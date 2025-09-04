@@ -26,7 +26,7 @@ const Partners = React.lazy(() => import('./pages/Partners'));
 const Pricing = React.lazy(() => import('./pages/Pricing'));
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
 
-export default function App() {
+export default function App(props: any) {
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-futuristic">

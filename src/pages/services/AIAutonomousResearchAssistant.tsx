@@ -31,10 +31,10 @@ export default function AIAutonomousResearchAssistant(...args: unknow n[]): unkn
   const [activeTab, setActiveTab] = useState<typeof 'overview'>('overview');
   const [isVisible, setIsVisible] = useState<typeof false>(false);
 
-export default function AIAutonomousResearchAssistant() {
+export default function AIAutonomousResearchAssistant(props: any) {
 
-  const [activeTab, setActiveTab] = useState('overview');
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeTab, setActiveTab] = useState<any>('overview');
+  const [isVisible, setIsVisible] = useState<any>(false);
 
   useEffect(() => {
     setIsVisible(true)}, []);
@@ -774,3 +774,30 @@ export default function AIAutonomousResearchAssistant() {
   )}
 }
 '"`
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</section>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</section>
+</motion>
+</motion>
+</section>
+</SEO>
+</div>
+</any>
+</any>
+</typeof>
+</typeof>

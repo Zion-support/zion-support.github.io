@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function ServicesIndex() {
+export default function ServicesIndex(props: any) {
   const groups = [
     { title: 'AI', href: '/ai-services', desc: 'LLMs, CV, NLP, and MLOps' },
     { title: 'IT', href: '/it-services', desc: 'Managed services, security, cloud' },
@@ -29,7 +29,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Database, Brain, Check, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3, Cpu, Headphones, Calendar, Send, Layers } from 'lucide-react';
 
-function FullServicesShowcase() {
+function FullServicesShowcase(props: any) {
   const services = [
     {
       name: 'AI & Machine Learning',

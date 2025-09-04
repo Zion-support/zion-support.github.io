@@ -1,4 +1,4 @@
-export function ErrorBanner({ msg }) {
+export function ErrorBanner(props: any) {
     return (<div className="p-4 bg-red-500/20 text-red-400 text-center rounded-md">
       {msg}
     </div>)}

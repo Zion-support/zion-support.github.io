@@ -2,7 +2,7 @@ import React from "react"
 import Link from "next/link"
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from "lucide-react"
   );
-export default function AiBusinessIntelligence() {
+export default function AiBusinessIntelligence(props: any) {
   const features = [
     "Feature 1",
     "Feature 2",
@@ -137,3 +137,10 @@ export default function AiBusinessIntelligence() {
       </section>
     </div>
   ),
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Activity, Cpu, HardDrive, Wifi, Settings, RefreshCw, Maximize2, Minimize2, X } from 'lucide-react';
-import { Button } from "button.tsx";
-import { Badge } from "badge.tsx";
-export function PerformanceMonitor({ enabled = true, showDetails: _showDetails = false, autoRefresh = true, refreshInterval = 1000, onAlert, className = "" }) {
+import React, {useState, useEffect, useCallback} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {Activity, Cpu, HardDrive, Wifi, Settings, RefreshCw, Maximize2, Minimize2, X} from 'lucide-react';
+import {Button} from "button.tsx";
+import {Badge} from "badge.tsx";
+export function PerformanceMonitor(props: any) {
     const [isExpanded, setIsExpanded] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [showSettings, setShowSettings] = useState(false);
@@ -17,14 +17,12 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
         timestamp: Date.now()
     });
     const [alerts, setAlerts] = useState([]);
-    const [thresholds, setThresholds] = useState({
-        fps: 30,
+    const [thresholds, setThresholds] = useState({fps: 30,
         memory: 80,
         renderTime: 16,
         networkLatency: 100,
         cpuUsage: 70,
-        diskUsage: 85
-    });
+        diskUsage: 85});
     // Performance monitoring functions
     const measureFPS = useCallback(() => {
         let frameCount = 0;
@@ -98,7 +96,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             });
             const end = performance.now();
             const latency = Math.round(end - start);
-            setMetrics(prev => ({ ...prev, networkLatency: latency }));
+            setMetrics(prev => ({...prev, networkLatency: latency}));
             if (latency > thresholds.networkLatency) {
                 const alert = {
                     id: `network-${Date.now()}`,
@@ -156,8 +154,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             simulateMetrics()}, refreshInterval);
         return () => clearInterval(interval)}, [enabled, autoRefresh, refreshInterval, measureMemory, measureRenderTime, measureNetworkLatency, simulateMetrics]);
     // Start FPS monitoring
-    useEffect(() => {
-        if (!enabled)
+    useEffect(() => {if (!enabled)
             return;
         measureFPS()}, [enabled, measureFPS]);
     // Clear old alerts
@@ -167,7 +164,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             setAlerts(prev => prev.filter(alert => now - alert.timestamp < 30000)); // Keep alerts for 30 seconds
         }, 5000);
         return () => clearInterval(interval)}, []);
-    const getMetricIcon = (metric) => {
+    const getMetricIcon = (props: any) => {
         switch (metric) {
             case 'FPS': return Activity;
             case 'Memory': return Activity;
@@ -177,7 +174,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             case 'Disk': return HardDrive;
             default: return Activity}
     };
-    const getSeverityColor = (severity) => {
+    const getSeverityColor = (props: any) => {
         switch (severity) {
             case 'error': return 'border-red-500/50 bg-red-500/10 text-red-400';
             case 'warning': return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';
@@ -207,7 +204,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
 
 }}>
         <Button size="sm" variant="outline" onClick={() => setIsMinimized(false)} className="bg-zion-blue-dark/80 backdrop-blur-md border-zion-blue-light/30 text-zinc-300 hover:text-white">
-          <Activity className="w-4 h-4 mr-2"/>
+          <Activity className="w-4 h-4 mr-2" />
           {alerts.length > 0 && (<Badge variant="outline" className="ml-2 text-xs">
               {alerts.length}
             </Badge>)}
@@ -238,7 +235,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
         <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">
-              <Activity className="w-5 h-5 text-white"/>
+              <Activity className="w-5 h-5 text-white" />
             </div>
             <div>
               <h3 className="text-white font-semibold text-sm">Performance Monitor</h3>
@@ -248,15 +245,15 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
 
           <div className="flex items-center gap-2">
             <Button size="sm" variant="ghost" onClick={() => setShowSettings(!showSettings)} className="text-zinc-400 hover:text-white p-2">
-              <Settings className="w-4 h-4"/>
+              <Settings className="w-4 h-4" />
             </Button>
 
             <Button size="sm" variant="ghost" onClick={() => setIsMinimized(true)} className="text-zinc-400 hover:text-white p-2">
-              <Minimize2 className="w-4 h-4"/>
+              <Minimize2 className="w-4 h-4" />
             </Button>
 
             <Button size="sm" variant="ghost" onClick={() => setIsExpanded(!isExpanded)} className="text-zinc-400 hover:text-white p-2">
-              {isExpanded ? <Minimize2 className="w-4 h-4"/> : <Maximize2 className="w-4 h-4"/>}
+              {isExpanded ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
             </Button>
           </div>
         </div>
@@ -298,7 +295,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                       <label className="text-zinc-300 text-xs font-medium capitalize">
                         {key.replace(/([A-Z])/g, ' $1').trim()}
                       </label>
-                      <input type="number" value={value} onChange = {
+                      <input type="number" value={value} onChange={
   (e) => setThresholds(prev => ({ ...prev,
   [key]: Number(e.target.value) 
 
@@ -320,7 +317,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             {/* FPS */}
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-2">
-                <Activity className="w-4 h-4 text-zinc-400"/>
+                <Activity className="w-4 h-4 text-zinc-400" />
                 <span className="text-zinc-300 text-xs">FPS</span>
               </div>
               <div className = {
@@ -340,7 +337,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             {/* Memory */}
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-2">
-                <Activity className="w-4 h-4 text-zinc-400"/>
+                <Activity className="w-4 h-4 text-zinc-400" />
                 <span className="text-zinc-300 text-xs">Memory</span>
               </div>
               <div className = {
@@ -360,7 +357,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             {/* Render Time */}
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-2">
-                <Cpu className="w-4 h-4 text-zinc-400"/>
+                <Cpu className="w-4 h-4 text-zinc-400" />
                 <span className="text-zinc-300 text-xs">Render</span>
               </div>
               <div className = {
@@ -380,7 +377,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             {/* Network */}
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-2">
-                <Wifi className="w-4 h-4 text-zinc-400"/>
+                <Wifi className="w-4 h-4 text-zinc-400" />
                 <span className="text-zinc-300 text-xs">Network</span>
               </div>
               <div className = {
@@ -424,7 +421,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                   <span className="text-zinc-300 text-xs">CPU Usage</span>
                   <div className="flex items-center gap-2">
                     <div className="w-20 bg-zinc-700 rounded-full h-2">
-                      <div className={`h-2 rounded-full transition-all duration-300 ${metrics.cpuUsage > thresholds.cpuUsage ? 'bg-red-400' : 'bg-zion-cyan'}`} style={{ width: `${metrics.cpuUsage}%` }}/>
+                      <div className={`h-2 rounded-full transition-all duration-300 ${metrics.cpuUsage > thresholds.cpuUsage ? 'bg-red-400' : 'bg-zion-cyan'}`} style="{{{ width: `${metrics.cpuUsage}}"%` }}/>
                     </div>
                     <span className = {
   `text-xs font-medium ${getMetricColor('CPU', metrics.cpuUsage,
@@ -446,7 +443,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                   <span className="text-zinc-300 text-xs">Disk Usage</span>
                   <div className="flex items-center gap-2">
                     <div className="w-20 bg-zinc-700 rounded-full h-2">
-                      <div className={`h-2 rounded-full transition-all duration-300 ${metrics.diskUsage > thresholds.diskUsage ? 'bg-red-400' : 'bg-zion-cyan'}`} style={{ width: `${metrics.diskUsage}%` }}/>
+                      <div className={`h-2 rounded-full transition-all duration-300 ${metrics.diskUsage > thresholds.diskUsage ? 'bg-red-400' : 'bg-zion-cyan'}`} style="{{{ width: `${metrics.diskUsage}}"%` }}/>
                     </div>
                     <span className = {
   `text-xs font-medium ${getMetricColor('Disk', metrics.diskUsage,
@@ -486,7 +483,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
               <div className="flex items-center justify-between mb-3">
                 <h4 className="text-white font-medium text-sm">Alerts</h4>
                 <Button size="sm" variant="ghost" onClick={() => setAlerts([])} className="text-zinc-400 hover:text-white p-1">
-                  <X className="w-3 h-3"/>
+                  <X className="w-3 h-3" />
                 </Button>
               </div>
 
@@ -522,7 +519,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
 
 }}>
                       <div className="flex items-center gap-2">
-                        <Icon className="w-3 h-3"/>
+                        <Icon className="w-3 h-3" />
                         <span className="font-medium">{alert.metric}</span>
                         <span className="text-xs opacity-75">
                           {new Date(alert.timestamp).toLocaleTimeString()}
@@ -541,15 +538,23 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             measureRenderTime();
             measureNetworkLatency();
             simulateMetrics()}} className="flex-1 border-zion-blue-light/30 text-zinc-300 hover:text-white">
-                <RefreshCw className="w-3 h-3 mr-2"/>
+                <RefreshCw className="w-3 h-3 mr-2" />
                 Refresh
               </Button>
 
               <Button size="sm" variant="outline" onClick={() => setShowSettings(!showSettings)} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">
-                <Settings className="w-3 h-3"/>
+                <Settings className="w-3 h-3" />
               </Button>
             </div>
           </div>
         </div>
       </div>
     </motion.div>)}
+
+</motion>
+</motion>
+</div>
+</motion>
+</div>
+</motion>
+</motion>

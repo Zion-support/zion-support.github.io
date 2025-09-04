@@ -31,10 +31,12 @@ interface ChatMessage {
 }
 
 interface AIChatbotSystemProps {
+
   showHeader?: boolean;
   showSettings?: boolean;
   maxMessages?: number;
   autoScroll?: boolean;
+
 }
 
 export const AIChatbotSystem: Reac t.FC<AIChatbotSystemProps> = ({
@@ -44,9 +46,9 @@ export const AIChatbotSystem: Reac t.FC<AIChatbotSystemProps> = ({
   autoScroll = true
 }) => {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
-  const [inputValue, setInputValue] = useState('');
-  const [isTyping, setIsTyping] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
+  const [inputValue, setInputValue] = useState<any>('');
+  const [isTyping, setIsTyping] = useState<any>(false);
+  const [isOpen, setIsOpen] = useState<any>(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   // Sample welcome message
@@ -144,7 +146,7 @@ export const AIChatbotSystem: Reac t.FC<AIChatbotSystemProps> = ({
   }, [inputValue, isTyping, simulateAIResponse]);
 
   // Handle suggestion click
-  const handleSuggestionClick = (suggestion: string) => {
+  const handleSuggestionClick = (props: any) => {
     setInputValue(suggestion);
     }, []);
 
@@ -170,7 +172,7 @@ export const AIChatbotSystem: Reac t.FC<AIChatbotSystemProps> = ({
     }, [isListening]);
 
   // Clear chat
-  const clearChat = () => {
+  const clearChat = (props: any) => {
     setMessages([]);
   };
 
@@ -265,8 +267,8 @@ export const AIChatbotSystem: Reac t.FC<AIChatbotSystemProps> = ({
                   <div className="flex items-center gap-2 p-3 bg-gray-800/50 rounded-lg">
                     <div className="flex space-x-1">
                       <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="{{{ animationDelay: '0.1s'}}"}></div>
+                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="{{{ animationDelay: '0.2s'}}"}></div>
                     </div>
                     <span className="text-sm text-gray-400">Zion AI is typing...</span>
                   </div>
@@ -322,3 +324,14 @@ export const AIChatbotSystem: Reac t.FC<AIChatbotSystemProps> = ({
 
 
 export default AIChatbotSystem;
+</motion>
+</motion>
+</motion>
+</motion>
+</HTMLInputElement>
+</HTMLDivElement>
+</any>
+</any>
+</any>
+</ChatMessage>
+</AIChatbotSystemProps>

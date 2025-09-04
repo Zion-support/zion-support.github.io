@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react';
+import React, {useState, useEffect} from 'react';
+import {BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw} from 'lucide-react';
 ;
-export const AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {
-    const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({
-        enableTracking: true,
+export const AnalyticsDashboard = (props: any) => {
+    const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({enableTracking: true,
         enablePerformanceTracking: true,
         enableUserBehaviorTracking: true,
-        enableHeatmapTracking: false
-    });
+        enableHeatmapTracking: false});
     const [isExpanded, setIsExpanded] = useState(false);
     const [selectedTimeRange, setSelectedTimeRange] = useState('24h');
     const [analyticsSummary, setAnalyticsSummary] = useState(null);
@@ -19,22 +17,20 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             updateAnalyticsSummary()}, refreshInterval);
         return () => clearInterval(interval)}, [showRealTime, refreshInterval]);
     // Update analytics summary
-    const updateAnalyticsSummary = () => {
+    const updateAnalyticsSummary = (props: any) => {
         const summary = getAnalyticsSummary();
         if (summary) {
             setAnalyticsSummary(summary)}
     };
     // Update summary when events change
-    useEffect(() => {
-        updateAnalyticsSummary()}, [events, currentSession]);
+    useEffect(() => {updateAnalyticsSummary()}, [events, currentSession]);
     // Track dashboard interactions
-    const handleDashboardInteraction = (action, metadata) => {
-        trackEvent('dashboard', action, 'dashboard_interaction', null, metadata)};
+    const handleDashboardInteraction = (props: any) => {trackEvent('dashboard', action, 'dashboard_interaction', null, metadata)};
     // Track conversion goal
-    const handleTrackConversion = () => {
+    const handleTrackConversion = (props: any) => {
         trackConversion('dashboard_engagement', 1, { timeRange: selectedTimeRange })};
     // Get events by category for chart
-    const getEventsByCategory = () => {
+    const getEventsByCategory = (props: any) => {
         if (!analyticsSummary?.eventsByCategory)
             return [];
         return Object.entries(analyticsSummary.eventsByCategory).map(([category, count]) => ({
@@ -42,8 +38,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             count: count
         }))};
     // Get performance score
-    const getPerformanceScore = () => {
-        if (!performanceMetrics)
+    const getPerformanceScore = (props: any) => {if (!performanceMetrics)
             return 0;
         let score = 100;
         // Deduct points for poor performance
@@ -61,14 +56,14 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             score -= 10;
         return Math.max(0, score)};
     // Format duration
-    const formatDuration = (seconds) => {
+    const formatDuration = (props: any) => {
         if (seconds < 60)
             return `${seconds}s`;
         const minutes = Math.floor(seconds / 60);
         const remainingSeconds = seconds % 60;
         return `${minutes}m ${remainingSeconds}s`};
     // Format number with K/M suffix
-    const formatNumber = (num) => {
+    const formatNumber = (props: any) => {
         if (num >= 1000000)
             return `${(num / 1000000).toFixed(1)}M`;
         if (num >= 1000)
@@ -76,29 +71,23 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         return num.toString()};
     return (<div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>      {/* Header */}
 // comment
-useEffect(() => {
-        updateAnalyticsSummary()}, [events, currentSession])
+useEffect(() => {updateAnalyticsSummary()}, [events, currentSession])
 }
     // comment
-const handleDashboardInteraction = (action, metadata) => {""
+const handleDashboardInteraction = (props: any) => {""
         trackEvent("dashboard", action, "dashboard_interaction", null, metadata)}
 
     // comment
-const handleTrackConversion = () => {"""
+const handleTrackConversion = (props: any) => {"""
         trackConversion("dashboard_engagement", 1, { timeRange: selectedTimeRange })}
 
     // comment
-const getEventsByCategory = () => {
-        if()
-}
+const getEventsByCategory = (props: any) => {if()}
             return []
-        return Object.entries(analyticsSummary.eventsByCategory).map(([category, count]) => ({
-            category, count: count}))}
+        return Object.entries(analyticsSummary.eventsByCategory).map(([category, count]) => ({category, count: count}))}
 
     // comment
-const getPerformanceScore = () => {
-        if()
-}
+const getPerformanceScore = (props: any) => {if()}
             return 0,
 let score = 100
         // comment
@@ -123,9 +112,7 @@ else if()
 return Math.max(0, score)}
 
     // comment
-const formatDuration = () => {
-        if()
-}
+const formatDuration = (props: any) => {if()}
             return "${seconds}s"
         const minutes = Math.floor()
 }
@@ -133,7 +120,7 @@ const formatDuration = () => {
         return "${minutes}m ${remainingSeconds}s"}
 
     // comment
-const formatNumber = () => {
+const formatNumber = (props: any) => {
         if (num >= 1000000)"
             return "${(num / 1000000).toFixed(1)}M"
         if (num >= 1000)"
@@ -188,7 +175,7 @@ const formatNumber = () => {
                 isExpanded ? "Collapse dashboard"  : "Expand dashboard"", ",
 }"""
             >"""""
-              {isExpanded ? "−" : }
+              {isExpanded ? "−" :}
 
             </button>
           </div>
@@ -265,8 +252,7 @@ const formatNumber = () => {
 """"
         <div className="space-y-2 max-h-32 overflow-y-auto">
           {events,
-            .slice()
-}
+            .slice()}
             .reverse()"
             .map(event => (""
               <div """""
@@ -472,3 +458,21 @@ Referrer: """""
 "
 
 export default Component
+
+</Target>
+</RefreshCw>
+</div>
+</span>
+</div>
+</div>
+</div>
+</Activity>
+</TrendingUp>
+</Activity>
+</Eye>
+</Clock>
+</div>
+</button>
+</BarChart3>
+</div>
+</div>

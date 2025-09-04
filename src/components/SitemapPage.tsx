@@ -79,3 +79,5 @@ const sitemapData = [{
       </div>;
     </div>;) }
 '"
+
+</SEO>

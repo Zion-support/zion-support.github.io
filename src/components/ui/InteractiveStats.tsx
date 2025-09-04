@@ -4,10 +4,12 @@ interface Stat {
   description: string;
 
 interface InteractiveStatsProps {
+
   stats: Stat[];
   className?: string;
 
-const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats, className = "" }) => {
+const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats, className = "" 
+}) => {
   return (
     <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 ${className}`}>
       {stats.map((stat, index) => (
@@ -25,3 +27,4 @@ const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats, className = 
 };
 
 export default InteractiveStats;}};
+</InteractiveStatsProps>

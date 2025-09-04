@@ -1,11 +1,12 @@
-import { Helmet } from 'react-helmet-async';
-const AIAutonomousFinance = () => {
+import React from 'react';
+import {Helmet} from 'react-helmet-async';
+const AIAutonomousFinance = (props: any) => {
     return (<>
       <Helmet>
         <title>AI Autonomous Finance Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous finance platform that provides intelligent financial analysis, automated trading, risk management, and investment optimization with advanced AI capabilities."/>
-        <meta name="keywords" content="AI finance, autonomous trading, financial analysis, investment AI, risk management, fintech AI"/>
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-finance"/>
+        <meta name="description" content="Revolutionary AI autonomous finance platform that provides intelligent financial analysis, automated trading, risk management, and investment optimization with advanced AI capabilities."  />
+        <meta name="keywords" content="AI finance, autonomous trading, financial analysis, investment AI, risk management, fintech AI"  />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-finance"  />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">

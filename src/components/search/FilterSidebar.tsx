@@ -1,3 +1,4 @@
+import React from 'react';
           </h3>
           <button onClick={onClose}"
             className="lg: hidden p-2 hover: b g-zion-blue-light/20 rounded-lg transition-colors"
@@ -30,7 +31,7 @@
                         name={group.key}
                         value={option.value}
                         checked={isSelected}
-                        onChange = {
+                        onChange={
 
   (e) => onFilterChange(group.key, option.value,
   e.target.checked)

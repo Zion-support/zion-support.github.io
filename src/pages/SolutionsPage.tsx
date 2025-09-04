@@ -20,7 +20,7 @@ import {
   MessageSquare
 } from 'lucide-react';
 
-export default function SolutionsPage() {
+export default function SolutionsPage(props: any) {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   const industrySolutions = [
@@ -460,3 +460,5 @@ export default function SolutionsPage() {
     </div>
   );
 }
+
+</string>

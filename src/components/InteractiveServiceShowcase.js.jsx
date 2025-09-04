@@ -1,19 +1,19 @@
-import React, { useState } from 'react';'''
-import { motion, AnimatePresence } from 'framer-motion';'''
-import { Link } from 'react-router-dom';
-const InteractiveServiceShowcase = () => {}
+import React, {useState} from 'react';'''
+import {motion, AnimatePresence} from 'framer-motion';'''
+import {Link} from 'react-router-dom';
+const InteractiveServiceShowcase = (props: any) => {}
 '
 ''
 '''
     const [activeCategory, setActiveCategory] = useState('all');''
     const [hoveredService, setHoveredService] = useState(null);'''
     const categories = [''''
-        { id: 'all', name: 'All Services', icon: '🚀', count: 35 },'''
-        { id: 'ai', name: 'AI & ML', icon: '🤖', count: 13 },'''
-        { id: 'quantum', name: 'Quantum', icon: '🔮', count: 5 },'''
-        { id: 'cloud', name: 'Cloud', icon: '☁️', count: 8 },'''
-        { id: 'security', name: 'Security', icon: '🛡️', count: 6 },'''
-        { id: 'automation', name: 'Automation', icon: '⚡', count: 3 }
+        {id: 'all', name: 'All Services', icon: '🚀', count: 35},'''
+        {id: 'ai', name: 'AI & ML', icon: '🤖', count: 13},'''
+        {id: 'quantum', name: 'Quantum', icon: '🔮', count: 5},'''
+        {id: 'cloud', name: 'Cloud', icon: '☁️', count: 8},'''
+        {id: 'security', name: 'Security', icon: '🛡️', count: 6},'''
+        {id: 'automation', name: 'Automation', icon: '⚡', count: 3}
     ];
     const services = []
         {}
@@ -136,7 +136,7 @@ const InteractiveServiceShowcase = () => {}
         ? services;
         : services.filter(service => service.category === activeCategory) ;
     const containerVariants = {}
-        hidden: { opacity: 0 },
+        hidden: {opacity: 0},
         visible: {}
             opacity: 1,
             transition: {}
@@ -145,9 +145,8 @@ const InteractiveServiceShowcase = () => {}
         }
     };
     const itemVariants = {}
-  hidden: { y: 20,
-  opacity: 0;
-},
+  hidden: {y: 20,
+  opacity: 0;},
         visible: {}
             y: 0,
             opacity: 1,
@@ -158,9 +157,8 @@ const InteractiveServiceShowcase = () => {}
         }
     };
     const categoryVariants = {}
-  hidden: { scale: 0.8,
-  opacity: 0;
-},
+  hidden: {scale: 0.8,
+  opacity: 0;},
         visible: {}
             scale: 1,
             opacity: 1,
@@ -175,13 +173,11 @@ const InteractiveServiceShowcase = () => {}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"""
         {/* Header Section */}""""
         <motion.div className="text-center mb-20" initial = {}
-  { opacity: 0,
-  y: 30;
-}} whileInView = {}
-  { opacity: 1,
+  {opacity: 0,
+  y: 30;}} whileInView = {}
+  {opacity: 1,
   y: 0;
-"""
-}} viewport={{ once: true }} transition={{ duration: 0.8 }}>""""
+"""}} viewport={{ once: true }} transition={{ duration: 0.8 }}>""""
           <h2 className="text-5xl md:text-6xl font-black text-white mb-6">'"""
             Explore Our{' '}""""
             <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">
@@ -196,12 +192,10 @@ const InteractiveServiceShowcase = () => {}
 """
         {/* Category Filter Tabs */}""""
         <motion.div className="flex flex-wrap justify-center gap-4 mb-16" initial = {}
-  { opacity: 0,
-  y: 20;
-}} whileInView = {}
-  { opacity: 1,
-  y: 0;
-}} viewport={{ once: true }} transition={{ duration: 0.6 }}>'
+  {opacity: 0,
+  y: 20;}} whileInView = {}
+  {opacity: 1,
+  y: 0;}} viewport={{ once: true }} transition={{ duration: 0.6 }}>'
           {categories.map((category) => (<button key={category.id} onClick={() => setActiveCategory(category.id)} className={`group flex items-center gap-3 px-6 py-4 rounded-2xl font-semibold transition-all duration-300 ${activeCategory === category.id''`
                 ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-xl shadow-zion-cyan/25''`'"`
                 : 'bg-white/10 backdrop-blur-md text-zion-slate-light border border-white/20 hover:bg-white/20 hover:border-zion-cyan/50'}`}>""""
@@ -250,7 +244,7 @@ const InteractiveServiceShowcase = () => {}
                       {/* Features */}""""
                       <div className="space-y-2 mb-6">""""
                         {service.features.slice(0, 3).map((feature, index) => (<div key={index} className="flex items-center gap-2 text-zion-slate-light text-xs">""""
-                            <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"/>
+                            <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full" />
                             {feature}"""
                           </div>))}""""
                         {service.features.length > 3 && (<div className="text-zion-cyan/60 text-xs">
@@ -266,7 +260,7 @@ const InteractiveServiceShowcase = () => {}
                     </div>
 """
                     {/* Hover Effect Overlay */}""""
-                    <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
+                    <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                 </Link>
               </motion.div>) ) }
@@ -275,16 +269,13 @@ const InteractiveServiceShowcase = () => {}
 """
         {/* Bottom CTA Section */}""""
         <motion.div className="text-center mt-20" initial = {}
-  { opacity: 0,
-  y: 30;
-}} whileInView = {}
-  { opacity: 1,
-  y: 0;
-}} viewport={{ once: true }} transition = {}
-  { duration: 0.8,
+  {opacity: 0,
+  y: 30;}} whileInView = {}
+  {opacity: 1,
+  y: 0;}} viewport={{ once: true }} transition = {}
+  {duration: 0.8,
   delay: 0.2;
-"""
-}}>""""
+"""}}>""""
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-blue/10 backdrop-blur-md p-12 rounded-3xl border border-zion-cyan/20">""""
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?"""
@@ -309,12 +300,18 @@ const InteractiveServiceShowcase = () => {}
     </section>)};
 export default InteractiveServiceShowcase;
 
-export { InteractiveServiceShowcase };
+export {InteractiveServiceShowcase};
 
-export { InteractiveServiceShowcase };
+export {InteractiveServiceShowcase};
 
-export { InteractiveServiceShowcase };
+export {InteractiveServiceShowcase};
 
-export { InteractiveServiceShowcase };
+export {InteractiveServiceShowcase};
 
-export { InteractiveServiceShowcase };
+export {InteractiveServiceShowcase};
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

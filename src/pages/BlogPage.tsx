@@ -21,10 +21,10 @@ import {
   Building2
 } from 'lucide-react';
 
-export default function BlogPage() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('latest');
+export default function BlogPage(props: any) {
+  const [searchQuery, setSearchQuery] = useState<any>('');
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [sortBy, setSortBy] = useState<any>('latest');
 
   const categories = [
     { id: 'all', name: 'All Posts', icon: BookOpe n, count: 2 5 },
@@ -183,7 +183,7 @@ export default function BlogPage() {
     }
   });
 
-  const formatDate = (dateString: string) => {
+  const formatDate = (props: any) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
       year: 'numeric', 
@@ -192,12 +192,12 @@ export default function BlogPage() {
     });
   };
 
-  const getCategoryIcon = (categoryId: string) => {
+  const getCategoryIcon = (props: any) => {
     const category = categories.find(cat => cat.id === categoryId);
     return category ? category.icon : BookOpen;
   };
 
-  const getCategoryName = (categoryId: string) => {
+  const getCategoryName = (props: any) => {
     const category = categories.find(cat => cat.id === categoryId);
     return category ? category.name : 'Uncategorized';
   };
@@ -424,7 +424,7 @@ export default function BlogPage() {
               <input type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus: outlin e-none focus: rin g-2 focus: rin g-blue-400 focus: borde r-transparent backdrop-blur-sm"
-               />
+                />
               <button className="px-6 py-3 bg-white text-blue-900 rounded-lg font-semibold hover: b g-gray-100 transition-colors">
                 Subscribe
                 <ArrowRight className="w-4 h-4"  />
@@ -462,3 +462,7 @@ export default function BlogPage() {
     </div>
   );
 }
+
+</any>
+</any>
+</any>

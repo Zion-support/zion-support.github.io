@@ -1,11 +1,12 @@
-import { Helmet } from 'react-helmet-async';
-const AIAutonomousReasoning = () => {
+import React from 'react';
+import {Helmet} from 'react-helmet-async';
+const AIAutonomousReasoning = (props: any) => {
     return (<>
       <Helmet>
         <title>AI Autonomous Reasoning Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous reasoning platform that continuously analyzes logic, solves problems, and makes decisions with advanced AI capabilities and autonomous operation."/>
-        <meta name="keywords" content="AI reasoning, autonomous reasoning, logical analysis, problem solving, autonomous operations, AI reasoning platform"/>
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-reasoning"/>
+        <meta name="description" content="Revolutionary AI autonomous reasoning platform that continuously analyzes logic, solves problems, and makes decisions with advanced AI capabilities and autonomous operation."  />
+        <meta name="keywords" content="AI reasoning, autonomous reasoning, logical analysis, problem solving, autonomous operations, AI reasoning platform"  />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-reasoning"  />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">

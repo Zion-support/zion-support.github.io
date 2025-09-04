@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { Brain, Users, TrendingUp, Target, BarChart3, Calendar, Zap, CheckCircle, Star, ArrowRight, Globe, Smartphone, Monitor, BookOpen, MessageSquare, Share2, Analytics, Palette, Clock, DollarSign, Shield, Headphones, Rocket, Heart, MessageCircle, Phone, Mail, Award, ThumbsUp } from 'lucide-react';
 
-export default function AICustomerSuccessPlatform() {
+export default function AICustomerSuccessPlatform(props: any) {
   const features = [
     "AI-powered customer health scoring and monitoring",
     "Predictive churn detection and prevention",
@@ -373,3 +373,19 @@ export default function AICustomerSuccessPlatform() {
     </div>
   );
 }
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</SEO>

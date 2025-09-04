@@ -179,7 +179,8 @@
     "audit:security": "node scripts/security-audit-enhanced.cjs",
     "optimize:ux": "node scripts/ux-optimizer.cjs",
     "improve:all": "npm run optimize:performance && npm run monitor:health && npm run audit:security && npm run optimize:ux",
-    "automation:safe": "bash scripts/run-safe-automations.sh"
+    "automation:safe": "bash scripts/run-safe-automations.sh",
+    "automation:orchestrate": "bash scripts/run-all-and-test.sh"
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"

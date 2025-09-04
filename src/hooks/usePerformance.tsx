@@ -21,7 +21,7 @@ interface PerformanceOptions {
   sendToAnalytics?: boolean;
   sendToAnalytics?: boolean}
 
-export function usePerformance(options: PerformanceOption s = {}) {
+export function usePerformance(props: any) {
 
   const {
 
@@ -43,7 +43,7 @@ export function usePerformance(options: PerformanceOption s = {}) {
     windowLoad: nul l,
     navigationStart: nul l});
 
-  const [isMonitoring, setIsMonitoring] = useState(false);
+  const [isMonitoring, setIsMonitoring] = useState<any>(false);
 :src/hooks/usePerformance.tsx
   const observerRef = useRef<PerformanceObserver | null>(null);'
       // // // // // // // // console.warn('PerformanceObserver not supported');
@@ -466,9 +466,9 @@ export function useRenderTime(...args: unknow n[]): unknown {
     return () => observer.disconnect()}, [eventName, callback]);
 
 // Hook for measuring time between renders
-export function useRenderTime() {
+export function useRenderTime(props: any) {
   
-  const [renderTime, setRenderTime] = useState(0);
+  const [renderTime, setRenderTime] = useState<any>(0);
   useEffect(() => {
     
     
@@ -477,7 +477,7 @@ export function useRenderTime() {
   return renderTime}
 
 // Hook for monitoring specific component performance
-export function useComponentPerformance(componentName: string) {
+export function useComponentPerformance(props: any) {
 
   const [renderTime, setRenderTime] = useState<number>(0);
   const [mountTime, setMountTime] = useState<number>(0);
@@ -559,3 +559,13 @@ export function useAPIPerformance(...args: unknow n[]): unknown {
   }}
 '`
   }}
+
+</string>
+</Map>
+</number>
+</number>
+</any>
+</typeof>
+</PerformanceObserver>
+</any>
+</PerformanceMetrics>

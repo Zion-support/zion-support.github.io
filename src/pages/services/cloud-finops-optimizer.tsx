@@ -17,7 +17,7 @@ import {
   Lightbulb
 } from 'lucide-react';
 
-export default function CloudFinOpsOptimizerPage() {
+export default function CloudFinOpsOptimizerPage(props: any) {
   return (
     <div className="min-h-screen bg-zion-slate-dark text-white">
       {/* Hero Section */}

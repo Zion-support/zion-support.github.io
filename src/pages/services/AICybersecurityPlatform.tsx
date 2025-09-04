@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Brain, TrendingUp, Shield, Zap, Lock, Globe, Database, Cloud, Rocket, CheckCircle, ArrowRight, PieChart, LineChart, Activity, Target, Lightbulb, Eye, Search, Filter, Download, Share2, Phone, Mail, MapPin, BarChart3, MessageCircle, Calendar, AlertTriangle, Star, Cpu, Network, AlertCircle, Key, Monitor, Bug, Fingerprint, Server, Wifi, Smartphone, Tablet, Laptop } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
-export default function AICybersecurityPlatform() {
+export default function AICybersecurityPlatform(props: any) {
   const features = [
     {
       icon: Brain,
@@ -548,7 +548,7 @@ export default function AICybersecurityPlatform() {
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
               <p className="text-slate-300">
-                364 E Main St STE 1008<br />
+                364 E Main St STE 1008<br  />
                 Middletown DE 19709
               </p>
               <p className="text-sm text-slate-400 mt-2">Global remote support available</p>
@@ -559,3 +559,18 @@ export default function AICybersecurityPlatform() {
     </div>
   );
 }
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</SEO>

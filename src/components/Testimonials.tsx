@@ -1,4 +1,4 @@
-export default function Testimonials() {
+export default function Testimonials(props: any) {
 interface Testimonial {
   quote: string;
   author: string;
@@ -9,7 +9,9 @@ interface Testimonial {
 }
 
 interface TestimonialsProps {
+
   testimonials: Testimonia l[];
+
 }
 
   return (<section className="py-20 bg-gray -800">
@@ -66,3 +68,6 @@ interface TestimonialsProps {
 }
 
 export default Testimonials;
+
+</motion>
+</div>

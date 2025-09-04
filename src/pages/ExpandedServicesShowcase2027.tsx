@@ -2,7 +2,7 @@ import React from 'react',;',';';
     ';';';';
 import {SEO } from '@/components/SEO';
 ,"});,"})
-export default function ExpandedServicesShowcase2027() {return (
+export default function ExpandedServicesShowcase2027(props: any) {return (
     <div className="min-h-screen bg-white">
       <SEO title="ExpandedServicesShowcase2027 - Zion Tech Group" description="Professional ExpandedServicesShowcase2027 services by Zion Tech Group"  />
       <div className="container mx-auto px-4 py-20">

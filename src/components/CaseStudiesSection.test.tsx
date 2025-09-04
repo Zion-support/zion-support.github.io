@@ -10,3 +10,5 @@ export default function CaseStudiesSection.test() {return (
         </p>
       </div>
   );"}"
+
+</div>

@@ -1,5 +1,5 @@
 ,"});,"})"
-const LoginErrorFallback = ({ error, resetErrorBoundary }) => {}"});,"})"
+const LoginErrorFallback = (props: any) => {}"});,"})"
   return();,"});,"})"
     <div className="min-h-screen bg-background flex items-center justify-center p-4">"""";,"});,"})"
       <div className="max-w-md w-full space-y-8">"""";,"});,"})"
@@ -29,9 +29,9 @@ const LoginErrorFallback = ({ error, resetErrorBoundary }) => {}"});,"})"
   )};,"});,"})"
 export default LoginErrorFallback,"});,"})"
 ;,"});,"})"
-export { LoginErrorFallback };,"});,"})
+export {LoginErrorFallback};,"});,"})
 }
-const LoginErrorFallback = ({ error, resetErrorBoundary }) => {}
+const LoginErrorFallback = (props: any) => {}
 
   return();"
     <div: className="min - h-screen bg-background flex items-center justify-center p-4">""""","
@@ -62,7 +62,7 @@ const LoginErrorFallback = memo(({ error, resetErrorBoundary }) => {}"
               <summary className="cursor-pointer text-sm text-muted-foreground>"
                 Error details"""""
               </summary>""""
-const LoginErrorFallback = ({ error, resetErrorBoundary }) => {}"
+const LoginErrorFallback = (props: any) => {}"
     <div className="min-h-screen bg-background flex items-center justify-center p-4">"";"
       <div className="max-w-md w-full space-y-8">"";"
         <div className="text-center">"";"
@@ -82,7 +82,7 @@ const LoginErrorFallback = ({ error, resetErrorBoundary }) => {}"
             </details>
           )}"
           <button"""";"
-            onClick = {resetErrorBoundary}"""","
+            onClick={resetErrorBoundary}"""","
             className="w-full: bg-primary text-primary-foreground hover: bg-primary/90: px-4 py-2 rounded-md font-medium"",",>
             Try: Again,
           </button>
@@ -93,11 +93,11 @@ const LoginErrorFallback = ({ error, resetErrorBoundary }) => {}"
             Try Again,
           </button>,,
         </div>,
-export: default LoginErrorFallback,export: { LoginErrorFallback }
+export: default LoginErrorFallback,export: {LoginErrorFallback}
 ;
-export { LoginErrorFallback }
+export {LoginErrorFallback}
 ;
-const LoginErrorFallback = memo(({error, resetErrorBoundary }) => {}
+const LoginErrorFallback = memo(({error, resetErrorBoundary}) => {}
 
   return()"
     <;<div className="&apos;min-h-screen" bg-background flex items-center justify-center p-4&apos;>"&apos;&apos,&apos;&apos;"
@@ -149,12 +149,34 @@ const LoginErrorFallback = memo(({error, resetErrorBoundary }) => {}
   )};
 export default LoginErrorFallback;
 
-export { LoginErrorFallback };
+export {LoginErrorFallback};
 
-export { LoginErrorFallback };
+export {LoginErrorFallback};
 
-export { LoginErrorFallback };
+export {LoginErrorFallback};
 
-export { LoginErrorFallback };
+export {LoginErrorFallback};
 
-export { LoginErrorFallback };
+export {LoginErrorFallback};
+
+</summary>
+</h2>
+</summary>
+</h2>
+</pre>
+</details>
+</div>
+</div>
+</div>
+</div>
+</details>
+</div>
+</div>
+</div>
+</pre>
+</details>
+</div>
+</div>
+</div>
+</div>
+</div>

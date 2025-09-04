@@ -15,7 +15,7 @@ const ToastItem: Reac t.FC<ToastProps> = { toast: unknow n, onRemove }: unknown 
   const [isVisible, setIsVisible] = useState<typeof true>(true);
 const ToastItem: Reac t.FC<ToastProps> = ({ toast, onRemove }) => {
 
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState<any>(true);
 
   useEffect(() => {
     
@@ -103,9 +103,16 @@ const ToastItem: Reac t.FC<ToastProps> = ({ toast, onRemove }) => {
   )};
 
 // Utility function to show toasts
-export const showToast = (type: anyToastTyp e, title: string, message?: string, duration?: number)  => {
+export const showToast = (props: any) => {
 
   if (typeof window !== 'undefined' && (window as ).showToast) {
 
     (window as ).showToast({ type, title, message, duration })}
 };'"`
+</ToastItem>
+</any>
+</motion>
+</any>
+</ToastProps>
+</typeof>
+</ToastProps>

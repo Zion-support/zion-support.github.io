@@ -1,8 +1,8 @@
 import React from 'react';
 ;
 ;
-;import { Building, Users, BarChart3, MessageSquare, Calendar, FileText, CreditCard, Globe, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink, BarChart, Shield, Zap } from "lucide-react";
-export default function MicroSAASServicesPage() {}
+;import {Building, Users, BarChart3, MessageSquare, Calendar, FileText, CreditCard, Globe, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink, BarChart, Shield, Zap} from "lucide-react";
+export default function MicroSAASServicesPage(props: any) {}
     const microSAASServices = []
         {}
 """
@@ -10,7 +10,7 @@ export default function MicroSAASServicesPage() {}
             id: "crm-saas",""""
             title: "ZionCRM Pro",""""
             description: "Complete customer relationship management solution with sales automation, lead tracking, and analytics.",""""
-            icon: <Users className="h-8 w-8 text-blue-500"/>,"""
+            icon: <Users className="h-8 w-8 text-blue-500" />,"""
             price: 29,""""
             currency: "$","""
             features: [""""
@@ -42,7 +42,7 @@ export default function MicroSAASServicesPage() {}
             id: "project-management",""""
             title: "ZionProject Hub",""""
             description: "Project management platform with task tracking, team collaboration, and resource management.",""""
-            icon: <Calendar className="h-8 w-8 text-green-500"/>,"""
+            icon: <Calendar className="h-8 w-8 text-green-500" />,"""
             price: 19,""""
             currency: "$","""
             features: [""""
@@ -74,7 +74,7 @@ export default function MicroSAASServicesPage() {}
             id: "analytics-platform",""""
             title: "ZionAnalytics",""""
             description: "Business intelligence platform with real-time dashboards, reporting, and data visualization.",""""
-            icon: <BarChart3 className="h-8 w-8 text-purple-500"/>,"""
+            icon: <BarChart3 className="h-8 w-8 text-purple-500" />,"""
             price: 39,""""
             currency: "$","""
             features: [""""
@@ -104,7 +104,7 @@ freeTrial: "21 days",
             id: "communication - tool",
             title: "ZionChat",
             description: "Team communication platform with chat, video calls, and file sharing capabilities.",
-            icon: <MessageSquare className="h-8 w-8 text-orange -500"/>,
+            icon: <MessageSquare className="h-8 w-8 text-orange -500" />,
             price: 15,
             currency: "$",
             features: ["Team Chat",
@@ -131,7 +131,7 @@ freeTrial: "21 days",
             id: "document - management",
             title: "ZionDocs",
             description: "Document management system with version control, collaboration, and secure storage.",
-            icon: <FileText className="h-8 w-8 text-cyan -500"/>,
+            icon: <FileText className="h-8 w-8 text-cyan -500" />,
             price: 25,
             currency: "$",
             features: ["Document Storage",
@@ -158,7 +158,7 @@ freeTrial: "21 days",
             id: "payment - processor",
             title: "ZionPay",
             description: "Payment processing solution with multiple payment methods, invoicing, and subscription management.",
-            icon: <CreditCard className="h-8 w-8 text-emerald -500"/>,
+            icon: <CreditCard className="h-8 w-8 text-emerald -500" />,
             price: 0,
             currency: "$",
             features: ["Multiple Payment Methods",
@@ -185,7 +185,7 @@ freeTrial: "21 days",
             id: "marketing - automation",
             title: "ZionMarketing",
             description: "Marketing automation platform with email campaigns, lead nurturing, and conversion tracking.",
-            icon: <BarChart className="h-8 w-8 text-pink -500"/>,
+            icon: <BarChart className="h-8 w-8 text-pink -500" />,
             price: 49,
             currency: "$",
             features: ["Email Campaigns",
@@ -212,7 +212,7 @@ freeTrial: "21 days",
             id: "inventory - management",
             title: "ZionInventory",
             description: "Inventory management system with stock tracking, order management, and supplier management.",
-            icon: <Building className="h-8 w-8 text-indigo -500"/>,
+            icon: <Building className="h-8 w-8 text-indigo -500" />,
             price: 35,
             currency: "$",
             features: ["Stock Tracking",
@@ -239,7 +239,7 @@ freeTrial: "21 days",
             id: "hr - management",
             title: "ZionHR",
             description: "Human resources management platform with employee onboarding, time tracking, and performance management.",
-            icon: <Users className="h-8 w-8 text-teal -500"/>,
+            icon: <Users className="h-8 w-8 text-teal -500" />,
             price: 45,
             currency: "$",
             features: ["Employee Onboarding",
@@ -266,7 +266,7 @@ freeTrial: "21 days",
             id: "accounting - software",
             title: "ZionBooks",
             description: "Cloud - based accounting software with invoicing, expense tracking, and financial reporting.",
-            icon: <BarChart3 className="h-8 w-8 text-amber -500"/>,
+            icon: <BarChart3 className="h-8 w-8 text-amber -500" />,
             price: 30,
             currency: "$",
             features: ["Invoicing",
@@ -293,7 +293,7 @@ freeTrial: "21 days",
             id: "ecommerce - platform",
             title: "ZionShop",
             description: "E - commerce platform with online store creation, payment processing, and inventory management.",
-            icon: <Globe className="h-8 w-8 text-red -500"/>,
+            icon: <Globe className="h-8 w-8 text-red -500" />,
             price: 40,
             currency: "$",
             features: ["Online Store Builder",
@@ -320,7 +320,7 @@ freeTrial: "21 days",
             id: "learning - platform",
             title: "ZionAcademy",
             description: "Online learning management system with course creation, student management, and progress tracking.",
-            icon: <FileText className="h-8 w-8 text-violet -500"/>,
+            icon: <FileText className="h-8 w-8 text-violet -500" />,
             price: 55,
             currency: "$",
             features: ["Course Creation",
@@ -347,7 +347,7 @@ freeTrial: "21 days",
             id: "ai - content - generator",
             title: "ZionAI Writer",
             description: "AI - powered content generation platform for blogs, marketing copy, and creative writing.",
-            icon: <BarChart3 className="h-8 w-8 text-rose -500"/>,
+            icon: <BarChart3 className="h-8 w-8 text-rose -500" />,
             price: 39,
             currency: "$",
             features: ["AI Content Generation",
@@ -374,7 +374,7 @@ freeTrial: "21 days",
             id: "blockchain - wallet",
             title: "ZionWallet",
             description: "Secure cryptocurrency wallet with DeFi integration, staking, and portfolio management.",
-            icon: <Globe className="h-8 w-8 text-emerald -500"/>,
+            icon: <Globe className="h-8 w-8 text-emerald -500" />,
             price: 0,
             currency: "$",
             features: ["Multi - chain Support",
@@ -401,7 +401,7 @@ freeTrial: "21 days",
             id: "quantum - computing",
             title: "ZionQuantum",
             description: "Quantum computing platform for complex problem solving and optimization.",
-            icon: <BarChart3 className="h-8 w-8 text-indigo -500"/>,
+            icon: <BarChart3 className="h-8 w-8 text-indigo -500" />,
             price: 299,
             currency: "$",
             features: ["Quantum Algorithms",
@@ -428,7 +428,7 @@ freeTrial: "21 days",
             id: "iot - platform",
             title: "ZionIoT Hub",
             description: "Internet of Things platform for device management, data collection, and automation.",
-            icon: <Building className="h-8 w-8 text-cyan -500"/>,
+            icon: <Building className="h-8 w-8 text-cyan -500" />,
             price: 45,
             currency: "$",
             features: ["Device Management",
@@ -455,7 +455,7 @@ freeTrial: "21 days",
             id: "cybersecurity - suite",
             title: "ZionShield",
             description: "Comprehensive cybersecurity platform with threat detection, vulnerability scanning, and incident response.",
-            icon: <Shield className="h-8 w-8 text-red -500"/>,
+            icon: <Shield className="h-8 w-8 text-red -500" />,
             price: 89,
             currency: "$",
             features: ["Threat Detection",
@@ -482,7 +482,7 @@ freeTrial: "21 days",
             id: "data - visualization",
             title: "ZionViz",
             description: "Advanced data visualization platform with interactive charts, dashboards, and reporting tools.",
-            icon: <BarChart3 className="h-8 w-8 text-purple -500"/>,
+            icon: <BarChart3 className="h-8 w-8 text-purple -500" />,
             price: 49,
             currency: "$",
             features: ["Interactive Charts",
@@ -509,7 +509,7 @@ freeTrial: "21 days",
             id: "workflow-automation",
             title: "ZionFlow",
             description: "No - code workflow automation platform for business process optimization and task automation.",
-            icon: <Zap className="h-8 w-8 text-yellow-500"/>,
+            icon: <Zap className="h-8 w-8 text-yellow-500" />,
             price: 35,
             currency: "$",
             features: ["Drag & Drop Builder",
@@ -536,7 +536,7 @@ freeTrial: "21 days",
             id: "supply - chain",
             title: "ZionSupply",
             description: "End - to - end supply chain management platform with real - time tracking and optimization.",
-            icon: <Building className="h-8 w-8 text-blue -500"/>,
+            icon: <Building className="h-8 w-8 text-blue -500" />,
             price: 69,
             currency: "$",
             features: ["Inventory Tracking",
@@ -563,7 +563,7 @@ freeTrial: "21 days",
             id: "customer - support",
             title: "ZionSupport",
             description: "AI - powered customer support platform with chatbots, ticket management, and knowledge base.",
-            icon: <MessageSquare className="h-8 w-8 text-green -500"/>,
+            icon: <MessageSquare className="h-8 w-8 text-green -500" />,
             price: 29,
             currency: "$",
             features: ["AI Chatbots",
@@ -619,17 +619,13 @@ freeTrial: "21 days",
     // Cleanup function
   };
 }, []);, []);
-        if(selectedCategory === "All Services") {
-            setFilteredServices(microSAASServices) ;
-        }
+        if(selectedCategory === "All Services") {setFilteredServices(microSAASServices) ;}
         // Filter by search query
-        if(searchQuery.trim () ) {
-            const query = searchQuery.toLowerCase () ;
+        if(searchQuery.trim () ) {const query = searchQuery.toLowerCase () ;
             filtered = filtered.filter(service => service.title.toLowerCase () .includes(query) ||
                 service.description.toLowerCase () .includes(query) ||
                 service.tags.some(tag => tag.toLowerCase () .includes(query) ) ||
-                service.subcategory.toLowerCase () .includes(query) ) ;
-        }
+                service.subcategory.toLowerCase () .includes(query) ) ;}
         // Sort services
         filtered.sort((a, b) => {
             switch(sortBy) {
@@ -647,23 +643,23 @@ freeTrial: "21 days",
         }) ;
         setFilteredServices(filtered) ;
     }, [selectedCategory, selectedPricing, searchQuery, sortBy]) ;
-    const ServiceCard = ({ service }) => (<div className="group relative bg-gradient - to - br from - zion - blue - dark / 50 to - zion - slate - dark / 50 border border-zion - blue - light / 20 rounded-2xl p - 6 hover:border-zion - purple / 50 transition - all duration - 500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion -purple / 20">
+    const ServiceCard = ({service}) => (<div className="group relative bg-gradient - to - br from - zion - blue - dark / 50 to - zion - slate - dark / 50 border border-zion - blue - light / 20 rounded-2xl p - 6 hover:border-zion - purple / 50 transition - all duration - 500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion -purple / 20">
       {/* Featured Badge */}
       {service.featured && (<div className="absolute - top - 3 -right - 3 bg-gradient - to - r from - zion - purple to - zion - cyan text-white text-xs font - bold px-3 py-1 rounded-full">
           Featured
-        </div>) }
+        </div>)}
 
       {/* Service Image */}
       <div className="relative mb-6 overflow-hidden rounded-xl">
-        <img src={service.images[0]} alt={service.title} className="w-full h-48 object - cover group - hover:scale - 110 transition - transform duration -500"/>
-        <div className="absolute inset - 0 bg-gradient - to - t from - black / 60 to -transparent"/>
+        <img src={service.images[0]} alt={service.title} className="w-full h-48 object - cover group - hover:scale - 110 transition - transform duration -500"  />
+        <div className="absolute inset - 0 bg-gradient - to - t from - black / 60 to -transparent" />
         <div className="absolute bottom - 3 left - 3 right -3">
           <div className="flex items - center justify -between">
             <Badge variant="secondary" className="bg-zion - purple / 80 text-white">
               {service.category}
             </Badge>
             <div className="flex items - center space - x-1 text-white">
-              <Star className="w-4 h-4 fill - yellow-400 text-yellow-400"/>
+              <Star className="w-4 h-4 fill - yellow-400 text-yellow-400" />
               <span className="text-sm font -medium">{service.rating}</span>
               <span className="text-xs text-zion - slate -light"> ({service.reviewCount}) </span>
             </div>
@@ -697,7 +693,7 @@ freeTrial: "21 days",
     return matchesCategory && matchesSearch;
   }) ;
 
-  const formatPrice = (price: number, currency: string, model: string) => { /* empty */ }
+  const formatPrice = (props: any) => {/* empty */}
     if(model === 'monthly') return `${currency}${price}/month`;
     if(model === 'yearly') return `${currency}${price}/year`;
     if(model === 'one - time') return `${currency}${price}`;
@@ -734,7 +730,7 @@ freeTrial: "21 days",
         <div className="flex items - center justify - between p - 3 bg-zion - blue / 20 rounded-lg border border-zion - blue -light / 20">
           <div>
             <div className="text-2xl font - bold text-white">
-              {formatPrice(service.zionPrice, service.currency, service.pricingModel) }
+              {formatPrice(service.zionPrice, service.currency, service.pricingModel)}
             </div>
             <div className="text-sm text-zion - slate -light">
               Market: {service.currency}{service.averageMarketPrice}
@@ -752,7 +748,7 @@ freeTrial: "21 days",
           <h4 className="text-sm font - semibold text-zion - cyan mb-2">Key Features</h4>
           <div className="grid grid - cols - 2 gap-1">
             {service.features.slice(0, 4) .map((feature, index) => (<div key={index} className="flex items - center gap-2 text-xs text-zion - slate -light">
-                <CheckCircle className="w-3 h-3 text-zion -cyan"/>
+                <CheckCircle className="w-3 h-3 text-zion -cyan" />
                 <span className="truncate">{feature}</span>
               </div>) ) }
       {/* Service Info */}
@@ -769,7 +765,7 @@ freeTrial: "21 days",
         {/* AI Score */}
         <div className="flex items - center justify -between">
           <div className="flex items - center space - x-2">
-            <Zap className="w-4 h-4 text-zion -cyan"/>
+            <Zap className="w-4 h-4 text-zion -cyan" />
             <span className="text-sm text-zion - slate -light">AI Score:</span>
             <span className="text-zion - cyan font -bold">{service.aiScore}%</span>
           </div>
@@ -808,7 +804,7 @@ freeTrial: "21 days",
           <p className="text-sm font - medium text-white">Benefits:</p>
           <div className="space - y-1">
             {service.benefits.slice(0, 2) .map((benefit, index) => (<div key={index} className="flex items - start space - x-2">
-                <CheckCircle className="w-4 h-4 text-zion - cyan mt-0.5 flex - shrink -0"/>
+                <CheckCircle className="w-4 h-4 text-zion - cyan mt-0.5 flex - shrink -0" />
                 <span className="text-xs text-zion - slate -light">{benefit}</span>
               </div>) ) }
           </div>
@@ -828,13 +824,13 @@ freeTrial: "21 days",
         <div className="flex space - x-3 pt -4">
           <Button asChild className="flex - 1 bg-gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text-white">
             <Link to={service.website} target="_blank" rel="noopener noreferrer">
-              <ExternalLink className="w-4 h-4 mr-2"/>
+              <ExternalLink className="w-4 h-4 mr-2" />
               Learn More
             </Link>
           </Button>
           <Button asChild variant="outline" className="border-zion - cyan text-zion - cyan hover:bg-zion - cyan hover:text-white">
             <a href={`mailto:${service.contactEmail}?subject = Inquiry about ${service.title}`}>
-              <Mail className="w-4 h-4 mr-2"/>
+              <Mail className="w-4 h-4 mr-2" />
               Contact
             </a>
           </Button>
@@ -843,7 +839,7 @@ freeTrial: "21 days",
     </div>) ;
 
   return (<div className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - blue - dark to - zion - slate -dark">
-      <SEO title="Micro SAAS Services - Zion Tech Group" description="Discover innovative micro SAAS services and solutions in AI, IT, and business automation.Transform your business with cutting - edge technology." keywords="micro SAAS, AI services, IT solutions, business automation, Zion Tech Group" canonical="https://ziontechgroup.com / micro - saas - services"/>
+      <SEO title="Micro SAAS Services - Zion Tech Group" description="Discover innovative micro SAAS services and solutions in AI, IT, and business automation.Transform your business with cutting - edge technology." keywords="micro SAAS, AI services, IT solutions, business automation, Zion Tech Group" canonical="https://ziontechgroup.com / micro - saas - services" />
 
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient - to - r from - zion - purple / 20 to - zion - cyan / 20 py-20">
@@ -857,11 +853,11 @@ freeTrial: "21 days",
             our micro SAAS services help you grow without breaking the bank.</p>
           <div className="flex flex - wrap justify - center gap-4">
             <Button className="bg-gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text-white px-8 py-3">
-              <TrendingUp className="h-5 w-5 mr-2"/>
+              <TrendingUp className="h-5 w-5 mr-2" />
               Explore SAAS Solutions
             </Button>
             <Button className="border-zion - cyan text-zion - cyan hover:bg-zion - cyan / 10 px-8 py-3">
-              <TrendingUp className="h-5 w-5 mr-2"/>
+              <TrendingUp className="h-5 w-5 mr-2" />
               Start Free Trial
             </Button>
           </div>
@@ -873,15 +869,15 @@ freeTrial: "21 days",
         <div className="container mx - auto px-4 py-6">
           <div className="flex flex - wrap items - center justify - center gap-8 text-center">
             <div className="flex items - center gap-3">
-              <Phone className="h-5 w-5 text-zion -cyan"/>
+              <Phone className="h-5 w-5 text-zion -cyan" />
               <span className="text-white">+1 302 464 0950</span>
             </div>
             <div className="flex items - center gap-3">
-              <Mail className="h-5 w-5 text-zion -cyan"/>
+              <Mail className="h-5 w-5 text-zion -cyan" />
               <span className="text-white">kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items - center gap-3">
-              <MapPin className="h-5 w-5 text-zion -cyan"/>
+              <MapPin className="h-5 w-5 text-zion -cyan" />
               <span className="text-white">364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
@@ -892,7 +888,7 @@ freeTrial: "21 days",
       <div className="py-8 bg-zion - blue -dark / 50">
         <div className="container mx - auto px-4">
           <div className="flex flex - wrap justify - center gap-3">
-            {categories.map ( (category) => (<Button key={category} onClick={ () => setSelectedCategory(category) } className={`${selectedCategory === category
+            {categories.map ( (category) => (<Button key={category} onClick={() => setSelectedCategory(category)} className={`${selectedCategory === category
                 ? "bg-zion - purple text-white"
                 : "border-zion - cyan text-zion - cyan hover:bg-zion - cyan / 10"}`}>
                 {category}
@@ -927,7 +923,7 @@ freeTrial: "21 days",
                     <p className="text-sm text-zion - slate - light mb-3">{service.details}</p>
                     <div className="grid grid - cols - 2 gap-2 mb-4">
                       {service.features.slice(0, 4) .map((feature, index) => (<div key={index} className="flex items - center text-xs text-zion -cyan">
-                          <CheckCircle className="w-3 h-3 mr-2"/>
+                          <CheckCircle className="w-3 h-3 mr-2" />
                           {feature}
                         </div>) ) }
                     </div>
@@ -936,7 +932,7 @@ freeTrial: "21 days",
                       <div className="space - y-1">
                         {Object.entries(service.pricing) .map(([plan, price]) => (<div key={plan} className="flex justify - between text-xs">
                             <span className="text-zion - slate -light capitalize">{plan}:</span>
-                            <span className="text-zion - cyan font -semibold">{String(price) }</span>
+                            <span className="text-zion - cyan font -semibold">{String(price)}</span>
                           </div>) ) }
                       </div>
                     </div>
@@ -945,7 +941,7 @@ freeTrial: "21 days",
                       <span className="text-zion - cyan font -semibold">{service.freeTrial}</span>
                     </div>
                     <div className="flex items - center justify - center gap-1 mb-3">
-                      {[...Array(5) ].map((_, i) => (<Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill - current' : 'text-zion - slate - light'}`}/>) ) }
+                      {[...Array(5) ].map((_, i) => (<Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill - current' : 'text-zion - slate - light'}`} />) ) }
                       <span className="text-sm text-zion - slate - light ml-2"> ({service.reviewCount}) </span>
                     </div>
                   </div>
@@ -961,7 +957,7 @@ freeTrial: "21 days",
                 <CardFooter className="pt -0">
                   <Button asChild className="w-full bg-gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text-white group - hover:shadow-lg group - hover:shadow-zion - purple / 25 transition -all">
                     <a href={service.link} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="h-4 w-4 mr-2"/>
+                      <ExternalLink className="h-4 w-4 mr-2" />
                       Start Free Trial
                     </a>
                   </Button>
@@ -982,11 +978,11 @@ freeTrial: "21 days",
             improve productivity, and drive growth.No long - term contracts, cancel time.</p>
           <div className="flex flex - wrap justify - center gap-4">
             <Button className="bg-gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text-white px-8 py-3">
-              <TrendingUp className="h-5 w-5 mr-2"/>
+              <TrendingUp className="h-5 w-5 mr-2" />
               Start Free Trial
             </Button>
             <Button className="border-zion - cyan text-zion - cyan hover:bg-zion - cyan / 10 px-8 py-3">
-              <Phone className="h-5 w-5 mr-2"/>
+              <Phone className="h-5 w-5 mr-2" />
               Call + 1 302 464 0950
             </Button>
           </div>
@@ -994,12 +990,18 @@ freeTrial: "21 days",
       </div>
 </div>)}
 
-export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
+export {MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard};
 
-export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
+export {MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard};
 
-export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
+export {MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard};
 
-export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
+export {MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard};
 
-export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
+export {MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard};
+
+</div>
+</CardContent>
+</Card>
+</div>
+</div>

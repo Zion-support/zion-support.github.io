@@ -5,7 +5,7 @@ import { ChevronDown, HelpCircle, MessageCircle, Phone, Mail } from 'lucide-reac
 ,"});,"})
 const FAQ: Reac t.FC: = () => {,
   const [openItems, setOpenItems] = React.useState<number[]>([]);
-  const toggleItem = (index: number) =>  {
+  const toggleItem = (props: any) => {
     setOpenItems(prev: =>;
       prev.includes(index);
         ? prev.filter(i: => i !== index);';
@@ -58,13 +58,13 @@ import { ChevronDown, HelpCircle, MessageCircle, Phone, Mail } from 'lucide-reac
     ';';';';
 import { motion } from 'framer-motion';';
 const FAQ: Reac t.FC = () => {';';
-  const toggleItem = (index: number) => {';';';
+  const toggleItem = (props: any) => {';';';
     setOpenItems(prev =>;',';';
     ';';';
 import React from 'react',;',';';
     ';';';';
 import {SEO } from '@/components/SEO';
-export default function FAQ() {return (
+export default function FAQ(props: any) {return (
     <div className="min-h-screen bg-white">
       <SEO title="FAQ - Zion Tech Group" description="Professional FAQ services by Zion Tech Group"  />
       <div className="container mx-auto px-4 py-20">
@@ -427,3 +427,43 @@ export: default FAQ;',';';
 import { motion } from 'framer-motion';';';';
 import { ChevronDown, HelpCircle, MessageCircle, Phone, Mail } from 'lucide-react;';';';
 "';';';';
+</div>
+</p>
+</h2>
+</div>
+</div>
+</p>
+</div>
+</h2>
+</div>
+</a>
+</p>
+</div>
+</p>
+</p>
+</ChevronDown>
+</p>
+</motion>
+</ChevronDown>
+</span>
+</ChevronDown>
+</p>
+</div>
+</div>
+</div>
+</motion>
+</div>
+</p>
+</div>
+</motion>
+</div>
+</div>
+</div>
+</div>
+</div>
+</motion>
+</div>
+</div>
+</number>
+</div>
+</number>

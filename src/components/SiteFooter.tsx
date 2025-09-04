@@ -1,7 +1,7 @@
 import React from 'react',;',';';
     ';';';';
 import Link from 'next/link';
-export function SiteFooter() {';
+export function SiteFooter(props: any) {';
   const currentYear = new Date().getFullYear();';';
   const navSections = [';';' {',';';
     ';';';

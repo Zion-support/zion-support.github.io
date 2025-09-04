@@ -3,7 +3,7 @@ export const WebsiteAnalyzer: Reac t.FC = () : JSX.Element => {
 export default WebsiteAnalyzer;
 import { CheckCircle, import { LinkChecker, LinkInfo, PageInfo } from '../utils / linkChecker';
 
-export default function Page() {
+export default function Page(props: any) {
  catch(error) {
 `
           // console.error(`Error analyzing ${page}:`, error)}
@@ -92,7 +92,7 @@ export default function Page() {
             <div className="w-full bg-gray-200 rounded-full h-2">
               <div "
                 className="bg-blue-600 h-2 rounded-full transition-all duration-300"`
-                style={{ width: `${progress}%` }}
+                style="{{{ width: `${progress}}"%` }}
                />
             </div>
             {currentPage && ("
@@ -220,3 +220,5 @@ export default function Page() {
       </div>
     </div>) };
 export default WebsiteAnalyzer;'"`
+
+</div>

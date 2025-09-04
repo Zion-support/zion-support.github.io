@@ -1,11 +1,12 @@
-import { Helmet } from 'react-helmet-async';
-const AIAutonomousEducationProfessor = () => {
+import React from 'react';
+import {Helmet} from 'react-helmet-async';
+const AIAutonomousEducationProfessor = (props: any) => {
     return (<>
       <Helmet>
         <title>AI Autonomous Education Professor | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous education professor that provides personalized learning experiences, intelligent tutoring, and adaptive curriculum design with 24/7 availability."/>
-        <meta name="keywords" content="AI education, autonomous professor, AI tutoring, personalized learning, adaptive curriculum, AI teaching"/>
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-education-professor"/>
+        <meta name="description" content="Revolutionary AI autonomous education professor that provides personalized learning experiences, intelligent tutoring, and adaptive curriculum design with 24/7 availability."  />
+        <meta name="keywords" content="AI education, autonomous professor, AI tutoring, personalized learning, adaptive curriculum, AI teaching"  />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-education-professor"  />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">

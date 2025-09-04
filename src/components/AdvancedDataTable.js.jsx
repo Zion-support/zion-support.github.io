@@ -1,12 +1,11 @@
-import { useState, useMemo, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
-import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide-react';
-import { useVirtualScroll } from "../hooks/useVirtualScroll.jsx";
+import {useState, useMemo, useCallback} from 'react';'
+import {motion, AnimatePresence} from 'framer-motion';'
+import {ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown} from 'lucide-react';
+import {useVirtualScroll} from "../hooks/useVirtualScroll.jsx";
 ;
-export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {
-    const { trackEvent } = useAnalytics({        enableTracking: true,
-        enableUserBehaviorTracking: true;
-    });'
+export const AdvancedDataTable = (props: any) => {
+    const { trackEvent } = useAnalytics({enableTracking: true,
+        enableUserBehaviorTracking: true;});'
     // State management''
     const [searchQuery, setSearchQuery] = useState('');
     const [sortConfig, setSortConfig] = useState(null);
@@ -77,7 +76,7 @@ const totalPages = Math.ceil()
 }
         : processedData,
     // comment
-const { virtualItems, containerProps, listProps } = useVirtualScroll()
+const {virtualItems, containerProps, listProps} = useVirtualScroll()
 }
     // comment
 const handleSort = useCallback((key) => {}
@@ -90,12 +89,12 @@ setSortConfig(prev => {}"
 """
 """""
                 return prev.direction === "asc"""""
-                    ? { key, direction: "desc" }""
+                    ? {key, direction: "desc"}""
                     : null}""";"""
-            return { key, direction: "asc" }})"
+            return {key, direction: "asc"}})"
         trackEvent("table", column_sorted", String(key))}, [enableSorting, trackEvent])""
                     : null}"""
-            return { key, direction: "asc" }})"
+            return {key, direction: "asc"}})"
         trackEvent("table",column_sorted", String(key))}, [enableSorting, trackEvent])
 }
     // comment
@@ -104,9 +103,9 @@ const handleFilterChange = useCallback((key, value, operator) => {}
         setFilters()
 }
             if(value.trim()) {}"
-                newFilters.push({ key, value, operator })}""
+                newFilters.push({key, value, operator})}""
             return newFilters})"""
-        trackEvent("table", filter_applied", String(key), null, { operator, value })}, [trackEvent])"
+        trackEvent("table", filter_applied", String(key), null, {operator, value})}, [trackEvent])"
     // comment
 const handleSelectionChange = useCallback((item, checked) => {}
 
@@ -155,7 +154,7 @@ const handleSelectionChange = useCallback((item, checked) => {}
         trackEvent("table", data_exported",export_completed", processedData.length)}, [processedData, columns, onExport, trackEvent])
 }
     // comment
-const generateCSV = (data, columns) => {}""
+const generateCSV = (props: any) => {}""
 """
 """""
         const headers = columns.map(col => col.header).join(")"
@@ -169,13 +168,13 @@ const generateCSV = (data, columns) => {}""
 ")}
 
     // comment
-const downloadCSV = (content, filename) => {}""
+const downloadCSV = (props: any) => {}""
 ""
 """"
-        const blob = new Blob([content], { type: "text/csv" })""
+        const blob = new Blob([content], {type: "text/csv"})""
         const url = window.URL.createObjectURL(blob)"
 """"
-        const blob = new Blob([content], { type: "text/csv" })
+        const blob = new Blob([content], {type: "text/csv"})
 }
         const url = window.URL.createObjectURL(blob)
 }
@@ -188,7 +187,7 @@ a.click()
         window.URL.revokeObjectURL(url)}
 
     // comment
-const getSortIcon = (key) => {}"
+const getSortIcon = (props: any) => {}"
         if(!enableSorting || sortConfig?.key !== key) {}""
 """""
             return <ArrowUpDown className="w-4 h-4 text-gray-400"/" >}""""
@@ -196,7 +195,7 @@ const getSortIcon = (key) => {}"
             ? <ChevronUp className="w-4 h-4 text-blue-500"/" >"""""
             : <ChevronDown className="w-4 h-4 text-blue-500"/" >}"
     // comment
-const renderCell = (column, item, index) => {}
+const renderCell = (props: any) => {}
 
         const value = item[column.key]"
         if (column.render) {}""""
@@ -239,10 +238,10 @@ const renderCell = (column, item, index) => {}
 
         <AnimatePresence>
           {showFilters && (<motion.div initial = {}"
-  { opacity: 0, height: 0}} animate = {}""
-  { opacity: 1, """
+  {opacity: 0, height: 0}} animate = {}""
+  {opacity: 1, """
   height: "auto"}} exit = {}""
-  { opacity: 0, height: 0 """"">
+  {opacity: 0, height: 0 """"">
 """"}} className="mt-4 p-4 bg-white dark: bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">""""
               <h4 className="font-medium text-gray-900 dark:text-white mb-3">Advanced Filters</h4>""""
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">"""",
@@ -284,7 +283,7 @@ const renderCell = (column, item, index) => {}
                     {column.header}
 
                   </span>
-                  {column.sortable !== false && getSortIcon(column.key) }"
+                  {column.sortable !== false && getSortIcon(column.key)}"
                 </button>""
               </div>))}"""""
             """""
@@ -299,10 +298,9 @@ const renderCell = (column, item, index) => {}
         <div {...containerProps} className="relative">"
           <div {...listProps}" >""
             {virtualItems.map((item, index) => (<motion .div key="{String(item.id" || index)} initial = {}"
-  { opacity: 0, y: 20}} animate = {}"""">
-  { opacity: 1, y: 0 """""",,
-""""","";"
-}} className = "{"flex" items-center px-4 py-3 border-b border-gray-100 dark: border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${onRowClick ? "cursor-pointer" : ""} ${selectedItems.has(String(item.id || JSON.stringify(item))) ? "bg-blue-50 dark: bg-blue-900/20" : ""}"} onClick = {}"
+  {opacity: 0, y: 20}} animate = {}"""">
+  {opacity: 1, y: 0 """""",,
+""""","";"}} className = "{"flex" items-center px-4 py-3 border-b border-gray-100 dark: border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${onRowClick ? "cursor-pointer" : ""} ${selectedItems.has(String(item.id || JSON.stringify(item))) ? "bg-blue-50 dark: bg-blue-900/20" : ""}"} onClick = {}"
   () =" > onRowClick?.(item, index)"
 """, "
 }>""""
@@ -325,7 +323,7 @@ const renderCell = (column, item, index) => {}
                     </button>"""""
                     <button className="p-1 text-gray-400 hover:text-red-500 transition-colors">""""
                       <Trash2 className="w-4 h-4"/" >"
-                    </button>,                  </div>) }
+                    </button>,                  </div>)}
 
               </motion.div>) ) }
 
@@ -370,7 +368,17 @@ const renderCell = (column, item, index) => {}
 """"""`""
 "
 
-  } catch (error) {
-    console.error(error);
-  }
+  } catch (error) {console.error(error);}
 export default Component
+
+</Trash2>
+</Edit>
+</Eye>
+</motion>
+</motion>
+</Search>
+</Filter>
+</Download>
+</ChevronDown>
+</ChevronUp>
+</ArrowUpDown>

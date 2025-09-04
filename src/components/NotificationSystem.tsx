@@ -1,6 +1,7 @@
+import React from 'react';
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page() {
+export default function Page(props: any) {
 > {
 
   maxNotifications?: number;
@@ -36,9 +37,9 @@ enableSound: tru e,;
     maxNotifications,
     defaultDuration
   }) ;
-  const [showSettings, setShowSettings] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-  const [unreadCount, setUnreadCount] = useState(0);
+  const [showSettings, setShowSettings] = useState<any>(false);
+  const [isOpen, setIsOpen] = useState<any>(false);
+  const [unreadCount, setUnreadCount] = useState<any>(0);
   
 // Initialize audio for notification sounds
 default:'
@@ -370,3 +371,19 @@ export
 };
 '"`
 ;,"});,})";
+
+</Notification>
+</Notification>
+</Notification>
+</Notification>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</any>
+</any>
+</any>
+</NotificationSettings>
+</Notification>
+</NotificationSystemProps>

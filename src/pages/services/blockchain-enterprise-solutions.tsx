@@ -2,12 +2,12 @@ import React from 'react';
 import { Head } from 'next/head';
 import { Link, Shield, Zap, BarChart3, CheckCircle, Phone } from 'lucide-react';
 
-export default function BlockchainEnterpriseSolutions() {
+export default function BlockchainEnterpriseSolutions(props: any) {
   return (
     <>
       <Head>
         <title>Blockchain Enterprise Solutions - Zion Tech Group</title>
-        <meta name="description" content="Enterprise-grade blockchain solutions for supply chain, finance, and data security. Reduce costs by 30% and increase transparency."  />
+        <meta name="description" content="Enterprise-grade blockchain solutions for supply chain, finance, and data security. Reduce costs by 30% and increase transparency."   />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
@@ -34,7 +34,7 @@ export default function BlockchainEnterpriseSolutions() {
             <div className="grid md: gri d-cols-2 lg: gri d-cols-4 gap-8">
               <div className="bg-gray-50 p-8 rounded-xl">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center mb-6">
-                  <Link className="w-6 h-6 text-white"  />
+                  <Link className="w-6 h-6 text-white"   />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Supply Chain</h3>
                 <p className="text-gray-600 mb-4">Transparent and traceable supply chain management</p>

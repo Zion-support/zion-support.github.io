@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import { Cloud, Server, Database, Shield, GitFork, ArrowRight, CheckCircle, Monitor } from 'lucide-react';
-const CloudDevOpsServices = () => {
+import {Link} from 'react-router-dom';
+import {Cloud, Server, Database, Shield, GitFork, ArrowRight, CheckCircle, Monitor} from 'lucide-react';
+const CloudDevOpsServices = (props: any) => {
     const cloudServices = [
         {
             title: "Cloud Migration & Strategy",
@@ -14,8 +14,7 @@ const CloudDevOpsServices = () => {
                 "Security Assessment"
             ]
         },
-        {
-            title: "DevOps Implementation",
+        {title: "DevOps Implementation",
             description: "Streamline development and operations with modern DevOps practices and tools.",
             icon: GitFork,
             features: [
@@ -24,10 +23,8 @@ const CloudDevOpsServices = () => {
                 "Automated Testing",
                 "Deployment Automation",
                 "Monitoring & Alerting"
-            ]
-        },
-        {
-            title: "Container Orchestration",
+            ]},
+        {title: "Container Orchestration",
             description: "Manage and scale containerized applications with Kubernetes and Docker.",
             icon: Server,
             features: [
@@ -36,10 +33,8 @@ const CloudDevOpsServices = () => {
                 "Service Mesh",
                 "Auto-scaling",
                 "Load Balancing"
-            ]
-        },
-        {
-            title: "Database Management",
+            ]},
+        {title: "Database Management",
             description: "Optimize and manage databases in cloud environments for performance and reliability.",
             icon: Database,
             features: [
@@ -48,10 +43,8 @@ const CloudDevOpsServices = () => {
                 "Backup & Recovery",
                 "High Availability",
                 "Data Security"
-            ]
-        },
-        {
-            title: "Security & Compliance",
+            ]},
+        {title: "Security & Compliance",
             description: "Ensure cloud security and compliance with industry standards and best practices.",
             icon: Shield,
             features: [
@@ -60,10 +53,8 @@ const CloudDevOpsServices = () => {
                 "Data Encryption",
                 "Compliance Auditing",
                 "Threat Detection"
-            ]
-        },
-        {
-            title: "Monitoring & Observability",
+            ]},
+        {title: "Monitoring & Observability",
             description: "Comprehensive monitoring and observability solutions for cloud infrastructure.",
             icon: Monitor,
             features: [
@@ -72,8 +63,7 @@ const CloudDevOpsServices = () => {
                 "Performance Metrics",
                 "Alert Management",
                 "Troubleshooting Tools"
-            ]
-        }
+            ]}
     ];
     const benefits = [
         "Faster time to market with automated deployments",
@@ -92,21 +82,15 @@ const CloudDevOpsServices = () => {
         "ELK Stack"
     ];
     const cloudPlatforms = [
-        {
-            name: "Amazon Web Services",
+        {name: "Amazon Web Services",
             description: "Leading cloud platform with comprehensive services",
-            features: ["EC2, S3, RDS", "Lambda Functions", "CloudFormation", "CloudWatch"]
-        },
-        {
-            name: "Microsoft Azure",
+            features: ["EC2, S3, RDS", "Lambda Functions", "CloudFormation", "CloudWatch"]},
+        {name: "Microsoft Azure",
             description: "Enterprise-grade cloud solutions for Windows environments",
-            features: ["Virtual Machines", "Azure DevOps", "Azure Functions", "Application Insights"]
-        },
-        {
-            name: "Google Cloud Platform",
+            features: ["Virtual Machines", "Azure DevOps", "Azure Functions", "Application Insights"]},
+        {name: "Google Cloud Platform",
             description: "Innovative cloud services with AI and ML capabilities",
-            features: ["Compute Engine", "Cloud Run", "BigQuery", "Cloud Build"]
-        }
+            features: ["Compute Engine", "Cloud Run", "BigQuery", "Cloud Build"]}
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
@@ -147,7 +131,7 @@ const CloudDevOpsServices = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {cloudServices.map((service, index) => (<div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-slate-100">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
-                  <service.icon className="w-8 h-8 text-white"/>
+                  <service .icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">
                   {service.title}
@@ -157,13 +141,13 @@ const CloudDevOpsServices = () => {
                 </p>
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-slate-600">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"/>
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                       {feature}
                     </li>))}
                 </ul>
                 <Link to="/contact" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors duration-200">
                   Learn More
-                  <ArrowRight className="w-4 h-4 ml-2"/>
+                  <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>))}
           </div>
@@ -193,7 +177,7 @@ const CloudDevOpsServices = () => {
                 </p>
                 <ul className="space-y-2">
                   {platform.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-slate-600">
-                      <CheckCircle className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0"/>
+                      <CheckCircle className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" />
                       {feature}
                     </li>))}
                 </ul>
@@ -217,7 +201,7 @@ const CloudDevOpsServices = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (<div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-8 h-8 text-white"/>
+                  <CheckCircle className="w-8 h-8 text-white" />
                 </div>
                 <p className="text-lg text-slate-700">{benefit}</p>
               </div>))}

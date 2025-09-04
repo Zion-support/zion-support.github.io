@@ -1,5 +1,6 @@
-export default function Page() {
+export default function Page(props: any) {
 interface ChatAssistantProps {
+
   children?: React.ReactNode;
   enabled?: boolean;
   position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
@@ -9,6 +10,7 @@ interface ChatAssistantProps {
   enableVoice?: boolean;
   enableFileUpload?: boolean;
   enableSuggestions?: boolean;
+
 }
 
 export const ChatAssistant: Reac t.FC<ChatAssistantProps> = ({
@@ -21,7 +23,7 @@ export const ChatAssistant: Reac t.FC<ChatAssistantProps> = ({
   enableFileUpload = true,
   enableSuggestions = true
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<any>(false);
   const [messages, setMessages] = useState<Message[]>([{
       id: '1',
       text: 'Hello! I\'m your AI assistant.How can I help you today?',
@@ -29,13 +31,13 @@ export const ChatAssistant: Reac t.FC<ChatAssistantProps> = ({
       timestamp: new Date()
     }
   ]);
-  const [inputValue, setInputValue] = useState('');
-  const [isTyping, setIsTyping] = useState(false);
-  const [isListening, setIsListening] = useState(false);
+  const [inputValue, setInputValue] = useState<any>('');
+  const [isTyping, setIsTyping] = useState<any>(false);
+  const [isListening, setIsListening] = useState<any>(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const scrollToBottom = () => {
+  const scrollToBottom = (props: any) => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -91,14 +93,14 @@ export const ChatAssistant: Reac t.FC<ChatAssistantProps> = ({
     return responses[Math.floor(Math.random() * responses.length)];
   };
 
-  const handleKeyPress = (e: Reac t.KeyboardEvent) => {
+  const handleKeyPress = (props: any) => {
     if(e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       handleSendMessage();
     }
   };
 
-  const toggleVoice = () => {
+  const toggleVoice = (props: any) => {
     setIsListening(!isListening);
     // Voice functionality would be implemented here
   };
@@ -175,8 +177,8 @@ export const ChatAssistant: Reac t.FC<ChatAssistantProps> = ({
                   <div className="bg-white/10 text-gray-100 rounded-lg p-3">
                     <div className="flex space-x-1">
                       <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="{{{ animationDelay: '0.1s'}}"}></div>
+                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="{{{ animationDelay: '0.2s'}}"}></div>
                     </div>
                   </div>
                 </div>
@@ -242,3 +244,14 @@ export const ChatAssistant: Reac t.FC<ChatAssistantProps> = ({
 };
 
 export default ChatAssistant;
+
+</motion>
+</motion>
+</HTMLInputElement>
+</HTMLDivElement>
+</any>
+</any>
+</any>
+</Message>
+</any>
+</ChatAssistantProps>

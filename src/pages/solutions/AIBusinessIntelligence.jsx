@@ -1,5 +1,5 @@
-import { Brain, TrendingUp, Users, Globe, Cpu, Lightbulb, BarChart3, PieChart, Activity, Search } from 'lucide-react';
-const AIBusinessIntelligence = () => {
+import {Brain, TrendingUp, Users, Globe, Cpu, Lightbulb, BarChart3, PieChart, Activity, Search} from 'lucide-react';
+const AIBusinessIntelligence = (props: any) => {
     const biFeatures = [
         {
             icon: Brain,
@@ -7,62 +7,44 @@ const AIBusinessIntelligence = () => {
             description: "Intelligent data analysis and pattern recognition",
             features: ["Predictive analytics", "Machine learning insights", "Natural language queries", "Automated reporting"]
         },
-        {
-            icon: BarChart3,
+        {icon: BarChart3,
             title: "Advanced Visualization",
             description: "Interactive charts and dashboards for data insights",
-            features: ["Real-time dashboards", "Custom visualizations", "Interactive charts", "Mobile-responsive views"]
-        },
-        {
-            icon: Search,
+            features: ["Real-time dashboards", "Custom visualizations", "Interactive charts", "Mobile-responsive views"]},
+        {icon: Search,
             title: "Data Discovery",
             description: "Intelligent data exploration and insights discovery",
-            features: ["Data mining", "Trend analysis", "Anomaly detection", "Correlation discovery"]
-        },
-        {
-            icon: Activity,
+            features: ["Data mining", "Trend analysis", "Anomaly detection", "Correlation discovery"]},
+        {icon: Activity,
             title: "Real-time Monitoring",
             description: "Live monitoring and alerting for business metrics",
-            features: ["Live data feeds", "Instant alerts", "Performance tracking", "KPI monitoring"]
-        }
+            features: ["Live data feeds", "Instant alerts", "Performance tracking", "KPI monitoring"]}
     ];
     const biSolutions = [
-        {
-            title: "Sales Analytics",
+        {title: "Sales Analytics",
             description: "Comprehensive sales performance and forecasting",
             icon: TrendingUp,
-            capabilities: ["Sales forecasting", "Performance tracking", "Pipeline analysis", "Revenue optimization"]
-        },
-        {
-            title: "Customer Analytics",
+            capabilities: ["Sales forecasting", "Performance tracking", "Pipeline analysis", "Revenue optimization"]},
+        {title: "Customer Analytics",
             description: "Deep insights into customer behavior and preferences",
             icon: Users,
-            capabilities: ["Customer segmentation", "Behavior analysis", "Lifetime value", "Churn prediction"]
-        },
-        {
-            title: "Financial Analytics",
+            capabilities: ["Customer segmentation", "Behavior analysis", "Lifetime value", "Churn prediction"]},
+        {title: "Financial Analytics",
             description: "Financial performance and risk analysis",
             icon: PieChart,
-            capabilities: ["Financial reporting", "Risk assessment", "Budget analysis", "Cost optimization"]
-        },
-        {
-            title: "Operational Analytics",
+            capabilities: ["Financial reporting", "Risk assessment", "Budget analysis", "Cost optimization"]},
+        {title: "Operational Analytics",
             description: "Operational efficiency and process optimization",
             icon: Cpu,
-            capabilities: ["Process optimization", "Efficiency metrics", "Resource allocation", "Performance monitoring"]
-        },
-        {
-            title: "Market Analytics",
+            capabilities: ["Process optimization", "Efficiency metrics", "Resource allocation", "Performance monitoring"]},
+        {title: "Market Analytics",
             description: "Market trends and competitive intelligence",
             icon: Globe,
-            capabilities: ["Market research", "Competitive analysis", "Trend forecasting", "Opportunity identification"]
-        },
-        {
-            title: "Predictive Analytics",
+            capabilities: ["Market research", "Competitive analysis", "Trend forecasting", "Opportunity identification"]},
+        {title: "Predictive Analytics",
             description: "Future-focused insights and forecasting",
             icon: Lightbulb,
-            capabilities: ["Trend prediction", "Risk forecasting", "Opportunity identification", "Scenario planning"]
-        }
+            capabilities: ["Trend prediction", "Risk forecasting", "Opportunity identification", "Scenario planning"]}
     ];
     const benefits = [
         "Data-driven decision making across all business areas",
@@ -73,36 +55,24 @@ const AIBusinessIntelligence = () => {
         "Enhanced customer understanding and engagement"
     ];
     const implementation = [
-        {
-            phase: "Data Assessment",
+        {phase: "Data Assessment",
             description: "Evaluate current data sources and quality",
-            duration: "2-3 weeks"
-        },
-        {
-            phase: "BI Strategy",
+            duration: "2-3 weeks"},
+        {phase: "BI Strategy",
             description: "Define business intelligence goals and requirements",
-            duration: "3-4 weeks"
-        },
-        {
-            phase: "Data Integration",
+            duration: "3-4 weeks"},
+        {phase: "Data Integration",
             description: "Connect and integrate data sources",
-            duration: "6-10 weeks"
-        },
-        {
-            phase: "AI Model Development",
+            duration: "6-10 weeks"},
+        {phase: "AI Model Development",
             description: "Build and train AI models for analytics",
-            duration: "8-12 weeks"
-        },
-        {
-            phase: "Dashboard Development",
+            duration: "8-12 weeks"},
+        {phase: "Dashboard Development",
             description: "Create interactive dashboards and reports",
-            duration: "6-8 weeks"
-        },
-        {
-            phase: "Deployment & Training",
+            duration: "6-8 weeks"},
+        {phase: "Deployment & Training",
             description: "Deploy system and train users",
-            duration: "2-4 weeks"
-        }
+            duration: "2-4 weeks"}
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -110,7 +80,7 @@ const AIBusinessIntelligence = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-violet-500/10 text-violet-400 rounded-full text-sm font-medium mb-6">
-              <BarChart3 className="w-4 h-4 mr-2"/>
+              <BarChart3 className="w-4 h-4 mr-2" />
               AI BI Solution
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -149,7 +119,7 @@ const AIBusinessIntelligence = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {biFeatures.map((feature, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-violet-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-white"/>
+                  <feature .icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -180,7 +150,7 @@ const AIBusinessIntelligence = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {biSolutions.map((solution, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-violet-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <solution.icon className="w-8 h-8 text-white"/>
+                  <solution .icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{solution.title}</h3>
                 <p className="text-gray-300 mb-4">{solution.description}</p>
@@ -216,7 +186,7 @@ const AIBusinessIntelligence = () => {
             </div>
             <div className="bg-gradient-to-br from-violet-500/20 to-purple-500/20 rounded-2xl p-8 border border-violet-500/30">
               <div className="text-center">
-                <Lightbulb className="w-24 h-24 text-violet-400 mx-auto mb-4"/>
+                <Lightbulb className="w-24 h-24 text-violet-400 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-2">Data Intelligence</h3>
                 <p className="text-gray-300 mb-6">
                   Transform your data into intelligent insights that drive 

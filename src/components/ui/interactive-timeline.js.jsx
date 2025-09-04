@@ -1,9 +1,9 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence, useScroll } from 'framer-motion';
-import { Calendar, Clock, CheckCircle, Circle, ArrowRight, Play, Pause, RotateCcw, ZoomIn, ZoomOut, Share2, Download, Star, Award, Users, TrendingUp, Zap, Shield, Globe, Rocket, Filter, X } from 'lucide-react';
-import { Button } from "button.tsx";
-import { Badge } from "badge.tsx";
-export function InteractiveTimeline({ enabled = true, events, autoPlay = false, showProgress = true, onEventClick, onStatusChange, className = "" }) {
+import React, {useState, useRef, useEffect, useCallback} from 'react';
+import {motion, AnimatePresence, useScroll} from 'framer-motion';
+import {Calendar, Clock, CheckCircle, Circle, ArrowRight, Play, Pause, RotateCcw, ZoomIn, ZoomOut, Share2, Download, Star, Award, Users, TrendingUp, Zap, Shield, Globe, Rocket, Filter, X} from 'lucide-react';
+import {Button} from "button.tsx";
+import {Badge} from "badge.tsx";
+export function InteractiveTimeline(props: any) {
     const [currentEventIndex, setCurrentEventIndex] = useState(0);
     const [isPlaying, setIsPlaying] = useState(autoPlay);
     const [playbackSpeed, setPlaybackSpeed] = useState(1);
@@ -18,13 +18,10 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
     const [viewMode, setViewMode] = useState('timeline');
     const [zoomLevel, setZoomLevel] = useState(1);
     const timelineRef = useRef(null);
-    const { scrollYProgress: _scrollYProgress } = useScroll({
-        target: timelineRef,
-        offset["start end", "end start"];
-    });
+    const {scrollYProgress: _scrollYProgress} = useScroll({target: timelineRef,
+        offset["start end", "end start"];});
     // Filter events based on current filters
-    const filteredEvents = events.filter(event => {
-        const matchesPriority = filters.priority.length === 0 || filters.priority.includes(event.priority);
+    const filteredEvents = events.filter(event => {const matchesPriority = filters.priority.length === 0 || filters.priority.includes(event.priority);
         return matchesStatus && matchesCategory && matchesPriority});
     // Auto-play functionality
     useEffect(() => {
@@ -39,28 +36,26 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                 return next})}, 3000 / playbackSpeed);
         return () => clearInterval(interval)}, [isPlaying, filteredEvents.length, playbackSpeed]);
     // Handle event selection
-    const handleEventClick = useCallback((event) => {
-        setSelectedEvent(event);
+    const handleEventClick = useCallback((event) => {setSelectedEvent(event);
         onEventClick?.(event)}, [onEventClick]);
     // Handle status change
-    const handleStatusChange = useCallback((eventId, newStatus) => {
-        onStatusChange?.(eventId, newStatus)}, [onStatusChange]);
+    const handleStatusChange = useCallback((eventId, newStatus) => {onStatusChange?.(eventId, newStatus)}, [onStatusChange]);
     // Get status icon and color
-    const getStatusIcon = (status) => {
+    const getStatusIcon = (props: any) => {
         switch (status) {
             case 'completed':
                 return { icon: CheckCircle, color: 'text-green-400', bgColor: 'bg-green-400/20' };
             case 'in-progress':
-                return { icon: Clock, color: 'text-yellow-400', bgColor: 'bg-yellow-400/20' };
+                return {icon: Clock, color: 'text-yellow-400', bgColor: 'bg-yellow-400/20'};
             case 'upcoming':
-                return { icon: Circle, color: 'text-zinc-400', bgColor: 'bg-zinc-400/20' };
+                return {icon: Circle, color: 'text-zinc-400', bgColor: 'bg-zinc-400/20'};
             case 'milestone':
-                return { icon: Star, color: 'text-purple-400', bgColor: 'bg-purple-400/20' };
+                return {icon: Star, color: 'text-purple-400', bgColor: 'bg-purple-400/20'};
             default:
-                return { icon: Circle, color: 'text-zinc-400', bgColor: 'bg-zinc-400/20' }}
+                return {icon: Circle, color: 'text-zinc-400', bgColor: 'bg-zinc-400/20'}}
     };
     // Get priority color
-    const getPriorityColor = (priority) => {
+    const getPriorityColor = (props: any) => {
         switch (priority) {
             case 'critical':
                 return 'border-red-500/50 bg-red-500/10';
@@ -74,7 +69,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                 return 'border-zinc-500/50 bg-zinc-500/10'}
     };
     // Get category icon
-    const getCategoryIcon = (category) => {
+    const getCategoryIcon = (props: any) => {
         const iconMap = {
   'AI & ML': Zap,
             'Cybersecurity': Shield,
@@ -88,11 +83,9 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 };
         return iconMap[category] || Calendar};
     // Toggle play/pause
-    const togglePlayback = useCallback(() => {
-        setIsPlaying(!isPlaying)}, [isPlaying]);
+    const togglePlayback = useCallback(() => {setIsPlaying(!isPlaying)}, [isPlaying]);
     // Reset timeline
-    const resetTimeline = useCallback(() => {
-        setCurrentEventIndex(0);
+    const resetTimeline = useCallback(() => {setCurrentEventIndex(0);
         setIsPlaying(false)}, []);
     // Export timeline
     const exportTimeline = useCallback(() => {
@@ -111,8 +104,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                 text: 'Check out our project timeline',
                 url: window.location.href
             })}
-        else {
-            navigator.clipboard.writeText(window.location.href)}
+        else {navigator.clipboard.writeText(window.location.href)}
     }, []);
     if (!enabled || filteredEvents.length === 0)
         return null;
@@ -137,11 +129,11 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
           {/* Playback Controls */}
           <div className="flex items-center gap-2 bg-zion-blue/20 rounded-lg p-1">
             <Button size="sm" variant="ghost" onClick={togglePlayback} className="text-zinc-400 hover:text-white p-2">
-              {isPlaying ? <Pause className="w-4 h-4"/> : <Play className="w-4 h-4"/>}
+              {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
             </Button>
             
             <Button size="sm" variant="ghost" onClick={resetTimeline} className="text-zinc-400 hover:text-white p-2">
-              <RotateCcw className="w-4 h-4"/>
+              <RotateCcw className="w-4 h-4" />
             </Button>
             
             <select value={playbackSpeed} onChange={(e) => setPlaybackSpeed(Number(e.target.value))} className="bg-transparent text-zinc-300 text-xs border-none focus:outline-none">
@@ -154,31 +146,25 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
           
           {/* Zoom Controls */}
           <div className="flex items-center gap-1 bg-zion-blue/20 rounded-lg p-1">
-            <Button size="sm" variant="ghost" onClick = {
-  () => setZoomLevel(prev => Math.max(0.5,
-  prev - 0.1))
-
-} className="text-zinc-400 hover:text-white p-2">
-              <ZoomOut className="w-4 h-4"/>
+            <Button size="sm" variant="ghost" onClick={() => setZoomLevel(prev => Math.max(0.5,
+  prev - 0.1))} className="text-zinc-400 hover:text-white p-2">
+              <ZoomOut className="w-4 h-4" />
             </Button>
             <span className="text-zinc-300 text-xs px-2">{Math.round(zoomLevel * 100)}%</span>
-            <Button size="sm" variant="ghost" onClick = {
-  () => setZoomLevel(prev => Math.min(2,
-  prev + 0.1))
-
-} className="text-zinc-400 hover:text-white p-2">
-              <ZoomIn className="w-4 h-4"/>
+            <Button size="sm" variant="ghost" onClick={() => setZoomLevel(prev => Math.min(2,
+  prev + 0.1))} className="text-zinc-400 hover:text-white p-2">
+              <ZoomIn className="w-4 h-4" />
             </Button>
           </div>
           
           {/* Action Buttons */}
           <Button size="sm" variant="outline" onClick={shareTimeline} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">
-            <Share2 className="w-4 h-4 mr-2"/>
+            <Share2 className="w-4 h-4 mr-2" />
             Share
           </Button>
           
           <Button size="sm" variant="outline" onClick={exportTimeline} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">
-            <Download className="w-4 h-4 mr-2"/>
+            <Download className="w-4 h-4 mr-2" />
             Export
           </Button>
         </div>
@@ -187,7 +173,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
       {/* Filters */}
       <div className="mb-6">
         <Button size="sm" variant="ghost" onClick={() => setShowFilters(!showFilters)} className="text-zinc-400 hover:text-white mb-3">
-          <Filter className="w-4 h-4 mr-2"/>
+          <Filter className="w-4 h-4 mr-2" />
           {showFilters ? 'Hide' : 'Show'} Filters
         </Button>
         
@@ -207,7 +193,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 }} transition={{ duration: 0.2 }}>
               <div>
                 <label className="text-zinc-300 text-sm font-medium">Status</label>
-                <select multiple value={filters.status} onChange = {
+                <select multiple value={filters.status} onChange={
   (e) => {
                 const selected = Array.from(e.target.selectedOptions, option => option.value);
                 setFilters(prev => ({ ...prev,
@@ -223,7 +209,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
               
               <div>
                 <label className="text-zinc-300 text-sm font-medium">Category</label>
-                <select multiple value={filters.category} onChange = {
+                <select multiple value={filters.category} onChange={
   (e) => {
                 const selected = Array.from(e.target.selectedOptions, option => option.value);
                 setFilters(prev => ({ ...prev,
@@ -242,7 +228,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
               
               <div>
                 <label className="text-zinc-300 text-sm font-medium">Priority</label>
-                <select multiple value={filters.priority} onChange = {
+                <select multiple value={filters.priority} onChange={
   (e) => {
                 const selected = Array.from(e.target.selectedOptions, option => option.value);
                 setFilters(prev => ({ ...prev,
@@ -259,7 +245,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
               <div>
                 <label className="text-zinc-300 text-sm font-medium">Progress</label>
                 <div className="mt-1">
-                  <input type="range" min="0" max="100" value={filters.progress || 0} onChange = {
+                  <input type="range" min="0" max="100" value={filters.progress || 0} onChange={
   (e) => setFilters(prev => ({ ...prev,
   progress: Number(e.target.value) 
 
@@ -291,7 +277,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
       {/* Timeline View */}
       {viewMode === 'timeline' && (<div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-zion-cyan via-zion-blue to-zion-purple"/>
+          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-zion-cyan via-zion-blue to-zion-purple" />
           
           {/* Events */}
           <div className="space-y-6">
@@ -325,17 +311,17 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
   repeat: Infinity 
 
 }}>
-                      <statusInfo.icon className={`w-8 h-8 ${statusInfo.color}`}/>
+                      <statusInfo .icon className={`w-8 h-8 ${statusInfo.color}`} />
                     </motion.div>
                     
                     {/* Progress Ring for in-progress events */}
                     {event.status === 'in-progress' && (<svg className="absolute inset-0 w-16 h-16 transform -rotate-90">
-                        <circle cx="32" cy="32" r="28" stroke="currentColor" strokeWidth="2" fill="none" className="text-zion-cyan/20"/>
-                        <motion.circle cx="32" cy="32" r="28" stroke="currentColor" strokeWidth="2" fill="none" className="text-zion-cyan" strokeDasharray={2 * Math.PI * 28} strokeDashoffset={2 * Math.PI * 28 * (1 - event.metadata.progress / 100)} initial={{ strokeDashoffset: 2 * Math.PI * 28 }} animate={{ strokeDashoffset: 2 * Math.PI * 28 * (1 - event.metadata.progress / 100) }} transition = {
+                        <circle cx="32" cy="32" r="28" stroke="currentColor" strokeWidth="2" fill="none" className="text-zion-cyan/20" />
+                        <motion .circle cx="32" cy="32" r="28" stroke="currentColor" strokeWidth="2" fill="none" className="text-zion-cyan" strokeDasharray={2 * Math.PI * 28} strokeDashoffset={2 * Math.PI * 28 * (1 - event.metadata.progress / 100)} initial={{ strokeDashoffset: 2 * Math.PI * 28 }} animate={{ strokeDashoffset: 2 * Math.PI * 28 * (1 - event.metadata.progress / 100) }} transition = {
   { duration: 1,
   ease: "easeOut" 
 
-}}/>
+}} />
                       </svg>)}
                   </div>
 
@@ -363,19 +349,19 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                         
                         <div className="flex items-center gap-4 text-xs text-zinc-400">
                           <span className="flex items-center gap-1">
-                            <Calendar className="w-3 h-3"/>
+                            <Calendar className="w-3 h-3" />
                             {event.date}
                           </span>
                           <span className="flex items-center gap-1">
-                            <Clock className="w-3 h-3"/>
+                            <Clock className="w-3 h-3" />
                             {event.duration}
                           </span>
                           <span className="flex items-center gap-1">
-                            <CategoryIcon className="w-3 h-3"/>
+                            <CategoryIcon className="w-3 h-3" />
                             {event.category}
                           </span>
                           {event.participants.length > 0 && (<span className="flex items-center gap-1">
-                              <Users className="w-3 h-3"/>
+                              <Users className="w-3 h-3" />
                               {event.participants.length} participants
                             </span>)}
                         </div>
@@ -383,11 +369,8 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                       
                       {/* Status Change Button */}
                       <div className="ml-4">
-                        <select value={event.status} onChange = {
-  (e) => handleStatusChange(event.id,
-  e.target.value)
-
-} className="px-2 py-1 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-xs text-zinc-300 focus:border-zion-cyan focus:outline-none" onClick={(e) => e.stopPropagation()}>
+                        <select value={event.status} onChange={(e) => handleStatusChange(event.id,
+  e.target.value)} className="px-2 py-1 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-xs text-zinc-300 focus:border-zion-cyan focus:outline-none" onClick={(e) => e.stopPropagation()}>
                           <option value="upcoming">Upcoming</option>
                           <option value="in-progress">In Progress</option>
                           <option value="completed">Completed</option>
@@ -408,7 +391,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                         {event.actions.map((action, actionIndex) => (<Button key={actionIndex} size="sm" variant={action.variant || 'outline'} onClick={(e) => {
                                 e.stopPropagation();
                                 action.action()}} className="text-xs">
-                            <action.icon className="w-3 h-3 mr-1"/>
+                            <action .icon className="w-3 h-3 mr-1" />
                             {action.label}
                           </Button>))}
                       </div>)}
@@ -436,7 +419,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                 <div className="flex items-center gap-4">
                   <div className={`w-3 h-3 rounded-full ${event.status === 'completed' ? 'bg-green-400' :
                     event.status === 'in-progress' ? 'bg-yellow-400' :
-                        event.status === 'milestone' ? 'bg-purple-400' : 'bg-zinc-400'}`}/>
+                        event.status === 'milestone' ? 'bg-purple-400' : 'bg-zinc-400'}`} />
                   <div>
                     <h4 className="text-white font-medium">{event.title}</h4>
                     <p className="text-zinc-400 text-sm">{event.date}</p>
@@ -449,7 +432,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                   <Badge variant="outline" className={`text-xs ${getPriorityColor(event.priority)}`}>
                     {event.priority}
                   </Badge>
-                  <ArrowRight className="w-4 h-4 text-zinc-400"/>
+                  <ArrowRight className="w-4 h-4 text-zinc-400" />
                 </div>
               </div>
             </motion.div>))}
@@ -510,7 +493,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-xl font-semibold text-white">{selectedEvent.title}</h3>
                 <Button size="sm" variant="ghost" onClick={() => setSelectedEvent(null)} className="text-zinc-400 hover:text-white">
-                  <X className="w-4 h-4"/>
+                  <X className="w-4 h-4" />
                 </Button>
               </div>
               
@@ -558,3 +541,16 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
           </motion.div>)}
       </AnimatePresence>
     </div>)}
+
+</motion>
+</motion>
+</motion>
+</motion>
+</div>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</div>

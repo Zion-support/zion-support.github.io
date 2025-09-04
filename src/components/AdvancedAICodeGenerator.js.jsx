@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { 
-  Code, 
+import React, {useState, useEffect} from 'react';
+import {Code, 
   Copy, 
   Download, 
   Search, 
@@ -15,8 +14,7 @@ import {
   Settings,
   Zap,
   Brain,
-  Sparkles
-} from 'lucide-react';
+  Sparkles} from 'lucide-react';
 
 const mockCodeSnippets = [
   {
@@ -26,13 +24,11 @@ const mockCodeSnippets = [
     language: 'typescript',
     code: `import { useState, useEffect } from 'react';
 
-interface UseApiOptions {
-  method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
+interface UseApiOptions {method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
   headers?: Record<string, string>;
-  body?: any;
-}
+  body?: any;}
 
-export const useApi = (url: string, options: UseApiOptions = {}) => {
+export const useApi = (props: any) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -54,11 +50,7 @@ export const useApi = (url: string, options: UseApiOptions = {}) => {
       
       const result = await response.json();
       setData(result);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred');
-    } finally {
-      setLoading(false);
-    }
+    } catch (err) {setError(err instanceof Error ? err.message : 'An error occurred');} finally {setLoading(false);}
   };
 
   useEffect(() => {
@@ -67,7 +59,7 @@ export const useApi = (url: string, options: UseApiOptions = {}) => {
     }
   }, [url]);
 
-  return { data, loading, error, execute };
+  return {data, loading, error, execute};
 };`,
     tags: ['react', 'hooks', 'api', 'typescript'],
     complexity: 'medium',
@@ -85,35 +77,31 @@ export const useApi = (url: string, options: UseApiOptions = {}) => {
     animation: float 3s ease-in-out infinite;
   }
   
-  .animate-glow {
-    animation: glow 2s ease-in-out infinite alternate;
-  }
+  .animate-glow {animation: glow 2s ease-in-out infinite alternate;}
   
-  .animate-shimmer {
-    background: linear-gradient(
+  .animate-shimmer {background: linear-gradient(
       90deg,
       transparent,
       rgba(255, 255, 255, 0.4),
       transparent
     );
     background-size: 200% 100%;
-    animation: shimmer 1.5s infinite;
-  }
+    animation: shimmer 1.5s infinite;}
 }
 
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  50% {transform: translateY(-10px);}
 }
 
 @keyframes glow {
   from { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
-  to { box-shadow: 0 0 30px rgba(59, 130, 246, 0.8); }
+  to {box-shadow: 0 0 30px rgba(59, 130, 246, 0.8);}
 }
 
 @keyframes shimmer {
   0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  100% {background-position: 200% 0;}
 }`,
     tags: ['css', 'tailwind', 'animations', 'utilities'],
     complexity: 'low',
@@ -182,7 +170,7 @@ export const useApi = (url: string, options: UseApiOptions = {}) => {
   }
 ];
 
-export const AdvancedAICodeGenerator = () => {
+export const AdvancedAICodeGenerator = (props: any) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedLanguage, setSelectedLanguage] = useState('all');
   const [selectedComplexity, setSelectedComplexity] = useState('all');
@@ -200,9 +188,7 @@ export const AdvancedAICodeGenerator = () => {
     return matchesSearch && matchesLanguage && matchesComplexity;
   });
 
-  const copyToClipboard = (code) => {
-    navigator.clipboard.writeText(code);
-  };
+  const copyToClipboard = (props: any) => {navigator.clipboard.writeText(code);};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
@@ -221,7 +207,7 @@ export const AdvancedAICodeGenerator = () => {
         {/* Search and Filters */}
         <div className="mb-8 flex flex-col md:flex-row gap-4">
           <div className="flex-1 relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
             <input
               type="text"
               placeholder="Search code snippets..."
@@ -265,7 +251,7 @@ export const AdvancedAICodeGenerator = () => {
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center gap-3">
                   <div className="p-2 bg-purple-500/20 rounded-lg">
-                    <Code className="w-6 h-6 text-purple-400" />
+                    <Code className="w-6 h-6 text-purple-400"  />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white">{snippet.title}</h3>
@@ -279,7 +265,7 @@ export const AdvancedAICodeGenerator = () => {
                   </div>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Star className="w-4 h-4 text-yellow-400" />
+                  <Star className="w-4 h-4 text-yellow-400"  />
                   <span className="text-sm text-gray-300">{snippet.rating}</span>
                 </div>
               </div>
@@ -310,11 +296,11 @@ export const AdvancedAICodeGenerator = () => {
 
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <Eye className="w-4 h-4 text-gray-400" />
+                  <Eye className="w-4 h-4 text-gray-400"  />
                   <span className="text-sm text-gray-300">View Code</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Copy className="w-4 h-4 text-gray-400" />
+                  <Copy className="w-4 h-4 text-gray-400"  />
                   <span className="text-sm text-gray-300">Copy</span>
                 </div>
               </div>
@@ -330,7 +316,7 @@ export const AdvancedAICodeGenerator = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
               <div className="flex items-center gap-3 mb-4">
-                <Brain className="w-6 h-6 text-purple-400" />
+                <Brain className="w-6 h-6 text-purple-400"  />
                 <h3 className="text-xl font-semibold text-white">Smart Code Generation</h3>
               </div>
               <p className="text-gray-300 mb-4">
@@ -351,7 +337,7 @@ export const AdvancedAICodeGenerator = () => {
 
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
               <div className="flex items-center gap-3 mb-4">
-                <Sparkles className="w-6 h-6 text-yellow-400" />
+                <Sparkles className="w-6 h-6 text-yellow-400"  />
                 <h3 className="text-xl font-semibold text-white">Code Optimization</h3>
               </div>
               <p className="text-gray-300 mb-4">
@@ -372,7 +358,7 @@ export const AdvancedAICodeGenerator = () => {
 
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
               <div className="flex items-center gap-3 mb-4">
-                <Zap className="w-6 h-6 text-blue-400" />
+                <Zap className="w-6 h-6 text-blue-400"  />
                 <h3 className="text-xl font-semibold text-white">Instant Generation</h3>
               </div>
               <p className="text-gray-300 mb-4">
@@ -418,3 +404,5 @@ export const AdvancedAICodeGenerator = () => {
 };
 
 export default AdvancedAICodeGenerator;
+
+</string>

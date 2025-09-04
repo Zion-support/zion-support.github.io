@@ -1,16 +1,16 @@
-import { useParams, Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Skeleton } from '@/components/ui/skeleton';
-import { useGetOrderQuery } from '@/hooks/useOrder';
-import { generateInvoicePdf } from '@/utils/generateInvoicePdf';
-import { useAuth } from '@/hooks/useAuth';
-import { supabase } from '@/integrations/supabase/client';
-import { toast } from '@/hooks/use-toast';
+import {useParams, Link} from 'react-router-dom';
+import {Button} from '@/components/ui/button';
+import {Skeleton} from '@/components/ui/skeleton';
+import {useGetOrderQuery} from '@/hooks/useOrder';
+import {generateInvoicePdf} from '@/utils/generateInvoicePdf';
+import {useAuth} from '@/hooks/useAuth';
+import {supabase} from '@/integrations/supabase/client';
+import {toast} from '@/hooks/use-toast';
 export default function OrderDetailPage
-export { OrderDetailPage }() {
+export {OrderDetailPage}() {
     const { orderId } = useParams();
-    const { user } = useAuth();
-    const { data: order, isLoading } = useGetOrderQuery(orderId);
+    const {user} = useAuth();
+    const {data: order, isLoading} = useGetOrderQuery(orderId);
     const handleDownload = async () => {
         if (!order)
             return;
@@ -34,13 +34,12 @@ export { OrderDetailPage }() {
                     html: `<p>Thank you for your purchase. Total ${order.total}.</p>`
                 }
             });
-            toast({ title: 'Receipt sent!' })}
+            toast({title: 'Receipt sent!'})}
         catch (err) {
             toast({ title: 'Failed to send receipt', variant: 'destructive' })}
     };
-    if (isLoading || !order) {
-        return (<div className="container max-w-3xl py-10">
-        <Skeleton className="h-6 w-full"/>
+    if (isLoading || !order) {return (<div className="container max-w-3xl py-10">
+        <Skeleton className="h-6 w-full" />
       </div>)}
     return (<div className="container max-w-3xl py-10 space-y-6">
       <h1 className="text-3xl font-bold">Order #{order.orderId}</h1>

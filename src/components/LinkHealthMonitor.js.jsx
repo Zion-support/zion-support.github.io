@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion  } from 'framer-motion';
-export default function Page() {
+import React, {useState, useEffect} from 'react';
+import {motion} from 'framer-motion';
+export default function Page(props: any) {
 ,
   ];
   useEffect(() => {
@@ -26,24 +26,22 @@ export default function Page() {
       averageResponseTime: avgResponseTime,
       lastUpdated: new Date()});
   };
-  const startMonitoring = async () => {
-    setIsMonitoring(true);
+  const startMonitoring = async () => {setIsMonitoring(true);
     // Simulate link checking
     await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsMonitoring(false);
-  };
+    setIsMonitoring(false);};
   const getStatusIcon = status => {
 
     switch(status) {
 
       case 'healthy':
-        return <CheckCircle className="w-4 h-4 text-green-400" />;
+        return <CheckCircle className="w-4 h-4 text-green-400"  />;
       case 'broken':"
-        return <AlertTriangle className="w-4 h-4 text-red-400" />;
+        return <AlertTriangle className="w-4 h-4 text-red-400"  />;
       case 'external':"
-        return <ExternalLink className="w-4 h-4 text-blue-400" />;
+        return <ExternalLink className="w-4 h-4 text-blue-400"  />;
       default:"
-        return <RefreshCw className="w-4 h-4 text-yellow-400" />;
+        return <RefreshCw className="w-4 h-4 text-yellow-400"  />;
     }
   };
   const getStatusColor = status => {
@@ -60,11 +58,8 @@ export default function Page() {
         return 'text-yellow-400';
     }
   };
-  const filteredLinks = linkStatuses.filter(link => {
-
-    if (selectedFilter === 'all') return true;
-    return link.status === selectedFilter;
-  });
+  const filteredLinks = linkStatuses.filter(link => {if (selectedFilter === 'all') return true;
+    return link.status === selectedFilter;});
   return ()
     <>
       {/* Floating Action Button */}
@@ -74,7 +69,7 @@ export default function Page() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       >"
-        <Link className="w-6 h-6" />
+        <Link className="w-6 h-6"   />
       </motion.button>
 
       {/* Modal */}
@@ -97,7 +92,7 @@ export default function Page() {
             <div className="bg-gradient-to-r from-cyan-500 to-blue-500 p-6 text-white">"
               <div className="flex items-center justify-between">"
                 <div className="flex items-center space-x-3">"
-                  <Link className="w-8 h-8" />"
+                  <Link className="w-8 h-8"   />"
                   <h2 className="text-2xl font-bold">Link Health Monitor</h2>
                 </div>
                 <button
@@ -191,9 +186,9 @@ export default function Page() {
                   className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
                 >
                   {isMonitoring ? ("
-                    <RefreshCw className="w-4 h-4 animate-spin" />
+                    <RefreshCw className="w-4 h-4 animate-spin"  />
                   ) : ("
-                    <Zap className="w-4 h-4" />
+                    <Zap className="w-4 h-4"  />
                   )}
                   <span>
                     {isMonitoring ? 'Checking...' : 'Check All Links'}
@@ -250,7 +245,7 @@ export default function Page() {
                                 className="text-cyan-400 hover:text-cyan-300 transition-colors flex items-center space-x-1"
                               >"
                                 <span className="truncate">{link.url}</span>"
-                                <ExternalLink className="w-3 h-3" />
+                                <ExternalLink className="w-3 h-3"  />
                               </a>
                               {link.linkText && ("
                                 <div className="text-xs text-gray-400 mt-1">
@@ -280,7 +275,7 @@ export default function Page() {
               {/* Recommendations */}"
               <div className="bg-gradient-to-r from-yellow-900/20 to-orange-900/20 border border-yellow-500/20 rounded-lg p-4">"
                 <h3 className="text-lg font-semibold text-yellow-400 mb-2 flex items-center">"
-                  <AlertTriangle className="w-5 h-5 mr-2" />
+                  <AlertTriangle className="w-5 h-5 mr-2"  />
                   Recommendations
                 </h3>"
                 <ul className="text-yellow-200 text-sm space-y-1">
@@ -296,12 +291,16 @@ export default function Page() {
     </>)};
 export default LinkHealthMonitor;
 
-export { LinkHealthMonitor };
+export {LinkHealthMonitor};
 
-export { LinkHealthMonitor };
+export {LinkHealthMonitor};
 
-export { LinkHealthMonitor };
+export {LinkHealthMonitor};
 
-export { LinkHealthMonitor };
+export {LinkHealthMonitor};
 
-export { LinkHealthMonitor };
+export {LinkHealthMonitor};
+
+</motion>
+</motion>
+</motion>

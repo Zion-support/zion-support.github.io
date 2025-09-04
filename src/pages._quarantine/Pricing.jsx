@@ -1,7 +1,7 @@
 import React from 'react';'''
-import { SEO } from '../components/SEO';
+import {SEO} from '../components/SEO';
 
-const Pricing = () => {}
+const Pricing = (props: any) => {}
   const pricingTiers = []
     {}
 '
@@ -57,12 +57,12 @@ const Pricing = () => {}
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"""
-      <SEO""""
+      <SEO """"
         title="Pricing - Zion Tech Group | AI & Technology Solutions""""
         description="Choose the perfect plan for your AI and technology needs. Flexible pricing options for individuals, teams, and enterprises.""""
         keywords="pricing, AI services, technology solutions, subscription plans, enterprise pricing""""
         canonical="https://ziontechgroup.com/pricing"""
-      />
+       />
 """
       {/* Hero Section */}""""
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">""""
@@ -177,12 +177,14 @@ const Pricing = () => {}
 
 export default Pricing;
 
-export { Pricing };
+export {Pricing};
 
-export { Pricing };
+export {Pricing};
 
-export { Pricing };
+export {Pricing};
 
-export { Pricing };
+export {Pricing};
 
-export { Pricing };
+export {Pricing};
+
+</SEO>

@@ -3,7 +3,7 @@ import {  import { motion  } from 'framer-motion';
  params - Function parameters
  * @returns {*} Function return value
  */
-function AnalyticsManager () {
+function AnalyticsManager(props: any) {
 
   BarChart3,
   Users,
@@ -45,15 +45,15 @@ interface UserSession {
   userAgent: string;
   referrer: string}
 
-export function AnalyticsManager() {
+export function AnalyticsManager(props: any) {
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(
     null
   );
   const [currentSession, setCurrentSession] = useState<UserSession | null>(
     null
   );
-  const [isTracking, setIsTracking] = useState(false);
-  const [showAnalytics, setShowAnalytics] = useState(false);
+  const [isTracking, setIsTracking] = useState<any>(false);
+  const [showAnalytics, setShowAnalytics] = useState<any>(false);
 
   // Initialize analytics tracking
   useEffect(() => {
@@ -374,3 +374,11 @@ export function AnalyticsManager() {
     </motion.div>
   )}
 '"`
+
+</motion>
+</motion>
+</string>
+</any>
+</any>
+</UserSession>
+</AnalyticsData>

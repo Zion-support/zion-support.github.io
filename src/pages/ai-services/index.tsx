@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function AIServicesIndex() {
+export default function AIServicesIndex(props: any) {
   const services = [
     { name: 'Custom LLM Integration', price: 'From $8,000', bullets: ['RAG and vector search', 'Guardrails and policy'] },
     { name: 'Computer Vision Pipelines', price: 'From $6,000', bullets: ['OCR, object detection', 'Edge inference'] },

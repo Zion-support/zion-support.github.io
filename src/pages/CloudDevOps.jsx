@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Cloud, Server, GitFork, Zap, Shield, CheckCircle, ArrowRight, Star, Users, Award, Globe, Lock, Activity, Clock, Eye, Database, Smartphone, Monitor, Code, FileText, Truck, Wrench } from 'lucide-react';
+import React, {useState} from 'react';
+import {motion} from 'framer-motion';
+import {Cloud, Server, GitFork, Zap, Shield, CheckCircle, ArrowRight, Star, Users, Award, Globe, Lock, Activity, Clock, Eye, Database, Smartphone, Monitor, Code, FileText, Truck, Wrench} from 'lucide-react';
 
     icon: GitFork,
     features: [;
@@ -14,8 +14,7 @@ import { Cloud, Server, GitFork, Zap, Shield, CheckCircle, ArrowRight, Star, Use
     category: "DevOps",;
     platforms["Jenkins", "GitHub Actions", "GitLab CI", "Azure DevOps"]
   },
-  {
-    id: 3,
+  {id: 3,
     title: "Container Orchestration",;
     description: "Kubernetes and Docker implementation for scalable containerized applications.",;
     icon: Server,;
@@ -28,10 +27,8 @@ import { Cloud, Server, GitFork, Zap, Shield, CheckCircle, ArrowRight, Star, Use
     price: "From $20,000",;
     timeline: "10-18 weeks",;
     category: "Containerization",;
-    platforms["Kubernetes", "Docker", "Helm", "Istio"]
-  },
-  {
-    id: 4,
+    platforms["Kubernetes", "Docker", "Helm", "Istio"]},
+  {id: 4,
     title: "Infrastructure as Code",;
     description: "Automated infrastructure provisioning and management using code.",;
     icon: Code,;
@@ -44,10 +41,8 @@ import { Cloud, Server, GitFork, Zap, Shield, CheckCircle, ArrowRight, Star, Use
     price: "From $18,000",;
     timeline: "8-14 weeks",;
     category: "IaC",;
-    platforms["Terraform", "Ansible", "CloudFormation", "ARM Templates"]
-  },
-  {
-    id: 5,
+    platforms["Terraform", "Ansible", "CloudFormation", "ARM Templates"]},
+  {id: 5,
     title: "Monitoring & Observability",;
     description: "Comprehensive monitoring and logging solutions for cloud applications.",;
     icon: Activity,;
@@ -60,10 +55,8 @@ import { Cloud, Server, GitFork, Zap, Shield, CheckCircle, ArrowRight, Star, Use
     price: "From $10,000",;
     timeline: "6-10 weeks",;
     category: "Monitoring",;
-    platforms["Prometheus", "Grafana", "ELK Stack", "Datadog"]
-  },
-  {
-    id: 6,
+    platforms["Prometheus", "Grafana", "ELK Stack", "Datadog"]},
+  {id: 6,
     title: "Security & Compliance",;
     description: "Cloud security implementation and compliance management for enterprise applications.",;
     icon: Shield,;
@@ -76,58 +69,45 @@ import { Cloud, Server, GitFork, Zap, Shield, CheckCircle, ArrowRight, Star, Use
     price: "From $25,000",;
     timeline: "12-20 weeks",;
     category: "Security",;
-    platforms["IAM", "VPC", "Security Groups", "WAF"]
-  }
+    platforms["IAM", "VPC", "Security Groups", "WAF"]}
 ];
 
 const cloudPlatforms = [
-  {
-    name: "Amazon Web Services",
+  {name: "Amazon Web Services",
     description: "Leading cloud platform with comprehensive services",
     icon: Cloud,
-    features["EC2", "S3", "Lambda", "RDS", "ECS"];
-  },;
-  {
-    name: "Microsoft Azure",
+    features["EC2", "S3", "Lambda", "RDS", "ECS"];},;
+  {name: "Microsoft Azure",
     description: "Enterprise cloud platform with strong integration",
     icon: Server,
-    features["Virtual Machines", "Blob Storage", "Functions", "SQL Database", "AKS"];
-  },;
-  {
-    name: "Google Cloud Platform",
+    features["Virtual Machines", "Blob Storage", "Functions", "SQL Database", "AKS"];},;
+  {name: "Google Cloud Platform",
     description: "Innovative cloud platform with AI/ML focus",
     icon: Globe,
-    features["Compute Engine", "Cloud Storage", "Cloud Functions", "Cloud SQL", "GKE"];
-  },;
-  {
-    name: "Kubernetes",
+    features["Compute Engine", "Cloud Storage", "Cloud Functions", "Cloud SQL", "GKE"];},;
+  {name: "Kubernetes",
     description: "Open-source container orchestration platform",
           icon: GitFork,
     features: ["Auto-scaling", "Load Balancing", "Service Discovery", "Rolling Updates"]
 
-    features["Auto-scaling", "Load Balancing", "Service Discovery", "Rolling Updates"];
-  }
+    features["Auto-scaling", "Load Balancing", "Service Discovery", "Rolling Updates"];}
 ];
 
 const successStories = [
-  {
-    id: 1,
+  {id: 1,
     comp: "Tech Startup",
     industry: "SaaS",
     challenge: "Needed scalable cloud infrastructure for rapid growth",
     solution: "Built auto-scaling cloud platform with CI/CD pipelines",
     results: "10x faster deployments, 99.9% uptime, 60% cost reduction",
-    logo: "TS"
-  },
-  {
-    id: 2,
+    logo: "TS"},
+  {id: 2,
     comp: "E-commerce Platform",
     industry: "Retail",
     challenge: "Required containerized microservices architecture",
     solution: "Implemented Kubernetes with automated CI/CD",
     results: "5x faster development cycles, improved scalability, better performance",
-    logo: "EP"
-  },
+    logo: "EP"},
   {
     id: 3,
     comp: "Financial Services",
@@ -147,20 +127,16 @@ const processSteps = [
     icon: FileText,
     duration: "1-2 weeks"
   },
-  {
-    step: 2,
+  {step: 2,
     title: "Architecture Design",
     description: "Design scalable cloud architecture and DevOps processes",
     icon: Code,
-    duration: "2-3 weeks"
-  },
-  {
-    step: 3,
+    duration: "2-3 weeks"},
+  {step: 3,
     title: "Implementation",
     description: "Build and deploy cloud infrastructure with automation",
     icon: Wrench,
-    duration: "6-20 weeks"
-  },
+    duration: "6-20 weeks"},
   {
     step: 4,
     title: "Optimization",
@@ -192,7 +168,7 @@ export { CloudDevOps }() {
         </div>
 
         <div className="container-responsive relative z-10">
-          <motion.div
+          <motion .div
             initial = {
   { opacity: 0,
   y: 30 
@@ -249,7 +225,7 @@ export { CloudDevOps }() {
 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
 
-              <Cloud className="w-10 h-10 text-white" />
+              <Cloud className="w-10 h-10 text-white"  />
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -264,15 +240,15 @@ export { CloudDevOps }() {
 
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-zion-cyan">
-                <Cloud className="w-4 h-4" />
+                <Cloud className="w-4 h-4"  />
                 <span>Cloud Native</span>
               </div>
               <div className="flex items-center gap-2 text-zion-purple">
-                <GitFork className="w-4 h-4" />
+                <GitFork className="w-4 h-4"  />
                 <span>DevOps Automation</span>
               </div>
               <div className="flex items-center gap-2 text-zion-blue">
-                <Zap className="w-4 h-4" />
+                <Zap className="w-4 h-4"  />
                 <span>Scalable Solutions</span>
               </div>
             </div>
@@ -350,7 +326,7 @@ export { CloudDevOps }() {
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <platform.icon className="w-8 h-8 text-white" />
+                  <platform .icon className="w-8 h-8 text-white"  />
                 </div>
 
                 <h3 className="text-xl font-bold text-white mb-3">{platform.name}</h3>
@@ -359,7 +335,7 @@ export { CloudDevOps }() {
                 <div className="space-y-2">
                   {platform.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-2 text-zion-slate-light text-sm">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0"  />
                       <span>{feature}</span>
                     </div>
                   ))}
@@ -441,7 +417,7 @@ export { CloudDevOps }() {
 
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
-                    <step.icon className="w-8 h-8 text-white" />
+                    <step .icon className="w-8 h-8 text-white"  />
                   </div>
                   <div className="absolute -top-2 -right-2 w-8 h-8 bg-zion-blue rounded-full flex items-center justify-center text-white text-sm font-bold">
                     {step.step}
@@ -547,7 +523,7 @@ export { CloudDevOps }() {
                 onClick={() => setSelectedSolution(solution)}
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
-                  <solution.icon className="w-8 h-8 text-white" />
+                  <solution .icon className="w-8 h-8 text-white"  />
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
@@ -556,7 +532,7 @@ export { CloudDevOps }() {
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0"  />
                       <span className="text-zion-slate-light text-sm">{feature}</span>
                     </div>
                   ))}
@@ -584,7 +560,7 @@ export { CloudDevOps }() {
                   </span>
                   <button className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors duration-300">
                     <span className="text-sm font-medium">Learn More</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4"  />
                   </button>
                 </div>
               </motion.div>
@@ -689,7 +665,7 @@ export { CloudDevOps }() {
 
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current"  />
                   ))}
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
@@ -751,3 +727,15 @@ export { CloudDevOps }() {
       </section>
     </div>
   )}
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

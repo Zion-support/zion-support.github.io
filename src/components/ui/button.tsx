@@ -8,14 +8,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
 }
 
-export function Button({
-  children,
-  variant = 'default',
-  size = 'md',
-  asChild = false,
-  className = '',
-  ...props
-}: ButtonProps) {
+export function Button(props: any) {
   const baseClasses = 'inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible: outlin e-none focus-visible: rin g-2 focus-visible: rin g-ring focus-visible: rin g-offset-2 disabled: opacit y-50 disabled: pointe r-events-none';
   
   const variantClasses = {
@@ -47,3 +40,4 @@ export function Button({
     </button>
   );
 }
+</HTMLButtonElement>

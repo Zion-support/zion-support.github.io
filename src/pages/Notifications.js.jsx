@@ -1,60 +1,42 @@
 import React from 'react';
-import { useNotifications } from "@/context/notifications/NotificationContext";
-import { formatDistanceToNow } from "date-fns";
-import { Bell, Check, Trash2, ChevronRight, CheckCircle, AlertCircle, MessageCircle, Briefcase, UserCheck, Settings } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Badge } from "@/components/ui/badge";
-import { Skeleton } from "@/components/ui/skeleton";
-import { SEO } from "@/components/SEO";
-import { useNavigate } from "react-router-dom";
-import { cn } from "@/lib/utils";
-const getNotificationIcon = (type, className = "h-5 w-5") => {
+import {useNotifications} from "@/context/notifications/NotificationContext";
+import {formatDistanceToNow} from "date-fns";
+import {Bell, Check, Trash2, ChevronRight, CheckCircle, AlertCircle, MessageCircle, Briefcase, UserCheck, Settings} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
+import {Badge} from "@/components/ui/badge";
+import {Skeleton} from "@/components/ui/skeleton";
+import {SEO} from "@/components/SEO";
+import {useNavigate} from "react-router-dom";
+import {cn} from "@/lib/utils";
+const getNotificationIcon = (props: any) => {
     switch (type) {
         case 'message':
             return <MessageCircle className = {
   cn(className,
   "text-blue-500")
 
-}/>;
+} />;
         case 'quote_request':
-            return <Briefcase className = {
-  cn(className,
-  "text-purple-500")
-
-}/>;
+            return <Briefcase className = {cn(className,
+  "text-purple-500")} />;
         case 'booking_confirmation':
-            return <CheckCircle className = {
-  cn(className,
-  "text-green-500")
-
-}/>;
+            return <CheckCircle className = {cn(className,
+  "text-green-500")} />;
         case 'hire_request':
-            return <UserCheck className = {
-  cn(className,
-  "text-zion-purple")
-
-}/>;
+            return <UserCheck className = {cn(className,
+  "text-zion-purple")} />;
         case 'onboarding':
-            return <Settings className = {
-  cn(className,
-  "text-zion-cyan")
-
-}/>;
+            return <Settings className = {cn(className,
+  "text-zion-cyan")} />;
         case 'system':
-            return <AlertCircle className = {
-  cn(className,
-  "text-yellow-500")
-
-}/>;
+            return <AlertCircle className = {cn(className,
+  "text-yellow-500")} />;
         default:
-            return <Bell className = {
-  cn(className,
-  "text-gray-500")
-
-}/>}
+            return <Bell className = {cn(className,
+  "text-gray-500")} />}
 };
-const getNotificationTypeBadge = (type) => {
+const getNotificationTypeBadge = (props: any) => {
     switch (type) {
         case 'message':
             return <Badge className="bg-blue-500">Message</Badge>;
@@ -71,19 +53,15 @@ const getNotificationTypeBadge = (type) => {
         default:
             return <Badge variant="outline">Notification</Badge>}
 };
-const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
+const NotificationCard = (props: any) => {
     const navigate = useNavigate();
-    const handleAction = () => {
+    const handleAction = (props: any) => {
         if (!notification.read) {
             onMarkAsRead(notification.id)}
-        if (notification.action_url) {
-            router(notification.action_url)}
+        if (notification.action_url) {router(notification.action_url)}
     };
-    return (<div className = {
-  cn("border rounded-lg shadow-sm p-4 mb-3 group transition-colors",
-  notification.read ? "border-zion-blue-light bg-zion-blue-dark/10" : "border-zion-cyan bg-zion-blue-dark/30")
-
-}>
+    return (<div className = {cn("border rounded-lg shadow-sm p-4 mb-3 group transition-colors",
+  notification.read ? "border-zion-blue-light bg-zion-blue-dark/10" : "border-zion-cyan bg-zion-blue-dark/30")}>
       <div className="flex items-start gap-4">
         <div className="mt-1">
           {getNotificationIcon(notification.type, "h-6 w-6")}
@@ -103,11 +81,11 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
             
             <div className="flex items-center gap-2">
               {!notification.read && (<Button variant="ghost" size="sm" className="h-8 w-8 p-0" onClick={() => onMarkAsRead(notification.id)}>
-                  <Check className="h-4 w-4 text-green-400"/>
+                  <Check className="h-4 w-4 text-green-400" />
                   <span className="sr-only">Mark as read</span>
                 </Button>)}
               <Button variant="ghost" size="sm" className="h-8 w-8 p-0" onClick={() => onDismiss(notification.id)}>
-                <Trash2 className="h-4 w-4 text-red-400"/>
+                <Trash2 className="h-4 w-4 text-red-400" />
                 <span className="sr-only">Dismiss</span>
               </Button>
             </div>
@@ -117,29 +95,29 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
           
           {notification.action_url && notification.action_text && (<Button variant="outline" size="sm" className="mt-1 text-zion-cyan border-zion-cyan hover:bg-zion-cyan hover:text-black" onClick={handleAction}>
               {notification.action_text}
-              <ChevronRight className="ml-1 h-4 w-4"/>
+              <ChevronRight className="ml-1 h-4 w-4" />
             </Button>)}
         </div>
       </div>
     </div>)};
 export default function NotificationsPage
-export { NotificationsPage }() {
+export {NotificationsPage}() {
     const { filteredNotifications, unreadCount, markAsRead, markAllAsRead, dismissNotification, loading, filter, setFilter } = useNotifications();
     return (<>
-      <SEO title="Notifications | Zion AI Marketplace" description="View and manage your notifications on the Zion AI Marketplace."/>
+      <SEO title="Notifications | Zion AI Marketplace" description="View and manage your notifications on the Zion AI Marketplace." />
       
       <main className="container mx-auto px-4 py-8 min-h-screen">
         <div className="flex justify-between items-center mb-6">
           <div>
             <h1 className="text-3xl font-bold flex items-center">
-              <Bell className="mr-3 h-7 w-7"/> Notifications
+              <Bell className="mr-3 h-7 w-7" /> Notifications
               {unreadCount > 0 && (<Badge className="ml-3 bg-zion-cyan">{unreadCount} unread</Badge>)}
             </h1>
             <p className="text-muted-foreground">Stay updated with the latest activities and reminders</p>
           </div>
           
           {unreadCount > 0 && (<Button variant="outline" onClick={() => markAllAsRead()}>
-              <Check className="mr-2 h-4 w-4"/>
+              <Check className="mr-2 h-4 w-4" />
               Mark all as read
             </Button>)}
         </div>
@@ -155,17 +133,17 @@ export { NotificationsPage }() {
             </TabsList>
             <TabsContent value={filter} className="mt-6">
               {loading ? (<div className="space-y-4">
-                  <Skeleton className="h-24 w-full rounded-lg"/>
-                  <Skeleton className="h-24 w-full rounded-lg"/>
-                  <Skeleton className="h-24 w-full rounded-lg"/>
+                  <Skeleton className="h-24 w-full rounded-lg" />
+                  <Skeleton className="h-24 w-full rounded-lg" />
+                  <Skeleton className="h-24 w-full rounded-lg" />
                 </div>) : filteredNotifications.length === 0 ? (<div className="text-center py-12 bg-muted rounded-lg">
-                  <Bell className="mx-auto h-12 w-12 text-muted-foreground mb-3 opacity-30"/>
+                  <Bell className="mx-auto h-12 w-12 text-muted-foreground mb-3 opacity-30" />
                   <h3 className="text-xl font-medium">No notifications found</h3>
                   <p className="text-muted-foreground mt-1">
                     {filter === 'all' ? "You don't have  notifications yet" : `You don't have  ${filter} notifications`}
                   </p>
                 </div>) : (<div>
-                  {filteredNotifications.map(notification => (<NotificationCard key={notification.id} notification={notification} onMarkAsRead={markAsRead} onDismiss={dismissNotification}/>))}
+                  {filteredNotifications.map(notification => (<NotificationCard key={notification.id} notification={notification} onMarkAsRead={markAsRead} onDismiss={dismissNotification} />))}
                 </div>)}
             </TabsContent>
           </Tabs>
@@ -173,3 +151,11 @@ export { NotificationsPage }() {
       </main>
       
     </>)}
+
+</Bell>
+</AlertCircle>
+</Settings>
+</UserCheck>
+</CheckCircle>
+</Briefcase>
+</MessageCircle>

@@ -6,7 +6,7 @@ let localStorageAvailable = null; // Cache the availability check
 let lastAvailabilityCheck = 0;
 const AVAILABILITY_CHECK_INTERVAL = 5000; // Check every 5 seconds max
 
-function isLocalStorageAvailable() {
+function isLocalStorageAvailable(props: any) {
   const now = Date.now();
   // Use cached result if checked recently
   if()
@@ -37,7 +37,7 @@ function isLocalStorageAvailable() {
   }
 }
 
-function safeConsoleError(message, error) {
+function safeConsoleError(props: any) {
 
   const env = globalThis.process?.env?.NODE_ENV ?? 'production';
   // Prevent infinite recursion in console logging'

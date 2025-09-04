@@ -1,4 +1,4 @@
-const Component = () => {
+const Component = (props: any) => {
 import React from "react"
 """;,"});,"})"
           title: "Code Review & Security",""";,"});,"})"
@@ -791,3 +791,42 @@ export { EnhancedServicesNavigation };
 export { EnhancedServicesNavigation };
 
 export { EnhancedServicesNavigation };
+
+</motion>
+</span>
+</div>
+</div>
+</div>
+</span>
+</div>
+</div>
+</div>
+</motion>
+</div>
+</div>
+</div>
+</div>
+</motion>
+</div>
+</div>
+</motion>
+</div>
+</motion>
+</div>
+</div>
+</div>
+</div>
+</span>
+</button>
+</div>
+</motion>
+</div>
+</motion>
+</div>
+</motion>
+</motion>
+</div>
+</div>
+</motion>
+</motion>
+</div>

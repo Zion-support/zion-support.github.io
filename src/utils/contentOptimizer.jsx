@@ -20,8 +20,7 @@ export class ContentOptimizer {
         });
         const suggestions = this.generateSuggestions(issues, page);
 
-        return {
-            page,
+        return {page,
             wordCount,
             headingCount,
             imageCount,
@@ -29,33 +28,23 @@ export class ContentOptimizer {
             readabilityScore,
             seoScore,
             issues,
-            suggestions
-        };
+            suggestions};
     }
 
-    static countWords(content) {
-        // Remove HTML tags and count words
+    static countWords(content) {// Remove HTML tags and count words
         const textContent = content.replace(/<[^>]*>/g, ' ').trim();
-        return textContent.split(/\s+/).filter(word => word.length > 0).length;
-    }
+        return textContent.split(/\s+/).filter(word => word.length > 0).length;}
 
-    static countHeadings(content) {
-        const headingMatches = content.match(/<h[1-6][^>]*>/gi);
-        return headingMatches ? headingMatches.length : 0;
-    }
+    static countHeadings(content) {const headingMatches = content.match(/<h[1-6][^>]*>/gi);
+        return headingMatches ? headingMatches.length : 0;}
 
-    static countImages(content) {
-        const imageMatches = content.match(/<img[^>]*>/gi);
-        return imageMatches ? imageMatches.length : 0;
-    }
+    static countImages(content) {const imageMatches = content.match(/<img[^>]*>/gi);
+        return imageMatches ? imageMatches.length : 0;}
 
-    static countLinks(content) {
-        const linkMatches = content.match(/<a[^>]*>/gi);
-        return linkMatches ? linkMatches.length : 0;
-    }
+    static countLinks(content) {const linkMatches = content.match(/<a[^>]*>/gi);
+        return linkMatches ? linkMatches.length : 0;}
 
-    static calculateReadabilityScore(content) {
-        const textContent = content.replace(/<[^>]*>/g, ' ').trim();
+    static calculateReadabilityScore(content) {const textContent = content.replace(/<[^>]*>/g, ' ').trim();
         const sentences = textContent.split(/[.!?]+/).filter(s => s.trim().length > 0);
         const words = textContent.split(/\s+/).filter(w => w.length > 0);
         const syllables = this.countSyllables(textContent);
@@ -65,8 +54,7 @@ export class ContentOptimizer {
 
         // Flesch Reading Ease formula
         const score = 206.835 - (1.015 * (words.length / sentences.length)) - (84.6 * (syllables / words.length));
-        return Math.max(0, Math.min(100, score));
-    }
+        return Math.max(0, Math.min(100, score));}
 
     static countSyllables(text) {
         // Simplified syllable counting
@@ -76,18 +64,15 @@ export class ContentOptimizer {
         words.forEach(word => {
             if (word.length <= 3) {
                 syllableCount += 1;
-            } else {
-                // Count vowel groups
+            } else {// Count vowel groups
                 const vowelGroups = word.match(/[aeiouy]+/g);
-                syllableCount += vowelGroups ? vowelGroups.length : 1;
-            }
+                syllableCount += vowelGroups ? vowelGroups.length : 1;}
         });
 
         return syllableCount;
     }
 
-    static calculateSEOScore(content, page) {
-        let score = 100;
+    static calculateSEOScore(content, page) {let score = 100;
 
         // Check for title
         if (!content.includes('<title>'))
@@ -114,8 +99,7 @@ export class ContentOptimizer {
         if (internalLinks.length < 2)
             score -= 10;
 
-        return Math.max(0, score);
-    }
+        return Math.max(0, score);}
 
     static identifyIssues(content, page, metrics) {
         const issues = [];
@@ -185,7 +169,7 @@ export class ContentOptimizer {
         // Apply optimizations based on analysis
         if (analysis.issues.length > 0) {
             // Add suggestions as comments
-            const optimizationComments = analysis.suggestions.map(suggestion => `<!-- TODO: ${suggestion} -->`).join('\n');
+            const optimizationComments = analysis.suggestions.map(suggestion => `{/*  TODO: ${suggestion}  */}`).join('\n');
             return `${optimizationComments}\n\n${optimizedContent}`;
         }
 
@@ -195,3 +179,9 @@ export class ContentOptimizer {
 
 
 export default ContentOptimizer;
+
+</h2>
+</h1>
+</title>
+</a>
+</h>

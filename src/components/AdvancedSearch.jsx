@@ -1,17 +1,17 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Search, Sparkles, Filter, TrendingUp, Clock, Star } from 'lucide-react';
+import React, {useState, useEffect, useRef} from 'react';
+import {Search, Sparkles, Filter, TrendingUp, Clock, Star} from 'lucide-react';
 
 const mockSuggestions = [
-    { id: '1', text: 'AI Development Services', type: 'service', relevance: 95, category: 'AI & ML' },
-    { id: '2', text: 'Cloud Infrastructure', type: 'service', relevance: 88, category: 'DevOps' },
-    { id: '3', text: 'React Native Apps', type: 'technology', relevance: 82, category: 'Mobile' },
-    { id: '4', text: 'Blockchain Solutions', type: 'trending', relevance: 90, category: 'Web3' },
-    { id: '5', text: 'Data Analytics', type: 'service', relevance: 85, category: 'Data Science' },
-    { id: '6', text: 'Cybersecurity', type: 'trending', relevance: 92, category: 'Security' },
-    { id: '7', text: 'Machine Learning', type: 'technology', relevance: 87, category: 'AI & ML' },
-    { id: '8', text: 'Web Development', type: 'service', relevance: 80, category: 'Frontend' },
+    {id: '1', text: 'AI Development Services', type: 'service', relevance: 95, category: 'AI & ML'},
+    {id: '2', text: 'Cloud Infrastructure', type: 'service', relevance: 88, category: 'DevOps'},
+    {id: '3', text: 'React Native Apps', type: 'technology', relevance: 82, category: 'Mobile'},
+    {id: '4', text: 'Blockchain Solutions', type: 'trending', relevance: 90, category: 'Web3'},
+    {id: '5', text: 'Data Analytics', type: 'service', relevance: 85, category: 'Data Science'},
+    {id: '6', text: 'Cybersecurity', type: 'trending', relevance: 92, category: 'Security'},
+    {id: '7', text: 'Machine Learning', type: 'technology', relevance: 87, category: 'AI & ML'},
+    {id: '8', text: 'Web Development', type: 'service', relevance: 80, category: 'Frontend'},
 ];
-export function AdvancedSearch() {
+export function AdvancedSearch(props: any) {
     const [query, setQuery] = useState('');
     const [suggestions, setSuggestions] = useState([]);
     const [isExpanded, setIsExpanded] = useState(false);
@@ -20,7 +20,7 @@ export function AdvancedSearch() {
     const searchRef = useRef(null);
     const categories = ['AI & ML', 'DevOps', 'Mobile', 'Web3', 'Data Science', 'Security', 'Frontend', 'Backend'];
     useEffect(() => {
-        const handleClickOutside = (event) => {
+        const handleClickOutside = (props: any) => {
             if (searchRef.current && !searchRef.current.contains(event.target)) {
                 setShowSuggestions(false);
             }
@@ -37,34 +37,26 @@ export function AdvancedSearch() {
                 .slice(0, 8);
             setSuggestions(filtered);
             setShowSuggestions(true);
-        } else {
-            setSuggestions([]);
-            setShowSuggestions(false);
-        }
+        } else {setSuggestions([]);
+            setShowSuggestions(false);}
     }, [query]);
-    const handleSuggestionClick = (suggestion) => {
-        setQuery(suggestion.text);
+    const handleSuggestionClick = (props: any) => {setQuery(suggestion.text);
         setShowSuggestions(false);
-        // Here you would typically trigger a search
-    };
-    const toggleFilter = (category) => {
-        setSelectedFilters(prev => prev.includes(category)
+        // Here you would typically trigger a search};
+    const toggleFilter = (props: any) => {setSelectedFilters(prev => prev.includes(category)
             ? prev.filter(f => f !== category)
-            : [...prev, category]);
-    };
-    const clearFilters = () => {
-        setSelectedFilters([]);
-    };
-    const getSuggestionIcon = (type) => {
+            : [...prev, category]);};
+    const clearFilters = (props: any) => {setSelectedFilters([]);};
+    const getSuggestionIcon = (props: any) => {
         switch (type) {
-            case 'service': return <Star className="w-4 h-4 text-zion-cyan"/>;
-            case 'technology': return <Sparkles className="w-4 h-4 text-zion-purple"/>;
-            case 'trending': return <TrendingUp className="w-4 h-4 text-zion-emerald"/>;
-            case 'recent': return <Clock className="w-4 h-4 text-zion-gold"/>;
-            default: return <Search className="w-4 h-4 text-zion-slate"/>;
+            case 'service': return <Star className="w-4 h-4 text-zion-cyan" />;
+            case 'technology': return <Sparkles className="w-4 h-4 text-zion-purple" />;
+            case 'trending': return <TrendingUp className="w-4 h-4 text-zion-emerald" />;
+            case 'recent': return <Clock className="w-4 h-4 text-zion-gold" />;
+            default: return <Search className="w-4 h-4 text-zion-slate" />;
         }
     };
-    const getSuggestionColor = (type) => {
+    const getSuggestionColor = (props: any) => {
         switch (type) {
             case 'service': return 'bg-zion-cyan/10 border-zion-cyan/20';
             case 'technology': return 'bg-zion-purple/10 border-zion-purple/20';
@@ -77,14 +69,14 @@ export function AdvancedSearch() {
       {/* Search Input */}
       <div className="relative">
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-          <Search className="h-5 w-5 text-zion-slate-light"/>
+          <Search className="h-5 w-5 text-zion-slate-light" />
         </div>
 
         <input type="text" value={query} onChange={(e) => setQuery(e.target.value)} onFocus={() => setShowSuggestions(true)} placeholder="Search for services, technologies, or solutions..." className="block w-full pl-10 pr-12 py-3 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-200 text-zion-slate placeholder-zion-slate-light"/>
 
         <div className="absolute inset-y-0 right-0 flex items-center pr-3">
           <button onClick={() => setIsExpanded(!isExpanded)} className="p-2 text-zion-slate-light hover:text-zion-slate transition-colors" title="Advanced Filters">
-            <Filter className="h-5 w-5"/>
+            <Filter className="h-5 w-5" />
           </button>
         </div>
       </div>
@@ -135,7 +127,7 @@ export function AdvancedSearch() {
 
           <div className="p-3 bg-zion-slate-light/5 border-t border-zion-slate-light">
             <div className="flex items-center gap-2 text-xs text-zion-slate-light">
-              <Sparkles className="w-3 h-3"/>
+              <Sparkles className="w-3 h-3" />
               AI-powered suggestions based on your query
             </div>
           </div>

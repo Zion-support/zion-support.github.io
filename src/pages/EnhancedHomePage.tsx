@@ -2,7 +2,7 @@ import React from 'react',;',';';
     ';';';';
 import {SEO } from '@/components/SEO';
 ,"});,"})
-export default function EnhancedHomePage() {return (
+export default function EnhancedHomePage(props: any) {return (
     <div className="min-h-screen bg-white">
       <SEO title="EnhancedHomePage - Zion Tech Group" description="Professional EnhancedHomePage services by Zion Tech Group"  />
       <div className="container mx-auto px-4 py-20">

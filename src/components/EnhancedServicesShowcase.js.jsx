@@ -1,5 +1,5 @@
-import React, { useState } from "react";""";,"});,"})","});,"})","});,"})","});,"})"
-const EnhancedServicesShowcase = () => {}"});,"})"
+import React, {useState} from "react";""";,"});,"})","});,"})","});,"})","});,"})"
+const EnhancedServicesShowcase = (props: any) => {}"});,"})"
 ";,"});,"})"
   const [selectedCategory, setSelectedCategory] = useState("all");,"});,"})"
   const [searchTerm, setSearchTerm] = useState("");,"});,"})"
@@ -12,18 +12,18 @@ const EnhancedServicesShowcase = () => {}"});,"})"
     return matchesCategory && matchesSearch,"});,"});"
 });,"});,"})"
   const containerVariants = {}"});,"})"
-    hidden: { opacity: 0 },,"});,"})"
+    hidden: {opacity: 0},,"});,"})"
     visible: {}"});,"})"
       opacity: 1,"});,"})"
       transition: {}"});,"})"
         staggerChildren: 0.1,"});,"})"
         delayChildren: 0.2}}};,"});,"})"
   const itemVariants = {}"});,"})"
-    hidden: { opacity: 0, y: 20 },,"});,"})"
+    hidden: {opacity: 0, y: 20},,"});,"})"
     visible: {}"});,"})"
       opacity: 1,"});,"})"
       y: 0,"});,"})"
-      transition: { duration: 0.5 }}};,"});,"})"
+      transition: {duration: 0.5}}};,"});,"})"
   return();,"});,"})"
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">""";,"});,"})"
       {/* comment */}"""";,"});,"})"
@@ -213,11 +213,11 @@ const EnhancedServicesShowcase = () => {}"});,"})"
                       stroke="currentColor"""";,"});,"})"
                       viewBox="0 0 24 24""";,"});,"})"
                     >""";,"});,"})"
-                      <path"""";,"});,"})"
+                      <path """";,"});,"})"
                         strokeLinecap="round"""";,"});,"})"
                         strokeLinejoin="round"""";,"});,"})"
                         strokeWidth={2}"""";,"});,"})"
-                        d="M9 5l7 7-7 7""";,"});,"})" />;,"});,"})"
+                        d="M9 5l7 7-7 7""";,"});,"})"  />;,"});,"})"
                     </svg>;,"});,"})"
                   </Link>;,"});,"})"
                 </div>;,"});,"})"
@@ -340,16 +340,16 @@ const EnhancedServicesShowcase = () => {}"});,"})"
     </div>)};,"});,"})"
 export default EnhancedServicesShowcase,"});,"})"
 ;,"});,"})"
-export { EnhancedServicesShowcase };,"});,"})"
+export {EnhancedServicesShowcase};,"});,"})"
 ;,"});,"})"
-export { EnhancedServicesShowcase };,"});,"})"
+export {EnhancedServicesShowcase};,"});,"})"
 ;,"});,"})"
-export { EnhancedServicesShowcase };,"});,"})"
+export {EnhancedServicesShowcase};,"});,"})"
 ;,"});,"})"
-export { EnhancedServicesShowcase };,"});,"})"
+export {EnhancedServicesShowcase};,"});,"})"
 ;,"});,"})"
-export { EnhancedServicesShowcase };,"});,"})"";"
-const EnhancedServicesShowcase = () => {}""
+export {EnhancedServicesShowcase};,"});,"})"";"
+const EnhancedServicesShowcase = (props: any) => {}""
 """
   const [selectedCategory, setSelectedCategory] = useState("all")"""
   const [searchTerm, setSearchTerm] = useState("")"""
@@ -364,7 +364,7 @@ const EnhancedServicesShowcase = () => {}""
     return matchesCategory && matchesSearch})
 }  const containerVariants = {}
 
-    hidden: { opacity: 0 }, visible: {}
+    hidden: {opacity: 0}, visible: {}
 
       opacity: 1, transition: {}
 
@@ -372,9 +372,9 @@ const EnhancedServicesShowcase = () => {}""
 
   const itemVariants = {}
 
-    hidden: { opacity: 0, y: 20 }, visible: {}
+    hidden: {opacity: 0, y: 20}, visible: {}
 
-      opacity: 1, y: 0, transition: { duration: 0.5 }}}"
+      opacity: 1, y: 0, transition: {duration: 0.5}}}"
   return()"""
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">"""""
       {/* comment */}""""
@@ -706,12 +706,45 @@ https: // comment
     </div>)};
 export default EnhancedServicesShowcase;
 
-export { EnhancedServicesShowcase };
+export {EnhancedServicesShowcase};
 
-export { EnhancedServicesShowcase };
+export {EnhancedServicesShowcase};
 
-export { EnhancedServicesShowcase };
+export {EnhancedServicesShowcase};
 
-export { EnhancedServicesShowcase };
+export {EnhancedServicesShowcase};
 
-export { EnhancedServicesShowcase };
+export {EnhancedServicesShowcase};
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</button>
+</motion>
+</path>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</path>
+</div>
+</div>
+</motion>
+</motion>
+</div>
+</motion>
+</motion>
+</motion>
+</motion>
+</div>
+</div>

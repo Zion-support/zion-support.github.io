@@ -1,7 +1,7 @@
 import React from 'react';
 const Match: Reac t.FC = () => {;''''
-  const [selectedCategory, setSelectedCategory] = useState('all');''''
-  const [searchQuery, setSearchQuery] = useState('');'
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');''''
+  const [searchQuery, setSearchQuery] = useState<any>('');'
 ''
   '''
     { id: 'all', name: 'All Categories', icon: Sparkle s, count: 15 0 },;'''
@@ -140,12 +140,12 @@ const Match: Reac t.FC = () => {;''''
             </p>"""
 """"
             <div className="flex flex-col sm: fle x-row gap-4 justify-center">"""
-              <Link""""
+              <Link """"
                 to="/contact""""
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover: fro m-cyan-400 hover: t o-blue-500 transition-all duration-200 hover: scal e-105 shadow-lg shadow-cyan-500/25"""
 """
                 Get Matched""""
-                <ArrowRight className="ml-2 w-5 h-5"   />              </Link>"""
+                <ArrowRight className="ml-2 w-5 h-5"    />              </Link>"""
               <Link""""
                 to="/services""""
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover: b g-cyan-400/10 transition-all duration-200"""
@@ -324,12 +324,12 @@ const Match: Reac t.FC = () => {;''''
               <p className="text-slate-300 mb-6">
                 Try adjusting your search criteria or browse all our services.
               </p>"""
-              <Link""""
+              <Link """"
                 to="/services""""
                 className="inline-flex items-center px-6 py-3 bg-cyan-500 text-white font-medium rounded-lg hover: b g-cyan-400 transition-all duration-200"""
 """
                 Browse All Services""""
-                <ArrowRight className="ml-2 w-4 h-4"   />              </Link>;
+                <ArrowRight className="ml-2 w-4 h-4"    />              </Link>;
             </motion.div>) }
         </div>
       </section>
@@ -436,12 +436,12 @@ const Match: Reac t.FC = () => {;''''
             </p>"""
 """"
             <div className="flex flex-col sm: fle x-row gap-4 justify-center">"""
-              <Link""""
+              <Link """"
                 to="/contact""""
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover: fro m-cyan-400 hover: t o-blue-500 transition-all duration-200 hover: scal e-105 shadow-lg shadow-cyan-500/25"""
 """
                 Start Matching""""
-                <ArrowRight className="ml-2 w-5 h-5"   />              </Link>"""
+                <ArrowRight className="ml-2 w-5 h-5"    />              </Link>"""
               <Link""""
                 to="/services""""
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover: b g-cyan-400/10 transition-all duration-200"""
@@ -467,3 +467,14 @@ export { Match };
 export { Match };
 
 export { Match };
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</SEO>
+</any>
+</any>

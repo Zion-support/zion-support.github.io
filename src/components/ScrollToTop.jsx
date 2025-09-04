@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, {useState, useEffect} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
 
-export default function Page() {
-;
+export default function Page(props: any) {;
             window.addEventListener('scroll', toggleVisibility);
             return () => window.removeEventListener('scroll', toggleVisibility)}, []);
-        const scrollToTop = () => {
+        const scrollToTop = (props: any) => {
             window.scrollTo({
 
                 top: 0,
@@ -14,9 +13,7 @@ export default function Page() {
         aria - label;"
         "Back to top";
         initial = {};
-        {
-
-            opacity: 0, scale;
+        {opacity: 0, scale;
             0, y;
             20}
     };
@@ -25,7 +22,7 @@ export default function Page() {
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
-  const scrollToTop = () => {
+  const scrollToTop = (props: any) => {
     window.scrollTo({
 
       top: 0,
@@ -76,7 +73,7 @@ export default function Page() {
 }}
         >"
           <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
           </svg>
         </button>) }
     </>
@@ -91,3 +88,6 @@ export default ScrollToTop;
 export default ScrollToTop;
 export default ScrollToTop;
 '"
+
+</motion>
+</AnimatePresence>

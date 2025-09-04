@@ -1,14 +1,15 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { GradientHeading } from "@/components/GradientHeading";
-import { SEO } from "@/components/SEO";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost";
-import { BLOG_POSTS } from "@/data/blog-posts";
-import { Search } from "lucide-react";
+import React from 'react';
+import {useState, useEffect} from "react";
+import {Link} from "react-router-dom";
+import {GradientHeading} from "@/components/GradientHeading";
+import {SEO} from "@/components/SEO";
+import {Card, CardContent, CardFooter} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Select, SelectValue, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
+import {generateRandomBlogPost} from "@/utils/generateRandomBlogPost";
+import {BLOG_POSTS} from "@/data/blog-posts";
+import {Search} from "lucide-react";
 // Categories for filtering
 const CATEGORIES = [
     "All Categories",
@@ -20,7 +21,7 @@ const CATEGORIES = [
     "Infrastructure"
 ];
 export default function Blog
-export { Blog }() {
+export {Blog}() {
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedCategory, setSelectedCategory] = useState("All Categories");
     const [posts, setPosts] = useState([...BLOG_POSTS]);
@@ -29,13 +30,12 @@ export { Blog }() {
             setPosts(prev => [...prev, generateRandomBlogPost()])}, 120000); // every 2 minutes
         return () => clearInterval(interval)}, []);
     // Filter blog posts based on search and category
-    const filteredPosts = posts.filter(post => {
-        const matchesCategory = selectedCategory === "All Categories" || post.category === selectedCategory;
+    const filteredPosts = posts.filter(post => {const matchesCategory = selectedCategory === "All Categories" || post.category === selectedCategory;
         return matchesSearch && matchesCategory});
     // Get featured posts
     const featuredPosts = posts.filter(post => post.isFeatured);
     return (<>
-      <SEO title="Blog - AI & Tech Insights" description="Stay updated with the latest trends in AI technology, marketplace strategies, and IT services. Expert articles on innovation, sustainability, and digital transformation." keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT" canonical="https://ziontechgroup.com/blog"/>
+      <SEO title="Blog - AI & Tech Insights" description="Stay updated with the latest trends in AI technology, marketplace strategies, and IT services. Expert articles on innovation, sustainability, and digital transformation." keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT" canonical="https://ziontechgroup.com/blog" />
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -86,12 +86,12 @@ export { Blog }() {
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate"/>
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />
                 <Input type="text" placeholder="Search articles..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10 bg-zion-blue border border-zion-blue-light text-white"/>
               </div>
               <Select value={selectedCategory} onValueChange={setSelectedCategory}>
                 <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
-                  <SelectValue placeholder="Select Category"/>
+                  <SelectValue placeholder="Select Category" />
                 </SelectTrigger>
                 <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
                   {CATEGORIES.map((category) => (<SelectItem key={category} value={category} className="text-white">

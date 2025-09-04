@@ -1,5 +1,5 @@
-import { Brain, Zap, Target, Shield, Users, Globe, Cpu, Lightbulb, BarChart3 } from 'lucide-react';
-const AIAutonomousResearch = () => {
+import {Brain, Zap, Target, Shield, Users, Globe, Cpu, Lightbulb, BarChart3} from 'lucide-react';
+const AIAutonomousResearch = (props: any) => {
     const researchFeatures = [
         {
             icon: Brain,
@@ -7,68 +7,46 @@ const AIAutonomousResearch = () => {
             description: "AI systems that independently conduct research and generate insights",
             benefits: ["24/7 research operation", "Data-driven insights", "Pattern recognition", "Hypothesis generation"]
         },
-        {
-            icon: Zap,
+        {icon: Zap,
             title: "Automated Experimentation",
             description: "Self-running experiments with continuous optimization and learning",
-            benefits: ["Parameter optimization", "Result analysis", "Iterative improvement", "Efficiency gains"]
-        },
-        {
-            icon: Target,
+            benefits: ["Parameter optimization", "Result analysis", "Iterative improvement", "Efficiency gains"]},
+        {icon: Target,
             title: "Predictive Modeling",
             description: "Advanced AI models that predict research outcomes and trends",
-            benefits: ["Outcome prediction", "Risk assessment", "Resource optimization", "Strategic planning"]
-        },
-        {
-            icon: Shield,
+            benefits: ["Outcome prediction", "Risk assessment", "Resource optimization", "Strategic planning"]},
+        {icon: Shield,
             title: "Data Security & Privacy",
             description: "Secure handling of sensitive research data with privacy protection",
-            benefits: ["Data encryption", "Access control", "Compliance management", "Audit trails"]
-        },
-        {
-            icon: Users,
+            benefits: ["Data encryption", "Access control", "Compliance management", "Audit trails"]},
+        {icon: Users,
             title: "Collaborative Research",
             description: "AI-facilitated collaboration across research teams and institutions",
-            benefits: ["Team coordination", "Knowledge sharing", "Resource pooling", "Cross-disciplinary insights"]
-        },
-        {
-            icon: Globe,
+            benefits: ["Team coordination", "Knowledge sharing", "Resource pooling", "Cross-disciplinary insights"]},
+        {icon: Globe,
             title: "Global Research Network",
             description: "Connect with research institutions worldwide through AI-powered platforms",
-            benefits: ["Global collaboration", "Resource sharing", "Cultural diversity", "Innovation acceleration"]
-        }
+            benefits: ["Global collaboration", "Resource sharing", "Cultural diversity", "Innovation acceleration"]}
     ];
     const applications = [
-        {
-            title: "Scientific Research",
+        {title: "Scientific Research",
             description: "Automated hypothesis testing and experimental design",
-            icon: Lightbulb
-        },
-        {
-            title: "Medical Research",
+            icon: Lightbulb},
+        {title: "Medical Research",
             description: "Drug discovery and clinical trial optimization",
-            icon: Shield
-        },
-        {
-            title: "Academic Research",
+            icon: Shield},
+        {title: "Academic Research",
             description: "Literature review and knowledge synthesis automation",
-            icon: BookOpen
-        },
-        {
-            title: "Market Research",
+            icon: BookOpen},
+        {title: "Market Research",
             description: "Consumer behavior analysis and trend prediction",
-            icon: BarChart3
-        },
-        {
-            title: "Technology Research",
+            icon: BarChart3},
+        {title: "Technology Research",
             description: "Innovation tracking and technology forecasting",
-            icon: Cpu
-        },
-        {
-            title: "Environmental Research",
+            icon: Cpu},
+        {title: "Environmental Research",
             description: "Climate modeling and sustainability analysis",
-            icon: Globe
-        }
+            icon: Globe}
     ];
     const benefits = [
         "Accelerated research timelines and faster discoveries",
@@ -84,7 +62,7 @@ const AIAutonomousResearch = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 text-purple-400 rounded-full text-sm font-medium mb-6">
-              <Brain className="w-4 h-4 mr-2"/>
+              <Brain className="w-4 h-4 mr-2" />
               AI Autonomous Research
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -123,7 +101,7 @@ const AIAutonomousResearch = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {researchFeatures.map((feature, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-white"/>
+                  <feature .icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -154,7 +132,7 @@ const AIAutonomousResearch = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {applications.map((app, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-purple-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <app.icon className="w-8 h-8 text-white"/>
+                  <app .icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{app.title}</h3>
                 <p className="text-gray-300">{app.description}</p>
@@ -184,7 +162,7 @@ const AIAutonomousResearch = () => {
             </div>
             <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl p-8 border border-purple-500/30">
               <div className="text-center">
-                <Lightbulb className="w-24 h-24 text-purple-400 mx-auto mb-4"/>
+                <Lightbulb className="w-24 h-24 text-purple-400 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-2">Research Innovation</h3>
                 <p className="text-gray-300 mb-6">
                   We're at the forefront of AI autonomous research technology, 
@@ -224,7 +202,7 @@ const AIAutonomousResearch = () => {
     </div>);
 };
 // Icon components
-const BookOpen = ({ className }) => (<svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+const BookOpen = ({className}) => (<svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
   </svg>);
 export default AIAutonomousResearch;

@@ -5,8 +5,8 @@ import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@
 
 // Mock AI Matchmaker component - in real app this would be a separate component
 function AIMatchmaker({ serviceType, onMatchSelect }: { serviceType: string; onMatchSelect: (match: an y) => void }) {
-  const [query, setQuery] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
+  const [query, setQuery] = useState<any>('');
+  const [isLoading, setIsLoading] = useState<any>(false);
 
   const handleSubmit = async (e: Reac t.FormEvent) => {
     e.preventDefault();
@@ -60,11 +60,11 @@ function AIMatchmaker({ serviceType, onMatchSelect }: { serviceType: string; onM
   );
 }
 
-export default function AIMatcherPage() {
+export default function AIMatcherPage(props: any) {
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
-  const handleMatchSelect = (match: an y) => {
+  const handleMatchSelect = (props: any) => {
     let itemType = "service";
     const category = match.item.category.toLowerCase();
     
@@ -127,3 +127,9 @@ export default function AIMatcherPage() {
     </>
   );
 }
+
+</AIMatchmaker>
+</string>
+</textarea>
+</any>
+</any>

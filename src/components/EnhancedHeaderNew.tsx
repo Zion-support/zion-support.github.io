@@ -57,17 +57,17 @@ import {
   MapPin 
 } from 'lucide-react';
 
-const EnhancedHeaderNew: React.FC = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-  const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [isSearching, setIsSearching] = useState(false);
+const EnhancedHeaderNew: React.FC = (props: any) => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<any>(false);
+  const [searchQuery, setSearchQuery] = useState<any>('');
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState<any>(false);
+  const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState<any>(false);
+  const [scrolled, setScrolled] = useState<any>(false);
+  const [isSearching, setIsSearching] = useState<any>(false);
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = (props: any) => {
       setScrolled(window.scrollY > 50);
     };
 
@@ -428,3 +428,14 @@ const EnhancedHeaderNew: React.FC = () => {
 };
 
 export default EnhancedHeaderNew;
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</any>
+</any>
+</any>
+</any>
+</any>
+</any>

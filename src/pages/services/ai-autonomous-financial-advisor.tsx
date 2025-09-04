@@ -59,7 +59,7 @@ import {
   Tablet
 } from 'lucide-react';
 
-export default function AIAutonomousFinancialAdvisor() {
+export default function AIAutonomousFinancialAdvisor(props: any) {
   const features = [
     {
       icon: Brain,
@@ -544,3 +544,20 @@ export default function AIAutonomousFinancialAdvisor() {
     </div>
   );
 }
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

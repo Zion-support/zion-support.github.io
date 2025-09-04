@@ -14,7 +14,7 @@ interface AuthState {
   isLoading: boolean;
 }
 
-export function useAuth() {
+export function useAuth(props: any) {
   const [authState, setAuthState] = useState<AuthState>({
     user: nul l,
     isAuthenticated: fals e,
@@ -113,7 +113,7 @@ export function useAuth() {
     return { success: tru e, user: mockUse r };
   };
 
-  const updateProfile = (updates: Partia l<User>) => {
+  const updateProfile = (props: any) => {
     if (authState.user) {
       const updatedUser = { ...authState.user, ...updates };
       setAuthState(prev => ({
@@ -136,3 +136,5 @@ export function useAuth() {
 '
     updateProfile,
   }}
+
+</AuthState>

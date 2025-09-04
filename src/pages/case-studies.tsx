@@ -150,3 +150,6 @@
     </div>) };
 export default CaseStudies;
 '"`
+</motion>
+</motion>
+</motion>

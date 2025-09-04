@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 const TabsContext = createContext(undefined);
-export function Tabs({ children, defaultValue, value, onValueChange, className = '' }) {
+export function Tabs(props: any) {
     const [activeTab, setActiveTab] = useState(value || defaultValue || '');
-    const handleTabChange = (tab) => {
+    const handleTabChange = (props: any) => {
         setActiveTab(tab);
         if (onValueChange) {
             onValueChange(tab);
@@ -15,13 +15,13 @@ export function Tabs({ children, defaultValue, value, onValueChange, className =
     </TabsContext.Provider>);
 }
 ;
-export function TabsList({ children, className = '' }) {
+export function TabsList(props: any) {
     return (<div className={`flex border-b border-gray-200 ${className}`}>
       {children}
     </div>);
 }
 ;
-export function TabsTrigger({ children, value, className = '' }) {
+export function TabsTrigger(props: any) {
     const context = useContext(TabsContext);
     if (!context)
         throw new Error('TabsTrigger must be used within Tabs');
@@ -32,7 +32,7 @@ export function TabsTrigger({ children, value, className = '' }) {
       {children}
     </button>);
 }
-export function TabsContent({ children, value, className = '' }) {
+export function TabsContent(props: any) {
     const context = useContext(TabsContext);
     if (!context)
         throw new Error('TabsContent must be used within Tabs');
@@ -43,3 +43,4 @@ export function TabsContent({ children, value, className = '' }) {
 
 
 export default tabs;
+</TabsContext>

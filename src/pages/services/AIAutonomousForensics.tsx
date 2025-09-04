@@ -231,3 +231,10 @@ const AIAutonomousForensics: Reac t.FC = (): JSX.Element => {
 };
 
 export default AIAutonomousForensics;
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

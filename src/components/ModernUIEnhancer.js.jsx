@@ -1,17 +1,15 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, {useEffect, useState, useRef} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
 
-export default function Page() {
+export default function Page(props: any) {
         };
         updateDeviceType();
         window.addEventListener('resize', updateDeviceType);
         return () => window.removeEventListener('resize', updateDeviceType)}, []);
     // Scroll effects
-    useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
+    useEffect(() => {// TODO: Add dependencies if needed}, []);
         if(!enableScrollEffects) return;
-        const handleScroll = () => {
+        const handleScroll = (props: any) => {
             const scrollTop = window.pageYOffset;
             setShowScrollToTop(scrollTop > 300) ;
             // Parallax effect for background elements
@@ -35,89 +33,65 @@ export default function Page() {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll)}, [enableScrollEffects]);
     // Theme management
-    useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
+    useEffect(() => {// TODO: Add dependencies if needed}, []);
 
         const savedTheme = localStorage.getItem('theme') || 'auto';
         setCurrentTheme(savedTheme);
         applyTheme(savedTheme)}, []);
-    const applyTheme = (theme) => {
+    const applyTheme = (props: any) => {
 
         const root = document.documentElement;
         if(theme === 'auto') {
 
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)).matches;
             root.classList.toggle('dark', prefersDark)}
-        else {
-
-            root.classList.toggle('dark', theme === 'dark')}
+        else {root.classList.toggle('dark', theme === 'dark')}
         localStorage.setItem('theme', theme)};
     const themes = ['light',dark',auto'];
         const currentIndex = themes.indexOf(currentTheme) ;
         const nextTheme = themes[(currentIndex + 1) % themes.length];
         setCurrentTheme(nextTheme) ;
         applyTheme(nextTheme) };
-    const scrollToTop = () => {
+    const scrollToTop = (props: any) => {
         window.scrollTo({
 
             top: 0,
             behavior: 'smooth'})};
     // Add CSS animations to the document
-    useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
+    useEffect(() => {// TODO: Add dependencies if needed}, []);
         if(!enableAnimations)
             return;
         const style = document.createElement('style');`
         style.textContent = `
-      .fade-in {
-
-        opacity: 0;
+      .fade-in {opacity: 0;
         transform: translateY(30px) ;
         transition: opacity 0.6s ease - out, transform 0.6s ease - out}
       
-      .fade-in-visible {
-
-        opacity: 1;
-        transform: translateY(0) }
+      .fade-in-visible {opacity: 1;
+        transform: translateY(0)}
       
-      .slide-in-left {
-
-        opacity: 0;
+      .slide-in-left {opacity: 0;
         transform: translateX(-50px) ;
         transition: opacity 0.6s ease - out, transform 0.6s ease - out}
       
-      .slide-in-left-visible {
-
-        opacity: 1;
-        transform: translateX(0) }
+      .slide-in-left-visible {opacity: 1;
+        transform: translateX(0)}
       
-      .slide-in-right {
-
-        opacity: 0;
+      .slide-in-right {opacity: 0;
         transform: translateX(50px) ;
         transition: opacity 0.6s ease - out, transform 0.6s ease - out}
       
-      .slide-in-right-visible {
-
-        opacity: 1;
-        transform: translateX(0) }
+      .slide-in-right-visible {opacity: 1;
+        transform: translateX(0)}
       
-      .scale-in {
-
-        opacity: 0;
+      .scale-in {opacity: 0;
         transform: scale(0.8) ;
         transition: opacity 0.6s ease - out, transform 0.6s ease - out}
       
-      .scale-in-visible {
-
-        opacity: 1;
-        transform: scale(1) }
+      .scale-in-visible {opacity: 1;
+        transform: scale(1)}
       
-      .bounce-in {
-
-        animation: bounceIn 0.8s ease-out}
+      .bounce-in {animation: bounceIn 0.8s ease-out}
       
       @keyframes bounceIn {
 
@@ -125,90 +99,59 @@ export default function Page() {
 
           opacity: 0;
           transform: scale(0.3) }
-        50% {
-
-          opacity: 1;
-          transform: scale(1.05) }
-        70% {
-
-          transform: scale(0.9)}
-        100% {
-
-          opacity: 1;
-          transform: scale(1) }
+        50% {opacity: 1;
+          transform: scale(1.05)}
+        70% {transform: scale(0.9)}
+        100% {opacity: 1;
+          transform: scale(1)}
       }
       
-      .floating {
-
-        animation: floating 3s ease-in-out infinite}
+      .floating {animation: floating 3s ease-in-out infinite}
       
       @keyframes floating {
 
         0%, 100% {
 
           transform: translateY(0px)}
-        50% {
-
-          transform: translateY(-10px)}
+        50% {transform: translateY(-10px)}
       }
       
-      .glow {
-
-        animation: glow 2s ease-in-out infinite alternate}
+      .glow {animation: glow 2s ease-in-out infinite alternate}
       
       @keyframes glow {
 
         from {
 
           box-shadow: 0 0 20px rgba(59, 130, 246, 0.5)}
-        to {
-
-          box-shadow: 0 0 30px rgba(59, 130, 246, 0.8)}
+        to {box-shadow: 0 0 30px rgba(59, 130, 246, 0.8)}
       }
       
-      .gradient-text {
-
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      .gradient-text {background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text}
       
-      .glass-effect {
-
-        background: rgba(255, 255, 255, 0.1);
+      .glass-effect {background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.2)}
       
-      .glass-effect-dark {
-
-        background: rgba(0, 0, 0, 0.1);
+      .glass-effect-dark {background: rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.1)}
       
-      .hover-lift {
-
-        transition: transform 0.3s ease, box-shadow 0.3s ease}
+      .hover-lift {transition: transform 0.3s ease, box-shadow 0.3s ease}
       
-      .hover-lift:hover {
-
-        transform: translateY(-5px);
+      .hover-lift:hover {transform: translateY(-5px);
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1)}
       
-      .text-shadow {
-
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)}
+      .text-shadow {text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)}
       
-      .text-shadow-light {
-
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1)}`
+      .text-shadow-light {text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1)}`
     `;
         document.head.appendChild(style) ;
-        return () => {
-            document.head.removeChild(style) }}, [enableAnimations]) ;
+        return () => {document.head.removeChild(style)}}, [enableAnimations]) ;
     // Add intersection observer for scroll animations
-    useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
+    useEffect(() => {// TODO: Add dependencies if needed}, []);
         if(!enableScrollEffects)
             return;
         const observer = new IntersectionObserver((entries) => {
@@ -225,9 +168,7 @@ export default function Page() {
                 }
             })}, observerOptions);
         const animatedElements = document.querySelectorAll('[data-animation]');
-        animatedElements.forEach((element) => {
-
-            observer.observe(element)});
+        animatedElements.forEach((element) => {observer.observe(element)});
         return () => {
             animatedElements.forEach((element) => {
 
@@ -262,7 +203,7 @@ export default function Page() {
   rotate: 90 
 
 }} transition={{ duration: 0.3 }}>"
-                <Sun className="w-5 h-5 text-yellow-500"/>
+                <Sun className="w-5 h-5 text-yellow-500" />
               </motion.div>)}'"
             {currentTheme === 'dark' && (<motion.div key="dark" initial = {
 
@@ -280,7 +221,7 @@ export default function Page() {
   rotate: 90 
 
 }} transition={{ duration: 0.3 }}>"
-                <Moon className="w-5 h-5 text-blue-400"/>
+                <Moon className="w-5 h-5 text-blue-400" />
               </motion.div>)}'"
             {currentTheme === 'auto' && (<motion.div key="auto" initial = {
 
@@ -298,7 +239,7 @@ export default function Page() {
   rotate: 90 
 
 }} transition={{ duration: 0.3 }}>"
-                <Monitor className="w-5 h-5 text-gray-600 dark:text-gray-400"/>
+                <Monitor className="w-5 h-5 text-gray-600 dark:text-gray-400" />
               </motion.div>)}
           </AnimatePresence>
         </motion.button>) }
@@ -316,9 +257,9 @@ export default function Page() {
 "
 }} className="fixed top-6 left-6 z-50 p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">"
           <div className="flex items-center space-x-2 text-sm">'"
-            {deviceType === 'desktop' && <Monitor className="w-4 h-4 text-blue-500"/>}'"
-            {deviceType === 'tablet' && <Tablet className="w-4 h-4 text-green-500"/>}'"
-            {deviceType === 'mobile' && <Smartphone className="w-4 h-4 text-purple-500"/>}"
+            {deviceType === 'desktop' && <Monitor className="w-4 h-4 text-blue-500" />}'"
+            {deviceType === 'tablet' && <Tablet className="w-4 h-4 text-green-500" />}'"
+            {deviceType === 'mobile' && <Smartphone className="w-4 h-4 text-purple-500" />}"
             <span className="text-gray-700 dark:text-gray-300 capitalize">{deviceType}</span>
           </div>
         </motion.div>) }
@@ -341,7 +282,7 @@ export default function Page() {
   scale: 0 
 "
 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={scrollToTop} className="fixed bottom-6 left-6 z-50 p-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300" title="Scroll to top">"
-            <ArrowUp className="w-5 h-5"/>
+            <ArrowUp className="w-5 h-5" />
           </motion.button>)}
       </AnimatePresence>
 
@@ -357,7 +298,7 @@ export default function Page() {
   scale: 1 
 "
 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsVisible(!isVisible)} className="fixed bottom-6 right-6 z-50 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300" title="UI Enhancements">"
-        <Palette className="w-5 h-5"/>
+        <Palette className="w-5 h-5" />
       </motion.button>
 
       {/* UI Enhancement Panel */}
@@ -387,7 +328,7 @@ export default function Page() {
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4">"
               <div className="flex items-center justify-between">"
                 <div className="flex items-center space-x-2">"
-                  <Sparkles className="w-5 h-5"/>"
+                  <Sparkles className="w-5 h-5" />"
                   <h3 className="font-semibold">UI Enhancements</h3>
                 </div>"
                 <button onClick={() => setIsVisible(false)} className="text-white hover:text-gray-200 transition-colors">
@@ -454,7 +395,7 @@ export default function Page() {
 
       {/* Background Particles */}"
       {enableParticles && (<div className="fixed inset-0 pointer-events-none z-0">"
-          {[...Array(20)].map((_, i) => (<motion.div key={i} className="absolute w-2 h-2 bg-blue-400 rounded-full opacity-20" initial = {
+          {[...Array(20)].map((_, i) => (<motion .div key={i} className="absolute w-2 h-2 bg-blue-400 rounded-full opacity-20" initial = {
 
   {
 
@@ -472,8 +413,18 @@ export default function Page() {
 
                     duration: Math.random() * 10 + 10,
                     repeat: Infinity,"
-                    ease: "linear"}}/>))}
+                    ease: "linear"}} />))}
         </div>)}
     </>)};
 export default ModernUIEnhancer;
 '"`
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

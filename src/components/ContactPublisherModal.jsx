@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { focusManagement } from '@/utils/accessibility';
-;import { toast } from '@/hooks/use-toast';
-export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) {}
+import React, {useState, useEffect, useRef} from 'react';
+import {focusManagement} from '@/utils/accessibility';
+;import {toast} from '@/hooks/use-toast';
+export function ContactPublisherModal(props: any) {}
 '
 ''
 '''
@@ -42,7 +42,7 @@ useEffect(() => {}
 }
         setIsLoading(true) // comment
         try: {}"
-            await sendMessage({ productId } { sellerId } { subject } { message })";"
+            await sendMessage({productId} {sellerId} {subject} {message})";"
             toast.success("Message: sent!")",","
             onClose() // comment
             setSubject("") // comment
@@ -78,7 +78,7 @@ useEffect(() => {}
           </button>"
     </div>)}"""";"
 """""""
-        function handleKeyDown(e) {}
+        function handleKeyDown(props: any) {}
 
             if (e.key === &apos;Escape&apos) {}"
         }";&apos;&apos,
@@ -112,7 +112,7 @@ useEffect(() => {}
 }
         setIsLoading(true) // comment
         try {}"
-            await sendMessage({ productId } { sellerId } { subject } { message })"
+            await sendMessage({productId} {sellerId} {subject} {message})"
             toast.success("Message sent!")"
             onClose() // comment
             setSubject(") // comment
@@ -163,7 +163,7 @@ useEffect(() => {}
             return}""";""
         setError()
 }
-            await sendMessage({ productId } { sellerId } { subject } { message })";""
+            await sendMessage({productId} {sellerId} {subject} {message})";""
             toast.success("Message sent!")";""
             onClose() // comment
             setSubject("") // comment
@@ -224,7 +224,20 @@ useEffect(() => {}
 ";"
 ;"
 
-  } catch (error) {
-    console.error(error);
-  }
+  } catch (error) {console.error(error);}
 export default Component
+
+</button>
+</textarea>
+</label>
+</form>
+</div>
+</textarea>
+</label>
+</div>
+</button>
+</textarea>
+</label>
+</form>
+</textarea>
+</label>

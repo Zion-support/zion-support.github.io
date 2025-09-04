@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import { ComputerDesktopIcon, ServerIcon, ShieldCheckIcon, CogIcon, WrenchScrewdriverIcon, CloudIcon } from '@heroicons/react/24/outline';
-const ITServices = () => {
+import {Link} from 'react-router-dom';
+import {ComputerDesktopIcon, ServerIcon, ShieldCheckIcon, CogIcon, WrenchScrewdriverIcon, CloudIcon} from '@heroicons/react/24/outline';
+const ITServices = (props: any) => {
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
@@ -8,7 +8,7 @@ const ITServices = () => {
           <div className="text-center">
             <div className="flex justify-center mb-6">
               <div className="p-3 bg-blue-600/20 rounded-full">
-                <ComputerDesktopIcon className="h-12 w-12 text-blue-400"/>
+                <ComputerDesktopIcon className="h-12 w-12 text-blue-400" />
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -71,25 +71,25 @@ const ITServices = () => {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                      <ServerIcon className="h-5 w-5 text-white"/>
+                      <ServerIcon className="h-5 w-5 text-white" />
                     </div>
                     <span className="text-lg font-semibold">Infrastructure Management</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
-                      <ShieldCheckIcon className="h-5 w-5 text-white"/>
+                      <ShieldCheckIcon className="h-5 w-5 text-white" />
                     </div>
                     <span className="text-lg font-semibold">Security & Compliance</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
-                      <CloudIcon className="h-5 w-5 text-white"/>
+                      <CloudIcon className="h-5 w-5 text-white" />
                     </div>
                     <span className="text-lg font-semibold">Cloud Services</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
-                      <WrenchScrewdriverIcon className="h-5 w-5 text-white"/>
+                      <WrenchScrewdriverIcon className="h-5 w-5 text-white" />
                     </div>
                     <span className="text-lg font-semibold">Technical Support</span>
                   </div>
@@ -109,7 +109,7 @@ const ITServices = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-4">
-                <ServerIcon className="h-8 w-8 text-blue-400"/>
+                <ServerIcon className="h-8 w-8 text-blue-400" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Infrastructure Management</h3>
               <p className="text-gray-300 mb-4">
@@ -126,7 +126,7 @@ const ITServices = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mb-4">
-                <ShieldCheckIcon className="h-8 w-8 text-green-400"/>
+                <ShieldCheckIcon className="h-8 w-8 text-green-400" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Cybersecurity</h3>
               <p className="text-gray-300 mb-4">
@@ -143,7 +143,7 @@ const ITServices = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">
-                <CloudIcon className="h-8 w-8 text-purple-400"/>
+                <CloudIcon className="h-8 w-8 text-purple-400" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Cloud Services</h3>
               <p className="text-gray-300 mb-4">
@@ -160,7 +160,7 @@ const ITServices = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-orange-600/20 rounded-lg flex items-center justify-center mb-4">
-                <WrenchScrewdriverIcon className="h-8 w-8 text-orange-400"/>
+                <WrenchScrewdriverIcon className="h-8 w-8 text-orange-400" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Technical Support</h3>
               <p className="text-gray-300 mb-4">
@@ -177,7 +177,7 @@ const ITServices = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center mb-4">
-                <CogIcon className="h-8 w-8 text-cyan-400"/>
+                <CogIcon className="h-8 w-8 text-cyan-400" />
               </div>
               <h3 className="text-xl font-semibold mb-3">System Administration</h3>
               <p className="text-gray-300 mb-4">
@@ -194,7 +194,7 @@ const ITServices = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-pink-600/20 rounded-lg flex items-center justify-center mb-4">
-                <ComputerDesktopIcon className="h-8 w-8 text-pink-400"/>
+                <ComputerDesktopIcon className="h-8 w-8 text-pink-400" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Desktop Support</h3>
               <p className="text-gray-300 mb-4">

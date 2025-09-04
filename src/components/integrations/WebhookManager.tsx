@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-export default function Page() {
+export default function Page(props: any) {
 ,
     { value: "quote_received", label: "Quote Request Received" },
     { value: "milestone_approved", label: "Milestone Approved" },
@@ -13,7 +13,7 @@ export default function Page() {
     fetchWebhooks();
   }, [fetchWebhooks]); // Added fetchWebhooks
   
-  const handleAddEvent = () => {
+  const handleAddEvent = (props: any) => {
     if(!newWebhook.selectedEvent) return;
     
     if(newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
@@ -28,7 +28,7 @@ export default function Page() {
     });
   };
   
-  const handleRemoveEvent = (event: WebhookEventTyp e) => {
+  const handleRemoveEvent = (props: any) => {
     setNewWebhook({
       ...newWebhook,
       eventTypes: newWebhoo k.eventTypes.filter(e => e !== event)
@@ -258,3 +258,5 @@ export default function Page() {
     </div>
   );
 }
+
+</empty>

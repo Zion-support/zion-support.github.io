@@ -7,7 +7,7 @@ interface BundleInfo {
   imageSize: number;
 }
 
-const BundleAnalyzer: React.FC = () => {
+const BundleAnalyzer: React.FC = (props: any) => {
   const [bundleInfo, setBundleInfo] = useState<BundleInfo>({
     totalSize: 0,
     jsSize: 0,
@@ -17,7 +17,7 @@ const BundleAnalyzer: React.FC = () => {
 
   useEffect(() => {
     // Simulate bundle analysis
-    const analyzeBundle = () => {
+    const analyzeBundle = (props: any) => {
       // In a real implementation, this would analyze the actual bundle
       setBundleInfo({
         totalSize: 1024 * 1024, // 1MB
@@ -30,7 +30,7 @@ const BundleAnalyzer: React.FC = () => {
     analyzeBundle();
   }, []);
 
-  const formatBytes = (bytes: number) => {
+  const formatBytes = (props: any) => {
     if (bytes === 0) return '0 Bytes';
     const k = 1024;
     const sizes = ['Bytes', 'KB', 'MB', 'GB'];
@@ -72,3 +72,5 @@ const BundleAnalyzer: React.FC = () => {
 };
 
 export default BundleAnalyzer;
+
+</BundleInfo>

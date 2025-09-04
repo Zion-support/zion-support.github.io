@@ -1,8 +1,9 @@
+import React from 'react';
 import { useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
 
-export function ReferralMiddleware({ children }: Props) {
+export function ReferralMiddleware(props: any) {
   const { user } = useAuth();
 
   useEffect(() => {
@@ -18,7 +19,7 @@ export function ReferralMiddleware({ children }: Props) {
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
-    async function sendReferral() {
+    async function sendReferral(props: any) {
       const code = localStorage.getItem('referralCode');
       if(!code || !user?.id || !user?.email) return; // Guard against missing email as well
       try {

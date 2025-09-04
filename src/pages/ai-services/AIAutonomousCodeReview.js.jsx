@@ -1,33 +1,25 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Code, Shield, Zap, Brain, Users, CheckCircle, ArrowRight, Play, Star, Cpu, GitBranch } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import {motion} from 'framer-motion';
+import {Link} from 'react-router-dom';
+import {Code, Shield, Zap, Brain, Users, CheckCircle, ArrowRight, Play, Star, Cpu, GitBranch} from 'lucide-react';
+import {SEO} from '@/components/SEO';
 const features = [
-    {
-        title: "Automated Code Analysis",
+    {title: "Automated Code Analysis",
         description: "AI-powered code review that identifies bugs, security vulnerabilities, and optimization opportunities.",
         icon: Code,
-        color: "from-blue-500 to-cyan-500"
-    },
-    {
-        title: "Security Vulnerability Detection",
+        color: "from-blue-500 to-cyan-500"},
+    {title: "Security Vulnerability Detection",
         description: "Advanced security scanning that detects potential threats and compliance issues in your codebase.",
         icon: Shield,
-        color: "from-red-500 to-pink-500"
-    },
-    {
-        title: "Performance Optimization",
+        color: "from-red-500 to-pink-500"},
+    {title: "Performance Optimization",
         description: "Intelligent suggestions for improving code performance, readability, and maintainability.",
         icon: Zap,
-        color: "from-green-500 to-emerald-500"
-    },
-    {
-        title: "Learning & Adaptation",
+        color: "from-green-500 to-emerald-500"},
+    {title: "Learning & Adaptation",
         description: "Machine learning algorithms that continuously improve based on your team's coding patterns and preferences.",
         icon: Brain,
-        color: "from-purple-500 to-indigo-500"
-    }
+        color: "from-purple-500 to-indigo-500"}
 ];
 const benefits = [
     "Reduce code review time by up to 80%",
@@ -38,45 +30,33 @@ const benefits = [
     "Accelerate development cycles"
 ];
 const useCases = [
-    {
-        title: "Development Teams",
+    {title: "Development Teams",
         description: "Streamline code review processes for development teams of  size.",
-        icon: Users
-    },
-    {
-        title: "Open Source Projects",
+        icon: Users},
+    {title: "Open Source Projects",
         description: "Maintain high code quality standards in open source contributions.",
-        icon: GitBranch
-    },
-    {
-        title: "Enterprise Applications",
+        icon: GitBranch},
+    {title: "Enterprise Applications",
         description: "Ensure security and compliance in enterprise-grade applications.",
-        icon: Shield
-    },
-    {
-        title: "CI/CD Pipelines",
+        icon: Shield},
+    {title: "CI/CD Pipelines",
         description: "Integrate automated code review into your continuous integration workflows.",
-        icon: Cpu
-    }
+        icon: Cpu}
 ];
 const testimonials = [
-    {
-        content: "The AI Autonomous Code Review has transformed our development process. We catch issues much earlier and our code quality has improved significantly.",
+    {content: "The AI Autonomous Code Review has transformed our development process. We catch issues much earlier and our code quality has improved significantly.",
         name: "Alex Thompson",
         role: "Lead Developer, CodeFlow Inc",
-        rating: 5
-    },
-    {
-        content: "This tool is a game-changer for our security team. It catches vulnerabilities that human reviewers might miss.",
+        rating: 5},
+    {content: "This tool is a game-changer for our security team. It catches vulnerabilities that human reviewers might miss.",
         name: "Maria Santos",
         role: "Security Engineer, SecureTech",
-        rating: 5
-    }
+        rating: 5}
 ];
 export default function AIAutonomousCodeReview
-export { AIAutonomousCodeReview }() {
+export {AIAutonomousCodeReview}() {
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 relative overflow-hidden">
-      <SEO title="AI Autonomous Code Review - Zion Tech Group" description="Revolutionize your code review process with AI-powered analysis. Automated security scanning, performance optimization, and quality assurance." keywords="AI code review, automated code review, code security, code quality, AI development tools, code analysis" canonical="https://ziontechgroup.com/ai-services/ai-autonomous-code-review/"/>
+      <SEO title="AI Autonomous Code Review - Zion Tech Group" description="Revolutionize your code review process with AI-powered analysis. Automated security scanning, performance optimization, and quality assurance." keywords="AI code review, automated code review, code security, code quality, AI development tools, code analysis" canonical="https://ziontechgroup.com/ai-services/ai-autonomous-code-review/" />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -92,7 +72,7 @@ export { AIAutonomousCodeReview }() {
 
 }} transition={{ duration: 0.8 }} className="text-center">
             <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full px-4 py-2 text-cyan-400 text-sm font-medium mb-6">
-              <Code className="w-4 h-4"/>
+              <Code className="w-4 h-4" />
               AI-Powered Code Review
             </div>
             
@@ -109,12 +89,12 @@ export { AIAutonomousCodeReview }() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-cyan-500/25 transition-all duration-300 flex items-center gap-2 justify-center">
-                <Play className="w-5 h-5"/>
+                <Play className="w-5 h-5" />
                 Watch Demo
               </motion.button>
               <Link to="/contact" className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center gap-2 justify-center">
                 Get Started
-                <ArrowRight className="w-5 h-5"/>
+                <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
           </motion.div>
@@ -158,7 +138,7 @@ export { AIAutonomousCodeReview }() {
 
 }} className="bg-gray-800/50 backdrop-blur-md border border-gray-700 rounded-2xl p-8 hover:border-cyan-500/50 hover:bg-gray-800/70 transition-all duration-300">
                   <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl mb-6 flex items-center justify-center text-white`}>
-                    <IconComponent className="w-8 h-8"/>
+                    <IconComponent className="w-8 h-8" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 leading-relaxed">{feature.description}</p>
@@ -201,7 +181,7 @@ export { AIAutonomousCodeReview }() {
   delay: index * 0.1 
 
 }} className="flex items-start gap-3">
-                <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0"/>
+                <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
               </motion.div>))}
           </div>
@@ -245,7 +225,7 @@ export { AIAutonomousCodeReview }() {
 
 }} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                    <IconComponent className="w-8 h-8 text-white"/>
+                    <IconComponent className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
                   <p className="text-gray-300 text-sm">{useCase.description}</p>
@@ -289,7 +269,7 @@ export { AIAutonomousCodeReview }() {
 
 }} className="bg-gray-800/50 backdrop-blur-md border border-gray-700 rounded-2xl p-8">
                 <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-cyan-400 fill-current"/>))}
+                  {[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-cyan-400 fill-current" />))}
                 </div>
                 <p className="text-gray-300 mb-6 leading-relaxed italic">
                   "{testimonial.content}"
@@ -324,14 +304,26 @@ export { AIAutonomousCodeReview }() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-cyan-500/25 transition-all duration-300 flex items-center gap-2 justify-center">
                 Get Started Today
-                <ArrowRight className="w-5 h-5"/>
+                <ArrowRight className="w-5 h-5" />
               </Link>
               <Link to="/pricing" className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center gap-2 justify-center">
                 View Pricing
-                <ArrowRight className="w-5 h-5"/>
+                <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
     </div>)}
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

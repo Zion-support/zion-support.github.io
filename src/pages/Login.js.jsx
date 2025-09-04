@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
+import React, {useState} from 'react';
+import {SEO} from "@/components/SEO";
+import {GradientHeading} from "@/components/GradientHeading";
+import {Button} from "@/components/ui/button";
 export default function Login
-export { Login }() {
+export {Login}() {
   const { isAuthenticated, user, isLoading } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-  const { dispatch } = useCart();
+  const {dispatch} = useCart();
   const reduxDispatch = useDispatch();
 
   useEffect(() => {
@@ -32,14 +32,12 @@ export { Login }() {
   if (!isAuthenticated && !isLoading) {
     return (
       <ErrorBoundary FallbackComponent={LoginErrorFallback}>
-        <LoginContent />
+        <LoginContent  />
       </ErrorBoundary>
     )}
 
   // Optional: Render a loading indicator while isLoading is true
-  if (isLoading) {
-    return <div className="p-4 text-center text-foreground">Loading...</div>; // Or a proper loading spinner component
-  }
+  if (isLoading) {return <div className="p-4 text-center text-foreground">Loading...</div>; // Or a proper loading spinner component}
 
   // If authenticated and isLoading is false, the useEffect above should have navigated.
   // Return null or a minimal layout if needed, though direct navigation is preferred.

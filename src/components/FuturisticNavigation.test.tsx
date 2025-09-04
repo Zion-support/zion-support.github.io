@@ -10,3 +10,5 @@ export default function FuturisticNavigation.test() {return (
         </p>
       </div>
   );"}"
+
+</div>

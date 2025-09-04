@@ -1,9 +1,9 @@
-import { Helmet } from 'react-helmet-async';
-const Admin = () => {
-    return (<>
+import React from 'react';
+import {Helmet} from 'react-helmet-async';
+const Admin = (props: any) => {return (<>
       <Helmet>
         <title>Admin - Zion Tech Group</title>
-        <meta name="description" content="Administrative dashboard for Zion Tech Group. Manage users, services, and system configurations."/>
+        <meta name="description" content="Administrative dashboard for Zion Tech Group. Manage users, services, and system configurations."  />
       </Helmet>
       
       <div className="min-h-screen bg-gray-50 py-12">
@@ -22,6 +22,5 @@ const Admin = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>);};
 export default Admin;

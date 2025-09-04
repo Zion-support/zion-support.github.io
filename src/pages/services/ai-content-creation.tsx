@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3, Users, Clock, DollarSign } from 'lucide-react';
 
-export default function AIContentCreation() {
+export default function AIContentCreation(props: any) {
   const features = [
     'AI-powered content generation for blogs, social media, and marketing',
     'Multi-language content creation and translation',

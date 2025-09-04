@@ -10,3 +10,5 @@ export default function CategoriesSection.test() {return (
         </p>
       </div>
   );"}"
+
+</div>

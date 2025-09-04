@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthChecker = ({ links, className = '' }) => {
+import React, {useState, useEffect} from 'react';
+import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthChecker = (props: any) => {
 
     const [linkStatuses, setLinkStatuses] = useState([]);
     const [isChecking, setIsChecking] = useState(false);    const checkLinkHealth = async(url) => {
@@ -36,12 +36,9 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
                 }}
             // For external links, we could implement actual health checking'
             // For now, we'll mark them as external
-            return {
-
-                url,
+            return {url,
                 status: 'external',
-                responseTime: Date.now () - startTime
-            }}
+                responseTime: Date.now () - startTime}}
         catch(error) {
             return {
 
@@ -66,22 +63,22 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
 }, []);, []);
         // Auto-check links when component mounts
         checkAllLinks()}, [links]);
-    const getStatusIcon = (status) => {
+    const getStatusIcon = (props: any) => {
 
         switch(status) {
 
             case 'healthy':
-                return <CheckCircle className="w-5 h-5 text-green-500"/>;
+                return <CheckCircle className="w-5 h-5 text-green-500" />;
             case 'broken':"
-                return <XCircle className="w-5 h-5 text-red-500"/>;
+                return <XCircle className="w-5 h-5 text-red-500" />;
             case 'external':"
-                return <ExternalLink className="w-5 h-5 text-blue-500"/>;
+                return <ExternalLink className="w-5 h-5 text-blue-500" />;
             case 'checking':"
-                return <AlertTriangle className="w-5 h-5 text-yellow-500 animate-pulse"/>;
+                return <AlertTriangle className="w-5 h-5 text-yellow-500 animate-pulse" />;
             default:"
-                return <AlertTriangle className="w-5 h-5 text-gray-500"/>}
+                return <AlertTriangle className="w-5 h-5 text-gray-500" />}
     };
-    const getStatusText = (status) => {
+    const getStatusText = (props: any) => {
 
         switch(status) {
 
@@ -96,7 +93,7 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
             default:'
                 return 'Unknown'}
     };
-    const getStatusColor = (status) => {
+    const getStatusColor = (props: any) => {
 
         switch(status) {
 
@@ -123,12 +120,12 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
         </div>"
         <button onClick={checkAllLinks} disabled={isChecking} className="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 text-white rounded-lg transition-colors duration-300 flex items-center gap-2">
           {isChecking ? (<>"
-              <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"/>
+              <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
               Checking...
             </>) : (<>"
-              <CheckCircle className="w-4 h-4"/>
+              <CheckCircle className="w-4 h-4" />
               Recheck
-            </>) }
+            </>)}
         </button>
       </div>
 
@@ -185,13 +182,13 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
 export default LinkHealthChecker;
 }}}}}}}}}
 
-export { LinkHealthChecker };
+export {LinkHealthChecker};
 
-export { LinkHealthChecker };
+export {LinkHealthChecker};
 
-export { LinkHealthChecker };
+export {LinkHealthChecker};
 
-export { LinkHealthChecker };
+export {LinkHealthChecker};
 
-export { LinkHealthChecker };
+export {LinkHealthChecker};
 "

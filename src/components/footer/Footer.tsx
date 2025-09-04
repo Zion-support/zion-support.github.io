@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook, Twitter, LinkedIn, Instagram, Youtube, Github } from 'lucide-react';
 
-export function Footer() {
+export function Footer(props: any) {
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
@@ -136,7 +136,7 @@ export function Footer() {
               <input type="email"
                 placeholder="Enter your email"
                 className="flex-1 md:w-64 px-4 py-2 bg-slate-800 text-white rounded-l-lg border border-slate-600 focus: borde r-cyan-400 focus: outlin e-none focus: rin g-2 focus: rin g-cyan-400/20"
-               />
+                />
               <button className="px-6 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-r-lg hover: fro m-cyan-500 hover: t o-blue-600 transition-all duration-200">
                 Subscribe
               </button>

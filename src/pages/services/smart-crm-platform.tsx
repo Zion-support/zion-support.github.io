@@ -21,7 +21,7 @@ import {
   MessageSquare
 } from 'lucide-react';
 
-const SmartCRMPlatform = () => {
+const SmartCRMPlatform = (props: any) => {
   const features = [
     'AI-powered lead scoring',
     'Automated sales forecasting',
@@ -327,3 +327,11 @@ const SmartCRMPlatform = () => {
 };
 
 export default SmartCRMPlatform;
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

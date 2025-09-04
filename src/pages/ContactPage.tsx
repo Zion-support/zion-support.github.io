@@ -13,8 +13,8 @@ import {
   CheckCircle
 } from 'lucide-react';
 
-export default function ContactPage() {
-  const [formData, setFormData] = useState({
+export default function ContactPage(props: any) {
+  const [formData, setFormData] = useState<any>({
     firstName: '',
     lastName: '',
     email: '',
@@ -24,10 +24,10 @@ export default function ContactPage() {
     message: ''
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState<any>(false);
+  const [isSubmitted, setIsSubmitted] = useState<any>(false);
 
-  const handleInputChange = (e: Reac t.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (props: any) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -190,7 +190,7 @@ export default function ContactPage() {
                         required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent transition-colors"
                         placeholder="John"
-                       />
+                        />
                     </div>
                     <div>
                       <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
@@ -204,7 +204,7 @@ export default function ContactPage() {
                         required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent transition-colors"
                         placeholder="Doe"
-                       />
+                        />
                     </div>
                   </div>
                   
@@ -221,7 +221,7 @@ export default function ContactPage() {
                         required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent transition-colors"
                         placeholder="john@company.com"
-                       />
+                        />
                     </div>
                     <div>
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
@@ -234,7 +234,7 @@ export default function ContactPage() {
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent transition-colors"
                         placeholder="+1 (555) 123-4567"
-                       />
+                        />
                     </div>
                   </div>
                   
@@ -249,7 +249,7 @@ export default function ContactPage() {
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent transition-colors"
                       placeholder="Your Company Name"
-                     />
+                      />
                   </div>
                   
                   <div>
@@ -397,3 +397,8 @@ export default function ContactPage() {
     </div>
   );
 }
+
+</textarea>
+</any>
+</any>
+</any>

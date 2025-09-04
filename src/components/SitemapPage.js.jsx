@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { SEO } from "./SEO";
+import {Link} from 'react-router-dom';
+import {SEO} from "./SEO";
 ;
-export default function SitemapPage() {
+export default function SitemapPage(props: any) {
     const publicRoutes = completeSitemap.filter(route => !route.requiredAuth);
     const talentRoutes = completeSitemap.filter(route => route.requiredAuth &&
         route.requiredRoles &&
@@ -16,7 +16,7 @@ export default function SitemapPage() {
         route.requiredRoles &&
         route.requiredRoles.includes('admin'));
     return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO title="Sitemap" description="Complete navigation guide for Zion Tech Group website" keywords="sitemap, navigation, website structure, Zion Tech Group" canonical="https://ziontechgroup.com/content/sitemap-page"/>
+      <SEO title="Sitemap" description="Complete navigation guide for Zion Tech Group website" keywords="sitemap, navigation, website structure, Zion Tech Group" canonical="https://ziontechgroup.com/content/sitemap-page" />
       
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
@@ -135,12 +135,12 @@ export default function SitemapPage() {
       </div>
     </div>)}
 
-export { SitemapPage };
+export {SitemapPage};
 
-export { SitemapPage };
+export {SitemapPage};
 
-export { SitemapPage };
+export {SitemapPage};
 
-export { SitemapPage };
+export {SitemapPage};
 
-export { SitemapPage };
+export {SitemapPage};

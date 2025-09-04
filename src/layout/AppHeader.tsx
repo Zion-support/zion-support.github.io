@@ -17,14 +17,14 @@ import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Cp
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
 >>>>>>> merge-all-prs-20250904-105408
 
-export function AppHeader() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+export function AppHeader(props: any) {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<any>(false);
+  const [sidebarOpen, setSidebarOpen] = useState<any>(false);
+  const [searchQuery, setSearchQuery] = useState<any>('');
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState<any>(false);
 <<<<<<< HEAD
 
-  const handleSearch = (e: Reac t.FormEvent) => {
+  const handleSearch = (props: any) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
@@ -243,7 +243,7 @@ export function AppHeader() {
     }
   ];
 
-  const toggleMenu = () => {
+  const toggleMenu = (props: any) => {
     setIsMenuOpen(!isMenuOpen);
   };
 
@@ -532,7 +532,7 @@ export function AppHeader() {
                           <Settings className="w-4 h-4 mr-3"  />
                           Settings
                         </Link>
-                        <hr className="border-zion-slate/20 my-2"  />
+                        <hr className="border-zion-slate/20 my-2"   />
                         <button
                           onClick={() => {
                             logout();
@@ -569,7 +569,7 @@ export function AppHeader() {
     { name: 'Cloud Services', href: '/services/cloud', description: 'DevOps & Infrastructure' },
   ];
 =======
-  const handleDropdownToggle = (itemName: string) => {
+  const handleDropdownToggle = (props: any) => {
     setActiveDropdown(activeDropdown === itemName ? null : itemName);
   };
 >>>>>>> origin/main
@@ -817,13 +817,13 @@ export function AppHeader() {
             <div className="px-2 pt-2 pb-3 space-y-1 sm: p x-3 bg-slate-800/95 border-t border-slate-700/20">
 =======
 <<<<<<< HEAD
-  const [scrolled, setScrolled] = useState(false);
-  const [isSearching, setIsSearching] = useState(false);
+  const [scrolled, setScrolled] = useState<any>(false);
+  const [isSearching, setIsSearching] = useState<any>(false);
 =======
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = (props: any) => {
       setScrolled(window.scrollY > 10);
     };
 
@@ -1195,8 +1195,8 @@ export function AppHeader() {
               delay: i * 0.1,
               ease: "easeInOut"
             }}
-            style={{
-              left: `${Math.random() * 100}%`,
+            style="{{{
+              left: `${Math.random() * 100}}"%`,
               top: `${Math.random() * 100}%`,
             }}
           />
@@ -1785,7 +1785,7 @@ export function AppHeader() {
                         className="flex items-center px-4 py-2 text-slate-400 hover:text-cyan-400 hover:bg-slate-800/30 rounded transition-all duration-200"
                         onClick={() => setMobileMenuOpen(false)}
                       >
-                        <link.icon className="w-4 h-4 mr-3" />
+                        <link .icon className="w-4 h-4 mr-3"  />
                         {link.name}
                       </Link>
                     ))}
@@ -1816,3 +1816,37 @@ export function AppHeader() {
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
 >>>>>>> merge-all-prs-20250904-105408
+
+</ChevronDown>
+</ChevronDown>
+</div>
+</motion>
+</ChevronDown>
+</nav>
+</motion>
+</motion>
+</motion>
+</any>
+</any>
+</motion>
+</motion>
+</ChevronDown>
+</nav>
+</div>
+</div>
+</form>
+</div>
+</motion>
+</div>
+</motion>
+</motion>
+</motion>
+</motion>
+</div>
+</div>
+</div>
+</header>
+</any>
+</any>
+</any>
+</any>

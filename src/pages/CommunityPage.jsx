@@ -1,10 +1,11 @@
-import { useState } from "react";""""
+import React from 'react';
+import {useState} from "react";""""
 import CreatePostButton from "@/components/community/CreatePostButton";""""
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";""""
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";""""
 import SEO from "@/components/SEO";""""
 import ForumCategories from "@/components/community/ForumCategories";""""
 import PostCard from "@/components/community/PostCard";""""
-import { useAuth } from "@/hooks/useAuth";
+import {useAuth} from "@/hooks/useAuth";
 // Mock data for featured posts;
 const featuredPosts = []
     {}
@@ -174,12 +175,12 @@ const recentPosts = []
         authorAvatar: "https://i.pravatar.cc/150?img=11",""""
         authorRole: "Freelancer"""
 ];
-export default function CommunityPage() {}
+export default function CommunityPage(props: any) {}
 """
-    const { user } = useAuth();""""
+    const {user} = useAuth();""""
     const [activeTab, setActiveTab] = useState("categories");"""
     return (<>""""
-      <SEO title="Community Forum | Zion AI Marketplace" description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals." keywords="community, forum, discussion, AI marketplace, questions, answers" canonical="https://ziontechgroup.com/community"/>"""
+      <SEO title="Community Forum | Zion AI Marketplace" description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals." keywords="community, forum, discussion, AI marketplace, questions, answers" canonical="https://ziontechgroup.com/community" />"""
 """"
       <div className="container py-8">""""
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">"""
@@ -190,7 +191,7 @@ export default function CommunityPage() {}
             </p>
           </div>
 
-          <CreatePostButton />
+          <CreatePostButton  />
         </div>"""
 """"
         <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">""""
@@ -201,30 +202,30 @@ export default function CommunityPage() {}
           </TabsList>"""
 """"
           <TabsContent value="categories">
-            <ForumCategories />
+            <ForumCategories  />
           </TabsContent>"""
 """"
           <TabsContent value="featured">""""
             <div className="space-y-4">
-              {featuredPosts.map((post) => (<PostCard key={post.id} post={post}/>))}
+              {featuredPosts.map((post) => (<PostCard key={post.id} post={post} />))}
             </div>
           </TabsContent>"""
 """"
           <TabsContent value="recent">""""
             <div className="space-y-4">
-              {recentPosts.map((post) => (<PostCard key={post.id} post={post}/>))}
+              {recentPosts.map((post) => (<PostCard key={post.id} post={post} />))}
             </div>
           </TabsContent>
         </Tabs>
       </div>
     </>)}
 
-export { CommunityPage };
+export {CommunityPage};
 
-export { CommunityPage };
+export {CommunityPage};
 
-export { CommunityPage };
+export {CommunityPage};
 
-export { CommunityPage };
+export {CommunityPage};
 
-export { CommunityPage };
+export {CommunityPage};

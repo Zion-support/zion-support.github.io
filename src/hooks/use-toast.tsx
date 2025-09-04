@@ -59,3 +59,5 @@ export
 export 
   // In a real implementation, this would dispatch to a global toast system;
   console.log('Toast:', { title, description, variant, duration })};
+
+</any>

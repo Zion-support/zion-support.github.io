@@ -1,20 +1,20 @@
-import { Cloud, Server, Database, Zap, Target, DollarSign, ArrowRight, CheckCircle, Star, Shield, Network, BarChart3 } from "lucide - react";"""
-import { Link } from "react - router - dom";
+import {Cloud, Server, Database, Zap, Target, DollarSign, ArrowRight, CheckCircle, Star, Shield, Network, BarChart3} from "lucide - react";"""
+import {Link} from "react - router - dom";
 import React from 'react';"""
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";""""
-import { Button } from "@/components/ui/button";""""
-import { Badge } from "@/components/ui/badge";""""
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";""""
+import {Button} from "@/components/ui/button";""""
+import {Badge} from "@/components/ui/badge";""""
 import SEO from "@/components/SEO";""""
-import { Cloud, Server, Database, Zap, Target, DollarSign, ArrowRight, CheckCircle, Star, Shield, Network, BarChart3 } from "lucide-react";""""
-import { Link } from "react-router-dom";
-export default function CloudMigrationServices() {}
+import {Cloud, Server, Database, Zap, Target, DollarSign, ArrowRight, CheckCircle, Star, Shield, Network, BarChart3} from "lucide-react";""""
+import {Link} from "react-router-dom";
+export default function CloudMigrationServices(props: any) {}
     const services = []
         {}
 """
 """"
             title: "Cloud Assessment",""""
             description: "Comprehensive analysis of your current infrastructure and cloud readiness",""""
-            icon: <BarChart3 className="h-6 w-6 text-zion-cyan"/>,""""
+            icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />,""""
             price: "From $2,000"""
         },
         {}
@@ -22,7 +22,7 @@ export default function CloudMigrationServices() {}
 """"
             title: "Migration Planning",""""
             description: "Detailed roadmap and strategy for seamless cloud migration",""""
-            icon: <Target className="h-6 w-6 text-zion-purple"/>,""""
+            icon: <Target className="h-6 w-6 text-zion-purple" />,""""
             price: "From $3,500"""
         },
         {}
@@ -30,7 +30,7 @@ export default function CloudMigrationServices() {}
 """"
             title: "Data Migration",""""
             description: "Secure and efficient transfer of data to cloud platforms",""""
-            icon: <Database className="h-6 w-6 text-zion-blue"/>,""""
+            icon: <Database className="h-6 w-6 text-zion-blue" />,""""
             price: "From $5,000"""
         },
         {}
@@ -38,7 +38,7 @@ export default function CloudMigrationServices() {}
 """"
             title: "Application Migration",""""
             description: "Lift-and-shift or refactor applications for cloud deployment",""""
-            icon: <Server className="h-6 w-6 text-zion-cyan"/>,""""
+            icon: <Server className="h-6 w-6 text-zion-cyan" />,""""
             price: "From $8,000"""
     ];
     const cloudPlatforms = []
@@ -47,7 +47,7 @@ export default function CloudMigrationServices() {}
 """"
             name: "AWS",""""
             description: "Amazon Web Services migration and optimization",""""
-            icon: <Cloud className="h-8 w-8 text-zion-cyan"/>,""""
+            icon: <Cloud className="h-8 w-8 text-zion-cyan" />,""""
             features["EC2", "RDS", "S3", "Lambda"];
         },;
         {}
@@ -55,7 +55,7 @@ export default function CloudMigrationServices() {}
 """"
             name: "Azure",""""
             description: "Microsoft Azure cloud migration services",""""
-            icon: <Cloud className="h-8 w-8 text-zion-purple"/>,""""
+            icon: <Cloud className="h-8 w-8 text-zion-purple" />,""""
             features["VM", "SQL Database", "Blob Storage", "Functions"];
         },;
         {}
@@ -63,7 +63,7 @@ export default function CloudMigrationServices() {}
 """"
             name: "Google Cloud",""""
             description: "Google Cloud Platform migration solutions",""""
-            icon: <Cloud className="h-8 w-8 text-zion-blue"/>,""""
+            icon: <Cloud className="h-8 w-8 text-zion-blue" />,""""
             features["Compute Engine", "Cloud SQL", "Cloud Storage", "Cloud Functions"];
         },;
         {}
@@ -71,7 +71,7 @@ export default function CloudMigrationServices() {}
 """"
             name: "Multi-Cloud",""""
             description: "Hybrid and multi-cloud migration strategies",""""
-            icon: <Network className="h-8 w-8 text-zion-cyan"/>,""""
+            icon: <Network className="h-8 w-8 text-zion-cyan" />,""""
             features["Hybrid Cloud", "Multi-Cloud", "Cloud Bursting", "Disaster Recovery"];
         }
     ];
@@ -153,7 +153,7 @@ export default function CloudMigrationServices() {}
 """
     ];""""
     return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">""""
-      <SEO title="Cloud Migration Services - Zion Tech Group" description="Expert cloud migration services for AWS, Azure, and Google Cloud. Seamless migration with zero downtime and cost optimization." keywords="cloud migration, AWS migration, Azure migration, Google Cloud, cloud optimization, Zion Tech Group" canonical="https://ziontechgroup.com/cloud-migration-services"/>
+      <SEO title="Cloud Migration Services - Zion Tech Group" description="Expert cloud migration services for AWS, Azure, and Google Cloud. Seamless migration with zero downtime and cost optimization." keywords="cloud migration, AWS migration, Azure migration, Google Cloud, cloud optimization, Zion Tech Group" canonical="https://ziontechgroup.com/cloud-migration-services" />
 """
       {/* Hero Section */}""""
       <section className="relative overflow-hidden py-20 px-4">""""
@@ -173,7 +173,7 @@ export default function CloudMigrationServices() {}
             <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-4 text-lg">""""
               <Link to="/contact">"""
                 Get Migration Assessment""""
-                <ArrowRight className="ml-2 h-5 w-5"/>
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>"""
             </Button>""""
             <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg">""""
@@ -269,7 +269,7 @@ export default function CloudMigrationServices() {}
             <Card className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">""""
               <CardHeader className="text-center">""""
                 <div className="mx-auto mb-4 p-3 bg-zion-purple/10 rounded-full w-16 h-16 flex items-center justify-center">""""
-                  <DollarSign className="h-8 w-8 text-zion-cyan"/>"""
+                  <DollarSign className="h-8 w-8 text-zion-cyan" />"""
                 </div>""""
                 <CardTitle className="text-white">Cost Reduction</CardTitle>
               </CardHeader>"""
@@ -283,7 +283,7 @@ export default function CloudMigrationServices() {}
             <Card className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">""""
               <CardHeader className="text-center">""""
                 <div className="mx-auto mb-4 p-3 bg-zion-purple/10 rounded-full w-16 h-16 flex items-center justify-center">""""
-                  <Zap className="h-8 w-8 text-zion-purple"/>"""
+                  <Zap className="h-8 w-8 text-zion-purple" />"""
                 </div>""""
                 <CardTitle className="text-white">Scalability</CardTitle>
               </CardHeader>"""
@@ -297,7 +297,7 @@ export default function CloudMigrationServices() {}
             <Card className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">""""
               <CardHeader className="text-center">""""
                 <div className="mx-auto mb-4 p-3 bg-zion-purple/10 rounded-full w-16 h-16 flex items-center justify-center">""""
-                  <Shield className="h-8 w-8 text-zion-blue"/>"""
+                  <Shield className="h-8 w-8 text-zion-blue" />"""
                 </div>""""
                 <CardTitle className="text-white">Enhanced Security</CardTitle>
               </CardHeader>"""
@@ -341,7 +341,7 @@ export default function CloudMigrationServices() {}
                 <CardContent>""""
                   <ul className="space-y-3 mb-6">""""
                     {plan.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-zion-slate-light">""""
-                        <CheckCircle className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0"/>
+                        <CheckCircle className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0" />
                         {feature}
                       </li>))}"""
                   </ul>""""
@@ -372,7 +372,7 @@ export default function CloudMigrationServices() {}
             {testimonials.map((testimonial, index) => (<Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">""""
                 <CardContent className="pt-6">""""
                   <div className="flex mb-4">""""
-                    {[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="h-5 w-5 text-yellow-400 fill-current"/>))}"""
+                    {[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />))}"""
                   </div>""""
                   <p className="text-zion-slate-light mb-4 italic">"{testimonial.content}"</p>"""
                   <div>""""
@@ -398,7 +398,7 @@ export default function CloudMigrationServices() {}
             <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-4 text-lg">""""
               <Link to="/contact">"""
                 Start Migration Assessment""""
-                <ArrowRight className="ml-2 h-5 w-5"/>
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>"""
             </Button>""""
             <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg">""""
@@ -411,12 +411,12 @@ export default function CloudMigrationServices() {}
       </section>
     </div>)}
 
-export { CloudMigrationServices };
+export {CloudMigrationServices};
 
-export { CloudMigrationServices };
+export {CloudMigrationServices};
 
-export { CloudMigrationServices };
+export {CloudMigrationServices};
 
-export { CloudMigrationServices };
+export {CloudMigrationServices};
 
-export { CloudMigrationServices };
+export {CloudMigrationServices};

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'import { motion } from framer-motionimport {}
+import React, {useState} from 'react'import {motion} from framer-motionimport {}
   TrendingUp,
   TrendingDown,
   Users,
@@ -10,24 +10,24 @@ import React, { useState } from 'react'import { motion } from framer-motionimpor
   Star,
   ArrowUpRight,
   ArrowDownRight,;
-  Shield,'Brain,'Rocket} from lucide-react'import { Card, CardContent, CardHeader, CardTitle } from ./ui/card;'
-import { Button   } from './ui/button;import { Badge  } from ./ui/badgeconst AdvancedAnalyticsDashboard = () => {}const [timeRange, setTimeRange] = useState(30d);const [selectedMetric, setSelectedMetric] = useState(overview);
+  Shield,'Brain,'Rocket} from lucide-react'import {Card, CardContent, CardHeader, CardTitle} from ./ui/card;'
+import {Button} from './ui/button;import {Badge} from ./ui/badgeconst AdvancedAnalyticsDashboard = (props: any) => {}const [timeRange, setTimeRange] = useState(30d);const [selectedMetric, setSelectedMetric] = useState(overview);
   // Mock data - in real app this would come from API;
   const metrics = []{}
 title: Total Revenue,';value: $2.4M','change: 12.5,'changeType: increase',''
-      icon: <DollarSign className='w-6 h-6' />,''color: from-green-500 to-emerald-600'},'
+      icon: <DollarSign className='w-6 h-6'  />,''color: from-green-500 to-emerald-600'},'
     {}
 title: Active Clients',value: 1,247',
       change: 8.2,'''changeType: increase',''''
-      icon: <Users className='w-6 h-6' />,color: from-blue-500 to-cyan-600'},'
+      icon: <Users className='w-6 h-6'  />,color: from-blue-500 to-cyan-600'},'
     {}
 title: Service Performance',value: 94.2%',
       change: 2.1,'''changeType: increase',''''
-      icon: <Target className='w-6 h-6' />,color: from-purple-500 to-pink-600'},'
+      icon: <Target className='w-6 h-6'  />,color: from-purple-500 to-pink-600'},'
     {}
 title: Client Satisfaction',value: 4.8/5',
       change: 0.3,'''changeType: increase',''''
-      icon: <Star className='w-6 h-6' />,color: from-yellow-500 to-orange-600'}'
+      icon: <Star className='w-6 h-6'  />,color: from-yellow-500 to-orange-600'}'
   ];
   const servicePerformance = []{}
 'name: AI CRM Platform',
@@ -52,16 +52,16 @@ title: Client Satisfaction',value: 4.8/5',
       clients: 67,
       revenue: 340000,status: stable'}'
   ]const categoryDistribution = ['
-    { label: 'AI & ML', value: 35, color: 'from-purple-500 to-pink-600' },'{ label: 'Quantum', value: 20, color: 'from-blue-500 to-cyan-600' },'{ label: 'Blockchain', value: 25, color: 'from-green-500 to-emerald-600' },'{ label: 'Cybersecurity', value: 15, color: 'from-red-500 to-pink-600' },'{ label: 'IoT', value: 5, color: 'from-orange-500 to-yellow-600' }
+    {label: 'AI & ML', value: 35, color: 'from-purple-500 to-pink-600'},'{label: 'Quantum', value: 20, color: 'from-blue-500 to-cyan-600'},'{label: 'Blockchain', value: 25, color: 'from-green-500 to-emerald-600'},'{label: 'Cybersecurity', value: 15, color: 'from-red-500 to-pink-600'},'{label: 'IoT', value: 5, color: 'from-orange-500 to-yellow-600'}
   ];
   const getStatusIcon = status => {}
     switch (status) {}
 '''case trending':''''
-        return <TrendingUp className='w-4 h-4 text-green-500' />case stable':''''
-        return <Activity className='w-4 h-4 text-blue-500' />case declining':''''
-        return <TrendingDown className='w-4 h-4 text-red-500' />;
+        return <TrendingUp className='w-4 h-4 text-green-500'  />case stable':''''
+        return <Activity className='w-4 h-4 text-blue-500'  />case declining':''''
+        return <TrendingDown className='w-4 h-4 text-red-500'  />;
       default:''''
-        return <Activity className='w-4 h-4 text-gray-500' />
+        return <Activity className='w-4 h-4 text-gray-500'  />
     }
   }
   const getStatusColor = status => {}
@@ -109,8 +109,8 @@ case trending':'return bg-green-100 text-green-800case stable':'return bg-blue-1
                   >{metric.icon}'''
                   </div>''''
                   <div className='flex items-center gap-1'>''''{metric.changeType === 'increase' ? (''''
-                      <ArrowUpRight className='w-4 h-4 text-green-500' />''') : (''''
-                      <ArrowDownRight className='w-4 h-4 text-red-500' />
+                      <ArrowUpRight className='w-4 h-4 text-green-500'  />''') : (''''
+                      <ArrowDownRight className='w-4 h-4 text-red-500'  />
                     )}'`'
                     <span'`'`
                       className={`text-sm font-medium ${metric.changeType === 'increase' ? 'text-green-600' : 'text-red-600'}`}
@@ -136,7 +136,7 @@ case trending':'return bg-green-100 text-green-800case stable':'return bg-blue-1
         <Card>'''
           <CardHeader>''''
             <CardTitle className='flex items-center gap-2'>''''
-              <BarChart3 className='w-5 h-5 text-zion-cyan' />
+              <BarChart3 className='w-5 h-5 text-zion-cyan'  />
               Service Performance Overview
             </CardTitle>
           </CardHeader>'''
@@ -181,7 +181,7 @@ case trending':'return bg-green-100 text-green-800case stable':'return bg-blue-1
                           <div className='w-16 bg-zion-slate-light/20 rounded-full h-2'>'''
                             <div''`;
                               className='bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full'``;
-                              style={{ width: `${service.performance}%` }}
+                              style="{{{ width: `${service.performance}}"%` }}
                             ></div>'''
                           </div>''''
                           <span className='text-sm font-medium'>
@@ -191,7 +191,7 @@ case trending':'return bg-green-100 text-green-800case stable':'return bg-blue-1
                       </td>''''
                       <td className='py-3 px-4'>''''
                         <div className='flex items-center gap-1'>''''
-                          <TrendingUp className='w-4 h-4 text-green-500' />''''
+                          <TrendingUp className='w-4 h-4 text-green-500'  />''''
                           <span className='text-green-600 font-medium'>
                             +{service.growth}%
                           </span>
@@ -228,7 +228,7 @@ case trending':'return bg-green-100 text-green-800case stable':'return bg-blue-1
         <Card>'''
           <CardHeader>''''
             <CardTitle className='flex items-center gap-2'>''''
-              <PieChart className='w-5 h-5 text-zion-purple' />
+              <PieChart className='w-5 h-5 text-zion-purple'  />
               Service Category Distribution
             </CardTitle>
           </CardHeader>'''
@@ -250,7 +250,7 @@ case trending':'return bg-green-100 text-green-800case stable':'return bg-blue-1
                     <div className='w-20 bg-zion-slate-light/20 rounded-full h-2'>`
                       <div``;
                         className={`bg-gradient-to-r ${category.color} h-2 rounded-full`}``;
-                        style={{ width: `${category.value}%` }}
+                        style="{{{ width: `${category.value}}"%` }}
                       ></div>'''
                     </div>''''
                     <span className='text-sm font-medium text-zion-slate-light'>
@@ -266,14 +266,14 @@ case trending':'return bg-green-100 text-green-800case stable':'return bg-blue-1
         <Card>'''
           <CardHeader>''''
             <CardTitle className='flex items-center gap-2'>''''
-              <Brain className='w-5 h-5 text-zion-cyan' />
+              <Brain className='w-5 h-5 text-zion-cyan'  />
               Key Insights
             </CardTitle>
           </CardHeader>'''
           <CardContent>''''
             <div className='space-y-4'>''''
               <div className='flex items-start gap-3 p-3 bg-zion-green/10 rounded-lg'>''''
-                <TrendingUp className='w-5 h-5 text-zion-green mt-1' />'''
+                <TrendingUp className='w-5 h-5 text-zion-green mt-1'  />'''
                 <div>''''
                   <h4 className='font-semibold text-zion-slate-dark'>
                     AI Services Growth'''
@@ -285,7 +285,7 @@ case trending':'return bg-green-100 text-green-800case stable':'return bg-blue-1
                 </div>
               </div>'''''
               <div className='flex items-start gap-3 p-3 bg-zion-blue/10 rounded-lg'>''''
-                <Users className='w-5 h-5 text-zion-blue mt-1' />'''
+                <Users className='w-5 h-5 text-zion-blue mt-1'  />'''
                 <div>''''
                   <h4 className='font-semibold text-zion-slate-dark'>
                     Client Acquisition'''
@@ -296,7 +296,7 @@ case trending':'return bg-green-100 text-green-800case stable':'return bg-blue-1
                 </div>
               </div>'''''
               <div className='flex items-start gap-3 p-3 bg-zion-purple/10 rounded-lg'>''''
-                <Star className='w-5 h-5 text-zion-purple mt-1' />'''
+                <Star className='w-5 h-5 text-zion-purple mt-1'  />'''
                 <div>''''
                   <h4 className='font-semibold text-zion-slate-dark'>
                     Satisfaction Score'''
@@ -324,11 +324,11 @@ case trending':'return bg-green-100 text-green-800case stable':'return bg-blue-1
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>'''
             <Button'''className=bg-white text-zion-purple hover:bg-zion-slate-light''onClick={() =>;'
                 window.open('mailto:kleber@ziontechgroup.com?subject=Analytics Dashboard Access',_blank')}'''>''''
-              <Rocket className='w-5 h-5 mr-2' />
+              <Rocket className='w-5 h-5 mr-2'  />
               Request Access
             </Button>'''
             <Button'''variant=outline''''className=border-white text-white hover:bg-white hover:text-zion-purple''onClick={() => window.open(tel:+13024640950',_blank')}'''>''''
-              <Shield className='w-5 h-5 mr-2' />
+              <Shield className='w-5 h-5 mr-2'  />
               Schedule Demo
             </Button>
           </div>
@@ -336,9 +336,17 @@ case trending':'return bg-green-100 text-green-800case stable':'return bg-blue-1
       </motion.div>
     </div>)}
 export default AdvancedAnalyticsDashboard;
-export { AdvancedAnalyticsDashboard };
-export { AdvancedAnalyticsDashboard };
-export { AdvancedAnalyticsDashboard };
-export { AdvancedAnalyticsDashboard }
+export {AdvancedAnalyticsDashboard};
+export {AdvancedAnalyticsDashboard};
+export {AdvancedAnalyticsDashboard};
+export {AdvancedAnalyticsDashboard}
 
-export { AdvancedAnalyticsDashboard }
+export {AdvancedAnalyticsDashboard}
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

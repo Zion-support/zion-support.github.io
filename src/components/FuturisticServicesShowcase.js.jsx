@@ -1,23 +1,20 @@
-import React, { useState, useEffect } from 'react';'''
-import { motion, AnimatePresence } from 'framer-motion';
-import { ADVANCED_MICRO_SERVICES } from "../data/advancedMicroServices.jsx";
-const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, setIsHovered] = useState(false);
+import React, {useState, useEffect} from 'react';'''
+import {motion, AnimatePresence} from 'framer-motion';
+import {ADVANCED_MICRO_SERVICES} from "../data/advancedMicroServices.jsx";
+const ServiceCard = (props: any) => {    const [isHovered, setIsHovered] = useState(false);
     return (<motion.div initial = {}
-  { opacity: 0, y: 50,
-  scale: 0.9;
-}} animate = {}
-  isVisible ? { opacity: 1, y: 0,
-  scale: 1;
-} : {}} transition = {}
-  { duration: 0.6,
+  {opacity: 0, y: 50,
+  scale: 0.9;}} animate = {}
+  isVisible ? {opacity: 1, y: 0,
+  scale: 1;} : {}} transition = {}
+  {duration: 0.6,
   delay: index * 0.1 """
-""""
-}} className="relative group" onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)}>"""
+""""}} className="relative group" onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)}>"""
       {/* Animated Background */}""""
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-{ opacity: 0, y: 50, scale: 0.9}} animate = {}"
-  isVisible ? { opacity: 1, y: 0, scale: 1} : {}} transition = {}""
-  { duration: 0.6, delay: index * 0.1 """"">
+{opacity: 0, y: 50, scale: 0.9}} animate = {}"
+  isVisible ? {opacity: 1, y: 0, scale: 1} : {}} transition = {}""
+  {duration: 0.6, delay: index * 0.1 """"">
 """"}} className="relative group" onHoverStart="{()" =" > setIsHovered(true)} onHoverEnd="{()" => setIsHovered(false)}>""""
       {/* comment */}""""
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-500"></div>""",
@@ -147,7 +144,7 @@ const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, se
           <motion .div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" initial={false}/" >"
         </div>
     </motion.div>)}"
-export const FuturisticServicesShowcase = () => {}""
+export const FuturisticServicesShowcase = (props: any) => {}""
 ""
 """;"""
     const [selectedCategory, setSelectedCategory] = useState("all")";""
@@ -177,12 +174,12 @@ service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       {/* Animated Background */}"
       <div className="absolute inset-0 overflow-hidden">"
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5"></div>"
-        {[...Array(20)].map((_, i) => (<div key={i} className="absolute w-2 h-2 bg-cyan-400/20 rounded-full animate-float" style={{
+        {[...Array(20)].map((_, i) => (<div key={i} className="absolute w-2 h-2 bg-cyan-400/20 rounded-full animate-float" style="{{{
 `
-                left: `${Math.random() * 100}%`,`
+                left: `${Math.random() * 100}}"%`,`
                 top: `${Math.random() * 100}%`,`
                 animationDelay: `${Math.random() * 5}s`,`
-                animationDuration: `${3 + Math.random() * 4}s`}}/>))}
+                animationDuration: `${3 + Math.random() * 4}s`}} />))}
       </div>
 "
 ""
@@ -196,8 +193,8 @@ service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
         {/* comment */}
 
         <motion.div initial = {}"
-  { opacity: 0, y: -50}} animate = {}""
-  { opacity: 1, y: 0 """"">
+  {opacity: 0, y: -50}} animate = {}""
+  {opacity: 1, y: 0 """"">
 """"}} transition="{{" duration: 0.8 }} className="text-center mb-16">""""
           <h1 className="text-5xl lg: text-7xl font-bold mb-6">""""
             <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">"
@@ -234,16 +231,16 @@ service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
         {/* comment */}""""
         <div className="grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-8">
           <AnimatePresence>",
-            {filteredServices.map((service, index) => (<ServiceCard key="{service.id}" service="{service}" index="{index}" isVisible="{visibleServices.has(index)" }/" >) ) }"
+            {filteredServices.map((service, index) => (<ServiceCard key="{service.id}" service="{service}" index="{index}" isVisible="{visibleServices.has(index)"}/" >) ) }"
           </AnimatePresence>
         </div>
         {/* comment */}
 
         <motion.div initial = {}
 
-  { opacity: 0, y: 50}} animate = {}"
-  { opacity: 1, y: 0}} transition = {}""
-  { duration: 0.8, delay: 0.5 """"">
+  {opacity: 0, y: 50}} animate = {}"
+  {opacity: 1, y: 0}} transition = {}""
+  {duration: 0.8, delay: 0.5 """"">
 """"}} className="text-center mt-20">""""
           <div className="bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl p-12 border border-cyan-500/30">""""
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">""
@@ -267,3 +264,13 @@ service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
 "
 
 export default Component
+
+</motion>
+</ServiceCard>
+</motion>
+</div>
+</motion>
+</motion>
+</div>
+</div>
+</motion>

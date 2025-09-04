@@ -12,11 +12,11 @@ import { DescriptionFields } from './DescriptionFields';
 import { useJobs } from '@/hooks/useJobs';
 import { JobSchemaType } from './validation';
 
-export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
+export function JobPostingForm(props: any) {
   const navigate = useNavigate();
   const { createJob, updateJob, getJobById } = useJobs();
-  const [isFormLoading, setIsFormLoading] = useState(false);
-  const [editorContent, setEditorContent] = useState("");
+  const [isFormLoading, setIsFormLoading] = useState<any>(false);
+  const [editorContent, setEditorContent] = useState<any>("");
   
   const {
     form,
@@ -151,3 +151,8 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
     </Form>
   );
 }
+
+</DescriptionFields>
+</DateFields>
+</any>
+</any>

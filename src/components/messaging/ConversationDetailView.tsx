@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { format } from 'date-fns';
 
-export default function Page() {
+export default function Page(props: any) {
 , [activeConversation, loadMessages]); // Changed activeConversation?.id to activeConversation
   
   useEffect(() => {
@@ -10,7 +10,7 @@ export default function Page() {
     scrollToBottom();
   }, [activeMessages]);
 
-  const scrollToBottom = () => {
+  const scrollToBottom = (props: any) => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
   
@@ -85,7 +85,7 @@ export default function Page() {
                   <img src={activeConversation.context_data.image_url}
                     alt={activeConversation.context_data.title || "Context"}
                     className="object-cover"
-                   />
+                    />
                 </AspectRatio>
               </div>
             )}
@@ -150,3 +150,7 @@ export default function Page() {
     </div>
   );
 }
+
+</textarea>
+</MessageBubble>
+</AvatarImage>

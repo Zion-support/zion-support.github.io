@@ -1,19 +1,19 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { toast } from "@/components/ui/use-toast";
-import { useTheme } from "@/hooks/useTheme";
-import { cn } from "@/lib/utils";
-import { apiClient } from "@/utils/apiClient";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {ScrollArea} from "@/components/ui/scroll-area";
+import {toast} from "@/components/ui/use-toast";
+import {useTheme} from "@/hooks/useTheme";
+import {cn} from "@/lib/utils";
+import {apiClient} from "@/utils/apiClient";
 import { Loader2, Send import { useEffect, useRef, useState } from "react";
 ;
 ;
 // Define suggested quick replies
 const QUICK_REPLIES = [
-    { id: "hire", text: "How do I hire?" },
-    { id: "match", text: "How do I get matched?" },
-    { id: "billing", text: "Billing help" },];
-export function ChatBotPanel() {}
+    {id: "hire", text: "How do I hire?"},
+    {id: "match", text: "How do I get matched?"},
+    {id: "billing", text: "Billing help"},];
+export function ChatBotPanel(props: any) {}
     const [messages, setMessages] = useState([{}
 """
 """"
@@ -27,7 +27,7 @@ sender: "bot",
     const [failedAttempts, setFailedAttempts] = useState(0);
     const scrollAreaRef = useRef(null);
     const inputRef = useRef(null);
-    const { theme } = useTheme();
+    const {theme} = useTheme();
     // Auto-scroll to bottom when messages change
     useEffect(() => {
   // TODO: Add dependencies if needed
@@ -36,9 +36,7 @@ sender: "bot",
     // Cleanup function
   };
 }, []);, []);
-        if(scrollAreaRef.current) {
-
-            scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight}
+        if(scrollAreaRef.current) {scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight}
     }, [messages]);
     // Focus input when component mounts
     useEffect(() => {
@@ -48,9 +46,7 @@ sender: "bot",
     // Cleanup function
   };
 }, []);, []);
-        if(inputRef.current) {
-
-            inputRef.current.focus()}
+        if(inputRef.current) {inputRef.current.focus()}
     }, []);
     const handleSendMessage = async(text = inputValue) => {
 
@@ -84,9 +80,7 @@ sender: "bot",
 
                     suggestEscalation()}
             }
-            else {
-
-                // Reset failed attempts if successful
+            else {// Reset failed attempts if successful
                 setFailedAttempts(0)}
         }
         catch(error) {
@@ -98,13 +92,9 @@ sender: "bot",
                 title: "Communication Error","
                 description: "We're having trouble connecting to our support service."});
             setFailedAttempts((prev) => prev + 1);
-            if(failedAttempts >= 2) {
-
-                suggestEscalation()}
+            if(failedAttempts >= 2) {suggestEscalation()}
         }
-        finally {
-
-            setIsLoading(false)}
+        finally {setIsLoading(false)}
     };
     const sendToAIAssistant = async(message) => {
 
@@ -129,11 +119,8 @@ sender: "bot",
                     message: "I'm having trouble connecting to my knowledge base right now."
                 }}
             const data = await response.json();
-            return {
-
-                success: true,
-                message: data.message
-            }}
+            return {success: true,
+                message: data.message}}
         catch(error) {
 "
             // // // // // // // // console.error("Error in AI chat:", error);
@@ -143,7 +130,7 @@ sender: "bot",
                 message: "I'm experiencing technical difficulties.Please try again later."
             }}
     };
-    const suggestEscalation = () => {
+    const suggestEscalation = (props: any) => {
         const escalationMessage = {
 `
             id: `bot-escalation-${Date.now()}`,"
@@ -168,15 +155,11 @@ sender: "bot",
             // // // // // // // // console.error("Failed to log support escalation:", error);
         }
     };
-    const handleQuickReply = (text) => {
-
-        handleSendMessage(text);
-            })}
-        catch(error) {
-"
+    const handleQuickReply = (props: any) => {handleSendMessage(text);})}
+        catch(error) {"
             // console.error("Failed to log support escalation:", error)}
     };
-    const handleEscalateToLiveAgent = () => {
+    const handleEscalateToLiveAgent = (props: any) => {
         setMessages((prev) => [...prev,
             {
 `
@@ -194,11 +177,10 @@ sender: "bot",
 
         ]);
         // In a real implementation, this would trigger a live chat request
-        toast({
-"
+        toast({"
             title: "Support request submitted","
             description: "A support agent will be with you shortly."})};
-    const handleEmailSupport = () => {
+    const handleEmailSupport = (props: any) => {
         setMessages((prev) => [...prev,
             {
 `
@@ -218,10 +200,10 @@ sender: "bot",
     return (<div className="flex flex-col h-full">"
       <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>"
         <div className="flex flex-col gap-4">"
-          {messages.map((message) => (<ChatMessage key={message.id} message={message.content} isUser={message.sender === "user"} timestamp={message.timestamp}/>))}
+          {messages.map((message) => (<ChatMessage key={message.id} message={message.content} isUser={message.sender === "user"} timestamp={message.timestamp} />))}
 "
           {isLoading && (<div className="flex items-center justify-center py-2">"
-              <Loader2 className="h-5 w-5 animate-spin text-zion-purple"/>
+              <Loader2 className="h-5 w-5 animate-spin text-zion-purple" />
             </div>)}
         </div>
       </ScrollArea>
@@ -259,25 +241,21 @@ sender: "bot",
           </div>
         </div>)}
 
-      <div className={
-  cn("p-4 border-t",  theme === "dark" ? "border-zion-blue-light" : "border-gray-200")
-
-}>
+      <div className={cn("p-4 border-t",  theme === "dark" ? "border-zion-blue-light" : "border-gray-200")}>
         <form onSubmit={(e) => {
 
             e.preventDefault();
             handleSendMessage();
 
 }} className="flex items-center gap-2">
-          <Input ref={inputRef} value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="Type your question..." className={
-  cn("flex-1",  theme === "dark"
+          <Input ref={inputRef} value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="Type your question..." className={cn("flex-1",  theme === "dark"
             ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple"
-            : "bg-white border-gray-200")
-
-}/>
-          <Button type="submit" size="icon" disabled={isLoading || !inputValue.trim()} className="bg-zion-cyan hover:bg-zion-cyan/80 text-white">            <Send className="h-4 w-4"/>
+            : "bg-white border-gray-200")}/>
+          <Button type="submit" size="icon" disabled={isLoading || !inputValue.trim()} className="bg-zion-cyan hover:bg-zion-cyan/80 text-white">            <Send className="h-4 w-4" />
           </Button>
         </form>
       </div>
     </div>)}
 '"`
+
+</QuickReplyButton>

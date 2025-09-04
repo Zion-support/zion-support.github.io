@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 
 interface ConnectWalletButtonProps {
+
   onConnect?: (walletType: string) => void;
   onDisconnect?: () => void;
   isConnected?: boolean;
   walletAddress?: string;
   className?: string;
+
 }
 
 const ConnectWalletButton: Reac t.FC<ConnectWalletButtonProps> = ({
@@ -15,7 +17,7 @@ const ConnectWalletButton: Reac t.FC<ConnectWalletButtonProps> = ({
   walletAddress,
   className = ''
 }) => {
-  const [isConnecting, setIsConnecting] = useState(false);
+  const [isConnecting, setIsConnecting] = useState<any>(false);
 
   const handleConnect = async () => {
     setIsConnecting(true);
@@ -33,13 +35,13 @@ const ConnectWalletButton: Reac t.FC<ConnectWalletButtonProps> = ({
     }
   };
 
-  const handleDisconnect = () => {
+  const handleDisconnect = (props: any) => {
     if (onDisconnect) {
       onDisconnect();
     }
   };
 
-  const formatAddress = (address: string) => {
+  const formatAddress = (props: any) => {
     if (address.length <= 10) return address;
     return `${address.slice(0, 6)}...${address.slice(-4)}`;
   };
@@ -88,3 +90,5 @@ const ConnectWalletButton: Reac t.FC<ConnectWalletButtonProps> = ({
 };
 
 export default ConnectWalletButton;
+</any>
+</ConnectWalletButtonProps>

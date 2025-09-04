@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity  } from 'lucide-react';
 
-const QuantumTechnology = () => {
+const QuantumTechnology = (props: any) => {
   const quantumServices = [
     {
       title: "Quantum Neural Networks",

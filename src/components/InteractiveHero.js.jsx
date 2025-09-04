@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion  } from 'framer-motion';
+import React, {useState, useEffect} from 'react';
+import {motion} from 'framer-motion';
 
-export default function Page() {
-] }) => {
+export default function Page(props: any) {]}) => {
 
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [isHovered, setIsHovered] = useState(false);
@@ -14,16 +13,13 @@ export default function Page() {
     // Cleanup function
   };
 }, []);, []);
-        const handleMouseMove = (e) => {
+        const handleMouseMove = (props: any) => {
 
             setMousePosition({ x: e.clientX, y: e.clientY })};
         window.addEventListener('mousemove', handleMouseMove);
         // Auto-rotate stats
-        const interval = setInterval(() => {
-            setActiveStat((prev) => (prev + 1) % stats.length)}, 3000);
-        return () => {
-
-            window.removeEventListener('mousemove', handleMouseMove);
+        const interval = setInterval(() => {setActiveStat((prev) => (prev + 1) % stats.length)}, 3000);
+        return () => {window.removeEventListener('mousemove', handleMouseMove);
             clearInterval(interval)}}, [stats.length]);
     const containerVariants = {
 
@@ -73,7 +69,7 @@ export default function Page() {
       {/* Animated Background */}"
       <div className="absolute inset-0">
         {/* Gradient Orbs */}"
-        <motion.div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl" animate = {
+        <motion .div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl" animate = {
 
   {
 
@@ -90,8 +86,8 @@ export default function Page() {
             repeat: Infinity,"
   ease: "linear"
 
-}}/>"
-        <motion.div className="absolute top-40 right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl" animate = {
+}} />"
+        <motion .div className="absolute top-40 right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl" animate = {
 
   {
 
@@ -108,8 +104,8 @@ export default function Page() {
             repeat: Infinity,"
   ease: "linear"
 
-}}/>"
-        <motion.div className="absolute bottom-20 left-1/2 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl" animate = {
+}} />"
+        <motion .div className="absolute bottom-20 left-1/2 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl" animate = {
 
   {
 
@@ -126,22 +122,15 @@ export default function Page() {
             repeat: Infinity,"
   ease: "linear"
 
-}}/>
+}} />
       </div>
 
       {/* Interactive Grid */}"
       <div className="absolute inset-0 opacity-30">"
-        <div className="absolute inset-0" style = {
-
-  {
+        <div className="absolute inset-0" style="{{{
 
             backgroundImage: `
-            linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)`
-          `,
-  backgroundSize: '50px 50px'
-
-}}/>
+            linear-gradient(rgba(59; backgroundSize: '50px 50px'}}"} />
       </div>
 
       {/* Main Content */}"
@@ -184,8 +173,8 @@ export default function Page() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>"
               <Link to={primaryAction.href} className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-semibold text-lg overflow-hidden transition-all duration-300 hover:from-blue-700 hover:to-cyan-700 shadow-lg hover:shadow-xl">"
                 <span className="relative z-10">{primaryAction.text}</span>"
-                <motion.div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" initial={false}/>"
-                <motion.div className="absolute -inset-1 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-lg blur opacity-25 group-hover:opacity-75 transition-opacity duration-300" initial={false}/>
+                <motion .div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" initial={false} />"
+                <motion .div className="absolute -inset-1 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-lg blur opacity-25 group-hover:opacity-75 transition-opacity duration-300" initial={false} />
               </Link>
             </motion.div>
 
@@ -193,7 +182,7 @@ export default function Page() {
               <Link to={secondaryAction.href} className="group inline-flex items-center px-8 py-4 border-2 border-white/20 text-white rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm">
                 {secondaryAction.text}"
                 <motion.svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" initial={false}>"
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </motion.svg>
               </Link>
             </motion.div>
@@ -214,7 +203,7 @@ export default function Page() {
       </div>
 
       {/* Floating Elements */}"
-      <motion.div className="absolute top-1/2 left-10 w-20 h-20 bg-blue-500/10 rounded-full border border-blue-400/20 backdrop-blur-sm" animate = {
+      <motion .div className="absolute top-1/2 left-10 w-20 h-20 bg-blue-500/10 rounded-full border border-blue-400/20 backdrop-blur-sm" animate = {
 
   {
 
@@ -230,9 +219,9 @@ export default function Page() {
             repeat: Infinity,"
   ease: "easeInOut"
 
-}}/>
+}} />
 "
-      <motion.div className="absolute top-1/3 right-16 w-16 h-16 bg-cyan-500/10 rounded-full border border-cyan-400/20 backdrop-blur-sm" animate = {
+      <motion .div className="absolute top-1/3 right-16 w-16 h-16 bg-cyan-500/10 rounded-full border border-cyan-400/20 backdrop-blur-sm" animate = {
 
   {
 
@@ -248,10 +237,10 @@ export default function Page() {
             repeat: Infinity,"
   ease: "easeInOut"
 
-}}/>
+}} />
 
       {/* Mouse Follower Effect */}"
-      <motion.div className="fixed w-4 h-4 bg-blue-400/50 rounded-full pointer-events-none z-50 mix-blend-difference" animate = {
+      <motion .div className="fixed w-4 h-4 bg-blue-400/50 rounded-full pointer-events-none z-50 mix-blend-difference" animate = {
 
   {
 
@@ -267,7 +256,28 @@ export default function Page() {
             stiffness: 500,
   damping: 30
 
-}}/>
+}} />
     </section>)};
 export default InteractiveHero;
 '"`
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</div>
+</motion>
+</motion>
+</motion>

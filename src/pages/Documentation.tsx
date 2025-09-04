@@ -2,12 +2,12 @@ import React from "react"
   BookOpen, Code, FileText, Video, Download,
   Search, ArrowRight, ExternalLink, Star, Users} from "lucide-react
   );
-export default function Documentation() {;
+export default function Documentation(props: any) {;
   const docCategories = []
 
   const popularDocs = []&quot
 "
-export default function Documentation() {
+export default function Documentation(props: any) {
 
   const docCategories = []
   const popularDocs = []
@@ -580,3 +580,43 @@ you get the most out of our platform.
   )
 }
   )}""
+
+</p>
+</p>
+</p>
+</div>
+</motion>
+</div>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</button>
+</span>
+</div>
+</div>
+</div>
+</p>
+</div>
+</motion>
+</div>
+</motion>
+</div>
+</section>
+</div>
+</p>
+</div>
+</h1>
+</div>
+</div>
+</SEO>
+</motion>
+</div>
+</motion>
+</div>
+</section>
+</motion>
+</div>
+</div>
+</SEO>

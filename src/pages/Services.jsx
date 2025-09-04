@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import {
-  Phone,
+import {Link} from 'react-router-dom';
+import {Phone,
   Mail,
   MapPin,
   ExternalLink,
@@ -16,10 +15,9 @@ import {
   Zap,
   Target,
   Users,
-  CheckCircle
-} from 'lucide-react';
+  CheckCircle} from 'lucide-react';
 
-export default function Services() {
+export default function Services(props: any) {
 const contact = {
   mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -28,7 +26,7 @@ const contact = {
 
 };
     return (<>
-			<SEO title="Services - Micro SaaS, IT and AI Solutions | Zion Tech Group" description="Explore our micro SaaS products, enterprise IT services, and AI solutions with transparent pricing, clear features, and easy ways to get started." canonical="/services" url="https://ziontechgroup.com/services"/>
+			<SEO title="Services - Micro SaaS, IT and AI Solutions | Zion Tech Group" description="Explore our micro SaaS products, enterprise IT services, and AI solutions with transparent pricing, clear features, and easy ways to get started." canonical="/services" url="https://ziontechgroup.com/services" />
 
 			<main className="min-h-screen bg-zion-blue pt-24 pb-20">
 				<div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -62,7 +60,7 @@ const contact = {
 											<div className="mt-6 flex items-center justify-between">
 												<Link to={item.href} target={item.external ? '_blank' : null} rel={item.external ? 'noopener noreferrer' : null} className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-medium py-2 px-4 rounded-lg border border-zion-cyan/40 hover:shadow-lg hover:shadow-zion-cyan/20">
 													<span>{item.ctaLabel}</span>
-													{item.external && <ExternalLink className="w-4 h-4"/>}
+													{item.external && <ExternalLink className="w-4 h-4" />}
 												</Link>
 												<span className="text-zion-slate-light text-sm">Category: {item.category}</span>
 											</div>
@@ -75,13 +73,13 @@ const contact = {
 						<h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">Contact Us</h2>
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 							<div className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6">
-								<div className="flex items-center gap-3 text-white"><Phone className="w-5 h-5"/><span>{contact.mobile}</span></div>
+								<div className="flex items-center gap-3 text-white"><Phone className="w-5 h-5" /><span>{contact.mobile}</span></div>
 							</div>
 							<div className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6">
-								<div className="flex items-center gap-3 text-white"><Mail className="w-5 h-5"/><span>{contact.email}</span></div>
+								<div className="flex items-center gap-3 text-white"><Mail className="w-5 h-5" /><span>{contact.email}</span></div>
 							</div>
 							<div className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6">
-								<div className="flex items-center gap-3 text-white"><MapPin className="w-5 h-5"/><span>{contact.address}</span></div>
+								<div className="flex items-center gap-3 text-white"><MapPin className="w-5 h-5" /><span>{contact.address}</span></div>
 							</div>
 						</div>
 						<div className="mt-6">
@@ -94,12 +92,12 @@ const contact = {
 		</>);
 }
 
-export { Services };
+export {Services};
 
-export { Services };
+export {Services};
 
-export { Services };
+export {Services};
 
-export { Services };
+export {Services};
 
-export { Services };
+export {Services};

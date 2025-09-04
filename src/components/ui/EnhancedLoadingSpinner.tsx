@@ -1,10 +1,4 @@
-export function EnhancedLoadingSpinner({
-
-  size = 'md',
-  text = 'Loading...',
-  showProgress = false,
-  progress = 0,
-  variant = 'futuristic'}: EnhancedLoadingSpinnerProps) {
+export function EnhancedLoadingSpinner(props: any) {
 
   
   
@@ -131,9 +125,9 @@ export function EnhancedLoadingSpinner({
               duration: 3 + i * 0.5,
               repeat: Infinit y,
               delay: i * 0.3}}
-            style={{
+            style="{{{
 `
-              left: `${20 + i * 15}%`,`
+              left: `${20 + i * 15}}"%`,`
               top: `${30 + i * 10}%`}}
           />
         ))}
@@ -145,3 +139,14 @@ export function EnhancedLoadingSpinner({
 export { EnhancedLoadingSpinner };
 export default EnhancedLoadingSpinner;
 '"`
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</div>
+</div>
+</motion>
+</div>
+</div>

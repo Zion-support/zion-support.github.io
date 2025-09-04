@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
+import {motion} from 'framer-motion';
 // ;
 // ;
-const ComprehensivePricing2026 = () => {
+const ComprehensivePricing2026 = (props: any) => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [billingCycle, setBillingCycle] = useState('monthly');
     // Combine all services
@@ -16,7 +16,7 @@ const ComprehensivePricing2026 = () => {
         'Cloud & DevOps',
         'Specialized Industry'
     ];
-    const getCategoryServices = (category) => {
+    const getCategoryServices = (props: any) => {
         switch (category) {
             case 'AI & Business Solutions':
                 return allServices.filter(service => ['Business Intelligence', 'Marketing Automation', 'Customer Service', 'Workflow Automation'].includes(service.category));
@@ -33,7 +33,7 @@ const ComprehensivePricing2026 = () => {
         }
     };
     const filteredServices = getCategoryServices(selectedCategory);
-    const getAnnualPrice = (monthlyPrice) => {
+    const getAnnualPrice = (props: any) => {
         const price = parseInt(monthlyPrice.replace(/[^0-9]/g, ''));
         const annualPrice = price * 12 * 0.8; // 20% discount for annual
         return `$${annualPrice.toLocaleString()}`;
@@ -278,12 +278,22 @@ const ComprehensivePricing2026 = () => {
 };
 export default ComprehensivePricing2026;
 
-export { ComprehensivePricing2026 };
+export {ComprehensivePricing2026};
 
-export { ComprehensivePricing2026 };
+export {ComprehensivePricing2026};
 
-export { ComprehensivePricing2026 };
+export {ComprehensivePricing2026};
 
-export { ComprehensivePricing2026 };
+export {ComprehensivePricing2026};
 
-export { ComprehensivePricing2026 };
+export {ComprehensivePricing2026};
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</span>
+</motion>
+</motion>
+</motion>

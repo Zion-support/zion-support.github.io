@@ -24,10 +24,8 @@ const FuturisticBackground = React.memo(() => {
       {particles.map((particle) => (<motion.div
           key={particle.id}
           className="absolute w-1 h-1 bg-cyan - 400 rounded-full opacity - 80 shadow-lg shadow-cyan -400 / 50"
-          style={{
-            left: particl e.left,
-            top: particl e.top
-          }}
+          style="{{{
+            left: particl e.left; top: particl e.top}}"}
           animate={{
             y: [0, -20, 0],
             opacity: [0.8, 0.4, 0.8]
@@ -49,8 +47,8 @@ const FuturisticBackground = React.memo(() => {
 
 // Floating Action Button Component
 const FloatingActionButton = React.memo(() => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isVisible, setIsVisible] = useState<any>(false);
+  const [isExpanded, setIsExpanded] = useState<any>(false);
 
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -59,7 +57,7 @@ const FloatingActionButton = React.memo(() => {
     // Cleanup function
   };
 }, []);, []);
-    const toggleVisibility = () => {
+    const toggleVisibility = (props: any) => {
       if(window.pageYOffset > 300) {
         setIsVisible(true) ;
       } else {
@@ -71,7 +69,7 @@ const FloatingActionButton = React.memo(() => {
     return () => window.removeEventListener('scroll', toggleVisibility) ;
   }, []) ;
 
-  const scrollToTop = () => {
+  const scrollToTop = (props: any) => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
@@ -150,8 +148,8 @@ FloatingActionButton.displayName = 'FloatingActionButton';
 
 // Enhanced hero section component
 const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [currentSlide, setCurrentSlide] = useState<any>(0);
+  const [isPlaying, setIsPlaying] = useState<any>(true);
 
   const heroSlides = [{
       title: "AI - Powered Innovation",
@@ -350,9 +348,9 @@ import {
   ShoppingCart
 } from 'lucide-react';
 
-export default function Home() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+export default function Home(props: any) {
+  const [currentSlide, setCurrentSlide] = useState<any>(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState<any>(true);
 
   const heroSlides = [
     {
@@ -511,11 +509,11 @@ export default function Home() {
     return () => clearInterval(interval);
   }, [isAutoPlaying, heroSlides.length]);
 
-  const nextSlide = () => {
+  const nextSlide = (props: any) => {
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
   };
 
-  const prevSlide = () => {
+  const prevSlide = (props: any) => {
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
   };
 
@@ -670,7 +668,7 @@ export default Home;        </section>
     </>
   )},
   );
-export default function Home() {return ("
+export default function Home(props: any) {return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="Home - Zion Tech Group" description="Professional Home services by Zion Tech Group"   />"
       <div className="container mx-auto px-4 py-20">"
@@ -685,7 +683,7 @@ export default function Home() {return ("
   Cpu, Atom, Cloud, Lock, Target, TrendingUp, Lightbulb, Code, Server, "
   Database, Network, Smartphone, Building, Heart, Award, MessageCircle,
   Phone, Mail, MapPin } from "lucide-react
-export default React.memo(function Home() {;
+export default React.memo(function Home(props: any) {;
 
   const features = []"
   const stats = []&apos
@@ -856,3 +854,116 @@ export default React.memo(function Home() {;
   );
 }
 >>>>>>> merge-all-prs-20250904-105408
+
+</MapPin>
+</motion>
+</Mail>
+</motion>
+</Phone>
+</motion>
+</motion>
+</Users>
+</MessageCircle>
+</motion>
+</ArrowRight>
+</service>
+</motion>
+</motion>
+</feature>
+</motion>
+</motion>
+</stat>
+</motion>
+</EnhancedHero>
+</SEO>
+</MapPin>
+</motion>
+</Mail>
+</motion>
+</Phone>
+</motion>
+</motion>
+</Users>
+</MessageCircle>
+</motion>
+</ArrowRight>
+</service>
+</motion>
+</motion>
+</feature>
+</motion>
+</motion>
+</stat>
+</motion>
+</EnhancedHero>
+</SEO>
+</MapPin>
+</motion>
+</Mail>
+</motion>
+</Phone>
+</motion>
+</motion>
+</Users>
+</MessageCircle>
+</motion>
+</ArrowRight>
+</service>
+</motion>
+</motion>
+</feature>
+</motion>
+</motion>
+</stat>
+</motion>
+</EnhancedHero>
+</SEO>
+</MapPin>
+</motion>
+</Mail>
+</motion>
+</Phone>
+</motion>
+</motion>
+</Users>
+</MessageCircle>
+</motion>
+</ArrowRight>
+</service>
+</motion>
+</motion>
+</feature>
+</motion>
+</motion>
+</stat>
+</motion>
+</EnhancedHero>
+</SEO>
+</div>
+</motion>
+</motion>
+</motion>
+</motion>
+</button>
+</div>
+</motion>
+</motion>
+</div>
+</any>
+</any>
+</div>
+</motion>
+</AnimatePresence>
+</div>
+</section>
+</any>
+</any>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</any>
+</any>
+</motion>

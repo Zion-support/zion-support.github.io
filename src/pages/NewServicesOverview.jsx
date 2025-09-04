@@ -1,8 +1,8 @@
 import React from 'react';'''
 import Link from 'next/link';'''
-import { Link } from 'react-router-dom';'''
-import { Brain, Shield, Cloud, Rocket, Users, BarChart3, Building, ArrowRight, CheckCircle, Phone, Mail, MapPin, Award, Users as UsersIcon, Globe as GlobeIcon, TrendingUp as TrendingUpIcon, Sparkles } from 'lucide-react';
-export default function NewServicesOverview() {}
+import {Link} from 'react-router-dom';'''
+import {Brain, Shield, Cloud, Rocket, Users, BarChart3, Building, ArrowRight, CheckCircle, Phone, Mail, MapPin, Award, Users as UsersIcon, Globe as GlobeIcon, TrendingUp as TrendingUpIcon, Sparkles} from 'lucide-react';
+export default function NewServicesOverview(props: any) {}
     const serviceCategories = []
         {}
 '
@@ -242,10 +242,10 @@ export default function NewServicesOverview() {}
 
     ];'
     const stats = [''
-        { icon: UsersIcon, value: '500+', label: 'Happy Clients', description: 'Trusted by businesses worldwide' },'
-        { icon: TrendingUpIcon, value: '95%', label: 'Success Rate', description: 'Proven track record of delivery' },'
-        { icon: Award, value: '10+', label: 'Years Experience', description: 'Deep industry expertise' },'
-        { icon: GlobeIcon, value: '25+', label: 'Countries Served', description: 'Global reach and support' }
+        {icon: UsersIcon, value: '500+', label: 'Happy Clients', description: 'Trusted by businesses worldwide'},'
+        {icon: TrendingUpIcon, value: '95%', label: 'Success Rate', description: 'Proven track record of delivery'},'
+        {icon: Award, value: '10+', label: 'Years Experience', description: 'Deep industry expertise'},'
+        {icon: GlobeIcon, value: '25+', label: 'Countries Served', description: 'Global reach and support'}
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">"""
       {/* Hero Section */}""""
@@ -255,7 +255,7 @@ export default function NewServicesOverview() {}
           <div className="text-center">""""
             <div className="flex justify-center mb-6">""""
               <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full">""""
-                <Sparkles className="h-8 w-8 text-white"/>
+                <Sparkles className="h-8 w-8 text-white" />
               </div>"""
             </div>""""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -267,7 +267,7 @@ export default function NewServicesOverview() {}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
               <Link to="/comprehensive-services-showcase" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">"""
                 Explore All Services""""
-                <ArrowRight className="ml-2 h-5 w-5"/>"""
+                <ArrowRight className="ml-2 h-5 w-5" />"""
               </Link>""""
               <Link to="/contact" className="inline-flex items-center px-8 py-4 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300">
                 Get Started;
@@ -283,7 +283,7 @@ export default function NewServicesOverview() {}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">""""
             {stats.map((stat, index) => (<div key={index} className="text-center">""""
                 <div className="flex justify-center mb-4">""""
-                  <stat.icon className="h-12 w-12 text-blue-400"/>"""
+                  <stat .icon className="h-12 w-12 text-blue-400" />"""
                 </div>""""
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>""""
                 <div className="text-gray-400">{stat.label}</div>""""
@@ -309,7 +309,7 @@ export default function NewServicesOverview() {}
             {serviceCategories.map((category) => (<div key={category.id} className="bg-gray-800/30 border border-gray-700 rounded-2xl p-8">""""
                 <div className="flex items-center mb-8">"""
                   <div className={`p-4 rounded-xl bg-gradient-to-r ${category.color} mr-6`}>""""
-                    <category.icon className="h-8 w-8 text-white"/>
+                    <category .icon className="h-8 w-8 text-white" />
                   </div>"""
                   <div>""""
                     <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
@@ -339,7 +339,7 @@ export default function NewServicesOverview() {}
                         <h5 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h5>""""
                         <div className="space-y-1">""""
                           {service.features.map((feature, featureIndex) => (<div key={featureIndex} className="flex items-center text-sm text-gray-400">""""
-                              <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0"/>
+                              <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
                               {feature}
                             </div>) ) }
                         </div>
@@ -347,7 +347,7 @@ export default function NewServicesOverview() {}
 """"
                       <Link to={service.path} className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300">"""
                         Learn More""""
-                        <ArrowRight className="ml-2 h-4 w-4"/>
+                        <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                     </div>) ) }
                 </div>
@@ -371,7 +371,7 @@ export default function NewServicesOverview() {}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">""""
             {benefits.map((benefit, index) => (<div key={index} className="text-center">""`
                 <div className="flex justify-center mb-4">``
-                  <benefit.icon className={`h-12 w-12 ${benefit.color}`}/>"""
+                  <benefit .icon className={`h-12 w-12 ${benefit.color}`} />"""
                 </div>""""
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>""""
                 <p className="text-gray-400">{benefit.description}</p>
@@ -395,7 +395,7 @@ export default function NewServicesOverview() {}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">""""
               <div className="text-center">""""
                 <div className="flex justify-center mb-4">""""
-                  <Phone className="h-12 w-12 text-blue-400"/>"""
+                  <Phone className="h-12 w-12 text-blue-400" />"""
                 </div>""""
                 <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>""""
                 <p className="text-gray-300">+1 302 464 0950</p>""""
@@ -403,7 +403,7 @@ export default function NewServicesOverview() {}
               </div>""""
               <div className="text-center">""""
                 <div className="flex justify-center mb-4">""""
-                  <Mail className="h-12 w-12 text-green-400"/>"""
+                  <Mail className="h-12 w-12 text-green-400" />"""
                 </div>""""
                 <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>""""
                 <p className="text-gray-300">kleber@ziontechgroup.com</p>""""
@@ -411,7 +411,7 @@ export default function NewServicesOverview() {}
               </div>""""
               <div className="text-center">""""
                 <div className="flex justify-center mb-4">""""
-                  <MapPin className="h-12 w-12 text-purple-400"/>"""
+                  <MapPin className="h-12 w-12 text-purple-400" />"""
                 </div>""""
                 <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>""""
                 <p className="text-gray-300">364 E Main St STE 1008</p>""""
@@ -422,7 +422,7 @@ export default function NewServicesOverview() {}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
               <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">"""
                 Schedule a Consultation""""
-                <ArrowRight className="ml-2 h-5 w-5"/>"""
+                <ArrowRight className="ml-2 h-5 w-5" />"""
               </Link>""""
               <Link to="/comprehensive-services-showcase" className="inline-flex items-center px-8 py-4 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300">
                 View All Services;
@@ -433,12 +433,12 @@ export default function NewServicesOverview() {}
       </div>
     </div>)}
 
-export { NewServicesOverview };
+export {NewServicesOverview};
 
-export { NewServicesOverview };
+export {NewServicesOverview};
 
-export { NewServicesOverview };
+export {NewServicesOverview};
 
-export { NewServicesOverview };
+export {NewServicesOverview};
 
-export { NewServicesOverview };
+export {NewServicesOverview};

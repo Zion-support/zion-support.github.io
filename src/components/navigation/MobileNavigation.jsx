@@ -1,25 +1,23 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Briefcase, HardDrive, Users, Lightbulb } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
+import {Menu, X, Search, User, Briefcase, HardDrive, Users, Lightbulb} from 'lucide-react';
+import {Button} from '@/components/ui/button';
 
 const mobileMenuItems = [
-  { name: 'Services', icon: <Briefcase className="w-5 h-5" />, href: '/services' },
-  { name: 'Talent', icon: <Users className="w-5 h-5" />, href: '/talent' },
-  { name: 'Equipment', icon: <HardDrive className="w-5 h-5" />, href: '/equipment' },
-  { name: 'Innovation', icon: <Lightbulb className="w-5 h-5" />, href: '/category/innovation' }
+  {name: 'Services', icon: <Briefcase className="w-5 h-5"  />, href: '/services'},
+  {name: 'Talent', icon: <Users className="w-5 h-5"  />, href: '/talent'},
+  {name: 'Equipment', icon: <HardDrive className="w-5 h-5"  />, href: '/equipment'},
+  {name: 'Innovation', icon: <Lightbulb className="w-5 h-5"  />, href: '/category/innovation'}
 ];
 
-export function MobileNavigation() {
+export function MobileNavigation(props: any) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
+  const toggleMenu = (props: any) => {
     setIsOpen(!isOpen);
   };
 
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
+  const closeMenu = (props: any) => {setIsOpen(false);};
 
   return (
     <div className="lg:hidden">
@@ -28,7 +26,7 @@ export function MobileNavigation() {
         className="p-2 rounded-lg text-gray-300 hover:text-cyan-300 hover:bg-gray-800/50 transition-colors duration-200"
         aria-label="Toggle mobile menu"
       >
-        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
       </button>
 
       {isOpen && (
@@ -55,7 +53,7 @@ export function MobileNavigation() {
                 className="w-full justify-start"
                 onClick={closeMenu}
               >
-                <Search className="w-4 h-4 mr-2" />
+                <Search className="w-4 h-4 mr-2"  />
                 Search
               </Button>
               <Button
@@ -64,7 +62,7 @@ export function MobileNavigation() {
                 className="w-full justify-start"
                 onClick={closeMenu}
               >
-                <User className="w-4 h-4 mr-2" />
+                <User className="w-4 h-4 mr-2"  />
                 Sign In
               </Button>
             </div>

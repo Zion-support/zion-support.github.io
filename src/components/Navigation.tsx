@@ -33,9 +33,9 @@ const navigation = [',';';
     ';';' { name: 'Contact', href: '/contact' }
 ];
 const Navigation: Reac t.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<any>(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const toggleDropdown = (name: string) => {
+  const toggleDropdown = (props: any) => {
     setActiveDropdown(activeDropdown === name ? null : name)};
   return (
     <nav className="bg-gray-900/95 backdrop-blur-md border-b border-gray-800 sticky top-0 z-50">
@@ -274,9 +274,9 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { Brain, Menu, X, ChevronDown, Search, Phone, Mail } from 'lucide-react';
 
-export default function Navigation() {
-  const [open, setOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+export default function Navigation(props: any) {
+  const [open, setOpen] = useState<any>(false);
+  const [servicesOpen, setServicesOpen] = useState<any>(false);
 
   const services = [
     { name: 'AI Services', href: '/services/ai-services', description: 'Artificial Intelligence Solutions' },
@@ -437,3 +437,11 @@ export default function Navigation() {
   );
 }
 >>>>>>> merge-all-prs-20250904-105408
+
+</any>
+</any>
+</motion>
+</motion>
+</motion>
+</string>
+</any>

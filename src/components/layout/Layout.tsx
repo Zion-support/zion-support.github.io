@@ -5,7 +5,7 @@ type LayoutProps = {
   children: React.ReactNode;
 };
 
-export default function Layout({ children }: LayoutProps) {
+export default function Layout(props: any) {
   return (
 
     <div className="min-h-screen flex flex-col bg-black">

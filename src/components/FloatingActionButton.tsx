@@ -1,3 +1,4 @@
+import React from 'react';
 Plus,
   MessageCircle,
   Phone,
@@ -24,6 +25,7 @@ interface FloatingAction {
   priority: 'high' | 'medium' | 'low'}
 
 interface FloatingActionButtonProps {
+
   actions?: FloatingAction[];
   position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
   theme?: 'light' | 'dark' | 'auto';
@@ -33,15 +35,16 @@ interface FloatingActionButtonProps {
 
 const FloatingActionButton: Reac t.FC<FloatingActionButtonProps> = ({
 
-  actions = [],
-  position = 'bottom-right',
-  theme = 'auto',
-  showScrollToTop = true,
-  showContactActions = true,
-  showUtilityActions = true}) => {
+  actions = [],: any;
+  position = 'bottom-right',: any;
+  theme = 'auto',: any;
+  showScrollToTop = true,: any;
+  showContactActions = true,: any;
+  showUtilityActions = true: any;
+}) => {
 
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [showScrollButton, setShowScrollButton] = useState(false);
+  const [isExpanded, setIsExpanded] = useState<any>(false);
+  const [showScrollButton, setShowScrollButton] = useState<any>(false);
   const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light');
 
   // Detect theme
@@ -272,9 +275,9 @@ const FloatingActionButton: Reac t.FC<FloatingActionButtonProps> = ({
                     ${action.color} text-white transform opacity-0 scale-75
                     hover: scal e-105 focus: outlin e-none focus: rin g-2 focus: rin g-white/50`
                   `}
-                  style={{
+                  style="{{{
 `
-                    animationDelay: `${index * 100}ms`,
+                    animationDelay: `${index * 100}}"ms`,
                     animation: 'slideInUp 0.3s ease-out forwards'
                   }}
                 >
@@ -357,7 +360,7 @@ type FloatingActionButtonProps = {
 };
 
 const FloatingActionButton: Reac t.FC<FloatingActionButtonProps> = ({ enabled = true }) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState<any>(false);
   if(!enabled) return null;
   return (<button
       onClick={() => setOpen(!open)}
@@ -370,3 +373,9 @@ const FloatingActionButton: Reac t.FC<FloatingActionButtonProps> = ({ enabled = 
   )};
 
 export default FloatingActionButton;
+
+</any>
+</FloatingActionButtonProps>
+</any>
+</any>
+</FloatingActionButtonProps>

@@ -1,19 +1,19 @@
 import React from 'react';'''
 import JSZip from 'jszip';'''
-import { saveAs } from 'file-saver';'''
-import { AppLayout } from '@/layout/AppLayout';'''
-import { NextSeo } from '@/components/NextSeo';'''
-import { Button } from '@/components/ui/button';'''
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';'''
-import { Input } from '@/components/ui/input';'''
-import { Label } from '@/components/ui/label';'''
+import {saveAs} from 'file-saver';'''
+import {AppLayout} from '@/layout/AppLayout';'''
+import {NextSeo} from '@/components/NextSeo';'''
+import {Button} from '@/components/ui/button';'''
+import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';'''
+import {Input} from '@/components/ui/input';'''
+import {Label} from '@/components/ui/label';'''
 // Card components are usually exported from 'card.tsx' like this:''''
-// import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';'''
+// import {Card, CardHeader, CardTitle, CardContent} from '@/components/ui/card';'''
 // However, the provided JSX doesn't use Card, CardHeader, etc. explicitly as wrappers,
 // but implies their styling might be used. The current JSX structure is fine as is;
 // and will rely on Tailwind classes primarily. If Card components were needed for structure,
 // their import would be added here.;
-const LaunchToolkitPage = () => {}
+const LaunchToolkitPage = (props: any) => {}
 '
   const [customDate, setCustomDate] = React.useState('');'
   const [selectedTemplateUrl, setSelectedTemplateUrl] = React.useState('');'
@@ -62,7 +62,7 @@ const LaunchToolkitPage = () => {}
         );'
         zip.file(pathInZip, blob);''
       }'''
-      const zipBlob = await zip.generateAsync({ type: 'blob' });'''
+      const zipBlob = await zip.generateAsync({type: 'blob'});'''
       saveAs(zipBlob,Zion_Launch_Toolkit.zip');
     } catch (error) {}
       // console.error("Error creating ZIP:", error);
@@ -139,7 +139,7 @@ const LaunchToolkitPage = () => {}
       setIsLoadingTemplate(false);
     }
   };
-  const generateWithDate = () => {}
+  const generateWithDate = (props: any) => {}
     if (selectedTemplateContent && customDate) {}
       setGeneratedPressRelease()
         selectedTemplateContent.replace(/\[DATE\]/g, customDate)
@@ -158,10 +158,10 @@ const LaunchToolkitPage = () => {}
   };
   return()
     <AppLayout>"""
-      <NextSeo""""
+      <NextSeo """"
         title="Launch Operations Toolkit""""
         description="Your complete toolkit for the Zion platform public release.""""
-      />""""
+       />""""
       <div className="container mx-auto py-8 px-4">""""
         <h1 className="text-3xl font-bold mb-2 text-center">'
           Launch Operations Toolkit''
@@ -248,12 +248,12 @@ const LaunchToolkitPage = () => {}
                 <div>""""
                   <h4 className="font-medium">Zion Logo - Color</h4>""""
                   <div className="flex items-center space-x-4">"""
-                    <img""""
+                    <img """"
                       loading="lazy""""
                       src="/toolkit_assets/media_kit/logos/zion_logo_color.svg""""
                       alt="Zion Logo Color""""
                       className="h-10 border p-1 rounded"""
-                    />"""
+                      />"""
                     <a""""
                       href="/toolkit_assets/media_kit/logos/zion_logo_color.svg""""
                       download""""
@@ -396,12 +396,12 @@ const LaunchToolkitPage = () => {}
               <div className="space-y-3 mb-6">"""
                 <div>""""
                   <h4 className="font-medium">LinkedIn Banner</h4>"""
-                  <img""""
+                  <img """"
                     loading="lazy""""
                     src="/toolkit_assets/social_media_kit/banners/linkedin_banner.png""""
                     alt="LinkedIn Banner Placeholder""""
                     className="h-20 border p-1 rounded mb-1"""
-                  />"""
+                    />"""
                   <a""""
                     href="/toolkit_assets/social_media_kit/banners/linkedin_banner.png""""
                     download""""
@@ -412,12 +412,12 @@ const LaunchToolkitPage = () => {}
                 </div>"""
                 <div>""""
                   <h4 className="font-medium">Twitter Banner</h4>"""
-                  <img""""
+                  <img """"
                     loading="lazy""""
                     src="/toolkit_assets/social_media_kit/banners/twitter_banner.png""""
                     alt="Twitter Banner Placeholder""""
                     className="h-20 border p-1 rounded mb-1"""
-                  />"""
+                    />"""
                   <a""""
                     href="/toolkit_assets/social_media_kit/banners/twitter_banner.png""""
                     download""""
@@ -432,12 +432,12 @@ const LaunchToolkitPage = () => {}
               <div className="space-y-3">"""
                 <div>""""
                   <h4 className="font-medium">Promotional GIF</h4>"""
-                  <img""""
+                  <img """"
                     loading="lazy""""
                     src="/toolkit_assets/social_media_kit/gifs/promo_banner.gif""""
                     alt="Promo GIF Placeholder""""
                     className="h-20 border p-1 rounded mb-1"""
-                  />"""
+                    />"""
                   <a""""
                     href="/toolkit_assets/social_media_kit/gifs/promo_banner.gif""""
                     download""""
@@ -648,12 +648,14 @@ const LaunchToolkitPage = () => {}
     </AppLayout>)};
 export default LaunchToolkitPage;
 
-export { LaunchToolkitPage };
+export {LaunchToolkitPage};
 
-export { LaunchToolkitPage };
+export {LaunchToolkitPage};
 
-export { LaunchToolkitPage };
+export {LaunchToolkitPage};
 
-export { LaunchToolkitPage };
+export {LaunchToolkitPage};
 
-export { LaunchToolkitPage };
+export {LaunchToolkitPage};
+
+</NextSeo>

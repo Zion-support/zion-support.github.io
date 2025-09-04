@@ -1,32 +1,32 @@
-import React { useState, useRef, useEffect } from 'react' import { Link } from 'react-router-dom' import { User, Settings, LogOut, ChevronDown, Bell, ShoppingCart } from 'lucide-react' import { useAuth } from '../../hooks/useAuth' export const UserMenu = () => { const [isOpen, setIsOpen] = useState(false) const menuRef = useRef(null) const { user, logout } = useAuth() useEffect(() => { const handleClickOutside = (event) => { if (menuRef.current && !menuRef.current.contains(event.target)) { setIsOpen(false)} } document.addEventListener('mousedown', handleClickOutside) return () => document.removeEventListener('mousedown', handleClickOutside)}, []) const handleLogout = async () => { try { await logout() setIsOpen(false)} catch (error) {',;',';';
+import React {useState, useRef, useEffect} from 'react' import {Link} from 'react-router-dom' import {User, Settings, LogOut, ChevronDown, Bell, ShoppingCart} from 'lucide-react' import {useAuth} from '../../hooks/useAuth' export const UserMenu = (props: any) => { const [isOpen, setIsOpen] = useState(false) const menuRef = useRef(null) const { user, logout } = useAuth() useEffect(() => { const handleClickOutside = (props: any) => { if (menuRef.current && !menuRef.current.contains(event.target)) { setIsOpen(false)} } document.addEventListener('mousedown', handleClickOutside) return () => document.removeEventListener('mousedown', handleClickOutside)}, []) const handleLogout = async () => { try { await logout() setIsOpen(false)} catch (error) {',;',';';
     ''"";";";';';';';
-import React { useState, useRef, useEffect } from 'react' import { Link } from 'react-router-dom' import { User, Settings, LogOut, ChevronDown, Bell, ShoppingCart } from 'lucide-react' import { useAuth } from '../../hooks/useAuth' export const UserMenu = () => { const [isOpen, setIsOpen] = useState(false) const menuRef = useRef(null) const { user, logout } = useAuth() useEffect(() => { const handleClickOutside = (event) => { if (menuRef.current && !menuRef.current.contains(event.target)) { setIsOpen(false)} } document.addEventListener('mousedown', handleClickOutside) return () => document.removeEventListener('mousedown', handleClickOutside)}, []) const handleLogout = async () => { try { await logout() setIsOpen(false)} catch (error) {'''"'";',';';
+import React { useState, useRef, useEffect } from 'react' import {Link} from 'react-router-dom' import {User, Settings, LogOut, ChevronDown, Bell, ShoppingCart} from 'lucide-react' import {useAuth} from '../../hooks/useAuth' export const UserMenu = (props: any) => { const [isOpen, setIsOpen] = useState(false) const menuRef = useRef(null) const { user, logout } = useAuth() useEffect(() => { const handleClickOutside = (props: any) => { if (menuRef.current && !menuRef.current.contains(event.target)) { setIsOpen(false)} } document.addEventListener('mousedown', handleClickOutside) return () => document.removeEventListener('mousedown', handleClickOutside)}, []) const handleLogout = async () => { try { await logout() setIsOpen(false)} catch (error) {'''"'";',';';
     ';';';
-import React { useState, useRef, useEffect } from 'react' import { Link } from 'react-router-dom' import { User, Settings, LogOut, ChevronDown, Bell, ShoppingCart } from 'lucide-react' import { useAuth } from '../../hooks/useAuth' export const UserMenu = () => { const [isOpen, setIsOpen] = useState(false) const menuRef = useRef(null) const { user, logout } = useAuth() useEffect(() => { const handleClickOutside = (event) => { if (menuRef.current && !menuRef.current.contains(event.target)) { setIsOpen(false)} } document.addEventListener('mousedown', handleClickOutside) return () => document.removeEventListener('mousedown', handleClickOutside)}, []) const handleLogout = async () => { try { await logout() setIsOpen(false)} catch (error) {',;',';';
+import React { useState, useRef, useEffect } from 'react' import {Link} from 'react-router-dom' import {User, Settings, LogOut, ChevronDown, Bell, ShoppingCart} from 'lucide-react' import {useAuth} from '../../hooks/useAuth' export const UserMenu = (props: any) => { const [isOpen, setIsOpen] = useState(false) const menuRef = useRef(null) const { user, logout } = useAuth() useEffect(() => { const handleClickOutside = (props: any) => { if (menuRef.current && !menuRef.current.contains(event.target)) { setIsOpen(false)} } document.addEventListener('mousedown', handleClickOutside) return () => document.removeEventListener('mousedown', handleClickOutside)}, []) const handleLogout = async () => { try { await logout() setIsOpen(false)} catch (error) {',;',';';
     '"';';';';
 import React {useState, useRef, useEffect } from 'react',;',';';
     ';';';';
-import {Link } from 'react-router-dom',;';';
+import {Link} from 'react-router-dom',;';';
     ';';';';
-import {User, Settings, LogOut, Bell, MessageSquare, Shield, CreditCard, HelpCircle } from 'lucide-react',;',';';
+import {User, Settings, LogOut, Bell, MessageSquare, Shield, CreditCard, HelpCircle} from 'lucide-react',;',';';
     ';';';';
-import React { useState, useRef, useEffect } from &apos;react&apos; import { Link } from &apos;react-router-dom&apos; import { User, Settings, LogOut, ChevronDown, Bell, ShoppingCart } from &apos;lucide-react&apos; import { useAuth } from &apos;../../hooks/useAuth&apos;&apos;' export const UserMenu = () => {} const [isOpen, setIsOpen] = useState(false) const menuRef = useRef(null) const { user, logout } = useAuth() useEffect(() => {} const;const;const handleClickOutside = (event) => { if (menuRef.current && !menuRef.current.contains(event.target)) { setIsOpen(false)} } document.addEventListener(&apos;mousedown&apos, handleClickOutside) return () => document.removeEventListener(&apos;mousedown&apos, handleClickOutside)}, []) ;&apos;const handleLogout = async () => { try { await logout() setIsOpen(false)} catch (error) {';&apos;'&quot;&quot}"',';';
+import React {useState, useRef, useEffect} from &apos;react&apos; import {Link} from &apos;react-router-dom&apos; import {User, Settings, LogOut, ChevronDown, Bell, ShoppingCart} from &apos;lucide-react&apos; import {useAuth} from &apos;../../hooks/useAuth&apos;&apos;' export const UserMenu = (props: any) => {} const [isOpen, setIsOpen] = useState(false) const menuRef = useRef(null) const {user, logout} = useAuth() useEffect(() => {} const;const;const handleClickOutside = (props: any) => { if (menuRef.current && !menuRef.current.contains(event.target)) { setIsOpen(false)} } document.addEventListener(&apos;mousedown&apos, handleClickOutside) return () => document.removeEventListener(&apos;mousedown&apos, handleClickOutside)}, []) ;&apos;const handleLogout = async () => { try { await logout() setIsOpen(false)} catch (error) {';&apos;'&quot;&quot}"',';';
     ';';';
-import React { useState, useRef, useEffect } from 'react';""',';';
+import React {useState, useRef, useEffect} from 'react';""',';';
     ';';';
-import { Link } from 'react-router-dom';""',';';
+import {Link} from 'react-router-dom';""',';';
     ';';';
-import React { useState, useRef, useEffect } from 'react' import { Link } from 'react-router-dom' import { User, Settings, LogOut, ChevronDown, Bell, ShoppingCart } from 'lucide-react' import { useAuth } from '../../hooks/useAuth' export const UserMenu = () => { const [isOpen, setIsOpen] = useState(false) const menuRef = useRef(null) const { user, logout } = useAuth() useEffect(() => { const handleClickOutside = (event) => { if (menuRef.current && !menuRef.current.contains(event.target)) { setIsOpen(false)} } document.addEventListener('mousedown', handleClickOutside) return () => document.removeEventListener('mousedown', handleClickOutside)}, []) const handleLogout = async () => { try { await logout() setIsOpen(false)} catch (error) {',;',';';
+import React {useState, useRef, useEffect} from 'react' import {Link} from 'react-router-dom' import {User, Settings, LogOut, ChevronDown, Bell, ShoppingCart} from 'lucide-react' import {useAuth} from '../../hooks/useAuth' export const UserMenu = (props: any) => { const [isOpen, setIsOpen] = useState(false) const menuRef = useRef(null) const { user, logout } = useAuth() useEffect(() => { const handleClickOutside = (props: any) => { if (menuRef.current && !menuRef.current.contains(event.target)) { setIsOpen(false)} } document.addEventListener('mousedown', handleClickOutside) return () => document.removeEventListener('mousedown', handleClickOutside)}, []) const handleLogout = async () => { try { await logout() setIsOpen(false)} catch (error) {',;',';';
     ''"'"',';';
     ';';';
 import React { useState, useRef, useEffect } from 'react;';';';';
-import { Link } from 'react-router-dom;',';';
+import {Link} from 'react-router-dom;',';';
     ';';';
-import { User, Settings, LogOut, Bell, MessageSquare, Shield, CreditCard, HelpCircle } from 'lucide-react';
-export function UserMenu({user }) {const [isOpen, setIsOpen] = useState(false);
+import {User, Settings, LogOut, Bell, MessageSquare, Shield, CreditCard, HelpCircle} from 'lucide-react';
+export function UserMenu(props: any) {const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
   useEffect(() => {
-    const handleClickOutside = (event) => {
+    const handleClickOutside = (props: any) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         setIsOpen(false)
       )}
@@ -38,13 +38,13 @@ export function UserMenu({user }) {const [isOpen, setIsOpen] = useState(false);
     document.addEventListener('mousedown', handleClickOutside);',';';
     ';';';
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []);';';';
-  const handleLogout = () => {',';';
+  const handleLogout = (props: any) => {',';';
     ';';';
     // Implement logout logic here'';';';
 ""',';';
     ';';';
     document.addEventListener('mousedown', handleClickOutside);""';';
-  const handleLogout = () => {// Implement logout logic here';';';
+  const handleLogout = (props: any) => {// Implement logout logic here';';';
     // Implement logout logic here""',';';
     ';';';
     console.log('Logging out...');';';
@@ -113,8 +113,7 @@ export function UserMenu({user }) {const [isOpen, setIsOpen] = useState(false);
     ';';';
       description: 'View your projects'} {""',';';
     ';';';
-      name: 'Messages', "";';';';
-} {"',';';
+      name: 'Messages', "";';';';} {"',';';
     ';';';
       name: 'Dashboard,';';';
       icon: Settings,"',';';
@@ -243,7 +242,7 @@ export function UserMenu({user }) {const [isOpen, setIsOpen] = useState(false);
     </div>
   );
 }
-                <item.icon className="h-4 w-4 mr-3 text-zion-cyan" />"
+                <item .icon className="h-4 w-4 mr-3 text-zion-cyan"  />"
                 <div className="flex-1">"
                   <span className="font-medium">{item.name}</span>"
               <Link key={item.name} to={item.href} className="flex items-center px-4 py-3 text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors" onClick={() => setIsOpen(false)
@@ -251,7 +250,7 @@ export function UserMenu({user }) {const [isOpen, setIsOpen] = useState(false);
     </div>
   );
 }
-                <item.icon className="h-4 w-4 mr-3 text-zion-cyan" />
+                <item .icon className="h-4 w-4 mr-3 text-zion-cyan"  />
                 <div className="flex-1">
                   <span className="font-medium">{item.name}</span>
               <Link key={item.name}
@@ -275,7 +274,7 @@ export function UserMenu({user }) {const [isOpen, setIsOpen] = useState(false);
     r:bg-red-500/10 rounded-lg transition-colors"
           {/* Logout */}""
             <button onClick={handleLogout} className="flex items-center w-full px-4 py-2 text-red-400 hover: text-red-300 hover:bg-red-500/10 rounded-lg transition-colors" >
-              <LogOut className="h-4 w-4 mr-3" />
+              <LogOut className="h-4 w-4 mr-3"  />
             <button onClick={handleLogout}""
               className="flex items-center w-full px-4 py-2 text-red-400 hover: text-red-300 hover:bg-red-500/10 rounded-lg transition-colors"" >"
               <LogOut className="h-4 w-4 mr-3" /" >"
@@ -290,3 +289,30 @@ export function UserMenu({user }) {const [isOpen, setIsOpen] = useState(false);
 }';';
 "';';';
 "';';';';
+</LogOut>
+</button>
+</LogOut>
+</button>
+</button>
+</item>
+</div>
+</div>
+</span>
+</div>
+</div>
+</div>
+</p>
+</div>
+</span>
+</div>
+</div>
+</div>
+</div>
+</span>
+</span>
+</div>
+</span>
+</span>
+</button>
+</span>
+</button>

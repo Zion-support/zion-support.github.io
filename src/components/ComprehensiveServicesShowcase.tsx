@@ -1,6 +1,6 @@
 import {  import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
 
-export default function Page() {
+export default function Page(props: any) {
 const ComprehensiveServicesShowcase: Reac t.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');
@@ -72,12 +72,12 @@ const ComprehensiveServicesShowcase: Reac t.FC = () => {;
               Discover our comprehensive portfolio of cutting-edge micro SAAS services,
               AI solutions, and emerging technology platforms designed to transform your business.</p>"
             <div className="flex flex-wrap justify-center gap-4">
-              <Link"
+              <Link "
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover: b g-zion-cyan-light transition-colors"
 
                 Get Started"
-                <ArrowRight className="ml-2 h-5 w-5"   />              </Link>
+                <ArrowRight className="ml-2 h-5 w-5"    />              </Link>
               <Link"
                 to="/request-quote"
                 className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover: b g-white hover: tex t-zion-blue-dark transition-colors"
@@ -315,12 +315,12 @@ const ComprehensiveServicesShowcase: Reac t.FC = () => {;
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
             Our innovative technology solutions are designed to give you a competitive edge.Contact us today to discuss how we can help you achieve your goals.</p>"
           <div className="flex flex-wrap justify-center gap-4">
-            <Link"
+            <Link "
               to="/contact"
               className="inline-flex items-center px-8 py-3 bg-white text-zion-blue font-semibold rounded-lg hover: b g-gray-100 transition-colors"
 
               Contact Us"
-              <ArrowRight className="ml-2 h-5 w-5"   />            </Link>
+              <ArrowRight className="ml-2 h-5 w-5"    />            </Link>
             <a"
               href="tel:+13024640950"
               className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover: b g-white hover: tex t-zion-blue transition-colors"
@@ -332,3 +332,8 @@ const ComprehensiveServicesShowcase: Reac t.FC = () => {;
       </section>;
     </div>;) };
 export default ComprehensiveServicesShowcase}}}}'"`
+
+</motion>
+</string>
+</string>
+</string>

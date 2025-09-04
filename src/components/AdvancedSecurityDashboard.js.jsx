@@ -1,28 +1,24 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Shield, AlertTriangle, CheckCircle, Download, RefreshCw, X, Maximize2, Minimize2, Activity, BarChart3, TrendingUp, Users, Server, FileText, Bug } from 'lucide-react';
+import React, {useState, useRef, useEffect} from 'react';
+import {Shield, AlertTriangle, CheckCircle, Download, RefreshCw, X, Maximize2, Minimize2, Activity, BarChart3, TrendingUp, Users, Server, FileText, Bug} from 'lucide-react';
 const mockThreatIntelligence = [
-    {
-        id: '1',
+    {id: '1',
         threatType: 'Ransomware Campaign',
         description: 'Active ransomware campaign targeting healthcare organizations in the region.',
         riskScore: 9.2,
         affectedSystems: ['Windows Servers', 'File Shares', 'Backup Systems'],
         mitigationSteps: ['Update endpoint protection', 'Enable advanced threat protection', 'Review backup procedures'],
         lastSeen: '2024-01-15T09:00:00.000Z',
-        frequency: 15
-    },
-    {
-        id: '2',
+        frequency: 15},
+    {id: '2',
         threatType: 'Phishing Attack',
         description: 'Sophisticated phishing campaign using executive impersonation.',
         riskScore: 7.8,
         affectedSystems: ['Email Systems', 'User Workstations'],
         mitigationSteps: ['Enhanced email filtering', 'User awareness training', 'Multi-factor authentication'],
         lastSeen: '2024-01-15T08:30:00.000Z',
-        frequency: 8
-    }
+        frequency: 8}
 ];
-export function AdvancedSecurityDashboard() {
+export function AdvancedSecurityDashboard(props: any) {
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);
@@ -53,7 +49,7 @@ export function AdvancedSecurityDashboard() {
             return () => clearInterval(interval);
         }
     }, [autoRefresh]);
-    const getSeverityColor = (severity) => {
+    const getSeverityColor = (props: any) => {
         switch (severity) {
             case 'critical':
                 return 'bg-red-500 text-white';
@@ -67,7 +63,7 @@ export function AdvancedSecurityDashboard() {
                 return 'bg-gray-500 text-white';
         }
     };
-    const getStatusColor = (status) => {
+    const getStatusColor = (props: any) => {
         switch (status) {
             case 'compliant':
                 return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300';
@@ -79,7 +75,7 @@ export function AdvancedSecurityDashboard() {
                 return 'bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-300';
         }
     };
-    const getRiskLevelColor = (riskLevel) => {
+    const getRiskLevelColor = (props: any) => {
         switch (riskLevel) {
             case 'high':
                 return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300';
@@ -89,40 +85,40 @@ export function AdvancedSecurityDashboard() {
                 return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300';
         }
     };
-    const getTrendIcon = (trend) => {
+    const getTrendIcon = (props: any) => {
         switch (trend) {
             case 'up':
-                return <TrendingUp className="w-4 h-4 text-green-500"/>;
+                return <TrendingUp className="w-4 h-4 text-green-500" />;
             case 'down':
-                return <TrendingUp className="w-4 h-4 text-red-500 rotate-180"/>;
+                return <TrendingUp className="w-4 h-4 text-red-500 rotate-180" />;
             default:
-                return <Activity className="w-4 h-4 text-gray-500"/>;
+                return <Activity className="w-4 h-4 text-gray-500" />;
         }
     };
-    const getEventIcon = (type) => {
+    const getEventIcon = (props: any) => {
         switch (type) {
             case 'threat':
-                return <AlertTriangle className="w-5 h-5 text-red-500"/>;
+                return <AlertTriangle className="w-5 h-5 text-red-500" />;
             case 'vulnerability':
-                return <Bug className="w-5 h-5 text-orange-500"/>;
+                return <Bug className="w-5 h-5 text-orange-500" />;
             case 'compliance':
-                return <FileText className="w-5 h-5 text-blue-500"/>;
+                return <FileText className="w-5 h-5 text-blue-500" />;
             case 'access':
-                return <Users className="w-5 h-5 text-purple-500"/>;
+                return <Users className="w-5 h-5 text-purple-500" />;
             default:
-                return <Server className="w-5 h-5 text-gray-500"/>}
+                return <Server className="w-5 h-5 text-gray-500" />}
     };
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Security Dashboard">
-        <Shield className="w-6 h-6"/>
+        <Shield className="w-6 h-6" />
       </button>)}
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">
         <div className="flex items-center gap-2 p-3">
-          <Shield className="w-5 h-5 text-zion-red"/>
+          <Shield className="w-5 h-5 text-zion-red" />
           <span className="text-sm font-medium text-zion-slate">Security</span>
           <button onClick={() => setIsMinimized(false)} className="ml-auto p-1 hover:bg-zion-slate-light rounded">
-            <Maximize2 className="w-4 h-4"/>
+            <Maximize2 className="w-4 h-4" />
           </button>
         </div>
       </div>)}
@@ -130,7 +126,7 @@ export function AdvancedSecurityDashboard() {
       {/* Header */}
       <div className="bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <Shield className="w-6 h-6"/>
+          <Shield className="w-6 h-6" />
           <div>
             <h2 className="text-lg font-bold">Advanced Security & Compliance Dashboard</h2>
             <p className="text-sm opacity-90">Real-time Threat Monitoring & Compliance Tracking</p>
@@ -138,16 +134,16 @@ export function AdvancedSecurityDashboard() {
         </div>
         <div className="flex items-center gap-2">
           <button onClick={() => setAutoRefresh(!autoRefresh)} className={`p-2 rounded-lg transition-colors ${autoRefresh ? 'bg-white/20' : 'hover:bg-white/10'}`} title={autoRefresh ? 'Auto-refresh enabled' : 'Auto-refresh disabled'}>
-            <RefreshCw className={`w-4 h-4 ${autoRefresh ? 'animate-spin' : ''}`}/>
+            <RefreshCw className={`w-4 h-4 ${autoRefresh ? 'animate-spin' : ''}`} />
           </button>
           <button onClick={() => setIsMinimized(true)} className="p-2 hover:bg-white/10 rounded-lg transition-colors">
-            <Minimize2 className="w-4 h-4"/>
+            <Minimize2 className="w-4 h-4" />
           </button>
           <button onClick={() => setIsFullscreen(!isFullscreen)} className="p-2 hover:bg-white/10 rounded-lg transition-colors">
-            {isFullscreen ? <Minimize2 className="w-4 h-4"/> : <Maximize2 className="w-4 h-4"/>}
+            {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
           </button>
           <button onClick={() => setIsOpen(false)} className="p-2 hover:bg-white/10 rounded-lg transition-colors">
-            <X className="w-4 h-4"/>
+            <X className="w-4 h-4" />
           </button>
         </div>
       </div>
@@ -167,7 +163,7 @@ export function AdvancedSecurityDashboard() {
                 </option>))}
             </select>
             <button onClick={refreshData} disabled={isRefreshing} className="px-4 py-2 bg-zion-red text-white rounded-lg hover:bg-zion-red/90 transition-colors disabled:opacity-50 flex items-center gap-2">
-              <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`}/>
+              <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`} />
               Refresh
             </button>
           </div>
@@ -177,7 +173,7 @@ export function AdvancedSecurityDashboard() {
               Show Resolved
             </label>
             <button className="px-4 py-2 bg-zion-orange text-white rounded-lg hover:bg-zion-orange/90 transition-colors flex items-center gap-2">
-              <Download className="w-4 h-4"/>
+              <Download className="w-4 h-4" />
               Export Report
             </button>
           </div>
@@ -188,16 +184,16 @@ export function AdvancedSecurityDashboard() {
       <div className="flex border-b border-zion-slate-light">
         {[
             { id: 'overview', label: 'Overview', icon: BarChart3 },
-            { id: 'events', label: 'Security Events', icon: AlertTriangle },
-            { id: 'compliance', label: 'Compliance', icon: CheckCircle },
-            { id: 'threats', label: 'Threat Intel', icon: Shield },
-            { id: 'analytics', label: 'Analytics', icon: TrendingUp }
+            {id: 'events', label: 'Security Events', icon: AlertTriangle},
+            {id: 'compliance', label: 'Compliance', icon: CheckCircle},
+            {id: 'threats', label: 'Threat Intel', icon: Shield},
+            {id: 'analytics', label: 'Analytics', icon: TrendingUp}
         ].map(tab => {
             const Icon = tab.icon;
             return (<button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${activeTab === tab.id
                     ? 'border-zion-red text-zion-red bg-zion-red/5'
                     : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'}`}>
-              <Icon className="w-4 h-4"/>
+              <Icon className="w-4 h-4" />
               {tab.label}
             </button>)})}
       </div>
@@ -231,7 +227,7 @@ export function AdvancedSecurityDashboard() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <div className="bg-gradient-to-r from-zion-red/10 to-zion-orange/10 p-6 rounded-xl border border-zion-red/20">
                 <h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">
-                  <AlertTriangle className="w-5 h-5 text-zion-red"/>
+                  <AlertTriangle className="w-5 h-5 text-zion-red" />
                   Active Security Events
                 </h3>
                 <div className="space-y-3">
@@ -250,13 +246,13 @@ export function AdvancedSecurityDashboard() {
 
               <div className="bg-gradient-to-r from-zion-blue/10 to-zion-cyan/10 p-6 rounded-xl border border-zion-blue/20">
                 <h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-zion-blue"/>
+                  <CheckCircle className="w-5 h-5 text-zion-blue" />
                   Compliance Status
                 </h3>
                 <div className="space-y-3">
                   {complianceRequirements.slice(0, 3).map(req => (<div key={req.id} className="flex items-center gap-3 p-3 bg-white dark:bg-zion-slate rounded-lg">
                       <div className="w-8 h-8 bg-zion-blue/20 rounded-lg flex items-center justify-center">
-                        <FileText className="w-4 h-4 text-zion-blue"/>
+                        <FileText className="w-4 h-4 text-zion-blue" />
                       </div>
                       <div className="flex-1">
                         <h4 className="font-medium text-zion-slate text-sm">{req.requirement}</h4>
@@ -303,7 +299,7 @@ export function AdvancedSecurityDashboard() {
             {filteredCompliance.map(req => (<div key={req.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">
                 <div className="flex items-start gap-3">
                   <div className="w-12 h-12 bg-zion-blue/20 rounded-lg flex items-center justify-center">
-                    <FileText className="w-6 h-6 text-zion-blue"/>
+                    <FileText className="w-6 h-6 text-zion-blue" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
@@ -338,7 +334,7 @@ export function AdvancedSecurityDashboard() {
             {threatIntelligence.map(threat => (<div key={threat.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">
                 <div className="flex items-start gap-3">
                   <div className="w-12 h-12 bg-zion-red/20 rounded-lg flex items-center justify-center">
-                    <Shield className="w-6 h-6 text-zion-red"/>
+                    <Shield className="w-6 h-6 text-zion-red" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
@@ -378,7 +374,7 @@ export function AdvancedSecurityDashboard() {
 
         {activeTab === 'analytics' && (<div className="space-y-6">
             <div className="text-center text-zion-slate-light">
-              <TrendingUp className="w-16 h-16 mx-auto mb-4 opacity-50"/>
+              <TrendingUp className="w-16 h-16 mx-auto mb-4 opacity-50" />
               <h3 className="text-lg font-semibold mb-2">Security Analytics</h3>
               <p>Advanced security analytics and threat intelligence reports coming soon...</p>
             </div>

@@ -1,11 +1,12 @@
-import { Helmet } from 'react-helmet-async';
-const AIAutonomousRobotics = () => {
+import React from 'react';
+import {Helmet} from 'react-helmet-async';
+const AIAutonomousRobotics = (props: any) => {
     return (<>
       <Helmet>
         <title>AI Autonomous Robotics Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous robotics platform that enables intelligent robots to operate independently, learn from experience, and perform complex tasks with human-like capabilities."/>
-        <meta name="keywords" content="AI robotics, autonomous robots, intelligent automation, AI automation, robotic systems, autonomous systems"/>
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-robotics"/>
+        <meta name="description" content="Revolutionary AI autonomous robotics platform that enables intelligent robots to operate independently, learn from experience, and perform complex tasks with human-like capabilities."  />
+        <meta name="keywords" content="AI robotics, autonomous robots, intelligent automation, AI automation, robotic systems, autonomous systems"  />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-robotics"  />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">

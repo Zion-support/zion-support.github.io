@@ -2,7 +2,7 @@
  * @param {*} params - Function parameters
  * @returns {*} Function return value
  */
-function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
+function CategoriesSection(props: any) {
 
 const categories = [{
     title: "AI Services",
@@ -48,24 +48,24 @@ const specialServices = [{
   }
 ];
 interface CategoriesSectionProps {
-  // Add your props here
 
-  showTitle?: boolean}
+  // Add your props here: any;
+
+  showTitle?: boolean
+}
 ;
 
 ;
 
-export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
+export function CategoriesSection(props: any) {
 
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
       {/* Background pattern */}"
       <div className="absolute inset-0 opacity-5">"
-        <div className="absolute inset-0" style={{
+        <div className="absolute inset-0" style="{{{
 
-          backgroundImage: `radial-gradient(circle at 25% 25%, #8ab1f3 2px, transparent 2px)`,
-          backgroundSize: '50px 50px'
-        }}></div>
+          backgroundImage: `radial-gradient(circle at 25% 25%; backgroundSize: '50px 50px'}}"}></div>
       </div>
 
       <div className="container mx - auto px-4 relative z -10">
@@ -129,11 +129,11 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           </div>
         </motion.div>
         >
-          <Link"
+          <Link "
             to="/services"
             className="group inline-flex items-center gap-3 text-zion-cyan border-b-2 border-zion-cyan hover: borde r-zion-cyan-light transition-colors text-lg font-medium py-2"
 
-            View All Services < ArrowRight className="w-5 h-5 ml-2 group - hover: translat e - x-1 transition -transform" />
+            View All Services < ArrowRight className="w-5 h-5 ml-2 group - hover: translat e - x-1 transition -transform"  />
 
         <motion.div
           className="mt-12 flex justify -center"          initial={{ opacity: 0, y: 2 0 }}
@@ -151,3 +151,9 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       </div>
     </section>;
   )}}}}}}}}}}'"`
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

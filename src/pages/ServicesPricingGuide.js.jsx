@@ -1,45 +1,45 @@
-import React, { useState } from 'react';
-import { EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES } from '@/data/expandedServices';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { CheckCircle, Star, Clock, Globe, Mail, Phone, MapPin, ExternalLink, TrendingUp, Shield, Zap, DollarSign } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import React, {useState} from 'react';
+import {EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES} from '@/data/expandedServices';
+import {Button} from '@/components/ui/button';
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
+import {Badge} from '@/components/ui/badge';
+import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from '@/components/ui/table';
+import {CheckCircle, Star, Clock, Globe, Mail, Phone, MapPin, ExternalLink, TrendingUp, Shield, Zap, DollarSign} from 'lucide-react';
+import {SEO} from '@/components/SEO';
 export default function ServicesPricingGuide
-export { ServicesPricingGuide }() {
+export {ServicesPricingGuide}() {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const filteredServices = selectedCategory === 'all'
         ? EXPANDED_SERVICES
         : EXPANDED_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory);
-    const getPriceTier = (price) => {
+    const getPriceTier = (props: any) => {
         if (price < 10000)
             return 'Starter';
         if (price < 25000)
             return 'Professional';
         return 'Enterprise'};
-    const getPriceTierColor = (tier) => {
+    const getPriceTierColor = (props: any) => {
         switch (tier) {
             case 'Starter': return 'bg-green-500';
             case 'Professional': return 'bg-blue-500';
             case 'Enterprise': return 'bg-purple-500';
             default: return 'bg-gray-500'}
     };
-    const getServiceIcon = (category) => {
+    const getServiceIcon = (props: any) => {
         switch (category) {
-            case 'AI Development': return <TrendingUp className="w-5 h-5 text-blue-500"/>;
-            case 'Cloud Services': return <Globe className="w-5 h-5 text-green-500"/>;
-            case 'Cybersecurity': return <Shield className="w-5 h-5 text-red-500"/>;
-            case 'Data & Analytics': return <TrendingUp className="w-5 h-5 text-purple-500"/>;
-            case 'Digital Transformation': return <Zap className="w-5 h-5 text-yellow-500"/>;
-            case 'IoT & Edge Computing': return <Globe className="w-5 h-5 text-indigo-500"/>;
-            case 'Blockchain & Web3': return <TrendingUp className="w-5 h-5 text-orange-500"/>;
-            case 'AR/VR & Metaverse': return <Globe className="w-5 h-5 text-pink-500"/>;
-            default: return <TrendingUp className="w-5 h-5 text-gray-500"/>}
+            case 'AI Development': return <TrendingUp className="w-5 h-5 text-blue-500" />;
+            case 'Cloud Services': return <Globe className="w-5 h-5 text-green-500" />;
+            case 'Cybersecurity': return <Shield className="w-5 h-5 text-red-500" />;
+            case 'Data & Analytics': return <TrendingUp className="w-5 h-5 text-purple-500" />;
+            case 'Digital Transformation': return <Zap className="w-5 h-5 text-yellow-500" />;
+            case 'IoT & Edge Computing': return <Globe className="w-5 h-5 text-indigo-500" />;
+            case 'Blockchain & Web3': return <TrendingUp className="w-5 h-5 text-orange-500" />;
+            case 'AR/VR & Metaverse': return <Globe className="w-5 h-5 text-pink-500" />;
+            default: return <TrendingUp className="w-5 h-5 text-gray-500" />}
     };
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
-      <SEO title="Services Pricing Guide - Zion Tech Group" description="Comprehensive pricing guide for all our IT and AI services. Compare features, pricing, and benefits across our service portfolio." keywords="pricing guide, IT services pricing, AI development cost, cloud migration pricing, cybersecurity pricing" canonical="https://ziontechgroup.com/services-pricing-guide"/>
+      <SEO title="Services Pricing Guide - Zion Tech Group" description="Comprehensive pricing guide for all our IT and AI services. Compare features, pricing, and benefits across our service portfolio." keywords="pricing guide, IT services pricing, AI development cost, cloud migration pricing, cybersecurity pricing" canonical="https://ziontechgroup.com/services-pricing-guide" />
 
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-20 px-4">
@@ -53,11 +53,11 @@ export { ServicesPricingGuide }() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light">
-              <Mail className="w-5 h-5 mr-2"/>
+              <Mail className="w-5 h-5 mr-2" />
               Get Custom Quote
             </Button>
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-              <Phone className="w-5 h-5 mr-2"/>
+              <Phone className="w-5 h-5 mr-2" />
               Call +1 302 464 0950
             </Button>
           </div>
@@ -69,19 +69,19 @@ export { ServicesPricingGuide }() {
         <div className="container mx-auto">
           <div className="flex flex-wrap items-center justify-center gap-8 text-zion-cyan">
             <div className="flex items-center gap-2">
-              <Phone className="w-5 h-5"/>
+              <Phone className="w-5 h-5" />
               <span>+1 302 464 0950</span>
             </div>
             <div className="flex items-center gap-2">
-              <Mail className="w-5 h-5"/>
+              <Mail className="w-5 h-5" />
               <span>kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items-center gap-2">
-              <MapPin className="w-5 h-5"/>
+              <MapPin className="w-5 h-5" />
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
             <div className="flex items-center gap-2">
-              <ExternalLink className="w-5 h-5"/>
+              <ExternalLink className="w-5 h-5" />
               <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="hover:underline">
                 ziontechgroup.com
               </a>
@@ -120,7 +120,7 @@ export { ServicesPricingGuide }() {
             <Card className="bg-zion-blue-dark border-zion-blue-light">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <DollarSign className="w-8 h-8 text-white"/>
+                  <DollarSign className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-white">Starter Tier</CardTitle>
                 <CardDescription className="text-zion-slate-light">
@@ -133,15 +133,15 @@ export { ServicesPricingGuide }() {
                 </p>
                 <ul className="text-sm text-zion-slate-light space-y-2">
                   <li className="flex items-center justify-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-400"/>
+                    <CheckCircle className="w-4 h-4 text-green-400" />
                     Basic implementation
                   </li>
                   <li className="flex items-center justify-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-400"/>
+                    <CheckCircle className="w-4 h-4 text-green-400" />
                     Standard support
                   </li>
                   <li className="flex items-center justify-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-400"/>
+                    <CheckCircle className="w-4 h-4 text-green-400" />
                     Documentation included
                   </li>
                 </ul>
@@ -151,7 +151,7 @@ export { ServicesPricingGuide }() {
             <Card className="bg-zion-blue-dark border-zion-purple/50">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <DollarSign className="w-8 h-8 text-white"/>
+                  <DollarSign className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-white">Professional Tier</CardTitle>
                 <CardDescription className="text-zion-slate-light">
@@ -164,15 +164,15 @@ export { ServicesPricingGuide }() {
                 </p>
                 <ul className="text-sm text-zion-slate-light space-y-2">
                   <li className="flex items-center justify-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-400"/>
+                    <CheckCircle className="w-4 h-4 text-green-400" />
                     Advanced features
                   </li>
                   <li className="flex items-center justify-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-400"/>
+                    <CheckCircle className="w-4 h-4 text-green-400" />
                     Priority support
                   </li>
                   <li className="flex items-center justify-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-400"/>
+                    <CheckCircle className="w-4 h-4 text-green-400" />
                     Training included
                   </li>
                 </ul>
@@ -182,7 +182,7 @@ export { ServicesPricingGuide }() {
             <Card className="bg-zion-blue-dark border-zion-blue-light">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <DollarSign className="w-8 h-8 text-white"/>
+                  <DollarSign className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-white">Enterprise Tier</CardTitle>
                 <CardDescription className="text-zion-slate-light">
@@ -195,15 +195,15 @@ export { ServicesPricingGuide }() {
                 </p>
                 <ul className="text-sm text-zion-slate-light space-y-2">
                   <li className="flex items-center justify-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-400"/>
+                    <CheckCircle className="w-4 h-4 text-green-400" />
                     Full customization
                   </li>
                   <li className="flex items-center justify-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-400"/>
+                    <CheckCircle className="w-4 h-4 text-green-400" />
                     24/7 dedicated support
                   </li>
                   <li className="flex items-center justify-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-400"/>
+                    <CheckCircle className="w-4 h-4 text-green-400" />
                     Ongoing maintenance
                   </li>
                 </ul>
@@ -260,19 +260,19 @@ export { ServicesPricingGuide }() {
                         </TableCell>
                         <TableCell className="text-zion-slate-light">
                           <div className="flex items-center gap-2">
-                            <Clock className="w-4 h-4"/>
+                            <Clock className="w-4 h-4" />
                             {service.availability}
                           </div>
                         </TableCell>
                         <TableCell className="text-white">
                           <div className="flex items-center gap-1">
-                            <Star className="w-4 h-4 text-yellow-400 fill-current"/>
+                            <Star className="w-4 h-4 text-yellow-400 fill-current" />
                             {service.rating} ({service.reviewCount})
                           </div>
                         </TableCell>
                         <TableCell>
                           <Button size="sm" className="bg-zion-purple hover:bg-zion-purple-dark text-white">
-                            <Mail className="w-4 h-4 mr-2"/>
+                            <Mail className="w-4 h-4 mr-2" />
                             Quote
                           </Button>
                         </TableCell>
@@ -305,27 +305,27 @@ export { ServicesPricingGuide }() {
                       
                       <div className="space-y-2 text-sm text-zion-slate-light">
                         <div className="flex items-center gap-2">
-                          <Clock className="w-4 h-4"/>
+                          <Clock className="w-4 h-4" />
                           <span>Delivery: {service.availability}</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <Globe className="w-4 h-4"/>
+                          <Globe className="w-4 h-4" />
                           <span>Location: {service.location}</span>
                         </div>
                         {service.aiScore && (<div className="flex items-center gap-2">
-                            <TrendingUp className="w-4 h-4"/>
+                            <TrendingUp className="w-4 h-4" />
                             <span>AI Score: {service.aiScore}/100</span>
                           </div>)}
                       </div>
 
                       <div className="flex items-center gap-2">
-                        <Star className="w-4 h-4 text-yellow-400 fill-current"/>
+                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
                         <span className="text-white">{service.rating}</span>
                         <span className="text-zion-slate-light">({service.reviewCount} reviews)</span>
                       </div>
 
                       <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
-                        <Mail className="w-4 h-4 mr-2"/>
+                        <Mail className="w-4 h-4 mr-2" />
                         Get Quote
                       </Button>
                     </CardContent>
@@ -347,11 +347,11 @@ export { ServicesPricingGuide }() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light">
-              <Mail className="w-5 h-5 mr-2"/>
+              <Mail className="w-5 h-5 mr-2" />
               Request Custom Quote
             </Button>
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-              <Phone className="w-5 h-5 mr-2"/>
+              <Phone className="w-5 h-5 mr-2" />
               Call +1 302 464 0950
             </Button>
           </div>

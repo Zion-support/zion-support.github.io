@@ -1,10 +1,5 @@
 import React from 'react';
-export default function CodeBlock({}
-  children,
-  code,'
-  language = 'text','
-  className = '',
-  showLineNumbers = false}) {}
+export default function CodeBlock(props: any) {}
 '
 ''
 '''
@@ -19,8 +14,7 @@ export default function CodeBlock({}
           onClick={() =>'
             navigator.clipboard.writeText(''
               typeof content === 'string' ? content : content.toString()
-            )"""
-          }""""
+            )"""}""""
           className="text-xs text-gray-400 hover:text-white transition-colors"""
         >
           Copy;
@@ -31,12 +25,12 @@ export default function CodeBlock({}
       </pre>
     </div>)}
 
-export { CodeBlock };
+export {CodeBlock};
 
-export { CodeBlock };
+export {CodeBlock};
 
-export { CodeBlock };
+export {CodeBlock};
 
-export { CodeBlock };
+export {CodeBlock};
 
-export { CodeBlock };
+export {CodeBlock};

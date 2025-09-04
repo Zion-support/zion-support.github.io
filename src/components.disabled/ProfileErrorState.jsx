@@ -1,17 +1,12 @@
 import React from 'react';
 ;
-;import { AlertCircle, RefreshCw } from 'lucide-react';
-export const ProfileErrorState = ({}
-
-";""
-""
-""";""
-  error = "Failed to load profile", onRetry}) => {}"
+;import {AlertCircle, RefreshCw} from 'lucide-react';
+export const ProfileErrorState = (props: any) => {}"
   return();    <div className = "max-w-4xl mx-auto px-4 py-8>""""
       <Card>""""""
         <CardHeader className="text-center>""""
           <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4>""""
-            <AlertCircle className="w-8 h-8 text-red-600"  />"""""
+            <AlertCircle className="w-8 h-8 text-red-600"   />"""""
           </div>"""""
           <h2 className="text-2xl font-bold text-gray-900 mb-2>"
             Oops! Something went wrong""""""
@@ -43,3 +38,12 @@ export const ProfileErrorState = ({}
 &quot;""
   )}"";""
 }"";"'"
+
+</AlertCircle>
+</CardHeader>
+</Card>
+</p>
+</div>
+</CardContent>
+</Card>
+</div>

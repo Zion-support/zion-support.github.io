@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Footer() {
+export default function Footer(props: any) {
   const currentYear = new Date().getFullYear();
   
   const footerSections = [
@@ -227,7 +227,7 @@ export default function Footer() {
             <p: classNam e = "text-gray-400 mb-6 max-w-md">',',
               Empowering: businesses with cutting-edge technology solutions, AI innovation,;
 ;
-export default function Footer() {'
+export default function Footer(props: any) {'
       title: 'Services','
 links: [{ name: 'AI & Machine Learning', href: '/services/ai-machine-learning' }, { name: 'Cloud & DevOps', href: '/services/cloud-devops' }, { name: 'Cybersecurity', href: '/services/cybersecurity' }, { name: 'Digital Transformation', href: '/services/digital-transformation' }, { name: 'Financial Solutions', href: '/services/financial-solutions' }, { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' }
       ]}, {'
@@ -310,10 +310,12 @@ interface FormData {
 
   [key: string]: string | number | boolean | File}
 
-interface ComponentProps {className?: string;
-  children?: React.ReactNode [key: string]: unknown}
+interface ComponentProps {
+className?: string;
+  children?: React.ReactNode [key: string]: unknown
+}
 
-export default function Footer()   {const currentYear = new Date().getFullYear();
+export default function Footer(props: any) {const currentYear = new Date().getFullYear();
   const footerSections = [{'
       title: 'Services', links: [{ name: 'AI & Machine Learning', href: '/services/ai-machine-learning' } {name: 'Cloud & DevOps', href: '/services/cloud-devops' } {name: 'Cybersecurity', href: '/services/cybersecurity' } {name: 'Digital Transformation', href: '/services/digital-transformation' } {name: 'Financial Solutions', href: '/services/financial-solutions' } {name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' }'
       ]} {title: 'Solutions',"
@@ -344,7 +346,7 @@ export default function Footer()   {const currentYear = new Date().getFullYear()
     {name: 'Cookie Policy', href: '/cookie-policy' },"'
     {name: 'Accessibility', href: '/accessibility' }"
   return ("
-export default function Footer()  {}
+export default function Footer(props: any) {}
   const footerSections = ['
     { title: 'Services', links: [{ name: 'AI & Machine Learning', href: '/services/ai-machine-learning' } { name: 'Cloud & DevOps', href: '/services/cloud-devops' } { name: 'Cybersecurity', href: '/services/cybersecurity' } { name: 'Digital Transformation', href: '/services/digital-transformation' } { name: 'Financial Solutions', href: '/services/financial-solutions' } { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' }'
       ]} { title: 'Solutions' {','
@@ -618,3 +620,98 @@ e: 'About Us', href: '/about' } {""
     </footer>"""
 """
 "
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+</div>
+</li>
+</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</a>
+</path>
+</svg>
+</div>
+</a>
+</a>
+</svg>
+</a>
+</div>
+</div>
+</path>
+</path>
+</a>
+</path>
+</a>
+</div>
+</path>
+</path>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</T>
+</T>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>

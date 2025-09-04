@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { 
-    Phone, 
+import React from 'react';
+import {useState} from 'react';
+import {useParams, useNavigate} from 'react-router-dom';
+import {SEO} from '@/components/SEO';
+import {Button} from '@/components/ui/button';
+import {Phone, 
     PhoneOff, 
     Video, 
     VideoOff, 
@@ -12,11 +12,10 @@ import {
     Monitor, 
     Users, 
     Settings,
-    MessageCircle
-} from 'lucide-react';
+    MessageCircle} from 'lucide-react';
 
 export default function VideoCall
-export { VideoCall }() {
+export {VideoCall}() {
     const { roomId } = useParams();
     const navigate = useNavigate();
     const [isJoining, setIsJoining] = useState(false);
@@ -25,16 +24,14 @@ export { VideoCall }() {
     const [isMuted, setIsMuted] = useState(false);
     const [isScreenSharing, setIsScreenSharing] = useState(false);
     const [participants, setParticipants] = useState([
-        {
-            id: 'user-1',
+        {id: 'user-1',
             name: 'You',
             isVideoEnabled: true,
             isMuted: false,
-            isScreenSharing: false
-        }
+            isScreenSharing: false}
     ]);
 
-    const handleJoinCall = () => {
+    const handleJoinCall = (props: any) => {
         setIsJoining(true);
         // Simulate connection delay
         setTimeout(() => {
@@ -43,7 +40,7 @@ export { VideoCall }() {
         }, 1500);
     };
 
-    const handleLeaveCall = () => {
+    const handleLeaveCall = (props: any) => {
         setHasJoined(false);
         // Navigate back after a short delay
         setTimeout(() => {
@@ -51,34 +48,26 @@ export { VideoCall }() {
         }, 1000);
     };
 
-    const toggleVideo = () => {
-        setIsVideoEnabled(!isVideoEnabled);
-    };
+    const toggleVideo = (props: any) => {setIsVideoEnabled(!isVideoEnabled);};
 
-    const toggleMute = () => {
-        setIsMuted(!isMuted);
-    };
+    const toggleMute = (props: any) => {setIsMuted(!isMuted);};
 
-    const toggleScreenShare = () => {
-        setIsScreenSharing(!isScreenSharing);
-    };
+    const toggleScreenShare = (props: any) => {setIsScreenSharing(!isScreenSharing);};
 
-    const simulateUserJoining = () => {
+    const simulateUserJoining = (props: any) => {
         // This is just for demo purposes - in a real app, this would be handled by the video call service
         const mockUsers = [
             { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false, isScreenSharing: false },
-            { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true, isScreenSharing: false },
-            { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
+            {id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true, isScreenSharing: false},
+            {id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true}
         ];
         const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
-        if (!participants.find(p => p.id === randomUser.id)) {
-            setParticipants(prev => [...prev, randomUser]);
-        }
+        if (!participants.find(p => p.id === randomUser.id)) {setParticipants(prev => [...prev, randomUser]);}
     };
 
     return (
         <>
-            <SEO title={`Video Call - Room ${roomId}`} description="Zion video call" />
+            <SEO title={`Video Call - Room ${roomId}`} description="Zion video call"  />
 
             <main className="container mx-auto py-8 min-h-[calc(100vh-200px)]">
                 {!hasJoined ? (
@@ -111,8 +100,8 @@ export { VideoCall }() {
                                             </div>
                                             <div className="flex items-center justify-center gap-2 mb-2">
                                                 <span className="text-white font-medium">{participant.name}</span>
-                                                {participant.isMuted && <MicOff className="w-4 h-4 text-red-400" />}
-                                                {participant.isScreenSharing && <Monitor className="w-4 h-4 text-blue-400" />}
+                                                {participant.isMuted && <MicOff className="w-4 h-4 text-red-400"  />}
+                                                {participant.isScreenSharing && <Monitor className="w-4 h-4 text-blue-400"  />}
                                             </div>
                                             {participant.id === 'user-1' && (
                                                 <div className="text-xs text-gray-400">(You)</div>
@@ -130,7 +119,7 @@ export { VideoCall }() {
                                     size="lg"
                                     className="rounded-full w-14 h-14"
                                 >
-                                    {isMuted ? <MicOff className="w-6 h-6" /> : <Mic className="w-6 h-6" />}
+                                    {isMuted ? <MicOff className="w-6 h-6"  /> : <Mic className="w-6 h-6"  />}
                                 </Button>
 
                                 <Button
@@ -139,7 +128,7 @@ export { VideoCall }() {
                                     size="lg"
                                     className="rounded-full w-14 h-14"
                                 >
-                                    {isVideoEnabled ? <Video className="w-6 h-6" /> : <VideoOff className="w-6 h-6" />}
+                                    {isVideoEnabled ? <Video className="w-6 h-6"  /> : <VideoOff className="w-6 h-6"  />}
                                 </Button>
 
                                 <Button
@@ -148,7 +137,7 @@ export { VideoCall }() {
                                     size="lg"
                                     className="rounded-full w-14 h-14"
                                 >
-                                    <Monitor className="w-6 h-6" />
+                                    <Monitor className="w-6 h-6"  />
                                 </Button>
 
                                 <Button
@@ -157,22 +146,22 @@ export { VideoCall }() {
                                     size="lg"
                                     className="rounded-full w-14 h-14"
                                 >
-                                    <PhoneOff className="w-6 h-6" />
+                                    <PhoneOff className="w-6 h-6"  />
                                 </Button>
                             </div>
 
                             {/* Additional Controls */}
                             <div className="flex items-center justify-center gap-4 mt-4">
                                 <Button variant="ghost" size="sm" className="text-gray-400 hover:text-white">
-                                    <MessageCircle className="w-4 h-4 mr-2" />
+                                    <MessageCircle className="w-4 h-4 mr-2"  />
                                     Chat
                                 </Button>
                                 <Button variant="ghost" size="sm" className="text-gray-400 hover:text-white">
-                                    <Users className="w-4 h-4 mr-2" />
+                                    <Users className="w-4 h-4 mr-2"  />
                                     Participants
                                 </Button>
                                 <Button variant="ghost" size="sm" className="text-gray-400 hover:text-white">
-                                    <Settings className="w-4 h-4 mr-2" />
+                                    <Settings className="w-4 h-4 mr-2"  />
                                     Settings
                                 </Button>
                             </div>

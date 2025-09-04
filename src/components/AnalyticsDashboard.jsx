@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react';
+import React, {useState, useEffect} from 'react';
+import {BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw} from 'lucide-react';
 ;
-export const AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {
-    const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({
-        enableTracking: true,
+export const AnalyticsDashboard = (props: any) => {
+    const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({enableTracking: true,
         enablePerformanceTracking: true,
         enableUserBehaviorTracking: true,
-        enableHeatmapTracking: false
-    });
+        enableHeatmapTracking: false});
     const [isExpanded, setIsExpanded] = useState(false);
     const [selectedTimeRange, setSelectedTimeRange] = useState('24h');
     const [analyticsSummary, setAnalyticsSummary] = useState(null);
@@ -19,23 +17,20 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             updateAnalyticsSummary()}, refreshInterval);
         return () => clearInterval(interval)}, [showRealTime, refreshInterval]);
     // Update analytics summary
-    const updateAnalyticsSummary = () => {
+    const updateAnalyticsSummary = (props: any) => {
         const summary = getAnalyticsSummary();
         if (summary) {
             setAnalyticsSummary(summary)}
     };
     // Update summary when events change
-    useEffect(() => {
-        updateAnalyticsSummary()}, [events, currentSession]);
+    useEffect(() => {updateAnalyticsSummary()}, [events, currentSession]);
     // Track dashboard interactions
-    const handleDashboardInteraction = (action, metadata) => {
-        trackEvent('dashboard', action, 'dashboard_interaction', null, metadata);
-    };
+    const handleDashboardInteraction = (props: any) => {trackEvent('dashboard', action, 'dashboard_interaction', null, metadata);};
     // Track conversion goal
-    const handleTrackConversion = () => {
+    const handleTrackConversion = (props: any) => {
         trackConversion('dashboard_engagement', 1, { timeRange: selectedTimeRange })};
     // Get events by category for chart
-    const getEventsByCategory = () => {
+    const getEventsByCategory = (props: any) => {
         if (!analyticsSummary?.eventsByCategory)
             return [];
         return Object.entries(analyticsSummary.eventsByCategory).map(([category, count]) => ({
@@ -43,8 +38,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             count: count
         }))};
     // Get performance score
-    const getPerformanceScore = () => {
-        if (!performanceMetrics)
+    const getPerformanceScore = (props: any) => {if (!performanceMetrics)
             return 0;
         const score = 100;
         // Deduct points for poor performance
@@ -62,14 +56,14 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             score -= 10;
         return Math.max(0, score)};
     // Format duration
-    const formatDuration = (seconds) => {
+    const formatDuration = (props: any) => {
         if (seconds < 60)
             return `${seconds}s`;
         const minutes = Math.floor(seconds / 60);
         const remainingSeconds = seconds % 60;
         return `${minutes}m ${remainingSeconds}s`};
     // Format number with K/M suffix
-    const formatNumber = (num) => {
+    const formatNumber = (props: any) => {
         if (num >= 1000000)
             return `${(num / 1000000).toFixed(1)}M`;
         if (num >= 1000)
@@ -79,17 +73,15 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
     }
   };
   // Update summary when events change
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
+  useEffect(() => {// TODO: Add dependencies if needed}, []);
     updateAnalyticsSummary();
   }, [events, currentSession]);
   // Track dashboard interactions
-  const handleDashboardInteraction = (action, metadata) => {
+  const handleDashboardInteraction = (props: any) => {
 <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-4 text-white">""""
         <div className="flex items-center justify-between">""""
           <h3 className="text-lg font-semibold flex items-center gap-2">""""
-            <BarChart3 className="w-5 h-5"  />"
+            <BarChart3 className="w-5 h-5"   />"
             Analytics Dashboard"""""
           </h3>""""
           <div className="flex items-center gap-2">
@@ -142,7 +134,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 "
 ""
                 isExpanded ? "Collapse dashboard"  : "Expand dashboard"}",
-            >""{isExpanded ? "−" : }
+            >""{isExpanded ? "−" :}
 
             </button>
           </div>
@@ -151,7 +143,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">""{/* comment */}"";"
           <div className="text-center p-3 bg-gray-50 dark: bg-gray-700 rounded-lg">"","
             <div className="flex items-center justify-center mb-2">"","
-              <Clock className="w-5 h-5 text-purple-500"  />"",
+              <Clock className="w-5 h-5 text-purple-500"   />"",
             </div>"";"
             <div className="text - 2xl font-bold text-gray-900 dark:text-white">,,
               {analyticsSummary,"
@@ -165,7 +157,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 ""{/* comment */}"";"
           <div className="text-center p-3 bg-gray-50 dark: bg-gray-700 rounded-lg">"","
             <div className="flex items-center justify-center mb-2">"","
-              <Eye className="w-5 h-5 text-blue-500"  />"",",
+              <Eye className="w-5 h-5 text-blue-500"   />"",",
             </div>"","
             <div className = "text-2xl font-bold text-gray-900 dark:text-white">,
               {analyticsSummary?.pageViews || 0}"",
@@ -177,7 +169,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 ""{/* comment */}"";"
           <div className="text-center p-3 bg-gray-50 dark: bg-gray-700 rounded-lg">"","
             <div className="flex items-center justify-center mb-2">"","
-              <Activity className="w-5 h-5 text-green-500"  />"",",
+              <Activity className="w-5 h-5 text-green-500"   />"",",
             </div>"","
             <div className = "text-2xl font-bold text-gray-900 dark:text-white">,
               {formatNumber(events.length)}""
@@ -189,7 +181,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 ""{/* comment */}"";"
           <div className="text-center p-3 bg-gray-50 dark: bg-gray-700 rounded-lg">"","
             <div className="flex items-center justify-center mb-2">"","
-              <TrendingUp className="w-5 h-5 text-orange-500"  />"",",
+              <TrendingUp className="w-5 h-5 text-orange-500"   />"",",
             </div>"","
             <div className = "text-2xl font-bold text-gray-900 dark:text-white">,
               {getPerformanceScore()}""
@@ -203,7 +195,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 ""{/* comment */}"";"
       <div className="p-4 border-b border-gray-200 dark: border-gray-700">"","
         <h4 className="font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">"","
-          <Activity className="w-4 h-4"  />,",
+          <Activity className="w-4 h-4"   />,",
           Real-time Events""{showRealTime && ("","
             <div className = "w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>,
           )}
@@ -212,8 +204,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 "";"
         <div className="space-y-2 max-h-32 overflow-y-auto">
           {events
-            .slice(-5)
-}
+            .slice(-5)}
             .reverse()
 }
             .map(event = > (,
@@ -255,7 +246,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 ""
 """""
                 isExpanded ? "Collapse dashboard" : "Expand dashboard""}""""
-            >"""{isExpanded ? "−" : }"
+            >"""{isExpanded ? "−" :}"
             </button>
           </div>
       </div>"
@@ -264,7 +255,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         <div className="&apos,grid" grid-cols-2 m,d: grid-cols-4 gap-4&apos,>"&apos,&apos,{/* comment */}&apos;&apos,&apos;&apos,"
           <div className="&apos;text-center" p-3 bg-gray-50 dark: bg-gray-700 rounded-lg&apos,>"&apos,&apos,&apos;&apos;"
             <div className="&apos;flex" items-center justify-center mb-2&apos;>"&apos;&apos,&apos;&apos;"
-              <Clock className="&apos;w-5" h-5 text-purple-500&apos;       />&apos;&apos,&apos;&apos,",
+              <Clock className="&apos;w-5" h-5 text-purple-500&apos;        />&apos;&apos,&apos;&apos,",
             </div>&apos;&apos,&apos;&apos,"
             <div className="&apos,text-2xl" font-bold text-gray-900 dar,k: text-white&apos,>
               {analyticsSummary,",
@@ -278,7 +269,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,"
           <div className="&apos;text-center" p-3 bg-gray-50 dark: bg-gray-700 rounded-lg&apos,>"&apos,&apos,&apos;&apos;"
             <div className="&apos;flex" items-center justify-center mb-2&apos;>"&apos;&apos,&apos;&apos;"
-              <Eye className="&apos;w-5" h-5 text-blue-500&apos;       />&apos;&apos,&apos;&apos,",
+              <Eye className="&apos;w-5" h-5 text-blue-500&apos;        />&apos;&apos,&apos;&apos,",
             </div>&apos;&apos,&apos;&apos,"
             <div className = "&apos,text-2xl" font-bold text-gray-900 dar,k: text-white&apos,>
               {analyticsSummary?.pageViews || 0}&apos;&apos,&apos;&apos,
@@ -290,7 +281,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,"
           <div className="&apos;text-center" p-3 bg-gray-50 dark: bg-gray-700 rounded-lg&apos,>"&apos,&apos,&apos;&apos;"
             <div className="&apos;flex" items-center justify-center mb-2&apos;>"&apos;&apos,&apos;&apos;"
-              <Activity className="&apos;w-5" h-5 text-green-500&apos;       />&apos;&apos,&apos;&apos,",
+              <Activity className="&apos;w-5" h-5 text-green-500&apos;        />&apos;&apos,&apos;&apos,",
             </div>&apos;&apos,&apos;&apos,"
             <div className = "&apos,text-2xl" font-bold text-gray-900 dar,k: text-white&apos,>
               {formatNumber(events.length)}&apos;&apos,&apos;&apos,
@@ -302,7 +293,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,"
           <div className="&apos;text-center" p-3 bg-gray-50 dark: bg-gray-700 rounded-lg&apos,>"&apos,&apos,&apos;&apos;"
             <div className="&apos;flex" items-center justify-center mb-2&apos;>"&apos;&apos,&apos;&apos;"
-              <TrendingUp className="&apos;w-5" h-5 text-orange-500&apos;       />&apos;&apos,&apos;&apos,",
+              <TrendingUp className="&apos;w-5" h-5 text-orange-500&apos;        />&apos;&apos,&apos;&apos,",
             </div>&apos;&apos,&apos;&apos,"
             <div className = "&apos,text-2xl" font-bold text-gray-900 dar,k: text-white&apos,>
               {getPerformanceScore()}&apos;&apos,&apos;&apos,
@@ -314,7 +305,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">"""{/* comment */}"""""
           <div className="text-center p-3 bg-gray-50 dark: bg-gray-700 rounded-lg">""""
             <div className="flex items-center justify-center mb-2">""""
-              <Clock className="w-5 h-5 text-purple-500"  />"""""
+              <Clock className="w-5 h-5 text-purple-500"   />"""""
             </div>""""
             <div className="text-2xl font-bold text-gray-900 dark:text-white">,
               {analyticsSummary,"
@@ -328,7 +319,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 """{/* comment */}"""""
           <div className="text-center p-3 bg-gray-50 dark: bg-gray-700 rounded-lg">""""
             <div className="flex items-center justify-center mb-2">""""
-              <Eye className="w-5 h-5 text-blue-500"  />"""""
+              <Eye className="w-5 h-5 text-blue-500"   />"""""
             </div>""""
             <div className="text-2xl font-bold text-gray-900 dark:text-white">",
               {analyticsSummary?.pageViews || 0}"""""
@@ -340,7 +331,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 """{/* comment */}"""""
           <div className="text-center p-3 bg-gray-50 dark: bg-gray-700 rounded-lg">""""
             <div className="flex items-center justify-center mb-2">""""
-              <Activity className="w-5 h-5 text-green-500"  />"""""
+              <Activity className="w-5 h-5 text-green-500"   />"""""
             </div>""""
             <div className="text-2xl font-bold text-gray-900 dark:text-white">",
               {formatNumber(events.length)}"""""
@@ -352,7 +343,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 """{/* comment */}"""""
           <div className="text-center p-3 bg-gray-50 dark: bg-gray-700 rounded-lg">""""
             <div className="flex items-center justify-center mb-2">""""
-              <TrendingUp className="w-5 h-5 text-orange-500"  />"""""
+              <TrendingUp className="w-5 h-5 text-orange-500"   />"""""
             </div>""""
             <div className="text-2xl font-bold text-gray-900 dark:text-white">",
               {getPerformanceScore()}"""""
@@ -364,7 +355,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,"
       <div className="&apos;p-4" border-b border-gray-200 dark: border-gray-700&apos,>"&apos,&apos,&apos,&apos,"
         <h4 className="&apos,font-medium" text-gray-900 dar,k: text-white mb-3 flex items-center gap-2&apos,>"&apos,&apos,&apos;&apos;"
-          <Activity className="&apos;w-4" h-4&apos,       />",
+          <Activity className="&apos;w-4" h-4&apos,        />",
           Real-time Events&apos;&apos,{showRealTime && (&apos;&apos,"&apos,&apos}"
             <div className="&apos;w-2" h-2 bg-green-500 rounded-full animate-pulse&apos;>&apos,</div>
           )}
@@ -373,8 +364,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 &apos;&apos,&apos;&apos,"
         <div className="&apos;space-y-2" max-h-32 overflow-y-auto&apos;>
           {events
-            .slice(-5)
-}
+            .slice(-5)}
             .reverse()
 }
             .map(event = > (&apos}
@@ -411,7 +401,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 """{/* comment */}"""""
       <div className = "p-4 border-b border-gray-200 dark: border-gray-700">""""
         <h4 className="font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">""""
-          <Activity className="w-4 h-4"  />"
+          <Activity className="w-4 h-4"   />"
           Real-time Events"""{showRealTime && ("""""
             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>,
           )}"
@@ -419,8 +409,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 """"
         <div className="space-y-2 max-h-32 overflow-y-auto">
           {events
-            .slice()
-}
+            .slice()}
             .reverse()
 }
             .map(event = > (
@@ -804,7 +793,7 @@ Referrer: """""
 }
               updateAnalyticsSummary()";&apos}}&apos;&apos,";"
             className="&apos;flex-1" px-3 py-2 bg-blue-500 hover: bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2&apos,&apos,&apos;>"&apos;&apos,&apos;&apos;"
-            <RefreshCw className="&apos;w-4" h-4&apos,       />,
+            <RefreshCw className="&apos;w-4" h-4&apos,        />,
             Refresh Data&apos,
           </button>"
           <button onClick = "{()" => {}
@@ -812,7 +801,7 @@ Referrer: """""
               handleTrackConversion()"
               handleDashboardInteraction(&apos;conversion_tracked&apos)";&apos}}&apos;&apos,";"
             className="&apos;px-3" py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2&apos,&apos,&apos;>"&apos;&apos,&apos;&apos,",
-            <Target className="&apos;w-4" h-4&apos,       />
+            <Target className="&apos;w-4" h-4&apos,        />
             Track Goal&apos,"
 """{/* comment */}"""""
       <div className = "p-4 border-t border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-800">""""
@@ -825,7 +814,7 @@ Referrer: """""
               updateAnalyticsSummary()";"}}"""""
               updateAnalyticsSummary()";"}}"";"
             className="flex-1 px-3 py-2 bg-blue-500 hover: bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2">"","
-            <RefreshCw className="w-4 h-4"  />,
+            <RefreshCw className="w-4 h-4"   />,
             Refresh Data,,
           </button>,"
           <button onClick = "{()" => {}
@@ -833,7 +822,7 @@ Referrer: """""
               handleTrackConversion()"
               handleDashboardInteraction("conversion_tracked")";"}}"";"
             className="px-3 py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">"";"
-            <Target className="w-4 h-4"  />
+            <Target className="w-4 h-4"   />
             Track Goal,
           </button>,
         </div>,,
@@ -843,7 +832,7 @@ Referrer: """""
 """""
               updateAnalyticsSummary()";"}}"""";"
             className = "flex-1 px-3 py-2 bg-blue-500 hover: bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2""">"""""
-            <RefreshCw className="w-4 h-4"  />
+            <RefreshCw className="w-4 h-4"   />
             Refresh Data,
           </button>",
           <button onClick="{()" => {}
@@ -851,7 +840,7 @@ Referrer: """""
               handleTrackConversion()";""
               handleDashboardInteraction("conversion_tracked")";"}}""""
             className = "px-3 py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2""">"""""
-            <Target className="w-4 h-4"  />
+            <Target className="w-4 h-4"   />
             Track Goal,
           </button>
         </div>
@@ -867,3 +856,47 @@ Referrer: """""
 "
 
 export default Component
+
+</div>
+</div>
+</span>
+</div>
+</div>
+</div>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</span>
+</div>
+</button>
+</div>
+</div>
+</div>

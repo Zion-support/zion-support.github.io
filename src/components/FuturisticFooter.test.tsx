@@ -10,3 +10,5 @@ export default function FuturisticFooter.test() {return (
         </p>
       </div>
   );"}"
+
+</div>

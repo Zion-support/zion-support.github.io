@@ -4,7 +4,7 @@ interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {
   children: Reac t.ReactNode;
 }
 
-export function Form({ children, ...props }: FormProps) {
+export function Form(props: any) {
   return (
     <form {...props}>
       {children}
@@ -13,11 +13,13 @@ export function Form({ children, ...props }: FormProps) {
 }
 
 interface FormItemProps {
+
   children: Reac t.ReactNode;
   className?: string;
+
 }
 
-export function FormItem({ children, className = '' }: FormItemProps) {
+export function FormItem(props: any) {
   return (
     <div className={`space-y-2 ${className}`}>
       {children}
@@ -26,12 +28,14 @@ export function FormItem({ children, className = '' }: FormItemProps) {
 }
 
 interface FormLabelProps {
+
   children: Reac t.ReactNode;
   className?: string;
   htmlFor?: string;
+
 }
 
-export function FormLabel({ children, className = '', htmlFor }: FormLabelProps) {
+export function FormLabel(props: any) {
   return (
     <label 
       htmlFor={htmlFor}
@@ -43,11 +47,13 @@ export function FormLabel({ children, className = '', htmlFor }: FormLabelProps)
 }
 
 interface FormFieldProps {
+
   children: Reac t.ReactNode;
   className?: string;
+
 }
 
-export function FormField({ children, className = '' }: FormFieldProps) {
+export function FormField(props: any) {
   return (
     <div className={`space-y-1 ${className}`}>
       {children}
@@ -56,11 +62,13 @@ export function FormField({ children, className = '' }: FormFieldProps) {
 }
 
 interface FormMessageProps {
+
   children?: React.ReactNode;
   className?: string;
+
 }
 
-export function FormMessage({ children, className = '' }: FormMessageProps) {
+export function FormMessage(props: any) {
   if (!children) return null;
   
   return (
@@ -69,3 +77,4 @@ export function FormMessage({ children, className = '' }: FormMessageProps) {
     </p>
   );
 }
+</HTMLFormElement>

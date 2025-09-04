@@ -1,7 +1,7 @@
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
 import { Globe import { useEffect, useState } from "react";
-import { SEO } from "@/components/SEO";
+import {SEO} from "@/components/SEO";
 // Enhanced service listings with new micro SAAS services
 const SERVICE_LISTINGS = [
     // AI & Machine Learning Services
@@ -484,7 +484,7 @@ const SERVICE_LISTINGS = [
         reviewCount: 85,
     },
 ];
-function generateRandomService(idNum) {
+function generateRandomService(props: any) {
     const templates = [
         {
             title: "AI Automation Consulting",
@@ -493,41 +493,31 @@ function generateRandomService(idNum) {
             max: 12000,
             tags["Automation", "AI Strategy", "Optimization"],;
         },
-        {
-            title: "Cloud Migration & Support",
+        {title: "Cloud Migration & Support",
             category: "Management",
             min: 3000,
             max: 9000,
-            tags["Cloud", "Migration", "DevOps"],;
-        },
-        {
-            title: "Advanced Cybersecurity Suite",
+            tags["Cloud", "Migration", "DevOps"],;},
+        {title: "Advanced Cybersecurity Suite",
             category: "Security",
             min: 5000,
             max: 15000,
-            tags["Cybersecurity", "PenTesting", "Compliance"],;
-        },
-        {
-            title: "Big Data Engineering",
+            tags["Cybersecurity", "PenTesting", "Compliance"],;},
+        {title: "Big Data Engineering",
             category: "Analytics",
             min: 3500,
             max: 11000,
-            tags["Data Engineering", "Analytics", "ETL"],;
-        },
-        {
-            title: "AI Model Training Service",
+            tags["Data Engineering", "Analytics", "ETL"],;},
+        {title: "AI Model Training Service",
             category: "Development",
             min: 4500,
             max: 13000,
-            tags["Machine Learning", "Model Training", "AI"],;
-        },
-        {
-            title: "Digital Transformation Strategy",
+            tags["Machine Learning", "Model Training", "AI"],;},
+        {title: "Digital Transformation Strategy",
             category: "Strategy",
             min: 6000,
             max: 14000,
-            tags["Transformation", "Strategy", "Business"],;
-        },
+            tags["Transformation", "Strategy", "Business"],;},
     ];
     const authors = [
         "Global AI Experts",
@@ -554,7 +544,7 @@ function generateRandomService(idNum) {
         price,
         currency: "$",
         tags: template.tags,
-        author: { name: author, id: author.toLowerCase().replace(/\s+/g, "-") },
+        author: {name: author, id: author.toLowerCase().replace(/\s+/g, "-")},
         images[getRandomItem(images)],;
         createdAt: new Date().toISOString(),
         aiScore: Math.floor(90 + Math.random() * 10),
@@ -563,28 +553,28 @@ function generateRandomService(idNum) {
     }}
 // Enhanced filter options for all service categories
 const SERVICE_FILTERS = [
-    { label: 'AI & ML', value: 'ai-ml' },
-    { label: 'Cybersecurity', value: 'cybersecurity' },
-    { label: 'Cloud & Infrastructure', value: 'cloud-infrastructure' },
-    { label: 'Business Intelligence', value: 'business-intelligence' },
-    { label: 'Communication', value: 'communication' },
-    { label: 'Specialized Tools', value: 'specialized-tools' },
-    { label: 'Development', value: 'development' },
-    { label: 'Management', value: 'management' },
-    { label: 'Security', value: 'security' },
-    { label: 'Analytics', value: 'analytics' },
-    { label: 'Consulting', value: 'consulting' },
-    { label: 'Strategy', value: 'strategy' },
+    {label: 'AI & ML', value: 'ai-ml'},
+    {label: 'Cybersecurity', value: 'cybersecurity'},
+    {label: 'Cloud & Infrastructure', value: 'cloud-infrastructure'},
+    {label: 'Business Intelligence', value: 'business-intelligence'},
+    {label: 'Communication', value: 'communication'},
+    {label: 'Specialized Tools', value: 'specialized-tools'},
+    {label: 'Development', value: 'development'},
+    {label: 'Management', value: 'management'},
+    {label: 'Security', value: 'security'},
+    {label: 'Analytics', value: 'analytics'},
+    {label: 'Consulting', value: 'consulting'},
+    {label: 'Strategy', value: 'strategy'},
 ];
 export default function ServicesPage
-export { ServicesPage }() {
+export {ServicesPage}() {
     const [listings, setListings] = useState(SERVICE_LISTINGS);
     useEffect(() => {
         const interval = setInterval(() => {
             setListings(prev => [...prev, generateRandomService(prev.length + 1)])}, 120000);
         return () => clearInterval(interval)}, []);
     return (<div className="min-h-screen bg-background">
-      <SEO title="IT & AI Services - Zion Tech Group" description="Find expert technology service providers for your business needs, from AI development to infrastructure management." keywords="IT services, AI services, technology consulting, Zion Tech Group" url="https://ziontechgroup.com/services"/>
+      <SEO title="IT & AI Services - Zion Tech Group" description="Find expert technology service providers for your business needs, from AI development to infrastructure management." keywords="IT services, AI services, technology consulting, Zion Tech Group" url="https://ziontechgroup.com/services" />
       
       <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
@@ -592,7 +582,7 @@ export { ServicesPage }() {
           <div className="flex flex-wrap gap-2">
             <Link to="/comprehensive-services">
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
-                <Globe className="h-4 w-4 mr-2"/>
+                <Globe className="h-4 w-4 mr-2" />
                 View All Services
               </Button>
             </Link>

@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+export default function Header(props: any) {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<any>(false);
+  const [scrolled, setScrolled] = useState<any>(false);
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = (props: any) => {
       setScrolled(window.scrollY > 50);
     };
 
@@ -222,3 +222,5 @@ export default function Header() {
     </header>
   );
 }
+</any>
+</any>

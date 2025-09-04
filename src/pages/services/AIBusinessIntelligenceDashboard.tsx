@@ -27,7 +27,7 @@ import { BarChart3,
  } from 'lucide-react';
 import { SEO  } from '../../components/SEO';
 
-const AIBusinessIntelligenceDashboard = () => {
+const AIBusinessIntelligenceDashboard = (props: any) => {
   const features = [
     {
       icon: Brai n,
@@ -517,3 +517,15 @@ export { AIBusinessIntelligenceDashboard };
 export { AIBusinessIntelligenceDashboard };
 
 export { AIBusinessIntelligenceDashboard };
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</SEO>

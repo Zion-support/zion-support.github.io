@@ -1,47 +1,36 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { SEO } from "@/components/SEO";
-import { Shield, Eye, Target, Users, ArrowRight, CheckCircle, Star, AlertTriangle, Network, Database, Cloud, Smartphone, Server } from "lucide-react";
-import { Link } from "react-router-dom";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {SEO} from "@/components/SEO";
+import {Shield, Eye, Target, Users, ArrowRight, CheckCircle, Star, AlertTriangle, Network, Database, Cloud, Smartphone, Server} from "lucide-react";
+import {Link} from "react-router-dom";
 export default function CybersecurityServices
-export { CybersecurityServices }() {
+export {CybersecurityServices}() {
     const securitySolutions = [
         {
             title: "Network Security",
             description: "Firewall configuration, intrusion detection, and network monitoring",
-            icon: <Network className="h-8 w-8 text-zion-cyan"/>
+            icon: <Network className="h-8 w-8 text-zion-cyan" />
         },
-        {
-            title: "Endpoint Protection",
+        {title: "Endpoint Protection",
             description: "Advanced antivirus, malware protection, and device security",
-            icon: <Smartphone className="h-8 w-8 text-zion-purple"/>
-        },
-        {
-            title: "Cloud Security",
+            icon: <Smartphone className="h-8 w-8 text-zion-purple" />},
+        {title: "Cloud Security",
             description: "AWS, Azure, and Google Cloud security assessment and hardening",
-            icon: <Cloud className="h-8 w-8 text-zion-blue"/>
-        },
-        {
-            title: "Data Protection",
+            icon: <Cloud className="h-8 w-8 text-zion-blue" />},
+        {title: "Data Protection",
             description: "Encryption, backup security, and data loss prevention",
-            icon: <Database className="h-8 w-8 text-zion-cyan"/>
-        },
-        {
-            title: "Server Security",
+            icon: <Database className="h-8 w-8 text-zion-cyan" />},
+        {title: "Server Security",
             description: "Server hardening, access control, and monitoring",
-            icon: <Server className="h-8 w-8 text-zion-purple"/>
-        },
-        {
-            title: "Compliance",
+            icon: <Server className="h-8 w-8 text-zion-purple" />},
+        {title: "Compliance",
             description: "GDPR, HIPAA, SOC 2, and industry-specific compliance",
-            icon: <Shield className="h-8 w-8 text-zion-blue"/>
-        }
+            icon: <Shield className="h-8 w-8 text-zion-blue" />}
     ];
     const pricingPlans = [
-        {
-            name: "Basic Security",
+        {name: "Basic Security",
             price: "$299",
             period: "/month",
             description: "Essential cybersecurity for small businesses",
@@ -52,10 +41,8 @@ export { CybersecurityServices }() {
                 "Email support",
                 "Security training"
             ],;
-            popular: false
-        },
-        {
-            name: "Professional Security",
+            popular: false},
+        {name: "Professional Security",
             price: "$799",
             period: "/month",
             description: "Comprehensive protection for growing businesses",
@@ -67,10 +54,8 @@ export { CybersecurityServices }() {
                 "Advanced training",
                 "Compliance assistance"
             ],;
-            popular: true
-        },
-        {
-            name: "Enterprise Security",
+            popular: true},
+        {name: "Enterprise Security",
             price: "$1,999",
             period: "/month",
             description: "Full-scale cybersecurity for large organizations",
@@ -82,31 +67,24 @@ export { CybersecurityServices }() {
                 "Custom integrations",
                 "Executive reporting"
             ],;
-            popular: false
-        }
+            popular: false}
     ];
     const testimonials = [
-        {
-            name: "Michael Chen",
+        {name: "Michael Chen",
             role: "CISO, FinTech Solutions",
             content: "Zion's cybersecurity team helped us achieve SOC 2 compliance in record time. Their expertise is unmatched.",
-            rating: 5
-        },
-        {
-            name: "Dr. Sarah Williams",
+            rating: 5},
+        {name: "Dr. Sarah Williams",
             role: "IT Director, HealthCare Plus",
             content: "The penetration testing revealed critical vulnerabilities we didn't know existed. Their thorough approach saved us.",
-            rating: 5
-        },
-        {
-            name: "Robert Johnson",
+            rating: 5},
+        {name: "Robert Johnson",
             role: "CEO, E-commerce Pro",
             content: "24/7 incident response gives us peace of mind. Zion's team responds faster than  other provider we've used.",
-            rating: 5
-        }
+            rating: 5}
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
-      <SEO title="Cybersecurity Services - Zion Tech Group" description="Protect your business with comprehensive cybersecurity services including penetration testing, security audits, and incident response." keywords="cybersecurity, penetration testing, security audit, incident response, Zion Tech Group" canonical="https://ziontechgroup.com/cybersecurity-services"/>
+      <SEO title="Cybersecurity Services - Zion Tech Group" description="Protect your business with comprehensive cybersecurity services including penetration testing, security audits, and incident response." keywords="cybersecurity, penetration testing, security audit, incident response, Zion Tech Group" canonical="https://ziontechgroup.com/cybersecurity-services" />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4">
@@ -126,7 +104,7 @@ export { CybersecurityServices }() {
             <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-4 text-lg">
               <Link to="/contact">
                 Get Security Assessment
-                <ArrowRight className="ml-2 h-5 w-5"/>
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg">
@@ -231,7 +209,7 @@ export { CybersecurityServices }() {
                 <CardContent>
                   <ul className="space-y-3 mb-6">
                     {plan.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-zion-slate-light">
-                        <CheckCircle className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0"/>
+                        <CheckCircle className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0" />
                         {feature}
                       </li>))}
                   </ul>
@@ -262,7 +240,7 @@ export { CybersecurityServices }() {
             {testimonials.map((testimonial, index) => (<Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">
                 <CardContent className="pt-6">
                   <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="h-5 w-5 text-yellow-400 fill-current"/>))}
+                    {[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />))}
                   </div>
                   <p className="text-zion-slate-light mb-4 italic">"{testimonial.content}"</p>
                   <div>
@@ -288,7 +266,7 @@ export { CybersecurityServices }() {
             <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-4 text-lg">
               <Link to="/contact">
                 Get Security Assessment
-                <ArrowRight className="ml-2 h-5 w-5"/>
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg">

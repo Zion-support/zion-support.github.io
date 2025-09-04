@@ -1,18 +1,20 @@
 import React, { useState } from 'react';
 
 interface InteractiveSearchProps {
+
   placeholder?: string;
   onSearch: (query: string) => void;
   className?: string;
 
 const InteractiveSearch: React.FC<InteractiveSearchProps> = ({ 
-  placeholder = "Search...", ;
-  onSearch, ;
-  className = "" ;
-}) => {;
-  const [query, setQuery] = useState('');
+  placeholder = "Search...", ;: any;
+  onSearch, ;: any;
+  className = "" ;: any;
 
-  const handleSubmit = (e: React.FormEvent) => {;
+}) => {;
+  const [query, setQuery] = useState<any>('');
+
+  const handleSubmit = (props: any) => {;
     e.preventDefault();
     if (query.trim()) {
       onSearch(query.trim());
@@ -20,7 +22,7 @@ const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
   };
 
   return (
-    <form onSubmit = {handleSubmit} className={`w-full ${className}`}>
+    <form onSubmit={handleSubmit} className={`w-full ${className}`}>
       <div className="relative">
         <input
           type="text"
@@ -46,3 +48,5 @@ const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
 };
 
 export default InteractiveSearch;}};
+</any>
+</InteractiveSearchProps>

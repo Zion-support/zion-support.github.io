@@ -46,15 +46,17 @@ import {
 } from 'lucide-react';
 
 interface SidebarProps {
+
   isOpen: boolean;
   onClose: () => void;
+
 }
 
-export function Sidebar({ isOpen, onClose }: SidebarProps) {
+export function Sidebar(props: any) {
   const location = useLocation();
   const [expandedSections, setExpandedSections] = useState<string[]>(['services', 'solutions']);
 
-  const toggleSection = (section: string) => {
+  const toggleSection = (props: any) => {
     setExpandedSections(prev => 
       prev.includes(section) 
         ? prev.filter(s => s !== section)
@@ -269,3 +271,5 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     </>
   );
 }
+</div>
+</string>
