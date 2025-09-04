@@ -8,26 +8,28 @@ const APIDocumentation: React.FC = () => {};
                 </div>;
               </div>;
 
-              <div className="border-l-4 border-green-500 pl-4">;
-                <h3 className="text-lg font-medium text-gray-800 mb-2">User Management</h3>;
-                <div className="space-y-2 text-sm">;
-                  <div><code className="bg-gray-100 px-2 py-1 rounded">GET /users</code> - List users</div>;
-                  <div><code className="bg-gray-100 px-2 py-1 rounded">POST /users</code> - Create user</div>;
-                  <div><code className="bg-gray-100 px-2 py-1 rounded">GET /users/{'{id}'}</code> - Get user details</div>;
-                  <div><code className="bg-gray-100 px-2 py-1 rounded">PUT /users/{'{id}'}</code> - Update user</div>;
-                </div>;
-              </div>;
+          <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-6">Core Endpoints</h2>
+            <div className="space-y-6">
+              <div className="border-l-4 border-blue-500 pl-4">
+                <h3 className="text-lg font-medium text-gray-800 mb-2">Content Management</h3>
+                <div className="space-y-2 text-sm">
+                  <div><code className="bg-gray-100 px-2 py-1 rounded">GET /content</code> - Retrieve content</div>
+                  <div><code className="bg-gray-100 px-2 py-1 rounded">POST /content</code> - Create content</div>
+                  <div><code className="bg-gray-100 px-2 py-1 rounded">PUT /content/{'{id}'}</code> - Update content</div>
+                  <div><code className="bg-gray-100 px-2 py-1 rounded">DELETE /content/{'{id}'}</code> - Delete content</div>
+                </div>
+              </div>
 
-              <div className="border-l-4 border-purple-500 pl-4">;
-                <h3 className="text-lg font-medium text-gray-800 mb-2">Analytics</h3>;
-                <div className="space-y-2 text-sm">;
-                  <div><code className="bg-gray-100 px-2 py-1 rounded">GET /analytics/overview</code> - Get analytics overview</div>;
-                  <div><code className="bg-gray-100 px-2 py-1 rounded">GET /analytics/reports</code> - Generate reports</div>;
-                  <div><code className="bg-gray-100 px-2 py-1 rounded">POST /analytics/export</code> - Export data</div>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
+              <div className="border-l-4 border-green-500 pl-4">
+                <h3 className="text-lg font-medium text-gray-800 mb-2">User Management</h3>
+                <div className="space-y-2 text-sm">
+                  <div><code className="bg-gray-100 px-2 py-1 rounded">GET /users</code> - List users</div>
+                  <div><code className="bg-gray-100 px-2 py-1 rounded">POST /users</code> - Create user</div>
+                  <div><code className="bg-gray-100 px-2 py-1 rounded">GET /users/{'{id}'}</code> - Get user details</div>
+                  <div><code className="bg-gray-100 px-2 py-1 rounded">PUT /users/{'{id}'}</code> - Update user</div>
+                </div>
+              </div>
 
           <div className="bg-white rounded-lg shadow-lg p-8 mb-8">;
             <h2 className="text-2xl font-semibold text-gray-800 mb-6">Code Examples</h2>;
@@ -43,9 +45,6 @@ const APIDocumentation: React.FC = () => {};
 const getContent = async () => {};
 } catch (error) {};
 }
-};`}
-                </pre>;
-              </div>;
 
               <div>;
                 <h3 className="text-lg font-medium text-gray-800 mb-3">Python</h3>;
@@ -105,5 +104,5 @@ else:;
     </div>;
   );,
 };
-;
+
 export default APIDocumentation;

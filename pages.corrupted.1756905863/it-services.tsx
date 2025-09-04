@@ -1345,7 +1345,172 @@ export default function ITServices() {;
       ],;
       pricing: '$30,000 - $250,000/month',;
       delivery: '20-40 weeks',;
-      category: 'Federated Learning Services'}
+      category: 'Federated Learning Services'},
+    {
+      title: 'Quantum Computing Infrastructure',
+      description: 'Quantum computing setup, optimization, and integration services for enterprise applications',
+      icon: Cpu,
+      features: [
+        'Quantum hardware procurement and setup,Quantum algorithm development and optimization,Quantum-classical hybrid system integration,Quantum error correction and fault tolerance,Quantum security and cryptography implementation,Quantum simulation and modeling services'
+      ],
+      pricing: '$50,000 - $500,000/month',
+      delivery: '24-48 weeks',
+      category: 'Quantum Computing'
+    },
+    {
+      title: 'Edge Computing & IoT Infrastructure',
+      description: 'Comprehensive edge computing solutions with IoT device management and real-time data processing',
+      icon: Network,
+      features: [
+        'Edge computing infrastructure design and deployment,IoT device management and monitoring,Real-time data processing and analytics,Edge-to-cloud synchronization and optimization,5G network integration and optimization,Edge security and compliance management'
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '12-24 weeks',
+      category: 'Edge Computing'
+    },
+    {
+      title: 'Blockchain & Web3 Infrastructure',
+      description: 'Enterprise blockchain solutions with smart contracts, DeFi integration, and Web3 applications',
+      icon: Shield,
+      features: [
+        'Blockchain network design and deployment,Smart contract development and auditing,DeFi protocol integration and optimization,NFT marketplace development and management,Web3 application development,Blockchain security and compliance'
+      ],
+      pricing: '$25,000 - $200,000/month',
+      delivery: '16-32 weeks',
+      category: 'Blockchain'
+    },
+    {
+      title: 'Advanced Analytics & Business Intelligence',
+      description: 'Enterprise-grade analytics platform with real-time insights, predictive modeling, and data visualization',
+      icon: BarChart3,
+      features: [
+        'Advanced analytics platform development,Real-time data processing and visualization,Predictive modeling and machine learning integration,Self-service analytics and reporting tools,Data governance and quality management,Integration with existing business systems'
+      ],
+      pricing: '$10,000 - $75,000/month',
+      delivery: '8-16 weeks',
+      category: 'Analytics'
+    },
+    {
+      title: 'Digital Transformation Consulting',
+      description: 'Comprehensive digital transformation strategy and implementation for enterprise modernization',
+      icon: TrendingUp,
+      features: [
+        'Digital strategy development and roadmap creation,Legacy system modernization and migration,Process automation and workflow optimization,Change management and training programs,Digital culture transformation,Performance measurement and optimization'
+      ],
+      pricing: '$20,000 - $150,000/month',
+      delivery: '12-24 weeks',
+      category: 'Digital Transformation'
+    },
+    {
+      title: 'Advanced Cybersecurity Services',
+      description: 'Next-generation cybersecurity solutions with AI-powered threat detection and response',
+      icon: Shield,
+      features: [
+        'AI-powered threat detection and response,Zero-trust security architecture implementation,Advanced persistent threat (APT) protection,Security orchestration and automated response (SOAR),Penetration testing and vulnerability assessments,Compliance and regulatory consulting'
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '8-16 weeks',
+      category: 'Cybersecurity'
+    },
+    {
+      title: 'Cloud-Native Application Development',
+      description: 'Modern cloud-native application development with microservices, containers, and serverless architecture',
+      icon: Cloud,
+      features: [
+        'Microservices architecture design and implementation,Container orchestration with Kubernetes,Serverless application development,API gateway and service mesh implementation,Cloud-native CI/CD pipeline setup,Performance optimization and monitoring'
+      ],
+      pricing: '$12,000 - $80,000/month',
+      delivery: '10-20 weeks',
+      category: 'Cloud Development'
+    },
+    {
+      title: 'Enterprise Integration & API Management',
+      description: 'Comprehensive integration solutions with API management, data synchronization, and workflow automation',
+      icon: Network,
+      features: [
+        'Enterprise application integration (EAI),API gateway and management platform,Data integration and ETL/ELT processes,Workflow automation and business process management,Real-time data synchronization,Integration monitoring and analytics'
+      ],
+      pricing: '$8,000 - $60,000/month',
+      delivery: '6-16 weeks',
+      category: 'Integration'
+    },
+    {
+      title: 'Advanced Database Solutions',
+      description: 'High-performance database solutions with optimization, scaling, and advanced analytics capabilities',
+      icon: Database,
+      features: [
+        'Database architecture design and optimization,High availability and disaster recovery setup,Database migration and modernization,Performance tuning and query optimization,Advanced analytics and data warehousing,Database security and compliance'
+      ],
+      pricing: '$5,000 - $40,000/month',
+      delivery: '4-12 weeks',
+      category: 'Database'
+    },
+    {
+      title: 'Mobile & Cross-Platform Development',
+      description: 'Native and cross-platform mobile application development with advanced features and integrations',
+      icon: Smartphone,
+      features: [
+        'Native iOS and Android application development,Cross-platform development with React Native/Flutter,Progressive Web App (PWA) development,Mobile app optimization and performance tuning,App store deployment and management,Mobile security and compliance'
+      ],
+      pricing: '$8,000 - $50,000/month',
+      delivery: '8-16 weeks',
+      category: 'Mobile Development'
+    },
+    {
+      title: 'Advanced Network Infrastructure',
+      description: 'Next-generation network infrastructure with SD-WAN, 5G integration, and network automation',
+      icon: Network,
+      features: [
+        'SD-WAN design and implementation,5G network integration and optimization,Network automation and orchestration,Network security and segmentation,Network monitoring and analytics,Disaster recovery and business continuity'
+      ],
+      pricing: '$10,000 - $75,000/month',
+      delivery: '8-20 weeks',
+      category: 'Network Infrastructure'
+    },
+    {
+      title: 'IT Service Management & Automation',
+      description: 'Comprehensive IT service management with automation, monitoring, and optimization',
+      icon: Settings,
+      features: [
+        'ITSM platform implementation and customization,Service automation and orchestration,IT asset management and tracking,Service level agreement (SLA) management,IT service catalog and self-service portal,Performance monitoring and optimization'
+      ],
+      pricing: '$5,000 - $35,000/month',
+      delivery: '6-12 weeks',
+      category: 'ITSM'
+    },
+    {
+      title: 'Advanced Backup & Disaster Recovery',
+      description: 'Enterprise-grade backup and disaster recovery solutions with automation and testing',
+      icon: Shield,
+      features: [
+        'Automated backup and recovery systems,Disaster recovery planning and implementation,Business continuity planning and testing,Data replication and synchronization,Recovery time objective (RTO) optimization,Compliance and audit support'
+      ],
+      pricing: '$8,000 - $60,000/month',
+      delivery: '6-16 weeks',
+      category: 'Backup & Recovery'
+    },
+    {
+      title: 'Advanced Monitoring & Observability',
+      description: 'Comprehensive monitoring and observability platform with AI-powered insights and automation',
+      icon: Monitor,
+      features: [
+        'Application performance monitoring (APM),Infrastructure monitoring and alerting,Log aggregation and analysis,Distributed tracing and debugging,AI-powered anomaly detection,Automated incident response and remediation'
+      ],
+      pricing: '$6,000 - $45,000/month',
+      delivery: '4-12 weeks',
+      category: 'Monitoring'
+    },
+    {
+      title: 'Advanced Compliance & Governance',
+      description: 'Comprehensive compliance management with automated monitoring, reporting, and audit support',
+      icon: Shield,
+      features: [
+        'Compliance framework implementation (SOX, GDPR, HIPAA),Automated compliance monitoring and reporting,Policy management and enforcement,Audit preparation and support,Risk assessment and management,Regulatory change management'
+      ],
+      pricing: '$10,000 - $70,000/month',
+      delivery: '8-16 weeks',
+      category: 'Compliance'
+    }
   ];
 
   const technologies = [;
