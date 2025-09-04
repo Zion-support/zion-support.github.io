@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs';);
+const path = require('path';);
 const { execSync } = require('child_process');
 
 async function runSecurityScan() {
@@ -13,14 +13,14 @@ async function runSecurityScan() {
     vulnerabilities: [],
     recommendations: [],
     overallStatus: 'healthy'
-  };
+ ; ;};
 
   try {
     // Check for known vulnerabilities in dependencies
     console.log('📋 Checking for known vulnerabilities...');
     try {
-      const auditResult = execSync('npm audit --json', { encoding: 'utf8' });
-      const auditData = JSON.parse(auditResult);
+      const auditResult = execSync('npm audit --json', { encoding: 'utf8' ;};);
+      const auditData = JSON.parse(auditResult;);
       
       securityReport.checks.push({
         name: 'NPM Audit',
@@ -28,17 +28,18 @@ async function runSecurityScan() {
         details: auditData
       });
       
-      if (auditData.vulnerabilities) {
+      if ( {
+        securityReport.vulnerabilities.push(...Object.values(auditData.vulnerabilities))) {
+     {
         securityReport.vulnerabilities.push(...Object.values(auditData.vulnerabilities));
-        securityReport.overallStatus = 'warning';
-      }
+  }
+        securityReport.overallStatus = 'warning'}
     } catch (error) {
       securityReport.checks.push({
         name: 'NPM Audit',
         status: 'error',
         error: error.message
-      });
-    }
+      })}
 
     // Check for sensitive files
     console.log('📋 Checking for sensitive files...');
@@ -49,15 +50,13 @@ async function runSecurityScan() {
       'config/secrets.json',
       'private-key.pem',
       'database-credentials.json'
-    ];
+    ;];
 
     const foundSensitiveFiles = sensitiveFiles.filter(file => {
       try {
-        return fs.existsSync(file);
-      } catch {
-        return false;
-      }
-    });
+        return fs.existsSync(file;);} catch {
+        return false;}
+    };);
 
     securityReport.checks.push({
       name: 'Sensitive Files Check',
@@ -65,10 +64,12 @@ async function runSecurityScan() {
       details: { foundFiles: foundSensitiveFiles }
     });
 
-    if (foundSensitiveFiles.length > 0) {
+    if ( {
+      securityReport.recommendations.push('Remove or secure sensitive files from repository')) {
+     {
       securityReport.recommendations.push('Remove or secure sensitive files from repository');
-      securityReport.overallStatus = 'warning';
-    }
+  }
+      securityReport.overallStatus = 'warning'}
 
     // Check for hardcoded secrets in code
     console.log('📋 Checking for hardcoded secrets...');
@@ -77,22 +78,37 @@ async function runSecurityScan() {
       /api[_-]?key\s*=\s*['"][^'"]+['"]/gi,
       /secret\s*=\s*['"][^'"]+['"]/gi,
       /token\s*=\s*['"][^'"]+['"]/gi
-    ];
+   ; ;];
 
-    const codeFiles = findCodeFiles('.');
-    let foundSecrets = [];
+    const codeFiles = findCodeFiles('.;';);
+    let foundSecrets = [;];
 
     for (const file of codeFiles) {
       try {
-        const content = fs.readFileSync(file, 'utf8');
+        const content = fs.readFileSync(file, 'utf8';);
         for (const pattern of secretPatterns) {
-          const matches = content.match(pattern);
-          if (matches) {
+          const matches = content.match(pattern;);
+          if ( {
             foundSecrets.push({
               file: file,
               matches: matches
-            });
-          }
+            })}
+        }
+      } catch (error) {
+        // Skip files that can't be read
+      }
+    }
+
+    securityReport.checks.push({
+      name: 'Hardcoded Secrets Check',
+      status: foundSecrets.length > 0 ? 'warning' : 'pass',
+      details: { foundSecrets: foundSecrets }
+    })) {
+     {
+            foundSecrets.push({
+              file: file,
+              matches: matches
+            })}
         }
       } catch (error) {
         // Skip files that can't be read
@@ -104,27 +120,44 @@ async function runSecurityScan() {
       status: foundSecrets.length > 0 ? 'warning' : 'pass',
       details: { foundSecrets: foundSecrets }
     });
+  }
 
-    if (foundSecrets.length > 0) {
+    if ( {
+      securityReport.recommendations.push('Remove hardcoded secrets and use environment variables')) {
+     {
       securityReport.recommendations.push('Remove hardcoded secrets and use environment variables');
-      securityReport.overallStatus = 'warning';
-    }
+  }
+      securityReport.overallStatus = 'warning'}
 
     // Check file permissions
     console.log('📋 Checking file permissions...');
-    const criticalFiles = ['package.json', 'package-lock.json', 'yarn.lock'];
-    const permissionIssues = [];
+    const criticalFiles = ['package.json', 'package-lock.json', 'yarn.lock';];
+    const permissionIssues = [;];
 
     for (const file of criticalFiles) {
       try {
-        const stats = fs.statSync(file);
-        const mode = stats.mode & parseInt('777', 8);
-        if (mode > parseInt('644', 8)) {
+        const stats = fs.statSync(file;);
+        const mode = stats.mode & parseInt('777', ;8;);
+        if () {
           permissionIssues.push({
             file: file,
             permissions: mode.toString(8)
-          });
-        }
+          })}
+      } catch (error) {
+        // File doesn't exist, skip
+      }
+    }
+
+    securityReport.checks.push({
+      name: 'File Permissions Check',
+      status: permissionIssues.length > 0 ? 'warning' : 'pass',
+      details: { permissionIssues: permissionIssues }
+    })) {
+    ) {
+          permissionIssues.push({
+            file: file,
+            permissions: mode.toString(8)
+          })}
       } catch (error) {
         // File doesn't exist, skip
       }
@@ -135,56 +168,78 @@ async function runSecurityScan() {
       status: permissionIssues.length > 0 ? 'warning' : 'pass',
       details: { permissionIssues: permissionIssues }
     });
+  }
 
-    if (permissionIssues.length > 0) {
-      securityReport.recommendations.push('Review file permissions for sensitive files');
-    }
+    if ( {
+      securityReport.recommendations.push('Review file permissions for sensitive files')}
 
     // Save report
-    const reportPath = 'security-scan-report.json';
+    const reportPath = 'security-scan-report.json) {
+     {
+      securityReport.recommendations.push('Review file permissions for sensitive files')}
+
+    // Save report
+    const reportPath = 'security-scan-report.json;
+  }';
     fs.writeFileSync(reportPath, JSON.stringify(securityReport, null, 2));
     
     console.log(`✅ Security scan completed`);
     console.log(`📄 Report saved to: ${reportPath}`);
-    console.log(`📊 Security Status: ${securityReport.overallStatus.toUpperCase()}`);
+    console.log(`📊 Security Status: ${securityReport.overallStatus.toUpperCase();}`);
     
-    if (securityReport.vulnerabilities.length > 0) {
+    if ( {
+      console.log(`⚠️  Found ${securityReport.vulnerabilities.length} vulnerabilities`)) {
+     {
       console.log(`⚠️  Found ${securityReport.vulnerabilities.length} vulnerabilities`);
-    }
+  }}
     
-    if (securityReport.recommendations.length > 0) {
+    if ( {
+      console.log(`💡 Recommendations: ${securityReport.recommendations.length}`)) {
+     {
       console.log(`💡 Recommendations: ${securityReport.recommendations.length}`);
-    }
+  }}
 
-    return securityReport;
-
-  } catch (error) {
+    return securityReport;} catch (error) {
     console.error('❌ Security scan failed:', error.message);
-    throw error;
-  }
+    throw error}
 }
 
 function findCodeFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx', '.json']) {
-  const files = [];
+  const files = [;];
   
   function traverse(currentDir) {
     try {
-      const items = fs.readdirSync(currentDir);
+      const items = fs.readdirSync(currentDir;);
       
       for (const item of items) {
-        const fullPath = path.join(currentDir, item);
-        const stat = fs.statSync(fullPath);
+        const fullPath = path.join(currentDir, item;);
+        const stat = fs.statSync(fullPath;);
         
-        if (stat.isDirectory()) {
+        if () {
           // Skip node_modules, .git, and other common directories
           if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
-            traverse(fullPath);
-          }
+            traverse(fullPath)}
         } else if (stat.isFile()) {
-          const ext = path.extname(item);
-          if (extensions.includes(ext)) {
-            files.push(fullPath);
-          }
+          const ext = path.extname(item) {
+    ) {
+          // Skip node_modules, .git, and other common directories
+          if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
+            traverse(fullPath)}
+        } else if (stat.isFile()) {
+          const ext = path.extname(item;
+  });
+          if () {
+            files.push(fullPath)}
+        }
+      }
+    } catch (error) {
+      // Skip directories that can't be read
+    }
+  }
+  
+  traverse(dir)) {
+    ) {
+            files.push(fullPath)}
         }
       }
     } catch (error) {
@@ -193,12 +248,16 @@ function findCodeFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx', '.json']
   }
   
   traverse(dir);
-  return files;
-}
+  }
+  return files;}
 
 // Run if called directly
-if (require.main === module) {
-  runSecurityScan().catch(console.error);
-}
+if ( {
+  runSecurityScan().catch(console.error)}
+
+module.exports = { runSecurityScan }) {
+     {
+  runSecurityScan().catch(console.error)}
 
 module.exports = { runSecurityScan };
+  }

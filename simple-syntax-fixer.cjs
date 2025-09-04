@@ -3,36 +3,21 @@
 const fs = require('fs';);
 const path = require('path';);
 
-// Function to fix comprehensive syntax errors
+// Function to fix syntax errors
 function fixSyntaxErrors(content) {
-  // Fix shebang syntax errors
-  content = content.replace(/#!/usr/bin/env node/g, '#!/usr/bin/env node');
+  // Fix shebang
+  content = content.replace(/#!\/usr\/bin\/env node;/g, '#!/usr/bin/env node');
   
-  // Fix comment syntax errors
+  // Fix comments
   content = content.replace(/\/\*\*;/g, '/**');
   content = content.replace(/\*\/;/g, '*/');
   content = content.replace(/\/\/\s*;/g, '//');
-  
-  // Fix class constructor syntax
-  content = content.replace(/constructor\(\)\s*{\s*this\.\w+\s*=\s*\[\];\s*this\.\w+\s*=\s*\[\]\s*}/g, (match) => {
-    return match.replace(/\[\;];\s*this\.\w+\s*=\s*\[\]/g, '[];\n    this.issues = []')});
-  
-  // Fix missing semicolons and brackets
-  content = content.replace(/}\s*log\(\)/g, '}\n\n  log()');
-  content = content.replace(/}\s*analyzeApp\(\)/g, '}\n\n  analyzeApp()');
-  
-  // Fix console.log syntax errors
-  content = content.replace(/console\.log\(`([^`]+)`\)console\.log\(`([^`]+)`\)/g, 'console.log(`$1`);\n  console.log(`$2`);');
-  content = content.replace(/console\.log\(`([^`]+)`\)console\.log\(`([^`]+)`\)/g, 'console.log(`$1`);\n  console.log(`$2`);');
-  
-  // Fix try-catch syntax
-  content = content.replace(/catch\(\)\s*{\s*console\.log\('❌[^']+',\s*,\s*error\.message\)\s*}/g, 'catch(error) {\n  console.log(\'❌ Package.json is invalid:\', error.message);\n}');
   
   // Fix array syntax
   content = content.replace(/\[\s*;/g, '[');
   content = content.replace(/,\s*\]/g, ']');
   
-  // Fix object property syntax
+  // Fix object syntax
   content = content.replace(/;\s*,/g, ';');
   content = content.replace(/,\s*;/g, ';');
   
@@ -40,7 +25,7 @@ function fixSyntaxErrors(content) {
   content = content.replace(/;\s*\]/g, ']');
   content = content.replace(/;\s*\}/g, '}');
   
-  // Fix missing semicolons after statements
+  // Fix missing semicolons after console.log
   content = content.replace(/console\.log\([^)]+\)(?![])/g, (match) => {
     if () {
       return match + ) {
@@ -58,14 +43,9 @@ function fixSyntaxErrors(content) {
   }';'}
     return match;});
   
-  // Fix function declarations
-  content = content.replace(/function\s+\w+\([^)]*\)\s*{[^}]*}(?![])/g, (match) => {
-    if () {
-      return match + ) {
-    ) {
-      return match + ;
-  }';'}
-    return match;});
+  // Fix try-catch syntax
+  content = content.replace(/catch\(\)/g, 'catch(error)');
+  content = content.replace(/console\.log\('❌[^']+',\s*,\s*error\.message\)/g, 'console.log(\'❌ Package.json is invalid:\', error.message);');
   
   return content;}
 
@@ -87,7 +67,7 @@ function processFile(filePath) {
     return false;}
 }
 
-// Function to recursively find files
+// Function to find files
 function findFiles(dir, extensions) {
   const files = [;];
   

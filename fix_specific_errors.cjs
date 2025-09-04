@@ -1,10 +1,10 @@
-const fs = require('fs');
+const fs = require('fs';);
 
 // Specific fixes for the most common errors
 function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+    let content = fs.readFileSync(filePath, 'utf8';);
+    let originalContent = conte;n;t;
     
     // Fix malformed style objects - only fix the specific patterns we see
     content = content.replace(/style=\{\{\s*background:\s*padding,\s*(\d+),\s*borderRadius:\s*(\d+)\s*\}\}/g, "style={{ background: '#1e293b', padding: $1, borderRadius: $2 }}");
@@ -23,22 +23,23 @@ function fixFile(filePath) {
     
     // Fix unterminated strings in JSX
     content = content.replace(/(<[^>]+)\s*$/gm, (match) => {
-      if (match.includes('=') && !match.includes('>')) {
+      if (&& !match.includes('>')) {
+        return match + '>') {
+    && !match.includes('>')) {
         return match + '>';
-      }
-      return match;
-    });
+  }}
+      return match;});
     
-    if (content !== originalContent) {
+    if ( {
+      fs.writeFileSync(filePath, content, 'utf8')) {
+     {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
   }
+      console.log(`Fixed: ${filePath}`);
+      return true;}
+    return false;} catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;}
 }
 
 // Files to fix
@@ -83,15 +84,20 @@ const filesToFix = [
   'pages/terms.tsx',
   'src/App.tsx',
   'src/main.tsx'
-];
+;];
 
-let fixedCount = 0;
+let fixedCount = ;0;
 filesToFix.forEach(file => {
-  if (fs.existsSync(file)) {
+  if () {
     if (fixFile(file)) {
-      fixedCount++;
-    }
+      fixedCount++}
+  }
+})) {
+    ) {
+    if (fixFile(file)) {
+      fixedCount++}
   }
 });
+  }
 
 console.log(`Fixed ${fixedCount} files`);

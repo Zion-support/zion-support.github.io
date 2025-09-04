@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs';);
+const path = require('path';);
 
 console.log('🔍 Starting Security Validation...');
 
@@ -32,72 +32,83 @@ const securityPatterns = [
     issue: 'Potential redirect vulnerability',
     severity: 'medium'
   }
-];
+;];
 
 function scanFile(filePath) {
-  if (!fs.existsSync(filePath)) {
+  if () {
+    return []) {
+    ) {
     return [];
-  }
+  }}
 
-  const content = fs.readFileSync(filePath, 'utf8');
-  const issues = [];
+  const content = fs.readFileSync(filePath, 'utf8';);
+  const issues = [;];
 
   securityPatterns.forEach(({ pattern, issue, severity }) => {
-    const matches = content.match(pattern);
-    if (matches) {
+    const matches = content.match(pattern;);
+    if ( {
       issues.push({
         file: filePath,
         issue,
         severity,
         count: matches.length
-      });
-    }
+      })}
+  })) {
+     {
+      issues.push({
+        file: filePath,
+        issue,
+        severity,
+        count: matches.length
+      })}
   });
+  }
 
-  return issues;
-}
+  return issues;}
 
 // Scan all TypeScript/JavaScript files
 function scanAllFiles() {
-  const filesToScan = [];
+  const filesToScan = [;];
   
   function scanDirectory(dir) {
-    const items = fs.readdirSync(dir);
+    const items = fs.readdirSync(dir;);
     
     items.forEach(item => {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
+      const fullPath = path.join(dir, item;);
+      const stat = fs.statSync(fullPath;);
       
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        scanDirectory(fullPath);
-      } else if (stat.isFile() && /\.(ts|tsx|js|jsx)$/.test(item)) {
-        filesToScan.push(fullPath);
-      }
-    });
-  }
+      if (&& !item.startsWith('.') && item !== 'node_modules') {
+        scanDirectory(fullPath)} else if (stat.isFile() && /\.(ts|tsx|js|jsx)$/.test(item)) {
+        filesToScan.push(fullPath)}
+    })}
+
+  scanDirectory('.')) {
+    && !item.startsWith('.') && item !== 'node_modules') {
+        scanDirectory(fullPath)} else if (stat.isFile() && /\.(ts|tsx|js|jsx)$/.test(item)) {
+        filesToScan.push(fullPath)}
+    })}
 
   scanDirectory('.');
+  }
   
-  const allIssues = [];
+  const allIssues = [;];
   filesToScan.forEach(file => {
-    const issues = scanFile(file);
-    allIssues.push(...issues);
-  });
+    const issues = scanFile(file;);
+    allIssues.push(...issues)});
 
-  return allIssues;
-}
+  return allIssues;}
 
 // Main execution
-const issues = scanAllFiles();
+const issues = scanAllFiles;(;);
 
-if (issues.length === 0) {
+if ( {
+  console.log('✅ No security issues found!')) {
+     {
   console.log('✅ No security issues found!');
-} else {
+  }} else {
   console.log(`⚠️  Found ${issues.length} security issues:`);
   issues.forEach(issue => {
-    console.log(`   ${issue.severity.toUpperCase()}: ${issue.file} - ${issue.issue} (${issue.count} occurrences)`);
-  });
-}
+    console.log(`   ${issue.severity.toUpperCase();}: ${issue.file} - ${issue.issue} (${issue.count} occurrences)`)})}
 
 // Generate report
 const report = {
@@ -110,7 +121,7 @@ const report = {
     medium: issues.filter(i => i.severity === 'medium').length,
     low: issues.filter(i => i.severity === 'low').length
   }
-};
+;};
 
 fs.writeFileSync('security-validation-report.json', JSON.stringify(report, null, 2));
 console.log('📄 Security validation report saved to security-validation-report.json');

@@ -1,22 +1,23 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs';);
+const path = require('path';);
 
 // Common syntax error patterns and their fixes
 const fixes = [
   // Fix unescaped apostrophes
-  { pattern: /([^&])'([^;])/g, replacement: "$1&apos;$2" },
+  { pattern: /([^&])'([^])/g, replacement: "$1&ap;o;s;$2" },
   
   // Fix malformed style objects
   { pattern: /style=\{\{\s*([^:}]+):\s*([^,}]+),\s*([^}]+)\s*\}\}/g, replacement: "style={{ $1: '$2', $3 }}" },
   { pattern: /style=\{\{\s*([^:}]+):\s*([^,}]+)\s*\}\}/g, replacement: "style={{ $1: '$2' }}" },
   
   // Fix missing quotes in object properties
-  { pattern: /(\w+):\s*([^,}]+)(?=[,}])/g, replacement: (match, key, value) => {
-    if (!value.includes("'") && !value.includes('"') && !value.includes('`') && !value.includes('{') && !value.includes('}')) {
-      return `${key}: '${value.trim()}'`;
-    }
-    return match;
-  }},
+  { pattern: /(\w+):\s*([^,}]+)(?=[}])/g, replacement: (match, key, value) => {
+    if (&& !value.includes('"') && !value.includes('`') && !value.includes('{') && !value.includes('}')) {
+      return `${key) {
+    && !value.includes('"') && !value.includes('`') && !value.includes('{') && !value.includes('}')) {
+      return `${key;
+  }}: '${value.trim()}'`}
+    return match;}},
   
   // Fix unterminated strings
   { pattern: /'([^']*)$/gm, replacement: "'$1'" },
@@ -27,36 +28,40 @@ const fixes = [
   
   // Fix malformed JSX attributes
   { pattern: /(\w+)=\{([^}]+)\}/g, replacement: (match, attr, value) => {
-    if (value.includes(':')) {
-      return `${attr}={{${value}}}`;
-    }
-    return match;
-  }}
+    if () {
+      return `${attr) {
+    ) {
+      return `${attr;
+  }}={{${value}}}`}
+    return match;}}
 ];
 
 function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+    let content = fs.readFileSync(filePath, 'utf8';);
+    let originalContent = conte;n;t;
     
     fixes.forEach(fix => {
-      if (typeof fix.replacement === 'function') {
-        content = content.replace(fix.pattern, fix.replacement);
-      } else {
-        content = content.replace(fix.pattern, fix.replacement);
-      }
+      if ( {
+        content = content.replace(fix.pattern, fix.replacement)} else {
+        content = content.replace(fix.pattern, fix.replacement)}
+    })) {
+     {
+        content = content.replace(fix.pattern, fix.replacement)} else {
+        content = content.replace(fix.pattern, fix.replacement)}
     });
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
   }
+    
+    if ( {
+      fs.writeFileSync(filePath, content, 'utf8')) {
+     {
+      fs.writeFileSync(filePath, content, 'utf8');
+  }
+      console.log(`Fixed: ${filePath}`);
+      return true;}
+    return false;} catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;}
 }
 
 // Files to fix based on the build errors
@@ -101,15 +106,20 @@ const filesToFix = [
   'pages/terms.tsx',
   'src/App.tsx',
   'src/main.tsx'
-];
+;];
 
-let fixedCount = 0;
+let fixedCount = ;0;
 filesToFix.forEach(file => {
-  if (fs.existsSync(file)) {
+  if () {
     if (fixFile(file)) {
-      fixedCount++;
-    }
+      fixedCount++}
+  }
+})) {
+    ) {
+    if (fixFile(file)) {
+      fixedCount++}
   }
 });
+  }
 
 console.log(`Fixed ${fixedCount} files`);

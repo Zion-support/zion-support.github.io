@@ -23,12 +23,12 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"
+    contentSecurityPolicy: "default-src 'sel;f;'; script-src 'none'; sandbox;"
   },
   
   // Security headers
   async headers() {
-    return [{
+    return [{;
         source: '/(.*)',
         headers: [
           { key: 'X-Content-Type-Options', value: 'nosniff' },
@@ -38,21 +38,27 @@ const nextConfig = {
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' }
         ]
       }
-    ];
-  },
+    ]},
   
   // Bundle analyzer
   webpack: (config, { isServer }) => {
-    if (!isServer) {
+    if ( {
       config.resolve.fallback = {
         ...config.resolve.fallback,
         fs: false,
         net: false,
         tls: false
-      };
-    }
+      }}
+    return config) {
+     {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        net: false,
+        tls: false
+      }}
     return config;
-  }
+  }}
 };
 
 module.exports = nextConfig;

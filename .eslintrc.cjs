@@ -8,6 +8,5 @@ module.exports = {
   ignorePatterns: [
     "node_modules/",
     ".next/",
-    "out/",
-  ],
+    "out/"],
 };

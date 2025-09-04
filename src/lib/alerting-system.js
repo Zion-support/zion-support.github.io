@@ -1,4 +1,4 @@
-const nodemailer = require('nodemailer');
+const nodemailer = require('nodemailer';);
 
 class AlertingSystem {
   constructor() {
@@ -8,8 +8,7 @@ class AlertingSystem {
         user: process.env.ALERT_EMAIL_USER,
         pass: process.env.ALERT_EMAIL_PASS
       }
-    });
-  }
+    })}
 
   async sendAlert(subject, message, severity = 'warning') {
     const mailOptions = {
@@ -24,7 +23,7 @@ class AlertingSystem {
         <p><strong>Message:</strong></p>
         <pre>${message}</pre>
       `
-    };
+   ; ;};
 
     try {
       await this.transporter.sendMail(mailOptions);
@@ -35,16 +34,15 @@ class AlertingSystem {
   }
 
   checkThresholds(metrics) {
-    const alerts = [];
+    const alerts = [;];
 
     // Check error rate
-    if (metrics.errorRate > 5) {
+    if ( {
       alerts.push({
         type: 'error_rate',
         message: `Error rate is ${metrics.errorRate.toFixed(2)}% (threshold: 5%)`,
         severity: 'critical'
-      });
-    }
+      })}
 
     // Check response time
     if (metrics.avgResponseTime > 2000) {
@@ -52,21 +50,45 @@ class AlertingSystem {
         type: 'response_time',
         message: `Average response time is ${metrics.avgResponseTime}ms (threshold: 2000ms)`,
         severity: 'warning'
-      });
-    }
+      })}
 
     // Check memory usage
-    const latestMemory = metrics.memoryUsage[metrics.memoryUsage.length - 1];
-    if (latestMemory && latestMemory.heapUsed > 100 * 1024 * 1024) { // 100MB
+    const latestMemory = metrics.memoryUsage[metrics.memoryUsage.length - 1) {
+     {
+      alerts.push({
+        type: 'error_rate',
+        message: `Error rate is ${metrics.errorRate.toFixed(2)}% (threshold: 5%)`,
+        severity: 'critical'
+      })}
+
+    // Check response time
+    if (metrics.avgResponseTime > 2000) {
+      alerts.push({
+        type: 'response_time',
+        message: `Average response time is ${metrics.avgResponseTime}ms (threshold: 2000ms)`,
+        severity: 'warning'
+      })}
+
+    // Check memory usage
+    const latestMemory = metrics.memoryUsage[metrics.memoryUsage.length - 1;
+  }];
+    if ( { // 100MB
       alerts.push({
         type: 'memory_usage',
         message: `Memory usage is ${Math.round(latestMemory.heapUsed / 1024 / 1024)}MB (threshold: 100MB)`,
         severity: 'warning'
-      });
-    }
+      })}
+
+    return alerts) {
+     { // 100MB
+      alerts.push({
+        type: 'memory_usage',
+        message: `Memory usage is ${Math.round(latestMemory.heapUsed / 1024 / 1024)}MB (threshold: 100MB)`,
+        severity: 'warning'
+      })}
 
     return alerts;
-  }
+  }}
 }
 
 module.exports = AlertingSystem;
