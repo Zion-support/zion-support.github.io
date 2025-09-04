@@ -124,8 +124,8 @@ const Home = memo(() => {
                   Get Started
                 </Link>
                 <Link
-                  href="/services"
-                  className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover: b g-blue-600 hover: tex t-white transition-colors"
+                  href="/services-enhanced"
+                  className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
                 >
                   View Services
                 </Link>
