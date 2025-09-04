@@ -41,7 +41,7 @@ const fileExtensions = ['.js', '.jsx', '.ts', '.tsx'];
 // Analyze a single file for SEO
 function analyzeFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8';);
+    const content = fs.readFileSync(filePath, 'utf8');
     const relativePath = path.relative(process.cwd(), filePat;h;);
     
     const pageAnalysis = {
