@@ -62,14 +62,14 @@ export default function PerformanceOptimizer({ children }) {
                   navigator.serviceWorker.controller
                 ) {
                   // New service worker available
-                  console.log('New service worker available');
+                  
                 }
               });
             }
           });
         })
         .catch(registrationError => {
-          console.log('Service worker registration failed:', registrationError);
+          
         });
     }
   }, []);

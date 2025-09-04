@@ -40,15 +40,16 @@ const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.Reac
 };
 <<<<<<< HEAD
 
-// Lazy load pages for better performance - only import existing pages
+// Lazy load pages for better performance
 const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ default: module.default })));
+const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.default })));
+const MicroSaasServices = lazy(() => import('./pages/MicroSaasServices').then(module => ({ default: module.default })));
 
 // Service Pages
 const AISolutions = lazy(() => import('./pages/AIServices').then(module => ({ default: module.default })));
 const ITServices = lazy(() => import('./pages/ITServices').then(module => ({ default: module.default })));
 
 // Create placeholder components for missing pages
-const HomePage = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Zion Tech Group - Home</h1></div>;
 const ServicesPage = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Services</h1></div>;
 const AboutPage = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">About Us</h1></div>;
 const ContactPage = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Contact Us</h1></div>;
@@ -184,7 +185,7 @@ const App: React.FC = memo(() => {
           <main className="flex-1 lg:ml-80">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/blog" element={<BlogPage />} />
@@ -197,7 +198,8 @@ const App: React.FC = memo(() => {
                 <Route path="/search" element={<Services />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/comprehensive-services" element={<ComprehensiveServicesShowcase />} />
-                <Route path="/solutions" element={<Solutions />} />
+                <Route path="/solutions" element={<SolutionsPage />} />
+                <Route path="/micro-saas-services" element={<MicroSaasServices />} />
                 <Route path="/resources" element={<Services />} />
                 <Route path="/case-studies" element={<Services />} />
                 <Route path="/white-papers" element={<WhitePapers />} />
@@ -216,9 +218,9 @@ const App: React.FC = memo(() => {
                 <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricing />} />
                 
                 {/* Service Routes */}
-                <Route path="/ai-services" element={<AIServices />} />
+                <Route path="/ai-services" element={<AISolutions />} />
                 <Route path="/it-services" element={<ITServices />} />
-                <Route path="/micro-saas" element={<MicroSaaS />} />
+                <Route path="/micro-saas" element={<MicroSaasServices />} />
                 
                 {/* New sitemap routes */}
                 <Route path="/ai-solutions" element={<AISolutions />} />
