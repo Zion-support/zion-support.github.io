@@ -27,7 +27,19 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
   const [isScanning, setIsScanning] = useState(false);
   const [issues, setIssues] = useState<any[]>([]);
 
-  // Keyboard navigation support
+export function AccessibilityEnhancer({ enabled = true, showSettings = true }: AccessibilityEnhancerProps) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [settings, setSettings] = useState<AccessibilitySettings>({
+    fontSize: 16,
+    highContrast: false,
+    largeText: false,
+    reducedMotion: false,
+    highSaturation: false,
+    lineHeight: 1.5,
+    letterSpacing: 0,
+    keyboardNavigation: false
+  });
+
   useEffect(() => {
   // TODO: Add dependencies if needed
 
@@ -616,8 +628,8 @@ document.addEventListener('keydown', handleKeyDown);
         
         aria-expanded={isOpen}
       >
-        <Accessibility className="w-6 h-6" />
-      </motion.button>
+        <Settings className="w-6 h-6" />
+      </button>
 
       {/* Accessibility Panel */}
       <AnimatePresence>
@@ -861,7 +873,16 @@ document.addEventListener('keydown', handleKeyDown);
                   <button     onClick={resetSettings}
                     className="w-full px-4 py-2 text-sm font - medium text-gray - 700 dark:text-gray - 300 bg-gray - 100 dark:bg-gray - 700 rounded-lg hover:bg-gray - 200 dark:hover:bg-gray - 600 transition -colors"
                   >
-                    Reset to Defaults
+                    <ZoomOut className="w-4 h-4" />
+                  </button>
+                  <span className="flex-1 text-center text-sm font-medium text-gray-900 dark:text-white">
+                    {settings.fontSize}px
+                  </span>
+                  <button
+                    onClick={increaseFontSize}
+                    className="p-2 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600"
+                  >
+                    <ZoomIn className="w-4 h-4" />
                   </button>
                 </div>
               </div>
