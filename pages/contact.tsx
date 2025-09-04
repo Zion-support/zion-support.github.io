@@ -1,13 +1,13 @@
 import React from 'react';
-import Head from 'next/head';
+import MainLayout from '../components/layout/MainLayout';
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Head>
-        <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with our expert team for technology solutions and consulting." />
-      </Head>
+    <MainLayout 
+      title="Contact Us - Zion Tech Group"
+      description="Get in touch with our expert team for technology solutions and consulting."
+    >
+      <div className="min-h-screen bg-gray-50">
       
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto">
@@ -98,6 +98,7 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </MainLayout>
   );
 }
