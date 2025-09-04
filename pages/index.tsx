@@ -245,9 +245,9 @@ export default function HomePage() {
                 Learn About Us
               </Link>
             </div>
-          </motion.div>
-        </div>
-      </section>
+          </div>
+        </section>
+      </div>
     </div>
   );
 }

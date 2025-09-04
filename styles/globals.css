@@ -1,3 +1,43 @@
+:root{--max:1200px;--pad:16px;--bg:#0b0c10;--fg:#e6eef5;--muted:#a2b3c2;--accent:#39c0ba}
+html,body,#__next{height:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;line-height:1.6}
+.ztg-container{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.ztg-header{position:sticky;top:0;z-index:50;background:#0f1116;border-bottom:1px solid #1a202c}
+.ztg-header .ztg-container{display:flex;align-items:center;justify-content:space-between;height:64px}
+.ztg-brand span{font-weight:700;color:var(--fg)}
+.ztg-nav{display:flex;gap:16px;flex-wrap:wrap}
+.ztg-nav-link{color:var(--muted);text-decoration:none}
+.ztg-nav-link:hover{color:var(--fg)}
+.ztg-root{min-height:100%;display:flex;flex-direction:column}
+.ztg-main{flex:1}
+.ztg-footer{border-top:1px solid #1a202c;background:#0f1116}
+.ztg-footer .ztg-container{padding:32px var(--pad)}
+.ztg-footer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.ztg-footer h4{margin:0 0 8px 0}
+.ztg-footer ul{list-style:none;padding:0;margin:0}
+.ztg-footer a{color:var(--muted);text-decoration:none}
+.ztg-footer a:hover{color:var(--fg)}
+.ztg-footer-bottom{margin-top:24px;color:#7c8a99;font-size:12px}
+.ztg-page{padding:32px 0}
+.ztg-grid{display:grid;grid-template-columns:280px 1fr;gap:24px}
+.ztg-card{background:#0f1116;border:1px solid #1a202c;border-radius:10px;padding:16px}
+.ztg-section{margin-bottom:32px}
+.ztg-hero{padding:48px 0}
+.ztg-hero h1{font-size:36px;margin:0 0 8px 0}
+.ztg-hero p{color:var(--muted);margin:0}
+.ztg-cta{display:flex;gap:12px;margin-top:16px}
+.ztg-btn{background:var(--accent);color:#081013;border:none;border-radius:8px;padding:10px 14px;font-weight:700;cursor:pointer}
+.ztg-btn.secondary{background:#1a202c;color:var(--fg)}
+.ztg-sidebar{position:sticky;top:80px}
+.ztg-sidebar-group{margin-bottom:16px}
+.ztg-sidebar-group h5{margin:0 0 8px 0;color:#9fb3c8}
+.ztg-sidebar a{color:var(--muted);text-decoration:none}
+.ztg-sidebar a:hover{color:var(--fg)}
+@media (max-width: 980px){
+  .ztg-grid{grid-template-columns:1fr}
+  .ztg-footer-grid{grid-template-columns:1fr}
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
