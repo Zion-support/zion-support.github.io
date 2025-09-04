@@ -20,7 +20,8 @@ export default function Sitemap() {
     { href: '/privacy', title: 'Privacy Policy', description: 'Our privacy policy and data protection' },
     { href: '/terms', title: 'Terms of Service', description: 'Terms and conditions for our services' },
     { href: '/schedule-demo', title: 'Schedule Demo', description: 'Book a personalized demo of our solutions' },
-    { href: '/enterprise', title: 'Enterprise Solutions', description: 'Enterprise-grade technology solutions' }];
+    { href: '/enterprise', title: 'Enterprise Solutions', description: 'Enterprise-grade technology solutions' }
+  ];
 
   const services = [
     { href: '/services', title: 'All Services', description: 'Complete overview of all our services' },
@@ -32,14 +33,16 @@ export default function Sitemap() {
     { href: '/it-services', title: 'IT Services', description: '100+ comprehensive IT solutions' },
     { href: '/cloud-devops', title: 'Cloud & DevOps', description: 'Cloud computing and DevOps solutions' },
     { href: '/cybersecurity', title: 'Cybersecurity', description: 'Security solutions and consulting' },
-    { href: '/quantum-computing', title: 'Quantum Computing', description: 'Quantum computing consulting and solutions' }];
+    { href: '/quantum-computing', title: 'Quantum Computing', description: 'Quantum computing consulting and solutions' }
+  ];
 
   const documentation = [
     { href: '/docs', title: 'Documentation', description: 'Main documentation hub' },
     { href: '/docs/getting-started', title: 'Getting Started', description: 'Quick start guide for new users' },
     { href: '/docs/api-overview', title: 'API Overview', description: 'API documentation and reference' },
     { href: '/docs/authentication', title: 'Authentication', description: 'Authentication and security guide' },
-    { href: '/docs/first-steps', title: 'First Steps', description: 'Initial setup and configuration' }];
+    { href: '/docs/first-steps', title: 'First Steps', description: 'Initial setup and configuration' }
+  ];
 
   return (
     <>
