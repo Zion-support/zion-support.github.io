@@ -1,3 +1,19 @@
+## Development Scripts
+
+- **dev**: Start Next.js dev server.
+- **build**: Build the app.
+- **start**: Start the production server.
+- **lint**: Run ESLint.
+- **lint:fix**: Auto-fix lint issues.
+- **test**: Run Jest tests.
+- **check**: Lint and run tests (fast sanity check).
+
+### Testing
+
+Jest is configured via `jest.config.cjs` and uses `jsdom`. A basic smoke test in `__tests__/smoke.test.ts` verifies the setup.
+
+Note: legacy tests under `tests/` are currently excluded pending cleanup.
+
 # Zion Tech Group Website
 
 A modern, high-performance website built with Next.js, featuring AI services, micro SaaS products, and enterprise IT solutions.
