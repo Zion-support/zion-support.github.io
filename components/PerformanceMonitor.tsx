@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unused-vars, no-unused-vars */
 import { useEffect } from 'react';
 
 // Type definitions for gtag
 declare global {
   interface Window {
-    gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;
+    gtag?: (...args: unknown[]) => void;
   }
 }
 
@@ -15,6 +16,7 @@ const PerformanceMonitor: React.FC = () => {
       const sendToAnalytics = (metric: string, value: number) => {
         if (process.env.NODE_ENV === 'production') {
           // Send to Google Analytics or other analytics service
+          // eslint-disable-next-line no-console
           console.log({
             metric_name: metric,
             metric_value: Math.round(value),
@@ -48,9 +50,10 @@ const PerformanceMonitor: React.FC = () => {
           if (entry.entryType === 'first-input') {
             // Log FID in development only
             if (process.env.NODE_ENV === 'development') {
-              // eslint-disable-next-line no-console
+              // eslint-disable-next-line no-console, @typescript-eslint/no-explicit-any
               console.log('FID:', (entry as any).processingStart - entry.startTime);
             }
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             sendToAnalytics('FID', (entry as any).processingStart - entry.startTime);
           }
         }

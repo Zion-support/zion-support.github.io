@@ -1,0 +1,344 @@
+{
+  "timestamp": "2025-09-04T02:25:36.339Z",
+  "tests": [
+    {
+      "type": "type-checking",
+      "status": "failed",
+      "error": "Command failed: npx tsc --noEmit\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+    },
+    {
+      "type": "linting",
+      "status": "passed"
+    },
+    {
+      "type": "build-test",
+      "status": "passed"
+    },
+    {
+      "type": "performance-tests",
+      "status": "passed"
+    },
+    {
+      "type": "accessibility-tests",
+      "status": "passed"
+    },
+    {
+      "type": "security-tests",
+      "status": "passed"
+    }
+  ],
+  "coverage": {},
+  "performance": {
+    "bundleSize": 96.1,
+    "pageSizes": [
+      {
+        "page": "about",
+        "size": 1.93
+      },
+      {
+        "page": "services",
+        "size": 8.63
+      },
+      {
+        "page": "blog",
+        "size": 2.47
+      },
+      {
+        "page": "careers",
+        "size": 3.65
+      },
+      {
+        "page": "devops",
+        "size": 3.33
+      },
+      {
+        "page": "contact",
+        "size": 3.28
+      },
+      {
+        "page": "cybersecurity",
+        "size": 3.24
+      },
+      {
+        "page": "docs",
+        "size": 3.15
+      },
+      {
+        "page": "faq",
+        "size": 2.24
+      },
+      {
+        "page": "it",
+        "size": 3.6
+      },
+      {
+        "page": "services",
+        "size": 10.3
+      },
+      {
+        "page": "saas",
+        "size": 11.2
+      },
+      {
+        "page": "news",
+        "size": 3.28
+      },
+      {
+        "page": "partners",
+        "size": 3.36
+      },
+      {
+        "page": "pricing",
+        "size": 1.22
+      },
+      {
+        "page": "privacy",
+        "size": 1.15
+      },
+      {
+        "page": "computing",
+        "size": 3.45
+      },
+      {
+        "page": "quote",
+        "size": 3.35
+      },
+      {
+        "page": "development",
+        "size": 4.05
+      },
+      {
+        "page": "catalog",
+        "size": 5.11
+      },
+      {
+        "page": "chunks",
+        "size": 15.3
+      }
+    ]
+  },
+  "accessibility": {
+    "totalImages": 0,
+    "imagesWithAlt": 0,
+    "altTextCoverage": 100,
+    "headingStructure": [
+      "<h1 className=\"text-9xl font-bold text-blue-600 mb-4\">",
+      "<h2 className=\"text-2xl font-semibold text-gray-800 mb-4\">",
+      "<h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>",
+      "<h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>",
+      "<h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>",
+      "<h1 className=\"text-4xl md:text-5xl font-extrabold tracking-tight mb-6\">",
+      "<h2 className=\"text-3xl font-bold mb-6 text-blue-400\">",
+      "<h2 className=\"text-3xl font-bold mb-6 text-purple-400\">",
+      "<h2 className=\"text-3xl md:text-4xl font-bold text-center mb-12\">",
+      "<h3 className=\"text-4xl font-bold text-blue-400 mb-2\">",
+      "<h3 className=\"text-4xl font-bold text-purple-400 mb-2\">",
+      "<h3 className=\"text-4xl font-bold text-green-400 mb-2\">",
+      "<h3 className=\"text-4xl font-bold text-yellow-400 mb-2\">",
+      "<h2 className=\"text-3xl md:text-4xl font-bold text-center mb-12\">",
+      "<h3 className=\"text-2xl font-bold mb-4 text-blue-400\">",
+      "<h3 className=\"text-2xl font-bold mb-4 text-purple-400\">",
+      "<h3 className=\"text-2xl font-bold mb-4 text-green-400\">",
+      "<h2 className=\"text-3xl md:text-4xl font-bold mb-8\">",
+      "<h1 className=\"text-4xl md:text-5xl font-extrabold tracking-tight mb-4\">",
+      "<h2 className=\"text-2xl font-bold mb-2\">",
+      "<h3 className=\"text-lg font-semibold mb-3 text-blue-400\">",
+      "<h3 className=\"text-lg font-semibold mb-3 text-green-400\">",
+      "<h2 className=\"text-3xl font-bold mb-6\">",
+      "<h1 className=\"text-4xl md:text-6xl font-bold text-white mb-6\">",
+      "<h3 className=\"text-xl font-bold text-white mb-3 hover:text-blue-400 transition-colors\">",
+      "<h2 className=\"text-3xl font-bold text-white mb-4\">",
+      "<h2 className=\"text-3xl font-bold text-white mb-4\">",
+      "<h1 className=\"text-4xl md:text-6xl font-bold text-white mb-6\">",
+      "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+      "<h3 className=\"text-xl font-bold text-white mb-3\">",
+      "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+      "<h3 className=\"text-2xl font-bold text-white mb-2\">",
+      "<h4 className=\"text-lg font-semibold text-white mb-2\">",
+      "<h2 className=\"text-3xl font-bold text-white mb-6\">",
+      "<h3 className=\"text-2xl font-bold text-white mb-4\">",
+      "<h2 className=\"text-3xl font-bold text-white mb-4\">",
+      "<h1 className=\"text-4xl md:text-6xl font-bold mb-6\">",
+      "<h2 className=\"text-3xl md:text-4xl font-bold text-gray-900 mb-4\">",
+      "<h3 className=\"text-xl font-semibold text-gray-900\">",
+      "<h2 className=\"text-3xl md:text-4xl font-bold text-gray-900 mb-6\">",
+      "<h1 className=\"text-4xl md:text-5xl font-extrabold tracking-tight mb-6\">",
+      "<h2 className=\"text-3xl font-bold mb-8\">",
+      "<h3 className=\"text-xl font-semibold mb-2 text-blue-400\">",
+      "<h3 className=\"text-xl font-semibold mb-2 text-purple-400\">",
+      "<h3 className=\"text-xl font-semibold mb-2 text-green-400\">",
+      "<h3 className=\"text-xl font-semibold mb-2 text-yellow-400\">",
+      "<h2 className=\"text-3xl font-bold mb-8\">",
+      "<h3 className=\"text-xl font-semibold mb-3 text-blue-400\">",
+      "<h3 className=\"text-xl font-semibold mb-3 text-purple-400\">",
+      "<h3 className=\"text-xl font-semibold mb-3 text-green-400\">",
+      "<h2 className=\"text-3xl md:text-4xl font-bold mb-6\">",
+      "<h2 className=\"text-3xl md:text-4xl font-bold mb-8\">",
+      "<h1 className=\"text-4xl md:text-6xl font-bold mb-6\">",
+      "<h2 className=\"text-3xl md:text-4xl font-bold text-gray-900 mb-4\">",
+      "<h3 className=\"text-xl font-semibold text-gray-900\">",
+      "<h2 className=\"text-3xl md:text-4xl font-bold text-gray-900 mb-6\">",
+      "<h1 className=\"text-4xl md:text-6xl font-bold mb-6\">",
+      "<h2 className=\"text-2xl font-semibold text-gray-900\">",
+      "<h2 className=\"text-3xl md:text-4xl font-bold text-gray-900 mb-4\">",
+      "<h3 className=\"text-lg font-semibold text-gray-900 mb-3\">",
+      "<h3 className=\"text-lg font-semibold text-gray-900 mb-3\">",
+      "<h3 className=\"text-lg font-semibold text-gray-900 mb-3\">",
+      "<h1 className=\"text-4xl md:text-5xl font-extrabold tracking-tight mb-6\">",
+      "<h3 className=\"text-xl font-bold mb-4 text-blue-400\">",
+      "<h2 className=\"text-3xl md:text-4xl font-bold mb-8\">",
+      "<h1 className=\"text-4xl md:text-6xl font-bold text-white mb-6\">",
+      "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+      "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+      "<h3 className=\"text-xl font-bold text-white mb-3\">",
+      "<h4 className=\"text-lg font-semibold text-white mb-2\">",
+      "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+      "<h3 className=\"text-xl font-bold text-white mb-3\">",
+      "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+      "<h3 className=\"text-lg font-bold text-white mb-2\">",
+      "<h2 className=\"text-3xl font-bold text-white mb-6\">",
+      "<h3 className=\"text-2xl font-bold text-white mb-4\">",
+      "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+      "<h3 className=\"text-xl font-bold text-white mb-3\">",
+      "<h3 className=\"text-xl font-bold text-white mb-3\">",
+      "<h3 className=\"text-xl font-bold text-white mb-3\">",
+      "<h2 className=\"text-3xl font-bold text-white mb-4\">",
+      "<h1 className=\"text-5xl md:text-6xl font-extrabold tracking-tight mb-6\">",
+      "<h3 className=\"text-2xl font-bold text-blue-400 mb-2\">",
+      "<h3 className=\"text-2xl font-bold text-purple-400 mb-2\">",
+      "<h3 className=\"text-2xl font-bold text-green-400 mb-2\">",
+      "<h2 className=\"text-3xl md:text-4xl font-bold text-center mb-12\">",
+      "<h3 className=\"text-2xl font-bold mb-4 text-blue-400\">",
+      "<h3 className=\"text-2xl font-bold mb-4 text-purple-400\">",
+      "<h3 className=\"text-2xl font-bold mb-4 text-green-400\">",
+      "<h2 className=\"text-3xl md:text-4xl font-bold mb-8\">",
+      "<h1 className=\"text-4xl md:text-5xl font-extrabold tracking-tight mb-4\">",
+      "<h2 className=\"text-2xl font-bold mb-6 text-center\">",
+      "<h2 className=\"text-2xl font-bold\">",
+      "<h3 className=\"text-lg font-semibold mb-3 text-blue-400\">",
+      "<h3 className=\"text-lg font-semibold mb-3 text-green-400\">",
+      "<h2 className=\"text-3xl font-bold mb-4\">",
+      "<h1 className=\"text-4xl md:text-5xl font-extrabold tracking-tight mb-4\">",
+      "<h2 className=\"text-2xl font-bold mb-6 text-center\">",
+      "<h2 className=\"text-2xl font-bold\">",
+      "<h3 className=\"text-lg font-semibold mb-3 text-blue-400\">",
+      "<h3 className=\"text-lg font-semibold mb-3 text-green-400\">",
+      "<h2 className=\"text-3xl font-bold mb-4\">",
+      "<h1 className=\"text-4xl md:text-6xl font-bold text-white mb-6\">",
+      "<h2 className=\"text-2xl font-bold text-white mb-8\">",
+      "<h3 className=\"text-3xl font-bold text-white mb-4 hover:text-blue-400 transition-colors\">",
+      "<h2 className=\"text-2xl font-bold text-white mb-8\">",
+      "<h3 className=\"text-xl font-bold text-white mb-3 hover:text-blue-400 transition-colors\">",
+      "<h2 className=\"text-3xl font-bold text-white mb-6\">",
+      "<h3 className=\"text-2xl font-bold text-white mb-4\">",
+      "<h4 className=\"text-lg font-semibold text-white mb-2\">",
+      "<h4 className=\"text-lg font-semibold text-white mb-2\">",
+      "<h4 className=\"text-lg font-semibold text-white mb-2\">",
+      "<h2 className=\"text-3xl font-bold text-white mb-4\">",
+      "<h2 className=\"text-3xl font-bold text-white mb-4\">",
+      "<h1 className=\"text-4xl md:text-6xl font-bold text-white mb-6\">",
+      "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+      "<h3 className=\"text-xl font-bold text-white mb-4\">",
+      "<h4 className=\"text-lg font-semibold text-white mb-3\">",
+      "<h4 className=\"text-lg font-semibold text-white mb-3\">",
+      "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+      "<h3 className=\"text-2xl font-bold text-white mb-4\">",
+      "<h4 className=\"text-lg font-bold text-white mb-2\">",
+      "<h2 className=\"text-3xl font-bold text-white mb-6\">",
+      "<h3 className=\"text-xl font-bold text-white mb-2\">",
+      "<h3 className=\"text-xl font-bold text-white mb-2\">",
+      "<h3 className=\"text-xl font-bold text-white mb-2\">",
+      "<h3 className=\"text-xl font-bold text-white mb-2\">",
+      "<h3 className=\"text-2xl font-bold text-white mb-4\">",
+      "<h2 className=\"text-3xl font-bold text-white mb-4\">",
+      "<h1 className=\"text-3xl md:text-4xl font-bold text-gray-900 mb-6\">",
+      "<h3 className=\"text-xl font-semibold mb-2\">",
+      "<h3 className=\"text-xl font-semibold mb-2\">",
+      "<h3 className=\"text-xl font-semibold mb-2\">",
+      "<h3 className=\"text-xl font-semibold mb-2\">",
+      "<h3 className=\"text-xl font-semibold mb-2\">",
+      "<h3 className=\"text-xl font-semibold mb-2\">",
+      "<h1 className=\"text-3xl md: text-4xl font-bold text-gray-900 mb-6\">",
+      "<h2>",
+      "<h2>",
+      "<h2>",
+      "<h2>",
+      "<h2>",
+      "<h2>",
+      "<h1 className=\"text-4xl md:text-6xl font-bold mb-6\">",
+      "<h2 className=\"text-3xl md:text-4xl font-bold text-gray-900 mb-4\">",
+      "<h3 className=\"text-xl font-semibold text-gray-900\">",
+      "<h2 className=\"text-3xl md:text-4xl font-bold text-gray-900 mb-6\">",
+      "<h1 className=\"text-3xl font-bold text-white mb-4\">",
+      "<h3 className=\"text-lg font-semibold text-white mb-2\">",
+      "<h1 className=\"text-4xl md:text-6xl font-bold text-white mb-6\">",
+      "<h2 className=\"text-2xl font-bold text-white mb-8 text-center\">",
+      "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+      "<h3 className=\"text-xl font-bold text-white mb-3\">",
+      "<h3 className=\"text-xl font-bold text-white mb-3\">",
+      "<h3 className=\"text-xl font-bold text-white mb-3\">",
+      "<h2 className=\"text-3xl font-bold text-white mb-4\">",
+      "<h1 className=\"text-4xl md:text-6xl font-bold text-white mb-6\">",
+      "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+      "<h3 className=\"text-2xl font-bold text-white mb-2\">",
+      "<h4 className=\"text-lg font-bold text-white\">",
+      "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+      "<h3 className=\"text-xl font-bold text-white mb-2\">",
+      "<h3 className=\"text-xl font-bold text-white mb-2\">",
+      "<h3 className=\"text-xl font-bold text-white mb-2\">",
+      "<h3 className=\"text-xl font-bold text-white mb-2\">",
+      "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+      "<h3 className=\"text-xl font-bold text-white mb-3\">",
+      "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+      "<h3 className=\"text-lg font-bold text-white\">",
+      "<h2 className=\"text-3xl font-bold text-white mb-6\">",
+      "<h3 className=\"text-2xl font-bold text-white mb-4\">",
+      "<h2 className=\"text-3xl font-bold text-white mb-4\">",
+      "<h1 className=\"text-4xl md:text-5xl font-extrabold tracking-tight\">",
+      "<h2 className=\"text-2xl md:text-3xl font-bold\">",
+      "<h3 className=\"text-xl font-semibold\">",
+      "<h2 className=\"text-xl font-semibold mb-2\">",
+      "<h2 style={{ \n          fontSize: 28, fontWeight: 800, margin: 0,\n          background: `linear-gradient(135deg, ${color}, ${color}80)`,\n          WebkitBackgroundClip: 'text',\n          WebkitTextFillColor: 'transparent',\n          backgroundClip: 'text'\n        }}>",
+      "<h1 style={{ \n            fontSize: 48, fontWeight: 800, marginBottom: 16,\n            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',\n            WebkitBackgroundClip: 'text',\n            WebkitTextFillColor: 'transparent',\n            backgroundClip: 'text'\n          }}>",
+      "<h2 style={{ \n          fontSize: 32, fontWeight: 700, marginBottom: 16,\n          color: '#1e293b'\n        }}>",
+      "<h1 className=\"text-4xl md:text-6xl font-bold text-white mb-6\">",
+      "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+      "<h3 className=\"text-2xl font-bold text-white mb-2\">",
+      "<h4 className=\"text-lg font-bold text-white mb-3\">",
+      "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+      "<h3 className=\"text-xl font-bold text-white mb-3\">",
+      "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+      "<h3 className=\"text-xl font-bold text-white mb-3\">",
+      "<h3 className=\"text-xl font-bold text-white mb-3\">",
+      "<h3 className=\"text-xl font-bold text-white mb-3\">",
+      "<h3 className=\"text-xl font-bold text-white mb-3\">",
+      "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+      "<h3 className=\"text-xl font-bold text-white mb-3\">",
+      "<h3 className=\"text-xl font-bold text-white mb-3\">",
+      "<h3 className=\"text-xl font-bold text-white mb-3\">",
+      "<h2 className=\"text-3xl font-bold text-white mb-4\">",
+      "<h1 className=\"text-4xl md:text-5xl font-extrabold tracking-tight mb-8\">",
+      "<h2 className=\"text-2xl font-bold mb-4 text-blue-400\">",
+      "<h2 className=\"text-2xl font-bold mb-4 text-blue-400\">",
+      "<h2 className=\"text-2xl font-bold mb-4 text-blue-400\">",
+      "<h2 className=\"text-2xl font-bold mb-4 text-blue-400\">",
+      "<h2 className=\"text-2xl font-bold mb-4 text-blue-400\">",
+      "<h2 className=\"text-2xl font-bold mb-4 text-blue-400\">",
+      "<h2 className=\"text-2xl font-bold mb-4 text-blue-400\">",
+      "<h2 className=\"text-2xl font-bold mb-4 text-blue-400\">",
+      "<h1 className=\"text-2xl font-bold text-white mb-4\">",
+      "<h3 className=\"font-semibold text-white\">"
+    ]
+  },
+  "security": {
+    "auditStatus": "issues-found",
+    "hasSecurityHeaders": false
+  },
+  "summary": {
+    "totalTests": 6,
+    "passedTests": 5,
+    "failedTests": 1,
+    "successRate": 83,
+    "timestamp": "2025-09-04T02:26:08.936Z"
+  }
+}

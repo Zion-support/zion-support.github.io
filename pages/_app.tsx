@@ -1,11 +1,12 @@
 import type { AppProps } from 'next/app';
 import Link from 'next/link';
 import { useState } from 'react';
+import type { JSX } from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import '../styles/globals.css';
 
-function Header(): any {
+function Header(): JSX.Element {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -29,7 +30,7 @@ function Header(): any {
         {/* Desktop Navigation */}
         <div style={{ 
           display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'center',
-          '@media (max-width: 768px)': { display: 'none' } as any
+          '@media (max-width: 768px)': { display: 'none' }
         }}>
           <Link href="/" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Home</Link>
           <Link href="/services" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>All Services</Link>
@@ -50,7 +51,7 @@ function Header(): any {
           style={{ 
             background: 'none', border: 'none', color: 'white', fontSize: '1.5rem', cursor: 'pointer',
             display: 'none',
-            '@media (max-width: 768px)': { display: 'block' } as any
+            '@media (max-width: 768px)': { display: 'block' }
           }}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle mobile menu"
@@ -87,7 +88,7 @@ function Header(): any {
   );
 }
 
-function Footer(): any {
+function Footer(): JSX.Element {
   return (
     <footer style={{ 
       background: 'linear-gradient(135deg, #0b1220, #1e293b)', 
