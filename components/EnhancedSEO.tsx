@@ -4,9 +4,6 @@ import { useRouter } from 'next/router';
 interface SEOProps {
   title?: string;
   description?: string;
-  image?: string;
-  url?: string;
-  type?: string;
   keywords?: string[];
   author?: string;
   publishedTime?: string;
