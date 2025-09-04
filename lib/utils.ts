@@ -28,7 +28,6 @@ export function debounce<T extends (...args: any[]) => any>(
     timeout = setTimeout(() => func(...args), wait);
   };
 }
-
 export function throttle<T extends (...args: any[]) => any>(
   func: T,
   limit: number

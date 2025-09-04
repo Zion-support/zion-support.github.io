@@ -12,7 +12,6 @@ interface RateLimitStore {
     resetTime: number;
   };
 }
-
 class RateLimiter {
   private store: RateLimitStore = {};
   private config: RateLimitConfig;
@@ -56,7 +55,6 @@ class RateLimiter {
         resetTime: this.store[key].resetTime
       };
     }
-
     if (this.store[key].count >= this.config.maxRequests) {
       return {
         allowed: false,
@@ -64,7 +62,6 @@ class RateLimiter {
         resetTime: this.store[key].resetTime
       };
     }
-
     this.store[key].count++;
     return {
       allowed: true,
