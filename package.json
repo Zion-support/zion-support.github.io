@@ -172,7 +172,8 @@
     "automation:health": "node automation/health-check.cjs",
     "automation:security": "node automation/security-scanner.cjs",
     "pr:merge-open": "node scripts/merge-open-prs.cjs",
-    "pr:auto-resolve-and-merge": "node scripts/auto-resolve-merge-prs.cjs"
+    "pr:auto-resolve-and-merge": "node scripts/auto-resolve-merge-prs.cjs",
+    "pr:force-merge-heads": "node scripts/force-merge-open-pr-heads-into-main.cjs"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
