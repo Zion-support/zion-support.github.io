@@ -1,85 +1,100 @@
 module.exports = {
   apps: [
     {
-      name: 'error-monitor',
-      script: 'automation/error-monitor.js',
+      name: 'auto-fix',
+      script: 'scripts/pm2/auto-fix.js',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production',
-        LOG_LEVEL: 'info'
+        NODE_ENV: 'production'
       },
-      error_file: 'automation/logs/error-monitor-error.log',
-      out_file: 'automation/logs/error-monitor-out.log',
-      log_file: 'automation/logs/error-monitor-combined.log',
-      time: true
+      log_file: 'logs/pm2/auto-fix.log',
+      error_file: 'logs/pm2/auto-fix-error.log',
+      out_file: 'logs/pm2/auto-fix-out.log',
     },
     {
-      name: 'lint-automation',
-      script: 'automation/lint-automation.js',
+      name: 'healthcheck',
+      script: 'scripts/pm2/healthcheck.js',
       instances: 1,
-      autorestart: false,
+      autorestart: true,
       watch: false,
-      max_memory_restart: '512M',
-      cron_restart: '0 */6 * * *', // Restart every 6 hours
+      max_memory_restart: '128M',
       env: {
-        NODE_ENV: 'production',
-        LOG_LEVEL: 'info'
+        NODE_ENV: 'production'
       },
-      error_file: 'automation/logs/lint-automation-error.log',
-      out_file: 'automation/logs/lint-automation-out.log',
-      log_file: 'automation/logs/lint-automation-combined.log',
-      time: true
+      log_file: 'logs/pm2/health.log',
+      error_file: 'logs/pm2/health-error.log',
+      out_file: 'logs/pm2/health-out.log',
     },
     {
-      name: 'build-monitor',
-      script: 'automation/build-monitor.cjs',
+      name: 'code-quality-monitor',
+      script: 'scripts/pm2/code-quality-monitor.js',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
-      cron_restart: '0 2 * * *', // Restart daily at 2 AM
       env: {
-        NODE_ENV: 'production',
-        LOG_LEVEL: 'info'
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'code-quality-monitor',
+        QUALITY_THRESHOLD: '80',
+        AUTO_FIX_CRITICAL: 'true',
       },
-      log_file: './logs/performance-monitor.log',
-      out_file: './logs/performance-monitor-out.log',
-      error_file: './logs/performance-monitor-error.log'
+      log_file: 'logs/pm2/code-quality-monitor.log',
+      error_file: 'logs/pm2/code-quality-monitor-error.log',
+      out_file: 'logs/pm2/code-quality-monitor-out.log',
     },
     {
-      name: 'automation-ci-cd',
-      script: 'node',
-      args: 'automation/ci-cd-automation.cjs',
-      cwd: '/workspace',
+      name: 'auto-commit-fixes',
+      script: 'scripts/pm2/auto-commit-fixes.js',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 */4 * * *', // Restart every 4 hours
+      max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'auto-commit-fixes',
+        COMMIT_FREQUENCY: 'hourly',
+        AUTO_PUSH: 'false',
       },
-      log_file: './logs/ci-cd.log',
-      out_file: './logs/ci-cd-out.log',
-      error_file: './logs/ci-cd-error.log'
+      log_file: 'logs/pm2/auto-commit-fixes.log',
+      error_file: 'logs/pm2/auto-commit-fixes-error.log',
+      out_file: 'logs/pm2/auto-commit-fixes-out.log',
     },
     {
-      name: 'automation-continuous-improvement',
-      script: 'node',
-      args: 'automation/continuous-improvement.cjs',
-      cwd: '/workspace',
+      name: 'dependency-monitor',
+      script: 'scripts/pm2/dependency-monitor.js',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 */3 * * *', // Restart every 3 hours
+      max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'dependency-monitor',
+        AUTO_UPDATE_DEV: 'true',
+        SECURITY_ALERTS: 'true',
       },
-      log_file: './logs/continuous-improvement.log',
-      out_file: './logs/continuous-improvement-out.log',
-      error_file: './logs/continuous-improvement-error.log'
+      log_file: 'logs/pm2/dependency-monitor.log',
+      error_file: 'logs/pm2/dependency-monitor-error.log',
+      out_file: 'logs/pm2/dependency-monitor-out.log',
+    },
+    {
+      name: 'performance-monitor',
+      script: 'scripts/pm2/performance-monitor.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'performance-monitor',
+        PERFORMANCE_THRESHOLD: '3000',
+        BUNDLE_SIZE_LIMIT: '2MB',
+      },
+      log_file: 'logs/pm2/performance-monitor.log',
+      error_file: 'logs/pm2/performance-monitor-error.log',
+      out_file: 'logs/pm2/performance-monitor-out.log',
     }
-  ]
+  ],
 };
