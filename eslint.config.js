@@ -14,6 +14,8 @@ export default [
       'dist/**',
       'build/**',
       'out/**',
+      'src/**',
+      'src/pages.disabled/**',
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
