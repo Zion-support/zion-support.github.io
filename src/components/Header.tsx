@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Zap, Search, Sun, Moon, User, Menu, X } from 'lucide-react';
+import { Zap, Search, Sun, Moon, User, Menu, X, ChevronRight } from 'lucide-react';
 
 interface HeaderProps {
   className?: string;
@@ -39,6 +39,7 @@ export function Header({ className = '' }: HeaderProps) {
   const navigationItems = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
+    { name: 'Innovative 2025', href: '/innovative-services-2025' },
     { name: 'AI Services', href: '/ai-services' },
     { name: 'IT Services', href: '/it-services' },
     { name: 'Micro SaaS', href: '/micro-saas' },
@@ -71,18 +72,40 @@ export function Header({ className = '' }: HeaderProps) {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navigationItems.map((item) => (
+          <nav className="hidden lg:flex items-center space-x-6">
+            {navigationItems.slice(0, 6).map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-gray-300 hover:text-cyan-400 transition-colors duration-200 ${
+                className={`text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm font-medium ${
                   location.pathname === item.href ? 'text-cyan-400' : ''
                 }`}
               >
                 {item.name}
               </Link>
             ))}
+            {/* Dropdown for more items */}
+            <div className="relative group">
+              <button className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm font-medium flex items-center">
+                More
+                <ChevronRight className="w-4 h-4 ml-1 group-hover:rotate-90 transition-transform" />
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="py-2">
+                  {navigationItems.slice(6).map((item) => (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      className={`block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors ${
+                        location.pathname === item.href ? 'bg-gray-100 text-blue-600' : ''
+                      }`}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
           </nav>
 
           {/* Right side actions */}
@@ -152,18 +175,38 @@ export function Header({ className = '' }: HeaderProps) {
         {isMobileMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-900/95 backdrop-blur-md rounded-lg mt-2">
-              {navigationItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`block px-3 py-2 text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-gray-800 rounded-md transition-colors duration-200 ${
-                    location.pathname === item.href ? 'text-cyan-400 bg-gray-800' : ''
-                  }`}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {/* Main Navigation */}
+              <div className="space-y-1">
+                {navigationItems.slice(0, 6).map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className={`block px-3 py-2 text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-gray-800 rounded-md transition-colors duration-200 ${
+                      location.pathname === item.href ? 'text-cyan-400 bg-gray-800' : ''
+                    }`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+              
+              {/* Additional Navigation */}
+              <div className="border-t border-gray-700 pt-2 mt-2">
+                <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider px-3 py-1">More</div>
+                {navigationItems.slice(6).map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className={`block px-3 py-2 text-sm font-medium text-gray-300 hover:text-cyan-400 hover:bg-gray-800 rounded-md transition-colors duration-200 ${
+                      location.pathname === item.href ? 'text-cyan-400 bg-gray-800' : ''
+                    }`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         )}

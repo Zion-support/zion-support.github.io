@@ -1,1 +1,239 @@
-export interface InnovativeService { id: string; name: string; tagline: string; description: string; category: 'AI & Machine Learning' | 'Micro SaaS' | 'IT Services' | 'Cybersecurity' | 'Cloud & DevOps' | 'Data & Analytics' | 'Emerging Tech' | 'Digital Transformation' | 'Industry Solutions' | 'Quantum Computing' | 'Blockchain & Web3' | 'Space Technology' | 'Green Technology'; price: string; billing: 'month' | 'project' | 'hour' | 'one-time'; features: string[]; benefits: string[]; targetAudience: string[]; marketPosition: string; competitors: string[]; marketSize: string; growthRate: string; implementationTime: string; trialDays: number; contactInfo: { mobile: string; email: string; address: string} }; link: 'string; icon: string; color: string; popular?: boolean; new?: boolean; featured?: boolean; roi?: string; useCases: string[]; technicalSpecs: string[];' } export const innovativeServices2025: InnovativeService[] = [; { id: 'ai-autonomous-research-assistant',name: 'AI Autonomous Research Assistant',tagline: 'Revolutionary AI that conducts independent research and generates breakthrough insights',description: 'Advanced AI system that autonomously conducts research,analyzes data,generates hypotheses,and produces comprehensive research reports without human intervention.',category: 'AI & Machine Learning',price: '$3,499',billing: 'month',features: [ 'Autonomous research methodology selection','Multi-source data analysis and synthesis','Hypothesis generation and testing','Automated literature review','Real-time research progress tracking','Intelligent citation management','Cross-disciplinary insights generation','Automated report generation' ],benefits: [ 'Accelerate research by 10x','Reduce research costs by 60%','24/7 autonomous operation','Unbiased data analysis','Cross-domain knowledge synthesis','Real-time research updates' ],targetAudience: ['Research Institutions','Universities','Pharmaceutical Companies','Tech Companies','Consulting Firms'],marketPosition: 'First truly autonomous research AI with proven breakthrough capabilities',competitors: ['Traditional research tools','Basic AI assistants'],marketSize: '$28B research and development market',growthRate: '30% CAGR',implementationTime: '6-8 weeks',trialDays: '45',roi: '300% within 6 months',useCases: ['Drug discovery','Market research','Scientific research','Policy analysis','Technology forecasting'],technicalSpecs: ['GPT-4 integration','Advanced NLP','Machine learning algorithms','Data visualization','API integration'],contactInfo: { mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709' },link: 'https: icon: '🔬',color: 'from-blue-600 to-indigo-700',popular: 'true',featured: 'true',new: 'true' },{ id: 'quantum-ai-hybrid-platform',name: 'Quantum AI Hybrid Platform',tagline: 'Breakthrough platform combining quantum computing with AI for unprecedented computational power',description: 'Revolutionary platform that integrates quantum computing with artificial intelligence to solve previously unsolvable problems in optimization,cryptography,and scientific research.',category: 'Quantum Computing',price: '$5,999',billing: 'month',features: [ 'Quantum-AI algorithm optimization','Hybrid classical-quantum processing','Advanced cryptography solutions','Scientific research acceleration','Financial modeling enhancement','Drug discovery optimization','Climate modeling capabilities','Quantum machine learning' ],benefits: [ '1000x faster computation for complex problems','Unbreakable encryption standards','Revolutionary scientific breakthroughs','Competitive advantage in research','Future-proof technology platform' ],targetAudience: ['Research Institutions','Financial Services','Pharmaceutical Companies','Government Agencies','Tech Giants'],marketPosition: 'Leading quantum-AI integration platform with proven quantum advantage',competitors: ['IBM Quantum','Google Quantum AI','Microsoft Azure Quantum'],marketSize: '$65B quantum computing market',growthRate: '35% CAGR',implementationTime: '8-12 weeks',trialDays: '30',roi: '500% within 12 months',useCases: ['Financial modeling','Drug discovery','Climate research','Cryptography','Optimization problems'],technicalSpecs: ['Quantum processors','AI algorithms','Hybrid computing','Quantum error correction','Cloud integration'],contactInfo: { mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709' },link: 'https: icon: '⚛️',color: 'from-purple-600 to-violet-700',popular: 'true',featured: 'true' },{ id: 'blockchain-enterprise-solutions',name: 'Blockchain Enterprise Solutions',tagline: 'Enterprise-grade blockchain solutions for secure,transparent,and efficient business operations',description: 'Comprehensive blockchain platform designed for enterprise use,offering smart contracts,decentralized applications,and secure digital asset management.',category: 'Blockchain & Web3',price: '$2,999',billing: 'month',features: [ 'Smart contract development and deployment','Decentralized application (dApp) creation','Digital asset management','Supply chain transparency','Identity verification systems','Cross-chain interoperability','Enterprise security protocols','Scalable blockchain infrastructure' ],benefits: [ 'Reduce operational costs by 30%','Enhance security and transparency','Automate complex business processes','Improve supply chain efficiency','Enable new business models' ],targetAudience: ['Financial Services','Supply Chain Companies','Healthcare Organizations','Government Agencies','Manufacturing'],marketPosition: 'Leading enterprise blockchain platform with proven scalability and security',competitors: ['IBM Blockchain','Microsoft Azure Blockchain','Amazon Managed Blockchain'],marketSize: '$19B blockchain market',growthRate: '40% CAGR',implementationTime: '10-16 weeks',trialDays: '30',roi: '250% within 8 months',useCases: ['Supply chain management','Financial services','Healthcare records','Voting systems','Digital identity'],technicalSpecs: ['Ethereum compatibility','Smart contracts','Consensus algorithms','API integration','Cloud deployment'],contactInfo: { mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709' },link: 'https: icon: '🔗',color: 'from-green-600 to-emerald-700',popular: 'true' },{ id: 'space-technology-solutions',name: 'Space Technology Solutions',tagline: 'Terrestrial applications of space technology for innovative business solutions',description: 'Cutting-edge space technology adapted for Earth-based applications,including satellite communications,remote sensing,and space-derived innovations.',category: 'Space Technology',price: '$4,499',billing: 'month',features: [ 'Satellite communication systems','Remote sensing and Earth observation','Space-derived materials and technologies','Navigation and positioning systems','Climate monitoring solutions','Space tourism technology','Satellite internet services','Space data analytics' ],benefits: [ 'Access to space-grade technology','Global coverage and connectivity','Advanced monitoring capabilities','Innovative material solutions','Future-ready technology platform' ],targetAudience: ['Telecommunications','Agriculture','Environmental Services','Logistics','Government Agencies'],marketPosition: 'Leading terrestrial space technology applications provider',competitors: ['SpaceX Starlink','OneWeb','Amazon Project Kuiper'],marketSize: '$469B space economy',growthRate: '8% CAGR',implementationTime: '12-20 weeks',trialDays: '30',roi: '400% within 18 months',useCases: ['Global communications','Precision agriculture','Environmental monitoring','Logistics tracking','Disaster response'],technicalSpecs: ['Satellite technology','IoT integration','Data analytics','Cloud computing','AI algorithms'],contactInfo: { mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709' },link: 'https: icon: '🚀',color: 'from-slate-600 to-gray-700',featured: 'true' },{ id: 'green-technology-solutions',name: 'Green Technology Solutions',tagline: 'Sustainable technology solutions for a greener,more efficient future',description: 'Comprehensive green technology platform offering sustainable solutions for energy,transportation,and environmental management.',category: 'Green Technology',price: '$2,799',billing: 'month',features: [ 'Renewable energy optimization','Smart grid management','Electric vehicle infrastructure','Carbon footprint tracking','Sustainable building solutions','Waste management optimization','Water conservation systems','Environmental monitoring' ],benefits: [ 'Reduce carbon footprint by 50%','Lower energy costs by 40%','Meet sustainability goals','Enhance brand reputation','Future-proof operations' ],targetAudience: ['Manufacturing','Real Estate','Transportation','Utilities','Government'],marketPosition: 'Leading green technology platform with proven environmental impact',competitors: ['Siemens','GE Renewable Energy','Schneider Electric'],marketSize: '$44B green technology market',growthRate: '25% CAGR',implementationTime: '8-14 weeks',trialDays: '30',roi: '300% within 10 months',useCases: ['Energy management','Building automation','Fleet management','Waste reduction','Water conservation'],technicalSpecs: ['IoT sensors','AI algorithms','Cloud platform','Mobile apps','Analytics dashboard'],contactInfo: { mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709' },link: 'https: icon: '🌱',color: 'from-green-500 to-emerald-600',popular: 'true' },{ id: 'ai-cybersecurity-platform',name: 'AI Cybersecurity Platform',tagline: 'Next-generation AI-powered cybersecurity for comprehensive threat protection',description: 'Advanced cybersecurity platform that uses artificial intelligence to detect,prevent,and respond to cyber threats in real-time.',category: 'Cybersecurity',price: '$3,299',billing: 'month',features: [ 'AI-powered threat detection','Behavioral analysis','Automated incident response','Zero-day threat prevention','Advanced malware protection','Network security monitoring','Vulnerability assessment','Compliance management' ],benefits: [ 'Detect threats 99.9% faster','Reduce false positives by 80%','Automate security responses','24/7 threat monitoring','Meet compliance requirements' ],targetAudience: ['Financial Services','Healthcare','Government','Technology','Manufacturing'],marketPosition: 'Leading AI cybersecurity platform with proven threat detection accuracy',competitors: ['CrowdStrike','SentinelOne','Darktrace'],marketSize: '$150B cybersecurity market',growthRate: '12% CAGR',implementationTime: '6-10 weeks',trialDays: '30',roi: '400% within 6 months',useCases: ['Threat detection','Incident response','Compliance','Risk assessment','Security monitoring'],technicalSpecs: ['Machine learning','Behavioral analytics','Cloud security','API protection','Zero trust'],contactInfo: { mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709' },link: 'https: icon: '🛡️',color: 'from-red-600 to-orange-700',popular: 'true',featured: 'true' },{ id: 'micro-crm-platform',name: 'Micro CRM Platform',tagline: 'Lightweight,powerful CRM solution for growing businesses',description: 'Streamlined customer relationship management platform designed specifically for small to medium businesses with essential CRM features.',category: 'Micro SaaS',price: '$99',billing: 'month',features: [ 'Contact management','Lead tracking','Sales pipeline management','Email marketing integration','Task and appointment scheduling','Basic reporting and analytics','Mobile app access','API integration capabilities' ],benefits: [ 'Increase sales by 25%','Improve customer retention','Streamline sales processes','Affordable pricing','Easy to implement' ],targetAudience: ['Small Business','Startups','Sales Teams','Consultants','Real Estate'],marketPosition: 'Affordable CRM solution with enterprise-grade features',competitors: ['HubSpot','Salesforce','Pipedrive'],marketSize: '$40B CRM market',growthRate: '15% CAGR',implementationTime: '2-4 weeks',trialDays: '14',roi: '200% within 3 months',useCases: ['Sales management','Customer tracking','Lead generation','Marketing campaigns','Customer service'],technicalSpecs: ['Cloud-based','Mobile responsive','API integration','Data encryption','Backup systems'],contactInfo: { mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709' },link: 'https: icon: '👥',color: 'from-blue-500 to-cyan-600',popular: 'true' },{ id: 'advanced-data-analytics',name: 'Advanced Data Analytics Platform',tagline: 'Transform raw data into actionable business intelligence',description: 'Comprehensive data analytics platform that helps businesses make data-driven decisions through advanced analytics,visualization,and machine learning.',category: 'Data & Analytics',price: '$1,999',billing: 'month',features: [ 'Real-time data processing','Advanced analytics and modeling','Interactive dashboards','Predictive analytics','Data visualization tools','Machine learning integration','Data quality management','Custom reporting' ],benefits: [ 'Improve decision making by 60%','Identify new business opportunities','Optimize operations','Reduce costs through insights','Competitive advantage' ],targetAudience: ['Enterprise','Financial Services','Healthcare','Retail','Manufacturing'],marketPosition: 'Leading data analytics platform with AI-powered insights',competitors: ['Tableau','Power BI','Qlik'],marketSize: '$25B business intelligence market',growthRate: '20% CAGR',implementationTime: '8-12 weeks',trialDays: '30',roi: '350% within 8 months',useCases: ['Business intelligence','Performance monitoring','Customer analytics','Operational optimization','Risk assessment'],technicalSpecs: ['Big data processing','Machine learning','Real-time analytics','Cloud deployment','API integration'],contactInfo: { mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709' },link: 'https: icon: '📊',color: 'from-indigo-600 to-purple-700',popular: 'true' },{ id: 'cloud-devops-automation',name: 'Cloud DevOps Automation Platform',tagline: 'Streamline development and operations with intelligent automation',description: 'Comprehensive DevOps platform that automates software development,testing,deployment,and operations for faster,more reliable software delivery.',category: 'Cloud & DevOps',price: '$2,499',billing: 'month',features: [ 'Continuous integration/continuous deployment (CI/CD)','Infrastructure as code (IaC)','Automated testing and quality assurance','Container orchestration','Monitoring and alerting','Security scanning and compliance','Performance optimization','Multi-cloud management' ],benefits: [ 'Deploy 10x faster','Reduce deployment failures by 80%','Improve code quality','Lower operational costs','Enhanced security' ],targetAudience: ['Technology Companies','Financial Services','Healthcare','E-commerce','Startups'],marketPosition: 'Leading DevOps automation platform with proven ROI',competitors: ['GitLab','Jenkins','CircleCI'],marketSize: '$8B DevOps market',growthRate: '18% CAGR',implementationTime: '6-10 weeks',trialDays: '30',roi: '300% within 6 months',useCases: ['Software development','Application deployment','Infrastructure management','Quality assurance','Security compliance'],technicalSpecs: ['Docker support','Kubernetes integration','Cloud platforms','API management','Monitoring tools'],contactInfo: { mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709' },link: 'https: icon: '☁️',color: 'from-cyan-600 to-blue-700',popular: 'true' },{ id: 'digital-transformation-suite',name: 'Digital Transformation Suite',tagline: 'Comprehensive digital transformation for modern businesses',description: 'End-to-end digital transformation platform that helps businesses modernize operations,improve customer experience,and drive innovation.',category: 'Digital Transformation',price: '$4,999',billing: 'month',features: [ 'Business process automation','Customer experience optimization','Legacy system modernization','Cloud migration services','Data strategy and governance','Change management support','Innovation consulting','Performance measurement' ],benefits: [ 'Increase operational efficiency by 40%','Improve customer satisfaction','Reduce operational costs','Enable innovation','Competitive advantage' ],targetAudience: ['Enterprise','Manufacturing','Healthcare','Financial Services','Retail'],marketPosition: 'Leading digital transformation platform with proven success',competitors: ['Accenture','Deloitte Digital','McKinsey Digital'],marketSize: '$500B digital transformation market',growthRate: '23% CAGR',implementationTime: '16-24 weeks',trialDays: '30',roi: '400% within 18 months',useCases: ['Process automation','Customer experience','System modernization','Cloud adoption','Innovation management'],technicalSpecs: ['AI integration','Cloud platforms','API management','Data analytics','Mobile solutions'],contactInfo: { mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709' },link: 'https: icon: '🔄',color: 'from-orange-600 to-red-700',featured: 'true' } ]; export default innovativeServices2025;
+export interface InnovativeService {
+  id: string;
+  title: string;
+  description: string;
+  category: 'Micro SaaS' | 'AI Services' | 'IT Services' | 'Cloud Services' | 'Cybersecurity' | 'Data Analytics' | 'Automation' | 'IoT' | 'Blockchain' | 'Quantum Computing';
+  subcategory: string;
+  price: number;
+  currency: string;
+  pricingModel: 'monthly' | 'yearly' | 'project' | 'per-user' | 'pay-per-use';
+  features: string[];
+  benefits: string[];
+  useCases: string[];
+  targetAudience: string[];
+  tags: string[];
+  estimatedDelivery: string;
+  supportLevel: 'basic' | 'standard' | 'premium' | 'enterprise';
+  marketPrice: string;
+  roi: string;
+  innovationLevel: 'cutting-edge' | 'advanced' | 'standard' | 'emerging';
+  contactInfo: {
+    phone: string;
+    email: string;
+    website: string;
+  };
+  technicalSpecs?: {
+    technology: string[];
+    integrations: string[];
+    apiEndpoints: number;
+    uptime: string;
+    security: string[];
+  };
+  competitors?: string[];
+  marketSize?: string;
+  launchDate?: string;
+  status: 'live' | 'beta' | 'coming-soon' | 'enterprise-only';
+}
+
+export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
+  // AI-Powered Services
+  {
+    id: "ai-autonomous-supply-chain-optimizer",
+    title: "AI Autonomous Supply Chain Optimizer",
+    description: "Revolutionary AI platform that autonomously optimizes supply chain operations using machine learning, predictive analytics, and real-time data processing to reduce costs, minimize risks, and maximize efficiency.",
+    category: "AI Services",
+    subcategory: "Supply Chain Intelligence",
+    price: 15000,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Autonomous demand forecasting with 95%+ accuracy",
+      "Real-time inventory optimization",
+      "Predictive risk assessment and mitigation",
+      "Multi-supplier performance analytics",
+      "Automated procurement recommendations",
+      "Blockchain-based traceability",
+      "IoT sensor integration",
+      "Carbon footprint optimization",
+      "Regulatory compliance monitoring",
+      "Custom AI model training"
+    ],
+    benefits: [
+      "Reduce supply chain costs by 25-40%",
+      "Minimize stockouts by 80%",
+      "Improve supplier performance by 35%",
+      "Reduce carbon emissions by 30%",
+      "Increase operational efficiency by 50%"
+    ],
+    useCases: [
+      "Manufacturing supply chain optimization",
+      "Retail inventory management",
+      "Healthcare supply chain",
+      "Food and beverage distribution",
+      "Automotive parts management"
+    ],
+    targetAudience: [
+      "Supply chain managers",
+      "Operations directors",
+      "Procurement teams",
+      "Logistics coordinators",
+      "C-level executives"
+    ],
+    tags: ["AI", "Supply Chain", "Machine Learning", "Predictive Analytics", "IoT", "Blockchain"],
+    estimatedDelivery: "8-12 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$15,000 - $50,000/month",
+    roi: "300-500%",
+    innovationLevel: "cutting-edge",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "Apache Kafka", "Kubernetes", "PostgreSQL", "Redis"],
+      integrations: ["SAP", "Oracle", "Salesforce", "Microsoft Dynamics", "AWS", "Azure"],
+      apiEndpoints: 200,
+      uptime: "99.95%",
+      security: ["SOC 2 Type II", "ISO 27001", "GDPR", "CCPA", "End-to-end encryption"]
+    },
+    competitors: ["Kinaxis", "Blue Yonder", "E2open", "Manhattan Associates"],
+    marketSize: "$37.4 billion by 2025",
+    launchDate: "Q1 2025",
+    status: "beta"
+  },
+
+  {
+    id: "quantum-cybersecurity-suite",
+    title: "Quantum Cybersecurity Suite",
+    description: "Next-generation cybersecurity platform leveraging quantum-resistant encryption, AI-powered threat detection, and quantum key distribution to protect against current and future cyber threats.",
+    category: "Cybersecurity",
+    subcategory: "Quantum Security",
+    price: 25000,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Quantum-resistant encryption algorithms",
+      "AI-powered threat intelligence",
+      "Zero-trust network architecture",
+      "Quantum key distribution (QKD)",
+      "Behavioral analytics",
+      "Automated incident response",
+      "Compliance automation",
+      "Dark web monitoring",
+      "Quantum random number generation",
+      "Post-quantum cryptography migration"
+    ],
+    benefits: [
+      "Future-proof against quantum attacks",
+      "Reduce security incidents by 90%",
+      "Automate 80% of security operations",
+      "Achieve 99.99% threat detection accuracy",
+      "Reduce compliance costs by 60%"
+    ],
+    useCases: [
+      "Financial services security",
+      "Government and defense",
+      "Healthcare data protection",
+      "Critical infrastructure",
+      "Enterprise security transformation"
+    ],
+    targetAudience: [
+      "CISOs and security directors",
+      "Government agencies",
+      "Financial institutions",
+      "Healthcare organizations",
+      "Critical infrastructure operators"
+    ],
+    tags: ["Quantum Computing", "Cybersecurity", "AI", "Encryption", "Zero Trust", "Compliance"],
+    estimatedDelivery: "12-16 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$25,000 - $100,000/month",
+    roi: "400-600%",
+    innovationLevel: "cutting-edge",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Quantum SDK", "PostgreSQL", "Kubernetes", "TensorFlow", "Rust", "Go"],
+      integrations: ["SIEM", "SOAR", "EDR", "XDR", "Cloud providers", "Identity providers"],
+      apiEndpoints: 150,
+      uptime: "99.99%",
+      security: ["FIPS 140-2", "Common Criteria", "SOC 2", "ISO 27001", "NIST Framework"]
+    },
+    competitors: ["IBM", "Microsoft", "Google", "Cisco", "Palo Alto Networks"],
+    marketSize: "$248.3 billion by 2025",
+    launchDate: "Q2 2025",
+    status: "coming-soon"
+  },
+
+  {
+    id: "ai-content-optimization-suite",
+    title: "AI Content Optimization Suite",
+    description: "Comprehensive content optimization platform that uses AI to analyze, improve, and optimize content across multiple channels for maximum engagement and conversion.",
+    category: "Micro SaaS",
+    subcategory: "Content Marketing",
+    price: 299,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered content analysis",
+      "SEO optimization suggestions",
+      "Readability scoring",
+      "Tone and sentiment analysis",
+      "A/B testing automation",
+      "Multi-language support",
+      "Content calendar integration",
+      "Performance analytics",
+      "Competitor analysis",
+      "Content templates library"
+    ],
+    benefits: [
+      "Increase content engagement by 60%",
+      "Improve SEO rankings by 40%",
+      "Reduce content creation time by 50%",
+      "Boost conversion rates by 35%",
+      "Streamline content workflow"
+    ],
+    useCases: [
+      "Blog content optimization",
+      "Social media posts",
+      "Email marketing campaigns",
+      "Website copy",
+      "Product descriptions"
+    ],
+    targetAudience: [
+      "Content marketers",
+      "SEO specialists",
+      "Digital marketing agencies",
+      "E-commerce businesses",
+      "Bloggers and influencers"
+    ],
+    tags: ["AI", "Content Marketing", "SEO", "Analytics", "Automation"],
+    estimatedDelivery: "2-4 weeks",
+    supportLevel: "standard",
+    marketPrice: "$299 - $999/month",
+    roi: "200-350%",
+    innovationLevel: "advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Node.js", "React", "Python", "OpenAI API", "MongoDB", "Redis"],
+      integrations: ["WordPress", "HubSpot", "Mailchimp", "Hootsuite", "Google Analytics"],
+      apiEndpoints: 50,
+      uptime: "99.5%",
+      security: ["SSL/TLS", "API key authentication", "Rate limiting"]
+    },
+    competitors: ["Jasper", "Copy.ai", "Writesonic", "Frase", "Clearscope"],
+    marketSize: "$4.2 billion by 2025",
+    launchDate: "Q1 2025",
+    status: "live"
+  }
+];
+
+export default INNOVATIVE_SERVICES_2025;

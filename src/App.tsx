@@ -23,29 +23,10 @@ const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.Reac
 };
 
 // Lazy load pages for better performance
-const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
-const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.default })));
-const SolutionsPage = lazy(() => import('./pages/SolutionsPage').then(module => ({ default: module.SolutionsPage })));
-const AboutPage = lazy(() => import('./pages/AboutPage').then(module => ({ default: module.AboutPage })));
-const ContactPage = lazy(() => import('./pages/ContactPage').then(module => ({ default: module.ContactPage })));
-const BlogPage = lazy(() => import('./pages/BlogPage').then(module => ({ default: module.BlogPage })));
-const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(module => ({ default: module.NotFoundPage })));
-const ComprehensiveServicesPage = lazy(() => import('./pages/ComprehensiveServicesPage').then(module => ({ default: module.ComprehensiveServicesPage })));
-const Sitemap = lazy(() => import('./pages/Sitemap').then(module => ({ default: module.default })));
-const ComprehensiveSitemap = lazy(() => import('./pages/ComprehensiveSitemap').then(module => ({ default: module.ComprehensiveSitemap })));
-const Support = lazy(() => import('./pages/Support').then(module => ({ default: module.default })));
-const Training = lazy(() => import('./pages/Training').then(module => ({ default: module.default })));
-const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default: module.default })));
-const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServicesPage').then(module => ({ default: module.RevolutionaryServicesPage })));
-const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025').then(module => ({ default: module.NewServicesShowcase2025 })));
-const EnhancedNewServices2025 = lazy(() => import('./pages/EnhancedNewServices2025').then(module => ({ default: module.EnhancedNewServices2025 })));
-const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
 const ComprehensiveServicesShowcase = lazy(() => import('./pages/ComprehensiveServicesShowcase').then(module => ({ default: module.default })));
+const InnovativeServices2025 = lazy(() => import('./pages/InnovativeServices2025').then(module => ({ default: module.default })));
 
 // Service Pages
-const AISolutions = lazy(() => import('./pages/services/AISolutions').then(module => ({ default: module.AISolutions })));
-const QuantumComputing = lazy(() => import('./pages/services/QuantumComputing').then(module => ({ default: module.QuantumComputing })));
-const Cybersecurity = lazy(() => import('./pages/services/Cybersecurity').then(module => ({ default: module.Cybersecurity })));
 
 // Loading component
 const PageLoader = () => (
@@ -74,9 +55,9 @@ const Pricing = createLazyComponent(() => import('./pages/Pricing'));
 const Help = createLazyComponent(() => import('./pages/Help'));
 const News = createLazyComponent(() => import('./pages/News'));
 const Careers = createLazyComponent(() => import('./pages/Careers'));
-const Support = createLazyComponent(() => import('./pages/Support'));
 const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));
 const ComprehensivePricing = createLazyComponent(() => import('./pages/ComprehensivePricing'));
+const ComprehensivePricing2025 = lazy(() => import('./pages/ComprehensivePricing2025').then(module => ({ default: module.default })));
 
 // Additional service components
 const AIServices = createLazyComponent(() => import('./pages/AIServices'));
@@ -107,6 +88,7 @@ export default function App() {
                 <Route path="/search" element={<Services />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/comprehensive-services" element={<ComprehensiveServicesShowcase />} />
+                <Route path="/innovative-services-2025" element={<InnovativeServices2025 />} />
                 <Route path="/solutions" element={<Solutions />} />
                 <Route path="/resources" element={<Services />} />
                 <Route path="/case-studies" element={<Services />} />
@@ -124,6 +106,7 @@ export default function App() {
                 
                 {/* New pricing guide route */}
                 <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricing />} />
+                <Route path="/pricing-2025" element={<ComprehensivePricing2025 />} />
                 
                 {/* Service Routes */}
                 <Route path="/ai-services" element={<AIServices />} />
