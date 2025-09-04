@@ -1,0 +1,1 @@
+export default function APIPage(){return (<main style={{minHeight:'40vh',padding:'4rem'}}>API docs coming soon.</main>);}
