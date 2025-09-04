@@ -1,5 +1,5 @@
-import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
+import React from 'react';
+import { SEO } from '../src/components/SEO';
 import { Handshake, Award, Users, Globe, Star, CheckCircle } from 'lucide-react';
 
 const Partners: NextPag e = () => {
@@ -10,7 +10,7 @@ const partnerCategories = [
       partners: [
         {
           name: 'Microsoft',
-logo: '🏢',
+          logo: '🏢',
           description: 'Cloud infrastructure and enterprise solutions',
           tier: 'Platinum'
         },
@@ -97,7 +97,7 @@ logo: '🏢',
               <h1 className="text-4xl md: tex t-5xl font-bold mb-6">Strategic Partners</h1>
               <p className="text-xl text-gray-200 mb-8">
                 We collaborate with industry leaders to deliver comprehensive technology solutions 
-                that drive business success and innovation.
+                that drive innovation and business success.
               </p>
 </div>
           </div>
@@ -125,7 +125,7 @@ logo: '🏢',
         </section>
 
         {/* Partner Categories */}
-        <section className="py-16">
+        <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               {partnerCategories.map((category, categoryIndex) => (
@@ -146,7 +146,7 @@ logo: '🏢',
                           partner.tier === 'Gold' ? 'bg-yellow-500 text-white' :
                           'bg-gray-400 text-white'
                         }`}>
-                          {partner.tier} Partner
+                          {partner.tier}
                         </span>
                       </div>
                     ))}
@@ -159,18 +159,18 @@ logo: '🏢',
         </section>
       ))}
 
-        {/* Partnership Tiers */}
-        <section className="py-16 bg-white">
+        {/* Benefits */}
+        <section className="bg-white py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Partnership Tiers</h2>
               <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
                 {partnershipTiers.map((tier, index) => (
-                  <div key={index} className="text-center">
-                    <div className={`w-20 h-20 ${tier.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                  <div key={index} className="bg-white rounded-xl shadow-lg p-8 text-center">
+                    <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full ${tier.color} mb-6`}>
                       <span className={`text-2xl font-bold ${tier.textColor}`}>{tier.name[0]}</span>
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{tier.name} Partner</h3>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">{tier.name}</h3>
                     <p className="text-gray-600">{tier.description}</p>
                   </div>
                 ))}
@@ -197,16 +197,15 @@ logo: '🏢',
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-{/* Become a Partner */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
+        {/* CTA Section */}
+        <section className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-16">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center text-white">
-              <h2 className="text-3xl font-bold mb-6">Become a Partner</h2>
-              <p className="text-xl mb-8 text-blue-100">
-                Join our partner ecosystem and unlock new opportunities for growth and innovation.
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-4xl font-bold mb-6">Become a Partner</h2>
+              <p className="text-xl mb-8">
+                Join our partner network and help us deliver innovative technology solutions to clients worldwide.
               </p>
               <div className="grid grid-cols-1 md: gri d-cols-3 gap-8 mb-8">
                 <div className="text-center">
@@ -236,15 +235,15 @@ logo: '🏢',
                   href="mailto: partner s@ziontechgroup.com"
                   className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: b g-white/10 transition-colors"
                 >
-                  Contact Partnership Team
+                  Call Us: +1 302 464 0950
                 </a>
               </div>
             </div>
-</div>
-        </div>
-      </section>
-    </MainLayout>
+          </div>
+        </section>
+      </div>
+    </>
   );
 };
 
-export default PartnersPage;
+export default Partners;
