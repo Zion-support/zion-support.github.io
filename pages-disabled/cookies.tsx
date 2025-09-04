@@ -1,232 +1,280 @@
-import React from "react";
-const CookiePolicy: NextPage = () => {;
-  const lastUpdated = "December 2024";
-  return (;
-    <MainLayout;
-      title="Cookie Policy - Zion Tech Group";
-      description="Learn about how Zion Tech Group uses cookies and similar technologies to enhance your browsing experience and provide personalized services.";
-      keywords="cookie policy, cookies, tracking, privacy, Zion Tech Group";
-    >;
-      <div className="min-h-screen bg-gray-50">;
-        {/* Header */}
-        <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-16">;
-          <div className="container mx-auto px-4 text-center">;
-            <div className="flex justify-center mb-6">;
-              <Cookie className="w-16 h-16 text-blue-400" />;
-            </div>;
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Cookie Policy</h1>;
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">;
-              This policy explains how we use cookies and similar technologies on our website to enhance your experience.;
-            </p>;
-            <p className="text-sm text-gray-300 mt-4">Last updated: {lastUpdated}</p>;
-          </div>;
-        </section>;
 
-        {/* Content */}
-        <section className="py-16">;
-          <div className="container mx-auto px-4 max-w-4xl">;
-            <div className="bg-white rounded-lg shadow-lg p-8">;
-              ;
-              {/* Introduction */}
-              <div className="mb-8">;
-                <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">;
-                  <Info className="w-6 h-6 mr-3 text-blue-600" />;
-                  What Are Cookies?;
-                </h2>;
-                <p className="text-gray-700 leading-relaxed">;
-                  Cookies are small text files that are placed on your computer or mobile device when you visit a website. ;
-                  They are widely used to make websites work more efficiently and to provide information to website owners. ;
-                  Cookies allow a website to recognize a user"s device and remember information about their visit.;
-                </p>;
-              </div>;
+import React from 'react';
+import Link from 'next/link';
+import Head from 'next/head';
 
-              {/* How We Use Cookies */}
-              <div className="mb-8">;
-                <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">;
-                  <Settings className="w-6 h-6 mr-3 text-blue-600" />;
-                  How We Use Cookies;
-                </h2>;
-                <p className="text-gray-700 mb-4">;
-                  Zion Tech Group uses cookies for several purposes:;
-                </p>;
-                <ul className="list-disc list-inside text-gray-700 space-y-2">;
-                  <li>To ensure our website functions properly</li>;
-                  <li>To remember your preferences and settings</li>;
-                  <li>To analyze how our website is used</li>;
-                  <li>To improve our website"s performance and user experience</li>;
-                  <li>To provide personalized content and services</li>;
-                  <li>To measure the effectiveness of our marketing campaigns</li>;
-                </ul>;
-              </div>;
+export default function Cookies() {
+const contact = { 
+  phone: '+1 302 464 0950', 
+  email: 'kleber@ziontechgroup.com', 
+  address: '364 E Main St STE 1008 Middletown DE 19709', 
+  site: 'https://ziontechgroup.com'
+};
 
-              {/* Types of Cookies */}
-              <div className="mb-8">;
-                <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">;
-                  <Database className="w-6 h-6 mr-3 text-blue-600" />;
-                  Types of Cookies We Use;
-                </h2>;
-                ;
-                <div className="space-y-6">;
-                  <div className="border-l-4 border-blue-500 pl-6">;
-                    <h3 className="text-xl font-semibold text-gray-800 mb-2">Essential Cookies</h3>;
-                    <p className="text-gray-700 mb-2">;
-                      These cookies are necessary for the website to function and cannot be switched off in our systems.;
-                    </p>;
-                    <ul className="list-disc list-inside text-gray-600 text-sm space-y-1">;
-                      <li>Session management</li>;
-                      <li>Security features</li>;
-                      <li>Load balancing</li>;
-                      <li>User authentication</li>;
-                    </ul>;
-                  </div>;
+const cookieTypes = [
+  {
+    type: "Essential Cookies",
+    description: "These cookies are necessary for the website to function and cannot be switched off in our systems.",
+    purpose: "Enable basic website functionality, security, and user authentication.",
+    examples: [
+      "Session management cookies",
+      "Security and authentication cookies",
+      "Load balancing cookies",
+      "User interface customization cookies"
+    ],
+    retention: "Session or up to 1 year"
+  },
+  {
+    type: "Analytics Cookies",
+    description: "These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site.",
+    purpose: "Help us understand how visitors interact with our website by collecting and reporting information anonymously.",
+    examples: [
+      "Google Analytics cookies",
+      "Page view tracking",
+      "User behavior analysis",
+      "Performance monitoring"
+    ],
+    retention: "Up to 2 years"
+  },
+  {
+    type: "Functional Cookies",
+    description: "These cookies enable enhanced functionality and personalization, such as videos and live chat.",
+    purpose: "Provide enhanced features and personalization options for a better user experience.",
+    examples: [
+      "Language preference cookies",
+      "Chat widget cookies",
+      "Video player cookies",
+      "Form data cookies"
+    ],
+    retention: "Up to 1 year"
+  },
+  {
+    type: "Marketing Cookies",
+    description: "These cookies may be set through our site by our advertising partners to build a profile of your interests.",
+    purpose: "Show you relevant advertisements on other websites and measure the effectiveness of our marketing campaigns.",
+    examples: [
+      "Advertising network cookies",
+      "Social media tracking cookies",
+      "Remarketing cookies",
+      "Conversion tracking cookies"
+    ],
+    retention: "Up to 2 years"
+  }
+];
 
-                  <div className="border-l-4 border-green-500 pl-6">;
-                    <h3 className="text-xl font-semibold text-gray-800 mb-2">Performance Cookies</h3>;
-                    <p className="text-gray-700 mb-2">;
-                      These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site.;
-                    </p>;
-                    <ul className="list-disc list-inside text-gray-600 text-sm space-y-1">;
-                      <li>Google Analytics</li>;
-                      <li>Page load times</li>;
-                      <li>User behavior tracking</li>;
-                      <li>Error reporting</li>;
-                    </ul>;
-                  </div>;
+  return (
+    <>
+      <Head>
+        <title>Cookie Policy - Zion Tech Group | Cookie Usage & Management</title>
+        <meta name="description" content="Learn about how Zion Tech Group uses cookies on our website, what types of cookies we use, and how you can manage your cookie preferences." />
+        <meta name="keywords" content="cookie policy, cookies, privacy, data collection, website tracking, user preferences" />
+        <link rel="canonical" href={`${contact.site}/cookies`} />
+        <meta property="og:title" content="Cookie Policy - Zion Tech Group | Cookie Usage & Management" />
+        <meta property="og:description" content="Learn about how Zion Tech Group uses cookies on our website, what types of cookies we use, and how you can manage your cookie preferences." />
+        <meta property="og:url" content={`${contact.site}/cookies`} />
+        <meta property="og:type" content="website" />
+      </Head>
 
-                  <div className="border-l-4 border-purple-500 pl-6">;
-                    <h3 className="text-xl font-semibold text-gray-800 mb-2">Functional Cookies</h3>;
-                    <p className="text-gray-700 mb-2">;
-                      These cookies enable the website to provide enhanced functionality and personalization.;
-                    </p>;
-                    <ul className="list-disc list-inside text-gray-600 text-sm space-y-1">;
-                      <li>Language preferences</li>;
-                      <li>Theme settings</li>;
-                      <li>Form data retention</li>;
-                      <li>User preferences</li>;
-                    </ul>;
-                  </div>;
+      <div style={{ minHeight: '100vh', background: 'white' }}>
+        <div style={{ maxWidth: 1000, margin: '0 auto', padding: '40px 20px' }}>
+          <div style={{ textAlign: 'center', marginBottom: 60 }}>
+            <h1 style={{ 
+              fontSize: '2.5rem',
+              fontWeight: 800, 
+              marginBottom: 20,
+              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}>
+              Cookie Policy
+            </h1>
+            <p style={{ fontSize: '1.2rem', color: '#666', maxWidth: 600, margin: '0 auto' }}>
+              Learn about how we use cookies and similar technologies on our website to enhance your experience.
+            </p>
+          </div>
 
-                  <div className="border-l-4 border-orange-500 pl-6">;
-                    <h3 className="text-xl font-semibold text-gray-800 mb-2">Marketing Cookies</h3>;
-                    <p className="text-gray-700 mb-2">;
-                      These cookies may be set through our site by our advertising partners to build a profile of your interests.;
-                    </p>;
-                    <ul className="list-disc list-inside text-gray-600 text-sm space-y-1">;
-                      <li>Social media integration</li>;
-                      <li>Advertising personalization</li>;
-                      <li>Campaign tracking</li>;
-                      <li>Retargeting</li>;
-                    </ul>;
-                  </div>;
-                </div>;
-              </div>;
+          <div style={{ marginBottom: 60 }}>
+            <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: 20 }}>
+              What Are Cookies?
+            </h2>
+            <div style={{
+              background: '#f8fafc',
+              borderRadius: 12,
+              padding: 30,
+              border: '1px solid #e2e8f0',
+              marginBottom: 30
+            }}>
+              <p style={{ fontSize: '1rem', lineHeight: 1.6, color: '#94a3b8' }}>
+                Cookies are small text files that are placed on your computer or mobile device when you visit our website. 
+                They are widely used to make websites work more efficiently and to provide information to website owners.
+              </p>
+            </div>
+          </div>
 
-              {/* Third-Party Cookies */}
-              <div className="mb-8">;
-                <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">;
-                  <Eye className="w-6 h-6 mr-3 text-blue-600" />;
-                  Third-Party Cookies;
-                </h2>;
-                <p className="text-gray-700 mb-4">;
-                  We may also use third-party services that set cookies on our website:;
-                </p>;
-                <div className="bg-gray-50 p-6 rounded-lg">;
-                  <h3 className="text-lg font-semibold text-gray-800 mb-3">Google Analytics</h3>;
-                  <p className="text-gray-700 mb-2">;
-                    We use Google Analytics to analyze website usage and improve our services. Google Analytics uses cookies to collect information about how visitors use our site.;
-                  </p>;
-                  <p className="text-sm text-gray-600">;
-                    <strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy" className="text-blue-600 hover:text-blue-700 underline" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a>;
-                  </p>;
-                </div>;
-              </div>;
+          <div style={{ marginBottom: 60 }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 30 }}>
+              Types of Cookies We Use
+            </h2>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 30 }}>
+              {cookieTypes.map((cookie, index) => (
+                <div key={index} style={{
+                  background: '#f8fafc',
+                  borderRadius: 12,
+                  padding: 30,
+                  border: '1px solid #e2e8f0'
+                }}>
+                  <h3 style={{ 
+                    fontSize: '1.3rem',
+                    fontWeight: 700, 
+                    marginBottom: 15,
+                    color: '#3b82f6'
+                  }}>
+                    {cookie.type}
+                  </h3>
+                  
+                  <p style={{ 
+                    color: '#64748b',
+                    marginBottom: 20, 
+                    lineHeight: 1.6,
+                    fontSize: '1.1rem'
+                  }}>
+                    {cookie.description}
+                  </p>
+                  
+                  <div style={{ marginBottom: 20 }}>
+                    <h4 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: 10, color: '#64748b' }}>
+                      Purpose:
+                    </h4>
+                    <p style={{ color: '#64748b', lineHeight: 1.5 }}>
+                      {cookie.purpose}
+                    </p>
+                  </div>
+                  
+                  <div style={{ marginBottom: 20 }}>
+                    <h4 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: 10, color: '#64748b' }}>
+                      Examples:
+                    </h4>
+                    <ul style={{ color: '#64748b', paddingLeft: 20 }}>
+                      {cookie.examples.map((example, exampleIndex) => (
+                        <li key={exampleIndex} style={{ marginBottom: 5 }}>
+                          {example}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h4 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: 10, color: '#64748b' }}>
+                      Retention Period:
+                    </h4>
+                    <p style={{ color: '#94a3b8' }}>
+                      {cookie.retention}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
-              {/* Managing Cookies */}
-              <div className="mb-8">;
-                <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">;
-                  <Shield className="w-6 h-6 mr-3 text-blue-600" />;
-                  Managing Your Cookie Preferences;
-                </h2>;
-                <p className="text-gray-700 mb-4">;
-                  You have several options for managing cookies:;
-                </p>;
-                ;
-                <div className="space-y-4">;
-                  <div className="bg-blue-50 p-4 rounded-lg">;
-                    <h3 className="text-lg font-semibold text-blue-800 mb-2">Browser Settings</h3>;
-                    <p className="text-gray-700 mb-2">;
-                      Most web browsers allow you to control cookies through their settings preferences. You can:;
-                    </p>;
-                    <ul className="list-disc list-inside text-gray-700 text-sm space-y-1">;
-                      <li>Block all cookies</li>;
-                      <li>Block third-party cookies only</li>;
-                      <li>Delete existing cookies</li>;
-                      <li>Set preferences for specific websites</li>;
-                    </ul>;
-                  </div>;
+          <div style={{ marginBottom: 60 }}>
+            <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: 20 }}>
+              Managing Your Cookie Preferences
+            </h2>
+            <div style={{
+              background: '#f8fafc',
+              borderRadius: 12,
+              padding: 30,
+              border: '1px solid #e2e8f0'
+            }}>
+              <p style={{ fontSize: '1rem', lineHeight: 1.6, color: '#94a3b8', marginBottom: 20 }}>
+                You have the right to choose whether to accept or reject cookies. You can exercise your cookie rights by 
+                setting your preferences in our cookie banner or by adjusting your browser settings.
+              </p>
+              
+              <div style={{ marginBottom: 20 }}>
+                <h3 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
+                  Browser Settings:
+                </h3>
+                <p style={{ color: '#64748b', lineHeight: 1.5 }}>
+                  Most web browsers allow you to control cookies through their settings preferences. You can set your 
+                  browser to refuse cookies or delete certain cookies. However, if you choose to delete or refuse cookies, 
+                  some features of our website may not function properly.
+                </p>
+              </div>
+              
+              <div>
+                <h3 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
+                  Cookie Banner:
+                </h3>
+                <p style={{ color: '#64748b', lineHeight: 1.5 }}>
+                  When you first visit our website, you will see a cookie banner that allows you to accept or reject 
+                  non-essential cookies. You can change your preferences at any time by clicking the cookie settings 
+                  link in our website footer.
+                </p>
+              </div>
+            </div>
+          </div>
 
-                  <div className="bg-green-50 p-4 rounded-lg">;
-                    <h3 className="text-lg font-semibold text-green-800 mb-2">Cookie Consent</h3>;
-                    <p className="text-gray-700">;
-                      When you first visit our website, you'll see a cookie consent banner. You can choose which types of cookies to accept or reject.;
-                    </p>;
-                  </div>;
+          <div style={{ marginBottom: 60 }}>
+            <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: 20 }}>
+              Third-Party Cookies
+            </h2>
+            <div style={{
+              background: '#f8fafc',
+              borderRadius: 12,
+              padding: 30,
+              border: '1px solid rgba(255, 255, 255, 0.1)'
+            }}>
+              <p style={{ fontSize: '1rem', lineHeight: 1.6, color: '#94a3b8', marginBottom: 20 }}>
+                Some cookies on our website are set by third-party services that appear on our pages. These third parties 
+                may use cookies to collect information about your online activities across different websites.
+              </p>
+              
+              <div style={{ display: 'grid', gap: 15 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                  <div style={{ width: 6, height: 6, background: '#3b82f6', borderRadius: '50%' }} />
+                  <span style={{ color: '#94a3b8' }}>Google Analytics - Website analytics and performance monitoring</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                  <div style={{ width: 6, height: 6, background: '#3b82f6', borderRadius: '50%' }} />
+                  <span style={{ color: '#94a3b8' }}>Social Media Platforms - Social sharing and engagement tracking</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                  <div style={{ width: 6, height: 6, background: '#3b82f6', borderRadius: '50%' }} />
+                  <span style={{ color: '#94a3b8' }}>Advertising Networks - Targeted advertising and campaign measurement</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-                  <div className="bg-purple-50 p-4 rounded-lg">;
-                    <h3 className="text-lg font-semibold text-purple-800 mb-2">Opt-Out Links</h3>;
-                    <p className="text-gray-700 mb-2">;
-                      For specific third-party services, you can opt out directly:;
-                    </p>;
-                    <ul className="list-disc list-inside text-gray-700 text-sm space-y-1">;
-                      <li> </a href="https://tools.google.com/dlpage/gaoptout" className="text-blue-600 hover:text-blue-700 underline" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out</a> <//li>;
-                      <li> </a href="https://www.aboutads.info/choices/" className="text-blue-600 hover:text-blue-700 underline" target="_blank" rel="noopener noreferrer">Digital Advertising Alliance Opt-out</a> <//li>;
-                    </ul>;
-                  </div>;
-                </div>;
-              </div>;
-
-              {/* Impact of Disabling Cookies */}
-              <div className="mb-8">;
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Impact of Disabling Cookies</h2>;
-                <p className="text-gray-700 mb-4">;
-                  If you choose to disable cookies, please note that:;
-                </p>;
-                <ul className="list-disc list-inside text-gray-700 space-y-2">;
-                  <li>Some features of our website may not function properly</li>;
-                  <li>Your preferences may not be saved</li>;
-                  <li>You may need to re-enter information more frequently</li>;
-                  <li>Some personalized content may not be available</li>;
-                  <li>We may not be able to provide you with the best possible user experience</li>;
-                </ul>;
-              </div>;
-
-              {/* Updates to Policy */}
-              <div className="mb-8">;
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Updates to This Policy</h2>;
-                <p className="text-gray-700 leading-relaxed">;
-                  We may update this Cookie Policy from time to time to reflect changes in our practices or for other ;
-                  operational, legal, or regulatory reasons. We will notify you of any material changes by posting the ;
-                  new Cookie Policy on this page and updating the "Last updated" date.;
-                </p>;
-              </div>;
-
-              {/* Contact Information */}
-              <div className="mb-8">;
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Us</h2>;
-                <p className="text-gray-700 mb-4">;
-                  If you have any questions about our use of cookies, please contact us:;
-                </p>;
-                <div className="bg-gray-50 p-6 rounded-lg">;
-                  <p className="text-gray-700"> </strong>Email:</strong> kleber@ziontechgroup.com</p>;
-                  <p className="text-gray-700"> </strong>Phone:</strong> +1 302 464 0950</p>;
-                  <p className="text-gray-700"> </strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-    </MainLayout>;
+          <div style={{ 
+            background: '#f8fafc',
+            borderRadius: 12,
+            padding: 30,
+            border: '1px solid #e2e8f0',
+            textAlign: 'center'
+          }}>
+            <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 15 }}>
+              Questions About Our Cookie Policy?
+            </h2>
+            <p style={{ color: '#94a3b8', marginBottom: 20 }}>
+              If you have any questions about our use of cookies or this Cookie Policy, please contact us.
+            </p>
+            <Link href="/contact" style={{
+              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+              color: 'white',
+              padding: '12px 24px',
+              textDecoration: 'none',
+              borderRadius: 8,
+              fontSize: '1rem', fontWeight: 600,
+              display: 'inline-block'
+            }}>
+              Contact Us
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
-export default CookiePolicy

@@ -1,342 +1,374 @@
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import { ;
-  ArrowRight, ;
-  Award, ;
-  CheckCircle, ;
-  Zap, ;
-  Shield, ;
-  Brain, ;
-  Bot, ;
-  Eye, ;
-  MessageSquare, ;
-  BarChart3,;
-  Globe,;
-  Lock,;
-  Cpu,;
-  Smartphone,;
-  Code,;
-  Target,;
-  TrendingUp,;
-  Users,;
-  Clock,;
-  DollarSign,;
-  Phone;,
-} from "lucide-react";
+import React from "react"
+import Head from "next/head"
+import Link from "next/link"
+import { 
+  ArrowRight, 
+  Award, 
+  BarChart3, 
+  Bot, 
+  Brain, 
+  CheckCircle, 
+  Eye, 
+  MessageSquare, 
+  Shield, 
+  Zap,
+  Cloud,
+  Database,
+  Users,
+  Settings,
+  Monitor,
+  Network,
+  FileText,
+  Target,
+  Calendar,
+  Smartphone,
+  Globe,
+  Lock,
+  TrendingUp,
+  Clock,
+  Star,
+  Cpu,
+  Wifi,
+  Server,
+  Code,
+  Mail,
+  Phone,
+  MapPin
+} from "lucide-react"
 
-export default function InnovativeServices() {;
-  const services = [;
-    {;
-      id: 1,;
-      name: "AI-Powered Email Automation Suite",;
-      description: "Intelligent email marketing platform with advanced segmentation, personalization, and automated workflows.",;
-      icon: MessageSquare,;
-      features: [;
-        "Advanced AI-driven segmentation",;
-        "Dynamic content personalization",;
-        "Automated A/B testing",;
-        "Real-time analytics dashboard",;
-        "Multi-channel integration";
-      ],;
-      pricing: "$299 - $1,999/month",;
-      delivery: "2-4 weeks",;
-      category: "AI Automation",;
-      benefits: "Increase email engagement by 300% and reduce manual work by 80%",;
-      roi: "Expected ROI: 400-600% within 6 months";,
-},;
-    {;
-      id: 2,;
-      name: "Smart Inventory Management System",;
-      description: "AI-driven inventory optimization with predictive analytics and automated reordering capabilities.",;
-      icon: BarChart3,;
-      features: [;
-        "Predictive demand forecasting",;
-        "Automated reorder points",;
-        "Real-time inventory tracking",;
-        "Multi-location management",;
-        "Integration with major e-commerce platforms";
-      ],;
-      pricing: "$199 - $1,299/month",;
-      delivery: "3-5 weeks",;
-      category: "AI Analytics",;
-      benefits: "Reduce inventory costs by 25% and prevent stockouts by 95%",;
-      roi: "Expected ROI: 250-400% within 4 months";,
-},;
-    {;
-      id: 3,;
-      name: "AI Customer Support Chatbot",;
-      description: "Advanced conversational AI that handles customer inquiries with human-like understanding and response.",;
-      icon: Bot,;
-      features: [;
-        "Natural language processing",;
-        "Multi-language support",;
-        "Integration with CRM systems",;
-        "24/7 availability",;
-        "Escalation to human agents";
-      ],;
-      pricing: "$149 - $899/month",;
-      delivery: "2-3 weeks",;
-      category: "AI Customer Service",;
-      benefits: "Reduce support costs by 60% and improve response time by 90%",;
-      roi: "Expected ROI: 300-500% within 3 months";,
-},;
-    {;
-      id: 4,;
-      name: "Blockchain Document Verification",;
-      description: "Immutable document verification system using blockchain technology for secure and tamper-proof records.",;
-      icon: Shield,;
-      features: [;
-        "Blockchain-based verification",;
-        "Digital signatures",;
-        "Audit trail",;
-        "Multi-party verification",;
-        "API integration";
-      ],;
-      pricing: "$399 - $2,499/month",;
-      delivery: "4-6 weeks",;
-      category: "Blockchain Security",;
-      benefits: "Eliminate document fraud and reduce verification time by 70%",;
-      roi: "Expected ROI: 200-350% within 6 months";,
-},;
-    {;
-      id: 5,;
-      name: "IoT Device Management Platform",;
-      description: "Comprehensive IoT device monitoring, management, and analytics platform for connected devices.",;
-      icon: Cpu,;
-      features: [;
-        "Real-time device monitoring",;
-        "Predictive maintenance",;
-        "Device lifecycle management",;
-        "Security monitoring",;
-        "Custom dashboards";
-      ],;
-      pricing: "$299 - $1,999/month",;
-      delivery: "5-8 weeks",;
-      category: "IoT Solutions",;
-      benefits: "Reduce device downtime by 40% and optimize maintenance costs by 30%",;
-      roi: "Expected ROI: 180-300% within 8 months";,
-},;
-    {;
-      id: 6,;
-      name: "AI-Powered Social Media Manager",;
-      description: "Intelligent social media management with content creation, scheduling, and performance optimization.",;
-      icon: Globe,;
-      features: [;
-        "AI content generation",;
-        "Optimal posting times",;
-        "Engagement analytics",;
-        "Multi-platform management",;
-        "Brand voice consistency";
-      ],;
-      pricing: "$199 - $1,299/month",;
-      delivery: "2-4 weeks",;
-      category: "AI Marketing",;
-      benefits: "Increase social media engagement by 250% and save 15 hours/week",;
-      roi: "Expected ROI: 350-500% within 4 months";,
-},;
-    {;
-      id: 7,;
-      name: "Smart Contract Development Platform",;
-      description: "No-code platform for creating, deploying, and managing smart contracts on multiple blockchains.",;
-      icon: Code,;
-      features: [;
-        "Visual contract builder",;
-        "Multi-blockchain support",;
-        "Automated testing",;
-        "Deployment management",;
-        "Contract monitoring";
-      ],;
-      pricing: "$499 - $3,999/month",;
-      delivery: "6-10 weeks",;
-      category: "Blockchain Development",;
-      benefits: "Reduce development time by 80% and eliminate coding errors",;
-      roi: "Expected ROI: 400-700% within 6 months";,
-},;
-    {;
-      id: 8,;
-      name: "AI-Powered Lead Scoring System",;
-      description: "Advanced lead qualification and scoring system using machine learning to identify high-value prospects.",;
-      icon: Target,;
-      features: [;
-        "Machine learning algorithms",;
-        "Behavioral analysis",;
-        "Lead prioritization",;
-        "CRM integration",;
-        "Real-time scoring";
-      ],;
-      pricing: "$249 - $1,499/month",;
-      delivery: "3-5 weeks",;
-      category: "AI Sales",;
-      benefits: "Increase conversion rates by 200% and reduce sales cycle by 35%",;
-      roi: "Expected ROI: 300-450% within 5 months";,
-},;
-    {;
-      id: 9,;
-      name: "Quantum-Safe Encryption Service",;
-      description: "Future-proof encryption solution using quantum-resistant algorithms to protect against quantum computing threats.",;
-      icon: Lock,;
-      features: [;
-        "Quantum-resistant algorithms",;
-        "End-to-end encryption",;
-        "Key management",;
-        "Compliance ready",;
-        "API integration";
-      ],;
-      pricing: "$999 - $7,999/month",;
-      delivery: "8-12 weeks",;
-      category: "Quantum Security",;
-      benefits: "Future-proof security and meet compliance requirements",;
-      roi: "Expected ROI: 150-250% within 12 months";,
-},;
-    {;
-      id: 10,;
-      name: "AI-Powered Code Review Assistant",;
-      description: "Intelligent code analysis and review system that identifies bugs, security vulnerabilities, and optimization opportunities.",;
-      icon: Code,;
-      features: [;
-        "Automated code analysis",;
-        "Security vulnerability detection",;
-        "Performance optimization suggestions",;
-        "Code quality metrics",;
-        "Integration with development tools";
-      ],;
-      pricing: "$199 - $1,299/month",;
-      delivery: "3-5 weeks",;
-      category: "AI Development",;
-      benefits: "Reduce bugs by 70% and improve code quality by 50%",;
-      roi: "Expected ROI: 250-400% within 4 months";,
-}
-  ];
+const PageTransition = ({ children }: { children: React.ReactNode }) => <div>{children}</div>
 
-  return (;
-    <>;
-      <Head>;
-        <title>Innovative Services - Zion Tech Group</title>;
-        <meta name="description" content="Cutting-edge micro SaaS, IT, and AI services that drive innovation and business growth." />;
-        <meta name="viewport" content="width=device-width, initial-scale=1" />;
-      </Head>;
+export default function InnovativeServices() {
+  const title = "Innovative Services — Zion Tech Group"
+  const description = "Cutting-edge micro SaaS, IT, and AI services that transform businesses with intelligent automation and innovative solutions."
 
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">;
-        {/* Hero Section */}
-        <section className="py-20 px-4">;
-          <div className="max-w-6xl mx-auto text-center">;
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">;
-              Innovative Technology Services;
-            </h1>;
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">;
-              Discover our cutting-edge micro SaaS, IT, and AI solutions designed to transform your business ;
-              and drive unprecedented growth in the digital age.;
-            </p>;
-            <div className="flex justify-center space-x-4">;
-              <Link href="/contact";
-                className="inline-flex items-center px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors">;
-                <span>Get Started</span>;
-                <ArrowRight className="w-5 h-5 ml-2" />;
-              </Link>;
-              <Link href="/services";
-                className="inline-flex items-center px-8 py-3 border border-blue-600 text-blue-600 hover:bg-blue-50 font-medium rounded-lg transition-colors">;
-                <span>View All Services</span>;
-              </Link>;
-            </div>;
-          </div>;
-        </section>;
+  const innovativeServices = [
+    {
+      title: "AI-Powered Email Automation Suite",
+      description: "Intelligent email marketing platform with AI-driven personalization and automated follow-up sequences",
+      icon: Mai l,
+      features: [
+        "AI-powered email content generation",
+        "Behavioral trigger automation",
+        "Advanced segmentation and personalization",
+        "A/B testing with machine learning optimization",
+        "Deliverability optimization and monitoring",
+        "ROI tracking and analytics dashboard"
+      ],
+      pricing: "$299 - $1,999/month",
+      delivery: "2-3 weeks",
+      category: "Email Marketing SaaS",
+      benefits: "Increase email engagement by 40% and reduce manual work by 60%",
+      marketPrice: "Average market price: $500-2,500/month"
+    },
+    {
+      title: "Smart Inventory Management System",
+      description: "AI-driven inventory optimization with predictive analytics and automated reordering",
+      icon: Databas e,
+      features: [
+        "Predictive demand forecasting",
+        "Automated reorder point calculations",
+        "Multi-location inventory tracking",
+        "Supplier performance analytics",
+        "Cost optimization recommendations",
+        "Integration with major e-commerce platforms"
+      ],
+      pricing: "$199 - $1,299/month",
+      delivery: "3-4 weeks",
+      category: "Inventory SaaS",
+      benefits: "Reduce inventory costs by 25% and prevent stockouts by 90%",
+      marketPrice: "Average market price: $300-1,500/month"
+    },
+    {
+      title: "AI Customer Support Chatbot",
+      description: "Advanced conversational AI that handles customer inquiries with human-like responses",
+      icon: Bo t,
+      features: [
+        "Natural language processing and understanding",
+        "Multi-language support and translation",
+        "Integration with CRM and helpdesk systems",
+        "Sentiment analysis and escalation triggers",
+        "Knowledge base learning and updates",
+        "Performance analytics and optimization"
+      ],
+      pricing: "$149 - $899/month",
+      delivery: "2-3 weeks",
+      category: "Customer Support AI",
+      benefits: "Handle 80% of customer inquiries automatically, 24/7 availability",
+      marketPrice: "Average market price: $200-1,200/month"
+    },
+    {
+      title: "Blockchain Document Verification",
+      description: "Secure document authentication and verification using blockchain technology",
+      icon: Shiel d,
+      features: [
+        "Immutable document verification",
+        "Digital signature validation",
+        "Cross-platform document sharing",
+        "Audit trail and compliance reporting",
+        "API integration for existing systems",
+        "Multi-signature approval workflows"
+      ],
+      pricing: "$399 - $2,499/month",
+      delivery: "4-6 weeks",
+      category: "Blockchain SaaS",
+      benefits: "Eliminate document fraud and reduce verification time by 70%",
+      marketPrice: "Average market price: $500-3,000/month"
+    },
+    {
+      title: "IoT Device Management Platform",
+      description: "Comprehensive IoT device monitoring, management, and analytics platform",
+      icon: Wif i,
+      features: [
+        "Real-time device monitoring and alerts",
+        "Remote device configuration and updates",
+        "Data collection and analytics dashboard",
+        "Predictive maintenance scheduling",
+        "Security monitoring and threat detection",
+        "Integration with cloud platforms"
+      ],
+      pricing: "$299 - $1,999/month",
+      delivery: "5-7 weeks",
+      category: "IoT Management",
+      benefits: "Reduce device downtime by 50% and improve operational efficiency",
+      marketPrice: "Average market price: $400-2,500/month"
+    },
+    {
+      title: "AI-Powered Social Media Manager",
+      description: "Intelligent social media content creation, scheduling, and engagement automation",
+      icon: Glob e,
+      features: [
+        "AI-generated content for multiple platforms",
+        "Optimal posting time recommendations",
+        "Hashtag research and optimization",
+        "Engagement tracking and analytics",
+        "Competitor analysis and insights",
+        "Multi-account management dashboard"
+      ],
+      pricing: "$199 - $1,299/month",
+      delivery: "2-3 weeks",
+      category: "Social Media SaaS",
+      benefits: "Increase social media engagement by 60% and save 10+ hours weekly",
+      marketPrice: "Average market price: $300-1,800/month"
+    },
+    {
+      title: "Smart Contract Development Platform",
+      description: "No-code smart contract creation and deployment platform for blockchain applications",
+      icon: Cod e,
+      features: [
+        "Visual smart contract builder",
+        "Pre-built contract templates",
+        "Automated testing and deployment",
+        "Gas optimization recommendations",
+        "Multi-blockchain support",
+        "Security audit integration"
+      ],
+      pricing: "$499 - $3,999/month",
+      delivery: "6-8 weeks",
+      category: "Blockchain Development",
+      benefits: "Reduce smart contract development time by 80% and costs by 60%",
+      marketPrice: "Average market price: $800-5,000/month"
+    },
+    {
+      title: "AI-Powered Lead Scoring System",
+      description: "Intelligent lead qualification and scoring using machine learning algorithms",
+      icon: Targe t,
+      features: [
+        "Behavioral pattern analysis",
+        "Predictive lead scoring models",
+        "Real-time lead qualification",
+        "CRM integration and automation",
+        "Custom scoring criteria setup",
+        "Performance analytics and optimization"
+      ],
+      pricing: "$249 - $1,499/month",
+      delivery: "3-4 weeks",
+      category: "Sales Automation AI",
+      benefits: "Increase lead conversion rates by 35% and sales efficiency by 45%",
+      marketPrice: "Average market price: $400-2,000/month"
+    },
+    {
+      title: "Quantum-Safe Encryption Service",
+      description: "Future-proof encryption solutions resistant to quantum computing attacks",
+      icon: Loc k,
+      features: [
+        "Post-quantum cryptographic algorithms",
+        "Hybrid classical-quantum encryption",
+        "API integration for existing systems",
+        "Compliance with NIST standards",
+        "Performance optimization",
+        "Migration tools and support"
+      ],
+      pricing: "$999 - $7,999/month",
+      delivery: "8-12 weeks",
+      category: "Cybersecurity",
+      benefits: "Future-proof your data security against quantum computing threats",
+      marketPrice: "Average market price: $1,500-10,000/month"
+    },
+    {
+      title: "AI-Powered Code Review Assistant",
+      description: "Automated code analysis, review, and optimization using advanced AI",
+      icon: Cp u,
+      features: [
+        "Automated code quality analysis",
+        "Security vulnerability detection",
+        "Performance optimization suggestions",
+        "Best practice recommendations",
+        "Integration with popular IDEs",
+        "Team collaboration and reporting"
+      ],
+      pricing: "$199 - $1,299/month",
+      delivery: "3-4 weeks",
+      category: "Development Tools",
+      benefits: "Improve code quality by 40% and reduce bugs by 60%",
+      marketPrice: "Average market price: $300-1,800/month"
+    }
+  ]
+
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description}  />
+        <meta name="keywords" content="innovative services, micro SaaS, AI services, IT solutions, blockchain, IoT, automation"  />
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />
+        <link rel="canonical" href="https://ziontechgroup.com/innovative-services"  />
+      </Head>
+      
+      <PageTransition>
+        {/* Header Section */}
+        <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: p y-32">
+          <div className="mx-auto max-w-7xl px-6 lg: p x-8">
+            <div className="mx-auto max-w-2xl text-center">
+              <div className="flex items-center justify-center mb-4">
+                <Award className="h-6 w-6 text-blue-600 mr-2"  />
+                <span className="text-base font-semibold leading-7 text-blue-600">
+                  Innovative Services
+                </span>
+              </div>
+              <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl">
+                Cutting-Edge Technology Solutions
+              </h1>
+              <p className="mt-6 text-lg leading-8 text-gray-600">
+                Discover our latest innovative services that combine AI, blockchain, IoT, and advanced automation 
+                to transform your business operations and drive unprecedented growth.
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* Services Grid */}
-        <section className="py-16 px-4">;
-          <div className="max-w-7xl mx-auto">;
-            <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Our Innovative Services</h2>;
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {services.map((service) => {;
-                const IconComponent = service.icon;
-                return (;
-                  <div key={service.id} className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">;
-                    <div className="flex items-center mb-4">;
-                      <IconComponent className="w-12 h-12 text-blue-600 mr-4" />;
-                      <div>;
-                        <h3 className="text-xl font-semibold text-gray-900">{service.name}</h3>;
-                        <span className="text-sm text-blue-600 font-medium">{service.category}</span>;
-                      </div>;
-                    </div>;
-                    ;
-                    <p className="text-gray-600 mb-4">{service.description}</p>;
-                    ;
-                    <div className="mb-4">;
-                      <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>;
-                      <ul className="text-sm text-gray-600 space-y-1">;
-                        {service.features.map((feature, index) => (;
-                          <li key={index} className="flex items-center">;
-                            <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
-                            {feature}
-                          </li>;
-                        ))}
-                      </ul>;
-                    </div>;
-
-                    <div className="border-t pt-4 space-y-2">;
-                      <div className="flex items-center justify-between">;
-                        <span className="text-sm font-medium text-gray-700">Pricing:</span>;
-                        <span className="text-sm font-bold text-green-600">{service.pricing}</span>;
-                      </div>;
-                      <div className="flex items-center justify-between">;
-                        <span className="text-sm font-medium text-gray-700">Delivery:</span>;
-                        <span className="text-sm text-gray-600">{service.delivery}</span>;
-                      </div>;
-                      <div className="flex items-center justify-between">;
-                        <span className="text-sm font-medium text-gray-700">Expected ROI:</span>;
-                        <span className="text-sm font-bold text-blue-600">{service.roi}</span>;
-                      </div>;
-                    </div>;
-
-                    <div className="mt-4 p-3 bg-blue-50 rounded-lg">;
-                      <p className="text-sm text-blue-800 font-medium">{service.benefits}</p>;
-                    </div>;
-
-                    <Link href="/contact";
-                      className="mt-4 w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors">;
-                      <span>Get Quote</span>;
-                      <ArrowRight className="w-4 h-4 ml-2" />;
-                    </Link>;
-                  </div>;
-                );,
-})}
-            </div>;
-          </div>;
-        </section>;
+        <section className="py-24 sm: p y-32">
+          <div className="mx-auto max-w-7xl px-6 lg: p x-8">
+            <div className="grid gap-8 lg: gri d-cols-2">
+              {innovativeServices.map((service, index) => (
+                <div
+                  key={index}
+                  className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shado w-lg transition-all duration-300 hover: borde r-blue-300"
+                >
+                  <div className="flex items-center gap-x-3 mb-6">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover: b g-blue-700 transition-colors">
+                      <service.icon className="h-7 w-7 text-white" />
+                    </div>
+                    <div>
+                      <h2 className="text-xl font-semibold text-gray-900">
+                        {service.title}
+                      </h2>
+                      <p className="text-sm text-blue-600 font-medium">
+                        {service.category}
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-600 mb-6">
+                    {service.description}
+                  </p>
+                  
+                  <ul className="space-y-3 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center gap-x-3">
+                        <CheckCircle className="h-4 w-4 text-blue-600"  />
+                        <span className="text-sm text-gray-700">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center space-x-2 text-sm text-gray-500">
+                      <Clock className="h-4 w-4"  />
+                      <span>{service.delivery}</span>
+                    </div>
+                    <div className="flex items-center space-x-2 text-sm text-gray-500">
+                      <TrendingUp className="h-4 w-4"  />
+                      <span>{service.pricing}</span>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-green-50 p-4 rounded-lg mb-4">
+                    <p className="text-sm text-green-800 font-medium mb-1">Key Benefits:</p>
+                    <p className="text-sm text-green-700">{service.benefits}</p>
+                  </div>
+                  
+                  <div className="bg-blue-50 p-4 rounded-lg mb-6">
+                    <p className="text-sm text-blue-800 font-medium mb-1">Market Pricing:</p>
+                    <p className="text-sm text-blue-700">{service.marketPrice}</p>
+                  </div>
+                  
+                  <div className="flex items-center justify-between">
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center text-sm font-medium text-blue-600 hover: tex t-blue-500"
+                    >
+                      Get Started
+                      <ArrowRight className="ml-1 h-4 w-4"  />
+                    </Link>
+                    <Link
+                      href="/request-quote"
+                      className="inline-flex items-center px-4 py-2 border border-blue-600 text-blue-600 hover: b g-blue-50 font-medium rounded-lg transition-colors"
+                    >
+                      Request Quote
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* Contact Section */}
-        <section className="bg-blue-600 text-white py-20 px-4">;
-          <div className="max-w-6xl mx-auto text-center">;
-            <h2 className="text-4xl font-bold mb-6">Ready to Innovate?</h2>;
-            <p className="text-xl mb-8 max-w-3xl mx-auto">;
-              Transform your business with our cutting-edge technology solutions. ;
-              Contact us today to discuss your project requirements.;
-            </p>;
-            <div className="grid md:grid-cols-3 gap-8 mb-8">;
-              <div className="text-center">;
-                <Phone className="w-8 h-8 mx-auto mb-4" />;
-                <h3 className="font-semibold mb-2">Phone</h3>;
-                <p>+1 302 464 0950</p>;
-              </div>;
-              <div className="text-center">;
-                <MessageSquare className="w-8 h-8 mx-auto mb-4" />;
-                <h3 className="font-semibold mb-2">Email</h3>;
-                <p>kleber@ziontechgroup.com</p>;
-              </div>;
-              <div className="text-center">;
-                <Globe className="w-8 h-8 mx-auto mb-4" />;
-                <h3 className="font-semibold mb-2">Website</h3>;
-                <p>https://ziontechgroup.com</p>;
-              </div>;
-            </div>;
-            <Link href="/contact";
-              className="inline-flex items-center px-8 py-3 bg-white hover:bg-gray-100 text-blue-600 font-medium rounded-lg transition-colors">;
-              <span>Contact Us Today</span>;
-              <ArrowRight className="w-5 h-5 ml-2" />;
-            </Link>;
-          </div>;
-        </section>;
-      </div>;
-    </>;
-  );,
+        <section className="bg-gray-50 py-16">
+          <div className="mx-auto max-w-7xl px-6 lg: p x-8">
+            <div className="text-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+                Contact our experts to discuss how these innovative services can drive your business forward.
+              </p>
+              <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-3 bg-blue-600 hover: b g-blue-700 text-white font-medium rounded-lg transition-colors"
+                >
+                  <Phone className="w-5 h-5 mr-2"  />
+                  +1 302 464 0950
+                </Link>
+                <Link
+                  href="mailto: klebe r@ziontechgroup.com"
+                  className="inline-flex items-center px-8 py-3 border border-blue-600 text-blue-600 hover: b g-blue-50 font-medium rounded-lg transition-colors"
+                >
+                  <Mail className="w-5 h-5 mr-2"  />
+                  kleber@ziontechgroup.com
+                </Link>
+              </div>
+              <div className="mt-6 text-sm text-gray-500">
+                <MapPin className="w-4 h-4 inline mr-1"  />
+                364 E Main St STE 1008, Middletown DE 19709
+              </div>
+            </div>
+          </div>
+        </section>
+      </PageTransition>
+    </>
+  )
 }

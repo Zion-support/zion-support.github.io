@@ -1,102 +1,74 @@
-import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-
-// Minimal, readable Services page. Preserves existing offerings concept and adds more without removing.
-
-type Service = {
-  title: string
-  href: string
-  price: string
-  bullets: string[]
-  category: 'Micro SaaS' | 'AI Services' | 'IT Services'
-}
-
-const services: Service[] = [
-  // Existing-style Micro SaaS (kept) + new
-  { title: 'Cloud Cost Guard (FinOps Assistant)', href: '/services/micro-saas', price: 'Typical: $299–$1,499/month', bullets: ['Anomaly detection', 'Rightsizing', 'Forecasting'], category: 'Micro SaaS' },
-  { title: 'API Rate Limiter & Analytics', href: '/services/micro-saas', price: 'Typical: $199–$999/month', bullets: ['Smart throttling', 'Usage analytics', 'Monetization hooks'], category: 'Micro SaaS' },
-  { title: 'Smart Document Processing', href: '/services/micro-saas', price: 'Typical: $399–$1,999/month', bullets: ['OCR + extraction', 'Validation rules', 'Workflow automation'], category: 'Micro SaaS' },
-  { title: 'SEO Content Optimizer', href: '/services/micro-saas', price: 'Typical: $149–$699/month', bullets: ['Keyword insights', 'Briefs', 'SERP tracking'], category: 'Micro SaaS' },
-  // New Micro SaaS
-  { title: 'Privacy Policy & Cookie Manager', href: '/services/micro-saas', price: 'Typical: $49–$299/month', bullets: ['GDPR/CCPA banners', 'DSAR inbox', 'Geo rules'], category: 'Micro SaaS' },
-  { title: 'Uptime & Core Web Vitals Monitor', href: '/services/micro-saas', price: 'Typical: $59–$399/month', bullets: ['SLAs', 'Synthetic checks', 'CWV alerts'], category: 'Micro SaaS' },
-  { title: 'Sales Engineering Demo Hub', href: '/services/micro-saas', price: 'Typical: $99–$599/month', bullets: ['Live demos', 'Usage analytics', 'Lead capture'], category: 'Micro SaaS' },
-
-  // AI Services (existing concepts retained) + new
-  { title: 'AI Customer Support Automation', href: '/ai-services', price: 'Setup: $2k–$8k, usage-based', bullets: ['Chat + email triage', 'Escalations', 'Knowledge mining'], category: 'AI Services' },
-  { title: 'Predictive Analytics & Forecasting', href: '/ai-services', price: 'Project: $4k–$20k', bullets: ['Demand', 'Churn', 'Revenue'], category: 'AI Services' },
-  { title: 'LLM Evaluation & Safety Suite', href: '/ai-services', price: 'Typical: $799–$3,500/month', bullets: ['Guardrails', 'Jailbreak tests', 'Bias/toxicity'], category: 'AI Services' },
-  { title: 'RAG Search & Knowledge Agents', href: '/ai-services', price: 'Project: $6k–$35k', bullets: ['Hybrid search', 'Eval harness', 'Observability'], category: 'AI Services' },
-  { title: 'Vision QA for Manufacturing', href: '/ai-services', price: 'Project: $8k–$50k', bullets: ['Defect detect', 'Edge deploy', 'Dashboards'], category: 'AI Services' },
-
-  // IT Services (existing concepts retained) + new
-  { title: 'Cloud Platforms & SRE', href: '/cloud-platforms', price: 'Project: $8k–$60k', bullets: ['Kubernetes', 'Serverless', 'IaC'], category: 'IT Services' },
-  { title: 'Cybersecurity & Zero Trust', href: '/cybersecurity', price: 'Project: $6k–$40k', bullets: ['ZTA', 'SOC2/GDPR', 'IR plan'], category: 'IT Services' },
-  { title: 'Data Platform & MLOps', href: '/data-analytics', price: 'Project: $12k–$80k', bullets: ['Data mesh', 'Feature store', 'ML pipelines'], category: 'IT Services' },
-  { title: 'Observability & Reliability', href: '/cloud-devops', price: 'Project: $8k–$45k', bullets: ['Tracing', 'SLO/SLI', 'Chaos drills'], category: 'IT Services' }
-]
-
-const groups = [
-  { name: 'Micro SaaS', description: 'Lightweight, high-impact products delivered fast.', color: 'text-orange-600' },
-  { name: 'AI Services', description: 'Applied AI that moves business metrics.', color: 'text-blue-600' },
-  { name: 'IT Services', description: 'Reliable platforms, security, and operations.', color: 'text-green-600' }
-]
+import React from 'react';
+import Head from 'next/head';
 
 export default function Services() {
-  const title = 'Services — Zion Tech Group'
-  const description = 'AI, Micro SaaS, and IT services with transparent pricing and clear outcomes.'
-
   return (
     <>
       <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
+        <title>Services — Zion Tech Group</title>
+        <meta name="description" content="Comprehensive technology services including AI, cybersecurity, cloud solutions, and digital transformation." />
         <link rel="canonical" href="https://ziontechgroup.com/services" />
       </Head>
-      <main className="min-h-screen bg-white">
-        <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-          <h1 className="text-3xl md:text-4xl font-bold mb-3">Our Services</h1>
-          <p className="text-gray-600 mb-8">Real, production-grade solutions. No mockups.</p>
 
-          {groups.map((g) => (
-            <div key={g.name} className="mb-10">
-              <div className="flex items-baseline justify-between mb-3">
-                <h2 className={`text-2xl font-semibold ${g.color}`}>{g.name}</h2>
-                <span className="text-sm text-gray-500">{g.description}</span>
-              </div>
-              <div className="grid gap-6 md:grid-cols-2">
-                {services
-                  .filter((s) => s.category === (g.name as Service['category']))
-                  .map((s) => (
-                    <Link key={`${g.name}-${s.title}`} href={s.href} className="block border rounded-lg p-6 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-200">
-                      <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-lg font-semibold text-gray-900">{s.title}</h3>
-                        <span className="text-sm text-gray-500 whitespace-nowrap">{s.price}</span>
-                      </div>
-                      <ul className="text-gray-600 list-disc pl-5 space-y-1">
-                        {s.bullets.map((b) => (
-                          <li key={`${s.title}-${b}`}>{b}</li>
-                        ))}
-                      </ul>
-                    </Link>
-                  ))}
-              </div>
-            </div>
-          ))}
-
-          <div className="mt-12 border-t pt-6">
-            <h2 className="text-xl font-semibold mb-2">Contact</h2>
-            <p className="text-gray-700 mb-1">
-              Mobile: <a className="text-blue-600 hover:underline" href="tel:+13024640950">+1 302 464 0950</a>
+      <div className="min-h-screen bg-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Our Services
+            </h1>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Comprehensive technology solutions to drive your business forward
             </p>
-            <p className="text-gray-700 mb-1">
-              E-mail: <a className="text-blue-600 hover:underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>
-            </p>
-            <p className="text-gray-700">Address: 364 E Main St STE 1008 Middletown DE 19709</p>
           </div>
-        </section>
-      </main>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                AI Services
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Machine learning, natural language processing, and computer vision solutions.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-2">
+                <li>• Predictive Analytics</li>
+                <li>• Chatbot Development</li>
+                <li>• Image Recognition</li>
+                <li>• Custom AI Models</li>
+              </ul>
+            </div>
+            
+            <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                Cybersecurity
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Advanced security solutions to protect your digital assets and data.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-2">
+                <li>• Security Audits</li>
+                <li>• Threat Detection</li>
+                <li>• Compliance Management</li>
+                <li>• Incident Response</li>
+              </ul>
+            </div>
+            
+            <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                Cloud Solutions
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Scalable cloud infrastructure and migration services.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-2">
+                <li>• Cloud Migration</li>
+                <li>• Infrastructure Setup</li>
+                <li>• DevOps Implementation</li>
+                <li>• Monitoring & Support</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
-  )
+  );
 }
