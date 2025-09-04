@@ -29,7 +29,9 @@ const services = {
     { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' },
     { name: 'Voice AI Assistant', href: '/ai-services#voice-ai-assistant' },
     { name: 'AI Fraud Detection', href: '/ai-services#ai-fraud-detection' },
-    { name: 'AI Drug Discovery', href: '/ai-services#ai-drug-discovery' }
+    { name: 'AI Mental Health Companion', href: '/ai-services#ai-mental-health' },
+    { name: 'AI Smart City Management', href: '/ai-services#ai-smart-city' },
+    { name: 'AI Agricultural Intelligence', href: '/ai-services#ai-agricultural' }
   ],
   'IT Services': [
     { name: 'Cloud Infrastructure Management', href: '/it-services#cloud-infrastructure' },
@@ -39,7 +41,9 @@ const services = {
     { name: 'DevOps & CI/CD', href: '/it-services#devops-cicd' },
     { name: 'Data Center Migration', href: '/it-services#data-center-migration' },
     { name: 'IT Asset Management', href: '/it-services#it-asset-management' },
-    { name: 'Backup & Disaster Recovery', href: '/it-services#backup-disaster-recovery' }
+    { name: 'Zero Trust Security', href: '/it-services#zero-trust' },
+    { name: 'Edge Computing', href: '/it-services#edge-computing' },
+    { name: '5G Network Infrastructure', href: '/it-services#5g-networks' }
   ],
   'Micro SaaS': [
     { name: 'Cloud Cost Guard', href: '/micro-saas#cloud-cost-guard' },
@@ -49,7 +53,9 @@ const services = {
     { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' },
     { name: 'Workflow Automation', href: '/micro-saas#workflow-automation' },
     { name: 'AI Lead Scoring', href: '/micro-saas#ai-lead-scoring' },
-    { name: 'Social Media Scheduler', href: '/micro-saas#social-media-scheduler' }
+    { name: 'AI Legal Document Analyzer', href: '/micro-saas#ai-legal-analyzer' },
+    { name: 'Smart Energy Management', href: '/micro-saas#smart-energy' },
+    { name: 'AI Medical Diagnosis Assistant', href: '/micro-saas#ai-medical-diagnosis' }
   ]
 };
 

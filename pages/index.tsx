@@ -7,8 +7,9 @@ import MainLayout from '../components/layout/MainLayout';
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' },
-  { number: '500+', label: 'Projects Completed' },
-  { number: '50+', label: 'Expert Team Members' }
+  { number: '1000+', label: 'Projects Completed' },
+  { number: '110+', label: 'Services Offered' },
+  { number: '75+', label: 'Expert Team Members' }
 ];
 
 const services = [
@@ -198,10 +199,11 @@ export default function HomePage() {
             >
               <h3 className="text-xl font-bold text-gray-900 mb-4">🚀 Innovation Focus</h3>
               <ul className="text-gray-600 space-y-2">
-                <li>• 50+ cutting-edge services</li>
-                <li>• AI, Blockchain, IoT expertise</li>
+                <li>• 110+ cutting-edge services</li>
+                <li>• AI, Blockchain, IoT, 5G expertise</li>
                 <li>• Quantum computing solutions</li>
                 <li>• Future-ready technology stack</li>
+                <li>• Industry-leading innovation</li>
               </ul>
             </motion.div>
 
