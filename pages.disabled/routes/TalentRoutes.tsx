@@ -1,3 +1,0 @@
-
-export default function TalentRoutes(function TalentRoutes() {): any {}
-
