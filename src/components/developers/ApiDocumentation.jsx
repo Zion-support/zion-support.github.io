@@ -33,11 +33,6 @@
 
     'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
 }
-});
-const data = await response.json();`
-// // // // // // // // console.log(data);`,`
-            python: `import requests
-headers = {
 
   'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
 }
