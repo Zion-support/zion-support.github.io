@@ -226,7 +226,13 @@
     <loc>https://ziontechgroup.com/docs/first-steps</loc>
     <lastmod>2025-09-04T03:49:51.167Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/cookies</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/docs/getting-started</loc>
