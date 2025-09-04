@@ -74,7 +74,7 @@ export default [
   {
     files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
     languageOptions: {
-      parser: typescriptParser,
+      parser: tsParser,
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -92,12 +92,12 @@ export default [
       },
     },
     plugins: {
-      '@typescript-eslint': typescript,
+      '@typescript-eslint': tsEslint,
       'react': react,
       'react-hooks': reactHooks,
     },
     rules: {
-      ...typescript.configs.recommended.rules,
+      ...tsEslint.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       'no-unused-vars': 'warn',
