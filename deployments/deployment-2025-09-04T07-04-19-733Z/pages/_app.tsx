@@ -1,17 +1,1 @@
-import type { AppProps } from 'next/app';
-import { useEffect } from 'react';
-
-export function reportWebVitals(metric: any) {
-  if (typeof window === 'undefined') return;
-  if (metric && 'name' in metric) {
-    console.log('[WebVitals]', metric.name, Math.round(metric.value));
-  }
-}
-
-export default function MyApp({ Component, pageProps }: AppProps) {
-  useEffect(() => {
-    // Minimal global side effects placeholder
-  }, []);
-  return <Component {...pageProps} />;
-}
-
+import type { AppProps } from 'next/app'; import { useEffect } from 'react'; export function reportWebVitals(metric: any) { if (typeof window === 'undefined') return; if (metric && 'name' in metric) { console.log('[WebVitals]',metric.name,Math.round(metric.value))} } export default function MyApp({ Component,pageProps }: AppProps) { useEffect(() => { },[]); return <Component {...pageProps} /> }

@@ -1,3 +1,1 @@
-// comment;
-export const cartUtils = {};
-export default cartUtils;
+export const cartUtils = {}; export default cartUtils;

@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 export default [
   {
     ignores: ['**/*']
   }
 ];
+=======
+import js from '@eslint/js'; import typescript from '@typescript-eslint/eslint-plugin'; import typescriptParser from '@typescript-eslint/parser'; import react from 'eslint-plugin-react'; import reactHooks from 'eslint-plugin-react-hooks'; export default [ js.configs.recommended,{ files: ['***.jsx','***.tsx'],languageOptions: { parser: typescriptParser,parserOptions: { ecmaVersion: 'latest',sourceType: 'module',ecmaFeatures: { jsx: true,},},globals: { window: 'readonly',document: 'readonly',console: 'readonly',process: 'readonly',PerformanceObserver: 'readonly',JSX: 'readonly',React: 'readonly',__dirname: 'readonly',},},plugins: { '@typescript-eslint': typescript,'react': react,'react-hooks': reactHooks,},rules: { ...typescript.configs.recommended.rules,...react.configs.recommended.rules,...reactHooks.configs.recommended.rules,'no-unused-vars': 'warn','no-console': 'off','prefer-const': 'error','no-var': 'error','react/prop-types': 'off','react/react-in-jsx-scope': 'off','react/no-unescaped-entities': 'off','@typescript-eslint/no-unused-vars': 'warn','@typescript-eslint/no-explicit-any': 'warn',},settings: { react: { version: 'detect',},},},{ files: ['****','pages._quarantine**','scripts*.cjs','next.config.*','playwright.config.ts','vite.config-backup.ts','services-broken.tsx','types/service-variants.js','public/**','.venv/**','api/**','jest.config.*','fix-*.js','fix-*.jsx','pages/**','components/**','src/**','lib/**','utils/**','deployments/**','hooks/**','.eslintrc.js','.eslintrc.cjs','.eslintrc.disabled.js','.prettierrc.js','pages.__backup/**','pages-disabled/**','pages.disabled_auto/**'],}];
+>>>>>>> chore/automation-improvements

@@ -1,0 +1,74 @@
+{
+  "timestamp": "2025-09-04T13:10:01.595Z",
+  "summary": {
+    "total": 10,
+    "successful": 6,
+    "failed": 4
+  },
+  "results": [
+    {
+      "name": "Error Prevention System",
+      "success": true,
+      "output": "[2025-09-04T13:09:22.566Z] 🛡️ Starting Error Prevention System...\n[2025-09-04T13:09:22.567Z] 📊 Generating error prevention report...\n[2025-09-04T13:09:22.567Z] 🔍 Checking TypeScript errors...\n[2025-09-04T13:09:25.931Z] ❌ Found 0 TypeScript errors\n[2025-09-04T13:09:25.931Z] 🔍 Checking linting errors...\n[2025-09-04T13:09:26.774Z] ✅ No linting errors found\n[2025-09-04T13:09:26.774Z] 🔨 Checking build errors...\n[2025-09-04T13:09:29.839Z] ✅ Build completed successfully\n[2025-09-04T13:09:29.839Z] 🧪 Checking test errors...\n[2025-09-04T13:09:38.142Z] ❌ Tests failed with 0 errors\n[2025-09-04T13:09:38.142Z] 🔍 Checking for potential runtime errors...\n[2025-09-04T13:09:39.230Z] 🔍 Found 179593 potential runtime errors\n[2025-09-04T13:09:39.702Z] 📄 Error prevention report generated: /workspace/error-prevention-reports/error-prevention-report-1756991379230.json\n[2025-09-04T13:09:39.702Z] 🎉 Error prevention analysis completed!\n[2025-09-04T13:09:39.702Z] 🔍 TypeScript errors: 0\n[2025-09-04T13:09:39.702Z] 🔍 Linting errors: 0\n[2025-09-04T13:09:39.702Z] 🔨 Build status: success\n[2025-09-04T13:09:39.702Z] 🧪 Tests: failed\n[2025-09-04T13:09:39.702Z] 🔍 Runtime errors: 179593\n[2025-09-04T13:09:39.702Z] 💡 Recommendations: 2\n\n🎉 Error Prevention System completed successfully!\n🔍 TypeScript errors: 0\n💡 Recommendations: 2\n"
+    },
+    {
+      "name": "Performance Optimizer",
+      "success": true,
+      "output": "[2025-09-04T13:09:39.815Z] [INFO] 🚀 Starting Performance Optimizations\n[2025-09-04T13:09:39.817Z] [INFO] ⚡ Creating performance optimizations...\n[2025-09-04T13:09:39.817Z] [INFO] Created PerformanceMonitor component\n[2025-09-04T13:09:39.817Z] [INFO] 📊 Creating bundle analyzer...\n[2025-09-04T13:09:39.817Z] [INFO] Created BundleAnalyzer component\n[2025-09-04T13:09:39.817Z] [INFO] ✅ Performance optimizations completed successfully\n"
+    },
+    {
+      "name": "Security Auditor",
+      "success": true,
+      "output": "[2025-09-04T13:09:39.837Z] 🔒 Starting Security Auditor...\n[2025-09-04T13:09:39.838Z] 📊 Generating security report...\n[2025-09-04T13:09:39.839Z] 🔍 Running npm audit...\n[2025-09-04T13:09:40.547Z] 🔍 Found 0 vulnerabilities\n[2025-09-04T13:09:40.548Z] 🔐 Checking environment variables...\n[2025-09-04T13:09:40.548Z] 🔐 Found 0 environment files\n[2025-09-04T13:09:40.548Z] 🔐 Found 0 potentially sensitive variables\n[2025-09-04T13:09:40.548Z] 📦 Checking dependencies...\n[2025-09-04T13:09:40.548Z] 📦 Found 0 potentially vulnerable packages\n[2025-09-04T13:09:40.549Z] 🔍 Checking code security...\n[2025-09-04T13:09:40.947Z] 🔍 Found 120 potential security issues\n[2025-09-04T13:09:40.947Z] 📄 Security report generated: /workspace/security-reports/security-report-1756991380947.json\n[2025-09-04T13:09:40.947Z] 🎉 Security audit completed!\n[2025-09-04T13:09:40.947Z] 🔍 Vulnerabilities: 0\n[2025-09-04T13:09:40.947Z] 🔐 Sensitive variables: 0\n[2025-09-04T13:09:40.947Z] 📦 Vulnerable packages: 0\n[2025-09-04T13:09:40.947Z] 🔍 Code security issues: 120\n[2025-09-04T13:09:40.947Z] 💡 Recommendations: 1\n\n🎉 Security Auditor completed successfully!\n🔍 Vulnerabilities: 0\n💡 Recommendations: 1\n"
+    },
+    {
+      "name": "Build Monitor",
+      "success": true,
+      "output": "[2025-09-04T13:09:40.968Z] 🔨 Starting Build Monitor...\n[2025-09-04T13:09:40.969Z] 📊 Generating build report...\n[2025-09-04T13:09:40.969Z] 🔨 Running build...\n[2025-09-04T13:09:44.066Z] ✅ Build completed in 3097ms\n[2025-09-04T13:09:44.067Z] 📁 Checking build output...\n[2025-09-04T13:09:44.067Z] ❌ Build output check failed: Build output directory not found\n[2025-09-04T13:09:44.067Z] 🔍 Checking TypeScript errors...\n[2025-09-04T13:09:47.056Z] ❌ Found 11719 TypeScript errors\n[2025-09-04T13:09:47.056Z] 🔍 Checking linting errors...\n[2025-09-04T13:09:47.879Z] ✅ No linting errors found\n[2025-09-04T13:09:47.880Z] 🧪 Checking test results...\n[2025-09-04T13:09:56.045Z] ❌ Tests failed: spawnSync /bin/sh ENOBUFS\n[2025-09-04T13:09:56.055Z] 📄 Build report generated: /workspace/build-reports/build-report-1756991396045.json\n[2025-09-04T13:09:56.055Z] 🎉 Build monitoring completed!\n[2025-09-04T13:09:56.055Z] 🔨 Build status: success\n[2025-09-04T13:09:56.055Z] 🔍 TypeScript errors: 11719\n[2025-09-04T13:09:56.055Z] 🔍 Linting errors: 0\n[2025-09-04T13:09:56.055Z] 🧪 Tests: failed\n[2025-09-04T13:09:56.055Z] 💡 Recommendations: 2\n\n🎉 Build Monitor completed successfully!\n🔨 Build status: success\n💡 Recommendations: 2\n"
+    },
+    {
+      "name": "Code Quality Monitor",
+      "success": false,
+      "error": "Command failed: node scripts/code-quality-monitor.cjs\n/workspace/scripts/code-quality-monitor.cjs:17\n;};\n^\n\nSyntaxError: Unexpected token ';'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+    },
+    {
+      "name": "Dependency Manager",
+      "success": false,
+      "error": "Command failed: node scripts/dependency-manager.cjs\n/workspace/scripts/dependency-manager.cjs:24\n        const outdatedResult = execSync('npm outdated --json', {stdio: 'pipe',cwd: this.projectRoot;\n                                                                                                   ^\n\nSyntaxError: Unexpected token ';'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+    },
+    {
+      "name": "Git Workflow Automator",
+      "success": true,
+      "output": "[2025-09-04T13:09:56.127Z] 🔧 Starting Git Workflow Automator...\n[2025-09-04T13:09:56.128Z] 📊 Generating git workflow report...\n[2025-09-04T13:09:56.128Z] 🔍 Checking git status...\n[2025-09-04T13:09:56.243Z] 🔍 Staged changes: 0\n[2025-09-04T13:09:56.243Z] 🔍 Unstaged changes: 9274\n[2025-09-04T13:09:56.243Z] 🔍 Deleted files: 0\n[2025-09-04T13:09:56.243Z] 🔍 Checking current branch...\n[2025-09-04T13:09:56.246Z] 🔍 Current branch: cursor/automate-test-fix-improve-and-merge-code-9a3f\n[2025-09-04T13:09:56.246Z] 🔍 Checking remote status...\n[2025-09-04T13:09:56.248Z] 🔍 Found 2 remotes\n[2025-09-04T13:09:56.248Z] 🔍 Checking commit history...\n[2025-09-04T13:09:56.253Z] 🔍 Found 10 recent commits\n[2025-09-04T13:09:56.253Z] 🔍 Checking branch status...\n[2025-09-04T13:09:56.403Z] 🔍 Local branches: 2\n[2025-09-04T13:09:56.403Z] 🔍 Remote branches: 13408\n[2025-09-04T13:09:56.403Z] 🔍 Checking for merge conflicts...\n[2025-09-04T13:09:56.502Z] 🔍 Found 72 merge conflicts\n[2025-09-04T13:09:56.502Z] 🔍 Checking stash status...\n[2025-09-04T13:09:56.504Z] 🔍 Found 0 stashes\n[2025-09-04T13:09:56.519Z] 📄 Git workflow report generated: /workspace/git-workflow-reports/git-workflow-report-1756991396505.json\n[2025-09-04T13:09:56.519Z] 🎉 Git workflow analysis completed!\n[2025-09-04T13:09:56.519Z] 🔍 Current branch: cursor/automate-test-fix-improve-and-merge-code-9a3f\n[2025-09-04T13:09:56.519Z] 🔍 Uncommitted changes: 9275\n[2025-09-04T13:09:56.519Z] 🔍 Merge conflicts: 72\n[2025-09-04T13:09:56.519Z] 🔍 Stashes: 0\n[2025-09-04T13:09:56.519Z] 💡 Recommendations: 3\n\n🎉 Git Workflow Automator completed successfully!\n🔍 Current branch: cursor/automate-test-fix-improve-and-merge-code-9a3f\n💡 Recommendations: 3\n"
+    },
+    {
+      "name": "Health Monitor",
+      "success": false,
+      "error": "Command failed: node scripts/health-monitor.cjs\n/workspace/scripts/health-monitor.cjs:17\n        const result = execSync(check.command, { encoding: 'utf8' ;};);\n                                                                  ^\n\nSyntaxError: Unexpected token ';'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+    },
+    {
+      "name": "Log Analyzer",
+      "success": true,
+      "output": "[2025-09-04T13:09:56.556Z] 📊 Starting Log Analyzer...\n[2025-09-04T13:09:56.557Z] 📊 Generating log analysis report...\n[2025-09-04T13:09:56.558Z] 🔍 Analyzing build logs...\n[2025-09-04T13:09:56.628Z] 🔍 Total builds: 0\n[2025-09-04T13:09:56.628Z] 🔍 Successful builds: 0\n[2025-09-04T13:09:56.628Z] 🔍 Failed builds: 0\n[2025-09-04T13:09:56.629Z] 🔍 Average build time: 0ms\n[2025-09-04T13:09:56.629Z] 🔍 Analyzing error logs...\n[2025-09-04T13:09:56.690Z] 🔍 Total errors: 0\n[2025-09-04T13:09:56.690Z] 🔍 Error types: 0\n[2025-09-04T13:09:56.690Z] 🔍 Files with errors: 0\n[2025-09-04T13:09:56.690Z] 🔍 Analyzing performance logs...\n[2025-09-04T13:09:56.764Z] 🔍 Average response time: 0ms\n[2025-09-04T13:09:56.764Z] 🔍 Average memory usage: 0MB\n[2025-09-04T13:09:56.764Z] 🔍 Average CPU usage: 0%\n[2025-09-04T13:09:56.764Z] 🔍 Analyzing access logs...\n[2025-09-04T13:09:56.819Z] 🔍 Total requests: 0\n[2025-09-04T13:09:56.819Z] 🔍 Status codes: 0\n[2025-09-04T13:09:56.819Z] 🔍 User agents: 0\n[2025-09-04T13:09:56.819Z] 🔍 IP addresses: 0\n[2025-09-04T13:09:56.819Z] 📄 Log analysis report generated: /workspace/log-analysis-reports/log-analysis-report-1756991396819.json\n[2025-09-04T13:09:56.819Z] 🎉 Log analysis completed!\n[2025-09-04T13:09:56.819Z] 🔍 Build success rate: 0%\n[2025-09-04T13:09:56.819Z] 🔍 Total errors: 0\n[2025-09-04T13:09:56.819Z] 🔍 Average response time: 0ms\n[2025-09-04T13:09:56.819Z] 🔍 Total requests: 0\n[2025-09-04T13:09:56.819Z] 💡 Recommendations: 1\n\n🎉 Log Analyzer completed successfully!\n🔍 Build success rate: 0%\n💡 Recommendations: 1\n"
+    },
+    {
+      "name": "Resource Optimizer",
+      "success": false,
+      "error": "Command failed: node scripts/resource-optimizer.cjs\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nwarn - No utility classes were detected in your source files. If this is unexpected, double-check the `content` option in your Tailwind CSS configuration.\nwarn - https://tailwindcss.com/docs/content-configuration\n\n💥 Resource Optimizer failed: Cannot read properties of undefined (reading 'length')\n"
+    }
+  ],
+  "recommendations": [
+    {
+      "type": "failed_automations",
+      "priority": "high",
+      "message": "4 automations failed. Review and fix the issues.",
+      "impact": "Ensures all automations work properly",
+      "failedAutomations": [
+        "Code Quality Monitor",
+        "Dependency Manager",
+        "Health Monitor",
+        "Resource Optimizer"
+      ]
+    }
+  ]
+}
