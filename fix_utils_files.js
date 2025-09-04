@@ -1,18 +1,16 @@
 import fs from "fs";
 import { glob } from "glob";
-
 function fixUtilsFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, "utf8");
-    let originalContent = content;
-
+    const originalContent = content;
     // Fix common patterns in utils files
     content = content.replace(
-      /export,\s*interface,\s*([^{]+)\s*{;/g,
+      /export,\s*interface,\s*([^{]+)\s*{/g,
       "export interface $1 {",
     );
     content = content.replace(
-      /export,\s*const\s+([^=]+)\s*=\s*([^;]+);/g,
+      /export,\s*const\s+([^=]+)\s*=\s*([^]+);/g,
       "export const $1 = $2;",
     );
     content = content.replace(
@@ -20,25 +18,23 @@ function fixUtilsFile(filePath) {
       "import React from 'react';",
     );
     content = content.replace(
-      /const\s+([^=]+)\s*=\s*([^;]+);/g,
+      /const\s+([^=]+)\s*=\s*([^]+);/g,
       "const $1 = $2;",
     );
-    content = content.replace(/retu,\s*r,\s*n\s+([^;]+);/g, "return $1;");
+    content = content.replace(/retu,\s*r,\s*n\s+([^]+);/g, "return $1;");
     content = content.replace(
-      /if\s*\(!\s*([^)]+)\s*\)\s*retu,\s*r,\s*n\s*([^;]+);/g,
+      /if\s*\(!\s*([^)]+)\s*\)\s*retu,\s*r,\s*n\s*([^]+);/g,
       "if (!$1) return $2;",
     );
-
     // Fix string literals
     content = content.replace(/'([^']+),\s*([^']+)'/g, "'$1 $2'");
     content = content.replace(/"([^"]+),\s*([^"]+)"/g, '"$1 $2"');
-
     // Fix variable names
     content = content.replace(/ht,\s*m,\s*l/g, "html");
     content = content.replace(/sanitiz,\s*e,\s*d/g, "sanitized");
     content = content.replace(/repla,\s*c,\s*e/g, "replace");
     content = content.replace(/windo,\s*w/g, "window");
-    content = content.replace(/undefin,\s*e,\s*d/g, "undefined");
+    content = content.replace(/undefin,\s*e,\s*d/g, "null");
     content = content.replace(/innerWid,\s*t,\s*h/g, "innerWidth");
     content = content.replace(/innerHeig,\s*h,\s*t/g, "innerHeight");
     content = content.replace(/dispatchEve,\s*n,\s*t/g, "dispatchEvent");
@@ -53,11 +49,10 @@ function fixUtilsFile(filePath) {
     content = content.replace(/Obje,\s*c,\s*t/g, "Object");
     content = content.replace(/defineProper,\s*t,\s*y/g, "defineProperty");
     content = content.replace(/Even,\s*t/g, "Event");
-
     // Fix type annotations
     content = content.replace(/stri,\s*n,\s*g/g, "string");
     content = content.replace(/numb,\s*e,\s*r/g, "number");
-    content = content.replace(/a,\s*n,\s*y/g, "any");
+    content = content.replace(/a,\s*n,\s*y/g, "");
     content = content.replace(/pendi,\s*n,\s*g/g, "pending");
     content = content.replace(/approv,\s*e,\s*d/g, "approved");
     content = content.replace(/reject,\s*e,\s*d/g, "rejected");
@@ -119,32 +114,36 @@ function fixUtilsFile(filePath) {
     );
     content = content.replace(/supabaseMiddleware/g, "supabaseMiddleware");
     content = content.replace(/au,\s*t,\s*h/g, "auth");
-
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, "utf8");
-      console.log(`Fixed: ${filePath}`);
+      // // // // // // // console.log(`Fixed: ${filePath}`);
       return true;
-    }
+
+    return false} catch (error) {
+    // // // // // // // console.error(`Error processing ${filePath}:`, error.message);
     return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
+
 
 async function fixAllUtilsFiles() {
   const files = await glob("utils/**/*.{ts,tsx}", {
     ignore: ["node_modules/**", ".next/**"],
   });
-
-  let fixedCount = 0;
+  const fixedCount = 0;
   for (const file of files) {
     if (fixUtilsFile(file)) {
-      fixedCount++;
-    }
+      fixedCount++}
   }
-
-  console.log(`Fixed ${fixedCount} utils files.`);
+  // // // // // // // console.log(`Fixed ${fixedCount} utils files.`)}
+      console.log(`Fixed: ${filePath}`);
+      return true}
+    return false} catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false}
 }
-
-fixAllUtilsFiles();
+async function fixedCount = 0;
+  for (const file of files) {
+    if (fixUtilsFile(file)) {
+      fixedCount++}
+  }
+  console.log(`Fixed ${fixedCount} utils files.`)}
+fixAllUtilsFiles()}}}}}}}}}

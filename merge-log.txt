@@ -1,0 +1,6 @@
+nohup: ignoring input
+Starting aggressive PR merge process...
+Found 8718 PRs to process
+\n=== Processing PR: pr/1 ===
+Clean merge for pr/1
+Successfully merged pr/1 into main

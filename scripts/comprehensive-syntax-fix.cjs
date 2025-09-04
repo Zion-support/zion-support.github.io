@@ -1,0 +1,124 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+
+console.log('🔧 Starting comprehensive syntax error fixing...');
+
+// Fix specific files with known issues
+const fixes = [
+  {
+    file: 'pages/docs/api-quick-start.tsx',
+    search: "background: 'borderRadius', 8,",
+    replace: "background: '#1e293b', borderRadius: 8,"
+  },
+  {
+    file: 'pages/docs/sdk.tsx',
+    search: "background: 'borderRadius', 8,",
+    replace: "background: '#1e293b', borderRadius: 8,"
+  },
+  {
+    file: 'pages/enterprise.tsx',
+    search: "clients: '25+' solutions:",
+    replace: "clients: '25+', solutions:"
+  },
+  {
+    file: 'pages/enterprise.tsx',
+    search: "clients: '60+' solutions:",
+    replace: "clients: '60+', solutions:"
+  },
+  {
+    file: 'pages/marketplace.tsx',
+    search: "},,}>",
+    replace: "}"
+  },
+  {
+    file: 'pages/marketplace.tsx',
+    search: "color: 'maxWidth', 600,",
+    replace: "color: 'rgba(255, 255, 255, 0.9)', maxWidth: 600,"
+  }
+];
+
+// Fix privacy.tsx completely
+const privacyContent = `import React from 'react';
+import Head from 'next/head';
+
+const PrivacyPage: React.FC = () => {
+  return (
+    <>
+      <Head>
+        <title>Privacy Policy - Zion Tech Group</title>
+        <meta name="description" content="How Zion Tech Group collects, uses, and protects your data." />
+      </Head>
+      <section className="bg-white">
+        <div className="container mx-auto px-4 py-12">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Privacy Policy</h1>
+          <p className="text-gray-700 mb-6">Last updated: 2025-09-03</p>
+          <div className="prose max-w-none">
+            <p>We respect your privacy. This policy explains what information we collect and how we use it.</p>
+            <h2>Information We Collect</h2>
+            <ul>
+              <li>Contact details you provide (name, email, phone) via forms</li>
+              <li>Usage analytics (pages visited, approximate location, device/browser)</li>
+              <li>Business information shared to scope projects</li>
+            </ul>
+            <h2>How We Use Information</h2>
+            <ul>
+              <li>To respond to inquiries and provide services</li>
+              <li>To improve our website and offerings</li>
+              <li>To comply with legal obligations</li>
+            </ul>
+            <h2>Data Sharing</h2>
+            <p>We do not sell personal data. We may share data with service providers under strict agreements (e.g., hosting, analytics) or when required by law.</p>
+            <h2>Security</h2>
+            <p>We use industry-standard safeguards such as encryption in transit, least-privilege access, and regular security reviews.</p>
+            <h2>Your Rights</h2>
+            <p>You may request access, correction, or deletion of your data. Contact us at <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>
+            <h2>Contact</h2>
+            <p>Zion Tech Group, 364 E Main St STE 1008, Middletown DE 19709. Phone: +1 302 464 0950</p>
+          </div>
+        </div>
+      </section>
+    </>
+  )};
+
+export default PrivacyPage;`;
+
+let fixedCount = 0;
+let errorCount = 0;
+
+// Apply fixes
+fixes.forEach(({ file, search, replace }) => {
+  try {
+    const filePath = path.join(process.cwd(), file);
+    
+    if (!fs.existsSync(filePath)) {
+      console.log(`⚠️  File not found: ${file}`);
+      return}
+    
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    if (content.includes(search)) {
+      content = content.replace(search, replace);
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`✅ Fixed issue in ${file}`);
+      fixedCount++}
+    
+  } catch (error) {
+    console.error(`❌ Error fixing ${file}:`, error.message);
+    errorCount++}
+});
+
+// Fix privacy.tsx
+try {
+  const privacyPath = path.join(process.cwd(), 'pages/privacy.tsx');
+  fs.writeFileSync(privacyPath, privacyContent, 'utf8');
+  console.log(`✅ Completely rewrote pages/privacy.tsx`);
+  fixedCount++} catch (error) {
+  console.error(`❌ Error fixing privacy.tsx:`, error.message);
+  errorCount++}
+
+console.log(`\n🎉 Comprehensive syntax error fixing complete!`);
+console.log(`✅ Files fixed: ${fixedCount}`);
+console.log(`❌ Errors: ${errorCount}`);
+console.log(`\n💡 Run 'npm run build' to test the fixes.`);

@@ -1,0 +1,74 @@
+{
+  "timestamp": "2025-09-01T09:45:57.673Z",
+  "reports": {
+    "build-status.json": {
+      "timestamp": "2025-09-01T09:45:49.476Z",
+      "build": {
+        "status": "failed",
+        "duration": 3163,
+        "errors": []
+      },
+      "lint": {
+        "status": "unknown",
+        "issues": []
+      },
+      "typeCheck": {
+        "status": "unknown",
+        "errors": []
+      },
+      "dependencies": {
+        "status": "unknown",
+        "outdated": []
+      },
+      "trends": {
+        "consecutiveFailures": 0,
+        "improvementSinceLastRun": false,
+        "degradationSinceLastRun": false
+      },
+      "healthScore": 60,
+      "recommendations": [
+        "Fix build errors immediately",
+        "Run intelligent error fixer"
+      ]
+    },
+    "dependency-health.json": {
+      "timestamp": "2025-09-01T09:45:49.673Z",
+      "outdated": [],
+      "vulnerable": [],
+      "missing": [],
+      "healthScore": 100
+    },
+    "error-fixer-report.json": {
+      "timestamp": "2025-09-01T09:44:34.849Z",
+      "totalErrors": 0,
+      "fixesApplied": 0,
+      "errors": [],
+      "fixes": [],
+      "summary": {
+        "buildStatus": "checking",
+        "criticalErrors": 0,
+        "warningsResolved": 0,
+        "syntaxErrorsFixed": 0
+      }
+    }
+  },
+  "overallHealth": {
+    "buildHealth": 60,
+    "codeQuality": 0,
+    "dependencyHealth": 100,
+    "overallScore": 80
+  },
+  "trends": {},
+  "recommendations": [
+    {
+      "priority": "high",
+      "type": "build",
+      "message": "Build health is critical. Run intelligent error fixer immediately."
+    },
+    {
+      "priority": "medium",
+      "type": "quality",
+      "message": "Code quality needs improvement. Address linting and TypeScript errors."
+    }
+  ]
+}

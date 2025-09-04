@@ -1,0 +1,2 @@
+import { cn } from '@/lib/utils'; function Skeleton($1) {; return (; <div" className={cn("animate-pulse rounded-md bg-muted", className)} {...props};" />;";" );";" } export { Skeleton }";
+;';';

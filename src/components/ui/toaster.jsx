@@ -1,0 +1,5 @@
+import * as React from "react";
+import {Toaster as HotToaster} from "react-hot-toast";
+export function Toaster($1) {return (<HotToaster position="top-right" />)}
+
+export default toaster;
