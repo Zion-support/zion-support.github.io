@@ -1,245 +1,206 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Shield, Zap, Users, Globe, CheckCircle, ArrowRight, Star, Award } from 'lucide-react';
+import { Shield, Users, Zap, CheckCircle, ArrowRight, Building, Globe, Lock } from 'lucide-react';
 
 export default function Enterprise() {
-  const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
-  };
-
-  const enterpriseSolutions = [
+  const solutions = [
     {
-      icon: Shield,
-      title: 'Enterprise Security Suite',
-      description: 'Comprehensive cybersecurity solutions designed for large organizations.',
-      features: [
-        'Advanced Threat Detection & Response',
-        'Compliance Management (SOC2, ISO27001)',
-        '24/7 Security Operations Center',
-        'Penetration Testing & Vulnerability Assessment',
-        'Security Awareness Training',
-        'Incident Response Planning'
-      ],
-      link: '/cybersecurity'
-    },
-    {
-      icon: Zap,
-      title: 'Cloud Infrastructure Platform',
-      description: 'Scalable, secure cloud infrastructure with enterprise-grade reliability.',
-      features: [
-        'Multi-cloud Architecture Design',
-        'Auto-scaling & Load Balancing',
-        'Disaster Recovery & Backup Solutions',
-        'Infrastructure as Code (IaC)',
-        'Cost Optimization & Monitoring',
-        'DevOps & CI/CD Implementation'
-      ],
-      link: '/cloud-devops'
-    },
-    {
-      icon: Users,
-      title: 'AI & Machine Learning Platform',
-      description: 'Enterprise AI solutions to automate processes and drive insights.',
-      features: [
-        'Custom AI Model Development',
-        'Natural Language Processing',
-        'Computer Vision Solutions',
-        'Predictive Analytics & Forecasting',
-        'Process Automation & RPA',
-        'AI Strategy & Implementation'
-      ],
-      link: '/ai-services'
-    },
-    {
-      icon: Globe,
-      title: 'Digital Transformation Services',
-      description: 'Complete digital transformation for traditional enterprises.',
-      features: [
-        'Legacy System Modernization',
-        'Digital Strategy & Roadmapping',
-        'Change Management & Training',
-        'API Development & Integration',
-        'Data Migration & Management',
-        'User Experience Design'
-      ],
-      link: '/it-services'
-    }
-  ];
-
-  const enterpriseFeatures = [
-    {
-      icon: Star,
-      title: 'Dedicated Account Management',
-      description: 'Personal account manager and dedicated support team for your organization.'
-    },
-    {
-      icon: Shield,
+      icon: <Shield className="w-8 h-8" />,
       title: 'Enterprise Security',
-      description: 'Bank-level security with advanced encryption and compliance certifications.'
+      description: 'Comprehensive cybersecurity solutions including threat detection, compliance management, and data protection.',
+      features: ['Advanced Threat Detection', 'Compliance Automation', 'Data Encryption', 'Security Monitoring']
     },
     {
-      icon: Zap,
-      title: '99.9% Uptime SLA',
-      description: 'Guaranteed service availability with comprehensive monitoring and redundancy.'
+      icon: <Users className="w-8 h-8" />,
+      title: 'Digital Transformation',
+      description: 'End-to-end digital transformation services to modernize your enterprise infrastructure and processes.',
+      features: ['Cloud Migration', 'Process Automation', 'Legacy Modernization', 'Change Management']
     },
     {
-      icon: Users,
-      title: '24/7 Technical Support',
-      description: 'Round-the-clock support with priority response times for critical issues.'
+      icon: <Zap className="w-8 h-8" />,
+      title: 'AI & Automation',
+      description: 'Enterprise-grade AI solutions and automation platforms to optimize operations and drive innovation.',
+      features: ['Machine Learning', 'Process Automation', 'Predictive Analytics', 'Intelligent Workflows']
     },
     {
-      icon: Award,
-      title: 'Custom Service Level Agreements',
-      description: 'Tailored SLAs designed to meet your specific business requirements.'
-    },
-    {
-      icon: Globe,
-      title: 'Global Deployment',
-      description: 'Worldwide infrastructure with local compliance and data residency options.'
+      icon: <Globe className="w-8 h-8" />,
+      title: 'Cloud Solutions',
+      description: 'Scalable cloud infrastructure and services designed for enterprise workloads and global operations.',
+      features: ['Multi-Cloud Strategy', 'Infrastructure as Code', 'Disaster Recovery', 'Global Deployment']
     }
   ];
 
   const industries = [
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Manufacturing & Industrial',
-    'Retail & E-commerce',
-    'Government & Public Sector',
-    'Education & Research',
-    'Energy & Utilities',
-    'Media & Entertainment'
+    { name: 'Financial Services', clients: '50+', solutions: 'Banking, Insurance, FinTech' },
+    { name: 'Healthcare', clients: '75+', solutions: 'Hospitals, Pharma, Medical Devices' },
+    { name: 'Manufacturing', clients: '100+', solutions: 'Automotive, Aerospace, Industrial' },
+    { name: 'Retail & E-commerce', clients: '80+', solutions: 'Omnichannel, Supply Chain, Analytics' },
+    { name: 'Government', clients: '25+', solutions: 'Public Services, Security, Compliance' },
+    { name: 'Education', clients: '60+', solutions: 'Universities, K-12, EdTech' }
   ];
 
   return (
     <>
       <Head>
         <title>Enterprise Solutions - Zion Tech Group</title>
-        <meta name="description" content="Enterprise-grade technology solutions for large organizations. Comprehensive security, cloud infrastructure, AI automation, and digital transformation services." />
-        <meta name="keywords" content="enterprise solutions, enterprise security, cloud infrastructure, AI automation, digital transformation, enterprise software" />
-        <link rel="canonical" href={`${contact.site}/enterprise`} />
+        <meta name="description" content="Comprehensive enterprise technology solutions including digital transformation, AI automation, cloud services, and cybersecurity for large organizations." />
+        <meta name="keywords" content="enterprise solutions, digital transformation, enterprise AI, cloud migration, cybersecurity, large organizations" />
+        <link rel="canonical" href="https://ziontechgroup.com/enterprise" />
         <meta property="og:title" content="Enterprise Solutions - Zion Tech Group" />
-        <meta property="og:description" content="Enterprise-grade technology solutions for large organizations. Comprehensive security, cloud infrastructure, AI automation, and digital transformation services." />
-        <meta property="og:url" content={`${contact.site}/enterprise`} />
+        <meta property="og:description" content="Comprehensive enterprise technology solutions including digital transformation, AI automation, cloud services, and cybersecurity for large organizations." />
+        <meta property="og:url" content="https://ziontechgroup.com/enterprise" />
         <meta property="og:type" content="website" />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         {/* Hero Section */}
-        <div className="container mx-auto px-4 py-16">
+        <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Enterprise Solutions
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              <Building className="w-16 h-16 inline-block mr-4 text-blue-400" />
+              Enterprise <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Solutions</span>
             </h1>
-            <p className="text-xl text-slate-300 mb-8 max-w-4xl mx-auto">
-              Comprehensive technology solutions designed for large organizations. 
-              From Fortune 500 companies to government agencies, we provide enterprise-grade 
-              services that scale with your business and meet the highest security standards.
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+              Transform your enterprise with cutting-edge technology solutions designed for scale, security, and innovation. 
+              We help large organizations navigate digital transformation and achieve sustainable growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
-                className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
-              >
-                Request Enterprise Demo
-              </Link>
-              <a 
-                href={`tel:${contact.phone}`}
-                className="px-8 py-3 bg-slate-800 hover:bg-slate-700 text-white border border-white/20 rounded-lg font-semibold transition-colors"
-              >
-                Call {contact.phone}
-              </a>
+          </div>
+
+          {/* Key Stats */}
+          <div className="grid md:grid-cols-4 gap-8 mb-16">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-blue-400 mb-2">500+</div>
+              <div className="text-gray-300">Enterprise Clients</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-purple-400 mb-2">99.9%</div>
+              <div className="text-gray-300">Uptime SLA</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-green-400 mb-2">24/7</div>
+              <div className="text-gray-300">Support</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-yellow-400 mb-2">50+</div>
+              <div className="text-gray-300">Countries</div>
             </div>
           </div>
 
-          {/* Enterprise Solutions Grid */}
-          <div className="grid lg:grid-cols-2 gap-8 mb-16">
-            {enterpriseSolutions.map((solution, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-                <div className="flex items-center mb-6">
-                  <solution.icon className="w-10 h-10 text-blue-400 mr-4" />
-                  <h3 className="text-2xl font-bold text-white">{solution.title}</h3>
+          {/* Solutions Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {solutions.map((solution, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300 group">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mb-6 text-white">
+                  {solution.icon}
                 </div>
-                <p className="text-slate-300 mb-6">{solution.description}</p>
-                <ul className="space-y-3 mb-6">
+                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors">
+                  {solution.title}
+                </h3>
+                <p className="text-gray-300 mb-6 text-sm leading-relaxed">
+                  {solution.description}
+                </p>
+                <ul className="space-y-2">
                   {solution.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-slate-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
+                    <li key={featureIndex} className="flex items-center gap-2 text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                      <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
-                <Link 
-                  href={solution.link}
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold"
-                >
-                  Learn More <ArrowRight className="w-4 h-4 ml-1" />
-                </Link>
               </div>
             ))}
           </div>
 
-          {/* Enterprise Features */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
-              Enterprise-Grade Features
-            </h2>
+          {/* Industries Section */}
+          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-8">Industries We Serve</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {enterpriseFeatures.map((feature, index) => (
-                <div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
-                  <feature.icon className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                  <p className="text-slate-300">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Industries Served */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
-              Industries We Serve
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {industries.map((industry, index) => (
-                <div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-4 border border-white/10 text-center">
-                  <span className="text-slate-300 font-medium">{industry}</span>
+                <div key={index} className="bg-white/10 rounded-lg p-6 border border-white/20">
+                  <h3 className="text-lg font-semibold text-white mb-2">{industry.name}</h3>
+                  <div className="text-blue-400 font-medium mb-2">{industry.clients} Clients</div>
+                  <div className="text-gray-300 text-sm">{industry.solutions}</div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Enterprise CTA */}
-          <div className="text-center bg-slate-800/30 backdrop-blur-sm rounded-xl p-12 border border-white/10">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Transform Your Enterprise?
-            </h2>
-            <p className="text-slate-300 mb-8 max-w-3xl mx-auto">
-              Our enterprise team is ready to discuss your specific requirements and create 
-              a customized solution that meets your organization's unique needs. 
-              Contact us today for a consultation.
+          {/* Enterprise Features */}
+          <div className="grid md:grid-cols-2 gap-12 mb-16">
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-6">Why Choose Zion for Enterprise?</h2>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Lock className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">Enterprise-Grade Security</h3>
+                    <p className="text-gray-300">SOC 2 Type II compliant with advanced security protocols and data protection measures.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Globe className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">Global Scale</h3>
+                    <p className="text-gray-300">Worldwide presence with local support teams and 24/7 operations centers.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Zap className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">Proven Expertise</h3>
+                    <p className="text-gray-300">Deep industry knowledge and successful implementations across Fortune 500 companies.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold text-white mb-6">Enterprise Capabilities</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Project Scale</span>
+                  <span className="text-white font-semibold">$1M - $50M+</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Team Size</span>
+                  <span className="text-white font-semibold">5 - 200+ Engineers</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Timeline</span>
+                  <span className="text-white font-semibold">3 - 24 Months</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Support Level</span>
+                  <span className="text-white font-semibold">Dedicated Team</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Compliance</span>
+                  <span className="text-white font-semibold">SOC 2, ISO 27001</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Enterprise?</h2>
+            <p className="text-gray-300 mb-8 max-w-3xl mx-auto">
+              Let's discuss how our enterprise solutions can help you achieve your digital transformation goals 
+              and drive sustainable growth for your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href={`tel:${contact.phone}`}
-                className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
-              >
-                Call {contact.phone}
-              </a>
-              <a 
-                href={`mailto:${contact.email}?subject=Enterprise Solutions Inquiry`}
-                className="px-8 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold transition-colors"
-              >
-                Email Enterprise Team
-              </a>
-              <Link 
-                href="/contact" 
-                className="px-8 py-3 bg-slate-800 hover:bg-slate-700 text-white border border-white/20 rounded-lg font-semibold transition-colors"
-              >
-                Schedule Consultation
+              <Link href="/contact" className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 inline-flex items-center">
+                Schedule Enterprise Consultation
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link href="/pricing" className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
+                View Enterprise Pricing
               </Link>
             </div>
           </div>
