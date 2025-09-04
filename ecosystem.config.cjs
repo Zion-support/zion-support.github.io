@@ -2,66 +2,77 @@ module.exports = {
   apps: [
     {
       name: 'error-monitor',
-      script: './automation/error-monitor.cjs',
+      script: 'automation/error-monitor.js',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
+        LOG_LEVEL: 'info'
       },
-      error_file: './automation/logs/error-monitor-error.log',
-      out_file: './automation/logs/error-monitor-out.log',
-      log_file: './automation/logs/error-monitor-combined.log',
+      error_file: './logs/error-monitor-error.log',
+      out_file: './logs/error-monitor-out.log',
+      log_file: './logs/error-monitor-combined.log',
       time: true
     },
     {
-      name: 'lint-fixer',
-      script: './automation/lint-fixer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production'
-      },
-      error_file: './automation/logs/lint-fixer-error.log',
-      out_file: './automation/logs/lint-fixer-out.log',
-      log_file: './automation/logs/lint-fixer-combined.log',
-      time: true,
-      cron_restart: '0 */6 * * *' // Restart every 6 hours
-    },
-    {
       name: 'build-monitor',
-      script: './automation/build-monitor.cjs',
+      script: 'automation/build-monitor.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
+      cron_restart: '0 2 * * *', // Restart daily at 2 AM
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
+        LOG_LEVEL: 'info'
       },
-      error_file: './automation/logs/build-monitor-error.log',
-      out_file: './automation/logs/build-monitor-out.log',
-      log_file: './automation/logs/build-monitor-combined.log',
-      time: true,
-      cron_restart: '0 */4 * * *' // Restart every 4 hours
+      log_file: './logs/build-monitor.log',
+      out_file: './logs/build-monitor-out.log',
+      error_file: './logs/build-monitor-error.log'
     },
     {
-      name: 'git-automation',
-      script: './automation/git-automation.cjs',
+      name: 'ci-cd-automation',
+      script: 'automation/ci-cd-automation.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      cron_restart: '0 */4 * * *', // Restart every 4 hours
       env: {
         NODE_ENV: 'production'
       },
-      error_file: './automation/logs/git-automation-error.log',
-      out_file: './automation/logs/git-automation-out.log',
-      log_file: './automation/logs/git-automation-combined.log',
-      time: true,
-      cron_restart: '0 0 * * *' // Restart daily
+      log_file: './logs/ci-cd.log',
+      out_file: './logs/ci-cd-out.log',
+      error_file: './logs/ci-cd-error.log'
+    },
+    {
+      name: 'continuous-improvement',
+      script: 'automation/continuous-improvement.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */3 * * *', // Restart every 3 hours
+      env: {
+        NODE_ENV: 'production'
+      },
+      log_file: './logs/continuous-improvement.log',
+      out_file: './logs/continuous-improvement-out.log',
+      error_file: './logs/continuous-improvement-error.log'
+    },
+    {
+      name: 'performance-monitor',
+      script: 'automation/performance-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */2 * * *', // Restart every 2 hours
+      env: {
+        NODE_ENV: 'production'
+      },
+      log_file: './logs/performance-monitor.log',
+      out_file: './logs/performance-monitor-out.log',
+      error_file: './logs/performance-monitor-error.log'
     }
   ]
 };
