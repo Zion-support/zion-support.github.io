@@ -1352,6 +1352,226 @@ export default function MicroSaaS() {
         'Cutting-edge research capabilities'
       ],
       category: 'Quantum Computing'
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Contract Analyzer',
+      description: 'Intelligent legal document analysis with risk assessment, clause extraction, and compliance verification.',
+      features: [
+        'Automated contract review and analysis',
+        'Risk assessment and red flag detection',
+        'Clause extraction and categorization',
+        'Legal compliance verification',
+        'Contract comparison and benchmarking',
+        'Automated redlining and suggestions'
+      ],
+      pricing: '$499 – $2,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '85% reduction in contract review time',
+        'Improved risk identification',
+        'Automated compliance checking',
+        'Enhanced legal accuracy'
+      ],
+      category: 'Legal Tech'
+    },
+    {
+      icon: TrendingUp,
+      name: 'Real Estate Investment Analyzer',
+      description: 'Comprehensive real estate analysis platform with market insights, ROI calculations, and investment recommendations.',
+      features: [
+        'Property valuation and market analysis',
+        'ROI and cash flow calculations',
+        'Market trend analysis and forecasting',
+        'Investment opportunity scoring',
+        'Portfolio management and tracking',
+        'Automated property alerts and notifications'
+      ],
+      pricing: '$199 – $1,499/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '40% better investment decisions',
+        'Automated market analysis',
+        'Risk-adjusted return optimization',
+        'Enhanced portfolio performance'
+      ],
+      category: 'PropTech'
+    },
+    {
+      icon: Shield,
+      name: 'Smart Insurance Claims Processor',
+      description: 'AI-driven insurance claims automation with fraud detection, damage assessment, and settlement optimization.',
+      features: [
+        'Automated claims intake and processing',
+        'AI-powered fraud detection and analysis',
+        'Damage assessment using computer vision',
+        'Settlement calculation and optimization',
+        'Regulatory compliance and reporting',
+        'Customer communication automation'
+      ],
+      pricing: '$0.50 – $5.00 per claim',
+      timeline: '4–6 weeks',
+      benefits: [
+        '70% faster claims processing',
+        '95% fraud detection accuracy',
+        'Reduced operational costs',
+        'Improved customer satisfaction'
+      ],
+      category: 'InsurTech'
+    },
+    {
+      icon: Users,
+      name: 'Employee Wellness & Mental Health Platform',
+      description: 'Comprehensive workplace wellness solution with mental health support, stress monitoring, and well-being analytics.',
+      features: [
+        'Mental health screening and assessment',
+        'Stress monitoring and intervention alerts',
+        'Wellness program management',
+        'Anonymous feedback and reporting',
+        'Resource library and self-help tools',
+        'Manager dashboard and insights'
+      ],
+      pricing: '$5 – $25 per employee/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '30% reduction in sick days',
+        'Improved employee satisfaction',
+        'Early mental health intervention',
+        'Better workplace productivity'
+      ],
+      category: 'HR Tech'
+    },
+    {
+      icon: Globe,
+      name: 'Supply Chain Visibility Platform',
+      description: 'End-to-end supply chain tracking with real-time visibility, risk management, and optimization recommendations.',
+      features: [
+        'Real-time shipment tracking and visibility',
+        'Supply chain risk assessment and alerts',
+        'Vendor performance monitoring',
+        'Inventory optimization recommendations',
+        'Sustainability and carbon footprint tracking',
+        'Predictive analytics for disruptions'
+      ],
+      pricing: '$299 – $2,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '50% improvement in delivery reliability',
+        'Reduced supply chain risks',
+        'Optimized inventory levels',
+        'Enhanced supplier relationships'
+      ],
+      category: 'Supply Chain'
+    },
+    {
+      icon: Code,
+      name: 'No-Code Automation Builder',
+      description: 'Visual workflow automation platform that enables non-technical users to create complex business automations.',
+      features: [
+        'Drag-and-drop workflow designer',
+        'Pre-built automation templates',
+        'API integrations and connectors',
+        'Conditional logic and decision trees',
+        'Real-time monitoring and analytics',
+        'Collaboration and sharing features'
+      ],
+      pricing: '$99 – $999/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '80% faster automation deployment',
+        'No technical skills required',
+        'Reduced development costs',
+        'Improved business efficiency'
+      ],
+      category: 'Process Automation'
+    },
+    {
+      icon: BarChart3,
+      name: 'Carbon Footprint Tracker & ESG Reporting',
+      description: 'Sustainability management platform with carbon tracking, ESG reporting, and environmental impact optimization.',
+      features: [
+        'Automated carbon footprint calculation',
+        'ESG metrics tracking and reporting',
+        'Sustainability goal setting and monitoring',
+        'Regulatory compliance management',
+        'Supply chain sustainability assessment',
+        'Carbon offset recommendations'
+      ],
+      pricing: '$199 – $1,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '90% reduction in ESG reporting time',
+        'Improved sustainability metrics',
+        'Enhanced regulatory compliance',
+        'Better stakeholder transparency'
+      ],
+      category: 'Sustainability'
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Voice Analytics Platform',
+      description: 'Advanced voice analysis for customer service quality, sentiment detection, and conversation insights.',
+      features: [
+        'Real-time voice sentiment analysis',
+        'Call quality scoring and evaluation',
+        'Conversation topic extraction',
+        'Agent performance analytics',
+        'Compliance monitoring and alerts',
+        'Customer satisfaction prediction'
+      ],
+      pricing: '$0.05 – $0.50 per minute analyzed',
+      timeline: '4–5 weeks',
+      benefits: [
+        '40% improvement in call quality',
+        'Enhanced customer satisfaction',
+        'Automated compliance monitoring',
+        'Data-driven agent coaching'
+      ],
+      category: 'Voice Analytics'
+    },
+    {
+      icon: Shield,
+      name: 'Smart Access Control & Visitor Management',
+      description: 'Intelligent building access system with facial recognition, visitor tracking, and security automation.',
+      features: [
+        'Facial recognition and biometric access',
+        'Visitor pre-registration and management',
+        'Real-time security monitoring',
+        'Access control automation and scheduling',
+        'Integration with security systems',
+        'Compliance and audit trail management'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '99% secure access control',
+        'Streamlined visitor experience',
+        'Enhanced building security',
+        'Automated compliance reporting'
+      ],
+      category: 'Security Tech'
+    },
+    {
+      icon: TrendingUp,
+      name: 'Predictive Maintenance Platform',
+      description: 'IoT-powered predictive maintenance solution with equipment monitoring, failure prediction, and maintenance optimization.',
+      features: [
+        'IoT sensor integration and monitoring',
+        'Predictive failure analysis',
+        'Maintenance scheduling optimization',
+        'Equipment performance tracking',
+        'Cost analysis and ROI calculation',
+        'Mobile maintenance management'
+      ],
+      pricing: '$199 – $1,499 per asset/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '60% reduction in unplanned downtime',
+        'Optimized maintenance costs',
+        'Extended equipment lifespan',
+        'Improved operational efficiency'
+      ],
+      category: 'Industrial IoT'
     }
   ];
 
