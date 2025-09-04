@@ -1,6 +1,4 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req, res) {
   const healthCheck = {
     uptime: process.uptime(),
     message: 'OK',
@@ -14,7 +12,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // e.g., database connectivity, external API calls, etc.
     
     res.status(200).json(healthCheck);
-  } catch (error) {
+  } catch {
     healthCheck.message = 'ERROR';
     res.status(503).json(healthCheck);
   }

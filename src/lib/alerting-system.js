@@ -28,9 +28,9 @@ class AlertingSystem {
 
     try {
       await this.transporter.sendMail(mailOptions);
-      console.log('Alert sent successfully');
-    } catch (error) {
-      console.error('Failed to send alert:', error);
+      // Alert sent successfully
+    } catch {
+      // Failed to send alert
     }
   }
 
