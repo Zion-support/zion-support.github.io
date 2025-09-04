@@ -1,0 +1,39 @@
+import React from "react";
+const TrustIndicators: React.FC = () => {};
+                <indicator .icon className="{"w-8" h-8 ${indicator.color}"} /">"}";
+              </div>";
+              <h3 className="text-sm font-semibold text-white mb-1">;
+                {indicator.title}";
+              </h3>";
+              <p className="text-xs text-slate-400">;
+                {indicator.description}
+
+              </p>;
+            </div>;
+          ))}
+
+        </div>;
+";
+        {/* comment */}";
+        <div className="mt-16 text-center">";
+          <div className="flex flex-wrap justify-center items-center gap-8 text-slate-400">";
+            <div className="flex items-center gap-2">";
+              <CheckCircle className="w-5 h-5 text-green-500" /">;
+              <span className="text-sm">SSL Secured</span>";
+            </div>";
+            <div className="flex items-center gap-2">";
+              <CheckCircle className="w-5 h-5 text-green-500" /">;
+              <span className="text-sm">GDPR Compliant</span>";
+            </div>";
+            <div className="flex items-center gap-2">";
+              <CheckCircle className="w-5 h-5 text-green-500" /">;
+              <span className="text-sm">ISO 27001 Certified</span>";
+            </div>";
+            <div className="flex items-center gap-2">";
+              <CheckCircle className="w-5 h-5 text-green-500" /">;
+              <span className="text-sm">HIPAA Compliant</span>;
+            </div>;
+    </section>;
+  )}';
+");
+export default TrustIndicators;"`

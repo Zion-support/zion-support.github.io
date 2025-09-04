@@ -1,21 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-
-export default function HomeRoute() {
+import React from 'react'
+export default function Home() {
   return (
-    <main style={{ padding: 24, fontFamily: 'ui-sans-serif, system-ui' }}>
-      <h1 style={{ fontSize: 28, fontWeight: 700 }}>Zion Tech Group</h1>
-      <p style={{ marginTop: 8 }}>AI-powered Micro SAAS, IT and AI solutions.</p>
-      <div style={{ marginTop: 16, display: 'flex', gap: 12 }}>
-        <Link href="/services/comprehensive-micro-saas-showcase" legacyBehavior>
-          <a style={{ color: '#4f46e5' }}>Explore Services</a>
-        </Link>
-        <Link href="/services" legacyBehavior>
-          <a style={{ color: '#4f46e5' }}>Services Overview</a>
-        </Link>
-        <a href="https://ziontechgroup.com" style={{ color: '#4f46e5' }}>Website</a>
-      </div>
-    </main>
-  );
+    <main style={{padding:'40px',fontFamily:'sans-serif'}}><h1>Zion Tech Group</h1><p>Site build OK. Visit public pages at ziontechgroup.com</p></main>
+  )
 }
-

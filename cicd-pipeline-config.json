@@ -1,0 +1,41 @@
+{
+  "pipelineMode": "intelligent",
+  "qualityGates": "strict",
+  "autoDeploy": true,
+  "rollbackEnabled": true,
+  "environments": {
+    "development": {
+      "branch": "develop",
+      "autoDeploy": true,
+      "healthThreshold": 70,
+      "rollbackThreshold": 50,
+      "qualityGates": ["build", "test", "lint"]
+    },
+    "staging": {
+      "branch": "staging",
+      "autoDeploy": true,
+      "healthThreshold": 80,
+      "rollbackThreshold": 60,
+      "qualityGates": ["build", "test", "lint", "security", "performance"]
+    },
+    "production": {
+      "branch": "main",
+      "autoDeploy": false,
+      "healthThreshold": 90,
+      "rollbackThreshold": 70,
+      "qualityGates": ["build", "test", "lint", "security", "performance", "e2e"]
+    }
+  },
+  "qualityThresholds": {
+    "testCoverage": 80,
+    "performanceScore": 90,
+    "securityScore": 95,
+    "codeQuality": 85,
+    "buildTime": 300,
+    "testTime": 120
+  },
+  "notificationChannels": ["log", "file", "webhook"],
+  "backupStrategy": "incremental",
+  "monitoringInterval": 300000,
+  "maxConcurrentDeployments": 2
+}

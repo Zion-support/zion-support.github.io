@@ -1,410 +1,112 @@
-export interface Service {;
-  id: string;
-  name: string;
-  category: "micro-saas" | "it-services" | "ai-services";
+export type ServiceItem = {
+  slug: string;
+  title: string;
+  category: 'Micro-SaaS' | 'IT Services' | 'AI Solutions';
   description: string;
-  features: string[];
-  pricing: {;
-    starter: number;
-    professional: number;
-    enterprise: number;
-    currency: string;,
-};
-  benefits: string[];
-  useCases: string[];
-  technologies: string[];
+  startingPriceUSD: string;
+  typicalTimeline: string;
   link: string;
-  icon: string;,
-}
-;
-export const services: Service[] = [;
-  {;
-    id: "ai-content-generator",;
-    name: "AI Content Generator Pro",;
-    category: "micro-saas",;
-    description: "Advanced AI-powered content generation platform for blogs, social media, and marketing materials with GPT-4 integration.",;
-    features: [;
-      "Multi-language content generation",;
-      "SEO-optimized content",;
-      "Brand voice customization",;
-      "Content scheduling",;
-      "Analytics dashboard",;
-      "API integration",;
-      "Plagiarism detection",;
-      "Content templates library";
-    ],;
-    pricing: {;
-      starter: 29,;
-      professional: 79,;
-      enterprise: 199,;
-      currency: "USD";,
-},;
-    benefits: [;
-      "10x faster content creation",;
-      "Consistent brand messaging",;
-      "SEO optimization built-in",;
-      "Multi-platform publishing",;
-      "Cost-effective content marketing";
-    ],;
-    useCases: [;
-      "Blog content creation",;
-      "Social media management",;
-      "Email marketing campaigns",;
-      "Product descriptions",;
-      "Marketing copywriting";
-    ],;
-    technologies: ["OpenAI GPT-4", "React", "Node.js", "PostgreSQL", "Stripe"],;
-    link: "https://ziontechgroup.com/services/ai-content-generator",;
-    icon: "📝";,
-},;
-  {;
-    id: "ai-email-responder",;
-    name: "AI Email Responder Pro",;
-    category: "micro-saas",;
-    description: "Intelligent email automation that reads, categorizes, and responds to emails using advanced AI, handling simple inquiries and flagging important messages.",;
-    features: [;
-      "AI-powered email analysis",;
-      "Automatic response generation",;
-      "Priority email flagging",;
-      "Sentiment analysis",;
-      "Multi-language support",;
-      "Custom response templates",;
-      "Integration with CRM systems",;
-      "Analytics dashboard";
-    ],;
-    pricing: {;
-      starter: 35,;
-      professional: 89,;
-      enterprise: 249,;
-      currency: "USD";,
-},;
-    benefits: [;
-      "Reduce email response time by 80%",;
-      "24/7 email handling",;
-      "Improved customer satisfaction",;
-      "Better email organization",;
-      "Reduced manual workload";
-    ],;
-    useCases: [;
-      "Customer support teams",;
-      "Sales departments",;
-      "Small businesses",;
-      "Freelancers and consultants";
-    ],;
-    technologies: ["OpenAI GPT-4", "React", "Node.js", "PostgreSQL", "Email APIs"],;
-    link: "https://ziontechgroup.com/services/ai-email-responder",;
-    icon: "📧";,
-},;
-  {;
-    id: "social-media-scheduler",;
-    name: "Social Media Scheduler Pro",;
-    category: "micro-saas",;
-    description: "Advanced social media management platform with AI-powered content optimization and cross-platform scheduling.",;
-    features: [;
-      "Multi-platform scheduling",;
-      "AI content optimization",;
-      "Hashtag research",;
-      "Analytics & insights",;
-      "Team collaboration",;
-      "Content calendar",;
-      "Auto-posting",;
-      "Engagement tracking";
-    ],;
-    pricing: {;
-      starter: 19,;
-      professional: 49,;
-      enterprise: 129,;
-      currency: "USD";,
-},;
-    benefits: [;
-      "Save 10+ hours per week",;
-      "Increase engagement by 40%",;
-      "Consistent brand presence",;
-      "Data-driven content strategy";
-    ],;
-    useCases: [;
-      "Marketing agencies",;
-      "Small businesses",;
-      "Content creators",;
-      "E-commerce brands";
-    ],;
-    technologies: ["React", "Node.js", "MongoDB", "Social APIs"],;
-    link: "https://ziontechgroup.com/services/social-media-scheduler",;
-    icon: "📱";,
-},;
-  {;
-    id: "ai-seo-optimizer",;
-    name: "AI SEO Content Optimizer",;
-    category: "micro-saas",;
-    description: "AI-powered SEO optimization platform that analyzes web pages, provides keyword recommendations, and optimizes content for better search rankings.",;
-    features: [;
-      "Real-time SEO analysis",;
-      "Keyword research and recommendations",;
-      "Content optimization suggestions",;
-      "Competitor analysis",;
-      "Technical SEO audits",;
-      "Performance tracking",;
-      "Content scoring",;
-      "Automated reports";
-    ],;
-    pricing: {;
-      starter: 39,;
-      professional: 99,;
-      enterprise: 249,;
-      currency: "USD";,
-},;
-    benefits: [;
-      "Improve search rankings by 50%",;
-      "Increase organic traffic",;
-      "Better content performance",;
-      "Automated optimization",;
-      "Competitive advantage";
-    ],;
-    useCases: [;
-      "Content creators",;
-      "Digital marketing agencies",;
-      "E-commerce businesses",;
-      "Blog owners";
-    ],;
-    technologies: ["AI/ML", "React", "Node.js", "SEO APIs", "Analytics"],;
-    link: "https://ziontechgroup.com/services/ai-seo-optimizer",;
-    icon: "🔍";,
-},;
-  {;
-    id: "event-management-dashboard",;
-    name: "Smart Event Management Dashboard",;
-    category: "micro-saas",;
-    description: "Comprehensive event management platform with ticket sales, guest management, scheduling, and real-time analytics for successful events.",;
-    features: [;
-      "Event planning tools",;
-      "Ticket sales management",;
-      "Guest registration",;
-      "Schedule management",;
-      "Real-time analytics",;
-      "Payment processing",;
-      "Mobile check-in",;
-      "Post-event surveys";
-    ],;
-    pricing: {;
-      starter: 45,;
-      professional: 119,;
-      enterprise: 299,;
-      currency: "USD";,
-},;
-    benefits: [;
-      "Streamline event planning",;
-      "Increase ticket sales",;
-      "Better guest experience",;
-      "Real-time insights",;
-      "Reduced manual work";
-    ],;
-    useCases: [;
-      "Conference organizers",;
-      "Wedding planners",;
-      "Corporate events",;
-      "Community organizations";
-    ],;
-    technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Analytics"],;
-    link: "https://ziontechgroup.com/services/event-management-dashboard",;
-    icon: "🎪";,
-},;
-  {;
-    id: "ai-talent-matching",;
-    name: "AI Talent Matching Platform",;
-    category: "micro-saas",;
-    description: "Advanced AI-powered talent matching system that connects businesses with the right tech professionals using machine learning algorithms.",;
-    features: [;
-      "AI-powered candidate matching",;
-      "Skills assessment tools",;
-      "Behavioral analysis",;
-      "Cultural fit evaluation",;
-      "Interview scheduling",;
-      "Performance tracking",;
-      "Integration with job boards",;
-      "Analytics dashboard";
-    ],;
-    pricing: {;
-      starter: 199,;
-      professional: 499,;
-      enterprise: 1299,;
-      currency: "USD";,
-},;
-    benefits: [;
-      "Reduce hiring time by 70%",;
-      "Better candidate matches",;
-      "Improved retention rates",;
-      "Cost-effective recruitment",;
-      "Data-driven hiring decisions";
-    ],;
-    useCases: [;
-      "Tech companies",;
-      "Recruitment agencies",;
-      "HR departments",;
-      "Startups";
-    ],;
-    technologies: ["AI/ML", "React", "Node.js", "PostgreSQL", "Matching Algorithms"],;
-    link: "https://ziontechgroup.com/services/ai-talent-matching",;
-    icon: "👥";,
-},;
-  {;
-    id: "cloud-migration",;
-    name: "Cloud Migration Expert",;
-    category: "it-services",;
-    description: "Comprehensive cloud migration services for seamless transition to AWS, Azure, or Google Cloud with zero downtime.",;
-    features: [;
-      "Infrastructure assessment",;
-      "Migration planning",;
-      "Data migration",;
-      "Application modernization",;
-      "Security implementation",;
-      "Performance optimization",;
-      "Cost optimization",;
-      "24/7 monitoring";
-    ],;
-    pricing: {;
-      starter: 5000,;
-      professional: 15000,;
-      enterprise: 50000,;
-      currency: "USD";,
-},;
-    benefits: [;
-      "Reduced infrastructure costs by 40%",;
-      "Improved scalability",;
-      "Enhanced security",;
-      "Better performance",;
-      "Disaster recovery";
-    ],;
-    useCases: [;
-      "Legacy system modernization",;
-      "Data center consolidation",;
-      "Disaster recovery setup",;
-      "Application scaling";
-    ],;
-    technologies: ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "Terraform"],;
-    link: "https://ziontechgroup.com/services/cloud-migration",;
-    icon: "☁️";,
-},;
-  {;
-    id: "zero-trust-security",;
-    name: "Zero Trust Security Architecture",;
-    category: "it-services",;
-    description: "Comprehensive zero trust security implementation with continuous verification, micro-segmentation, and advanced threat protection.",;
-    features: [;
-      "Identity verification systems",;
-      "Micro-segmentation implementation",;
-      "Continuous monitoring",;
-      "Threat detection and response",;
-      "Access control policies",;
-      "Security analytics",;
-      "Compliance automation",;
-      "Incident response planning";
-    ],;
-    pricing: {;
-      starter: 20000,;
-      professional: 60000,;
-      enterprise: 150000,;
-      currency: "USD";,
-},;
-    benefits: [;
-      "Enhanced security posture",;
-      "Reduced attack surface",;
-      "Better compliance adherence",;
-      "Improved visibility",;
-      "Proactive threat protection";
-    ],;
-    useCases: [;
-      "Enterprise organizations",;
-      "Healthcare systems",;
-      "Financial institutions",;
-      "Government agencies";
-    ],;
-    technologies: ["Zero Trust", "SIEM", "SOAR", "Identity Management", "Network Security"],;
-    link: "https://ziontechgroup.com/services/zero-trust-security",;
-    icon: "🔒";,
-},;
-  {;
-    id: "custom-ai-models",;
-    name: "Custom AI Model Development",;
-    category: "ai-services",;
-    description: "Custom AI model development tailored to your specific business needs and data with advanced machine learning techniques.",;
-    features: [;
-      "Custom model training",;
-      "Data preprocessing",;
-      "Model optimization",;
-      "API development",;
-      "Integration support",;
-      "Ongoing maintenance",;
-      "Model versioning",;
-      "Performance monitoring";
-    ],;
-    pricing: {;
-      starter: 10000,;
-      professional: 30000,;
-      enterprise: 100000,;
-      currency: "USD";,
-},;
-    benefits: [;
-      "Tailored to your data",;
-      "Better accuracy",;
-      "Competitive advantage",;
-      "Scalable solutions",;
-      "ROI optimization";
-    ],;
-    useCases: [;
-      "Predictive analytics",;
-      "Image recognition",;
-      "Natural language processing",;
-      "Recommendation systems",;
-      "Fraud detection";
-    ],;
-    technologies: ["TensorFlow", "PyTorch", "Scikit-learn", "Python", "Docker", "MLflow"],;
-    link: "https://ziontechgroup.com/services/custom-ai-models",;
-    icon: "🧠";,
-},;
-  {;
-    id: "computer-vision-solutions",;
-    name: "Computer Vision & Image Recognition",;
-    category: "ai-services",;
-    description: "Advanced computer vision solutions for object detection, facial recognition, and image analysis applications.",;
-    features: [;
-      "Object detection & classification",;
-      "Facial recognition systems",;
-      "Image segmentation",;
-      "OCR & text extraction",;
-      "Quality inspection",;
-      "Real-time processing",;
-      "Custom model training",;
-      "API integration";
-    ],;
-    pricing: {;
-      starter: 8000,;
-      professional: 25000,;
-      enterprise: 75000,;
-      currency: "USD";,
-},;
-    benefits: [;
-      "Automated visual inspection",;
-      "Enhanced security",;
-      "Improved accuracy",;
-      "Cost reduction";
-    ],;
-    useCases: [;
-      "Manufacturing quality control",;
-      "Security & surveillance",;
-      "Medical imaging",;
-      "Retail analytics",;
-      "Autonomous vehicles";
-    ],;
-    technologies: ["OpenCV", "TensorFlow", "PyTorch", "YOLO", "ResNet", "CUDA"],;
-    link: "https://ziontechgroup.com/services/computer-vision-solutions",;
-    icon: "👁️";,
-}
+  references?: { label: string; url: string }[];
+};
+
+export const servicesCatalog: ServiceItem[] = [
+  {
+    slug: 'ai-chatbot-for-support',
+    title: 'AI Chatbot for Customer Support',
+    category: 'Micro-SaaS',
+    description:
+      'Deploy a branded AI assistant trained on your docs to deflect tickets, reduce response times, and boost CSAT across web and chat channels.',
+    startingPriceUSD: '$1,500 setup + $99/mo',
+    typicalTimeline: '1-2 weeks',
+    link: '/services/ai-chatbot-for-support',
+    references: [
+      { label: 'OpenAI API Pricing', url: 'https://openai.com/api/pricing' },
+      { label: 'Vercel Pricing', url: 'https://vercel.com/pricing' },
+    ],
+  },
+  {
+    slug: 'lead-scraper-and-enrichment',
+    title: 'Lead Scraper & Enrichment Engine',
+    category: 'Micro-SaaS',
+    description:
+      'Automated B2B lead discovery, enrichment, and scoring with workflow exports to your CRM.',
+    startingPriceUSD: '$2,500 setup + $149/mo',
+    typicalTimeline: '2-3 weeks',
+    link: '/services/lead-scraper-and-enrichment',
+    references: [
+      { label: 'Clearbit (reference)', url: 'https://clearbit.com' },
+      { label: 'Apollo (reference)', url: 'https://www.apollo.io/pricing' },
+    ],
+  },
+  {
+    slug: 'document-processing-automation',
+    title: 'Document Processing Automation',
+    category: 'AI Solutions',
+    description:
+      'Extract structured data from PDFs, invoices, forms and route it into ERPs/CRMs with human-in-the-loop review.',
+    startingPriceUSD: '$3,000 setup + usage',
+    typicalTimeline: '2-4 weeks',
+    link: '/services/document-processing-automation',
+    references: [
+      { label: 'Google Document AI', url: 'https://cloud.google.com/document-ai' },
+      { label: 'AWS Textract', url: 'https://aws.amazon.com/textract/pricing/' },
+    ],
+  },
+  {
+    slug: 'cloud-migration-and-cost-optimization',
+    title: 'Cloud Migration & Cost Optimization',
+    category: 'IT Services',
+    description:
+      'Migrate workloads to AWS/GCP/Azure, implement IaC, and reduce spend via rightsizing and savings plans.',
+    startingPriceUSD: 'From $8,000 project',
+    typicalTimeline: '4-8 weeks',
+    link: '/services/cloud-migration-and-cost-optimization',
+    references: [
+      { label: 'AWS Pricing', url: 'https://aws.amazon.com/pricing/' },
+      { label: 'Terraform', url: 'https://developer.hashicorp.com/terraform' },
+    ],
+  },
+  {
+    slug: 'security-hardening-and-audits',
+    title: 'Security Hardening & Audits',
+    category: 'IT Services',
+    description:
+      'CIS/NIST aligned audits, SOC2 readiness, penetration testing coordination, and remediation roadmaps.',
+    startingPriceUSD: 'From $5,000 audit',
+    typicalTimeline: '2-6 weeks',
+    link: '/services/security-hardening-and-audits',
+    references: [
+      { label: 'CIS Benchmarks', url: 'https://www.cisecurity.org/cis-benchmarks' },
+      { label: 'OWASP ASVS', url: 'https://owasp.org/www-project-application-security-verification-standard/' },
+    ],
+  },
+  {
+    slug: 'mvp-web-app-development',
+    title: 'MVP Web App Development',
+    category: 'Micro-SaaS',
+    description:
+      'Design and build a production-ready MVP with Next.js, Tailwind, Stripe, and modern auth.',
+    startingPriceUSD: 'From $12,000 project',
+    typicalTimeline: '4-6 weeks',
+    link: '/services/mvp-web-app-development',
+    references: [
+      { label: 'Vercel Pricing', url: 'https://vercel.com/pricing' },
+      { label: 'Stripe Pricing', url: 'https://stripe.com/pricing' },
+    ],
+  },
+  {
+    slug: 'analytics-and-bi-dashboards',
+    title: 'Analytics & BI Dashboards',
+    category: 'AI Solutions',
+    description:
+      'Data pipelines and BI with semantic layers and KPI dashboards for execs and ops teams.',
+    startingPriceUSD: 'From $6,000 project',
+    typicalTimeline: '3-5 weeks',
+    link: '/services/analytics-and-bi-dashboards',
+    references: [
+      { label: 'dbt', url: 'https://www.getdbt.com/' },
+      { label: 'BigQuery Pricing', url: 'https://cloud.google.com/bigquery/pricing' },
+    ],
+  },
 ];
-;
-export function getServicesByCategory(category: "micro-saas" | "it-services" | "ai-services"): Service[] {;
-  return services.filter(service => service.category === category);,
-}
-;
-export function getServiceById(id: string): Service | undefined {;
-  return services.find(service => service.id === id);,
-}
+

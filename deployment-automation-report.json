@@ -1,0 +1,68 @@
+{
+  "timestamp": "2025-09-03T17:24:38.507Z",
+  "preDeploymentChecks": [
+    {
+      "name": "Build Directory",
+      "status": "pass",
+      "message": ".next directory exists"
+    },
+    {
+      "name": "Package.json",
+      "status": "pass",
+      "message": "package.json exists"
+    },
+    {
+      "name": "Environment Variables",
+      "status": "warning",
+      "message": "No environment files found"
+    },
+    {
+      "name": "Git Status",
+      "status": "warning",
+      "message": "Uncommitted changes detected"
+    }
+  ],
+  "configurations": [
+    {
+      "name": "Vercel Config",
+      "status": "created",
+      "message": "vercel.json created"
+    },
+    {
+      "name": "Netlify Config",
+      "status": "created",
+      "message": "netlify.toml created"
+    }
+  ],
+  "optimizations": [
+    {
+      "name": "Build Script",
+      "status": "recommendation",
+      "message": "Consider adding a production build script"
+    }
+  ],
+  "scripts": [
+    {
+      "name": "Vercel Deploy Script",
+      "status": "created",
+      "message": "deploy-vercel.sh created"
+    },
+    {
+      "name": "Netlify Deploy Script",
+      "status": "created",
+      "message": "deploy-netlify.sh created"
+    },
+    {
+      "name": "Docker Deploy Script",
+      "status": "created",
+      "message": "deploy-docker.sh created"
+    }
+  ],
+  "summary": {
+    "checksPassed": 2,
+    "checksFailed": 0,
+    "configsCreated": 2,
+    "optimizationsRecommended": 1,
+    "scriptsCreated": 3
+  }
+}

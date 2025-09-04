@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-09-03T13:51:00.426Z",
+  "status": "completed",
+  "steps": [
+    {
+      "name": "Health Check",
+      "status": "completed",
+      "duration": 221,
+      "result": {
+        "success": false,
+        "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 8.57.1\n\nSyntaxError: Unexpected token ';'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n",
+        "description": "Linting check"
+      }
+    },
+    {
+      "name": "Build Test",
+      "status": "completed",
+      "duration": 55683,
+      "result": {
+        "success": false,
+        "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nwarn  - Invalid next.config.js options detected: \n  - The value at .experimental has an unexpected property, optimizePackageImports, which is not in the list of allowed properties (adjustFontFallbacks, allowMiddlewareResponseBody, amp, appDir, browsersListForSwc, cpus, craCompat, disableOptimizedLoading, disablePostcssPresetEnv, esmExternals, externalDir, fallbackNodePolyfills, forceSwcTransforms, fullySpecified, gzipSize, incrementalCacheHandlerPath, isrFlushToDisk, isrMemoryCacheSize, largePageDataBytes, legacyBrowsers, manualClientBasePath, modularizeImports, newNextLinkBehavior, nextScriptWorkers, optimizeCss, optimisticClientCache, outputFileTracingRoot, pageEnv, profiling, proxyTimeout, runtime, scrollRestoration, serverComponents, sharedPool, skipMiddlewareUrlNormalize, skipTrailingSlashRedirect, sri, swcFileReading, swcMinify, swcMinifyDebugOptions, swcPlugins, swcTraceProfiling, urlImports, workerThreads).\n\nSee more info here: https://nextjs.org/docs/messages/invalid-next-config\nwarn  - You have enabled experimental feature (optimizePackageImports) in next.config.js.\nwarn  - Experimental features are not covered by semver, and may cause unexpected or broken application behavior. Use at your own risk.\n\nerror - ESLint: Cannot read config file: /workspace/.eslintrc.js Error: module is not defined\nFailed to compile.\n\n./components/AccessibilityManager.tsx:11:7\nType error: Type '() => void' is not assignable to type 'FC<{}>'.\n  Type 'void' is not assignable to type 'ReactNode | Promise<ReactNode>'.\n\n\u001b[0m \u001b[90m  9 | \u001b[39m}\u001b[0m\n\u001b[0m \u001b[90m 10 | \u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 | \u001b[39m\u001b[36mconst\u001b[39m \u001b[33mAccessibilityManager\u001b[39m\u001b[33m:\u001b[39m \u001b[33mReact\u001b[39m\u001b[33m.\u001b[39m\u001b[33mFC\u001b[39m \u001b[33m=\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 12 | \u001b[39m  \u001b[36mconst\u001b[39m [settings\u001b[33m,\u001b[39m setSettings] \u001b[33m=\u001b[39m useState\u001b[33m<\u001b[39m\u001b[33mAccessibilitySettings\u001b[39m\u001b[33m>\u001b[39m({\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 13 | \u001b[39m    highContrast\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 14 | \u001b[39m    fontSize\u001b[33m:\u001b[39m \u001b[32m\"normal\"\u001b[39m\u001b[33m,\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n",
+        "description": "Build test"
+      }
+    },
+    {
+      "name": "Type Check",
+      "status": "completed",
+      "duration": 4219,
+      "result": {
+        "success": false,
+        "error": "spawnSync /bin/sh ENOBUFS",
+        "description": "TypeScript type check"
+      }
+    },
+    {
+      "name": "Security Audit",
+      "status": "completed",
+      "duration": 1311,
+      "result": {
+        "success": false,
+        "error": "Command failed: npm audit\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n",
+        "description": "Security audit"
+      }
+    }
+  ],
+  "errors": [],
+  "fixes": [],
+  "improvements": [],
+  "newScripts": []
+}

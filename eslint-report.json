@@ -1,0 +1,46 @@
+npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
+npm warn config `--include=optional` to include them.
+npm warn config
+npm warn config       Default value does install optional deps unless otherwise omitted.
+Invalid option '--ext' - perhaps you meant '-c'?
+You're using eslint.config.js, some command line flags are no longer available. Please see https://eslint.org/docs/latest/use/command-line-interface for details.
+
+/workspace/deployments/deployment-2025-09-04T07-04-19-733Z/public/sw.js
+  3:21  error  Parsing error: Expression or comma expected
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+/workspace/deployments/deployment-2025-09-04T07-04-19-733Z/public/sw.js
+  18:1   error  'self' is not defined    no-undef
+  20:5   error  'caches' is not defined  no-undef
+  25:3   error  'self' is not defined    no-undef
+  29:1   error  'self' is not defined    no-undef
+  31:5   error  'caches' is not defined  no-undef
+  38:14  error  'fetch' is not defined   no-undef
+  46:11  error  'caches' is not defined  no-undef
+  52:22  error  'caches' is not defined  no-undef
+  58:1   error  'self' is not defined    no-undef
+  60:5   error  'caches' is not defined  no-undef
+  64:20  error  'caches' is not defined  no-undef
+  72:3   error  'self' is not defined    no-undef
+
+✖ 12 problems (12 errors, 0 warnings)
+
+
+/workspace/deployments/deployment-2025-09-04T07-04-19-733Z/public/sw.js
+  19:1   error  'self' is not defined    no-undef
+  21:5   error  'caches' is not defined  no-undef
+  26:3   error  'self' is not defined    no-undef
+  30:1   error  'self' is not defined    no-undef
+  32:5   error  'caches' is not defined  no-undef
+  39:14  error  'fetch' is not defined   no-undef
+  47:11  error  'caches' is not defined  no-undef
+  53:22  error  'caches' is not defined  no-undef
+  59:1   error  'self' is not defined    no-undef
+  61:5   error  'caches' is not defined  no-undef
+  65:20  error  'caches' is not defined  no-undef
+  73:3   error  'self' is not defined    no-undef
+
+✖ 12 problems (12 errors, 0 warnings)
+
