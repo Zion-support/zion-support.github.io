@@ -34,49 +34,6 @@ const services = [
 
 export default function HomePage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
-      <Head>
-        <title>Zion Tech Solutions - Leading Technology Solutions Provider</title>
-        <meta name="description" content="Zion Tech Solutions provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence." />
-      </Head>
-      
-      <main className="container mx-auto px-4 py-16">
-        <div className="text-center text-white">
-          <h1 className="text-5xl font-bold mb-6">
-            Welcome to Zion Tech Solutions
-          </h1>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Leading technology solutions provider helping businesses transform their digital presence 
-            with cutting-edge AI, cloud architecture, and innovative development services.
-          </p>
-          
-          <div className="flex justify-center gap-6 mb-12">
-            <Link href="/services">
-              <span className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                Our Services
-              </span>
-            </Link>
-            <Link href="/contact">
-              <span className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors">
-                Get in Touch
-              </span>
-            </Link>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">AI Development</h3>
-              <p>Custom AI solutions and machine learning models for your business needs.</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cloud Architecture</h3>
-              <p>Scalable cloud solutions and infrastructure design for modern applications.</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Digital Transformation</h3>
-              <p>End-to-end digital transformation services to modernize your business.</p>
-=======
     <MainLayout>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 
@@ -114,7 +71,6 @@ export default function HomePage() {
               <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
                 Explore Services
               </Link>
->>>>>>> 86e2a4cca918c6ff376b51aa8638f7a375ebfe57
             </div>
           </motion.div>
         </div>
@@ -194,6 +150,100 @@ export default function HomePage() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Market Position & Pricing Section */}
+      <section className="py-20 bg-gray-100">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-lg text-gray-600 max-w-4xl mx-auto">
+              We deliver cutting-edge technology solutions with competitive pricing and unmatched expertise. 
+              Our comprehensive service portfolio covers everything from micro SaaS development to enterprise AI solutions.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <motion.div
+              className="bg-white p-6 rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-bold text-gray-900 mb-4">💰 Competitive Pricing</h3>
+              <ul className="text-gray-600 space-y-2">
+                <li>• Micro SaaS: $29 - $4,999/month</li>
+                <li>• IT Services: $120 - $500/hour</li>
+                <li>• AI Solutions: $1,000 - $1M/project</li>
+                <li>• Transparent, no hidden fees</li>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              className="bg-white p-6 rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-bold text-gray-900 mb-4">🚀 Innovation Focus</h3>
+              <ul className="text-gray-600 space-y-2">
+                <li>• 50+ cutting-edge services</li>
+                <li>• AI, Blockchain, IoT expertise</li>
+                <li>• Quantum computing solutions</li>
+                <li>• Future-ready technology stack</li>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              className="bg-white p-6 rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-bold text-gray-900 mb-4">📞 Expert Support</h3>
+              <ul className="text-gray-600 space-y-2">
+                <li>• 24/7 technical support</li>
+                <li>• Dedicated project managers</li>
+                <li>• Free consultation & quotes</li>
+                <li>• Rapid response times</li>
+              </ul>
+            </motion.div>
+          </div>
+
+          <motion.div
+            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-lg text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
+            <p className="text-lg mb-6">
+              Contact us today for a free consultation and custom quote tailored to your needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="text-center sm:text-left">
+                <p className="text-blue-100 mb-1">📞 <strong>Call:</strong> +1 302 464 0950</p>
+                <p className="text-blue-100 mb-1">📧 <strong>Email:</strong> kleber@ziontechgroup.com</p>
+                <p className="text-blue-100">📍 <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>
+              </div>
+              <Link href="/contact" className="px-6 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                Get Free Quote
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 
