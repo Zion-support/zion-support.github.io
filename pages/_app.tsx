@@ -25,7 +25,7 @@ function Header(): any {
           WebkitTextFillColor: 'transparent',
           backgroundClip: 'text',
           textDecoration: 'none'
-        }}>Zion Tech Group</Link>
+        }}>Zion Tech Group        </Link>
         
         {/* Desktop Navigation */}
         <div style={{ 
@@ -173,6 +173,7 @@ function Footer(): any {
         </div>
 
         {/* Services */}
+<<<<<<< HEAD
         <div style={{ display: 'grid', gap: 12 }}>
           <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Our Services</h3>
           <div style={{ display: 'grid', gap: 8 }}>
@@ -217,6 +218,7 @@ function Footer(): any {
             <Link href="/terms" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Terms of Service</Link>
             <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Main Website</a>
           </div>
+        </div>
         </div>
 
         {/* Contact CTA */}
