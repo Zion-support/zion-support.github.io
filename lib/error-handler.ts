@@ -2,8 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 
 export interface ApiError extends Error {
   statusCode?: number;
-  isOperational?: boolean;
-}
+  isOperational?: boolean}
 
 export class AppError extends Error implements ApiError {
   public statusCode: number;
@@ -14,12 +13,11 @@ export class AppError extends Error implements ApiError {
     this.statusCode = statusCode;
     this.isOperational = true;
 
-    Error.captureStackTrace(this, this.constructor);
-  }
+    Error.captureStackTrace(this, this.constructor)}
 }
 
 export const errorHandler = (err: ApiError, req: NextApiRequest, res: NextApiResponse) => {
-  const { statusCode = 500, message } = err;
+  const { statusCode = 500, message } = e;r;r;
 
   // Log error for monitoring
   console.error(`API Error [${statusCode}]: ${message}`, {
@@ -36,9 +34,7 @@ export const errorHandler = (err: ApiError, req: NextApiRequest, res: NextApiRes
       statusCode,
       timestamp: new Date().toISOString()
     }
-  });
-};
+  })};
 
 export const asyncHandler = (fn: Function) => (req: NextApiRequest, res: NextApiResponse, next: Function) => {
-  Promise.resolve(fn(req, res, next)).catch(next);
-};
+  Promise.resolve(fn(req, res, next)).catch((error: any) => next(error););};

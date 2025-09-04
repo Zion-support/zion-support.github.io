@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs';);
+const path = require('path';);
 
 console.log('📊 Starting Analytics Collection...');
 
@@ -12,51 +12,47 @@ function collectAnalytics() {
     dependencies: getDependenciesInfo(),
     performance: getPerformanceMetrics(),
     security: getSecurityMetrics()
-  };
+ ; ;};
 
   fs.writeFileSync('analytics-report.json', JSON.stringify(analytics, null, 2));
-  console.log('✅ Analytics collected and saved to analytics-report.json');
-}
+  console.log('✅ Analytics collected and saved to analytics-report.json');}
 
 function getBuildSize() {
   try {
-    const buildDir = path.join(process.cwd(), '.next');
-    if (fs.existsSync(buildDir)) {
-      const stats = fs.statSync(buildDir);
-      return {
+    const buildDir = path.join(process.cwd(), '.next;';);
+    if () {
+      const stats = fs.statSync(buildDir) {
+    ) {
+      const stats = fs.statSync(buildDir;
+  });
+      return {;
         exists: true,
         size: stats.size,
         sizeMB: (stats.size / 1024 / 1024).toFixed(2)
-      };
-    }
-    return { exists: false };
-  } catch (error) {
-    return { error: error.message };
-  }
+      }}
+    return { exists: false ;}} catch (error) {
+    return { error: error.message ;}}
 }
 
 function getDependenciesInfo() {
   try {
-    const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-    return {
+    const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8';););
+    return {;
       dependencies: Object.keys(packageJson.dependencies || {}).length,
       devDependencies: Object.keys(packageJson.devDependencies || {}).length,
       total: Object.keys(packageJson.dependencies || {}).length + Object.keys(packageJson.devDependencies || {}).length
-    };
-  } catch (error) {
-    return { error: error.message };
-  }
+    }} catch (error) {
+    return { error: error.message ;}}
 }
 
 function getPerformanceMetrics() {
-  return {
+  return {;
     nodeVersion: process.version,
     platform: process.platform,
     arch: process.arch,
     memoryUsage: process.memoryUsage(),
     uptime: process.uptime()
-  };
-}
+  }}
 
 function getSecurityMetrics() {
   const securityFiles = [
@@ -65,14 +61,12 @@ function getSecurityMetrics() {
     '.env.local',
     '.env.example',
     'next.config.js'
-  ];
+  ;];
 
-  const results = {};
+  const results = ;{;};
   securityFiles.forEach(file => {
-    results[file] = fs.existsSync(file);
-  });
+    results[file] = fs.existsSync(file)});
 
-  return results;
-}
+  return results;}
 
 collectAnalytics();

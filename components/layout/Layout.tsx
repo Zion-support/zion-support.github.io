@@ -3,7 +3,8 @@ import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
 
-interface LayoutProps { children: React.ReactNode;
+interface LayoutProps {
+  children: React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
@@ -75,11 +76,9 @@ const Layout: React.FC<LayoutProps> = ({
                 "contactType": "customer service",
                 "email": "kleber@ziontechgroup.com"
               },
-              "sameAs": [
-                "https://ziontechgroup.com"
-              ]
+              "sameAs": ["https://ziontechgroup.com"]
             })
-          }
+          }}
         />
       </Head>
       
@@ -92,5 +91,6 @@ const Layout: React.FC<LayoutProps> = ({
       </div>
     </>
   );
-}
+};
+
 export default Layout;

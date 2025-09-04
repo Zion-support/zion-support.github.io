@@ -1,12 +1,65 @@
 {
-  "timestamp": "2025-09-04T02:09:58.191Z",
-  "duration": "679ms",
+<<<<<<< HEAD
+  "timestamp": "2025-09-04T02:05:42.730Z",
+  "duration": "703ms",
   "overallStatus": "unhealthy",
   "summary": {
-    "passed": 3,
+    "total": 5,
+    "healthy": 3,
     "warnings": 1,
-    "errors": 0,
-    "infos": 1
+    "unhealthy": 1
   },
-  "status": "WARNING"
+  "checks": [
+    {
+      "name": "Hardcoded Secrets",
+      "status": "healthy",
+      "details": "No hardcoded secrets detected"
+    },
+    {
+      "name": "Dependency Vulnerabilities",
+      "status": "unhealthy",
+      "details": "Command failed: npm audit --json\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+    },
+    {
+      "name": "File Permissions",
+      "status": "warning",
+      "details": "2 files with insecure permissions"
+    },
+    {
+      "name": "Exposed Information",
+      "status": "healthy",
+      "details": "No sensitive information exposure detected"
+    },
+    {
+      "name": "Insecure HTTP",
+      "status": "healthy",
+      "details": "No insecure HTTP usage detected"
+    }
+  ]
+=======
+  "timestamp": "2025-09-04T00:00:10.786Z",
+  "scans": {
+    "packageJson": {
+      "status": "completed",
+      "dependencies": 111,
+      "vulnerablePackages": 0
+    },
+    "sensitiveFiles": {
+      "status": "completed",
+      "found": 0,
+      "files": []
+    },
+    "codeScan": {
+      "status": "completed",
+      "filesScanned": 10,
+      "potentialSecrets": 0
+    },
+    "npmAudit": {
+      "status": "skipped",
+      "message": "npm audit not available or failed"
+    }
+  },
+  "vulnerabilities": [],
+  "status": "secure"
+>>>>>>> cursor/add-new-services-and-advertise-them-334b
 }

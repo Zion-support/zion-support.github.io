@@ -4,18 +4,13 @@ import Link from 'next/link';
 import { ArrowLeft, Code, Key, Zap, Shield } from 'lucide-react';
 
 export default function APIOverview() {
-<<<<<<< HEAD
-  const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
+  const contact = { 
+    phone: '+1 302 464 0950', 
+    email: 'kleber@ziontechgroup.com', 
+    address: '364 E Main St STE 1008 Middletown DE 19709', 
+    site: 'https://ziontechgroup.com' 
   };
 
-=======
-  const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
-  }
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
   return (
     <>
       <Head>
@@ -23,7 +18,7 @@ export default function APIOverview() {
         <meta name="description" content="Comprehensive overview of Zion Tech Group's API services and integration capabilities." />
         <link rel="canonical" href={`${contact.site}/docs/api-overview`} />
       </Head>
-
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-4xl mx-auto px-4 py-8">
           {/* Header */}
@@ -46,7 +41,7 @@ export default function APIOverview() {
                 <h2 className="text-xl font-semibold text-gray-900">RESTful APIs</h2>
               </div>
               <p className="text-gray-600 mb-4">
-                Clean, intuitive REST APIs with comprehensive documentation and SDKs for popular languages.
+                Clean intuitive REST APIs with comprehensive documentation and SDKs for popular languages.
               </p>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li>• JSON-based request/response format</li>
@@ -74,62 +69,51 @@ export default function APIOverview() {
 
             <div className="bg-white rounded-lg shadow-lg p-6">
               <div className="flex items-center mb-4">
-                <Zap className="w-8 h-8 text-purple-600 mr-3" />
-                <h2 className="text-xl font-semibold text-gray-900">Real-time Updates</h2>
+                <Zap className="w-8 h-8 text-yellow-600 mr-3" />
+                <h2 className="text-xl font-semibold text-gray-900">Performance</h2>
               </div>
               <p className="text-gray-600 mb-4">
-                WebSocket connections and webhooks for real-time data synchronization and event notifications.
+                High-performance APIs with global CDN, caching, and optimized response times.
               </p>
               <ul className="space-y-2 text-sm text-gray-600">
-                <li>• WebSocket connections</li>
-                <li>• Webhook notifications</li>
-                <li>• Event streaming</li>
-                <li>• Real-time data sync</li>
+                <li>• Global CDN distribution</li>
+                <li>• Intelligent caching strategies</li>
+                <li>• Sub-100ms response times</li>
+                <li>• 99.9% uptime SLA</li>
               </ul>
             </div>
 
             <div className="bg-white rounded-lg shadow-lg p-6">
               <div className="flex items-center mb-4">
                 <Shield className="w-8 h-8 text-red-600 mr-3" />
-                <h2 className="text-xl font-semibold text-gray-900">Security & Compliance</h2>
+                <h2 className="text-xl font-semibold text-gray-900">Security</h2>
               </div>
               <p className="text-gray-600 mb-4">
-                Enterprise-grade security with SOC 2 compliance, encryption, and comprehensive audit logs.
+                Enterprise-grade security with encryption, monitoring, and compliance standards.
               </p>
               <ul className="space-y-2 text-sm text-gray-600">
-                <li>• SOC 2 Type II compliant</li>
                 <li>• End-to-end encryption</li>
-                <li>• Comprehensive audit logs</li>
-                <li>• GDPR and CCPA compliant</li>
+                <li>• SOC 2 Type II compliance</li>
+                <li>• Real-time monitoring</li>
+                <li>• DDoS protection</li>
               </ul>
             </div>
           </div>
 
-          {/* API Categories */}
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-6">API Categories</h2>
-            
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="border border-gray-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Micro SaaS APIs</h3>
-                <p className="text-gray-600 mb-4">
-                  APIs for our 150+ micro SaaS applications including cost optimization, analytics, and automation tools.
-                </p>
-                <Link href="/micro-saas" className="text-blue-600 hover:text-blue-700 font-medium">
-                  View Micro SaaS →
-                </Link>
-              </div>
-
+          {/* Service APIs */}
+          <div className="mb-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-6">Available Service APIs</h2>
+            <div className="grid md:grid-cols-2 gap-6">
               <div className="border border-gray-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">AI Service APIs</h3>
                 <p className="text-gray-600 mb-4">
-                  Machine learning and AI APIs for natural language processing, computer vision, and predictive analytics.
+                  Machine learning and artificial intelligence APIs for natural language processing, computer vision, and predictive analytics.
                 </p>
                 <Link href="/ai-services" className="text-blue-600 hover:text-blue-700 font-medium">
                   View AI Services →
                 </Link>
               </div>
-
+              
               <div className="border border-gray-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">IT Service APIs</h3>
                 <p className="text-gray-600 mb-4">

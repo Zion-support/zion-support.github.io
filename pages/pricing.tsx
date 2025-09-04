@@ -1,14 +1,8 @@
 import React from 'react';
-// // import Link from 'next/link';
+
 import Head from 'next/head';
 
 const PricingPage: React.FC = () => {
-<<<<<<< HEAD
-  const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
-  };
-
-=======
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
   return (
     <>
       <Head>
@@ -17,7 +11,7 @@ const PricingPage: React.FC = () => {
       </Head>
       <section className="bg-white">
         <div className="container mx-auto px-4 py-12">
-          <h1 className="text-3xl md: text-4xl font-bold text-gray-900 mb-6">Pricing</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Pricing</h1>
           <p className="text-gray-600 mb-10 max-w-3xl">
             We tailor solutions to your needs. Below are typical starting ranges observed in the market. Get a custom quote at any time.
           </p>

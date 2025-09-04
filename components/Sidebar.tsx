@@ -33,13 +33,15 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         ? prev.filter(s => s !== section)
         : [...prev, section]
     );
-  }
+  };
+
   const navigation = [
-    { name: 'Home', href: '/', icon: Home
-    },
-    { name: 'About', href: '/about', icon: Users
-    },
-    { name: 'Services', icon: Settings, children: [
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'About', href: '/about', icon: Users },
+    { 
+      name: 'Services', 
+      icon: Settings, 
+      children: [
         { name: 'All Services', href: '/services' },
         { name: 'Services Catalog', href: '/services-catalog' },
         { name: 'Micro SaaS', href: '/micro-saas' },
@@ -50,14 +52,10 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         { name: 'Quantum Computing', href: '/quantum-computing' }
       ]
     },
-    { name: 'Documentation', href: '/docs', icon: BookOpen
-    },
-    { name: 'Pricing', href: '/pricing', icon: DollarSign
-    },
-    { name: 'FAQ', href: '/faq', icon: HelpCircle
-    },
-    { name: 'Contact', href: '/contact', icon: Mail
-    }
+    { name: 'Documentation', href: '/docs', icon: BookOpen },
+    { name: 'Pricing', href: '/pricing', icon: DollarSign },
+    { name: 'FAQ', href: '/faq', icon: HelpCircle },
+    { name: 'Contact', href: '/contact', icon: Mail }
   ];
 
   const quickLinks = [
@@ -180,7 +178,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                 ✉️ <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">kleber@ziontechgroup.com</a>
               </div>
               <div className="text-slate-300">
-                📍 Middletown, DE 19709
+                📍 Middletown DE 19709
               </div>
             </div>
           </div>

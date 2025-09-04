@@ -7,8 +7,7 @@ class AutoDeploy {
       'git add .',
       'git commit -m "feat: automated improvements and fixes"',
       'git push origin main'
-    ];
-  }
+    ]}
 
   async deploy() {
     console.log('🚀 Starting automated deployment...');
@@ -17,15 +16,12 @@ class AutoDeploy {
       try {
         console.log(`Executing: ${step}`);
         execSync(step, { stdio: 'inherit' });
-        console.log(`✅ ${step} completed`);
-      } catch (error) {
+        console.log(`✅ ${step} completed`);} catch (error) {
         console.log(`❌ ${step} failed: ${error.message}`);
-        break;
-      }
+        break}
     }
     
-    console.log('🎉 Deployment completed!');
-  }
+    console.log('🎉 Deployment completed!');}
 }
 
 new AutoDeploy().deploy();

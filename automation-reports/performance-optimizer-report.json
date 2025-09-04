@@ -1,152 +1,91 @@
 {
-<<<<<<< HEAD
-  "timestamp": "2025-09-04T02:59:17.423Z",
-=======
-  "timestamp": "2025-09-04T02:33:47.463Z",
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
+  "timestamp": "2025-09-04T03:12:55.818Z",
   "optimizations": [
     {
       "type": "build",
       "description": "Build directory exists - production build available",
       "impact": "high",
       "implementation": "Use production build for optimal performance",
-<<<<<<< HEAD
-      "timestamp": "2025-09-04T02:59:17.423Z"
-=======
-      "timestamp": "2025-09-04T02:33:47.463Z"
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
+      "timestamp": "2025-09-04T03:12:55.818Z"
     },
     {
       "type": "compression",
       "description": "Gzip compression enabled",
       "impact": "high",
       "implementation": "Already implemented",
-<<<<<<< HEAD
-      "timestamp": "2025-09-04T02:59:17.434Z"
-=======
-      "timestamp": "2025-09-04T02:33:47.481Z"
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
+      "timestamp": "2025-09-04T03:12:55.839Z"
+    },
+    {
+      "type": "css",
+      "description": "CSS optimization enabled",
+      "impact": "medium",
+      "implementation": "Already implemented",
+      "timestamp": "2025-09-04T03:12:55.839Z"
+    },
+    {
+      "type": "console",
+      "description": "Console removal enabled for production",
+      "impact": "medium",
+      "implementation": "Already implemented",
+      "timestamp": "2025-09-04T03:12:55.839Z"
     }
   ],
   "recommendations": [
     {
       "category": "imports",
-<<<<<<< HEAD
-      "description": "Found 15 potentially unused imports",
+      "description": "Found 16 potentially unused imports",
       "priority": "low",
-      "timestamp": "2025-09-04T02:59:17.430Z"
-=======
-      "description": "Found 14 potentially unused imports",
-      "priority": "low",
-      "timestamp": "2025-09-04T02:33:47.474Z"
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
+      "timestamp": "2025-09-04T03:12:55.833Z"
     },
     {
       "category": "logging",
-      "description": "Found 9 console statements - remove for production",
+      "description": "Found 17 console statements - remove for production",
       "priority": "medium",
-<<<<<<< HEAD
-      "timestamp": "2025-09-04T02:59:17.434Z"
-=======
-      "timestamp": "2025-09-04T02:33:47.481Z"
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
-    },
-    {
-      "category": "css",
-      "description": "Enable CSS optimization in Next.js config",
-      "priority": "medium",
-<<<<<<< HEAD
-      "timestamp": "2025-09-04T02:59:17.434Z"
-=======
-      "timestamp": "2025-09-04T02:33:47.481Z"
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
-    },
-    {
-      "category": "console",
-      "description": "Remove console statements in production builds",
-      "priority": "medium",
-<<<<<<< HEAD
-      "timestamp": "2025-09-04T02:59:17.434Z"
-    },
-    {
-      "category": "lazy-loading",
-      "description": "Found 36 components that could benefit from lazy loading",
-      "priority": "medium",
-      "timestamp": "2025-09-04T02:59:17.437Z"
-=======
-      "timestamp": "2025-09-04T02:33:47.481Z"
+      "timestamp": "2025-09-04T03:12:55.839Z"
     },
     {
       "category": "lazy-loading",
       "description": "Found 41 components that could benefit from lazy loading",
       "priority": "medium",
-      "timestamp": "2025-09-04T02:33:47.484Z"
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
+      "timestamp": "2025-09-04T03:12:55.842Z"
     },
     {
       "category": "caching",
       "description": "Implement proper caching strategies",
       "priority": "high",
-<<<<<<< HEAD
-      "timestamp": "2025-09-04T02:59:17.437Z"
-=======
-      "timestamp": "2025-09-04T02:33:47.485Z"
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
+      "timestamp": "2025-09-04T03:12:55.843Z"
     },
     {
       "category": "cdn",
       "description": "Use CDN for static assets",
       "priority": "medium",
-<<<<<<< HEAD
-      "timestamp": "2025-09-04T02:59:17.437Z"
-=======
-      "timestamp": "2025-09-04T02:33:47.485Z"
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
+      "timestamp": "2025-09-04T03:12:55.843Z"
     },
     {
       "category": "minification",
       "description": "Ensure all assets are minified",
       "priority": "high",
-<<<<<<< HEAD
-      "timestamp": "2025-09-04T02:59:17.437Z"
-=======
-      "timestamp": "2025-09-04T02:33:47.485Z"
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
+      "timestamp": "2025-09-04T03:12:55.843Z"
     },
     {
       "category": "bundling",
       "description": "Optimize bundle splitting",
       "priority": "medium",
-<<<<<<< HEAD
-      "timestamp": "2025-09-04T02:59:17.437Z"
-=======
-      "timestamp": "2025-09-04T02:33:47.485Z"
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
+      "timestamp": "2025-09-04T03:12:55.843Z"
     },
     {
       "category": "preloading",
       "description": "Implement resource preloading for critical assets",
       "priority": "medium",
-<<<<<<< HEAD
-      "timestamp": "2025-09-04T02:59:17.437Z"
-=======
-      "timestamp": "2025-09-04T02:33:47.485Z"
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
+      "timestamp": "2025-09-04T03:12:55.843Z"
     }
   ],
   "metrics": {
     "largeImages": 0,
-<<<<<<< HEAD
-    "unusedImports": 15,
-    "consoleStatements": 9,
-    "lazyLoadingOpportunities": 36,
-    "totalFiles": 68
-=======
-    "unusedImports": 14,
-    "consoleStatements": 9,
+    "unusedImports": 16,
+    "consoleStatements": 17,
     "lazyLoadingOpportunities": 41,
-    "totalFiles": 67
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
+    "totalFiles": 89
   },
   "overall": "optimized"
 }

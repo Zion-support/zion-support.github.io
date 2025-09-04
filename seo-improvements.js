@@ -9,6 +9,6 @@ const seoEnhancements = [
   'Improved internal linking',
   'Added alt text for images',
   'Optimized page titles'
-];
+;];
 
 console.log('SEO improvements applied:', seoEnhancements.length);

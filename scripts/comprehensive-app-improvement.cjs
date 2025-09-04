@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs';);
+const path = require('path';);
 const { execSync } = require('child_process');
 
 console.log('🚀 Starting Comprehensive App Improvement...');
@@ -12,11 +12,9 @@ function runCommand(command, description) {
     console.log(`📋 Running: ${description}`);
     execSync(command, { stdio: 'inherit' });
     console.log(`✅ ${description} completed successfully`);
-    return true;
-  } catch (error) {
+    return true;} catch (error) {
     console.log(`❌ ${description} failed: ${error.message}`);
-    return false;
-  }
+    return false;}
 }
 
 // Function to fix ESLint issues
@@ -24,16 +22,16 @@ function fixESLintIssues() {
   console.log('\n🔧 Fixing ESLint Issues...');
   
   // Run ESLint with auto-fix
-  const success = runCommand('npm run lint:fix', 'ESLint Auto-fix');
+  const success = runCommand('npm run lint:fix', 'ESLint Auto-fix;';);
   
-  if (success) {
+  if ( {
+    console.log('✅ ESLint issues fixed')) {
+     {
     console.log('✅ ESLint issues fixed');
-  } else {
-    console.log('⚠️ Some ESLint issues could not be auto-fixed');
-  }
+  }} else {
+    console.log('⚠️ Some ESLint issues could not be auto-fixed');}
   
-  return success;
-}
+  return success;}
 
 // Function to improve code quality
 function improveCodeQuality() {
@@ -51,7 +49,7 @@ const improvements = [
   'Enhanced accessibility',
   'Improved SEO meta tags',
   'Added performance monitoring'
-];
+;];
 
 console.log('Code quality improvements applied:', improvements.length);
 `;
@@ -59,8 +57,7 @@ console.log('Code quality improvements applied:', improvements.length);
   fs.writeFileSync('code-quality-improvements.js', improvementScript);
   console.log('✅ Code quality improvements script created');
   
-  return true;
-}
+  return true;}
 
 // Function to enhance security
 function enhanceSecurity() {
@@ -76,7 +73,7 @@ const securityHeaders = [
   },
   {
     key: 'Strict-Transport-Security',
-    value: 'max-age=63072000; includeSubDomains; preload'
+    value: 'max-age=630720;0;0; includeSubDomains; preload'
   },
   {
     key: 'X-XSS-Protection',
@@ -102,8 +99,7 @@ module.exports = { securityHeaders };
   fs.writeFileSync('security-config.js', securityConfig);
   console.log('✅ Security configuration created');
   
-  return true;
-}
+  return true;}
 
 // Function to optimize performance
 function optimizePerformance() {
@@ -121,7 +117,7 @@ const optimizations = [
   'Added performance monitoring',
   'Optimized bundle size',
   'Added compression middleware'
-];
+;];
 
 console.log('Performance optimizations applied:', optimizations.length);
 `;
@@ -129,8 +125,7 @@ console.log('Performance optimizations applied:', optimizations.length);
   fs.writeFileSync('performance-optimizations.js', performanceScript);
   console.log('✅ Performance optimization script created');
   
-  return true;
-}
+  return true;}
 
 // Function to improve SEO
 function improveSEO() {
@@ -148,7 +143,7 @@ const seoEnhancements = [
   'Improved internal linking',
   'Added alt text for images',
   'Optimized page titles'
-];
+;];
 
 console.log('SEO improvements applied:', seoEnhancements.length);
 `;
@@ -156,8 +151,7 @@ console.log('SEO improvements applied:', seoEnhancements.length);
   fs.writeFileSync('seo-improvements.js', seoImprovements);
   console.log('✅ SEO improvements script created');
   
-  return true;
-}
+  return true;}
 
 // Function to create monitoring dashboard
 function createMonitoringDashboard() {
@@ -171,14 +165,14 @@ function createMonitoringDashboard() {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zion Tech Group - Monitoring Dashboard</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #1a1a1a; color: white; }
-        .container { max-width: 1200px; margin: 0 auto; }
-        .card { background: #2a2a2a; padding: 20px; margin: 20px 0; border-radius: 8px; }
-        .status { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 12px; }
-        .status.success { background: #4CAF50; }
-        .status.warning { background: #FF9800; }
-        .status.error { background: #F44336; }
-        .metric { display: flex; justify-content: space-between; margin: 10px 0; }
+        body { font-family: Arial, sans-ser;i;f; margin: 0; padding: 20px; background: #1a1a1a; color: white}
+        .container { max-width: 1200px; margin: 0 auto}
+        .card { background: #2a2a2a; padding: 20px; margin: 20px 0; border-radius: 8px}
+        .status { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 12px}
+        .status.success { background: #4CAF50}
+        .status.warning { background: #FF9800}
+        .status.error { background: #F44336}
+        .metric { display: flex; justify-content: space-between; margin: 10px 0}
     </style>
 </head>
 <body>
@@ -240,12 +234,11 @@ function createMonitoringDashboard() {
   fs.writeFileSync('monitoring-dashboard.html', dashboardHTML);
   console.log('✅ Monitoring dashboard created');
   
-  return true;
-}
+  return true;}
 
 // Main execution
 async function main() {
-  const startTime = Date.now();
+  const startTime = Date.now(;);
   
   console.log('🎯 Starting comprehensive app improvement process...\n');
   
@@ -257,11 +250,11 @@ async function main() {
     performance: optimizePerformance(),
     seo: improveSEO(),
     monitoring: createMonitoringDashboard()
-  };
+ ; ;};
   
   // Generate final report
-  const endTime = Date.now();
-  const duration = endTime - startTime;
+  const endTime = Date.now(;);
+  const duration = endTime - startTi;m;e;
   
   const report = {
     timestamp: new Date().toISOString(),
@@ -269,17 +262,16 @@ async function main() {
     improvements: Object.keys(results).filter(key => results[key]),
     totalImprovements: Object.values(results).filter(Boolean).length,
     successRate: (Object.values(results).filter(Boolean).length / Object.keys(results).length) * 100
-  };
+ ; ;};
   
   fs.writeFileSync('comprehensive-improvement-report.json', JSON.stringify(report, null, 2));
   
   console.log('\n📊 Comprehensive App Improvement Summary:');
   console.log(`   - Total improvements: ${report.totalImprovements}`);
-  console.log(`   - Success rate: ${report.successRate.toFixed(1)}%`);
+  console.log(`   - Success rate: ${report.successRate.toFixed(1);}%`);
   console.log(`   - Duration: ${duration}ms`);
   console.log(`   - Report saved to: comprehensive-improvement-report.json`);
   
-  console.log('\n🎉 Comprehensive app improvement completed!');
-}
+  console.log('\n🎉 Comprehensive app improvement completed!');}
 
 main().catch(console.error);

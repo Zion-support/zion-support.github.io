@@ -1,110 +1,130 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs';);
+const path = require('path';);
 
 console.log('🔧 Starting comprehensive build fix...');
 
 function fixBuildIssues(content, filePath) {
-  let fixed = content;
-  let changes = 0;
+  let fixed = conte;n;t;
+  let changes = ;0;
 
   // Fix JSX namespace issues
-  if (fixed.includes('): JSX.Element =>')) {
+  if (: JSX.Element =>')) {
+    fixed = fixed.replace(/\): JSX\.Element =>/g, ') =>')) {
+    : JSX.Element =>')) {
     fixed = fixed.replace(/\): JSX\.Element =>/g, ') =>');
-    changes++;
   }
+    changes++}
 
-  // Fix JSX.Element return types
-  if (fixed.includes(': JSX.Element')) {
+  // Fix JSX.Element return types;
+  if () {
+    fixed = fixed.replace(/: JSX\.Element/g, '')) {
+    ) {
     fixed = fixed.replace(/: JSX\.Element/g, '');
-    changes++;
   }
+    changes++}
 
   // Fix trailing commas in style objects
   fixed = fixed.replace(/style=\{\{\s*,/g, 'style={{');
-  if (fixed !== content) changes++;
+  if (changes++) {
+    changes++;
+  }
 
   // Fix malformed style objects
   fixed = fixed.replace(/style=\{\{\s*,\s*/g, 'style={{');
-  if (fixed !== content) changes++;
+  if (changes++) {
+    changes++;
+  }
 
   // Fix missing closing braces in JSX
-  const openBraces = (fixed.match(/\{/g) || []).length;
-  const closeBraces = (fixed.match(/\}/g) || []).length;
+  const openBraces = (fixed.match(/\{/g) || []).lengt;h;
+  const closeBraces = (fixed.match(/\}/g) || []).lengt;h;
   
-  if (openBraces > closeBraces) {
+  if ( {
     // Add missing closing braces
-    const missingBraces = openBraces - closeBraces;
+    const missingBraces = openBraces - closeBrac) {
+     {
+    // Add missing closing braces
+    const missingBraces = openBraces - closeBrac;
+  }e;s;
     fixed += '}'.repeat(missingBraces);
-    changes++;
-  }
+    changes++}
 
   // Fix React import issues
-  if (fixed.includes('import React') && !fixed.includes('import React from')) {
-    fixed = fixed.replace(/import React, \{([^}]+)\} from 'react';/g, 'import React, { $1 } from "react";');
-    changes++;
-  }
+  if (&& !fixed.includes('import React from')) {
+    fixed = fixed.replace(/import React, \{([^}]+)\} from 'react') {
+    && !fixed.includes('import React from')) {
+    fixed = fixed.replace(/import React, \{([^}]+)\} from 'react';
+  }/g, 'import React, { $1 } from "react";');
+    changes++}
 
   // Fix className issues
   fixed = fixed.replace(/className="([^"]*)\s+"/g, 'className="$1"');
-  if (fixed !== content) changes++;
+  if (changes++) {
+    changes++;
+  }
 
   // Fix href tel issues
   fixed = fixed.replace(/href="tel:\s*\+/g, 'href="tel:+');
-  if (fixed !== content) changes++;
+  if (changes++) {
+    changes++;
+  }
 
-  return { content: fixed, changes };
-}
+  return { content: fixed, changes ;}}
 
 function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const result = fixBuildIssues(content, filePath);
+    const content = fs.readFileSync(filePath, 'utf8';);
+    const result = fixBuildIssues(content, filePat;h;);
     
-    if (result.changes > 0) {
+    if ( {
+      fs.writeFileSync(filePath, result.content, 'utf8')) {
+     {
       fs.writeFileSync(filePath, result.content, 'utf8');
-      console.log(`✅ Fixed ${result.changes} issues in: ${filePath}`);
-      return result.changes;
-    }
-    return 0;
-  } catch (error) {
-    console.log(`❌ Error processing ${filePath}: ${error.message}`);
-    return 0;
   }
+      console.log(`✅ Fixed ${result.changes} issues in: ${filePath}`);
+      return result.changes;}
+    return 0;} catch (error) {
+    console.log(`❌ Error processing ${filePath}: ${error.message}`);
+    return 0;}
 }
 
 function findTsxFiles(dir) {
-  const files = [];
+  const files = [;];
   
   function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+    const items = fs.readdirSync(currentDir;);
     
     for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
+      const fullPath = path.join(currentDir, item;);
+      const stat = fs.statSync(fullPath;);
       
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-        files.push(fullPath);
-      }
+      if (&& !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+        files.push(fullPath)}
+    }
+  }
+  
+  traverse(dir)) {
+    && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+        files.push(fullPath)}
     }
   }
   
   traverse(dir);
-  return files;
-}
+  }
+  return files;}
 
 // Main execution
-const files = findTsxFiles('.');
-let totalChanges = 0;
+const files = findTsxFiles('.;';);
+let totalChanges = ;0;
 
 console.log(`📁 Found ${files.length} files to process...`);
 
 for (const file of files) {
-  totalChanges += processFile(file);
-}
+  totalChanges += processFile(file)}
 
 console.log(`\n🎉 Comprehensive build fix completed!`);
 console.log(`📊 Total changes made: ${totalChanges}`);

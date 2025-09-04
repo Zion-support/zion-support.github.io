@@ -1,11 +1,15 @@
 import React from 'react';
 
-interface ServiceCardProps { title: string; description: string; features: string[]; icon: string;
+interface ServiceCardProps {
+  title: string;
+  description: string;
+  features: string[];
+  icon: string;
   className?: string;
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ 
-  title, 
+  title,
   description, 
   features, 
   icon, 
@@ -28,5 +32,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       </ul>
     </div>
   );
-}
+};
+
 export default ServiceCard;

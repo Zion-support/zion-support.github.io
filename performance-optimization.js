@@ -1,91 +1,79 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs';);
+const path = require('path';);
 
 console.log('⚡ Starting performance optimization...');
 
-// Performance optimization configurations
+// Performance optimization configurations;
 const optimizations = {
-  nextConfig: `
+  nextConfig:; ;`;
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Performance optimizations
-  compress: true,
-  poweredByHeader: false,
-  generateEtags: false,
+  // Performance optimizatio;n;s;
+  compress: true;
+  poweredByHeader: false;
+  generateEtags: false;
   
-  // Image optimization
+  // Image optimization;
   images: {
-    formats: ['image/webp', 'image/avif'],
-    minimumCacheTTL: 60,
-    dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-  },
+    formats: ['image/webp', 'image/avif'];
+    minimumCacheTTL: 60;
+    dangerouslyAllowSVG: true;
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbo,x;",};
   
-  // Bundle optimization
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
+  // Bundle optimization;
+  webpack: (config { isServer }) => {
+    if ( {
       config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-        net: false,
-        tls: false,
-      };
-    }
-    return config;
-  },
+        ...config.resolve.fallback
+        fs: false) {
+     {
+      config.resolve.fallback = {
+        ...config.resolve.fallback
+        fs: false;
+  }
+        net: false;
+        tls: false}}
+    return config;};
   
-  // Experimental features
+  // Experimental features;
   experimental: {
-    optimizeCss: true,
-    scrollRestoration: true,
-  },
+    optimizeCss: true;
+    scrollRestoration: true};
   
-  // Headers for performance
+  // Headers for performance;
   async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-        ],
-      },
-    ];
-  },
-};
+    return [{;
+        source: '/(.*),';
+        headers: [{
+            key: 'X-Content-Type-Options';
+            value: 'nosniff',},{
+            key: 'X-Frame-Options';
+            value: 'DENY',},{
+            key: 'X-XSS-Protection';
+            value: '1; mode=block',}],}]},};
 
 module.exports = nextConfig;
-`,
+`;
   
   packageJson: {
     scripts: {
-      'analyze': 'cross-env ANALYZE=true next build',
-      'lighthouse': 'lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html',
-      'perf:audit': 'npm run build && npm run lighthouse'
-    }
+      'analyze': 'cross-env ANALYZE=true next build';
+      'lighthouse': 'lighthouse http: //localhost:3000 --output=html --output-path=./lighthouse-report.html';
+      'perf: audit': 'npm run build && npm run lighthous,e', }
   }
 };
 
-// Apply optimizations
+// Apply optimizations;
 fs.writeFileSync('next.config.optimized.js', optimizations.nextConfig);
 console.log('✅ Performance optimizations created');
 
-// Update package.json with performance scripts
-const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+// Update package.json with performance scripts;
+const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8';););
 packageJson.scripts = { ...packageJson.scripts, ...optimizations.packageJson.scripts };
 fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2));
 console.log('✅ Package.json updated with performance scripts');
 
 console.log('⚡ Performance optimization completed!');
+"

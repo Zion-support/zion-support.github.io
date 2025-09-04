@@ -1,7 +1,9 @@
 import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 
-interface LazyImageProps { src: string; alt: string;
+interface LazyImageProps {
+  src: string;
+  alt: string;
   width?: number;
   height?: number;
   className?: string;
@@ -34,9 +36,7 @@ export default function LazyImage({
           observer.disconnect();
         }
       },
-      { threshold: 0.1,
-        rootMargin: '50px'
-      }
+      { threshold: 0.1, rootMargin: '50px' }
     );
 
     if (imgRef.current) {

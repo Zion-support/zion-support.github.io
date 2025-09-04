@@ -5,14 +5,10 @@ import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 const ContactSection: React.FC = () => {
   const contactInfo = [
-    { icon: Phone, title: 'Phone', value: '+1 302 464 0950', href: 'tel:+13024640950'
-    },
-    { icon: Mail, title: 'Email', value: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com'
-    },
-    { icon: MapPin, title: 'Address', value: '364 E Main St STE 1008, Middletown, DE 19709', href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'
-    },
-    { icon: Clock, title: 'Business Hours', value: 'Mon-Fri: 9:00 AM - 6:00 PM EST', href: null
-    }
+    { icon: Phone, title: 'Phone', value: '+1 302 464 0950', href: 'tel:+13024640950' },
+    { icon: Mail, title: 'Email', value: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
+    { icon: MapPin, title: 'Address', value: '364 E Main St STE 1008, Middletown, DE 19709', href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709' },
+    { icon: Clock, title: 'Business Hours', value: 'Mon-Fri: 9:00 AM - 6:00 PM EST', href: null }
   ];
 
   return (
@@ -58,7 +54,6 @@ const ContactSection: React.FC = () => {
                 </div>
               ))}
             </div>
-
             <div className="mt-8">
               <Link href="/contact">
                 <Button size="lg">Send us a Message</Button>
@@ -98,7 +93,6 @@ const ContactSection: React.FC = () => {
                   />
                 </div>
               </div>
-              
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                   Email
@@ -111,7 +105,6 @@ const ContactSection: React.FC = () => {
                   placeholder="john@example.com"
                 />
               </div>
-              
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                   Company
@@ -124,7 +117,6 @@ const ContactSection: React.FC = () => {
                   placeholder="Your Company"
                 />
               </div>
-              
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Message
@@ -137,7 +129,6 @@ const ContactSection: React.FC = () => {
                   placeholder="Tell us about your project..."
                 ></textarea>
               </div>
-              
               <Button type="submit" size="lg" className="w-full">
                 Send Message
               </Button>
@@ -147,5 +138,6 @@ const ContactSection: React.FC = () => {
       </div>
     </section>
   );
-}
+};
+
 export default ContactSection;
