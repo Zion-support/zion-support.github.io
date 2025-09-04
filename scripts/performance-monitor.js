@@ -12,11 +12,10 @@ const performanceChecks = {
   lighthouseScore: false,
   loadTime: false,
   memoryUsage: false
-};
-
+}
 try {
   // Check build size
-  if (fs.existsSync('.next')) {
+  if (fs.existsSync('.next')) {;
     const buildSize = execSync('du -sh .next', { encoding: 'utf8' }).trim();
     console.log(`✅ Build size: ${buildSize}`);
     
@@ -49,7 +48,7 @@ try {
   // Check if app is running and get basic metrics
   const isRunning = execSync('curl -s -o /dev/null -w "%{http_code}" http://localhost:3000', { encoding: 'utf8' });
   if (isRunning === '200') {
-    console.log('✅ Application is running on localhost:3000');
+    console.log('✅ Application is running on localhost: 3000');,
     
     // Get response time
     const responseTime = execSync('curl -s -o /dev/null -w "%{time_total}" http://localhost:3000', { encoding: 'utf8' });
@@ -62,7 +61,7 @@ try {
     }
     performanceChecks.loadTime = true;
   } else {
-    console.log('⚠️  Application not running on localhost:3000');
+    console.log('⚠️  Application not running on localhost: 3000');,
   }
 } catch (error) {
   console.log('⚠️  Could not test application performance (app not running?)');
@@ -97,9 +96,8 @@ const report = {
   score: performanceScore,
   checks: performanceChecks,
   recommendations: []
-};
-
-if (performanceScore < 80) {
+}
+if (performanceScore < 80) {;
   report.recommendations.push('Consider optimizing build size');
   report.recommendations.push('Review bundle composition');
   report.recommendations.push('Implement code splitting');

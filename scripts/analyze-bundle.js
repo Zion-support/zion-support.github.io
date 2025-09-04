@@ -16,4 +16,4 @@ module.exports = (nextConfig = {}) => {
       return config;
     },
   });
-};
+}

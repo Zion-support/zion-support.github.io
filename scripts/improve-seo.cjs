@@ -74,6 +74,7 @@ Sitemap: https://ziontechgroup.com/sitemap.xml`;
     } catch (error) {
       console.error('SEO improvement failed:', error.message);
     }
+  }
 }
 
 improveSEO();

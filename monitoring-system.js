@@ -1,0 +1,73 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+
+console.log('📊 Starting monitoring and alerting system...');
+
+// Monitor system health
+function monitorSystemHealth() {
+  const healthChecks = {
+    timestamp: new Date().toISOString(),
+    build: checkBuildStatus(),
+    performance: checkPerformance(),
+    security: checkSecurity(),
+    dependencies: checkDependencies()
+  };
+  
+  fs.writeFileSync('health-monitor.json', JSON.stringify(healthChecks, null, 2));
+  console.log('✅ System health monitored');
+  
+  return healthChecks;
+}
+
+function checkBuildStatus() {
+  try {
+    require('child_process').execSync('npm run build', { stdio: 'pipe' });
+    return { status: 'healthy', message: 'Build successful' };
+  } catch (error) {
+    return { status: 'unhealthy', message: 'Build failed', error: error.message };
+  }
+}
+
+function checkPerformance() {
+  const bundleSize = getBundleSize();
+  return {
+    status: bundleSize < 50 ? 'healthy' : 'warning',
+    message: `Bundle size: ${bundleSize}MB`,
+    bundleSize
+  };
+}
+
+function checkSecurity() {
+  try {
+    require('child_process').execSync('npm audit --audit-level=moderate', { stdio: 'pipe' });
+    return { status: 'healthy', message: 'No security vulnerabilities found' };
+  } catch (error) {
+    return { status: 'warning', message: 'Security vulnerabilities detected' };
+  }
+}
+
+function checkDependencies() {
+  const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+  const totalDeps = Object.keys(packageJson.dependencies || {}).length + 
+                   Object.keys(packageJson.devDependencies || {}).length;
+  
+  return {
+    status: 'healthy',
+    message: `${totalDeps} dependencies`,
+    count: totalDeps
+  };
+}
+
+function getBundleSize() {
+  try {
+    const stats = fs.statSync('.next');
+    return Math.round(stats.size / (1024 * 1024) * 100) / 100;
+  } catch {
+    return 0;
+  }
+}
+
+// Run monitoring
+monitorSystemHealth();
