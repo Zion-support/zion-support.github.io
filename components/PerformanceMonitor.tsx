@@ -1,6 +1,13 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
-const PerformanceMonitor: React.FC = (): JSX.Element => {
+// Declare PerformanceObserver for TypeScript
+declare global {
+  interface Window {
+    PerformanceObserver: typeof PerformanceObserver;
+  }
+}
+
+const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -8,9 +15,8 @@ const PerformanceMonitor: React.FC = (): JSX.Element => {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
-          }
-      }
+            }
+        }
       });
       
       try {
@@ -25,7 +31,7 @@ const PerformanceMonitor: React.FC = (): JSX.Element => {
           if (entry.entryType === 'first-input') {
             console.log('FID:', (entry as any).processingStart - entry.startTime);
           }
-      }
+        }
       });
 
       try {
@@ -41,8 +47,8 @@ const PerformanceMonitor: React.FC = (): JSX.Element => {
           if (!(entry as any).hadRecentInput) {
             clsValue += (entry as any).value;
           }
-        console.log('CLS:', clsValue);
-      });
+        }
+        });
 
       try {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
@@ -54,7 +60,8 @@ const PerformanceMonitor: React.FC = (): JSX.Element => {
         observer.disconnect();
         fidObserver.disconnect();
         clsObserver.disconnect();
-      }
+      };
+    }
   }, []);
 
   return null; // This component doesn't render anything

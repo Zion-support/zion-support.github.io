@@ -1,14 +1,15 @@
-import React, {  useState, useEffect  } from "react";
+import React, { useState, useEffect } from 'react';
 
-interface LoadingOptimizedProps { children: React.ReactNode;
+interface LoadingOptimizedProps {
+  children: React.ReactNode;
   fallback?: React.ReactNode;
   delay?: number;
 }
 
 export default function LoadingOptimized({ 
   children, 
-  fallback, 
-  delay = 1000 
+  fallback = <div className="animate-pulse bg-slate-800 rounded-lg h-32 w-full" />,
+  delay = 0 
 }: LoadingOptimizedProps) {
   const [isLoading, setIsLoading] = useState(true);
 
