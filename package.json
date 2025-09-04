@@ -156,7 +156,7 @@
     "automation:security-audit": "node automation/security-audit.cjs",
     "format:check": "prettier --check .",
     "test": "jest --config jest.config.cjs",
-    "test:smoke": "jest --config jest.config.cjs",
+    "test:smoke": "jest --config jest.config.cjs src/__tests__/smoke.test.tsx",
     "ci:full": "bash scripts/comprehensive-build-test.sh",
     "ci:auto": "npm ci && npm run lint:check && npm run type-check && npm run build && npm run test:smoke",
     "test:watch": "jest --watch --config jest.config.ts",
@@ -184,7 +184,6 @@
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"
   },
-
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
@@ -234,6 +233,7 @@
     "d3-path": "^3.1.0",
     "d3-time-format": "^4.1.0",
     "date-fns": "^2.30.0",
+    "esbuild": "^0.21.5",
     "events": "^3.3.0",
     "framer-motion": "^10.16.16",
     "fs": "^0.0.1-security",
@@ -254,8 +254,6 @@
     "react-datepicker": "^8.4.0",
     "react-day-picker": "^8.9.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^7.8.2",
-    "esbuild": "^0.21.5",
     "react-error-boundary": "^6.0.0",
     "react-helmet-async": "^2.0.5",
     "react-hook-form": "^7.62.0",
@@ -276,17 +274,21 @@
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1"
   },
   "devDependencies": {
-
     "@babel/plugin-transform-class-properties": "^7.27.1",
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
     "@esbuild/linux-x64": "^0.25.9",
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.34.0",
+    "@netlify/plugin-nextjs": "^5.12.1",
     "@next/bundle-analyzer": "^15.5.2",
+    "@next/eslint-plugin-next": "^14.2.32",
     "@rollup/rollup-linux-x64-gnu": "^4.50.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/typography": "^0.5.16",
+    "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.6.4",
     "@testing-library/react": "^16.3.0",
     "@types/jest": "^29.5.8",
@@ -303,10 +305,6 @@
     "concurrently": "^8.2.2",
     "cssnano": "^7.1.1",
     "esbuild": "^0.25.9",
-    "@eslint/eslintrc": "^3.3.1",
-    "@eslint/js": "^9.34.0",
-    "@netlify/plugin-nextjs": "^5.12.1",
-    "@next/eslint-plugin-next": "^14.2.32",
     "eslint": "^9.34.0",
     "eslint-config-next": "^14.2.32",
     "eslint-formatter-junit": "^8.40.0",

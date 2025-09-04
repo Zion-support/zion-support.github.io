@@ -1,22 +1,46 @@
 {
-  "timestamp": "2025-09-04T02:55:27.818Z",
-  "duration": "0s",
+  "timestamp": "2025-09-04T13:20:57.426Z",
+  "totalDuration": "5s",
   "results": {
-    "automation": {
-      "success": true
-    },
-    "testing": {
+    "dependencyFix": {
       "success": false,
-      "error": "Class constructor TestSuite cannot be invoked without 'new'"
+      "duration": 25,
+      "errors": [
+        "Command failed: node automation/dependency-fixer.cjs"
+      ]
     },
-    "git": {
-      "success": true
+    "typescriptFix": {
+      "success": false,
+      "duration": 22,
+      "errors": [
+        "Command failed: node automation/typescript-fixer.cjs"
+      ]
+    },
+    "healthCheck": {
+      "success": true,
+      "duration": 25,
+      "errors": []
+    },
+    "securityScan": {
+      "success": true,
+      "duration": 852,
+      "errors": []
+    },
+    "performanceOptimize": {
+      "success": true,
+      "duration": 25,
+      "errors": []
+    },
+    "buildTest": {
+      "success": true,
+      "duration": 4016,
+      "errors": []
     }
   },
   "summary": {
-    "automationSuccess": true,
-    "testingSuccess": true,
-    "gitSuccess": true,
-    "overallSuccess": true
+    "totalPhases": 6,
+    "successfulPhases": 4,
+    "failedPhases": 2,
+    "overallSuccess": false
   }
 }

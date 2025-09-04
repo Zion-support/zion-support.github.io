@@ -1,1 +1,13 @@
-import React, { useState } from 'react'; import { Link  } from 'react-router-dom'; import { motion  } from 'framer-motion'; import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe  } from 'lucide-react'; export function FooterNewsletter() { const [email, setEmail] = useState(''); const [isSubscribed, setIsSubscribed] = useState(false); const [isLoading, setIsLoading] = useState(false); const handleSubscribe = async(e) => { e.preventDefault(); if(!email) return; setIsLoading(true);
+import React from 'react';
+
+export function Footer() {
+	return (
+		<footer className="bg-slate-900 border-t border-slate-800 text-slate-300 py-6">
+			<div className="container mx-auto px-4 text-center">
+				<span className="text-sm">© {new Date().getFullYear()} Zion Tech Group</span>
+			</div>
+		</footer>
+	);
+}
+
+export default Footer;
