@@ -1,6 +1,6 @@
 export default [
   {
-    files: ['**/*.js'],
+    files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
@@ -22,9 +22,6 @@ export default [
   },
   {
     ignores: [
-      '**/*.tsx',
-      '**/*.ts',
-      '**/*.jsx',
       'node_modules/**',
       '.next/**',
       'dist/**',
