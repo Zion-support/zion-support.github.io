@@ -1,0 +1,9 @@
+{
+  "timestamp": "2025-09-03T17:50:28Z",
+  "application": {
+    "status": "stopped",
+    "response_time_ms": "N/A",
+    "error_count": "0"
+  },
+  "alerts": []
+}

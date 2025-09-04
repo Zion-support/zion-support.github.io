@@ -1,0 +1,43 @@
+{
+  "timestamp": "2025-09-03T19:09:32.989Z",
+  "status": "unhealthy",
+  "checks": [
+    {
+      "name": "Application Build",
+      "status": "failed",
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n",
+      "timestamp": "2025-09-03T19:09:33.177Z"
+    },
+    {
+      "name": "Dependencies Check",
+      "status": "passed",
+      "result": "Dependencies: 79",
+      "timestamp": "2025-09-03T19:09:33.178Z"
+    },
+    {
+      "name": "File System Check",
+      "status": "passed",
+      "result": "All required directories present",
+      "timestamp": "2025-09-03T19:09:33.178Z"
+    },
+    {
+      "name": "Configuration Check",
+      "status": "passed",
+      "result": "All configuration files present",
+      "timestamp": "2025-09-03T19:09:33.178Z"
+    },
+    {
+      "name": "Log Directory Check",
+      "status": "passed",
+      "result": "Log directory ready",
+      "timestamp": "2025-09-03T19:09:33.178Z"
+    }
+  ],
+  "summary": {
+    "total": 5,
+    "passed": 4,
+    "failed": 1,
+    "warnings": 0,
+    "healthScore": 80
+  }
+}
