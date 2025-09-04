@@ -4,53 +4,54 @@ import Link from 'next/link';
 import { Book, FileText, Video, Download, Search, ExternalLink } from 'lucide-react';
 
 export default function Documentation() {
-  const contact ={
-    phone: email, 'kleber@ziontechgroup.com'
-    address: site, 'https://ziontechgroup.com'
-  }
+  const contact = {
+    phone: 'kleber@ziontechgroup.com',
+    site: 'https://ziontechgroup.com'
+  };
+  
   const documentationSections = [
     {
       icon: Book,
-      title: 'Getting Started'
-      description: 'Quick start guides and tutorials to help you begin using our services.'
+      title: 'Getting Started',
+      description: 'Quick start guides and tutorials to help you begin using our services.',
       items: [
-        { name: 'Quick Start Guide' link: '/docs/getting-started' },
-        { name: 'API Overview' link: '/docs/api-overview' },
-        { name: 'Authentication' link: '/docs/authentication' },
-        { name: 'First Steps' link: '/docs/first-steps' }
+        { name: 'Quick Start Guide', link: '/docs/getting-started' },
+        { name: 'API Overview', link: '/docs/api-overview' },
+        { name: 'Authentication', link: '/docs/authentication' },
+        { name: 'First Steps', link: '/docs/first-steps' }
       ]
     },
     {
       icon: FileText,
-      title: 'API Documentation'
-      description: 'Comprehensive API reference and integration guides.'
+      title: 'API Documentation',
+      description: 'Comprehensive API reference and integration guides.',
       items: [
-        { name: 'REST API Reference' link: '/docs/api-reference' },
-        { name: 'Webhook Integration' link: '/docs/webhooks' },
-        { name: 'SDK Documentation' link: '/docs/sdk' },
-        { name: 'Rate Limits' link: '/docs/rate-limits' }
+        { name: 'REST API Reference', link: '/docs/api-reference' },
+        { name: 'Webhook Integration', link: '/docs/webhooks' },
+        { name: 'SDK Documentation', link: '/docs/sdk' },
+        { name: 'Rate Limits', link: '/docs/rate-limits' }
       ]
     },
     {
       icon: Video,
-      title: 'Tutorials & Guides'
-      description: 'Step-by-step tutorials and best practices.'
+      title: 'Tutorials & Guides',
+      description: 'Step-by-step tutorials and best practices.',
       items: [
-        { name: 'Video Tutorials' link: '/docs/video-tutorials' },
-        { name: 'Code Examples' link: '/docs/code-examples' },
-        { name: 'Best Practices' link: '/docs/best-practices' },
-        { name: 'Troubleshooting' link: '/docs/troubleshooting' }
+        { name: 'Video Tutorials', link: '/docs/video-tutorials' },
+        { name: 'Code Examples', link: '/docs/code-examples' },
+        { name: 'Best Practices', link: '/docs/best-practices' },
+        { name: 'Troubleshooting', link: '/docs/troubleshooting' }
       ]
     },
     {
       icon: Download,
-      title: 'Resources'
-      description: 'Downloadable resources and additional materials.'
+      title: 'Resources',
+      description: 'Downloadable resources and additional materials.',
       items: [
-        { name: 'White Papers' link: '/docs/white-papers' },
-        { name: 'Case Studies' link: '/docs/case-studies' },
-        { name: 'Templates' link: '/docs/templates' },
-        { name: 'Changelog' link: '/docs/changelog' }
+        { name: 'White Papers', link: '/docs/white-papers' },
+        { name: 'Case Studies', link: '/docs/case-studies' },
+        { name: 'Templates', link: '/docs/templates' },
+        { name: 'Changelog', link: '/docs/changelog' }
       ]
     }
   ];
@@ -62,16 +63,16 @@ export default function Documentation() {
         <meta name="description" content="Comprehensive documentation for Zion Tech Group services including API guides, tutorials, and resources. Get started with our services today." />
         <meta name="keywords" content="documentation, API guide, tutorials, getting started, Zion Tech Group" />
         <link rel="canonical" href={`${contact.site}/docs`} />
-        <meta property="og: title" content="Documentation - Zion Tech Group" />
+        <meta property="og:title" content="Documentation - Zion Tech Group" />
         <meta property="og:description" content="Comprehensive documentation for Zion Tech Group services including API guides and tutorials." />
         <meta property="og:url" content={`${contact.site}/docs`} />
-        <meta property="og: type" content="website" />
+        <meta property="og:type" content="website" />
       </Head>
 
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-green-600 to-teal-600 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Documentation
@@ -79,7 +80,7 @@ export default function Documentation() {
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Everything you need to get started with Zion Tech Group services, from quick start guides to comprehensive API documentation.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   href="/docs/getting-started"
                   className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
@@ -99,7 +100,7 @@ export default function Documentation() {
 
         {/* Search Section */}
         <section className="py-12 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
@@ -113,7 +114,7 @@ export default function Documentation() {
 
         {/* Documentation Sections */}
         <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-8">
               {documentationSections.map((section, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
@@ -127,7 +128,7 @@ export default function Documentation() {
                       <li key={itemIndex}>
                         <Link 
                           href={item.link}
-                          className="flex items-center text-green-600 hover: text-green-700 transition-colors"
+                          className="flex items-center text-green-600 hover:text-green-700 transition-colors"
                         >
                           <ExternalLink className="w-4 h-4 mr-2" />
                           {item.name}
@@ -143,7 +144,7 @@ export default function Documentation() {
 
         {/* Quick Links */}
         <section className="bg-gray-50 py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Popular Resources
@@ -182,4 +183,5 @@ export default function Documentation() {
         </section>
       </div>
     </>
-  )}
+  );
+}

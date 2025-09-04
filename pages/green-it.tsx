@@ -9,14 +9,20 @@ export default function GreenIT() {
         <meta name="description" content="Sustainable IT solutions and green technology services to reduce your environmental impact." />
         <link rel="canonical" href="https://ziontechgroup.com/green-it" />
       </Head>
-      <main style={{ padding: maxWidth, 1200, margin: '0 auto' }}>
-        <h1 style={{ fontSize: fontWeight, 700, marginBottom: textAlign, 'center' }}>Green IT Solutions</h1>
-        <p style={{ fontSize: lineHeight, 1.6, textAlign: color, '#ccc' }}>
+      <main style={{ padding: '20px', maxWidth: 1200, margin: '0 auto' }}>
+        <h1 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '1rem', textAlign: 'center' }}>Green IT Solutions</h1>
+        <p style={{ fontSize: '1.1rem', lineHeight: 1.6, textAlign: 'center', color: '#ccc' }}>
           Sustainable IT solutions and green technology services to help reduce your environmental impact while improving efficiency.
         </p>
-        <div style={{ marginTop: textAlign, 'center' }}>
+        <div style={{ marginTop: '2rem', textAlign: 'center' }}>
           <Link href="/" style={{
-            background: color, 'white' padding: textDecoration, 'none' borderRadius: 8, fontSize: fontWeight, 600
+            background: 'white',
+            color: '#333',
+            padding: '12px 24px',
+            textDecoration: 'none',
+            borderRadius: 8,
+            fontSize: '1rem',
+            fontWeight: 600
           }}>
             Back to Home
           </Link>

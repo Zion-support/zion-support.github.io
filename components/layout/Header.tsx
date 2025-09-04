@@ -1,34 +1,92 @@
-import React, {  useState  } from "react";
+import React, { useState } from "react";
 import Link from 'next/link';
 import { Button } from '../ui/Button';
 import { Menu, X } from 'lucide-react';
 
 const Header: React.FC = () => {
-  const [mobileMenuOpen setMobileMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const navigation = [{ name: 'Home', href: '/', },{ name: 'All Services', href: '/service,s', },{ name: 'Catalog', href: '/services-catalo,g', },{ name: 'Cloud DevOps', href: '/cloud-devop,s', },{ name: 'Cybersecurity', href: '/cybersecurit,y', },{ name: 'Quantum', href: '/quantum-computin,g', },{ name: 'Docs', href: '/doc,s', },{ name: 'Pricing', href: '/pricin,g', }];
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { name: 'All Services', href: '/services' },
+    { name: 'Catalog', href: '/services-catalog' },
+    { name: 'Cloud DevOps', href: '/cloud-devops' },
+    { name: 'Cybersecurity', href: '/cybersecurity' },
+    { name: 'Quantum', href: '/quantum-computing' },
+    { name: 'Docs', href: '/docs' },
+    { name: 'Pricing', href: '/pricing' }
+  ];
 
-  return ("<header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-white/10">"<nav className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"<div className="flex items-center justify-between h-16">{/* Log,o *,/}"<Link href="/" className="flex-shrink-0">"<span className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">;
-              Zion Tech Group</span></Link>{/* Desktop Navigation */}"<div className="hidden md: block">"<div className="ml-10 flex items-baseline space-x-4">{navigation.map((item) => (<Link;
+  return (
+    <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-white/10">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link href="/" className="flex-shrink-0">
+            <span className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+              Zion Tech Group
+            </span>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              {navigation.map((item) => (
+                <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-300 hover: text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">{item.name}
-                </Link>;
+                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                >
+                  {item.name}
+                </Link>
               ))}
-            </div></div>{/* Contact Button */}"<div className="hidden md: block">"<Link href="/contact"><Button>Contact</Button></Link></div>{/* Mobile menu butto,n *,/}"<div className="md: hidden"><button;
+            </div>
+          </div>
+
+          {/* Contact Button */}
+          <div className="hidden md:block">
+            <Link href="/contact">
+              <Button>Contact</Button>
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-gray-300 hover: text-white p-2"";
-              aria-label="Toggle mobile menu">{mobileMenuOpen ? <X siz,e={2,4} /> : <Menu size={24} />}
-            </button></div></div>{/* Mobile Navigation */}
-        {mobileMenuOpen && ("<div className="md: hidden">"<div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/50 backdrop-blur-sm rounded-lg mt-2">{navigation.map((item) => (<Link;
+              className="text-gray-300 hover:text-white p-2"
+              aria-label="Toggle mobile menu"
+            >
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        {mobileMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/50 backdrop-blur-sm rounded-lg mt-2">
+              {navigation.map((item) => (
+                <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-300 hover: text-white block px-3 py-2 rounded-md text-base font-medium transition-colors";
+                  className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
-                >{item.name}
-                </Link>;
-              ))}"<div className="pt-4">"<Link href="/contact" className="w-full">"<Button className="w-full">Contact</Button></Link></div></div></div>;
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <div className="pt-4">
+                <Link href="/contact" className="w-full">
+                  <Button className="w-full">Contact</Button>
+                </Link>
+              </div>
+            </div>
+          </div>
         )}
-      </nav></header>;
-  )}
-export default Header</div></div>"
+      </nav>
+    </header>
+  );
+};
+
+export default Header;
