@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 interface EnhancedMarketplaceCardProps {
   title: string;
   description: string;

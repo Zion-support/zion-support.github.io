@@ -1,10 +1,7 @@
 import Head from 'next/head';
-<<<<<<< HEAD
 import { ReactNode } from 'react';
-=======
 import Header from './Header';
 import Footer from './Footer';
->>>>>>> 86e2a4cca918c6ff376b51aa8638f7a375ebfe57
 
 interface LayoutProps {
   children: ReactNode;
@@ -15,11 +12,7 @@ interface LayoutProps {
   noindex?: boolean;
 }
 
-<<<<<<< HEAD
-const Layout = ({ 
-=======
 export default function Layout({ 
->>>>>>> 86e2a4cca918c6ff376b51aa8638f7a375ebfe57
   children, 
   title = 'Zion Tech Group - Leading AI & Technology Solutions',
   description = 'Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results with 99.9% uptime guarantee.',
