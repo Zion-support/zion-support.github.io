@@ -15,7 +15,7 @@ export interface AdvancedCybersecurityService {
   popular?: boolean;
 }
 
-export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityServic e[] = [
+export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService[] = [
   {
     id: 'ai-threat-intelligence-platform',
     name: 'AI-Powered Threat Intelligence Platform',
@@ -44,9 +44,9 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityServic e
     ],
     targetAudience: 'Large enterprises, MSSPs, Security teams',
     rating: 4.8,
-    reviewCount: 15 6,
+    reviewCount: 156,
     launchDate: '2027-01-15',
-    popular: tru e
+    popular: true
   },
   {
     id: 'zero-trust-security-framework',
@@ -76,7 +76,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityServic e
     ],
     targetAudience: 'Enterprises, Government agencies, Healthcare organizations',
     rating: 4.7,
-    reviewCount: 8 9,
+    reviewCount: 89,
     launchDate: '2027-02-01'
   },
   {
@@ -107,9 +107,9 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityServic e
     ],
     targetAudience: 'Financial institutions, Government, Healthcare, Critical infrastructure',
     rating: 4.9,
-    reviewCount: 6 7,
+    reviewCount: 67,
     launchDate: '2027-01-20',
-    popular: tru e
+    popular: true
   },
   {
     id: 'ai-penetration-testing',
@@ -139,7 +139,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityServic e
     ],
     targetAudience: 'Security consultants, Enterprises, MSSPs',
     rating: 4.6,
-    reviewCount: 12 3,
+    reviewCount: 123,
     launchDate: '2027-02-10'
   },
   {
@@ -170,7 +170,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityServic e
     ],
     targetAudience: 'Cloud-first organizations, Enterprises, DevOps teams',
     rating: 4.7,
-    reviewCount: 9 4,
+    reviewCount: 94,
     launchDate: '2027-01-25'
   },
   {
@@ -201,7 +201,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityServic e
     ],
     targetAudience: 'IoT manufacturers, Industrial companies, Smart city operators',
     rating: 4.5,
-    reviewCount: 7 8,
+    reviewCount: 78,
     launchDate: '2027-02-15'
   }
 ];
