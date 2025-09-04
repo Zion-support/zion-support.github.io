@@ -1,220 +1,136 @@
-import React from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useState } from 'react';
 
 interface SidebarProps {
-  isOpen?: boolean;
-  onClose?: () => void;
+  isOpen: boolean;
+  onClose: () => void;
 }
 
-export default function Sidebar({ isOpen = false, onClose }: SidebarProps) {
-  const router = useRouter();
-
-  const navigationItems = [
+export default function Sidebar({ isOpen, onClose }: SidebarProps) {
+  const serviceCategories = [
     {
-      title: 'Main Navigation',
-      items: [
-        { href: '/', label: 'Home', icon: '🏠' },
-        { href: '/about', label: 'About Us', icon: 'ℹ️' },
-        { href: '/contact', label: 'Contact', icon: '📞' },
-        { href: '/pricing', label: 'Pricing', icon: '💰' },
-        { href: '/faq', label: 'FAQ', icon: '❓' }
-      ]
+      title: 'Micro SaaS Products',
+      href: '/micro-saas',
+      count: '120+',
+      description: 'Innovative software solutions'
     },
     {
-      title: 'Services',
-      items: [
-        { href: '/services', label: 'All Services', icon: '🔧' },
-        { href: '/micro-saas', label: 'Micro SaaS', icon: '📱' },
-        { href: '/ai-services', label: 'AI Services', icon: '🤖' },
-        { href: '/it-services', label: 'IT Services', icon: '💻' },
-        { href: '/services-catalog', label: 'Services Catalog', icon: '📋' }
-      ]
+      title: 'AI Services',
+      href: '/ai-services',
+      count: '80+',
+      description: 'Advanced AI solutions'
     },
     {
-      title: 'Legal',
-      items: [
-        { href: '/privacy', label: 'Privacy Policy', icon: '🔒' },
-        { href: '/terms', label: 'Terms of Service', icon: '📄' }
-      ]
+      title: 'IT Services',
+      href: '/it-services',
+      count: '80+',
+      description: 'Enterprise IT solutions'
     }
   ];
 
-  const isActive = (href: string) => {
-    if (href === '/') {
-      return router.pathname === '/';
-    }
-    return router.pathname.startsWith(href);
-  };
+  const quickLinks = [
+    { title: 'All Services', href: '/services' },
+    { title: 'Services Catalog', href: '/services-catalog' },
+    { title: 'Portfolio', href: '/portfolio' },
+    { title: 'Blog', href: '/blog' },
+    { title: 'Pricing', href: '/pricing' },
+    { title: 'About Us', href: '/about' },
+    { title: 'FAQ', href: '/faq' }
+  ];
+
+  const contactInfo = [
+    { title: 'Contact Form', href: '/contact' },
+    { title: 'Call: +1 302 464 0950', href: 'tel:+13024640950' },
+    { title: 'Email: kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' }
+  ];
 
   return (
     <>
-      {/* Overlay for mobile */}
+      {/* Overlay */}
       {isOpen && (
-        <div
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 z-40"
           onClick={onClose}
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            background: 'rgba(0, 0, 0, 0.5)',
-            zIndex: 40,
-            display: 'block',
-            '@media (min-width: 1024px)': { display: 'none' }
-          }}
         />
       )}
-
+      
       {/* Sidebar */}
-      <aside
-        style={{
-          position: 'fixed',
-          top: 0,
-          left: isOpen ? 0 : '-300px',
-          width: '300px',
-          height: '100vh',
-          background: 'linear-gradient(135deg, #0b1220, #1e293b)',
-          borderRight: '1px solid rgba(255,255,255,0.1)',
-          zIndex: 50,
-          transition: 'left 0.3s ease',
-          overflowY: 'auto',
-          '@media (min-width: 1024px)': {
-            position: 'static',
-            left: 'auto',
-            width: '280px',
-            height: 'auto',
-            background: 'rgba(11, 18, 32, 0.8)',
-            border: '1px solid rgba(255,255,255,0.1)',
-            borderRadius: '12px',
-            margin: '20px',
-            padding: '20px'
-          }
-        }}
-      >
-        {/* Header */}
-        <div style={{
-          padding: '20px',
-          borderBottom: '1px solid rgba(255,255,255,0.1)',
-          marginBottom: '20px'
-        }}>
-          <Link href="/" style={{
-            fontWeight: 800,
-            fontSize: '1.25rem',
-            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
-            textDecoration: 'none'
-          }}>
-            Zion Tech Group
-          </Link>
-          <p style={{
-            fontSize: '0.9rem',
-            opacity: 0.7,
-            marginTop: '8px',
-            lineHeight: 1.4
-          }}>
-            Innovative Technology Solutions
-          </p>
-        </div>
-
-        {/* Navigation */}
-        <nav style={{ padding: '0 20px' }}>
-          {navigationItems.map((section, sectionIndex) => (
-            <div key={sectionIndex} style={{ marginBottom: '24px' }}>
-              <h3 style={{
-                fontSize: '0.9rem',
-                fontWeight: 600,
-                color: '#93c5fd',
-                marginBottom: '12px',
-                textTransform: 'uppercase',
-                letterSpacing: '0.5px'
-              }}>
-                {section.title}
-              </h3>
-              <div style={{ display: 'grid', gap: '4px' }}>
-                {section.items.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={onClose}
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '12px',
-                      padding: '10px 12px',
-                      borderRadius: '8px',
-                      textDecoration: 'none',
-                      color: isActive(item.href) ? '#3b82f6' : 'rgba(255,255,255,0.8)',
-                      background: isActive(item.href) ? 'rgba(59, 130, 246, 0.1)' : 'transparent',
-                      border: isActive(item.href) ? '1px solid rgba(59, 130, 246, 0.2)' : '1px solid transparent',
-                      transition: 'all 0.2s ease',
-                      fontSize: '0.95rem'
-                    }}
-                  >
-                    <span style={{ fontSize: '1.1rem' }}>{item.icon}</span>
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          ))}
-        </nav>
-
-        {/* Contact Info */}
-        <div style={{
-          padding: '20px',
-          borderTop: '1px solid rgba(255,255,255,0.1)',
-          marginTop: '20px'
-        }}>
-          <h4 style={{
-            fontSize: '0.9rem',
-            fontWeight: 600,
-            marginBottom: '12px',
-            color: '#93c5fd'
-          }}>
-            Contact Info
-          </h4>
-          <div style={{ display: 'grid', gap: '8px', fontSize: '0.85rem' }}>
-            <div>📞 <a href="tel:+13024640950" style={{ color: '#93c5fd' }}>+1 302 464 0950</a></div>
-            <div>✉️ <a href="mailto:kleber@ziontechgroup.com" style={{ color: '#93c5fd' }}>kleber@ziontechgroup.com</a></div>
-            <div>📍 Middletown, DE</div>
+      <aside className={`fixed top-0 right-0 h-full w-80 bg-slate-900 border-l border-white/10 z-50 transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        <div className="p-6 h-full overflow-y-auto">
+          {/* Header */}
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-xl font-bold text-white">Navigation</h2>
+            <button
+              onClick={onClose}
+              className="text-white hover:text-gray-300 text-2xl"
+              aria-label="Close sidebar"
+            >
+              ×
+            </button>
           </div>
-        </div>
 
-        {/* Quick Actions */}
-        <div style={{
-          padding: '20px',
-          borderTop: '1px solid rgba(255,255,255,0.1)'
-        }}>
-          <div style={{ display: 'grid', gap: '8px' }}>
-            <Link href="/contact" style={{
-              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-              color: 'white',
-              padding: '10px 16px',
-              borderRadius: '8px',
-              textAlign: 'center',
-              textDecoration: 'none',
-              fontWeight: 600,
-              fontSize: '0.9rem'
-            }}>
-              Get Quote
-            </Link>
-            <Link href="/services-catalog" style={{
-              background: 'rgba(255,255,255,0.05)',
-              color: 'white',
-              padding: '10px 16px',
-              borderRadius: '8px',
-              textAlign: 'center',
-              textDecoration: 'none',
-              fontWeight: 600,
-              fontSize: '0.9rem',
-              border: '1px solid rgba(255,255,255,0.1)'
-            }}>
-              View Catalog
-            </Link>
+          {/* Service Categories */}
+          <div className="mb-8">
+            <h3 className="text-lg font-semibold text-blue-400 mb-4">Service Categories</h3>
+            <div className="space-y-3">
+              {serviceCategories.map((category) => (
+                <Link
+                  key={category.href}
+                  href={category.href}
+                  onClick={onClose}
+                  className="block p-3 bg-slate-800/50 rounded-lg border border-white/10 hover:border-blue-500/40 transition-colors"
+                >
+                  <div className="flex items-center justify-between mb-1">
+                    <h4 className="font-medium text-white">{category.title}</h4>
+                    <span className="text-xs bg-blue-600 text-white px-2 py-1 rounded">{category.count}</span>
+                  </div>
+                  <p className="text-sm text-slate-400">{category.description}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div className="mb-8">
+            <h3 className="text-lg font-semibold text-purple-400 mb-4">Quick Links</h3>
+            <div className="space-y-2">
+              {quickLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={onClose}
+                  className="block p-2 text-slate-300 hover:text-white hover:bg-slate-800/50 rounded transition-colors"
+                >
+                  {link.title}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Contact Information */}
+          <div className="mb-8">
+            <h3 className="text-lg font-semibold text-green-400 mb-4">Contact</h3>
+            <div className="space-y-2">
+              {contactInfo.map((contact, index) => (
+                <a
+                  key={index}
+                  href={contact.href}
+                  onClick={onClose}
+                  className="block p-2 text-slate-300 hover:text-white hover:bg-slate-800/50 rounded transition-colors"
+                >
+                  {contact.title}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Company Info */}
+          <div className="border-t border-white/10 pt-6">
+            <div className="text-sm text-slate-400">
+              <p className="mb-2">📍 364 E Main St STE 1008</p>
+              <p className="mb-2">Middletown DE 19709</p>
+              <p>🌐 <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">ziontechgroup.com</a></p>
+            </div>
           </div>
         </div>
       </aside>

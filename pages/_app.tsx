@@ -1,28 +1,14 @@
 import type { AppProps } from 'next/app';
 import Link from 'next/link';
 import { useState } from 'react';
+import ErrorBoundary from '../components/ErrorBoundary';
+import PerformanceMonitor from '../components/PerformanceMonitor';
+import Sidebar from '../components/Sidebar';
+import '../styles/globals.css';
 
 function Header(): any {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const navigationItems = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
-    { 
-      href: '/services', 
-      label: 'Services',
-      submenu: [
-        { href: '/services', label: 'All Services' },
-        { href: '/micro-saas', label: 'Micro SaaS' },
-        { href: '/ai-services', label: 'AI Services' },
-        { href: '/it-services', label: 'IT Services' },
-        { href: '/services-catalog', label: 'Services Catalog' }
-      ]
-    },
-    { href: '/pricing', label: 'Pricing' },
-    { href: '/faq', label: 'FAQ' },
-    { href: '/contact', label: 'Contact' }
-  ];
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <header style={{
@@ -44,16 +30,23 @@ function Header(): any {
         
         <div className="header-nav-links">
           <Link href="/" className="header-nav-link">Home</Link>
-          <Link href="/about" className="header-nav-link">About</Link>
           <Link href="/services" className="header-nav-link">Services</Link>
-          <Link href="/micro-saas" className="header-nav-link">Micro SaaS</Link>
-          <Link href="/ai-services" className="header-nav-link">AI Services</Link>
-          <Link href="/it-services" className="header-nav-link">IT Services</Link>
-          <Link href="/pricing" className="header-nav-link">Pricing</Link>
+          <Link href="/portfolio" className="header-nav-link">Portfolio</Link>
+          <Link href="/blog" className="header-nav-link">Blog</Link>
+          <Link href="/about" className="header-nav-link">About</Link>
           <Link href="/contact" className="header-nav-cta">Contact</Link>
         </div>
 
-        {/* Mobile menu button */}
+        <div className="header-actions">
+          <button 
+            className="sidebar-toggle-button"
+            onClick={() => setSidebarOpen(true)}
+            aria-label="Open navigation sidebar"
+          >
+            ☰
+          </button>
+        </div>
+
         <button 
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           style={{
@@ -69,14 +62,14 @@ function Header(): any {
       
       <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
         <Link href="/" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-        <Link href="/about" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>About</Link>
         <Link href="/services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Services</Link>
-        <Link href="/micro-saas" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Micro SaaS</Link>
-        <Link href="/ai-services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>AI Services</Link>
-        <Link href="/it-services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>IT Services</Link>
-        <Link href="/pricing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
+        <Link href="/portfolio" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Portfolio</Link>
+        <Link href="/blog" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
+        <Link href="/about" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>About</Link>
         <Link href="/contact" className="header-nav-cta" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
       </div>
+      
+      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
     </header>
   );
 }
@@ -150,6 +143,9 @@ function Footer(): JSX.Element {
         <div className="footer-section">
           <h3>Quick Links</h3>
           <Link href="/">Home</Link>
+          <Link href="/services">Services</Link>
+          <Link href="/portfolio">Portfolio</Link>
+          <Link href="/blog">Blog</Link>
           <Link href="/about">About Us</Link>
           <Link href="/contact">Contact Us</Link>
           <Link href="/faq">FAQ</Link>
