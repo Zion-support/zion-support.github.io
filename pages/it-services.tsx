@@ -1022,326 +1022,234 @@ export default function ITServices(): any {
       category: 'Compliance'
     },
     {
-      icon: Cloud,
-      name: 'Serverless Architecture Implementation',
-      description: 'Modern serverless solutions with AWS Lambda, Azure Functions, and Google Cloud Functions for scalable applications.',
-      features: [
-        'Serverless function development and deployment',
-        'Event-driven architecture design',
-        'API Gateway and service integration',
-        'Auto-scaling and cost optimization',
-        'Monitoring and debugging tools',
-        'Security and compliance implementation'
-      ],
-      pricing: '$120 – $280/hour',
-      projectPricing: '$15,000 – $75,000/project',
-      timeline: '3–8 weeks',
-      benefits: [
-        'Reduced infrastructure costs',
-        'Automatic scaling and high availability',
-        'Faster development and deployment',
-        'Pay-per-use pricing model'
-      ],
-      category: 'Cloud & Infrastructure'
-    },
-    {
-      icon: Database,
-      name: 'Graph Database & Knowledge Management',
-      description: 'Advanced graph database solutions for complex relationships, knowledge graphs, and semantic data modeling.',
-      features: [
-        'Graph database design and implementation',
-        'Knowledge graph construction',
-        'Semantic data modeling',
-        'Graph analytics and query optimization',
-        'Real-time graph processing',
-        'Integration with AI and ML systems'
-      ],
-      pricing: '$150 – $350/hour',
-      projectPricing: '$25,000 – $120,000/project',
-      timeline: '6–16 weeks',
-      benefits: [
-        'Complex relationship modeling',
-        'Advanced analytics capabilities',
-        'Improved data insights',
-        'Enhanced AI/ML applications'
-      ],
-      category: 'Data Management'
-    },
-    {
-      icon: Shield,
-      name: 'Cloud-Native Security Platform',
-      description: 'Comprehensive cloud security with DevSecOps, container security, and runtime protection.',
-      features: [
-        'DevSecOps pipeline integration',
-        'Container security scanning and monitoring',
-        'Runtime application self-protection (RASP)',
-        'Cloud security posture management',
-        'Identity and access management',
-        'Security automation and orchestration'
-      ],
-      pricing: '$180 – $400/hour',
-      projectPricing: '$30,000 – $150,000/project',
-      timeline: '6–16 weeks',
-      benefits: [
-        'Enhanced cloud security posture',
-        'Automated security processes',
-        'Reduced security vulnerabilities',
-        'Compliance with cloud security standards'
-      ],
-      category: 'Security'
-    },
-    {
-      icon: Cpu,
-      name: '5G Network Integration & Edge Computing',
-      description: '5G network implementation with edge computing, IoT integration, and ultra-low latency applications.',
-      features: [
-        '5G network architecture design',
-        'Edge computing infrastructure deployment',
-        'Ultra-low latency application development',
-        'IoT device integration and management',
-        'Network slicing and optimization',
-        'Performance monitoring and analytics'
-      ],
-      pricing: '$200 – $500/hour',
-      projectPricing: '$50,000 – $300,000/project',
-      timeline: '12–32 weeks',
-      benefits: [
-        'Ultra-low latency connectivity',
-        'Enhanced IoT capabilities',
-        'Improved application performance',
-        'Future-ready network infrastructure'
-      ],
-      category: 'Emerging Technologies'
-    },
-    {
       icon: Globe,
-      name: 'Web3 & Decentralized Application Development',
-      description: 'Complete Web3 solutions including dApps, smart contracts, and blockchain integration.',
+      name: 'Edge Computing & IoT Solutions',
+      description: 'Edge computing infrastructure and IoT device management for real-time data processing and analytics.',
       features: [
-        'Decentralized application (dApp) development',
-        'Smart contract development and auditing',
-        'Blockchain integration and APIs',
-        'DeFi protocol implementation',
-        'NFT marketplace development',
-        'Cross-chain interoperability solutions'
+        'Edge computing infrastructure setup',
+        'IoT device management and monitoring',
+        'Real-time data processing and analytics',
+        'Edge-to-cloud data synchronization',
+        'IoT security and device authentication',
+        'Custom IoT application development'
       ],
-      pricing: '$150 – $400/hour',
-      projectPricing: '$30,000 – $200,000/project',
-      timeline: '8–24 weeks',
+      pricing: '$8,000 – $50,000/project',
+      projectPricing: '$1,000 – $5,000/month managed',
+      timeline: '4–12 weeks',
       benefits: [
-        'Decentralized and secure applications',
-        'Innovative business models',
-        'Enhanced transparency and trust',
-        'Future-proof technology adoption'
-      ],
-      category: 'Emerging Technologies'
-    },
-    {
-      icon: BarChart3,
-      name: 'Real-Time Data Streaming & Analytics',
-      description: 'Advanced streaming analytics with Apache Kafka, Apache Flink, and real-time decision making.',
-      features: [
-        'Real-time data streaming architecture',
-        'Stream processing and analytics',
-        'Event-driven application development',
-        'Real-time dashboards and monitoring',
-        'Data pipeline optimization',
-        'Machine learning model serving'
-      ],
-      pricing: '$150 – $350/hour',
-      projectPricing: '$25,000 – $100,000/project',
-      timeline: '6–16 weeks',
-      benefits: [
-        'Real-time business insights',
-        'Faster decision making',
-        'Improved operational efficiency',
-        'Enhanced customer experience'
-      ],
-      category: 'Data Analytics'
-    },
-    {
-      icon: Code,
-      name: 'Low-Code/No-Code Platform Development',
-      description: 'Custom low-code and no-code platforms for rapid application development and citizen development.',
-      features: [
-        'Visual application builder development',
-        'Drag-and-drop interface design',
-        'Workflow automation and orchestration',
-        'Integration with enterprise systems',
-        'User management and permissions',
-        'Performance optimization and scaling'
-      ],
-      pricing: '$120 – $300/hour',
-      projectPricing: '$40,000 – $200,000/project',
-      timeline: '8–20 weeks',
-      benefits: [
-        'Faster application development',
-        'Reduced development costs',
-        'Citizen developer empowerment',
-        'Improved business agility'
-      ],
-      category: 'Development'
-    },
-    {
-      icon: Server,
-      name: 'Hyperconverged Infrastructure (HCI)',
-      description: 'Modern hyperconverged infrastructure with software-defined storage, compute, and networking.',
-      features: [
-        'HCI architecture design and implementation',
-        'Software-defined storage and networking',
-        'Virtualization and containerization',
-        'Automated resource management',
-        'Disaster recovery and backup',
-        'Performance monitoring and optimization'
-      ],
-      pricing: '$150 – $350/hour',
-      projectPricing: '$50,000 – $250,000/project',
-      timeline: '8–20 weeks',
-      benefits: [
-        'Simplified infrastructure management',
-        'Reduced hardware costs',
-        'Improved scalability and flexibility',
-        'Enhanced disaster recovery capabilities'
+        'Reduced latency and improved performance',
+        'Real-time data processing capabilities',
+        'Enhanced IoT device security',
+        'Scalable edge computing solutions'
       ],
       category: 'Infrastructure'
     },
     {
-      icon: Shield,
-      name: 'Identity & Access Management (IAM) Platform',
-      description: 'Comprehensive IAM solution with SSO, MFA, and privileged access management.',
-      features: [
-        'Single Sign-On (SSO) implementation',
-        'Multi-Factor Authentication (MFA)',
-        'Privileged Access Management (PAM)',
-        'Identity governance and administration',
-        'Access analytics and reporting',
-        'Integration with cloud and on-premises systems'
-      ],
-      pricing: '$120 – $300/hour',
-      projectPricing: '$20,000 – $100,000/project',
-      timeline: '4–12 weeks',
-      benefits: [
-        'Enhanced security and compliance',
-        'Improved user experience',
-        'Reduced administrative overhead',
-        'Centralized access management'
-      ],
-      category: 'Security'
-    },
-    {
       icon: Database,
-      name: 'Data Mesh Architecture Implementation',
-      description: 'Modern data mesh architecture with decentralized data ownership and domain-driven design.',
+      name: 'Data Lake & Analytics Platform',
+      description: 'Modern data lake architecture with real-time analytics, machine learning pipelines, and business intelligence.',
       features: [
-        'Data mesh architecture design',
-        'Domain-driven data product development',
-        'Data governance and cataloging',
-        'Self-serve data platform',
-        'Data quality and lineage tracking',
-        'Cross-domain data sharing'
+        'Data lake architecture design and implementation',
+        'Real-time data streaming and processing',
+        'Machine learning pipeline development',
+        'Business intelligence and reporting dashboards',
+        'Data governance and quality management',
+        'Advanced analytics and predictive modeling'
       ],
-      pricing: '$180 – $400/hour',
-      projectPricing: '$40,000 – $200,000/project',
-      timeline: '12–32 weeks',
+      pricing: '$15,000 – $100,000/project',
+      projectPricing: '$2,000 – $10,000/month managed',
+      timeline: '6–16 weeks',
       benefits: [
-        'Decentralized data ownership',
-        'Improved data accessibility',
-        'Enhanced data quality',
-        'Scalable data architecture'
+        'Unified data platform for analytics',
+        'Real-time business insights',
+        'Improved data-driven decision making',
+        'Scalable analytics infrastructure'
       ],
-      category: 'Data Management'
+      category: 'Data & Analytics'
     },
     {
-      icon: Globe,
-      name: 'Progressive Web App (PWA) Development',
-      description: 'Advanced PWA development with offline capabilities, push notifications, and native app features.',
+      icon: Smartphone,
+      name: 'Mobile App Development & DevOps',
+      description: 'Native and cross-platform mobile app development with CI/CD pipelines and app store optimization.',
       features: [
-        'PWA architecture and implementation',
-        'Service worker development',
-        'Offline functionality and caching',
-        'Push notifications and background sync',
-        'App-like user experience',
-        'Performance optimization and SEO'
+        'Native iOS and Android app development',
+        'Cross-platform development (React Native, Flutter)',
+        'Mobile CI/CD pipeline setup',
+        'App store optimization and deployment',
+        'Mobile app testing and quality assurance',
+        'Performance monitoring and analytics'
+      ],
+      pricing: '$80 – $200/hour',
+      projectPricing: '$10,000 – $80,000/project',
+      timeline: '4–16 weeks',
+      benefits: [
+        'High-performance mobile applications',
+        'Automated deployment and testing',
+        'Improved user experience',
+        'Faster time to market'
+      ],
+      category: 'Mobile Development'
+    },
+    {
+      icon: Server,
+      name: 'Microservices Architecture & API Gateway',
+      description: 'Modern microservices architecture with API gateway, service mesh, and distributed system design.',
+      features: [
+        'Microservices architecture design',
+        'API gateway implementation and management',
+        'Service mesh setup (Istio, Linkerd)',
+        'Distributed system monitoring and tracing',
+        'Event-driven architecture implementation',
+        'Container orchestration and scaling'
+      ],
+      pricing: '$12,000 – $75,000/project',
+      projectPricing: '$1,500 – $8,000/month managed',
+      timeline: '6–20 weeks',
+      benefits: [
+        'Scalable and maintainable architecture',
+        'Improved system performance',
+        'Enhanced developer productivity',
+        'Better fault tolerance and resilience'
+      ],
+      category: 'Architecture'
+    },
+    {
+      icon: BarChart3,
+      name: 'Business Intelligence & Data Visualization',
+      description: 'Comprehensive BI solutions with interactive dashboards, reporting, and data visualization.',
+      features: [
+        'Interactive dashboard development',
+        'Custom reporting and analytics',
+        'Data visualization and storytelling',
+        'Self-service BI platform setup',
+        'Data warehouse design and implementation',
+        'Advanced analytics and forecasting'
+      ],
+      pricing: '$5,000 – $40,000/project',
+      projectPricing: '$1,000 – $5,000/month managed',
+      timeline: '3–12 weeks',
+      benefits: [
+        'Data-driven business insights',
+        'Improved decision making',
+        'Self-service analytics capabilities',
+        'Enhanced business performance'
+      ],
+      category: 'Data & Analytics'
+    },
+    {
+      icon: LinkIcon,
+      name: 'API Development & Integration',
+      description: 'RESTful and GraphQL API development with third-party integrations and API management.',
+      features: [
+        'RESTful and GraphQL API development',
+        'API documentation and testing',
+        'Third-party service integration',
+        'API gateway and management platform',
+        'API security and authentication',
+        'Performance optimization and monitoring'
       ],
       pricing: '$100 – $250/hour',
-      projectPricing: '$15,000 – $75,000/project',
-      timeline: '4–12 weeks',
+      projectPricing: '$8,000 – $50,000/project',
+      timeline: '2–8 weeks',
       benefits: [
-        'Native app-like experience',
-        'Offline functionality',
-        'Reduced development costs',
-        'Cross-platform compatibility'
+        'Seamless system integration',
+        'Improved API performance',
+        'Enhanced security and monitoring',
+        'Better developer experience'
       ],
-      category: 'Development'
+      category: 'Integration'
     },
     {
       icon: Cpu,
-      name: 'AI Infrastructure & MLOps Platform',
-      description: 'Complete AI infrastructure with model training, deployment, and monitoring capabilities.',
+      name: 'High-Performance Computing (HPC)',
+      description: 'High-performance computing solutions for scientific computing, simulations, and data processing.',
       features: [
-        'AI/ML infrastructure setup and optimization',
-        'Model training and deployment pipelines',
-        'MLOps workflow automation',
-        'Model monitoring and drift detection',
-        'A/B testing and experimentation',
-        'GPU cluster management and optimization'
+        'HPC cluster design and implementation',
+        'Parallel computing optimization',
+        'GPU computing and CUDA programming',
+        'Scientific computing workflows',
+        'High-speed networking and storage',
+        'Performance monitoring and optimization'
       ],
-      pricing: '$150 – $400/hour',
-      projectPricing: '$30,000 – $150,000/project',
-      timeline: '8–20 weeks',
+      pricing: '$20,000 – $200,000/project',
+      projectPricing: '$3,000 – $20,000/month managed',
+      timeline: '8–24 weeks',
       benefits: [
-        'Scalable AI infrastructure',
-        'Automated ML operations',
-        'Faster model deployment',
-        'Improved model performance'
+        'Massive computational power',
+        'Faster scientific simulations',
+        'Optimized resource utilization',
+        'Scalable computing infrastructure'
       ],
-      category: 'AI & Machine Learning'
+      category: 'High Performance Computing'
     },
     {
-      icon: Shield,
-      name: 'Zero Trust Network Access (ZTNA)',
-      description: 'Comprehensive zero trust network access with secure remote access and micro-segmentation.',
+      icon: TestTube,
+      name: 'Quality Assurance & Testing Automation',
+      description: 'Comprehensive testing strategies with automated testing frameworks and continuous quality assurance.',
       features: [
-        'Zero trust network architecture',
-        'Secure remote access solutions',
-        'Network micro-segmentation',
-        'Identity-based access control',
-        'Continuous security monitoring',
-        'Threat detection and response'
+        'Test automation framework development',
+        'Continuous integration and testing',
+        'Performance and load testing',
+        'Security testing and vulnerability assessment',
+        'User acceptance testing coordination',
+        'Quality metrics and reporting'
       ],
-      pricing: '$150 – $350/hour',
-      projectPricing: '$25,000 – $125,000/project',
-      timeline: '6–16 weeks',
+      pricing: '$80 – $180/hour',
+      projectPricing: '$5,000 – $30,000/project',
+      timeline: '2–8 weeks',
       benefits: [
-        'Enhanced network security',
-        'Secure remote access',
-        'Reduced attack surface',
-        'Improved compliance posture'
+        'Improved software quality',
+        'Reduced testing time and costs',
+        'Automated quality assurance',
+        'Better user experience'
       ],
-      category: 'Security'
+      category: 'Quality Assurance'
     },
     {
-      icon: Cloud,
-      name: 'Cloud Cost Optimization & FinOps',
-      description: 'Comprehensive cloud cost management with automated optimization and financial operations.',
+      icon: BookOpen,
+      name: 'Technical Documentation & Knowledge Management',
+      description: 'Comprehensive technical documentation, API documentation, and knowledge management systems.',
       features: [
-        'Cloud cost analysis and optimization',
-        'Automated resource scheduling',
-        'Reserved instance and spot instance management',
-        'Cost allocation and chargeback',
-        'Budget monitoring and alerting',
-        'FinOps best practices implementation'
+        'Technical documentation creation',
+        'API documentation and developer portals',
+        'Knowledge management system setup',
+        'Documentation automation and maintenance',
+        'User guides and training materials',
+        'Version control and collaboration tools'
       ],
-      pricing: '$120 – $280/hour',
-      projectPricing: '$15,000 – $75,000/project',
-      timeline: '4–12 weeks',
+      pricing: '$60 – $150/hour',
+      projectPricing: '$3,000 – $20,000/project',
+      timeline: '2–6 weeks',
       benefits: [
-        '30% reduction in cloud costs',
-        'Automated cost optimization',
-        'Better cost visibility',
-        'Improved financial governance'
+        'Improved developer onboarding',
+        'Better knowledge sharing',
+        'Reduced support overhead',
+        'Enhanced team productivity'
       ],
-      category: 'Cloud & Infrastructure'
+      category: 'Documentation'
+    },
+    {
+      icon: Wrench,
+      name: 'IT Infrastructure Monitoring & Management',
+      description: 'Comprehensive IT infrastructure monitoring, management, and optimization services.',
+      features: [
+        'Infrastructure monitoring and alerting',
+        'Performance optimization and tuning',
+        'Capacity planning and scaling',
+        'Backup and disaster recovery',
+        'Security monitoring and compliance',
+        '24/7 infrastructure support'
+      ],
+      pricing: '$2,000 – $15,000/month',
+      projectPricing: '$5,000 – $25,000 setup',
+      timeline: '2–6 weeks',
+      benefits: [
+        'Proactive issue detection',
+        'Improved system reliability',
+        'Reduced downtime and costs',
+        'Enhanced security posture'
+      ],
+      category: 'Infrastructure Management'
     }
   ];
 
