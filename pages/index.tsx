@@ -27,65 +27,85 @@ import {
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' },
-  { number: '500+', label: 'Projects Completed' },
-  { number: '50+', label: 'Expert Team Members' }
+  { number: '750+', label: 'Projects Completed' },
+  { number: '60+', label: 'Technology Solutions' }
 ];
 
 const services = [
   {
-    title: "AI Services",
-    description: "Cutting-edge artificial intelligence solutions",
+    title: "AI Solutions",
+    description: "Cutting-edge artificial intelligence and machine learning solutions",
     icon: Brain,
-    href: "/ai-services",
+    href: "/services?category=AI Solutions",
     color: "from-purple-500 to-pink-500",
-    count: "15+ Solutions"
+    count: "20+ Solutions"
   },
   {
     title: "IT Services", 
-    description: "Comprehensive information technology services",
+    description: "Comprehensive information technology and infrastructure services",
     icon: Network,
-    href: "/it-services",
+    href: "/services?category=IT Services",
     color: "from-blue-500 to-cyan-500",
-    count: "12+ Services"
+    count: "15+ Services"
   },
   {
     title: "Micro SaaS",
-    description: "Scalable software as a service solutions",
+    description: "Innovative software as a service platforms and applications",
     icon: Cloud,
-    href: "/micro-saas",
+    href: "/services?category=Micro-SaaS",
     color: "from-green-500 to-emerald-500",
-    count: "20+ Platforms"
+    count: "25+ Platforms"
   }
 ];
 
 const featuredServices = [
   {
     title: "AI Content Generator",
-    description: "Generate high-quality content with AI-powered tools",
+    description: "Generate high-quality content with AI-powered tools and brand voice consistency",
     icon: FileText,
     price: "$79/mo",
-    category: "Micro SaaS"
+    category: "Micro SaaS",
+    href: "/services/ai-content-generator"
   },
   {
     title: "Zero Trust Security",
-    description: "Complete security architecture implementation",
+    description: "Complete security architecture implementation with continuous monitoring",
     icon: Shield,
     price: "From $15,000",
-    category: "IT Services"
+    category: "IT Services",
+    href: "/services/zero-trust-security-implementation"
   },
   {
     title: "Predictive Analytics",
-    description: "Forecast trends with machine learning",
+    description: "Advanced forecasting with machine learning and business intelligence",
     icon: BarChart3,
     price: "From $8,500",
-    category: "AI Solutions"
+    category: "AI Solutions",
+    href: "/services/predictive-analytics-platform"
   },
   {
-    title: "Customer Support Platform",
-    description: "All-in-one helpdesk solution",
+    title: "AI Social Media Manager",
+    description: "Intelligent social media automation with AI-driven engagement strategies",
     icon: MessageSquare,
-    price: "$99/mo",
-    category: "Micro SaaS"
+    price: "$89/mo",
+    category: "Micro SaaS",
+    href: "/services/ai-social-media-manager"
+  },
+  {
+    title: "Blockchain NFT Marketplace",
+    description: "Complete NFT marketplace with smart contracts and wallet integration",
+    icon: Globe,
+    price: "$199/mo",
+    category: "Micro SaaS",
+    href: "/services/blockchain-nft-marketplace"
+  },
+  {
+    title: "Quantum Computing Readiness",
+    description: "Future-proof your business with quantum computing assessment and integration",
+    icon: Rocket,
+    price: "From $25,000",
+    category: "IT Services",
+    href: "/services/quantum-computing-readiness"
   }
 ];
 
@@ -155,7 +175,7 @@ export default function HomePage() {
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services. 
-              <span className="text-blue-300 font-semibold"> 50+ innovative solutions</span> to accelerate your growth.
+              <span className="text-blue-300 font-semibold"> 60+ innovative solutions</span> to accelerate your growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold inline-flex items-center">
@@ -163,7 +183,7 @@ export default function HomePage() {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                Explore 50+ Services
+                Explore 60+ Services
               </Link>
             </div>
             
@@ -284,18 +304,19 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredServices.map((service, index) => {
               const IconComponent = service.icon;
               return (
                 <motion.div
                   key={index}
-                  className="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-lg hover:shadow-lg transition-all duration-300 group"
+                  className="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-lg hover:shadow-lg transition-all duration-300 group cursor-pointer"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -3 }}
+                  onClick={() => window.location.href = service.href}
                 >
                   <div className="text-blue-600 mb-4">
                     <IconComponent className="w-8 h-8" />

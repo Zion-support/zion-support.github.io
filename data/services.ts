@@ -380,5 +380,277 @@ export const servicesCatalog: ServiceItem[] = [
       { label: 'Machine Learning for Fraud', url: 'https://towardsdatascience.com/machine-learning-for-fraud-detection-6f65f37c5eef' },
     ],
   },
+
+  // ADDITIONAL INNOVATIVE MICRO SAAS SERVICES
+  {
+    slug: 'ai-social-media-manager',
+    title: 'AI Social Media Management Platform',
+    category: 'Micro-SaaS',
+    description:
+      'Intelligent social media automation that creates, schedules, and optimizes content across all platforms with AI-driven engagement strategies.',
+    startingPriceUSD: '$1,800 setup + $89/mo',
+    typicalTimeline: '2-3 weeks',
+    link: '/services/ai-social-media-manager',
+    references: [
+      { label: 'Social Media ROI', url: 'https://blog.hootsuite.com/social-media-roi/' },
+      { label: 'AI Content Creation', url: 'https://www.socialmediaexaminer.com/ai-content-creation-tools/' },
+    ],
+  },
+  {
+    slug: 'blockchain-nft-marketplace',
+    title: 'Blockchain NFT Marketplace Platform',
+    category: 'Micro-SaaS',
+    description:
+      'Complete NFT marketplace with smart contracts, wallet integration, auction system, and royalty management for digital asset trading.',
+    startingPriceUSD: '$8,000 setup + $199/mo',
+    typicalTimeline: '6-8 weeks',
+    link: '/services/blockchain-nft-marketplace',
+    references: [
+      { label: 'NFT Market Growth', url: 'https://www.nftnow.com/features/nft-market-report-2024/' },
+      { label: 'Ethereum Smart Contracts', url: 'https://ethereum.org/en/developers/docs/smart-contracts/' },
+    ],
+  },
+  {
+    slug: 'ai-video-editing-platform',
+    title: 'AI Video Editing & Production Platform',
+    category: 'Micro-SaaS',
+    description:
+      'Automated video editing platform that uses AI to create professional videos, add effects, optimize for different platforms, and generate thumbnails.',
+    startingPriceUSD: '$3,500 setup + $149/mo',
+    typicalTimeline: '4-5 weeks',
+    link: '/services/ai-video-editing-platform',
+    references: [
+      { label: 'Video Marketing Statistics', url: 'https://www.wyzowl.com/video-marketing-statistics/' },
+      { label: 'AI Video Tools', url: 'https://www.techradar.com/best/ai-video-editing-software' },
+    ],
+  },
+  {
+    slug: 'affiliate-marketing-tracker',
+    title: 'Affiliate Marketing Tracking & Analytics',
+    category: 'Micro-SaaS',
+    description:
+      'Comprehensive affiliate marketing platform with link tracking, commission management, performance analytics, and automated payouts.',
+    startingPriceUSD: '$2,200 setup + $79/mo',
+    typicalTimeline: '2-3 weeks',
+    link: '/services/affiliate-marketing-tracker',
+    references: [
+      { label: 'Affiliate Marketing Growth', url: 'https://www.statista.com/statistics/693418/affiliate-marketing-spending-worldwide/' },
+      { label: 'Commission Junction', url: 'https://www.cj.com/' },
+    ],
+  },
+  {
+    slug: 'ai-personalized-learning',
+    title: 'AI-Powered Personalized Learning Platform',
+    category: 'Micro-SaaS',
+    description:
+      'Adaptive learning management system that personalizes educational content, tracks progress, and adjusts difficulty based on individual performance.',
+    startingPriceUSD: '$4,500 setup + $129/mo',
+    typicalTimeline: '5-6 weeks',
+    link: '/services/ai-personalized-learning',
+    references: [
+      { label: 'EdTech Market Growth', url: 'https://www.grandviewresearch.com/industry-analysis/education-technology-market' },
+      { label: 'Personalized Learning Benefits', url: 'https://www.edweek.org/technology/personalized-learning-what-does-the-research-say/2017/07' },
+    ],
+  },
+  {
+    slug: 'smart-contract-auditor',
+    title: 'Smart Contract Security Auditor',
+    category: 'Micro-SaaS',
+    description:
+      'Automated smart contract security analysis platform that identifies vulnerabilities, gas optimization opportunities, and compliance issues.',
+    startingPriceUSD: '$5,500 setup + $199/mo',
+    typicalTimeline: '4-6 weeks',
+    link: '/services/smart-contract-auditor',
+    references: [
+      { label: 'Smart Contract Security', url: 'https://consensys.github.io/smart-contract-best-practices/' },
+      { label: 'Blockchain Security', url: 'https://owasp.org/www-project-blockchain-security/' },
+    ],
+  },
+  {
+    slug: 'ai-weather-prediction',
+    title: 'AI Weather Prediction & Analytics Platform',
+    category: 'Micro-SaaS',
+    description:
+      'Advanced weather forecasting platform using machine learning to provide hyperlocal weather predictions and climate analytics for businesses.',
+    startingPriceUSD: '$3,800 setup + $99/mo',
+    typicalTimeline: '3-4 weeks',
+    link: '/services/ai-weather-prediction',
+    references: [
+      { label: 'Weather API Services', url: 'https://openweathermap.org/api' },
+      { label: 'Climate Data', url: 'https://www.ncdc.noaa.gov/data-access' },
+    ],
+  },
+  {
+    slug: 'ai-code-reviewer',
+    title: 'AI Code Review & Quality Assurance Platform',
+    category: 'Micro-SaaS',
+    description:
+      'Intelligent code review platform that automatically analyzes code quality, suggests improvements, detects bugs, and enforces coding standards.',
+    startingPriceUSD: '$2,500 setup + $89/mo',
+    typicalTimeline: '2-3 weeks',
+    link: '/services/ai-code-reviewer',
+    references: [
+      { label: 'Code Quality Metrics', url: 'https://www.sonarqube.org/' },
+      { label: 'Static Code Analysis', url: 'https://owasp.org/www-community/controls/Static_Code_Analysis' },
+    ],
+  },
+
+  // ADDITIONAL IT SERVICES
+  {
+    slug: 'iot-infrastructure-management',
+    title: 'IoT Infrastructure & Device Management',
+    category: 'IT Services',
+    description:
+      'Complete IoT infrastructure setup with device monitoring, data collection, security protocols, and real-time analytics dashboard.',
+    startingPriceUSD: 'From $12,000 project',
+    typicalTimeline: '6-10 weeks',
+    link: '/services/iot-infrastructure-management',
+    references: [
+      { label: 'IoT Security Framework', url: 'https://www.nist.gov/publications/guidelines-iot-device-cybersecurity-capabilities-core-baseline' },
+      { label: 'AWS IoT Services', url: 'https://aws.amazon.com/iot/' },
+    ],
+  },
+  {
+    slug: 'edge-computing-solutions',
+    title: 'Edge Computing & Distributed Systems',
+    category: 'IT Services',
+    description:
+      'Edge computing infrastructure deployment with low-latency processing, distributed data management, and real-time decision making capabilities.',
+    startingPriceUSD: 'From $18,000 project',
+    typicalTimeline: '8-12 weeks',
+    link: '/services/edge-computing-solutions',
+    references: [
+      { label: 'Edge Computing Benefits', url: 'https://www.gartner.com/en/information-technology/glossary/edge-computing' },
+      { label: 'Kubernetes Edge', url: 'https://kubernetes.io/docs/concepts/cluster-administration/edge/' },
+    ],
+  },
+  {
+    slug: 'quantum-computing-readiness',
+    title: 'Quantum Computing Readiness Assessment',
+    category: 'IT Services',
+    description:
+      'Quantum computing readiness evaluation, algorithm optimization, and hybrid classical-quantum system integration for future-proofing.',
+    startingPriceUSD: 'From $25,000 project',
+    typicalTimeline: '10-16 weeks',
+    link: '/services/quantum-computing-readiness',
+    references: [
+      { label: 'IBM Quantum Network', url: 'https://www.ibm.com/quantum/network' },
+      { label: 'Quantum Computing Applications', url: 'https://www.nature.com/articles/s41586-019-1666-5' },
+    ],
+  },
+  {
+    slug: '5g-network-implementation',
+    title: '5G Network Implementation & Optimization',
+    category: 'IT Services',
+    description:
+      '5G network deployment, optimization, and integration with existing infrastructure for enhanced connectivity and IoT capabilities.',
+    startingPriceUSD: 'From $35,000 project',
+    typicalTimeline: '12-20 weeks',
+    link: '/services/5g-network-implementation',
+    references: [
+      { label: '5G Technology Overview', url: 'https://www.qualcomm.com/5g/what-is-5g' },
+      { label: '5G Business Applications', url: 'https://www.gsma.com/futurenetworks/5g/' },
+    ],
+  },
+  {
+    slug: 'cyber-threat-intelligence',
+    title: 'Cyber Threat Intelligence & Monitoring',
+    category: 'IT Services',
+    description:
+      'Advanced threat intelligence platform with real-time monitoring, threat hunting, incident response, and security orchestration.',
+    startingPriceUSD: 'From $15,000 project',
+    typicalTimeline: '6-8 weeks',
+    link: '/services/cyber-threat-intelligence',
+    references: [
+      { label: 'MITRE ATT&CK Framework', url: 'https://attack.mitre.org/' },
+      { label: 'Threat Intelligence Platforms', url: 'https://www.gartner.com/reviews/market/security-threat-intelligence' },
+    ],
+  },
+
+  // ADDITIONAL AI SOLUTIONS
+  {
+    slug: 'ai-drug-discovery',
+    title: 'AI-Powered Drug Discovery Platform',
+    category: 'AI Solutions',
+    description:
+      'Machine learning platform for pharmaceutical research, molecular design, drug interaction prediction, and clinical trial optimization.',
+    startingPriceUSD: 'From $50,000 project',
+    typicalTimeline: '12-20 weeks',
+    link: '/services/ai-drug-discovery',
+    references: [
+      { label: 'AI in Drug Discovery', url: 'https://www.nature.com/articles/s41587-021-01179-w' },
+      { label: 'Pharmaceutical AI Market', url: 'https://www.grandviewresearch.com/industry-analysis/artificial-intelligence-pharmaceutical-market' },
+    ],
+  },
+  {
+    slug: 'ai-financial-modeling',
+    title: 'AI Financial Modeling & Risk Assessment',
+    category: 'AI Solutions',
+    description:
+      'Advanced financial modeling platform with AI-driven risk assessment, portfolio optimization, and automated trading strategies.',
+    startingPriceUSD: 'From $20,000 project',
+    typicalTimeline: '8-12 weeks',
+    link: '/services/ai-financial-modeling',
+    references: [
+      { label: 'FinTech AI Applications', url: 'https://www.mckinsey.com/industries/financial-services/our-insights/ai-bank-of-the-future' },
+      { label: 'Quantitative Finance', url: 'https://www.quantstart.com/' },
+    ],
+  },
+  {
+    slug: 'ai-supply-chain-optimization',
+    title: 'AI Supply Chain Optimization Platform',
+    category: 'AI Solutions',
+    description:
+      'Intelligent supply chain management with demand forecasting, inventory optimization, route planning, and supplier risk assessment.',
+    startingPriceUSD: 'From $25,000 project',
+    typicalTimeline: '10-16 weeks',
+    link: '/services/ai-supply-chain-optimization',
+    references: [
+      { label: 'Supply Chain AI', url: 'https://www.mckinsey.com/capabilities/operations/our-insights/artificial-intelligence-in-supply-chain' },
+      { label: 'Supply Chain Optimization', url: 'https://www.oracle.com/supply-chain-management/' },
+    ],
+  },
+  {
+    slug: 'ai-mental-health-platform',
+    title: 'AI Mental Health & Wellness Platform',
+    category: 'AI Solutions',
+    description:
+      'AI-powered mental health platform with mood tracking, personalized therapy recommendations, crisis detection, and wellness coaching.',
+    startingPriceUSD: 'From $30,000 project',
+    typicalTimeline: '12-18 weeks',
+    link: '/services/ai-mental-health-platform',
+    references: [
+      { label: 'Digital Mental Health', url: 'https://www.nimh.nih.gov/health/topics/technology-and-the-future-of-mental-health-treatment' },
+      { label: 'AI in Healthcare', url: 'https://www.nature.com/articles/s41591-021-01614-0' },
+    ],
+  },
+  {
+    slug: 'ai-autonomous-vehicles',
+    title: 'AI Autonomous Vehicle Systems',
+    category: 'AI Solutions',
+    description:
+      'Autonomous vehicle AI systems with computer vision, sensor fusion, path planning, and real-time decision making for self-driving applications.',
+    startingPriceUSD: 'From $100,000 project',
+    typicalTimeline: '20-30 weeks',
+    link: '/services/ai-autonomous-vehicles',
+    references: [
+      { label: 'Autonomous Vehicle Technology', url: 'https://www.sae.org/standards/content/j3016_202104/' },
+      { label: 'Self-Driving Car AI', url: 'https://www.tesla.com/AI' },
+    ],
+  },
+  {
+    slug: 'ai-space-technology',
+    title: 'AI Space Technology & Satellite Systems',
+    category: 'AI Solutions',
+    description:
+      'AI-powered space technology solutions including satellite data processing, orbital mechanics optimization, and space mission planning.',
+    startingPriceUSD: 'From $75,000 project',
+    typicalTimeline: '16-24 weeks',
+    link: '/services/ai-space-technology',
+    references: [
+      { label: 'Space AI Applications', url: 'https://www.nasa.gov/feature/artificial-intelligence-and-space-exploration' },
+      { label: 'Satellite Technology', url: 'https://www.spacex.com/' },
+    ],
+  },
 ];
 

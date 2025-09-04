@@ -27,7 +27,9 @@ const services = {
     { name: 'Computer Vision', href: '/services/computer-vision-solutions' },
     { name: 'Natural Language Processing', href: '/services/natural-language-processing' },
     { name: 'AI-Powered CRM', href: '/services/ai-powered-crm' },
-    { name: 'Voice Assistant Development', href: '/services/voice-assistant-development' }
+    { name: 'Voice Assistant Development', href: '/services/voice-assistant-development' },
+    { name: 'AI Drug Discovery', href: '/services/ai-drug-discovery' },
+    { name: 'AI Financial Modeling', href: '/services/ai-financial-modeling' }
   ],
   'IT Services': [
     { name: 'Cloud Migration', href: '/services/cloud-migration-and-cost-optimization' },
@@ -35,7 +37,9 @@ const services = {
     { name: 'Zero Trust Security', href: '/services/zero-trust-security-implementation' },
     { name: 'Disaster Recovery', href: '/services/disaster-recovery-planning' },
     { name: 'Managed IT Support', href: '/services/managed-it-support' },
-    { name: 'Network Optimization', href: '/services/network-optimization' }
+    { name: 'Network Optimization', href: '/services/network-optimization' },
+    { name: 'IoT Infrastructure', href: '/services/iot-infrastructure-management' },
+    { name: 'Edge Computing', href: '/services/edge-computing-solutions' }
   ],
   'Micro SaaS': [
     { name: 'AI Chatbot', href: '/services/ai-chatbot-for-support' },
@@ -43,7 +47,9 @@ const services = {
     { name: 'Customer Support Platform', href: '/services/customer-support-platform' },
     { name: 'Event Management', href: '/services/event-management-dashboard' },
     { name: 'E-commerce Returns', href: '/services/ecommerce-return-management' },
-    { name: 'AI Talent Matching', href: '/services/ai-talent-matching' }
+    { name: 'AI Talent Matching', href: '/services/ai-talent-matching' },
+    { name: 'AI Social Media Manager', href: '/services/ai-social-media-manager' },
+    { name: 'Blockchain NFT Marketplace', href: '/services/blockchain-nft-marketplace' }
   ]
 };
 

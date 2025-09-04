@@ -84,7 +84,7 @@ export default function ServicesPage() {
   return (
     <Layout
       title="Our Services - Zion Tech Group | AI, IT & Micro SaaS Solutions"
-      description="Explore our comprehensive portfolio of 50+ technology services including AI solutions, IT services, and micro SaaS platforms. Transform your business with cutting-edge technology."
+      description="Explore our comprehensive portfolio of 60+ technology services including AI solutions, IT services, and micro SaaS platforms. Transform your business with cutting-edge technology."
       keywords="AI services, IT services, micro SaaS, technology solutions, digital transformation, cloud services, cybersecurity"
       canonical="https://ziontechgroup.com/services"
     >

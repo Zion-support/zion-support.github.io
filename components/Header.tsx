@@ -15,7 +15,10 @@ import {
   Shield,
   BarChart3,
   Settings,
-  Globe
+  Globe,
+  FileText,
+  MessageSquare,
+  Rocket
 } from 'lucide-react';
 
 const navigation = [
@@ -24,10 +27,32 @@ const navigation = [
     href: '/services',
     icon: Settings,
     children: [
-      { name: 'AI Solutions', href: '/services?category=AI Solutions', icon: Brain, count: '15+' },
-      { name: 'IT Services', href: '/services?category=IT Services', icon: Network, count: '12+' },
-      { name: 'Micro SaaS', href: '/services?category=Micro-SaaS', icon: Cloud, count: '20+' },
-      { name: 'All Services', href: '/services', icon: Globe, count: '50+' }
+      { name: 'AI Solutions', href: '/services?category=AI Solutions', icon: Brain, count: '20+' },
+      { name: 'IT Services', href: '/services?category=IT Services', icon: Network, count: '15+' },
+      { name: 'Micro SaaS', href: '/services?category=Micro-SaaS', icon: Cloud, count: '25+' },
+      { name: 'All Services', href: '/services', icon: Globe, count: '60+' }
+    ]
+  },
+  {
+    name: 'Solutions',
+    href: '/solutions',
+    icon: Shield,
+    children: [
+      { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Shield },
+      { name: 'Startup Solutions', href: '/solutions/startup', icon: Rocket },
+      { name: 'Industry Solutions', href: '/solutions/industry', icon: BarChart3 },
+      { name: 'Custom Development', href: '/solutions/custom', icon: Settings }
+    ]
+  },
+  {
+    name: 'Resources',
+    href: '/resources',
+    icon: FileText,
+    children: [
+      { name: 'Documentation', href: '/docs', icon: FileText },
+      { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
+      { name: 'Blog', href: '/blog', icon: MessageSquare },
+      { name: 'API Reference', href: '/api-docs', icon: Settings }
     ]
   },
   {
