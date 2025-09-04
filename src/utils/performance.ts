@@ -3,12 +3,12 @@ export const measurePerformance = (name: string, fn: () => void) => {
   const start = performance.now();
   fn();
   const end = performance.now();
-  console.log(`${name} took ${end - start} milliseconds`);
+  
 };
 
 export const reportWebVitals = (metric: an y) => {
   // Send to analytics service
-  console.log(metric);
+  
   
   // Example: Send to Google Analytics
   if (typeof window !== 'undefined' && (window as any).gtag) {

@@ -213,7 +213,7 @@ if(enableHeatmap) {
 
       return () => lcpObserver.disconnect () } catch(error) {
 
-      // console.warn('PerformanceObserver not supported:', error)}
+      // }
   }, [enabled]) ;
 
   // Send analytics data to service
@@ -228,7 +228,7 @@ if(enableHeatmap) {
           'Content-Type': 'application/json'},
         body: JSO N.stringify(analyticsPayload)})} catch(error) {
 
-      // console.warn('Failed to send analytics data:', error)}
+      // }
   }, [trackingId, userSession]) ;
   // Generate mock data for demonstration
   useEffect(() => {

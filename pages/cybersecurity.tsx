@@ -16,10 +16,10 @@ import {
   Users
 } from 'lucide-react'
 
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: fals e })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: fals e })
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
 
-const CybersecurityPage: Reac t.FC = () => {
+const CybersecurityPage: React.FC = () => {
   const services = [
     {
       id: 1,

@@ -57,7 +57,7 @@ export default function Page() {
         .register('/sw.js')
         .then(registration => {
 
-          // // console.log('SW registered: ', registration);
+          // // 
 
           // Check for updates'
           registration.addEventListener('updatefound', () => {
@@ -71,7 +71,7 @@ export default function Page() {
                 ) {
 
                   // New service worker available'
-                  // // console.log('New service worker available');
+                  // // 
                 }
               });
             }
@@ -79,7 +79,7 @@ export default function Page() {
         })
         .catch(registrationError => {
 
-          // // console.warn('SW registration failed: ', registrationError);
+          // // 
         });
     }
   }, []);

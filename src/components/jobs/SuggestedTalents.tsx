@@ -50,7 +50,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
   }, [jobId]); // jobId is a dependency of fetchSuggestedTalents
 
   const handleViewProfile = (talentId: string) => {
-    console.log("View talent profile:", talentId);
+    
     toast({
       title: "View Profile",
       description: `Navigating to talent profile: ${talentId}`,
@@ -58,7 +58,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
   };
 
   const handleInvite = (talentId: string) => {
-    console.log("Invite talent:", talentId);
+    
     toast({
       title: "Invite Talent",
       description: `Inviting talent: ${talentId}`,

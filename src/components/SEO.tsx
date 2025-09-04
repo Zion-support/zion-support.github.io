@@ -81,7 +81,7 @@ export const SEO: Reac t.FC<SEOProps> = ({
 
               if(navigation) {
                 const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-                console.log('Page load time:', loadTime + 'ms') ;
+                 ;
                 // Send to analytics if available
                 if(window.gtag) {
 

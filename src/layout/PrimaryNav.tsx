@@ -1,7 +1,7 @@
-// // // // // // // // console.log('PrimaryNav search submit:', query);
+// // // // // // // // 
       router.push(`/search/${slugify(query)}`);
       setQuery('');
-      // // // // // console.log('PrimaryNav search submit:', query);`
+      // // // // // `
       router.push(`/search/${slugify(query)}`);
       setQuery('')}
 // Theme toggle component;
@@ -28,14 +28,12 @@
             <ResponsiveNavigation  />
           </div>
 
-                  // // // // // // // // console.log('PrimaryNav search suggestion selected:', sugg);
+                  // // // // // // // // 
                 onSelectSuggestion = {
 
   (sugg) => {
 
-                  // // // // // console.log('PrimaryNav search suggestion selected:',;
-  ;
-  sugg);
+                  // // // // // 
                   // Handle different suggestion types with proper navigation
                   if(sugg.id) {
 

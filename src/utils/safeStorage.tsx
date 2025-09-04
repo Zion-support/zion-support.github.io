@@ -58,7 +58,7 @@ export const safeStorage = {
       return localStorage.getItem(key);
     } catch(error) {
 
-      // console.warn('Failed to get item from localStorage:', error);
+      // 
       return null;
     }
   },
@@ -70,7 +70,7 @@ export const safeStorage = {
       return true;
     } catch(error) {
 
-      // console.warn('Failed to set item in localStorage:', error);
+      // 
       return false;
     }
   },
@@ -82,7 +82,7 @@ export const safeStorage = {
       return true;
     } catch(error) {
 
-      // console.warn('Failed to remove item from localStorage:', error);
+      // 
       return false;
     }
   },
@@ -93,7 +93,7 @@ export const safeStorage = {
       return true;
     } catch(error) {
 
-      // console.warn('Failed to clear localStorage:', error);
+      // 
       return false;
     }
   },
@@ -104,7 +104,7 @@ export const safeStorage = {
       return localStorage.key(index);
     } catch(error) {
 
-      // console.warn('Failed to get key from localStorage:', error);
+      // 
       return null;    }
   },
 
@@ -113,7 +113,7 @@ export const safeStorage = {
       return localStorage.length;
     } catch(error) {
 
-      // console.warn('Failed to get localStorage length:', error);
+      // 
       return 0;    }
   }};
 

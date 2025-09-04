@@ -80,11 +80,11 @@ export default function Page() {
           chainId: newNetwor k.chainId,
           isConnected: tru e,
         });
-        console.log('Network changed to:', newNetwork.chainId);
+        
       });
 
       instance.on('disconnect', (error: an y) => {
-        console.log('Disconnected', error);
+        
         disconnectWallet();
       });
 

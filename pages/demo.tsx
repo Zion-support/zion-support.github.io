@@ -16,10 +16,10 @@ import {
   CheckCircle
 } from 'lucide-react'
 
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: fals e })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: fals e })
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
 
-const DemoPage: Reac t.FC = () => {
+const DemoPage: React.FC = () => {
   const [selectedDemo, setSelectedDemo] = useState('ai-services')
   
   const demos = [

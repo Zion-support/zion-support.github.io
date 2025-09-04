@@ -47,7 +47,7 @@ export function UserMenu({user }) {const [isOpen, setIsOpen] = useState(false);
   const handleLogout = () => {// Implement logout logic here';';';
     // Implement logout logic here""',';';
     ';';';
-    console.log('Logging out...');';';
+    ';';
     setIsOpen(false)};';';';
   const menuItems = [',';';
     ';';';

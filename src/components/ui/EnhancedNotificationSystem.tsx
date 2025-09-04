@@ -178,32 +178,25 @@ const NotificationItem: Reac t.FC<NotificationItemProps> = ({ notification, onRe
 
 // Utility functions for easy notification creation;
 export 
-    // console.log('Success notification:', { title, message,;
-=======
-'
-    // console.log('Info notification:', { title, message, ...options })};'
-    // console.log('Success notification:', { title, message,;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  ;
-  ;
-  ...options })},
+    // };'
+    // },
   error: (title: string, message: string, options?: Partial<Notification>) => {
 
-    // // // // console.log('Error notification:', { title, message, ...options })},
+    // // // // },
   warning: (title: string, message: string, options?: Partial<Notification>) => {
 
-    // // // // console.log('Warning notification:', { title, message, ...options })},
+    // // // // },
   info: (title: string, message: string, options?: Partial<Notification>) => {
 
-    // // // // console.log('Info notification:', { title, message, ...options })}}}}}}}}}}}}
-    // // // // // // // // console.log('Success notification:', { title, message, ...options })},
+    // // // // }}}}}}}}}}}}
+    // // // // // // // // },
   error: (title: string, message: string, options?: Partial<Notification>) => {
 
-    // // // // // // // // console.log('Error notification:', { title, message, ...options })},
+    // // // // // // // // },
   warning: (title: string, message: string, options?: Partial<Notification>) => {
 
-    // // // // // // // // console.log('Warning notification:', { title, message, ...options })},
+    // // // // // // // // },
   info: (title: string, message: string, options?: Partial<Notification>) => {
 
-    // // // // // // // // console.log('Info notification:', { title, message, ...options })}};
+    // // // // // // // // }};
 '"`

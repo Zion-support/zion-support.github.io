@@ -157,14 +157,7 @@ export function ChatBotPanel() {
         try {
             // Send the conversation to the backend for logging
             // This would be implemented in a real system"
-            // console.log("Support escalation triggered", {
-
-                conversationHistory: messages.map(m => ({
-
-                    content: m.content,
-                    sender: m.sender,
-                    timestamp: m.timestamp
-                }))
+            // )
             })}
         catch(error) {
 "

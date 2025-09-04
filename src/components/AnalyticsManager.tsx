@@ -102,7 +102,7 @@ export function AnalyticsManager() {
     // Set up session tracking
     setupSessionTracking();
 
-    // console.log('Analytics initialized for session:', sessionId)}, []);
+    // }, []);
 
     document.removeEventListener('scroll', handleScroll);
     window.removeEventListener('beforeunload', handleBeforeUnload);
@@ -221,7 +221,7 @@ export function AnalyticsManager() {
   )}, [])}, [])}, []);
 
         // For now, just log to console'
-        // console.log('Analytics Event:', { type, data, sessionId: currentSessio n?.id })} catch(error) {
+        // } catch(error) {
 
         // console.error('Failed to send analytics data:', error)}
     },

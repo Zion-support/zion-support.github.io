@@ -61,7 +61,7 @@ export function ApiDocumentation() {
 });
 
 const data = await response.json();
-console.log(data);`,
+`,
             python: `import requests
 
 headers = {
@@ -137,7 +137,7 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/jobs/\${jobId
 });
 
 const data = await response.json();
-console.log(data);`,
+`,
             python: `import requests
 
 headers = {
@@ -233,7 +233,7 @@ print(data)`
 });
 
 const data = await response.json();
-console.log(data);`,
+`,
             python: `import requests
 import json
 
@@ -318,7 +318,7 @@ print(data)`
 });
 
 const data = await response.json();
-console.log(data);`,
+`,
             python: `import requests
 
 headers = {
@@ -388,7 +388,7 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/talent/\${talent
 });
 
 const data = await response.json();
-console.log(data);`,
+`,
             python: `import requests
 
 headers = {
@@ -494,7 +494,7 @@ print(data)`
 });
 
 const data = await response.json();
-console.log(data);`,
+`,
             python: `import requests
 import json
 
@@ -575,7 +575,7 @@ print(data)`
 });
 
 const data = await response.json();
-console.log(data);`,
+`,
             python: `import requests
 
 headers = {
@@ -661,7 +661,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   
   // Process the webhook event
   const event = JSON.parse(payload);
-  console.log('Received valid webhook:', event);
+  
   
   // Respond to acknowledge receipt
   res.status(200).send('Webhook received')});`} language="javascript" showLineNumbers={true}/>

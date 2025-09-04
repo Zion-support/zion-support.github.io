@@ -3,10 +3,7 @@ type Reporter = (metric: any) => void;
 function defaultReporter(metric: any): void {
   // Replace with analytics endpoint or gtag if desired
   // eslint-disable-next-line no-console
-  console.info(`[Web Vitals] ${metric.name}`, {
-    id: metric.id,
-    value: metric.value,
-    rating: (metric as any).rating,
+  .rating,
   });
 }
 

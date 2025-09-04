@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
+const fs = require('fs');
+const path = require('path');
+const { glob } = require('glob');
 
 /**
  * Script to remove console.log statements from production builds
@@ -31,9 +31,7 @@ const EXCLUDE_PATTERNS = [
 function shouldProcessFile(filePath) {
   return !EXCLUDE_PATTERNS.some(pattern => {
     if (pattern.includes('*')) {
-      return glob.sync(pattern, { cwd: path.dirname(filePath) }).then(matches => 
-        matches.some(match => filePath.includes(match))
-      );
+      return filePath.includes(pattern.replace('*', ''));
     }
     return filePath.includes(pattern);
   });
@@ -72,7 +70,7 @@ function processFile(filePath) {
   }
 }
 
-function main() {
+async function main() {
   const srcDir = path.join(process.cwd(), 'src');
   const pagesDir = path.join(process.cwd(), 'pages');
   
@@ -84,17 +82,17 @@ function main() {
   let totalRemoved = 0;
   let filesProcessed = 0;
 
-  patterns.forEach(pattern => {
-    const files = glob.sync(pattern);
+  for (const pattern of patterns) {
+    const files = await glob(pattern);
     
-    files.forEach(file => {
+    for (const file of files) {
       if (shouldProcessFile(file)) {
         const removed = processFile(file);
         totalRemoved += removed;
         filesProcessed++;
       }
-    });
-  });
+    }
+  }
 
   console.log(`\n📊 Summary:`);
   console.log(`   Files processed: ${filesProcessed}`);
@@ -108,7 +106,7 @@ function main() {
 }
 
 if (require.main === module) {
-  main();
+  main().catch(console.error);
 }
 
 module.exports = { removeConsoleStatements, processFile };

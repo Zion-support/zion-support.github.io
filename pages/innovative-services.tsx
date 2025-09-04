@@ -36,7 +36,7 @@ import {
   MapPin
 } from "lucide-react"
 
-const PageTransition = ({ children }: { children: Reac t.ReactNode }) => <div>{children}</div>
+const PageTransition = ({ children }: { children: React.ReactNode }) => <div>{children}</div>
 
 export default function InnovativeServices() {
   const title = "Innovative Services — Zion Tech Group"
