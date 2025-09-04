@@ -1,85 +1,47 @@
 {
-  "timestamp": "2025-09-03T17:32:53.642Z",
-
+  "timestamp": "2025-09-03T23:23:47.106Z",
+  "status": "warning",
   "checks": [
     {
       "name": "Node.js Version",
-      "status": "passed",
-      "message": "Node.js version v22.16.0 is supported",
-      "duration": 1,
-      "details": {
-        "version": "v22.16.0",
-        "majorVersion": 22
-      }
+      "status": "pass",
+      "value": "v22.16.0",
+      "message": "Node.js version is compatible"
     },
     {
-      "name": "Package Configuration",
-      "status": "passed",
-      "message": "package.json is valid",
-      "duration": 0,
-      "details": {
-        "name": "ziontechgroup.com",
-        "version": "0.1.0",
-        "scriptsCount": 156
-      }
+      "name": "Package.json",
+      "status": "pass",
+      "value": "ziontechgroup.com",
+      "message": "Package.json found and valid"
     },
     {
       "name": "Dependencies",
-      "status": "passed",
-      "message": "All dependencies are installed correctly",
-      "duration": 408,
-      "details": {}
+      "status": "pass",
+      "message": "Node modules directory exists"
     },
     {
-      "name": "Build System",
-      "status": "passed",
-      "message": "Build system configuration is complete",
-      "duration": 0,
-      "details": {
-        "hasNextConfig": true,
-        "hasTsConfig": true
-      }
+      "name": "Next.js Config",
+      "status": "pass",
+      "message": "Next.js configuration found"
+    },
+    {
+      "name": "TypeScript Config",
+      "status": "pass",
+      "message": "TypeScript configuration found"
     },
     {
       "name": "Source Files",
-      "status": "passed",
-      "message": "Source files found: 13 pages, 3 components",
-      "duration": 0,
-      "details": {
-        "pageCount": 13,
-        "componentCount": 3,
-        "hasPagesDir": true,
-        "hasComponentsDir": true
-      }
+      "status": "pass",
+      "message": "Source directory found"
     },
     {
-      "name": "Git Repository",
-      "status": "passed",
-      "message": "Git repository on branch 'cursor/automate-test-fix-improve-and-merge-code-62a4' with uncommitted changes",
-      "duration": 66,
-      "details": {
-        "branch": "cursor/automate-test-fix-improve-and-merge-code-62a4",
-        "hasChanges": true,
-        "changesCount": 15
-      }
-    },
-    {
-      "name": "Security",
-      "status": "passed",
-      "message": "Basic security files are present",
-      "duration": 0,
-      "details": {
-        "foundFiles": [
-          ".gitignore",
-          ".env.example"
-        ]
-      }
+      "name": "Environment Variables",
+      "status": "warn",
+      "message": "Environment file not found, but example exists"
     }
   ],
-  "summary": {
-    "total": 7,
-    "passed": 7,
-    "failed": 0,
-    "warnings": 0
-  }
+  "issues": [],
+  "recommendations": [
+    "Copy .env.example to .env.local and configure"
+  ]
 }

@@ -1,46 +1,28 @@
 {
 <<<<<<< HEAD
-  "timestamp": "2025-09-03T16:53:15.213Z",
+  "timestamp": "2025-09-03T23:23:48.436Z",
   "bundleSize": {
     ".next": {
-      "size": 42156652,
-      "sizeMB": "40.20"
+      "size": 48331706,
+      "sizeMB": "46.09"
     },
     "node_modules": {
       "size": 820676108,
-      "sizeMB": "782.66"
-    }
 =======
-  "timestamp": "2025-09-03T16:54:18.031Z",
-  "score": 60,
+  "timestamp": "2025-09-04T00:00:12.166Z",
   "bundleSize": {
     ".next": {
-      "size": 41612654,
-      "sizeMB": "39.68"
+      "size": 139,
+      "sizeMB": "0.00"
     },
     "node_modules": {
-      "size": 819927451,
-      "sizeMB": "781.94"
+      "size": 820678240,
+>>>>>>> 2c58a75d9c0daeb808b0155ba4d9e05ed9958f1f
+      "sizeMB": "782.66"
     }
   },
   "fileCounts": {
-    ".tsx": 16,
-    ".ts": 0,
-    ".jsx": 0,
-    ".js": 0,
-    ".css": 2,
-    ".json": 0
-  },
-  "checks": {
-    "buildSize": true,
-    "bundleAnalysis": false,
-    "lighthouseScore": false,
-    "loadTime": true,
-    "memoryUsage": true
->>>>>>> 1735b00409ca432e079c8359c109c85b21bb1334
-  },
-  "fileCounts": {
-    ".tsx": 16,
+    ".tsx": 25,
     ".ts": 0,
     ".jsx": 0,
     ".js": 0,
