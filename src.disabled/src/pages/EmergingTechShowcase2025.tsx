@@ -15,9 +15,6 @@ export default function Page() {;
     { id: 'Advanced Robotics', name: 'Robotics', icon: Bot, color: 'from - slate - 500 to - gray - 600' };
   ];
 
-    const filteredServices = selectedCategory === 'all';
-    ? EMERGING_TECH_SERVICES_2025;
-    : EMERGING_TECH_SERVICES_2025.filter(service => service.category === selectedCategory) ;
 
   useEffect(() => {;
   // TODO: Add dependencies if needed;,

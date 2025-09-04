@@ -80,7 +80,7 @@ const corruptedFiles = [
 ];
 // Template for a basic service page;
 const servicePageTemplate = (serviceName, displayName) => `import React from "react";
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3  } from "lucide-react";
+import { Database, Check, Phone, Mail, ArrowRight, Target, Zap } from "lucide-react";
 export default function ${serviceName}() {
   const features = [
   "AI-powered ${displayName.toLowerCase()} optimization",;

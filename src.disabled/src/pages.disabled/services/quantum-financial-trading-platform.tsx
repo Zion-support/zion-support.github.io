@@ -1,5 +1,5 @@
 import React from 'react';
-import { Zap, Brain, TrendingUp, Shield, BarChart3, Users, CheckCircle, Star, Globe, Cpu } from 'lucide-react';
+import { Zap, Brain, TrendingUp, Shield, BarChart3, CheckCircle, Star, Globe, Cpu } from "lucide-react";
 
 export default function QuantumFinancialTradingPlatform() {;
   return (;

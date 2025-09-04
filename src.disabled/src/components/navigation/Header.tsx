@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Mail, MapPin, ChevronDown, Search, User, ShoppingCart } from 'lucide-react';
+import { Menu, X, Phone, Mail, MapPin, ChevronDown, Search } from "lucide-react";
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Header: React.FC = () => {;
