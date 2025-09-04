@@ -41,6 +41,7 @@ export default [
         MouseEvent: 'readonly',
         Node: 'readonly',
         PerformanceObserver: 'readonly',
+        PerformanceEntry: 'readonly',
         // Node.js globals
         process: 'readonly',
         Buffer: 'readonly',

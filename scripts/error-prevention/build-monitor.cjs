@@ -1,159 +1,120 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
+const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
 class BuildMonitor {
   constructor() {
-    this.logFile = path.join(process.cwd(), 'automation/logs/build-monitor.log');
-    this.reportFile = path.join(process.cwd(), 'automation/logs/build-report.json');
+    this.isRunning = false;
+    this.interval = 60000; // 1 minute
     this.lastBuildTime = null;
-    this.buildCount = 0;
-    this.errorCount = 0;
   }
 
-  log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
-    console.log(logMessage.trim());
-    fs.appendFileSync(this.logFile, logMessage);
-  }
-
-  async checkBuild() {
-    this.log('Starting build check...');
+  async start() {
+    console.log('Starting Build Monitor...');
+    this.isRunning = true;
     
-    try {
-      // Clean previous build
-      this.log('Cleaning previous build...');
-      execSync('npm run clean', { stdio: 'pipe' });
-      
-      // Run type check first
-      this.log('Running TypeScript type check...');
-      execSync('npm run type-check', { stdio: 'pipe' });
-      
-      // Run the build
-      this.log('Running production build...');
-      const startTime = Date.now();
-      execSync('npm run build', { stdio: 'pipe' });
-      const buildTime = Date.now() - startTime;
-      
-      this.buildCount++;
-      this.lastBuildTime = new Date();
-      
-      this.log(`Build completed successfully in ${buildTime}ms`);
-      
-      // Generate build report
-      const report = {
-        timestamp: this.lastBuildTime.toISOString(),
-        buildTime: buildTime,
-        buildCount: this.buildCount,
-        status: 'success',
-        errors: [],
-        warnings: []
-      };
-      
-      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-      
-      // Check bundle size
-      this.checkBundleSize();
-      
-    } catch (error) {
-      this.errorCount++;
-      this.log(`Build failed (attempt ${this.errorCount}):`);
-      this.log(error.stdout || error.message);
-      
-      const report = {
-        timestamp: new Date().toISOString(),
-        buildCount: this.buildCount,
-        errorCount: this.errorCount,
-        status: 'failed',
-        errors: [error.stdout || error.message],
-        warnings: []
-      };
-      
-      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-      
-      // Try to fix common build issues
-      this.attemptBuildFix();
-    }
+    // Initial build check
+    await this.runBuildCheck();
+    
+    // Set up interval for periodic checks
+    this.intervalId = setInterval(() => {
+      this.runBuildCheck();
+    }, this.interval);
+    
+    console.log('Build Monitor started successfully');
   }
 
-  checkBundleSize() {
+  async runBuildCheck() {
     try {
-      const nextDir = path.join(process.cwd(), '.next');
-      if (fs.existsSync(nextDir)) {
-        const stats = this.getDirectorySize(nextDir);
-        this.log(`Build size: ${(stats / 1024 / 1024).toFixed(2)} MB`);
-        
-        if (stats > 50 * 1024 * 1024) { // 50MB warning
-          this.log('WARNING: Build size is larger than 50MB');
+      console.log('Running build check...');
+      
+      const child = spawn('npm', ['run', 'build'], {
+        stdio: ['pipe', 'pipe', 'pipe'],
+        cwd: process.cwd()
+      });
+
+      let output = '';
+      let errorOutput = '';
+
+      child.stdout.on('data', (data) => {
+        output += data.toString();
+      });
+
+      child.stderr.on('data', (data) => {
+        errorOutput += data.toString();
+      });
+
+      child.on('close', (code) => {
+        if (code === 0) {
+          console.log('Build check passed ✓');
+          this.lastBuildTime = new Date();
+        } else {
+          console.log('Build check failed ✗');
+          console.log('Output:', output);
+          console.log('Errors:', errorOutput);
+          
+          // Attempt to fix common build issues
+          this.attemptBuildFix();
         }
-      }
+      });
     } catch (error) {
-      this.log(`Error checking bundle size: ${error.message}`);
+      console.error('Error running build check:', error.message);
     }
   }
 
-  getDirectorySize(dirPath) {
-    let totalSize = 0;
-    const files = fs.readdirSync(dirPath);
-    
-    for (const file of files) {
-      const filePath = path.join(dirPath, file);
-      const stats = fs.statSync(filePath);
-      
-      if (stats.isDirectory()) {
-        totalSize += this.getDirectorySize(filePath);
-      } else {
-        totalSize += stats.size;
-      }
-    }
-    
-    return totalSize;
-  }
-
-  attemptBuildFix() {
-    this.log('Attempting to fix build issues...');
-    
+  async attemptBuildFix() {
     try {
-      // Clear Next.js cache
-      this.log('Clearing Next.js cache...');
-      execSync('rm -rf .next', { stdio: 'pipe' });
+      console.log('Attempting to fix build issues...');
       
-      // Reinstall dependencies if needed
-      if (this.errorCount % 3 === 0) {
-        this.log('Reinstalling dependencies...');
-        execSync('npm ci', { stdio: 'pipe' });
-      }
-      
-      // Try building again
-      setTimeout(() => this.checkBuild(), 5000);
-      
+      // Clean build directory
+      const cleanChild = spawn('npm', ['run', 'clean'], {
+        stdio: 'inherit',
+        cwd: process.cwd()
+      });
+
+      cleanChild.on('close', (code) => {
+        if (code === 0) {
+          console.log('Clean completed, retrying build...');
+          this.runBuildCheck();
+        } else {
+          console.log('Clean failed');
+        }
+      });
     } catch (error) {
-      this.log(`Build fix attempt failed: ${error.message}`);
+      console.error('Error running build fix:', error.message);
     }
   }
 
-  start() {
-    this.log('Build monitor started...');
+  stop() {
+    console.log('Stopping Build Monitor...');
+    this.isRunning = false;
     
-    // Run initial build check
-    this.checkBuild();
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+    }
     
-    // Schedule regular checks (every 6 hours)
-    setInterval(() => {
-      this.checkBuild();
-    }, 6 * 60 * 60 * 1000);
-    
-    // Keep process alive
-    process.on('SIGINT', () => {
-      this.log('Shutting down build monitor...');
-      process.exit(0);
-    });
+    console.log('Build Monitor stopped');
   }
 }
 
-// Start the monitor
-const monitor = new BuildMonitor();
-monitor.start();
+// Start the monitor if run directly
+if (require.main === module) {
+  const monitor = new BuildMonitor();
+  
+  // Handle graceful shutdown
+  process.on('SIGINT', () => {
+    monitor.stop();
+    process.exit(0);
+  });
+  
+  process.on('SIGTERM', () => {
+    monitor.stop();
+    process.exit(0);
+  });
+  
+  monitor.start().catch(console.error);
+}
+
+module.exports = BuildMonitor;
