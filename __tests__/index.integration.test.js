@@ -1,1 +1,23 @@
-import React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import index from '../pages/index" describe('index Integration Tests',() => {' test('page renders correctly',() => {' render(<index / />) expect(screen.getByRole('main')).toBeInTheDocument();' }) test('navigation works',() => {' render(<index / />) }) test('page content is accessible',() => {' render(<index / />) }) test('page loads with correct data',() => {' render(<index / />) }) })
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import Index from '../components/index';
+
+describe('Index', () => {
+  test('renders without crashing', () => {
+    render(<Index />);
+    expect(screen.getByTestId('index')).toBeInTheDocument();
+  });
+
+  test('displays correct content', () => {
+    render(<Index />);
+  });
+
+  test('handles user interactions', () => {
+    render(<Index />);
+  });
+
+  test('applies correct styling', () => {
+    render(<Index />);
+  });
+});

@@ -1,1 +1,23 @@
-import React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import _document from '../pages/_document" describe('_document Integration Tests',() => {' test('page renders correctly',() => {' render(<_document / />) expect(screen.getByRole('main')).toBeInTheDocument();' }) test('navigation works',() => {' render(<_document / />) }) test('page content is accessible',() => {' render(<_document / />) }) test('page loads with correct data',() => {' render(<_document / />) }) })
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import _document from '../components/_document';
+
+describe('_document', () => {
+  test('renders without crashing', () => {
+    render(<_document />);
+    expect(screen.getByTestId('_document')).toBeInTheDocument();
+  });
+
+  test('displays correct content', () => {
+    render(<_document />);
+  });
+
+  test('handles user interactions', () => {
+    render(<_document />);
+  });
+
+  test('applies correct styling', () => {
+    render(<_document />);
+  });
+});

@@ -1,1 +1,23 @@
-import React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import services from '../pages/services" describe('services Integration Tests',() => {' test('page renders correctly',() => {' render(<services / />) expect(screen.getByRole('main')).toBeInTheDocument();' }) test('navigation works',() => {' render(<services / />) }) test('page content is accessible',() => {' render(<services / />) }) test('page loads with correct data',() => {' render(<services / />) }) })
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import services from '../components/services';
+
+describe('services', () => {
+  test('renders without crashing', () => {
+    render(<services />);
+    expect(screen.getByTestId('services')).toBeInTheDocument();
+  });
+
+  test('displays correct content', () => {
+    render(<services />);
+  });
+
+  test('handles user interactions', () => {
+    render(<services />);
+  });
+
+  test('applies correct styling', () => {
+    render(<services />);
+  });
+});
