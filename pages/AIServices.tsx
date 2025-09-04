@@ -1,6 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
-import Head from 'next/head';
+import { Link } from 'react-router-dom';
 
 export default function AIServices() {
   const aiServices = [
@@ -348,6 +347,236 @@ export default function AIServices() {
       ],
       marketPrice: "$600-900/month",
       savings: "Save up to $550/month"
+    },
+    {
+      name: "AI Computer Vision Platform",
+      description: "Advanced computer vision platform with object detection, facial recognition, and image analysis capabilities for various industries.",
+      price: "$599/month",
+      features: [
+        "Real-time object detection and classification",
+        "Facial recognition and verification",
+        "OCR and text extraction from images",
+        "Quality control and defect detection",
+        "Medical image analysis",
+        "Security and surveillance monitoring",
+        "Custom model training",
+        "API integration and SDK"
+      ],
+      benefits: [
+        "Automate visual inspection processes",
+        "Improve accuracy by 95%",
+        "Reduce manual inspection costs",
+        "Enable 24/7 monitoring capabilities"
+      ],
+      marketPrice: "$1000-1500/month",
+      savings: "Save up to $900/month"
+    },
+    {
+      name: "AI Natural Language Processing Suite",
+      description: "Comprehensive NLP platform with sentiment analysis, language translation, text summarization, and chatbot development tools.",
+      price: "$449/month",
+      features: [
+        "Sentiment analysis and emotion detection",
+        "Multi-language translation (100+ languages)",
+        "Text summarization and extraction",
+        "Named entity recognition",
+        "Intent classification and understanding",
+        "Chatbot and virtual assistant development",
+        "Document analysis and processing",
+        "Custom model fine-tuning"
+      ],
+      benefits: [
+        "Understand customer sentiment in real-time",
+        "Break language barriers globally",
+        "Automate text processing workflows",
+        "Improve customer service automation"
+      ],
+      marketPrice: "$700-1200/month",
+      savings: "Save up to $750/month"
+    },
+    {
+      name: "AI Predictive Analytics Engine",
+      description: "Advanced predictive analytics platform with machine learning models for forecasting, risk assessment, and decision optimization.",
+      price: "$699/month",
+      features: [
+        "Time series forecasting",
+        "Risk assessment and scoring",
+        "Customer lifetime value prediction",
+        "Churn prediction and prevention",
+        "Market trend analysis",
+        "Anomaly detection",
+        "Recommendation engines",
+        "Automated model deployment"
+      ],
+      benefits: [
+        "Make data-driven predictions with 90% accuracy",
+        "Reduce business risks significantly",
+        "Optimize customer retention strategies",
+        "Improve strategic decision making"
+      ],
+      marketPrice: "$1200-2000/month",
+      savings: "Save up to $1300/month"
+    },
+    {
+      name: "AI Voice Recognition & Processing",
+      description: "Advanced voice AI platform with speech-to-text, voice commands, and intelligent voice analytics for business applications.",
+      price: "$399/month",
+      features: [
+        "Real-time speech-to-text conversion",
+        "Voice command recognition",
+        "Speaker identification and verification",
+        "Voice emotion analysis",
+        "Multi-language voice support",
+        "Custom wake word training",
+        "Voice biometrics authentication",
+        "Call center analytics"
+      ],
+      benefits: [
+        "Enable hands-free operations",
+        "Improve accessibility for all users",
+        "Enhance security with voice biometrics",
+        "Automate voice-based workflows"
+      ],
+      marketPrice: "$600-1000/month",
+      savings: "Save up to $600/month"
+    },
+    {
+      name: "AI Recommendation Engine",
+      description: "Intelligent recommendation system that personalizes content, products, and services based on user behavior and preferences.",
+      price: "$349/month",
+      features: [
+        "Collaborative filtering algorithms",
+        "Content-based recommendations",
+        "Hybrid recommendation models",
+        "Real-time personalization",
+        "A/B testing for recommendations",
+        "Cold start problem solutions",
+        "Multi-armed bandit optimization",
+        "Performance analytics dashboard"
+      ],
+      benefits: [
+        "Increase conversion rates by 40%",
+        "Improve user engagement significantly",
+        "Boost revenue through better targeting",
+        "Enhance customer satisfaction"
+      ],
+      marketPrice: "$500-800/month",
+      savings: "Save up to $450/month"
+    },
+    {
+      name: "AI Fraud Detection System",
+      description: "Advanced fraud detection platform with real-time monitoring, pattern recognition, and automated response capabilities.",
+      price: "$799/month",
+      features: [
+        "Real-time transaction monitoring",
+        "Machine learning fraud models",
+        "Behavioral pattern analysis",
+        "Risk scoring and assessment",
+        "Automated fraud prevention",
+        "False positive reduction",
+        "Multi-channel fraud detection",
+        "Compliance reporting tools"
+      ],
+      benefits: [
+        "Detect fraud with 99.5% accuracy",
+        "Reduce false positives by 80%",
+        "Prevent financial losses",
+        "Ensure regulatory compliance"
+      ],
+      marketPrice: "$1200-2000/month",
+      savings: "Save up to $1200/month"
+    },
+    {
+      name: "AI Chatbot Development Platform",
+      description: "Comprehensive chatbot development platform with natural language understanding, multi-channel deployment, and analytics.",
+      price: "$299/month",
+      features: [
+        "Visual chatbot builder",
+        "Natural language understanding",
+        "Multi-channel deployment (web, mobile, social)",
+        "Integration with CRM and databases",
+        "Conversation analytics",
+        "A/B testing capabilities",
+        "Human handoff functionality",
+        "Custom training data management"
+      ],
+      benefits: [
+        "Reduce customer service costs by 60%",
+        "Provide 24/7 customer support",
+        "Improve response time to seconds",
+        "Scale customer service efficiently"
+      ],
+      marketPrice: "$500-800/month",
+      savings: "Save up to $500/month"
+    },
+    {
+      name: "AI Data Labeling & Annotation",
+      description: "Automated data labeling platform with AI-powered annotation tools for machine learning model training and validation.",
+      price: "$249/month",
+      features: [
+        "Automated data annotation",
+        "Human-in-the-loop validation",
+        "Multi-modal data support",
+        "Quality assurance tools",
+        "Collaborative annotation workflows",
+        "Custom annotation schemas",
+        "Progress tracking and reporting",
+        "API integration for ML pipelines"
+      ],
+      benefits: [
+        "Reduce labeling time by 70%",
+        "Improve annotation accuracy",
+        "Scale data preparation processes",
+        "Accelerate ML model development"
+      ],
+      marketPrice: "$400-700/month",
+      savings: "Save up to $450/month"
+    },
+    {
+      name: "AI Edge Computing Platform",
+      description: "Edge AI platform for deploying machine learning models on edge devices with real-time inference and optimization.",
+      price: "$599/month",
+      features: [
+        "Model optimization for edge devices",
+        "Real-time inference capabilities",
+        "Edge device management",
+        "Offline operation support",
+        "Model versioning and updates",
+        "Performance monitoring",
+        "Security and encryption",
+        "Multi-device synchronization"
+      ],
+      benefits: [
+        "Reduce latency to milliseconds",
+        "Enable offline AI capabilities",
+        "Lower bandwidth requirements",
+        "Improve privacy and security"
+      ],
+      marketPrice: "$900-1500/month",
+      savings: "Save up to $900/month"
+    },
+    {
+      name: "AI Model Monitoring & MLOps",
+      description: "Comprehensive MLOps platform for monitoring, managing, and maintaining machine learning models in production.",
+      price: "$499/month",
+      features: [
+        "Model performance monitoring",
+        "Data drift detection",
+        "Model versioning and management",
+        "Automated retraining pipelines",
+        "A/B testing for models",
+        "Model governance and compliance",
+        "Alert and notification system",
+        "Integration with CI/CD pipelines"
+      ],
+      benefits: [
+        "Ensure model reliability and accuracy",
+        "Automate model lifecycle management",
+        "Reduce model degradation risks",
+        "Improve operational efficiency"
+      ],
+      marketPrice: "$800-1200/month",
+      savings: "Save up to $700/month"
     }
   ];
 

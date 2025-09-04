@@ -1,6 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
-import Head from 'next/head';
+import { Link } from 'react-router-dom';
 
 export default function Solutions() {
   const solutions = [
@@ -121,6 +120,156 @@ export default function Solutions() {
           description: "AI-powered legal document analysis and contract review",
           price: "$599/month",
           features: ["Contract analysis", "Compliance monitoring", "Risk assessment", "Legal research"]
+        }
+      ]
+    },
+    {
+      category: "AI-Powered Solutions",
+      description: "Cutting-edge artificial intelligence solutions for modern businesses",
+      solutions: [
+        {
+          name: "AI Customer Experience Platform",
+          description: "Comprehensive AI platform for personalized customer experiences across all touchpoints",
+          price: "$1,299/month",
+          features: ["Personalized recommendations", "Predictive analytics", "Omnichannel support", "Real-time insights"]
+        },
+        {
+          name: "AI Process Automation Suite",
+          description: "End-to-end business process automation with AI-powered decision making",
+          price: "$899/month",
+          features: ["Workflow automation", "Document processing", "Decision automation", "Performance monitoring"]
+        },
+        {
+          name: "AI Data Intelligence Hub",
+          description: "Advanced data analytics and intelligence platform with AI-powered insights",
+          price: "$1,499/month",
+          features: ["Data integration", "Predictive modeling", "Real-time analytics", "Automated reporting"]
+        },
+        {
+          name: "AI Security & Compliance",
+          description: "AI-powered security monitoring and compliance management system",
+          price: "$1,199/month",
+          features: ["Threat detection", "Compliance monitoring", "Risk assessment", "Automated responses"]
+        }
+      ]
+    },
+    {
+      category: "Cloud & Infrastructure Solutions",
+      description: "Scalable cloud and infrastructure solutions for any business size",
+      solutions: [
+        {
+          name: "Multi-Cloud Management Platform",
+          description: "Unified management platform for AWS, Azure, and Google Cloud environments",
+          price: "$1,799/month",
+          features: ["Multi-cloud orchestration", "Cost optimization", "Security management", "Performance monitoring"]
+        },
+        {
+          name: "Hybrid Cloud Infrastructure",
+          description: "Seamless integration between on-premises and cloud environments",
+          price: "$2,299/month",
+          features: ["Hybrid connectivity", "Data synchronization", "Workload portability", "Unified management"]
+        },
+        {
+          name: "Edge Computing Solutions",
+          description: "Edge computing infrastructure for low-latency applications and IoT",
+          price: "$1,599/month",
+          features: ["Edge deployment", "IoT integration", "Real-time processing", "Distributed management"]
+        },
+        {
+          name: "Container & Microservices Platform",
+          description: "Complete container orchestration and microservices management platform",
+          price: "$1,399/month",
+          features: ["Kubernetes management", "Service mesh", "CI/CD pipelines", "Monitoring & logging"]
+        }
+      ]
+    },
+    {
+      category: "Digital Transformation Solutions",
+      description: "Complete digital transformation services for modern businesses",
+      solutions: [
+        {
+          name: "Legacy System Modernization",
+          description: "Modernize legacy systems with cloud-native architectures and microservices",
+          price: "$4,999/project",
+          features: ["System assessment", "Architecture redesign", "Data migration", "Performance optimization"]
+        },
+        {
+          name: "API-First Integration Platform",
+          description: "Comprehensive API management and integration platform for digital ecosystems",
+          price: "$1,299/month",
+          features: ["API gateway", "Integration services", "Developer portal", "Analytics & monitoring"]
+        },
+        {
+          name: "Mobile-First Solutions",
+          description: "Cross-platform mobile applications with native performance and cloud backend",
+          price: "$2,999/project",
+          features: ["Native mobile apps", "Cross-platform development", "Cloud backend", "Push notifications"]
+        },
+        {
+          name: "E-commerce & Digital Commerce",
+          description: "Complete e-commerce platform with AI-powered personalization and analytics",
+          price: "$1,899/month",
+          features: ["Online storefront", "Payment processing", "Inventory management", "Customer analytics"]
+        }
+      ]
+    },
+    {
+      category: "Security & Compliance Solutions",
+      description: "Comprehensive security and compliance solutions for enterprise protection",
+      solutions: [
+        {
+          name: "Zero Trust Security Architecture",
+          description: "Complete zero trust security implementation with identity and access management",
+          price: "$1,599/month",
+          features: ["Identity verification", "Access controls", "Network segmentation", "Continuous monitoring"]
+        },
+        {
+          name: "Data Privacy & GDPR Compliance",
+          description: "Comprehensive data privacy management and GDPR compliance platform",
+          price: "$1,299/month",
+          features: ["Data mapping", "Consent management", "Privacy controls", "Compliance reporting"]
+        },
+        {
+          name: "Advanced Threat Protection",
+          description: "AI-powered threat detection and response platform with 24/7 monitoring",
+          price: "$1,799/month",
+          features: ["Threat hunting", "Incident response", "Forensic analysis", "Threat intelligence"]
+        },
+        {
+          name: "Security Operations Center (SOC)",
+          description: "Managed security operations center with expert analysts and advanced tools",
+          price: "$2,499/month",
+          features: ["24/7 monitoring", "Expert analysts", "Incident response", "Threat hunting"]
+        }
+      ]
+    },
+    {
+      category: "Industry-Specific Solutions",
+      description: "Specialized solutions tailored for specific industries and use cases",
+      solutions: [
+        {
+          name: "Healthcare IT Solutions",
+          description: "HIPAA-compliant healthcare technology solutions with patient data management",
+          price: "$2,199/month",
+          features: ["EHR integration", "Patient portals", "Telemedicine", "Compliance management"]
+        },
+        {
+          name: "Financial Services Platform",
+          description: "Secure financial services platform with fraud detection and compliance",
+          price: "$2,999/month",
+          features: ["Payment processing", "Fraud detection", "Regulatory compliance", "Risk management"]
+        },
+        {
+          name: "Manufacturing IoT Solutions",
+          description: "Industrial IoT platform for smart manufacturing and predictive maintenance",
+          price: "$1,899/month",
+          features: ["Sensor integration", "Predictive maintenance", "Quality control", "Supply chain optimization"]
+        },
+        {
+          name: "Retail & E-commerce Solutions",
+          description: "Complete retail technology stack with omnichannel capabilities",
+          price: "$1,599/month",
+          features: ["Inventory management", "Customer analytics", "Omnichannel retail", "Personalization"]
         }
       ]
     }

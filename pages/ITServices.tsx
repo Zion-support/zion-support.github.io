@@ -1,6 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
-import Head from 'next/head';
+import { Link } from 'react-router-dom';
 
 export default function ITServices() {
   const itServices = [
@@ -371,6 +370,259 @@ export default function ITServices() {
       ],
       marketPrice: "$1,000-1,500/month",
       savings: "Save up to $900/month"
+    },
+    {
+      name: "Cloud Infrastructure as a Service (IaaS)",
+      description: "Complete cloud infrastructure management with automated provisioning, scaling, and optimization across AWS, Azure, and Google Cloud platforms.",
+      price: "$1,899/month",
+      features: [
+        "Multi-cloud infrastructure management",
+        "Automated resource provisioning",
+        "Auto-scaling and load balancing",
+        "Cost optimization and monitoring",
+        "Disaster recovery and backup",
+        "Security and compliance management",
+        "Performance monitoring and alerting",
+        "24/7 infrastructure support"
+      ],
+      benefits: [
+        "Reduce infrastructure costs by 50%",
+        "Improve scalability and flexibility",
+        "Ensure 99.9% uptime",
+        "Simplify cloud management"
+      ],
+      marketPrice: "$3,000-5,000/month",
+      savings: "Save up to $3,100/month"
+    },
+    {
+      name: "Advanced DevOps & CI/CD Pipeline",
+      description: "Comprehensive DevOps services with automated CI/CD pipelines, container orchestration, and infrastructure automation for modern software delivery.",
+      price: "$2,199/month",
+      features: [
+        "Automated CI/CD pipeline setup",
+        "Container orchestration with Kubernetes",
+        "Infrastructure as Code (IaC)",
+        "Automated testing and quality gates",
+        "Deployment automation and rollback",
+        "Monitoring and logging integration",
+        "Security scanning and compliance",
+        "Team training and best practices"
+      ],
+      benefits: [
+        "Reduce deployment time by 80%",
+        "Improve code quality and reliability",
+        "Enable continuous delivery",
+        "Minimize deployment risks"
+      ],
+      marketPrice: "$3,500-6,000/month",
+      savings: "Save up to $3,800/month"
+    },
+    {
+      name: "Enterprise Database Management",
+      description: "Comprehensive database services including design, optimization, migration, and maintenance for SQL and NoSQL databases.",
+      price: "$1,499/month",
+      features: [
+        "Database design and architecture",
+        "Performance tuning and optimization",
+        "Data migration and synchronization",
+        "Backup and recovery strategies",
+        "Security and access management",
+        "Monitoring and alerting",
+        "Capacity planning and scaling",
+        "24/7 database support"
+      ],
+      benefits: [
+        "Improve database performance by 60%",
+        "Ensure data integrity and security",
+        "Reduce downtime to near zero",
+        "Optimize storage and costs"
+      ],
+      marketPrice: "$2,500-4,000/month",
+      savings: "Save up to $2,500/month"
+    },
+    {
+      name: "Network Security & Firewall Management",
+      description: "Advanced network security services with firewall configuration, intrusion detection, and threat prevention for enterprise networks.",
+      price: "$1,299/month",
+      features: [
+        "Firewall design and configuration",
+        "Intrusion detection and prevention",
+        "VPN setup and management",
+        "Network segmentation and isolation",
+        "Threat monitoring and analysis",
+        "Security policy implementation",
+        "Compliance and audit support",
+        "Incident response and forensics"
+      ],
+      benefits: [
+        "Protect against 99.9% of cyber threats",
+        "Ensure network compliance",
+        "Reduce security incidents by 90%",
+        "Improve network performance"
+      ],
+      marketPrice: "$2,000-3,500/month",
+      savings: "Save up to $2,200/month"
+    },
+    {
+      name: "IT Service Desk & Support",
+      description: "Comprehensive IT support services with helpdesk management, remote assistance, and proactive maintenance for all IT needs.",
+      price: "$899/month",
+      features: [
+        "24/7 IT helpdesk support",
+        "Remote desktop assistance",
+        "Hardware and software support",
+        "User account management",
+        "Printer and peripheral support",
+        "Mobile device management",
+        "Software installation and updates",
+        "IT asset management"
+      ],
+      benefits: [
+        "Reduce IT support costs by 40%",
+        "Improve user productivity",
+        "Minimize downtime and disruptions",
+        "Centralize IT support operations"
+      ],
+      marketPrice: "$1,500-2,500/month",
+      savings: "Save up to $1,600/month"
+    },
+    {
+      name: "Cloud Migration & Modernization",
+      description: "Complete cloud migration services with application modernization, data migration, and optimization for legacy systems.",
+      price: "$3,999/project",
+      features: [
+        "Application assessment and planning",
+        "Legacy system modernization",
+        "Data migration and synchronization",
+        "Cloud-native architecture design",
+        "Performance optimization",
+        "Security and compliance migration",
+        "Training and documentation",
+        "Post-migration support"
+      ],
+      benefits: [
+        "Reduce operational costs by 45%",
+        "Improve system performance and reliability",
+        "Enable modern cloud capabilities",
+        "Future-proof your technology stack"
+      ],
+      marketPrice: "$8,000-15,000/project",
+      savings: "Save up to $11,000/project"
+    },
+    {
+      name: "IT Compliance & Audit Services",
+      description: "Comprehensive compliance services for SOX, HIPAA, GDPR, and other regulatory requirements with audit preparation and ongoing monitoring.",
+      price: "$1,799/month",
+      features: [
+        "Compliance gap analysis",
+        "Policy and procedure development",
+        "Risk assessment and mitigation",
+        "Audit preparation and support",
+        "Documentation and reporting",
+        "Training and awareness programs",
+        "Ongoing compliance monitoring",
+        "Regulatory change management"
+      ],
+      benefits: [
+        "Ensure regulatory compliance",
+        "Reduce audit findings by 85%",
+        "Minimize compliance risks",
+        "Streamline audit processes"
+      ],
+      marketPrice: "$3,000-5,000/month",
+      savings: "Save up to $3,200/month"
+    },
+    {
+      name: "Advanced Backup & Disaster Recovery",
+      description: "Comprehensive backup and disaster recovery solutions with automated backups, testing, and rapid recovery capabilities.",
+      price: "$1,199/month",
+      features: [
+        "Automated backup scheduling",
+        "Multi-tier backup strategies",
+        "Disaster recovery planning",
+        "Recovery time objective (RTO) optimization",
+        "Backup testing and validation",
+        "Off-site storage management",
+        "Recovery point objective (RPO) monitoring",
+        "Business continuity planning"
+      ],
+      benefits: [
+        "Ensure data protection and recovery",
+        "Minimize business disruption",
+        "Meet compliance requirements",
+        "Reduce recovery time to minutes"
+      ],
+      marketPrice: "$2,000-3,500/month",
+      savings: "Save up to $2,300/month"
+    },
+    {
+      name: "IT Asset Management & Lifecycle",
+      description: "Complete IT asset management services including inventory, lifecycle management, and optimization for hardware and software assets.",
+      price: "$699/month",
+      features: [
+        "IT asset inventory and tracking",
+        "Software license management",
+        "Hardware lifecycle planning",
+        "Asset optimization and consolidation",
+        "Vendor management and negotiations",
+        "Compliance and audit support",
+        "Cost analysis and reporting",
+        "Asset disposal and recycling"
+      ],
+      benefits: [
+        "Reduce IT costs by 30%",
+        "Improve asset utilization",
+        "Ensure license compliance",
+        "Optimize IT investments"
+      ],
+      marketPrice: "$1,200-2,000/month",
+      savings: "Save up to $1,300/month"
+    },
+    {
+      name: "Advanced Monitoring & Analytics",
+      description: "Comprehensive IT monitoring platform with real-time analytics, predictive insights, and automated alerting for all IT systems.",
+      price: "$1,399/month",
+      features: [
+        "Real-time system monitoring",
+        "Performance analytics and reporting",
+        "Predictive failure analysis",
+        "Custom dashboard creation",
+        "Automated alerting and escalation",
+        "Capacity planning and forecasting",
+        "Trend analysis and insights",
+        "Integration with existing tools"
+      ],
+      benefits: [
+        "Prevent 95% of system failures",
+        "Improve system performance",
+        "Reduce downtime significantly",
+        "Enable proactive maintenance"
+      ],
+      marketPrice: "$2,200-3,800/month",
+      savings: "Save up to $2,400/month"
+    },
+    {
+      name: "IT Consulting & Strategy",
+      description: "Strategic IT consulting services including technology roadmaps, architecture design, and digital transformation planning.",
+      price: "$2,499/month",
+      features: [
+        "IT strategy and roadmap development",
+        "Technology architecture design",
+        "Digital transformation planning",
+        "Vendor evaluation and selection",
+        "Technology assessment and recommendations",
+        "ROI analysis and business case development",
+        "Change management support",
+        "Ongoing strategic guidance"
+      ],
+      benefits: [
+        "Align IT with business objectives",
+        "Optimize technology investments",
+        "Accelerate digital transformation",
+        "Improve competitive advantage"
+      ],
+      marketPrice: "$4,000-7,000/month",
+      savings: "Save up to $4,500/month"
     }
   ];
 
