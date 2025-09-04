@@ -42,15 +42,16 @@ class ApiDocumentationGenerator {
       info: {
         title: 'Zion Tech Group API',
         version: '1.0.0',
-        description: 'API documentation for Zion Tech Group services'
+        description: 'API documentation for Zion Tech Group services',
       },
       servers: [{
-        url: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api',
-        description: 'Development server'
-      }],
+          url: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api',
+          description: 'Development server',
+        }
+      ],
       paths: this.generatePaths(),
       components: {
-        schemas: this.generateSchemas()
+        schemas: this.generateSchemas(),
       }
     };
     return spec;
@@ -69,21 +70,22 @@ class ApiDocumentationGenerator {
           in: param.location,
           required: param.required,
           schema: { type: param.type },
-          description: param.description
+          description: param.description,
         })),
         responses: endpoint.responses?.reduce((acc, response) => {
           acc[response.status] = {
             description: response.description,
             content: response.schema ? {
               'application/json': {
-                schema: response.schema
+                schema: response.schema,
               }
-            } : undefined
+            } : undefined,
           };
           return acc;
-        }, {})
+        }, {} as any),
       };
     });
+
     return paths;
   }
 
@@ -97,19 +99,19 @@ class ApiDocumentationGenerator {
             properties: {
               message: { type: 'string' },
               statusCode: { type: 'number' },
-              timestamp: { type: 'string', format: 'date-time' }
+              timestamp: { type: 'string', format: 'date-time' },
             }
           }
-        }
+        },
       },
       Success: {
         type: 'object',
         properties: {
           success: { type: 'boolean' },
           data: { type: 'object' },
-          message: { type: 'string' }
+          message: { type: 'string' },
         }
-      }
+      },
     };
   }
 
@@ -143,9 +145,9 @@ class ApiDocumentationGenerator {
         markdown += '### Examples\n\n';
         endpoint.examples.forEach(example => {
           markdown += `#### ${example.name}\n\n`;
-          markdown += `**Request:**\n`;
+          markdown += `**Request: **\n`;
           markdown += `\`\`\`json\n${JSON.stringify(example.request, null, 2)}\n\`\`\`\n\n`;
-          markdown += `**Response:**\n`;
+          markdown += `**Response: **\n`;
           markdown += `\`\`\`json\n${JSON.stringify(example.response, null, 2)}\n\`\`\`\n\n`;
         });
       }
@@ -159,7 +161,7 @@ class ApiDocumentationGenerator {
 
 export const apiDocGenerator = new ApiDocumentationGenerator();
 
-// API Documentation endpoint
+// API Documentation endpoint;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const format = req.query.format as string || 'json';
@@ -173,6 +175,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
   } else {
     res.setHeader('Allow', ['GET']);
-    res.status(405).json({ error: 'Method not allowed' });
+    res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 }
