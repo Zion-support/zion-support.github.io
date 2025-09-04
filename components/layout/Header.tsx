@@ -77,7 +77,7 @@ const Header: React.FC = () => {
                 </Link>
               ))}
               <div className="pt-4">
-                <Link href="/contact">
+                <Link href="/contact" className="w-full">
                   <Button className="w-full">Contact</Button>
                 </Link>
               </div>

@@ -1,26 +1,11 @@
 {
-  "timestamp": "2025-09-04T01:43:11.173Z",
-  "fixes": [
-    "components/ContactForm.tsx: Remove semicolon after closing brace (1 fixes)",
-    "components/ContactForm.tsx: Remove duplicate closing braces (1 fixes)",
-    "components/ErrorBoundary.tsx: Remove semicolon after closing brace (1 fixes)",
-    "components/ErrorBoundary.tsx: Remove duplicate closing braces (2 fixes)",
-    "components/PerformanceMonitor.tsx: Remove semicolon after closing brace (1 fixes)",
-    "components/PerformanceMonitor.tsx: Remove duplicate closing braces (4 fixes)",
-    "components/ThemeToggle.tsx: Remove duplicate closing braces (2 fixes)",
-    "pages/_app.tsx: Remove duplicate closing braces (1 fixes)",
-    "pages/blog.tsx: Remove semicolon after closing brace (1 fixes)",
-    "pages/careers.tsx: Remove semicolon after closing brace (1 fixes)",
-    "pages/green-it.tsx: Remove semicolon after closing brace (1 fixes)",
-    "pages/index.tsx: Remove semicolon after closing brace (1 fixes)",
-    "pages/index.tsx: Remove duplicate closing braces (1 fixes)",
-    "pages/news.tsx: Remove semicolon after closing brace (1 fixes)",
-    "pages/partners.tsx: Remove semicolon after closing brace (1 fixes)",
-    "pages/request-quote.tsx: Remove semicolon after closing brace (3 fixes)",
-    "pages/research-development.tsx: Remove semicolon after closing brace (1 fixes)",
-    "pages/solutions.tsx: Remove semicolon after closing brace (1 fixes)"
-  ],
+<<<<<<< HEAD
+  "timestamp": "2025-09-03T16:53:09.087Z",
+=======
+  "timestamp": "2025-09-03T21:22:51.451Z",
+>>>>>>> origin/main
+  "fixes": [],
   "issues": [],
-  "totalFixes": 18,
+  "totalFixes": 0,
   "totalIssues": 0
 }

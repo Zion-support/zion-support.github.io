@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Cog, Search } from 'lucide-react';
+import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Mail, Code, Cog, Search, Users } from 'lucide-react';
 
 export default function AIServices() {
   const contact = {
@@ -31,8 +31,7 @@ export default function AIServices() {
         '60% decrease in support costs',
         '24/7 customer availability',
         'Improved customer satisfaction scores'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: TrendingUp,
@@ -54,8 +53,7 @@ export default function AIServices() {
         '30% reduction in inventory costs',
         'Early warning system for risks',
         'Data-driven decision making'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: FileText,
@@ -77,8 +75,7 @@ export default function AIServices() {
         '40% improvement in SEO rankings',
         'Consistent brand messaging',
         'Reduced content creation costs'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: Eye,
@@ -100,8 +97,7 @@ export default function AIServices() {
         'Automated quality control',
         'Enhanced security with biometrics',
         'Reduced manual inspection costs'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: Database,
@@ -123,8 +119,7 @@ export default function AIServices() {
         'Automated document processing',
         'Multi-language support',
         'Real-time text understanding'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: Shield,
@@ -146,8 +141,7 @@ export default function AIServices() {
         'Real-time risk assessment',
         'Reduced false positives',
         'Compliance with regulations'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: Mic,
@@ -169,8 +163,7 @@ export default function AIServices() {
         'Hands-free operation',
         'Enhanced accessibility',
         'Improved user experience'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: Zap,
@@ -192,8 +185,7 @@ export default function AIServices() {
         'Improved user engagement',
         'Higher average order value',
         'Reduced bounce rates'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: Brain,
@@ -215,8 +207,7 @@ export default function AIServices() {
         'Reduced operational costs',
         '24/7 autonomous operation',
         'Scalable AI workforce'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: Eye,
@@ -238,8 +229,7 @@ export default function AIServices() {
         'Faster diagnosis and treatment',
         'Reduced medical errors',
         'Improved patient outcomes'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: Shield,
@@ -261,8 +251,7 @@ export default function AIServices() {
         'Real-time security monitoring',
         'Automated threat response',
         'Reduced security incidents'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: Cog,
@@ -284,8 +273,7 @@ export default function AIServices() {
         '30% improvement in efficiency',
         'Predictive maintenance savings',
         'Enhanced product quality'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: TrendingUp,
@@ -307,8 +295,7 @@ export default function AIServices() {
         '20% energy savings',
         'Improved public safety',
         'Enhanced citizen services'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: Database,
@@ -330,8 +317,7 @@ export default function AIServices() {
         'Automated optimization',
         'Reduced operational costs',
         'Better compliance tracking'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: FileText,
@@ -353,8 +339,7 @@ export default function AIServices() {
         'Improved accuracy in legal analysis',
         'Automated compliance monitoring',
         'Reduced legal costs'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: Search,
@@ -376,8 +361,7 @@ export default function AIServices() {
         'Enhanced user experience',
         'Increased engagement',
         'Better content discovery'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: Brain,
@@ -399,8 +383,7 @@ export default function AIServices() {
         'Automated risk management',
         '24/7 market monitoring',
         'Data-driven trading decisions'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: Mic,
@@ -422,8 +405,7 @@ export default function AIServices() {
         'Enhanced sales performance',
         'Better call quality',
         'Automated coaching insights'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: Eye,
@@ -445,8 +427,7 @@ export default function AIServices() {
         'Real-time processing capabilities',
         'Automated quality control',
         'Enhanced security monitoring'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: Database,
@@ -468,8 +449,7 @@ export default function AIServices() {
         'Automated data quality assurance',
         'Improved data accuracy',
         'Reduced manual data handling'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: TrendingUp,
@@ -491,8 +471,7 @@ export default function AIServices() {
         'Automated forecasting processes',
         'Improved business planning',
         'Risk mitigation strategies'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: Shield,
@@ -514,8 +493,7 @@ export default function AIServices() {
         'Automated security response',
         'Reduced false positives',
         'Enhanced security posture'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: Mic,
@@ -537,8 +515,7 @@ export default function AIServices() {
         'Natural human-like interactions',
         'Improved customer satisfaction',
         'Reduced support costs'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: FileText,
@@ -560,8 +537,7 @@ export default function AIServices() {
         'Automated document processing',
         'Improved compliance tracking',
         'Reduced manual document handling'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: Search,
@@ -583,8 +559,7 @@ export default function AIServices() {
         'Personalized user experience',
         'Increased content discovery',
         'Better user engagement'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: Cog,
@@ -606,8 +581,7 @@ export default function AIServices() {
         'Automated optimization recommendations',
         'Reduced operational costs',
         'Better resource utilization'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: Brain,
@@ -629,8 +603,7 @@ export default function AIServices() {
         'Reduced diagnostic errors',
         'Faster treatment decisions',
         'Improved patient outcomes'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: Shield,
@@ -652,8 +625,7 @@ export default function AIServices() {
         'Automated security response',
         'Reduced false positives',
         'Enhanced security posture'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: TrendingUp,
@@ -675,8 +647,7 @@ export default function AIServices() {
         'Reduced quality control costs',
         'Improved product quality',
         'Automated quality processes'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: Eye,
@@ -698,8 +669,7 @@ export default function AIServices() {
         '25% improvement in energy efficiency',
         'Enhanced public safety',
         'Better citizen services'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: Database,
@@ -721,8 +691,7 @@ export default function AIServices() {
         'Automated process optimization',
         'Reduced operational costs',
         'Better compliance management'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: Mic,
@@ -744,8 +713,7 @@ export default function AIServices() {
         'Enhanced agent performance',
         'Automated quality monitoring',
         'Better sales conversion rates'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: Brain,
@@ -767,8 +735,7 @@ export default function AIServices() {
         'Reduced development costs',
         'Improved success rates',
         'Better patient outcomes'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: Eye,
@@ -790,8 +757,7 @@ export default function AIServices() {
         '30% reduction in resource usage',
         'Improved crop quality',
         'Automated farm management'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: Shield,
@@ -813,8 +779,7 @@ export default function AIServices() {
         'Reduced financial losses',
         'Automated risk monitoring',
         'Better regulatory compliance'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: TrendingUp,
@@ -836,8 +801,7 @@ export default function AIServices() {
         'Reduced energy costs',
         'Automated trading strategies',
         'Better risk management'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: Brain,
@@ -859,11 +823,200 @@ export default function AIServices() {
         'Improved accuracy in legal analysis',
         'Automated compliance checking',
         'Better risk identification'
-      ],
-      category: 'General'
+      ]
     },
     {
       icon: Brain,
+      name: 'AI-Powered Drug Discovery Platform',
+      description: 'Advanced AI platform for pharmaceutical research, drug discovery, and molecular analysis using deep learning.',
+      features: [
+        'Molecular structure prediction and analysis',
+        'Drug-target interaction modeling',
+        'Side effect prediction and assessment',
+        'Clinical trial optimization',
+        'Biomarker discovery and validation',
+        'Regulatory compliance and documentation'
+      ],
+      pricing: '$50,000 – $500,000 project',
+      perUnit: 'Custom pricing based on research scope',
+      timeline: '12–24 weeks',
+      benefits: [
+        '60% faster drug discovery process',
+        'Reduced research and development costs',
+        'Improved success rates in clinical trials',
+        'Enhanced drug safety profiles'      ]
+    },
+    {
+      icon: Eye,
+      name: 'AI-Powered Medical Imaging Analysis',
+      description: 'Advanced computer vision for medical imaging diagnosis, radiology, and pathology analysis.',
+      features: [
+        'Radiology image analysis and diagnosis',
+        'Pathology slide examination',
+        'Tumor detection and classification',
+        'Medical image enhancement and processing',
+        'Diagnostic report generation',
+        'Integration with medical systems'
+      ],
+      pricing: '$25,000 – $150,000 setup',
+      perUnit: '$0.50 – $5.00 per image',
+      timeline: '8–16 weeks',
+      benefits: [
+        '95% accuracy in medical diagnosis',
+        'Faster diagnostic turnaround times',
+        'Reduced human error in analysis',
+        'Improved patient outcomes'      ]
+    },
+    {
+      icon: TrendingUp,
+      name: 'AI-Powered Financial Trading Algorithm',
+      description: 'Sophisticated AI trading algorithms for automated investment strategies and risk management.',
+      features: [
+        'Algorithmic trading strategy development',
+        'Real-time market analysis and prediction',
+        'Risk assessment and portfolio optimization',
+        'High-frequency trading capabilities',
+        'Backtesting and performance analysis',
+        'Regulatory compliance and reporting'
+      ],
+      pricing: '$100,000 – $1,000,000 setup',
+      perUnit: 'Performance-based fees (10-20% of profits)',
+      timeline: '16–32 weeks',
+      benefits: [
+        'Superior risk-adjusted returns',
+        '24/7 automated trading',
+        'Reduced emotional trading decisions',
+        'Advanced market analysis capabilities'
+      ]
+    },
+    {
+      icon: Shield,
+      name: 'AI-Powered Cybersecurity Threat Intelligence',
+      description: 'Advanced AI system for real-time threat detection, analysis, and automated response.',
+      features: [
+        'Real-time threat detection and analysis',
+        'Behavioral anomaly identification',
+        'Automated incident response',
+        'Threat intelligence gathering',
+        'Vulnerability assessment and prioritization',
+        'Security orchestration and automation'
+      ],
+      pricing: '$15,000 – $100,000 setup',
+      perUnit: '$0.10 – $1.00 per event',
+      timeline: '8–16 weeks',
+      benefits: [
+        '99.9% threat detection accuracy',
+        'Real-time automated response',
+        'Reduced security incident impact',
+        'Enhanced security posture'
+      ]
+    },
+    {
+      icon: FileText,
+      name: 'AI-Powered Legal Document Analysis',
+      description: 'Advanced AI for legal document review, contract analysis, and compliance monitoring.',
+      features: [
+        'Contract analysis and risk assessment',
+        'Legal document review and summarization',
+        'Compliance monitoring and reporting',
+        'Due diligence automation',
+        'Legal research and case law analysis',
+        'Document generation and templating'
+      ],
+      pricing: '$10,000 – $75,000 setup',
+      perUnit: '$0.25 – $2.50 per document',
+      timeline: '6–12 weeks',
+      benefits: [
+        '90% reduction in document review time',
+        'Improved accuracy in legal analysis',
+        'Automated compliance monitoring',
+        'Reduced legal costs and risks'      ]
+    },
+    {
+      icon: Mic,
+      name: 'AI-Powered Real-Time Translation',
+      description: 'Advanced real-time translation system with voice recognition and natural language processing.',
+      features: [
+        'Real-time voice translation',
+        'Multi-language support (100+ languages)',
+        'Context-aware translation',
+        'Offline translation capabilities',
+        'Custom domain adaptation',
+        'Integration with communication platforms'
+      ],
+      pricing: '$5,000 – $30,000 setup',
+      perUnit: '$0.01 – $0.10 per minute',
+      timeline: '4–8 weeks',
+      benefits: [
+        '95% translation accuracy',
+        'Real-time communication support',
+        'Multi-language business expansion',
+        'Enhanced global collaboration'      ]
+    },
+    {
+      icon: Database,
+      name: 'AI-Powered Supply Chain Optimization',
+      description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics planning.',
+      features: [
+        'Demand forecasting and planning',
+        'Inventory optimization and management',
+        'Logistics route optimization',
+        'Supplier risk assessment',
+        'Supply chain visibility and tracking',
+        'Automated decision making'
+      ],
+      pricing: '$20,000 – $150,000 setup',
+      perUnit: '$0.05 – $0.50 per transaction',
+      timeline: '8–16 weeks',
+      benefits: [
+        '30% reduction in supply chain costs',
+        'Improved inventory turnover',
+        'Enhanced supply chain resilience',
+        'Optimized logistics operations'
+      ]
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Climate Change Modeling',
+      description: 'Advanced AI models for climate prediction, environmental impact assessment, and sustainability planning.',
+      features: [
+        'Climate change prediction and modeling',
+        'Environmental impact assessment',
+        'Carbon footprint analysis',
+        'Renewable energy optimization',
+        'Sustainability planning and reporting',
+        'Environmental risk assessment'
+      ],
+      pricing: '$30,000 – $200,000 project',
+      perUnit: 'Custom pricing based on scope',
+      timeline: '12–24 weeks',
+      benefits: [
+        'Accurate climate predictions',
+        'Improved sustainability planning',
+        'Reduced environmental impact',
+        'Enhanced corporate responsibility'
+      ]
+    },
+    {
+      icon: Eye,
+      name: 'AI-Powered Autonomous Vehicle Systems',
+      description: 'Advanced AI systems for autonomous vehicle navigation, safety, and fleet management.',
+      features: [
+        'Autonomous navigation and path planning',
+        'Object detection and collision avoidance',
+        'Traffic pattern analysis and optimization',
+        'Fleet management and coordination',
+        'Predictive maintenance and diagnostics',
+        'Safety monitoring and compliance'
+      ],
+      pricing: '$100,000 – $1,000,000 project',
+      perUnit: 'Custom pricing based on fleet size',
+      timeline: '24–48 weeks',
+      benefits: [
+        'Enhanced vehicle safety',
+        'Reduced transportation costs',
+        'Improved fleet efficiency',
+        'Advanced autonomous capabilities'      ]
     }
   ];
 
@@ -892,7 +1045,7 @@ export default function AIServices() {
 
       <main className="max-w-7xl mx-auto px-4 pb-24">
         <div className="grid gap-8">
-          {aiServices.filter(service => service && service.name).map((service, index) => (
+          {aiServices.map((service, index) => (
             <div key={index} className="rounded-xl border border-white/10 bg-slate-900/60 p-8 hover:border-blue-500/40 transition-colors">
               <div className="flex items-start gap-4 mb-6">
                 <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -908,7 +1061,7 @@ export default function AIServices() {
                 <div>
                   <h3 className="text-lg font-semibold mb-3 text-blue-400">Key Features</h3>
                   <ul className="space-y-2 text-slate-300">
-                    {service.features && service.features.map((feature, idx) => (
+                    {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-2">
                         <span className="text-blue-400 mt-1">•</span>
                         <span>{feature}</span>
@@ -920,7 +1073,7 @@ export default function AIServices() {
                 <div>
                   <h3 className="text-lg font-semibold mb-3 text-green-400">Business Benefits</h3>
                   <ul className="space-y-2 text-slate-300">
-                    {service.benefits && service.benefits.map((benefit, idx) => (
+                    {service.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-start gap-2">
                         <span className="text-green-400 mt-1">✓</span>
                         <span>{benefit}</span>

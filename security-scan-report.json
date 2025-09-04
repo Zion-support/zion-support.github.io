@@ -1,5 +1,7 @@
 {
-  "timestamp": "2025-09-04T02:16:02.212Z",
+  "timestamp": "2025-09-04T02:09:58.191Z",
+  "duration": "679ms",
+  "overallStatus": "unhealthy",
   "summary": {
     "passed": 3,
     "warnings": 1,

@@ -28,7 +28,7 @@ function Header(): JSX.Element {
         }}>Zion Tech Group</Link>
         
         {/* Desktop Navigation */}
-        <div className="hidden md:flex gap-4 flex-wrap items-center">
+        <div className="hidden md:flex gap-2 flex-wrap items-center">
           <Link href="/" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Home</Link>
           <Link href="/services" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>All Services</Link>
           <Link href="/services-catalog" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Catalog</Link>
