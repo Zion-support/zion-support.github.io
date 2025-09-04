@@ -1,34 +1,28 @@
-import React from 'react';
-
+import React from 'react'
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: Reac t.ReactNode;
-  variant?: 'default' | 'outline' | 'ghost' | 'link';
-  size?: 'sm' | 'md' | 'lg' | 'icon';
-  asChild?: boolean;
-  className?: string;
+  children: React.ReactNode
+  variant?: 'default' | 'outline' | 'ghost' | 'link'
+  size?: 'sm' | 'md' | 'lg' | 'icon'
+  asChild?: boolean
+  className?: string
 }
-
 export function Button(props: any) {
-  const baseClasses = 'inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible: outlin e-none focus-visible: rin g-2 focus-visible: rin g-ring focus-visible: rin g-offset-2 disabled: opacit y-50 disabled: pointe r-events-none';
-  
+  const baseClasses = 'inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none'
   const variantClasses = {
-    default: 'bg-primary text-primary-foreground hover: b g-primary/90',
+    default: 'bg-primary text-primary-foreground hover:bg-primary/90',
     outline: 'border border-input bg-background hover: b g-accent hover: tex t-accent-foreground',
     ghost: 'hover: b g-accent hover: tex t-accent-foreground',
     link: 'text-primary underline-offset-4 hover: underlin e'
-  };
-  
+  }
   const sizeClasses = {
     sm: 'h-9 px-3 rounded-md text-sm',
     md: 'h-10 px-4 py-2',
     lg: 'h-11 px-8 rounded-md',
     icon: 'h-10 w-10'
-  };
-
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
-
+  }
+  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`
   if (asChild) {
-    return <span className={classes}>{children}</span>;
+    return <span className={classes}>{children}</span>
   }
 
   return (
@@ -40,4 +34,3 @@ export function Button(props: any) {
     </button>
   );
 }
-</HTMLButtonElement>
