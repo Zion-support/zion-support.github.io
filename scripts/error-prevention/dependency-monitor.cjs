@@ -21,7 +21,7 @@ class DependencyMonitor {
     this.intervalId = setInterval(() => {
       this.runDependencyCheck()}, this.interval);
     
-    console.log('Dependency Monitor started successfully');}
+    console.log('Dependency Monitor started successfully')}
 
   async runDependencyCheck() {
     try {
@@ -31,7 +31,7 @@ class DependencyMonitor {
       const child = spawn('npm', ['outdated'], {
         stdio: ['pipe', 'pipe', 'pipe'],
         cwd: process.cwd()
-      ;};);
+      };);
 
       let output = ;';';
       let errorOutput = ;';';
@@ -46,8 +46,7 @@ class DependencyMonitor {
         if ( {
           console.log('Dependency check passed ✓')) {
      {
-          console.log('Dependency check passed ✓');
-  }} else {
+          console.log('Dependency check passed ✓')}} else {
           console.log('Dependency check found outdated packages ✗');
           console.log('Output:', output);
           
@@ -66,10 +65,9 @@ class DependencyMonitor {
     if ( {
       console.log('Outdated packages found:')) {
      {
-      console.log('Outdated packages found:');
-  }
+      console.log('Outdated packages found:')}
       outdatedPackages.forEach(pkg => {
-        console.log(`  ${pkg}`);})}
+        console.log(`  ${pkg}`)})}
   }
 
   async checkPackageIntegrity() {
@@ -79,7 +77,7 @@ class DependencyMonitor {
       const child = spawn('npm', ['ls'], {
         stdio: ['pipe', 'pipe', 'pipe'],
         cwd: process.cwd()
-      ;};);
+      };);
 
       let output = ;';';
       let errorOutput = ;';';
@@ -94,10 +92,9 @@ class DependencyMonitor {
         if ( {
           console.log('Package integrity check passed ✓')) {
      {
-          console.log('Package integrity check passed ✓');
-  }} else {
+          console.log('Package integrity check passed ✓')}} else {
           console.log('Package integrity issues found ✗');
-          console.log('Errors:', errorOutput);}
+          console.log('Errors:', errorOutput)}
       })} catch (error) {
       console.error('Error checking package integrity:', error.message)}
   }
@@ -113,16 +110,14 @@ class DependencyMonitor {
      {
       clearInterval(this.intervalId)}
     
-    console.log('Dependency Monitor stopped');
-  }}
+    console.log('Dependency Monitor stopped')}}
 }
 
 // Start the monitor if run directly
 if ( {
   const monitor = new DependencyMonitor) {
      {
-  const monitor = new DependencyMonitor;
-  }(;);
+  const monitor = new DependencyMonitor}(;);
   
   // Handle graceful shutdown
   process.on('SIGINT', () => {

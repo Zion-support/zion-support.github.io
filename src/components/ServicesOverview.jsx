@@ -249,7 +249,8 @@ const whyChooseUs = [
 
 ];
 export function ServicesOverview(props: any) {
-    return (<div className="py-20 bg-zion-blue-dark">
+    return (
+    <div className="min-h-screen bg-white">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -365,7 +366,7 @@ export function ServicesOverview(props: any) {
           </div>
         </div>
       </div>
-    </div>)}
-
-
-export default ServicesOverview;
+        </div>
+  );
+}
+export default ServicesOverview;;;

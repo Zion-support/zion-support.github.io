@@ -25,8 +25,9 @@ const [data, setData] = useState([]);
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>"
         <p className="text-zion-slate-light">Computing expensive data...</p>
       </div>
-</div>)}
-
+    </div>
+  );
+}
 export {ExpensiveComponent};
 
 export {ExpensiveComponent};
@@ -190,7 +191,9 @@ className="px-8" py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white ro
               Get Started,
             </a>
           </div>
-      </div>;,    </div>)}
+      </div>;,        </div>
+  );
+}
 ;
 export {ExpensiveComponent}
 ;
@@ -207,13 +210,12 @@ export {ExpensiveComponent}
 "
 export {ExpensiveComponent}""
 ""
-"    </div>
-  )}
+"        </div>
+  );
+}
 export default ExpensiveComponent;";
 "
 
 </SEO>
 </div>
-</div>
-</div>
-</div>
+</div>;;

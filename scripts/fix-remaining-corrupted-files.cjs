@@ -73,8 +73,7 @@ export default function IntegrationExamples() {
 {\`class ZionTechAPI {
   constructor(apiKey, baseURL = 'https://api.ziontechgroup.com/v1') {
     this.apiKey = apiKey;
-    this.baseURL = baseURL;
-  }
+    this.baseURL = baseURL}
 
   async getServices() {
     try {
@@ -86,14 +85,11 @@ export default function IntegrationExamples() {
       });
       
       if (!response.ok) {
-        throw new Error(\`HTTP error! status: \${response.status}\`);
-      }
+        throw new Error(\`HTTP error! status: \${response.status}\`)}
       
-      return await response.json();
-    } catch (error) {
+      return await response.json()} catch (error) {
       console.error('Error fetching services:', error);
-      throw error;
-    }
+      throw error}
   }
 
   async submitContact(data) {
@@ -107,11 +103,9 @@ export default function IntegrationExamples() {
         body: JSON.stringify(data)
       });
       
-      return await response.json();
-    } catch (error) {
+      return await response.json()} catch (error) {
       console.error('Error submitting contact:', error);
-      throw error;
-    }
+      throw error}
   }
 }
 
@@ -213,26 +207,20 @@ const useZionTechAPI = (apiKey) => {
       });
       
       if (!response.ok) {
-        throw new Error(\`HTTP error! status: \${response.status}\`);
-      }
+        throw new Error(\`HTTP error! status: \${response.status}\`)}
       
       const data = await response.json();
-      setServices(data.data.services);
-    } catch (err) {
-      setError(err.message);
-    } finally {
-      setLoading(false);
-    }
+      setServices(data.data.services)} catch (err) {
+      setError(err.message)} finally {
+      setLoading(false)}
   };
 
   useEffect(() => {
     if (apiKey) {
-      fetchServices();
-    }
+      fetchServices()}
   }, [apiKey]);
 
-  return { services, loading, error, refetch: fetchServices };
-};
+  return { services, loading, error, refetch: fetchServices }};
 
 export default useZionTechAPI;\`}
                   </pre>
@@ -259,9 +247,7 @@ export default useZionTechAPI;\`}
         </div>
       </div>
     </>
-  );
-}`;
-    } else if (filePath === 'pages/docs/sdk.tsx') {
+  )}`} else if (filePath === 'pages/docs/sdk.tsx') {
       content = `import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -426,8 +412,7 @@ function ServicesList() {
         </div>
       ))}
     </div>
-  );
-}\`}
+  )}\`}
                   </pre>
                 </div>
               </div>
@@ -452,9 +437,7 @@ function ServicesList() {
         </div>
       </div>
     </>
-  );
-}`;
-    } else if (filePath === 'pages/enterprise.tsx') {
+  )}`} else if (filePath === 'pages/enterprise.tsx') {
       content = `import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -549,9 +532,7 @@ export default function Enterprise() {
         </div>
       </div>
     </>
-  );
-}`;
-    } else if (filePath === 'pages/help.tsx') {
+  )}`} else if (filePath === 'pages/help.tsx') {
       content = `import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -758,9 +739,7 @@ export default function Help() {
         </div>
       </div>
     </>
-  );
-}`;
-    } else if (filePath === 'pages/login.tsx') {
+  )}`} else if (filePath === 'pages/login.tsx') {
       content = `import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -778,15 +757,13 @@ export default function Login() {
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    }))};
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle login logic here
     console.log('Login attempt:', formData);
-    alert('Login functionality will be implemented with authentication system.');
-  };
+    alert('Login functionality will be implemented with authentication system.')};
 
   return (
     <>
@@ -901,20 +878,15 @@ export default function Login() {
         </div>
       </div>
     </>
-  );
-}`;
-    }
+  )}`}
 
     if (content) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`   ✅ Fixed ${filePath}`);
-    } else {
-      console.log(`   ⚠️  No content defined for ${filePath}`);
-    }
+      console.log(`   ✅ Fixed ${filePath}`)} else {
+      console.log(`   ⚠️  No content defined for ${filePath}`)}
 
   } catch (error) {
-    console.log(`   ❌ Error fixing ${filePath}: ${error.message}`);
-  }
+    console.log(`   ❌ Error fixing ${filePath}: ${error.message}`)}
 }
 
 // Fix all corrupted files

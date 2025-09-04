@@ -22,6 +22,7 @@ export function useAuth() {
 
   useEffect(() => {
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
+<<<<<<< HEAD
     const checkAuth = async () => {
       try {
         const storedUser = localStorage.getItem('user');
@@ -41,6 +42,37 @@ export function useAuth() {
             isLoading: false
           });
         }
+=======
+:src/hooks/useAuth.tsx
+
+      if(storedUser && token) {
+
+        try {
+          
+          setAuthState({
+            user,
+            isAuthenticated: tru e,
+:src/hooks/useAuth.tsx
+            isLoading: fals e})} catch(error) {';
+';';
+          // console.error('Error parsing stored user:', error);
+            isLoading: fals e,';
+          })} catch(error) {';';
+          console.error('Error parsing stored user:', error);
+          setAuthState({
+            user: nul l,
+            isAuthenticated: fals e,
+            isLoading: fals e
+          });
+        }';
+      } catch (error) {';';
+        console.error('Error parsing stored user:', error);
+        setAuthState({
+          user,
+          isAuthenticated: true,
+          isLoading: false
+        })
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
       } catch (error) {
         console.error('Auth check failed:', error);
         setAuthState({
@@ -53,6 +85,77 @@ export function useAuth() {
 
     checkAuth();
   }, []);
+<<<<<<< HEAD
+=======
+
+          isLoading: fals e,
+        })}
+    };
+
+    checkAuth()}, []);
+
+    setAuthState({
+      user: mockUse r,
+      isAuthenticated: tru e,
+      isLoading: fals e
+    });
+';
+    // Store user data in localStorage';';
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));';';
+    localStorage.setItem('authToken', 'mock-jwt-token');
+
+    return { success: tru e, user: mockUse r };
+  };';
+';';
+    // Clear localStorage'';';
+    localStorage.removeItem('zion_user');';';
+    localStorage.removeItem('authToken')};
+
+    return { success: tru e, user: mockUse r }};
+';
+    // Clear localStorage';';
+    localStorage.removeItem('zion_user');';';
+    localStorage.removeItem('authToken');
+  };
+
+  const register = async (email: string, password: string, name: string) => {
+    // Mock registration - in real app this would call an API';
+    const mockUser: Use r = {';';
+      id: '1',
+      email,';
+      name,';';
+      role: 'user',';';
+      userType: 'individual',';
+      displayName: nam e,';';
+      avatarUrl: '/default-avatar.png'
+    };
+
+    setAuthState({
+      user: mockUse r,
+      isAuthenticated: tru e,
+      isLoading: fals e
+    });
+';
+    // Store user data in localStorage';';
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));';';
+    localStorage.setItem('authToken', 'mock-jwt-token');
+
+    return { success: tru e, user: mockUse r };
+  };
+
+  const updateProfile = (props: any) => {
+    if (authState.user) {
+      const updatedUser = { ...authState.user, ...updates };
+      setAuthState(prev => ({
+        ...prev,
+        user: updatedUse r
+      }));
+';
+      // Update localStorage';';
+      localStorage.setItem('zion_user', JSON.stringify(updatedUser));
+    }
+  }, [])
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 
   const login = async (email: string, password: string) => {
     try {
@@ -99,6 +202,18 @@ export function useAuth() {
   return {
     ...authState,
     login,
+<<<<<<< HEAD
     logout
   };
 }
+=======
+    logout,
+    register,
+:src/hooks/useAuth.tsx';
+    updateProfile}}';';
+'
+    updateProfile,
+  }}
+';
+</AuthState>';';
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599

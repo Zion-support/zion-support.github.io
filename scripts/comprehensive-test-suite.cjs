@@ -36,9 +36,8 @@ class ComprehensiveTestSuite {
   }
 
   log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString(;
-  });
-    const logMessage = `[${timestamp}] [${level}] ${message;};`;
+    const timestamp = new Date().toISOString(});
+    const logMessage = `[${timestamp}] [${level}] ${message};`;
     console.log(logMessage);
     
     const logFile = path.join(this.logDir, 'comprehensive-test-suite.log';);
@@ -52,11 +51,11 @@ class ComprehensiveTestSuite {
         stdio: 'pipe',
         timeout: timeout,
         cwd: this.projectRoot
-      ;};);
+      };);
       this.log(`✅ ${description} completed successfully`);
-      return { success: true, output: result ;}} catch (error) {
+      return { success: true, output: result }} catch (error) {
       this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
-      return { success: false, error: error.message, output: error.stdout || '' ;}}
+      return { success: false, error: error.message, output: error.stdout || '' }}
   }
 
   async runUnitTests() {
@@ -78,7 +77,7 @@ class ComprehensiveTestSuite {
         command: 'npx prettier --check .',
         critical: false
       }
-    ;];
+    ];
 
     for (const test of testCommands) {
       const result = await this.runCommand(test.command, test.name;);
@@ -111,7 +110,7 @@ class ComprehensiveTestSuite {
         command: 'npm ci --dry-run',
         critical: false
       }
-    ;];
+    ];
 
     for (const test of integrationTests) {
       const result = await this.runCommand(test.command, test.name;);
@@ -164,7 +163,7 @@ class ComprehensiveTestSuite {
         command: 'grep -r "password\\|secret\\|key" --include="*.js" --include="*.ts" --include="*.tsx" . | grep -v node_modules | head -5',
         description: 'Checking for hardcoded secrets'
       }
-    ;];
+    ];
 
     for (const test of securityTests) {
       const result = await this.runCommand(test.command, test.description;);
@@ -190,7 +189,7 @@ class ComprehensiveTestSuite {
         command: 'grep -r "aria-" --include="*.tsx" --include="*.jsx" . | grep -v node_modules | wc -l',
         description: 'Counting ARIA attributes'
       }
-    ;];
+    ];
 
     for (const check of a11yChecks) {
       const result = await this.runCommand(check.command, check.description;);
@@ -237,7 +236,7 @@ class ComprehensiveTestSuite {
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
     
     this.log(`📄 Test results saved to: ${reportPath}`);
-    return reportPath;}
+    return reportPath}
 
   async run() {
     this.log('🚀 Starting Comprehensive Test Suite...');
@@ -257,7 +256,7 @@ class ComprehensiveTestSuite {
       this.log(`📊 Summary: ${this.results.summary.passedTests}/${this.results.summary.totalTests} tests passed`);
       this.log(`📄 Full report: ${reportPath}`);
       
-      return this.results;} catch (error) {
+      return this.results} catch (error) {
       this.log(`❌ Test suite failed: ${error.message}`, 'ERROR');
       throw error}
   }
@@ -275,5 +274,4 @@ module.exports = ComprehensiveTestSuite) {
     .then(() => process.exit(0))
     .catch(() => process.exit(1))}
 
-module.exports = ComprehensiveTestSuite;
-  }
+module.exports = ComprehensiveTestSuite}

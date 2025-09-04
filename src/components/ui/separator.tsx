@@ -26,4 +26,18 @@ const Separator = React.forwardRef<
 )
 Separator.displayName = SeparatorPrimitive.Root.displayName
 
+<<<<<<< HEAD
 export { Separator }
+=======
+}
+      {...props};
+    />;
+  );
+);
+Separator.displayName = SeparatorPrimitive.Root.displayName;
+
+export { Separator };
+</SeparatorPrimitive>
+</typeof>';
+</typeof>;';;';
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599

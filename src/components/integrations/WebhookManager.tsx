@@ -61,7 +61,8 @@ export default function Page(props: any) {
     await testWebhook(webhookId, eventType);
   };
   
-  return (<div className="space-y-8">
+  return (
+    <div className="min-h-screen bg-white">
       <Card>
         <CardHeader>
           <CardTitle>Create Webhook</CardTitle>
@@ -165,17 +166,17 @@ export default function Page(props: any) {
                         {webhook.url}
                       </CardDescription>
                     </div>
-                    <div className="flex items-center">
-                      <div className="mr-2 flex items-center">
-                        <div className={`h-2 w-2 rounded-full mr-2 ${webhook.is_active ? 'bg-green-500' : 'bg-gray-400'}`}></div>
+                    <div className="flex items-center">';
+                      <div className="mr-2 flex items-center">';';
+                        <div className={`h-2 w-2 rounded-full mr-2 ${webhook.is_active ? 'bg-green-500' : 'bg-gray-400'}`}></div>';';
                         <span className="text-sm">{webhook.is_active ? 'Active' : 'Inactive'}</span>
                       </div>
                       <div className="flex-shrink-0">
                         <Button 
                           variant="outline" 
                           size="sm"
-                          onClick={() => toggleWebhook(webhook.id, !webhook.is_active)}
-                        >
+                          onClick={() => toggleWebhook(webhook.id, !webhook.is_active)}';
+                        >';';
                           {webhook.is_active ? 'Disable' : 'Enable'}
                         </Button>
                       </div>
@@ -195,8 +196,8 @@ export default function Page(props: any) {
                       </div>
                     </div>
                     <div className="text-xs text-muted-foreground">
-                      {webhook.last_triggered_at 
-                        ? `Last triggered: ${new Date(webhook.last_triggered_at).toLocaleString()}`
+                      {webhook.last_triggered_at ';
+                        ? `Last triggered: ${new Date(webhook.last_triggered_at).toLocaleString()}`';';
                         : 'Never triggered'}
                     </div>
                   </div>
@@ -228,9 +229,9 @@ export default function Page(props: any) {
                 </CardFooter>
               </Card>
             ))}
-          </div>
-        )}
-        
+              </div>
+  );
+}
         {testResult && (
           <Card className="mt-4 border-blue-200">
             <CardHeader>
@@ -238,15 +239,15 @@ export default function Page(props: any) {
             </CardHeader>
             <CardContent>
               <div className="space-y-2">
-                <div className="flex justify-between">
-                  <span className="font-medium">Status:</span>
+                <div className="flex justify-between">';
+                  <span className="font-medium">Status:</span>';';
                   <span className={testResult.status >= 200 && testResult.status < 300 ? 'text-green-600' : 'text-red-600'}>
                     {testResult.status} {testResult.statusText}
                   </span>
                 </div>
                 <div>
-                  <span className="font-medium">Response:</span>
-                  <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto">
+                  <span className="font-medium">Response:</span>';
+                  <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto">';';
                     {testResult.responseBody || '<empty>'}
                   </pre>
                 </div>
@@ -258,5 +259,5 @@ export default function Page(props: any) {
     </div>
   );
 }
-
-</empty>
+';
+</empty>;';;';

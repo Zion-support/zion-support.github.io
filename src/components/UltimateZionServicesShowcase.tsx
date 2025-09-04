@@ -1,8 +1,8 @@
-const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
-  const [selectedCategory, setSelectedCategory] = useState<any>('all');
-  const [searchTerm, setSearchTerm] = useState<any>('');
-;
-  const categories = [{ id: 'all', name: 'All Services', icon: '🌟', color: 'from - purple - 600 to - pink - 600' },;
+const UltimateZionServicesShowcase: Reac t.FC = () : JSX.Element => {;
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');';';
+  const [searchTerm, setSearchTerm] = useState<any>('');';
+';';
+  const categories = [{ id: 'all', name: 'All Services', icon: '🌟', color: 'from - purple - 600 to - pink - 600' },';';
     { id: 'quantum - computing', name: 'Quantum Computing', icon: '⚛️', color: 'from - blue - 600 to - cyan - 600' }, { id: 'blockchain - web3', name: 'Blockchain & Web3', icon: '🔗', color: 'from - green - 600 to - emerald - 600' }, { id: 'space - tech', name: 'Space Technology', icon: '🛰️', color: 'from - indigo - 600 to - purple - 600' }, { id: 'biotech-ai', name: 'Biotech & AI', icon: '🧬', color: 'from - red - 600 to - pink - 600' }, { id: 'emerging - tech', name: 'Emerging Tech', icon: '🚀', color: 'from - orange - 600 to - red - 600' }, { id: 'micro - saas', name: 'Micro SAAS', icon: '💻', color: 'from - blue - 600 to - indigo - 600' }, { id: 'it - services', name: 'IT Services', icon: '🖥️', color: 'from - gray - 600 to - slate - 600' };  ];
 ;
       service.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ||;
@@ -24,8 +24,9 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
     visible: {;      opacity: 1,;
       y: 0,;
       transition: { duration: 0.5 }}};
-;
-  return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">;
+
+  return (
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm: p x-6 lg: p x-8">;
         <div  className="max - w-7xl mx - auto text-center">;
@@ -134,9 +135,9 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
             />;
             <div  className="flex flex - wrap gap-2">;
               {categories.map((category) => (<button     key={category.id}
-                  onClick={ () => setSelectedCategory(category.id) }
-                  className={`px-4 py-2 rounded-lg border transition - all duration - 300 ${selectedCategory === category.id;
-                      ? 'bg-gradient - to - r from - purple - 600 to - pink - 600 border-purple - 400 text-white';
+                  onClick={ () => setSelectedCategory(category.id) }';
+                  className={`px-4 py-2 rounded-lg border transition - all duration - 300 ${selectedCategory === category.id';';
+                      ? 'bg-gradient - to - r from - purple - 600 to - pink - 600 border-purple - 400 text-white'';';
                       : 'bg-white / 10 border-white / 20 text-gray - 300 hover: b g-white / 20 hover: borde r-white / 40'                  }`}
                 >";
                   <span className="mr-2">{category.icon}</span>;
@@ -164,9 +165,9 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
                 <div className="text-center mb-6">`;
                   <div className={`text-6xl mb-4 group-hover: scal e-110 transition-transform duration-300`}>;
                     {service.icon}
-                  </div>";
-                  <h3 className="text-xl font-semibold text-white mb-2">{service.name}";
-                  <p className="text-sm text-purple-400 font-medium mb-2">;
+                  </div>"
+                  <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>"';
+                  <p className="text-sm text-purple-400 font-medium mb-2">';';
                     {service.category.replace('-',).toUpperCase()}
                   </p>";
                   <div className="inline-block px-3 py-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xs font-semibold">;
@@ -234,40 +235,43 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
                     <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-lg p-3">";
                       <p className="text-blue-400 text-sm font-semibold">;
                         Market Size: {service.marketSize}
-                      </p>;
-                    </div>;
-                  </div>) }
-;
-                {/* Trial and Setup */}";
-                <div className="flex justify-between items-center mb-6 text-sm">";
-                  <div className="text-center">";
-                    <div className="text-purple-400 font-semibold">🆓 Trial</div>";
-                    <div className="text-gray-300">{service.trialDays} days</div>;
-                  </div>";
-                  <div className="text-center">";
-                    <div className="text-purple-400 font-semibold">⚡ Setup</div>";
-                    <div className="text-gray-300">{service.setupTime}</div>;
-                  </div>;
-                </div>;
-                {/* Call to Action */}";
-                <div className="text-center">";
-                  <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover: fro m-purple-700 hover: t o-pink-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover: scal e-105">;
-                    🚀 Get Started Today;
-                  </button>";
-                  <p className="text-xs text-gray-400 mt-2">;
-                    Contact us for a personalized demo;
-                  </p>;
-                </div>;
-                {/* Contact Quick Access */}";
-                <div className="mt-4 text-center">";
-                  <div className="text-xs text-gray-400">";
-                    📞 <a href="tel:+13024640950" className="text-blue-400 hover: tex t-blue-300">;
-                      +1 302 464 0950;
-                    </a> |;
-                    ✉️ <a href="mailto: klebe r@ziontechgroup.com" className="text-blue - 400 hover: tex t-blue -300">                      kleber@ziontechgroup.com;
-                    </a>;
-                  </div>;
-                </div>;
+                      </p>
+                    </div>
+                      </div>
+  );
+}
+                {/* Trial and Setup */}"
+                <div className="flex justify-between items-center mb-6 text-sm">"
+                  <div className="text-center">"
+                    <div className="text-purple-400 font-semibold">🆓 Trial</div>"
+                    <div className="text-gray-300">{service.trialDays} days</div>
+                  </div>"
+                  <div className="text-center">"
+                    <div className="text-purple-400 font-semibold">⚡ Setup</div>"
+                    <div className="text-gray-300">{service.setupTime}</div>
+                  </div>
+                </div>
+
+                {/* Call to Action */}"
+                <div className="text-center">"
+                  <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover: fro m-purple-700 hover: t o-pink-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover: scal e-105">
+                    🚀 Get Started Today
+                  </button>"
+                  <p className="text-xs text-gray-400 mt-2">
+                    Contact us for a personalized demo
+                  </p>
+                </div>
+
+                {/* Contact Quick Access */}"
+                <div className="mt-4 text-center">"
+                  <div className="text-xs text-gray-400">"
+                    📞 <a href="tel:+13024640950" className="text-blue-400 hover: tex t-blue-300">
+                      +1 302 464 0950
+                    </a> |
+                    ✉️ <a href="mailto: klebe r@ziontechgroup.com" className="text-blue - 400 hover: tex t-blue -300">                      kleber@ziontechgroup.com
+                    </a>
+                  </div>
+                </div>
               </motion.div>) ) }
           </motion.div>;
         </div>;
@@ -304,15 +308,11 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
             </div>;
           </motion.div>;
         </div>;
-      </section>;
-    </div>;) };
-export default UltimateZionServicesShowcase;'"`;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</any>;
-</any>;
+      </section>;';
+    </div>;) };';';
+export default UltimateZionServicesShowcase;'"`
+
+</motion>
+</motion>
+</any>';
+</any>';';

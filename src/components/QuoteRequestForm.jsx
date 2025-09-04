@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from './ui/card';
-import {Button} from './ui/Button.jsx';
-import {Input} from './ui/input';
-import {Textarea} from './ui/textarea.jsx';
+import React, {useState} from 'react';';';
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from './ui/card';';';
+import {Button} from './ui/Button.jsx';';';
+import {Input} from './ui/input';';';
+import {Textarea} from './ui/textarea.jsx';';';
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from './ui/select';import {Checkbox} from './ui/checkbox';
 import {}
 const;const;const [formData, setFormData] = useState({}"
@@ -343,15 +343,15 @@ get back to you within 24 hours.&apos,</p>"
 &apos;&apos,
   return (&apos;&apos,&apos;&apos,"
     <Card className="&apos;max-w-4xl" mx-auto&apos;>"&apos;&apos,&apos;&apos;"
-      <CardHeader className="&apos;text-center&apos;">"&apos;&apos,&apos;&apos;"
+      <CardHeader className="&apos;text-center&apos">"&apos;&apos,&apos;&apos;"
         <CardTitle className="&apos;text-3xl" font-bold&apos;>Request a Quote&apos;</CardTitle>"
         <CardDescription>
           Tell us about your project and we&apos;ll provide you with a customized
           quote&apos;&apos,
         </CardDescription>&apos;&apos,&apos;&apos,
       </CardHeader>&apos;&apos,&apos;&apos,"
-      <CardContent className="&apos;p-6&apos;">"&apos;&apos,&apos;&apos;"
-        <form onSubmit="{handleSubmit}" className="&apos;space-y-6&apos;">"&apos;&apos;{/* comment */}&apos;&apos,&apos;&apos,"
+      <CardContent className="&apos;p-6&apos">"&apos;&apos,&apos;&apos;"
+        <form onSubmit="{handleSubmit}" className="&apos;space-y-6&apos">"&apos;&apos;{/* comment */}&apos;&apos,&apos;&apos,"
           <div className="&apos;grid" grid-cols-1 md: grid-cols-2 gap-4&apos,>"&apos,&apos,""
             <div>&apos;&apos,&apos;&apos,"
               <label className="&apos;block" text-sm font-medium text-gray-700 mb-2&apos,>,
@@ -878,7 +878,7 @@ get back to you within 24 hours.&apos,</p>"
               </Select>
             </div>
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
-          <div className="&apos;space-y-4&apos;">"&apos;&apos,&apos;&apos;"
+          <div className="&apos;space-y-4&apos">"&apos;&apos,&apos;&apos;"
             <div className="&apos;flex" items-center space-x-2&apos;>"&apos;&apos,""
               <Checkbox&apos;&apos,";"
                 id="&apos;terms&apos;&apos;""
@@ -909,7 +909,7 @@ get back to you within 24 hours.&apos,</p>"
             </div>
           </div>"
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
-          <div className="&apos;text-center&apos;">"&apos;&apos,""
+          <div className="&apos;text-center&apos">"&apos;&apos,""
             <Button&apos;&apos,&apos>
               type=&apos;submit&apos;&apos,"
               disabled={isSubmitting}&apos;&apos,";"
@@ -981,8 +981,8 @@ get back to you within 24 hours.&apos,</p>"
     </Card>) }&apos;&quot}&apos,
 &apos;&apos,&apos;&apos,"
 &apos,"
-    </Card>) }"";""
-}"";"""
+    </Card>) }"";""';
+}"";"""';';
 """"""'
 ";"
 ;"
@@ -990,23 +990,16 @@ get back to you within 24 hours.&apos,</p>"
 export default Component
 
 </Checkbox>
-</Checkbox>
 </Button>
 </div>
 </Checkbox>
-</Checkbox>
-</Checkbox>
-</Checkbox>
-</div>
 </div>
 </Textarea>
 </SelectContent>
 </div>
-</div>
 </Textarea>
 </p>
 </Textarea>
-</div>
 </div>
 </SelectTrigger>
 </div>
@@ -1016,12 +1009,8 @@ export default Component
 </div>
 </label>
 </div>
-</div>
 </p>
 </CardContent>
 </div>
-</div>
-</div>
-</div>
-</form>
-</CardContent>
+</form>';
+</CardContent>;';;';

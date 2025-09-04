@@ -14,7 +14,7 @@ const testReport = {
     passed: 0,
     failed: 0
   }
-;};
+};
 
 function runTest(name, testFn) {
   testReport.summary.total++;
@@ -26,38 +26,38 @@ function runTest(name, testFn) {
       result
     });
     testReport.summary.passed++;
-    console.log('✅ ' + name + ': PASSED');} catch (error) {
+    console.log('✅ ' + name + ': PASSED')} catch (error) {
     testReport.tests.push({
       name,
       status: 'fail',
       error: error.message
     });
     testReport.summary.failed++;
-    console.log('❌ ' + name + ': FAILED - ' + error.message);}
+    console.log('❌ ' + name + ': FAILED - ' + error.message)}
 }
 
 // Test build process
 runTest('Build Process', () => {
   execSync('npm run build', { stdio: 'pipe' });
-  return 'Build completed successfully';});
+  return 'Build completed successfully'});
 
 // Test linting
 runTest('Code Linting', () => {
   execSync('npm run lint', { stdio: 'pipe' });
-  return 'Linting passed';});
+  return 'Linting passed'});
 
 // Test TypeScript compilation
 runTest('TypeScript Compilation', () => {
   execSync('npm run type-check', { stdio: 'pipe' });
-  return 'TypeScript compilation successful';});
+  return 'TypeScript compilation successful'});
 
 // Test security audit
 runTest('Security Audit', () => {
   try {
     execSync('npm audit --audit-level=moderate', { stdio: 'pipe' });
-    return 'Security audit passed';} catch (error) {
+    return 'Security audit passed'} catch (error) {
     // Security audit might fail with vulnerabilities, but that's expected
-    return 'Security audit completed (vulnerabilities may exist)';}
+    return 'Security audit completed (vulnerabilities may exist)'}
 });
 
 // Save report

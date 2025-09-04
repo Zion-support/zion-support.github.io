@@ -422,30 +422,28 @@ export function ComprehensiveServicesShowcase(props: any) {}"});,"})"
 
 // Import the new service data
 ;
-;
-;
 const serviceCategories = []
   {}
-'
-    id: 'micro-saas','"""
-    name: 'Micro SAAS Solutions',""""
-    icon: <Rocket className="w-6 h-6"  />,'
+'';';
+    id: 'micro-saas','"""';';
+    name: 'Micro SAAS Solutions',""""';';
+    icon: <Rocket className="w-6 h-6"  />,'';';
     color: 'from-purple-600 to-pink-600',
     services: revolutionary2027AdvancedMicroSaasServices;
-  },
-  {}
-'
-    id: 'it-infrastructure','"""
-    name: 'IT Infrastructure & Cybersecurity',""""
-    icon: <Shield className="w-6 h-6"  />,'
+  },';
+  {}';';
+'';';
+    id: 'it-infrastructure','"""';';
+    name: 'IT Infrastructure & Cybersecurity',""""';';
+    icon: <Shield className="w-6 h-6"  />,'';';
     color: 'from-red-600 to-orange-600',
     services: revolutionary2027ITInfrastructureCybersecurityServices;
-  },
-  {}
-'
-    id: 'ai-innovation','"""
-    name: 'AI Innovation Services',""""
-    icon: <Brain className="w-6 h-6"  />,'
+  },';
+  {}';';
+'';';
+    id: 'ai-innovation','"""';';
+    name: 'AI Innovation Services',""""';';
+    icon: <Brain className="w-6 h-6"  />,'';';
     color: 'from-blue-600 to-cyan-600',
     services: revolutionary2027AIInnovationServices;
 }
@@ -778,8 +776,8 @@ designed to transform your business and drive exponential growth."
           </motion.div>) }
 
       </AnimatePresence>"
-    </section>""""
-  )}"""""""
+    </section>""""';
+  )}"""""""';';
 """""""'"
 "
 
@@ -788,15 +786,10 @@ export default Component
 </div>
 </CheckCircle>
 </motion>
-</motion>
-</motion>
 </ArrowRight>
 </div>
 </Star>
 </DollarSign>
-</motion>
-</motion>
-</motion>
 </motion>
 </Award>
 </Target>
@@ -804,19 +797,9 @@ export default Component
 </div>
 </motion>
 </div>
-</div>
-</div>
-</motion>
-</motion>
-</motion>
-</div>
-</div>
-</div>
-</div>
-</motion>
-</motion>
-</motion>
 </motion>
 </div>
 </motion>
 </div>
+</motion>';
+</div>;';;';

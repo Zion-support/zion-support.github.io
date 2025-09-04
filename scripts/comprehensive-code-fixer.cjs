@@ -7,7 +7,7 @@ const { execSync } = require('child_process');
 console.log('🔧 Comprehensive Code Fixer');
 console.log('============================');
 
-const fixes = [;];
+const fixes = [];
 
 // Function to fix common linting issues
 function fixLintingIssues() {
@@ -31,7 +31,7 @@ function fixLintingIssues() {
     'pages/pricing.tsx',
     'pages/services.tsx',
     'pages/terms.tsx'
-  ;];
+  ];
 
   filesToFix.forEach(filePath => {
     if () {
@@ -39,8 +39,7 @@ function fixLintingIssues() {
         let content = fs.readFileSync(filePath, 'utf8') {
     ) {
       try {
-        let content = fs.readFileSync(filePath, 'utf8';
-  });
+        let content = fs.readFileSync(filePath, 'utf8'});
         let modified = fal;s;e;
 
         // Fix unescaped entities
@@ -51,29 +50,25 @@ function fixLintingIssues() {
         if ( {
           content = content.replace(/import Image from 'next\/image') {
      {
-          content = content.replace(/import Image from 'next\/image';
-  }/, '// import Image from \'next/image\';');
+          content = content.replace(/import Image from 'next\/image'}/, '// import Image from \'next/image\';');
           modified = true}
 
         if ( {
           content = content.replace(/import { Mail, Phone, MapPin } from 'lucide-react') {
      {
-          content = content.replace(/import { Mail, Phone, MapPin } from 'lucide-react';
-  }/, 'import { Phone, MapPin } from \'lucide-react\';');
+          content = content.replace(/import { Mail, Phone, MapPin } from 'lucide-react'}/, 'import { Phone, MapPin } from \'lucide-react\';');
           modified = true}
 
         if ( {
           content = content.replace(/import { Layers, Zap, Shield, Globe } from 'lucide-react') {
      {
-          content = content.replace(/import { Layers, Zap, Shield, Globe } from 'lucide-react';
-  }/, 'import { Zap, Shield, Globe } from \'lucide-react\';');
+          content = content.replace(/import { Layers, Zap, Shield, Globe } from 'lucide-react'}/, 'import { Zap, Shield, Globe } from \'lucide-react\';');
           modified = true}
 
         if ( {
           content = content.replace(/import Link from 'next\/link') {
      {
-          content = content.replace(/import Link from 'next\/link';
-  }/, '// import Link from \'next/link\';');
+          content = content.replace(/import Link from 'next\/link'}/, '// import Link from \'next/link\';');
           modified = true}
 
         // Fix unused variables
@@ -90,8 +85,7 @@ function fixLintingIssues() {
           content = content.replace(/const PerformanceMonitor: React\.FC = \(\) => {/, 'const PerformanceMonitor: React.FC = (): JSX.Element => {')}
 
         if (modified) {
-          fs.writeFileSync(filePath, content);
-  }
+          fs.writeFileSync(filePath, content)}
           fixes.push(`Fixed ${filePath}`)}
       } catch (error) {
         console.error(`Error fixing ${filePath}:`, error.message)}
@@ -99,7 +93,7 @@ function fixLintingIssues() {
   });
 
   console.log(`✅ Fixed ${fixes.length} files`);
-  return fixes;}
+  return fixes}
 
 // Function to run ESLint with auto-fix
 function runESLintFix() {
@@ -107,9 +101,9 @@ function runESLintFix() {
   try {
     execSync('npm run lint:fix', { stdio: 'inherit' });
     console.log('✅ ESLint auto-fix completed');
-    return true;} catch (error) {
+    return true} catch (error) {
     console.log('⚠️ ESLint auto-fix had some issues, but continuing...');
-    return false;}
+    return false}
 }
 
 // Function to run TypeScript type check
@@ -118,9 +112,9 @@ function runTypeCheck() {
   try {
     execSync('npx tsc --noEmit', { stdio: 'inherit' });
     console.log('✅ TypeScript type check passed');
-    return true;} catch (error) {
+    return true} catch (error) {
     console.log('⚠️ TypeScript type check had issues');
-    return false;}
+    return false}
 }
 
 // Function to run build test
@@ -129,9 +123,9 @@ function runBuildTest() {
   try {
     execSync('npm run build', { stdio: 'inherit' });
     console.log('✅ Build test passed');
-    return true;} catch (error) {
+    return true} catch (error) {
     console.log('❌ Build test failed');
-    return false;}
+    return false}
 }
 
 // Main execution
@@ -168,7 +162,7 @@ async function main() {
         totalSteps: 4,
         successfulSteps: [eslintSuccess, typeCheckSuccess, buildSuccess].filter(Boolean).length
       }
-   ; ;};
+   };
     
     // Save report
     const reportPath = 'comprehensive-code-fixer-report.json;';
@@ -181,8 +175,7 @@ async function main() {
     if ( {
       console.log('\n🎉 Comprehensive Code Fixer completed successfully!')) {
      {
-      console.log('\n🎉 Comprehensive Code Fixer completed successfully!');
-  }
+      console.log('\n🎉 Comprehensive Code Fixer completed successfully!')}
       process.exit(0)} else {
       console.log('\n⚠️ Comprehensive Code Fixer completed with issues');
       process.exit(1)}

@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react';';';
 import {motion} from 'framer-motion';
 
 export default function Page(props: any) {
     componentDidCatch(error, errorInfo) {
-
-        this.setState({ errorInfo });
-        // Log error to console'
+';
+        this.setState({ errorInfo });';';
+        // Log error to console'';';
         // // // // // // // // console.error('Error caught by boundary:', error, errorInfo);
         // Call custom error handler if provided
         if(this.props.onError) {this.props.onError(error, errorInfo)}
@@ -30,20 +30,18 @@ export default function Page(props: any) {
             errorInfo: {componentStack: errorInfo.componentStack},
             userAgent: navigator.userAgent,
             url: window.location.href,
-            viewport: {width: window.innerWidth,
-                height: window.innerHeight};
-        // Log to console for development'
-        if(process.env.NODE_ENV === 'development') {
-
+            viewport: {width: window.innerWidth,';
+                height: window.innerHeight};';';
+        // Log to console for development'';';
+        if(process.env.NODE_ENV === 'development') {';
+';';
             console.group('Error Report');
-            // // // // // // // // 
             // // // // // // // // 
             console.groupEnd();
 
         // In production, you would send this to your error reporting service
         // Example: Sentry.captureException(error, { extra: errorReport });
 
-            // 
             // 
             console.groupEnd()}
         // In production, you would send this to your error reporting service
@@ -55,19 +53,20 @@ export default function Page(props: any) {
             error: null,
             errorInfo: null,
             errorId: null,
-            showStackTrace: false
-        })};
+            showStackTrace: false';
+        })};';';
     handleGoHome = () => {window.location.href = '/'};
     handleReportIssue = () => {
         const errorInfo = this.state.errorInfo;
         if(error && errorInfo) {
-`
-            const issueUrl = `https://github.com/ziontechgroup/zion-website/issues/new?title=Error: ${encodeURIComponent(error.message)}&body=${encodeURIComponent(issueBody)}`;
+`';
+            const issueUrl = `https://github.com/ziontechgroup/zion-website/issues/new?title=Error: ${encodeURIComponent(error.message)}&body=${encodeURIComponent(issueBody)}`;';';
             window.open(issueUrl,_blank')}
     };
                 return this.props.fallback}
             // Default error UI
-            return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center p-4">
+            return (
+    <div className="min-h-screen bg-white">
           <motion.div initial = {
 
   { opacity: 0,
@@ -81,19 +80,19 @@ export default function Page(props: any) {
             {/* Header */}"
             <div className="bg-gradient-to-r from-red-500 to-pink-500 p-6 text-white">"
               <div className="flex items-center space-x-3">"
-                <ExclamationTriangleIcon className="w-8 h-8" />
-                <div>"
-                  <h1 className="text-2xl font-bold">Something went wrong</h1>'"
-                  <p className="text-red-100">We've encountered an unexpected error</p>
-
-    // Add global error handler'
-    window.addEventListener('error', handleError);
-    window.addEventListener('unhandledrejection', (event) => {
-
+                <ExclamationTriangleIcon className="w-8 h-8" />';
+                <div>"';';
+                  <h1 className="text-2xl font-bold">Something went wrong</h1>'"';';
+                  <p className="text-red-100">We've encountered an unexpected error</p>';
+';';
+    // Add global error handler'';';
+    window.addEventListener('error', handleError);';';
+    window.addEventListener('unhandledrejection', (event) => {';
+';';
       handleError(event.reason, { componentStack: 'Promise rejection' });
-    });
-
-    return () => {window.removeEventListener('error', handleError);
+    });';
+';';
+    return () => {window.removeEventListener('error', handleError);';';
       window.removeEventListener('unhandledrejection', handleError);};
   }, []);
 
@@ -122,8 +121,8 @@ export default function Page(props: any) {
             </svg>
           </div>
 
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h1>
-          <p className="text-gray-600 mb-6">
+          <h1 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h1>';
+          <p className="text-gray-600 mb-6">';';
             We're sorry, but something unexpected happened.Please try refreshing the page.</p>
           <div className="space-y-3">
             <button
@@ -139,8 +138,8 @@ export default function Page(props: any) {
             >
               Go Back
             </button>
-          </div>
-
+          </div>';
+';';
           {process.env.NODE_ENV === 'development' && error && (
             <details className="mt-6 text-left">              <summary className="cursor-pointer text-sm text-gray-600 hover:text-gray-800">
                 Error Details(Development)
@@ -148,7 +147,9 @@ export default function Page(props: any) {
               <div className="mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto">"
                 <div className="mb-2">
                   <strong>Error:</strong> {error.toString()}
-        </div>)}
+            </div>
+  );
+}
         return this.props.children}
 }
                 </div>
@@ -156,8 +157,9 @@ export default function Page(props: any) {
                   <div>
                     <strong>Component Stack:</strong>"
                     <pre className="whitespace-pre-wrap mt-1">{errorInfo.componentStack}</pre>
-                  </div>
-                )}
+                      </div>
+  );
+}
               </div>
             </details>;
           )}
@@ -170,15 +172,14 @@ export default function Page(props: any) {
 
   return children;
 };
-;
-export {EnhancedErrorBoundary};
-export default EnhancedErrorBoundary;'"`
+;';
+export {EnhancedErrorBoundary};';';
+export default EnhancedErrorBoundary;'"`';';
 }}}}}}}}}}}}}'"`'"`
 
 export {Page};
 
 </motion>
 </div>
-</div>
-</motion>
-</div>
+</motion>';
+</div>;';;';

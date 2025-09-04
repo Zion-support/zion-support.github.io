@@ -218,9 +218,9 @@ future.""
       )
       )}
 
-    </section>
-);
-});'
+    </section>';
+);';';
+});'';';
 PerformanceOptimizedHero.displayName = 'PerformanceOptimizedHero';
 export default PerformanceOptimizedHero;
 
@@ -233,5 +233,5 @@ export {HeroStats, PerformanceOptimizedHero};
 export {HeroStats, PerformanceOptimizedHero};
 
 export {HeroStats, PerformanceOptimizedHero};
-
-</HeroStats>
+';
+</HeroStats>;';;';

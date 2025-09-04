@@ -1,19 +1,20 @@
-import React from 'react';
-const ComprehensiveServicesShowcase2030: React.FC = () => {;
-  const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
-  const [searchTerm, setSearchTerm] = useState<any>('');
+import React from 'react';';
+const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;';';
+  const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');';';
+  const [searchTerm, setSearchTerm] = useState<any>('');';';
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
 ;
   const getFilteredServices = (props: any) => {;
     let services: an y[] = [];
-    switch(activeTab) {;
-      case 'microsaas':;
-        services = innovativeMicroSaasServices2030;
-        break;
-      case 'it':;
-        services = comprehensiveITServices2030;
-        break;
-      case 'ai':;
+    switch(activeTab) {';
+';';
+      case 'microsaas':
+        services = innovativeMicroSaasServices2030;';
+        break;';';
+      case 'it':
+        services = comprehensiveITServices2030;';
+        break;';';
+      case 'ai':
         services = comprehensiveAIServices2030;
         break}
 ;
@@ -22,36 +23,39 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.tags.some(tag: string tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      )}
-;
-    if(selectedCategory !== 'all') {;
+      )}';
+';';
+    if(selectedCategory !== 'all') {
       services = services.filter(service => service.category === selectedCategory)};
 ;
     return services};
 ;
   const getCategories = (props: any) => {;
     let services: an y[] = [];
-    switch(activeTab) {;
-      case 'microsaas':;
-        services = innovativeMicroSaasServices2030;
-        break;
-      case 'it':;
-        services = comprehensiveITServices2030;
-        break;
-      case 'ai':;
+    switch(activeTab) {';
+';';
+      case 'microsaas':
+        services = innovativeMicroSaasServices2030;';
+        break;';';
+      case 'it':
+        services = comprehensiveITServices2030;';
+        break;';';
+      case 'ai':
         services = comprehensiveAIServices2030;
         break}
 ;
     return categories};
-;
-  const renderServiceCard = (props: any) => {;
-    if(activeTab === 'microsaas') {;
-      return (";
-        <div key={service.id} className="bg-white rounded-xl shadow-lg hover: shado w-xl transition-all duration-300 border border-gray-100 overflow-hidden">";
-          <div className="p-6">";
-            <div className="flex items-start justify-between mb-4">";
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}";
-              <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full">;
+
+  const renderServiceCard = (props: any) => {';
+';';
+    if(activeTab === 'microsaas') {
+
+      return ("
+        <div key={service.id} className="bg-white rounded-xl shadow-lg hover: shado w-xl transition-all duration-300 border border-gray-100 overflow-hidden">"
+          <div className="p-6">"
+            <div className="flex items-start justify-between mb-4">"
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h3>"
+              <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full">
                 {service.pricing}
               </span>;
             </div>;
@@ -145,14 +149,15 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                   Learn More;
                 </a>;              </div>;
             </div>;
-          </div>;
-        </div>;
-      )} else if(activeTab = == 'it') {;
-      return (";
-        <div key={service.id} className="bg-white rounded-xl shadow-lg hover: shado w-xl transition-all duration-300 border border-gray-100 overflow-hidden">";
-          <div className="p-6">";
-            <div className="flex items-start justify-between mb-4">";
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}"              <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-green-600 to-blue-600 rounded-full">;
+          </div>;';
+        </div>;';';
+      )} else if(activeTab = == 'it') {
+
+      return ("
+        <div key={service.id} className="bg-white rounded-xl shadow-lg hover: shado w-xl transition-all duration-300 border border-gray-100 overflow-hidden">"
+          <div className="p-6">"
+            <div className="flex items-start justify-between mb-4">"
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h3>"              <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-green-600 to-blue-600 rounded-full">
                 {service.category}
               </span>;
             </div>;
@@ -359,78 +364,80 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
         </div>;
       )}
   };
-;
-  return ();
-    <>;
-      <SEO";
-        title = "Comprehensive Services Showcase 2030 - Zion Tech Group";
-        description="Explore our cutting-edge micro SAAS, IT infrastructure, and AI services.Discover innovative solutions with real market data, competitive pricing, and proven ROI.";
-        keywords="micro SAAS, IT services, AI services, technology solutions, Zion Tech Group, 2030 services";
-        ogImage="https://ziontechgroup.com/images/services-showcase-2030.jpg";
-        ogUrl="https://ziontechgroup.com/comprehensive-services-showcase-2030";
-      />;
-"      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">;
-        {/* Hero Section */}";
-        <div className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">";
-          <div className="container mx-auto px-4 py-20">";
-            <div className="text-center max-w-4xl mx-auto">";
-              <h1 className="text-5xl md: tex t-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">;
-                Comprehensive Services Showcase 2030;
-              </h1>";
-              <p className="text-xl md: tex t-2xl text-gray-200 mb-8">;
-                Discover Zion Tech Group's cutting-edge micro SAAS, IT infrastructure, and AI services.Real solutions with proven ROI, competitive pricing, and market-leading innovation.</p>";
-              <div className="flex flex-wrap justify-center gap-4 text-sm">";
-                <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-2">;
-                  <strong>30+ Services</strong>;
-                </div>";
-                <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-2">;
-                  <strong>Proven ROI</strong>;
-                </div>";
-                <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-2">;
-                  <strong>Market Data</strong>;
-                </div>";
-                <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-2">;
-                  <strong>24/7 Support</strong>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-        {/* Contact Banner */}";
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6">";
-          <div className="container mx-auto px-4 text-center">";
-            <div className="flex flex-col md: fle x-row items-center justify-center gap-6">";
-              <div className="flex items-center gap-2">";
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">";
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"  />";
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"  />;
-                </svg>;
-                <span>kleber@ziontechgroup.com</span>;
-              </div>";
-              <div className="flex items-center gap-2">";
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">";
-                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"  />;
-                </svg>;
-                <span>+1 302 464 0950</span>;
-              </div>";
-              <div className="flex items-center gap-2">";
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">";
-                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"  />;
-                </svg>;
-                <span>364 E Main St STE 1008 Middletown DE 19709</span>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-        {/* Main Content */}";
-        <div className="container mx-auto px-4 py-12">;
-          {/* Search and Filter */}";
-          <div className="mb-8">";
-            <div className="flex flex-col md: fle x-row gap-4 mb-6">";
-              <div className="flex-1">;
-                <input";
-                  type="text";
-                  placeholder="Search services...";
+
+  return ()
+    <>
+      <SEO"
+        title = "Comprehensive Services Showcase 2030 - Zion Tech Group"
+        description="Explore our cutting-edge micro SAAS, IT infrastructure, and AI services.Discover innovative solutions with real market data, competitive pricing, and proven ROI."
+        keywords="micro SAAS, IT services, AI services, technology solutions, Zion Tech Group, 2030 services"
+        ogImage="https://ziontechgroup.com/images/services-showcase-2030.jpg"
+        ogUrl="https://ziontechgroup.com/comprehensive-services-showcase-2030"
+      />
+"      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
+        {/* Hero Section */}"
+        <div className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">"
+          <div className="container mx-auto px-4 py-20">"
+            <div className="text-center max-w-4xl mx-auto">"
+              <h1 className="text-5xl md: tex t-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                Comprehensive Services Showcase 2030
+              </h1>"';
+              <p className="text-xl md: tex t-2xl text-gray-200 mb-8">';';
+                Discover Zion Tech Group's cutting-edge micro SAAS, IT infrastructure, and AI services.Real solutions with proven ROI, competitive pricing, and market-leading innovation.</p>"
+              <div className="flex flex-wrap justify-center gap-4 text-sm">"
+                <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-2">
+                  <strong>30+ Services</strong>
+                </div>"
+                <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-2">
+                  <strong>Proven ROI</strong>
+                </div>"
+                <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-2">
+                  <strong>Market Data</strong>
+                </div>"
+                <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-2">
+                  <strong>24/7 Support</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Contact Banner */}"
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6">"
+          <div className="container mx-auto px-4 text-center">"
+            <div className="flex flex-col md: fle x-row items-center justify-center gap-6">"
+              <div className="flex items-center gap-2">"
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">"
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"  />"
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"  />
+                </svg>
+                <span>kleber@ziontechgroup.com</span>
+              </div>"
+              <div className="flex items-center gap-2">"
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">"
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"  />
+                </svg>
+                <span>+1 302 464 0950</span>
+              </div>"
+              <div className="flex items-center gap-2">"
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">"
+                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"  />
+                </svg>
+                <span>364 E Main St STE 1008 Middletown DE 19709</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Main Content */}"
+        <div className="container mx-auto px-4 py-12">
+          {/* Search and Filter */}"
+          <div className="mb-8">"
+            <div className="flex flex-col md: fle x-row gap-4 mb-6">"
+              <div className="flex-1">
+                <input"
+                  type="text"
+                  placeholder="Search services..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}";
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent";
@@ -445,35 +452,36 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                 {getCategories().map(category: unknow n (;
                   <option key={category} value={category}>{category}</option>;
                 ))}
-              </select>;
-            </div>;
-          </div>;
-          {/* Service Tabs */}";
-          <div className="mb-8">";
-            <div className="flex flex-wrap gap-2 justify-center">;
-              <button';
-                onClick={() => setActiveTab('microsaas')}`;
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeTab === 'microsaas'';
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'';
-                    : 'bg-white text-gray-700 hover: b g-gray-50 border border-gray-200'`;
+              </select>
+            </div>
+          </div>
+
+          {/* Service Tabs */}"
+          <div className="mb-8">"';
+            <div className="flex flex-wrap gap-2 justify-center">';';
+              <button'';';
+                onClick={() => setActiveTab('microsaas')}`';';
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeTab === 'microsaas''';';
+                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg''';';
+                    : 'bg-white text-gray-700 hover: b g-gray-50 border border-gray-200'`
                 }`}
-;
-                Micro SAAS Services({innovativeMicroSaasServices2030.length});
-              </button>;
-              <button';
-                onClick={() => setActiveTab('it')}`;
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeTab === 'it'';
-                    ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white shadow-lg'';
-                    : 'bg-white text-gray-700 hover: b g-gray-50 border border-gray-200'`;
+
+                Micro SAAS Services({innovativeMicroSaasServices2030.length})';
+              </button>';';
+              <button'';';
+                onClick={() => setActiveTab('it')}`';';
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeTab === 'it''';';
+                    ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white shadow-lg''';';
+                    : 'bg-white text-gray-700 hover: b g-gray-50 border border-gray-200'`
                 }`}
-;
-                IT Services({comprehensiveITServices2030.length});
-              </button>;
-              <button';
-                onClick={() => setActiveTab('ai')}`;
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeTab === 'ai'';
-                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'';
-                    : 'bg-white text-gray-700 hover: b g-gray-50 border border-gray-200'`;
+
+                IT Services({comprehensiveITServices2030.length})';
+              </button>';';
+              <button'';';
+                onClick={() => setActiveTab('ai')}`';';
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeTab === 'ai''';';
+                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg''';';
+                    : 'bg-white text-gray-700 hover: b g-gray-50 border border-gray-200'`
                 }`}
 ;
                 AI Services({comprehensiveAIServices2030.length});
@@ -486,40 +494,43 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
  {/* No Results */} {getFilteredServices().length === 0 && (;";
             <div className="text-center py-12">;";
               <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>;
-              <button;
-                onClick={() => {;
-                  setSearchTerm('');
-                  setSelectedCategory('all')}}"                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover: b g-blue-700 transition-colors";
-              >;
-                Clear Filters;
-              </button>;
-            </div>;
-          )}
-;
-          {/* Contact CTA */}";
-          <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">";
-            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>";
-            <p className="text-xl text-blue-100 mb-6">;
-              Get in touch with our experts to discuss your specific needs and discover how our services can drive your success.</p>";
-            <div className="flex flex-col md: fle x-row gap-4 justify-center">;
-              <a";
-                href="tel:+13024640950";
-                className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover: b g-gray-100 transition-colors";
-                Call Now: +1 302 464 0950;
-              </a>;
-              <a";
-                href="mailto: klebe r@ziontechgroup.com";
-                className="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover: b g-white hover: tex t-blue-600 transition-colors";
-                Email Us;
-              </a>;
+              <button;';
+                onClick={() => {;';';
+                  setSearchTerm('');';';
+                  setSelectedCategory('all')}}"                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover: b g-blue-700 transition-colors"
+              >
+                Clear Filters
+              </button>
+                </div>
+  );
+}
+          {/* Contact CTA */}"
+          <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">"
+            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>"
+            <p className="text-xl text-blue-100 mb-6">
+              Get in touch with our experts to discuss your specific needs and discover how our services can drive your success.</p>"
+            <div className="flex flex-col md: fle x-row gap-4 justify-center">
+              <a"
+                href="tel:+13024640950"
+                className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover: b g-gray-100 transition-colors"
+
+                Call Now: +1 302 464 0950
+              </a>
+              <a"
+                href="mailto: klebe r@ziontechgroup.com"
+                className="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover: b g-white hover: tex t-blue-600 transition-colors"
+
+                Email Us
+              </a>
             </div>;
           </div>;
         </div>;
       </div>;
-    </>;
-  )};
-;
-export default ComprehensiveServicesShowcase2030}}}}}'"`;
-</SEO>;
-</any>;
-</any>;
+    </>
+  )};';
+';';
+export default ComprehensiveServicesShowcase2030}}}}}'"`
+
+</SEO>
+</any>';
+</any>;';;';

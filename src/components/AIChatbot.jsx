@@ -1,22 +1,22 @@
-import React, {useState, useCallback, useEffect, useRef} from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
+import React, {useState, useCallback, useEffect, useRef} from 'react';';';
+import {motion, AnimatePresence} from 'framer-motion';';';
 import {MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles} from 'lucide-react';
 ;
 export const AIChatbot = (props: any) => {
-    const { trackEvent } = useAnalytics({enableTracking: true,
-        enableUserBehaviorTracking: true;});
-    const [isOpen, setIsOpen] = useState(false);'
-    const [isMinimized, setIsMinimized] = useState(false);''
-    const [messages, setMessages] = useState([]);'''
+    const { trackEvent } = useAnalytics({enableTracking: true,';
+        enableUserBehaviorTracking: true;});';';
+    const [isOpen, setIsOpen] = useState(false);'';';
+    const [isMinimized, setIsMinimized] = useState(false);''';';
+    const [messages, setMessages] = useState([]);'''';';
     const [inputValue, setInputValue] = useState('');
     const [isTyping, setIsTyping] = useState(false);
     const messagesEndRef = useRef(null);
     const inputRef = useRef(null);
     // Initialize chatbot;
     useEffect(() => {}
-        if(isOpen && messages.length === 0) {}
-            addBotMessage(welcomeMessage, {}
-'
+        if(isOpen && messages.length === 0) {}';
+            addBotMessage(welcomeMessage, {}';';
+'';';
                 intent: 'greeting',
                 confidence: 1.0,
                 suggestions: [
@@ -244,27 +244,27 @@ return &quot;I understand you&apos;re asking about &apos;&quot; + userInput + "&
         const userMessage = addMessage({type: &apos,user&apos,
             content: input.trim()})
 }
-        // comment
-trackChatbotInteraction(&apos;user_input&apos, {messageId: userMessage.id,
-inputLength: input.length;});'
-        // Clear input''
+        // comment';
+trackChatbotInteraction(&apos;user_input&apos, {messageId: userMessage.id,';';
+inputLength: input.length;});'';';
+        // Clear input''';';
         setInputValue('');
         setIsTyping(true);
         try {}
             // Get AI response;
             const response = await simulateAIProcessing(input) ;
-            // Add bot response;
-            addBotMessage(response, {}
-'
+            // Add bot response;';
+            addBotMessage(response, {}';';
+'';';
                 intent: 'response',
                 confidence: 0.9,
                 suggestions: [
                     "Tell me more",
                     "Get a quote",
-                    "View services",
-                    "Contact sales"                ]
-            });'
-            // Track successful interaction''
+                    "View services",';
+                    "Contact sales"                ]';';
+            });'';';
+            // Track successful interaction''';';
             trackChatbotInteraction('conversation_success', {}
 userInput: input,
             // comment
@@ -484,8 +484,9 @@ const MessageSuggestions = ({suggestions}) => (<motion.div initial = {
         <MessageCircle className="w-6 h-6"/" >""
         {messages.length > 0 && (<div className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">            {Math.min(messages.length, 9)}
 
-          </div>)}
-
+              </div>
+  );
+}
       </motion.button>
 
       {/* comment */}
@@ -523,10 +524,10 @@ const MessageSuggestions = ({suggestions}) => (<motion.div initial = {
               <div className="&quot;flex" items-center justify-between&quot;>&quot;""
                 <div className="&quot;flex" items-center gap-2&quot;>&quot;""
                   <Bot className="&quot;w-5" h-5&quot;        />&quot;"
-                  <span className="&quot;font-semibold&quot;">AI Assistant&quot;</span>"
+                  <span className="&quot;font-semibold&quot">AI Assistant&quot;</span>"
                   <div className="&quot;flex" items-center gap-1&quot;>&quot;""
                     <Sparkles className="&quot;w-3" h-3 text-yellow-300&quot;        />&quot;"
-                    <span className="&quot;text-xs&quot;">Powered by AI&quot;</span>"
+                    <span className="&quot;text-xs&quot">Powered by AI&quot;</span>"
 """"
 ", "",";"
 }} className = "{"fixed" bottom-24 right-6 z-40 w-96 bg-white dark: bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden ${isMinimized ? "h-16" : "h-[500px]"}"}"" >"""
@@ -660,12 +661,13 @@ const MessageSuggestions = ({suggestions}) => (<motion.div initial = {
                         : &apos;bg-gray-100 dark:bg-gray-700 text-gray-800 dar,k: text-gray-200&apos}"}>&apos;"
                           <p className="&quot;text-sm" whitespace-pre-wrap&quot;>{message.content}&quot;</p>
                           {/* comment */}"
-                          {message.metadata && (}<div className="&quot;mt-2" text-xs opacity-70&quot;>"                              {message.metadata.confidence && (&quot}<span className="&quot;mr-2&quot;">Confidence: {Math.round(message.metadata.confidence * 100)}%&quot;</span>)}
+                          {message.metadata && (}<div className="&quot;mt-2" text-xs opacity-70&quot;>"                              {message.metadata.confidence && (&quot}<span className="&quot;mr-2&quot">Confidence: {Math.round(message.metadata.confidence * 100)}%&quot;</span>)}
 
                               {message.metadata.intent && (}<span>Intent: {message.metadata.intent}</span>)}
 
-                            </div>)}
-
+                                </div>
+  );
+}
                           {/* comment */}"
                           {message.type === &apos;bot&apos; && message.metadata?.suggestions && enableSuggestions && (&apos}<MessageSuggestions suggestions = "{message.metadata.suggestions}/">)}"
 """"
@@ -793,11 +795,9 @@ export default Component
 </Send>
 </Loader2>
 </div>
-</div>
 </button>
 </div>
 </button>
-</div>
 </div>
 </button>
 </form>
@@ -809,27 +809,21 @@ export default Component
 </form>
 </div>
 </TypingIndicator>
-</MessageSuggestions>
 </MessageSuggestions>
 </Bot>
 </User>
 </div>
 </MessageSuggestions>
 </div>
-</div>
-</motion>
-</motion>
 </motion>
 </div>
 </motion>
-</div>
 </div>
 </TypingIndicator>
 </MessageSuggestions>
 </Bot>
 </User>
 </motion>
-</div>
 </div>
 </Bot>
 </User>
@@ -839,7 +833,6 @@ export default Component
 </X>
 </Minimize2>
 </Maximize2>
-</button>
 </button>
 </div>
 </X>
@@ -853,42 +846,24 @@ export default Component
 </Bot>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</motion>
 </motion>
 </Sparkles>
 </div>
 </Bot>
 </div>
-</div>
-</div>
-</motion>
 </motion>
 </MessageCircle>
 </motion>
-</motion>
 </div>
 </motion>
-</motion>
-</motion>
-</button>
-</button>
-</button>
 </button>
 </motion>
 </Bot>
-</motion>
-</motion>
-</motion>
 </motion>
 </Bot>
 </motion>
 </div>
 </Bot>
 </motion>
-</div>
-</motion>
+</div>';
+</motion>;';;';

@@ -82,6 +82,5 @@ import { Globe, Clock, Users, Shield, Zap, CheckCircle export const GlobalServic
       </div>
     </section>;
   )};
-
-
-export default GlobalServiceSection;
+';
+export default GlobalServiceSection;;';;';

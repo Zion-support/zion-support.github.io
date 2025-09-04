@@ -20,7 +20,7 @@ class ComprehensiveTestAutomation {
     }}
 
   ensureDirectories() {
-    const dirs = ['automation/logs', 'test-results', 'coverage';];
+    const dirs = ['automation/logs', 'test-results', 'coverage'];
     dirs.forEach(dir => {
       const dirPath = path.join(this.projectRoot, dir;);
       if () {
@@ -34,9 +34,8 @@ class ComprehensiveTestAutomation {
     })}
 
   log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString(;
-  });
-    const logMessage = `[${timestamp}] [${level}] ${message;};`;
+    const timestamp = new Date().toISOString(});
+    const logMessage = `[${timestamp}] [${level}] ${message};`;
     console.log(logMessage);
     try {
       fs.appendFileSync(this.logFile, logMessage + '\n')} catch(error) {
@@ -53,10 +52,10 @@ class ComprehensiveTestAutomation {
       });
       this.results.tests.push({ type: 'unit-tests', status: 'passed' });
       this.log('Unit tests passed');
-      return { status: 'passed' ;}} catch(error) {
+      return { status: 'passed' }} catch(error) {
       this.results.tests.push({ type: 'unit-tests', status: 'failed', error: error.message });
       this.log(`Unit tests failed: ${error.message}`, 'ERROR');
-      return { status: 'failed', error: error.message ;}}
+      return { status: 'failed', error: error.message }}
   }
 
   async runTypeChecking() {
@@ -69,10 +68,10 @@ class ComprehensiveTestAutomation {
       });
       this.results.tests.push({ type: 'type-checking', status: 'passed' });
       this.log('Type checking passed');
-      return { status: 'passed' ;}} catch(error) {
+      return { status: 'passed' }} catch(error) {
       this.results.tests.push({ type: 'type-checking', status: 'failed', error: error.message });
       this.log(`Type checking failed: ${error.message}`, 'ERROR');
-      return { status: 'failed', error: error.message ;}}
+      return { status: 'failed', error: error.message }}
   }
 
   async runLinting() {
@@ -85,10 +84,10 @@ class ComprehensiveTestAutomation {
       });
       this.results.tests.push({ type: 'linting', status: 'passed' });
       this.log('Linting passed');
-      return { status: 'passed' ;}} catch(error) {
+      return { status: 'passed' }} catch(error) {
       this.results.tests.push({ type: 'linting', status: 'failed', error: error.message });
       this.log(`Linting failed: ${error.message}`, 'ERROR');
-      return { status: 'failed', error: error.message ;}}
+      return { status: 'failed', error: error.message }}
   }
 
   async runBuildTest() {
@@ -101,15 +100,15 @@ class ComprehensiveTestAutomation {
       });
       this.results.tests.push({ type: 'build-test', status: 'passed' });
       this.log('Build test passed');
-      return { status: 'passed' ;}} catch(error) {
+      return { status: 'passed' }} catch(error) {
       this.results.tests.push({ type: 'build-test', status: 'failed', error: error.message });
       this.log(`Build test failed: ${error.message}`, 'ERROR');
-      return { status: 'failed', error: error.message ;}}
+      return { status: 'failed', error: error.message }}
   }
 
   async runPerformanceTests() {
     this.log('Running performance tests...');
-    const performanceResults = ;{;};
+    const performanceResults = ;{};
 
     try {
       // Check bundle size
@@ -118,15 +117,14 @@ class ComprehensiveTestAutomation {
         encoding: 'utf8',
         stdio: 'pipe',
         timeout: 300000
-      ;};);
+      };);
 
       // Extract bundle size information
       const bundleSizeMatch = buildOutput.match(/First Load JS shared by all\s+(\d+\.?\d*)\s+kB;/;);
       if ( {
         performanceResults.bundleSize = parseFloat(bundleSizeMatch[1])) {
      {
-        performanceResults.bundleSize = parseFloat(bundleSizeMatch[1]);
-  }
+        performanceResults.bundleSize = parseFloat(bundleSizeMatch[1])}
         this.log(`Bundle size: ${performanceResults.bundleSize} kB`)}
 
       // Check for large pages
@@ -136,22 +134,21 @@ class ComprehensiveTestAutomation {
           const parts = match.match(/(\w+)\s+\([^)]+\)\s+(\d+\.?\d*)\s+kB) {
      {
         performanceResults.pageSizes = pageSizeMatches.map(match => {
-          const parts = match.match(/(\w+)\s+\([^)]+\)\s+(\d+\.?\d*)\s+kB;
-  }/;);
-          return { page: parts[1], size: parseFloat(parts[2]) ;}})}
+          const parts = match.match(/(\w+)\s+\([^)]+\)\s+(\d+\.?\d*)\s+kB}/;);
+          return { page: parts[1], size: parseFloat(parts[2]) }})}
 
       this.results.performance = performanceResults;
       this.results.tests.push({ type: 'performance-tests', status: 'passed' });
       this.log('Performance tests completed');
-      return { status: 'passed', results: performanceResults ;}} catch(error) {
+      return { status: 'passed', results: performanceResults }} catch(error) {
       this.results.tests.push({ type: 'performance-tests', status: 'failed', error: error.message });
       this.log(`Performance tests failed: ${error.message}`, 'ERROR');
-      return { status: 'failed', error: error.message ;}}
+      return { status: 'failed', error: error.message }}
   }
 
   async runAccessibilityTests() {
     this.log('Running accessibility tests...');
-    const accessibilityResults = ;{;};
+    const accessibilityResults = ;{};
 
     try {
       // Check for alt text in images
@@ -164,13 +161,12 @@ class ComprehensiveTestAutomation {
         if () {
           const files = this.findReactFiles(dir) {
     ) {
-          const files = this.findReactFiles(dir;
-  });
+          const files = this.findReactFiles(dir});
           files.forEach(file => {
             const content = fs.readFileSync(file, 'utf8';);
-            const images = content.match(/<img[^>]*>/g) || [;];
+            const images = content.match(/<img[^>]*>/g) || [];
             totalImages += images.length
-            const altTexts = content.match(/alt\s*=\s*["'][^"']*["']/g) || [;];
+            const altTexts = content.match(/alt\s*=\s*["'][^"']*["']/g) || [];
             imagesWithAlt += altTexts.length})}
       });
 
@@ -179,16 +175,15 @@ class ComprehensiveTestAutomation {
       accessibilityResults.altTextCoverage = totalImages > 0 ? Math.round((imagesWithAlt / totalImages) * 100) : 100;
 
       // Check for heading structure
-      let headingStructure = [;];
+      let headingStructure = [];
       [pagesDir, componentsDir].forEach(dir => {
         if () {
           const files = this.findReactFiles(dir) {
     ) {
-          const files = this.findReactFiles(dir;
-  });
+          const files = this.findReactFiles(dir});
           files.forEach(file => {
             const content = fs.readFileSync(file, 'utf8';);
-            const headings = content.match(/<h[1-6][^>]*>/g) || [;];
+            const headings = content.match(/<h[1-6][^>]*>/g) || [];
             headingStructure.push(...headings)})}
       });
 
@@ -197,15 +192,15 @@ class ComprehensiveTestAutomation {
       this.results.accessibility = accessibilityResults;
       this.results.tests.push({ type: 'accessibility-tests', status: 'passed' });
       this.log(`Accessibility tests completed - Alt text coverage: ${accessibilityResults.altTextCoverage}%`);
-      return { status: 'passed', results: accessibilityResults ;}} catch(error) {
+      return { status: 'passed', results: accessibilityResults }} catch(error) {
       this.results.tests.push({ type: 'accessibility-tests', status: 'failed', error: error.message });
       this.log(`Accessibility tests failed: ${error.message}`, 'ERROR');
-      return { status: 'failed', error: error.message ;}}
+      return { status: 'failed', error: error.message }}
   }
 
   async runSecurityTests() {
     this.log('Running security tests...');
-    const securityResults = ;{;};
+    const securityResults = ;{};
 
     try {
       // Run npm audit
@@ -225,21 +220,20 @@ class ComprehensiveTestAutomation {
       if () {
         const nextConfig = fs.readFileSync(nextConfigPath, 'utf8') {
     ) {
-        const nextConfig = fs.readFileSync(nextConfigPath, 'utf8';
-  });
+        const nextConfig = fs.readFileSync(nextConfigPath, 'utf8'});
         securityResults.hasSecurityHeaders = nextConfig.includes('securityHeaders')}
 
       this.results.security = securityResults;
       this.results.tests.push({ type: 'security-tests', status: 'passed' });
       this.log('Security tests completed');
-      return { status: 'passed', results: securityResults ;}} catch(error) {
+      return { status: 'passed', results: securityResults }} catch(error) {
       this.results.tests.push({ type: 'security-tests', status: 'failed', error: error.message });
       this.log(`Security tests failed: ${error.message}`, 'ERROR');
-      return { status: 'failed', error: error.message ;}}
+      return { status: 'failed', error: error.message }}
   }
 
   findReactFiles(dir) {
-    const files = [;];
+    const files = [];
     const items = fs.readdirSync(dir;);
     
     items.forEach(item => {
@@ -253,10 +247,9 @@ class ComprehensiveTestAutomation {
     ) {
         files.push(...this.findReactFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.js')) {
         files.push(fullPath)}
-    });
-  }
+    })}
     
-    return files;}
+    return files}
 
   generateSummary() {
     const totalTests = this.results.tests.lengt;h;
@@ -292,7 +285,7 @@ class ComprehensiveTestAutomation {
       this.log(`Test report saved to ${reportFile}`);
 
       this.log('Comprehensive Test Automation completed successfully!');
-      return this.results;} catch(error) {
+      return this.results} catch(error) {
       this.log(`Comprehensive Test Automation failed: ${error.message}`, 'ERROR');
       throw error}
   }
@@ -301,8 +294,7 @@ class ComprehensiveTestAutomation {
 if ( {
   const testAutomation = new ComprehensiveTestAutomation) {
      {
-  const testAutomation = new ComprehensiveTestAutomation;
-  }(;);
+  const testAutomation = new ComprehensiveTestAutomation}(;);
   testAutomation.run().catch(console.error)}
 
 module.exports = ComprehensiveTestAutomation;

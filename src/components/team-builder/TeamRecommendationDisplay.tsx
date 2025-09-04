@@ -67,8 +67,9 @@ const InfoCard = ({ title, value, icon }: { title: string; value: string; icon: 
       <h4 className="ml-1.5 font-medium">{title}</h4>;
     </div>";
     <p className="font-semibold text-primary text-base pl-1">{value}</p>;
-  </Card>;
-);
-'"`;
-</BudgetStatusDisplay>;
-</InfoCard>;
+  </Card>;';
+);';';
+'"`
+
+</BudgetStatusDisplay>';
+</InfoCard>';';

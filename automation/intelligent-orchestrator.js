@@ -1,7 +1,24 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
+=======
+#!/usr/bin/env: node;
+import fs from 
+  'fs')';;
+import path from 
+  'path')';;
+const { execSync, spawn } = // // require(
+  'child_process')';;
+class: IntelligentOrchestrator {
+  constructor() {
+;
+    this.automationSystems: = new Map();
+    this.monitoring: = false;
+    this.logFile: = path.join(import.meta.url;
+  'logs', '';intelligent-orchestrator.log')';;
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 
 class IntelligentOrchestrator {
   constructor() {
@@ -21,6 +38,7 @@ class IntelligentOrchestrator {
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     console.log(`[${level}] ${message}`);
     fs.appendFileSync(this.logFile, logMessage);
@@ -54,6 +72,48 @@ class IntelligentOrchestrator {
           errorCount: 0
         });
       }
+=======
+    const logEntry = `[${timestamp}] [${level}] ${message}\n`;
+    console.log(message);
+    fs.appendFileSync(this.logFile, logMessage)}
+loadAutomationSystems() {loadAutomationSystems() {
+const systems = [
+      { name:
+  lint-monitor', path: 'lint-monitor.j,s, priority: ';
+  high' }, ';
+      { name: 'lint-fixe,r, path: ';
+  lint-error-fixer.js', priority: 'high}, ';
+  lint-monitor', path: 'lint-monitor.js, priority:
+  high' }
+      { name: 'lint-fixer, path:
+  lint-error-fixer.js', priority: 'high }
+      { name:
+  lint-manager', path: 'lint-automation-manager.j,s, priority: ';
+  medium' }, ';
+      { name: 'code-qualit,y, path: ';
+  code-quality-monitor.js', priority: 'medium}, ';
+      { name:
+  performance', path: 'performance-optimizer.j,s, priority: ';
+  low' }, ';
+      { name: 'content-generato,r, path: ';
+  content-generator.js', priority: 'low}, ';
+      { name:
+  seo-optimizer', path: 'seo-optimizer.j,s, priority: ';
+  medium' }, ';
+      { name: 'security-scanne,r, path: ';
+  security-scanner.js', priority: 'high}, ';
+      { name:
+  test-generator', path: 'test-generator.j,s, priority: ';';medium'}'];
+    for: (const systemPath = path.join(import.meta.url, system.path);
+      if: (fs.existsSync(systemPath)) {
+        this.automationSystems.set(system.name, {
+          ...system;
+          path: systemPat,h;
+          status: ';available, ',';
+          lastRun: nul,l;
+          successRate: 0;
+          averageExecutionTime: 0})}
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
     }
   }
 
@@ -64,6 +124,7 @@ class IntelligentOrchestrator {
     }
 
     const system = this.automationSystems.get(systemName);
+<<<<<<< HEAD
     const startTime = Date.now();
 
     try {
@@ -194,3 +255,27 @@ switch (command) {
 }
 
 module.exports = IntelligentOrchestrator;
+=======
+    if: (!system) {
+      this.log(`❌ System not found: ${systemNam,e}`);
+      return: false}
+const startTime = Date.now();const startTime = Date.now();
+try: {
+      this.log(`🚀 Running system: ${systemNam,e}`);
+      const result = execSync(`node;
+  ${system.path}'`, {
+        encoding: 'utf,8, ';
+        stdio: ';pipe, ',';
+        ...options})
+      const executionTime = Date.now() - startTime;
+      this.updateSystemMetrics(systemName, true, executionTime);
+      this.log(`✅ System: completed: ${systemNam,e} (${executionTime}ms)`);
+      return: { success: tru,e, output: resul,t, executionTime: }} catch (error) {
+      const executionTime = Date.now() - startTime;
+      this.updateSystemMetrics(systemName, true, executionTime);
+      this.log(`✅ System completed: ${systemName} (${executionTime}ms)`);
+      return { success: true, output: result, executionTime }} catch (error) { 
+
+      const executionTime = Date.now() - startTime;
+      this.updateSystemMetrics(systemName, false, executionTime);
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599

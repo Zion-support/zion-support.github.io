@@ -13,23 +13,20 @@ function fixMissingCommas(content) {
   // Pattern: 'Typical: $xxx–$xxx/month' link: 'https://...'
   fixed = fixed.replace(/(pricing: '[^']*')\s+(link:)/g, '$1, $2');
   if (changes++) {
-    changes++;
-  }
+    changes++}
 
   // Fix missing commas in array elements
   // Pattern: '...' link: 'https://...'},
   fixed = fixed.replace(/(link: '[^']*')\s*}/g, '$1}');
   if (changes++) {
-    changes++;
-  }
+    changes++}
 
   // Fix trailing commas in arrays
   fixed = fixed.replace(/,\s*]/g, ']');
   if (changes++) {
-    changes++;
-  }
+    changes++}
 
-  return { content: fixed, changes ;}}
+  return { content: fixed, changes }}
 
 function processFile(filePath) {
   try {
@@ -39,17 +36,16 @@ function processFile(filePath) {
     if ( {
       fs.writeFileSync(filePath, result.content, 'utf8')) {
      {
-      fs.writeFileSync(filePath, result.content, 'utf8');
-  }
+      fs.writeFileSync(filePath, result.content, 'utf8')}
       console.log(`✅ Fixed ${result.changes} comma issues in: ${filePath}`);
-      return result.changes;}
-    return 0;} catch (error) {
+      return result.changes}
+    return 0} catch (error) {
     console.log(`❌ Error processing ${filePath}: ${error.message}`);
-    return 0;}
+    return 0}
 }
 
 function findTsxFiles(dir) {
-  const files = [;];
+  const files = [];
   
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir;);
@@ -71,9 +67,8 @@ function findTsxFiles(dir) {
     }
   }
   
-  traverse(dir);
-  }
-  return files;}
+  traverse(dir)}
+  return files}
 
 // Main execution
 const files = findTsxFiles('.;';);

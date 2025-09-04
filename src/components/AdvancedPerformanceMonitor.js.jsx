@@ -1,31 +1,31 @@
-import React, {useState, useRef, useEffect} from 'react';
-import {Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive, X, Maximize2, Minimize2, RefreshCw, AlertTriangle, CheckCircle, Download} from 'lucide-react';
-,
-  {id: '2',
+import React, {useState, useRef, useEffect} from 'react';';';
+import {Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive, X, Maximize2, Minimize2, RefreshCw, AlertTriangle, CheckCircle, Download} from 'lucide-react';';
+,';';
+  {id: '2',';';
     name: 'API Requests',
     current: 1250000,
     capacity: 2000000,
     utilization: 62.5,
-    growth: 18.7,
-    prediction: 3200000,
-    category: 'API Load',
-    unit: 'requests/hour'},
-  {id: '3',
+    growth: 18.7,';
+    prediction: 3200000,';';
+    category: 'API Load',';';
+    unit: 'requests/hour'},';';
+  {id: '3',';';
     name: 'Data Storage',
     current: 2.8,
     capacity: 5.0,
     utilization: 56.0,
-    growth: 8.5,
-    prediction: 4.2,
-    category: 'Storage',
+    growth: 8.5,';
+    prediction: 4.2,';';
+    category: 'Storage',';';
     unit: 'TB'},
 ];
 export function AdvancedPerformanceMonitor(props: any) {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMinimized, setIsMinimized] = useState(false);
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  const [activeTab, setActiveTab] = useState('overview');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [isMinimized, setIsMinimized] = useState(false);';
+  const [isFullscreen, setIsFullscreen] = useState(false);';';
+  const [activeTab, setActiveTab] = useState('overview');';';
+  const [selectedCategory, setSelectedCategory] = useState('all');';';
   const [timeRange, setTimeRange] = useState('1h');
   const [autoRefresh, setAutoRefresh] = useState(true);
   const [showPredictions, setShowPredictions] = useState(true);
@@ -35,18 +35,18 @@ export function AdvancedPerformanceMonitor(props: any) {
   );
   const [scalabilityMetrics, setScalabilityMetrics] = useState()
     mockScalabilityMetrics
-  );
-  const [isRefreshing, setIsRefreshing] = useState(false);
-  const categories = ['
-    'all',Processor',Memory',Storage',Network',Database',Performance',
-  ];
-  const timeRanges = ['
-    { value: '15m', label: '15 Minutes' },
-    {value: '1h', label: '1 Hour'},
-    {value: '6h', label: '6 Hours'},
-    {value: '24h', label: '24 Hours'},
-  ];
-  const filteredMetrics ='
+  );';
+  const [isRefreshing, setIsRefreshing] = useState(false);';';
+  const categories = ['';';
+    'all',Processor',Memory',Storage',Network',Database',Performance',';
+  ];';';
+  const timeRanges = ['';';
+    { value: '15m', label: '15 Minutes' },';';
+    {value: '1h', label: '1 Hour'},';';
+    {value: '6h', label: '6 Hours'},';';
+    {value: '24h', label: '24 Hours'},';
+  ];';';
+  const filteredMetrics ='';';
     selectedCategory === 'all'
       ? systemMetrics
       : systemMetrics.filter(metric => metric.category === selectedCategory);
@@ -66,36 +66,36 @@ export function AdvancedPerformanceMonitor(props: any) {
   }, [autoRefresh]);
   const getStatusColor = status => {
 
-    switch(status) {
-
-      case 'critical':'
-        return 'bg-red-500 text-white';
-      case 'warning':'
-        return 'bg-yellow-500 text-white';
-      default:'
+    switch(status) {';
+';';
+      case 'critical':'';';
+        return 'bg-red-500 text-white';';';
+      case 'warning':'';';
+        return 'bg-yellow-500 text-white';';';
+      default:'';';
         return 'bg-green-500 text-white';
     }
   };
   const getSeverityColor = severity => {
 
-    switch(severity) {
-
-      case 'critical':'
-        return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300';
-      case 'high':'
-        return 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300';
-      case 'medium':'
-        return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';
-      default:'
+    switch(severity) {';
+';';
+      case 'critical':'';';
+        return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300';';';
+      case 'high':'';';
+        return 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300';';';
+      case 'medium':'';';
+        return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';';';
+      default:'';';
         return 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300';
     }
   };
   const getTrendIcon = trend => {
 
-    switch(trend) {
-
-      case 'up':
-        return <TrendingUp className="w-4 h-4 text-red-500"  />;
+    switch(trend) {';
+';';
+      case 'up':';
+        return <TrendingUp className="w-4 h-4 text-red-500"  />;';';
       case 'down':"
         return <TrendingUp className="w-4 h-4 text-green-500 rotate-180"  />;
       default:"
@@ -104,24 +104,24 @@ export function AdvancedPerformanceMonitor(props: any) {
   };
   const getCategoryIcon = category => {
 
-    switch(category) {
-
-      case 'Processor':"
-        return <Cpu className="w-5 h-5 text-blue-500"  />;
-      case 'Memory':"
-        return <HardDrive className="w-5 h-5 text-green-500"  />;
-      case 'Storage':"
-        return <HardDrive className="w-5 h-5 text-purple-500"  />;
-      case 'Network':"
-        return <Network className="w-5 h-5 text-orange-500"  />;
+    switch(category) {';
+';';
+      case 'Processor':"';
+        return <Cpu className="w-5 h-5 text-blue-500"  />;';';
+      case 'Memory':"';
+        return <HardDrive className="w-5 h-5 text-green-500"  />;';';
+      case 'Storage':"';
+        return <HardDrive className="w-5 h-5 text-purple-500"  />;';';
+      case 'Network':"';
+        return <Network className="w-5 h-5 text-orange-500"  />;';';
       case 'Database':"
         return <Database className="w-5 h-5 text-cyan-500"  />;
       default:"
         return <Activity className="w-5 h-5 text-gray-500"  />;
-    }
-  };
-  const getUtilizationColor = utilization => {if(utilization >= 80) return 'text-red-600';
-    if(utilization >= 60) return 'text-yellow-600';
+    }';
+  };';';
+  const getUtilizationColor = utilization => {if(utilization >= 80) return 'text-red-600';';';
+    if(utilization >= 60) return 'text-yellow-600';';';
     return 'text-green-600';};
   if(!isOpen) {
 
@@ -153,9 +153,9 @@ export function AdvancedPerformanceMonitor(props: any) {
         </div>
       </div>
     );
-  }
-  return ()
-    <div'
+  }';
+  return ()';';
+    <div'';';
       className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`}
       ref={containerRef}
     >
@@ -172,13 +172,13 @@ export function AdvancedPerformanceMonitor(props: any) {
             </p>
           </div>
         </div>"
-        <div className="flex items-center gap-2">
-          <button
-            onClick={() => setAutoRefresh(!autoRefresh)}'`
-            className={`p-2 rounded-lg transition-colors ${autoRefresh ? 'bg-white/20' : 'hover:bg-white/10'}`}
-            title={autoRefresh ? 'Auto-refresh enabled' : 'Auto-refresh disabled'}
-          >
-            <RefreshCw '`
+        <div className="flex items-center gap-2">';
+          <button';';
+            onClick={() => setAutoRefresh(!autoRefresh)}'`';';
+            className={`p-2 rounded-lg transition-colors ${autoRefresh ? 'bg-white/20' : 'hover:bg-white/10'}`}';';
+            title={autoRefresh ? 'Auto-refresh enabled' : 'Auto-refresh disabled'}';
+          >';';
+            <RefreshCw '`';';
               className={`w-4 h-4 ${autoRefresh ? 'animate-spin' : ''}`}
              />
           </button>
@@ -216,8 +216,8 @@ export function AdvancedPerformanceMonitor(props: any) {
               onChange={e => setSelectedCategory(e.target.value)}"
               className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate"
             >
-              {categories.map(category => (
-                <option key={category} value={category}>
+              {categories.map(category => (';
+                <option key={category} value={category}>';';
                   {category === 'all' ? 'All Categories' : category}
                 </option>
               ))}
@@ -236,9 +236,9 @@ export function AdvancedPerformanceMonitor(props: any) {
             <button
               onClick={refreshData}
               disabled={isRefreshing}"
-              className="px-4 py-2 bg-zion-blue text-white rounded-lg hover:bg-zion-blue/90 transition-colors disabled:opacity-50 flex items-center gap-2"
-            >
-              <RefreshCw '`
+              className="px-4 py-2 bg-zion-blue text-white rounded-lg hover:bg-zion-blue/90 transition-colors disabled:opacity-50 flex items-center gap-2"';
+            >';';
+              <RefreshCw '`';';
                 className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`}
                />
               Refresh
@@ -262,23 +262,23 @@ export function AdvancedPerformanceMonitor(props: any) {
         </div>
       </div>
 
-      {/* Tabs */}"
-      <div className="flex border-b border-zion-slate-light">
-        {['
-          { id: 'overview', label: 'Overview', icon: Activity },
-          {id: 'metrics', label: 'System Metrics', icon: BarChart3},
-          {id: 'alerts', label: 'Performance Alerts', icon: AlertTriangle},
-          {id: 'scalability', label: 'Scalability', icon: TrendingUp},
+      {/* Tabs */}"';
+      <div className="flex border-b border-zion-slate-light">';';
+        {['';';
+          { id: 'overview', label: 'Overview', icon: Activity },';';
+          {id: 'metrics', label: 'System Metrics', icon: BarChart3},';';
+          {id: 'alerts', label: 'Performance Alerts', icon: AlertTriangle},';';
+          {id: 'scalability', label: 'Scalability', icon: TrendingUp},';';
           {id: 'analytics', label: 'Analytics', icon: Zap},
         ].map(tab => {
 
           const Icon = tab.icon;
           return ()
             <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}`
-              className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${activeTab === tab.id'
-                  ? 'border-zion-blue text-zion-blue bg-zion-blue/5''
+              key={tab.id}';
+              onClick={() => setActiveTab(tab.id)}`';';
+              className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${activeTab === tab.id'';';
+                  ? 'border-zion-blue text-zion-blue bg-zion-blue/5''';';
                   : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'`
               }`}
             >"
@@ -289,8 +289,8 @@ export function AdvancedPerformanceMonitor(props: any) {
         })}
       </div>
 
-      {/* Content */}"
-      <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">
+      {/* Content */}"';
+      <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">';';
         {activeTab === 'overview' && ("
           <div className="space-y-6">
             {/* System Health Overview */}"
@@ -317,15 +317,15 @@ export function AdvancedPerformanceMonitor(props: any) {
                     {metric.value}
                     {metric.unit}
                   </div>"
-                  <div className="flex items-center justify-between text-sm">
-                    <span`
-                      className={`font-medium ${metric.trend === 'up''
-                          ? 'text-red-600''
-                          : metric.trend === 'down''
-                            ? 'text-green-600''
+                  <div className="flex items-center justify-between text-sm">';
+                    <span`';';
+                      className={`font-medium ${metric.trend === 'up''';';
+                          ? 'text-red-600''';';
+                          : metric.trend === 'down''';';
+                            ? 'text-green-600''';';
                             : 'text-gray-600'`
-                      }`}
-                    >
+                      }`}';
+                    >';';
                       {metric.trend === 'up' ? '+' : ''}
                       {metric.change}%
                     </span>"
@@ -340,8 +340,9 @@ export function AdvancedPerformanceMonitor(props: any) {
                         Predicted: {metric.value * (1 + metric.change / 100)}
                         {metric.unit}
                       </div>
-                    </div>
-                  )}
+                        </div>
+  );
+}
                 </div>
               ))}
             </div>
@@ -365,8 +366,8 @@ export function AdvancedPerformanceMonitor(props: any) {
                   <div className="flex items-center justify-between">"
                     <span className="text-sm text-zion-slate">
                       Active Alerts
-                    </span>"
-                    <span className="px-3 py-1 bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300 rounded-full text-sm font-medium">
+                    </span>"';
+                    <span className="px-3 py-1 bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300 rounded-full text-sm font-medium">';';
                       {performanceAlerts.filter(a => a.status === 'active')
                           .length}
                     </span>
@@ -406,9 +407,10 @@ export function AdvancedPerformanceMonitor(props: any) {
                 </div>
               </div>
             </div>
-          </div>
-        )}
-
+              </div>
+  );
+}';
+';';
         {activeTab === 'metrics' && ("
           <div className="space-y-4">
             {filteredMetrics.map(metric => (
@@ -449,11 +451,11 @@ export function AdvancedPerformanceMonitor(props: any) {
                           {metric.unit}
                         </div>
                       </div>
-                      <div>"
-                        <span className="text-zion-slate-light">Change:</span>
-                        <div'`
-                          className={`font-semibold ${metric.change > 0 ? 'text-red-600' : 'text-green-600'}`}
-                        >
+                      <div>"';
+                        <span className="text-zion-slate-light">Change:</span>';';
+                        <div'`';';
+                          className={`font-semibold ${metric.change > 0 ? 'text-red-600' : 'text-green-600'}`}';
+                        >';';
                           {metric.change > 0 ? '+' : ''}
                           {metric.change}%
                         </div>
@@ -471,9 +473,10 @@ export function AdvancedPerformanceMonitor(props: any) {
                 </div>
               </div>
             ))}
-          </div>
-        )}
-
+              </div>
+  );
+}';
+';';
         {activeTab === 'alerts' && ("
           <div className="space-y-4">
             {performanceAlerts.map(alert => (
@@ -494,12 +497,12 @@ export function AdvancedPerformanceMonitor(props: any) {
                         className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(alert.severity)}`}
                       >
                         {alert.severity}
-                      </span>
-                      <span`
-                        className={`px-2 py-1 rounded-full text-xs font-medium ${alert.status === 'active''
-                            ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300''
-                            : alert.status === 'acknowledged''
-                              ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300''
+                      </span>';
+                      <span`';';
+                        className={`px-2 py-1 rounded-full text-xs font-medium ${alert.status === 'active''';';
+                            ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300''';';
+                            : alert.status === 'acknowledged''';';
+                              ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300''';';
                               : 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'`
                         }`}
                       >
@@ -547,9 +550,10 @@ export function AdvancedPerformanceMonitor(props: any) {
                 </div>
               </div>
             ))}
-          </div>
-        )}
-
+              </div>
+  );
+}';
+';';
         {activeTab === 'scalability' && ("
           <div className="space-y-4">
             {scalabilityMetrics.map(metric => (
@@ -601,25 +605,27 @@ export function AdvancedPerformanceMonitor(props: any) {
                       </div>
                     </div>
                     {showPredictions && ("
-                      <div className="mt-3 pt-3 border-t border-zion-slate-light/30">"
-                        <div className="text-xs text-zion-slate-light">
-                          Based on current growth rate, capacity will be reached'
+                      <div className="mt-3 pt-3 border-t border-zion-slate-light/30">"';
+                        <div className="text-xs text-zion-slate-light">';';
+                          Based on current growth rate, capacity will be reached'';';
                           in approximately{' '}
                           {Math.ceil()
-                            (metric.capacity - metric.current) /
-                              ((metric.current * metric.growth) / 100)
+                            (metric.capacity - metric.current) /';
+                              ((metric.current * metric.growth) / 100)';';
                           )}{' '}
                           days
                         </div>
-                      </div>
-                    )}
+                          </div>
+  );
+}
                   </div>
                 </div>
               </div>
             ))}
-          </div>
-        )}
-
+              </div>
+  );
+}';
+';';
         {activeTab === 'analytics' && ("
           <div className="space-y-6">"
             <div className="text-center text-zion-slate-light">"
@@ -632,12 +638,13 @@ export function AdvancedPerformanceMonitor(props: any) {
                 soon...
               </p>
             </div>
-          </div>
-        )}
+              </div>
+  );
+}
       </div>
     </div>
   );}
 "export default ComponentName;"
 
-</RefreshCw>
-</RefreshCw>
+</RefreshCw>';
+</RefreshCw>;';;';

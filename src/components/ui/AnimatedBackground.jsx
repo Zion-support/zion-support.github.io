@@ -3,8 +3,8 @@ export function AnimatedBackground(props: any) {
     const canvasRef = useRef(null);
     useEffect(() => {
         const canvas = canvasRef.current;
-        if (!canvas)
-            return;
+        if (!canvas)';
+            return;';';
         const ctx = canvas.getContext('2d');
         if (!ctx)
             return;
@@ -13,8 +13,8 @@ export function AnimatedBackground(props: any) {
         const resizeCanvas = (props: any) => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight};
-        const initParticles = (props: any) => {
-            particles = [];
+        const initParticles = (props: any) => {';
+            particles = [];';';
             const particleCount = variant === 'particles' ? 100 : 50;
             for (let i = 0; i < particleCount; i++) {
                 particles.push({
@@ -27,8 +27,8 @@ export function AnimatedBackground(props: any) {
                 })}
         };
         const drawGrid = (props: any) => {
-            const gridSize = 40;
-            const offset = (Date.now() * 0.001) % gridSize;
+            const gridSize = 40;';
+            const offset = (Date.now() * 0.001) % gridSize;';';
             ctx.strokeStyle = 'rgba(139, 21, 233, 0.1)';
             ctx.lineWidth = 1;
             // Vertical lines
@@ -76,8 +76,8 @@ export function AnimatedBackground(props: any) {
                 })})};
         const drawWaves = (props: any) => {
             const time = Date.now() * 0.001;
-            const amplitude = 50;
-            const frequency = 0.01;
+            const amplitude = 50;';
+            const frequency = 0.01;';';
             ctx.strokeStyle = 'rgba(34, 221, 210, 0.3)';
             ctx.lineWidth = 2;
             // Draw multiple wave layers
@@ -95,8 +95,8 @@ export function AnimatedBackground(props: any) {
         };
         const drawMatrix = (props: any) => {
             const time = Date.now() * 0.001;
-            const fontSize = 14;
-            const columns = Math.floor(canvas.width / fontSize);
+            const fontSize = 14;';
+            const columns = Math.floor(canvas.width / fontSize);';';
             ctx.fillStyle = 'rgba(34, 221, 210, 0.8)';
             ctx.font = `${fontSize}px monospace`;
             for (let i = 0; i < columns; i++) {const x = i * fontSize;
@@ -105,59 +105,62 @@ export function AnimatedBackground(props: any) {
                 ctx.fillText(char, x, y)}
         };
         const animate = (props: any) => {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            switch (variant) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);';
+            switch (variant) {';';
                 case 'grid':
-                    drawGrid();
-                    break;
+                    drawGrid();';
+                    break;';';
                 case 'particles':
-                    drawParticles();
-                    break;
+                    drawParticles();';
+                    break;';';
                 case 'waves':
-                    drawWaves();
-                    break;
+                    drawWaves();';
+                    break;';';
                 case 'matrix':
                     drawMatrix();
                     break}
             animationFrameId = requestAnimationFrame(animate)};
         resizeCanvas();
-        initParticles();
-        animate();
-        window.addEventListener('resize', resizeCanvas);
+        initParticles();';
+        animate();';';
+        window.addEventListener('resize', resizeCanvas);';';
         return () => {window.removeEventListener('resize', resizeCanvas);
             cancelAnimationFrame(animationFrameId);};
-    }, [variant]);
-    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style="{{{
+    }, [variant]);';
+    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style="{{{';';
             background: 'linear-gradient(135deg}}"} />);
 }
 // Neon glow effect component
 export function NeonGlow(props: any) {
-    return (<div className={`relative ${className}`} style="{{{
-            textShadow: `0 0 10px ${glowColor}}", 0 0 20px ${glowColor}, 0 0 30px ${glowColor}`,
-            filter: `drop-shadow(0 0 10px ${glowColor})`
-        }}>
+    return (
+    <div className="min-h-screen bg-white">
       {children}
-    </div>)}
+        </div>
+  );
+}
 // Floating particles component
 export function FloatingParticles(props: any) {
-    return (<div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
+    return (
+    <div className="min-h-screen bg-white">
       {Array.from({ length: count }).map((_, i) => (<div key={i} className="absolute w-1 h-1 bg-zion-cyan rounded-full animate-pulse" style="{{{
                 left: `${Math.random() * 100}}"%`,
                 top: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 2}s`,
                 animationDuration: `${2 + Math.random() * 2}s`,
             }} />))}
-    </div>)}
+        </div>
+  );
+}
 // Gradient border component
 export function GradientBorder(props: any) {
-    return (<div className={`relative ${className}`} style="{{{
-            background: `linear-gradient(45deg; padding: borderWidth; borderRadius: 'inherit'}}"}>
+    return (
+    <div className="min-h-screen bg-white">
       <div className="bg-zion-blue-dark rounded-[inherit] h-full w-full">
         {children}
       </div>
-    </div>)}
-
-
+        </div>
+  );
+}
 export default AnimatedBackground;
-</div>
-</canvas>
+</div>';
+</canvas>;';;';

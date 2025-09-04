@@ -5,8 +5,7 @@ const fs = // // require('fs');
 class SecurityAuditor {
   constructor() {
     this.issues = [];
-    this.fixes = [];
-  }
+    this.fixes = []}
 
   checkPackageJson() {
     try {
@@ -14,20 +13,15 @@ class SecurityAuditor {
       
       // Check for security-related scripts
       if (!packageJson.scripts.audit) {
-        this.issues.push('Missing security audit script');
-      }
+        this.issues.push('Missing security audit script')}
       
       // Check for known vulnerable packages
       const vulnerablePackages = ['lodash', 'moment'];
       vulnerablePackages.forEach(pkg => {
         if (packageJson.dependencies && packageJson.dependencies[pkg]) {
-          this.issues.push(`Potentially vulnerable package: ${pkg}`);
-        }
-      });
-      
-    } catch (error) {
-      this.issues.push(`Error reading package.json: ${error.message}`);
-    }
+          this.issues.push(`Potentially vulnerable package: ${pkg}`)}
+      })} catch (error) {
+      this.issues.push(`Error reading package.json: ${error.message}`)}
   }
 
   checkNextConfig() {
@@ -36,15 +30,12 @@ class SecurityAuditor {
         const content = fs.readFileSync('next.config.js', 'utf8');
         
         if (!content.includes('poweredByHeader')) {
-          this.issues.push('X-Powered-By header not disabled');
-        }
+          this.issues.push('X-Powered-By header not disabled')}
         
         if (!content.includes('X-Content-Type-Options')) {
-          this.issues.push('Security headers not configured');
-        }
+          this.issues.push('Security headers not configured')}
     } catch (error) {
-      this.issues.push(`Error reading next.config.js: ${error.message}`);
-    }
+      this.issues.push(`Error reading next.config.js: ${error.message}`)}
   generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
@@ -55,15 +46,13 @@ class SecurityAuditor {
         fixesApplied: this.fixes.length
       }
     fs.writeFileSync('security-report.json', JSON.stringify(report, null, 2));
-    console.log('Security report generated');
-  }
+    console.log('Security report generated')}
 }
 
 if (require.main === module) {
   const auditor = new SecurityAuditor();
   auditor.checkPackageJson();
   auditor.checkNextConfig();
-  auditor.generateReport();
-}
+  auditor.generateReport()}
 
 module.exports = SecurityAuditor;

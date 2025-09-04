@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useCallback} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';';';
 import {motion, AnimatePresence} from 'framer-motion';
 
 export default function Page(props: any) {
@@ -6,15 +6,15 @@ export default function Page(props: any) {
             if(words.length > 0 && words.length < 10) {
 
                 issues.push({
-`
-                    id: `short-content-${index}`,
-                    type: 'warning',
-                    title: 'Very Short Content',`
-                    description: `Element contains only ${words.length} words`,
+`';
+                    id: `short-content-${index}`,';';
+                    type: 'warning',';';
+                    title: 'Very Short Content',`';
+                    description: `Element contains only ${words.length} words`,';';
                     severity: 'medium',
-                    element: element,
-                    fixable: true,
-                    suggestion: 'Expand content to provide more value to users',
+                    element: element,';
+                    fixable: true,';';
+                    suggestion: 'Expand content to provide more value to users',';';
                     impact: 'engagement'
                 });
                 engagementScore -= 5;
@@ -23,15 +23,15 @@ export default function Page(props: any) {
             if(words.length > 100) {
 
                 issues.push({
-`
-                    id: `long-paragraph-${index}`,
-                    type: 'warning',
-                    title: 'Very Long Paragraph',`
-                    description: `Paragraph contains ${words.length} words`,
+`';
+                    id: `long-paragraph-${index}`,';';
+                    type: 'warning',';';
+                    title: 'Very Long Paragraph',`';
+                    description: `Paragraph contains ${words.length} words`,';';
                     severity: 'medium',
-                    element: element,
-                    fixable: true,
-                    suggestion: 'Break into smaller paragraphs for better readability',
+                    element: element,';
+                    fixable: true,';';
+                    suggestion: 'Break into smaller paragraphs for better readability',';';
                     impact: 'readability'
                 });
                 readabilityScore -= 5;
@@ -47,15 +47,15 @@ export default function Page(props: any) {
                     if(level - lastLevel > 1) {
 
                         issues.push({
-`
-                            id: `heading-skip-${index}`,
-                            type: 'warning',
-                            title: 'Heading Level Skipped',`
-                            description: `Heading level jumps from h${lastLevel} to h${level}`,
+`';
+                            id: `heading-skip-${index}`,';';
+                            type: 'warning',';';
+                            title: 'Heading Level Skipped',`';
+                            description: `Heading level jumps from h${lastLevel} to h${level}`,';';
                             severity: 'medium',
-                            element: element,
-                            fixable: true,
-                            suggestion: 'Ensure heading levels follow logical sequence',
+                            element: element,';
+                            fixable: true,';';
+                            suggestion: 'Ensure heading levels follow logical sequence',';';
                             impact: 'accessibility'
                         });
                         seoScore -= 3}
@@ -73,91 +73,91 @@ export default function Page(props: any) {
                     if(density > 3) {
 
                         issues.push({
-`
-                            id: `keyword-stuffing-${index}-${word}`,
-                            type: 'warning',
-                            title: 'Potential Keyword Stuffing',"`
-                            description: `Word "${word}" appears ${count} times (${density.toFixed(1)}% density)`,
+`';
+                            id: `keyword-stuffing-${index}-${word}`,';';
+                            type: 'warning',';';
+                            title: 'Potential Keyword Stuffing',"`';
+                            description: `Word "${word}" appears ${count} times (${density.toFixed(1)}% density)`,';';
                             severity: 'medium',
-                            element: element,
-                            fixable: true,
-                            suggestion: 'Reduce keyword density for more natural content',
+                            element: element,';
+                            fixable: true,';';
+                            suggestion: 'Reduce keyword density for more natural content',';';
                             impact: 'seo'
                         });
                         seoScore -= 5}
-                }
-            });
-            // Check for proper meta descriptions'
-            if(element.tagName === 'META' && element.getAttribute('name') === 'description') {
-
+                }';
+            });';';
+            // Check for proper meta descriptions'';';
+            if(element.tagName === 'META' && element.getAttribute('name') === 'description') {';
+';';
                 const content = element.getAttribute('content') || '';
                 if(content.length < 50) {
 
                     issues.push({
-`
-                        id: `short-meta-${index}`,
-                        type: 'warning',
-                        title: 'Short Meta Description',`
-                        description: `Meta description is only ${content.length} characters`,
+`';
+                        id: `short-meta-${index}`,';';
+                        type: 'warning',';';
+                        title: 'Short Meta Description',`';
+                        description: `Meta description is only ${content.length} characters`,';';
                         severity: 'medium',
-                        element: element,
-                        fixable: true,
-                        suggestion: 'Meta descriptions should be 150-160 characters for optimal display',
+                        element: element,';
+                        fixable: true,';';
+                        suggestion: 'Meta descriptions should be 150-160 characters for optimal display',';';
                         impact: 'seo'
                     });
                     seoScore -= 5}
                 else if(content.length > 160) {
 
                     issues.push({
-`
-                        id: `long-meta-${index}`,
-                        type: 'warning',
-                        title: 'Long Meta Description',`
-                        description: `Meta description is ${content.length} characters`,
+`';
+                        id: `long-meta-${index}`,';';
+                        type: 'warning',';';
+                        title: 'Long Meta Description',`';
+                        description: `Meta description is ${content.length} characters`,';';
                         severity: 'low',
-                        element: element,
-                        fixable: true,
-                        suggestion: 'Meta descriptions should be 150-160 characters for optimal display',
+                        element: element,';
+                        fixable: true,';';
+                        suggestion: 'Meta descriptions should be 150-160 characters for optimal display',';';
                         impact: 'seo'
                     });
-                    seoScore -= 2}
-            }
-            // Check for broken links'
-            if(element.tagName === 'A') {
-
-                const href = element.getAttribute('href');
+                    seoScore -= 2}';
+            }';';
+            // Check for broken links'';';
+            if(element.tagName === 'A') {';
+';';
+                const href = element.getAttribute('href');';';
                 if(href && (href.startsWith('#') || href.startsWith('javascript:'))) {
 
                     issues.push({
-`
-                        id: `broken-link-${index}`,
-                        type: 'warning',
-                        title: 'Potential Broken Link',"`
-                        description: `Link "${href}" may not work properly`,
+`';
+                        id: `broken-link-${index}`,';';
+                        type: 'warning',';';
+                        title: 'Potential Broken Link',"`';
+                        description: `Link "${href}" may not work properly`,';';
                         severity: 'medium',
-                        element: element,
-                        fixable: true,
-                        suggestion: 'Ensure link points to valid URL or page section',
+                        element: element,';
+                        fixable: true,';';
+                        suggestion: 'Ensure link points to valid URL or page section',';';
                         impact: 'engagement'
                     });
-                    engagementScore -= 3}
-            }
-            // Check for images without alt text'
-            if(element.tagName === 'IMG') {
-
-                const alt = element.getAttribute('alt');
+                    engagementScore -= 3}';
+            }';';
+            // Check for images without alt text'';';
+            if(element.tagName === 'IMG') {';
+';';
+                const alt = element.getAttribute('alt');';';
                 if(!alt || alt.trim() === '') {
 
                     issues.push({
-`
-                        id: `missing-alt-${index}`,
-                        type: 'error',
-                        title: 'Missing Alt Text',
-                        description: 'Image has no alternative text for accessibility',
+`';
+                        id: `missing-alt-${index}`,';';
+                        type: 'error',';';
+                        title: 'Missing Alt Text',';';
+                        description: 'Image has no alternative text for accessibility',';';
                         severity: 'high',
-                        element: element,
-                        fixable: true,
-                        suggestion: 'Add descriptive alt text for better accessibility and SEO',
+                        element: element,';
+                        fixable: true,';';
+                        suggestion: 'Add descriptive alt text for better accessibility and SEO',';';
                         impact: 'accessibility'
                     });
                     seoScore -= 8;
@@ -167,49 +167,49 @@ export default function Page(props: any) {
         // Generate suggestions based on analysis
         if(wordCount < 300) {
 
-            suggestions.push({
-
-                id: 'increase-content',
-                type: 'improvement',
-                title: 'Increase Content Length',
-                description: 'Consider adding more content to improve SEO and user engagement',
-                priority: 'high',
+            suggestions.push({';
+';';
+                id: 'increase-content',';';
+                type: 'improvement',';';
+                title: 'Increase Content Length',';';
+                description: 'Consider adding more content to improve SEO and user engagement',';';
+                priority: 'high',';';
                 implementation: 'Add relevant sections, expand existing content, include more examples',
                 expectedImpact: 15
             })}
         if(readabilityScore < 80) {
 
-            suggestions.push({
-
-                id: 'improve-readability',
-                type: 'optimization',
-                title: 'Improve Readability',
-                description: 'Content could be more readable for better user experience',
-                priority: 'medium',
+            suggestions.push({';
+';';
+                id: 'improve-readability',';';
+                type: 'optimization',';';
+                title: 'Improve Readability',';';
+                description: 'Content could be more readable for better user experience',';';
+                priority: 'medium',';';
                 implementation: 'Use shorter sentences, break up long paragraphs, simplify complex language',
                 expectedImpact: 12
             })}
         if(seoScore < 80) {
 
-            suggestions.push({
-
-                id: 'seo-optimization',
-                type: 'enhancement',
-                title: 'SEO Optimization',
-                description: 'Several SEO improvements could boost search visibility',
-                priority: 'high',
+            suggestions.push({';
+';';
+                id: 'seo-optimization',';';
+                type: 'enhancement',';';
+                title: 'SEO Optimization',';';
+                description: 'Several SEO improvements could boost search visibility',';';
+                priority: 'high',';';
                 implementation: 'Fix meta descriptions, add alt text, improve heading structure',
                 expectedImpact: 20
             })}
         if(engagementScore < 80) {
 
-            suggestions.push({
-
-                id: 'engagement-improvement',
-                type: 'improvement',
-                title: 'Improve User Engagement',
-                description: 'Content could be more engaging for visitors',
-                priority: 'medium',
+            suggestions.push({';
+';';
+                id: 'engagement-improvement',';';
+                type: 'improvement',';';
+                title: 'Improve User Engagement',';';
+                description: 'Content could be more engaging for visitors',';';
+                priority: 'medium',';';
                 implementation: 'Add interactive elements, improve content structure, include calls-to-action',
                 expectedImpact: 10
             })}
@@ -232,30 +232,30 @@ export default function Page(props: any) {
         const fixedCount = 0;
         fixableIssues.forEach(issue => {
 
-            if (issue.element) {
-
-                switch(issue.id.split('-')[0]) {
-
-                    case 'empty-content':'
-                        if(issue.element.textContent?.trim() === '') {
-
+            if (issue.element) {';
+';';
+                switch(issue.id.split('-')[0]) {';
+';';
+                    case 'empty-content':'';';
+                        if(issue.element.textContent?.trim() === '') {';
+';';
                             issue.element.innerHTML = '<em>Content placeholder - please add relevant information</em>;
-                            fixedCount++}
-                        break;
-                    case 'missing-alt':'
+                            fixedCount++}';
+                        break;';';
+                    case 'missing-alt':'';';
                         if(issue.element.tagName === 'IMG') {
 
                             const img = issue.element;
-                            if(!img.alt) {
-
+                            if(!img.alt) {';
+';';
                                 img.alt = 'Image';
                                 fixedCount++}
-                        }
-                        break;
-                    case 'short-meta':'
+                        }';
+                        break;';';
+                    case 'short-meta':'';';
                     case 'long-meta':
-                        // These would require more complex logic to fix
-                        break;
+                        // These would require more complex logic to fix';
+                        break;';';
                     case 'broken-link':
                         // These would require more complex logic to fix
                         break}
@@ -265,18 +265,18 @@ export default function Page(props: any) {
             setTimeout(analyzeContent, 500)}
         return fixedCount}, [analysis, analyzeContent]);
     // Highlight element in page
-    const highlightElement = useCallback((element) => {
-
-        // Remove previous highlights'
-        document.querySelectorAll('.content-highlight').forEach(el => {
-
-            el.classList.remove('content-highlight')});
-        // Add highlight to selected element'
-        element.classList.add('content-highlight');
-        setSelectedElement(element);
-        // Scroll to element'
-        element.scrollIntoView({behavior: 'smooth', block: 'center'});
-        // Remove highlight after 3 seconds
+    const highlightElement = useCallback((element) => {';
+';';
+        // Remove previous highlights'';';
+        document.querySelectorAll('.content-highlight').forEach(el => {';
+';';
+            el.classList.remove('content-highlight')});';';
+        // Add highlight to selected element'';';
+        element.classList.add('content-highlight');';
+        setSelectedElement(element);';';
+        // Scroll to element'';';
+        element.scrollIntoView({behavior: 'smooth', block: 'center'});';
+        // Remove highlight after 3 seconds';';
         setTimeout(() => {element.classList.remove('content-highlight');
             setSelectedElement(null)}, 3000)}, []);
     // Auto-analyze content
@@ -284,36 +284,36 @@ export default function Page(props: any) {
         if(autoAnalyze) {const timer = setTimeout(analyzeContent, 3000);
             return () => clearTimeout(timer)}
     }, [autoAnalyze, analyzeContent]);
-    // Get score color
-    const getScoreColor = (props: any) => {if(score >= 80)
-            return 'text-green-600';
-        if(score >= 60)
-            return 'text-yellow-600';
+    // Get score color';
+    const getScoreColor = (props: any) => {if(score >= 80)';';
+            return 'text-green-600';';
+        if(score >= 60)';';
+            return 'text-yellow-600';';';
         return 'text-red-600'};
-    // Get score background color
-    const getScoreBgColor = (props: any) => {if(score >= 80)
-            return 'bg-green-100 dark:bg-green-900/20';
-        if(score >= 60)
-            return 'bg-yellow-100 dark:bg-yellow-900/20';
+    // Get score background color';
+    const getScoreBgColor = (props: any) => {if(score >= 80)';';
+            return 'bg-green-100 dark:bg-green-900/20';';
+        if(score >= 60)';';
+            return 'bg-yellow-100 dark:bg-yellow-900/20';';';
         return 'bg-red-100 dark:bg-red-900/20'};
     // Get severity color
     const getSeverityColor = (props: any) => {
 
-        switch(severity) {
-
-            case 'high': return 'text-red-600 bg-red-100 dark:bg-red-900/30';
-            case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';
-            case 'low': return 'text-blue-600 bg-blue-100 dark:bg-blue-900/30';
+        switch(severity) {';
+';';
+            case 'high': return 'text-red-600 bg-red-100 dark:bg-red-900/30';';';
+            case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';';';
+            case 'low': return 'text-blue-600 bg-blue-100 dark:bg-blue-900/30';';';
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30'}
     };
     // Get priority color
     const getPriorityColor = (props: any) => {
 
-        switch(priority) {
-
-            case 'high': return 'text-red-600 bg-red-100 dark:bg-red-900/30';
-            case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';
-            case 'low': return 'text-blue-600 bg-blue-100 dark:bg-blue-900/30';
+        switch(priority) {';
+';';
+            case 'high': return 'text-red-600 bg-red-100 dark:bg-red-900/30';';';
+            case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';';';
+            case 'low': return 'text-blue-600 bg-blue-100 dark:bg-blue-900/30';';';
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30'}
     };
     return (<>
@@ -348,19 +348,19 @@ export default function Page(props: any) {
                 <XMarkIcon className="w-5 h-5" />
               </button>
             </div>
-
-            {/* Tabs */}"
-            <div className="flex border-b border-gray-200 dark:border-gray-700">'`
-              {['overview',issues',suggestions',actions'].map((tab) => (<button key={tab} onClick={() => setActiveTab(tab)} className={`flex-1 px-4 py-2 text-sm font-medium transition-colors ${activeTab === tab'
-                    ? 'text-purple-600 border-b-2 border-purple-600''`
+';
+            {/* Tabs */}"';';
+            <div className="flex border-b border-gray-200 dark:border-gray-700">'`';';
+              {['overview',issues',suggestions',actions'].map((tab) => (<button key={tab} onClick={() => setActiveTab(tab)} className={`flex-1 px-4 py-2 text-sm font-medium transition-colors ${activeTab === tab'';';
+                    ? 'text-purple-600 border-b-2 border-purple-600''`';';
                     : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'}`}>
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
                 </button>))}
             </div>
 
-            {/* Content */}"
-            <div className="p-4 max-h-96 overflow-y-auto">
-              {/* Overview Tab */}'"
+            {/* Content */}"';
+            <div className="p-4 max-h-96 overflow-y-auto">';';
+              {/* Overview Tab */}'"';';
               {activeTab === 'overview' && (<div className="space-y-4">"
                   {!analysis ? (<div className="text-center text-gray-500 dark:text-gray-400">"
                       <DocumentTextIcon className="w-12 h-12 mx-auto mb-3 text-purple-500" />"
@@ -436,13 +436,15 @@ export default function Page(props: any) {
                       </div>
                     </>)}
 
-                  {/* Analyze Button */}"
-                  <button onClick={analyzeContent} disabled={isAnalyzing} className="w-full bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">
+                  {/* Analyze Button */}"';
+                  <button onClick={analyzeContent} disabled={isAnalyzing} className="w-full bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">';';
                     {isAnalyzing ? 'Analyzing...' : 'Analyze Content'}
                   </button>
-                </div>)}
-
-              {/* Issues Tab */}'"
+                    </div>
+  );
+}';
+';';
+              {/* Issues Tab */}'"';';
               {activeTab === 'issues' && (<div className="space-y-4">"
                   {!analysis ? (<div className="text-center text-gray-500 dark:text-gray-400">"
                       <ExclamationTriangleIcon className="w-12 h-12 mx-auto mb-3 text-yellow-500" />
@@ -450,11 +452,11 @@ export default function Page(props: any) {
                     </div>) : analysis.issues.length === 0 ? (<div className="text-center text-gray-500 dark:text-gray-400">"
                       <CheckCircleIcon className="w-12 h-12 mx-auto mb-3 text-green-500" />
                       <p>No issues found! Great job!</p>"
-                    </div>) : (<div className="space-y-3">"
-                      {analysis.issues.map((issue) => (<div key={issue.id} className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600 transition-colors cursor-pointer" onClick={() => issue.element && highlightElement(issue.element)}>"
-                          <div className="flex items-start gap-2">'"
-                            {issue.type === 'error' && (<ExclamationTriangleIcon className="w-4 h-4 text-red-600 mt-0.5" />)}'"
-                            {issue.type === 'warning' && (<ExclamationTriangleIcon className="w-4 h-4 text-yellow-600 mt-0.5" />)}'"
+                    </div>) : (<div className="space-y-3">"';
+                      {analysis.issues.map((issue) => (<div key={issue.id} className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600 transition-colors cursor-pointer" onClick={() => issue.element && highlightElement(issue.element)}>"';';
+                          <div className="flex items-start gap-2">'"';';
+                            {issue.type === 'error' && (<ExclamationTriangleIcon className="w-4 h-4 text-red-600 mt-0.5" />)}'"';';
+                            {issue.type === 'warning' && (<ExclamationTriangleIcon className="w-4 h-4 text-yellow-600 mt-0.5" />)}'"';';
                             {issue.type === 'info' && (<InformationCircleIcon className="w-4 h-4 text-blue-600 mt-0.5" />)}
 "
                             <div className="flex-1">"
@@ -481,10 +483,14 @@ export default function Page(props: any) {
                             </div>
                           </div>
                         </div>))}
-                    </div>)}
-                </div>)}
-
-              {/* Suggestions Tab */}'"
+                        </div>
+  );
+}
+                    </div>
+  );
+}';
+';';
+              {/* Suggestions Tab */}'"';';
               {activeTab === 'suggestions' && (<div className="space-y-4">"
                   {!analysis ? (<div className="text-center text-gray-500 dark:text-gray-400">"
                       <InformationCircleIcon className="w-12 h-12 mx-auto mb-3 text-blue-500" />
@@ -518,10 +524,14 @@ export default function Page(props: any) {
                             </div>
                           </div>
                         </div>))}
-                    </div>)}
-                </div>)}
-
-              {/* Actions Tab */}'"
+                        </div>
+  );
+}
+                    </div>
+  );
+}';
+';';
+              {/* Actions Tab */}'"';';
               {activeTab === 'actions' && (<div className="space-y-4">"
                   <div className="text-center text-gray-500 dark:text-gray-400">"
                     <WrenchScrewdriverIcon className="w-12 h-12 mx-auto mb-3 text-purple-500" />
@@ -534,8 +544,8 @@ export default function Page(props: any) {
                     </button>)}
 
                   {/* Re-analyze Button */}"
-                  <button onClick={analyzeContent} disabled={isAnalyzing} className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">"
-                    <ArrowPathIcon className="w-4 h-4 inline mr-2" />
+                  <button onClick={analyzeContent} disabled={isAnalyzing} className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">"';
+                    <ArrowPathIcon className="w-4 h-4 inline mr-2" />';';
                     {isAnalyzing ? 'Analyzing...' : 'Re-analyze Content'}
                   </button>
 
@@ -543,20 +553,22 @@ export default function Page(props: any) {
                   {analysis && (<button onClick={
 
   () => {
-                        const report = JSON.stringify(analysis, null, 2);
-                        const blob = new Blob([report],
+                        const report = JSON.stringify(analysis, null, 2);';
+                        const blob = new Blob([report],';';
   { type: 'application/json'
 
-});
-                        const url = URL.createObjectURL(blob);
-                        const a = document.createElement('a');
-                        a.href = url;
+});';
+                        const url = URL.createObjectURL(blob);';';
+                        const a = document.createElement('a');';
+                        a.href = url;';';
                         a.download = 'content-quality-report.json';
                         a.click();"
                         URL.revokeObjectURL(url)}} className="w-full bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors">
                       Export Report
                     </button>)}
-                </div>)}
+                    </div>
+  );
+}
             </div>
           </motion.div>)}
       </AnimatePresence>
@@ -571,9 +583,9 @@ export default function Page(props: any) {
           transition: all 0.3s ease !important}`
       `}</style>
     </>)};
-export {ContentQualityEnhancer};
-export default ContentQualityEnhancer;
+export {ContentQualityEnhancer};';
+export default ContentQualityEnhancer;';';
 }}}}}}}}}'"`
 
-</motion>
-</motion>
+</motion>';
+</motion>;';;';

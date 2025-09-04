@@ -1,5 +1,5 @@
-import React from 'react';
-import {  import { motion, AnimatePresence  } from 'framer-motion';
+import React from 'react';';';
+import {  import { motion, AnimatePresence  } from 'framer-motion';';';
  from 'lucide-react';
 
 interface ContactFormData {
@@ -16,28 +16,28 @@ interface ContactFormErrors {
 
 export function EnhancedContact(...args[]):  {
 
-  const [formData, setFormData] = useState<any>({
-
-    name: '',;
-    email: '',;
-    phone: '',;
-    comp: '',;
-    service: 'general',;
+  const [formData, setFormData] = useState<any>({';
+';';
+    name: '',';';
+    email: '',';';
+    phone: '',';';
+    comp: '',';';
+    service: 'general',';';
     message: ''
   }) ;
 
-  const [errors, setErrors] = useState<any> ({}) ;
-  const [isSubmitting, setIsSubmitting] = useState<any>(false);
+  const [errors, setErrors] = useState<any> ({}) ;';
+  const [isSubmitting, setIsSubmitting] = useState<any>(false);';';
   const [isSubmitted, setIsSubmitted] = useState<any>(false) { value: 'cloud-infrastructure', label: 'Cloud Infrastructure' }, { value: 'cybersecurity', label: 'Cybersecurity' }, { value: 'digital-transformation', label: 'Digital Transformation' }, { value: 'consulting', label: 'IT Consulting' }, { value: 'quantum-computing', label: 'Quantum Computing' }, { value: 'green-it', label: 'Green IT Solutions' };
-  ];
-
+  ];';
+';';
     const newErrors: ContactFormError s = {};      // console.error('Error submitting form:', error)} finally {
 
       setIsSubmitting(false)}
-  } {;
-      icon: Cloc k,;
-      title: 'Business Hours',;
-      value: 'Mon-Fri: 9A M-6PM EST',;
+  } {;';
+      icon: Cloc k,;';';
+      title: 'Business Hours',';';
+      value: 'Mon-Fri: 9A M-6PM EST',';';
       description: 'Available during these hours'};  ];
 
   if(isSubmitted) {
@@ -103,8 +103,8 @@ export function EnhancedContact(...args[]):  {
 
 }}
             transition={{ delay: 0.4 }}"
-            className="text-zion-slate-light mb-8"
-          >
+            className="text-zion-slate-light mb-8"';
+          >';';
             Thank you for reaching out to us.We'll get back to you within 24 hours.</motion.p>
 
           <motion.button
@@ -149,8 +149,8 @@ export function EnhancedContact(...args[]):  {
         >"
           <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-6">
             Get in Touch
-          </h1>"
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+          </h1>"';
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">';';
             Ready to transform your business? Let's discuss how our AI-powered solutions
             can help you achieve your goals.</p>
         </motion.div>
@@ -272,19 +272,19 @@ export function EnhancedContact(...args[]):  {
                   type="text"
                   id="name"
                   value={formData.name}
-                  onChange={
-
+                  onChange={';
+';';
   (e) => handleInputChange('name',
   e.target.value)
-
-}
-                  className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan ${errors.name'
-                      ? 'border-red-500 focus: rin g-red-500''
+';
+}';';
+                  className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan ${errors.name'';';
+                      ? 'border-red-500 focus: rin g-red-500''';';
                       : 'border-zion-slate-light focus: borde r-zion-cyan'`
                   } text-white placeholder-zion-slate-light`}"
                   placeholder="Enter your full name"
-                />
-                <AnimatePresence>
+                />';
+                <AnimatePresence>';';
                   {errors['name'] && (
                     <motion.p
                       initial = {
@@ -306,8 +306,8 @@ export function EnhancedContact(...args[]):  {
 
 }}"
                       className="text-red-400 text-sm mt-1 flex items-center"
-                    >"
-                      <AlertCircle className="w-4 h-4 mr-1"   />
+                    >"';
+                      <AlertCircle className="w-4 h-4 mr-1"   />';';
                       {errors['name']}                    </motion.p>) }
                 </AnimatePresence>
               </div>
@@ -321,19 +321,19 @@ export function EnhancedContact(...args[]):  {
                   type="email"
                   id="email"
                   value={formData.email}
-                  onChange={
-
+                  onChange={';
+';';
   (e) => handleInputChange('email',
   e.target.value)
-
-}`
-                  className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan ${errors.email'
-                      ? 'border-red-500 focus: rin g-red-500''
+';
+}`';';
+                  className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan ${errors.email'';';
+                      ? 'border-red-500 focus: rin g-red-500''';';
                       : 'border-zion-slate-light focus: borde r-zion-cyan'`
                   } text-white placeholder-zion-slate-light`}"
                   placeholder="Enter your email address"
-                />
-                <AnimatePresence>
+                />';
+                <AnimatePresence>';';
                   {errors['email'] && (
                     <motion.p
                       initial = {
@@ -355,8 +355,8 @@ export function EnhancedContact(...args[]):  {
 
 }}"
                       className="text-red-400 text-sm mt-1 flex items-center"
-                    >"
-                      <AlertCircle className="w-4 h-4 mr-1"   />
+                    >"';
+                      <AlertCircle className="w-4 h-4 mr-1"   />';';
                       {errors['email']}                    </motion.p>) }
                 </AnimatePresence>
               </div>
@@ -371,8 +371,8 @@ export function EnhancedContact(...args[]):  {
                     type="tel"
                     id="phone"
                     value={formData.phone}
-                    onChange={
-
+                    onChange={';
+';';
   (e) => handleInputChange('phone',
   e.target.value)
 
@@ -388,8 +388,8 @@ export function EnhancedContact(...args[]):  {
                     type="text"
                     id="company"
                     value={formData.company}
-                    onChange={
-
+                    onChange={';
+';';
   (e) => handleInputChange('company',
   e.target.value)
 
@@ -408,8 +408,8 @@ export function EnhancedContact(...args[]):  {
                 <select"
                   id="service"
                   value={formData.service}
-                  onChange={
-
+                  onChange={';
+';';
   (e) => handleInputChange('service',
   e.target.value)
 
@@ -431,19 +431,19 @@ export function EnhancedContact(...args[]):  {
                   id="message"
                   rows={4}
                   value={formData.message}
-                  onChange={
-
+                  onChange={';
+';';
   (e) => handleInputChange('message',
   e.target.value)
-
-}`
-                  className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan resize-none ${errors.message'
-                      ? 'border-red-500 focus: rin g-red-500''
+';
+}`';';
+                  className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan resize-none ${errors.message'';';
+                      ? 'border-red-500 focus: rin g-red-500''';';
                       : 'border-zion-slate-light focus: borde r-zion-cyan'`
                   } text-white placeholder-zion-slate-light`}"
                   placeholder="Tell us about your project or inquiry..."
-                />
-                <AnimatePresence>
+                />';
+                <AnimatePresence>';';
                   {errors['message'] && (
                     <motion.p
                       initial = {
@@ -465,8 +465,8 @@ export function EnhancedContact(...args[]):  {
 
 }}"
                       className="text-red-400 text-sm mt-1 flex items-center"
-                    >"
-                      <AlertCircle className="w-4 h-4 mr-1"   />
+                    >"';
+                      <AlertCircle className="w-4 h-4 mr-1"   />';';
                       {errors['message']}                    </motion.p>) }
                 </AnimatePresence>
               </div>
@@ -493,26 +493,15 @@ export function EnhancedContact(...args[]):  {
             </form>;
           </motion.div>;
         </div>;
-      </div>;
-    </div>;) }
+      </div>;';
+    </div>;) }';';
 '"`
 
-</motion>
 </motion>
 </textarea>
 </motion>
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
 </any>
-</any>
-</any>
-</any>
+</any>';
+</any>;';;';

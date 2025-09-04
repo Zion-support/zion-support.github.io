@@ -34,16 +34,16 @@ export const MetaTags = (props: any) => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0"  />
       <meta name="theme-color" content="#22ddd2"  />
       <meta name="msapplication-TileColor" content="#22ddd2"  />
-      
-      {/* Article specific meta tags */}
-      {type === 'article' && publishedTime && (<meta property="article:published_time" content={publishedTime}  />)}
-      {type === 'article' && modifiedTime && (<meta property="article:modified_time" content={modifiedTime}  />)}
+      ';
+      {/* Article specific meta tags */}';';
+      {type === 'article' && publishedTime && (<meta property="article:published_time" content={publishedTime}  />)}';';
+      {type === 'article' && modifiedTime && (<meta property="article:modified_time" content={modifiedTime}  />)}';';
       {type === 'article' && (<meta property="article:author" content={author}  />)}
       
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify({
-            "@context": "https://schema.org",
+        {JSON.stringify({';
+            "@context": "https://schema.org",';';
             "@type": type === 'article' ? 'Article' : 'Organization',
             "name": "Zion Tech Group",
             "url": "https://ziontechgroup.com",
@@ -68,4 +68,5 @@ export const MetaTags = (props: any) => {
         })}
       </script>
     </Helmet>);
-};
+};';
+;';;';

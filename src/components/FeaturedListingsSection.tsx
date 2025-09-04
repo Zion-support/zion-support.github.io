@@ -1,9 +1,8 @@
-import { Link  } from 'react-router-dom';
-import { Link  } from 'react-router-dom';
- from 'react';
-import React, { useState } from 'react';
-export /**
-import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';';';
+ from 'react';';';
+import React, { useState } from 'react';';
+export /**';';
+import { motion  } from 'framer-motion';';';
 import { motion, AnimatePresence  } from 'framer-motion';
 
  params - Function parameters
@@ -125,9 +124,9 @@ function FeaturedListingsSection(props: any) {          initial = {
             <span className="text-xl">→</span>;
           </Link>;
         </motion.div>;
-      </div>;
-    </section>;) }
+      </div>;';
+    </section>;) }';';
 '"
 
-</motion>
-</motion>
+</motion>';
+</motion>;';;';

@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
-import {Link} from 'react-router-dom';
-import {Menu, X, Search, User, Briefcase, HardDrive, Users, Lightbulb} from 'lucide-react';
+import React, {useState} from 'react';';';
+import {Link} from 'react-router-dom';';';
+import {Menu, X, Search, User, Briefcase, HardDrive, Users, Lightbulb} from 'lucide-react';';';
 import {Button} from '@/components/ui/button';
-
-const mobileMenuItems = [
-  {name: 'Services', icon: <Briefcase className="w-5 h-5"  />, href: '/services'},
-  {name: 'Talent', icon: <Users className="w-5 h-5"  />, href: '/talent'},
-  {name: 'Equipment', icon: <HardDrive className="w-5 h-5"  />, href: '/equipment'},
+';
+const mobileMenuItems = [';';
+  {name: 'Services', icon: <Briefcase className="w-5 h-5"  />, href: '/services'},';';
+  {name: 'Talent', icon: <Users className="w-5 h-5"  />, href: '/talent'},';';
+  {name: 'Equipment', icon: <HardDrive className="w-5 h-5"  />, href: '/equipment'},';';
   {name: 'Innovation', icon: <Lightbulb className="w-5 h-5"  />, href: '/category/innovation'}
 ];
 
@@ -20,7 +20,7 @@ export function MobileNavigation(props: any) {
   const closeMenu = (props: any) => {setIsOpen(false);};
 
   return (
-    <div className="lg:hidden">
+    <div className="min-h-screen bg-white">
       <button
         onClick={toggleMenu}
         className="p-2 rounded-lg text-gray-300 hover:text-cyan-300 hover:bg-gray-800/50 transition-colors duration-200"
@@ -67,10 +67,11 @@ export function MobileNavigation(props: any) {
               </Button>
             </div>
           </div>
-        </div>
-      )}
+            </div>
+  );
+}
     </div>
   );
 }
-
-export default MobileNavigation;
+';
+export default MobileNavigation;;';;';

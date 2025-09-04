@@ -14,14 +14,12 @@ class WorkingAutomationSuite {
       success: [],
       errors: [],
       warnings: []
-    };
-  }
+    }}
 
   log(message, type = 'info') {
     const timestamp = new Date().toISOString();
     const prefix = type === 'error' ? '❌' : type === 'success' ? '✅' : 'ℹ️';
-    console.log(`[${timestamp}] ${prefix} ${message}`);
-  }
+    console.log(`[${timestamp}] ${prefix} ${message}`)}
 
   async runCommand(command, description) {
     try {
@@ -33,12 +31,10 @@ class WorkingAutomationSuite {
       });
       this.results.success.push(`${description} completed successfully`);
       this.log(`${description} completed successfully`, 'success');
-      return { success: true, output: result };
-    } catch (error) {
+      return { success: true, output: result }} catch (error) {
       this.results.errors.push(`${description} failed: ${error.message}`);
       this.log(`${description} failed: ${error.message}`, 'error');
-      return { success: false, error: error.message };
-    }
+      return { success: false, error: error.message }}
   }
 
   async runLinting() {
@@ -49,24 +45,20 @@ class WorkingAutomationSuite {
     ];
 
     for (const { cmd, desc } of lintCommands) {
-      await this.runCommand(cmd, desc);
-    }
+      await this.runCommand(cmd, desc)}
   }
 
   async runBuild() {
     this.log('🏗️ Running build process...');
-    await this.runCommand('npm run build', 'Next.js Build');
-  }
+    await this.runCommand('npm run build', 'Next.js Build')}
 
   async runTests() {
     this.log('🧪 Running tests...');
-    await this.runCommand('npm test', 'Jest Tests');
-  }
+    await this.runCommand('npm test', 'Jest Tests')}
 
   async runSecurityAudit() {
     this.log('🔒 Running security audit...');
-    await this.runCommand('npm audit', 'Security Audit');
-  }
+    await this.runCommand('npm audit', 'Security Audit')}
 
   async generateReport() {
     this.log('📊 Generating automation report...');
@@ -91,8 +83,7 @@ class WorkingAutomationSuite {
     const reportPath = path.join(this.projectRoot, 'automation-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`Report saved to: ${reportPath}`, 'success');
-    return report;
-  }
+    return report}
 
   async runAll() {
     try {
@@ -109,20 +100,17 @@ class WorkingAutomationSuite {
       this.log(`📊 Summary: ${report.summary.successful}/${report.summary.total} operations successful`);
       
       if (report.summary.errors > 0) {
-        this.log(`⚠️ ${report.summary.errors} operations failed - check the report for details`);
-      }
+        this.log(`⚠️ ${report.summary.errors} operations failed - check the report for details`)}
       
     } catch (error) {
       this.log(`❌ Automation suite failed: ${error.message}`, 'error');
-      process.exit(1);
-    }
+      process.exit(1)}
   }
 }
 
 // Run the automation suite
 if (require.main === module) {
   const suite = new WorkingAutomationSuite();
-  suite.runAll().catch(console.error);
-}
+  suite.runAll().catch(console.error)}
 
 module.exports = WorkingAutomationSuite;

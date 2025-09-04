@@ -254,16 +254,11 @@ export default InnovationResearchSection;"
         </motion.div>;
       </div>;
     </section>;) }
-export default IconComponent;
-export default IconComponent;
+export default IconComponent;';
+export default IconComponent;';';
 '"`
 
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
+</motion>';
+</motion>;';;';

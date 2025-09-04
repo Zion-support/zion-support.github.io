@@ -3,5 +3,4 @@ export function Label(props: any) {
       {children}
     </label>)}
 
-
 export default label;

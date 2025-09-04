@@ -23,9 +23,9 @@ function isLocalStorageAvailable(props: any) {
 
       localStorageAvailable = false;
       return false;
-    }
-
-    const testKey = '__localStorage_test__';
+    }';
+';';
+    const testKey = '__localStorage_test__';';';
     localStorage.setItem(testKey,test');
     localStorage.removeItem(testKey);
     localStorageAvailable = true;
@@ -37,10 +37,10 @@ function isLocalStorageAvailable(props: any) {
   }
 }
 
-function safeConsoleError(props: any) {
-
-  const env = globalThis.process?.env?.NODE_ENV ?? 'production';
-  // Prevent infinite recursion in console logging'
+function safeConsoleError(props: any) {';
+';';
+  const env = globalThis.process?.env?.NODE_ENV ?? 'production';';';
+  // Prevent infinite recursion in console logging'';';
   if(env === 'production') return;
 
   try {
@@ -117,4 +117,5 @@ export const safeStorage = {
       return 0;    }
   }};
 
-export default safeStorage;
+export default safeStorage;';
+';';

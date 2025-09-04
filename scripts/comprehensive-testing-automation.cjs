@@ -18,7 +18,7 @@ async function runComprehensiveTesting() {
       failedTests: 0,
       skippedTests: 0
     }
- ; ;};
+ };
 
   try {
     // Test Suite 1: Unit Tests
@@ -30,7 +30,7 @@ async function runComprehensiveTesting() {
         const result = execSync('npm test -- --passWithNoTests --coverage --json', { 
           encoding: 'utf8',
           stdio: 'pipe'
-        ;};);
+        };);
         const testData = JSON.parse(result;);
         return {;
           status: 'success',
@@ -53,7 +53,7 @@ async function runComprehensiveTesting() {
     await runTestSuite('TypeScript Type Check', async () => {
       try {
         execSync('npx tsc --noEmit', { stdio: 'pipe' });
-        return { status: 'success', message: 'No type errors found' ;}} catch (error) {
+        return { status: 'success', message: 'No type errors found' }} catch (error) {
         const output = error.stdout?.toString() || error.stderr?.toString() || ;';';
         const errorCount = (output.match(/error TS/g) || []).lengt;h;
         return {;
@@ -69,8 +69,8 @@ async function runComprehensiveTesting() {
     
     await runTestSuite('ESLint Code Quality', async () => {
       try {
-        const result = execSync('npm run lint', { encoding: 'utf8', stdio: 'pipe' ;};);
-        return { status: 'success', message: 'No linting errors found' ;}} catch (error) {
+        const result = execSync('npm run lint', { encoding: 'utf8', stdio: 'pipe' };);
+        return { status: 'success', message: 'No linting errors found' }} catch (error) {
         const output = error.stdout?.toString() || error.stderr?.toString() || ;';';
         const errorCount = (output.match(/error/g) || []).lengt;h;
         const warningCount = (output.match(/warning/g) || []).lengt;h;
@@ -89,7 +89,7 @@ async function runComprehensiveTesting() {
     await runTestSuite('Production Build Test', async () => {
       try {
         execSync('npm run build', { stdio: 'pipe' });
-        return { status: 'success', message: 'Build completed successfully' ;}} catch (error) {
+        return { status: 'success', message: 'Build completed successfully' }} catch (error) {
         return {;
           status: 'failed',
           error: error.message,
@@ -103,8 +103,8 @@ async function runComprehensiveTesting() {
         const devProcess = execSync('timeout 10s npm run dev || true', { 
           stdio: 'pipe',
           timeout: 15000
-        ;};);
-        return { status: 'success', message: 'Development server started successfully' ;}} catch (error) {
+        };);
+        return { status: 'success', message: 'Development server started successfully' }} catch (error) {
         return {;
           status: 'partial',
           error: error.message,
@@ -126,7 +126,7 @@ async function runComprehensiveTesting() {
           cssSize: buildStats.cssSize,
           recommendations: buildStats.recommendations
         }} catch (error) {
-        return { status: 'skipped', error: error.message ;}}
+        return { status: 'skipped', error: error.message }}
     });
 
     await runTestSuite('Performance Metrics', async () => {
@@ -136,7 +136,7 @@ async function runComprehensiveTesting() {
           status: 'success',
           metrics: metrics
         }} catch (error) {
-        return { status: 'skipped', error: error.message ;}}
+        return { status: 'skipped', error: error.message }}
     });
 
     // Test Suite 6: Security Tests
@@ -145,7 +145,7 @@ async function runComprehensiveTesting() {
     
     await runTestSuite('Dependency Security Audit', async () => {
       try {
-        const result = execSync('npm audit --json', { encoding: 'utf8', stdio: 'pipe' ;};);
+        const result = execSync('npm audit --json', { encoding: 'utf8', stdio: 'pipe' };);
         const auditData = JSON.parse(result;);
         return {;
           status: 'success',
@@ -153,7 +153,7 @@ async function runComprehensiveTesting() {
           advisories: auditData.advisories || 0,
           summary: auditData.summary || {}
         }} catch (error) {
-        return { status: 'partial', error: error.message ;}}
+        return { status: 'partial', error: error.message }}
     });
 
     await runTestSuite('Code Security Scan', async () => {
@@ -164,7 +164,7 @@ async function runComprehensiveTesting() {
           issuesFound: securityIssues.length,
           issues: securityIssues
         }} catch (error) {
-        return { status: 'skipped', error: error.message ;}}
+        return { status: 'skipped', error: error.message }}
     });
 
     // Test Suite 7: Integration Tests
@@ -179,7 +179,7 @@ async function runComprehensiveTesting() {
           endpointsTested: apiTests.length,
           results: apiTests
         }} catch (error) {
-        return { status: 'skipped', error: error.message ;}}
+        return { status: 'skipped', error: error.message }}
     });
 
     await runTestSuite('Component Integration Tests', async () => {
@@ -190,7 +190,7 @@ async function runComprehensiveTesting() {
           componentsTested: componentTests.length,
           results: componentTests
         }} catch (error) {
-        return { status: 'skipped', error: error.message ;}}
+        return { status: 'skipped', error: error.message }}
     });
 
     // Finalize report
@@ -207,10 +207,10 @@ async function runComprehensiveTesting() {
     console.log(`   - Failed: ${testReport.metrics.failedTests}`);
     console.log(`   - Skipped: ${testReport.metrics.skippedTests}`);
     console.log(`   - Success Rate: ${((testReport.metrics.passedTests / testReport.metrics.totalTests); * 100).toFixed(1)}%`);
-    console.log(`   - Status: ${testReport.overallStatus.toUpperCase();}`);
+    console.log(`   - Status: ${testReport.overallStatus.toUpperCase()}`);
     console.log(`📄 Report saved to: ${reportPath}`);
 
-    return testReport;} catch (error) {
+    return testReport} catch (error) {
     console.error('❌ Comprehensive testing failed:', error.message);
     testReport.overallStatus = 'failed';
     testReport.error = error.message
@@ -229,7 +229,7 @@ async function runComprehensiveTesting() {
         duration: `${duration}ms`,
         result: result,
         timestamp: new Date().toISOString()
-     ; ;};
+     };
       
       testReport.testSuites.push(testSuite);
       testReport.metrics.totalTests++;
@@ -237,18 +237,16 @@ async function runComprehensiveTesting() {
       if ( {
         testReport.metrics.passedTests++) {
      {
-        testReport.metrics.passedTests++;
-  }
-        console.log(`✅ ${suiteName} completed in ${duration}ms`);} else if ( {
+        testReport.metrics.passedTests++}
+        console.log(`✅ ${suiteName} completed in ${duration}ms`)} else if ( {
         testReport.metrics.failedTests++) {
      {
-        testReport.metrics.failedTests++;
-  }
-        console.log(`❌ ${suiteName} failed in ${duration}ms`);} else {
+        testReport.metrics.failedTests++}
+        console.log(`❌ ${suiteName} failed in ${duration}ms`)} else {
         testReport.metrics.skippedTests++;
-        console.log(`⚠️ ${suiteName} skipped in ${duration}ms`);}
+        console.log(`⚠️ ${suiteName} skipped in ${duration}ms`)}
       
-      return result;} catch (error) {
+      return result} catch (error) {
       const duration = Date.now() - startTi;m;e;
       
       testReport.testSuites.push({
@@ -275,8 +273,7 @@ async function runComprehensiveTesting() {
     ) {
       throw new Error('Build directory not found')}
 
-    let totalSize = ;
-  }0;
+    let totalSize = }0;
     let jsSize = ;0;
     let cssSize = ;0;
 
@@ -295,8 +292,7 @@ async function runComprehensiveTesting() {
     ) {
           size += getDirectorySize(fullPath)} else {
           size += stat.size
-          const ext = path.extname(item;
-  });
+          const ext = path.extname(item});
           if (jsSize += stat.size
           if (ext === '.css') cssSize += stat.size}
       }
@@ -306,12 +302,11 @@ async function runComprehensiveTesting() {
           if (ext === '.css') cssSize += stat.size}
       }
       
-      return size;
-  }}
+      return size}}
 
     totalSize = getDirectorySize(buildDir);
 
-    const recommendations = [;];
+    const recommendations = [];
     if ( { // > 1MB
       recommendations.push('Consider code splitting to reduce bundle size')}
     if (jsSize > 512 * 1024) { // > 512KB
@@ -323,8 +318,7 @@ async function runComprehensiveTesting() {
     if (jsSize > 512 * 1024) { // > 512KB
       recommendations.push('JavaScript bundle is large, consider optimization')}
 
-    return {;
-  }
+    return {}
       totalSize: totalSize,
       jsSize: jsSize,
       cssSize: cssSize,
@@ -340,7 +334,7 @@ async function runComprehensiveTesting() {
     }}
 
   async function scanCodeSecurity() {
-    const issues = [;];
+    const issues = [];
     const files = findCodeFiles('.;';);
     
     for (const file of files) {
@@ -371,8 +365,7 @@ async function runComprehensiveTesting() {
       }
     }
     
-    return issues;
-  }}
+    return issues}}
 
   async function testAPIEndpoints() {
     // Mock API endpoint tests
@@ -390,7 +383,7 @@ async function runComprehensiveTesting() {
     ]}
 
   function findCodeFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
-    const files = [;];
+    const files = [];
     
     function traverse(currentDir) {
       try {
@@ -409,8 +402,7 @@ async function runComprehensiveTesting() {
             if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
               traverse(fullPath)}
           } else if (stat.isFile()) {
-            const ext = path.extname(item;
-  });
+            const ext = path.extname(item});
             if () {
               files.push(fullPath)}
           }
@@ -430,9 +422,8 @@ async function runComprehensiveTesting() {
       }
     }
     
-    traverse(dir);
-  }
-    return files;}
+    traverse(dir)}
+    return files}
 }
 
 // Run if called directly
@@ -443,5 +434,4 @@ module.exports = { runComprehensiveTesting }) {
      {
   runComprehensiveTesting().catch(console.error)}
 
-module.exports = { runComprehensiveTesting };
-  }
+module.exports = { runComprehensiveTesting }}

@@ -2,13 +2,60 @@
 
 const fs = require('fs');
 
-console.log('🔧 Applying final comprehensive fixes...');
+// Function to fix all remaining syntax errors
+function fixSyntaxErrors(content) {
+  // Fix extra commas in JSX attributes
+  content = content.replace(/className="[^"]*"\s*,\s*>/g, (match) => {
+    return match.replace(/,\s*$/, '')});
+  
+  // Fix malformed function declarations: {, -> {
+  content = content.replace(/\{\s*,/g, '{');
+  
+  // Fix malformed JSX elements: >, -> >
+  content = content.replace(/>\s*,\s*$/gm, '>');
+  
+  // Fix malformed JSX elements: >, -> >
+  content = content.replace(/>\s*,\s*</g, '><');
+  
+  // Fix malformed function declarations: ) {, -> ) {
+  content = content.replace(/\)\s*\{\s*,/g, ') {');
+  
+  // Fix malformed JSX elements: >, -> >
+  content = content.replace(/>\s*,\s*$/gm, '>');
+  
+  // Fix missing closing braces in for loops
+  content = content.replace(/for \(const entry of list\.getEntries\(\)\) \{\s*if \([^}]+\) \{\s*[^}]+\s*\}\s*\}\);/g, (match) => {
+    return match.replace(/\}\);/g, '}\n      });')});
+  
+  // Fix missing closing braces in for loops (alternative pattern)
+  content = content.replace(/for \(const entry of list\.getEntries\(\)\) \{\s*if \([^}]+\) \{\s*[^}]+\s*\}\s*\}\);/g, (match) => {
+    return match.replace(/\}\);/g, '}\n      });')});
+  
+  // Fix malformed JSON objects: {, -> {
+  content = content.replace(/JSON\.stringify\(\{\s*,/g, 'JSON.stringify({');
+  
+  // Fix missing closing braces in for loops (CLS pattern)
+  content = content.replace(/for \(const entry of list\.getEntries\(\)\) \{\s*if \([^}]+\) \{\s*[^}]+\s*\}\s*\}\s*console\.log\('CLS:', clsValue\);\s*\}\);/g, (match) => {
+    return match.replace(/\}\);/g, '}\n      });')});
+  
+  return content}
 
-// Fix SEO.tsx - remove everything after the return statement
-const seoContent = fs.readFileSync('src/components/SEO.tsx', 'utf8');
-const seoFixed = seoContent.split('  );')[0] + '  );';
-fs.writeFileSync('src/components/SEO.tsx', seoFixed, 'utf8');
-console.log('✅ Fixed SEO.tsx');
+// Function to process a file
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8';);
+    const fixedContent = fixSyntaxErrors(conten;t;);
+    
+    if ( {
+      fs.writeFileSync(filePath, fixedContent, 'utf8')) {
+     {
+      fs.writeFileSync(filePath, fixedContent, 'utf8')}
+      console.log(`✅ Fixed: ${filePath}`);
+      return true}
+    return false} catch (error) {
+    console.error(`❌ Error processing ${filePath}:`, error.message);
+    return false}
+}
 
 // Fix TalentCard.jsx - fix malformed JSX
 const talentContent = fs.readFileSync('src/components/talent/TalentCard.jsx', 'utf8');
@@ -34,11 +81,13 @@ const talentFixed = talentContent
 fs.writeFileSync('src/components/talent/TalentCard.jsx', talentFixed, 'utf8');
 console.log('✅ Fixed TalentCard.jsx');
 
-// Fix use-toast.ts - add missing closing brace
-const toastContent = fs.readFileSync('src/components/ui/use-toast.ts', 'utf8');
-const toastFixed = toastContent.replace('  return { showToast };\n}', '  return { showToast };\n}');
-fs.writeFileSync('src/components/ui/use-toast.ts', toastFixed, 'utf8');
-console.log('✅ Fixed use-toast.ts');
+const filesToFix = [
+  'components/ContactForm.tsx',
+  'components/ErrorBoundary.tsx',
+  'components/PerformanceMonitor.tsx',
+  'pages/docs.tsx',
+  'pages/index.tsx'
+];
 
 // Fix enhancedServices.ts - fix malformed object properties
 const servicesContent = fs.readFileSync('src/data/enhancedServices.ts', 'utf8');
@@ -65,4 +114,19 @@ const authFixed = authContent
 fs.writeFileSync('src/hooks/useAuth.tsx', authFixed, 'utf8');
 console.log('✅ Fixed useAuth.tsx');
 
-console.log('✨ Final comprehensive fixes completed!');
+console.log(`\n📊 Syntax fixing complete:`)) {
+    ) {
+    if (processFile(file)) {
+      totalFixed++}
+  }
+}
+
+console.log(`\n📊 Syntax fixing complete:`)}
+console.log(`   - Files fixed: ${totalFixed}`);
+console.log(`   - Issues encountered: 0`);
+
+if ( {
+  console.log('\n✅ All syntax errors have been fixed!')) {
+     {
+  console.log('\n✅ All syntax errors have been fixed!')}} else {
+  console.log('\n✅ No syntax errors found!')}

@@ -21,7 +21,7 @@ class SecurityAuditor {
     this.intervalId = setInterval(() => {
       this.runSecurityCheck()}, this.interval);
     
-    console.log('Security Auditor started successfully');}
+    console.log('Security Auditor started successfully')}
 
   async runSecurityCheck() {
     try {
@@ -30,7 +30,7 @@ class SecurityAuditor {
       const child = spawn('npm', ['audit'], {
         stdio: ['pipe', 'pipe', 'pipe'],
         cwd: process.cwd()
-      ;};);
+      };);
 
       let output = ;';';
       let errorOutput = ;';';
@@ -45,8 +45,7 @@ class SecurityAuditor {
         if ( {
           console.log('Security audit passed ✓')) {
      {
-          console.log('Security audit passed ✓');
-  }} else {
+          console.log('Security audit passed ✓')}} else {
           console.log('Security audit found issues ✗');
           console.log('Output:', output);
           console.log('Errors:', errorOutput);
@@ -64,15 +63,14 @@ class SecurityAuditor {
       const child = spawn('npm', ['audit', 'fix', '--force'], {
         stdio: 'inherit',
         cwd: process.cwd()
-      ;};);
+      };);
 
       child.on('close', (code) => {
         if ( {
           console.log('Security fix completed ✓')) {
      {
-          console.log('Security fix completed ✓');
-  }} else {
-          console.log('Security fix failed ✗');}
+          console.log('Security fix completed ✓')}} else {
+          console.log('Security fix failed ✗')}
       })} catch (error) {
       console.error('Error running security fix:', error.message)}
   }
@@ -88,16 +86,14 @@ class SecurityAuditor {
      {
       clearInterval(this.intervalId)}
     
-    console.log('Security Auditor stopped');
-  }}
+    console.log('Security Auditor stopped')}}
 }
 
 // Start the auditor if run directly
 if ( {
   const auditor = new SecurityAuditor) {
      {
-  const auditor = new SecurityAuditor;
-  }(;);
+  const auditor = new SecurityAuditor}(;);
   
   // Handle graceful shutdown
   process.on('SIGINT', () => {

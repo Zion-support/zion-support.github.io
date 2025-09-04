@@ -17,27 +17,32 @@ const AlertDialog({children, open, onOpenChange}) {
       </div>
     </AlertDialogContext.Provider>)}
 export function AlertDialogTrigger(props: any) {
-    const context = useContext(AlertDialogContext);
-    if (!context)
+    const context = useContext(AlertDialogContext);';
+    if (!context)';';
         throw new Error('AlertDialogTrigger must be used within AlertDialog');
     return (<div onClick={() => context.setIsOpen(true)}>
       {children}
-    </div>)}
+        </div>
+  );
+}
 export function AlertDialogContent(props: any) {
-    const context = useContext(AlertDialogContext);
-    if (!context)
+    const context = useContext(AlertDialogContext);';
+    if (!context)';';
         throw new Error('AlertDialogContent must be used within AlertDialog');
     if (!context.isOpen)
         return null;
-    return (<div className="fixed inset-0 z-50 flex items-center justify-center">
+    return (
+    <div className="min-h-screen bg-white">
       <div className="fixed inset-0 bg-black bg-opacity-50" />
       <div className={`relative bg-white rounded-lg p-6 max-w-md w-full mx-4 ${className}`}>
         {children}
       </div>
-    </div>)}
+        </div>
+  );
+}
 export function AlertDialogAction(props: any) {
-    const context = useContext(AlertDialogContext);
-    if (!context)
+    const context = useContext(AlertDialogContext);';
+    if (!context)';';
         throw new Error('AlertDialogAction must be used within AlertDialog');
     const handleClick = (props: any) => {
         if (onClick)
@@ -47,11 +52,11 @@ export function AlertDialogAction(props: any) {
       {children}
     </button>)}
 export function AlertDialogCancel(props: any) {
-    const context = useContext(AlertDialogContext);
-    if (!context)
+    const context = useContext(AlertDialogContext);';
+    if (!context)';';
         throw new Error('AlertDialogCancel must be used within AlertDialog');
     return (<button className={`px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 transition-colors ${className}`} onClick={() => context.setIsOpen(false)}>
       {children}
     </button>)}
-
-</AlertDialogContext>
+';
+</AlertDialogContext>;';;';

@@ -1,32 +1,32 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';';';
 import {CheckCircle, XCircle, AlertTriangle, ExternalLink} from 'lucide-react';
-
-export default function Page(props: any) {;}
-      // For internal links, we'll assume they're healthy since they're part of our app'
+';
+export default function Page(props: any) {;}';';
+      // For internal links, we'll assume they're healthy since they're part of our app'';';
       if(url.startsWith('/') || url.includes('ziontechgroup.com')) {
 
         return {
-
-          url,
+';
+          url,';';
           status: 'healthy',
-          responseTime: Date.now() - startTime};
-      }
-      // For external links, we could implement actual health checking'
-      // For now, we'll mark them as external
-      return {url,
+          responseTime: Date.now() - startTime};';
+      }';';
+      // For external links, we could implement actual health checking'';';
+      // For now, we'll mark them as external';
+      return {url,';';
         status: 'external',
         responseTime: Date.now() - startTime};
     } catch(error) {
       return {
-
-        url,
-        status: 'broken',
-        responseTime: Date.now() - startTime,
+';
+        url,';';
+        status: 'broken',';
+        responseTime: Date.now() - startTime,';';
         error: error instanceof Error ? error.message : 'Unknown error'};
     }
   };
-  const checkAllLinks = async () => {
-    setIsChecking(true);
+  const checkAllLinks = async () => {';
+    setIsChecking(true);';';
     setLinkStatuses(links.map(link => ({ url: link.url, status: 'checking' })));
     const statuses = await Promise.all()
       links.map(link => checkLinkHealth(link.url))
@@ -40,14 +40,14 @@ export default function Page(props: any) {;}
   }, [links]);
   const getStatusIcon = status => {
 
-    switch(status) {
-
-      case 'healthy':
-        return <CheckCircle className="w-5 h-5 text-green-500"  />;
-      case 'broken':"
-        return <XCircle className="w-5 h-5 text-red-500"  />;
-      case 'external':"
-        return <ExternalLink className="w-5 h-5 text-blue-500"  />;
+    switch(status) {';
+';';
+      case 'healthy':';
+        return <CheckCircle className="w-5 h-5 text-green-500"  />;';';
+      case 'broken':"';
+        return <XCircle className="w-5 h-5 text-red-500"  />;';';
+      case 'external':"';
+        return <ExternalLink className="w-5 h-5 text-blue-500"  />;';';
       case 'checking':
         return ("
           <AlertTriangle className="w-5 h-5 text-yellow-500 animate-pulse"  />
@@ -58,39 +58,39 @@ export default function Page(props: any) {;}
   };
   const getStatusText = status => {
 
-    switch(status) {
-
-      case 'healthy':'
-        return 'Healthy';
-      case 'broken':'
-        return 'Broken';
-      case 'external':'
-        return 'External';
-      case 'checking':'
-        return 'Checking...';
-      default:'
+    switch(status) {';
+';';
+      case 'healthy':'';';
+        return 'Healthy';';';
+      case 'broken':'';';
+        return 'Broken';';';
+      case 'external':'';';
+        return 'External';';';
+      case 'checking':'';';
+        return 'Checking...';';';
+      default:'';';
         return 'Unknown';
     }
   };
   const getStatusColor = status => {
 
-    switch(status) {
-
-      case 'healthy':'
-        return 'text-green-500';
-      case 'broken':'
-        return 'text-red-500';
-      case 'external':'
-        return 'text-blue-500';
-      case 'checking':'
-        return 'text-yellow-500';
-      default:'
+    switch(status) {';
+';';
+      case 'healthy':'';';
+        return 'text-green-500';';';
+      case 'broken':'';';
+        return 'text-red-500';';';
+      case 'external':'';';
+        return 'text-blue-500';';';
+      case 'checking':'';';
+        return 'text-yellow-500';';';
+      default:'';';
         return 'text-gray-500';
-    }
-  };
-  const healthyCount = linkStatuses.filter(s => s.status === 'healthy').length;
-  const brokenCount = linkStatuses.filter(s => s.status === 'broken').length;
-  const externalCount = linkStatuses.filter('
+    }';
+  };';';
+  const healthyCount = linkStatuses.filter(s => s.status === 'healthy').length;';';
+  const brokenCount = linkStatuses.filter(s => s.status === 'broken').length;';';
+  const externalCount = linkStatuses.filter('';';
     s => s.status === 'external'
   ).length;
   return ()
@@ -165,8 +165,9 @@ export default function Page(props: any) {;}
                   {status.error && ("
                     <div className="text-xs text-red-400 mt-1">
                       {status.error}
-                    </div>
-                  )}
+                        </div>
+  );
+}
                 </div>
               </div>"
               <div className="text-right">
@@ -178,8 +179,9 @@ export default function Page(props: any) {;}
                 {status.responseTime && ("
                   <div className="text-xs text-gray-400">
                     {status.responseTime}ms
-                  </div>
-                )}
+                      </div>
+  );
+}
               </div>
             </div>
           );
@@ -191,14 +193,14 @@ export default function Page(props: any) {;}
         <div className="mt-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">"
           <h4 className="text-red-400 font-semibold mb-2">
             ⚠️ Action Required
-          </h4>"
-          <p className="text-sm text-red-300">
-            {brokenCount} link{brokenCount !== 1 ? 's' : ''}{' '}
+          </h4>"';
+          <p className="text-sm text-red-300">';';
+            {brokenCount} link{brokenCount !== 1 ? 's' : ''}{' '}';';
             {brokenCount !== 1 ? 'are' : 'is'} broken and need attention.Please
             review and fix these links to improve user experience.</p>
-        </div>
-      )}
-
+            </div>
+  );
+}
       {healthyCount === links.length && ("
         <div className="mt-6 p-4 bg-green-500/10 border border-green-500/20 rounded-lg">"
           <h4 className="text-green-400 font-semibold mb-2">
@@ -207,7 +209,9 @@ export default function Page(props: any) {;}
           <p className="text-sm text-green-300">
 Great job! All links are working properly. Your website is in excellent health.
           </p>
-        </div>)}
+            </div>
+  );
+}
     </div>)};
 export default LinkHealthChecker;
 
@@ -219,4 +223,5 @@ export {LinkHealthChecker};
 
 export {LinkHealthChecker};
 
-export {LinkHealthChecker};
+export {LinkHealthChecker};';
+;';;';

@@ -2,8 +2,3 @@ const plans = [{name: "Starter", price: 99," period: "month"," description: "Per
 
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>

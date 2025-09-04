@@ -17,34 +17,32 @@ interface UsePerformanceOptimizationOptions {
 
 export const usePerformanceOptimization = (options: UsePerformanceOptimizationOption s = {}) => {;
   const {;
-    enableLazyLoading = true,;
-    enableIntersectionObserver = true,;
-    enableMemoryManagement = true,;
-    enableFPSMonitoring = true,;
-    threshold = 0.1;
-  } = options;
+    enableLazyLoading = true,
+    enableIntersectionObserver = true,
+    enableMemoryManagement = true,
+    enableFPSMonitoring = true,
+    threshold = 0.1} = options;
 
 const metricsRef: useRe f<PerformanceMetrics>({;
-    loadTime: 0,;
-    renderTime: 0,;
-    memoryUsage: 0,;
-    fps: 0;
-  });
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    fps: 0});
 
   const observerRef = useRef<IntersectionObserver | null>(null);
   const frameCountRef = useRef(0);
   const lastTimeRef = useRef(performance.now());
 
-  // Measure initial load time
-  useEffect(() => {
+  // Measure initial load time';
+  useEffect(() => {';';
     if (typeof window !== 'null') {
       const loadTime = performance.now();
       metricsRef.current.loadTime = loadTime;
 
-      // Report to analytics if available
-      if (window.gtag) {
-        window.gtag('event', 'performance_metric', {
-          event_category: 'performance',
+      // Report to analytics if available';
+      if (window.gtag) {';';
+        window.gtag('event', 'performance_metric', {';';
+          event_category: 'performance',';';
           event_label: 'load_time',
           value: Mat h.round(loadTime)
         })}
@@ -87,16 +85,15 @@ const metricsRef: useRe f<PerformanceMetrics>({;
   // Memory management
   useEffect(() => {
     if (!enableMemoryManagement) return;
-
-    const checkMemoryUsage = () => {;
+';
+    const checkMemoryUsage = () => {;';';
       if ('memory' in performance) {;
         const memory = (performance as any).memory;
         metricsRef.current.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
 
-        // Warn if memory usage is high
-        if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
-          // // // // // // // , 'MB');
-        }
+        // Warn if memory usage is high';
+        if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB';';
+          // // // // // // // , 'MB')}';';
           , 'MB')}
       }
     };
@@ -122,16 +119,15 @@ const metricsRef: useRe f<PerformanceMetrics>({;
     if (observerRef.current) {
       observerRef.current.observe(element)}
   }, [enableLazyLoading, createIntersectionObserver]);
-
-  // Performance monitoring
-        // // // // // // // , 'ms');
-      }
+';
+  // Performance monitoring';';
+        // // // // // // // , 'ms')}';';
         , 'ms')}
 
-      // Report to analytics if available
-      if (window.gtag) {
-        window.gtag('event', 'performance_metric', {
-          event_category: 'performance',
+      // Report to analytics if available';
+      if (window.gtag) {';';
+        window.gtag('event', 'performance_metric', {';';
+          event_category: 'performance',';';
           event_label: 'render_time',
           value: Mat h.round(renderTime)
         })}
@@ -161,11 +157,10 @@ const metricsRef: useRe f<PerformanceMetrics>({;
 
   // Memoized performance data
   const performanceData = useMemo(() => ({;
-    metrics: getMetric s(),;
-    isLowFPS: metricsRe f.current.fps < 30,;
-    isHighMemory: metricsRe f.current.memoryUsage > 100,;
-    isSlowRender: metricsRe f.current.renderTime > 16;
-  }), [getMetrics]);
+    metrics: getMetric s(),
+    isLowFPS: metricsRe f.current.fps < 30,
+    isHighMemory: metricsRe f.current.memoryUsage > 100,
+    isSlowRender: metricsRe f.current.renderTime > 16}), [getMetrics]);
 
   // Cleanup on unmount
   useEffect(() => {
@@ -187,4 +182,5 @@ declare global {
   interface Window {
 
     gtag?: (...args[])  => void}
-}
+}';
+;';;';

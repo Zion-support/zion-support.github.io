@@ -1,0 +1,65 @@
+{
+  "timestamp": "2025-09-04T16:27:14.675Z",
+  "tests": [
+    {
+      "name": "File Structure",
+      "status": "passed",
+      "duration": 0,
+      "result": "File structure is valid"
+    },
+    {
+      "name": "Dependencies",
+      "status": "passed",
+      "duration": 1,
+      "result": "Dependencies are valid"
+    },
+    {
+      "name": "Automation Scripts",
+      "status": "passed",
+      "duration": 0,
+      "result": "Found 45 automation scripts"
+    },
+    {
+      "name": "Health Checks",
+      "status": "passed",
+      "duration": 121,
+      "result": "Health checks passed"
+    },
+    {
+      "name": "Security Scan",
+      "status": "passed",
+      "duration": 1027,
+      "result": "Security scan passed"
+    },
+    {
+      "name": "Performance Optimization",
+      "status": "passed",
+      "duration": 107,
+      "result": "Performance optimization completed"
+    },
+    {
+      "name": "Linting",
+      "status": "failed",
+      "duration": 2103,
+      "error": "Linting failed: Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:8671) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+    },
+    {
+      "name": "Type Checking",
+      "status": "failed",
+      "duration": 3141,
+      "error": "Type checking failed: spawnSync /bin/sh ENOBUFS"
+    },
+    {
+      "name": "Build Process",
+      "status": "failed",
+      "duration": 689,
+      "error": "Build failed: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\n[SyntaxError: Unexpected token '...']\n"
+    }
+  ],
+  "summary": {
+    "total": 9,
+    "passed": 6,
+    "failed": 3,
+    "skipped": 0
+  }
+}

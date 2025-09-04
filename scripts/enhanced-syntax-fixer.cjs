@@ -12,7 +12,7 @@ async function enhancedSyntaxFixer() {
     filesProcessed: [],
     fixesApplied: [],
     errors: []
- ; ;};
+ };
 
   try {
     // Get all TypeScript/JavaScript files
@@ -22,23 +22,20 @@ async function enhancedSyntaxFixer() {
       try {
         const originalContent = fs.readFileSync(file, 'utf8';);
         let content = originalConte;n;t;
-        let fixes = [;];
+        let fixes = [];
 
         // Fix 1: Ensure proper function closing braces
         if (&& !content.match(/}\s*export default/)) {
           const lines = content.split('\n') {
     && !content.match(/}\s*export default/)) {
-          const lines = content.split('\n';
-  });
+          const lines = content.split('\n'});
           const exportLineIndex = lines.findIndex(line => line.trim().startsWith('export default';););
           if ( {
             const prevLine = lines[exportLineIndex - 1].trim() {
      {
-            const prevLine = lines[exportLineIndex - 1].trim(;
-  });
+            const prevLine = lines[exportLineIndex - 1].trim(});
             if (&& !prevLine.endsWith(') {
-    && !prevLine.endsWith(';
-  }')) {
+    && !prevLine.endsWith('}')) {
               lines[exportLineIndex - 1] = prevLine + '}';
               content = lines.join('\n');
               fixes.push('Added missing closing brace before export')}
@@ -51,44 +48,40 @@ async function enhancedSyntaxFixer() {
         // Fix 3: Fix missing semicolons in object properties
         content = content.replace(/(\w+)\s*:\s*([^,}]+)(?=\s*[}])/g, (match, key, value) => {
           if (.endsWith(') {
-    .endsWith(';
-  }') && !value.trim().endsWith('}') && !value.trim().endsWith(')')) {
-            return `${key;}: ${value};`}
-          return match;});
+    .endsWith('}') && !value.trim().endsWith('}') && !value.trim().endsWith(')')) {
+            return `${key}: ${value};`}
+          return match});
 
         // Fix 4: Fix useEffect structure
         content = content.replace(/useEffect\(\(\)\s*=>\s*{([^}]+)}\s*,\s*\[\]\)/g, (match, body) => {
           if (.endsWith('}')) {
             return `useEffect(() => {${body) {
     .endsWith('}')) {
-            return `useEffect(() => {${body;
-  }}}, []);`}
-          return match;});
+            return `useEffect(() => {${body}}}, []);`}
+          return match});
 
         // Fix 5: Fix class method structure
         content = content.replace(/(\w+)\s*\([^)]*\)\s*{\s*([^}]+)\s*}/g, (match, methodName, body) => {
           if (&& !body.trim().endsWith(') {
-    && !body.trim().endsWith(';
-  }') && !body.trim().endsWith('}')) {
-            return `${methodName;}() { ${body}}`}
-          return match;});
+    && !body.trim().endsWith('}') && !body.trim().endsWith('}')) {
+            return `${methodName}() { ${body}}`}
+          return match});
 
         // Only write if changes were made
         if ( {
           fs.writeFileSync(file, content)) {
      {
-          fs.writeFileSync(file, content);
-  }
+          fs.writeFileSync(file, content)}
           fixReport.filesProcessed.push(file);
           fixReport.fixesApplied.push(...fixes);
-          console.log(`✅ Fixed ${fixes.length} issues in ${file}`);}
+          console.log(`✅ Fixed ${fixes.length} issues in ${file}`)}
 
       } catch (error) {
         fixReport.errors.push({
           file: file,
           error: error.message
         });
-        console.log(`❌ Error processing ${file}: ${error.message}`);}
+        console.log(`❌ Error processing ${file}: ${error.message}`)}
     }
 
     // Save report
@@ -101,13 +94,13 @@ async function enhancedSyntaxFixer() {
     console.log(`   - Errors: ${fixReport.errors.length}`);
     console.log(`📄 Report saved to: ${reportPath}`);
 
-    return fixReport;} catch (error) {
+    return fixReport} catch (error) {
     console.error('❌ Enhanced syntax fixer failed:', error.message);
     throw error}
 }
 
 function findCodeFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
-  const files = [;];
+  const files = [];
   
   function traverse(currentDir) {
     try {
@@ -126,8 +119,7 @@ function findCodeFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
           if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
             traverse(fullPath)}
         } else if (stat.isFile()) {
-          const ext = path.extname(item;
-  });
+          const ext = path.extname(item});
           if () {
             files.push(fullPath)}
         }
@@ -147,9 +139,8 @@ function findCodeFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
     }
   }
   
-  traverse(dir);
-  }
-  return files;}
+  traverse(dir)}
+  return files}
 
 // Run if called directly
 if ( {
@@ -159,5 +150,4 @@ module.exports = { enhancedSyntaxFixer }) {
      {
   enhancedSyntaxFixer().catch(console.error)}
 
-module.exports = { enhancedSyntaxFixer };
-  }
+module.exports = { enhancedSyntaxFixer }}

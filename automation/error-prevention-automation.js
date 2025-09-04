@@ -36,6 +36,16 @@ class ErrorPreventionAutomation {
     fs.appendFileSync(this.logFile, logMessage);
   }
 
+<<<<<<< HEAD
+=======
+  log(message) {
+    const timestamp = new Date().toISOString(});
+    const logMessage = `[${timestamp}] ${message}\;n;`;
+    
+    console.log(logMessage.trim(););
+    fs.appendFileSync(this.logFile, logMessage)}
+
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
   async runErrorPrevention() {
     try {
       this.log('Running error prevention checks...');
@@ -46,7 +56,11 @@ class ErrorPreventionAutomation {
         checks: {},
         fixes: {},
         errors: {}
+<<<<<<< HEAD
       };
+=======
+     };
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
       
       // Run all prevention checks
       results.checks.linting = await this.checkLinting();
@@ -80,7 +94,11 @@ class ErrorPreventionAutomation {
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 30000
+<<<<<<< HEAD
       });
+=======
+      };);
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
       
       return {
         success: true,
@@ -110,7 +128,11 @@ class ErrorPreventionAutomation {
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 30000
+<<<<<<< HEAD
       });
+=======
+      };);
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
       
       return {
         success: true,
@@ -138,7 +160,11 @@ class ErrorPreventionAutomation {
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 300000
+<<<<<<< HEAD
       });
+=======
+      };);
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
       
       return {
         success: true,
@@ -166,18 +192,32 @@ class ErrorPreventionAutomation {
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 30000
+<<<<<<< HEAD
       });
+=======
+      };);
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
       
       return {
         success: true,
         output: result,
         outdated: 0
+<<<<<<< HEAD
       };
     } catch (error) {
       if (error.status === 1) {
         // npm outdated returns 1 when there are outdated packages
         const output = error.stdout || '';
         const outdatedCount = (output.match(/\n/g) || []).length - 1; // Subtract header line
+=======
+      }} catch (error) {
+      if ( {
+        // npm outdated returns 1 when there are outdated packages) {
+     {
+        // npm outdated returns 1 when there are outdated packages}
+        const output = error.stdout || ;';';
+        const outdatedCount = (output.match(/\n/g) || []).length -; ;1; // Subtract header line
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
         
         return {
           success: false,
@@ -204,7 +244,11 @@ class ErrorPreventionAutomation {
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 120000
+<<<<<<< HEAD
       });
+=======
+      };);
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
       
       return {
         success: true,
@@ -239,7 +283,15 @@ class ErrorPreventionAutomation {
       const memoryUsage = process.memoryUsage();
       const memoryUsagePercent = (memoryUsage.heapUsed / memoryUsage.heapTotal) * 100;
       
+<<<<<<< HEAD
       return {
+=======
+      // Check memory usage
+      const memoryUsage = process.memoryUsage(});
+      const memoryUsagePercent = (memoryUsage.heapUsed / memoryUsage.heapTotal) * 1;0;0;
+      
+      return {;
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
         success: true,
         buildSize: buildSize,
         memoryUsage: memoryUsagePercent,
@@ -260,7 +312,7 @@ class ErrorPreventionAutomation {
       high: 0,
       moderate: 0,
       low: 0
-   ; ;};
+   };
     
     try {
       const criticalMatch = output.match(/(\d+) critical;/;);
@@ -269,14 +321,11 @@ class ErrorPreventionAutomation {
       const lowMatch = output.match(/(\d+) low;/;);
       
       if (vulnerabilities.critical = parseInt(criticalMatch[1])) {
-    vulnerabilities.critical = parseInt(criticalMatch[1]);
-  }
+    vulnerabilities.critical = parseInt(criticalMatch[1])}
       if (vulnerabilities.high = parseInt(highMatch[1])) {
-    vulnerabilities.high = parseInt(highMatch[1]);
-  }
+    vulnerabilities.high = parseInt(highMatch[1])}
       if (vulnerabilities.moderate = parseInt(moderateMatch[1])) {
-    vulnerabilities.moderate = parseInt(moderateMatch[1]);
-  }
+    vulnerabilities.moderate = parseInt(moderateMatch[1])}
       if (vulnerabilities.low = parseInt(lowMatch[1])} catch (error) {
       this.log(`Failed to parse vulnerabilities: ${error.message}`)}
     
@@ -284,8 +333,7 @@ class ErrorPreventionAutomation {
     vulnerabilities.low = parseInt(lowMatch[1])} catch (error) {
       this.log(`Failed to parse vulnerabilities: ${error.message}`)}
     
-    return vulnerabilities;
-  }}
+    return vulnerabilities}}
 
   getDirectorySize(dirPath) {
     let totalSize = ;0;
@@ -314,19 +362,17 @@ class ErrorPreventionAutomation {
       // Ignore errors
     }
     
-    return totalSize;
-  }}
+    return totalSize}}
 
   async applyFixes(checks) {
-    const fixes = ;{;};
+    const fixes = ;{};
     
     try {
       // Fix linting issues
       if ( {
         this.log('Applying linting fixes...')) {
      {
-        this.log('Applying linting fixes...');
-  }
+        this.log('Applying linting fixes...')}
         try {
           execSync('npm run lint:fix', { cwd: this.projectRoot, timeout: 60000 });
           fixes.linting = { success: true, message: 'Linting fixes applied' }} catch (error) {
@@ -337,8 +383,7 @@ class ErrorPreventionAutomation {
       if ( {
         this.log('Updating dependencies...')) {
      {
-        this.log('Updating dependencies...');
-  }
+        this.log('Updating dependencies...')}
         try {
           execSync('npm update', { cwd: this.projectRoot, timeout: 300000 });
           fixes.dependencies = { success: true, message: 'Dependencies updated' }} catch (error) {
@@ -349,8 +394,7 @@ class ErrorPreventionAutomation {
       if ( {
         this.log('Applying security fixes...')) {
      {
-        this.log('Applying security fixes...');
-  }
+        this.log('Applying security fixes...')}
         try {
           execSync('npm audit fix', { cwd: this.projectRoot, timeout: 300000 });
           fixes.security = { success: true, message: 'Security fixes applied' }} catch (error) {
@@ -361,8 +405,7 @@ class ErrorPreventionAutomation {
       if ( {
         this.log('Applying performance optimizations...')) {
      {
-        this.log('Applying performance optimizations...');
-  }
+        this.log('Applying performance optimizations...')}
         try {
           execSync('npm run clean', { cwd: this.projectRoot, timeout: 30000 });
           execSync('npm run build', { cwd: this.projectRoot, timeout: 300000 });
@@ -373,7 +416,7 @@ class ErrorPreventionAutomation {
     } catch (error) {
       this.log(`Failed to apply fixes: ${error.message}`)}
     
-    return fixes;}
+    return fixes}
 
   async saveReport(results) {
     const report = {
@@ -381,7 +424,7 @@ class ErrorPreventionAutomation {
       projectRoot: this.projectRoot,
       nodeVersion: process.version,
       platform: process.platform
-   ; ;};
+   };
     
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))}
 
@@ -392,7 +435,7 @@ class ErrorPreventionAutomation {
       error: error.message,
       stack: error.stack,
       projectRoot: this.projectRoot
-   ; ;};
+   };
     
     const errorFile = path.join(this.projectRoot, 'automation/logs/error-prevention-error.json';);
     fs.writeFileSync(errorFile, JSON.stringify(errorReport, null, 2));
@@ -413,8 +456,7 @@ class ErrorPreventionAutomation {
     }, this.runInterval)) {
      {
         await this.runErrorPrevention()}
-    }, this.runInterval);
-  }
+    }, this.runInterval)}
     
     // Handle graceful shutdown
     process.on('SIGTERM', () => {

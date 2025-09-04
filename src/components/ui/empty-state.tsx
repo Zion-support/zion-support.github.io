@@ -8,23 +8,23 @@ interface EmptyStateProps {;
   className?: string;
 ;
 }
-;
-const EmptyState: React.FC<EmptyStateProps> = ({;
-  title = 'No data available',;
-  description = 'There are no items to display at the moment.',;
-  icon,;
-  action,;
-  className = '';
-}) => {;
-  return (;
-    <div className={`text-center py-12 px-4 ${className}`}>;
-      {icon && (;
-        <div className="mx-auto h-12 w-12 text-gray-400 mb-4">;
+';
+const EmptyState: Reac t.FC<EmptyStateProps> = ({';';
+  title = 'No data available',';';
+  description = 'There are no items to display at the moment.',
+  icon,';
+  action,';';
+  className = ''
+}) => {
+  return (
+    <div className="min-h-screen bg-white">
+      {icon && (
+        <div className="mx-auto h-12 w-12 text-gray-400 mb-4">
           {icon}
-        </div>;
-      )}
-;
-      <h3 className="text-lg font-medium text-gray-900 mb-2">;
+            </div>
+  );
+}
+      <h3 className="text-lg font-medium text-gray-900 mb-2">
         {title}
 ;
       {description && (;
@@ -36,15 +36,16 @@ const EmptyState: React.FC<EmptyStateProps> = ({;
       {action && (;
         <div className="flex justify-center">;
           {action}
-        </div>;
-      )}
-    </div>;
+            </div>
+  );
+}
+    </div>
   );
 };
-;
-// Default empty state icon component;
-export const EmptyStateIcon: React.FC<{ className?: string }> = ({ className = '' }) => (;
-  <svg;
+';
+// Default empty state icon component';';
+export const EmptyStateIcon: Reac t.FC<{ className?: string }> = ({ className = '' }) => (
+  <svg
     className={`h-full w-full ${className}`}
     fill="none";
     viewBox="0 0 24 24";
@@ -60,5 +61,5 @@ export const EmptyStateIcon: React.FC<{ className?: string }> = ({ className = '
 );
 ;
 export default EmptyState;
-</path>;
-</EmptyStateProps>;
+</path>';
+</EmptyStateProps>;';;';

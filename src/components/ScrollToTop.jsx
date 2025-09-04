@@ -1,13 +1,13 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';';';
 import {motion, AnimatePresence} from 'framer-motion';
-
-export default function Page(props: any) {;
-            window.addEventListener('scroll', toggleVisibility);
+';
+export default function Page(props: any) {;';';
+            window.addEventListener('scroll', toggleVisibility);';';
             return () => window.removeEventListener('scroll', toggleVisibility)}, []);
         const scrollToTop = (props: any) => {
             window.scrollTo({
-
-                top: 0,
+';
+                top: 0,';';
                 behavior: 'smooth'})};
         return (className="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center z-50");
         aria - label;"
@@ -16,16 +16,16 @@ export default function Page(props: any) {;
         {opacity: 0, scale;
             0, y;
             20}
-    };
-
-    window.addEventListener('scroll', toggleVisibility);
+    };';
+';';
+    window.addEventListener('scroll', toggleVisibility);';';
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
   const scrollToTop = (props: any) => {
     window.scrollTo({
-
-      top: 0,
+';
+      top: 0,';';
       behavior: 'smooth'});
   };
 
@@ -81,13 +81,9 @@ export default function Page(props: any) {;
 export default ScrollToTop;
 
 export default ScrollToTop;
-export default ScrollToTop;
-export default ScrollToTop;
-export default ScrollToTop;
-export default ScrollToTop;
-export default ScrollToTop;
-export default ScrollToTop;
+export default ScrollToTop;';
+export default ScrollToTop;';';
 '"
 
-</motion>
-</AnimatePresence>
+</motion>';
+</AnimatePresence>;';;';

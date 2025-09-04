@@ -36,8 +36,7 @@ function fixAutomationFile(filePath) {
         break;
       case 'performance-optimizer':
         className = 'PerformanceOptimizer';
-        break;
-    }
+        break}
     
     // Fix class definition
     content = content.replace(/class \$?\d*[^\{]*\{/, `class ${className} {`);
@@ -48,27 +47,27 @@ function fixAutomationFile(filePath) {
     // Fix common syntax errors
     content = content
       // Remove extra semicolons after closing braces
-      .replace(/\[\];,/g, '[];')
-      .replace(/\{\};,/g, '{};')
-      .replace(/\);,/g, ');')
-      .replace(/\];,/g, '];')
+      .replace(/\[\],/g, '[];')
+      .replace(/\{\},/g, '{};')
+      .replace(/\),/g, ');')
+      .replace(/\],/g, '];')
       // Remove extra semicolons after closing braces
       .replace(/\[\];;/g, '[];')
       .replace(/\{\};;/g, '{};')
       .replace(/\);;/g, ');')
       .replace(/\];;/g, '];')
       // Fix malformed regex patterns
-      .replace(/\/[^\/]*\/gi,;/g, (match) => match.replace(/,$/, ''))
+      .replace(/\/[^\/]*\/gi,/g, (match) => match.replace(/,$/, ''))
       // Fix malformed function calls
       .replace(/return files\.filter\(file => ;/g, 'return files.filter(file => {')
       // Remove standalone semicolons
       .replace(/^\s*;\s*$/gm, '')
       // Fix object property syntax
-      .replace(/:\s*\[\];,/g, ': [];')
-      .replace(/:\s*\{\};,/g, ': {};')
+      .replace(/:\s*\[\],/g, ': [];')
+      .replace(/:\s*\{\},/g, ': {};')
       // Fix function call syntax
-      .replace(/\(\s*\[\];,/g, '([];')
-      .replace(/\(\s*\{\};,/g, '({};')
+      .replace(/\(\s*\[\],/g, '([];')
+      .replace(/\(\s*\{\},/g, '({};')
       // Fix malformed assignments
       .replace(/script1\.async: = true/g, 'script1.async = true')
       .replace(/script1\.src: =/g, 'script1.src =')
@@ -84,16 +83,12 @@ function fixAutomationFile(filePath) {
       // Add missing closing braces for filter functions
       .replace(/\.filter\(file => \{([^}]*)$/gm, (match, content) => {
         if (!content.includes('}')) {
-          return match + ' return true; }';
-        }
-        return match;
-      });
+          return match + ' return true}'}
+        return match});
     
     fs.writeFileSync(filePath, content);
-    console.log(`✅ Fixed ${filePath}`);
-  } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
-  }
+    console.log(`✅ Fixed ${filePath}`)} catch (error) {
+    console.error(`❌ Error fixing ${filePath}:`, error.message)}
 }
 
 // Fix all automation files

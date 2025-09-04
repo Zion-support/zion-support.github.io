@@ -17,10 +17,10 @@ interface FormItemProps {;
   className?: string;
 ;
 }
-;
-export function FormItem(props: any) {;
-  return (;
-    <div className={`space-y-2 ${className}`}>;
+
+export function FormItem(props: any) {
+  return (
+    <div className="min-h-screen bg-white">
       {children}
     </div>;
   );
@@ -49,10 +49,10 @@ interface FormFieldProps {;
   className?: string;
 ;
 }
-;
-export function FormField(props: any) {;
-  return (;
-    <div className={`space-y-1 ${className}`}>;
+
+export function FormField(props: any) {
+  return (
+    <div className="min-h-screen bg-white">
       {children}
     </div>;
   );
@@ -72,5 +72,5 @@ export function FormMessage(props: any) {;
       {children}
     </p>;
   );
-}
-</HTMLFormElement>;
+}';
+</HTMLFormElement>;';;';

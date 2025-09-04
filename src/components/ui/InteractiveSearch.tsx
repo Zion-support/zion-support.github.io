@@ -10,8 +10,8 @@ const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
   placeholder = "Search...", ;: any;
   onSearch, ;: any;
   className = "" ;: any;
-
-}) => {;
+';
+}) => {;';';
   const [query, setQuery] = useState<any>('');
 
   const handleSubmit = (props: any) => {;
@@ -48,5 +48,5 @@ const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
 };
 
 export default InteractiveSearch;}};
-</any>
-</InteractiveSearchProps>
+</any>';
+</InteractiveSearchProps>;';;';

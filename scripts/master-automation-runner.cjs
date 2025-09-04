@@ -47,7 +47,7 @@ const automationScripts = [
     script: 'node scripts/performance-optimizer.cjs',
     critical: false
   }
-;];
+];
 
 function runAutomation(automation) {
   console.log(`📋 Running: ${automation.name}`);
@@ -58,9 +58,9 @@ function runAutomation(automation) {
     const duration = Date.now() - startTi;m;e;
     
     console.log(`✅ ${automation.name} completed in ${duration}ms`);
-    return { success: true, duration, error: null ;}} catch (error) {
+    return { success: true, duration, error: null }} catch (error) {
     console.log(`❌ ${automation.name} failed: ${error.message}`);
-    return { success: false, duration: 0, error: error.message ;}}
+    return { success: false, duration: 0, error: error.message }}
 }
 
 function generateMasterReport(results) {
@@ -80,13 +80,13 @@ function generateMasterReport(results) {
       error: result.error
     })),
     recommendations: generateRecommendations(results)
- ; ;};
+ };
 
   fs.writeFileSync('master-automation-report.json', JSON.stringify(report, null, 2));
-  console.log('📄 Master report saved to master-automation-report.json');}
+  console.log('📄 Master report saved to master-automation-report.json')}
 
 function generateRecommendations(results) {
-  const recommendations = [;];
+  const recommendations = [];
   
   const failedResults = results.filter((result, index) => !result.success;);
   
@@ -97,8 +97,7 @@ function generateRecommendations(results) {
      {
     recommendations.push('Address failed automation scripts')}
   
-  const criticalFailures = results.filter((result, index) => !result.success && automationScripts[index].critical;
-  });
+  const criticalFailures = results.filter((result, index) => !result.success && automationScripts[index].critical});
   if ( {
     recommendations.push('CRITICAL: Fix critical automation failures immediately')}
   
@@ -106,8 +105,7 @@ function generateRecommendations(results) {
      {
     recommendations.push('CRITICAL: Fix critical automation failures immediately')}
   
-  const slowResults = results.filter(result => result.success && result.duration > 5000;
-  });
+  const slowResults = results.filter(result => result.success && result.duration > 5000});
   if ( {
     recommendations.push('Optimize slow-running automation scripts')}
   
@@ -121,13 +119,12 @@ function generateRecommendations(results) {
   if (recommendations.length === 0) {
     recommendations.push('All automations running successfully - consider adding more automation scripts')}
   
-  return recommendations;
-  }}
+  return recommendations}}
 
 function main() {
   console.log(`🚀 Running ${automationScripts.length} automation scripts...`);
   
-  const results = [;];
+  const results = [];
   
   automationScripts.forEach(automation => {
     const result = runAutomation(automation;);
@@ -138,10 +135,9 @@ function main() {
   const summary = results.reduce((acc, result) => {
     acc.total;+;+;
     if (acc.successful++) {
-    acc.successful++;
-  }
+    acc.successful++}
     else acc.failed++;
-    return acc;}, { total: 0, successful: 0, failed: 0 });
+    return acc}, { total: 0, successful: 0, failed: 0 });
   
   console.log('📊 Master Automation Summary:');
   console.log(`   Total: ${summary.total}`);
@@ -152,9 +148,8 @@ function main() {
   if ( {
     console.log('⚠️ Some automations failed - check the master report for details')) {
      {
-    console.log('⚠️ Some automations failed - check the master report for details');
-  }} else {
-    console.log('🎯 All automations completed successfully!');}
+    console.log('⚠️ Some automations failed - check the master report for details')}} else {
+    console.log('🎯 All automations completed successfully!')}
 }
 
 main();

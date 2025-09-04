@@ -21,8 +21,7 @@ class ESLintErrorFixer {
     this.fixesApplied = 0;
     this.fixesFailed = 0;
     this.fixesSkipped = 0;
-    this.fixedFiles = new Set();
-  }
+    this.fixedFiles = new Set()}
 
   log(level, message, data = null) {
     const timestamp = new Date().toISOString();
@@ -35,27 +34,20 @@ class ESLintErrorFixer {
     };
 
     if (level === 'error') {
-      console.error(`[${timestamp}] ERROR: ${message}`, data);
-    } else if (level === 'warn') {
-      console.warn(`[${timestamp}] WARN: ${message}`, data);
-    } else if (level === 'info') {
-      console.log(`[${timestamp}] INFO: ${message}`, data);
-    } else if (level === 'debug') {
-      console.log(`[${timestamp}] DEBUG: ${message}`, data);
-    }
+      console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {
+      console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === 'info') {
+      console.log(`[${timestamp}] INFO: ${message}`, data)} else if (level === 'debug') {
+      console.log(`[${timestamp}] DEBUG: ${message}`, data)}
 
-    this.writeToLog(logEntry);
-  }
+    this.writeToLog(logEntry)}
 
   writeToLog(logEntry) {
     const logDir = path.join(this.projectRoot, 'logs', 'pm2');
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
-    }
+      fs.mkdirSync(logDir, { recursive: true })}
 
     const logFile = path.join(logDir, 'eslint-error-fixer.log');
-    fs.appendFileSync(logFile, JSON.stringify(logEntry) + '\n');
-  }
+    fs.appendFileSync(logFile, JSON.stringify(logEntry) + '\n')}
 
   async start() {
     this.log('info', 'Starting ESLint Error Fixer Service...');
@@ -69,13 +61,9 @@ class ESLintErrorFixer {
       this.log('info', 'ESLint Error Fixer Service started successfully');
       
       setInterval(async () => {
-        await this.performESLintFixes();
-      }, this.fixInterval);
-      
-    } catch (error) {
+        await this.performESLintFixes()}, this.fixInterval)} catch (error) {
       this.log('error', 'Failed to start ESLint Error Fixer Service', error);
-      process.exit(1);
-    }
+      process.exit(1)}
   }
 
   ensureDirectories() {
@@ -83,10 +71,8 @@ class ESLintErrorFixer {
     dirs.forEach(dir => {
       const fullPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(fullPath)) {
-        fs.mkdirSync(fullPath, { recursive: true });
-      }
-    });
-  }
+        fs.mkdirSync(fullPath, { recursive: true })}
+    })}
 
   async performESLintFixes() {
     this.log('info', 'Starting ESLint error fixing process...');
@@ -97,8 +83,7 @@ class ESLintErrorFixer {
       
       if (errors.length === 0) {
         this.log('info', 'No ESLint errors found');
-        return;
-      }
+        return}
 
       this.log('info', `Found ${errors.length} ESLint errors`);
 
@@ -109,27 +94,21 @@ class ESLintErrorFixer {
         if (this.fixesApplied >= 100) break; // Limit fixes per run
         
         try {
-          await this.fixFileESLintErrors(filePath, fileErrors);
-        } catch (fixError) {
+          await this.fixFileESLintErrors(filePath, fileErrors)} catch (fixError) {
           this.log('error', `Failed to fix ESLint errors in ${filePath}`, fixError);
-          this.fixesFailed++;
-        }
+          this.fixesFailed++}
       }
 
       await this.generateFixReport();
-      this.log('info', `ESLint fixing completed. Applied: ${this.fixesApplied}, Failed: ${this.fixesFailed}, Skipped: ${this.fixesSkipped}`);
-      
-    } catch (error) {
-      this.log('error', 'Error during ESLint fixing process', error);
-    }
+      this.log('info', `ESLint fixing completed. Applied: ${this.fixesApplied}, Failed: ${this.fixesFailed}, Skipped: ${this.fixesSkipped}`)} catch (error) {
+      this.log('error', 'Error during ESLint fixing process', error)}
   }
 
   resetCounters() {
     this.fixesApplied = 0;
     this.fixesFailed = 0;
     this.fixesSkipped = 0;
-    this.fixedFiles.clear();
-  }
+    this.fixedFiles.clear()}
 
   async getESLintErrors() {
     try {
@@ -140,8 +119,7 @@ class ESLintErrorFixer {
             cwd: this.projectRoot, 
             encoding: 'utf8',
             stdio: 'pipe'
-          });
-        } catch (error) {
+          })} catch (error) {
           // Auto-fix completed, now get remaining errors
         }
       }
@@ -155,14 +133,11 @@ class ESLintErrorFixer {
       
       if (result) {
         const parsed = JSON.parse(result);
-        return parsed || [];
-      }
-      return [];
-    } catch (error) {
+        return parsed || []}
+      return []} catch (error) {
       // Parse stderr for errors
       const stderr = error.stderr ? error.stderr.toString() : '';
-      return this.parseESLintErrors(stderr);
-    }
+      return this.parseESLintErrors(stderr)}
   }
 
   parseESLintErrors(stderr) {
@@ -180,31 +155,25 @@ class ESLintErrorFixer {
           ruleId: 'ESLINT_ERROR',
           severity: 2,
           fix: false
-        });
-      }
+        })}
     });
     
-    return errors;
-  }
+    return errors}
 
   groupErrorsByFile(errors) {
     const errorsByFile = {};
     
     errors.forEach(error => {
       if (!errorsByFile[error.filePath]) {
-        errorsByFile[error.filePath] = [];
-      }
-      errorsByFile[error.filePath].push(error);
-    });
+        errorsByFile[error.filePath] = []}
+      errorsByFile[error.filePath].push(error)});
     
-    return errorsByFile;
-  }
+    return errorsByFile}
 
   async fixFileESLintErrors(filePath, fileErrors) {
     if (!fs.existsSync(filePath)) {
       this.fixesSkipped++;
-      return;
-    }
+      return}
 
     this.log('info', `Fixing ESLint errors in: ${filePath}`);
     
@@ -219,24 +188,21 @@ class ESLintErrorFixer {
       for (const error of sortedErrors) {
         if (error.line > lines.length) {
           this.fixesSkipped++;
-          continue;
-        }
+          continue}
 
         const lineIndex = error.line - 1;
         const line = lines[lineIndex];
         
         if (this.shouldSkipLine(line)) {
           this.fixesSkipped++;
-          continue;
-        }
+          continue}
 
         const fixedLine = await this.fixESLintError(line, error, lines, lineIndex);
         
         if (fixedLine !== line) {
           lines[lineIndex] = fixedLine;
           hasChanges = true;
-          this.fixesApplied++;
-        }
+          this.fixesApplied++}
       }
 
       if (hasChanges) {
@@ -252,19 +218,15 @@ class ESLintErrorFixer {
         
         // Verify the fix
         if (await this.verifyFix(filePath)) {
-          this.log('info', `Fix verification passed for: ${filePath}`);
-        } else {
+          this.log('info', `Fix verification passed for: ${filePath}`)} else {
           this.log('warn', `Fix verification failed for: ${filePath}`);
-          this.fixesFailed++;
-        }
+          this.fixesFailed++}
       } else {
-        this.fixesSkipped++;
-      }
+        this.fixesSkipped++}
       
     } catch (error) {
       this.log('error', `Error fixing ESLint errors in ${filePath}`, error);
-      this.fixesFailed++;
-    }
+      this.fixesFailed++}
   }
 
   shouldSkipLine(line) {
@@ -274,31 +236,22 @@ class ESLintErrorFixer {
            trimmed.startsWith('/*') || 
            trimmed.startsWith('*') ||
            trimmed.startsWith('import') ||
-           trimmed.startsWith('export');
-  }
+           trimmed.startsWith('export')}
 
   async fixESLintError(line, error, allLines, lineIndex) {
     let fixedLine = line;
     
     // Fix common ESLint errors
     if (error.message.includes('no-unused-vars') || error.message.includes('@typescript-eslint/no-unused-vars')) {
-      fixedLine = this.fixUnusedVariable(line, error);
-    } else if (error.message.includes('no-console')) {
-      fixedLine = this.fixConsoleStatement(line, error);
-    } else if (error.message.includes('prefer-const')) {
-      fixedLine = this.fixPreferConst(line, error);
-    } else if (error.message.includes('no-var')) {
-      fixedLine = this.fixNoVar(line, error);
-    } else if (error.message.includes('no-debugger')) {
-      fixedLine = this.fixDebuggerStatement(line, error);
-    } else if (error.message.includes('no-unreachable')) {
-      fixedLine = this.fixUnreachableCode(line, error, allLines, lineIndex);
-    } else if (error.message.includes('no-extra-semi')) {
-      fixedLine = this.fixExtraSemicolon(line, error);
-    }
+      fixedLine = this.fixUnusedVariable(line, error)} else if (error.message.includes('no-console')) {
+      fixedLine = this.fixConsoleStatement(line, error)} else if (error.message.includes('prefer-const')) {
+      fixedLine = this.fixPreferConst(line, error)} else if (error.message.includes('no-var')) {
+      fixedLine = this.fixNoVar(line, error)} else if (error.message.includes('no-debugger')) {
+      fixedLine = this.fixDebuggerStatement(line, error)} else if (error.message.includes('no-unreachable')) {
+      fixedLine = this.fixUnreachableCode(line, error, allLines, lineIndex)} else if (error.message.includes('no-extra-semi')) {
+      fixedLine = this.fixExtraSemicolon(line, error)}
 
-    return fixedLine;
-  }
+    return fixedLine}
 
   fixUnusedVariable(line, error) {
     // Extract variable name from error message
@@ -309,29 +262,23 @@ class ESLintErrorFixer {
     
     // Add underscore prefix to indicate intentionally unused
     if (line.includes(varName)) {
-      return line.replace(new RegExp(`\\b${varName}\\b`, 'g'), `_${varName}`);
-    }
+      return line.replace(new RegExp(`\\b${varName}\\b`, 'g'), `_${varName}`)}
     
-    return line;
-  }
+    return line}
 
   fixConsoleStatement(line, error) {
     // Comment out console statements
     if (line.includes('console.log') || line.includes('console.warn') || line.includes('console.error')) {
-      return `// ${line} // eslint-disable-line no-console`;
-    }
+      return `// ${line} // eslint-disable-line no-console`}
     
-    return line;
-  }
+    return line}
 
   fixPreferConst(line, error) {
     // Change 'let' to 'const' if the variable is never reassigned
     if (line.includes('let ')) {
-      return line.replace(/\blet\b/, 'const');
-    }
+      return line.replace(/\blet\b/, 'const')}
     
-    return line;
-  }
+    return line}
 
   fixNoVar(line, error) {
     // Change 'var' to 'const' or 'let'
@@ -341,21 +288,17 @@ class ESLintErrorFixer {
       if (varMatch) {
         const varName = varMatch[1];
         // Default to 'const' for now
-        return line.replace(/\bvar\b/, 'const');
-      }
+        return line.replace(/\bvar\b/, 'const')}
     }
     
-    return line;
-  }
+    return line}
 
   fixDebuggerStatement(line, error) {
     // Comment out debugger statements
     if (line.includes('debugger')) {
-      return `// ${line} // eslint-disable-line no-debugger`;
-    }
+      return `// ${line} // eslint-disable-line no-debugger`}
     
-    return line;
-  }
+    return line}
 
   fixUnreachableCode(line, error, allLines, lineIndex) {
     // Check if there's unreachable code after return/throw
@@ -365,18 +308,15 @@ class ESLintErrorFixer {
         const nextLine = allLines[i].trim();
         if (nextLine && !nextLine.startsWith('//') && !nextLine.startsWith('/*')) {
           // Comment out unreachable code
-          allLines[i] = `// ${allLines[i]} // eslint-disable-line no-unreachable`;
-        }
+          allLines[i] = `// ${allLines[i]} // eslint-disable-line no-unreachable`}
       }
     }
     
-    return line;
-  }
+    return line}
 
   fixExtraSemicolon(line, error) {
     // Remove extra semicolons
-    return line.replace(/;+$/, ';');
-  }
+    return line.replace(/;+$/, ';')}
 
   async createBackup(filePath) {
     try {
@@ -386,11 +326,8 @@ class ESLintErrorFixer {
       const backupPath = path.join(backupDir, `${fileName}.${timestamp}.backup`);
       
       fs.copyFileSync(filePath, backupPath);
-      this.log('debug', `Backup created: ${backupPath}`);
-      
-    } catch (error) {
-      this.log('warn', `Failed to create backup for: ${filePath}`, error.message);
-    }
+      this.log('debug', `Backup created: ${backupPath}`)} catch (error) {
+      this.log('warn', `Failed to create backup for: ${filePath}`, error.message)}
   }
 
   async verifyFix(filePath) {
@@ -407,11 +344,8 @@ class ESLintErrorFixer {
         return parsed.length === 0; // No errors means fix was successful
       }
       
-      return true;
-      
-    } catch (error) {
-      return false;
-    }
+      return true} catch (error) {
+      return false}
   }
 
   async generateFixReport() {
@@ -432,8 +366,7 @@ class ESLintErrorFixer {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
     this.log('info', `ESLint fix report generated: ${reportPath}`);
-    return report;
-  }
+    return report}
 
   generateRecommendations() {
     const recommendations = [];
@@ -443,42 +376,35 @@ class ESLintErrorFixer {
         priority: 'high',
         action: 'Review failed ESLint fixes manually',
         description: `${this.fixesFailed} ESLint fixes failed and need manual intervention`
-      });
-    }
+      })}
 
     if (this.fixesApplied > 0) {
       recommendations.push({
         priority: 'medium',
         action: 'Run ESLint to verify fixes',
         description: `${this.fixesApplied} ESLint fixes were applied, verify code quality`
-      });
-    }
+      })}
 
     if (this.fixesSkipped > 0) {
       recommendations.push({
         priority: 'low',
         action: 'Review skipped fixes',
         description: `${this.fixesSkipped} ESLint errors were skipped during fixing`
-      });
-    }
+      })}
 
-    return recommendations;
-  }
+    return recommendations}
 
   startContinuousFixing() {
     this.log('info', 'Starting continuous ESLint fixing...');
     
     setInterval(async () => {
-      await this.performESLintFixes();
-    }, 300000); // 5 minutes
+      await this.performESLintFixes()}, 300000); // 5 minutes
   }
 
   setupSignalHandlers() {
     process.on('SIGUSR2', async () => {
       this.log('info', 'Received SIGUSR2 signal, triggering immediate ESLint fix...');
-      await this.performESLintFixes();
-    });
-  }
+      await this.performESLintFixes()})}
 }
 
 // Start the service
@@ -487,27 +413,22 @@ const fixer = new ESLintErrorFixer();
 // Handle graceful shutdown
 process.on('SIGINT', () => {
   fixer.log('info', 'Received SIGINT, shutting down gracefully...');
-  process.exit(0);
-});
+  process.exit(0)});
 
 process.on('SIGTERM', () => {
   fixer.log('info', 'Received SIGTERM, shutting down gracefully...');
-  process.exit(0);
-});
+  process.exit(0)});
 
 // Handle uncaught errors
 process.on('uncaughtException', (error) => {
   fixer.log('error', 'Uncaught exception', error);
-  process.exit(1);
-});
+  process.exit(1)});
 
 process.on('unhandledRejection', (reason, promise) => {
   fixer.log('error', 'Unhandled rejection', { reason, promise });
-  process.exit(1);
-});
+  process.exit(1)});
 
 // Start the service
 fixer.start().catch(error => {
   fixer.log('error', 'Failed to start service', error);
-  process.exit(1);
-});
+  process.exit(1)});
