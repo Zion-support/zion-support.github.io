@@ -1,7 +1,10 @@
-#!/usr/bin/env node;
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
 function createValidReactComponent(filePath) {
   const fileName = path.basename(filePath, path.extname(filePath));
   const componentName = fileName
@@ -30,32 +33,15 @@ export default function ${componentName}() {
     </div>;
   );
 }
-`;,
+`;
 }
-;
+
 function fixFile(filePath) {
   try {
-  const content = fs.readFileSync(filePath, "utf8");
-    // If file is severely corrupted, rewrite it completely;
-    if (content.length < 50 || ;
-        content.includes("Parsing error") ||;
-        content.includes("Expression expected") ||;
-        content.includes("Declaration or statement expected") ||;
-        content.includes("Unterminated string literal") ||;
-        content.includes("; expected") ||;
-        content.includes("> expected") ||;
-        content.includes(", expected") ||;
-        content.includes(": expected") ||;
-        content.includes("( expected") ||;
-        content.includes("} expected") ||;
-        content.includes("Type expected") ||;
-        content.includes("Argument expression expected") ||;
-        content.includes("Unknown keyword or identifier") ||;
-        content.includes("Unexpected keyword or identifier") ||;
-        content.includes("Property or signature expected") ||;
-        content.includes("Component definition is missing display name") ||;
-        content.includes("Assign object to a variable before exporting as module default")) {
-  const newContent = createValidReactComponent(filePath);
+    const content = fs.readFileSync(filePath, "utf8");
+    // Basic heuristic: if the file is very short or empty, rewrite it
+    if (content.trim().length < 20) {
+      const newContent = createValidReactComponent(filePath);
       fs.writeFileSync(filePath, newContent);
       return true}
     ;
@@ -79,6 +65,7 @@ function processDirectory(dirPath) {
 }
       }
     }
+    return false;
   } catch (error) {
   console.error(`Error processing directory ${dirPath}:`, error.message);
 }
