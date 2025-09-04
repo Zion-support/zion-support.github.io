@@ -79,9 +79,9 @@ export default function Home(): any {
               Innovative Micro SaaS, AI Services & IT Solutions
             </p>
             <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
-              We deliver cutting-edge technology solutions with 60+ micro SaaS products, 
-              40+ advanced AI services, and 50+ comprehensive IT solutions. From cloud optimization 
-              to AI automation, we help businesses scale efficiently and securely with proven results.
+              We deliver cutting-edge technology solutions with 30+ micro SaaS products, 
+              32+ advanced AI services, and 32+ comprehensive IT solutions. From quantum computing 
+              to AI-powered drug discovery, we help businesses pioneer the future of technology.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-12" role="group" aria-label="Main navigation actions">
@@ -98,15 +98,15 @@ export default function Home(): any {
 
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-blue-400 mb-2">60+</h3>
+                <h3 className="text-2xl font-bold text-blue-400 mb-2">30+</h3>
                 <p className="text-slate-300">Micro SaaS Products</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-purple-400 mb-2">40+</h3>
+                <h3 className="text-2xl font-bold text-purple-400 mb-2">32+</h3>
                 <p className="text-slate-300">AI Services</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-green-400 mb-2">50+</h3>
+                <h3 className="text-2xl font-bold text-green-400 mb-2">32+</h3>
                 <p className="text-slate-300">IT Solutions</p>
               </div>
             </div>
@@ -129,10 +129,9 @@ export default function Home(): any {
                 </p>
                 <ul className="text-xs sm:text-sm text-slate-400 space-y-1 sm:space-y-2 mb-4 sm:mb-6">
                   <li>• Cloud Cost Guard (FinOps Assistant)</li>
-                  <li>• Smart Invoice Processing & AP Automation</li>
+                  <li>• Smart Contract Security Auditor</li>
                   <li>• AI-Powered Code Review Assistant</li>
-                  <li>• Dynamic Pricing Optimization Engine</li>
-                  <li>• Intelligent Supply Chain Monitor</li>
+                  <li>• Predictive Maintenance System</li>
                 </ul>
                 <Link href="/micro-saas" className="text-blue-400 hover:text-blue-300 font-semibold text-sm sm:text-base transition-colors">
                   View All Micro SaaS →
@@ -145,12 +144,11 @@ export default function Home(): any {
                   Advanced artificial intelligence solutions including healthcare diagnostics, 
                   cybersecurity threat detection, smart manufacturing, and 25+ more AI-powered services.
                 </p>
-                <ul className="text-xs sm:text-sm text-slate-400 space-y-1 sm:space-y-2 mb-4 sm:mb-6">
-                  <li>• AI-Powered Healthcare Diagnostics</li>
-                  <li>• AI-Powered Cybersecurity Threat Detection</li>
-                  <li>• Smart Manufacturing Quality Control</li>
-                  <li>• AI-Powered Smart City Solutions</li>
-                  <li>• Intelligent Process Mining & Optimization</li>
+                <ul className="text-slate-400 space-y-2 mb-6">
+                  <li>• AI-Powered Drug Discovery Platform</li>
+                  <li>• Quantum Machine Learning Platform</li>
+                  <li>• Autonomous Vehicle AI System</li>
+                  <li>• AI-Powered Climate Modeling</li>
                 </ul>
                 <Link href="/ai-services" className="text-purple-400 hover:text-purple-300 font-semibold text-sm sm:text-base transition-colors">
                   View All AI Services →
@@ -163,10 +161,11 @@ export default function Home(): any {
                   Comprehensive IT solutions including enterprise integration, high-performance computing, 
                   IoT platforms, digital transformation, and 30+ more enterprise-grade services.
                 </p>
-                <ul className="text-xs sm:text-sm text-slate-400 space-y-1 sm:space-y-2 mb-4 sm:mb-6">
-                  <li>• Enterprise Application Integration</li>
-                  <li>• Advanced Threat Intelligence Platform</li>
-                  <li>• High-Performance Computing Solutions</li>
+                <ul className="text-slate-400 space-y-2 mb-6">
+                  <li>• Quantum Computing Infrastructure</li>
+                  <li>• Metaverse & Web3 Infrastructure</li>
+                  <li>• Edge Computing & 5G Networks</li>
+                  <li>• Digital Twin Platform Development</li>
                 </ul>
                 <Link href="/it-services" className="text-green-400 hover:text-green-300 font-semibold text-sm sm:text-base transition-colors">
                   View All IT Services →
