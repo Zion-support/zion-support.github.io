@@ -45,6 +45,7 @@ const Dashboard = lazy(() => import('./pages/Dashboard').then(module => ({ defau
 const Login = lazy(() => import('./pages/Login').then(module => ({ default: module.default })));
 const BlogPage = lazy(() => import('./pages/BlogPage').then(module => ({ default: module.default })));
 const ComprehensivePricing = lazy(() => import('./pages/ComprehensivePricing').then(module => ({ default: module.default })));
+const UltimateServicesShowcase2025 = lazy(() => import('./pages/UltimateServicesShowcase2025').then(module => ({ default: module.default })));
 
 // New innovative services pages
 
@@ -101,6 +102,7 @@ export default function App() {
                 <Route path="/comprehensive-pricing" element={<ComprehensivePricing />} />
                 
                 {/* New innovative services routes */}
+                <Route path="/new-services-2025" element={<UltimateServicesShowcase2025 />} />
                 
                 {/* Service Routes */}
                 <Route path="/ai-services" element={<AIServices />} />

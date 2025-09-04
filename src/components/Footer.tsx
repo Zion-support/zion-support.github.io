@@ -175,7 +175,7 @@ export function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/comprehensive-pricing-guide-2025" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center group">
+                  <Link to="/comprehensive-pricing" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center group">
                     <TrendingUp className="w-4 h-4 mr-2" />
                     <span>Pricing Guide 2025</span>
                   </Link>
