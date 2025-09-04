@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface AlertProps {
   children: Reac t.ReactNode;
   className?: string;

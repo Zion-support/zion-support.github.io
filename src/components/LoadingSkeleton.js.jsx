@@ -1,4 +1,3 @@
-import React from 'react';
 import { cn } from '@/lib/utils';
 export function Skeleton({ className, width, height, rounded = 'md', animated = true }) {
     const roundedClasses = {

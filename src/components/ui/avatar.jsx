@@ -1,4 +1,3 @@
-import React from 'react';
 export function Avatar({ children, className = '' }) {
     return (<div className={`relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full ${className}`}>
       {children}
