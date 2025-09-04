@@ -33,7 +33,7 @@ import {
   Brain,
   Target
 } from 'lucide-react';
-import PageTransition from '../src/components/PageTransition';
+
 
 export default function ITServices() {
   const title = 'IT Services — Zion Tech Group';
@@ -527,7 +527,7 @@ export default function ITServices() {
   ];
 
   return (
-    <PageTransition>
+    <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description}  />
