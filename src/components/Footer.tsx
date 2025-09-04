@@ -1,49 +1,50 @@
 import React from 'react';
-import Link from 'next/link';
 
-export function Footer() {
-  const year = new Date().getFullYear();
+export default function Footer() {
   return (
-    <footer style={{ padding: '24px', background: '#1c2541', color: '#cbd5e1', marginTop: 40 }}>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: 16 }}>
+    <footer className="w-full border-t border-gray-200 bg-white mt-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid gap-6 md:grid-cols-4 text-sm">
         <div>
-          <h4 style={{ marginTop: 0, color: '#fff' }}>Company</h4>
-          <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-            <li><Link href="/about">About</Link></li>
-            <li><Link href="/team">Team</Link></li>
-            <li><Link href="/careers">Careers</Link></li>
-            <li><Link href="/partners">Partners</Link></li>
+          <h4 className="font-semibold text-gray-900 mb-2">Zion Tech Group</h4>
+          <p className="text-gray-600">364 E Main St STE 1008 Middletown DE 19709</p>
+          <p className="text-gray-600 mt-2">
+            <a className="text-blue-700 hover:underline" href="tel:+13024640950">+1 302 464 0950</a>
+          </p>
+          <p className="text-gray-600">
+            <a className="text-blue-700 hover:underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>
+          </p>
+        </div>
+        <div>
+          <h4 className="font-semibold text-gray-900 mb-2">Services</h4>
+          <ul className="space-y-1 text-gray-600">
+            <li><a className="hover:underline" href="/services">Micro SaaS</a></li>
+            <li><a className="hover:underline" href="/solutions">IT Solutions</a></li>
+            <li><a className="hover:underline" href="/services#ai">AI Services</a></li>
           </ul>
         </div>
         <div>
-          <h4 style={{ marginTop: 0, color: '#fff' }}>Resources</h4>
-          <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-            <li><Link href="/help">Help Center</Link></li>
-            <li><Link href="/faq">FAQ</Link></li>
-            <li><Link href="/status">Status</Link></li>
-            <li><Link href="/security">Security</Link></li>
+          <h4 className="font-semibold text-gray-900 mb-2">Company</h4>
+          <ul className="space-y-1 text-gray-600">
+            <li><a className="hover:underline" href="/about">About</a></li>
+            <li><a className="hover:underline" href="/pricing">Pricing</a></li>
+            <li><a className="hover:underline" href="/contact">Contact</a></li>
           </ul>
         </div>
         <div>
-          <h4 style={{ marginTop: 0, color: '#fff' }}>Legal</h4>
-          <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-            <li><Link href="/privacy">Privacy</Link></li>
-            <li><Link href="/terms">Terms</Link></li>
-            <li><Link href="/cookies">Cookies</Link></li>
-          </ul>
-        </div>
-        <div>
-          <h4 style={{ marginTop: 0, color: '#fff' }}>Get in touch</h4>
-          <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-            <li><Link href="/contact">Contact</Link></li>
-            <li><Link href="/request-quote">Request a Quote</Link></li>
+          <h4 className="font-semibold text-gray-900 mb-2">Legal</h4>
+          <ul className="space-y-1 text-gray-600">
+            <li><a className="hover:underline" href="https://ziontechgroup.com/privacy">Privacy Policy</a></li>
+            <li><a className="hover:underline" href="https://ziontechgroup.com/terms">Terms of Service</a></li>
           </ul>
         </div>
       </div>
-      <div style={{ marginTop: 16, textAlign: 'center' }}>© {year} Zion Tech Group. All rights reserved.</div>
+      <div className="border-t border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-xs text-gray-500 flex flex-col sm:flex-row items-center justify-between">
+          <p>© {new Date().getFullYear()} Zion Tech Group. All rights reserved.</p>
+          <a className="text-blue-700 hover:underline" href="https://ziontechgroup.com">ziontechgroup.com</a>
+        </div>
+      </div>
     </footer>
   );
 }
-
-export default Footer;
 
