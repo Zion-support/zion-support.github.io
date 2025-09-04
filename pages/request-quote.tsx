@@ -108,16 +108,16 @@ export default function RequestQuote() {
               </div>
               <h1 className="text-3xl font-bold text-white mb-4">Quote Request Submitted!</h1>
               <p className="text-slate-300 mb-6">
-                Thank you for your interest in our services. We've received your quote request and will get back to you within 24 hours with a detailed proposal tailored to your needs.
+                Thank you for your interest in our services. We&apos;ve received your quote request and will get back to you within 24 hours with a detailed proposal tailored to your needs.
               </p>
               <div className="space-y-4">
                 <div className="bg-white/5 rounded-lg p-4">
                   <h3 className="text-lg font-semibold text-white mb-2">What happens next?</h3>
                   <ul className="text-slate-300 space-y-1 text-left">
                     <li>• Our team will review your requirements</li>
-                    <li>• We'll prepare a customized proposal</li>
-                    <li>• You'll receive a detailed quote within 24 hours</li>
-                    <li>• We'll schedule a consultation call if needed</li>
+                    <li>• We&apos;ll prepare a customized proposal</li>
+                    <li>• You&apos;ll receive a detailed quote within 24 hours</li>
+                    <li>• We&apos;ll schedule a consultation call if needed</li>
                   </ul>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">

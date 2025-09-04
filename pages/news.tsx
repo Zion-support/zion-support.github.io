@@ -121,7 +121,7 @@ export default function News() {
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
               Stay informed about our latest innovations, partnerships, and industry developments. 
-              Discover how we're shaping the future of technology.
+              Discover how we&apos;re shaping the future of technology.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">

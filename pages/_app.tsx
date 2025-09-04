@@ -27,10 +27,7 @@ function Header(): any {
         }}>Zion Tech Group</Link>
         
         {/* Desktop Navigation */}
-        <div style={{ 
-          display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'center',
-          '@media (max-width: 768px)': { display: 'none' } as any
-        }}>
+        <div className="hidden md:flex gap-1 flex-wrap items-center">
           <Link href="/" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Home</Link>
           <Link href="/solutions" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Solutions</Link>
           <Link href="/services" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>All Services</Link>
@@ -47,10 +44,9 @@ function Header(): any {
 
         {/* Mobile Menu Button */}
         <button 
+          className="md:hidden bg-none border-none text-white text-2xl cursor-pointer"
           style={{ 
-            background: 'none', border: 'none', color: 'white', fontSize: '1.5rem', cursor: 'pointer',
-            display: 'none',
-            '@media (max-width: 768px)': { display: 'block' } as any
+            background: 'none', border: 'none', color: 'white', fontSize: '1.5rem', cursor: 'pointer'
           }}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle mobile menu"
