@@ -132,6 +132,23 @@ const Home = memo(() => {
                   Explore Services
                 </Link>
               </div>
+              <div>
+                <h4 className="text-white font-semibold mb-4">Services</h4>
+                <ul className="space-y-2">
+                  <li><Link href="/services/ai-machine-learning" className="text-gray-400 hover:text-white transition-colors text-sm">AI & Machine Learning</Link></li>
+                  <li><Link href="/services/micro-saas" className="text-gray-400 hover:text-white transition-colors text-sm">Micro SaaS Solutions</Link></li>
+                  <li><Link href="/services/ai-content-creation" className="text-gray-400 hover:text-white transition-colors text-sm">AI Content Creation</Link></li>
+                  <li><Link href="/services/email-automation" className="text-gray-400 hover:text-white transition-colors text-sm">Email Automation</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-white font-semibold mb-4">Contact</h4>
+                <div className="space-y-2 text-gray-400 text-sm">
+                  <p><strong>Phone:</strong> +1 302 464 0950</p>
+                  <p><strong>Email:</strong> kleber@ziontechgroup.com</p>
+                  <p><strong>Address:</strong> 364 E Main St STE 1008<br />Middletown, DE 19709</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>

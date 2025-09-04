@@ -20,63 +20,48 @@ export default function Blog() {
         </div>
       </section>
 
-      {/*   */}
-            {categories.map((category) => ("
-              <button key="{category}""
-                className="{`px-6" py-2 rounded-full font-semibold transition-colors ${'
-                  category === 'All' '
-                    ? 'bg-blue-600 text-white' '
-                    : 'bg-white text-gray-600 hover: bg-blue-50 hover:text-blue-600'}`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
+      <section className="py-16 max-w-6xl mx-auto px-6">
+        <div className="flex flex-wrap gap-2 mb-8">
+          {categories.map((category) => (
+            <button
+              key={category}
+              className="px-4 py-2 rounded-full border border-gray-300 text-gray-700 hover:bg-blue-50 hover:border-blue-300 transition-colors"
+            >
+              {category}
+            </button>
+          ))}
         </div>
-      </section>
 
-      {/*   */}"
-      <section className="`py-20`}">"
-        <div className="container" mx-auto px-4">"
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8>,
-            {blogPosts.map((post, index) => ("
-              <article key="{index}" className="bg-white" rounded-lg shadow-lg overflow-hidden hover: shadow-xl transition-shadow">"
-                <div className="p-6>"
-                  <div className="flex" items-center gap-2 mb-3">"
-                    <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-semibold>,
-                      {post.category}
-                    </span>
-                  </div>
-                  "
-                  <h2 className="text-xl" font-bold text-gray-900 mb-3 line-clamp-2">
-                    {post.title}
-                  </h2>
-                  "
-                  <p className="text-gray-600 mb-4 line-clamp-3>
-                    {post.excerpt}
-                  </p>
-                  "
-                  <div className="flex" items-center gap-4 text-sm text-gray-500 mb-4">"
-                    <div className="flex items-center gap-1>"
-                      <Calendar className="h-4" w-4" />
-                      {new Date(post.date).toLocaleDateString()}
-                    </div>"
-                    <div className="flex items-center gap-1>"
-                      <User className="h-4" w-4" />
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {blogPosts.map((post) => (
+            <article key={post.id} className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              <div className="p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded">
+                    {post.category}
+                  </span>
+                  <span className="text-gray-500 text-sm">{post.readTime}</span>
+                </div>
+                <h2 className="text-xl font-semibold text-gray-900 mb-3">{post.title}</h2>
+                <p className="text-gray-600 mb-4">{post.excerpt}</p>
+                <div className="flex items-center justify-between text-sm text-gray-500">
+                  <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-1">
+                      <User className="w-4 h-4" />
                       {post.author}
                     </div>
+                    <div className="flex items-center gap-1">
+                      <Calendar className="w-4 h-4" />
+                      {new Date(post.date).toLocaleDateString()}
+                    </div>
                   </div>
-                  "
-                  <Link href="{post.href}""
-                    className="inline-flex items-center text-blue-600 hover: text-blue-700 font-semibold>
-                  >
-                    Read More"
-                    <ArrowRight className="ml-2" h-4 w-4" />
+                  <Link href={`/blog/${post.id}`} className="flex items-center gap-1 text-blue-600 hover:text-blue-700">
+                    Read More <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
-              </article>,
-            ))}
-          </div>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
