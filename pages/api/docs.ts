@@ -49,34 +49,16 @@ class ApiDocumentationGenerator {
       components: {
         schemas: this.generateSchemas()
       }
-   ; ;};
-    return spec;}
+    };
+    return spec;
+  }
 
   private generatePaths() {
     const paths: Record<string, unknown> = {};
     this.endpoints.forEach(endpoint => {
-      if ( {
-        paths[endpoint.path] = {}}
-      paths[endpoint.path][endpoint.method.toLowerCase()] = {
-        summary: endpoint.description,
-        parameters: endpoint.parameters?.map(param => ({
-          name: param.name,
-          in: param.location,
-          required: param.required,
-          schema: { type: param.type },
-          description: param.description
-        })),
-        responses: endpoint.responses?.reduce((acc, response) => {
-          acc[response.status] = {
-            description: response.description,
-            content: response.schema ? {
-              'application/json': {
-                schema: response.schema
-              }
-            } : undefined
-          }) {
-     {
-        paths[endpoint.path] = {}}
+      if (!paths[endpoint.path]) {
+        paths[endpoint.path] = {};
+      }
       paths[endpoint.path][endpoint.method.toLowerCase()] = {
         summary: endpoint.description,
         parameters: endpoint.parameters?.map(param => ({
@@ -95,14 +77,15 @@ class ApiDocumentationGenerator {
               }
             } : undefined
           };
+          return acc;
+        }, {})
+      };
+    });
+    return paths;
   }
-          return acc;}, {} as any)
-      }});
-
-    return paths;}
 
   private generateSchemas() {
-    return {;
+    return {
       Error: {
         type: 'object',
         properties: {
