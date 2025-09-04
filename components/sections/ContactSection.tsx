@@ -75,9 +75,9 @@ const ContactSection: React.FC = () => {
             </div>
 
             <div className="mt-8">
-              <Button size="lg" asChild>
-                <a href="/contact">Send us a Message</a>
-              </Button>
+              <a href="/contact">
+                <Button size="lg">Send us a Message</Button>
+              </a>
             </div>
           </div>
 

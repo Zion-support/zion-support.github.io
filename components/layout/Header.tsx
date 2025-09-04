@@ -45,9 +45,9 @@ const Header: React.FC = () => {
 
           {/* Contact Button */}
           <div className="hidden md:block">
-            <Button asChild>
-              <Link href="/contact">Contact</Link>
-            </Button>
+            <Link href="/contact">
+              <Button>Contact</Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -77,9 +77,9 @@ const Header: React.FC = () => {
                 </Link>
               ))}
               <div className="pt-4">
-                <Button asChild className="w-full">
-                  <Link href="/contact">Contact</Link>
-                </Button>
+                <Link href="/contact">
+                  <Button className="w-full">Contact</Button>
+                </Link>
               </div>
             </div>
           </div>

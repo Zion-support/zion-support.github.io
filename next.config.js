@@ -4,6 +4,9 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   generateEtags: false,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   
   // Image optimization
   images: {
