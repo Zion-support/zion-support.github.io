@@ -49,10 +49,10 @@
   align-items: center;
 }
 
-@media (max-width: 1024px) {
-  .header-nav-links {
-    display: none;
-  }
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .header-nav-link {
@@ -86,59 +86,20 @@
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 
-/* Dropdown Styles */
-.dropdown-container {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-trigger {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: var(--header-bg);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--header-border);
-  border-radius: 8px;
-  padding: 8px 0;
-  min-width: 200px;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: all 0.2s ease;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-}
-
-.dropdown-menu.open {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.dropdown-item {
-  display: block;
-  padding: 8px 16px;
-  color: white;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  font-size: 0.9rem;
-}
-
-.dropdown-item:hover {
+.sidebar-toggle-button {
   background: rgba(255, 255, 255, 0.1);
-  color: #93c5fd;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
 }
 
-.dropdown-divider {
-  height: 1px;
-  background: var(--header-border);
-  margin: 8px 0;
+.sidebar-toggle-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .mobile-menu-button {
@@ -358,6 +319,35 @@
     grid-template-columns: 1fr;
     gap: 24px;
     padding: 32px 16px;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-nav-links {
+    display: none;
+  }
+  
+  .header-actions {
+    display: none;
+  }
+  
+  .mobile-menu-button {
+    display: block;
+  }
+  
+  .sidebar-toggle-button {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu-button {
+    display: none;
+  }
+  
+  .sidebar-toggle-button {
+    display: block;
   }
 }
 
