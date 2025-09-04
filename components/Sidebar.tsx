@@ -90,96 +90,74 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             </div>
             <button
               onClick={onClose}
-              className="text-slate-400 hover:text-white lg:hidden"
+              className="text-gray-400 hover:text-white lg:hidden"
             >
               ✕
             </button>
           </div>
 
-          {/* Main Navigation */}
-          <nav className="space-y-2 mb-8">
+          {/* Navigation */}
+          <nav className="space-y-2">
             {navigation.map((item) => (
               <div key={item.name}>
                 {item.children ? (
-                  <div>
-                    <button
-                      onClick={() => toggleSection('services')}
-                      className="w-full flex items-center justify-between px-3 py-2 text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
-                    >
-                      <div className="flex items-center space-x-3">
-                        <item.icon className="w-5 h-5" />
-                        <span>{item.name}</span>
-                      </div>
-                      {expandedSections.includes('services') ? (
-                        <ChevronDown className="w-4 h-4" />
-                      ) : (
-                        <ChevronRight className="w-4 h-4" />
-                      )}
-                    </button>
-                    {expandedSections.includes('services') && (
-                      <div className="ml-8 mt-2 space-y-1">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.name}
-                            href={child.href}
-                            className="block px-3 py-2 text-sm text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
-                            onClick={onClose}
-                          >
-                            {child.name}
-                          </Link>
-                        ))}
-                      </div>
+                  <button
+                    onClick={() => toggleSection(item.name.toLowerCase())}
+                    className="w-full flex items-center justify-between p-3 text-gray-300 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
+                  >
+                    <div className="flex items-center space-x-3">
+                      <item.icon className="w-5 h-5" />
+                      <span>{item.name}</span>
+                    </div>
+                    {expandedSections.includes(item.name.toLowerCase()) ? (
+                      <ChevronDown className="w-4 h-4" />
+                    ) : (
+                      <ChevronRight className="w-4 h-4" />
                     )}
-                  </div>
+                  </button>
                 ) : (
                   <Link
                     href={item.href}
-                    className="flex items-center space-x-3 px-3 py-2 text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
-                    onClick={onClose}
+                    className="flex items-center space-x-3 p-3 text-gray-300 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
                   >
                     <item.icon className="w-5 h-5" />
                     <span>{item.name}</span>
                   </Link>
+                )}
+                
+                {item.children && expandedSections.includes(item.name.toLowerCase()) && (
+                  <div className="ml-8 space-y-1">
+                    {item.children.map((child) => (
+                      <Link
+                        key={child.name}
+                        href={child.href}
+                        className="block p-2 text-sm text-gray-400 hover:text-white hover:bg-slate-800 rounded transition-colors"
+                      >
+                        {child.name}
+                      </Link>
+                    ))}
+                  </div>
                 )}
               </div>
             ))}
           </nav>
 
           {/* Quick Links */}
-          <div className="border-t border-slate-700 pt-6">
-            <h3 className="text-slate-400 text-sm font-semibold uppercase tracking-wider mb-4">
+          <div className="mt-8">
+            <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
               Quick Links
             </h3>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="space-y-1">
               {quickLinks.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="flex flex-col items-center p-3 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
-                  onClick={onClose}
+                  className="flex items-center space-x-3 p-2 text-sm text-gray-400 hover:text-white hover:bg-slate-800 rounded transition-colors"
                 >
-                  <link.icon className="w-5 h-5 mb-1" />
-                  <span className="text-xs text-center">{link.name}</span>
+                  <link.icon className="w-4 h-4" />
+                  <span>{link.name}</span>
                 </Link>
               ))}
-            </div>
-          </div>
-
-          {/* Contact Info */}
-          <div className="border-t border-slate-700 pt-6 mt-6">
-            <h3 className="text-slate-400 text-sm font-semibold uppercase tracking-wider mb-4">
-              Contact
-            </h3>
-            <div className="space-y-2 text-sm">
-              <div className="text-slate-300">
-                📞 <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300">+1 302 464 0950</a>
-              </div>
-              <div className="text-slate-300">
-                ✉️ <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">kleber@ziontechgroup.com</a>
-              </div>
-              <div className="text-slate-300">
-                📍 Middletown DE 19709
-              </div>
             </div>
           </div>
         </div>
