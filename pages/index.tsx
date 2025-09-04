@@ -7,8 +7,10 @@ import MainLayout from '../components/layout/MainLayout';
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' },
-  { number: '500+', label: 'Projects Completed' },
-  { number: '50+', label: 'Expert Team Members' }
+  { number: '120+', label: 'Services Available' },
+  { number: '1000+', label: 'Projects Completed' },
+  { number: '75+', label: 'Expert Team Members' },
+  { number: '50+', label: 'Countries Served' }
 ];
 
 const services = [
@@ -34,49 +36,6 @@ const services = [
 
 export default function HomePage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
-      <Head>
-        <title>Zion Tech Solutions - Leading Technology Solutions Provider</title>
-        <meta name="description" content="Zion Tech Solutions provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence." />
-      </Head>
-      
-      <main className="container mx-auto px-4 py-16">
-        <div className="text-center text-white">
-          <h1 className="text-5xl font-bold mb-6">
-            Welcome to Zion Tech Solutions
-          </h1>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Leading technology solutions provider helping businesses transform their digital presence 
-            with cutting-edge AI, cloud architecture, and innovative development services.
-          </p>
-          
-          <div className="flex justify-center gap-6 mb-12">
-            <Link href="/services">
-              <span className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                Our Services
-              </span>
-            </Link>
-            <Link href="/contact">
-              <span className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors">
-                Get in Touch
-              </span>
-            </Link>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">AI Development</h3>
-              <p>Custom AI solutions and machine learning models for your business needs.</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cloud Architecture</h3>
-              <p>Scalable cloud solutions and infrastructure design for modern applications.</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Digital Transformation</h3>
-              <p>End-to-end digital transformation services to modernize your business.</p>
-=======
     <MainLayout>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 
@@ -103,9 +62,9 @@ export default function HomePage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services. 
+              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, edge computing, quantum computing, and digital transformation services. 
               <br className="hidden md:block" />
-              <span className="text-blue-300 font-semibold">Contact us: +1 302 464 0950 | kleber@ziontechgroup.com</span>
+              <span className="text-blue-300 font-semibold">120+ Services Available | Contact us: +1 302 464 0950 | kleber@ziontechgroup.com</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
@@ -114,7 +73,6 @@ export default function HomePage() {
               <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
                 Explore Services
               </Link>
->>>>>>> 86e2a4cca918c6ff376b51aa8638f7a375ebfe57
             </div>
           </motion.div>
         </div>
@@ -177,7 +135,7 @@ export default function HomePage() {
       {/* Stats Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
