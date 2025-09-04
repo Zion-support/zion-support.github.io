@@ -1,21 +1,24 @@
 {
 <<<<<<< HEAD
-  "timestamp": "2025-09-03T20:36:49.970Z",
+  "timestamp": "2025-09-03T23:23:48.436Z",
   "bundleSize": {
     ".next": {
-      "size": 0,
-      "sizeMB": "0.00"
-=======
-  "timestamp": "2025-09-03T20:00:06.726Z",
-  "bundleSize": {
-    ".next": {
-      "size": 28534499,
-      "sizeMB": "27.21"
->>>>>>> 2a05819f8ad7f9ba18431a36ff65088a0d741ce0
+      "size": 48331706,
+      "sizeMB": "46.09"
     },
     "node_modules": {
-      "size": 0,
+      "size": 820676108,
+=======
+  "timestamp": "2025-09-04T00:00:12.166Z",
+  "bundleSize": {
+    ".next": {
+      "size": 139,
       "sizeMB": "0.00"
+    },
+    "node_modules": {
+      "size": 820678240,
+>>>>>>> 2c58a75d9c0daeb808b0155ba4d9e05ed9958f1f
+      "sizeMB": "782.66"
     }
   },
   "fileCounts": {

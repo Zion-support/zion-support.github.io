@@ -1066,6 +1066,226 @@ export default function AIServices() {
         'Automated sustainability reporting',
         'Improved environmental compliance'
       ]
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Fraud Detection & Prevention',
+      description: 'Advanced machine learning models for real-time fraud detection across financial transactions and digital platforms.',
+      features: [
+        'Real-time transaction monitoring and analysis',
+        'Behavioral pattern recognition and anomaly detection',
+        'Multi-layer fraud scoring algorithms',
+        'Identity verification and authentication',
+        'Risk assessment and automated decision making',
+        'Continuous learning and model adaptation'
+      ],
+      pricing: '$5,000 – $50,000 setup',
+      perUnit: '$0.01 – $0.10 per transaction',
+      timeline: '8–12 weeks',
+      benefits: [
+        '99.8% fraud detection accuracy',
+        '75% reduction in false positives',
+        'Real-time transaction protection',
+        'Reduced financial losses and chargebacks'
+      ]
+    },
+    {
+      icon: TrendingUp,
+      name: 'AI-Driven Dynamic Pricing Engine',
+      description: 'Intelligent pricing optimization using market data, competitor analysis, and demand forecasting.',
+      features: [
+        'Real-time market analysis and competitor monitoring',
+        'Demand forecasting and price elasticity modeling',
+        'Dynamic pricing rules and optimization',
+        'A/B testing and price performance tracking',
+        'Multi-channel pricing synchronization',
+        'Revenue and margin optimization'
+      ],
+      pricing: '$3,000 – $25,000 project',
+      perUnit: '$0.001 – $0.05 per price update',
+      timeline: '6–10 weeks',
+      benefits: [
+        '15-25% increase in revenue',
+        'Optimized profit margins',
+        'Competitive market positioning',
+        'Automated pricing decisions'
+      ]
+    },
+    {
+      icon: Search,
+      name: 'Intelligent Search & Recommendation Engine',
+      description: 'AI-powered search and personalized recommendation systems for e-commerce and content platforms.',
+      features: [
+        'Semantic search and natural language understanding',
+        'Personalized recommendation algorithms',
+        'Real-time user behavior analysis',
+        'Content similarity and clustering',
+        'A/B testing and performance optimization',
+        'Multi-modal search (text, image, voice)'
+      ],
+      pricing: '$4,000 – $30,000 setup',
+      perUnit: '$0.001 – $0.01 per search/recommendation',
+      timeline: '6–12 weeks',
+      benefits: [
+        '40% improvement in conversion rates',
+        'Enhanced user engagement',
+        'Personalized customer experience',
+        'Increased average order value'
+      ]
+    },
+    {
+      icon: Shield,
+      name: 'AI Cybersecurity Threat Detection',
+      description: 'Advanced threat detection and response system using machine learning for network security and incident response.',
+      features: [
+        'Real-time network traffic analysis',
+        'Behavioral anomaly detection',
+        'Malware and intrusion detection',
+        'Automated threat response and mitigation',
+        'Security incident classification and prioritization',
+        'Continuous learning and threat intelligence'
+      ],
+      pricing: '$10,000 – $100,000 setup',
+      perUnit: 'Custom pricing based on network size',
+      timeline: '12–16 weeks',
+      benefits: [
+        '95% threat detection accuracy',
+        'Reduced response time to incidents',
+        'Proactive security posture',
+        'Minimized security breach impact'
+      ]
+    },
+    {
+      icon: Code,
+      name: 'AI-Powered Code Generation & Review',
+      description: 'Intelligent code generation, automated testing, and code quality analysis for software development teams.',
+      features: [
+        'Automated code generation from specifications',
+        'Code quality analysis and optimization',
+        'Bug detection and security vulnerability scanning',
+        'Automated test case generation',
+        'Code documentation and commenting',
+        'Performance optimization suggestions'
+      ],
+      pricing: '$2,000 – $15,000 setup',
+      perUnit: '$0.01 – $0.50 per code review',
+      timeline: '4–8 weeks',
+      benefits: [
+        '50% faster development cycles',
+        'Improved code quality and security',
+        'Reduced technical debt',
+        'Enhanced developer productivity'
+      ]
+    },
+    {
+      icon: Database,
+      name: 'AI Data Quality & Governance Platform',
+      description: 'Intelligent data quality monitoring, cleansing, and governance with automated data pipeline management.',
+      features: [
+        'Automated data quality assessment',
+        'Data cleansing and standardization',
+        'Data lineage tracking and governance',
+        'Anomaly detection in data pipelines',
+        'Compliance monitoring and reporting',
+        'Data catalog and metadata management'
+      ],
+      pricing: '$5,000 – $40,000 project',
+      perUnit: 'Custom pricing based on data volume',
+      timeline: '8–14 weeks',
+      benefits: [
+        '90% improvement in data quality',
+        'Automated data governance',
+        'Reduced data processing time',
+        'Enhanced regulatory compliance'
+      ]
+    },
+    {
+      icon: Brain,
+      name: 'Conversational AI & Virtual Assistants',
+      description: 'Advanced conversational AI systems with natural language understanding and multi-modal interaction capabilities.',
+      features: [
+        'Natural language processing and understanding',
+        'Multi-modal interaction (voice, text, visual)',
+        'Context-aware conversation management',
+        'Integration with business systems and APIs',
+        'Personalized user experiences',
+        'Continuous learning and improvement'
+      ],
+      pricing: '$8,000 – $60,000 setup',
+      perUnit: '$0.02 – $0.30 per conversation',
+      timeline: '10–16 weeks',
+      benefits: [
+        '24/7 customer service availability',
+        '80% reduction in support costs',
+        'Improved customer satisfaction',
+        'Scalable customer interactions'
+      ]
+    },
+    {
+      icon: TrendingUp,
+      name: 'AI-Powered Supply Chain Optimization',
+      description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics planning.',
+      features: [
+        'Demand forecasting and inventory optimization',
+        'Supply chain risk assessment and mitigation',
+        'Logistics route optimization',
+        'Supplier performance analysis',
+        'Real-time supply chain visibility',
+        'Sustainability and carbon footprint optimization'
+      ],
+      pricing: '$15,000 – $150,000 project',
+      perUnit: 'Custom pricing based on complexity',
+      timeline: '16–24 weeks',
+      benefits: [
+        '20-30% reduction in inventory costs',
+        'Improved delivery performance',
+        'Enhanced supply chain resilience',
+        'Optimized logistics operations'
+      ]
+    },
+    {
+      icon: Eye,
+      name: 'AI Medical Imaging & Diagnostics',
+      description: 'Advanced medical imaging analysis using computer vision for diagnostic assistance and healthcare automation.',
+      features: [
+        'Medical image analysis and interpretation',
+        'Disease detection and classification',
+        'Diagnostic assistance and recommendations',
+        'Medical report generation',
+        'DICOM integration and workflow automation',
+        'Regulatory compliance and quality assurance'
+      ],
+      pricing: '$25,000 – $200,000 project',
+      perUnit: '$1 – $10 per image analysis',
+      timeline: '20–32 weeks',
+      benefits: [
+        '95% diagnostic accuracy',
+        'Faster diagnosis and treatment',
+        'Reduced healthcare costs',
+        'Improved patient outcomes'
+      ]
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Mental Health & Wellness Platform',
+      description: 'Intelligent mental health monitoring and intervention system with personalized therapy recommendations.',
+      features: [
+        'Mental health screening and assessment',
+        'Mood tracking and sentiment analysis',
+        'Personalized therapy recommendations',
+        'Crisis detection and intervention',
+        'Progress monitoring and analytics',
+        'Integration with healthcare systems'
+      ],
+      pricing: '$10,000 – $80,000 setup',
+      perUnit: '$5 – $50 per user/month',
+      timeline: '12–18 weeks',
+      benefits: [
+        'Early mental health intervention',
+        'Personalized treatment plans',
+        'Improved patient engagement',
+        'Reduced healthcare costs'
+      ]
     }
   ];
 
