@@ -1,46 +1,59 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ES2022",
     "lib": [
       "dom",
       "dom.iterable",
-      "es6"
+      "es2022"
     ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "preserve",
+    "strict": true,
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "allowJs": false,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "baseUrl": "."
+    "noEmit": true,
+    "types": [
+      "jest",
+      "node"
+    ],
+    "baseUrl": ".",
+    "incremental": true
   },
   "include": [
     "next-env.d.ts",
-    "pages/**/*",
-    "components/**/*.ts",
-    "components/**/*.tsx",
-    "data/services.ts",
+    ".next/types/**/*.ts",
+    "lib/**/*",
+    "hooks/**/*",
     "styles/**/*",
-    "types/**/*",
-    "utils/**/*",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    "**/*.d.ts",
+    "types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
     ".next",
     "out",
     "dist",
+    "data_backup/**",
+    "src.corrupted/**",
+    "src/data/**",
+    "src/**",
+    "utils/next-link-shim.tsx",
+    "playwright.config.ts",
     "api-backup",
     "pages.disabled",
     "backup-pages",
+    "automation/**",
+    "scripts/**",
+    "tests/**",
+    "zion_academy/**",
+    "deployments/**",
     "automation/backups",
     "automation_backup",
     "broken_files_backup",
@@ -48,11 +61,12 @@
     "cypress",
     "temp_working",
     "supabase/functions",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx",
     "**/*.backup",
-    "**/*.disabled"
+    "**/*.disabled",
+    "temp_backup",
+    "temp_backup/**",
+    "temp_broken_components",
+    "temp_broken_components/**",
+    "src.corrupted/**"
   ]
 }

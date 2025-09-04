@@ -1,272 +1,127 @@
-import React { useEffect } from "react";
-interface AccessibilityEnhancerProps {;
-  children: React.ReactNode,,;
-   skipToContent?: boolean,;
-   focusManagement?: boolean,;
-   keyboardNavigation?: boolea,n}
-;
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({,;
-  childre,n, skipToContent: = true,;
-  focusManagement = true, keyboardNavigation = true}) => {;
-  useEffect(() => {;
-    // comment;
-    if: (skipToContent) {,;
-      const handleSkipToContent = (e: KeyboardEvent) => {,";
-if: (e.key === "Tab" && !e.shiftKey) {",";
-          const skipLink = document.getElementById("skip-to-content"),;
-          if: (skipLink && document.activeElement === document.body) {,            skipLink.focus()}
-;,
+import React, { useEffect } from 'react';
+
+// Hook for keyboard navigation
+export const useKeyboardNavigation = () => {
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      // Skip to main content
+      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
+        const main = document.querySelector('main');
+        if (main) {
+          (main as HTMLElement).focus();
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
+};
+
+// Component for skip links
+export const SkipLinks: React.FC = () => (
+  <div className="sr-only focus-within:not-sr-only">
+    <a
+      href="#main-content"
+      className="absolute top-0 left-0 bg-blue-600 text-white px-4 py-2 rounded-br-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+    >
+      Skip to main content
+    </a>
+    <a
+      href="#navigation"
+      className="absolute top-0 left-20 bg-blue-600 text-white px-4 py-2 rounded-br-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+    >
+      Skip to navigation
+    </a>
+  </div>
+);
+
+// Enhanced button component with accessibility
+interface AccessibleButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: 'primary' | 'secondary' | 'danger';
+  size?: 'sm' | 'md' | 'lg';
+  loading?: boolean;
+  children: React.ReactNode;
 }
-;
-      document.addEventListener("keydown", handleSkipToContent);,
+
+export const AccessibleButton: React.FC<AccessibleButtonProps> = ({
+  variant = 'primary',
+  size = 'md',
+  loading = false,
+  children,
+  className = '',
+  disabled,
+  ...props
+}) => {
+  const baseClasses = 'font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
+  
+  const variantClasses = {
+    primary: 'bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500',
+    secondary: 'bg-gray-600 hover:bg-gray-700 text-white focus:ring-gray-500',
+    danger: 'bg-red-600 hover:bg-red-700 text-white focus:ring-red-500'
+  };
+  
+  const sizeClasses = {
+    sm: 'px-3 py-1.5 text-sm',
+    md: 'px-4 py-2 text-base',
+    lg: 'px-6 py-3 text-lg'
+  };
+
+  return (
+    <button
+      className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
+      disabled={disabled || loading}
+      aria-disabled={disabled || loading}
+      {...props}
+    >
+      {loading ? (
+        <span className="flex items-center">
+          <div className="animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent mr-2" />
+          Loading...
+        </span>
+      ) : (
+        children
+      )}
+    </button>
+  );
+};
+
+// Focus trap component
+interface FocusTrapProps {
+  children: React.ReactNode;
+  active: boolean;
 }
-      return: () => document.removeEventListener("keydown", handleSkipToContent)}";
-  keyboardNavigation?: boolean}
-;
-  children,;
-  skipToContent = true,;
-  focusManagement = true,;
-  keyboardNavigation = true,;
-  keyboardNavigation = true}) => {;
-    // comment;
-if (skipToContent) {";
-      const handleSkipToContent = (e: KeyboardEvent) => {",;
-        if (e.key === "Tab" && !e.shiftKey) {",,;
-          if (skipLink && document.activeElement === document.body) {}
-;
-";
-      return () => document.removeEventListener("keydown", handleSkipToContent)}";
-";
-    ;
-    return undefined}, [skipToContent]);,
-}
-    // comment;
-if: (focusManagement) {;
-      const handleFocusManagement = () => {,;
-        // comment;
-        const modals = document.querySelectorAll("[role="dialog"]"),;
-        modals.forEach(modal: => {,;
-          const focusableElements = modal.querySelectorAll(",,;
-            "button, [href], input, select, textarea, [tabindex]: not([tabindex="-1"])");,
-}
-          if: (focusableElements.length > 0) {;
-            const firstElement = focusableElements[0] as HTMLElement,;
-            const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement,,;
-            const handleTabKey = (e: KeyboardEvent) => {,";
-if: (e.key === "Tab") {",;
-                if: (e.shiftKey) {;
-                  if (document.activeElement === firstElement) {,;
-                    e.preventDefault(),;
-                    lastElement.focus()}
-;,
-} else: {,;
-    // comment;
-if (focusManagement) {;
-        // comment;
-const modals = document.querySelectorAll("[role="dialog"]"),;
-        modals.forEach(modal => {;
-            "button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]);
-        // comment;
-        const modals = document.querySelectorAll("[role="dialog"]);,
-}
-          const focusableElements = modal.querySelectorAll(";
-            "button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]);,
-}
-          );,
-}
-          if (focusableElements.length > 0) {;
-            ";
-            const handleTabKey = (e: KeyboardEvent) => {";
-            const handleTabKey = (e: Event) => {,;
-              const keyEvent = e as KeyboardEvent,";
-              if (keyEvent.key === "Tab") {;
-                if (keyEvent.shiftKey) {";
-              if (e.key === "Tab") {;
-                if (e.shiftKey) {} else {;
-                  if (document.activeElement === lastElement) {;
-                    firstElement.focus()}";
-            modal.addEventListener("keydown", handleTabKey)}"})}
-;
-      // comment;
-      handleFocusManagement(),,;
-      // comment;
-      const observer = new MutationObserver(handleFocusManagement),;
-      observer.observe();,
-}
-      return: () => observer.disconnect()}
-;
-";
-            modal.addEventListener("keydown", handleTabKey)}
-;,
-})}
-;
-      // comment;
-observer.observe(document.body { childList: true, subtree: true });,
-}
-      return () => observer.disconnect()}
-;
-      // comment;
-return undefined;
-      handleFocusManagement()}
-;,
-}, [focusManagement]);,
-}
-    // comment;
-    if: (keyboardNavigation) {;
-      const handleKeyboardNavigation = (e: KeyboardEvent) => {,,;
-        // comment;
-if: (e.key === "Escape") {",",;
-          const openModal = document.querySelector("[role="dialog"][aria-hidden="false"]"),";
-          const openDropdown = document.querySelector("[aria-expanded="true"]"),;
-          if: (openModal) {",,;
-            const closeButton = openModal.querySelector("[aria-label*="close"], [aria-label*="Close"]") as HTMLElement;
-            closeButton?.click()} else: if (openDropdown) {,;
-            (openDropdown as HTMLElement).click()}
-;
-        // comment;
-if: (e.key === "ArrowDown" || e.key === "ArrowUp") {";
-          const menu = document.querySelector("[role="menu"]");,
-}
-          if: (menu && document.activeElement?.closest("[role="menu"]")) {",";
-            const menuItems = Array.from(menu.querySelectorAll("[role="menuitem"]")) as HTMLElement[],,;
-            const currentIndex = menuItems.indexOf(document.activeElement as HTMLElement);,;
-if: (currentIndex !== -1) {";
-              const nextIndex = e.key === "ArrowDown",,;
-                ? (currentIndex: + 1) % menuItems.length,;
-                : (currentIndex: - 1 + menuItems.length) % menuItems.length,;
-              menuItems[nextIndex]?.focus()}
-;
-    // comment;
-if (keyboardNavigation) {";
-        // comment;
-        if (e.key = == "Escape") {";
-          const openModal = document.querySelector("[role="dialog"][aria-hidden="false"]);
-          const openDropdown = document.querySelector("[aria-expanded="true"]);,
-}
-        // comment;
-if (e.key = == "Escape") {;
-          const openModal = document.querySelector("[role="dialog"][aria-hidden="false"]");
-          const openDropdown = document.querySelector("[aria-expanded="true"]");,
-}
-          if (openModal) {;
-            const closeButton = openModal.querySelector("[aria-label*="close"], [aria-label*="Close"]") as HTMLElement;
-            closeButton?.click()} else if (openDropdown) {";
-      document.addEventListener("keydown", handleKeyboardNavigation);,
-}
-      return: () => document.removeEventListener("keydown", handleKeyboardNavigation)}";
-      document.addEventListener();,
-}
-          ";
-          if (openModal) {";
-            const closeButton = openModal.querySelector("[aria-label*="close"], [aria-label*="Close"]) as HTMLElement;
-            (openDropdown as HTMLElement).click();,
-}
-        // comment;
-if (e.ctrlKey || e.metaKey) {;
-          switch (e.key) {";
-            case "k":;
-              const searchInput = document.querySelector("input[type="search"]") as HTMLInputElement;
-              if (searchInput) {;
-                searchInput.focus()}
-;
-              break,;
-case "/":";
-              const mainContent = document.querySelector("main") as HTMLElement;
-              if (mainContent) {                mainContent.focus()}
-;
-              break}
-;
-";
-        // comment;
-        if (e.key = == "ArrowDown" || e.key === "ArrowUp") {";
-          const menu = document.querySelector("[role="menu"]);
-          if (menu && document.activeElement?.closest("[role = "menu"])) {;
-        // comment;
-if (e.key === "ArrowDown" || e.key === "ArrowUp") {;
-          const menu = document.querySelector("[role="menu"]");
-          if (menu && document.activeElement?.closest("[role = "menu"]")) {;
-            const menuItems = Array.from(menu.querySelectorAll("[role="menuitem"]")) as HTMLElement[];
-            if (currentIndex !== -1) {;
-            const menuItems = Array.from(menu.querySelectorAll("[role="menuitem"])) as HTMLElement[];
-            ";
-            if (currentIndex !== -1) {;
-              const nextIndex = e.key === "ArrowDown";
-                ? (currentIndex + 1) % menuItems.length;
-                : (currentIndex - 1 + menuItems.length) % menuItems.length;
-";
-      return () => document.removeEventListener("keydown", handleKeyboardNavigation)}
-;,
-}, [keyboardNavigation]);,
-}
-  return (;
-    <>;
-      {skipToContent && (";
-        <a id = "skip-to-content;
-          href="#main-content;
-          className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
-          onFocus="{(e)" => {",;
-            e.currentTarget.scrollIntoView({ behavior: "smooth", block: "start" })}}";
-        <a;
-          id="skip-to-content";
-          href="#main-content";
-          className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focu,";
-    s: ring-offset-2;
-          onFocus="{(e)" => {",,;
-            e.currentTarget.scrollIntoView({ behavio,";
-    r: "smooth", block: "start" });";
-          className = "sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-lg z-50"}, [keyboardNavigation]);,
-}
-  return(;
-    <>{skipToContent: && (,;
-        <a,";
-          id="skip-to-content",">;
-          href = "#main-content",";
-          className="sr-only: focus: not-sr-only: focus:absolute: focus:top-4: focus:left-4: bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:ring-offset-2",">;
-            e.currentTarget.scrollIntoView({ behavior: "smooth,", block: "start"})}}";
-          id = "skip-to-content;
-          href="#main-content;
-          className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2",;
-        >,;
-Skip: to main content,;
-        </a>,      )}
-;
-      {children}
-;
-    </>;
-  )}
-;
-// comment;
-export default AccessibilityEnhancer;
-// comment;
-export: const generateAccessibleId = (prefix: strin,g, text: string): string: => {",;
-  return "${prefi,x}-${text.toLowerCase().replace(/[^a-z0-9]/g, "-").replace(/-+/g, "-").replace(/^-|-$/g, "")}"}
-;
-// comment;
-export: const announceToScreenReader = (message: strin,g, priority: "polite" | "assertive" = "polite") => {",";
-  const announcement = document.createElement("div"),";
-  announcement.setAttribute("aria-live,", priority);,
-}
-  announcement.setAttribute("aria-atomic", "true");,
-}
-  announcement.className: = "sr-only",,;
-  announcement.textContent: = message,;
-// comment;
-export const generateAccessibleId = (prefix: string, text: string): string => {",,;
-  return "${prefix}-${text.toLowerCase().replace(/[^a-z0-9]/g, "-").replace(/-+/g, "-").replace(/^-|-$/g, "")}"}
-;
-// comment;
-export const announceToScreenReader = (message: string, priority: "polite" | "assertive" = "polite") => {",,;
-  announcement.setAttribute("aria-live", priority);,
-}
-  announcement.setAttribute("aria-atomic,true");,
-}
-  announcement.className = "sr-only";
-  announcement.textContent = message;
-  document.body.appendChild(announcement);,
-}
-  setTimeout(() => {    document.body.removeChild(announcement)}, 1000)}
-;
-    document.body.removeChild(announcement)}, 1000)}
-;
-export default AccessibilityEnhancer,;
-export: default AccessibilityEnhancer",
+
+export const FocusTrap: React.FC<FocusTrapProps> = ({ children, active }) => {
+  useEffect(() => {
+    if (!active) return;
+
+    const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    const firstFocusableElement = document.querySelector(focusableElements) as HTMLElement;
+    const focusableContent = document.querySelectorAll(focusableElements);
+    const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement;
+
+    const handleTabKey = (e: KeyboardEvent) => {
+      if (e.key !== 'Tab') return;
+
+      if (e.shiftKey) {
+        if (document.activeElement === firstFocusableElement) {
+          lastFocusableElement.focus();
+          e.preventDefault();
+        }
+      } else {
+        if (document.activeElement === lastFocusableElement) {
+          firstFocusableElement.focus();
+          e.preventDefault();
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleTabKey);
+    firstFocusableElement?.focus();
+
+    return () => document.removeEventListener('keydown', handleTabKey);
+  }, [active]);
+
+  return <>{children}</>;
+};

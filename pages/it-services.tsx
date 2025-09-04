@@ -1,1607 +1,1473 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import {;
-  Server,;
-  Cloud,;
-  Shield,;
-  Database,;
-  Network,;
-  Monitor,;
-  Smartphone,;
-  Globe,;
-  Lock,;
-  Settings,;
-  Zap,;
-  Users,;
-  BarChart3,;
-  CheckCircle,;
-  ArrowRight,;
-  Clock,;
-  Award,;
-  Star,;
-  Cpu,;
-  HardDrive,;
-  Wifi,;
-  Code,;
-  Terminal,;
-  FileText,;
-  Mail,;
-  Phone,;
-  MapPin,;
-  TrendingUp,;
-  Car,;
-  Brain,;
-  Satellite,;
-  TreePine} from 'lucide-react';
-import PageTransition from '../src/components/PageTransition';
-;
-export default function ITServices() {;
-  const title = 'IT Services — Zion Tech Group';
-  const description = 'Comprehensive IT services including cloud infrastructure, cybersecurity, network management, and digital transformation solutions.';
-;
-  const itServices = [;
-  {;
-      title: 'Cloud Infrastructure & Migration',;
-      description: 'Complete cloud transformation with AWS, Azure, and Google Cloud Platform',;
-      icon: Cloud,;
-      features: [;
-        'Multi-cloud architecture design and implementation,Legacy system migration and modernization,Serverless computing and containerization,Auto-scaling and load balancing,Cost optimization and FinOps practices,Disaster recovery and backup solutions';
-      ],;
-      pricing: '$5,000 - $50,000/month',;
-      delivery: '4-12 weeks',;
-      category: 'Cloud Services'},;
-    {;
-      title: 'Cybersecurity & Compliance',;
-      description: 'Enterprise-grade security solutions and compliance management',;
-      icon: Shield,;
-      features: [;
-        'Zero-trust security architecture,SOC 2, GDPR, HIPAA compliance automation,Penetration testing and vulnerability assessments,Security monitoring and incident response,Identity and access management (IAM),Data encryption and privacy protection';
-      ],;
-      pricing: '$3,000 - $25,000/month',;
-      delivery: '3-8 weeks',;
-      category: 'Security Services'},;
-    {;
-      title: 'Network Infrastructure',;
-      description: 'Design, implementation, and management of enterprise networks',;
-      icon: Network,;
-      features: [;
-        'SD-WAN and hybrid network solutions,Network security and firewall management,Wireless network design and optimization,Network monitoring and performance tuning,VoIP and unified communications,Network documentation and training';
-      ],;
-      pricing: '$2,000 - $15,000/month',;
-      delivery: '2-6 weeks',;
-      category: 'Network Services'},;
-    {;
-      title: 'IT Support & Helpdesk',;
-      description: '24/7 technical support and helpdesk services',;
-      icon: Users,;
-      features: [;
-        '24/7/365 technical support coverage,Remote desktop and troubleshooting,Software installation and updates,Hardware procurement and management,User training and documentation,SLA-based response times';
-      ],;
-      pricing: '$1,500 - $8,000/month',;
-      delivery: '1-2 weeks',;
-      category: 'Support Services'},;
-    {;
-      title: 'Data Management & Analytics',;
-      description: 'Data warehousing, analytics, and business intelligence solutions',;
-      icon: Database,;
-      features: [;
-        'Data warehouse design and implementation,ETL/ELT pipeline development,Business intelligence dashboards,Data governance and quality management,Real-time analytics and reporting,Machine learning data preparation';
-      ],;
-      pricing: '$4,000 - $30,000/month',;
-      delivery: '6-16 weeks',;
-      category: 'Data Services'},;
-    {;
-      title: 'DevOps & CI/CD',;
-      description: 'Automated deployment pipelines and infrastructure as code',;
-      icon: Settings,;
-      features: [;
-        'CI/CD pipeline setup and optimization,Infrastructure as Code (IaC) implementation,Container orchestration with Kubernetes,Monitoring and logging solutions,Automated testing and quality gates,DevSecOps and security integration';
-      ],;
-      pricing: '$3,500 - $20,000/month',;
-      delivery: '4-10 weeks',;
-      category: 'DevOps Services'},;
-    {;
-      title: 'Digital Transformation',;
-      description: 'End-to-end digital transformation consulting and implementation',;
-      icon: Zap,;
-      features: [;
-        'Digital strategy and roadmap development,Process automation and optimization,Legacy system modernization,Change management and training,Technology stack evaluation,ROI measurement and optimization';
-      ],;
-      pricing: '$10,000 - $100,000/month',;
-      delivery: '12-24 weeks',;
-      category: 'Consulting Services'},;
-    {;
-      title: 'Managed IT Services',;
-      description: 'Comprehensive IT management and monitoring services',;
-      icon: Monitor,;
-      features: [;
-        'Proactive monitoring and maintenance,Patch management and updates,Performance optimization,Capacity planning and scaling,Vendor management and procurement,IT strategy and planning';
-      ],;
-      pricing: '$2,500 - $15,000/month',;
-      delivery: '2-4 weeks',;
-      category: 'Managed Services'},;
-    {;
-      title: 'Blockchain & Web3 Solutions',;
-      description: 'Blockchain development, smart contracts, and decentralized applications',;
-      icon: Network,;
-      features: [;
-        'Smart contract development and auditing,DeFi and NFT platform development,Blockchain integration and consulting,Cryptocurrency wallet development,Tokenomics and governance design,Cross-chain interoperability solutions';
-      ],;
-      pricing: '$8,000 - $50,000/month',;
-      delivery: '8-20 weeks',;
-      category: 'Blockchain Services'},;
-    {;
-      title: 'IoT & Edge Computing',;
-      description: 'Internet of Things solutions and edge computing infrastructure',;
-      icon: Cpu,;
-      features: [;
-        'IoT device development and integration,Edge computing platform setup,Real-time data processing and analytics,IoT security and device management,Sensor network design and deployment,Edge AI and machine learning integration';
-      ],;
-      pricing: '$5,000 - $30,000/month',;
-      delivery: '6-16 weeks',;
-      category: 'IoT Services'},;
-    {;
-      title: 'Quantum Computing Consulting',;
-      description: 'Quantum computing strategy, algorithm development, and implementation',;
-      icon: Cpu,;
-      features: [;
-        'Quantum algorithm development,Quantum computing strategy consulting,Hybrid classical-quantum solutions,Quantum security and cryptography,Quantum machine learning applications,Quantum hardware evaluation and selection';
-      ],;
-      pricing: '$15,000 - $100,000/month',;
-      delivery: '12-24 weeks',;
-      category: 'Quantum Services'},;
-    {;
-      title: '5G & Network Modernization',;
-      description: '5G network implementation and legacy network modernization',;
-      icon: Wifi,;
-      features: [;
-        '5G network planning and deployment,Network slicing and optimization,Legacy network migration,Private 5G network setup,Network performance monitoring,Edge computing integration';
-      ],;
-      pricing: '$10,000 - $75,000/month',;
-      delivery: '8-20 weeks',;
-      category: 'Network Services'},;
-    {;
-      title: 'AR/VR Development & Implementation',;
-      description: 'Augmented and virtual reality solutions for business applications',;
-      icon: Monitor,;
-      features: [;
-        'AR/VR application development,3D modeling and animation,Immersive training and simulation,Virtual showroom and retail solutions,AR/VR hardware integration,Performance optimization and testing';
-      ],;
-      pricing: '$6,000 - $40,000/month',;
-      delivery: '8-16 weeks',;
-      category: 'AR/VR Services'},;
-    {;
-      title: 'API Management & Integration',;
-      description: 'Comprehensive API strategy, development, and management platform',;
-      icon: Code,;
-      features: [;
-        'API design and development,API gateway setup and management,Third-party API integration,API security and authentication,API analytics and monitoring,Microservices architecture design';
-      ],;
-      pricing: '$3,000 - $20,000/month',;
-      delivery: '4-12 weeks',;
-      category: 'API Services'},;
-    {;
-      title: 'Disaster Recovery & Business Continuity',;
-      description: 'Comprehensive disaster recovery planning and implementation',;
-      icon: Shield,;
-      features: [;
-        'Disaster recovery strategy development,Backup and replication solutions,Business continuity planning,Recovery time objective optimization,Testing and validation services,Compliance and audit support';
-      ],;
-      pricing: '$5,000 - $35,000/month',;
-      delivery: '6-16 weeks',;
-      category: 'Recovery Services'},;
-    {;
-      title: 'Green IT & Sustainability Solutions',;
-      description: 'Sustainable IT practices and carbon footprint reduction',;
-      icon: Globe,;
-      features: [;
-        'Energy-efficient infrastructure design,Carbon footprint assessment and reduction,Sustainable cloud migration,Green data center optimization,E-waste management and recycling,Sustainability reporting and compliance';
-      ],;
-      pricing: '$4,000 - $25,000/month',;
-      delivery: '6-14 weeks',;
-      category: 'Sustainability Services'},;
-    {;
-      title: 'FinTech & Payment Solutions',;
-      description: 'Financial technology solutions and payment system integration',;
-      icon: Database,;
-      features: [;
-        'Payment gateway integration,Financial API development,Compliance and regulatory solutions,Fraud detection and prevention,Digital banking solutions,Cryptocurrency integration';
-      ],;
-      pricing: '$8,000 - $60,000/month',;
-      delivery: '10-24 weeks',;
-      category: 'FinTech Services'},;
-    {;
-      title: 'Edge Computing & Distributed Systems',;
-      description: 'Edge computing infrastructure and distributed system architecture',;
-      icon: Cpu,;
-      features: [;
-        'Edge computing platform deployment,Distributed system architecture design,Real-time data processing at the edge,Edge AI and machine learning deployment,Multi-cloud and hybrid edge solutions,Edge security and device management';
-      ],;
-      pricing: '$6,000 - $35,000/month',;
-      delivery: '8-16 weeks',;
-      category: 'Edge Computing Services'},;
-    {;
-      title: 'Zero Trust Security Architecture',;
-      description: 'Comprehensive zero trust security implementation and management',;
-      icon: Shield,;
-      features: [;
-        'Zero trust network architecture design,Identity and access management (IAM),Micro-segmentation implementation,Continuous security monitoring,Privileged access management (PAM),Security orchestration and automation';
-      ],;
-      pricing: '$5,000 - $30,000/month',;
-      delivery: '6-14 weeks',;
-      category: 'Security Architecture Services'},;
-    {;
-      title: 'Hyperautomation & RPA Solutions',;
-      description: 'Intelligent process automation and robotic process automation',;
-      icon: Settings,;
-      features: [;
-        'Robotic process automation (RPA) implementation,Intelligent document processing,Workflow automation and optimization,AI-powered decision making integration,Process mining and discovery,End-to-end automation orchestration';
-      ],;
-      pricing: '$4,000 - $25,000/month',;
-      delivery: '6-12 weeks',;
-      category: 'Automation Services'},;
-    {;
-      title: 'Digital Twin & Simulation Platforms',;
-      description: 'Digital twin development and simulation platform implementation',;
-      icon: Monitor,;
-      features: [;
-        'Digital twin architecture and development,Real-time simulation and modeling,IoT sensor integration and data collection,Predictive analytics and maintenance,Virtual testing and optimization,Integration with existing systems';
-      ],;
-      pricing: '$10,000 - $50,000/month',;
-      delivery: '12-24 weeks',;
-      category: 'Digital Twin Services'},;
-    {;
-      title: 'Multi-Cloud & Hybrid Cloud Management',;
-      description: 'Comprehensive multi-cloud strategy and hybrid cloud management',;
-      icon: Cloud,;
-      features: [;
-        'Multi-cloud architecture design and implementation,Cloud cost optimization and FinOps,Hybrid cloud connectivity and management,Cloud migration and modernization,Disaster recovery across clouds,Cloud governance and compliance';
-      ],;
-      pricing: '$8,000 - $40,000/month',;
-      delivery: '8-20 weeks',;
-      category: 'Multi-Cloud Services'},;
-    {;
-      title: 'Low-Code/No-Code Platform Development',;
-      description: 'Custom low-code and no-code platform development and implementation',;
-      icon: Code,;
-      features: [;
-        'Custom low-code platform development,No-code application builder creation,Workflow automation and integration,User interface and experience design,API integration and data connectivity,Training and support services';
-      ],;
-      pricing: '$5,000 - $30,000/month',;
-      delivery: '8-16 weeks',;
-      category: 'Low-Code Services'},;
-    {;
-      title: 'IT Helpdesk Platform for Managed Service Providers',;
-      description: 'Comprehensive IT helpdesk solution designed specifically for MSPs with client management and ticketing',;
-      icon: Users,;
-      features: [;
-        'Multi-client ticketing system with client portals,Public and private knowledge bases,Remote monitoring and management integration,Automated ticket routing and escalation,SLA management and reporting,Integration with PSA and RMM tools';
-      ],;
-      pricing: '$2,000 - $12,000/month',;
-      delivery: '3-6 weeks',;
-      category: 'MSP Services';,
-},;
-    {;
-      title: 'Cloud Cost Optimization & FinOps Platform',;
-      description: 'Intelligent cloud cost management and optimization with automated resource scaling',;
-      icon: TrendingUp,;
-      features: [;
-        'Real-time cloud cost monitoring and analysis,Automated resource optimization and scaling,Cost allocation and chargeback management,Reserved instance and savings plan optimization,Multi-cloud cost comparison and recommendations,FinOps best practices implementation';
-      ],;
-      pricing: '$3,000 - $18,000/month',;
-      delivery: '4-8 weeks',;
-      category: 'Cloud Optimization Services';,
-},;
-    {;
-      title: 'API Management & Developer Portal Platform',;
-      description: 'Comprehensive API management solution with developer portal and analytics',;
-      icon: Code,;
-      features: [;
-        'API gateway and management platform,Developer portal and documentation,API analytics and monitoring,Rate limiting and throttling,API security and authentication,Third-party API integration and management';
-      ],;
-      pricing: '$2,500 - $15,000/month',;
-      delivery: '4-10 weeks',;
-      category: 'API Management Services';,
-},;
-    {;
-      title: 'Digital Workplace & Collaboration Platform',;
-      description: 'Comprehensive digital workplace solution with unified communication and collaboration tools',;
-      icon: Users,;
-      features: [;
-        'Unified communication and collaboration platform,Digital workspace optimization,Employee experience management,Remote work enablement and support,Integration with productivity tools,Digital transformation consulting';
-      ],;
-      pricing: '$4,000 - $25,000/month',;
-      delivery: '6-12 weeks',;
-      category: 'Digital Workplace Services';,
-},;
-    {;
-      title: 'AI-Powered IT Service Management (ITSM)',;
-      description: 'Intelligent IT service management with AI-driven automation and predictive analytics',;
-      icon: Settings,;
-      features: [;
-        'AI-powered incident management and resolution,Predictive analytics for IT operations,Automated change management and approval workflows,Service catalog and request management,IT asset management and optimization,Integration with existing IT tools and systems';
-      ],;
-      pricing: '$5,000 - $30,000/month',;
-      delivery: '6-14 weeks',;
-      category: 'ITSM Services';,
-},;
-    {;
-      title: 'Cybersecurity Operations Center (SOC)',;
-      description: '24/7 security operations center and threat monitoring services',;
-      icon: Shield,;
-      features: [;
-        '24/7 security monitoring and incident response,Threat hunting and intelligence analysis,Security incident management and forensics,Vulnerability management and patching,Security awareness training and testing,Compliance monitoring and reporting';
-      ],;
-      pricing: '$3,000 - $20,000/month',;
-      delivery: '4-8 weeks',;
-      category: 'SOC Services'},;
-    {;
-      title: 'Quantum-Safe Cryptography Implementation',;
-      description: 'Post-quantum cryptography solutions to protect against future quantum computing threats',;
-      icon: Lock,;
-      features: [;
-        'Quantum-resistant encryption algorithms,Post-quantum digital signatures,Quantum key distribution (QKD) systems,Hybrid classical-quantum security protocols,Migration planning and implementation,Compliance with NIST post-quantum standards';
-      ],;
-      pricing: '$15,000 - $75,000/month',;
-      delivery: '12-24 weeks',;
-      category: 'Quantum Security Services'},;
-    {;
-      title: 'Neuromorphic Computing Infrastructure',;
-      description: 'Brain-inspired computing systems for edge AI and low-power processing',;
-      icon: Cpu,;
-      features: [;
-        'Neuromorphic chip integration and optimization,Spiking neural network deployment,Edge AI processing and inference,Low-power computing optimization,Real-time learning and adaptation,Integration with IoT and sensor networks';
-      ],;
-      pricing: '$20,000 - $100,000/month',;
-      delivery: '16-32 weeks',;
-      category: 'Neuromorphic Computing Services'},;
-    {;
-      title: 'Space-Based Computing Infrastructure',;
-      description: 'Satellite-based computing and edge processing for global connectivity',;
-      icon: Satellite,;
-      features: [;
-        'Satellite constellation management,Space-based edge computing deployment,Global low-latency connectivity,Orbital data processing and storage,Space-to-ground communication optimization,Integration with terrestrial networks';
-      ],;
-      pricing: '$50,000 - $500,000/month',;
-      delivery: '24-48 weeks',;
-      category: 'Space Computing Services'},;
-    {;
-      title: 'Fusion Energy IT Infrastructure',;
-      description: 'Specialized IT infrastructure for fusion energy research and power generation',;
-      icon: Zap,;
-      features: [;
-        'High-performance computing for plasma simulation,Real-time control systems for fusion reactors,Data acquisition and processing systems,Safety monitoring and emergency response,Integration with power grid systems,Research collaboration platforms';
-      ],;
-      pricing: '$100,000 - $1,000,000/month',;
-      delivery: '32-64 weeks',;
-      category: 'Fusion Energy IT Services'},;
-    {;
-      title: 'Synthetic Biology Computing Platform',;
-      description: 'Specialized computing infrastructure for synthetic biology and bioengineering',;
-      icon: Cpu,;
-      features: [;
-        'High-performance computing for genetic modeling,Bioinformatics data processing and analysis,Laboratory automation and control systems,Biological simulation and modeling platforms,Integration with laboratory equipment,Research data management and collaboration';
-      ],;
-      pricing: '$25,000 - $150,000/month',;
-      delivery: '20-40 weeks',;
-      category: 'Synthetic Biology IT Services'},;
-    {;
-      title: 'Autonomous Vehicle Infrastructure',;
-      description: 'IT infrastructure for autonomous vehicle testing, deployment, and management',;
-      icon: Car,;
-      features: [;
-        'Vehicle-to-everything (V2X) communication systems,Edge computing for real-time decision making,Fleet management and coordination platforms,Safety monitoring and incident response,Integration with smart city infrastructure,Regulatory compliance and reporting systems';
-      ],;
-      pricing: '$30,000 - $200,000/month',;
-      delivery: '24-48 weeks',;
-      category: 'Autonomous Vehicle IT Services'},;
-    {;
-      title: 'Digital Twin Infrastructure Platform',;
-      description: 'Comprehensive digital twin infrastructure for real-time simulation and monitoring',;
-      icon: Monitor,;
-      features: [;
-        'Real-time data synchronization and modeling,High-fidelity simulation and visualization,IoT sensor integration and data processing,Predictive analytics and maintenance systems,Integration with existing business systems,Scalable cloud and edge computing infrastructure';
-      ],;
-      pricing: '$20,000 - $100,000/month',;
-      delivery: '16-32 weeks',;
-      category: 'Digital Twin Infrastructure Services'},;
-    {;
-      title: 'Metaverse Infrastructure & Platform',;
-      description: 'Complete metaverse infrastructure for virtual worlds and immersive experiences',;
-      icon: Globe,;
-      features: [;
-        '3D world rendering and streaming infrastructure,Avatar and asset management systems,Real-time physics simulation and networking,Virtual economy and blockchain integration,Cross-platform compatibility and optimization,Content creation and management tools';
-      ],;
-      pricing: '$40,000 - $300,000/month',;
-      delivery: '24-48 weeks',;
-      category: 'Metaverse Infrastructure Services'},;
-    {;
-      title: 'Brain-Computer Interface Infrastructure',;
-      description: 'Specialized IT infrastructure for brain-computer interface systems and neural data processing',;
-      icon: Brain,;
-      features: [;
-        'Neural signal acquisition and processing systems,Real-time brain activity analysis and interpretation,Medical device integration and control,Data privacy and security for neural data,Integration with healthcare systems,Research collaboration and data sharing platforms';
-      ],;
-      pricing: '$35,000 - $200,000/month',;
-      delivery: '28-56 weeks',;
-      category: 'BCI Infrastructure Services'},;
-    {;
-      title: 'Underwater Computing Infrastructure',;
-      description: 'Specialized computing infrastructure for underwater operations and marine research',;
-      icon: Network,;
-      features: [;
-        'Underwater communication and networking systems,Marine data processing and analysis platforms,Autonomous underwater vehicle coordination,Oceanographic data collection and storage,Underwater sensor network management,Integration with surface and satellite systems';
-      ],;
-      pricing: '$25,000 - $150,000/month',;
-      delivery: '20-40 weeks',;
-      category: 'Marine Computing Services'},;
-    {;
-      title: 'Consciousness Research Computing Platform',;
-      description: 'Advanced computing infrastructure for consciousness research and AGI development',;
-      icon: Brain,;
-      features: [;
-        'High-performance computing for consciousness modeling,Neural network simulation and training,Cognitive architecture development platforms,Research collaboration and data sharing systems,Ethical AI monitoring and assessment tools,Integration with neuroscience research equipment';
-      ],;
-      pricing: '$100,000 - $1,000,000/month',;
-      delivery: '40-80 weeks',;
-      category: 'Consciousness Research IT Services'},;
-    {;
-      title: 'Climate Computing & Modeling Infrastructure',;
-      description: 'High-performance computing infrastructure for climate modeling and environmental research',;
-      icon: Globe,;
-      features: [;
-        'Climate simulation and modeling systems,Environmental data processing and analysis,Real-time weather and climate monitoring,Carbon tracking and sustainability analytics,Integration with satellite and sensor networks,Research collaboration and data sharing platforms';
-      ],;
-      pricing: '$30,000 - $250,000/month',;
-      delivery: '24-48 weeks',;
-      category: 'Climate Computing Services'},;
-    {;
-      title: 'Space Mission Computing Infrastructure',;
-      description: 'Specialized computing infrastructure for space missions and satellite operations',;
-      icon: Satellite,;
-      features: [;
-        'Mission planning and trajectory optimization systems,Satellite constellation management platforms,Space debris tracking and collision avoidance,Ground station communication and control,Space weather monitoring and prediction,Integration with space agency networks';
-      ],;
-      pricing: '$75,000 - $750,000/month',;
-      delivery: '32-64 weeks',;
-      category: 'Space Mission IT Services'},;
-    {;
-      title: 'Quantum Computing Infrastructure',;
-      description: 'Quantum computing setup, optimization, and hybrid classical-quantum systems',;
-      icon: Cpu,;
-      features: [;
-        'Quantum computer setup and configuration,Quantum algorithm development and optimization,Hybrid classical-quantum computing workflows,Quantum error correction and noise mitigation,Quantum machine learning model training,Integration with existing IT infrastructure';
-      ],;
-      pricing: '$50,000 - $500,000/month',;
-      delivery: '24-48 weeks',;
-      category: 'Quantum Computing Services'},;
-    {;
-      title: '5G & Edge Computing Networks',;
-      description: '5G network deployment, edge computing infrastructure, and ultra-low latency solutions',;
-      icon: Network,;
-      features: [;
-        '5G network planning and deployment,Edge computing infrastructure setup,Ultra-low latency application optimization,Network slicing and virtualization,IoT device connectivity and management,Real-time data processing and analytics';
-      ],;
-      pricing: '$25,000 - $200,000/month',;
-      delivery: '16-32 weeks',;
-      category: '5G & Edge Services'},;
-    {;
-      title: 'Metaverse & Virtual Reality Infrastructure',;
-      description: 'VR/AR platform development, metaverse infrastructure, and immersive technology solutions',;
-      icon: Monitor,;
-      features: [;
-        'VR/AR application development and deployment,Metaverse platform infrastructure setup,3D content creation and management,Virtual event hosting and management,Immersive training and simulation systems,Cross-platform VR/AR integration';
-      ],;
-      pricing: '$15,000 - $150,000/month',;
-      delivery: '12-24 weeks',;
-      category: 'Metaverse Services'},;
-    {;
-      title: 'Green IT & Sustainable Computing',;
-      description: 'Energy-efficient computing solutions, carbon footprint reduction, and sustainable IT practices',;
-      icon: TreePine,;
-      features: [;
-        'Energy-efficient server and data center design,Carbon footprint monitoring and reduction,Renewable energy integration for IT infrastructure,Sustainable software development practices,E-waste management and recycling programs,Green cloud computing optimization';
-      ],;
-      pricing: '$10,000 - $100,000/month',;
-      delivery: '8-16 weeks',;
-      category: 'Green IT Services'},;
-    {;
-      title: 'Zero-Trust Security Architecture',;
-      description: 'Comprehensive zero-trust security implementation with identity verification and micro-segmentation',;
-      icon: Shield,;
-      features: [;
-        'Zero-trust network architecture design,Identity and access management (IAM) implementation,Micro-segmentation and network isolation,Continuous security monitoring and validation,Privileged access management (PAM),Security automation and orchestration';
-      ],;
-      pricing: '$20,000 - $150,000/month',;
-      delivery: '12-24 weeks',;
-      category: 'Zero-Trust Security Services'},;
-    {;
-      title: 'Hyperautomation & RPA Solutions',;
-      description: 'Intelligent process automation, robotic process automation, and business process optimization',;
-      icon: Settings,;
-      features: [;
-        'Robotic Process Automation (RPA) implementation,Intelligent document processing and workflow automation,Business process mining and optimization,AI-powered decision automation,Integration with legacy systems and APIs,Process monitoring and performance analytics';
-      ],;
-      pricing: '$8,000 - $80,000/month',;
-      delivery: '8-20 weeks',;
-      category: 'Hyperautomation Services'},;
-    {;
-      title: 'Digital Twin & Simulation Platforms',;
-      description: 'Digital twin development, simulation platforms, and virtual modeling solutions',;
-      icon: Monitor,;
-      features: [;
-        'Digital twin platform development and deployment,Real-time simulation and modeling systems,IoT sensor integration and data synchronization,Predictive analytics and scenario modeling,Virtual testing and validation environments,Integration with CAD and engineering tools';
-      ],;
-      pricing: '$25,000 - $250,000/month',;
-      delivery: '16-32 weeks',;
-      category: 'Digital Twin Services'},;
-    {;
-      title: 'Neuromorphic Computing Systems',;
-      description: 'Brain-inspired computing infrastructure, spiking neural networks, and edge AI optimization',;
-      icon: Brain,;
-      features: [;
-        'Neuromorphic chip integration and optimization,Spiking neural network development and deployment,Edge AI processing and optimization,Real-time learning and adaptation systems,Low-power computing infrastructure,Integration with IoT and sensor networks';
-      ],;
-      pricing: '$30,000 - $300,000/month',;
-      delivery: '20-40 weeks',;
-      category: 'Neuromorphic Computing Services'},;
-    {;
-      title: 'Autonomous Systems Infrastructure',;
-      description: 'Infrastructure for autonomous vehicles, drones, and robotic systems with real-time processing',;
-      icon: Car,;
-      features: [;
-        'Autonomous vehicle computing infrastructure,Drone fleet management and control systems,Robotic system integration and coordination,Real-time sensor data processing and fusion,Edge computing for autonomous decision making,Safety and failover system implementation';
-      ],;
-      pricing: '$40,000 - $400,000/month',;
-      delivery: '24-48 weeks',;
-      category: 'Autonomous Systems Services'},;
-    {;
-      title: 'DevOps Automation Platform',;
-      description: 'Comprehensive DevOps automation with CI/CD pipelines, infrastructure management, and monitoring',;
-      icon: Settings,;
-      features: [;
-        'Automated CI/CD pipeline setup and optimization,Infrastructure as Code (IaC) with Terraform and Ansible,Container orchestration with Kubernetes and Docker,Automated testing and quality assurance gates,Monitoring and alerting with Prometheus and Grafana,Security scanning and compliance automation,Multi-environment deployment management,Performance optimization and cost management';
-      ],;
-      pricing: '$5,000 - $25,000/month',;
-      delivery: '6-12 weeks',;
-      category: 'DevOps Services'},;
-    {;
-      title: 'API Gateway Management',;
-      description: 'Enterprise API gateway solution with security, monitoring, and traffic management',;
-      icon: Network,;
-      features: [;
-        'API gateway setup and configuration,Rate limiting and traffic management,Authentication and authorization (OAuth, JWT),API versioning and lifecycle management,Real-time monitoring and analytics,Security policies and threat protection,Developer portal and documentation,Microservices orchestration and routing';
-      ],;
-      pricing: '$3,000 - $15,000/month',;
-      delivery: '4-8 weeks',;
-      category: 'API Services'},;
-    {;
-      title: 'Database Optimization & Management',;
-      description: 'Advanced database performance tuning, optimization, and management services',;
-      icon: Database,;
-      features: [;
-        'Database performance analysis and optimization,Query optimization and indexing strategies,Database migration and modernization,Backup and disaster recovery solutions,Database security and compliance,Real-time monitoring and alerting,Capacity planning and scaling strategies,Multi-database platform support (SQL, NoSQL)';
-      ],;
-      pricing: '$4,000 - $20,000/month',;
-      delivery: '4-10 weeks',;
-      category: 'Database Services'},;
-    {;
-      title: 'Performance Monitoring & Analytics',;
-      description: 'Comprehensive application and infrastructure performance monitoring with AI insights',;
-      icon: BarChart3,;
-      features: [;
-        'Application Performance Monitoring (APM),Infrastructure monitoring and alerting,Real-time performance analytics and dashboards,User experience monitoring and optimization,AI-powered anomaly detection and root cause analysis,Custom metrics and KPI tracking,Performance testing and load testing,Capacity planning and resource optimization';
-      ],;
-      pricing: '$2,500 - $12,000/month',;
-      delivery: '3-6 weeks',;
-      category: 'Monitoring Services'},;
-    {;
-      title: 'Security Auditing & Compliance',;
-      description: 'Comprehensive security auditing, vulnerability assessment, and compliance management',;
-      icon: Shield,;
-      features: [;
-        'Security vulnerability assessments and penetration testing,Compliance auditing (SOC 2, GDPR, HIPAA, PCI DSS),Security policy development and implementation,Risk assessment and mitigation strategies,Security awareness training and education,Incident response planning and testing,Security monitoring and threat detection,Regular security reviews and updates';
-      ],;
-      pricing: '$5,000 - $30,000/month',;
-      delivery: '4-12 weeks',;
-      category: 'Security Services'},;
-    {;
-      title: 'Advanced Data Analytics & Business Intelligence',;
-      description: 'Comprehensive data analytics platform with real-time insights and predictive modeling',;
-      icon: BarChart3,;
-      features: [;
-        'Real-time data processing and analytics,Advanced business intelligence dashboards,Predictive modeling and forecasting,Data visualization and reporting tools,Integration with multiple data sources,Custom analytics solutions and consulting';
-      ],;
-      pricing: '$3,000 - $15,000/month',;
-      delivery: '3-6 weeks',;
-      category: 'Data Analytics'},;
-    {;
-      title: 'Enterprise IoT Solutions & Integration',;
-      description: 'Comprehensive IoT platform with device management, data processing, and analytics',;
-      icon: Cpu,;
-      features: [;
-        'IoT device management and monitoring,Real-time data collection and processing,Edge computing and local processing,Integration with existing business systems,Custom IoT application development,Security and compliance for IoT devices';
-      ],;
-      pricing: '$4,000 - $20,000/month',;
-      delivery: '4-8 weeks',;
-      category: 'IoT Services'},;
-    {;
-      title: 'Advanced DevOps & CI/CD Automation',;
-      description: 'Comprehensive DevOps platform with automated deployment, monitoring, and optimization',;
-      icon: Settings,;
-      features: [;
-        'Automated CI/CD pipeline setup and management,Infrastructure as Code (IaC) implementation,Container orchestration and management,Automated testing and quality assurance,Performance monitoring and optimization,Disaster recovery and backup automation';
-      ],;
-      pricing: '$2,500 - $12,000/month',;
-      delivery: '3-5 weeks',;
-      category: 'DevOps Services'},;
-    {;
-      title: 'Enterprise API Management & Integration',;
-      description: 'Comprehensive API strategy with management, security, and integration services',;
-      icon: Code,;
-      features: [;
-        'API gateway setup and management,API security and authentication,Rate limiting and traffic management,API documentation and developer portals,Third-party API integration services,API performance monitoring and analytics';
-      ],;
-      pricing: '$2,000 - $10,000/month',;
-      delivery: '2-4 weeks',;
-      category: 'API Services'},;
-    {;
-      title: 'Advanced Database Management & Optimization',;
-      description: 'Comprehensive database services with optimization, migration, and management',;
-      icon: Database,;
-      features: [;
-        'Database performance tuning and optimization,Database migration and modernization,High availability and disaster recovery setup,Database security and compliance,Backup and recovery solutions,Database monitoring and maintenance';
-      ],;
-      pricing: '$1,500 - $8,000/month',;
-      delivery: '2-4 weeks',;
-      category: 'Database Services'},;
-    {;
-      title: 'Enterprise Mobile App Development',;
-      description: 'Native and cross-platform mobile application development with backend integration',;
-      icon: Smartphone,;
-      features: [;
-        'Native iOS and Android app development,Cross-platform development with React Native/Flutter,Mobile backend development and API integration,App store optimization and deployment,Mobile app security and compliance,Performance optimization and monitoring';
-      ],;
-      pricing: '$5,000 - $25,000/month',;
-      delivery: '6-12 weeks',;
-      category: 'Mobile Development'},;
-    {;
-      title: 'Advanced Cloud Security & Compliance',;
-      description: 'Comprehensive cloud security with compliance management and threat protection',;
-      icon: Shield,;
-      features: [;
-        'Cloud security architecture design,Compliance automation (SOC 2, GDPR, HIPAA),Cloud access security broker (CASB) implementation,Security monitoring and incident response,Data encryption and key management,Regular security audits and assessments';
-      ],;
-      pricing: '$4,000 - $18,000/month',;
-      delivery: '4-8 weeks',;
-      category: 'Cloud Security'},;
-    {;
-      title: 'Enterprise Integration & Data Migration',;
-      description: 'Comprehensive system integration with data migration and transformation services',;
-      icon: Network,;
-      features: [;
-        'Legacy system integration and modernization,Data migration and transformation services,Enterprise service bus (ESB) implementation,Real-time data synchronization,Integration testing and validation,Ongoing integration support and maintenance';
-      ],;
-      pricing: '$3,000 - $15,000/month',;
-      delivery: '4-10 weeks',;
-      category: 'Integration Services'},;
-    {;
-      title: 'Advanced Performance Monitoring & Optimization',;
-      description: 'Comprehensive application and infrastructure performance monitoring with optimization',;
-      icon: BarChart3,;
-      features: [;
-        'Application performance monitoring (APM),Infrastructure monitoring and alerting,Performance optimization and tuning,Capacity planning and scaling recommendations,Real-time dashboards and reporting,Proactive issue detection and resolution';
-      ],;
-      pricing: '$2,000 - $10,000/month',;
-      delivery: '2-4 weeks',;
-      category: 'Performance Services'},;
-    {;
-      title: 'Enterprise Backup & Disaster Recovery',;
-      description: 'Comprehensive backup and disaster recovery solutions with business continuity planning',;
-      icon: Shield,;
-      features: [;
-        'Automated backup solutions and scheduling,Disaster recovery planning and testing,Business continuity planning and implementation,Data replication and synchronization,Recovery time objective (RTO) optimization,Regular disaster recovery testing and validation';
-      ],;
-      pricing: '$2,500 - $12,000/month',;
-      delivery: '3-6 weeks',;
-      category: 'Backup & Recovery'},;
-    {;
-      title: 'Advanced Network Security & Monitoring',;
-      description: 'Comprehensive network security with advanced threat detection and response',;
-      icon: Network,;
-      features: [;
-        'Network security architecture design,Advanced threat detection and prevention,Network monitoring and traffic analysis,Intrusion detection and prevention systems,Network segmentation and micro-segmentation,Security incident response and forensics';
-      ],;
-      pricing: '$3,000 - $15,000/month',;
-      delivery: '3-6 weeks',;
-      category: 'Network Security'},;
-    {;
-      title: 'AI-Powered IT Operations (AIOps)',;
-      description: 'Intelligent IT operations with AI-driven automation and predictive analytics',;
-      icon: Brain,;
-      features: [;
-        'AI-powered incident detection and resolution,Automated root cause analysis and remediation,Predictive capacity planning and scaling,Intelligent alert correlation and noise reduction,Automated performance optimization,Self-healing infrastructure capabilities';
-      ],;
-      pricing: '$5,000 - $25,000/month',;
-      delivery: '6-12 weeks',;
-      category: 'AIOps Services'},;
-    {;
-      title: 'Zero Trust Security Architecture',;
-      description: 'Comprehensive zero trust security implementation with identity and access management',;
-      icon: Shield,;
-      features: [;
-        'Zero trust network architecture design,Identity and access management (IAM) implementation,Multi-factor authentication and SSO,Micro-segmentation and network isolation,Continuous security monitoring and validation,Privileged access management (PAM)';
-      ],;
-      pricing: '$8,000 - $40,000/month',;
-      delivery: '8-16 weeks',;
-      category: 'Security Services'},;
-    {;
-      title: 'Quantum-Safe Cryptography Implementation',;
-      description: 'Future-proof cryptographic solutions resistant to quantum computing threats',;
-      icon: Lock,;
-      features: [;
-        'Post-quantum cryptography algorithm implementation,Quantum key distribution (QKD) systems,Hybrid classical-quantum security protocols,Cryptographic migration planning and execution,Quantum-safe certificate management,Compliance with quantum security standards';
-      ],;
-      pricing: '$15,000 - $75,000/month',;
-      delivery: '12-24 weeks',;
-      category: 'Quantum Security'},;
-    {;
-      title: 'Edge Computing Infrastructure',;
-      description: 'Distributed edge computing solutions for low-latency applications and IoT',;
-      icon: Cpu,;
-      features: [;
-        'Edge computing platform design and deployment,Distributed data processing and analytics,Edge AI and machine learning deployment,5G network integration and optimization,Edge security and device management,Multi-cloud edge orchestration';
-      ],;
-      pricing: '$6,000 - $30,000/month',;
-      delivery: '8-16 weeks',;
-      category: 'Edge Computing'},;
-    {;
-      title: 'Green IT & Sustainability Solutions',;
-      description: 'Environmentally conscious IT infrastructure and carbon footprint reduction',;
-      icon: TreePine,;
-      features: [;
-        'Energy-efficient data center design and optimization,Renewable energy integration and management,Carbon footprint tracking and reduction strategies,E-waste management and recycling programs,Green cloud computing and virtualization,Sustainability reporting and compliance';
-      ],;
-      pricing: '$4,000 - $20,000/month',;
-      delivery: '6-12 weeks',;
-      category: 'Green IT'},;
-    {;
-      title: 'Hyperconverged Infrastructure (HCI)',;
-      description: 'Simplified infrastructure management with integrated compute, storage, and networking',;
-      icon: Server,;
-      features: [;
-        'HCI platform design and implementation,Software-defined infrastructure management,Automated resource provisioning and scaling,Integrated backup and disaster recovery,Performance monitoring and optimization,Multi-site HCI deployment and management';
-      ],;
-      pricing: '$5,000 - $25,000/month',;
-      delivery: '6-12 weeks',;
-      category: 'Infrastructure Services'},;
-    {;
-      title: 'Multi-Cloud Management Platform',;
-      description: 'Unified management and orchestration across multiple cloud providers',;
-      icon: Cloud,;
-      features: [;
-        'Multi-cloud strategy and architecture design,Cloud cost optimization and FinOps,Unified monitoring and management dashboard,Cross-cloud data migration and synchronization,Disaster recovery and business continuity,Compliance and governance across clouds';
-      ],;
-      pricing: '$7,000 - $35,000/month',;
-      delivery: '8-16 weeks',;
-      category: 'Cloud Services'},;
-    {;
-      title: 'IT Service Management (ITSM) Platform',;
-      description: 'Comprehensive IT service delivery and support management system',;
-      icon: Settings,;
-      features: [;
-        'ITIL-compliant service management implementation,Incident and problem management automation,Change management and approval workflows,Service catalog and self-service portal,Asset and configuration management,Performance analytics and reporting';
-      ],;
-      pricing: '$3,000 - $15,000/month',;
-      delivery: '4-8 weeks',;
-      category: 'Service Management'},;
-    {;
-      title: 'Advanced Threat Intelligence Platform',;
-      description: 'Proactive threat hunting and intelligence-driven security operations',;
-      icon: Shield,;
-      features: [;
-        'Threat intelligence collection and analysis,Advanced persistent threat (APT) detection,Hunting and investigation capabilities,Threat actor profiling and attribution,Incident response automation and orchestration,Threat intelligence sharing and collaboration';
-      ],;
-      pricing: '$10,000 - $50,000/month',;
-      delivery: '10-20 weeks',;
-      category: 'Threat Intelligence'},;
-    {;
-      title: 'Green IT Solutions',;
-      description: 'Environmentally conscious IT solutions with carbon footprint reduction',;
-      icon: TreePine,;
-      features: [;
-        'Energy-efficient server and infrastructure design,Carbon footprint monitoring and reporting,Renewable energy integration,Green data center optimization,Sustainable IT procurement and lifecycle management,Environmental compliance and reporting';
-      ],;
-      pricing: '$1,500 - $8,000/month',;
-      delivery: '2-4 weeks',;
-      category: 'Green IT'},;
-    {;
-      title: 'Quantum Computing Readiness',;
-      description: 'Preparation and integration services for quantum computing technologies',;
-      icon: Cpu,;
-      features: [;
-        'Quantum algorithm development and optimization,Quantum-classical hybrid system integration,Quantum security and cryptography implementation,Quantum simulation and testing environments,Quantum workforce training and development,Quantum computing strategy and roadmap planning';
-      ],;
-      pricing: '$8,000 - $40,000/month',;
-      delivery: '8-16 weeks',;
-      category: 'Quantum Computing'},;
-    {;
-      title: '5G Network Integration',;
-      description: '5G network deployment and integration services for enterprise applications',;
-      icon: Wifi,;
-      features: [;
-        '5G network planning and deployment,5G enterprise application development,Network slicing and quality of service management,5G security and privacy implementation,Edge computing integration with 5G,5G performance monitoring and optimization';
-      ],;
-      pricing: '$5,000 - $25,000/month',;
-      delivery: '6-12 weeks',;
-      category: '5G Services'},;
-    {;
-      title: 'Blockchain Infrastructure Services',;
-      description: 'Blockchain network deployment and management for enterprise applications',;
-      icon: Shield,;
-      features: [;
-        'Private and consortium blockchain deployment,Smart contract development and auditing,Blockchain security and consensus mechanisms,Interoperability and cross-chain solutions,Blockchain monitoring and analytics,Regulatory compliance and governance';
-      ],;
-      pricing: '$3,500 - $18,000/month',;
-      delivery: '4-10 weeks',;
-      category: 'Blockchain Services'},;
-    {;
-      title: 'IoT Platform Management',;
-      description: 'Comprehensive IoT infrastructure and device management services',;
-      icon: Network,;
-      features: [;
-        'IoT device provisioning and management,Edge gateway deployment and configuration,IoT data collection and processing,Device security and firmware management,IoT analytics and insights,Integration with enterprise systems';
-      ],;
-      pricing: '$2,000 - $10,000/month',;
-      delivery: '3-6 weeks',;
-      category: 'IoT Services'},;
-    {;
-      title: 'Digital Twin Implementation',;
-      description: 'Digital twin creation and management for physical assets and processes',;
-      icon: Monitor,;
-      features: [;
-        '3D modeling and simulation creation,Real-time data integration and synchronization,Predictive maintenance and optimization,Digital twin analytics and insights,Integration with IoT and sensor networks,Collaborative digital twin environments';
-      ],;
-      pricing: '$6,000 - $30,000/month',;
-      delivery: '8-16 weeks',;
-      category: 'Digital Twin Services'},;
-    {;
-      title: 'Zero Trust Security Architecture',;
-      description: 'Comprehensive zero trust security implementation and management',;
-      icon: Lock,;
-      features: [;
-        'Identity and access management (IAM) implementation,Micro-segmentation and network isolation,Continuous authentication and authorization,Device and application trust verification,Security policy automation and enforcement,Zero trust monitoring and analytics';
-      ],;
-      pricing: '$4,500 - $22,000/month',;
-      delivery: '6-12 weeks',;
-      category: 'Zero Trust Security'},;
-    {;
-      title: 'AI-Powered IT Operations (AIOps)',;
-      description: 'Intelligent IT operations with machine learning-driven automation and predictive analytics',;
-      icon: Brain,;
-      features: [;
-        'AI-powered incident detection and root cause analysis,Automated remediation and self-healing systems,Predictive capacity planning and resource optimization,Anomaly detection and performance monitoring,Intelligent alert correlation and noise reduction,Automated change management and deployment,Integration with existing monitoring and ITSM tools,Continuous learning and improvement algorithms';
-      ],;
-      pricing: '$8,000 - $35,000/month',;
-      delivery: '8-16 weeks',;
-      category: 'AIOps Services'},;
-    {;
-      title: 'Edge Computing Infrastructure',;
-      description: 'Comprehensive edge computing solutions with distributed processing and real-time analytics',;
-      icon: Cpu,;
-      features: [;
-        'Edge computing platform design and deployment,Distributed data processing and analytics,Edge AI and machine learning model deployment,Low-latency application optimization,Edge security and device management,Multi-cloud edge orchestration,Edge-to-cloud data synchronization,Real-time streaming and event processing';
-      ],;
-      pricing: '$6,000 - $30,000/month',;
-      delivery: '6-14 weeks',;
-      category: 'Edge Computing Services'},;
-    {;
-      title: 'Serverless Architecture & Functions',;
-      description: 'Serverless computing solutions with function-as-a-service and event-driven architecture',;
-      icon: Cloud,;
-      features: [;
-        'Serverless architecture design and implementation,Function-as-a-Service (FaaS) development,Event-driven architecture and microservices,API Gateway and service mesh configuration,Serverless database and storage solutions,Cost optimization and performance tuning,Monitoring and observability for serverless,Integration with cloud-native services';
-      ],;
-      pricing: '$4,000 - $20,000/month',;
-      delivery: '4-10 weeks',;
-      category: 'Serverless Services'},;
-    {;
-      title: 'Container Security & Compliance',;
-      description: 'Comprehensive container security with vulnerability scanning and compliance automation',;
-      icon: Shield,;
-      features: [;
-        'Container image scanning and vulnerability assessment,Runtime security monitoring and protection,Compliance automation for containerized workloads,Secrets management and encryption,Network security and micro-segmentation,Container registry security and governance,DevSecOps integration and CI/CD security,Compliance reporting and audit trails';
-      ],;
-      pricing: '$3,500 - $18,000/month',;
-      delivery: '4-8 weeks',;
-      category: 'Container Security Services'},;
-    {;
-      title: 'Data Mesh & Distributed Data Architecture',;
-      description: 'Modern data architecture with distributed data mesh and domain-driven design',;
-      icon: Network,;
-      features: [;
-        'Data mesh architecture design and implementation,Domain-driven data product development,Distributed data governance and cataloging,Self-serve data platform development,Data product lifecycle management,Cross-domain data sharing and collaboration,Real-time data streaming and processing,Data quality and lineage tracking';
-      ],;
-      pricing: '$10,000 - $50,000/month',;
-      delivery: '12-24 weeks',;
-      category: 'Data Architecture Services'},;
-    {;
-      title: 'Cloud-Native Application Development',;
-      description: 'Modern cloud-native application development with microservices and containerization',;
-      icon: Code,;
-      features: [;
-        'Cloud-native application architecture design,Microservices development and orchestration,Containerization with Docker and Kubernetes,API-first development and documentation,Cloud-native database and storage solutions,Observability and monitoring implementation,CI/CD pipeline development and optimization,Cloud-native security and compliance';
-      ],;
-      pricing: '$8,000 - $40,000/month',;
-      delivery: '8-20 weeks',;
-      category: 'Cloud-Native Development Services'},;
-    {;
-      title: 'IT Service Management (ITSM) Automation',;
-      description: 'Intelligent IT service management with automated workflows and AI-powered support',;
-      icon: Settings,;
-      features: [;
-        'ITSM platform implementation and customization,Automated incident and problem management,AI-powered service desk and chatbot integration,Change management automation and approval workflows,Asset management and lifecycle tracking,Service catalog and self-service portal development,Performance analytics and reporting,Integration with monitoring and management tools';
-      ],;
-      pricing: '$5,000 - $25,000/month',;
-      delivery: '6-14 weeks',;
-      category: 'ITSM Services'},;
-    {;
-      title: 'Hybrid Cloud Management Platform',;
-      description: 'Unified hybrid cloud management with multi-cloud orchestration and governance',;
-      icon: Cloud,;
-      features: [;
-        'Multi-cloud and hybrid cloud architecture design,Unified cloud management and orchestration,Cloud cost optimization and FinOps implementation,Cross-cloud security and compliance management,Data migration and synchronization services,Disaster recovery across cloud environments,Cloud governance and policy enforcement,Performance monitoring and optimization';
-      ],;
-      pricing: '$12,000 - $60,000/month',;
-      delivery: '10-24 weeks',;
-      category: 'Hybrid Cloud Services'},;
-    {;
-      title: 'IT Infrastructure Automation & Orchestration',;
-      description: 'Comprehensive infrastructure automation with intelligent orchestration and self-healing',;
-      icon: Settings,;
-      features: [;
-        'Infrastructure as Code (IaC) implementation and management,Automated provisioning and configuration management,Intelligent orchestration and workflow automation,Self-healing infrastructure and automated recovery,Infrastructure monitoring and alerting automation,Compliance automation and policy enforcement,Cost optimization through automated scaling,Integration with existing tools and processes';
-      ],;
-      pricing: '$6,000 - $30,000/month',;
-      delivery: '6-16 weeks',;
-      category: 'Infrastructure Automation Services'},;
-    {;
-      title: 'Cybersecurity Operations Center (SOC) as a Service',;
-      description: '24/7 security operations center with advanced threat detection and response capabilities',;
-      icon: Shield,;
-      features: [;
-        '24/7/365 security monitoring and threat detection,Advanced threat hunting and incident response,Security information and event management (SIEM),Endpoint detection and response (EDR),Network security monitoring and analysis,Vulnerability management and assessment,Compliance monitoring and reporting,Threat intelligence and security research';
-      ],;
-      pricing: '$15,000 - $75,000/month',;
-      delivery: '4-8 weeks',;
-      category: 'SOC Services'},;
-    {;
-      title: 'Digital Workplace & Collaboration Solutions',;
-      description: 'Modern digital workplace with unified communication and collaboration platforms',;
-      icon: Users,;
-      features: [;
-        'Unified communication and collaboration platform setup,Digital workspace optimization and user experience,Remote work infrastructure and security,Video conferencing and virtual meeting solutions,Document collaboration and knowledge management,Employee productivity and engagement analytics,Integration with business applications,Change management and user training';
-      ],;
-      pricing: '$3,000 - $15,000/month',;
-      delivery: '4-10 weeks',;
-      category: 'Digital Workplace Services'},;
-    {;
-      title: 'IT Asset Management & Lifecycle Services',;
-      description: 'Comprehensive IT asset management with automated lifecycle tracking and optimization',;
-      icon: Database,;
-      features: [;
-        'IT asset discovery and inventory management,Automated asset lifecycle tracking and management,Software license management and compliance,Hardware procurement and disposal services,Asset performance monitoring and optimization,Cost tracking and budget management,Integration with ITSM and procurement systems,Compliance reporting and audit support';
-      ],;
-      pricing: '$2,500 - $12,000/month',;
-      delivery: '3-8 weeks',;
-      category: 'IT Asset Management Services'},;
-    {;
-      title: 'Cloud Migration & Modernization Services',;
-      description: 'Comprehensive cloud migration with application modernization and optimization',;
-      icon: Cloud,;
-      features: [;
-        'Cloud migration strategy and planning,Application assessment and modernization,Data migration and synchronization,Legacy system integration and API development,Performance optimization and cost reduction,Cloud-native application refactoring,Testing and validation services,Training and change management support';
-      ],;
-      pricing: '$10,000 - $100,000/month',;
-      delivery: '8-24 weeks',;
-      category: 'Cloud Migration Services'},;
-    {;
-      title: 'IT Compliance & Governance Services',;
-      description: 'Comprehensive IT compliance management with automated governance and audit support',;
-      icon: Shield,;
-      features: [;
-        'Compliance framework implementation (SOX, GDPR, HIPAA),IT governance structure and policy development,Automated compliance monitoring and reporting,Risk assessment and management,Audit preparation and support,Regulatory change management,Training and awareness programs,Integration with existing systems and processes';
-      ],;
-      pricing: '$5,000 - $30,000/month',;
-      delivery: '6-16 weeks',;
-      category: 'IT Compliance Services'},;
-    {;
-      title: 'AI-Powered IT Service Desk',;
-      description: 'Intelligent IT service desk with AI chatbots, automated ticket routing, and predictive issue resolution',;
-      icon: Brain,;
-      features: [;
-        'AI-powered chatbot for first-level support,Automated ticket classification and routing,Predictive issue detection and prevention,Knowledge base automation and self-service,Integration with ITSM and monitoring tools,Performance analytics and continuous improvement';
-      ],;
-      pricing: '$3,000 - $15,000/month',;
-      delivery: '4-8 weeks',;
-      category: 'AI-Powered Support Services'},;
-    {;
-      title: 'Quantum-Safe Security Implementation',;
-      description: 'Future-proof security solutions resistant to quantum computing threats with post-quantum cryptography',;
-      icon: Lock,;
-      features: [;
-        'Post-quantum cryptography algorithm implementation,Quantum key distribution (QKD) systems,Hybrid classical-quantum security protocols,Cryptographic migration planning and execution,Quantum-safe certificate management,Compliance with quantum security standards';
-      ],;
-      pricing: '$15,000 - $75,000/month',;
-      delivery: '12-24 weeks',;
-      category: 'Quantum Security Services'},;
-    {;
-      title: 'Neuromorphic Computing Infrastructure',;
-      description: 'Brain-inspired computing systems for ultra-low power AI processing and edge computing optimization',;
-      icon: Cpu,;
-      features: [;
-        'Neuromorphic chip integration and optimization,Spiking neural network deployment,Edge AI processing and inference,Low-power computing optimization,Real-time learning and adaptation,Integration with IoT and sensor networks';
-      ],;
-      pricing: '$20,000 - $100,000/month',;
-      delivery: '16-32 weeks',;
-      category: 'Neuromorphic Computing Services'},;
-    {;
-      title: 'Space-Based Computing Infrastructure',;
-      description: 'Satellite-based computing and edge processing for global connectivity and low-latency applications',;
-      icon: Satellite,;
-      features: [;
-        'Satellite constellation management,Space-based edge computing deployment,Global low-latency connectivity,Orbital data processing and storage,Space-to-ground communication optimization,Integration with terrestrial networks';
-      ],;
-      pricing: '$50,000 - $500,000/month',;
-      delivery: '24-48 weeks',;
-      category: 'Space Computing Services'},;
-    {;
-      title: 'Fusion Energy IT Infrastructure',;
-      description: 'Specialized IT infrastructure for fusion energy research, power generation, and plasma control systems',;
-      icon: Zap,;
-      features: [;
-        'High-performance computing for plasma simulation,Real-time control systems for fusion reactors,Data acquisition and processing systems,Safety monitoring and emergency response,Integration with power grid systems,Research collaboration platforms';
-      ],;
-      pricing: '$100,000 - $1,000,000/month',;
-      delivery: '32-64 weeks',;
-      category: 'Fusion Energy IT Services'},;
-    {;
-      title: 'Synthetic Biology Computing Platform',;
-      description: 'Specialized computing infrastructure for synthetic biology, bioengineering, and genetic design',;
-      icon: Cpu,;
-      features: [;
-        'High-performance computing for genetic modeling,Bioinformatics data processing and analysis,Laboratory automation and control systems,Biological simulation and modeling platforms,Integration with laboratory equipment,Research data management and collaboration';
-      ],;
-      pricing: '$25,000 - $150,000/month',;
-      delivery: '20-40 weeks',;
-      category: 'Synthetic Biology IT Services'},;
-    {;
-      title: 'Autonomous Vehicle Infrastructure',;
-      description: 'IT infrastructure for autonomous vehicle testing, deployment, fleet management, and safety systems',;
-      icon: Car,;
-      features: [;
-        'Vehicle-to-everything (V2X) communication systems,Edge computing for real-time decision making,Fleet management and coordination platforms,Safety monitoring and incident response,Integration with smart city infrastructure,Regulatory compliance and reporting systems';
-      ],;
-      pricing: '$30,000 - $200,000/month',;
-      delivery: '24-48 weeks',;
-      category: 'Autonomous Vehicle IT Services'},;
-    {;
-      title: 'Digital Twin Infrastructure Platform',;
-      description: 'Comprehensive digital twin infrastructure for real-time simulation, monitoring, and predictive analytics',;
-      icon: Monitor,;
-      features: [;
-        'Real-time data synchronization and modeling,High-fidelity simulation and visualization,IoT sensor integration and data processing,Predictive analytics and maintenance systems,Integration with existing business systems,Scalable cloud and edge computing infrastructure';
-      ],;
-      pricing: '$20,000 - $100,000/month',;
-      delivery: '16-32 weeks',;
-      category: 'Digital Twin Infrastructure Services'},;
-    {;
-      title: 'Metaverse Infrastructure & Platform',;
-      description: 'Complete metaverse infrastructure for virtual worlds, immersive experiences, and virtual economies',;
-      icon: Globe,;
-      features: [;
-        '3D world rendering and streaming infrastructure,Avatar and asset management systems,Real-time physics simulation and networking,Virtual economy and blockchain integration,Cross-platform compatibility and optimization,Content creation and management tools';
-      ],;
-      pricing: '$40,000 - $300,000/month',;
-      delivery: '24-48 weeks',;
-      category: 'Metaverse Infrastructure Services'},;
-    {;
-      title: 'Brain-Computer Interface Infrastructure',;
-      description: 'Specialized IT infrastructure for brain-computer interface systems, neural data processing, and medical applications',;
-      icon: Brain,;
-      features: [;
-        'Neural signal acquisition and processing systems,Real-time brain activity analysis and interpretation,Medical device integration and control,Data privacy and security for neural data,Integration with healthcare systems,Research collaboration and data sharing platforms';
-      ],;
-      pricing: '$35,000 - $200,000/month',;
-      delivery: '28-56 weeks',;
-      category: 'BCI Infrastructure Services'},;
-    {;
-      title: 'Underwater Computing Infrastructure',;
-      description: 'Specialized computing infrastructure for underwater operations, marine research, and ocean exploration',;
-      icon: Network,;
-      features: [;
-        'Underwater communication and networking systems,Marine data processing and analysis platforms,Autonomous underwater vehicle coordination,Oceanographic data collection and storage,Underwater sensor network management,Integration with surface and satellite systems';
-      ],;
-      pricing: '$25,000 - $150,000/month',;
-      delivery: '20-40 weeks',;
-      category: 'Marine Computing Services'},;
-    {;
-      title: 'Consciousness Research Computing Platform',;
-      description: 'Advanced computing infrastructure for consciousness research, AGI development, and cognitive architecture design',;
-      icon: Brain,;
-      features: [;
-        'High-performance computing for consciousness modeling,Neural network simulation and training,Cognitive architecture development platforms,Research collaboration and data sharing systems,Ethical AI monitoring and assessment tools,Integration with neuroscience research equipment';
-      ],;
-      pricing: '$100,000 - $1,000,000/month',;
-      delivery: '40-80 weeks',;
-      category: 'Consciousness Research IT Services'},;
-    {;
-      title: 'Climate Computing & Modeling Infrastructure',;
-      description: 'High-performance computing infrastructure for climate modeling, environmental research, and sustainability planning',;
-      icon: Globe,;
-      features: [;
-        'Climate simulation and modeling systems,Environmental data processing and analysis,Real-time weather and climate monitoring,Carbon tracking and sustainability analytics,Integration with satellite and sensor networks,Research collaboration and data sharing platforms';
-      ],;
-      pricing: '$30,000 - $250,000/month',;
-      delivery: '24-48 weeks',;
-      category: 'Climate Computing Services'},;
-    {;
-      title: 'Space Mission Computing Infrastructure',;
-      description: 'Specialized computing infrastructure for space missions, satellite operations, and space exploration',;
-      icon: Satellite,;
-      features: [;
-        'Mission planning and trajectory optimization systems,Satellite constellation management platforms,Space debris tracking and collision avoidance,Ground station communication and control,Space weather monitoring and prediction,Integration with space agency networks';
-      ],;
-      pricing: '$75,000 - $750,000/month',;
-      delivery: '32-64 weeks',;
-      category: 'Space Mission IT Services'},;
-    {;
-      title: 'Quantum Computing Infrastructure',;
-      description: 'Quantum computing setup, optimization, and hybrid classical-quantum systems for enterprise applications',;
-      icon: Cpu,;
-      features: [;
-        'Quantum computer setup and configuration,Quantum algorithm development and optimization,Hybrid classical-quantum computing workflows,Quantum error correction and noise mitigation,Quantum machine learning model training,Integration with existing IT infrastructure';
-      ],;
-      pricing: '$50,000 - $500,000/month',;
-      delivery: '24-48 weeks',;
-      category: 'Quantum Computing Services'},;
-    {;
-      title: '5G & Edge Computing Networks',;
-      description: '5G network deployment, edge computing infrastructure, and ultra-low latency solutions for enterprise',;
-      icon: Network,;
-      features: [;
-        '5G network planning and deployment,Edge computing infrastructure setup,Ultra-low latency application optimization,Network slicing and virtualization,IoT device connectivity and management,Real-time data processing and analytics';
-      ],;
-      pricing: '$25,000 - $200,000/month',;
-      delivery: '16-32 weeks',;
-      category: '5G & Edge Services'},;
-    {;
-      title: 'Metaverse & Virtual Reality Infrastructure',;
-      description: 'VR/AR platform development, metaverse infrastructure, and immersive technology solutions',;
-      icon: Monitor,;
-      features: [;
-        'VR/AR application development and deployment,Metaverse platform infrastructure setup,3D content creation and management,Virtual event hosting and management,Immersive training and simulation systems,Cross-platform VR/AR integration';
-      ],;
-      pricing: '$15,000 - $150,000/month',;
-      delivery: '12-24 weeks',;
-      category: 'Metaverse Services'},;
-    {;
-      title: 'Green IT & Sustainable Computing',;
-      description: 'Energy-efficient computing solutions, carbon footprint reduction, and sustainable IT practices',;
-      icon: TreePine,;
-      features: [;
-        'Energy-efficient server and data center design,Carbon footprint monitoring and reduction,Renewable energy integration for IT infrastructure,Sustainable software development practices,E-waste management and recycling programs,Green cloud computing optimization';
-      ],;
-      pricing: '$10,000 - $100,000/month',;
-      delivery: '8-16 weeks',;
-      category: 'Green IT Services'},;
-    {;
-      title: 'Zero-Trust Security Architecture',;
-      description: 'Comprehensive zero-trust security implementation with identity verification and micro-segmentation',;
-      icon: Shield,;
-      features: [;
-        'Zero-trust network architecture design,Identity and access management (IAM) implementation,Micro-segmentation and network isolation,Continuous security monitoring and validation,Privileged access management (PAM),Security automation and orchestration';
-      ],;
-      pricing: '$20,000 - $150,000/month',;
-      delivery: '12-24 weeks',;
-      category: 'Zero-Trust Security Services'},;
-    {;
-      title: 'Hyperautomation & RPA Solutions',;
-      description: 'Intelligent process automation, robotic process automation, and business process optimization',;
-      icon: Settings,;
-      features: [;
-        'Robotic Process Automation (RPA) implementation,Intelligent document processing and workflow automation,Business process mining and optimization,AI-powered decision automation,Integration with legacy systems and APIs,Process monitoring and performance analytics';
-      ],;
-      pricing: '$8,000 - $80,000/month',;
-      delivery: '8-20 weeks',;
-      category: 'Hyperautomation Services'},;
-    {;
-      title: 'Digital Twin & Simulation Platforms',;
-      description: 'Digital twin development, simulation platforms, and virtual modeling solutions',;
-      icon: Monitor,;
-      features: [;
-        'Digital twin platform development and deployment,Real-time simulation and modeling systems,IoT sensor integration and data synchronization,Predictive analytics and scenario modeling,Virtual testing and validation environments,Integration with CAD and engineering tools';
-      ],;
-      pricing: '$25,000 - $250,000/month',;
-      delivery: '16-32 weeks',;
-      category: 'Digital Twin Services'},;
-    {;
-      title: 'Neuromorphic Computing Systems',;
-      description: 'Brain-inspired computing infrastructure, spiking neural networks, and edge AI optimization',;
-      icon: Brain,;
-      features: [;
-        'Neuromorphic chip integration and optimization,Spiking neural network development and deployment,Edge AI processing and optimization,Real-time learning and adaptation systems,Low-power computing infrastructure,Integration with IoT and sensor networks';
-      ],;
-      pricing: '$30,000 - $300,000/month',;
-      delivery: '20-40 weeks',;
-      category: 'Neuromorphic Computing Services'},;
-    {;
-      title: 'Autonomous Systems Infrastructure',;
-      description: 'Infrastructure for autonomous vehicles, drones, and robotic systems with real-time processing',;
-      icon: Car,;
-      features: [;
-        'Autonomous vehicle computing infrastructure,Drone fleet management and control systems,Robotic system integration and coordination,Real-time sensor data processing and fusion,Edge computing for autonomous decision making,Safety and failover system implementation';
-      ],;
-      pricing: '$40,000 - $400,000/month',;
-      delivery: '24-48 weeks',;
-      category: 'Autonomous Systems Services'},;
-    {;
-      title: 'AI-Powered Infrastructure Orchestration',;
-      description: 'Intelligent infrastructure management with AI-driven automation, predictive scaling, and self-healing capabilities',;
-      icon: Brain,;
-      features: [;
-        'AI-powered infrastructure monitoring and optimization,Predictive scaling and resource allocation,Automated incident detection and resolution,Self-healing infrastructure with automated recovery,Intelligent cost optimization and resource management,Performance prediction and capacity planning,Integration with multi-cloud environments,Continuous learning and improvement algorithms';
-      ],;
-      pricing: '$15,000 - $100,000/month',;
-      delivery: '12-24 weeks',;
-      category: 'AI Infrastructure Services'},;
-    {;
-      title: 'Quantum-Safe Network Security',;
-      description: 'Future-proof network security with post-quantum cryptography and quantum-resistant protocols',;
-      icon: Lock,;
-      features: [;
-        'Post-quantum cryptographic protocol implementation,Quantum-resistant network security architecture,Hybrid classical-quantum security systems,Quantum key distribution (QKD) integration,Network security migration planning,Quantum-safe certificate management,Compliance with quantum security standards,Integration with existing security infrastructure';
-      ],;
-      pricing: '$25,000 - $200,000/month',;
-      delivery: '16-32 weeks',;
-      category: 'Quantum Security Services'},;
-    {;
-      title: 'Edge AI Computing Platform',;
-      description: 'Distributed edge AI infrastructure with real-time inference, model optimization, and autonomous decision making',;
-      icon: Cpu,;
-      features: [;
-        'Edge AI model deployment and optimization,Real-time inference and decision making,Distributed AI training and model updates,Edge-to-cloud AI synchronization,Low-latency AI processing and response,Edge AI security and privacy protection,Autonomous edge AI operation and management,Integration with IoT and sensor networks';
-      ],;
-      pricing: '$20,000 - $150,000/month',;
-      delivery: '16-32 weeks',;
-      category: 'Edge AI Services'},;
-    {;
-      title: 'Blockchain Infrastructure & Web3 Services',;
-      description: 'Comprehensive blockchain infrastructure with DeFi integration, NFT platforms, and Web3 applications',;
-      icon: Network,;
-      features: [;
-        'Blockchain network deployment and management,Smart contract development and auditing,DeFi protocol integration and optimization,NFT marketplace and platform development,Cross-chain interoperability solutions,Web3 application development,Blockchain security and compliance,Integration with traditional systems';
-      ],;
-      pricing: '$30,000 - $300,000/month',;
-      delivery: '20-40 weeks',;
-      category: 'Blockchain Infrastructure Services'},;
-    {;
-      title: 'Neuromorphic Edge Computing',;
-      description: 'Brain-inspired edge computing with spiking neural networks and ultra-low power processing',;
-      icon: Brain,;
-      features: [;
-        'Neuromorphic chip integration and optimization,Spiking neural network deployment,Ultra-low power edge AI processing,Real-time pattern recognition and classification,Adaptive learning and plasticity algorithms,Edge-to-cloud neuromorphic synchronization,Integration with IoT and sensor networks,Performance optimization and benchmarking';
-      ],;
-      pricing: '$40,000 - $400,000/month',;
-      delivery: '24-48 weeks',;
-      category: 'Neuromorphic Edge Services'},;
-    {;
-      title: 'AI-Powered Cybersecurity Operations',;
-      description: 'Advanced AI-driven cybersecurity with autonomous threat detection, response, and prevention',;
-      icon: Shield,;
-      features: [;
-        'AI-powered threat detection and analysis,Autonomous incident response and remediation,Behavioral analysis and anomaly detection,Zero-day threat identification and protection,AI-driven security orchestration,Threat intelligence and attribution,Automated security policy enforcement,Continuous security learning and adaptation';
-      ],;
-      pricing: '$25,000 - $200,000/month',;
-      delivery: '16-32 weeks',;
-      category: 'AI Cybersecurity Services'},;
-    {;
-      title: 'Quantum-Enhanced Data Analytics',;
-      description: 'Next-generation data analytics leveraging quantum computing for complex optimization and pattern recognition',;
-      icon: Cpu,;
-      features: [;
-        'Quantum machine learning algorithms and optimization,Hybrid classical-quantum data processing,Complex pattern recognition and analysis,Quantum advantage demonstration and benchmarking,Integration with quantum hardware and simulators,Quantum algorithm development and optimization,Performance analytics and scalability assessment,Research collaboration and knowledge sharing';
-      ],;
-      pricing: '$50,000 - $500,000/month',;
-      delivery: '32-64 weeks',;
-      category: 'Quantum Analytics Services'},;
-    {;
-      title: 'Autonomous Cloud Management',;
-      description: 'Self-managing cloud infrastructure with AI-driven optimization, cost management, and performance tuning',;
-      icon: Cloud,;
-      features: [;
-        'AI-powered cloud resource optimization,Automated cost management and FinOps,Self-healing cloud infrastructure,Intelligent workload placement and scaling,Automated security and compliance management,Predictive capacity planning and scaling,Multi-cloud orchestration and management,Continuous optimization and learning';
-      ],;
-      pricing: '$20,000 - $150,000/month',;
-      delivery: '16-32 weeks',;
-      category: 'Autonomous Cloud Services'},;
-    {;
-      title: 'AI-Powered Network Intelligence',;
-      description: 'Intelligent network management with AI-driven optimization, security, and performance enhancement',;
-      icon: Network,;
-      features: [;
-        'AI-powered network optimization and routing,Intelligent traffic analysis and management,Automated network security and threat detection,Predictive network maintenance and optimization,Self-healing network infrastructure,Network performance prediction and optimization,Integration with SD-WAN and 5G networks,Continuous learning and adaptation';
-      ],;
-      pricing: '$15,000 - $100,000/month',;
-      delivery: '12-24 weeks',;
-      category: 'AI Network Services'},;
-    {;
-      title: 'Federated Learning Infrastructure',;
-      description: 'Privacy-preserving distributed machine learning with federated learning and secure multi-party computation',;
-      icon: Network,;
-      features: [;
-        'Federated learning platform implementation,Privacy-preserving model training and aggregation,Secure multi-party computation,Distributed model deployment and management,Edge computing integration and optimization,Data privacy and compliance management,Real-time model updates and synchronization,Enterprise security and governance';
-      ],;
-      pricing: '$30,000 - $250,000/month',;
-      delivery: '20-40 weeks',;
-      category: 'Federated Learning Services'}
+import { Cloud, Shield, Database, Smartphone, Globe, Code, Server, BarChart3, Link as LinkIcon, Cpu, TestTube, BookOpen, Wrench } from 'lucide-react';
+
+export default function ITServices() {
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com'
+  }
+  const itServices = [
+    {
+      icon: Cloud,
+      name: 'Cloud DevOps & SRE',
+      description: 'Complete cloud infrastructure management with CI/CD pipelines, infrastructure as code, and site reliability engineering.',
+      features: [
+        'CI/CD pipeline setup and optimization',
+        'Infrastructure as Code (Terraform, Pulumi)',
+        'Container orchestration (Kubernetes, Docker)',
+        'Monitoring, logging, and alerting systems',
+        'Auto-scaling and load balancing',
+        'Disaster recovery and backup strategies'
+      ],
+      pricing: '$120 – $220/hour',
+      projectPricing: '$6,000 – $30,000/project',
+      timeline: '2–8 weeks',
+      benefits: [
+        '99.9% uptime guarantee',
+        'Automated deployment processes',
+        'Reduced infrastructure costs',
+        'Improved system reliability'
+      ],
+      category: 'Cloud & Infrastructure'
+    },
+    {
+      icon: Shield,
+      name: 'Cybersecurity Hardening & SOC',
+      description: 'Comprehensive security solutions including zero trust architecture, endpoint detection, and security operations center setup.',
+      features: [
+        'Zero Trust security architecture',
+        'Endpoint Detection and Response (EDR)',
+        'Security Operations Center (SOC) setup',
+        'Vulnerability assessment and penetration testing',
+        'Compliance and regulatory adherence',
+        'Security awareness training programs'
+      ],
+      pricing: '$5,000 – $40,000/project',
+      projectPricing: '$2,000 – $8,000/month managed',
+      timeline: '4–12 weeks',
+      benefits: [
+        'Enhanced security posture',
+        'Reduced security incidents',
+        'Compliance with regulations',
+        '24/7 security monitoring'
+      ],
+      category: 'Security'
+    },
+    {
+      icon: Cloud,
+      name: 'Cloud Migration & Modernization',
+      description: 'Seamless migration to cloud platforms with application modernization and optimization.',
+      features: [
+        'Lift and shift migration strategies',
+        'Application containerization',
+        'Serverless architecture implementation',
+        'Data platform upgrades and migration',
+        'Legacy system modernization',
+        'Performance optimization and tuning'
+      ],
+      pricing: '$10,000 – $150,000/project',
+      projectPricing: 'Custom pricing based on complexity',
+      timeline: '3–20 weeks',
+      benefits: [
+        'Reduced infrastructure costs',
+        'Improved scalability and performance',
+        'Enhanced security and compliance',
+        'Modern technology stack adoption'
+      ],
+      category: 'Cloud & Infrastructure'
+    },
+    {
+      icon: Code,
+      name: 'Enterprise Architecture Consulting',
+      description: 'Strategic technology planning, system design, and architecture optimization for enterprise-scale solutions.',
+      features: [
+        'Technology stack evaluation and selection',
+        'System architecture design and documentation',
+        'Scalability and performance planning',
+        'Integration strategy and roadmap development',
+        'Technical debt assessment and remediation',
+        'Digital transformation consulting'
+      ],
+      pricing: '$150 – $300/hour',
+      projectPricing: '$15,000 – $75,000/project',
+      timeline: '2–8 weeks',
+      benefits: [
+        'Optimized technology architecture',
+        'Reduced technical debt',
+        'Improved system performance',
+        'Strategic technology roadmap'
+      ],
+      category: 'Consulting'
+    },
+    {
+      icon: Database,
+      name: 'Database Design & Optimization',
+      description: 'Database architecture, performance tuning, and migration services for optimal data management.',
+      features: [
+        'Database architecture design and implementation',
+        'Performance tuning and optimization',
+        'Data migration and consolidation',
+        'Backup and disaster recovery setup',
+        'Database security and compliance',
+        'Monitoring and maintenance automation'
+      ],
+      pricing: '$100 – $250/hour',
+      projectPricing: '$8,000 – $40,000/project',
+      timeline: '2–6 weeks',
+      benefits: [
+        'Improved database performance',
+        'Enhanced data security',
+        'Reduced maintenance overhead',
+        'Optimized storage costs'
+      ],
+      category: 'Data Management'
+    },
+    {
+      icon: LinkIcon,
+      name: 'API Development & Integration',
+      description: 'RESTful and GraphQL API development, microservices architecture, and third-party integrations.',
+      features: [
+        'RESTful and GraphQL API development',
+        'Microservices architecture implementation',
+        'Third-party service integration',
+        'API documentation and testing frameworks',
+        'API security and authentication',
+        'Performance monitoring and optimization'
+      ],
+      pricing: '$120 – $280/hour',
+      projectPricing: '$10,000 – $50,000/project',
+      timeline: '3–12 weeks',
+      benefits: [
+        'Scalable API architecture',
+        'Improved system integration',
+        'Enhanced developer experience',
+        'Reduced development time'
+      ],
+      category: 'Development'
+    },
+    {
+      icon: Smartphone,
+      name: 'Mobile App Development',
+      description: 'Native iOS/Android applications, React Native, and Flutter development for cross-platform solutions.',
+      features: [
+        'Native iOS and Android development',
+        'React Native cross-platform apps',
+        'Flutter mobile applications',
+        'UI/UX design and implementation',
+        'App store optimization and deployment',
+        'Performance optimization and testing'
+      ],
+      pricing: '$100 – $250/hour',
+      projectPricing: '$25,000 – $150,000/project',
+      timeline: '8–24 weeks',
+      benefits: [
+        'High-performance mobile applications',
+        'Cross-platform compatibility',
+        'Optimized user experience',
+        'Reduced development costs'
+      ],
+      category: 'Development'
+    },
+    {
+      icon: Globe,
+      name: 'Web Application Development',
+      description: 'Modern web applications using React, Next.js, Vue.js, and full-stack development solutions.',
+      features: [
+        'React and Next.js applications',
+        'Vue.js and Nuxt.js development',
+        'Full-stack web applications',
+        'Progressive Web App (PWA) development',
+        'Performance optimization and SEO',
+        'Responsive design and accessibility'
+      ],
+      pricing: '$80 – $200/hour',
+      projectPricing: '$15,000 – $100,000/project',
+      timeline: '4–16 weeks',
+      benefits: [
+        'Modern, scalable web applications',
+        'Optimized performance and SEO',
+        'Responsive and accessible design',
+        'Reduced maintenance costs'
+      ],
+      category: 'Development'
+    },
+    {
+      icon: Server,
+      name: 'IT Infrastructure Management',
+      description: 'Complete IT infrastructure setup, management, and optimization for enterprise environments.',
+      features: [
+        'Server setup and configuration',
+        'Network infrastructure design',
+        'Storage and backup solutions',
+        'Monitoring and alerting systems',
+        'Performance optimization',
+        'Disaster recovery planning'
+      ],
+      pricing: '$100 – $250/hour',
+      projectPricing: '$20,000 – $100,000/project',
+      timeline: '4–12 weeks',
+      benefits: [
+        'Reliable and scalable infrastructure',
+        'Reduced downtime and maintenance',
+        'Optimized performance and costs',
+        'Enhanced security and compliance'
+      ],
+      category: 'Infrastructure'
+    },
+    {
+      icon: Cpu,
+      name: 'High-Performance Computing Solutions',
+      description: 'Advanced HPC infrastructure for scientific computing, AI/ML workloads, and data-intensive applications.',
+      features: [
+        'GPU cluster setup and optimization',
+        'Distributed computing frameworks',
+        'High-speed networking configuration',
+        'Parallel processing optimization',
+        'Scientific computing environments',
+        'AI/ML infrastructure scaling'
+      ],
+      pricing: '$200 – $500/hour',
+      projectPricing: '$50,000 – $500,000/project',
+      timeline: '8–24 weeks',
+      benefits: [
+        'Massive computational power',
+        'Accelerated research and development',
+        'Scalable AI/ML infrastructure',
+        'Cost-effective high-performance computing'
+      ],
+      category: 'High-Performance Computing'
+    },
+    {
+      icon: Globe,
+      name: 'IoT Platform & Device Management',
+      description: 'Comprehensive IoT solutions including device management, data analytics, and edge computing.',
+      features: [
+        'IoT device connectivity and management',
+        'Edge computing infrastructure',
+        'Real-time data processing and analytics',
+        'Device security and firmware updates',
+        'IoT platform integration',
+        'Predictive maintenance systems'
+      ],
+      pricing: '$150 – $350/hour',
+      projectPricing: '$30,000 – $200,000/project',
+      timeline: '6–20 weeks',
+      benefits: [
+        'Scalable IoT infrastructure',
+        'Real-time device monitoring',
+        'Automated device management',
+        'Data-driven insights and optimization'
+      ],
+      category: 'IoT & Edge Computing'
+    },
+    {
+      icon: BarChart3,
+      name: 'Enterprise Digital Transformation',
+      description: 'Comprehensive digital transformation consulting and implementation for modern business operations.',
+      features: [
+        'Digital strategy and roadmap development',
+        'Legacy system modernization',
+        'Cloud-native application development',
+        'Data analytics and business intelligence',
+        'Process automation and optimization',
+        'Change management and training'
+      ],
+      pricing: '$200 – $400/hour',
+      projectPricing: '$100,000 – $1,000,000/project',
+      timeline: '12–52 weeks',
+      benefits: [
+        'Modernized business operations',
+        'Improved efficiency and productivity',
+        'Enhanced customer experience',
+        'Competitive advantage in digital markets'
+      ],
+      category: 'Digital Transformation'
+    },
+    {
+      icon: Shield,
+      name: 'Advanced Threat Intelligence Platform',
+      description: 'Comprehensive cybersecurity platform with threat intelligence, incident response, and security analytics.',
+      features: [
+        'Threat intelligence gathering and analysis',
+        'Incident response automation',
+        'Security analytics and reporting',
+        'Threat hunting and investigation',
+        'Compliance monitoring and reporting',
+        'Security orchestration and automation'
+      ],
+      pricing: '$10,000 – $100,000/project',
+      projectPricing: '$5,000 – $25,000/month managed',
+      timeline: '8–20 weeks',
+      benefits: [
+        'Proactive threat detection',
+        'Automated incident response',
+        'Enhanced security visibility',
+        'Reduced security risks and costs'
+      ],
+      category: 'Cybersecurity'
+    },
+    {
+      icon: Database,
+      name: 'Enterprise Data Platform',
+      description: 'Modern data platform architecture with real-time analytics, data lakes, and business intelligence.',
+      features: [
+        'Data lake and warehouse architecture',
+        'Real-time data processing pipelines',
+        'Business intelligence and analytics',
+        'Data governance and compliance',
+        'Machine learning model deployment',
+        'Data visualization and reporting'
+      ],
+      pricing: '$150 – $350/hour',
+      projectPricing: '$75,000 – $500,000/project',
+      timeline: '12–32 weeks',
+      benefits: [
+        'Unified data platform',
+        'Real-time business insights',
+        'Improved data quality and governance',
+        'Enhanced decision-making capabilities'
+      ],
+      category: 'Data & Analytics'
+    },
+    {
+      icon: Code,
+      name: 'Enterprise Application Integration',
+      description: 'Seamless integration of enterprise applications with modern integration platforms and APIs.',
+      features: [
+        'Enterprise Service Bus (ESB) implementation',
+        'API gateway and management',
+        'Legacy system integration',
+        'Real-time data synchronization',
+        'Integration monitoring and management',
+        'Cloud and on-premises connectivity'
+      ],
+      pricing: '$120 – $300/hour',
+      projectPricing: '$40,000 – $300,000/project',
+      timeline: '8–24 weeks',
+      benefits: [
+        'Unified enterprise systems',
+        'Improved data flow and accuracy',
+        'Reduced integration complexity',
+        'Enhanced business process efficiency'
+      ],
+      category: 'Integration'
+    },
+    {
+      icon: Smartphone,
+      name: 'Quantum Computing Consulting',
+      description: 'Quantum computing strategy, algorithm development, and hybrid quantum-classical solutions.',
+      features: [
+        'Quantum computing strategy development',
+        'Quantum algorithm design and optimization',
+        'Hybrid quantum-classical solutions',
+        'Quantum software development',
+        'Quantum hardware evaluation',
+        'Quantum security and cryptography'
+      ],
+      pricing: '$300 – $800/hour',
+      projectPricing: '$100,000 – $2,000,000/project',
+      timeline: '16–52 weeks',
+      benefits: [
+        'Cutting-edge quantum capabilities',
+        'Exponential computational advantages',
+        'Future-proof technology investment',
+        'Competitive advantage in research'
+      ],
+      category: 'Quantum Computing'
+    },
+    {
+      icon: Globe,
+      name: 'Blockchain & Web3 Solutions',
+      description: 'Blockchain development, smart contracts, DeFi protocols, and Web3 application development.',
+      features: [
+        'Blockchain platform development',
+        'Smart contract development and auditing',
+        'DeFi protocol implementation',
+        'NFT marketplace development',
+        'Web3 application architecture',
+        'Cryptocurrency integration'
+      ],
+      pricing: '$150 – $400/hour',
+      projectPricing: '$50,000 – $500,000/project',
+      timeline: '8–32 weeks',
+      benefits: [
+        'Decentralized application solutions',
+        'Enhanced security and transparency',
+        'Reduced intermediary costs',
+        'Innovative business models'
+      ],
+      category: 'Blockchain & Web3'
+    },
+    {
+      icon: TestTube,
+      name: 'DevSecOps & Security Automation',
+      description: 'Integrated security practices in DevOps workflows with automated security testing and compliance.',
+      features: [
+        'Security integration in CI/CD pipelines',
+        'Automated security testing and scanning',
+        'Infrastructure security as code',
+        'Compliance automation and reporting',
+        'Security monitoring and alerting',
+        'Vulnerability management automation'
+      ],
+      pricing: '$120 – $280/hour',
+      projectPricing: '$25,000 – $150,000/project',
+      timeline: '6–16 weeks',
+      benefits: [
+        'Integrated security in development',
+        'Automated compliance management',
+        'Reduced security vulnerabilities',
+        'Faster and more secure deployments'
+      ],
+      category: 'DevSecOps'
+    },
+    {
+      icon: BarChart3,
+      name: 'Data Engineering & Analytics',
+      description: 'Data pipeline development, data warehouses, ETL processes, and business intelligence solutions.',
+      features: [
+        'Data pipeline development and optimization',
+        'Data warehouse design and implementation',
+        'ETL/ELT process automation',
+        'Business intelligence dashboards',
+        'Real-time data processing',
+        'Data quality and governance'
+      ],
+      pricing: '$120 – $280/hour',
+      projectPricing: '$20,000 – $100,000/project',
+      timeline: '4–16 weeks',
+      benefits: [
+        'Improved data-driven decision making',
+        'Automated data processing',
+        'Enhanced business intelligence',
+        'Reduced data processing costs'
+      ],
+      category: 'Data Management'
+    },
+    {
+      icon: Cpu,
+      name: 'Blockchain & Web3 Development',
+      description: 'Smart contract development, DeFi protocols, and blockchain integration solutions.',
+      features: [
+        'Smart contract development and auditing',
+        'DeFi protocol design and implementation',
+        'Blockchain integration and dApp development',
+        'Tokenomics and governance system design',
+        'NFT marketplace development',
+        'Cross-chain interoperability solutions'
+      ],
+      pricing: '$150 – $350/hour',
+      projectPricing: '$30,000 – $200,000/project',
+      timeline: '8–24 weeks',
+      benefits: [
+        'Cutting-edge blockchain solutions',
+        'Decentralized application development',
+        'Enhanced security and transparency',
+        'Innovative business models'
+      ],
+      category: 'Emerging Technologies'
+    },
+    {
+      icon: Wrench,
+      name: 'IoT & Embedded Systems',
+      description: 'IoT device development, sensor integration, and edge computing solutions.',
+      features: [
+        'IoT device development and prototyping',
+        'Sensor integration and data collection',
+        'Edge computing and real-time processing',
+        'IoT platform development',
+        'Device management and monitoring',
+        'Security and compliance implementation'
+      ],
+      pricing: '$100 – $300/hour',
+      projectPricing: '$25,000 – $150,000/project',
+      timeline: '6–20 weeks',
+      benefits: [
+        'Connected device solutions',
+        'Real-time data processing',
+        'Improved operational efficiency',
+        'Innovative IoT applications'
+      ],
+      category: 'Emerging Technologies'
+    },
+    {
+      icon: Cloud,
+      name: 'Edge Computing Infrastructure',
+      description: 'Distributed edge computing solutions for low-latency applications and real-time processing.',
+      features: [
+        'Edge server deployment and management',
+        'Content delivery network optimization',
+        'Real-time data processing at the edge',
+        'Edge AI and machine learning deployment',
+        '5G network integration',
+        'Edge security and compliance'
+      ],
+      pricing: '$150 – $350/hour',
+      projectPricing: '$40,000 – $200,000/project',
+      timeline: '8–16 weeks',
+      benefits: [
+        '50% reduction in latency',
+        'Improved application performance',
+        'Enhanced user experience',
+        'Reduced bandwidth costs'
+      ],
+      category: 'Cloud & Infrastructure'
+    },
+    {
+      icon: Shield,
+      name: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust implementation with identity verification and micro-segmentation.',
+      features: [
+        'Identity and access management (IAM)',
+        'Network micro-segmentation',
+        'Device trust and compliance',
+        'Application security controls',
+        'Data encryption and protection',
+        'Continuous security monitoring'
+      ],
+      pricing: '$8,000 – $50,000/project',
+      projectPricing: '$3,000 – $12,000/month managed',
+      timeline: '6–16 weeks',
+      benefits: [
+        'Enhanced security posture',
+        'Reduced attack surface',
+        'Compliance with regulations',
+        'Improved threat detection'
+      ],
+      category: 'Security'
+    },
+    {
+      icon: Database,
+      name: 'Data Lake & Warehouse Modernization',
+      description: 'Modern data architecture with cloud-native data lakes and real-time analytics.',
+      features: [
+        'Cloud data lake design and implementation',
+        'Real-time data streaming and processing',
+        'Data governance and cataloging',
+        'Advanced analytics and ML integration',
+        'Data quality and lineage tracking',
+        'Cost optimization and performance tuning'
+      ],
+      pricing: '$120 – $300/hour',
+      projectPricing: '$30,000 – $150,000/project',
+      timeline: '8–20 weeks',
+      benefits: [
+        'Unified data platform',
+        'Real-time analytics capabilities',
+        'Improved data quality',
+        'Reduced data processing costs'
+      ],
+      category: 'Data Management'
+    },
+    {
+      icon: Code,
+      name: 'Microservices Architecture Design',
+      description: 'Scalable microservices architecture with service mesh and container orchestration.',
+      features: [
+        'Microservices design and implementation',
+        'Service mesh and API gateway setup',
+        'Container orchestration with Kubernetes',
+        'Service discovery and load balancing',
+        'Distributed tracing and monitoring',
+        'DevOps and CI/CD integration'
+      ],
+      pricing: '$150 – $350/hour',
+      projectPricing: '$25,000 – $100,000/project',
+      timeline: '6–16 weeks',
+      benefits: [
+        'Improved scalability and performance',
+        'Faster development and deployment',
+        'Better fault isolation',
+        'Enhanced team productivity'
+      ],
+      category: 'Development'
+    },
+    {
+      icon: Globe,
+      name: 'Progressive Web App Development',
+      description: 'Modern PWA development with offline capabilities and native app features.',
+      features: [
+        'PWA architecture and implementation',
+        'Service worker development',
+        'Offline functionality and caching',
+        'Push notifications and background sync',
+        'App-like user experience',
+        'Performance optimization'
+      ],
+      pricing: '$100 – $250/hour',
+      projectPricing: '$20,000 – $80,000/project',
+      timeline: '4–12 weeks',
+      benefits: [
+        'Native app-like experience',
+        'Offline functionality',
+        'Reduced development costs',
+        'Cross-platform compatibility'
+      ],
+      category: 'Development'
+    },
+    {
+      icon: Server,
+      name: 'Hybrid Cloud Management',
+      description: 'Seamless hybrid cloud operations with multi-cloud orchestration and management.',
+      features: [
+        'Multi-cloud strategy and planning',
+        'Hybrid cloud architecture design',
+        'Cloud cost optimization and governance',
+        'Disaster recovery and backup solutions',
+        'Security and compliance management',
+        'Performance monitoring and optimization'
+      ],
+      pricing: '$120 – $280/hour',
+      projectPricing: '$15,000 – $75,000/project',
+      timeline: '4–12 weeks',
+      benefits: [
+        'Flexible cloud deployment',
+        'Reduced vendor lock-in',
+        'Optimized costs and performance',
+        'Enhanced disaster recovery'
+      ],
+      category: 'Cloud & Infrastructure'
+    },
+    {
+      icon: BarChart3,
+      name: 'Real-Time Analytics Platform',
+      description: 'Streaming analytics platform with real-time data processing and visualization.',
+      features: [
+        'Real-time data streaming and processing',
+        'Stream analytics and complex event processing',
+        'Real-time dashboards and visualization',
+        'Machine learning model deployment',
+        'Data pipeline monitoring and alerting',
+        'Scalable architecture design'
+      ],
+      pricing: '$150 – $350/hour',
+      projectPricing: '$35,000 – $120,000/project',
+      timeline: '8–16 weeks',
+      benefits: [
+        'Real-time business insights',
+        'Faster decision making',
+        'Improved operational efficiency',
+        'Enhanced customer experience'
+      ],
+      category: 'Data Management'
+    },
+    {
+      icon: Cpu,
+      name: 'Quantum Computing Integration',
+      description: 'Quantum computing solutions and hybrid quantum-classical system integration.',
+      features: [
+        'Quantum algorithm development',
+        'Hybrid quantum-classical systems',
+        'Quantum machine learning applications',
+        'Quantum cryptography implementation',
+        'Quantum simulation and optimization',
+        'Quantum hardware integration'
+      ],
+      pricing: '$200 – $500/hour',
+      projectPricing: '$50,000 – $300,000/project',
+      timeline: '12–32 weeks',
+      benefits: [
+        'Exponential computational power',
+        'Advanced optimization capabilities',
+        'Enhanced security with quantum cryptography',
+        'Competitive advantage in research'
+      ],
+      category: 'Emerging Technologies'
+    },
+    {
+      icon: TestTube,
+      name: 'AI/ML Model Deployment & MLOps',
+      description: 'End-to-end machine learning operations with model deployment and monitoring.',
+      features: [
+        'ML model deployment and serving',
+        'Model versioning and management',
+        'A/B testing and experimentation',
+        'Model monitoring and drift detection',
+        'Automated retraining pipelines',
+        'MLOps workflow automation'
+      ],
+      pricing: '$150 – $350/hour',
+      projectPricing: '$25,000 – $100,000/project',
+      timeline: '6–16 weeks',
+      benefits: [
+        'Faster model deployment',
+        'Improved model performance',
+        'Automated ML operations',
+        'Reduced operational overhead'
+      ],
+      category: 'AI & Machine Learning'
+    },
+    {
+      icon: BookOpen,
+      name: 'Digital Transformation Consulting',
+      description: 'Strategic digital transformation with technology roadmap and change management.',
+      features: [
+        'Digital strategy and roadmap development',
+        'Technology assessment and selection',
+        'Change management and training',
+        'Process optimization and automation',
+        'Customer experience transformation',
+        'Innovation and R&D strategy'
+      ],
+      pricing: '$200 – $400/hour',
+      projectPricing: '$30,000 – $150,000/project',
+      timeline: '8–24 weeks',
+      benefits: [
+        'Strategic technology alignment',
+        'Improved operational efficiency',
+        'Enhanced customer experience',
+        'Competitive advantage'
+      ],
+      category: 'Consulting'
+    },
+    {
+      icon: Wrench,
+      name: 'AR/VR Development & Integration',
+      description: 'Augmented and virtual reality solutions for training, visualization, and customer engagement.',
+      features: [
+        'AR/VR application development',
+        '3D modeling and animation',
+        'Spatial computing and tracking',
+        'Multi-platform deployment',
+        'User experience design',
+        'Performance optimization'
+      ],
+      pricing: '$120 – $300/hour',
+      projectPricing: '$40,000 – $200,000/project',
+      timeline: '8–24 weeks',
+      benefits: [
+        'Immersive user experiences',
+        'Enhanced training and education',
+        'Improved customer engagement',
+        'Innovative business applications'
+      ],
+      category: 'Emerging Technologies'
+    },
+    {
+      icon: Cloud,
+      name: 'Enterprise Application Integration',
+      description: 'Comprehensive enterprise application integration with API management, data synchronization, and workflow automation.',
+      features: [
+        'Enterprise Service Bus (ESB) implementation',
+        'API gateway and management platform',
+        'Data integration and synchronization',
+        'Workflow automation and orchestration',
+        'Legacy system modernization',
+        'Real-time data processing and analytics'
+      ],
+      pricing: '$150 – $350/hour',
+      projectPricing: '$25,000 – $150,000/project',
+      timeline: '4–16 weeks',
+      benefits: [
+        'Seamless system integration',
+        'Improved data consistency',
+        'Reduced integration complexity',
+        'Enhanced business agility'
+      ],
+      category: 'Enterprise Integration'
+    },
+    {
+      icon: Shield,
+      name: 'Advanced Threat Intelligence Platform',
+      description: 'Comprehensive threat intelligence and security monitoring with automated response capabilities.',
+      features: [
+        'Threat intelligence gathering and analysis',
+        'Security Information and Event Management (SIEM)',
+        'Automated incident response and remediation',
+        'Threat hunting and investigation',
+        'Security orchestration and automation',
+        'Compliance monitoring and reporting'
+      ],
+      pricing: '$200 – $400/hour',
+      projectPricing: '$30,000 – $200,000/project',
+      timeline: '6–20 weeks',
+      benefits: [
+        'Proactive threat detection',
+        'Automated security response',
+        'Reduced security incidents',
+        'Enhanced security posture'
+      ],
+      category: 'Security'
+    },
+    {
+      icon: Cpu,
+      name: 'High-Performance Computing Solutions',
+      description: 'Advanced HPC infrastructure with GPU computing, parallel processing, and scientific computing capabilities.',
+      features: [
+        'GPU-accelerated computing clusters',
+        'Parallel processing and distributed computing',
+        'Scientific computing and simulation',
+        'Machine learning and AI training infrastructure',
+        'High-speed networking and storage',
+        'Performance optimization and tuning'
+      ],
+      pricing: '$180 – $400/hour',
+      projectPricing: '$50,000 – $500,000/project',
+      timeline: '8–24 weeks',
+      benefits: [
+        'Massive computational power',
+        'Accelerated research and development',
+        'Cost-effective computing resources',
+        'Scalable infrastructure'
+      ],
+      category: 'High-Performance Computing'
+    },
+    {
+      icon: Globe,
+      name: 'IoT Platform & Device Management',
+      description: 'Comprehensive IoT platform with device management, data analytics, and edge computing capabilities.',
+      features: [
+        'IoT device provisioning and management',
+        'Edge computing and data processing',
+        'Real-time data analytics and visualization',
+        'Device security and firmware management',
+        'Integration with cloud platforms',
+        'Predictive maintenance and monitoring'
+      ],
+      pricing: '$120 – $300/hour',
+      projectPricing: '$20,000 – $100,000/project',
+      timeline: '6–16 weeks',
+      benefits: [
+        'Centralized device management',
+        'Real-time data insights',
+        'Improved operational efficiency',
+        'Scalable IoT infrastructure'
+      ],
+      category: 'IoT & Edge Computing'
+    },
+    {
+      icon: Code,
+      name: 'Enterprise Digital Transformation Consulting',
+      description: 'Strategic digital transformation with technology modernization, process optimization, and change management.',
+      features: [
+        'Digital strategy development and planning',
+        'Technology stack modernization',
+        'Process digitization and automation',
+        'Change management and training',
+        'Data-driven decision making implementation',
+        'Customer experience transformation'
+      ],
+      pricing: '$200 – $500/hour',
+      projectPricing: '$50,000 – $300,000/project',
+      timeline: '12–36 weeks',
+      benefits: [
+        'Modernized technology infrastructure',
+        'Improved operational efficiency',
+        'Enhanced customer experience',
+        'Competitive advantage'
+      ],
+      category: 'Digital Transformation'
+    },
+    {
+      icon: Database,
+      name: 'Big Data Analytics & Data Lake Solutions',
+      description: 'Comprehensive big data platform with data lake architecture, analytics, and machine learning capabilities.',
+      features: [
+        'Data lake architecture and implementation',
+        'Big data processing and analytics',
+        'Real-time streaming data processing',
+        'Machine learning and AI model deployment',
+        'Data governance and security',
+        'Business intelligence and reporting'
+      ],
+      pricing: '$150 – $350/hour',
+      projectPricing: '$30,000 – $200,000/project',
+      timeline: '8–20 weeks',
+      benefits: [
+        'Unified data platform',
+        'Advanced analytics capabilities',
+        'Real-time data processing',
+        'Data-driven insights'
+      ],
+      category: 'Data Analytics'
+    },
+    {
+      icon: Shield,
+      name: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security implementation with identity verification and network segmentation.',
+      features: [
+        'Identity and access management (IAM)',
+        'Network segmentation and micro-segmentation',
+        'Multi-factor authentication and SSO',
+        'Device trust and compliance',
+        'Continuous security monitoring',
+        'Security policy automation'
+      ],
+      pricing: '$180 – $400/hour',
+      projectPricing: '$40,000 – $250,000/project',
+      timeline: '8–24 weeks',
+      benefits: [
+        'Enhanced security posture',
+        'Reduced attack surface',
+        'Automated security policies',
+        'Compliance with regulations'
+      ],
+      category: 'Security'
+    },
+    {
+      icon: Cloud,
+      name: 'Multi-Cloud Management & Optimization',
+      description: 'Comprehensive multi-cloud strategy with cost optimization, governance, and unified management.',
+      features: [
+        'Multi-cloud architecture design',
+        'Cloud cost optimization and management',
+        'Unified cloud governance and compliance',
+        'Cloud migration and modernization',
+        'Disaster recovery and backup strategies',
+        'Performance monitoring and optimization'
+      ],
+      pricing: '$150 – $350/hour',
+      projectPricing: '$25,000 – $150,000/project',
+      timeline: '6–20 weeks',
+      benefits: [
+        'Optimized cloud costs',
+        'Improved cloud performance',
+        'Enhanced security and compliance',
+        'Reduced vendor lock-in'
+      ],
+      category: 'Cloud & Infrastructure'
+    },
+    {
+      icon: Smartphone,
+      name: 'Enterprise Mobile App Development',
+      description: 'Native and cross-platform mobile application development with enterprise-grade security and integration.',
+      features: [
+        'Native iOS and Android development',
+        'Cross-platform development (React Native, Flutter)',
+        'Enterprise security and authentication',
+        'Backend integration and API development',
+        'Mobile device management (MDM)',
+        'App store deployment and management'
+      ],
+      pricing: '$120 – $300/hour',
+      projectPricing: '$15,000 – $100,000/project',
+      timeline: '4–16 weeks',
+      benefits: [
+        'Enhanced mobile productivity',
+        'Improved user experience',
+        'Enterprise-grade security',
+        'Cross-platform compatibility'
+      ],
+      category: 'Mobile Development'
+    },
+    {
+      icon: BarChart3,
+      name: 'Business Intelligence & Data Visualization',
+      description: 'Advanced BI platform with interactive dashboards, reporting, and self-service analytics.',
+      features: [
+        'Interactive dashboards and reports',
+        'Self-service analytics platform',
+        'Data visualization and storytelling',
+        'Advanced analytics and forecasting',
+        'Real-time data integration',
+        'Mobile BI and accessibility'
+      ],
+      pricing: '$100 – $250/hour',
+      projectPricing: '$15,000 – $75,000/project',
+      timeline: '4–12 weeks',
+      benefits: [
+        'Data-driven decision making',
+        'Improved business insights',
+        'Self-service analytics',
+        'Enhanced reporting capabilities'
+      ],
+      category: 'Business Intelligence'
+    },
+    {
+      icon: Server,
+      name: 'Edge Computing Infrastructure',
+      description: 'Distributed edge computing platform with low-latency processing and real-time analytics.',
+      features: [
+        'Edge computing infrastructure deployment',
+        'Low-latency data processing',
+        'Real-time analytics and decision making',
+        'Edge-to-cloud data synchronization',
+        'Edge security and management',
+        'IoT and sensor data processing'
+      ],
+      pricing: '$150 – $350/hour',
+      projectPricing: '$30,000 – $150,000/project',
+      timeline: '6–16 weeks',
+      benefits: [
+        'Reduced latency and improved performance',
+        'Real-time data processing',
+        'Enhanced reliability and availability',
+        'Cost-effective computing at the edge'
+      ],
+      category: 'Edge Computing'
+    },
+    {
+      icon: Shield,
+      name: 'Compliance & Regulatory Technology',
+      description: 'Comprehensive compliance management with automated monitoring, reporting, and risk assessment.',
+      features: [
+        'Regulatory compliance monitoring',
+        'Automated compliance reporting',
+        'Risk assessment and management',
+        'Audit trail and documentation',
+        'Policy management and updates',
+        'Compliance training and awareness'
+      ],
+      pricing: '$120 – $300/hour',
+      projectPricing: '$20,000 – $100,000/project',
+      timeline: '4–12 weeks',
+      benefits: [
+        'Automated compliance monitoring',
+        'Reduced compliance risks',
+        'Streamlined audit processes',
+        'Cost-effective compliance management'
+      ],
+      category: 'Compliance'
+    },
+    {
+      icon: Cpu,
+      name: 'Quantum Computing Infrastructure',
+      description: 'Quantum computing infrastructure setup, optimization, and application development for complex problem solving.',
+      features: [
+        'Quantum hardware integration and setup',
+        'Quantum algorithm development and optimization',
+        'Quantum error correction implementation',
+        'Hybrid classical-quantum computing solutions',
+        'Quantum cryptography and security',
+        'Quantum machine learning applications'
+      ],
+      pricing: '$50,000 – $500,000/project',
+      projectPricing: 'Custom pricing based on quantum requirements',
+      timeline: '12–24 weeks',
+      benefits: [
+        'Exponential computational capabilities',
+        'Breakthrough problem-solving potential',
+        'Enhanced security with quantum cryptography',
+        'Future-proof technology investment'
+      ],
+      category: 'Quantum Computing'
+    },
+    {
+      icon: Globe,
+      name: '5G Network Infrastructure & Optimization',
+      description: '5G network deployment, optimization, and application development for ultra-fast connectivity.',
+      features: [
+        '5G network planning and deployment',
+        'Network slicing and optimization',
+        'Edge computing integration',
+        'IoT device connectivity management',
+        '5G application development',
+        'Network performance monitoring'
+      ],
+      pricing: '$25,000 – $200,000/project',
+      projectPricing: '$5,000 – $25,000/month managed',
+      timeline: '8–16 weeks',
+      benefits: [
+        'Ultra-fast network speeds',
+        'Low-latency connectivity',
+        'Enhanced IoT capabilities',
+        'Future-ready network infrastructure'
+      ],
+      category: 'Network Infrastructure'
+    },
+    {
+      icon: Shield,
+      name: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security implementation with identity verification and micro-segmentation.',
+      features: [
+        'Identity and access management (IAM)',
+        'Micro-segmentation and network isolation',
+        'Continuous security monitoring',
+        'Privileged access management',
+        'Device trust and compliance',
+        'Security orchestration and automation'
+      ],
+      pricing: '$15,000 – $100,000/project',
+      projectPricing: '$3,000 – $15,000/month managed',
+      timeline: '6–12 weeks',
+      benefits: [
+        'Enhanced security posture',
+        'Reduced attack surface',
+        'Automated threat response',
+        'Compliance with security standards'
+      ],
+      category: 'Security Architecture'
+    },
+    {
+      icon: Database,
+      name: 'Blockchain Infrastructure & Development',
+      description: 'Blockchain network setup, smart contract development, and decentralized application creation.',
+      features: [
+        'Blockchain network design and deployment',
+        'Smart contract development and auditing',
+        'DeFi application development',
+        'NFT marketplace creation',
+        'Blockchain integration services',
+        'Cryptocurrency wallet development'
+      ],
+      pricing: '$20,000 – $150,000/project',
+      projectPricing: 'Custom pricing based on blockchain requirements',
+      timeline: '8–16 weeks',
+      benefits: [
+        'Decentralized and secure transactions',
+        'Transparent and immutable records',
+        'Reduced transaction costs',
+        'Enhanced data integrity'
+      ],
+      category: 'Blockchain Technology'
+    },
+    {
+      icon: Smartphone,
+      name: 'IoT Platform Development & Management',
+      description: 'Comprehensive IoT platform development with device management, data analytics, and automation.',
+      features: [
+        'IoT device connectivity and management',
+        'Real-time data collection and processing',
+        'Edge computing and analytics',
+        'IoT security and compliance',
+        'Predictive maintenance systems',
+        'Integration with existing systems'
+      ],
+      pricing: '$15,000 – $100,000/project',
+      projectPricing: '$2,000 – $10,000/month managed',
+      timeline: '6–12 weeks',
+      benefits: [
+        'Automated device management',
+        'Real-time insights and analytics',
+        'Improved operational efficiency',
+        'Scalable IoT infrastructure'
+      ],
+      category: 'IoT Solutions'
+    },
+    {
+      icon: Cloud,
+      name: 'Multi-Cloud Strategy & Management',
+      description: 'Comprehensive multi-cloud strategy implementation with cost optimization and governance.',
+      features: [
+        'Multi-cloud architecture design',
+        'Cloud cost optimization and management',
+        'Cloud governance and compliance',
+        'Disaster recovery and backup',
+        'Cloud security and monitoring',
+        'Application migration and modernization'
+      ],
+      pricing: '$10,000 – $75,000/project',
+      projectPricing: '$2,000 – $12,000/month managed',
+      timeline: '4–12 weeks',
+      benefits: [
+        'Reduced vendor lock-in',
+        'Optimized cloud costs',
+        'Enhanced reliability and performance',
+        'Improved security and compliance'
+      ],
+      category: 'Cloud Strategy'
+    },
+    {
+      icon: Code,
+      name: 'Microservices Architecture & API Development',
+      description: 'Microservices architecture design, API development, and service mesh implementation.',
+      features: [
+        'Microservices architecture design',
+        'API gateway and management',
+        'Service mesh implementation',
+        'Container orchestration',
+        'API security and monitoring',
+        'Legacy system integration'
+      ],
+      pricing: '$12,000 – $80,000/project',
+      projectPricing: '$1,500 – $8,000/month managed',
+      timeline: '6–12 weeks',
+      benefits: [
+        'Improved scalability and flexibility',
+        'Faster development and deployment',
+        'Enhanced system reliability',
+        'Better resource utilization'
+      ],
+      category: 'Architecture & APIs'
+    },
+    {
+      icon: BarChart3,
+      name: 'Data Lake & Analytics Platform',
+      description: 'Comprehensive data lake setup with advanced analytics, machine learning, and business intelligence.',
+      features: [
+        'Data lake architecture and setup',
+        'ETL/ELT pipeline development',
+        'Real-time data processing',
+        'Machine learning model deployment',
+        'Business intelligence dashboards',
+        'Data governance and security'
+      ],
+      pricing: '$20,000 – $120,000/project',
+      projectPricing: '$3,000 – $15,000/month managed',
+      timeline: '8–16 weeks',
+      benefits: [
+        'Centralized data management',
+        'Advanced analytics capabilities',
+        'Real-time insights and reporting',
+        'Data-driven decision making'
+      ],
+      category: 'Data & Analytics'
+    },
+    {
+      icon: Shield,
+      name: 'DevSecOps & Security Automation',
+      description: 'Integrated security into DevOps pipelines with automated security testing and compliance.',
+      features: [
+        'Security integration in CI/CD pipelines',
+        'Automated security testing',
+        'Infrastructure as Code security',
+        'Compliance automation',
+        'Security monitoring and alerting',
+        'Vulnerability management'
+      ],
+      pricing: '$8,000 – $50,000/project',
+      projectPricing: '$1,500 – $6,000/month managed',
+      timeline: '4–8 weeks',
+      benefits: [
+        'Automated security processes',
+        'Faster and more secure deployments',
+        'Reduced security vulnerabilities',
+        'Compliance with security standards'
+      ],
+      category: 'DevSecOps'
+    },
+    {
+      icon: Globe,
+      name: 'Edge Computing Infrastructure',
+      description: 'Edge computing infrastructure setup with distributed processing and real-time analytics.',
+      features: [
+        'Edge computing architecture design',
+        'Distributed processing implementation',
+        'Real-time data analytics',
+        'Edge device management',
+        'Network optimization',
+        'Integration with cloud services'
+      ],
+      pricing: '$15,000 – $100,000/project',
+      projectPricing: '$2,500 – $12,000/month managed',
+      timeline: '6–12 weeks',
+      benefits: [
+        'Reduced latency and bandwidth usage',
+        'Real-time data processing',
+        'Improved system reliability',
+        'Enhanced user experience'
+      ],
+      category: 'Edge Computing'
+    },
+    {
+      icon: Cpu,
+      name: 'High-Performance Computing (HPC) Solutions',
+      description: 'High-performance computing infrastructure for scientific computing, simulations, and data processing.',
+      features: [
+        'HPC cluster design and deployment',
+        'Parallel processing optimization',
+        'GPU computing implementation',
+        'Scientific computing applications',
+        'Performance monitoring and tuning',
+        'Scalable computing resources'
+      ],
+      pricing: '$25,000 – $200,000/project',
+      projectPricing: '$5,000 – $25,000/month managed',
+      timeline: '8–16 weeks',
+      benefits: [
+        'Massive computational power',
+        'Faster research and development',
+        'Complex simulation capabilities',
+        'Scalable computing resources'
+      ],
+      category: 'High-Performance Computing'
+    },
+    {
+      icon: Smartphone,
+      name: 'Mobile-First Application Development',
+      description: 'Native and cross-platform mobile application development with modern frameworks and technologies.',
+      features: [
+        'Native iOS and Android development',
+        'Cross-platform development (React Native, Flutter)',
+        'Progressive Web App (PWA) development',
+        'Mobile app security and testing',
+        'App store optimization',
+        'Mobile analytics and monitoring'
+      ],
+      pricing: '$10,000 – $75,000/project',
+      projectPricing: '$1,500 – $8,000/month maintenance',
+      timeline: '4–12 weeks',
+      benefits: [
+        'Enhanced user experience',
+        'Cross-platform compatibility',
+        'Improved app performance',
+        'Better user engagement'
+      ],
+      category: 'Mobile Development'
+    },
+    {
+      icon: Database,
+      name: 'Real-Time Data Streaming Platform',
+      description: 'Real-time data streaming infrastructure with Apache Kafka, event processing, and analytics.',
+      features: [
+        'Real-time data streaming setup',
+        'Event-driven architecture implementation',
+        'Stream processing and analytics',
+        'Data pipeline optimization',
+        'Monitoring and alerting',
+        'Integration with data stores'
+      ],
+      pricing: '$12,000 – $80,000/project',
+      projectPricing: '$2,000 – $10,000/month managed',
+      timeline: '6–10 weeks',
+      benefits: [
+        'Real-time data processing',
+        'Event-driven architecture',
+        'Improved system responsiveness',
+        'Enhanced data analytics'
+      ],
+      category: 'Data Streaming'
+    }
   ];
 
-  const technologies = [;
-  { name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },;
-    { name: 'Containerization', icon: Server, description: 'Docker, Kubernetes, OpenShift' },;
-    { name: 'Security Tools', icon: Shield, description: 'SIEM, WAF, IAM, Encryption' },;
-    { name: 'Monitoring', icon: BarChart3, description: 'Prometheus, Grafana, ELK Stack' },;
-    { name: 'Databases', icon: Database, description: 'PostgreSQL, MongoDB, Redis' },;
-    { name: 'Networking', icon: Network, description: 'Cisco, Fortinet, SD-WAN' }
-  ];
+  return (
+    <>
+      <Head>
+        <title>IT Services - Zion Tech Group | Cloud, Security & Development Solutions</title>
+        <meta name="description" content="Comprehensive IT services including cloud DevOps, cybersecurity, database optimization, mobile development, and web solutions. Transform your technology infrastructure." />
+        <meta name="keywords" content="IT services, cloud DevOps, cybersecurity, database optimization, mobile development, web development, API development" />
+        <link rel="canonical" href={`${contact.site}/it-services`} />
+        <meta property="og:title" content="IT Services - Zion Tech Group | Cloud, Security & Development Solutions" />
+        <meta property="og:description" content="Comprehensive IT services including cloud DevOps, cybersecurity, and development solutions." />
+        <meta property="og:url" content={`${contact.site}/it-services`} />
+        <meta property="og:type" content="website" />
+      </Head>
 
-  const benefits = [;
-  {;
-      title: 'Reduced Downtime',;
-      description: 'Proactive monitoring and maintenance',;
-      icon: Clock,;
-      stat: '99.9%'},;
-    {;
-      title: 'Cost Savings',;
-      description: 'Optimized infrastructure and processes',;
-      icon: Zap,;
-      stat: '40%'},;
-    {;
-      title: 'Enhanced Security',;
-      description: 'Enterprise-grade protection',;
-      icon: Shield,;
-      stat: '100%'},;
-    {;
-      title: 'Scalability',;
-      description: 'Flexible and scalable solutions',;
-      icon: TrendingUp,;
-      stat: 'Unlimited'}
-  ];
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+      <Head>
+        <title>IT & Cloud Services — Zion Tech Group</title>
+        <meta name="description" content="Comprehensive IT services including cloud migration, cybersecurity, enterprise architecture, and development solutions. Expert IT consulting and implementation." />
+        <link rel="canonical" href={`${contact.site}/it-services`} />
+      </Head>
 
-  return (;
-    <PageTransition>;
-      <Head>;
-        <title>{title}</title>;
-        <meta name="description" content={description} />;
-        <meta name="viewport" content="width=device-width, initial-scale=1" />;
-        <link rel="canonical" href="https://ziontechgroup.com/it-services" />;
-      </Head>;
+      <header className="py-20 text-center px-4">
+        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
+          IT & Cloud Services
+        </h1>
+        <p className="mt-4 text-slate-300 max-w-3xl mx-auto text-lg">
+          Comprehensive IT solutions from cloud migration to cybersecurity. Our expert team delivers 
+          enterprise-grade infrastructure, development, and consulting services with proven results.
+        </p>
+        <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-5 py-2 rounded bg-blue-600 hover:bg-blue-700">Call {contact.phone}</a>
+          <a href={`mailto:${contact.email}`} className="px-5 py-2 rounded bg-purple-600 hover:bg-purple-700">Email {contact.email}</a>
+          <Link href="/contact" className="px-5 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10">Get Quote</Link>
+        </div>
+      </header>
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 py-20 sm:py-32">;
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">;
-          <div className="mx-auto max-w-3xl text-center">;
-            <div className="flex items-center justify-center mb-6">;
-              <Server className="h-12 w-12 text-green-600 mr-4" />;
-              <Award className="h-6 w-6 text-green-600 mr-2" />;
-              <span className="text-base font-semibold leading-7 text-green-600">IT Services</span>;
-            </div>;
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">;
-              Future-Ready IT Infrastructure;
-            </h1>;
-            <p className="mt-6 text-lg leading-8 text-gray-600">;
-              Transform your technology infrastructure with our comprehensive IT services. From quantum-safe cryptography and neuromorphic computing to space-based infrastructure and consciousness research platforms, we deliver cutting-edge solutions that prepare your organization for the next generation of computing. Our expertise spans traditional IT services to revolutionary technologies that will define the future of business.;
-            </p>;
-            <div className="mt-8 flex items-center justify-center gap-x-8 text-sm text-gray-500">;
-              <div className="flex items-center">;
-                <CheckCircle className="h-5 w-5 text-green-500 mr-2" />;
-                <span>200+ Infrastructure Deployments</span>;
-              </div>;
-              <div className="flex items-center">;
-                <CheckCircle className="h-5 w-5 text-green-500 mr-2" />;
-                <span>Zero-Trust Security</span>;
-              </div>;
-              <div className="flex items-center">;
-                <CheckCircle className="h-5 w-5 text-green-500 mr-2" />;
-                <span>Quantum-Ready Architecture</span>;
-              </div>;
-            </div>;
-            <div className="mt-10 flex items-center justify-center gap-x-6">;
-              <Link;
-                href="/contact";
-                className="rounded-md bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600">;
-                Get Started;
-                <ArrowRight className="ml-2 h-4 w-4 inline" />;
-              </Link>;
-              <Link;
-                href="/pricing";
-                className="text-sm font-semibold leading-6 text-gray-900 hover:text-green-600">;
-                View Pricing <span aria-hidden="true">→</span>;
-              </Link>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-
-      {/* Benefits Section */}
-      <section className="py-24 sm:py-32 bg-white">;
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">;
-          <div className="mx-auto max-w-2xl text-center mb-16">;
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">;
-              Why Choose Our IT Services?;
-            </h2>;
-            <p className="mt-6 text-lg leading-8 text-gray-600">;
-              Proven expertise and measurable results for your technology infrastructure;
-            </p>;
-          </div>;
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">;
-            {benefits.map((benefit, index) => (;
-              <div key={index} className="text-center">;
-                <div className="flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mx-auto mb-4">;
-                  <benefit.icon className="h-8 w-8 text-green-600" />;
-                </div>;
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{benefit.stat}</h3>;
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">{benefit.title}</h4>;
-                <p className="text-gray-600">{benefit.description}</p>;
-              </div>;
+      <main className="max-w-7xl mx-auto px-4 pb-24">
+        {/* Category Filter */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold mb-6 text-center">Browse by Category</h2>
+          <div className="flex flex-wrap justify-center gap-3">
+            {categories.map((category) => (
+              <button
+                key={category}
+                className="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 border border-white/10 text-sm font-medium transition-colors"
+              >
+                {category}
+              </button>
             ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
 
-      {/* Technologies Section */}
-      <section className="py-24 sm:py-32 bg-gray-50">;
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">;
-          <div className="mx-auto max-w-2xl text-center mb-16">;
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">;
-              Technologies We Master;
-            </h2>;
-            <p className="mt-6 text-lg leading-8 text-gray-600">;
-              Cutting-edge technologies powering modern IT infrastructure;
-            </p>;
-          </div>;
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">;
-            {technologies.map((tech, index) => (;
-              <div key={index} className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">;
-                <div className="flex items-center mb-4">;
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-100">;
-                    <tech.icon className="h-6 w-6 text-green-600" />;
-                  </div>;
-                  <h3 className="text-lg font-semibold text-gray-900 ml-4">{tech.name}</h3>;
-                </div>;
-                <p className="text-gray-600">{tech.description}</p>;
-              </div>;
-            ))}
-          </div>;
-        </div>;
-      </section>;
+        {/* Services Grid */}
+        <div className="grid gap-8">
+          {itServices.map((service, index) => (
+            <div key={index} className="rounded-xl border border-white/10 bg-slate-900/60 p-8 hover:border-blue-500/40 transition-colors">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <service.icon className="w-6 h-6" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-3 mb-2">
+                    <h2 className="text-2xl font-bold">{service.name}</h2>
+                    <span className="px-2 py-1 rounded bg-slate-800/70 border border-white/10 text-xs font-medium">
+                      {service.category}
+                    </span>
+                  </div>
+                  <p className="text-slate-300 text-lg">{service.description}</p>
+                </div>
+              </div>
 
-      {/* IT Services Grid */}
-      <section className="py-24 sm:py-32 bg-white">;
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">;
-          <div className="mx-auto max-w-2xl text-center mb-16">;
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">;
-              Our IT Service Portfolio;
-            </h2>;
-            <p className="mt-6 text-lg leading-8 text-gray-600">;
-              Comprehensive IT solutions tailored to your business needs. All services include implementation, ;
-              training, and ongoing support. Contact us at{' '}
-              <a href="mailto:kleber@ziontechgroup.com" className="text-green-600 hover:text-green-500">;
-                kleber@ziontechgroup.com;
-              </a>{' '}
-              or call{' '}
-              <a href="tel:+13024640950" className="text-green-600 hover:text-green-500">;
-                +1 302 464 0950;
-              </a>{' '}
-              for custom pricing.;
-            </p>;
-          </div>;
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">;
-            {itServices.map((service, index) => (;
-              <div key={index} className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300">;
-                <div className="flex items-center gap-x-3 mb-6">;
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hover:bg-green-700 transition-colors">;
-                    <service.icon className="h-7 w-7 text-white" />;
-                  </div>;
-                  <div>;
-                    <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>;
-                    <p className="text-sm text-green-600 font-medium">{service.category}</p>;
-                  </div>;
-                </div>;
-                <p className="text-gray-600 mb-6">{service.description}</p>;
-                <ul className="space-y-3 mb-6">;
-                  {service.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className="flex items-center gap-x-3">;
-                      <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />;
-                      <span className="text-sm text-gray-700">{feature}</span>;
-                    </li>;
-                  ))}
-                </ul>;
-                <div className="flex items-center justify-between">;
-                  <div className="flex items-center space-x-4 text-sm text-gray-500">;
-                    <div className="flex items-center space-x-1">;
-                      <Clock className="h-4 w-4" />;
-                      <span>{service.delivery}</span>;
-                    </div>;
-                    <div className="font-semibold text-green-600">{service.pricing}</div>;
-                  </div>;
-                  <Link;
-                    href="/contact";
-                    className="inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-500 transition-colors group">;
-                    Get Started;
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />;
-                  </Link>;
-                </div>;
-              </div>;
-            ))}
-          </div>;
-        </div>;
-      </section>;
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-lg font-semibold mb-3 text-blue-400">Key Features</h3>
+                  <ul className="space-y-2 text-slate-300">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <span className="text-blue-400 mt-1">•</span>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-      {/* Contact Information Section */}
-      <section className="bg-gray-50 py-16 sm: py-24">;
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">;
-          <div className="mx-auto max-w-2xl text-center">;
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">;
-              Ready to Transform Your IT Infrastructure?;
-            </h2>;
-            <p className="mt-6 text-lg leading-8 text-gray-600">;
-              Let's discuss how our IT services can optimize your technology infrastructure. ;
-              Get a free consultation and custom proposal.;
-            </p>;
-            <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-3">;
-              <div className="text-center">;
-                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mx-auto mb-4">;
-                  <Phone className="h-6 w-6 text-green-600" />;
-                </div>;
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Call Us</h3>;
-                <a href="tel:+13024640950" className="text-green-600 hover:text-green-500">;
-                  +1 302 464 0950;
-                </a>;
-              </div>;
-              <div className="text-center">;
-                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mx-auto mb-4">;
-                  <Mail className="h-6 w-6 text-green-600" />;
-                </div>;
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Us</h3>;
-                <a href="mailto:kleber@ziontechgroup.com" className="text-green-600 hover:text-green-500">;
-                  kleber@ziontechgroup.com;
-                </a>;
-              </div>;
-              <div className="text-center">;
-                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mx-auto mb-4">;
-                  <MapPin className="h-6 w-6 text-green-600" />;
-                </div>;
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Visit Us</h3>;
-                <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>;
-              </div>;
-            </div>;
-            <div className="mt-10 flex items-center justify-center gap-x-6">;
-              <Link;
-                href="/contact";
-                className="rounded-md bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600">;
-                Schedule Consultation;
-              </Link>;
-              <a;
-                href="tel:+13024640950";
-                className="text-sm font-semibold leading-6 text-gray-900 hover:text-green-600">;
-                Call Now <span aria-hidden="true">→</span>;
-              </a>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-    </PageTransition>;
-  )}
+                <div>
+                  <h3 className="text-lg font-semibold mb-3 text-green-400">Business Benefits</h3>
+                  <ul className="space-y-2 text-slate-300">
+                    {service.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <span className="text-green-400 mt-1">✓</span>
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="mt-6 pt-6 border-t border-white/10">
+                <div className="flex flex-wrap items-center gap-6">
+                  <div className="flex items-center gap-2">
+                    <span className="text-slate-400">Hourly Rate:</span>
+                    <span className="font-semibold text-blue-400">{service.pricing}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-slate-400">Project:</span>
+                    <span className="font-semibold text-purple-400">{service.projectPricing}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-slate-400">Timeline:</span>
+                    <span className="font-semibold text-green-400">{service.timeline}</span>
+                  </div>
+                  <div className="ml-auto flex gap-3">
+                    <Link href="/contact" className="px-4 py-2 rounded bg-blue-600 hover:bg-blue-700 text-sm font-semibold">
+                      Request Quote
+                    </Link>
+                    <Link href="/contact" className="px-4 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10 text-sm font-semibold">
+                      Learn More
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA Section */}
+        <section className="mt-16 text-center">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8">
+            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your IT Infrastructure?</h2>
+            <p className="text-lg mb-6 max-w-2xl mx-auto">
+              Our IT experts are ready to help you modernize your infrastructure, enhance security, 
+              and optimize performance. Contact us today for a free consultation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Call {contact.phone}
+              </a>
+              <a href={`mailto:${contact.email}`} className="px-8 py-3 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                Email {contact.email}
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
+}

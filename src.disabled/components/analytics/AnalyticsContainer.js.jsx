@@ -1,3 +1,0 @@
-" " export: function AnalyticsContainer({ children }) { const { isAuthenticated, isLoading, user } = useAuth()";";";
-" ' export function AnalyticsContainer({ children }) { const { isAuthenticated, isLoading, user } = useAuth();";";
-}}

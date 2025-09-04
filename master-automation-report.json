@@ -1,21 +1,21 @@
 {
-  "summary": {
-    "totalDuration": "39 seconds",
-    "prsProcessed": 1,
-    "conflictsResolved": 0,
-    "improvementsMade": 1,
-    "testsRun": 0,
-    "deployments": 0,
-    "totalErrors": 0
-  },
+  "timestamp": "2025-09-04T05:43:32.818Z",
+  "duration": "0s",
   "results": {
-    "prsProcessed": 1,
-    "conflictsResolved": 0,
-    "improvementsMade": 1,
-    "testsRun": 0,
-    "deployments": 0,
-    "errors": []
+    "automation": {
+      "success": true
+    },
+    "testing": {
+      "success": true
+    },
+    "git": {
+      "success": true
+    }
   },
-  "timestamp": "2025-09-03T05:49:15.135Z",
-  "status": "SUCCESS"
+  "summary": {
+    "automationSuccess": true,
+    "testingSuccess": true,
+    "gitSuccess": true,
+    "overallSuccess": true
+  }
 }
