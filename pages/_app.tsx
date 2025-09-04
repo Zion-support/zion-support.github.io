@@ -67,7 +67,14 @@ function Header(): any {
             <Link href="/careers" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)'}} onClick={() => setMobileMenuOpen(false)}>Careers</Link>
             <Link href="/contact" style={{ 
               background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-              color: 'white', padding: '12px 16px', textDecoration: 'none', borderRadius: 6, textAlign: 'center', fontWeight: 600, marginTop: 8}} onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+              color: 'white', 
+              padding: '12px 16px', 
+              textDecoration: 'none', 
+              borderRadius: 6, 
+              textAlign: 'center', 
+              fontWeight: 600, 
+              marginTop: 8
+            }} onClick={() => setMobileMenuOpen(false)}>Contact</Link>
           </div>
         </div>
       )}
@@ -81,14 +88,16 @@ function Footer(): any {
       background: 'linear-gradient(135deg, #0b1220, #1e293b)', 
       color: 'white', 
       marginTop: 60, 
-      borderTop: '1px solid rgba(255,255,255,0.1)'}}>
+      borderTop: '1px solid rgba(255,255,255,0.1)'
+    }}>
       <div style={{ 
         maxWidth: 1400, 
         margin: '0 auto', 
         padding: '40px 20px',
         display: 'grid', 
         gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', 
-        gap: 32 }}>
+        gap: 32 
+      }}>
         {/* Company Info */}
         <div style={{ display: 'grid', gap: 12 }}>
           <div style={{ 
@@ -97,7 +106,8 @@ function Footer(): any {
             background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text'}}>Zion Tech Group</div>
+            backgroundClip: 'text'
+          }}>Zion Tech Group</div>
           <p style={{ opacity: 0.8, lineHeight: 1.6 }}>
             Transforming businesses through innovative AI, quantum computing, and cutting-edge technology solutions.
           </p>
@@ -174,23 +184,26 @@ function Footer(): any {
               borderRadius: 8,
               textAlign: 'center', 
               textDecoration: 'none', 
-              fontWeight: 600}}>Request Quote</Link>
-            <a href="tel:+13024640950" style={{
+              fontWeight: 600
+            }}>Request Quote</Link>
+            <a href="tel: +13024640950" style={{
               background: 'rgba(255,255,255,0.1)', 
               color: 'white', 
               padding: '10px 16px', 
               borderRadius: 8,
               textAlign: 'center', 
               textDecoration: 'none', 
-              fontWeight: 600}}>Call Now</a>
-            <a href="mailto:kleber@ziontechgroup.com" style={{
+              fontWeight: 600
+            }}>Call Now</a>
+            <a href="mailto: kleber@ziontechgroup.com" style={{
               background: 'rgba(255,255,255,0.1)', 
               color: 'white', 
               padding: '10px 16px', 
               borderRadius: 8,
               textAlign: 'center', 
               textDecoration: 'none', 
-              fontWeight: 600}}>Email Us</a>
+              fontWeight: 600
+            }}>Email Us</a>
           </div>
         </div>
       </div>
@@ -198,7 +211,8 @@ function Footer(): any {
       <div style={{ 
         borderTop: '1px solid rgba(255,255,255,0.1)', 
         padding: '20px', 
-        textAlign: 'center' }}>
+        textAlign: 'center' 
+      }}>
         <small style={{ opacity: 0.7 }}>
           © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
           <Link href="/privacy" style={{ color: '#93c5fd', marginLeft: 8, textDecoration: 'none'}}>Privacy Policy</Link> | 
@@ -212,6 +226,7 @@ function Footer(): any {
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ErrorBoundary>
+      <PerformanceOptimizer />
       <PerformanceMonitor />
       <Header />
       <Component {...pageProps} />

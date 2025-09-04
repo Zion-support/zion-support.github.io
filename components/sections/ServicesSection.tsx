@@ -85,8 +85,12 @@ const ServicesSection: React.FC = () => {
               </div>
 
               {/* Content */}
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                {service.title}
+              </h3>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                {service.description}
+              </p>
 
               {/* Features */}
               <ul className="space-y-2 mb-6">
@@ -107,12 +111,12 @@ const ServicesSection: React.FC = () => {
           ))}
         </div>
 
-        {/* CTA Section */}
+        {/* Bottom CTA */}
         <div className="text-center">
           <Link href="/services">
-            <Button size="lg" className="group">
+            <Button size="lg">
               View All Services
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </Link>
         </div>
