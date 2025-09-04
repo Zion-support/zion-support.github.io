@@ -11,9 +11,9 @@ module.exports = {
         NODE_ENV: 'production',
         LOG_LEVEL: 'info'
       },
-      error_file: 'automation/logs/error-monitor-error.log',
-      out_file: 'automation/logs/error-monitor-out.log',
-      log_file: 'automation/logs/error-monitor-combined.log',
+      error_file: './logs/error-monitor-error.log',
+      out_file: './logs/error-monitor-out.log',
+      log_file: './logs/error-monitor-combined.log',
       time: true
     },
     {
@@ -28,9 +28,9 @@ module.exports = {
         NODE_ENV: 'production',
         LOG_LEVEL: 'info'
       },
-      error_file: 'automation/logs/lint-automation-error.log',
-      out_file: 'automation/logs/lint-automation-out.log',
-      log_file: 'automation/logs/lint-automation-combined.log',
+      error_file: './logs/lint-automation-error.log',
+      out_file: './logs/lint-automation-out.log',
+      log_file: './logs/lint-automation-combined.log',
       time: true
     },
     {
