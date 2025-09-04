@@ -15,22 +15,29 @@ export default function IntegrationExamples() {
           <Link href="/docs" style={{ color: '#3b82f6', textDecoration: 'none', marginBottom: 20, display: 'inline-block' }}>
             ← Back to Documentation
           </Link>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: 16, background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+          <h1 style={{ 
+            fontSize: '2.5rem', 
+            fontWeight: 800, 
+            marginBottom: 16, 
+            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent'
+          }}>
             Integration Examples
           </h1>
-          <p style={{ fontSize: '1.125rem', opacity: 0.8, lineHeight: 1.6 }}>
+          <p style={{ fontSize: '1.1rem', opacity: 0.8, lineHeight: 1.6 }}>
             Real-world examples showing how to integrate Zion Tech Group services into your applications. Choose your preferred language and framework.
           </p>
         </div>
 
         <div style={{ display: 'grid', gap: 32 }}>
           {/* JavaScript/Node.js */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)' }}>
+          <section style={{ background: '#f8fafc', padding: 32, borderRadius: 12, border: '1px solid #e2e8f0' }}>
             <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 16 }}>🟨 JavaScript/Node.js</h2>
             
-            <div style={{ background: '#0f172a', padding: 20, borderRadius: 8, marginBottom: 20 }}>
+            <div style={{ background: '#1e293b', padding: 20, borderRadius: 8, marginBottom: 20 }}>
               <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#fbbf24' }}>Basic Service Integration</h3>
-              <pre style={{ background: '#000', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>
+              <pre style={{ background: 'transparent', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem', color: '#e2e8f0' }}>
 {`const axios = require('axios');
 
 class ZionTechClient {
@@ -80,12 +87,12 @@ client.getServices().then(services => {
           </section>
 
           {/* Python */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)' }}>
+          <section style={{ background: '#f8fafc', padding: 32, borderRadius: 12, border: '1px solid #e2e8f0' }}>
             <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 16 }}>🐍 Python</h2>
             
-            <div style={{ background: '#0f172a', padding: 20, borderRadius: 8, marginBottom: 20 }}>
+            <div style={{ background: '#1e293b', padding: 20, borderRadius: 8, marginBottom: 20 }}>
               <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#10b981' }}>AI Services Integration</h3>
-              <pre style={{ background: '#000', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>
+              <pre style={{ background: 'transparent', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem', color: '#e2e8f0' }}>
 {`import requests
 import json
 
@@ -152,12 +159,12 @@ print(result)
           </section>
 
           {/* React/Next.js */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)' }}>
+          <section style={{ background: '#f8fafc', padding: 32, borderRadius: 12, border: '1px solid #e2e8f0' }}>
             <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 16 }}>⚛️ React/Next.js</h2>
             
-            <div style={{ background: '#0f172a', padding: 20, borderRadius: 8, marginBottom: 20 }}>
+            <div style={{ background: '#1e293b', padding: 20, borderRadius: 8, marginBottom: 20 }}>
               <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#61dafb' }}>Service Catalog Component</h3>
-              <pre style={{ background: '#000', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>
+              <pre style={{ background: 'transparent', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem', color: '#e2e8f0' }}>
 {`import { useState, useEffect } from 'react';
 
 const useZionTech = (apiKey) => {
@@ -234,12 +241,12 @@ export default ServiceCatalog;`}
           </section>
 
           {/* PHP */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)' }}>
+          <section style={{ background: '#f8fafc', padding: 32, borderRadius: 12, border: '1px solid #e2e8f0' }}>
             <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 16 }}>🐘 PHP</h2>
             
-            <div style={{ background: '#0f172a', padding: 20, borderRadius: 8, marginBottom: 20 }}>
+            <div style={{ background: '#1e293b', padding: 20, borderRadius: 8, marginBottom: 20 }}>
               <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#8b5cf6' }}>WordPress Plugin Integration</h3>
-              <pre style={{ background: '#000', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>
+              <pre style={{ background: 'transparent', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem', color: '#e2e8f0' }}>
 {`<?php
 class ZionTechWordPress {
     private $api_key;
@@ -309,11 +316,11 @@ class ZionTechMicroSaaS {
           </section>
 
           {/* Best Practices */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)' }}>
+          <section style={{ background: '#f8fafc', padding: 32, borderRadius: 12, border: '1px solid #e2e8f0' }}>
             <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 24 }}>✨ Best Practices</h2>
             <div style={{ display: 'grid', gap: 20 }}>
-              <div style={{ padding: 20, background: '#0f172a', borderRadius: 8, border: '1px solid rgba(34, 197, 94, 0.2)' }}>
-                <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#86efac' }}>🔒 Security</h3>
+              <div style={{ padding: 20, background: '#f0fdf4', borderRadius: 8, border: '1px solid rgba(34, 197, 94, 0.2)' }}>
+                <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#22c55e' }}>🔒 Security</h3>
                 <ul style={{ opacity: 0.8, paddingLeft: 20 }}>
                   <li>Never expose API keys in client-side code</li>
                   <li>Use environment variables for sensitive data</li>
@@ -322,8 +329,8 @@ class ZionTechMicroSaaS {
                 </ul>
               </div>
               
-              <div style={{ padding: 20, background: '#0f172a', borderRadius: 8, border: '1px solid rgba(59, 130, 246, 0.2)' }}>
-                <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#93c5fd' }}>⚡ Performance</h3>
+              <div style={{ padding: 20, background: '#f0f9ff', borderRadius: 8, border: '1px solid rgba(59, 130, 246, 0.2)' }}>
+                <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#3b82f6' }}>⚡ Performance</h3>
                 <ul style={{ opacity: 0.8, paddingLeft: 20 }}>
                   <li>Implement caching for frequently accessed data</li>
                   <li>Use pagination for large datasets</li>
@@ -332,8 +339,8 @@ class ZionTechMicroSaaS {
                 </ul>
               </div>
               
-              <div style={{ padding: 20, background: '#0f172a', borderRadius: 8, border: '1px solid rgba(139, 92, 246, 0.2)' }}>
-                <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#c4b5fd' }}>🛠️ Development</h3>
+              <div style={{ padding: 20, background: '#faf5ff', borderRadius: 8, border: '1px solid rgba(139, 92, 246, 0.2)' }}>
+                <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#8b5cf6' }}>🛠️ Development</h3>
                 <ul style={{ opacity: 0.8, paddingLeft: 20 }}>
                   <li>Use TypeScript for better type safety</li>
                   <li>Implement proper logging and monitoring</li>
@@ -345,29 +352,29 @@ class ZionTechMicroSaaS {
           </section>
 
           {/* Support */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)' }}>
+          <section style={{ background: '#f8fafc', padding: 32, borderRadius: 12, border: '1px solid #e2e8f0' }}>
             <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 16 }}>🤝 Need Help?</h2>
             <p style={{ opacity: 0.8, marginBottom: 20 }}>Our team is here to help you integrate our services successfully.</p>
             <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
               <Link href="/contact" style={{ 
-                display: 'inline-block', 
-                padding: '12px 24px', 
-                background: '#3b82f6', 
-                color: 'white', 
-                textDecoration: 'none', 
-                borderRadius: 8, 
-                fontWeight: 600 
+                display: 'inline-block',
+                padding: '12px 24px',
+                background: '#3b82f6',
+                color: 'white',
+                textDecoration: 'none',
+                borderRadius: 8,
+                fontWeight: 600
               }}>
                 Contact Support
               </Link>
               <Link href="/docs/api-reference" style={{ 
-                display: 'inline-block', 
-                padding: '12px 24px', 
-                background: '#6b7280', 
-                color: 'white', 
-                textDecoration: 'none', 
-                borderRadius: 8, 
-                fontWeight: 600 
+                display: 'inline-block',
+                padding: '12px 24px',
+                background: '#6b7280',
+                color: 'white',
+                textDecoration: 'none',
+                borderRadius: 8,
+                fontWeight: 600
               }}>
                 API Reference
               </Link>
