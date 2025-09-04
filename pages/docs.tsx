@@ -1,210 +1,187 @@
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { BookOpen, Search, FileText, Code, Users, HelpCircle, ArrowRight, Download, ExternalLink } from 'lucide-react';
-import { useState } from 'react';
+import { Book, FileText, Video, Download, Search, ExternalLink } from 'lucide-react';
 
 export default function Documentation() {
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const categories = [
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com'
+  }
+  const documentationSections = [
     {
+      icon: Book,
       title: 'Getting Started',
-      icon: <BookOpen className="w-6 h-6" />,
-      color: 'from-blue-500 to-cyan-500',
-      docs: [
-        { title: 'Quick Start Guide', description: 'Get up and running in minutes', link: '/docs/quick-start' },
-        { title: 'Installation Guide', description: 'Step-by-step installation instructions', link: '/docs/installation' },
-        { title: 'Configuration', description: 'Configure your environment', link: '/docs/configuration' },
-        { title: 'First Project', description: 'Create your first project', link: '/docs/first-project' }
+      description: 'Quick start guides and tutorials to help you begin using our services.',
+      items: [
+        { name: 'Quick Start Guide', link: '/docs/getting-started' },
+        { name: 'API Overview', link: '/docs/api-overview' },
+        { name: 'Authentication', link: '/docs/authentication' },
+        { name: 'First Steps', link: '/docs/first-steps' }
       ]
     },
     {
-      title: 'API Reference',
-      icon: <Code className="w-6 h-6" />,
-      color: 'from-green-500 to-emerald-500',
-      docs: [
-        { title: 'REST API', description: 'Complete REST API documentation', link: '/docs/api/rest' },
-        { title: 'GraphQL API', description: 'GraphQL schema and queries', link: '/docs/api/graphql' },
-        { title: 'Webhooks', description: 'Event-driven integrations', link: '/docs/api/webhooks' },
-        { title: 'SDKs', description: 'Client libraries and SDKs', link: '/docs/api/sdks' }
+      icon: FileText,
+      title: 'API Documentation',
+      description: 'Comprehensive API reference and integration guides.',
+      items: [
+        { name: 'REST API Reference', link: '/docs/api-reference' },
+        { name: 'Webhook Integration', link: '/docs/webhooks' },
+        { name: 'SDK Documentation', link: '/docs/sdk' },
+        { name: 'Rate Limits', link: '/docs/rate-limits' }
       ]
     },
     {
-      title: 'Guides & Tutorials',
-      icon: <FileText className="w-6 h-6" />,
-      color: 'from-purple-500 to-pink-500',
-      docs: [
-        { title: 'AI Services Guide', description: 'Implementing AI solutions', link: '/docs/guides/ai-services' },
-        { title: 'Micro SaaS Development', description: 'Building micro SaaS products', link: '/docs/guides/micro-saas' },
-        { title: 'Cloud Migration', description: 'Migrating to the cloud', link: '/docs/guides/cloud-migration' },
-        { title: 'Security Best Practices', description: 'Security implementation guide', link: '/docs/guides/security' }
+      icon: Video,
+      title: 'Tutorials & Guides',
+      description: 'Step-by-step tutorials and best practices.',
+      items: [
+        { name: 'Video Tutorials', link: '/docs/video-tutorials' },
+        { name: 'Code Examples', link: '/docs/code-examples' },
+        { name: 'Best Practices', link: '/docs/best-practices' },
+        { name: 'Troubleshooting', link: '/docs/troubleshooting' }
       ]
     },
     {
-      title: 'Support & Community',
-      icon: <Users className="w-6 h-6" />,
-      color: 'from-orange-500 to-red-500',
-      docs: [
-        { title: 'FAQ', description: 'Frequently asked questions', link: '/faq' },
-        { title: 'Community Forum', description: 'Connect with other developers', link: '/community' },
-        { title: 'Support Tickets', description: 'Get help from our team', link: '/support' },
-        { title: 'Status Page', description: 'Service status and updates', link: '/status' }
+      icon: Download,
+      title: 'Resources',
+      description: 'Downloadable resources and additional materials.',
+      items: [
+        { name: 'White Papers', link: '/docs/white-papers' },
+        { name: 'Case Studies', link: '/docs/case-studies' },
+        { name: 'Templates', link: '/docs/templates' },
+        { name: 'Changelog', link: '/docs/changelog' }
       ]
     }
   ];
-
-  const popularDocs = [
-    { title: 'Quick Start Guide', description: 'Get started with Zion Tech Group services', link: '/docs/quick-start', downloads: '1.2k' },
-    { title: 'API Authentication', description: 'Learn how to authenticate with our APIs', link: '/docs/api/authentication', downloads: '890' },
-    { title: 'AI Services Overview', description: 'Comprehensive guide to AI services', link: '/docs/guides/ai-services', downloads: '756' },
-    { title: 'Deployment Guide', description: 'Deploy your applications with confidence', link: '/docs/guides/deployment', downloads: '634' },
-    { title: 'Security Checklist', description: 'Essential security practices', link: '/docs/guides/security', downloads: '521' }
-  ];
-
-  const filteredCategories = categories.map(category => ({
-    ...category,
-    docs: category.docs.filter(doc => 
-      doc.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      doc.description.toLowerCase().includes(searchTerm.toLowerCase())
-    )
-  })).filter(category => category.docs.length > 0);
 
   return (
     <>
       <Head>
         <title>Documentation - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive documentation for Zion Tech Group's services including API references, guides, tutorials, and best practices." />
-        <meta name="keywords" content="documentation, API reference, guides, tutorials, developer resources, Zion Tech Group" />
-        <link rel="canonical" href="https://ziontechgroup.com/docs" />
+        <meta name="description" content="Comprehensive documentation for Zion Tech Group services including API guides, tutorials, and resources. Get started with our services today." />
+        <meta name="keywords" content="documentation, API guide, tutorials, getting started, Zion Tech Group" />
+        <link rel="canonical" href={`${contact.site}/docs`} />
         <meta property="og:title" content="Documentation - Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive documentation for Zion Tech Group's services including API references, guides, tutorials, and best practices." />
-        <meta property="og:url" content="https://ziontechgroup.com/docs" />
+        <meta property="og:description" content="Comprehensive documentation for Zion Tech Group services including API guides and tutorials." />
+        <meta property="og:url" content={`${contact.site}/docs`} />
         <meta property="og:type" content="website" />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <div className="container mx-auto px-4 py-20">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              <BookOpen className="w-16 h-16 inline-block mr-4 text-blue-400" />
-              Documentation
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive guides, API references, and tutorials to help you get the most out of our technology solutions.
-            </p>
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-green-600 to-teal-600 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Documentation
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Everything you need to get started with Zion Tech Group services, from quick start guides to comprehensive API documentation.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  href="/docs/getting-started"
+                  className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Get Started
+                </Link>
+                <Link 
+                  href="/contact"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+                >
+                  Contact Support
+                </Link>
+              </div>
+            </div>
           </div>
+        </section>
 
-          {/* Search */}
-          <div className="max-w-2xl mx-auto mb-12">
+        {/* Search Section */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
                 placeholder="Search documentation..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 text-lg"
+                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
               />
             </div>
           </div>
+        </section>
 
-          {/* Popular Documentation */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8">Popular Documentation</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {popularDocs.map((doc, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 group">
-                  <div className="flex items-start justify-between mb-4">
-                    <h3 className="text-lg font-semibold text-white group-hover:text-blue-300 transition-colors">
-                      {doc.title}
-                    </h3>
-                    <div className="flex items-center gap-2 text-sm text-gray-400">
-                      <Download className="w-4 h-4" />
-                      <span>{doc.downloads}</span>
-                    </div>
+        {/* Documentation Sections */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-8">
+              {documentationSections.map((section, index) => (
+                <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                  <div className="flex items-center mb-6">
+                    <section.icon className="w-8 h-8 text-green-600 mr-3" />
+                    <h2 className="text-2xl font-semibold text-gray-900">{section.title}</h2>
                   </div>
-                  <p className="text-gray-300 mb-4 text-sm">{doc.description}</p>
-                  <Link 
-                    href={doc.link} 
-                    className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
-                  >
-                    Read More
-                    <ArrowRight className="w-4 h-4 ml-1" />
-                  </Link>
+                  <p className="text-gray-600 mb-6">{section.description}</p>
+                  <ul className="space-y-3">
+                    {section.items.map((item, itemIndex) => (
+                      <li key={itemIndex}>
+                        <Link 
+                          href={item.link}
+                          className="flex items-center text-green-600 hover:text-green-700 transition-colors"
+                        >
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          {item.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
           </div>
+        </section>
 
-          {/* Documentation Categories */}
-          <div className="space-y-12">
-            {filteredCategories.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-                <div className="flex items-center gap-4 mb-8">
-                  <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center text-white`}>
-                    {category.icon}
-                  </div>
-                  <h2 className="text-2xl font-bold text-white">{category.title}</h2>
-                </div>
-                
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                  {category.docs.map((doc, docIndex) => (
-                    <div key={docIndex} className="bg-white/10 rounded-lg p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 group">
-                      <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-300 transition-colors">
-                        {doc.title}
-                      </h3>
-                      <p className="text-gray-300 mb-4 text-sm">{doc.description}</p>
-                      <Link 
-                        href={doc.link} 
-                        className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
-                      >
-                        View Documentation
-                        <ExternalLink className="w-4 h-4 ml-1" />
-                      </Link>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* No Results */}
-          {searchTerm && filteredCategories.length === 0 && (
-            <div className="text-center py-12">
-              <div className="w-16 h-16 bg-gray-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Search className="w-8 h-8 text-gray-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">No documentation found</h3>
-              <p className="text-gray-300 mb-6">Try adjusting your search terms</p>
-              <button
-                onClick={() => setSearchTerm('')}
-                className="text-blue-400 hover:text-blue-300 transition-colors"
-              >
-                Clear search
-              </button>
-            </div>
-          )}
-
-          {/* Support Section */}
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mt-16">
-            <div className="text-center">
-              <HelpCircle className="w-16 h-16 text-blue-400 mx-auto mb-6" />
-              <h2 className="text-3xl font-bold text-white mb-4">Need Help?</h2>
-              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                Can't find what you're looking for? Our support team is here to help you get the most out of our services.
+        {/* Quick Links */}
+        <section className="bg-gray-50 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Popular Resources
+              </h2>
+              <p className="text-xl text-gray-600">
+                Most accessed documentation and resources
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
-                  Contact Support
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">API Quick Start</h3>
+                <p className="text-gray-600 mb-4">Get up and running with our APIs in minutes</p>
+                <Link href="/docs/api-quick-start" className="text-green-600 hover:text-green-700 font-medium">
+                  Read Guide →
                 </Link>
-                <Link href="/faq" className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                  View FAQ
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Integration Examples</h3>
+                <p className="text-gray-600 mb-4">Real-world examples and code samples</p>
+                <Link href="/docs/integration-examples" className="text-green-600 hover:text-green-700 font-medium">
+                  View Examples →
+                </Link>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Support Center</h3>
+                <p className="text-gray-600 mb-4">Get help from our support team</p>
+                <Link href="/contact" className="text-green-600 hover:text-green-700 font-medium">
+                  Contact Support →
                 </Link>
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </>
   );

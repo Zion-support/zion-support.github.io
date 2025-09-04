@@ -5,28 +5,26 @@ export default function ThemeToggle() {
 
   useEffect(() => {
     // Check for saved theme preference or default to dark mode
-    if (typeof window !== 'undefined') {
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme) {
-        setIsDark(savedTheme === 'dark');
-      }
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      setIsDark(savedTheme === 'dark');
+    }
   }, []);
 
   useEffect(() => {
     // Apply theme to document
-    if (typeof window !== 'undefined') {
-      if (isDark) {
-        document.documentElement.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
-      }
+    if (isDark) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
   }, [isDark]);
 
   const toggleTheme = () => {
     setIsDark(!isDark);
-  };
+  }
   return (
     <button
       onClick={toggleTheme}
