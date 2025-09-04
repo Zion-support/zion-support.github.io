@@ -1,2 +1,1 @@
-// Auto-generated module
 export {};

@@ -1,16 +1,16 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
-import { Footer } from './components/Footer';
+import Footer from './components/Footer';
 import { Sidebar } from './components/Sidebar';
 import { ErrorBoundary } from 'react-error-boundary';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 
-// Enhanced Components
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
-import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
-import { ChatAssistant } from './components/ChatAssistant';
+// Enhanced Components - temporarily disabled due to build issues
+// import PerformanceOptimizer from './components/PerformanceOptimizer';
+// import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
+// import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
+// import { ChatAssistant } from './components/ChatAssistant';
 
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
@@ -33,7 +33,6 @@ const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(module => ({
 const ComprehensiveServicesPage = lazy(() => import('./pages/ComprehensiveServicesPage').then(module => ({ default: module.ComprehensiveServicesPage })));
 const Sitemap = lazy(() => import('./pages/Sitemap').then(module => ({ default: module.default })));
 const ComprehensiveSitemap = lazy(() => import('./pages/ComprehensiveSitemap').then(module => ({ default: module.ComprehensiveSitemap })));
-const Support = lazy(() => import('./pages/Support').then(module => ({ default: module.default })));
 const Training = lazy(() => import('./pages/Training').then(module => ({ default: module.default })));
 const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default: module.default })));
 const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServicesPage').then(module => ({ default: module.RevolutionaryServicesPage })));
@@ -46,6 +45,7 @@ const ComprehensiveServicesShowcase = lazy(() => import('./pages/ComprehensiveSe
 const AISolutions = lazy(() => import('./pages/services/AISolutions').then(module => ({ default: module.AISolutions })));
 const QuantumComputing = lazy(() => import('./pages/services/QuantumComputing').then(module => ({ default: module.QuantumComputing })));
 const Cybersecurity = lazy(() => import('./pages/services/Cybersecurity').then(module => ({ default: module.Cybersecurity })));
+const AIContentCreation = lazy(() => import('./pages/services/AIContentCreation').then(module => ({ default: module.default })));
 
 // Loading component
 const PageLoader = () => (
@@ -158,6 +158,9 @@ export default function App() {
                 <Route path="/services/affiliate-tracking" element={<Services />} />
                 <Route path="/services/mobile-survey" element={<Services />} />
                 
+                {/* New AI Content Creation Service */}
+                <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
+                
                 {/* Additional new service routes */}
                 <Route path="/services/ai-seo" element={<Services />} />
                 <Route path="/services/interview-assessment" element={<Services />} />
@@ -210,11 +213,11 @@ export default function App() {
           
           <Footer />
           
-          {/* Enhanced Components */}
-          <PerformanceOptimizer />
+          {/* Enhanced Components - temporarily disabled due to build issues */}
+          {/* <PerformanceOptimizer />
           <EnhancedAccessibilityEnhancer />
           <MobileExperienceEnhancer />
-          <ChatAssistant />
+          <ChatAssistant /> */}
         </div>
       </Router>
     </ErrorBoundary>

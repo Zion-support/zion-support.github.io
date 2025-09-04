@@ -1,11 +1,1 @@
-
-            )}
-          </button>
-
-        </form>
-      </div>
-    </div>
-  );
-};
-
-export default ContactFormEnhanced;
+)} </button> </form> </div> </div> )}; export default ContactFormEnhanced;
