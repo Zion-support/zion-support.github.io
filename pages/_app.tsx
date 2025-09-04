@@ -247,7 +247,8 @@ function Footer(): any {
       
       <div style={{ 
         borderTop: '1px solid rgba(255,255,255,0.1)', 
-        padding: '20px', textAlign: 'center' 
+        padding: '20px', 
+        textAlign: 'center' 
       }}>
         <small style={{ opacity: 0.7 }}>
           © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
