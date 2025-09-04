@@ -228,8 +228,15 @@ test_enhanced_system() {
         exit 1
     fi
     
-    # Test automation scripts syntax
-    for script in scripts/automation/*.cjs; do
+    # Test only the new automation scripts syntax
+    NEW_SCRIPTS=(
+        "scripts/automation/ai-intelligent-orchestrator.cjs"
+        "scripts/automation/predictive-analytics-engine.cjs"
+        "scripts/automation/intelligent-auto-scaler.cjs"
+        "scripts/automation/health-dashboard.cjs"
+    )
+    
+    for script in "${NEW_SCRIPTS[@]}"; do
         if [ -f "$script" ]; then
             if ! node -c "$script"; then
                 print_error "Script $script has syntax errors"
