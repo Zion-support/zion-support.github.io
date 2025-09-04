@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from 'next/head';
 import { Calendar, Clock, Users, Video, CheckCircle, ArrowRight } from 'lucide-react';
 import { useState } from 'react';
@@ -26,8 +27,7 @@ export default function ScheduleDemo() {
     e.preventDefault();
     // Handle form submission
     console.log('Demo scheduled:', { selectedDate, selectedTime, formData });
-  };
-
+  }
   return (
     <>
       <Head>

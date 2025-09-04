@@ -14,11 +14,8 @@ console.log('🧪 Running Simple Tests...');
 try {
   const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
   console.log('✅ Package.json is valid');
-  console.log(`   - Name: ${packageJson.name}`);
-  console.log(`   - Version: ${packageJson.version}`);
-} catch (error) {
-  console.log('❌ Package.json is invalid:', error.message);
-}
+  console.log(`   - Name: ${packageJson.name}`)console.log(`   - Version: ${packageJson.version}`);
+} catch() { console.log('❌ Package.json is invalid: ', error.message) }
 
 // Test 2: Check if main source files exist
 const requiredFiles = [
@@ -26,20 +23,16 @@ const requiredFiles = [
   'src/main.tsx',
   'package.json',
   'next.config.js'
-];
-
-requiredFiles.forEach(file => {
+]requiredFiles.forEach(file => {
   if (fs.existsSync(file)) {
-    console.log(`✅ ${file} exists`);
-  } else {
+    console.log(`✅ ${file} exists`)} else {
     console.log(`❌ ${file} missing`);
   }
 });
 
 // Test 3: Check node_modules
 if (fs.existsSync('node_modules')) {
-  console.log('✅ node_modules directory exists');
-} else {
+  console.log('✅ node_modules directory exists')} else {
   console.log('❌ node_modules directory missing');
 }
 
@@ -52,19 +45,16 @@ try {
   if (appContent.includes('import React')) {
     console.log('✅ App.tsx has React import');
   } else {
-    issues.push('App.tsx missing React import');
-  }
+    issues.push('App.tsx missing React import')}
 } catch (error) {
   issues.push(`Cannot read App.tsx: ${error.message}`);
 }
 
 // Summary
-console.log('\n📊 Test Summary:');
+console.log('\n📊 Test Summary: ');
 if (issues.length === 0) {
-  console.log('✅ All basic tests passed');
-} else {
-  console.log('❌ Issues found:');
-  issues.forEach(issue => console.log(`   - ${issue}`));
+  console.log('✅ All basic tests passed')} else {
+  console.log('❌ Issues found: ')issues.forEach(issue => console.log(`   - ${issue}`));
 }
 
 console.log('\n🎯 Next steps:');

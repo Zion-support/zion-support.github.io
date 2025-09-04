@@ -35,9 +35,14 @@ export default function Terms() {
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4 text-blue-400">2. Use License</h2>
               <p className="text-slate-300 mb-4">
+<<<<<<< HEAD
                 Permission is granted to temporarily download one copy of Zion Tech Group's services for personal, 
                 non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
               </p>
+=======
+                Permission is granted to temporarily download one copy of Zion Tech Group&aposs services for personal, 
+                non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not: </p>
+>>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
               <ul className="list-disc list-inside text-slate-300 mb-4 space-y-2">
                 <li>modify or copy the materials</li>
                 <li>use the materials for any commercial purpose or for any public display</li>
@@ -57,8 +62,7 @@ export default function Terms() {
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4 text-blue-400">4. User Responsibilities</h2>
               <p className="text-slate-300 mb-4">
-                Users are responsible for:
-              </p>
+                Users are responsible for: </p>
               <ul className="list-disc list-inside text-slate-300 mb-4 space-y-2">
                 <li>Maintaining the confidentiality of their account credentials</li>
                 <li>All activities that occur under their account</li>
@@ -95,29 +99,27 @@ export default function Terms() {
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4 text-blue-400">8. Contact Information</h2>
               <p className="text-slate-300 mb-4">
-                If you have any questions about these Terms of Service, please contact us:
-              </p>
+                If you have any questions about these Terms of Service, please contact us: </p>
               <div className="bg-slate-900/60 p-6 rounded-lg border border-white/10">
                 <p className="text-slate-300 mb-2">
-                  <strong>Phone:</strong> <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="text-blue-400 hover:text-blue-300">{contact.phone}</a>
+                  <strong>Phone:</strong> <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="text-blue-400 hover: text-blue-300">{contact.phone}</a>
                 </p>
                 <p className="text-slate-300 mb-2">
-                  <strong>Email:</strong> <a href={`mailto:${contact.email}`} className="text-blue-400 hover:text-blue-300">{contact.email}</a>
+                  <strong>Email: </strong> <a href={`mailto:${contact.email}`} className="text-blue-400 hover: text-blue-300">{contact.email}</a>
                 </p>
                 <p className="text-slate-300">
-                  <strong>Address:</strong> {contact.address}
+                  <strong>Address: </strong> {contact.address}
                 </p>
               </div>
             </section>
           </div>
 
           <div className="mt-12 text-center">
-            <Link href="/" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+            <Link href="/" className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors">
               Back to Home
             </Link>
           </div>
         </div>
       </main>
     </>
-  );
-}
+  )}

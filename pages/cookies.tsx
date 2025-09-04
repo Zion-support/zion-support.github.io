@@ -2,9 +2,18 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 export default function Cookies() {
+<<<<<<< HEAD
   const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
   };
 
+=======
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com'
+  }
+>>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
   const cookieTypes = [
     { type: "Essential Cookies", description: "These cookies are necessary for the website to function and cannot be switched off in our systems.", purpose: "Enable basic website functionality, security, and user authentication.", examples: [
         "Session management cookies",

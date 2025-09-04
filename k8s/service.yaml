@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ziontechgroup-service
+  namespace: ziontechgroup
+spec:
+  selector:
+    app: ziontechgroup-app
+  ports:
+  - port: 80
+    targetPort: 3000
+  type: LoadBalancer

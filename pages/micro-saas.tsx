@@ -937,8 +937,7 @@ export default function MicroSaaS() {
         'Enhanced patent portfolio management',
         'Proactive IP protection'
       ], category: 'Intellectual Property'
-    }
-  ];
+    }  ];
 
   const categories = [...new Set(microSaaSServices.map(service => service.category))];
 

@@ -6,8 +6,15 @@ export interface MicroSaasService { id: string; title: string; description: stri
   marketPrice: string; rating: number;
   reviewCount: number; features: string[]; tags: string[]; website: string; featured: boolean; benefits: string[];
   useCases: string[];
+<<<<<<< HEAD
   technicalSpecs: string[]; integrations: string[]; support: string[]; compliance: string[];
 }
+=======
+  technicalSpecs: string[];
+  integrations: string[];
+  support: string[];
+  compliance: string[]}
+>>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
 
 export const SERVICE_CATEGORIES = [
   'AI & Machine Learning',

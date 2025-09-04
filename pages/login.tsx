@@ -1,12 +1,25 @@
+import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState } from 'react';
 
 export default function Login() {
+<<<<<<< HEAD
   const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
   };
 
   const [formData, setFormData] = useState({ email: '', password: '',
+=======
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com'
+  }
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+>>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
     rememberMe: false
   });
 
@@ -16,15 +29,13 @@ export default function Login() {
       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
-  };
-
+  }
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle login logic here
     console.log('Login attempt:', formData);
     alert('Login functionality will be implemented with authentication system.');
-  };
-
+  }
   return (
     <>
       <Head>
@@ -73,7 +84,7 @@ export default function Login() {
                   style={{ width: '100%', padding: '12px',
                     borderRadius: 8, border: '1px solid rgba(255, 255, 255, 0.2)', background: 'rgba(255, 255, 255, 0.1)', color: 'white',
                     fontSize: '1rem'
-                  }}
+                  }
                   placeholder="Enter your email"
                 />
               </div>
@@ -91,7 +102,7 @@ export default function Login() {
                   style={{ width: '100%', padding: '12px',
                     borderRadius: 8, border: '1px solid rgba(255, 255, 255, 0.2)', background: 'rgba(255, 255, 255, 0.1)', color: 'white',
                     fontSize: '1rem'
-                  }}
+                  }
                   placeholder="Enter your password"
                 />
               </div>
@@ -103,7 +114,7 @@ export default function Login() {
                     name="rememberMe"
                     checked={formData.rememberMe}
                     onChange={handleInputChange}
-                    style={{ width: 16, height: 16 }}
+                    style={{ width: 16, height: 16 }
                   />
                   <span style={{ fontSize: '0.9rem' }}>Remember me</span>
                 </label>
@@ -122,13 +133,13 @@ export default function Login() {
                   fontSize: '1.1rem',
                   fontWeight: 600, cursor: 'pointer', transition: 'transform 0.3s ease',
                   marginBottom: 20
-                }}
+                }
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-2px)';
-                }}
+                }
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
-                }}
+                }
               >
                 Sign In
               </button>

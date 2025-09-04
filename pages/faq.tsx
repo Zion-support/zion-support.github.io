@@ -40,7 +40,7 @@ export default function FAQ() {
         {/* Hero Section */}
         <section className="py-20 px-4 text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
+            <h1 className="text-4xl md: text-5xl font-extrabold tracking-tight mb-6">
               Frequently Asked Questions
             </h1>
             <p className="text-xl text-slate-300 mb-8">
@@ -48,7 +48,11 @@ export default function FAQ() {
             </p>
             <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
               Find answers to the most common questions about our services, pricing, 
+<<<<<<< HEAD
               implementation, and support. Can't find what you're looking for? Contact us directly.
+=======
+              implementation, and support. Can&apos;t find what you&aposre looking for? Contact us directly.
+>>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
             </p>
           </div>
         </section>
@@ -70,7 +74,7 @@ export default function FAQ() {
         {/* Contact CTA */}
         <section className="py-16 px-4 bg-slate-900/40">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">
+            <h2 className="text-3xl md: text-4xl font-bold mb-8">
               Still Have Questions?
             </h2>
             <p className="text-lg text-slate-300 mb-8">
@@ -79,13 +83,13 @@ export default function FAQ() {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+              <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors">
                 Call {contact.phone}
               </a>
-              <a href={`mailto:${contact.email}`} className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
+              <a href={`mailto: ${contact.email}`} className="px-8 py-3 bg-purple-600 hover: bg-purple-700 rounded-lg font-semibold transition-colors">
                 Email {contact.email}
               </a>
-              <Link href="/contact" className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
+              <Link href="/contact" className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
                 Contact Form
               </Link>
             </div>
@@ -93,5 +97,4 @@ export default function FAQ() {
         </section>
       </main>
     </>
-  );
-}
+  )}

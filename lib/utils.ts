@@ -25,7 +25,7 @@ export function debounce<T extends (...args: any[]) => any>( func: T, wait: numb
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   };
-}
+};
 
 export function throttle<T extends (...args: any[]) => any>( func: T, limit: number
 ): (...args: Parameters<T>) => void {
@@ -37,4 +37,4 @@ export function throttle<T extends (...args: any[]) => any>( func: T, limit: num
       setTimeout(() => (inThrottle = false), limit);
     }
   };
-}
+};

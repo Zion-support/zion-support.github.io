@@ -2,9 +2,18 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 export default function Marketplace() {
+<<<<<<< HEAD
   const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
   };
 
+=======
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com'
+  }
+>>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
   const marketplaceCategories = [
     { title: "Products", description: "Discover innovative technology products and solutions", icon: "🛍️", items: [
         { name: "AI-Powered Analytics Platform", price: "Starting at $299/month", category: "AI & Analytics" },
@@ -82,13 +91,24 @@ export default function Marketplace() {
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: 30 }}>
               {featuredItems.map((item, index) => (
+<<<<<<< HEAD
                 <div key={index} style={{ background: 'rgba(255, 255, 255, 0.05)',
                   borderRadius: 12, padding: 30, border: '1px solid rgba(255, 255, 255, 0.1)', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: 'pointer'
                 }}
+=======
+                <div key={index} style={{
+                  background: 'rgba(255, 255, 255, 0.05)',
+                  borderRadius: 12,
+                  padding: 30,
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                  cursor: 'pointer'
+                }
+>>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-5px)';
                   e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3)';
-                }}
+                }
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
                   e.currentTarget.style.boxShadow = 'none';
@@ -173,13 +193,24 @@ export default function Marketplace() {
                 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20 }}>
                   {category.items.map((item, itemIndex) => (
+<<<<<<< HEAD
                     <div key={itemIndex} style={{ background: 'rgba(255, 255, 255, 0.05)',
                       borderRadius: 12, padding: 25, border: '1px solid rgba(255, 255, 255, 0.1)', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: 'pointer'
                     }}
+=======
+                    <div key={itemIndex} style={{
+                      background: 'rgba(255, 255, 255, 0.05)',
+                      borderRadius: 12,
+                      padding: 25,
+                      border: '1px solid rgba(255, 255, 255, 0.1)',
+                      transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                      cursor: 'pointer'
+                    }
+>>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
                     onMouseEnter={(e) => {
                       e.currentTarget.style.transform = 'translateY(-3px)';
                       e.currentTarget.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.2)';
-                    }}
+                    }
                     onMouseLeave={(e) => {
                       e.currentTarget.style.transform = 'translateY(0)';
                       e.currentTarget.style.boxShadow = 'none';
@@ -243,11 +274,19 @@ export default function Marketplace() {
                 textDecoration: 'none',
                 borderRadius: 8,
                 fontSize: '1.1rem',
+<<<<<<< HEAD
                 fontWeight: 600, display: 'inline-block', border: '2px solid rgba(255, 255, 255, 0.3)', transition: 'border-color 0.3s ease'
               }}
+=======
+                fontWeight: 600,
+                display: 'inline-block',
+                border: '2px solid rgba(255, 255, 255, 0.3)',
+                transition: 'border-color 0.3s ease'
+              }
+>>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor = '#3b82f6';
-              }}
+              }
               onMouseLeave={(e) => {
                 e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.3)';
               }}>

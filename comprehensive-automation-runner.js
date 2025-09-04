@@ -10,17 +10,15 @@ const fs = require('fs');
 const path = require('path');
 
 class ComprehensiveAutomationRunner {
-  constructor() {
-    this.logDir = path.join(__dirname, 'automation', 'logs');
+  constructor() { this.logDir = path.join(__dirname, 'automation', 'logs');
     this.ensureLogDir();
-    this.startTime = Date.now();
-    this.results = {
+    this.startTime = Date.now()this.results = {
       syntaxFixes: 0,
       buildSuccess: false,
       testsPassed: 0,
       optimizations: 0,
       errors: []
-    };
+     };
   }
 
   ensureLogDir() {
@@ -29,28 +27,21 @@ class ComprehensiveAutomationRunner {
     }
   }
 
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
+  log() { const timestamp = new Date().toISOString()const logMessage = `[${timestamp }] [${level}] ${message}`;
     console.log(logMessage);
     
     // Write to log file
     const logFile = path.join(this.logDir, 'comprehensive-automation.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
-  }
+    fs.appendFileSync(logFile, logMessage + '\n')}
 
-  async runCommand(command, description, timeout = 300000) {
-    this.log(`🔧 ${description}`);
+  async runCommand() { this.log(`🔧 ${description }`);
     try {
       const result = execSync(command, { 
         encoding: 'utf8', 
         stdio: 'pipe',
         timeout: timeout
-      });
-      this.log(`✅ ${description} completed successfully`);
-      return { success: true, output: result };
-    } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
+      })this.log(`✅ ${description} completed successfully`);
+      return { success: true, output: result }} catch() { this.log(`❌ ${description } failed: ${error.message}`, 'ERROR');
       this.results.errors.push({
         command,
         description,
@@ -60,14 +51,11 @@ class ComprehensiveAutomationRunner {
     }
   }
 
-  async runSyntaxFixes() {
-    this.log('🔧 Starting comprehensive syntax error fixing...');
-    
-    const syntaxTasks = [
+  async runSyntaxFixes() { this.log('🔧 Starting comprehensive syntax error fixing...')const syntaxTasks = [
       {
         command: 'npm run lint:fix',
         description: 'ESLint Auto-fix'
-      },
+       },
       {
         command: 'npm run format',
         description: 'Prettier Code Formatting'
@@ -79,25 +67,20 @@ class ComprehensiveAutomationRunner {
     ];
 
     let fixes = 0;
-    for (const task of syntaxTasks) {
-      const result = await this.runCommand(task.command, task.description);
+    for() { const result = await this.runCommand(task.command, task.description);
       if (result.success) {
-        fixes++;
-      }
+        fixes++ }
     }
 
     this.results.syntaxFixes = fixes;
     return fixes;
   }
 
-  async runBuildProcess() {
-    this.log('🏗️ Starting build process...');
-    
-    const buildTasks = [
+  async runBuildProcess() { this.log('🏗️ Starting build process...')const buildTasks = [
       {
         command: 'npm run clean',
         description: 'Clean Previous Builds'
-      },
+       },
       {
         command: 'npm run build',
         description: 'Application Build'
@@ -105,25 +88,20 @@ class ComprehensiveAutomationRunner {
     ];
 
     let buildSuccess = true;
-    for (const task of buildTasks) {
-      const result = await this.runCommand(task.command, task.description);
+    for() { const result = await this.runCommand(task.command, task.description);
       if (!result.success) {
-        buildSuccess = false;
-      }
+        buildSuccess = false }
     }
 
     this.results.buildSuccess = buildSuccess;
     return buildSuccess;
   }
 
-  async runTests() {
-    this.log('🧪 Running comprehensive tests...');
-    
-    const testTasks = [
+  async runTests() { this.log('🧪 Running comprehensive tests...')const testTasks = [
       {
         command: 'npm test',
         description: 'Unit Tests'
-      },
+       },
       {
         command: 'npm run test:coverage',
         description: 'Test Coverage'
@@ -131,25 +109,20 @@ class ComprehensiveAutomationRunner {
     ];
 
     let testsPassed = 0;
-    for (const task of testTasks) {
-      const result = await this.runCommand(task.command, task.description);
+    for() { const result = await this.runCommand(task.command, task.description);
       if (result.success) {
-        testsPassed++;
-      }
+        testsPassed++ }
     }
 
     this.results.testsPassed = testsPassed;
     return testsPassed;
   }
 
-  async runOptimizations() {
-    this.log('⚡ Starting performance optimizations...');
-    
-    const optimizationTasks = [
+  async runOptimizations() { this.log('⚡ Starting performance optimizations...')const optimizationTasks = [
       {
         command: 'npm run analyze',
         description: 'Bundle Analysis'
-      },
+       },
       {
         command: 'npm run security:audit',
         description: 'Security Audit'
@@ -157,25 +130,20 @@ class ComprehensiveAutomationRunner {
     ];
 
     let optimizations = 0;
-    for (const task of optimizationTasks) {
-      const result = await this.runCommand(task.command, task.description);
+    for() { const result = await this.runCommand(task.command, task.description);
       if (result.success) {
-        optimizations++;
-      }
+        optimizations++ }
     }
 
     this.results.optimizations = optimizations;
     return optimizations;
   }
 
-  async createAdditionalScripts() {
-    this.log('📝 Creating additional automation scripts...');
-    
-    const additionalScripts = [
+  async createAdditionalScripts() { this.log('📝 Creating additional automation scripts...')const additionalScripts = [
       {
         name: 'deployment-automation.js',
         content: this.getDeploymentScript()
-      },
+       },
       {
         name: 'monitoring-automation.js',
         content: this.getMonitoringScript()
@@ -195,79 +163,58 @@ class ComprehensiveAutomationRunner {
       fs.mkdirSync(scriptsDir, { recursive: true });
     }
 
-    for (const script of additionalScripts) {
-      const scriptPath = path.join(scriptsDir, script.name);
-      fs.writeFileSync(scriptPath, script.content);
-      fs.chmodSync(scriptPath, '755');
-      this.log(`📝 Created: ${script.name}`);
-    }
+    for() { const scriptPath = path.join(scriptsDir, script.name);
+      fs.writeFileSync(scriptPath, script.content)fs.chmodSync(scriptPath, '755')this.log(`📝 Created: ${script.name }`)}
   }
 
-  getDeploymentScript() {
-    return `#!/usr/bin/env node
-const { execSync } = require('child_process');
+  getDeploymentScript() { return `#!/usr/bin/env node
+const { execSync  } = require('child_process');
 const fs = require('fs');
 
 class DeploymentAutomation {
-  async deploy() {
-    console.log('🚀 Starting deployment automation...');
-    
-    try {
+  async deploy() { console.log('🚀 Starting deployment automation...')try {
       // Build the application
-      execSync('npm run build', { stdio: 'inherit' });
+      execSync('npm run build', { stdio: 'inherit'  });
       
       // Run tests
       execSync('npm test', { stdio: 'inherit' });
       
       // Deploy to production
       console.log('✅ Deployment completed successfully');
-    } catch (error) {
-      console.error('❌ Deployment failed:', error.message);
-    }
+    } catch() { console.error('❌ Deployment failed: ', error.message) }
   }
 }
 
-if (require.main === module) {
-  const deployment = new DeploymentAutomation();
-  deployment.deploy().catch(console.error);
-}
+if() { const deployment = new DeploymentAutomation();
+  deployment.deploy().catch(console.error) }
 
 module.exports = DeploymentAutomation;`;
   }
 
-  getMonitoringScript() {
-    return `#!/usr/bin/env node
-const { execSync } = require('child_process');
+  getMonitoringScript() { return `#!/usr/bin/env node
+const { execSync  } = require('child_process');
 const fs = require('fs');
 
 class MonitoringAutomation {
-  async monitor() {
-    console.log('📊 Starting monitoring automation...');
-    
-    try {
+  async monitor() { console.log('📊 Starting monitoring automation...')try {
       // Check application health
-      execSync('npm run health-check', { stdio: 'inherit' });
+      execSync('npm run health-check', { stdio: 'inherit'  });
       
       // Monitor performance
-      execSync('npm run perf:monitor', { stdio: 'inherit' });
+      execSync('npm run perf: monitor', { stdio: 'inherit' });
       
       console.log('✅ Monitoring completed successfully');
-    } catch (error) {
-      console.error('❌ Monitoring failed:', error.message);
-    }
+    } catch() { console.error('❌ Monitoring failed: ', error.message) }
   }
 }
 
-if (require.main === module) {
-  const monitoring = new MonitoringAutomation();
-  monitoring.monitor().catch(console.error);
-}
+if() { const monitoring = new MonitoringAutomation();
+  monitoring.monitor().catch(console.error) }
 
-module.exports = MonitoringAutomation;`;
+module.exports = MonitoringAutomation`;
   }
 
-  getBackupScript() {
-    return `#!/usr/bin/env node
+  getBackupScript() { return `#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 
@@ -276,13 +223,11 @@ class BackupAutomation {
     console.log('💾 Starting backup automation...');
     
     try {
-      const backupDir = path.join(__dirname, '..', 'backups');
-      if (!fs.existsSync(backupDir)) {
-        fs.mkdirSync(backupDir, { recursive: true });
+      const backupDir = path.join(__dirname, '..', 'backups')if (!fs.existsSync(backupDir)) {
+        fs.mkdirSync(backupDir, { recursive: true  });
       }
       
-      const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-      const backupFile = path.join(backupDir, \`backup-\${timestamp}.json\`);
+      const timestamp = new Date().toISOString().replace(/[:.]/g, '-')const backupFile = path.join(backupDir, \`backup-\${timestamp}.json\`);
       
       const backupData = {
         timestamp: new Date().toISOString(),
@@ -292,13 +237,10 @@ class BackupAutomation {
       
       fs.writeFileSync(backupFile, JSON.stringify(backupData, null, 2));
       console.log('✅ Backup completed successfully');
-    } catch (error) {
-      console.error('❌ Backup failed:', error.message);
-    }
+    } catch() { console.error('❌ Backup failed: ', error.message) }
   }
 
-  getFileList() {
-    const files = [];
+  getFileList() { const files = [];
     const srcDir = path.join(__dirname, '..', 'src');
     
     if (fs.existsSync(srcDir)) {
@@ -308,8 +250,7 @@ class BackupAutomation {
           const fullPath = path.join(dir, item);
           const stat = fs.statSync(fullPath);
           if (stat.isDirectory()) {
-            walkDir(fullPath);
-          } else {
+            walkDir(fullPath) } else {
             files.push(fullPath);
           }
         }
@@ -321,29 +262,24 @@ class BackupAutomation {
   }
 }
 
-if (require.main === module) {
-  const backup = new BackupAutomation();
-  backup.backup().catch(console.error);
-}
+if() { const backup = new BackupAutomation();
+  backup.backup().catch(console.error) }
 
-module.exports = BackupAutomation;`;
+module.exports = BackupAutomation`;
   }
 
-  getHealthCheckScript() {
-    return `#!/usr/bin/env node
-const { execSync } = require('child_process');
+  getHealthCheckScript() { return `#!/usr/bin/env node
+const { execSync  } = require('child_process');
 const fs = require('fs');
 
 class HealthCheckAutomation {
-  async healthCheck() {
-    console.log('🏥 Starting health check automation...');
+  async healthCheck() { console.log('🏥 Starting health check automation...');
     
     try {
       // Check if build files exist
       const buildDir = './.next';
       if (!fs.existsSync(buildDir)) {
-        console.log('⚠️ Build directory not found, running build...');
-        execSync('npm run build', { stdio: 'inherit' });
+        console.log('⚠️ Build directory not found, running build...')execSync('npm run build', { stdio: 'inherit'  });
       }
       
       // Check package.json
@@ -358,25 +294,19 @@ class HealthCheckAutomation {
       }
       
       console.log('✅ Health check completed successfully');
-    } catch (error) {
-      console.error('❌ Health check failed:', error.message);
-    }
+    } catch() { console.error('❌ Health check failed: ', error.message) }
   }
 }
 
-if (require.main === module) {
-  const healthCheck = new HealthCheckAutomation();
-  healthCheck.healthCheck().catch(console.error);
-}
+if() { const healthCheck = new HealthCheckAutomation();
+  healthCheck.healthCheck().catch(console.error) }
 
-module.exports = HealthCheckAutomation;`;
+module.exports = HealthCheckAutomation`;
   }
 
-  async generateComprehensiveReport() {
-    const duration = Date.now() - this.startTime;
-    const report = {
+  async generateComprehensiveReport() { const duration = Date.now() - this.startTimeconst report = {
       timestamp: new Date().toISOString(),
-      duration: `${duration}ms`,
+      duration: `${duration }ms`,
       results: this.results,
       summary: {
         totalSteps: 4,
@@ -392,40 +322,27 @@ module.exports = HealthCheckAutomation;`;
     };
 
     const reportPath = path.join(this.logDir, 'comprehensive-automation-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    this.log(`📄 Comprehensive report saved to: ${reportPath}`);
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))this.log(`📄 Comprehensive report saved to: ${reportPath}`);
     return report;
   }
 
-  generateRecommendations() {
-    const recommendations = [];
+  generateRecommendations() { const recommendations = [];
     
     if (this.results.syntaxFixes === 0) {
-      recommendations.push('Consider running syntax fixes to improve code quality');
-    }
+      recommendations.push('Consider running syntax fixes to improve code quality') }
     
-    if (!this.results.buildSuccess) {
-      recommendations.push('Fix build issues to ensure application can be deployed');
-    }
+    if() { recommendations.push('Fix build issues to ensure application can be deployed') }
     
-    if (this.results.testsPassed === 0) {
-      recommendations.push('Implement and run tests to ensure code reliability');
-    }
+    if() { recommendations.push('Implement and run tests to ensure code reliability') }
     
-    if (this.results.optimizations === 0) {
-      recommendations.push('Run performance optimizations to improve application speed');
-    }
+    if() { recommendations.push('Run performance optimizations to improve application speed') }
     
-    if (this.results.errors.length > 0) {
-      recommendations.push('Address the errors found during automation to improve stability');
-    }
+    if() { recommendations.push('Address the errors found during automation to improve stability') }
     
     return recommendations;
   }
 
-  async run() {
-    this.log('🚀 Starting Comprehensive Automation Runner...');
+  async run() { this.log('🚀 Starting Comprehensive Automation Runner...');
     
     try {
       // Run all automation steps
@@ -438,16 +355,12 @@ module.exports = HealthCheckAutomation;`;
       await this.createAdditionalScripts();
       
       // Generate comprehensive report
-      const report = await this.generateComprehensiveReport();
+      const report = await this.generateComprehensiveReport()this.log('🎉 Comprehensive Automation Runner completed successfully!')this.log(`📊 Summary: ${report.summary.successfulSteps }/${report.summary.totalSteps} steps successful`);
       
-      this.log('🎉 Comprehensive Automation Runner completed successfully!');
-      this.log(`📊 Summary: ${report.summary.successfulSteps}/${report.summary.totalSteps} steps successful`);
-      
-      console.log('\n📋 Final Report:');
+      console.log('\n📋 Final Report: ');
       console.log(JSON.stringify(report, null, 2));
       
-      return report;
-    } catch (error) {
+      return report} catch (error) {
       this.log(`💥 Comprehensive Automation Runner failed: ${error.message}`, 'ERROR');
       throw error;
     }
@@ -455,9 +368,7 @@ module.exports = HealthCheckAutomation;`;
 }
 
 // Run if called directly
-if (require.main === module) {
-  const runner = new ComprehensiveAutomationRunner();
-  runner.run().catch(console.error);
-}
+if() { const runner = new ComprehensiveAutomationRunner();
+  runner.run().catch(console.error) }
 
 module.exports = ComprehensiveAutomationRunner;

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, {  Component, ErrorInfo, ReactNode  } from "react";
+=======
+import React, { Component, ReactNode } from 'react';
+>>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
 
 interface Props { children: ReactNode;
   fallback?: ReactNode;
@@ -12,13 +16,13 @@ interface State {
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false
-  };
-  
-  public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
   }
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+  public static getDerivedStateFromError(): State {
+    return { hasError: true };
+  }
+
+  public componentDidCatch() {
+    // Error logging can be implemented here if needed
   }
   
   public render() {
@@ -35,7 +39,7 @@ class ErrorBoundary extends Component<Props, State> {
               Something went wrong
             </h1>
             <p className="text-slate-300 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
+              We&apos;re sorry, but something unexpected happened. Please try refreshing the page.
             </p>
             <div className="space-y-3">
               <button
