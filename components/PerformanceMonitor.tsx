@@ -15,7 +15,6 @@ const PerformanceMonitor: React.FC = () => {
               console.warn('LCP is slow:', entry.startTime);
             }
           }
-        }
       });
       
       try {
@@ -34,7 +33,6 @@ const PerformanceMonitor: React.FC = () => {
               console.warn('FID is slow:', entry.processingStart - entry.startTime);
             }
           }
-        }
       });
 
       try {
@@ -50,7 +48,6 @@ const PerformanceMonitor: React.FC = () => {
           if (!(entry as any).hadRecentInput) {
             clsValue += (entry as any).value;
           }
-        }
         console.log('CLS:', clsValue);
         // Send to analytics
         if (clsValue > 0.1) {
@@ -68,8 +65,7 @@ const PerformanceMonitor: React.FC = () => {
         observer.disconnect();
         fidObserver.disconnect();
         clsObserver.disconnect();
-      };
-    }
+      }
   }, []);
 
   return null; // This component doesn't render anything
