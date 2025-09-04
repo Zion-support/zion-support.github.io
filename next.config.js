@@ -2,7 +2,6 @@
 // Performance optimizations
 const nextConfig = {
   reactStrictMode: false,
-  swcMinify: true,
   compress: true,
   poweredByHeader: false,
   eslint: { 
@@ -13,6 +12,7 @@ const nextConfig = {
     ignoreBuildErrors: true 
   },
   trailingSlash: true,
+  output: 'export',
   generateBuildId: async () => 'build-' + Date.now(),
   // Ensure standard Next.js page extensions are recognized alongside any custom route files
   pageExtensions: ['tsx', 'jsx'],
@@ -25,6 +25,9 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
     scrollRestoration: true
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production'
   },
   async headers() {
     return [
