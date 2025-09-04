@@ -4,11 +4,12 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 function createValidReactComponent(filePath) {
   const fileName = path.basename(filePath, path.extname(filePath));
-  const componentName = fileName;
-    .split("-");
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1));
-    .join("");
+  const componentName = fileName
+    .split("-")
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join("")
     .replace(/[^a-zA-Z0-9]/g, "");
+  
   return `import React from "react";
 export default function ${componentName}() {
   return (;
