@@ -1,11 +1,12 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
 interface PerformanceMetrics {
-  responseTime: number;
+  responseTime: 'number;
   memoryUsage: number;
   timestamp: string;
   endpoint: string;
-  method: string;
+  method: string;'
+}
 }
 
 class PerformanceMonitor {
@@ -45,7 +46,7 @@ class PerformanceMonitor {
   }
 }
 
-export const performanceMiddleware = (req: NextApiRequest, res: NextApiResponse, next: Function) => {
+export const performanceMiddleware = (req: 'NextApiRequest', res: 'NextApiResponse', next: Function) => {
   const startTime = Date.now();
   const startMemory = process.memoryUsage().heapUsed;
 
@@ -55,8 +56,8 @@ export const performanceMiddleware = (req: NextApiRequest, res: NextApiResponse,
     
     const monitor = PerformanceMonitor.getInstance();
     monitor.recordMetric({
-      responseTime: endTime - startTime,
-      memoryUsage: endMemory - startMemory,
+      responseTime: 'endTime - startTime',
+      memoryUsage: 'endMemory - startMemory',
       timestamp: new Date().toISOString(),
       endpoint: req.url || '',
       method: req.method || ''

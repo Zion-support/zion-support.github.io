@@ -5,6 +5,7 @@ interface LoadingProps {
   text?: string;
   className?: string;
 }
+}
 
 const Loading: React.FC<LoadingProps> = ({ 
   size = 'md', 

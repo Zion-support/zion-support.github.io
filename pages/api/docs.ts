@@ -63,17 +63,17 @@ class ApiDocumentationGenerator {
         paths[endpoint.path] = {};
       }
       paths[endpoint.path][endpoint.method.toLowerCase()] = {
-        summary: endpoint.description,
+        summary: 'endpoint.description',
         parameters: endpoint.parameters?.map(param => ({
           name: param.name,
-          in: param.location,
-          required: param.required,
+          in: 'param.location',
+          required: 'param.required',
           schema: { type: param.type },
-          description: param.description
+          description: 'param.description'
         })),
         responses: endpoint.responses?.reduce((acc, response) => {
           acc[response.status] = {
-            description: response.description,
+            description: 'response.description',
             content: response.schema ? {
               'application/json': {
                 schema: response.schema
@@ -157,7 +157,7 @@ class ApiDocumentationGenerator {
 export const apiDocGenerator = new ApiDocumentationGenerator();
 
 // API Documentation endpoint
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: 'NextApiRequest', res: NextApiResponse) {
   if (req.method === 'GET') {
     const format = req.query.format as string || 'json';
     

@@ -1,124 +1,107 @@
-import Link from 'next/link';
+import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
+import { ArrowLeft, Code, Zap, Shield, Clock } from 'lucide-react';
 
 export default function ApiReference() {
+  const contact = { 
+    phone: '+1 302 464 0950', 
+    email: 'kleber@ziontechgroup.com', 
+    address: '364 E Main St STE 1008 Middletown DE 19709', 
+    site: 'https://ziontechgroup.com' 
+  };
+
   return (
     <>
       <Head>
         <title>API Reference - Zion Tech Group Documentation</title>
-        <meta name="description" content="Complete API reference for Zion Tech Group services. Detailed documentation for all endpoints, parameters, and responses." />
-        <link rel="canonical" href="https://ziontechgroup.com/docs/api-reference" />
+        <meta name="description" content="Complete API reference for Zion Tech Group's micro SaaS, AI, and IT services." />
+        <link rel="canonical" href={`${contact.site}/docs/api-reference`} />
       </Head>
-      
-      <div style={{ maxWidth: 1200, margin: '40px 20px', padding: '0 20px' }}>
-        <div style={{ marginBottom: 40 }}>
-          <Link href="/docs" style={{ color: '#3b82f6', textDecoration: 'none', marginBottom: 20, display: 'inline-block' }}>
-            ← Back to Documentation
-          </Link>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: 16, background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-            API Reference
-          </h1>
-          <p style={{ fontSize: '1.1rem', opacity: '0.8', lineHeight: '1.6'}}>
-            Complete reference for all Zion Tech Group API endpoints, including request/response formats, authentication, and error handling.
-          </p>
-        </div>
 
-        <div style={{ display: 'grid', gap: 32 }}>
-          {/* Base URL */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16  }}>🌐 Base URL</h2>
-            <div style={{ background: '#1e293b', padding: 20, borderRadius: 8 }}>
-              <code style={{ fontSize: '1.2rem', color: '#93c5fd' }}>https://api.ziontechgroup.com/v1</code>
-            </div>
-          </section>
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        <div className="max-w-6xl mx-auto px-4 py-8">
+          {/* Header */}
+          <div className="mb-8">
+            <Link href="/docs" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-4">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Documentation
+            </Link>
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">API Reference</h1>
+            <p className="text-xl text-gray-600">
+              Complete reference for all Zion Tech Group APIs and endpoints.
+            </p>
+          </div>
 
           {/* Authentication */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16  }}>🔐 Authentication</h2>
-            <p style={{ opacity: '0.8', marginBottom: 20 }}>All API requests require authentication using a Bearer token in the Authorization header.</p>
+          <section className="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <div className="flex items-center mb-6">
+              <Shield className="w-8 h-8 text-blue-600 mr-3" />
+              <h2 className="text-2xl font-semibold text-gray-900">Authentication</h2>
+            </div>
+            <p className="text-gray-600 mb-6">
+              All API requests require authentication using a Bearer token in the Authorization header.
+            </p>
             
-            <div style={{ background: '#1e293b', padding: 20, borderRadius: 8 }}>
-              <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#93c5fd' }}>Header Format</h3>
-              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>
+            <div className="bg-gray-900 rounded-lg p-6">
+              <h3 className="text-white font-semibold mb-4">Header Format</h3>
+              <pre className="text-green-400 text-sm">
 {`Authorization: Bearer YOUR_API_KEY`}
               </pre>
             </div>
           </section>
 
           {/* Services Endpoints */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 24  }}>📋 Services Endpoints</h2>
+          <section className="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-6">📋 Services Endpoints</h2>
             
-            <div style={{ display: 'grid', gap: 20 }}>
-              <div style={{ padding: 20, background: '#1e293b', borderRadius: 8 }}>
-                <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#86efac' }}>GET /services</h3>
-                <p style={{ opacity: '0.8', marginBottom: 12 }}>Retrieve a list of all available services.</p>
+            <div className="space-y-6">
+              <div className="border border-gray-200 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">GET /v1/services</h3>
+                <p className="text-gray-600 mb-4">Retrieve all available services</p>
                 
-                <div style={{ marginBottom: 16 }}>
-                  <h4 style={{ fontWeight: 600, marginBottom: 8, color: '#fbbf24' }}>Query Parameters</h4>
-                  <div style={{ background: '#1e293b', padding: 12, borderRadius: 6, fontSize: '0.9rem'  }}>
-                    <div><code>page</code> - Page number (default: 1)</div>
-                    <div><code>limit</code> - Items per page (default: 10, max: 100)</div>
-                    <div><code>category</code> - Filter by service category</div>
-                    <div><code>search</code> - Search in service names and descriptions</div>
-                  </div>
-                </div>
-                
-                <div style={{ marginBottom: 16 }}>
-                  <h4 style={{ fontWeight: 600, marginBottom: 8, color: '#fbbf24' }}>Response</h4>
-                  <pre style={{ background: '#0f172a', padding: 12, borderRadius: 6, overflow: 'auto', fontSize: '0.8rem' }}>`
+                <div className="bg-gray-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-gray-900 mb-2">Response Example</h4>
+                  <pre className="text-sm text-gray-700">
 {`{
   "success": true,
-  "data": [
-    {
-      "id": "micro-saas"
-      "name": "Micro SaaS Products"
-      "description": "Ready-to-use software solutions"
-      "category": "software"
-      "pricing": "custom"
-      "endpoints": ["/v1/micro-saas"]
+  "data": {
+    "services": [
+      {
+        "id": "micro-saas",
+        "name": "Micro SaaS Products",
+        "description": "Custom micro SaaS solutions",
+        "pricing": "Starting at $2,500"
+      }
+    ],
+    "pagination": {
+      "page": 1,
+      "limit": 10,
+      "total": 67,
+      "pages": 7
     }
-  ],
-  "pagination": {
-    "page": 1,
-    "limit": 10,
-    "total": 67,
-    "pages": 7
-  }`
+  }
 }`}
                   </pre>
                 </div>
               </div>
 
-              <div style={{ padding: 20, background: '#1e293b', borderRadius: 8 }}>
-                <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#86efac' }}>GET /services/&#123;id&#125;</h3>
-                <p style={{ opacity: '0.8', marginBottom: 12 }}>Retrieve detailed information about a specific service.</p>
+              <div className="border border-gray-200 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">POST /v1/contact</h3>
+                <p className="text-gray-600 mb-4">Submit a contact form or quote request</p>
                 
-                <div style={{ marginBottom: 16 }}>
-                  <h4 style={{ fontWeight: 600, marginBottom: 8, color: '#fbbf24' }}>Path Parameters</h4>
-                  <div style={{ background: '#1e293b', padding: 12, borderRadius: 6, fontSize: '0.9rem'  }}>
-                    <div><code>id</code> - Service identifier (required)</div>
-                  </div>
-                </div>
-                
-                <div style={{ marginBottom: 16 }}>
-                  <h4 style={{ fontWeight: 600, marginBottom: 8, color: '#fbbf24' }}>Response</h4>
-                  <pre style={{ background: '#0f172a', padding: 12, borderRadius: 6, overflow: 'auto', fontSize: '0.8rem' }}>`
+                <div className="bg-gray-50 rounded-lg p-4">
+                  <h4 className="font-semibold text-gray-900 mb-2">Request Body</h4>
+                  <pre className="text-sm text-gray-700">
 {`{
-  "success": true,
-  "data": {
-    "id": "micro-saas"
-    "name": "Micro SaaS Products"
-    "description": "Ready-to-use software solutions for specific business needs"
-    "category": "software"
-    "features": ["Cloud-based" "Scalable" "API-first"],
-    "pricing": {
-      "type": "custom"
-      "starting_from": "$99/month"
-    },
-    "documentation": "/docs/micro-saas"
-    "endpoints": ["/v1/micro-saas"]
-  }`
+  "name": "John Doe",
+  "email": "john@example.com",
+  "company": "Example Corp",
+  "phone": "+1-555-0123",
+  "service": "micro-saas",
+  "message": "Looking for a custom solution...",
+  "budget_range": "1000-5000",
+  "additional_notes": "Looking for a custom solution..."
 }`}
                   </pre>
                 </div>
@@ -126,113 +109,51 @@ export default function ApiReference() {
             </div>
           </section>
 
-          {/* Quotes Endpoints */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 24  }}>💰 Quotes Endpoints</h2>
+          {/* Rate Limiting */}
+          <section className="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <div className="flex items-center mb-6">
+              <Clock className="w-8 h-8 text-orange-600 mr-3" />
+              <h2 className="text-2xl font-semibold text-gray-900">Rate Limiting</h2>
+            </div>
+            <p className="text-gray-600 mb-6">
+              API requests are rate limited to ensure fair usage and system stability.
+            </p>
             
-            <div style={{ padding: 20, background: '#1e293b', borderRadius: 8 }}>
-              <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#86efac' }}>POST /quotes</h3>
-              <p style={{ opacity: '0.8', marginBottom: 12 }}>Submit a request for a custom service quote.</p>
-              
-              <div style={{ marginBottom: 16 }}>
-                <h4 style={{ fontWeight: 600, marginBottom: 8, color: '#fbbf24' }}>Request Body</h4>
-                <pre style={{ background: '#0f172a', padding: 12, borderRadius: 6, overflow: 'auto', fontSize: '0.8rem' }}>`
-{`{
-  "service_id": "micro-saas"
-  "requirements": {
-    "users": 100,
-    "features": ["analytics" "api-access"],
-    "timeline": "3 months"
-  },
-  "contact": {
-    "name": "John Doe"
-    "email": "john@example.com"
-    "company": "Example Corp"
-    "phone": "+1-555-0123"
-  },
-  "budget_range": "1000-5000"
-  "additional_notes": "Looking for a custom solution..."`
-}`}
-                </pre>
-              </div>
-              
-              <div style={{ marginBottom: 16 }}>
-                <h4 style={{ fontWeight: 600, marginBottom: 8, color: '#fbbf24' }}>Response</h4>
-                <pre style={{ background: '#0f172a', padding: 12, borderRadius: 6, overflow: 'auto', fontSize: '0.8rem' }}>`
-{`{
-  "success": true,
-  "data": {
-    "quote_id": "qt_123456789"
-    "status": "pending"
-    "estimated_timeline": "2-3 business days"
-    "next_steps": [
-      "Our team will review your requirements"
-      "We'll prepare a detailed proposal"
-      "Schedule a consultation call"
-    ]
-  }`
-}`}
-                </pre>
+            <div className="bg-gray-50 rounded-lg p-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="text-center">
+                  <h3 className="font-semibold text-gray-900 mb-2">Free Tier</h3>
+                  <p className="text-gray-600">100 requests/hour</p>
+                </div>
+                <div className="text-center">
+                  <h3 className="font-semibold text-gray-900 mb-2">Professional</h3>
+                  <p className="text-gray-600">10,000 requests/hour</p>
+                </div>
+                <div className="text-center">
+                  <h3 className="font-semibold text-gray-900 mb-2">Enterprise</h3>
+                  <p className="text-gray-600">Unlimited requests</p>
+                </div>
               </div>
             </div>
           </section>
 
-          {/* Error Codes */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 24  }}>⚠️ Error Codes</h2>
-            
-            <div style={{ display: 'grid', gap: 16 }}>
-              <div style={{ padding: 16, background: '#1e293b', borderRadius: 8, border: '1px solid rgba(239, 68, 68, 0.2)' }}>
-                <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#fca5a5' }}>400 - Bad Request</h3>
-                <p style={{ opacity: '0.8', fontSize: '0.9rem' }}>Invalid request parameters or malformed JSON.</p>
-              </div>
-              
-              <div style={{ padding: 16, background: '#1e293b', borderRadius: 8, border: '1px solid rgba(239, 68, 68, 0.2)' }}>
-                <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#fca5a5' }}>401 - Unauthorized</h3>
-                <p style={{ opacity: '0.8', fontSize: '0.9rem' }}>Invalid or missing API key.</p>
-              </div>
-              
-              <div style={{ padding: 16, background: '#1e293b', borderRadius: 8, border: '1px solid rgba(239, 68, 68, 0.2)' }}>
-                <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#fca5a5' }}>404 - Not Found</h3>
-                <p style={{ opacity: '0.8', fontSize: '0.9rem' }}>Requested resource does not exist.</p>
-              </div>
-              
-              <div style={{ padding: 16, background: '#1e293b', borderRadius: 8, border: '1px solid rgba(239, 68, 68, 0.2)' }}>
-                <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#fca5a5' }}>429 - Too Many Requests</h3>
-                <p style={{ opacity: '0.8', fontSize: '0.9rem' }}>Rate limit exceeded. Please wait before making more requests.</p>
-              </div>
-              
-              <div style={{ padding: 16, background: '#1e293b', borderRadius: 8, border: '1px solid rgba(239, 68, 68, 0.2)' }}>
-                <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#fca5a5' }}>500 - Internal Server Error</h3>
-                <p style={{ opacity: '0.8', fontSize: '0.9rem' }}>Unexpected server error. Please try again later.</p>
-              </div>
+          {/* Support */}
+          <div className="bg-blue-50 rounded-lg p-8 text-center">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Need Help with the API?</h2>
+            <p className="text-gray-600 mb-6">
+              Our technical team is here to help you integrate our APIs successfully.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                Get Support
+              </Link>
+              <a href={`mailto:${contact.email}`} className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
+                Email Technical Team
+              </a>
             </div>
-          </section>
-
-          {/* Rate Limits */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16  }}>⏱️ Rate Limits</h2>
-            <p style={{ opacity: '0.8', marginBottom: 20 }}>API requests are rate limited to ensure fair usage and system stability.</p>
-            
-            <div style={{ background: '#1e293b', padding: 20, borderRadius: 8 }}>
-              <div style={{ display: 'gridTemplateColumns', 'repeat(auto-fit, minmax(200px, 1fr))' gap: 16 }}>
-                <div>
-                  <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#93c5fd' }}>Free Tier</h3>
-                  <p style={{ opacity: '0.8', fontSize: '0.9rem' }}>100 requests/hour</p>
-                </div>
-                <div>
-                  <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#c4b5fd' }}>Pro Tier</h3>
-                  <p style={{ opacity: '0.8', fontSize: '0.9rem' }}>1,000 requests/hour</p>
-                </div>
-                <div>
-                  <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#86efac' }}>Enterprise</h3>
-                  <p style={{ opacity: '0.8', fontSize: '0.9rem' }}>10,000 requests/hour</p>
-                </div>
-              </div>
-            </div>
-          </section>
+          </div>
         </div>
       </div>
     </>
   );
-}`
+}

@@ -12,7 +12,7 @@ export default function ITServices() {
   }
   const itServices = [
     {
-      icon: Cloud,
+      icon: 'Cloud',
       name: 'Cloud DevOps & SRE',
       description: 'Complete cloud infrastructure management with CI/CD pipelines, infrastructure as code, and site reliability engineering.',
       features: [
@@ -35,7 +35,7 @@ export default function ITServices() {
       category: 'Cloud & Infrastructure'
     },
     {
-      icon: Shield,
+      icon: 'Shield',
       name: 'Cybersecurity Hardening & SOC',
       description: 'Comprehensive security solutions including zero trust architecture, endpoint detection, and security operations center setup.',
       features: [
@@ -58,7 +58,7 @@ export default function ITServices() {
       category: 'Security'
     },
     {
-      icon: Cloud,
+      icon: 'Cloud',
       name: 'Cloud Migration & Modernization',
       description: 'Seamless migration to cloud platforms with application modernization and optimization.',
       features: [
@@ -81,7 +81,7 @@ export default function ITServices() {
       category: 'Cloud & Infrastructure'
     },
     {
-      icon: Code,
+      icon: 'Code',
       name: 'Enterprise Architecture Consulting',
       description: 'Strategic technology planning, system design, and architecture optimization for enterprise-scale solutions.',
       features: [
@@ -104,7 +104,7 @@ export default function ITServices() {
       category: 'Consulting'
     },
     {
-      icon: Database,
+      icon: 'Database',
       name: 'Database Design & Optimization',
       description: 'Database architecture, performance tuning, and migration services for optimal data management.',
       features: [
@@ -127,7 +127,7 @@ export default function ITServices() {
       category: 'Data Management'
     },
     {
-      icon: LinkIcon,
+      icon: 'LinkIcon',
       name: 'API Development & Integration',
       description: 'RESTful and GraphQL API development, microservices architecture, and third-party integrations.',
       features: [
@@ -150,7 +150,7 @@ export default function ITServices() {
       category: 'Development'
     },
     {
-      icon: Smartphone,
+      icon: 'Smartphone',
       name: 'Mobile App Development',
       description: 'Native iOS/Android applications, React Native, and Flutter development for cross-platform solutions.',
       features: [
@@ -173,7 +173,7 @@ export default function ITServices() {
       category: 'Development'
     },
     {
-      icon: Globe,
+      icon: 'Globe',
       name: 'Web Application Development',
       description: 'Modern web applications using React, Next.js, Vue.js, and full-stack development solutions.',
       features: [
@@ -196,7 +196,7 @@ export default function ITServices() {
       category: 'Development'
     },
     {
-      icon: Server,
+      icon: 'Server',
       name: 'IT Infrastructure Management',
       description: 'Complete IT infrastructure setup, management, and optimization for enterprise environments.',
       features: [
@@ -219,7 +219,7 @@ export default function ITServices() {
       category: 'Infrastructure'
     },
     {
-      icon: Cpu,
+      icon: 'Cpu',
       name: 'High-Performance Computing Solutions',
       description: 'Advanced HPC infrastructure for scientific computing, AI/ML workloads, and data-intensive applications.',
       features: [
@@ -242,7 +242,7 @@ export default function ITServices() {
       category: 'High-Performance Computing'
     },
     {
-      icon: Globe,
+      icon: 'Globe',
       name: 'IoT Platform & Device Management',
       description: 'Comprehensive IoT solutions including device management, data analytics, and edge computing.',
       features: [
@@ -265,7 +265,7 @@ export default function ITServices() {
       category: 'IoT & Edge Computing'
     },
     {
-      icon: BarChart3,
+      icon: 'BarChart3',
       name: 'Enterprise Digital Transformation',
       description: 'Comprehensive digital transformation consulting and implementation for modern business operations.',
       features: [
@@ -288,7 +288,7 @@ export default function ITServices() {
       category: 'Digital Transformation'
     },
     {
-      icon: Shield,
+      icon: 'Shield',
       name: 'Advanced Threat Intelligence Platform',
       description: 'Comprehensive cybersecurity platform with threat intelligence, incident response, and security analytics.',
       features: [
@@ -311,7 +311,7 @@ export default function ITServices() {
       category: 'Cybersecurity'
     },
     {
-      icon: Database,
+      icon: 'Database',
       name: 'Enterprise Data Platform',
       description: 'Modern data platform architecture with real-time analytics, data lakes, and business intelligence.',
       features: [
@@ -334,7 +334,7 @@ export default function ITServices() {
       category: 'Data & Analytics'
     },
     {
-      icon: Code,
+      icon: 'Code',
       name: 'Enterprise Application Integration',
       description: 'Seamless integration of enterprise applications with modern integration platforms and APIs.',
       features: [
@@ -357,7 +357,7 @@ export default function ITServices() {
       category: 'Integration'
     },
     {
-      icon: Smartphone,
+      icon: 'Smartphone',
       name: 'Quantum Computing Consulting',
       description: 'Quantum computing strategy, algorithm development, and hybrid quantum-classical solutions.',
       features: [
@@ -380,7 +380,7 @@ export default function ITServices() {
       category: 'Quantum Computing'
     },
     {
-      icon: Globe,
+      icon: 'Globe',
       name: 'Blockchain & Web3 Solutions',
       description: 'Blockchain development, smart contracts, DeFi protocols, and Web3 application development.',
       features: [
@@ -403,7 +403,7 @@ export default function ITServices() {
       category: 'Blockchain & Web3'
     },
     {
-      icon: TestTube,
+      icon: 'TestTube',
       name: 'DevSecOps & Security Automation',
       description: 'Integrated security practices in DevOps workflows with automated security testing and compliance.',
       features: [
@@ -426,7 +426,7 @@ export default function ITServices() {
       category: 'DevSecOps'
     },
     {
-      icon: BarChart3,
+      icon: 'BarChart3',
       name: 'Data Engineering & Analytics',
       description: 'Data pipeline development, data warehouses, ETL processes, and business intelligence solutions.',
       features: [
@@ -449,7 +449,7 @@ export default function ITServices() {
       category: 'Data Management'
     },
     {
-      icon: Cpu,
+      icon: 'Cpu',
       name: 'Blockchain & Web3 Development',
       description: 'Smart contract development, DeFi protocols, and blockchain integration solutions.',
       features: [
@@ -472,7 +472,7 @@ export default function ITServices() {
       category: 'Emerging Technologies'
     },
     {
-      icon: Wrench,
+      icon: 'Wrench',
       name: 'IoT & Embedded Systems',
       description: 'IoT device development, sensor integration, and edge computing solutions.',
       features: [
@@ -495,7 +495,7 @@ export default function ITServices() {
       category: 'Emerging Technologies'
     },
     {
-      icon: Cloud,
+      icon: 'Cloud',
       name: 'Edge Computing Infrastructure',
       description: 'Distributed edge computing solutions for low-latency applications and real-time processing.',
       features: [
@@ -518,7 +518,7 @@ export default function ITServices() {
       category: 'Cloud & Infrastructure'
     },
     {
-      icon: Shield,
+      icon: 'Shield',
       name: 'Zero Trust Security Architecture',
       description: 'Comprehensive zero trust implementation with identity verification and micro-segmentation.',
       features: [
@@ -541,7 +541,7 @@ export default function ITServices() {
       category: 'Security'
     },
     {
-      icon: Database,
+      icon: 'Database',
       name: 'Data Lake & Warehouse Modernization',
       description: 'Modern data architecture with cloud-native data lakes and real-time analytics.',
       features: [
@@ -564,7 +564,7 @@ export default function ITServices() {
       category: 'Data Management'
     },
     {
-      icon: Code,
+      icon: 'Code',
       name: 'Microservices Architecture Design',
       description: 'Scalable microservices architecture with service mesh and container orchestration.',
       features: [
@@ -587,7 +587,7 @@ export default function ITServices() {
       category: 'Development'
     },
     {
-      icon: Globe,
+      icon: 'Globe',
       name: 'Progressive Web App Development',
       description: 'Modern PWA development with offline capabilities and native app features.',
       features: [
@@ -610,7 +610,7 @@ export default function ITServices() {
       category: 'Development'
     },
     {
-      icon: Server,
+      icon: 'Server',
       name: 'Hybrid Cloud Management',
       description: 'Seamless hybrid cloud operations with multi-cloud orchestration and management.',
       features: [
@@ -633,7 +633,7 @@ export default function ITServices() {
       category: 'Cloud & Infrastructure'
     },
     {
-      icon: BarChart3,
+      icon: 'BarChart3',
       name: 'Real-Time Analytics Platform',
       description: 'Streaming analytics platform with real-time data processing and visualization.',
       features: [
@@ -656,7 +656,7 @@ export default function ITServices() {
       category: 'Data Management'
     },
     {
-      icon: Cpu,
+      icon: 'Cpu',
       name: 'Quantum Computing Integration',
       description: 'Quantum computing solutions and hybrid quantum-classical system integration.',
       features: [
@@ -679,7 +679,7 @@ export default function ITServices() {
       category: 'Emerging Technologies'
     },
     {
-      icon: TestTube,
+      icon: 'TestTube',
       name: 'AI/ML Model Deployment & MLOps',
       description: 'End-to-end machine learning operations with model deployment and monitoring.',
       features: [
@@ -702,7 +702,7 @@ export default function ITServices() {
       category: 'AI & Machine Learning'
     },
     {
-      icon: BookOpen,
+      icon: 'BookOpen',
       name: 'Digital Transformation Consulting',
       description: 'Strategic digital transformation with technology roadmap and change management.',
       features: [
@@ -725,7 +725,7 @@ export default function ITServices() {
       category: 'Consulting'
     },
     {
-      icon: Wrench,
+      icon: 'Wrench',
       name: 'AR/VR Development & Integration',
       description: 'Augmented and virtual reality solutions for training, visualization, and customer engagement.',
       features: [
@@ -748,7 +748,7 @@ export default function ITServices() {
       category: 'Emerging Technologies'
     },
     {
-      icon: Cloud,
+      icon: 'Cloud',
       name: 'Enterprise Application Integration',
       description: 'Comprehensive enterprise application integration with API management, data synchronization, and workflow automation.',
       features: [
@@ -771,7 +771,7 @@ export default function ITServices() {
       category: 'Enterprise Integration'
     },
     {
-      icon: Shield,
+      icon: 'Shield',
       name: 'Advanced Threat Intelligence Platform',
       description: 'Comprehensive threat intelligence and security monitoring with automated response capabilities.',
       features: [
@@ -794,7 +794,7 @@ export default function ITServices() {
       category: 'Security'
     },
     {
-      icon: Cpu,
+      icon: 'Cpu',
       name: 'High-Performance Computing Solutions',
       description: 'Advanced HPC infrastructure with GPU computing, parallel processing, and scientific computing capabilities.',
       features: [
@@ -817,7 +817,7 @@ export default function ITServices() {
       category: 'High-Performance Computing'
     },
     {
-      icon: Globe,
+      icon: 'Globe',
       name: 'IoT Platform & Device Management',
       description: 'Comprehensive IoT platform with device management, data analytics, and edge computing capabilities.',
       features: [
@@ -840,7 +840,7 @@ export default function ITServices() {
       category: 'IoT & Edge Computing'
     },
     {
-      icon: Code,
+      icon: 'Code',
       name: 'Enterprise Digital Transformation Consulting',
       description: 'Strategic digital transformation with technology modernization, process optimization, and change management.',
       features: [
@@ -863,7 +863,7 @@ export default function ITServices() {
       category: 'Digital Transformation'
     },
     {
-      icon: Database,
+      icon: 'Database',
       name: 'Big Data Analytics & Data Lake Solutions',
       description: 'Comprehensive big data platform with data lake architecture, analytics, and machine learning capabilities.',
       features: [
@@ -886,7 +886,7 @@ export default function ITServices() {
       category: 'Data Analytics'
     },
     {
-      icon: Shield,
+      icon: 'Shield',
       name: 'Zero Trust Security Architecture',
       description: 'Comprehensive zero trust security implementation with identity verification and network segmentation.',
       features: [
@@ -909,7 +909,7 @@ export default function ITServices() {
       category: 'Security'
     },
     {
-      icon: Cloud,
+      icon: 'Cloud',
       name: 'Multi-Cloud Management & Optimization',
       description: 'Comprehensive multi-cloud strategy with cost optimization, governance, and unified management.',
       features: [
@@ -932,7 +932,7 @@ export default function ITServices() {
       category: 'Cloud & Infrastructure'
     },
     {
-      icon: Smartphone,
+      icon: 'Smartphone',
       name: 'Enterprise Mobile App Development',
       description: 'Native and cross-platform mobile application development with enterprise-grade security and integration.',
       features: [
@@ -955,7 +955,7 @@ export default function ITServices() {
       category: 'Mobile Development'
     },
     {
-      icon: BarChart3,
+      icon: 'BarChart3',
       name: 'Business Intelligence & Data Visualization',
       description: 'Advanced BI platform with interactive dashboards, reporting, and self-service analytics.',
       features: [
@@ -978,7 +978,7 @@ export default function ITServices() {
       category: 'Business Intelligence'
     },
     {
-      icon: Server,
+      icon: 'Server',
       name: 'Edge Computing Infrastructure',
       description: 'Distributed edge computing platform with low-latency processing and real-time analytics.',
       features: [
@@ -1001,7 +1001,7 @@ export default function ITServices() {
       category: 'Edge Computing'
     },
     {
-      icon: Shield,
+      icon: 'Shield',
       name: 'Compliance & Regulatory Technology',
       description: 'Comprehensive compliance management with automated monitoring, reporting, and risk assessment.',
       features: [
@@ -1024,7 +1024,7 @@ export default function ITServices() {
       category: 'Compliance'
     },
     {
-      icon: Cpu,
+      icon: 'Cpu',
       name: 'Quantum Computing Infrastructure',
       description: 'Quantum computing infrastructure setup, optimization, and application development for complex problem solving.',
       features: [
@@ -1047,7 +1047,7 @@ export default function ITServices() {
       category: 'Quantum Computing'
     },
     {
-      icon: Globe,
+      icon: 'Globe',
       name: '5G Network Infrastructure & Optimization',
       description: '5G network deployment, optimization, and application development for ultra-fast connectivity.',
       features: [
@@ -1070,7 +1070,7 @@ export default function ITServices() {
       category: 'Network Infrastructure'
     },
     {
-      icon: Shield,
+      icon: 'Shield',
       name: 'Zero Trust Security Architecture',
       description: 'Comprehensive zero trust security implementation with identity verification and micro-segmentation.',
       features: [
@@ -1093,7 +1093,7 @@ export default function ITServices() {
       category: 'Security Architecture'
     },
     {
-      icon: Database,
+      icon: 'Database',
       name: 'Blockchain Infrastructure & Development',
       description: 'Blockchain network setup, smart contract development, and decentralized application creation.',
       features: [
@@ -1116,7 +1116,7 @@ export default function ITServices() {
       category: 'Blockchain Technology'
     },
     {
-      icon: Smartphone,
+      icon: 'Smartphone',
       name: 'IoT Platform Development & Management',
       description: 'Comprehensive IoT platform development with device management, data analytics, and automation.',
       features: [
@@ -1139,7 +1139,7 @@ export default function ITServices() {
       category: 'IoT Solutions'
     },
     {
-      icon: Cloud,
+      icon: 'Cloud',
       name: 'Multi-Cloud Strategy & Management',
       description: 'Comprehensive multi-cloud strategy implementation with cost optimization and governance.',
       features: [
@@ -1162,7 +1162,7 @@ export default function ITServices() {
       category: 'Cloud Strategy'
     },
     {
-      icon: Code,
+      icon: 'Code',
       name: 'Microservices Architecture & API Development',
       description: 'Microservices architecture design, API development, and service mesh implementation.',
       features: [
@@ -1185,7 +1185,7 @@ export default function ITServices() {
       category: 'Architecture & APIs'
     },
     {
-      icon: BarChart3,
+      icon: 'BarChart3',
       name: 'Data Lake & Analytics Platform',
       description: 'Comprehensive data lake setup with advanced analytics, machine learning, and business intelligence.',
       features: [
@@ -1208,7 +1208,7 @@ export default function ITServices() {
       category: 'Data & Analytics'
     },
     {
-      icon: Shield,
+      icon: 'Shield',
       name: 'DevSecOps & Security Automation',
       description: 'Integrated security into DevOps pipelines with automated security testing and compliance.',
       features: [
@@ -1231,7 +1231,7 @@ export default function ITServices() {
       category: 'DevSecOps'
     },
     {
-      icon: Globe,
+      icon: 'Globe',
       name: 'Edge Computing Infrastructure',
       description: 'Edge computing infrastructure setup with distributed processing and real-time analytics.',
       features: [
@@ -1254,7 +1254,7 @@ export default function ITServices() {
       category: 'Edge Computing'
     },
     {
-      icon: Cpu,
+      icon: 'Cpu',
       name: 'High-Performance Computing (HPC) Solutions',
       description: 'High-performance computing infrastructure for scientific computing, simulations, and data processing.',
       features: [
@@ -1277,7 +1277,7 @@ export default function ITServices() {
       category: 'High-Performance Computing'
     },
     {
-      icon: Smartphone,
+      icon: 'Smartphone',
       name: 'Mobile-First Application Development',
       description: 'Native and cross-platform mobile application development with modern frameworks and technologies.',
       features: [
@@ -1300,7 +1300,7 @@ export default function ITServices() {
       category: 'Mobile Development'
     },
     {
-      icon: Database,
+      icon: 'Database',
       name: 'Real-Time Data Streaming Platform',
       description: 'Real-time data streaming infrastructure with Apache Kafka, event processing, and analytics.',
       features: [

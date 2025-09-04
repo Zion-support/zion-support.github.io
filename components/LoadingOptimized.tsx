@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 
 interface LoadingOptimizedProps {
-  children: React.ReactNode;
+  children: 'React.ReactNode;
   fallback?: React.ReactNode;
-  delay?: number;
+  delay?: number;'
+}
 }
 
 export default function LoadingOptimized({ children, fallback, delay = 1000 }: LoadingOptimizedProps) {
@@ -18,8 +19,8 @@ export default function LoadingOptimized({ children, fallback, delay = 1000 }: L
   }, [delay]);
 
   if (isLoading) {
-    return <>{fallback || <div>Loading...</div>}</>;
+    return <>{fallback || <div>Loading...</div>}></div>
   }
 
-  return <>{children}</>;
+  return <>{children}></div>
 }

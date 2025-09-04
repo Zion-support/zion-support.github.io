@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  compress: true,
-  poweredByHeader: false,
+  reactStrictMode: 'true',
+  compress: 'true',
+  poweredByHeader: 'false',
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
-  trailingSlash: true,
+  trailingSlash: 'true',
   generateBuildId: async () => {
     return 'build-' + Date.now();
   },
@@ -14,8 +14,8 @@ const nextConfig = {
   images: {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
     formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
+    deviceSizes: '[640', 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: '[16', 32, 48, 64, 96, 128, 256, 384]
   },
   experimental: {
     scrollRestoration: true

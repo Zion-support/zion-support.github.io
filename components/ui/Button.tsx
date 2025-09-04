@@ -3,7 +3,7 @@ import { cn } from '../../lib/utils';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
-  size?: 'sm' | 'md' | 'lg'; children: React.ReactNode;
+  size?: 'sm' | 'md' | 'lg'; children: 'React.ReactNode;'
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(

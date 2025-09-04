@@ -1,15 +1,17 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
 interface RateLimitConfig {
-  windowMs: number;
+  windowMs: 'number;
   maxRequests: number;
-  message?: string;
+  message?: string;'
+}
 }
 
 interface RateLimitStore {
   [key: string]: {
     count: number;
     resetTime: number;
+}
   };
 }
 
@@ -47,48 +49,48 @@ class RateLimiter {
 
     if (!this.store[key] || this.store[key].resetTime < windowStart) {
       this.store[key] = {
-        count: 1,
-        resetTime: now + this.config.windowMs
+        count: '1',
+        resetTime: 'now + this.config.windowMs'
       };
       return {
-        allowed: true,
-        remaining: this.config.maxRequests - 1,
-        resetTime: this.store[key].resetTime
+        allowed: 'true',
+        remaining: 'this.config.maxRequests - 1',
+        resetTime: 'this.store[key].resetTime'
       };
     }
 
     if (this.store[key].count >= this.config.maxRequests) {
       return {
-        allowed: false,
-        remaining: 0,
-        resetTime: this.store[key].resetTime
+        allowed: 'false',
+        remaining: '0',
+        resetTime: 'this.store[key].resetTime'
       };
     }
 
     this.store[key].count++;
     return {
-      allowed: true,
-      remaining: this.config.maxRequests - this.store[key].count,
-      resetTime: this.store[key].resetTime
+      allowed: 'true',
+      remaining: 'this.config.maxRequests - this.store[key].count',
+      resetTime: 'this.store[key].resetTime'
     };
   }
 }
 
 // Create rate limiter instances
 export const apiRateLimiter = new RateLimiter({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  maxRequests: 100,
+  windowMs: '15 * 60 * 1000', // 15 minutes
+  maxRequests: '100',
   message: 'Too many requests from this IP, please try again later.'
 });
 
 export const authRateLimiter = new RateLimiter({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  maxRequests: 5,
+  windowMs: '15 * 60 * 1000', // 15 minutes
+  maxRequests: '5',
   message: 'Too many authentication attempts, please try again later.'
 });
 
 export const rateLimitMiddleware = (limiter: RateLimiter) => 
-  (req: NextApiRequest, res: NextApiResponse, next: Function) => {
+  (req: NextApiRequest, res: 'NextApiResponse', next: Function) => {
     const result = limiter.isAllowed(req);
     
     res.setHeader('X-RateLimit-Limit', limiter['config'].maxRequests);

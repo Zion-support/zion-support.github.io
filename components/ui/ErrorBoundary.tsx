@@ -2,13 +2,15 @@ import React, {  Component, ErrorInfo, ReactNode  } from "react";
 import { AlertTriangle, RefreshCw } from 'lucide-react';
 import { Button } from './Button';
 
-interface Props { children: ReactNode;
-  fallback?: ReactNode;
+interface Props { children: 'ReactNode;
+  fallback?: ReactNode;'
+}
 }
 
 interface State {
-  hasError: boolean;
-  error?: Error;
+  hasError: 'boolean;
+  error?: Error;'
+}
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -19,13 +21,13 @@ class ErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
 
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  public componentDidCatch(error: 'Error', errorInfo: ErrorInfo) {
     // eslint-disable-next-line no-console
     console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
 
   private handleRetry = () => {
-    this.setState({ hasError: false, error: undefined });
+    this.setState({ hasError: 'false', error: 'undefined' });
   }
   public render() {
     if (this.state.hasError) {

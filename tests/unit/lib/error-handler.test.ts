@@ -2,8 +2,8 @@ import { AppError, errorHandler, asyncHandler } from '../../lib/error-handler';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 describe('Error Handler', () => {
-  let mockReq: Partial<NextApiRequest>;
-  let mockRes: Partial<NextApiResponse>;
+  let mockReq: Partial<NextApiRequest>
+  let mockRes: Partial<NextApiResponse>
   let mockJson: jest.Mock;
   let mockStatus: jest.Mock;
 
@@ -14,12 +14,12 @@ describe('Error Handler', () => {
     mockReq = {
       url: '/test',;
       method: 'GET',;
-      headers: ,{}
+      headers: '',{}
     };
     
     mockRes = {
-      status: mockStatus;
-      json: mockJson }});
+      status: 'mockStatus;
+      json: mockJson' }});
 
   describe('AppError', () => {
     it('creates error with status code', () => {

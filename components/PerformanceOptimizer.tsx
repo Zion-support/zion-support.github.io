@@ -1,7 +1,8 @@
 import { useEffect, ReactNode } from 'react';
 
 interface PerformanceOptimizerProps {
-  children: ReactNode;
+  children: 'ReactNode;'
+}
 }
 
 export default function PerformanceOptimizer({ children }: PerformanceOptimizerProps) {

@@ -25,7 +25,7 @@ class LintingAutomation {
   setupLogging() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { recursive: 'true' });
     }
   }
 
@@ -44,9 +44,9 @@ class LintingAutomation {
       
       // Run linting
       const lintOutput = execSync('npm run lint', { 
-        cwd: this.projectRoot,
+        cwd: 'this.projectRoot',
         encoding: 'utf8',
-        timeout: 60000
+        timeout: '60000'
       });
       
       const endTime = Date.now();
@@ -54,11 +54,11 @@ class LintingAutomation {
       
       this.lastLint = {
         timestamp: new Date().toISOString(),
-        success: true,
-        lintTime: lintTime,
-        output: lintOutput,
-        errors: 0,
-        warnings: 0
+        success: 'true',
+        lintTime: 'lintTime',
+        output: 'lintOutput',
+        errors: '0',
+        warnings: '0'
       };
       
       this.log(`Linting completed successfully in ${lintTime}ms`);
@@ -74,11 +74,11 @@ class LintingAutomation {
       
       this.lastLint = {
         timestamp: new Date().toISOString(),
-        success: false,
-        error: error.message,
-        output: output,
-        errors: errorCount,
-        warnings: warningCount
+        success: 'false',
+        error: 'error.message',
+        output: 'output',
+        errors: 'errorCount',
+        warnings: 'warningCount'
       };
       
       await this.saveLintReport();
@@ -94,18 +94,18 @@ class LintingAutomation {
       this.log('Attempting to auto-fix linting issues...');
       
       const fixOutput = execSync('npm run lint:fix', { 
-        cwd: this.projectRoot,
+        cwd: 'this.projectRoot',
         encoding: 'utf8',
-        timeout: 120000
+        timeout: '120000'
       });
       
       this.log('Auto-fix applied');
       
       // Run linting again to check if issues were resolved
       const recheckOutput = execSync('npm run lint', { 
-        cwd: this.projectRoot,
+        cwd: 'this.projectRoot',
         encoding: 'utf8',
-        timeout: 60000
+        timeout: '60000'
       });
       
       this.log('Linting issues resolved');
@@ -118,8 +118,8 @@ class LintingAutomation {
 
   async saveLintReport() {
     const report = {
-      lastLint: this.lastLint,
-      projectRoot: this.projectRoot,
+      lastLint: 'this.lastLint',
+      projectRoot: 'this.projectRoot',
       eslintConfig: this.getEslintConfig()
     };
     
@@ -131,8 +131,8 @@ class LintingAutomation {
       const configPath = path.join(this.projectRoot, 'eslint.config.js');
       if (fs.existsSync(configPath)) {
         return {
-          exists: true,
-          path: configPath,
+          exists: 'true',
+          path: 'configPath',
           size: fs.statSync(configPath).size
         };
       }
@@ -140,15 +140,15 @@ class LintingAutomation {
       // Ignore errors
     }
     
-    return { exists: false };
+    return { exists: 'false' };
   }
 
   async reportLintingFailure(error) {
     const failureReport = {
       timestamp: new Date().toISOString(),
-      error: error.message,
-      stack: error.stack,
-      projectRoot: this.projectRoot
+      error: 'error.message',
+      stack: 'error.stack',
+      projectRoot: 'this.projectRoot'
     };
     
     const failureFile = path.join(this.projectRoot, 'automation/logs/linting-failure-report.json');

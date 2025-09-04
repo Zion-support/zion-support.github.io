@@ -12,7 +12,7 @@ export default function AIServices() {
   }
   const aiServices = [
     {
-      icon: Brain,
+      icon: 'Brain',
       name: 'AI Customer Support Automation',
       description: 'Intelligent chatbots and automated customer service solutions that reduce response times by 80% and improve customer satisfaction.',
       features: [
@@ -34,7 +34,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: TrendingUp,
+      icon: 'TrendingUp',
       name: 'Predictive Analytics & Forecasting',
       description: 'Advanced machine learning models for demand forecasting, revenue prediction, and business intelligence.',
       features: [
@@ -56,7 +56,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: FileText,
+      icon: 'FileText',
       name: 'GenAI Content & SEO Automation',
       description: 'AI-powered content generation, SEO optimization, and editorial workflow automation for digital marketing.',
       features: [
@@ -78,7 +78,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: Eye,
+      icon: 'Eye',
       name: 'Computer Vision & Image Recognition',
       description: 'Advanced computer vision solutions for object detection, facial recognition, and visual content analysis.',
       features: [
@@ -100,7 +100,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: Database,
+      icon: 'Database',
       name: 'Natural Language Processing Engine',
       description: 'Comprehensive NLP solutions for text analysis, sentiment detection, and language understanding.',
       features: [
@@ -122,7 +122,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: Shield,
+      icon: 'Shield',
       name: 'AI-Powered Fraud Detection',
       description: 'Real-time fraud detection and risk assessment using advanced machine learning algorithms.',
       features: [
@@ -144,7 +144,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: Mic,
+      icon: 'Mic',
       name: 'Voice AI & Speech Recognition',
       description: 'Advanced voice processing solutions including speech-to-text, voice synthesis, and conversational AI.',
       features: [
@@ -166,7 +166,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: Zap,
+      icon: 'Zap',
       name: 'Recommendation Engine',
       description: 'Personalized recommendation systems that increase engagement and conversion rates.',
       features: [
@@ -188,7 +188,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: Brain,
+      icon: 'Brain',
       name: 'Autonomous AI Agents',
       description: 'Self-operating AI agents that can perform complex tasks and make decisions autonomously.',
       features: [
@@ -210,7 +210,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: Eye,
+      icon: 'Eye',
       name: 'Advanced Computer Vision Analytics',
       description: 'Deep learning computer vision for complex visual analysis and real-time processing.',
       features: [
@@ -232,7 +232,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: Database,
+      icon: 'Database',
       name: 'Intelligent Data Processing Pipeline',
       description: 'AI-powered data ingestion, cleaning, and transformation with automated quality assurance.',
       features: [
@@ -254,7 +254,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: TrendingUp,
+      icon: 'TrendingUp',
       name: 'Advanced Predictive Analytics',
       description: 'Sophisticated machine learning models for complex business forecasting and optimization.',
       features: [
@@ -276,7 +276,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: Shield,
+      icon: 'Shield',
       name: 'AI-Powered Cybersecurity Intelligence',
       description: 'Advanced threat detection and response using machine learning and behavioral analysis.',
       features: [
@@ -298,7 +298,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: Mic,
+      icon: 'Mic',
       name: 'Conversational AI Platform',
       description: 'Advanced conversational AI with context awareness and multi-modal interaction.',
       features: [
@@ -320,7 +320,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: FileText,
+      icon: 'FileText',
       name: 'Intelligent Document Intelligence',
       description: 'Advanced document processing with understanding, extraction, and automated workflows.',
       features: [
@@ -342,7 +342,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: Search,
+      icon: 'Search',
       name: 'Intelligent Search & Discovery Engine',
       description: 'AI-powered search with semantic understanding, personalization, and intelligent suggestions.',
       features: [
@@ -364,7 +364,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: Cog,
+      icon: 'Cog',
       name: 'AI-Powered Process Optimization',
       description: 'Intelligent process mining and optimization using AI to identify bottlenecks and improvements.',
       features: [
@@ -386,7 +386,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: Brain,
+      icon: 'Brain',
       name: 'AI-Powered Healthcare Diagnostics',
       description: 'Advanced medical imaging analysis and diagnostic assistance using deep learning and computer vision.',
       features: [
@@ -408,7 +408,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: Shield,
+      icon: 'Shield',
       name: 'AI-Powered Cybersecurity Threat Detection',
       description: 'Advanced threat detection and response using machine learning and behavioral analysis.',
       features: [
@@ -430,7 +430,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: TrendingUp,
+      icon: 'TrendingUp',
       name: 'Smart Manufacturing Quality Control',
       description: 'AI-powered quality control and defect detection for manufacturing processes.',
       features: [
@@ -452,7 +452,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: Eye,
+      icon: 'Eye',
       name: 'AI-Powered Smart City Solutions',
       description: 'Intelligent urban management with traffic optimization, energy efficiency, and public safety.',
       features: [
@@ -474,7 +474,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: Database,
+      icon: 'Database',
       name: 'Intelligent Process Mining & Optimization',
       description: 'AI-driven process analysis and optimization for business operations and workflows.',
       features: [
@@ -496,7 +496,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: Mic,
+      icon: 'Mic',
       name: 'AI-Powered Voice Analytics Platform',
       description: 'Advanced voice analysis for customer service, sales, and communication optimization.',
       features: [
@@ -518,7 +518,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: Brain,
+      icon: 'Brain',
       name: 'AI-Powered Drug Discovery Platform',
       description: 'Machine learning-driven drug discovery and development with molecular analysis.',
       features: [
@@ -540,7 +540,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: Eye,
+      icon: 'Eye',
       name: 'AI-Powered Agricultural Intelligence',
       description: 'Smart farming solutions with crop monitoring, yield prediction, and resource optimization.',
       features: [
@@ -562,7 +562,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: Shield,
+      icon: 'Shield',
       name: 'AI-Powered Financial Risk Assessment',
       description: 'Advanced financial risk modeling and assessment using machine learning and big data.',
       features: [
@@ -584,7 +584,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: TrendingUp,
+      icon: 'TrendingUp',
       name: 'AI-Powered Energy Trading Platform',
       description: 'Intelligent energy trading with price prediction, demand forecasting, and optimization.',
       features: [
@@ -606,7 +606,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: Brain,
+      icon: 'Brain',
       name: 'AI-Powered Legal Document Analysis',
       description: 'Intelligent legal document review and analysis with contract insights and risk assessment.',
       features: [
@@ -628,7 +628,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: Brain,
+      icon: 'Brain',
       name: 'Generative AI Content Studio',
       description: 'Advanced AI-powered content creation platform that generates high-quality text, images, videos, and audio content for marketing, education, and entertainment.',
       features: [
@@ -650,7 +650,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: Eye,
+      icon: 'Eye',
       name: 'AI-Powered Quality Assurance',
       description: 'Intelligent quality control system that uses computer vision and machine learning to detect defects, ensure compliance, and optimize manufacturing processes.',
       features: [
@@ -672,7 +672,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: TrendingUp,
+      icon: 'TrendingUp',
       name: 'AI Financial Risk Management',
       description: 'Advanced AI system for financial risk assessment, fraud detection, and regulatory compliance with real-time monitoring and predictive analytics.',
       features: [
@@ -694,7 +694,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: Mic,
+      icon: 'Mic',
       name: 'AI Voice Analytics & Sentiment Analysis',
       description: 'Advanced voice processing system that analyzes speech patterns, emotions, and sentiment for customer service, market research, and healthcare applications.',
       features: [
@@ -716,7 +716,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: Database,
+      icon: 'Database',
       name: 'AI Data Intelligence Platform',
       description: 'Comprehensive AI platform that automatically discovers, cleans, and enriches data while providing intelligent insights and recommendations.',
       features: [
@@ -738,7 +738,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: Shield,
+      icon: 'Shield',
       name: 'AI Cybersecurity Threat Intelligence',
       description: 'Advanced AI-powered cybersecurity system that provides real-time threat detection, incident response, and security intelligence.',
       features: [
@@ -760,7 +760,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: Users,
+      icon: 'Users',
       name: 'AI Talent Acquisition & HR Analytics',
       description: 'Intelligent HR platform that automates recruitment, employee analytics, and workforce optimization using advanced AI algorithms.',
       features: [
@@ -782,7 +782,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: Code,
+      icon: 'Code',
       name: 'AI Code Generation & Optimization',
       description: 'Advanced AI system that generates, optimizes, and maintains code while ensuring quality, security, and performance standards.',
       features: [
@@ -804,7 +804,7 @@ export default function AIServices() {
       ]
     },
     {
-      icon: Search,
+      icon: 'Search',
       name: 'AI Search & Recommendation Engine',
       description: 'Intelligent search and recommendation system that provides personalized results, content discovery, and user experience optimization.',
       features: [

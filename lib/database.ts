@@ -21,7 +21,7 @@ class DatabaseManager {
   static getInstance(config?: DatabaseConfig): DatabaseManager {
     if (!DatabaseManager.instance) {
       if (!config) {
-        throw new Error('Database configuration required for first initialization');
+        throw new Error('Database configuration is required for first initialization');
       }
       DatabaseManager.instance = new DatabaseManager(config);
     }
@@ -29,25 +29,18 @@ class DatabaseManager {
   }
 
   async connect(): Promise<void> {
-    if (this.client) {
-      return;
-    }
-
     try {
       this.client = new MongoClient(this.config.uri, {
         maxPoolSize: this.config.maxPoolSize || 10,
         minPoolSize: this.config.minPoolSize || 2,
         maxIdleTimeMS: this.config.maxIdleTimeMS || 30000,
-        serverSelectionTimeoutMS: 5000,
-        socketTimeoutMS: 45000
       });
 
       await this.client.connect();
       this.db = this.client.db(this.config.dbName);
-      
-      console.log('✅ Database connected successfully');
+      console.log('Connected to MongoDB');
     } catch (error) {
-      console.error('❌ Database connection failed:', error);
+      console.error('Failed to connect to MongoDB:', error);
       throw error;
     }
   }
@@ -57,7 +50,7 @@ class DatabaseManager {
       await this.client.close();
       this.client = null;
       this.db = null;
-      console.log('✅ Database disconnected');
+      console.log('Disconnected from MongoDB');
     }
   }
 
@@ -72,27 +65,15 @@ class DatabaseManager {
     return this.getDatabase().collection<T>(name);
   }
 
-  async healthCheck(): Promise<boolean> {
-    try {
-      if (!this.db) {
-        return false;
-      }
-      await this.db.admin().ping();
-      return true;
-    } catch {
-      return false;
-    }
+  isConnected(): boolean {
+    return this.client !== null && this.db !== null;
   }
 }
 
-// Initialize database with environment variables
-const dbConfig: DatabaseConfig = {
+// Export singleton instance
+export const dbManager = DatabaseManager.getInstance({
   uri: process.env.MONGODB_URI || 'mongodb://localhost:27017',
-  dbName: process.env.MONGODB_DB_NAME || 'ziontechgroup',
-  maxPoolSize: parseInt(process.env.MONGODB_MAX_POOL_SIZE || '10'),
-  minPoolSize: parseInt(process.env.MONGODB_MIN_POOL_SIZE || '2'),
-  maxIdleTimeMS: parseInt(process.env.MONGODB_MAX_IDLE_TIME_MS || '30000')
-};
+  dbName: process.env.MONGODB_DB_NAME || 'ziontechgroup'
+});
 
-export const dbManager = DatabaseManager.getInstance(dbConfig);
 export default DatabaseManager;

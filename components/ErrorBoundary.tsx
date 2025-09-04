@@ -18,7 +18,7 @@ class ErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
   
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  public componentDidCatch(error: 'Error', errorInfo: ErrorInfo) {
     // Log error in development only
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console

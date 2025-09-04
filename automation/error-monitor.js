@@ -26,7 +26,7 @@ class ErrorMonitor {
     // Ensure log directory exists
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { recursive: 'true' });
     }
   }
 
@@ -69,9 +69,9 @@ class ErrorMonitor {
       
       // Run a quick build check
       const result = execSync('npm run build', { 
-        cwd: this.projectRoot,
+        cwd: 'this.projectRoot',
         encoding: 'utf8',
-        timeout: 60000 // 1 minute timeout
+        timeout: '60000 // 1 minute timeout'
       });
       
       this.log('Build check passed');
@@ -87,9 +87,9 @@ class ErrorMonitor {
       this.log('Checking linting errors...');
       
       const result = execSync('npm run lint', { 
-        cwd: this.projectRoot,
+        cwd: 'this.projectRoot',
         encoding: 'utf8',
-        timeout: 30000
+        timeout: '30000'
       });
       
       this.log('Linting check passed');
@@ -105,9 +105,9 @@ class ErrorMonitor {
       this.log('Checking type errors...');
       
       const result = execSync('npm run type-check', { 
-        cwd: this.projectRoot,
+        cwd: 'this.projectRoot',
         encoding: 'utf8',
-        timeout: 30000
+        timeout: '30000'
       });
       
       this.log('Type check passed');
@@ -124,9 +124,9 @@ class ErrorMonitor {
       
       // Check for outdated dependencies
       const result = execSync('npm outdated', { 
-        cwd: this.projectRoot,
+        cwd: 'this.projectRoot',
         encoding: 'utf8',
-        timeout: 30000
+        timeout: '30000'
       });
       
       if (result.trim()) {
@@ -152,11 +152,11 @@ class ErrorMonitor {
     
     try {
       // Try to fix common build issues
-      execSync('npm run lint:fix', { cwd: this.projectRoot, timeout: 30000 });
+      execSync('npm run lint:fix', { cwd: 'this.projectRoot', timeout: '30000' });
       this.log('Applied linting fixes');
       
       // Try building again
-      execSync('npm run build', { cwd: this.projectRoot, timeout: 60000 });
+      execSync('npm run build', { cwd: 'this.projectRoot', timeout: '60000' });
       this.log('Build errors fixed successfully');
       
     } catch (fixError) {
@@ -169,7 +169,7 @@ class ErrorMonitor {
     this.log('Attempting to fix linting errors...');
     
     try {
-      execSync('npm run lint:fix', { cwd: this.projectRoot, timeout: 30000 });
+      execSync('npm run lint:fix', { cwd: 'this.projectRoot', timeout: '30000' });
       this.log('Linting errors fixed successfully');
       
     } catch (error) {
@@ -183,7 +183,7 @@ class ErrorMonitor {
     
     try {
       // Type errors usually require manual intervention, but we can try some common fixes
-      execSync('npm run lint:fix', { cwd: this.projectRoot, timeout: 30000 });
+      execSync('npm run lint:fix', { cwd: 'this.projectRoot', timeout: '30000' });
       this.log('Applied potential type error fixes');
       
     } catch (error) {
@@ -197,7 +197,7 @@ class ErrorMonitor {
     
     try {
       // Update non-breaking dependencies
-      execSync('npm update', { cwd: this.projectRoot, timeout: 120000 });
+      execSync('npm update', { cwd: 'this.projectRoot', timeout: '120000' });
       this.log('Dependencies updated successfully');
       
     } catch (error) {
@@ -209,10 +209,10 @@ class ErrorMonitor {
   async reportError(type, error) {
     const errorReport = {
       timestamp: new Date().toISOString(),
-      type: type,
-      message: error.message,
-      stack: error.stack,
-      projectRoot: this.projectRoot
+      type: 'type',
+      message: 'error.message',
+      stack: 'error.stack',
+      projectRoot: 'this.projectRoot'
     };
     
     // Save error report

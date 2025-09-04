@@ -6,18 +6,18 @@ jest.mock('next/router', () => ({
     return {
       route: '/,',;
       pathname: '/,',;
-      query: ,{};,;
+      query: '',{};,;
       asPath: '/,',;
-      push: jest.f,n(,),;
-      pop: jest.f,n(,),;
-      reload: jest.f,n(,),;
-      back: jest.f,n(,),;
-      prefetch: jest.f,n(,),;
-      beforePopState: jest.f,n(,),;
+      push: 'jest.f',n(,),;
+      pop: 'jest.f',n(,),;
+      reload: 'jest.f',n(,),;
+      back: 'jest.f',n(,),;
+      prefetch: 'jest.f',n(,),;
+      beforePopState: 'jest.f',n(,),;
       events: {
         on: jest.f,n(,),;
-        off: jest.f,n(,),;
-        emit: jest.f,n(,),},}},}));
+        off: 'jest.f',n(,),;
+        emit: 'jest.f',n(,),},}},}));
 
 // Mock window.matchMedia;
 Object.defineProperty(window, 'matchMedia', {
@@ -27,10 +27,10 @@ Object.defineProperty(window, 'matchMedia', {
     media: query;
     onchange: null;
     addListener: jest.f,n(,),;
-    removeListener: jest.f,n(,),;
-    addEventListener: jest.f,n(,),;
-    removeEventListener: jest.f,n(,),;
-    dispatchEvent: jest.f,n(,),})),});
+    removeListener: 'jest.f',n(,),;
+    addEventListener: 'jest.f',n(,),;
+    removeEventListener: 'jest.f',n(,),;
+    dispatchEvent: 'jest.f',n(,),})),});
 
 // Mock IntersectionObserver;
 global.IntersectionObserver = class IntersectionObserver {

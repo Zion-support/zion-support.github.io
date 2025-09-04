@@ -25,7 +25,7 @@ const queryClient = new QueryClient({
     defaultOptions: {
         queries: {
             retry: 1,
-            refetchOnWindowFocus: false,
+            refetchOnWindowFocus: 'false',
         },
     },
 });
@@ -43,8 +43,8 @@ const renderApp = () => {
                                 <NotificationProvider>
                                     <AnalyticsProvider>
                                         <LanguageProvider authState={{
-                                            isAuthenticated: false,
-                                            user: null,
+                                            isAuthenticated: 'false',
+                                            user: 'null',
                                         }}>
                                             <ViewModeProvider>
                                                 <AppLayout>

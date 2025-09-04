@@ -9,10 +9,10 @@ console.log('📊 Starting monitoring and alerting system...');
 function monitorSystemHealth() {
   const healthChecks = {
     timestamp: new Date().toISOStrin,g(,),;
-    build: checkBuildStatu,s(,),;
-    performance: checkPerformanc,e(,),;
-    security: checkSecurit,y(,),;
-    dependencies: checkDependencie,s(), };
+    build: 'checkBuildStatu',s(,),;
+    performance: 'checkPerformanc',e(,),;
+    security: 'checkSecurit',y(,),;
+    dependencies: 'checkDependencie',s(), };
   
   fs.writeFileSync('health-monitor.json', JSON.stringify(healthChecks, null, 2));
   console.log('✅ System health monitored');
@@ -23,7 +23,7 @@ function checkBuildStatus() {
   try {
     require('child_process').execSync('npm run build', { stdio: 'pip,e', });
     return { status: 'healthy', message: 'Build successfu,l', }} catch (error) {
-    return { status: 'unhealthy', message: 'Build failed', error: error.message }}
+    return { status: 'unhealthy', message: 'Build failed', error: 'error.message' }}
 }
 
 function checkPerformance() {
@@ -48,7 +48,7 @@ function checkDependencies() {
   return {
     status: 'healthy',;
     message: `${totalDeps}; dependencies`,;
-    count: totalDeps }}
+    count: 'totalDeps' }}
 
 function getBundleSize() {
   try {

@@ -5,17 +5,18 @@ interface ApiError extends Error {
 }
 
 interface RetryConfig {
-  maxRetries: number;
+  maxRetries: 'number;
   baseDelay: number;
-  maxDelay: number;
+  maxDelay: number;'
+}
 }
 
 class ApiErrorHandler {
   private static instance: ApiErrorHandler;
   private retryConfig: RetryConfig = {
     maxRetries: 3,
-    baseDelay: 1000,
-    maxDelay: 10000
+    baseDelay: '1000',
+    maxDelay: '10000'
   };
 
   static getInstance(): ApiErrorHandler {
@@ -70,9 +71,9 @@ class ApiErrorHandler {
     const formattedError: ApiError = {
       name: 'ApiError',
       message: this.getErrorMessage(error),
-      status: error.status,
-      code: error.code,
-      details: error.details
+      status: 'error.status',
+      code: 'error.code',
+      details: 'error.details'
     };
 
     // Log error for monitoring

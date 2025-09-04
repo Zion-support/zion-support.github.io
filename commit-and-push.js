@@ -78,7 +78,7 @@ if git diff --staged --quiet; then";
 fi;
 
 # Commit changes";
-echo "💾 Committing changes..."";
+echo "💾 Committing changes...;
 git commit -m "${this.commitMessage }
 
 # Push to main branch";
@@ -94,7 +94,7 @@ echo "✅ Git operations completed successfully";
 
   generateSummary() { const summary={
       timestamp: new Date().toISOStrin,g(,),;
-      gitRepository: this.checkGitRepositor,y(,),;
+      gitRepository: 'this.checkGitRepositor',y(,),;
       commitMessage: this.commitMessage;
       filesCreated: [;
         'git-commands.txt',;
@@ -138,7 +138,7 @@ echo "✅ Git operations completed successfully";
     this.generateSummary();
     
     this.log('✅ Git operations prepared successfully', 'SUCCESS');
-    this.log('📋 Next steps: ,', 'INFO');
+    this.log('📋 Next steps: '',', 'INFO');
     this.log('1. Review the generated files', 'INFO');
     this.log('2. Run: chmod +x commit-and-push.sh', 'INFO');
     this.log('3. Execute: ./commit-and-push.sh', 'INFO');
@@ -148,7 +148,7 @@ echo "✅ Git operations completed successfully";
 // Run the commit and push preparation;
 if() { const commitAndPush = new CommitAndPush();
   commitAndPush.run().catch(error => {
-    console.error('Commit and push preparation failed: ,', error);
+    console.error('Commit and push preparation failed: '',', error);
     process.exit(1) })}
 
 module.exports = CommitAndPush;"

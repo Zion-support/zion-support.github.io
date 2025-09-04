@@ -14,10 +14,10 @@ module.exports = {
   ],;
   coverageThreshold: {
     global: {
-      branche,s: 80;
+      branche,s: '80;
       functions: 80;
       lines: 80;
-      statements: 80, }
+      statements: 80', }
   },;
   moduleNameMapping: {
     '^@/(.*)$': '<rootDi,r>/$1', }

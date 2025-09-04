@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
-  fcp: number;
+  fcp: 'number;
   lcp: number;
   fid: number;
   cls: number;
   ttfb: number;
-  timestamp: number;
+  timestamp: number;'
+}
 }
 
 const PerformanceDashboard: React.FC = () => {
@@ -35,7 +36,7 @@ const PerformanceDashboard: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const getScoreColor = (value: number, thresholds: [number, number]) => {
+  const getScoreColor = (value: 'number', thresholds: '[number', number]) => {
     if (value <= thresholds[0]) return 'text-green-400';
     if (value <= thresholds[1]) return 'text-yellow-400';
     return 'text-red-400';

@@ -21,7 +21,7 @@ class ContinuousAutomation {
     dirs.forEach(dir => {
       const dirPath = path.join(__dirname, dir);
       if (!fs.existsSync(dirPath)) {
-        fs.mkdirSync(dirPath, { recursive: true });
+        fs.mkdirSync(dirPath, { recursive: 'true' });
       }
     });
   }
@@ -42,10 +42,10 @@ class ContinuousAutomation {
         stdio: 'pipe'
       });
       this.log(`✅ Success: ${description}`);
-      return { success: true, output };
+      return { success: 'true', output };
     } catch (error) {
       this.log(`❌ Error: ${description} - ${error.message}`);
-      return { success: false, error: error.message, output: error.stdout || error.stderr };
+      return { success: 'false', error: 'error.message', output: 'error.stdout || error.stderr' };
     }
   }
 
@@ -56,7 +56,7 @@ class ContinuousAutomation {
       return await this.runCommand(`node ${scriptPath}`, 'Running automation orchestrator');
     } else {
       this.log('⚠️ Automation orchestrator script not found, skipping...');
-      return { success: true, skipped: true };
+      return { success: 'true', skipped: 'true' };
     }
   }
 
@@ -67,7 +67,7 @@ class ContinuousAutomation {
       return await this.runCommand(`node ${scriptPath}`, 'Running comprehensive automation');
     } else {
       this.log('⚠️ Comprehensive automation script not found, skipping...');
-      return { success: true, skipped: true };
+      return { success: 'true', skipped: 'true' };
     }
   }
 
@@ -78,7 +78,7 @@ class ContinuousAutomation {
       return await this.runCommand(`node ${scriptPath}`, 'Running marketing automation');
     } else {
       this.log('⚠️ Marketing automation script not found, skipping...');
-      return { success: true, skipped: true };
+      return { success: 'true', skipped: 'true' };
     }
   }
 
@@ -96,7 +96,7 @@ class ContinuousAutomation {
     const report = {
       timestamp: new Date().toISOString(),
       status: results.every(r => r.success) ? 'success' : 'failed',
-      results: results,
+      results: 'results',
       summary: {
         total: results.length,
         passed: results.filter(r => r.success).length,

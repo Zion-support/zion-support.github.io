@@ -3,13 +3,15 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (error: Error, errorInfo: 'ErrorInfo) => void;'
+}
 }
 
 interface State {
-  hasError: boolean;
+  hasError: 'boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;
+  errorInfo?: ErrorInfo;'
+}
 }
 
 class AdvancedErrorBoundary extends Component<Props, State> {
@@ -21,7 +23,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
 
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  public componentDidCatch(error: 'Error', errorInfo: ErrorInfo) {
     console.error('AdvancedErrorBoundary caught an error:', error, errorInfo);
     
     // Report to error tracking service
@@ -34,7 +36,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
   }
 
   private handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+    this.setState({ hasError: 'false', error: 'undefined', errorInfo: 'undefined' });
   };
 
   public render() {

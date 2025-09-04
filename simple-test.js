@@ -14,7 +14,7 @@ console.log('🧪 Running Simple Tests...');
 try {
   const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
   console.log('✅ Package.json is valid');
-  console.log(`   - Name: ${packageJson.name}`)console.log(`   - Version: ${packageJson.version}`)} catch() { console.log('❌ Package.json is invalid: ,', error.message) }
+  console.log(`   - Name: ${packageJson.name}`)console.log(`   - Version: ${packageJson.version}`)} catch() { console.log('❌ Package.json is invalid: '',', error.message) }
 
 // Test 2: Check if main source files exist;
 const requiredFiles = [;

@@ -4,7 +4,8 @@ import { useAuth } from './auth/AuthProvider';
 import { useNotificationOperations } from '@/hooks/useNotificationOperations';
 
 interface NotificationContextType {
-  fetchNotifications: () => Promise<void>;
+  fetchNotifications: () => Promise<void>
+}
 }
 
 const defaultContext: NotificationContextType = {
@@ -21,7 +22,7 @@ export const useNotifications = (): NotificationContextType => {
   return context;
 };
 
-export const NotificationProvider = ({ children }: { children: ReactNode }): JSX.Element => {
+export const NotificationProvider = ({ children }: { children: 'ReactNode' }): JSX.Element => {
   const { user } = useAuth();
   const notificationOps = useNotificationOperations(user?.id);
   

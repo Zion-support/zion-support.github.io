@@ -25,7 +25,7 @@ class PerformanceMonitor {
   setupLogging() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { recursive: 'true' });
     }
   }
 
@@ -56,10 +56,10 @@ class PerformanceMonitor {
       
       this.lastCheck = {
         timestamp: new Date().toISOString(),
-        checkTime: checkTime,
-        systemMetrics: systemMetrics,
-        buildMetrics: buildMetrics,
-        bundleMetrics: bundleMetrics
+        checkTime: 'checkTime',
+        systemMetrics: 'systemMetrics',
+        buildMetrics: 'buildMetrics',
+        bundleMetrics: 'bundleMetrics'
       };
       
       this.log(`Performance check completed in ${checkTime}ms`);
@@ -80,16 +80,16 @@ class PerformanceMonitor {
         memory: process.memoryUsage(),
         uptime: process.uptime(),
         cpuUsage: process.cpuUsage(),
-        nodeVersion: process.version,
-        platform: process.platform
+        nodeVersion: 'process.version',
+        platform: 'process.platform'
       };
       
       // Get disk usage
       try {
         const diskUsage = execSync('df -h .', { 
-          cwd: this.projectRoot,
+          cwd: 'this.projectRoot',
           encoding: 'utf8',
-          timeout: 10000
+          timeout: '10000'
         });
         metrics.diskUsage = diskUsage;
       } catch (error) {
@@ -100,7 +100,7 @@ class PerformanceMonitor {
       
     } catch (error) {
       this.log(`Failed to get system metrics: ${error.message}`);
-      return { error: error.message };
+      return { error: 'error.message' };
     }
   }
 
@@ -109,22 +109,22 @@ class PerformanceMonitor {
       const buildDir = path.join(this.projectRoot, '.next');
       
       if (!fs.existsSync(buildDir)) {
-        return { exists: false };
+        return { exists: 'false' };
       }
       
       const stats = fs.statSync(buildDir);
       const buildSize = this.getDirectorySize(buildDir);
       
       return {
-        exists: true,
-        lastModified: stats.mtime,
-        size: buildSize,
+        exists: 'true',
+        lastModified: 'stats.mtime',
+        size: 'buildSize',
         age: Date.now() - stats.mtime.getTime()
       };
       
     } catch (error) {
       this.log(`Failed to get build metrics: ${error.message}`);
-      return { error: error.message };
+      return { error: 'error.message' };
     }
   }
 
@@ -135,19 +135,19 @@ class PerformanceMonitor {
       
       if (packageJson.scripts && packageJson.scripts.analyze) {
         return {
-          analyzerAvailable: true,
+          analyzerAvailable: 'true',
           script: 'npm run analyze'
         };
       } else {
         return {
-          analyzerAvailable: false,
+          analyzerAvailable: 'false',
           recommendation: 'Consider adding bundle analyzer for detailed metrics'
         };
       }
       
     } catch (error) {
       this.log(`Failed to get bundle metrics: ${error.message}`);
-      return { error: error.message };
+      return { error: 'error.message' };
     }
   }
 
@@ -231,8 +231,8 @@ class PerformanceMonitor {
       this.log('Performing build optimization...');
       
       // Clean and rebuild
-      execSync('npm run clean', { cwd: this.projectRoot, timeout: 30000 });
-      execSync('npm run build', { cwd: this.projectRoot, timeout: 300000 });
+      execSync('npm run clean', { cwd: 'this.projectRoot', timeout: '30000' });
+      execSync('npm run build', { cwd: 'this.projectRoot', timeout: '300000' });
       
       this.log('Build optimization completed');
       
@@ -247,13 +247,13 @@ class PerformanceMonitor {
       
       // Run build with analysis if available
       if (this.lastCheck.bundleMetrics.analyzerAvailable) {
-        execSync('npm run analyze', { cwd: this.projectRoot, timeout: 300000 });
+        execSync('npm run analyze', { cwd: 'this.projectRoot', timeout: '300000' });
         this.log('Bundle analysis completed');
       }
       
       // Clean and rebuild
-      execSync('npm run clean', { cwd: this.projectRoot, timeout: 30000 });
-      execSync('npm run build', { cwd: this.projectRoot, timeout: 300000 });
+      execSync('npm run clean', { cwd: 'this.projectRoot', timeout: '30000' });
+      execSync('npm run build', { cwd: 'this.projectRoot', timeout: '300000' });
       
       this.log('Build size optimization completed');
       
@@ -264,8 +264,8 @@ class PerformanceMonitor {
 
   async savePerformanceReport() {
     const report = {
-      lastCheck: this.lastCheck,
-      projectRoot: this.projectRoot,
+      lastCheck: 'this.lastCheck',
+      projectRoot: 'this.projectRoot',
       recommendations: this.getPerformanceRecommendations()
     };
     
@@ -307,9 +307,9 @@ class PerformanceMonitor {
   async reportPerformanceError(error) {
     const errorReport = {
       timestamp: new Date().toISOString(),
-      error: error.message,
-      stack: error.stack,
-      projectRoot: this.projectRoot
+      error: 'error.message',
+      stack: 'error.stack',
+      projectRoot: 'this.projectRoot'
     };
     
     const errorFile = path.join(this.projectRoot, 'automation/logs/performance-error-report.json');

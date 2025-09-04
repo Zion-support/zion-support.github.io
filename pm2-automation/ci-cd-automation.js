@@ -21,7 +21,7 @@ class CICDAutomation {
     dirs.forEach(dir => {
       const dirPath = path.join(__dirname, dir);
       if (!fs.existsSync(dirPath)) {
-        fs.mkdirSync(dirPath, { recursive: true });
+        fs.mkdirSync(dirPath, { recursive: 'true' });
       }
     });
   }
@@ -42,10 +42,10 @@ class CICDAutomation {
         stdio: 'pipe'
       });
       this.log(`✅ Success: ${description}`);
-      return { success: true, output };
+      return { success: 'true', output };
     } catch (error) {
       this.log(`❌ Error: ${description} - ${error.message}`);
-      return { success: false, error: error.message, output: error.stdout || error.stderr };
+      return { success: 'false', error: 'error.message', output: 'error.stdout || error.stderr' };
     }
   }
 
@@ -73,7 +73,7 @@ class CICDAutomation {
     const report = {
       timestamp: new Date().toISOString(),
       status: results.every(r => r.success) ? 'success' : 'failed',
-      results: results,
+      results: 'results',
       summary: {
         total: results.length,
         passed: results.filter(r => r.success).length,

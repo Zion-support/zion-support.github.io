@@ -25,7 +25,7 @@ class BuildMonitor {
   setupLogging() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { recursive: 'true' });
     }
   }
 
@@ -43,14 +43,14 @@ class BuildMonitor {
       const startTime = Date.now();
       
       // Clean previous build
-      execSync('npm run clean', { cwd: this.projectRoot, timeout: 30000 });
+      execSync('npm run clean', { cwd: 'this.projectRoot', timeout: '30000' });
       this.log('Build cleaned');
       
       // Run build
       const buildOutput = execSync('npm run build', { 
-        cwd: this.projectRoot,
+        cwd: 'this.projectRoot',
         encoding: 'utf8',
-        timeout: 300000 // 5 minutes
+        timeout: '300000 // 5 minutes'
       });
       
       const endTime = Date.now();
@@ -58,9 +58,9 @@ class BuildMonitor {
       
       this.lastBuild = {
         timestamp: new Date().toISOString(),
-        success: true,
-        buildTime: buildTime,
-        output: buildOutput
+        success: 'true',
+        buildTime: 'buildTime',
+        output: 'buildOutput'
       };
       
       this.log(`Build completed successfully in ${buildTime}ms`);
@@ -71,9 +71,9 @@ class BuildMonitor {
       
       this.lastBuild = {
         timestamp: new Date().toISOString(),
-        success: false,
-        error: error.message,
-        output: error.stdout || error.stderr
+        success: 'false',
+        error: 'error.message',
+        output: 'error.stdout || error.stderr'
       };
       
       await this.saveBuildReport();
@@ -89,14 +89,14 @@ class BuildMonitor {
       this.log('Attempting to fix build issues...');
       
       // Fix linting issues
-      execSync('npm run lint:fix', { cwd: this.projectRoot, timeout: 60000 });
+      execSync('npm run lint:fix', { cwd: 'this.projectRoot', timeout: '60000' });
       this.log('Applied linting fixes');
       
       // Try building again
       execSync('npm run build', { 
-        cwd: this.projectRoot,
+        cwd: 'this.projectRoot',
         encoding: 'utf8',
-        timeout: 300000
+        timeout: '300000'
       });
       
       this.log('Build fixed and completed successfully');
@@ -109,10 +109,10 @@ class BuildMonitor {
 
   async saveBuildReport() {
     const report = {
-      lastBuild: this.lastBuild,
-      projectRoot: this.projectRoot,
-      nodeVersion: process.version,
-      platform: process.platform
+      lastBuild: 'this.lastBuild',
+      projectRoot: 'this.projectRoot',
+      nodeVersion: 'process.version',
+      platform: 'process.platform'
     };
     
     fs.writeFileSync(this.buildReportFile, JSON.stringify(report, null, 2));
@@ -121,9 +121,9 @@ class BuildMonitor {
   async reportBuildFailure(error) {
     const failureReport = {
       timestamp: new Date().toISOString(),
-      error: error.message,
-      stack: error.stack,
-      projectRoot: this.projectRoot
+      error: 'error.message',
+      stack: 'error.stack',
+      projectRoot: 'this.projectRoot'
     };
     
     const failureFile = path.join(this.projectRoot, 'automation/logs/build-failure-report.json');

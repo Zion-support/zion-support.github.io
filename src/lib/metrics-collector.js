@@ -4,10 +4,10 @@ const path = require('path');
 class MetricsCollector {
   constructor() {
     this.metrics = {
-      requests: 0,
-      errors: 0,
-      responseTime: [],
-      memoryUsage: [],
+      requests: '0',
+      errors: '0',
+      responseTime: '[]',
+      memoryUsage: '[]',
       timestamp: Date.now()
     };
   }
@@ -30,10 +30,10 @@ class MetricsCollector {
     const usage = process.memoryUsage();
     this.metrics.memoryUsage.push({
       timestamp: Date.now(),
-      rss: usage.rss,
-      heapTotal: usage.heapTotal,
-      heapUsed: usage.heapUsed,
-      external: usage.external
+      rss: 'usage.rss',
+      heapTotal: 'usage.heapTotal',
+      heapUsed: 'usage.heapUsed',
+      external: 'usage.external'
     });
     
     // Keep only last 100 memory readings

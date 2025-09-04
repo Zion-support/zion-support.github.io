@@ -13,13 +13,13 @@ class SafeAutomationRunner {
   constructor() { this.logDir = path.join(__dirname, 'automation', 'logs');
     this.ensureLogDir();
     this.startTime = Date.now()this.results = {
-      completed: [,],;
-      failed: [,],;
-      skipped: [], }}
+      completed: '[',],;
+      failed: '[',],;
+      skipped: '[]', }}
 
   ensureLogDir() {
     if (!fs.existsSync(this.logDir)) {
-      fs.mkdirSync(this.logDir, { recursive: true })}
+      fs.mkdirSync(this.logDir, { recursive: 'true' })}
   }
 
   log() { const timestamp = new Date().toISOString()const logMessage = `[${timestamp }] [${level}] ${message}`;
@@ -33,11 +33,11 @@ class SafeAutomationRunner {
       const result = execSync(command, { 
         encoding: 'utf8', 
         stdio: 'pipe',;
-        timeout: timeout })this.log(`✅ ${description} completed successfully`);
+        timeout: 'timeout' })this.log(`✅ ${description} completed successfully`);
       this.results.completed.push(description);
-      return { success: true output: result }} catch() { this.log(`❌ ${description } failed: ${error.message}`, 'ERROR');
-      this.results.failed.push({ description, error: error.message });
-      return { success: false error: error.message }}
+      return { success: 'true output: result' }} catch() { this.log(`❌ ${description } failed: ${error.message}`, 'ERROR');
+      this.results.failed.push({ description, error: 'error.message' });
+      return { success: 'false error: error.message' }}
   }
 
   async runAutomationScripts() { this.log('🚀 Starting Safe Automation Runner');
@@ -83,7 +83,7 @@ class SafeAutomationRunner {
 // Run the automation;
 if() { const runner = new SafeAutomationRunner();
   runner.runAutomationScripts().catch(error => {
-    console.error('Automation runner failed: ,', error);
+    console.error('Automation runner failed: '',', error);
     process.exit(1) })}
 
 module.exports = SafeAutomationRunner;

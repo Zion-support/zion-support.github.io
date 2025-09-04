@@ -1,15 +1,16 @@
 import React from 'react';
 
 interface CacheItem<T> {
-  data: T;
+  data: 'T;
   timestamp: number;
-  ttl: number;
+  ttl: number;'
 }
 
 interface CacheConfig {
-  defaultTTL: number;
+  defaultTTL: 'number;
   maxSize: number;
-  cleanupInterval: number;
+  cleanupInterval: number;'
+}
 }
 
 class AdvancedCache<T = any> {
@@ -18,9 +19,9 @@ class AdvancedCache<T = any> {
 
   constructor(config: Partial<CacheConfig> = {}) {
     this.config = {
-      defaultTTL: 5 * 60 * 1000, // 5 minutes
-      maxSize: 100,
-      cleanupInterval: 60 * 1000, // 1 minute
+      defaultTTL: '5 * 60 * 1000', // 5 minutes
+      maxSize: '100',
+      cleanupInterval: '60 * 1000', // 1 minute
       ...config
     };
 
@@ -28,11 +29,11 @@ class AdvancedCache<T = any> {
     setInterval(() => this.cleanup(), this.config.cleanupInterval);
   }
 
-  set(key: string, data: T, ttl?: number): void {
+  set(key: 'string', data: 'T', ttl?: number): void {
     const item: CacheItem<T> = {
       data,
       timestamp: Date.now(),
-      ttl: ttl || this.config.defaultTTL
+      ttl: 'ttl || this.config.defaultTTL'
     };
 
     // Remove oldest items if cache is full
@@ -98,10 +99,10 @@ class AdvancedCache<T = any> {
     }
 
     return {
-      total: this.cache.size,
+      total: 'this.cache.size',
       active,
       expired,
-      hitRate: 0 // Would need to track hits/misses for accurate rate
+      hitRate: '0 // Would need to track hits/misses for accurate rate'
     };
   }
 }
@@ -110,7 +111,7 @@ class AdvancedCache<T = any> {
 export const globalCache = new AdvancedCache();
 
 // React hook for caching
-export const useCache = <T>(key: string, fetcher: () => Promise<T>, ttl?: number) => {
+export const useCache = <T>(key: 'string', fetcher: () => Promise<T>, ttl?: number) => {
   const [data, setData] = React.useState<T | null>(() => globalCache.get(key));
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<Error | null>(null);
@@ -136,5 +137,5 @@ export const useCache = <T>(key: string, fetcher: () => Promise<T>, ttl?: number
     }
   }, [data, loading, fetchData]);
 
-  return { data, loading, error, refetch: fetchData };
+  return { data, loading, error, refetch: 'fetchData' };
 };

@@ -4,6 +4,7 @@ import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 interface WebVitalsProps {
   analyticsId?: string;
 }
+}
 
 export default function WebVitals({ analyticsId }: WebVitalsProps) {
   useEffect(() => {
@@ -12,9 +13,9 @@ export default function WebVitals({ analyticsId }: WebVitalsProps) {
       if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('event', metric.name, {
           event_category: 'Web Vitals',
-          event_label: metric.id,
+          event_label: 'metric.id',
           value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-          non_interaction: true,
+          non_interaction: 'true',
         });
       }
 

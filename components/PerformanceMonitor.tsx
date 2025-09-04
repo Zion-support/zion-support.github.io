@@ -10,7 +10,7 @@ const PerformanceMonitor: React.FC = () => {
           // Send to Google Analytics or other analytics service
           if (typeof window !== 'undefined' && 'gtag' in window) {
             (window as any).gtag('event', 'web_vitals', {
-              metric_name: metric,
+              metric_name: 'metric',
               metric_value: Math.round(value),
               metric_rating: value < 2.5 ? 'good' : value < 4 ? 'needs-improvement' : 'poor'
             });

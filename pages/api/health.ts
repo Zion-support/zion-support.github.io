@@ -45,9 +45,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     
     // Calculate overall health
     const services = {
-      database: dbHealth,
-      cache: cacheStats.api.active > 0,
-      api: avgResponseTime < 1000 // Less than 1 second average response time
+      database: 'dbHealth',
+      cache: 'cacheStats.api.active > 0',
+      api: 'avgResponseTime < 1000 // Less than 1 second average response time'
     };
     const healthyServices = Object.values(services).filter(Boolean).length;
     const totalServices = Object.keys(services).length;
@@ -67,9 +67,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       services,
       metrics: {
         responseTime: avgResponseTime,
-        memoryUsage: memoryUsage.heapUsed,
-        cacheHitRate: 0, // This would need to be tracked separately
-        activeConnections: 0 // This would need to be tracked separately
+        memoryUsage: 'memoryUsage.heapUsed',
+        cacheHitRate: '0', // This would need to be tracked separately
+        activeConnections: '0 // This would need to be tracked separately'
       },
       uptime: process.uptime()
     };
@@ -89,14 +89,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       error: 'Health check failed',
       services: {
         database: false,
-        cache: false,
-        api: false
+        cache: 'false',
+        api: 'false'
       },
       metrics: {
         responseTime: 0,
-        memoryUsage: 0,
-        cacheHitRate: 0,
-        activeConnections: 0
+        memoryUsage: '0',
+        cacheHitRate: '0',
+        activeConnections: '0'
       },
       uptime: process.uptime()
     });

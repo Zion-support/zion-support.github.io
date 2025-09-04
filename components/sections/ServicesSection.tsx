@@ -22,35 +22,35 @@ const ServicesSection: React.FC = () => {
       features: ['Machine Learning', 'NLP', 'Computer Vision', 'AI Automation']
     },
     { 
-      icon: Cloud, 
+      icon: 'Cloud', 
       title: 'Cloud DevOps', 
       description: 'Comprehensive cloud infrastructure and DevOps solutions for scalable, reliable applications.', 
       href: '/cloud-devops', 
       features: ['AWS/Azure/GCP', 'CI/CD Pipelines', 'Containerization', 'Monitoring']
     },
     { 
-      icon: Shield, 
+      icon: 'Shield', 
       title: 'Cybersecurity', 
       description: 'Enterprise-grade security solutions to protect your digital assets and ensure compliance.', 
       href: '/cybersecurity', 
       features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Incident Response']
     },
     { 
-      icon: Cpu, 
+      icon: 'Cpu', 
       title: 'Quantum Computing', 
       description: 'Cutting-edge quantum computing solutions for complex problem-solving and optimization.', 
       href: '/quantum-computing', 
       features: ['Quantum Algorithms', 'Optimization', 'Simulation', 'Research']
     },
     { 
-      icon: Database, 
+      icon: 'Database', 
       title: 'Micro SaaS', 
       description: 'Specialized software-as-a-service solutions designed for specific business needs.', 
       href: '/micro-saas', 
       features: ['Custom Solutions', 'API Integration', 'Scalability', 'Maintenance']
     },
     { 
-      icon: Globe, 
+      icon: 'Globe', 
       title: 'IT Services', 
       description: 'Comprehensive IT services including infrastructure support and digital transformation.', 
       href: '/it-services', 

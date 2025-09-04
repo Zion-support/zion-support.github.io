@@ -5,9 +5,9 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [reac,t(),],;
   server: {
-    por,t: 3000;
-    open: true },;
+    por,t: '3000;
+    open: true' },;
   build: {
     outDir: 'dist',;
-    sourcemap: true }
+    sourcemap: 'true' }
 })

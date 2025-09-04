@@ -11,8 +11,8 @@ try {
     console.log('✅ Automation completed successfully');
     process.exit(0);
   }).catch(error => {
-    console.error('❌ Automation failed: ,', error);
+    console.error('❌ Automation failed: '',', error);
     process.exit(1);
   });
-} catch() { console.error('❌ Failed to load automation: ,', error);
+} catch() { console.error('❌ Failed to load automation: '',', error);
   process.exit(1) }

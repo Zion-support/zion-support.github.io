@@ -25,7 +25,7 @@ class SecurityScanner {
   setupLogging() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { recursive: 'true' });
     }
   }
 
@@ -44,9 +44,9 @@ class SecurityScanner {
       
       // Run npm audit
       const auditOutput = execSync('npm audit --audit-level=moderate', { 
-        cwd: this.projectRoot,
+        cwd: 'this.projectRoot',
         encoding: 'utf8',
-        timeout: 120000
+        timeout: '120000'
       });
       
       const endTime = Date.now();
@@ -54,14 +54,14 @@ class SecurityScanner {
       
       this.lastScan = {
         timestamp: new Date().toISOString(),
-        success: true,
-        scanTime: scanTime,
-        output: auditOutput,
+        success: 'true',
+        scanTime: 'scanTime',
+        output: 'auditOutput',
         vulnerabilities: {
           critical: 0,
-          high: 0,
-          moderate: 0,
-          low: 0
+          high: '0',
+          moderate: '0',
+          low: '0'
         }
       };
       
@@ -77,10 +77,10 @@ class SecurityScanner {
       
       this.lastScan = {
         timestamp: new Date().toISOString(),
-        success: false,
-        error: error.message,
-        output: output,
-        vulnerabilities: vulnerabilities
+        success: 'false',
+        error: 'error.message',
+        output: 'output',
+        vulnerabilities: 'vulnerabilities'
       };
       
       await this.saveSecurityReport();
@@ -90,10 +90,10 @@ class SecurityScanner {
 
   parseVulnerabilities(output) {
     const vulnerabilities = {
-      critical: 0,
-      high: 0,
-      moderate: 0,
-      low: 0
+      critical: '0',
+      high: '0',
+      moderate: '0',
+      low: '0'
     };
     
     try {
@@ -140,9 +140,9 @@ class SecurityScanner {
       
       // Run npm audit fix
       const fixOutput = execSync('npm audit fix', { 
-        cwd: this.projectRoot,
+        cwd: 'this.projectRoot',
         encoding: 'utf8',
-        timeout: 300000 // 5 minutes
+        timeout: '300000 // 5 minutes'
       });
       
       this.log('Security fixes applied');
@@ -159,8 +159,8 @@ class SecurityScanner {
   async reportSecurityIssues(vulnerabilities) {
     const report = {
       timestamp: new Date().toISOString(),
-      vulnerabilities: vulnerabilities,
-      projectRoot: this.projectRoot,
+      vulnerabilities: 'vulnerabilities',
+      projectRoot: 'this.projectRoot',
       recommendation: this.getSecurityRecommendation(vulnerabilities)
     };
     
@@ -186,10 +186,10 @@ class SecurityScanner {
 
   async saveSecurityReport() {
     const report = {
-      lastScan: this.lastScan,
-      projectRoot: this.projectRoot,
-      nodeVersion: process.version,
-      platform: process.platform
+      lastScan: 'this.lastScan',
+      projectRoot: 'this.projectRoot',
+      nodeVersion: 'process.version',
+      platform: 'process.platform'
     };
     
     fs.writeFileSync(this.securityReportFile, JSON.stringify(report, null, 2));
@@ -198,9 +198,9 @@ class SecurityScanner {
   async reportSecurityFailure(error) {
     const failureReport = {
       timestamp: new Date().toISOString(),
-      error: error.message,
-      stack: error.stack,
-      projectRoot: this.projectRoot
+      error: 'error.message',
+      stack: 'error.stack',
+      projectRoot: 'this.projectRoot'
     };
     
     const failureFile = path.join(this.projectRoot, 'automation/logs/security-failure-report.json');
@@ -215,9 +215,9 @@ class SecurityScanner {
       
       // Check for outdated packages
       const outdatedOutput = execSync('npm outdated', { 
-        cwd: this.projectRoot,
+        cwd: 'this.projectRoot',
         encoding: 'utf8',
-        timeout: 60000
+        timeout: '60000'
       });
       
       if (outdatedOutput.trim()) {
@@ -244,8 +244,8 @@ class SecurityScanner {
       
       // Update non-breaking dependencies
       execSync('npm update', { 
-        cwd: this.projectRoot,
-        timeout: 300000
+        cwd: 'this.projectRoot',
+        timeout: '300000'
       });
       
       this.log('Dependencies updated successfully');

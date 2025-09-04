@@ -4,6 +4,7 @@ interface AnalyticsContextType {
   trackEvent: (event: string, properties?: Record<string, any>) => void;
   trackPageView: (page: string) => void;
 }
+}
 
 const defaultContext: AnalyticsContextType = {
   trackEvent: () => {},
@@ -20,8 +21,8 @@ export const useAnalytics = (): AnalyticsContextType => {
   return context;
 };
 
-export const AnalyticsProvider = ({ children }: { children: ReactNode }): JSX.Element => {
-  const trackEvent = (event: string, properties?: Record<string, any>) => {
+export const AnalyticsProvider = ({ children }: { children: 'ReactNode' }): JSX.Element => {
+  const trackEvent = (event: 'string', properties?: Record<string, any>) => {
     // Analytics implementation
     console.log('Analytics event:', event, properties);
   };

@@ -7,7 +7,7 @@ try {
   const fs = require('fs');
   const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
   console.log('✅ Package.json is valid');
-  console.log(`   - Name: ${packageJson.name}`)console.log(`   - Version: ${packageJson.version}`)} catch() { console.log('❌ Package.json error: ,', error.message) }
+  console.log(`   - Name: ${packageJson.name}`)console.log(`   - Version: ${packageJson.version}`)} catch() { console.log('❌ Package.json error: '',', error.message) }
 
 // Test 2: Check main files;
 const fs = require('fs');

@@ -1,242 +1,192 @@
-import Link from 'next/link';
+import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
+import { ArrowLeft, Download, Code, Package } from 'lucide-react';
 
 export default function SDK() {
+  const contact = { 
+    phone: '+1 302 464 0950', 
+    email: 'kleber@ziontechgroup.com', 
+    address: '364 E Main St STE 1008 Middletown DE 19709', 
+    site: 'https://ziontechgroup.com' 
+  };
+
   return (
     <>
       <Head>
-        <title>SDK Documentation - Zion Tech Group</title>
-        <meta name="description" content="SDK documentation for Zion Tech Group services. Official SDKs for JavaScript, Python, PHP, and more." />
-        <link rel="canonical" href="https://ziontechgroup.com/docs/sdk" />
+        <title>SDK - Zion Tech Group Documentation</title>
+        <meta name="description" content="Official SDKs and libraries for integrating with Zion Tech Group's APIs." />
+        <link rel="canonical" href={`${contact.site}/docs/sdk`} />
       </Head>
-      
-      <div style={{ maxWidth: 1200, margin: '40px 20px', padding: '0 20px' }}>
-        <div style={{ marginBottom: 40 }}>
-          <Link href="/docs" style={{ color: '#3b82f6', textDecoration: 'none', marginBottom: 20, display: 'inline-block' }}>
-            ← Back to Documentation
-          </Link>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: 16, background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-            SDK Documentation
-          </h1>
-          <p style={{ fontSize: '1.1rem', opacity: '0.8', lineHeight: '1.6'}}>
-            Official SDKs for integrating Zion Tech Group services into your applications. Choose your preferred language and get started quickly.
-          </p>
-        </div>
 
-        <div style={{ display: 'grid', gap: 32 }}>
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        <div className="max-w-4xl mx-auto px-4 py-8">
+          {/* Header */}
+          <div className="mb-8">
+            <Link href="/docs" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-4">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Documentation
+            </Link>
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">SDK & Libraries</h1>
+            <p className="text-xl text-gray-600">
+              Official SDKs and libraries to help you integrate with our APIs quickly and easily.
+            </p>
+          </div>
+
           {/* JavaScript SDK */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16  }}>🟨 JavaScript SDK</h2>
+          <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <div className="flex items-center mb-6">
+              <Package className="w-8 h-8 text-yellow-600 mr-3" />
+              <h2 className="text-2xl font-semibold text-gray-900">JavaScript/Node.js SDK</h2>
+            </div>
             
-            <div style={{ background: '#1e293b', padding: 20, borderRadius: 8, marginBottom: 20  }}>
-              <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#fbbf24' }}>Installation</h3>
-              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Installation</h3>
+                <div className="bg-gray-900 rounded-lg p-6">
+                  <pre className="text-green-400 text-sm">
 {`npm install @ziontechgroup/sdk
 
 # or
-`
-yarn add @ziontechgroup/sdk`}
-              </pre>
-            </div>
-            
-            <div style={{ background: '#1e293b', padding: 20, borderRadius: 8, marginBottom: 20  }}>
-              <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#fbbf24' }}>Basic Usage</h3>
-              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>`
-{`import { ZionTechClient } from '@ziontechgroup/sdk';
 
-const client = new ZionTechClient({
-  apiKey: 'your-api-key',
-    environment: 'production' // or 'sandbox'
+yarn add @ziontechgroup/sdk`}
+                  </pre>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Basic Usage</h3>
+                <div className="bg-gray-900 rounded-lg p-6">
+                  <pre className="text-blue-400 text-sm">
+{`import { ZionTechAPI } from '@ziontechgroup/sdk';
+
+const api = new ZionTechAPI('your-api-key');
+
+// Get all services
+const services = await api.services.getAll();
+
+// Submit contact form
+const result = await api.contact.submit({
+  name: 'John Doe',
+  email: 'john@example.com',
+  service: 'micro-saas',
+  message: 'Looking for a custom solution'
 });
 
-// Get all services
-const services = await client.services.list();
-
-// Request a quote
-const quote = await client.quotes.create({
-  serviceId: 'micro-saas',
-    requirements: {
-    users: 100,
-    features: ['analytics' 'api-access']
-  },
-  contact: {
-    name: 'John Doe',
-    email: 'john@example.com'
-  }`
-});`}
-              </pre>
+console.log(result);`}
+                  </pre>
+                </div>
+              </div>
             </div>
-          </section>
+          </div>
 
           {/* Python SDK */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16  }}>🐍 Python SDK</h2>
-            
-            <div style={{ background: '#1e293b', padding: 20, borderRadius: 8, marginBottom: 20  }}>
-              <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#10b981' }}>Installation</h3>
-              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>`
-{`pip install ziontechgroup-sdk
-
-# or
-`
-pipenv install ziontechgroup-sdk`}
-              </pre>
+          <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <div className="flex items-center mb-6">
+              <Code className="w-8 h-8 text-green-600 mr-3" />
+              <h2 className="text-2xl font-semibold text-gray-900">Python SDK</h2>
             </div>
             
-            <div style={{ background: '#1e293b', padding: 20, borderRadius: 8, marginBottom: 20  }}>
-              <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#10b981' }}>Basic Usage</h3>
-              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>`
-{`from ziontechgroup import ZionTechClient
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Installation</h3>
+                <div className="bg-gray-900 rounded-lg p-6">
+                  <pre className="text-green-400 text-sm">
+{`pip install ziontechgroup-sdk`}
+                  </pre>
+                </div>
+              </div>
 
-client = ZionTechClient(
-    api_key='your-api-key'
-    environment='production'  # or 'sandbox'
-)
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Basic Usage</h3>
+                <div className="bg-gray-900 rounded-lg p-6">
+                  <pre className="text-blue-400 text-sm">
+{`from ziontechgroup import ZionTechAPI
+
+api = ZionTechAPI('your-api-key')
 
 # Get all services
-services = client.services.list()
+services = api.services.get_all()
 
-# Request a quote
-quote = client.quotes.create({
-    'service_id': 'micro-saas'
-    'requirements': {
-        'users': 100,
-        'features': ['analytics' 'api-access']
-    },
-    'contact': {
-        'name': 'John Doe'
-        'email': 'john@example.com'
-    }`
-})`}
-              </pre>
-            </div>
-          </section>
+# Submit contact form
+result = api.contact.submit({
+    'name': 'John Doe',
+    'email': 'john@example.com',
+    'service': 'micro-saas',
+    'message': 'Looking for a custom solution'
+})
 
-          {/* PHP SDK */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16  }}>🐘 PHP SDK</h2>
-            
-            <div style={{ background: '#1e293b', padding: 20, borderRadius: 8, marginBottom: 20  }}>
-              <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#8b5cf6' }}>Installation</h3>
-              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>`
-{`composer require ziontechgroup/sdk`}
-              </pre>
-            </div>
-            
-            <div style={{ background: '#1e293b', padding: 20, borderRadius: 8, marginBottom: 20  }}>
-              <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#8b5cf6' }}>Basic Usage</h3>
-              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>`
-{`<?php
-require_once 'vendor/autoload.php';
-
-use ZionTechGroup\\SDK\\ZionTechClient;
->
-$client = new ZionTechClient([>
-    'api_key' => 'your-api-key'
-    'environment' => 'production' // or 'sandbox'
-]);
-
-// Get all services
-$services = $client->services()->list();
-
-// Request a quote
-$quote = $client->quotes()->create([
-    'service_id' => 'micro-saas'
-    'requirements' => [
-        'users' => 100,
-        'features' => ['analytics' 'api-access']
-    ],
-    'contact' => [
-        'name' => 'John Doe'
-        'email' => 'john@example.com'
-    ]
-]);`
-?>`}
-              </pre>
-            </div>
-          </section>
-
-          {/* SDK Features */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 24  }}>✨ SDK Features</h2>
-            <div style={{ display: 'grid', gap: 20 }}>
-              <div style={{ padding: 20, background: 'borderRadius', 8, border: '1px solid rgba(34, 197, 94, 0.2)' }}>
-                <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#86efac' }}>🔧 Easy Integration</h3>
-                <p style={{ opacity: '0.8', fontSize: '0.9rem' }}>Simple, intuitive APIs that make integration straightforward and fast.</p>
-              </div>
-              
-              <div style={{ padding: 20, background: 'borderRadius', 8, border: '1px solid rgba(59, 130, 246, 0.2)' }}>
-                <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#93c5fd' }}>🛡️ Built-in Security</h3>
-                <p style={{ opacity: '0.8', fontSize: '0.9rem' }}>Automatic authentication, request signing, and secure communication.</p>
-              </div>
-              
-              <div style={{ padding: 20, background: 'borderRadius', 8, border: '1px solid rgba(139, 92, 246, 0.2)' }}>
-                <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#c4b5fd' }}>📚 Comprehensive Documentation</h3>
-                <p style={{ opacity: '0.8', fontSize: '0.9rem' }}>Detailed documentation with examples for every method and feature.</p>
-              </div>
-              
-              <div style={{ padding: 20, background: 'borderRadius', 8, border: '1px solid rgba(245, 158, 11, 0.2)' }}>
-                <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#fbbf24' }}>🔄 Auto-retry & Rate Limiting</h3>
-                <p style={{ opacity: '0.8', fontSize: '0.9rem' }}>Automatic retry logic and rate limit handling for reliable API calls.</p>
-              </div>
-            </div>
-          </section>
-
-          {/* Getting Started */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16  }}>🚀 Getting Started</h2>
-            <p style={{ opacity: '0.8', marginBottom: 20 }}>Ready to start using our SDKs? Follow these steps:</p>
-            
-            <div style={{ display: 'grid', gap: 16 }}>
-              <div style={{ display: 'alignItems', 'center' gap: 12, padding: 16, background: 'borderRadius', 8 }}>
-                <div style={{ fontSize: '1.5rem' }}>1️⃣</div>
-                <div>
-                  <h3 style={{ fontWeight: 600, marginBottom: 4 }}>Get Your API Key</h3>
-                  <p style={{ opacity: '0.8', fontSize: '0.9rem' }}>Contact us to receive your API credentials.</p>
-                </div>
-              </div>
-              
-              <div style={{ display: 'alignItems', 'center' gap: 12, padding: 16, background: 'borderRadius', 8 }}>
-                <div style={{ fontSize: '1.5rem' }}>2️⃣</div>
-                <div>
-                  <h3 style={{ fontWeight: 600, marginBottom: 4 }}>Install the SDK</h3>
-                  <p style={{ opacity: '0.8', fontSize: '0.9rem' }}>Use your preferred package manager to install the SDK.</p>
-                </div>
-              </div>
-              
-              <div style={{ display: 'alignItems', 'center' gap: 12, padding: 16, background: 'borderRadius', 8 }}>
-                <div style={{ fontSize: '1.5rem' }}>3️⃣</div>
-                <div>
-                  <h3 style={{ fontWeight: 600, marginBottom: 4 }}>Start Building</h3>
-                  <p style={{ opacity: '0.8', fontSize: '0.9rem' }}>Follow our examples and start integrating our services.</p>
+print(result)`}
+                  </pre>
                 </div>
               </div>
             </div>
-          </section>
+          </div>
+
+          {/* React Hook */}
+          <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <div className="flex items-center mb-6">
+              <Download className="w-8 h-8 text-blue-600 mr-3" />
+              <h2 className="text-2xl font-semibold text-gray-900">React Hook</h2>
+            </div>
+            
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Installation</h3>
+                <div className="bg-gray-900 rounded-lg p-6">
+                  <pre className="text-green-400 text-sm">
+{`npm install @ziontechgroup/react-hooks`}
+                  </pre>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Usage in React Component</h3>
+                <div className="bg-gray-900 rounded-lg p-6">
+                  <pre className="text-purple-400 text-sm">
+{`import React from 'react';
+import { useZionTechAPI } from '@ziontechgroup/react-hooks';
+
+function ServicesList() {
+  const { services, loading, error } = useZionTechAPI('your-api-key');
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
+
+  return (
+    <div>
+      {services.map(service => (
+        <div key={service.id}>
+          <h3>{service.name}</h3>
+          <p>{service.description}</p>
+        </div>
+      ))}
+    </div>
+  );
+}`}
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* Support */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16  }}>🤝 Need Help?</h2>
-            <p style={{ opacity: '0.8', marginBottom: 20 }}>Our team is here to help you get the most out of our SDKs.</p>
-            <div style={{ display: 'gap', 16, flexWrap: 'wrap' }}>
-              <Link href="/contact" style={{ 
-                display: 'padding', '12px 24px' 
-                background: 'color', 'white' >
-                textDecoration: 'borderRadius', 8, >
-                fontWeight: '600 >'}}>
-                Contact Support
+          <div className="bg-blue-50 rounded-lg p-8 text-center">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Need Help with SDKs?</h2>
+            <p className="text-gray-600 mb-6">
+              Our technical team can help you get started with our SDKs and libraries.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                Get SDK Support
               </Link>
-              <Link href="/docs/integration-examples" style={{ 
-                display: 'padding', '12px 24px' 
-                background: 'color', 'white' >
-                textDecoration: 'borderRadius', 8, >
-                fontWeight: '600 >'}}>
-                View Examples
-              </Link>
+              <a href={`mailto:${contact.email}`} className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
+                Email Technical Team
+              </a>
             </div>
-          </section>
+          </div>
         </div>
       </div>
     </>
   );
-}`
+}

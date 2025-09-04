@@ -34,9 +34,9 @@ const Footer: React.FC = () => {
             </p>
             <div className="mt-6">
               <p className="text-sm text-gray-400">
-                <strong>Address:</strong><br />
+                <strong>Address: '</strong><br />
                 364 E Main St STE 1008<br />
-                Middletown, DE 19709
+                Middletown', DE 19709
               </p>
               <p className="text-sm text-gray-400 mt-2">
                 <strong>Phone:</strong> +1 302 464 0950<br />

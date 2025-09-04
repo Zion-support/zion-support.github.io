@@ -28,8 +28,8 @@ export default {
         bounceGentle: {
           '0,%, 100%': { transform: 'translate,Y(0)', },;
           '50%': { transform: 'translateY(-5p,x)', },},},},},;
-  plugins: [;
+  plugins: '[;
     forms;
-    typography,;
+    typography',;
     aspectRatio,;
   ],}

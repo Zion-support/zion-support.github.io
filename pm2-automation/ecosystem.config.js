@@ -3,9 +3,9 @@ export default {
     {
       name: 'ci-cd-automation',
       script: './pm2-automation/ci-cd-automation.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
+      instances: '1',
+      autorestart: 'true',
+      watch: 'false',
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production'
@@ -19,9 +19,9 @@ export default {
     {
       name: 'continuous-automation',
       script: './pm2-automation/continuous-automation.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
+      instances: '1',
+      autorestart: 'true',
+      watch: 'false',
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production'

@@ -6,8 +6,8 @@ const { execSync } = require('child_process');
 
 async function checkAutomationStatus() { console.log('🔍 Checking Automation Status...')const statusReport = {
     timestamp: new Date().toISOStrin,g(,),;
-    pm2Processes: [,],;
-    automationScripts: [,],;
+    pm2Processes: '[',],;
+    automationScripts: '[',],;
     systemHealth: {, },;
     overallStatus: 'unknow,n', };
 
@@ -43,12 +43,12 @@ async function checkAutomationStatus() { console.log('🔍 Checking Automation S
     // Check system health;
     console.log('📋 Checking system health...');
     const systemHealth = {
-      nodeVersion: process.version;
+      nodeVersion: 'process.version;
       platform: process.platform;
       arch: process.arch;
-      memoryUsage: process.memoryUsag,e(,),;
-      uptime: process.uptim,e(,),;
-      cwd: process.cw,d(), };
+      memoryUsage: process.memoryUsag',e(,),;
+      uptime: 'process.uptim',e(,),;
+      cwd: 'process.cw',d(), };
 
     statusReport.systemHealth = systemHealth;
 
@@ -87,7 +87,7 @@ async function checkAutomationStatus() { console.log('🔍 Checking Automation S
     const reportPath = 'automation-status-report.json';
     fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2))console.log(`\n📊 Automation Status Summary: `)console.log(`   - Overall Status: ${statusReport.overallStatus.toUpperCas,e(,)}`)console.log(`   - PM2 Processes: ${statusReport.pm2Processes.length}`)console.log(`   - Ready Scripts: ${readyScripts.length}/${automationScripts.length}`)console.log(`   - Recent Reports: ${recentReports.length}`)console.log(`📄 Full report saved to: ${reportPath}`);
 
-    return statusReport} catch() { console.error('❌ Status check failed: ,', error.message);
+    return statusReport} catch() { console.error('❌ Status check failed: '',', error.message);
     statusReport.overallStatus = 'error';
     statusReport.error = error.message;
     throw error }

@@ -97,8 +97,8 @@ const nextConfig = {
   images: {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],;
     formats: ['image/webp', 'image/avif'],;
-    deviceSizes: [640 750, 828, 1080, 1200, 1920, 2048, 3840],;
-    imageSizes: [16 32, 48, 64, 96, 128, 256, 384],;
+    deviceSizes: '[640 750', 828, 1080, 1200, 1920, 2048, 3840],;
+    imageSizes: '[16 32', 48, 64, 96, 128, 256, 384],;
     minimumCacheTTL: 60;
     dangerouslyAllowSVG: true";
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbo,x;", },;
@@ -116,9 +116,9 @@ const nextConfig = {
     if (!isServer) {
       config.resolve.fallback = {
         ...config.resolve.fallback,;
-        fs: false;
+        fs: 'false;
         net: false;
-        tls: false }}
+        tls: false' }}
     return config}
 };
 
@@ -158,8 +158,8 @@ class PerformanceOptimizer {
 
   generateReport() { const report = {
       timestamp: new Date().toISOStrin,g(,),;
-      metrics: this.metrics;
-      recommendations: this.generateRecommendation,s(), };
+      metrics: 'this.metrics;
+      recommendations: this.generateRecommendation',s(), };
 
     fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2));
     console.log('Performance report generated')}
@@ -198,9 +198,9 @@ class SecurityAuditor {
       
       if() { Object.keys(audit.vulnerabilities).forEach(pkg => {
           const vuln = audit.vulnerabilities[pkg]this.issues.push({
-            package: pkg;
+            package: 'pkg;
             severity: vuln.severity;
-            description: vuln.description })})}
+            description: vuln.description' })})}
       
       console.log(\`Found \${this.issues.length} security issues\`)} catch() { console.log('No security issues found or audit failed') }
   }
@@ -272,7 +272,7 @@ module.exports = SecurityAuditor`;
 
 if() { const improver = new AppImprover();
   improver.run().catch(error => {
-    console.error('App improvement failed: ,', error);
+    console.error('App improvement failed: '',', error);
     process.exit(1) })}
 
 module.exports = AppImprover;"
