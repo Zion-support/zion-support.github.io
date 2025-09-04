@@ -1,19 +1,20 @@
 {
-  "timestamp": "2025-09-03T23:51:17.721Z",
+  "timestamp": "2025-09-04T03:05:05.803Z",
   "metrics": {
-    "buildSize": {
-      "bytes": 48335815,
-      "formatted": "46.1 MB"
+    "performance": {},
+    "errors": [],
+    "uptime": 0.015987013,
+    "memory": {
+      "rss": 47976448,
+      "heapTotal": 5570560,
+      "heapUsed": 4301248,
+      "external": 1553551,
+      "arrayBuffers": 10531
     },
-    "nodeModulesSize": {
-      "bytes": 820676108,
-      "formatted": "782.66 MB"
-    },
-    "fileCounts": {
-      "pages": 18,
-      "components": 7
+    "cpu": {
+      "user": 13755,
+      "system": 4585
     }
   },
-  "alerts": [],
-  "status": "monitoring"
+  "recommendations": []
 }

@@ -4,53 +4,53 @@ import Head from 'next/head';
 export default function Team() {
   const teamMembers = [
     {
-      name: "Dr. Sarah Johnson",
+      name: "Dr. Sarah Johnson"
       position: "Chief Executive Officer",
       bio: "Visionary leader with 15+ years in technology innovation and business strategy.",
       image: "/api/placeholder/300/300",
       linkedin: "#",
       twitter: "#"
-    },
+    },,,
     {
-      name: "Michael Chen",
-      position: "Chief Technology Officer",
-      bio: "AI and quantum computing expert with extensive experience in cutting-edge technologies.",
+      name: "Michael Chen"
+      position: "Chief Technology Officer"
+      bio: "AI and quantum computing expert with extensive experience in cutting-edge technologies."
       image: "/api/placeholder/300/300",
       linkedin: "#",
       twitter: "#"
-    },
+    },,,
     {
-      name: "Dr. Emily Rodriguez",
-      position: "Head of AI Research",
-      bio: "Leading researcher in machine learning and artificial intelligence applications.",
+      name: "Dr. Emily Rodriguez"
+      position: "Head of AI Research"
+      bio: "Leading researcher in machine learning and artificial intelligence applications."
       image: "/api/placeholder/300/300",
       linkedin: "#",
       twitter: "#"
-    },
+    },,,
     {
-      name: "David Kim",
-      position: "VP of Engineering",
-      bio: "Full-stack development expert specializing in scalable micro SaaS architectures.",
+      name: "David Kim"
+      position: "VP of Engineering"
+      bio: "Full-stack development expert specializing in scalable micro SaaS architectures."
       image: "/api/placeholder/300/300",
       linkedin: "#",
       twitter: "#"
-    },
+    },,,
     {
-      name: "Lisa Thompson",
-      position: "Head of Cybersecurity",
-      bio: "Cybersecurity specialist with expertise in threat detection and incident response.",
+      name: "Lisa Thompson"
+      position: "Head of Cybersecurity"
+      bio: "Cybersecurity specialist with expertise in threat detection and incident response."
       image: "/api/placeholder/300/300",
       linkedin: "#",
       twitter: "#"
-    },
+    },,,
     {
-      name: "James Wilson",
-      position: "VP of Cloud Operations",
-      bio: "DevOps and cloud infrastructure expert with focus on automation and scalability.",
+      name: "James Wilson"
+      position: "VP of Cloud Operations"
+      bio: "DevOps and cloud infrastructure expert with focus on automation and scalability."
       image: "/api/placeholder/300/300",
       linkedin: "#",
       twitter: "#"
-    }
+    },,
   ];
 
   return (

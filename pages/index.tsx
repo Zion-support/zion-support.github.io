@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import Head from 'next/head';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 export default function Home() {
   const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    phone: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
     site: 'https://ziontechgroup.com'
   }
   return (
@@ -27,24 +27,24 @@ export default function Home() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Zion Tech Group",
+              "@context": "https://schema.org"
+              "@type": "Organization"
+              "name": "Zion Tech Group"
               "url": contact.site,
-              "logo": `${contact.site}/favicon.svg`,
-              "description": "Leading provider of micro SaaS products, AI services, and IT solutions",
+              "logo": `${contact.site}/favicon.svg`
+              "description": "Leading provider of micro SaaS products, AI services, and IT solutions"
               "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "364 E Main St STE 1008",
-                "addressLocality": "Middletown",
-                "addressRegion": "DE",
-                "postalCode": "19709",
+                "@type": "PostalAddress"
+                "streetAddress": "364 E Main St STE 1008"
+                "addressLocality": "Middletown"
+                "addressRegion": "DE"
+                "postalCode": "19709"
                 "addressCountry": "US"
               },
               "contactPoint": {
-                "@type": "ContactPoint",
+                "@type": "ContactPoint"
                 "telephone": contact.phone,
-                "contactType": "customer service",
+                "contactType": "customer service"
                 "email": contact.email
               },
               "sameAs": [contact.site]

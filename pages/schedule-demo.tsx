@@ -7,32 +7,32 @@ export default function ScheduleDemo() {
   const [selectedDate, setSelectedDate] = useState('');
   const [selectedTime, setSelectedTime] = useState('');
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    message: '',
+    name: ''
+    email: ''
+    company: ''
+    phone: ''
+    message: ''
     service: ''
   });
 
   const timeSlots = [
-    '9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM',
-    '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM'
+    '9:00 AM' '10:00 AM' '11:00 AM' '12:00 PM'
+    '1:00 PM' '2:00 PM' '3:00 PM' '4:00 PM' '5:00 PM'
   ];
 
   const services = [
-    'AI Services',
-    'Micro SaaS Solutions',
-    'Cloud Migration',
-    'Cybersecurity',
-    'Digital Transformation',
+    'AI Services'
+    'Micro SaaS Solutions'
+    'Cloud Migration'
+    'Cybersecurity'
+    'Digital Transformation'
     'Custom Development'
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
-    console.log('Demo scheduled:', { selectedDate, selectedTime, formData });
+    console.log('Demo scheduled:' { selectedDate, selectedTime, formData });
   }
   return (
     <>

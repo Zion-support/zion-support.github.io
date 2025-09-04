@@ -5,9 +5,9 @@ import type { JSX } from 'react';
 
 export default function Contact(): JSX.Element {
   const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    phone: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
     site: 'https://ziontechgroup.com'
   }
   return (
@@ -140,7 +140,7 @@ export default function Contact(): JSX.Element {
                 Send Us a Message
               </h2>
               <p className="text-lg text-slate-300">
-                Fill out the form below and we&apos;ll get back to you within 24 hours
+                Fill out the form below and we'll get back to you within 24 hours
               </p>
             </div>
             <ContactForm />

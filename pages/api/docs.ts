@@ -46,7 +46,7 @@ class ApiDocumentationGenerator {
       },
       servers: [
         {
-          url: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api',
+          url: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api'
           description: 'Development server'
         }
       ],
@@ -54,19 +54,14 @@ class ApiDocumentationGenerator {
       components: {
         schemas: this.generateSchemas()
       }
-    };
-
     return spec;
   }
 
   private generatePaths() {
-    const paths: any = {};
-
+    const paths: any = {}
     this.endpoints.forEach(endpoint => {
       if (!paths[endpoint.path]) {
-        paths[endpoint.path] = {};
-      }
-
+        paths[endpoint.path] = {}
       paths[endpoint.path][endpoint.method.toLowerCase()] = {
         summary: endpoint.description,
         parameters: endpoint.parameters?.map(param => ({
@@ -84,10 +79,10 @@ class ApiDocumentationGenerator {
                 schema: response.schema
               }
             } : undefined
-          };
+          }
           return acc;
         }, {} as any)
-      };
+      }
     });
 
     return paths;
@@ -96,27 +91,23 @@ class ApiDocumentationGenerator {
   private generateSchemas() {
     return {
       Error: {
-        type: 'object',
+        type: 'object'
         properties: {
           error: {
-            type: 'object',
+            type: 'object'
             properties: {
               message: { type: 'string' },
               statusCode: { type: 'number' },
-              timestamp: { type: 'string', format: 'date-time' }
-            }
+              timestamp: { type: 'string' format: 'date-time' }
           }
-        }
       },
       Success: {
-        type: 'object',
+        type: 'object'
         properties: {
           success: { type: 'boolean' },
           data: { type: 'object' },
           message: { type: 'string' }
-        }
       }
-    };
   }
 
   generateMarkdown() {
@@ -161,8 +152,6 @@ class ApiDocumentationGenerator {
 
     return markdown;
   }
-}
-
 export const apiDocGenerator = new ApiDocumentationGenerator();
 
 // API Documentation endpoint
@@ -171,14 +160,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const format = req.query.format as string || 'json';
     
     if (format === 'markdown') {
-      res.setHeader('Content-Type', 'text/markdown');
+      res.setHeader('Content-Type' 'text/markdown');
       res.status(200).send(apiDocGenerator.generateMarkdown());
     } else {
-      res.setHeader('Content-Type', 'application/json');
+      res.setHeader('Content-Type' 'application/json');
       res.status(200).json(apiDocGenerator.generateOpenAPISpec());
     }
   } else {
-    res.setHeader('Allow', ['GET']);
+    res.setHeader('Allow' ['GET']);
     res.status(405).json({ error: 'Method not allowed' });
   }
-}

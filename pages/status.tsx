@@ -4,20 +4,20 @@ import { useState, useEffect } from 'react';
 
 export default function Status() {
   const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    phone: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
     site: 'https://ziontechgroup.com'
   }
   const [systemStatus, setSystemStatus] = useState({
-    overall: 'operational',
+    overall: 'operational'
     services: [
-      { name: 'Website', status: 'operational', uptime: '99.9%' },
-      { name: 'API Services', status: 'operational', uptime: '99.8%' },
-      { name: 'Cloud Infrastructure', status: 'operational', uptime: '99.9%' },
-      { name: 'AI Services', status: 'operational', uptime: '99.7%' },
-      { name: 'Database', status: 'operational', uptime: '99.9%' },
-      { name: 'Email Services', status: 'operational', uptime: '99.8%' }
+      { name: 'Website' status: 'operational' uptime: '99.9%' },
+      { name: 'API Services' status: 'operational' uptime: '99.8%' },
+      { name: 'Cloud Infrastructure' status: 'operational' uptime: '99.9%' },
+      { name: 'AI Services' status: 'operational' uptime: '99.7%' },
+      { name: 'Database' status: 'operational' uptime: '99.9%' },
+      { name: 'Email Services' status: 'operational' uptime: '99.8%' }
     ],
     lastUpdated: new Date().toISOString()
   });
@@ -25,20 +25,20 @@ export default function Status() {
   const [incidents, setIncidents] = useState([
     {
       id: 1,
-      title: "Scheduled Maintenance - Cloud Infrastructure",
+      title: "Scheduled Maintenance - Cloud Infrastructure"
       status: "resolved",
       severity: "minor",
       startTime: "2025-01-25T02:00:00Z",
       endTime: "2025-01-25T04:00:00Z",
       description: "Routine maintenance completed successfully. All services restored."
-    },
+    },,,
     {
       id: 2,
-      title: "API Response Time Degradation",
+      title: "API Response Time Degradation"
       status: "resolved",
       severity: "minor",
-      startTime: "2025-01-24T14:30:00Z",
-      endTime: "2025-01-24T15:45:00Z",
+      startTime: "2025-01-24T14:30:00Z"
+      endTime: "2025-01-24T15:45:00Z"
       description: "Temporary increase in API response times. Issue resolved with infrastructure scaling."
     }
   ]);
@@ -80,33 +80,33 @@ export default function Status() {
         <meta property="og:type" content="website" />
       </Head>
 
-      <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #0b1220 0%, #1a1f3a 100%)', color: 'white' }}>
+      <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #0b1220 0%, #1a1f3a 100%)' color: 'white' }}>
         <div style={{ maxWidth: 1000, margin: '0 auto', padding: '40px 20px' }}>
           <div style={{ textAlign: 'center', marginBottom: 60 }}>
             <h1 style={{ 
-              fontSize: '3rem', 
+              fontSize: '3rem' 
               fontWeight: 800, 
               marginBottom: 20,
-              background: 'linear-gradient(135deg, #10b981, #059669)',
+              background: 'linear-gradient(135deg, #10b981, #059669)'
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text'
-            }}>
+            },,}>
               System Status
             </h1>
-            <p style={{ fontSize: '1.2rem', color: '#94a3b8', maxWidth: 600, margin: '0 auto' }}>
+            <p style={{ fontSize: '1.2rem', color: '#94a3b8' maxWidth: 600, margin: '0 auto' }}>
               Real-time status of all Zion Tech Group services and systems.
             </p>
           </div>
 
           <div style={{ marginBottom: 60 }}>
             <div style={{
-              background: 'rgba(255, 255, 255, 0.05)',
+              background: 'rgba(255, 255, 255, 0.05)'
               borderRadius: 12,
               padding: 30,
-              border: '1px solid rgba(255, 255, 255, 0.1)',
+              border: '1px solid rgba(255, 255, 255, 0.1)'
               textAlign: 'center'
-            }}>
+            },,}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 15, marginBottom: 20 }}>
                 <div style={{ fontSize: '2rem' }}>{getStatusIcon(systemStatus.overall)}</div>
                 <h2 style={{ fontSize: '2rem', fontWeight: 700 }}>
@@ -126,14 +126,14 @@ export default function Status() {
             <div style={{ display: 'grid', gap: 15 }}>
               {systemStatus.services.map((service, index) => (
                 <div key={index} style={{
-                  background: 'rgba(255, 255, 255, 0.05)',
+                  background: 'rgba(255, 255, 255, 0.05)'
                   borderRadius: 8,
                   padding: 20,
-                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  border: '1px solid rgba(255, 255, 255, 0.1)'
                   display: 'flex',
                   justifyContent: 'space-between',
                   alignItems: 'center'
-                }}>
+                },,}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 15 }}>
                     <div style={{ fontSize: '1.5rem' }}>{getStatusIcon(service.status)}</div>
                     <div>
@@ -142,7 +142,7 @@ export default function Status() {
                       </h3>
                       <p style={{ 
                         color: getStatusColor(service.status), 
-                        fontSize: '0.9rem', 
+                        fontSize: '0.9rem' 
                         fontWeight: 600,
                         textTransform: 'capitalize'
                       }}>
@@ -171,7 +171,7 @@ export default function Status() {
               <div style={{ display: 'grid', gap: 20 }}>
                 {incidents.map((incident) => (
                   <div key={incident.id} style={{
-                    background: 'rgba(255, 255, 255, 0.05)',
+                    background: 'rgba(255, 255, 255, 0.05)'
                     borderRadius: 12,
                     padding: 25,
                     border: '1px solid rgba(255, 255, 255, 0.1)'
@@ -184,10 +184,10 @@ export default function Status() {
                         <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
                           <span style={{
                             background: getSeverityColor(incident.severity),
-                            color: 'white',
+                            color: 'white'
                             padding: '4px 12px',
                             borderRadius: 20,
-                            fontSize: '0.8rem',
+                            fontSize: '0.8rem'
                             fontWeight: 600,
                             textTransform: 'capitalize'
                           }}>
@@ -195,10 +195,10 @@ export default function Status() {
                           </span>
                           <span style={{
                             background: getStatusColor(incident.status),
-                            color: 'white',
+                            color: 'white'
                             padding: '4px 12px',
                             borderRadius: 20,
-                            fontSize: '0.8rem',
+                            fontSize: '0.8rem'
                             fontWeight: 600,
                             textTransform: 'capitalize'
                           }}>
@@ -208,11 +208,11 @@ export default function Status() {
                       </div>
                     </div>
                     
-                    <p style={{ color: '#94a3b8', marginBottom: 15, lineHeight: 1.6 }}>
+                    <p style={{ color: '#94a3b8' marginBottom: 15, lineHeight: 1.6 }}>
                       {incident.description}
                     </p>
                     
-                    <div style={{ display: 'flex', gap: 20, fontSize: '0.9rem', color: '#64748b' }}>
+                    <div style={{ display: 'flex' gap: 20, fontSize: '0.9rem' color: '#64748b' }}>
                       <span>
                         <strong>Started:</strong> {new Date(incident.startTime).toLocaleString()}
                       </span>
@@ -225,10 +225,10 @@ export default function Status() {
               </div>
             ) : (
               <div style={{
-                background: 'rgba(255, 255, 255, 0.05)',
+                background: 'rgba(255, 255, 255, 0.05)'
                 borderRadius: 12,
                 padding: 40,
-                border: '1px solid rgba(255, 255, 255, 0.1)',
+                border: '1px solid rgba(255, 255, 255, 0.1)'
                 textAlign: 'center'
               }}>
                 <div style={{ fontSize: '3rem', marginBottom: 20 }}>✅</div>
@@ -243,12 +243,12 @@ export default function Status() {
           </div>
 
           <div style={{ 
-            background: 'rgba(255, 255, 255, 0.05)',
+            background: 'rgba(255, 255, 255, 0.05)'
             borderRadius: 12,
             padding: 30,
-            border: '1px solid rgba(255, 255, 255, 0.1)',
+            border: '1px solid rgba(255, 255, 255, 0.1)'
             textAlign: 'center'
-          }}>
+          },,}>
             <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 15 }}>
               Subscribe to Status Updates
             </h2>
@@ -256,12 +256,12 @@ export default function Status() {
               Get notified about service status changes and incidents via email or SMS.
             </p>
             <Link href="/contact" style={{
-              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)'
               color: 'white',
               padding: '12px 24px',
               textDecoration: 'none',
               borderRadius: 8,
-              fontSize: '1rem',
+              fontSize: '1rem'
               fontWeight: 600,
               display: 'inline-block'
             }}>

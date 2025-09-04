@@ -5,19 +5,19 @@ import { useState } from 'react';
 
 export default function Signup() {
   const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    phone: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
     site: 'https://ziontechgroup.com'
   }
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    company: '',
-    phone: '',
-    password: '',
-    confirmPassword: '',
+    firstName: ''
+    lastName: ''
+    email: ''
+    company: ''
+    phone: ''
+    password: ''
+    confirmPassword: ''
     agreeToTerms: false,
     subscribeNewsletter: false
   });
@@ -43,7 +43,7 @@ export default function Signup() {
     }
     
     // Handle signup logic here
-    console.log('Signup attempt:', formData);
+    console.log('Signup attempt:' formData);
     alert('Account creation functionality will be implemented with authentication system.');
   }
   return (
@@ -59,18 +59,18 @@ export default function Signup() {
         <meta property="og:type" content="website" />
       </Head>
 
-      <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #0b1220 0%, #1a1f3a 100%)', color: 'white', padding: '40px 20px' }}>
+      <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #0b1220 0%, #1a1f3a 100%)' color: 'white' padding: '40px 20px' }}>
         <div style={{ maxWidth: 500, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 40 }}>
             <h1 style={{ 
-              fontSize: '2.5rem', 
+              fontSize: '2.5rem' 
               fontWeight: 800, 
               marginBottom: 10,
-              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)'
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text'
-            }}>
+            },,}>
               Create Account
             </h1>
             <p style={{ color: '#94a3b8', fontSize: '1.1rem' }}>
@@ -79,15 +79,15 @@ export default function Signup() {
           </div>
 
           <div style={{
-            background: 'rgba(255, 255, 255, 0.05)',
+            background: 'rgba(255, 255, 255, 0.05)'
             borderRadius: 12,
             padding: 40,
             border: '1px solid rgba(255, 255, 255, 0.1)'
           }}>
             <form onSubmit={handleSubmit}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 15, marginBottom: 20 }}>
+              <div style={{ display: 'grid' gridTemplateColumns: '1fr 1fr' gap: 15, marginBottom: 20 }}>
                 <div>
-                  <label style={{ display: 'block', marginBottom: 8, fontWeight: 600 }}>
+                  <label style={{ display: 'block' marginBottom: 8, fontWeight: 600 }}>
                     First Name *
                   </label>
                   <input
@@ -97,19 +97,19 @@ export default function Signup() {
                     onChange={handleInputChange}
                     required
                     style={{
-                      width: '100%',
-                      padding: '12px',
+                      width: '100%'
+                      padding: '12px'
                       borderRadius: 8,
-                      border: '1px solid rgba(255, 255, 255, 0.2)',
-                      background: 'rgba(255, 255, 255, 0.1)',
-                      color: 'white',
+                      border: '1px solid rgba(255, 255, 255, 0.2)'
+                      background: 'rgba(255, 255, 255, 0.1)'
+                      color: 'white'
                       fontSize: '1rem'
                     }
                     placeholder="First name"
                   />
                 </div>
                 <div>
-                  <label style={{ display: 'block', marginBottom: 8, fontWeight: 600 }}>
+                  <label style={{ display: 'block' marginBottom: 8, fontWeight: 600 }}>
                     Last Name *
                   </label>
                   <input
@@ -119,12 +119,12 @@ export default function Signup() {
                     onChange={handleInputChange}
                     required
                     style={{
-                      width: '100%',
-                      padding: '12px',
+                      width: '100%'
+                      padding: '12px'
                       borderRadius: 8,
-                      border: '1px solid rgba(255, 255, 255, 0.2)',
-                      background: 'rgba(255, 255, 255, 0.1)',
-                      color: 'white',
+                      border: '1px solid rgba(255, 255, 255, 0.2)'
+                      background: 'rgba(255, 255, 255, 0.1)'
+                      color: 'white'
                       fontSize: '1rem'
                     }
                     placeholder="Last name"
@@ -133,7 +133,7 @@ export default function Signup() {
               </div>
 
               <div style={{ marginBottom: 20 }}>
-                <label style={{ display: 'block', marginBottom: 8, fontWeight: 600 }}>
+                <label style={{ display: 'block' marginBottom: 8, fontWeight: 600 }}>
                   Email Address *
                 </label>
                 <input
@@ -143,12 +143,12 @@ export default function Signup() {
                   onChange={handleInputChange}
                   required
                   style={{
-                    width: '100%',
-                    padding: '12px',
+                    width: '100%'
+                    padding: '12px'
                     borderRadius: 8,
-                    border: '1px solid rgba(255, 255, 255, 0.2)',
-                    background: 'rgba(255, 255, 255, 0.1)',
-                    color: 'white',
+                    border: '1px solid rgba(255, 255, 255, 0.2)'
+                    background: 'rgba(255, 255, 255, 0.1)'
+                    color: 'white'
                     fontSize: '1rem'
                   }
                   placeholder="Enter your email"
@@ -156,7 +156,7 @@ export default function Signup() {
               </div>
 
               <div style={{ marginBottom: 20 }}>
-                <label style={{ display: 'block', marginBottom: 8, fontWeight: 600 }}>
+                <label style={{ display: 'block' marginBottom: 8, fontWeight: 600 }}>
                   Company Name
                 </label>
                 <input
@@ -165,12 +165,12 @@ export default function Signup() {
                   value={formData.company}
                   onChange={handleInputChange}
                   style={{
-                    width: '100%',
-                    padding: '12px',
+                    width: '100%'
+                    padding: '12px'
                     borderRadius: 8,
-                    border: '1px solid rgba(255, 255, 255, 0.2)',
-                    background: 'rgba(255, 255, 255, 0.1)',
-                    color: 'white',
+                    border: '1px solid rgba(255, 255, 255, 0.2)'
+                    background: 'rgba(255, 255, 255, 0.1)'
+                    color: 'white'
                     fontSize: '1rem'
                   }
                   placeholder="Your company name"
@@ -178,7 +178,7 @@ export default function Signup() {
               </div>
 
               <div style={{ marginBottom: 20 }}>
-                <label style={{ display: 'block', marginBottom: 8, fontWeight: 600 }}>
+                <label style={{ display: 'block' marginBottom: 8, fontWeight: 600 }}>
                   Phone Number
                 </label>
                 <input
@@ -187,21 +187,21 @@ export default function Signup() {
                   value={formData.phone}
                   onChange={handleInputChange}
                   style={{
-                    width: '100%',
-                    padding: '12px',
+                    width: '100%'
+                    padding: '12px'
                     borderRadius: 8,
-                    border: '1px solid rgba(255, 255, 255, 0.2)',
-                    background: 'rgba(255, 255, 255, 0.1)',
-                    color: 'white',
+                    border: '1px solid rgba(255, 255, 255, 0.2)'
+                    background: 'rgba(255, 255, 255, 0.1)'
+                    color: 'white'
                     fontSize: '1rem'
                   }
                   placeholder="+1 (555) 123-4567"
                 />
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 15, marginBottom: 20 }}>
+              <div style={{ display: 'grid' gridTemplateColumns: '1fr 1fr' gap: 15, marginBottom: 20 }}>
                 <div>
-                  <label style={{ display: 'block', marginBottom: 8, fontWeight: 600 }}>
+                  <label style={{ display: 'block' marginBottom: 8, fontWeight: 600 }}>
                     Password *
                   </label>
                   <input
@@ -211,19 +211,19 @@ export default function Signup() {
                     onChange={handleInputChange}
                     required
                     style={{
-                      width: '100%',
-                      padding: '12px',
+                      width: '100%'
+                      padding: '12px'
                       borderRadius: 8,
-                      border: '1px solid rgba(255, 255, 255, 0.2)',
-                      background: 'rgba(255, 255, 255, 0.1)',
-                      color: 'white',
+                      border: '1px solid rgba(255, 255, 255, 0.2)'
+                      background: 'rgba(255, 255, 255, 0.1)'
+                      color: 'white'
                       fontSize: '1rem'
                     }
                     placeholder="Create password"
                   />
                 </div>
                 <div>
-                  <label style={{ display: 'block', marginBottom: 8, fontWeight: 600 }}>
+                  <label style={{ display: 'block' marginBottom: 8, fontWeight: 600 }}>
                     Confirm Password *
                   </label>
                   <input
@@ -233,12 +233,12 @@ export default function Signup() {
                     onChange={handleInputChange}
                     required
                     style={{
-                      width: '100%',
-                      padding: '12px',
+                      width: '100%'
+                      padding: '12px'
                       borderRadius: 8,
-                      border: '1px solid rgba(255, 255, 255, 0.2)',
-                      background: 'rgba(255, 255, 255, 0.1)',
-                      color: 'white',
+                      border: '1px solid rgba(255, 255, 255, 0.2)'
+                      background: 'rgba(255, 255, 255, 0.1)'
+                      color: 'white'
                       fontSize: '1rem'
                     }
                     placeholder="Confirm password"
@@ -247,7 +247,7 @@ export default function Signup() {
               </div>
 
               <div style={{ marginBottom: 20 }}>
-                <label style={{ display: 'flex', alignItems: 'flex-start', gap: 10, cursor: 'pointer' }}>
+                <label style={{ display: 'flex' alignItems: 'flex-start' gap: 10, cursor: 'pointer' }}>
                   <input
                     type="checkbox"
                     name="agreeToTerms"
@@ -256,13 +256,13 @@ export default function Signup() {
                     required
                     style={{ width: 16, height: 16, marginTop: 2 }
                   />
-                  <span style={{ fontSize: '0.9rem', lineHeight: 1.4 }}>
+                  <span style={{ fontSize: '0.9rem' lineHeight: 1.4 }}>
                     I agree to the{' '}
-                    <Link href="/terms" style={{ color: '#3b82f6', textDecoration: 'none' }}>
+                    <Link href="/terms" style={{ color: '#3b82f6' textDecoration: 'none' }}>
                       Terms of Service
                     </Link>
                     {' '}and{' '}
-                    <Link href="/privacy" style={{ color: '#3b82f6', textDecoration: 'none' }}>
+                    <Link href="/privacy" style={{ color: '#3b82f6' textDecoration: 'none' }}>
                       Privacy Policy
                     </Link>
                     {' '}*
@@ -271,7 +271,7 @@ export default function Signup() {
               </div>
 
               <div style={{ marginBottom: 30 }}>
-                <label style={{ display: 'flex', alignItems: 'center', gap: 10, cursor: 'pointer' }}>
+                <label style={{ display: 'flex' alignItems: 'center' gap: 10, cursor: 'pointer' }}>
                   <input
                     type="checkbox"
                     name="subscribeNewsletter"
@@ -288,16 +288,16 @@ export default function Signup() {
               <button
                 type="submit"
                 style={{
-                  width: '100%',
-                  background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-                  color: 'white',
-                  padding: '15px',
-                  border: 'none',
+                  width: '100%'
+                  background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)'
+                  color: 'white'
+                  padding: '15px'
+                  border: 'none'
                   borderRadius: 8,
-                  fontSize: '1.1rem',
+                  fontSize: '1.1rem'
                   fontWeight: 600,
-                  cursor: 'pointer',
-                  transition: 'transform 0.3s ease',
+                  cursor: 'pointer'
+                  transition: 'transform 0.3s ease'
                   marginBottom: 20
                 }
                 onMouseEnter={(e) => {
@@ -311,12 +311,12 @@ export default function Signup() {
               </button>
             </form>
 
-            <div style={{ textAlign: 'center', marginTop: 20 }}>
+            <div style={{ textAlign: 'center' marginTop: 20 }}>
               <p style={{ color: '#94a3b8', fontSize: '0.9rem' }}>
                 Already have an account?{' '}
                 <Link href="/login" style={{ 
-                  color: '#3b82f6', 
-                  textDecoration: 'none', 
+                  color: '#3b82f6' 
+                  textDecoration: 'none' 
                   fontWeight: 600 
                 }}>
                   Sign in here
@@ -325,21 +325,21 @@ export default function Signup() {
             </div>
           </div>
 
-          <div style={{ textAlign: 'center', marginTop: 30 }}>
-            <p style={{ color: '#64748b', fontSize: '0.9rem', marginBottom: 10 }}>
+          <div style={{ textAlign: 'center' marginTop: 30 }}>
+            <p style={{ color: '#64748b' fontSize: '0.9rem' marginBottom: 10 }}>
               Questions about creating an account?
             </p>
-            <div style={{ display: 'flex', gap: 20, justifyContent: 'center', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex' gap: 20, justifyContent: 'center' flexWrap: 'wrap' }}>
               <a href={`tel:${contact.phone}`} style={{
-                color: '#3b82f6',
-                textDecoration: 'none',
+                color: '#3b82f6'
+                textDecoration: 'none'
                 fontSize: '0.9rem'
               }}>
                 📞 {contact.phone}
               </a>
               <a href={`mailto:${contact.email}`} style={{
-                color: '#3b82f6',
-                textDecoration: 'none',
+                color: '#3b82f6'
+                textDecoration: 'none'
                 fontSize: '0.9rem'
               }}>
                 ✉️ {contact.email}

@@ -3,9 +3,9 @@ import Link from 'next/link';
 
 export default function Terms() {
   const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    phone: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
     site: 'https://ziontechgroup.com'
   }
   return (
@@ -31,7 +31,7 @@ export default function Terms() {
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4 text-blue-400">1. Acceptance of Terms</h2>
               <p className="text-slate-300 mb-4">
-                By accessing and using Zion Tech Group&apos;s services, you accept and agree to be bound by the terms 
+                By accessing and using Zion Tech Group's services, you accept and agree to be bound by the terms 
                 and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
               </p>
             </section>

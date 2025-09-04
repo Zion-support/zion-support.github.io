@@ -6,49 +6,49 @@ export default function Help() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const categories = ['All', 'Getting Started', 'Account & Billing', 'Technical Support', 'API Documentation', 'Troubleshooting'];
+  const categories = ['All' 'Getting Started' 'Account & Billing' 'Technical Support' 'API Documentation' 'Troubleshooting'];
 
   const helpArticles = [
     {
       id: 1,
-      title: "Getting Started with Zion Tech Group Services",
-      category: "Getting Started",
-      description: "Learn how to set up your account and start using our services effectively.",
+      title: "Getting Started with Zion Tech Group Services"
+      category: "Getting Started"
+      description: "Learn how to set up your account and start using our services effectively."
       readTime: "5 min read"
     },
     {
       id: 2,
-      title: "Understanding Your Billing and Subscription",
-      category: "Account & Billing",
-      description: "Everything you need to know about billing, subscriptions, and payment methods.",
+      title: "Understanding Your Billing and Subscription"
+      category: "Account & Billing"
+      description: "Everything you need to know about billing, subscriptions, and payment methods."
       readTime: "3 min read"
     },
     {
       id: 3,
-      title: "API Integration Guide",
-      category: "API Documentation",
-      description: "Step-by-step guide to integrating our APIs into your applications.",
+      title: "API Integration Guide"
+      category: "API Documentation"
+      description: "Step-by-step guide to integrating our APIs into your applications."
       readTime: "10 min read"
     },
     {
       id: 4,
-      title: "Troubleshooting Common Issues",
-      category: "Troubleshooting",
-      description: "Solutions to the most common problems users encounter.",
+      title: "Troubleshooting Common Issues"
+      category: "Troubleshooting"
+      description: "Solutions to the most common problems users encounter."
       readTime: "7 min read"
     },
     {
       id: 5,
-      title: "Security Best Practices",
-      category: "Technical Support",
-      description: "Essential security practices to keep your data and systems secure.",
+      title: "Security Best Practices"
+      category: "Technical Support"
+      description: "Essential security practices to keep your data and systems secure."
       readTime: "8 min read"
     },
     {
       id: 6,
-      title: "Performance Optimization Tips",
-      category: "Technical Support",
-      description: "How to optimize your applications for better performance.",
+      title: "Performance Optimization Tips"
+      category: "Technical Support"
+      description: "How to optimize your applications for better performance."
       readTime: "6 min read"
     }
   ];

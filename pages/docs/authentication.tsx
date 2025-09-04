@@ -5,9 +5,9 @@ import { ArrowLeft, Key, Shield, Lock, User } from 'lucide-react';
 
 export default function Authentication() {
   const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    phone: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
     site: 'https://ziontechgroup.com'
   }
   return (
@@ -143,11 +143,11 @@ redirect_uri=YOUR_REDIRECT_URI`}
 {`// JWT Token Structure
 {
   "header": {
-    "alg": "HS256",
+    "alg": "HS256"
     "typ": "JWT"
   },
   "payload": {
-    "sub": "user_id",
+    "sub": "user_id"
     "iat": 1640995200,
     "exp": 1641081600,
     "scope": "read write"
