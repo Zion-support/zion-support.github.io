@@ -2,15 +2,18 @@ import React, { useEffect } from 'react';
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) return;
-
-    const metrics: PerformanceMetrics = {};
-
-    // Monitor Largest Contentful Paint (LCP)
-    const lcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1] as any;
-      metrics.lcp = lastEntry.startTime;
+    // Monitor Core Web Vitals
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      // Monitor Largest Contentful Paint (LCP)
+      const observer = new (window as any).PerformanceObserver((list: any) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            if (typeof console !== 'undefined') {
+              console.log('LCP:', entry.startTime);
+            }
+          }
+        }
+      });
       
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint'] });
@@ -19,10 +22,12 @@ const PerformanceMonitor: React.FC = () => {
       }
 
       // Monitor First Input Delay (FID)
-      const fidObserver = new PerformanceObserver((list) => {
+      const fidObserver = new (window as any).PerformanceObserver((list: any) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime);
+            if (typeof console !== 'undefined') {
+              console.log('FID:', entry.processingStart - entry.startTime);
+            }
           }
         }
       });
@@ -35,14 +40,16 @@ const PerformanceMonitor: React.FC = () => {
 
       // Monitor Cumulative Layout Shift (CLS)
       let clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
+      const clsObserver = new (window as any).PerformanceObserver((list: any) => {
         for (const entry of list.getEntries()) {
           const entryAny = entry as any;
           if (!entryAny.hadRecentInput) {
             clsValue += entryAny.value;
           }
         }
-        console.log('CLS:', clsValue);
+        if (typeof console !== 'undefined') {
+          console.log('CLS:', clsValue);
+        }
       });
 
       try {

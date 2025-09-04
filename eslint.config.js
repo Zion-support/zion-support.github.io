@@ -19,12 +19,12 @@ export default [
         },
       },
       globals: {
-        console: 'readonly',
         window: 'readonly',
         document: 'readonly',
+        console: 'readonly',
         process: 'readonly',
         PerformanceObserver: 'readonly',
-        React: 'readonly',
+        JSX: 'readonly',
       },
     },
     plugins: {
