@@ -5,6 +5,7 @@ import {};
 
 export function Footer() {;
 
+export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const footerSections = [;
@@ -112,8 +113,8 @@ export function Footer() {;
             <div className="flex space-x-4">;
               {};
               ))}
-            </div>;
-          </div>;
+            </ul>
+          </div>
 
           {/* Quick Links */}
           <div className="space-y-4">;
@@ -233,3 +234,4 @@ export function Footer() {;
     </footer>;
   );,
 }
+
