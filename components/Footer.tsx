@@ -22,34 +22,34 @@ import {
 
 const services = {
   'AI Solutions': [
-    { name: 'AI Content Generator', href: '/services/ai-content-generator' },
-    { name: 'Predictive Analytics', href: '/services/predictive-analytics-platform' },
-    { name: 'Computer Vision', href: '/services/computer-vision-solutions' },
-    { name: 'Natural Language Processing', href: '/services/natural-language-processing' },
-    { name: 'AI-Powered CRM', href: '/services/ai-powered-crm' },
-    { name: 'Voice Assistant Development', href: '/services/voice-assistant-development' },
-    { name: 'AI Drug Discovery', href: '/services/ai-drug-discovery' },
-    { name: 'AI Financial Modeling', href: '/services/ai-financial-modeling' }
+    { name: 'AI-Powered Email Responder', href: '/ai-services#ai-email-responder' },
+    { name: 'Predictive Analytics Platform', href: '/ai-services#predictive-analytics' },
+    { name: 'Intelligent Chatbot System', href: '/ai-services#intelligent-chatbot' },
+    { name: 'Computer Vision Solutions', href: '/ai-services#computer-vision' },
+    { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' },
+    { name: 'Voice AI Assistant', href: '/ai-services#voice-ai-assistant' },
+    { name: 'AI Fraud Detection', href: '/ai-services#ai-fraud-detection' },
+    { name: 'AI Drug Discovery', href: '/ai-services#ai-drug-discovery' }
   ],
   'IT Services': [
-    { name: 'Cloud Migration', href: '/services/cloud-migration-and-cost-optimization' },
-    { name: 'Security Hardening', href: '/services/security-hardening-and-audits' },
-    { name: 'Zero Trust Security', href: '/services/zero-trust-security-implementation' },
-    { name: 'Disaster Recovery', href: '/services/disaster-recovery-planning' },
-    { name: 'Managed IT Support', href: '/services/managed-it-support' },
-    { name: 'Network Optimization', href: '/services/network-optimization' },
-    { name: 'IoT Infrastructure', href: '/services/iot-infrastructure-management' },
-    { name: 'Edge Computing', href: '/services/edge-computing-solutions' }
+    { name: 'Cloud Infrastructure Management', href: '/it-services#cloud-infrastructure' },
+    { name: 'Cybersecurity Solutions', href: '/it-services#cybersecurity' },
+    { name: 'Network Infrastructure', href: '/it-services#network-infrastructure' },
+    { name: 'Database Management', href: '/it-services#database-management' },
+    { name: 'DevOps & CI/CD', href: '/it-services#devops-cicd' },
+    { name: 'Data Center Migration', href: '/it-services#data-center-migration' },
+    { name: 'IT Asset Management', href: '/it-services#it-asset-management' },
+    { name: 'Backup & Disaster Recovery', href: '/it-services#backup-disaster-recovery' }
   ],
   'Micro SaaS': [
-    { name: 'AI Chatbot', href: '/services/ai-chatbot-for-support' },
-    { name: 'Lead Scraper', href: '/services/lead-scraper-and-enrichment' },
-    { name: 'Customer Support Platform', href: '/services/customer-support-platform' },
-    { name: 'Event Management', href: '/services/event-management-dashboard' },
-    { name: 'E-commerce Returns', href: '/services/ecommerce-return-management' },
-    { name: 'AI Talent Matching', href: '/services/ai-talent-matching' },
-    { name: 'AI Social Media Manager', href: '/services/ai-social-media-manager' },
-    { name: 'Blockchain NFT Marketplace', href: '/services/blockchain-nft-marketplace' }
+    { name: 'Cloud Cost Guard', href: '/micro-saas#cloud-cost-guard' },
+    { name: 'LLM Evaluation Suite', href: '/micro-saas#llm-evaluation' },
+    { name: 'Customer Feedback App', href: '/micro-saas#customer-feedback' },
+    { name: 'API Rate Limiting', href: '/micro-saas#api-rate-limiting' },
+    { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' },
+    { name: 'Workflow Automation', href: '/micro-saas#workflow-automation' },
+    { name: 'AI Lead Scoring', href: '/micro-saas#ai-lead-scoring' },
+    { name: 'Social Media Scheduler', href: '/micro-saas#social-media-scheduler' }
   ]
 };
 

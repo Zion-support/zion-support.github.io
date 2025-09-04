@@ -38,7 +38,11 @@ import {
   Search,
   Eye,
   Target,
-  TrendingUp
+  TrendingUp,
+  Package,
+  Calendar,
+  BookOpen,
+  ShoppingCart
 } from 'lucide-react';
 
 const microSaaSProducts = [
@@ -57,7 +61,8 @@ const microSaaSProducts = [
     icon: Shield,
     features: ['Prompt Testing', 'Bias Detection', 'Safety Checks', 'Guardrail Policies'],
     pricing: '$799 - $3,500/month',
-    category: 'AI Safety'
+    category: 'AI Safety',
+    popular: true
   },
   {
     title: 'Customer Feedback & NPS Micro-App',
@@ -89,7 +94,152 @@ const microSaaSProducts = [
     icon: Settings,
     features: ['Visual Builder', '100+ Integrations', 'Conditional Logic', 'Scheduled Tasks'],
     pricing: '$99 - $599/month',
-    category: 'Automation'
+    category: 'Automation',
+    popular: true
+  },
+  {
+    title: 'AI Lead Scoring & Enrichment',
+    description: 'Intelligent lead scoring and data enrichment for sales teams.',
+    icon: Target,
+    features: ['Lead Scoring', 'Data Enrichment', 'Behavioral Tracking', 'CRM Integration'],
+    pricing: '$199 - $999/month',
+    category: 'Sales'
+  },
+  {
+    title: 'Social Media Scheduler Pro',
+    description: 'Advanced social media management with AI-powered content optimization.',
+    icon: Globe,
+    features: ['Multi-platform Posting', 'Optimal Timing', 'Content Suggestions', 'Analytics Dashboard'],
+    pricing: '$49 - $299/month',
+    category: 'Social Media'
+  },
+  {
+    title: 'Invoice & Payment Processor',
+    description: 'Streamlined invoicing and payment processing for small businesses.',
+    icon: DollarSign,
+    features: ['Invoice Generation', 'Payment Processing', 'Recurring Billing', 'Financial Reports'],
+    pricing: '$29 - $199/month',
+    category: 'Finance'
+  },
+  {
+    title: 'Project Time Tracker',
+    description: 'Comprehensive time tracking and project management for teams.',
+    icon: Clock,
+    features: ['Time Tracking', 'Project Management', 'Team Collaboration', 'Reporting'],
+    pricing: '$9 - $49/month',
+    category: 'Productivity'
+  },
+  {
+    title: 'Email Marketing Automation',
+    description: 'Advanced email marketing with AI-powered personalization and automation.',
+    icon: Mail,
+    features: ['Email Templates', 'Automation Workflows', 'A/B Testing', 'Analytics'],
+    pricing: '$39 - $299/month',
+    category: 'Marketing'
+  },
+  {
+    title: 'Inventory Management System',
+    description: 'Smart inventory tracking and management for e-commerce businesses.',
+    icon: Package,
+    features: ['Stock Tracking', 'Low Stock Alerts', 'Supplier Management', 'Analytics'],
+    pricing: '$79 - $399/month',
+    category: 'E-commerce'
+  },
+  {
+    title: 'Customer Support Ticketing',
+    description: 'AI-powered customer support ticketing and knowledge base system.',
+    icon: MessageSquare,
+    features: ['Ticket Management', 'Knowledge Base', 'AI Chatbot', 'Performance Analytics'],
+    pricing: '$19 - $149/month',
+    category: 'Support'
+  },
+  {
+    title: 'HR & Payroll Management',
+    description: 'Complete HR and payroll solution for small to medium businesses.',
+    icon: Users,
+    features: ['Employee Management', 'Payroll Processing', 'Time Off Tracking', 'Compliance'],
+    pricing: '$99 - $499/month',
+    category: 'HR'
+  },
+  {
+    title: 'Website Analytics & Heatmaps',
+    description: 'Advanced website analytics with heatmaps and user behavior tracking.',
+    icon: BarChart3,
+    features: ['User Behavior Tracking', 'Heatmaps', 'Conversion Funnels', 'A/B Testing'],
+    pricing: '$29 - $199/month',
+    category: 'Analytics'
+  },
+  {
+    title: 'Document Management System',
+    description: 'Secure document storage, sharing, and collaboration platform.',
+    icon: FileText,
+    features: ['Document Storage', 'Version Control', 'Collaboration Tools', 'Security'],
+    pricing: '$19 - $99/month',
+    category: 'Document Management'
+  },
+  {
+    title: 'Event Management Platform',
+    description: 'Complete event planning and management solution for organizers.',
+    icon: Calendar,
+    features: ['Event Planning', 'Registration Management', 'Payment Processing', 'Analytics'],
+    pricing: '$49 - $299/month',
+    category: 'Events'
+  },
+  {
+    title: 'Learning Management System',
+    description: 'Online learning platform for courses, training, and certifications.',
+    icon: BookOpen,
+    features: ['Course Creation', 'Student Management', 'Progress Tracking', 'Certificates'],
+    pricing: '$79 - $399/month',
+    category: 'Education'
+  },
+  {
+    title: 'Real Estate CRM',
+    description: 'Specialized CRM for real estate agents and property management.',
+    icon: Building,
+    features: ['Lead Management', 'Property Listings', 'Client Communication', 'Deal Tracking'],
+    pricing: '$39 - $199/month',
+    category: 'Real Estate'
+  },
+  {
+    title: 'Restaurant POS & Management',
+    description: 'Point of sale and restaurant management system with inventory tracking.',
+    icon: ShoppingCart,
+    features: ['POS System', 'Menu Management', 'Inventory Tracking', 'Staff Scheduling'],
+    pricing: '$99 - $499/month',
+    category: 'Restaurant'
+  },
+  {
+    title: 'Fitness & Wellness Tracker',
+    description: 'Comprehensive fitness tracking and wellness management platform.',
+    icon: Heart,
+    features: ['Workout Tracking', 'Nutrition Logging', 'Progress Monitoring', 'Community Features'],
+    pricing: '$9 - $49/month',
+    category: 'Health & Fitness'
+  },
+  {
+    title: 'Cryptocurrency Portfolio Tracker',
+    description: 'Advanced cryptocurrency portfolio tracking and trading analytics.',
+    icon: TrendingUp,
+    features: ['Portfolio Tracking', 'Price Alerts', 'Trading Analytics', 'Tax Reporting'],
+    pricing: '$19 - $99/month',
+    category: 'Crypto'
+  },
+  {
+    title: 'Fleet Management System',
+    description: 'GPS tracking and fleet management solution for transportation companies.',
+    icon: Car,
+    features: ['GPS Tracking', 'Route Optimization', 'Driver Management', 'Maintenance Scheduling'],
+    pricing: '$199 - $999/month',
+    category: 'Transportation'
+  },
+  {
+    title: 'Property Maintenance Tracker',
+    description: 'Property maintenance and facility management solution.',
+    icon: Settings,
+    features: ['Maintenance Scheduling', 'Work Order Management', 'Vendor Management', 'Reporting'],
+    pricing: '$49 - $299/month',
+    category: 'Property Management'
   }
 ];
 

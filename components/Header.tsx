@@ -27,10 +27,10 @@ const navigation = [
     href: '/services',
     icon: Settings,
     children: [
-      { name: 'AI Solutions', href: '/services?category=AI Solutions', icon: Brain, count: '20+' },
-      { name: 'IT Services', href: '/services?category=IT Services', icon: Network, count: '15+' },
-      { name: 'Micro SaaS', href: '/services?category=Micro-SaaS', icon: Cloud, count: '25+' },
-      { name: 'All Services', href: '/services', icon: Globe, count: '60+' }
+      { name: 'AI Solutions', href: '/ai-services', icon: Brain, count: '20+' },
+      { name: 'IT Services', href: '/it-services', icon: Network, count: '20+' },
+      { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, count: '25+' },
+      { name: 'All Services', href: '/services', icon: Globe, count: '65+' }
     ]
   },
   {

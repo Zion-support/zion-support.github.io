@@ -10,24 +10,30 @@ const services = [
     description: "Cutting-edge artificial intelligence solutions including machine learning, natural language processing, and intelligent automation.",
     icon: Brain,
     href: "/ai-services",
-    features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"],
-    pricing: "Starting at $2,000/month"
+    features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics", "AI Fraud Detection", "Voice AI", "Content Generation"],
+    pricing: "Starting at $1,000/month",
+    count: "20+ Services",
+    popular: true
   },
   {
     title: "IT Services", 
     description: "Comprehensive information technology services including cloud infrastructure, cybersecurity, and system administration.",
     icon: Network,
     href: "/it-services",
-    features: ["Cloud Infrastructure", "Cybersecurity", "System Administration", "Network Management"],
-    pricing: "Starting at $120/hour"
+    features: ["Cloud Infrastructure", "Cybersecurity", "System Administration", "Network Management", "DevOps & CI/CD", "Data Center Migration"],
+    pricing: "Starting at $120/hour",
+    count: "20+ Services",
+    popular: true
   },
   {
     title: "Micro SaaS",
     description: "Scalable software as a service solutions designed for specific business needs and rapid deployment.",
     icon: Cloud,
     href: "/micro-saas",
-    features: ["Custom Applications", "API Development", "Database Solutions", "Integration Services"],
-    pricing: "Starting at $299/month"
+    features: ["Custom Applications", "API Development", "Database Solutions", "Integration Services", "Workflow Automation", "Lead Management"],
+    pricing: "Starting at $29/month",
+    count: "25+ Products",
+    popular: true
   }
 ];
 
@@ -114,19 +120,31 @@ export default function ServicesPage() {
               return (
                 <motion.div
                   key={index}
-                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -5 }}
                 >
+                  {service.popular && (
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
                   <div className="text-blue-600 mb-6 group-hover:text-purple-600 transition-colors">
                     <IconComponent className="w-12 h-12" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                    {service.title}
-                  </h3>
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-2xl font-bold text-gray-900">
+                      {service.title}
+                    </h3>
+                    <span className="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                      {service.count}
+                    </span>
+                  </div>
                   <p className="text-gray-600 mb-6 leading-relaxed">
                     {service.description}
                   </p>
