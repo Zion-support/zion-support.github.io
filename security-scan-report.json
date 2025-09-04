@@ -1,38 +1,126 @@
 {
-  "timestamp": "2025-09-04T02:05:42.730Z",
-  "duration": "703ms",
-  "overallStatus": "unhealthy",
-  "summary": {
-    "total": 5,
-    "healthy": 3,
-    "warnings": 1,
-    "unhealthy": 1
-  },
-  "checks": [
-    {
-      "name": "Hardcoded Secrets",
-      "status": "healthy",
-      "details": "No hardcoded secrets detected"
-    },
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "timestamp": "2025-09-04T02:05:34.188Z",
+  "status": "failed",
+  "scans": [
     {
       "name": "Dependency Vulnerabilities",
-      "status": "unhealthy",
-      "details": "Command failed: npm audit --json\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+      "status": "warning",
+      "duration": 619,
+      "findings": [],
+      "message": "Found 0 vulnerabilities in dependencies"
+    },
+    {
+      "name": "Hardcoded Secrets",
+      "status": "warning",
+      "duration": 239,
+      "findings": [
+        {
+          "type": "hardcoded_password",
+          "severity": "high",
+          "file": "automation-orchestrator-report.json",
+          "description": "Potential hardcoded hardcoded password found",
+          "recommendation": "Use environment variables instead"
+        },
+        {
+          "type": "hardcoded_token",
+          "severity": "medium",
+          "file": "automation-orchestrator-report.json",
+          "description": "Potential hardcoded hardcoded token found",
+          "recommendation": "Use environment variables instead"
+        }
+      ],
+      "message": "Found 2 potential secrets"
     },
     {
       "name": "File Permissions",
+      "status": "success",
+      "duration": 0,
+      "findings": [],
+      "message": "File permissions are secure"
+    },
+    {
+      "name": "Content Security Policy",
       "status": "warning",
-      "details": "2 files with insecure permissions"
-    },
-    {
-      "name": "Exposed Information",
-      "status": "healthy",
-      "details": "No sensitive information exposure detected"
-    },
-    {
-      "name": "Insecure HTTP",
-      "status": "healthy",
-      "details": "No insecure HTTP usage detected"
+      "duration": 2,
+      "findings": [
+        {
+          "type": "csp_violation",
+          "severity": "medium",
+          "file": "pages/index.tsx",
+          "description": "Use of dangerouslySetInnerHTML detected",
+          "recommendation": "Sanitize content or use safer alternatives"
+        }
+      ],
+      "message": "Found 1 CSP issues"
     }
-  ]
+  ],
+  "vulnerabilities": [
+    {
+      "type": "hardcoded_password",
+      "severity": "high",
+      "file": "automation-orchestrator-report.json",
+      "description": "Potential hardcoded hardcoded password found",
+      "recommendation": "Use environment variables instead"
+    },
+    {
+      "type": "hardcoded_token",
+      "severity": "medium",
+      "file": "automation-orchestrator-report.json",
+      "description": "Potential hardcoded hardcoded token found",
+      "recommendation": "Use environment variables instead"
+    },
+    {
+      "type": "csp_violation",
+      "severity": "medium",
+      "file": "pages/index.tsx",
+      "description": "Use of dangerouslySetInnerHTML detected",
+      "recommendation": "Sanitize content or use safer alternatives"
+    }
+  ],
+  "summary": {
+    "total": 3,
+    "critical": 0,
+    "high": 1,
+    "medium": 2,
+    "low": 0,
+    "info": 0
+  }
+=======
+  "timestamp": "2025-09-04T00:00:10.786Z",
+  "scans": {
+    "packageJson": {
+      "status": "completed",
+      "dependencies": 111,
+      "vulnerablePackages": 0
+    },
+    "sensitiveFiles": {
+      "status": "completed",
+      "found": 0,
+      "files": []
+    },
+    "codeScan": {
+      "status": "completed",
+      "filesScanned": 10,
+      "potentialSecrets": 0
+    },
+    "npmAudit": {
+      "status": "skipped",
+      "message": "npm audit not available or failed"
+    }
+  },
+  "vulnerabilities": [],
+  "status": "secure"
+>>>>>>> 128840a43b844df0edc9aa22038e6fb53d898bf5
+=======
+  "timestamp": "2025-09-04T02:16:02.212Z",
+  "summary": {
+    "passed": 3,
+    "warnings": 1,
+    "errors": 0,
+    "infos": 1
+  },
+  "status": "WARNING"
+>>>>>>> 9d52a0b519566fb829f098b2703072e5c0978931
 }

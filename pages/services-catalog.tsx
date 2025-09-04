@@ -1,318 +1,233 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Brain, Cloud, Layers } from 'lucide-react';
+import { Search, Filter, ArrowRight, Star, Clock, DollarSign } from 'lucide-react';
+import { useState } from 'react';
 
 export default function ServicesCatalog() {
-  const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
-  }
-  const sections = [
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const services = [
     {
-      id: 'micro-saas',
-      title: 'Micro SaaS Products',
-      icon: Layers,
-      items: [
-        {
-          name: 'Cloud Cost Guard (FinOps Assistant)',
-          blurb: 'Automated cloud cost anomaly detection, budget guardrails, and rightsizing recommendations across AWS/Azure/GCP.',
-          price: '$299 – $1,499/month',
-          eta: '1–2 weeks',
-          bullets: [
-            'Anomaly detection on daily spend and resources',
-            'Idle/overprovisioned resource cleanup suggestions',
-            'Forecasting, budgets, and team alerts (Slack/Email)',
-            'Executive savings dashboards and benchmarks'
-          ],
-          link: '/micro-saas'
-        },
-        {
-          name: 'API Rate Limiter & Analytics',
-          blurb: 'Intelligent rate limiting, usage analytics, and API monetization for SaaS platforms with real-time monitoring.',
-          price: '$199 – $999/month',
-          eta: '1–2 weeks',
-          bullets: [
-            'Dynamic rate limiting based on user tiers',
-            'Real-time API usage analytics and reporting',
-            'Revenue tracking and billing integration',
-            'DDoS protection and abuse prevention'
-          ],
-          link: '/micro-saas'
-        },
-        {
-          name: 'Smart Document Processing',
-          blurb: 'AI-powered OCR, data extraction, and document workflow automation for businesses of all sizes.',
-          price: '$399 – $1,999/month',
-          eta: '2–3 weeks',
-          bullets: [
-            'Advanced OCR with 99%+ accuracy',
-            'Intelligent data extraction and validation',
-            'Workflow automation and approval processes',
-            'Integration with existing business systems'
-          ],
-          link: '/micro-saas'
-        },
-        {
-          name: 'Customer Churn Predictor',
-          blurb: 'Machine learning models to predict and prevent customer churn with actionable insights and automated interventions.',
-          price: '$399 – $1,599/month',
-          eta: '2–4 weeks',
-          bullets: [
-            'Real-time churn risk scoring',
-            'Automated retention campaign triggers',
-            'Customer health dashboards',
-            'ROI tracking and success metrics'
-          ],
-          link: '/micro-saas'
-        }
-      ]
+      id: 1,
+      name: 'Cloud Cost Guard (FinOps Assistant)',
+      category: 'micro-saas',
+      description: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
+      pricing: '$299–$1,499/month',
+      rating: 4.9,
+      delivery: '2-4 weeks',
+      features: ['Anomaly Detection', 'Cost Optimization', 'Budget Alerts', 'Multi-Cloud Support']
     },
     {
-      id: 'ai',
-      title: 'AI Services & Platforms',
-      icon: Brain,
-      items: [
-        {
-          name: 'RAG Platform‑in‑a‑Box',
-          blurb: 'End‑to‑end retrieval augmented generation with connectors, governance, analytics, and feedback loops.',
-          price: '$4,000 – $18,000/month',
-          eta: '4–8 weeks',
-          bullets: [
-            'Connectors for docs, tickets, CRM, and data lakes',
-            'Embedding strategy and vector stores (FAISS/PGVector)',
-            'Citations, human feedback loops, analytics',
-            'PII scrubbers and policy guardrails'
-          ],
-          link: '/ai-services'
-        },
-        {
-          name: 'Computer Vision & Image Analysis',
-          blurb: 'Advanced object detection, facial recognition, quality control, and medical imaging analysis with custom model training.',
-          price: '$5,000 – $25,000 setup',
-          eta: '6–12 weeks',
-          bullets: [
-            'Custom object detection and classification models',
-            'Real-time image processing and analysis',
-            'Quality control and defect detection systems',
-            'Medical imaging and diagnostic assistance'
-          ],
-          link: '/ai-services'
-        },
-        {
-          name: 'AI-Powered Fraud Detection',
-          blurb: 'Real-time fraud scoring, anomaly detection, and risk assessment for financial transactions with machine learning models.',
-          price: '$8,000 – $40,000 setup',
-          eta: '8–16 weeks',
-          bullets: [
-            'Real-time transaction fraud scoring',
-            'Behavioral anomaly detection',
-            'Risk assessment and decision automation',
-            'Compliance reporting and audit trails'
-          ],
-          link: '/ai-services'
-        },
-        {
-          name: 'Conversational AI Platform',
-          blurb: 'Multi-channel chatbots, voice assistants, and intelligent virtual agents with natural language understanding.',
-          price: '$8,000 – $35,000 setup',
-          eta: '6–14 weeks',
-          bullets: [
-            'Multi-language conversational AI',
-            'Voice and text interaction capabilities',
-            'Integration with existing business systems',
-            'Continuous learning and improvement'
-          ],
-          link: '/ai-services'
-        },
-        {
-          name: 'Generative AI Content Studio',
-          blurb: 'Advanced AI-powered content creation platform for marketing, social media, and brand communications.',
-          price: '$2,000 – $12,000/month',
-          eta: '3–6 weeks',
-          bullets: [
-            'Multi-modal content generation (text, images, video)',
-            'Brand voice consistency and customization',
-            'Content optimization for different platforms',
-            'Automated A/B testing and performance tracking'
-          ],
-          link: '/ai-services'
-        },
-        {
-          name: 'AI-Powered Agricultural Intelligence',
-          blurb: 'Comprehensive agricultural AI platform for crop monitoring, yield optimization, and farm management.',
-          price: '$1,000 – $8,000/month',
-          eta: '3–6 weeks',
-          bullets: [
-            'Crop health monitoring and analysis',
-            'Yield prediction and optimization',
-            'Pest and disease detection',
-            'Weather impact analysis and recommendations'
-          ],
-          link: '/ai-services'
-        }
-      ]
+      id: 2,
+      name: 'LLM Evaluation & Safety Suite',
+      category: 'ai-services',
+      description: 'Prompt evaluation, bias/toxicity checks, jailbreak tests and guardrail policies.',
+      pricing: '$799–$3,500/month',
+      rating: 4.8,
+      delivery: '3-6 weeks',
+      features: ['Bias Detection', 'Safety Testing', 'Prompt Optimization', 'Compliance Monitoring']
     },
     {
-      id: 'it',
-      title: 'IT & Cloud Services',
-      icon: Cloud,
-      items: [
-        {
-          name: 'Cloud Landing Zone + Migration',
-          blurb: 'Secure multi‑account AWS/Azure/GCP landing zone, IaC, guardrails, and app migration.',
-          price: '$8,000 – $45,000 fixed or $150 – $220/hr',
-          eta: '3–10 weeks',
-          bullets: [
-            'Networking, IAM, SSO, logging, backups',
-            'Foundational IaC (Terraform/Pulumi)',
-            'VPC design, cost and security guardrails',
-            'Application assessment and phased migration'
-          ],
-          link: '/it-services'
-        },
-        {
-          name: 'Kubernetes & Container Orchestration',
-          blurb: 'Production-ready Kubernetes clusters, microservices architecture, and container security hardening.',
-          price: '$8,000 – $40,000 project',
-          eta: '4–8 weeks',
-          bullets: [
-            'EKS/GKE/AKS cluster setup and configuration',
-            'Microservices architecture design',
-            'Container security and compliance',
-            'Auto-scaling and load balancing'
-          ],
-          link: '/it-services'
-        },
-        {
-          name: 'Cybersecurity Hardening & SOC',
-          blurb: 'Comprehensive security assessment, Zero Trust implementation, and Security Operations Center setup.',
-          price: '$5,000 – $40,000 project',
-          eta: '6–12 weeks',
-          bullets: [
-            'Zero Trust architecture implementation',
-            'Endpoint Detection and Response (EDR)',
-            'Security monitoring and incident response',
-            'Compliance and audit preparation'
-          ],
-          link: '/it-services'
-        },
-        {
-          name: 'Data Engineering & Analytics',
-          blurb: 'Modern data pipeline development, ETL processes, data warehousing, and analytics platform setup.',
-          price: '$12,000 – $60,000 project',
-          eta: '8–16 weeks',
-          bullets: [
-            'Data pipeline architecture and development',
-            'ETL/ELT process automation',
-            'Data warehouse and lake setup',
-            'Business intelligence and analytics dashboards'
-          ],
-          link: '/it-services'
-        },
-        {
-          name: 'Edge Computing Infrastructure',
-          blurb: 'Distributed edge computing solutions for low-latency applications and IoT device management.',
-          price: '$200 – $400/hour',
-          eta: '4–12 weeks',
-          bullets: [
-            'Edge server deployment and management',
-            'IoT device connectivity and management',
-            'Real-time data processing at the edge',
-            'Low-latency application hosting'
-          ],
-          link: '/it-services'
-        },
-        {
-          name: 'Zero Trust Network Architecture',
-          blurb: 'Comprehensive zero trust security implementation with micro-segmentation and continuous verification.',
-          price: '$8,000 – $50,000/project',
-          eta: '6–16 weeks',
-          bullets: [
-            'Network micro-segmentation',
-            'Identity-based access control',
-            'Continuous security monitoring',
-            'Threat detection and response'
-          ],
-          link: '/it-services'
-        },
-        {
-          name: '5G Network Infrastructure & Private Networks',
-          blurb: 'Private 5G network deployment and management for enterprise applications and IoT.',
-          price: '$250 – $500/hour',
-          eta: '12–24 weeks',
-          bullets: [
-            'Private 5G network design and deployment',
-            'Network slicing and optimization',
-            'IoT device connectivity management',
-            'Edge computing integration'
-          ],
-          link: '/it-services'
-        }
-      ]
+      id: 3,
+      name: 'Customer Feedback & NPS Micro-App',
+      category: 'micro-saas',
+      description: 'Embed surveys, analyze sentiment and route issues to the right team automatically.',
+      pricing: '$149–$799/month',
+      rating: 4.7,
+      delivery: '1-3 weeks',
+      features: ['Survey Builder', 'Sentiment Analysis', 'Auto-Routing', 'Analytics Dashboard']
+    },
+    {
+      id: 4,
+      name: 'API Rate Limiter & Analytics',
+      category: 'micro-saas',
+      description: 'Intelligent rate limiting, usage analytics, and API monetization for SaaS platforms.',
+      pricing: '$199–$999/month',
+      rating: 4.6,
+      delivery: '2-4 weeks',
+      features: ['Rate Limiting', 'Usage Analytics', 'Monetization', 'Security Monitoring']
+    },
+    {
+      id: 5,
+      name: 'Smart Document Processing',
+      category: 'ai-services',
+      description: 'AI-powered OCR, data extraction, and document workflow automation for businesses.',
+      pricing: '$399–$1,999/month',
+      rating: 4.8,
+      delivery: '4-8 weeks',
+      features: ['OCR Technology', 'Data Extraction', 'Workflow Automation', 'Integration APIs']
+    },
+    {
+      id: 6,
+      name: 'Social Media Scheduler Pro',
+      category: 'micro-saas',
+      description: 'Multi-platform scheduling, content optimization, and engagement analytics.',
+      pricing: '$99–$499/month',
+      rating: 4.5,
+      delivery: '1-2 weeks',
+      features: ['Multi-Platform', 'Content Optimization', 'Analytics', 'Auto-Posting']
     }
   ];
 
+  const categories = [
+    { id: 'all', name: 'All Services' },
+    { id: 'micro-saas', name: 'Micro SaaS' },
+    { id: 'ai-services', name: 'AI Services' },
+    { id: 'it-services', name: 'IT Services' },
+    { id: 'cloud', name: 'Cloud Solutions' },
+    { id: 'security', name: 'Cybersecurity' }
+  ];
+
+  const filteredServices = services.filter(service => {
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+    <>
       <Head>
-        <title>Services Catalog — Zion Tech Group</title>
-        <meta name="description" content="Expanded catalog of Micro SaaS products, AI platforms, and IT services with transparent pricing and timelines." />
-        <link rel="canonical" href={`${contact.site}/services-catalog`} />
+        <title>Services Catalog - Zion Tech Group</title>
+        <meta name="description" content="Browse our comprehensive catalog of technology services including AI solutions, micro SaaS products, and IT services." />
+        <meta name="keywords" content="services catalog, AI services, micro SaaS, IT solutions, technology services" />
+        <link rel="canonical" href="https://ziontechgroup.com/services-catalog" />
+        <meta property="og:title" content="Services Catalog - Zion Tech Group" />
+        <meta property="og:description" content="Browse our comprehensive catalog of technology services including AI solutions, micro SaaS products, and IT services." />
+        <meta property="og:url" content="https://ziontechgroup.com/services-catalog" />
+        <meta property="og:type" content="website" />
       </Head>
 
-      <header className="py-20 text-center px-4">
-        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">Services Catalog</h1>
-        <p className="mt-4 text-slate-300 max-w-3xl mx-auto">
-          Production‑ready Micro SaaS, AI, and Cloud solutions. Transparent pricing, clear timelines, and measurable outcomes.
-        </p>
-        <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-5 py-2 rounded bg-blue-600 hover:bg-blue-700">Call {contact.phone}</a>
-          <a href={`mailto:${contact.email}`} className="px-5 py-2 rounded bg-purple-600 hover:bg-purple-700">Email {contact.email}</a>
-          <Link href="/contact" className="px-5 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10">Contact Form</Link>
-        </div>
-        <div className="mt-2 text-slate-400 text-sm">{contact.address}</div>
-      </header>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Services <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Catalog</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Explore our comprehensive portfolio of technology solutions designed to accelerate your digital transformation.
+            </p>
+          </div>
 
-      <main className="max-w-6xl mx-auto px-4 pb-24 space-y-16">
-        {sections.map(section => (
-          <section key={section.id} id={section.id}>
-            <div className="flex items-center gap-3 mb-6">
-              <section.icon className="w-6 h-6 text-blue-400" />
-              <h2 className="text-2xl md:text-3xl font-bold">{section.title}</h2>
+          {/* Search and Filter */}
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 mb-12">
+            <div className="flex flex-col md:flex-row gap-4">
+              <div className="flex-1 relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search services..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400"
+                />
+              </div>
+              <div className="flex gap-2">
+                <Filter className="w-5 h-5 text-gray-400 mt-3" />
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-blue-400"
+                >
+                  {categories.map(category => (
+                    <option key={category.id} value={category.id} className="bg-slate-800">
+                      {category.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
             </div>
-            <div className="grid md:grid-cols-2 gap-6">
-              {section.items.map(item => (
-                <div key={item.name} className="rounded-xl border border-white/10 bg-slate-900/60 p-6 hover:border-blue-500/40 transition-colors">
-                  <h3 className="text-xl font-semibold">{item.name}</h3>
-                  <p className="mt-2 text-slate-300">{item.blurb}</p>
-                  <div className="mt-4 flex flex-wrap items-center gap-3 text-sm">
-                    <span className="px-2.5 py-1 rounded bg-slate-800/70 border border-white/10">{item.price}</span>
-                    <span className="px-2.5 py-1 rounded bg-slate-800/70 border border-white/10">Lead time: {item.eta}</span>
-                  </div>
-                  <ul className="mt-4 space-y-2 text-slate-300 list-disc list-inside">
-                    {item.bullets.map(point => (<li key={point}>{point}</li>))}
-                  </ul>
-                  <div className="mt-4 flex flex-wrap gap-3">
-                    <Link href={item.link} className="px-3 py-1.5 rounded bg-blue-600 hover:bg-blue-700 text-sm">Learn more</Link>
-                    <Link href="/contact" className="px-3 py-1.5 rounded bg-slate-800 hover:bg-slate-700 border border-white/10 text-sm">Request quote</Link>
+          </div>
+
+          {/* Services Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service) => (
+              <div key={service.id} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 group">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm font-medium">
+                    {categories.find(cat => cat.id === service.category)?.name}
+                  </span>
+                  <div className="flex items-center gap-1">
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <span className="text-white font-medium">{service.rating}</span>
                   </div>
                 </div>
-              ))}
-            </div>
-          </section>
-        ))}
 
-        <section className="pt-4">
-          <h2 className="text-xl font-semibold mb-2">Need something custom?</h2>
-          <p className="text-slate-300">We scope custom builds with fixed‑bid or time‑and‑materials. Typical rates: $120 – $220/hr depending on skillset and urgency.</p>
-          <div className="mt-3">
-            <a href={`${contact.site}/contact`} className="underline">Discuss your project</a>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">
+                  {service.name}
+                </h3>
+
+                <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                  {service.description}
+                </p>
+
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center gap-2 text-sm text-gray-300">
+                    <DollarSign className="w-4 h-4" />
+                    <span>{service.pricing}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-gray-300">
+                    <Clock className="w-4 h-4" />
+                    <span>Delivery: {service.delivery}</span>
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {service.features.map((feature, index) => (
+                      <span key={index} className="px-2 py-1 bg-white/5 text-gray-300 rounded text-xs">
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <Link 
+                  href="/contact" 
+                  className="inline-flex items-center justify-center w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-blue-500/25"
+                >
+                  Get Started
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            ))}
           </div>
-        </section>
-      </main>
-    </div>
+
+          {/* No Results */}
+          {filteredServices.length === 0 && (
+            <div className="text-center py-12">
+              <div className="w-16 h-16 bg-gray-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Search className="w-8 h-8 text-gray-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">No services found</h3>
+              <p className="text-gray-300 mb-6">Try adjusting your search terms or filters</p>
+              <button
+                onClick={() => {
+                  setSearchTerm('');
+                  setSelectedCategory('all');
+                }}
+                className="text-blue-400 hover:text-blue-300 transition-colors"
+              >
+                Clear filters
+              </button>
+            </div>
+          )}
+
+          {/* CTA Section */}
+          <div className="text-center mt-16">
+            <h2 className="text-3xl font-bold text-white mb-6">Need a Custom Solution?</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Don't see what you're looking for? Our team can create custom solutions tailored to your specific needs.
+            </p>
+            <Link href="/contact" className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
+              Discuss Your Project
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }

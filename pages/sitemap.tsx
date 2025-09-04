@@ -20,14 +20,18 @@ export default function Sitemap() {
     { href: '/faq', title: 'FAQ', description: 'Frequently asked questions' },
     { href: '/privacy', title: 'Privacy Policy', description: 'Our privacy policy and data protection' },
     { href: '/terms', title: 'Terms of Service', description: 'Terms and conditions for our services' },
+    { href: '/schedule-demo', title: 'Schedule Demo', description: 'Book a personalized demo of our solutions' },
+    { href: '/enterprise', title: 'Enterprise Solutions', description: 'Enterprise-grade technology solutions' },
   ];
 
   const services = [
     { href: '/services', title: 'All Services', description: 'Complete overview of all our services' },
+    { href: '/services-overview', title: 'Services Overview', description: 'Comprehensive overview of our technology services' },
+    { href: '/services-catalog', title: 'Services Catalog', description: 'Detailed catalog of all services' },
+    { href: '/services-comparison', title: 'Services Comparison', description: 'Compare our services side-by-side' },
     { href: '/micro-saas', title: 'Micro SaaS Products', description: '150+ innovative micro SaaS solutions' },
     { href: '/ai-services', title: 'AI Services', description: '100+ AI-powered services and solutions' },
     { href: '/it-services', title: 'IT Services', description: '100+ comprehensive IT solutions' },
-    { href: '/services-catalog', title: 'Services Catalog', description: 'Detailed catalog of all services' },
     { href: '/cloud-devops', title: 'Cloud & DevOps', description: 'Cloud computing and DevOps solutions' },
     { href: '/cybersecurity', title: 'Cybersecurity', description: 'Security solutions and consulting' },
     { href: '/quantum-computing', title: 'Quantum Computing', description: 'Quantum computing consulting and solutions' },

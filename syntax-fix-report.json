@@ -1,26 +1,35 @@
 {
-  "timestamp": "2025-09-03T16:54:11.661Z",
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "timestamp": "2025-09-04T01:04:25.846Z",
 =======
-  "timestamp": "2025-09-03T22:18:49.780Z",
+  "timestamp": "2025-09-03T16:53:09.087Z",
+>>>>>>> 128840a43b844df0edc9aa22038e6fb53d898bf5
+  "fixes": [],
+=======
+  "timestamp": "2025-09-04T01:43:11.173Z",
   "fixes": [
-    "components/ContactForm.tsx: Remove semicolon after closing brace (3 fixes)",
+    "components/ContactForm.tsx: Remove semicolon after closing brace (1 fixes)",
     "components/ContactForm.tsx: Remove duplicate closing braces (1 fixes)",
+    "components/ErrorBoundary.tsx: Remove semicolon after closing brace (1 fixes)",
     "components/ErrorBoundary.tsx: Remove duplicate closing braces (2 fixes)",
-    "components/LoadingSpinner.tsx: Remove semicolon after closing brace (2 fixes)",
     "components/PerformanceMonitor.tsx: Remove semicolon after closing brace (1 fixes)",
     "components/PerformanceMonitor.tsx: Remove duplicate closing braces (4 fixes)",
-    "components/SearchBar.tsx: Remove semicolon after closing brace (6 fixes)",
-    "components/SearchBar.tsx: Remove duplicate closing braces (2 fixes)",
-    "components/ThemeToggle.tsx: Remove semicolon after closing brace (1 fixes)",
+    "components/ThemeToggle.tsx: Remove duplicate closing braces (2 fixes)",
     "pages/_app.tsx: Remove duplicate closing braces (1 fixes)",
-    "pages/cloud-devops.tsx: Remove semicolon after closing brace (1 fixes)",
-    "pages/cybersecurity.tsx: Remove semicolon after closing brace (1 fixes)",
-    "pages/docs.tsx: Remove semicolon after closing brace (1 fixes)",
+    "pages/blog.tsx: Remove semicolon after closing brace (1 fixes)",
+    "pages/careers.tsx: Remove semicolon after closing brace (1 fixes)",
+    "pages/green-it.tsx: Remove semicolon after closing brace (1 fixes)",
     "pages/index.tsx: Remove semicolon after closing brace (1 fixes)",
     "pages/index.tsx: Remove duplicate closing braces (1 fixes)",
-    "pages/quantum-computing.tsx: Remove semicolon after closing brace (1 fixes)"
+    "pages/news.tsx: Remove semicolon after closing brace (1 fixes)",
+    "pages/partners.tsx: Remove semicolon after closing brace (1 fixes)",
+    "pages/request-quote.tsx: Remove semicolon after closing brace (3 fixes)",
+    "pages/research-development.tsx: Remove semicolon after closing brace (1 fixes)",
+    "pages/solutions.tsx: Remove semicolon after closing brace (1 fixes)"
   ],
+>>>>>>> 9d52a0b519566fb829f098b2703072e5c0978931
   "issues": [],
-  "totalFixes": 16,
+  "totalFixes": 18,
   "totalIssues": 0
 }

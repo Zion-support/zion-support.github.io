@@ -1,14 +1,9 @@
 {
-  "timestamp": "2025-09-03T22:18:49.800Z",
-=======
-  "timestamp": "2025-09-04T00:00:07.357Z",
-=======
-  "timestamp": "2025-09-04T02:00:48.117Z",
->>>>>>> d92321314d9 (Checkpoint before follow-up message)
+  "timestamp": "2025-09-04T01:04:25.872Z",
   "bundleSize": {
     ".next": {
-      "size": 49474164,
-      "sizeMB": "47.18"
+      "size": 28534499,
+      "sizeMB": "27.21"
     },
     "node_modules": {
       "size": 820676108,
