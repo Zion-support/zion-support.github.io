@@ -1485,6 +1485,160 @@ export default function AIServices() {
         'Streamlined audit processes',
         'Real-time compliance monitoring'
       ]
+    },
+    {
+      icon: Brain,
+      name: 'LLM Fine-Tuning & Custom Models',
+      description: 'Custom large language model training and fine-tuning for specialized business applications and domain-specific tasks.',
+      features: [
+        'Custom model training on proprietary data',
+        'Domain-specific fine-tuning (legal, medical, finance)',
+        'Model optimization for specific use cases',
+        'Continuous learning and model updates',
+        'Performance benchmarking and validation',
+        'Deployment and scaling infrastructure'
+      ],
+      pricing: '$15,000 – $100,000 project',
+      perUnit: '$0.50 – $5.00 per 1K tokens',
+      timeline: '8–16 weeks',
+      benefits: [
+        '95% accuracy in domain-specific tasks',
+        'Reduced hallucination and improved reliability',
+        'Customized responses for business needs',
+        'Competitive advantage through proprietary models'
+      ]
+    },
+    {
+      icon: Users,
+      name: 'AI Agent Development Platform',
+      description: 'Intelligent autonomous agents that can perform complex business tasks, make decisions, and interact with systems.',
+      features: [
+        'Multi-agent orchestration and coordination',
+        'Natural language task understanding',
+        'API integration and system automation',
+        'Decision-making and reasoning capabilities',
+        'Learning from interactions and feedback',
+        'Human-in-the-loop supervision'
+      ],
+      pricing: '$10,000 – $75,000 setup',
+      perUnit: '$0.10 – $1.00 per task',
+      timeline: '6–12 weeks',
+      benefits: [
+        '80% reduction in manual task execution',
+        '24/7 autonomous business operations',
+        'Scalable workforce augmentation',
+        'Improved operational efficiency'
+      ]
+    },
+    {
+      icon: Shield,
+      name: 'AI Security & Fraud Detection',
+      description: 'Advanced AI-powered security solutions for threat detection, fraud prevention, and risk assessment.',
+      features: [
+        'Real-time fraud detection and prevention',
+        'Behavioral anomaly detection',
+        'Threat intelligence and analysis',
+        'Automated incident response',
+        'Risk scoring and assessment',
+        'Compliance monitoring and reporting'
+      ],
+      pricing: '$8,000 – $50,000 setup',
+      perUnit: '$0.05 – $0.50 per transaction',
+      timeline: '4–8 weeks',
+      benefits: [
+        '99.5% fraud detection accuracy',
+        'Real-time threat prevention',
+        'Reduced false positives',
+        'Automated compliance reporting'
+      ]
+    },
+    {
+      icon: TrendingUp,
+      name: 'AI-Powered Business Intelligence',
+      description: 'Advanced analytics and business intelligence platform with AI-driven insights and automated reporting.',
+      features: [
+        'Automated data analysis and insights',
+        'Predictive business metrics',
+        'Natural language query interface',
+        'Automated report generation',
+        'Anomaly detection and alerting',
+        'Interactive dashboards and visualizations'
+      ],
+      pricing: '$5,000 – $30,000 setup',
+      perUnit: '$0.20 – $2.00 per report',
+      timeline: '4–8 weeks',
+      benefits: [
+        '90% faster data analysis',
+        'Automated insight generation',
+        'Improved decision-making speed',
+        'Reduced manual reporting workload'
+      ]
+    },
+    {
+      icon: Mic,
+      name: 'AI Voice & Speech Solutions',
+      description: 'Advanced voice AI including speech recognition, synthesis, and conversational AI for voice interfaces.',
+      features: [
+        'High-accuracy speech recognition',
+        'Natural voice synthesis and cloning',
+        'Conversational AI for voice interfaces',
+        'Multi-language voice processing',
+        'Emotion and sentiment analysis',
+        'Real-time voice translation'
+      ],
+      pricing: '$6,000 – $40,000 setup',
+      perUnit: '$0.01 – $0.10 per minute',
+      timeline: '6–10 weeks',
+      benefits: [
+        '99% speech recognition accuracy',
+        'Natural human-like voice synthesis',
+        'Multi-language support',
+        'Enhanced user experience'
+      ]
+    },
+    {
+      icon: Database,
+      name: 'AI Data Pipeline & ETL',
+      description: 'Intelligent data processing, transformation, and pipeline automation with AI-powered data quality assurance.',
+      features: [
+        'Automated data extraction and transformation',
+        'AI-powered data quality validation',
+        'Intelligent data mapping and integration',
+        'Real-time data processing pipelines',
+        'Automated data cleansing and enrichment',
+        'Data lineage and governance'
+      ],
+      pricing: '$8,000 – $45,000 setup',
+      perUnit: '$0.10 – $1.00 per GB processed',
+      timeline: '6–12 weeks',
+      benefits: [
+        '95% reduction in data processing time',
+        'Automated data quality assurance',
+        'Real-time data pipeline monitoring',
+        'Improved data accuracy and reliability'
+      ]
+    },
+    {
+      icon: Code,
+      name: 'AI Code Generation & Review',
+      description: 'Intelligent code generation, review, and optimization using advanced AI models for software development.',
+      features: [
+        'Automated code generation from specifications',
+        'AI-powered code review and optimization',
+        'Bug detection and vulnerability scanning',
+        'Code documentation generation',
+        'Performance optimization suggestions',
+        'Integration with development workflows'
+      ],
+      pricing: '$5,000 – $35,000 setup',
+      perUnit: '$0.50 – $5.00 per 1K lines of code',
+      timeline: '4–8 weeks',
+      benefits: [
+        '70% faster code development',
+        'Reduced bugs and vulnerabilities',
+        'Automated code optimization',
+        'Improved code quality and maintainability'
+      ]
     }
   ];
 
