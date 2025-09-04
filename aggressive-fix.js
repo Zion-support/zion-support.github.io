@@ -15,24 +15,25 @@ function createValidReactComponent(filePath) {
   
   return `import React from "react";
 export default function ${componentName}() {
-  return (;
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">;
-      <SEO title=`${componentName} - Zion Technologies`;
-        description=`Professional ${componentName} services by Zion Technologies`;
-      />;
-      <div className="container mx-auto px-4 py-16">;
-        <div className="text-center">;
-          <h1 className={`text-4xl font-bold text-white mb-8`>;
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      <SEO title="${componentName} - Zion Technologies"
+        description="Professional ${componentName} services by Zion Technologies"
+      />
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">
             ${componentName}
-          </h1>;
-          <p className=`text-xl text-gray-300 max-w-3xl mx-auto`}>;
-            Professional ${componentName} services delivered with cutting-edge technology and expertise.;
-          </p>;
-        </div>;
-      </div>;
-    </div>;
-  )}
-`}
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional ${componentName} services delivered with cutting-edge technology and expertise.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}`;
+}
 
 function fixFile(filePath) {
   try {
@@ -41,10 +42,13 @@ function fixFile(filePath) {
     if (content.trim().length < 20) {
       const newContent = createValidReactComponent(filePath);
       fs.writeFileSync(filePath, newContent);
-      return true}
-    return false} catch (error) {
+      return true;
+    }
+    return false;
+  } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false}
+    return false;
+  }
 }
 
 function processDirectory(dirPath) {
@@ -55,17 +59,19 @@ function processDirectory(dirPath) {
       const fullPath = path.join(dirPath, item);
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {
-  fixedCount += processDirectory(fullPath)} else if (item.endsWith(".tsx") || item.endsWith(".ts") || item.endsWith(".js") || item.endsWith(".jsx")) {
-  if (fixFile(fullPath)) {
-  fixedCount++,
-}
+        fixedCount += processDirectory(fullPath);
+      } else if (item.endsWith(".tsx") || item.endsWith(".ts") || item.endsWith(".js") || item.endsWith(".jsx")) {
+        if (fixFile(fullPath)) {
+          fixedCount++;
+        }
       }
     }
-    return false} catch (error) {
-  console.error(`Error processing directory ${dirPath}:`, error.message)}
-  
-  return fixedCount}
-;
+    return fixedCount;
+  } catch (error) {
+    console.error(`Error processing directory ${dirPath}:`, error.message);
+    return 0;
+  }
+}
 console.log("Starting aggressive fix...");
 const fixedCount = processDirectory(path.join(__dirname, "src"));
 console.log(`Fixed ${fixedCount} files`);
