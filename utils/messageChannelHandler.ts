@@ -6,10 +6,17 @@ type MessageHandler = {
 
 export const messageChannelHandler: MessageHandler = {
   sendMessage: (_message) => {
+<<<<<<< HEAD
     // no-op placeholder; wire to real transport as needed
   },
   receiveMessage: (_callback) => {
     // no-op placeholder; wire to real transport as needed
+=======
+    // No-op: placeholder for message channel integration
+  },
+  receiveMessage: (_callback) => {
+    // No-op: placeholder for message listener registration
+>>>>>>> origin/merge-pr-11208
   },
 =======
 export const messageChannelHandler = {
