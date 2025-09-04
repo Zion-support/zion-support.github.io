@@ -111,11 +111,13 @@
     "pm2:restart": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && (pm2 restart ecosystem.config.cjs || pm2 start ecosystem.config.cjs --update-env)",
     "pm2:status": "pm2 status",
     "pm2:logs": "pm2 logs --lines 200",
-    "pm2:intelligent:start": "bash scripts/start-intelligent-automations.sh",
-    "pm2:intelligent:stop": "pm2 stop ecosystem.intelligent.config.cjs || true",
-    "pm2:intelligent:restart": "pm2 restart ecosystem.intelligent.config.cjs || pm2 start ecosystem.intelligent.config.cjs --update-env",
+    "pm2:intelligent:start": "bash scripts/start-intelligent-pm2-system.sh",
+    "pm2:intelligent:stop": "pm2 stop ecosystem.intelligent.cjs || true",
+    "pm2:intelligent:restart": "pm2 restart ecosystem.intelligent.cjs || pm2 start ecosystem.intelligent.cjs --update-env",
     "pm2:intelligent:status": "pm2 status",
     "pm2:intelligent:logs": "pm2 logs --lines 200",
+    "pm2:intelligent:monitor": "pm2 monit",
+    "pm2:intelligent:health": "bash scripts/start-intelligent-pm2-system.sh health",
     "automation:error-prevention": "node scripts/intelligent/error-prevention-system.js",
     "automation:performance-optimizer": "node scripts/intelligent/performance-optimizer.js",
     "automation:dependency-manager": "node scripts/intelligent/dependency-manager.js",
@@ -206,6 +208,7 @@
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/typography": "^0.5.16",
     "@tanstack/react-query": "^5.85.5",
+    "@types/react": "17.0.88",
     "@types/react-datepicker": "^6.2.0",
     "@types/react-dom": "17.0.26",
     "autoprefixer": "^10.4.21",
@@ -237,7 +240,7 @@
     "react-dom": "^18.3.1",
     "react-error-boundary": "^6.0.0",
     "react-helmet-async": "^2.0.5",
-    "sharp": "^0.34.3",
+    "react-router-dom": "^7.8.2",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^3.4.17",
     "tailwindcss-animate": "^1.0.7",
@@ -281,7 +284,11 @@
     "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2",
+<<<<<<< HEAD
     "vite": "^7.1.4"
+=======
+    "vite": "^5.4.19"
+>>>>>>> cursor/add-new-services-and-advertise-them-1b6b
   },
   "engines": {
     "node": ">=18.0.0",

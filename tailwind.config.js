@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+// eslint-disable-next-line @typescript-eslint/no-require-imports, no-undef
 module.exports = {
+  mode: "jit",
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -33,8 +35,11 @@ module.exports = {
     },
   },
   plugins: [
+    // eslint-disable-next-line @typescript-eslint/no-require-imports, no-undef
     require('@tailwindcss/forms'),
+    // eslint-disable-next-line @typescript-eslint/no-require-imports, no-undef
     require('@tailwindcss/typography'),
+    // eslint-disable-next-line @typescript-eslint/no-require-imports, no-undef
     require('@tailwindcss/aspect-ratio'),
   ],
 }
