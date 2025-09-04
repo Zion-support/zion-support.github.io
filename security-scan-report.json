@@ -1,34 +1,38 @@
 {
-  "timestamp": "2025-09-03T16:52:55.156Z",
-  "checks": {
-    "NPM Audit": {
-      "status": "passed",
-      "message": "Audit check completed"
-    },
-    "Sensitive Files": {
-      "status": "passed",
-      "message": "No sensitive files in root directory"
-    },
-    "Hardcoded Secrets": {
-      "status": "passed",
-      "message": "No obvious hardcoded secrets found"
-    },
-    "HTTPS Configuration": {
-      "status": "warning",
-      "warning": true,
-      "message": "HTTPS configuration not found"
-    },
-    "Security Headers": {
-      "status": "passed",
-      "message": "Security headers configured"
-    }
-  },
-  "vulnerabilities": [],
+  "timestamp": "2025-09-04T00:00:10.764Z",
+  "duration": "612ms",
+  "overallStatus": "unhealthy",
   "summary": {
     "total": 5,
-    "passed": 4,
-    "failed": 0,
+    "healthy": 3,
     "warnings": 1,
-    "vulnerabilities": 0
-  }
+    "unhealthy": 1
+  },
+  "checks": [
+    {
+      "name": "Hardcoded Secrets",
+      "status": "healthy",
+      "details": "No hardcoded secrets detected"
+    },
+    {
+      "name": "Dependency Vulnerabilities",
+      "status": "unhealthy",
+      "details": "Command failed: npm audit --json\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+    },
+    {
+      "name": "File Permissions",
+      "status": "warning",
+      "details": "2 files with insecure permissions"
+    },
+    {
+      "name": "Exposed Information",
+      "status": "healthy",
+      "details": "No sensitive information exposure detected"
+    },
+    {
+      "name": "Insecure HTTP",
+      "status": "healthy",
+      "details": "No insecure HTTP usage detected"
+    }
+  ]
 }
