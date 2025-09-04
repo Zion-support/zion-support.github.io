@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 
+export default function PerformanceMonitor() {
   useEffect(() => {
 
   return (
