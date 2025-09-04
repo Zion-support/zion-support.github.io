@@ -1706,9 +1706,9 @@ export default function MicroSaaS() {;
     <PageTransition>;
       <Head>;
         <title>{title}</title>;
-        <meta name="description content={description} />;
-        <meta name=viewport" content="width=device-width, initial-scale=1 />;
-        <link rel=canonical" href="https://ziontechgroup.com/micro-saas />;
+        <meta name="description" content={description} />;
+        <meta name="viewport" content="width=device-width, initial-scale=1" />;
+        <link rel="canonical" href="https://ziontechgroup.com/micro-saas" />;
       </Head>;
 
       {/* Hero Section */}
@@ -1736,7 +1736,7 @@ export default function MicroSaaS() {;
                 <ArrowRight className=ml-2 h-4 w-4 inline" />;
               </Link>;
               <Link;
-                href="/pricing-guide;
+                href="/pricing-guide";
                 className=text-sm font-semibold leading-6 text-gray-900 hover:text-orange-600">;
                 View Pricing <span aria-hidden="true>→</span>;
               </Link>;
