@@ -1,18 +1,17 @@
+// Innovative Talent Details component
 import React from 'react';
 
-export interface TalentProfile {
-  full_name: string;
-  professional_title?: string;
-  bio?: string;
-  profile_picture_url?: string;
-  skills?: string[];
-  hourly_rate?: number;
-  social?: Record<string, string>;
-  key_projects?: Array<{ title: string; description?: string }>;
-}
-
 export interface TalentDetailsProps {
-  talent: TalentProfile;
+  talent: {
+    profile_picture_url?: string;
+    full_name: string;
+    professional_title?: string;
+    bio?: string;
+    skills?: string[];
+    hourly_rate?: number;
+    social?: Record<string, string>;
+    key_projects?: { title: string; description?: string }[];
+  };
 }
 
 const TalentDetails: React.FC<TalentDetailsProps> = ({ talent }) => {
@@ -33,7 +32,7 @@ const TalentDetails: React.FC<TalentDetailsProps> = ({ talent }) => {
         {talent.bio && <p>{talent.bio}</p>}
       </div>
 
-      <div className="mt-8 space-y-6">
+      <div className="mt-8 space-y-6 px-4">
         {talent.skills && talent.skills.length > 0 && (
           <section>
             <h2 className="text-xl font-semibold mb-2">Skills</h2>
@@ -51,7 +50,7 @@ const TalentDetails: React.FC<TalentDetailsProps> = ({ talent }) => {
           <p>Hourly Rate: ${talent.hourly_rate}/hr</p>
         )}
 
-        {talent.social && Object.keys(talent.social).length > 0 && (
+        {talent.social && (
           <section>
             <h2 className="text-xl font-semibold mb-2">Contact</h2>
             <ul className="space-y-1">
@@ -75,8 +74,8 @@ const TalentDetails: React.FC<TalentDetailsProps> = ({ talent }) => {
           <section>
             <h2 className="text-xl font-semibold mb-2">Portfolio</h2>
             <ul className="space-y-2">
-              {talent.key_projects.map((proj, i) => (
-                <li key={i} className="border-b border-zion-purple/20 pb-2">
+              {talent.key_projects.map((proj, index) => (
+                <li key={index} className="border-b border-zion-purple/20 pb-2">
                   <h3 className="font-medium">{proj.title}</h3>
                   {proj.description && (
                     <p className="text-sm text-zion-slate">{proj.description}</p>
