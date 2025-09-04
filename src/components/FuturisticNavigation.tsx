@@ -1,9 +1,9 @@
-
-    e.preventDefault();
-
-      e.preventDefault();
-
-    if(searchQuery.trim()) {
+import {  import { MobileSidebarToggle } from './MobileSidebarToggle';
+export default function Page() {
+, [location.pathname]);
+e.preventDefault();
+e.preventDefault();
+if(searchQuery.trim()) {
 
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`};
   
@@ -12,28 +12,27 @@
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown) };
   // Enhanced service categories with better organization
   
-        { name: 'AI Autonomous Trading', href: '/ai-services/autonomous-trading', icon: DollarSign, description: 'AI-powered financial trading platform' },
-        { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Quantum AI consciousness research' },
-        { name: 'AI Business Operations', href: '/ai-services/business-operations', icon: Building, description: 'Autonomous business management' },
-        { name: 'AI Healthcare Diagnosis', href: '/ai-services/healthcare-diagnosis', icon: Heart, description: 'AI-powered medical diagnosis' },
-        { name: 'AI Content Creation', href: '/ai-services/content-creation', icon: FileText, description: 'Autonomous content generation' },
-        { name: 'AI Supply Chain', href: '/ai-services/supply-chain', icon: Truck, description: 'AI-powered supply chain optimization' },
-        { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkles, description: 'Complete AI services showcase' },
-        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' }
+        { name: 'AI Autonomous Trading', href: '/ai-services/autonomous-trading', icon: DollarSig n, description: 'AI-powered financial trading platform' },
+        { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brai n, description: 'Quantum AI consciousness research' },
+        { name: 'AI Business Operations', href: '/ai-services/business-operations', icon: Buildin g, description: 'Autonomous business management' },
+        { name: 'AI Healthcare Diagnosis', href: '/ai-services/healthcare-diagnosis', icon: Hear t, description: 'AI-powered medical diagnosis' },
+        { name: 'AI Content Creation', href: '/ai-services/content-creation', icon: FileTex t, description: 'Autonomous content generation' },
+        { name: 'AI Supply Chain', href: '/ai-services/supply-chain', icon: Truc k, description: 'AI-powered supply chain optimization' },
+        { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkle s, description: 'Complete AI services showcase' },
+        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crow n, description: 'Latest innovative services for 2028' }
       dropdown[;'
-        { name: 'AI Autonomous Trading', href: '/ai-services/autonomous-trading', icon: DollarSign, description: 'AI-powered financial trading platform' },'
-        { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Quantum AI consciousness research' },'
-        { name: 'AI Business Operations', href: '/ai-services/business-operations', icon: Building, description: 'Autonomous business management' },'
-        { name: 'AI Healthcare Diagnosis', href: '/ai-services/healthcare-diagnosis', icon: Heart, description: 'AI-powered medical diagnosis' },'
-        { name: 'AI Content Creation', href: '/ai-services/content-creation', icon: FileText, description: 'Autonomous content generation' },'
-        { name: 'AI Supply Chain', href: '/ai-services/supply-chain', icon: Truck, description: 'AI-powered supply chain optimization' },'
-        { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkles, description: 'Complete AI services showcase' },'        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' }
+        { name: 'AI Autonomous Trading', href: '/ai-services/autonomous-trading', icon: DollarSig n, description: 'AI-powered financial trading platform' },'
+        { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brai n, description: 'Quantum AI consciousness research' },'
+        { name: 'AI Business Operations', href: '/ai-services/business-operations', icon: Buildin g, description: 'Autonomous business management' },'
+        { name: 'AI Healthcare Diagnosis', href: '/ai-services/healthcare-diagnosis', icon: Hear t, description: 'AI-powered medical diagnosis' },'
+        { name: 'AI Content Creation', href: '/ai-services/content-creation', icon: FileTex t, description: 'Autonomous content generation' },'
+        { name: 'AI Supply Chain', href: '/ai-services/supply-chain', icon: Truc k, description: 'AI-powered supply chain optimization' },'
+        { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkle s, description: 'Complete AI services showcase' },'        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crow n, description: 'Latest innovative services for 2028' }
       ]
-    },;
-    {
+    }, {
 "
       name: "Micro SAAS Solutions",
-      icon: Cloud,
+      icon: Clou d,
       services[;"
         { name: "Micro SAAS Services", href: "/micro-saas" },"
         { name: "Business Tools", href: "/micro-saas/business-tools" },"
@@ -42,11 +41,10 @@
         { name: "Custom Development", href: "/micro-saas/custom" },"
         { name: "Marketplace", href: "/marketplace" }
       ]
-    },;
-    {
+    }, {
 "
       name: "IT Infrastructure",
-      icon: Server,
+      icon: Serve r,
       services[;"
         { name: "IT Services", href: "/it-services" },"
         { name: "Cloud Solutions", href: "/it-services/cloud" },"
@@ -55,11 +53,10 @@
         { name: "Data Management", href: "/it-services/data" },"
         { name: "Network Security", href: "/it-services/network-security" }
       ]
-    },;
-    {
+    }, {
 "
       name: "Emerging Technologies",
-      icon: Rocket,
+      icon: Rocke t,
       services[;"
         { name: "Quantum Computing", href: "/emerging-tech/quantum" },"
         { name: "Blockchain & Web3", href: "/emerging-tech/blockchain" },"
@@ -68,18 +65,13 @@
         { name: "Green Technology", href: "/green-it" },"
         { name: "Space Technology", href: "/emerging-tech/space" }
       ]
-    },;
-    {
+    }, {
 
       name: '2028 Services',
       href: '/innovative-services-2028',
-      icon: Crown,
+      icon: Crow n,
       color: 'from-zion-cyan to-zion-purple',
-      dropdown[;
-        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' },;
-        { name: 'Micro SAAS 2028', href: '/micro-saas-2028', icon: Zap, description: 'Advanced micro SAAS solutions' },;
-        { name: 'IT Services 2028', href: '/it-services-2028', icon: Server, description: 'Next-generation IT services' },;
-        { name: 'Pricing Guide 2028', href: '/comprehensive-pricing-guide-2028', icon: Calculator, description: 'Complete pricing and ROI analysis' };
+      dropdown[ { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crow n, description: 'Latest innovative services for 2028' }, { name: 'Micro SAAS 2028', href: '/micro-saas-2028', icon: Za p, description: 'Advanced micro SAAS solutions' }, { name: 'IT Services 2028', href: '/it-services-2028', icon: Serve r, description: 'Next-generation IT services' }, { name: 'Pricing Guide 2028', href: '/comprehensive-pricing-guide-2028', icon: Calculato r, description: 'Complete pricing and ROI analysis' };
       ]};
   ];
   return ()
@@ -88,7 +80,7 @@
           ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10''
           : 'bg-transparent'`
       }`}>"
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">"
+        <div className="container mx-auto px-4 sm: p x-6 lg: p x-8">"
           <div className="flex h-20 items-center justify-between">
             {/* Enhanced Logo */}
             <motion.div"
@@ -109,13 +101,13 @@
 "
               <Link to="/" className="flex items-center space-x-3 group">"
                 <div className="relative">"
-                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-zion-cyan/25">"
+                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center group-hover: scal e-110 transition-all duration-300 shadow-lg shadow-zion-cyan/25">"
                     <span className="text-2xl font-bold text-white">Z</span>
                   </div>"
-                  <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>"
-                  <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl blur-xl opacity-25 group-hover:opacity-50 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl blur-lg opacity-50 group-hover: opacit y-75 transition-opacity duration-300"></div>"
+                  <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl blur-xl opacity-25 group-hover: opacit y-50 transition-opacity duration-300"></div>
                 </div>"
-                <div className="hidden sm:block">"
+                <div className="hidden sm: bloc k">"
                   <h1 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
                     ZION TECH GROUP
                   </h1>"
@@ -124,7 +116,7 @@
               </Link>
             </motion.div>
             {/* Desktop Navigation */}"
-            <nav className="hidden lg:flex items-center space-x-1">
+            <nav className="hidden lg: flex items-center space-x-1">
               {/* Main Navigation Links */}
               <motion.div
                 initial = {
@@ -148,9 +140,9 @@
               >
                 <Link"
                   to="/about"
-                  className="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group hover:text-zion-cyan hover:bg-zion-cyan/5 hover:shadow-lg hover:shadow-zion-cyan/10"
+                  className="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group hover: tex t-zion-cyan hover: b g-zion-cyan/5 hover: shado w-lg hover: shado w-zion-cyan/10"
 "
-                  <Users className="w-4 h-4 group-hover:scale-110 transition-transform duration-300"  />"                  <span className="font-medium">About</span>
+                  <Users className="w-4 h-4 group-hover: scal e-110 transition-transform duration-300"   />"                  <span className="font-medium">About</span>
                 </Link>
               </motion.div>
               <motion.div
@@ -175,9 +167,9 @@
               >
                 <Link"
                   to="/partners"
-                  className="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group hover:text-zion-cyan hover:bg-zion-cyan/5 hover:shadow-lg hover:shadow-zion-cyan/10"
+                  className="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group hover: tex t-zion-cyan hover: b g-zion-cyan/5 hover: shado w-lg hover: shado w-zion-cyan/10"
 "
-                  <Handshake className="w-4 h-4 group-hover:scale-110 transition-transform duration-300"  />"                  <span className="font-medium">Partners</span>
+                  <Handshake className="w-4 h-4 group-hover: scal e-110 transition-transform duration-300"   />"                  <span className="font-medium">Partners</span>
                 </Link>
               </motion.div>
               {/* Service Categories */}
@@ -205,13 +197,13 @@
                     onClick={() => toggleDropdown(category.name)}`
                     className={`nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group ${activeDropdown === category.name'
                         ? 'text-zion-cyan bg-zion-cyan/10 shadow-lg shadow-zion-cyan/20''
-                        : 'hover:text-zion-cyan hover:bg-zion-cyan/5 hover:shadow-lg hover:shadow-zion-cyan/10'`
+                        : 'hover: tex t-zion-cyan hover: b g-zion-cyan/5 hover: shado w-lg hover: shado w-zion-cyan/10'`
                     }`}
 "
-                    <category.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />"
+                    <category.icon className="w-4 h-4 group-hover: scal e-110 transition-transform duration-300" />"
                     <span className="font-medium">{category.name}</span>`
                     <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${activeDropdown === category.name ? 'rotate-180' : ''`
-                    }`}  />                  </motion.button>
+                    }`}   />                  </motion.button>
                   {/* Enhanced Dropdown Menu */}
                   <AnimatePresence>
                     {activeDropdown === category.name && ;
@@ -261,18 +253,18 @@
                                 transition = {
 
   { duration: 0.3,
-  delay: subIndex * 0.05
+  delay: subInde x * 0.05
 
 }}
                               >
                                 <Link
                                   to={service.href}"
-                                  className="flex items-start space-x-3 p-3 rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 group"
+                                  className="flex items-start space-x-3 p-3 rounded-lg hover: b g-zion-cyan/10 transition-all duration-300 group"
 "
-                                  <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">"
-                                    <Brain className="w-4 h-4 text-zion-cyan"  /> {/* Using Brain icon for consistency */}
+                                  <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-lg flex items-center justify-center group-hover: scal e-110 transition-transform duration-300">"
+                                    <Brain className="w-4 h-4 text-zion-cyan"   /> {/* Using Brain icon for consistency */}
                                   </div>"
-                                  <div className="flex-1">"                                    <h4 className="font-medium text-white group-hover:text-zion-cyan transition-colors duration-300">
+                                  <div className="flex-1">"                                    <h4 className="font-medium text-white group-hover: tex t-zion-cyan transition-colors duration-300">
                                       {service.name}
                                     </h4>
                                   </div>
@@ -285,39 +277,38 @@
                 </div>) ) }
             </nav>
             {/* Right side actions */}"
-            <div className="flex items-center space-x-4">;
-              {/* Search */}"
-              <form onSubmit={handleSearch} className="hidden md:block">;"
+            <div className="flex items-center space-x-4"> {/* Search */}"
+              <form onSubmit={handleSearch} className="hidden md: bloc k">;"
                 <div className="relative">
                   <input"
                     type="text"
                     placeholder="Search services..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}"
-                    className="w-64 px-4 py-2 pl-10 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan/50 transition-all duration-300"
+                    className="w-64 px-4 py-2 pl-10 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan/50 focus: borde r-zion-cyan/50 transition-all duration-300"
                   />"
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light"  />                </div>
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light"   />                </div>
               </form>
               {/* User actions */}"
               <div className="flex items-center space-x-2">;
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}"
-                  className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
+                  className="p-2 text-zion-slate-light hover: tex t-zion-cyan hover: b g-zion-cyan/10 rounded-lg transition-all duration-300"
 "
-                  <Bell className="w-5 h-5"  />                </motion.button>
+                  <Bell className="w-5 h-5"   />                </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}"
-                  className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
+                  className="p-2 text-zion-slate-light hover: tex t-zion-cyan hover: b g-zion-cyan/10 rounded-lg transition-all duration-300"
 "
-                  <User className="w-5 h-5"  />                </motion.button>
+                  <User className="w-5 h-5"   />                </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}"
-                  className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
+                  className="p-2 text-zion-slate-light hover: tex t-zion-cyan hover: b g-zion-cyan/10 rounded-lg transition-all duration-300"
 "
-                  <ShoppingCart className="w-5 h-5"  />                </motion.button>
+                  <ShoppingCart className="w-5 h-5"   />                </motion.button>
               </div>
               {/* Mobile Sidebar Toggle */}
               <MobileSidebarToggle  />
@@ -328,6 +319,4 @@
     </>
   )};
 '"`
-
 ;,"});,})";
-

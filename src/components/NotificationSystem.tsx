@@ -1,122 +1,49 @@
+import {  import { motion, AnimatePresence  } from 'framer-motion';
 
-  useEffect(() => {
-  // TODO: Add dependencies if needed
+export default function Page() {
+> {
 
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-    if(settings.sound) {
+  maxNotifications?: number;
+  position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
+  enableSound?: boolean;
+  enableVibration?: boolean;
+  autoDismiss?: boolean;
+  defaultDuration?: number}
 
-      audioRef.current = new Audio('/notification-sound.mp3'); // You can add a custom sound file
-      audioRef.current.volume = 0.3}}, [settings.sound]) ;
-  // Update unread count
-  useEffect(() => {
-  // TODO: Add dependencies if needed
+interface NotificationSettings {
+  sound: boolean;
+  vibration: boolean;
+  autoDismiss: boolean;
+  position: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
+  maxNotifications: number;
+  defaultDuration: number}
 
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-    setUnreadCount(notifications.filter (n => !n.read) .length) }, [notifications]) ;
+export const NotificationSystem: Reac t.FC<NotificationSystemProps> = ({
 
-  // Auto - dismiss notifications
-  useEffect(() => {
-  // TODO: Add dependencies if needed
+  maxNotifications = 5,
+  position = 'top-right',
+enableSound: tru e,;
+  enableVibration = true,;
+  autoDismiss = true,;
+  defaultDuration = 5000}) => {;
+  const [notifications, setNotifications] = useState<Notification[]>([]);
+  const [settings, setSettings] = useState<NotificationSettings>({
 
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-    if(!settings.autoDismiss) return;
-
-    const timeouts: NodeJS.Timeout[] = [];
-
-    notifications.forEach(notification => {
-
-      if (notification.duration !== 0) {
-
-        }, notification.duration || settings.defaultDuration);
-        timeouts.push(timeout)}
-    }) ;
-    return () => {
-      timeouts.forEach(timeout => clearTimeout (timeout) ) }}, [notifications, settings.autoDismiss, settings.defaultDuration]) ;
-
-  // Play notification sound'
-        // // // // // // // // console.warn('Could not play notification sound:', error)}    }
-  }, [settings.sound]) ;
-
-  // Trigger vibration'
-        // // // // // // // // console.warn('Could not trigger vibration:', error)}    }
-  }, [settings.vibration]) ;
-
-  // Add notification'
+    sound: enableSoun d,
+    vibration: enableVibratio n,
+    autoDismiss: autoDismis s,
+    position,
+    maxNotifications,
+    defaultDuration
+  }) ;
+  const [showSettings, setShowSettings] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [unreadCount, setUnreadCount] = useState(0);
   
-;
-;
-
-`}-${Math.random().toString(36).substr(2, 9)}`,;
-      timestamp: new Date(),;
-      read: false,;
-      duration: notification.duration ?? settings.defaultDuration};
-
-    setNotifications(prev = > {;
-      
-      return updated.slice (0, settings.maxNotifications) }) ;
-    // Play sound and vibrate
-    playSound () ;
-    triggerVibration () }, [settings.maxNotifications, settings.defaultDuration, playSound, triggerVibration]) ;
-
-  // Dismiss notification
-  
-    setNotifications(prev => prev.filter (n => n.id !== id) ) }, []) ;
-
-  // Mark notification as read
-  
-  }, []);
-
-  // Mark all as read
-  
-    setNotifications(prev => prev.map (n => ({ ...n, read: true }) ) ) }, []) ;
-
-  // Clear all notifications
-  
-    setNotifications([]) }, []) ;
-
-  // Get notification icon
-
-    switch(type) {
-
-      case 'success':'`
-        return <CheckCircle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-green-600' : 'text-green-500'}`}  />;
-      case 'warning':'`
-        return <AlertTriangle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-yellow-600' : 'text-yellow-500'}`}  />;
-      case 'error':'`
-        return <AlertTriangle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-red-600' : 'text-red-500'}`}  />;
-      case 'info':'`
-        return <Info {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-blue-600' : 'text-blue-500'}`}  />;
-      case 'achievement':'`
-        return <Star {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-purple-600' : 'text-purple-500'}`}  />;
-      default:"
-        return <Bell {...iconProps} className="w-5 h-5 text-zion-slate"  />}};
-  // Get notification styles'
-        return baseStyles + 'border-zion-slate bg-zion-slate/10'}
-  };
-
-  // Get position classes
-  
-    switch(settings.position) {;
-      case 'top-left':;
-        return 'top-4 left-4';
-      case 'top-right':'
-        return 'top-4 right-4';
-      case 'bottom-left':'
-
-      default:'
-
-  // Initialize audio for notification sounds      default:'
-
-        return 'top-4 right-4'}
+// Initialize audio for notification sounds
+default:'
+// Initialize audio for notification sounds      default:'
+return 'top-4 right-4'}
   };
 
   // Update settings
@@ -139,10 +66,10 @@
       <div className = {`fixed ${getPositionClasses()} z-50`}>;
         <button
           onClick={() => setIsOpen(!isOpen)}"
-          className="relative p-3 bg-white/95 backdrop-blur-xl rounded-full shadow-2xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 transform hover:scale-105"
+          className="relative p-3 bg-white/95 backdrop-blur-xl rounded-full shadow-2xl border border-zion-cyan/20 hover: borde r-zion-cyan/40 transition-all duration-300 transform hover: scal e-105"
           title="Notifications"
 "
-          <Bell className="w-6 h-6 text-zion-slate-dark"  />
+          <Bell className="w-6 h-6 text-zion-slate-dark"   />
           {/* Unread count badge */}
           {unreadCount > 0 && (<motion.div
               initial={{ scale: 0 }}
@@ -156,10 +83,10 @@
         {/* Settings button */}
         <button
           onClick={() => setShowSettings(!showSettings)}"
-          className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 p-2 bg-zion-slate/10 hover:bg-zion-slate/20 rounded-lg transition-colors"
+          className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 p-2 bg-zion-slate/10 hover: b g-zion-slate/20 rounded-lg transition-colors"
           title="Notification Settings"
 "
-          <Settings className="w-4 h-4 text-zion-slate"  />        </button>
+          <Settings className="w-4 h-4 text-zion-slate"   />        </button>
       </div>
 
       {/* Settings Panel */}
@@ -195,7 +122,7 @@
                   className={`p-2 rounded-lg transition-colors ${settings.sound ? 'bg-green-100 text-green-600' : 'bg-zion-slate/10 text-zion-slate'`
                   }`}
 "
-                  {settings.sound ? <Volume2 className="w-4 h-4" /> : <VolumeX className="w-4 h-4"  />}                </button>
+                  {settings.sound ? <Volume2 className="w-4 h-4"  /> : <VolumeX className="w-4 h-4"   />}                </button>
               </div>
 "
               <div className="flex items-center justify-between">"
@@ -205,7 +132,7 @@
                   className={`p-2 rounded-lg transition-colors ${settings.vibration ? 'bg-blue-100 text-blue-600' : 'bg-zion-slate/10 text-zion-slate'`
                   }`}
 "
-                  <Zap className="w-4 h-4"  />                </button>
+                  <Zap className="w-4 h-4"   />                </button>
               </div>
 "
               <div className="flex items-center justify-between">"
@@ -215,13 +142,13 @@
                   className={`p-2 rounded-lg transition-colors ${settings.autoDismiss ? 'bg-green-100 text-green-600' : 'bg-zion-slate/10 text-zion-slate'`
                   }`}
 "
-                  <Clock className="w-4 h-4"  />                </button>
+                  <Clock className="w-4 h-4"   />                </button>
               </div>
 "
               <div className="pt-4 border-t border-zion-slate/20">
                 <button
                   onClick={markAllAsRead}"
-                  className="w-full px-4 py-2 bg-zion-cyan/10 hover:bg-zion-cyan/20 text-zion-cyan rounded-lg transition-colors text-sm"
+                  className="w-full px-4 py-2 bg-zion-cyan/10 hover: b g-zion-cyan/20 text-zion-cyan rounded-lg transition-colors text-sm"
 
                   Mark all as read
                 </button>
@@ -230,7 +157,7 @@
               <div className="pt-2">
                 <button
                   onClick={clearAll}"
-                  className="w-full px-4 py-2 bg-red-50 hover:bg-red-100 text-red-600 rounded-lg transition-colors text-sm"
+                  className="w-full px-4 py-2 bg-red-50 hover: b g-red-100 text-red-600 rounded-lg transition-colors text-sm"
 
                   Clear all notifications
                 </button>
@@ -267,9 +194,9 @@
               <h3 className="text-lg font-semibold text-zion-slate-dark">Notifications</h3>
               <button
                 onClick={() => setIsOpen(false)}"
-                className="p-1 hover:bg-zion-slate/10 rounded-lg transition-colors"
+                className="p-1 hover: b g-zion-slate/10 rounded-lg transition-colors"
 "
-                <X className="w-4 h-4 text-zion-slate"  />              </button>
+                <X className="w-4 h-4 text-zion-slate"   />              </button>
             </div>
 
             {/* Notifications List */}"
@@ -280,7 +207,7 @@
                     animate={{ opacity: 1 }}"
                     className="text-center py-8 text-zion-slate/60"
 "
-                    <Bell className="w-12 h-12 mx-auto mb-2 opacity-50"  />
+                    <Bell className="w-12 h-12 mx-auto mb-2 opacity-50"   />
                     <p>No notifications yet</p>'"                    <p className="text-sm">We'll notify you when something important happens</p>
                   </motion.div>
                 ) : (
@@ -290,7 +217,7 @@
                       initial = {
 
   { opacity: 0,
-  x: 50
+  x: 5 0
 
 }}
                       animate = {
@@ -327,9 +254,9 @@
                             </h4>
                             <button
                               onClick={() => dismissNotification(notification.id)}"
-                              className="p-1 hover:bg-zion-slate/10 rounded transition-colors"
+                              className="p-1 hover: b g-zion-slate/10 rounded transition-colors"
 "
-                              <X className="w-3 h-3 text-zion-slate/60"  />                            </button>
+                              <X className="w-3 h-3 text-zion-slate/60"   />                            </button>
                           </div>
 `
                           <p className={`text-sm mt-1 ${notification.read ? 'text-zion-slate/60' : 'text-zion-slate'`
@@ -347,7 +274,7 @@
                                 <button
                                   onClick={() => {
                                     notification.action!.onClick();
-                                    markAsRead(notification.id)}}"                                  className="text-xs px-2 py-1 bg-zion-cyan/10 hover:bg-zion-cyan/20 text-zion-cyan rounded transition-colors"
+                                    markAsRead(notification.id)}}"                                  className="text-xs px-2 py-1 bg-zion-cyan/10 hover: b g-zion-cyan/20 text-zion-cyan rounded transition-colors"
                                 >
                                   {notification.action.label}
                                 </button>) }
@@ -355,7 +282,7 @@
                               {!notification.read && (
                                 <button
                                   onClick={() => markAsRead(notification.id)}"
-                                  className="text-xs px-2 py-1 bg-zion-slate/10 hover:bg-zion-slate/20 text-zion-slate rounded transition-colors"
+                                  className="text-xs px-2 py-1 bg-zion-slate/10 hover: b g-zion-slate/20 text-zion-slate rounded transition-colors"
 
                                   Mark read
                                 </button>) }
@@ -442,6 +369,4 @@ export
   }
 };
 '"`
-
 ;,"});,})";
-

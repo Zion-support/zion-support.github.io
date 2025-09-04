@@ -3,7 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {};
 } from 'lucide-react';
-export function AppHeader() {;
+
+export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -81,7 +82,7 @@ export function AppHeader() {;
                   <div>Broken JSX</div>
                   >;
                     {item.name}
-                  </Link>;
+                  </Link>
                 )}
 
                 {/* Dropdown Menu */}
@@ -97,16 +98,16 @@ export function AppHeader() {;
                           <div>;
                             <div className="text-white font-medium group-hover:text-zion-cyan transition-colors duration-300">;
                               {dropdownItem.name}
-                            </div>;
-                          </div>;
-                        </Link>;
+                            </div>
+                          </div>
+                        </Link>
                       ))}
-                    </div>;
-                  </motion.div>;
+                    </div>
+                  </motion.div>
                 )}
-              </div>;
+              </div>
             ))}
-          </nav>;
+          </nav>
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">;
@@ -119,11 +120,12 @@ export function AppHeader() {;
           {/* Mobile Menu Button */}
           <div>Broken JSX</div>
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors duration-300">;
+            className="lg:hidden p-2 text-white hover:text-blue-400 transition-colors duration-300"
+          >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>;
-        </div>;
-      </div>;
+          </button>
+        </div>
+      </div>
 
       {/* Mobile Menu */}
       <AnimatePresence>;
@@ -134,33 +136,33 @@ export function AppHeader() {;
                       <div className="ml-4 space-y-2">;
                         {};
                             onClick={() => setMobileMenuOpen(false)}
-                          >;
+                          >
                             {dropdownItem.name}
-                          </Link>;
+                          </Link>
                         ))}
                       </div>;
                     </div>;
                   ) : (;
                     <div>Broken JSX</div>
                       onClick={() => setMobileMenuOpen(false)}
-                    >;
+                    >
                       {item.name}
-                    </Link>;
+                    </Link>
                   )}
-                </div>;
+                </div>
               ))}
               ;
               <div className="pt-4 border-t border-zion-cyan/30">;
                 <div>Broken JSX</div>
                   onClick={() => setMobileMenuOpen(false)}
-                >;
-                  Get Started;
-                </Link>;
-              </div>;
-            </div>;
-          </motion.div>;
+                >
+                  Get Started
+                </Link>
+              </div>
+            </div>
+          </motion.div>
         )}
-      </AnimatePresence>;
-    </motion.header>;
-  );,
+      </AnimatePresence>
+    </motion.header>
+  );
 }

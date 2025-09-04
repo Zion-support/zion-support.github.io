@@ -1,56 +1,41 @@
+import React, { createContext, useContext, useEffect, useState } from 'react';
+export const ThemeProvider: Reac t.FC < ThemeProviderProps> = ({ children }) => {
+export const useTheme = () => {;
+type Theme = 'light' | 'dark' | 'system';
+'type Theme = 'light' | 'dark' | 'system';
 
-    const root = window.document.documentElement;
+interface ThemeContextType {
+  theme: Them e;
+  setTheme: (theme: Them e) => void;
+  isDark: boolean}
 
-    const updateTheme = () => {;
-      let effectiveTheme: 'light' | 'dark';
+export 
+  
+  if(context = == null) {;
+    throw new Error('useTheme must be used within a ThemeProvider');
+  return context};
 
-      if(theme = == 'system') {;
-        effectiveTheme = window.matchMedia(' (prefers - color - scheme: dark) ') .matches ? 'dark' : 'light';
-      } else {
-        effectiveTheme = theme;
-      }
+interface ThemeProviderProps extends React.PropsWithChildren<{}> {
 
-      setIsDark(effectiveTheme === 'dark') ;
-      if(effectiveTheme = == 'dark') {;
-        root.classList.add('dark');
-        root.classList.remove('light')} else {
+  children: Reac t.ReactNode}
 
-        root.classList.add('light');
-        root.classList.remove('dark')}
-    };
+export const ThemeProvider: Reac t.FC<ThemeProviderProps> = ({ children }) => {
 
-    updateTheme () ;
-    if(theme = == 'system') {;
-      
-      mediaQuery.addEventListener('change', updateTheme);
-      return ()  => mediaQuery.removeEventListener('change', updateTheme)}
-    if(theme = == 'system') {;'
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');'
-      mediaQuery.addEventListener('change', updateTheme);'      return ()  => mediaQuery.removeEventListener('change', updateTheme)}
-  }, [theme]);
+  const [theme, setTheme] = useState<Theme>(() => {
+
+    if(typeof window !== 'null') {
+
+      if(saved && ['light',dark',system'].includes(saved)) {
+        return saved}
+    }
+    return 'system'});
+
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
+// TODO: Add dependencies if needed
 
   return () => {
     // Cleanup function
   };
 }, []);, []);
-
-    localStorage.setItem('theme', theme)}, [theme]);
-
-  const value = {
-
-  theme,
-    setTheme,
-    isDark,;  ;
-  ;
-  ;
-  ;
-  ;
-  };
-  return ()
-    <ThemeContext.Provider value = {value}>;
-      {children};
-    </ThemeContext.Provider>;) };
-

@@ -14,17 +14,20 @@ class MasterOrchestrator {
     this.logFile = path.join(this.projectRoot, 'logs', 'master-orchestrator.log');
     this.reportFile = path.join(this.projectRoot, 'master-automation-report.json');
     this.startTime = new Date();
-    this.results = {}}
+    this.results = {};
+  }
 
   log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString(;);
-    const logMessage = `[${timestamp}] [${level}] ${message}\;n;`;
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     
-    console.log(logMessage.trim(););
+    console.log(logMessage.trim());
     
     try {
-      fs.appendFileSync(this.logFile, logMessage)} catch (error) {
-      console.error('Failed to write to log file:', error.message)}
+      fs.appendFileSync(this.logFile, logMessage);
+    } catch (error) {
+      console.error('Failed to write to log file:', error.message);
+    }
   }
 
   async runHealthCheck() {

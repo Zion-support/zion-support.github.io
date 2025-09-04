@@ -1,156 +1,338 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { Shield, Lock, Eye, AlertTriangle, Users, Database } from 'lucide-react';
+import React from 'react'
+import dynamic from 'next/dynamic'
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+import { 
+  Shield, 
+  Lock, 
+  Eye, 
+  AlertTriangle, 
+  ArrowRight, 
+  CheckCircle, 
+  Star,
+  Globe,
+  Settings,
+  Users
+} from 'lucide-react'
 
-export default function Cybersecurity(): any {
-  const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com',
-  };
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: fals e })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: fals e })
+
+const CybersecurityPage: Reac t.FC = () => {
   const services = [
     {
-      icon: Shield,
-      title: 'Security Assessment & Auditing',
-      description: 'Comprehensive security evaluations to identify vulnerabilities and compliance gaps.',
-      features: ['Penetration testing', 'Vulnerability scanning', 'Compliance audits', 'Risk assessments']
+      id: 1,
+      title: "Security Assessment",
+      description: "Comprehensive security evaluation to identify vulnerabilities and risks in your systems.",
+      features: [
+        "Vulnerability scanning",
+        "Penetration testing",
+        "Security audit",
+        "Risk assessment",
+        "Compliance review"
+      ],
+      pricing: "Starting at $2,500",
+      delivery: "1-3 weeks",
+      category: "Assessment",
+      icon: <Shield className="w-8 h-8"  />
     },
     {
-      icon: Lock,
-      title: 'Identity & Access Management',
-      description: 'Robust IAM solutions to control user access and protect sensitive data.',
-      features: ['Multi-factor authentication', 'Single sign-on', 'Role-based access', 'Privileged access management']
+      id: 2,
+      title: "Data Protection",
+      description: "Advanced data encryption and protection solutions to secure your sensitive information.",
+      features: [
+        "Data encryption",
+        "Access control",
+        "Data backup",
+        "Privacy compliance",
+        "Data loss prevention"
+      ],
+      pricing: "Starting at $3,000",
+      delivery: "2-4 weeks",
+      category: "Protection",
+      icon: <Lock className="w-8 h-8"  />
     },
     {
-      icon: Eye,
-      title: 'Security Monitoring & SIEM',
-      description: '24/7 security monitoring with advanced threat detection and incident response.',
-      features: ['Real-time monitoring', 'Threat intelligence', 'Incident response', 'Forensic analysis']
+      id: 3,
+      title: "Threat Monitoring",
+      description: "24/7 security monitoring and threat detection to protect your systems in real-time.",
+      features: [
+        "Real-time monitoring",
+        "Threat detection",
+        "Incident alerting",
+        "Security analytics",
+        "Response automation"
+      ],
+      pricing: "Starting at $1,500/month",
+      delivery: "Ongoing",
+      category: "Monitoring",
+      icon: <Eye className="w-8 h-8"  />
     },
     {
-      icon: AlertTriangle,
-      title: 'Threat Detection & Response',
-      description: 'Advanced threat hunting and automated response to security incidents.',
-      features: ['Behavioral analytics', 'AI-powered detection', 'Automated response', 'Threat hunting']
+      id: 4,
+      title: "Incident Response",
+      description: "Rapid response and recovery services to minimize damage from security incidents.",
+      features: [
+        "Incident analysis",
+        "Containment strategies",
+        "Recovery planning",
+        "Forensic investigation",
+        "Post-incident review"
+      ],
+      pricing: "Starting at $5,000",
+      delivery: "Immediate",
+      category: "Response",
+      icon: <AlertTriangle className="w-8 h-8"  />
     },
     {
-      icon: Users,
-      title: 'Security Training & Awareness',
-      description: 'Comprehensive security education programs to build a security-conscious culture.',
-      features: ['Phishing simulations', 'Security workshops', 'Compliance training', 'Awareness campaigns']
+      id: 5,
+      title: "Compliance Management",
+      description: "Ensure compliance with industry standards and regulations for data security.",
+      features: [
+        "Compliance assessment",
+        "Policy development",
+        "Training programs",
+        "Audit support",
+        "Documentation"
+      ],
+      pricing: "Starting at $4,000",
+      delivery: "2-6 weeks",
+      category: "Compliance",
+      icon: <Settings className="w-8 h-8"  />
     },
     {
-      icon: Database,
-      title: 'Data Protection & Encryption',
-      description: 'End-to-end data protection with advanced encryption and backup solutions.',
-      features: ['Data encryption', 'Backup solutions', 'Data loss prevention', 'Privacy compliance']
+      id: 6,
+      title: "Security Training",
+      description: "Comprehensive security awareness training for your team to prevent security breaches.",
+      features: [
+        "Security awareness",
+        "Phishing simulation",
+        "Best practices training",
+        "Incident reporting",
+        "Regular updates"
+      ],
+      pricing: "Starting at $1,000",
+      delivery: "1-2 weeks",
+      category: "Training",
+      icon: <Users className="w-8 h-8"  />
     }
-  ];
+  ]
+
+  const complianceStandards = [
+    { name: "SOC 2", description: "Service Organization Control 2" },
+    { name: "ISO 27001", description: "Information Security Management" },
+    { name: "HIPAA", description: "Health Insurance Portability" },
+    { name: "PCI DSS", description: "Payment Card Industry" },
+    { name: "GDPR", description: "General Data Protection Regulation" },
+    { name: "NIST", description: "National Institute of Standards" }
+  ]
 
   return (
     <>
-      <Head>
-        <title>Cybersecurity Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive cybersecurity services including security assessments, threat detection, identity management, and compliance. Protect your business with Zion Tech Group." />
-        <meta name="keywords" content="cybersecurity, security assessment, threat detection, identity management, compliance, penetration testing" />
-        <link rel="canonical" href={`${contact.site}/cybersecurity`} />
-        <meta property="og:title" content="Cybersecurity Services - Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive cybersecurity services including security assessments, threat detection, and compliance." />
-        <meta property="og:url" content={`${contact.site}/cybersecurity`} />
-        <meta property="og:type" content="website" />
-      </Head>
+      <SEO title="Cybersecurity Services - Zion Tech Group"
+        description="Comprehensive cybersecurity services including security assessments, data protection, monitoring, and incident response. Protect your business with our expert security solutions."
+        keywords="cybersecurity, security assessment, data protection, threat monitoring, incident response, compliance"
+        canonical="https://ziontechgroup.com/cybersecurity"
+       />
+      
+      <PageTransition>
+        <main className="min-h-screen bg-white">
+          {/* Hero Section */}
+          <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+              <motion.div
+                initial={{ opacity: 0, y: 2 0 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center"
+              >
+                <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6">
+                  Cybersecurity <span className="text-blue-600">Services</span>
+                </h1>
+                <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                  Protect your business with comprehensive cybersecurity solutions including security assessments, data protection, and threat monitoring.
+                </p>
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+                  <motion.a
+                    href="#services"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5"  />
+                    Explore Services
+                  </motion.a>
+                  <motion.a
+                    href="/contact"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5"  />
+                    Get Started
+                  </motion.a>
+                </div>
+              </motion.div>
+            </div>
+          </section>
 
-      <div className="min-h-screen bg-white">
-        {/* Hero Section */ }
-        <section className="bg-gradient-to-r from-red-600 to-orange-600 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Cybersecurity Services
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                Protect your business with comprehensive cybersecurity solutions, threat detection, and compliance services.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  href="/contact"
-  className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                >
-                  Get Security Assessment
-                </Link>
-                <Link 
-                  href="/services"
-  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
-                >
-                  View All Services
-                </Link>
+          {/* Services Grid */}
+          <section id="services" className="py-20">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+              <motion.div
+                initial={{ opacity: 0, y: 2 0 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
+                  Our Cybersecurity Services
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Comprehensive security solutions to protect your business from cyber threats and ensure compliance.
+                </p>
+              </motion.div>
+
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
+                {services.map((service, index) => (
+                  <motion.div
+                    key={service.id}
+                    initial={{ opacity: 0, y: 2 0 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg hover: shado w-xl transition-shadow duration-300 overflow-hidden"
+                  >
+                    <div className="p-8">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="text-blue-600">
+                          {service.icon}
+                        </div>
+                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                          {service.category}
+                        </span>
+                      </div>
+                      
+                      <h3 className="text-xl font-bold text-gray-900 mb-3">
+                        {service.title}
+                      </h3>
+                      
+                      <p className="text-gray-600 mb-6">
+                        {service.description}
+                      </p>
+                      
+                      <div className="mb-6">
+                        <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                        <ul className="space-y-2">
+                          {service.features.map((feature, idx) => (
+                            <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
+                              <CheckCircle className="w-4 h-4 text-green-500"  />
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      <div className="flex items-center justify-between text-sm text-gray-500 mb-6">
+                        <span className="font-semibold text-green-600">{service.pricing}</span>
+                        <span>{service.delivery}</span>
+                      </div>
+                      
+                      <motion.button
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover: b g-blue-700 transition-colors"
+                      >
+                        <ArrowRight className="w-5 h-5"  />
+                        Learn More
+                      </motion.button>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Services Grid */}
-        <section className="py-20">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,";
-            <div className="text-center mb-16">";
-              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,";
-                Comprehensive Security Solutions
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                From threat detection to compliance management, we provide end-to-end cybersecurity services to protect your digital assets.
-              </p>
+          {/* Compliance Standards */}
+          <section className="bg-gray-50 py-20">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+              <motion.div
+                initial={{ opacity: 0, y: 2 0 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
+                  Compliance Standards
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  We help you meet industry standards and regulatory requirements for data security.
+                </p>
+              </motion.div>
+
+              <div className="grid grid-cols-2 md: gri d-cols-3 lg: gri d-cols-6 gap-8">
+                {complianceStandards.map((standard, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 2 0 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                    className="bg-white rounded-xl p-6 shadow-lg hover: shado w-xl transition-shadow duration-300 text-center"
+                  >
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">
+                      {standard.name}
+                    </h3>
+                    <p className="text-sm text-gray-600">
+                      {standard.description}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
             </div>
+          </section>
 
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,";
-              {services.map((service, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-shadow border border-gray-100">,";
-                  <div className="flex items-center mb-4">";
-                    <service.icon className="w-8 h-8 text-red-600 mr-3" />";
-                    <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>";
-                  </div>
-                  <p className="text-gray-600 mb-4">{service.description}</p>";
-                  <ul className="space-y-2">";
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-700">";
-                        <span className="w-2 h-2 bg-red-600 rounded-full mr-3"></span>";
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+          {/* CTA Section */}
+          <section className="py-20">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+              <motion.div
+                initial={{ opacity: 0, y: 2 0 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center"
+              >
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-6">
+                  Secure Your Business Today
+                </h2>
+                <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                  Don't wait for a security breach. Protect your business with our comprehensive cybersecurity solutions.
+                </p>
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+                  <motion.a
+                    href="/contact"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5"  />
+                    Get Started Today
+                  </motion.a>
+                  <motion.a
+                    href="tel:+13024640950"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5"  />
+                    Call Us: +1 302 464 0950
+                  </motion.a>
                 </div>
-              ))}
+              </motion.div>
             </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="bg-gray-50 py-20">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Secure Your Business Today
-            </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Don&apos;t wait for a security breach. Let our experts help you build a robust security posture.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact"
-  className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
-              >
-                Schedule Security Audit
-              </Link>
-                                <a 
-                    href={`tel:${contact.phone}`}
-                    className="border-2 border-red-600 text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-600 hover:text-white transition-colors"
-              >
-                Call {contact.phone }
-              </a>
-            </div>
-          </div>
-        </section>
-      </div>
+          </section>
+        </main>
+      </PageTransition>
     </>
-  );
-};
+  )
+}
+
+export default CybersecurityPage

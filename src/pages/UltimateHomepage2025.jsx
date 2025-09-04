@@ -1,5 +1,12 @@
-
-    const [isVisible, setIsVisible] = useState(false);
+import { Brain, Zap, Shield, Users, TrendingUp, Globe, Rocket, CheckCircle, ArrowRight, Phone, Mail, MapPin, ChevronRight, Clock, BarChart3, Cpu, ShieldCheck, Building2 } from 'lucide - react';'
+import { Link } from 'react - router - dom';'
+import React, { useState, useEffect } from 'react';
+import SEO from "@/components/SEO";
+import { Link } from 'react-router-dom';
+import { Brain, Zap, Shield, Users, TrendingUp, Globe, Rocket, CheckCircle, ArrowRight, Phone, Mail, MapPin, ChevronRight, Clock, BarChart3, Cpu, ShieldCheck, Building2 } from 'lucide-react';
+;
+export default function UltimateHomepage2025() {    const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
+const [isVisible, setIsVisible] = useState(false);
     useEffect(() => {
   // TODO: Add dependencies if needed
 
@@ -336,4 +343,14 @@
           </div>
         </div>
       </div>
+</div>)}
 
+export { UltimateHomepage2025 };
+
+export { UltimateHomepage2025 };
+
+export { UltimateHomepage2025 };
+
+export { UltimateHomepage2025 };
+
+export { UltimateHomepage2025 };

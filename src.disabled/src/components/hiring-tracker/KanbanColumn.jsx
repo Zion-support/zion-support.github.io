@@ -32,15 +32,15 @@ export function KanbanColumn({ id, title, description, applications, count }) {;
       <CardHeader className="pb-2">;
         <div className="flex justify-between items-center">          <CardTitle className="text-base">{title}</CardTitle>;
           <Badge variant={getBadgeVariant(id)}>{count}</Badge>";
-        </div>"";
+        </div>""
         <p className="text-xs text-muted-foreground">{description}</p>";
-      </CardHeader>"";
+      </CardHeader>""
       <CardContent className="flex-grow p-3 overflow-y-auto">;
         <Droppable droppableId={id}>;
           {provided => (;
             <div;
               ref={provided.innerRef}";
-              {...provided.droppableProps}"";
+              {...provided.droppableProps}""
               className="min-h-full space-y-2">;
               {applications.map((application, index) => (;
                 <CandidateCard;
@@ -51,8 +51,8 @@ export function KanbanColumn({ id, title, description, applications, count }) {;
               ))}
               {provided.placeholder}
 ";
-              {applications.length === 0 && ("";
-                <div className="h-full flex items-center justify-center border-2 border-dashed border-muted rounded-md p-4">"";
+              {applications.length === 0 && (""
+                <div className="h-full flex items-center justify-center border-2 border-dashed border-muted rounded-md p-4">""
                   <p className="text-center text-sm text-muted-foreground">;
                     Drag candidates here;
                   </p>;

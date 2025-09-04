@@ -2,11 +2,11 @@
 
 describe('AIChatAssistant', () => {
   it('renders without crashing', () => {
-    render(<AIChatAssistant />);
+    render(<AIChatAssistant  />);
 
     // Add specific content checks based on component functionality
   });
 
   it('handles user interactions', () => {
-    render(<AIChatAssistant />);
+    render(<AIChatAssistant  />);
 

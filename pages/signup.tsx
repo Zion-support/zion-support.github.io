@@ -1,359 +1,663 @@
-import React from 'react';
-import Link from 'next/link';
-import Head from 'next/head';
-import { useState } from 'react';
+import Head from 'next/head.ts'
+import { motion  } from 'framer-motion'
+import { useState  } from 'react'
+import { User,
+  Mail,
+  Lock,
+  Eye,
+  EyeOff,
+  CheckCircle,
+  AlertCircle,
+  Building,
+  Phone,
+  Globe,
+  Shield,
+  Zap,
+  Brain,
+  Cloud
+ } from 'lucide-react'
 
 export default function Signup() {
-const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
-}
-  const [formData, setFormDa,
-  t
-] = useState({
-    firstName: ''
-    lastName: ''
-    email: ''
-    company: ''
-    phone: ''
-    password: ''
-    confirmPassword: ''
-    agreeToTerms: false,
-    subscribeNewsletter: false
-});
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+    comp: '',
+    phone: '',
+    website: '',
+    industry: '',
+    useCase: ''
+  })
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [nam,
-  e
-]: type === 'checkbox' ? checked : value
-    }));
-  }
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (formData.password !== formData.confirmPassword) {
-      alert('Passwords do not match');
-      return;
-     }
-    
-    if (!formData.agreeToTerms) {
-      alert('Please agree to the Terms of Service and Privacy Policy');
-      return;
-    }
-    
-    // Handle signup logic here
-    console.log('Signup attempt: ' formData);
-    alert('Account creation functionality will be implemented with authentication system.');
-   }
+  const [showPassword, setShowPassword] = useState(false)
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [errors, setErrors] = useState<Record<string, any>>({})
+
+  const industries = [
+    'Technology',
+    'Healthcare',
+    'Finance',
+    'Manufacturing',
+    'Retail',
+    'Education',
+    'Government',
+    'Non-profit',
+    'Other'
+  ]
+
+  const useCases = [
+    'AI & Machine Learning',
+    'Cloud Infrastructure',
+    'Cybersecurity',
+    'Digital Transformation',
+    'Data Analytics',
+    'IoT Solutions',
+    'Micro SaaS Development',
+    'Enterprise IT',
+    'Other'
+  ]
+
+      // // // // // // // console.log('Signup successful:', formData)
+
+    } catch (error) {
+      // // // // // // // console.error('Signup error:', error)
+      // // // // console.log('Signup successful:', formData)
+      
+    } catch (error) {
+      // // // // console.error('Signup error:', error)
+    } finally {
+      setIsSubmitting(false)
+
+
+  const title = 'Sign Up — Zion Tech Group'
+  const description = 'Join Zion Tech Group and unlock access to cutting-edge AI, cloud, and cybersecurity solutions.'
+
   return (
     <>
-      <Head>
-        <title>Sign Up - Zion Tech Group | Create Your Account</title>
-        <meta name="description"
-  content="Create your Zion Tech Group account to access our technology services, manage projects, and get started with our solutions." />
-        <meta name="keywords"
-  content="sign up, create account, register, new user, account creation" />
-        <link rel="canonical"
-  href={`${contact.site}/signup`} />
-        <meta property="og:title"
-  content="Sign Up - Zion Tech Group | Create Your Account" />
-        <meta property="og:description"
-  content="Create your Zion Tech Group account to access our technology services, manage projects, and get started with our solutions." />
-        <meta property="og:url"
-  content={`${contact.site}/signup`} />
-        <meta property="og:type"
-  content="website" />
-      </Head>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description}  />
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />
+        <link rel="canonical" href="https://ziontechgroup.com/signup"  />
 
-      <div style={{ minHeight: 100vh, background: color, 'white' padding: '40px 20px'
-}}>
-        <div style={{ maxWidth: 500, margin: '0 auto'
-}}>
-          <div style={{ textAlign: center, marginBottom: 40
-}}>
-            <h1 style={{ 
-              fontSize: fontWeight, 800, 
-              marginBottom: 10,
-              background: WebkitBackgroundClip, 'text',
-              WebkitTextFillColor: transparent,
-              backgroundClip: text
-},,}>
-              Create Account
-            </h1>
-            <p style={{ color: '#94a3b8', fontSize: '1.1rem'
-}}>
-              Join Zion Tech Group and unlock the power of technology
-            </p>
+        {/* Open Graph */}
+        <meta property="og: titl e" content={title}  />
+        <meta property="og: descriptio n" content={description}  />
+        <meta property="og: ur l" content="https://ziontechgroup.com/signup"  />
+        <meta property="og: typ e" content="website"  />
+
+        {/* Twitter */}
+        <meta name="twitter: car d" content="summary_large_image"  />
+        <meta name="twitter: titl e" content={title}  />
+        <meta name="twitter: descriptio n" content={description}  />
+      </Helmet>
+
+      <main className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark text-white">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden py-20">
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full"></div>
+            <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
+            <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
           </div>
 
-          <div style={{
-            background: borderRadius, 12,
-            padding: 40,
-            border: '1px solid rgba(255, 255, 255, 0.1)'
-}}>
-            <form onSubmit={handleSubmit}>
-              <div style={{ display: gridTemplateColumns, '1fr 1fr' gap: 15, marginBottom: 20
-}}>
-                <div>
-                  <label style={{ display: marginBottom, 8, fontWeight: 600
-}}>
-                    First Name *
-                  </label>
-                  <input
-                    type="text"
-  name="firstName"
-                    value={formData.firstName}
-                    onChange={handleInputChange}
-                    required
-                    style={{
-                      width: padding, '12px'
-                      borderRadius: 8,
-                      border: background, 'rgba(255, 255, 255, 0.1)'
-                      color: fontSize, '1rem'
-                    }
-                    placeholder="First name"
-                  />
-                </div>
-                <div>
-                  <label style={{ display: marginBottom, 8, fontWeight: 600
-}}>
-                    Last Name *
-                  </label>
-                  <input
-                    type="text"
-  name="lastName"
-                    value={formData.lastName}
-                    onChange={handleInputChange}
-                    required
-                    style={{
-                      width: padding, '12px'
-                      borderRadius: 8,
-                      border: background, 'rgba(255, 255, 255, 0.1)'
-                      color: fontSize, '1rem'
-                    }
-                    placeholder="Last name"
-                  />
-                </div>
-              </div>
+          <div className="container mx-auto px-4 sm: p x-6 lg: p x-8 relative z-10">
+            <motion.div
+              initial = {
+  { opacity: 0,
+  y: 2 0 
 
-              <div style={{ marginBottom: 20
-}}>
-                <label style={{ display: marginBottom, 8, fontWeight: 600
-}}>
-                  Email Address *
-                </label>
-                <input
-                  type="email"
-  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  style={{
-                    width: padding, '12px'
-                    borderRadius: 8,
-                    border: background, 'rgba(255, 255, 255, 0.1)'
-                    color: fontSize, '1rem'
-                  }
-                  placeholder="Enter your email"
-                />
-              </div>
 
-              <div style={{ marginBottom: 20
-}}>
-                <label style={{ display: marginBottom, 8, fontWeight: 600
-}}>
-                  Company Name
-                </label>
-                <input
-                  type="text"
-  name="company"
-                  value={formData.company}
-                  onChange={handleInputChange}
-                  style={{
-                    width: padding, '12px'
-                    borderRadius: 8,
-                    border: background, 'rgba(255, 255, 255, 0.1)'
-                    color: fontSize, '1rem'
-                  }
-                  placeholder="Your company name"
-                />
-              </div>
 
-              <div style={{ marginBottom: 20
-}}>
-                <label style={{ display: marginBottom, 8, fontWeight: 600
-}}>
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-  name="phone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  style={{
-                    width: padding, '12px'
-                    borderRadius: 8,
-                    border: background, 'rgba(255, 255, 255, 0.1)'
-                    color: fontSize, '1rem'
-                  }
-                  placeholder="+1 (555) 123-4567"
-                />
-              </div>
 
-              <div style={{ display: gridTemplateColumns, '1fr 1fr' gap: 15, marginBottom: 20
-}}>
-                <div>
-                  <label style={{ display: marginBottom, 8, fontWeight: 600
-}}>
-                    Password *
-                  </label>
-                  <input
-                    type="password"
-  name="password"
-                    value={formData.password}
-                    onChange={handleInputChange}
-                    required
-                    style={{
-                      width: padding, '12px'
-                      borderRadius: 8,
-                      border: background, 'rgba(255, 255, 255, 0.1)'
-                      color: fontSize, '1rem'
-                    }
-                    placeholder="Create password"
-                  />
-                </div>
-                <div>
-                  <label style={{ display: marginBottom, 8, fontWeight: 600
-}}>
-                    Confirm Password *
-                  </label>
-                  <input
-                    type="password"
-  name="confirmPassword"
-                    value={formData.confirmPassword}
-                    onChange={handleInputChange}
-                    required
-                    style={{
-                      width: padding, '12px'
-                      borderRadius: 8,
-                      border: background, 'rgba(255, 255, 255, 0.1)'
-                      color: fontSize, '1rem'
-                    }
-                    placeholder="Confirm password"
-                  />
-                </div>
-              </div>
 
-              <div style={{ marginBottom: 20
-}}>
-                <label style={{ display: alignItems, 'flex-start' gap: 10, cursor: pointer
-}}>
-                  <input
-                    type="checkbox"
-  name="agreeToTerms"
-                    checked={formData.agreeToTerms}
-                    onChange={handleInputChange}
-                    required
-                    style={{ width: 16, height: 16, marginTop: 2
-}
-                  />
-                  <span style={{
-            fontSize: lineHeight, 1.4 
-          }}>
-                    I agree to the{' '}
-                    <Link href="/terms"
-  style={{ color: textDecoration, 'none' }}>
-                      Terms of Service
-                    </Link>
-                    {' '}and{' '}
-                    <Link href="/privacy"
-  style={{ color: textDecoration, 'none' }}>
-                      Privacy Policy
-                    </Link>
-                    {' '}*
-                  </span>
-                </label>
-              </div>
 
-              <div style={{ marginBottom: 30
-}}>
-                <label style={{ display: alignItems, 'center' gap: 10, cursor: pointer
-}}>
-                  <input
-                    type="checkbox"
-  name="subscribeNewsletter"
-                    checked={formData.subscribeNewsletter}
-                    onChange={handleInputChange}
-                    style={{ width: 16, height: 16
-}
-                  />
-                  <span style={{ fontSize: '0.9rem'
-}}>
-                    Subscribe to our newsletter for updates and insights
-                  </span>
-                </label>
-              </div>
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
 
-              <button
-                type="submit"
-  style={{
-                  width: background, 'linear-gradient(135deg, #3b82f6, #8b5cf6)'
-                  color: padding, '15px'
-                  border: borderRadius, 8,
-                  fontSize: fontWeight, 600,
-                  cursor: transition, 'transform 0.3s ease'
-                  marginBottom: 20
-}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-2px)';
-                }
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                }
-              >
-                Create Account
-              </button>
-            </form>
 
-            <div style={{ textAlign: marginTop, 20 }}>
-              <p style={{ color: '#94a3b8', fontSize: '0.9rem'
-}}>
-                Already have an account?{' '}
-                <Link href="/login"
-  style={{ 
-                  color: textDecoration, 'none' 
-                  fontWeight: 600
-}}>
-                  Sign in here
-                </Link>
+
+
+
+
+}}
+              transition={{ duration: 0.6 }}
+              className="text-center max-w-4xl mx-auto"
+
+              <h1 className="text-4xl md: tex t-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">
+                Join Zion Tech Group
+              </h1>
+              <p className="text-xl md: tex t-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+                Unlock access to revolutionary AI autonomous systems, quantum computing solutions,
+                and enterprise-grade cybersecurity platforms.
               </p>
-            </div>
-          </div>
 
-          <div style={{ textAlign: marginTop, 30 }}>
-            <p style={{ color: fontSize, '0.9rem' marginBottom: 10
-}}>
-              Questions about creating an account?
-            </p>
-            <div style={{ display: gap, 20, justifyContent: flexWrap, 'wrap' }}>
-              <a href={`tel: '${contact.phone'
-}`} style={{
-                color: textDecoration, 'none'
-                fontSize: '0.9rem'
-}}>
-                📞 {contact.phone}
-              </a>
-              <a href={`mailto: ${contact.email }`} style={{
-            color: textDecoration, 'none'
-                fontSize: '0.9rem'
-}}>
-                ✉️ {contact.email}
-              </a>
-            </div>
+              <div className="flex flex-wrap justify-center gap-6 mb-12">
+                <div className="flex items-center gap-3 text-zion-cyan">
+                  <Shield className="w-6 h-6"  />
+                  <span className="text-lg">Enterprise Security</span>
+                </div>
+                <div className="flex items-center gap-3 text-zion-purple-light">
+                  <Brain className="w-6 h-6"  />
+                  <span className="text-lg">AI Innovation</span>
+                </div>
+                <div className="flex items-center gap-3 text-zion-cyan-light">
+                  <Cloud className="w-6 h-6"  />
+                  <span className="text-lg">Cloud Native</span>
+                </div>
+              </div>
+            </motion.div>
           </div>
-        </div>
-      </div>
-    </>
+        </section>
+
+        {/* Signup Form Section */}
+        <section className="py-20 bg-white/5 backdrop-blur-sm">
+          <div className="container mx-auto px-4 sm: p x-6 lg: p x-8">
+            <motion.div
+              initial = {
+  { opacity: 0,
+  y: 2 0 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+
+}}
+              className="max-w-2xl mx-auto"
+
+              <div className="bg-zion-blue-dark/50 backdrop-blur-md border border-zion-blue-light rounded-2xl p-8 md:p-12">
+                <h2 className="text-3xl font-bold text-center mb-8 text-white">
+                  Create Your Account
+                </h2>
+
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Personal Information */}
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="firstName" className="block text-sm font-medium text-zion-slate-light mb-2">
+                        First Name *
+                      </label>
+                      <div className="relative">
+                        <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
+                        <input type="text"
+                          id="firstName"
+                          name="firstName"
+                          value={formData.firstName}
+                          onChange={handleInputChange}
+                          className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${
+                            errors.firstName ? 'border-red-500' : 'border-zion-blue-light'
+                          }`}
+                          placeholder="Enter your first name"
+                         />
+                      </div>
+                      {errors.firstName && (
+                        <p className="mt-1 text-sm text-red-400 flex items-center gap-2">
+                          <AlertCircle className="w-4 h-4"  />
+                          {errors.firstName}
+                        </p>
+                      )}
+                    </div>
+
+                    <div>
+                      <label htmlFor="lastName" className="block text-sm font-medium text-zion-slate-light mb-2">
+                        Last Name *
+                      </label>
+                      <div className="relative">
+                        <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
+                        <input type="text"
+                          id="lastName"
+                          name="lastName"
+                          value={formData.lastName}
+                          onChange={handleInputChange}
+                          className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${
+                            errors.lastName ? 'border-red-500' : 'border-zion-blue-light'
+                          }`}
+                          placeholder="Enter your last name"
+                         />
+                      </div>
+                      {errors.lastName && (
+                        <p className="mt-1 text-sm text-red-400 flex items-center gap-2">
+                          <AlertCircle className="w-4 h-4"  />
+                          {errors.lastName}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Email */}
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-2">
+                      Email Address *
+                    </label>
+                    <div className="relative">
+                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
+                      <input type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${
+                          errors.email ? 'border-red-500' : 'border-zion-blue-light'
+                        }`}
+                        placeholder="Enter your email address"
+                       />
+                    </div>
+                    {errors.email && (
+                      <p className="mt-1 text-sm text-red-400 flex items-center gap-2">
+                        <AlertCircle className="w-4 h-4"  />
+                        {errors.email}
+                      </p>
+                    )}
+                  </div>
+
+                  {/* Password */}
+                  <div>
+                    <label htmlFor="password" className="block text-sm font-medium text-zion-slate-light mb-2">
+                      Password *
+                    </label>
+                    <div className="relative">
+                      <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
+                      <input type={showPassword ? 'text' : 'password'}
+                        id="password"
+                        name="password"
+                        value={formData.password}
+                        onChange={handleInputChange}
+                        className={`w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${
+                          errors.password ? 'border-red-500' : 'border-zion-blue-light'
+                        }`}
+                        placeholder="Create a strong password"
+                       />
+                      <button
+                        type="button"
+                        onClick={() => setShowPassword(!showPassword)}
+                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover: tex t-white transition-colors"
+
+                        {showPassword ? <EyeOff className="w-5 h-5"  /> : <Eye className="w-5 h-5"  />}
+                      </button>
+                    </div>
+                    {errors.password && (
+                      <p className="mt-1 text-sm text-red-400 flex items-center gap-2">
+                        <AlertCircle className="w-4 h-4"  />
+                        {errors.password}
+                      </p>
+                    )}
+                  </div>
+
+                  {/* Confirm Password */}
+                  <div>
+                    <label htmlFor="confirmPassword" className="block text-sm font-medium text-zion-slate-light mb-2">
+                      Confirm Password *
+                    </label>
+                    <div className="relative">
+                      <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
+                      <input type={showConfirmPassword ? 'text' : 'password'}
+                        id="confirmPassword"
+                        name="confirmPassword"
+                        value={formData.confirmPassword}
+                        onChange={handleInputChange}
+                        className={`w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${
+                          errors.confirmPassword ? 'border-red-500' : 'border-zion-blue-light'
+                        }`}
+                        placeholder="Confirm your password"
+                       />
+                      <button
+                        type="button"
+                        onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover: tex t-white transition-colors"
+
+                        {showConfirmPassword ? <EyeOff className="w-5 h-5"  /> : <Eye className="w-5 h-5"  />}
+                      </button>
+                    </div>
+                    {errors.confirmPassword && (
+                      <p className="mt-1 text-sm text-red-400 flex items-center gap-2">
+                        <AlertCircle className="w-4 h-4"  />
+                        {errors.confirmPassword}
+                      </p>
+                    )}
+                  </div>
+
+                  {/* Comp Information */}
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="comp" className="block text-sm font-medium text-zion-slate-light mb-2">
+                        Comp Name
+                      </label>
+                      <div className="relative">
+                        <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
+                        <input type="text"
+                          id="comp"
+                          name="comp"
+                          value={formData.comp}
+                          onChange={handleInputChange}
+                          className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
+                          placeholder="Enter comp name"
+                         />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-medium text-zion-slate-light mb-2">
+                        Phone Number
+                      </label>
+                      <div className="relative">
+                        <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
+                        <input type="tel"
+                          id="phone"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleInputChange}
+                          className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
+                          placeholder="Enter phone number"
+                         />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Website and Industry */}
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="website" className="block text-sm font-medium text-zion-slate-light mb-2">
+                        Website
+                      </label>
+                      <div className="relative">
+                        <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
+                        <input type="url"
+                          id="website"
+                          name="website"
+                          value={formData.website}
+                          onChange={handleInputChange}
+                          className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
+                          placeholder="https://yourcomp.com"
+                         />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label htmlFor="industry" className="block text-sm font-medium text-zion-slate-light mb-2">
+                        Industry
+                      </label>
+                      <select
+                        id="industry"
+                        name="industry"
+                        value={formData.industry}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
+
+                        <option value="">Select industry</option>
+                        {industries.map(industry => (
+                          <option key={industry} value={industry} className="bg-zion-blue-dark text-white">
+                            {industry}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+
+                  {/* Use Case */}
+                  <div>
+                    <label htmlFor="useCase" className="block text-sm font-medium text-zion-slate-light mb-2">
+                      Primary Use Case
+                    </label>
+                    <select
+                      id="useCase"
+                      name="useCase"
+                      value={formData.useCase}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
+
+                      <option value="">Select primary use case</option>
+                      {useCases.map(useCase => (
+                        <option key={useCase} value={useCase} className="bg-zion-blue-dark text-white">
+                          {useCase}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  {/* Submit Button */}
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-4 px-8 rounded-lg font-semibold text-lg hover: fro m-zion-cyan-dark hover: t o-zion-purple-dark transition-all duration-300 transform hover: scal e-105 disabled: opacit y-50 disabled: curso r-not-allowed disabled: transfor m-none"
+
+                    {isSubmitting ? (
+                      <div className="flex items-center justify-center gap-3">
+                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                        Creating Account...
+                      </div>
+                    ) : (
+                      <div className="flex items-center justify-center gap-3">
+                        <Zap className="w-5 h-5"  />
+                        Create Account
+                      </div>
+                    )}
+                  </button>
+                </form>
+
+                {/* Additional Info */}
+                <div className="mt-8 text-center">
+                  <p className="text-zion-slate-light text-sm">
+                    Already have an account?{' '}
+                    <a href="/login" className="text-zion-cyan hover: tex t-zion-cyan-light transition-colors font-medium">
+                      Sign in here
+                    </a>
+                  </p>
+                  <p className="text-zion-slate-light text-xs mt-2">
+                    By creating an account, you agree to our{' '}
+                    <a href="/terms" className="text-zion-cyan hover: tex t-zion-cyan-light transition-colors">
+                      Terms of Service
+                    </a>{' '}
+                    and{' '}
+                    <a href="/privacy" className="text-zion-cyan hover: tex t-zion-cyan-light transition-colors">
+                      Privacy Policy
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4 sm: p x-6 lg: p x-8">
+            <motion.div
+              initial = {
+  { opacity: 0,
+  y: 2 0 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+
+
+
+
+}}
+              className="text-center mb-16"
+
+              <h2 className="text-3xl md: tex t-4xl font-bold mb-6 text-white">
+                Why Join Zion Tech Group?
+              </h2>
+              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+                Get exclusive access to cutting-edge technology solutions and expert support
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
+              <motion.div
+                initial = {
+  { opacity: 0,
+  y: 2 0 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+
+
+
+
+}}
+                className="text-center p-6"
+
+                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-8 h-8 text-white"  />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-white">Enterprise Security</h3>
+                <p className="text-zion-slate-light">
+                  Access to zero-trust cybersecurity platforms and advanced threat detection systems
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial = {
+  { opacity: 0,
+  y: 2 0 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 0.8 
+
+
+
+
+
+
+}}
+                className="text-center p-6"
+
+                <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Brain className="w-8 h-8 text-white"  />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-white">AI Innovation</h3>
+                <p className="text-zion-slate-light">
+                  Leverage autonomous AI systems and machine learning platforms for business growth
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial = {
+  { opacity: 0,
+  y: 2 0 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 1.0 
+
+
+
+
+
+
+}}
+                className="text-center p-6"
+
+                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan-light to-zion-purple-light rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Cloud className="w-8 h-8 text-white"  />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-white">Cloud Native</h3>
+                <p className="text-zion-slate-light">
+                  Scalable cloud infrastructure and DevOps solutions for modern applications
+                </p>
+              </motion.div>
+            </div>;
+          </div>;
+        </section>;
+      </main>;
+    </>;
   );
-}
+};

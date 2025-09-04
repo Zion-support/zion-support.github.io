@@ -1,1 +1,2 @@
-
+import { useEffect, useState, useRef, ReactNode } from "react";"; interface LazyLoadProps {}; height?: string | number; width?: string | number; children: ReactNod e, loadingComponent? ReactNode, className? string"
+  };" export function LazyLoad(function LazyLoad(function LazyLoad({}"; height = 200px","; width = 100%", children, loadingComponent, className}: LazyLoadProps) {): any {) any {}; const [isVisible, setIsVisible] = useState(false); const [isLoaded, setIsLoaded] = useState(false); const containerRef: an y = useRef<HTMLDivElement>(null), useEffect(() => {}; const currentRef: an y = containerRef.current, "

@@ -1,5 +1,54 @@
-
-            <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">""""
+import React, { useState } from 'react';
+;
+;
+const EnhancedComprehensiveServicesShowcase = () => {
+    const [activeCategory, setActiveCategory] = useState('all');
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedService, setSelectedService] = useState(null);
+    const allServices = [
+        ...advancedInnovativeServicesExpansionV3.map(service => ({
+            ...service,
+            type: 'Advanced AI & Innovation',
+            displayPrice: service.price
+        })),
+        ...specializedEnterpriseSolutions2025.map(service => ({
+            ...service,
+            type: 'Specialized Enterprise',
+            displayPrice: service.price
+        }))
+    ];
+    const filteredServices = allServices.filter(service => {
+        const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            service.category.toLowerCase().includes(searchTerm.toLowerCase());
+        return matchesCategory && matchesSearch});
+    const categories = [
+        { id: 'all', name: 'All Services', count: allServices.length },
+        { id: 'Advanced AI & Innovation', name: 'Advanced AI & Innovation', count: advancedInnovativeServicesExpansionV3.length },
+        { id: 'Specialized Enterprise', name: 'Specialized Enterprise', count: specializedEnterpriseSolutions2025.length }
+    ];
+    const handleServiceClick = (service) => {
+        setSelectedService(service)};
+    const closeModal = () => {
+        setSelectedService(null)};
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+      {/* Header Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            Zion Tech Group
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              {" "}Innovative Services 2025
+            </span>
+          </h1>          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Discover our cutting-edge portfolio of micro SAAS solutions, IT;
+            services, and AI-powered innovations designed to transform your;
+            business and drive competitive advantage in the digital age;
+          </p>
+"""
+          {/* Key Statistics */}""""
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">""""
+<div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">""""
               <div className="text-3xl font-bold text-blue-400 mb-2">"",
                 {allServices.length}+"""""
               </div>"""""
@@ -396,4 +445,25 @@ enterprise-level reliability,
 
                       </a>
                     </div>
+</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>)
+      )}
+    </div>
+  );
+}
+    </div>)};
+export default EnhancedComprehensiveServicesShowcase;
 
+export { EnhancedComprehensiveServicesShowcase };
+
+export { EnhancedComprehensiveServicesShowcase };
+
+export { EnhancedComprehensiveServicesShowcase };
+
+export { EnhancedComprehensiveServicesShowcase };
+
+export { EnhancedComprehensiveServicesShowcase };

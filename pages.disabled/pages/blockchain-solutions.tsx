@@ -1,5 +1,4 @@
 import React from 'react';
-import type { NextPage } from 'next';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 import { Shield, Zap, Globe, Lock, Database, ArrowRight, CheckCircle, Users, Award } from 'lucide-react';
@@ -32,12 +31,12 @@ const BlockchainSolutions: NextPage = () => {
     }
   ];
 
+const BlockchainSolutions = () => {
   return (
     <>
       <Head>
         <title>Blockchain Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive blockchain solutions including smart contracts, DeFi, NFTs, and cross-chain integration services." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Enterprise blockchain solutions and smart contract development" />
       </Head>
       
       <Layout 
@@ -49,17 +48,51 @@ const BlockchainSolutions: NextPage = () => {
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Blockchain</span> Solutions
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your business with cutting-edge blockchain technology, smart contracts, and decentralized solutions
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Transform your business with secure, transparent, and efficient blockchain technology solutions.
             </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h2 className="text-2xl font-semibold mb-4">Smart Contracts</h2>
+              <ul className="text-gray-600 space-y-2">
+                <li>• Automated Agreements</li>
+                <li>• DeFi Protocols</li>
+                <li>• Supply Chain</li>
+                <li>• Governance Systems</li>
+              </ul>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h2 className="text-2xl font-semibold mb-4">Enterprise Blockchain</h2>
+              <ul className="text-gray-600 space-y-2">
+                <li>• Private Networks</li>
+                <li>• Consortium Solutions</li>
+                <li>• Cross-chain Integration</li>
+                <li>• Scalability Solutions</li>
+              </ul>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h2 className="text-2xl font-semibold mb-4">NFT & Tokenization</h2>
+              <ul className="text-gray-600 space-y-2">
+                <li>• Digital Assets</li>
+                <li>• Token Economics</li>
+                <li>• Marketplace Development</li>
+                <li>• Asset Management</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="text-center">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
-                Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </button>
-              <button className="inline-flex items-center px-8 py-3 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
-                View Portfolio
-              </button>
+              <Link href="/contact/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                Start Your Project
+              </Link>
+              <Link href="/services/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                View All Services
+              </Link>
             </div>
           </div>
         </section>

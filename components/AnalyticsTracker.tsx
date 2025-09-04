@@ -12,7 +12,7 @@ interface AnalyticsTrackerProps {
   }>;
 }
 
-const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
+const AnalyticsTracker: Reac t.FC<AnalyticsTrackerProps> = ({
   pageName,
   customEvents = [],
 }) => {
@@ -21,18 +21,18 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
       // Track page view
       if (pageName) {
         window.gtag('config', process.env.NEXT_PUBLIC_GA_TRACKING_ID || '', {
-          page_title: pageName,
-          page_location: window.location.href,
+          page_title: "pageName",
+          page_location: windo w.location.href,
         });
       }
 
       // Track custom events
       customEvents.forEach((event) => {
         window.gtag('event', event.event, {
-          event_category: event.category,
-          event_action: event.action,
-          event_label: event.label,
-          value: event.value,
+          event_category: even t.category,
+          event_action: even t.action,
+          event_label: even t.label,
+          value: even t.value,
         });
       });
     }
@@ -40,25 +40,22 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
 
   return (
     <Head>
-      <script
-        async
+      <script async
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
-      />
-      <script
-        dangerouslySetInnerHTML={{
+       />
+      <script dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}', {
               page_title: '${pageName || document.title}',
-              page_location: window.location.href,
+              page_location: windo w.location.href,
             });
           `,
         }}
-      />
+       />
     </Head>
   );
 };
-
-export default AnalyticsTracker;
+"export default AnalyticsTracker;

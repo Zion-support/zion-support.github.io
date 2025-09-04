@@ -1,5 +1,44 @@
-
-          <div className="flex flex-wrap justify-center gap-4">""""
+import React, { useState } from 'react';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/innovativeMicroSaasServices2025";
+;
+;
+const InnovativeServicesShowcase = () => {
+    const [activeTab, setActiveTab] = useState('microsaas');
+    const [selectedService, setSelectedService] = useState(null);
+    const tabs = [
+        { id: 'microsaas', name: 'Micro SAAS Services', count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.length },
+        { id: 'it', name: 'IT Services', count: innovativeITServices2025.length },
+        { id: 'ai', name: 'AI Services', count: innovativeAIServices2025.length }
+    ];
+    const getServicesByTab = () => {
+        switch (activeTab) {
+            case 'microsaas':
+                return INNOVATIVE_MICRO_SAAS_SERVICES_2025;
+            case 'it':
+                return innovativeITServices2025;
+            case 'ai':
+                return innovativeAIServices2025;
+            default:
+                return []}
+    };
+    const handleServiceClick = (service) => {
+        setSelectedService(service)};
+    const closeModal = () => {
+        setSelectedService(null)};
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+      {/* Header Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            Innovative
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              {" "}Services 2025
+            </span>
+          </h1>          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Cutting-edge technology solutions designed to transform your;
+            business and drive innovation"""
+          </p>""""
+<div className="flex flex-wrap justify-center gap-4">""""
             <div className="bg-white/10 backdrop-blur-lg rounded-lg px-6 py-3">""""
               <span className="text-2xl font-bold text-blue-400">
                 {INNOVATIVE_MICRO_SAAS_SERVICES_2025.length +"
@@ -385,4 +424,17 @@
               Call Now: +1 302 464 0950,
             </a>
           </div>
+</div>
+      </section>
+    </div>)};
+export default InnovativeServicesShowcase;
 
+export { InnovativeServicesShowcase };
+
+export { InnovativeServicesShowcase };
+
+export { InnovativeServicesShowcase };
+
+export { InnovativeServicesShowcase };
+
+export { InnovativeServicesShowcase };

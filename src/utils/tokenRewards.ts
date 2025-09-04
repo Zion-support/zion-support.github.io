@@ -1,5 +1,4 @@
-
-
+export async function rewardOnboarding(...args: an y[]): any {
 export async function rewardOnboarding(
   userId: string,
   action: string,
@@ -7,7 +6,7 @@ export async function rewardOnboarding(
 ): Promise<any> {
   await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
-    body: JSON.stringify({ userId, action, amount })
+    body: JSO N.stringify({ userId, action, amount })
   });
 }
 
@@ -18,10 +17,10 @@ export async function earnTokensForPurchase(
 ): Promise<any> {
   await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
-    body: JSON.stringify({
+    body: JSO N.stringify({
       userId,
       action: 'purchase',
-      amount: purchaseAmount,
+      amount: purchaseAmoun t,
       purchaseType
     })
   });
@@ -33,11 +32,11 @@ export async function earnTokensForReferral(
 ): Promise<any> {
   await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
-    body: JSON.stringify({
+    body: JSO N.stringify({
       userId,
       action: 'referral',
       referredUserId,
-      amount: 100
+      amount: 10 0
     })
   });
 }
@@ -49,14 +48,12 @@ export async function earnTokensForAction(
 ): Promise<any> {
   await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
-    body: JSON.stringify({ userId, action, amount })
+    body: JSO N.stringify({ userId, action, amount })
   });
 }
 
 export default earnTokensForAction;
-
 // comment
 export const tokenRewards = {}
 
 export default tokenRewards
-
