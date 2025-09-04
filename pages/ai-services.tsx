@@ -485,6 +485,390 @@ export default function AIServices() {
       pricing: '$5,000 - $20,000/month',
       delivery: '8-14 weeks',
       category: 'Mental Health AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Robotics',
+      description: 'Intelligent robotic systems with advanced AI capabilities for industrial and service applications',
+      icon: Settings,
+      features: [
+        'Autonomous navigation and path planning',
+        'Object recognition and manipulation',
+        'Human-robot collaboration',
+        'Predictive maintenance and self-diagnosis',
+        'Adaptive learning and behavior modification',
+        'Multi-robot coordination and swarm intelligence'
+      ],
+      pricing: '$30,000 - $150,000/month',
+      delivery: '16-28 weeks',
+      category: 'Robotics AI'
+    },
+    {
+      title: 'AI-Powered Financial Risk Assessment',
+      description: 'Advanced financial risk modeling and assessment using machine learning',
+      icon: Shield,
+      features: [
+        'Credit risk scoring and assessment',
+        'Market risk analysis and prediction',
+        'Operational risk identification',
+        'Regulatory compliance monitoring',
+        'Fraud detection and prevention',
+        'Portfolio optimization and stress testing'
+      ],
+      pricing: '$15,000 - $60,000/month',
+      delivery: '10-18 weeks',
+      category: 'FinTech AI'
+    },
+    {
+      title: 'AI-Powered Supply Chain Intelligence',
+      description: 'Intelligent supply chain optimization with predictive analytics and automation',
+      icon: Network,
+      features: [
+        'Demand forecasting and planning',
+        'Supplier risk assessment and monitoring',
+        'Logistics optimization and routing',
+        'Inventory optimization and management',
+        'Supply chain visibility and tracking',
+        'Risk mitigation and contingency planning'
+      ],
+      pricing: '$20,000 - $80,000/month',
+      delivery: '12-20 weeks',
+      category: 'Supply Chain AI'
+    },
+    {
+      title: 'AI-Powered Energy Grid Optimization',
+      description: 'Smart grid management with AI-driven energy distribution and consumption optimization',
+      icon: Zap,
+      features: [
+        'Energy demand prediction and load balancing',
+        'Renewable energy integration and optimization',
+        'Grid stability monitoring and control',
+        'Energy storage optimization',
+        'Fault detection and predictive maintenance',
+        'Carbon footprint reduction and sustainability'
+      ],
+      pricing: '$25,000 - $100,000/month',
+      delivery: '14-22 weeks',
+      category: 'Energy AI'
+    },
+    {
+      title: 'AI-Powered Legal Document Analysis',
+      description: 'Intelligent legal document processing with contract analysis and compliance monitoring',
+      icon: FileText,
+      features: [
+        'Contract analysis and risk assessment',
+        'Legal document summarization and extraction',
+        'Compliance monitoring and reporting',
+        'Case law research and analysis',
+        'Legal precedent identification',
+        'Automated legal drafting and review'
+      ],
+      pricing: '$12,000 - $45,000/month',
+      delivery: '8-16 weeks',
+      category: 'Legal AI'
+    },
+    {
+      title: 'AI-Powered Real Estate Intelligence',
+      description: 'Intelligent real estate analysis with property valuation and market prediction',
+      icon: Home,
+      features: [
+        'Property valuation and price prediction',
+        'Market trend analysis and forecasting',
+        'Investment opportunity identification',
+        'Property condition assessment',
+        'Neighborhood analysis and scoring',
+        'Rental yield optimization'
+      ],
+      pricing: '$8,000 - $30,000/month',
+      delivery: '6-14 weeks',
+      category: 'Real Estate AI'
+    },
+    {
+      title: 'AI-Powered Manufacturing Quality Control',
+      description: 'Intelligent quality control systems with defect detection and process optimization',
+      icon: Settings,
+      features: [
+        'Real-time defect detection and classification',
+        'Quality prediction and prevention',
+        'Process optimization and control',
+        'Root cause analysis and correction',
+        'Predictive quality maintenance',
+        'Supply chain quality integration'
+      ],
+      pricing: '$18,000 - $70,000/month',
+      delivery: '12-20 weeks',
+      category: 'Manufacturing AI'
+    },
+    {
+      title: 'AI-Powered Customer Experience Optimization',
+      description: 'Intelligent customer experience management with personalization and optimization',
+      icon: Users,
+      features: [
+        'Customer journey mapping and optimization',
+        'Personalized experience delivery',
+        'Sentiment analysis and emotion detection',
+        'Customer satisfaction prediction',
+        'Churn prevention and retention',
+        'Cross-channel experience consistency'
+      ],
+      pricing: '$10,000 - $40,000/month',
+      delivery: '8-16 weeks',
+      category: 'Customer Experience AI'
+    },
+    {
+      title: 'AI-Powered Content Generation',
+      description: 'Advanced content creation platform with multi-format generation and optimization',
+      icon: FileText,
+      features: [
+        'Multi-format content generation (text, images, video)',
+        'Brand voice consistency and customization',
+        'SEO optimization and keyword integration',
+        'Content performance prediction',
+        'Automated content scheduling',
+        'Multi-language content creation'
+      ],
+      pricing: '$6,000 - $25,000/month',
+      delivery: '6-12 weeks',
+      category: 'Content AI'
+    },
+    {
+      title: 'AI-Powered Predictive Maintenance',
+      description: 'Intelligent equipment maintenance with failure prediction and optimization',
+      icon: Settings,
+      features: [
+        'Equipment failure prediction and prevention',
+        'Maintenance scheduling optimization',
+        'Spare parts inventory management',
+        'Cost-benefit analysis and optimization',
+        'Maintenance history analysis',
+        'Integration with IoT sensors and systems'
+      ],
+      pricing: '$15,000 - $60,000/month',
+      delivery: '10-18 weeks',
+      category: 'Maintenance AI'
+    },
+    {
+      title: 'AI-Powered Human Resources Intelligence',
+      description: 'Intelligent HR management with talent acquisition and employee optimization',
+      icon: Users,
+      features: [
+        'Talent acquisition and candidate matching',
+        'Employee performance prediction and optimization',
+        'Workforce planning and optimization',
+        'Employee engagement and satisfaction analysis',
+        'Skills gap analysis and training recommendations',
+        'Retention prediction and intervention'
+      ],
+      pricing: '$12,000 - $50,000/month',
+      delivery: '10-18 weeks',
+      category: 'HR AI'
+    },
+    {
+      title: 'AI-Powered Marketing Intelligence',
+      description: 'Intelligent marketing optimization with campaign analysis and customer insights',
+      icon: Target,
+      features: [
+        'Campaign performance prediction and optimization',
+        'Customer segmentation and targeting',
+        'Marketing ROI analysis and optimization',
+        'Content performance analysis',
+        'Channel optimization and attribution',
+        'Marketing automation and personalization'
+      ],
+      pricing: '$8,000 - $35,000/month',
+      delivery: '6-14 weeks',
+      category: 'Marketing AI'
+    },
+    {
+      title: 'AI-Powered Sales Intelligence',
+      description: 'Intelligent sales optimization with lead scoring and revenue prediction',
+      icon: TrendingUp,
+      features: [
+        'Lead scoring and qualification',
+        'Sales forecasting and revenue prediction',
+        'Customer lifetime value prediction',
+        'Sales process optimization',
+        'Deal closure probability analysis',
+        'Sales performance analytics and insights'
+      ],
+      pricing: '$10,000 - $40,000/month',
+      delivery: '8-16 weeks',
+      category: 'Sales AI'
+    },
+    {
+      title: 'AI-Powered Operations Intelligence',
+      description: 'Intelligent operations management with process optimization and efficiency',
+      icon: Settings,
+      features: [
+        'Process optimization and automation',
+        'Resource allocation and optimization',
+        'Performance monitoring and analysis',
+        'Bottleneck identification and resolution',
+        'Cost optimization and reduction',
+        'Operational efficiency improvement'
+      ],
+      pricing: '$15,000 - $60,000/month',
+      delivery: '10-18 weeks',
+      category: 'Operations AI'
+    },
+    {
+      title: 'AI-Powered Research & Development',
+      description: 'Intelligent R&D platform with innovation discovery and development optimization',
+      icon: Brain,
+      features: [
+        'Innovation opportunity identification',
+        'Research trend analysis and prediction',
+        'Patent landscape analysis',
+        'Technology scouting and evaluation',
+        'R&D project optimization',
+        'Innovation impact assessment'
+      ],
+      pricing: '$20,000 - $80,000/month',
+      delivery: '12-20 weeks',
+      category: 'R&D AI'
+    },
+    {
+      title: 'AI-Powered Compliance Intelligence',
+      description: 'Intelligent compliance monitoring with regulatory analysis and risk assessment',
+      icon: Shield,
+      features: [
+        'Regulatory compliance monitoring',
+        'Risk assessment and mitigation',
+        'Policy analysis and interpretation',
+        'Audit preparation and support',
+        'Compliance reporting and documentation',
+        'Regulatory change impact analysis'
+      ],
+      pricing: '$12,000 - $50,000/month',
+      delivery: '8-16 weeks',
+      category: 'Compliance AI'
+    },
+    {
+      title: 'AI-Powered Innovation Lab',
+      description: 'Intelligent innovation platform with solution development and testing',
+      icon: Brain,
+      features: [
+        'Innovation strategy development',
+        'Solution ideation and evaluation',
+        'Prototype development and testing',
+        'Market validation and analysis',
+        'Technology trend analysis',
+        'Innovation portfolio management'
+      ],
+      pricing: '$25,000 - $100,000/month',
+      delivery: '16-24 weeks',
+      category: 'Innovation AI'
+    },
+    {
+      title: 'AI-Powered Business Intelligence',
+      description: 'Intelligent business analytics with predictive insights and decision support',
+      icon: BarChart3,
+      features: [
+        'Business performance prediction',
+        'Market trend analysis and forecasting',
+        'Competitive intelligence and analysis',
+        'Strategic planning support',
+        'ROI analysis and optimization',
+        'Business process optimization'
+      ],
+      pricing: '$15,000 - $60,000/month',
+      delivery: '10-18 weeks',
+      category: 'Business Intelligence AI'
+    },
+    {
+      title: 'AI-Powered Customer Support Intelligence',
+      description: 'Intelligent customer support with automated resolution and optimization',
+      icon: MessageSquare,
+      features: [
+        'Automated ticket resolution',
+        'Customer sentiment analysis',
+        'Support agent optimization',
+        'Knowledge base optimization',
+        'Support process automation',
+        'Customer satisfaction prediction'
+      ],
+      pricing: '$8,000 - $35,000/month',
+      delivery: '6-14 weeks',
+      category: 'Support AI'
+    },
+    {
+      title: 'AI-Powered Data Intelligence',
+      description: 'Intelligent data management with analysis, optimization, and insights',
+      icon: Database,
+      features: [
+        'Data quality assessment and improvement',
+        'Data pattern recognition and analysis',
+        'Data governance and compliance',
+        'Data integration and synchronization',
+        'Data privacy and security',
+        'Data-driven decision support'
+      ],
+      pricing: '$12,000 - $50,000/month',
+      delivery: '8-16 weeks',
+      category: 'Data Intelligence AI'
+    },
+    {
+      title: 'AI-Powered Security Intelligence',
+      description: 'Intelligent security management with threat detection and response',
+      icon: Shield,
+      features: [
+        'Threat detection and analysis',
+        'Security incident response',
+        'Vulnerability assessment and management',
+        'Security policy optimization',
+        'Risk assessment and mitigation',
+        'Security compliance monitoring'
+      ],
+      pricing: '$15,000 - $60,000/month',
+      delivery: '10-18 weeks',
+      category: 'Security Intelligence AI'
+    },
+    {
+      title: 'AI-Powered Performance Intelligence',
+      description: 'Intelligent performance management with optimization and improvement',
+      icon: TrendingUp,
+      features: [
+        'Performance monitoring and analysis',
+        'Bottleneck identification and resolution',
+        'Performance optimization recommendations',
+        'Capacity planning and scaling',
+        'Performance prediction and forecasting',
+        'Performance improvement automation'
+      ],
+      pricing: '$10,000 - $40,000/month',
+      delivery: '8-16 weeks',
+      category: 'Performance Intelligence AI'
+    },
+    {
+      title: 'AI-Powered Innovation Intelligence',
+      description: 'Intelligent innovation management with discovery and development',
+      icon: Brain,
+      features: [
+        'Innovation opportunity identification',
+        'Technology trend analysis',
+        'Innovation portfolio management',
+        'Innovation impact assessment',
+        'Innovation process optimization',
+        'Innovation success prediction'
+      ],
+      pricing: '$20,000 - $80,000/month',
+      delivery: '12-20 weeks',
+      category: 'Innovation Intelligence AI'
+    },
+    {
+      title: 'AI-Powered Excellence Intelligence',
+      description: 'Intelligent excellence management with optimization and continuous improvement',
+      icon: Award,
+      features: [
+        'Excellence benchmarking and analysis',
+        'Best practice identification and implementation',
+        'Excellence process optimization',
+        'Excellence performance monitoring',
+        'Excellence improvement recommendations',
+        'Excellence culture development'
+      ],
+      pricing: '$25,000 - $100,000/month',
+      delivery: '16-24 weeks',
+      category: 'Excellence Intelligence AI'
     }
   ];
 
