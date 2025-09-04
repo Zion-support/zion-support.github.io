@@ -1,10 +1,57 @@
 {
-  "timestamp": "2025-09-03T21:22:52.907Z",
-  "status": "healthy",
-  "checks": {
-    "packageJson": true,
-    "buildDir": false,
-    "dependencies": true,
-    "criticalFiles": true
+  "timestamp": "2025-09-04T02:05:30.595Z",
+  "status": "failed",
+  "checks": [
+    {
+      "name": "Node.js Version",
+      "status": "success",
+      "duration": 0,
+      "message": "Node.js v22.16.0 (compatible)",
+      "details": null
+    },
+    {
+      "name": "Dependencies",
+      "status": "success",
+      "duration": 0,
+      "message": "Dependencies OK (78 deps, 37 dev deps)",
+      "details": {
+        "dependencies": 78,
+        "devDependencies": 37
+      }
+    },
+    {
+      "name": "Build System",
+      "status": "success",
+      "duration": 0,
+      "message": "Next.js configuration found",
+      "details": null
+    },
+    {
+      "name": "TypeScript",
+      "status": "error",
+      "duration": 891,
+      "message": "TypeScript compilation failed",
+      "details": null
+    },
+    {
+      "name": "ESLint",
+      "status": "warning",
+      "duration": 2678,
+      "message": "ESLint found issues",
+      "details": null
+    },
+    {
+      "name": "File Structure",
+      "status": "success",
+      "duration": 0,
+      "message": "Required directories present",
+      "details": null
+    }
+  ],
+  "summary": {
+    "total": 6,
+    "passed": 4,
+    "failed": 1,
+    "warnings": 1
   }
 }

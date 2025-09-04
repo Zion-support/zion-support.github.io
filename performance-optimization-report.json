@@ -1,246 +1,72 @@
 {
-  "timestamp": "2025-09-03T15:41:55.530Z",
-  "totalOptimizations": 47,
+  "timestamp": "2025-09-04T02:05:50.183Z",
+  "status": "failed",
   "optimizations": [
     {
-      "type": "console_removal",
-      "file": "/workspace/src/components/AICodeGenerator.js.jsx",
-      "timestamp": "2025-09-03T15:41:53.477Z"
+      "name": "Image Optimization",
+      "status": "success",
+      "duration": 1,
+      "message": "Found 3 images for optimization",
+      "details": {
+        "imagesFound": 3,
+        "optimized": 0
+      }
     },
     {
-      "type": "console_removal",
-      "file": "/workspace/src/components/AdvancedAICodeGenerator.js.jsx",
-      "timestamp": "2025-09-03T15:41:53.479Z"
+      "name": "Bundle Optimization",
+      "status": "success",
+      "duration": 11464,
+      "message": "Bundle optimized - Total size: 47.28MB",
+      "details": {
+        "totalSize": 49577613,
+        "pages": 19,
+        "chunks": 19
+      }
     },
     {
-      "type": "console_removal",
-      "file": "/workspace/src/components/AdvancedAICodeGenerator.jsx",
-      "timestamp": "2025-09-03T15:41:53.480Z"
+      "name": "Code Splitting Analysis",
+      "status": "success",
+      "duration": 3,
+      "message": "Code splitting analysis - 0/17 pages use dynamic imports",
+      "details": {
+        "totalPages": 17,
+        "dynamicImports": 0,
+        "staticImports": 17
+      }
     },
     {
-      "type": "console_removal",
-      "file": "/workspace/src/components/AdvancedDataVisualization.js.jsx",
-      "timestamp": "2025-09-03T15:41:53.482Z"
+      "name": "Caching Configuration",
+      "status": "success",
+      "duration": 0,
+      "message": "Caching configuration found",
+      "details": {
+        "hasCaching": true
+      }
     },
     {
-      "type": "console_removal",
-      "file": "/workspace/src/components/AdvancedDataVisualization.jsx",
-      "timestamp": "2025-09-03T15:41:53.482Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/components/AdvancedNotificationSystem.js.jsx",
-      "timestamp": "2025-09-03T15:41:53.482Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/components/AdvancedNotificationSystem.jsx",
-      "timestamp": "2025-09-03T15:41:53.482Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/components/AnalyticsManager.tsx",
-      "timestamp": "2025-09-03T15:41:53.484Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/components/BundleAnalyzer.tsx",
-      "timestamp": "2025-09-03T15:41:53.485Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/components/DynamicListingPage.jsx",
-      "timestamp": "2025-09-03T15:41:53.488Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/components/EnhancedAnalytics.tsx",
-      "timestamp": "2025-09-03T15:41:53.488Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/components/FavoriteButton.tsx",
-      "timestamp": "2025-09-03T15:41:53.492Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/components/MobileNavigation.js.jsx",
-      "timestamp": "2025-09-03T15:41:53.496Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/components/MobileNavigation.jsx",
-      "timestamp": "2025-09-03T15:41:53.496Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/components/PWAUpdater.tsx",
-      "timestamp": "2025-09-03T15:41:53.497Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/components/PerformanceOptimizations.jsx",
-      "timestamp": "2025-09-03T15:41:53.498Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/components/PerformanceOptimizedHero.tsx",
-      "timestamp": "2025-09-03T15:41:53.498Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/components/PerformanceOptimizer.js.jsx",
-      "timestamp": "2025-09-03T15:41:53.498Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/components/PerformanceOptimizer.jsx",
-      "timestamp": "2025-09-03T15:41:53.498Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/components/SEO.tsx",
-      "timestamp": "2025-09-03T15:41:53.499Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/components/ServiceWorker.tsx",
-      "timestamp": "2025-09-03T15:41:53.501Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/components/Sonner.jsx",
-      "timestamp": "2025-09-03T15:41:53.503Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/components/developers/ApiDocumentation.js.jsx",
-      "timestamp": "2025-09-03T15:41:53.506Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/components/developers/ApiDocumentation.jsx",
-      "timestamp": "2025-09-03T15:41:53.507Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/components/header/EnhancedSearchInput.jsx",
-      "timestamp": "2025-09-03T15:41:53.507Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/components/jobs/SuggestedTalents.tsx",
-      "timestamp": "2025-09-03T15:41:53.510Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/components/support/ChatBotPanel.js.jsx",
-      "timestamp": "2025-09-03T15:41:53.512Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/components/support/ChatBotPanel.jsx",
-      "timestamp": "2025-09-03T15:41:53.512Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/components/unused/EnhancedErrorBoundary.jsx",
-      "timestamp": "2025-09-03T15:41:53.515Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/context/WalletContext.tsx",
-      "timestamp": "2025-09-03T15:41:53.516Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/context/notifications/NotificationContext.tsx",
-      "timestamp": "2025-09-03T15:41:53.516Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/hooks/use-toast.tsx",
-      "timestamp": "2025-09-03T15:41:53.516Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/hooks/useAICodeGeneration.jsx",
-      "timestamp": "2025-09-03T15:41:53.516Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/hooks/usePerformance.tsx",
-      "timestamp": "2025-09-03T15:41:53.517Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/hooks/usePerformanceMonitoring.ts",
-      "timestamp": "2025-09-03T15:41:53.517Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/hooks/useSEO.ts",
-      "timestamp": "2025-09-03T15:41:53.517Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/layout/PrimaryNav.jsx",
-      "timestamp": "2025-09-03T15:41:53.518Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/layout/PrimaryNav.tsx",
-      "timestamp": "2025-09-03T15:41:53.518Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/pages/AccountSettings.js.jsx",
-      "timestamp": "2025-09-03T15:41:53.534Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/pages/AccountSettings.jsx",
-      "timestamp": "2025-09-03T15:41:53.534Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/pages/ComprehensiveContact.js.jsx",
-      "timestamp": "2025-09-03T15:41:53.538Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/pages/ComprehensiveContact.jsx",
-      "timestamp": "2025-09-03T15:41:53.539Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/pages/Marketplace.js.jsx",
-      "timestamp": "2025-09-03T15:41:53.552Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/pages/SavedTalentsPage.js.jsx",
-      "timestamp": "2025-09-03T15:41:53.558Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/pages/SavedTalentsPage.jsx",
-      "timestamp": "2025-09-03T15:41:53.558Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/utils/mimeTypeFallback.ts",
-      "timestamp": "2025-09-03T15:41:53.583Z"
-    },
-    {
-      "type": "console_removal",
-      "file": "/workspace/src/utils/resourceMonitor.ts",
-      "timestamp": "2025-09-03T15:41:53.583Z"
+      "name": "SEO Optimization",
+      "status": "warning",
+      "duration": 2,
+      "message": "16/17 pages are SEO optimized",
+      "details": {
+        "totalPages": 17,
+        "optimized": 16,
+        "issues": [
+          {
+            "page": "services.tsx",
+            "missing": [
+              "Head component"
+            ]
+          }
+        ]
+      }
     }
   ],
+  "metrics": {},
   "summary": {
-    "imageOptimizations": 0,
-    "consoleRemovals": 47,
-    "bundleAnalyses": 0
+    "total": 5,
+    "applied": 4,
+    "skipped": 0,
+    "failed": 1
   }
 }

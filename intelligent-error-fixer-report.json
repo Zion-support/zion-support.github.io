@@ -1,6 +1,49 @@
 {
-  "timestamp": "2025-09-01T10:18:18.513Z",
-  "totalFixes": 3339,
-  "status": "completed",
-  "summary": "Intelligent error fixer completed with 3339 fixes applied";
+  "timestamp": "2025-09-04T02:05:35.069Z",
+  "status": "failed",
+  "fixes": [
+    {
+      "name": "TypeScript Errors",
+      "status": "warning",
+      "duration": 837,
+      "message": "Fixed 0/2 TypeScript errors",
+      "details": {
+        "totalErrors": 2,
+        "fixed": 0
+      }
+    },
+    {
+      "name": "ESLint Errors",
+      "status": "warning",
+      "duration": 2650,
+      "message": "Fixed 0/0 ESLint errors",
+      "details": {
+        "totalErrors": 0,
+        "fixed": 0
+      }
+    },
+    {
+      "name": "Import Errors",
+      "status": "success",
+      "duration": 4,
+      "message": "Fixed import issues in 0 files",
+      "details": {
+        "filesFixed": 0
+      }
+    },
+    {
+      "name": "Build Errors",
+      "status": "success",
+      "duration": 11601,
+      "message": "Build successful - no errors to fix",
+      "details": null
+    }
+  ],
+  "errors": [],
+  "summary": {
+    "total": 4,
+    "fixed": 2,
+    "skipped": 0,
+    "failed": 2
+  }
 }

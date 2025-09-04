@@ -1,29 +1,53 @@
 {
-  "timestamp": "2025-09-03T20:00:12.970Z",
+  "timestamp": "2025-09-04T02:06:13.126Z",
   "tests": [
     {
       "name": "Build Test",
-      "status": "failed",
-      "message": "Build failed: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n",
-      "duration": 79,
+      "status": "passed",
+      "message": "Application builds successfully",
+      "duration": 11407,
       "details": {
-        "error": "\n> ziontechgroup.com@0.1.0 prebuild\n> echo \"Starting build...\"\n\nStarting build...\n\n> ziontechgroup.com@0.1.0 build\n> next build\n\n"
+        "buildOutput": [
+          "  └ other shared chunks (total)           14.5 kB",
+          "",
+          "○  (Static)  prerendered as static content",
+          "",
+          "",
+          "> ziontechgroup.com@0.1.0 postbuild",
+          "> echo \"Build completed\"",
+          "",
+          "Build completed",
+          ""
+        ]
       }
     },
     {
       "name": "TypeScript Check",
-      "status": "skipped",
-      "message": "TypeScript type checking not available",
-      "duration": 74,
-      "details": {}
+      "status": "failed",
+      "message": "TypeScript errors found: 2 errors",
+      "duration": 765,
+      "details": {
+        "errors": [
+          "error TS1005:",
+          "error TS1005:"
+        ],
+        "output": "\n> ziontechgroup.com@0.1.0 type-check\n> tsc --noEmit\n\ncomponents/SearchBar.tsx(101,8): error TS1005: ',' expected.\ncomponents/SearchBar.tsx(181,26): error TS1005: '}' expected.\n"
+      }
     },
     {
       "name": "ESLint Check",
-      "status": "passed",
-      "message": "ESLint completed (check output for warnings)",
-      "duration": 75,
+      "status": "failed",
+      "message": "ESLint found 5 issues",
+      "duration": 1239,
       "details": {
-        "output": "\n> ziontechgroup.com@0.1.0 lint\n> eslint components pages --no-ignore\n\n"
+        "errors": [
+          "   50:14  warning  'error' is defined but never used                                @typescript-eslint/no-unused-vars",
+          "  166:41  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities",
+          "  39:17  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities",
+          "  101:7  error  Parsing error: ',' expected",
+          "✖ 25 problems (3 errors, 22 warnings)"
+        ],
+        "output": "\n> ziontechgroup.com@0.1.0 lint\n> eslint components pages --no-ignore\n\n\n/workspace/components/ContactForm.tsx\n   50:14  warning  'error' is defined but never used                                @typescript-eslint/no-unused-vars\n  166:41  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities\n\n/workspace/components/ErrorBoundary.tsx\n  22:5   warning  Unexpected console statement                                     no-console\n  39:17  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities\n\n/workspace/components/PerformanceMonitor.tsx\n  12:13  warning  Unexpected console statement              no-console\n  19:16  warning  'e' is defined but never used             @typescript-eslint/no-unused-vars\n  27:13  warning  Unexpected console statement              no-console\n  34:16  warning  'e' is defined but never used             @typescript-eslint/no-unused-vars\n  42:26  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any\n  43:35  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any\n  46:9   warning  Unexpected console statement              no-console\n  51:16  warning  'e' is defined but never used             @typescript-eslint/no-unused-vars\n\n/workspace/components/SearchBar.tsx\n  101:7  error  Parsing error: ',' expected\n\n/workspace/pages/_app.tsx\n   8:20  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any\n  32:63  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any\n  53:66  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any\n  90:20  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any\n\n/workspace/pages/ai-services.tsx\n  4:72  warning  'Mail' is defined but never used  no-unused-vars\n  4:72  warning  'Mail' is defined but never used  @typescript-eslint/no-unused-vars\n\n/workspace/pages/contact.tsx\n  5:36  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any\n\n/workspace/pages/index.tsx\n  3:8  warning  'Image' is defined but never used  no-unused-vars\n  3:8  warning  'Image' is defined but never used  @typescript-eslint/no-unused-vars\n\n/workspace/pages/micro-saas.tsx\n  4:10  warning  'Layers' is defined but never used  no-unused-vars\n  4:10  warning  'Layers' is defined but never used  @typescript-eslint/no-unused-vars\n\n/workspace/pages/services.tsx\n  1484:37  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any\n\n✖ 25 problems (3 errors, 22 warnings)\n\n"
       }
     },
     {
@@ -37,19 +61,19 @@
             "page": "404.tsx",
             "hasExport": true,
             "hasImports": true,
-            "size": 2402
+            "size": 2412
           },
           {
             "page": "_app.tsx",
             "hasExport": true,
             "hasImports": true,
-            "size": 11609
+            "size": 11610
           },
           {
             "page": "about.tsx",
             "hasExport": true,
             "hasImports": true,
-            "size": 7663
+            "size": 7668
           },
           {
             "page": "ai-services.tsx",
@@ -67,13 +91,13 @@
             "page": "contact.tsx",
             "hasExport": true,
             "hasImports": true,
-            "size": 9132
+            "size": 9142
           },
           {
             "page": "cybersecurity.tsx",
             "hasExport": true,
             "hasImports": true,
-            "size": 7229
+            "size": 7234
           },
           {
             "page": "docs.tsx",
@@ -85,13 +109,13 @@
             "page": "faq.tsx",
             "hasExport": true,
             "hasImports": true,
-            "size": 6274
+            "size": 6284
           },
           {
             "page": "index.tsx",
             "hasExport": true,
             "hasImports": true,
-            "size": 12352
+            "size": 12353
           },
           {
             "page": "it-services.tsx",
@@ -109,7 +133,7 @@
             "page": "pricing.tsx",
             "hasExport": true,
             "hasImports": true,
-            "size": 3929
+            "size": 3900
           },
           {
             "page": "privacy.tsx",
@@ -133,13 +157,13 @@
             "page": "services.tsx",
             "hasExport": true,
             "hasImports": true,
-            "size": 77368
+            "size": 77418
           },
           {
             "page": "terms.tsx",
             "hasExport": true,
             "hasImports": true,
-            "size": 6561
+            "size": 6571
           }
         ],
         "totalPages": 18,
@@ -165,21 +189,21 @@
             "hasReactImport": true,
             "hasExport": true,
             "hasJSX": true,
-            "size": 6741
+            "size": 6749
           },
           {
             "component": "ErrorBoundary.tsx",
             "hasReactImport": true,
             "hasExport": true,
             "hasJSX": true,
-            "size": 2368
+            "size": 2377
           },
           {
             "component": "Loading.tsx",
             "hasReactImport": true,
             "hasExport": true,
             "hasJSX": true,
-            "size": 595
+            "size": 694
           },
           {
             "component": "LoadingSpinner.tsx",
@@ -193,7 +217,7 @@
             "hasReactImport": true,
             "hasExport": true,
             "hasJSX": false,
-            "size": 1857
+            "size": 1921
           },
           {
             "component": "SearchBar.tsx",
@@ -217,27 +241,31 @@
     {
       "name": "Dependencies Check",
       "status": "passed",
-      "message": "Dependencies check passed (79 deps, 37 dev deps)",
-      "duration": 615,
+      "message": "Dependencies check passed (78 deps, 37 dev deps)",
+      "duration": 596,
       "details": {
-        "dependencies": 79,
+        "dependencies": 78,
         "devDependencies": 37,
         "vulnerabilities": []
       }
     },
     {
       "name": "Performance Check",
-      "status": "skipped",
-      "message": "No build directory found for performance testing",
-      "duration": 1,
-      "details": {}
+      "status": "passed",
+      "message": "Build size: 47.30MB (Good)",
+      "duration": 2,
+      "details": {
+        "buildSizeBytes": 49601473,
+        "buildSizeMB": 47.303650856018066,
+        "threshold": 50
+      }
     }
   ],
   "summary": {
     "total": 7,
-    "passed": 3,
-    "failed": 2,
-    "skipped": 2,
+    "passed": 4,
+    "failed": 3,
+    "skipped": 0,
     "coverage": 0
   }
 }

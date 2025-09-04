@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect } from 'react';
 
 const PerformanceMonitor: React.FC = () => {
@@ -10,6 +11,7 @@ const PerformanceMonitor: React.FC = () => {
           if (entry.entryType === 'largest-contentful-paint') {
             console.log('LCP:', entry.startTime);
           }
+        }
       });
       
       try {
@@ -24,6 +26,7 @@ const PerformanceMonitor: React.FC = () => {
           if (entry.entryType === 'first-input') {
             console.log('FID:', entry.processingStart - entry.startTime);
           }
+        }
       });
 
       try {
@@ -39,6 +42,7 @@ const PerformanceMonitor: React.FC = () => {
           if (!(entry as any).hadRecentInput) {
             clsValue += (entry as any).value;
           }
+        }
         console.log('CLS:', clsValue);
       });
 
@@ -52,7 +56,8 @@ const PerformanceMonitor: React.FC = () => {
         observer.disconnect();
         fidObserver.disconnect();
         clsObserver.disconnect();
-      }
+      };
+    }
   }, []);
 
   return null; // This component doesn't render anything

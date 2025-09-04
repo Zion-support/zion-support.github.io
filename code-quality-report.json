@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-03T21:22:51.525Z",
+  "timestamp": "2025-09-04T02:06:01.679Z",
   "files": {
     "components/Breadcrumb.tsx": {
       "path": "components/Breadcrumb.tsx",
@@ -9,19 +9,19 @@
     },
     "components/ContactForm.tsx": {
       "path": "components/ContactForm.tsx",
-      "lines": 192,
+      "lines": 195,
       "issues": [],
       "complexity": 1
     },
     "components/ErrorBoundary.tsx": {
       "path": "components/ErrorBoundary.tsx",
-      "lines": 68,
+      "lines": 72,
       "issues": [],
       "complexity": 4
     },
     "components/Loading.tsx": {
       "path": "components/Loading.tsx",
-      "lines": 24,
+      "lines": 25,
       "issues": [],
       "complexity": 2
     },
@@ -33,7 +33,7 @@
     },
     "components/PerformanceMonitor.tsx": {
       "path": "components/PerformanceMonitor.tsx",
-      "lines": 60,
+      "lines": 65,
       "issues": [],
       "complexity": 10
     },
@@ -198,7 +198,7 @@
     },
     "pages/services.tsx": {
       "path": "pages/services.tsx",
-      "lines": 1636,
+      "lines": 1637,
       "issues": [
         {
           "rule": "File Length",
@@ -234,7 +234,7 @@
   },
   "summary": {
     "totalFiles": 28,
-    "totalLines": 8473,
+    "totalLines": 8487,
     "averageComplexity": "1.75",
     "issues": [
       {
