@@ -3,13 +3,14 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Atom, Cpu, Zap, Lock, Brain, Target } from 'lucide-react';
 
-export default function QuantumComputing() {
+export default function QuantumComputing(): any {
   const contact = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
-  }
+    site: 'https://ziontechgroup.com',;
+  };
+
   const services = [
     {
       icon: Atom,
@@ -46,43 +47,43 @@ export default function QuantumComputing() {
       title: 'Quantum Consulting & Training',
       description: 'Expert guidance and training to help your team understand and implement quantum solutions.',
       features: ['Quantum strategy', 'Team training', 'Implementation guidance', 'Technology assessment']
-    }
+    };
   ];
 
   return (
     <>
       <Head>
         <title>Quantum Computing Services - Zion Tech Group</title>
-        <meta name="description" content="Cutting-edge quantum computing solutions including algorithm development, optimization, cryptography, and machine learning. Transform your business with quantum technology." />
-        <meta name="keywords" content="quantum computing, quantum algorithms, quantum optimization, quantum cryptography, quantum machine learning, quantum consulting" />
-        <link rel="canonical" href={`${contact.site}/quantum-computing`} />
-        <meta property="og:title" content="Quantum Computing Services - Zion Tech Group" />
-        <meta property="og:description" content="Cutting-edge quantum computing services including algorithm development and optimization solutions." />
-        <meta property="og:url" content={`${contact.site}/quantum-computing`} />
-        <meta property="og:type" content="website" />
+        <meta name="description" content="Cutting-edge quantum computing services including algorithm development, optimization solutions, and quantum cryptography. Explore the future with Zion Tech Group." />";
+        <meta name="keywords" content="quantum computing, quantum algorithms, quantum optimization, quantum cryptography, quantum machine learning" />";
+        <link rel="canonical" href={`${contact.site}/quantum-computing`} />`;
+        <meta property="og: title" content="Quantum Computing Services - Zion Tech Group" />,";
+        <meta property="og: description" content="Cutting-edge quantum computing services including algorithm development and optimization solutions." />,";
+        <meta property="og:url" content={`${contact.site}/quantum-computing`} />`;
+        <meta property="og: type" content="website" />,";
       </Head>
 
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-white">";
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+        <section className="bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20">";
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,";
+            <div className="text-center">";
+              <h1 className="text-4xl md: text-6xl font-bold mb-6">,";
                 Quantum Computing Services
               </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                Harness the power of quantum computing to solve complex problems and unlock new possibilities for your business.
+              <p className="text-xl md: text-2xl mb-8 max-w-3xl mx-auto">,";
+                Harness the power of quantum computing for optimization, cryptography, and machine learning applications.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">,";
                 <Link 
                   href="/contact"
-                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors",";
                 >
                   Get Started
                 </Link>
                 <Link 
                   href="/services"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-colors",";
                 >
                   View All Services
                 </Link>
@@ -92,46 +93,33 @@ export default function QuantumComputing() {
         </section>
 
         {/* Services Grid */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Quantum Computing Solutions
+        <section className="py-20">";
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,";
+            <div className="text-center mb-16">";
+              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,";
+                Next-Generation Quantum Solutions
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                From algorithm development to quantum cryptography, we provide comprehensive quantum computing services to help you stay ahead of the curve.
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
+                From algorithm development to quantum cryptography, we provide cutting-edge quantum computing services to solve complex problems.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,";
               {services.map((service, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
-                  <div className="flex items-center mb-4">
-                    <service.icon className="w-8 h-8 text-purple-600 mr-3" />
-                    <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
+                <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-shadow border border-gray-100">,";
+                  <div className="flex items-center mb-4">";
+                    <service.icon className="w-8 h-8 text-purple-600 mr-3" />";
+                    <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>";
                   </div>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-700">
-                          <span className="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <Link 
-                      href="/contact"
-                      className="text-purple-600 hover:text-purple-700 font-medium text-sm"
-                    >
-                      Learn More →
-                    </Link>
-                  </div>
+                  <p className="text-gray-600 mb-4">{service.description}</p>";
+                  <ul className="space-y-2">";
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-700">";
+                        <span className="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>";
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
@@ -139,24 +127,24 @@ export default function QuantumComputing() {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-gray-50 py-20">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Ready to Explore Quantum Computing?
+        <section className="bg-gray-50 py-20">";
+          <div className="max-w-4xl mx-auto text-center px-4 sm: px-6 lg:px-8">,";
+            <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-6">,";
+              Ready for the Quantum Future?
             </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Let our quantum computing experts help you identify opportunities and implement solutions that give you a competitive advantage.
+            <p className="text-xl text-gray-600 mb-8">";
+              Explore how quantum computing can revolutionize your business operations and solve previously intractable problems.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">,";
               <Link 
                 href="/contact"
-                className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+                className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-purple-700 transition-colors",";
               >
                 Schedule Consultation
               </Link>
               <a 
-                href={`tel:${contact.phone}`}
-                className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors"
+                href={`tel:${contact.phone}`}`;
+                className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover: bg-purple-600 hover:text-white transition-colors",";
               >
                 Call {contact.phone}
               </a>
@@ -166,4 +154,4 @@ export default function QuantumComputing() {
       </div>
     </>
   );
-}
+};

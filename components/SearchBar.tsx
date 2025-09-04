@@ -2,118 +2,61 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 
 interface SearchResult {
-  title: string;
-  description: string;
-  url: string;
+  title: string;,
+  description: string;,
+  url: string;,
   type: 'service' | 'page' | 'category';
 }
 
-const searchData: SearchResult[] = [
-  {
-    title: "Micro SaaS Products",
-    description: "120+ innovative micro SaaS solutions including Cloud Cost Guard, Smart Invoice Processing, and AI-Powered Code Review",
-    url: "/micro-saas",
-    category: "Services"
-  },
-  {
-    title: "AI Services",
-    description: "80+ advanced AI services including healthcare diagnostics, cybersecurity threat detection, and smart manufacturing",
-    url: "/ai-services",
-    category: "Services"
-  },
-  {
-    title: "IT Services",
-    description: "80+ comprehensive IT solutions including enterprise integration, high-performance computing, and IoT platforms",
-    url: "/it-services",
-    category: "Services"
-  },
-  {
-    title: "All Services",
-    description: "Complete overview of all our 280+ innovative technology solutions and services",
-    url: "/services",
-    category: "Services"
-  },
-  {
-    title: "Services Catalog",
-    description: "Detailed catalog of all our micro SaaS products, AI services, and IT solutions",
-    url: "/services-catalog",
-    category: "Services"
-  },
-  {
-    title: "Pricing",
-    description: "Transparent pricing for all our services and solutions",
-    url: "/pricing",
-    category: "Business"
-  },
-  {
-    title: "About Us",
-    description: "Learn about Zion Tech Group's mission, vision, and team",
-    url: "/about",
-    category: "Company"
-  },
-  {
-    title: "Contact Us",
-    description: "Get in touch with our experts for project discussions and quotes",
-    url: "/contact",
-    category: "Support"
-  },
-  {
-    title: "FAQ",
-    description: "Frequently asked questions about our services and solutions",
-    url: "/faq",
-    category: "Support"
-  }
-];
-
-function SearchBar() {
+const SearchBar: React.FC = () => {,
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const searchRef = useRef<HTMLDivElement>(null);
 
-  // Mock search data - in a real app, this would come from an API
-  const searchData: SearchResult[] = [
+  // Memoized search data - in a real app, this would come from an API
+  const searchData: SearchResult[] = useMemo(() => [,
     {
       title: 'Micro SaaS Products',
       description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',
       url: '/micro-saas',
-      type: 'category'
+      type: 'category',
     },
     {
       title: 'AI Services',
       description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',
       url: '/ai-services',
-      type: 'category'
+      type: 'category',
     },
     {
       title: 'IT Services',
       description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',
       url: '/it-services',
-      type: 'category'
+      type: 'category',
     },
     {
       title: 'Cloud Cost Guard',
       description: 'FinOps Assistant for anomaly detection and cost optimization',
       url: '/services',
-      type: 'service'
+      type: 'service',
     },
     {
       title: 'Contact Us',
       description: 'Get in touch with our experts for consultation and quotes',
       url: '/contact',
-      type: 'page'
+      type: 'page',
     },
     {
       title: 'Pricing',
       description: 'View our transparent pricing for all services',
       url: '/pricing',
-      type: 'page'
+      type: 'page',
     }
   ];
 
-  const handleSearch = async (searchQuery: string) => {
-    if (!searchQuery.trim()) {
+  const handleSearch = useCallback(async (searchQuery: string) => {,
+    if (!searchQuery.trim()) {;
       setResults([]);
       setIsOpen(false);
       return;
@@ -126,30 +69,33 @@ function SearchBar() {
     
     const filteredResults = searchData.filter(item =>
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.description.toLowerCase().includes(searchQuery.toLowerCase())
+      item.description.toLowerCase().includes(searchQuery.toLowerCase());
     );
     
     setResults(filteredResults);
     setIsOpen(true);
     setIsLoading(false);
-  }
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  }, [searchData]);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {,;
     const value = e.target.value;
     setQuery(value);
     handleSearch(value);
-  }
-  const handleResultClick = () => {
+  };
+
+  const handleResultClick = () => {;
     setIsOpen(false);
     setQuery('');
-  }
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Escape') {
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {,
+    if (e.key === 'Escape') {;
       setIsOpen(false);
       inputRef.current?.blur();
     }
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+    const handleClickOutside = (event: MouseEvent) => {,
+      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {;
         setIsOpen(false);
       }
     document.addEventListener('mousedown', handleClickOutside);
@@ -164,7 +110,13 @@ function SearchBar() {
           value={query}
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
-          className="w-full px-4 py-2 pl-10 bg-slate-800/50 border border-white/20 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          onFocus={() => query && setIsOpen(true)}
+          placeholder="Search services, products, or pages..."
+          className="w-full md: w-80 px-4 py-2 pl-10 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent",
+          aria-label="Search"
+          aria-expanded={isOpen}
+          aria-haspopup="listbox"
+          role="combobox"
         />
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
           <svg
@@ -198,12 +150,12 @@ function SearchBar() {
                   key={index}
                   href={result.url}
                   onClick={handleResultClick}
-                  className="block px-4 py-3 hover:bg-slate-700 transition-colors border-b border-slate-700 last:border-b-0"
+                  className="block px-4 py-3 hover: bg-slate-700 transition-colors border-b border-slate-700 last:border-b-0",
                   role="option"
                   aria-selected="false"
                 >
                   <div className="flex items-start gap-3">
-                    <div className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${
+                    <div className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${>
                       result.type === 'service' ? 'bg-blue-500' :
                       result.type === 'category' ? 'bg-purple-500' : 'bg-green-500'
                     }`} />

@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
 type Service = {
-  name: string;
-  summary: string;
-  pricing: string;
+  name: string;,
+  summary: string;,
+  pricing: string;,
   link: string;
 }
 const microSaaS: Service[] = [,
@@ -1688,34 +1688,34 @@ const itServices: Service[] = [,
 export default function Services(): React.JSX.Element {
   const Section = ({ title, items, color }: { title: string; items: Service[]; color: string }) => (
     <section style={{ maxWidth: 1400, margin: '0 auto', padding: '32px 20px', }}>
-      <div style={{ 
+      <div style={{ >
         display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24,
         paddingBottom: 12, borderBottom: `2px solid ${color}20`
       }}>
-        <div style={{ 
+        <div style={{ >
           width: 4, height: 32, background: color, borderRadius: 2 ,
         }}></div>
-        <h2 style={{ 
+        <h2 style={{ >
           fontSize: 28, fontWeight: 800, margin: 0,
-          background: `linear-gradient(135deg, ${color}, ${color}80)`,
+          background: `linear-gradient(135deg, ${color}, ${color}80)`,`;
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
           backgroundClip: 'text',
         }}>{title}</h2>
-        <div style={{ 
-          background: `${color}20`, color: color, padding: '4px 12px', 
+        <div style={{ >
+          background: `${color}20`, color: color, padding: '4px 12px', `;
           borderRadius: 20, fontSize: 14, fontWeight: 600 ,
         }}>
           {items.length} Services
         </div>
       </div>
-      <div style={{ 
+      <div style={{ >
         display: 'grid', 
         gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', 
         gap: 20 ,
       }}>
         {items.map((s) => (
-          <a key={s.name} href={s.link} style={{
+          <a key={s.name} href={s.link} style={{>
             border: '1px solid rgba(0,0,0,0.08)', borderRadius: 16, padding: 24,
             background: 'white', textDecoration: 'none', color: '#0b1220',
             transition: 'all 0.3s ease', boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
@@ -1724,18 +1724,18 @@ export default function Services(): React.JSX.Element {
               boxShadow: '0 8px 24px rgba(0,0,0,0.12)',
               borderColor: `${color}40`
             }
-          } as React.CSSProperties}>
-            <div style={{ 
+          }}>
+            <div style={{ >
               fontWeight: 700, marginBottom: 8, fontSize: 16,
               lineHeight: 1.4, color: '#1e293b',
             }}>{s.name}</div>
-            <div style={{ 
+            <div style={{ >
               opacity: 0.8, fontSize: 14, marginBottom: 12, 
               lineHeight: 1.5, color: '#64748b',
             }}>{s.summary}</div>
-            <div style={{ 
+            <div style={{ >
               fontSize: 13, color: color, fontWeight: 600,
-              background: `${color}10`, padding: '6px 12px',
+              background: `${color}10`, padding: '6px 12px',`;
               borderRadius: 8, display: 'inline-block',
             }}>{s.pricing}</div>
           </a>
@@ -1745,48 +1745,48 @@ export default function Services(): React.JSX.Element {
   );
 
   return (
-    <main style={{ 
+    <main style={{ >
       background: 'linear-gradient(135deg, #f8fafc, #f1f5f9)', 
-      minHeight: 'calc(100vh - 120px)',
+      minHeight: 'calc(100vh - 120px)' ,
     }}>
       {/* Header */}
-      <section style={{ 
+      <section style={{ >
         background: 'linear-gradient(135deg, #0b1220, #1e293b)', 
-        color: 'white', padding: '60px 20px', textAlign: 'center',
+        color: 'white', padding: '60px 20px', textAlign: 'center' ,
       }}>
-        <div style={{ maxWidth: 800, margin: '0 auto', }}>
-          <h1 style={{ 
+        <div style={{ maxWidth: 800, margin: '0 auto' }}>
+          <h1 style={{ >
             fontSize: 48, fontWeight: 800, marginBottom: 16,
             background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
           }}>Our Services</h1>
-          <p style={{ 
+          <p style={{ >
             fontSize: 20, opacity: 0.9, marginBottom: 24,
             lineHeight: 1.6 ,
           }}>
             Comprehensive technology solutions to transform your business
           </p>
-          <div style={{ 
+          <div style={{ >
             display: 'flex', gap: 16, justifyContent: 'center',
             flexWrap: 'wrap', marginBottom: 32 ,
           }}>
-            <div style={{ 
+            <div style={{ >
               background: 'rgba(59, 130, 246, 0.1)', padding: '12px 20px', 
               borderRadius: 12, border: '1px solid rgba(59, 130, 246, 0.2)',
             }}>
               <div style={{ fontSize: 24, fontWeight: 700, color: '#3b82f6', }}>60+</div>
               <div style={{ fontSize: 14, opacity: 0.8 }}>Micro SaaS</div>
             </div>
-            <div style={{ 
+            <div style={{ >
               background: 'rgba(139, 92, 246, 0.1)', padding: '12px 20px', 
               borderRadius: 12, border: '1px solid rgba(139, 92, 246, 0.2)',
             }}>
               <div style={{ fontSize: 24, fontWeight: 700, color: '#8b5cf6', }}>40+</div>
               <div style={{ fontSize: 14, opacity: 0.8 }}>AI Services</div>
             </div>
-            <div style={{ 
+            <div style={{ >
               background: 'rgba(34, 197, 94, 0.1)', padding: '12px 20px', 
               borderRadius: 12, border: '1px solid rgba(34, 197, 94, 0.2)',
             }}>
@@ -1797,36 +1797,36 @@ export default function Services(): React.JSX.Element {
         </div>
       </section>
 
-      <Section title="Micro SaaS Products" items={microSaaS} color="#3b82f6" />
-      <Section title="AI Services & Platforms" items={aiServices} color="#8b5cf6" />
-      <Section title="IT & Cloud Services" items={itServices} color="#22c55e" />
+      <Section title="Micro SaaS Products" items={microSaaS} color="#3b82f6" />";
+      <Section title="AI Services & Platforms" items={aiServices} color="#8b5cf6" />";
+      <Section title="IT & Cloud Services" items={itServices} color="#22c55e" />";
       
       {/* CTA Section */}
-      <section style={{ 
+      <section style={{ >
         maxWidth: 1400, margin: '0 auto', padding: '60px 20px',
         textAlign: 'center', background: 'white', marginTop: 40,
         borderRadius: 24, boxShadow: '0 4px 24px rgba(0,0,0,0.06)',
       }}>
-        <h2 style={{ 
+        <h2 style={{ >
           fontSize: 32, fontWeight: 700, marginBottom: 16,
           color: '#1e293b',
         }}>Ready to Get Started?</h2>
-        <p style={{ 
+        <p style={{ >
           fontSize: 18, color: '#64748b', marginBottom: 32,
           maxWidth: 600, margin: '0 auto 32px auto',
         }}>
           Contact our experts to discuss your project requirements and discover 
           how our innovative solutions can drive your business forward.
         </p>
-        <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap', }}>
-          <Link href="/contact" style={{
+        <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
+          <Link href="/contact" style={{>";
             display: 'inline-block', 
             background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
             color: 'white', padding: '16px 32px', borderRadius: 12, 
             fontWeight: 700, textDecoration: 'none', fontSize: 16,
             transition: 'all 0.3s ease',
           }}>Request a Quote</Link>
-          <a href="tel: +13024640950" style={{
+          <a href="tel: +13024640950" style={{,>";
             display: 'inline-block', 
             background: 'rgba(34, 197, 94, 0.1)', 
             color: '#22c55e', padding: '16px 32px', borderRadius: 12, 
@@ -1838,3 +1838,4 @@ export default function Services(): React.JSX.Element {
     </main>
   );
 }
+;

@@ -3,11 +3,12 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Shield, Lock, Eye, AlertTriangle, Users, Database } from 'lucide-react';
 
-export default function Cybersecurity() {
+export default function Cybersecurity(): any {
   const contact = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: 'https://ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com',
   };
   const services = [
     {
@@ -91,29 +92,29 @@ export default function Cybersecurity() {
         </section>
 
         {/* Services Grid */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <section className="py-20">";
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,";
+            <div className="text-center mb-16">";
+              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,";
                 Comprehensive Security Solutions
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 From threat detection to compliance management, we provide end-to-end cybersecurity services to protect your digital assets.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,";
               {services.map((service, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
-                  <div className="flex items-center mb-4">
-                    <service.icon className="w-8 h-8 text-red-600 mr-3" />
-                    <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
+                <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-shadow border border-gray-100">,";
+                  <div className="flex items-center mb-4">";
+                    <service.icon className="w-8 h-8 text-red-600 mr-3" />";
+                    <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>";
                   </div>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  <ul className="space-y-2">
+                  <p className="text-gray-600 mb-4">{service.description}</p>";
+                  <ul className="space-y-2">";
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-700">
-                        <span className="w-2 h-2 bg-red-600 rounded-full mr-3"></span>
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-700">";
+                        <span className="w-2 h-2 bg-red-600 rounded-full mr-3"></span>";
                         {feature}
                       </li>
                     ))}
@@ -140,9 +141,9 @@ export default function Cybersecurity() {
               >
                 Schedule Security Audit
               </Link>
-              <a 
-                href={`tel:${contact.phone}`}
-                className="border-2 border-red-600 text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-600 hover:text-white transition-colors"
+                                <a 
+                    href={`tel:${contact.phone}`}
+                    className="border-2 border-red-600 text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-600 hover:text-white transition-colors"
               >
                 Call {contact.phone}
               </a>
@@ -152,4 +153,4 @@ export default function Cybersecurity() {
       </div>
     </>
   );
-}
+};
