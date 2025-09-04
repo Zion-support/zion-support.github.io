@@ -1063,667 +1063,315 @@ export default function MicroSaaS(): any {
         'Automated compliance',
         'Improved user onboarding'
       ],
-      category: 'Identity Management',
+      category: 'Identity Management'
     },
     {
       icon: Brain,
-      name: 'AI-Powered Email Responder',
-      description: 'Intelligent email automation that reads, analyzes, and responds to emails with human-like accuracy and context awareness.',
-      features: [,
-        'Natural language processing for email understanding',
-        'Context-aware response generation',
-        'Priority classification and urgent flagging',
-        'Multi-language support and translation',
-        'Integration with CRM and business systems',
-        'Learning from user feedback and corrections'
-      ],
-      pricing: '$299 – $1,999/month',
-      timeline: '3–4 weeks',
-      benefits: [,
-        '80% reduction in email response time',
-        '24/7 automated email handling',
-        'Improved customer satisfaction',
-        'Reduced manual email workload'
-      ],
-      category: 'AI Automation',
-    },
-    {
-      icon: Users,
-      name: 'Mobile-First Survey Tool',
-      description: 'Engaging mobile-optimized surveys with conversational UI, real-time analytics, and high completion rates.',
-      features: [,
-        'Mobile-first responsive design',
-        'Conversational survey interface',
-        'Real-time data collection and analytics',
-        'Adaptive questioning based on responses',
-        'Multi-channel distribution (SMS, email, web)',
-        'Advanced data visualization and reporting'
-      ],
-      pricing: '$149 – $899/month',
-      timeline: '2–3 weeks',
-      benefits: [,
-        '60% higher completion rates',
-        'Real-time customer insights',
-        'Mobile-optimized user experience',
-        'Automated data analysis and reporting'
-      ],
-      category: 'Data Collection',
-    },
-    {
-      icon: BarChart3,
-      name: 'Niche Productivity Planner',
-      description: 'Industry-specific productivity tools with customized dashboards, workflows, and smart recommendations.',
-      features: [,
-        'Industry-specific templates and workflows',
-        'Customizable dashboards and data views',
-        'Smart goal setting and progress tracking',
-        'Data-driven productivity recommendations',
-        'Integration with industry-specific tools',
-        'Team collaboration and sharing features'
-      ],
-      pricing: '$199 – $1,299/month',
-      timeline: '3–4 weeks',
-      benefits: [,
-        '35% improvement in team productivity',
-        'Industry-tailored solutions',
-        'Data-driven workflow optimization',
-        'Enhanced goal achievement rates'
-      ],
-      category: 'Productivity',
-    },
-    {
-      icon: Calendar,
-      name: 'Event Management Dashboard',
-      description: 'Comprehensive event planning platform with automated workflows, ticketing, and attendee management.',
-      features: [,
-        'End-to-end event planning and management',
-        'Automated ticketing and registration',
-        'Attendee communication and updates',
-        'Real-time event analytics and insights',
-        'Integration with payment and marketing tools',
-        'Mobile app for attendees and organizers'
-      ],
-      pricing: '$249 – $1,599/month',
-      timeline: '4–5 weeks',
-      benefits: [
-        'Streamlined event planning and execution',
-        'Automated attendee management',
-        'Real-time event insights and analytics',
-        'Enhanced attendee experience'
-      ],
-      category: 'Event Management'
-    },
-    {
-      icon: Brain,
-      name: 'AI Email Assistant',
-      description: 'Intelligent email automation that analyzes incoming messages, generates contextual responses, and flags critical communications for human review.',
-      features: [,
-        'Natural language processing for email understanding',
-        'Context-aware response generation',
-        'Priority classification and flagging',
-        'Multi-language support and translation',
-        'Integration with CRM and helpdesk systems',
-        'Learning from user feedback and corrections'
-      ],
-      pricing: '$199 – $1,299/month',
-      timeline: '2–3 weeks',
-      benefits: [,
-        '80% reduction in email response time',
-        '24/7 automated customer communication',
-        'Improved customer satisfaction scores',
-        'Reduced manual email management overhead'
-      ],
-      category: 'Communication Automation',
-    },
-    {
-      icon: Smartphone,
-      name: 'Mobile-First Survey Platform',
-      description: 'Advanced survey creation and analytics platform optimized for mobile devices with real-time data collection and AI-powered insights.',
-      features: [,
-        'Drag-and-drop survey builder with mobile optimization',
-        'Real-time data collection and analytics',
-        'AI-powered response analysis and sentiment detection',
-        'Multi-channel distribution (SMS, email, social media)',
-        'Advanced segmentation and targeting',
-        'Custom branding and white-label options'
-      ],
-      pricing: '$149 – $999/month',
-      timeline: '1–2 weeks',
-      benefits: [,
-        '60% higher mobile response rates',
-        'Real-time customer feedback collection',
-        'AI-driven insights and recommendations',
-        'Improved customer engagement and satisfaction'
-      ],
-      category: 'Customer Research',
-    },
-    {
-      icon: Calendar,
-      name: 'Event Management Automation',
-      description: 'Comprehensive event planning platform with automated workflows, ticketing, and attendee management for conferences, webinars, and corporate events.',
-      features: [,
-        'Automated event registration and ticketing',
-        'Dynamic pricing and promotional campaigns',
-        'Attendee communication and engagement tools',
-        'Real-time analytics and reporting',
-        'Integration with payment processors and CRM',
-        'Mobile app for attendees and organizers'
-      ],
-      pricing: '$299 – $1,999/month',
-      timeline: '3–4 weeks',
-      benefits: [,
-        '50% reduction in event planning time',
-        'Automated attendee management',
-        'Improved event ROI tracking',
-        'Enhanced attendee experience'
-      ],
-      category: 'Event Management',
-    },
-    {
-      icon: FileText,
       name: 'AI-Powered Content Creation Suite',
-      description: 'Comprehensive content generation platform with AI writing, editing, and optimization tools.',
-      features: [,
-        'AI-powered content generation for multiple formats',
-        'Brand voice consistency and customization',
-        'SEO optimization and keyword integration',
-        'Content planning and editorial calendar',
-        'Multi-language content creation',
-        'Performance tracking and optimization'
+      description: 'Comprehensive AI content generation platform for blogs, social media, and marketing materials.',
+      features: [
+        'AI blog post and article generation',
+        'Social media content creation',
+        'Email marketing copy generation',
+        'SEO-optimized content writing',
+        'Brand voice consistency maintenance',
+        'Content performance analytics'
       ],
-      pricing: '$399 – $2,499/month',
-      timeline: '4–5 weeks',
-      benefits: [,
-        '10x faster content production',
+      pricing: '$199 – $1,499/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '80% reduction in content creation time',
         'Consistent brand messaging',
-        'Improved SEO performance',
-        'Reduced content creation costs'
-      ],
-      category: 'Content Management',
-    },
-    {
-      icon: Headphones,
-      name: 'Customer Support & Helpdesk Platform',
-      description: 'All-in-one customer support solution with AI chatbots, ticket management, and knowledge base.',
-      features: [,
-        'AI-powered chatbots and virtual assistants',
-        'Intelligent ticket routing and prioritization',
-        'Comprehensive knowledge base management',
-        'Multi-channel support (chat, email, phone)',
-        'Customer satisfaction tracking and analytics',
-        'Integration with CRM and business tools'
-      ],
-      pricing: '$299 – $1,999/month',
-      timeline: '3–4 weeks',
-      benefits: [,
-        '70% reduction in support response time',
-        '24/7 automated customer assistance',
-        'Improved customer satisfaction scores',
-        'Reduced support team workload'
-      ],
-      category: 'Customer Support',
-    },
-    {
-      icon: RefreshCw,
-      name: 'E-Commerce Return Management SaaS',
-      description: 'Automated return processing platform with intelligent routing, label generation, and analytics.',
-      features: [,
-        'Automated return request processing',
-        'Intelligent return routing and approval',
-        'Automated return label generation',
-        'Real-time return status tracking',
-        'Return analytics and insights',
-        'Integration with e-commerce platforms'
-      ],
-      pricing: '$199 – $1,299/month',
-      timeline: '2–3 weeks',
-      benefits: [
-        '60% faster return processing',
-        'Automated return workflows',
-        'Improved customer experience',
-        'Reduced return processing costs'
-      ],
-      category: 'E-Commerce'
-    },
-    {
-      icon: Video,
-      name: 'AI Video Content Generator',
-      description: 'Automated video creation platform that transforms text, images, and data into engaging video content for marketing, training, and social media.',
-      features: [,
-        'AI-powered script generation and voice synthesis',
-        'Automated video editing and scene transitions',
-        'Multi-format output (MP4, GIF, social media optimized)',
-        'Brand template library and customization',
-        'Bulk video generation and batch processing',
-        'Analytics and performance tracking'
-      ],
-      pricing: '$399 – $2,499/month',
-      timeline: '4–6 weeks',
-      benefits: [,
-        '90% faster video content production',
-        'Consistent brand messaging across videos',
-        'Reduced video production costs',
-        'Scalable content creation for marketing campaigns'
-      ],
-      category: 'Content Creation',
-    },
-    {
-      icon: Package,
-      name: 'E-Commerce Return Automation',
-      description: 'Intelligent return management system that automates return requests, generates labels, tracks status, and provides analytics for e-commerce businesses.',
-      features: [,
-        'Automated return request processing',
-        'Dynamic return label generation',
-        'Real-time return status tracking',
-        'Return analytics and fraud detection',
-        'Integration with major e-commerce platforms',
-        'Customer self-service return portal'
-      ],
-      pricing: '$199 – $1,299/month',
-      timeline: '2–3 weeks',
-      benefits: [
-        '70% reduction in return processing time',
-        'Automated fraud detection and prevention',
-        'Improved customer satisfaction with returns',
-        'Better inventory management and restocking'
-      ],
-      category: 'E-Commerce',
-    },
-    {
-      icon: Mail,
-      name: 'Automated Email Follow-up Service',
-      description: 'Intelligent email sequence automation with personalization, A/B testing, and conversion optimization.',
-      features: [,
-        'Automated email sequence management',
-        'Personalized content and timing',
-        'A/B testing and optimization',
-        'Behavioral trigger-based emails',
-        'Conversion tracking and analytics',
-        'Integration with CRM and marketing tools'
-      ],
-      pricing: '$149 – $999/month',
-      timeline: '2–3 weeks',
-      benefits: [,
-        '45% increase in email conversion rates',
-        'Automated lead nurturing',
-        'Personalized customer communication',
-        'Improved sales pipeline management'
-      ],
-      category: 'Email Marketing',
-    },
-    {
-      icon: Video,
-      name: 'AI-Powered Video Clip Maker',
-      description: 'Automated video editing platform that transforms long-form content into engaging social media clips.',
-      features: [,
-        'AI-powered video clip extraction',
-        'Automatic highlight detection',
-        'Social media format optimization',
-        'Brand consistency and watermarking',
-        'Multi-platform publishing',
-        'Performance analytics and insights'
-      ],
-      pricing: '$299 – $1,999/month',
-      timeline: '3–4 weeks',
-      benefits: [
-        '90% faster video content creation',
-        'Automated social media optimization',
-        'Increased content engagement',
-        'Reduced video production costs'
-      ],
-      category: 'Video Marketing'
-    },
-    {
-      icon: Target,
-      name: 'AI-Powered Lead Scoring Engine',
-      description: 'Advanced lead qualification system that uses machine learning to score, prioritize, and route leads for maximum conversion rates.',
-      features: [,
-        'Machine learning-based lead scoring algorithms',
-        'Behavioral tracking and engagement analysis',
-        'Automated lead routing and assignment',
-        'Predictive analytics for conversion probability',
-        'Integration with CRM and marketing automation',
-        'Custom scoring models and rule configuration'
-      ],
-      pricing: '$299 – $1,999/month',
-      timeline: '3–4 weeks',
-      benefits: [
-        '40% improvement in lead conversion rates',
-        'Automated lead prioritization and routing',
-        'Data-driven sales decisions',
-        'Reduced manual lead qualification time'
-      ],
-      category: 'Sales Automation'
-    },
-    {
-      icon: Stethoscope,
-      name: 'Hospital Appointment Scheduler',
-      description: 'Specialized healthcare scheduling platform with patient management, medical history, and compliance features.',
-      features: [,
-        'Secure patient appointment scheduling',
-        'Medical history and record integration',
-        'HIPAA-compliant data management',
-        'Automated reminders and notifications',
-        'Provider availability management',
-        'Insurance verification and billing integration'
-      ],
-      pricing: '$399 – $2,499/month',
-      timeline: '4–6 weeks',
-      benefits: [,
-        '50% reduction in no-show rates',
-        'Improved patient experience',
-        'Automated compliance management',
-        'Enhanced operational efficiency'
-      ],
-      category: 'Healthcare',
-    },
-    {
-      icon: Users,
-      name: 'AI-Powered Talent Matching Platform',
-      description: 'Advanced talent acquisition platform with AI matching, skill assessment, and recruitment automation.',
-      features: [,
-        'AI-powered candidate-job matching',
-        'Automated skill assessment and testing',
-        'Video interview scheduling and analysis',
-        'Candidate ranking and recommendation',
-        'Recruiter workflow automation',
-        'Analytics and performance tracking'
-      ],
-      pricing: '$499 – $3,999/month',
-      timeline: '4–6 weeks',
-      benefits: [,
-        '60% reduction in time-to-hire',
-        'Improved candidate quality',
-        'Automated recruitment workflows',
-        'Enhanced hiring success rates'
-      ],
-      category: 'Recruitment'
-    },
-    {
-      icon: Shield,
-      name: 'Cybersecurity Compliance Manager',
-      description: 'Automated compliance monitoring and reporting platform for cybersecurity standards and regulations.',
-      features: [,
-        'Automated compliance monitoring',
-        'Real-time security posture assessment',
-        'Regulatory reporting and documentation',
-        'Risk assessment and mitigation',
-        'Audit trail and evidence collection',
-        'Integration with security tools'
-      ],
-      pricing: '$599 – $3,999/month',
-      timeline: '4–6 weeks',
-      benefits: [,
-        '90% reduction in compliance effort',
-        'Automated risk assessment',
-        'Improved security posture',
-        'Reduced compliance costs'
-      ],
-      category: 'Cybersecurity',
-    },
-    {
-      icon: Cpu,
-      name: 'Quantum Computing Solutions Platform',
-      description: 'Access to quantum computing resources for complex optimization, cryptography, and scientific research.',
-      features: [,
-        'Quantum algorithm development and testing',
-        'Optimization problem solving',
-        'Cryptographic security enhancement',
-        'Scientific research and simulation',
-        'Quantum machine learning applications',
-        'Expert consultation and support'
-      ],
-      pricing: '$999 – $9,999/month',
-      timeline: '6–8 weeks',
-      benefits: [,
-        'Exponential computational power',
-        'Advanced optimization capabilities',
-        'Enhanced security solutions',
-        'Cutting-edge research capabilities'
-      ],
-      category: 'Quantum Computing'
-    },
-    {
-      icon: Brain,
-      name: 'AI-Powered Email Responder',
-      description: 'Intelligent email management system that reads, categorizes, and responds to emails automatically.',
-      features: [
-        'Natural language processing for email understanding',
-        'Automated response generation with human-like tone',
-        'Priority classification and urgent email flagging',
-        'Integration with CRM and calendar systems',
-        'Learning from user preferences and corrections',
-        'Multi-language support and translation'
-      ],
-      pricing: '$199 – $1,299/month',
-      timeline: '2–3 weeks',
-      benefits: [
-        '80% reduction in email response time',
-        '24/7 automated customer support',
-        'Improved customer satisfaction scores',
-        'Reduced workload for support teams'
-      ],
-      category: 'AI Automation'
-    },
-    {
-      icon: Users,
-      name: 'AI-Powered Talent Matching Platform',
-      description: 'Advanced recruitment platform using AI to match businesses with perfect tech talent.',
-      features: [
-        'AI-driven candidate screening and matching',
-        'Skills assessment and competency testing',
-        'Cultural fit analysis and team compatibility',
-        'Automated interview scheduling and coordination',
-        'Real-time market salary insights',
-        'Diversity and inclusion optimization'
-      ],
-      pricing: '$399 – $2,499/month',
-      timeline: '3–4 weeks',
-      benefits: [
-        '60% faster time-to-hire',
-        '90% improvement in candidate quality',
-        'Reduced recruitment costs by 40%',
-        'Better retention rates and team fit'
-      ],
-      category: 'HR Technology'
-    },
-    {
-      icon: FileText,
-      name: 'Smart Contract Management System',
-      description: 'AI-powered contract analysis, risk assessment, and automated compliance monitoring.',
-      features: [
-        'Automated contract review and risk analysis',
-        'Key terms extraction and comparison',
-        'Compliance monitoring and alert system',
-        'Renewal and expiration tracking',
-        'Digital signature integration',
-        'Contract performance analytics'
-      ],
-      pricing: '$299 – $1,999/month',
-      timeline: '2–3 weeks',
-      benefits: [
-        '75% reduction in contract review time',
-        'Early risk identification and mitigation',
-        'Automated compliance monitoring',
-        'Improved contract performance tracking'
-      ],
-      category: 'Legal Technology'
-    },
-    {
-      icon: BarChart3,
-      name: 'Predictive Inventory Optimization',
-      description: 'AI-driven inventory management with demand forecasting and automated reordering.',
-      features: [
-        'Machine learning demand forecasting',
-        'Automated reorder point calculations',
-        'Seasonal trend analysis and adjustment',
-        'Supplier performance tracking',
-        'Cost optimization recommendations',
-        'Real-time inventory visibility'
-      ],
-      pricing: '$499 – $2,999/month',
-      timeline: '3–4 weeks',
-      benefits: [
-        '30% reduction in inventory costs',
-        '99% reduction in stockouts',
-        'Improved cash flow management',
-        'Enhanced supplier relationships'
-      ],
-      category: 'Supply Chain'
-    },
-    {
-      icon: Shield,
-      name: 'AI Security Threat Detection',
-      description: 'Advanced cybersecurity platform with real-time threat detection and automated response.',
-      features: [
-        'Real-time threat monitoring and detection',
-        'Behavioral analysis and anomaly detection',
-        'Automated incident response and containment',
-        'Threat intelligence and correlation',
-        'Compliance reporting and audit trails',
-        'Integration with existing security tools'
-      ],
-      pricing: '$599 – $3,499/month',
-      timeline: '2–4 weeks',
-      benefits: [
-        '99.9% threat detection accuracy',
-        '50% faster incident response time',
-        'Reduced security team workload',
-        'Comprehensive compliance reporting'
-      ],
-      category: 'Cybersecurity'
-    },
-    {
-      icon: Calendar,
-      name: 'Intelligent Meeting Scheduler',
-      description: 'AI-powered meeting coordination with optimal time slot suggestions and conflict resolution.',
-      features: [
-        'Smart scheduling with time zone optimization',
-        'Meeting room and resource booking',
-        'Agenda generation and preparation',
-        'Follow-up action item tracking',
-        'Integration with calendar and productivity tools',
-        'Meeting effectiveness analytics'
-      ],
-      pricing: '$99 – $599/month',
-      timeline: '1–2 weeks',
-      benefits: [
-        '40% reduction in scheduling conflicts',
-        'Improved meeting productivity',
-        'Automated follow-up management',
-        'Better time utilization'
-      ],
-      category: 'Productivity'
-    },
-    {
-      icon: Headphones,
-      name: 'AI Customer Support Chatbot',
-      description: 'Intelligent chatbot with natural language understanding and seamless human handoff.',
-      features: [
-        'Natural language processing and understanding',
-        'Multi-channel support (web, mobile, social)',
-        'Context-aware conversation management',
-        'Seamless escalation to human agents',
-        'Knowledge base integration and learning',
-        'Sentiment analysis and customer satisfaction tracking'
-      ],
-      pricing: '$199 – $1,299/month',
-      timeline: '2–3 weeks',
-      benefits: [
-        '70% reduction in support ticket volume',
-        '24/7 customer support availability',
-        'Improved response time and satisfaction',
-        'Cost-effective customer service scaling'
-      ],
-      category: 'Customer Support'
-    },
-    {
-      icon: RefreshCw,
-      name: 'Automated Content Marketing Engine',
-      description: 'AI-driven content creation, distribution, and performance optimization platform.',
-      features: [
-        'AI content generation and optimization',
-        'Multi-platform content distribution',
-        'Performance tracking and analytics',
-        'Audience engagement optimization',
-        'Content calendar and scheduling',
-        'ROI measurement and reporting'
-      ],
-      pricing: '$299 – $1,999/month',
-      timeline: '2–3 weeks',
-      benefits: [
-        '300% increase in content output',
-        '50% improvement in engagement rates',
-        'Automated content optimization',
-        'Data-driven marketing decisions'
-      ],
-      category: 'Marketing Automation'
-    },
-    {
-      icon: Video,
-      name: 'AI Video Content Generator',
-      description: 'Automated video creation platform with AI-powered editing and personalization.',
-      features: [
-        'AI-powered video script generation',
-        'Automated video editing and production',
-        'Voice synthesis and narration',
-        'Multi-language video creation',
-        'Brand consistency and customization',
-        'Performance analytics and optimization'
-      ],
-      pricing: '$399 – $2,499/month',
-      timeline: '3–4 weeks',
-      benefits: [
-        '90% reduction in video production time',
-        'Consistent brand messaging across videos',
-        'Scalable video content creation',
-        'Improved engagement and conversion rates'
+        'SEO-optimized content',
+        'Scalable content production'
       ],
       category: 'Content Creation'
     },
     {
-      icon: Stethoscope,
-      name: 'AI Health Monitoring Assistant',
-      description: 'Intelligent health tracking and wellness management platform for remote patient care.',
+      icon: Mail,
+      name: 'Intelligent Email Follow-Up Automation',
+      description: 'AI-driven email follow-up system with personalized sequences and engagement optimization.',
       features: [
-        'Wearable device integration and data analysis',
-        'Health trend monitoring and alerts',
-        'Medication adherence tracking',
-        'Telemedicine integration and scheduling',
-        'Personalized health recommendations',
-        'Healthcare provider dashboard and reporting'
+        'Personalized follow-up sequences',
+        'Optimal timing prediction',
+        'Engagement-based automation',
+        'A/B testing for email content',
+        'Lead nurturing workflows',
+        'Conversion tracking and analytics'
       ],
-      pricing: '$199 – $1,299/month',
-      timeline: '4–6 weeks',
+      pricing: '$149 – $999/month',
+      timeline: '1–2 weeks',
       benefits: [
-        'Improved patient health outcomes',
-        'Reduced healthcare costs',
-        'Enhanced patient engagement',
-        'Proactive health management'
+        '45% increase in email response rates',
+        'Automated lead nurturing',
+        'Improved conversion rates',
+        'Reduced manual follow-up work'
       ],
-      category: 'Healthcare Technology'
+      category: 'Email Automation'
     },
     {
-      icon: Cpu,
-      name: 'Edge Computing Optimization Platform',
-      description: 'Intelligent edge computing management with automated workload distribution and optimization.',
+      icon: Users,
+      name: 'AI-Powered Customer Support Chatbot',
+      description: 'Intelligent chatbot platform with natural language processing and seamless human handoff.',
       features: [
-        'Automated workload distribution across edge nodes',
-        'Real-time performance monitoring and optimization',
-        'Predictive maintenance and failure prevention',
-        'Energy efficiency optimization',
-        'Security and compliance management',
-        'Cost optimization and resource allocation'
+        'Natural language understanding',
+        'Multi-language support',
+        'Context-aware conversations',
+        'Seamless human agent handoff',
+        'Knowledge base integration',
+        'Performance analytics and optimization'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '70% reduction in support tickets',
+        '24/7 customer support availability',
+        'Improved response times',
+        'Cost-effective customer service'
+      ],
+      category: 'Customer Support'
+    },
+    {
+      icon: TrendingUp,
+      name: 'Smart Competitor Intelligence Platform',
+      description: 'AI-driven competitor analysis with pricing monitoring, feature tracking, and market insights.',
+      features: [
+        'Real-time competitor pricing monitoring',
+        'Feature and product tracking',
+        'Market share analysis',
+        'Competitive positioning insights',
+        'Alert system for competitive changes',
+        'Strategic recommendations'
+      ],
+      pricing: '$399 – $2,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        'Data-driven competitive strategy',
+        'Proactive market positioning',
+        'Improved pricing decisions',
+        'Competitive advantage insights'
+      ],
+      category: 'Market Intelligence'
+    },
+    {
+      icon: BarChart3,
+      name: 'AI-Powered Sales Forecasting Engine',
+      description: 'Advanced sales prediction with machine learning models and revenue optimization insights.',
+      features: [
+        'Machine learning sales forecasting',
+        'Pipeline analysis and optimization',
+        'Revenue prediction and planning',
+        'Sales performance analytics',
+        'Risk assessment and mitigation',
+        'Automated reporting and insights'
+      ],
+      pricing: '$499 – $3,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '85% accuracy in sales forecasting',
+        'Improved revenue planning',
+        'Data-driven sales strategies',
+        'Reduced forecasting errors'
+      ],
+      category: 'Sales Intelligence'
+    },
+    {
+      icon: Shield,
+      name: 'Smart Cybersecurity Threat Monitor',
+      description: 'AI-powered cybersecurity monitoring with threat detection and automated response.',
+      features: [
+        'Real-time threat detection',
+        'Automated incident response',
+        'Vulnerability assessment',
+        'Security compliance monitoring',
+        'Threat intelligence integration',
+        'Security analytics and reporting'
       ],
       pricing: '$599 – $3,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '99.9% threat detection accuracy',
+        'Automated security responses',
+        'Reduced security incidents',
+        'Improved compliance posture'
+      ],
+      category: 'Cybersecurity'
+    },
+    {
+      icon: Globe,
+      name: 'AI-Powered Website Builder',
+      description: 'Intelligent website creation platform with AI design suggestions and content optimization.',
+      features: [
+        'AI-powered design recommendations',
+        'Automated content generation',
+        'SEO optimization built-in',
+        'Mobile-responsive templates',
+        'Performance optimization',
+        'Analytics and conversion tracking'
+      ],
+      pricing: '$99 – $799/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        '90% faster website creation',
+        'Professional design quality',
+        'SEO-optimized from start',
+        'No coding required'
+      ],
+      category: 'Web Development'
+    },
+    {
+      icon: Zap,
+      name: 'Smart Inventory Demand Predictor',
+      description: 'AI-driven demand forecasting with seasonal analysis and automated reorder optimization.',
+      features: [
+        'Advanced demand forecasting',
+        'Seasonal trend analysis',
+        'Automated reorder optimization',
+        'Supplier performance tracking',
+        'Cost optimization recommendations',
+        'Inventory turnover analysis'
+      ],
+      pricing: '$399 – $2,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '30% reduction in stockouts',
+        '25% decrease in excess inventory',
+        'Improved cash flow',
+        'Optimized supplier relationships'
+      ],
+      category: 'Inventory Management'
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Employee Performance Analytics',
+      description: 'Intelligent performance tracking with productivity insights and development recommendations.',
+      features: [
+        'Productivity pattern analysis',
+        'Performance trend identification',
+        'Skill gap analysis',
+        'Development recommendations',
+        'Goal tracking and progress monitoring',
+        'Team collaboration insights'
+      ],
+      pricing: '$199 – $1,499/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '25% improvement in productivity',
+        'Data-driven performance insights',
+        'Personalized development plans',
+        'Better team collaboration'
+      ],
+      category: 'HR Analytics'
+    },
+    {
+      icon: Mail,
+      name: 'Smart Email Deliverability Optimizer',
+      description: 'Advanced email deliverability platform with reputation management and inbox placement optimization.',
+      features: [
+        'Email reputation monitoring',
+        'Inbox placement optimization',
+        'Spam score analysis',
+        'Authentication setup and monitoring',
+        'Deliverability testing',
+        'Performance analytics and reporting'
+      ],
+      pricing: '$149 – $899/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        '95% email deliverability rate',
+        'Reduced spam folder placement',
+        'Improved campaign performance',
+        'Proactive reputation management'
+      ],
+      category: 'Email Marketing'
+    },
+    {
+      icon: BarChart3,
+      name: 'AI-Powered Financial Risk Assessment',
+      description: 'Intelligent financial risk analysis with credit scoring and investment risk evaluation.',
+      features: [
+        'Credit risk assessment',
+        'Investment risk analysis',
+        'Fraud detection and prevention',
+        'Portfolio risk monitoring',
+        'Regulatory compliance checking',
+        'Risk reporting and analytics'
+      ],
+      pricing: '$299 – $2,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '90% accuracy in risk prediction',
+        'Reduced financial losses',
+        'Automated risk monitoring',
+        'Improved decision making'
+      ],
+      category: 'FinTech'
+    },
+    {
+      icon: Globe,
+      name: 'Smart E-commerce Personalization Engine',
+      description: 'AI-driven e-commerce personalization with product recommendations and dynamic pricing.',
+      features: [
+        'Personalized product recommendations',
+        'Dynamic pricing optimization',
+        'Customer behavior analysis',
+        'Cart abandonment recovery',
+        'Cross-selling and upselling',
+        'Conversion rate optimization'
+      ],
+      pricing: '$399 – $2,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '35% increase in conversion rates',
+        'Improved customer experience',
+        'Higher average order value',
+        'Reduced cart abandonment'
+      ],
+      category: 'E-commerce'
+    },
+    {
+      icon: Shield,
+      name: 'AI-Powered Data Privacy Compliance Manager',
+      description: 'Automated GDPR, CCPA, and privacy regulation compliance with data protection monitoring.',
+      features: [
+        'Privacy regulation compliance monitoring',
+        'Data protection impact assessments',
+        'Consent management automation',
+        'Data breach detection and response',
+        'Privacy policy generation',
+        'Compliance reporting and auditing'
+      ],
+      pricing: '$499 – $3,499/month',
       timeline: '4–6 weeks',
       benefits: [
-        '40% improvement in application performance',
-        '50% reduction in latency',
-        'Optimized resource utilization',
-        'Enhanced security and compliance'
+        '100% compliance with privacy regulations',
+        'Automated privacy management',
+        'Reduced compliance costs',
+        'Improved data protection'
       ],
-      category: 'Edge Computing'
+      category: 'Privacy & Compliance'
+    },
+    {
+      icon: Zap,
+      name: 'Smart Project Management AI Assistant',
+      description: 'Intelligent project management with automated scheduling, resource allocation, and risk prediction.',
+      features: [
+        'Automated project scheduling',
+        'Resource allocation optimization',
+        'Risk prediction and mitigation',
+        'Progress tracking and analytics',
+        'Team collaboration facilitation',
+        'Performance optimization insights'
+      ],
+      pricing: '$199 – $1,499/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '40% improvement in project delivery',
+        'Optimized resource utilization',
+        'Reduced project risks',
+        'Better team collaboration'
+      ],
+      category: 'Project Management'
     }
   ];
 

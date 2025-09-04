@@ -73,29 +73,17 @@ function Header(): any {
         
         <div className="header-nav-links">
           <Link href="/" className="header-nav-link">Home</Link>
-          
-          {/* Services Dropdown */}
-          <div className="dropdown-container">
-            <button 
-              className="header-nav-link dropdown-trigger"
-              onMouseEnter={() => setServicesDropdownOpen(true)}
-              onMouseLeave={() => setServicesDropdownOpen(false)}
-              onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
-            >
-              Services ▼
-            </button>
-            <div className={`dropdown-menu ${servicesDropdownOpen ? 'open' : ''}`}>
-              <Link href="/services" className="dropdown-item">All Services</Link>
-              <Link href="/services-catalog" className="dropdown-item">Services Catalog</Link>
-              <div className="dropdown-divider"></div>
-              <Link href="/micro-saas" className="dropdown-item">Micro SaaS Products</Link>
-              <Link href="/ai-services" className="dropdown-item">AI Services</Link>
-              <Link href="/it-services" className="dropdown-item">IT Services</Link>
+          <div className="header-dropdown">
+            <span className="header-nav-link dropdown-trigger">Services</span>
+            <div className="header-dropdown-menu">
+              <Link href="/services" className="header-dropdown-link">All Services</Link>
+              <Link href="/micro-saas" className="header-dropdown-link">Micro SaaS</Link>
+              <Link href="/ai-services" className="header-dropdown-link">AI Services</Link>
+              <Link href="/it-services" className="header-dropdown-link">IT Services</Link>
+              <Link href="/services-catalog" className="header-dropdown-link">Services Catalog</Link>
             </div>
           </div>
-
           <Link href="/about" className="header-nav-link">About</Link>
-          <Link href="/blog" className="header-nav-link">Blog</Link>
           <Link href="/pricing" className="header-nav-link">Pricing</Link>
           <Link href="/faq" className="header-nav-link">FAQ</Link>
           <Link href="/contact" className="header-nav-cta">Contact</Link>
@@ -108,27 +96,24 @@ function Header(): any {
           aria-expanded={mobileMenuOpen}
           aria-controls="mobile-menu"
         >
-          <span className={`hamburger ${mobileMenuOpen ? 'open' : ''}`}>
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
+          {mobileMenuOpen ? '✕' : '☰'}
         </button>
       </nav>
       
-      <div 
-        id="mobile-menu"
-        className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}
-        role="navigation"
-        aria-label="Mobile navigation"
-      >
-        <div className="mobile-menu-content">
-          <Link href="/" className="header-nav-link" onClick={closeMobileMenu}>Home</Link>
-          <Link href="/services" className="header-nav-link" onClick={closeMobileMenu}>All Services</Link>
-          <Link href="/services-catalog" className="header-nav-link" onClick={closeMobileMenu}>Catalog</Link>
-          <Link href="/pricing" className="header-nav-link" onClick={closeMobileMenu}>Pricing</Link>
-          <Link href="/contact" className="header-nav-cta" onClick={closeMobileMenu}>Contact</Link>
+      <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
+        <Link href="/" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+        <div className="mobile-menu-section">
+          <span className="mobile-menu-section-title">Services</span>
+          <Link href="/services" className="header-nav-link mobile-submenu" onClick={() => setMobileMenuOpen(false)}>All Services</Link>
+          <Link href="/micro-saas" className="header-nav-link mobile-submenu" onClick={() => setMobileMenuOpen(false)}>Micro SaaS</Link>
+          <Link href="/ai-services" className="header-nav-link mobile-submenu" onClick={() => setMobileMenuOpen(false)}>AI Services</Link>
+          <Link href="/it-services" className="header-nav-link mobile-submenu" onClick={() => setMobileMenuOpen(false)}>IT Services</Link>
+          <Link href="/services-catalog" className="header-nav-link mobile-submenu" onClick={() => setMobileMenuOpen(false)}>Services Catalog</Link>
         </div>
+        <Link href="/about" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>About</Link>
+        <Link href="/pricing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
+        <Link href="/faq" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
+        <Link href="/contact" className="header-nav-cta" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
       </div>
     </header>
     </>
@@ -178,34 +163,30 @@ function Footer(): any {
 
         {/* Services */}
         <div className="footer-section">
-          <h3>Our Services</h3>
-          <div className="footer-links">
-            <Link href="/services" className="footer-link">All Services</Link>
-            <Link href="/services-catalog" className="footer-link">Services Catalog</Link>
-            <Link href="/micro-saas" className="footer-link">Micro SaaS Products</Link>
-            <Link href="/ai-services" className="footer-link">AI Services</Link>
-            <Link href="/it-services" className="footer-link">IT Services</Link>
-            <Link href="/pricing" className="footer-link">Pricing</Link>
-          </div>
-          <div className="service-stats">
-            <div className="stat-item">• 120+ Micro SaaS Products</div>
-            <div className="stat-item">• 80+ AI Services</div>
-            <div className="stat-item">• 80+ IT Solutions</div>
+          <h3>Services</h3>
+          <Link href="/services">All Services</Link>
+          <Link href="/micro-saas">Micro SaaS Products</Link>
+          <Link href="/ai-services">AI Services</Link>
+          <Link href="/it-services">IT Services</Link>
+          <Link href="/services-catalog">Services Catalog</Link>
+          <Link href="/pricing">Pricing</Link>
+          <div className="text-sm mt-2 space-y-1">
+            <div>• 120+ Micro SaaS Products</div>
+            <div>• 80+ AI Services</div>
+            <div>• 80+ IT Solutions</div>
           </div>
         </div>
 
-        {/* Company */}
+        {/* Quick Links */}
         <div className="footer-section">
-          <h3>Company</h3>
-          <div className="footer-links">
-            <Link href="/" className="footer-link">Home</Link>
-            <Link href="/about" className="footer-link">About Us</Link>
-            <Link href="/blog" className="footer-link">Blog</Link>
-            <Link href="/contact" className="footer-link">Contact Us</Link>
-            <Link href="/faq" className="footer-link">FAQ</Link>
-            <Link href="/privacy" className="footer-link">Privacy Policy</Link>
-            <Link href="/terms" className="footer-link">Terms of Service</Link>
-          </div>
+          <h3>Quick Links</h3>
+          <Link href="/">Home</Link>
+          <Link href="/about">About Us</Link>
+          <Link href="/contact">Contact Us</Link>
+          <Link href="/faq">FAQ</Link>
+          <Link href="/privacy">Privacy Policy</Link>
+          <Link href="/terms">Terms of Service</Link>
+          <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer">Main Website</a>
         </div>
 
         {/* Get Started */}
