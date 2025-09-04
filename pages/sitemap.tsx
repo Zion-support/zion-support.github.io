@@ -3,18 +3,12 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 export default function Sitemap() {
-<<<<<<< HEAD
-  const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
-  };
-
-=======
   const contact = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  }
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
+  };
   const pages = [
     { href: '/', title: 'Home', description: 'Main homepage with company overview and services' },
     { href: '/about', title: 'About Us', description: 'Learn about Zion Tech Group and our mission' },

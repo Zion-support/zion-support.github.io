@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React, {  useState, useCallback  } from "react";
-import LoadingSpinner from './LoadingSpinner';
-
-interface FormData { name: string; email: string; company: string; phone: string; service: string; message: string;
-}
-=======
 import React, { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
@@ -14,12 +7,11 @@ interface FormData {
   company: string;
   phone: string;
   service: string;
-  message: string}
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
+  message: string;
+}
 
 const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({ name: '', email: '', company: '', phone: '', service: '', message: ''
-  });
+  const [formData, setFormData] = useState<FormData>({ name: '', email: '', company: '', phone: '', service: '', message: '' });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -40,8 +32,7 @@ const ContactForm: React.FC = () => {
       // Simulate form submission
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
-      setFormData({ name: '', email: '', company: '', phone: '', service: '', message: ''
-      });
+      setFormData({ name: '', email: '', company: '', phone: '', service: '', message: '' });
       
       setSubmitStatus('success');
     } catch (_error) {

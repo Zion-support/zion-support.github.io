@@ -4,18 +4,12 @@ import Link from 'next/link';
 import { ArrowLeft, Play, CheckCircle, ArrowRight, Book } from 'lucide-react';
 
 export default function FirstSteps() {
-<<<<<<< HEAD
-  const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
-  };
-
-=======
   const contact = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  }
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
+  };
   return (
     <>
       <Head>

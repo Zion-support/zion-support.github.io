@@ -44,18 +44,18 @@ export default function ServicesCatalog() {
         <title>Services Catalog - Zion Tech Group</title>
         <meta name="description" content="Browse our comprehensive catalog of technology services including AI solutions, micro SaaS products, and IT services." />
         <meta name="keywords" content="services catalog, AI services, micro SaaS, IT solutions, technology services" />
-        <link rel="canonical" href="https: //ziontechgroup.com/services-catalog" />,
-        <meta property="og: title" content="Services Catalog - Zion Tech Group" />,
+        <link rel="canonical" href="https://ziontechgroup.com/services-catalog" />
+        <meta property="og:title" content="Services Catalog - Zion Tech Group" />
         <meta property="og:description" content="Browse our comprehensive catalog of technology services including AI solutions, micro SaaS products, and IT services." />
-        <meta property="og: url" content="https://ziontechgroup.com/services-catalog" />,
-        <meta property="og: type" content="website" />,
+        <meta property="og:url" content="https://ziontechgroup.com/services-catalog" />
+        <meta property="og:type" content="website" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="container mx-auto px-4 py-20">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">,
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Services <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Catalog</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -65,7 +65,7 @@ export default function ServicesCatalog() {
 
           {/* Search and Filter */}
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 mb-12">
-            <div className="flex flex-col md: flex-row gap-4">,
+            <div className="flex flex-col md:flex-row gap-4">
               <div className="flex-1 relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
@@ -94,9 +94,9 @@ export default function ServicesCatalog() {
           </div>
 
           {/* Services Grid */}
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service) => (
-              <div key={service.id} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: border-blue-400/50 transition-all duration-300 group">,
+              <div key={service.id} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 group">
                 <div className="flex items-center justify-between mb-4">
                   <span className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm font-medium">
                     {categories.find(cat => cat.id === service.category)?.name}
@@ -107,7 +107,7 @@ export default function ServicesCatalog() {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold text-white mb-3 group-hover: text-blue-300 transition-colors">,
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">
                   {service.name}
                 </h3>
 
@@ -127,7 +127,7 @@ export default function ServicesCatalog() {
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-white mb-2">Key Features: </h4>,
+                  <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                   <div className="flex flex-wrap gap-2">
                     {service.features.map((feature, index) => (
                       <span key={index} className="px-2 py-1 bg-white/5 text-gray-300 rounded text-xs">
@@ -142,7 +142,7 @@ export default function ServicesCatalog() {
                   className="inline-flex items-center justify-center w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-blue-500/25"
                 >
                   Get Started
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />,
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
             ))}
@@ -160,13 +160,8 @@ export default function ServicesCatalog() {
                 onClick={() => {
                   setSearchTerm('');
                   setSelectedCategory('all');
-<<<<<<< HEAD
                 }}
-                className="text-blue-400 hover: text-blue-300 transition-colors"
-=======
-                }
                 className="text-blue-400 hover:text-blue-300 transition-colors"
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
               >
                 Clear filters
               </button>
@@ -179,7 +174,7 @@ export default function ServicesCatalog() {
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Don&apos;t see what you&apos;re looking for? Our team can create custom solutions tailored to your specific needs.
             </p>
-            <Link href="/contact" className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">,
+            <Link href="/contact" className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
               Discuss Your Project
             </Link>
           </div>
