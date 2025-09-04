@@ -28,10 +28,11 @@ const PerformanceMonitor: React.FC = () => {
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime);
+            const fidEntry = entry as PerformanceEventTiming;
+            console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
             // Send to analytics
-            if (entry.processingStart - entry.startTime > 100) {
-              console.warn('FID is slow:', entry.processingStart - entry.startTime);
+            if (fidEntry.processingStart - fidEntry.startTime > 100) {
+              console.warn('FID is slow:', fidEntry.processingStart - fidEntry.startTime);
             }
           }
         }
