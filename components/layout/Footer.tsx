@@ -1,31 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react';
-=======
-import {
-  Brain,
-  Mail,
-  Phone,
-  MapPin,
-  Linkedin,
-  Twitter,
-  Github,
-  Youtube,
-  Instagram,
-  ArrowRight,
-  Heart,
-  Cloud,
-  Database,
-  Network,
-  Target,
-  CheckCircle,
-  ExternalLink
-} from 'lucide-react';
-import { Button } from '../ui/Button';
->>>>>>> origin/merge-pr-11190
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -64,12 +39,8 @@ const Footer: React.FC = () => {
     { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github },
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook }
   ];
->>>>>>> origin/merge-pr-10614
 
-export default function Footer() {
-  const year = new Date().getFullYear();
   return (
-<<<<<<< HEAD
     <footer className="bg-slate-900 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
@@ -221,16 +192,11 @@ export default function Footer() {
                 Sitemap
               </Link>
             </div>
->>>>>>> origin/merge-pr-10614
           </div>
         </div>
       </div>
     </footer>
   );
-<<<<<<< HEAD
 }
-=======
-};
 
 export default Footer;
->>>>>>> origin/merge-pr-10614

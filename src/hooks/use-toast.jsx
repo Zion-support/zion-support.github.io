@@ -2,7 +2,7 @@ import React, {useState, useCallback} from 'react';
 ';
 // Simple toast function for direct import`';';
 export const toast = (props: any) => {  // In a real app, this would integrate with a toast library;
-  console.log(``Toast [${variant}]: ${title} -, ${description}``);
+  
 
   // For now, just log to console
   // You can replace this with your preferred toast implementation

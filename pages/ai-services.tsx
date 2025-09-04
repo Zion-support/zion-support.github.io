@@ -1,58 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-  Brain,
-  Zap,
-  Shield,
-  Database,
-  BarChart3,
-  Users,
-  MessageSquare,
-  Search,
-  Eye,
-  Target,
-  TrendingUp,
-  CheckCircle,
-  ArrowRight,
-  Clock,
-  Award,
-  Star,
-  Globe,
-  Lock,
-  Cpu,
-  Bot,
-  FileText,
-  Image,
-  Video,
-  Mic,
-  Code,
-  Settings,
-  Monitor,
-  Smartphone,
-  Cloud,
-  Server,
-  Network,
-  Car,
-  Rocket,
-  Heart,
-  Building,
-  Sprout
-} from 'lucide-react';
-import PageTransition from '../src/components/PageTransition';
-
-=======
-import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Lightbulb, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap, Heart, Satellite, Car, TreePine } from 'lucide-react';
-import Navigation from '../src/components/Navigation';
-import Footer from '../src/components/Footer';
->>>>>>> origin/merge-pr-11140
-=======
 import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap, Heart, Satellite, Car, TreePine, Atom, Building2, FlaskConical, Sprout } from 'lucide-react';
-import Navigation from '../src/components/Navigation';
-import Footer from '../src/components/Footer';
->>>>>>> origin/merge-pr-11190
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 export default function AIServices() {
   const title = 'AI Services — Zion Tech Group';
   const description = 'Cutting-edge AI solutions including autonomous systems, machine learning, natural language processing, and intelligent automation.';
@@ -123,14 +74,11 @@ export default function AIServices() {
       description: 'Image and video analysis for quality control, security, and automation',
       icon: Eye,
       features: [
-<<<<<<< HEAD
         'Real-time object detection and recognition',
         'Quality control and defect detection',
         'Facial recognition and access control',
         'Video analytics and monitoring',
         'Custom model training and deployment'
-=======
-        'Real-time object detection and recognition,Quality control and defect detection,Facial recognition and access control,Video analytics and monitoring,Custom model training and deployment',
       ],
       pricing: '$5,000 - $20, 000/month',
       delivery: '6-8 weeks',
@@ -913,8 +861,12 @@ export default function AIServices() {
       description: 'End-to-end machine learning operations with automated model deployment and monitoring',
       icon: Settings,
       features: [
-        'Automated model training and deployment pipelines,Real-time model performance monitoring,A/B testing and model versioning,Automated retraining and drift detection,Model governance and compliance tracking,Integration with cloud platforms and data sources'
->>>>>>> origin/merge-pr-11141
+        'Automated model training and deployment pipelines',
+        'Real-time model performance monitoring',
+        'A/B testing and model versioning',
+        'Automated retraining and drift detection',
+        'Model governance and compliance tracking',
+        'Integration with cloud platforms and data sources'
       ],
       pricing: '$5,000 - $20,000/month',
       delivery: '6-8 weeks',
@@ -925,18 +877,15 @@ export default function AIServices() {
       description: 'Intelligent conversational AI for customer support and business automation',
       icon: Bot,
       features: [
-<<<<<<< HEAD
         'Natural language understanding',
         'Multi-channel deployment (web, mobile, voice)',
         'Integration with business systems',
         'Sentiment analysis and escalation',
         'Continuous learning and improvement'
-=======
-        'Natural language understanding,Multi-channel deployment (web, mobile, voice),Integration with business systems,Sentiment analysis and escalation,Continuous learning and improvement',
       ],
-      pricing: '$2,000 - $10, 000/month',
+      pricing: '$2,000 - $10,000/month',
       delivery: '2-4 weeks',
-      category: 'Conversational AI',;
+      category: 'Conversational AI'
 },
     {
       title: 'Predictive Analytics Platform',
@@ -948,7 +897,7 @@ export default function AIServices() {
       ],
       pricing: '$6,000 - $25, 000/month',
       delivery: '8-12 weeks',
-      category: 'Analytics AI',;
+      category: 'Analytics AI'
 },
     {
       title: 'AI-Powered Search Engine',
@@ -960,7 +909,7 @@ export default function AIServices() {
       ],
       pricing: '$3,500 - $12, 000/month',
       delivery: '4-6 weeks',
-      category: 'Search AI',;
+      category: 'Search AI'
 },
     {
       title: 'AI Voice & Speech Processing',
@@ -972,7 +921,7 @@ export default function AIServices() {
       ],
       pricing: '$4,000 - $15, 000/month',
       delivery: '5-8 weeks',
-      category: 'Voice AI',;
+      category: 'Voice AI'
 },
     {
       title: 'AI-Powered Fraud Detection',
@@ -984,7 +933,7 @@ export default function AIServices() {
       ],
       pricing: '$5,000 - $20, 000/month',
       delivery: '6-10 weeks',
-      category: 'Security AI',;
+      category: 'Security AI'
 },
     {
       title: 'AI Recommendation Engine',

@@ -45,19 +45,19 @@ export function useToast(...args[]):  {
     dismiss,
 :src/hooks/use-toast.tsx
     dismissAll'
-  // // // // // // // // console.log('Toast:', { title, description, variant, duration })}}}
+  // // // // // // // // }}}
 
 // Export a default toast function for backward compatibility'
 export 
   // In a real implementation, this would dispatch to a global toast system;
-  // console.log('Toast:', { title, description, variant, duration })};
+  // };
 '
     dismissAll
-  // // // // // // // console.log('Toast:', { title, description, variant, duration })}}}
+  // // // // // // // }}}
 
 // Export a default toast function for backward compatibility
 export 
   // In a real implementation, this would dispatch to a global toast system;
-  console.log('Toast:', { title, description, variant, duration })};
+  };
 
 </any>

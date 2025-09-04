@@ -17,7 +17,7 @@ export {SavedTalentsPage}() {
             setIsLoading(true);
             try {
                 if (!user) {
-                    console.warn("User not authenticated.");
+                    
                     return}
                 const {data, error} = await supabase
                     .from("saved_talents")
@@ -55,7 +55,7 @@ export {SavedTalentsPage}() {
         };
         fetchSavedTalents()}, [user]);
     const handleRequestHire = (props: any) => {
-        console.log("Request to hire:", talent);
+        
         toast({
             title: "Hire Request Sent",
             description: `A hire request has been sent to ${talent.full_name}.`,
@@ -63,7 +63,7 @@ export {SavedTalentsPage}() {
     const handleToggleSave = async (talentId, isCurrentlySaved) => {
         try {
             if (!user) {
-                console.warn("User not authenticated.");
+                
                 return}
             if (isCurrentlySaved) {
                 // Remove from saved talents
