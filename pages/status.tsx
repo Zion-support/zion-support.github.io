@@ -3,16 +3,10 @@ import Head from 'next/head';
 import { useState, useEffect } from 'react';
 
 export default function Status() {
-  const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
+  const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
   };
 
-  const [systemStatus, setSystemStatus] = useState({
-    overall: 'operational',
-    services: [
+  const [systemStatus, setSystemStatus] = useState({ overall: 'operational', services: [
       { name: 'Website', status: 'operational', uptime: '99.9%' },
       { name: 'API Services', status: 'operational', uptime: '99.8%' },
       { name: 'Cloud Infrastructure', status: 'operational', uptime: '99.9%' },
@@ -24,23 +18,13 @@ export default function Status() {
   });
 
   const [incidents, setIncidents] = useState([
-    {
-      id: 1,
-      title: "Scheduled Maintenance - Cloud Infrastructure",
-      status: "resolved",
-      severity: "minor",
+    { id: 1, title: "Scheduled Maintenance - Cloud Infrastructure", status: "resolved", severity: "minor",
       startTime: "2025-01-25T02:00:00Z",
-      endTime: "2025-01-25T04:00:00Z",
-      description: "Routine maintenance completed successfully. All services restored."
+      endTime: "2025-01-25T04:00:00Z", description: "Routine maintenance completed successfully. All services restored."
     },
-    {
-      id: 2,
-      title: "API Response Time Degradation",
-      status: "resolved",
-      severity: "minor",
+    { id: 2, title: "API Response Time Degradation", status: "resolved", severity: "minor",
       startTime: "2025-01-24T14:30:00Z",
-      endTime: "2025-01-24T15:45:00Z",
-      description: "Temporary increase in API response times. Issue resolved with infrastructure scaling."
+      endTime: "2025-01-24T15:45:00Z", description: "Temporary increase in API response times. Issue resolved with infrastructure scaling."
     }
   ]);
 
@@ -49,8 +33,7 @@ export default function Status() {
       case 'operational': return '#10b981';
       case 'degraded': return '#f59e0b';
       case 'outage': return '#ef4444';
-      case 'maintenance': return '#3b82f6';
-      default: return '#6b7280';
+      case 'maintenance': return '#3b82f6'; default: return '#6b7280';
     }
   };
 
@@ -59,8 +42,7 @@ export default function Status() {
       case 'operational': return '✅';
       case 'degraded': return '⚠️';
       case 'outage': return '❌';
-      case 'maintenance': return '🔧';
-      default: return '❓';
+      case 'maintenance': return '🔧'; default: return '❓';
     }
   };
 
@@ -69,8 +51,7 @@ export default function Status() {
       case 'critical': return '#ef4444';
       case 'major': return '#f97316';
       case 'minor': return '#f59e0b';
-      case 'maintenance': return '#3b82f6';
-      default: return '#6b7280';
+      case 'maintenance': return '#3b82f6'; default: return '#6b7280';
     }
   };
 
@@ -93,8 +74,7 @@ export default function Status() {
             <h1 style={{ 
               fontSize: '3rem', 
               fontWeight: 800, 
-              marginBottom: 20,
-              background: 'linear-gradient(135deg, #10b981, #059669)',
+              marginBottom: 20, background: 'linear-gradient(135deg, #10b981, #059669)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text'
@@ -107,11 +87,8 @@ export default function Status() {
           </div>
 
           <div style={{ marginBottom: 60 }}>
-            <div style={{
-              background: 'rgba(255, 255, 255, 0.05)',
-              borderRadius: 12,
-              padding: 30,
-              border: '1px solid rgba(255, 255, 255, 0.1)',
+            <div style={{ background: 'rgba(255, 255, 255, 0.05)',
+              borderRadius: 12, padding: 30, border: '1px solid rgba(255, 255, 255, 0.1)',
               textAlign: 'center'
             }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 15, marginBottom: 20 }}>
@@ -132,12 +109,8 @@ export default function Status() {
             </h2>
             <div style={{ display: 'grid', gap: 15 }}>
               {systemStatus.services.map((service, index) => (
-                <div key={index} style={{
-                  background: 'rgba(255, 255, 255, 0.05)',
-                  borderRadius: 8,
-                  padding: 20,
-                  border: '1px solid rgba(255, 255, 255, 0.1)',
-                  display: 'flex',
+                <div key={index} style={{ background: 'rgba(255, 255, 255, 0.05)',
+                  borderRadius: 8, padding: 20, border: '1px solid rgba(255, 255, 255, 0.1)', display: 'flex',
                   justifyContent: 'space-between',
                   alignItems: 'center'
                 }}>
@@ -147,8 +120,7 @@ export default function Status() {
                       <h3 style={{ fontSize: '1.2rem', fontWeight: 600, marginBottom: 5 }}>
                         {service.name}
                       </h3>
-                      <p style={{ 
-                        color: getStatusColor(service.status), 
+                      <p style={{ color: getStatusColor(service.status), 
                         fontSize: '0.9rem', 
                         fontWeight: 600,
                         textTransform: 'capitalize'
@@ -177,11 +149,8 @@ export default function Status() {
             {incidents.length > 0 ? (
               <div style={{ display: 'grid', gap: 20 }}>
                 {incidents.map((incident) => (
-                  <div key={incident.id} style={{
-                    background: 'rgba(255, 255, 255, 0.05)',
-                    borderRadius: 12,
-                    padding: 25,
-                    border: '1px solid rgba(255, 255, 255, 0.1)'
+                  <div key={incident.id} style={{ background: 'rgba(255, 255, 255, 0.05)',
+                    borderRadius: 12, padding: 25, border: '1px solid rgba(255, 255, 255, 0.1)'
                   }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 15 }}>
                       <div>
@@ -189,10 +158,7 @@ export default function Status() {
                           {incident.title}
                         </h3>
                         <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
-                          <span style={{
-                            background: getSeverityColor(incident.severity),
-                            color: 'white',
-                            padding: '4px 12px',
+                          <span style={{ background: getSeverityColor(incident.severity), color: 'white', padding: '4px 12px',
                             borderRadius: 20,
                             fontSize: '0.8rem',
                             fontWeight: 600,
@@ -200,10 +166,7 @@ export default function Status() {
                           }}>
                             {incident.severity}
                           </span>
-                          <span style={{
-                            background: getStatusColor(incident.status),
-                            color: 'white',
-                            padding: '4px 12px',
+                          <span style={{ background: getStatusColor(incident.status), color: 'white', padding: '4px 12px',
                             borderRadius: 20,
                             fontSize: '0.8rem',
                             fontWeight: 600,
@@ -231,11 +194,8 @@ export default function Status() {
                 ))}
               </div>
             ) : (
-              <div style={{
-                background: 'rgba(255, 255, 255, 0.05)',
-                borderRadius: 12,
-                padding: 40,
-                border: '1px solid rgba(255, 255, 255, 0.1)',
+              <div style={{ background: 'rgba(255, 255, 255, 0.05)',
+                borderRadius: 12, padding: 40, border: '1px solid rgba(255, 255, 255, 0.1)',
                 textAlign: 'center'
               }}>
                 <div style={{ fontSize: '3rem', marginBottom: 20 }}>✅</div>
@@ -249,11 +209,8 @@ export default function Status() {
             )}
           </div>
 
-          <div style={{ 
-            background: 'rgba(255, 255, 255, 0.05)',
-            borderRadius: 12,
-            padding: 30,
-            border: '1px solid rgba(255, 255, 255, 0.1)',
+          <div style={{ background: 'rgba(255, 255, 255, 0.05)',
+            borderRadius: 12, padding: 30, border: '1px solid rgba(255, 255, 255, 0.1)',
             textAlign: 'center'
           }}>
             <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 15 }}>
@@ -262,15 +219,11 @@ export default function Status() {
             <p style={{ color: '#94a3b8', marginBottom: 20 }}>
               Get notified about service status changes and incidents via email or SMS.
             </p>
-            <Link href="/contact" style={{
-              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-              color: 'white',
-              padding: '12px 24px',
+            <Link href="/contact" style={{ background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', color: 'white', padding: '12px 24px',
               textDecoration: 'none',
               borderRadius: 8,
               fontSize: '1rem',
-              fontWeight: 600,
-              display: 'inline-block'
+              fontWeight: 600, display: 'inline-block'
             }}>
               Subscribe to Updates
             </Link>

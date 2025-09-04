@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {  useState  } from "react";
 import Link from 'next/link';
 import { Button } from '../ui/Button';
 import { Menu, X } from 'lucide-react';
@@ -14,8 +14,7 @@ const Header: React.FC = () => {
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'Quantum', href: '/quantum-computing' },
     { name: 'Docs', href: '/docs' },
-    { name: 'Pricing', href: '/pricing' },
-  ];
+    { name: 'Pricing', href: '/pricing' }];
 
   return (
     <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-white/10">

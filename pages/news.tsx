@@ -15,9 +15,7 @@ export default function News() {
           Stay informed about our latest developments, product launches, and company milestones.
         </p>
         <div style={{ marginTop: '40px', textAlign: 'center' }}>
-          <Link href="/" style={{
-            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-            color: 'white', padding: '12px 24px', textDecoration: 'none', borderRadius: 8, fontSize: '1rem', fontWeight: 600
+          <Link href="/" style={{ background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', color: 'white', padding: '12px 24px', textDecoration: 'none', borderRadius: 8, fontSize: '1rem', fontWeight: 600
           }}>
             Back to Home
           </Link>

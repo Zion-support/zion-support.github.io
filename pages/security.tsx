@@ -2,52 +2,32 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 export default function Security() {
-  const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
+  const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
   };
 
   const securityMeasures = [
-    {
-      title: "Data Encryption",
-      description: "All data is encrypted both in transit and at rest using industry-standard encryption protocols",
-      icon: "🔐",
-      details: [
+    { title: "Data Encryption", description: "All data is encrypted both in transit and at rest using industry-standard encryption protocols", icon: "🔐", details: [
         "AES-256 encryption for data at rest",
         "TLS 1.3 for data in transit",
         "End-to-end encryption for sensitive communications",
         "Regular encryption key rotation"
       ]
     },
-    {
-      title: "Access Control",
-      description: "Multi-layered access control systems ensure only authorized personnel can access sensitive information",
-      icon: "🔑",
-      details: [
+    { title: "Access Control", description: "Multi-layered access control systems ensure only authorized personnel can access sensitive information", icon: "🔑", details: [
         "Multi-factor authentication (MFA)",
         "Role-based access control (RBAC)",
         "Principle of least privilege",
         "Regular access reviews and audits"
       ]
     },
-    {
-      title: "Network Security",
-      description: "Advanced network security measures protect against external threats and unauthorized access",
-      icon: "🛡️",
-      details: [
+    { title: "Network Security", description: "Advanced network security measures protect against external threats and unauthorized access", icon: "🛡️", details: [
         "Firewall protection and intrusion detection",
         "DDoS protection and mitigation",
         "Network segmentation and isolation",
         "Continuous network monitoring"
       ]
     },
-    {
-      title: "Compliance & Auditing",
-      description: "Regular compliance audits and security assessments ensure adherence to industry standards",
-      icon: "📋",
-      details: [
+    { title: "Compliance & Auditing", description: "Regular compliance audits and security assessments ensure adherence to industry standards", icon: "📋", details: [
         "SOC 2 Type II compliance",
         "ISO 27001 certification",
         "Regular penetration testing",
@@ -95,8 +75,7 @@ export default function Security() {
             <h1 style={{ 
               fontSize: '3rem', 
               fontWeight: 800, 
-              marginBottom: 20,
-              background: 'linear-gradient(135deg, #ef4444, #dc2626)',
+              marginBottom: 20, background: 'linear-gradient(135deg, #ef4444, #dc2626)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text'
@@ -114,11 +93,8 @@ export default function Security() {
             </h2>
             <div style={{ display: 'grid', gap: 30 }}>
               {securityMeasures.map((measure, index) => (
-                <div key={index} style={{
-                  background: 'rgba(255, 255, 255, 0.05)',
-                  borderRadius: 12,
-                  padding: 30,
-                  border: '1px solid rgba(255, 255, 255, 0.1)'
+                <div key={index} style={{ background: 'rgba(255, 255, 255, 0.05)',
+                  borderRadius: 12, padding: 30, border: '1px solid rgba(255, 255, 255, 0.1)'
                 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 20, marginBottom: 20 }}>
                     <div style={{ fontSize: '3rem' }}>{measure.icon}</div>
@@ -134,19 +110,11 @@ export default function Security() {
                   
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 15 }}>
                     {measure.details.map((detail, detailIndex) => (
-                      <div key={detailIndex} style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: 12,
-                        padding: 15,
-                        background: 'rgba(239, 68, 68, 0.1)',
-                        borderRadius: 8,
-                        border: '1px solid rgba(239, 68, 68, 0.2)'
+                      <div key={detailIndex} style={{ display: 'flex',
+                        alignItems: 'center', gap: 12, padding: 15, background: 'rgba(239, 68, 68, 0.1)',
+                        borderRadius: 8, border: '1px solid rgba(239, 68, 68, 0.2)'
                       }}>
-                        <div style={{
-                          width: 8,
-                          height: 8,
-                          background: 'linear-gradient(135deg, #ef4444, #dc2626)',
+                        <div style={{ width: 8, height: 8, background: 'linear-gradient(135deg, #ef4444, #dc2626)',
                           borderRadius: '50%'
                         }} />
                         <span style={{ fontSize: '1rem' }}>{detail}</span>
@@ -164,14 +132,9 @@ export default function Security() {
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 25 }}>
               {certifications.map((cert, index) => (
-                <div key={index} style={{
-                  background: 'rgba(255, 255, 255, 0.05)',
-                  borderRadius: 12,
-                  padding: 25,
-                  border: '1px solid rgba(255, 255, 255, 0.1)',
-                  textAlign: 'center',
-                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                  cursor: 'pointer'
+                <div key={index} style={{ background: 'rgba(255, 255, 255, 0.05)',
+                  borderRadius: 12, padding: 25, border: '1px solid rgba(255, 255, 255, 0.1)',
+                  textAlign: 'center', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: 'pointer'
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-5px)';
@@ -181,15 +144,11 @@ export default function Security() {
                   e.currentTarget.style.transform = 'translateY(0)';
                   e.currentTarget.style.boxShadow = 'none';
                 }}>
-                  <div style={{
-                    background: 'linear-gradient(135deg, #ef4444, #dc2626)',
-                    color: 'white',
-                    padding: '10px 20px',
+                  <div style={{ background: 'linear-gradient(135deg, #ef4444, #dc2626)', color: 'white', padding: '10px 20px',
                     borderRadius: 20,
                     fontSize: '0.9rem',
                     fontWeight: 600,
-                    marginBottom: 15,
-                    display: 'inline-block'
+                    marginBottom: 15, display: 'inline-block'
                   }}>
                     {cert.name}
                   </div>
@@ -207,19 +166,11 @@ export default function Security() {
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 20 }}>
               {securityFeatures.map((feature, index) => (
-                <div key={index} style={{ 
-                  display: 'flex', 
-                  alignItems: 'center', 
-                  gap: 15,
-                  padding: 20,
-                  background: 'rgba(255, 255, 255, 0.05)',
-                  borderRadius: 8,
-                  border: '1px solid rgba(255, 255, 255, 0.1)'
+                <div key={index} style={{ display: 'flex', 
+                  alignItems: 'center', gap: 15, padding: 20, background: 'rgba(255, 255, 255, 0.05)',
+                  borderRadius: 8, border: '1px solid rgba(255, 255, 255, 0.1)'
                 }}>
-                  <div style={{
-                    width: 8,
-                    height: 8,
-                    background: 'linear-gradient(135deg, #ef4444, #dc2626)',
+                  <div style={{ width: 8, height: 8, background: 'linear-gradient(135deg, #ef4444, #dc2626)',
                     borderRadius: '50%'
                   }} />
                   <span style={{ fontSize: '1rem' }}>{feature}</span>
@@ -228,11 +179,8 @@ export default function Security() {
             </div>
           </div>
 
-          <div style={{ 
-            background: 'rgba(239, 68, 68, 0.1)',
-            borderRadius: 12,
-            padding: 40,
-            border: '1px solid rgba(239, 68, 68, 0.2)',
+          <div style={{ background: 'rgba(239, 68, 68, 0.1)',
+            borderRadius: 12, padding: 40, border: '1px solid rgba(239, 68, 68, 0.2)',
             textAlign: 'center'
           }}>
             <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 20 }}>
@@ -242,29 +190,19 @@ export default function Security() {
               If you discover a security vulnerability or have concerns about our security practices, please report them to our security team immediately.
             </p>
             <div style={{ display: 'flex', gap: 20, justifyContent: 'center', flexWrap: 'wrap' }}>
-              <a href={`mailto:security@ziontechgroup.com`} style={{
-                background: 'linear-gradient(135deg, #ef4444, #dc2626)',
-                color: 'white',
-                padding: '15px 30px',
+              <a href={`mailto:security@ziontechgroup.com`} style={{ background: 'linear-gradient(135deg, #ef4444, #dc2626)', color: 'white', padding: '15px 30px',
                 textDecoration: 'none',
                 borderRadius: 8,
                 fontSize: '1.1rem',
-                fontWeight: 600,
-                display: 'inline-block'
+                fontWeight: 600, display: 'inline-block'
               }}>
                 Report Security Issue
               </a>
-              <Link href="/contact" style={{
-                background: 'transparent',
-                color: '#ef4444',
-                padding: '15px 30px',
+              <Link href="/contact" style={{ background: 'transparent', color: '#ef4444', padding: '15px 30px',
                 textDecoration: 'none',
                 borderRadius: 8,
                 fontSize: '1.1rem',
-                fontWeight: 600,
-                display: 'inline-block',
-                border: '2px solid #ef4444',
-                transition: 'background-color 0.3s ease'
+                fontWeight: 600, display: 'inline-block', border: '2px solid #ef4444', transition: 'background-color 0.3s ease'
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = 'rgba(239, 68, 68, 0.1)';

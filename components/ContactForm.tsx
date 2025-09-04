@@ -1,23 +1,11 @@
-import React, { useState, useCallback } from 'react';
+import React, {  useState, useCallback  } from "react";
 import LoadingSpinner from './LoadingSpinner';
 
-interface FormData {
-  name: string;
-  email: string;
-  company: string;
-  phone: string;
-  service: string;
-  message: string;
+interface FormData { name: string; email: string; company: string; phone: string; service: string; message: string;
 }
 
 const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''
+  const [formData, setFormData] = useState<FormData>({ name: '', email: '', company: '', phone: '', service: '', message: ''
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -68,13 +56,7 @@ const ContactForm: React.FC = () => {
       // Simulate form submission
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: ''
+      setFormData({ name: '', email: '', company: '', phone: '', service: '', message: ''
       });
     } catch {
       setSubmitStatus('error');
@@ -192,7 +174,7 @@ const ContactForm: React.FC = () => {
 
       {submitStatus === 'success' && (
         <div className="p-4 bg-green-900/50 border border-green-500 rounded-lg text-green-300" role="alert">
-          Thank you for your message! We&apos;ll get back to you within 24 hours.
+          Thank you for your message! We'll get back to you within 24 hours.
         </div>
       )}
 

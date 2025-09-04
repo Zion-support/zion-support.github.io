@@ -15,9 +15,7 @@ export default function GreenIT() {
           Sustainable IT solutions and green technology services to help reduce your environmental impact while improving efficiency.
         </p>
         <div style={{ marginTop: '40px', textAlign: 'center' }}>
-          <Link href="/" style={{
-            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-            color: 'white', padding: '12px 24px', textDecoration: 'none', borderRadius: 8, fontSize: '1rem', fontWeight: 600
+          <Link href="/" style={{ background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', color: 'white', padding: '12px 24px', textDecoration: 'none', borderRadius: 8, fontSize: '1rem', fontWeight: 600
           }}>
             Back to Home
           </Link>

@@ -3,9 +3,7 @@ import React from 'react';
 type Href = string | { pathname?: string; href?: string };
 
 // eslint-disable-next-line no-undef
-type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
-  href: Href;
-  children: React.ReactNode;
+type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: Href; children: React.ReactNode;
 };
 
 function resolveHref(href: Href): string {
@@ -19,8 +17,7 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
   if (React.isValidElement(children)) {
     const existingClass = (children.props as any)?.className || '';
     const mergedClassName = [existingClass, className].filter(Boolean).join(' ');
-    return React.cloneElement(children as any, {
-      href: resolved,
+    return React.cloneElement(children as any, { href: resolved,
       className: mergedClassName,
       ...rest,
     });

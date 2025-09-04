@@ -4,25 +4,19 @@ import Link from 'next/link';
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-  const footerLinks = {
-    services: [
+  const footerLinks = { services: [
       { name: 'AI Services', href: '/ai-services' },
       { name: 'Cloud DevOps', href: '/cloud-devops' },
       { name: 'Cybersecurity', href: '/cybersecurity' },
       { name: 'Quantum Computing', href: '/quantum-computing' },
-      { name: 'Micro SaaS', href: '/micro-saas' },
-    ],
-    company: [
+      { name: 'Micro SaaS', href: '/micro-saas' }], company: [
       { name: 'About', href: '/about' },
       { name: 'Contact', href: '/contact' },
       { name: 'Pricing', href: '/pricing' },
-      { name: 'FAQ', href: '/faq' },
-    ],
-    legal: [
+      { name: 'FAQ', href: '/faq' }], legal: [
       { name: 'Privacy Policy', href: '/privacy' },
       { name: 'Terms of Service', href: '/terms' },
-      { name: 'Documentation', href: '/docs' },
-    ],
+      { name: 'Documentation', href: '/docs' }],
   };
 
   return (

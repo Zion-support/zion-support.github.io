@@ -36,20 +36,11 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   };
 
   const navigation = [
-    {
-      name: 'Home',
-      href: '/',
-      icon: Home
+    { name: 'Home', href: '/', icon: Home
     },
-    {
-      name: 'About',
-      href: '/about',
-      icon: Users
+    { name: 'About', href: '/about', icon: Users
     },
-    {
-      name: 'Services',
-      icon: Settings,
-      children: [
+    { name: 'Services', icon: Settings, children: [
         { name: 'All Services', href: '/services' },
         { name: 'Services Catalog', href: '/services-catalog' },
         { name: 'Micro SaaS', href: '/micro-saas' },
@@ -60,25 +51,13 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         { name: 'Quantum Computing', href: '/quantum-computing' }
       ]
     },
-    {
-      name: 'Documentation',
-      href: '/docs',
-      icon: BookOpen
+    { name: 'Documentation', href: '/docs', icon: BookOpen
     },
-    {
-      name: 'Pricing',
-      href: '/pricing',
-      icon: DollarSign
+    { name: 'Pricing', href: '/pricing', icon: DollarSign
     },
-    {
-      name: 'FAQ',
-      href: '/faq',
-      icon: HelpCircle
+    { name: 'FAQ', href: '/faq', icon: HelpCircle
     },
-    {
-      name: 'Contact',
-      href: '/contact',
-      icon: Mail
+    { name: 'Contact', href: '/contact', icon: Mail
     }
   ];
 

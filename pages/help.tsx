@@ -2,48 +2,32 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 export default function Help() {
-  const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
+  const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
   };
 
   const helpCategories = [
-    {
-      title: "Getting Started",
-      icon: "🚀",
-      articles: [
+    { title: "Getting Started", icon: "🚀", articles: [
         { title: "How to Get Started with Our Services", description: "Step-by-step guide to begin your technology journey" },
         { title: "Account Setup and Configuration", description: "Learn how to set up your account and configure settings" },
         { title: "Understanding Our Service Portfolio", description: "Overview of all available services and solutions" },
         { title: "Initial Consultation Process", description: "What to expect during your first consultation" }
       ]
     },
-    {
-      title: "Technical Support",
-      icon: "🔧",
-      articles: [
+    { title: "Technical Support", icon: "🔧", articles: [
         { title: "Troubleshooting Common Issues", description: "Solutions to frequently encountered problems" },
         { title: "System Requirements and Compatibility", description: "Technical specifications and compatibility information" },
         { title: "Performance Optimization", description: "Tips for improving system performance" },
         { title: "Integration and API Documentation", description: "Technical documentation for integrations" }
       ]
     },
-    {
-      title: "Billing & Account",
-      icon: "💳",
-      articles: [
+    { title: "Billing & Account", icon: "💳", articles: [
         { title: "Understanding Your Bill", description: "How to read and understand your service charges" },
         { title: "Payment Methods and Billing Cycles", description: "Available payment options and billing schedules" },
         { title: "Upgrading or Downgrading Services", description: "How to modify your service plan" },
         { title: "Cancellation and Refund Policy", description: "Information about service cancellation and refunds" }
       ]
     },
-    {
-      title: "Security & Privacy",
-      icon: "🛡️",
-      articles: [
+    { title: "Security & Privacy", icon: "🛡️", articles: [
         { title: "Security Best Practices", description: "Guidelines for maintaining security" },
         { title: "Data Privacy and Protection", description: "How we protect your data and privacy" },
         { title: "Two-Factor Authentication Setup", description: "How to enable 2FA for your account" },
@@ -53,52 +37,26 @@ export default function Help() {
   ];
 
   const faqItems = [
-    {
-      question: "How quickly can you start working on my project?",
-      answer: "We typically begin new projects within 1-2 weeks of contract signing, depending on project complexity and current workload."
+    { question: "How quickly can you start working on my project?", answer: "We typically begin new projects within 1-2 weeks of contract signing, depending on project complexity and current workload."
     },
-    {
-      question: "Do you provide ongoing support after project completion?",
-      answer: "Yes, we offer comprehensive support packages including maintenance, updates, and technical assistance."
+    { question: "Do you provide ongoing support after project completion?", answer: "Yes, we offer comprehensive support packages including maintenance, updates, and technical assistance."
     },
-    {
-      question: "What technologies do you specialize in?",
-      answer: "We specialize in AI/ML, cloud computing, cybersecurity, quantum computing, micro SaaS development, and digital transformation."
+    { question: "What technologies do you specialize in?", answer: "We specialize in AI/ML, cloud computing, cybersecurity, quantum computing, micro SaaS development, and digital transformation."
     },
-    {
-      question: "Can you work with our existing systems?",
-      answer: "Absolutely. We have extensive experience integrating with existing systems and can work with most technology stacks."
+    { question: "Can you work with our existing systems?", answer: "Absolutely. We have extensive experience integrating with existing systems and can work with most technology stacks."
     },
-    {
-      question: "Do you offer remote services?",
-      answer: "Yes, we provide both remote and on-site services, depending on your needs and project requirements."
+    { question: "Do you offer remote services?", answer: "Yes, we provide both remote and on-site services, depending on your needs and project requirements."
     }
   ];
 
   const contactMethods = [
-    {
-      method: "Phone Support",
-      details: "+1 302 464 0950",
-      availability: "Mon-Fri 9AM-6PM EST",
-      icon: "📞"
+    { method: "Phone Support", details: "+1 302 464 0950", availability: "Mon-Fri 9AM-6PM EST", icon: "📞"
     },
-    {
-      method: "Email Support",
-      details: "kleber@ziontechgroup.com",
-      availability: "24/7 Response within 24 hours",
-      icon: "✉️"
+    { method: "Email Support", details: "kleber@ziontechgroup.com", availability: "24/7 Response within 24 hours", icon: "✉️"
     },
-    {
-      method: "Live Chat",
-      details: "Available on website",
-      availability: "Mon-Fri 9AM-6PM EST",
-      icon: "💬"
+    { method: "Live Chat", details: "Available on website", availability: "Mon-Fri 9AM-6PM EST", icon: "💬"
     },
-    {
-      method: "Emergency Support",
-      details: "Critical issues only",
-      availability: "24/7 for urgent matters",
-      icon: "🚨"
+    { method: "Emergency Support", details: "Critical issues only", availability: "24/7 for urgent matters", icon: "🚨"
     }
   ];
 
@@ -121,8 +79,7 @@ export default function Help() {
             <h1 style={{ 
               fontSize: '3rem', 
               fontWeight: 800, 
-              marginBottom: 20,
-              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+              marginBottom: 20, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text'
@@ -140,11 +97,8 @@ export default function Help() {
             </h2>
             <div style={{ display: 'grid', gap: 40 }}>
               {helpCategories.map((category, categoryIndex) => (
-                <div key={categoryIndex} style={{
-                  background: 'rgba(255, 255, 255, 0.05)',
-                  borderRadius: 12,
-                  padding: 30,
-                  border: '1px solid rgba(255, 255, 255, 0.1)'
+                <div key={categoryIndex} style={{ background: 'rgba(255, 255, 255, 0.05)',
+                  borderRadius: 12, padding: 30, border: '1px solid rgba(255, 255, 255, 0.1)'
                 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 20, marginBottom: 25 }}>
                     <div style={{ fontSize: '2.5rem' }}>{category.icon}</div>
@@ -155,13 +109,8 @@ export default function Help() {
                   
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 20 }}>
                     {category.articles.map((article, articleIndex) => (
-                      <div key={articleIndex} style={{
-                        background: 'rgba(255, 255, 255, 0.03)',
-                        borderRadius: 8,
-                        padding: 20,
-                        border: '1px solid rgba(255, 255, 255, 0.05)',
-                        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                        cursor: 'pointer'
+                      <div key={articleIndex} style={{ background: 'rgba(255, 255, 255, 0.03)',
+                        borderRadius: 8, padding: 20, border: '1px solid rgba(255, 255, 255, 0.05)', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: 'pointer'
                       }}
                       onMouseEnter={(e) => {
                         e.currentTarget.style.transform = 'translateY(-3px)';
@@ -174,8 +123,7 @@ export default function Help() {
                         <h4 style={{ 
                           fontSize: '1.1rem', 
                           fontWeight: 600, 
-                          marginBottom: 10,
-                          color: '#3b82f6'
+                          marginBottom: 10, color: '#3b82f6'
                         }}>
                           {article.title}
                         </h4>
@@ -196,17 +144,13 @@ export default function Help() {
             </h2>
             <div style={{ display: 'grid', gap: 20 }}>
               {faqItems.map((faq, index) => (
-                <div key={index} style={{
-                  background: 'rgba(255, 255, 255, 0.05)',
-                  borderRadius: 12,
-                  padding: 25,
-                  border: '1px solid rgba(255, 255, 255, 0.1)'
+                <div key={index} style={{ background: 'rgba(255, 255, 255, 0.05)',
+                  borderRadius: 12, padding: 25, border: '1px solid rgba(255, 255, 255, 0.1)'
                 }}>
                   <h3 style={{ 
                     fontSize: '1.2rem', 
                     fontWeight: 700, 
-                    marginBottom: 15,
-                    color: '#3b82f6'
+                    marginBottom: 15, color: '#3b82f6'
                   }}>
                     {faq.question}
                   </h3>
@@ -224,14 +168,9 @@ export default function Help() {
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 25 }}>
               {contactMethods.map((method, index) => (
-                <div key={index} style={{
-                  background: 'rgba(255, 255, 255, 0.05)',
-                  borderRadius: 12,
-                  padding: 25,
-                  border: '1px solid rgba(255, 255, 255, 0.1)',
-                  textAlign: 'center',
-                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                  cursor: 'pointer'
+                <div key={index} style={{ background: 'rgba(255, 255, 255, 0.05)',
+                  borderRadius: 12, padding: 25, border: '1px solid rgba(255, 255, 255, 0.1)',
+                  textAlign: 'center', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: 'pointer'
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-5px)';
@@ -248,8 +187,7 @@ export default function Help() {
                   <p style={{ 
                     fontSize: '1.1rem', 
                     fontWeight: 600, 
-                    marginBottom: 10,
-                    color: '#3b82f6'
+                    marginBottom: 10, color: '#3b82f6'
                   }}>
                     {method.details}
                   </p>
@@ -261,11 +199,8 @@ export default function Help() {
             </div>
           </div>
 
-          <div style={{ 
-            background: 'rgba(255, 255, 255, 0.05)',
-            borderRadius: 12,
-            padding: 40,
-            border: '1px solid rgba(255, 255, 255, 0.1)',
+          <div style={{ background: 'rgba(255, 255, 255, 0.05)',
+            borderRadius: 12, padding: 40, border: '1px solid rgba(255, 255, 255, 0.1)',
             textAlign: 'center'
           }}>
             <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 20 }}>
@@ -275,29 +210,19 @@ export default function Help() {
               Can't find what you're looking for? Our support team is here to help you with any questions or issues.
             </p>
             <div style={{ display: 'flex', gap: 20, justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link href="/contact" style={{
-                background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-                color: 'white',
-                padding: '15px 30px',
+              <Link href="/contact" style={{ background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', color: 'white', padding: '15px 30px',
                 textDecoration: 'none',
                 borderRadius: 8,
                 fontSize: '1.1rem',
-                fontWeight: 600,
-                display: 'inline-block'
+                fontWeight: 600, display: 'inline-block'
               }}>
                 Contact Support
               </Link>
-              <a href={`tel:${contact.phone}`} style={{
-                background: 'transparent',
-                color: 'white',
-                padding: '15px 30px',
+              <a href={`tel:${contact.phone}`} style={{ background: 'transparent', color: 'white', padding: '15px 30px',
                 textDecoration: 'none',
                 borderRadius: 8,
                 fontSize: '1.1rem',
-                fontWeight: 600,
-                display: 'inline-block',
-                border: '2px solid rgba(255, 255, 255, 0.3)',
-                transition: 'border-color 0.3s ease'
+                fontWeight: 600, display: 'inline-block', border: '2px solid rgba(255, 255, 255, 0.3)', transition: 'border-color 0.3s ease'
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor = '#3b82f6';

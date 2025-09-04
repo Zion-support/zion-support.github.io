@@ -5,13 +5,7 @@ import { useState } from 'react';
 export default function ScheduleDemo() {
   const [selectedDate, setSelectedDate] = useState('');
   const [selectedTime, setSelectedTime] = useState('');
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    message: '',
-    service: ''
+  const [formData, setFormData] = useState({ name: '', email: '', company: '', phone: '', message: '', service: ''
   });
 
   const timeSlots = [

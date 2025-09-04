@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-interface BreadcrumbItem {
-  label: string;
+interface BreadcrumbItem { label: string;
   href?: string;
 }
 
@@ -27,8 +26,7 @@ export default function Breadcrumb() {
       .join(' ');
     
     breadcrumbs.push({
-      label,
-      href: isLast ? undefined : currentPath
+      label, href: isLast ? undefined : currentPath
     });
   });
 

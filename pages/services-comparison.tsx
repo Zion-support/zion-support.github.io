@@ -2,40 +2,15 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 export default function ServicesComparison() {
-  const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
+  const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
   };
 
   const serviceCategories = [
-    {
-      name: 'Micro SaaS Products',
-      count: '150+',
-      description: 'Focused software solutions for specific business needs',
-      features: ['Quick deployment', 'Scalable architecture', 'API integrations', 'Custom branding'],
-      pricing: 'Starting at $29/month',
-      href: '/micro-saas',
-      color: 'blue'
+    { name: 'Micro SaaS Products', count: '150+', description: 'Focused software solutions for specific business needs', features: ['Quick deployment', 'Scalable architecture', 'API integrations', 'Custom branding'], pricing: 'Starting at $29/month', href: '/micro-saas', color: 'blue'
     },
-    {
-      name: 'AI Services',
-      count: '90+',
-      description: 'Advanced artificial intelligence and automation solutions',
-      features: ['Machine learning models', 'Natural language processing', 'Computer vision', 'Predictive analytics'],
-      pricing: 'Starting at $99/month',
-      href: '/ai-services',
-      color: 'purple'
+    { name: 'AI Services', count: '90+', description: 'Advanced artificial intelligence and automation solutions', features: ['Machine learning models', 'Natural language processing', 'Computer vision', 'Predictive analytics'], pricing: 'Starting at $99/month', href: '/ai-services', color: 'purple'
     },
-    {
-      name: 'IT Solutions',
-      count: '100+',
-      description: 'Comprehensive IT services and infrastructure solutions',
-      features: ['Cloud management', 'Security solutions', 'DevOps automation', 'Data analytics'],
-      pricing: 'Starting at $199/month',
-      href: '/it-services',
-      color: 'green'
+    { name: 'IT Solutions', count: '100+', description: 'Comprehensive IT services and infrastructure solutions', features: ['Cloud management', 'Security solutions', 'DevOps automation', 'Data analytics'], pricing: 'Starting at $199/month', href: '/it-services', color: 'green'
     }
   ];
 
