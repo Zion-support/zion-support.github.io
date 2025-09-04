@@ -30,7 +30,7 @@ const ServicesSection: React.FC = () => {
     },
     { 
       icon: Shield, 
-      title: 'Cybersecurity', 
+      title: Cybersecurity, 
       description: 'Enterprise-grade security solutions to protect your digital assets and ensure compliance.', 
       href: '/cybersecurity', 
       features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Incident Response']

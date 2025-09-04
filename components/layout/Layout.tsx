@@ -4,12 +4,12 @@ import Header from './Header';
 import Footer from './Footer';
 
 interface LayoutProps {
-  children: React.ReactNode;
+  children: 'React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
   canonical?: string;
-  ogImage?: string;
+  ogImage?: string;'
 }
 
 const Layout: React.FC<LayoutProps> = ({
@@ -49,37 +49,55 @@ const Layout: React.FC<LayoutProps> = ({
     <>
       <Head>
         <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <link rel="canonical" href={canonical} />
+        <meta name="description"
+  content={description} />
+        <meta name="keywords"
+  content={keywords} />
+        <link rel="canonical"
+  href={canonical} />
         
         {/* Open Graph */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:url" content={canonical} />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content={ogImage} />
+        <meta property="og:title"
+  content={title} />
+        <meta property="og:description"
+  content={description} />
+        <meta property="og:url"
+  content={canonical} />
+        <meta property="og:type"
+  content="website" />
+        <meta property="og:image"
+  content={ogImage} />
         
         {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
+        <meta name="twitter:card"
+  content="summary_large_image" />
+        <meta name="twitter:title"
+  content={title} />
+        <meta name="twitter:description"
+  content={description} />
+        <meta name="twitter:image"
+  content={ogImage} />
         
         {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon"
+  href="/favicon.ico" />
+        <link rel="icon"
+  type="image/svg+xml" href="/favicon.svg" />
+        <link rel="apple-touch-icon"
+  href="/apple-touch-icon.png" />
         
         {/* PWA */}
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#0f172a" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="manifest"
+  href="/manifest.json" />
+        <meta name="theme-color"
+  content="#0f172a" />
+        <meta name="viewport"
+  content="width=device-width, initial-scale=1" />
         
         {/* Structured Data */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
+  dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",

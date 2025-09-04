@@ -74,18 +74,19 @@ const ContactForm: React.FC = () => {
     <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
       <div className="grid md: grid-cols-2 gap-6">,
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">
+          <label htmlFor="name"
+  className="block text-sm font-medium text-slate-300 mb-2">
             Full Name *
           </label>
           <input
             type="text"
-            id="name"
+  id="name"
             name="name"
-            value={formData.name}
+  value={formData.name}
             onChange={handleInputChange}
             required
             className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            placeholder="Your full name"
+  placeholder="Your full name"
             aria-describedby="name-error"
           />
           {errors.name && (
@@ -96,18 +97,19 @@ const ContactForm: React.FC = () => {
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-2">
+          <label htmlFor="email"
+  className="block text-sm font-medium text-slate-300 mb-2">
             Email Address *
           </label>
           <input
             type="email"
-            id="email"
+  id="email"
             name="email"
-            value={formData.email}
+  value={formData.email}
             onChange={handleInputChange}
             required
             className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            placeholder="your.email@company.com"
+  placeholder="your.email@company.com"
             aria-describedby="email-error"
           />
           {errors.email && (
@@ -120,43 +122,46 @@ const ContactForm: React.FC = () => {
 
       <div className="grid md: grid-cols-2 gap-6">,
         <div>
-          <label htmlFor="company" className="block text-sm font-medium text-slate-300 mb-2">
+          <label htmlFor="company"
+  className="block text-sm font-medium text-slate-300 mb-2">
             Company
           </label>
           <input
             type="text"
-            id="company"
+  id="company"
             name="company"
-            value={formData.company}
+  value={formData.company}
             onChange={handleInputChange}
             className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            placeholder="Your company name"
+  placeholder="Your company name"
           />
         </div>
 
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-slate-300 mb-2">
+          <label htmlFor="phone"
+  className="block text-sm font-medium text-slate-300 mb-2">
             Phone Number
           </label>
           <input
             type="tel"
-            id="phone"
+  id="phone"
             name="phone"
-            value={formData.phone}
+  value={formData.phone}
             onChange={handleInputChange}
             className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            placeholder="+1 (555) 123-4567"
+  placeholder="+1 (555) 123-4567"
           />
         </div>
       </div>
 
       <div>
-        <label htmlFor="service" className="block text-sm font-medium text-slate-300 mb-2">
+        <label htmlFor="service"
+  className="block text-sm font-medium text-slate-300 mb-2">
           Service Interest
         </label>
         <select
           id="service"
-          name="service"
+  name="service"
           value={formData.service}
           onChange={handleInputChange}
           className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -173,12 +178,13 @@ const ContactForm: React.FC = () => {
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-2">
+        <label htmlFor="message"
+  className="block text-sm font-medium text-slate-300 mb-2">
           Message *
         </label>
         <textarea
           id="message"
-          name="message"
+  name="message"
           value={formData.message}
           onChange={handleInputChange}
           required
@@ -196,7 +202,8 @@ const ContactForm: React.FC = () => {
 
       {/* Status Messages */}
       {submitStatus === 'success' && (
-        <div className="p-4 bg-green-900/50 border border-green-500 rounded-lg text-green-300" role="alert">
+        <div className="p-4 bg-green-900/50 border border-green-500 rounded-lg text-green-300"
+  role="alert">
           Thank you for your message! We&apos;ll get back to you within 24 hours.
         </div>
       )}
@@ -211,7 +218,7 @@ const ContactForm: React.FC = () => {
 
       <button
         type="submit"
-        disabled={isSubmitting}
+  disabled={isSubmitting}
         className="w-full px-8 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-800 disabled:cursor-not-allowed rounded-lg font-semibold text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900"
         aria-describedby="submit-status"
       >

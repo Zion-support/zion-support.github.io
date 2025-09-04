@@ -34,5 +34,9 @@
     "components/ThemeToggle.tsx",
     "scripts/performance-monitor.js"
   ],
-  "errors": []
+  "errors": [],
+  "summary": {
+    "success": true,
+    "successRate": 100
+  }
 }

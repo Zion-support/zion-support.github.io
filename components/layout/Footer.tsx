@@ -26,7 +26,8 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+            <Link href="/"
+  className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
               Zion Tech Group
             </Link>
             <p className="mt-4 text-gray-300 text-sm leading-relaxed">
@@ -35,18 +36,19 @@ const Footer: React.FC = () => {
             </p>
             <div className="mt-6">
               <p className="text-sm text-gray-400">
-                <strong>Address:</strong><br />
+                <strong>Address: '</strong><br />
                 364 E Main St STE 1008<br />
-                Middletown, DE 19709
+                Middletown', DE 19709
               </p>
               <p className="text-sm text-gray-400 mt-2">
-                <strong>Phone:</strong> +1 302 464 0950<br />
+                <strong>Phone: '</strong> +1 302 464 0950<br />
                 <strong>Email:</strong> kleber@ziontechgroup.com
               </p>
             </div>
           </div>
 
-          {/* Services */}
+          {/* Services */'
+}
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">

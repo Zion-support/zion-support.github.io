@@ -4,7 +4,7 @@ import { dbManager } from '../../lib/database';
 import { apiCache, userCache, staticCache } from '../../lib/cache';
 
 interface SystemHealth {
-  status: 'healthy' | 'degraded' | 'unhealthy';
+  status: healthy | 'degraded' | 'unhealthy';
   timestamp: string;
   services: {
     database: boolean;
@@ -55,7 +55,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const healthyServices = Object.values(services).filter(Boolean).length;
     const totalServices = Object.keys(services).length;
     
-    let status: 'healthy' | 'degraded' | 'unhealthy';
+    let status: healthy | 'degraded' | 'unhealthy';
     if (healthyServices === totalServices) {
       status = 'healthy';
     } else if (healthyServices >= totalServices / 2) {

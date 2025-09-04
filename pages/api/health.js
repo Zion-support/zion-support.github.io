@@ -1,12 +1,11 @@
 export default async function handler(req, res) {
   const healthCheck = {
     uptime: process.uptime(),
-    message: 'OK',
+    message: OK,
     timestamp: Date.now(),
-    environment: process.env.NODE_ENV,
+    environment: 'process.env.NODE_ENV',
     version: process.env.npm_package_version || '1.0.0'
-  };
-
+  }
   try {
     // Add any additional health checks here
     // e.g., database connectivity, external API calls, etc.
@@ -16,4 +15,3 @@ export default async function handler(req, res) {
     healthCheck.message = 'ERROR';
     res.status(503).json(healthCheck);
   }
-}

@@ -27,7 +27,9 @@ class PerformanceMonitor {
       this.metrics = this.metrics.slice(-1000);
     }
   getMetrics(): PerformanceMetrics[] {
-    return [...this.metrics];
+    return [...this.metric,
+  s
+];
   }
 
   getAverageResponseTime(): number {
@@ -55,7 +57,7 @@ export const performanceMiddleware = (req: NextApiRequest, res: NextApiResponse,
     
     const monitor = PerformanceMonitor.getInstance();
     monitor.recordMetric({
-      responseTime: endTime - startTime,
+      responseTime: 'endTime - startTime',
       memoryUsage: endMemory - startMemory,
       timestamp: new Date().toISOString(),
       endpoint: req.url || '',

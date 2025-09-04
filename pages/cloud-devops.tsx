@@ -76,13 +76,13 @@ export default function CloudDevOps(): any {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   href="/contact"
-                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Get Started
                 </Link>
                 <Link 
                   href="/services"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                 >
                   View All Services
                 </Link>
@@ -137,7 +137,7 @@ export default function CloudDevOps(): any {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact"
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+  className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
                 Schedule Consultation
               </Link>

@@ -19,13 +19,13 @@ export const SkipLinks: React.FC = () => (
   <div className="sr-only focus-within:not-sr-only">
     <a
       href="#main-content"
-      className="absolute top-0 left-0 bg-blue-600 text-white px-4 py-2 rounded-br-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+  className="absolute top-0 left-0 bg-blue-600 text-white px-4 py-2 rounded-br-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
     >
       Skip to main content
     </a>
     <a
       href="#navigation"
-      className="absolute top-0 left-20 bg-blue-600 text-white px-4 py-2 rounded-br-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+  className="absolute top-0 left-20 bg-blue-600 text-white px-4 py-2 rounded-br-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
     >
       Skip to navigation
     </a>
@@ -55,12 +55,12 @@ export const AccessibleButton: React.FC<AccessibleButtonProps> = ({
     primary: 'bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500',
     secondary: 'bg-gray-600 hover:bg-gray-700 text-white focus:ring-gray-500',
     danger: 'bg-red-600 hover:bg-red-700 text-white focus:ring-red-500'
-  }
+  };
   const sizeClasses = {
     sm: 'px-3 py-1.5 text-sm',
     md: 'px-4 py-2 text-base',
     lg: 'px-6 py-3 text-lg'
-  }
+  };
   return (
     <button
       className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}

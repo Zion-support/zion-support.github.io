@@ -7,13 +7,13 @@ interface ApiError extends Error {
 interface RetryConfig {
   maxRetries: number;
   baseDelay: number;
-  maxDelay: number;
+  maxDelay: number;'
 }
 
 class ApiErrorHandler {
   private static instance: ApiErrorHandler;
   private retryConfig: RetryConfig = {
-    maxRetries: 3,
+    maxRetries: 3',
     baseDelay: 1000,
     maxDelay: 10000
   }
@@ -53,10 +53,10 @@ class ApiErrorHandler {
     throw this.formatError(lastError!);
   }
 
-  private shouldRetry(error: ApiError): boolean {
+  private shouldRetry(error: 'ApiError): boolean {
     // Retry on network errors or 5xx status codes
-    return !error.status || error.status >= 500;
-  }
+    return !error.status || error.status >= 500;'
+}
 
   private async delay(ms: number): Promise<void> {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -64,7 +64,7 @@ class ApiErrorHandler {
 
   private formatError(error: ApiError): ApiError {
     const formattedError: ApiError = {
-      name: 'ApiError',
+      name: ApiError,
       message: this.getErrorMessage(error),
       status: error.status,
       code: error.code,

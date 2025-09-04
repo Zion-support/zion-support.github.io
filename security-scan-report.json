@@ -41,6 +41,7 @@
       "fix": "Update vite to latest version"
     }
   ],
+  "vulnerabilities": [],
   "recommendations": [
     "Review and fix all identified vulnerabilities",
     "Implement regular security scanning in CI/CD pipeline",

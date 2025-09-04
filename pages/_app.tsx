@@ -17,10 +17,12 @@ function Header(): any {
       borderBottom: '1px solid rgba(255,255,255,0.1)',
     }}>
       <nav style={{
-        maxWidth: 1400, margin: '0 auto', padding: '12px 20px', display: 'flex',
-        alignItems: 'center', justifyContent: 'space-between', gap: 16}}>
-        <Link href="/" style={{ 
-          fontWeight: 800, letterSpacing: 0.3, fontSize: '1.25rem',
+        maxWidth: 1400, margin: '0 auto', padding: '12px 20px', display: flex,
+        alignItems: center, justifyContent: 'space-between', gap: 16
+}}>
+        <Link href="/"
+  style={{ 
+          fontWeight: 800, letterSpacing: '0.3', fontSize: '1.25rem',
           background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
@@ -154,7 +156,8 @@ function Footer(): JSX.Element {
         gap: 32 
       }}>
         {/* Company Info */}
-        <div style={{ display: 'grid', gap: 12 }}>
+        <div style={{ display: grid, gap: 12
+}}>
           <div style={{ 
             fontWeight: 800, fontSize: '1.25rem',
             background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
@@ -166,9 +169,14 @@ function Footer(): JSX.Element {
             Leading provider of innovative micro SaaS products, AI services, and IT solutions. 
             Empowering businesses with cutting-edge technology and digital transformation.
           </p>
-          <div style={{ display: 'grid', gap: 6, fontSize: '0.9rem' }}>
-            <div>📞 <a href="tel:+13024640950" style={{ color: '#93c5fd', textDecoration: 'none' }}>+1 302 464 0950</a></div>
-            <div>✉️ <a href="mailto:kleber@ziontechgroup.com" style={{ color: '#93c5fd', textDecoration: 'none' }}>kleber@ziontechgroup.com</a></div>
+          <div style={{ display: grid, gap: 6, fontSize: '0.9rem'
+}}>
+            <div>📞 <a href="tel:+13024640950"
+  style={{ color: '#93c5fd', textDecoration: none
+}}>+1 302 464 0950</a></div>
+            <div>✉️ <a href="mailto:kleber@ziontechgroup.com"
+  style={{ color: '#93c5fd', textDecoration: none
+}}>kleber@ziontechgroup.com</a></div>
             <div>📍 364 E Main St STE 1008, Middletown DE 19709</div>
             <div>🌐 <a href="https://ziontechgroup.com" style={{ color: '#93c5fd' }}>ziontechgroup.com</a></div>
           </div>

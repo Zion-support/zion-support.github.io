@@ -65,7 +65,7 @@ export default function ApiReference() {
                   <h4 style={{ fontWeight: 600, marginBottom: 8, color: '#f59e0b' }}>Query Parameters</h4>
                   <div style={{ background: '#e0f2fe', padding: 12, borderRadius: 6, fontSize: '0.9rem' }}>
                     <div><code>page</code> - Page number (default: 1)</div>
-                    <div><code>limit</code> - Items per page (default: 10, max: 100)</div>
+                    <div><code>limit</code> - Items per page (default: 10, max: '100)</div>
                     <div><code>category</code> - Filter by service category</div>
                     <div><code>search</code> - Search in service names and descriptions</div>
                   </div>

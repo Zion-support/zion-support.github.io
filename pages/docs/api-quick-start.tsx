@@ -6,8 +6,10 @@ export default function ApiQuickStart() {
     <>
       <Head>
         <title>API Quick Start - Zion Tech Group Documentation</title>
-        <meta name="description" content="Quick start guide for Zion Tech Group APIs. Learn how to make your first API call and integrate our services." />
-        <link rel="canonical" href="https://ziontechgroup.com/docs/api-quick-start" />
+        <meta name="description"
+  content="Quick start guide for Zion Tech Group APIs. Learn how to make your first API call and integrate our services." />
+        <link rel="canonical"
+  href="https://ziontechgroup.com/docs/api-quick-start" />
       </Head>
       
       <div style={{ maxWidth: 1200, margin: '40px 20px' }}>

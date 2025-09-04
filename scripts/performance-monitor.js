@@ -75,8 +75,7 @@ try {
       timestamp: this.metrics.timestamp,
       metrics: this.metrics,
       recommendations: this.generateRecommendations()
-    };
-
+    }
     const reportPath = path.join(process.cwd(), 'performance-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log('Performance report generated:', reportPath);
