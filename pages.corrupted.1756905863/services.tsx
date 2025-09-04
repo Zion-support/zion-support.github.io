@@ -1,5 +1,4 @@
-
-import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import {};
@@ -1317,38 +1316,12 @@ export default function Services() {};
 							</div>;
 						</div>;
 
-						<div className='bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition-all duration-300 ring-2 ring-blue-500'>;
-							<div className='text-center mb-6'>;
-								<div className='inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 mb-2'>;
-									Most Popular;
-								</div>;
-								<h3 className='text-xl font-semibold text-gray-900 mb-2'>AI Services</h3>;
-								<div className='text-3xl font-bold text-blue-600 mb-2'>$1,500 - $75,000</div>;
-								<div className='text-sm text-gray-500'>per month</div>;
-							</div>;
-							<ul className='space-y-3 mb-6'>;
-								<li className='flex items-center text-sm text-gray-600'>;
-									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />;
-									Cutting-edge AI technology;
-								</li>;
-								<li className='flex items-center text-sm text-gray-600'>;
-									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />;
-									Custom model development;
-								</li>;
-								<li className='flex items-center text-sm text-gray-600'>;
-									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />;
-									Real-time processing;
-								</li>;
-								<li className='flex items-center text-sm text-gray-600'>;
-									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />;
-									Advanced analytics;
-								</li>;
-							</ul>;
-							<div className='text-center'>;
-								<div className='text-xs text-gray-500 mb-2'>Market Average: $5,000 - $100,000/month</div>;
-								<div className='text-sm font-medium text-green-600'>Save up to 40%</div>;
-							</div>;
-						</div>;
+export default function Services() {
+  const categories = [
+    { name: 'AI Services', href: '/ai-services', blurb: 'Autonomous agents, RAG, MLOps, analytics' },
+    { name: 'Micro SaaS', href: '/micro-saas', blurb: 'Vertical products with fast ROI' },
+    { name: 'IT Services', href: '/it-services', blurb: 'Cloud, platform engineering, security' },
+  ];
 
 						<div className='bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition-all duration-300'>;
 							<div className='text-center mb-6'>;
@@ -1452,4 +1425,4 @@ export default function Services() {};
 		</Layout>;
 	);,
 }
-;
+
