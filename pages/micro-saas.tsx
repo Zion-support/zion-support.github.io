@@ -1070,19 +1070,6 @@ export default function MicroSaaS() {
   ];
 
   return (
-    <>
-      <Head>
-        <title>Micro SaaS Products - Zion Tech Group | 150+ Ready-to-Use Solutions</title>
-        <meta name="description" content="Discover our collection of 150+ micro SaaS products designed to solve specific business problems. From cloud management to AI safety, find the perfect solution for your needs." />
-        <meta name="keywords" content="micro SaaS, SaaS products, business solutions, cloud management, AI safety, document processing, API management" />
-        <link rel="canonical" href={`${contact.site}/micro-saas`} />
-        <meta property="og:title" content="Micro SaaS Products - Zion Tech Group | 150+ Ready-to-Use Solutions" />
-        <meta property="og:description" content="Discover our collection of 150+ micro SaaS products designed to solve specific business problems." />
-        <meta property="og:url" content={`${contact.site}/micro-saas`} />
-        <meta property="og:type" content="website" />
-      </Head>
-
-  return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>Micro SaaS Products — Zion Tech Group</title>
@@ -1110,7 +1097,7 @@ export default function MicroSaaS() {
         <div className="mb-12">
           <h2 className="text-2xl font-bold mb-6 text-center">Browse by Category</h2>
           <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((category) => (
+            {[...new Set(microSaaSServices.map(s => s.category))].map((category) => (
               <button
                 key={category}
                 className="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 border border-white/10 text-sm font-medium transition-colors"
