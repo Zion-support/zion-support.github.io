@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-
 import { motion } from 'framer-motion';
 import {
-
   Menu,
   X,
   ChevronDown,
@@ -16,7 +14,8 @@ import {
   Cloud,
   Users,
   Database,
-  Shield} from 'lucide-react';
+  Shield
+} from 'lucide-react';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -172,7 +171,7 @@ export function AppHeader() {
                     transition={{ duration: 0.2 }}
                   >
                     <div className="grid grid-cols-1 gap-2">
-                      {item.dropdown.map(dropdownItem => (
+                      {item.dropdown.map((dropdownItem) => (
                         <Link
                           key={dropdownItem.name}
                           to={dropdownItem.path}
@@ -243,7 +242,7 @@ export function AppHeader() {
         >
           <div className="container mx-auto px-4 py-6">
             <nav className="space-y-4">
-              {navigationItems.map(item => (
+              {navigationItems.map((item) => (
                 <div key={item.name}>
                   {item.dropdown ? (
                     <div>
@@ -251,7 +250,7 @@ export function AppHeader() {
                         {item.name}
                       </div>
                       <div className="pl-4 space-y-2">
-                        {item.dropdown.map(dropdownItem => (
+                        {item.dropdown.map((dropdownItem) => (
                           <Link
                             key={dropdownItem.name}
                             to={dropdownItem.path}
