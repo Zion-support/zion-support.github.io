@@ -55,7 +55,8 @@ const PerformanceMonitor: React.FC = () => {
         observer.disconnect();
         fidObserver.disconnect();
         clsObserver.disconnect();
-      }
+      };
+    }
   }, []);
 
   return null; // This component doesn't render anything
