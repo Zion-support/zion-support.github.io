@@ -18,10 +18,10 @@ const ContentQualityDashboard = (props) => {    const [isOpen, setIsOpen] = useS
 '
 "
 "
-                    url: '/',"
-                    title: 'Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services',"
-                    content: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology.',"
-                    metaDescription: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.',"
+                    "url": '/',"
+                    "title": 'Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services',"
+                    "content": 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology.',"
+                    "metaDescription": 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.',"
                     images['/images/hero-ai-solutions.jpg',/images/hero-it-services.jpg'],;"
                     links['/services',/ai-solutions',/about',/contact'];
                 },;';
@@ -29,10 +29,10 @@ const ContentQualityDashboard = (props) => {    const [isOpen, setIsOpen] = useS
 '
 "
 "
-                    url: '/services',"
-                    title: 'Our Services - Comprehensive Technology Solutions',"
-                    content: 'We offer a wide range of technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation. Our expert team delivers innovative solutions tailored to your business needs.',"
-                    metaDescription: 'Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.',"
+                    "url": '/services',"
+                    "title": 'Our Services - Comprehensive Technology Solutions',"
+                    "content": 'We offer a wide range of technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation. Our expert team delivers innovative solutions tailored to your business needs.',"
+                    "metaDescription": 'Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.',"
                     images['/images/services-overview.jpg'],;"
                     links['/ai-solutions',/cloud-devops',/cybersecurity',/about'];
                 },;';
@@ -40,10 +40,10 @@ const ContentQualityDashboard = (props) => {    const [isOpen, setIsOpen] = useS
 '
 "
 "
-                    url: '/ai-solutions',"
-                    title: 'AI Solutions - Artificial Intelligence Services',"
-                    content: 'Cutting-edge artificial intelligence solutions for modern businesses. Machine learning, predictive analytics, and AI automation to drive innovation and efficiency.',"
-                    metaDescription: 'Cutting-edge artificial intelligence solutions including machine learning, predictive analytics, and AI automation.',"
+                    "url": '/ai-solutions',"
+                    "title": 'AI Solutions - Artificial Intelligence Services',"
+                    "content": 'Cutting-edge artificial intelligence solutions for modern businesses. Machine learning, predictive analytics, and AI automation to drive innovation and efficiency.',"
+                    "metaDescription": 'Cutting-edge artificial intelligence solutions including machine learning, predictive analytics, and AI automation.',"
                     images['/images/ai-solutions.jpg'],;"
                     links['/services',/about',/contact'];
                 },;';
@@ -51,25 +51,25 @@ const ContentQualityDashboard = (props) => {    const [isOpen, setIsOpen] = useS
 '
 "
 "
-                    url: '/about',"
-                    title: 'About Us - Zion Tech Group',"
-                    content: 'Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions. Discover our team of experts and our journey in the tech industry.',"
-                    metaDescription: 'Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions.',"
+                    "url": '/about',"
+                    "title": 'About Us - Zion Tech Group',"
+                    "content": 'Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions. Discover our team of experts and our journey in the tech industry.',"
+                    "metaDescription": 'Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions.',"
                     images['/images/about-team.jpg'],;"
 links['/services',/team',/contact',/mission'];';
                 },;';';
-                {url: '/contact',
-                    title: 'Contact Us - Get in Touch',
-                    content: 'Contact Zion Tech Group for all your technology needs.Our team is ready to help you transform your business with cutting-edge solutions.',
-                    metaDescription: 'Contact Zion Tech Group for all your technology needs.Our team is ready to help you transform your business.',
+                {"url": '/contact',
+                    "title": 'Contact Us - Get in Touch',
+                    "content": 'Contact Zion Tech Group for all your technology needs.Our team is ready to help you transform your business with cutting-edge solutions.',
+                    "metaDescription": 'Contact Zion Tech Group for all your technology needs.Our team is ready to help you transform your business.',
                     images['/images/contact-office.jpg'],;';';
                     links['/services',/about',/team'];}
             ];
             for(const page of samplePages) {contentAnalyzer.analyzePageContent(page.url, page.title, page.content, page.metaDescription, page.images, page.links)}
             const newReport = contentAnalyzer.generateReport();
-            setReport(newReport)} catch (error) {// console.error('Error analyzing pages:', error)} finally {setIsLoading(false)}
+            setReport(newReport)} catch (error) {// console.error('Error analyzing "pages": ', error)} finally {setIsLoading(false)}
     }, [contentAnalyzer]);
-    useEffect(() => {// TODO: Add dependencies if needed}, []);
+    useEffect(() => {// "TODO": Add dependencies if needed}, []);
         // Auto-analyze pages when component mounts
         analyzeAllPages()}, [analyzeAllPages]);
     const getFilteredPages = (props) => {
@@ -93,8 +93,7 @@ links['/services',/team',/contact',/mission'];';
                         return page.overallScore >= 60 && page.overallScore < 80;
                     case 'poor':
                         return page.overallScore < 40;
-                    default:
-                        return true}
+                    "default": return true}
             }) }
         return filtered};
     const getStatusColor = (props) => {if(score >= 80)';
@@ -124,8 +123,8 @@ links['/services',/team',/contact',/mission'];';
                 page.issues.join('; '),
                 page.recommendations.join('; ')';';
             ])";';
-        ].map(row => row.map(cell => `"${cell}"`).join(',)).join('\n');';';
-        const blob = new Blob([csvContent], {type: 'text/csv'};);
+        ].map(row => row.map(cell => `"${cell}"`).join(')).join('\n');';';
+        const blob = new Blob([csvContent], {"type": 'text/csv'};);
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;';';
@@ -136,12 +135,12 @@ links['/services',/team',/contact',/mission'];';
     return (
     <div className="min-h-screen bg-white">
       {/* Floating Action Button */}"
-      <button onClick={() => setIsOpen(!isOpen)} className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" >"
+      <button onClick={() => setIsOpen(!isOpen)} className="bg-gradient-to-r from-green-600 to-blue-600 "hover": from-green-700 hover:to-blue-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" >"
         <BarChart3 className="w-6 h-6" />
       </button>
 
       {/* Dashboard Panel */}"
-      {isOpen && (<div className="absolute bottom-16 left-0 w-[800px] bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+      {isOpen && (<div className="absolute bottom-16 left-0 w-[800px] bg-white "dark": bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
           {/* Header */}"
           <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white p-4">"
             <div className="flex items-center justify-between">"
@@ -149,7 +148,7 @@ links['/services',/team',/contact',/mission'];';
                 <FileText className="w-5 h-5" />
                 Content Quality Dashboard
               </h3>"
-              <button onClick={() => setIsOpen(false)} className="text-white/80 hover:text-white transition-colors">
+              <button onClick={() => setIsOpen(false)} className="text-white/80 "hover": text-white transition-colors">
                 ×
               </button>
             </div>
@@ -195,10 +194,10 @@ const ContentQualityDashboard = (props) => {const [isOpen, setIsOpen] = useState
 ";,"});,"})"
 ";,"});,"})"
 ";,"});,"})"
-                    url: "/",";,"});,"})"
-                    title: "Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services",";,"});,"})"
-                    content: "Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology.",";,"});,"})"
-                    metaDescription: "Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.",";,"});,"})"
+                    "url": "/",";,"});,"})"
+                    "title": "Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services",";,"});,"})"
+                    "content": "Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology.",";,"});,"})"
+                    "metaDescription": "Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.",";,"});,"})"
                     images["/images/hero - ai-solutions.jpg",/images/hero-it-services.jpg"],,";,"});,"})"
                     links["/services",/ai-solutions",/about",/contact"];,"});,"});"
 },,"});,"})"
@@ -206,10 +205,10 @@ const ContentQualityDashboard = (props) => {const [isOpen, setIsOpen] = useState
 ";,"});,"})"
 ";,"});,"})"
 ";,"});,"})"
-                    url: "/services",";,"});,"})"
-                    title: "Our Services - Comprehensive Technology Solutions",";,"});,"})"
-                    content: "We offer a wide range of technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation. Our expert team delivers innovative solutions tailored to your business needs.",";,"});,"})"
-                    metaDescription: "Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.",";,"});,"})"
+                    "url": "/services",";,"});,"})"
+                    "title": "Our Services - Comprehensive Technology Solutions",";,"});,"})"
+                    "content": "We offer a wide range of technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation. Our expert team delivers innovative solutions tailored to your business needs.",";,"});,"})"
+                    "metaDescription": "Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.",";,"});,"})"
                     images["/images/services - overview.jpg"],,";,"});,"})"
                     links["/ai-solutions",/cloud-devops",/cybersecurity",/about"];,"});,"});"
 },,"});,"})"
@@ -217,10 +216,10 @@ const ContentQualityDashboard = (props) => {const [isOpen, setIsOpen] = useState
 ";,"});,"})"
 ";,"});,"})"
 ";,"});,"})"
-                    url: "/ai-solutions",";,"});,"})"
-                    title: "AI Solutions - Artificial Intelligence Services",";,"});,"})"
-                    content: "Cutting-edge artificial intelligence solutions for modern businesses. Machine learning, predictive analytics, and AI automation to drive innovation and efficiency.",";,"});,"})"
-                    metaDescription: "Cutting-edge artificial intelligence solutions including machine learning, predictive analytics, and AI automation.",";,"});,"})"
+                    "url": "/ai-solutions",";,"});,"})"
+                    "title": "AI Solutions - Artificial Intelligence Services",";,"});,"})"
+                    "content": "Cutting-edge artificial intelligence solutions for modern businesses. Machine learning, predictive analytics, and AI automation to drive innovation and efficiency.",";,"});,"})"
+                    "metaDescription": "Cutting-edge artificial intelligence solutions including machine learning, predictive analytics, and AI automation.",";,"});,"})"
                     images["/images/ai - solutions.jpg"],,";,"});,"})"
                     links["/services",/about",/contact"];,"});,"});"
 },,"});,"})"
@@ -228,10 +227,10 @@ const ContentQualityDashboard = (props) => {const [isOpen, setIsOpen] = useState
 ";,"});,"})"
 ";,"});,"})"
 ";,"});,"})"
-                    url: "/about",";,"});,"})"
-                    title: "About Us - Zion Tech Group",";,"});,"})"
-                    content: "Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions. Discover our team of experts and our journey in the tech industry.",";,"});,"})"
-                    metaDescription: "Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions.",";,"});,"})"
+                    "url": "/about",";,"});,"})"
+                    "title": "About Us - Zion Tech Group",";,"});,"})"
+                    "content": "Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions. Discover our team of experts and our journey in the tech industry.",";,"});,"})"
+                    "metaDescription": "Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions.",";,"});,"})"
                     images["/images/about - team.jpg"],,";,"});,"})"
                     links["/services",/team",/contact",/mission"];,"});,"});"
 },,"});,"})"
@@ -239,10 +238,10 @@ const ContentQualityDashboard = (props) => {const [isOpen, setIsOpen] = useState
 ";,"});,"})"
 ";,"});,"})"
 ";,"});,"})"
-                    url: "/contact",";,"});,"})"
-                    title: "Contact Us - Get in Touch",";,"});,"})"
-                    content: "Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business with cutting-edge solutions.",";,"});,"})"
-                    metaDescription: "Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business.",";,"});,"})"
+                    "url": "/contact",";,"});,"})"
+                    "title": "Contact Us - Get in Touch",";,"});,"})"
+                    "content": "Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business with cutting-edge solutions.",";,"});,"})"
+                    "metaDescription": "Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business.",";,"});,"})"
                     images["/images/contact - office.jpg"],,";,"});,"})"
                     links["/services",/about",/team"];,"});,"});"
 }"});,"})"
@@ -280,7 +279,7 @@ const ContentQualityDashboard = (props) => {const [isOpen, setIsOpen] = useState
                         return page.overallScore >= 60 && page.overallScore < 80,"});,"})"
                     case "poor": any,"});,"})"
                         return page.overallScore < 40,"});,"})"
-                    default: any,"});,"})"
+                    "default": any,"});,"})"
                         return true}"});,"});"
 }) }"});,"})"
         return filtered};,"});,"})"
@@ -314,7 +313,7 @@ const ContentQualityDashboard = (props) => {const [isOpen, setIsOpen] = useState
             ])";,"});,"})"
         ].map(row => row.map(cell => "${cell}").join(")).join("
 ");,"});,"})"
-        const blob = new Blob([csvContent], {type: "text/csv"};);,"});,"})"
+        const blob = new Blob([csvContent], {"type": "text/csv"};);,"});,"})"
         const url = window.URL.createObjectURL(blob);,"});,"})"
         const a = document.createElement("a");,"});,"})"
         a.href = url,"});,"})"
@@ -326,12 +325,12 @@ const ContentQualityDashboard = (props) => {const [isOpen, setIsOpen] = useState
     return ("
     <div className="{"fixed" bottom-6 left-6 z-50 ${className}"}>";,"});,"})"
       {/* comment */}";,"});,"})"
-      <button onClick="{()" => setIsOpen(!isOpen)} className="bg-gradient-to-r from-green-600 to-blue-600 hover: from-green-700 hover:to-blue-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" aria-label="Toggle Content Quality Dashboard">","});,"})"
+      <button onClick="{()" => setIsOpen(!isOpen)} className="bg-gradient-to-r from-green-600 to-blue-600 "hover": from-green-700 hover:to-blue-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" aria-label="Toggle Content Quality Dashboard">","});,"})"
         <BarChart3 className="w-6 h-6"   />;,"});,"})"
       </button>;,"});,"})"
 ";,"});,"})"
       {/* comment */}";,"});,"})"
-      {isOpen && (<div className="absolute bottom-16 left-0 w-[800px] bg-white dark: bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">","});,"})"
+      {isOpen && (<div className="absolute bottom-16 left-0 w-[800px] bg-white "dark": bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">","});,"})"
           {/* comment */}";,"});,"})"
           <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white p-4">";,"});,"})"
             <div className="flex items-center justify-between">";,"});,"})"
@@ -339,7 +338,7 @@ const ContentQualityDashboard = (props) => {const [isOpen, setIsOpen] = useState
                 <FileText className="w-5 h-5"   />;,"});,"})"
                 Content Quality Dashboard";,"});,"})"
               </h3>";,"});,"})"
-              <button onClick="{()" => setIsOpen(false)} className="text-white/80 hover: text-white transition-colors">,"});,"})"
+              <button onClick="{()" => setIsOpen(false)} className="text-white/80 "hover": text-white transition-colors">,"});,"})"
                 ×;,"});,"})"
               </button>;,"});,"})"
             </div>;,"});,"})"
@@ -375,38 +374,38 @@ const ContentQualityDashboard = (props) => {const [isOpen, setIsOpen] = useState
                 <div className="flex gap-3 items-center">";,"});,"})"
                   <div className="flex-1 relative">";,"});,"})"
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"   />";,"});,"})"
-                    <input type="text" placeholder="Search pages..." value="{searchTerm}" onChange="{(e)" => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus: ring-2 focus:ring-green-500 focus:border-transparent" />","});,"})"
+                    <input type="text" placeholder="Search pages..." value="{searchTerm}" onChange="{(e)" => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md "focus": ring-2 focus:ring-green-500 focus:border-transparent" />","});,"})"
                   </div>";,"});,"})"
-                  <select value="{filterStatus}" onChange="{(e)" => setFilterStatus(e.target.value)} className="px-3 py-2 border border-gray-300 rounded-md focus: ring-2 focus:ring-green-500 focus:border-transparent">","});,"})"
+                  <select value="{filterStatus}" onChange="{(e)" => setFilterStatus(e.target.value)} className="px-3 py-2 border border-gray-300 rounded-md "focus": ring-2 focus:ring-green-500 focus:border-transparent">","});,"})"
                     <option value="all">All Pages</option>";,"});,"})"
                     <option value="excellent">Excellent (80%+)</option>";,"});,"})"
                     <option value="good">Good (60-79%)</option>";,"});,"})"
                     <option value="poor">Poor (&lt;40%)</option>";,"});,"})"
                   </select>";,"});,"})"
-                  <button onClick="{exportReport}" className="px-3 py-2 bg-green-600 hover: bg-green-700 text-white rounded-md transition-colors flex items-center gap-2">","});,"})"
+                  <button onClick="{exportReport}" className="px-3 py-2 bg-green-600 "hover": bg-green-700 text-white rounded-md transition-colors flex items-center gap-2">","});,"})"
                     <Download className="w-4 h-4"   />;,"});,"})"
                     Export,"});,"})"
                   </button>;,"});,"})"
                 </div>;,"});,"})"
 ";,"});,"})"
                 {/* comment */}";,"});,"})"
-                {report.topIssues.length > 0 && (<div className="bg-yellow-50 dark: bg-yellow-900/20 p-4 rounded-lg">","});,"})"
-                    <h4 className="font-medium text-yellow-800 dark: text-yellow-200 mb-2 flex items-center gap-2">","});,"})"
+                {report.topIssues.length > 0 && (<div className="bg-yellow-50 "dark": bg-yellow-900/20 p-4 rounded-lg">","});,"})"
+                    <h4 className="font-medium text-yellow-800 "dark": text-yellow-200 mb-2 flex items-center gap-2">","});,"})"
                       <AlertTriangle className="w-4 h-4"   />;,"});,"})"
                       Top Issues to Address";,"});,"})"
                     </h4>";,"});,"})"
                     <div className="space-y-1">";,"});,"})"
-                      {report.topIssues.slice(0, 3).map((issue, index) => (<div key="{index}" className="text-sm text-yellow-700 dark: text-yellow-300">,"});,"})"
+                      {report.topIssues.slice(0, 3).map((issue, index) => (<div key="{index}" className="text-sm text-yellow-700 "dark": text-yellow-300">,"});,"})"
                           • {issue}"});,"})"
                         </div>) ) }"});,"})"
                     </div>;,"});,"})"
                   </div>) }"});,"})"
 ";,"});,"})"
                 {/* comment */}";,"});,"})"
-                <div className="bg-gray-50 dark: bg-gray-800 rounded-lg overflow-hidden">","});,"})"
+                <div className="bg-gray-50 "dark": bg-gray-800 rounded-lg overflow-hidden">","});,"})"
                   <div className="overflow-x-auto">";,"});,"})"
                     <table className="w-full">";,"});,"})"
-                      <thead className="bg-gray-100 dark: bg-gray-700">","});,"})"
+                      <thead className="bg-gray-100 "dark": bg-gray-700">","});,"})"
                         <tr>";,"});,"})"
                           <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">;,"});,"})"
                             Page";,"});,"})"
@@ -425,23 +424,23 @@ const ContentQualityDashboard = (props) => {const [isOpen, setIsOpen] = useState
                           </th>;,"});,"})"
                         </tr>";,"});,"})"
                       </thead>";,"});,"})"
-                      <tbody className="bg-white dark: bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">","});,"})"
-                        {filteredPages.map((page, index) => (<tr key="{index}" className="hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer" onClick="{()" => setSelectedPage(page)}>";,"});,"})"
+                      <tbody className="bg-white "dark": bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">","});,"})"
+                        {filteredPages.map((page, index) => (<tr key="{index}" className=""hover": bg-gray-50 dark:hover:bg-gray-700 cursor-pointer" onClick="{()" => setSelectedPage(page)}>";,"});,"})"
                             <td className="px-4 py-3">";,"});,"})"
-                              <div className="text-sm font-medium text-gray-900 dark: text-white">,"});,"})"
+                              <div className="text-sm font-medium text-gray-900 "dark": text-white">,"});,"})"
                                 {page.title}";,"});,"})"
                               </div>";,"});,"})"
-                              <div className="text-xs text-gray-500 dark: text-gray-400">,"});,"})"
+                              <div className="text-xs text-gray-500 "dark": text-gray-400">,"});,"})"
                                 {page.pageUrl}"});,"})"
                               </div>";,"});,"})"
                             </td>";,"});,"})"
-                            <td className="px-4 py-3 text-sm text-gray-900 dark: text-white">,"});,"})"
+                            <td className="px-4 py-3 text-sm text-gray-900 "dark": text-white">,"});,"})"
                               {page.wordCount}";,"});,"})"
                             </td>";,"});,"})"
-                            <td className="px-4 py-3 text-sm text-gray-900 dark: text-white">,"});,"})"
+                            <td className="px-4 py-3 text-sm text-gray-900 "dark": text-white">,"});,"})"
                               {page.seoScore}%";,"});,"})"
                             </td>";,"});,"})"
-                            <td className="px-4 py-3 text-sm text-gray-900 dark: text-white">,"});,"})"
+                            <td className="px-4 py-3 text-sm text-gray-900 "dark": text-white">,"});,"})"
                               {page.overallScore}%";,"});,"})"
                             </td>";,"});,"})"
                             <td className="px-4 py-3">";,"});,"})"
@@ -456,39 +455,39 @@ const ContentQualityDashboard = (props) => {const [isOpen, setIsOpen] = useState
 ";,"});,"})"
                 {/* comment */}";,"});,"})"
                 {selectedPage && (<div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">";,"});,"})"
-                    <div className="bg-white dark: bg-gray-900 rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto">","});,"})"
+                    <div className="bg-white "dark": bg-gray-900 rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto">","});,"})"
                       <div className="flex items-center justify-between mb-4">";,"});,"})"
-                        <h3 className="text-lg font-semibold text-gray-900 dark: text-white">,"});,"})"
-                          Page Analysis: {selectedPage.title}";,"});,"})"
+                        <h3 className="text-lg font-semibold text-gray-900 "dark": text-white">,"});,"})"
+                          Page "Analysis": {selectedPage.title}";,"});,"})"
                         </h3>";,"});,"})"
-                        <button onClick="{()" => setSelectedPage(null)} className="text-gray-400 hover: text-gray-600 dark:hover:text-gray-300">","});,"})"
+                        <button onClick="{()" => setSelectedPage(null)} className="text-gray-400 "hover": text-gray-600 dark:hover:text-gray-300">","});,"})"
                           <X className="w-5 h-5"   />;,"});,"})"
                         </button>;,"});,"})"
                       </div>";,"});,"})"
                       ";,"});,"})"
                       <div className="space-y-4">";,"});,"})"
                         <div className="grid grid-cols-2 gap-4">";,"});,"})"
-                          <div className="bg-gray-50 dark: bg-gray-800 p-3 rounded-lg">","});,"})"
-                            <div className="text-sm text-gray-500 dark: text-gray-400">Word Count</div>","});,"})"
-                            <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.wordCount}</div>";,"});,"})"
+                          <div className="bg-gray-50 "dark": bg-gray-800 p-3 rounded-lg">","});,"})"
+                            <div className="text-sm text-gray-500 "dark": text-gray-400">Word Count</div>","});,"})"
+                            <div className="text-lg font-semibold text-gray-900 "dark": text-white">{selectedPage.wordCount}</div>";,"});,"})"
                           </div>";,"});,"})"
-                          <div className="bg-gray-50 dark: bg-gray-800 p-3 rounded-lg">","});,"})"
-                            <div className="text-sm text-gray-500 dark: text-gray-400">Headings</div>","});,"})"
-                            <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.headingCount}</div>";,"});,"})"
+                          <div className="bg-gray-50 "dark": bg-gray-800 p-3 rounded-lg">","});,"})"
+                            <div className="text-sm text-gray-500 "dark": text-gray-400">Headings</div>","});,"})"
+                            <div className="text-lg font-semibold text-gray-900 "dark": text-white">{selectedPage.headingCount}</div>";,"});,"})"
                           </div>";,"});,"})"
-                          <div className="bg-gray-50 dark: bg-gray-800 p-3 rounded-lg">","});,"})"
-                            <div className="text-sm text-gray-500 dark: text-gray-400">Images</div>","});,"})"
-                            <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.imageCount}</div>";,"});,"})"
+                          <div className="bg-gray-50 "dark": bg-gray-800 p-3 rounded-lg">","});,"})"
+                            <div className="text-sm text-gray-500 "dark": text-gray-400">Images</div>","});,"})"
+                            <div className="text-lg font-semibold text-gray-900 "dark": text-white">{selectedPage.imageCount}</div>";,"});,"})"
                           </div>";,"});,"})"
-                          <div className="bg-gray-50 dark: bg-gray-800 p-3 rounded-lg">","});,"})"
-                            <div className="text-sm text-gray-500 dark: text-gray-400">Links</div>","});,"})"
-                            <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.linkCount}</div>;,"});,"})"
+                          <div className="bg-gray-50 "dark": bg-gray-800 p-3 rounded-lg">","});,"})"
+                            <div className="text-sm text-gray-500 "dark": text-gray-400">Links</div>","});,"})"
+                            <div className="text-lg font-semibold text-gray-900 "dark": text-white">{selectedPage.linkCount}</div>;,"});,"})"
                           </div>;,"});,"})"
 ";,"});,"})"
                         {selectedPage.issues.length > 0 && (<div>";,"});,"})"
-                            <h4 className="font-medium text-red-600 dark: text-red-400 mb-2">Issues Found</h4>","});,"})"
+                            <h4 className="font-medium text-red-600 "dark": text-red-400 mb-2">Issues Found</h4>","});,"})"
                             <div className="space-y-2">";,"});,"})"
-                              {selectedPage.issues.map((issue, index) => (<div key="{index}" className="flex items-start gap-2 text-sm text-red-600 dark: text-red-400">","});,"})"
+                              {selectedPage.issues.map((issue, index) => (<div key="{index}" className="flex items-start gap-2 text-sm text-red-600 "dark": text-red-400">","});,"})"
                                   <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0"   />;,"});,"})"
                                   <span>{issue}</span>;,"});,"})"
                                 </div>) ) }"});,"})"
@@ -496,9 +495,9 @@ const ContentQualityDashboard = (props) => {const [isOpen, setIsOpen] = useState
                           </div>) }"});,"})"
 ";,"});,"})"
                         {selectedPage.recommendations.length > 0 && (<div>";,"});,"})"
-                            <h4 className="font-medium text-green-600 dark: text-green-400 mb-2">Recommendations</h4>","});,"})"
+                            <h4 className="font-medium text-green-600 "dark": text-green-400 mb-2">Recommendations</h4>","});,"})"
                             <div className="space-y-2">";,"});,"})"
-                              {selectedPage.recommendations.map((rec, index) => (<div key="{index}" className="flex items-start gap-2 text-sm text-green-600 dark: text-green-400">","});,"})"
+                              {selectedPage.recommendations.map((rec, index) => (<div key="{index}" className="flex items-start gap-2 text-sm text-green-600 "dark": text-green-400">","});,"})"
                                   <Zap className="w-4 h-4 mt-0.5 flex-shrink-0"   />;,"});,"})"
                                   <span>{rec}</span>;,"});,"})"
                                 </div>) ) }"});,"})"
@@ -513,12 +512,12 @@ const ContentQualityDashboard = (props) => {const [isOpen, setIsOpen] = useState
           </div>;,"});,"})"
 ";,"});,"})"
           {/* comment */}";,"});,"})"
-          <div className="bg-gray-50 dark: bg-gray-800 p-3 flex gap-2">","});,"})"
-            <button onClick="{analyzeAllPages}" disabled="{isLoading}" className="flex-1 bg-green-600 hover: bg-green-700 disabled:bg-green-400 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2">","});,"})"
+          <div className="bg-gray-50 "dark": bg-gray-800 p-3 flex gap-2">","});,"})"
+            <button onClick="{analyzeAllPages}" disabled="{isLoading}" className="flex-1 bg-green-600 "hover": bg-green-700 disabled:bg-green-400 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2">","});,"})"
               <RefreshCw className="{"w-4" h-4 ${isLoading ? "animate-spin" : "}"}        />";,`});,"})"
               {isLoading ? "Analyzing..." : "Analyze All Pages"}";,"});,"})"
             </button>";,"});,"})"
-            <button onClick="{()" => contentAnalyzer.clearCache()} className="px-3 py-2 text-gray-600 hover: text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 text-sm transition-colors">,"});,"})"
+            <button onClick="{()" => contentAnalyzer.clearCache()} className="px-3 py-2 text-gray-600 "hover": text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 text-sm transition-colors">,"});,"})"
               Clear Cache,"});,"})"
             </button>;,"});,"})"
           </div>;,"});,"})"
@@ -555,7 +554,7 @@ const ContentQualityDashboardJs = (props) => {
           </p>"
           <div className="flex justify-center">"
             <a href="/contact" "
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover: shadow-lg transition-all duration-300"
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg "hover": shadow-lg transition-all duration-300"
             >
               Get Started,
             </a>
@@ -571,28 +570,28 @@ const ContentQualityDashboardJs = (props) => {
                 <div className="flex gap-3 items-center">"
                   <div className="flex-1 relative">"
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />"
-                    <input type="text" placeholder="Search pages..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent"/>"
+                    <input type="text" placeholder="Search pages..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md "focus": ring-2 focus:ring-green-500 focus:border-transparent"/>"
                   </div>"
-                  <select value={filterStatus} onChange={(e) => setFilterStatus(e.target.value)}; className="px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent">"
+                  <select value={filterStatus} onChange={(e) => setFilterStatus(e.target.value)}; className="px-3 py-2 border border-gray-300 rounded-md "focus": ring-2 focus:ring-green-500 focus:border-transparent">"
                     <option value="all">All Pages</option>"
                     <option value="excellent">Excellent (80%+)</option>"
                     <option value="good">Good (60-79%)</option>"
                     <option value="poor">Poor (&lt;40%)</option>"
                   </select>"
-                  <button onClick={exportReport} className="px-3 py-2 bg-green-600 hover:bg-green-700 text-white rounded-md transition-colors flex items-center gap-2">"
+                  <button onClick={exportReport} className="px-3 py-2 bg-green-600 "hover": bg-green-700 text-white rounded-md transition-colors flex items-center gap-2">"
                     <Download className="w-4 h-4" />
                     Export;
                   </button>
                 </div>
 "
                 {/* Top Issues */}"
-                {report.topIssues.length > 0 && (<div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg">"
+                {report.topIssues.length > 0 && (<div className="bg-yellow-50 "dark": bg-yellow-900/20 p-4 rounded-lg">"
                     <h4 className="font-medium text-yellow-800 dark:text-yellow-200 mb-2 flex items-center gap-2">"
                       <AlertTriangle className="w-4 h-4" />
                       Top Issues to Address"
                     </h4>"
                     <div className="space-y-1">"
-                      {report.topIssues.slice(0, 3).map((issue, index) => (<div key={index} className="text-sm text-yellow-700 dark:text-yellow-300">
+                      {report.topIssues.slice(0, 3).map((issue, index) => (<div key={index} className="text-sm text-yellow-700 "dark": text-yellow-300">
                           • {issue}
                         </div>) ) }
                     </div>
@@ -601,7 +600,7 @@ const ContentQualityDashboardJs = (props) => {
 }
 "
                 {/* Pages Table */}"
-                <div className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden">"
+                <div className="bg-gray-50 "dark": bg-gray-800 rounded-lg overflow-hidden">"
                   <div className="overflow-x-auto">"
                     <table className="w-full">"
                       <thead className="bg-gray-100 dark:bg-gray-700">"
@@ -624,26 +623,26 @@ const ContentQualityDashboardJs = (props) => {
                         </tr>"
                       </thead>"
                       <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">"
-                        {filteredPages.map((page, index) => (<tr key={index} className="hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer" onClick={() => setSelectedPage(page)}>"
+                        {filteredPages.map((page, index) => (<tr key={index} className=""hover": bg-gray-50 dark:hover:bg-gray-700 cursor-pointer" onClick={() => setSelectedPage(page)}>"
                             <td className="px-4 py-3">"
-                              <div className="text-sm font-medium text-gray-900 dark:text-white">
+                              <div className="text-sm font-medium text-gray-900 "dark": text-white">
                                 {page.title}"
                               </div>"
-                              <div className="text-xs text-gray-500 dark:text-gray-400">
+                              <div className="text-xs text-gray-500 "dark": text-gray-400">
                                 {page.pageUrl}
                               </div>"
                             </td>"
-                            <td className="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                            <td className="px-4 py-3 text-sm text-gray-900 "dark": text-white">
                               {page.wordCount}"
                             </td>"
-                            <td className="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                            <td className="px-4 py-3 text-sm text-gray-900 "dark": text-white">
                               {page.seoScore}%"
                             </td>"
-                            <td className="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                            <td className="px-4 py-3 text-sm text-gray-900 "dark": text-white">
                               {page.overallScore}%"
-                            </td>"`
-                            <td className="px-4 py-3">``
-                              <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full border ${getStatusColor(page.overallScore)}`}>
+                            </td>""
+                            <td className="px-4 py-3">""
+                              <span className={"inline-flex px-2 py-1 text-xs font-semibold rounded-full border ${getStatusColor(page.overallScore)}"}>
                                 {getStatusText(page.overallScore)}
                               </span>
                             </td>
@@ -655,12 +654,12 @@ const ContentQualityDashboardJs = (props) => {
 "
                 {/* Page Details Modal */}"
                 {selectedPage && (<div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">"
-                    <div className="bg-white dark:bg-gray-900 rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto">"
+                    <div className="bg-white "dark": bg-gray-900 rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto">"
                       <div className="flex items-center justify-between mb-4">"
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                           Page Analysis: {selectedPage.title}"
                         </h3>"
-                        <button onClick={() => setSelectedPage(null)} className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">"
+                        <button onClick={() => setSelectedPage(null)} className="text-gray-400 "hover": text-gray-600 dark:hover:text-gray-300">"
                           <X className="w-5 h-5" />
                         </button>
                       </div>"
@@ -671,24 +670,24 @@ const ContentQualityDashboardJs = (props) => {
                             <div className="text-sm text-gray-500 dark:text-gray-400">Word Count</div>"
                             <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.wordCount}</div>"
                           </div>"
-                          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">"
+                          <div className="bg-gray-50 "dark": bg-gray-800 p-3 rounded-lg">"
                             <div className="text-sm text-gray-500 dark:text-gray-400">Headings</div>"
                             <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.headingCount}</div>"
                           </div>"
-                          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">"
+                          <div className="bg-gray-50 "dark": bg-gray-800 p-3 rounded-lg">"
                             <div className="text-sm text-gray-500 dark:text-gray-400">Images</div>"
                             <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.imageCount}</div>"
                           </div>"
-                          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">"
+                          <div className="bg-gray-50 "dark": bg-gray-800 p-3 rounded-lg">"
                             <div className="text-sm text-gray-500 dark:text-gray-400">Links</div>"
                             <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.linkCount}</div>
                           </div>
                         </div>
 "
                         {selectedPage.issues.length > 0 && (<div>"
-                            <h4 className="font-medium text-red-600 dark:text-red-400 mb-2">Issues Found</h4>"
+                            <h4 className="font-medium text-red-600 "dark": text-red-400 mb-2">Issues Found</h4>"
                             <div className="space-y-2">"
-                              {selectedPage.issues.map((issue, index) => (<div key={index} className="flex items-start gap-2 text-sm text-red-600 dark:text-red-400">"
+                              {selectedPage.issues.map((issue, index) => (<div key={index} className="flex items-start gap-2 text-sm text-red-600 "dark": text-red-400">"
                                   <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0" />
                                   <span>{issue}</span>
                                 </div>) ) }
@@ -698,9 +697,9 @@ const ContentQualityDashboardJs = (props) => {
 }
 "
                         {selectedPage.recommendations.length > 0 && (<div>"
-                            <h4 className="font-medium text-green-600 dark:text-green-400 mb-2">Recommendations</h4>"
+                            <h4 className="font-medium text-green-600 "dark": text-green-400 mb-2">Recommendations</h4>"
                             <div className="space-y-2">"
-                              {selectedPage.recommendations.map((rec, index) => (<div key={index} className="flex items-start gap-2 text-sm text-green-600 dark:text-green-400">"
+                              {selectedPage.recommendations.map((rec, index) => (<div key={index} className="flex items-start gap-2 text-sm text-green-600 "dark": text-green-400">"
                                   <Zap className="w-4 h-4 mt-0.5 flex-shrink-0" />
                                   <span>{rec}</span>
                                 </div>) ) }
@@ -719,12 +718,12 @@ const ContentQualityDashboardJs = (props) => {
           </div>
 ";
           {/* Footer Actions */}";';
-          <div className="bg-gray-50 dark:bg-gray-800 p-3 flex gap-2">"`
-            <button onClick={analyzeAllPages} disabled={isLoading} className="flex-1 bg-green-600 hover:bg-green-700 disabled:bg-green-400 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2">'`'`
+          <div className="bg-gray-50 "dark": bg-gray-800 p-3 flex gap-2">""
+            <button onClick={analyzeAllPages} disabled={isLoading} className="flex-1 bg-green-600 "hover": bg-green-700 disabled:bg-green-400 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2">'"'"
               <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : "}`} />'
               {isLoading ? 'Analyzing...' : 'Analyze All Pages'}"
             </button>"
-            <button onClick={() => contentAnalyzer.clearCache()} className="px-3 py-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 text-sm transition-colors">
+            <button onClick={() => contentAnalyzer.clearCache()} className="px-3 py-2 text-gray-600 "hover": text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 text-sm transition-colors">
               Clear Cache;
             </button>
           </div>

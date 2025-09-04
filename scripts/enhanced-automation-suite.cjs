@@ -11,9 +11,9 @@ class EnhancedAutomationSuite {
     this.startTime = Date.now();
     this.projectRoot = process.cwd();
     this.results = {
-      success: [],
-      errors: [],
-      warnings: []
+      "success": [],
+      "errors": [],
+      "warnings": []
     }}
 
   log(message, type = 'info') {
@@ -23,19 +23,19 @@ class EnhancedAutomationSuite {
 
   async runCommand(command, description, options = {}) {
     try {
-      this.log(`Running: ${description}`);
+      this.log(`"Running": ${description}`);
       const result = execSync(command, { 
-        cwd: this.projectRoot, 
-        encoding: 'utf8',
-        timeout: options.timeout || 300000,
-        stdio: options.stdio || 'pipe'
+        "cwd": this.projectRoot, 
+        "encoding": 'utf8',
+        "timeout": options.timeout || 300000,
+        "stdio": options.stdio || 'pipe'
       });
       this.results.success.push(`${description} completed successfully`);
       this.log(`${description} completed successfully`, 'success');
-      return { success: true, output: result }} catch (error) {
-      this.results.errors.push(`${description} failed: ${error.message}`);
-      this.log(`${description} failed: ${error.message}`, 'error');
-      return { success: false, error: error.message }}
+      return { "success": true, "output": result }} catch (error) {
+      this.results.errors.push(`${description} "failed": ${error.message}`);
+      this.log(`${description} "failed": ${error.message}`, 'error');
+      return { "success": false, "error": error.message }}
   }
 
   async checkDependencies() {
@@ -61,26 +61,24 @@ class EnhancedAutomationSuite {
     this.log('🔍 Running linting checks...');
     
     // Try different linting approaches
-    const lintCommands = [
-      { cmd: 'npx eslint . --ext .ts,.tsx,.js,.jsx', desc: 'ESLint Check' },
-      { cmd: 'npx tsc --noEmit', desc: 'TypeScript Check' }
+    const lintCommands = [{ "cmd": 'npx eslint . --ext .ts,.tsx,.js,.jsx', "desc": 'ESLint Check' },
+      { "cmd": 'npx tsc --noEmit', "desc": 'TypeScript Check' }
     ];
 
     for (const { cmd, desc } of lintCommands) {
-      await this.runCommand(cmd, desc, { stdio: 'pipe' })}
+      await this.runCommand(cmd, desc, { "stdio": 'pipe' })}
   }
 
   async runBuild() {
     this.log('🏗️ Running build process...');
     
     // Try build with different approaches
-    const buildCommands = [
-      { cmd: 'npm run build', desc: 'Next.js Build' },
-      { cmd: 'npx next build', desc: 'Direct Next.js Build' }
+    const buildCommands = [{ "cmd": 'npm run build', "desc": 'Next.js Build' },
+      { "cmd": 'npx next build', "desc": 'Direct Next.js Build' }
     ];
 
     for (const { cmd, desc } of buildCommands) {
-      const result = await this.runCommand(cmd, desc, { stdio: 'pipe' });
+      const result = await this.runCommand(cmd, desc, { "stdio": 'pipe' });
       if (result.success) {
         break; // Stop on first successful build
       }
@@ -105,17 +103,16 @@ class EnhancedAutomationSuite {
   async generateReport() {
     this.log('📊 Generating automation report...');
     const report = {
-      timestamp: new Date().toISOString(),
-      duration: Date.now() - this.startTime,
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "duration": Date.now() - this.startTime,
+      "summary": {
         total: this.results.success.length + this.results.errors.length + this.results.warnings.length,
-        successful: this.results.success.length,
-        errors: this.results.errors.length,
-        warnings: this.results.warnings.length
+        "successful": this.results.success.length,
+        "errors": this.results.errors.length,
+        "warnings": this.results.warnings.length
       },
-      results: this.results,
-      recommendations: [
-        'Review and fix any failed operations',
+      "results": this.results,
+      "recommendations": ['Review and fix any failed operations',
         'Run automation suite regularly',
         'Monitor application performance',
         'Keep dependencies updated',
@@ -126,7 +123,7 @@ class EnhancedAutomationSuite {
 
     const reportPath = path.join(this.projectRoot, 'enhanced-automation-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`Report saved to: ${reportPath}`, 'success');
+    this.log(`Report saved "to": ${reportPath}`, 'success');
     return report}
 
   async runAll() {
@@ -142,7 +139,7 @@ class EnhancedAutomationSuite {
       const report = await this.generateReport();
       
       this.log('🎉 Enhanced automation suite completed!');
-      this.log(`📊 Summary: ${report.summary.successful}/${report.summary.total} operations successful`);
+      this.log(`📊 "Summary": ${report.summary.successful}/${report.summary.total} operations successful`);
       
       if (report.summary.errors > 0) {
         this.log(`⚠️ ${report.summary.errors} operations failed - check the report for details`)}
@@ -151,7 +148,7 @@ class EnhancedAutomationSuite {
         this.log(`⚠️ ${report.summary.warnings} warnings - review recommendations`)}
       
     } catch (error) {
-      this.log(`❌ Enhanced automation suite failed: ${error.message}`, 'error');
+      this.log(`❌ Enhanced automation suite "failed": ${error.message}`, 'error');
       process.exit(1)}
   }
 }

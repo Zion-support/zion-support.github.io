@@ -8,17 +8,17 @@ console.log('🔒 Enhanced Security Scanner v2.0');
 console.log('==================================');
 
 const securityReport = {
-  timestamp: new Date().toISOString(),
-  sessionId: Date.now().toString(),
-  vulnerabilities: [],
-  recommendations: [],
-  summary: {
+  "timestamp": new Date().toISOString(),
+  "sessionId": Date.now().toString(),
+  "vulnerabilities": [],
+  "recommendations": [],
+  "summary": {
     totalChecks: 0,
-    vulnerabilities: 0,
-    high: 0,
-    medium: 0,
-    low: 0,
-    securityScore: 0
+    "vulnerabilities": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "securityScore": 0
   }
 };
 
@@ -30,17 +30,17 @@ function checkDependencies() {
   log('info', 'Checking dependencies for vulnerabilities');
   
   try {
-    const output = execSync('npm audit --json', { encoding: 'utf8' });
+    const output = execSync('npm audit --json', { "encoding": 'utf8' });
     const audit = JSON.parse(output);
     
     if (audit.vulnerabilities) {
       Object.entries(audit.vulnerabilities).forEach(([name, vuln]) => {
         securityReport.vulnerabilities.push({
-          type: 'dependency',
+          "type": 'dependency',
           name,
-          severity: vuln.severity,
-          description: vuln.description,
-          recommendation: vuln.recommendation
+          "severity": vuln.severity,
+          "description": vuln.description,
+          "recommendation": vuln.recommendation
         })})}
     
     securityReport.summary.totalChecks++;
@@ -51,8 +51,7 @@ function checkDependencies() {
 function checkSecrets() {
   log('info', 'Scanning for exposed secrets');
   
-  const secretPatterns = [
-    /password\s*=\s*['"][^'"]+['"]/gi,
+  const secretPatterns = [/password\s*=\s*['"][^'"]+['"]/gi,
     /api[_-]?key\s*=\s*['"][^'"]+['"]/gi,
     /secret\s*=\s*['"][^'"]+['"]/gi,
     /token\s*=\s*['"][^'"]+['"]/gi
@@ -67,11 +66,11 @@ function checkSecrets() {
         if (matches) {
           matches.forEach(match => {
             securityReport.vulnerabilities.push({
-              type: 'secret',
-              file: filePath,
-              severity: 'high',
-              description: `Potential secret exposed: ${match.substring(0, 50)}...`,
-              recommendation: 'Remove or move secrets to environment variables'
+              "type": 'secret',
+              "file": filePath,
+              "severity": 'high',
+              "description": `Potential secret exposed: ${match.substring(0, 50)}...`,
+              "recommendation": 'Remove or move secrets to environment variables'
             })})}
       })} catch (error) {
       // Skip files that can't be read
@@ -97,8 +96,7 @@ function checkSecrets() {
 function checkFilePermissions() {
   log('info', 'Checking file permissions');
   
-  const sensitiveFiles = [
-    'package.json',
+  const sensitiveFiles = ['package.json',
     'package-lock.json',
     '.env',
     '.env.local',
@@ -112,11 +110,11 @@ function checkFilePermissions() {
       
       if (mode > parseInt('644', 8)) {
         securityReport.vulnerabilities.push({
-          type: 'permission',
+          "type": 'permission',
           file,
-          severity: 'medium',
-          description: `File has overly permissive permissions: ${mode.toString(8)}`,
-          recommendation: 'Set file permissions to 644 or more restrictive'
+          "severity": 'medium',
+          "description": `File has overly permissive permissions: ${mode.toString(8)}`,
+          "recommendation": 'Set file permissions to 644 or more restrictive'
         })}
     } catch (error) {
       // File doesn't exist, skip
@@ -131,28 +129,28 @@ function generateRecommendations() {
   
   if (securityReport.summary.high > 0) {
     recommendations.push({
-      priority: 'critical',
-      message: `${securityReport.summary.high} high severity vulnerabilities found`,
-      action: 'Address high severity issues immediately'
+      "priority": 'critical',
+      "message": `${securityReport.summary.high} high severity vulnerabilities found`,
+      "action": 'Address high severity issues immediately'
     })}
   
   if (securityReport.summary.medium > 0) {
     recommendations.push({
-      priority: 'high',
-      message: `${securityReport.summary.medium} medium severity vulnerabilities found`,
-      action: 'Address medium severity issues within 48 hours'
+      "priority": 'high',
+      "message": `${securityReport.summary.medium} medium severity vulnerabilities found`,
+      "action": 'Address medium severity issues within 48 hours'
     })}
   
   recommendations.push({
-    priority: 'medium',
-    message: 'Implement automated security scanning',
-    action: 'Set up CI/CD pipeline with security checks'
+    "priority": 'medium',
+    "message": 'Implement automated security scanning',
+    "action": 'Set up CI/CD pipeline with security checks'
   });
   
   recommendations.push({
-    priority: 'low',
-    message: 'Regular security audits',
-    action: 'Schedule monthly security reviews'
+    "priority": 'low',
+    "message": 'Regular security audits',
+    "action": 'Schedule monthly security reviews'
   });
   
   return recommendations}
@@ -185,29 +183,29 @@ async function main() {
     // Display summary
     log('info', 'Enhanced Security Scanner Summary');
     log('info', '=================================');
-    log('info', `Total checks: ${securityReport.summary.totalChecks}`);
-    log('info', `Vulnerabilities found: ${securityReport.summary.vulnerabilities}`);
-    log('info', `High severity: ${securityReport.summary.high}`);
-    log('info', `Medium severity: ${securityReport.summary.medium}`);
-    log('info', `Low severity: ${securityReport.summary.low}`);
-    log('info', `Security score: ${securityReport.summary.securityScore}/100`);
+    log('info', `Total "checks": ${securityReport.summary.totalChecks}`);
+    log('info', `Vulnerabilities "found": ${securityReport.summary.vulnerabilities}`);
+    log('info', `High "severity": ${securityReport.summary.high}`);
+    log('info', `Medium "severity": ${securityReport.summary.medium}`);
+    log('info', `Low "severity": ${securityReport.summary.low}`);
+    log('info', `Security "score": ${securityReport.summary.securityScore}/100`);
     
     if (securityReport.vulnerabilities.length > 0) {
-      log('warn', 'Vulnerabilities found:');
+      log('warn', 'Vulnerabilities "found": ');
       securityReport.vulnerabilities.forEach(vuln => {
         log('warn', `- [${vuln.severity.toUpperCase()}] ${vuln.description}`)})}
     
     if (securityReport.recommendations.length > 0) {
-      log('info', 'Security Recommendations:');
+      log('info', 'Security "Recommendations": ');
       securityReport.recommendations.forEach(rec => {
         log('info', `- [${rec.priority.toUpperCase()}] ${rec.message}`);
-        log('info', `  Action: ${rec.action}`)})}
+        log('info', `  "Action": ${rec.action}`)})}
     
     // Save report
     const reportPath = path.join(process.cwd(), `enhanced-security-report-${securityReport.sessionId}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(securityReport, null, 2));
     
-    log('info', `Enhanced security report saved to: enhanced-security-report-${securityReport.sessionId}.json`);
+    log('info', `Enhanced security report saved "to": enhanced-security-report-${securityReport.sessionId}.json`);
     
     // Exit with appropriate status
     if (securityReport.summary.securityScore < 50) {

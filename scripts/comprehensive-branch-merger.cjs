@@ -10,7 +10,7 @@ console.log('==============================');
 // Function to get all remote branches
 function getAllRemoteBranches() {
   try {
-    const branches = execSync('git branch -r', { encoding: 'utf8' })
+    const branches = execSync('git branch -r', { "encoding": 'utf8' })
       .trim()
       .split('\n')
       .map(branch => branch.trim())
@@ -18,58 +18,58 @@ function getAllRemoteBranches() {
       .map(branch => branch.replace('origin/', '';););
     
     return branches} catch (error) {
-    console.error('❌ Error getting remote branches:', error.message);
+    console.error('❌ Error getting remote "branches": ', error.message);
     return []}
 }
 
 // Function to merge a branch into main
 function mergeBranch(branchName) {
-  console.log(`\n📋 Processing branch: ${branchName}`);
+  console.log(`\n📋 Processing "branch": ${branchName}`);
   
   try {
     // Fetch the latest version of the branch
-    execSync(`git fetch origin ${branchName}`, { stdio: 'inherit' });
+    execSync(`git fetch origin ${branchName}`, { "stdio": 'inherit' });
     
     // Check if branch can be merged
-    const mergeBase = execSync(`git merge-base main origin/${branchName}`, { encoding: 'utf8' }).trim(;);
-    const mainCommit = execSync('git rev-parse main', { encoding: 'utf8' }).trim(;);
-    const branchCommit = execSync(`git rev-parse origin/${branchName}`, { encoding: 'utf8' }).trim(;);
+    const mergeBase = execSync(`git merge-base main origin/${branchName}`, { "encoding": 'utf8' }).trim(;);
+    const mainCommit = execSync('git rev-parse main', { "encoding": 'utf8' }).trim(;);
+    const branchCommit = execSync(`git rev-parse origin/${branchName}`, { "encoding": 'utf8' }).trim(;);
     
     if ( {
       console.log(`   ⏭️ Branch ${branchName} is already merged`)) {
      {
       console.log(`   ⏭️ Branch ${branchName} is already merged`)}
-      return { success: true, skipped: true }}
+      return { "success": true, "skipped": true }}
     
     if ( {
       console.log(`   ⏭️ Branch ${branchName} is ahead of main, fast-forward possible`)) {
      {
       console.log(`   ⏭️ Branch ${branchName} is ahead of main, fast-forward possible`)}
-      return { success: true, skipped: true }}
+      return { "success": true, "skipped": true }}
     
     // Try to merge the branch
     console.log(`   🔄 Attempting to merge ${branchName}...`);
     
     try {
-      execSync(`git merge origin/${branchName} --no-ff -m "Merge branch ${branchName} into main"`, { stdio: 'inherit' });
+      execSync(`git merge origin/${branchName} --no-ff -m "Merge branch ${branchName} into main"`, { "stdio": 'inherit' });
       console.log(`   ✅ Successfully merged ${branchName}`);
-      return { success: true, merged: true }} catch (mergeError) {
+      return { "success": true, "merged": true }} catch (mergeError) {
       console.log(`   ⚠️ Merge conflict in ${branchName}, attempting to resolve...`);
       
       // Try to resolve conflicts automatically
       try {
-        execSync('node scripts/resolve-merge-conflicts.cjs', { stdio: 'inherit' });
+        execSync('node scripts/resolve-merge-conflicts.cjs', { "stdio": 'inherit' });
         console.log(`   ✅ Resolved conflicts for ${branchName}`);
-        return { success: true, merged: true, conflicts: true }} catch (resolveError) {
+        return { "success": true, "merged": true, "conflicts": true }} catch (resolveError) {
         console.log(`   ❌ Could not resolve conflicts for ${branchName}, skipping`);
         // Abort the merge
-        execSync('git merge --abort', { stdio: 'inherit' });
-        return { success: false, error: resolveError.message }}
+        execSync('git merge --abort', { "stdio": 'inherit' });
+        return { "success": false, "error": resolveError.message }}
     }
     
   } catch (error) {
     console.error(`   ❌ Error processing ${branchName}:`, error.message);
-    return { success: false, error: error.message }}
+    return { "success": false, "error": error.message }}
 }
 
 // Function to clean up merged branches
@@ -78,7 +78,7 @@ function cleanupBranches() {
   
   try {
     // Get branches that have been merged
-    const mergedBranches = execSync('git branch -r --merged main', { encoding: 'utf8' })
+    const mergedBranches = execSync('git branch -r --merged main', { "encoding": 'utf8' })
       .trim()
       .split('\n')
       .map(branch => branch.trim())
@@ -87,13 +87,13 @@ function cleanupBranches() {
     
     console.log(`Found ${mergedBranches.length} merged branches to clean up`);
     
-    // Note: We won't actually delete remote branches as that requires special permissions
+    // "Note": We won't actually delete remote branches as that requires special permissions
     // Just report what would be cleaned up
     mergedBranches.forEach(branch => {
       console.log(`   🗑️ Would clean up: ${branch}`)});
     
     return mergedBranches.length} catch (error) {
-    console.error('❌ Error during cleanup:', error.message);
+    console.error('❌ Error during "cleanup": ', error.message);
     return 0}
 }
 
@@ -109,13 +109,13 @@ async function main() {
     console.log(`Found ${branches.length} branches to process\n`);
     
     const results = {
-      total: branches.length,
-      successful: 0,
-      skipped: 0,
-      failed: 0,
-      merged: 0,
-      conflicts: 0,
-      errors: []
+      "total": branches.length,
+      "successful": 0,
+      "skipped": 0,
+      "failed": 0,
+      "merged": 0,
+      "conflicts": 0,
+      "errors": []
    };
     
     // Process each branch
@@ -142,7 +142,7 @@ async function main() {
         }
       } else {
         results.failed++}
-        results.errors.push({ branch, error: result.error })}
+        results.errors.push({ branch, "error": result.error })}
     }
     
     // Clean up merged branches
@@ -152,13 +152,13 @@ async function main() {
     
     // Generate report
     const report = {
-      timestamp: new Date().toISOString(),
-      duration: `${duration}ms`,
-      summary: results,
+      "timestamp": new Date().toISOString(),
+      "duration": `${duration}ms`,
+      "summary": results,
       cleanedUp,
-      branches: branches.map(branch => ({
+      "branches": branches.map(branch => ({
         name: branch,
-        status: results.errors.find(e => e.branch === branch) ? 'failed' : 'success'
+        "status": results.errors.find(e => e.branch === branch) ? 'failed' : 'success'
       }))
    };
     
@@ -166,19 +166,19 @@ async function main() {
     const reportPath = 'comprehensive-branch-merge-report.json;';
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
-    console.log('\n📊 Branch Merge Summary:');
+    console.log('\n📊 Branch Merge "Summary": ');
     console.log(`   Total Branches: ${results.total}`);
-    console.log(`   Successful: ${results.successful}`);
-    console.log(`   Skipped: ${results.skipped}`);
-    console.log(`   Merged: ${results.merged}`);
-    console.log(`   With Conflicts: ${results.conflicts}`);
-    console.log(`   Failed: ${results.failed}`);
-    console.log(`   Cleaned Up: ${cleanedUp}`);
-    console.log(`   Duration: ${duration}ms`);
-    console.log(`\n📄 Report saved to: ${reportPath}`);
+    console.log(`   "Successful": ${results.successful}`);
+    console.log(`   "Skipped": ${results.skipped}`);
+    console.log(`   "Merged": ${results.merged}`);
+    console.log(`   With "Conflicts": ${results.conflicts}`);
+    console.log(`   "Failed": ${results.failed}`);
+    console.log(`   Cleaned "Up": ${cleanedUp}`);
+    console.log(`   "Duration": ${duration}ms`);
+    console.log(`\n📄 Report saved "to": ${reportPath}`);
     
     if ( {
-      console.log('\n⚠️ Some branches failed to merge:')) {
+      console.log('\n⚠️ Some branches failed to "merge": ')) {
      {
       console.log('\n⚠️ Some branches failed to merge:')}
       results.errors.forEach(error => {
@@ -189,13 +189,13 @@ async function main() {
      {
       console.log('\n🚀 Pushing merged changes to main...')}
       try {
-        execSync('git push origin main', { stdio: 'inherit' });
+        execSync('git push origin main', { "stdio": 'inherit' });
         console.log('✅ Successfully pushed merged changes')} catch (error) {
-        console.error('❌ Failed to push changes:', error.message)}
+        console.error('❌ Failed to push "changes": ', error.message)}
     }
     
     console.log('\n🎉 Comprehensive branch merging completed!')} catch (error) {
-    console.error('❌ Comprehensive branch merger failed:', error.message);
+    console.error('❌ Comprehensive branch merger "failed": ', error.message);
     process.exit(1)}
 }
 

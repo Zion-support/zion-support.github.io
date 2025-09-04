@@ -14,11 +14,11 @@ class PRMerger {
 
   execCommand(command, description) {
     try {
-      this.log(`Executing: ${description}`);
+      this.log(`"Executing": ${description}`);
       const result = execSync(command, { 
-        cwd: this.projectRoot, 
-        stdio: 'pipe',
-        encoding: 'utf8'
+        "cwd": this.projectRoot, 
+        "stdio": 'pipe',
+        "encoding": 'utf8'
       });
       return result} catch (error) {
       this.log(`Error in ${description}: ${error.message}`);
@@ -29,7 +29,7 @@ class PRMerger {
     try {
       const result = this.execCommand('gh pr list --state open --limit 50 --json number,title,headRefName,mergeable,mergeStateStatus', 'Get open PRs');
       return JSON.parse(result)} catch (error) {
-      this.log(`Failed to get PRs: ${error.message}`);
+      this.log(`Failed to get "PRs": ${error.message}`);
       return []}
   }
 
@@ -40,7 +40,7 @@ class PRMerger {
       // Try to merge directly first
       try {
         this.execCommand(`gh pr merge ${prNumber} --merge --delete-branch`, `Merge PR #${prNumber} directly`);
-        this.mergedPRs.push({ number: prNumber, title: prTitle, method: 'direct' });
+        this.mergedPRs.push({ "number": prNumber, "title": prTitle, "method": 'direct' });
         this.log(`✅ Successfully merged PR #${prNumber} directly`);
         return true} catch (directError) {
         this.log(`Direct merge failed for PR #${prNumber}, trying conflict resolution...`);
@@ -69,7 +69,7 @@ class PRMerger {
               this.log(`Failed to resolve conflicts for PR #${prNumber}: ${resolveError.message}`);
               this.execCommand('git merge --abort', 'Abort merge');
               this.execCommand('git checkout main', 'Return to main');
-              this.failedPRs.push({ number: prNumber, title: prTitle, error: resolveError.message });
+              this.failedPRs.push({ "number": prNumber, "title": prTitle, "error": resolveError.message });
               return false}
           }
           
@@ -82,17 +82,17 @@ class PRMerger {
           // Now try to merge the PR
           this.execCommand(`gh pr merge ${prNumber} --merge --delete-branch`, `Merge resolved PR #${prNumber}`);
           
-          this.mergedPRs.push({ number: prNumber, title: prTitle, method: 'conflict-resolved' });
+          this.mergedPRs.push({ "number": prNumber, "title": prTitle, "method": 'conflict-resolved' });
           this.log(`✅ Successfully merged PR #${prNumber} after conflict resolution`);
           return true} catch (conflictError) {
           this.log(`Failed to resolve conflicts for PR #${prNumber}: ${conflictError.message}`);
           this.execCommand('git checkout main', 'Return to main');
-          this.failedPRs.push({ number: prNumber, title: prTitle, error: conflictError.message });
+          this.failedPRs.push({ "number": prNumber, "title": prTitle, "error": conflictError.message });
           return false}
       }
     } catch (error) {
       this.log(`Failed to merge PR #${prNumber}: ${error.message}`);
-      this.failedPRs.push({ number: prNumber, title: prTitle, error: error.message });
+      this.failedPRs.push({ "number": prNumber, "title": prTitle, "error": error.message });
       return false}
   }
 
@@ -112,32 +112,32 @@ class PRMerger {
         // Add a small delay between merges
         await new Promise(resolve => setTimeout(resolve, 2000))} catch (error) {
         this.log(`Unexpected error processing PR #${pr.number}: ${error.message}`);
-        this.failedPRs.push({ number: pr.number, title: pr.title, error: error.message })}
+        this.failedPRs.push({ "number": pr.number, "title": pr.title, "error": error.message })}
     }
     
     this.log('\n=== MERGE SUMMARY ===');
-    this.log(`Successfully merged: ${this.mergedPRs.length} PRs`);
-    this.log(`Failed to merge: ${this.failedPRs.length} PRs`);
+    this.log(`Successfully "merged": ${this.mergedPRs.length} PRs`);
+    this.log(`Failed to "merge": ${this.failedPRs.length} PRs`);
     
     if (this.mergedPRs.length > 0) {
-      this.log('\n✅ Successfully merged PRs:');
+      this.log('\n✅ Successfully merged "PRs": ');
       this.mergedPRs.forEach(pr => {
         this.log(`  - #${pr.number}: ${pr.title} (${pr.method})`)})}
     
     if (this.failedPRs.length > 0) {
-      this.log('\n❌ Failed to merge PRs:');
+      this.log('\n❌ Failed to merge "PRs": ');
       this.failedPRs.forEach(pr => {
         this.log(`  - #${pr.number}: ${pr.title} - ${pr.error}`)})}
     
     // Save results to file
     const results = {
-      timestamp: new Date().toISOString(),
-      merged: this.mergedPRs,
-      failed: this.failedPRs,
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "merged": this.mergedPRs,
+      "failed": this.failedPRs,
+      "summary": {
         total: prs.length,
-        merged: this.mergedPRs.length,
-        failed: this.failedPRs.length
+        "merged": this.mergedPRs.length,
+        "failed": this.failedPRs.length
       }
     };
     
@@ -148,5 +148,5 @@ class PRMerger {
 // Run the merger
 const merger = new PRMerger();
 merger.mergeAllPRs().catch(error => {
-  console.error('Fatal error:', error);
+  console.error('Fatal "error": ', error);
   process.exit(1)});

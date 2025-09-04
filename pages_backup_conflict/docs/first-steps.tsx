@@ -5,10 +5,10 @@ import { ArrowLeft, Play, CheckCircle, ArrowRight, Book } from 'lucide-react';
 
 export default function FirstSteps() {
   const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
+    "phone": '+1 302 464 0950',
+    "email": 'kleber@ziontechgroup.com',
+    "address": '364 E Main St STE 1008 Middletown DE 19709',
+    "site": 'https://ziontechgroup.com'
   };
 
   return (
@@ -23,7 +23,7 @@ export default function FirstSteps() {
         <div className="max-w-4xl mx-auto px-4 py-8">
           {/* Header */}
           <div className="mb-8">
-            <Link href="/docs" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-4">
+            <Link href="/docs" className="inline-flex items-center text-blue-600 "hover": text-blue-700 mb-4">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Documentation
             </Link>
@@ -57,8 +57,7 @@ export default function FirstSteps() {
               </div>
               
               <p className="text-gray-600 mb-6">
-                Before diving in, let's understand what you're looking to achieve. Our services span three main categories:
-              </p>
+                Before diving in, let's understand what you're looking to achieve. Our services span three main "categories": </p>
 
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="border border-gray-200 rounded-lg p-6">
@@ -80,7 +79,7 @@ export default function FirstSteps() {
                       Pay-as-you-use pricing
                     </li>
                   </ul>
-                  <Link href="/micro-saas" className="inline-flex items-center text-blue-600 hover:text-blue-700 mt-4">
+                  <Link href="/micro-saas" className="inline-flex items-center text-blue-600 "hover": text-blue-700 mt-4">
                     Explore Micro SaaS <ArrowRight className="w-4 h-4 ml-1" />
                   </Link>
                 </div>
@@ -104,7 +103,7 @@ export default function FirstSteps() {
                       Real-time processing
                     </li>
                   </ul>
-                  <Link href="/ai-services" className="inline-flex items-center text-blue-600 hover:text-blue-700 mt-4">
+                  <Link href="/ai-services" className="inline-flex items-center text-blue-600 "hover": text-blue-700 mt-4">
                     Explore AI Services <ArrowRight className="w-4 h-4 ml-1" />
                   </Link>
                 </div>
@@ -128,7 +127,7 @@ export default function FirstSteps() {
                       24/7 support
                     </li>
                   </ul>
-                  <Link href="/it-services" className="inline-flex items-center text-blue-600 hover:text-blue-700 mt-4">
+                  <Link href="/it-services" className="inline-flex items-center text-blue-600 "hover": text-blue-700 mt-4">
                     Explore IT Services <ArrowRight className="w-4 h-4 ml-1" />
                   </Link>
                 </div>
@@ -207,7 +206,7 @@ export default function FirstSteps() {
                 Once you've identified the services you need, contact our team for a personalized quote and implementation plan.
               </p>
 
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid "md": grid-cols-2 gap-6">
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">What to Include in Your Request</h3>
                   <ul className="space-y-2 text-gray-600">
@@ -256,7 +255,7 @@ export default function FirstSteps() {
                 <Link href="/contact" className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-center">
                   Request Quote
                 </Link>
-                <a href={`tel:${contact.phone}`} className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors text-center">
+                <a href={`tel:${contact.phone}`} className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg "hover": bg-blue-50 transition-colors text-center">
                   Call {contact.phone}
                 </a>
               </div>
@@ -269,7 +268,7 @@ export default function FirstSteps() {
             <p className="text-gray-600 mb-6">
               You're now ready to explore our services and start your digital transformation journey.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
               <Link href="/services-catalog" className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
                 Browse Services
               </Link>

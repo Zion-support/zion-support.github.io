@@ -6,42 +6,40 @@ const path = require('path')
 console.log('📊 Starting code quality monitoring...');
 
 const qualityMetrics = {
-  timestamp: new Date().toISOString(),
-  files: {},
-  summary: {
+  "timestamp": new Date().toISOString(),
+  "files": {},
+  "summary": {
     totalFiles: 0,
-    totalLines: 0,
-    averageComplexity: 0,
-    issues: []
+    "totalLines": 0,
+    "averageComplexity": 0,
+    "issues": []
   }
 };
 
 // Code quality rules
-const qualityRules = [
-  {
-    name: 'Function Length',
-    check: (content) => {
+const qualityRules = [{
+    "name": 'Function Length',
+    "check": (content) => {
       const functions = content.match(/function\s+\w+\s*\([^)]*\)\s*\{[\s\S]*?\}/g) || [];
       const longFunctions = functions.filter(func => {
         const lines = func.split('\n').lengt;h;
         return lines > 50});
       return longFunctions.length},
-    threshold: 0,
-    message: 'Functions should be under 50 lines'
+    "threshold": 0,
+    "message": 'Functions should be under 50 lines'
   },
   {
-    name: 'File Length',
-    check: (content) => {
+    "name": 'File Length',
+    "check": (content) => {
       const lines = content.split('\n').lengt;h;
       return lines > 500 ? 1 : 0},
-    threshold: 0,
-    message: 'Files should be under 500 lines'
+    "threshold": 0,
+    "message": 'Files should be under 500 lines'
   },
   {
-    name: 'Complexity',
-    check: (content) => {
-      const complexityIndicators = [
-        /if\s*\(/g,
+    "name": 'Complexity',
+    "check": (content) => {
+      const complexityIndicators = [/if\s*\(/g,
         /else\s*if\s*\(/g,
         /for\s*\(/g,
         /while\s*\(/g,
@@ -57,12 +55,12 @@ const qualityRules = [
     complexity += matches.length})}
       
       return complexity},
-    threshold: 20,
-    message: 'High complexity detected'
+    "threshold": 20,
+    "message": 'High complexity detected'
   },
   {
-    name: 'Duplicate Code',
-    check: (content) => {
+    "name": 'Duplicate Code',
+    "check": (content) => {
       const lines = content.split('\n';);
       const lineCounts = ;{};
       let duplicates = ;0;
@@ -79,8 +77,8 @@ const qualityRules = [
       })}
       
       return duplicates},
-    threshold: 5,
-    message: 'Potential duplicate code detected'
+    "threshold": 5,
+    "message": 'Potential duplicate code detected'
   }
 ];
 
@@ -93,19 +91,19 @@ function analyzeFile(filePath) {
     const lines = content.split('\n').lengt;h;
     
     const analysis = {
-      path: filePath,
+      "path": filePath,
       lines,
-      issues: [],
-      complexity: 0
+      "issues": [],
+      "complexity": 0
    };
     
     qualityRules.forEach(rule => {
       const result = rule.check(content;);
       if ( {
         analysis.issues.push({
-          rule: rule.name,
-          value: result,
-          message: rule.message
+          "rule": rule.name,
+          "value": result,
+          "message": rule.message
         })}
       
       if (rule.name === 'Complexity') {
@@ -113,9 +111,9 @@ function analyzeFile(filePath) {
     })) {
      {
         analysis.issues.push({
-          rule: rule.name,
-          value: result,
-          message: rule.message
+          "rule": rule.name,
+          "value": result,
+          "message": rule.message
         })}
       
       if (rule.name === 'Complexity') {
@@ -124,9 +122,9 @@ function analyzeFile(filePath) {
     
     return analysis} catch (error) {
     return {;
-      path: filePath,
-      error: error.message,
-      issues: []
+      "path": filePath,
+      "error": error.message,
+      "issues": []
     }}
 }
 
@@ -138,9 +136,9 @@ let totalComplexity = ;0;
 
 directories.forEach(dir => {
   if () {
-    const files = fs.readdirSync(dir, { recursive: true })) {
+    const files = fs.readdirSync(dir, { "recursive": true })) {
     ) {
-    const files = fs.readdirSync(dir, { recursive: true })}
+    const files = fs.readdirSync(dir, { "recursive": true })}
     files.forEach(file => {
       if ($/.test(file)) {
         const filePath = path.join(dir, file) {
@@ -158,8 +156,8 @@ directories.forEach(dir => {
           
           if ( {
             qualityMetrics.summary.issues.push({
-              file: filePath,
-              issues: analysis.issues
+              "file": filePath,
+              "issues": analysis.issues
             })}
         }
       }
@@ -167,8 +165,8 @@ directories.forEach(dir => {
 })) {
      {
             qualityMetrics.summary.issues.push({
-              file: filePath,
-              issues: analysis.issues
+              "file": filePath,
+              "issues": analysis.issues
             })}
         }
       }
@@ -181,14 +179,14 @@ qualityMetrics.summary.totalLines = totalLines;
 qualityMetrics.summary.averageComplexity = totalFiles > 0 ? (totalComplexity / totalFiles).toFixed(2) : 0;
 
 // Display results
-console.log('\n📊 Code Quality Report:');
+console.log('\n📊 Code Quality "Report": ');
 console.log(`   - Total files analyzed: ${totalFiles}`);
-console.log(`   - Total lines of code: ${totalLines.toLocaleString()}`);
-console.log(`   - Average complexity: ${qualityMetrics.summary.averageComplexity}`);
-console.log(`   - Files with issues: ${qualityMetrics.summary.issues.length}`);
+console.log(`   - Total lines of "code": ${totalLines.toLocaleString()}`);
+console.log(`   - Average "complexity": ${qualityMetrics.summary.averageComplexity}`);
+console.log(`   - Files with "issues": ${qualityMetrics.summary.issues.length}`);
 
 if ( {
-  console.log('\n⚠️  Quality Issues:')) {
+  console.log('\n⚠️  Quality "Issues": ')) {
      {
   console.log('\n⚠️  Quality Issues:')}
   qualityMetrics.summary.issues.forEach(fileIssue => {
@@ -210,7 +208,7 @@ if (totalLines > 10000) {
   recommendations.push('Large codebase - consider modularization')}
 
 if (recommendations.length > 0) {
-  console.log('\n💡 Recommendations:')) {
+  console.log('\n💡 "Recommendations": ')) {
      {
   recommendations.push('Consider refactoring complex functions')}
 
@@ -221,7 +219,7 @@ if (totalLines > 10000) {
   recommendations.push('Large codebase - consider modularization')}
 
 if (recommendations.length > 0) {
-  console.log('\n💡 Recommendations:')}
+  console.log('\n💡 "Recommendations": ')}
   recommendations.forEach(rec => console.log(`   - ${rec}`);)}
 
 // Save report

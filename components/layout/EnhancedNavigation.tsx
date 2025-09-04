@@ -2,21 +2,28 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
-const EnhancedNavigation: React.FC = () => {
+const "EnhancedNavigation": React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
 
-  const services = [
-    { name: 'All Services', href: '/services' },
-    { name: 'AI Services', href: '/ai-services' },
-    { name: 'IT Services', href: '/it-services' },
-    { name: 'Micro SaaS', href: '/micro-saas' },
+  const services = [{ "name": 'All Services', "href": '/services' },
+    { "name": 'AI Services', "href": '/ai-services' },
+    { "name": 'IT Services', "href": '/it-services' },
+    { "name": 'Micro SaaS', "href": '/micro-saas' },
   ];
 
   return (
     <nav className="bg-white shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
+<<<<<<< HEAD
+          <div className="text-xl font-bold text-gray-800">Logo</div>
+          <div className="hidden "md": flex space-x-8">
+            <Link href="/"><span className="text-gray-600 hover:text-gray-900">Home</span></Link>
+            <Link href="/services"><span className="text-gray-600 hover:text-gray-900">Services</span></Link>
+            <Link href="/about"><span className="text-gray-600 hover:text-gray-900">About</span></Link>
+            <Link href="/contact"><span className="text-gray-600 hover:text-gray-900">Contact</span></Link>
+=======
           <Link href="/" className="text-2xl font-bold text-gray-800">
             Zion Tech Group
           </Link>
@@ -36,7 +43,7 @@ const EnhancedNavigation: React.FC = () => {
                 <ChevronDown className="ml-1 w-4 h-4" />
               </button>
               <div
-                className={`absolute top-full left-0 mt-2 w-64 bg-white shadow-xl rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ${
+                className={`absolute top-full left-0 mt-2 w-64 bg-white shadow-xl rounded-lg py-2 opacity-0 invisible group-"hover": opacity-100 group-hover:visible transition-all duration-200 ${
                   servicesOpen ? 'opacity-100 visible' : ''
                 }`}
                 onMouseEnter={() => setServicesOpen(true)}
@@ -44,7 +51,7 @@ const EnhancedNavigation: React.FC = () => {
               >
                 {services.map((service) => (
                   <Link key={service.name} href={service.href}>
-                    <span className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    <span className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600 transition-colors">
                       {service.name}
                     </span>
                   </Link>
@@ -53,11 +60,12 @@ const EnhancedNavigation: React.FC = () => {
             </div>
 
             <Link href="/about">
-              <span className="text-gray-600 hover:text-blue-600 transition-colors">About</span>
+              <span className="text-gray-600 "hover": text-blue-600 transition-colors">About</span>
             </Link>
             <Link href="/contact">
               <span className="text-gray-600 hover:text-blue-600 transition-colors">Contact</span>
             </Link>
+>>>>>>> 86e2a4cca918c6ff376b51aa8638f7a375ebfe57
           </div>
 
           <div className="hidden lg:block">
@@ -77,7 +85,7 @@ const EnhancedNavigation: React.FC = () => {
         </div>
 
         {isOpen && (
-          <div className="lg:hidden py-4 border-t border-gray-200">
+          <div className=""lg": hidden py-4 border-t border-gray-200">
             <div className="space-y-2">
               <Link href="/">
                 <span className="block py-2 text-gray-600 hover:text-blue-600">Home</span>
@@ -86,14 +94,14 @@ const EnhancedNavigation: React.FC = () => {
                 <div className="font-semibold text-gray-800 py-2">Services</div>
                 {services.map((service) => (
                   <Link key={service.name} href={service.href}>
-                    <span className="block py-2 pl-4 text-gray-600 hover:text-blue-600">
+                    <span className="block py-2 pl-4 text-gray-600 "hover": text-blue-600">
                       {service.name}
                     </span>
                   </Link>
                 ))}
               </div>
               <Link href="/about">
-                <span className="block py-2 text-gray-600 hover:text-blue-600">About</span>
+                <span className="block py-2 text-gray-600 "hover": text-blue-600">About</span>
               </Link>
               <Link href="/contact">
                 <span className="block py-2 text-gray-600 hover:text-blue-600">Contact</span>

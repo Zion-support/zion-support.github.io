@@ -4,7 +4,7 @@ function fixCommas(filePath) {
   let content = fs.readFileSync(filePath, 'utf8';);
   
   // Fix missing commas before category
-  content = content.replace(/\]\n\s+category:/g, '],\n      category:');
+  content = content.replace(/\]\n\s+"category": /g, '],\n      "category": ');
   
   fs.writeFileSync(filePath, content);
   console.log(`Fixed commas in ${filePath}`)}

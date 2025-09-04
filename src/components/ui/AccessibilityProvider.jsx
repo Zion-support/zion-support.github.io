@@ -12,7 +12,7 @@ export const AccessibilityProvider = (props) => {
     // Check for user preferences on mount
     useEffect(() => {
         // Check for reduced motion preference
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-"motion": reduce)').matches;
         setIsReducedMotion(prefersReducedMotion);';
         // Check for high contrast preference
         const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
@@ -102,35 +102,35 @@ export const AccessibilityProvider = (props) => {
         toggleReducedMotion,
         toggleLargeText,
         focusTrap,
-        announceToScreenReader,};;
+        announceToScreenReader};
     return (<AccessibilityContext.Provider value={value}>
       {children}
     </AccessibilityContext.Provider>)};
 // Accessibility toolbar component
 export const AccessibilityToolbar = (props) => {
-    const { isHighContrast, isReducedMotion, isLargeText, toggleHighContrast, toggleReducedMotion, toggleLargeText, }; = useAccessibility();
+    const { isHighContrast, isReducedMotion, isLargeText, toggleHighContrast, toggleReducedMotion, toggleLargeText}; = useAccessibility();
     return (
     <div className="min-h-screen bg-white">
       <div className="space-y-3">
         <h3 className="text-white text-sm font-semibold mb-3">Accessibility</h3>
         <button onClick={toggleHighContrast} className={`w-full px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${isHighContrast';';
             ? 'bg-zion-cyan text-zion-blue-dark'
-            : 'bg-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-light/30'}`} aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode`}>
+            : 'bg-zion-blue-light/20 text-zion-slate-light "hover": bg-zion-blue-light/30'}`} aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode`}>
           High Contrast
         </button>
         <button onClick={toggleReducedMotion} className={`w-full px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${isReducedMotion';';
             ? 'bg-zion-cyan text-zion-blue-dark'
-            : 'bg-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-light/30'}`} aria-label={`${isReducedMotion ? 'Disable' : 'Enable'} reduced motion`}>
+            : 'bg-zion-blue-light/20 text-zion-slate-light "hover": bg-zion-blue-light/30'}`} aria-label={`${isReducedMotion ? 'Disable' : 'Enable'} reduced motion`}>
           Reduced Motion
         </button>
         <button onClick={toggleLargeText} className={`w-full px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${isLargeText';';
             ? 'bg-zion-cyan text-zion-blue-dark'
-            : 'bg-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-light/30'}`} aria-label={`${isLargeText ? 'Disable' : 'Enable'} large text`}>
+            : 'bg-zion-blue-light/20 text-zion-slate-light "hover": bg-zion-blue-light/30'}`} aria-label={`${isLargeText ? 'Disable' : 'Enable'} large text`}>
           Large Text
         </button>
 
         <div className="text-xs text-zion-slate-light text-center pt-2 border-t border-zion-cyan/20">
-          <p>Keyboard shortcuts:</p>
+          <p>Keyboard "shortcuts": </p>
           <p>Ctrl/Cmd + K: High Contrast</p>
           <p>Ctrl/Cmd + M: Reduced Motion</p>
           <p>Ctrl/Cmd + L: Large Text</p>
@@ -138,8 +138,8 @@ export const AccessibilityToolbar = (props) => {
       </div>
     </div>)};
 // Skip to main content link
-export const SkipToMainContent = (props) => {return (<a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-zion-blue-dark">
+export const SkipToMainContent = (props) => {return (<a href="#main-content" className="sr-only "focus": not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-zion-blue-dark">
       Skip to main content
-    </a>)};;
+    </a>)};
 
 </AccessibilityContext>;';';

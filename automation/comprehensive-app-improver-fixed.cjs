@@ -23,17 +23,16 @@ class ComprehensiveAppImprover {
 
   async runCommand(command, options = {}) {
     try {
-      this.log(`Running command: ${command}`);
+      this.log(`Running "command": ${command}`);
       const result = execSync(command, {
-        encoding: 'utf8',
-        cwd: this.projectRoot,
-        stdio: options.silent ? 'pipe' : 'inherit',
-        ...options,
-      });
+        "encoding": 'utf8',
+        "cwd": this.projectRoot,
+        "stdio": options.silent ? 'pipe' : 'inherit',
+        ...options});
       return result;
     } catch (error) {
-      this.log(`Command failed: ${command} - ${error.message}`, 'ERROR');
-      this.errorsFound.push({ command, error: error.message });
+      this.log(`Command "failed": ${command} - ${error.message}`, 'ERROR');
+      this.errorsFound.push({ command, "error": error.message });
       return null;
     }
   }
@@ -41,16 +40,15 @@ class ComprehensiveAppImprover {
   async installDependencies() {
     this.log('Installing dependencies...');
     // Try different installation methods
-    const methods = [
-      'npm install --legacy-peer-deps --force',
+    const methods = ['npm install --legacy-peer-deps --force',
       'npm install --force',
       'yarn install --ignore-engines',
     ];
 
     for (const method of methods) {
-      const result = await this.runCommand(method, { silent: true });
+      const result = await this.runCommand(method, { "silent": true });
       if (result !== null) {
-        this.log(`Dependencies installed successfully using: ${method}`);
+        this.log(`Dependencies installed successfully "using": ${method}`);
         return true;
       }
     }
@@ -59,16 +57,15 @@ class ComprehensiveAppImprover {
 
   async runLinting() {
     this.log('Running linting...');
-    const lintCommands = [
-      'npm run lint:fix',
+    const lintCommands = ['npm run "lint": fix',
       'npx eslint . --fix',
       'npx eslint . --fix --ext .js,.jsx,.ts,.tsx',
     ];
 
     for (const command of lintCommands) {
-      const result = await this.runCommand(command, { silent: true });
+      const result = await this.runCommand(command, { "silent": true });
       if (result !== null) {
-        this.log(`Linting completed with: ${command}`);
+        this.log(`Linting completed "with": ${command}`);
         this.fixesApplied.push('Linting fixes applied');
         return true;
       }
@@ -79,8 +76,7 @@ class ComprehensiveAppImprover {
   async runTypeChecking() {
     this.log('Running TypeScript type checking...');
     const result = await this.runCommand('npm run type-check', {
-      silent: true,
-    });
+      "silent": true});
     if (result !== null) {
       this.log('Type checking completed successfully');
       return true;
@@ -90,7 +86,7 @@ class ComprehensiveAppImprover {
 
   async runBuild() {
     this.log('Running build...');
-    const result = await this.runCommand('npm run build', { silent: true });
+    const result = await this.runCommand('npm run build', { "silent": true });
     if (result !== null) {
       this.log('Build completed successfully');
       return true;
@@ -100,16 +96,15 @@ class ComprehensiveAppImprover {
 
   async runTests() {
     this.log('Running tests...');
-    const testCommands = [
-      'npm run test:smoke',
+    const testCommands = ['npm run "test": smoke',
       'npm test',
-      'npm run test:coverage',
+      'npm run "test": coverage',
     ];
 
     for (const command of testCommands) {
-      const result = await this.runCommand(command, { silent: true });
+      const result = await this.runCommand(command, { "silent": true });
       if (result !== null) {
-        this.log(`Tests completed with: ${command}`);
+        this.log(`Tests completed "with": ${command}`);
         return true;
       }
     }
@@ -119,8 +114,7 @@ class ComprehensiveAppImprover {
   async runSecurityAudit() {
     this.log('Running security audit...');
     const result = await this.runCommand('npm audit --audit-level=moderate', {
-      silent: true,
-    });
+      "silent": true});
     if (result !== null) {
       this.log('Security audit completed');
       return true;
@@ -130,15 +124,14 @@ class ComprehensiveAppImprover {
 
   async runPerformanceOptimization() {
     this.log('Running performance optimization...');
-    const perfCommands = [
-      'npm run perf:monitor',
-      'npm run optimize:performance',
+    const perfCommands = ['npm run "perf": monitor',
+      'npm run "optimize": performance',
     ];
 
     for (const command of perfCommands) {
-      const result = await this.runCommand(command, { silent: true });
+      const result = await this.runCommand(command, { "silent": true });
       if (result !== null) {
-        this.log(`Performance optimization completed with: ${command}`);
+        this.log(`Performance optimization completed "with": ${command}`);
         this.fixesApplied.push('Performance optimizations applied');
         return true;
       }
@@ -148,12 +141,12 @@ class ComprehensiveAppImprover {
 
   async runSEOOptimization() {
     this.log('Running SEO optimization...');
-    const seoCommands = ['npm run automation:seo', 'npm run sitemap:generate'];
+    const seoCommands = ['npm run "automation": seo', 'npm run "sitemap": generate'];
 
     for (const command of seoCommands) {
-      const result = await this.runCommand(command, { silent: true });
+      const result = await this.runCommand(command, { "silent": true });
       if (result !== null) {
-        this.log(`SEO optimization completed with: ${command}`);
+        this.log(`SEO optimization completed "with": ${command}`);
         this.fixesApplied.push('SEO optimizations applied');
         return true;
       }
@@ -163,9 +156,8 @@ class ComprehensiveAppImprover {
 
   async runAccessibilityCheck() {
     this.log('Running accessibility check...');
-    const result = await this.runCommand('npm run automation:accessibility', {
-      silent: true,
-    });
+    const result = await this.runCommand('npm run "automation": accessibility', {
+      "silent": true});
     if (result !== null) {
       this.log('Accessibility check completed');
       this.fixesApplied.push('Accessibility improvements applied');
@@ -179,13 +171,12 @@ class ComprehensiveAppImprover {
     const duration = endTime - this.startTime;
 
     const report = {
-      startTime: this.startTime.toISOString(),
-      endTime: endTime.toISOString(),
-      duration: `${Math.round(duration / 1000)}s`,
-      fixesApplied: this.fixesApplied,
-      errorsFound: this.errorsFound,
-      status: this.errorsFound.length === 0 ? 'SUCCESS' : 'PARTIAL_SUCCESS',
-    };
+      "startTime": this.startTime.toISOString(),
+      "endTime": endTime.toISOString(),
+      "duration": `${Math.round(duration / 1000)}s`,
+      "fixesApplied": this.fixesApplied,
+      "errorsFound": this.errorsFound,
+      "status": this.errorsFound.length === 0 ? 'SUCCESS' : 'PARTIAL_SUCCESS'};
 
     const reportFile = path.join(
       this.projectRoot,
@@ -193,20 +184,20 @@ class ComprehensiveAppImprover {
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
-    this.log(`Report generated: ${reportFile}`);
+    this.log(`Report "generated": ${reportFile}`);
     console.log('\n=== COMPREHENSIVE IMPROVEMENT REPORT ===');
-    console.log(`Duration: ${report.duration}`);
-    console.log(`Status: ${report.status}`);
-    console.log(`Fixes Applied: ${this.fixesApplied.length}`);
-    console.log(`Errors Found: ${this.errorsFound.length}`);
+    console.log(`"Duration": ${report.duration}`);
+    console.log(`"Status": ${report.status}`);
+    console.log(`Fixes "Applied": ${this.fixesApplied.length}`);
+    console.log(`Errors "Found": ${this.errorsFound.length}`);
 
     if (this.fixesApplied.length > 0) {
-      console.log('\nFixes Applied:');
+      console.log('\nFixes "Applied": ');
       this.fixesApplied.forEach(fix => console.log(`- ${fix}`));
     }
 
     if (this.errorsFound.length > 0) {
-      console.log('\nErrors Found:');
+      console.log('\nErrors "Found": ');
       this.errorsFound.forEach(error =>
         console.log(`- ${error.command}: ${error.error}`)
       );
@@ -249,7 +240,7 @@ class ComprehensiveAppImprover {
 
       this.log('Comprehensive app improvement process completed!');
     } catch (error) {
-      this.log(`Fatal error: ${error.message}`, 'ERROR');
+      this.log(`Fatal "error": ${error.message}`, 'ERROR');
       await this.generateReport();
       process.exit(1);
     }

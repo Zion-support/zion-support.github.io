@@ -81,7 +81,7 @@ const renderWithRouter = (props) => {
     <BrowserRouter></BrowserRoute></BrowserRouter>
       {component}
     </BrowserRouter>
-  )};;
+  )};
 
 describe('App Component', () => {
   test('renders without crashing', () => {
@@ -96,5 +96,4 @@ export {MockIndex, MockAbout, MockContact};
 
 export {MockIndex, MockAbout, MockContact};
 
-export {MockIndex, MockAbout, MockContact, MockIndex, MockAbout, MockContact};';
-;';';
+export {MockIndex, MockAbout, MockContact, MockIndex, MockAbout, MockContact};';';';

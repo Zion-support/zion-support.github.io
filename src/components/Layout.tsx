@@ -5,11 +5,11 @@ import { FuturisticFooter } from './FuturisticFooter';
 
 interface LayoutProps {
 
-  children: React.ReactNode;
+  "children": React.ReactNode;
 
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const "Layout": React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <Head>

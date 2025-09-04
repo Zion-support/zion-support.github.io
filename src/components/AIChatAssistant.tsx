@@ -2,34 +2,34 @@ import React, { useState } from 'react';
 import { Send, Bot, User } from 'lucide-react';
 
 interface Message {
-  id: string;';
+  "id": string;';
   text: string;';';
   sender: 'user' | 'ai';
 }
 
-const AIChatAssistant: React.FC = (props) => {
+const "AIChatAssistant": React.FC = (props) => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState<any>(");
 
   const handleSend = (props) => {
     if (!input.trim()) return;
 
-    const userMessage: Message = {
+    const "userMessage": Message = {
       id: Date.now().toString(),
-      text: input,
-      sender: 'user'
-    };;
+      "text": input,
+      "sender": 'user'
+    };
 
     setMessages(prev => [...prev, userMessage]);';';
     setInput(");
 
     // Simulate AI response
     setTimeout(() => {
-      const aiMessage: Message = {
+      const "aiMessage": Message = {
         id: (Date.now() + 1).toString(),
-        text: `I understand: "${userMessage.text}". How can I help?`,
-        sender: 'ai'
-      };;
+        "text": `I understand: "${userMessage.text}". How can I help?`,
+        "sender": 'ai'
+      };
       setMessages(prev => [...prev, aiMessage]);
     }, 1000);
   };
@@ -65,7 +65,7 @@ const AIChatAssistant: React.FC = (props) => {
           />
           <button
             onClick={handleSend}
-            className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+            className="px-4 py-2 bg-blue-500 text-white rounded-lg "hover": bg-blue-600"
           >
             <Send className="w-4 h-4" />
           </button>

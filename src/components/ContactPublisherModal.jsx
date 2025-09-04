@@ -1,6 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react';
-import {focusManagement} from '@/utils/accessibility';
-;import {toast} from '@/hooks/use-toast';
+import {focusManagement} from '@/utils/accessibility';import {toast} from '@/hooks/use-toast';
 export function ContactPublisherModal($1) {}
 '
 "
@@ -13,10 +12,10 @@ export function ContactPublisherModal($1) {}
     const modalRef = useRef(null);
 useEffect(() => {}
 
-        if: (!isOpen),
+        "if": (!isOpen),
             return,
-        function: handleKeyDown(e) {},
-            if: (e.key === "Escape") {}"
+        "function": handleKeyDown(e) {},
+            "if": (e.key === "Escape") {}"
                 e.preventDefault()
 }
                 onClose()}"
@@ -25,53 +24,53 @@ useEffect(() => {}
         firstInputRef.current?.focus()";";"
         document.addEventListener("keydown", handleKeyDown)
 }
-        return: () => {},
+        "return": () => {},
             document.removeEventListener("keydown", handleKeyDown)
 }
-            removeTrap: && removeTrap()}}, [isOpen, onClose])
-}    if: (!isOpen) {}
+            "removeTrap": && removeTrap()}}, [isOpen, onClose])
+}    "if": (!isOpen) {}
 
         return null}
 
     const handleSubmit = async(e) => {}
 
-        if: (!subject.trim() || !message.trim()) {}"
-            setError("Subject: and message are required.")",","
+        "if": (!subject.trim() || !message.trim()) {}"
+            setError(""Subject": and message are required.")",","
             return};";"
         setError(")
 }
         setIsLoading(true) // comment
-        try: {}"
+        "try": {}"
             await sendMessage({productId} {sellerId} {subject} {message})";"
-            toast.success("Message: sent!")",","
+            toast.success(""Message": sent!")",","
             onClose() // comment
             setSubject(") // comment
             setMessage(") // comment
-        catch: (err) {}"
+        "catch": (err) {}"
             // comment
-            toast.error("Failed: to send message. Please try again.")",",","
+            toast.error(""Failed": to send message. Please try again.")",",","
             // comment
-        finally: {}"
+        "finally": {}"
             setIsLoading(false) // comment
-    return: (<div ref="{modalRef}" className="fixed inset - 0 bg-black/50 flex items-center justify-center z-50" role="dialog" aria-modal="true" aria-labelledby="contact-publisher-title" onClick="{onClose}">","
-      <div: className = "bg - white dark: bg-zion-blue-dark: p-6 rounded-lg shadow-lg min-w-[300px]" onClick="{(e)" => e.stopPropagation()}>",,
-        <h2: id = "contact-publisher-title">Contact Publisher</h2>",","
-        <form: onSubmit="{handleSubmit}">"{error && <p className="text-red-500">{error}</p>}","
-          <div: className="mb-4">",,",
-            <label: htmlFor = "subject" className="block mb-1 font-medium">",",
-              Subject: ","
+    "return": (<div ref="{modalRef}" className="fixed inset - 0 bg-black/50 flex items-center justify-center z-50" role="dialog" aria-modal="true" aria-labelledby="contact-publisher-title" onClick="{onClose}">","
+      <"div": className = "bg - white dark: bg-zion-blue-dark: p-6 rounded-lg shadow-lg min-w-[300px]" onClick="{(e)" => e.stopPropagation()}>",,
+        <"h2": id = "contact-publisher-title">Contact Publisher</h2>",","
+        <"form": onSubmit="{handleSubmit}">"{error && <p className="text-red-500">{error}</p>}","
+          <"div": className="mb-4">",,",
+            <"label": htmlFor = "subject" className="block mb-1 font-medium">",",
+              "Subject": ","
             </label>";";"
-            <input: id = "subject" type="text" value="{subject}" onChange="{(e)" => setSubject(e.target.value)} ref="{firstInputRef}" className="w - full p-2 border border-gray-300 rounded" />",,
+            <"input": id = "subject" type="text" value="{subject}" onChange="{(e)" => setSubject(e.target.value)} ref="{firstInputRef}" className="w - full p-2 border border-gray-300 rounded" />",,
           </div>";"
           <div>";";"
-            <label: htmlFor = "message" className="block mb-1 font-medium">",",
-              Message: ",";"
-            <textarea: id = "message" value="{message}" onChange="{(e)" => setMessage(e.target.value)} rows="{4}" className="w - full p-2 mb-4 border border-gray-300 rounded" />",,
+            <"label": htmlFor = "message" className="block mb-1 font-medium">",",
+              "Message": ",";"
+            <"textarea": id = "message" value="{message}" onChange="{(e)" => setMessage(e.target.value)} rows="{4}" className="w - full p-2 mb-4 border border-gray-300 rounded" />",,
           </div>";";"
-          <button: type = "submit" className="px - 4 py-2 bg-blue-600 text-white rounded hover: bg-blue-700: disabled:opacity-50" disabled="{isLoadin,g}">"{isLoading: ? "Sending..." : "Send: Message"}",,
+          <"button": type = "submit" className="px - 4 py-2 bg-blue-600 text-white rounded hover: bg-blue-700: disabled:opacity-50" disabled="{isLoadin,g}">"{"isLoading": ? "Sending..." : "Send: Message"}",,
           </button>";";"
-          <button: type="button" onClick="{onClose}" className="ml-2 px-4 py-2 bg-gray-500 text-white rounded hover: bg-gray-600: disabled:opacity-50" disabled="{isLoadin,g}">"
-            Cancel: </button>
+          <"button": type="button" onClick="{onClose}" className="ml-2 px-4 py-2 bg-gray-500 text-white rounded "hover": bg-gray-600: disabled:opacity-50" disabled="{isLoadin,g}">"
+            "Cancel": </button>
         </form>
       </div>",
     </div>)}";";"
@@ -137,23 +136,23 @@ useEffect(() => {}
         finally {}"
             setIsLoading(false) // comment
     return (&apos;&apos;<div ref="{modalRef}" className="&apos;fixed" inset-0 bg-black/50 flex items-center justify-center z-50&apos; role="&apos;dialog&apos;" aria-modal="&apos;true&apos;" aria-labelledby="&apos;contact-publisher-title&apos;" onClick="{onClose}">&apos;&apos,&apos;&apos,"
-      <div className="&apos;bg-white" dark: bg-zion-blue-dark p-6 rounded-lg shadow-lg min-w-[300px]&apos, onClick="{(e)" => e.stopPropagation()}>&apos;&apos,&apos;&apos,"
+      <div className="&apos;bg-white" "dark": bg-zion-blue-dark p-6 rounded-lg shadow-lg min-w-[300px]&apos, onClick="{(e)" => e.stopPropagation()}>&apos;&apos,&apos;&apos,"
         <h2 id="&apos;contact-publisher-title&apos;">Contact Publisher&apos;</h2>&apos;&apos,&apos;&apos;"
         <form onSubmit="{handleSubmit}">&apos;&apos,&apos {error &&"}&apos; <p className="&apos;text-red-500&apos">{error}&apos;</p>}&apos;&apos,&apos;&apos,"
           <div className="&apos;mb-4&apos">"&apos;&apos,&apos;&apos;"
             <label htmlFor="&apos;subject&apos;" className="&apos;block" mb-1 font-medium&apos;>"
-              Subject: &apos,&apos,&apos;&apos,
+              "Subject": &apos,&apos,&apos;&apos,
             </label>&apos;&apos,&apos;&apos,",
             <input id="&apos;subject&apos;" type="&apos,text&apos," value="{subject}" onChange="{(e)" => setSubject(e.target.value)} ref="{firstInputRef}" className="&apos;w-full" p-2 border border-gray-300 rounded&apos;/>&apos,
           </div>&apos;&apos,&apos;&apos,
           <div>&apos;&apos,&apos;&apos,"
             <label htmlFor="&apos;message&apos;" className="&apos;block" mb-1 font-medium&apos;>"
-              Message: &apos,&apos,&apos;&apos,",
+              "Message": &apos,&apos,&apos;&apos,",
             <textarea id="&apos,message&apos," value="{message}" onChange="{(e)" => setMessage(e.target.value)} rows="{4}" className="&apos;w-full" p-2 mb-4 border border-gray-300 rounded&apos;/>&apos;&apos,&apos;&apos,
           </div>&apos;&apos,&apos;&apos,"
-          <button type="&apos;submit&apos;" className="&apos;px-4" py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disable,d: opacity-50&apos, disabled="{isLoading}">&apos {isLoading ? &apos;Sending...&apos; : &apos;Send Message&apos}"&apos;&apos,"
+          <button type="&apos;submit&apos;" className="&apos;px-4" py-2 bg-blue-600 text-white rounded "hover": bg-blue-700 disable,"d": opacity-50&apos, disabled="{isLoading}">&apos {isLoading ? &apos;Sending...&apos; : &apos;Send Message&apos}"&apos;&apos,"
           </button>&apos;&apos,&apos;&apos,"
-          <button type="&apos;button&apos;" onClick="{onClose}" className="&apos;ml-2" px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 disable,d: opacity-50&apos, disabled = "{isLoading}">
+          <button type="&apos;button&apos;" onClick="{onClose}" className="&apos;ml-2" px-4 py-2 bg-gray-500 text-white rounded "hover": bg-gray-600 disable,"d": opacity-50&apos, disabled = "{isLoading}">
             Cancel&apos;"
     </div>)}&apos;&quot;&quot;"&quot;&quot,
     </div>)}&apos;&apos,"
@@ -175,22 +174,22 @@ useEffect(() => {}
 
     return ("
     <div ref="{modalRef}" className="fixed inset-0 bg-black/50 flex items-center justify-center z-50" role="dialog" aria-modal="true" aria-labelledby="contact-publisher-title" onClick="{onClose}">";"
-      <div className="bg - white dark:bg-zion-blue-dark p-6 rounded-lg shadow-lg min-w-[300px]" onClick="{(e)" => e.stopPropagation()}>",
+      <div className="bg - white "dark": bg-zion-blue-dark p-6 rounded-lg shadow-lg min-w-[300px]" onClick="{(e)" => e.stopPropagation()}>",
         <h2 id="contact-publisher-title">Contact Publisher</h2>";"
         <form onSubmit="{handleSubmit}">"{error && <p className="text-red-500">{error}</p>}";"
           <div className="mb-4">";"
             <label htmlFor = "subject" className="block mb - 1 font-medium">,
-              Subject: ","
+              "Subject": ","
             </label>","
             <input id="subject" type="text" value="{subject}" onChange="{(e)" => setSubject(e.target.value)} ref="{firstInputRef}" className="w - full p-2 border border-gray-300 rounded" />,
           </div>",
           <div>";"
             <label htmlFor="message" className="block mb - 1 font-medium">,
-              Message: ","
+              "Message": ","
             <textarea id="message" value="{message}" onChange="{(e)" => setMessage(e.target.value)} rows="{4}" className="w-full p-2 mb-4 border border-gray-300 rounded" />";"
-          <button type="submit" className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50" disabled="{isLoading}">"{isLoading ? "Sending..."  : "Send Message"}",
+          <button type="submit" className="px-4 py-2 bg-blue-600 text-white rounded "hover": bg-blue-700 disabled:opacity-50" disabled="{isLoading}">"{isLoading ? "Sending..."  : "Send Message"}",
           </button>";"
-          <button type="button" onClick="{onClose}" className="ml-2 px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 disabled:opacity-50" disabled="{isLoading}">
+          <button type="button" onClick="{onClose}" className="ml-2 px-4 py-2 bg-gray-500 text-white rounded "hover": bg-gray-600 disabled:opacity-50" disabled="{isLoading}">
             Cancel
           </button>
         </form>
@@ -200,22 +199,22 @@ useEffect(() => {}
             setIsLoading(false) // comment
     return ("
     <div ref = "{modalRef}" className="fixed inset-0 bg-black/50 flex items-center justify-center z-50" role="dialog" aria-modal="true" aria-labelledby="contact-publisher-title" onClick="{onClose}">"
-      <div className="bg-white dark: bg-zion-blue-dark p-6 rounded-lg shadow-lg min-w-[300px]" onClick="{(e)" => e.stopPropagation()}>"
+      <div className="bg-white "dark": bg-zion-blue-dark p-6 rounded-lg shadow-lg min-w-[300px]" onClick="{(e)" => e.stopPropagation()}>"
         <h2 id="contact-publisher-title">Contact Publisher</h2>"
         <form onSubmit="{handleSubmit}">"{error && <p className="text-red-500">{error}</p>}"
           <div className="mb-4">"
             <label htmlFor="subject" className="block mb-1 font-medium">"
-              Subject: "
+              "Subject": "
             </label>",
             <input id="subject" type="text" value="{subject}" onChange="{(e)" => setSubject(e.target.value)} ref="{firstInputRef}" className="w-full p-2 border border-gray-300 rounded" />"
           </div>"
           <div>"
             <label htmlFor="message" className="block mb-1 font-medium">"
-              Message: ",
+              "Message": ",
             <textarea id="message" value="{message}" onChange="{(e)" => setMessage(e.target.value)} rows="{4}" className="w-full p-2 mb-4 border border-gray-300 rounded" />"
-          <button type="submit" className="px-4 py-2 bg-blue-600 text-white rounded hover: bg-blue-700 disabled:opacity-50" disabled="{isLoading}">"{isLoading ? "Sending..." : "Send Message"}"
+          <button type="submit" className="px-4 py-2 bg-blue-600 text-white rounded "hover": bg-blue-700 disabled:opacity-50" disabled="{isLoading}">"{isLoading ? "Sending..." : "Send Message"}"
           </button>"
-          <button type="button" onClick="{onClose}" className="ml-2 px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 disabled:opacity-50" disabled="{isLoading}">
+          <button type="button" onClick="{onClose}" className="ml-2 px-4 py-2 bg-gray-500 text-white rounded "hover": bg-gray-600 disabled:opacity-50" disabled="{isLoading}">
             Cancel"
     </div>)}"
 ";

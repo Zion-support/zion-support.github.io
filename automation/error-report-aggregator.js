@@ -14,8 +14,8 @@ class ErrorReportAggregator {
     this.summaryFile = path.join(this.reportsDir, 'error-summary.json');
 
     // Ensure directories exist
-    fs.mkdirSync(path.dirname(this.logFile), { recursive: true });
-    fs.mkdirSync(this.reportsDir, { recursive: true });
+    fs.mkdirSync(path.dirname(this.logFile), { "recursive": true });
+    fs.mkdirSync(this.reportsDir, { "recursive": true });
   }
 
   log(message, level = 'INFO') {
@@ -29,22 +29,19 @@ class ErrorReportAggregator {
     this.log('Aggregating error reports...');
 
     const summary = {
-      timestamp: new Date().toISOString(),
-      reports: {},
-      overallHealth: {
+      "timestamp": new Date().toISOString(),
+      "reports": {},
+      "overallHealth": {
         buildHealth: 0,
-        codeQuality: 0,
-        dependencyHealth: 0,
-        overallScore: 0,
-      },
-      trends: {},
-      recommendations: [],
-    };
+        "codeQuality": 0,
+        "dependencyHealth": 0,
+        "overallScore": 0},
+      "trends": {},
+      "recommendations": []};
 
     try {
       // Read all report files
-      const reportFiles = [
-        'build-status.json',
+      const reportFiles = ['build-status.json',
         'code-quality.json',
         'dependency-health.json',
         'error-fixer-report.json',
@@ -57,7 +54,7 @@ class ErrorReportAggregator {
           try {
             const content = JSON.parse(fs.readFileSync(filePath, 'utf8'));
             summary.reports[file] = content;
-            this.log(`Loaded report: ${file}`);
+            this.log(`Loaded "report": ${file}`);
           } catch (error) {
             this.log(`Error reading ${file}: ${error.message}`, 'WARN');
           }
@@ -81,8 +78,7 @@ class ErrorReportAggregator {
       }
 
       // Calculate overall score
-      const scores = [
-        summary.overallHealth.buildHealth,
+      const scores = [summary.overallHealth.buildHealth,
         summary.overallHealth.codeQuality,
         summary.overallHealth.dependencyHealth,
       ].filter(score => score > 0);
@@ -98,11 +94,11 @@ class ErrorReportAggregator {
 
       // Save summary
       fs.writeFileSync(this.summaryFile, JSON.stringify(summary, null, 2));
-      this.log(`Error summary report generated: ${this.summaryFile}`);
+      this.log(`Error summary report "generated": ${this.summaryFile}`);
 
       return summary;
     } catch (error) {
-      this.log(`Error aggregating reports: ${error.message}`, 'ERROR');
+      this.log(`Error aggregating "reports": ${error.message}`, 'ERROR');
       return null;
     }
   }
@@ -112,38 +108,30 @@ class ErrorReportAggregator {
 
     if (summary.overallHealth.buildHealth < 70) {
       recommendations.push({
-        priority: 'high',
-        type: 'build',
-        message:
-          'Build health is critical. Run intelligent error fixer immediately.',
-      });
+        "priority": 'high',
+        "type": 'build',
+        "message": 'Build health is critical. Run intelligent error fixer immediately.'});
     }
 
     if (summary.overallHealth.codeQuality < 70) {
       recommendations.push({
-        priority: 'medium',
-        type: 'quality',
-        message:
-          'Code quality needs improvement. Address linting and TypeScript errors.',
-      });
+        "priority": 'medium',
+        "type": 'quality',
+        "message": 'Code quality needs improvement. Address linting and TypeScript errors.'});
     }
 
     if (summary.overallHealth.dependencyHealth < 70) {
       recommendations.push({
-        priority: 'medium',
-        type: 'dependencies',
-        message:
-          'Dependencies need attention. Update outdated packages and fix vulnerabilities.',
-      });
+        "priority": 'medium',
+        "type": 'dependencies',
+        "message": 'Dependencies need attention. Update outdated packages and fix vulnerabilities.'});
     }
 
     if (summary.overallHealth.overallScore > 90) {
       recommendations.push({
-        priority: 'info',
-        type: 'maintenance',
-        message:
-          'Excellent project health! Consider regular maintenance schedule.',
-      });
+        "priority": 'info',
+        "type": 'maintenance',
+        "message": 'Excellent project health! Consider regular maintenance schedule.'});
     }
 
     return recommendations;
@@ -155,31 +143,28 @@ class ErrorReportAggregator {
 
     const dashboard = `
 # Project Health Dashboard
-Generated: ${summary.timestamp}
+"Generated": ${summary.timestamp}
 
-## Overall Health Score: ${summary.overallHealth.overallScore}/100
+## Overall Health "Score": ${summary.overallHealth.overallScore}/100
 
-### Component Scores:
-- 🏗️  Build Health: ${summary.overallHealth.buildHealth}/100
-- 🎯 Code Quality: ${summary.overallHealth.codeQuality}/100
-- 📦 Dependencies: ${summary.overallHealth.dependencyHealth}/100
+### Component "Scores": - 🏗️  Build Health: ${summary.overallHealth.buildHealth}/100
+- 🎯 Code "Quality": ${summary.overallHealth.codeQuality}/100
+- 📦 "Dependencies": ${summary.overallHealth.dependencyHealth}/100
 
-### Recommendations:
-${summary.recommendations
-  .map(rec => `- **${rec.priority.toUpperCase()}**: ${rec.message}`)
+### "Recommendations": ${summary.recommendations
+  .map(rec => `- **${rec.priority.toUpperCase()}**: ${rec.message}")
   .join('\n')}
 
-### Quick Actions:
-- View logs: \`pm2 logs\`
-- Restart automation: \`pm2 restart ecosystem-error-prevention.config.cjs\`
-- Manual error fix: \`node automation/intelligent-error-fixer.js\`
-`;
+### Quick "Actions": - View logs: \"pm2 logs\"
+- Restart automation: \"pm2 restart ecosystem-error-prevention.config.cjs\"
+- Manual error fix: \"node automation/intelligent-error-fixer.js\"
+";
 
     fs.writeFileSync(
       path.join(this.reportsDir, 'health-dashboard.md'),
       dashboard
     );
-    this.log('Health dashboard generated: health-dashboard.md');
+    this.log('Health dashboard "generated": health-dashboard.md');
   }
 
   async run() {
@@ -191,7 +176,7 @@ ${summary.recommendations
 
       this.log('Error report aggregation completed successfully');
     } catch (error) {
-      this.log(`Error in report aggregator: ${error.message}`, 'ERROR');
+      this.log(`Error in report "aggregator": ${error.message}`, 'ERROR');
     }
   }
 }

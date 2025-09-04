@@ -4,50 +4,46 @@ const fs = require('fs')
 function fixIncompleteObjects(filePath) {
   let content = fs.readFileSync(filePath, 'utf8';);
   
-  // Find patterns like: { icon: SomeIcon] }
-  const incompletePattern = /\{\s*icon:\s*(\w+),\s*\]\s*\}/;g;
+  // Find patterns "like": { icon: SomeIcon] }
+  const incompletePattern = /\{\s*"icon": \s*(\w+),\s*\]\s*\}/;g;
   
   content = content.replace(incompletePattern, (match, iconName) => {
     return `{;
-      icon: ${iconName},
-      name: 'Service Name',
-      description: 'Service description placeholder.',
-      features: [
-        'Feature 1',
+      "icon": ${iconName},
+      "name": 'Service Name',
+      "description": 'Service description placeholder.',
+      "features": ['Feature 1',
         'Feature 2',
         'Feature 3'
       ],
-      pricing: '$999 – $4,999/month',
-      timeline: '2–4 weeks',
-      benefits: [
-        'Benefit 1',
+      "pricing": '$999 – $4,999/month',
+      "timeline": '2–4 weeks',
+      "benefits": ['Benefit 1',
         'Benefit 2',
         'Benefit 3'
       ],
-      category: 'General'
+      "category": 'General'
     }`});
   
-  // Find patterns like: { icon: SomeIcon], category: 'SomeCategory' }
-  const incompleteWithCategoryPattern = /\{\s*icon:\s*(\w+),\s*\],\s*category:\s*'([^']+)'\s*\}/;g;
+  // Find patterns "like": { icon: SomeIcon], "category": 'SomeCategory' }
+  const incompleteWithCategoryPattern = /\{\s*"icon": \s*(\w+),\s*\],\s*"category": \s*'([^']+)'\s*\}/;g;
   
   content = content.replace(incompleteWithCategoryPattern, (match, iconName, category) => {
     return `{;
-      icon: ${iconName},
-      name: 'Service Name',
-      description: 'Service description placeholder.',
-      features: [
-        'Feature 1',
+      "icon": ${iconName},
+      "name": 'Service Name',
+      "description": 'Service description placeholder.',
+      "features": ['Feature 1',
         'Feature 2',
         'Feature 3'
       ],
-      pricing: '$999 – $4,999/month',
-      timeline: '2–4 weeks',
-      benefits: [
-        'Benefit 1',
+      "pricing": '$999 – $4,999/month',
+      "timeline": '2–4 weeks',
+      "benefits": ['Benefit 1',
         'Benefit 2',
         'Benefit 3'
       ],
-      category: '${category}'
+      "category": '${category}'
     }`});
   
   fs.writeFileSync(filePath, content);

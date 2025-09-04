@@ -10,17 +10,17 @@ interface LoadingSpinnerProps {
 
 }
 const sizeClasses = {
-  sm: 'w-4 h-4',
-  md: 'w-6 h-6',
-  lg: 'w-8 h-8',
-  xl: 'w-12 h-12'
-};;
+  "sm": 'w-4 h-4',
+  "md": 'w-6 h-6',
+  "lg": 'w-8 h-8',
+  "xl": 'w-12 h-12'
+};
 
 const colorClasses = {
-  cyan: 'border-cyan-400',
-  white: 'border-white',
-  blue: 'border-blue-400'
-};;
+  "cyan": 'border-cyan-400',
+  "white": 'border-white',
+  "blue": 'border-blue-400'
+};
 
 export default function LoadingSpinner($1) {
   return (
@@ -28,14 +28,14 @@ export default function LoadingSpinner($1) {
       <div className="relative">
         {/* Outer ring */}
         <div className={`${sizeClasses[size]} border-4 border-gray-200 rounded-full opacity-20`}></div>
-export const LoadingSpinner: Reac t.FC<LoadingSpinnerProps> = ({
+export const "LoadingSpinner": Reac t.FC<LoadingSpinnerProps> = ({
   size = 'md',
   className = "
 }) => {
-  const sizeClasses = { sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
-  };;
+  const sizeClasses = { "sm": 'w-4 h-4',
+    "md": 'w-8 h-8',
+    "lg": 'w-12 h-12'
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -49,18 +49,18 @@ export const LoadingSpinner: Reac t.FC<LoadingSpinnerProps> = ({
   );
 }
 // Optimized spinner for inline use
-export const InlineSpinner: Reac t.FC<{ size?: 'sm' | 'md className?: string }> = ({
+export const "InlineSpinner": Reac t.FC<{ size?: 'sm' | 'md className?: string }> = ({
   size = 'sm',
   className = "
 }) => (
   <divclassName={`inline-flex items-center ${className}`}; role="status">
     <motion.div';';
       className={`${size === 'sm' ? 'w-4 h-4' : 'w-6 h-6'} border-2 border-t-transparent border-cyan-400 rounded-full`}
-      animate={{ rotate: 36 0 }}
+      animate={{ "rotate": 36 0 }}
       transition={{
-        duration: 1,
-        repeat: Infinit y,
-        ease: "linear"
+        "duration": 1,
+        "repeat": Infinit y,
+        "ease": "linear"
       }}
     />
     <span className="sr-only">Loading</span>
@@ -68,7 +68,7 @@ export const InlineSpinner: Reac t.FC<{ size?: 'sm' | 'md className?: string }> 
 );
 
 // Full-screen loading overlay
-export const FullScreenLoader: Reac t.FC<{
+export const "FullScreenLoader": Reac t.FC<{
   text?: string;
   showLogo?: boolean;
   className?: string;';
@@ -103,7 +103,7 @@ export const FullScreenLoader: Reac t.FC<{
   )}"
 interface LoadingSpinnerProps {
 size?: "sm" | "md" | "lg";"
-export const LoadingSpinner: Reac t.FC<LoadingSpinnerProps> = ({size = "md", className="
+export const "LoadingSpinner": Reac t.FC<LoadingSpinnerProps> = ({size = "md", className="
 }) => {const sizeClasses = {}"}" >"
       <div className="{"${sizeClasses[size]}" border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin"};" role="status" >"
   size?: &apos;sm&apos; | &apos;md&apos; | &apos;lg
@@ -113,7 +113,7 @@ export const LoadingSpinner: Reac t.FC<LoadingSpinnerProps> = ({size = "md", cla
   const sizeClasses = {};
 
 // Skeleton loading component
-export const SkeletonLoader: Reac t.FC<{
+export const "SkeletonLoader": Reac t.FC<{
   className?: string;
   lines?: number;';
 }> = ({
@@ -121,10 +121,10 @@ export const SkeletonLoader: Reac t.FC<{
   lines = 3
 }) => (
   <div className={`animate-pulse ${className}`}>
-    {Array.from({ length: line s }).map((_, index) => (
+    {Array.from({ "length": line s }).map((_, index) => (
       <div key={index}
         className="h-4 bg-gray-200 rounded mb-2"
-        style="{{{ width: `${Math.random() * 40 + 60}}"%` }}
+        style="{{{ "width": `${Math.random() * 40 + 60}}"%` }}
        />
     ))};
   </div>

@@ -25,7 +25,7 @@ class AutomatedTestingEnhancer {
       this.log('Components directory not found', 'warn')}
       return}
 
-    const components = fs.readdirSync(componentsDir, { withFileTypes: true })
+    const components = fs.readdirSync(componentsDir, { "withFileTypes": true })
       .filter(item => item.isFile() && item.name.endsWith('.tsx'))
       .map(item => item.name;);
 
@@ -39,10 +39,10 @@ class AutomatedTestingEnhancer {
     ) {
         this.generateTestFile(componentName, testFilePath)}
         this.improvements.push({
-          type: 'test_generation',
-          component: componentName,
-          file: testFilePath,
-          status: 'created'
+          "type": 'test_generation',
+          "component": componentName,
+          "file": testFilePath,
+          "status": 'created'
         })}
     }
   }
@@ -81,7 +81,7 @@ describe('${componentName}', () => {
       this.log('Pages directory not found', 'warn')}
       return}
 
-    const pages = fs.readdirSync(pagesDir, { withFileTypes: true })
+    const pages = fs.readdirSync(pagesDir, { "withFileTypes": true })
       .filter(item => item.isFile() && item.name.endsWith('.tsx') && !item.name.startsWith('_'))
       .map(item => item.name;);
 
@@ -95,10 +95,10 @@ describe('${componentName}', () => {
     ) {
         this.generatePageTestFile(pageName, testFilePath)}
         this.improvements.push({
-          type: 'page_test_generation',
-          page: pageName,
-          file: testFilePath,
-          status: 'created'
+          "type": 'page_test_generation',
+          "page": pageName,
+          "file": testFilePath,
+          "status": 'created'
         })}
     }
   }
@@ -112,12 +112,10 @@ import ${pageName} from './${pageName}';
 jest.mock('next/router', () => ({
   useRouter() {
     return {;
-      route: '/${pageName}',
-      pathname: '/${pageName}',
-      query: {},
-      asPath: '/${pageName}',
-    }},
-}));
+      "route": '/${pageName}',
+      "pathname": '/${pageName}',
+      "query": {},
+      "asPath": '/${pageName}'}}}));
 
 describe('${pageName} Page', () => {
   it('renders without crashing', () => {
@@ -143,42 +141,42 @@ describe('${pageName} Page', () => {
     
     try {
       const testOutput = execSync('npm test', { 
-        encoding: 'utf8',
-        cwd: this.projectRoot 
+        "encoding": 'utf8',
+        "cwd": this.projectRoot 
       };);
       
       this.testResults.push({
-        type: 'test_execution',
-        status: 'passed',
-        output: testOutput
+        "type": 'test_execution',
+        "status": 'passed',
+        "output": testOutput
       });
       
       this.log('✅ All tests passed')} catch (error) {
       this.testResults.push({
-        type: 'test_execution',
-        status: 'failed',
-        error: error.message
+        "type": 'test_execution',
+        "status": 'failed',
+        "error": error.message
       });
       
-      this.log(`❌ Tests failed: ${error.message}`, 'error')}
+      this.log(`❌ Tests "failed": ${error.message}`, 'error')}
   }
 
   async generateTestReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      improvements: this.improvements,
-      testResults: this.testResults,
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "improvements": this.improvements,
+      "testResults": this.testResults,
+      "summary": {
         totalTestsGenerated: this.improvements.length,
-        totalTestRuns: this.testResults.length,
-        successRate: this.testResults.filter(r => r.status === 'passed').length / this.testResults.length * 100
+        "totalTestRuns": this.testResults.length,
+        "successRate": this.testResults.filter(r => r.status === 'passed').length / this.testResults.length * 100
       }
    };
     
     const reportPath = path.join(this.projectRoot, 'test-enhancement-report.json';);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
-    this.log(`📊 Test enhancement report saved to: ${reportPath}`);
+    this.log(`📊 Test enhancement report saved "to": ${reportPath}`);
     return report}
 
   async start() {
@@ -191,9 +189,9 @@ describe('${pageName} Page', () => {
     const report = await this.generateTestReport(;);
     
     this.log('✅ Automated Testing Enhancer completed!');
-    this.log(`📈 Tests generated: ${report.summary.totalTestsGenerated}`);
-    this.log(`🏃 Test runs: ${report.summary.totalTestRuns}`);
-    this.log(`📊 Success rate: ${report.summary.successRate.toFixed(1)}%`)}
+    this.log(`📈 Tests "generated": ${report.summary.totalTestsGenerated}`);
+    this.log(`🏃 Test "runs": ${report.summary.totalTestRuns}`);
+    this.log(`📊 Success "rate": ${report.summary.successRate.toFixed(1)}%`)}
 }
 
 // Run the enhancer

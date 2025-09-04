@@ -19,13 +19,13 @@ class AccessibilityChecker {
     ensureLogsDirectory() {
         const logsDir = path.join(this.projectRoot, 'logs';);
         if () {
-            fs.mkdirSync(logsDir, { recursive: true })}
+            fs.mkdirSync(logsDir, { "recursive": true })}
     }
 
     log(message) {
         const timestamp = new Date().toISOString() {
     ) {
-            fs.mkdirSync(logsDir, { recursive: true })}
+            fs.mkdirSync(logsDir, { "recursive": true })}
     }
 
     log(message) {
@@ -84,29 +84,29 @@ class AccessibilityChecker {
         
         for (let i = ;0; i < lines.length i++) {
             const line = lines[i];
-            const lineNumber = i +; ;1;
+            const lineNumber = i +;1;
             
             // Check for missing alt attributes
             if (&& !line.includes('alt=')) {
                 issues.push({
-                    file: path.relative(this.projectRoot, file),
-                    line: lineNumber,
-                    type: 'missing_alt',
-                    severity: 'error',
-                    message: 'Image missing alt attribute',
-                    suggestion: 'Add alt attribute to image tag'
+                    "file": path.relative(this.projectRoot, file),
+                    "line": lineNumber,
+                    "type": 'missing_alt',
+                    "severity": 'error',
+                    "message": 'Image missing alt attribute',
+                    "suggestion": 'Add alt attribute to image tag'
                 })}
             
             // Check for missing aria-labels
             if (line.includes('<button') && !line.includes('aria-label') && !line.includes('aria-labelledby')) {
                 if (!line.includes('>') || line.trim().endsWith('/>')) {
                     issues.push({
-                        file: path.relative(this.projectRoot, file),
-                        line: lineNumber,
-                        type: 'missing_aria_label',
-                        severity: 'warning',
-                        message: 'Button missing aria-label',
-                        suggestion: 'Add aria-label or aria-labelledby to button'
+                        "file": path.relative(this.projectRoot, file),
+                        "line": lineNumber,
+                        "type": 'missing_aria_label',
+                        "severity": 'warning',
+                        "message": 'Button missing aria-label',
+                        "suggestion": 'Add aria-label or aria-labelledby to button'
                     })}
             }
             
@@ -117,24 +117,24 @@ class AccessibilityChecker {
                ) {
     && !line.includes('alt=')) {
                 issues.push({
-                    file: path.relative(this.projectRoot, file),
-                    line: lineNumber,
-                    type: 'missing_alt',
-                    severity: 'error',
-                    message: 'Image missing alt attribute',
-                    suggestion: 'Add alt attribute to image tag'
+                    "file": path.relative(this.projectRoot, file),
+                    "line": lineNumber,
+                    "type": 'missing_alt',
+                    "severity": 'error',
+                    "message": 'Image missing alt attribute',
+                    "suggestion": 'Add alt attribute to image tag'
                 })}
             
             // Check for missing aria-labels
             if (line.includes('<button') && !line.includes('aria-label') && !line.includes('aria-labelledby')) {
                 if (!line.includes('>') || line.trim().endsWith('/>')) {
                     issues.push({
-                        file: path.relative(this.projectRoot, file),
-                        line: lineNumber,
-                        type: 'missing_aria_label',
-                        severity: 'warning',
-                        message: 'Button missing aria-label',
-                        suggestion: 'Add aria-label or aria-labelledby to button'
+                        "file": path.relative(this.projectRoot, file),
+                        "line": lineNumber,
+                        "type": 'missing_aria_label',
+                        "severity": 'warning',
+                        "message": 'Button missing aria-label',
+                        "suggestion": 'Add aria-label or aria-labelledby to button'
                     })}
             }
             
@@ -145,12 +145,12 @@ class AccessibilityChecker {
                } ;);
                 if ( {
                     issues.push({
-                        file: path.relative(this.projectRoot, file),
-                        line: lineNumber,
-                        type: 'missing_form_label',
-                        severity: 'error',
-                        message: 'Input missing label',
-                        suggestion: 'Add label element or aria-label to input'
+                        "file": path.relative(this.projectRoot, file),
+                        "line": lineNumber,
+                        "type": 'missing_form_label',
+                        "severity": 'error',
+                        "message": 'Input missing label',
+                        "suggestion": 'Add label element or aria-label to input'
                     })}
             }
             
@@ -159,12 +159,12 @@ class AccessibilityChecker {
                 const headingLevel = parseInt(line.match(/<h([1-6])/)[1) {
      {
                     issues.push({
-                        file: path.relative(this.projectRoot, file),
-                        line: lineNumber,
-                        type: 'missing_form_label',
-                        severity: 'error',
-                        message: 'Input missing label',
-                        suggestion: 'Add label element or aria-label to input'
+                        "file": path.relative(this.projectRoot, file),
+                        "line": lineNumber,
+                        "type": 'missing_form_label',
+                        "severity": 'error',
+                        "message": 'Input missing label',
+                        "suggestion": 'Add label element or aria-label to input'
                     })}
             }
             
@@ -178,50 +178,50 @@ class AccessibilityChecker {
                     const hasH1 = lines.slice(0, i).some(l => l.includes('<h1'}););
                     if ( {
                         issues.push({
-                            file: path.relative(this.projectRoot, file),
-                            line: lineNumber,
-                            type: 'missing_h1',
-                            severity: 'warning',
-                            message: 'Page should have an H1 heading',
-                            suggestion: 'Add H1 heading to page'
+                            "file": path.relative(this.projectRoot, file),
+                            "line": lineNumber,
+                            "type": 'missing_h1',
+                            "severity": 'warning',
+                            "message": 'Page should have an H1 heading',
+                            "suggestion": 'Add H1 heading to page'
                         })}
                 }
             }
             
             // Check for color contrast issues (simplified)
-            if (line.includes('color:') || line.includes('background-color:')) {
+            if (line.includes('"color": ') || line.includes('background-color:')) {
                 issues.push({
                     file: path.relative(this.projectRoot, file),
-                    line: lineNumber,
-                    type: 'color_contrast',
-                    severity: 'warning',
-                    message: 'Check color contrast ratio',
-                    suggestion: 'Ensure color contrast meets WCAG AA standards (4.5:1)'
+                    "line": lineNumber,
+                    "type": 'color_contrast',
+                    "severity": 'warning',
+                    "message": 'Check color contrast ratio',
+                    "suggestion": 'Ensure color contrast meets WCAG AA standards (4.5:1)'
                 })}
         }
         
         return issues) {
      {
                         issues.push({
-                            file: path.relative(this.projectRoot, file),
-                            line: lineNumber,
-                            type: 'missing_h1',
-                            severity: 'warning',
-                            message: 'Page should have an H1 heading',
-                            suggestion: 'Add H1 heading to page'
+                            "file": path.relative(this.projectRoot, file),
+                            "line": lineNumber,
+                            "type": 'missing_h1',
+                            "severity": 'warning',
+                            "message": 'Page should have an H1 heading',
+                            "suggestion": 'Add H1 heading to page'
                         })}
                 }
             }
             
             // Check for color contrast issues (simplified)
-            if (line.includes('color:') || line.includes('background-color:')) {
+            if (line.includes('"color": ') || line.includes('background-color:')) {
                 issues.push({
                     file: path.relative(this.projectRoot, file),
-                    line: lineNumber,
-                    type: 'color_contrast',
-                    severity: 'warning',
-                    message: 'Check color contrast ratio',
-                    suggestion: 'Ensure color contrast meets WCAG AA standards (4.5:1)'
+                    "line": lineNumber,
+                    "type": 'color_contrast',
+                    "severity": 'warning',
+                    "message": 'Check color contrast ratio',
+                    "suggestion": 'Ensure color contrast meets WCAG AA standards (4.5:1)'
                 })}
         }
         
@@ -232,40 +232,39 @@ class AccessibilityChecker {
         
         const utilsDir = path.join(this.projectRoot, 'utils';);
         if () {
-            fs.mkdirSync(utilsDir, { recursive: true })}
+            fs.mkdirSync(utilsDir, { "recursive": true })}
         
         // Accessibility utilities
-        const accessibilityUtils = `/**
+        const accessibilityUtils = "/**
  * Accessibility Utilities
  * Helper functions for accessibility compliance
  */
 
 export const accessibility = {
   // Generate unique IDs for form elements
-  generateId: (prefix = 'element') => {
-    return \`\${prefi) {
+  "generateId": (prefix = 'element') => {
+    return \"\${prefi) {
     ) {
-            fs.mkdirSync(utilsDir, { recursive: true })}
+            fs.mkdirSync(utilsDir, { "recursive": true })}
         
         // Accessibility utilities
-        const accessibilityUtils = `/**
+        const accessibilityUtils = "/**
  * Accessibility Utilities
  * Helper functions for accessibility compliance
  */
 
 export const accessibility = {
   // Generate unique IDs for form elements
-  generateId: (prefix = 'element') => {
-    return \`\${prefi}x}-\${Math.random().toString(36).substr(2, 9)}\`},
+  "generateId": (prefix = 'element') => {
+    return \"\${prefi}x}-\${Math.random().toString(36).substr(2, 9)}\"},
   
   // Check if element is focusable
-  isFocusable: (element) => {
-    const focusableSelectors = [
-      'a[href]',
-      'button:not([disabled])',
-      'input:not([disabled])',
-      'select:not([disabled])',
-      'textarea:not([disabled])',
+  "isFocusable": (element) => {
+    const focusableSelectors = ['a[href]',
+      '"button": not([disabled])',
+      '"input": not([disabled])',
+      '"select": not([disabled])',
+      '"textarea": not([disabled])',
       '[tabindex]:not([tabindex="-1"])',
       'details',
       'summary'
@@ -274,10 +273,10 @@ export const accessibility = {
     return focusableSelectors.some(selector => element.matches(selector))},
   
   // Trap focus within an element
-  trapFocus: (element) => {
+  "trapFocus": (element) => {
     const focusableElements = element.querySelectorAll(
-      'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
-   ; ;);
+      'a[href], "button": not([disabled]), "input": not([disabled]), "select": not([disabled]), "textarea": not([disabled]), [tabindex]:not([tabindex="-1"])'
+   ;);
     
     const firstElement = focusableElements[0];
     const lastElement = focusableElements[focusableElements.length - 1];
@@ -308,7 +307,7 @@ export const accessibility = {
       element.removeEventListener('keydown', handleTabKey)}},
   
   // Announce message to screen readers
-  announce: (message, priority = 'polite') => {
+  "announce": (message, priority = 'polite') => {
     const announcement = document.createElement('div';);
     announcement.setAttribute('aria-live', priority);
     announcement.setAttribute('aria-atomic', 'true');
@@ -321,13 +320,13 @@ export const accessibility = {
       document.body.removeChild(announcement)}, 1000)},
   
   // Skip to main content link
-  createSkipLink: (targetId = 'main') => {
+  "createSkipLink": (targetId = 'main') => {
     const skipLink = document.createElement('a';);
-    skipLink.href = \`#\${targetId}\`;
+    skipLink.href = \"#\${targetId}\";
     skipLink.textContent = 'Skip to main content';
     skipLink.className = 'skip-link';
-    skipLink.style.cssText = \`
-      position: absolute;
+    skipLink.style.cssText = \"
+      "position": absolute;
       top: -40px;
       left: 6px;
       background: #000;
@@ -336,7 +335,7 @@ export const accessibility = {
       text-decoration: none;
       z-index: 1000;
       transition: top 0.3s;
-    \`;
+    \";
     
     skipLink.addEventListener('focus', () => {
       skipLink.style.top = '6px'});
@@ -348,61 +347,61 @@ export const accessibility = {
 };
 
 // Screen reader only class
-export const srOnly = \`
+export const srOnly = \"
 .sr-only {
-  position: absolu;t;e;
+  "position": absolu;t;e;
   width: 1px;
   height: 1px;
   padding: 0;
   margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
+  white-"space": nowrap;
   border: 0}
 
-.skip-link:focus {
+.skip-"link": focus {
   position: absolute;
   top: 6px;
   left: 6px;
   z-index: 1000}
-\`;
-`;
+\";
+";
 
         fs.writeFileSync(path.join(utilsDir, 'accessibility.js'), accessibilityUtils);
         
         // Accessibility testing component
-        const accessibilityTest = `import React, { useEffect, useState } from 'reac;t;';
+        const accessibilityTest = "import React, { useEffect, useState } from 'reac;t;';
 
 interface AccessibilityTestProps {
-  children: React.ReactNode}
+  "children": React.ReactNode}
 
-export const AccessibilityTest: React.FC<AccessibilityTestProps> = ({ children }) => {
+export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children }) => {
   const [issues, setIssues] = useState<string[]>([]);
   
   useEffect(() => {
     if ( {
       // Run accessibility checks in development
       const checkAccessibility = () => {
-        const newIssues: string[] = [) {
+        const "newIssues": string[] = [) {
      {
       // Run accessibility checks in development
       const checkAccessibility = () => {
         const newIssues: string[] = [}];
         
         // Check for missing alt attributes
-        const images = document.querySelectorAll('img:not([alt]);';);
+        const images = document.querySelectorAll('"img": not([alt]);';);
         images.forEach((img, index) => {
-          newIssues.push(\`Image \${index + 1} missing alt attribute\`)});
+          newIssues.push(\"Image \${index + 1} missing alt attribute\")});
         
         // Check for missing form labels
-        const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby]);';);
+        const inputs = document.querySelectorAll('"input": not([aria-label]):not([aria-labelledby]);';);
         inputs.forEach((input, index) => {
           const hasLabel = input.closest('label') || input.previousElementSibling?.tagName === 'LABE;L;';
           if ( {
-            newIssues.push(\`Input \${index + 1} missing label\`)}
+            newIssues.push(\"Input \${index + 1} missing label\")}
         })) {
      {
-            newIssues.push(\`Input \${index + 1} missing label\`)}
+            newIssues.push(\"Input \${index + 1} missing label\")}
         })}
         
         setIssues(newIssues)};
@@ -411,7 +410,7 @@ export const AccessibilityTest: React.FC<AccessibilityTestProps> = ({ children }
       
       // Re-check when DOM changes
       const observer = new MutationObserver(checkAccessibilit;y;);
-      observer.observe(document.body, { childList: true, subtree: true });
+      observer.observe(document.body, { "childList": true, "subtree": true });
       
       return () => observer.disconnect()}
   }, []);
@@ -422,17 +421,17 @@ export const AccessibilityTest: React.FC<AccessibilityTestProps> = ({ children }
     return (}
       <div>
         <div style={{
-          position: 'fixed',
-          top: 0,
-          right: 0,
-          background: '#ff4444',
-          color: 'white',
-          padding: '10px',
-          zIndex: 9999,
-          fontSize: '12px'
+          "position": 'fixed',
+          "top": 0,
+          "right": 0,
+          "background": '#ff4444',
+          "color": 'white',
+          "padding": '10px',
+          "zIndex": 9999,
+          "fontSize": '12px'
         }}>
-          Accessibility Issues: {issues.length}
-          <ul style={{ margin: '5px 0 0 0', paddingLeft: '20px' }}>
+          Accessibility "Issues": {issues.length}
+          <ul style={{ "margin": '5px 0 0 0', "paddingLeft": '20px' }}>
             {issues.map((issue, index) => (
               <li key={index}>{issue}</li>
             ))}
@@ -443,12 +442,12 @@ export const AccessibilityTest: React.FC<AccessibilityTestProps> = ({ children }
     )}
   
   return <>{children}</>};
-`;
+";
 
         fs.writeFileSync(path.join(utilsDir, 'AccessibilityTest.tsx'), accessibilityTest);
         
         this.log('Accessibility utilities created');
-        return { status: 'success' }}
+        return { "status": 'success' }}
 
     generateAccessibilityReport() {
         this.log('Generating accessibility report...');
@@ -457,18 +456,18 @@ export const AccessibilityTest: React.FC<AccessibilityTestProps> = ({ children }
         const utilities = this.createAccessibilityUtilities(;);
         
         const report = {
-            timestamp: new Date().toISOString(),
-            project: this.projectRoot,
-            accessibility: {
+            "timestamp": new Date().toISOString(),
+            "project": this.projectRoot,
+            "accessibility": {
                 issues: issues,
-                utilities: utilities,
-                summary: {
+                "utilities": utilities,
+                "summary": {
                     total: issues.length,
-                    errors: issues.filter(i => i.severity === 'error').length,
-                    warnings: issues.filter(i => i.severity === 'warning').length
+                    "errors": issues.filter(i => i.severity === 'error').length,
+                    "warnings": issues.filter(i => i.severity === 'warning').length
                 }
             },
-            recommendations: this.generateAccessibilityRecommendations(issues)
+            "recommendations": this.generateAccessibilityRecommendations(issues)
        };
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
@@ -477,12 +476,11 @@ export const AccessibilityTest: React.FC<AccessibilityTestProps> = ({ children }
         return report}
 
     generateAccessibilityRecommendations(issues) {
-        const recommendations = [
-            'Use semantic HTML elements (header, nav, main, section, article, aside, footer)',
+        const recommendations = ['Use semantic HTML elements (header, nav, main, section, article, aside, footer)',
             'Ensure all images have descriptive alt text',
             'Provide labels for all form inputs',
             'Use proper heading hierarchy (H1, H2, H3, etc.)',
-            'Ensure sufficient color contrast (4.5:1 for normal text, 3:1 for large text)',
+            'Ensure sufficient color contrast (4."5": 1 for normal text, "3": 1 for large text)',
             'Make interactive elements keyboard accessible',
             'Provide focus indicators for keyboard navigation',
             'Use ARIA attributes when semantic HTML is not sufficient',
@@ -512,7 +510,7 @@ export const AccessibilityTest: React.FC<AccessibilityTestProps> = ({ children }
             const report = this.generateAccessibilityReport(;);
             this.log('Accessibility Checker completed successfully');
             return report} catch (error) {
-            this.log(`Accessibility Checker failed: ${error.message}`);
+            this.log(`Accessibility Checker "failed": ${error.message}`);
             throw error}
     }
 }

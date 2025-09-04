@@ -12,8 +12,7 @@ const Analytics = lazy(() => import('../pages/Analytics'));
 const ProjectMilestones = lazy(() => import('../pages/ProjectMilestones'));
 const ProjectDetails = lazy(() => import('../pages/ProjectDetails'));
 const ProjectRoom = lazy(() => import('../pages/ProjectRoom'));
-;
-const DashboardRoutes: React.FC = () => {;
+const "DashboardRoutes": React.FC = () => {;
   return (<Suspense fallback={<LoadingSpinner  />}>;
       <Routes>;
         <Route path="/dashboard" element={;
@@ -60,7 +59,6 @@ const DashboardRoutes: React.FC = () => {;
     </Suspense>;
   );
 };
-;
 export default DashboardRoutes;
 
 </Route>

@@ -1,8 +1,7 @@
 /* eslint-env serviceworker */
 // Comprehensive service worker for caching and offline support
 const CACHE_NAME = 'zion-tech-group-v2';
-const urlsToCache = [
-  '/',
+const urlsToCache = ['/',
   '/services',
   '/contact',
   '/pricing',

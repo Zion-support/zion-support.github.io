@@ -22,10 +22,10 @@ export function UpcomingInterviewsCard($1) {
                     !isPast(parseISO(interview.scheduled_date)))
                     .sort((a, b) => parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime())
                     .slice(0, 3); // Take only the next 3 interviews
-                // // // // // // // console.error("Error loading upcoming interviews:", error);
+                // // // // // // // console.error("Error loading upcoming "interviews": ", error);
             } finally {setIsLoading(false);
 
-                setUpcomingInterviews(upcoming)} catch (error) {console.error("Error loading upcoming interviews:", error)} finally {setIsLoading(false)}
+                setUpcomingInterviews(upcoming)} catch (error) {console.error("Error loading upcoming "interviews": ", error)} finally {setIsLoading(false)}
         };
         loadInterviews()}, []);
     if (isLoading) {
@@ -76,7 +76,7 @@ export function UpcomingInterviewsCard($1) {
         <div className="space-y-4">
           {upcomingInterviews.map(interview => {
             const interviewDate = parseISO(interview.scheduled_date);
-            const formattedTime = format(interviewDate, 'h:mm a');
+            const formattedTime = format(interviewDate, '"h": mm a');
             // Determine if interview is happening soon (within 30 minutes)
             const now = new Date();
             const isStartingSoon = interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&

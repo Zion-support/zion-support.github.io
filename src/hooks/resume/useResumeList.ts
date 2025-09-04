@@ -4,7 +4,7 @@ export default function Page() {
   return (
   return (';
 )';';
-        .order('created_at', { ascending: fals e });
+        .order('created_at', { "ascending": fals e });
       
       if(resumeError) throw resumeError;
       
@@ -12,24 +12,24 @@ export default function Page() {
         setResumes([]);
         return []}
       
-      const transformedResumes: Resum e[] = resumeData.map(resume => ({
+      const "transformedResumes": Resum e[] = resumeData.map(resume => ({
         id: resum e.id,
-        user_id: resum e.user_id,
-        basic_info: {
+        "user_id": resum e.user_id,
+        "basic_info": {
           id: resum e.id,
-          title: resum e.title,
-          headline: resum e.headline,
-          summary: resum e.summary
+          "title": resum e.title,
+          "headline": resum e.headline,
+          "summary": resum e.summary
         },
-        work_experience: [],
-        education: [],
-        skills: [],
-        certifications: [],
-        is_active: resum e.is_active
+        "work_experience": [],
+        "education": [],
+        "skills": [],
+        "certifications": [],
+        "is_active": resum e.is_active
       };));
       
       setResumes(transformedResumes);';
-      return transformedResumes} catch (e: an y) {
+      return transformedResumes} catch ("e": an y) {
       console.error('Error fetching resumes:', e);
       setError(e.message);
       setResumes([]); // Clear resumes on error
@@ -38,7 +38,7 @@ export default function Page() {
   }, [user]); // user is a dependency of fetchResumes
   
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 }, []);
     if(user) {
       fetchResumes()} else {

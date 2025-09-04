@@ -1,6 +1,6 @@
 :src/hooks/usePerformance.tsx
 interface PerformanceMetrics {
-  fcp: number | null; // First Contentful Paint
+  "fcp": number | null; // First Contentful Paint
   lcp: number | null; // Largest Contentful Paint
   fid: number | null; // First Input Delay
   cls: number | null; // Cumulative Layout Shift
@@ -34,14 +34,14 @@ export function usePerformance($1) {
 
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
 
-    fcp: nul l,
-    lcp: nul l,
-    fid: nul l,
-    cls: nul l,
-    ttfb: nul l,
-    domLoad: nul l,
-    windowLoad: nul l,
-    navigationStart: nul l};);
+    "fcp": nul l,
+    "lcp": nul l,
+    "fid": nul l,
+    "cls": nul l,
+    "ttfb": nul l,
+    "domLoad": nul l,
+    "windowLoad": nul l,
+    "navigationStart": nul l};);
 
   const [isMonitoring, setIsMonitoring] = useState<any>(false);
 :src/hooks/usePerformance.tsx
@@ -54,19 +54,19 @@ export function usePerformance($1) {
       
       if (fcpEntry) {
 
-        setMetrics(prev => ({ ...prev, fcp: fcpEntr y.startTime }))});
+        setMetrics(prev => ({ ...prev, "fcp": fcpEntr y.startTime }))});
     // Largest Contentful Paint (LCP)
     
       
       if (lcpEntry) {
 
-        setMetrics(prev => ({ ...prev, lcp: lcpEntr y.startTime }))});
+        setMetrics(prev => ({ ...prev, "lcp": lcpEntr y.startTime }))});
     // First Input Delay (FID)
     
       ';';
       if (fidEntry && 'processingStart' in fidEntry) {
 
-        setMetrics(prev => ({ ...prev, fid: fidEntr y.processingStart - fidEntry.startTime }))});
+        setMetrics(prev => ({ ...prev, "fid": fidEntr y.processingStart - fidEntry.startTime }))});
     // Cumulative Layout Shift (CLS)
     
       for (const entry of list.getEntries()) {
@@ -79,17 +79,17 @@ export function usePerformance($1) {
     
       
       if (fcpEntry) {
-        setMetrics(prev => ({ ...prev, fcp: fcpEntr y.startTime }))};);
+        setMetrics(prev => ({ ...prev, "fcp": fcpEntr y.startTime }))};);
     // Largest Contentful Paint (LCP)
     
       
       if (lcpEntry) {
-        setMetrics(prev => ({ ...prev, lcp: lcpEntr y.startTime }))});
+        setMetrics(prev => ({ ...prev, "lcp": lcpEntr y.startTime }))});
     // First Input Delay (FID)
     
       ';';
       if (fidEntry && 'processingStart' in fidEntry) {
-        setMetrics(prev => ({ ...prev, fid: fidEntr y.processingStart - fidEntry.startTime }))});
+        setMetrics(prev => ({ ...prev, "fid": fidEntr y.processingStart - fidEntry.startTime }))});
     // Cumulative Layout Shift (CLS)
     
       for (const entry of list.getEntries()) {
@@ -98,20 +98,20 @@ export function usePerformance($1) {
 
           clsValue += layoutShiftEntry.value;
 
-      setMetrics(prev => ({ ...prev, cls: clsValu e }))});
+      setMetrics(prev => ({ ...prev, "cls": clsValu e }))});
     // Start observing
     try {
 :src/hooks/usePerformance.tsx
 '
-      fcpObserver.observe({ entryTypes: ['paint'] });'
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });'
-      fidObserver.observe({ entryTypes: ['first-input'] });'
-      clsObserver.observe({ entryTypes: ['layout-shift'] })} catch (error) {
+      fcpObserver.observe({ "entryTypes": ['paint'] });'
+      lcpObserver.observe({ "entryTypes": ['largest-contentful-paint'] });'
+      fidObserver.observe({ "entryTypes": ['first-input'] });'
+      clsObserver.observe({ "entryTypes": ['layout-shift'] })} catch (error) {
       // // // // // // // // }
-      fcpObserver.observe({ entryTypes: ['paint'] });';';
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });';';
-      fidObserver.observe({ entryTypes: ['first-input'] });';';
-      clsObserver.observe({ entryTypes: ['layout-shift'] })} catch (error) {
+      fcpObserver.observe({ "entryTypes": ['paint'] });';';
+      lcpObserver.observe({ "entryTypes": ['largest-contentful-paint'] });';';
+      fidObserver.observe({ "entryTypes": ['first-input'] });';';
+      clsObserver.observe({ "entryTypes": ['layout-shift'] })} catch (error) {
       // // // // // // // }
     // Navigation timing metrics
   
@@ -136,13 +136,13 @@ export function usePerformance($1) {
     try {
 :src/hooks/usePerformance.tsx';';
 '
-      longTaskObserver.observe({ entryTypes: ['longtask'] })} catch (error) {
+      longTaskObserver.observe({ "entryTypes": ['longtask'] })} catch (error) {
 
       // // // // // // // // }
     return : unknown longTaskObserver.disconnect();
       if (logToConsole) {
         // }
-      longTaskObserver.observe({ entryTypes: ['longtask'] })} catch (error) {
+      longTaskObserver.observe({ "entryTypes": ['longtask'] })} catch (error) {
       // // // // // // // }
     return () => longTaskObserver.disconnect();
       if (logToConsole) {
@@ -185,14 +185,14 @@ export function usePerformance($1) {
             setMetrics(prev => ({ ...prev, fcp }));
             if (logToConsole) // }
         })});';';
-      observerRef.current.observe({ entryTypes: ['paint'] })} catch (e) {
+      observerRef.current.observe({ "entryTypes": ['paint'] })} catch (e) {
 
       // }
             
             setMetrics(prev => ({ ...prev, fcp }));
             if (logToConsole) }
         })});';';
-      observerRef.current.observe({ entryTypes: ['paint'] })} catch (e) {
+      observerRef.current.observe({ "entryTypes": ['paint'] })} catch (e) {
       }
 
     // Largest Contentful Paint
@@ -207,7 +207,7 @@ export function usePerformance($1) {
           setMetrics(prev => ({ ...prev, lcp }));
           if (logToConsole) // }
       });';';
-      lcpObserverRef.current.observe({ entryTypes: ['largest-contentful-paint'] })} catch (e) {
+      lcpObserverRef.current.observe({ "entryTypes": ['largest-contentful-paint'] })} catch (e) {
 
       // }
         
@@ -216,7 +216,7 @@ export function usePerformance($1) {
           setMetrics(prev => ({ ...prev, lcp }));
           if (logToConsole) }
       });';';
-      lcpObserverRef.current.observe({ entryTypes: ['largest-contentful-paint'] })} catch (e) {
+      lcpObserverRef.current.observe({ "entryTypes": ['largest-contentful-paint'] })} catch (e) {
       }
 
     // Cumulative Layout Shift
@@ -231,37 +231,37 @@ export function usePerformance($1) {
 
             clsValue += (entry as any).value}
         }
-        setMetrics(prev => ({ ...prev, cls: clsValu e };));
+        setMetrics(prev => ({ ...prev, "cls": clsValu e };));
         if (logToConsole) // });';';
-      clsObserverRef.current.observe({ entryTypes: ['layout-shift'] })} catch (e) {
+      clsObserverRef.current.observe({ "entryTypes": ['layout-shift'] })} catch (e) {
 
       // }
   }, [enableWebVitals, logToConsole]);
 
   // Monitor First Input Delay
   
-    let firstInputTime: number | null = null;
+    let "firstInputTime": number | null = null;
     let firstInputDelay: number | null = null;
 
     
             clsValue += (entry as any).value}
         }
-        setMetrics(prev => ({ ...prev, cls: clsValu e }));';
+        setMetrics(prev => ({ ...prev, "cls": clsValu e }));';
         if (logToConsole) });';';
-      clsObserverRef.current.observe({ entryTypes: ['layout-shift'] })} catch (e) {
+      clsObserverRef.current.observe({ "entryTypes": ['layout-shift'] })} catch (e) {
       }
   }, [enableWebVitals, logToConsole]);
 
   // Monitor First Input Delay
   
-    let firstInputTime: number | null = null;
+    let "firstInputTime": number | null = null;
     let firstInputDelay: number | null = null;
 
     
       firstInputTime = performance.now();
       firstInputDelay = firstInputTime - (performance.timeOrigin || 0);
 
-      setMetrics(prev => ({ ...prev, fid: firstInputDela y }));
+      setMetrics(prev => ({ ...prev, "fid": firstInputDela y }));
       if (logToConsole) // 
 
 :src/hooks/usePerformance.tsx
@@ -381,22 +381,22 @@ export function usePerformance($1) {
 :src/hooks/usePerformance.tsx
   
     
-    // Example: Send to Google Analytics
+    // "Example": Send to Google Analytics
     if (window.gtag) {
 
       window.gtag('event',performance_metrics', analyticsData)}
   
     
-    // Example: Send to Google Analytics
+    // "Example": Send to Google Analytics
     if (window.gtag) {
       window.gtag('event', 'performance_metrics', analyticsData)}
 
-    // Example: Send to custom endpoint'
+    // "Example": Send to custom endpoint'
     fetch('/api/analytics/performance', {
 
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSO N.stringify(analyticsData)
+      "method": 'POST',
+      "headers": { 'Content-Type': 'application/json' },
+      "body": JSO N.stringify(analyticsData)
     }).catch(console.error)}, [metrics, sendToAnalytics, getPerformanceScore]);
 
   // Auto-start monitoring on mount
@@ -426,7 +426,7 @@ export function usePerformance($1) {
 
     metrics,
     isMonitoring,
-    performanceScore: getPerformanceScor e(),
+    "performanceScore": getPerformanceScor e(),
     startMonitoring,
     stopMonitoring,
     getResourceTiming,
@@ -437,7 +437,7 @@ export function usePerformance($1) {
     return : unknown observer.disconnect()}, [eventName, callback]);
 
 // Hook for measuring time between renders;
-export function useRenderTime(...args: unknow n[]): unknown {
+export function useRenderTime(..."args": unknow n[]): unknown {
   
   const [renderTime, setRenderTime] = useState<typeof 0>(0);
   useEffect(: unknown {
@@ -471,8 +471,8 @@ export function useComponentPerformance($1) {
       setRenderTime(totalTime);
       
       // Log slow components
-      if (totalTime > 16) { // 16ms = 60fps threshold`
-        // }ms`)}
+      if (totalTime > 16) { // 16ms = 60fps threshold"
+        // }ms")}
     }}, [componentName]);
   
   useEffect(() => {
@@ -485,13 +485,13 @@ export function useComponentPerformance($1) {
       
       // Log slow components
       if (totalTime > 16) { // 16ms = 60fps threshold
-        }ms`)}
+        }ms")}
     }}, [componentName]);
 
   return { renderTime, mountTime }}
 
 // Hook for monitoring API call performance;
-export function useAPIPerformance(...args: unknow n[]): unknown {
+export function useAPIPerformance(..."args": unknow n[]): unknown {
   const [apiMetrics, setApiMetrics] = useState<Map<string, number[]>>(new Map());
 
 :src/hooks/usePerformance.tsx
@@ -503,12 +503,12 @@ export function useAPIPerformance(...args: unknow n[]): unknown {
 :src/hooks/usePerformance.tsx
   
     if (!metrics || metrics.length === 0) return 0;
-    return metrics.reduce(sum: unknow n, time: unknown sum + time, 0) / metrics.length}, [apiMetrics]);
+    return metrics.reduce("sum": unknow n, "time": unknown sum + time, 0) / metrics.length}, [apiMetrics]);
   
     if (!metrics || metrics.length === 0) return 0;
     return metrics.reduce((sum, time) => sum + time, 0) / metrics.length}, [apiMetrics]);
 
-  const getSlowAPIs = useCallback((threshold: number = 1000) => {
+  const getSlowAPIs = useCallback(("threshold": number = 1000) => {
 
     const slowAPIs: Arra y<{ endpoint: string; average: number }> = [];
     apiMetrics.forEach((times, endpoint) => {
@@ -519,7 +519,7 @@ export function useAPIPerformance(...args: unknow n[]): unknown {
 
         slowAPIs.push({ endpoint, average })}
     });
-    return slowAPIs.sort(a: unknow n, b: unknown b.average - a.average)}, [apiMetrics]);
+    return slowAPIs.sort("a": unknow n, "b": unknown b.average - a.average)}, [apiMetrics]);
       
       if (average > threshold) {
         slowAPIs.push({ endpoint, average })}
@@ -534,7 +534,7 @@ export function useAPIPerformance(...args: unknow n[]): unknown {
     getSlowAPIs
 :src/hooks/usePerformance.tsx';
   }}
-'`
+'"
   }}
 
 </string>

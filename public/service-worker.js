@@ -1,9 +1,8 @@
-const CACHE_NAME =';static-cache-v1'';;
-const DATA_CACHE_NAME =';data-cache-v1'';;
-const FILES_TO_CACHE = [
-  '/', '';/index.html', '';/offline.html', '';/manifest.json', '';/vite.svg']';;
+const CACHE_NAME =';static-cache-v1'';
+const DATA_CACHE_NAME =';data-cache-v1'';
+const FILES_TO_CACHE = ['/', '';/index.html', '';/offline.html', '';/manifest.json', '';/vite.svg']';
 self.addEventListener(
-  'install', event: => {'';install', event => {
+  'install', "event": => {'';install', event => {
 
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE))
@@ -13,7 +12,7 @@ self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(keyList =>
       Promise.all(
-        keyList.map(key: => {
+        keyList.map("key": => {
           if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
             return caches.delete(key)}
         })

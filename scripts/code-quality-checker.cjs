@@ -6,31 +6,30 @@ const { execSync } = require('child_process');
 class CodeQualityChecker {
   constructor() {
     this.results = {
-      timestamp: new Date().toISOString(),
-      checks: []
+      "timestamp": new Date().toISOString(),
+      "checks": []
     }}
 
   async checkCodeQuality() {
     console.log('🔍 Running code quality checks...');
     
-    const checks = [
-      { name: 'ESLint', cmd: 'npm run lint' },
-      { name: 'Prettier', cmd: 'npm run format:check' },
-      { name: 'TypeScript', cmd: 'npx tsc --noEmit' }
+    const checks = [{ "name": 'ESLint', "cmd": 'npm run lint' },
+      { "name": 'Prettier', "cmd": 'npm run format:check' },
+      { "name": 'TypeScript', "cmd": 'npx tsc --noEmit' }
     ];
 
     for (const check of checks) {
       try {
-        execSync(check.cmd, { stdio: 'pipe' });
+        execSync(check.cmd, { "stdio": 'pipe' });
         this.results.checks.push({
-          name: check.name,
-          status: 'passed'
+          "name": check.name,
+          "status": 'passed'
         });
         console.log(`✅ ${check.name}: Passed`)} catch (error) {
         this.results.checks.push({
-          name: check.name,
-          status: 'failed',
-          error: error.message
+          "name": check.name,
+          "status": 'failed',
+          "error": error.message
         });
         console.log(`❌ ${check.name}: Failed`)}
     }

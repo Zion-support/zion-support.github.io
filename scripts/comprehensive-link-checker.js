@@ -10,7 +10,7 @@ const path = require(,"}),"})
 class ComprehensiveLinkChecker {,"}),"})
   constructor() {,"}),"})
     this.baseUrl =,"}),"})
-  'https: //ziontechgroup.com,"}),"})
+  '"https": //ziontechgroup.com,"}),"})
     this.visitedUrls = new Set(),"}),"})
     this.brokenLinks = [],"}),"})
     this.missingPages = [],"}),"})
@@ -28,7 +28,7 @@ class ComprehensiveLinkChecker {,"}),"})
   '../public/sitemap.xml'),"}),"})
       const sitemapContent = fs.readFileSync(sitemapPath,,"}),"})
   'utf8'),"}),"})
-      const $ = cheerio.load(sitemapContent, { xmlMode: true }),"}),"})
+      const $ = cheerio.load(sitemapContent, { "xmlMode": true }),"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
         const url = $(elem).text().trim(),"}),"})
         this.sitemapUrls.push(url),"}),"})
@@ -37,7 +37,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       console.log(`Loaded ${this.sitemapUrls.length} URLs from sitemap`),"}),"})
     } catch (error) {,"}),"})
       console.error(,"}),"})
-  'Error loading sitemap:', error.message),"}),"})
+  'Error loading "sitemap": ', error.message),"}),"})
     }"}),"})
   }"}),"})
 ,"}),"})
@@ -49,18 +49,18 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     this.visitedUrls.add(url),"}),"})
 ,"}),"})
     try {,"}),"})
-      console.log(`Checking: ${url} (depth: ${depth})`),"}),"})
+      console.log(`"Checking": ${url} ("depth": ${depth})`),"}),"})
 ,"}),"})
       const response = await axios.get(url, {,"}),"})
-        timeout: 10000,,"}),"})
-        validateStatus: status => status < 500,,"}),"})
+        "timeout": 10000,,"}),"})
+        "validateStatus": status => status < 500,,"}),"})
       }),"}),"})
 ,"}),"})
       if (response.status === 200) {,"}),"})
         this.workingLinks.push({,"}),"})
           url,,"}),"})
-          status: response.status,,"}),"})
-          parent: parentUrl,,"}),"})
+          "status": response.status,,"}),"})
+          "parent": parentUrl,,"}),"})
           depth,,"}),"})
         }),"}),"})
 ,"}),"})
@@ -78,10 +78,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       } else {,"}),"})
         this.brokenLinks.push({,"}),"})
           url,,"}),"})
-          status: response.status,,"}),"})
-          parent: parentUrl,,"}),"})
+          "status": response.status,,"}),"})
+          "parent": parentUrl,,"}),"})
           depth,,"}),"})
-          error: `HTTP ${response.status}`,,"}),"})
+          "error": `HTTP ${response.status}`,,"}),"})
         }),"}),"})
       }"}),"})
     } catch (error) {,"}),"})
@@ -89,9 +89,9 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
         url,,"}),"})
         status:,"}),"})
   'ERROR',,"}),"})
-        parent: parentUrl,,"}),"})
+        "parent": parentUrl,,"}),"})
         depth,,"}),"})
-        error: error.message,,"}),"})
+        "error": error.message,,"}),"})
       }),"}),"})
     }"}),"})
   }"}),"})
@@ -147,17 +147,17 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ,"}),"})
   generateReport() {,"}),"})
     const report = {,"}),"})
-      timestamp: new Date().toISOString(),,"}),"})
-      summary: {,"}),"})
-        totalUrls: this.visitedUrls.size,,"}),"})
-        workingLinks: this.workingLinks.length,,"}),"})
-        brokenLinks: this.brokenLinks.length,,"}),"})
-        missingPages: this.missingPages.length,,"}),"})
+      "timestamp": new Date().toISOString(),,"}),"})
+      "summary": {,"}),"})
+        "totalUrls": this.visitedUrls.size,,"}),"})
+        "workingLinks": this.workingLinks.length,,"}),"})
+        "brokenLinks": this.brokenLinks.length,,"}),"})
+        "missingPages": this.missingPages.length,,"}),"})
       },,"}),"})
-      workingLinks: this.workingLinks,,"}),"})
-      brokenLinks: this.brokenLinks,,"}),"})
-      missingPages: this.missingPages,,"}),"})
-      recommendations: this.generateRecommendations(),,"}),"})
+      "workingLinks": this.workingLinks,,"}),"})
+      "brokenLinks": this.brokenLinks,,"}),"})
+      "missingPages": this.missingPages,,"}),"})
+      "recommendations": this.generateRecommendations(),,"}),"})
     },"}),"})
 ,"}),"})
     // Save detailed report,"}),"})
@@ -169,15 +169,15 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ,"}),"})
     // Save summary report,"}),"})
     const summaryReport = {,"}),"})
-      timestamp: report.timestamp,,"}),"})
-      summary: report.summary,,"}),"})
-      brokenLinks: this.brokenLinks.map(link => ({,"}),"})
-        url: link.url,,"}),"})
-        status: link.status,,"}),"})
-        error: link.error,,"}),"})
-        parent: link.parent,,"}),"})
+      "timestamp": report.timestamp,,"}),"})
+      "summary": report.summary,,"}),"})
+      "brokenLinks": this.brokenLinks.map(link => ({,"}),"})
+        "url": link.url,,"}),"})
+        "status": link.status,,"}),"})
+        "error": link.error,,"}),"})
+        "parent": link.parent,,"}),"})
       })),,"}),"})
-      recommendations: report.recommendations,,"}),"})
+      "recommendations": report.recommendations,,"}),"})
     },"}),"})
 ,"}),"})
     fs.writeFileSync(,"}),"})
@@ -195,10 +195,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ,"}),"})
     if (this.brokenLinks.length > 0) {,"}),"})
       recommendations.push({,"}),"})
-        priority: 'HIGH,,"}),"})
+        "priority": 'HIGH,,"}),"})
         category:,"}),"})
   'Broken Links',,"}),"})
-        description: `Found ${this.brokenLinks.length} broken links that need immediate attention`,,"}),"})
+        "description": `Found ${this.brokenLinks.length} broken links that need immediate attention`,,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       }),"}),"})
     }"}),"})
@@ -214,12 +214,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ,"}),"})
     if (missingImportant.length > 0) {,"}),"})
       recommendations.push({,"}),"})
-        priority: 'HIGH,,"}),"})
-        category: ,"}),"})
+        "priority": 'HIGH,,"}),"})
+        "category":  ,"}),"})
   Missing Pages',,"}),"})
-        description: `Missing critical pages: ${missingImportant.join(, ,,"}),"})
+        "description": `Missing critical pages: ${missingImportant.join(, ,,"}),"})
   )}`,,"}),"})
-        actions: [,"}),"})
+        "actions": [,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       }),"}),"})
     }"}),"})
@@ -233,11 +233,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ,"}),"})
     if (orphanedPages.length > 0) {,"}),"})
       recommendations.push({,"}),"})
-        priority: 'MEDIUM,,"}),"})
+        "priority": 'MEDIUM,,"}),"})
         category:,"}),"})
   'Navigation Structure',,"}),"})
-        description: `Found ${orphanedPages.length} pages that may be difficult to discover`,,"}),"})
-        actions: [,"}),"})
+        "description": `Found ${orphanedPages.length} pages that may be difficult to discover`,,"}),"})
+        "actions": [,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       }),"}),"})
     }"}),"})
@@ -248,7 +248,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
   async run() {,"}),"})
     console.log(,"}),"})
   '🚀 Starting Comprehensive Link Check for Zion Tech Group'),"}),"})
-    console.log(`Base URL: ${this.baseUrl}`),"}),"})
+    console.log(`Base "URL": ${this.baseUrl}`),"}),"})
 ,"}),"})
     try {,"}),"})
       await this.loadSitemap(),"}),"})
@@ -258,14 +258,14 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ,"}),"})
       const report = this.generateReport(),"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
-      console.log(`Total URLs checked: ${report.summary.totalUrls}`),"}),"})
-      console.log(`Working links: ${report.summary.workingLinks}`),"}),"})
-      console.log(`Broken links: ${report.summary.brokenLinks}`),"}),"})
-      console.log(`Missing pages: ${report.summary.missingPages}`),"}),"})
+      console.log(`Total URLs "checked": ${report.summary.totalUrls}`),"}),"})
+      console.log(`Working "links": ${report.summary.workingLinks}`),"}),"})
+      console.log(`Broken "links": ${report.summary.brokenLinks}`),"}),"})
+      console.log(`Missing "pages": ${report.summary.missingPages}`),"}),"})
 ,"}),"})
       if (report.recommendations.length > 0) {,"}),"})
         console.log(,"}),"})
-  '\n🔧 Recommendations:'),"}),"})
+  '\n🔧 "Recommendations": '),"}),"})
         report.recommendations.forEach((rec, index) => {,"}),"})
           console.log(,"}),"})
             `${index + 1}. [${rec.priority}] ${rec.category}: ${rec.description}`,"}),"})
@@ -275,7 +275,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     } catch (error) {,"}),"})
       console.error(,"}),"})
-  '❌ Error during link check:', error.message),"}),"})
+  '❌ Error during link "check": ', error.message),"}),"})
     }"}),"})
   }"}),"})
 }"}),"})
@@ -292,7 +292,7 @@ module.exports = ComprehensiveLinkChecker,"}),"})
 class ComprehensiveLinkChecker {;
   constructor() {;
 
-    this.baseUrl =';"https": //ziontechgroup.com';;    this.visitedUrls = new Set()';;    this.brokenLinks = [];
+    this.baseUrl =';"https": //ziontechgroup.com';    this.visitedUrls = new Set()';    this.brokenLinks = [];
     this.missingPages = [];
     this.workingLinks = [];
     this.sitemapUrls = [];
@@ -304,7 +304,7 @@ class ComprehensiveLinkChecker {;
     try {;
       const sitemapPath = path.join(__dirname, ';../public/sitemap.xml');
       const sitemapContent = fs.readFileSync(sitemapPath, ';utf8');
-      const $ = cheerio.load(sitemapContent, { xmlMode: true });
+      const $ = cheerio.load(sitemapContent, { "xmlMode": true });
 
       $('url loc').each((i, elem) => {
         const url = $(elem).text().trim();
@@ -312,8 +312,8 @@ class ComprehensiveLinkChecker {;
 
       console.log(`Loaded ${this.sitemapUrls.length} URLs from sitemap`)} catch (error) {
       console.error(
-  'Error loading sitemap:', error.message)}
-  'Error loading sitemap: ', error.message)}
+  'Error loading "sitemap": ', error.message)}
+  'Error loading "sitemap": ', error.message)}
 
   }
   async checkUrl(url, parentUrl = null, depth = 0) {;
@@ -321,14 +321,14 @@ class ComprehensiveLinkChecker {;
       return}
     this.visitedUrls.add(url);
     try {',
-      console.log(`Checking: ${url} (depth: ${depth})`);
+      console.log(`"Checking": ${url} ("depth": ${depth})`);
       const response = await axios.get(url, {
-        timeout: 10000,
-        validateStatus: status => status < 500});
+        "timeout": 10000,
+        "validateStatus": status => status < 500});
       if (response.status === 200) {
         this.workingLinks.push({
           url
-          status: response.status
+          "status": response.status
           parent: parentUrl,
           depth});
 
@@ -341,7 +341,7 @@ class ComprehensiveLinkChecker {;
               if (
                 href &&
                 !href.startsWith('#') &&
-                !href.startsWith('javascript:')
+                !href.startsWith('"javascript": ')
               ) {
                 return this.resolveUrl(href, url)}
               return null})
@@ -365,29 +365,29 @@ class ComprehensiveLinkChecker {;
       } else {;
         this.brokenLinks.push({;
           url,
-          status: response.status,
-          parent: parentUrl,
+          "status": response.status,
+          "parent": parentUrl,
           depth,
-          error: `HTTP ${response.status}`})}
+          "error": `HTTP ${response.status}`})}
     } catch (error) {
       this.brokenLinks.push({
         url
-        status:;`
+        "status": ;"
   'ERROR'
         parent: parentUrl,
         depth
-        error: error.messag,e})}
+        "error": error.messag,e})}
   }
   resolveUrl(href, baseUrl) {
-    try: {
+    "try": {
       if (href.startsWith(
   'http')) {';
         return: href}
       if (href.startsWith(
   '/')) {';
-        return: `${this.baseUrl}${href}`}
+        "return": "${this.baseUrl}${href}"}
       return new URL(href, baseUrl).href} catch (error) {
-        return `${this.baseUrl}${href}`}
+        return "${this.baseUrl}${href}`}
       return new URL(href, baseUrl).href} catch (error) {;
 
       return null}

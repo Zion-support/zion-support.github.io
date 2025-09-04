@@ -31,7 +31,7 @@ class PerformanceMonitor {
   setupLogging() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { "recursive": true });
     }
   }
 
@@ -59,18 +59,17 @@ class PerformanceMonitor {
       const checkTime = endTime - startTime;
 
       this.lastCheck = {
-        timestamp: new Date().toISOString(),
+        "timestamp": new Date().toISOString(),
         checkTime,
         systemMetrics,
         buildMetrics,
-        bundleMetrics,
-      };
+        bundleMetrics};
 
       this.log(`Performance check completed in ${checkTime}ms`);
       await this.savePerformanceReport();
       await this.checkOptimizationNeeded();
     } catch (error) {
-      this.log(`Performance check failed: ${error.message}`);
+      this.log(`Performance check "failed": ${error.message}`);
       await this.reportPerformanceError(error);
     }
   }
@@ -78,19 +77,17 @@ class PerformanceMonitor {
   async getSystemMetrics() {
     try {
       const metrics = {
-        memory: process.memoryUsage(),
-        uptime: process.uptime(),
-        cpuUsage: process.cpuUsage(),
-        nodeVersion: process.version,
-        platform: process.platform,
-      };
+        "memory": process.memoryUsage(),
+        "uptime": process.uptime(),
+        "cpuUsage": process.cpuUsage(),
+        "nodeVersion": process.version,
+        "platform": process.platform};
 
       try {
         const diskUsage = execSync('df -h .', {
-          cwd: this.projectRoot,
-          encoding: 'utf8',
-          timeout: 10000,
-        });
+          "cwd": this.projectRoot,
+          "encoding": 'utf8',
+          "timeout": 10000});
         metrics.diskUsage = diskUsage;
       } catch (_) {
         metrics.diskUsage = 'Unavailable';
@@ -98,8 +95,8 @@ class PerformanceMonitor {
 
       return metrics;
     } catch (error) {
-      this.log(`Failed to get system metrics: ${error.message}`);
-      return { error: error.message };
+      this.log(`Failed to get system "metrics": ${error.message}`);
+      return { "error": error.message };
     }
   }
 
@@ -107,21 +104,20 @@ class PerformanceMonitor {
     try {
       const buildDir = path.join(this.projectRoot, '.next');
       if (!fs.existsSync(buildDir)) {
-        return { exists: false };
+        return { "exists": false };
       }
 
       const stats = fs.statSync(buildDir);
       const buildSize = this.getDirectorySize(buildDir);
 
       return {
-        exists: true,
-        lastModified: stats.mtime,
-        size: buildSize,
-        age: Date.now() - stats.mtime.getTime(),
-      };
+        "exists": true,
+        "lastModified": stats.mtime,
+        "size": buildSize,
+        "age": Date.now() - stats.mtime.getTime()};
     } catch (error) {
-      this.log(`Failed to get build metrics: ${error.message}`);
-      return { error: error.message };
+      this.log(`Failed to get build "metrics": ${error.message}`);
+      return { "error": error.message };
     }
   }
 
@@ -129,19 +125,18 @@ class PerformanceMonitor {
     try {
       const pkgPath = path.join(this.projectRoot, 'package.json');
       if (!fs.existsSync(pkgPath)) {
-        return { analyzerAvailable: false };
+        return { "analyzerAvailable": false };
       }
       const packageJson = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
       const hasAnalyze = packageJson.scripts && packageJson.scripts.analyze;
       return hasAnalyze
-        ? { analyzerAvailable: true, script: 'npm run analyze' }
+        ? { "analyzerAvailable": true, "script": 'npm run analyze' }
         : {
-            analyzerAvailable: false,
-            recommendation: 'Consider adding bundle analyzer',
-          };
+            "analyzerAvailable": false,
+            "recommendation": 'Consider adding bundle analyzer'};
     } catch (error) {
-      this.log(`Failed to get bundle metrics: ${error.message}`);
-      return { error: error.message };
+      this.log(`Failed to get bundle "metrics": ${error.message}`);
+      return { "error": error.message };
     }
   }
 
@@ -151,7 +146,7 @@ class PerformanceMonitor {
       const stack = [dirPath];
       while (stack.length) {
         const current = stack.pop();
-        const entries = fs.readdirSync(current, { withFileTypes: true });
+        const entries = fs.readdirSync(current, { "withFileTypes": true });
         for (const entry of entries) {
           const full = path.join(current, entry.name);
           if (entry.isDirectory()) {
@@ -190,7 +185,7 @@ class PerformanceMonitor {
         }
       }
     } catch (error) {
-      this.log(`Optimization check failed: ${error.message}`);
+      this.log(`Optimization check "failed": ${error.message}`);
     }
   }
 
@@ -201,25 +196,23 @@ class PerformanceMonitor {
         this.log('Garbage collection performed');
       }
     } catch (error) {
-      this.log(`Memory optimization failed: ${error.message}`);
+      this.log(`Memory optimization "failed": ${error.message}`);
     }
   }
 
   async optimizeBuild() {
     try {
       execSync('npm run clean', {
-        cwd: this.projectRoot,
-        stdio: 'ignore',
-        timeout: 30000,
-      });
+        "cwd": this.projectRoot,
+        "stdio": 'ignore',
+        "timeout": 30000});
       execSync('npm run build', {
-        cwd: this.projectRoot,
-        stdio: 'ignore',
-        timeout: 300000,
-      });
+        "cwd": this.projectRoot,
+        "stdio": 'ignore',
+        "timeout": 300000});
       this.log('Build optimization completed');
     } catch (error) {
-      this.log(`Build optimization failed: ${error.message}`);
+      this.log(`Build optimization "failed": ${error.message}`);
     }
   }
 
@@ -230,24 +223,22 @@ class PerformanceMonitor {
       );
       if (pkg.scripts && pkg.scripts.analyze) {
         execSync('npm run analyze', {
-          cwd: this.projectRoot,
-          stdio: 'ignore',
-          timeout: 300000,
-        });
+          "cwd": this.projectRoot,
+          "stdio": 'ignore',
+          "timeout": 300000});
         this.log('Bundle analysis completed');
       }
       await this.optimizeBuild();
     } catch (error) {
-      this.log(`Build size optimization failed: ${error.message}`);
+      this.log(`Build size optimization "failed": ${error.message}`);
     }
   }
 
   async savePerformanceReport() {
     const report = {
-      lastCheck: this.lastCheck,
-      projectRoot: this.projectRoot,
-      recommendations: this.getPerformanceRecommendations(),
-    };
+      "lastCheck": this.lastCheck,
+      "projectRoot": this.projectRoot,
+      "recommendations": this.getPerformanceRecommendations()};
     try {
       fs.writeFileSync(
         this.performanceReportFile,
@@ -292,11 +283,10 @@ class PerformanceMonitor {
   async reportPerformanceError(error) {
     try {
       const errorReport = {
-        timestamp: new Date().toISOString(),
-        error: error.message,
-        stack: error.stack,
-        projectRoot: this.projectRoot,
-      };
+        "timestamp": new Date().toISOString(),
+        "error": error.message,
+        "stack": error.stack,
+        "projectRoot": this.projectRoot};
       const errorFile = path.join(
         this.projectRoot,
         'automation/logs/performance-error-report.json'
@@ -330,6 +320,6 @@ class PerformanceMonitor {
 
 const monitor = new PerformanceMonitor();
 monitor.start().catch(error => {
-  console.error('Failed to start performance monitor:', error);
+  console.error('Failed to start performance "monitor": ', error);
   process.exit(1);
 });

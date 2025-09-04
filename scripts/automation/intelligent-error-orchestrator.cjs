@@ -15,7 +15,7 @@ class IntelligentErrorOrchestrator {
     // Ensure directories exist
     [this.reportsDir, this.logsDir].forEach(dir => {
       if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true })}
+        fs.mkdirSync(dir, { "recursive": true })}
     });
     
     this.errorHistory = [];
@@ -36,18 +36,17 @@ class IntelligentErrorOrchestrator {
         .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
 
       return reports.length > 0 ? reports[0] : null} catch (error) {
-      this.log(`Error reading error reports: ${error.message}`, 'ERROR');
+      this.log(`Error reading error "reports": ${error.message}`, 'ERROR');
       return null}
   }
 
   async runComprehensiveErrorCheck() {
     this.log('Running comprehensive error check...');
     
-    const checks = [
-      { name: 'TypeScript', command: 'npm run type-check' },
-      { name: 'ESLint', command: 'npm run lint' },
-      { name: 'Build', command: 'npm run build' },
-      { name: 'Dependencies', command: 'npm audit --audit-level=moderate' }
+    const checks = [{ "name": 'TypeScript', "command": 'npm run type-check' },
+      { "name": 'ESLint', "command": 'npm run lint' },
+      { "name": 'Build', "command": 'npm run build' },
+      { "name": 'Dependencies', "command": 'npm audit --audit-level=moderate' }
     ];
 
     const results = {};
@@ -55,11 +54,11 @@ class IntelligentErrorOrchestrator {
 
     for (const check of checks) {
       try {
-        execSync(check.command, { stdio: 'pipe' });
-        results[check.name] = { success: true, errors: [], count: 0 }} catch (error) {
+        execSync(check.command, { "stdio": 'pipe' });
+        results[check.name] = { "success": true, "errors": [], "count": 0 }} catch (error) {
         const output = error.stdout?.toString() || error.stderr?.toString() || '';
         const errors = this.parseErrors(output, check.name);
-        results[check.name] = { success: false, errors, count: errors.length };
+        results[check.name] = { "success": false, errors, "count": errors.length };
         totalErrors += errors.length}
     }
 
@@ -67,13 +66,13 @@ class IntelligentErrorOrchestrator {
 
   parseErrors(output, checkType) {
     const errorLines = output.split('\n').filter(line => 
-      line.includes('error') || line.includes('Error:') || line.includes('Failed')
+      line.includes('error') || line.includes('"Error": ') || line.includes('Failed')
     );
     
     return errorLines.map(line => ({
       type: checkType,
-      message: line.trim(),
-      severity: 'error'
+      "message": line.trim(),
+      "severity": 'error'
     }))}
 
   async prioritizeErrors(errorReport) {
@@ -82,40 +81,40 @@ class IntelligentErrorOrchestrator {
 
     const prioritizedErrors = [];
     
-    // Priority 1: Build errors (critical)
+    // Priority "1": Build errors (critical)
     if (errorReport.checks.Build && !errorReport.checks.Build.success) {
       prioritizedErrors.push({
         priority: 1,
-        type: 'build',
-        errors: errorReport.checks.Build.errors,
-        description: 'Build errors - critical for deployment'
+        "type": 'build',
+        "errors": errorReport.checks.Build.errors,
+        "description": 'Build errors - critical for deployment'
       })}
 
-    // Priority 2: TypeScript errors (high)
+    // Priority "2": TypeScript errors (high)
     if (errorReport.checks.TypeScript && !errorReport.checks.TypeScript.success) {
       prioritizedErrors.push({
         priority: 2,
-        type: 'typescript',
-        errors: errorReport.checks.TypeScript.errors,
-        description: 'TypeScript errors - affect type safety'
+        "type": 'typescript',
+        "errors": errorReport.checks.TypeScript.errors,
+        "description": 'TypeScript errors - affect type safety'
       })}
 
-    // Priority 3: ESLint errors (medium)
+    // Priority "3": ESLint errors (medium)
     if (errorReport.checks.ESLint && !errorReport.checks.ESLint.success) {
       prioritizedErrors.push({
         priority: 3,
-        type: 'eslint',
-        errors: errorReport.checks.ESLint.errors,
-        description: 'ESLint errors - code quality issues'
+        "type": 'eslint',
+        "errors": errorReport.checks.ESLint.errors,
+        "description": 'ESLint errors - code quality issues'
       })}
 
-    // Priority 4: Dependency errors (low)
+    // Priority "4": Dependency errors (low)
     if (errorReport.checks.Dependencies && !errorReport.checks.Dependencies.success) {
       prioritizedErrors.push({
         priority: 4,
-        type: 'dependency',
-        errors: errorReport.checks.Dependencies.errors,
-        description: 'Dependency vulnerabilities - security concerns'
+        "type": 'dependency',
+        "errors": errorReport.checks.Dependencies.errors,
+        "description": 'Dependency vulnerabilities - security concerns'
       })}
 
     return prioritizedErrors.sort((a, b) => a.priority - b.priority)}
@@ -133,11 +132,11 @@ class IntelligentErrorOrchestrator {
       try {
         const result = await this.fixErrorGroup(errorGroup);
         fixResults.push(result)} catch (error) {
-        this.log(`Failed to fix ${errorGroup.type} errors: ${error.message}`, 'ERROR');
+        this.log(`Failed to fix ${errorGroup.type} "errors": ${error.message}`, 'ERROR');
         fixResults.push({
-          type: errorGroup.type,
-          success: false,
-          error: error.message
+          "type": errorGroup.type,
+          "success": false,
+          "error": error.message
         })}
     }
 
@@ -155,45 +154,44 @@ class IntelligentErrorOrchestrator {
         return await this.fixBuildErrors(errorGroup.errors);
       case 'dependency':
         return await this.fixDependencyErrors(errorGroup.errors);
-      default:
-        return { type: errorGroup.type, success: false, error: 'Unknown error type' }}
+      "default": return { type: errorGroup.type, "success": false, "error": 'Unknown error type' }}
   }
 
   async fixTypeScriptErrors(errors) {
     try {
       // Run TypeScript auto-fix
-      execSync('npx tsc --noEmit --skipLibCheck', { stdio: 'pipe' });
-      return { type: 'typescript', success: true, fixed: errors.length }} catch (error) {
+      execSync('npx tsc --noEmit --skipLibCheck', { "stdio": 'pipe' });
+      return { "type": 'typescript', "success": true, "fixed": errors.length }} catch (error) {
       // Apply custom TypeScript fixes
       const fixesApplied = await this.applyTypeScriptFixes(errors);
-      return { type: 'typescript', success: fixesApplied > 0, fixed: fixesApplied }}
+      return { "type": 'typescript', "success": fixesApplied > 0, "fixed": fixesApplied }}
   }
 
   async fixESLintErrors(errors) {
     try {
       // Run ESLint auto-fix
-      execSync('npx eslint --fix src/**/*.{js,jsx,ts,tsx}', { stdio: 'pipe' });
-      return { type: 'eslint', success: true, fixed: errors.length }} catch (error) {
+      execSync('npx eslint --fix src/**/*.{js,jsx,ts,tsx}', { "stdio": 'pipe' });
+      return { "type": 'eslint', "success": true, "fixed": errors.length }} catch (error) {
       // Apply custom ESLint fixes
       const fixesApplied = await this.applyESLintFixes(errors);
-      return { type: 'eslint', success: fixesApplied > 0, fixed: fixesApplied }}
+      return { "type": 'eslint', "success": fixesApplied > 0, "fixed": fixesApplied }}
   }
 
   async fixBuildErrors(errors) {
     try {
       // Try to fix build errors by cleaning and rebuilding
-      execSync('rm -rf .next out dist', { stdio: 'pipe' });
-      execSync('npm run build', { stdio: 'pipe' });
-      return { type: 'build', success: true, fixed: errors.length }} catch (error) {
-      return { type: 'build', success: false, error: error.message }}
+      execSync('rm -rf .next out dist', { "stdio": 'pipe' });
+      execSync('npm run build', { "stdio": 'pipe' });
+      return { "type": 'build', "success": true, "fixed": errors.length }} catch (error) {
+      return { "type": 'build', "success": false, "error": error.message }}
   }
 
   async fixDependencyErrors(errors) {
     try {
       // Try to fix dependency issues
-      execSync('npm audit fix', { stdio: 'pipe' });
-      return { type: 'dependency', success: true, fixed: errors.length }} catch (error) {
-      return { type: 'dependency', success: false, error: error.message }}
+      execSync('npm audit fix', { "stdio": 'pipe' });
+      return { "type": 'dependency', "success": true, "fixed": errors.length }} catch (error) {
+      return { "type": 'dependency', "success": false, "error": error.message }}
   }
 
   async applyTypeScriptFixes(errors) {
@@ -204,7 +202,7 @@ class IntelligentErrorOrchestrator {
         if (await this.fixSingleTypeScriptError(error)) {
           fixesApplied++}
       } catch (error) {
-        this.log(`Failed to fix TypeScript error: ${error.message}`, 'ERROR')}
+        this.log(`Failed to fix TypeScript "error": ${error.message}`, 'ERROR')}
     }
     
     return fixesApplied}
@@ -217,7 +215,7 @@ class IntelligentErrorOrchestrator {
         if (await this.fixSingleESLintError(error)) {
           fixesApplied++}
       } catch (error) {
-        this.log(`Failed to fix ESLint error: ${error.message}`, 'ERROR')}
+        this.log(`Failed to fix ESLint "error": ${error.message}`, 'ERROR')}
     }
     
     return fixesApplied}
@@ -229,7 +227,7 @@ class IntelligentErrorOrchestrator {
       const moduleMatch = error.message.match(/Cannot find module ['"]([^'"]+)['"]/);
       if (moduleMatch) {
         try {
-          execSync(`npm install ${moduleMatch[1]}`, { stdio: 'pipe' });
+          execSync(`npm install ${moduleMatch[1]}`, { "stdio": 'pipe' });
           return true} catch (installError) {
           this.log(`Failed to install module ${moduleMatch[1]}: ${installError.message}`, 'WARN')}
       }
@@ -266,7 +264,7 @@ class IntelligentErrorOrchestrator {
       this.log(`Found ${currentErrors.totalErrors} current errors`, 'INFO');
 
       // Prioritize errors
-      const prioritizedErrors = await this.prioritizeErrors({ checks: currentErrors.results });
+      const prioritizedErrors = await this.prioritizeErrors({ "checks": currentErrors.results });
       
       if (prioritizedErrors.length === 0) {
         this.log('No fixable errors found', 'INFO');
@@ -279,11 +277,11 @@ class IntelligentErrorOrchestrator {
       
       // Generate orchestration report
       const report = {
-        timestamp: new Date().toISOString(),
-        initialErrors: currentErrors.totalErrors,
-        prioritizedErrors: prioritizedErrors.length,
+        "timestamp": new Date().toISOString(),
+        "initialErrors": currentErrors.totalErrors,
+        "prioritizedErrors": prioritizedErrors.length,
         fixResults,
-        success: fixResults.some(result => result.success)
+        "success": fixResults.some(result => result.success)
       };
 
       // Save report
@@ -298,7 +296,7 @@ class IntelligentErrorOrchestrator {
       this.lastOrchestration = new Date();
       
       this.log(`Orchestration completed. Report saved to ${reportPath}`, 'INFO')} catch (error) {
-      this.log(`Orchestration failed: ${error.message}`, 'ERROR')}
+      this.log(`Orchestration "failed": ${error.message}`, 'ERROR')}
   }
 
   async startOrchestrator() {
@@ -311,18 +309,18 @@ class IntelligentErrorOrchestrator {
     setInterval(async () => {
       try {
         await this.runOrchestration()} catch (error) {
-        this.log(`Error in periodic orchestration: ${error.message}`, 'ERROR')}
+        this.log(`Error in periodic "orchestration": ${error.message}`, 'ERROR')}
     }, this.orchestrationInterval);
 
     this.log(`Intelligent error orchestrator started. Running every ${this.orchestrationInterval / 1000} seconds.`)}
 
   getStatus() {
     return {
-      running: true,
-      lastOrchestration: this.lastOrchestration,
-      fixHistory: this.fixHistory.length,
-      orchestrationInterval: this.orchestrationInterval,
-      intelligentFixingEnabled: this.intelligentFixingEnabled
+      "running": true,
+      "lastOrchestration": this.lastOrchestration,
+      "fixHistory": this.fixHistory.length,
+      "orchestrationInterval": this.orchestrationInterval,
+      "intelligentFixingEnabled": this.intelligentFixingEnabled
     }}
 }
 
@@ -341,7 +339,7 @@ if (require.main === module) {
 
   // Start orchestrator
   orchestrator.startOrchestrator().catch(error => {
-    orchestrator.log(`Failed to start orchestrator: ${error.message}`, 'ERROR');
+    orchestrator.log(`Failed to start "orchestrator": ${error.message}`, 'ERROR');
     process.exit(1)})}
 
 module.exports = IntelligentErrorOrchestrator;

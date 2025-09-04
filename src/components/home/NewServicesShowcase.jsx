@@ -19,7 +19,7 @@ import { Sparkles, Zap, TrendingUp, ArrowRight, Star, CheckCircle, Globe, Messag
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
             <Sparkles className="w-8 h-8 text-zion-cyan" />
-            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
+            <h2 className="text-3xl "md": text-4xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
               Revolutionary AI & Micro SAAS Services
             </h2>
             <Sparkles className="w-8 h-8 text-zion-cyan" />
@@ -32,9 +32,9 @@ import { Sparkles, Zap, TrendingUp, ArrowRight, Star, CheckCircle, Globe, Messag
         </div>
 
         {/* Featured Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {featuredServices.map((service, index) => (<Card key={service.id} className="group relative overflow-hidden border-0 bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate/50 backdrop-blur-sm hover:from-zion-blue-dark/70 hover:to-zion-slate/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-zion-purple/20" style="{{{ animationDelay: `${index * 200}}"ms` }}>
-              <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/5 to-zion-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {featuredServices.map((service, index) => (<Card key={service.id} className="group relative overflow-hidden border-0 bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate/50 backdrop-blur-sm "hover": from-zion-blue-dark/70 hover:to-zion-slate/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-zion-purple/20" style="{{{ animationDelay: `${index * 200}}"ms` }}>
+              <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/5 to-zion-cyan/5 opacity-0 group-"hover": opacity-100 transition-opacity duration-500"></div>
 
               <CardHeader className="relative z-10">
                 <div className="flex items-center justify-between mb-4">
@@ -47,7 +47,7 @@ import { Sparkles, Zap, TrendingUp, ArrowRight, Star, CheckCircle, Globe, Messag
                   </div>
                 </div>
 
-                <CardTitle className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
+                <CardTitle className="text-xl font-bold text-white mb-3 group-"hover": text-zion-cyan transition-colors">
                   {service.title}
                 </CardTitle>
 
@@ -67,7 +67,7 @@ import { Sparkles, Zap, TrendingUp, ArrowRight, Star, CheckCircle, Globe, Messag
                       </span>
                     </div>
                     <div className="text-sm text-zion-slate-light">
-                      Market: ${service.averageMarketPrice}
+                      "Market": ${service.averageMarketPrice}
                     </div>
                   </div>
                   <div className="text-right">
@@ -92,7 +92,7 @@ import { Sparkles, Zap, TrendingUp, ArrowRight, Star, CheckCircle, Globe, Messag
                 <div className="flex items-center justify-between text-sm">
                   <div className="flex items-center gap-2">
                     <Zap className="w-4 h-4 text-zion-cyan" />
-                    <span className="text-zion-slate-light">AI Score:</span>
+                    <span className="text-zion-slate-light">AI "Score": </span>
                     <span className="text-zion-cyan font-semibold">{service.aiScore}</span>
                   </div>
                   <div className="flex items-center gap-2">
@@ -102,10 +102,10 @@ import { Sparkles, Zap, TrendingUp, ArrowRight, Star, CheckCircle, Globe, Messag
                 </div>
 
                 {/* CTA Button */}
-                <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white group-hover:scale-105 transition-transform duration-300" asChild>
+                <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark "hover": from-zion-purple-light hover:to-zion-purple text-white group-hover:scale-105 transition-transform duration-300" asChild>
                   <Link to={service.contactLink}>
                     Get Started
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                    <ArrowRight className="w-4 h-4 ml-2 group-"hover": translate-x-1 transition-transform duration-300" />
                   </Link>
                 </Button>
               </CardContent>
@@ -113,15 +113,15 @@ import { Sparkles, Zap, TrendingUp, ArrowRight, Star, CheckCircle, Globe, Messag
         </div>
 
         {/* Category Overview */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {SERVICE_CATEGORIES.map((category, index) => (<div key={category.name} className="text-center p-6 rounded-lg bg-zion-blue-dark/30 border border-zion-blue-light/20 hover:border-zion-cyan/30 transition-all duration-300 hover:scale-105" style="{{{ animationDelay: `${index * 300}}"ms` }}>
+        <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-12">
+          {SERVICE_CATEGORIES.map((category, index) => (<div key={category.name} className="text-center p-6 rounded-lg bg-zion-blue-dark/30 border border-zion-blue-light/20 "hover": border-zion-cyan/30 transition-all duration-300 hover:scale-105" style="{{{ animationDelay: `${index * 300}}"ms` }}>
               <div className="text-4xl mb-4">{category.icon}</div>
               <h3 className="text-xl font-bold text-white mb-3">{category.name}</h3>
               <p className="text-zion-slate-light mb-4">{category.description}</p>
               <div className="text-2xl font-bold text-zion-cyan mb-2">
                 {category.services.length}+ Services
               </div>
-              <Button variant="outline" className="border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10" asChild>
+              <Button variant="outline" className="border-zion-cyan/30 text-zion-cyan "hover": bg-zion-cyan/10" asChild>
                 <Link to="/micro-saas-services">
                   Explore {category.name}
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -133,7 +133,7 @@ import { Sparkles, Zap, TrendingUp, ArrowRight, Star, CheckCircle, Globe, Messag
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-zion-blue-dark/50 to-zion-slate/50 rounded-2xl p-8 border border-zion-blue-light/20">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+            <h3 className="text-2xl "md": text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">

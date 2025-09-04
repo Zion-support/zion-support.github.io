@@ -2,7 +2,7 @@
 // Premium quality content with market-competitive pricing and comprehensive features
 
 export interface EnhancedService {
-  id: string;
+  "id": string;
   name: string;
   category: 'AI' | 'IT' | 'MicroSaaS' | 'Consulting' | 'Support';
   subcategory: string;
@@ -11,37 +11,37 @@ export interface EnhancedService {
   detailedDescription: string;
   pricing: {
     starter: { price: number; features: string[]; description: string };
-    professional: { price: number; features: string[]; description: string };
-    enterprise: { price: number; features: string[]; description: string };
+    "professional": { price: number; features: string[]; description: string };
+    "enterprise": { price: number; features: string[]; description: string };
   };
-  features: {
+  "features": {
     core: string[];
     advanced: string[];
     premium: string[];
   };
-  benefits: {
+  "benefits": {
     business: string[];
     technical: string[];
     financial: string[];
   };
-  useCases: {
+  "useCases": {
     title: string;
     description: string;
     industry: string;
   }[];
-  marketAnalysis: {
+  "marketAnalysis": {
     marketSize: string;
     growthRate: string;
     competitorPrice: string;
     ourAdvantage: string;
   };
-  roi: {
+  "roi": {
     timeToValue: string;
     averageROI: string;
     paybackPeriod: string;
     caseStudy: string;
   };
-  technical: {
+  "technical": {
     technologies: string[];
     integrations: string[];
     apis: string[];
@@ -50,7 +50,7 @@ export interface EnhancedService {
     scalability: string;
     uptime: string;
   };
-  support: {
+  "support": {
     availability: string;
     channels: string[];
     responseTime: string;
@@ -58,14 +58,14 @@ export interface EnhancedService {
     onboarding: string;
     training: string;
   };
-  testimonials: {
+  "testimonials": {
     client: string;
     role: string;
     company: string;
     quote: string;
     results: string;
   }[];
-  cta: {
+  "cta": {
     primary: string;
     secondary: string;
     demoAvailable: boolean;
@@ -73,20 +73,19 @@ export interface EnhancedService {
   };
 }
 
-export const enhancedServices2025: EnhancedService[] = [
-  {
+export const "enhancedServices2025": EnhancedService[] = [{
     id: 'ai-powered-crm',
-    name: 'AI-Powered CRM Suite',
-    category: 'AI',
-    subcategory: 'Customer Management',
-    tagline: 'Transform customer relationships with intelligent automation',
-    description: 'Revolutionary CRM platform that leverages advanced AI to predict customer behavior, automate sales processes, and maximize revenue growth.',
-    detailedDescription: 'Our AI-Powered CRM Suite represents the next generation of customer relationship management, combining traditional CRM functionality with cutting-edge artificial intelligence. The platform analyzes customer interactions, predicts buying patterns, and automates routine tasks, allowing your sales team to focus on building relationships and closing deals. With built-in machine learning algorithms, the system continuously improves its predictions and recommendations, ensuring your business stays ahead of market trends.',
-    pricing: {
+    "name": 'AI-Powered CRM Suite',
+    "category": 'AI',
+    "subcategory": 'Customer Management',
+    "tagline": 'Transform customer relationships with intelligent automation',
+    "description": 'Revolutionary CRM platform that leverages advanced AI to predict customer behavior, automate sales processes, and maximize revenue growth.',
+    "detailedDescription": 'Our AI-Powered CRM Suite represents the next generation of customer relationship management, combining traditional CRM functionality with cutting-edge artificial intelligence. The platform analyzes customer interactions, predicts buying patterns, and automates routine tasks, allowing your sales team to focus on building relationships and closing deals. With built-in machine learning algorithms, the system continuously improves its predictions and recommendations, ensuring your business stays ahead of market trends.',
+    "pricing": {
       starter: {
         price: 49,
-        description: 'Perfect for small teams and startups',
-        features: [
+        "description": 'Perfect for small teams and startups',
+        "features": [
           'Up to 1,000 contacts',
           'Basic AI insights',
           'Email integration',
@@ -95,11 +94,10 @@ export const enhancedServices2025: EnhancedService[] = [
           '24/7 email support'
         ]
       },
-      professional: {
+      "professional": {
         price: 149,
-        description: 'Ideal for growing businesses',
-        features: [
-          'Up to 10,000 contacts',
+        "description": 'Ideal for growing businesses',
+        "features": ['Up to 10,000 contacts',
           'Advanced AI predictions',
           'Multi-channel integration',
           'Custom workflows',
@@ -109,11 +107,10 @@ export const enhancedServices2025: EnhancedService[] = [
           'Custom fields'
         ]
       },
-      enterprise: {
+      "enterprise": {
         price: 349,
-        description: 'For large organizations',
-        features: [
-          'Unlimited contacts',
+        "description": 'For large organizations',
+        "features": ['Unlimited contacts',
           'Enterprise AI models',
           'Full system integration',
           'Custom development',
@@ -124,132 +121,123 @@ export const enhancedServices2025: EnhancedService[] = [
         ]
       }
     },
-    features: {
-      core: [
-        'Contact & lead management',
+    "features": {
+      core: ['Contact & lead management',
         'Sales pipeline tracking',
         'Email automation',
         'Task management',
         'Basic reporting'
       ],
-      advanced: [
-        'AI-powered lead scoring',
+      "advanced": ['AI-powered lead scoring',
         'Predictive analytics',
         'Automated follow-ups',
         'Integration hub',
         'Advanced reporting'
       ],
-      premium: [
-        'Custom AI models',
+      "premium": ['Custom AI models',
         'Real-time insights',
         'Advanced automation',
         'Enterprise integrations',
         'Custom development'
       ]
     },
-    benefits: {
-      business: [
-        'Increase sales conversion by 35%',
+    "benefits": {
+      business: ['Increase sales conversion by 35%',
         'Reduce manual data entry by 80%',
         'Improve customer retention by 25%',
         'Accelerate sales cycle by 40%'
       ],
-      technical: [
-        'Cloud-native architecture',
+      "technical": ['Cloud-native architecture',
         'Real-time data processing',
         'Scalable infrastructure',
         'Enterprise-grade security'
       ],
-      financial: [
-        'ROI within 3 months',
+      "financial": ['ROI within 3 months',
         'Reduce operational costs by 30%',
         'Increase revenue per customer by 20%',
         'Lower customer acquisition cost'
       ]
     },
-    useCases: [
-      {
+    "useCases": [{
         title: 'E-commerce Growth',
-        description: 'Predict customer lifetime value and optimize marketing spend',
-        industry: 'Retail'
+        "description": 'Predict customer lifetime value and optimize marketing spend',
+        "industry": 'Retail'
       },
       {
-        title: 'B2B Sales Acceleration',
-        description: 'Automate lead qualification and prioritize high-value prospects',
-        industry: 'Technology'
+        "title": 'B2B Sales Acceleration',
+        "description": 'Automate lead qualification and prioritize high-value prospects',
+        "industry": 'Technology'
       },
       {
-        title: 'Customer Success',
-        description: 'Identify at-risk customers and proactively prevent churn',
-        industry: 'SaaS'
+        "title": 'Customer Success',
+        "description": 'Identify at-risk customers and proactively prevent churn',
+        "industry": 'SaaS'
       }
     ],
-    marketAnalysis: {
+    "marketAnalysis": {
       marketSize: '$69.8B CRM market by 2028',
-      growthRate: '12.1% CAGR',
-      competitorPrice: '$75-$200/user/month',
-      ourAdvantage: '40% more affordable with superior AI capabilities'
+      "growthRate": '12.1% CAGR',
+      "competitorPrice": '$75-$200/user/month',
+      "ourAdvantage": '40% more affordable with superior AI capabilities'
     },
-    roi: {
+    "roi": {
       timeToValue: '2-4 weeks',
-      averageROI: '312% in first year',
-      paybackPeriod: '3.8 months',
-      caseStudy: 'TechCorp increased sales by 45% in 6 months'
+      "averageROI": '312% in first year',
+      "paybackPeriod": '3.8 months',
+      "caseStudy": 'TechCorp increased sales by 45% in 6 months'
     },
-    technical: {
+    "technical": {
       technologies: ['Machine Learning', 'Natural Language Processing', 'Cloud Computing', 'REST APIs'],
-      integrations: ['Salesforce', 'HubSpot', 'Slack', 'Microsoft 365', 'Google Workspace'],
-      apis: ['REST API', 'GraphQL', 'Webhooks', 'SDK'],
-      security: ['SOC 2 Type II', 'GDPR Compliant', 'ISO 27001', 'End-to-end Encryption'],
-      compliance: ['GDPR', 'CCPA', 'HIPAA', 'SOX'],
-      scalability: 'Auto-scaling infrastructure supports 100M+ records',
-      uptime: '99.9% SLA with 24/7 monitoring'
+      "integrations": ['Salesforce', 'HubSpot', 'Slack', 'Microsoft 365', 'Google Workspace'],
+      "apis": ['REST API', 'GraphQL', 'Webhooks', 'SDK'],
+      "security": ['SOC 2 Type II', 'GDPR Compliant', 'ISO 27001', 'End-to-end Encryption'],
+      "compliance": ['GDPR', 'CCPA', 'HIPAA', 'SOX'],
+      "scalability": 'Auto-scaling infrastructure supports 100M+ records',
+      "uptime": '99.9% SLA with 24/7 monitoring'
     },
-    support: {
+    "support": {
       availability: '24/7/365',
-      channels: ['Phone', 'Chat', 'Email', 'Video Call', 'Knowledge Base'],
-      responseTime: '< 1 hour for critical issues',
-      sla: '99.9% uptime guarantee',
-      onboarding: 'Dedicated onboarding specialist and 30-day implementation plan',
-      training: 'Live training sessions, video tutorials, and certification program'
+      "channels": ['Phone', 'Chat', 'Email', 'Video Call', 'Knowledge Base'],
+      "responseTime": '< 1 hour for critical issues',
+      "sla": '99.9% uptime guarantee',
+      "onboarding": 'Dedicated onboarding specialist and 30-day implementation plan',
+      "training": 'Live training sessions, video tutorials, and certification program'
     },
-    testimonials: [
-      {
+    "testimonials": [{
         client: 'Sarah Johnson',
-        role: 'VP of Sales',
-        company: 'GrowthTech Inc.',
-        quote: 'This AI CRM transformed our sales process. We closed 40% more deals in the first quarter.',
-        results: '40% increase in closed deals, 60% reduction in admin time'
+        "role": 'VP of Sales',
+        "company": 'GrowthTech Inc.',
+        "quote": 'This AI CRM transformed our sales process. We closed 40% more deals in the first quarter.',
+        "results": '40% increase in closed deals, 60% reduction in admin time'
       },
       {
-        client: 'Michael Chen',
-        role: 'CEO',
-        company: 'StartupXYZ',
-        quote: 'The predictive insights helped us focus on the right customers at the right time.',
-        results: '25% improvement in customer retention, $2M additional revenue'
+        "client": 'Michael Chen',
+        "role": 'CEO',
+        "company": 'StartupXYZ',
+        "quote": 'The predictive insights helped us focus on the right customers at the right time.',
+        "results": '25% improvement in customer retention, $2M additional revenue'
       }
     ],
-    cta: {
+    "cta": {
       primary: 'Start Free Trial',
-      secondary: 'Schedule Demo',
-      demoAvailable: true,
-      freeTrialDays: 14
+      "secondary": 'Schedule Demo',
+      "demoAvailable": true,
+      "freeTrialDays": 14
     }
   },
   {
-    id: 'cloud-infrastructure-management',
-    name: 'Enterprise Cloud Infrastructure Management',
-    category: 'IT',
-    subcategory: 'Cloud Services',
-    tagline: 'Optimize, secure, and scale your cloud infrastructure',
-    description: 'Comprehensive cloud management platform that reduces costs by 40%, improves security, and ensures 99.99% uptime across multi-cloud environments.',
-    detailedDescription: 'Our Enterprise Cloud Infrastructure Management service provides end-to-end cloud optimization, monitoring, and management across AWS, Azure, Google Cloud, and hybrid environments. Using advanced automation and AI-driven insights, we help organizations reduce cloud costs, improve performance, and maintain security compliance while scaling efficiently.',
-    pricing: {
+    "id": 'cloud-infrastructure-management',
+    "name": 'Enterprise Cloud Infrastructure Management',
+    "category": 'IT',
+    "subcategory": 'Cloud Services',
+    "tagline": 'Optimize, secure, and scale your cloud infrastructure',
+    "description": 'Comprehensive cloud management platform that reduces costs by 40%, improves security, and ensures 99.99% uptime across multi-cloud environments.',
+    "detailedDescription": 'Our Enterprise Cloud Infrastructure Management service provides end-to-end cloud optimization, monitoring, and management across AWS, Azure, Google Cloud, and hybrid environments. Using advanced automation and AI-driven insights, we help organizations reduce cloud costs, improve performance, and maintain security compliance while scaling efficiently.',
+    "pricing": {
       starter: {
         price: 299,
-        description: 'For small to medium cloud deployments',
-        features: [
-          'Up to 50 cloud resources',
+        "description": 'For small to medium cloud deployments',
+        "features": ['Up to 50 cloud resources',
           'Basic monitoring & alerts',
           'Cost optimization reports',
           'Security scanning',
@@ -257,11 +245,10 @@ export const enhancedServices2025: EnhancedService[] = [
           'Monthly reviews'
         ]
       },
-      professional: {
+      "professional": {
         price: 899,
-        description: 'For growing cloud infrastructure',
-        features: [
-          'Up to 500 cloud resources',
+        "description": 'For growing cloud infrastructure',
+        "features": ['Up to 500 cloud resources',
           'Advanced monitoring & automation',
           'Real-time cost optimization',
           'Compliance management',
@@ -271,11 +258,10 @@ export const enhancedServices2025: EnhancedService[] = [
           'Multi-cloud support'
         ]
       },
-      enterprise: {
+      "enterprise": {
         price: 2499,
-        description: 'For large-scale enterprise deployments',
-        features: [
-          'Unlimited cloud resources',
+        "description": 'For large-scale enterprise deployments',
+        "features": ['Unlimited cloud resources',
           'Enterprise automation suite',
           'AI-powered optimization',
           'Full compliance suite',
@@ -286,132 +272,123 @@ export const enhancedServices2025: EnhancedService[] = [
         ]
       }
     },
-    features: {
-      core: [
-        'Multi-cloud monitoring',
+    "features": {
+      core: ['Multi-cloud monitoring',
         'Cost tracking & alerts',
         'Resource optimization',
         'Security scanning',
         'Performance monitoring'
       ],
-      advanced: [
-        'Automated scaling',
+      "advanced": ['Automated scaling',
         'Compliance monitoring',
         'Custom alerting',
         'Integration management',
         'Advanced analytics'
       ],
-      premium: [
-        'AI-powered optimization',
+      "premium": ['AI-powered optimization',
         'Custom automation',
         'Enterprise integrations',
         'Dedicated support',
         'Custom development'
       ]
     },
-    benefits: {
-      business: [
-        'Reduce cloud costs by 40%',
+    "benefits": {
+      business: ['Reduce cloud costs by 40%',
         'Improve system reliability by 99.99%',
         'Accelerate deployment by 60%',
         'Enhance security posture'
       ],
-      technical: [
-        'Multi-cloud compatibility',
+      "technical": ['Multi-cloud compatibility',
         'Automated resource management',
         'Real-time monitoring',
         'Advanced security controls'
       ],
-      financial: [
-        'Average savings of $50K/month',
+      "financial": ['Average savings of $50K/month',
         'ROI within 2 months',
         'Reduce operational overhead by 50%',
         'Eliminate cost overruns'
       ]
     },
-    useCases: [
-      {
+    "useCases": [{
         title: 'Digital Transformation',
-        description: 'Migrate legacy systems to cloud with zero downtime',
-        industry: 'Financial Services'
+        "description": 'Migrate legacy systems to cloud with zero downtime',
+        "industry": 'Financial Services'
       },
       {
-        title: 'Startup Scaling',
-        description: 'Auto-scale infrastructure based on demand patterns',
-        industry: 'Technology'
+        "title": 'Startup Scaling',
+        "description": 'Auto-scale infrastructure based on demand patterns',
+        "industry": 'Technology'
       },
       {
-        title: 'Compliance Management',
-        description: 'Maintain regulatory compliance across cloud environments',
-        industry: 'Healthcare'
+        "title": 'Compliance Management',
+        "description": 'Maintain regulatory compliance across cloud environments',
+        "industry": 'Healthcare'
       }
     ],
-    marketAnalysis: {
+    "marketAnalysis": {
       marketSize: '$832B cloud market by 2025',
-      growthRate: '17.9% CAGR',
-      competitorPrice: '$500-$5000/month',
-      ourAdvantage: 'Comprehensive solution at 50% lower cost'
+      "growthRate": '17.9% CAGR',
+      "competitorPrice": '$500-$5000/month',
+      "ourAdvantage": 'Comprehensive solution at 50% lower cost'
     },
-    roi: {
+    "roi": {
       timeToValue: '1-2 weeks',
-      averageROI: '450% in first year',
-      paybackPeriod: '2.1 months',
-      caseStudy: 'FinanceCorpXYZ saved $120K annually'
+      "averageROI": '450% in first year',
+      "paybackPeriod": '2.1 months',
+      "caseStudy": 'FinanceCorpXYZ saved $120K annually'
     },
-    technical: {
+    "technical": {
       technologies: ['Kubernetes', 'Terraform', 'Docker', 'Prometheus', 'Grafana'],
-      integrations: ['AWS', 'Azure', 'Google Cloud', 'VMware', 'OpenStack'],
-      apis: ['REST API', 'GraphQL', 'CLI Tools', 'SDK'],
-      security: ['Zero Trust Architecture', 'Multi-factor Authentication', 'Encryption at Rest/Transit'],
-      compliance: ['SOC 2', 'ISO 27001', 'PCI DSS', 'HIPAA'],
-      scalability: 'Supports infrastructure from startup to enterprise scale',
-      uptime: '99.99% SLA with automated failover'
+      "integrations": ['AWS', 'Azure', 'Google Cloud', 'VMware', 'OpenStack'],
+      "apis": ['REST API', 'GraphQL', 'CLI Tools', 'SDK'],
+      "security": ['Zero Trust Architecture', 'Multi-factor Authentication', 'Encryption at Rest/Transit'],
+      "compliance": ['SOC 2', 'ISO 27001', 'PCI DSS', 'HIPAA'],
+      "scalability": 'Supports infrastructure from startup to enterprise scale',
+      "uptime": '99.99% SLA with automated failover'
     },
-    support: {
+    "support": {
       availability: '24/7 for Enterprise, Business hours for others',
-      channels: ['Phone', 'Chat', 'Email', 'Slack Integration'],
-      responseTime: '< 15 minutes for critical issues',
-      sla: '99.99% uptime with financial penalties',
-      onboarding: 'Cloud architect consultation and migration planning',
-      training: 'Cloud certification programs and best practices workshops'
+      "channels": ['Phone', 'Chat', 'Email', 'Slack Integration'],
+      "responseTime": '< 15 minutes for critical issues',
+      "sla": '99.99% uptime with financial penalties',
+      "onboarding": 'Cloud architect consultation and migration planning',
+      "training": 'Cloud certification programs and best practices workshops'
     },
-    testimonials: [
-      {
+    "testimonials": [{
         client: 'David Rodriguez',
-        role: 'CTO',
-        company: 'FinTech Solutions',
-        quote: 'Reduced our cloud costs by 45% while improving performance. Outstanding service.',
-        results: '45% cost reduction, 99.99% uptime achieved'
+        "role": 'CTO',
+        "company": 'FinTech Solutions',
+        "quote": 'Reduced our cloud costs by 45% while improving performance. Outstanding service.',
+        "results": '45% cost reduction, 99.99% uptime achieved'
       },
       {
-        client: 'Lisa Wang',
-        role: 'Infrastructure Manager',
-        company: 'E-commerce Giant',
-        quote: 'The automated scaling saved us during Black Friday traffic spikes.',
-        results: 'Handled 10x traffic spike, zero downtime'
+        "client": 'Lisa Wang',
+        "role": 'Infrastructure Manager',
+        "company": 'E-commerce Giant',
+        "quote": 'The automated scaling saved us during Black Friday traffic spikes.',
+        "results": 'Handled 10x traffic spike, zero downtime'
       }
     ],
-    cta: {
+    "cta": {
       primary: 'Get Free Assessment',
-      secondary: 'Schedule Consultation',
-      demoAvailable: true,
-      freeTrialDays: 30
+      "secondary": 'Schedule Consultation',
+      "demoAvailable": true,
+      "freeTrialDays": 30
     }
   },
   {
-    id: 'ai-content-generator',
-    name: 'AI Content Generation Platform',
-    category: 'MicroSaaS',
-    subcategory: 'Content Creation',
-    tagline: 'Generate high-quality content at scale with AI',
-    description: 'Advanced AI platform that creates blog posts, social media content, marketing copy, and technical documentation 10x faster than traditional methods.',
-    detailedDescription: 'Our AI Content Generation Platform leverages state-of-the-art natural language processing to create human-quality content across multiple formats and industries. From blog posts and social media content to technical documentation and marketing copy, our platform helps businesses maintain consistent, high-quality content output while reducing costs and time-to-market.',
-    pricing: {
+    "id": 'ai-content-generator',
+    "name": 'AI Content Generation Platform',
+    "category": 'MicroSaaS',
+    "subcategory": 'Content Creation',
+    "tagline": 'Generate high-quality content at scale with AI',
+    "description": 'Advanced AI platform that creates blog posts, social media content, marketing copy, and technical documentation 10x faster than traditional methods.',
+    "detailedDescription": 'Our AI Content Generation Platform leverages state-of-the-art natural language processing to create human-quality content across multiple formats and industries. From blog posts and social media content to technical documentation and marketing copy, our platform helps businesses maintain consistent, high-quality content output while reducing costs and time-to-market.',
+    "pricing": {
       starter: {
         price: 29,
-        description: 'Perfect for individual creators and small businesses',
-        features: [
-          '50,000 words/month',
+        "description": 'Perfect for individual creators and small businesses',
+        "features": ['50,000 words/month',
           '10+ content templates',
           'Basic SEO optimization',
           'Plagiarism checker',
@@ -419,11 +396,10 @@ export const enhancedServices2025: EnhancedService[] = [
           'Export to multiple formats'
         ]
       },
-      professional: {
+      "professional": {
         price: 89,
-        description: 'Ideal for marketing teams and agencies',
-        features: [
-          '200,000 words/month',
+        "description": 'Ideal for marketing teams and agencies',
+        "features": ['200,000 words/month',
           '50+ content templates',
           'Advanced SEO tools',
           'Brand voice training',
@@ -433,11 +409,10 @@ export const enhancedServices2025: EnhancedService[] = [
           'Custom templates'
         ]
       },
-      enterprise: {
+      "enterprise": {
         price: 299,
-        description: 'For large organizations and publishers',
-        features: [
-          'Unlimited words',
+        "description": 'For large organizations and publishers',
+        "features": ['Unlimited words',
           'Custom AI models',
           'White-label solution',
           'Advanced integrations',
@@ -448,136 +423,127 @@ export const enhancedServices2025: EnhancedService[] = [
         ]
       }
     },
-    features: {
-      core: [
-        'Blog post generation',
+    "features": {
+      core: ['Blog post generation',
         'Social media content',
         'Email templates',
         'Product descriptions',
         'SEO optimization'
       ],
-      advanced: [
-        'Brand voice matching',
+      "advanced": ['Brand voice matching',
         'Multi-language support',
         'Content scheduling',
         'Performance analytics',
         'Team collaboration'
       ],
-      premium: [
-        'Custom AI training',
+      "premium": ['Custom AI training',
         'Advanced integrations',
         'White-label options',
         'Enterprise security',
         'Dedicated support'
       ]
     },
-    benefits: {
-      business: [
-        'Reduce content creation time by 90%',
+    "benefits": {
+      business: ['Reduce content creation time by 90%',
         'Increase content output by 500%',
         'Improve SEO rankings by 40%',
         'Lower content costs by 70%'
       ],
-      technical: [
-        'Advanced NLP models',
+      "technical": ['Advanced NLP models',
         'Real-time generation',
         'Multi-format output',
         'API integration'
       ],
-      financial: [
-        'Save $10K+ per month on writers',
+      "financial": ['Save $10K+ per month on writers',
         'ROI within 1 month',
         'Increase traffic by 300%',
         'Reduce agency costs by 80%'
       ]
     },
-    useCases: [
-      {
+    "useCases": [{
         title: 'Content Marketing',
-        description: 'Scale blog content production for better SEO results',
-        industry: 'Digital Marketing'
+        "description": 'Scale blog content production for better SEO results',
+        "industry": 'Digital Marketing'
       },
       {
-        title: 'E-commerce',
-        description: 'Generate product descriptions and marketing copy at scale',
-        industry: 'Retail'
+        "title": 'E-commerce',
+        "description": 'Generate product descriptions and marketing copy at scale',
+        "industry": 'Retail'
       },
       {
-        title: 'Social Media Management',
-        description: 'Create engaging social media content across platforms',
-        industry: 'Media & Entertainment'
+        "title": 'Social Media Management',
+        "description": 'Create engaging social media content across platforms',
+        "industry": 'Media & Entertainment'
       }
     ],
-    marketAnalysis: {
+    "marketAnalysis": {
       marketSize: '$15.7B content marketing by 2026',
-      growthRate: '16.2% CAGR',
-      competitorPrice: '$50-$500/month',
-      ourAdvantage: 'Superior AI quality at competitive pricing'
+      "growthRate": '16.2% CAGR',
+      "competitorPrice": '$50-$500/month',
+      "ourAdvantage": 'Superior AI quality at competitive pricing'
     },
-    roi: {
+    "roi": {
       timeToValue: '1 week',
-      averageROI: '800% in first year',
-      paybackPeriod: '1.5 months',
-      caseStudy: 'MarketingPro increased content output by 600%'
+      "averageROI": '800% in first year',
+      "paybackPeriod": '1.5 months',
+      "caseStudy": 'MarketingPro increased content output by 600%'
     },
-    technical: {
+    "technical": {
       technologies: ['GPT-4', 'BERT', 'Transformer Models', 'Natural Language Processing'],
-      integrations: ['WordPress', 'Shopify', 'HubSpot', 'Buffer', 'Hootsuite'],
-      apis: ['REST API', 'Webhooks', 'SDK', 'Chrome Extension'],
-      security: ['SOC 2 Compliant', 'Data Encryption', 'Privacy Controls'],
-      compliance: ['GDPR', 'CCPA', 'Content Guidelines'],
-      scalability: 'Handles millions of content requests per month',
-      uptime: '99.9% availability with global CDN'
+      "integrations": ['WordPress', 'Shopify', 'HubSpot', 'Buffer', 'Hootsuite'],
+      "apis": ['REST API', 'Webhooks', 'SDK', 'Chrome Extension'],
+      "security": ['SOC 2 Compliant', 'Data Encryption', 'Privacy Controls'],
+      "compliance": ['GDPR', 'CCPA', 'Content Guidelines'],
+      "scalability": 'Handles millions of content requests per month',
+      "uptime": '99.9% availability with global CDN'
     },
-    support: {
+    "support": {
       availability: '24/7 chat support',
-      channels: ['Live Chat', 'Email', 'Video Tutorials', 'Community Forum'],
-      responseTime: '< 2 hours average response',
-      sla: '99.9% uptime guarantee',
-      onboarding: 'Guided setup and content strategy consultation',
-      training: 'Video library, webinars, and best practices guide'
+      "channels": ['Live Chat', 'Email', 'Video Tutorials', 'Community Forum'],
+      "responseTime": '< 2 hours average response',
+      "sla": '99.9% uptime guarantee',
+      "onboarding": 'Guided setup and content strategy consultation',
+      "training": 'Video library, webinars, and best practices guide'
     },
-    testimonials: [
-      {
+    "testimonials": [{
         client: 'Jennifer Smith',
-        role: 'Content Manager',
-        company: 'Digital Agency Pro',
-        quote: 'This platform revolutionized our content production. We now publish 5x more content.',
-        results: '500% increase in content output, 40% improvement in SEO rankings'
+        "role": 'Content Manager',
+        "company": 'Digital Agency Pro',
+        "quote": 'This platform revolutionized our content production. We now publish 5x more content.',
+        "results": '500% increase in content output, 40% improvement in SEO rankings'
       },
       {
-        client: 'Alex Thompson',
-        role: 'Marketing Director',
-        company: 'E-comm Solutions',
-        quote: 'Generated 10,000 product descriptions in a week. Incredible time savings.',
-        results: 'Saved 200 hours per month, increased conversion by 25%'
+        "client": 'Alex Thompson',
+        "role": 'Marketing Director',
+        "company": 'E-comm Solutions',
+        "quote": 'Generated 10,000 product descriptions in a week. Incredible time savings.',
+        "results": 'Saved 200 hours per month, increased conversion by 25%'
       }
     ],
-    cta: {
+    "cta": {
       primary: 'Start Free Trial',
-      secondary: 'See Examples',
-      demoAvailable: true,
-      freeTrialDays: 7
+      "secondary": 'See Examples',
+      "demoAvailable": true,
+      "freeTrialDays": 7
     }
   };
 ];
 
 // Contact information
 export const zionContactInfo = {
-  phone: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  website: 'https://ziontechgroup.com',
-  address: '364 E Main St STE 1008, Middletown DE 19709'
-};;
+  "phone": '+1 302 464 0950',
+  "email": 'kleber@ziontechgroup.com',
+  "website": 'https://ziontechgroup.com',
+  "address": '364 E Main St STE 1008, Middletown DE 19709'
+};
 
 // Service categories for filtering
-export const serviceCategories = [
-  { id: 'all', name: 'All Services', count: enhancedServices2025.length },
-  { id: 'ai', name: 'AI Services', count: enhancedServices2025.filter(s => s.category === 'AI').length },
-  { id: 'it', name: 'IT Services', count: enhancedServices2025.filter(s => s.category === 'IT').length },
-  { id: 'microsaas', name: 'Micro SaaS', count: enhancedServices2025.filter(s => s.category === 'MicroSaaS').length },
-  { id: 'consulting', name: 'Consulting', count: enhancedServices2025.filter(s => s.category === 'Consulting').length },
-  { id: 'support', name: 'Support', count: enhancedServices2025.filter(s => s.category === 'Support').length };
+export const serviceCategories = [{ "id": 'all', "name": 'All Services', "count": enhancedServices2025.length },
+  { "id": 'ai', "name": 'AI Services', "count": enhancedServices2025.filter(s => s.category === 'AI').length },
+  { "id": 'it', "name": 'IT Services', "count": enhancedServices2025.filter(s => s.category === 'IT').length },
+  { "id": 'microsaas', "name": 'Micro SaaS', "count": enhancedServices2025.filter(s => s.category === 'MicroSaaS').length },
+  { "id": 'consulting', "name": 'Consulting', "count": enhancedServices2025.filter(s => s.category === 'Consulting').length },
+  { "id": 'support', "name": 'Support', "count": enhancedServices2025.filter(s => s.category === 'Support').length };
 ];
 
 export default enhancedServices2025;

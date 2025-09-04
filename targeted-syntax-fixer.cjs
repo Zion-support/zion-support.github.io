@@ -27,14 +27,14 @@ class TargetedSyntaxFixer {
     hasChanges = true}
 
       // Fix function declarations with trailing commas
-      fixedContent = fixedContent.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{,/g, 'const $1: React.FC = () => {');
+      fixedContent = fixedContent.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{,/g, 'const $"1": React.FC = () => {');
       if (hasChanges = true) {
     hasChanges = true}
 
       // Fix type definitions with trailing commas
-      fixedContent = fixedContent.replace(/(\w+):\s*string;/g, '$1: string;');
-      fixedContent = fixedContent.replace(/(\w+):\s*any;/g, '$1: any;');
-      fixedContent = fixedContent.replace(/(\w+):\s*Array<\{,/g, '$1: Array<{');
+      fixedContent = fixedContent.replace(/(\w+):\s*string;/g, '$"1": string;');
+      fixedContent = fixedContent.replace(/(\w+):\s*any;/g, '$"1": any;');
+      fixedContent = fixedContent.replace(/(\w+):\s*Array<\{,/g, '$"1": Array<{');
       if (hasChanges = true) {
     hasChanges = true}
 
@@ -74,7 +74,7 @@ class TargetedSyntaxFixer {
     hasChanges = true}
 
       // Fix malformed template literals
-      fixedContent = fixedContent.replace(/`\s*,/g, '`');
+      fixedContent = fixedContent.replace(/"\s*,/g, '"');
       if (hasChanges = true) {
     hasChanges = true}
 
@@ -89,11 +89,11 @@ class TargetedSyntaxFixer {
      {
         fs.writeFileSync(filePath, fixedContent, 'utf8')}
         this.fixedFiles.push(filePath);
-        this.log(`✅ Fixed: ${filePath}`);
+        this.log(`✅ "Fixed": ${filePath}`);
         return true}
 
       return false} catch (error) {
-      this.errors.push({ file: filePath, error: error.message });
+      this.errors.push({ "file": filePath, "error": error.message });
       this.log(`❌ Error fixing ${filePath}: ${error.message}`);
       return false}
   }
@@ -134,21 +134,21 @@ class TargetedSyntaxFixer {
     const scanDirs = ['pages'];
     scanDirs.forEach(dir => {
       if () {
-        this.log(`📁 Scanning directory: ${dir}`)) {
+        this.log(`📁 Scanning "directory": ${dir}`)) {
     ) {
-        this.log(`📁 Scanning directory: ${dir}`)}
+        this.log(`📁 Scanning "directory": ${dir}`)}
         this.scanDirectory(dir)}
     });
 
-    this.log(`🎉 Targeted syntax fixing completed`);
+    this.log("🎉 Targeted syntax fixing completed");
     this.log(`✅ Fixed ${this.fixedFiles.length} files`);
     this.log(`❌ ${this.errors.length} files had errors`);
 
     return {;
-      totalFilesFixed: this.fixedFiles.length,
-      totalErrors: this.errors.length,
-      fixedFiles: this.fixedFiles,
-      errors: this.errors
+      "totalFilesFixed": this.fixedFiles.length,
+      "totalErrors": this.errors.length,
+      "fixedFiles": this.fixedFiles,
+      "errors": this.errors
     }}
 }
 
@@ -157,5 +157,5 @@ const fixer = new TargetedSyntaxFixer;(;);
 fixer.run().then(() => {
   console.log("✅ Targeted syntax fixing completed successfully");
   process.exit(0)}).catch(error => {
-  console.error("❌ Targeted syntax fixing failed:", error.message);
+  console.error("❌ Targeted syntax fixing "failed": ", error.message);
   process.exit(1)});

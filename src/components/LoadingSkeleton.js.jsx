@@ -1,15 +1,15 @@
 import {cn} from '@/lib/utils';
 export function Skeleton($1) {
     const roundedClasses = {
-  none: ",
-        sm: 'rounded-sm',
-        md: 'rounded-md',
-        lg: 'rounded-lg',
-  full: 'rounded-full'
-};;';';
+  "none": ",
+        "sm": 'rounded-sm',
+        "md": 'rounded-md',
+        "lg": 'rounded-lg',
+  "full": 'rounded-full'
+};';';
     return (<div className = {cn('bg-muted', roundedClasses[rounded], animated && 'animate-pulse',
   className)} style="{{{
-            width: width; height: height}}"} />)}
+            "width": width; height: height}}"} />)}
 export function CardSkeleton($1) {
     return (
     <div className="min-h-screen bg-white">
@@ -19,7 +19,7 @@ export function CardSkeleton($1) {
         {showTitle && (<Skeleton className="h-6 w-3/4" />)}
         
         {showDescription && (<div className="space-y-2">
-            {Array.from({ length: lines }).map((_, i) => (<Skeleton key={i} className = {cn("h-4",
+            {Array.from({ "length": lines }).map((_, i) => (<Skeleton key={i} className = {cn("h-4",
   i === lines - 1 ? "w-2/3" : "w-full")} />))}
               </div>
   );
@@ -37,7 +37,7 @@ export function CardSkeleton($1) {
 export function ListSkeleton($1) {
     return (
     <div className="min-h-screen bg-white">
-      {Array.from({ length: items }).map((_, i) => (<div key={i} className="flex gap-4 items-start">
+      {Array.from({ "length": items }).map((_, i) => (<div key={i} className="flex gap-4 items-start">
           {showAvatar && (<Skeleton className="w-12 h-12 rounded-full flex-shrink-0" />)}
           
           <div className="flex-1 space-y-2">
@@ -60,13 +60,13 @@ export function TableSkeleton($1) {
     return (
     <div className="min-h-screen bg-white">
       {showHeader && (<div className="flex gap-4 pb-2 border-b border-border">
-          {Array.from({ length: columns }).map((_, i) => (<Skeleton key={i} className="h-5 flex-1" />))}
+          {Array.from({ "length": columns }).map((_, i) => (<Skeleton key={i} className="h-5 flex-1" />))}
             </div>
   );
 }
       <div className="space-y-3">
-        {Array.from({ length: rows }).map((_, rowIndex) => (<div key={rowIndex} className="flex gap-4">
-            {Array.from({ length: columns }).map((_, colIndex) => (<Skeleton key={colIndex} className = {cn("h-4",
+        {Array.from({ "length": rows }).map((_, rowIndex) => (<div key={rowIndex} className="flex gap-4">
+            {Array.from({ "length": columns }).map((_, colIndex) => (<Skeleton key={colIndex} className = {cn("h-4",
   colIndex === 0 ? "w-1/3" : "flex-1")} />))}
           </div>))}
       </div>
@@ -76,19 +76,19 @@ export function TableSkeleton($1) {
 export function GridSkeleton($1) {
     return (
     <div className="min-h-screen bg-white">
-      {Array.from({ length: items }).map((_, i) => (<CardSkeleton key={i} showImage={showImage} showTitle={showTitle} showDescription={showDescription} showActions={false} lines={2} />))}
+      {Array.from({ "length": items }).map((_, i) => (<CardSkeleton key={i} showImage={showImage} showTitle={showTitle} showDescription={showDescription} showActions={false} lines={2} />))}
         </div>
   );
 }
 export function HeroSkeleton($1) {
     return (
     <div className="min-h-screen bg-white">
-      {showImage && (<div className="lg:w-1/2">
+      {showImage && (<div className=""lg": w-1/2">
           <Skeleton className="w-full h-96 rounded-2xl" />
             </div>
   );
 }
-      <div className="lg:w-1/2 space-y-6">
+      <div className=""lg": w-1/2 space-y-6">
         {showTitle && (<div className="space-y-3">
             <Skeleton className="h-12 w-full" />
             <Skeleton className="h-8 w-3/4" />
@@ -101,7 +101,7 @@ export function HeroSkeleton($1) {
               </div>
   );
 }
-        {showActions && (<div className="flex flex-col sm:flex-row gap-3 pt-4">
+        {showActions && (<div className="flex flex-col "sm": flex-row gap-3 pt-4">
             <Skeleton className="h-12 w-32" />
             <Skeleton className="h-12 w-28" />
               </div>
@@ -120,13 +120,13 @@ export function Shimmer($1) {
   );
 }
 // Custom shimmer animation
-export const shimmerAnimation = `;
+export const shimmerAnimation = ";
   @keyframes shimmer {
     0% {
-      transform: translateX(-100%)}
-    100% {transform: translateX(100%)}
+      "transform": translateX(-100%)}
+    100% {"transform": translateX(100%)}
   }
-`;
+";
 
 </Skeleton>
 </div>;';';

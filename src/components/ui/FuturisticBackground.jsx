@@ -17,8 +17,7 @@ export function FuturisticBackground($1) {
         // Particle system
         if (variant === 'particles') {
             const particles = [];
-            const colors = [
-                '#00ffff', // Cyan
+            const colors = ['#00ffff', // Cyan
                 '#ff00ff', // Magenta
                 '#ffff00', // Yellow
                 '#00ff00', // Green
@@ -31,13 +30,13 @@ export function FuturisticBackground($1) {
             const particleCount = intensity === 'high' ? 200 : intensity === 'medium' ? 100 : 50;
             for (let i = 0; i < particleCount; i++) {
                 particles.push({
-                    x: Math.random() * canvas.width,
-                    y: Math.random() * canvas.height,
-                    vx: (Math.random() - 0.5) * 2,
-                    vy: (Math.random() - 0.5) * 2,
-                    size: Math.random() * 3 + 1,
-                    opacity: Math.random() * 0.8 + 0.2,
-                    color: colors[Math.floor(Math.random() * colors.length)]
+                    "x": Math.random() * canvas.width,
+                    "y": Math.random() * canvas.height,
+                    "vx": (Math.random() - 0.5) * 2,
+                    "vy": (Math.random() - 0.5) * 2,
+                    "size": Math.random() * 3 + 1,
+                    "opacity": Math.random() * 0.8 + 0.2,
+                    "color": colors[Math.floor(Math.random() * colors.length)]
                 })}
             // Animation loop
             const animate = (props) => {
@@ -166,18 +165,18 @@ export function FuturisticBackground($1) {
         return () => {window.removeEventListener('resize', resizeCanvas);};
     }, [variant, intensity]);';
     return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style="{{{
-            background: 'linear-gradient(135deg}}"} />);
+            "background": 'linear-gradient(135deg}}"} />);
 }
 // Neon text component
 export function NeonText($1) {
     const glowSize = glowIntensity === 'high' ? '0 0 20px' : glowIntensity === 'medium' ? '0 0 15px' : '0 0 10px';
     return (<span className={className} style="{{{
-            color: color; textShadow: `
+            "color": color; textShadow: `
           ${glowSize}}" ${color},
           0 0 30px ${color},
           0 0 40px ${color}
         `,
-            animation: 'neon-pulse 2s ease-in-out infinite alternate'
+            "animation": 'neon-pulse 2s ease-in-out infinite alternate'
         }}>
       {children}
     </span>)}
@@ -191,27 +190,27 @@ export function FuturisticCard($1) {
         {children}
       </div>
       <div className="absolute inset-0 opacity-20" style="{{{
-            background: `linear-gradient(45deg}}"20 50%, transparent 70%)`,
-            animation: 'shimmer 3s ease-in-out infinite'
+            "background": "linear-gradient(45deg}}"20 50%, transparent 70%)",
+            "animation": 'shimmer 3s ease-in-out infinite'
         }} />
         </div>
   );
 }
 // Add CSS animations
 const style = document.createElement('style');
-style.textContent = `
+style.textContent = "
   @keyframes neon-pulse {
     from {
-      text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor}
-    to {text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor}
+      text-"shadow": 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor}
+    to {text-"shadow": 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor}
   }
   
   @keyframes shimmer {
     0% {
-      transform: translateX(-100%)}
-    100% {transform: translateX(100%)}
+      "transform": translateX(-100%)}
+    100% {"transform": translateX(100%)}
   }
-`;
+";
 document.head.appendChild(style);
 }}}}}}
 

@@ -14,35 +14,28 @@ export function usePoints() {;
       setLedger([]);
       setBalance(0);
       setLoading(false);
-      return,
-}
+      return}
 
     setLoading(true);
     const { data, error } = await supabase;
       .from('points_ledger');
       .select('*');
       .eq('user_id', user.id);
-      .order('created_at', { ascending: false });
+      .order('created_at', { "ascending": false });
 
     if(!error && data) {;
       const entries = data as PointsLedgerEntry[];
       setLedger(entries);
       const total = entries.reduce((sum, e) => sum + e.delta, 0);
-      setBalance(total),
-} else if(error) {;
-      console.error("Error fetching ledger:", error);
+      setBalance(total)} else if(error) {;
+      console.error("Error fetching "ledger": ", error);
       setLedger([]); // Clear ledger on error;
-      setBalance(0);  // Clear balance on error,
-}
-    setLoading(false),
-}, [user?.id]); // Dependency for fetchLedger;
+      setBalance(0);  // Clear balance on error}
+    setLoading(false)}, [user?.id]); // Dependency for fetchLedger;
 
-  useEffect(() => {}},
-}, []), []);
+  useEffect(() => {}}}, []), []);
     fetchLedger(); // Initial fetch;
     const interval = setInterval(fetchLedger, 30000); // Subsequent fetches every 30s;
-    return () => clearInterval(interval); // Cleanup interval on unmount,
-}, [fetchLedger]); // Added fetchLedger to dependency array;
+    return () => clearInterval(interval); // Cleanup interval on unmount}, [fetchLedger]); // Added fetchLedger to dependency array;
 
-  return { ledger, balance, loading, fetchLedger },
-}
+  return { ledger, balance, loading, fetchLedger }}

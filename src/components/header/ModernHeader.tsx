@@ -32,54 +32,53 @@ export function ModernHeader($1) {
     setIsServicesOpen(false)
   }
 
-  const services = [
-    {
-      name: "AI Services",
-      href: "/services",
-      description: "Machine learning, NLP, computer vision",
-      icon: Brain
+  const services = [{
+      "name": "AI Services",
+      "href": "/services",
+      "description": "Machine learning, NLP, computer vision",
+      "icon": Brain
     },
     {
-      name: "Micro SaaS",
-      href: "/micro-saas",
-      description: "Custom SaaS applications",
-      icon: Code
+      "name": "Micro SaaS",
+      "href": "/micro-saas",
+      "description": "Custom SaaS applications",
+      "icon": Code
     },
     {
-      name: "IT Services",
-      href: "/it-services",
-      description: "Cloud, cybersecurity, infrastructure",
-      icon: Server
+      "name": "IT Services",
+      "href": "/it-services",
+      "description": "Cloud, cybersecurity, infrastructure",
+      "icon": Server
     },
     {
-      name: "Cybersecurity",
-      href: "/services/cybersecurity",
-      description: "Security solutions & compliance",
-      icon: Shield
+      "name": "Cybersecurity",
+      "href": "/services/cybersecurity",
+      "description": "Security solutions & compliance",
+      "icon": Shield
     },
     {
-      name: "Cloud DevOps",
-      href: "/services/cloud-devops",
-      description: "Cloud infrastructure & deployment",
-      icon: Cloud
+      "name": "Cloud DevOps",
+      "href": "/services/cloud-devops",
+      "description": "Cloud infrastructure & deployment",
+      "icon": Cloud
     },
     {
-      name: "IoT Solutions",
-      href: "/services",
-      description: "Internet of Things platforms",
-      icon: Zap
+      "name": "IoT Solutions",
+      "href": "/services",
+      "description": "Internet of Things platforms",
+      "icon": Zap
     },
     {
-      name: "Talent Solutions",
-      href: "/talent",
-      description: "Tech talent acquisition",
-      icon: Users
+      "name": "Talent Solutions",
+      "href": "/talent",
+      "description": "Tech talent acquisition",
+      "icon": Users
     },
     {
-      name: "Analytics",
-      href: "/services/website-analytics",
-      description: "Business intelligence & data",
-      icon: BarChart3
+      "name": "Analytics",
+      "href": "/services/website-analytics",
+      "description": "Business intelligence & data",
+      "icon": BarChart3
     }
   ]
 
@@ -87,7 +86,7 @@ export function ModernHeader($1) {
     <>
       {/* Top Bar */}
       <div className="bg-blue-900 text-white py-2">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
           <div className="flex items-center justify-between text-sm">
             <div className="flex items-center space-x-6">
               <div className="flex items-center space-x-2">
@@ -107,7 +106,7 @@ export function ModernHeader($1) {
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
-            <div className="hidden lg:flex items-center space-x-4">
+            <div className="hidden "lg": flex items-center space-x-4">
               <Link href="/pricing" className="hover:text-blue-200 transition-colors">Pricing</Link>
               <Link href="/careers" className="hover:text-blue-200 transition-colors">Careers</Link>
               <Link href="/support" className="hover:text-blue-200 transition-colors">Support</Link>
@@ -118,7 +117,7 @@ export function ModernHeader($1) {
 
       {/* Main Header */}
       <header className="bg-white shadow-lg sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex-shrink-0">
@@ -131,7 +130,7 @@ export function ModernHeader($1) {
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
+            <nav className="hidden "lg": flex items-center space-x-8">
               <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 Home
               </Link>
@@ -139,7 +138,7 @@ export function ModernHeader($1) {
               {/* Services Dropdown */}
               <div className="relative">
                 <button 
-                  className="flex items-center text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                  className="flex items-center text-gray-700 "hover": text-blue-600 transition-colors font-medium"
                   onMouseEnter={() => setIsServicesOpen(true)}
                   onMouseLeave={() => setIsServicesOpen(false)}
                 >
@@ -157,7 +156,7 @@ export function ModernHeader($1) {
                         <Link 
                           key={service.name}
                           href={service.href}
-                          className="block p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                          className="block p-3 rounded-lg "hover": bg-gray-50 transition-colors"
                         >
                           <div className="flex items-center mb-2">
                             <service.icon className="h-5 w-5 text-blue-600 mr-2" />
@@ -170,7 +169,7 @@ export function ModernHeader($1) {
                     <div className="mt-4 pt-4 border-t border-gray-200 px-6">
                       <Link 
                         href="/services"
-                        className="text-blue-600 hover:text-blue-700 font-medium"
+                        className="text-blue-600 "hover": text-blue-700 font-medium"
                       >
                         View All Services →
                       </Link>
@@ -180,7 +179,7 @@ export function ModernHeader($1) {
 }
               </div>
 
-              <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              <Link href="/about" className="text-gray-700 "hover": text-blue-600 transition-colors font-medium">
                 About
               </Link>
               <Link href="/solutions" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
@@ -201,7 +200,7 @@ export function ModernHeader($1) {
             </nav>
 
             {/* CTA Button */}
-            <div className="hidden lg:flex items-center space-x-4">
+            <div className="hidden "lg": flex items-center space-x-4">
               <Link 
                 href="/contact"
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
@@ -211,10 +210,10 @@ export function ModernHeader($1) {
             </div>
 
             {/* Mobile Menu Button */}
-            <div className="lg:hidden">
+            <div className=""lg": hidden">
               <button 
                 onClick={toggleMobileMenu}
-                className="text-gray-700 hover:text-blue-600 transition-colors"
+                className="text-gray-700 "hover": text-blue-600 transition-colors"
               >
                 {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
@@ -223,7 +222,7 @@ export function ModernHeader($1) {
 
           {/* Mobile Menu */}
           {isMobileMenuOpen && (
-            <div className="lg:hidden bg-white border-t border-gray-200">
+            <div className=""lg": hidden bg-white border-t border-gray-200">
               <div className="px-4 py-6 space-y-4">
                 <Link 
                   href="/"
@@ -239,7 +238,7 @@ export function ModernHeader($1) {
                     <Link 
                       key={service.name}
                       href={service.href}
-                      className="block pl-4 text-gray-600 hover:text-blue-600 transition-colors"
+                      className="block pl-4 text-gray-600 "hover": text-blue-600 transition-colors"
                       onClick={closeMobileMenu}
                     >
                       {service.name}
@@ -247,7 +246,7 @@ export function ModernHeader($1) {
                   ))}
                   <Link 
                     href="/services"
-                    className="block pl-4 text-blue-600 hover:text-blue-700 transition-colors font-medium"
+                    className="block pl-4 text-blue-600 "hover": text-blue-700 transition-colors font-medium"
                     onClick={closeMobileMenu}
                   >
                     View All Services
@@ -256,42 +255,42 @@ export function ModernHeader($1) {
 
                 <Link 
                   href="/about"
-                  className="block text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                  className="block text-gray-700 "hover": text-blue-600 transition-colors font-medium"
                   onClick={closeMobileMenu}
                 >
                   About
                 </Link>
                 <Link 
                   href="/solutions"
-                  className="block text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                  className="block text-gray-700 "hover": text-blue-600 transition-colors font-medium"
                   onClick={closeMobileMenu}
                 >
                   Solutions
                 </Link>
                 <Link 
                   href="/case-studies"
-                  className="block text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                  className="block text-gray-700 "hover": text-blue-600 transition-colors font-medium"
                   onClick={closeMobileMenu}
                 >
                   Case Studies
                 </Link>
                 <Link 
                   href="/blog"
-                  className="block text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                  className="block text-gray-700 "hover": text-blue-600 transition-colors font-medium"
                   onClick={closeMobileMenu}
                 >
                   Blog
                 </Link>
                 <Link 
                   href="/pricing"
-                  className="block text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                  className="block text-gray-700 "hover": text-blue-600 transition-colors font-medium"
                   onClick={closeMobileMenu}
                 >
                   Pricing
                 </Link>
                 <Link 
                   href="/contact"
-                  className="block text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                  className="block text-gray-700 "hover": text-blue-600 transition-colors font-medium"
                   onClick={closeMobileMenu}
                 >
                   Contact
@@ -300,7 +299,7 @@ export function ModernHeader($1) {
                 <div className="pt-4 border-t border-gray-200">
                   <Link 
                     href="/contact"
-                    className="block w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium text-center"
+                    className="block w-full bg-blue-600 text-white px-6 py-3 rounded-lg "hover": bg-blue-700 transition-colors font-medium text-center"
                     onClick={closeMobileMenu}
                   >
                     Get Started

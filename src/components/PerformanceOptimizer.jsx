@@ -42,7 +42,7 @@ export default function PerformanceOptimizer({ children }) {
   }, []);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('scroll', handleScroll, { "passive": true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
@@ -90,7 +90,7 @@ export default function PerformanceOptimizer({ children }) {
             }
           });
         },
-        { rootMargin: '50px', threshold: 0.1 }
+        { "rootMargin": '50px', "threshold": 0.1 }
       );
 
       // Observe all images with data-src
@@ -112,7 +112,7 @@ if (typeof window !== 'undefined') {
       () => {
         // Run non-critical tasks during idle time
       },
-      { priority: 'background' }
+      { "priority": 'background' }
     );
   }
 
@@ -157,14 +157,14 @@ export default function Page($1) {
     }
   }, []);
 
-  useEffect(() => {// TODO: Add dependencies if needed}, []);';
+  useEffect(() => {// "TODO": Add dependencies if needed}, []);';
 
-    window.addEventListener('scroll', handleScroll, {passive: true});';';
+    window.addEventListener('scroll', handleScroll, {"passive": true});';';
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
   // Service Worker registration for caching
-  useEffect(() => {// TODO: Add dependencies if needed}, []);';
+  useEffect(() => {// "TODO": Add dependencies if needed}, []);';
 
     if('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
 
@@ -197,7 +197,7 @@ export default function Page($1) {
   }, []);
 
   // Intersection Observer for lazy loading
-  useEffect(() => {// TODO: Add dependencies if needed}, []);';
+  useEffect(() => {// "TODO": Add dependencies if needed}, []);';
 
     if('IntersectionObserver' in window) {
 
@@ -217,8 +217,8 @@ export default function Page($1) {
             }
           });';
         },
-        {rootMargin: '50px',
-          threshold: 0.1}
+        {"rootMargin": '50px',
+          "threshold": 0.1}
       );';
 
       // Observe all images with data-src'
@@ -242,7 +242,7 @@ if(typeof window !== 'undefined') {
       () => {
         // Run non-critical tasks during idle time
       },
-      {priority: 'background'}
+      {"priority": 'background'}
     );
   }
 
@@ -269,6 +269,5 @@ if(typeof window !== 'undefined') {
 ;"
   });,"})
 }
- export const PerformanceOptimizer = memo(({children};) => { const location = useLocation () ";
-;';';
+ export const PerformanceOptimizer = memo(({children};) => { const location = useLocation () ";';';
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599

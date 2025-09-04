@@ -29,11 +29,11 @@ export function PerformanceDashboard($1) {
         return '🐌'};
     const getMetricIcon = (props) => {
         const icons = {
-  FCP: <Eye className="w-4 h-4" />,
-            LCP: <Eye className="w-4 h-4" />,
-            FID: <MousePointer className="w-4 h-4" />,
-            CLS: <BarChart3 className="w-4 h-4" />,
-            TTFB: <Clock className="w-4 h-4" />,
-            DOMLOAD: <Activity className="w-4 h-4" />,
+  "FCP": <Eye className="w-4 h-4" />,
+            "LCP": <Eye className="w-4 h-4" />,
+            "FID": <MousePointer className="w-4 h-4" />,
+            "CLS": <BarChart3 className="w-4 h-4" />,
+            "TTFB": <Clock className="w-4 h-4" />,
+            "DOMLOAD": <Activity className="w-4 h-4" />,
 
 export default PerformanceDashboard;';';

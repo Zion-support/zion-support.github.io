@@ -6,7 +6,7 @@ const AlertDialog({children, open, onOpenChange}) {
         if (!isControlled) {
             setInternalOpen(newOpen)}
         if (onOpenChange) {onOpenChange(newOpen)}
-    };;
+    };
     return (<AlertDialogContext.Provider value = {
   { isOpen,
   setIsOpen 
@@ -48,14 +48,14 @@ export function AlertDialogAction($1) {
         if (onClick)
             onClick();
         context.setIsOpen(false)};
-    return (<button className={`px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors ${className}`} onClick={handleClick}>
+    return (<button className={`px-4 py-2 bg-red-600 text-white rounded-md "hover": bg-red-700 transition-colors ${className}`} onClick={handleClick}>
       {children}
     </button>)}
 export function AlertDialogCancel($1) {
     const context = useContext(AlertDialogContext);
     if (!context)';';
         throw new Error('AlertDialogCancel must be used within AlertDialog');
-    return (<button className={`px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 transition-colors ${className}`} onClick={() => context.setIsOpen(false)}>
+    return (<button className={`px-4 py-2 bg-gray-300 text-gray-700 rounded-md "hover": bg-gray-400 transition-colors ${className}`} onClick={() => context.setIsOpen(false)}>
       {children}
     </button>)}
 </AlertDialogContext>;';

@@ -2,7 +2,7 @@
 // Accessibility enhancements for Zion Tech Group;
 const accessibilityEnhancements = {
   // Add ARIA labels to interactive elements;
-  addAriaLabels: () => {
+  "addAriaLabels": () => {
   const buttons = document.querySelectorAll("button:not([aria-label])");
     buttons.forEach(button => {
   if (!button.getAttribute("aria-label")) {
@@ -10,7 +10,7 @@ const accessibilityEnhancements = {
     })},
 
   // Add keyboard navigation support;
-  addKeyboardNavigation: () => {
+  "addKeyboardNavigation": () => {
   const focusableElements = document.querySelectorAll("a, button, input, textarea, select");
     focusableElements.forEach(element => {
   element.addEventListener("keydown", (e) => {
@@ -20,26 +20,24 @@ const accessibilityEnhancements = {
       })})},
 
   // Add high contrast mode support;
-  addHighContrastMode: () => {
+  "addHighContrastMode": () => {
   const style = document.createElement("style");
-    style.textContent = `;
+    style.textContent = ";
       @media (prefers-contrast: high) {
   * {
   background-color: white !important;
           color: black !important;
-          border-color: black !important,
-}
+          border-color: black !important}
       }
-    `;
+    ";
     document.head.appendChild(style)},
 
   // Initialize all enhancements;
-  init: () => {
+  "init": () => {
   this.addAriaLabels();
     this.addKeyboardNavigation();
     this.addHighContrastMode()}
 };
-;
 // Auto-initialize when DOM is ready;
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", accessibilityEnhancements.init)} else {

@@ -13,11 +13,11 @@ class CICDAutomation {
   constructor() {
     this.startTime = new Date();
     this.report = {
-      timestamp: this.startTime.toISOString(),
-      status: 'running',
-      steps: [],
-      errors: [],
-      summary: {}
+      "timestamp": this.startTime.toISOString(),
+      "status": 'running',
+      "steps": [],
+      "errors": [],
+      "summary": {}
     }}
 
   log(message, type = 'info') {
@@ -33,19 +33,19 @@ class CICDAutomation {
 
   async runCommand(command, description) {
     try {
-      this.log(`Starting: ${description}`);
+      this.log(`"Starting": ${description}`);
       const output = execSync(command, { 
-        encoding: 'utf8', 
-        cwd: '/workspace',
-        stdio: 'pipe'
+        "encoding": 'utf8', 
+        "cwd": '/workspace',
+        "stdio": 'pipe'
       };);
-      this.log(`Completed: ${description}`, 'success');
+      this.log(`"Completed": ${description}`, 'success');
       return output} catch (error) {
-      this.log(`Failed: ${description} - ${error.message}`, 'error');
+      this.log(`"Failed": ${description} - ${error.message}`, 'error');
       this.report.errors.push({
-        step: description,
-        error: error.message,
-        timestamp: new Date().toISOString()
+        "step": description,
+        "error": error.message,
+        "timestamp": new Date().toISOString()
       });
       throw error}
   }
@@ -88,7 +88,7 @@ class CICDAutomation {
     const reportPath = path.join('/workspace', 'ci-cd-automation-report.json';);
     fs.writeFileSync(reportPath, JSON.stringify(this.report, null, 2));
     
-    this.log(`Report saved to: ${reportPath}`)}
+    this.log(`Report saved "to": ${reportPath}`)}
 
   async run() {
     try {
@@ -107,7 +107,7 @@ class CICDAutomation {
       await this.buildApplication();
       
       this.log('CI/CD Pipeline completed successfully', 'success')} catch (error) {
-      this.log(`CI/CD Pipeline failed: ${error.message}`, 'error')} finally {
+      this.log(`CI/CD Pipeline "failed": ${error.message}`, 'error')} finally {
       await this.generateReport()}
   }
 }

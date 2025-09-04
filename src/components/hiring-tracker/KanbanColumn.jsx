@@ -16,8 +16,7 @@ export function KanbanColumn($1) {
                 return "success";
             case "rejected":
                 return "destructive";
-            default:
-                return "outline"}
+            "default": return "outline"}
     };
     const getColumnBgColor = (props) => {
         switch (columnId) {
@@ -25,8 +24,7 @@ export function KanbanColumn($1) {
                 return "bg-green-50";
             case "rejected":
                 return "bg-red-50";
-            default:
-                return "bg-muted/30"}
+            "default": return "bg-muted/30"}
     };
     return (<Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}>
       <CardHeader className="pb-2">

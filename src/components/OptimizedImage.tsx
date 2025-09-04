@@ -26,12 +26,12 @@ export default function Page($1) {
       setIsLoading(true)} else {
       setHasError(true);
       setIsLoading(false);
-      onError?.(new Error(`Failed to load image: an y${src}`))}
+      onError?.(new Error(`Failed to load "image": an y${src}`))}
   };
 
   // Cleanup on unmount
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function
@@ -45,7 +45,7 @@ export default function Page($1) {
 
   // Generate optimized src with quality parameter
   const getOptimizedSrc = (props) => {
-    if(src.startsWith ('data:') || src.startsWith('blob:') ) {
+    if(src.startsWith ('"data": ') || src.startsWith('blob:') ) {
       return src;
     }
     // Add quality parameter for external images if possible
@@ -77,15 +77,14 @@ export default function Page($1) {
     <div className="min-h-screen bg-white">
         <div className="text-center">
           <AlertCircle className="w-12 h-12 text-gray - 400 mx - auto mb-2"  />
-          <p className="text-sm text-gray - 500 dark: tex t-gray -400">Image failed to load</p>
+          <p className="text-sm text-gray - 500 "dark": tex t-gray -400">Image failed to load</p>
         </div>
       </div>) ;
   }}) => {
         </div>
   );
 }
-export default OptimizedImage;";
-;"
+export default OptimizedImage;";"
 
 </any>
 </any>;';';

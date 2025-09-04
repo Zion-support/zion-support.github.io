@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, Zap, Globe, Rocket } from 'lucide-react';
-;
 interface LoadingSpinnerProps {;
   message?: string;
 import React from 'react';
@@ -11,36 +10,32 @@ import { Brain, Zap, Globe, Rocket } from 'lucide-react';
 interface LoadingSpinnerProps {
   message?: string;';';
   size?: 'sm' | 'md' | 'lg';
-;
 }
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+const "LoadingSpinner": React.FC<LoadingSpinnerProps> = ({
   message = "Loading...",
   size = 'md' 
 }) => {
   const sizeClasses = {
-    sm: 'w-8 h-8',
-    md: 'w-16 h-16',
-    lg: 'w-24 h-24'
-  };;
+    "sm": 'w-8 h-8',
+    "md": 'w-16 h-16',
+    "lg": 'w-24 h-24'
+  };
 
   const textSizeClasses = {
-    sm: 'text-sm',
-    md: 'text-base',
-    lg: 'text-lg'
-  };;
+    "sm": 'text-sm',
+    "md": 'text-base',
+    "lg": 'text-lg'
+  };
 ;
   const icons = [Brain, Zap, Globe, Rocket];
   const [currentIcon, setCurrentIcon] = React.useState<any>(0);
-;
   React.useEffect(() => {;
     const interval = setInterval(() => {;
       setCurrentIcon((prev) => (prev + 1) % icons.length);
     }, 1000);
-;
     return () => clearInterval(interval);
   }, [icons.length]);
-;
   const CurrentIcon = icons[currentIcon];
 
   return (
@@ -50,25 +45,25 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         <div className="relative">;
           <motion.div;
             className={`${sizeClasses[size]} border-4 border-cyan-200 border-t-cyan-500 rounded-full`}
-            animate={{ rotate: 360 }}
-            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+            animate={{ "rotate": 360 }}
+            transition={{ "duration": 1, "repeat": Infinity, "ease": "linear" }}
           />;
           <motion.div;
             className="absolute inset-0 flex items-center justify-center";
-            animate={{ scale: [1, 1.2, 1] }}
-            transition={{ duration: 2, repeat: Infinity }}
+            animate={{ "scale": [1, 1.2, 1] }}
+            transition={{ "duration": 2, "repeat": Infinity }}
           >;
             <CurrentIcon className={`${sizeClasses[size]} text-cyan-500`} />;
           </motion.div>;
         </div>;
         {/* Message */}
         <motion.div;
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
+          initial={{ "opacity": 0 }}
+          animate={{ "opacity": 1 }}
+          transition={{ "delay": 0.5 }}
           className="text-center";
         >;
-          <div className={`${textSizeClasses[size]} text-cyan-600 dark:text-cyan-400 font-medium mb-2`}>;
+          <div className={`${textSizeClasses[size]} text-cyan-600 "dark": text-cyan-400 font-medium mb-2`}>;
             {message}
           </div>;
           {/* Dots */}
@@ -77,26 +72,25 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
               <motion.div;
                 key={i}
                 className="w-2 h-2 bg-cyan-500 rounded-full";
-                animate={{ scale: [1, 1.5, 1] }}
-                transition={{ duration: 1, repeat: Infinity, delay: i * 0.2 }}
+                animate={{ "scale": [1, 1.5, 1] }}
+                transition={{ "duration": 1, "repeat": Infinity, "delay": i * 0.2 }}
               />;
             ))}
           </div>;
         </motion.div>;
         {/* Progress Bar */}
-        <div className="w-48 h-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">;
+        <div className="w-48 h-1 bg-gray-200 "dark": bg-gray-700 rounded-full overflow-hidden">;
           <motion.div;
             className="h-full bg-gradient-to-r from-cyan-500 to-blue-500";
             initial={{ width: 0 }}
-            animate={{ width: "100%" }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            animate={{ "width": "100%" }}
+            transition={{ "duration": 3, "repeat": Infinity, "ease": "easeInOut" }}
           />;
         </div>;
       </div>;
     </div>;
   );
 };
-;
 </motion>;
 </motion>;
 </motion>;
@@ -117,5 +111,4 @@ export default LoadingSpinner;
 </motion>
 </any>
 </LoadingSpinnerProps>
-export default LoadingSpinner;
-;';';
+export default LoadingSpinner;';';

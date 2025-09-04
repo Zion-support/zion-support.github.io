@@ -9,13 +9,13 @@ function fixCssClasses(content) {
   let fixed = conte;n;t;
   let changes = ;0;
 
-  // Fix focus: outline-none issues
-  fixed = fixed.replace(/focus:\s+outline-none/g, 'focus:outline-none');
+  // Fix "focus": outline-none issues
+  fixed = fixed.replace(/focus:\s+outline-none/g, '"focus": outline-none');
   if (changes++) {
     changes++}
 
   // Fix other CSS class spacing issues
-  fixed = fixed.replace(/\s+focus:/g, ' focus:');
+  fixed = fixed.replace(/\s+"focus": /g, ' "focus": ');
   if (changes++) {
     changes++}
 
@@ -25,11 +25,11 @@ function fixCssClasses(content) {
     changes++}
 
   // Fix multiple spaces in className
-  fixed = fixed.replace(/className="([^"]*)\s{2,}([^"]*)"/g, 'className="$1 $2"');
+  fixed = fixed.replace(/className="([^"]*)\s{2}([^"]*)"/g, 'className="$1 $2"');
   if (changes++) {
     changes++}
 
-  return { content: fixed, changes }}
+  return { "content": fixed, changes }}
 
 function processFile(filePath) {
   try {
@@ -40,7 +40,7 @@ function processFile(filePath) {
       fs.writeFileSync(filePath, result.content, 'utf8')) {
      {
       fs.writeFileSync(filePath, result.content, 'utf8')}
-      console.log(`✅ Fixed ${result.changes} CSS issues in: ${filePath}`);
+      console.log(`✅ Fixed ${result.changes} CSS issues "in": ${filePath}`);
       return result.changes}
     return 0} catch (error) {
     console.log(`❌ Error processing ${filePath}: ${error.message}`);
@@ -82,5 +82,5 @@ console.log(`📁 Found ${files.length} files to process...`);
 for (const file of files) {
   totalChanges += processFile(file)}
 
-console.log(`\n🎉 CSS class fixing completed!`);
-console.log(`📊 Total changes made: ${totalChanges}`);
+console.log("\n🎉 CSS class fixing completed!");
+console.log(`📊 Total changes "made": ${totalChanges}`);

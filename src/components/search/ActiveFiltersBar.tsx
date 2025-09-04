@@ -3,17 +3,17 @@ import { X  } from 'lucide-react';
 
 interface Filter {
 
-  key: string;
+  "key": string;
   value: string;
   label: string}
 
 interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
 
-  filters: Filte r[];
+  "filters": Filte r[];
   onRemoveFilter: (key: string)  => void;
   onClearAll: ()  => void}
 
-        className="text-sm text-zion-slate-light hover: tex t-zion-cyan transition-colors underline";
+        className="text-sm text-zion-slate-light "hover": tex t-zion-cyan transition-colors underline";
       >;
         Clear all;
       </button>;

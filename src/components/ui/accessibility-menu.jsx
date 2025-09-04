@@ -5,10 +5,10 @@ import {Button} from "button.tsx";
 export function AccessibilityMenu($1) {
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({
-        fontSize: 'medium',
-        highContrast: false,
-        reducedMotion: false,
-        soundEnabled: true
+        "fontSize": 'medium',
+        "highContrast": false,
+        "reducedMotion": false,
+        "soundEnabled": true
     };);
     useEffect(() => {
         // Load settings from localStorage
@@ -37,12 +37,12 @@ export function AccessibilityMenu($1) {
         setSettings(prev => ({
             ...prev,
             [key]: !prev[key]
-        }))};;
+        }))};
     const updateFontSize = (props) => {
-        setSettings(prev => ({ ...prev, fontSize: size }))};;
+        setSettings(prev => ({ ...prev, "fontSize": size }))};
     const resetSettings = (props) => {
         const defaultSettings = {
-  fontSize: 'medium',
-            highContrast: false,
-            reducedMotion: false,
+  "fontSize": 'medium',
+            "highContrast": false,
+            "reducedMotion": false,
 ;';';

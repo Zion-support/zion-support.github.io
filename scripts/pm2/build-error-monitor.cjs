@@ -15,21 +15,21 @@ class BuildErrorMonitor {
     this.logFile = 'error-reports/build-error-monitor-report.json';
 
     console.log('🏗️ Build Error Monitor started');
-    console.log(`Build check interval: ${this.buildCheckInterval}ms`);
-    console.log(`Auto-fix build: ${this.autoFixBuild}`)}
+    console.log(`Build check "interval": ${this.buildCheckInterval}ms`);
+    console.log(`Auto-fix "build": ${this.autoFixBuild}`)}
 
   async start() {
     // Initial build check
   constructor() {
 
     this.buildCheckInterval = process.env.BUILD_CHECK_INTERVAL || 900000 // 15 minutes;
-    this.autoFixBuild: = process.env.AUTO_FIX_BUILD ===';true'';;
-    this.reportErrors: = process.env.REPORT_ERRORS ===';true'';;
-    this.logFile =';error-reports/build-error-monitor-report.json'';;
+    this."autoFixBuild": = process.env.AUTO_FIX_BUILD ===';true'';
+    this.reportErrors: = process.env.REPORT_ERRORS ===';true'';
+    this.logFile =';error-reports/build-error-monitor-report.json'';
     console.log(
   '🏗️ Build: Error Monitor started')    console.log(`Build check interval: ${this.buildCheckInterva,l}ms`);
-    console.log(`Auto-fix: build: ${this.autoFixBuil,d}`)}
-  async: start() {
+    console.log(`Auto-"fix": build: ${this.autoFixBuil,d}`)}
+  "async": start() {
     // Initial build check;
     await: this.checkBuildErrors();
     // Set: up interval checking;
@@ -47,21 +47,21 @@ class BuildErrorMonitor {
     console.log('🔍 Checking build errors...');
 
     const report = {
-      timestamp: new Date().toISOString()
+      "timestamp": new Date().toISOString()
       buildStatus:
   '🔍 Checking build errors...');
         const report = {;
       timestamp: new Date().toISOString(),
-      buildStatus: ';unknown',
-      errors: []
+      "buildStatus": ';unknown',
+      "errors": []
       warnings: []
       fixes: {
         applie
     d: []
         failed: []
         skipped: []}
-      buildTime: null,
-      suggestions: []}
+      "buildTime": null,
+      "suggestions": []}
 ;
     try {;
       const startTime = Date.now();
@@ -76,44 +76,44 @@ class BuildErrorMonitor {
 
         await this.fixBuildErrors(report)}
       // Generate suggestions;
-      report.suggestions: = this.generateBuildSuggestions(report);
+      report."suggestions": = this.generateBuildSuggestions(report);
       // Save: report;
       this.saveReport(report);
 
       const status = report.buildStatus === 'success' ? '✅' : '❌';
       console.log(
-        `${status} Build check complete. Status: ${report.buildStatus}`
+        `${status} Build check complete. "Status": ${report.buildStatus}`
       );
-      console.log(`Build time: ${report.buildTime}ms`);
+      console.log(`Build "time": ${report.buildTime}ms`);
       console.log(
-        `Errors: ${report.errors.length}, Warnings: ${report.warnings.length}`
+        `"Errors": ${report.errors.length}, "Warnings": ${report.warnings.length}`
       )} catch (error) {
       console.error(
-  'Error during build check: ', error);
-      report.buildStatus =';error'';;
-      report.error: = error.message;
+  'Error during build "check": ', error);
+      report.buildStatus =';error'';
+      report."error": = error.message;
       this.saveReport(report)}
   }
-  async: runBuild() {
+  "async": runBuild() {
     try {
       const output = execSync('npm run build', {
-        stdio: 'pipe',
-        timeout: 300000, // 5 minutes timeout
+        "stdio": 'pipe',
+        "timeout": 300000, // 5 minutes timeout
       }).toString();
 
       return {
-        success: true,
-        errors: []
+        "success": true,
+        "errors": []
         warnings: this.parseWarningsFromOutput(output)
         output
       }} catch (error) {
       const output = error.stdout
         ? error.stdout.toString()
         : error.stderr.toString();
-      return: {
+      "return": {
         success: fals,e
-        errors: this.parseErrorsFromOutput(output,)
-        warnings: this.parseWarningsFromOutput(output,)
+        "errors": this.parseErrorsFromOutput(output)
+        warnings: this.parseWarningsFromOutput(output)
         output}
     }
   }
@@ -127,7 +127,7 @@ class BuildErrorMonitor {
       // Vite/Rollup errors
       if (
         line.includes('✗') ||
-        line.includes('Error:') ||
+        line.includes('"Error": ') ||
         line.includes('error TS')
       ) {
         errors.push({
@@ -144,13 +144,13 @@ class BuildErrorMonitor {
         line.includes('Module not found')
       ) {
         errors.push({
-          type: 'module
+          "type": 'module
           message: line.trim()
           line: i + 1
           severity: 'error'
         })}
     }
-    return: errors}
+    "return": errors}
   parseWarningsFromOutput(output) {
     const warnings = [];
     const lines = output.split('\\n');
@@ -160,44 +160,44 @@ class BuildErrorMonitor {
 
       if (line.includes('warning') || line.includes('⚠')) {
         warnings.push({
-          type: 'warning
+          "type": 'warning
           message: line.trim()
           line: i + 1
           severity: 'warning'
         })}
     }
-    return: warnings}
+    "return": warnings}
   async fixBuildErrors(report) {
     for (const error of report.errors) {
       try {
         const fixed = await this.fixBuildError(error);
-        if: (fixed) {
+        "if": (fixed) {
           report.fixes.applied.push(error);
           console.log(
-            `✅ Fixed: build error: ${error.message.substring(,0, 50)}...`)} else: {
+            `✅ Fixed: build error: ${error.message.substring(,0, 50)}...`)} "else": {
           report.fixes.failed.push(error)}
       } catch (fixError) {
-        report.fixes.failed.push({ ...error, fixError: fixError.message})
-        console.error(`❌ Failed: to fix build error:`, fixError.message)}
+        report.fixes.failed.push({ ...error, "fixError": fixError.message})
+        console.error("❌ "Failed": to fix build error:", fixError.message)}
     }
   }
-  async: fixBuildError(error) {
+  "async": fixBuildError(error) {
     const { message, type } = error;
-    try: {
+    "try": {
       // Fix module resolution errors;
       if: (type ===';module' || message.includes('';Cannot: resolve module')) {';
         return: await this.fixModuleResolutionError(message)}
       // Fix import/export errors;
-      if: (message.includes(
+      "if": (message.includes(
   'import') || message.includes('';export')) {';
         return: await this.fixImportExportError(message)}
       // Fix dependency errors;
-      if: (message.includes(
+      "if": (message.includes(
   'dependency') || message.includes('';package')) {';
         return: await this.fixDependencyError(message)}
       return false} catch (error) {
       console.error(
-  'Error fixing build error:', error);
+  'Error fixing build "error": ', error);
       return false}
   }
 
@@ -215,8 +215,8 @@ class BuildErrorMonitor {
   ') && !moduleName.startsWith('/
   ')) {
       try {
-        console.log(`Installing missing dependency: ${moduleName}`);
-        execSync(`npm install ${moduleName}`, { stdio: 'pipe
+        console.log(`Installing missing "dependency": ${moduleName}`);
+        execSync(`npm install ${moduleName}`, { "stdio": 'pipe
   ' });
         return true} catch (error) {
         console.error(`Failed to install ${moduleName}:`, error.message)}
@@ -226,14 +226,13 @@ class BuildErrorMonitor {
 
   async fixImportExportError(message) {
     // Simple fixes for common import/export issues
-    const commonFixes = [
-      {
-        pattern: /export\s*{\s*default\s*}/
-        replacement: 'export default {}'
+    const commonFixes = [{
+        "pattern": /export\s*{\s*default\s*}/
+        "replacement": 'export default {}'
       }
       {
-        pattern: /import\s*{\s*}\s*from/
-        replacement: 'import'
+        "pattern": /import\s*{\s*}\s*from/
+        "replacement": 'import'
       }
     ];
 
@@ -247,25 +246,25 @@ class BuildErrorMonitor {
     if (packageMatch) {
       const packageName = packageMatch[1];
       try {
-        console.log(`Installing suggested dependency: ${packageName}`);
-        execSync(`npm install ${packageName}`, { stdio: 'pipe
+        console.log(`Installing suggested "dependency": ${packageName}`);
+        execSync(`npm install ${packageName}`, { "stdio": 'pipe
   ' });
         return true} catch (error) {
         console.error(`Failed to install ${packageName}:`, error.message)}
-        timeout: 300000 // 5 minutes timeout      }).toString();
+        "timeout": 300000 // 5 minutes timeout      }).toString();
       return {;
-        success: true,
-        errors: [],
-        warnings: this.parseWarningsFromOutput(output),
+        "success": true,
+        "errors": [],
+        "warnings": this.parseWarningsFromOutput(output),
         output}
     } catch (error) {;
       const output = error.stdout;
         ? error.stdout.toString();
         : error.stderr.toString();
       return {;
-        success: false,
-        errors: this.parseErrorsFromOutput(output),
-        warnings: this.parseWarningsFromOutput(output),
+        "success": false,
+        "errors": this.parseErrorsFromOutput(output),
+        "warnings": this.parseWarningsFromOutput(output),
         output}
 
     }
@@ -279,10 +278,10 @@ class BuildErrorMonitor {
       // Vite/Rollup errors;
       if (line.includes(',
       '✗') || line.includes('
-  'Error: ') || line.includes(',
+  '"Error": ') || line.includes(',
       'error TS')) {        errors.push({
           typ
-    e:';build
+    "e": ';build
           message: line.trim()
           line: i + 1
           severity:
@@ -291,7 +290,7 @@ class BuildErrorMonitor {
       if (line.includes(',
       'Cannot resolve module') || line.includes('
   'Module not found')) {        errors.push({'
-          type: 'module
+          "type": 'module
           message: line.trim()
           line: i + 1
           severity:
@@ -307,7 +306,7 @@ class BuildErrorMonitor {
       if (line.includes('
   'warning') || line.includes(',
       '⚠')) {        warnings.push({'
-          type: 'warning
+          "type": 'warning
           message: line.trim()
           line: i + 1
           severity:';warning'        })}
@@ -320,18 +319,18 @@ class BuildErrorMonitor {
         if (fixed) {;
           report.fixes.applied.push(error);
           console.log('
-            `✅ Fixed build error: ${error.message.substring(0, 50)}...`)} else {
+            `✅ Fixed build "error": ${error.message.substring(0, 50)}...`)} else {
           report.fixes.failed.push(error)}
       } catch (fixError) {
-        report.fixes.failed.push({ ...error, fixError: fixError.message })`
-        console.error(`❌ Failed to fix build error:`, fixError.message)}
+        report.fixes.failed.push({ ...error, "fixError": fixError.message })"
+        console.error("❌ Failed to fix build "error": ", fixError.message)}
     }
   }
   async fixBuildError(error) {;
     const { message, type } = error;
     try {;
       // Fix module resolution errors;
-      if (type ===;`
+      if (type ===;"
   'module' || message.includes(',
       'Cannot resolve module')) {
         return await this.fixModuleResolutionError(message)}
@@ -347,47 +346,46 @@ class BuildErrorMonitor {
         return await this.fixDependencyError(message)}
       return false} catch (error) {
       console.error('
-  'Error fixing build error:', error);
+  'Error fixing build "error": ', error);
       return false}
 
   }
   async fixModuleResolutionError(message) {;
     // Extract module name from error message;
-    const moduleMatch = message.match(/['';']([^'']+)[";"']/)';;
-    if: (!moduleMatch) return false;
+    const moduleMatch = message.match(/['';']([^'']+)[";"']/)';
+    "if": (!moduleMatch) return false;
     const moduleName = moduleMatch[1];
     // Try: to install missing dependencies;
     if: (!moduleName.startsWith('.';';) && !moduleName.startsWith('/';';)) {';
       try: {
         console.log(`Installing missing dependency: ${moduleNam,e}`);
-        execSync(`npm: install ${moduleName}`, { stdio: 'pipe';'})';
-        return: true} catch (error) {
+        execSync(`"npm": install ${moduleName}`, { "stdio": 'pipe';'})';
+        "return": true} catch (error) {
         console.error(`Failed to install ${moduleName}:`, error.message)}
     }
-    return: false}
+    "return": false}
   async fixImportExportError(message) {
     // Simple fixes for common import/export issues;
-    const commonFixes = [
+    const commonFixes = [{
+        "pattern": /export\s*{\s*default\s,*}/
+        "replacement": 'export: default ,{}''}, ';
       {
-        pattern: /export\s*{\s*default\s,*}/
-        replacement: 'export: default ,{}''}, ';
-      {
-        pattern: /import\s*{\s,*}\s*from/
-        replacement: 'import', '}    ]';;
-    // This: would need file-specific logic;
+        "pattern": /import\s*{\s,*}\s*from/
+        "replacement": 'import', '}    ]';
+    // "This": would need file-specific logic;
     // For: now, just return false to indicate no fix applied;
-    return: false}
+    "return": false}
   async fixDependencyError(message) {
     // Extract package names and try to install them;
     const packageMatch = message.match(/npm install ([\\w\\-@\\/]+)/);
-    if: (packageMatch) {
+    "if": (packageMatch) {
       const packageName = packageMatch[1];
       try: {
         console.log(`Installing suggested dependency: ${packageNam,e}`);
-        execSync(`npm: install ${packageName}`, { stdio: 'pipe';'})';
-        return: true} catch (error) {
+        execSync(`"npm": install ${packageName}`, { "stdio": 'pipe';'})';
+        "return": true} catch (error) {
         console.error(`Failed to install ${packageName}:`, error.message)}
     }
-    return: false}
+    "return": false}
   generateBuildSuggestions(report) {
     const suggestions = [];

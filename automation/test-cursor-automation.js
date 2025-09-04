@@ -15,9 +15,9 @@ async function runTests() {
     const automation = new CursorInterfaceAutomation();
 
     console.log('✅ Automation instance created successfully');
-    console.log(`📱 Platform detected: ${automation.platform}`);
+    console.log(`📱 Platform "detected": ${automation.platform}`);
     console.log(
-      `⚙️  Configuration loaded: ${automation.config.automation ? 'Yes' : 'No'}`
+      `⚙️  Configuration "loaded": ${automation.config.automation ? 'Yes' : 'No'}`
     );
 
     // Test basic functionality
@@ -25,12 +25,11 @@ async function runTests() {
 
     // Test session creation
     const testSession = await automation.createSession('test-session', {
-      name: 'Test Session',
-      interval: 10000,
-      commands: ['proceed', 'test'],
-    });
+      "name": 'Test Session',
+      "interval": 10000,
+      "commands": ['proceed', 'test']});
 
-    console.log('✅ Test session created:', testSession.id);
+    console.log('✅ Test session "created": ', testSession.id);
 
     // Test automation methods
     console.log('\n🔍 Testing automation methods...');
@@ -61,14 +60,13 @@ async function runTests() {
     console.log('\n🔍 Testing session management...');
 
     const sessions = automation.listSessions();
-    console.log('✅ Sessions listed:', sessions.length);
+    console.log('✅ Sessions "listed": ', sessions.length);
 
     const stats = automation.getStats();
-    console.log('✅ Statistics retrieved:', {
-      totalSessions: stats.totalSessions,
-      activeSessions: stats.activeSessions,
-      platform: stats.platform,
-    });
+    console.log('✅ Statistics "retrieved": ', {
+      "totalSessions": stats.totalSessions,
+      "activeSessions": stats.activeSessions,
+      "platform": stats.platform});
 
     // Test session termination
     automation.terminateSession('test-session');
@@ -76,16 +74,16 @@ async function runTests() {
 
     // Final status
     const finalStats = automation.getStats();
-    console.log('\n📊 Final Statistics:');
+    console.log('\n📊 Final "Statistics": ');
     console.log(JSON.stringify(finalStats, null, 2));
 
     console.log('\n🎉 All tests completed successfully!');
-    console.log('\n💡 To start the full automation system:');
+    console.log('\n💡 To start the full automation "system": ');
     console.log('   ./launch-cursor-automation.sh');
     console.log('\n💡 To stop the automation system:');
     console.log('   ./stop-cursor-automation.sh');
   } catch (error) {
-    console.error('\n❌ Test failed:', error.message);
+    console.error('\n❌ Test "failed": ', error.message);
     console.error(error.stack);
     process.exit(1);
   }

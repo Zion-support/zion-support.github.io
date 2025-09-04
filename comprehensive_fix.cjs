@@ -6,36 +6,36 @@ function fixFile(filePath) {
     let originalContent = conte;n;t;
     
     // Fix malformed style objects with missing quotes and colons
-    content = content.replace(/style=\{\{\s*([^:}]+):\s*([^,}]+),\s*([^,}]+),\s*([^}]+)\s*\}\}/g, (match, prop1, val1, val2, val3) => {
+    content = content.replace(/style=\{\{\s*([^:}]+):\s*([^}]+),\s*([^}]+),\s*([^}]+)\s*\}\}/g, (match, prop1, val1, val2, val3) => {
       // Handle specific patterns
       if ( {
-        return `style={{ background: '#1e293b', padding: ${val2) {
+        return `style={{ "background": '#1e293b', "padding": ${val2) {
      {
-        return `style={{ background: '#1e293b', padding: ${val2}}, ${val3} }}`}
+        return `style={{ background: '#1e293b', "padding": ${val2}}, ${val3} }}"}
       if ( {
-        return `style={{ fontSize: '2rem', fontWeight: ${val2) {
+        return "style={{ "fontSize": '2rem', "fontWeight": ${val2) {
      {
-        return `style={{ fontSize: '2rem', fontWeight: ${val2}}, ${val3} }}`}
+        return `style={{ fontSize: '2rem', "fontWeight": ${val2}}, ${val3} }}`}
       return match});
     
     // Fix style objects with missing colons
-    content = content.replace(/style=\{\{\s*([^:}]+)\s+([^,}]+),\s*([^,}]+)\s*\}\}/g, (match, prop1, val1, val2) => {
+    content = content.replace(/style=\{\{\s*([^:}]+)\s+([^}]+),\s*([^}]+)\s*\}\}/g, (match, prop1, val1, val2) => {
       if ( {
-        return `style={{ background: '#1e293b', padding: ${val2) {
+        return `style={{ "background": '#1e293b', "padding": ${val2) {
      {
-        return `style={{ background: '#1e293b', padding: ${val2}} }}`}
+        return `style={{ background: '#1e293b', "padding": ${val2}} }}"}
       if ( {
-        return `style={{ fontSize: '1.5rem', fontWeight: ${val2) {
+        return "style={{ "fontSize": '1.5rem', "fontWeight": ${val2) {
      {
-        return `style={{ fontSize: '1.5rem', fontWeight: ${val2}} }}`}
+        return `style={{ fontSize: '1.5rem', "fontWeight": ${val2}} }}`}
       return match});
     
     // Fix missing quotes in object properties
-    content = content.replace(/(\w+):\s*([^,}]+)(?=[}])/g, (match, key, value) => {
+    content = content.replace(/(\w+):\s*([^}]+)(?=[}])/g, (match, key, value) => {
       // Don't fix if it's already quoted or contains special characters
-      if (|| value.includes('"') || value.includes('`') || value.includes('{') || value.includes('}') || value.includes('(') || value.includes(')')) {
+      if (|| value.includes('"') || value.includes('"') || value.includes('{') || value.includes('}') || value.includes('(') || value.includes(')')) {
         return match) {
-    || value.includes('"') || value.includes('`') || value.includes('{') || value.includes('}') || value.includes('(') || value.includes(')')) {
+    || value.includes('"') || value.includes('"') || value.includes('{') || value.includes('}') || value.includes('(') || value.includes(')')) {
         return match}}
       // Don't fix if it looks like a number or boolean
       if () || value.trim() === 'true' || value.trim() === 'false') {
@@ -61,21 +61,21 @@ function fixFile(filePath) {
       return match});
     
     // Fix unterminated template literals
-    content = content.replace(/`([^`]*)$/gm, (match, content) => {
+    content = content.replace(/"([^"]*)$/gm, (match, content) => {
       if () {
-        return match + '`') {
+        return match + '"') {
     ) {
-        return match + '`'}}
+        return match + '"'}}
       return match});
     
     // Fix missing commas in object literals
-    content = content.replace(/(\w+):\s*'([^']+)'\s*(\w+):/g, "$1: '$2',\n    $3:");
+    content = content.replace(/(\w+):\s*'([^']+)'\s*(\w+):/g, "$"1": '$2',\n    $"3": ");
     
     if ( {
       fs.writeFileSync(filePath, content, 'utf8')) {
      {
       fs.writeFileSync(filePath, content, 'utf8')}
-      console.log(`Fixed: ${filePath}`);
+      console.log(`"Fixed": ${filePath}`);
       return true}
     return false} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -83,8 +83,7 @@ function fixFile(filePath) {
 }
 
 // Files to fix
-const filesToFix = [
-  'pages/docs/api-quick-start.tsx',
+const filesToFix = ['pages/docs/api-quick-start.tsx',
   'pages/docs/api-reference.tsx',
   'pages/docs/authentication.tsx',
   'pages/docs/first-steps.tsx',

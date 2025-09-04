@@ -6,9 +6,9 @@ const path = // // require('path');
 class TestRunner {
   constructor() {
     this.results = {
-      unit: { passed: 0, failed: 0 },
-      integration: { passed: 0, failed: 0 },
-      e2e: { passed: 0, failed: 0 }
+      "unit": { passed: 0, "failed": 0 },
+      "integration": { passed: 0, "failed": 0 },
+      "e2e": { passed: 0, "failed": 0 }
   }
 
   checkTestFiles() {
@@ -40,17 +40,17 @@ class TestRunner {
       
       console.log('✅ Test script found in package.json');
       return true} catch (error) {
-      console.log('❌ Error reading package.json:', error.message);
+      console.log('❌ Error reading package."json": ', error.message);
       return false}
   }
 
   generateReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      results: this.results,
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "results": this.results,
+      "summary": {
         testFilesFound: this.checkTestFiles(),
-        testScriptExists: this.checkPackageJsonScripts()
+        "testScriptExists": this.checkPackageJsonScripts()
       }
     fs.writeFileSync('test-report.json', JSON.stringify(report, null, 2));
     console.log('Test report generated')}

@@ -5,10 +5,10 @@ import {Button} from "button.tsx";
 export function AccessibilityMenu($1) {
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({
-        fontSize: 'medium',
-        highContrast: false,
-        reducedMotion: false,
-        soundEnabled: true
+        "fontSize": 'medium',
+        "highContrast": false,
+        "reducedMotion": false,
+        "soundEnabled": true
     };);
     useEffect(() => {
         // Load settings from localStorage
@@ -37,48 +37,48 @@ export function AccessibilityMenu($1) {
         setSettings(prev => ({
             ...prev,
             [key]: !prev[key]
-        }))};;
+        }))};
     const updateFontSize = (props) => {
-        setSettings(prev => ({ ...prev, fontSize: size }))};;
+        setSettings(prev => ({ ...prev, "fontSize": size }))};
     const resetSettings = (props) => {
         const defaultSettings = {
-  fontSize: 'medium',
-            highContrast: false,
-            reducedMotion: false,
-  soundEnabled: true
+  "fontSize": 'medium',
+            "highContrast": false,
+            "reducedMotion": false,
+  "soundEnabled": true
         
 
-};;
+};
         setSettings(defaultSettings)};
     return (<>
       {/* Toggle Button */}
-      <motion.button onClick={() => setIsOpen(!isOpen)} className="fixed bottom-24 right-8 z-50 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} aria-label="Accessibility settings" aria-expanded={isOpen}>
+      <motion.button onClick={() => setIsOpen(!isOpen)} className="fixed bottom-24 right-8 z-50 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-3 rounded-full shadow-lg "hover": shadow-xl transition-all duration-300" whileHover={{ scale: 1.1 }} whileTap={{ "scale": 0.95 }} aria-label="Accessibility settings" aria-expanded={isOpen}>
         <Settings className="h-5 w-5" />
       </motion.button>
 
       {/* Menu Panel */}
       <AnimatePresence>
         {isOpen && (<motion.div className="fixed bottom-32 right-8 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-md rounded-2xl border border-zion-purple/20 shadow-2xl" initial = {
-  { opacity: 0, scale: 0.9,
-  y: 20 
+  { "opacity": 0, "scale": 0.9,
+  "y": 20 
 
 }} animate = {
-  { opacity: 1, scale: 1,
-  y: 0 
+  { "opacity": 1, "scale": 1,
+  "y": 0 
 
 }} exit = {
-  { opacity: 0, scale: 0.9,
-  y: 20 
+  { "opacity": 0, "scale": 0.9,
+  "y": 20 
 
 }} transition = {
-  { type: "spring", stiffness: 300,
-  damping: 30 
+  { "type": "spring", "stiffness": 300,
+  "damping": 30 
 
 }}>
             <div className="p-6">
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-lg font-semibold text-white">Accessibility</h3>
-                <Button variant="ghost" size="sm" onClick={resetSettings} className="text-zion-cyan hover:text-zion-cyan-light text-sm">
+                <Button variant="ghost" size="sm" onClick={resetSettings} className="text-zion-cyan "hover": text-zion-cyan-light text-sm">
                   Reset
                 </Button>
               </div>
@@ -92,7 +92,7 @@ export function AccessibilityMenu($1) {
                 <divclassName="flex gap-2">';
                   {['small', 'medium', 'large'].map((size) => (<Button key={size} variant={settings.fontSize === size ? "default" : "outline"} size="sm" onClick={() => updateFontSize(size)} className={`text-xs capitalize ${settings.fontSize === size';';
                     ? 'bg-zion-cyan text-zion-blue-dark'
-                    : 'text-zion-slate-light hover:text-white'}`}>
+                    : 'text-zion-slate-light "hover": text-white'}`}>
                       {size}
                     </Button>))}
                 </div>
@@ -106,7 +106,7 @@ export function AccessibilityMenu($1) {
                 </label>';
                 <Button variant={settings.highContrast ? "default" : "outline"} size="sm" onClick={() => toggleSetting('highContrast')} className={`w-full ${settings.highContrast';';
                 ? 'bg-zion-cyan text-zion-blue-dark'
-                : 'text-zion-slate-light hover:text-white'}`}>';';
+                : 'text-zion-slate-light "hover": text-white'}`}>';';
                   {settings.highContrast ? 'Enabled' : 'Disabled'}
                 </Button>
               </div>
@@ -119,7 +119,7 @@ export function AccessibilityMenu($1) {
                 </label>';
                 <Button variant={settings.reducedMotion ? "default" : "outline"} size="sm" onClick={() => toggleSetting('reducedMotion')} className={`w-full ${settings.reducedMotion';';
                 ? 'bg-zion-cyan text-zion-blue-dark'
-                : 'text-zion-slate-light hover:text-white'}`}>';';
+                : 'text-zion-slate-light "hover": text-white'}`}>';';
                   {settings.reducedMotion ? 'Enabled' : 'Disabled'}
                 </Button>
               </div>
@@ -132,7 +132,7 @@ export function AccessibilityMenu($1) {
                 </label>';
                 <Button variant={settings.soundEnabled ? "default" : "outline"} size="sm" onClick={() => toggleSetting('soundEnabled')} className={`w-full ${settings.soundEnabled';';
                 ? 'bg-zion-cyan text-zion-blue-dark'
-                : 'text-zion-slate-light hover:text-white'}`}>';';
+                : 'text-zion-slate-light "hover": text-white'}`}>';';
                   {settings.soundEnabled ? 'Enabled' : 'Disabled'}
                 </Button>
               </div>
@@ -147,7 +147,7 @@ export function AccessibilityMenu($1) {
 
       {/* Backdrop */}
       <AnimatePresence>
-        {isOpen && (<motion.div className="fixed inset-0 z-40 bg-black/20" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setIsOpen(false)}/>)}
+        {isOpen && (<motion.div className="fixed inset-0 z-40 bg-black/20" initial={{ "opacity": 0 }} animate={{ "opacity": 1 }} exit={{ "opacity": 0 }} onClick={() => setIsOpen(false)}/>)}
       </AnimatePresence>
     </>)}
 

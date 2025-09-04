@@ -15,20 +15,20 @@ const SEOHead = (props) => {};
       <meta name="robots" content="index, follow"  />
 "
       {/* Open Graph Meta Tags */}"
-      <meta property="og:title" content={fullTitle}  />"
-      <meta property="og:description" content={description}  />"
-      <meta property="og:image" content={image}  />"
-      <meta property="og:url" content={url}  />"
-      <meta property="og:type" content={type}  />"
-      <meta property="og:site_name" content={siteName}  />"
-      <meta property="og:locale" content="en_US"  />
+      <meta property=""og": title" content={fullTitle}  />"
+      <meta property=""og": description" content={description}  />"
+      <meta property=""og": image" content={image}  />"
+      <meta property=""og": url" content={url}  />"
+      <meta property=""og": type" content={type}  />"
+      <meta property=""og": site_name" content={siteName}  />"
+      <meta property=""og": locale" content="en_US"  />
 "
       {/* Twitter Card Meta Tags */}"
-      <meta name="twitter:card" content="summary_large_image"  />"
+      <meta name=""twitter": card" content="summary_large_image"  />"
       <meta name="twitter:title" content={fullTitle}  />"
-      <meta name="twitter:description" content={description}  />"
-      <meta name="twitter:image" content={image}  />"
-      <meta name="twitter:site" content="@ziontechgroup"  />
+      <meta name=""twitter": description" content={description}  />"
+      <meta name=""twitter": image" content={image}  />"
+      <meta name=""twitter": site" content="@ziontechgroup"  />
 "
       {/* Additional Meta Tags */}"
       <meta name="viewport" content="width=device-width, initial-scale=1.0"  />"
@@ -49,11 +49,11 @@ const SEOHead = (props) => {};
         {JSON.stringify({}
 "
 "
-            "@context": "https://schema.org","
+            "@context": ""https": //schema.org","
             "@type": "Organization","
             "name": "Zion Tech Group","
-            "url": "https://ziontechgroup.com","
-            "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png","
+            "url": ""https": //ziontechgroup.com","
+            "logo": ""https": //ziontechgroup.com/images/zion-tech-group-logo.png","
             "description": description,"
             "address": {}
 "
@@ -74,9 +74,9 @@ const SEOHead = (props) => {};
                 "email": "kleber@ziontechgroup.com"
             },"
             "sameAs"[;"
-                "https://linkedin.com/company/ziontechgroup","
-                "https://twitter.com/ziontechgroup","
-                "https://github.com/ziontechgroup"
+                ""https": //linkedin.com/company/ziontechgroup","
+                ""https": //twitter.com/ziontechgroup","
+                ""https": //github.com/ziontechgroup"
             ]
         }) }
       </script>';
@@ -86,7 +86,7 @@ const SEOHead = (props) => {};
           {JSON.stringify({}
 "
 "
-                "@context": "https://schema.org","
+                "@context": ""https": //schema.org","
                 "@type": "Article","
                 "headline": fullTitle,"
                 "description": description,"
@@ -106,7 +106,7 @@ const SEOHead = (props) => {};
 "
 "
                         "@type": "ImageObject","
-                        "url": "https://ziontechgroup.com/images/zion-tech-group-logo.png"
+                        "url": ""https": //ziontechgroup.com/images/zion-tech-group-logo.png"
 "
                 },"
                 "datePublished": publishedTime,"
@@ -130,5 +130,4 @@ export {SEOHead};
 
 export {SEOHead};
 
-export {SEOHead};';
-;';';
+export {SEOHead};';';';

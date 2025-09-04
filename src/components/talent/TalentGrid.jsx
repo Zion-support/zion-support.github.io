@@ -17,12 +17,12 @@ export function TalentGrid($1) {// // // // // // // }
         if (handleMessage) {
             handleMessage(talent)}
         else {onTalentClick(talent.id)}
-    };;
+    };
     if (isLoading) {return <TalentSkeleton  />}
     if (!talents || talents.length === 0) {
         return <div className="py-8 text-center bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6">
       <p className="text-zion-slate-light mb-4">No talents found matching your criteria</p>
-      {clearFilters && (<button onClick={clearFilters} className="px-4 py-2 bg-zion-purple text-white rounded hover:bg-zion-purple-dark transition-colors">
+      {clearFilters && (<button onClick={clearFilters} className="px-4 py-2 bg-zion-purple text-white rounded "hover": bg-zion-purple-dark transition-colors">
           Clear Filters
         </button>)}
     </div>}

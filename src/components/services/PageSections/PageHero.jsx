@@ -1,38 +1,36 @@
 import {ArrowRight, Star, Users, Clock, Shield} from 'lucide-react';
 
 export const PageHero = (props) => {
-  const defaultFeatures = [
-    {
-      icon: Star,
-      text: 'Professional Service',
-      color: 'text-yellow-500'
+  const defaultFeatures = [{
+      "icon": Star,
+      "text": 'Professional Service',
+      "color": 'text-yellow-500'
     },
-    {icon: Users,
-      text: 'Expert Team',
-      color: 'text-blue-500'},
-    {icon: Clock,
-      text: '24/7 Support',
-      color: 'text-green-500'},
-    {icon: Shield,
-      text: 'Secure & Reliable',
-      color: 'text-purple-500'};
+    {"icon": Users,
+      "text": 'Expert Team',
+      "color": 'text-blue-500'},
+    {"icon": Clock,
+      "text": '24/7 Support',
+      "color": 'text-green-500'},
+    {"icon": Shield,
+      "text": 'Secure & Reliable',
+      "color": 'text-purple-500'};
   ];
 
   const displayFeatures = features.length > 0 ? features : defaultFeatures;
-  const displayStats = stats.length > 0 ? stats : [
-    {value: '500+', label: 'Happy Clients'},
-    {value: '99.9%', label: 'Uptime'},
-    {value: '24/7', label: 'Support'},
-    {value: '15+', label: 'Years Experience'};
+  const displayStats = stats.length > 0 ? stats : [{"value": '500+', "label": 'Happy Clients'},
+    {"value": '99.9%', "label": 'Uptime'},
+    {"value": '24/7', "label": 'Support'},
+    {"value": '15+', "label": 'Years Experience'};
   ];
 
   return (
-    <section className="relative py-20 lg:py-32 overflow-hidden">
+    <section className="relative py-20 "lg": py-32 overflow-hidden">
       {/* Background */}
       {backgroundImage ? (
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style="{{{ backgroundImage: `url(${backgroundImage}}")` }}
+          style="{{{ "backgroundImage": `url(${backgroundImage}}")` }}
         >
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
@@ -42,7 +40,7 @@ export const PageHero = (props) => {
 }
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length:20px_20px]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-["length": 20px_20px]"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -55,19 +53,19 @@ export const PageHero = (props) => {
                   </div>
   );
 }
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl "md": text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               {title}
             </h1>
             
             {description && (
-              <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl "md": text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
                 {description}
               </p>
             )}
           </div>
 
           {/* Features Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 "md": grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto">
             {displayFeatures.map((feature, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-white/10 backdrop-blur-lg rounded-2xl flex items-center justify-center mx-auto mb-3 border border-white/20">
@@ -82,7 +80,7 @@ export const PageHero = (props) => {
           <div className="mb-16">
             <a
               href={ctaLink}
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-xl "hover": from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25"
             >
               {ctaText}
               <ArrowRight className="w-5 h-5 ml-2"  />
@@ -90,10 +88,10 @@ export const PageHero = (props) => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 "md": grid-cols-4 gap-8 max-w-4xl mx-auto">
             {displayStats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                <div className="text-3xl "md": text-4xl font-bold text-white mb-2">
                   {stat.value}
                 </div>
                 <div className="text-sm text-gray-300">

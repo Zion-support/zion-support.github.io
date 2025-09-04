@@ -1,6 +1,6 @@
 interface PostCardProps {
 
-  post: {
+  "post": {
     id: string;
     title: string;
     content: string;
@@ -26,7 +26,7 @@ export default function PostCard($1) {
           className="w-10 h-10 rounded-full object-cover"
           />
         <div className="flex-1">
-          <h3 className="text-xl font-semibold text-white mb-2 hover: tex t-blue-400 transition-colors duration-300">
+          <h3 className="text-xl font-semibold text-white mb-2 "hover": tex t-blue-400 transition-colors duration-300">
             {post.title}
           </h3>
           <p className="text-gray-300 mb-3 line-clamp-3 leading-relaxed">

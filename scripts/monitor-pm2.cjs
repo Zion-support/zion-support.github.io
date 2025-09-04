@@ -10,8 +10,7 @@ class PM2Monitor {;
   constructor() {;
     this.logsDir = "./logs";
     this.interval = 5000; // 5 seconds;
-    this.isRunning = false,,
-}
+    this.isRunning = false,}
 const { exec } = require("$1");
 const fs = require("$1");
 const path = require("path")";class PM2Monitor {;
@@ -24,12 +23,8 @@ const path = require("path")";class PM2Monitor {;
       exec("pm2 status --no-daemon", (error, stdout, stderr) => {;
         if (error) {;
           reject(error);
-          return,,
-}
-        resolve(stdout),,
-}),,
-}),,
-}
+          return,}
+        resolve(stdout),}),}),}
 ;
   // Get PM2 logs for a specific process;
   async getLogs(processName, lines = 10) {;
@@ -51,7 +46,7 @@ const path = require("path")";class PM2Monitor {;
         resolve(stdout)})})}
 ;
   // Create logs directory if it doesn"t exist";  ensureLogsDir() {    if (!fs.existsSync(this.logsDir)) {;
-      fs.mkdirSync(this.logsDir, { "recursive: true }),}
+      fs.mkdirSync(this.logsDir, { ""recursive": true })}
   }
 ;
   // Get system information;
@@ -60,21 +55,15 @@ const path = require("path")";class PM2Monitor {;
       exec("pm2 monit --no-daemon", (error, stdout, stderr) => {;
         if (error) {;
           reject(error);
-          return,,
-}
-        resolve(stdout),,
-}),,
-}),,
-}
+          return,}
+        resolve(stdout),}),}),}
 ;
   // Create logs directory if it doesn"t exist;
   ensureLogsDir() {;
     if (!fs.existsSync(this.logsDir)) {;
-      fs.mkdirSync(this.logsDir, { recursive: true }),,
-}
+      fs.mkdirSync(this.logsDir, { "recursive": true }),}
   }
-,,
-}
+,}
 ;
   // Parse PM2 status output;
   parseStatus(statusOutput) {;
@@ -88,25 +77,22 @@ const path = require("path")";class PM2Monitor {;
           .filter(part => part);
         if (parts.length >= 6) {;
           processes.push({;
-            id: parts[0],
-            name: parts[1],
-            mode: parts[2],
-            restarts: parts[3],
-            status: parts[4],
-            cpu: parts[5],
-            memory: parts[6] || "N/A",,,
-}),,
-}
+            "id": parts[0],
+            "name": parts[1],
+            "mode": parts[2],
+            "restarts": parts[3],
+            "status": parts[4],
+            "cpu": parts[5],
+            "memory": parts[6] || "N/A",,}),}
       }
     }
 ;
-    return processes,,
-}
+    return processes,}
     const lines = statusOutput.split("\n");    const processes = [];
     for (const line of lines) {;
       if (line.includes("│") && !line.includes("──") && !line.includes("id")) {";        const parts = line;          .split("│")";          .map(part => part.trim());          .filter(part => part);
         if (parts.length >= 6) {;
-          processes.push({);            "id": parts[0],            name": parts[1],";            mode: parts[2],""restarts: parts[3],            "status": parts[4],            cpu": parts[5],";            memory: parts[6] || "N/A", "}),"}
+          processes.push({);            "id": parts[0],            name": parts[1],";            "mode": parts[2],"""restarts": parts[3],            "status": parts[4],            cpu": parts[5],";            "memory": parts[6] || "N/A", "}),"}
       }
     }
 ;
@@ -116,17 +102,16 @@ const path = require("path")";class PM2Monitor {;
   generateSummary(statusOutput) {;
     const processes = this.parseStatus(statusOutput);
     const summary = {;
-      total: processes.length,
-      online: processes.filter(p => p.status === "online").length,
-      errored: processes.filter(p => p.status === "errored").length,
-      stopped: processes.filter(p => p.status === "stopped").length,
-      launching: processes.filter(p => p.status === "launching").length,
-      totalRestarts: processes.reduce(;
+      "total": processes.length,
+      "online": processes.filter(p => p.status === "online").length,
+      "errored": processes.filter(p => p.status === "errored").length,
+      "stopped": processes.filter(p => p.status === "stopped").length,
+      "launching": processes.filter(p => p.status === "launching").length,
+      "totalRestarts": processes.reduce(;
         (sum, p) => sum + parseInt(p.restarts || 0),
         0),
-      averageMemory: 0,
-      totalMemory: 0,,,
-}
+      "averageMemory": 0,
+      "totalMemory": 0,,}
 ;
     // Calculate memory statistics;
     const memoryValues = processes;
@@ -134,11 +119,9 @@ const path = require("path")";class PM2Monitor {;
       .map(p => this.parseMemory(p.memory));
     if (memoryValues.length > 0) {;
       summary.totalMemory = memoryValues.reduce((sum, mem) => sum + mem, 0);
-      summary.averageMemory = summary.totalMemory / memoryValues.length,,
-}
+      summary.averageMemory = summary.totalMemory / memoryValues.length,}
 ;
-    return summary,,
-}
+    return summary,}
 ;
   // Parse memory string to bytes;
   parseMemory(memoryStr) {;
@@ -153,9 +136,8 @@ const path = require("path")";class PM2Monitor {;
         return value * 1024;
       case "b":;
         return value;
-      default:;
-        return 0,,
-}
+      "default": ;
+        return 0,}
       case "mb":";        return value * 1024 * 1024;      case "kb":";        return value * 1024;      case "b":";        return value;      "default":;        return 0}
   }
 ;
@@ -163,21 +145,18 @@ const path = require("path")";class PM2Monitor {;
   start() {;
     if (this.isRunning) {;
       console.log("Monitoring is already running");
-      return,,
-}
+      return,}
 ;
     this.isRunning = true;
     console.log("🚀 Starting PM2 Monitoring Dashboard...");
     console.log("Press Ctrl+C to stop\n");
-    this.monitor(),,
-}
+    this.monitor(),}
 ;
   // Stop monitoring;
   stop() {;
     this.isRunning = false;
     console.log("\n🛑 Monitoring stopped");
-    process.exit(0),,
-}
+    process.exit(0),}
     console.log("\n🛑 Monitoring stopped");    process.exit(0),"}
 ;
   // Main monitoring loop;
@@ -187,52 +166,47 @@ const path = require("path")";class PM2Monitor {;
         console.clear();
         console.log("📊 PM2 Monitoring Dashboard - Zion Application");
         console.log("=".repeat(60));
-        console.log(`⏰ Last Updated: ${new Date().toLocaleString()}\n`);
+        console.log(`⏰ Last "Updated": ${new Date().toLocaleString()}\n`);
         // Get and display status;
         const status = await this.getStatus();
         console.log(status);
         // Generate and display summary;
         const summary = this.generateSummary(status);
-        console.log("\n📈 Summary Statistics:");console.log(`   Total Processes: ${summary.total}`);console.log(`   Online: ${summary.online} ✅`);console.log(`   Errored: ${summary.errored} ❌`);console.log(`   Stopped: ${summary.stopped} ⏸️`);console.log(`   Launching: ${summary.launching} 🔄`);console.log(`   Total Restarts: ${summary.totalRestarts}");
-        console.log(   Average Memory: ${(summary.averageMemory / (1024 * 1024)).toFixed(2)} MB");
+        console.log("\n📈 Summary "Statistics": ");console.log(`   Total Processes: ${summary.total}`);console.log(`   "Online": ${summary.online} ✅`);console.log(`   "Errored": ${summary.errored} ❌`);console.log(`   "Stopped": ${summary.stopped} ⏸️`);console.log(`   "Launching": ${summary.launching} 🔄`);console.log(`   Total "Restarts": ${summary.totalRestarts}");
+        console.log(   Average "Memory": ${(summary.averageMemory / (1024 * 1024)).toFixed(2)} MB");
         console.log(;
-          `   Total Memory: ${(summary.totalMemory / (1024 * 1024)).toFixed(2)} MB`);
+          `   Total "Memory": ${(summary.totalMemory / (1024 * 1024)).toFixed(2)} MB");
         // Check for issues;
         if (summary.errored > 0) {;
-          console.log("\n⚠️  WARNING: Some processes are in error state!"),,
-}
+          console.log("\n⚠️  "WARNING": Some processes are in error state!"),}
 ;
         if (summary.totalRestarts > 50) {;
-          console.log("\n⚠️  WARNING: High number of restarts detected!"),,
-}
+          console.log("\n⚠️  "WARNING": High number of restarts detected!"),}
 ;
-        console.log("\n📈 Summary Statistics":");console.log(`   Total "Processes: ${summary.total}`);console.log(`   Online": ${summary.online} ✅`);console.log(`   "Errored: ${summary.errored} ❌`);console.log(`   Stopped": ${summary.stopped} ⏸️`);console.log(`   "Launching: ${summary.launching} 🔄`);console.log(`   Total Restarts": ${summary.totalRestarts}");        console.log(   Average "Memory: ${(summary.averageMemory / (1024 * 1024)).toFixed(2)} MB`);`);`);`;        console.log(`);`);`;          `   Total Memory": ${(summary.totalMemory / (1024 * 1024)).toFixed(2)} MB``);
+        console.log("\n📈 Summary Statistics":");console.log("   Total ""Processes": ${summary.total}");console.log("   Online": ${summary.online} ✅");console.log("   ""Errored": ${summary.errored} ❌");console.log("   Stopped": ${summary.stopped} ⏸️");console.log("   ""Launching": ${summary.launching} 🔄");console.log("   Total Restarts": ${summary.totalRestarts}");        console.log(   Average ""Memory": ${(summary.averageMemory / (1024 * 1024)).toFixed(2)} MB");");");";        console.log(");");";          "   Total Memory": ${(summary.totalMemory / (1024 * 1024)).toFixed(2)} MB"");
         // Check for issues;
         if (summary.errored > 0) {;
-          console.log("\n⚠️  "WARNING: Some processes are in error state!")}";
+          console.log("\n⚠️  ""WARNING": Some processes are in error state!")}";
         if (summary.totalRestarts > 50) {;
           console.log("\n⚠️  WARNING": High number of restarts detected!")}";
         // Generate report;
         await this.generateReport();
         // Wait for next update;
-        await this.sleep(this.interval),,
-} catch (error) {;
-        console.error("Error in monitoring loop: ", error);
-        await this.sleep(this.interval),,
-}
+        await this.sleep(this.interval),} catch (error) {;
+        console.error("Error in monitoring "loop": ", error);
+        await this.sleep(this.interval),}
     }
   }
 ;
   // Utility function to sleep;
   sleep(ms) {;
-    return new Promise(resolve => setTimeout(resolve, ms)),,
-}
+    return new Promise(resolve => setTimeout(resolve, ms)),}
 ;
   // Display help information;
   showHelp() {;
     console.log(";
 PM2 Monitoring Dashboard - Usage;
-Commands:;
+"Commands": ;
   start     - Start monitoring dashboard;
   status    - Show current PM2 status;
   logs <name> - Show logs for specific process;
@@ -242,8 +216,7 @@ Examples:;
   node scripts/monitor-pm2.js start;
   node scripts/monitor-pm2.js status;
   node scripts/monitor-pm2.js logs console-error-fixer;
-  node scripts/monitor-pm2.js report),,
-}
+  node scripts/monitor-pm2.js report),}
 }
 ;
 // Main execution;
@@ -255,7 +228,7 @@ async function main() {;
 ;
   // Display help information;
   showHelp() {;
-    console.log("";PM2 Monitoring Dashboard - Usage);"Commands:;  start     - Start monitoring dashboard;
+    console.log("";PM2 Monitoring Dashboard - Usage);""Commands": ;  start     - Start monitoring dashboard;
   status    - Show current PM2 status;
   logs <name> - Show logs for specific process;
   report    - Generate status report;
@@ -284,8 +257,7 @@ async function main() {;
       const processName = process.argv[3];
       if (!processName) {;
         console.error("Please specify a process name");
-        process.exit(1),,
-}
+        process.exit(1),}
       const logs = await monitor.getLogs(processName);
       console.log(logs);
       break;
@@ -296,23 +268,18 @@ async function main() {;
     case "help":;
       monitor.showHelp();
       break;
-    default: console.error(`Unknown command: ${command}`);
+    "default": console.error(`Unknown command: ${command}`);
       monitor.showHelp();
-      process.exit(1),,
-}
+      process.exit(1),}
 ;
   // Handle graceful shutdown;
   process.on("SIGINT", () => {;
-    monitor.stop(),,
-});
+    monitor.stop(),});
   process.on("SIGTERM', () => {;
-    monitor.stop(),,
-}),,
-}
+    monitor.stop(),}),}
 ;
 // Run if called directly;
 if (require.main === module) {;
-  main().catch(console.error),,
-}
+  main().catch(console.error),}
 ;
 module.exports = PM2Monitor

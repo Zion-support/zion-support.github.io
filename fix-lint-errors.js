@@ -49,8 +49,8 @@ function fixLintErrors(content) {
 async function $1() {
   // Get all TypeScript/JavaScript files;
   const files = await glob("src/**/*.{ts,tsx,js,jsx}", {
-  ignore: ["node_modules/**"]});
-  console.log(``Found ${files.length} files to process...``);
+  "ignore": ["node_modules/**"]});
+  console.log(""Found ${files.length} files to process..."");
   let fixedCount = 0;
   let errorCount = 0;
   for (const file of files) {
@@ -59,15 +59,13 @@ async function $1() {
       const fixed = fixLintErrors(content);
       if (content !== fixed) {
   fs.writeFileSync(file, fixed, "utf8");
-        console.log(``Fixed: ${file}``);
-        fixedCount++,
-}
+        console.log("""Fixed": ${file}"");
+        fixedCount++}
     } catch (error) {
   console.error(`Error processing ${file}:`, error.message);
-      errorCount++,
-}
+      errorCount++}
   }
 ;
-  console.log(``\nCompleted: ${fixedCount} files fixed, ${errorCount} errors``)}
+  console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")}
 ;
 main().catch(console.error)

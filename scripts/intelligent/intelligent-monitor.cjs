@@ -12,18 +12,18 @@ const os = require('os');
 class IntelligentMonitor {
   constructor() {
     this.metrics = {
-      system: [],
-      processes: [],
-      performance: [],
-      errors: []
+      "system": [],
+      "processes": [],
+      "performance": [],
+      "errors": []
     };
     this.alerts = [];
     this.thresholds = {
-      memory: 80, // percentage
-      cpu: 70,   // percentage
-      disk: 85,  // percentage
-      responseTime: 5000, // milliseconds
-      errorRate: 5 // percentage
+      "memory": 80, // percentage
+      "cpu": 70,   // percentage
+      "disk": 85,  // percentage
+      "responseTime": 5000, // milliseconds
+      "errorRate": 5 // percentage
     };
     this.reportDir = path.join(process.cwd(), 'monitoring-reports');
     this.ensureDirectories();
@@ -31,8 +31,8 @@ class IntelligentMonitor {
 
   async ensureDirectories() {
     try {
-      await fs.mkdir(this.reportDir, { recursive: true });
-      await fs.mkdir(path.join(process.cwd(), 'logs'), { recursive: true });
+      await fs.mkdir(this.reportDir, { "recursive": true });
+      await fs.mkdir(path.join(process.cwd(), 'logs'), { "recursive": true });
     } catch (error) {
       console.log('Directories already exist or created');
     }
@@ -42,7 +42,7 @@ class IntelligentMonitor {
     return new Promise((resolve, reject) => {
       pm2.connect((err) => {
         if (err) {
-          console.error('❌ Failed to connect to PM2:', err);
+          console.error('❌ Failed to connect to "PM2": ', err);
           reject(err);
           return;
         }
@@ -76,22 +76,22 @@ class IntelligentMonitor {
 
   async collectSystemMetrics() {
     const systemMetrics = {
-      timestamp: Date.now(),
-      memory: {
+      "timestamp": Date.now(),
+      "memory": {
         total: os.totalmem(),
-        free: os.freemem(),
-        used: os.totalmem() - os.freemem(),
-        percentage: ((os.totalmem() - os.freemem()) / os.totalmem()) * 100
+        "free": os.freemem(),
+        "used": os.totalmem() - os.freemem(),
+        "percentage": ((os.totalmem() - os.freemem()) / os.totalmem()) * 100
       },
-      cpu: {
+      "cpu": {
         loadAverage: os.loadavg(),
-        cores: os.cpus().length,
-        model: os.cpus()[0].model
+        "cores": os.cpus().length,
+        "model": os.cpus()[0].model
       },
-      disk: await this.getDiskUsage(),
-      uptime: os.uptime(),
-      platform: os.platform(),
-      arch: os.arch()
+      "disk": await this.getDiskUsage(),
+      "uptime": os.uptime(),
+      "platform": os.platform(),
+      "arch": os.arch()
     };
 
     this.metrics.system.push(systemMetrics);
@@ -107,22 +107,22 @@ class IntelligentMonitor {
   async getDiskUsage() {
     try {
       const { execSync } = require('child_process');
-      const output = execSync('df -h /', { encoding: 'utf8' });
+      const output = execSync('df -h /', { "encoding": 'utf8' });
       const lines = output.split('\n');
       const data = lines[1].split(/\s+/);
       
       return {
-        total: data[1],
-        used: data[2],
-        available: data[3],
-        percentage: parseInt(data[4].replace('%', ''))
+        "total": data[1],
+        "used": data[2],
+        "available": data[3],
+        "percentage": parseInt(data[4].replace('%', ''))
       };
     } catch (error) {
       return {
-        total: 'Unknown',
-        used: 'Unknown',
-        available: 'Unknown',
-        percentage: 0
+        "total": 'Unknown',
+        "used": 'Unknown',
+        "available": 'Unknown',
+        "percentage": 0
       };
     }
   }
@@ -136,18 +136,18 @@ class IntelligentMonitor {
         }
 
         const processMetrics = {
-          timestamp: Date.now(),
-          processes: processes.map(process => ({
+          "timestamp": Date.now(),
+          "processes": processes.map(process => ({
             name: process.name,
-            pid: process.pid,
-            memory: process.monit.memory,
-            cpu: process.monit.cpu,
-            status: process.pm2_env.status,
-            uptime: process.pm2_env.pm_uptime,
-            restarts: process.pm2_env.restart_time,
-            heapUsed: process.monit.heap_used,
-            heapTotal: process.monit.heap_total,
-            responseTime: this.calculateResponseTime(process)
+            "pid": process.pid,
+            "memory": process.monit.memory,
+            "cpu": process.monit.cpu,
+            "status": process.pm2_env.status,
+            "uptime": process.pm2_env.pm_uptime,
+            "restarts": process.pm2_env.restart_time,
+            "heapUsed": process.monit.heap_used,
+            "heapTotal": process.monit.heap_total,
+            "responseTime": this.calculateResponseTime(process)
           }))
         };
 
@@ -195,11 +195,10 @@ class IntelligentMonitor {
       this.metrics.system.slice(-20).map(m => m.cpu.loadAverage[0])
     );
 
-    console.log(`📊 System Analysis:
-      Memory: ${currentSystem.memory.percentage.toFixed(2)}% (Trend: ${memoryTrend > 0 ? '↗️' : '↘️'})
-      CPU Load: ${currentSystem.cpu.loadAverage[0].toFixed(2)} (Trend: ${cpuTrend > 0 ? '↗️' : '↘️'})
-      Disk: ${currentSystem.disk.percentage}%
-      Anomalies: Memory=${memoryAnomaly}, CPU=${cpuAnomaly}`);
+    console.log(`📊 System "Analysis": Memory: ${currentSystem.memory.percentage.toFixed(2)}% ("Trend": ${memoryTrend > 0 ? '↗️' : '↘️'})
+      CPU "Load": ${currentSystem.cpu.loadAverage[0].toFixed(2)} ("Trend": ${cpuTrend > 0 ? '↗️' : '↘️'})
+      "Disk": ${currentSystem.disk.percentage}%
+      "Anomalies": Memory=${memoryAnomaly}, CPU=${cpuAnomaly}`);
 
     return {
       memoryTrend,
@@ -236,12 +235,12 @@ class IntelligentMonitor {
     if (this.metrics.processes.length < 5) return;
 
     const performanceMetrics = {
-      timestamp: Date.now(),
-      averageResponseTime: this.calculateAverageResponseTime(),
-      totalMemoryUsage: this.calculateTotalMemoryUsage(),
-      averageCpuUsage: this.calculateAverageCpuUsage(),
-      errorRate: this.calculateErrorRate(),
-      throughput: this.calculateThroughput()
+      "timestamp": Date.now(),
+      "averageResponseTime": this.calculateAverageResponseTime(),
+      "totalMemoryUsage": this.calculateTotalMemoryUsage(),
+      "averageCpuUsage": this.calculateAverageCpuUsage(),
+      "errorRate": this.calculateErrorRate(),
+      "throughput": this.calculateThroughput()
     };
 
     this.metrics.performance.push(performanceMetrics);
@@ -251,12 +250,11 @@ class IntelligentMonitor {
       this.metrics.performance.shift();
     }
 
-    console.log(`⚡ Performance Analysis:
-      Avg Response Time: ${performanceMetrics.averageResponseTime}ms
-      Total Memory: ${(performanceMetrics.totalMemoryUsage / 1024 / 1024).toFixed(2)}MB
-      Avg CPU: ${performanceMetrics.averageCpuUsage.toFixed(2)}%
-      Error Rate: ${performanceMetrics.errorRate.toFixed(2)}%
-      Throughput: ${performanceMetrics.throughput} req/min`);
+    console.log(`⚡ Performance "Analysis": Avg Response Time: ${performanceMetrics.averageResponseTime}ms
+      Total "Memory": ${(performanceMetrics.totalMemoryUsage / 1024 / 1024).toFixed(2)}MB
+      Avg "CPU": ${performanceMetrics.averageCpuUsage.toFixed(2)}%
+      Error "Rate": ${performanceMetrics.errorRate.toFixed(2)}%
+      "Throughput": ${performanceMetrics.throughput} req/min`);
 
     return performanceMetrics;
   }
@@ -350,7 +348,7 @@ class IntelligentMonitor {
     for (const process of currentProcesses.processes) {
       if (process.status !== 'online') {
         await this.createAlert('process', 'critical', 
-          `Process ${process.name} is not online (status: ${process.status})`);
+          `Process ${process.name} is not online ("status": ${process.status})`);
       }
 
       if (process.restarts > 5) {
@@ -374,12 +372,12 @@ class IntelligentMonitor {
 
   async createAlert(type, severity, message) {
     const alert = {
-      id: Date.now(),
-      timestamp: new Date().toISOString(),
+      "id": Date.now(),
+      "timestamp": new Date().toISOString(),
       type,
       severity,
       message,
-      acknowledged: false
+      "acknowledged": false
     };
 
     this.alerts.push(alert);
@@ -396,8 +394,7 @@ class IntelligentMonitor {
   }
 
   async sendNotification(alert) {
-    // In a real implementation, this would send notifications via:
-    // - Slack webhook
+    // In a real implementation, this would send notifications "via": // - Slack webhook
     // - Email
     // - SMS
     // - PagerDuty
@@ -409,17 +406,17 @@ class IntelligentMonitor {
 
   async generateInsights() {
     const insights = {
-      timestamp: new Date().toISOString(),
-      systemHealth: this.calculateSystemHealth(),
-      performanceScore: this.calculatePerformanceScore(),
-      recommendations: this.generateRecommendations(),
-      trends: this.analyzeTrends()
+      "timestamp": new Date().toISOString(),
+      "systemHealth": this.calculateSystemHealth(),
+      "performanceScore": this.calculatePerformanceScore(),
+      "recommendations": this.generateRecommendations(),
+      "trends": this.analyzeTrends()
     };
 
     const insightsPath = path.join(this.reportDir, `insights-${Date.now()}.json`);
     await fs.writeFile(insightsPath, JSON.stringify(insights, null, 2));
     
-    console.log(`💡 Insights generated and saved to: ${insightsPath}`);
+    console.log(`💡 Insights generated and saved "to": ${insightsPath}`);
     return insights;
   }
 
@@ -471,37 +468,37 @@ class IntelligentMonitor {
 
     if (currentSystem.memory.percentage > 80) {
       recommendations.push({
-        type: 'memory',
-        priority: 'high',
-        action: 'Consider increasing memory or optimizing memory usage',
-        details: `Current memory usage: ${currentSystem.memory.percentage.toFixed(2)}%`
+        "type": 'memory',
+        "priority": 'high',
+        "action": 'Consider increasing memory or optimizing memory usage',
+        "details": `Current memory usage: ${currentSystem.memory.percentage.toFixed(2)}%`
       });
     }
 
     if (currentSystem.cpu.loadAverage[0] > 2) {
       recommendations.push({
-        type: 'cpu',
-        priority: 'high',
-        action: 'Consider scaling up or optimizing CPU-intensive operations',
-        details: `Current CPU load: ${currentSystem.cpu.loadAverage[0].toFixed(2)}`
+        "type": 'cpu',
+        "priority": 'high',
+        "action": 'Consider scaling up or optimizing CPU-intensive operations',
+        "details": `Current CPU load: ${currentSystem.cpu.loadAverage[0].toFixed(2)}`
       });
     }
 
     if (errorRate > 5) {
       recommendations.push({
-        type: 'stability',
-        priority: 'critical',
-        action: 'Review error logs and improve error handling',
-        details: `Current error rate: ${errorRate.toFixed(2)}%`
+        "type": 'stability',
+        "priority": 'critical',
+        "action": 'Review error logs and improve error handling',
+        "details": `Current error rate: ${errorRate.toFixed(2)}%`
       });
     }
 
     if (recommendations.length === 0) {
       recommendations.push({
-        type: 'status',
-        priority: 'info',
-        action: 'System is running optimally',
-        details: 'No immediate actions required'
+        "type": 'status',
+        "priority": 'info',
+        "action": 'System is running optimally',
+        "details": 'No immediate actions required'
       });
     }
 
@@ -515,12 +512,12 @@ class IntelligentMonitor {
     const recentProcesses = this.metrics.processes.slice(-10);
 
     return {
-      memoryTrend: this.calculateTrend(recentSystem.map(m => m.memory.percentage)),
-      cpuTrend: this.calculateTrend(recentSystem.map(m => m.cpu.loadAverage[0])),
-      responseTimeTrend: this.calculateTrend(
+      "memoryTrend": this.calculateTrend(recentSystem.map(m => m.memory.percentage)),
+      "cpuTrend": this.calculateTrend(recentSystem.map(m => m.cpu.loadAverage[0])),
+      "responseTimeTrend": this.calculateTrend(
         recentProcesses.map(p => this.calculateAverageResponseTime())
       ),
-      errorRateTrend: this.calculateTrend(
+      "errorRateTrend": this.calculateTrend(
         recentProcesses.map(p => this.calculateErrorRate())
       )
     };
@@ -528,26 +525,26 @@ class IntelligentMonitor {
 
   async generateMonitoringReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "summary": {
         totalAlerts: this.alerts.length,
-        activeAlerts: this.alerts.filter(a => !a.acknowledged).length,
-        systemHealth: this.calculateSystemHealth(),
-        performanceScore: this.calculatePerformanceScore()
+        "activeAlerts": this.alerts.filter(a => !a.acknowledged).length,
+        "systemHealth": this.calculateSystemHealth(),
+        "performanceScore": this.calculatePerformanceScore()
       },
-      metrics: {
+      "metrics": {
         system: this.metrics.system.slice(-10),
-        processes: this.metrics.processes.slice(-10),
-        performance: this.metrics.performance.slice(-10)
+        "processes": this.metrics.processes.slice(-10),
+        "performance": this.metrics.performance.slice(-10)
       },
-      alerts: this.alerts.slice(-50), // Last 50 alerts
-      insights: await this.generateInsights()
+      "alerts": this.alerts.slice(-50), // Last 50 alerts
+      "insights": await this.generateInsights()
     };
 
     const reportPath = path.join(this.reportDir, `monitoring-report-${Date.now()}.json`);
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
     
-    console.log(`📊 Monitoring report saved to: ${reportPath}`);
+    console.log(`📊 Monitoring report saved "to": ${reportPath}`);
     return report;
   }
 
@@ -581,7 +578,7 @@ async function main() {
     });
 
   } catch (error) {
-    console.error('❌ Intelligent Monitor failed:', error);
+    console.error('❌ Intelligent Monitor "failed": ', error);
     process.exit(1);
   }
 }

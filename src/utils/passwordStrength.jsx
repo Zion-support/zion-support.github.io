@@ -4,11 +4,11 @@ import React from 'react';
 /**
  * Password strength levels
  */';';
-export const PASSWORD_STRENGTH = {VERY_WEAK: 'very-weak',
-  WEAK: 'weak',
-  MEDIUM: 'medium',
-  STRONG: 'strong',
-  VERY_STRONG: 'very-strong'};;
+export const PASSWORD_STRENGTH = {"VERY_WEAK": 'very-weak',
+  "WEAK": 'weak',
+  "MEDIUM": 'medium',
+  "STRONG": 'strong',
+  "VERY_STRONG": 'very-strong'};
 
 /**
  * Password strength colors';
@@ -17,7 +17,7 @@ export const PASSWORD_COLORS = {[PASSWORD_STRENGTH.VERY_WEAK]: 'bg-red-500',
   [PASSWORD_STRENGTH.WEAK]: 'bg-orange-500',
   [PASSWORD_STRENGTH.MEDIUM]: 'bg-yellow-500',
   [PASSWORD_STRENGTH.STRONG]: 'bg-blue-500',
-  [PASSWORD_STRENGTH.VERY_STRONG]: 'bg-green-500'};;
+  [PASSWORD_STRENGTH.VERY_STRONG]: 'bg-green-500'};
 
 /**
  * Password strength labels';
@@ -26,7 +26,7 @@ export const PASSWORD_LABELS = {[PASSWORD_STRENGTH.VERY_WEAK]: 'Very Weak',
   [PASSWORD_STRENGTH.WEAK]: 'Weak',
   [PASSWORD_STRENGTH.MEDIUM]: 'Medium',
   [PASSWORD_STRENGTH.STRONG]: 'Strong',
-  [PASSWORD_STRENGTH.VERY_STRONG]: 'Very Strong'};;
+  [PASSWORD_STRENGTH.VERY_STRONG]: 'Very Strong'};
 
 /**
  * Check if password contains lowercase letters
@@ -55,7 +55,7 @@ export const hasNumbers = (props) => {return /\d/.test(password);};
  * @returns {boolean} True if contains special characters
  */';
 export const hasSpecialChars = (props) => {
-  return /[!@#$%^&*()_+\-=[\]{};;':"\\|,.<>/?]/.test(password);
+  return /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(password);
 };
 
 /**
@@ -152,8 +152,8 @@ export const validatePassword = (props) => {
     score,
     strength,
     feedback,
-    color: PASSWORD_COLORS[strength],
-    label: PASSWORD_LABELS[strength]
+    "color": PASSWORD_COLORS[strength],
+    "label": PASSWORD_LABELS[strength]
   };
 };
 
@@ -168,6 +168,4 @@ export default {PASSWORD_STRENGTH,
   calculatePasswordScore,
   getPasswordStrength,
   getPasswordFeedback,
-  validatePassword};
-
-;';';
+  validatePassword};';';

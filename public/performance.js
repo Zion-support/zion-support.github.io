@@ -2,7 +2,7 @@
 // Performance optimizations for Zion Tech Group;
 const performanceOptimizations = {
   // Lazy load images;
-  lazyLoadImages: () => {
+  "lazyLoadImages": () => {
   const images = document.querySelectorAll("img[data-src]");
     const imageObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -12,15 +12,12 @@ const performanceOptimizations = {
           img.removeAttribute("data-src");
           imageObserver.unobserve(img)}
       })});
-;
     images.forEach(img => imageObserver.observe(img))},
 
   // Preload critical resources;
-  preloadCriticalResources: () => {
-  const criticalResources = [
-  "/fonts/inter.woff2",
+  "preloadCriticalResources": () => {
+  const criticalResources = ["/fonts/inter.woff2",
       "/css/critical.css"];
-;
     criticalResources.forEach(resource => {
   const link = document.createElement("link");
       link.rel = "preload";
@@ -29,27 +26,23 @@ const performanceOptimizations = {
       document.head.appendChild(link)})},
 
   // Optimize scroll performance;
-  optimizeScroll: () => {
+  "optimizeScroll": () => {
   let ticking = false;
     const handleScroll = () => {
   if (!ticking) {
   requestAnimationFrame(() => {
   // Scroll handling logic here;
-          ticking = false,
-});
-        ticking = true,
-}
+          ticking = false});
+        ticking = true}
     };
-;
-    window.addEventListener("scroll", handleScroll, { passive: true })},
+    window.addEventListener("scroll", handleScroll, { "passive": true })},
 
   // Initialize all optimizations;
-  init: () => {
+  "init": () => {
   this.lazyLoadImages();
     this.preloadCriticalResources();
     this.optimizeScroll()}
 };
-;
 // Auto-initialize when DOM is ready;
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", performanceOptimizations.init)} else {

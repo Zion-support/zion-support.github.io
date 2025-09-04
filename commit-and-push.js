@@ -12,13 +12,12 @@ class CommitAndPush {
 
   log(message, type = 'INFO') {
     const icons = {
-      'INFO': 'ℹ️',
-      'SUCCESS': '✅',
-      'ERROR': '❌',
-      'WARNING': '⚠️',
-      'PROGRESS': '🔄'
-    };
-    
+      "INFO": 'ℹ️',
+      "SUCCESS": '✅',
+      "ERROR": '❌',
+      "WARNING": '⚠️',
+      "PROGRESS": '🔄'};
+
     console.log(`${icons[type]} ${message}`);
   }
 
@@ -46,8 +45,7 @@ class CommitAndPush {
   }
 
   createGitCommands() {
-    const commands = [
-      '# Git Workflow Commands',
+    const commands = ['# Git Workflow Commands',
       '# Run these commands to commit and push changes',
       '',
       'git add .',
@@ -55,12 +53,12 @@ class CommitAndPush {
       `git commit -m "${this.commitMessage}"`,
       'git push origin main',
       '',
-      '# Alternative: Push to current branch',
+      '# "Alternative": Push to current branch',
       'git push origin HEAD',
       '',
       '# Check status after push',
       'git status',
-      'git log --oneline -5'
+      'git log --oneline -5',
     ];
 
     const commandsPath = path.join(process.cwd(), 'git-commands.txt');
@@ -75,7 +73,7 @@ set -e
 echo "🚀 Starting git workflow..."
 
 # Check if we're in a git repository
-if [ ! -d ".git" ]; then
+if [! -d ".git" ]; then
     echo "❌ Not in a git repository"
     exit 1
 fi
@@ -85,7 +83,7 @@ echo "📦 Adding changes..."
 git add .
 
 # Show status
-echo "📊 Current status:"
+echo "📊 Current "status": "
 git status
 
 # Commit with message
@@ -98,7 +96,7 @@ git push origin main
 
 # Show final status
 echo "✅ Git workflow completed!"
-echo "📊 Final status:"
+echo "📊 Final "status": "
 git status
 echo "📝 Recent commits:"
 git log --oneline -5
@@ -107,24 +105,19 @@ git log --oneline -5
     const scriptPath = path.join(process.cwd(), 'commit-and-push.sh');
     fs.writeFileSync(scriptPath, script);
     fs.chmodSync(scriptPath, '755');
-    this.log(`Commit script created: ${scriptPath}`, 'SUCCESS');
+    this.log(`Commit script "created": ${scriptPath}`, 'SUCCESS');
   }
 
   generateSummary() {
     const summary = {
-      timestamp: new Date().toISOString(),
-      commitMessage: this.commitMessage,
-      filesCreated: [
-        'git-commands.txt',
-        'commit-and-push.sh'
-      ],
-      nextSteps: [
-        'Review the generated files',
-        'Run: chmod +x commit-and-push.sh',
-        'Execute: ./commit-and-push.sh',
-        'Or manually run commands from git-commands.txt'
-      ]
-    };
+      "timestamp": new Date().toISOString(),
+      "commitMessage": this.commitMessage,
+      "filesCreated": ['git-commands.txt', 'commit-and-push.sh'],
+      "nextSteps": ['Review the generated files',
+        '"Run": chmod +x commit-and-push.sh',
+        '"Execute": ./commit-and-push.sh',
+        'Or manually run commands from git-commands.txt',
+      ]};
 
     const summaryPath = path.join(process.cwd(), 'git-workflow-summary.json');
     fs.writeFileSync(summaryPath, JSON.stringify(summary, null, 2));
@@ -133,7 +126,7 @@ git log --oneline -5
 
   async run() {
     this.log('🚀 Starting git workflow preparation...', 'PROGRESS');
-    
+
     if (!this.checkGitRepository()) {
       this.log('Cannot proceed without git repository', 'ERROR');
       return;
@@ -142,12 +135,12 @@ git log --oneline -5
     this.createGitCommands();
     this.createCommitScript();
     this.generateSummary();
-    
+
     this.log('✅ Git operations prepared successfully', 'SUCCESS');
-    this.log('📋 Next steps:', 'INFO');
+    this.log('📋 Next "steps": ', 'INFO');
     this.log('1. Review the generated files', 'INFO');
-    this.log('2. Run: chmod +x commit-and-push.sh', 'INFO');
-    this.log('3. Execute: ./commit-and-push.sh', 'INFO');
+    this.log('2. "Run": chmod +x commit-and-push.sh', 'INFO');
+    this.log('3. "Execute": ./commit-and-push.sh', 'INFO');
     this.log('4. Or manually run commands from git-commands.txt', 'INFO');
   }
 }
@@ -156,7 +149,7 @@ git log --oneline -5
 if (require.main === module) {
   const commitAndPush = new CommitAndPush();
   commitAndPush.run().catch(error => {
-    console.error('Commit and push preparation failed:', error);
+    console.error('Commit and push preparation "failed": ', error);
     process.exit(1);
   });
 }

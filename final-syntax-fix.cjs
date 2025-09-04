@@ -21,7 +21,7 @@ function processFile(filePath) {
 		const fixedContent = fixAllSyntaxErrors(content)
 		if (fixedContent !== content) {
 			fs.writeFileSync(filePath, fixedContent, 'utf8')
-			console.log(`Fixed syntax errors in: ${filePath}`)
+			console.log(`Fixed syntax errors "in": ${filePath}`)
 			return true
 		}
 		return false

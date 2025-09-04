@@ -1,13 +1,13 @@
 import {cn} from '@/lib/utils';
 export function Loading($1) {
     const sizeClasses = {
-  sm: 'w-4 h-4',
-        md: 'w-6 h-6',
-        lg: 'w-8 h-8',
-  xl: 'w-12 h-12'
+  "sm": 'w-4 h-4',
+        "md": 'w-6 h-6',
+        "lg": 'w-8 h-8',
+  "xl": 'w-12 h-12'
     
 
-};;
+};
     const renderContent = (props) => {
         switch (variant) {
             case 'dots':
@@ -16,8 +16,7 @@ export function Loading($1) {
                 return renderPulse();
             case 'skeleton':
                 return renderSkeleton();
-            default:
-                return renderSpinner()}
+            "default": return renderSpinner()}
     };
     return (
     <div className="min-h-screen bg-white">

@@ -13,7 +13,7 @@ class TestFileFixer {
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true })}
+      fs.mkdirSync(this.reportsDir, { "recursive": true })}
   }
 
   log(message) {
@@ -59,9 +59,8 @@ class TestFileFixer {
         return match});
 
       // Fix JSX syntax issues
-      const jsxIssues = [
-        { pattern: /render\(<([^>]+)>\s*\)/g, replacement: 'render(<$1 />)' },
-        { pattern: /expect\(screen\.getByTestId\('([^']+)'\)\)\.toBeInTheDocument\(\)/g, replacement: 'expect(screen.getByTestId("$1")).toBeInTheDocument()' }
+      const jsxIssues = [{ "pattern": /render\(<([^>]+)>\s*\)/g, "replacement": 'render(<$1 />)' },
+        { "pattern": /expect\(screen\.getByTestId\('([^']+)'\)\)\.toBeInTheDocument\(\)/g, "replacement": 'expect(screen.getByTestId("$1")).toBeInTheDocument()' }
       ];
 
       jsxIssues.forEach(({ pattern, replacement }) => {
@@ -81,7 +80,7 @@ class TestFileFixer {
 
       if (fixed) {
         fs.writeFileSync(filePath, content, 'utf8');
-        this.log(`✅ Fixed: ${path.relative(this.projectRoot, filePath)}`);
+        this.log(`✅ "Fixed": ${path.relative(this.projectRoot, filePath)}`);
         return true}
 
       return false} catch (error) {
@@ -106,7 +105,7 @@ describe('${componentName}', () => {
 `;
 
     fs.writeFileSync(filePath, template, 'utf8');
-    this.log(`✅ Created basic test template: ${path.relative(this.projectRoot, filePath)}`)}
+    this.log(`✅ Created basic test "template": ${path.relative(this.projectRoot, filePath)}`)}
 
   async run() {
     this.log('🔧 Starting Test File Fixer');
@@ -124,8 +123,7 @@ describe('${componentName}', () => {
     }
 
     // Create missing test files for main components
-    const mainComponents = [
-      'Navigation',
+    const mainComponents = ['Navigation',
       'SEO',
       'Button',
       'PageTransition'
@@ -140,15 +138,15 @@ describe('${componentName}', () => {
 
     // Generate report
     const report = {
-      timestamp: new Date().toISOString(),
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "summary": {
         totalTestFiles: testFiles.length,
-        fixedFiles: fixedCount,
-        createdFiles: createdCount
+        "fixedFiles": fixedCount,
+        "createdFiles": createdCount
       },
-      details: {
+      "details": {
         fixedFiles: testFiles.filter(file => this.fixTestFile(file)),
-        createdFiles: mainComponents.filter(comp => {
+        "createdFiles": mainComponents.filter(comp => {
           const testPath = path.join(this.testDir, `${comp}.test.tsx`);
           return !fs.existsSync(testPath)})
       }
@@ -157,10 +155,10 @@ describe('${componentName}', () => {
     const reportPath = path.join(this.reportsDir, 'test-fixer-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
-    this.log(`✅ Test File Fixer completed`);
-    this.log(`   Fixed: ${fixedCount} files`);
-    this.log(`   Created: ${createdCount} files`);
-    this.log(`   Report: ${reportPath}`);
+    this.log("✅ Test File Fixer completed");
+    this.log(`   "Fixed": ${fixedCount} files`);
+    this.log(`   "Created": ${createdCount} files`);
+    this.log(`   "Report": ${reportPath}`);
 
     return report}
 }

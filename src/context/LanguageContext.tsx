@@ -2,23 +2,21 @@ import React, { createContext, useState, useContext, useEffect, ReactNode } from
 import { safeStorage } from '@/utils/safeStorage';
 export default function Page($1) {
 ,
-  { code: 'pt' as SupportedLanguage, name: 'Português', flag: '🇧🇷' },
-  { code: 'ar' as SupportedLanguage, name: 'العربية', flag: '🇸🇦' }
+  { "code": 'pt' as SupportedLanguage, "name": 'Português', "flag": '🇧🇷' },
+  { "code": 'ar' as SupportedLanguage, "name": 'العربية', "flag": '🇸🇦' }
 ];
 
-const defaultLanguageContext: LanguageContextTyp e = {
+const "defaultLanguageContext": LanguageContextTyp e = {
   currentLanguage: 'en',
-  changeLanguage: asyn c () => {},
-  isRTL: fals e,
+  "changeLanguage": asyn c () => {},
+  "isRTL": fals e,
   supportedLanguages
-};;
+};
 ;
 const LanguageContext = createContext(defaultLanguageContext);
-;
 export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
-;
 interface LanguageProviderProps {;
-  children: ReactNod e;
+  "children": ReactNod e;
   authState?: {;
     isAuthenticated: boolean;
     user: { id?: string;
@@ -26,9 +24,9 @@ interface LanguageProviderProps {;
   };
 }
 ;
-export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
+export const "LanguageProvider": React.FC<LanguageProviderProps> = ({;
   children,;
-  authState = { isAuthenticated: fals e, user: nul l } ;
+  authState = { "isAuthenticated": fals e, "user": nul l } ;
 }) => {;
   const { i18n, t } = useTranslation();
   const { isAuthenticated, user } = authState;
@@ -38,7 +36,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
   const [isRTL, setIsRTL] = useState<any>(i18n.dir() === 'rtl');
   
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function
@@ -54,7 +52,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
   }, [i18n]); // i18n is a dependency here
   
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function
@@ -69,7 +67,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
     } else {
       document.documentElement.classList.remove('rtl');
     }
-  }, [currentLanguage, i18n]); // Correct: i18n and currentLanguage;
+  }, [currentLanguage, i18n]); // "Correct": i18n and currentLanguage;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
   return () => {;
@@ -81,21 +79,20 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
         try {
           const { error } = await supabase
             .from('profiles')
-            .update({ preferred_language: currentLanguag e };)
+            .update({ "preferred_language": currentLanguag e };)
             .eq('id', user.id);
             ';
           if(error) {
-            console.error('Error updating language preference:', error);
+            console.error('Error updating language "preference": ', error);
           }
         } catch (err) {
-          console.error('Error syncing language with profile:', err);
+          console.error('Error syncing language with "profile": ', err);
         }
       }
     };
-;
     syncLanguageWithProfile();
   }, [currentLanguage, isAuthenticated, user]); // Correct dependencies;
-  const changeLanguage = async(lang: SupportedLanguag e) => {;
+  const changeLanguage = async("lang": SupportedLanguag e) => {;
     if(lang === currentLanguage) return;
     
     try {
@@ -105,15 +102,14 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
       
       const langName = supportedLanguages.find(l => l.code === lang)?.name || lang;
       toast({
-        description: t('language.language_changed', { language: langNam e })
+        "description": t('language.language_changed', { "language": langNam e })
       });
       
       // The language preference sync will be handled by the useEffect above
       // that depends on currentLanguage, isAuthenticated, and user.} catch (err) {
-      console.error('Error changing language:', err);
+      console.error('Error changing "language": ', err);
     }
   };
-;
   return (<LanguageContext.Provider;
       value={{;
         currentLanguage,;

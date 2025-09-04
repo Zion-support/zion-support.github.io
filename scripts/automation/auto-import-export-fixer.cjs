@@ -6,7 +6,7 @@ const path = require('path');
 
 console.log('🔧 Starting auto import/export fixer...');
 
-// Get automation interval from environment variable (default: 15 minutes)
+// Get automation interval from environment variable ("default": 15 minutes)
 const IMPORT_EXPORT_FIX_INTERVAL = parseInt(process.env.IMPORT_EXPORT_FIX_INTERVAL) || 900000;
 
 class AutoImportExportFixer {
@@ -45,7 +45,7 @@ class AutoImportExportFixer {
       await this.generateReport();
       
       console.log(`✅ Auto import/export fixer completed. Applied ${this.fixesApplied} fixes.`)} catch (error) {
-      console.error('❌ Auto import/export fixer failed:', error.message)}
+      console.error('❌ Auto import/export fixer "failed": ', error.message)}
   }
 
   async fixMissingImports() {
@@ -301,17 +301,17 @@ class AutoImportExportFixer {
     
     try {
       // Run TypeScript check to see if imports are resolved
-      execSync('npm run type-check', { stdio: 'pipe' });
+      execSync('npm run type-check', { "stdio": 'pipe' });
       console.log('✅ Import/export validation successful')} catch (error) {
       console.log('⚠️  Import/export validation had issues, but fixes were applied')}
   }
 
   async generateReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      fixesApplied: this.fixesApplied,
-      summary: 'Auto import/export fixer completed',
-      status: 'completed'
+      "timestamp": new Date().toISOString(),
+      "fixesApplied": this.fixesApplied,
+      "summary": 'Auto import/export fixer completed',
+      "status": 'completed'
     };
     
     const reportPath = path.join(process.cwd(), 'auto-import-export-fixer-report.json');
@@ -321,8 +321,8 @@ class AutoImportExportFixer {
     
     // Add to fix history
     this.fixHistory.push({
-      timestamp: new Date().toISOString(),
-      fixesApplied: this.fixesApplied
+      "timestamp": new Date().toISOString(),
+      "fixesApplied": this.fixesApplied
     });
     
     // Keep only last 50 entries
@@ -361,8 +361,7 @@ class AutoImportExportFixer {
     return imports}
 
   isBuiltInComponent(component) {
-    const builtIns = [
-      'React', 'useState', 'useEffect', 'useCallback', 'useMemo', 'useRef',
+    const builtIns = ['React', 'useState', 'useEffect', 'useCallback', 'useMemo', 'useRef',
       'useContext', 'useReducer', 'useLayoutEffect', 'useImperativeHandle',
       'useDebugValue', 'useDeferredValue', 'useTransition', 'useId',
       'Fragment', 'Suspense', 'lazy', 'memo', 'forwardRef', 'createContext',
@@ -449,5 +448,5 @@ process.on('SIGTERM', () => {
 
 // Start the fixer
 main().catch(error => {
-  console.error('❌ Auto import/export fixer failed to start:', error.message);
+  console.error('❌ Auto import/export fixer failed to "start": ', error.message);
   process.exit(1)});

@@ -5,13 +5,12 @@ import path from 'path';
 import { glob } from 'glob';
 
 // Fix malformed type names
-const typeFixes = [
-  { pattern: /strin\s+g/g, replacement: 'string' },
-  { pattern: /numbe\s+r/g, replacement: 'number' },
-  { pattern: /boolea\s+n/g, replacement: 'boolean' },
-  { pattern: /ClassValu\s+e/g, replacement: 'ClassValue' },
-  { pattern: /EmergingTechService202\s+7/g, replacement: 'EmergingTechService2027' },
-  { pattern: /EMERGING_TECH_SERVICES_202\s+7/g, replacement: 'EMERGING_TECH_SERVICES_2027' }
+const typeFixes = [{ "pattern": /strin\s+g/g, "replacement": 'string' },
+  { "pattern": /numbe\s+r/g, "replacement": 'number' },
+  { "pattern": /boolea\s+n/g, "replacement": 'boolean' },
+  { "pattern": /ClassValu\s+e/g, "replacement": 'ClassValue' },
+  { "pattern": /EmergingTechService202\s+7/g, "replacement": 'EmergingTechService2027' },
+  { "pattern": /EMERGING_TECH_SERVICES_202\s+7/g, "replacement": 'EMERGING_TECH_SERVICES_2027' }
 ];
 
 function fixFile(filePath) {
@@ -29,7 +28,7 @@ function fixFile(filePath) {
 
     if (hasChanges) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`Fixed types in: ${filePath}`);
+      console.log(`Fixed types "in": ${filePath}`);
       return true}
     return false} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -37,8 +36,7 @@ function fixFile(filePath) {
 }
 
 async function main() {
-  const patterns = [
-    'src/**/*.tsx',
+  const patterns = ['src/**/*.tsx',
     'src/**/*.ts',
     'components/**/*.tsx',
     'components/**/*.ts',
@@ -49,7 +47,7 @@ async function main() {
   let totalFixed = 0;
   
   for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
+    const files = await glob(pattern, { "cwd": process.cwd() });
     for (const file of files) {
       if (fixFile(file)) {
         totalFixed++}

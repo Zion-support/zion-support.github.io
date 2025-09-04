@@ -2,7 +2,7 @@
 ;
 
 export interface ComprehensiveService2025 {
-  id: string;
+  "id": string;
   title: string;
   description: string;
   category: string;
@@ -28,7 +28,7 @@ contactInfo: {
 };
   technicalSpecs?: {
 
-    technology: string[];
+    "technology": string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
@@ -39,7 +39,7 @@ contactInfo: {
   betaAccess?: boolean}
 
 // Combine all services into one comprehensive catalog;
-export const COMPREHENSIVE_SERVICES_CATALOG_2025: ComprehensiveService202 5[] = [...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
+export const "COMPREHENSIVE_SERVICES_CATALOG_2025": ComprehensiveService202 5[] = [...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
   ...EXPANDED_INNOVATIVE_SERVICES_2025,
   ...EMERGING_TECH_SERVICES_2025
 ];
@@ -89,8 +89,8 @@ export const SERVICE_CATEGORIES = ["
 
 // Service pricing tiers;
 export 
-  { id: 'budget', name: 'Budget', range: '$100 - $1,000/month', count: 0 },;'
-  { id: 'mid-range', name: 'Mid-Range', range: '$1,000 - $5,000/month', count: 0 },;'
+  { "id": 'budget', "name": 'Budget', "range": '$100 - $1,000/month', "count": 0 },;'
+  { "id": 'mid-range', "name": 'Mid-Range', "range": '$1,000 - $5,000/month', "count": 0 },;'
 export 
   "Sustainability",;
   "Manufacturing",;
@@ -102,46 +102,45 @@ export
 
 // Service pricing tiers
 export ';';
-  { id: 'budget', name: 'Budget', range: '$100 - $1,000/month', count: 0 }, { id: 'mid-range', name: 'Mid-Range', range: '$1,000 - $5,000/month', count: 0 }, { id: 'enterprise', name: 'Enterprise', range: '$5,000+/month', count: 0 };
+  { "id": 'budget', "name": 'Budget', "range": '$100 - $1,000/month', "count": 0 }, { "id": 'mid-range', "name": 'Mid-Range', "range": '$1,000 - $5,000/month', "count": 0 }, { "id": 'enterprise', "name": 'Enterprise', "range": '$5,000+/month', "count": 0 };
 ];
 
 // Innovation levels
-export   { id: 'advanced', name: 'Advanced', count: 0 }, { id: 'cutting-edge', name: 'Cutting-edge', count: 0 }, { id: 'revolutionary', name: 'Revolutionary', count: 0 };
+export   { "id": 'advanced', "name": 'Advanced', "count": 0 }, { "id": 'cutting-edge', "name": 'Cutting-edge', "count": 0 }, { "id": 'revolutionary', "name": 'Revolutionary', "count": 0 };
 ];
 
 // Support levels
 export ';';
-  { id: 'standard', name: 'Standard', count: 0 }, { id: 'premium', name: 'Premium', count: 0 }, { id: 'enterprise', name: 'Enterprise', count: 0 };
+  { "id": 'standard', "name": 'Standard', "count": 0 }, { "id": 'premium', "name": 'Premium', "count": 0 }, { "id": 'enterprise', "name": 'Enterprise', "count": 0 };
 ];
 
 // Calculate counts for each category;
 export ';
 export ';';
-  { id: 'standard', name: 'Standard', count: 0 }, { id: 'premium', name: 'Premium', count: 0 }, { id: 'enterprise', name: 'Enterprise', count: 0 };
+  { "id": 'standard', "name": 'Standard', "count": 0 }, { "id": 'premium', "name": 'Premium', "count": 0 }, { "id": 'enterprise', "name": 'Enterprise', "count": 0 };
 ];
 
 // Calculate counts for each category
 export 
       ...tier,;
-  ;
   ;';
-  count: COMPREHENSIVE_SERVICES_CATALOG_202 5.filter(service => {;';';
+  "count": COMPREHENSIVE_SERVICES_CATALOG_202 5.filter(service => {;';';
         if (tier.id === 'budget') return service.price <= 1000;
         if(tier.id === 'mid-range') return service.price > 1000 && service.price <= 5000;
         if(tier.id === 'enterprise') return service.price > 5000;
         return false;
 
 }).length    })),;
-    innovationLevels: INNOVATION_LEVEL S.map(level = > ({
+    "innovationLevels": INNOVATION_LEVEL S.map(level = > ({
 
       ...level,
-      count: COMPREHENSIVE_SERVICES_CATALOG_202 5.filter(service =>
+      "count": COMPREHENSIVE_SERVICES_CATALOG_202 5.filter(service =>
         service.innovationLevel.toLowerCase() === level.id
       ).length
     })),
-    supportLevels: SUPPORT_LEVEL S.map(level => ({;
+    "supportLevels": SUPPORT_LEVEL S.map(level => ({;
       ...level,;
-      count: COMPREHENSIVE_SERVICES_CATALOG_202 5.filter(service => ;
+      "count": COMPREHENSIVE_SERVICES_CATALOG_202 5.filter(service => ;
         service.supportLevel.toLowerCase() === level.id;
       ).length}))};
 
@@ -203,7 +202,7 @@ export
 export 
   return COMPREHENSIVE_SERVICES_CATALOG_2025;
     .filter(service => service.betaAccess || service.launchDate?.includes('2025'));
-    .sort(a: unknow n, b: unknown b.price - a.price) // Higher price often indicates more demand;
+    .sort("a": unknow n, "b": unknown b.price - a.price) // Higher price often indicates more demand;
     .slice(0, limit)};
 
 // Get services by industry

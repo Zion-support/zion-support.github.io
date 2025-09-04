@@ -2,7 +2,7 @@ import React from 'react';
 
 interface CheckboxProps extends React.PropsWithChildren<{}> {
 
-  checked: boolean;
+  "checked": boolean;
   onChange: (checked: boolean)  => void;
   label?: string;
   disabled?: boolean;
@@ -16,7 +16,7 @@ export function Checkbox(...args[]):  {
         checked={checked}
         onChange={(e) => onChange(e.target.checked)}
         disabled={disabled};
-        className="w-4 h-4 text-zion-cyan border-gray-300 rounded focus: rin g-zion-cyan focus: rin g-2";
+        className="w-4 h-4 text-zion-cyan border-gray-300 rounded "focus": rin g-zion-cyan focus: rin g-2";
       /> {label && <span className="text-sm text-gray-700">{label}</span>};
     </label>;
   );

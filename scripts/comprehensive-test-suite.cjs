@@ -15,24 +15,24 @@ class ComprehensiveTestSuite {
     this.logDir = path.join(this.projectRoot, 'automation', 'logs');
     this.ensureLogDir();
     this.results = {
-      timestamp: new Date().toISOString(),
-      tests: [],
-      coverage: {},
-      performance: {},
-      security: {},
-      accessibility: {},
-      summary: {}
+      "timestamp": new Date().toISOString(),
+      "tests": [],
+      "coverage": {},
+      "performance": {},
+      "security": {},
+      "accessibility": {},
+      "summary": {}
     }}
 
   ensureLogDir() {
     if () {
-      fs.mkdirSync(this.logDir, { recursive: true })}
+      fs.mkdirSync(this.logDir, { "recursive": true })}
   }
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString() {
     ) {
-      fs.mkdirSync(this.logDir, { recursive: true })}
+      fs.mkdirSync(this.logDir, { "recursive": true })}
   }
 
   log(message, level = 'INFO') {
@@ -47,130 +47,126 @@ class ComprehensiveTestSuite {
     this.log(`🧪 ${description}`);
     try {
       const result = execSync(command, { 
-        encoding: 'utf8', 
-        stdio: 'pipe',
-        timeout: timeout,
-        cwd: this.projectRoot
+        "encoding": 'utf8', 
+        "stdio": 'pipe',
+        "timeout": timeout,
+        "cwd": this.projectRoot
       };);
       this.log(`✅ ${description} completed successfully`);
-      return { success: true, output: result }} catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
-      return { success: false, error: error.message, output: error.stdout || '' }}
+      return { "success": true, "output": result }} catch (error) {
+      this.log(`❌ ${description} "failed": ${error.message}`, 'ERROR');
+      return { "success": false, "error": error.message, "output": error.stdout || '' }}
   }
 
   async runUnitTests() {
     this.log('🔬 Running unit tests...');
     
-    const testCommands = [
-      {
-        name: 'TypeScript Compilation',
-        command: 'npx tsc --noEmit',
-        critical: true
+    const testCommands = [{
+        "name": 'TypeScript Compilation',
+        "command": 'npx tsc --noEmit',
+        "critical": true
       },
       {
-        name: 'ESLint Validation',
-        command: 'npx eslint . --max-warnings 20',
-        critical: false
+        "name": 'ESLint Validation',
+        "command": 'npx eslint . --max-warnings 20',
+        "critical": false
       },
       {
-        name: 'Prettier Format Check',
-        command: 'npx prettier --check .',
-        critical: false
+        "name": 'Prettier Format Check',
+        "command": 'npx prettier --check .',
+        "critical": false
       }
     ];
 
     for (const test of testCommands) {
       const result = await this.runCommand(test.command, test.name;);
       this.results.tests.push({
-        name: test.name,
-        type: 'unit',
-        critical: test.critical,
-        success: result.success,
-        error: result.error || null,
-        timestamp: new Date().toISOString()
+        "name": test.name,
+        "type": 'unit',
+        "critical": test.critical,
+        "success": result.success,
+        "error": result.error || null,
+        "timestamp": new Date().toISOString()
       })}
   }
 
   async runIntegrationTests() {
     this.log('🔗 Running integration tests...');
     
-    const integrationTests = [
-      {
-        name: 'Next.js Build Test',
-        command: 'npm run build',
-        critical: true
+    const integrationTests = [{
+        "name": 'Next.js Build Test',
+        "command": 'npm run build',
+        "critical": true
       },
       {
-        name: 'Dependency Check',
-        command: 'npm ls --depth=0',
-        critical: false
+        "name": 'Dependency Check',
+        "command": 'npm ls --depth=0',
+        "critical": false
       },
       {
-        name: 'Package Lock Verification',
-        command: 'npm ci --dry-run',
-        critical: false
+        "name": 'Package Lock Verification',
+        "command": 'npm ci --dry-run',
+        "critical": false
       }
     ];
 
     for (const test of integrationTests) {
       const result = await this.runCommand(test.command, test.name;);
       this.results.tests.push({
-        name: test.name,
-        type: 'integration',
-        critical: test.critical,
-        success: result.success,
-        error: result.error || null,
-        timestamp: new Date().toISOString()
+        "name": test.name,
+        "type": 'integration',
+        "critical": test.critical,
+        "success": result.success,
+        "error": result.error || null,
+        "timestamp": new Date().toISOString()
       })}
   }
 
   async runPerformanceTests() {
     this.log('⚡ Running performance tests...');
     
-    const perfTests = [
-      {
-        name: 'Bundle Size Analysis',
-        command: 'du -sh .next 2>/dev/null || echo "Build directory not found"',
-        description: 'Analyzing bundle size'
+    const perfTests = [{
+        "name": 'Bundle Size Analysis',
+        "command": 'du -sh .next 2>/dev/null || echo "Build directory not found"',
+        "description": 'Analyzing bundle size'
       },
       {
-        name: 'Memory Usage Check',
-        command: 'node -e "console.log(JSON.stringify(process.memoryUsage(;);))"',
-        description: 'Checking memory usage'
+        "name": 'Memory Usage Check',
+        "command": 'node -e "console.log(JSON.stringify(process.memoryUsage(;);))"',
+        "description": 'Checking memory usage'
       }
     ];
 
     for (const test of perfTests) {
       const result = await this.runCommand(test.command, test.description;);
       this.results.performance[test.name] = {
-        success: result.success,
-        output: result.output,
-        timestamp: new Date().toISOString()
+        "success": result.success,
+        "output": result.output,
+        "timestamp": new Date().toISOString()
       }}
   }
 
   async runSecurityTests() {
     this.log('🔒 Running security tests...');
     
-    const securityTests = [
-      {
-        name: 'Dependency Audit',
-        command: 'npm audit --audit-level moderate',
-        description: 'Checking for security vulnerabilities'
+    const securityTests = [{
+        "name": 'Dependency Audit',
+        "command": 'npm audit --audit-level moderate',
+        "description": 'Checking for security vulnerabilities'
       },
       {
-        name: 'Sensitive Data Check',
-        command: 'grep -r "password\\|secret\\|key" --include="*.js" --include="*.ts" --include="*.tsx" . | grep -v node_modules | head -5',
-        description: 'Checking for hardcoded secrets'
+        "name": 'Sensitive Data Check',
+        "command": 'grep -r "password\\|secret\\|key" --include="*.js" --include="*.ts" --include="*.tsx" . | grep -v node_modules | head -5',
+        "description": 'Checking for hardcoded secrets'
       }
     ];
 
     for (const test of securityTests) {
       const result = await this.runCommand(test.command, test.description;);
       this.results.security[test.name] = {
-        success: result.success,
-        output: result.output,
-        timestamp: new Date().toISOString()
+        "success": result.success,
+        "output": result.output,
+        "timestamp": new Date().toISOString()
       }}
   }
 
@@ -178,25 +174,24 @@ class ComprehensiveTestSuite {
     this.log('♿ Running accessibility tests...');
     
     // Basic accessibility checks
-    const a11yChecks = [
-      {
-        name: 'Alt Text Check',
-        command: 'grep -r "alt=" --include="*.tsx" --include="*.jsx" . | grep -v node_modules | wc -l',
-        description: 'Counting alt attributes'
+    const a11yChecks = [{
+        "name": 'Alt Text Check',
+        "command": 'grep -r "alt=" --include="*.tsx" --include="*.jsx" . | grep -v node_modules | wc -l',
+        "description": 'Counting alt attributes'
       },
       {
-        name: 'ARIA Labels Check',
-        command: 'grep -r "aria-" --include="*.tsx" --include="*.jsx" . | grep -v node_modules | wc -l',
-        description: 'Counting ARIA attributes'
+        "name": 'ARIA Labels Check',
+        "command": 'grep -r "aria-" --include="*.tsx" --include="*.jsx" . | grep -v node_modules | wc -l',
+        "description": 'Counting ARIA attributes'
       }
     ];
 
     for (const check of a11yChecks) {
       const result = await this.runCommand(check.command, check.description;);
       this.results.accessibility[check.name] = {
-        success: result.success,
-        output: result.output,
-        timestamp: new Date().toISOString()
+        "success": result.success,
+        "output": result.output,
+        "timestamp": new Date().toISOString()
       }}
   }
 
@@ -205,11 +200,11 @@ class ComprehensiveTestSuite {
     
     // Simulate coverage data
     this.results.coverage = {
-      statements: 85,
-      branches: 78,
-      functions: 90,
-      lines: 87,
-      timestamp: new Date().toISOString()
+      "statements": 85,
+      "branches": 78,
+      "functions": 90,
+      "lines": 87,
+      "timestamp": new Date().toISOString()
     }}
 
   async generateSummary() {
@@ -225,8 +220,8 @@ class ComprehensiveTestSuite {
       passedTests,
       failedTests,
       criticalFailures,
-      successRate: totalTests > 0 ? (passedTests / totalTests * 100).toFixed(2) : 0,
-      timestamp: new Date().toISOString()
+      "successRate": totalTests > 0 ? (passedTests / totalTests * 100).toFixed(2) : 0,
+      "timestamp": new Date().toISOString()
     }}
 
   async saveResults() {
@@ -235,7 +230,7 @@ class ComprehensiveTestSuite {
     const reportPath = path.join(this.logDir, 'comprehensive-test-results.json';);
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
     
-    this.log(`📄 Test results saved to: ${reportPath}`);
+    this.log(`📄 Test results saved "to": ${reportPath}`);
     return reportPath}
 
   async run() {
@@ -253,11 +248,11 @@ class ComprehensiveTestSuite {
       const reportPath = await this.saveResults(;);
       
       this.log('✅ Comprehensive Test Suite completed!');
-      this.log(`📊 Summary: ${this.results.summary.passedTests}/${this.results.summary.totalTests} tests passed`);
-      this.log(`📄 Full report: ${reportPath}`);
+      this.log(`📊 "Summary": ${this.results.summary.passedTests}/${this.results.summary.totalTests} tests passed`);
+      this.log(`📄 Full "report": ${reportPath}`);
       
       return this.results} catch (error) {
-      this.log(`❌ Test suite failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Test suite "failed": ${error.message}`, 'ERROR');
       throw error}
   }
 }

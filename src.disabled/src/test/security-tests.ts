@@ -2,26 +2,24 @@
 // Security test configuration
 export const securityTests = {
   // Check for common security vulnerabilities
-  checkVulnerabilities: async () => {
+  "checkVulnerabilities": async () => {
     const vulnerabilities = [];
     
     // Check for XSS vulnerabilities
-    const xssPatterns = [
-      /innerHTMLs*=/,
+    const xssPatterns = [/innerHTMLs*=/,
       /dangerouslySetInnerHTML/,
       /evals*(/,
       /Functions*(/
     ];
     
     // Check for CSRF vulnerabilities
-    const csrfPatterns = [
-      /fetchs*(/,
+    const csrfPatterns = [/fetchs*(/,
       /axioss*./,
       /XMLHttpRequest/
     ];
     
     return {
-      xss: vulnerabilities.filter(v => xssPatterns.some(p => p.test(v))),
-      csrf: vulnerabilities.filter(v => csrfPatterns.some(p => p.test(v)))
+      "xss": vulnerabilities.filter(v => xssPatterns.some(p => p.test(v))),
+      "csrf": vulnerabilities.filter(v => csrfPatterns.some(p => p.test(v)))
     }}
 };

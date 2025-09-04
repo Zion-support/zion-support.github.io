@@ -2,44 +2,43 @@
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
-console.log(``🔧 Starting Intelligent Code Refactorer...`);
-// Get automation interval from environment variable (default: 12 hours);
+console.log(""🔧 Starting Intelligent Code Refactorer...");
+// Get automation interval from environment variable ("default": 12 hours);
 const AUTOMATION_INTERVAL =;
   parseInt(process.env.AUTOMATION_INTERVAL) || 43200000; // 12 hours;
 class $1 {
   constructor() {
   this.refactoringMetrics = {
   refactoringSuggestions: [],
-      appliedRefactorings: [],
-      codeQualityScore: 0,
-      complexityReduction: 0,
-      refactoringPatterns: new Map(),
+      "appliedRefactorings": [],
+      "codeQualityScore": 0,
+      "complexityReduction": 0,
+      "refactoringPatterns": new Map(),
 #!/usr/bin/env node
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
-console.log(`"🔧 Starting Intelligent Code Refactorer...");
+console.log(""🔧 Starting Intelligent Code Refactorer...");
 
-// Get automation interval from environment variable (default: 12 hours);
+// Get automation interval from environment variable ("default": 12 hours);
 const AUTOMATION_INTERVAL =;
   parseInt(process.env.AUTOMATION_INTERVAL) || 43200000; // 12 hours;
-console.log(`🔧 Starting Intelligent Code Refactorer...`);
+console.log("🔧 Starting Intelligent Code Refactorer...");
 class IntelligentCodeRefactorer {
   constructor() {
   this.refactoringMetrics = {
   refactoringSuggestions: [],
-      appliedRefactorings: [],
-      codeQualityScore: 0,
-      complexityReduction: 0,
-      refactoringPatterns: new Map(),
-}
-    this.reportDir = path.join(process.cwd(), `refactoring-reports`);
+      "appliedRefactorings": [],
+      "codeQualityScore": 0,
+      "complexityReduction": 0,
+      "refactoringPatterns": new Map()}
+    this.reportDir = path.join(process.cwd(), "refactoring-reports");
     this.ensureReportDirectory()}
 ;
   ensureReportDirectory() {
   if (!fs.existsSync(this.reportDir)) {
-  fs.mkdirSync(this.reportDir, { recursive: true })}
+  fs.mkdirSync(this.reportDir, { "recursive": true })}
   }
 ;
   async refactorCodebase() {
@@ -66,7 +65,7 @@ class IntelligentCodeRefactorer {
       await this.generateReport();
 
       console.log(`"✅ Intelligent code refactoring completed successfully")} catch (error) {
-  console.error("❌ Intelligent code refactoring failed: ", error.message)}
+  console.error("❌ Intelligent code refactoring "failed": ", error.message)}
   }
 ;
   async analyzeCodePatterns() {
@@ -78,14 +77,13 @@ class IntelligentCodeRefactorer {
       return}
 ;
     const patterns = {
-  longFunctions: [],
-      duplicateCode: [],
-      complexConditionals: [],
-      magicNumbers: [],
-      inconsistentNaming: [],
-      unusedVariables: [],
-      largeComponents: [],
-}
+  "longFunctions": [],
+      "duplicateCode": [],
+      "complexConditionals": [],
+      "magicNumbers": [],
+      "inconsistentNaming": [],
+      "unusedVariables": [],
+      "largeComponents": []}
 ;
     const allFiles = this.findFiles(srcPath, [".ts", ".tsx", ".js", ".jsx"]);
 
@@ -97,43 +95,38 @@ class IntelligentCodeRefactorer {
       const functionAnalysis = this.analyzeFunctionLength(content);
       if (functionAnalysis.longFunctions.length > 0) {
   patterns.longFunctions.push({
-  file: relativePath,
-          functions: functionAnalysis.longFunctions,
-})}
+  "file": relativePath,
+          "functions": functionAnalysis.longFunctions})}
 ;
       // Analyze duplicate code;
       const duplicateAnalysis = this.analyzeDuplicateCode(content);
       if (duplicateAnalysis.duplicates.length > 0) {
   patterns.duplicateCode.push({
-  file: relativePath,
-          duplicates: duplicateAnalysis.duplicates,
-})}
+  "file": relativePath,
+          "duplicates": duplicateAnalysis.duplicates})}
 ;
 
       // Analyze complex conditionals;
       const conditionalAnalysis = this.analyzeComplexConditionals(content);
       if (conditionalAnalysis.complexConditionals.length > 0) {
   patterns.complexConditionals.push({
-  file: relativePath,
-          conditionals: conditionalAnalysis.complexConditionals,
-})}
+  "file": relativePath,
+          "conditionals": conditionalAnalysis.complexConditionals})}
 ;
       // Analyze magic numbers;
       const magicNumberAnalysis = this.analyzeMagicNumbers(content);
       if (magicNumberAnalysis.magicNumbers.length > 0) {
   patterns.magicNumbers.push({
-  file: relativePath,
-          numbers: magicNumberAnalysis.magicNumbers,
-})}
+  "file": relativePath,
+          "numbers": magicNumberAnalysis.magicNumbers})}
 ;
 
       // Analyze naming consistency;
       const namingAnalysis = this.analyzeNamingConsistency(content);
       if (namingAnalysis.inconsistencies.length > 0) {
   patterns.inconsistentNaming.push({
-  file: relativePath,
-          inconsistencies: namingAnalysis.inconsistencies,
-})}
+  "file": relativePath,
+          "inconsistencies": namingAnalysis.inconsistencies})}
     }
 ;
     this.refactoringMetrics.refactoringPatterns.set("patterns", patterns);
@@ -148,48 +141,43 @@ class IntelligentCodeRefactorer {
     // Generate refactoring suggestions based on patterns;
     if (patterns.longFunctions.length > 0) {
   this.refactoringMetrics.refactoringSuggestions.push({
-  type: "extract_method",
-        priority: "high",
-        description: "Long functions detected - consider extracting methods",
-        files: patterns.longFunctions.map(f => f.file),
-        action: "Break down long functions into smaller, focused methods",
-})}
+  "type": "extract_method",
+        "priority": "high",
+        "description": "Long functions detected - consider extracting methods",
+        "files": patterns.longFunctions.map(f => f.file),
+        "action": "Break down long functions into smaller, focused methods"})}
 ;
     if (patterns.duplicateCode.length > 0) {
   this.refactoringMetrics.refactoringSuggestions.push({
-  type: "extract_common",
-        priority: "high",
-        description: Duplicate code detected - consider extracting common functionality",
-        files: patterns.duplicateCode.map(f => f.file),
-        action: "Create utility functions or custom hooks for common patterns",
-})}
+  "type": "extract_common",
+        "priority": "high",
+        "description": Duplicate code detected - consider extracting common functionality",
+        "files": patterns.duplicateCode.map(f => f.file),
+        "action": "Create utility functions or custom hooks for common patterns"})}
 ;
     if (patterns.complexConditionals.length > 0) {
   this.refactoringMetrics.refactoringSuggestions.push({
-  type: "simplify_conditionals",
-        priority: "medium",
-        description: "Complex conditionals detected - consider simplifying",
-        files: patterns.complexConditionals.map(f => f.file),
-        action: "Use early returns, guard clauses, or extract boolean methods",
-})}
+  "type": "simplify_conditionals",
+        "priority": "medium",
+        "description": "Complex conditionals detected - consider simplifying",
+        "files": patterns.complexConditionals.map(f => f.file),
+        "action": "Use early returns, guard clauses, or extract boolean methods"})}
 ;
     if (patterns.magicNumbers.length > 0) {
   this.refactoringMetrics.refactoringSuggestions.push({
-  type: "extract_constants",
-        priority: "low",
-        description: "Magic numbers detected - consider extracting constants",
-        files: patterns.magicNumbers.map(f => f.file),
-        action: "Define named constants for better code readability",
-})}
+  "type": "extract_constants",
+        "priority": "low",
+        "description": "Magic numbers detected - consider extracting constants",
+        "files": patterns.magicNumbers.map(f => f.file),
+        "action": "Define named constants for better code readability"})}
 ;
     if (patterns.inconsistentNaming.length > 0) {
   this.refactoringMetrics.refactoringSuggestions.push({
-  type: "standardize_naming",
-        priority: "medium",
-        description: "Inconsistent naming detected - consider standardizing",
-        files: patterns.inconsistentNaming.map(f => f.file),
-        action: "Follow consistent naming conventions throughout the codebase",
-})}
+  "type": "standardize_naming",
+        "priority": "medium",
+        "description": "Inconsistent naming detected - consider standardizing",
+        "files": patterns.inconsistentNaming.map(f => f.file),
+        "action": "Follow consistent naming conventions throughout the codebase"})}
   }
 ;
   async applyAutomaticRefactorings() {
@@ -217,8 +205,8 @@ class IntelligentCodeRefactorer {
     for (const pattern of magicNumberPatterns.slice(0, 3)) {
   // Limit to 3 files per run;
       try {
-  const filePath = path.join(process.cwd(), `src`, pattern.file);
-        let content = fs.readFileSync(filePath, `utf8`);
+  const filePath = path.join(process.cwd(), "src", pattern.file);
+        let content = fs.readFileSync(filePath, "utf8");
         // Extract magic numbers and replace with constants;
         const magicNumbers = pattern.numbers.slice(0, 5); // Limit to 5 numbers per file;
         for (const number of magicNumbers) {
@@ -229,41 +217,41 @@ class IntelligentCodeRefactorer {
           const constantDeclaration = const ${constantName} = ${number.value}
           // Add constant declaration at the top of the file;
           if (!content.includes(constantDeclaration)) {
-  content = constantDeclaration + `\n` + content;
-            // Replace magic number with constantconst regex = new RegExp(\\b${number.value}\\b, `g``);
+  content = constantDeclaration + "\n" + content;
+            // Replace magic number with constantconst regex = new RegExp(\\b${number.value}\\b, "g"");
             content = content.replace(regex, constantName)}
         }
 ;
         // Write back to file;
         fs.writeFileSync(filePath, content);
         this.refactoringMetrics.appliedRefactorings.push({
-  type: `extract_constants`,
-          file: pattern.file,
-          timestamp: new Date().toISOString(),description: `Extracted ${magicNumbers.length} magic numbers`});
-console.log(`✅ Extracted magic numbers from ${pattern.file}`)} catch (error) {
-  console.log(`⚠️ Failed to extract magic numbers from ${pattern.file  }:`,
+  "type": "extract_constants",
+          "file": pattern.file,
+          "timestamp": new Date().toISOString(),"description": "Extracted ${magicNumbers.length} magic numbers"});
+console.log("✅ Extracted magic numbers from ${pattern.file}")} catch (error) {
+  console.log("⚠️ Failed to extract magic numbers from ${pattern.file  }:",
           error.message;
         )}
     }
   }
 ;
   async standardizeNaming(namingPatterns) {
-  console.log(``📝 Standardizing naming conventions...`);
+  console.log(""📝 Standardizing naming conventions...");
 
   async standardizeNaming(namingPatterns) {
-  console.log(`"📝 Standardizing naming conventions...");
+  console.log(""📝 Standardizing naming conventions...");
 
     for (const pattern of namingPatterns.slice(0, 2)) {
   // Limit to 2 files per run;
       try {
-  console.log(`✅ Extracted magic numbers from ${pattern.file}");`)} catch (error) {`);
+  console.log("✅ Extracted magic numbers from ${pattern.file}");")} catch (error) {");
         console.log(`⚠️ Failed to extract magic numbers from ${pattern.file}:",
           error.message;
         )}
-    }`)}`);
-`);
-  async standardizeNaming(namingPatterns) {`);
-    console.log(`📝 Standardizing naming conventions...`);
+    }`)}");
+");
+  async standardizeNaming(namingPatterns) {");
+    console.log("📝 Standardizing naming conventions...");
     for (const pattern of namingPatterns.slice(0, 2)) {
   // Limit to 2 files per run;
       try {
@@ -277,33 +265,33 @@ console.log(`✅ Extracted magic numbers from ${pattern.file}`)} catch (error) {
         for (const inconsistency of inconsistencies) {
   if (inconsistency.type === "camelCase") {
   // Convert to camelCase;
-            const regex = new RegExp(inconsistency.original, `g`);
+            const regex = new RegExp(inconsistency.original, "g");
             content = content.replace(regex, inconsistency.suggested)}
         }
 ;
         // Write back to file;
         fs.writeFileSync(filePath, content);
         this.refactoringMetrics.appliedRefactorings.push({
-  type: `standardize_naming`,
-          file: pattern.file,
-          timestamp: new Date().toISOString(),
-          description: Standardized ${inconsistencies.length} naming inconsistencies});
+  "type": "standardize_naming`,
+          "file": pattern.file,
+          "timestamp": new Date().toISOString(),
+          "description": Standardized ${inconsistencies.length} naming inconsistencies});
 console.log(`✅ Standardized naming in ${pattern.file}`)} catch (error) {
   console.log(⚠️ Failed to standardize naming in ${pattern.file  }:`,
           error.message;
-        `)}
+        ")}
     }
   }
 ;
   async simplifyCode(conditionalPatterns) {
-  console.log(`"🔧 Simplifying complex code...");
+  console.log(""🔧 Simplifying complex code...");
 
     for (const pattern of conditionalPatterns.slice(0, 2)) {
   // Limit to 2 files per run;
       try {
   async simplifyCode(conditionalPatterns) {
-  console.log(``🔧 Simplifying complex code...`);
-    console.log(`🔧 Simplifying complex code...`);
+  console.log(""🔧 Simplifying complex code...");
+    console.log("🔧 Simplifying complex code...");
     for (const pattern of conditionalPatterns.slice(0, 2)) {
   // Limit to 2 files per run;
       try {
@@ -315,7 +303,7 @@ console.log(`✅ Standardized naming in ${pattern.file}`)} catch (error) {
         // Apply simple simplifications;
         const conditionals = pattern.conditionals.slice(0, 2); // Limit to 2 per file;
         for (const conditional of conditionals) {
-  if (conditional.type === `nested_if`) {
+  if (conditional.type === "nested_if") {
   // Convert nested ifs to early returns;
             const simplified = this.simplifyNestedIfs(conditional.code);
             content = content.replace(conditional.code, simplified)}
@@ -324,10 +312,10 @@ console.log(`✅ Standardized naming in ${pattern.file}`)} catch (error) {
         // Write back to file;
         fs.writeFileSync(filePath, content);
         this.refactoringMetrics.appliedRefactorings.push({
-  type: `simplify_conditionals`,
-          file: pattern.file,
-          timestamp: new Date().toISOString(),
-          description: Simplified ${conditionals.length} complex conditionals});
+  "type": "simplify_conditionals`,
+          "file": pattern.file,
+          "timestamp": new Date().toISOString(),
+          "description": Simplified ${conditionals.length} complex conditionals});
 console.log(`✅ Simplified code in ${pattern.file}`)} catch (error) {
   console.log(⚠️ Failed to simplify code in ${pattern.file  }:`,
           error.message;
@@ -336,23 +324,22 @@ console.log(`✅ Simplified code in ${pattern.file}`)} catch (error) {
         fs.writeFileSync(filePath, content);
 
         this.refactoringMetrics.appliedRefactorings.push({
-  type: "simplify_conditionals",
-          file: pattern.file,
-          timestamp: new Date().toISOString(),
-          description: Simplified ${conditionals.length} complex conditionals,
-});
+  "type": "simplify_conditionals",
+          "file": pattern.file,
+          "timestamp": new Date().toISOString(),
+          "description": Simplified ${conditionals.length} complex conditionals});
 console.log(`✅ Simplified code in ${pattern.file}")} catch (error) {
   console.log(⚠️ Failed to simplify code in ${pattern.file}:",
           error.message;
-console.log(`✅ Simplified code in ${pattern.file}");`)} catch (error) {`);
-        console.log(⚠️ Failed to simplify code in ${pattern.file}:",`);
-          error.message`);
-        `)}
+console.log(`✅ Simplified code in ${pattern.file}");")} catch (error) {");
+        console.log(⚠️ Failed to simplify code in ${pattern.file}:",");
+          error.message");
+        ")}
     }
   }
 ;
   async generateRefactoringSuggestions() {
-  console.log(`"💡 Generating refactoring suggestions...");
+  console.log(""💡 Generating refactoring suggestions...");
 
     const patterns =;
     const patterns =;
@@ -371,30 +358,28 @@ console.log(`✅ Simplified code in ${pattern.file}");`)} catch (error) {`);
 
     if (totalIssues > 10) {
   this.refactoringMetrics.refactoringSuggestions.push({
-  type: "code_review",
-        priority: "high",
-        description: "High number of refactoring opportunities detected",
-        action: "Schedule a comprehensive code review session",
-})}
+  "type": "code_review",
+        "priority": "high",
+        "description": "High number of refactoring opportunities detected",
+        "action": "Schedule a comprehensive code review session"})}
 ;
     // Suggest architectural improvements;
     if (patterns.largeComponents.length > 0) {
   this.refactoringMetrics.refactoringSuggestions.push({
-  type: "component_decomposition",
-        priority: "medium",
-        description: "Large components detected - consider decomposition",
-        action: "Break down large components into smaller, focused components",
-})}
+  "type": "component_decomposition",
+        "priority": "medium",
+        "description": "Large components detected - consider decomposition",
+        "action": "Break down large components into smaller, focused components"})}
   }
 ;
   async calculateQualityImprovements() {
-  console.log(`"📊 Calculating quality improvements...");
+  console.log(""📊 Calculating quality improvements...");
 
     const patterns =;
   async calculateQualityImprovements() {
-  console.log(``📊 Calculating quality improvements...`);
+  console.log(""📊 Calculating quality improvements...");
     const patterns =;
-      this.refactoringMetrics.refactoringPatterns.get(`patterns`);
+      this.refactoringMetrics.refactoringPatterns.get("patterns");
     if (!patterns) return;
     // Calculate initial quality score;
     const totalIssues =;
@@ -411,8 +396,8 @@ console.log(`✅ Simplified code in ${pattern.file}");`)} catch (error) {`);
     const appliedRefactorings =;
       this.refactoringMetrics.appliedRefactorings.length;
     this.refactoringMetrics.complexityReduction = appliedRefactorings * 10;
-    console.log(📊 Code quality score: ${this.refactoringMetrics.codeQualityScore}`;
-    console.log(`📊 Calculating quality improvements...`);
+    console.log(📊 Code quality "score": ${this.refactoringMetrics.codeQualityScore}";
+    console.log("📊 Calculating quality improvements...`);
     const patterns =;
       this.refactoringMetrics.refactoringPatterns.get("patterns");
     if (!patterns) return;
@@ -435,33 +420,33 @@ console.log(`✅ Simplified code in ${pattern.file}");`)} catch (error) {`);
       this.refactoringMetrics.appliedRefactorings.length;
     this.refactoringMetrics.complexityReduction = appliedRefactorings * 10;
 
-    console.log(📊 Code quality score: ${this.refactoringMetrics.codeQualityScore}";
+    console.log(📊 Code quality "score": ${this.refactoringMetrics.codeQualityScore}";
     );
     console.log(;
-      📊 Complexity reduction: ${this.refactoringMetrics.complexityReduction}%;
+      📊 Complexity "reduction": ${this.refactoringMetrics.complexityReduction}%;
     )}
 ;
   async generateReport() {
-  console.log(`📊 Generating refactoring report...`);
+  console.log(`📊 Generating refactoring report...");
     const report = {
-  timestamp: new Date().toISOString(),
-      summary: {
-  totalFilesAnalyzed: this.findFiles(path.join(process.cwd(), `src"), [".ts"", ".tsx", ".js"", `.jsx`, ``]).length,
-        refactoringSuggestions: this.refactoringMetrics.refactoringSuggestions.length,
-        appliedRefactorings: this.refactoringMetrics.appliedRefactorings.length,
-        codeQualityScore: this.refactoringMetrics.codeQualityScore,
-        complexityReduction: this.refactoringMetrics.complexityReduction},
-      metrics: this.refactoringMetrics,
-      suggestions: this.refactoringMetrics.refactoringSuggestions,
-      applied: this.refactoringMetrics.appliedRefactorings}
+  "timestamp": new Date().toISOString(),
+      "summary": {
+  totalFilesAnalyzed: this.findFiles(path.join(process.cwd(), "src"), [".ts"", ".tsx", ".js"", ".jsx", ""]).length,
+        "refactoringSuggestions": this.refactoringMetrics.refactoringSuggestions.length,
+        "appliedRefactorings": this.refactoringMetrics.appliedRefactorings.length,
+        "codeQualityScore": this.refactoringMetrics.codeQualityScore,
+        "complexityReduction": this.refactoringMetrics.complexityReduction},
+      "metrics": this.refactoringMetrics,
+      "suggestions": this.refactoringMetrics.refactoringSuggestions,
+      "applied": this.refactoringMetrics.appliedRefactorings}
     const reportPath = path.join(;
-      this.reportDir,refactoring-${Date.now()}.json`;
+      this.reportDir,refactoring-${Date.now()}.json";
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     // Also save latest report;
     const latestReportPath = path.join(;
       process.cwd(),
-      `refactoring-report.json`;
+      "refactoring-report.json`;
     );
     fs.writeFileSync(latestReportPath, JSON.stringify(report, null, 2));
 console.log(📊 Refactoring report saved to ${reportPath}`)}
@@ -482,7 +467,7 @@ console.log(📊 Refactoring report saved to ${reportPath}`)}
   files.push(fullPath)}
         }
       } catch (error) {
-  // Skip directories that can`t be accessed}
+  // Skip directories that can"t be accessed}
       } catch (error) {
   // Skip directories that can"t be accessed}
     }
@@ -492,7 +477,7 @@ console.log(📊 Refactoring report saved to ${reportPath}`)}
 ;
   analyzeFunctionLength(content) {
   const longFunctions = [];
-    const lines = content.split(`\n`);
+    const lines = content.split("\n");
     let inFunction = false;
     let functionStart = 0;
     let functionName = ";
@@ -512,18 +497,17 @@ console.log(📊 Refactoring report saved to ${reportPath}`)}
         if (functionLength > 20) {
   // Functions longer than 20 lines;
           longFunctions.push({
-  name: functionName,
-            length: functionLength,
-            startLine: functionStart + 1,
-            endLine: i + 1,
+  "name": functionName,
+            "length": functionLength,
+            "startLine": functionStart + 1,
+            "endLine": i + 1,
         if (functionLength > 20) {
   // Functions longer than 20 lines;
           longFunctions.push({
-  name: functionName,
-            length: functionLength,
-            startLine: functionStart + 1,
-            endLine: i + 1,
-})}
+  "name": functionName,
+            "length": functionLength,
+            "startLine": functionStart + 1,
+            "endLine": i + 1})}
         inFunction = false}
     }
 ;
@@ -538,7 +522,7 @@ console.log(📊 Refactoring report saved to ${reportPath}`)}
     const codeBlocks = [];
     for (let i = 0; i < lines.length - 2; i++) {
   const block = lines.slice(i, i + 3).join("\n");
-      codeBlocks.push({ block, startLine: i + 1 })}
+      codeBlocks.push({ block, "startLine": i + 1 })}
 ;
     // Find duplicates;
     for (let i = 0; i < codeBlocks.length; i++) {
@@ -548,10 +532,9 @@ console.log(📊 Refactoring report saved to ${reportPath}`)}
           codeBlocks[i].block.trim().length > 10;
         ) {
   duplicates.push({
-  code: codeBlocks[i].block,
-            startLine: codeBlocks[i].startLine,
-            duplicateLine: codeBlocks[j].startLine,
-})}
+  "code": codeBlocks[i].block,
+            "startLine": codeBlocks[i].startLine,
+            "duplicateLine": codeBlocks[j].startLine})}
       }
     }
 ;
@@ -577,11 +560,10 @@ console.log(📊 Refactoring report saved to ${reportPath}`)}
   const conditionCount = (line.match(/&&|\|\|/g) || []).length;
         if (conditionCount > 2) {
   complexConditionals.push({
-  type: "complex_conditional",
-            line: i + 1,
-            code: line.trim(),
-            complexity: conditionCount,
-})}
+  "type": "complex_conditional",
+            "line": i + 1,
+            "code": line.trim(),
+            "complexity": conditionCount})}
       }
 ;
       // Check for nested ifs;
@@ -589,11 +571,10 @@ console.log(📊 Refactoring report saved to ${reportPath}`)}
   const nextLine = lines[i + 1];
         if (nextLine.includes("if (") && !nextLine.includes("else")) {
   complexConditionals.push({
-  type: "nested_if",
-            line: i + 1,
-            code: line.trim() + "\n" + nextLine.trim(),
-            complexity: 2,
-})}
+  "type": "nested_if",
+            "line": i + 1,
+            "code": line.trim() + "\n" + nextLine.trim(),
+            "complexity": 2})}
       }
     }
 ;
@@ -615,16 +596,15 @@ console.log(📊 Refactoring report saved to ${reportPath}`)}
           if (num > 1 && num < 1000) {
   // Reasonable range for magic numbers;
             magicNumbers.push({
-  value: number,
-              line: i + 1,
-              context: line.trim(),
+  "value": number,
+              "line": i + 1,
+              "context": line.trim(),
           if (num > 1 && num < 1000) {
   // Reasonable range for magic numbers;
             magicNumbers.push({
-  value: number,
-              line: i + 1,
-              context: line.trim(),
-})}
+  "value": number,
+              "line": i + 1,
+              "context": line.trim()})}
         })}
     }
 ;
@@ -643,11 +623,10 @@ console.log(📊 Refactoring report saved to ${reportPath}`)}
   variableMatches.forEach(variable => {
   if (variable.length > 3 && !this.isConsistentNaming(variable)) {
   inconsistencies.push({
-  type: `camelCase`,
-              original: variable,
-              suggested: this.toCamelCase(variable),
-              line: i + 1,
-})}
+  "type": "camelCase",
+              "original": variable,
+              "suggested": this.toCamelCase(variable),
+              "line": i + 1})}
         })}
     }
 ;
@@ -657,10 +636,10 @@ console.log(📊 Refactoring report saved to ${reportPath}`)}
   generateConstantName(value, context) {
   const num = parseInt(value);
     const contextWords = context.split(/\s+/).slice(0, 3);
-    const prefix = contextWords[0] ? contextWords[0].toUpperCase() : `VALUE`;return ${prefix}_${num}`}
+    const prefix = contextWords[0] ? contextWords[0].toUpperCase() : "VALUE`;return ${prefix}_${num}`}
 ;
-  isConsistentNaming(name`) {
-  isConsistentNaming(name`) {
+  isConsistentNaming(name") {
+  isConsistentNaming(name") {
   // Check if name follows camelCase convention;
     return /^[a-z][a-zA-Z0-9]*$/.test(name) || /^[A-Z][a-zA-Z0-9]*$/.test(name)}
 ;
@@ -670,14 +649,14 @@ console.log(📊 Refactoring report saved to ${reportPath}`)}
   simplifyNestedIfs(code) {
   // Simple nested if simplification;
     return code.replace(;
-      /if\s*\(([^)]+)\)\s*{\s*if\s*\(([^)]+)\)/g,if ($1 && $2)`;
+      /if\s*\(([^)]+)\)\s*{\s*if\s*\(([^)]+)\)/g,if ($1 && $2)";
     )}
 }
 ;
 // Main continuous loop;
 async function $1() {
   console.log(;
-    `🔧 Starting intelligent code refactorer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`;
+    "🔧 Starting intelligent code refactorer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`;
   );
 
   const refactorer = new IntelligentCodeRefactorer();
@@ -690,7 +669,7 @@ async function $1() {
   )}
 ;
 // Handle graceful shutdown;
-process.on(`SIGINT`, () => {
+process.on("SIGINT", () => {
   // Run initial refactoring;
   await refactorer.refactorCodebase();
 
@@ -711,4 +690,4 @@ process.on("SIGTERM", () => {
   process.exit(0)});
 // Start the intelligent code refactorer;
 runContinuous().catch(error => {
-  console.error("❌ Failed to start intelligent code refactorer: ', error);  process.exit(1)})
+  console.error("❌ Failed to start intelligent code "refactorer": ', error);  process.exit(1)})

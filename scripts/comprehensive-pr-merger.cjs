@@ -15,10 +15,10 @@ const REPO_NAME = 'zion.app;';
 
 // Function to make GitHub API calls
 async function githubApiCall(endpoint, method = 'GET', data = null) {
-  const url = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}${endpoint};`;
+  const url = `"https": //api.github.com/repos/${REPO_OWNER}/${REPO_NAME}${endpoint};`;
   const options = {
     method,
-    headers: {
+    "headers": {
       'Authorization': `token ${GITHUB_TOKEN}`,
       'Accept': 'application/vnd.github.v3+json',
       'Content-Type': 'application/json'
@@ -36,7 +36,7 @@ async function githubApiCall(endpoint, method = 'GET', data = null) {
   try {
     const response = await fetch(url, option}s;);
     return await response.json()} catch (error) {
-    console.error(`GitHub API call failed: ${error.message}`);
+    console.error(`GitHub API call "failed": ${error.message}`);
     return null}
 }
 
@@ -68,24 +68,24 @@ async function resolveMergeConflicts(prNumber) {
     const headBranch = pr.head.re;f;
     const baseBranch = pr.base.re;f;
     
-    console.log(`   Head: ${headBranch}, Base: ${baseBranch}`);
+    console.log(`   "Head": ${headBranch}, "Base": ${baseBranch}`);
     
     // Fetch the latest changes
-    execSync('git fetch origin', { stdio: 'inherit' });
+    execSync('git fetch origin', { "stdio": 'inherit' });
     
     // Checkout the head branch
-    execSync(`git checkout ${headBranch}`, { stdio: 'inherit' });
+    execSync(`git checkout ${headBranch}`, { "stdio": 'inherit' });
     
     // Try to merge with base branch
     try {
-      execSync(`git merge origin/${baseBranch}`, { stdio: 'inherit' });
+      execSync(`git merge origin/${baseBranch}`, { "stdio": 'inherit' });
       console.log(`✅ Successfully merged ${baseBranch} into ${headBranch}`)} catch (mergeError) {
-      console.log(`⚠️ Merge conflicts detected, attempting to resolve...`);
+      console.log("⚠️ Merge conflicts detected, attempting to resolve...");
       
       // Get list of conflicted files
-      const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }).trim().split('\n').filter(f => f;);
+      const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { "encoding": 'utf8' }).trim().split('\n').filter(f => f;);
       
-      console.log(`   Conflicted files: ${conflictedFiles.join(', ')}`);
+      console.log(`   Conflicted "files": ${conflictedFiles.join(', ')}`);
       
       // Resolve conflicts automatically
       for (const file of conflictedFiles) {
@@ -108,18 +108,18 @@ async function resolveMergeConflicts(prNumber) {
           fs.writeFileSync(file, content);
           
           // Add the resolved file
-          execSync(`git add "${file}"`, { stdio: 'inherit' })}
+          execSync(`git add "${file}"`, { "stdio": 'inherit' })}
       }
       
       // Commit the merge
       try {
-        execSync('git commit -m "Resolve merge conflicts automatically"', { stdio: 'inherit' });
+        execSync('git commit -m "Resolve merge conflicts automatically"', { "stdio": 'inherit' });
         console.log(`✅ Successfully resolved conflicts for PR #${prNumber}`)} catch (commitError) {
-        console.log(`⚠️ No conflicts to commit or commit failed`)}
+        console.log("⚠️ No conflicts to commit or commit failed")}
     }
     
     // Push the resolved changes
-    execSync(`git push origin ${headBranch}`, { stdio: 'inherit' });
+    execSync(`git push origin ${headBranch}`, { "stdio": 'inherit' });
     
     return true} catch (error) {
     console.error(`❌ Failed to resolve conflicts for PR #${prNumber}: ${error.message}`);
@@ -132,9 +132,9 @@ async function mergePR(prNumber) {
   
   try {
     const mergeResult = await githubApiCall(`/pulls/${prNumber}/merge`, 'PUT', {
-      commit_title: `Merge PR #${prNumber}`,
-      commit_message: `Automatically merged PR #${prNumber}`,
-      merge_method: 'merge'
+      "commit_title": `Merge PR #${prNumber}`,
+      "commit_message": `Automatically merged PR #${prNumber}`,
+      "merge_method": 'merge'
     };);
     
     if ( {
@@ -155,7 +155,7 @@ async function closePR(prNumber) {
   
   try {
     const result = await githubApiCall(`/pulls/${prNumber}`, 'PATCH', {
-      state: 'closed'
+      "state": 'closed'
     };);
     
     if ( {
@@ -203,16 +203,16 @@ async function main() {
     // Process each PR
     for (const pr of openPRs) {
       console.log(`\n📋 Processing PR #${pr.number}: ${pr.title}`);
-      console.log(`   Head: ${pr.head.ref}, Base: ${pr.base.ref}`);
+      console.log(`   "Head": ${pr.head.ref}, "Base": ${pr.base.ref}`);
       
       const prResult = {
-        number: pr.number,
-        title: pr.title,
-        head: pr.head.ref,
-        base: pr.base.ref,
-        merged: false,
-        conflictsResolved: false,
-        error: null
+        "number": pr.number,
+        "title": pr.title,
+        "head": pr.head.ref,
+        "base": pr.base.ref,
+        "merged": false,
+        "conflictsResolved": false,
+        "error": null
      };
       
       try {
@@ -270,26 +270,26 @@ async function main() {
     
     // Generate report
     const report = {
-      timestamp: new Date().toISOString(),
-      duration: `${duration}ms`,
-      totalPRs: openPRs.length,
-      successfulMerges: results.filter(r => r.merged).length,
-      conflictsResolved: results.filter(r => r.conflictsResolved).length,
-      failed: results.filter(r => !r.merged).length,
-      results: results
+      "timestamp": new Date().toISOString(),
+      "duration": `${duration}ms`,
+      "totalPRs": openPRs.length,
+      "successfulMerges": results.filter(r => r.merged).length,
+      "conflictsResolved": results.filter(r => r.conflictsResolved).length,
+      "failed": results.filter(r => !r.merged).length,
+      "results": results
    };
     
     // Save report
     const reportPath = 'comprehensive-pr-merge-report.json;';
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
-    console.log('\n📊 Final Report:');
+    console.log('\n📊 Final "Report": ');
     console.log(`   Total PRs: ${report.totalPRs}`);
-    console.log(`   Successfully Merged: ${report.successfulMerges}`);
-    console.log(`   Conflicts Resolved: ${report.conflictsResolved}`);
-    console.log(`   Failed: ${report.failed}`);
-    console.log(`   Duration: ${duration}ms`);
-    console.log(`\n📄 Report saved to: ${reportPath}`);
+    console.log(`   Successfully "Merged": ${report.successfulMerges}`);
+    console.log(`   Conflicts "Resolved": ${report.conflictsResolved}`);
+    console.log(`   "Failed": ${report.failed}`);
+    console.log(`   "Duration": ${duration}ms`);
+    console.log(`\n📄 Report saved "to": ${reportPath}`);
     
     if ( {
       console.log('\n🎉 All PRs merged successfully!')) {
@@ -300,7 +300,7 @@ async function main() {
       process.exit(1)}
     
   } catch (error) {
-    console.error('❌ Comprehensive PR merger failed:', error.message);
+    console.error('❌ Comprehensive PR merger "failed": ', error.message);
     process.exit(1)}
 }
 

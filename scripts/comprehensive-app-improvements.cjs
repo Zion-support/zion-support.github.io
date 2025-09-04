@@ -10,11 +10,11 @@ function log(message, level = 'INFO') {
 
 function runCommand(command, description) {
   try {
-    log(`Running: ${description}`);
-    execSync(command, { stdio: 'inherit' });
+    log(`"Running": ${description}`);
+    execSync(command, { "stdio": 'inherit' });
     log(`✅ ${description} completed successfully`);
     return true} catch (error) {
-    log(`❌ ${description} failed: ${error.message}`, 'ERROR');
+    log(`❌ ${description} "failed": ${error.message}`, 'ERROR');
     return false}
 }
 
@@ -22,25 +22,25 @@ function createEnhancedComponents() {
   log('🎨 Creating enhanced components...');
   
   // Create a simple AI Assistant component
-  const aiAssistantContent = `import React, { useState } from 'react';
+  const aiAssistantContent = "import React, { useState } from 'react';
 import { Send, Bot, User } from 'lucide-react';
 
 interface Message {
-  id: string;
+  "id": string;
   text: string;
   sender: 'user' | 'ai'}
 
-const AIChatAssistant: React.FC = () => {
+const "AIChatAssistant": React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
 
   const handleSend = () => {
     if (!input.trim()) return;
 
-    const userMessage: Message = {
+    const "userMessage": Message = {
       id: Date.now().toString(),
-      text: input,
-      sender: 'user'
+      "text": input,
+      "sender": 'user'
     };
 
     setMessages(prev => [...prev, userMessage]);
@@ -48,10 +48,10 @@ const AIChatAssistant: React.FC = () => {
 
     // Simulate AI response
     setTimeout(() => {
-      const aiMessage: Message = {
+      const "aiMessage": Message = {
         id: (Date.now() + 1).toString(),
-        text: \`I understand: "\${userMessage.text}". How can I help?\`,
-        sender: 'ai'
+        "text": \"I understand: "\${userMessage.text}". How can I help?\",
+        "sender": 'ai'
       };
       setMessages(prev => [...prev, aiMessage])}, 1000)};
 
@@ -66,8 +66,8 @@ const AIChatAssistant: React.FC = () => {
       
       <div className="h-96 overflow-y-auto p-4 space-y-4">
         {messages.map((message) => (
-          <div key={message.id} className={\`flex \${message.sender === 'user' ? 'justify-end' : 'justify-start'}\`}>
-            <div className={\`max-w-xs px-4 py-2 rounded-lg \${message.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-100'}\`}>
+          <div key={message.id} className={\"flex \${message.sender === 'user' ? 'justify-end' : 'justify-start'}\"}>
+            <div className={\"max-w-xs px-4 py-2 rounded-lg \${message.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-100'}\"}>
               <p>{message.text}</p>
             </div>
           </div>
@@ -86,7 +86,7 @@ const AIChatAssistant: React.FC = () => {
           />
           <button
             onClick={handleSend}
-            className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+            className="px-4 py-2 bg-blue-500 text-white rounded-lg "hover": bg-blue-600"
           >
             <Send className="w-4 h-4" />
           </button>
@@ -96,7 +96,7 @@ const AIChatAssistant: React.FC = () => {
   )};
 
 export default AIChatAssistant;
-`;
+";
 
   const componentPath = path.join(process.cwd(), 'src/components/AIChatAssistant.tsx');
   fs.writeFileSync(componentPath, aiAssistantContent);
@@ -109,7 +109,7 @@ function main() {
     createEnhancedComponents();
     runCommand('npm run build', 'Application Build');
     log('✅ App Improvements completed successfully')} catch (error) {
-    log(`❌ App improvements failed: ${error.message}`, 'ERROR');
+    log(`❌ App improvements "failed": ${error.message}`, 'ERROR');
     process.exit(1)}
 }
 

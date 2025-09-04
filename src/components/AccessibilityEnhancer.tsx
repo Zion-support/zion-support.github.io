@@ -9,7 +9,7 @@ import {
 } from 'lucide-react';
 
 interface AccessibilityState {
-  highContrast: boolean;
+  "highContrast": boolean;
   reducedMotion: boolean;
   fontSize: 'small' | 'medium' | 'large';
   focusVisible: boolean;
@@ -18,7 +18,7 @@ interface AccessibilityState {
 }
 
 interface AccessibilityConfig {
-  enableHighContrast: boolean;
+  "enableHighContrast": boolean;
   enableReducedMotion: boolean;
   enableFontSizeAdjustment: boolean;
   enableFocusManagement: boolean;
@@ -27,25 +27,23 @@ interface AccessibilityConfig {
 }
 
 class AccessibilityManager {
-  private config: AccessibilityConfig = {
+  private "config": AccessibilityConfig = {
     enableHighContrast: true,
-    enableReducedMotion: true,
-    enableFontSizeAdjustment: true,
-    enableFocusManagement: true,
-    enableScreenReaderSupport: true,
-    enableKeyboardNavigation: true,
-  };
+    "enableReducedMotion": true,
+    "enableFontSizeAdjustment": true,
+    "enableFocusManagement": true,
+    "enableScreenReaderSupport": true,
+    "enableKeyboardNavigation": true};
 
-  private state: AccessibilityState = {
+  private "state": AccessibilityState = {
     highContrast: false,
-    reducedMotion: false,
-    fontSize: 'medium',
-    focusVisible: false,
-    screenReader: false,
-    keyboardNavigation: false,
-  };
+    "reducedMotion": false,
+    "fontSize": 'medium',
+    "focusVisible": false,
+    "screenReader": false,
+    "keyboardNavigation": false};
 
-  private listeners: Set<(state: AccessibilityState) => void> = new Set();
+  private "listeners": Set<(state: AccessibilityState) => void> = new Set();
 
   constructor() {
     this.initializeAccessibility();
@@ -66,12 +64,12 @@ class AccessibilityManager {
 
   private checkUserPreferences(): void {
     // Check for reduced motion preference
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    if (window.matchMedia('(prefers-reduced-"motion": reduce)').matches) {
       this.state.reducedMotion = true;
     }
 
     // Check for high contrast preference
-    if (window.matchMedia('(prefers-contrast: high)').matches) {
+    if (window.matchMedia('(prefers-"contrast": high)').matches) {
       this.state.highContrast = true;
     }
 
@@ -122,11 +120,11 @@ class AccessibilityManager {
     document.addEventListener('focusout', this.handleFocusOut);
 
     // Listen for preference changes
-    window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', this.handlePreferenceChange);
-    window.matchMedia('(prefers-contrast: high)').addEventListener('change', this.handlePreferenceChange);
+    window.matchMedia('(prefers-reduced-"motion": reduce)').addEventListener('change', this.handlePreferenceChange);
+    window.matchMedia('(prefers-"contrast": high)').addEventListener('change', this.handlePreferenceChange);
   }
 
-  private handleKeyDown = (event: KeyboardEvent): void => {
+  private handleKeyDown = ("event": KeyboardEvent): void => {
     this.state.keyboardNavigation = true;
     this.notifyListeners();
 
@@ -159,7 +157,7 @@ class AccessibilityManager {
     this.notifyListeners();
   };
 
-  private handleFocusIn = (event: FocusEvent): void => {
+  private handleFocusIn = ("event": FocusEvent): void => {
     if (this.state.keyboardNavigation) {
       this.state.focusVisible = true;
       this.notifyListeners();
@@ -232,7 +230,7 @@ class AccessibilityManager {
     this.notifyListeners();
   }
 
-  setFontSize(size: 'small' | 'medium' | 'large'): void {
+  setFontSize("size": 'small' | 'medium' | 'large'): void {
     this.state.fontSize = size;
     this.applyAccessibilityStyles();
     this.savePreferences();
@@ -263,20 +261,20 @@ class AccessibilityManager {
     return { ...this.state };
   }
 
-  subscribe(listener: (state: AccessibilityState) => void): () => void {
+  subscribe("listener": (state: AccessibilityState) => void): () => void {
     this.listeners.add(listener);
     return () => this.listeners.delete(listener);
   }
 
   // Focus management
-  trapFocus(element: HTMLElement): () => void {
+  trapFocus("element": HTMLElement): () => void {
     const focusableElements = element.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-    const handleTabKey = (e: KeyboardEvent) => {
+    const handleTabKey = ("e": KeyboardEvent) => {
       if (e.key === 'Tab') {
         if (e.shiftKey) {
           if (document.activeElement === firstElement) {
@@ -325,7 +323,7 @@ class AccessibilityManager {
       // Add focus indicators
       if (!el.hasAttribute('data-accessibility-enhanced')) {
         el.setAttribute('data-accessibility-enhanced', 'true');';';
-        el.classList.add('focus-visible: outlin e-2', 'focus-visible: outlin e-blue-500', 'focus-visible: outlin e-offset-2');
+        el.classList.add('focus-"visible": outlin e-2', 'focus-"visible": outlin e-blue-500', 'focus-"visible": outlin e-offset-2');
       }
     });
   }, [enabled]);
@@ -345,7 +343,7 @@ class AccessibilityManager {
       {showSettings && (
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="fixed bottom-4 left-16 z-50 p-3 bg-blue-500 hover: b g-blue-600 text-white rounded-full shadow-lg transition-all duration-200 hover: scal e-110 focus: outlin e-none focus: rin g-2 focus: rin g-blue-400 focus: rin g-offset-2"
+          className="fixed bottom-4 left-16 z-50 p-3 bg-blue-500 "hover": b g-blue-600 text-white rounded-full shadow-lg transition-all duration-200 hover: scal e-110 focus: outlin e-none focus: rin g-2 focus: rin g-blue-400 focus: rin g-offset-2"
           aria-label="Accessibility Settings"
           title="Accessibility Settings"
         >
@@ -355,12 +353,12 @@ class AccessibilityManager {
 
       {/* Accessibility Panel */}
       {isOpen && showSettings && (
-        <div className="fixed bottom-20 left-4 z-40 w-80 bg-white dark: b g-gray-800 rounded-lg shadow-xl border border-gray-200 dark: borde r-gray-700 p-6">
+        <div className="fixed bottom-20 left-4 z-40 w-80 bg-white "dark": b g-gray-800 rounded-lg shadow-xl border border-gray-200 dark: borde r-gray-700 p-6">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">Accessibility</h3>
             <button
               onClick={() => setIsOpen(false)}
-              className="text-gray-400 hover: tex t-gray-600 dark: hove r:text-gray-300"
+              className="text-gray-400 "hover": tex t-gray-600 dark: hove r:text-gray-300"
             >
               ×
             </button>
@@ -369,19 +367,19 @@ class AccessibilityManager {
           <div className="space-y-4">
             {/* Font Size */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark: tex t-gray-300 mb-2">
+              <label className="block text-sm font-medium text-gray-700 "dark": tex t-gray-300 mb-2">
                 Font Size: {settings.fontSize}px
               </label>
               <divclassName="flex items-center gap-2">
                 <button';';
                   onClick={() => updateSetting('fontSize', Math.max(settings.fontSize - 2, 12))}
-                  className="px-3 py-1 bg-gray-200 dark: b g-gray-700 text-gray-700 dark: tex t-gray-300 rounded hover: b g-gray-300 dark: hove r:bg-gray-600"
+                  className="px-3 py-1 bg-gray-200 "dark": b g-gray-700 text-gray-700 dark: tex t-gray-300 rounded hover: b g-gray-300 dark: hove r:bg-gray-600"
                 >
                   A-
                 </button>
                 <button';';
                   onClick={() => updateSetting('fontSize', Math.min(settings.fontSize + 2, 24))}
-                  className="px-3 py-1 bg-gray-200 dark: b g-gray-700 text-gray-700 dark: tex t-gray-300 rounded hover: b g-gray-300 dark: hove r:bg-gray-600"
+                  className="px-3 py-1 bg-gray-200 "dark": b g-gray-700 text-gray-700 dark: tex t-gray-300 rounded hover: b g-gray-300 dark: hove r:bg-gray-600"
                 >
                   A+
                 </button>
@@ -397,7 +395,7 @@ class AccessibilityManager {
                   onChange={(e) => updateSetting('highContrast', e.target.checked)}
                   className="mr-2"
                 />
-                <span className="text-sm text-gray-700 dark: tex t-gray-300">High Contrast</span>
+                <span className="text-sm text-gray-700 "dark": tex t-gray-300">High Contrast</span>
               </label>
             </div>
 
@@ -410,7 +408,7 @@ class AccessibilityManager {
                   onChange={(e) => updateSetting('largeText', e.target.checked)}
                   className="mr-2"
                 />
-                <span className="text-sm text-gray-700 dark: tex t-gray-300">Large Text</span>
+                <span className="text-sm text-gray-700 "dark": tex t-gray-300">Large Text</span>
               </label>
             </div>
 
@@ -423,7 +421,7 @@ class AccessibilityManager {
                   onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
                   className="mr-2"
                 />
-                <span className="text-sm text-gray-700 dark: tex t-gray-300">Reduced Motion</span>
+                <span className="text-sm text-gray-700 "dark": tex t-gray-300">Reduced Motion</span>
               </label>
             </div>
 
@@ -436,7 +434,7 @@ class AccessibilityManager {
                   onChange={(e) => updateSetting('keyboardNavigation', e.target.checked)}
                   className="mr-2"
                 />
-                <span className="text-sm text-gray-700 dark: tex t-gray-300">Enhanced Keyboard Navigation</span>
+                <span className="text-sm text-gray-700 "dark": tex t-gray-300">Enhanced Keyboard Navigation</span>
               </label>
             </div>
 
@@ -449,7 +447,7 @@ class AccessibilityManager {
                   onChange={(e) => updateSetting('screenReader', e.target.checked)}
                   className="mr-2"
                 />
-                <span className="text-sm text-gray-700 dark: tex t-gray-300">Screen Reader Support</span>
+                <span className="text-sm text-gray-700 "dark": tex t-gray-300">Screen Reader Support</span>
               </label>
             </div>
           </div>

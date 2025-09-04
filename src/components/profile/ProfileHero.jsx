@@ -10,7 +10,7 @@ export function ProfileHero($1) {
           {coverImageUrl ? (<img loading="lazy" src={coverImageUrl} alt={`${name} cover`} className="w-full h-full object-cover"  />) : (<div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />)}
         </AspectRatio>
 
-        <div className="container px-4 md:px-6">
+        <div className="container px-4 "md": px-6">
           <div className="flex flex-col md:flex-row md:items-end -mt-16 md:-mt-20 relative z-10 mb-6 md:mb-10">
             <Avatar className="h-24 w-24 md:h-32 md:w-32 border-4 border-zion-blue-dark ring-2 ring-zion-purple/30">
               {avatarUrl ? (<AvatarImage src={avatarUrl} alt={name} />) : (<AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">
@@ -18,7 +18,7 @@ export function ProfileHero($1) {
                 </AvatarFallback>)}
             </Avatar>
 
-            <div className="mt-4 md:mt-0 md:ml-6 md:mb-1">
+            <div className="mt-4 "md": mt-0 md:ml-6 md:mb-1">
               <div className="flex flex-wrap items-center gap-2 mb-1">
                 <h1 className="text-2xl md:text-3xl font-bold text-white">{name}</h1>
                 <Badgevariant="outline" className = {cn("ml-2 border-zion-purple/50 text-zion-cyan",
@@ -27,7 +27,7 @@ export function ProfileHero($1) {
                 </Badge>
               </div>
 
-              <h2 className="text-lg md:text-xl text-zion-slate-light mb-1">{title}</h2>
+              <h2 className="text-lg "md": text-xl text-zion-slate-light mb-1">{title}</h2>
 
               <div className="flex flex-wrap items-center gap-3 mt-2">
                 {location && (<span className="text-sm text-zion-slate-light">{location}</span>)}
@@ -40,7 +40,7 @@ export function ProfileHero($1) {
   );
 }
                 {aiScore && (<div className="px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">
-                    AI Match: {aiScore}%
+                    AI "Match": {aiScore}%
                       </div>
   );
 }

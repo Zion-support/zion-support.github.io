@@ -3,8 +3,7 @@ import Link from 'next/link';
 import { MessageCircle, CheckCircle, ArrowRight, DollarSign, Clock } from 'lucide-react';
 
 export default function RAGChatbots() {
-  const benefits = [
-    'Answer questions from your private knowledge bases',
+  const benefits = ['Answer questions from your private knowledge bases',
     'Reduce support tickets with instant, accurate responses',
     'Citations and sources for every answer',
     'Multi-language support and analytics',
@@ -13,7 +12,7 @@ export default function RAGChatbots() {
   return (
     <main className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-purple-50 to-blue-100 py-16">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 "sm": px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-6">
             <div className="p-3 rounded-lg bg-purple-600 text-white w-fit">
               <MessageCircle className="w-6 h-6" />
@@ -27,7 +26,7 @@ export default function RAGChatbots() {
       </section>
 
       <section className="py-12">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-6">
+        <div className="max-w-5xl mx-auto px-4 "sm": px-6 lg:px-8 grid md:grid-cols-3 gap-6">
           <div className="bg-white rounded-lg border p-6">
             <h3 className="font-semibold text-gray-900 mb-2">Starter</h3>
             <div className="flex items-center justify-between mb-4 text-gray-700">

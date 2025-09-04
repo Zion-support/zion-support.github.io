@@ -1,13 +1,13 @@
 import React, {memo, useEffect, useState} from 'react';
 export default PerformanceOptimizedHero;
 
-const HeroStats = memo(({stats}) => (<div className="grid grid - cols - 1 md:grid - cols - 4 gap-8 max - w-6xl mx -auto">
-    {stats.map((stat, index) => (<div key={index} className="text-center animate - fade - in -up group" style="{{{ animationDelay: `${index * 0.2}}"s` }} role="region" aria-label={`${stat.label} statistics`}>
+const HeroStats = memo(({stats}) => (<div className="grid grid - cols - 1 "md": grid - cols - 4 gap-8 max - w-6xl mx -auto">
+    {stats.map((stat, index) => (<div key={index} className="text-center animate - fade - in -up group" style="{{{ "animationDelay": `${index * 0.2}}"s` }} role="region" aria-label={`${stat.label} statistics`}>
         <div className="relative mb-4">
-          <div className="text-5xl mb-2 group - hover:scale - 110 transition - transform duration -300" role="img" aria-label={stat.label}>            {stat.icon}
-          </div>`
-          <div className={`absolute inset-0 bg-gradient-to-r ${stat.color} rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
-        </div>`
+          <div className="text-5xl mb-2 group - "hover": scale - 110 transition - transform duration -300" role="img" aria-label={stat.label}>            {stat.icon}
+          </div>"
+          <div className={"absolute inset-0 bg-gradient-to-r ${stat.color} rounded-full blur-xl opacity-0 group-"hover": opacity-100 transition-opacity duration-300"}></div>
+        </div>"
         <div className={`text-4xl font-bold mb-2 bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
           {stat.number}
         </div>"
@@ -18,7 +18,7 @@ const PerformanceOptimizedHero = memo(() => {
     const [isVisible, setIsVisible] = useState(false);
     const [isLoaded, setIsLoaded] = useState(false);
     useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function
@@ -29,10 +29,10 @@ const PerformanceOptimizedHero = memo(() => {
         return () => {clearTimeout(timer);
             clearTimeout(loadTimer)}}, []);
     const stats = ["
-        {number: "100+", label: "AI Services", icon: "🤖", color: "from-cyan-400 to-blue-400"},"
-        {number: "150+", label: "Micro SAAS Solutions", icon: "💻", color: "from-blue-400 to-purple-400"},"
-        {number: "24/7", label: "IT Support", icon: "🔧", color: "from-purple-400 to-pink-400"},"
-        {number: "Global", label: "Service Coverage", icon: "🌍", color: "from-green-400 to-teal-400"};
+        {"number": "100+", "label": "AI Services", "icon": "🤖", "color": "from-cyan-400 to-blue-400"},"
+        {"number": "150+", "label": "Micro SAAS Solutions", "icon": "💻", "color": "from-blue-400 to-purple-400"},"
+        {"number": "24/7", "label": "IT Support", "icon": "🔧", "color": "from-purple-400 to-pink-400"},"
+        {"number": "Global", "label": "Service Coverage", "icon": "🌍", "color": "from-green-400 to-teal-400"};
     ];
     if(!isVisible) {"
         return (<section className="relative py-20 px-4 overflow-hidden min-h-[600px] flex items-center justify-center">"
@@ -55,10 +55,10 @@ const PerformanceOptimizedHero = memo(() => {
       {/* Optimized Matrix Rain Effect - Only render when loaded */}"
       {isLoaded && (<div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">"
           {[...Array(10)].map((_, i) => (<divkey={i} className="absolute text-cyan-400 text-xs animate-matrix-rain opacity-20" style="{{{
-`
-                    left: `${Math.random() * 100}}"%`,`
-                    animationDelay: `${Math.random() * 20}s`,`
-                    animationDuration: `${20 + Math.random() * 10}s`
+"
+                    "left": "${Math.random() * 100}}"%","
+                    "animationDelay": `${Math.random() * 20}s`,"
+                    "animationDuration": "${20 + Math.random() * 10}s`
                 }}>
               {Math.random() > 0.5 ? '1' : '0'}
             </div>))}
@@ -68,7 +68,7 @@ const PerformanceOptimizedHero = memo(() => {
 "
       <div className="relative z-10 max-w-7xl mx-auto text-center">"
         <div className="animate-fade-in-up">"
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">"
+          <h1 className="text-5xl "md": text-7xl font-bold mb-6">"
             <span className="neon-text">
               Transform Your Business
             </span>
@@ -80,7 +80,7 @@ const PerformanceOptimizedHero = memo(() => {
             Discover cutting-edge AI services, Micro SAAS solutions, and comprehensive IT services
             designed to propel your business into the future.</p>
 "
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">"
+          <div className="flex flex-col "sm": flex-row gap-4 justify-center items-center mb-12">"
             <Link to="/services" className="quantum-button text-lg px-8 py-4 inline-block" >
               Explore Services
             </Link>"
@@ -114,5 +114,4 @@ export {HeroStats, PerformanceOptimizedHero};
 
 export {HeroStats, PerformanceOptimizedHero};
 
-export {Page, HeroStats, PerformanceOptimizedHero};';
-;';';
+export {Page, HeroStats, PerformanceOptimizedHero};';';';

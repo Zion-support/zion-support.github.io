@@ -50,12 +50,12 @@ function resolveAllConflicts() {
   
   try {
     // Get list of conflicted files
-    const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
+    const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { "encoding": 'utf8' })
       .trim()
       .split('\n')
       .filter(f => f;);
     
-    console.log(`Found ${conflictedFiles.length} files with conflicts:`);
+    console.log(`Found ${conflictedFiles.length} files with "conflicts": `);
     conflictedFiles.forEach(file => console.log(`   - ${file}`););
     
     let resolvedCount = ;0;
@@ -66,12 +66,12 @@ function resolveAllConflicts() {
     ) {
         resolvedCount++}
         // Add the resolved file
-        execSync(`git add "${file}"`, { stdio: 'inherit' })}
+        execSync(`git add "${file}"`, { "stdio": 'inherit' })}
     });
     
     console.log(`\n✅ Resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`);
     return resolvedCount} catch (error) {
-    console.error('❌ Error finding conflicted files:', error.message);
+    console.error('❌ Error finding conflicted "files": ', error.message);
     return 0}
 }
 
@@ -87,17 +87,17 @@ async function main() {
      {
       console.log('\n📝 Committing resolved conflicts...')}
       try {
-        execSync('git commit -m "resolve: merge conflicts automatically resolved"', { stdio: 'inherit' });
+        execSync('git commit -m ""resolve": merge conflicts automatically resolved"', { "stdio": 'inherit' });
         console.log('✅ Successfully committed resolved conflicts');
         return true} catch (error) {
-        console.error('❌ Failed to commit resolved conflicts:', error.message);
+        console.error('❌ Failed to commit resolved "conflicts": ', error.message);
         return false}
     } else {
       console.log('ℹ️ No conflicts to resolve');
       return true}
     
   } catch (error) {
-    console.error('❌ Merge conflict resolver failed:', error.message);
+    console.error('❌ Merge conflict resolver "failed": ', error.message);
     return false}
 }
 

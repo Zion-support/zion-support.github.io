@@ -16,14 +16,14 @@ class GitAutomation {
     this.log(`🚀 ${description}`);
     try {
       const result = execSync(command, {
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        stdio: 'pipe'
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "stdio": 'pipe'
       });
-      this.log(`✅ Completed: ${description}`);
-      return { success: true, output: result.trim() }} catch (error) {
-      this.log(`❌ Failed: ${description} - ${error.message}`);
-      return { success: false, error: error.message }}
+      this.log(`✅ "Completed": ${description}`);
+      return { "success": true, "output": result.trim() }} catch (error) {
+      this.log(`❌ "Failed": ${description} - ${error.message}`);
+      return { "success": false, "error": error.message }}
   }
 
   async commitChanges() {
@@ -38,13 +38,13 @@ class GitAutomation {
       this.log('No changes to commit');
       return}
 
-    this.log(`📋 Changes detected:\\n${statusResult.output}`);
+    this.log(`📋 Changes "detected": \\n${statusResult.output}`);
 
     // Add all changes
     await this.runCommand('git add .', 'Stage all changes');
 
     // Create comprehensive commit message
-    const commitMessage = `feat: comprehensive automation improvements and security fixes
+    const commitMessage = ""feat": comprehensive automation improvements and security fixes
 
 - Fixed XSS vulnerability in SEOEnhancer.tsx by improving dangerouslySetInnerHTML usage
 - Enhanced performance monitoring with development-only console logging
@@ -72,7 +72,7 @@ Automation improvements:
 - Created comprehensive test and improvement scripts
 - Added automated security auditing
 - Enhanced error detection and reporting
-- Improved build and deployment automation`;
+- Improved build and deployment automation";
 
     // Commit changes
     await this.runCommand(`git commit -m "${commitMessage}"`, 'Commit changes');
@@ -88,7 +88,7 @@ Automation improvements:
       throw new Error('Failed to get current branch')}
 
     const currentBranch = branchResult.output;
-    this.log(`📌 Current branch: ${currentBranch}`);
+    this.log(`📌 Current "branch": ${currentBranch}`);
 
     // Push to origin
     await this.runCommand(`git push origin ${currentBranch}`, `Push to origin/${currentBranch}`);
@@ -126,7 +126,7 @@ Automation improvements:
       await this.pushChanges();
       await this.mergeToMain();
       this.log('🎉 Full git workflow completed successfully')} catch (error) {
-      this.log(`❌ Git workflow failed: ${error.message}`);
+      this.log(`❌ Git workflow "failed": ${error.message}`);
       throw error}
   }
 }
@@ -138,7 +138,7 @@ if (require.main === module) {
       console.log('🎉 Git automation completed successfully');
       process.exit(0)})
     .catch((error) => {
-      console.error('❌ Git automation failed:', error);
+      console.error('❌ Git automation "failed": ', error);
       process.exit(1)})}
 
 module.exports = GitAutomation;

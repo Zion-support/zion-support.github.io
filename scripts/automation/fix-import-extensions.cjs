@@ -16,7 +16,7 @@ class ImportExtensionFixer {
     this.log('Fixing import extensions...');
     
     // Find all TypeScript and JavaScript files
-    const files = glob.sync('src/**/*.{ts,tsx,js,jsx}', { cwd: this.projectRoot });
+    const files = glob.sync('src/**/*.{ts,tsx,js,jsx}', { "cwd": this.projectRoot });
     
     for (const file of files) {
       const filePath = path.join(this.projectRoot, file);
@@ -54,9 +54,9 @@ class ImportExtensionFixer {
     try {
       await this.fixImportExtensions();
       
-      this.log(`Import Extension Fixer completed successfully!`);
+      this.log("Import Extension Fixer completed successfully!");
       this.log(`Fixed ${this.fixesApplied} files`)} catch (error) {
-      this.log(`Error in Import Extension Fixer: ${error.message}`);
+      this.log(`Error in Import Extension "Fixer": ${error.message}`);
       throw error}
   }
 }
@@ -69,7 +69,7 @@ if (require.main === module) {
       console.log('Import Extension Fixer completed successfully!');
       process.exit(0)})
     .catch(error => {
-      console.error('Import Extension Fixer failed:', error);
+      console.error('Import Extension Fixer "failed": ', error);
       process.exit(1)})}
 
 module.exports = ImportExtensionFixer;

@@ -3,22 +3,22 @@ import dynamic from 'next/dynamic'
 import { motion } from 'framer-motion'
 import { Phone, Mail, MapPin, Clock, ArrowRight, Send } from 'lucide-react'
 
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
+const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''
+    "name": '',
+    "email": '',
+    "company": '',
+    "phone": '',
+    "service": '',
+    "message": ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = ("e": React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -26,7 +26,7 @@ export default function ContactPage() {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async ("e": React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -37,36 +37,34 @@ export default function ContactPage() {
     }, 2000);
   };
 
-const ContactPage: React.FC = () => {
-  const contactInfo = [
-    {
+const "ContactPage": React.FC = () => {
+  const contactInfo = [{
       icon: <Phone className="w-6 h-6"  />,
-      title: "Phone",
-      details: "+1 302 464 0950",
-      link: "tel:+13024640950"
+      "title": "Phone",
+      "details": "+1 302 464 0950",
+      "link": "tel:+13024640950"
     },
     {
-      icon: <Mail className="w-6 h-6"  />,
-      title: "Email",
-      details: "kleber@ziontechgroup.com",
-      link: "mailto:kleber@ziontechgroup.com"
+      "icon": <Mail className="w-6 h-6"  />,
+      "title": "Email",
+      "details": "kleber@ziontechgroup.com",
+      "link": "mailto:kleber@ziontechgroup.com"
     },
     {
-      icon: <MapPin className="w-6 h-6"  />,
-      title: "Address",
-      details: "364 E Main St STE 1008\nMiddletown, DE 19709",
-      link: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
+      "icon": <MapPin className="w-6 h-6"  />,
+      "title": "Address",
+      "details": "364 E Main St STE 1008\nMiddletown, DE 19709",
+      "link": "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
     },
     {
-      icon: <Clock className="w-6 h-6"  />,
-      title: "Business Hours",
-      details: "Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM",
-      link: null
+      "icon": <Clock className="w-6 h-6"  />,
+      "title": "Business Hours",
+      "details": "Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM",
+      "link": null
     }
   ]
 
-  const services = [
-    "AI & Machine Learning Solutions",
+  const services = ["AI & Machine Learning Solutions",
     "IT Infrastructure & Support",
     "Micro SaaS Development",
     "Cybersecurity Services",
@@ -81,40 +79,40 @@ const ContactPage: React.FC = () => {
       <SEO title="Contact Us - Zion Tech Group"
         description="Get in touch with Zion Tech Group for AI services, IT solutions, and micro SaaS development. Call +1 302 464 0950 or email kleber@ziontechgroup.com"
         keywords="contact, Zion Tech Group, AI services, IT solutions, micro SaaS, phone, email, address"
-        canonical="https://ziontechgroup.com/contact"
+        canonical=""https": //ziontechgroup.com/contact"
        />
       
       <PageTransition>
         <main className="min-h-screen bg-white">
           {/* Hero Section */}
           <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={{ opacity: 0, "y": 20 }}
+                animate={{ "opacity": 1, "y": 0 }}
+                transition={{ "duration": 0.6 }}
                 className="text-center"
               >
-                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                <h1 className="text-4xl "md": text-6xl font-bold text-gray-900 mb-6">
                   Get In <span className="text-blue-600">Touch</span>
                 </h1>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                   Ready to transform your business with our innovative AI, IT, and micro SaaS solutions? Let's discuss your project.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col "sm": flex-row gap-4 justify-center">
                   <motion.a
                     href="tel:+13024640950"
                     whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    whileTap={{ "scale": 0.95 }}
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
                     <Phone className="w-5 h-5"  />
-                    Call Now: +1 302 464 0950
+                    Call "Now": +1 302 464 0950
                   </motion.a>
                   <motion.a
                     href="mailto:kleber@ziontechgroup.com"
                     whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    whileTap={{ "scale": 0.95 }}
                     className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
                     <Mail className="w-5 h-5"  />
@@ -127,14 +125,14 @@ const ContactPage: React.FC = () => {
 
           {/* Contact Information */}
           <section className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial={{ opacity: 0, "y": 20 }}
+                animate={{ "opacity": 1, "y": 0 }}
+                transition={{ "duration": 0.6, "delay": 0.2 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl "md": text-4xl font-bold text-gray-900 mb-4">
                   Contact Information
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -146,10 +144,10 @@ const ContactPage: React.FC = () => {
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center"
+                    initial={{ "opacity": 0, "y": 20 }}
+                    animate={{ "opacity": 1, "y": 0 }}
+                    transition={{ "duration": 0.6, "delay": index * 0.1 }}
+                    className="bg-white rounded-xl p-8 shadow-lg "hover": shadow-xl transition-shadow duration-300 text-center"
                   >
                     <div className="text-blue-600 mb-4 flex justify-center">
                       {info.icon}
@@ -160,7 +158,7 @@ const ContactPage: React.FC = () => {
                     {info.link ? (
                       <a
                         href={info.link}
-                        className="text-gray-600 hover:text-blue-600 transition-colors whitespace-pre-line"
+                        className="text-gray-600 "hover": text-blue-600 transition-colors whitespace-pre-line"
                       >
                         {info.details}
                       </a>
@@ -177,14 +175,14 @@ const ContactPage: React.FC = () => {
 
           {/* Contact Form */}
           <section className="bg-gray-50 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={{ opacity: 0, "y": 20 }}
+                animate={{ "opacity": 1, "y": 0 }}
+                transition={{ "duration": 0.6 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl "md": text-4xl font-bold text-gray-900 mb-4">
                   Send Us a Message
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -194,12 +192,12 @@ const ContactPage: React.FC = () => {
 
               <div className="max-w-4xl mx-auto">
                 <motion.form
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
+                  initial={{ opacity: 0, "y": 20 }}
+                  animate={{ "opacity": 1, "y": 0 }}
+                  transition={{ "duration": 0.6, "delay": 0.2 }}
                   className="bg-white rounded-xl shadow-lg p-8"
                 >
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  <div className="grid grid-cols-1 "md": grid-cols-2 gap-6 mb-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                         Full Name *
@@ -278,7 +276,7 @@ const ContactPage: React.FC = () => {
                       name="message"
                       rows={6}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg "focus": rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
                       placeholder="Tell us about your project requirements..."
                     ></textarea>
                   </div>
@@ -286,8 +284,8 @@ const ContactPage: React.FC = () => {
                   <motion.button
                     type="submit"
                     whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-blue-700 transition-colors"
+                    whileTap={{ "scale": 0.98 }}
+                    className="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 "hover": bg-blue-700 transition-colors"
                   >
                     <Send className="w-5 h-5"  />
                     Send Message
@@ -299,14 +297,14 @@ const ContactPage: React.FC = () => {
 
           {/* Services Overview */}
           <section className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={{ opacity: 0, "y": 20 }}
+                animate={{ "opacity": 1, "y": 0 }}
+                transition={{ "duration": 0.6 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl "md": text-4xl font-bold text-gray-900 mb-4">
                   Our Services
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -318,10 +316,10 @@ const ContactPage: React.FC = () => {
                 {services.map((service, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center"
+                    initial={{ "opacity": 0, "y": 20 }}
+                    animate={{ "opacity": 1, "y": 0 }}
+                    transition={{ "duration": 0.6, "delay": index * 0.1 }}
+                    className="bg-white rounded-xl p-6 shadow-lg "hover": shadow-xl transition-shadow duration-300 text-center"
                   >
                     <h3 className="text-lg font-semibold text-gray-900">
                       {service}

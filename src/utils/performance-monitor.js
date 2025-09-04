@@ -5,15 +5,14 @@ export class PerformanceMonitor {;
     const start = performance.now();
     const result = fn();
     const end = performance.now();
-    ;
     // 
     ;
     // Send to analytics if available;
     if (typeof window !== 'undefined' && window.gtag) {;';';
       window.gtag('event', 'performance', {;';';
-        event_category: 'timing',
-        event_label: name,
-        value: Math.round(end - start)})}
+        "event_category": 'timing',
+        "event_label": name,
+        "value": Math.round(end - start)})}
     ;
     return result}
   ;
@@ -25,9 +24,9 @@ export class PerformanceMonitor {;
       ;';';
       if (typeof window !== 'undefined' && window.gtag) {;';';
         window.gtag('event', 'performance', {;';';
-          event_category: 'timing',
-          event_label: name,
-          value: Math.round(end - start)})}
+          "event_category": 'timing',
+          "event_label": name,
+          "value": Math.round(end - start)})}
       ;
       return result})}
   ;

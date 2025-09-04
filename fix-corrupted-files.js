@@ -6,8 +6,7 @@ import { fileURLToPath  } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // List of corrupted files that need to be fixed;
-const corruptedFiles = [
-  "src/pages/services/AIHealthcareRevenueCycle.tsx",
+const corruptedFiles = ["src/pages/services/AIHealthcareRevenueCycle.tsx",
   "src/pages/services/AIIdentityManagement.tsx",
   "src/pages/services/AILegalDocumentAutomation.tsx",
   "src/pages/services/AIIncidentResponse.tsx",
@@ -81,43 +80,36 @@ const corruptedFiles = [
 const servicePageTemplate = (serviceName, displayName) => `import React from "react";
 import { Database, Check, Phone, Mail, ArrowRight, Target, Zap } from "lucide-react";
 export default function ${serviceName}() {
-  const features = [
-  "AI-powered ${displayName.toLowerCase()} optimization",
+  const features = ["AI-powered ${displayName.toLowerCase()} optimization",
     "Automated ${displayName.toLowerCase()} management",
     "Real-time ${displayName.toLowerCase()} analytics",
     "Predictive ${displayName.toLowerCase()} insights",
     "Custom AI models for ${displayName.toLowerCase()}",
     "Enterprise-grade security and compliance"];
-  const benefits = [
-  "Improve ${displayName.toLowerCase()} performance by 50-80%",
+  const benefits = ["Improve ${displayName.toLowerCase()} performance by 50-80%",
     "Reduce operational costs by 35-65%",
     "Enhance scalability and reliability",
     "Optimize resource utilization",
     "Scale operations efficiently",
     "Maximize ROI and efficiency"];
-  const useCases = [
-  "Software Development",
+  const useCases = ["Software Development",
     "E-commerce & Retail",
     "Financial Services",
     "Healthcare & Life Sciences",
     "Media & Entertainment",
     "Technology & SaaS"];
-  const pricing = [
-  {
-  name: "Starter",
-      price: "$299/mo",
-      details: ["Up to 10 users", "Basic features", "Email support", "Standard SLA"],
-},
+  const pricing = [{
+  "name": "Starter",
+      "price": "$299/mo",
+      "details": ["Up to 10 users", "Basic features", "Email support", "Standard SLA"]},
     {
-  name: "Professional",
-      price: "$799/mo",
-      details: ["Up to 50 users", "Advanced features", "Priority support", "99.9% SLA"],
-},
+  "name": "Professional",
+      "price": "$799/mo",
+      "details": ["Up to 50 users", "Advanced features", "Priority support", "99.9% SLA"]},
     {
-  name: "Enterprise",
-      price: "$1,999/mo",
-      details: ["Unlimited users", "Custom AI models", "Full ${displayName.toLowerCase()} suite", "24/7 dedicated support"],
-}
+  "name": "Enterprise",
+      "price": "$1,999/mo",
+      "details": ["Unlimited users", "Custom AI models", "Full ${displayName.toLowerCase()} suite", "24/7 dedicated support"]}
   ];
   return (;
     <div className="min-h-screen bg-white">;
@@ -127,7 +119,7 @@ export default function ${serviceName}() {
             <Database className="w-4 h-4 mr-2" />;
             AI-Powered ${displayName} Intelligence;
           </div>;
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">${displayName} Platform</h1>;
+          <h1 className="text-4xl "md": text-6xl font-bold text-white mb-4">${displayName} Platform</h1>;
           <p className="text-indigo-100 text-xl">;
             Transform your ${displayName.toLowerCase()} operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.;
           </p>;
@@ -135,7 +127,7 @@ export default function ${serviceName}() {
       </section>;
 
       <section className="py-16 max-w-6xl mx-auto px-6">;
-        <div className="grid md:grid-cols-2 gap-10">;
+        <div className="grid "md": grid-cols-2 gap-10">;
           <div>;
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced ${displayName} Features</h2>;
             <ul className="space-y-3">;
@@ -152,9 +144,9 @@ export default function ${serviceName}() {
           </div>;
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">;
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">Competitive Pricing</h3>;
-            <div className="grid md:grid-cols-3 gap-4">;
+            <div className="grid "md": grid-cols-3 gap-4">;
               {pricing.map((tier, index) => (;
-                <div key={index} className="rounded-lg p-4 border border-gray-200 hover:border-indigo-300 transition-colors">;
+                <div key={index} className="rounded-lg p-4 border border-gray-200 "hover": border-indigo-300 transition-colors">;
                   <div className="text-lg font-semibold mb-1">{tier.name}</div>;
                   <div className="text-2xl font-bold text-indigo-600 mb-2">{tier.price}</div>;
                   <ul className="text-sm text-gray-600 space-y-1">;
@@ -166,7 +158,7 @@ export default function ${serviceName}() {
               ))}
             </div>;
             <div className="mt-6 flex flex-wrap gap-3">;
-              <a href="/pricing" className="px-5 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors inline-flex items-center">;
+              <a href="/pricing" className="px-5 py-3 bg-indigo-600 text-white rounded-lg "hover": bg-indigo-700 transition-colors inline-flex items-center">;
                 View Full Pricing <ArrowRight className="w-4 h-4 ml-2" />;
               </a>;
               <a href="/contact" className="px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors inline-flex items-center">;
@@ -197,9 +189,9 @@ export default function ${serviceName}() {
       <section className="py-16">;
         <div className="max-w-6xl mx-auto px-6">;
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Industries We Serve</h2>;
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">;
+          <div className="grid "md": grid-cols-2 lg:grid-cols-3 gap-6">;
             {useCases.map((industry, index) => (;
-              <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">;
+              <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 "hover": shadow-md transition-shadow">;
                 <div className="flex items-center mb-3">;
                   <Target className="w-5 h-5 text-indigo-600 mr-3" />;
                   <h3 className="text-lg font-semibold text-gray-900">{industry}</h3>;
@@ -217,7 +209,7 @@ export default function ${serviceName}() {
           <p className="text-indigo-100 text-xl mb-8">;
             Get started with our AI-powered ${displayName.toLowerCase()} platform today.;
           </p>;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+          <div className="flex flex-col "sm": flex-row gap-4 justify-center">;
             <a href="/contact" className="px-8 py-3 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center">;
               Get Started <ArrowRight className="w-4 h-4 ml-2" />;
             </a>;
@@ -256,7 +248,7 @@ corruptedFiles.forEach(filePath => {
     // Ensure directory exists;
     const dir = path.dirname(filePath);
     if (!fs.existsSync(dir)) {
-  fs.mkdirSync(dir, { recursive: true })}
+  fs.mkdirSync(dir, { "recursive": true })}
     ;
     // Write the fixed content;
     const content = servicePageTemplate(serviceName, displayName);

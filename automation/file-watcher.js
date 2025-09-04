@@ -12,8 +12,7 @@ const { execSync } = // // require('child_process');
 class FileWatcher {
   constructor() {
     this.logFile = path.join(__dirname, 'logs', 'file-watcher.log');
-    this.watchPaths = [
-      'src/**/*.{js,jsx,ts,tsx}',
+    this.watchPaths = ['src/**/*.{js,jsx,ts,tsx}',
       'pages/**/*.{js,jsx,ts,tsx}',
       'components/**/*.{js,jsx,ts,tsx}',
       'hooks/**/*.{js,jsx,ts,tsx}',
@@ -27,7 +26,7 @@ class FileWatcher {
     this.pendingChanges = new Set();
     
     // Ensure directories exist
-    fs.mkdirSync(path.dirname(this.logFile), { recursive: true })}
+    fs.mkdirSync(path.dirname(this.logFile), { "recursive": true })}
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
@@ -44,12 +43,12 @@ class FileWatcher {
       if (content.includes('return()') && !content.includes('return ()')) {
         issues.push('Invalid return statement syntax')}
 
-          replacement: '',
-          description: 'Removed merge conflict markers'
+          "replacement": '',
+          "description": 'Removed merge conflict markers'
         },
         {
-          replacement: '',
-          description: 'Removed merge conflict markers'
+          "replacement": '',
+          "description": 'Removed merge conflict markers'
         }
       ];
 
@@ -57,7 +56,7 @@ class FileWatcher {
         if (fix.pattern.test(content)) {
           content = content.replace(fix.pattern, fix.replacement);
           modified = true;
-          this.log(`Applied fix: ${fix.description} in ${filePath}`)}
+          this.log(`Applied "fix": ${fix.description} in ${filePath}`)}
       }
 
       // Add React import if needed
@@ -73,7 +72,7 @@ class FileWatcher {
         
         // Write fixed content
         fs.writeFileSync(filePath, content);
-        this.log(`Auto-fixed file: ${filePath}`);
+        this.log(`Auto-fixed "file": ${filePath}`);
         return true}
 
       return false} catch (error) {
@@ -87,14 +86,14 @@ class FileWatcher {
     this.log(`Processing ${this.pendingChanges.size} file changes...`);
     
     const results = {
-      validated: 0,
-      issues: 0,
-      autoFixed: 0,
-      files: []
+      "validated": 0,
+      "issues": 0,
+      "autoFixed": 0,
+      "files": []
     };
 
     for (const filePath of this.pendingChanges) {
-      this.log(`Validating: ${filePath}`);
+      this.log(`"Validating": ${filePath}`);
       
       const issues = await this.validateFile(filePath);
       const typeErrors = await this.quickTypeCheck(filePath);
@@ -112,26 +111,25 @@ class FileWatcher {
       }
 
       results.files.push({
-        path: filePath,
-        issues: issues,
-        typeErrors: typeErrors,
-        timestamp: new Date().toISOString()
+        "path": filePath,
+        "issues": issues,
+        "typeErrors": typeErrors,
+        "timestamp": new Date().toISOString()
       })}
 
     // Save results
     const reportPath = path.join(__dirname, 'reports', 'real-time-validation.json');
-    fs.mkdirSync(path.dirname(reportPath), { recursive: true });
+    fs.mkdirSync(path.dirname(reportPath), { "recursive": true });
     fs.writeFileSync(reportPath, JSON.stringify(results, null, 2));
 
-    this.log(`Validation complete: ${results.validated} files, ${results.issues} with issues, ${results.autoFixed} auto-fixed`);
+    this.log(`Validation "complete": ${results.validated} files, ${results.issues} with issues, ${results.autoFixed} auto-fixed`);
     this.pendingChanges.clear()}
 
   setupWatcher() {
     this.log('Setting up file watcher...');
     
     const watcher = chokidar.watch(this.watchPaths, {
-      ignored: [
-        '**/node_modules/**',
+      "ignored": ['**/node_modules/**',
         '**/.git/**',
         '**/.next/**',
         '**/dist/**',
@@ -139,12 +137,12 @@ class FileWatcher {
         '**/*.log',
         '**/*.backup*'
       ],
-      persistent: true,
-      ignoreInitial: true
+      "persistent": true,
+      "ignoreInitial": true
     });
 
     watcher.on('change', (filePath) => {
-      this.log(`File changed: ${filePath}`);
+      this.log(`File "changed": ${filePath}`);
       this.pendingChanges.add(filePath);
       
       // Debounce processing
@@ -153,14 +151,14 @@ class FileWatcher {
       
       this.debounceTimer = setTimeout(() => {
         this.processChanges().catch(error => {
-          this.log(`Error processing changes: ${error.message}`, 'ERROR')})}, this.debounceDelay)});
+          this.log(`Error processing "changes": ${error.message}`, 'ERROR')})}, this.debounceDelay)});
 
     watcher.on('add', (filePath) => {
-      this.log(`File added: ${filePath}`);
+      this.log(`File "added": ${filePath}`);
       this.pendingChanges.add(filePath)});
 
     watcher.on('error', (error) => {
-      this.log(`Watcher error: ${error.message}`, 'ERROR')});
+      this.log(`Watcher "error": ${error.message}`, 'ERROR')});
 
     watcher.on('ready', () => {
       this.log('File watcher ready. Monitoring for changes...')});
@@ -183,7 +181,7 @@ class FileWatcher {
         this.log('Received SIGINT, closing watcher...');
         watcher.close();
         process.exit(0)})} catch (error) {
-      this.log(`Error in file watcher: ${error.message}`, 'ERROR')}
+      this.log(`Error in file "watcher": ${error.message}`, 'ERROR')}
   }
 }
 
@@ -191,7 +189,7 @@ class FileWatcher {
 try {
   require('chokidar')} catch (error) {
   console.log('Installing chokidar...');
-  execSync('yarn add chokidar', { stdio: 'inherit' })}
+  execSync('yarn add chokidar', { "stdio": 'inherit' })}
 
 // Main execution
 if (require.main === module) {

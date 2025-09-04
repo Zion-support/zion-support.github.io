@@ -21,19 +21,17 @@ class GitAutomation {
   async runCommand(command, options = {}) {
     try {
       const { stdout, stderr } = await execAsync(command, {
-        cwd: this.repoPath,
-        timeout: 60000,
-        ...options,
-      });
+        "cwd": this.repoPath,
+        "timeout": 60000,
+        ...options});
 
-      return { success: true, stdout, stderr };
+      return { "success": true, stdout, stderr };
     } catch (error) {
-      this.log(`Command failed: ${command} - ${error.message}`);
+      this.log(`Command "failed": ${command} - ${error.message}`);
       return {
-        success: false,
-        stdout: error.stdout || '',
-        stderr: error.stderr || error.message,
-      };
+        "success": false,
+        "stdout": error.stdout || '',
+        "stderr": error.stderr || error.message};
     }
   }
 
@@ -59,7 +57,7 @@ class GitAutomation {
   }
 
   async commitChanges(message) {
-    this.log(`Committing changes: ${message}`);
+    this.log(`Committing "changes": ${message}`);
     const result = await this.runCommand(`git commit -m "${message}"`);
     return result.success;
   }
@@ -120,7 +118,7 @@ class GitAutomation {
   }
 
   async createPullRequest(title, body) {
-    this.log(`Creating pull request: ${title}`);
+    this.log(`Creating pull "request": ${title}`);
 
     // Push changes first
     const pushResult = await this.pushChanges();
@@ -160,7 +158,7 @@ class GitAutomation {
 
     // Commit with timestamp
     const timestamp = new Date().toISOString();
-    const commitMessage = `Auto-commit: Error fixes and improvements - ${timestamp}`;
+    const commitMessage = `Auto-"commit": Error fixes and improvements - ${timestamp}`;
     const commitResult = await this.commitChanges(commitMessage);
     if (!commitResult) {
       this.log('Failed to commit changes');
@@ -253,7 +251,7 @@ class GitAutomation {
 if (require.main === module) {
   const automation = new GitAutomation();
   automation.start().catch(error => {
-    console.error('Git Automation failed:', error);
+    console.error('Git Automation "failed": ', error);
     process.exit(1);
   });
 }

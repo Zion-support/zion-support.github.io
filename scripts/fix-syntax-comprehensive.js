@@ -5,56 +5,55 @@ import path from 'path';
 import { glob } from 'glob';
 
 // Common syntax fixes
-const fixes = [
-  // Fix malformed JSX attributes with extra slashes
+const fixes = [// Fix malformed JSX attributes with extra slashes
   {
-    pattern: /\/ \/ \/ \/ \/ \/>/g,
-    replacement: ' />'
+    "pattern": /\/ \/ \/ \/ \/ \/>/g,
+    "replacement": ' />'
   },
   // Fix malformed JSX attributes with quotes and slashes
   {
-    pattern: /" \/ \/ \/ \/ \/ \/>/g,
-    replacement: '" />'
+    "pattern": /" \/ \/ \/ \/ \/ \/>/g,
+    "replacement": '" />'
   },
   // Fix malformed semicolons in JSX
   {
-    pattern: /;"";"/g,
-    replacement: ''
+    "pattern": /;"";"/g,
+    "replacement": ''
   },
   // Fix malformed JSX expressions
   {
-    pattern: /;\s*{/g,
-    replacement: ' {'
+    "pattern": /;\s*{/g,
+    "replacement": ' {'
   },
   // Fix malformed return statements
   {
-    pattern: /return\(/g,
-    replacement: 'return ('
+    "pattern": /return\(/g,
+    "replacement": 'return ('
   },
   // Fix malformed JSX closing tags
   {
-    pattern: /<\/([^>]+)\s*\/\s*>/g,
-    replacement: '</$1>'
+    "pattern": /<\/([^>]+)\s*\/\s*>/g,
+    "replacement": '</$1>'
   },
   // Fix malformed object properties
   {
-    pattern: /(\w+):\s*(\d+)([a-zA-Z]+)/g,
-    replacement: '$1: $2$3'
+    "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,
+    "replacement": '$1: $2$3'
   },
   // Fix malformed array syntax
   {
-    pattern: /\[\s*\]\s*=\s*\[/g,
-    replacement: '[] = ['
+    "pattern": /\[\s*\]\s*=\s*\[/g,
+    "replacement": '[] = ['
   },
   // Fix malformed interface properties
   {
-    pattern: /(\w+):\s*(\w+)\s*(\w+)/g,
-    replacement: '$1: $2 $3'
+    "pattern": /(\w+):\s*(\w+)\s*(\w+)/g,
+    "replacement": '$1: $2 $3'
   },
   // Fix malformed JSX self-closing tags
   {
-    pattern: /<(\w+)\s+([^>]*)\s*\/\s*>/g,
-    replacement: '<$1 $2 />'
+    "pattern": /<(\w+)\s+([^>]*)\s*\/\s*>/g,
+    "replacement": '<$1 $2 />'
   }
 ];
 
@@ -73,7 +72,7 @@ function fixFile(filePath) {
 
     if (hasChanges) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      console.log(`"Fixed": ${filePath}`);
       return true}
     return false} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -81,8 +80,7 @@ function fixFile(filePath) {
 }
 
 async function main() {
-  const patterns = [
-    'src/**/*.tsx',
+  const patterns = ['src/**/*.tsx',
     'src/**/*.ts',
     'components/**/*.tsx',
     'components/**/*.ts',
@@ -93,7 +91,7 @@ async function main() {
   let totalFixed = 0;
   
   for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
+    const files = await glob(pattern, { "cwd": process.cwd() });
     for (const file of files) {
       if (fixFile(file)) {
         totalFixed++}

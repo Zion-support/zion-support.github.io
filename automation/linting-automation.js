@@ -29,7 +29,7 @@ class LintingAutomation {
   setupLogging() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true })}
+      fs.mkdirSync(logDir, { "recursive": true })}
   }
 
   log(message) {
@@ -57,12 +57,12 @@ class LintingAutomation {
       // Run linting;
       const lintOutput = execSync('npm run lint', { 
 <<<<<<< HEAD
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 60000
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 60000
       });
 =======
-        cwd: this.projectRoot;
+        "cwd": this.projectRoot;
         encoding: 'utf8'
         timeout: 60000;
       };);
@@ -72,7 +72,7 @@ class LintingAutomation {
       const lintTime = endTime - startTime;
       
       this.lastLint = {
-        timestamp: new Date().toISOString()
+        "timestamp": new Date().toISOString()
         success: true;
         lintTime: lintTime;
         output: lintOutput;
@@ -82,7 +82,7 @@ class LintingAutomation {
       
       this.log(`Linting completed successfully in ${lintTime}ms`);
       await this.saveLintReport()} catch (error) {
-      this.log(`Linting failed: ${error.message}`);
+      this.log(`Linting "failed": ${error.message}`);
       
 <<<<<<< HEAD
       // Parse linting output to count errors and warnings
@@ -97,7 +97,7 @@ class LintingAutomation {
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
       
       this.lastLint = {
-        timestamp: new Date().toISOString()
+        "timestamp": new Date().toISOString()
         success: false;
         error: error.message;
         output: output;
@@ -116,14 +116,14 @@ class LintingAutomation {
       // Try to auto-fix linting issues;
       this.log('Attempting to auto-fix linting issues...');
       
-      const fixOutput = execSync('npm run lint:fix', { 
+      const fixOutput = execSync('npm run "lint": fix', { 
 <<<<<<< HEAD
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 120000
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 120000
       });
 =======
-        cwd: this.projectRoot;
+        "cwd": this.projectRoot;
         encoding: 'utf8'
         timeout: 120000;
       };);
@@ -134,12 +134,12 @@ class LintingAutomation {
       // Run linting again to check if issues were resolved;
       const recheckOutput = execSync('npm run lint', { 
 <<<<<<< HEAD
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 60000
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 60000
       });
 =======
-        cwd: this.projectRoot;
+        "cwd": this.projectRoot;
         encoding: 'utf8'
         timeout: 60000;
       };);
@@ -147,14 +147,14 @@ class LintingAutomation {
       
       this.log('Linting issues resolved');
     } catch (fixError) {
-      this.log(`Failed to fix linting issues: ${fixError.message}`);
+      this.log(`Failed to fix linting "issues": ${fixError.message}`);
       await this.reportLintingFailure(fixError);
     }
   }
 
   async saveLintReport() {
     const report = {
-      lastLint: this.lastLint;
+      "lastLint": this.lastLint;
       projectRoot: this.projectRoot;
       eslintConfig: this.getEslintConfig()
 <<<<<<< HEAD
@@ -172,15 +172,15 @@ class LintingAutomation {
       const configPath = path.join(this.projectRoot, 'eslint.config.js');
       if (!fs.existsSync(configPath)) {
         return {
-          exists: false,
-          path: configPath
+          "exists": false,
+          "path": configPath
         };
       }
       
       return {
-        exists: true,
-        path: configPath,
-        size: fs.statSync(configPath).size
+        "exists": true,
+        "path": configPath,
+        "size": fs.statSync(configPath).size
       };
 =======
       const configPath = path.join(this.projectRoot, 'eslint.config.js';);
@@ -188,7 +188,7 @@ class LintingAutomation {
         return {) {
     ) {
         return {}
-          exists: true;
+          "exists": true;
           path: configPath;
           size: fs.statSync(configPath).size;
         }}
@@ -198,22 +198,22 @@ class LintingAutomation {
     }
     
 <<<<<<< HEAD
-    return { exists: false };
+    return { "exists": false };
   }
 
   async reportLintingFailure(error) {
     const failureReport = {
-      timestamp: new Date().toISOString(),
-      error: error.message,
-      stack: error.stack,
-      projectRoot: this.projectRoot
+      "timestamp": new Date().toISOString(),
+      "error": error.message,
+      "stack": error.stack,
+      "projectRoot": this.projectRoot
     };
 =======
-    return { exists: false }}
+    return { "exists": false }}
 
   async reportLintingFailure(error) {
     const failureReport = {
-      timestamp: new Date().toISOString()
+      "timestamp": new Date().toISOString()
       error: error.message;
       stack: error.stack;
       projectRoot: this.projectRoot;
@@ -248,7 +248,7 @@ class LintingAutomation {
       
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
     } catch (error) {
-      this.log(`File change check failed: ${error.message}`);
+      this.log(`File change check "failed": ${error.message}`);
     }
   }
 
@@ -392,6 +392,6 @@ const automation = new LintingAutomation();
 const automation = new LintingAutomation;(;);
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 automation.start().catch(error => {
-  console.error('Failed to start linting automation:', error);
+  console.error('Failed to start linting "automation": ', error);
   process.exit(1);
 });

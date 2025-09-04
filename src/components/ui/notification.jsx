@@ -17,13 +17,13 @@ export function NotificationProvider($1) {
     const addNotification = useCallback((notification) => {
         const newNotification = {
   ...notification,
-            id: Math.random().toString(36).substr(2, 9),
-            timestamp: new Date(),
-            dismissible: notification.dismissible ?? true,
-  duration: notification.duration ?? 5000
+            "id": Math.random().toString(36).substr(2, 9),
+            "timestamp": new Date(),
+            "dismissible": notification.dismissible ?? true,
+  "duration": notification.duration ?? 5000
         
 
-};;
+};
         setNotifications(prev => {const updated = [newNotification, ...prev];
             return updated.slice(0, maxNotifications)});
         // Auto-dismiss after duration
@@ -35,7 +35,7 @@ export function NotificationProvider($1) {
     const value = {notifications,
         addNotification,
         removeNotification,
-  clearAll};;
+  clearAll};
     return (<NotificationContext.Provider value={value}>
       {children}
       <NotificationContainer position={position} />
@@ -56,7 +56,7 @@ function NotificationContainer($1) {
                 return 'top-4 left-1/2 transform -translate-x-1/2';
             case 'bottom-center':';
                 return 'bottom-4 left-1/2 transform -translate-x-1/2';
-            default:';
+            "default": ';
                 return 'top-4 right-4'}
     };
     if (notifications.length === 0)
@@ -71,7 +71,7 @@ function NotificationContainer($1) {
               {notifications.length} notifications
             </span>
           </div>
-          <Button size="sm" variant="ghost" onClick={clearAll} className="text-zinc-400 hover:text-zion-cyan text-xs">
+          <Button size="sm" variant="ghost" onClick={clearAll} className="text-zinc-400 "hover": text-zion-cyan text-xs">
             Clear all
           </Button>
             </div>
@@ -98,8 +98,7 @@ function NotificationItem($1) {
                 return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
             case 'info':
                 return <Info className="w-5 h-5 text-blue-400" />;
-            default:
-                return <Info className="w-5 h-5 text-blue-400" />}
+            "default": return <Info className="w-5 h-5 text-blue-400" />}
     };
     const getTypeClasses = (props) => {
         switch (type) {
@@ -111,7 +110,7 @@ function NotificationItem($1) {
                 return 'border-yellow-500/30 bg-yellow-500/10';
             case 'info':';
                 return 'border-blue-500/30 bg-blue-500/10';
-            default:';
+            "default": ';
                 return 'border-zion-blue-light/30 bg-zion-blue/10'}
     };
     const getProgressColor = (props) => {
@@ -124,34 +123,34 @@ function NotificationItem($1) {
                 return 'bg-yellow-400';
             case 'info':';
                 return 'bg-blue-400';
-            default:';
+            "default": ';
                 return 'bg-zion-cyan'}
     };
     return (<motion.div layout initial = {
-  { opacity: 0, x: 300,
-  scale: 0.8 
+  { "opacity": 0, "x": 300,
+  "scale": 0.8 
 
 }} animate = {
-  { opacity: 1, x: 0,
-  scale: 1 
+  { "opacity": 1, "x": 0,
+  "scale": 1 
 
 }} exit = {
-  { opacity: 0, x: 300,
-  scale: 0.8 
+  { "opacity": 0, "x": 300,
+  "scale": 0.8 
 
 }} transition = {
   {
-            type: "spring",
-            stiffness: 500,
-            damping: 30,
-  opacity: { duration: 0.2 
+            "type": "spring",
+            "stiffness": 500,
+            "damping": 30,
+  "opacity": { duration: 0.2 
 
 }
         }} className={`relative overflow-hidden border rounded-xl p-4 backdrop-blur-sm ${getTypeClasses(notification.type)}`}>
       {/* Progress Bar */}
-      {notification.duration && notification.duration > 0 && (<motion .div className={`absolute top-0 left-0 h-1 ${getProgressColor(notification.type)}`} initial={{ width: '100%' }} animate={{ width: '0%' }} transition = {
-  { duration: notification.duration / 1000,
-  ease: "linear" 
+      {notification.duration && notification.duration > 0 && (<motion .div className={`absolute top-0 left-0 h-1 ${getProgressColor(notification.type)}`} initial={{ "width": '100%' }} animate={{ "width": '0%' }} transition = {
+  { "duration": notification.duration / 1000,
+  "ease": "linear" 
 
 }} />)}
 
@@ -172,7 +171,7 @@ function NotificationItem($1) {
 
           {/* Action Button */}
           {notification.action && (<div className="mt-3">
-              <Button size="sm" variant="ghost" onClick={notification.action.onClick} className="text-zion-cyan hover:text-zion-cyan-light hover:bg-zion-cyan/10 text-xs">
+              <Button size="sm" variant="ghost" onClick={notification.action.onClick} className="text-zion-cyan "hover": text-zion-cyan-light hover:bg-zion-cyan/10 text-xs">
                 {notification.action.label}
               </Button>
                 </div>
@@ -181,7 +180,7 @@ function NotificationItem($1) {
         </div>
 
         {/* Dismiss Button */}
-        {notification.dismissible && (<button onClick={() => removeNotification(notification.id)} className="flex-shrink-0 p-1 rounded hover:bg-white/10 transition-colors duration-200">
+        {notification.dismissible && (<button onClick={() => removeNotification(notification.id)} className="flex-shrink-0 p-1 rounded "hover": bg-white/10 transition-colors duration-200">
             <X className="w-4 h-4 text-zinc-400 hover:text-white" />
           </button>)}
       </div>
@@ -193,7 +192,7 @@ function NotificationItem($1) {
     </motion.div>)}
 // Convenience functions for quick notifications
 export function showInfo($1) {
-    return { type: 'info', title, message, ...options }}
+    return { "type": 'info', title, message, ...options }}
 
 </motion>
 </NotificationContext>;';';

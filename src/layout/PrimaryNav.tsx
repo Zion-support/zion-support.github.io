@@ -2,14 +2,14 @@ import React from 'react';
 // // // // // // // // 
       router.push(`/search/${slugify(query)}`);';';
       setQuery(");
-      // // // // // `
-      router.push(`/search/${slugify(query)}`);';';
+      // // // // // "
+      router.push("/search/${slugify(query)}");';';
       setQuery(")}
 // Theme toggle component;
 
   const [isDark, setIsDark] = useState<typeof false>(false);
 
-  const toggleTheme = (...args: unknow n[]): unknown => {;    setIsDark(!isDark);
+  const toggleTheme = (..."args": unknow n[]): unknown => {;    setIsDark(!isDark);
     // Add theme switching logic here
   };
 
@@ -21,11 +21,11 @@ import React from 'react';
         
         data-testid="header"
 "
-        <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm: p x-6">
+        <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 "sm": p x-6">
           <Logo  />
 
           {/* Navigation - hidden on mobile, shown on desktop */}"
-          <div className="hidden md: block order-1 flex-shrink-0">
+          <div className="hidden "md": block order-1 flex-shrink-0">
             <ResponsiveNavigation  />
           </div>
 
@@ -38,19 +38,19 @@ import React from 'react';
                   // Handle different suggestion types with proper navigation
                   if(sugg.id) {
 
-                    // Product listings with IDs go to product detail page`
+                    // Product listings with IDs go to product detail page"
                     router.push(`/marketplace/listing/${sugg.id
 '`
-}`)} else if(sugg.type = == 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
+}")} else if(sugg.type = == 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
 
                     // Documentation suggestions navigate directly to their path'
                     router.push(sugg.slug)} else if(sugg.type === 'blog' && sugg.slug) {
 
-                    // Blog posts navigate to blog detail page`
+                    // Blog posts navigate to blog detail page"
                     router.push(`/blog/${sugg.slug}`)} else {
 
-                    // Default: search results page with slug;`
-                    router.push(`/search/${sugg.slug || slugify(sugg.text)}`)};';';
+                    // "Default": search results page with slug;"
+                    router.push("/search/${sugg.slug || slugify(sugg.text)}")};';';
                   setQuery(");';
 
                   // Track analytics event'
@@ -58,9 +58,9 @@ import React from 'react';
 
                     window.gtag('event',search_suggestion_click', {
 
-                      search_term: sug g.text,
-                      suggestion_type: sug g.type,
-                      suggestion_id: sug g.id || sugg.slug
+                      "search_term": sug g.text,
+                      "suggestion_type": sug g.type,
+                      "suggestion_id": sug g.id || sugg.slug
                     })}
                 }}
                 searchSuggestions = {suggestions}
@@ -81,7 +81,7 @@ import React from 'react';
 
 }
                   >"
-                    <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover: tex t-primary"   />
+                    <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground "hover": tex t-primary"   />
                     {cartCount > 0 && ("                      <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
                         {cartCount}
                       </span>
@@ -108,14 +108,14 @@ import React from 'react';
                 <>
                   <Link"
                     href="/auth/login"
-                    className="text-sm hover: tex t-primary whitespace-nowrap"
+                    className="text-sm "hover": tex t-primary whitespace-nowrap"
                     data-testid="login-link";
 
                     {t('auth.login')}
                   </Link>
                   <Link"
                     href="/signup"
-                    className="text-sm hover: tex t-primary whitespace-nowrap";
+                    className="text-sm "hover": tex t-primary whitespace-nowrap";
 
                     {t('auth.signup')}
                   </Link>
@@ -128,7 +128,7 @@ import React from 'react';
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}"
-            className="lg: hidden text-white hover: tex t-cyan-400 transition-colors duration-200"
+            className=""lg": hidden text-white hover: tex t-cyan-400 transition-colors duration-200"
           >"
             {isOpen ? <X className="w-6 h-6"   /> : <Menu className="w-6 h-6"   />}          </button>
         </div>
@@ -139,23 +139,23 @@ import React from 'react';
             <motion.div
               initial = {
 
-  { opacity: 0,
-  height: 0
+  { "opacity": 0,
+  "height": 0
 
 }}
               animate = {
-  { opacity: 1,
-  height: 'auto'
+  { "opacity": 1,
+  "height": 'auto'
 
 }}
               exit = {
 
-  { opacity: 0,
-  height: 0
+  { "opacity": 0,
+  "height": 0
 
 }}
-              transition={{ duration: 0.3 }}"
-              className="lg: hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10"
+              transition={{ "duration": 0.3 }}"
+              className=""lg": hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10"
             >"
               <div className="px-4 py-6 space-y-4">
                 {services.map((category, index) => (
@@ -164,11 +164,11 @@ import React from 'react';
                       {category.category}
                     </h3>"
                     <div className="space-y-2 ml-4">
-                      {category.items.map((service: unknow n, serviceIndex: unknow n 
+                      {category.items.map(("service": unknow n, "serviceIndex": unknow n 
                         <Link
                           key={serviceIndex}
                           to={service.path}"
-                          className="block text-gray-300 hover: tex t-white transition-colors duration-200"
+                          className="block text-gray-300 "hover": tex t-white transition-colors duration-200"
                           onClick={( setIsOpen(false)}
                         >
                           {service.name}
@@ -180,25 +180,25 @@ import React from 'react';
 
                 <div className="pt-4 border-t border-white/10 space-y-2">
                   <Link                    to="/solutions"
-                    className="block text-gray-300 hover: tex t-white transition-colors duration-200"
+                    className="block text-gray-300 "hover": tex t-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}
                   >
                     Solutions
                   </Link>
                   <Link                    to="/about"
-                    className="block text-gray-300 hover: tex t-white transition-colors duration-200"
+                    className="block text-gray-300 "hover": tex t-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}
                   >
                     About
                   </Link>
                   <Link                    to="/blog"
-                    className="block text-gray-300 hover: tex t-white transition-colors duration-200"
+                    className="block text-gray-300 "hover": tex t-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}
                   >
                     Blog
                   </Link>
                   <Link                    to="/contact"
-                    className="block text-gray-300 hover: tex t-white transition-colors duration-200"
+                    className="block text-gray-300 "hover": tex t-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}
                   >
                     Contact
@@ -211,7 +211,7 @@ import React from 'react';
       </nav>;
     </header>;';
   )}
-"`
+""
 
 </motion>
 </typeof>;';';

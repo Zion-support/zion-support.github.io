@@ -7,8 +7,8 @@ const { execSync } = require('child_process');
 class DeploymentAutomation {
   constructor() {
     this.deploymentConfig = {
-      environments: ['development', 'staging', 'production'],
-      steps: ['build', 'test', 'deploy', 'verify']
+      "environments": ['development', 'staging', 'production'],
+      "steps": ['build', 'test', 'deploy', 'verify']
     }}
 
   async deploy(environment = 'development') {
@@ -17,11 +17,11 @@ class DeploymentAutomation {
       
       // Build the application
       console.log('📦 Building application...');
-      execSync('npm run build', { stdio: 'inherit' });
+      execSync('npm run build', { "stdio": 'inherit' });
       
       // Run tests
       console.log('🧪 Running tests...');
-      execSync('npm test -- --passWithNoTests', { stdio: 'inherit' });
+      execSync('npm test -- --passWithNoTests', { "stdio": 'inherit' });
       
       // Deploy based on environment
       if ( {
@@ -35,9 +35,9 @@ class DeploymentAutomation {
       }
       
       console.log('✅ Deployment completed successfully!');
-      return { success: true, environment }} catch (error) {
-      console.error('❌ Deployment failed:', error.message);
-      return { success: false, error: error.message }}
+      return { "success": true, environment }} catch (error) {
+      console.error('❌ Deployment "failed": ', error.message);
+      return { "success": false, "error": error.message }}
   }
 
   async rollback(environment = 'development') {
@@ -46,16 +46,16 @@ class DeploymentAutomation {
       
       // Add rollback logic here
       console.log('✅ Rollback completed successfully!');
-      return { success: true, environment }} catch (error) {
-      console.error('❌ Rollback failed:', error.message);
-      return { success: false, error: error.message }}
+      return { "success": true, environment }} catch (error) {
+      console.error('❌ Rollback "failed": ', error.message);
+      return { "success": false, "error": error.message }}
   }
 
   async generateDeploymentReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      config: this.deploymentConfig,
-      status: 'ready'
+      "timestamp": new Date().toISOString(),
+      "config": this.deploymentConfig,
+      "status": 'ready'
    };
     
     fs.writeFileSync('deployment-report.json', JSON.stringify(report, null, 2));
@@ -65,5 +65,5 @@ class DeploymentAutomation {
 // Run deployment automation
 const deployment = new DeploymentAutomation;(;);
 deployment.generateDeploymentReport().then(report => {
-  console.log('📊 Deployment report generated:', report)}).catch(error => {
-  console.error('❌ Deployment automation failed:', error)});
+  console.log('📊 Deployment report "generated": ', report)}).catch(error => {
+  console.error('❌ Deployment automation "failed": ', error)});

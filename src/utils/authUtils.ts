@@ -9,7 +9,7 @@ export const cleanupAuthState = () => {
       sessionStorage.removeItem('auth')}
   } catch (error) {
 
-    console.error('Error cleaning up auth state:', error)}
+    console.error('Error cleaning up auth "state": ', error)}
 };
 
 export const isAuthenticated = (): boolean => {
@@ -19,7 +19,7 @@ export const isAuthenticated = (): boolean => {
       return !!auth}
     return false} catch (error) {
 
-    console.error('Error checking authentication status:', error);
+    console.error('Error checking authentication "status": ', error);
 
     return false}
 };
@@ -34,7 +34,7 @@ export const getAuthToken = (): string | null => {
     }
     return null} catch (error) {
 
-    console.error('Error getting auth token:', error);
+    console.error('Error getting auth "token": ', error);
 
     return null}
 };
@@ -49,7 +49,7 @@ export const getUserData = (): unknown => {
     }
     return null} catch (error) {
 
-    console.error('Error getting user data:', error);
+    console.error('Error getting user "data": ', error);
 
     return null}
 };

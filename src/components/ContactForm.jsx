@@ -2,13 +2,13 @@ import React, {useState} from 'react';
 import {Button} from "./ui/Button.jsx";
 const ContactForm = (props) => {
     const [formData, setFormData] = useState({
-        firstName: ",
-        lastName: ",
-        email: ",
-        comp: ",
-        phone: ",
-        service: ",
-        message: "
+        "firstName": ",
+        "lastName": ",
+        "email": ",
+        "comp": ",
+        "phone": ",
+        "service": ",
+        "message": "
     };);
     const [isSubmitting, setIsSubmitting] = useState(false);    const [submitStatus, setSubmitStatus] = useState('idle');
     const handleInputChange = (props) => {}
@@ -29,13 +29,13 @@ const ContactForm = (props) => {
 '
 "
 "
-                firstName: ","
-                lastName: ","
-                email: ","
-                comp: ","
-                phone: ","
-                service: ","
-                message: "
+                "firstName": ","
+                "lastName": ","
+                "email": ","
+                "comp": ","
+                "phone": ","
+                "service": ","
+                "message": "
             });"
             setSubmitStatus('success');"
             setTimeout(() => setSubmitStatus('idle'), 5000)} catch (error) {}
@@ -67,19 +67,19 @@ const ContactForm = (props) => {
         </div>)}"
 "
       <form onSubmit={handleSubmit} className="space-y-6">"
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
+        <div className="grid grid-cols-1 "md": grid-cols-2 gap-6">"
           <div>"
             <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-2">
               First Name *"
             </label>"
-            <input type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleInputChange} required className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Enter your first name"  />
+            <input type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleInputChange} required className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 "focus": outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Enter your first name"  />
           </div>
 "
           <div>"
             <label htmlFor="lastName" className="block text-sm font-medium text-gray-300 mb-2">
               Last Name *"
             </label>"
-            <input type="text" id="lastName" name="lastName" value={formData.lastName} onChange={handleInputChange} required className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Enter your last name"  />
+            <input type="text" id="lastName" name="lastName" value={formData.lastName} onChange={handleInputChange} required className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 "focus": outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Enter your last name"  />
           </div>
         </div>"
 "
@@ -88,14 +88,14 @@ const ContactForm = (props) => {
             <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
               Email Address *"
             </label>"
-            <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} required className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Enter your email address"  />
+            <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} required className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 "focus": outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Enter your email address"  />
           </div>
 "
           <div>"
             <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
               Phone Number"
             </label>"
-            <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleInputChange} className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Enter your phone number"  />
+            <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleInputChange} className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 "focus": outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Enter your phone number"  />
           </div>
         </div>
 "
@@ -103,14 +103,14 @@ const ContactForm = (props) => {
           <label htmlFor="comp" className="block text-sm font-medium text-gray-300 mb-2">
             Comp Name"
           </label>"
-          <input type="text" id="comp" name="comp" value={formData.comp} onChange={handleInputChange} className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Enter your comp name"  />
+          <input type="text" id="comp" name="comp" value={formData.comp} onChange={handleInputChange} className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 "focus": outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Enter your comp name"  />
         </div>
 "
         <div>"
           <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
             Service of Interest"
           </label>"
-          <select id="service" name="service" value={formData.service} onChange={handleInputChange} className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300">"
+          <select id="service" name="service" value={formData.service} onChange={handleInputChange} className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white "focus": outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300">"
             <option value=">Select a service</option>"
             <option value="ai-solutions">AI & Machine Learning</option>"
             <option value="cloud-devops">Cloud & DevOps</option>"
@@ -127,7 +127,7 @@ const ContactForm = (props) => {
           <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
             Message *"
           </label>"
-          <textarea id="message" name="message" value={formData.message} onChange={handleInputChange} required rows={5} className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none" placeholder="Tell us about your project or how we can help..." />
+          <textarea id="message" name="message" value={formData.message} onChange={handleInputChange} required rows={5} className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 "focus": outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none" placeholder="Tell us about your project or how we can help..." />
         </div>"
 ";
         <div className="pt-4">";';
@@ -138,11 +138,11 @@ const ContactForm = (props) => {
 ";';
         <p className="text-xs text-gray-400 text-center">";';
           By submitting this form, you agree to our{' '}";';
-          <a href="/privacy" className="text-blue-400 hover:text-blue-300 underline">'
+          <a href="/privacy" className="text-blue-400 "hover": text-blue-300 underline">'
             Privacy Policy"
           </a>{' '}";';
           and{' '}"
-          <a href="/terms" className="text-blue-400 hover:text-blue-300 underline">
+          <a href="/terms" className="text-blue-400 "hover": text-blue-300 underline">
             Terms of Service;
           </a>
           .</p>
@@ -159,5 +159,4 @@ export {ContactForm};
 
 export {ContactForm};
 
-export {ContactForm};';
-;';';
+export {ContactForm};';';';

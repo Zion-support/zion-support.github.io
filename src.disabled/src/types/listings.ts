@@ -1,5 +1,5 @@
 export interface Listing {;
-  id: string;
+  "id": string;
   title: string;
   description: string;
   price: number;
@@ -13,7 +13,7 @@ seller: {;
     name: string;
     rating: number;
     reviews: number};
-  location: string;  createdAt: string;
+  "location": string;  createdAt: string;
   updatedAt: string;
   status: 'active' | 'inactive' | 'sold' | 'pending';
   views: number;
@@ -23,7 +23,7 @@ export interface ProductListing extends Listing {;
 
   brand?: string;
   model?: string;
-  condition: 'new' | 'used' | 'refurbished';
+  "condition": 'new' | 'used' | 'refurbished';
   warranty?: string;
   shipping: {;
 
@@ -32,7 +32,7 @@ export interface ProductListing extends Listing {;
     estimatedDays: number}}
 
 export interface ServiceListing extends Listing {;
-  serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support';
+  "serviceType": 'consulting' | 'development' | 'maintenance' | 'training' | 'support';
   duration?: string;
   availability: string[];
   experience: number;
@@ -40,7 +40,7 @@ export interface ServiceListing extends Listing {;
   portfolio?: string[]}
 export interface TalentListing extends Listing {;
 
-  skills: string[];
+  "skills": string[];
   experience: number;
   education: string[];
   certifications: string[];
@@ -50,14 +50,14 @@ export interface TalentListing extends Listing {;
   portfolio?: string[];
   references?: string[]}
 export interface CartItem {;
-  id: string;
+  "id": string;
   title: string;
   price: number;
   quantity: number;
   type: 'product' | 'service' | 'talent';
   image?: string}
 export interface WishlistItem {;
-  id: string;
+  "id": string;
   userId: string;
   listingId: string;
   type: 'product' | 'service' | 'talent';

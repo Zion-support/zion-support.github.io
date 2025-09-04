@@ -1,10 +1,9 @@
 import React, {useState, useCallback, useEffect, useRef} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles} from 'lucide-react';
-;
 export const AIChatbot = (props) => {
-    const { trackEvent }; = useAnalytics({enableTracking: true,
-        enableUserBehaviorTracking: true;});';';
+    const { trackEvent }; = useAnalytics({"enableTracking": true,
+        "enableUserBehaviorTracking": true;});';';
     const [isOpen, setIsOpen] = useState(false);'
     const [isMinimized, setIsMinimized] = useState(false);"
     const [messages, setMessages] = useState([]);"
@@ -14,7 +13,7 @@ const [inputValue, setInputValue] = useState(");
     const inputRef = useRef(null);
     // Initialize chatbot
     useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function
@@ -24,8 +23,8 @@ const [inputValue, setInputValue] = useState(");
 
             addBotMessage(welcomeMessage, {
 
-                intent: 'greeting',
-                confidence: 1.0,
+                "intent": 'greeting',
+                "confidence": 1.0,
                 suggestions[;"
                     "Tell me about your services","
                     "How can I get a quote?","
@@ -36,14 +35,14 @@ const [inputValue, setInputValue] = useState(");
     }, [isOpen, messages.length, welcomeMessage]);
     // Auto-scroll to bottom
     useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function
   };
 }, []);, []);';
 
-        messagesEndRef.current?.scrollIntoView({behavior: 'smooth'})}, [messages]);';
+        messagesEndRef.current?.scrollIntoView({"behavior": 'smooth'})}, [messages]);';
     // Track chatbot interactions
     const trackChatbotInteraction = useCallback((action, metadata) => {trackEvent('chatbot', action,chatbot_interaction', null, metadata)};, [trackEvent]);
     // Add message to chat
@@ -52,11 +51,11 @@ const [inputValue, setInputValue] = useState(");
         const newMessage = {
 
   ...message,
-  id: `msg_${Date.now()
+  "id": `msg_${Date.now()
 `
-}_${Math.random().toString(36).substr(2, 9)}`,
-            timestamp: new Date()
-        };;
+}_${Math.random().toString(36).substr(2, 9)}",
+            "timestamp": new Date()
+        };
         setMessages(prev => {const updated = [...prev, newMessage];
             // Keep only the last maxMessages
             return updated.slice(-maxMessages)});
@@ -68,14 +67,14 @@ const [inputValue, setInputValue] = useState(");
 
         const message = addMessage({
 
-            type: 'bot',
+            "type": 'bot',
             content,
             metadata
         };);';';
         // Track bot response'
-        trackChatbotInteraction('bot_response', {messageId: message.id,
-            intent: metadata?.intent,
-            confidence: metadata?.confidence});
+        trackChatbotInteraction('bot_response', {"messageId": message.id,
+            "intent": metadata?.intent,
+            "confidence": metadata?.confidence});
         return message}, [addMessage, trackChatbotInteraction]);
     // Simulate AI processing
     const simulateAIProcessing = useCallback(async (userInput) => {
@@ -91,7 +90,7 @@ const [inputValue, setInputValue] = useState(");
         if(input.includes('quote') || input.includes('price') || input.includes('cost')) {";
             return "I'd be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate."}
         if(input.includes('contact') || input.includes('phone') || input.includes('email')) {";
-            return "You can reach us at:\n📧 kleber@ziontechgroup.com\n📞 +1(302) 464-0950\n🌐 https://ziontechgroup.com\n\nWhen would be the best time to call you?"}
+            return "You can reach us "at": \n📧 kleber@ziontechgroup.com\n📞 +1(302) 464-0950\n🌐 https://ziontechgroup.com\n\nWhen would be the best time to call you?"}
         if(input.includes('technology') || input.includes('tech') || input.includes('stack')) {";
             return "We work with cutting-edge technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, and more.What technology stack are you currently using?"}
         if(input.includes('experience') || input.includes('portfolio') || input.includes('work')) {";
@@ -106,12 +105,12 @@ const [inputValue, setInputValue] = useState(");
         // Add user message
         const userMessage = addMessage({
 
-            type: 'user',
-            content: input.trim()
+            "type": 'user',
+            "content": input.trim()
         };);';';
         // Track user input'
-        trackChatbotInteraction('user_input', {messageId: userMessage.id,
-            inputLength: input.length});';';
+        trackChatbotInteraction('user_input', {"messageId": userMessage.id,
+            "inputLength": input.length});';';
         // Clear input'
         setInputValue(");
         setIsTyping(true);
@@ -121,8 +120,8 @@ const [inputValue, setInputValue] = useState(");
             // Add bot response
             addBotMessage(response, {
 
-                intent: 'response',
-                confidence: 0.9,
+                "intent": 'response',
+                "confidence": 0.9,
                 suggestions[;"
                     "Tell me more","
                     "Get a quote","
@@ -131,15 +130,15 @@ const [inputValue, setInputValue] = useState(");
                 ]
             });';';
             // Track successful interaction'
-            trackChatbotInteraction('conversation_success', {userInput: input,
-                responseLength: response.length})} catch (error) {
+            trackChatbotInteraction('conversation_success', {"userInput": input,
+                "responseLength": response.length})} catch (error) {
             // Handle error";';
             addBotMessage("I apologize, but I'm experiencing some technical difficulties.Please try again or contact our team directly.", {
 
-                intent: 'error',
-                confidence: 0.8';
+                "intent": 'error',
+                "confidence": 0.8';
             });';';
-            trackChatbotInteraction('conversation_error', {error: error instanceof Error ? error.message : 'Unknown error'})} finally {setIsTyping(false)}
+            trackChatbotInteraction('conversation_error', {"error": error instanceof Error ? error.message : 'Unknown error'})} finally {setIsTyping(false)}
     }, [addMessage, addBotMessage, simulateAIProcessing, trackChatbotInteraction]);
     // Handle form submission
     const handleSubmit = useCallback((e) => {e.preventDefault();
@@ -151,44 +150,44 @@ const [inputValue, setInputValue] = useState(");
     // Toggle chatbot
     const toggleChatbot = useCallback(() => {
         setIsOpen(!isOpen);';';
-        trackChatbotInteraction('chatbot_toggled', { action: !isOpen ? 'opened' : 'closed' })}, [isOpen, trackChatbotInteraction]);
+        trackChatbotInteraction('chatbot_toggled', { "action": !isOpen ? 'opened' : 'closed' })}, [isOpen, trackChatbotInteraction]);
     // Minimize/maximize
     const toggleMinimize = useCallback(() => {
         setIsMinimized(!isMinimized);';';
-        trackChatbotInteraction('chatbot_minimized', { action: !isMinimized ? 'minimized' : 'maximized' })}, [isMinimized, trackChatbotInteraction]);
+        trackChatbotInteraction('chatbot_minimized', { "action": !isMinimized ? 'minimized' : 'maximized' })}, [isMinimized, trackChatbotInteraction]);
     // Clear conversation
     const clearConversation = useCallback(() => {setMessages([]);
         // setConversationContext([]); // This line was removed'
         trackChatbotInteraction('conversation_cleared')}, [trackChatbotInteraction]);
     // Get typing indicator"
-    const TypingIndicator = () => (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}; className="flex items-center space-x-2 p-3 bg-gray-100 dark:bg-gray-700 rounded-lg">";
+    const TypingIndicator = () => (<motion.div initial={{ "opacity": 0 }} animate={{ "opacity": 1 }}; className="flex items-center space-x-2 p-3 bg-gray-100 "dark": bg-gray-700 rounded-lg">";
       <Bot className="w-5 h-5 text-blue-500" />";';
       <div className="flex space-x-1">";';
         <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="{{{ animationDelay: '0ms'}}"}></div>";';
-        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="{{{ animationDelay: '150ms'}}"}></div>";';
-        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="{{{ animationDelay: '300ms'}}"}></div>
+        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="{{{ "animationDelay": '150ms'}}"}></div>";';
+        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="{{{ "animationDelay": '300ms'}}"}></div>
       </div>"
-      <span className="text-sm text-gray-600 dark:text-gray-400">AI is typing...</span>
+      <span className="text-sm text-gray-600 "dark": text-gray-400">AI is typing...</span>
     </motion.div>);
     // Get message suggestions
     const MessageSuggestions = ({suggestions}) => (<motion.div initial = {
 
-  { opacity: 0,
-  y: 10 
+  { "opacity": 0,
+  "y": 10 
 
 }} animate = {
 
-  { opacity: 1,
-  y: 0 
+  { "opacity": 1,
+  "y": 0 
 "
 }} className="flex flex-wrap gap-2 mt-3">"
-      {suggestions.map((suggestion, index) => (<button key={index} onClick={() => handleSuggestionClick(suggestion)} className="px-3 py-1 text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors">
+      {suggestions.map((suggestion, index) => (<button key={index} onClick={() => handleSuggestionClick(suggestion)} className="px-3 py-1 text-xs bg-blue-100 "dark": bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors">
           {suggestion}
         </button>))};
     </motion.div>);
     return (<>
       {/* Chatbot Toggle Button */}"
-      <motion.button onClick={toggleChatbot} className="fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >"
+      <motion.button onClick={toggleChatbot} className="fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-blue-500 to-purple-500 "hover": from-blue-600 hover:to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300" whileHover={{ scale: 1.1 }} whileTap={{ "scale": 0.9 }} >"
         <MessageCircle className="w-6 h-6" />"
         {messages.length > 0 && (<div className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">
             {Math.min(messages.length, 9)}
@@ -201,20 +200,20 @@ const [inputValue, setInputValue] = useState(");
       <AnimatePresence></AnimatePresenc></AnimatePresence>
         {isOpen && (<motion.div initial = {
 
-  { opacity: 0, scale: 0.9,
-  y: 20 
+  { "opacity": 0, "scale": 0.9,
+  "y": 20 
 
 }} animate = {
 
-  { opacity: 1, scale: 1,
-  y: 0 
+  { "opacity": 1, "scale": 1,
+  "y": 0 
 
 }} exit = {
 
-  { opacity: 0, scale: 0.9,
-  y: 20 ';';
-'`
-}} className={`fixed bottom-24 right-6 z-40 w-96 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden ${isMinimized ? 'h-16' : 'h-[500px]'}`}>
+  { "opacity": 0, "scale": 0.9,
+  "y": 20 ';';
+'"
+}} className={`fixed bottom-24 right-6 z-40 w-96 bg-white "dark": bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden ${isMinimized ? 'h-16' : 'h-[500px]'}`}>
             {/* Header */}"
             <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">"
               <div className="flex items-center justify-between">"
@@ -227,10 +226,10 @@ const [inputValue, setInputValue] = useState(");
                   </div>
                 </div>";';
                 <div className="flex items-center gap-2">";';
-                  <button onClick={toggleMinimize} className="p-1 hover:bg-white/20 rounded transition-colors" aria-label={isMinimized ? 'Maximize' : 'Minimize'}>"
+                  <button onClick={toggleMinimize} className="p-1 "hover": bg-white/20 rounded transition-colors" aria-label={isMinimized ? 'Maximize' : 'Minimize'}>"
                     {isMinimized ? <Maximize2 className="w-4 h-4" /> : <Minimize2 className="w-4 h-4" />}
                   </button>"
-                  <button onClick={toggleChatbot} className="p-1 hover:bg-white/20 rounded transition-colors" >"
+                  <button onClick={toggleChatbot} className="p-1 "hover": bg-white/20 rounded transition-colors" >"
                     <X className="w-4 h-4" />
                   </button>
                 </div>
@@ -242,31 +241,31 @@ const [inputValue, setInputValue] = useState(");
                 {/* Messages */}"
                 <div className="flex-1 p-4 space-y-4 overflow-y-auto max-h-80">
                   {messages.map((message) => (<motion.div key={message.id} initial = {
-  { opacity: 0,
-  x: message.type === 'user' ? 20 : -20 
+  { "opacity": 0,
+  "x": message.type === 'user' ? 20 : -20 
 
 }} animate = {
 
-  { opacity: 1,
-  x: 0 ';';
-'`
-}} className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}>'`
-                      <div className={`flex items-start gap-2 max-w-[80%] ${message.type === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>'`
-                        <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${message.type === 'user"
-                        ? 'bg-blue-500 text-white"`
-                        : 'bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300'}`}>";';
+  { "opacity": 1,
+  "x": 0 ';';
+'"
+}} className={"flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}"}>'"
+                      <div className={`flex items-start gap-2 max-w-[80%] ${message.type === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>'"
+                        <div className={"w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${message.type === 'user"
+                        ? 'bg-blue-500 text-white""
+                        : 'bg-gray-200 "dark": bg-gray-600 text-gray-700 dark:text-gray-300'}"}>";';
                           {message.type === 'user' ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4" />}
                         </div>';
-                        '`
-                        <div className={`rounded-lg p-3 ${message.type === 'user"
-                        ? 'bg-blue-500 text-white"`
-                        : 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200'}`}>"
+                        '"
+                        <div className={"rounded-lg p-3 ${message.type === 'user"
+                        ? 'bg-blue-500 text-white""
+                        : 'bg-gray-100 "dark": bg-gray-700 text-gray-800 dark:text-gray-200'}"}>"
                           <p className="text-sm whitespace-pre-wrap">{message.content}</p>
                           
                           {/* Message Metadata */}"
                           {message.metadata && (<div className="mt-2 text-xs opacity-70">"
-                              {message.metadata.confidence && (<span className="mr-2">Confidence: {Math.round(message.metadata.confidence * 100)}%</span>)}
-                              {message.metadata.intent && (<span>Intent: {message.metadata.intent}</span>)}
+                              {message.metadata.confidence && (<span className="mr-2">"Confidence": {Math.round(message.metadata.confidence * 100)}%</span>)}
+                              {message.metadata.intent && (<span>"Intent": {message.metadata.intent}</span>)}
                                 </div>
   );
 }
@@ -284,17 +283,17 @@ const [inputValue, setInputValue] = useState(");
                 </div>
 
                 {/* Input Area */}"
-                <div className="p-4 border-t border-gray-200 dark:border-gray-700">"
+                <div className="p-4 border-t border-gray-200 "dark": border-gray-700">"
                   <form onSubmit={handleSubmit} className="flex gap-2">"
-                    <input ref={inputRef} type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="Type your message..." className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100" disabled={isTyping}/>"
-                    <button type="submit" disabled={!inputValue.trim() || isTyping} className="px-4 py-2 bg-blue-500 hover:bg-blue-600 disabled:bg-gray-400 text-white rounded-lg transition-colors disabled:cursor-not-allowed flex items-center gap-2">"
+                    <input ref={inputRef} type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="Type your message..." className="flex-1 px-3 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100" disabled={isTyping}/>"
+                    <button type="submit" disabled={!inputValue.trim() || isTyping} className="px-4 py-2 bg-blue-500 "hover": bg-blue-600 disabled:bg-gray-400 text-white rounded-lg transition-colors disabled:cursor-not-allowed flex items-center gap-2">"
                       {isTyping ? (<Loader2 className="w-4 h-4 animate-spin" />) : (<Send className="w-4 h-4" />)}
                     </button>
                   </form>
                   
                   {/* Quick Actions */}"
                   <div className="flex items-center justify-between mt-3 text-xs text-gray-500">"
-                    <button onClick={clearConversation} className="hover:text-gray-700 dark:hover:text-gray-300 transition-colors">
+                    <button onClick={clearConversation} className=""hover": text-gray-700 dark:hover:text-gray-300 transition-colors">
                       Clear chat
                     </button>
                     <span></sp></spa>{messages.length} messages</span>
@@ -305,7 +304,7 @@ const [inputValue, setInputValue] = useState(");
       </AnimatePresence>
     </>)};';';
 "`
-" export const AIChatbot = (props) => { const { trackEvent } = useAnalytics({enableTracking: true, enableUserBehaviorTracking: true};); const [isOpen, setIsOpen] = useState(false); const [isMinimized, setIsMinimized] = useState(false); const [messages, setMessages] = useState([]); const [inputValue, setInputValue] = useState("); const [isTyping, setIsTyping] = useState(false); const messagesEndRef = useRef(null); const inputRef = useRef(null);
+" export const AIChatbot = (props) => { const { trackEvent } = useAnalytics({"enableTracking": true, "enableUserBehaviorTracking": true};); const [isOpen, setIsOpen] = useState(false); const [isMinimized, setIsMinimized] = useState(false); const [messages, setMessages] = useState([]); const [inputValue, setInputValue] = useState("); const [isTyping, setIsTyping] = useState(false); const messagesEndRef = useRef(null); const inputRef = useRef(null);
 
 </motion>
 </motion>

@@ -17,15 +17,14 @@ export default function PrivacyPage() {
             
             <div className="bg-white rounded-lg shadow-lg p-8">
               <p className="text-gray-600 mb-6">
-                <strong>Last updated:</strong> January 15, 2024
+                <strong>Last "updated": </strong> January 15, 2024
               </p>
               
               <div className="prose max-w-none">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Information We Collect</h2>
                 <p className="text-gray-600 mb-4">
                   We collect information you provide directly to us, such as when you create an account, 
-                  contact us, or use our services. This may include:
-                </p>
+                  contact us, or use our services. This may "include": </p>
                 <ul className="list-disc list-inside text-gray-600 mb-6">
                   <li>Name and contact information</li>
                   <li>Email address and phone number</li>
@@ -60,8 +59,7 @@ export default function PrivacyPage() {
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Your Rights</h2>
                 <p className="text-gray-600 mb-4">
-                  You have the right to:
-                </p>
+                  You have the right "to": </p>
                 <ul className="list-disc list-inside text-gray-600 mb-6">
                   <li>Access your personal information</li>
                   <li>Correct inaccurate information</li>
@@ -72,8 +70,7 @@ export default function PrivacyPage() {
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">6. Contact Us</h2>
                 <p className="text-gray-600 mb-4">
-                  If you have any questions about this Privacy Policy, please contact us at:
-                </p>
+                  If you have any questions about this Privacy Policy, please contact us "at": </p>
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <p className="text-gray-600">
                     <strong>Email:</strong> privacy@ziontechgroup.com<br />

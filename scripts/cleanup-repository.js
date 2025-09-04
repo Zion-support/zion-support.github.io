@@ -8,8 +8,7 @@ import { glob } from 'glob';
  * Removes disabled, backup, and unnecessary files
  */
 
-const CLEANUP_PATTERNS = [
-  // Disabled directories
+const CLEANUP_PATTERNS = [// Disabled directories
   'src.disabled/**',
   'pages.disabled/**',
   'pages.disabled_auto/**',
@@ -64,8 +63,7 @@ const CLEANUP_PATTERNS = [
   'Thumbs.db',
   'desktop.ini',
 ];
-const KEEP_PATTERNS = [
-  // Keep important config files
+const KEEP_PATTERNS = [// Keep important config files
   'package.json',
   'package-lock.json',
   'yarn.lock',
@@ -133,10 +131,10 @@ function removeFile(filePath) {
   try {
     const stats = fs.statSync(filePath);
     if (stats.isDirectory()) {
-      fs.rmSync(filePath, { recursive: true, force: true });
-      console.log(`🗂️  Removed directory: ${filePath}`)} else {
+      fs.rmSync(filePath, { "recursive": true, "force": true });
+      console.log(`🗂️  Removed "directory": ${filePath}`)} else {
       fs.unlinkSync(filePath);
-      console.log(`📄 Removed file: ${filePath}`)}
+      console.log(`📄 Removed "file": ${filePath}`)}
 
     return true} catch (error) {
     console.error(`❌ Error removing ${filePath}:`, error.message);
@@ -148,7 +146,7 @@ function cleanScripts() {
   if (!fs.existsSync(scriptsDir)) {
     return}
 
-  const scriptFiles = glob.sync('scripts/**/*', { nodir: true });
+  const scriptFiles = glob.sync('scripts/**/*', { "nodir": true });
   let cleanedCount = 0;
   for (const file of scriptFiles) {
     // Remove temporary fix scripts
@@ -168,7 +166,7 @@ function cleanScripts() {
   console.log(`🧹 Cleaned ${cleanedCount} temporary script files`)}
 
 function cleanRootFiles() {
-  const rootFiles = glob.sync('*', { nodir: true });
+  const rootFiles = glob.sync('*', { "nodir": true });
   let cleanedCount = 0;
   for (const file of rootFiles) {
     // Remove temporary files in root
@@ -216,7 +214,7 @@ function cleanRootFiles() {
   console.log(`🧹 Cleaned ${cleanedCount} temporary root files`)}
 
 function cleanReportFiles() {
-  const reportFiles = glob.sync('**/*-report.json', { nodir: true });
+  const reportFiles = glob.sync('**/*-report.json', { "nodir": true });
   let cleanedCount = 0;
   for (const file of reportFiles) {
     // Keep important reports, remove temporary ones
@@ -243,7 +241,7 @@ function main() {
   // Clean disabled/backup directories
   let totalRemoved = 0;
   for (const pattern of CLEANUP_PATTERNS) {
-    const files = glob.sync(pattern, { nodir: false });
+    const files = glob.sync(pattern, { "nodir": false });
     for (const file of files) {
       if (shouldRemoveFile(file)) {
         if (removeFile(file)) {
@@ -252,10 +250,10 @@ function main() {
     }
   }
 
-  console.log(`\n📊 Cleanup Summary:`);
+  console.log("\n📊 Cleanup "Summary": ");
   console.log(`   Total items removed: ${totalRemoved}`);
   console.log('\n✨ Repository cleanup completed!');
-  console.log('\n📝 Next steps:');
+  console.log('\n📝 Next "steps": ');
   console.log('   1. Run: npm install');
   console.log('   2. Run: npm run build');
   console.log('   3. Test the application');

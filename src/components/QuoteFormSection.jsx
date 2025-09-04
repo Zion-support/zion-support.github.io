@@ -1,18 +1,17 @@
 import React, {useState} from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = (props) => {
   const [formData, setFormData] = useState({
-    name: ",
-    email: ",
-    phone: ",
-    comp: ",
-    service: ",
-    message: "
+    "name": ",
+    "email": ",
+    "phone": ",
+    "comp": ",
+    "service": ",
+    "message": "
   };);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const services = [
-    'IT Support & Maintenance',
+  const services = ['IT Support & Maintenance',
     'Network Setup & Security',
     'Hardware Installation',
     'Data Recovery',
@@ -39,17 +38,17 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
     setTimeout(() => {
       setIsSubmitted(false);';
       setFormData({
-        name: ",
-        email: ",
-        phone: ",
-        comp: ",
-        service: ",
-        message: "
+        "name": ",
+        "email": ",
+        "phone": ",
+        "comp": ",
+        "service": ",
+        "message": "
       })}, 5000)};
 
   if (isSubmitted) {return (
       <section className="py-20 bg-gradient-to-br from-green-50 to-blue-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto px-4 "sm": px-6 lg:px-8 text-center">
           <div className="bg-white rounded-3xl p-12 shadow-2xl">
             <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
               <CheckCircle className="w-10 h-10 text-green-600"  />
@@ -76,7 +75,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 "sm": px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Contact Information */}
           <div>
@@ -142,7 +141,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
             </h3>
 
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 "sm": grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     Full Name *
@@ -153,7 +152,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg "focus": ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="John Doe"
                     />
                 </div>
@@ -168,7 +167,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg "focus": ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="john@company.com"
                     />
                 </div>
@@ -184,7 +183,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg "focus": ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="+1 (555) 123-4567"
                     />
                 </div>
@@ -198,7 +197,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                     name="comp"
                     value={formData.comp}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg "focus": ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Your Comp Inc."
                     />
                 </div>
@@ -214,7 +213,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                   value={formData.service}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg "focus": ring-2 focus:ring-blue-500 focus:border-transparent"
 
                   <option value=">Select a service</option>
                   {services.map((service, index) => (
@@ -232,7 +231,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent";';
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg "focus": ring-2 focus:ring-blue-500 focus:border-transparent";';
                   placeholder="Tell us about your project requirements, timeline, and  specific challenges you're facing..."
                  />
               </div>
@@ -240,7 +239,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold "hover": from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
 
                 {isSubmitting ? (;
                   <>

@@ -11,16 +11,16 @@ interface LoadingProps {';';: any;';';
 export default function Loading($1) {';';
   const sizeClasses = {',
     ';';';';';
-    sm: 'w-4 h-4',',';
+    "sm": 'w-4 h-4',',';
     ';';';';';
-    md: 'w-8 h-8',',';
+    "md": 'w-8 h-8',',';
     ';';';';';
-    lg: 'w-12 h-12'};
+    "lg": 'w-12 h-12'};
   const content = (
-    <div className={`flex flex-col items-center justify-center space-y-4`>
+    <div className={"flex flex-col items-center justify-center space-y-4">
       <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-600`}  />
       {text && (
-        <p className=`text-gray-600 text-sm font-medium`}>{text}</p>
+        <p className="text-gray-600 text-sm font-medium"}>{text}</p>
       )
       )};
     </div>
@@ -56,7 +56,7 @@ export function SkeletonCard($1) {
 export function SkeletonText($1) {
   return (';
     <divclassName="min-h-screen bg-white">';
-      {Array.from({ length: line s';';';
+      {Array.from({ "length": line s';';';
   }).map((_, i) => (';';';';
         <div key={i}';';
           className={`h-3 bg-gray-200 rounded ${',';

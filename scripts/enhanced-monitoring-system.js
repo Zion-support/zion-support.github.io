@@ -11,32 +11,32 @@ class EnhancedMonitoringSystem {
     this.logFile = path.join(this.reportsDir, 'monitoring-system.log');
     this.ensureDirectories();
     this.results = {
-      timestamp: new Date().toISOString(),
-      system: {
+      "timestamp": new Date().toISOString(),
+      "system": {
         health: 'unknown',
-        uptime: process.uptime(),
-        memory: process.memoryUsage(),
-        cpu: process.cpuUsage()
+        "uptime": process.uptime(),
+        "memory": process.memoryUsage(),
+        "cpu": process.cpuUsage()
       },
-      application: {
+      "application": {
         status: 'unknown',
-        buildStatus: 'unknown',
-        testStatus: 'unknown'
+        "buildStatus": 'unknown',
+        "testStatus": 'unknown'
       },
-      performance: {
+      "performance": {
         metrics: {},
-        alerts: []
+        "alerts": []
       },
-      security: {
+      "security": {
         vulnerabilities: 0,
-        outdatedPackages: 0,
-        securityScore: 0
+        "outdatedPackages": 0,
+        "securityScore": 0
       }
     }}
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true })}
+      fs.mkdirSync(this.reportsDir, { "recursive": true })}
   }
 
   log(message, level = 'INFO') {
@@ -46,37 +46,36 @@ class EnhancedMonitoringSystem {
     fs.appendFileSync(this.logFile, logMessage + '\n')}
 
   async runCommand(command, description, timeout = 30000) {
-    this.log(`🔍 Monitoring: ${description}`);
+    this.log(`🔍 "Monitoring": ${description}`);
     
     try {
       const result = execSync(command, {
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: timeout,
-        maxBuffer: 1024 * 1024 * 5 // 5MB buffer
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": timeout,
+        "maxBuffer": 1024 * 1024 * 5 // 5MB buffer
       });
       
-      this.log(`✅ Success: ${description}`);
-      return { success: true, output: result }} catch (error) {
-      this.log(`❌ Failed: ${description} - ${error.message}`, 'ERROR');
-      return { success: false, error: error.message }}
+      this.log(`✅ "Success": ${description}`);
+      return { "success": true, "output": result }} catch (error) {
+      this.log(`❌ "Failed": ${description} - ${error.message}`, 'ERROR');
+      return { "success": false, "error": error.message }}
   }
 
   async checkSystemHealth() {
     this.log('🖥️ Checking System Health');
     
-    const systemChecks = [
-      {
-        command: 'df -h',
-        description: 'Disk Space Check'
+    const systemChecks = [{
+        "command": 'df -h',
+        "description": 'Disk Space Check'
       },
       {
-        command: 'free -h',
-        description: 'Memory Usage Check'
+        "command": 'free -h',
+        "description": 'Memory Usage Check'
       },
       {
-        command: 'uptime',
-        description: 'System Uptime Check'
+        "command": 'uptime',
+        "description": 'System Uptime Check'
       }
     ];
 
@@ -110,10 +109,9 @@ class EnhancedMonitoringSystem {
   async checkPerformanceMetrics() {
     this.log('⚡ Checking Performance Metrics');
     
-    const performanceChecks = [
-      {
-        command: 'npm run perf:monitor',
-        description: 'Performance Monitoring'
+    const performanceChecks = [{
+        "command": 'npm run perf:monitor',
+        "description": 'Performance Monitoring'
       }
     ];
 
@@ -129,19 +127,18 @@ class EnhancedMonitoringSystem {
     
     if (buildSize > 100 * 1024 * 1024) { // 100MB
       this.results.performance.alerts.push({
-        type: 'warning',
-        message: 'Build size is large (>100MB)',
-        value: `${Math.round(buildSize / (1024 * 1024))}MB`
+        "type": 'warning',
+        "message": 'Build size is large (>100MB)',
+        "value": `${Math.round(buildSize / (1024 * 1024))}MB`
       })}
   }
 
   async checkSecurityStatus() {
     this.log('🔒 Checking Security Status');
     
-    const securityChecks = [
-      {
-        command: 'npm audit --audit-level=moderate --json',
-        description: 'Security Audit'
+    const securityChecks = [{
+        "command": 'npm audit --audit-level=moderate --json',
+        "description": 'Security Audit'
       }
     ];
 
@@ -154,9 +151,9 @@ class EnhancedMonitoringSystem {
           
           if (this.results.security.vulnerabilities > 0) {
             this.results.performance.alerts.push({
-              type: 'error',
-              message: `${this.results.security.vulnerabilities} security vulnerabilities found`,
-              value: this.results.security.vulnerabilities
+              "type": 'error',
+              "message": `${this.results.security.vulnerabilities} security vulnerabilities found`,
+              "value": this.results.security.vulnerabilities
             })}
         } catch (error) {
           this.log('⚠️ Could not parse security audit results', 'WARN')}
@@ -178,10 +175,9 @@ class EnhancedMonitoringSystem {
   async checkTestStatus() {
     this.log('🧪 Checking Test Status');
     
-    const testChecks = [
-      {
-        command: 'npm test -- --passWithNoTests --silent',
-        description: 'Test Suite Check'
+    const testChecks = [{
+        "command": 'npm test -- --passWithNoTests --silent',
+        "description": 'Test Suite Check'
       }
     ];
 
@@ -191,9 +187,9 @@ class EnhancedMonitoringSystem {
         this.results.application.testStatus = 'passed'} else {
         this.results.application.testStatus = 'failed';
         this.results.performance.alerts.push({
-          type: 'error',
-          message: 'Test suite failed',
-          value: 'failed'
+          "type": 'error',
+          "message": 'Test suite failed',
+          "value": 'failed'
         })}
     }
   }
@@ -201,14 +197,13 @@ class EnhancedMonitoringSystem {
   async checkCodeQuality() {
     this.log('🔍 Checking Code Quality');
     
-    const qualityChecks = [
-      {
-        command: 'npx eslint . --max-warnings 0 --quiet',
-        description: 'ESLint Quality Check'
+    const qualityChecks = [{
+        "command": 'npx eslint . --max-warnings 0 --quiet',
+        "description": 'ESLint Quality Check'
       },
       {
-        command: 'npx tsc --noEmit --skipLibCheck',
-        description: 'TypeScript Type Check'
+        "command": 'npx tsc --noEmit --skipLibCheck',
+        "description": 'TypeScript Type Check'
       }
     ];
 
@@ -216,9 +211,9 @@ class EnhancedMonitoringSystem {
       const result = await this.runCommand(check.command, check.description, 30000);
       if (!result.success) {
         this.results.performance.alerts.push({
-          type: 'warning',
-          message: `${check.description} failed`,
-          value: 'failed'
+          "type": 'warning',
+          "message": `${check.description} failed`,
+          "value": 'failed'
         })}
     }
   }
@@ -255,9 +250,9 @@ class EnhancedMonitoringSystem {
     if (this.results.performance.alerts.length > 0) healthScore -= 15;
     
     this.results.overallHealth = {
-      score: Math.max(0, healthScore),
-      status: healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',
-      timestamp: new Date().toISOString()
+      "score": Math.max(0, healthScore),
+      "status": healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',
+      "timestamp": new Date().toISOString()
     }}
 
   generateReport() {
@@ -265,17 +260,17 @@ class EnhancedMonitoringSystem {
     
     const reportPath = path.join(this.reportsDir, 'monitoring-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
-    this.log(`📊 Monitoring report generated: ${reportPath}`);
+    this.log(`📊 Monitoring report "generated": ${reportPath}`);
     
     // Generate summary
-    this.log('📊 Monitoring Summary:');
+    this.log('📊 Monitoring "Summary": ');
     this.log(`   Overall Health: ${this.results.overallHealth.status} (${this.results.overallHealth.score}/100)`);
-    this.log(`   System Health: ${this.results.system.health}`);
-    this.log(`   Application Status: ${this.results.application.status}`);
-    this.log(`   Build Status: ${this.results.application.buildStatus}`);
-    this.log(`   Test Status: ${this.results.application.testStatus}`);
-    this.log(`   Security Vulnerabilities: ${this.results.security.vulnerabilities}`);
-    this.log(`   Alerts: ${this.results.performance.alerts.length}`);
+    this.log(`   System "Health": ${this.results.system.health}`);
+    this.log(`   Application "Status": ${this.results.application.status}`);
+    this.log(`   Build "Status": ${this.results.application.buildStatus}`);
+    this.log(`   Test "Status": ${this.results.application.testStatus}`);
+    this.log(`   Security "Vulnerabilities": ${this.results.security.vulnerabilities}`);
+    this.log(`   "Alerts": ${this.results.performance.alerts.length}`);
     
     return reportPath}
 
@@ -295,14 +290,14 @@ class EnhancedMonitoringSystem {
       this.log('🎉 Enhanced Monitoring System Completed');
       
       return {
-        success: true,
+        "success": true,
         reportPath,
-        results: this.results
+        "results": this.results
       }} catch (error) {
-      this.log(`💥 Monitoring failed: ${error.message}`, 'ERROR');
+      this.log(`💥 Monitoring "failed": ${error.message}`, 'ERROR');
       return {
-        success: false,
-        error: error.message
+        "success": false,
+        "error": error.message
       }}
   }
 }

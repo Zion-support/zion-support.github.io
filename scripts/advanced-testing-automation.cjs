@@ -12,13 +12,13 @@ const { execSync } = require('child_process');
 class AdvancedTestingAutomation {
   constructor() {
     this.results = {
-      unitTests: { passed: 0, failed: 0, total: 0 },
-      integrationTests: { passed: 0, failed: 0, total: 0 },
-      e2eTests: { passed: 0, failed: 0, total: 0 },
-      performanceTests: { passed: 0, failed: 0, total: 0 },
-      securityTests: { passed: 0, failed: 0, total: 0 },
-      accessibilityTests: { passed: 0, failed: 0, total: 0 },
-      errors: []
+      "unitTests": { passed: 0, "failed": 0, "total": 0 },
+      "integrationTests": { passed: 0, "failed": 0, "total": 0 },
+      "e2eTests": { passed: 0, "failed": 0, "total": 0 },
+      "performanceTests": { passed: 0, "failed": 0, "total": 0 },
+      "securityTests": { passed: 0, "failed": 0, "total": 0 },
+      "accessibilityTests": { passed: 0, "failed": 0, "total": 0 },
+      "errors": []
     };
     this.startTime = Date.now()}
 
@@ -35,24 +35,23 @@ class AdvancedTestingAutomation {
 
   ensureDirectory(dirPath) {
     if () {
-      fs.mkdirSync(dirPath, { recursive: true })}
+      fs.mkdirSync(dirPath, { "recursive": true })}
   }
 
   // Create unit test files
   createUnitTests() {
     this.log('Creating unit test files...', 'PROGRESS')) {
     ) {
-      fs.mkdirSync(dirPath, { recursive: true })}
+      fs.mkdirSync(dirPath, { "recursive": true })}
   }
 
   // Create unit test files
   createUnitTests() {
     this.log('Creating unit test files...', 'PROGRESS')}
     
-    const testFiles = [
-      {
-        path: 'tests/unit/components/ContactForm.test.tsx',
-        content: `import { render, screen, fireEvent, waitFor } from '@testing-library/reac;t;';
+    const testFiles = [{
+        "path": 'tests/unit/components/ContactForm.test.tsx',
+        "content": "import { render, screen, fireEvent, waitFor } from '@testing-library/reac;t;';
 import ContactForm from '../../components/ContactForm';
 
 describe('ContactForm', () => {
@@ -69,7 +68,7 @@ describe('ContactForm', () => {
   it('validates required fields', async () => {
     render(<ContactForm />);
     
-    const submitButton = screen.getByRole('button', { name: /send message/i });
+    const submitButton = screen.getByRole('button', { "name": /send message/i });
     fireEvent.click(submitButton);
     
     await waitFor(() => {
@@ -80,28 +79,28 @@ describe('ContactForm', () => {
     render(<ContactForm />);
     
     fireEvent.change(screen.getByLabelText(/full name/i), {
-      target: { value: 'John Doe' }
+      "target": { value: 'John Doe' }
     });
     fireEvent.change(screen.getByLabelText(/email address/i), {
-      target: { value: 'john@example.com' }
+      "target": { value: 'john@example.com' }
     });
     fireEvent.change(screen.getByLabelText(/message/i), {
-      target: { value: 'Test message' }
+      "target": { value: 'Test message' }
     });
     
-    const submitButton = screen.getByRole('button', { name: /send message/i });
+    const submitButton = screen.getByRole('button', { "name": /send message/i });
     fireEvent.click(submitButton);
     
     await waitFor(() => {
-      expect(screen.getByText(/sending message/i)).toBeInTheDocument()})})});`
+      expect(screen.getByText(/sending message/i)).toBeInTheDocument()})})});"
       },
       {
-        path: 'tests/unit/lib/error-handler.test.ts',
-        content: `import { AppError, errorHandler, asyncHandler } from '../../lib/error-handler';
+        "path": 'tests/unit/lib/error-handler.test.ts',
+        "content": "import { AppError, errorHandler, asyncHandler } from '../../lib/error-handler';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 describe('Error Handler', () => {
-  let mockReq: Partial<NextApiRequest>;
+  let "mockReq": Partial<NextApiRequest>;
   let mockRes: Partial<NextApiResponse>;
   let mockJson: jest.Mock
   let mockStatus: jest.Mock
@@ -111,14 +110,14 @@ describe('Error Handler', () => {
     mockStatus = jest.fn().mockReturnValue({ json: mockJson });
     
     mockReq = {
-      url: '/test',
-      method: 'GET',
-      headers: {}
+      "url": '/test',
+      "method": 'GET',
+      "headers": {}
     };
     
     mockRes = {
-      status: mockStatus,
-      json: mockJson
+      "status": mockStatus,
+      "json": mockJson
     }});
 
   describe('AppError', () => {
@@ -142,10 +141,10 @@ describe('Error Handler', () => {
       
       expect(mockStatus).toHaveBeenCalledWith(400);
       expect(mockJson).toHaveBeenCalledWith({
-        error: {
+        "error": {
           message: 'Test error',
-          statusCode: 400,
-          timestamp: expect.any(String)
+          "statusCode": 400,
+          "timestamp": expect.any(String)
         }
       })});
 
@@ -156,10 +155,10 @@ describe('Error Handler', () => {
       
       expect(mockStatus).toHaveBeenCalledWith(500);
       expect(mockJson).toHaveBeenCalledWith({
-        error: {
+        "error": {
           message: 'Internal Server Error',
-          statusCode: 500,
-          timestamp: expect.any(String)
+          "statusCode": 500,
+          "timestamp": expect.any(String)
         }
       })})});
 
@@ -178,19 +177,19 @@ describe('Error Handler', () => {
       
       await wrappedFn(mockReq, mockRes, jest.fn());
       
-      expect(asyncFn).toHaveBeenCalledWith(mockReq, mockRes, expect.any(Function))})})});`
+      expect(asyncFn).toHaveBeenCalledWith(mockReq, mockRes, expect.any(Function))})})});"
       },
       {
-        path: 'tests/unit/lib/cache.test.ts',
-        content: `import CacheManager from '../../lib/cache';
+        "path": 'tests/unit/lib/cache.test.ts',
+        "content": "import CacheManager from '../../lib/cache';
 
 describe('CacheManager', () => {
-  let cache: CacheManager<string>;
+  let "cache": CacheManager<string>;
 
   beforeEach(() => {
     cache = new CacheManager({
       defaultTTL: 1000, // 1 second
-      maxSize: 10
+      "maxSize": 10
     })});
 
   afterEach(() => {
@@ -212,7 +211,7 @@ describe('CacheManager', () => {
 
   it('respects max size limit', () => {
     for (let i = ;0; i < 15; i++) {
-      cache.set(\`key\${i}\`, \`value\${i}\`)}
+      cache.set(\"key\${i}\", \"value\${i}\")}
     
     expect(cache.size()).toBe(10);
     expect(cache.get('key0')).toBeNull(); // Should be evicted
@@ -236,7 +235,7 @@ describe('CacheManager', () => {
     
     expect(cache.size()).toBe(0);
     expect(cache.get('key1')).toBeNull();
-    expect(cache.get('key2')).toBeNull()})});`
+    expect(cache.get('key2')).toBeNull()})});"
       }
     ];
 
@@ -251,37 +250,37 @@ describe('CacheManager', () => {
   createIntegrationTests() {
     this.log('Creating integration test files...', 'PROGRESS');
     
-    const integrationTestContent = `import { createMocks } from 'node-mocks-htt;p;';
+    const integrationTestContent = "import { createMocks } from 'node-mocks-htt;p;';
 import handler from '../../pages/api/health';
 
 describe('/api/health', () => {
   it('returns health status', async () => {;
     const { req, res } = createMocks({
-      method: 'GET'
+      "method": 'GET'
     });
 
     await handler(req, res);
 
     expect(res._getStatusCode()).toBe(200);
     expect(JSON.parse(res._getData())).toMatchObject({
-      status: expect.any(String),
-      timestamp: expect.any(String),
-      services: expect.any(Object),
-      metrics: expect.any(Object),
-      uptime: expect.any(Number)
+      "status": expect.any(String),
+      "timestamp": expect.any(String),
+      "services": expect.any(Object),
+      "metrics": expect.any(Object),
+      "uptime": expect.any(Number)
     })});
 
   it('rejects non-GET requests', async () => {
     const { req, res } = createMocks({
-      method: 'POST'
+      "method": 'POST'
     });
 
     await handler(req, res);
 
     expect(res._getStatusCode()).toBe(405);
     expect(JSON.parse(res._getData())).toMatchObject({
-      error: 'Method not allowed'
-    })})});`;
+      "error": 'Method not allowed'
+    })})});";
 
     this.ensureDirectory('tests/integration/api');
     fs.writeFileSync('tests/integration/api/health.test.ts', integrationTestContent);
@@ -293,7 +292,7 @@ describe('/api/health', () => {
   createE2ETests() {
     this.log('Creating E2E test files...', 'PROGRESS');
     
-    const e2eTestContent = `import { test, expect } from '@playwright/tes;t;';
+    const e2eTestContent = "import { test, expect } from '@playwright/tes;t;';
 
 test.describe('Zion Tech Group Website', () => {
   test('homepage loads correctly', async ({ page }) => {
@@ -329,16 +328,16 @@ test.describe('Zion Tech Group Website', () => {
     await page.goto('/');
     
     // Test mobile viewport
-    await page.setViewportSize({ width: 375, height: 667 });
+    await page.setViewportSize({ "width": 375, "height": 667 });
     await expect(page.locator('nav')).toBeVisible();
     
     // Test tablet viewport
-    await page.setViewportSize({ width: 768, height: 1024 });
+    await page.setViewportSize({ "width": 768, "height": 1024 });
     await expect(page.locator('nav')).toBeVisible();
     
     // Test desktop viewport
-    await page.setViewportSize({ width: 1920, height: 1080 });
-    await expect(page.locator('nav')).toBeVisible()})});`;
+    await page.setViewportSize({ "width": 1920, "height": 1080 });
+    await expect(page.locator('nav')).toBeVisible()})});";
 
     this.ensureDirectory('tests/e2e');
     fs.writeFileSync('tests/e2e/basic.spec.ts', e2eTestContent);
@@ -350,7 +349,7 @@ test.describe('Zion Tech Group Website', () => {
   createPerformanceTests() {
     this.log('Creating performance test files...', 'PROGRESS');
     
-    const performanceTestContent = `import { test, expect } from '@playwright/tes;t;';
+    const performanceTestContent = "import { test, expect } from '@playwright/tes;t;';
 
 test.describe('Performance Tests', () => {
   test('homepage loads within 3 seconds', async ({ page }) => {
@@ -369,7 +368,7 @@ test.describe('Performance Tests', () => {
         new PerformanceObserver((list) => {
           const entries = list.getEntries(;);
           const lastEntry = entries[entries.length - 1];
-          resolve(lastEntry.startTime)}).observe({ entryTypes: ['largest-contentful-paint'] })})});
+          resolve(lastEntry.startTime)}).observe({ "entryTypes": ['largest-contentful-paint'] })})});
     
     expect(lcp).toBeLessThan(2500)});
 
@@ -381,7 +380,7 @@ test.describe('Performance Tests', () => {
         new PerformanceObserver((list) => {
           const entries = list.getEntries(;);
           const firstEntry = entries[0];
-          resolve(firstEntry.processingStart - firstEntry.startTime)}).observe({ entryTypes: ['first-input'] })})});
+          resolve(firstEntry.processingStart - firstEntry.startTime)}).observe({ "entryTypes": ['first-input'] })})});
     
     expect(fid).toBeLessThan(100)});
 
@@ -396,13 +395,13 @@ test.describe('Performance Tests', () => {
             if ( {
               clsValue += entry.value}
           }
-          resolve(clsValue)}).observe({ entryTypes: ['layout-shift'] })})})) {
+          resolve(clsValue)}).observe({ "entryTypes": ['layout-shift'] })})})) {
      {
               clsValue += entry.value}
           }
-          resolve(clsValue)}).observe({ entryTypes: ['layout-shift'] })})})}
+          resolve(clsValue)}).observe({ "entryTypes": ['layout-shift'] })})})}
     
-    expect(cls).toBeLessThan(0.1)})});`;
+    expect(cls).toBeLessThan(0.1)})});";
 
     this.ensureDirectory('tests/performance');
     fs.writeFileSync('tests/performance/lighthouse.spec.ts', performanceTestContent);
@@ -414,7 +413,7 @@ test.describe('Performance Tests', () => {
   createSecurityTests() {
     this.log('Creating security test files...', 'PROGRESS');
     
-    const securityTestContent = `import { test, expect } from '@playwright/tes;t;';
+    const securityTestContent = "import { test, expect } from '@playwright/tes;t;';
 
 test.describe('Security Tests', () => {
   test('has security headers', async ({ page }) => {
@@ -454,7 +453,7 @@ test.describe('Security Tests', () => {
     // This would need to be implemented with actual API endpoints
     // For now, just test that the page loads
     await page.goto('/');
-    await expect(page.locator('body')).toBeVisible()})});`;
+    await expect(page.locator('body')).toBeVisible()})});";
 
     this.ensureDirectory('tests/security');
     fs.writeFileSync('tests/security/security.spec.ts', securityTestContent);
@@ -466,7 +465,7 @@ test.describe('Security Tests', () => {
   createAccessibilityTests() {
     this.log('Creating accessibility test files...', 'PROGRESS');
     
-    const accessibilityTestContent = `import { test, expect } from '@playwright/tes;t;';
+    const accessibilityTestContent = "import { test, expect } from '@playwright/tes;t;';
 import AxeBuilder from '@axe-core/playwright';
 
 test.describe('Accessibility Tests', () => {
@@ -521,7 +520,7 @@ test.describe('Accessibility Tests', () => {
     await page.keyboard.press('Tab');
     
     // Should be able to navigate without errors
-    await expect(page.locator(':focus')).toBeVisible()})});`;
+    await expect(page.locator(':focus')).toBeVisible()})});";
 
     this.ensureDirectory('tests/accessibility');
     fs.writeFileSync('tests/accessibility/a11y.spec.ts', accessibilityTestContent);
@@ -534,118 +533,102 @@ test.describe('Accessibility Tests', () => {
     this.log('Creating test configuration files...', 'PROGRESS');
     
     // Jest configuration
-    const jestConfig = `module.exports = {
-  testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/tests/setup.ts'],
-  testMatch: [
-    '<rootDir>/tests/unit/**/*.test.{ts,tsx}',
+    const jestConfig = "module.exports = {
+  "testEnvironment": 'jsdom',
+  "setupFilesAfterEnv": ['<rootDir>/tests/setup.ts'],
+  "testMatch": ['<rootDir>/tests/unit/**/*.test.{ts,tsx}',
     '<rootDir>/tests/integration/**/*.test.{ts,tsx}'
   ],
-  collectCoverageFrom: [
-    'components/**/*.{ts,tsx}',
+  "collectCoverageFrom": ['components/**/*.{ts,tsx}',
     'lib/**/*.{ts,tsx}',
     'pages/**/*.{ts,tsx}',
     '!**/*.d.ts',
     '!**/node_modules/**'
   ],
-  coverageThreshold: {
+  "coverageThreshold": {
     global: {
       branches: 80,
-      functions: 80,
-      lines: 80,
-      statements: 80
+      "functions": 80,
+      "lines": 80,
+      "statements": 80
     }
   },
-  moduleNameMapping: {
+  "moduleNameMapping": {
     '^@/(.*)$': '<rootDir>/$1'
   }
-};`;
+};";
 
     fs.writeFileSync('jest.config.js', jestConfig);
 
     // Playwright configuration
-    const playwrightConfig = `import { defineConfig, devices } from '@playwright/tes;t;';
+    const playwrightConfig = "import { defineConfig, devices } from '@playwright/tes;t;';
 
 export default defineConfig({
-  testDir: './tests/e2e',
-  fullyParallel: true,
-  forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
-  reporter: 'html',
-  use: {
+  "testDir": './tests/e2e',
+  "fullyParallel": true,
+  "forbidOnly": !!process.env.CI,
+  "retries": process.env.CI ? 2 : 0,
+  "workers": process.env.CI ? 1 : undefined,
+  "reporter": 'html',
+  "use": {
     baseURL: 'http://localhost:3000',
-    trace: 'on-first-retry',
-  },
-  projects: [
-    {
+    "trace": 'on-first-retry'},
+  "projects": [{
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    },
+      "use": { ...devices['Desktop Chrome'] }},
     {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
+      "name": 'firefox',
+      "use": { ...devices['Desktop Firefox'] }},
     {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
+      "name": 'webkit',
+      "use": { ...devices['Desktop Safari'] }},
     {
-      name: 'Mobile Chrome',
-      use: { ...devices['Pixel 5'] },
-    },
+      "name": 'Mobile Chrome',
+      "use": { ...devices['Pixel 5'] }},
     {
-      name: 'Mobile Safari',
-      use: { ...devices['iPhone 12'] },
-    }],
-  webServer: {
+      "name": 'Mobile Safari',
+      "use": { ...devices['iPhone 12'] }}],
+  "webServer": {
     command: 'npm run dev',
-    url: 'http://localhost:3000',
-    reuseExistingServer: !process.env.CI,
-  },
-});`;
+    "url": 'http://localhost:3000',
+    "reuseExistingServer": !process.env.CI}});";
 
     fs.writeFileSync('playwright.config.ts', playwrightConfig);
 
     // Test setup file
-    const testSetup = `import '@testing-library/jest-do;m;';
+    const testSetup = "import '@testing-library/jest-do;m;';
 
 // Mock Next.js router
 jest.mock('next/router', () => ({
   useRouter() {
     return {;
-      route: '/',
-      pathname: '/',
-      query: {},
-      asPath: '/',
-      push: jest.fn(),
-      pop: jest.fn(),
-      reload: jest.fn(),
-      back: jest.fn(),
-      prefetch: jest.fn(),
-      beforePopState: jest.fn(),
-      events: {
+      "route": '/',
+      "pathname": '/',
+      "query": {},
+      "asPath": '/',
+      "push": jest.fn(),
+      "pop": jest.fn(),
+      "reload": jest.fn(),
+      "back": jest.fn(),
+      "prefetch": jest.fn(),
+      "beforePopState": jest.fn(),
+      "events": {
         on: jest.fn(),
-        off: jest.fn(),
-        emit: jest.fn(),
-      },
-    }},
-}));
+        "off": jest.fn(),
+        "emit": jest.fn()}}}}));
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
-  writable: true,
-  value: jest.fn().mockImplementation(query => ({
+  "writable": true,
+  "value": jest.fn().mockImplementation(query => ({
     matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(),
-    removeListener: jest.fn(),
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
-});
+    "media": query,
+    "onchange": null,
+    "addListener": jest.fn(),
+    "removeListener": jest.fn(),
+    "addEventListener": jest.fn(),
+    "removeEventListener": jest.fn(),
+    "dispatchEvent": jest.fn()}))});
 
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
@@ -661,7 +644,7 @@ global.ResizeObserver = class ResizeObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
-};`;
+};";
 
     this.ensureDirectory('tests');
     fs.writeFileSync('tests/setup.ts', testSetup);
@@ -676,7 +659,7 @@ global.ResizeObserver = class ResizeObserver {
       // Run unit tests
       this.log('Running unit tests...', 'PROGRESS');
       try {
-        execSync('npx jest tests/unit --passWithNoTests', { stdio: 'pipe' });
+        execSync('npx jest tests/unit --passWithNoTests', { "stdio": 'pipe' });
         this.results.unitTests.passed = this.results.unitTests.total
         this.log('✅ Unit tests passed', 'SUCCESS')} catch (error) {
         this.results.unitTests.failed = this.results.unitTests.total
@@ -686,7 +669,7 @@ global.ResizeObserver = class ResizeObserver {
       // Run integration tests
       this.log('Running integration tests...', 'PROGRESS');
       try {
-        execSync('npx jest tests/integration --passWithNoTests', { stdio: 'pipe' });
+        execSync('npx jest tests/integration --passWithNoTests', { "stdio": 'pipe' });
         this.results.integrationTests.passed = this.results.integrationTests.total
         this.log('✅ Integration tests passed', 'SUCCESS')} catch (error) {
         this.results.integrationTests.failed = this.results.integrationTests.total
@@ -694,8 +677,8 @@ global.ResizeObserver = class ResizeObserver {
         this.results.errors.push('Integration tests failed')}
 
     } catch (error) {
-      this.log(`Test execution failed: ${error.message}`, 'ERROR');
-      this.results.errors.push(`Test execution failed: ${error.message}`)}
+      this.log(`Test execution "failed": ${error.message}`, 'ERROR');
+      this.results.errors.push(`Test execution "failed": ${error.message}`)}
   }
 
   // Generate comprehensive report
@@ -723,27 +706,27 @@ global.ResizeObserver = class ResizeObserver {
       return sum}, 0;);
 
     const report = {
-      timestamp: new Date().toISOString(),
-      duration: `${Math.round(duration / 1000)}s`,
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "duration": `${Math.round(duration / 1000)}s`,
+      "summary": {
         totalTests,
         totalPassed,
         totalFailed,
-        successRate: totalTests > 0 ? Math.round((totalPassed / totalTests) * 100) : 0
+        "successRate": totalTests > 0 ? Math.round((totalPassed / totalTests) * 100) : 0
       },
-      results: this.results,
-      errors: this.results.errors
+      "results": this.results,
+      "errors": this.results.errors
    };
 
     this.ensureDirectory('automation-reports');
     fs.writeFileSync('automation-reports/advanced-testing-report.json', JSON.stringify(report, null, 2));
     
     this.log('📊 Advanced Testing Report Generated', 'SUCCESS');
-    this.log(`⏱️ Total Duration: ${report.duration}`, 'INFO');
-    this.log(`🧪 Total Tests: ${totalTests}`, 'INFO');
-    this.log(`✅ Passed: ${totalPassed}`, 'SUCCESS');
-    this.log(`❌ Failed: ${totalFailed}`, totalFailed > 0 ? 'ERROR' : 'SUCCESS');
-    this.log(`📈 Success Rate: ${report.summary.successRate}%`, report.summary.successRate >= 80 ? 'SUCCESS' : 'WARNING')}
+    this.log(`⏱️ Total "Duration": ${report.duration}`, 'INFO');
+    this.log(`🧪 Total "Tests": ${totalTests}`, 'INFO');
+    this.log(`✅ "Passed": ${totalPassed}`, 'SUCCESS');
+    this.log(`❌ "Failed": ${totalFailed}`, totalFailed > 0 ? 'ERROR' : 'SUCCESS');
+    this.log(`📈 Success "Rate": ${report.summary.successRate}%`, report.summary.successRate >= 80 ? 'SUCCESS' : 'WARNING')}
 
   async run() {
     this.log('🚀 Starting Advanced Testing Automation...', 'PROGRESS');
@@ -762,7 +745,7 @@ global.ResizeObserver = class ResizeObserver {
       
       this.log('🎉 Advanced Testing Automation completed successfully!', 'SUCCESS');
       return true} catch (error) {
-      this.log(`Advanced Testing Automation failed: ${error.message}`, 'ERROR');
+      this.log(`Advanced Testing Automation "failed": ${error.message}`, 'ERROR');
       return false}
   }
 }
@@ -774,7 +757,7 @@ if ( {
   const automation = new AdvancedTestingAutomation}(;);
   automation.run().then(success => {
     process.exit(success ? 0 : 1)}).catch(error => {
-    console.error('Advanced testing automation failed:', error);
+    console.error('Advanced testing automation "failed": ', error);
     process.exit(1)})}
 
 module.exports = AdvancedTestingAutomation;

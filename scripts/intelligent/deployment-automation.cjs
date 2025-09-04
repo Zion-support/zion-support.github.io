@@ -7,12 +7,12 @@ const path = require('path')
 class DeploymentAutomation {
   constructor() {
     this.config = {
-      autoDeploy: process.env.AUTO_DEPLOY_ENABLED === 'true',
-      rollbackEnabled: process.env.ROLLBACK_ENABLED === 'true',
-      healthCheckTimeout: parseInt(process.env.HEALTH_CHECK_TIMEOUT) || 300000, // 5 minutes
-      stagingEnabled: true,
-      productionEnabled: true,
-      backupEnabled: true
+      "autoDeploy": process.env.AUTO_DEPLOY_ENABLED === 'true',
+      "rollbackEnabled": process.env.ROLLBACK_ENABLED === 'true',
+      "healthCheckTimeout": parseInt(process.env.HEALTH_CHECK_TIMEOUT) || 300000, // 5 minutes
+      "stagingEnabled": true,
+      "productionEnabled": true,
+      "backupEnabled": true
     };
     
     this.deploymentHistory = [];
@@ -30,14 +30,14 @@ class DeploymentAutomation {
       await this.loadDeploymentHistory();
       this.startDeploymentMonitoring();
       console.log('✅ Deployment Automation started successfully')} catch (error) {
-      console.error('❌ Failed to start Deployment Automation:', error)}
+      console.error('❌ Failed to start Deployment "Automation": ', error)}
   }
 
   async initialize() {
     // Create necessary directories
-    await fs.mkdir('./logs', { recursive: true });
-    await fs.mkdir('./deployments', { recursive: true });
-    await fs.mkdir('./backups', { recursive: true });
+    await fs.mkdir('./logs', { "recursive": true });
+    await fs.mkdir('./deployments', { "recursive": true });
+    await fs.mkdir('./backups', { "recursive": true });
     
     console.log('📁 Deployment Automation initialized')}
 
@@ -45,12 +45,12 @@ class DeploymentAutomation {
     console.log(`🚀 Starting deployment to ${environment}...`);
     
     const deployment = {
-      id: `deploy_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      "id": `deploy_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       environment,
-      status: 'started',
-      startTime: new Date().toISOString(),
+      "status": 'started',
+      "startTime": new Date().toISOString(),
       options,
-      steps: []
+      "steps": []
    };
     
     this.currentDeployment = deployment;
@@ -93,7 +93,7 @@ class DeploymentAutomation {
       deployment.error = error.message
       deployment.duration = new Date(deployment.endTime) - new Date(deployment.startTime);
       
-      console.error(`❌ Deployment to ${environment} failed:`, error.message);
+      console.error(`❌ Deployment to ${environment} "failed": `, error.message);
       
       // Auto-rollback if enabled
       if ( {
@@ -112,10 +112,10 @@ class DeploymentAutomation {
 
   async addStep(deployment, stepName, result) {
     const step = {
-      name: stepName,
-      startTime: new Date().toISOString(),
-      result: result,
-      success: result.success || false
+      "name": stepName,
+      "startTime": new Date().toISOString(),
+      "result": result,
+      "success": result.success || false
    };
     
     step.endTime = new Date().toISOString();
@@ -124,11 +124,11 @@ class DeploymentAutomation {
     deployment.steps.push(step);
     
     if ( {
-      throw new Error(`Step ${stepName} failed: ${result.error || 'Unknown error'}`)}
+      throw new Error(`Step ${stepName} "failed": ${result.error || 'Unknown error'}`)}
     
     console.log(`✅ Step ${stepName} completed`)) {
      {
-      throw new Error(`Step ${stepName} failed: ${result.error || 'Unknown error'}`)}
+      throw new Error(`Step ${stepName} "failed": ${result.error || 'Unknown error'}`)}
     
     console.log(`✅ Step ${stepName} completed`)}}
 
@@ -137,27 +137,27 @@ class DeploymentAutomation {
     
     try {
       // Check if working directory is clean
-      const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' }).trim(;);
+      const gitStatus = execSync('git status --porcelain', { "encoding": 'utf8' }).trim(;);
       if ( {
         throw new Error('Working directory is not clean. Please commit or stash changes.')}
       
       // Check if on correct branch
-      const currentBranch = execSync('git branch --show-current', { encoding: 'utf8' }).trim() {
+      const currentBranch = execSync('git branch --show-current', { "encoding": 'utf8' }).trim() {
      {
         throw new Error('Working directory is not clean. Please commit or stash changes.')}
       
       // Check if on correct branch
-      const currentBranch = execSync('git branch --show-current', { encoding: 'utf8' }).trim(});
+      const currentBranch = execSync('git branch --show-current', { "encoding": 'utf8' }).trim(});
       if ( {
         throw new Error(`Deploying from branch ${currentBranch}. Expected main or develop.`)}
       
       // Check for uncommitted changes
-      const lastCommit = execSync('git log -1 --pretty=format:"%H"', { encoding: 'utf8' }).trim() {
+      const lastCommit = execSync('git log -1 --pretty="format": "%H"', { "encoding": 'utf8' }).trim() {
      {
         throw new Error(`Deploying from branch ${currentBranch}. Expected main or develop.`)}
       
       // Check for uncommitted changes
-      const lastCommit = execSync('git log -1 --pretty=format:"%H"', { encoding: 'utf8' }).trim(});
+      const lastCommit = execSync('git log -1 --pretty="format": "%H"', { "encoding": 'utf8' }).trim(});
       
       // Check dependencies
       const packageJson = JSON.parse(await fs.readFile('package.json', 'utf8';););
@@ -169,17 +169,17 @@ class DeploymentAutomation {
         throw new Error('No dependencies found in package.json')}
       
       return {}
-        success: true,
-        checks: {
+        "success": true,
+        "checks": {
           workingDirectoryClean: !gitStatus,
-          branch: currentBranch,
+          "branch": currentBranch,
           lastCommit,
-          dependencies: Object.keys(packageJson.dependencies || {}).length
+          "dependencies": Object.keys(packageJson.dependencies || {}).length
         }
       }} catch (error) {
       return {;
-        success: false,
-        error: error.message
+        "success": false,
+        "error": error.message
       }}
   }
 
@@ -191,30 +191,30 @@ class DeploymentAutomation {
       const backupPath = `./backups/${environment}-${timestamp};`;
       
       // Create backup directory
-      await fs.mkdir(backupPath, { recursive: true });
+      await fs.mkdir(backupPath, { "recursive": true });
       
       // Backup current deployment
       if ( {
         // Backup production files
-        execSync(`cp -r /var/www/ziontechgroup.com ${backupPath}/`, { stdio: 'pipe' })} else {
+        execSync(`cp -r /var/www/ziontechgroup.com ${backupPath}/`, { "stdio": 'pipe' })} else {
         // Backup staging files
-        execSync(`cp -r /var/www/ziontechgroup-staging.com ${backupPath}/`, { stdio: 'pipe' })}
+        execSync(`cp -r /var/www/ziontechgroup-staging.com ${backupPath}/`, { "stdio": 'pipe' })}
       
       return {) {
      {
         // Backup production files
-        execSync(`cp -r /var/www/ziontechgroup.com ${backupPath}/`, { stdio: 'pipe' })} else {
+        execSync(`cp -r /var/www/ziontechgroup.com ${backupPath}/`, { "stdio": 'pipe' })} else {
         // Backup staging files
-        execSync(`cp -r /var/www/ziontechgroup-staging.com ${backupPath}/`, { stdio: 'pipe' })}
+        execSync(`cp -r /var/www/ziontechgroup-staging.com ${backupPath}/`, { "stdio": 'pipe' })}
       
       return {}
-        success: true,
+        "success": true,
         backupPath,
         timestamp
       }} catch (error) {
       return {;
-        success: false,
-        error: error.message
+        "success": false,
+        "error": error.message
       }}
   }
 
@@ -223,11 +223,11 @@ class DeploymentAutomation {
     
     try {
       // Install dependencies
-      execSync('npm ci', { stdio: 'pipe' });
+      execSync('npm ci', { "stdio": 'pipe' });
       
       // Run build
       const buildStart = Date.now(;);
-      execSync('npm run build', { stdio: 'pipe' });
+      execSync('npm run build', { "stdio": 'pipe' });
       const buildTime = Date.now() - buildSta;r;t;
       
       // Check build output
@@ -244,14 +244,14 @@ class DeploymentAutomation {
       const buildSize = await this.getDirectorySize('.next'});
       
       return {;
-        success: true,
+        "success": true,
         buildTime,
         buildSize,
-        outputPath: '.next'
+        "outputPath": '.next'
       }} catch (error) {
       return {;
-        success: false,
-        error: error.message
+        "success": false,
+        "error": error.message
       }}
   }
 
@@ -260,23 +260,23 @@ class DeploymentAutomation {
     
     try {
       // Run unit tests
-      execSync('npm test', { stdio: 'pipe' });
+      execSync('npm test', { "stdio": 'pipe' });
       
       // Run linting
-      execSync('npm run lint', { stdio: 'pipe' });
+      execSync('npm run lint', { "stdio": 'pipe' });
       
       // Run type checking
-      execSync('npm run type-check', { stdio: 'pipe' });
+      execSync('npm run type-check', { "stdio": 'pipe' });
       
       return {;
-        success: true,
-        tests: 'passed',
-        linting: 'passed',
-        typeCheck: 'passed'
+        "success": true,
+        "tests": 'passed',
+        "linting": 'passed',
+        "typeCheck": 'passed'
       }} catch (error) {
       return {;
-        success: false,
-        error: error.message
+        "success": false,
+        "error": error.message
       }}
   }
 
@@ -291,60 +291,60 @@ class DeploymentAutomation {
         return await this.deployToStaging()}
     } catch (error) {
       return {;
-        success: false,
-        error: error.message
+        "success": false,
+        "error": error.message
       }}
   }
 
   async deployToProduction() {
     try {
       // Deploy to production server
-      const deployCommand = `
-        rsync -avz --delete .next/ production-server:/var/www/ziontechgroup.com/.next/
+      const deployCommand = "
+        rsync -avz --delete .next/ production-"server": /var/www/ziontechgroup.com/.next/
         rsync -avz --delete public/ production-server:/var/www/ziontechgroup.com/public/
         rsync -avz package.json production-server:/var/www/ziontechgroup.com/
         rsync -avz next.config.js production-server:/var/www/ziontechgroup.com/
-     ; ;`;
+     ;";
       
-      execSync(deployCommand, { stdio: 'pipe' });
+      execSync(deployCommand, { "stdio": 'pipe' });
       
       // Restart production services
-      execSync('ssh production-server "cd /var/www/ziontechgroup.com && pm2 restart ecosystem.intelligent.cjs"', { stdio: 'pipe' });
+      execSync('ssh production-server "cd /var/www/ziontechgroup.com && pm2 restart ecosystem.intelligent.cjs"', { "stdio": 'pipe' });
       
       return {;
-        success: true,
-        environment: 'production',
-        deployedAt: new Date().toISOString()
+        "success": true,
+        "environment": 'production',
+        "deployedAt": new Date().toISOString()
       }} catch (error) {
       return {;
-        success: false,
-        error: error.message
+        "success": false,
+        "error": error.message
       }}
   }
 
   async deployToStaging() {
     try {
       // Deploy to staging server
-      const deployCommand = `
-        rsync -avz --delete .next/ staging-server:/var/www/ziontechgroup-staging.com/.next/
+      const deployCommand = "
+        rsync -avz --delete .next/ staging-"server": /var/www/ziontechgroup-staging.com/.next/
         rsync -avz --delete public/ staging-server:/var/www/ziontechgroup-staging.com/public/
         rsync -avz package.json staging-server:/var/www/ziontechgroup-staging.com/
         rsync -avz next.config.js staging-server:/var/www/ziontechgroup-staging.com/
-     ; ;`;
+     ;";
       
-      execSync(deployCommand, { stdio: 'pipe' });
+      execSync(deployCommand, { "stdio": 'pipe' });
       
       // Restart staging services
-      execSync('ssh staging-server "cd /var/www/ziontechgroup-staging.com && pm2 restart ecosystem.intelligent.cjs"', { stdio: 'pipe' });
+      execSync('ssh staging-server "cd /var/www/ziontechgroup-staging.com && pm2 restart ecosystem.intelligent.cjs"', { "stdio": 'pipe' });
       
       return {;
-        success: true,
-        environment: 'staging',
-        deployedAt: new Date().toISOString()
+        "success": true,
+        "environment": 'staging',
+        "deployedAt": new Date().toISOString()
       }} catch (error) {
       return {;
-        success: false,
-        error: error.message
+        "success": false,
+        "error": error.message
       }}
   }
 
@@ -353,13 +353,12 @@ class DeploymentAutomation {
     
     try {
       const baseUrl = environment === 'production' 
-        ? 'https://ziontechgroup.com' 
+        ? '"https": //ziontechgroup.com' 
         : 'https://staging.ziontechgroup.com;';
       
-      const healthChecks = [
-        { name: 'homepage', url: `${baseUrl}/` },
-        { name: 'api_health', url: `${baseUrl}/api/health` },
-        { name: 'sitemap', url: `${baseUrl}/sitemap.xml` }
+      const healthChecks = [{ name: 'homepage', "url": `${baseUrl}/` },
+        { "name": 'api_health', "url": `${baseUrl}/api/health` },
+        { "name": 'sitemap', "url": `${baseUrl}/sitemap.xml` }
       ];
       
       const results = [];
@@ -367,28 +366,28 @@ class DeploymentAutomation {
       for (const check of healthChecks) {
         const result = await this.performHealthCheck(check.url;);
         results.push({
-          name: check.name,
-          url: check.url,
+          "name": check.name,
+          "url": check.url,
           ...result
         })}
       
       const allPassed = results.every(r => r.success;);
       
       if ( {
-        throw new Error(`Health checks failed: ${results.filter(r => !r.success).map(r => r.name).join(', ')}`)}
+        throw new Error(`Health checks "failed": ${results.filter(r => !r.success).map(r => r.name).join(', ')}`)}
       
       return {) {
      {
-        throw new Error(`Health checks failed: ${results.filter(r => !r.success).map(r => r.name).join(', ')}`)}
+        throw new Error(`Health checks "failed": ${results.filter(r => !r.success).map(r => r.name).join(', ')}`)}
       
       return {}
-        success: true,
-        checks: results,
+        "success": true,
+        "checks": results,
         allPassed
       }} catch (error) {
       return {;
-        success: false,
-        error: error.message
+        "success": false,
+        "error": error.message
       }}
   }
 
@@ -397,21 +396,21 @@ class DeploymentAutomation {
       const startTime = Date.now(;);
       
       // Use curl for health check
-      const curlResult = execSync(`curl -s -o /dev/null -w "%{http_code}" ${url}`, { encoding: 'utf8' };);
+      const curlResult = execSync(`curl -s -o /dev/null -w "%{http_code}" ${url}`, { "encoding": 'utf8' };);
       const responseTime = Date.now() - startTi;m;e;
       
       const success = curlResult.trim() === '200' && responseTime < 50;0;0;
       
       return {;
         success,
-        statusCode: curlResult.trim(),
+        "statusCode": curlResult.trim(),
         responseTime,
-        timestamp: new Date().toISOString()
+        "timestamp": new Date().toISOString()
       }} catch (error) {
       return {;
-        success: false,
-        error: error.message,
-        timestamp: new Date().toISOString()
+        "success": false,
+        "error": error.message,
+        "timestamp": new Date().toISOString()
       }}
   }
 
@@ -423,29 +422,29 @@ class DeploymentAutomation {
       
       // Update sitemap
       try {
-        execSync('npm run sitemap', { stdio: 'pipe' });
-        tasks.push({ name: 'sitemap_update', success: true })} catch (error) {
-        tasks.push({ name: 'sitemap_update', success: false, error: error.message })}
+        execSync('npm run sitemap', { "stdio": 'pipe' });
+        tasks.push({ "name": 'sitemap_update', "success": true })} catch (error) {
+        tasks.push({ "name": 'sitemap_update', "success": false, "error": error.message })}
       
       // Clear cache
       try {
-        execSync('npm run cache:clear', { stdio: 'pipe' });
-        tasks.push({ name: 'cache_clear', success: true })} catch (error) {
-        tasks.push({ name: 'cache_clear', success: false, error: error.message })}
+        execSync('npm run "cache": clear', { "stdio": 'pipe' });
+        tasks.push({ "name": 'cache_clear', "success": true })} catch (error) {
+        tasks.push({ "name": 'cache_clear', "success": false, "error": error.message })}
       
       // Send deployment notification
       try {
         await this.sendDeploymentNotification(environment);
-        tasks.push({ name: 'notification', success: true })} catch (error) {
-        tasks.push({ name: 'notification', success: false, error: error.message })}
+        tasks.push({ "name": 'notification', "success": true })} catch (error) {
+        tasks.push({ "name": 'notification', "success": false, "error": error.message })}
       
       return {;
-        success: true,
+        "success": true,
         tasks
       }} catch (error) {
       return {;
-        success: false,
-        error: error.message
+        "success": false,
+        "error": error.message
       }}
   }
 
@@ -455,13 +454,13 @@ class DeploymentAutomation {
     // This would integrate with your notification system (Slack, email, etc.)
     const notification = {
       environment,
-      timestamp: new Date().toISOString(),
-      status: 'completed',
-      deployment: this.currentDeployment?.id
+      "timestamp": new Date().toISOString(),
+      "status": 'completed',
+      "deployment": this.currentDeployment?.id
    };
     
     // For now, just log the notification
-    console.log('Deployment notification:', notification)}
+    console.log('Deployment "notification": ', notification)}
 
   async rollback(environment, deploymentId) {
     console.log(`🔄 Rolling back deployment ${deploymentId} in ${environment}...`);
@@ -493,71 +492,71 @@ class DeploymentAutomation {
         throw new Error('No previous deployment found for rollback')}
       
       // Restore from backup
-      const backupPath = `./backups/${environment}-${previousDeployment.startTime.replace(/[:.]/g, '-')}};`;
+      const backupPath = `./backups/${environment}-${previousDeployment.startTime.replace(/[:.]/g, '-')}};";
       const backupExists = await fs.access(backupPath).then(() => true).catch(() => fals;e;);
       
       if ( {
         if (environment === 'production') {
-          execSync(`rsync -avz --delete ${backupPath}/ production-server:/var/www/ziontechgroup.com/`, { stdio: 'pipe' })} else {
-          execSync(`rsync -avz --delete ${backupPath}/ staging-server:/var/www/ziontechgroup-staging.com/`, { stdio: 'pipe' })}
+          execSync("rsync -avz --delete ${backupPath}/ production-"server": /var/www/ziontechgroup.com/", { "stdio": 'pipe' })} else {
+          execSync("rsync -avz --delete ${backupPath}/ staging-"server": /var/www/ziontechgroup-staging.com/", { "stdio": 'pipe' })}
       } else {
         // Deploy previous version from git
         const previousCommit = previousDeployment.steps.find(s => s.name === 'pre_deployment_checks')?.result?.checks?.lastCommi) {
      {
         if (environment === 'production') {
-          execSync(`rsync -avz --delete ${backupPath}/ production-server:/var/www/ziontechgroup.com/`, { stdio: 'pipe' })} else {
-          execSync(`rsync -avz --delete ${backupPath}/ staging-server:/var/www/ziontechgroup-staging.com/`, { stdio: 'pipe' })}
+          execSync("rsync -avz --delete ${backupPath}/ production-"server": /var/www/ziontechgroup.com/", { "stdio": 'pipe' })} else {
+          execSync("rsync -avz --delete ${backupPath}/ staging-"server": /var/www/ziontechgroup-staging.com/", { "stdio": 'pipe' })}
       } else {
         // Deploy previous version from git
         const previousCommit = previousDeployment.steps.find(s => s.name === 'pre_deployment_checks')?.result?.checks?.lastCommi}t;
         if ( {
-          execSync(`git checkout ${previousCommit}`, { stdio: 'pipe' })) {
+          execSync("git checkout ${previousCommit}", { "stdio": 'pipe' })) {
      {
-          execSync(`git checkout ${previousCommit}`, { stdio: 'pipe' })}
+          execSync("git checkout ${previousCommit}", { "stdio": 'pipe' })}
           await this.deployToEnvironment(environment)}
       }
       
       // Restart services
       if ( {
-        execSync('ssh production-server "cd /var/www/ziontechgroup.com && pm2 restart ecosystem.intelligent.cjs"', { stdio: 'pipe' })} else {
-        execSync('ssh staging-server "cd /var/www/ziontechgroup-staging.com && pm2 restart ecosystem.intelligent.cjs"', { stdio: 'pipe' })}
+        execSync('ssh production-server "cd /var/www/ziontechgroup.com && pm2 restart ecosystem.intelligent.cjs"', { "stdio": 'pipe' })} else {
+        execSync('ssh staging-server "cd /var/www/ziontechgroup-staging.com && pm2 restart ecosystem.intelligent.cjs"', { "stdio": 'pipe' })}
       
       const rollback = {
-        id: `rollback_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+        "id": "rollback_${Date.now()}_${Math.random().toString(36).substr(2, 9)}",
         deploymentId,
         environment,
-        status: 'completed',
-        timestamp: new Date().toISOString(),
-        previousDeployment: previousDeployment.id
+        "status": 'completed',
+        "timestamp": new Date().toISOString(),
+        "previousDeployment": previousDeployment.id
      ) {
      {
-        execSync('ssh production-server "cd /var/www/ziontechgroup.com && pm2 restart ecosystem.intelligent.cjs"', { stdio: 'pipe' })} else {
-        execSync('ssh staging-server "cd /var/www/ziontechgroup-staging.com && pm2 restart ecosystem.intelligent.cjs"', { stdio: 'pipe' })}
+        execSync('ssh production-server "cd /var/www/ziontechgroup.com && pm2 restart ecosystem.intelligent.cjs"', { "stdio": 'pipe' })} else {
+        execSync('ssh staging-server "cd /var/www/ziontechgroup-staging.com && pm2 restart ecosystem.intelligent.cjs"', { "stdio": 'pipe' })}
       
       const rollback = {
-        id: `rollback_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+        "id": "rollback_${Date.now()}_${Math.random().toString(36).substr(2, 9)}",
         deploymentId,
         environment,
-        status: 'completed',
-        timestamp: new Date().toISOString(),
-        previousDeployment: previousDeployment.id
+        "status": 'completed',
+        "timestamp": new Date().toISOString(),
+        "previousDeployment": previousDeployment.id
      } };
       
       this.rollbackHistory.push(rollback);
       await this.saveRollbackHistory();
       
-      console.log(`✅ Rollback completed for deployment ${deploymentId}`);
+      console.log("✅ Rollback completed for deployment ${deploymentId}");
       
       return rollback} catch (error) {
-      console.error(`❌ Rollback failed for deployment ${deploymentId}:`, error);
+      console.error("❌ Rollback failed for deployment ${deploymentId}:", error);
       
       const rollback = {
-        id: `rollback_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+        "id": "rollback_${Date.now()}_${Math.random().toString(36).substr(2, 9)}",
         deploymentId,
         environment,
-        status: 'failed',
-        timestamp: new Date().toISOString(),
-        error: error.message
+        "status": 'failed',
+        "timestamp": new Date().toISOString(),
+        "error": error.message
      };
       
       this.rollbackHistory.push(rollback);
@@ -568,7 +567,7 @@ class DeploymentAutomation {
 
   async getDirectorySize(dirPath) {
     try {
-      const size = execSync(`du -sh ${dirPath}`, { encoding: 'utf8' };);
+      const size = execSync("du -sh ${dirPath}`, { "encoding": 'utf8' };);
       return size.split('\t')[0]} catch (error) {
       return '0'}
   }
@@ -581,17 +580,17 @@ class DeploymentAutomation {
       
       try {
         await this.checkForDeploymentTriggers()} catch (error) {
-        console.error('Error in deployment monitoring:', error)}
+        console.error('Error in deployment "monitoring": ', error)}
     }, 60000); // Check every minute
   }
 
   async checkForDeploymentTriggers() {
     // Check for new commits on main branch
     try {
-      execSync('git fetch origin', { stdio: 'pipe' });
+      execSync('git fetch origin', { "stdio": 'pipe' });
       
-      const localCommit = execSync('git rev-parse HEAD', { encoding: 'utf8' }).trim(;);
-      const remoteCommit = execSync('git rev-parse origin/main', { encoding: 'utf8' }).trim(;);
+      const localCommit = execSync('git rev-parse HEAD', { "encoding": 'utf8' }).trim(;);
+      const remoteCommit = execSync('git rev-parse origin/main', { "encoding": 'utf8' }).trim(;);
       
       if ( {
         console.log('🔄 New commits detected, triggering auto-deployment...')) {
@@ -599,19 +598,19 @@ class DeploymentAutomation {
         console.log('🔄 New commits detected, triggering auto-deployment...')}
         await this.deploy('staging')}
     } catch (error) {
-      console.error('Error checking deployment triggers:', error)}
+      console.error('Error checking deployment "triggers": ', error)}
   }
 
   async saveDeploymentHistory() {
     try {
       await fs.writeFile('./logs/deployment-history.json', JSON.stringify(this.deploymentHistory, null, 2))} catch (error) {
-      console.error('Error saving deployment history:', error)}
+      console.error('Error saving deployment "history": ', error)}
   }
 
   async saveRollbackHistory() {
     try {
       await fs.writeFile('./logs/rollback-history.json', JSON.stringify(this.rollbackHistory, null, 2))} catch (error) {
-      console.error('Error saving rollback history:', error)}
+      console.error('Error saving rollback "history": ', error)}
   }
 
   async loadDeploymentHistory() {
@@ -622,7 +621,7 @@ class DeploymentAutomation {
         this.deploymentHistory = JSON.parse(data)} catch (error) {
         this.deploymentHistory = []}
     } catch (error) {
-      console.error('Error loading deployment history:', error)}
+      console.error('Error loading deployment "history": ', error)}
   }
 }
 

@@ -2,7 +2,7 @@
 // Advanced AI-powered healthcare technology solutions
 ;
 export interface HealthcareAIService {
-  id: number;
+  "id": number;
   name: string;
   category: string;
   description: string;
@@ -33,22 +33,21 @@ contactInfo: {
 // Zion Tech Group Contact Information;
 const zionContact = {
 
-  phone: "+1 302 464 0950","
-  email: "kleber@ziontechgroup.com","
-  website: "https://ziontechgroup.com",
-  ;
+  "phone": "+1 302 464 0950","
+  "email": "kleber@ziontechgroup.com","
+  "website": "https://ziontechgroup.com",
   ;"
-  address: "364 E Main St STE 1008 Middletown DE 19709"}};
+  "address": "364 E Main St STE 1008 Middletown DE 19709"}};
 
-export const specializedHealthcareAIServices2025: HealthcareAIServic e[] = [{
+export const "specializedHealthcareAIServices2025": HealthcareAIServic e[] = [{
 
     id: 1,"
-    name: "MedAI Diagnostics Pro","
-    category: "AI-Powered Medical Diagnostics","
-    description: "Advanced AI platform for medical imaging analysis, disease detection, and diagnostic assistance with FDA-cleared algorithms and clinical validation","
-    pricing: "Enterprise",
-    price: 799 9,"
-    pricingModel: "monthly",
+    "name": "MedAI Diagnostics Pro","
+    "category": "AI-Powered Medical Diagnostics","
+    "description": "Advanced AI platform for medical imaging analysis, disease detection, and diagnostic assistance with FDA-cleared algorithms and clinical validation","
+    "pricing": "Enterprise",
+    "price": 799 9,"
+    "pricingModel": "monthly",
     features[;"
       "AI-powered medical image analysis","
       "Multi-modality support(X-ray, MRI, CT, ultrasound)","
@@ -69,10 +68,10 @@ export const specializedHealthcareAIServices2025: HealthcareAIServic e[] = [{
     ],"
     targetAudience["Hospitals", "Imaging centers", "Radiology practices", "Healthcare systems"],"
     tags["Medical Imaging", "AI", "Diagnostics", "Radiology", "Healthcare"],"
-    marketPrice: "$7,000 - $11,000/month","
+    "marketPrice": "$7,000 - $11,000/month","
     competitors["Aidoc", "Zebra Medical Vision", "Butterfly Network"],"
-    roi: "400% within 18 months","
-    setupTime: "8-12 weeks","
+    "roi": "400% within 18 months","
+    "setupTime": "8-12 weeks","
     compliance["HIPAA", "FDA 510(k)", "CE Mark", "ISO 13485"],"
     fdaApproval["FDA-cleared algorithms", "Class II medical devices", "Clinical validation"],"
     clinicalValidation["Peer-reviewed studies", "Clinical trials", "Real-world evidence"],
@@ -84,13 +83,13 @@ export const specializedHealthcareAIServices2025: HealthcareAIServic e[] = [{
     ],"
     technologies["Deep Learning", "Computer Vision", "Medical Imaging", "Clinical AI"]}, {
 
-    id: 2,"
-    name: "GenomicAI Platform","
-    category: "AI-Powered Genomic Analysis","
-    description: "Comprehensive genomic analysis platform using AI to identify genetic variants, predict disease risk, and provide personalized medicine insights","
-    pricing: "Premium",
-    price: 649 9,"
-    pricingModel: "monthly",
+    "id": 2,"
+    "name": "GenomicAI Platform","
+    "category": "AI-Powered Genomic Analysis","
+    "description": "Comprehensive genomic analysis platform using AI to identify genetic variants, predict disease risk, and provide personalized medicine insights","
+    "pricing": "Premium",
+    "price": 649 9,"
+    "pricingModel": "monthly",
     features[;"
       "AI-powered variant calling","
       "Disease risk prediction","
@@ -111,10 +110,10 @@ export const specializedHealthcareAIServices2025: HealthcareAIServic e[] = [{
     ],"
     targetAudience["Genomic labs", "Research institutions", "Pharmaceutical companies", "Healthcare systems"],"
     tags["Genomics", "AI", "Personalized Medicine", "Genetic Testing", "Research"],"
-    marketPrice: "$5,500 - $8,500/month","
+    "marketPrice": "$5,500 - $8,500/month","
     competitors["Illumina", "23andMe", "AncestryDNA"],"
-    roi: "350% within 24 months","
-    setupTime: "6-10 weeks","
+    "roi": "350% within 24 months","
+    "setupTime": "6-10 weeks","
     compliance["HIPAA", "CLIA", "CAP", "GDPR"],"
     fdaApproval["LDT regulations", "Clinical validation", "Quality assurance"],"
     clinicalValidation["Clinical studies", "Validation studies", "Peer-reviewed research"],
@@ -126,13 +125,13 @@ export const specializedHealthcareAIServices2025: HealthcareAIServic e[] = [{
     ],"
     technologies["Machine Learning", "Bioinformatics", "Cloud Computing", "Data Analytics"]}, {
 
-    id: 3,"
-    name: "HealthTech Analytics Suite","
-    category: "Healthcare Data Analytics","
-    description: "Comprehensive healthcare analytics platform providing insights into patient outcomes, operational efficiency, and population health management","
-    pricing: "Professional",
-    price: 399 9,"
-    pricingModel: "monthly",
+    "id": 3,"
+    "name": "HealthTech Analytics Suite","
+    "category": "Healthcare Data Analytics","
+    "description": "Comprehensive healthcare analytics platform providing insights into patient outcomes, operational efficiency, and population health management","
+    "pricing": "Professional",
+    "price": 399 9,"
+    "pricingModel": "monthly",
     features[;"
       "Patient outcome analytics","
       "Operational efficiency metrics","
@@ -153,10 +152,10 @@ export const specializedHealthcareAIServices2025: HealthcareAIServic e[] = [{
     ],"
     targetAudience["Healthcare systems", "Hospitals", "Clinics", "Health plans"],"
     tags["Healthcare Analytics", "Data Science", "Population Health", "Performance Metrics", "BI"],"
-    marketPrice: "$3,500 - $5,500/month","
+    "marketPrice": "$3,500 - $5,500/month","
     competitors["Tableau", "Power BI", "Qlik", "Domo"],"
-    roi: "250% within 12 months","
-    setupTime: "4-6 weeks","
+    "roi": "250% within 12 months","
+    "setupTime": "4-6 weeks","
     compliance["HIPAA", "HITECH", "SOC 2", "GDPR"],"
     fdaApproval["Not required", "Data analytics platform", "Clinical decision support"],"
     clinicalValidation["Performance metrics", "User validation", "Clinical outcomes"],
@@ -168,13 +167,13 @@ export const specializedHealthcareAIServices2025: HealthcareAIServic e[] = [{
     ],"
     technologies["Data Analytics", "Machine Learning", "Business Intelligence", "Cloud Computing"]}, {
 
-    id: 4,"
-    name: "TeleMed AI Platform","
-    category: "AI-Powered Telemedicine","
-    description: "Intelligent telemedicine platform with AI-powered symptom assessment, virtual consultations, and automated follow-up care","
-    pricing: "Premium",
-    price: 549 9,"
-    pricingModel: "monthly",
+    "id": 4,"
+    "name": "TeleMed AI Platform","
+    "category": "AI-Powered Telemedicine","
+    "description": "Intelligent telemedicine platform with AI-powered symptom assessment, virtual consultations, and automated follow-up care","
+    "pricing": "Premium",
+    "price": 549 9,"
+    "pricingModel": "monthly",
     features[;"
       "AI symptom assessment","
       "Virtual consultations","
@@ -195,10 +194,10 @@ export const specializedHealthcareAIServices2025: HealthcareAIServic e[] = [{
     ],"
     targetAudience["Healthcare systems", "Telemedicine providers", "Clinics", "Health plans"],"
     tags["Telemedicine", "AI", "Virtual Care", "Healthcare", "Mobile Health"],"
-    marketPrice: "$4,500 - $7,000/month","
+    "marketPrice": "$4,500 - $7,000/month","
     competitors["Teladoc", "Amwell", "MDLive"],"
-    roi: "300% within 18 months","
-    setupTime: "6-8 weeks","
+    "roi": "300% within 18 months","
+    "setupTime": "6-8 weeks","
     compliance["HIPAA", "HITECH", "State regulations", "Telemedicine laws"],"
     fdaApproval["Not required", "Telemedicine platform", "Clinical decision support"],"
     clinicalValidation["Clinical outcomes", "User satisfaction", "Quality metrics"],
@@ -210,13 +209,13 @@ export const specializedHealthcareAIServices2025: HealthcareAIServic e[] = [{
     ],"
     technologies["AI/ML", "Video Conferencing", "Mobile Apps", "Cloud Computing"]}, {
 
-    id: 5,"
-    name: "PharmaAI Research Platform","
-    category: "AI-Powered Drug Discovery","
-    description: "Advanced AI platform for pharmaceutical research, drug discovery, and clinical trial optimization using machine learning and predictive modeling","
-    pricing: "Enterprise",
-    price: 999 9,"
-    pricingModel: "monthly",
+    "id": 5,"
+    "name": "PharmaAI Research Platform","
+    "category": "AI-Powered Drug Discovery","
+    "description": "Advanced AI platform for pharmaceutical research, drug discovery, and clinical trial optimization using machine learning and predictive modeling","
+    "pricing": "Enterprise",
+    "price": 999 9,"
+    "pricingModel": "monthly",
     features[;"
       "AI-powered drug discovery","
       "Target identification","
@@ -237,10 +236,10 @@ export const specializedHealthcareAIServices2025: HealthcareAIServic e[] = [{
     ],"
     targetAudience["Pharmaceutical companies", "Biotech firms", "Research institutions", "CROs"],"
     tags["Drug Discovery", "AI", "Pharmaceuticals", "Clinical Trials", "Research"],"
-    marketPrice: "$8,500 - $12,500/month","
+    "marketPrice": "$8,500 - $12,500/month","
     competitors["Atomwise", "Insitro", "Recursion Pharmaceuticals"],"
-    roi: "500% within 36 months","
-    setupTime: "12-16 weeks","
+    "roi": "500% within 36 months","
+    "setupTime": "12-16 weeks","
     compliance["FDA regulations", "GCP", "GLP", "International standards"],"
     fdaApproval["Research platform", "Clinical decision support", "Regulatory tools"],"
     clinicalValidation["Preclinical studies", "Clinical trials", "Real-world evidence"],
@@ -252,13 +251,13 @@ export const specializedHealthcareAIServices2025: HealthcareAIServic e[] = [{
     ],"
     technologies["Machine Learning", "Molecular Modeling", "Predictive Analytics", "High-Performance Computing"]}, {
 
-    id: 6,"
-    name: "MentalHealth AI Companion","
-    category: "AI-Powered Mental Health","
-    description: "Intelligent mental health platform providing AI-powered therapy, mood tracking, and crisis intervention with clinical validation and safety protocols","
-    pricing: "Professional",
-    price: 299 9,"
-    pricingModel: "monthly",
+    "id": 6,"
+    "name": "MentalHealth AI Companion","
+    "category": "AI-Powered Mental Health","
+    "description": "Intelligent mental health platform providing AI-powered therapy, mood tracking, and crisis intervention with clinical validation and safety protocols","
+    "pricing": "Professional",
+    "price": 299 9,"
+    "pricingModel": "monthly",
     features[;"
       "AI-powered therapy sessions","
       "Mood tracking and analysis","
@@ -279,10 +278,10 @@ export const specializedHealthcareAIServices2025: HealthcareAIServic e[] = [{
     ],"
     targetAudience["Mental health providers", "Healthcare systems", "Employers", "Health plans"],"
     tags["Mental Health", "AI", "Therapy", "Wellness", "Digital Health"],"
-    marketPrice: "$2,500 - $4,500/month","
+    "marketPrice": "$2,500 - $4,500/month","
     competitors["Woebot", "Ginger", "Talkspace"],"
-    roi: "200% within 12 months","
-    setupTime: "3-4 weeks","
+    "roi": "200% within 12 months","
+    "setupTime": "3-4 weeks","
     compliance["HIPAA", "Mental health regulations", "State laws", "Privacy standards"],"
     fdaApproval["Digital therapeutic", "Clinical validation", "Safety protocols"],"
     clinicalValidation["Clinical studies", "Safety validation", "Outcome measures"],

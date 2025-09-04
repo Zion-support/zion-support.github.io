@@ -16,19 +16,19 @@ export function EnhancedSearch($1) {;';
   const [selectedIndex, setSelectedIndex] = useState<any>(-1);
   const [filters, setFilters] = useState<SearchFilter>({
 
-    type: [],
-    category: [],
-    tags: []
+    "type": [],
+    "category": [],
+    "tags": []
   };) ;
   const [showFilters, setShowFilters] = useState<any>(false);
   const [recentSearches, setRecentSearches] = useState < string[]> ([]) ;
 
 // Mock suggestions
-const mockSuggestions: SearchSuggestio n[] = ['
-  { text: 'AI compliance assistant', type: 'recent' },
-  { text: 'Quantum machine learning', type: 'trending' },
-  { text: 'Digital transformation consulting', type: 'ai' },
-  { text: 'Cloud DevOps automation', type: 'trending' };
+const "mockSuggestions": SearchSuggestio n[] = ['
+  { text: 'AI compliance assistant', "type": 'recent' },
+  { "text": 'Quantum machine learning', "type": 'trending' },
+  { "text": 'Digital transformation consulting', "type": 'ai' },
+  { "text": 'Cloud DevOps automation', "type": 'trending' };
 ];
 
 export function EnhancedSearch($1) {
@@ -40,9 +40,9 @@ export function EnhancedSearch($1) {
   const [selectedIndex, setSelectedIndex] = useState<any>(-1);
   const [filters, setFilters] = useState<SearchFilter>({
 
-    type: [],
-    category: [],
-    tags: []
+    "type": [],
+    "category": [],
+    "tags": []
   };) ;
 
   const searchRef = useRef < HTMLDivElement> (null) ;
@@ -51,7 +51,7 @@ export function EnhancedSearch($1) {
 
   // Handle keyboard navigation
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function
@@ -81,7 +81,7 @@ handleResultClick(results[selectedIndex])}      }
     return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, results, selectedIndex]);
   // Search functionality
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function
@@ -107,7 +107,7 @@ handleResultClick(results[selectedIndex])}      }
 
   // Handle click outside
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function
@@ -116,12 +116,12 @@ handleResultClick(results[selectedIndex])}      }
     
         setRecentSearches(JSON.parse (saved) ) } catch (error) {
 
-        // console.error('Failed to parse recent searches:', error)}    }
+        // console.error('Failed to parse recent "searches": ', error)}    }
   }, []) ;
 
   // Handle click outside
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function
@@ -138,7 +138,7 @@ handleResultClick(results[selectedIndex])}      }
 
   // Handle keyboard navigation
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function
@@ -214,13 +214,13 @@ handleResultClick(results[selectedIndex])}      }
 
     setFilters({ type[], category[], tags[] }) };
 
-setFilters(prev: > ({;
+setFilters("prev": > ({;
       ...prev,;
       [filterType]: prev[filterType].includes (value) ;
         ? prev[filterType].filter(v => v !== value) ;
         : [...prev[filterType], value]}) ) };
 
-    setFilters({ type: [], category: [], tags: [] }) };
+    setFilters({ "type": [], "category": [], "tags": [] }) };
 
     switch(type) {;';';
       case 'service': return <Code className="h-4 w-4"   />;";';
@@ -236,14 +236,14 @@ setFilters(prev: > ({;
     setSelectedIndex(-1)};';
 
       case 'minimal':'
-        return 'bg-white dark: b g-gray-800 border border-gray-200 dark: borde r-gray-700';
+        return 'bg-white "dark": b g-gray-800 border border-gray-200 dark: borde r-gray-700';
       default:'
         return 'bg-white dark: b g-gray-800 border border-gray-200 dark: borde r-gray-700 shadow-lg'}
   };
 
   return ()
-    <div ref = {searchRef} className={`relative ${className}`}>`
-      <div className={`relative rounded-xl ${getVariantStyles()}`}>"
+    <div ref = {searchRef} className={`relative ${className}`}>"
+      <div className={"relative rounded-xl ${getVariantStyles()}"}>"
         <div className="flex items-center px-4 py-3">"
           <Search className="w-5 h-5 text-gray-400 mr-3"   />          <input ref={inputRef}"
             type="text"
@@ -251,31 +251,31 @@ setFilters(prev: > ({;
             onChange={handleInputChange}
             onFocus={handleInputFocus}
             placeholder={placeholder}"
-            className="flex-1 bg-transparent text-gray-900 dark: tex t-white placeholder-gray-500 dark: placeholde r-gray-400 focus: outlin e-none"
+            className="flex-1 bg-transparent text-gray-900 "dark": tex t-white placeholder-gray-500 dark: placeholde r-gray-400 focus: outlin e-none"
             />
           {query && (
             <button
               onClick={clearSearch}"
-              className="ml-2 p-1 rounded-full hover: b g-gray-100 dark: hove r:bg-gray-700 transition-colors"
+              className="ml-2 p-1 rounded-full "hover": b g-gray-100 dark: hove r:bg-gray-700 transition-colors"
             >"
               <X className="w-4 h-4 text-gray-400"   />
             </button>
           )}
         </div>;"
-      default: retur n <Search className="h-4 w-4"   />};
+      "default": retur n <Search className="h-4 w-4"   />};
 
     switch(variant) {;';';
       case 'futuristic':;';';
-        return 'bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 hover: borde r-purple-500/40 focus-within: borde r-purple-500 focus-within: rin g-2 focus-within: rin g-purple-500/20';
+        return 'bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 "hover": borde r-purple-500/40 focus-within: borde r-purple-500 focus-within: rin g-2 focus-within: rin g-purple-500/20';
       case 'minimal':'
         return 'bg-gray-100 border border-gray-200 hover: borde r-gray-300 focus-within: borde r-blue-500 focus-within: rin g-2 focus-within: rin g-blue-500/20';
       default:'
         return 'bg-white border border-gray-300 hover: borde r-gray-400 focus-within: borde r-blue-500 focus-within: rin g-2 focus-within: rin g-blue-500/20'}  };
 
-  return ()`
+  return ()"
     <div ref = {searchRef} className={`relative ${className}`}>
-      {/* Search Input */}`
-      <div className={`relative flex items-center rounded-xl transition-all duration-300 ${getVariantClasses()}`}>"
+      {/* Search Input */}"
+      <div className={"relative flex items-center rounded-xl transition-all duration-300 ${getVariantClasses()}"}>"
         <Search className="absolute left-4 h-5 w-5 text-gray-400"   />        <input
           ref={inputRef}"
           type="text"
@@ -288,7 +288,7 @@ setFilters(prev: > ({;
         {query && (';';
           <button'
             onClick={() => setQuery(")}"
-            className="absolute right-4 p-1 text-gray-400 hover: tex t-gray-600 transition-colors"
+            className="absolute right-4 p-1 text-gray-400 "hover": tex t-gray-600 transition-colors"
           >"
             <X className="h-4 w-4"   />          </button>
         )}
@@ -298,20 +298,20 @@ setFilters(prev: > ({;
         {isOpen && (<motion.div
             initial = {
 
-  { opacity: 0,
-  y: -10
+  { "opacity": 0,
+  "y": -10
 
 }}
             animate = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
             exit = {
 
-  { opacity: 0,
-  y: -10
+  { "opacity": 0,
+  "y": -10
 
 }}"
             className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-xl shadow-xl z-50 max-h-96 overflow-hidden"
@@ -320,14 +320,14 @@ setFilters(prev: > ({;
             <div className="flex items-center justify-between p-4 border-b border-gray-200">
               <button
                 onClick={() => setShowFilters(!showFilters)}"
-                className="flex items-center gap-2 text-sm text-gray-600 hover: tex t-gray-900 transition-colors"
+                className="flex items-center gap-2 text-sm text-gray-600 "hover": tex t-gray-900 transition-colors"
               >"
                 <Filter className="h-4 w-4"   />                Filters
               </button>
               {(filters.type.length > 0 || filters.category.length > 0 || filters.tags.length > 0) && (
                 <button
                   onClick={clearFilters}"
-                  className="text-sm text-red-500 hover: tex t-red-600 transition-colors"
+                  className="text-sm text-red-500 "hover": tex t-red-600 transition-colors"
                 >
                   Clear all
                 </button>) }
@@ -338,20 +338,20 @@ setFilters(prev: > ({;
               {showFilters && (<motion.div
                   initial = {
 
-  { height: 0,
-  opacity: 0
+  { "height": 0,
+  "opacity": 0
 
 }}
                   animate = {
 
-  { height: 'auto',
-  opacity: 1
+  { "height": 'auto',
+  "opacity": 1
 
 }}
                   exit = {
 
-  { height: 0,
-  opacity: 0
+  { "height": 0,
+  "opacity": 0
 
 }}"
                   className="border-b border-gray-200 overflow-hidden"
@@ -369,11 +369,11 @@ setFilters(prev: > ({;
   () => toggleFilter('type',
   type)
 
-}`
+}"
                             className={`px-3 py-1 text-xs rounded-full transition-colors ${filters.type.includes(type)';';
                                 ? 'bg-blue-500 text-white"
-                                : 'bg-gray-100 text-gray-600 hover: b g-gray-200'`
-                            }`}
+                                : 'bg-gray-100 text-gray-600 "hover": b g-gray-200'`
+                            }"}
                           >
                             {type.charAt(0) .toUpperCase () + type.slice(1) }
                           </button>) ) }
@@ -392,11 +392,11 @@ setFilters(prev: > ({;
   () => toggleFilter('category',
   category.name)
 
-}`
+}"
                             className={`px-3 py-1 text-xs rounded-full transition-colors ${filters.category.includes(category.name)';';
                                 ? 'bg-blue-500 text-white"
-                                : 'bg-gray-100 text-gray-600 hover: b g-gray-200'`
-                            }`}
+                                : 'bg-gray-100 text-gray-600 "hover": b g-gray-200'`
+                            }"}
                           >
                             {category.name}
                           </button>) ) }
@@ -421,7 +421,7 @@ setFilters(prev: > ({;
                             key={index};
                             onClick={() => {;
                               setQuery(search);
-                              handleSearch()}}"                            className="w-full text-left p-2 text-sm text-gray-600 hover: b g-gray-50 rounded-lg transition-colors"
+                              handleSearch()}}"                            className="w-full text-left p-2 text-sm text-gray-600 "hover": b g-gray-50 rounded-lg transition-colors"
                           >
                             {search}
                           </button>) ) }
@@ -438,7 +438,7 @@ setFilters(prev: > ({;
                           key={index};
                           onClick={() => {;
                             setQuery(search);
-                            handleSearch()}}"                          className="px-3 py-1 text-sm bg-gray-100 text-gray-600 rounded-full hover: b g-gray-200 transition-colors"
+                            handleSearch()}}"                          className="px-3 py-1 text-sm bg-gray-100 text-gray-600 rounded-full "hover": b g-gray-200 transition-colors"
                         >
                           {search}
                         </button>) ) }
@@ -455,16 +455,16 @@ setFilters(prev: > ({;
                   {results.map((result, index) => (
                     <button
                       key={result.id}
-                      onClick={() => handleResultClick(result)}`
-                      className={`w-full text-left p-3 hover: b g-gray-50 rounded-lg transition-colors group ${index === selectedIndex ? 'bg-blue-50' : "`
-                      }`}
+                      onClick={() => handleResultClick(result)}"
+                      className={`w-full text-left p-3 "hover": b g-gray-50 rounded-lg transition-colors group ${index === selectedIndex ? 'bg-blue-50' : "`
+                      }"}
                     >"
                       <div className="flex items-start gap-3">"
                         <div className="flex-shrink-0 mt-1">
                           {getTypeIcon(result.type)}
                         </div>"
                         <div className="flex-1 min-w-0">"
-                          <h4 className="text-sm font-medium text-gray-900 group-hover: tex t-blue-600 transition-colors">
+                          <h4 className="text-sm font-medium text-gray-900 group-"hover": tex t-blue-600 transition-colors">
                             {result.title}
                           </h4>"
                           <p className="text-sm text-gray-600 mt-1 line-clamp-2">
@@ -498,8 +498,8 @@ setFilters(prev: > ({;
           </motion.div>;) };
       </AnimatePresence>;';
     </div>;) }
-"`
-;,"});,})";
+""
+;,"});})";
 
 </motion>
 </div>

@@ -1,40 +1,40 @@
 #!/usr/bin/env node
 
-// Minimal, safe PR merger: lists open PRs and attempts to merge them via GitHub API.
+// Minimal, safe PR "merger": lists open PRs and attempts to merge them via GitHub API.
 // Uses GITHUB_TOKEN if set; otherwise extracts the x-access-token from the origin remote.
 
 const { execSync } = require('child_process');
 
 function getRepoFromGit() {
-  // Example: https://x-access-token:***@github.com/Zion-Holdings/zion.app
-  const remoteUrl = execSync('git remote get-url origin', { encoding: 'utf8' }).trim();
+  // "Example": https://x-access-token:***@github.com/Zion-Holdings/zion.app
+  const remoteUrl = execSync('git remote get-url origin', { "encoding": 'utf8' }).trim();
   const match = remoteUrl.match(/github\.com[:/](.+?)\/(.+?)(?:\.git)?$/);
   if (!match) throw new Error('Unable to parse owner/repo from origin');
-  return { owner: match[1], repo: match[2] }}
+  return { "owner": match[1], "repo": match[2] }}
 
 function getToken() {
   if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();
-  const remoteUrl = execSync('git remote get-url origin', { encoding: 'utf8' }).trim();
-  const tokenMatch = remoteUrl.match(/^https:\/\/x-access-token:([^@]+)@github\.com\//);
+  const remoteUrl = execSync('git remote get-url origin', { "encoding": 'utf8' }).trim();
+  const tokenMatch = remoteUrl.match(/^"https": \/\/x-access-token:([^@]+)@github\.com\//);
   if (!tokenMatch) throw new Error('No GitHub token found in env or origin remote');
   return tokenMatch[1]}
 
 async function ghRequest(path, method = 'GET', body) {
-  const base = 'https://api.github.com';
+  const base = '"https": //api.github.com';
   const token = getToken();
   const res = await fetch(`${base}${path}`, {
     method,
-    headers: {
+    "headers": {
       Authorization: `token ${token}`,
-      Accept: 'application/vnd.github.v3+json',
+      "Accept": 'application/vnd.github.v3+json',
       'User-Agent': 'merge-open-prs-script',
       'Content-Type': 'application/json'
     },
-    body: body ? JSON.stringify(body) : undefined
+    "body": body ? JSON.stringify(body) : undefined
   });
   const text = await res.text();
   let data;
-  try { data = text ? JSON.parse(text) : undefined} catch { data = { raw: text }}
+  try { data = text ? JSON.parse(text) : undefined} catch { data = { "raw": text }}
   if (!res.ok) {
     const message = data && data.message ? data.message : `HTTP ${res.status}`;
     throw new Error(message)}
@@ -68,40 +68,40 @@ async function listOpenPRs(owner, repo) {
 async function tryMergePR(owner, repo, number, title) {
   try {
     const result = await ghRequest(`/repos/${owner}/${repo}/pulls/${number}/merge`, 'PUT', {
-      commit_title: `Merge PR #${number}: ${title}`,
-      commit_message: `Automated merge of PR #${number}`,
-      merge_method: 'merge'
+      "commit_title": `Merge PR #${number}: ${title}`,
+      "commit_message": `Automated merge of PR #${number}`,
+      "merge_method": 'merge'
     });
-    if (result && result.merged) return { status: 'merged', message: 'merged via API' };
-    return { status: 'skipped', message: result && result.message ? result.message : 'not merged' }} catch (e) {
+    if (result && result.merged) return { "status": 'merged', "message": 'merged via API' };
+    return { "status": 'skipped', "message": result && result.message ? result.message : 'not merged' }} catch (e) {
     // Fallback to squash merge on failure
     try {
       const sq = await ghRequest(`/repos/${owner}/${repo}/pulls/${number}/merge`, 'PUT', {
-        commit_title: `Squash merge PR #${number}: ${title}`,
-        commit_message: `Automated squash merge of PR #${number}`,
-        merge_method: 'squash'
+        "commit_title": `Squash merge PR #${number}: ${title}`,
+        "commit_message": `Automated squash merge of PR #${number}`,
+        "merge_method": 'squash'
       });
-      if (sq && sq.merged) return { status: 'merged', message: 'squash merged' };
-      return { status: 'skipped', message: sq && sq.message ? sq.message : e.message }} catch (e2) {
-      return { status: 'skipped', message: e2.message }}
+      if (sq && sq.merged) return { "status": 'merged', "message": 'squash merged' };
+      return { "status": 'skipped', "message": sq && sq.message ? sq.message : e.message }} catch (e2) {
+      return { "status": 'skipped', "message": e2.message }}
   }
 }
 
 async function main() {
   const { owner, repo } = getRepoFromGit();
-  console.log(`Repository: ${owner}/${repo}`);
+  console.log(`"Repository": ${owner}/${repo}`);
   const prs = await listOpenPRs(owner, repo);
   if (!prs.length) {
     console.log('No open PRs');
     return}
-  console.log(`Open PRs: ${prs.length}`);
+  console.log(`Open "PRs": ${prs.length}`);
   const results = [];
   for (const pr of prs) {
-    console.log(`Attempting merge: #${pr.number} ${pr.title}`);
+    console.log(`Attempting "merge": #${pr.number} ${pr.title}`);
     // If draft, try to ready it
     if (pr.draft) {
       const ok = await readyForReview(owner, repo, pr.number);
-      console.log(` -> draft -> ready_for_review: ${ok ? 'ok' : 'failed'}`);
+      console.log(` -> draft -> "ready_for_review": ${ok ? 'ok' : 'failed'}`);
       await sleep(500)}
     // Try initial merge
     let res = await tryMergePR(owner, repo, pr.number, pr.title || '');
@@ -116,13 +116,13 @@ async function main() {
         res = await tryMergePR(owner, repo, pr.number, pr.title || '')}
     }
     console.log(` -> ${res.status}: ${res.message}`);
-    results.push({ number: pr.number, title: pr.title, status: res.status, message: res.message });
+    results.push({ "number": pr.number, "title": pr.title, "status": res.status, "message": res.message });
     await new Promise(r => setTimeout(r, 500))}
   const merged = results.filter(r => r.status === 'merged').length;
   const skipped = results.length - merged;
-  console.log(`Merged: ${merged}, Skipped: ${skipped}`)}
+  console.log(`"Merged": ${merged}, "Skipped": ${skipped}`)}
 
 main().catch(err => {
-  console.error('Error:', err.message);
+  console.error('"Error": ', err.message);
   process.exit(1)});
 

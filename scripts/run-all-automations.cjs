@@ -12,7 +12,7 @@ class AllAutomationsRunner {
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true })}
+      fs.mkdirSync(this.reportsDir, { "recursive": true })}
   }
 
   log(message) {
@@ -23,68 +23,67 @@ class AllAutomationsRunner {
     this.log(`🚀 Running ${scriptName}...`);
     try {
       const result = execSync(`node ${scriptPath}`, {
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 300000 // 5 minutes
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 300000 // 5 minutes
       });
       
       this.log(`✅ ${scriptName} completed successfully`);
       return {
-        name: scriptName,
-        success: true,
-        output: result
+        "name": scriptName,
+        "success": true,
+        "output": result
       }} catch (error) {
-      this.log(`❌ ${scriptName} failed: ${error.message}`);
+      this.log(`❌ ${scriptName} "failed": ${error.message}`);
       return {
-        name: scriptName,
-        success: false,
-        error: error.message
+        "name": scriptName,
+        "success": false,
+        "error": error.message
       }}
   }
 
   async runAllAutomations() {
     this.log('🎯 Starting All Automations Runner');
 
-    const automations = [
-      {
-        name: 'Error Prevention System',
-        script: 'scripts/error-prevention-system.cjs'
+    const automations = [{
+        "name": 'Error Prevention System',
+        "script": 'scripts/error-prevention-system.cjs'
       },
       {
-        name: 'Performance Optimizer',
-        script: 'scripts/performance-optimizer.cjs'
+        "name": 'Performance Optimizer',
+        "script": 'scripts/performance-optimizer.cjs'
       },
       {
-        name: 'Security Auditor',
-        script: 'scripts/security-auditor.cjs'
+        "name": 'Security Auditor',
+        "script": 'scripts/security-auditor.cjs'
       },
       {
-        name: 'Build Monitor',
-        script: 'scripts/build-monitor.cjs'
+        "name": 'Build Monitor',
+        "script": 'scripts/build-monitor.cjs'
       },
       {
-        name: 'Code Quality Monitor',
-        script: 'scripts/code-quality-monitor.cjs'
+        "name": 'Code Quality Monitor',
+        "script": 'scripts/code-quality-monitor.cjs'
       },
       {
-        name: 'Dependency Manager',
-        script: 'scripts/dependency-manager.cjs'
+        "name": 'Dependency Manager',
+        "script": 'scripts/dependency-manager.cjs'
       },
       {
-        name: 'Git Workflow Automator',
-        script: 'scripts/git-workflow-automator.cjs'
+        "name": 'Git Workflow Automator',
+        "script": 'scripts/git-workflow-automator.cjs'
       },
       {
-        name: 'Health Monitor',
-        script: 'scripts/health-monitor.cjs'
+        "name": 'Health Monitor',
+        "script": 'scripts/health-monitor.cjs'
       },
       {
-        name: 'Log Analyzer',
-        script: 'scripts/log-analyzer.cjs'
+        "name": 'Log Analyzer',
+        "script": 'scripts/log-analyzer.cjs'
       },
       {
-        name: 'Resource Optimizer',
-        script: 'scripts/resource-optimizer.cjs'
+        "name": 'Resource Optimizer',
+        "script": 'scripts/resource-optimizer.cjs'
       }
     ];
 
@@ -100,20 +99,20 @@ class AllAutomationsRunner {
     this.log('📊 Generating overall report...');
     
     const report = {
-      timestamp: new Date().toISOString(),
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "summary": {
         total: automationResults.length,
-        successful: automationResults.filter(r => r.success).length,
-        failed: automationResults.filter(r => !r.success).length
+        "successful": automationResults.filter(r => r.success).length,
+        "failed": automationResults.filter(r => !r.success).length
       },
-      results: automationResults,
-      recommendations: this.generateOverallRecommendations(automationResults)
+      "results": automationResults,
+      "recommendations": this.generateOverallRecommendations(automationResults)
     };
 
     const reportFile = path.join(this.reportsDir, `all-automations-report-${Date.now()}.json`);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-    this.log(`📄 Overall report generated: ${reportFile}`);
+    this.log(`📄 Overall report "generated": ${reportFile}`);
     
     return report}
 
@@ -123,20 +122,20 @@ class AllAutomationsRunner {
     const failedAutomations = automationResults.filter(r => !r.success);
     if (failedAutomations.length > 0) {
       recommendations.push({
-        type: 'failed_automations',
-        priority: 'high',
-        message: `${failedAutomations.length} automations failed. Review and fix the issues.`,
-        impact: 'Ensures all automations work properly',
-        failedAutomations: failedAutomations.map(a => a.name)
+        "type": 'failed_automations',
+        "priority": 'high',
+        "message": `${failedAutomations.length} automations failed. Review and fix the issues.`,
+        "impact": 'Ensures all automations work properly',
+        "failedAutomations": failedAutomations.map(a => a.name)
       })}
 
     const successfulAutomations = automationResults.filter(r => r.success);
     if (successfulAutomations.length === automationResults.length) {
       recommendations.push({
-        type: 'all_automations_successful',
-        priority: 'low',
-        message: 'All automations completed successfully. Great job!',
-        impact: 'Indicates a healthy project state'
+        "type": 'all_automations_successful',
+        "priority": 'low',
+        "message": 'All automations completed successfully. Great job!',
+        "impact": 'Indicates a healthy project state'
       })}
 
     return recommendations}
@@ -149,10 +148,10 @@ class AllAutomationsRunner {
       const overallReport = await this.generateOverallReport(automationResults);
 
       this.log('🎉 All Automations Runner completed!');
-      this.log(`📊 Total automations: ${overallReport.summary.total}`);
-      this.log(`✅ Successful: ${overallReport.summary.successful}`);
-      this.log(`❌ Failed: ${overallReport.summary.failed}`);
-      this.log(`💡 Recommendations: ${overallReport.recommendations.length}`);
+      this.log(`📊 Total "automations": ${overallReport.summary.total}`);
+      this.log(`✅ "Successful": ${overallReport.summary.successful}`);
+      this.log(`❌ "Failed": ${overallReport.summary.failed}`);
+      this.log(`💡 "Recommendations": ${overallReport.recommendations.length}`);
 
       if (overallReport.summary.failed > 0) {
         this.log('❌ Some automations failed. Check the report for details.');
@@ -160,7 +159,7 @@ class AllAutomationsRunner {
         this.log('🎉 All automations completed successfully!');
         process.exit(0)}
     } catch (error) {
-      this.log(`💥 All Automations Runner failed: ${error.message}`);
+      this.log(`💥 All Automations Runner "failed": ${error.message}`);
       process.exit(1)}
   }
 }

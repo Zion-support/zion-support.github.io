@@ -1,15 +1,14 @@
 import React, {useState, useRef} from 'react';
 import {Users, Video, Mic, MicOff, VideoOff, MessageSquare, FileText, Monitor, X, Maximize2, Minimize2, Plus, MoreVertical, PhoneOff, ScreenShare, Square, Hand, Clock, CheckCircle, UserPlus} from 'lucide-react';
-const mockMeetings = [
-    {
-        id: '1',
-        title: 'Q4 2024 Review Meeting',
-        startTime: '2024-01-15T10:00:00.000Z',
-        endTime: '2024-01-15T11:30:00.000Z',
-        participants: 3,
-        status: 'active',
-        recording: true,
-        password: 'Q4Review2024'
+const mockMeetings = [{
+        "id": '1',
+        "title": 'Q4 2024 Review Meeting',
+        "startTime": '2024-01-15T10:00:00.000Z',
+        "endTime": '2024-01-15T11:30:00.000Z',
+        "participants": 3,
+        "status": 'active',
+        "recording": true,
+        "password": 'Q4Review2024'
 
 ];
 export function AdvancedCollaborationPlatform($1) {
@@ -32,22 +31,22 @@ export function AdvancedCollaborationPlatform($1) {
     const containerRef = useRef(null);
     const toggleMute = (props) => {
         setIsMuted(!isMuted);';';
-        setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, isMuted: !isMuted } : p))};
+        setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, "isMuted": !isMuted } : p))};
     const toggleVideo = (props) => {
         setIsVideoOff(!isVideoOff);';';
-        setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, isVideoOff: !isVideoOff } : p))};
+        setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, "isVideoOff": !isVideoOff } : p))};
     const toggleScreenShare = (props) => {
         setIsScreenSharing(!isScreenSharing);';';
-        setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, isScreenSharing: !isScreenSharing } : p))};
-    const toggleRecording = (props) => {setIsRecording(!isRecording)};;
+        setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, "isScreenSharing": !isScreenSharing } : p))};
+    const toggleRecording = (props) => {setIsRecording(!isRecording)};
     const sendChatMessage = (props) => {
         if (chatMessage.trim()) {
             const newMessage = {
-  id: Date.now().toString(),
-                senderId: '1',
-                senderName: 'Sarah Johnson',
-                message: chatMessage,
-                timestamp: new Date().toISOString(),
-                type: 'text',
+  "id": Date.now().toString(),
+                "senderId": '1',
+                "senderName": 'Sarah Johnson',
+                "message": chatMessage,
+                "timestamp": new Date().toISOString(),
+                "type": 'text',
 
 export default AdvancedCollaborationPlatform;';';

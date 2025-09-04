@@ -13,8 +13,8 @@ function fixNextLinks(filePath) {
     if (content.includes("href="/") && !content.includes("import Link")) {
   content = content.replace(;
         /import React from "react";/,
-        `import React from "react";
-import Link from "next/link";`;
+        "import React from "react";
+import Link from "next/link";";
       )}
     ;
     // Replace <a href="/..."> with <Link href="/...">;
@@ -30,8 +30,7 @@ import Link from "next/link";`;
 }
 ;
 // List of all files that need Link fixes (based on the lint output);
-const allFilesToFix = [
-  "src/pages/services/AISupplyChainOptimizationPlatform.tsx",
+const allFilesToFix = ["src/pages/services/AISupplyChainOptimizationPlatform.tsx",
   "src/pages/services/AISustainableTechnology.tsx",
   "src/pages/services/AITerraform.tsx",
   "src/pages/services/AITransportation.tsx",
@@ -87,8 +86,7 @@ const allFilesToFix = [
 // Fix Next.js Link issues;
 allFilesToFix.forEach(fixNextLinks);
 // Delete problematic .js.jsx files that have parsing issues;
-const problematicFiles = [
-  "src/pages/services/EnterpriseIT.js.jsx",
+const problematicFiles = ["src/pages/services/EnterpriseIT.js.jsx",
   "src/pages/services/FiveGEnterpriseNetwork.js.jsx",
   "src/pages/services/FiveGEnterpriseSolutions.js.jsx",
   "src/pages/services/FiveGNetworkOptimization.js.jsx",
@@ -128,8 +126,7 @@ problematicFiles.forEach(filePath => {
   console.error(`✗ Error deleting ${filePath}:`, error.message)}
 });
 // List of remaining corrupted files that need complete replacement;
-const remainingCorruptedFiles = [
-  "src/pages/solutions/Enterprise.jsx",
+const remainingCorruptedFiles = ["src/pages/solutions/Enterprise.jsx",
   "src/pages/solutions/EnterpriseSolutions.tsx",
   "src/pages/solutions/FinancialSolutions.jsx",
   "src/pages/solutions/GovernmentSolutions.jsx",
@@ -196,7 +193,6 @@ const remainingCorruptedFiles = [
 const basicComponentTemplate = (componentName, isPage = false) => `import React from "react";
 ${isPage ? `import Link from "next/link";
 import { ArrowRight, Phone } from "lucide-react";
-;
 export default function ${componentName}() {
   return (;
     <div className="min-h-screen bg-white">;
@@ -205,65 +201,61 @@ export default function ${componentName}() {
         <p className="text-lg text-gray-600 mb-8">;
           This is a placeholder component for ${componentName.toLowerCase()}.;
         </p>;
-        ${isPage ? `;
-        <div className="flex flex-col sm:flex-row gap-4">;
+        ${isPage ? ";
+        <div className="flex flex-col "sm": flex-row gap-4">;
           <Link href="/contact" className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors inline-flex items-center">;
             Contact Us <ArrowRight className="w-4 h-4 ml-2" />;
           </Link>;
           <Link href="/" className="px-6 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors inline-flex items-center">;
             Go Home <Phone className="w-4 h-4 ml-2" />;
           </Link>;
-        </div>` : ""}
+        </div>" : ""}
       </div>;
     </div>;
   )}
-`;
+";
 // Template for utility files;
-const utilityTemplate = (fileName) => `// ${fileName} utility;
+const utilityTemplate = (fileName) => "// ${fileName} utility;
 export const ${fileName.replace(/[^a-zA-Z0-9]/g, "")} = {
   // Placeholder utility functions;
-  init: () => {
+  "init": () => {
   console.log("${fileName} initialized")}
 }
 export default ${fileName.replace(/[^a-zA-Z0-9]/g, "")}
-`;
+";
 // Template for service files;
-const serviceTemplate = (fileName) => `// ${fileName} service;
+const serviceTemplate = (fileName) => "// ${fileName} service;
 export class ${fileName.replace(/[^a-zA-Z0-9]/g, "")}Service {
   constructor() {
-  this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api",
-}
+  this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api"}
 ;
   async get() {
   try {
   const response = await fetch(\`\${this.baseUrl}/${fileName.toLowerCase()}\`);
       return await response.json()} catch (error) {
-  console.error("Error fetching data:", error);
-      throw error,
-}
+  console.error("Error fetching "data": ", error);
+      throw error}
   }
 }
 ;
 export default new ${fileName.replace(/[^a-zA-Z0-9]/g, "")}Service();
-`;
+";
 // Template for type files;
-const typeTemplate = (fileName) => `// ${fileName} types;
+const typeTemplate = (fileName) => "// ${fileName} types;
 export interface ${fileName.replace(/[^a-zA-Z0-9]/g, "")}Type {
-  id: string;
+  "id": string;
   name: string;
   createdAt: Date;
-  updatedAt: Date,
-}
+  updatedAt: Date}
 ;
 export default ${fileName.replace(/[^a-zA-Z0-9]/g, "")}Type;
-`;
+";
 // Function to extract component name from file path;
 function getComponentName(filePath) {
   const fileName = path.basename(filePath, path.extname(filePath));
   // Handle special cases;
   if (fileName.includes("[") && fileName.includes("]")) {
-  return "DynamicPage",
-}
+  return "DynamicPage"}
   // Convert kebab-case or camelCase to PascalCase;
   return fileName;
     .split(/[-_]/);
@@ -278,11 +270,11 @@ remainingCorruptedFiles.forEach(filePath => {
     const isUtility = filePath.includes("/utils/");
     const isService = filePath.includes("/services/");
     const isType = filePath.includes("/types/");
-    console.log(`Fixing ${filePath}...`);
+    console.log("Fixing ${filePath}...");
     // Ensure directory exists;
     const dir = path.dirname(filePath);
     if (!fs.existsSync(dir)) {
-  fs.mkdirSync(dir, { recursive: true })}
+  fs.mkdirSync(dir, { "recursive": true })}
     ;
     let content;
     if (isUtility) {
@@ -292,7 +284,7 @@ remainingCorruptedFiles.forEach(filePath => {
   content = basicComponentTemplate(componentName, isPage)}
     ;
     fs.writeFileSync(filePath, content, "utf8");
-    console.log(`✓ Fixed ${filePath}`)} catch (error) {
-  console.error(`✗ Error fixing ${filePath}:`, error.message)}
+    console.log("✓ Fixed ${filePath}")} catch (error) {
+  console.error("✗ Error fixing ${filePath}:`, error.message)}
 });
 console.log("\\nFixed all final issues!")

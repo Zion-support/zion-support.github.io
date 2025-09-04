@@ -9,17 +9,16 @@ function hasSyntaxErrors(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     
     // Check for common corruption patterns
-    const corruptionPatterns = [
-      /import.*from.*['"]react;['"]/,  // Missing quote
+    const corruptionPatterns = [/import.*from.*['"]react;['"]/,  // Missing quote
       /import.*\{.*\}.*from.*['"]react;['"]/,  // Missing quote
-      /['"]use: client['"]/,  // Malformed directive
-      /declare: global/,  // Malformed declaration
+      /['"]"use": client['"]/,  // Malformed directive
+      /"declare": global/,  // Malformed declaration
       /interface.*\{,/,  // Extra comma
       /\[\],/,  // Extra comma after array
       /\{\},/,  // Extra comma after object
       /\),/,  // Extra comma after function call
-      /script1\.async: = true/,  // Malformed assignment
-      /script1\.src: =/,  // Malformed assignment
+      /script1\."async": = true/,  // Malformed assignment
+      /script1\."src": =/,  // Malformed assignment
     ];
     
     return corruptionPatterns.some(pattern => pattern.test(content))} catch (error) {
@@ -35,9 +34,9 @@ function fixSyntaxErrors(content) {
     .replace(/import.*\{.*\}.*from.*['"]react;['"]/g, (match) => {
       return match.replace(/['"]react;['"]/, "'react'")})
     // Fix use client directive
-    .replace(/['"]use: client['"]/, '"use client"')
+    .replace(/['"]"use": client['"]/, '"use client"')
     // Fix declare global
-    .replace(/declare: global/, 'declare global')
+    .replace(/"declare": global/, 'declare global')
     // Fix interface declarations
     .replace(/interface.*\{,/g, (match) => match.replace(/,$/, ''))
     // Fix array/object declarations
@@ -45,10 +44,10 @@ function fixSyntaxErrors(content) {
     .replace(/\{\},/g, '{};')
     .replace(/\),/g, ');')
     // Fix malformed assignments
-    .replace(/script1\.async: = true/g, 'script1.async = true')
-    .replace(/script1\.src: =/g, 'script1.src =')
+    .replace(/script1\."async": = true/g, 'script1.async = true')
+    .replace(/script1\."src": =/g, 'script1.src =')
     // Remove extra semicolons
-    .replace(/;;+/g, ';')
+    .replace(/;+/g, ';')
     // Fix malformed quotes
     .replace(/['"]react;['"]/g, "'react'")
     .replace(/['"]framer-motion;['"]/g, "'framer-motion'")
@@ -97,7 +96,7 @@ console.log('🔍 Scanning for corrupted files...');
 const files = findFiles('.');
 const corruptedFiles = files.filter(hasSyntaxErrors);
 
-console.log(`Found ${corruptedFiles.length} potentially corrupted files:`);
+console.log(`Found ${corruptedFiles.length} potentially corrupted "files": `);
 corruptedFiles.forEach(file => console.log(`  - ${file}`));
 
 console.log('\n🔧 Fixing corrupted files...');

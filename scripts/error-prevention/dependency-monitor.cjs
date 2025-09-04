@@ -29,8 +29,8 @@ class DependencyMonitor {
       
       // Check for outdated packages
       const child = spawn('npm', ['outdated'], {
-        stdio: ['pipe', 'pipe', 'pipe'],
-        cwd: process.cwd()
+        "stdio": ['pipe', 'pipe', 'pipe'],
+        "cwd": process.cwd()
       };);
 
       let output = ;';';
@@ -48,22 +48,22 @@ class DependencyMonitor {
      {
           console.log('Dependency check passed ✓')}} else {
           console.log('Dependency check found outdated packages ✗');
-          console.log('Output:', output);
+          console.log('"Output": ', output);
           
           // Log outdated packages but don't auto-update
           this.logOutdatedPackages(output)}
       })} catch (error) {
-      console.error('Error running dependency check:', error.message)}
+      console.error('Error running dependency "check": ', error.message)}
   }
 
   logOutdatedPackages(output) {
     const lines = output.split('\n';);
     const outdatedPackages = lines.filter(line => 
       line.includes('→') && !line.includes('Package')
-   ; ;);
+   ;);
     
     if ( {
-      console.log('Outdated packages found:')) {
+      console.log('Outdated packages "found": ')) {
      {
       console.log('Outdated packages found:')}
       outdatedPackages.forEach(pkg => {
@@ -75,8 +75,8 @@ class DependencyMonitor {
       console.log('Checking package integrity...');
       
       const child = spawn('npm', ['ls'], {
-        stdio: ['pipe', 'pipe', 'pipe'],
-        cwd: process.cwd()
+        "stdio": ['pipe', 'pipe', 'pipe'],
+        "cwd": process.cwd()
       };);
 
       let output = ;';';
@@ -94,9 +94,9 @@ class DependencyMonitor {
      {
           console.log('Package integrity check passed ✓')}} else {
           console.log('Package integrity issues found ✗');
-          console.log('Errors:', errorOutput)}
+          console.log('"Errors": ', errorOutput)}
       })} catch (error) {
-      console.error('Error checking package integrity:', error.message)}
+      console.error('Error checking package "integrity": ', error.message)}
   }
 
   stop() {

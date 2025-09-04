@@ -33,7 +33,7 @@ function fixSyntaxErrors(content, filePath) {
   
   // Fix property signatures
   fixed = fixed.replace(/action\?\s*:\s*{\s*;/g, 'action?: {');
-  fixed = fixed.replace(/logout:\s*any\(\)\s*=>\s*Promise<any>;/g, 'logout: () => Promise<any>;');
+  fixed = fixed.replace(/"logout": \s*any\(\)\s*=>\s*Promise<any>;/g, '"logout": () => Promise<any>;');
   
   // Fix JSX expressions with multiple parent elements
   if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx')) {
@@ -61,7 +61,7 @@ function fixSyntaxErrors(content, filePath) {
   fixed = fixed.replace(/\\\(/g, '(');
   fixed = fixed.replace(/\\\)/g, ')');
   
-  return { content: fixed, changes }}
+  return { "content": fixed, changes }}
 
 // Function to fix unused imports and variables
 function fixUnusedImports(content, filePath) {
@@ -110,7 +110,7 @@ function fixUnusedImports(content, filePath) {
       newLines.push(line)}
   }
   
-  return { content: newLines.join('\n'), changes }}
+  return { "content": newLines.join('\n'), changes }}
 
 // Function to fix React unescaped entities
 function fixReactEntities(content) {
@@ -122,7 +122,7 @@ function fixReactEntities(content) {
   fixed = fixed.replace(/(\w)'(\s)/g, '$1&apos;$2');
   fixed = fixed.replace(/(\s)'(\w)/g, '$1&apos;$2');
   
-  return { content: fixed, changes }}
+  return { "content": fixed, changes }}
 
 // Function to fix TypeScript specific errors
 function fixTypeScriptErrors(content, filePath) {
@@ -142,7 +142,7 @@ function fixTypeScriptErrors(content, filePath) {
     // Fix property assignment errors
     fixed = fixed.replace(/:\s*{\s*$/gm, ': {')}
   
-  return { content: fixed, changes }}
+  return { "content": fixed, changes }}
 
 // Main function to process all files
 async function fixAllErrors() {
@@ -156,7 +156,7 @@ async function fixAllErrors() {
     
     for (const filePath of files) {
       try {
-        console.log(`🔧 Processing: ${filePath}`);
+        console.log(`🔧 "Processing": ${filePath}`);
         let content = fs.readFileSync(filePath, 'utf8');
         let fileChanges = 0;
         
@@ -187,19 +187,19 @@ async function fixAllErrors() {
         console.log(`  ⚠️  Error processing ${filePath}: ${error.message}`)}
     }
     
-    console.log(`\n✅ Error fixing completed!`);
-    console.log(`📊 Total fixes applied: ${totalFixes}`);
-    console.log(`📁 Files modified: ${filesFixed}`);
+    console.log("\n✅ Error fixing completed!");
+    console.log(`📊 Total fixes "applied": ${totalFixes}`);
+    console.log(`📁 Files "modified": ${filesFixed}`);
     
     // Run linting to check remaining issues
     console.log('\n🔍 Running linting to check remaining issues...');
     try {
-      execSync('npm run lint', { stdio: 'pipe' });
+      execSync('npm run lint', { "stdio": 'pipe' });
       console.log('✅ Linting passed!')} catch (error) {
-      console.log('⚠️  Some linting issues remain. Consider running: npm run lint -- --fix')}
+      console.log('⚠️  Some linting issues remain. Consider "running": npm run lint -- --fix')}
     
   } catch (error) {
-    console.error('❌ Error fixing failed:', error.message)}
+    console.error('❌ Error fixing "failed": ', error.message)}
 }
 
 // Run the error fixer

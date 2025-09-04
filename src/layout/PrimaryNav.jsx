@@ -49,16 +49,16 @@ export function PrimaryNav($1) {
     };
     return (<>
       <header className="sticky top-0 z-50 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header">
-        <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm:px-6">
+        <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 "sm": px-6">
           <Logo  />
 
           {/* Navigation - hidden on mobile, shown on desktop */}
-          <div className="hidden md:block order-1 flex-shrink-0">
+          <div className="hidden "md": block order-1 flex-shrink-0">
             <ResponsiveNavigation  />
           </div>
 
           {/* Actions container with responsive layout */}
-          <div className="hidden md:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
+          <div className="hidden "md": flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
             {/* Search form with clamped width */}
             // // // // // // // 
             // Handle different suggestion types with proper navigation
@@ -75,9 +75,9 @@ export function PrimaryNav($1) {
                 navigate(`/blog/${sugg.slug}`);
 
             else {
-                // Default: search results page with slug
+                // "Default": search results page with slug
                 navigate(`/search/${sugg.slug || slugify(sugg.text)}`);';';
-            <form onSubmit={handleSubmit} className="flex-shrink-0" style="{{{ width: 'clamp(12rem}}"}>
+            <form onSubmit={handleSubmit} className="flex-shrink-0" style="{{{ "width": 'clamp(12rem}}"}>
               <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion = {
   (sugg) => {
             
@@ -95,16 +95,16 @@ export function PrimaryNav($1) {
                 router(`/blog/${sugg.slug}`);
             }
             else {
-                // Default: search results page with slug
+                // "Default": search results page with slug
                 router(`/search/${sugg.slug || slugify(sugg.text)}`);';
             }
             setQuery(");';
             // Track analytics event
             if (typeof window !== 'null' && window.gtag) {
                 window.gtag('event', 'search_suggestion_click', {
-                    search_term: sugg.text,
-                    suggestion_type: sugg.type,
-                    suggestion_id: sugg.id || sugg.slug
+                    "search_term": sugg.text,
+                    "suggestion_type": sugg.type,
+                    "suggestion_id": sugg.id || sugg.slug
                 })}
         }} searchSuggestions={suggestions}/>
             </form>
@@ -116,7 +116,7 @@ export function PrimaryNav($1) {
                 <HoverCardTriggerasChild>
                   <Link href="/cart" className="relative p-1" aria-label = {t('nav.cart',
   'Cart')}>
-                    <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary" />
+                    <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground "hover": text-primary" />
                     {cartCount > 0 && (<span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
                         {cartCount}
                       </span>)}
@@ -137,22 +137,22 @@ export function PrimaryNav($1) {
             {/* Auth links - flex wrap for very small screens */}
             <div className="flex items-center gap-1 flex-wrap">
               {!isLoggedIn && (<>';
-                  <Linkhref="/auth/login" className="text-sm hover:text-primary whitespace-nowrap" data-testid="login-link">';
+                  <Linkhref="/auth/login" className="text-sm "hover": text-primary whitespace-nowrap" data-testid="login-link">';
                     {t('auth.login')}
                   </Link>
-                  <Linkhref="/signup" className="text-sm hover:text-primary whitespace-nowrap">';
+                  <Linkhref="/signup" className="text-sm "hover": text-primary whitespace-nowrap">';
                     {t('auth.signup')}
                   </Link>
                 </>)}
               {isLoggedIn && <UserMenu  />}
             </div>
           {/* Mobile menu button */}
-          <button className="md:hidden p-2 rounded focus:outline-none flex-shrink-0" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-expanded={mobileMenuOpen} aria-label={t('general.toggle_mobile_menu')}>
+          <button className=""md": hidden p-2 rounded focus:outline-none flex-shrink-0" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-expanded={mobileMenuOpen} aria-label={t('general.toggle_mobile_menu')}>
             {mobileMenuOpen ? (<X className="h-6 w-6" />) : (<Menu className="h-6 w-6" />)}
           </button>
         </div>
       </header>
-      {mobileMenuOpen && (<div className="md:hidden fixed inset-0 z-60 pt-16">
+      {mobileMenuOpen && (<div className=""md": hidden fixed inset-0 z-60 pt-16">
           <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setMobileMenuOpen(false)} aria-hidden="true"/>
           <div className="relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto">
             <MobileMenu unreadCount={unreadCount} onClose={() => setMobileMenuOpen(false)}/>

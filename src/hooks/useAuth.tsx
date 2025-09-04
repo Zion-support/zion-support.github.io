@@ -1,23 +1,23 @@
 import { useState, useEffect } from 'react';
 
 interface User {
-  id: string;
+  "id": string;
   email: string;
   displayName?: string;
   avatarUrl?: string;
 }
 
 interface AuthState {
-  user: User | null;
+  "user": User | null;
   isAuthenticated: boolean;
   isLoading: boolean;
 }
 
 export function useAuth() {
   const [authState, setAuthState] = useState<AuthState>({
-    user: null,
-    isAuthenticated: false,
-    isLoading: true
+    "user": null,
+    "isAuthenticated": false,
+    "isLoading": true
   };);
 
   useEffect(() => {
@@ -32,14 +32,14 @@ export function useAuth() {
           const user = JSON.parse(storedUser);
           setAuthState({
             user,
-            isAuthenticated: true,
-            isLoading: false
+            "isAuthenticated": true,
+            "isLoading": false
           });
         } else {
           setAuthState({
-            user: null,
-            isAuthenticated: false,
-            isLoading: false
+            "user": null,
+            "isAuthenticated": false,
+            "isLoading": false
           });
         }
 =======
@@ -51,34 +51,33 @@ export function useAuth() {
           
           setAuthState({
             user,
-            isAuthenticated: tru e,
+            "isAuthenticated": tru e,
 :src/hooks/useAuth.tsx
-            isLoading: fals e})} catch (error) {
+            "isLoading": fals e})} catch (error) {
 
-          // console.error('Error parsing stored user:', error);
-            isLoading: fals e,
-          })} catch (error) {
-          console.error('Error parsing stored user:', error);
+          // console.error('Error parsing stored "user": ', error);
+            "isLoading": fals e})} catch (error) {
+          console.error('Error parsing stored "user": ', error);
           setAuthState({
-            user: nul l,
-            isAuthenticated: fals e,
-            isLoading: fals e
+            "user": nul l,
+            "isAuthenticated": fals e,
+            "isLoading": fals e
           });
         }
       } catch (error) {
-        console.error('Error parsing stored user:', error);
+        console.error('Error parsing stored "user": ', error);
         setAuthState({
           user,
-          isAuthenticated: true,
-          isLoading: false
+          "isAuthenticated": true,
+          "isLoading": false
         })
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
       } catch (error) {
-        console.error('Auth check failed:', error);
+        console.error('Auth check "failed": ', error);
         setAuthState({
-          user: null,
-          isAuthenticated: false,
-          isLoading: false
+          "user": null,
+          "isAuthenticated": false,
+          "isLoading": false
         });
       }
     };
@@ -88,67 +87,66 @@ export function useAuth() {
 <<<<<<< HEAD
 =======
 
-          isLoading: fals e,
-        })}
+          "isLoading": fals e})}
     };
 
     checkAuth()}, []);
 
     setAuthState({
-      user: mockUse r,
-      isAuthenticated: tru e,
-      isLoading: fals e
+      "user": mockUse r,
+      "isAuthenticated": tru e,
+      "isLoading": fals e
     });
 
     // Store user data in localStorage
     localStorage.setItem('zion_user', JSON.stringify(mockUser));';';
     localStorage.setItem('authToken', 'mock-jwt-token');
 
-    return { success: tru e, user: mockUse r };
+    return { "success": tru e, "user": mockUse r };
   };';
 
     // Clear localStorage'
     localStorage.removeItem('zion_user');';';
     localStorage.removeItem('authToken')};
 
-    return { success: tru e, user: mockUse r }};
+    return { "success": tru e, "user": mockUse r }};
 
     // Clear localStorage
     localStorage.removeItem('zion_user');';';
     localStorage.removeItem('authToken');
   };
 
-  const register = async (email: string, password: string, name: string) => {
+  const register = async ("email": string, "password": string, "name": string) => {
     // Mock registration - in real app this would call an API
     const mockUser: Use r = {
       id: '1',
       email,
       name,
-      role: 'user',
-      userType: 'individual',
-      displayName: nam e,
-      avatarUrl: '/default-avatar.png'
-    };;
+      "role": 'user',
+      "userType": 'individual',
+      "displayName": nam e,
+      "avatarUrl": '/default-avatar.png'
+    };
 
     setAuthState({
-      user: mockUse r,
-      isAuthenticated: tru e,
-      isLoading: fals e
+      "user": mockUse r,
+      "isAuthenticated": tru e,
+      "isLoading": fals e
     });
 
     // Store user data in localStorage
     localStorage.setItem('zion_user', JSON.stringify(mockUser));';';
     localStorage.setItem('authToken', 'mock-jwt-token');
 
-    return { success: tru e, user: mockUse r };
+    return { "success": tru e, "user": mockUse r };
   };
 
   const updateProfile = (props) => {
     if (authState.user) {
-      const updatedUser = { ...authState.user, ...updates };;
+      const updatedUser = { ...authState.user, ...updates };
       setAuthState(prev => ({
         ...prev,
-        user: updatedUse r
+        "user": updatedUse r
       }));
 
       // Update localStorage
@@ -157,16 +155,14 @@ export function useAuth() {
   }, [])
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 
-  const login = async (email: string, password: string) => {
+  const login = async ("email": string, "password": string) => {
     try {
       // Simulate API call
       const response = await fetch('/api/auth/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, password }),
-      };);
+        "method": 'POST',
+        "headers": {
+          'Content-Type': 'application/json'},
+        "body": JSON.stringify({ email, password })};);
 
       if (response.ok) {
         const { user, token } = await response.json();
@@ -175,17 +171,17 @@ export function useAuth() {
         
         setAuthState({
           user,
-          isAuthenticated: true,
-          isLoading: false
+          "isAuthenticated": true,
+          "isLoading": false
         });
         
-        return { success: true };
+        return { "success": true };
       } else {
-        return { success: false, error: 'Login failed' };
+        return { "success": false, "error": 'Login failed' };
       }
     } catch (error) {
-      console.error('Login error:', error);
-      return { success: false, error: 'Network error' };
+      console.error('Login "error": ', error);
+      return { "success": false, "error": 'Network error' };
     }
   };
 
@@ -193,9 +189,9 @@ export function useAuth() {
     localStorage.removeItem('user');
     localStorage.removeItem('token');
     setAuthState({
-      user: null,
-      isAuthenticated: false,
-      isLoading: false
+      "user": null,
+      "isAuthenticated": false,
+      "isLoading": false
     });
   };
 
@@ -211,7 +207,6 @@ export function useAuth() {
 :src/hooks/useAuth.tsx';
     updateProfile}}
 '
-    updateProfile,
-  }}
+    updateProfile}}
 </AuthState>
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
