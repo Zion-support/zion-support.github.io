@@ -115,7 +115,7 @@ function Header({ onSidebarOpen }: { onSidebarOpen: () => void }): any {
             }} onClick={() => setMobileMenuOpen(false)}>Contact</Link>
           </div>
         </div>
-      </div>
+      )}
     </header>
   );
 }
