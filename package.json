@@ -164,7 +164,7 @@
     "test:coverage": "jest --coverage",
     "analyze": "ANALYZE=true npm run build",
     "dev:fast": "npm run dev -- --turbo",
-    "lint:check": "eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 0",
+    "lint:check": "eslint . --max-warnings 0",
     "automation:master": "node automation/master-orchestrator.cjs",
     "automation:performance": "node automation/performance-optimizer.cjs",
     "automation:seo": "node automation/seo-optimizer.cjs",
