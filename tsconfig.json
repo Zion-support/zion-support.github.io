@@ -83,6 +83,11 @@
     "temp_backup/**",
     "temp_broken_components",
     "temp_broken_components/**",
-    "src.corrupted/**"
+    "src.corrupted/**",
+    "src/components/**",
+    "src/components/SEOOptimizer.tsx",
+    "src/App*.tsx",
+    "src/main*.tsx",
+    "src/components/AIChatbotSystem.tsx"
   ]
 }
