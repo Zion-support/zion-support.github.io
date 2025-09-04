@@ -29,7 +29,9 @@ const services = {
     { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' },
     { name: 'Voice AI Assistant', href: '/ai-services#voice-ai-assistant' },
     { name: 'AI Fraud Detection', href: '/ai-services#ai-fraud-detection' },
-    { name: 'AI Drug Discovery', href: '/ai-services#ai-drug-discovery' }
+    { name: 'AI Drug Discovery', href: '/ai-services#ai-drug-discovery' },
+    { name: 'Quantum Machine Learning', href: '/ai-services#quantum-ml' },
+    { name: 'Space Mission Planning', href: '/ai-services#space-mission' }
   ],
   'IT Services': [
     { name: 'Cloud Infrastructure Management', href: '/it-services#cloud-infrastructure' },
@@ -38,8 +40,10 @@ const services = {
     { name: 'Database Management', href: '/it-services#database-management' },
     { name: 'DevOps & CI/CD', href: '/it-services#devops-cicd' },
     { name: 'Data Center Migration', href: '/it-services#data-center-migration' },
-    { name: 'IT Asset Management', href: '/it-services#it-asset-management' },
-    { name: 'Backup & Disaster Recovery', href: '/it-services#backup-disaster-recovery' }
+    { name: 'Quantum Computing Infrastructure', href: '/it-services#quantum-computing' },
+    { name: 'Edge Computing Solutions', href: '/it-services#edge-computing' },
+    { name: 'Blockchain Infrastructure', href: '/it-services#blockchain' },
+    { name: '5G Network Implementation', href: '/it-services#5g-networks' }
   ],
   'Micro SaaS': [
     { name: 'Cloud Cost Guard', href: '/micro-saas#cloud-cost-guard' },
@@ -49,7 +53,9 @@ const services = {
     { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' },
     { name: 'Workflow Automation', href: '/micro-saas#workflow-automation' },
     { name: 'AI Lead Scoring', href: '/micro-saas#ai-lead-scoring' },
-    { name: 'Social Media Scheduler', href: '/micro-saas#social-media-scheduler' }
+    { name: 'Social Media Scheduler', href: '/micro-saas#social-media-scheduler' },
+    { name: 'AI Trading Bot', href: '/micro-saas#ai-trading-bot' },
+    { name: 'Medical Diagnosis Assistant', href: '/micro-saas#medical-diagnosis' }
   ]
 };
 

@@ -379,6 +379,87 @@ const aiServices = [
     pricing: '$15,000 - $100,000/setup',
     category: 'Industrial AI',
     popular: true
+  },
+  {
+    title: 'AI-Powered Quantum Machine Learning',
+    description: 'Revolutionary quantum machine learning algorithms for solving complex optimization problems.',
+    icon: Cpu,
+    features: ['Quantum Neural Networks', 'Quantum Optimization', 'Quantum Feature Selection', 'Hybrid Classical-Quantum Models'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Quantum AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Space Mission Planning',
+    description: 'Autonomous space mission planning and satellite constellation management using AI.',
+    icon: Rocket,
+    features: ['Mission Optimization', 'Satellite Coordination', 'Resource Allocation', 'Risk Assessment'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Space AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Climate Change Mitigation',
+    description: 'AI solutions for climate modeling, carbon footprint optimization, and environmental monitoring.',
+    icon: Sprout,
+    features: ['Climate Modeling', 'Carbon Optimization', 'Environmental Monitoring', 'Policy Impact Analysis'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Climate AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Personalized Medicine',
+    description: 'AI-driven personalized treatment plans and drug discovery for precision medicine.',
+    icon: Heart,
+    features: ['Genomic Analysis', 'Treatment Optimization', 'Drug Discovery', 'Clinical Decision Support'],
+    pricing: '$30,000 - $250,000/project',
+    category: 'Precision Medicine',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart City Management',
+    description: 'Comprehensive AI platform for smart city operations and urban optimization.',
+    icon: Building,
+    features: ['Traffic Optimization', 'Resource Management', 'Public Safety', 'Environmental Monitoring'],
+    pricing: '$100,000 - $2,000,000/project',
+    category: 'Smart Cities',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Financial Crime Detection',
+    description: 'Advanced AI system for detecting money laundering, fraud, and financial crimes.',
+    icon: Shield,
+    features: ['Transaction Analysis', 'Pattern Recognition', 'Risk Scoring', 'Regulatory Compliance'],
+    pricing: '$20,000 - $150,000/setup',
+    category: 'FinTech AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Agricultural Intelligence',
+    description: 'Smart farming solutions with AI for crop optimization and yield prediction.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'AgTech AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Metaverse Development',
+    description: 'Complete AI platform for creating and managing immersive virtual worlds.',
+    icon: Globe,
+    features: ['Virtual World Creation', 'Avatar AI', 'Behavioral Simulation', 'Content Generation'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Metaverse AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Edge Computing Intelligence',
+    description: 'Real-time AI processing at the edge for IoT and mobile applications.',
+    icon: Network,
+    features: ['Edge AI Processing', 'Real-time Inference', 'Resource Optimization', 'Distributed Learning'],
+    pricing: '$25,000 - $200,000/setup',
+    category: 'Edge AI',
+    popular: true
   }
 ];
 

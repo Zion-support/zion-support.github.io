@@ -7,8 +7,10 @@ import MainLayout from '../components/layout/MainLayout';
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' },
-  { number: '500+', label: 'Projects Completed' },
-  { number: '50+', label: 'Expert Team Members' }
+  { number: '1000+', label: 'Projects Completed' },
+  { number: '150+', label: 'Services Available' },
+  { number: '50+', label: 'Expert Team Members' },
+  { number: '25+', label: 'Countries Served' }
 ];
 
 const services = [
@@ -133,7 +135,7 @@ export default function HomePage() {
       {/* Stats Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
@@ -169,6 +171,8 @@ export default function HomePage() {
             <p className="text-lg text-gray-600 max-w-4xl mx-auto">
               We deliver cutting-edge technology solutions with competitive pricing and unmatched expertise. 
               Our comprehensive service portfolio covers everything from micro SaaS development to enterprise AI solutions.
+              <br /><br />
+              <strong>Contact us today:</strong> 📞 +1 302 464 0950 | 📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown DE 19709
             </p>
           </motion.div>
 
@@ -182,9 +186,11 @@ export default function HomePage() {
             >
               <h3 className="text-xl font-bold text-gray-900 mb-4">💰 Competitive Pricing</h3>
               <ul className="text-gray-600 space-y-2">
-                <li>• Micro SaaS: $29 - $4,999/month</li>
+                <li>• Micro SaaS: $29 - $9,999/month</li>
                 <li>• IT Services: $120 - $500/hour</li>
-                <li>• AI Solutions: $1,000 - $1M/project</li>
+                <li>• AI Solutions: $1,000 - $2M/project</li>
+                <li>• Quantum Computing: $50K - $1M/project</li>
+                <li>• Space Technology: $100K - $5M/project</li>
                 <li>• Transparent, no hidden fees</li>
               </ul>
             </motion.div>
@@ -198,9 +204,10 @@ export default function HomePage() {
             >
               <h3 className="text-xl font-bold text-gray-900 mb-4">🚀 Innovation Focus</h3>
               <ul className="text-gray-600 space-y-2">
-                <li>• 50+ cutting-edge services</li>
-                <li>• AI, Blockchain, IoT expertise</li>
-                <li>• Quantum computing solutions</li>
+                <li>• 150+ cutting-edge services</li>
+                <li>• AI, Quantum, Space, Blockchain expertise</li>
+                <li>• Metaverse & AR/VR solutions</li>
+                <li>• Climate & Environmental AI</li>
                 <li>• Future-ready technology stack</li>
               </ul>
             </motion.div>
