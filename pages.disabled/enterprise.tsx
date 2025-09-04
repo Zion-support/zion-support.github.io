@@ -2,13 +2,13 @@ import type { NextPage } from 'next';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
 import {
-  Building,
-  Users,
-  Shield,
-  Zap,
-  Database,
-  Globe,
-  CheckCircle,
+  Building
+  Users
+  Shield
+  Zap
+  Database
+  Globe
+  CheckCircle
 } from 'lucide-react';
 
 const EnterpriseSolutions: NextPage = () => {
@@ -89,7 +89,7 @@ const EnterpriseSolutions: NextPage = () => {
                 Enterprise Applications
               </h3>
               <p className="text-gray-600 mb-4">
-                Custom enterprise applications designed for scalability,
+                Custom enterprise applications designed for scalability
                 security, and performance.
               </p>
               <ul className="text-sm text-gray-600 space-y-2 mb-4">

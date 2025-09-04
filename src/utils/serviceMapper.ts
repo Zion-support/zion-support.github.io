@@ -1,7 +1,7 @@
 // comment
 export const serviceMapper = {}
 
-// Interface for the existing service structure
+    // Interface for the existing service structure
     id: string;
     title: string;
     description: string;

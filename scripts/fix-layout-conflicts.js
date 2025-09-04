@@ -61,11 +61,11 @@ async function main() {
   const excludeDirs = [
     'node_modules',
     '.next',
-    'build',
+      'build'
     'dist',
-    'scripts',
+      'scripts'
     'automation',
-    'automation_backup',
+      'automation_backup'
     'src.disabled',
     'pages.disabled',
     'components.disabled',

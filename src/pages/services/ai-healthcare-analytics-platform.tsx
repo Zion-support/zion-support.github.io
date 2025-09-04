@@ -63,7 +63,7 @@
               </button>"
               <button className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: b g-gray-800 transition-all duration-300">
                 Schedule Demo
-              </button>
+              </motion.button>
             </div>
           </motion.div>
         </div>
@@ -150,7 +150,7 @@
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>"
                 <p className="text-gray-300">{feature.description}</p>
-              </motion.div>;
+              </motion.div>
             ))}
           </div>
         </div>
@@ -517,6 +517,7 @@
                     <span className="text-4xl font-bold text-white">{plan.price}</span>"
                     <span className="text-gray-300 ml-1">{plan.period}</span>
                   </div>
+                  <p className="text-gray-300">{plan.description}</p>
                 </div>
 "
                 <ul className="space-y-4 mb-8">

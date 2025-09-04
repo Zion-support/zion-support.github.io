@@ -92,7 +92,7 @@ describe('/api/reviews API Endpoint', () => {
         companyId: null,
         headline: null,
         lastLoginAt: null,
-        notifications: {},
+        notifications: {}
         profileComplete: false,
         resetToken: null,
         resetTokenExpiry: null,

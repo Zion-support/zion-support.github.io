@@ -339,8 +339,7 @@ class $1 {
   async attemptFixes(errors) {this.log(`🔧 Attempting to fix ${errors.length} TypeScript errors...`);
 
     let fixedCount = 0;
-    const fixResults = [];
-
+    
     for (const error of errors) {
   try {
   const fixed = await this.fixTypeScriptError(error);
@@ -462,7 +461,10 @@ class $1 {
 // Run the automation if called directly;
 if (require.main === module) {
   const monitor = new TypeScriptErrorMonitor();
-  monitor.run().catch(console.error);
+  monitor.run().catch(error => {
+    console.error('TypeScript error monitor failed:', error);
+    process.exit(1);
+  });
 }
 ;
 module.exports = TypeScriptErrorMonitor

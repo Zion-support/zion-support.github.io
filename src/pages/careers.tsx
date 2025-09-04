@@ -1,5 +1,4 @@
 import React from 'react';
-import { SEO } from '../components/SEO';
 
 const Careers: Reac t.FC = () => {
   return (<>
@@ -10,7 +9,7 @@ const Careers: Reac t.FC = () => {
           <p className="text-lg text-gray-600">Content coming soon...</p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

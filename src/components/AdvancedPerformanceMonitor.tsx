@@ -197,6 +197,5 @@ export default function Page() {
           className="text-zion-slate-light hover: tex t-white transition-colors"
         >
           ×
-        </button>
-</div>
+        </button>      </div>
   );"}"

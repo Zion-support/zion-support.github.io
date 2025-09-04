@@ -129,7 +129,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     customers: 15,
     rating: 4.8,
     reviews: 28
-  },
+  }
   {
     id:,
   quantum-resistant-blockchain',
@@ -207,7 +207,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     customers: 8,
     rating: 4.9,
     reviews: 15
-  },
+  }
   {
     id:,
   web3-identity-platform',
@@ -288,7 +288,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     customers: 32,
     rating: 4.7,
     reviews: 58
-  },
+  }
   {
     id:,
   ai-nft-marketplace',
@@ -368,7 +368,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     customers: 45,
     rating: 4.6,
     reviews: 89
-  },
+  }
   {
     id:,
   blockchain-supply-chain-orchestrator',
@@ -447,7 +447,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     customers: 28,
     rating: 4.8,
     reviews: 52
-  },
+  }
   {
     id:,
   metaverse-development-platform',
@@ -527,6 +527,6 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
   Advanced metaverse development platform with AI content generation and blockchain ownership.',
     launchDate: '2024-07-20,
     customers: 18,
-    rating: 4.7,
+    rating: 4.7
     reviews: 35
 ];}}

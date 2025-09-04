@@ -40,7 +40,7 @@ const Marketplace: React.FC = () => {
   ': return b.rating - a.rating'      case;
   'price':;
         return(
-          parseFloat(a.price.replace(/[^0-9.]/g,)) -,
+          parseFloat(a.price.replace(/[^0-9.]/g,)) -
   parseFloat(b.price.replace(/[^0-9.]/g,)));
       case;
   'reviews': return b.reviews - a.reviews;

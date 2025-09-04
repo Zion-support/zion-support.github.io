@@ -106,7 +106,7 @@ technology: [,
     customers: 1800,
     rating: 4.7,
     reviews: 950
-  },
+  }
   // Customer Success Automation Platform
   {
     id:,
@@ -174,7 +174,7 @@ technology: [,
     customers: 1200,
     rating: 4.8,
     reviews: 680
-  },
+  }
   // API Security & Monitoring Suite
   {
     id:,
@@ -242,7 +242,7 @@ technology: [,
     customers: 950,
     rating: 4.6,
     reviews: 520
-  },
+  }
   // E-commerce Automation Platform
   {
     id:,
@@ -310,7 +310,7 @@ technology: [,
     customers: 2100,
     rating: 4.7,
     reviews: 1100
-  },
+  }
   // HR Automation Suite
   {
     id:,
@@ -378,7 +378,7 @@ technology: [,
     customers: 1600,
     rating: 4.8,
     reviews: 890
-  },
+  }
   // Financial Analytics Platform
   {
     id:,
@@ -446,7 +446,7 @@ technology: [,
     customers: 1400,
     rating: 4.7,
     reviews: 780
-  },
+  }
   // Project Management AI Platform
   {
     id:,
@@ -514,7 +514,7 @@ technology: [,
     customers: 1900,
     rating: 4.8,
     reviews: 1050
-  },
+  }
   // Marketing Automation Suite
   {
     id:,
@@ -580,7 +580,7 @@ technology: [,
   Comprehensive marketing automation platform with AI-powered personalization, comprehensive analytics, and automated campaign management. Includes mobile apps and extensive integrations.',
     launchDate: '2024-02-10,
     customers: 2300,
-    rating: 4.7,
+    rating: 4.7
     reviews: 1250
   },
   // Legal Document Automation

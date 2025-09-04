@@ -1,15 +1,18 @@
-* SEO function
- * @param {*} params - Function parameters
- * @returns {*} Function return value
- */
-function SEO({
+import React from 'react';
 
-interface SEOProps {  title?: string;
-description?: string;
+interface SEOProps {
+  title?: string;
+  description?: string;
   keywords?: string;
   image?: string;
   url?: string;
   type?: string;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+  noindex?: boolean;
 }
 
 export const SEO: Reac t.FC<SEOProps> = ({
@@ -18,13 +21,39 @@ export const SEO: Reac t.FC<SEOProps> = ({
   keywords = 'AI, cybersecurity, cloud infrastructure, digital transformation, technology solutions, Zion Tech Group',
   image = '/og-image.svg',
   url = 'https://ziontechgroup.com',
-type = 'website',
+  type = 'website',
   author = 'Zion Tech Group',
   publishedTime,
   modifiedTime,
   section,
   tags = [],
-  canonical}: SEOProps) {
+  noindex = false,
+}) => {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Zion Tech Group',
+    url: 'https://ziontechgroup.com',
+    logo: 'https://ziontechgroup.com/logo.svg',
+    description: description,
+    sameAs: [
+      'https://linkedin.com/company/zion-tech-group',
+      'https://twitter.com/ziontechgroup'
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+1-302-464-0950',
+      contactType: 'customer service',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '364 E Main St STE 1008',
+        addressLocality: 'Middletown',
+        addressRegion: 'DE',
+        postalCode: '19709',
+        addressCountry: 'US'
+      }
+    }
+  };
 
   // Structured data for organization
   
@@ -107,12 +136,13 @@ type = 'website',
           "url": "https://ziontechgroup.com",
           "logo": "https://ziontechgroup.com/logo.svg",
           "description": description,
-          "sameAs": ["https://linkedin.com/company/zion-tech-group",
+          "sameAs": [
+            "https://linkedin.com/company/zion-tech-group",
             "https://twitter.com/ziontechgroup"
           ],
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+1-555-ZION-TECH",
+            "telephone": "+1-302-464-0950",
             "contactType": "customer service"
           }
         })}
@@ -396,11 +426,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}
         })}
 
       </script>
-    </Helmet>"
-      <script type = "application/ld+json">
-        {JSON.stringify(structuredData)}
-
-</script>
     </Helmet>
   );
 }  );"
@@ -479,6 +504,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}
       <meta name="author" content="Zion Tech Group" /" >"
     </Head>
   )}
+
 "
 export default SEO;"
 ""

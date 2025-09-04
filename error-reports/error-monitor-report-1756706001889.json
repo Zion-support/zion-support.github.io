@@ -1,0 +1,26 @@
+{
+  "timestamp": "2025-09-01T05:53:11.913Z",
+  "duration": 9976,
+  "errorsDetected": [
+    {
+      "type": "build_failure",
+      "message": "Command failed: npx next build --dry-run\nUnknown or unexpected option: --dry-run\n",
+      "timestamp": "2025-09-01T05:53:16.854Z"
+    },
+    {
+      "type": "missing_critical_file",
+      "file": "src/pages/index.tsx",
+      "message": "Critical file src/pages/index.tsx is missing",
+      "timestamp": "2025-09-01T05:53:16.855Z"
+    }
+  ],
+  "warnings": [],
+  "healthStatus": "warning",
+  "metrics": {
+    "totalErrors": 2,
+    "totalWarnings": 0,
+    "buildSuccess": false,
+    "typeCheckSuccess": false,
+    "lintSuccess": false
+  }
+}

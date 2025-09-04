@@ -231,3 +231,6 @@ export default function Page() {
       <meta name="mobile - web - app - capable" content="yes"  />
     </Helmet>) ;
 };
+
+
+export default EnhancedSEO;

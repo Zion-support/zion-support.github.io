@@ -11,14 +11,12 @@ const SecurityHeaders: React.FC = () => {
         { name: 'x-xss-protection', content: '1 mode=block' },
         {
           name: 'permissions-policy',
-          content:
-            'camera=(), microphone=(), geolocation=(), interest-cohort=()',
-        },
+          content: 'camera=(), microphone=(), geolocation=(), interest-cohort=()'
+        }
         {
           name: 'content-security-policy',
-          content:
-            "default-src 'self' script-src 'self' 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com https://www.google-analytics.com style-src 'self' 'unsafe-inline' https://fonts.googleapis.com font-src 'self' https://fonts.gstatic.com img-src 'self' data: https: connect-src 'self' https://api.ziontechgroup.com frame-ancestors 'none'",
-        },
+          content: "default-src 'self' script-src 'self' 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com https://www.google-analytics.com style-src 'self' 'unsafe-inline' https://fonts.googleapis.com font-src 'self' https://fonts.gstatic.com img-src 'self' data: https: connect-src 'self' https://api.ziontechgroup.com frame-ancestors 'none'"
+        }
       ];
 
       securityMetaTags.forEach(tag => {
@@ -34,7 +32,7 @@ const SecurityHeaders: React.FC = () => {
       const style = document.createElement('style');
       style.setAttribute(
         'nonce',
-        'csp-nonce-' + Math.random().toString(36).substr(2, 9)
+      'csp-nonce-' + Math.random().toString(36).substr(2, 9)
       );
       document.head.appendChild(style);
     };

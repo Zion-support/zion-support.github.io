@@ -1,0 +1,1531 @@
+{
+  "timestamp": "2025-09-01T06:23:28.555Z",
+  "duration": 5172,
+  "fixesApplied": [
+    {
+      "type": "missing_export",
+      "file": "src/components/AIChatAssistant.jsx",
+      "description": "Added default export for AIChatAssistant"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "description": "Added default export for AIChatbotSystem"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/AICodeGenerator.jsx",
+      "description": "Added default export for AICodeGenerator"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/AIContentOptimizer.tsx",
+      "description": "Added default export for AIContentOptimizer"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/AIServicesShowcase.jsx",
+      "description": "Added default export for AIServicesShowcase"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/AboutSection.jsx",
+      "description": "Added default export for AboutSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/Accessibility.tsx",
+      "description": "Added default export for Accessibility"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/AccessibilityEnhancer.tsx",
+      "description": "Added default export for AccessibilityEnhancer"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/AccessibilityProvider.tsx",
+      "description": "Added default export for AccessibilityProvider"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/AdvancedAIBusinessProcessAutomation.jsx",
+      "description": "Added default export for AdvancedAIBusinessProcessAutomation"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/AdvancedAICodeGenerator.jsx",
+      "description": "Added default export for AdvancedAICodeGenerator"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/AdvancedAnalytics.tsx",
+      "description": "Added default export for AdvancedAnalytics"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/AdvancedAnalyticsDashboard.tsx",
+      "description": "Added default export for AdvancedAnalyticsDashboard"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/AdvancedBusinessIntelligence.jsx",
+      "description": "Added default export for AdvancedBusinessIntelligence"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/AdvancedCollaborationPlatform.jsx",
+      "description": "Added default export for AdvancedCollaborationPlatform"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/AdvancedDataVisualization.jsx",
+      "description": "Added default export for AdvancedDataVisualization"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/AdvancedNotificationSystem.jsx",
+      "description": "Added default export for AdvancedNotificationSystem"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/AdvancedPerformanceMonitor.jsx",
+      "description": "Added default export for AdvancedPerformanceMonitor"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/AdvancedReportingDashboard.tsx",
+      "description": "Added default export for AdvancedReportingDashboard"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/AdvancedSearch.jsx",
+      "description": "Added default export for AdvancedSearch"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/AdvancedSecurityDashboard.jsx",
+      "description": "Added default export for AdvancedSecurityDashboard"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/AnalyticsManager.tsx",
+      "description": "Added default export for AnalyticsManager"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/BackToTopButton.jsx",
+      "description": "Added default export for BackToTopButton"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/BenefitsSection.jsx",
+      "description": "Added default export for BenefitsSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/BlogSection.jsx",
+      "description": "Added default export for BlogSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/BlogSection.tsx",
+      "description": "Added default export for BlogSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/BundleAnalyzer.jsx",
+      "description": "Added default export for BundleAnalyzer"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/BundleAnalyzer.tsx",
+      "description": "Added default export for BundleAnalyzer"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/CaseStudiesSection.jsx",
+      "description": "Added default export for CaseStudiesSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/CategoriesSection.jsx",
+      "description": "Added default export for CategoriesSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/CategoriesSection.tsx",
+      "description": "Added default export for CategoriesSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/CategoryListingPage.jsx",
+      "description": "Added default export for CategoryListingPage"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ChatAssistant/ChatAssistant.jsx",
+      "description": "Added default export for ChatAssistant"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ChatAssistant/ChatAssistant.tsx",
+      "description": "Added default export for ChatAssistant"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ChatAssistant/ChatInput.jsx",
+      "description": "Added default export for ChatInput"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ChatAssistant.tsx",
+      "description": "Added default export for ChatAssistant"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ChatAssistantTrigger.jsx",
+      "description": "Added default export for ChatAssistantTrigger"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ClientSuccessStoriesSection.jsx",
+      "description": "Added default export for ClientSuccessStoriesSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/CollaborationPlatform.jsx",
+      "description": "Added default export for CollaborationPlatform"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/CommunityDiscussion.jsx",
+      "description": "Added default export for CommunityDiscussion"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ComprehensivePricingGuide2027.tsx",
+      "description": "Added default export for ComprehensivePricingGuide2027"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ComprehensiveServicesShowcase.jsx",
+      "description": "Added default export for ComprehensiveServicesShowcase"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ContactInfo.jsx",
+      "description": "Added default export for ContactInfo"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ContactPublisherModal.jsx",
+      "description": "Added default export for ContactPublisherModal"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ContactSection.jsx",
+      "description": "Added default export for ContactSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/CustomerFeedbackSystem.tsx",
+      "description": "Added default export for CustomerFeedbackSystem"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/DataVisualization.tsx",
+      "description": "Added default export for DataVisualization"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/DisputeDashboard.jsx",
+      "description": "Added default export for DisputeDashboard"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/DynamicListingPage.jsx",
+      "description": "Added default export for DynamicListingPage"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/EnhancedAbout.jsx",
+      "description": "Added default export for EnhancedAbout"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/EnhancedAccessibilityPanel.tsx",
+      "description": "Added default export for EnhancedAccessibilityPanel"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/EnhancedContact.jsx",
+      "description": "Added default export for EnhancedContact"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/EnhancedContact.tsx",
+      "description": "Added default export for EnhancedContact"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/EnhancedFuturisticFooter.tsx",
+      "description": "Added default export for EnhancedFuturisticFooter"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/EnhancedLayout.tsx",
+      "description": "Added default export for EnhancedLayout"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/EnhancedMobileNavigation.tsx",
+      "description": "Added default export for EnhancedMobileNavigation"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/EnhancedNavigation.tsx",
+      "description": "Added default export for EnhancedNavigation"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/EnhancedNewsletterForm.jsx",
+      "description": "Added default export for EnhancedNewsletterForm"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/EnhancedSEO.tsx",
+      "description": "Added default export for EnhancedSEO"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/EnhancedSearch.tsx",
+      "description": "Added default export for EnhancedSearch"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/EnhancedSidebar.tsx",
+      "description": "Added default export for EnhancedSidebar"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/EnterpriseDashboard.jsx",
+      "description": "Added default export for EnterpriseDashboard"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ErrorBoundary.jsx",
+      "description": "Added default export for ErrorBoundary"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ErrorFallback.tsx",
+      "description": "Added default export for ErrorFallback"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/FaqSection.jsx",
+      "description": "Added default export for FaqSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/FavoriteButton.tsx",
+      "description": "Added default export for FavoriteButton"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/FeaturedListingsSection.jsx",
+      "description": "Added default export for FeaturedListingsSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/FeaturedListingsSection.tsx",
+      "description": "Added default export for FeaturedListingsSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/FeaturesGuideSection.jsx",
+      "description": "Added default export for FeaturesGuideSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/FloatingCTA.jsx",
+      "description": "Added default export for FloatingCTA"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/Footer.jsx",
+      "description": "Added default export for Footer"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/Footer.tsx",
+      "description": "Added default export for Footer"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/FooterNewsletter.jsx",
+      "description": "Added default export for FooterNewsletter"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/FuturisticFooter.tsx",
+      "description": "Added default export for FuturisticFooter"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/FuturisticNavigation.tsx",
+      "description": "Added default export for FuturisticNavigation"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/FuturisticServicesShowcase.jsx",
+      "description": "Added default export for FuturisticServicesShowcase"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/GlobalPresenceSection.jsx",
+      "description": "Added default export for GlobalPresenceSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/GlobalServiceSection.jsx",
+      "description": "Added default export for GlobalServiceSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/GradientHeading.jsx",
+      "description": "Added default export for GradientHeading"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/Header.jsx",
+      "description": "Added default export for Header"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/Header.tsx",
+      "description": "Added default export for Header"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/HeroSection.jsx",
+      "description": "Added default export for HeroSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/HeroSectionAlt.jsx",
+      "description": "Added default export for HeroSectionAlt"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/HomepagePromotion.jsx",
+      "description": "Added default export for HomepagePromotion"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/HowItWorksSection.jsx",
+      "description": "Added default export for HowItWorksSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/HowItWorksSection.tsx",
+      "description": "Added default export for HowItWorksSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ITServiceRequestHero.jsx",
+      "description": "Added default export for ITServiceRequestHero"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/InnovationResearchSection.jsx",
+      "description": "Added default export for InnovationResearchSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/InnovativeServicesShowcase2027.tsx",
+      "description": "Added default export for InnovativeServicesShowcase2027"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/InteractivePortfolio.jsx",
+      "description": "Added default export for InteractivePortfolio"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/InteractiveTestimonials.jsx",
+      "description": "Added default export for InteractiveTestimonials"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/InteractiveUserExperience.tsx",
+      "description": "Added default export for InteractiveUserExperience"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ListingCard.jsx",
+      "description": "Added default export for ListingCard"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/MainNavigation.jsx",
+      "description": "Added default export for MainNavigation"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/MainSidebar.jsx",
+      "description": "Added default export for MainSidebar"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/MarketplaceErrorBoundary.jsx",
+      "description": "Added default export for MarketplaceErrorBoundary"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/MicroSaasShowcase.jsx",
+      "description": "Added default export for MicroSaasShowcase"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ModeToggle.jsx",
+      "description": "Added default export for ModeToggle"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ModernUIEnhancer.tsx",
+      "description": "Added default export for ModernUIEnhancer"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/NewsletterSection.jsx",
+      "description": "Added default export for NewsletterSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/Notification.jsx",
+      "description": "Added default export for Notification"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/NotificationSystem.tsx",
+      "description": "Added default export for NotificationSystem"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/PasswordStrengthMeter.jsx",
+      "description": "Added default export for PasswordStrengthMeter"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/PerformanceDashboard.jsx",
+      "description": "Added default export for PerformanceDashboard"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/PerformanceMonitor.jsx",
+      "description": "Added default export for PerformanceMonitor"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/PerformanceOptimizations.jsx",
+      "description": "Added default export for PerformanceOptimizations"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/PerformanceOptimizedLoader.jsx",
+      "description": "Added default export for PerformanceOptimizedLoader"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/PricingSection.jsx",
+      "description": "Added default export for PricingSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ProductActions.jsx",
+      "description": "Added default export for ProductActions"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ProductListingCard.jsx",
+      "description": "Added default export for ProductListingCard"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ProductSubmissionForm.jsx",
+      "description": "Added default export for ProductSubmissionForm"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ProjectManagementDashboard.jsx",
+      "description": "Added default export for ProjectManagementDashboard"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ProjectManagementTimeline.tsx",
+      "description": "Added default export for ProjectManagementTimeline"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ProtectedRoute.tsx",
+      "description": "Added default export for ProtectedRoute"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/QuoteFormSection.jsx",
+      "description": "Added default export for QuoteFormSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/QuoteRequestForm/ServiceTypeStep.jsx",
+      "description": "Added default export for ServiceTypeStep"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/QuoteRequestForm.jsx",
+      "description": "Added default export for QuoteRequestForm"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/RatingStars.jsx",
+      "description": "Added default export for RatingStars"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ResourceManagementSystem.tsx",
+      "description": "Added default export for ResourceManagementSystem"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/SEO.tsx",
+      "description": "Added default export for SEO"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/SEOOptimizer.tsx",
+      "description": "Added default export for SEOOptimizer"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/SearchAndFilterSystem.tsx",
+      "description": "Added default export for SearchAndFilterSystem"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/SecurityComplianceSection.jsx",
+      "description": "Added default export for SecurityComplianceSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/SecurityEnhancer.tsx",
+      "description": "Added default export for SecurityEnhancer"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/SecurityHeaders.jsx",
+      "description": "Added default export for SecurityHeaders"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/SecurityMonitoringSystem.tsx",
+      "description": "Added default export for SecurityMonitoringSystem"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ServiceShowcase.jsx",
+      "description": "Added default export for ServiceShowcase"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ServiceWorker.tsx",
+      "description": "Added default export for ServiceWorker"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ServicesBenefitsShowcase.jsx",
+      "description": "Added default export for ServicesBenefitsShowcase"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ServicesComparisonTable.jsx",
+      "description": "Added default export for ServicesComparisonTable"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ServicesOverview.jsx",
+      "description": "Added default export for ServicesOverview"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ServicesOverview.tsx",
+      "description": "Added default export for ServicesOverview"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ServicesShowcase.tsx",
+      "description": "Added default export for ServicesShowcase"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/Sidebar.tsx",
+      "description": "Added default export for Sidebar"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/SiteHealthDashboard.jsx",
+      "description": "Added default export for SiteHealthDashboard"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/SitemapPage.tsx",
+      "description": "Added default export for SitemapPage"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/SmartNotificationSystem.tsx",
+      "description": "Added default export for SmartNotificationSystem"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/SocialShareSection.jsx",
+      "description": "Added default export for SocialShareSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/Sonner.jsx",
+      "description": "Added default export for Sonner"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/StatisticsSection.jsx",
+      "description": "Added default export for StatisticsSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/StatsSection.jsx",
+      "description": "Added default export for StatsSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/TeamCollaborationTools.tsx",
+      "description": "Added default export for TeamCollaborationTools"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/TeamExpertiseSection.jsx",
+      "description": "Added default export for TeamExpertiseSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/TechSolutionsSection.jsx",
+      "description": "Added default export for TechSolutionsSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/TechnologyStackSection.jsx",
+      "description": "Added default export for TechnologyStackSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/TestimonialCarousel.jsx",
+      "description": "Added default export for TestimonialCarousel"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/TestimonialsSection.jsx",
+      "description": "Added default export for TestimonialsSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/TestimonialsSection.tsx",
+      "description": "Added default export for TestimonialsSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ThemeProvider.tsx",
+      "description": "Added default export for ThemeProvider"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ThemeToggle.jsx",
+      "description": "Added default export for ThemeToggle"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/TrustIndicators.jsx",
+      "description": "Added default export for TrustIndicators"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/TrustedBySection.jsx",
+      "description": "Added default export for TrustedBySection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/UserExperienceOptimizer.tsx",
+      "description": "Added default export for UserExperienceOptimizer"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ValuePropositionShowcase.jsx",
+      "description": "Added default export for ValuePropositionShowcase"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/WaitlistSection.jsx",
+      "description": "Added default export for WaitlistSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/auth/login/LoginContent.jsx",
+      "description": "Added default export for LoginContent"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/cart/CartItem.jsx",
+      "description": "Added default export for CartItem"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/developers/ApiDocumentation.jsx",
+      "description": "Added default export for ApiDocumentation"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/developers/WebhooksManager.jsx",
+      "description": "Added default export for WebhooksManager"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/enterprise/EnterpriseHero.jsx",
+      "description": "Added default export for EnterpriseHero"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/enterprise/EnterpriseTestimonials.jsx",
+      "description": "Added default export for EnterpriseTestimonials"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/enterprise/admin/AdminHeader.jsx",
+      "description": "Added default export for AdminHeader"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/enterprise/workspace/WorkspaceHeader.jsx",
+      "description": "Added default export for WorkspaceHeader"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/expo/InteractiveMap.jsx",
+      "description": "Added default export for InteractiveMap"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/gallery/ProductGallery.jsx",
+      "description": "Added default export for ProductGallery"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/header/EnhancedSearchInput.jsx",
+      "description": "Added default export for EnhancedSearchInput"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/header/Header.jsx",
+      "description": "Added default export for Header"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/header/LanguageSelector.jsx",
+      "description": "Added default export for LanguageSelector"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/header/MainNavigation.jsx",
+      "description": "Added default export for MainNavigation"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/header/MainNavigation.tsx",
+      "description": "Added default export for MainNavigation"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/header/MobileBottomNav.jsx",
+      "description": "Added default export for MobileBottomNav"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/header/MobileMenu.jsx",
+      "description": "Added default export for MobileMenu"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/header/UserMenu.jsx",
+      "description": "Added default export for UserMenu"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/hiring-tracker/CandidateCard.jsx",
+      "description": "Added default export for CandidateCard"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/hiring-tracker/KanbanBoard.jsx",
+      "description": "Added default export for KanbanBoard"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/hiring-tracker/KanbanColumn.jsx",
+      "description": "Added default export for KanbanColumn"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/home/AdvancedServicesShowcase.jsx",
+      "description": "Added default export for AdvancedServicesShowcase"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/home/ContactInfo.jsx",
+      "description": "Added default export for ContactInfo"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/home/EnhancedServicesShowcase.jsx",
+      "description": "Added default export for EnhancedServicesShowcase"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/home/ExpandedServicesPreview.jsx",
+      "description": "Added default export for ExpandedServicesPreview"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/home/FeatureCTAs.jsx",
+      "description": "Added default export for FeatureCTAs"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/home/FeatureCTAs.tsx",
+      "description": "Added default export for FeatureCTAs"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/home/FeatureCTAsSection.jsx",
+      "description": "Added default export for FeatureCTAsSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/home/FeatureHighlights.jsx",
+      "description": "Added default export for FeatureHighlights"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/home/FeatureHighlights.tsx",
+      "description": "Added default export for FeatureHighlights"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/home/HomePageSkeleton.jsx",
+      "description": "Added default export for HomePageSkeleton"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/home/ITServiceRequestHero.jsx",
+      "description": "Added default export for ITServiceRequestHero"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/home/ITServiceRequestHero.tsx",
+      "description": "Added default export for ITServiceRequestHero"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/home/MicroSaasServicesSection.jsx",
+      "description": "Added default export for MicroSaasServicesSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/home/NewServicesShowcase.jsx",
+      "description": "Added default export for NewServicesShowcase"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/home/QuickAccess.jsx",
+      "description": "Added default export for QuickAccess"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/home/QuickAccess.tsx",
+      "description": "Added default export for QuickAccess"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/home/ServicesShowcase.jsx",
+      "description": "Added default export for ServicesShowcase"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/home/TestimonialsSection.jsx",
+      "description": "Added default export for TestimonialsSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/integrations/IntegrationConnectionModal.jsx",
+      "description": "Added default export for IntegrationConnectionModal"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/interviews/InterviewRequestForm.jsx",
+      "description": "Added default export for InterviewRequestForm"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/interviews/UpcomingInterviewsCard.jsx",
+      "description": "Added default export for UpcomingInterviewsCard"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/layout/MainSidebar.tsx",
+      "description": "Added default export for MainSidebar"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/loyalty/PointsBadge.jsx",
+      "description": "Added default export for PointsBadge"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/marketplace/EmptyState.jsx",
+      "description": "Added default export for EmptyState"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/messaging/ConversationDetailView.jsx",
+      "description": "Added default export for ConversationDetailView"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/mobile-app/AppScreenshots.jsx",
+      "description": "Added default export for AppScreenshots"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/mobile-app/AppStoreBanner.jsx",
+      "description": "Added default export for AppStoreBanner"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/mobile-app/AppTestimonials.jsx",
+      "description": "Added default export for AppTestimonials"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/mobile-app/CommunityTrust.jsx",
+      "description": "Added default export for CommunityTrust"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/mobile-app/MobileEmailCapture.jsx",
+      "description": "Added default export for MobileEmailCapture"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/mobile-app/MobileFeatureShowcase.jsx",
+      "description": "Added default export for MobileFeatureShowcase"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/mobile-app/QrCodeDownload.jsx",
+      "description": "Added default export for QrCodeDownload"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/navigation/MobileNavigation.jsx",
+      "description": "Added default export for MobileNavigation"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/profile/AvatarUpload.jsx",
+      "description": "Added default export for AvatarUpload"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/profile/ContactPublisherModal.jsx",
+      "description": "Added default export for ContactPublisherModal"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/profile/HireNowCTA.jsx",
+      "description": "Added default export for HireNowCTA"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/profile/ProfileHero.jsx",
+      "description": "Added default export for ProfileHero"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/profile/ProfileProjects.jsx",
+      "description": "Added default export for ProfileProjects"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/profile/ServiceProviderRegistrationForm.jsx",
+      "description": "Added default export for ServiceProviderRegistrationForm"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/profile/TalentRegistrationForm.jsx",
+      "description": "Added default export for TalentRegistrationForm"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/quote/QuoteWizard.jsx",
+      "description": "Added default export for QuoteWizard"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/resume-builder/portfolio/ProjectCard.jsx",
+      "description": "Added default export for ProjectCard"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/search/FilterSidebar.tsx",
+      "description": "Added default export for FilterSidebar"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/services/ITServicePricingTable.jsx",
+      "description": "Added default export for ITServicePricingTable"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/services/PageSections/CountryTabs.jsx",
+      "description": "Added default export for CountryTabs"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/services/PageSections/EnterpriseCallToAction.jsx",
+      "description": "Added default export for EnterpriseCallToAction"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/services/PageSections/ServiceIncludes.jsx",
+      "description": "Added default export for ServiceIncludes"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/services/PageSections/ServiceProcessSteps.jsx",
+      "description": "Added default export for ServiceProcessSteps"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/services/ServiceDetails.jsx",
+      "description": "Added default export for ServiceDetails"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/summit/PartnersSection.jsx",
+      "description": "Added default export for PartnersSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/summit/SpeakersSection.jsx",
+      "description": "Added default export for SpeakersSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/support/ChatBotPanel.jsx",
+      "description": "Added default export for ChatBotPanel"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/talent/ErrorBanner.jsx",
+      "description": "Added default export for ErrorBanner"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/talent/TalentGrid.jsx",
+      "description": "Added default export for TalentGrid"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/talent/TalentResults.jsx",
+      "description": "Added default export for TalentResults"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/talent/TalentSkeleton.jsx",
+      "description": "Added default export for TalentSkeleton"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/AnimatedBackground.jsx",
+      "description": "Added default export for AnimatedBackground"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/Avatar.jsx",
+      "description": "Added default export for Avatar"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/Button.jsx",
+      "description": "Added default export for Button"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/EnhancedCard.jsx",
+      "description": "Added default export for EnhancedCard"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/FloatingActionButton.tsx",
+      "description": "Added default export for FloatingActionButton"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/FloatingOrbs.jsx",
+      "description": "Added default export for FloatingOrbs"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/FuturisticBackground.jsx",
+      "description": "Added default export for FuturisticBackground"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/GradientHeading.jsx",
+      "description": "Added default export for GradientHeading"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/Input.jsx",
+      "description": "Added default export for Input"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/LoadingFallback.jsx",
+      "description": "Added default export for LoadingFallback"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/LoadingSkeleton.jsx",
+      "description": "Added default export for LoadingSkeleton"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/LoadingSpinner.jsx",
+      "description": "Added default export for LoadingSpinner"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/NeonGlow.jsx",
+      "description": "Added default export for NeonGlow"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/OptimizedImage.jsx",
+      "description": "Added default export for OptimizedImage"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/accordion.tsx",
+      "description": "Added default export for accordion"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/alert.tsx",
+      "description": "Added default export for alert"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/avatar.jsx",
+      "description": "Added default export for avatar"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/button.tsx",
+      "description": "Added default export for button"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/checkbox.jsx",
+      "description": "Added default export for checkbox"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/checkbox.tsx",
+      "description": "Added default export for checkbox"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/input.jsx",
+      "description": "Added default export for input"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/label.jsx",
+      "description": "Added default export for label"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/loading.jsx",
+      "description": "Added default export for loading"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/progress.tsx",
+      "description": "Added default export for progress"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/select.jsx",
+      "description": "Added default export for select"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/select.tsx",
+      "description": "Added default export for select"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/separator.jsx",
+      "description": "Added default export for separator"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/skeleton.jsx",
+      "description": "Added default export for skeleton"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/switch.tsx",
+      "description": "Added default export for switch"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/tabs.jsx",
+      "description": "Added default export for tabs"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/tabs.tsx",
+      "description": "Added default export for tabs"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/toaster.jsx",
+      "description": "Added default export for toaster"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/ui/toaster.tsx",
+      "description": "Added default export for toaster"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/unused/CTASection.jsx",
+      "description": "Added default export for CTASection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/unused/FeaturesSection.jsx",
+      "description": "Added default export for FeaturesSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/unused/ServicesShowcase.jsx",
+      "description": "Added default export for ServicesShowcase"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/unused/TestimonialsSection.jsx",
+      "description": "Added default export for TestimonialsSection"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/wallet/OnChainExport.jsx",
+      "description": "Added default export for OnChainExport"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components/wallet/TokenDisplay.jsx",
+      "description": "Added default export for TokenDisplay"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/components.disabled/Logo.jsx",
+      "description": "Added default export for Logo"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/hooks/useAuth.ts",
+      "description": "Added default export for useAuth"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/hooks/usePerformance.ts",
+      "description": "Added default export for usePerformance"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/layout/AppHeader.jsx",
+      "description": "Added default export for AppHeader"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/layout/AppHeader.tsx",
+      "description": "Added default export for AppHeader"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/layout/AppLayout.tsx",
+      "description": "Added default export for AppLayout"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/layout/MainNavigation.jsx",
+      "description": "Added default export for MainNavigation"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/layout/PrimaryNav.jsx",
+      "description": "Added default export for PrimaryNav"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/lib/slugify.ts",
+      "description": "Added default export for slugify"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/mobile/components/onboarding/RolePicker.jsx",
+      "description": "Added default export for RolePicker"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/pages/AboutPage.tsx",
+      "description": "Added default export for AboutPage"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/pages/AdvancedInnovativeServicesShowcase2025.jsx",
+      "description": "Added default export for AdvancedInnovativeServicesShowcase2025"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/pages/AdvancedServicesShowcase2025.jsx",
+      "description": "Added default export for AdvancedServicesShowcase2025"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/pages/BlogPage.tsx",
+      "description": "Added default export for BlogPage"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/pages/ComprehensivePricingShowcase2025.jsx",
+      "description": "Added default export for ComprehensivePricingShowcase2025"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/pages/ComprehensiveServicesOverview2025.jsx",
+      "description": "Added default export for ComprehensiveServicesOverview2025"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/pages/ContactPage.tsx",
+      "description": "Added default export for ContactPage"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/pages/EnhancedNewServices2025.tsx",
+      "description": "Added default export for EnhancedNewServices2025"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/pages/HomePage.tsx",
+      "description": "Added default export for HomePage"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/pages/InnovativeServicesOverview.jsx",
+      "description": "Added default export for InnovativeServicesOverview"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/pages/InnovativeServicesShowcase.jsx",
+      "description": "Added default export for InnovativeServicesShowcase"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/pages/MicroSAASServicesPage.tsx",
+      "description": "Added default export for MicroSAASServicesPage"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/pages/MicroSaasServicesPage.tsx",
+      "description": "Added default export for MicroSaasServicesPage"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/pages/MobileLaunchPage.jsx",
+      "description": "Added default export for MobileLaunchPage"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/pages/NotFoundPage.tsx",
+      "description": "Added default export for NotFoundPage"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/pages/Resources.tsx",
+      "description": "Added default export for Resources"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/pages/RevolutionaryServicesPage.tsx",
+      "description": "Added default export for RevolutionaryServicesPage"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/pages/SolutionsPage.tsx",
+      "description": "Added default export for SolutionsPage"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/pages/services/AICustomerSuccessPrediction.tsx",
+      "description": "Added default export for AICustomerSuccessPrediction"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/utils/cn.ts",
+      "description": "Added default export for cn"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/utils/generateRandomBlogPost.js",
+      "description": "Added default export for generateRandomBlogPost"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/utils/generateRandomListing.ts",
+      "description": "Added default export for generateRandomListing"
+    },
+    {
+      "type": "missing_export",
+      "file": "src/utils/getStripe.ts",
+      "description": "Added default export for getStripe"
+    }
+  ],
+  "errorsFound": [],
+  "summary": {
+    "totalFixes": 304,
+    "totalErrors": 0
+  }
+}

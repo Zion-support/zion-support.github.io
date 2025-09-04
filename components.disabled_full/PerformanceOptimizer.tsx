@@ -8,11 +8,11 @@ interface PerformanceOptimizerProps {
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  preloadImages = [],
+  preloadImages = []
   preloadFonts = [
-    'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap',
-  ],
-  criticalCSS,
+    'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'
+  ]
+  criticalCSS
 }) => {
   useEffect(() => {
     // Performance monitoring
@@ -25,7 +25,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           }
           if (entry.entryType === 'first-input') {
             console.log(
-              'FID: ',
+              'FID: '
               (entry as any).processingStart - entry.startTime
             );
           }
@@ -41,9 +41,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         observer.observe({
           entryTypes: [
             'largest-contentful-paint',
-            'first-input',
-            'layout-shift',
-          ],
+      'first-input'
+            'layout-shift'
+          ]
         });
       } catch (e) {
         // Fallback for browsers that don't support all entry types

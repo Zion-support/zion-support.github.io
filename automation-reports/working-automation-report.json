@@ -13,8 +13,10 @@
       "name": "File Structure Check",
       "success": true,
       "result": {
-        "missing": [],
-        "isValid": true
+        "missing": [
+          "next.config.js"
+        ],
+        "isValid": false
       }
     },
     {
@@ -105,13 +107,14 @@
       "success": true,
       "result": {
         "existing": [
-          "next.config.js",
           "tailwind.config.js",
           "postcss.config.js",
           "eslint.config.js"
         ],
-        "missing": [],
-        "coverage": 100
+        "missing": [
+          "next.config.js"
+        ],
+        "coverage": 75
       }
     }
   ]

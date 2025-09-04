@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-export default function API() {
+const API: NextPage = () => {
   const apiEndpoints = [
     {
       name: 'Services API',
@@ -64,6 +64,8 @@ export default function API() {
                   <p><strong>Description:</strong> {endpoint.description}</p>
                   <p><strong>Response:</strong> {endpoint.response}</p>
                 </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -83,4 +85,6 @@ export default function API() {
       </div>
     </>
   );
-}
+};
+
+export default API;

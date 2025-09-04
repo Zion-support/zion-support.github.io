@@ -188,7 +188,6 @@ export function CollaborationPlatform() {
             <X className="w-4 h-4" />
           </button>
         </div>
-      </div>
-"
+      </div>"
 
 export default Component

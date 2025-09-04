@@ -375,3 +375,6 @@ onMouseLeave={() => setIsCompanyOpen(false)}
     </nav>
   );
 }
+
+
+export default MainNavigation;

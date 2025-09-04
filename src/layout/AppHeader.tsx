@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Cpu, Rocket, Lock, Globe, Heart, Code, Users, Network } from 'lucide-react';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
 
   const handleSearch = (e: Reac t.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      // Navigate to search results
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
     }
   };
@@ -289,8 +288,8 @@ setServicesDropdownOpen(true);
             </div>
           </nav>
 
-          {/* Right side - Search, User, Mobile menu */}
-          <div className="flex items-center space-x-4">
+          {/* Search and Actions */}
+          <div className="hidden lg:flex items-center space-x-4">
             {/* Search */}
             <div className="relative hidden md: bloc k">
               <form onSubmit={handleSearch} className="relative">
@@ -455,6 +454,7 @@ setServicesDropdownOpen(true);
                               {service.description}
                             </div>
                           </div>
+                          <span>{subItem.name}</span>
                         </Link>
                       ))}
                     </div>
@@ -467,9 +467,9 @@ setServicesDropdownOpen(true);
                       </Link>
                     </div>
                   </div>
-                </div>
-              )}
-            </div>
+                )}
+              </div>
+            ))}
           </nav>
 
           {/* Search Bar - Hidden on mobile */}
@@ -521,7 +521,6 @@ setServicesDropdownOpen(true);
             </button>
           </div>
         </div>
-      </div>
 
       {/* Mobile Navigation */}
       <AnimatePresence>
@@ -551,7 +550,7 @@ setServicesDropdownOpen(true);
                   <Link
                     key={item.name}
                     to={item.href}
-                    onClick={closeMobileMenu}
+                    onClick={() => setMobileMenuOpen(false)}
                     className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
                       item.current
                         ? 'text-zion-cyan bg-zion-cyan/10'
@@ -561,18 +560,42 @@ setServicesDropdownOpen(true);
                     {item.name}
                   </Link>
                 ))}
-              </nav>
+                
+                {/* Mobile Services */}
+                <div className="px-3 py-2">
+                  <div className="text-sm font-medium text-zion-slate-light mb-2">Services</div>
+                  <div className="space-y-1">
+                    {services.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="block px-3 py-2 text-sm text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
 
-              {/* Mobile Quick Actions */}
-              <div className="mt-6 pt-6 border-t border-zinc-800/50">
-                <div className="grid grid-cols-1 gap-3">
-                  {quickActions.map((action) => (
-                    <Link
-                      key={action.name}
-                      to={action.href}
-                      className="btn-futuristic text-center"
-                    >
-                      {action.name}        {/* Mobile Navigation */}
+            {/* User Menu */}
+            <button className="p-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200">
+              <User className="w-5 h-5" />
+            </button>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="p-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200"
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <div className="md: hidde n">
             <div className="px-2 pt-2 pb-3 space-y-1 sm: p x-3 bg-slate-800/95 border-t border-slate-700/20">
@@ -597,8 +620,9 @@ setServicesDropdownOpen(true);
                       to={service.href}
                       className="block text-slate-300 hover: tex t-cyan-400 px-3 py-2 text-sm transition-colors duration-200"
                       onClick={() => setMobileMenuOpen(false)}
+                      className={`block w-full text-center px-4 py-2 bg-gradient-to-r ${action.color} text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium`}
                     >
-                      {service.name}
+                      {action.name}
                     </Link>
                   ))}
                 </div>
@@ -668,7 +692,8 @@ setServicesDropdownOpen(true);
                     onClick={closeMobileMenu}
                     className="block px-6 py-2 text-zion-slate-light hover: tex t-zion-cyan transition-colors"
                   >
-                    {item.name}
+                    <item.icon className="w-4 h-4" />
+                    <span>{item.name}</span>
                   </Link>
                 ))}
               </div>
@@ -716,8 +741,9 @@ setServicesDropdownOpen(true);
                 </div>
               )}
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </header>  );
+      </div>
+    </header>
+  );
 }

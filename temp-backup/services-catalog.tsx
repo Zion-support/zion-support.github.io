@@ -283,7 +283,7 @@ export default function ServicesCatalog(): any {
           link: '/it-services',
         }
       ]
-    };
+    }
   ];
 
   const categories = [

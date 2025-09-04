@@ -67,7 +67,7 @@ describe('/api/products API Endpoint', () => {
           id: 'product-gpt-high-score',
           name: 'Super GPT Model',
           description: 'Latest generation AI',
-          images: [],
+          images: []
           price: null,
           currency: 'USD',
           tags: []
@@ -76,7 +76,7 @@ describe('/api/products API Endpoint', () => {
           id: 'product-gpt-medium-score',
           name: 'Advanced GPT Assistant',
           description: 'Your personal AI helper powered by GPT',
-          images: [],
+          images: []
           price: null,
           currency: 'USD',
           tags: []
@@ -127,7 +127,7 @@ describe('/api/products API Endpoint', () => {
       // The first item should be 'product-gpt-high-score' due to sorting by GREATEST similarity.
       expect(responseData[0].id).toBe('product-gpt-high-score')
       expect(responseData[0].name).toBe('Super GPT Model')
-      // The problem statement: 'asserts that at least one result with a similarity score >= 0.8 is returned'
+      // The problem statement: 'asserts that at least one result with a similarity score >= 0.8 is returned',
       // Since scores aren't in the response, we infer this from our mock setup.
       // `filteredMockRawResults` contains products that passed the >=0.3 threshold.
       // We know `product-gpt-high-score` had 0.9 and `product-gpt-medium-score` had 0.85. Both are >= 0.8.

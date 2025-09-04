@@ -169,6 +169,8 @@ class $1 {
   this.processLogLine(line, path.basename(logPath));
 }
       }
+      
+      return reports.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
     } catch (error) {
   this.log(`Failed to parse log file ${logPath  }: ${error.message}`, `WARN`);
 }
@@ -707,12 +709,57 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`);
       throw error;
 }
   }
+
+  async startDashboard() {
+    this.log('Starting error analytics dashboard...');
+    
+    // Generate initial report
+    await this.generateAnalyticsReport();
+    
+    // Set up periodic updates
+    setInterval(async () => {
+      try {
+        await this.generateAnalyticsReport();
+      } catch (error) {
+        this.log(`Error in periodic analytics update: ${error.message}`, 'ERROR');
+      }
+    }, this.updateInterval);
+
+    this.log(`Error analytics dashboard started. Updating every ${this.updateInterval / 1000} seconds.`);
+    this.log(`Dashboard available at: ${path.join(this.dashboardDir, 'index.html')}`);
+  }
+
+  getStatus() {
+    return {
+      running: true,
+      dashboardPath: path.join(this.dashboardDir, 'index.html'),
+      updateInterval: this.updateInterval,
+      analyticsEnabled: this.analyticsEnabled,
+      lastUpdate: this.analyticsData.lastUpdated
+    };
+  }
 }
 ;
 // Run the automation if called directly;
 if (require.main === module) {
   const dashboard = new ErrorAnalyticsDashboard();
-  dashboard.run().catch(console.error);
+  
+  // Handle graceful shutdown
+  process.on('SIGINT', () => {
+    dashboard.log('Shutting down error analytics dashboard...');
+    process.exit(0);
+  });
+
+  process.on('SIGTERM', () => {
+    dashboard.log('Shutting down error analytics dashboard...');
+    process.exit(0);
+  });
+
+  // Start dashboard
+  dashboard.startDashboard().catch(error => {
+    dashboard.log(`Failed to start dashboard: ${error.message}`, 'ERROR');
+    process.exit(1);
+  });
 }
 ;
 module.exports = ErrorAnalyticsDashboard

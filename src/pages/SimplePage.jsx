@@ -1031,11 +1031,11 @@ export default function SimplePage()   {const location = useLocation();';';
                   </p>
                   <Link
                     to={section.link}"
-                    className="inline-flex items-center text-zion-cyan hover: text-white transition-colors group-hove,
+                    className="inline-flex items-center text-zion-cyan hover: text-white transition-colors group-hove
     r:translate-x-1"
                   >
                     Learn More"
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hove,
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hove
     r:translate-x-1" />
       {/* Page Content */}, {pageInfo.sections.length > 0 && (
         <section className="py-20">
@@ -1098,8 +1098,8 @@ export default function SimplePage()   {const location = useLocation();';';
               </Link>
               <Link"
                 to="/services""
-                className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hove,
-    r:bg-zion-purple/10 hove,
+                className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hove
+    r:bg-zion-purple/10 hove
     r:border-zion-purple/50 transition-all duration-300"
               >
       )}, {/* CTA Section */}

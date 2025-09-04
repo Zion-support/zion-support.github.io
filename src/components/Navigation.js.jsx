@@ -7,7 +7,7 @@ const Navigation = () => {}
     const location = useLocation();'
     const navigationItems = [''
         { name: 'Home', href: '/', icon: Globe }, ''
-        { name: 'Micro SAAS Services', href: '/micro-saas-services', icon: Zap },''
+        { name: 'Micro SAAS Services', href: '/micro-saas-services', icon: Zap }, ''
         { name: 'Comprehensive Services', href: '/comprehensive-services', icon: Brain }, ''
         { name: 'Pricing', href: '/pricing', icon: Building }
     ];

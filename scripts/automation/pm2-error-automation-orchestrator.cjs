@@ -442,7 +442,7 @@ class PM2ErrorAutomationOrchestrator {
       isRunning: this.isRunning,
       scheduledJobs: this.scheduledJobs.map(({ name, schedule }) => ({ name, schedule })),
       config: this.config
-try {
+    try {
   // Initialize PM2 if not already running;
       await this.initializePM2();
       ;
@@ -904,8 +904,7 @@ return {
       remainingErrors: 0,
       success: false,
       error: error.message,
-};
-}
+    };  }
 }
 ;
 // Export the class;
@@ -918,8 +917,7 @@ module.exports = PM2ErrorAutomationOrchestrator;
 if (require.main === module) {
   const orchestrator = new PM2ErrorAutomationOrchestrator();
   orchestrator.start().catch(console.error);
-}
-}
+}  }
 }
 ;
 async function applyIntelligentFixes(errors) {

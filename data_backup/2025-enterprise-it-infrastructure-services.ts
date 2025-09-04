@@ -344,7 +344,7 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     implementationDetails: 'Operational quantum internet platform with quantum entanglement, unbreakable encryption, and global quantum network.',
     launchDate: '2025-03-15',
     customers: 3,
-    rating: 4.9,
+    rating: 4.,9
     reviews: 8,
     innovationLevel: 'Revolutionary',
     patentStatus: 'Patent Pending',
