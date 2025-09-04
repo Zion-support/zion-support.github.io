@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs')
+const path = require('path')
 const { execSync } = require('child_process');
 
 console.log('⚡ Starting Advanced Build Optimization...');
@@ -17,22 +17,20 @@ class BuildOptimizer {
         buildTime: 0,
         optimizationsApplied: 0
       }
-    };
-  }
+    }}
 
   log(message, type = 'info') {
-    const timestamp = new Date().toISOString();
-    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logEntry);
-  }
+    const timestamp = new Date().toISOString(;);
+    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message;};`;
+    console.log(logEntry);}
 
   async runOptimization(name, optimizationFunction) {
     this.log(`Applying: ${name}`);
-    const startTime = Date.now();
+    const startTime = Date.now(;);
     
     try {
-      const result = await optimizationFunction();
-      const duration = Date.now() - startTime;
+      const result = await optimizationFunction;(;);
+      const duration = Date.now() - startTi;m;e;
       
       const optimization = {
         name,
@@ -41,22 +39,27 @@ class BuildOptimizer {
         duration,
         impact: result.impact || 'low',
         details: result.details || {}
-      };
+     ; ;};
       
       this.results.optimizations.push(optimization);
       
-      if (optimization.status === 'applied') {
+      if ( {
+        this.results.metrics.optimizationsApplied++) {
+     {
         this.results.metrics.optimizationsApplied++;
-        this.log(`✅ ${name}: ${optimization.message}`, 'success');
-      } else if (optimization.status === 'skipped') {
-        this.log(`⏭️ ${name}: ${optimization.message}`, 'info');
-      } else {
-        this.log(`❌ ${name}: ${optimization.message}`, 'error');
-      }
+  }
+        this.log(`✅ ${name}: ${optimization.message}`, 'success')} else if ( {
+        this.log(`⏭️ ${name}: ${optimization.message}`, 'info')} else {
+        this.log(`❌ ${name}: ${optimization.message}`, 'error')}
+      
+      return optimization) {
+     {
+        this.log(`⏭️ ${name}: ${optimization.message}`, 'info')} else {
+        this.log(`❌ ${name}: ${optimization.message}`, 'error')}
       
       return optimization;
-    } catch (error) {
-      const duration = Date.now() - startTime;
+  }} catch (error) {
+      const duration = Date.now() - startTi;m;e;
       const optimization = {
         name,
         status: 'failed',
@@ -64,130 +67,169 @@ class BuildOptimizer {
         duration,
         impact: 'none',
         details: { error: error.stack }
-      };
+     ; ;};
       
       this.results.optimizations.push(optimization);
       this.log(`❌ ${name}: ${error.message}`, 'error');
-      return optimization;
-    }
+      return optimization;}
   }
 
   async optimizeNextConfig() {
-    return new Promise((resolve) => {
+    return new Promise((resolve) => {;
       try {
-        const configPath = path.join(process.cwd(), 'next.config.js');
+        const configPath = path.join(process.cwd(), 'next.config.js;';);
         
-        if (!fs.existsSync(configPath)) {
+        if () {
+          resolve({
+            status: 'skipped',
+            message: 'next.config.js not found',
+            impact: 'none'
+          })) {
+    ) {
           resolve({
             status: 'skipped',
             message: 'next.config.js not found',
             impact: 'none'
           });
-          return;
-        }
+  }
+          return}
 
-        let config = fs.readFileSync(configPath, 'utf8');
-        let optimizations = [];
+        let config = fs.readFileSync(configPath, 'utf8';);
+        let optimizations = [;];
 
         // Check for compression
-        if (!config.includes('compress: true')) {
+        if () {
+          config = config.replace(
+            'module.exports = {',
+            'module.exports = {\n  compress: true,'
+          )) {
+    ) {
           config = config.replace(
             'module.exports = {',
             'module.exports = {\n  compress: true,'
           );
-          optimizations.push('compression');
-        }
+  }
+          optimizations.push('compression')}
 
         // Check for image optimization
-        if (!config.includes('images:')) {
+        if () {
           const imageConfig = `
   images: {
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-  },`;
+  },) {
+    ) {
+          const imageConfig = `
+  images: {
+    formats: ['image/webp', 'image/avif'],
+    minimumCacheTTL: 60,
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+  },;
+  }`;
           config = config.replace(
             'module.exports = {',
             `module.exports = {${imageConfig}`
           );
-          optimizations.push('image optimization');
-        }
+          optimizations.push('image optimization')}
 
         // Check for experimental features
-        if (!config.includes('experimental:')) {
+        if () {
           const experimentalConfig = `
   experimental: {
     optimizeCss: true,
     scrollRestoration: true,
-  },`;
+  },) {
+    ) {
+          const experimentalConfig = `
+  experimental: {
+    optimizeCss: true,
+    scrollRestoration: true,
+  },;
+  }`;
           config = config.replace(
             'module.exports = {',
             `module.exports = {${experimentalConfig}`
           );
-          optimizations.push('experimental features');
-        }
+          optimizations.push('experimental features')}
 
-        if (optimizations.length > 0) {
+        if ( {
+          fs.writeFileSync(configPath, config)) {
+     {
           fs.writeFileSync(configPath, config);
+  }
           resolve({
             status: 'applied',
             message: `Applied optimizations: ${optimizations.join(', ')}`,
             impact: 'high',
             details: { optimizations }
-          });
-        } else {
+          })} else {
           resolve({
             status: 'skipped',
             message: 'Next.js config already optimized',
             impact: 'none'
-          });
-        }
+          })}
       } catch (error) {
         resolve({
           status: 'failed',
           message: `Failed to optimize Next.js config: ${error.message}`,
           impact: 'none'
-        });
-      }
-    });
-  }
+        })}
+    })}
 
   async optimizePackageJson() {
-    return new Promise((resolve) => {
+    return new Promise((resolve) => {;
       try {
-        const packagePath = path.join(process.cwd(), 'package.json');
+        const packagePath = path.join(process.cwd(), 'package.json;';);
         
-        if (!fs.existsSync(packagePath)) {
+        if () {
+          resolve({
+            status: 'skipped',
+            message: 'package.json not found',
+            impact: 'none'
+          })) {
+    ) {
           resolve({
             status: 'skipped',
             message: 'package.json not found',
             impact: 'none'
           });
-          return;
-        }
+  }
+          return}
 
-        const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
-        let optimizations = [];
+        const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8';););
+        let optimizations = [;];
 
         // Add build optimization scripts
         const optimizedScripts = {
           'build:analyze': 'ANALYZE=true npm run build',
           'build:prod': 'NODE_ENV=production npm run build',
           'start:prod': 'NODE_ENV=production npm start'
-        };
+       ; ;};
 
-        let scriptsAdded = 0;
+        let scriptsAdded = ;0;
         for (const [scriptName, scriptValue] of Object.entries(optimizedScripts)) {
-          if (!packageJson.scripts[scriptName]) {
+          if ( {
+            packageJson.scripts[scriptName] = scriptValue) {
+     {
             packageJson.scripts[scriptName] = scriptValue;
-            scriptsAdded++;
-          }
+  }
+            scriptsAdded++}
         }
 
-        if (scriptsAdded > 0) {
-          optimizations.push(`${scriptsAdded} build scripts`);
-        }
+        if ( {
+          optimizations.push(`${scriptsAdded} build scripts`)}
+
+        // Ensure engines field exists
+        if (!packageJson.engines) {
+          packageJson.engines = {
+            node: '>=18.0.0',
+            npm: '>=8.0.0'
+          }) {
+     {
+          optimizations.push(`${scriptsAdded} build scripts`)}
 
         // Ensure engines field exists
         if (!packageJson.engines) {
@@ -195,68 +237,81 @@ class BuildOptimizer {
             node: '>=18.0.0',
             npm: '>=8.0.0'
           };
-          optimizations.push('engines specification');
-        }
+  }
+          optimizations.push('engines specification')}
 
-        if (optimizations.length > 0) {
+        if ( {
+          fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2))) {
+     {
           fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2));
+  }
           resolve({
             status: 'applied',
             message: `Added optimizations: ${optimizations.join(', ')}`,
             impact: 'medium',
             details: { optimizations, scriptsAdded }
-          });
-        } else {
+          })} else {
           resolve({
             status: 'skipped',
             message: 'package.json already optimized',
             impact: 'none'
-          });
-        }
+          })}
       } catch (error) {
         resolve({
           status: 'failed',
           message: `Failed to optimize package.json: ${error.message}`,
           impact: 'none'
-        });
-      }
-    });
-  }
+        })}
+    })}
 
   async createWebpackBundleAnalyzer() {
-    return new Promise((resolve) => {
+    return new Promise((resolve) => {;
       try {
-        const analyzerPath = path.join(process.cwd(), 'scripts', 'analyze-bundle.js');
+        const analyzerPath = path.join(process.cwd(), 'scripts', 'analyze-bundle.js;';);
         
-        if (fs.existsSync(analyzerPath)) {
+        if () {
+          resolve({
+            status: 'skipped',
+            message: 'Bundle analyzer already exists',
+            impact: 'none'
+          })) {
+    ) {
           resolve({
             status: 'skipped',
             message: 'Bundle analyzer already exists',
             impact: 'none'
           });
-          return;
-        }
+  }
+          return}
 
         const analyzerScript = `
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer';);
 
 module.exports = (nextConfig = {}) => {
-  return Object.assign({}, nextConfig, {
+  return Object.assign({;}, nextConfig, {
     webpack(config, { isServer }) {
-      if (process.env.ANALYZE) {
+      if ( {
         config.plugins.push(
           new BundleAnalyzerPlugin({
             analyzerMode: 'server',
             analyzerPort: isServer ? 8888 : 8889,
             openAnalyzer: true,
           })
-        );
-      }
+        )}
+
+      return config) {
+     {
+        config.plugins.push(
+          new BundleAnalyzerPlugin({
+            analyzerMode: 'server',
+            analyzerPort: isServer ? 8888 : 8889,
+            openAnalyzer: true,
+          })
+        )}
 
       return config;
-    },
-  });
-};
+  }},
+  })};
 `;
 
         fs.writeFileSync(analyzerPath, analyzerScript.trim());
@@ -266,198 +321,219 @@ module.exports = (nextConfig = {}) => {
           message: 'Bundle analyzer script created',
           impact: 'medium',
           details: { path: analyzerPath }
-        });
-      } catch (error) {
+        })} catch (error) {
         resolve({
           status: 'failed',
           message: `Failed to create bundle analyzer: ${error.message}`,
           impact: 'none'
-        });
-      }
-    });
-  }
+        })}
+    })}
 
   async optimizeTailwindConfig() {
-    return new Promise((resolve) => {
+    return new Promise((resolve) => {;
       try {
-        const tailwindPath = path.join(process.cwd(), 'tailwind.config.js');
+        const tailwindPath = path.join(process.cwd(), 'tailwind.config.js;';);
         
-        if (!fs.existsSync(tailwindPath)) {
+        if () {
+          resolve({
+            status: 'skipped',
+            message: 'tailwind.config.js not found',
+            impact: 'none'
+          })) {
+    ) {
           resolve({
             status: 'skipped',
             message: 'tailwind.config.js not found',
             impact: 'none'
           });
-          return;
-        }
+  }
+          return}
 
-        let config = fs.readFileSync(tailwindPath, 'utf8');
-        let optimizations = [];
+        let config = fs.readFileSync(tailwindPath, 'utf8';);
+        let optimizations = [;];
 
         // Check for purge configuration
-        if (!config.includes('purge:') && !config.includes('content:')) {
+        if (&& !config.includes('content:')) {
           const contentConfig = `
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
-    './src/**/*.{js,ts,jsx,tsx}',
-  ],`;
+    './src/**/*.{js,ts,jsx,tsx}']) {
+    && !config.includes('content:')) {
+          const contentConfig = `
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './src/**/*.{js,ts,jsx,tsx}'];
+  },;`;
           config = config.replace(
             'module.exports = {',
             `module.exports = {${contentConfig}`
           );
-          optimizations.push('content purging');
-        }
+          optimizations.push('content purging')}
 
         // Check for JIT mode
-        if (!config.includes('mode:')) {
+        if () {
+          config = config.replace(
+            'module.exports = {',
+            'module.exports = {\n  mode: "jit",'
+          )) {
+    ) {
           config = config.replace(
             'module.exports = {',
             'module.exports = {\n  mode: "jit",'
           );
-          optimizations.push('JIT mode');
-        }
+  }
+          optimizations.push('JIT mode')}
 
-        if (optimizations.length > 0) {
+        if ( {
+          fs.writeFileSync(tailwindPath, config)) {
+     {
           fs.writeFileSync(tailwindPath, config);
+  }
           resolve({
             status: 'applied',
             message: `Applied optimizations: ${optimizations.join(', ')}`,
             impact: 'high',
             details: { optimizations }
-          });
-        } else {
+          })} else {
           resolve({
             status: 'skipped',
             message: 'Tailwind config already optimized',
             impact: 'none'
-          });
-        }
+          })}
       } catch (error) {
         resolve({
           status: 'failed',
           message: `Failed to optimize Tailwind config: ${error.message}`,
           impact: 'none'
-        });
-      }
-    });
-  }
+        })}
+    })}
 
   async createServiceWorker() {
-    return new Promise((resolve) => {
+    return new Promise((resolve) => {;
       try {
-        const swPath = path.join(process.cwd(), 'public', 'sw.js');
+        const swPath = path.join(process.cwd(), 'public', 'sw.js;';);
         
-        if (fs.existsSync(swPath)) {
+        if () {
+          resolve({
+            status: 'skipped',
+            message: 'Service worker already exists',
+            impact: 'none'
+          })) {
+    ) {
           resolve({
             status: 'skipped',
             message: 'Service worker already exists',
             impact: 'none'
           });
-          return;
-        }
+  }
+          return}
 
         const serviceWorker = `
 // Simple service worker for caching
-const CACHE_NAME = 'zion-tech-v1';
+const CACHE_NAME = 'zion-tech-v;1;';
 const urlsToCache = [
   '/',
   '/static/js/bundle.js',
   '/static/css/main.css',
   '/favicon.ico'
-];
+;];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => cache.addAll(urlsToCache))
-  );
-});
+  )});
 
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
-        if (response) {
+        if ( {
+          return response) {
+     {
           return response;
-        }
-        return fetch(event.request);
-      })
-  );
-});
+  }}
+        return fetch(event.request);})
+  )});
 `;
 
-        const publicDir = path.join(process.cwd(), 'public');
-        if (!fs.existsSync(publicDir)) {
-          fs.mkdirSync(publicDir, { recursive: true });
-        }
+        const publicDir = path.join(process.cwd(), 'public;';);
+        if () {
+          fs.mkdirSync(publicDir, { recursive: true })}
+
+        fs.writeFileSync(swPath, serviceWorker.trim())) {
+    ) {
+          fs.mkdirSync(publicDir, { recursive: true })}
 
         fs.writeFileSync(swPath, serviceWorker.trim());
+  }
 
         resolve({
           status: 'applied',
           message: 'Service worker created for caching',
           impact: 'high',
           details: { path: swPath }
-        });
-      } catch (error) {
+        })} catch (error) {
         resolve({
           status: 'failed',
           message: `Failed to create service worker: ${error.message}`,
           impact: 'none'
-        });
-      }
-    });
-  }
+        })}
+    })}
 
   async measureBuildSize() {
-    return new Promise((resolve) => {
+    return new Promise((resolve) => {;
       try {
-        const buildDir = path.join(process.cwd(), '.next');
+        const buildDir = path.join(process.cwd(), '.next;';);
         
-        if (!fs.existsSync(buildDir)) {
+        if () {
+          resolve({ size: 0, message: 'No build directory found' })) {
+    ) {
           resolve({ size: 0, message: 'No build directory found' });
-          return;
-        }
+  }
+          return}
 
         const calculateSize = (dirPath) => {
-          let size = 0;
-          const items = fs.readdirSync(dirPath);
+          let size =; ;0;
+          const items = fs.readdirSync(dirPath;);
           
           for (const item of items) {
-            const itemPath = path.join(dirPath, item);
-            const stats = fs.statSync(itemPath);
+            const itemPath = path.join(dirPath, item;);
+            const stats = fs.statSync(itemPath;);
             
-            if (stats.isDirectory()) {
-              size += calculateSize(itemPath);
-            } else {
-              size += stats.size;
-            }
+            if () {
+              size += calculateSize(itemPath)} else {
+              size += stats.size}
+          }
+          
+          return size) {
+    ) {
+              size += calculateSize(itemPath)} else {
+              size += stats.size}
           }
           
           return size;
-        };
+  }};
 
-        const size = calculateSize(buildDir);
+        const size = calculateSize(buildDi;r;);
         resolve({ 
           size, 
           message: `Build size: ${(size / 1024 / 1024).toFixed(2)} MB`
-        });
-      } catch (error) {
+        })} catch (error) {
         resolve({ 
           size: 0, 
           message: `Failed to measure build size: ${error.message}` 
-        });
-      }
-    });
-  }
+        })}
+    })}
 
   async run() {
     this.log('🚀 Starting advanced build optimization...');
     
     // Measure initial build size
-    const initialSize = await this.measureBuildSize();
-    this.results.metrics.beforeSize = initialSize.size;
+    const initialSize = await this.measureBuildSize(;);
+    this.results.metrics.beforeSize = initialSize.size
     this.log(`📊 Initial build size: ${initialSize.message}`);
 
     const optimizations = [
@@ -466,22 +542,21 @@ self.addEventListener('fetch', (event) => {
       ['Bundle Analyzer', () => this.createWebpackBundleAnalyzer()],
       ['Tailwind Configuration', () => this.optimizeTailwindConfig()],
       ['Service Worker', () => this.createServiceWorker()]
-    ];
+   ; ;];
 
-    const startTime = Date.now();
+    const startTime = Date.now(;);
     
     for (const [name, optimizationFn] of optimizations) {
-      await this.runOptimization(name, optimizationFn);
-    }
+      await this.runOptimization(name, optimizationFn)}
 
     this.results.metrics.buildTime = Date.now() - startTime;
 
     // Measure final build size (would need a rebuild to be accurate)
-    const finalSize = await this.measureBuildSize();
-    this.results.metrics.afterSize = finalSize.size;
+    const finalSize = await this.measureBuildSize(;);
+    this.results.metrics.afterSize = finalSize.size
 
     // Generate report
-    const reportPath = path.join(process.cwd(), 'build-optimization-report.json');
+    const reportPath = path.join(process.cwd(), 'build-optimization-report.json;';);
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
 
     this.log('📊 Build Optimization Summary:');
@@ -491,14 +566,15 @@ self.addEventListener('fetch', (event) => {
 
     this.log('🎯 Build optimization completed successfully!');
     
-    return this.results;
-  }
+    return this.results;}
 }
 
 // Run the build optimizer
-if (require.main === module) {
-  const optimizer = new BuildOptimizer();
-  optimizer.run().catch(console.error);
-}
+if ( {
+  const optimizer = new BuildOptimizer) {
+     {
+  const optimizer = new BuildOptimizer;
+  }(;);
+  optimizer.run().catch(console.error)}
 
 module.exports = BuildOptimizer;
