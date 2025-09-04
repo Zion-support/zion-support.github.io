@@ -1,4 +1,4 @@
-# Security Report - 9/1/2025
+# Security Report - 8/29/2025
 
 ## 🚨 Risk Level: HIGH
 
@@ -7,8 +7,8 @@
 - **Critical Vulnerabilities**: 0 🔴
 - **High Vulnerabilities**: 0 🟠
 - **Outdated Packages**: 0
-- **Security Issues**: 4
-- **Potential Secrets**: 4
+- **Security Issues**: 8
+- **Potential Secrets**: 6
 
 ## Detailed Results
 
@@ -24,16 +24,16 @@
 
 ### 🔍 Code Analysis
 - **Status**: ✅ Completed
-- **Security Issues**: 4
-- **Breakdown**: High: 0, Medium: 4, Low: 0
+- **Security Issues**: 8
+- **Breakdown**: High: 2, Medium: 6, Low: 0
 
 ### 🔐 Secret Scan
 - **Status**: ✅ Completed
-- **Potential Secrets**: 4
+- **Potential Secrets**: 6
 
 ### 📋 Compliance
 - **Status**: ✅ Completed
-- **Checks Performed**: 4
+- **Checks Performed**: 1
 
 ## 🚨 Immediate Actions Required
 
@@ -41,8 +41,9 @@
 
 2. ✅ No high-risk vulnerabilities found
 
-5. **SECRETS**: Remove or secure 4 hardcoded secrets
+5. **SECRETS**: Remove or secure 6 hardcoded secrets
 6. **SECRETS**: Use environment variables for sensitive data
+
 ## 📚 Recommendations
 
 1. **Regular Updates**: Update dependencies weekly

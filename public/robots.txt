@@ -1,4 +1,81 @@
 User-agent: *
 Allow: /
 
+<<<<<<< HEAD
 Sitemap: https://ziontechgroup.com/sitemap.xml
+=======
+# Sitemap
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Allow all important pages
+Allow: /about
+Allow: /services
+Allow: /ai-services
+Allow: /it-services
+Allow: /micro-saas
+Allow: /contact
+Allow: /blog
+Allow: /careers
+Allow: /partners
+Allow: /news
+Allow: /case-studies
+Allow: /help
+Allow: /faq
+Allow: /pricing
+Allow: /marketplace
+Allow: /ai-solutions
+Allow: /it-consulting
+Allow: /space-tech
+Allow: /quantum-computing
+Allow: /iot-edge-computing
+Allow: /digital-twin
+Allow: /data-analytics
+
+# Allow all service pages
+Allow: /services/
+
+# Allow all solution pages
+Allow: /solutions/
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Crawl delay (optional)
+Crawl-delay: 1
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# Block common AI training bots
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+>>>>>>> merge-all-prs-20250904-105408

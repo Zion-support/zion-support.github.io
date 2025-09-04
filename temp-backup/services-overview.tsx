@@ -1,6 +1,13 @@
-import Link from 'next/link';
-import Head from 'next/head';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { 
+  ArrowRight, CheckCircle, Star, Clock, Users, Shield, Zap, TrendingUp, Award, Globe,
+  Brain, Cloud, Cpu, Lock, Rocket, Heart, Code, Network, Database, Target
+} from 'lucide-react';
 
+<<<<<<< HEAD:temp-backup/services-overview.tsx
 export default function ServicesOverview() {
   const contact = {
     phone: '+1 302 464 0950',
@@ -159,10 +166,323 @@ export default function ServicesOverview() {
                   Browse Catalog
                 </Link>
               </div>
+=======
+export default function ServicesOverviewPage() {
+  const stats = [
+    { number: '100+', label: 'Services Available', icon: Globe },
+    { number: '500+', label: 'Projects Completed', icon: TrendingUp },
+    { number: '50+', label: 'Happy Clients', icon: Users },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: Award },
+    { number: '24/7', label: 'Support Available', icon: Clock },
+    { number: '30-60%', label: 'Cost Savings', icon: Shield },
+  ];
+
+  const benefits = [
+    {
+      icon: Zap,
+      title: 'Cutting-Edge Technology',
+      description: 'We use the latest technologies and frameworks to deliver innovative solutions that give you a competitive edge.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with SOC 2 compliance, regular security audits, and advanced threat protection.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Team',
+      description: 'Our team consists of certified professionals with deep expertise in AI, cloud architecture, and modern development practices.'
+    },
+    {
+      icon: Clock,
+      title: 'Fast Implementation',
+      description: 'Quick setup and deployment to get you up and running in days, not months, with our proven methodologies.'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Proven Results',
+      description: 'Track record of successful implementations with measurable ROI improvements and client satisfaction.'
+    },
+    {
+      icon: Award,
+      title: 'Quality Assurance',
+      description: 'Rigorous testing and quality control processes ensure reliable, scalable, and maintainable solutions.'
+    }
+  ];
+
+  const serviceCategories = [
+    {
+      title: "AI & Machine Learning",
+      icon: Brain,
+      description: "Transform your business with intelligent automation and data-driven insights",
+      services: [
+        "AI Business Intelligence",
+        "Machine Learning Models",
+        "Natural Language Processing",
+        "Computer Vision",
+        "Predictive Analytics",
+        "AI Chatbots & Assistants"
+      ],
+      color: "from-cyan-500 to-blue-500",
+      href: "/services/ai-analytics"
+    },
+    {
+      title: "Cybersecurity Solutions",
+      icon: Shield,
+      description: "Protect your digital assets with enterprise-grade security solutions",
+      services: [
+        "Security Audits & Assessments",
+        "Threat Detection & Response",
+        "Identity & Access Management",
+        "Data Encryption & Protection",
+        "Compliance & Governance",
+        "Security Training & Awareness"
+      ],
+      color: "from-purple-500 to-red-500",
+      href: "/services/cybersecurity"
+    },
+    {
+      title: "Cloud & DevOps",
+      icon: Cloud,
+      description: "Scale your infrastructure with modern cloud and DevOps practices",
+      services: [
+        "Cloud Migration & Strategy",
+        "Container Orchestration",
+        "CI/CD Pipeline Setup",
+        "Infrastructure as Code",
+        "Monitoring & Observability",
+        "Cost Optimization"
+      ],
+      color: "from-blue-500 to-cyan-500",
+      href: "/services/cloud-devops"
+    },
+    {
+      title: "IoT & Edge Computing",
+      icon: Cpu,
+      description: "Connect and manage devices at the edge with intelligent IoT solutions",
+      services: [
+        "IoT Device Management",
+        "Edge Computing Platforms",
+        "Real-time Data Processing",
+        "Sensor Integration",
+        "Fleet Management",
+        "Smart City Solutions"
+      ],
+      color: "from-green-500 to-cyan-500",
+      href: "/services/iot-edge"
+    },
+    {
+      title: "Quantum Computing",
+      icon: Rocket,
+      description: "Explore the next frontier of computing with quantum solutions",
+      services: [
+        "Quantum Algorithm Development",
+        "Quantum Simulation",
+        "Quantum Cryptography",
+        "Quantum Machine Learning",
+        "Quantum Optimization",
+        "Quantum Research & Development"
+      ],
+      color: "from-purple-500 to-cyan-500",
+      href: "/services/quantum-computing"
+    },
+    {
+      title: "Blockchain Solutions",
+      icon: Lock,
+      description: "Build secure, transparent, and decentralized applications",
+      services: [
+        "Smart Contract Development",
+        "DeFi Applications",
+        "NFT Platforms",
+        "Supply Chain Tracking",
+        "Digital Identity",
+        "Cryptocurrency Integration"
+      ],
+      color: "from-orange-500 to-purple-500",
+      href: "/services/blockchain"
+    },
+    {
+      title: "Digital Transformation",
+      icon: Target,
+      description: "Modernize your business processes and technology stack",
+      services: [
+        "Process Automation",
+        "Legacy System Modernization",
+        "Digital Strategy Consulting",
+        "Change Management",
+        "Technology Roadmapping",
+        "Digital Culture Transformation"
+      ],
+      color: "from-pink-500 to-red-500",
+      href: "/services/digital-transformation"
+    },
+    {
+      title: "Micro SaaS Solutions",
+      icon: Code,
+      description: "Scalable software solutions tailored to your specific needs",
+      services: [
+        "Custom Web Applications",
+        "API Development",
+        "Database Design",
+        "Third-party Integrations",
+        "Performance Optimization",
+        "Maintenance & Support"
+      ],
+      color: "from-purple-500 to-pink-500",
+      href: "/services/micro-saas"
+    }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Services - Zion Tech Group | Comprehensive Technology Solutions</title>
+        <meta name="description" content="Explore Zion Tech Group's comprehensive technology services including AI, cybersecurity, cloud, IoT, quantum computing, blockchain, and digital transformation solutions." />
+        <meta name="keywords" content="technology services, AI solutions, cybersecurity, cloud services, IoT, quantum computing, blockchain, digital transformation" />
+        <link rel="canonical" href="https://ziontechgroup.com/services" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Services</span>
+              </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                Comprehensive technology solutions designed to transform your business and drive innovation across all industries.
+              </p>
+>>>>>>> merge-all-prs-20250904-105408:pages/services-overview.tsx
             </div>
           </div>
         </section>
-      </main>
+
+        {/* Stats Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <stat.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-gray-400 text-sm">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Service Categories Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Service Categories</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Explore our comprehensive range of technology services designed to meet your business needs.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {serviceCategories.map((category, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 group"
+                >
+                  <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center mb-4`}>
+                    <category.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{category.title}</h3>
+                  <p className="text-gray-300 mb-4">{category.description}</p>
+                  <ul className="space-y-2 mb-6">
+                    {category.services.slice(0, 3).map((service, serviceIndex) => (
+                      <li key={serviceIndex} className="flex items-center text-sm text-gray-400">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                        {service}
+                      </li>
+                    ))}
+                    {category.services.length > 3 && (
+                      <li className="text-sm text-cyan-400">
+                        +{category.services.length - 3} more services
+                      </li>
+                    )}
+                  </ul>
+                  <Link
+                    to={category.href}
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group-hover:translate-x-1"
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We deliver exceptional value through our expertise, innovation, and commitment to your success.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300"
+                >
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
+                    <benefit.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
+                  <p className="text-gray-300">{benefit.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our services can help transform your business and drive innovation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+              >
+                Get a Free Consultation
+              </Link>
+              <Link
+                to="/pricing"
+                className="inline-flex items-center px-8 py-3 border border-cyan-500 text-base font-medium rounded-md text-cyan-400 bg-transparent hover:bg-cyan-500/10 transition-all duration-300"
+              >
+                View Pricing
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
     </>
   );
 }

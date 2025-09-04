@@ -25,9 +25,17 @@ const Layout = ({
         <meta name="viewport" content="width=device-width, initial-scale=1"  />
         <link rel="icon" href="/favicon.ico"  />
       </Head>
+<<<<<<< HEAD
       <Header  />
       {children}
       <Footer  />
+=======
+      <EnhancedNavigation />
+      <main>
+        {children}
+      </main>
+      <EnhancedFooter />
+>>>>>>> merge-all-prs-20250904-105408
     </>
   )
 }

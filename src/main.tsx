@@ -1,17 +1,27 @@
+<<<<<<< HEAD
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import App from './App.tsx'
 import './index.css'
 import { reportWebVitals } from './reportWebVitals'
+=======
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import App from './App.tsx';
+import './index.css';
+>>>>>>> pr-11559
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <HelmetProvider>
       <Router>
-        <App  />
+        <App />
       </Router>
     </HelmetProvider>
+<<<<<<< HEAD
   </React.StrictMode>,
 )
 
@@ -26,3 +36,7 @@ if ('serviceWorker' in navigator) {
       .catch(() => void 0)
   })
 }
+=======
+  </React.StrictMode>
+);
+>>>>>>> pr-11559
