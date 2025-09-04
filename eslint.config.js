@@ -32,6 +32,8 @@ export default [
         Node: 'readonly',
         setTimeout: 'readonly',
         clearTimeout: 'readonly',
+        PerformanceObserver: 'readonly',
+        React: 'readonly',
       },
     },
     plugins: {
@@ -84,7 +86,6 @@ export default [
       'src.pages.disabled/**',
       'solutions.disabled/**',
       'components.disabled/**',
-      'components/**',
       'components.corrupted/**',
       'hooks/**',
       'hooks.disabled/**',
@@ -100,7 +101,6 @@ export default [
       'cypress_backup/**',
       'data/**',
       'e2e/**',
-      'pages/**',
       'pages.disabled/**',
       'pages.disabled_backup/**',
       'pages_backup/**',
@@ -147,11 +147,6 @@ export default [
 
       // Root-level noisy files
       'api/**',
-      '*.js',
-      '.*.js',
-      '*.ts',
-      '*.tsx',
-      '*.jsx',
       'jest.config.*',
       'fix-*.js',
       'fix-*.jsx',

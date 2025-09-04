@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../components/PerformanceMonitor';
+import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import '../styles/globals.css';
 
 function Header(): any {
@@ -24,7 +25,7 @@ function Header(): any {
           WebkitTextFillColor: 'transparent',
           backgroundClip: 'text',
           textDecoration: 'none'
-        }}>Zion Tech Group</Link>
+        }}>Zion Tech Group        </Link>
         
         {/* Desktop Navigation */}
         <div style={{ 
@@ -125,6 +126,7 @@ function Footer(): any {
         </div>
 
         {/* Services */}
+<<<<<<< HEAD
         <div style={{ display: 'grid', gap: 12 }}>
           <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Our Services</h3>
           <div style={{ display: 'grid', gap: 8 }}>
@@ -148,6 +150,7 @@ function Footer(): any {
             <Link href="/faq" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>FAQ</Link>
             <Link href="/contact" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Contact</Link>
           </div>
+        </div>
         </div>
 
         {/* Contact CTA */}
@@ -206,10 +209,12 @@ function Footer(): any {
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ErrorBoundary>
-      <PerformanceMonitor />
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
+      <PerformanceOptimizer>
+        <PerformanceMonitor />
+        <Header />
+        <Component {...pageProps} />
+        <Footer />
+      </PerformanceOptimizer>
     </ErrorBoundary>
   );
 }
