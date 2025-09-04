@@ -11,23 +11,18 @@ const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const sendToAnalytics = (metric: WebVitals) => {
-        // Send to Google Analytics or other analytics service
-        if (typeof window !== 'undefined' && window.gtag) {
-          window.gtag('event', metric.name, {
-            event_category: 'Web Vitals',
-            event_label: metric.id,
-            value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-            non_interaction: true,
-          });
-        }
-        
-        // Log to console in development
-        if (process.env.NODE_ENV === 'development') {
-          console.log(`Web Vital - ${metric.name}:`, metric.value);
-        }
-      };
-
+      // Send performance data to analytics in production
+      const sendToAnalytics = (metric: string, value: number) => {
+        if (process.env.NODE_ENV === 'production') {
+          // Send to Google Analytics or other analytics service
+          if (typeof (window as any).gtag !== 'undefined') {
+            (window as any).gtag('event', 'web_vitals', {
+              metric_name: metric,
+              metric_value: Math.round(value),
+              metric_rating: value < 2.5 ? 'good' : value < 4 ? 'needs-improvement' : 'poor'
+            });
+          }
+      }
       // Monitor Largest Contentful Paint (LCP)
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
@@ -39,7 +34,6 @@ const PerformanceMonitor: React.FC = () => {
               id: entry.startTime.toString()
             });
           }
-        }
       });
       
       try {
@@ -60,7 +54,6 @@ const PerformanceMonitor: React.FC = () => {
             }
             sendToAnalytics('FID', fidEntry.processingStart - fidEntry.startTime);
           }
-        }
       });
 
       try {
@@ -77,8 +70,11 @@ const PerformanceMonitor: React.FC = () => {
             const value = layoutEntry.value || 0;
             console.log('CLS:', value);
           }
+        // Log CLS in development only
+        if (process.env.NODE_ENV === 'development') {
+          console.log('CLS:', clsValue);
         }
-        console.log('CLS:', clsValue);
+        sendToAnalytics('CLS', clsValue);
       });
 
       try {
@@ -112,7 +108,6 @@ const PerformanceMonitor: React.FC = () => {
         fidObserver.disconnect();
         clsObserver.disconnect();
       }
-    };
   }, []);
 
   return null; // This component doesn't render anything
