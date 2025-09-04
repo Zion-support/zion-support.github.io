@@ -37,7 +37,8 @@ const categories: Arra y<any> = [''
   'TechCorp Solutions','''
   'SecureNet Professionals',;'''
 '''
-'$500',$1,200',$2,500',$5,000',$8,500',$15,000',$25,000',$50,000';
+
+  '$500',$1,200',$2,500',$5,000',$8,500',$15,000',$25,000',$50,000';
 ];
 
   'San Francisco, CA',New York, NY',Austin, TX',Seattle, WA',Boston, MA',Remote';

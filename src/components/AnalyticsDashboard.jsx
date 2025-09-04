@@ -76,8 +76,8 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             return `${(num / 1000).toFixed(1)}K`;
         return num.toString()};
     return (<div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>      {/* Header */}
-}
-};
+    }
+  };
   // Update summary when events change
   useEffect(() => {
   // TODO: Add dependencies if needed

@@ -1,18 +1,17 @@
 {
   "timestamp": "2025-09-01T11:49:27.336Z",
   "summary": {
-"total": 19,
+    "total": 19,
     "working": 14,
     "broken": 5,
     "rate": "73.68"
-  },
-"internal": {
+  },  "internal": {
     "total": 13,
     "working": 11,
     "broken": 2,
     "results": [
       {
-"url": "https://ziontechgroup.com/images/grid-pattern.svg",
+        "url": "https://ziontechgroup.com/images/grid-pattern.svg",
         "source": "assets/index-Cs_mqll6.css",
         "type": "css",
         "status": 302,
@@ -36,7 +35,7 @@
 }
       },
       {
-"url": "https://app.ziontechgroup.com/enterprise",
+        "url": "https://app.ziontechgroup.com/enterprise",
         "source": "enterprise/index.html",
         "type": "html",
         "status": "error",
@@ -65,10 +64,9 @@
           "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
           "x-content-type-options": "nosniff",
           "x-frame-options": "DENY",
-"x-nf-request-id": "01K42HRN68Y62CBT88BSFQVMHT",
+          "x-nf-request-id": "01K42HRN68Y62CBT88BSFQVMHT",
           "x-xss-protection": "1; mode=block"
-        }
-},
+        }      },
       {
         "url": "https://ziontechgroup.com/logo192.png",
         "source": "index.html",
@@ -91,10 +89,9 @@
           "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
           "x-content-type-options": "nosniff",
           "x-frame-options": "DENY",
-"x-nf-request-id": "01K42HRN74FRHSYKWWR8BB1BW4",
+          "x-nf-request-id": "01K42HRN74FRHSYKWWR8BB1BW4",
           "x-xss-protection": "1; mode=block"
-        }
-},
+        }      },
       {
         "url": "https://ziontechgroup.com/manifest.json",
         "source": "index.html",
@@ -117,7 +114,7 @@
           "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
           "x-content-type-options": "nosniff",
           "x-frame-options": "DENY",
-"x-nf-request-id": "01K42HRN6FWTTGSQ9ZPEAB28D4",
+          "x-nf-request-id": "01K42HRN6FWTTGSQ9ZPEAB28D4",
           "x-xss-protection": "1; mode=block"
         }
       },
@@ -171,8 +168,7 @@
           "x-frame-options": "DENY",
           "x-nf-request-id": "01K42HRN6V2GC0ZXE7E93VR2NE",
           "x-xss-protection": "1; mode=block"
-        }
-},
+        }      },
       {
         "url": "https://ziontechgroup.com/favicon.ico",
         "source": "offline.html",
@@ -195,10 +191,9 @@
           "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
           "x-content-type-options": "nosniff",
           "x-frame-options": "DENY",
-"x-nf-request-id": "01K42HRN74PVY7BVSZ0T6DWESQ",
+          "x-nf-request-id": "01K42HRN74PVY7BVSZ0T6DWESQ",
           "x-xss-protection": "1; mode=block"
-        }
-},
+        }      },
       {
         "url": "https://ziontechgroup.com/favicon-32x32.png",
         "source": "offline.html",
@@ -221,10 +216,9 @@
           "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
           "x-content-type-options": "nosniff",
           "x-frame-options": "DENY",
-"x-nf-request-id": "01K42HRN6RNE57CR8625AJZRMT",
+          "x-nf-request-id": "01K42HRN6RNE57CR8625AJZRMT",
           "x-xss-protection": "1; mode=block"
-        }
-},
+        }      },
       {
         "url": "https://ziontechgroup.com/favicon-16x16.png",
         "source": "offline.html",
@@ -247,13 +241,12 @@
           "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
           "x-content-type-options": "nosniff",
           "x-frame-options": "DENY",
-"x-nf-request-id": "01K42HRN7MMPE2WK1DJE9NMKH3",
+          "x-nf-request-id": "01K42HRN7MMPE2WK1DJE9NMKH3",
           "x-xss-protection": "1; mode=block"
         }
       },
       {
-        "url": "https://ziontechgroup.com/apple-touch-icon.png",
-"source": "offline.html",
+        "url": "https://ziontechgroup.com/apple-touch-icon.png",        "source": "offline.html",
         "type": "html",
         "status": 200,
         "working": true,
@@ -273,17 +266,16 @@
           "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
           "x-content-type-options": "nosniff",
           "x-frame-options": "DENY",
-"x-nf-request-id": "01K42HRN7KKZCW7PJ34T3V0PQV",
+          "x-nf-request-id": "01K42HRN7KKZCW7PJ34T3V0PQV",
           "x-xss-protection": "1; mode=block"
-        }
-},
+        }      },
       {
         "url": "mailto:support@ziontechgroup.com",
         "source": "offline.html",
         "type": "html",
         "status": "error",
         "working": false,
-"error": "Protocol \"mailto:\" not supported. Expected \"http:\""
+        "error": "Protocol \"mailto:\" not supported. Expected \"http:\""
       },
       {
         "url": "https://ziontechgroup.com",
@@ -327,8 +319,7 @@
           "strict-transport-security": "max-age=31536000",
           "x-nf-request-id": "01K42HRNCATVK13HK25VGQGZY8"
         }
-      }
-]
+      }    ]
 },
   "external": {
     "total": 6,
@@ -419,7 +410,7 @@
           "x-xss-protection": "0",
           "x-frame-options": "SAMEORIGIN",
           "x-content-type-options": "nosniff",
-"alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
         }
       },
       {
@@ -452,8 +443,7 @@
         "type": "html",
         "status": "error",
         "working": false,
-        "error": "Protocol \"tel:\" not supported. Expected \"http:\""
-}
+        "error": "Protocol \"tel:\" not supported. Expected \"http:\""      }
     ]
 },
   "brokenLinks": {
@@ -472,9 +462,8 @@
         "type": "html",
         "status": "error",
         "working": false,
-"error": "Protocol \"mailto:\" not supported. Expected \"http:\""
-      }
-],
+        "error": "Protocol \"mailto:\" not supported. Expected \"http:\""
+      }    ],
     "external": [
       {
         "url": "https://fonts.googleapis.com",
@@ -509,7 +498,7 @@
           "server": "sffe",
           "content-length": "1561",
           "x-xss-protection": "0",
-"alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
         }
       },
       {

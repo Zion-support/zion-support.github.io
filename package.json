@@ -179,8 +179,6 @@
     "ecosystem": "ecosystem.maintenance.cjs"
   },
   "dependencies": {
-    "@google-analytics/data": "^5.2.0",
-    "@google/generative-ai": "^0.24.1",
     "@hookform/resolvers": "^5.2.1",
     "@magneticwatermelon/mcp-toolkit": "^1.1.4",
     "@modelcontextprotocol/sdk": "^1.17.1",
@@ -327,7 +325,7 @@
     "url": "git+https://github.com/Zion-Holdings/zion.app.git"
   },
   "keywords": [
-    "nextjs",
+    "vite",
     "react",
     "typescript",
     "tailwindcss",

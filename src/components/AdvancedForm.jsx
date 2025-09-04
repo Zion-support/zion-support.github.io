@@ -13,8 +13,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
     const [showPassword, setShowPassword] = useState ({ /* empty */ }) ;
     const [progress, setProgress] = useState (0) ;
     // Initialize form data and validation;
-    useEffect(() => {}
-const initialValidation = {};
+    useEffect(() => {}        const initialValidation = {};
         fields.forEach(field => {
 import React from "react"
 import { useState, useEffect, useCallback } from "react";,"});,"})","});,"})","});,"})"

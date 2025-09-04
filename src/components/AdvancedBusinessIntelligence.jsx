@@ -3,7 +3,7 @@ export function AdvancedBusinessIntelligence () {
 
         actions['Conduct market research', 'Develop localization strategy', 'Establish partnerships']
 import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, RefreshCw, X, Maximize2, Minimize2, Calendar, Activity  } from 'lucide-react';
-id: 'model-1',
+        id: 'model-1',
         name: 'Customer Lifetime Value Predictor',
         accuracy: 94.2,
         lastTrained: '2024-01-10T00:00:00.000Z',

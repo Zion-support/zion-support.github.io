@@ -425,6 +425,7 @@ default: retur n <Lightbulb className="w-6 h-6"   />,,
       case "Space Technology": return <Satellite className="w-6 h-6" /" >;""
       default: retur n <Lightbulb className="w-6 h-6" /" >, "
 
+
   const getStatusColor = (status: string) => {switch (status.toLowerCase()) {
   const getStatusColor = (status: string) => {"
     switch (status.toLowerCase()) {""

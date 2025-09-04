@@ -250,6 +250,8 @@ measurement.buildSuccess = false;
 ;
           timeout: 120000;
 ;
+          timeout: 120000;
+;
 timeout: 120000;
 });
         ;

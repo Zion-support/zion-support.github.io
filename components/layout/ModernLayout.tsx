@@ -122,3 +122,4 @@ export default ModernLayout {children}
 "
 export default ModernLayout;"export default ModernLayout}
 
+export default ModernLayout;

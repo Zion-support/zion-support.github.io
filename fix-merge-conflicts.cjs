@@ -4,7 +4,7 @@ function fixMergeConflicts(filePath) {
   try {
   let content = fs.readFileSync(filePath, "utf8");
     // Remove merge conflict markers and keep the content after the last marker;
-    content = content.replace(/[\s\S]*?[\s\S]*?content = content.replace(/[\s\S]*?content = content.replace(/[\s\S]*?// Fix common syntax issues;
+    content = content.replace(/[\s\S]*?[\s\S]*?    content = content.replace(/[\s\S]*?    content = content.replace(/[\s\S]*?    // Fix common syntax issues;
     content = content.replace(/},\s*}/g, "}");
     content = content.replace(/},\s*]/g, "]");
     content = content.replace(/},\s*\)/g, ")");
