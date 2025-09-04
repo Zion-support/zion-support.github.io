@@ -682,5 +682,203 @@ export const IT_SERVICES: ITService[] = [
     },
     competitors: ["IBM", "HPE", "Dell Technologies", "Cisco", "Microsoft"],
     marketSize: "$23.4 billion by 2025"
+  },
+  // Quantum Cloud Infrastructure
+  {
+    id: "quantum-cloud-infrastructure",
+    title: "Quantum Cloud Infrastructure",
+    description: "Revolutionary cloud infrastructure service that combines traditional cloud computing with quantum computing capabilities. Provides unprecedented processing power and security for mission-critical applications.",
+    category: "Quantum Cloud",
+    subcategory: "Infrastructure as a Service",
+    price: 75000,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Hybrid quantum-classical computing",
+      "Quantum encryption and security",
+      "Scalable quantum processing",
+      "Real-time quantum optimization",
+      "Multi-cloud quantum distribution",
+      "Quantum machine learning services",
+      "Advanced monitoring and analytics",
+      "24/7 quantum support",
+      "Custom quantum algorithm development",
+      "Compliance and audit support"
+    ],
+    benefits: [
+      "1000x faster processing for specific tasks",
+      "Unbreakable quantum encryption",
+      "Future-proof infrastructure",
+      "Competitive advantage in quantum era",
+      "Reduced computational costs for complex problems"
+    ],
+    useCases: [
+      "Financial modeling and trading",
+      "Drug discovery and research",
+      "Cryptography and security",
+      "Optimization problems",
+      "Machine learning acceleration",
+      "Scientific computing"
+    ],
+    targetAudience: [
+      "Fortune 500 companies",
+      "Research institutions",
+      "Financial services",
+      "Pharmaceutical companies",
+      "Government agencies",
+      "Technology companies"
+    ],
+    tags: ["Quantum Computing", "Cloud Infrastructure", "Security", "High Performance", "Innovation"],
+    estimatedDelivery: "6-12 months",
+    supportLevel: "premium",
+    marketPrice: "$100,000 - $250,000/month",
+    roi: "300-600%",
+    innovationLevel: "Cutting-Edge",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Quantum Annealing", "AWS Braket", "IBM Quantum", "Google Quantum AI", "Docker", "Kubernetes"],
+      integrations: ["AWS", "Azure", "Google Cloud", "IBM Cloud", "Private Data Centers"],
+      apiEndpoints: 150,
+      uptime: "99.99%",
+      security: ["Quantum encryption", "Zero-trust architecture", "SOC 2 Type II", "ISO 27001"]
+    },
+    competitors: ["IBM Quantum Network", "Google Quantum AI", "Microsoft Azure Quantum", "Amazon Braket"],
+    marketSize: "$5.2 billion by 2025"
+  },
+  // AI-Powered DevOps Automation
+  {
+    id: "ai-powered-devops-automation",
+    title: "AI-Powered DevOps Automation",
+    description: "Intelligent DevOps platform that uses AI to automate deployment, monitoring, and maintenance of applications. Reduces deployment time by 90% and eliminates 95% of manual DevOps tasks.",
+    category: "DevOps",
+    subcategory: "AI Automation",
+    price: 12000,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered deployment automation",
+      "Intelligent monitoring and alerting",
+      "Automated performance optimization",
+      "Predictive maintenance",
+      "Self-healing infrastructure",
+      "Automated security scanning",
+      "Intelligent scaling decisions",
+      "Automated rollback capabilities",
+      "Performance analytics and insights",
+      "Integration with all major platforms"
+    ],
+    benefits: [
+      "Reduce deployment time by 90%",
+      "Eliminate 95% of manual tasks",
+      "Improve system reliability by 99%",
+      "Reduce operational costs by 60%",
+      "Accelerate time-to-market by 70%"
+    ],
+    useCases: [
+      "Continuous integration and deployment",
+      "Infrastructure monitoring",
+      "Performance optimization",
+      "Security automation",
+      "Disaster recovery",
+      "Capacity planning"
+    ],
+    targetAudience: [
+      "DevOps teams",
+      "Software development companies",
+      "Cloud service providers",
+      "Enterprise IT departments",
+      "Startups and scale-ups",
+      "Managed service providers"
+    ],
+    tags: ["DevOps", "AI", "Automation", "Cloud", "Monitoring"],
+    estimatedDelivery: "4-8 weeks",
+    supportLevel: "premium",
+    marketPrice: "$15,000 - $35,000/month",
+    roi: "250-400%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Machine Learning", "Docker", "Kubernetes", "Terraform", "Ansible", "Prometheus"],
+      integrations: ["AWS", "Azure", "Google Cloud", "GitHub", "GitLab", "Jenkins", "Docker Hub"],
+      apiEndpoints: 100,
+      uptime: "99.9%",
+      security: ["Zero-trust security", "Encrypted communications", "Access control", "Audit logging"]
+    },
+    competitors: ["GitLab", "Jenkins", "CircleCI", "GitHub Actions", "Azure DevOps"],
+    marketSize: "$3.8 billion by 2025"
+  },
+  // Blockchain Enterprise Platform
+  {
+    id: "blockchain-enterprise-platform",
+    title: "Blockchain Enterprise Platform",
+    description: "Comprehensive blockchain platform for enterprises that provides secure, scalable, and compliant blockchain solutions. Enables smart contracts, digital identity, supply chain tracking, and decentralized applications.",
+    category: "Blockchain",
+    subcategory: "Enterprise Solutions",
+    price: 35000,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Private and public blockchain networks",
+      "Smart contract development and deployment",
+      "Digital identity management",
+      "Supply chain tracking and verification",
+      "Tokenization and asset management",
+      "Decentralized application hosting",
+      "Cross-chain interoperability",
+      "Compliance and regulatory tools",
+      "Advanced analytics and reporting",
+      "24/7 blockchain support"
+    ],
+    benefits: [
+      "Increase transparency and trust",
+      "Reduce transaction costs by 80%",
+      "Eliminate intermediaries",
+      "Improve supply chain visibility",
+      "Enable new business models"
+    ],
+    useCases: [
+      "Supply chain management",
+      "Digital identity verification",
+      "Smart contracts automation",
+      "Asset tokenization",
+      "Decentralized finance (DeFi)",
+      "Non-fungible tokens (NFTs)"
+    ],
+    targetAudience: [
+      "Large enterprises",
+      "Financial institutions",
+      "Supply chain companies",
+      "Government agencies",
+      "Healthcare organizations",
+      "Real estate companies"
+    ],
+    tags: ["Blockchain", "Smart Contracts", "Decentralized", "Security", "Innovation"],
+    estimatedDelivery: "3-6 months",
+    supportLevel: "premium",
+    marketPrice: "$50,000 - $100,000/month",
+    roi: "200-400%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Ethereum", "Hyperledger", "Polkadot", "Cosmos", "Solidity", "Web3.js"],
+      integrations: ["AWS", "Azure", "Google Cloud", "Oracle", "SAP", "Salesforce"],
+      apiEndpoints: 80,
+      uptime: "99.9%",
+      security: ["Cryptographic security", "Multi-signature", "Hardware security modules", "Audit trails"]
+    },
+    competitors: ["IBM Blockchain", "Microsoft Azure Blockchain", "Amazon Managed Blockchain", "ConsenSys"],
+    marketSize: "$4.2 billion by 2025"
   }
 ];
