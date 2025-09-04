@@ -12,12 +12,422 @@ import { Menu, X } from 'lucide-react';
 export function AppHeader() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
+<<<<<<< HEAD
   const nav = [
     { name: 'Home', to: '/' },
     { name: 'Services', to: '/services' },
     { name: 'Solutions', to: '/solutions' },
     { name: 'Resources', to: '/resources' },
     { name: 'Contact', to: '/contact' }
+=======
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      // Navigate to search results
+      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
+    }
+  };
+
+  const navigation = [
+    { name: 'Home', href: '/', current: true },
+    { name: 'Services', href: '/services', current: false, hasDropdown: true },
+    { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true },
+    { name: 'Resources', href: '/resources', current: false, hasDropdown: true },
+    { name: 'About', href: '/about', current: false },
+    { name: 'Contact', href: '/contact', current: false },
+  ];
+
+  // Featured Services Showcase
+  const featuredServicesShowcase = {
+    title: 'Innovative Services 2032',
+    href: '/innovative-services-showcase-2032',
+    icon: Rocket,
+    color: 'from-indigo-500 to-purple-600',
+    description: 'Cutting-edge AI & Micro SAAS Solutions',
+    featured: true
+  };
+
+  // Organized Services Categories
+  const servicesCategories = [
+    {
+      title: 'AI & Machine Learning',
+icon: Brain,
+      color: 'from-zion-cyan to-zion-purple',
+      dropdown: [
+        { name: 'Machine Learning', href: '/ai-solutions/machine-learning', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
+        { name: 'Computer Vision', href: '/ai-solutions/computer-vision', icon: Eye, color: 'from-zion-purple to-zion-pink' },
+        { name: 'NLP & Chatbots', href: '/ai-solutions/nlp-chatbots', icon: MessageCircle, color: 'from-zion-green to-zion-cyan' },
+        { name: 'Predictive Analytics', href: '/ai-solutions/predictive-analytics', icon: TrendingUp, color: 'from-zion-blue to-zion-green' },
+        { name: 'AI Consulting', href: '/ai-solutions/consulting', icon: Users, color: 'from-zion-pink to-zion-purple' },
+        { name: 'Custom AI Models', href: '/ai-solutions/custom-models', icon: Code, color: 'from-zion-orange to-zion-purple' }
+      ]
+    },
+    {
+      name: 'Innovation Lab',
+      href: '/innovation-lab',
+      icon: Sparkles,
+      color: 'from-zion-purple to-zion-pink',
+      dropdown: [
+        { name: 'Research & Development', href: '/innovation-lab/research', icon: Sparkles, color: 'from-zion-purple to-zion-pink' },
+        { name: 'Emerging Tech', href: '/innovation-lab/emerging-tech', icon: Rocket, color: 'from-zion-purple to-zion-cyan' },
+        { name: 'Prototyping', href: '/innovation-lab/prototyping', icon: Code, color: 'from-zion-green to-zion-cyan' },
+        { name: 'Innovation Consulting', href: '/innovation-lab/consulting', icon: Users, color: 'from-zion-pink to-zion-purple' },
+        { name: 'Tech Partnerships', href: '/innovation-lab/partnerships', icon: Handshake, color: 'from-zion-blue to-zion-green' }
+      ]
+    }
+  ];
+setServicesDropdownOpen(true);
+        setSolutionsDropdownOpen(false);
+        setCompanyDropdownOpen(false);
+        setResourcesDropdownOpen(false)} else if(nav.name === 'Solutions') {
+
+        setSolutionsDropdownOpen(true);
+        setServicesDropdownOpen(false);
+        setCompanyDropdownOpen(false);
+        setResourcesDropdownOpen(false)} else if(nav.name === 'Pricing') {
+        // Use the same dropdown state as solutions for pricing
+        setSolutionsDropdownOpen(true);
+        setServicesDropdownOpen(false);
+        setCompanyDropdownOpen(false);
+        setResourcesDropdownOpen(false)} else if(nav.name === 'Company') {
+
+        setCompanyDropdownOpen(true);
+        setServicesDropdownOpen(false);
+        setSolutionsDropdownOpen(false);
+        setResourcesDropdownOpen(false)} else if(nav.name === 'Resources') {
+        setResourcesDropdownOpen(true);
+        setServicesDropdownOpen(false);
+        setSolutionsDropdownOpen(false);
+        setCompanyDropdownOpen(false)}
+    } else {
+
+      setActiveNav(null);
+      setServicesDropdownOpen(false);
+      setSolutionsDropdownOpen(false);
+      setCompanyDropdownOpen(false);
+      setResourcesDropdownOpen(false)}
+  };
+
+  const closeAllDropdowns = (...args: unknown[]): unknown => {
+    setServicesDropdownOpen(false);    setSolutionsDropdownOpen(false);
+    setCompanyDropdownOpen(false);
+    setResourcesDropdownOpen(false);
+    setActiveNav(null)};
+
+  return ()
+    <>`
+      <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${        scrolled
+          ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10'
+          : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'      }`}>
+        <div className="container-responsive">"
+          <div className="flex h-20 items-center justify-between">
+            {/* Logo */}"
+            <div className="flex items-center">"
+              <Link to="/" className="flex-shrink-0 group">"
+                <div className="flex items-center space-x-3">"
+                  <div className="relative">"
+                    <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">"
+                      <Zap className="w-6 h-6 text-white"  />
+                    </div>"                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                  </div>"
+                  <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
+                    Zion Tech Group
+                  </h1>
+                </div>
+                <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                  Zion Tech Group
+                </span>
+              </Link>
+            </div>
+
+            {/* Desktop Navigation */}            <nav className="hidden lg:flex items-center space-x-8">
+              {navigation.map((item) => ("
+                <div key={item.name} className="relative">
+                  {item.hasDropdown ? ("
+                    <div className="relative">
+                      <button
+                        onClick={() => {
+<AnimatePresence>
+                {activeDropdown === 'services' && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md"
+                  >
+                    <div className="p-4">
+                      <div className="grid grid-cols-1 gap-2">
+                        {services.map((service) => (
+                          <Link
+                            key={service.name}
+                            to={service.href}
+                            onClick={() => setActiveDropdown(null)}
+                            className="flex items-center p-3 rounded-lg hover:bg-zion-slate/50 transition-colors group"
+                          >
+                            <div className={`w-10 h-10 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform`}>
+                              <service.icon className="w-5 h-5 text-white" />
+                            </div>
+                            <div>
+                              <div className="font-medium text-white group-hover:text-zion-cyan transition-colors">
+                                {service.name}
+                              </div>
+                              <div className="text-sm text-zion-slate-light">
+                                {service.description}
+                              </div>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Solutions Dropdown */}
+            <div className="relative dropdown-container">
+              <button
+                onClick={() => toggleDropdown('solutions')}
+                className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 transition-colors"
+                aria-expanded={activeDropdown === 'solutions'}
+                aria-haspopup="true"
+              >
+                Solutions
+                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'solutions' ? 'rotate-180' : ''}`} />
+              </button>
+
+              <AnimatePresence>
+                {activeDropdown === 'solutions' && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md"
+                  >
+                    <div className="p-4">
+                      <div className="grid grid-cols-1 gap-2">
+                        {solutions.map((solution) => (
+                          <Link
+                            key={solution.name}
+                            to={solution.href}
+                            onClick={() => setActiveDropdown(null)}
+                            className="flex items-center p-3 rounded-lg hover:bg-zion-slate/50 transition-colors group"
+                          >
+                            <div className={`w-10 h-10 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform`}>
+                              <solution.icon className="w-5 h-5 text-white" />
+                            </div>
+                            <div>
+                              <div className="font-medium text-white group-hover:text-zion-cyan transition-colors">
+                                {solution.name}
+                              </div>
+                              <div className="text-sm text-zion-slate-light">
+                                {solution.description}
+                              </div>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Resources Dropdown */}
+            <div className="relative dropdown-container">
+              <button
+                onClick={() => toggleDropdown('resources')}
+                className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 transition-colors"
+                aria-expanded={activeDropdown === 'resources'}
+                aria-haspopup="true"
+              >
+                Resources
+                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'resources' ? 'rotate-180' : ''}`} />
+              </button>
+
+              <AnimatePresence>
+                {activeDropdown === 'resources' && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-0 mt-2 w-64 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md"
+                  >
+                    <div className="p-4">
+                      <div className="grid grid-cols-1 gap-2">
+                        {resources.map((resource) => (
+                          <Link
+                            key={resource.name}
+                            to={resource.href}
+                            onClick={() => setActiveDropdown(null)}
+                            className="flex items-center p-3 rounded-lg hover:bg-zion-slate/50 transition-colors group"
+                          >
+                            <resource.icon className="w-5 h-5 text-zion-cyan mr-3 group-hover:scale-110 transition-transform" />
+                            <span className="text-white group-hover:text-zion-cyan transition-colors">
+                              {resource.name}
+                            </span>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Company Dropdown */}
+            <div className="relative dropdown-container">
+              <button
+                onClick={() => toggleDropdown('company')}
+                className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 transition-colors"
+                aria-expanded={activeDropdown === 'company'}
+                aria-haspopup="true"
+              >
+                Company
+                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : ''}`} />
+              </button>
+
+              <AnimatePresence>
+                {activeDropdown === 'company' && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-0 mt-2 w-64 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md"
+                  >
+                    <div className="p-4">
+                      <div className="grid grid-cols-1 gap-2">
+                        {company.map((item) => (
+                          <Link
+                            key={item.name}
+                            to={item.href}
+                            onClick={() => setActiveDropdown(null)}
+                            className="flex items-center p-3 rounded-lg hover:bg-zion-slate/50 transition-colors group"
+                          >
+                            <item.icon className="w-5 h-5 text-zion-cyan mr-3 group-hover:scale-110 transition-transform" />
+                            <span className="text-white group-hover:text-zion-cyan transition-colors">
+                              {item.name}
+                            </span>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          </nav>
+
+          {/* Right side - Search, User, Mobile menu */}
+          <div className="flex items-center space-x-4">
+            {/* Search */}
+            <div className="relative hidden md:block">
+              <form onSubmit={handleSearch} className="relative">
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onFocus={() => setSearchFocused(true)}
+                  onBlur={() => setSearchFocused(false)}
+                  className={`w-64 px-4 py-2 pl-10 bg-zion-slate/20 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan transition-all duration-200 ${
+                    searchFocused ? 'w-80' : ''
+                  }`}
+                />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
+              </form>
+            </div>
+
+            {/* User Menu */}
+            {user ? (
+              <div className="relative dropdown-container">
+                <button
+                  onClick={() => toggleDropdown('user')}
+                  className="flex items-center space-x-2 p-2 rounded-lg hover:bg-zion-cyan/10 transition-colors"
+                  aria-expanded={activeDropdown === 'user'}
+                  aria-haspopup="true"
+                >
+                  <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">
+                    <User className="w-4 h-4 text-white" />
+                  </div>
+                  <span className="text-white text-sm hidden lg:block">{user.name}</span>
+                  <ChevronDown className="w-4 h-4 text-zion-slate-light" />
+                </button>
+
+                <AnimatePresence>
+                  {activeDropdown === 'user' && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute top-full right-0 mt-2 w-48 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md"
+                    >
+                      <div className="p-2">
+                        <Link
+                          to="/dashboard"
+                          onClick={() => setActiveDropdown(null)}
+                          className="flex items-center w-full p-3 rounded-lg hover:bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan"
+                        >
+                          <PanelLeft className="w-4 h-4 mr-3" />
+                          Dashboard
+                        </Link>
+                        <Link
+                          to="/profile"
+                          onClick={() => setActiveDropdown(null)}
+                          className="flex items-center w-full p-3 rounded-lg hover:bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan"
+                        >
+                          <User className="w-4 h-4 mr-3" />
+                          Profile
+                        </Link>
+                        <Link
+                          to="/settings"
+                          onClick={() => setActiveDropdown(null)}
+                          className="flex items-center w-full p-3 rounded-lg hover:bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan"
+                        >
+                          <Settings className="w-4 h-4 mr-3" />
+                          Settings
+                        </Link>
+                        <hr className="border-zion-slate/20 my-2" />
+                        <button
+                          onClick={() => {
+                            logout();
+                            setActiveDropdown(null);
+                          }}
+                          className="flex items-center w-full p-3 rounded-lg hover:bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan"
+                        >
+                          <LogOut className="w-4 h-4 mr-3" />
+                          Logout
+                        </button>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
+          </nav>
+
+          {/* Right side actions */}
+          <div className="flex items-center space-x-4">
+            {/* Search */}
+            <form onSubmit={handleSearch} className="hidden md:flex relative">  const navigation = [
+    { name: 'Home', href: '/', current: true },
+    { name: 'About', href: '/about', current: false },
+    { name: 'Contact', href: '/contact', current: false },
+  ];
+
+  const services = [
+    { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & NLP' },
+    { name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' },
+    { name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' },
+    { name: 'Consulting', href: '/consulting', description: 'Digital Transformation' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Compliance' },
+    { name: 'Cloud Services', href: '/services/cloud', description: 'DevOps & Infrastructure' },
+>>>>>>> origin/merge-pr-10615
   ];
 
 >>>>>>> origin/main
