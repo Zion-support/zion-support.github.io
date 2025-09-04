@@ -31,6 +31,11 @@ export default [
       'react-hooks': reactHooks,
       '@next/next': next,
     },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
     rules: {
       ...typescript.configs.recommended.rules,
       ...react.configs.recommended.rules,
@@ -38,6 +43,7 @@ export default [
       ...next.configs.recommended.rules,
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
+      '@next/next/no-html-link-for-pages': 'off',
     },
   },
   {
