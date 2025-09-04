@@ -7,13 +7,15 @@ const nextConfig = {
     ignoreDuringBuilds: true,
     dirs: ['pages', 'components', 'lib', 'hooks']
   },
-  typescript: { ignoreBuildErrors: true },
+  typescript: { 
+    ignoreBuildErrors: true 
+  },
   trailingSlash: true,
   generateBuildId: async () => {
     return 'build-' + Date.now();
   },
   // Ensure standard Next.js page extensions are recognized alongside any custom route files
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'route.tsx', 'route.ts'],
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'route.tsx', 'route.ts', 'xpage.tsx'],
   images: {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
     formats: ['image/webp', 'image/avif'],
