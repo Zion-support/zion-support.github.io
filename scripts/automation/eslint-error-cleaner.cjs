@@ -77,6 +77,11 @@ class $1 {
 });
 }
       }
+      
+      return errors;
+    } catch (error) {
+      this.log(`Failed to parse ESLint errors: ${error.message}`, 'ERROR');
+      return [];
     }
 ;
     return errors;
@@ -333,8 +338,7 @@ return false;
   async attemptFixes(errors) {this.log(`🔧 Attempting to fix ${errors.length} ESLint errors...`);
 
     let fixedCount = 0;
-    const fixResults = [];
-
+    
     for (const error of errors) {
   try {
   const fixed = await this.fixESLintError(error);
@@ -476,7 +480,10 @@ this.log(`📄 Report generated: ${reportFile}`);
 // Run the automation if called directly;
 if (require.main === module) {
   const cleaner = new ESLintErrorCleaner();
-  cleaner.run().catch(console.error);
+  cleaner.run().catch(error => {
+    console.error('ESLint error cleaner failed:', error);
+    process.exit(1);
+  });
 }
 ;
 module.exports = ESLintErrorCleaner
