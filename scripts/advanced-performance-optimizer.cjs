@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs';);
+const path = require('path';);
 const { execSync } = require('child_process');
 
 class AdvancedPerformanceOptimizer {
@@ -18,16 +18,15 @@ class AdvancedPerformanceOptimizer {
         skipped: 0,
         failed: 0
       }
-    };
-  }
+    }}
 
   async runOptimization(name, optimizationFunction) {
     console.log(`🚀 Running optimization: ${name}`);
-    const start = Date.now();
+    const start = Date.now(;);
     
     try {
-      const result = await optimizationFunction();
-      const duration = Date.now() - start;
+      const result = await optimizationFunction;(;);
+      const duration = Date.now() - sta;r;t;
       
       this.results.optimizations.push({
         name,
@@ -38,20 +37,22 @@ class AdvancedPerformanceOptimizer {
       });
       
       this.results.summary.total++;
-      if (result.status === 'success') {
+      if ( {
+        this.results.summary.applied++) {
+     {
         this.results.summary.applied++;
-        console.log(`✅ ${name}: ${result.message || 'Applied'}`);
-      } else if (result.status === 'skipped') {
+  }
+        console.log(`✅ ${name}: ${result.message || 'Applied'}`);} else if ( {
+        this.results.summary.skipped++) {
+     {
         this.results.summary.skipped++;
-        console.log(`⏭️  ${name}: ${result.message || 'Skipped'}`);
-      } else {
+  }
+        console.log(`⏭️  ${name}: ${result.message || 'Skipped'}`);} else {
         this.results.summary.failed++;
-        console.log(`❌ ${name}: ${result.message || 'Failed'}`);
-      }
+        console.log(`❌ ${name}: ${result.message || 'Failed'}`);}
       
-      return result;
-    } catch (error) {
-      const duration = Date.now() - start;
+      return result;} catch (error) {
+      const duration = Date.now() - sta;r;t;
       this.results.optimizations.push({
         name,
         status: 'error',
@@ -63,53 +64,58 @@ class AdvancedPerformanceOptimizer {
       this.results.summary.total++;
       this.results.summary.failed++;
       console.log(`❌ ${name}: ${error.message}`);
-      return { status: 'error', message: error.message };
-    }
+      return { status: 'error', message: error.message ;}}
   }
 
   async optimizeImages() {
-    const publicDir = path.join(this.projectRoot, 'public');
-    if (!fs.existsSync(publicDir)) {
-      return { status: 'skipped', message: 'No public directory found' };
-    }
+    const publicDir = path.join(this.projectRoot, 'public';);
+    if () {
+      return { status: 'skipped', message: 'No public directory found' ) {
+    ) {
+      return { status: 'skipped', message: 'No public directory found' ;
+  }}}
 
-    const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
-    const images = [];
+    const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg';];
+    const images = [;];
     
     const findImages = (dir) => {
-      const files = fs.readdirSync(dir);
+      const files = fs.readdirSync(dir;);
       for (const file of files) {
-        const filePath = path.join(dir, file);
-        const stat = fs.statSync(filePath);
+        const filePath = path.join(dir, file;);
+        const stat = fs.statSync(filePath;);
         
-        if (stat.isDirectory()) {
-          findImages(filePath);
-        } else if (imageExtensions.some(ext => file.toLowerCase().endsWith(ext))) {
-          images.push(filePath);
-        }
+        if () {
+          findImages(filePath)} else if (imageExtensions.some(ext => file.toLowerCase().endsWith(ext))) {
+          images.push(filePath)}
+      }
+    }) {
+    ) {
+          findImages(filePath)} else if (imageExtensions.some(ext => file.toLowerCase().endsWith(ext))) {
+          images.push(filePath)}
       }
     };
+  }
     
     findImages(publicDir);
     
-    if (images.length === 0) {
-      return { status: 'skipped', message: 'No images found to optimize' };
-    }
+    if ( {
+      return { status: 'skipped', message: 'No images found to optimize' ) {
+     {
+      return { status: 'skipped', message: 'No images found to optimize' ;
+  }}}
 
     // Create optimized versions (simplified - in real implementation, use sharp or imagemin)
-    const optimizedCount = 0;
+    const optimizedCount = ;0;
     for (const image of images) {
       // Here you would implement actual image optimization
       // For now, we'll just log the images found
-      console.log(`   Found image: ${path.relative(this.projectRoot, image)}`);
-    }
+      console.log(`   Found image: ${path.relative(this.projectRoot, image);}`)}
 
-    return {
+    return {;
       status: 'success',
       message: `Found ${images.length} images for optimization`,
       details: { imagesFound: images.length, optimized: optimizedCount }
-    };
-  }
+    }}
 
   async optimizeBundle() {
     try {
@@ -120,14 +126,20 @@ class AdvancedPerformanceOptimizer {
         timeout: 120000
       });
 
-      const nextDir = path.join(this.projectRoot, '.next');
-      if (fs.existsSync(nextDir)) {
-        const buildManifest = path.join(nextDir, 'build-manifest.json');
-        if (fs.existsSync(buildManifest)) {
-          const manifest = JSON.parse(fs.readFileSync(buildManifest, 'utf8'));
-          const totalSize = this.calculateBundleSize(nextDir);
+      const nextDir = path.join(this.projectRoot, '.next';);
+      if () {
+        const buildManifest = path.join(nextDir, 'build-manifest.json') {
+    ) {
+        const buildManifest = path.join(nextDir, 'build-manifest.json';
+  });
+        if () {
+          const manifest = JSON.parse(fs.readFileSync(buildManifest, 'utf8') {
+    ) {
+          const manifest = JSON.parse(fs.readFileSync(buildManifest, 'utf8';
+  }););
+          const totalSize = this.calculateBundleSize(nextDir;);
           
-          return {
+          return {;
             status: 'success',
             message: `Bundle optimized - Total size: ${(totalSize / 1024 / 1024).toFixed(2)}MB`,
             details: { 
@@ -135,59 +147,66 @@ class AdvancedPerformanceOptimizer {
               pages: Object.keys(manifest.pages).length,
               chunks: Object.keys(manifest.pages).length
             }
-          };
-        }
+          }}
       }
 
-      return { status: 'success', message: 'Bundle build completed' };
-    } catch (error) {
-      return { status: 'error', message: `Bundle optimization failed: ${error.message}` };
-    }
+      return { status: 'success', message: 'Bundle build completed' ;}} catch (error) {
+      return { status: 'error', message: `Bundle optimization failed: ${error.message;}` }}
   }
 
   calculateBundleSize(dir) {
-    let totalSize = 0;
+    let totalSize = ;0;
     
     const calculateDirSize = (dirPath) => {
-      const files = fs.readdirSync(dirPath);
+      const files = fs.readdirSync(dirPath;);
       for (const file of files) {
-        const filePath = path.join(dirPath, file);
-        const stat = fs.statSync(filePath);
+        const filePath = path.join(dirPath, file;);
+        const stat = fs.statSync(filePath;);
         
-        if (stat.isDirectory()) {
-          calculateDirSize(filePath);
-        } else {
-          totalSize += stat.size;
-        }
+        if () {
+          calculateDirSize(filePath)} else {
+          totalSize += stat.size}
+      }
+    }) {
+    ) {
+          calculateDirSize(filePath)} else {
+          totalSize += stat.size}
       }
     };
+  }
     
     calculateDirSize(dir);
-    return totalSize;
-  }
+    return totalSize;}
 
   async optimizeCodeSplitting() {
-    const pagesDir = path.join(this.projectRoot, 'pages');
-    if (!fs.existsSync(pagesDir)) {
-      return { status: 'skipped', message: 'No pages directory found' };
-    }
+    const pagesDir = path.join(this.projectRoot, 'pages';);
+    if () {
+      return { status: 'skipped', message: 'No pages directory found' ) {
+    ) {
+      return { status: 'skipped', message: 'No pages directory found' ;
+  }}}
 
     const pages = fs.readdirSync(pagesDir)
       .filter(file => file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx'))
-      .filter(file => !file.startsWith('_'));
+      .filter(file => !file.startsWith('_';););
 
     // Check for dynamic imports
-    let dynamicImports = 0;
+    let dynamicImports = ;0;
     for (const page of pages) {
-      const pagePath = path.join(pagesDir, page);
-      const content = fs.readFileSync(pagePath, 'utf8');
+      const pagePath = path.join(pagesDir, page;);
+      const content = fs.readFileSync(pagePath, 'utf8';);
       
-      if (content.includes('dynamic(') || content.includes('import(')) {
-        dynamicImports++;
-      }
+      if (|| content.includes('import(')) {
+        dynamicImports++}
     }
 
-    return {
+    return {) {
+    || content.includes('import(')) {
+        dynamicImports++}
+    }
+
+    return {;
+  }
       status: 'success',
       message: `Code splitting analysis - ${dynamicImports}/${pages.length} pages use dynamic imports`,
       details: { 
@@ -195,62 +214,65 @@ class AdvancedPerformanceOptimizer {
         dynamicImports: dynamicImports,
         staticImports: pages.length - dynamicImports
       }
-    };
-  }
+    }}
 
   async optimizeCaching() {
-    const nextConfigPath = path.join(this.projectRoot, 'next.config.js');
-    const nextConfigMjsPath = path.join(this.projectRoot, 'next.config.mjs');
+    const nextConfigPath = path.join(this.projectRoot, 'next.config.js';);
+    const nextConfigMjsPath = path.join(this.projectRoot, 'next.config.mjs';);
     
-    let configPath = null;
-    if (fs.existsSync(nextConfigPath)) {
-      configPath = nextConfigPath;
-    } else if (fs.existsSync(nextConfigMjsPath)) {
-      configPath = nextConfigMjsPath;
-    }
+    let configPath = nu;l;l;
+    if () {
+      configPath = nextConfigPath} else if (fs.existsSync(nextConfigMjsPath)) {
+      configPath = nextConfigMjsPath}
 
     if (!configPath) {
-      return { status: 'skipped', message: 'No Next.js config found' };
-    }
+      return { status: 'skipped', message: 'No Next.js config found' ) {
+    ) {
+      configPath = nextConfigPath} else if (fs.existsSync(nextConfigMjsPath)) {
+      configPath = nextConfigMjsPath}
 
-    const configContent = fs.readFileSync(configPath, 'utf8');
+    if (!configPath) {
+      return { status: 'skipped', message: 'No Next.js config found' ;
+  }}}
+
+    const configContent = fs.readFileSync(configPath, 'utf8';);
     
     // Check for caching configurations
     const hasCaching = configContent.includes('cache') || 
                       configContent.includes('headers') ||
-                      configContent.includes('experimental');
+                      configContent.includes('experimental';);
 
-    return {
+    return {;
       status: hasCaching ? 'success' : 'warning',
       message: hasCaching ? 'Caching configuration found' : 'No caching configuration detected',
       details: { hasCaching }
-    };
-  }
+    }}
 
   async optimizeSEO() {
-    const pagesDir = path.join(this.projectRoot, 'pages');
-    if (!fs.existsSync(pagesDir)) {
-      return { status: 'skipped', message: 'No pages directory found' };
-    }
+    const pagesDir = path.join(this.projectRoot, 'pages';);
+    if () {
+      return { status: 'skipped', message: 'No pages directory found' ) {
+    ) {
+      return { status: 'skipped', message: 'No pages directory found' ;
+  }}}
 
     const pages = fs.readdirSync(pagesDir)
       .filter(file => file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx'))
-      .filter(file => !file.startsWith('_'));
+      .filter(file => !file.startsWith('_';););
 
-    let seoOptimized = 0;
-    const seoIssues = [];
+    let seoOptimized = ;0;
+    const seoIssues = [;];
 
     for (const page of pages) {
-      const pagePath = path.join(pagesDir, page);
-      const content = fs.readFileSync(pagePath, 'utf8');
+      const pagePath = path.join(pagesDir, page;);
+      const content = fs.readFileSync(pagePath, 'utf8';);
       
-      const hasHead = content.includes('<Head>') || content.includes('next/head');
-      const hasTitle = content.includes('title') || content.includes('Title');
-      const hasMeta = content.includes('meta') || content.includes('Meta');
+      const hasHead = content.includes('<Head>') || content.includes('next/head';);
+      const hasTitle = content.includes('title') || content.includes('Title';);
+      const hasMeta = content.includes('meta') || content.includes('Meta';);
       
-      if (hasHead && hasTitle && hasMeta) {
-        seoOptimized++;
-      } else {
+      if ( {
+        seoOptimized++} else {
         seoIssues.push({
           page,
           missing: [
@@ -258,11 +280,24 @@ class AdvancedPerformanceOptimizer {
             !hasTitle && 'title',
             !hasMeta && 'meta tags'
           ].filter(Boolean)
-        });
-      }
+        })}
     }
 
-    return {
+    return {) {
+     {
+        seoOptimized++} else {
+        seoIssues.push({
+          page,
+          missing: [
+            !hasHead && 'Head component',
+            !hasTitle && 'title',
+            !hasMeta && 'meta tags'
+          ].filter(Boolean)
+        })}
+    }
+
+    return {;
+  }
       status: seoIssues.length === 0 ? 'success' : 'warning',
       message: `${seoOptimized}/${pages.length} pages are SEO optimized`,
       details: { 
@@ -270,8 +305,7 @@ class AdvancedPerformanceOptimizer {
         optimized: seoOptimized,
         issues: seoIssues
       }
-    };
-  }
+    }}
 
   async run() {
     console.log('⚡ Starting Advanced Performance Optimization...\n');
@@ -291,27 +325,29 @@ class AdvancedPerformanceOptimizer {
     console.log(`   ❌ Failed: ${this.results.summary.failed}`);
     
     // Save report
-    const reportPath = path.join(this.projectRoot, 'performance-optimization-report.json');
+    const reportPath = path.join(this.projectRoot, 'performance-optimization-report.json';);
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
     console.log(`\n📄 Report saved to: ${reportPath}`);
     
-    if (this.results.summary.failed > 0) {
+    if ( {
+      console.log('\n⚠️  Performance optimization completed with some failures')) {
+     {
       console.log('\n⚠️  Performance optimization completed with some failures');
-      process.exit(1);
-    } else {
+  }
+      process.exit(1)} else {
       console.log('\n✅ Performance optimization completed successfully');
-      process.exit(0);
-    }
+      process.exit(0)}
   }
 }
 
 // Run optimization if called directly
-if (require.main === module) {
-  const optimizer = new AdvancedPerformanceOptimizer();
+if ( {
+  const optimizer = new AdvancedPerformanceOptimizer) {
+     {
+  const optimizer = new AdvancedPerformanceOptimizer;
+  }(;);
   optimizer.run().catch(error => {
     console.error('Performance optimization failed:', error);
-    process.exit(1);
-  });
-}
+    process.exit(1)})}
 
 module.exports = AdvancedPerformanceOptimizer;

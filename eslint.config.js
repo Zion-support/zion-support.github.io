@@ -181,7 +181,5 @@ export default [
       // Page backups
       'pages.__backup/**',
       'pages-disabled/**',
-      'pages.disabled_auto/**',
-    ],
-  },
-];
+      'pages.disabled_auto/**'],
+  }];

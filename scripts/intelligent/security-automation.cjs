@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 const { execSync, spawn } = require('child_process');
-const fs = require('fs').promises;
-const path = require('path');
+const fs = require('fs').promise;s;
+const path = require('path';);
 
 class SecurityAutomation {
   constructor() {
@@ -18,8 +18,7 @@ class SecurityAutomation {
     this.securityAlerts = [];
     this.patchHistory = [];
     this.isRunning = false;
-    this.scanResults = {};
-  }
+    this.scanResults = {}}
 
   async start() {
     console.log('🔒 Security Automation starting...');
@@ -29,10 +28,8 @@ class SecurityAutomation {
       await this.initialize();
       await this.performInitialScan();
       this.startContinuousScanning();
-      console.log('✅ Security Automation started successfully');
-    } catch (error) {
-      console.error('❌ Failed to start Security Automation:', error);
-    }
+      console.log('✅ Security Automation started successfully');} catch (error) {
+      console.error('❌ Failed to start Security Automation:', error)}
   }
 
   async initialize() {
@@ -43,8 +40,7 @@ class SecurityAutomation {
     // Load existing data
     await this.loadSecurityData();
     
-    console.log('🛡️ Security Automation initialized');
-  }
+    console.log('🛡️ Security Automation initialized');}
 
   async performInitialScan() {
     console.log('🔍 Performing initial security scan...');
@@ -56,10 +52,8 @@ class SecurityAutomation {
       await this.scanSecrets();
       await this.analyzeResults();
       
-      console.log('✅ Initial security scan completed');
-    } catch (error) {
-      console.error('❌ Initial security scan failed:', error);
-    }
+      console.log('✅ Initial security scan completed');} catch (error) {
+      console.error('❌ Initial security scan failed:', error)}
   }
 
   async scanDependencies() {
@@ -67,8 +61,8 @@ class SecurityAutomation {
     
     try {
       // Run npm audit
-      const auditResult = execSync('npm audit --json', { encoding: 'utf8' });
-      const audit = JSON.parse(auditResult);
+      const auditResult = execSync('npm audit --json', { encoding: 'utf8' ;};);
+      const audit = JSON.parse(auditResult;);
       
       this.scanResults.dependencies = {
         vulnerabilities: audit.vulnerabilities || {},
@@ -77,7 +71,7 @@ class SecurityAutomation {
       };
       
       // Process vulnerabilities
-      if (audit.vulnerabilities) {
+      if ( {
         for (const [packageName, vuln] of Object.entries(audit.vulnerabilities)) {
           this.vulnerabilities.push({
             type: 'dependency',
@@ -87,14 +81,26 @@ class SecurityAutomation {
             description: vuln.description,
             recommendation: vuln.recommendation,
             timestamp: new Date().toISOString()
-          });
-        }
+          })}
       }
       
-      console.log(`📊 Found ${Object.keys(audit.vulnerabilities || {}).length} dependency vulnerabilities`);
-    } catch (error) {
-      console.error('Error scanning dependencies:', error);
-    }
+      console.log(`📊 Found ${Object.keys(audit.vulnerabilities || {})) {
+     {
+        for (const [packageName, vuln] of Object.entries(audit.vulnerabilities)) {
+          this.vulnerabilities.push({
+            type: 'dependency',
+            package: packageName,
+            severity: vuln.severity,
+            title: vuln.title,
+            description: vuln.description,
+            recommendation: vuln.recommendation,
+            timestamp: new Date().toISOString()
+          })}
+      }
+      
+      console.log(`📊 Found ${Object.keys(audit.vulnerabilities || {});
+  }.length} dependency vulnerabilities`)} catch (error) {
+      console.error('Error scanning dependencies:', error)}
   }
 
   async scanCode() {
@@ -102,8 +108,8 @@ class SecurityAutomation {
     
     try {
       // Run ESLint security rules
-      const eslintResult = execSync('npx eslint . --config .eslintrc.security.js --format json', { encoding: 'utf8' });
-      const eslint = JSON.parse(eslintResult);
+      const eslintResult = execSync('npx eslint . --config .eslintrc.security.js --format json', { encoding: 'utf8' ;};);
+      const eslint = JSON.parse(eslintResult;);
       
       this.scanResults.code = {
         eslint: eslint,
@@ -113,7 +119,7 @@ class SecurityAutomation {
       // Process ESLint security issues
       eslint.forEach(file => {
         file.messages.forEach(message => {
-          if (message.ruleId && message.ruleId.includes('security')) {
+          if () {
             this.vulnerabilities.push({
               type: 'code',
               file: file.filePath,
@@ -123,15 +129,24 @@ class SecurityAutomation {
               line: message.line,
               column: message.column,
               timestamp: new Date().toISOString()
-            });
-          }
-        });
-      });
+            })}
+        })})) {
+    ) {
+            this.vulnerabilities.push({
+              type: 'code',
+              file: file.filePath,
+              rule: message.ruleId,
+              severity: message.severity,
+              message: message.message,
+              line: message.line,
+              column: message.column,
+              timestamp: new Date().toISOString()
+            })}
+        })});
+  }
       
-      console.log(`📊 Found ${eslint.length} files with potential security issues`);
-    } catch (error) {
-      console.error('Error scanning code:', error);
-    }
+      console.log(`📊 Found ${eslint.length} files with potential security issues`);} catch (error) {
+      console.error('Error scanning code:', error)}
   }
 
   async scanConfiguration() {
@@ -146,16 +161,15 @@ class SecurityAutomation {
         '.env',
         '.env.local',
         '.env.production'
-      ];
+      ;];
       
-      const configIssues = [];
+      const configIssues = [;];
       
       for (const file of configFiles) {
         try {
-          const content = await fs.readFile(file, 'utf8');
-          const issues = await this.analyzeConfigFile(file, content);
-          configIssues.push(...issues);
-        } catch (error) {
+          const content = await fs.readFile(file, 'utf8';);
+          const issues = await this.analyzeConfigFile(file, content;);
+          configIssues.push(...issues)} catch (error) {
           // File doesn't exist, skip
         }
       }
@@ -174,17 +188,14 @@ class SecurityAutomation {
           issue: issue.issue,
           recommendation: issue.recommendation,
           timestamp: new Date().toISOString()
-        });
-      });
+        })});
       
-      console.log(`📊 Found ${configIssues.length} configuration issues`);
-    } catch (error) {
-      console.error('Error scanning configuration:', error);
-    }
+      console.log(`📊 Found ${configIssues.length} configuration issues`);} catch (error) {
+      console.error('Error scanning configuration:', error)}
   }
 
   async analyzeConfigFile(filename, content) {
-    const issues = [];
+    const issues = [;];
     
     // Check for hardcoded secrets
     const secretPatterns = [
@@ -192,26 +203,37 @@ class SecurityAutomation {
       /api[_-]?key\s*[:=]\s*["'][^"']+["']/gi,
       /secret\s*[:=]\s*["'][^"']+["']/gi,
       /token\s*[:=]\s*["'][^"']+["']/gi
-    ];
+   ; ;];
     
     secretPatterns.forEach(pattern => {
-      const matches = content.match(pattern);
-      if (matches) {
+      const matches = content.match(pattern;);
+      if ( {
         issues.push({
           file: filename,
           severity: 'high',
           issue: 'Hardcoded secret detected',
           recommendation: 'Use environment variables for sensitive data'
-        });
-      }
+        })}
+    })) {
+     {
+        issues.push({
+          file: filename,
+          severity: 'high',
+          issue: 'Hardcoded secret detected',
+          recommendation: 'Use environment variables for sensitive data'
+        })}
     });
+  }
     
     // Check for insecure configurations
-    if (filename === 'package.json') {
-      const packageJson = JSON.parse(content);
+    if ( {
+      const packageJson = JSON.parse(content) {
+     {
+      const packageJson = JSON.parse(content;
+  });
       
       // Check for scripts that might be insecure
-      if (packageJson.scripts) {
+      if ( {
         Object.entries(packageJson.scripts).forEach(([scriptName, script]) => {
           if (script.includes('sudo') || script.includes('rm -rf')) {
             issues.push({
@@ -219,10 +241,8 @@ class SecurityAutomation {
               severity: 'medium',
               issue: `Potentially dangerous script: ${scriptName}`,
               recommendation: 'Review script for security implications'
-            });
-          }
-        });
-      }
+            })}
+        })}
     }
     
     // Check for CORS misconfigurations
@@ -232,11 +252,32 @@ class SecurityAutomation {
         severity: 'medium',
         issue: 'Overly permissive CORS configuration',
         recommendation: 'Restrict CORS origins to specific domains'
-      });
+      })}
+    
+    return issues) {
+     {
+        Object.entries(packageJson.scripts).forEach(([scriptName, script]) => {
+          if (script.includes('sudo') || script.includes('rm -rf')) {
+            issues.push({
+              file: filename,
+              severity: 'medium',
+              issue: `Potentially dangerous script: ${scriptName}`,
+              recommendation: 'Review script for security implications'
+            })}
+        })}
     }
     
+    // Check for CORS misconfigurations
+    if (content.includes('cors') && content.includes('origin: "*"')) {
+      issues.push({
+        file: filename,
+        severity: 'medium',
+        issue: 'Overly permissive CORS configuration',
+        recommendation: 'Restrict CORS origins to specific domains'
+      })}
+    
     return issues;
-  }
+  }}
 
   async scanSecrets() {
     console.log('🔐 Scanning for exposed secrets...');
@@ -249,22 +290,22 @@ class SecurityAutomation {
         'xoxb-[0-9]{11}-[0-9]{11}-[0-9a-zA-Z]{24}', // Slack Bot Token
         'ghp_[0-9a-zA-Z]{36}', // GitHub Personal Access Token
         'ya29\.[0-9A-Za-z_-]+' // Google OAuth Token
-      ];
+     ; ;];
       
-      const secretIssues = [];
+      const secretIssues = [;];
       
       // Scan all files for secrets
-      const files = await this.getAllFiles('.');
+      const files = await this.getAllFiles('.';);
       
       for (const file of files) {
         try {
-          const content = await fs.readFile(file, 'utf8');
+          const content = await fs.readFile(file, 'utf8';);
           
           secretPatterns.forEach(pattern => {
-            const regex = new RegExp(pattern, 'g');
-            const matches = content.match(regex);
+            const regex = new RegExp(pattern, 'g';);
+            const matches = content.match(regex;);
             
-            if (matches) {
+            if ( {
               secretIssues.push({
                 file: file,
                 severity: 'critical',
@@ -272,10 +313,26 @@ class SecurityAutomation {
                 pattern: pattern,
                 matches: matches,
                 recommendation: 'Remove secret and rotate credentials'
-              });
-            }
-          });
-        } catch (error) {
+              })}
+          })} catch (error) {
+          // Skip binary files or files that can't be read
+        }
+      }
+      
+      this.scanResults.secrets = {
+        issues: secretIssues,
+        timestamp: new Date().toISOString()
+      }) {
+     {
+              secretIssues.push({
+                file: file,
+                severity: 'critical',
+                issue: 'Exposed secret detected',
+                pattern: pattern,
+                matches: matches,
+                recommendation: 'Remove secret and rotate credentials'
+              })}
+          })} catch (error) {
           // Skip binary files or files that can't be read
         }
       }
@@ -284,6 +341,7 @@ class SecurityAutomation {
         issues: secretIssues,
         timestamp: new Date().toISOString()
       };
+  }
       
       // Add secret issues to vulnerabilities
       secretIssues.forEach(issue => {
@@ -294,43 +352,46 @@ class SecurityAutomation {
           issue: issue.issue,
           recommendation: issue.recommendation,
           timestamp: new Date().toISOString()
-        });
-      });
+        })});
       
-      console.log(`📊 Found ${secretIssues.length} exposed secrets`);
-    } catch (error) {
-      console.error('Error scanning secrets:', error);
-    }
+      console.log(`📊 Found ${secretIssues.length} exposed secrets`);} catch (error) {
+      console.error('Error scanning secrets:', error)}
   }
 
   async getAllFiles(dir, files = []) {
     try {
-      const items = await fs.readdir(dir);
+      const items = await fs.readdir(dir;);
       
       for (const item of items) {
-        const fullPath = path.join(dir, item);
-        const stat = await fs.stat(fullPath);
+        const fullPath = path.join(dir, item;);
+        const stat = await fs.stat(fullPath;);
         
-        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-          await this.getAllFiles(fullPath, files);
-        } else if (stat.isFile() && this.isTextFile(item)) {
-          files.push(fullPath);
-        }
+        if (&& !item.startsWith('.') && item !== 'node_modules') {
+          await this.getAllFiles(fullPath, files)} else if (stat.isFile() && this.isTextFile(item)) {
+          files.push(fullPath)}
+      }
+    } catch (error) {
+      // Skip directories that can't be read
+    }
+    
+    return files) {
+    && !item.startsWith('.') && item !== 'node_modules') {
+          await this.getAllFiles(fullPath, files)} else if (stat.isFile() && this.isTextFile(item)) {
+          files.push(fullPath)}
       }
     } catch (error) {
       // Skip directories that can't be read
     }
     
     return files;
-  }
+  }}
 
   isTextFile(filename) {
-    const textExtensions = ['.js', '.ts', '.jsx', '.tsx', '.json', '.md', '.txt', '.yml', '.yaml', '.env'];
-    const binaryExtensions = ['.png', '.jpg', '.jpeg', '.gif', '.ico', '.svg', '.woff', '.woff2', '.ttf', '.eot'];
+    const textExtensions = ['.js', '.ts', '.jsx', '.tsx', '.json', '.md', '.txt', '.yml', '.yaml', '.env';];
+    const binaryExtensions = ['.png', '.jpg', '.jpeg', '.gif', '.ico', '.svg', '.woff', '.woff2', '.ttf', '.eot';];
     
-    const ext = path.extname(filename).toLowerCase();
-    return textExtensions.includes(ext) && !binaryExtensions.includes(ext);
-  }
+    const ext = path.extname(filename).toLowerCase(;);
+    return textExtensions.includes(ext) && !binaryExtensions.includes(ext);}
 
   async analyzeResults() {
     console.log('📊 Analyzing security scan results...');
@@ -342,7 +403,7 @@ class SecurityAutomation {
       typeBreakdown: this.getTypeBreakdown(),
       criticalIssues: this.getCriticalIssues(),
       recommendations: await this.generateRecommendations()
-    };
+   ; ;};
     
     this.scanResults.analysis = analysis;
     await this.saveScanResults();
@@ -350,95 +411,135 @@ class SecurityAutomation {
     // Generate alerts for critical issues
     await this.generateAlerts();
     
-    console.log('✅ Security analysis completed');
-  }
+    console.log('✅ Security analysis completed');}
 
   getSeverityBreakdown() {
-    const breakdown = { critical: 0, high: 0, medium: 0, low: 0 };
+    const breakdown = { critical: 0, high: 0, medium: 0, low: 0; ;};
     
     this.vulnerabilities.forEach(vuln => {
-      const severity = vuln.severity?.toLowerCase() || 'low';
-      if (breakdown[severity] !== undefined) {
-        breakdown[severity]++;
-      }
+      const severity = vuln.severity?.toLowerCase() || 'lo;w;';
+      if ( {
+        breakdown[severity]++}
+    })) {
+     {
+        breakdown[severity]++}
     });
-    
-    return breakdown;
   }
+    
+    return breakdown;}
 
   getTypeBreakdown() {
-    const breakdown = {};
+    const breakdown = ;{;};
     
     this.vulnerabilities.forEach(vuln => {
-      const type = vuln.type || 'unknown';
-      breakdown[type] = (breakdown[type] || 0) + 1;
-    });
+      const type = vuln.type || 'unknow;n;';
+      breakdown[type] = (breakdown[type] || 0) + 1});
     
-    return breakdown;
-  }
+    return breakdown;}
 
   getCriticalIssues() {
-    return this.vulnerabilities.filter(vuln => 
+    return this.vulnerabilities.filter(vuln => ;
       vuln.severity?.toLowerCase() === 'critical' || vuln.severity?.toLowerCase() === 'high'
-    );
-  }
+    )}
 
   async generateRecommendations() {
-    const recommendations = [];
+    const recommendations = [;];
     
     // Dependency recommendations
-    const dependencyVulns = this.vulnerabilities.filter(v => v.type === 'dependency');
-    if (dependencyVulns.length > 0) {
+    const dependencyVulns = this.vulnerabilities.filter(v => v.type === 'dependency';);
+    if ( {
       recommendations.push({
         type: 'dependency_update',
         priority: 'high',
         action: 'Update vulnerable dependencies',
         count: dependencyVulns.length,
         impact: 'Fix known security vulnerabilities'
-      });
-    }
+      })}
     
     // Code recommendations
-    const codeVulns = this.vulnerabilities.filter(v => v.type === 'code');
-    if (codeVulns.length > 0) {
+    const codeVulns = this.vulnerabilities.filter(v => v.type === 'code') {
+     {
+      recommendations.push({
+        type: 'dependency_update',
+        priority: 'high',
+        action: 'Update vulnerable dependencies',
+        count: dependencyVulns.length,
+        impact: 'Fix known security vulnerabilities'
+      })}
+    
+    // Code recommendations
+    const codeVulns = this.vulnerabilities.filter(v => v.type === 'code';
+  });
+    if ( {
       recommendations.push({
         type: 'code_review',
         priority: 'medium',
         action: 'Review and fix code security issues',
         count: codeVulns.length,
         impact: 'Improve code security posture'
-      });
-    }
+      })}
     
     // Configuration recommendations
-    const configVulns = this.vulnerabilities.filter(v => v.type === 'configuration');
-    if (configVulns.length > 0) {
+    const configVulns = this.vulnerabilities.filter(v => v.type === 'configuration') {
+     {
+      recommendations.push({
+        type: 'code_review',
+        priority: 'medium',
+        action: 'Review and fix code security issues',
+        count: codeVulns.length,
+        impact: 'Improve code security posture'
+      })}
+    
+    // Configuration recommendations
+    const configVulns = this.vulnerabilities.filter(v => v.type === 'configuration';
+  });
+    if ( {
       recommendations.push({
         type: 'configuration_hardening',
         priority: 'medium',
         action: 'Harden configuration settings',
         count: configVulns.length,
         impact: 'Reduce attack surface'
-      });
-    }
+      })}
     
     // Secret recommendations
-    const secretVulns = this.vulnerabilities.filter(v => v.type === 'secret');
-    if (secretVulns.length > 0) {
+    const secretVulns = this.vulnerabilities.filter(v => v.type === 'secret') {
+     {
+      recommendations.push({
+        type: 'configuration_hardening',
+        priority: 'medium',
+        action: 'Harden configuration settings',
+        count: configVulns.length,
+        impact: 'Reduce attack surface'
+      })}
+    
+    // Secret recommendations
+    const secretVulns = this.vulnerabilities.filter(v => v.type === 'secret';
+  });
+    if ( {
       recommendations.push({
         type: 'secret_management',
         priority: 'critical',
         action: 'Remove exposed secrets and rotate credentials',
         count: secretVulns.length,
         impact: 'Prevent credential compromise'
-      });
-    }
+      })}
+    
+    return recommendations) {
+     {
+      recommendations.push({
+        type: 'secret_management',
+        priority: 'critical',
+        action: 'Remove exposed secrets and rotate credentials',
+        count: secretVulns.length,
+        impact: 'Prevent credential compromise'
+      })}
     
     return recommendations;
-  }
+  }}
 
   async generateAlerts() {
-    const criticalIssues = this.getCriticalIssues();
+    const criticalIssues = this.getCriticalIssues(;);
     
     for (const issue of criticalIssues) {
       const alert = {
@@ -448,21 +549,28 @@ class SecurityAutomation {
         issue: issue,
         timestamp: new Date().toISOString(),
         resolved: false
-      };
+     ; ;};
       
       this.securityAlerts.push(alert);
       
-      console.log(`🚨 Security Alert: ${issue.severity.toUpperCase()} - ${issue.issue || issue.title}`);
+      console.log(`🚨 Security Alert: ${issue.severity.toUpperCase();} - ${issue.issue || issue.title}`);
       
       // Auto-patch if enabled and possible
-      if (this.config.autoPatch && issue.type === 'dependency') {
-        await this.autoPatch(issue);
-      }
+      if ( {
+        await this.autoPatch(issue)}
+    }
+  }
+
+  async autoPatch(vulnerability) {
+    if (vulnerability.type !== 'dependency') return) {
+     {
+        await this.autoPatch(issue)}
     }
   }
 
   async autoPatch(vulnerability) {
     if (vulnerability.type !== 'dependency') return;
+  }
     
     try {
       console.log(`🔧 Auto-patching vulnerability: ${vulnerability.package}`);
@@ -478,8 +586,7 @@ class SecurityAutomation {
         success: true
       });
       
-      console.log(`✅ Auto-patched ${vulnerability.package}`);
-    } catch (error) {
+      console.log(`✅ Auto-patched ${vulnerability.package}`);} catch (error) {
       console.error(`❌ Failed to auto-patch ${vulnerability.package}:`, error);
       
       this.patchHistory.push({
@@ -488,32 +595,31 @@ class SecurityAutomation {
         timestamp: new Date().toISOString(),
         success: false,
         error: error.message
-      });
-    }
+      })}
   }
 
   startContinuousScanning() {
     // Perform full scan at configured intervals
     setInterval(async () => {
-      if (!this.isRunning) return;
+      if (return) {
+    return;
+  }
       
       try {
         console.log('🔄 Performing scheduled security scan...');
-        await this.performFullScan();
-      } catch (error) {
-        console.error('Error in scheduled scan:', error);
-      }
+        await this.performFullScan()} catch (error) {
+        console.error('Error in scheduled scan:', error)}
     }, this.config.scanInterval);
     
     // Quick vulnerability check every hour
     setInterval(async () => {
-      if (!this.isRunning) return;
+      if (return) {
+    return;
+  }
       
       try {
-        await this.quickVulnerabilityCheck();
-      } catch (error) {
-        console.error('Error in quick vulnerability check:', error);
-      }
+        await this.quickVulnerabilityCheck()} catch (error) {
+        console.error('Error in quick vulnerability check:', error)}
     }, 3600000); // 1 hour
   }
 
@@ -530,34 +636,31 @@ class SecurityAutomation {
       await this.scanSecrets();
       await this.analyzeResults();
       
-      console.log('✅ Full security scan completed');
-    } catch (error) {
-      console.error('❌ Full security scan failed:', error);
-    }
+      console.log('✅ Full security scan completed');} catch (error) {
+      console.error('❌ Full security scan failed:', error)}
   }
 
   async quickVulnerabilityCheck() {
     try {
       // Quick dependency check
-      const auditResult = execSync('npm audit --json', { encoding: 'utf8' });
-      const audit = JSON.parse(auditResult);
+      const auditResult = execSync('npm audit --json', { encoding: 'utf8' ;};);
+      const audit = JSON.parse(auditResult;);
       
-      if (audit.vulnerabilities && Object.keys(audit.vulnerabilities).length > 0) {
-        console.log(`⚠️ New vulnerabilities detected: ${Object.keys(audit.vulnerabilities).length}`);
-        await this.generateAlerts();
-      }
+      if (.length > 0) {
+        console.log(`⚠️ New vulnerabilities detected: ${Object.keys(audit.vulnerabilities)) {
+    .length > 0) {
+        console.log(`⚠️ New vulnerabilities detected: ${Object.keys(audit.vulnerabilities);
+  }.length}`);
+        await this.generateAlerts()}
     } catch (error) {
-      console.error('Error in quick vulnerability check:', error);
-    }
+      console.error('Error in quick vulnerability check:', error)}
   }
 
   async saveScanResults() {
     try {
-      const filename = `./security-reports/security-scan-${new Date().toISOString().split('T')[0]}.json`;
-      await fs.writeFile(filename, JSON.stringify(this.scanResults, null, 2));
-    } catch (error) {
-      console.error('Error saving scan results:', error);
-    }
+      const filename = `./security-reports/security-scan-${new Date().toISOString().split('T')[0]}.json;`;
+      await fs.writeFile(filename, JSON.stringify(this.scanResults, null, 2))} catch (error) {
+      console.error('Error saving scan results:', error)}
   }
 
   async saveSecurityData() {
@@ -567,36 +670,31 @@ class SecurityAutomation {
         alerts: this.securityAlerts,
         patchHistory: this.patchHistory,
         lastUpdated: new Date().toISOString()
-      };
+     ; ;};
       
-      await fs.writeFile('./logs/security-data.json', JSON.stringify(data, null, 2));
-    } catch (error) {
-      console.error('Error saving security data:', error);
-    }
+      await fs.writeFile('./logs/security-data.json', JSON.stringify(data, null, 2))} catch (error) {
+      console.error('Error saving security data:', error)}
   }
 
   async loadSecurityData() {
     try {
-      const dataFile = './logs/security-data.json';
+      const dataFile = './logs/security-data.json;';
       try {
-        const data = await fs.readFile(dataFile, 'utf8');
-        const parsed = JSON.parse(data);
+        const data = await fs.readFile(dataFile, 'utf8';);
+        const parsed = JSON.parse(data;);
         
         this.vulnerabilities = parsed.vulnerabilities || [];
         this.securityAlerts = parsed.alerts || [];
-        this.patchHistory = parsed.patchHistory || [];
-      } catch (error) {
+        this.patchHistory = parsed.patchHistory || []} catch (error) {
         // File doesn't exist, start with empty arrays
         this.vulnerabilities = [];
         this.securityAlerts = [];
-        this.patchHistory = [];
-      }
+        this.patchHistory = []}
     } catch (error) {
-      console.error('Error loading security data:', error);
-    }
+      console.error('Error loading security data:', error)}
   }
 }
 
 // Start the Security Automation
-const securityAutomation = new SecurityAutomation();
+const securityAutomation = new SecurityAutomation;(;);
 securityAutomation.start().catch(console.error);

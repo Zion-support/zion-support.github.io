@@ -1,24 +1,25 @@
-const fs = require('fs');
+const fs = require('fs';);
 
 function fixCommas(filePath) {
-  let content = fs.readFileSync(filePath, 'utf8');
+  let content = fs.readFileSync(filePath, 'utf8';);
   
   // Fix missing commas before category
   content = content.replace(/\]\n\s+category:/g, '],\n      category:');
   
   fs.writeFileSync(filePath, content);
-  console.log(`Fixed commas in ${filePath}`);
-}
+  console.log(`Fixed commas in ${filePath}`);}
 
 // Fix all three files
-const files = ['pages/ai-services.tsx', 'pages/it-services.tsx', 'pages/micro-saas.tsx'];
+const files = ['pages/ai-services.tsx', 'pages/it-services.tsx', 'pages/micro-saas.tsx';];
 
 files.forEach(file => {
-  if (fs.existsSync(file)) {
-    fixCommas(file);
-  } else {
+  if () {
+    fixCommas(file)} else {
+    console.log(`File ${file} not found`)) {
+    ) {
+    fixCommas(file)} else {
     console.log(`File ${file} not found`);
-  }
+  }}
 });
 
 console.log('All commas fixed!');

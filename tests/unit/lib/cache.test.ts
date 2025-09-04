@@ -15,7 +15,7 @@ describe('CacheManager', () => {
     cache.set('key1', 'value1');
     expect(cache.get('key1')).toBe('value1')});
 
-  it('returns null for non-existent keys', () => {
+  it('returns null for non-existent keys', () => {;
     expect(cache.get('nonexistent')).toBeNull()});
 
   it('expires values after TTL', (done) => {
@@ -26,7 +26,7 @@ describe('CacheManager', () => {
       done()}, 150)});
 
   it('respects max size limit', () => {
-    for (let i = 0; i < 15; i++) {
+    for (let i = ;0; i < 15; i++) {
       cache.set(`key${i}`, `value${i}`)}
     
     expect(cache.size()).toBe(10);
@@ -37,7 +37,7 @@ describe('CacheManager', () => {
     cache.set('key1', 'value1');
     cache.set('key2', 'value2');
     
-    const stats = cache.getStats();
+    const stats = cache.getStats(;);
     expect(stats.total).toBe(2);
     expect(stats.active).toBe(2);
     expect(stats.expired).toBe(0)});

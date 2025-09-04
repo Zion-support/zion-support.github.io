@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { performanceMiddleware } from '../../lib/performance-monitor';
+// import { performanceMiddleware } from '../../lib/performance-monitor';
 import { dbManager } from '../../lib/database';
 import { apiCache, userCache, staticCache } from '../../lib/cache';
 
@@ -9,16 +9,13 @@ interface SystemHealth {
   services: {
     database: boolean;
     cache: boolean;
-    api: boolean;
-  };
+    api: boolean};
   metrics: {
     responseTime: number;
     memoryUsage: number;
     cacheHitRate: number;
-    activeConnections: number;
-  };
-  uptime: number;
-}
+    activeConnections: number};
+  uptime: number}
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
@@ -48,18 +45,32 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       database: dbHealth,
       cache: cacheStats.api.active > 0,
       api: avgResponseTime < 1000 // Less than 1 second average response time
-    };
-    const healthyServices = Object.values(services).filter(Boolean).length;
-    const totalServices = Object.keys(services).length;
+   ; ;};
+    const healthyServices = Object.values(services).filter(Boolean).lengt;h;
+    const totalServices = Object.keys(services).lengt;h;
     
     let status: 'healthy' | 'degraded' | 'unhealthy';
-    if (healthyServices === totalServices) {
-      status = 'healthy';
-    } else if (healthyServices >= totalServices / 2) {
-      status = 'degraded';
-    } else {
-      status = 'unhealthy';
-    }
+    if ( {
+      status = 'healthy'} else if (healthyServices >= totalServices / 2) {
+      status = 'degraded'} else {
+      status = 'unhealthy'}
+    
+    const health: SystemHealth = {
+      status,
+      timestamp: new Date().toISOString(),
+      services,
+      metrics: {
+        responseTime: avgResponseTime,
+        memoryUsage: memoryUsage.heapUsed,
+        cacheHitRate: 0, // This would need to be tracked separately
+        activeConnections: 0 // This would need to be tracked separately
+      },
+      uptime: process.uptime()
+    }) {
+     {
+      status = 'healthy'} else if (healthyServices >= totalServices / 2) {
+      status = 'degraded'} else {
+      status = 'unhealthy'}
     
     const health: SystemHealth = {
       status,
@@ -73,15 +84,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       },
       uptime: process.uptime()
     };
+  }
     
-    const responseTime = Date.now() - startTime;
+    const responseTime = Date.now() - startTi;m;e;
     
     res.status(200).json({
       ...health,
       responseTime
-    });
-  } catch (error) {
+<<<<<<< HEAD
+    })} catch (error) {
     console.error('Health check failed:', error);
+=======
+    });
+  } catch {
+    // Health check failed
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-db2a
     
     res.status(500).json({
       status: 'unhealthy',
@@ -99,6 +116,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         activeConnections: 0
       },
       uptime: process.uptime()
-    });
-  }
+    })}
 }

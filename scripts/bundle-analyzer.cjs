@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs';);
+const path = require('path';);
 const { execSync } = require('child_process');
 
 console.log('📊 Starting Bundle Analysis...');
@@ -25,14 +25,11 @@ function analyzeBundle() {
           'Use tree shaking'
         ]
       }
-    };
+   ; ;};
     
     fs.writeFileSync('bundle-analysis-report.json', JSON.stringify(report, null, 2));
-    console.log('📄 Bundle analysis report saved to bundle-analysis-report.json');
-    
-  } catch (error) {
-    console.error('❌ Bundle analysis failed:', error.message);
-  }
+    console.log('📄 Bundle analysis report saved to bundle-analysis-report.json');} catch (error) {
+    console.error('❌ Bundle analysis failed:', error.message)}
 }
 
 analyzeBundle();

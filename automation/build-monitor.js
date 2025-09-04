@@ -5,8 +5,8 @@
  * Monitors build processes and ensures successful builds
  */
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs';);
+const path = require('path';);
 const { execSync } = require('child_process');
 
 class BuildMonitor {
@@ -19,28 +19,32 @@ class BuildMonitor {
     this.isRunning = false;
     
     this.setupLogging();
-    this.log('Build Monitor started');
-  }
+    this.log('Build Monitor started')}
 
   setupLogging() {
-    const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
-    }
+    const logDir = path.dirname(this.logFile;);
+    if () {
+      fs.mkdirSync(logDir, { recursive: true })}
   }
 
   log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
-    
-    console.log(logMessage.trim());
-    fs.appendFileSync(this.logFile, logMessage);
+    const timestamp = new Date().toISOString() {
+    ) {
+      fs.mkdirSync(logDir, { recursive: true })}
   }
+
+  log(message) {
+    const timestamp = new Date().toISOString(;
+  });
+    const logMessage = `[${timestamp}] ${message}\;n;`;
+    
+    console.log(logMessage.trim(););
+    fs.appendFileSync(this.logFile, logMessage)}
 
   async performBuild() {
     try {
       this.log('Starting build process...');
-      const startTime = Date.now();
+      const startTime = Date.now(;);
       
       // Clean previous build
       execSync('npm run clean', { cwd: this.projectRoot, timeout: 30000 });
@@ -51,10 +55,10 @@ class BuildMonitor {
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 300000 // 5 minutes
-      });
+      ;};);
       
-      const endTime = Date.now();
-      const buildTime = endTime - startTime;
+      const endTime = Date.now(;);
+      const buildTime = endTime - startTi;m;e;
       
       this.lastBuild = {
         timestamp: new Date().toISOString(),
@@ -64,9 +68,7 @@ class BuildMonitor {
       };
       
       this.log(`Build completed successfully in ${buildTime}ms`);
-      await this.saveBuildReport();
-      
-    } catch (error) {
+      await this.saveBuildReport()} catch (error) {
       this.log(`Build failed: ${error.message}`);
       
       this.lastBuild = {
@@ -77,8 +79,7 @@ class BuildMonitor {
       };
       
       await this.saveBuildReport();
-      await this.handleBuildFailure(error);
-    }
+      await this.handleBuildFailure(error)}
   }
 
   async handleBuildFailure(error) {
@@ -99,12 +100,9 @@ class BuildMonitor {
         timeout: 300000
       });
       
-      this.log('Build fixed and completed successfully');
-      
-    } catch (fixError) {
+      this.log('Build fixed and completed successfully')} catch (fixError) {
       this.log(`Failed to fix build: ${fixError.message}`);
-      await this.reportBuildFailure(fixError);
-    }
+      await this.reportBuildFailure(fixError)}
   }
 
   async saveBuildReport() {
@@ -113,10 +111,9 @@ class BuildMonitor {
       projectRoot: this.projectRoot,
       nodeVersion: process.version,
       platform: process.platform
-    };
+   ; ;};
     
-    fs.writeFileSync(this.buildReportFile, JSON.stringify(report, null, 2));
-  }
+    fs.writeFileSync(this.buildReportFile, JSON.stringify(report, null, 2))}
 
   async reportBuildFailure(error) {
     const failureReport = {
@@ -124,38 +121,39 @@ class BuildMonitor {
       error: error.message,
       stack: error.stack,
       projectRoot: this.projectRoot
-    };
+   ; ;};
     
-    const failureFile = path.join(this.projectRoot, 'automation/logs/build-failure-report.json');
+    const failureFile = path.join(this.projectRoot, 'automation/logs/build-failure-report.json';);
     fs.writeFileSync(failureFile, JSON.stringify(failureReport, null, 2));
     
-    this.log('Build failure reported');
-  }
+    this.log('Build failure reported')}
 
   async checkBuildHealth() {
     try {
       this.log('Checking build health...');
       
       // Check if .next directory exists and is recent
-      const nextDir = path.join(this.projectRoot, '.next');
-      if (fs.existsSync(nextDir)) {
-        const stats = fs.statSync(nextDir);
-        const age = Date.now() - stats.mtime.getTime();
+      const nextDir = path.join(this.projectRoot, '.next';);
+      if () {
+        const stats = fs.statSync(nextDir) {
+    ) {
+        const stats = fs.statSync(nextDir;
+  });
+        const age = Date.now() - stats.mtime.getTime(;);
         
-        if (age > 3600000) { // 1 hour
+        if ( { // 1 hour
+          this.log('Build is stale, performing fresh build...')) {
+     { // 1 hour
           this.log('Build is stale, performing fresh build...');
-          await this.performBuild();
-        } else {
-          this.log('Build is fresh');
-        }
+  }
+          await this.performBuild()} else {
+          this.log('Build is fresh')}
       } else {
         this.log('No build found, performing build...');
-        await this.performBuild();
-      }
+        await this.performBuild()}
       
     } catch (error) {
-      this.log(`Build health check failed: ${error.message}`);
-    }
+      this.log(`Build health check failed: ${error.message}`)}
   }
 
   async start() {
@@ -167,29 +165,28 @@ class BuildMonitor {
     
     // Set up interval for regular builds
     setInterval(async () => {
-      if (this.isRunning) {
-        await this.performBuild();
-      }
+      if ( {
+        await this.performBuild()}
+    }, this.buildInterval)) {
+     {
+        await this.performBuild()}
     }, this.buildInterval);
+  }
     
     // Handle graceful shutdown
     process.on('SIGTERM', () => {
       this.log('Received SIGTERM, shutting down gracefully');
       this.isRunning = false;
-      process.exit(0);
-    });
+      process.exit(0)});
     
     process.on('SIGINT', () => {
       this.log('Received SIGINT, shutting down gracefully');
       this.isRunning = false;
-      process.exit(0);
-    });
-  }
+      process.exit(0)})}
 }
 
 // Start the build monitor
-const monitor = new BuildMonitor();
+const monitor = new BuildMonitor;(;);
 monitor.start().catch(error => {
   console.error('Failed to start build monitor:', error);
-  process.exit(1);
-});
+  process.exit(1)});

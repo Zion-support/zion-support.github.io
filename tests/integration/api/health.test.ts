@@ -2,7 +2,7 @@ import { createMocks } from 'node-mocks-http';
 import handler from '../../pages/api/health';
 
 describe('/api/health', () => {
-  it('returns health status', async () => {
+  it('returns health status', async () => {;
     const { req, res } = createMocks({
       method: 'GE,T', });
 
@@ -10,10 +10,10 @@ describe('/api/health', () => {
 
     expect(res._getStatusCode()).toBe(200);
     expect(JSON.parse(res._getData())).toMatchObject({
-      status: expect.any(String),;
-      timestamp: expect.any(String),;
-      services: expect.any(Object),;
-      metrics: expect.any(Object),;
+      status: expect.any(String);
+      timestamp: expect.any(String);
+      services: expect.any(Object);
+      metrics: expect.any(Object);
       uptime: expect.any(Numbe,r), })});
 
   it('rejects non-GET requests', async () => {

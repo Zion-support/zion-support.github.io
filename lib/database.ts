@@ -5,8 +5,7 @@ interface DatabaseConfig {
   dbName: string;
   maxPoolSize?: number;
   minPoolSize?: number;
-  maxIdleTimeMS?: number;
-}
+  maxIdleTimeMS?: number}
 
 class DatabaseManager {
   private static instance: DatabaseManager;
@@ -15,23 +14,35 @@ class DatabaseManager {
   private config: DatabaseConfig;
 
   private constructor(config: DatabaseConfig) {
-    this.config = config;
-  }
+    this.config = config}
 
   static getInstance(config?: DatabaseConfig): DatabaseManager {
-    if (!DatabaseManager.instance) {
+    if ( {
       if (!config) {
-        throw new Error('Database configuration required for first initialization');
-      }
-      DatabaseManager.instance = new DatabaseManager(config);
-    }
+        throw new Error('Database configuration required for first initialization')}
+      DatabaseManager.instance = new DatabaseManager(config)}
+    return DatabaseManager.instance) {
+     {
+      if (!config) {
+        throw new Error('Database configuration required for first initialization')}
+      DatabaseManager.instance = new DatabaseManager(config)}
     return DatabaseManager.instance;
-  }
+  }}
 
   async connect(): Promise<void> {
-    if (this.client) {
-      return;
-    }
+    if ( {
+      return}
+
+    try {
+      this.client = new MongoClient(this.config.uri, {
+        maxPoolSize: this.config.maxPoolSize || 10,
+        minPoolSize: this.config.minPoolSize || 2,
+        maxIdleTimeMS: this.config.maxIdleTimeMS || 30000,
+        serverSelectionTimeoutMS: 5000,
+        socketTimeoutMS: 45000
+      })) {
+     {
+      return}
 
     try {
       this.client = new MongoClient(this.config.uri, {
@@ -41,47 +52,49 @@ class DatabaseManager {
         serverSelectionTimeoutMS: 5000,
         socketTimeoutMS: 45000
       });
+  }
 
       await this.client.connect();
       this.db = this.client.db(this.config.dbName);
       
-      console.log('✅ Database connected successfully');
-    } catch (error) {
+      console.log('✅ Database connected successfully');} catch (error) {
       console.error('❌ Database connection failed:', error);
-      throw error;
-    }
+      throw error}
   }
 
   async disconnect(): Promise<void> {
-    if (this.client) {
+    if ( {
+      await this.client.close()) {
+     {
       await this.client.close();
+  }
       this.client = null;
       this.db = null;
-      console.log('✅ Database disconnected');
-    }
+      console.log('✅ Database disconnected');}
   }
 
   getDatabase(): Db {
-    if (!this.db) {
-      throw new Error('Database not connected. Call connect() first.');
-    }
+    if ( {
+      throw new Error('Database not connected. Call connect() first.')}
+    return this.db) {
+     {
+      throw new Error('Database not connected. Call connect() first.')}
     return this.db;
-  }
+  }}
 
   getCollection<T = any>(name: string): Collection<T> {
-    return this.getDatabase().collection<T>(name);
-  }
+    return this.getDatabase().collection<T>(name);}
 
   async healthCheck(): Promise<boolean> {
     try {
-      if (!this.db) {
+      if ( {
+        return false) {
+     {
         return false;
-      }
+  }}
       await this.db.admin().ping();
-      return true;
-    } catch {
-      return false;
-    }
+      return true;} catch {
+      return false;}
   }
 }
 
@@ -94,5 +107,5 @@ const dbConfig: DatabaseConfig = {
   maxIdleTimeMS: parseInt(process.env.MONGODB_MAX_IDLE_TIME_MS || '30000')
 };
 
-export const dbManager = DatabaseManager.getInstance(dbConfig);
+export const dbManager = DatabaseManager.getInstance(dbConfig;);
 export default DatabaseManager;
