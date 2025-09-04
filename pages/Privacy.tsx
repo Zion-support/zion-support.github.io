@@ -1,0 +1,90 @@
+import React from 'react';
+
+export default function Privacy() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      {/* Header */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Privacy Policy
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Last updated: January 2025
+          </p>
+        </div>
+      </section>
+
+      {/* Content */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gray-800 p-8 rounded-lg space-y-8">
+            <div>
+              <h2 className="text-2xl font-bold text-cyan-400 mb-4">Information We Collect</h2>
+              <p className="text-gray-300 mb-4">
+                We collect information you provide directly to us, such as when you create an account, 
+                use our services, or contact us for support.
+              </p>
+              <ul className="text-gray-300 space-y-2 ml-6">
+                <li>• Personal information (name, email, phone number)</li>
+                <li>• Business information (company name, industry)</li>
+                <li>• Usage data and analytics</li>
+                <li>• Communication records</li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold text-cyan-400 mb-4">How We Use Your Information</h2>
+              <p className="text-gray-300 mb-4">
+                We use the information we collect to provide, maintain, and improve our services:
+              </p>
+              <ul className="text-gray-300 space-y-2 ml-6">
+                <li>• Provide and deliver our services</li>
+                <li>• Process transactions and send related information</li>
+                <li>• Send technical notices and support messages</li>
+                <li>• Respond to your comments and questions</li>
+                <li>• Improve our services and develop new features</li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold text-cyan-400 mb-4">Information Sharing</h2>
+              <p className="text-gray-300 mb-4">
+                We do not sell, trade, or otherwise transfer your personal information to third parties 
+                without your consent, except as described in this policy.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold text-cyan-400 mb-4">Data Security</h2>
+              <p className="text-gray-300 mb-4">
+                We implement appropriate security measures to protect your personal information against 
+                unauthorized access, alteration, disclosure, or destruction.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold text-cyan-400 mb-4">Your Rights</h2>
+              <p className="text-gray-300 mb-4">
+                You have the right to access, update, or delete your personal information. You may also 
+                opt out of certain communications from us.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold text-cyan-400 mb-4">Contact Us</h2>
+              <p className="text-gray-300 mb-4">
+                If you have any questions about this Privacy Policy, please contact us:
+              </p>
+              <div className="text-gray-300 space-y-2">
+                <p>Email: kleber@ziontechgroup.com</p>
+                <p>Phone: +1 302 464 0950</p>
+                <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

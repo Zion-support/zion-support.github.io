@@ -1,1 +1,131 @@
-import React from 'react'; import { Link } from 'react-router-dom'; import { Mail,Phone,MapPin,Linkedin,Twitter,Github,Facebook,ArrowUp,} from 'lucide-react'; const Footer: React.FC = () => { const scrollToTop = () => { window.scrollTo({ top: 0,behavior: 'smooth' })}; const currentYear = new Date().getFullYear(); return ( <footer className="bg-black border-t border-white/10"> <div className="container mx-auto px-4"> {} <div className="py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-8"> {} <div className="lg:col-span-1"> <Link href="/" className="flex items-center space-x-2 mb-6"> <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center"> <span className="text-white font-bold text-lg">Z</span> </div> <span className="text-white font-bold text-2xl">Zion Tech</span> </Link> <p className="text-gray-400 mb-6 leading-relaxed"> Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI,cloud architecture,and innovative development services. </p> <div className="flex space-x-4"> <a href="https: target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition-all duration-300" aria-label="LinkedIn" > <Linkedin className="w-5 h-5" /> </a> <a href="https: target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-400 transition-all duration-300" aria-label="Twitter" > <Twitter className="w-5 h-5" /> </a> <a href="https: target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-600 transition-all duration-300" aria-label="GitHub" > <Github className="w-5 h-5" /> </a> <a href="https: target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition-all duration-300" aria-label="Facebook" > <Facebook className="w-5 h-5" /> </a> </div> </div> {} <div> <h3 className="text-white font-bold text-lg mb-6">Services</h3> <ul className="space-y-3"> <li> <Link to="/ai-services" className="text-gray-400 hover:text-white transition-colors duration-200"> AI Services </Link> </li> <li> <Link to="/it-services" className="text-gray-400 hover:text-white transition-colors duration-200"> IT Services </Link> </li> <li> <Link to="/micro-saas" className="text-gray-400 hover:text-white transition-colors duration-200"> Micro SaaS </Link> </li> <li> <Link to="/services/cloud-services" className="text-gray-400 hover:text-white transition-colors duration-200"> Cloud Services </Link> </li> <li> <Link to="/services/cybersecurity" className="text-gray-400 hover:text-white transition-colors duration-200"> Cybersecurity </Link> </li> </ul> </div> {} <div> <h3 className="text-white font-bold text-lg mb-6">Company</h3> <ul className="space-y-3"> <li> <Link to="/about" className="text-gray-400 hover:text-white transition-colors duration-200"> About Us </Link> </li> <li> <Link to="/careers" className="text-gray-400 hover:text-white transition-colors duration-200"> Careers </Link> </li> <li> <Link to="/blog" className="text-gray-400 hover:text-white transition-colors duration-200"> Blog </Link> </li> <li> <Link to="/pricing" className="text-gray-400 hover:text-white transition-colors duration-200"> Pricing </Link> </li> <li> <Link to="/contact" className="text-gray-400 hover:text-white transition-colors duration-200"> Contact </Link> </li> </ul> </div> {} <div> <h3 className="text-white font-bold text-lg mb-6">Resources</h3> <ul className="space-y-3"> <li> <Link to="/docs" className="text-gray-400 hover:text-white transition-colors duration-200"> Documentation </Link> </li> <li> <Link to="/support" className="text-gray-400 hover:text-white transition-colors duration-200"> Support </Link> </li> <li> <Link to="/solutions" className="text-gray-400 hover:text-white transition-colors duration-200"> Solutions </Link> </li> <li> <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200"> Privacy Policy </Link> </li> <li> <Link to="/terms" className="text-gray-400 hover:text-white transition-colors duration-200"> Terms of Service </Link> </li> </ul> </div> {} <div> <h3 className="text-white font-bold text-lg mb-6">Contact</h3> <div className="space-y-4"> <div className="flex items-start space-x-3"> <Mail className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" /> <div> <p className="text-gray-400">Email</p> <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-blue-400 transition-colors duration-200"> kleber@ziontechgroup.com </a> </div> </div> <div className="flex items-start space-x-3"> <Phone className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" /> <div> <p className="text-gray-400">Phone</p> <a href="tel:+13024640950" className="text-white hover:text-blue-400 transition-colors duration-200"> +1 302 464 0950 </a> </div> </div> <div className="flex items-start space-x-3"> <MapPin className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" /> <div> <p className="text-gray-400">Address</p> <p className="text-white"> 364 E Main St STE 1008 <br /> Middletown,DE 19709 </p> </div> </div> </div> </div> </div> {} <div className="py-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center"> <div className="text-gray-400 text-sm mb-4 md:mb-0">© {currentYear} Zion Tech Group. All rights reserved.</div> <div className="flex space-x-6 text-sm"> <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200"> Privacy Policy </Link> <Link to="/terms" className="text-gray-400 hover:text-white transition-colors duration-200"> Terms of Service </Link> <Link to="/cookies" className="text-gray-400 hover:text-white transition-colors duration-200"> Cookie Policy </Link> </div> </div> </div> {} <button onClick={scrollToTop} className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center z-50" aria-label="Scroll to top" > <ArrowUp className="w-6 h-6" /> </button> </footer> )}; export default Footer
+import React from 'react';
+import NextLink from 'next/link';
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Twitter,
+  Github,
+  Facebook,
+  ArrowUp,
+} from 'lucide-react';
+
+const Footer: React.FC = (): JSX.Element => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="bg-black border-t border-white/10">
+      <div className="container mx-auto px-4">
+        {/* Main Footer Content */}
+        <div className="py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="lg:col-span-1">
+            <NextLink href="/" className="flex items-center space-x-2 mb-6">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-xl">Z</span>
+              </div>
+              <span className="text-white text-xl font-bold">Zion Tech Group</span>
+            </NextLink>
+            <p className="text-gray-400 text-sm mb-6 max-w-xs">
+              Leading provider of revolutionary AI services, IT solutions, and micro SaaS development.
+            </p>
+            <div className="flex space-x-4">
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+                <Github className="w-5 h-5" />
+              </a>
+              <a href="https://facebook.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+                <Facebook className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">Services</h3>
+            <ul className="space-y-3 text-sm">
+              <li><NextLink href="/ai-services" className="text-gray-400 hover:text-white transition-colors">AI Services</NextLink></li>
+              <li><NextLink href="/it-services" className="text-gray-400 hover:text-white transition-colors">IT Services</NextLink></li>
+              <li><NextLink href="/micro-saas" className="text-gray-400 hover:text-white transition-colors">Micro SaaS</NextLink></li>
+              <li><NextLink href="/blockchain-solutions" className="text-gray-400 hover:text-white transition-colors">Blockchain Solutions</NextLink></li>
+              <li><NextLink href="/cybersecurity" className="text-gray-400 hover:text-white transition-colors">Cybersecurity</NextLink></li>
+              <li><NextLink href="/cloud-services" className="text-gray-400 hover:text-white transition-colors">Cloud Services</NextLink></li>
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">Company</h3>
+            <ul className="space-y-3 text-sm">
+              <li><NextLink href="/about" className="text-gray-400 hover:text-white transition-colors">About Us</NextLink></li>
+              <li><NextLink href="/team" className="text-gray-400 hover:text-white transition-colors">Our Team</NextLink></li>
+              <li><NextLink href="/careers" className="text-gray-400 hover:text-white transition-colors">Careers</NextLink></li>
+              <li><NextLink href="/blog" className="text-gray-400 hover:text-white transition-colors">Blog</NextLink></li>
+              <li><NextLink href="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</NextLink></li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">Contact</h3>
+            <div className="space-y-3 text-sm">
+              <div className="flex items-center space-x-3">
+                <Phone className="w-4 h-4 text-gray-400" />
+                <a href="tel:+13024640950" className="text-gray-400 hover:text-white transition-colors">
+                  +1 302 464 0950
+                </a>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Mail className="w-4 h-4 text-gray-400" />
+                <a href="mailto:kleber@ziontechgroup.com" className="text-gray-400 hover:text-white transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex items-start space-x-3">
+                <MapPin className="w-4 h-4 text-gray-400 mt-0.5" />
+                <div className="text-gray-400">
+                  <div>364 E Main St STE 1008</div>
+                  <div>Middletown, DE 19709</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Section */}
+        <div className="border-t border-white/10 py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="text-sm text-gray-400">
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </div>
+            <div className="flex space-x-6 text-sm">
+              <NextLink href="/privacy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</NextLink>
+              <NextLink href="/terms" className="text-gray-400 hover:text-white transition-colors">Terms of Service</NextLink>
+              <NextLink href="/cookies" className="text-gray-400 hover:text-white transition-colors">Cookie Policy</NextLink>
+            </div>
+            <button
+              onClick={scrollToTop}
+              className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
+              aria-label="Back to top"
+            >
+              <ArrowUp className="w-4 h-4" />
+              <span>Back to top</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
