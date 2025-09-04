@@ -12,8 +12,7 @@ const performanceChecks = {
   lighthouseScore: false,
   loadTime: false,
   memoryUsage: false
-};
-
+}
 try {
   // Check build size
   if (fs.existsSync('.next')) {
@@ -97,8 +96,7 @@ const report = {
   score: performanceScore,
   checks: performanceChecks,
   recommendations: []
-};
-
+}
 if (performanceScore < 80) {
   report.recommendations.push('Consider optimizing build size');
   report.recommendations.push('Review bundle composition');
