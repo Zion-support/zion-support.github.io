@@ -1,3 +1,4 @@
+
 import React, { memo } from 'react';
 import Link from 'next/link';
 import Navigation from '../src/components/Navigation';

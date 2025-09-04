@@ -1,35 +1,41 @@
-import NextLink from 'next/link'
+import Link from 'next/link';
+import React from 'react';
 
-const navLinks: { href: string; label: string }[] = [
+const navLinks: Array<{ href: string; label: string }> = [
   { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
   { href: '/services', label: 'Services' },
-  { href: '/services/micro-saas', label: 'Micro SaaS' },
-  { href: '/services/it-services', label: 'IT Services' },
-  { href: '/services/ai-services', label: 'AI Services' },
   { href: '/solutions', label: 'Solutions' },
-  { href: '/pricing', label: 'Pricing' },
+  { href: '/micro-saas', label: 'Micro SAAS' },
+  { href: '/it-services', label: 'IT Services' },
+  { href: '/marketplace', label: 'Marketplace' },
   { href: '/blog', label: 'Blog' },
+  { href: '/careers', label: 'Careers' },
   { href: '/contact', label: 'Contact' }
-]
+];
 
-export default function Header() {
+export function Header(): JSX.Element {
   return (
-    <header className="ztg-header">
-      <div className="ztg-container">
-        <div className="ztg-brand">
-          <NextLink href="/">
-            <span>Zion Tech Group</span>
-          </NextLink>
-        </div>
-        <nav className="ztg-nav" aria-label="Main navigation">
+    <header style={{
+      position: 'sticky', top: 0, zIndex: 50, background: 'white', borderBottom: '1px solid #eee'
+    }}>
+      <div style={{
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+        padding: '12px 20px', maxWidth: 1200, margin: '0 auto'
+      }}>
+        <Link href="/" style={{ fontWeight: 800, fontSize: 18, textDecoration: 'none', color: '#111' }}>
+          Zion Tech Group
+        </Link>
+        <nav style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
           {navLinks.map((link) => (
-            <NextLink key={link.href} href={link.href} className="ztg-nav-link">
+            <Link key={link.href} href={link.href} style={{ color: '#111', textDecoration: 'none' }}>
               {link.label}
-            </NextLink>
+            </Link>
           ))}
         </nav>
       </div>
     </header>
-  )
+  );
 }
 
+export default Header;

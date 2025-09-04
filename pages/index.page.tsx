@@ -19,6 +19,7 @@ export default function HomePage() {
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="canonical" href="https://ziontechgroup.com/"  />
       </Head>
+
       <main className="min-h-screen bg-gray-50">
         <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">Zion Tech Group</h1>
@@ -33,8 +34,9 @@ export default function HomePage() {
               Contact Us
             </Link>
           </div>
-          <div className="mt-8 text-sm text-gray-600">
+          <div style={{ marginTop: 16, fontSize: 14, color: '#666' }}>
             <p>
+
               Mobile: <a className="text-blue-700" href="tel:+13024640950">+1 302 464 0950</a> · Email:{' '}
               <a className="text-blue-700" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · Address: 364 E
               Main St STE 1008 Middletown DE 19709
