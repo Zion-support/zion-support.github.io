@@ -30,16 +30,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // Mock database health check
     const dbHealth = true; // This would be a real database check
     
-    // Check database health (mock for now)
-    const dbHealth = true;
+    // Check database health
+    const dbHealth = await dbManager.healthCheck();
     
-    // Check cache health (mock for now)
+    // Check cache health
     const cacheStats = {
-      api: { active: true },
-      user: { active: true },
-      static: { active: true }
+      api: apiCache.getStats(),
+      user: userCache.getStats(),
+      static: staticCache.getStats()
     };
-    
     // Get performance metrics
     const avgResponseTime = 100; // Mock value
     const memoryUsage = process.memoryUsage();
@@ -47,10 +46,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // Calculate overall health
     const services = {
       database: dbHealth,
-      cache: cacheStats.api.active,
+      cache: cacheStats.api.active > 0,
       api: avgResponseTime < 1000 // Less than 1 second average response time
     };
-    
     const healthyServices = Object.values(services).filter(Boolean).length;
     const totalServices = Object.keys(services).length;
     
@@ -75,7 +73,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       },
       uptime: process.uptime()
     };
-    
     const responseTime = Date.now() - startTime;
     
     res.status(200).json({
