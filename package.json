@@ -199,16 +199,12 @@
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
-<<<<<<< HEAD
+    "@hookform/resolvers": "^5.2.1",
     "@magneticwatermelon/mcp-toolkit": "^1.1.4",
     "@modelcontextprotocol/sdk": "^1.17.1",
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
-    "@supabase/ssr": "^0.6.1",
-    "@supabase/supabase-js": "^2.39.0",
-=======
-    "@hookform/resolvers": "^5.2.1",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-avatar": "^1.0.4",
@@ -236,10 +232,10 @@
     "@radix-ui/react-tooltip": "^1.0.7",
     "@reduxjs/toolkit": "^2.9.0",
     "@stripe/stripe-js": "^7.9.0",
+    "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.57.0",
     "@tailwindcss/postcss": "^4.1.12",
     "@tanstack/react-query": "^5.85.5",
->>>>>>> 86e2a4cca918c6ff376b51aa8638f7a375ebfe57
     "@types/react-datepicker": "^6.2.0",
     "autoprefixer": "^10.4.21",
     "axios": "^1.11.0",
@@ -264,22 +260,12 @@
     "i18next-browser-languagedetector": "^8.2.0",
     "import-fresh": "^3.3.1",
     "lucide-react": "^0.536.0",
-<<<<<<< HEAD
-    "next": "^12.0.0",
-    "node-cron": "^4.2.1",
-    "openai": "^5.11.0",
-    "path": "^0.12.7",
-    "postcss": "^8.4.32",
-    "react": "^18.0.0",
-    "react-datepicker": "^8.4.0",
-    "react-dom": "^18.0.0",
-    "uuid": "^11.1.0"
-=======
     "mongodb": "^6.19.0",
     "next": "^15.5.2",
     "node-cron": "^4.2.1",
     "openai": "^5.11.0",
     "path": "^0.12.7",
+    "postcss": "^8.4.32",
     "postcss-preset-env": "^10.3.1",
     "react": "^18.3.1",
     "react-datepicker": "^8.4.0",
@@ -304,7 +290,6 @@
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1"
->>>>>>> 86e2a4cca918c6ff376b51aa8638f7a375ebfe57
   },
   "devDependencies": {
     "@babel/plugin-transform-class-properties": "^7.27.1",
@@ -322,18 +307,6 @@
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/typography": "^0.5.16",
     "@testing-library/jest-dom": "^6.6.4",
-<<<<<<< HEAD
-    "@testing-library/react": "^13.4.0",
-    "@types/node": "^24.2.0",
-    "@types/node-cron": "^3.0.11",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "@typescript-eslint/eslint-plugin": "^8.39.0",
-    "@typescript-eslint/parser": "^8.39.0",
-    "autoprefixer": "^10.4.16",
-    "eslint": "^9.34.0",
-    "eslint-config-next": "^14.0.0",
-=======
     "@testing-library/react": "^16.3.0",
     "@types/jest": "^29.5.8",
     "@types/next": "^8.0.7",
@@ -357,7 +330,6 @@
     "eslint-config-next": "^14.2.32",
     "eslint-formatter-junit": "^8.40.0",
     "eslint-plugin-react": "^7.37.5",
->>>>>>> 86e2a4cca918c6ff376b51aa8638f7a375ebfe57
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
@@ -374,10 +346,6 @@
     "terser": "^5.43.1",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
-<<<<<<< HEAD
-    "typescript": "^5.0.0"
-  }
-=======
     "typescript": "^5.9.2",
     "vite": "^7.1.4",
     "web-vitals": "^5.1.0"
@@ -407,5 +375,4 @@
   ],
   "author": "Zion Tech Group",
   "license": "MIT"
->>>>>>> 86e2a4cca918c6ff376b51aa8638f7a375ebfe57
 }
