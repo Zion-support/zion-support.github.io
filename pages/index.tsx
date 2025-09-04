@@ -65,7 +65,7 @@ export default function Home(): any {
                 contact.site
               ]
             })
-          }}
+          }
         />
       </Head>
       
