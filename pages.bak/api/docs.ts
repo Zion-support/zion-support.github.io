@@ -3,25 +3,25 @@ import { NextApiRequest, NextApiResponse } from 'next';
 type HttpMethod = 'get' | 'post' | 'put' | 'patch' | 'delete';
 
 interface ApiParameter {
-  name: string;
+  "name": string;
   type: string;
   required: boolean;
   description: string;
   location: 'query' | 'body' | 'header' | 'path'}
 
 interface ApiResponse {
-  status: number;
+  "status": number;
   description: string;
   schema?: unknown}
 
 interface ApiExample {
-  name: string;
+  "name": string;
   request: unknown;
   response: unknown}
 
 
 interface Endpoint {
-  path: string;
+  "path": string;
   method: HttpMethod;
   description: string;
   parameters?: ApiParameter[];
@@ -29,93 +29,75 @@ interface Endpoint {
   examples?: ApiExample[]}
 
 class ApiDocumentationGenerator {
-  private endpoints: Endpoint[] = [];
+  private "endpoints": Endpoint[] = [];
 
   public addEndpoint(endpoint: Endpoint) {
     this.endpoints.push(endpoint)}
 
   public generateOpenAPISpec() {
     return {
-      openapi: '3.0.0',
-      info: {
+      "openapi": '3.0.0',
+      "info": {
         title: 'Zion Tech Group API',
-        version: '1.0.0',
-        description: 'API documentation for Zion Tech Group services',
-      },
-      servers: [
-        {
+        "version": '1.0.0',
+        "description": 'API documentation for Zion Tech Group services'},
+      "servers": [{
           url: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api',
 
-          description: 'Development server',
-        },
+          "description": 'Development server'},
       ],
-      paths: this.generatePaths(),
-      components: {
-        schemas: this.generateSchemas(),
-      },
-    }}
+      "paths": this.generatePaths(),
+      "components": {
+        schemas: this.generateSchemas()}}}
 
   private generatePaths() {
-    const paths: Record<string, any> = {};
+    const "paths": Record<string, any> = {};
 
 
     this.endpoints.forEach((endpoint) => {
       if (!paths[endpoint.path]) {
         paths[endpoint.path] = {}}
       paths[endpoint.path][endpoint.method.toLowerCase()] = {
-        summary: endpoint.description,
+        "summary": endpoint.description,
 
-        parameters:
-          endpoint.parameters?.map((param) => ({
+        "parameters": endpoint.parameters?.map((param) => ({
             name: param.name,
-            in: param.location,
-            required: param.required,
-            schema: { type: param.type },
-            description: param.description,
-          })) ?? [],
-        responses: (endpoint.responses ?? []).reduce((acc, response) => {
+            "in": param.location,
+            "required": param.required,
+            "schema": { type: param.type },
+            "description": param.description})) ?? [],
+        "responses": (endpoint.responses ?? []).reduce((acc, response) => {
           acc[response.status] = {
-            description: response.description,
-            content: response.schema
+            "description": response.description,
+            "content": response.schema
               ? {
                   'application/json': {
 
-                    schema: response.schema,
-                  },
-                }
-              : undefined,
-          };
-          return acc}, {} as Record<string, any>),
-      }});
+                    schema: response.schema}}
+              : undefined};
+          return acc}, {} as Record<string, any>)}});
 
     return paths}
 
   private generateSchemas() {
     return {
-      Error: {
+      "Error": {
         type: 'object',
-        properties: {
+        "properties": {
           error: {
             type: 'object',
-            properties: {
+            "properties": {
               message: { type: 'string' },
-              statusCode: { type: 'number' },
+              "statusCode": { type: 'number' },
 
-              timestamp: { type: 'string', format: 'date-time' },
-            },
-          },
-        },
-      },
-      Success: {
+              "timestamp": { type: 'string', "format": 'date-time' }}}}},
+      "Success": {
         type: 'object',
-        properties: {
+        "properties": {
           success: { type: 'boolean' },
-          data: { type: 'object' },
+          "data": { type: 'object' },
 
-          message: { type: 'string' },
-        },
-      },
-    }}
+          "message": { type: 'string' }}}}}
 
   public generateMarkdown() {
     let markdown = '# API Documentation\n\n';
@@ -144,10 +126,10 @@ class ApiDocumentationGenerator {
         markdown += '### Examples\n\n';
         endpoint.examples.forEach((example) => {
           markdown += `#### ${example.name}\n\n`;
-          markdown += `**Request:**\n`;
-          markdown += `\`\`\`json\n${JSON.stringify(example.request, null, 2)}\n\`\`\`\n\n`;
-          markdown += `**Response:**\n`;
-          markdown += `\`\`\`json\n${JSON.stringify(example.response, null, 2)}\n\`\`\`\n\n`})}
+          markdown += "**"Request": **\n";
+          markdown += "\"\"\"json\n${JSON.stringify(example.request, null, 2)}\n\"\"\"\n\n";
+          markdown += "**"Response": **\n";
+          markdown += "\"\"\"json\n${JSON.stringify(example.response, null, 2)}\n\"\"\"\n\n"})}
 
       markdown += '---\n\n'});
 
@@ -156,7 +138,7 @@ class ApiDocumentationGenerator {
 
 export const apiDocGenerator = new ApiDocumentationGenerator();
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler("req": NextApiRequest, "res": NextApiResponse) {
   if (req.method === 'GET') {
     const format = (req.query.format as string) || 'json';
 
@@ -167,5 +149,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       res.status(200).json(apiDocGenerator.generateOpenAPISpec())}
   } else {
     res.setHeader('Allow', ['GET']);
-    res.status(405).json({ error: 'Method not allowed' })}
+    res.status(405).json({ "error": 'Method not allowed' })}
 }

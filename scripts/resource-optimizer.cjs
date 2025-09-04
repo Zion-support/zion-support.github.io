@@ -12,7 +12,7 @@ class ResourceOptimizer {
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true })}
+      fs.mkdirSync(this.reportsDir, { "recursive": true })}
   }
 
   log(message) {
@@ -25,7 +25,7 @@ class ResourceOptimizer {
       const publicDir = path.join(this.projectRoot, 'public');
       if (!fs.existsSync(publicDir)) {
         this.log('⚠️ Public directory not found');
-        return { optimized: 0, files: [] }}
+        return { "optimized": 0, "files": [] }}
 
       const imageFiles = this.findImageFiles(publicDir);
       let optimizedCount = 0;
@@ -39,10 +39,10 @@ class ResourceOptimizer {
           // Here you would implement actual image optimization
           // For now, we'll just report what we found
           optimizationResults.push({
-            file: path.relative(this.projectRoot, imageFile),
+            "file": path.relative(this.projectRoot, imageFile),
             originalSize,
-            optimizedSize: originalSize, // Placeholder
-            savings: 0 // Placeholder
+            "optimizedSize": originalSize, // Placeholder
+            "savings": 0 // Placeholder
           });
           
           optimizedCount++} catch (error) {
@@ -54,12 +54,12 @@ class ResourceOptimizer {
       this.log(`🖼️ Optimized ${optimizedCount} images`);
 
       return {
-        total: imageFiles.length,
-        optimized: optimizedCount,
-        results: optimizationResults
+        "total": imageFiles.length,
+        "optimized": optimizedCount,
+        "results": optimizationResults
       }} catch (error) {
-      this.log(`❌ Image optimization failed: ${error.message}`);
-      return { error: error.message }}
+      this.log(`❌ Image optimization "failed": ${error.message}`);
+      return { "error": error.message }}
   }
 
   async optimizeCSS() {
@@ -90,7 +90,7 @@ class ResourceOptimizer {
             optimizedCount++}
 
           optimizationResults.push({
-            file: path.relative(this.projectRoot, cssFile),
+            "file": path.relative(this.projectRoot, cssFile),
             originalSize,
             optimizedSize,
             savings
@@ -103,12 +103,12 @@ class ResourceOptimizer {
       this.log(`🎨 Optimized ${optimizedCount} CSS files`);
 
       return {
-        total: cssFiles.length,
-        optimized: optimizedCount,
-        results: optimizationResults
+        "total": cssFiles.length,
+        "optimized": optimizedCount,
+        "results": optimizationResults
       }} catch (error) {
-      this.log(`❌ CSS optimization failed: ${error.message}`);
-      return { error: error.message }}
+      this.log(`❌ CSS optimization "failed": ${error.message}`);
+      return { "error": error.message }}
   }
 
   async optimizeJavaScript() {
@@ -140,7 +140,7 @@ class ResourceOptimizer {
             optimizedCount++}
 
           optimizationResults.push({
-            file: path.relative(this.projectRoot, jsFile),
+            "file": path.relative(this.projectRoot, jsFile),
             originalSize,
             optimizedSize,
             savings
@@ -153,12 +153,12 @@ class ResourceOptimizer {
       this.log(`⚡ Optimized ${optimizedCount} JavaScript files`);
 
       return {
-        total: jsFiles.length,
-        optimized: optimizedCount,
-        results: optimizationResults
+        "total": jsFiles.length,
+        "optimized": optimizedCount,
+        "results": optimizationResults
       }} catch (error) {
-      this.log(`❌ JavaScript optimization failed: ${error.message}`);
-      return { error: error.message }}
+      this.log(`❌ JavaScript optimization "failed": ${error.message}`);
+      return { "error": error.message }}
   }
 
   async optimizeHTML() {
@@ -188,7 +188,7 @@ class ResourceOptimizer {
             optimizedCount++}
 
           optimizationResults.push({
-            file: path.relative(this.projectRoot, htmlFile),
+            "file": path.relative(this.projectRoot, htmlFile),
             originalSize,
             optimizedSize,
             savings
@@ -201,12 +201,12 @@ class ResourceOptimizer {
       this.log(`📄 Optimized ${optimizedCount} HTML files`);
 
       return {
-        total: htmlFiles.length,
-        optimized: optimizedCount,
-        results: optimizationResults
+        "total": htmlFiles.length,
+        "optimized": optimizedCount,
+        "results": optimizationResults
       }} catch (error) {
-      this.log(`❌ HTML optimization failed: ${error.message}`);
-      return { error: error.message }}
+      this.log(`❌ HTML optimization "failed": ${error.message}`);
+      return { "error": error.message }}
   }
 
   async optimizeDependencies() {
@@ -228,19 +228,19 @@ class ResourceOptimizer {
           const content = fs.readFileSync(file, 'utf8');
           
           // Match import statements
-          const importMatches = content.match(/import\s+.*?\s+from\s+['"`]([^'"`]+)['"`]/g);
+          const importMatches = content.match(/import\s+.*?\s+from\s+['""]([^'""]+)['""]/g);
           if (importMatches) {
             importMatches.forEach(match => {
-              const dep = match.match(/from\s+['"`]([^'"`]+)['"`]/)[1];
+              const dep = match.match(/from\s+['""]([^'""]+)['""]/)[1];
               if (dep && !dep.startsWith('.')) {
                 usedDependencies.add(dep)}
             })}
 
           // Match require statements
-          const requireMatches = content.match(/require\s*\(\s*['"`]([^'"`]+)['"`]\s*\)/g);
+          const requireMatches = content.match(/require\s*\(\s*['""]([^'""]+)['""]\s*\)/g);
           if (requireMatches) {
             requireMatches.forEach(match => {
-              const dep = match.match(/require\s*\(\s*['"`]([^'"`]+)['"`]\s*\)/)[1];
+              const dep = match.match(/require\s*\(\s*['""]([^'""]+)['""]\s*\)/)[1];
               if (dep && !dep.startsWith('.')) {
                 usedDependencies.add(dep)}
             })}
@@ -253,18 +253,18 @@ class ResourceOptimizer {
         !usedDependencies.has(dep) && !this.isFrameworkDependency(dep)
       );
 
-      this.log(`📦 Total dependencies: ${Object.keys(dependencies).length}`);
-      this.log(`📦 Used dependencies: ${usedDependencies.size}`);
-      this.log(`📦 Unused dependencies: ${unusedDependencies.length}`);
+      this.log(`📦 Total "dependencies": ${Object.keys(dependencies).length}`);
+      this.log(`📦 Used "dependencies": ${usedDependencies.size}`);
+      this.log(`📦 Unused "dependencies": ${unusedDependencies.length}`);
 
       return {
-        total: Object.keys(dependencies).length,
-        used: usedDependencies.size,
-        unused: unusedDependencies.length,
-        unusedList: unusedDependencies
+        "total": Object.keys(dependencies).length,
+        "used": usedDependencies.size,
+        "unused": unusedDependencies.length,
+        "unusedList": unusedDependencies
       }} catch (error) {
-      this.log(`❌ Dependency optimization failed: ${error.message}`);
-      return { error: error.message }}
+      this.log(`❌ Dependency optimization "failed": ${error.message}`);
+      return { "error": error.message }}
   }
 
   async optimizeBundleSize() {
@@ -272,9 +272,9 @@ class ResourceOptimizer {
     try {
       // Build the project first
       execSync('npm run build', {
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 300000
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 300000
       });
 
       const nextDir = path.join(this.projectRoot, '.next');
@@ -284,7 +284,7 @@ class ResourceOptimizer {
       const buildStats = this.getDirectoryStats(nextDir);
       const sizeInMB = buildStats.size / (1024 * 1024);
       
-      this.log(`📦 Bundle size: ${this.formatBytes(buildStats.size)}`);
+      this.log(`📦 Bundle "size": ${this.formatBytes(buildStats.size)}`);
 
       // Check for large files
       const largeFiles = this.findLargeFiles(nextDir);
@@ -292,13 +292,13 @@ class ResourceOptimizer {
       this.log(`📦 Large files (>1MB): ${largeFiles.length}`);
 
       return {
-        size: buildStats.size,
+        "size": buildStats.size,
         sizeInMB,
-        files: buildStats.files,
+        "files": buildStats.files,
         largeFiles
       }} catch (error) {
-      this.log(`❌ Bundle size optimization failed: ${error.message}`);
-      return { error: error.message }}
+      this.log(`❌ Bundle size optimization "failed": ${error.message}`);
+      return { "error": error.message }}
   }
 
   findImageFiles(dir) {
@@ -439,9 +439,9 @@ class ResourceOptimizer {
           if (stats.isDirectory()) {
             scanDirectory(filePath)} else if (stats.isFile() && stats.size > minSize) {
             largeFiles.push({
-              file: path.relative(this.projectRoot, filePath),
-              size: stats.size,
-              sizeFormatted: this.formatBytes(stats.size)
+              "file": path.relative(this.projectRoot, filePath),
+              "size": stats.size,
+              "sizeFormatted": this.formatBytes(stats.size)
             })}
         })} catch (error) {
         // Skip directories that can't be read
@@ -472,7 +472,7 @@ class ResourceOptimizer {
     };
 
     scanDirectory(dirPath);
-    return { size: totalSize, files: fileCount }}
+    return { "size": totalSize, "files": fileCount }}
 
   formatBytes(bytes) {
     if (bytes === 0) return '0 Bytes';
@@ -482,8 +482,7 @@ class ResourceOptimizer {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]}
 
   isFrameworkDependency(dep) {
-    const frameworkDeps = [
-      'next',
+    const frameworkDeps = ['next',
       'react',
       'react-dom',
       'typescript',
@@ -501,14 +500,14 @@ class ResourceOptimizer {
     this.log('📊 Generating resource optimization report...');
     
     const report = {
-      timestamp: new Date().toISOString(),
-      analysis: {
+      "timestamp": new Date().toISOString(),
+      "analysis": {
         images: await this.optimizeImages(),
-        css: await this.optimizeCSS(),
-        javascript: await this.optimizeJavaScript(),
-        html: await this.optimizeHTML(),
-        dependencies: await this.optimizeDependencies(),
-        bundle: await this.optimizeBundleSize()
+        "css": await this.optimizeCSS(),
+        "javascript": await this.optimizeJavaScript(),
+        "html": await this.optimizeHTML(),
+        "dependencies": await this.optimizeDependencies(),
+        "bundle": await this.optimizeBundleSize()
       }
     };
 
@@ -518,7 +517,7 @@ class ResourceOptimizer {
     const reportFile = path.join(this.reportsDir, `resource-optimization-report-${Date.now()}.json`);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-    this.log(`📄 Resource optimization report generated: ${reportFile}`);
+    this.log(`📄 Resource optimization report "generated": ${reportFile}`);
     
     return report}
 
@@ -527,50 +526,50 @@ class ResourceOptimizer {
 
     if (analysis.images && analysis.images.total > 0) {
       recommendations.push({
-        type: 'image_optimization',
-        priority: 'medium',
-        message: `Found ${analysis.images.total} images. Consider optimizing them for web.`,
-        impact: 'Reduces page load time'
+        "type": 'image_optimization',
+        "priority": 'medium',
+        "message": `Found ${analysis.images.total} images. Consider optimizing them for web.`,
+        "impact": 'Reduces page load time'
       })}
 
     if (analysis.css && analysis.css.optimized > 0) {
       recommendations.push({
-        type: 'css_optimization',
-        priority: 'low',
-        message: `Optimized ${analysis.css.optimized} CSS files. Consider using a CSS minifier.`,
-        impact: 'Reduces CSS file size'
+        "type": 'css_optimization',
+        "priority": 'low',
+        "message": `Optimized ${analysis.css.optimized} CSS files. Consider using a CSS minifier.`,
+        "impact": 'Reduces CSS file size'
       })}
 
     if (analysis.javascript && analysis.javascript.optimized > 0) {
       recommendations.push({
-        type: 'javascript_optimization',
-        priority: 'low',
-        message: `Optimized ${analysis.javascript.optimized} JavaScript files. Consider using a minifier.`,
-        impact: 'Reduces JavaScript file size'
+        "type": 'javascript_optimization',
+        "priority": 'low',
+        "message": `Optimized ${analysis.javascript.optimized} JavaScript files. Consider using a minifier.`,
+        "impact": 'Reduces JavaScript file size'
       })}
 
     if (analysis.dependencies && analysis.dependencies.unused > 0) {
       recommendations.push({
-        type: 'dependency_cleanup',
-        priority: 'medium',
-        message: `Found ${analysis.dependencies.unused} unused dependencies. Consider removing them.`,
-        impact: 'Reduces bundle size and maintenance overhead'
+        "type": 'dependency_cleanup',
+        "priority": 'medium',
+        "message": `Found ${analysis.dependencies.unused} unused dependencies. Consider removing them.`,
+        "impact": 'Reduces bundle size and maintenance overhead'
       })}
 
     if (analysis.bundle && analysis.bundle.sizeInMB > 10) {
       recommendations.push({
-        type: 'bundle_optimization',
-        priority: 'high',
-        message: `Bundle size is ${analysis.bundle.sizeInMB.toFixed(1)}MB. Consider code splitting and tree shaking.`,
-        impact: 'Improves initial page load performance'
+        "type": 'bundle_optimization',
+        "priority": 'high',
+        "message": `Bundle size is ${analysis.bundle.sizeInMB.toFixed(1)}MB. Consider code splitting and tree shaking.`,
+        "impact": 'Improves initial page load performance'
       })}
 
     if (analysis.bundle && analysis.bundle.largeFiles.length > 0) {
       recommendations.push({
-        type: 'large_files',
-        priority: 'medium',
-        message: `Found ${analysis.bundle.largeFiles.length} large files. Consider optimizing them.`,
-        impact: 'Reduces bundle size'
+        "type": 'large_files',
+        "priority": 'medium',
+        "message": `Found ${analysis.bundle.largeFiles.length} large files. Consider optimizing them.`,
+        "impact": 'Reduces bundle size'
       })}
 
     return recommendations}
@@ -582,16 +581,16 @@ class ResourceOptimizer {
       const report = await this.generateResourceOptimizationReport();
       
       this.log('🎉 Resource optimization completed!');
-      this.log(`🖼️ Images: ${report.analysis.images.total || 0}`);
-      this.log(`🎨 CSS files: ${report.analysis.css.total || 0}`);
-      this.log(`⚡ JavaScript files: ${report.analysis.javascript.total || 0}`);
-      this.log(`📄 HTML files: ${report.analysis.html.total || 0}`);
-      this.log(`📦 Dependencies: ${report.analysis.dependencies.total || 0}`);
-      this.log(`📦 Bundle size: ${this.formatBytes(report.analysis.bundle.size || 0)}`);
-      this.log(`💡 Recommendations: ${report.recommendations.length}`);
+      this.log(`🖼️ "Images": ${report.analysis.images.total || 0}`);
+      this.log(`🎨 CSS "files": ${report.analysis.css.total || 0}`);
+      this.log(`⚡ JavaScript "files": ${report.analysis.javascript.total || 0}`);
+      this.log(`📄 HTML "files": ${report.analysis.html.total || 0}`);
+      this.log(`📦 "Dependencies": ${report.analysis.dependencies.total || 0}`);
+      this.log(`📦 Bundle "size": ${this.formatBytes(report.analysis.bundle.size || 0)}`);
+      this.log(`💡 "Recommendations": ${report.recommendations.length}`);
       
       return report} catch (error) {
-      this.log(`💥 Resource optimization failed: ${error.message}`);
+      this.log(`💥 Resource optimization "failed": ${error.message}`);
       throw error}
   }
 }
@@ -602,11 +601,11 @@ if (require.main === module) {
   optimizer.run()
     .then((report) => {
       console.log('\n🎉 Resource Optimizer completed successfully!');
-      console.log(`📦 Bundle size: ${optimizer.formatBytes(report.analysis.bundle.size || 0)}`);
-      console.log(`💡 Recommendations: ${report.recommendations.length}`);
+      console.log(`📦 Bundle "size": ${optimizer.formatBytes(report.analysis.bundle.size || 0)}`);
+      console.log(`💡 "Recommendations": ${report.recommendations.length}`);
       process.exit(0)})
     .catch((error) => {
-      console.error('\n💥 Resource Optimizer failed:', error.message);
+      console.error('\n💥 Resource Optimizer "failed": ', error.message);
       process.exit(1)})}
 
 module.exports = ResourceOptimizer;

@@ -18,13 +18,13 @@ export default function Page($1) {
 
         form.setError('root', {
 
-          message: 'Login failed.Please check your credentials.'});
+          "message": 'Login failed.Please check your credentials.'});
       }
     } catch (error) {
 
       form.setError('root', {
 
-        message: 'An error occurred.Please try again.'});
+        "message": 'An error occurred.Please try again.'});
     } finally {setIsSubmitting(false);}
   };
 
@@ -53,7 +53,7 @@ export default function Page($1) {
                 <div className="relative">
                   <Input "
                     placeholder="you@example.com"
-                    className="bg-zion-blue pl-10 placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
+                    className="bg-zion-blue pl-10 "placeholder": text-zion-slate border-zion-blue-light focus:border-zion-purple"
                     {...field}"
                     autoComplete="off"
                     />"
@@ -76,7 +76,7 @@ export default function Page($1) {
                   <Input '
                     type={showPassword ? 'text' : 'password'}"
                     placeholder="••••••••"
-                    className="bg-zion-blue pl-10 border-zion-blue-light focus:border-zion-purple"
+                    className="bg-zion-blue pl-10 border-zion-blue-light "focus": border-zion-purple"
                     {...field}"
                     autoComplete="off"
                     />"
@@ -85,7 +85,7 @@ export default function Page($1) {
                     type="button"
                     variant="ghost"
                     size="sm"
-                    className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan"
+                    className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 "hover": text-zion-cyan"
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     {showPassword ? ("
@@ -108,7 +108,7 @@ export default function Page($1) {
           <div className="text-sm">
             <Link"
               to="/forgot-password"
-              className="font-medium text-zion-cyan hover:text-zion-cyan-light"
+              className="font-medium text-zion-cyan "hover": text-zion-cyan-light"
             >
               Forgot your password?
             </Link>
@@ -137,7 +137,7 @@ export default function Page($1) {
           <span className="text-zion-slate-light">Don't have an account? </span>
           <Link"
             to="/signup"
-            className="font-medium text-zion-cyan hover:text-zion-cyan-light"
+            className="font-medium text-zion-cyan "hover": text-zion-cyan-light"
           >
             Sign up
           </Link>

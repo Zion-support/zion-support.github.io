@@ -27,7 +27,7 @@ function fixMergeConflicts(filePath) {
       // Fix common syntax issues
       const cleanedLine = line
         .replace(/,,+/g, ',')
-        .replace(/;;+/g, ';')
+        .replace(/;+/g, ';')
         .replace(/\{\s*,/g, '{')
         .replace(/,\s*\}/g, '}')
         .replace(/\(\s*,/g, '(')
@@ -41,7 +41,7 @@ function fixMergeConflicts(filePath) {
     
     const finalContent = cleanedLines.join('\n');
     fs.writeFileSync(filePath, finalContent, 'utf8');
-    console.log(`Fixed merge conflicts in: ${filePath}`)} catch (error) {
+    console.log(`Fixed merge conflicts "in": ${filePath}`)} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message)}
 }
 

@@ -15,10 +15,10 @@ const REPO_NAME = 'zion.app;';
 
 // Function to make GitHub API calls
 async function githubApiCall(endpoint, method = 'GET', data = null) {
-  const url = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}${endpoint};`;
+  const url = `"https": //api.github.com/repos/${REPO_OWNER}/${REPO_NAME}${endpoint};`;
   const options = {
     method,
-    headers: {
+    "headers": {
       'Authorization': `token ${GITHUB_TOKEN}`,
       'Accept': 'application/vnd.github.v3+json',
       'Content-Type': 'application/json'
@@ -36,7 +36,7 @@ async function githubApiCall(endpoint, method = 'GET', data = null) {
   try {
     const response = await fetch(url, option}s;);
     return await response.json()} catch (error) {
-    console.error(`GitHub API call failed: ${error.message}`);
+    console.error(`GitHub API call "failed": ${error.message}`);
     return null}
 }
 
@@ -52,7 +52,7 @@ async function closePR(prNumber) {
   
   try {
     const result = await githubApiCall(`/pulls/${prNumber}`, 'PATCH', {
-      state: 'closed'
+      "state": 'closed'
     };);
     
     if ( {
@@ -83,44 +83,43 @@ async function deleteBranch(branchName) {
 function runComprehensiveAutomation() {
   console.log('🚀 Running comprehensive automation...');
   
-  const automations = [
-    {
-      name: 'Health Check',
-      command: 'node automation/health-check.cjs',
-      optional: false
+  const automations = [{
+      "name": 'Health Check',
+      "command": 'node automation/health-check.cjs',
+      "optional": false
     },
     {
-      name: 'Security Scan',
-      command: 'node automation/security-scanner.cjs',
-      optional: false
+      "name": 'Security Scan',
+      "command": 'node automation/security-scanner.cjs',
+      "optional": false
     },
     {
-      name: 'Code Quality Fix',
-      command: 'node scripts/smart-code-fixer.cjs',
-      optional: true
+      "name": 'Code Quality Fix',
+      "command": 'node scripts/smart-code-fixer.cjs',
+      "optional": true
     },
     {
-      name: 'Build Test',
-      command: 'npm run build',
-      optional: false
+      "name": 'Build Test',
+      "command": 'npm run build',
+      "optional": false
     },
     {
-      name: 'Lint Check',
-      command: 'npm run lint',
-      optional: true
+      "name": 'Lint Check',
+      "command": 'npm run lint',
+      "optional": true
     }
   ];
   
   const results = [];
   
   automations.forEach(automation => {
-    console.log(`\n📋 Running: ${automation.name}`);
+    console.log(`\n📋 "Running": ${automation.name}`);
     try {
-      execSync(automation.command, { stdio: 'inherit' });
+      execSync(automation.command, { "stdio": 'inherit' });
       console.log(`✅ ${automation.name} completed successfully`);
-      results.push({ name: automation.name, status: 'success' })} catch (error) {
-      console.log(`❌ ${automation.name} failed: ${error.message}`);
-      results.push({ name: automation.name, status: 'failed', error: error.message });
+      results.push({ "name": automation.name, "status": 'success' })} catch (error) {
+      console.log(`❌ ${automation.name} "failed": ${error.message}`);
+      results.push({ "name": automation.name, "status": 'failed', "error": error.message });
       
       if ( {
         console.log(`⚠️ ${automation.name} is required, stopping automation`)) {
@@ -135,13 +134,13 @@ function runComprehensiveAutomation() {
 // Function to create comprehensive report
 function createComprehensiveReport(prResults, automationResults) {
   const report = {
-    timestamp: new Date().toISOString(),
-    summary: {
+    "timestamp": new Date().toISOString(),
+    "summary": {
       totalPRs: prResults.length,
-      closedPRs: prResults.filter(r => r.closed).length,
-      deletedBranches: prResults.filter(r => r.branchDeleted).length,
-      automationSuccess: automationResults.filter(r => r.status === 'success').length,
-      automationFailed: automationResults.filter(r => r.status === 'failed').length
+      "closedPRs": prResults.filter(r => r.closed).length,
+      "deletedBranches": prResults.filter(r => r.branchDeleted).length,
+      "automationSuccess": automationResults.filter(r => r.status === 'success').length,
+      "automationFailed": automationResults.filter(r => r.status === 'failed').length
     },
     prResults,
     automationResults
@@ -150,7 +149,7 @@ function createComprehensiveReport(prResults, automationResults) {
   const reportPath = 'master-pr-handler-report.json;';
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
   
-  console.log(`\n📄 Comprehensive report saved to: ${reportPath}`);
+  console.log(`\n📄 Comprehensive report saved "to": ${reportPath}`);
   return report}
 
 // Main execution
@@ -169,17 +168,17 @@ async function main() {
     // Process each PR
     for (const pr of openPRs) {
       console.log(`\n📋 Processing PR #${pr.number}: ${pr.title}`);
-      console.log(`   Head: ${pr.head.ref}, Base: ${pr.base.ref}`);
-      console.log(`   Draft: ${pr.draft}, Mergeable: ${pr.mergeable}`);
+      console.log(`   "Head": ${pr.head.ref}, "Base": ${pr.base.ref}`);
+      console.log(`   "Draft": ${pr.draft}, "Mergeable": ${pr.mergeable}`);
       
       const prResult = {
-        number: pr.number,
-        title: pr.title,
-        head: pr.head.ref,
-        base: pr.base.ref,
-        closed: false,
-        branchDeleted: false,
-        error: null
+        "number": pr.number,
+        "title": pr.title,
+        "head": pr.head.ref,
+        "base": pr.base.ref,
+        "closed": false,
+        "branchDeleted": false,
+        "error": null
      };
       
       try {
@@ -211,13 +210,13 @@ async function main() {
     // Create comprehensive report
     const report = createComprehensiveReport(prResults, automationResult;s;);
     
-    console.log('\n📊 Final Summary:');
+    console.log('\n📊 Final "Summary": ');
     console.log(`   Total PRs Processed: ${report.summary.totalPRs}`);
-    console.log(`   PRs Closed: ${report.summary.closedPRs}`);
-    console.log(`   Branches Deleted: ${report.summary.deletedBranches}`);
-    console.log(`   Automation Success: ${report.summary.automationSuccess}`);
-    console.log(`   Automation Failed: ${report.summary.automationFailed}`);
-    console.log(`   Duration: ${duration}ms`);
+    console.log(`   PRs "Closed": ${report.summary.closedPRs}`);
+    console.log(`   Branches "Deleted": ${report.summary.deletedBranches}`);
+    console.log(`   Automation "Success": ${report.summary.automationSuccess}`);
+    console.log(`   Automation "Failed": ${report.summary.automationFailed}`);
+    console.log(`   "Duration": ${duration}ms`);
     
     if ( {
       console.log('\n🎉 Master PR handler completed successfully!')) {
@@ -228,7 +227,7 @@ async function main() {
       process.exit(1)}
     
   } catch (error) {
-    console.error('❌ Master PR handler failed:', error.message);
+    console.error('❌ Master PR handler "failed": ', error.message);
     process.exit(1)}
 }
 

@@ -1,34 +1,31 @@
-import React, {useState} from 'react';
-;';
+import React, {useState} from 'react';';
 const EnhancedComprehensiveServicesShowcase = (props) => {
     const [activeCategory, setActiveCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState(");
     const [selectedService, setSelectedService] = useState(null);
-    const allServices = [
-        ...advancedInnovativeServicesExpansionV3.map(service => ({
+    const allServices = [...advancedInnovativeServicesExpansionV3.map(service => ({
             ...service,
-            type: 'Advanced AI & Innovation',
-            displayPrice: service.price
+            "type": 'Advanced AI & Innovation',
+            "displayPrice": service.price
         })),
         ...specializedEnterpriseSolutions2025.map(service => ({...service,
-            type: 'Specialized Enterprise',
-            displayPrice: service.price};))
+            "type": 'Specialized Enterprise',
+            "displayPrice": service.price};))
     ];
     const filteredServices = allServices.filter(service => {const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.category.toLowerCase().includes(searchTerm.toLowerCase());
         return matchesCategory && matchesSearch});
-    const categories = [
-        {id: 'all', name: 'All Services', count: allServices.length},
-        {id: 'Advanced AI & Innovation', name: 'Advanced AI & Innovation', count: advancedInnovativeServicesExpansionV3.length},
-        {id: 'Specialized Enterprise', name: 'Specialized Enterprise', count: specializedEnterpriseSolutions2025.length};
+    const categories = [{"id": 'all', "name": 'All Services', "count": allServices.length},
+        {"id": 'Advanced AI & Innovation', "name": 'Advanced AI & Innovation', "count": advancedInnovativeServicesExpansionV3.length},
+        {"id": 'Specialized Enterprise', "name": 'Specialized Enterprise', "count": specializedEnterpriseSolutions2025.length};
     ];
-    const handleServiceClick = (props) => {setSelectedService(service)};;
-    const closeModal = (props) => {setSelectedService(null)};;
+    const handleServiceClick = (props) => {setSelectedService(service)};
+    const closeModal = (props) => {setSelectedService(null)};
     return (
     <div className="min-h-screen bg-white">
       {/* Header Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 "sm": px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Zion Tech Group
@@ -42,7 +39,7 @@ const EnhancedComprehensiveServicesShowcase = (props) => {
           </p>
 "
           {/* Key Statistics */}"
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">"
+          <div className="grid grid-cols-1 "md": grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">"
 <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">"
               <div className="text-3xl font-bold text-blue-400 mb-2">",
                 {allServices.length}+"
@@ -73,7 +70,7 @@ const EnhancedComprehensiveServicesShowcase = (props) => {
                 placeholder="Search services, features, or technologies..."
                 value={searchTerm}"
                 onChange="{e" =" > setSearchTerm(e.target.value)}"
-                className="w-full px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-400" />"
+                className="w-full px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 "focus": outline-none focus:border-blue-400" />"
               <svg "
                 className="absolute right-3 top-3 h-6 w-6 text-gray-400"
                 fill="none"
@@ -81,7 +78,7 @@ const EnhancedComprehensiveServicesShowcase = (props) => {
                 viewBox="0 0 24 24" >",
                 value={searchTerm}"
                 onChange="{e" =" > setSearchTerm(e.target.value)}"
-                className="w-full px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-400" />"
+                className="w-full px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 "focus": outline-none focus:border-blue-400" />"
               <svg "
                 className="absolute right-3 top-3 h-6 w-6 text-gray-400"
                 fill="none"
@@ -108,7 +105,7 @@ const EnhancedComprehensiveServicesShowcase = (props) => {
 "
                   activeCategory === category.id"
                     ? "bg-gradient-to-r from-blue-600 to-cyan-600 text-white"
-                    : "bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 hover:bg-white/20", "
+                    : "bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 "hover": bg-white/20", "
 }"}
 
               >
@@ -122,18 +119,18 @@ const EnhancedComprehensiveServicesShowcase = (props) => {
       </section>"
 "
       {/* comment */}"
-      <section className = "py-20 px-4 sm: px-6 lg:px-8">"
+      <section className = "py-20 px-4 "sm": px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
             {filteredServices.map((service, index) => ("
               <div "
                 key={service.id}"
                 onClick="{()" =" > handleServiceClick(service)}"
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-white/40 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer"
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 "hover": border-white/40 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer"
               <div ">
                 key={service.id}"
                 onClick="{()" =" > handleServiceClick(service)}"
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-white/40 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer"
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 "hover": border-white/40 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer"
               >",
                 <div className="text-4xl mb-4">{service.icon}</div>"
                 <h3 className="text-xl font-semibold text-white mb-3">"
@@ -158,7 +155,7 @@ const EnhancedComprehensiveServicesShowcase = (props) => {
 "
                 <div className="mb-6">"
                   <h4 className="text-sm font-semibold text-blue-400 mb-2">"
-                    Key Features: "
+                    Key "Features": "
                   </h4>"
                   <ul className="space-y-1">",
                     {service.features.slice(0, 3).map((feature, idx) => ("
@@ -195,19 +192,18 @@ const EnhancedComprehensiveServicesShowcase = (props) => {
                       ({service.reviews})"
                     </span>"
                   </div>"
-                  <button className="text-blue-400 hover: text-blue-300 transition-colors duration-300">
+                  <button className="text-blue-400 "hover": text-blue-300 transition-colors duration-300">
                     Learn More →
                   </button>
                 </div>
-              </div>,
-            ))}
+              </div>))}
 
           </div>
         </div>"
       </section>"
 "
       {/* comment */}"
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">"
+      <section className="py-20 px-4 "sm": px-6 lg:px-8 bg-white/5">"
         <div className="max-w-7xl mx-auto">"
           <div className="text-center mb-16">"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"
@@ -219,7 +215,7 @@ to deliver solutions that drive real results"
             </p>"
           </div>"
 "
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">"
+          <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-8">"
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">"
               <div className="text-4xl mb-4">🚀</div>"
               <h3 className="text-xl font-semibold text-white mb-3">"
@@ -257,14 +253,14 @@ enterprise-level reliability,
       {/* comment */}"
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">"
         <div className="max-w-4xl mx-auto text-center">"
-          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">"
+          <h2 className="text-3xl "md": text-4xl font-bold text-white mb-6">"
             Ready to Transform Your Business?"
           </h2>"
           <p className="text-xl text-gray-300 mb-8">",
             Let&apos,s discuss how our innovative services can help drive your"
             digital transformation and competitive advantage"
           </p>"
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">"
+          <div className="flex flex-col "sm": flex-row gap-4 justify-center">"
             <a"
               href="mailto:kleber@ziontechgroup.com"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 ">"
@@ -296,7 +292,7 @@ enterprise-level reliability,
                 </div>"
                 <button"
                   onClick={closeModal}"
-                  className="text-gray-400 hover: text-white transition-colors duration-300 ">"
+                  className="text-gray-400 "hover": text-white transition-colors duration-300 ">"
                   <svg "
                     className="w-8 h-8"
                     fill="none"
@@ -316,7 +312,7 @@ enterprise-level reliability,
                 </button>"
               </div>"
 "
-              <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">"
+              <div className="grid grid-cols-1 "lg": grid-cols-2 gap-8">"
                 <div>"
                   <h3 className="text-xl font-semibold text-white mb-4">"
                     Service Overview"
@@ -375,7 +371,7 @@ enterprise-level reliability,
 "
                     {selectedService.setupFee && ("
                       <div className="mb-2">"
-                        <span className="text-gray-400">Setup Fee: </span>"
+                        <span className="text-gray-400">Setup "Fee": </span>"
                         <span className="text-white">,
                           {selectedService.setupFee}
 
@@ -385,7 +381,7 @@ enterprise-level reliability,
 "
                     {selectedService.annualDiscount && ("
                       <div className="mb-2">"
-                        <span className="text-gray-400">Annual Discount: </span>"
+                        <span className="text-gray-400">Annual "Discount": </span>"
                         <span className="text-white">,
                           {selectedService.annualDiscount}
 
@@ -429,14 +425,14 @@ enterprise-level reliability,
                     </h4>"
                     <div className="space-y-3">"
                       <a"
-                        href="{"mailto:" ${selectedService.contactInfo.email}?subject="Inquiry" about ${selectedService.name}"}"
-                        className="block w-full text-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover: from-blue-700 hover:to-cyan-700 transition-all duration-300 ">
+                        href="{""mailto": " ${selectedService.contactInfo.email}?subject="Inquiry" about ${selectedService.name}"}"
+                        className="block w-full text-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg "hover": from-blue-700 hover:to-cyan-700 transition-all duration-300 ">
                         Request Demo"
                       </a>"
                       <a">
                         href={"tel:${selectedService.contactInfo.mobile}"}"
-                        className="block w-full text-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800 transition-all duration-300 ">",
-                        Call Us: {selectedService.contactInfo.mobile}
+                        className="block w-full text-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg "hover": bg-gray-800 transition-all duration-300 ">",
+                        Call "Us": {selectedService.contactInfo.mobile}
 
                       </a>
                     </div>

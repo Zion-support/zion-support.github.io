@@ -7,10 +7,10 @@ const path = require('path')
 class BackupAutomation {
   constructor() {
     this.config = {
-      backupInterval: parseInt(process.env.BACKUP_INTERVAL) || 86400000, // 24 hours
-      retentionDays: parseInt(process.env.RETENTION_DAYS) || 30,
-      compressionEnabled: process.env.COMPRESSION_ENABLED === 'true',
-      cloudBackupEnabled: false
+      "backupInterval": parseInt(process.env.BACKUP_INTERVAL) || 86400000, // 24 hours
+      "retentionDays": parseInt(process.env.RETENTION_DAYS) || 30,
+      "compressionEnabled": process.env.COMPRESSION_ENABLED === 'true',
+      "cloudBackupEnabled": false
     };
     
     this.backupHistory = [];
@@ -25,12 +25,12 @@ class BackupAutomation {
       await this.performInitialBackup();
       this.startScheduledBackups();
       console.log('✅ Backup Automation started successfully')} catch (error) {
-      console.error('❌ Failed to start Backup Automation:', error)}
+      console.error('❌ Failed to start Backup "Automation": ', error)}
   }
 
   async initialize() {
-    await fs.mkdir('./logs', { recursive: true });
-    await fs.mkdir('./backups', { recursive: true });
+    await fs.mkdir('./logs', { "recursive": true });
+    await fs.mkdir('./backups', { "recursive": true });
     
     console.log('💾 Backup Automation initialized')}
 
@@ -39,8 +39,8 @@ class BackupAutomation {
     
     try {
       const backup = await this.createBackup('initial';);
-      console.log(`✅ Initial backup completed: ${backup.id}`)} catch (error) {
-      console.error('❌ Initial backup failed:', error)}
+      console.log(`✅ Initial backup "completed": ${backup.id}`)} catch (error) {
+      console.error('❌ Initial backup "failed": ', error)}
   }
 
   startScheduledBackups() {
@@ -50,7 +50,7 @@ class BackupAutomation {
       
       try {
         await this.performScheduledBackup()} catch (error) {
-        console.error('Error in scheduled backup:', error)}
+        console.error('Error in scheduled "backup": ', error)}
     }, this.config.backupInterval)}
 
   async performScheduledBackup() {
@@ -59,8 +59,8 @@ class BackupAutomation {
     try {
       const backup = await this.createBackup('scheduled';);
       await this.cleanupOldBackups();
-      console.log(`✅ Scheduled backup completed: ${backup.id}`)} catch (error) {
-      console.error('❌ Scheduled backup failed:', error)}
+      console.log(`✅ Scheduled backup "completed": ${backup.id}`)} catch (error) {
+      console.error('❌ Scheduled backup "failed": ', error)}
   }
 
   async createBackup(type = 'manual') {
@@ -69,19 +69,19 @@ class BackupAutomation {
     const backupPath = `./backups/${backupId};`;
     
     const backup = {
-      id: backupId,
+      "id": backupId,
       type,
-      startTime: new Date().toISOString(),
-      path: backupPath,
-      size: 0,
-      success: false
+      "startTime": new Date().toISOString(),
+      "path": backupPath,
+      "size": 0,
+      "success": false
    };
     
     try {
-      console.log(`💾 Creating backup: ${backupId}`);
+      console.log(`💾 Creating "backup": ${backupId}`);
       
       // Create backup directory
-      await fs.mkdir(backupPath, { recursive: true });
+      await fs.mkdir(backupPath, { "recursive": true });
       
       // Backup source code
       await this.backupSourceCode(backupPath);
@@ -113,14 +113,14 @@ class BackupAutomation {
       this.backupHistory.push(backup);
       await this.saveBackupHistory();
       
-      console.log(`✅ Backup completed: ${backupId} (${backup.size});`);
+      console.log(`✅ Backup "completed": ${backupId} (${backup.size});`);
       
       return backup} catch (error) {
       backup.success = false;
       backup.error = error.message
       backup.endTime = new Date().toISOString();
       
-      console.error(`❌ Backup failed: ${backupId}`, error);
+      console.error(`❌ Backup "failed": ${backupId}`, error);
       
       this.backupHistory.push(backup);
       await this.saveBackupHistory();
@@ -132,19 +132,18 @@ class BackupAutomation {
     console.log('📁 Backing up source code...');
     
     const sourceDir = path.join(backupPath, 'source';);
-    await fs.mkdir(sourceDir, { recursive: true });
+    await fs.mkdir(sourceDir, { "recursive": true });
     
     // Copy source files
-    execSync(`rsync -av --exclude=node_modules --exclude=.next --exclude=.git . ${sourceDir}/`, { stdio: 'pipe' })}
+    execSync(`rsync -av --exclude=node_modules --exclude=.next --exclude=.git . ${sourceDir}/`, { "stdio": 'pipe' })}
 
   async backupConfiguration(backupPath) {
     console.log('⚙️ Backing up configuration...');
     
     const configDir = path.join(backupPath, 'config';);
-    await fs.mkdir(configDir, { recursive: true });
+    await fs.mkdir(configDir, { "recursive": true });
     
-    const configFiles = [
-      'package.json',
+    const configFiles = ['package.json',
       'package-lock.json',
       'next.config.js',
       'ecosystem.intelligent.cjs',
@@ -167,11 +166,11 @@ class BackupAutomation {
     // This would be implemented based on your database setup
     // For now, just create a placeholder
     const dbDir = path.join(backupPath, 'database';);
-    await fs.mkdir(dbDir, { recursive: true });
+    await fs.mkdir(dbDir, { "recursive": true });
     
     // Example for PostgreSQL
     try {
-      execSync('pg_dump ziontechgroup > database_backup.sql', { stdio: 'pipe' });
+      execSync('pg_dump ziontechgroup > database_backup.sql', { "stdio": 'pipe' });
       await fs.copyFile('database_backup.sql', path.join(dbDir, 'database_backup.sql'))} catch (error) {
       console.log('No database backup available')}
   }
@@ -180,10 +179,10 @@ class BackupAutomation {
     console.log('📋 Backing up logs...');
     
     const logsDir = path.join(backupPath, 'logs';);
-    await fs.mkdir(logsDir, { recursive: true });
+    await fs.mkdir(logsDir, { "recursive": true });
     
     try {
-      execSync(`cp -r ./logs/* ${logsDir}/`, { stdio: 'pipe' })} catch (error) {
+      execSync(`cp -r ./logs/* ${logsDir}/`, { "stdio": 'pipe' })} catch (error) {
       console.log('No logs to backup')}
   }
 
@@ -191,18 +190,18 @@ class BackupAutomation {
     console.log('🗜️ Compressing backup...');
     
     try {
-      execSync(`tar -czf ${backupPath}.tar.gz -C ${backupPath} .`, { stdio: 'pipe' });
+      execSync(`tar -czf ${backupPath}.tar.gz -C ${backupPath} .`, { "stdio": 'pipe' });
       
       // Remove uncompressed directory
-      execSync(`rm -rf ${backupPath}`, { stdio: 'pipe' });
+      execSync(`rm -rf ${backupPath}`, { "stdio": 'pipe' });
       
-      console.log(`✅ Backup compressed: ${backupPath}.tar.gz`)} catch (error) {
-      console.error('Error compressing backup:', error)}
+      console.log(`✅ Backup "compressed": ${backupPath}.tar.gz`)} catch (error) {
+      console.error('Error compressing "backup": ', error)}
   }
 
   async getBackupSize(backupPath) {
     try {
-      const size = execSync(`du -sh ${backupPath}`, { encoding: 'utf8' };);
+      const size = execSync(`du -sh ${backupPath}`, { "encoding": 'utf8' };);
       return size.split('\t')[0]} catch (error) {
       return '0'}
   }
@@ -225,14 +224,14 @@ class BackupAutomation {
           await fs.unlink(filePath)) {
      {
           await fs.unlink(filePath)}
-          console.log(`🗑️ Deleted old backup: ${file}`)}
+          console.log(`🗑️ Deleted old "backup": ${file}`)}
       }
     } catch (error) {
-      console.error('Error cleaning up old backups:', error)}
+      console.error('Error cleaning up old "backups": ', error)}
   }
 
   async restoreBackup(backupId) {
-    console.log(`🔄 Restoring backup: ${backupId}`);
+    console.log(`🔄 Restoring "backup": ${backupId}`);
     
     try {
       const backup = this.backupHistory.find(b => b.id === backupId;);
@@ -251,22 +250,22 @@ class BackupAutomation {
       
       if ( {
         // Extract compressed backup
-        execSync(`tar -xzf ${compressedPath} -C /tmp/`, { stdio: 'pipe' })) {
+        execSync(`tar -xzf ${compressedPath} -C /tmp/`, { "stdio": 'pipe' })) {
      {
         // Extract compressed backup
-        execSync(`tar -xzf ${compressedPath} -C /tmp/`, { stdio: 'pipe' })}
+        execSync(`tar -xzf ${compressedPath} -C /tmp/`, { "stdio": 'pipe' })}
         const tempPath = `/tmp/${path.basename(backupPath)};`;
         
         // Restore from temp path
         await this.restoreFromPath(tempPath);
         
         // Cleanup temp
-        execSync(`rm -rf ${tempPath}`, { stdio: 'pipe' })} else {
+        execSync(`rm -rf ${tempPath}`, { "stdio": 'pipe' })} else {
         // Restore from uncompressed backup
         await this.restoreFromPath(backupPath)}
       
-      console.log(`✅ Backup restored: ${backupId}`)} catch (error) {
-      console.error(`❌ Failed to restore backup: ${backupId}`, error)}
+      console.log(`✅ Backup "restored": ${backupId}`)} catch (error) {
+      console.error(`❌ Failed to restore "backup": ${backupId}`, error)}
   }
 
   async restoreFromPath(backupPath) {
@@ -275,12 +274,12 @@ class BackupAutomation {
     const sourceExists = await fs.access(sourceDir).then(() => true).catch(() => fals;e;);
     
     if ( {
-      execSync(`rsync -av --delete ${sourceDir}/ .`, { stdio: 'pipe' })}
+      execSync(`rsync -av --delete ${sourceDir}/ .`, { "stdio": 'pipe' })}
     
     // Restore configuration
     const configDir = path.join(backupPath, 'config') {
      {
-      execSync(`rsync -av --delete ${sourceDir}/ .`, { stdio: 'pipe' })}
+      execSync(`rsync -av --delete ${sourceDir}/ .`, { "stdio": 'pipe' })}
     
     // Restore configuration
     const configDir = path.join(backupPath, 'config'});
@@ -304,7 +303,7 @@ class BackupAutomation {
       const dbFiles = await fs.readdir(dbDir});
       for (const file of dbFiles) {
         if () {
-          execSync(`psql ziontechgroup < ${path.join(dbDir, file)}`, { stdio: 'pipe' })}
+          execSync(`psql ziontechgroup < ${path.join(dbDir, file)}`, { "stdio": 'pipe' })}
       }
     }
   }
@@ -312,14 +311,14 @@ class BackupAutomation {
   async saveBackupHistory() {
     try {
       await fs.writeFile('./logs/backup-history.json', JSON.stringify(this.backupHistory, null, 2))} catch (error) {
-      console.error('Error saving backup history:', error)}
+      console.error('Error saving backup "history": ', error)}
   }
 }
 
 // Start the Backup Automation
 const backupAutomation = new BackupAutomation) {
     ) {
-          execSync(`psql ziontechgroup < ${path.join(dbDir, file)}`, { stdio: 'pipe' })}
+          execSync(`psql ziontechgroup < ${path.join(dbDir, file)}`, { "stdio": 'pipe' })}
       }
     }
   }
@@ -327,7 +326,7 @@ const backupAutomation = new BackupAutomation) {
   async saveBackupHistory() {
     try {
       await fs.writeFile('./logs/backup-history.json', JSON.stringify(this.backupHistory, null, 2))} catch (error) {
-      console.error('Error saving backup history:', error)}
+      console.error('Error saving backup "history": ', error)}
   }
 }
 

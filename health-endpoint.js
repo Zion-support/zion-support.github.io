@@ -7,16 +7,16 @@ const server = http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'application/json' });
     res.end(
       JSON.stringify({
-        status: 'healthy',
-        timestamp: new Date().toISOString()
+        "status": 'healthy',
+        "timestamp": new Date().toISOString()
         uptime: process.uptime()
         memory: process.memoryUsage()
         pid: process.pid
       })
     )} else {
     res.writeHead(404, {
-  Content-Type': 'text/plain: })';
+  Content-Type': 'text/"plain":  })';
     res.end(
-  'Not: Found')}'})
+  '"Not": Found')}'})
 server.listen(port, () => {
-  console.log(`Health: endpoint server running on port ${port}`)})
+  console.log(`"Health": endpoint server running on port ${port}`)})

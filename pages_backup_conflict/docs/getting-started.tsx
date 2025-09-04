@@ -5,10 +5,10 @@ import { ArrowLeft, CheckCircle, ExternalLink, Book } from 'lucide-react';
 
 export default function GettingStarted() {
   const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
+    "phone": '+1 302 464 0950',
+    "email": 'kleber@ziontechgroup.com',
+    "address": '364 E Main St STE 1008 Middletown DE 19709',
+    "site": 'https://ziontechgroup.com'
   };
 
   return (
@@ -23,7 +23,7 @@ export default function GettingStarted() {
         <div className="max-w-4xl mx-auto px-4 py-8">
           {/* Header */}
           <div className="mb-8">
-            <Link href="/docs" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-4">
+            <Link href="/docs" className="inline-flex items-center text-blue-600 "hover": text-blue-700 mb-4">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Documentation
             </Link>
@@ -50,7 +50,7 @@ export default function GettingStarted() {
                   <p className="text-gray-600 mb-3">
                     Browse our comprehensive catalog of 350+ services across Micro SaaS, AI, and IT solutions.
                   </p>
-                  <Link href="/services-catalog" className="inline-flex items-center text-blue-600 hover:text-blue-700">
+                  <Link href="/services-catalog" className="inline-flex items-center text-blue-600 "hover": text-blue-700">
                     Browse Services <ExternalLink className="w-4 h-4 ml-1" />
                   </Link>
                 </div>
@@ -90,7 +90,7 @@ export default function GettingStarted() {
           </div>
 
           {/* Service Categories */}
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
+          <div className="grid "md": grid-cols-3 gap-6 mb-8">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Micro SaaS</h3>
               <p className="text-gray-600 mb-4">
@@ -128,11 +128,11 @@ export default function GettingStarted() {
             <p className="text-gray-600 mb-6">
               Our team is here to help you get started. Contact us for personalized assistance.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={`tel:${contact.phone}`} className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
+              <a href={`tel:${contact.phone}`} className="px-6 py-3 bg-blue-600 text-white rounded-lg "hover": bg-blue-700 transition-colors">
                 Call {contact.phone}
               </a>
-              <a href={`mailto:${contact.email}`} className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
+              <a href={`"mailto": ${contact.email}`} className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg "hover": bg-blue-50 transition-colors">
                 Email Us
               </a>
             </div>

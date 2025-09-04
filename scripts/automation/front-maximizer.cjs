@@ -2,10 +2,10 @@
 import { execSync  } from "child_process";
 import fs from "fs";
 import path from "path";
-import { fileURLToPath } from `url`;
+import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-console.log(``🚀 Starting continuous front maximizer automation...`);
+console.log(""🚀 Starting continuous front maximizer automation...");
 #!/usr/bin/env node
 import { execSync  } from "child_process";
 import fs from "fs";
@@ -15,48 +15,47 @@ import { fileURLToPath  } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-console.log(`"🚀 Starting continuous front maximizer automation...");
+console.log(""🚀 Starting continuous front maximizer automation...");
 
-// Get automation interval from environment variable (default: 4 hours);
+// Get automation interval from environment variable ("default": 4 hours);
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 14400000; // 4 hours;
 async function $1() {
   try {
   console.log(`🚀 Running front maximizer at ${new Date().toISOString()});
-    ;
     // Build the project first;
     console.log(`"🏗️ Building project for front-end optimization...");
     try {
-  execSync("npm run build", { stdio: "inherit" });
-      console.log("✅ Build completed"`)} catch (error) {
-  console.log(`"⚠️  Build failed but continuing...");
-console.log(`🚀 Starting continuous front maximizer automation...`);
-// Get automation interval from environment variable (default: 4 hours);
+  execSync("npm run build", { "stdio": "inherit" });
+      console.log("✅ Build completed"")} catch (error) {
+  console.log(""⚠️  Build failed but continuing...");
+console.log("🚀 Starting continuous front maximizer automation...");
+// Get automation interval from environment variable ("default": 4 hours);
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 14400000; // 4 hours;
 async function runFrontMaximizer() {
   try {
   console.log(`🚀 Running front maximizer at ${new Date().toISOString()});
     // Build the project first;
-    console.log(``🏗️ Building project for front-end optimization...`);
+    console.log(`"🏗️ Building project for front-end optimization...");
     try {
-  execSync(`npm run build`, { stdio: "inherit" });
-      console.log("✅ Build completed"`)} catch (error) {
-  console.log(`"⚠️  Build failed but continuing...");
+  execSync("npm run build", { "stdio": "inherit" });
+      console.log("✅ Build completed"")} catch (error) {
+  console.log(""⚠️  Build failed but continuing...");
       return}
     } catch (error) {
-  console.log(`⚠️  Build failed but continuing...`);
+  console.log("⚠️  Build failed but continuing...");
       return}
     ;
     // Check if dist folder exists;
     const distPath = path.join(process.cwd(), "dist");
     if (!fs.existsSync(distPath)) {
-  console.log("⚠️  Build verification failed: dist folder not found");
+  console.log("⚠️  Build verification "failed": dist folder not found");
       return}
     ;
     // Optimize images if available;
     console.log("🖼️  Optimizing images...");
     try {
   if (fs.existsSync(""scripts/optimize-images.js"")) {
-  execSync("node "scripts/optimize-images.js"", { stdio: "inherit" });
+  execSync("node "scripts/optimize-images.js"", { "stdio": "inherit" });
         console.log("✅ Image optimization completed")} else {
   console.log("ℹ️  Image optimization script not available")}
     } catch (error) {
@@ -67,7 +66,7 @@ async function runFrontMaximizer() {
     // Check for unused CSS;
     console.log("🎨 Checking for unused CSS...");
     try {
-  execSync("npx purgecss --css dist/**/*.css --content dist/**/*.html --output "dist/optimized"", { stdio: "inherit" });
+  execSync("npx purgecss --css dist/**/*.css --content dist/**/*.html --output "dist/optimized"", { "stdio": "inherit" });
       console.log("✅ CSS optimization completed")} catch (error) {
   console.log("ℹ️  CSS optimization not available")}
     } catch (error) {
@@ -77,7 +76,7 @@ async function runFrontMaximizer() {
     // Check for JavaScript bundle optimization;
 console.log("📦 Checking JavaScript bundle optimization...");
     try {
-  execSync("node "scripts/analyze-bundle.js"", { stdio: "inherit" });
+  execSync("node "scripts/analyze-bundle.js"", { "stdio": "inherit" });
       console.log("✅ Bundle analysis completed")} catch (error) {
   console.log("⚠️  Bundle analysis failed but continuing...")}
     } catch (error) {
@@ -87,7 +86,7 @@ console.log("📦 Checking JavaScript bundle optimization...");
     console.log("🔍 Checking critical CSS...");
     try {
   if (fs.existsSync(""scripts/critical-css.js"")) {
-  execSync("node "scripts/critical-css.js"", { stdio: "inherit" });
+  execSync("node "scripts/critical-css.js"", { "stdio": "inherit" });
         console.log("✅ Critical CSS extraction completed")} else {
   console.log("ℹ️  Critical CSS script not available")}
     } catch (error) {
@@ -96,14 +95,14 @@ console.log("📦 Checking JavaScript bundle optimization...");
     // Generate front maximizer report;
     console.log("📊 Generating front maximizer report...");
     const report = {
-  timestamp: new Date().toISOString(),
-      summary: "Front maximizer completed",
-      status: `completed`}
-    const reportPath = path.join(process.cwd(), `front-maximizer-report.json`);
+  "timestamp": new Date().toISOString(),
+      "summary": "Front maximizer completed",
+      "status": "completed"}
+    const reportPath = path.join(process.cwd(), "front-maximizer-report.json");
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(✅ Front maximizer report saved to ${reportPath});
-    console.log(`✅ Continuous front maximizer completed successfully`)} catch (error) {
-  console.error(`❌ Continuous front maximizer failed: `, error.message)} catch (error) {
-  console.error(`❌ Continuous front maximizer failed: `, error.message);
+    console.log("✅ Continuous front maximizer completed successfully")} catch (error) {
+  console.error("❌ Continuous front maximizer "failed": ", error.message)} catch (error) {
+  console.error("❌ Continuous front maximizer "failed": ", error.message);
 // Don`t exit, just log the error and continue}
 }
 ;
@@ -120,34 +119,31 @@ async function runContinuous() {console.log(🚀 Starting continuous front maxim
     // Generate front maximizer report;
     console.log("📊 Generating front maximizer report...");
     const report = {
-  timestamp: new Date().toISOString(),
-      summary: "Front maximizer completed",
-      status: "completed"}
+  "timestamp": new Date().toISOString(),
+      "summary": "Front maximizer completed",
+      "status": "completed"}
     ;
     const reportPath = path.join(process.cwd(), "front-maximizer-report.json");
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(✅ Front maximizer report saved to ${reportPath});
-    ;
     console.log("✅ Continuous front maximizer completed successfully")} catch (error) {
-  console.error("❌ Continuous front maximizer failed: ", error.message);
+  console.error("❌ Continuous front maximizer "failed": ", error.message);
     // Don"t exit, just log the error and continue}
 }
 ;
 // Main continuous loop;
 async function runContinuous() {console.log(🚀 Starting continuous front maximizer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
-  ;
   // Run initial front maximizer;
   await runFrontMaximizer();
-  ;
   // Set up continuous execution;
   setInterval(async () => {
   await runFrontMaximizer();
   setInterval(async () => {
   await runFrontMaximizer()}, AUTOMATION_INTERVAL);
-  console.log(✅ Continuous front maximizer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes``)}
+  console.log(✅ Continuous front maximizer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`")}
 ;
 // Handle graceful shutdown;
-process.on(`SIGINT`, () => {
-  console.log(`🛑 Received SIGINT, shutting down gracefully...");
+process.on("SIGINT", () => {
+  console.log("🛑 Received SIGINT, shutting down gracefully...");
 
 // Handle graceful shutdown;
 process.on("SIGINT", () => {
@@ -159,4 +155,4 @@ process.on("SIGTERM", () => {
   process.exit(0)});
 // Start the continuous front maximizer;
 runContinuous().catch(error => {
-  console.error("❌ Failed to start continuous front maximizer: ", error);  process.exit(1)})
+  console.error("❌ Failed to start continuous front "maximizer": ", error);  process.exit(1)})

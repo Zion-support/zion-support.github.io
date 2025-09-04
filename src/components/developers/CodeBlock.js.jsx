@@ -15,7 +15,7 @@ export default function CodeBlock($1) {}
             navigator.clipboard.writeText("
               typeof content === 'string' ? content : content.toString()
             )"}"
-          className="text-xs text-gray-400 hover:text-white transition-colors"
+          className="text-xs text-gray-400 "hover": text-white transition-colors"
         >
           Copy;
         </button>"
@@ -34,5 +34,4 @@ export {CodeBlock};
 
 export {CodeBlock};
 
-export {CodeBlock};';
-;';';
+export {CodeBlock};';';';

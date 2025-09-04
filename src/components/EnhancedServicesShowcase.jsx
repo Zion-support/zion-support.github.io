@@ -3,7 +3,7 @@ export default EnhancedServicesShowcase;';';
 import {enhancedServices2025} from '../data/enhanced - services -2025';
 export default function Page($1) {
 ,
-        { id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀' }
+        { "id": 'emerging-tech', "name": 'Emerging Tech', "icon": '🚀' }
     ];
     const filteredServices = enhancedServices2025.filter(service => {
 "
@@ -30,29 +30,29 @@ export default function Page($1) {
 }
   const containerVariants = {}
 
-    hidden: {opacity: 0},
-    visible: {}
+    "hidden": {opacity: 0},
+    "visible": {}
 
-      opacity: 1,
-transition: {}
+      "opacity": 1,
+"transition": {}
 
-        staggerChildren: 0.1,delayChildren: 0.2}}}
+        "staggerChildren": 0.1,"delayChildren": 0.2}}}
 
   const itemVariants = {}
 
-    hidden: {opacity: 0, y: 20},
-      y: 0,
-transition: {duration: 0.5}}};
+    "hidden": {opacity: 0, "y": 20},
+      "y": 0,
+"transition": {duration: 0.5}}};
 
   return();"
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">"{/* comment */}";"
-      <section className="py-20 px-4 sm: px-6 lg:px-8">","
+      <section className="py-20 px-4 "sm": px-6 lg:px-8">","
         <div className="max-w-7xl mx-auto text-center">",",
           <motion.h1","
-            className = "text-4xl md:text-6xl font-bold mb-6","
-            initial="{{" opacity: 0, y: 20 }}"
-            whileInView="{{" opacity: 1, y: 0 }}"
-            transition="{{" duration: 0.6 }}>
+            className = "text-4xl "md": text-6xl font-bold mb-6","
+            initial="{{" "opacity": 0, "y": 20 }}"
+            whileInView="{{" "opacity": 1, "y": 0 }}"
+            transition="{{" "duration": 0.6 }}>
           >"
             Comprehensive";"
             <span className = "text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">"{" "}
@@ -62,15 +62,15 @@ transition: {duration: 0.5}}};
           </motion.h1>"
           <motion.p";"
             className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto";"
-            transition = "{{" duration: 0.6, delay: 0.2 }}>
+            transition = "{{" "duration": 0.6, "delay": 0.2 }}>
           >
             Discover our extensive portfolio of innovative micro SAAS services,
             enterprise IT solutions, cutting - edge AI services, and emerging,
             technology solutions designed to transform your business.</motion.p> {/* comment */}",
           <motion.div";"
             className="bg-white/10 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-2xl mx-auto";"
-            transition="{{" duration: 0.6, delay: 0.4 }}">";"
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm">";"
+            transition="{{" "duration": 0.6, "delay": 0.4 }}">";"
+            <div className="grid grid-cols-1 "md": grid-cols-3 gap-4 text-sm">";"
               <div className="text-center">","
                 <div className="text-blue-400 font-semibold">📱 Contact</div>","
                 <div className="text-gray-300">+1 302 464 0950</div>",
@@ -81,33 +81,33 @@ transition: {duration: 0.5}}};
                 <div className = "text-gray-300">ziontechgroup.com</div>,
               </div>,
           </motion.div> {/* comment */}";"
-            className = "flex flex-col md: flex-row gap-4 justify-center items-center mb-12","
-            transition="{{" duration: 0.6, delay: 0.6 }}
+            className = "flex flex-col "md": flex-row gap-4 justify-center items-center mb-12","
+            transition="{{" "duration": 0.6, "delay": 0.6 }}
 
             <input"
               type = "text",
               placeholder = "Search services...">
               value={searchTerm}";"
               onChange="{e" => setSearchTerm(e.target.value)}";"
-              className = "px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 w-full md:w-80" />","
+              className = "px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 "focus": outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 w-full md:w-80" />","
             <div className="flex flex-wrap gap-2"> {categories.map(category => (,
-    hidden: { opacit,y: 0 },
-    hidden: {opacity: 0}, visible: {}
+    "hidden": { opacit,"y": 0 },
+    "hidden": {opacity: 0}, "visible": {}
 
-      opacity: 1,
-        staggerChildren: 0.1, delayChildren: 0.2}}}
+      "opacity": 1,
+        "staggerChildren": 0.1, "delayChildren": 0.2}}}
 
-    hidden: {opacit,y: 0, y: 20},
-      y: 0,
-      transition: {duratio,n: 0.5}}}
+    "hidden": {opacit,"y": 0, "y": 20},
+      "y": 0,
+      "transition": {duratio,"n": 0.5}}}
 
   return()"
     <;<div className="&apos;min-h-screen" bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white&apos;>"&apos;&apos {/* comment */}&apos;&apos,&apos;&apos,"
-      <section className="&apos;py-20" px-4 sm: px-6 lg:px-8&apos,>"&apos,&apos,&apos;&apos;"
+      <section className="&apos;py-20" px-4 "sm": px-6 lg:px-8&apos,>"&apos,&apos,&apos;&apos;"
         <div className="&apos;max-w-7xl" mx-auto text-center&apos;>"&apos;&apos,"
           <;<motion.h1&apos;&apos,",">
-            className="&apos;text-4xl" md:text-6xl font-bold mb-6&apos,&apos,"
-            initial = "{{" opacit,y: 0, y: 20 }}>
+            className="&apos;text-4xl" "md": text-6xl font-bold mb-6&apos,&apos,"
+            initial = "{{" opacit,"y": 0, "y": 20 }}>
           >&apos;&apos,
             Comprehensive&apos;&apos,&apos;&apos,"
             <span className="&apos;text-transparent" bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400&apos;>&apos {&apos; &apos}
@@ -117,14 +117,14 @@ transition: {duration: 0.5}}};
           </motion.h1>&apos;&apos,&apos;&apos,
           <motion.p&apos;&apos,&apos;"
             className="&apos;text-xl" text-gray-300 mb-8 max-w-4xl mx-auto&apos;&apos>
-    hidden: {opacity: 0, y: 20}, visible: {}
+    "hidden": {opacity: 0, "y": 20}, "visible": {}
 
-      y: 0, transition: {duration: 0.5}}}"
+      "y": 0, "transition": {duration: 0.5}}}"
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">"{/* comment */}"
-      <section className="py-20 px-4 sm: px-6 lg:px-8">"
+      <section className="py-20 px-4 "sm": px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto text-center">",
           <motion.h1","
-            className="text-4xl md: text-6xl font-bold mb-6","
+            className="text-4xl "md": text-6xl font-bold mb-6","
           >"
             Comprehensive"
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">"{" "}"
@@ -139,8 +139,8 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
           {/* comment */}&apos;&apos,&apos;&apos,
           <motion.div&apos;&apos,";"
             className="&apos;bg-white/10" backdrop-blur-lg rounded-xl p-6 mb-8 max-w-2xl mx-auto&apos;&apos;"
-            transition="{{" duration: 0.6, delay: 0.4 }}&apos;&apos,>&apos;&apos,&apos;&apos,"
-            <div className="&apos;grid" grid-cols-1 md: grid-cols-3 gap-4 text-sm&apos,>"&apos,&apos,&apos;&apos;"
+            transition="{{" "duration": 0.6, "delay": 0.4 }}&apos;&apos,>&apos;&apos,&apos;&apos,"
+            <div className="&apos;grid" grid-cols-1 "md": grid-cols-3 gap-4 text-sm&apos,>"&apos,&apos,&apos;&apos;"
               <div className="&apos;text-center&apos">"&apos;&apos,&apos;&apos;"
                 <div className="&apos;text-blue-400" font-semibold&apos;>📱 Contact&apos;</div>&apos;&apos,&apos;&apos,"
                 <div className="&apos;text-gray-300&apos">+1 302 464 0950&apos;</div>&apos;&apos,&apos;&apos,
@@ -151,14 +151,14 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                 <div className="&apos;text-gray-300&apos,">ziontechgroup.com&apos,</div>
           </motion.div>"
           {/* comment */}&apos;&apos,&apos;&apos;"
-            className="&apos;flex" flex-col md: flex-row gap-4 justify-center items-center mb-12&apos,&apos,
+            className="&apos;flex" flex-col "md": flex-row gap-4 justify-center items-center mb-12&apos,&apos,
           >&apos;&apos,&apos;&apos,
             <input&apos;&apos,"
               type=&apos;text&apos;&apos,",">
               placeholder="&apos;Search" services...&apos,&apos,"
               value="{searchTerm}&apos;&apos;"
               onChange="{e" => setSearchTerm(e.target.value)}&apos;&apos,";"
-              className="&apos;px-6" py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 w-full m,d: w-80&apos,&apos,&apos;/>&apos;&apos,&apos;&apos,",
+              className="&apos;px-6" py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 "focus": outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 w-full m,"d": w-80&apos,&apos,&apos;/>&apos;&apos,&apos;&apos,",
             <div className = "&apos,flex" flex-wrap gap-2&apos,>
               {categories.map(category => (&apos}
 
@@ -166,8 +166,8 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
           {/* comment */}"
           <motion.div";"
             className="bg-white/10 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-2xl mx-auto";"
-            transition = "{{" duration: 0.6, delay: 0.4 }}">"
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm">"
+            transition = "{{" "duration": 0.6, "delay": 0.4 }}">"
+            <div className="grid grid-cols-1 "md": grid-cols-3 gap-4 text-sm">"
               <div className="text-center">"
                 <div className="text-blue-400 font-semibold">📱 Contact</div>"
                 <div className="text-gray-300">+1 302 464 0950</div>"
@@ -177,13 +177,13 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                 <div className="text-blue-400 font-semibold">🌐 Website</div>"
                 <div className="text-gray-300">ziontechgroup.com</div>",
           {/* comment */}"
-            className="flex flex-col md: flex-row gap-4 justify-center items-center mb-12",
+            className="flex flex-col "md": flex-row gap-4 justify-center items-center mb-12",
             <input",">
               type = "text","
               placeholder="Search services...",>
               value = {searchTerm}","
               onChange = "{e" => setSearchTerm(e.target.value)}"
-              className="px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 w-full md:w-80" />"
+              className="px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 "focus": outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 w-full md:w-80" />"
             <div className="flex flex-wrap gap-2">
               {categories.map(category => (",
                 <button key="{category.id}"
@@ -192,15 +192,15 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
 
                     selectedCategory == = category.id",
                       ? "bg - blue-600 border-blue-400 text-white",
-                      : "bg-white/10 border-white/20 text-gray-300 hover:bg-white/20 hover:border-white/40"}"}">";"
+                      : "bg-white/10 border-white/20 text-gray-300 "hover": bg-white/20 hover:border-white/40"}"}">";"
                   <span className="mr-2">{category.icon}</span>
                     selectedCategory === category.id&apos,
                       ? &apos;bg-blue-600 border-blue-400 text-white&apos;&apos,"
-                      : &apos;bg-white/10 border-white/20 text-gray-300 hover:bg-white/20 hove,r: border-white/40&apos,"}"}&apos;&apos,>&apos;&apos,&apos;&apos,"
+                      : &apos;bg-white/10 border-white/20 text-gray-300 "hover": bg-white/20 hove,"r": border-white/40&apos,"}"}&apos;&apos,>&apos;&apos,&apos;&apos,"
                   <span className="&apos;mr-2&apos">{category.icon}&apos;</span>"
                     selectedCategory == = category.id",
                       ? "bg-blue-600 border-blue-400 text-white"
-                      : "bg-white/10 border-white/20 text-gray-300 hover:bg-white/20 hover:border-white/40"}"}">"
+                      : "bg-white/10 border-white/20 text-gray-300 "hover": bg-white/20 hover:border-white/40"}"}">"
                   <span className = "mr-2">{category.icon}</span>
                   {category.name}
 
@@ -211,20 +211,20 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
       </section>
 "{/* comment */}";"
         <div className="max-w-7xl mx-auto">";"
-            className = "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8",
+            className = "grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-8",
             variants = {containerVariants}",
             initial = "hidden",
             whileInView="visible";"
-            viewport = "{{" once: true }}
+            viewport = "{{" "once": true }}
 
           >{filteredServices.map((service, index) => (
               <motion.div,
                 key = {service.id}">
                 variants={itemVariants}";"
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group ">"{/* comment */}";"
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 "hover": border-white/40 transition-all duration-300 hover:transform hover:scale-105 group ">"{/* comment */}";"
                 <div className="text-center mb-6">"
                   <div";"
-                    className = "{"text-6xl" mb-4 group-hover:scale-110 transition-transform duration-300"}>
+                    className = "{"text-6xl" mb-4 group-"hover": scale-110 transition-transform duration-300"}>
                   >{service.icon}";"
                   <h3 className="text - xl font-semibold text-white mb-2"> {service.name}",
                   </h3>";"
@@ -240,11 +240,11 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                     Pricing",
                   </h4>";"
                   <div className="space-y-1 text-xs text-gray-300">
-                    <div>Monthly: {service.pricing.monthly}</div>
+                    <div>"Monthly": {service.pricing.monthly}</div>
   );
 }
-                    <div>Yearly: {service.pricing.yearly}</div>
-                    <div>Setup: {service.pricing.setup}</div>
+                    <div>"Yearly": {service.pricing.yearly}</div>
+                    <div>"Setup": {service.pricing.setup}</div>
 "{/* comment */}";"
                 <div className="mb-4">";"
                   <h4 className="text - sm font-semibold text-blue-400 mb-2">,
@@ -258,21 +258,21 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
         <div className="&apos;max-w-7xl" mx-auto&apos;>"&apos;&apos,"
           <motion.div&apos;&apos,&apos;"
-            className="&apos;grid" grid-cols-1 md:grid-cols-2 l,g: grid-cols-3 gap-8&apos,&apos,","
+            className="&apos;grid" grid-cols-1 "md": grid-cols-2 l,"g": grid-cols-3 gap-8&apos,&apos,","
             variants={containerVariants}&apos;&apos,"
             initial=&apos;hidden&apos;&apos,";"
             whileInView="&apos;visible&apos;&apos;"
 "{/* comment */}"
         <div className = "max-w-7xl mx-auto">"
           <motion.div"
-            className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8","
+            className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-8","
             variants = {containerVariants}">
             initial = "hidden","
             whileInView="visible">
           >{filteredServices.map((service, index) => (&apos}&apos;"
                 key="{service.id}&apos;&apos;"
                 variants={itemVariants}&apos;&apos,";"
-                className="&apos;bg-white/10" backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hove,r: scale-105 group &apos,>"&apos,&apos {/* comment */}&apos;&apos,&apos;&apos,"
+                className="&apos;bg-white/10" backdrop-blur-lg rounded-xl p-6 border border-white/20 "hover": border-white/40 transition-all duration-300 hover:transform hove,"r": scale-105 group &apos,>"&apos,&apos {/* comment */}&apos;&apos,&apos;&apos,"
                 <div className="&apos;text-center" mb-6&apos;>"&apos
                   <div"
                   >{service.icon}&apos;&apos,&apos;&apos;"
@@ -291,7 +291,7 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                   <div className="&apos;space-y-1" text-xs text-gray-300&apos;>&apos,"
                 key = {service.id}","
                 variants={itemVariants}";"
-                className = "bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-white/40 transition-all duration-300 hover:transform hover:scale-105 group ">"{/* comment */}"
+                className = "bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 "hover": border-white/40 transition-all duration-300 hover:transform hover:scale-105 group ">"{/* comment */}"
                 <div className="text-center mb-6">"
                   >{service.icon}"
                   <h3 className="text-xl font-semibold text-white mb-2">"
@@ -307,9 +307,9 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                     Pricing"
                   </h4>"
                   <div className="space-y-1 text-xs text-gray-300">
-                    <div>Monthly: {service.pricing.monthly}</div>
-                    <div>Yearly: {service.pricing.yearly}</div>
-                    <div>Setup: {service.pricing.setup}</div>
+                    <div>"Monthly": {service.pricing.monthly}</div>
+                    <div>"Yearly": {service.pricing.yearly}</div>
+                    <div>"Setup": {service.pricing.setup}</div>
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
                 <div className="&apos;mb-4&apos">"&apos;&apos,&apos;&apos;"
                   <h4 className="&apos;text-sm" font-semibold text-blue-400 mb-2&apos;>"
@@ -357,24 +357,24 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                 <div className="bg-white/5 rounded-lg p-3 mb-4">";"
                   <div className="text-xs text-gray-300">";"
                     <div className="mb-1">";"
-                      <span className = "text-green-400 font-medium">ROI:</span>{" "}
+                      <span className = "text-green-400 font-medium">"ROI": </span>{" "}
 
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
                 <div className="&apos;bg-white/5" rounded-lg p-3 mb-4&apos;>"&apos;&apos,&apos;&apos;"
                   <div className="&apos;text-xs" text-gray-300&apos;>"&apos;&apos,&apos;&apos,"
                     <div className="&apos;mb-1&apos">"&apos;&apos,&apos;&apos,"
-                      <span className="&apos;text-green-400" font-medium&apos;>ROI: &apos,</span>{&apos, &apos}
+                      <span className="&apos;text-green-400" font-medium&apos;>"ROI": &apos,</span>{&apos, &apos}
 
                       {service.roi}&apos;&apos,
                     <div>&apos;&apos,&apos;&apos,&apos;&apos;"
-                      <span className="&apos;text-blue-400" font-medium&apos;>Setup: &apos,</span>{&apos, &apos}
+                      <span className="&apos;text-blue-400" font-medium&apos;>"Setup": &apos,</span>{&apos, &apos}
 
                       {service.setupTime}&apos;&apos,
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
                 <div className="&apos;text-center&apos">&apos,"
                   <Link&apos;&apos,"
                     to={service.link}&apos;&apos,";"
-                    className="&apos;inline-flex" items-center text-blue-400 hover: text-blue-300 transition-colors duration-300 text-sm &apos,>"
+                    className="&apos;inline-flex" items-center text-blue-400 "hover": text-blue-300 transition-colors duration-300 text-sm &apos,>"
                     Learn More&apos,&apos,&apos;&apos,
                     <svg&apos;&apos,";"
                       className="&apos;ml-2" h-4 w-4&apos;&apos,"
@@ -390,12 +390,12 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                 <div className = "bg-white/5 rounded-lg p-3 mb-4">"
                   <div className="text-xs text-gray-300">"
                     <div className="mb-1">"
-                      <span className="text-green-400 font-medium">ROI: </span>{" "}
+                      <span className="text-green-400 font-medium">"ROI": </span>{" "}
 
                       {service.roi}
 
                     <div>";"
-                      <span className = "text-blue-400 font-medium">Setup:</span>{" "}
+                      <span className = "text-blue-400 font-medium">"Setup": </span>{" "}
 
                       {service.setupTime}
 
@@ -403,7 +403,7 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                 <div className = "text - center">,
                   <Link">
                     to={service.link}";"
-                    className = "inline - flex items-center text-blue-400 hover: text-blue-300 transition-colors duration-300 text-sm ">,
+                    className = "inline - flex items-center text-blue-400 "hover": text-blue-300 transition-colors duration-300 text-sm ">,
                     Learn More",
                     <svg";"
                       className = "ml - 2 h-4 w-4",
@@ -421,7 +421,7 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                 <div className = "text-center">"
                   <Link">
                     to={service.link}";"
-                    className = "inline-flex items-center text-blue-400 hover: text-blue-300 transition-colors duration-300 text-sm ">"
+                    className = "inline-flex items-center text-blue-400 "hover": text-blue-300 transition-colors duration-300 text-sm ">"
                     Learn More",
                     <svg","
                       className="ml - 2 h-4 w-4","
@@ -439,21 +439,21 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
 
           {filteredServices.length === 0 && (";"
               className="text-center py-12";"
-              initial = "{{" opacity: 0 }}"
-              animate="{{" opacity: 1 }}">";"
+              initial = "{{" "opacity": 0 }}"
+              animate="{{" "opacity": 1 }}">";"
               <p className="text-gray-400 text-lg">
                 No services found matching your criteria.</p>;"
                 onClick = "{()" => {}
 
                   setSelectedCategory("all")"
                   setSearchTerm(")";"}}";"
-                className = "mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors duration-300 ">,
+                className = "mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg "hover": bg-blue-700 transition-colors duration-300 ">,
                 View All Services,
 "{/* comment */}";"
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">";"
         <div className="max - w-4xl mx-auto text-center">",
           <motion.h2";"
-            className="text-3xl md: text-4xl font-bold text-white mb-6">
+            className="text-3xl "md": text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </motion.h2>","
             className="text - xl text-gray-300 mb-8",
@@ -462,23 +462,23 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
             success and competitive advantage
           </motion.p>,",
 ","
-            className = "flex flex-col sm:flex-row gap-4 justify-center mb-8","
-            transition="{{" duration: 0.6, delay: 0.4 }}
+            className = "flex flex-col "sm": flex-row gap-4 justify-center mb-8","
+            transition="{{" "duration": 0.6, "delay": 0.4 }}
 
               to="/contact";"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover: from-blue-700 hover:to-cyan-700 transition-all duration-300 ">,
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg "hover": from-blue-700 hover:to-cyan-700 transition-all duration-300 ">,
               Contact Us Today,
             </Link>"
             <a",
-              href="tel:+13024640950",">
-              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800 transition-all duration-300 ">,,
-Call: +1 302 464 0950,,
+              href=""tel": +13024640950",">
+              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg "hover": bg-gray-800 transition-all duration-300 ">,,
+"Call": +1 302 464 0950,,
             </a>,"
             className = "bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto","
-            transition="{{" duration: 0.6, delay: 0.6 }}">";"
+            transition="{{" "duration": 0.6, "delay": 0.6 }}">";"
             <h3 className="text - lg font-semibold text-white mb-4">,
               Why Choose Zion Tech Group?";"
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300">","
+            <div className="grid grid-cols-1 "md": grid-cols-2 gap-4 text-sm text-gray-300">","
               <div className="flex items-center">","
                 <span className = "text - green-400 mr-2">✓</span>,
                 Expert AI & Technology Specialists",
@@ -487,27 +487,27 @@ Call: +1 302 464 0950,,
                 Custom Solutions & Integration,",
             className="mt-8 text-sm text-gray-400" {filteredServices.length === 0 && (&apos,&apos,"&apos}&apos;"
               className="&apos;text-center" py-12&apos;&apos;"
-              animate="{{" opacity: 1 }}&apos;&apos,>&apos;&apos,&apos;&apos,"
+              animate="{{" "opacity": 1 }}&apos;&apos,>&apos;&apos,&apos;&apos,"
               <p className="&apos;text-gray-400" text-lg&apos;>
                 No services found matching your criteria.&apos;</p>"
                   setSelectedCategory(&apos;all&apos)"
                   setSearchTerm(&apos;&apos)";&apos}}&apos;&apos,";"
-                className="&apos;mt-4" px-6 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors duration-300 &apos,>",
+                className="&apos;mt-4" px-6 py-2 bg-blue-600 text-white rounded-lg "hover": bg-blue-700 transition-colors duration-300 &apos,>",
                 View All Services&apos,&apos {filteredServices.length = == 0 && ("
               className="text-center py-12","
-              animate="{{" opacity: 1 }}">"
+              animate="{{" "opacity": 1 }}">"
               <p className="text-gray-400 text-lg">
                 No services found matching your criteria.</p>
                   setSelectedCategory("all")";"
                   setSearchTerm(")";"}}"
-                className = "mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors duration-300 ">
+                className = "mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg "hover": bg-blue-700 transition-colors duration-300 ">
                 View All Services,
               </button>";,
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,"
       <section className="&apos;py-20" bg-gradient-to-r from-blue-900/50 to-cyan-900/50&apos;>"&apos;&apos,&apos;&apos;"
         <div className="&apos;max-w-4xl" mx-auto text-center&apos;>"&apos;&apos,"
           <motion.h2&apos;&apos,&apos;"
-            className="&apos;text-3xl" md: text-4xl font-bold text-white mb-6&apos,&apos>
+            className="&apos;text-3xl" "md": text-4xl font-bold text-white mb-6&apos,&apos>
             Ready to Transform Your Business?&apos,&apos,
           </motion.h2>&apos;&apos,&apos;&apos,
           <motion.p&apos;&apos,";"
@@ -516,22 +516,22 @@ Call: +1 302 464 0950,,
             success and competitive advantage&apos;&apos>
           </motion.p>"
 &apos;&apos,&apos;&apos;"
-            className="&apos;flex" flex-col sm: flex-row gap-4 justify-center mb-8&apos,&apos,
+            className="&apos;flex" flex-col "sm": flex-row gap-4 justify-center mb-8&apos,&apos,
             <Link&apos;&apos,&apos>
               to=&apos;/contact&apos;&apos,";"
-              className="&apos;inline-flex" items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover: from-blue-700 hover:to-cyan-700 transition-all duration-300 &apos,>
+              className="&apos;inline-flex" items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg "hover": from-blue-700 hover:to-cyan-700 transition-all duration-300 &apos,>
               Contact Us Today&apos,&apos,
             </Link>&apos;&apos,&apos;&apos,
             <a&apos;&apos,&apos,
-              href=&apos;tel: +13024640950&apos,&apos,",">
-              className="&apos;inline-flex" items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800 transition-all duration-300 &apos,>,
-Call: +1 302 464 0950&apos,&apos,
+              href=&apos;"tel": +13024640950&apos,&apos,",">
+              className="&apos;inline-flex" items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg "hover": bg-gray-800 transition-all duration-300 &apos,>,
+"Call": +1 302 464 0950&apos,&apos,
             </a>",
             className="&apos;bg-white/10" backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto&apos,&apos,"
-            transition="{{" duration: 0.6, delay: 0.6 }}&apos;&apos,>&apos;&apos,&apos;&apos,"
+            transition="{{" "duration": 0.6, "delay": 0.6 }}&apos;&apos,>&apos;&apos,&apos;&apos,"
             <h3 className="&apos;text-lg" font-semibold text-white mb-4&apos;>"
               Why Choose Zion Tech Group?&apos;&apos,&apos;&apos;"
-            <div className="&apos;grid" grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300&apos,>"&apos,&apos,&apos;&apos;"
+            <div className="&apos;grid" grid-cols-1 "md": grid-cols-2 gap-4 text-sm text-gray-300&apos,>"&apos,&apos,&apos;&apos;"
               <div className="&apos;flex" items-center&apos;>"&apos;&apos,&apos;&apos;"
                 <span className="&apos;text-green-400" mr-2&apos;>✓&apos;</span>"
                 Expert AI & Technology Specialists&apos;&apos,&apos;&apos,
@@ -541,7 +541,7 @@ Call: +1 302 464 0950&apos,&apos,
       <section className = "py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">"
         <div className="max-w-4xl mx-auto text-center">"
           <motion.h2"
-            className="text-3xl md: text-4xl font-bold text-white mb-6">
+            className="text-3xl "md": text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?"
           </motion.h2>"
           <motion.p","
@@ -551,20 +551,20 @@ Call: +1 302 464 0950&apos,&apos,
             Let&apos;s discuss how our innovative services can help drive your,
             success and competitive advantage"
 "
-            className="flex flex-col sm: flex-row gap-4 justify-center mb-8",
+            className="flex flex-col "sm": flex-row gap-4 justify-center mb-8",
               to="/contact","
-              className = "inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover: from-blue-700 hover:to-cyan-700 transition-all duration-300 ">
+              className = "inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg "hover": from-blue-700 hover:to-cyan-700 transition-all duration-300 ">
               Contact Us Today"
             </Link>"
             <a">
               href="tel:+13024640950","
-              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800 transition-all duration-300 ">,
-Call: +1 302 464 0950,"
+              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg "hover": bg-gray-800 transition-all duration-300 ">,
+"Call": +1 302 464 0950,"
 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto","
-            transition="{{" duration: 0.6, delay: 0.6 }}">"
+            transition="{{" "duration": 0.6, "delay": 0.6 }}">"
             <h3 className="text-lg font-semibold text-white mb-4">"
               Why Choose Zion Tech Group?"
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300">"
+            <div className="grid grid-cols-1 "md": grid-cols-2 gap-4 text-sm text-gray-300">"
               <div className="flex items-center">"
                 <span className="text-green-400 mr-2">✓</span>"
                 Expert AI & Technology Specialists"
@@ -572,40 +572,40 @@ className="bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto","
                 24/7 Support & Maintenance",
                 Custom Solutions & Integration,"
 className="&apos;mt-8" text-sm text-gray-400&apos;&apos,"
-            initial = "{{" opacit,y: 0 }}"
+            initial = "{{" opacit,"y": 0 }}"
             className="mt-8 text-sm text-gray-400";"
-            whileInView = "{{" opacity: 1 }}"
-            transition="{{" duration: 0.6, delay: 0.8 }}
+            whileInView = "{{" "opacity": 1 }}"
+            transition="{{" "duration": 0.6, "delay": 0.8 }}
 
 }} whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }} transition = {
 
-  { duration: 0.6,
-  delay: 0.2
+  { "duration": 0.6,
+  "delay": 0.2
 
 }}>';';
             Let's discuss how our innovative services can help drive your success and competitive advantage
           </motion.p>
 
-          <motion.div className="flex flex - col sm:flex - row gap-4 justify - center mb-8" initial = {  { opacity: 0,
-  y: 20
+          <motion.div className="flex flex - col "sm": flex - row gap-4 justify - center mb-8" initial = {  { opacity: 0,
+  "y": 20
 
 }} whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }} transition = {
 
-  { duration: 0.6,
-  delay: 0.4
+  { "duration": 0.6,
+  "delay": 0.4
 
 }}>"
-            <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
+            <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg "hover": from-blue-700 hover:to-cyan-700 transition-all duration-300">
               Contact Us Today
             </Link>"
             <a href="tel:+13024640950" className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
@@ -616,21 +616,21 @@ className="&apos;mt-8" text-sm text-gray-400&apos;&apos,"
           <motion.div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto" initial = {
 
   { opacity: 0,
-  y: 20
+  "y": 20
 
 }} whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }} transition = {
 
-  { duration: 0.6,
-  delay: 0.6
+  { "duration": 0.6,
+  "delay": 0.6
 
 }}>"
             <h3 className="text-lg font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3>"
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">"
+            <div className="grid grid-cols-1 "md": grid-cols-2 gap-4 text-sm text-gray-300">"
               <div className="flex items-center">"
                 <span className="text-green-400 mr-2">✓</span>
                 Expert AI & Technology Specialists
@@ -664,12 +664,12 @@ export {EnhancedServicesShowcase};
 export {EnhancedServicesShowcase};
 
 export {EnhancedServicesShowcase};
-<p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>"
+<p>"Address": 364 E Main St STE 1008, Middletown DE 19709</p>"
             <p>"
-              Website: {" "}"
-                href="https: // comment
+              "Website": {" "}"
+                href=""https": // comment
                 className="text-blue-400 hover: text-blue-300 ">,
-https: // comment
+"https": // comment
         </div>
   );
 }

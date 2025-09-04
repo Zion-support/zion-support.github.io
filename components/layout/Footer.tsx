@@ -3,39 +3,35 @@ import Link from 'next/link';
 
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react';
 
-const Footer: React.FC = () => {
+const "Footer": React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-  const services = [
-    { name: 'All Services', href: '/services' },
-    { name: 'AI Services', href: '/ai-services' },
-    { name: 'IT Services', href: '/it-services' },
-    { name: 'Micro SaaS', href: '/micro-saas' }
+  const services = [{ name: 'All Services', "href": '/services' },
+    { "name": 'AI Services', "href": '/ai-services' },
+    { "name": 'IT Services', "href": '/it-services' },
+    { "name": 'Micro SaaS', "href": '/micro-saas' }
   ];
 
-  const company = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Our Team', href: '/about#team' },
-    { name: 'Contact', href: '/contact' }
+  const company = [{ "name": 'About Us', "href": '/about' },
+    { "name": 'Our Team', "href": '/about#team' },
+    { "name": 'Contact', "href": '/contact' }
   ];
 
-  const support = [
-    { name: 'Help Center', href: '/help' },
-    { name: 'Documentation', href: '/docs' },
-    { name: 'API Reference', href: '/api' },
-    { name: 'Status', href: '/status' }
+  const support = [{ "name": 'Help Center', "href": '/help' },
+    { "name": 'Documentation', "href": '/docs' },
+    { "name": 'API Reference', "href": '/api' },
+    { "name": 'Status', "href": '/status' }
   ];
 
-  const social = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github },
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook }
+  const social = [{ "name": 'LinkedIn', "href": 'https://linkedin.com/company/zion-tech-group', "icon": Linkedin },
+    { "name": 'Twitter', "href": 'https://twitter.com/ziontechgroup', "icon": Twitter },
+    { "name": 'GitHub', "href": 'https://github.com/zion-tech-group', "icon": Github },
+    { "name": 'Facebook', "href": 'https://facebook.com/ziontechgroup', "icon": Facebook }
   ];
 
   return (
     <footer className="bg-slate-900 border-t border-slate-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
           <div className="text-white font-bold text-xl mb-2">Zion Tech Group</div>
           <p className="text-gray-400 text-sm">AI, cloud, and modern software solutions.</p>
@@ -47,7 +43,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.name}>
-                  <Link href={service.href} className="text-gray-400 hover:text-blue-400 text-sm">
+                  <Link href={service.href} className="text-gray-400 "hover": text-blue-400 text-sm">
                     {service.name}
                   </Link>
                 </li>
@@ -60,7 +56,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {company.map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href} className="text-gray-400 hover:text-blue-400 text-sm">
+                  <Link href={item.href} className="text-gray-400 "hover": text-blue-400 text-sm">
                     {item.name}
                   </Link>
                 </li>
@@ -73,7 +69,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {support.map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href} className="text-gray-400 hover:text-blue-400 text-sm">
+                  <Link href={item.href} className="text-gray-400 "hover": text-blue-400 text-sm">
                     {item.name}
                   </Link>
                 </li>
@@ -84,7 +80,7 @@ const Footer: React.FC = () => {
       </div>
       
       <div className="border-t border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-6 mb-4 md:mb-0">
               <div className="flex items-center space-x-2 text-gray-400 text-sm">
@@ -106,7 +102,7 @@ const Footer: React.FC = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-400 hover:text-blue-400 transition-colors"
+                  className="text-gray-400 "hover": text-blue-400 transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -117,11 +113,11 @@ const Footer: React.FC = () => {
           </div>
           
           <div className="mt-8 pt-8 border-t border-slate-800">
-            <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex flex-col "md": flex-row justify-between items-center">
               <p className="text-gray-400 text-sm">
                 © {currentYear} Zion Tech Group. All rights reserved.
               </p>
-              <div className="flex space-x-6 mt-4 md:mt-0">
+              <div className="flex space-x-6 mt-4 "md": mt-0">
                 <Link href="/privacy" className="text-gray-300 hover:text-blue-400 text-sm">
                   Privacy Policy
                 </Link>

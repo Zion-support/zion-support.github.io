@@ -14,7 +14,7 @@ function fixMergeConflicts(filePath) {
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`);
+      console.log(`✅ Fixed merge conflicts "in": ${path.relative(process.cwd(), filePath)}`);
       return true}
     
     return false} catch (error) {

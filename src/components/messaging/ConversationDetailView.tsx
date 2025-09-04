@@ -1,19 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { format } from 'date-fns';
-;
 export default function Page($1) {;
 , [activeConversation, loadMessages]); // Changed activeConversation?.id to activeConversation;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // "TODO": Add dependencies if needed;
 }, []);
     scrollToBottom();
   }, [activeMessages]);
 
   const scrollToBottom = (props) => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' };);
+    messagesEndRef.current?.scrollIntoView({ "behavior": 'smooth' };);
   };
-;
-  const handleSendMessage = async(e: React.FormEvent) => {;
+  const handleSendMessage = async("e": React.FormEvent) => {;
     e.preventDefault();
     if(!messageText.trim() || !activeConversation) return;
     ';
@@ -32,22 +30,20 @@ export default function Page($1) {;
     );
   }
 ;
-  const groupedMessages: { date: string; messages: an y[] }[] = [];
+  const "groupedMessages": { date: string; messages: an y[] }[] = [];
   ';
   activeMessages.forEach(message => {
     const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd');
     const existingGroup = groupedMessages.find(group => group.date === messageDate);
-;
     if(existingGroup) {;
       existingGroup.messages.push(message);
     } else {;
       groupedMessages.push({;
-        date: messageDat e,;
-        messages: [message];
+        "date": messageDat e,;
+        "messages": [message];
       });
     }
   });
-;
   const hasContextData = activeConversation.context_data &&;
     (activeConversation.context_data.title || activeConversation.context_data.description);
 
@@ -92,7 +88,7 @@ export default function Page($1) {;
 }
             <div>
               <divclassName="font-medium text-white mb-1">';
-                {activeConversation.context_type === 'job' ? 'Regarding Job:' :';';
+                {activeConversation.context_type === 'job' ? 'Regarding "Job": ' :';';
                  activeConversation.context_type === 'talent' ? 'Regarding Talent:' :';';
                  'Regarding:'}
               </div>;
@@ -138,7 +134,7 @@ export default function Page($1) {;
             value={messageText}
             onChange={(e) => setMessageText(e.target.value)}
             placeholder="Type a message...";
-            className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan";
+            className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan";
           />;
           <Button;
             type="submit";

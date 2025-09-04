@@ -26,13 +26,13 @@ class ContentGenerator {
       console.log("✅ Content generation completed successfully!")
       this.saveReport()
       } catch (error) {
-      console.error("❌ Error generating content:", error)}
+      console.error("❌ Error generating "content": ", error)}
   }
   async generateServicePages() {
     console.log("🔧 Generating service page content...")
     const serviceTemplates = {
-      "ai-services": {title: "AI Services",description: "Comprehensive AI solutions for modern businesses";
-        content: `
+      "ai-services": {"title": "AI Services","description": "Comprehensive AI solutions for modern businesses";
+        content: "
 # AI Services
 Transform your business with cutting-edge artificial intelligence solutions.
 ## Our AI Services
@@ -58,9 +58,9 @@ Transform your business with cutting-edge artificial intelligence solutions.
 - **24/7 Support**: Round-the-clock assistance
 ## Get Started Today
 Ready to leverage AI for your business? Contact us for a free consultation.
-        `};
-      "it-services": {title: "IT Services",description: "Complete IT solutions for digital transformation";
-        content: `
+        "};
+      "it-services": {"title": "IT Services","description": "Complete IT solutions for digital transformation";
+        content: "
 # IT Services
 Comprehensive IT services to drive your digital transformation.
 ## Our IT Services
@@ -86,7 +86,7 @@ Comprehensive IT services to drive your digital transformation.
 - **Cost-Effective**: Optimized pricing plans
 ## Ready to Transform Your IT?
 Contact us today for a free IT assessment.
-        `}
+        "}
     }
     for (const [serviceType, template] of Object.entries(serviceTemplates)) {
       this.generatedContent.set(serviceType, template)}
@@ -94,8 +94,8 @@ Contact us today for a free IT assessment.
   async generateSolutionPages() {
     console.log("💡 Generating solution page content...")
     const solutionTemplates = {
-      "enterprise": {title: "Enterprise Solutions",description: "Scalable solutions for large organizations";
-        content: `
+      "enterprise": {"title": "Enterprise Solutions","description": "Scalable solutions for large organizations";
+        content: "
 # Enterprise Solutions
 Comprehensive technology solutions designed for enterprise-scale organizations.
 ## Enterprise Services
@@ -121,7 +121,7 @@ Comprehensive technology solutions designed for enterprise-scale organizations.
 - **Support**: Dedicated account management
 ## Get Your Enterprise Solution
 Schedule a consultation with our enterprise team.
-        `}
+        "}
     }
     for (const [solutionType, template] of Object.entries(solutionTemplates)) {
       this.generatedContent.set(`solution-${solutionType}`, template)}
@@ -129,7 +129,7 @@ Schedule a consultation with our enterprise team.
   async generateLandingPages() {
     console.log("🎯 Generating landing page content...")
     const landingTemplates = {
-      "home": {title: "Zion Tech Group - Technology Solutions",description: "Leading provider of AI, IT, and digital transformation services",content: `
+      "home": {"title": "Zion Tech Group - Technology Solutions","description": "Leading provider of AI, IT, and digital transformation services","content": "
 # Welcome to Zion Tech Group
 Your trusted partner for cutting-edge technology solutions.
 ## Our Services
@@ -146,17 +146,17 @@ Modernize your business processes and systems.
 - **Support**: 24/7 customer service
 ## Get Started Today
 Ready to transform your business? Contact us now.
-        `}
+        "}
     }
     for (const [pageType, template] of Object.entries(landingTemplates)) {
       this.generatedContent.set(pageType, template)}
   }
   saveReport() {
-    const report = {timestamp: new Date().toISOString(),generatedContent: Object.fromEntries(this.generatedContent),totalPages: this.generatedContent.size;
+    const report = {"timestamp": new Date().toISOString(),"generatedContent": Object.fromEntries(this.generatedContent),"totalPages": this.generatedContent.size;
       placeholderPages: this.placeholderPages.length}
     const reportPath = path.join(this.projectRoot, "content-generation-report.json")
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
-    console.log(`📄 Report saved to: ${reportPath}`)}
+    console.log(`📄 Report saved "to": ${reportPath}`)}
 }
 // Run the content generator
 if (require.main === module) {

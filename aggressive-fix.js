@@ -38,7 +38,7 @@ export default function ${componentName}() {
 function fixFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    // Basic heuristic: if the file is very short or empty, rewrite it
+    // Basic "heuristic": if the file is very short or empty, rewrite it
     if (content.trim().length < 20) {
       const newContent = createValidReactComponent(filePath);
       fs.writeFileSync(filePath, newContent);

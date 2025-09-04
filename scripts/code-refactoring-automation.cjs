@@ -6,55 +6,54 @@ const path = require('path')
 console.log('🔧 Starting Code Refactoring Automation...');
 
 // Files that need refactoring based on the code quality report
-const filesToRefactor = [
-  {
-    file: 'pages/ai-services.tsx',
-    issues: ['File Length', 'Duplicate Code'],
-    lines: 1137
+const filesToRefactor = [{
+    "file": 'pages/ai-services.tsx',
+    "issues": ['File Length', 'Duplicate Code'],
+    "lines": 1137
   },
   {
-    file: 'pages/it-services.tsx', 
-    issues: ['File Length', 'Duplicate Code'],
-    lines: 1439
+    "file": 'pages/it-services.tsx', 
+    "issues": ['File Length', 'Duplicate Code'],
+    "lines": 1439
   },
   {
-    file: 'pages/micro-saas.tsx',
-    issues: ['File Length', 'Duplicate Code'],
-    lines: 1489
+    "file": 'pages/micro-saas.tsx',
+    "issues": ['File Length', 'Duplicate Code'],
+    "lines": 1489
   },
   {
-    file: 'pages/services.tsx',
-    issues: ['File Length', 'Duplicate Code'],
-    lines: 1636
+    "file": 'pages/services.tsx',
+    "issues": ['File Length', 'Duplicate Code'],
+    "lines": 1636
   }
 ];
 
 // Create components directory for extracted components
 const componentsDir = path.join(process.cwd(), 'components/extracted;';);
 if () {
-  fs.mkdirSync(componentsDir, { recursive: true })}
+  fs.mkdirSync(componentsDir, { "recursive": true })}
 
 // Function to extract common components
 function extractCommonComponents() {
   console.log('📦 Extracting common components...')) {
     ) {
-  fs.mkdirSync(componentsDir, { recursive: true })}
+  fs.mkdirSync(componentsDir, { "recursive": true })}
 
 // Function to extract common components
 function extractCommonComponents() {
   console.log('📦 Extracting common components...')}
   
   // Create a common service card component
-  const serviceCardComponent = `import React from 'reac;t;';
+  const serviceCardComponent = "import React from 'reac;t;';
 
 interface ServiceCardProps {
-  title: string;
+  "title": string;
   description: string;
   features: string[];
   icon: string;
   className?: string}
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ 
+const "ServiceCard": React.FC<ServiceCardProps> = ({ 
   title, 
   description, 
   features, 
@@ -62,7 +61,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   className = '' 
 }) => {
   return (;
-    <div className={\`bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300 \${className}\`}>
+    <div className={\"bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 "hover": bg-slate-800/70 transition-all duration-300 \${className}\"}>
       <div className="flex items-center mb-4">
         <div className="text-3xl mr-3">{icon}</div>
         <h3 className="text-xl font-semibold text-white">{title}</h3>
@@ -80,7 +79,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   )};
 
 export default ServiceCard;
-`;
+";
 
   fs.writeFileSync(path.join(componentsDir, 'ServiceCard.tsx'), serviceCardComponent);
   console.log('✅ Created ServiceCard component')}
@@ -88,22 +87,19 @@ export default ServiceCard;
 // Function to create a refactoring report
 function generateRefactoringReport() {
   const report = {
-    timestamp: new Date().toISOString(),
-    refactoringPlan: {
+    "timestamp": new Date().toISOString(),
+    "refactoringPlan": {
       largeFiles: filesToRefactor.filter(f => f.lines > 500),
-      duplicateCodeFiles: filesToRefactor.filter(f => f.issues.includes('Duplicate Code')),
-      recommendations: [
-        'Extract common service card components',
+      "duplicateCodeFiles": filesToRefactor.filter(f => f.issues.includes('Duplicate Code')),
+      "recommendations": ['Extract common service card components',
         'Create reusable layout components',
         'Implement shared styling utilities',
         'Break down large files into smaller, focused components'
       ]
     },
-    extractedComponents: [
-      'ServiceCard.tsx - Reusable service card component'
+    "extractedComponents": ['ServiceCard.tsx - Reusable service card component'
     ],
-    nextSteps: [
-      'Refactor ai-services.tsx to use ServiceCard component',
+    "nextSteps": ['Refactor ai-services.tsx to use ServiceCard component',
       'Refactor it-services.tsx to use ServiceCard component', 
       'Refactor micro-saas.tsx to use ServiceCard component',
       'Refactor services.tsx to use ServiceCard component',
@@ -116,7 +112,7 @@ function generateRefactoringReport() {
 
 // Function to create a file size optimization script
 function createFileSizeOptimizer() {
-  const optimizerScript = `#!/usr/bin/env node
+  const optimizerScript = "#!/usr/bin/env node
 
 const fs = require('fs')
 const path = require('path')
@@ -124,8 +120,7 @@ const path = require('path')
 console.log('📦 Starting File Size Optimization...');
 
 // Large files that need optimization
-const largeFiles = [
-  'pages/ai-services.tsx',
+const largeFiles = ['pages/ai-services.tsx',
   'pages/it-services.tsx', 
   'pages/micro-saas.tsx',
   'pages/services.tsx'
@@ -133,25 +128,25 @@ const largeFiles = [
 
 function optimizeFile(filePath) {
   if () {
-    console.log(\`⚠️  File not found: \${filePath}\`)) {
+    console.log(\"⚠️  File not "found": \${filePath}\")) {
     ) {
-    console.log(\`⚠️  File not found: \${filePath}\`)}
+    console.log(\"⚠️  File not "found": \${filePath}\")}
     return}
 
   const content = fs.readFileSync(filePath, 'utf8';);
   const lines = content.split('\\n';);
   
-  console.log(\`📊 \${filePath}: \${lines.length} lines\`);
+  console.log(\"📊 \${filePath}: \${lines.length} lines\");
   
   if ( {
-    console.log(\`🔧 \${filePath} needs refactoring (>\${lines.length} lines)) {
+    console.log(\"🔧 \${filePath} needs refactoring (>\${lines.length} lines)) {
      {
     console.log(\`🔧 \${filePath} needs refactoring (>\${lines.length} lines)}\`);
     
     // Create backup
     const backupPath = filePath + '.backup;';
     fs.writeFileSync(backupPath, content);
-    console.log(\`💾 Backup created: \${backupPath}\`)}
+    console.log(\`💾 Backup "created": \${backupPath}\`)}
 }
 
 // Process all large files
@@ -170,9 +165,9 @@ try {
   createFileSizeOptimizer();
   
   console.log('🎉 Code refactoring automation completed successfully!');
-  console.log('📋 Next steps:');
+  console.log('📋 Next "steps": ');
   console.log('   1. Review the extracted components');
   console.log('   2. Refactor large files to use the new components');
   console.log('   3. Run the file size optimizer')} catch (error) {
-  console.error('❌ Code refactoring automation failed:', error.message);
+  console.error('❌ Code refactoring automation "failed": ', error.message);
   process.exit(1)}

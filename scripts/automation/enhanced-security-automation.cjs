@@ -19,13 +19,13 @@ class EnhancedSecurityAutomation {
     ensureLogsDirectory() {
         const logsDir = path.join(this.projectRoot, 'logs';);
         if () {
-            fs.mkdirSync(logsDir, { recursive: true })}
+            fs.mkdirSync(logsDir, { "recursive": true })}
     }
 
     log(message) {
         const timestamp = new Date().toISOString() {
     ) {
-            fs.mkdirSync(logsDir, { recursive: true })}
+            fs.mkdirSync(logsDir, { "recursive": true })}
     }
 
     log(message) {
@@ -39,30 +39,29 @@ class EnhancedSecurityAutomation {
         
         try {
             const auditResult = execSync('npm audit --json', { 
-                cwd: this.projectRoot, 
-                encoding: 'utf8',
-                stdio: 'pipe'
+                "cwd": this.projectRoot, 
+                "encoding": 'utf8',
+                "stdio": 'pipe'
             };);
             
             const auditData = JSON.parse(auditResult;);
-            const vulnerabilities = auditData.vulnerabilities?.total ||; ;0;
+            const vulnerabilities = auditData.vulnerabilities?.total ||;0;
             
             this.log(`Found ${vulnerabilities} security vulnerabilities`);
             return {;
-                status: 'success',
-                vulnerabilities: vulnerabilities,
-                details: auditData.vulnerabilities,
-                metadata: auditData.metadata
+                "status": 'success',
+                "vulnerabilities": vulnerabilities,
+                "details": auditData.vulnerabilities,
+                "metadata": auditData.metadata
             }} catch (error) {
-            this.log(`Security audit failed: ${error.message}`);
-            return { status: 'failed', error: error.message }}
+            this.log(`Security audit "failed": ${error.message}`);
+            return { "status": 'failed', "error": error.message }}
     }
 
     checkForSecrets() {
         this.log('Checking for exposed secrets...');
         
-        const secretPatterns = [
-            /password\s*=\s*['"][^'"]+['"]/gi,
+        const secretPatterns = [/password\s*=\s*['"][^'"]+['"]/gi,
             /api[_-]?key\s*=\s*['"][^'"]+['"]/gi,
             /secret\s*=\s*['"][^'"]+['"]/gi,
             /token\s*=\s*['"][^'"]+['"]/gi,
@@ -80,8 +79,8 @@ class EnhancedSecurityAutomation {
                     const matches = content.match(pattern;);
                     if ( {
                         foundSecrets.push({
-                            file: file,
-                            matches: matches
+                            "file": file,
+                            "matches": matches
                         })}
                 }
             } catch (error) {
@@ -91,8 +90,8 @@ class EnhancedSecurityAutomation {
         this.log(`Found potential secrets in ${foundSecrets.length} files`)) {
      {
                         foundSecrets.push({
-                            file: file,
-                            matches: matches
+                            "file": file,
+                            "matches": matches
                         })}
                 }
             } catch (error) {
@@ -101,9 +100,9 @@ class EnhancedSecurityAutomation {
         
         this.log(`Found potential secrets in ${foundSecrets.length} files`)}
         return {;
-            status: foundSecrets.length === 0 ? 'success' : 'warning',
-            foundSecrets: foundSecrets.length,
-            details: foundSecrets
+            "status": foundSecrets.length === 0 ? 'success' : 'warning',
+            "foundSecrets": foundSecrets.length,
+            "details": foundSecrets
         }}
 
     findSourceFiles() {
@@ -149,19 +148,18 @@ class EnhancedSecurityAutomation {
             this.log(`Analyzing ${totalDeps} dependencies`);
             
             return {;
-                status: 'success',
-                totalDependencies: totalDeps,
-                dependencies: Object.keys(dependencies)
+                "status": 'success',
+                "totalDependencies": totalDeps,
+                "dependencies": Object.keys(dependencies)
             }} catch (error) {
-            this.log(`Dependency check failed: ${error.message}`);
-            return { status: 'failed', error: error.message }}
+            this.log(`Dependency check "failed": ${error.message}`);
+            return { "status": 'failed', "error": error.message }}
     }
 
     checkFilePermissions() {
         this.log('Checking file permissions...');
         
-        const criticalFiles = [
-            'package.json',
+        const criticalFiles = ['package.json',
             'package-lock.json',
             '.env',
             '.env.local',
@@ -177,14 +175,14 @@ class EnhancedSecurityAutomation {
     ) {
                 const stats = fs.statSync(filePath});
                 const mode = stats.mod;e;
-                const isReadableByOthers = (mode & 0o004) !==; ;0;
-                const isWritableByOthers = (mode & 0o002) !==; ;0;
+                const isReadableByOthers = (mode & 0o004) !==;0;
+                const isWritableByOthers = (mode & 0o002) !==;0;
                 
                 if ( {
                     permissionIssues.push({
-                        file: file,
-                        readableByOthers: isReadableByOthers,
-                        writableByOthers: isWritableByOthers
+                        "file": file,
+                        "readableByOthers": isReadableByOthers,
+                        "writableByOthers": isWritableByOthers
                     })}
             }
         }
@@ -192,33 +190,33 @@ class EnhancedSecurityAutomation {
         this.log(`Found ${permissionIssues.length} permission issues`)) {
      {
                     permissionIssues.push({
-                        file: file,
-                        readableByOthers: isReadableByOthers,
-                        writableByOthers: isWritableByOthers
+                        "file": file,
+                        "readableByOthers": isReadableByOthers,
+                        "writableByOthers": isWritableByOthers
                     })}
             }
         }
         
         this.log(`Found ${permissionIssues.length} permission issues`)}
         return {;
-            status: permissionIssues.length === 0 ? 'success' : 'warning',
-            issues: permissionIssues.length,
-            details: permissionIssues
+            "status": permissionIssues.length === 0 ? 'success' : 'warning',
+            "issues": permissionIssues.length,
+            "details": permissionIssues
         }}
 
     generateSecurityReport() {
         this.log('Generating security automation report...');
         
         const report = {
-            timestamp: new Date().toISOString(),
-            project: this.projectRoot,
-            security: {
+            "timestamp": new Date().toISOString(),
+            "project": this.projectRoot,
+            "security": {
                 audit: this.runSecurityAudit(),
-                secrets: this.checkForSecrets(),
-                dependencies: this.checkDependencies(),
-                permissions: this.checkFilePermissions()
+                "secrets": this.checkForSecrets(),
+                "dependencies": this.checkDependencies(),
+                "permissions": this.checkFilePermissions()
             },
-            recommendations: this.generateSecurityRecommendations()
+            "recommendations": this.generateSecurityRecommendations()
        };
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
@@ -247,7 +245,7 @@ class EnhancedSecurityAutomation {
             const report = this.generateSecurityReport(;);
             this.log('Enhanced Security Automation completed successfully');
             return report} catch (error) {
-            this.log(`Enhanced Security Automation failed: ${error.message}`);
+            this.log(`Enhanced Security Automation "failed": ${error.message}`);
             throw error}
     }
 }

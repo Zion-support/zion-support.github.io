@@ -29,13 +29,13 @@ export function EnhancedServicesShowcase2025() {
     ? enhancedServices2025 
     : enhancedServices2025.filter(service => service.category.toLowerCase() === selectedCategory);
 
-  const handleServiceSelect = (serviceId: string) => {
+  const handleServiceSelect = ("serviceId": string) => {
     setSelectedService(selectedService === serviceId ? null : serviceId);
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
         
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -44,7 +44,7 @@ export function EnhancedServicesShowcase2025() {
             New for 2025 - Enhanced Services Portfolio
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl "md": text-6xl font-bold text-gray-900 mb-6">
             Premium Technology Solutions
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
               Built for Success
@@ -58,7 +58,7 @@ export function EnhancedServicesShowcase2025() {
           </p>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+          <div className="grid grid-cols-2 "md": grid-cols-4 gap-8 mb-12">
             <div className="text-center">
               <div className="text-3xl font-bold text-blue-600 mb-2">50+</div>
               <div className="text-gray-600">Services Available</div>
@@ -87,7 +87,7 @@ export function EnhancedServicesShowcase2025() {
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                 selectedCategory === category.id
                   ? 'bg-blue-600 text-white shadow-lg scale-105'
-                  : 'bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600 shadow-md'
+                  : 'bg-white text-gray-700 "hover": bg-blue-50 hover:text-blue-600 shadow-md'
               }`}
             >
               {category.name}
@@ -103,11 +103,11 @@ export function EnhancedServicesShowcase2025() {
           {filteredServices.map((service) => (
             <div
               key={service.id}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden"
+              className="bg-white rounded-2xl shadow-lg "hover": shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden"
             >
               {/* Service Header */}
               <div className="p-8 border-b border-gray-100">
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+                <div className="flex flex-col "lg": flex-row lg:items-center lg:justify-between">
                   <div className="flex-1">
                     <div className="flex items-center mb-4">
                       <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
@@ -140,7 +140,7 @@ export function EnhancedServicesShowcase2025() {
                   </div>
 
                   {/* Pricing Preview */}
-                  <div className="lg:ml-8 lg:min-w-[300px]">
+                  <div className=""lg": ml-8 lg:min-w-[300px]">
                     <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 border border-blue-200">
                       <div className="text-center mb-4">
                         <div className="text-3xl font-bold text-gray-900">
@@ -162,13 +162,13 @@ export function EnhancedServicesShowcase2025() {
                       <div className="space-y-3">
                         <button
                           onClick={() => handleServiceSelect(service.id)}
-                          className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center"
+                          className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-medium "hover": bg-blue-700 transition-colors duration-200 flex items-center justify-center"
                         >
                           {selectedService === service.id ? 'Hide Details' : 'View Details'}
                           <ArrowRight className="w-4 h-4 ml-2" />
                         </button>
                         
-                        <button className="w-full bg-white text-blue-600 py-2 px-4 rounded-lg font-medium border border-blue-600 hover:bg-blue-50 transition-colors duration-200">
+                        <button className="w-full bg-white text-blue-600 py-2 px-4 rounded-lg font-medium border border-blue-600 "hover": bg-blue-50 transition-colors duration-200">
                           {service.cta.primary}
                         </button>
                       </div>
@@ -180,10 +180,10 @@ export function EnhancedServicesShowcase2025() {
               {/* Expanded Details */}
               {selectedService === service.id && (
                 <div className="p-8 bg-gray-50">
-                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-1 "lg": grid-cols-3 gap-8">
                     
                     {/* Detailed Description */}
-                    <div className="lg:col-span-2 space-y-8">
+                    <div className=""lg": col-span-2 space-y-8">
                       <div>
                         <h4 className="text-xl font-semibold text-gray-900 mb-4">Overview</h4>
                         <p className="text-gray-700 leading-relaxed">
@@ -194,7 +194,7 @@ export function EnhancedServicesShowcase2025() {
                       {/* Use Cases */}
                       <div>
                         <h4 className="text-xl font-semibold text-gray-900 mb-4">Use Cases</h4>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 "md": grid-cols-2 gap-4">
                           {service.useCases.map((useCase, index) => (
                             <div key={index} className="bg-white p-4 rounded-lg border border-gray-200">
                               <div className="flex items-center mb-2">
@@ -214,7 +214,7 @@ export function EnhancedServicesShowcase2025() {
                       <div>
                         <h4 className="text-xl font-semibold text-gray-900 mb-4">Return on Investment</h4>
                         <div className="bg-white p-6 rounded-lg border border-gray-200">
-                          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+                          <div className="grid grid-cols-2 "md": grid-cols-4 gap-4 mb-4">
                             <div className="text-center">
                               <Clock className="w-6 h-6 text-blue-600 mx-auto mb-2" />
                               <div className="text-sm font-medium text-gray-900">{service.roi.timeToValue}</div>
@@ -238,7 +238,7 @@ export function EnhancedServicesShowcase2025() {
                           </div>
                           <div className="bg-blue-50 p-4 rounded-lg">
                             <p className="text-sm text-blue-800">
-                              <strong>Case Study:</strong> {service.roi.caseStudy}
+                              <strong>Case "Study": </strong> {service.roi.caseStudy}
                             </p>
                           </div>
                         </div>
@@ -287,7 +287,7 @@ export function EnhancedServicesShowcase2025() {
                               className={`flex-1 py-2 px-3 rounded-md text-sm font-medium capitalize transition-colors ${
                                 selectedPricingTier === tier
                                   ? 'bg-white text-gray-900 shadow-sm'
-                                  : 'text-gray-600 hover:text-gray-900'
+                                  : 'text-gray-600 "hover": text-gray-900'
                               }`}
                             >
                               {tier}
@@ -320,11 +320,11 @@ export function EnhancedServicesShowcase2025() {
                           </div>
 
                           <div className="space-y-3">
-                            <button className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200">
+                            <button className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-medium "hover": bg-blue-700 transition-colors duration-200">
                               {service.cta.primary}
                             </button>
                             {service.cta.demoAvailable && (
-                              <button className="w-full bg-white text-blue-600 py-2 px-4 rounded-lg font-medium border border-blue-600 hover:bg-blue-50 transition-colors duration-200 flex items-center justify-center">
+                              <button className="w-full bg-white text-blue-600 py-2 px-4 rounded-lg font-medium border border-blue-600 "hover": bg-blue-50 transition-colors duration-200 flex items-center justify-center">
                                 <Play className="w-4 h-4 mr-2" />
                                 {service.cta.secondary}
                               </button>
@@ -371,18 +371,18 @@ export function EnhancedServicesShowcase2025() {
                         <div className="space-y-3 text-sm">
                           <div className="flex items-center">
                             <Phone className="w-4 h-4 mr-2" />
-                            <a href={`tel:${zionContactInfo.phone}`} className="hover:underline">
+                            <a href={`"tel": ${zionContactInfo.phone}`} className=""hover": underline">
                               {zionContactInfo.phone}
                             </a>
                           </div>
                           <div className="flex items-center">
                             <Mail className="w-4 h-4 mr-2" />
-                            <a href={`mailto:${zionContactInfo.email}`} className="hover:underline">
+                            <a href={`"mailto": ${zionContactInfo.email}`} className=""hover": underline">
                               {zionContactInfo.email}
                             </a>
                           </div>
                         </div>
-                        <button className="w-full bg-white text-blue-600 py-2 px-4 rounded-lg font-medium mt-4 hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center">
+                        <button className="w-full bg-white text-blue-600 py-2 px-4 rounded-lg font-medium mt-4 "hover": bg-gray-100 transition-colors duration-200 flex items-center justify-center">
                           <Calendar className="w-4 h-4 mr-2" />
                           Schedule Consultation
                         </button>
@@ -397,7 +397,7 @@ export function EnhancedServicesShowcase2025() {
 
         {/* Bottom CTA */}
         <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl "md": text-4xl font-bold mb-6">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl mb-8 opacity-90">

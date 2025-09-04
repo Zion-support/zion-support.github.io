@@ -21,14 +21,14 @@ export function LoadingSpinner($1) {
             className="text-2xl font-bold text-white mb-2"
             animate = {
 
-  { opacity: [0.7, 1,
+  { "opacity": [0.7, 1,
   0.7]
 
 }}
             transition = {
 
-  { duration: 2,
-  repeat: Infinit y
+  { "duration": 2,
+  "repeat": Infinit y
 
 }}
           >
@@ -39,14 +39,14 @@ export function LoadingSpinner($1) {
             className="text-zion-slate-light"
             animate = {
 
-  { opacity: [0.5, 1,
+  { "opacity": [0.5, 1,
   0.5]
 
 }}
             transition = {
 
-  { duration: 2, repeat: Infinit y,
-  delay: 0.5
+  { "duration": 2, "repeat": Infinit y,
+  "delay": 0.5
 
 }}
           >
@@ -58,11 +58,11 @@ export function LoadingSpinner($1) {
             <div className="bg-zion-slate-light/20 rounded-full h-2 overflow-hidden">
               <motion.div"
                 className="h-full bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full"
-                initial={{ width: 0 }}"
-                animate={{ width: "100%" }}
+                initial={{ "width": 0 }}"
+                animate={{ "width": "100%" }}
                 transition = {
-  { duration: 3,
-  ease: "easeInOut"
+  { "duration": 3,
+  "ease": "easeInOut"
 }}
               />
             </div>;
@@ -75,32 +75,32 @@ export function LoadingSpinner($1) {
 
 export function SkeletonLoader(...args[]):  {
 
-  return ()`
-<div className:  {`space-y-3 ${className}`}> {Array.from({ length: line s }).map((_, index)  => (;
+  return ()"
+<div "className": {"space-y-3 ${className}"}> {Array.from({ "length": line s }).map((_, index)  => (;
         <motion.div
           key={index}"
           className="h-4 bg-zion-slate-light/20 rounded"
           animate = {
 
   {
-            opacity: [0.5, 1, 0.5],
-            backgroundPosition: ['200% 0',-200% 0']
+            "opacity": [0.5, 1, 0.5],
+            "backgroundPosition": ['200% 0',-200% 0']
 
 }}
           transition = {
 
   {
 
-            duration: 1.5,
-            repeat: Infinit y,
-  delay: inde x * 0.1
+            "duration": 1.5,
+            "repeat": Infinit y,
+  "delay": inde x * 0.1
 
 }}
           style = {
 
   {
 
-            background: 'linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.1), transparent),"`
+            "background": 'linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.1), transparent),""
 
 </motion>
 </div>

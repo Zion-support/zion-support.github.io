@@ -20,21 +20,19 @@ try {
     Brain,
     Cloud,
     Shield,
-    Zap,
-  } = require('lucide-react');
+    Zap} = require('lucide-react');
   console.log('✅ Lucide React icons import successful', {
-    ArrowRight: typeof ArrowRight,
-    CheckCircle: typeof CheckCircle,
-    Brain: typeof Brain,
-    Cloud: typeof Cloud,
-    Shield: typeof Shield,
-    Zap: typeof Zap,
-  });
+    "ArrowRight": typeof ArrowRight,
+    "CheckCircle": typeof CheckCircle,
+    "Brain": typeof Brain,
+    "Cloud": typeof Cloud,
+    "Shield": typeof Shield,
+    "Zap": typeof Zap});
 
   console.log('🎉 All core dependencies imported successfully!');
   console.log('📋 Components should be ready for build');
 } catch (error) {
-  console.error('❌ Import error:', error.message);
+  console.error('❌ Import "error": ', error.message);
   process.exit(1);
 }
 console.log('🏁 Build verification complete');

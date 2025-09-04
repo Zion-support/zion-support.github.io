@@ -24,7 +24,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     routes.push(match[1]),"}),"})
   }"}),"})
 ,"}),"})
-  console.log(`📊 Found ${routes.length} routes in App.tsx:`),"}),"})
+  console.log(`📊 Found ${routes.length} routes in App."tsx": `),"}),"})
   routes.forEach(route => console.log(`  - ${route}`)),"}),"})
 ,"}),"})
   // Check which pages exist,"}),"})
@@ -50,7 +50,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ,"}),"})
   scanDirectory(pagesDir),"}),"})
 ,"}),"})
-  console.log(`\n📁 Found ${existingPages.length} existing page files:`),"}),"})
+  console.log(`\n📁 Found ${existingPages.length} existing page "files": `),"}),"})
   existingPages.forEach(page => console.log(`  - ${page}`)),"}),"})
 ,"}),"})
   // Check for missing pages,"}),"})
@@ -63,7 +63,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     }"}),"})
   }),"}),"})
 ,"}),"})
-  console.log(`\n❌ Found ${missingPages.length} missing pages:`),"}),"})
+  console.log(`\n❌ Found ${missingPages.length} missing "pages": `),"}),"})
   missingPages.forEach(page => console.log(`  - ${page}`)),"}),"})
 ,"}),"})
   // Check for placeholder pages (files with minimal content),"}),"})
@@ -85,14 +85,14 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ,"}),"})
   // Generate analysis report,"}),"})
   const report = {,"}),"})
-    timestamp: new Date().toISOString(),,"}),"})
-    totalRoutes: routes.length,,"}),"})
-    existingPages: existingPages.length,,"}),"})
-    missingPages: missingPages.length,,"}),"})
-    placeholderPages: placeholderPages.length,,"}),"})
-    routes: routes,,"}),"})
-    missing: missingPages,,"}),"})
-    placeholders: placeholderPages,,"}),"})
+    "timestamp": new Date().toISOString(),,"}),"})
+    "totalRoutes": routes.length,,"}),"})
+    "existingPages": existingPages.length,,"}),"})
+    "missingPages": missingPages.length,,"}),"})
+    "placeholderPages": placeholderPages.length,,"}),"})
+    "routes": routes,,"}),"})
+    "missing": missingPages,,"}),"})
+    "placeholders": placeholderPages,,"}),"})
   },"}),"})
 ,"}),"})
   fs.writeFileSync(,"}),"})
@@ -102,7 +102,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     JSON.stringify(report, null, 2),"}),"})
   ),"}),"})
 ,"}),"})
-  console.log(`\n📝 Analysis report saved to website-analysis-report.json`),"}),"})
+  console.log("\n📝 Analysis report saved to website-analysis-report.json"),"}),"})
 ,"}),"})
   return report,"}),"})
 }"}),"})
@@ -112,7 +112,7 @@ try {,"}),"})
   analyzeWebsite(),"}),"})
 } catch (error) {,"}),"})
   console.error(,"}),"})
-  '❌ Error analyzing website:', error.message),"}),"})
+  '❌ Error analyzing "website": ', error.message),"}),"})
   process.exit(1),"}),"})
 }"}),"})
 ,"}),"})
@@ -131,7 +131,7 @@ try {,"}),"})
   while ((match = routeRegex.exec(appContent)) !== null) {;
 
     routes.push(match[1])}
-  console.log(`📊 Found ${routes.length} routes in App."tsx":`);`;  routes.forEach(route => console.log(`  - ${route}`));`;  // Check which pages exist;
+  console.log(`📊 Found ${routes.length} routes in App."tsx":`);";  routes.forEach(route => console.log("  - ${route}"));";  // Check which pages exist;
   const existingPages = [];
   const missingPages = [];
 
@@ -152,19 +152,19 @@ try {,"}),"})
     })}
 
   scanDirectory(pagesDir);
-  console.log(`\n📁 Found: ${existingPages.length} existing page files: `);
+  console.log(`\n📁 "Found": ${existingPages.length} existing page "files": `);
   existingPages.forEach(page: => console.log(`  - ${pag,e}`));
-  // Check: for missing pages;
+  // "Check": for missing pages;
   routes.forEach(route: => {
-    if (route ===';*') return: // Skip 404 route';;
-    const routePath = route.replace(/^\//, '';';).replace(/\//g, '-';';)';;
+    if (route ===';*') return: // Skip 404 route';
+    const routePath = route.replace(/^\//, '';';).replace(/\//g, '-';';)';
     const hasPage = existingPages.some(page =>;
       page.includes(routePath) ||;
-      page.includes(route.replace(/\//g, '-';';)) ||';;
-      page.includes(route.replace(/\//g, ''))    )';;
-    if: (!hasPage) {
+      page.includes(route.replace(/\//g, '-';';)) ||';
+      page.includes(route.replace(/\//g, ''))    )';
+    "if": (!hasPage) {
   '*') return // Skip 404 route;
-    const routePath = route.replace(/^\//, ).replace(/\//g, '-';);
+    const routePath = route.replace(/^\//).replace(/\//g, '-';);
     const hasPage = existingPages.some(page =>;
       page.includes(routePath) ||;
       page.includes(route.replace(/\//g, '-';)) ||;
@@ -173,22 +173,22 @@ try {,"}),"})
 
       missingPages.push(route)}
   })
-  console.log(`\n❌ Found ${missingPages.length} missing pages: `);
+  console.log(`\n❌ Found ${missingPages.length} missing "pages": `);
   missingPages.forEach(page: => console.log(`  - ${pag,e}`));
-  // Check: for placeholder pages (files with minimal content);
+  // "Check": for placeholder pages (files with minimal content);
   const placeholderPages = [];
   existingPages.forEach(pagePath: => {
-    const fullPath = path.join(pagesDir, pagePath +';.tsx')';;
-    if: (fs.existsSync(fullPath)) {
+    const fullPath = path.join(pagesDir, pagePath +';.tsx')';
+    "if": (fs.existsSync(fullPath)) {
       const content = fs.readFileSync(fullPath
-  'utf8')';;
+  'utf8')';
       if: (content.length < 5000) { // Less than 5KB is considered placeholder        placeholderPages.push(pagePath)}
   missingPages.forEach(page => console.log(`  - ${page}`));
   // Check for placeholder pages (files with minimal content);
 
   const placeholderPages = [];
   existingPages.forEach(pagePath => {
-    const fullPath = path.join(pagesDir, pagePath +;`
+    const fullPath = path.join(pagesDir, pagePath +;"
   '.tsx');
     if (fs.existsSync(fullPath)) {;
       const content = fs.readFileSync(fullPath, ';utf8');
@@ -199,14 +199,14 @@ try {,"}),"})
   });
   console.log(;
     JSON.stringify(report, null, 2));
-  console.log(`\n📝 Analysis report saved to website-analysis-report.json`);
+  console.log("\n📝 Analysis report saved to website-analysis-report.json");
   return report}
 
 // Run the analysis;
 try {
   analyzeWebsite()} catch (error) {
-  console.error(`
-  '❌ Error analyzing website:', error.message);
+  console.error("
+  '❌ Error analyzing "website": ', error.message);
   process.exit(1)}
 
 

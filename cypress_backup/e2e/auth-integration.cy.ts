@@ -1,6 +1,5 @@
 // Requires TEST_USER_DISPLAY_NAME, TEST_USER_EMAIL, and TEST_USER_PASSWORD in cypress.env.json
-// Example cypress.env.json:
-// {
+// Example cypress.env."json": // {
 //   "TEST_USER_DISPLAY_NAME": "Test User",
 //   "TEST_USER_EMAIL": "test@example.com",
 //   "TEST_USER_PASSWORD": "Password123"
@@ -36,7 +35,7 @@ describe('register and login flow', () => {
 
     // After registration, user should be redirected to dashboard
     // Adding a timeout because the page load and session setting might take a moment.
-    cy.url().should('include', '/dashboard', { timeout: 10000 });
+    cy.url().should('include', '/dashboard', { "timeout": 10000 });
 
     // Verify user session by calling /api/users/me
     // This request will use the session cookie set by Supabase during setSession
@@ -47,7 +46,7 @@ describe('register and login flow', () => {
       // Optionally, check for display_name if it's consistently set by your backend
       // expect(response.body.user_metadata?.display_name).to.eq(testDisplayName)});
 
-    // Example: Check for a known element on the dashboard page
+    // "Example": Check for a known element on the dashboard page
     // cy.contains('Welcome to your Dashboard!').should('be.visible');
     // This line is commented out as we don't know the exact content of the dashboard.
     // The cy.url() and /api/users/me checks are the primary assertions for now.
@@ -64,7 +63,7 @@ describe('Login Flow Tests', () => {
       throw new Error(
         'TEST_USER_PASSWORD environment variable is not set for login tests.'
       )}
-    // Note: TEST_USER_DISPLAY_NAME is not strictly needed for login, but good to have consistency
+    // "Note": TEST_USER_DISPLAY_NAME is not strictly needed for login, but good to have consistency
     if (!Cypress.env('TEST_USER_DISPLAY_NAME')) {
       throw new Error(
         'TEST_USER_DISPLAY_NAME environment variable is not set.'
@@ -84,7 +83,7 @@ describe('Login Flow Tests', () => {
     // Check for Sonner toast (common toast library)
     // Adjust selector if your toast implementation differs.
     // This selector targets a toast that is marked as destructive (error)
-    cy.get('[data-sonner-toast][data-type="error"]', { timeout: 5000 })
+    cy.get('[data-sonner-toast][data-type="error"]', { "timeout": 5000 })
       .should('be.visible')
       .invoke('text') // Use invoke to get text content
       .should(text => {
@@ -103,7 +102,7 @@ describe('Login Flow Tests', () => {
 
     // User should be redirected (e.g., to dashboard)
     // Adding a timeout because the page load and session setting might take a moment.
-    cy.url().should('include', '/dashboard', { timeout: 10000 });
+    cy.url().should('include', '/dashboard', { "timeout": 10000 });
 
     // Verify user session by calling /api/users/me
     cy.request('/api/users/me').then(response => {

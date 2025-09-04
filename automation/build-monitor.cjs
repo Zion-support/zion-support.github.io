@@ -26,20 +26,19 @@ class BuildMonitor {
       const startTime = Date.now();
 
       const { stdout, stderr } = await execAsync('npm run build', {
-        cwd: process.cwd(),
-        timeout: 300000, // 5 minutes timeout
+        "cwd": process.cwd(),
+        "timeout": 300000, // 5 minutes timeout
       });
 
       const endTime = Date.now();
       const duration = endTime - startTime;
 
       const buildResult = {
-        timestamp: new Date().toISOString(),
+        "timestamp": new Date().toISOString(),
         duration,
-        success: true,
-        output: stdout,
-        errors: stderr,
-      };
+        "success": true,
+        "output": stdout,
+        "errors": stderr};
 
       this.buildHistory.push(buildResult);
       if (this.buildHistory.length > this.maxHistorySize) {
@@ -55,19 +54,18 @@ class BuildMonitor {
       const duration = endTime - startTime;
 
       const buildResult = {
-        timestamp: new Date().toISOString(),
+        "timestamp": new Date().toISOString(),
         duration,
-        success: false,
-        output: error.stdout || '',
-        errors: error.stderr || error.message,
-      };
+        "success": false,
+        "output": error.stdout || '',
+        "errors": error.stderr || error.message};
 
       this.buildHistory.push(buildResult);
       if (this.buildHistory.length > this.maxHistorySize) {
         this.buildHistory.shift();
       }
 
-      this.log(`Build failed after ${duration}ms: ${error.message}`);
+      this.log(`Build failed after ${duration}"ms": ${error.message}`);
 
       return buildResult;
     }
@@ -77,59 +75,53 @@ class BuildMonitor {
     try {
       this.log('Running type check...');
       const { stdout, stderr } = await execAsync('npm run type-check', {
-        cwd: process.cwd(),
-        timeout: 60000,
-      });
+        "cwd": process.cwd(),
+        "timeout": 60000});
 
       this.log('Type check completed successfully');
-      return { success: true, output: stdout, errors: stderr };
+      return { "success": true, "output": stdout, "errors": stderr };
     } catch (error) {
-      this.log(`Type check failed: ${error.message}`);
+      this.log(`Type check "failed": ${error.message}`);
       return {
-        success: false,
-        output: error.stdout || '',
-        errors: error.stderr || error.message,
-      };
+        "success": false,
+        "output": error.stdout || '',
+        "errors": error.stderr || error.message};
     }
   }
 
   async runLintCheck() {
     try {
       this.log('Running lint check...');
-      const { stdout, stderr } = await execAsync('npm run lint:check', {
-        cwd: process.cwd(),
-        timeout: 60000,
-      });
+      const { stdout, stderr } = await execAsync('npm run "lint": check', {
+        "cwd": process.cwd(),
+        "timeout": 60000});
 
       this.log('Lint check completed successfully');
-      return { success: true, output: stdout, errors: stderr };
+      return { "success": true, "output": stdout, "errors": stderr };
     } catch (error) {
-      this.log(`Lint check failed: ${error.message}`);
+      this.log(`Lint check "failed": ${error.message}`);
       return {
-        success: false,
-        output: error.stdout || '',
-        errors: error.stderr || error.message,
-      };
+        "success": false,
+        "output": error.stdout || '',
+        "errors": error.stderr || error.message};
     }
   }
 
   async runTests() {
     try {
       this.log('Running tests...');
-      const { stdout, stderr } = await execAsync('npm run test:smoke', {
-        cwd: process.cwd(),
-        timeout: 120000,
-      });
+      const { stdout, stderr } = await execAsync('npm run "test": smoke', {
+        "cwd": process.cwd(),
+        "timeout": 120000});
 
       this.log('Tests completed successfully');
-      return { success: true, output: stdout, errors: stderr };
+      return { "success": true, "output": stdout, "errors": stderr };
     } catch (error) {
-      this.log(`Tests failed: ${error.message}`);
+      this.log(`Tests "failed": ${error.message}`);
       return {
-        success: false,
-        output: error.stdout || '',
-        errors: error.stderr || error.message,
-      };
+        "success": false,
+        "output": error.stdout || '',
+        "errors": error.stderr || error.message};
     }
   }
 
@@ -137,12 +129,11 @@ class BuildMonitor {
     this.log('Starting full build check...');
 
     const results = {
-      timestamp: new Date().toISOString(),
-      typeCheck: await this.runTypeCheck(),
-      lintCheck: await this.runLintCheck(),
-      build: await this.runBuild(),
-      tests: await this.runTests(),
-    };
+      "timestamp": new Date().toISOString(),
+      "typeCheck": await this.runTypeCheck(),
+      "lintCheck": await this.runLintCheck(),
+      "build": await this.runBuild(),
+      "tests": await this.runTests()};
 
     const allPassed =
       results.typeCheck.success &&
@@ -150,7 +141,7 @@ class BuildMonitor {
       results.build.success &&
       results.tests.success;
 
-    this.log(`Full check completed. All passed: ${allPassed}`);
+    this.log(`Full check completed. All "passed": ${allPassed}`);
 
     // Save results
     const resultsFile = path.join(__dirname, 'logs', 'build-results.json');
@@ -167,12 +158,12 @@ class BuildMonitor {
       for (const dir of buildDirs) {
         const dirPath = path.join(process.cwd(), dir);
         if (fs.existsSync(dirPath)) {
-          await execAsync(`rm -rf ${dirPath}`, { cwd: process.cwd() });
+          await execAsync(`rm -rf ${dirPath}`, { "cwd": process.cwd() });
           this.log(`Cleaned up ${dir}`);
         }
       }
     } catch (error) {
-      this.log(`Cleanup failed: ${error.message}`);
+      this.log(`Cleanup "failed": ${error.message}`);
     }
   }
 
@@ -184,20 +175,18 @@ class BuildMonitor {
       await this.cleanupOldBuilds();
 
       // Run build with optimization
-      const { stdout, stderr } = await execAsync('npm run build:production', {
-        cwd: process.cwd(),
-        timeout: 300000,
-      });
+      const { stdout, stderr } = await execAsync('npm run "build": production', {
+        "cwd": process.cwd(),
+        "timeout": 300000});
 
       this.log('Build optimization completed');
-      return { success: true, output: stdout, errors: stderr };
+      return { "success": true, "output": stdout, "errors": stderr };
     } catch (error) {
-      this.log(`Build optimization failed: ${error.message}`);
+      this.log(`Build optimization "failed": ${error.message}`);
       return {
-        success: false,
-        output: error.stdout || '',
-        errors: error.stderr || error.message,
-      };
+        "success": false,
+        "output": error.stdout || '',
+        "errors": error.stderr || error.message};
     }
   }
 
@@ -209,11 +198,10 @@ class BuildMonitor {
       recentBuilds.length;
 
     return {
-      totalBuilds: this.buildHistory.length,
-      recentSuccessRate: (successfulBuilds / recentBuilds.length) * 100,
-      averageDuration: Math.round(averageDuration),
-      lastBuildTime: this.lastBuildTime,
-    };
+      "totalBuilds": this.buildHistory.length,
+      "recentSuccessRate": (successfulBuilds / recentBuilds.length) * 100,
+      "averageDuration": Math.round(averageDuration),
+      "lastBuildTime": this.lastBuildTime};
   }
 
   async start() {
@@ -245,7 +233,7 @@ class BuildMonitor {
 if (require.main === module) {
   const monitor = new BuildMonitor();
   monitor.start().catch(error => {
-    console.error('Build Monitor failed:', error);
+    console.error('Build Monitor "failed": ', error);
     process.exit(1);
   });
 }

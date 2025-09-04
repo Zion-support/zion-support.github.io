@@ -28,7 +28,7 @@ class TargetedMergeResolver {
       
       this.log(`✅ Resolved conflicts in ${this.resolvedFiles.length} files`);
       return this.resolvedFiles} catch (error) {
-      this.log(`❌ Error resolving merge conflicts: ${error.message}`);
+      this.log(`❌ Error resolving merge "conflicts": ${error.message}`);
       return []}
   }
 
@@ -75,11 +75,11 @@ class TargetedMergeResolver {
       
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
-        this.log(`✅ Resolved conflicts in: ${path.relative(this.projectRoot, filePath)}`);
+        this.log(`✅ Resolved conflicts "in": ${path.relative(this.projectRoot, filePath)}`);
         return true}
       
       return false} catch (error) {
-      this.errors.push({ file: filePath, error: error.message });
+      this.errors.push({ "file": filePath, "error": error.message });
       this.log(`❌ Error resolving conflicts in ${filePath}: ${error.message}`);
       return false}
   }
@@ -95,10 +95,10 @@ class TargetedMergeResolver {
     
     // Generate report
     const report = {
-      timestamp: new Date().toISOString(),
-      resolvedFiles: resolvedFiles.length,
-      files: resolvedFiles.map(f => path.relative(this.projectRoot, f)),
-      errors: this.errors
+      "timestamp": new Date().toISOString(),
+      "resolvedFiles": resolvedFiles.length,
+      "files": resolvedFiles.map(f => path.relative(this.projectRoot, f)),
+      "errors": this.errors
     };
     
     fs.writeFileSync(

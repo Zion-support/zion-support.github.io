@@ -12,7 +12,7 @@ class AppHealthMonitor {
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true })}
+      fs.mkdirSync(this.reportsDir, { "recursive": true })}
   }
 
   log(message) {
@@ -23,28 +23,28 @@ class AppHealthMonitor {
     this.log('🔍 Checking build health...');
     try {
       const result = execSync('npm run build', {
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 300000
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 300000
       });
-      this.log('✅ Build health: PASSED');
-      return { status: 'healthy', output: result }} catch (error) {
-      this.log('❌ Build health: FAILED');
-      return { status: 'unhealthy', error: error.message }}
+      this.log('✅ Build "health": PASSED');
+      return { status: 'healthy', "output": result }} catch (error) {
+      this.log('❌ Build "health": FAILED');
+      return { status: 'unhealthy', "error": error.message }}
   }
 
   async checkDependencies() {
     this.log('📦 Checking dependencies...');
     try {
       const result = execSync('npm audit --audit-level=moderate', {
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 60000
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 60000
       });
-      this.log('✅ Dependencies: SECURE');
-      return { status: 'secure', output: result }} catch (error) {
-      this.log('⚠️ Dependencies: VULNERABILITIES FOUND');
-      return { status: 'vulnerable', error: error.message }}
+      this.log('✅ "Dependencies": SECURE');
+      return { status: 'secure', "output": result }} catch (error) {
+      this.log('⚠️ "Dependencies": VULNERABILITIES FOUND');
+      return { status: 'vulnerable', "error": error.message }}
   }
 
   async checkCodeQuality() {
@@ -54,75 +54,75 @@ class AppHealthMonitor {
     // Check for console.log statements
     try {
       const consoleResult = execSync('grep -r "console\\.log" src/ pages/ components/ --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" || true', {
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 30000
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 30000
       });
       
       if (consoleResult.trim()) {
         const count = consoleResult.split('\n').length - 1;
-        issues.push({ type: 'console_logs', count, severity: 'warning' });
+        issues.push({ "type": 'console_logs', count, "severity": 'warning' });
         this.log(`⚠️ Found ${count} console.log statements`)}
     } catch (error) {
-      this.log(`❌ Console log check failed: ${error.message}`)}
+      this.log(`❌ Console log check "failed": ${error.message}`)}
 
     // Check for TODO comments
     try {
       const todoResult = execSync('grep -r "TODO\\|FIXME" src/ pages/ components/ --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" || true', {
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 30000
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 30000
       });
       
       if (todoResult.trim()) {
         const count = todoResult.split('\n').length - 1;
-        issues.push({ type: 'todos', count, severity: 'info' });
+        issues.push({ "type": 'todos', count, "severity": 'info' });
         this.log(`📝 Found ${count} TODO/FIXME comments`)}
     } catch (error) {
-      this.log(`❌ TODO check failed: ${error.message}`)}
+      this.log(`❌ TODO check "failed": ${error.message}`)}
 
-    return { status: issues.length === 0 ? 'excellent' : 'good', issues }}
+    return { "status": issues.length === 0 ? 'excellent' : 'good', issues }}
 
   async checkPerformance() {
     this.log('⚡ Checking performance...');
     try {
       const startTime = Date.now();
       execSync('npm run build', {
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 300000
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 300000
       });
       const buildTime = Date.now() - startTime;
       
-      this.log(`⏱️ Build time: ${buildTime}ms`);
+      this.log(`⏱️ Build "time": ${buildTime}ms`);
       
       return {
-        status: buildTime < 120000 ? 'excellent' : buildTime < 300000 ? 'good' : 'needs_optimization',
+        "status": buildTime < 120000 ? 'excellent' : buildTime < 300000 ? 'good' : 'needs_optimization',
         buildTime
       }} catch (error) {
-      this.log(`❌ Performance check failed: ${error.message}`);
-      return { status: 'failed', error: error.message }}
+      this.log(`❌ Performance check "failed": ${error.message}`);
+      return { "status": 'failed', "error": error.message }}
   }
 
   async generateHealthReport() {
     this.log('📊 Generating health report...');
     
     const report = {
-      timestamp: new Date().toISOString(),
-      checks: {
+      "timestamp": new Date().toISOString(),
+      "checks": {
         build: await this.checkBuildHealth(),
-        dependencies: await this.checkDependencies(),
-        codeQuality: await this.checkCodeQuality(),
-        performance: await this.checkPerformance()
+        "dependencies": await this.checkDependencies(),
+        "codeQuality": await this.checkCodeQuality(),
+        "performance": await this.checkPerformance()
       }
     };
 
     // Calculate overall health score
     const scores = {
-      build: report.checks.build.status === 'healthy' ? 100 : 0,
-      dependencies: report.checks.dependencies.status === 'secure' ? 100 : 50,
-      codeQuality: report.checks.codeQuality.status === 'excellent' ? 100 : 75,
-      performance: report.checks.performance.status === 'excellent' ? 100 : 
+      "build": report.checks.build.status === 'healthy' ? 100 : 0,
+      "dependencies": report.checks.dependencies.status === 'secure' ? 100 : 50,
+      "codeQuality": report.checks.codeQuality.status === 'excellent' ? 100 : 75,
+      "performance": report.checks.performance.status === 'excellent' ? 100 : 
                    report.checks.performance.status === 'good' ? 75 : 50
     };
 
@@ -137,8 +137,8 @@ class AppHealthMonitor {
     const reportFile = path.join(this.reportsDir, `health-report-${Date.now()}.json`);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-    this.log(`📄 Health report generated: ${reportFile}`);
-    this.log(`🏥 Overall Health Score: ${report.overallScore}/100 (${report.healthStatus})`);
+    this.log(`📄 Health report "generated": ${reportFile}`);
+    this.log(`🏥 Overall Health "Score": ${report.overallScore}/100 (${report.healthStatus})`);
     
     return report}
 
@@ -149,11 +149,11 @@ class AppHealthMonitor {
       const report = await this.generateHealthReport();
       
       this.log('🎉 Health monitoring completed!');
-      this.log(`📊 Overall Score: ${report.overallScore}/100`);
-      this.log(`🏥 Health Status: ${report.healthStatus}`);
+      this.log(`📊 Overall "Score": ${report.overallScore}/100`);
+      this.log(`🏥 Health "Status": ${report.healthStatus}`);
       
       return report} catch (error) {
-      this.log(`💥 Health monitoring failed: ${error.message}`);
+      this.log(`💥 Health monitoring "failed": ${error.message}`);
       throw error}
   }
 }
@@ -164,11 +164,11 @@ if (require.main === module) {
   monitor.run()
     .then((report) => {
       console.log('\n🎉 App Health Monitor completed successfully!');
-      console.log(`📊 Overall Health Score: ${report.overallScore}/100`);
-      console.log(`🏥 Health Status: ${report.healthStatus}`);
+      console.log(`📊 Overall Health "Score": ${report.overallScore}/100`);
+      console.log(`🏥 Health "Status": ${report.healthStatus}`);
       process.exit(0)})
     .catch((error) => {
-      console.error('\n💥 App Health Monitor failed:', error.message);
+      console.error('\n💥 App Health Monitor "failed": ', error.message);
       process.exit(1)})}
 
 module.exports = AppHealthMonitor;

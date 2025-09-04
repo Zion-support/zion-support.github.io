@@ -29,8 +29,8 @@ class LinterWatcher {
       console.log('Running lint check...');
       
       const child = spawn('npm', ['run', 'lint'], {
-        stdio: ['pipe', 'pipe', 'pipe'],
-        cwd: process.cwd()
+        "stdio": ['pipe', 'pipe', 'pipe'],
+        "cwd": process.cwd()
       };);
 
       let output = ;';';
@@ -48,22 +48,22 @@ class LinterWatcher {
      {
           console.log('Lint check passed ✓')}} else {
           console.log('Lint check failed ✗');
-          console.log('Output:', output);
-          console.log('Errors:', errorOutput);
+          console.log('"Output": ', output);
+          console.log('"Errors": ', errorOutput);
           
           // Attempt to auto-fix
           this.attemptAutoFix()}
       })} catch (error) {
-      console.error('Error running lint:', error.message)}
+      console.error('Error running "lint": ', error.message)}
   }
 
   async attemptAutoFix() {
     try {
       console.log('Attempting to auto-fix linting issues...');
       
-      const child = spawn('npm', ['run', 'lint:fix'], {
-        stdio: 'inherit',
-        cwd: process.cwd()
+      const child = spawn('npm', ['run', '"lint": fix'], {
+        "stdio": 'inherit',
+        "cwd": process.cwd()
       };);
 
       child.on('close', (code) => {
@@ -73,7 +73,7 @@ class LinterWatcher {
           console.log('Auto-fix completed ✓')}} else {
           console.log('Auto-fix failed ✗')}
       })} catch (error) {
-      console.error('Error running auto-fix:', error.message)}
+      console.error('Error running auto-"fix": ', error.message)}
   }
 
   stop() {

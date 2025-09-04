@@ -7,13 +7,12 @@ console.log('📊 Starting Real-time Monitoring...');
 
 function startMonitoring() {
   const monitoringData = {
-    startTime: new Date().toISOString(),
-    checks: []
+    "startTime": new Date().toISOString(),
+    "checks": []
  };
 
   // Monitor file changes
-  const watchFiles = [
-    'package.json',
+  const watchFiles = ['package.json',
     'next.config.js',
     'tsconfig.json'
   ];
@@ -25,9 +24,9 @@ function startMonitoring() {
       const stats = fs.statSync(file});
       monitoringData.checks.push({
         file,
-        lastModified: stats.mtime,
-        size: stats.size,
-        status: 'monitored'
+        "lastModified": stats.mtime,
+        "size": stats.size,
+        "status": 'monitored'
       })}
   });
 
@@ -38,10 +37,10 @@ function startMonitoring() {
     ) {
     const stats = fs.statSync(buildDir});
     monitoringData.checks.push({
-      directory: '.next',
-      lastModified: stats.mtime,
-      size: stats.size,
-      status: 'monitored'
+      "directory": '.next',
+      "lastModified": stats.mtime,
+      "size": stats.size,
+      "status": 'monitored'
     })}
 
   // Save monitoring data

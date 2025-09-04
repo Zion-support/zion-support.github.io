@@ -18,15 +18,15 @@ class PredictiveAnalyticsEngine {
     this.modelFile = path.join(this.projectRoot, 'logs', 'ml-model.json');
     
     this.mlModel = {
-      failurePrediction: {
+      "failurePrediction": {
         threshold: parseFloat(process.env.ALERT_THRESHOLD) || 0.8,
-        accuracy: 0.85,
-        features: ['memory_usage', 'cpu_usage', 'error_rate', 'restart_count', 'uptime']
+        "accuracy": 0.85,
+        "features": ['memory_usage', 'cpu_usage', 'error_rate', 'restart_count', 'uptime']
       },
-      performancePrediction: {
+      "performancePrediction": {
         threshold: 0.6,
-        accuracy: 0.90,
-        features: ['response_time', 'throughput', 'resource_utilization']
+        "accuracy": 0.90,
+        "features": ['response_time', 'throughput', 'resource_utilization']
       }
     };
     
@@ -37,7 +37,7 @@ class PredictiveAnalyticsEngine {
 
   async ensureLogsDirectory() {
     try {
-      await fs.mkdir(path.join(this.projectRoot, 'logs'), { recursive: true });
+      await fs.mkdir(path.join(this.projectRoot, 'logs'), { "recursive": true });
       await this.loadHistoricalData();
     } catch (error) {
       console.log('Logs directory already exists');
@@ -67,7 +67,7 @@ class PredictiveAnalyticsEngine {
     try {
       await fs.writeFile(this.dataFile, JSON.stringify(this.historicalData, null, 2));
     } catch (error) {
-      this.log(`❌ Failed to save historical data: ${error.message}`, 'ERROR');
+      this.log(`❌ Failed to save historical "data": ${error.message}`, 'ERROR');
     }
   }
 
@@ -77,7 +77,7 @@ class PredictiveAnalyticsEngine {
     return new Promise((resolve, reject) => {
       pm2.connect((err) => {
         if (err) {
-          this.log(`❌ Failed to connect to PM2: ${err.message}`, 'ERROR');
+          this.log(`❌ Failed to connect to "PM2": ${err.message}`, 'ERROR');
           reject(err);
           return;
         }
@@ -113,19 +113,19 @@ class PredictiveAnalyticsEngine {
       
       const metrics = {
         timestamp,
-        processes: processes.map(process => ({
+        "processes": processes.map(process => ({
           name: process.name,
-          status: process.pm2_env.status,
-          memory: process.monit.memory || 0,
-          cpu: process.monit.cpu || 0,
-          uptime: process.pm2_env.pm_uptime,
-          restarts: process.pm2_env.restart_time || 0,
-          pid: process.pid
+          "status": process.pm2_env.status,
+          "memory": process.monit.memory || 0,
+          "cpu": process.monit.cpu || 0,
+          "uptime": process.pm2_env.pm_uptime,
+          "restarts": process.pm2_env.restart_time || 0,
+          "pid": process.pid
         })),
-        system: {
+        "system": {
           totalMemory: await this.getTotalMemory(),
-          totalCPU: await this.getTotalCPU(),
-          loadAverage: await this.getLoadAverage()
+          "totalCPU": await this.getTotalCPU(),
+          "loadAverage": await this.getLoadAverage()
         }
       };
       
@@ -140,7 +140,7 @@ class PredictiveAnalyticsEngine {
       this.log(`📊 Collected metrics for ${processes.length} processes`);
       
     } catch (error) {
-      this.log(`❌ Metrics collection failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Metrics collection "failed": ${error.message}`, 'ERROR');
     }
   }
 
@@ -158,7 +158,7 @@ class PredictiveAnalyticsEngine {
 
   async getTotalMemory() {
     try {
-      const result = execSync('free -m', { encoding: 'utf8' });
+      const result = execSync('free -m', { "encoding": 'utf8' });
       const lines = result.split('\n');
       const memLine = lines[1].split(/\s+/);
       return parseInt(memLine[1]) * 1024 * 1024; // Convert to bytes
@@ -169,7 +169,7 @@ class PredictiveAnalyticsEngine {
 
   async getTotalCPU() {
     try {
-      const result = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' });
+      const result = execSync('top -bn1 | grep "Cpu(s)"', { "encoding": 'utf8' });
       const cpuMatch = result.match(/(\d+\.\d+)%us/);
       return cpuMatch ? parseFloat(cpuMatch[1]) : 0;
     } catch (error) {
@@ -179,8 +179,8 @@ class PredictiveAnalyticsEngine {
 
   async getLoadAverage() {
     try {
-      const result = execSync('uptime', { encoding: 'utf8' });
-      const loadMatch = result.match(/load average: ([\d.]+), ([\d.]+), ([\d.]+)/);
+      const result = execSync('uptime', { "encoding": 'utf8' });
+      const loadMatch = result.match(/load "average": ([\d.]+), ([\d.]+), ([\d.]+)/);
       return loadMatch ? {
         '1min': parseFloat(loadMatch[1]),
         '5min': parseFloat(loadMatch[2]),
@@ -199,19 +199,19 @@ class PredictiveAnalyticsEngine {
     
     try {
       const patterns = {
-        memoryTrend: this.analyzeMemoryTrend(),
-        cpuTrend: this.analyzeCPUTrend(),
-        errorPattern: this.analyzeErrorPattern(),
-        restartPattern: this.analyzeRestartPattern()
+        "memoryTrend": this.analyzeMemoryTrend(),
+        "cpuTrend": this.analyzeCPUTrend(),
+        "errorPattern": this.analyzeErrorPattern(),
+        "restartPattern": this.analyzeRestartPattern()
       };
       
-      this.log(`🔍 Pattern analysis completed: ${Object.keys(patterns).length} patterns identified`);
+      this.log(`🔍 Pattern analysis "completed": ${Object.keys(patterns).length} patterns identified`);
       
       // Store patterns for ML model
       this.mlModel.patterns = patterns;
       
     } catch (error) {
-      this.log(`❌ Pattern analysis failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Pattern analysis "failed": ${error.message}`, 'ERROR');
     }
   }
 
@@ -223,9 +223,9 @@ class PredictiveAnalyticsEngine {
     
     const trend = this.calculateTrend(memoryValues);
     return {
-      direction: trend > 0 ? 'increasing' : 'decreasing',
-      rate: Math.abs(trend),
-      prediction: this.predictMemoryUsage(memoryValues)
+      "direction": trend > 0 ? 'increasing' : 'decreasing',
+      "rate": Math.abs(trend),
+      "prediction": this.predictMemoryUsage(memoryValues)
     };
   }
 
@@ -237,9 +237,9 @@ class PredictiveAnalyticsEngine {
     
     const trend = this.calculateTrend(cpuValues);
     return {
-      direction: trend > 0 ? 'increasing' : 'decreasing',
-      rate: Math.abs(trend),
-      prediction: this.predictCPUUsage(cpuValues)
+      "direction": trend > 0 ? 'increasing' : 'decreasing',
+      "rate": Math.abs(trend),
+      "prediction": this.predictCPUUsage(cpuValues)
     };
   }
 
@@ -254,9 +254,9 @@ class PredictiveAnalyticsEngine {
     const errorTrend = this.calculateTrend(errorRates);
     
     return {
-      average: avgErrorRate,
-      trend: errorTrend > 0 ? 'increasing' : 'decreasing',
-      risk: avgErrorRate > 0.1 ? 'high' : avgErrorRate > 0.05 ? 'medium' : 'low'
+      "average": avgErrorRate,
+      "trend": errorTrend > 0 ? 'increasing' : 'decreasing',
+      "risk": avgErrorRate > 0.1 ? 'high' : avgErrorRate > 0.05 ? 'medium' : 'low'
     };
   }
 
@@ -270,9 +270,9 @@ class PredictiveAnalyticsEngine {
     const restartTrend = this.calculateTrend(restartCounts);
     
     return {
-      total: totalRestarts,
-      trend: restartTrend > 0 ? 'increasing' : 'decreasing',
-      frequency: totalRestarts / recentData.length
+      "total": totalRestarts,
+      "trend": restartTrend > 0 ? 'increasing' : 'decreasing',
+      "frequency": totalRestarts / recentData.length
     };
   }
 
@@ -280,7 +280,7 @@ class PredictiveAnalyticsEngine {
     if (values.length < 2) return 0;
     
     const n = values.length;
-    const x = Array.from({ length: n }, (_, i) => i);
+    const x = Array.from({ "length": n }, (_, i) => i);
     const y = values;
     
     const sumX = x.reduce((sum, val) => sum + val, 0);
@@ -320,11 +320,11 @@ class PredictiveAnalyticsEngine {
     
     try {
       const predictions = {
-        timestamp: Date.now(),
-        failureRisk: await this.predictFailureRisk(),
-        performanceScore: await this.predictPerformanceScore(),
-        resourceNeeds: await this.predictResourceNeeds(),
-        maintenanceWindow: await this.predictMaintenanceWindow()
+        "timestamp": Date.now(),
+        "failureRisk": await this.predictFailureRisk(),
+        "performanceScore": await this.predictPerformanceScore(),
+        "resourceNeeds": await this.predictResourceNeeds(),
+        "maintenanceWindow": await this.predictMaintenanceWindow()
       };
       
       this.predictions.push(predictions);
@@ -337,10 +337,10 @@ class PredictiveAnalyticsEngine {
       await this.savePredictions();
       await this.triggerAlerts(predictions);
       
-      this.log(`🔮 Generated predictions: Failure Risk: ${predictions.failureRisk.risk}, Performance: ${predictions.performanceScore.score}`);
+      this.log(`🔮 Generated "predictions": Failure Risk: ${predictions.failureRisk.risk}, "Performance": ${predictions.performanceScore.score}`);
       
     } catch (error) {
-      this.log(`❌ Prediction generation failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Prediction generation "failed": ${error.message}`, 'ERROR');
     }
   }
 
@@ -352,11 +352,11 @@ class PredictiveAnalyticsEngine {
     const failureScore = this.calculateFailureScore(features);
     
     return {
-      score: failureScore,
-      risk: failureScore > this.mlModel.failurePrediction.threshold ? 'high' : 
+      "score": failureScore,
+      "risk": failureScore > this.mlModel.failurePrediction.threshold ? 'high' : 
             failureScore > 0.5 ? 'medium' : 'low',
-      confidence: this.mlModel.failurePrediction.accuracy,
-      factors: this.identifyFailureFactors(features)
+      "confidence": this.mlModel.failurePrediction.accuracy,
+      "factors": this.identifyFailureFactors(features)
     };
   }
 
@@ -367,12 +367,12 @@ class PredictiveAnalyticsEngine {
     const performanceScore = this.calculatePerformanceScore(features);
     
     return {
-      score: performanceScore,
-      level: performanceScore > 0.8 ? 'excellent' : 
+      "score": performanceScore,
+      "level": performanceScore > 0.8 ? 'excellent' : 
              performanceScore > 0.6 ? 'good' : 
              performanceScore > 0.4 ? 'fair' : 'poor',
-      confidence: this.mlModel.performancePrediction.accuracy,
-      recommendations: this.generatePerformanceRecommendations(performanceScore)
+      "confidence": this.mlModel.performancePrediction.accuracy,
+      "recommendations": this.generatePerformanceRecommendations(performanceScore)
     };
   }
 
@@ -382,15 +382,15 @@ class PredictiveAnalyticsEngine {
     const cpuTrend = this.analyzeCPUTrend();
     
     return {
-      memory: {
+      "memory": {
         current: memoryTrend.prediction,
-        recommendation: memoryTrend.prediction > 1024 * 1024 * 1024 ? 'increase' : 'maintain',
-        urgency: memoryTrend.rate > 0.1 ? 'high' : 'low'
+        "recommendation": memoryTrend.prediction > 1024 * 1024 * 1024 ? 'increase' : 'maintain',
+        "urgency": memoryTrend.rate > 0.1 ? 'high' : 'low'
       },
-      cpu: {
+      "cpu": {
         current: cpuTrend.prediction,
-        recommendation: cpuTrend.prediction > 80 ? 'scale_up' : 'maintain',
-        urgency: cpuTrend.rate > 5 ? 'high' : 'low'
+        "recommendation": cpuTrend.prediction > 80 ? 'scale_up' : 'maintain',
+        "urgency": cpuTrend.rate > 5 ? 'high' : 'low'
       }
     };
   }
@@ -402,20 +402,20 @@ class PredictiveAnalyticsEngine {
     const maintenanceScore = (restartPattern.frequency + errorPattern.average) / 2;
     
     return {
-      score: maintenanceScore,
-      recommended: maintenanceScore > 0.1,
-      urgency: maintenanceScore > 0.2 ? 'high' : maintenanceScore > 0.1 ? 'medium' : 'low',
-      suggestedTime: this.calculateOptimalMaintenanceTime()
+      "score": maintenanceScore,
+      "recommended": maintenanceScore > 0.1,
+      "urgency": maintenanceScore > 0.2 ? 'high' : maintenanceScore > 0.1 ? 'medium' : 'low',
+      "suggestedTime": this.calculateOptimalMaintenanceTime()
     };
   }
 
   extractFeatures(data) {
     const features = {
-      memory_usage: 0,
-      cpu_usage: 0,
-      error_rate: 0,
-      restart_count: 0,
-      uptime: 0
+      "memory_usage": 0,
+      "cpu_usage": 0,
+      "error_rate": 0,
+      "restart_count": 0,
+      "uptime": 0
     };
     
     data.forEach(d => {
@@ -441,10 +441,10 @@ class PredictiveAnalyticsEngine {
   calculateFailureScore(features) {
     // Weighted scoring system
     const weights = {
-      memory_usage: 0.3,
-      cpu_usage: 0.25,
-      error_rate: 0.25,
-      restart_count: 0.2
+      "memory_usage": 0.3,
+      "cpu_usage": 0.25,
+      "error_rate": 0.25,
+      "restart_count": 0.2
     };
     
     let score = 0;
@@ -522,18 +522,18 @@ class PredictiveAnalyticsEngine {
 
   async triggerAlerts(predictions) {
     if (predictions.failureRisk.risk === 'high') {
-      this.log(`🚨 HIGH FAILURE RISK ALERT: ${predictions.failureRisk.score}`, 'ERROR');
+      this.log(`🚨 HIGH FAILURE RISK "ALERT": ${predictions.failureRisk.score}`, 'ERROR');
       await this.sendAlert('failure_risk', predictions.failureRisk);
     }
     
     if (predictions.performanceScore.level === 'poor') {
-      this.log(`⚠️ PERFORMANCE ALERT: ${predictions.performanceScore.score}`, 'WARN');
+      this.log(`⚠️ PERFORMANCE "ALERT": ${predictions.performanceScore.score}`, 'WARN');
       await this.sendAlert('performance', predictions.performanceScore);
     }
     
     if (predictions.resourceNeeds.memory.urgency === 'high' || 
         predictions.resourceNeeds.cpu.urgency === 'high') {
-      this.log(`📈 RESOURCE ALERT: Memory/CPU needs attention`, 'WARN');
+      this.log("📈 RESOURCE "ALERT": Memory/CPU needs attention", 'WARN');
       await this.sendAlert('resources', predictions.resourceNeeds);
     }
   }
@@ -541,10 +541,10 @@ class PredictiveAnalyticsEngine {
   async sendAlert(type, data) {
     try {
       const alert = {
-        timestamp: new Date().toISOString(),
+        "timestamp": new Date().toISOString(),
         type,
         data,
-        severity: type === 'failure_risk' ? 'critical' : 'warning'
+        "severity": type === 'failure_risk' ? 'critical' : 'warning'
       };
       
       const alertFile = path.join(this.projectRoot, 'logs', 'alerts.json');
@@ -561,7 +561,7 @@ class PredictiveAnalyticsEngine {
       await fs.writeFile(alertFile, JSON.stringify(alerts, null, 2));
       
     } catch (error) {
-      this.log(`❌ Failed to send alert: ${error.message}`, 'ERROR');
+      this.log(`❌ Failed to send "alert": ${error.message}`, 'ERROR');
     }
   }
 
@@ -570,7 +570,7 @@ class PredictiveAnalyticsEngine {
       const predictionsFile = path.join(this.projectRoot, 'logs', 'predictions.json');
       await fs.writeFile(predictionsFile, JSON.stringify(this.predictions, null, 2));
     } catch (error) {
-      this.log(`❌ Failed to save predictions: ${error.message}`, 'ERROR');
+      this.log(`❌ Failed to save "predictions": ${error.message}`, 'ERROR');
     }
   }
 
@@ -579,12 +579,12 @@ class PredictiveAnalyticsEngine {
     
     try {
       const analysis = {
-        timestamp: new Date().toISOString(),
-        dataPoints: this.historicalData.length,
-        predictions: this.predictions.length,
-        modelAccuracy: this.calculateModelAccuracy(),
-        trends: this.analyzeLongTermTrends(),
-        insights: this.generateInsights()
+        "timestamp": new Date().toISOString(),
+        "dataPoints": this.historicalData.length,
+        "predictions": this.predictions.length,
+        "modelAccuracy": this.calculateModelAccuracy(),
+        "trends": this.analyzeLongTermTrends(),
+        "insights": this.generateInsights()
       };
       
       const reportFile = path.join(this.projectRoot, 'logs', 'deep-analytics-report.json');
@@ -593,7 +593,7 @@ class PredictiveAnalyticsEngine {
       this.log('📊 Deep analysis completed and saved');
       
     } catch (error) {
-      this.log(`❌ Deep analysis failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Deep analysis "failed": ${error.message}`, 'ERROR');
     }
   }
 
@@ -608,7 +608,7 @@ class PredictiveAnalyticsEngine {
 
   analyzeLongTermTrends() {
     if (this.historicalData.length < 50) {
-      return { message: 'Insufficient data for long-term analysis' };
+      return { "message": 'Insufficient data for long-term analysis' };
     }
     
     const longTermData = this.historicalData.slice(-50);
@@ -616,9 +616,9 @@ class PredictiveAnalyticsEngine {
     const cpuTrend = this.analyzeCPUTrend();
     
     return {
-      memory: memoryTrend,
-      cpu: cpuTrend,
-      stability: this.calculateSystemStability(longTermData)
+      "memory": memoryTrend,
+      "cpu": cpuTrend,
+      "stability": this.calculateSystemStability(longTermData)
     };
   }
 
@@ -631,8 +631,8 @@ class PredictiveAnalyticsEngine {
     const stability = Math.max(0, 1 - (avgRestarts / 10)); // Normalize to 0-1
     
     return {
-      score: stability,
-      level: stability > 0.8 ? 'stable' : stability > 0.6 ? 'moderate' : 'unstable'
+      "score": stability,
+      "level": stability > 0.8 ? 'stable' : stability > 0.6 ? 'moderate' : 'unstable'
     };
   }
 
@@ -677,7 +677,7 @@ class PredictiveAnalyticsEngine {
       this.log('✅ ML model updated successfully');
       
     } catch (error) {
-      this.log(`❌ ML model update failed: ${error.message}`, 'ERROR');
+      this.log(`❌ ML model update "failed": ${error.message}`, 'ERROR');
     }
   }
 
@@ -694,7 +694,7 @@ class PredictiveAnalyticsEngine {
       });
       
     } catch (error) {
-      this.log(`❌ Fatal error: ${error.message}`, 'ERROR');
+      this.log(`❌ Fatal "error": ${error.message}`, 'ERROR');
       process.exit(1);
     }
   }

@@ -6,10 +6,9 @@ const path = require('path');
 console.log('🔍 SEO Optimizer Starting...\n');
 
 // SEO optimization tasks
-const seoChecks = [
-  {
-    name: 'Meta Tags Check',
-    action: () => {
+const seoChecks = [{
+    "name": 'Meta Tags Check',
+    "action": () => {
       console.log('🏷️ Checking meta tags...');
       const pagesDir = path.join(process.cwd(), 'pages');
       if (fs.existsSync(pagesDir)) {
@@ -31,11 +30,10 @@ const seoChecks = [
 
         console.log(`Found meta tags in ${metaTagCount}/${pages.length} pages`);
       }
-    },
-  },
+    }},
   {
-    name: 'Sitemap Check',
-    action: () => {
+    "name": 'Sitemap Check',
+    "action": () => {
       console.log('🗺️ Checking sitemap...');
       const sitemapPath = path.join(process.cwd(), 'public', 'sitemap.xml');
       if (fs.existsSync(sitemapPath)) {
@@ -43,11 +41,10 @@ const seoChecks = [
       } else {
         console.log('⚠️ Sitemap not found - consider creating one');
       }
-    },
-  },
+    }},
   {
-    name: 'Robots.txt Check',
-    action: () => {
+    "name": 'Robots.txt Check',
+    "action": () => {
       console.log('🤖 Checking robots.txt...');
       const robotsPath = path.join(process.cwd(), 'public', 'robots.txt');
       if (fs.existsSync(robotsPath)) {
@@ -55,11 +52,10 @@ const seoChecks = [
       } else {
         console.log('⚠️ Robots.txt not found - consider creating one');
       }
-    },
-  },
+    }},
   {
-    name: 'Structured Data Check',
-    action: () => {
+    "name": 'Structured Data Check',
+    "action": () => {
       console.log('📊 Checking structured data...');
       const pagesDir = path.join(process.cwd(), 'pages');
       if (fs.existsSync(pagesDir)) {
@@ -82,11 +78,10 @@ const seoChecks = [
           `Found structured data in ${structuredDataCount}/${pages.length} pages`
         );
       }
-    },
-  },
+    }},
   {
-    name: 'Alt Text Check',
-    action: () => {
+    "name": 'Alt Text Check',
+    "action": () => {
       console.log('🖼️ Checking image alt text...');
       const pagesDir = path.join(process.cwd(), 'pages');
       if (fs.existsSync(pagesDir)) {
@@ -108,13 +103,12 @@ const seoChecks = [
           });
         });
 
-        console.log(`Images with alt text: ${imagesWithAlt}/${totalImages}`);
+        console.log(`Images with alt "text": ${imagesWithAlt}/${totalImages}`);
       }
-    },
-  },
+    }},
   {
-    name: 'Heading Structure Check',
-    action: () => {
+    "name": 'Heading Structure Check',
+    "action": () => {
       console.log('📝 Checking heading structure...');
       const pagesDir = path.join(process.cwd(), 'pages');
       if (fs.existsSync(pagesDir)) {
@@ -130,10 +124,9 @@ const seoChecks = [
           h2Count += (content.match(/<h2[^>]*>/g) || []).length;
         });
 
-        console.log(`H1 tags: ${h1Count}, H2 tags: ${h2Count}`);
+        console.log(`H1 "tags": ${h1Count}, H2 "tags": ${h2Count}`);
       }
-    },
-  },
+    }},
 ];
 
 // Run SEO checks
@@ -147,32 +140,29 @@ for (const check of seoChecks) {
     console.log(`✅ ${check.name} completed`);
     successCount++;
   } catch (error) {
-    console.log(`❌ ${check.name} failed: ${error.message}`);
+    console.log(`❌ ${check.name} "failed": ${error.message}`);
   }
 }
 
-console.log(`\n🎉 SEO Optimization Complete!`);
-console.log(`✅ Successfully completed: ${successCount}/${totalCount} checks`);
+console.log("\n🎉 SEO Optimization Complete!");
+console.log(`✅ Successfully "completed": ${successCount}/${totalCount} checks`);
 
 // Generate SEO report
 const report = {
-  timestamp: new Date().toISOString(),
-  checks: seoChecks.map(check => ({
+  "timestamp": new Date().toISOString(),
+  "checks": seoChecks.map(check => ({
     name: check.name,
-    status: 'completed',
-  })),
-  summary: {
+    "status": 'completed'})),
+  "summary": {
     total: totalCount,
-    successful: successCount,
-    failed: totalCount - successCount,
-  },
-};
+    "successful": successCount,
+    "failed": totalCount - successCount}};
 
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
-  fs.mkdirSync(reportsDir, { recursive: true });
+  fs.mkdirSync(reportsDir, { "recursive": true });
 }
 
 const reportFile = path.join(reportsDir, `seo-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-console.log(`📄 SEO report saved to: ${reportFile}`);
+console.log(`📄 SEO report saved "to": ${reportFile}`);

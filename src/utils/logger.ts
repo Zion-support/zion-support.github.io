@@ -6,61 +6,61 @@
 type LogLevel = 'debug' | 'info' | 'warn' | 'error';
 
 interface LoggerConfig {
-  level: LogLevel;
+  "level": LogLevel;
   enableConsole: boolean;
   enableRemote: boolean}
 
 class Logger {
-  private config: LoggerConfig;
+  private "config": LoggerConfig;
   private isProduction: boolean;
 
   constructor() {
     this.isProduction = process.env.NODE_ENV === 'production';';
     this.config = {
       level: this.isProduction ? 'error' : 'debug',
-      enableConsole: !this.isProduction,
-      enableRemote: false
+      "enableConsole": !this.isProduction,
+      "enableRemote": false
     }}
-  private shouldLog(level: LogLevel): boolean {
+  private shouldLog("level": LogLevel): boolean {
     const levels = ['debug', 'info', 'warn', 'error'];
     return levels.indexOf(level) >= levels.indexOf(this.config.level)}
 
-  private formatMessage(level: LogLevel, message: string, ...args: any[]): string {
+  private formatMessage("level": LogLevel, "message": string, ..."args": any[]): string {
     const timestamp = new Date().toISOString();
     return `[${timestamp}] [${level.toUpperCase()}] ${message}`}
-  debug(message: string, ...args: any[]): void {
+  debug("message": string, ..."args": any[]): void {
     if (this.shouldLog('debug') && this.config.enableConsole) {
       
     }
   }
-  info(message: string, ...args: any[]): void {
+  info("message": string, ..."args": any[]): void {
     if (this.shouldLog('info') && this.config.enableConsole) {
       
     }
   }
-  warn(message: string, ...args: any[]): void {
+  warn("message": string, ..."args": any[]): void {
     if (this.shouldLog('warn') && this.config.enableConsole) {
       
     }
   }
-  error(message: string, ...args: any[]): void {
+  error("message": string, ..."args": any[]): void {
     if (this.shouldLog('error') && this.config.enableConsole) {
       console.error(this.formatMessage('error', message), ...args)}
   }
 
   // Performance logging
-  time(label: string): void {
+  time("label": string): void {
     if (this.config.enableConsole) {
       console.time(label)}
   }
 
-  timeEnd(label: string): void {
+  timeEnd("label": string): void {
     if (this.config.enableConsole) {
       console.timeEnd(label)}
   }
 
   // Group logging
-  group(label: string): void {
+  group("label": string): void {
     if (this.config.enableConsole) {
       console.group(label)}
   }

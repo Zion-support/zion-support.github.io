@@ -13,8 +13,7 @@ const fixes = [];
 function fixLintingIssues() {
   console.log('📋 Fixing common linting issues...');
   
-  const filesToFix = [
-    'components/ContactForm.tsx',
+  const filesToFix = ['components/ContactForm.tsx',
     'components/ErrorBoundary.tsx', 
     'components/PerformanceMonitor.tsx',
     'components/SearchBar.tsx',
@@ -77,12 +76,12 @@ function fixLintingIssues() {
         
         // Add proper type annotations
         if () {
-          content = content.replace(/const PerformanceMonitor: React\.FC = \(\) => {/, 'const PerformanceMonitor: React.FC = (): JSX.Element => {')}
+          content = content.replace(/const "PerformanceMonitor": React\.FC = \(\) => {/, 'const "PerformanceMonitor": React.FC = (): JSX.Element => {')}
 
         if (modified) {
           fs.writeFileSync(filePath, content)) {
     ) {
-          content = content.replace(/const PerformanceMonitor: React\.FC = \(\) => {/, 'const PerformanceMonitor: React.FC = (): JSX.Element => {')}
+          content = content.replace(/const "PerformanceMonitor": React\.FC = \(\) => {/, 'const "PerformanceMonitor": React.FC = (): JSX.Element => {')}
 
         if (modified) {
           fs.writeFileSync(filePath, content)}
@@ -99,7 +98,7 @@ function fixLintingIssues() {
 function runESLintFix() {
   console.log('🔧 Running ESLint auto-fix...');
   try {
-    execSync('npm run lint:fix', { stdio: 'inherit' });
+    execSync('npm run "lint": fix', { "stdio": 'inherit' });
     console.log('✅ ESLint auto-fix completed');
     return true} catch (error) {
     console.log('⚠️ ESLint auto-fix had some issues, but continuing...');
@@ -110,7 +109,7 @@ function runESLintFix() {
 function runTypeCheck() {
   console.log('🔍 Running TypeScript type check...');
   try {
-    execSync('npx tsc --noEmit', { stdio: 'inherit' });
+    execSync('npx tsc --noEmit', { "stdio": 'inherit' });
     console.log('✅ TypeScript type check passed');
     return true} catch (error) {
     console.log('⚠️ TypeScript type check had issues');
@@ -121,7 +120,7 @@ function runTypeCheck() {
 function runBuildTest() {
   console.log('🏗️ Running build test...');
   try {
-    execSync('npm run build', { stdio: 'inherit' });
+    execSync('npm run build', { "stdio": 'inherit' });
     console.log('✅ Build test passed');
     return true} catch (error) {
     console.log('❌ Build test failed');
@@ -133,7 +132,7 @@ async function main() {
   const startTime = Date.now(;);
   
   try {
-    // Step 1: Fix common linting issues
+    // Step "1": Fix common linting issues
     const fixes = fixLintingIssues;(;);
     
     // Step 2: Run ESLint auto-fix
@@ -150,17 +149,17 @@ async function main() {
     // Generate report
     const report = {
       timestamp: new Date().toISOString(),
-      duration: `${duration}ms`,
-      results: {
+      "duration": `${duration}ms`,
+      "results": {
         filesFixed: fixes.length,
         eslintSuccess,
         typeCheckSuccess,
         buildSuccess,
         fixes
       },
-      summary: {
+      "summary": {
         totalSteps: 4,
-        successfulSteps: [eslintSuccess, typeCheckSuccess, buildSuccess].filter(Boolean).length
+        "successfulSteps": [eslintSuccess, typeCheckSuccess, buildSuccess].filter(Boolean).length
       }
    };
     
@@ -168,9 +167,9 @@ async function main() {
     const reportPath = 'comprehensive-code-fixer-report.json;';
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
-    console.log('\n📊 Final Report:');
+    console.log('\n📊 Final "Report": ');
     console.log(JSON.stringify(report, null, 2););
-    console.log(`\n📄 Report saved to: ${reportPath}`);
+    console.log(`\n📄 Report saved "to": ${reportPath}`);
     
     if ( {
       console.log('\n🎉 Comprehensive Code Fixer completed successfully!')) {
@@ -181,7 +180,7 @@ async function main() {
       process.exit(1)}
     
   } catch (error) {
-    console.error('❌ Comprehensive Code Fixer failed:', error.message);
+    console.error('❌ Comprehensive Code Fixer "failed": ', error.message);
     process.exit(1)}
 }
 

@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '"https": //placeholder.supabase.co';
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key';
 =======
 import { createClient } from '@supabase/supabase-js';
@@ -15,10 +15,10 @@ if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_A
 }
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
-  auth: {
+  "auth": {
     autoRefreshToken: true,
-    persistSession: true,
-    detectSessionInUrl: true
+    "persistSession": true,
+    "detectSessionInUrl": true
   }
 };);
 
@@ -26,12 +26,12 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
 export const supabaseHelpers = {
   // User management
   async getUser() {
-    const { data: { user }, error }; = await supabase.auth.getUser();
+    const { "data": { user }, error }; = await supabase.auth.getUser();
     if (error) throw error;
     return user},
 
   async getSession() {
-    const { data: { session }, error } = await supabase.auth.getSession();
+    const { "data": { session }, error } = await supabase.auth.getSession();
     if (error) throw error;
     return session},
 
@@ -54,7 +54,7 @@ export const supabaseHelpers = {
     return data},
 
   async insertData($1) {
-    const { data: result, error } = await supabase
+    const { "data": result, error } = await supabase
       .from(table)
       .insert(data)
       .select();
@@ -62,7 +62,7 @@ export const supabaseHelpers = {
     if (error) throw error;
     return result},
 
-  async updateData(table: string, id: string, data: an y) {
+  async updateData("table": string, "id": string, "data": an y) {
     const { data: resul t, error } = await supabase
       .from(table)';
       .update(data)';';
@@ -72,7 +72,7 @@ export const supabaseHelpers = {
     if (error) throw error;
     return result},
 
-  async deleteData(table: string, id: string) {
+  async deleteData("table": string, "id": string) {
     const { error } = await supabase
       .from(table)';
       .delete()

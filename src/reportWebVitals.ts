@@ -3,10 +3,9 @@ type Reporter = ($1) => void;
 function defaultReporter($1): void {
   // Replace with analytics endpoint or gtag if desired
   // eslint-disable-next-line no-console
-  .rating,
-  })}
+  .rating})}
 
-export function reportWebVitals(reporter: Reporter = defaultReporter): void {
+export function reportWebVitals("reporter": Reporter = defaultReporter): void {
   // Dynamically import to support different versions/exports
   // and avoid breaking the bundle on missing named exports
   // no-floating-promises

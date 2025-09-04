@@ -14,9 +14,9 @@ class AIProcessManager {
     this.processHistory = [];
     this.performanceMetrics = [];
     this.predictionModel = {
-      failureThreshold: 0.7,
-      performanceThreshold: 0.6,
-      learningRate: 0.1
+      "failureThreshold": 0.7,
+      "performanceThreshold": 0.6,
+      "learningRate": 0.1
     };
     this.reportDir = path.join(process.cwd(), 'ai-reports');
     this.ensureDirectories();
@@ -24,8 +24,8 @@ class AIProcessManager {
 
   async ensureDirectories() {
     try {
-      await fs.mkdir(this.reportDir, { recursive: true });
-      await fs.mkdir(path.join(process.cwd(), 'logs'), { recursive: true });
+      await fs.mkdir(this.reportDir, { "recursive": true });
+      await fs.mkdir(path.join(process.cwd(), 'logs'), { "recursive": true });
     } catch (error) {
       console.log('Directories already exist or created');
     }
@@ -35,7 +35,7 @@ class AIProcessManager {
     return new Promise((resolve, reject) => {
       pm2.connect((err) => {
         if (err) {
-          console.error('❌ Failed to connect to PM2:', err);
+          console.error('❌ Failed to connect to "PM2": ', err);
           reject(err);
           return;
         }
@@ -71,17 +71,17 @@ class AIProcessManager {
         }
 
         const metrics = {
-          timestamp: Date.now(),
-          processes: processes.map(process => ({
+          "timestamp": Date.now(),
+          "processes": processes.map(process => ({
             name: process.name,
-            pid: process.pid,
-            memory: process.monit.memory,
-            cpu: process.monit.cpu,
-            status: process.pm2_env.status,
-            uptime: process.pm2_env.pm_uptime,
-            restarts: process.pm2_env.restart_time,
-            heapUsed: process.monit.heap_used,
-            heapTotal: process.monit.heap_total
+            "pid": process.pid,
+            "memory": process.monit.memory,
+            "cpu": process.monit.cpu,
+            "status": process.pm2_env.status,
+            "uptime": process.pm2_env.pm_uptime,
+            "restarts": process.pm2_env.restart_time,
+            "heapUsed": process.monit.heap_used,
+            "heapTotal": process.monit.heap_total
           }))
         };
 
@@ -235,8 +235,8 @@ class AIProcessManager {
     try {
       // Adjust memory limits
       pm2.reload(process.name, {
-        max_memory_restart: '1G',
-        instances: 1
+        "max_memory_restart": '1G',
+        "instances": 1
       }, (err) => {
         if (err) {
           console.error(`❌ Failed to optimize ${process.name}:`, err);
@@ -312,7 +312,7 @@ class AIProcessManager {
     
     // Force garbage collection if possible
     try {
-      execSync(`node -e "if (global.gc) global.gc()"`, { stdio: 'pipe' });
+      execSync("node -e "if (global.gc) global.gc()"", { "stdio": 'pipe' });
     } catch (error) {
       // GC not available, continue
     }
@@ -331,12 +331,12 @@ class AIProcessManager {
     console.log('🧠 Performing deep analysis...');
     
     const analysis = {
-      timestamp: new Date().toISOString(),
-      totalProcesses: this.processHistory[this.processHistory.length - 1]?.processes.length || 0,
-      averageMemoryUsage: this.calculateAverage('memory'),
-      averageCpuUsage: this.calculateAverage('cpu'),
-      totalRestarts: this.calculateTotalRestarts(),
-      recommendations: this.generateRecommendations()
+      "timestamp": new Date().toISOString(),
+      "totalProcesses": this.processHistory[this.processHistory.length - 1]?.processes.length || 0,
+      "averageMemoryUsage": this.calculateAverage('memory'),
+      "averageCpuUsage": this.calculateAverage('cpu'),
+      "totalRestarts": this.calculateTotalRestarts(),
+      "recommendations": this.generateRecommendations()
     };
 
     await this.saveAnalysis(analysis);
@@ -375,33 +375,33 @@ class AIProcessManager {
 
     if (avgMemory > 1024 * 1024 * 1024) {
       recommendations.push({
-        type: 'memory',
-        priority: 'high',
-        message: 'High memory usage detected. Consider optimizing memory usage or increasing limits.'
+        "type": 'memory',
+        "priority": 'high',
+        "message": 'High memory usage detected. Consider optimizing memory usage or increasing limits.'
       });
     }
 
     if (avgCpu > 70) {
       recommendations.push({
-        type: 'cpu',
-        priority: 'high',
-        message: 'High CPU usage detected. Consider scaling up or optimizing code.'
+        "type": 'cpu',
+        "priority": 'high',
+        "message": 'High CPU usage detected. Consider scaling up or optimizing code.'
       });
     }
 
     if (totalRestarts > 20) {
       recommendations.push({
-        type: 'stability',
-        priority: 'critical',
-        message: 'High restart count detected. Review error logs and improve error handling.'
+        "type": 'stability',
+        "priority": 'critical',
+        "message": 'High restart count detected. Review error logs and improve error handling.'
       });
     }
 
     if (recommendations.length === 0) {
       recommendations.push({
-        type: 'status',
-        priority: 'info',
-        message: 'All processes are running optimally.'
+        "type": 'status',
+        "priority": 'info',
+        "message": 'All processes are running optimally.'
       });
     }
 
@@ -423,27 +423,27 @@ class AIProcessManager {
       this.predictionModel.failureThreshold = Math.min(0.9, this.predictionModel.failureThreshold + 0.05);
     }
 
-    console.log(`📊 Updated prediction model - Failure threshold: ${this.predictionModel.failureThreshold}`);
+    console.log(`📊 Updated prediction model - Failure "threshold": ${this.predictionModel.failureThreshold}`);
   }
 
   async generateAIReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      model: this.predictionModel,
-      metrics: {
+      "timestamp": new Date().toISOString(),
+      "model": this.predictionModel,
+      "metrics": {
         totalProcesses: this.processHistory[this.processHistory.length - 1]?.processes.length || 0,
-        averageMemoryUsage: this.calculateAverage('memory'),
-        averageCpuUsage: this.calculateAverage('cpu'),
-        totalRestarts: this.calculateTotalRestarts()
+        "averageMemoryUsage": this.calculateAverage('memory'),
+        "averageCpuUsage": this.calculateAverage('cpu'),
+        "totalRestarts": this.calculateTotalRestarts()
       },
-      recommendations: this.generateRecommendations(),
-      processHealth: await this.analyzeProcessHealth()
+      "recommendations": this.generateRecommendations(),
+      "processHealth": await this.analyzeProcessHealth()
     };
 
     const reportPath = path.join(this.reportDir, `ai-process-manager-report-${Date.now()}.json`);
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
     
-    console.log(`📊 AI Process Manager report saved to: ${reportPath}`);
+    console.log(`📊 AI Process Manager report saved "to": ${reportPath}`);
     return report;
   }
 
@@ -482,7 +482,7 @@ async function main() {
     });
 
   } catch (error) {
-    console.error('❌ AI Process Manager failed:', error);
+    console.error('❌ AI Process Manager "failed": ', error);
     process.exit(1);
   }
 }

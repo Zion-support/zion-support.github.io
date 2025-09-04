@@ -1,26 +1,22 @@
 import React, { useState } from 'react';
 import { MessageCircle, X, Mail, Phone, Calendar, Send } from 'lucide-react';
-const FloatingContactWidget: React.FC = () => {
+const "FloatingContactWidget": React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const contactOptions = [
+  const contactOptions = [{
+      "icon": 'Mail',
+      "label": 'Email',
+      "value": 'contact@ziontechgroup.com',
+      "action": () => window.open('mailto:contact@ziontechgroup.com')},
     {
-      icon: 'Mail',
-      label: 'Email',
-      value: 'contact@ziontechgroup.com',
-      action: () => window.open('mailto:contact@ziontechgroup.com'),
-    },
+      "icon": 'Phone',
+      "label": 'Call',
+      "value": '+1 (555) 123-4567',
+      "action": () => window.open('tel:+15551234567')},
     {
-      icon: 'Phone',
-      label: 'Call',
-      value: '+1 (555) 123-4567',
-      action: () => window.open('tel:+15551234567'),
-    },
-    {
-      icon: 'Calendar',
-      label: 'Schedule',
-      value: 'Book a meeting',
-      action: () => window.open('/contact'),
-    },
+      "icon": 'Calendar',
+      "label": 'Schedule',
+      "value": 'Book a meeting',
+      "action": () => window.open('/contact')},
   ];
   return (
     <>
@@ -28,7 +24,7 @@ const FloatingContactWidget: React.FC = () => {
       {}{' '}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 left-6 z-50 w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg transition-all duration-300 flex items-center justify-center group"
+        className="fixed bottom-6 left-6 z-50 w-14 h-14 bg-blue-600 "hover": bg-blue-700 text-white rounded-full shadow-lg transition-all duration-300 flex items-center justify-center group"
         aria-label="Open contact widget"
       >
         {' '}
@@ -60,7 +56,7 @@ const FloatingContactWidget: React.FC = () => {
                 <button
                   key={index}
                   onClick={option.action}
-                  className="w-full flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors text-left"
+                  className="w-full flex items-center space-x-3 p-3 rounded-lg "hover": bg-gray-50 transition-colors text-left"
                 >
                   {' '}
                   <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
@@ -84,7 +80,7 @@ const FloatingContactWidget: React.FC = () => {
             {' '}
             <button
               onClick={() => window.open('/contact')}
-              className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2"
+              className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg "hover": bg-blue-700 transition-colors flex items-center justify-center space-x-2"
             >
               {' '}
               <Send className="w-4 h-4" /> <span>Send Message</span>{' '}

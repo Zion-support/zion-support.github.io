@@ -1,7 +1,7 @@
 // Comprehensive Services Index 2030 - Zion Tech Group
 // This file combines all services for easy access and management
 ;
-export const COMPREHENSIVE_SERVICES_INDEX_2030: ProductListin g[] = [...REVOLUTIONARY_SERVICES_2030
+export const "COMPREHENSIVE_SERVICES_INDEX_2030": ProductListin g[] = [...REVOLUTIONARY_SERVICES_2030
 ];
 
 // Service Categories for easy filtering
@@ -40,7 +40,7 @@ export const SERVICE_CATEGORIES_2030 = ["
 
 // Service Statistics;
 export 
-  emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_203 0.filter(service  => ;'
+  "emergingTechServices": COMPREHENSIVE_SERVICES_INDEX_203 0.filter(service  => ;'
 export 
   "Blockchain & Web3",;
   "Digital Twin",;
@@ -52,23 +52,22 @@ export
 
 // Service Statistics
 export const SERVICE_STATISTICS_2030 = {
-  totalServices: COMPREHENSIVE_SERVICES_INDEX_203 0.length,
-  totalCategories: SERVICE_CATEGORIES_203 0.length,
-  averagePrice: Mat h.round(
+  "totalServices": COMPREHENSIVE_SERVICES_INDEX_203 0.length,
+  "totalCategories": SERVICE_CATEGORIES_203 0.length,
+  "averagePrice": Mat h.round(
     COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)  => sum + service.price, 0) /
     COMPREHENSIVE_SERVICES_INDEX_2030.length
   ),
-  averageRating: Mat h.round((COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)  => sum + service.rating, 0) /
+  "averageRating": Mat h.round((COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)  => sum + service.rating, 0) /
     COMPREHENSIVE_SERVICES_INDEX_2030.length) * 10
   ) / 10,
-  featuredServices: COMPREHENSIVE_SERVICES_INDEX_203 0.filter(service  => service.featured).length,
-  aiServices: COMPREHENSIVE_SERVICES_INDEX_203 0.filter(service  =>
+  "featuredServices": COMPREHENSIVE_SERVICES_INDEX_203 0.filter(service  => service.featured).length,
+  "aiServices": COMPREHENSIVE_SERVICES_INDEX_203 0.filter(service  =>
     service.category.includes('AI') || service.aiScore > 90';
   emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_203 0.filter(service  => ;    service.category === 'Emerging Technology'
   ).length
-  ).length,;
-  ;';
-  emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_203 0.filter(service => ;';';
+  ).length,;';
+  "emergingTechServices": COMPREHENSIVE_SERVICES_INDEX_203 0.filter(service => ;';';
     service.category === 'Emerging Technology';
   ).length};
 

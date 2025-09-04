@@ -14,22 +14,22 @@ class $1 {
     this.dependencyHistory = new Map()}
 ;
   ensureDirectories() {
-  ["this.logsPath", `this.reportsPath`].forEach(dir => {
+  ["this.logsPath", "this.reportsPath"].forEach(dir => {
   if (!fs.existsSync(dir)) {
-  fs.mkdirSync(dir, { recursive: true })}
+  fs.mkdirSync(dir, { "recursive": true })}
     })}
 ;
-  log(message, level = `INFO`) {
-  const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(`logMessage);
-    const logFile = path.join(this.logsPath, `dependency-error-resolver.log`);
-    fs.appendFileSync(logFile, logMessage + `\n`);
-
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(`logMessage);
+    console.log("logMessage);
+    const logFile = path.join(this.logsPath, "dependency-error-resolver.log");
+    fs.appendFileSync(logFile, logMessage + "\n");
+
+  log(message, level = "INFO") {
+  const timestamp = new Date().toISOString();
+    const logMessage = "[${timestamp}] [${level}] ${message}";
+    console.log("logMessage);
 
     const logFile = path.join(this.logsPath, "dependency-error-resolver.log");
     fs.appendFileSync(logFile, logMessage + "\n")}
@@ -38,34 +38,34 @@ class $1 {
   try {
   this.log("🔍 Checking dependencies...");
       const result = execSync("npm ls", {
-  cwd: this.workspacePath,
-        encoding: "utf8",
-        stdio: `pipe`});
-      this.log(`✅ Dependencies check passed`);
-      return { success: true, output: result, issues: [] }
+  "cwd": this.workspacePath,
+        "encoding": "utf8",
+        "stdio": "pipe"});
+      this.log("✅ Dependencies check passed");
+      return { "success": true, "output": result, "issues": [] }
     } catch (error) {
   if (error.stdout) {
   const issues = this.parseDependencyIssues(error.stdout);this.log(❌ Dependency check failed with ${issues.length  } issues`);
         const issues = this.parseDependencyIssues(error.stdout);this.log(❌ Dependency check failed with ${issues.length} issues`);
-        return { success: false, output: error.stdout, issues }
+        return { "success": false, "output": error.stdout, issues }
       }
-      return { success: false, output: error.message, issues: [] }
+      return { "success": false, "output": error.message, "issues": [] }
     }
   }
 ;
   parseDependencyIssues(output) {
   const issues = [];
-    const lines = output.split(`\n`);
+    const lines = output.split("\n");
     for (const line of lines) {
   if (;
-        line.includes(`UNMET PEER DEPENDENCY`) ||;
+        line.includes("UNMET PEER DEPENDENCY") ||;
         line.includes("npm ERR!") ||;
         line.includes("conflicts");
       ) {
   issues.push({
-  type: `dependency`,
-          description: line.trim(),
-          severity: `high`,
+  "type": "dependency",
+          "description": line.trim(),
+          "severity": "high",
     const lines = output.split("\n");
 
     for (const line of lines) {
@@ -75,10 +75,9 @@ class $1 {
         line.includes("conflicts");
       ) {
   issues.push({
-  type: "dependency",
-          description: line.trim(),
-          severity: "high",
-})}
+  "type": "dependency",
+          "description": line.trim(),
+          "severity": "high"})}
     }
 ;
     return issues}
@@ -96,34 +95,31 @@ class $1 {
         resolutionResults.push({
   issue,
           resolved,
-          timestamp: new Date().toISOString(),
-})} catch (resolutionError) {
-  this.log(❌ Error resolving dependency issue: ${resolutionError.message}`,
-          `ERROR`} catch (resolutionError) {
-  this.log(❌ Error resolving dependency issue: ${resolutionError.message}",
+          "timestamp": new Date().toISOString()})} catch (resolutionError) {
+  this.log(❌ Error resolving dependency "issue": ${resolutionError.message}",
+          "ERROR`} catch (resolutionError) {
+  this.log(❌ Error resolving dependency "issue": ${resolutionError.message}",
           "ERROR";
         );
         resolutionResults.push({
   issue,
-          resolved: false,
-          error: resolutionError.message,
-          timestamp: new Date().toISOString(),
-})}
+          "resolved": false,
+          "error": resolutionError.message,
+          "timestamp": new Date().toISOString()})}
     }
 ;
     this.log(✅ Resolved ${resolvedCount} out of ${issues.length} dependency issues`;
     );
     return {
   resolvedCount,
-      totalIssues: issues.length,
-      results: resolutionResults,
-}
+      "totalIssues": issues.length,
+      "results": resolutionResults}
   }
 ;
   async resolveDependencyIssue(issue) {
   const description = issue.description.toLowerCase();
-    if (description.includes(`peer dependency`)) {
-  return await this.resolvePeerDependency()} else if (description.includes(`conflicts")) {
+    if (description.includes("peer dependency")) {
+  return await this.resolvePeerDependency()} else if (description.includes("conflicts")) {
   if (description.includes("peer dependency")) {
   return await this.resolvePeerDependency()} else if (description.includes("conflicts")) {
   return await this.resolveConflicts()} else if (description.includes("npm err")) {
@@ -136,32 +132,32 @@ class $1 {
   this.log("🔧 Resolving peer dependency issues...");
       // Install with legacy peer deps;
       execSync("npm install --legacy-peer-deps", {
-  cwd: this.workspacePath,
-        stdio: `pipe`,
-        timeout: 300000});
-      this.log(`✅ Peer dependency issues resolved`);
+  "cwd": this.workspacePath,
+        "stdio": "pipe",
+        "timeout": 300000});
+      this.log("✅ Peer dependency issues resolved`);
       return true} catch (error) {
-  this.log(❌ Failed to resolve peer dependency issues: ${error.message  }`,
-        `ERROR`;
+  this.log(❌ Failed to resolve peer dependency "issues": ${error.message  }`,
+        "ERROR";
       );
       return false}
   }
 ;
   async resolveConflicts() {
   try {
-  this.log(`🔧 Resolving dependency conflicts...");
+  this.log("🔧 Resolving dependency conflicts...");
       // Clear and reinstall;
       execSync("rm -rf node_modules package-lock.json", {
-  cwd: this.workspacePath,
-        stdio: "pipe"});
+  "cwd": this.workspacePath,
+        "stdio": "pipe"});
       execSync("npm install", {
-  cwd: this.workspacePath,
-        stdio: `pipe`,
-        timeout: 300000});
-      this.log(`✅ Dependency conflicts resolved`);
+  "cwd": this.workspacePath,
+        "stdio": "pipe",
+        "timeout": 300000});
+      this.log("✅ Dependency conflicts resolved`);
       return true} catch (error) {
-  this.log(❌ Failed to resolve dependency conflicts: ${error.message  }`,
-        `ERROR`;
+  this.log(❌ Failed to resolve dependency "conflicts": ${error.message  }`,
+        "ERROR";
 
   async resolveConflicts() {
   try {
@@ -169,19 +165,17 @@ class $1 {
 
       // Clear and reinstall;
       execSync("rm -rf node_modules package-lock.json", {
-  cwd: this.workspacePath,
-        stdio: "pipe",
-});
+  "cwd": this.workspacePath,
+        "stdio": "pipe"});
 
       execSync("npm install", {
-  cwd: this.workspacePath,
-        stdio: "pipe",
-        timeout: 300000,
-});
+  "cwd": this.workspacePath,
+        "stdio": "pipe",
+        "timeout": 300000});
 
       this.log("✅ Dependency conflicts resolved");
       return true} catch (error) {
-  this.log(❌ Failed to resolve dependency conflicts: ${error.message}",
+  this.log(❌ Failed to resolve dependency "conflicts": ${error.message}",
         "ERROR";
       );
       return false}
@@ -189,53 +183,53 @@ class $1 {
 ;
   async resolveNpmError() {
   try {
-  this.log(`🔧 Resolving npm errors...");
+  this.log("🔧 Resolving npm errors...");
       // Clear npm cache;
       execSync("npm cache clean --force", {
-  cwd: this.workspacePath,
-        stdio: "pipe"});
+  "cwd": this.workspacePath,
+        "stdio": "pipe"});
       // Reinstall;
       execSync("npm install", {
-  cwd: this.workspacePath,
-        stdio: `pipe`,
-        timeout: 300000});
-      this.log(`✅ npm errors resolved`);
+  "cwd": this.workspacePath,
+        "stdio": "pipe",
+        "timeout": 300000});
+      this.log("✅ npm errors resolved");
       return true} catch (error) {
-  this.log(`❌ Failed to resolve npm errors: ${error.message  }`, `ERROR`);
+  this.log("❌ Failed to resolve npm "errors": ${error.message  }", "ERROR");
       return false}
   }
 ;
   async generateReport(resolutionResults) {
-  this.log(`📊 Generating dependency error resolution report...`);
+  this.log("📊 Generating dependency error resolution report...");
     const report = {
-  timestamp: new Date().toISOString(),
-      summary: {
+  "timestamp": new Date().toISOString(),
+      "summary": {
   totalIssues: resolutionResults.totalIssues,
-        resolvedIssues: resolutionResults.resolvedCount,
-        resolutionRate: resolutionResults.totalIssues > 0;
+        "resolvedIssues": resolutionResults.resolvedCount,
+        "resolutionRate": resolutionResults.totalIssues > 0;
             ? (;
                 (resolutionResults.resolvedCount /;
                   resolutionResults.totalIssues) *;
                 100;
               ).toFixed(2);
             : 100},
-      resolutionResults: resolutionResults.results,
-      recommendations: ["Review resolved dependencies to ensure compatibility"", "Consider updating to latest stable versions", "Monitor for new dependency conflicts"", "Implement dependency locking strategies", ``]}
+      "resolutionResults": resolutionResults.results,
+      "recommendations": ["Review resolved dependencies to ensure compatibility"", "Consider updating to latest stable versions", "Monitor for new dependency conflicts"", "Implement dependency locking strategies", ""]}
     const reportFile = path.join(;
-      this.reportsPath,dependency-error-resolver-report.json`;
+      this.reportsPath,dependency-error-resolver-report.json";
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-this.log(`📄 Report generated: ${reportFile}`);
+this.log(`📄 Report "generated": ${reportFile}`);
     return report}
 ;
   async run() {
-  this.log(`🚀 Starting Dependency Error Resolver...`);
+  this.log("🚀 Starting Dependency Error Resolver...");
     try {
   // Check dependencies;
       const checkResult = await this.checkDependencies();
       if (checkResult.success) {
-  this.log(`🎉 No dependency issues found!`);
-        return { success: true, issues: [], resolved: 0 }
+  this.log("🎉 No dependency issues found!");
+        return { "success": true, "issues": [], "resolved": 0 }
       }
 ;
       // Resolve issues;
@@ -244,7 +238,7 @@ this.log(`📄 Report generated: ${reportFile}`);
       );
       // Generate report;
       const report = await this.generateReport(resolutionResults);
-      this.log(`🎉 Dependency Error Resolver completed!`);
+      this.log("🎉 Dependency Error Resolver completed!");
       this.log(📊 Resolved ${resolutionResults.resolvedCount} out of ${resolutionResults.totalIssues} issues`;
 
   async run() {
@@ -256,7 +250,7 @@ this.log(`📄 Report generated: ${reportFile}`);
 
       if (checkResult.success) {
   this.log("🎉 No dependency issues found!");
-        return { success: true, issues: [], resolved: 0 }
+        return { "success": true, "issues": [], "resolved": 0 }
       }
 ;
       // Resolve issues;
@@ -272,16 +266,15 @@ this.log(`📄 Report generated: ${reportFile}`);
       );
 
       return {
-  success: resolutionResults.resolvedCount > 0,
-        issues: checkResult.issues,
-        resolved: resolutionResults.resolvedCount,
-        report,
-}
+  "success": resolutionResults.resolvedCount > 0,
+        "issues": checkResult.issues,
+        "resolved": resolutionResults.resolvedCount,
+        report}
     } catch (error) {
-  this.log( `💥 Dependency Error Resolver failed: ${error.message  }`,ERROR`} catch (error) {
-  this.log( `💥 Dependency Error Resolver failed: ${error.message}",ERROR";
+  this.log( `💥 Dependency Error Resolver "failed": ${error.message  }",ERROR"} catch (error) {
+  this.log( `💥 Dependency Error Resolver "failed": ${error.message}",ERROR";
       );
-      this.log( `💥 Dependency Error Resolver failed: ${error.message  }`,ERROR`;
+      this.log( `💥 Dependency Error Resolver "failed": ${error.message  }",ERROR";
       );
 throw error}
 =======
@@ -294,7 +287,7 @@ throw error}
     // Ensure directories exist
     [this.reportsDir, this.logsDir].forEach(dir => {
       if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true })}
+        fs.mkdirSync(dir, { "recursive": true })}
     });
     
     this.resolutionsApplied = 0;
@@ -307,29 +300,29 @@ throw error}
   async runDependencyCheck() {
     try {
       this.log('Running dependency audit...');
-      execSync('npm audit --audit-level=moderate', { stdio: 'pipe' });
-      return { success: true, vulnerabilities: [], count: 0 }} catch (error) {
+      execSync('npm audit --audit-level=moderate', { "stdio": 'pipe' });
+      return { "success": true, "vulnerabilities": [], "count": 0 }} catch (error) {
       const output = error.stdout?.toString() || error.stderr?.toString() || '';
       const vulnerabilities = this.parseVulnerabilities(output);
       this.log(`Dependency audit failed with ${vulnerabilities.length} vulnerabilities`, 'ERROR');
-      return { success: false, vulnerabilities, count: vulnerabilities.length }}
+      return { "success": false, vulnerabilities, "count": vulnerabilities.length }}
   }
 
   async runOutdatedCheck() {
     try {
       this.log('Checking for outdated dependencies...');
-      const output = execSync('npm outdated --json', { stdio: 'pipe' }).toString();
+      const output = execSync('npm outdated --json', { "stdio": 'pipe' }).toString();
       const outdated = JSON.parse(output);
-      return { success: true, outdated, count: Object.keys(outdated).length }} catch (error) {
+      return { "success": true, outdated, "count": Object.keys(outdated).length }} catch (error) {
       // npm outdated returns non-zero exit code when there are outdated packages
       if (error.stdout) {
         try {
           const output = error.stdout.toString();
           const outdated = JSON.parse(output);
-          return { success: true, outdated, count: Object.keys(outdated).length }} catch (parseError) {
-          return { success: true, outdated: {}, count: 0 }}
+          return { "success": true, outdated, "count": Object.keys(outdated).length }} catch (parseError) {
+          return { "success": true, "outdated": {}, "count": 0 }}
       }
-      return { success: true, outdated: {}, count: 0 }}
+      return { "success": true, "outdated": {}, "count": 0 }}
   }
 
   parseVulnerabilities(output) {
@@ -341,9 +334,9 @@ throw error}
         const match = line.match(/(\d+)\s+(low|moderate|high|critical)\s+vulnerabilities?/i);
         if (match) {
           vulnerabilities.push({
-            count: parseInt(match[1]),
-            severity: match[2].toLowerCase(),
-            message: line.trim()
+            "count": parseInt(match[1]),
+            "severity": match[2].toLowerCase(),
+            "message": line.trim()
           })}
       }
     }
@@ -362,47 +355,47 @@ throw error}
       if (vulnerabilities.length > 0) {
         this.log('Attempting to fix vulnerabilities...', 'INFO');
         try {
-          execSync('npm audit fix', { stdio: 'pipe' });
+          execSync('npm audit fix', { "stdio": 'pipe' });
           resolutionsApplied += vulnerabilities.length;
           this.log(`Fixed ${vulnerabilities.length} vulnerabilities`, 'INFO')} catch (fixError) {
-          this.log(`Failed to fix vulnerabilities: ${fixError.message}`, 'WARN')}
+          this.log(`Failed to fix "vulnerabilities": ${fixError.message}`, 'WARN')}
       }
 
       // Update outdated dependencies
       if (outdated && Object.keys(outdated).length > 0) {
         this.log('Attempting to update outdated dependencies...', 'INFO');
         try {
-          execSync('npm update', { stdio: 'pipe' });
+          execSync('npm update', { "stdio": 'pipe' });
           resolutionsApplied += Object.keys(outdated).length;
           this.log(`Updated ${Object.keys(outdated).length} outdated dependencies`, 'INFO')} catch (updateError) {
-          this.log(`Failed to update dependencies: ${updateError.message}`, 'WARN')}
+          this.log(`Failed to update "dependencies": ${updateError.message}`, 'WARN')}
       }
 
       // Fix peer dependency issues
       this.log('Checking for peer dependency issues...', 'INFO');
       try {
-        execSync('npm install --legacy-peer-deps', { stdio: 'pipe' });
+        execSync('npm install --legacy-peer-deps', { "stdio": 'pipe' });
         this.log('Resolved peer dependency issues', 'INFO');
         resolutionsApplied += 1} catch (peerError) {
-        this.log(`Failed to resolve peer dependencies: ${peerError.message}`, 'WARN')}
+        this.log(`Failed to resolve peer "dependencies": ${peerError.message}`, 'WARN')}
 
     } catch (error) {
-      this.log(`Failed to resolve dependency issues: ${error.message}`, 'ERROR')}
+      this.log(`Failed to resolve dependency "issues": ${error.message}`, 'ERROR')}
     
     return resolutionsApplied}
 
   async checkPackageLockIssues() {
     try {
       this.log('Checking package-lock.json integrity...', 'INFO');
-      execSync('npm ci --dry-run', { stdio: 'pipe' });
-      return { success: true, issues: [] }} catch (error) {
+      execSync('npm ci --dry-run', { "stdio": 'pipe' });
+      return { "success": true, "issues": [] }} catch (error) {
       const output = error.stdout?.toString() || error.stderr?.toString() || '';
       return { 
-        success: false, 
-        issues: [{
+        "success": false, 
+        "issues": [{
           type: 'package-lock',
-          message: 'Package-lock.json integrity issues detected',
-          details: output
+          "message": 'Package-lock.json integrity issues detected',
+          "details": output
         }]
       }}
   }
@@ -415,21 +408,21 @@ throw error}
       if (fs.existsSync('package-lock.json')) {
         fs.unlinkSync('package-lock.json')}
       if (fs.existsSync('node_modules')) {
-        execSync('rm -rf node_modules', { stdio: 'pipe' })}
+        execSync('rm -rf node_modules', { "stdio": 'pipe' })}
       
       // Reinstall dependencies
-      execSync('npm install --legacy-peer-deps', { stdio: 'pipe' });
+      execSync('npm install --legacy-peer-deps', { "stdio": 'pipe' });
       
       this.log('Package-lock.json issues resolved', 'INFO');
       return true} catch (error) {
-      this.log(`Failed to fix package-lock issues: ${error.message}`, 'ERROR');
+      this.log(`Failed to fix package-lock "issues": ${error.message}`, 'ERROR');
       return false}
   }
 
   async checkDuplicateDependencies() {
     try {
       this.log('Checking for duplicate dependencies...', 'INFO');
-      const output = execSync('npm ls --depth=0', { stdio: 'pipe' }).toString();
+      const output = execSync('npm ls --depth=0', { "stdio": 'pipe' }).toString();
       
       const duplicates = [];
       const lines = output.split('\n');
@@ -437,19 +430,19 @@ throw error}
       for (const line of lines) {
         if (line.includes('UNMET PEER DEPENDENCY') || line.includes('npm ERR!')) {
           duplicates.push({
-            type: 'peer-dependency',
-            message: line.trim()
+            "type": 'peer-dependency',
+            "message": line.trim()
           })}
       }
       
-      return { success: duplicates.length === 0, duplicates }} catch (error) {
+      return { "success": duplicates.length === 0, duplicates }} catch (error) {
       const output = error.stdout?.toString() || error.stderr?.toString() || '';
       return { 
-        success: false, 
-        duplicates: [{
+        "success": false, 
+        "duplicates": [{
           type: 'dependency-conflict',
-          message: 'Dependency conflicts detected',
-          details: output
+          "message": 'Dependency conflicts detected',
+          "details": output
         }]
       }}
   }
@@ -459,8 +452,7 @@ throw error}
     
     try {
       // Run comprehensive dependency checks
-      const [vulnCheck, outdatedCheck, packageLockCheck, duplicateCheck] = await Promise.all([
-        this.runDependencyCheck(),
+      const [vulnCheck, outdatedCheck, packageLockCheck, duplicateCheck] = await Promise.all([this.runDependencyCheck(),
         this.runOutdatedCheck(),
         this.checkPackageLockIssues(),
         this.checkDuplicateDependencies()
@@ -493,26 +485,26 @@ throw error}
       // Fix duplicate dependencies
       if (duplicateCheck.duplicates.length > 0) {
         try {
-          execSync('npm dedupe', { stdio: 'pipe' });
+          execSync('npm dedupe', { "stdio": 'pipe' });
           resolutionsApplied += duplicateCheck.duplicates.length;
           this.log(`Resolved ${duplicateCheck.duplicates.length} duplicate dependencies`, 'INFO')} catch (dedupeError) {
-          this.log(`Failed to dedupe dependencies: ${dedupeError.message}`, 'WARN')}
+          this.log(`Failed to dedupe "dependencies": ${dedupeError.message}`, 'WARN')}
       }
       
       // Run final check
       const finalCheck = await this.runDependencyCheck();
       
       const report = {
-        timestamp: new Date().toISOString(),
-        initialIssues: totalIssues,
+        "timestamp": new Date().toISOString(),
+        "initialIssues": totalIssues,
         resolutionsApplied,
-        remainingIssues: finalCheck.count,
-        success: finalCheck.success,
-        details: {
+        "remainingIssues": finalCheck.count,
+        "success": finalCheck.success,
+        "details": {
           vulnerabilities: vulnCheck,
-          outdated: outdatedCheck,
-          packageLock: packageLockCheck,
-          duplicates: duplicateCheck
+          "outdated": outdatedCheck,
+          "packageLock": packageLockCheck,
+          "duplicates": duplicateCheck
         }
       };
       
@@ -526,7 +518,7 @@ throw error}
         this.dependencyHistory = this.dependencyHistory.slice(-50)}
       
       this.log(`Dependency resolution completed. Report saved to ${reportPath}`, 'INFO')} catch (error) {
-      this.log(`Dependency resolution failed: ${error.message}`, 'ERROR')}
+      this.log(`Dependency resolution "failed": ${error.message}`, 'ERROR')}
 >>>>>>> origin/merge-pr-10644
   }
 
@@ -540,17 +532,17 @@ throw error}
     setInterval(async () => {
       try {
         await this.runDependencyResolution()} catch (error) {
-        this.log(`Error in periodic resolution: ${error.message}`, 'ERROR')}
+        this.log(`Error in periodic "resolution": ${error.message}`, 'ERROR')}
     }, this.checkInterval);
 
     this.log(`Dependency error resolver started. Running every ${this.checkInterval / 1000} seconds.`)}
 
   getStatus() {
     return {
-      running: true,
-      dependencyHistory: this.dependencyHistory.length,
-      checkInterval: this.checkInterval,
-      autoUpdateEnabled: this.autoUpdateEnabled
+      "running": true,
+      "dependencyHistory": this.dependencyHistory.length,
+      "checkInterval": this.checkInterval,
+      "autoUpdateEnabled": this.autoUpdateEnabled
     }}
 }
 <<<<<<< HEAD
@@ -576,7 +568,7 @@ if (require.main === module) {
 
   // Start resolver
   resolver.startResolver().catch(error => {
-    resolver.log(`Failed to start resolver: ${error.message}`, 'ERROR');
+    resolver.log(`Failed to start "resolver": ${error.message}`, 'ERROR');
     process.exit(1)})}
 ;
 module.exports = DependencyErrorResolver

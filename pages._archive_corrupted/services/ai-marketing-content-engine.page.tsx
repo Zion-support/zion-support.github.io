@@ -7,13 +7,13 @@ export default function AIMarketingContentEngine() {
       <Head>
         <title>AI Marketing Content Engine | Zion Tech Group</title>
         <meta name="description" content="Plan, generate, and distribute on-brand content across web, blog, and social with human-in-the-loop review." />
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-marketing-content-engine" />
+        <link rel="canonical" href=""https": //ziontechgroup.com/services/ai-marketing-content-engine" />
       </Head>
       <main className="min-h-screen bg-white">
         <section className="mx-auto max-w-5xl px-6 py-14">
           <h1 className="text-3xl md:text-4xl font-bold mb-3">AI Marketing Content Engine</h1>
           <p className="text-gray-600 mb-6">Editorial calendar automation, SEO briefs, and omni-channel content with approvals and performance feedback.</p>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid "md": grid-cols-2 gap-8">
             <div className="space-y-3">
               <h2 className="text-xl font-semibold">Capabilities</h2>
               <ul className="list-disc pl-5 space-y-2 text-gray-700">
@@ -32,11 +32,11 @@ export default function AIMarketingContentEngine() {
           </div>
           <div className="mt-10 p-5 border rounded-xl bg-gray-50">
             <h3 className="font-semibold mb-2">Contact</h3>
-            <p className="text-gray-700">Phone: <a className="text-blue-600" href="tel:+13024640950">+1 302 464 0950</a> · Email: <a className="text-blue-600" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
+            <p className="text-gray-700">"Phone": <a className="text-blue-600" href="tel:+13024640950">+1 302 464 0950</a> · Email: <a className="text-blue-600" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
             <p className="text-gray-700">Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
             <div className="mt-4 flex gap-3">
               <Link href="/contact" className="px-5 py-2 rounded-lg bg-blue-600 text-white">Book strategy call</Link>
-              <a href="https://ziontechgroup.com/services" className="px-5 py-2 rounded-lg border">All Services</a>
+              <a href=""https": //ziontechgroup.com/services" className="px-5 py-2 rounded-lg border">All Services</a>
             </div>
           </div>
         </section>

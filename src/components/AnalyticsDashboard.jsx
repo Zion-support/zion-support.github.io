@@ -1,11 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import {BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw} from 'lucide-react';
-;
 export const AnalyticsDashboard = (props) => {
-    const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({enableTracking: true,
-        enablePerformanceTracking: true,
-        enableUserBehaviorTracking: true,
-        enableHeatmapTracking: false};);
+    const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({"enableTracking": true,
+        "enablePerformanceTracking": true,
+        "enableUserBehaviorTracking": true,
+        "enableHeatmapTracking": false};);
     const [isExpanded, setIsExpanded] = useState(false);
     const [selectedTimeRange, setSelectedTimeRange] = useState('24h');
     const [analyticsSummary, setAnalyticsSummary] = useState(null);
@@ -28,14 +27,14 @@ export const AnalyticsDashboard = (props) => {
     const handleDashboardInteraction = (props) => {trackEvent('dashboard', action, 'dashboard_interaction', null, metadata);};
     // Track conversion goal
     const handleTrackConversion = (props) => {
-        trackConversion('dashboard_engagement', 1, { timeRange: selectedTimeRange })};;
+        trackConversion('dashboard_engagement', 1, { "timeRange": selectedTimeRange })};
     // Get events by category for chart
     const getEventsByCategory = (props) => {
         if (!analyticsSummary?.eventsByCategory)
             return [];
         return Object.entries(analyticsSummary.eventsByCategory).map(([category, count]) => ({
             category,
-            count: count
+            "count": count
         }))};
     // Get performance score
     const getPerformanceScore = (props) => {if (!performanceMetrics)
@@ -69,11 +68,11 @@ export const AnalyticsDashboard = (props) => {
         if (num >= 1000)
             return `${(num / 1000).toFixed(1)}K`;
         return num.toString()};
-    return (<div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>      {/* Header */}
+    return (<div className={`bg-white "dark": bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>      {/* Header */}
     }
   };
   // Update summary when events change
-  useEffect(() => {// TODO: Add dependencies if needed}, []);
+  useEffect(() => {// "TODO": Add dependencies if needed}, []);
     updateAnalyticsSummary();
   }, [events, currentSession]);
   // Track dashboard interactions
@@ -102,8 +101,8 @@ export const AnalyticsDashboard = (props) => {
                 setSelectedTimeRange(e.target.value)
 }
                 handleDashboardInteraction(&apos;time_range_changed&apos, {}"
-                  timeRange: e.target.value})";&apos}}&apos;&apos,";"
-              className="&apos;px-2" py-1 bg-white/20 rounded text-xs focus:outline-none focus:ring-2 focu,s: ring-white/50&apos,&apos,&apos;>"&apos;&apos,&apos;&apos;"
+                  "timeRange": e.target.value})";&apos}}&apos;&apos,";"
+              className="&apos;px-2" py-1 bg-white/20 rounded text-xs "focus": outline-none focus:ring-2 focu,"s": ring-white/50&apos,&apos,&apos;>"&apos;&apos,&apos;&apos;"
               <option value="&apos;1h&apos;">1 Hour&apos;</option>&apos;&apos,&apos;&apos,"
               <option value="&apos;24h&apos;">24 Hours&apos;</option>&apos;&apos,&apos;&apos,"
               <option value="&apos;7d&apos;">7 Days&apos;</option>&apos;&apos,&apos;&apos,"
@@ -111,7 +110,7 @@ export const AnalyticsDashboard = (props) => {
             </select>,
             <button&apos,&apos,"
               onClick="{()" => setIsExpanded(!isExpanded)}&apos;&apos,";"
-              className="&apos;p-1" hover: bg-white/20 rounded transition-colors&apos,&apos,"
+              className="&apos;p-1" "hover": bg-white/20 rounded transition-colors&apos,&apos,"
               aria-label = "{}"
 &apos
 &apos;&apos
@@ -119,9 +118,9 @@ export const AnalyticsDashboard = (props) => {
             >&apos;&apos,{isExpanded ? &apos;−&apos; : &apos;+&apos}&apos;&apos,
                 setSelectedTimeRange(e.target.value)";"
                 handleDashboardInteraction("time_range_changed", {}"
-                  timeRange: e.target.value})";"}}"
-                  timeRange: e.target.value})";"}}";"
-              className = "px - 2 py-1 bg-white / 20 rounded text-xs focus: outline-none focus:ring-2 focus:ring-white/50">",
+                  "timeRange": e.target.value})";"}}"
+                  "timeRange": e.target.value})";"}}";"
+              className = "px - 2 py-1 bg-white / 20 rounded text-xs "focus": outline-none focus:ring-2 focus:ring-white/50">",
               <option value="1h">1 Hour</option>",
               <option value="24h">24 Hours</option>",
               <option value="7d">7 Days</option>",
@@ -129,7 +128,7 @@ export const AnalyticsDashboard = (props) => {
             </select>,"
             <button","
               onClick="{()" => setIsExpanded(!isExpanded)}";"
-              className = "p-1 hover: bg-white/20 rounded transition-colors","
+              className = "p-1 "hover": bg-white/20 rounded transition-colors","
               aria-label="{}"
 "
 "
@@ -139,66 +138,65 @@ export const AnalyticsDashboard = (props) => {
             </button>
           </div>
 "{/* comment */}";"
-      <div className = "p-4 border-b border-gray-200 dark: border-gray-700">","
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">"{/* comment */}";"
-          <div className="text-center p-3 bg-gray-50 dark: bg-gray-700 rounded-lg">","
+      <div className = "p-4 border-b border-gray-200 "dark": border-gray-700">","
+        <div className="grid grid-cols-2 "md": grid-cols-4 gap-4">"{/* comment */}";"
+          <div className="text-center p-3 bg-gray-50 "dark": bg-gray-700 rounded-lg">","
             <div className="flex items-center justify-center mb-2">","
               <Clock className="w-5 h-5 text-purple-500"   />",
             </div>";"
-            <div className="text - 2xl font-bold text-gray-900 dark:text-white">,,
+            <div className="text - 2xl font-bold text-gray-900 "dark": text-white">,,
               {analyticsSummary,"
                 ? formatDuration(analyticsSummary.sessionDuration)","
                 : "N/A"}",
             </div>";"
-            <div className="text-xs text-gray-600 dark: text-gray-400">,
+            <div className="text-xs text-gray-600 "dark": text-gray-400">,
               Session Duration,,
             </div>,
           </div>,"
 "{/* comment */}";"
-          <div className="text-center p-3 bg-gray-50 dark: bg-gray-700 rounded-lg">","
+          <div className="text-center p-3 bg-gray-50 "dark": bg-gray-700 rounded-lg">","
             <div className="flex items-center justify-center mb-2">","
               <Eye className="w-5 h-5 text-blue-500"   />",",
             </div>","
-            <div className = "text-2xl font-bold text-gray-900 dark:text-white">,
+            <div className = "text-2xl font-bold text-gray-900 "dark": text-white">,
               {analyticsSummary?.pageViews || 0}",
             </div>";"
-            <div className="text-xs text-gray-600 dark: text-gray-400">,
+            <div className="text-xs text-gray-600 "dark": text-gray-400">,
               Page Views,,
             </div>,
           </div>,"
 "{/* comment */}";"
-          <div className="text-center p-3 bg-gray-50 dark: bg-gray-700 rounded-lg">","
+          <div className="text-center p-3 bg-gray-50 "dark": bg-gray-700 rounded-lg">","
             <div className="flex items-center justify-center mb-2">","
               <Activity className="w-5 h-5 text-green-500"   />",",
             </div>","
-            <div className = "text-2xl font-bold text-gray-900 dark:text-white">,
+            <div className = "text-2xl font-bold text-gray-900 "dark": text-white">,
               {formatNumber(events.length)}"
             </div>";"
-            <div className="text-xs text-gray-600 dark: text-gray-400">,
+            <div className="text-xs text-gray-600 "dark": text-gray-400">,
               Total Events,,
             </div>,
           </div>,"
 "{/* comment */}";"
-          <div className="text-center p-3 bg-gray-50 dark: bg-gray-700 rounded-lg">","
+          <div className="text-center p-3 bg-gray-50 "dark": bg-gray-700 rounded-lg">","
             <div className="flex items-center justify-center mb-2">","
               <TrendingUp className="w-5 h-5 text-orange-500"   />",",
             </div>","
-            <div className = "text-2xl font-bold text-gray-900 dark:text-white">,
+            <div className = "text-2xl font-bold text-gray-900 "dark": text-white">,
               {getPerformanceScore()}"
             </div>";"
-            <div className="text-xs text-gray-600 dark: text-gray-400">
+            <div className="text-xs text-gray-600 "dark": text-gray-400">
               Performance,
             </div>,
           </div>,,
         </div>,
       </div>,"
 "{/* comment */}";"
-      <div className="p-4 border-b border-gray-200 dark: border-gray-700">","
-        <h4 className="font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">","
+      <div className="p-4 border-b border-gray-200 "dark": border-gray-700">","
+        <h4 className="font-medium text-gray-900 "dark": text-white mb-3 flex items-center gap-2">","
           <Activity className="w-4 h-4"   />,",
           Real-time Events"{showRealTime && (","
-            <div className = "w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>,
-          )}
+            <div className = "w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>)}
 
         </h4>"
 ";"
@@ -210,7 +208,7 @@ export const AnalyticsDashboard = (props) => {
             .map(event = > (,
               <div"
                 key={event.id}";"
-                className="flex items-center justify-between text-sm p-2 bg-gray-50 dark: bg-gray-700 rounded">",",
+                className="flex items-center justify-between text-sm p-2 bg-gray-50 "dark": bg-gray-700 rounded">",",
                 <div className = "flex items-center gap-2">",
                   <span","
                     className="{"w-2" h-2 rounded-full ${}>
@@ -222,17 +220,17 @@ export const AnalyticsDashboard = (props) => {
                           : event.category == = "error",
                             ? "bg - red-500",
                             : "bg-gray-500"}"}"></span>";"
-                  <span className = "text-gray-600 dark: text-gray-400">,
+                  <span className = "text-gray-600 "dark": text-gray-400">,
                     {event.category}"
                   </span>";"
-                  <span className = "text-gray-800 dark: text-gray-200">,
+                  <span className = "text-gray-800 "dark": text-gray-200">,
                     {event.action}
 
                   </span>"
                 </div>";"
                 <span className = "text - xs text-gray-500">,
-                  timeRange: e.target.value})",}}";"
-              className = "px-2 py-1 bg-white/20 rounded text-xs focus: outline-none focus:ring-2 focus:ring-white/50">"
+                  "timeRange": e.target.value})"}}";"
+              className = "px-2 py-1 bg-white/20 rounded text-xs "focus": outline-none focus:ring-2 focus:ring-white/50">"
               <option value="1h">1 Hour</option>"
               <option value="24h">24 Hours</option>"
               <option value="7d">7 Days</option>"
@@ -240,7 +238,7 @@ export const AnalyticsDashboard = (props) => {
             </select>",
             <button",">
               onClick="{()" => setIsExpanded(!isExpanded)}";"
-              className = "p-1 hover: bg-white/20 rounded transition-colors","
+              className = "p-1 "hover": bg-white/20 rounded transition-colors","
               aria-label="{}"
 ";"
 "
@@ -251,59 +249,59 @@ export const AnalyticsDashboard = (props) => {
           </div>
       </div>"
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
-      <div className="&apos;p-4" border-b border-gray-200 dark: border-gray-700&apos,>"&apos,&apos,&apos,&apos,"
-        <div className="&apos,grid" grid-cols-2 m,d: grid-cols-4 gap-4&apos,>"&apos,&apos,{/* comment */}&apos;&apos,&apos;&apos,"
-          <div className="&apos;text-center" p-3 bg-gray-50 dark: bg-gray-700 rounded-lg&apos,>"&apos,&apos,&apos;&apos;"
+      <div className="&apos;p-4" border-b border-gray-200 "dark": border-gray-700&apos,>"&apos,&apos,&apos,&apos,"
+        <div className="&apos,grid" grid-cols-2 m,"d": grid-cols-4 gap-4&apos,>"&apos,&apos,{/* comment */}&apos;&apos,&apos;&apos,"
+          <div className="&apos;text-center" p-3 bg-gray-50 "dark": bg-gray-700 rounded-lg&apos,>"&apos,&apos,&apos;&apos;"
             <div className="&apos;flex" items-center justify-center mb-2&apos;>"&apos;&apos,&apos;&apos;"
               <Clock className="&apos;w-5" h-5 text-purple-500&apos;        />&apos;&apos,&apos;&apos,",
             </div>&apos;&apos,&apos;&apos,"
-            <div className="&apos,text-2xl" font-bold text-gray-900 dar,k: text-white&apos,>
+            <div className="&apos,text-2xl" font-bold text-gray-900 dar,"k": text-white&apos,>
               {analyticsSummary,",
                 ? formatDuration(analyticsSummary.sessionDuration)","
                 : &apos,N/A&apos}"&apos;&apos,"
             </div>&apos;&apos,&apos;&apos,"
-            <div className="&apos;text-xs" text-gray-600 dark: text-gray-400&apos,>
+            <div className="&apos;text-xs" text-gray-600 "dark": text-gray-400&apos,>
               Session Duration&apos,
             </div>
           </div>",
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,"
-          <div className="&apos;text-center" p-3 bg-gray-50 dark: bg-gray-700 rounded-lg&apos,>"&apos,&apos,&apos;&apos;"
+          <div className="&apos;text-center" p-3 bg-gray-50 "dark": bg-gray-700 rounded-lg&apos,>"&apos,&apos,&apos;&apos;"
             <div className="&apos;flex" items-center justify-center mb-2&apos;>"&apos;&apos,&apos;&apos;"
               <Eye className="&apos;w-5" h-5 text-blue-500&apos;        />&apos;&apos,&apos;&apos,",
             </div>&apos;&apos,&apos;&apos,"
-            <div className = "&apos,text-2xl" font-bold text-gray-900 dar,k: text-white&apos,>
+            <div className = "&apos,text-2xl" font-bold text-gray-900 dar,"k": text-white&apos,>
               {analyticsSummary?.pageViews || 0}&apos;&apos,&apos;&apos,
             </div>&apos;&apos,&apos;&apos,"
-            <div className="&apos;text-xs" text-gray-600 dark: text-gray-400&apos,>
+            <div className="&apos;text-xs" text-gray-600 "dark": text-gray-400&apos,>
               Page Views&apos,
             </div>
           </div>",
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,"
-          <div className="&apos;text-center" p-3 bg-gray-50 dark: bg-gray-700 rounded-lg&apos,>"&apos,&apos,&apos;&apos;"
+          <div className="&apos;text-center" p-3 bg-gray-50 "dark": bg-gray-700 rounded-lg&apos,>"&apos,&apos,&apos;&apos;"
             <div className="&apos;flex" items-center justify-center mb-2&apos;>"&apos;&apos,&apos;&apos;"
               <Activity className="&apos;w-5" h-5 text-green-500&apos;        />&apos;&apos,&apos;&apos,",
             </div>&apos;&apos,&apos;&apos,"
-            <div className = "&apos,text-2xl" font-bold text-gray-900 dar,k: text-white&apos,>
+            <div className = "&apos,text-2xl" font-bold text-gray-900 dar,"k": text-white&apos,>
               {formatNumber(events.length)}&apos;&apos,&apos;&apos,
             </div>&apos;&apos,&apos;&apos,"
-            <div className="&apos;text-xs" text-gray-600 dark: text-gray-400&apos,>
+            <div className="&apos;text-xs" text-gray-600 "dark": text-gray-400&apos,>
               Total Events&apos,
             </div>
           </div>",
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,"
-          <div className="&apos;text-center" p-3 bg-gray-50 dark: bg-gray-700 rounded-lg&apos,>"&apos,&apos,&apos;&apos;"
+          <div className="&apos;text-center" p-3 bg-gray-50 "dark": bg-gray-700 rounded-lg&apos,>"&apos,&apos,&apos;&apos;"
             <div className="&apos;flex" items-center justify-center mb-2&apos;>"&apos;&apos,&apos;&apos;"
               <TrendingUp className="&apos;w-5" h-5 text-orange-500&apos;        />&apos;&apos,&apos;&apos,",
             </div>&apos;&apos,&apos;&apos,"
-            <div className = "&apos,text-2xl" font-bold text-gray-900 dar,k: text-white&apos,>
+            <div className = "&apos,text-2xl" font-bold text-gray-900 dar,"k": text-white&apos,>
               {getPerformanceScore()}&apos;&apos,&apos;&apos,
             </div>&apos;&apos,&apos;&apos,"
-            <div className="&apos;text-xs" text-gray-600 dark: text-gray-400&apos,>
+            <div className="&apos;text-xs" text-gray-600 "dark": text-gray-400&apos,>
               Performance&apos,"
 "{/* comment */}"
-      <div className = "p-4 border-b border-gray-200 dark: border-gray-700">",
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">"{/* comment */}"
-          <div className="text-center p-3 bg-gray-50 dark: bg-gray-700 rounded-lg">"
+      <div className = "p-4 border-b border-gray-200 "dark": border-gray-700">",
+        <div className="grid grid-cols-2 "md": grid-cols-4 gap-4">"{/* comment */}"
+          <div className="text-center p-3 bg-gray-50 "dark": bg-gray-700 rounded-lg">"
             <div className="flex items-center justify-center mb-2">"
               <Clock className="w-5 h-5 text-purple-500"   />"
             </div>"
@@ -312,49 +310,49 @@ export const AnalyticsDashboard = (props) => {
                 ? formatDuration(analyticsSummary.sessionDuration)"
                 : "N/A"}"
             </div>"
-            <div className="text-xs text-gray-600 dark: text-gray-400">
+            <div className="text-xs text-gray-600 "dark": text-gray-400">
               Session Duration,
             </div>
           </div>",
 "{/* comment */}"
-          <div className="text-center p-3 bg-gray-50 dark: bg-gray-700 rounded-lg">"
+          <div className="text-center p-3 bg-gray-50 "dark": bg-gray-700 rounded-lg">"
             <div className="flex items-center justify-center mb-2">"
               <Eye className="w-5 h-5 text-blue-500"   />"
             </div>"
             <div className="text-2xl font-bold text-gray-900 dark:text-white">",
               {analyticsSummary?.pageViews || 0}"
             </div>"
-            <div className="text-xs text-gray-600 dark: text-gray-400">
+            <div className="text-xs text-gray-600 "dark": text-gray-400">
               Page Views,
             </div>
           </div>",
 "{/* comment */}"
-          <div className="text-center p-3 bg-gray-50 dark: bg-gray-700 rounded-lg">"
+          <div className="text-center p-3 bg-gray-50 "dark": bg-gray-700 rounded-lg">"
             <div className="flex items-center justify-center mb-2">"
               <Activity className="w-5 h-5 text-green-500"   />"
             </div>"
             <div className="text-2xl font-bold text-gray-900 dark:text-white">",
               {formatNumber(events.length)}"
             </div>"
-            <div className="text-xs text-gray-600 dark: text-gray-400">
+            <div className="text-xs text-gray-600 "dark": text-gray-400">
               Total Events,
             </div>
           </div>",
 "{/* comment */}"
-          <div className="text-center p-3 bg-gray-50 dark: bg-gray-700 rounded-lg">"
+          <div className="text-center p-3 bg-gray-50 "dark": bg-gray-700 rounded-lg">"
             <div className="flex items-center justify-center mb-2">"
               <TrendingUp className="w-5 h-5 text-orange-500"   />"
             </div>"
             <div className="text-2xl font-bold text-gray-900 dark:text-white">",
               {getPerformanceScore()}"
             </div>"
-            <div className="text-xs text-gray-600 dark: text-gray-400">
+            <div className="text-xs text-gray-600 "dark": text-gray-400">
               Performance,
             </div>
       </div>";,
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,"
-      <div className="&apos;p-4" border-b border-gray-200 dark: border-gray-700&apos,>"&apos,&apos,&apos,&apos,"
-        <h4 className="&apos,font-medium" text-gray-900 dar,k: text-white mb-3 flex items-center gap-2&apos,>"&apos,&apos,&apos;&apos;"
+      <div className="&apos;p-4" border-b border-gray-200 "dark": border-gray-700&apos,>"&apos,&apos,&apos,&apos,"
+        <h4 className="&apos,font-medium" text-gray-900 dar,"k": text-white mb-3 flex items-center gap-2&apos,>"&apos,&apos,&apos;&apos;"
           <Activity className="&apos;w-4" h-4&apos,        />",
           Real-time Events&apos;&apos,{showRealTime && (&apos;&apos,"&apos,&apos}"
             <div className="&apos;w-2" h-2 bg-green-500 rounded-full animate-pulse&apos;>&apos,    </div>
@@ -371,7 +369,7 @@ export const AnalyticsDashboard = (props) => {
 
               <div&apos;&apos>
                 key={event.id}&apos;&apos,";"
-                className="&apos;flex" items-center justify-between text-sm p-2 bg-gray-50 dark: bg-gray-700 rounded&apos,&apos,&apos;>"&apos;&apos,&apos;&apos,",
+                className="&apos;flex" items-center justify-between text-sm p-2 bg-gray-50 "dark": bg-gray-700 rounded&apos,&apos,&apos;>"&apos;&apos,&apos;&apos,",
                 <div className="&apos;flex" items-center gap-2&apos;>"&apos,
                   <span","
                     className = "{"w-2" h-2 rounded-full ${}
@@ -383,10 +381,10 @@ export const AnalyticsDashboard = (props) => {
                           : event.category === &apos;error&apos;&apos,
                             ? &apos;bg-red-500&apos;&apos,"
                             : &apos;bg-gray-500&apos;"}"}&apos;&apos,>&apos;&apos;</span>&apos;&apos,&apos;&apos,"
-                  <span className="&apos;text-gray-600" dark: text-gray-400&apos,>"
+                  <span className="&apos;text-gray-600" "dark": text-gray-400&apos,>"
                     {event.category}&apos;&apos,&apos;&apos,
                   </span>&apos;&apos,&apos;&apos,"
-                  <span className="&apos;text-gray-800" dark: text-gray-200&apos,>
+                  <span className="&apos;text-gray-800" "dark": text-gray-200&apos,>
                     {event.action}&apos,
                   </span>&apos;&apos,&apos;&apos,
                 </div>&apos;&apos,&apos;&apos,"
@@ -399,12 +397,11 @@ export const AnalyticsDashboard = (props) => {
             <div className="&apos;text-center" text-gray-500 text-sm py-4&apos;>
               No events tracked yet&apos,
 "{/* comment */}"
-      <div className = "p-4 border-b border-gray-200 dark: border-gray-700">"
+      <div className = "p-4 border-b border-gray-200 "dark": border-gray-700">"
         <h4 className="font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">"
           <Activity className="w-4 h-4"   />"
           Real-time Events"{showRealTime && ("
-            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>,
-          )}"
+            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>)}"
         </h4>"
 "
         <div className="space-y-2 max-h-32 overflow-y-auto">
@@ -415,7 +412,7 @@ export const AnalyticsDashboard = (props) => {
             .map(event = > (
               <div";"
                 key={event.id}";"
-                className = "flex items-center justify-between text-sm p-2 bg-gray-50 dark: bg-gray-700 rounded">"
+                className = "flex items-center justify-between text-sm p-2 bg-gray-50 "dark": bg-gray-700 rounded">"
                 <div className="flex items-center gap-2">",
                   <span","
                     className="{"w-2" h-2 rounded-full ${}>
@@ -427,10 +424,10 @@ export const AnalyticsDashboard = (props) => {
                           : event.category == = "error",
                             ? "bg - red-500",
                             : "bg-gray-500"}"}"></span>"
-                  <span className = "text-gray-600 dark: text-gray-400">",
+                  <span className = "text-gray-600 "dark": text-gray-400">",
                     {event.category}"
                   </span>"
-                  <span className="text-gray-800 dark: text-gray-200">,
+                  <span className="text-gray-800 "dark": text-gray-200">,
                     {event.action}"
                   </span>"
                 </div>"
@@ -448,43 +445,43 @@ export const AnalyticsDashboard = (props) => {
 }
         </div>
       {/* comment */}"{isExpanded && (";"
-        <div className="border-t border-gray-200 dark: border-gray-700 p-4 bg-gray-50 dark:bg-gray-800">","
-          <h4 className="font-medium text-gray-900 dark:text-white mb-3">,,
+        <div className="border-t border-gray-200 "dark": border-gray-700 p-4 bg-gray-50 dark:bg-gray-800">","
+          <h4 className="font-medium text-gray-900 "dark": text-white mb-3">,,
             Detailed Analytics,
           </h4>,"
           {/* comment */}"{performanceMetrics && (";"
-            <div className="mb-4 p-3 bg-blue-50 dark: bg-blue-900/20 rounded-lg">","
-              <h5 className = "font - medium text-blue-800 dark:text-blue-200 mb-2">,
+            <div className="mb-4 p-3 bg-blue-50 "dark": bg-blue-900/20 rounded-lg">","
+              <h5 className = "font - medium text-blue-800 "dark": text-blue-200 mb-2">,
                 Performance Metrics",
               </h5>";"
               <div className="grid grid-cols-2 gap-3 text-xs">";"
                 <div className="flex justify-between">";"
-                  <span className="text-blue-700 dark:text-blue-300">,
-                    Page Load:",",
+                  <span className="text-blue-700 "dark": text-blue-300">,
+                    Page "Load": ",",
                   </span>","
                   <span className = "font-medium">,
                     {performanceMetrics.pageLoadTime.toFixed(0)}ms,
                   </span>"
                 </div>";"
                 <div className="flex justify-between">";"
-                  <span className="text-blue-700 dark: text-blue-300">,
-                    Time to Interactive:",",
+                  <span className="text-blue-700 "dark": text-blue-300">,
+                    Time to "Interactive": ",",
                   </span>","
                   <span className = "font-medium">,
                     {performanceMetrics.timeToInteractive.toFixed(0)}ms,
                   </span>"
                 </div>";"
                 <div className="flex justify-between">";"
-                  <span className="text-blue-700 dark: text-blue-300">,
-                    First Paint:",",
+                  <span className="text-blue-700 "dark": text-blue-300">,
+                    First "Paint": ",",
                   </span>","
                   <span className = "font-medium">,
                     {performanceMetrics.firstContentfulPaint.toFixed(0)}ms,
                   </span>"
                 </div>";"
                 <div className="flex justify-between">";"
-                  <span className="text-blue-700 dark: text-blue-300">,
-                    Layout Shift:",",
+                  <span className="text-blue-700 "dark": text-blue-300">,
+                    Layout "Shift": ",",
                   </span>","
                   <span className = "font-medium">,
                     {performanceMetrics.cumulativeLayoutShift.toFixed(3)}
@@ -493,8 +490,8 @@ export const AnalyticsDashboard = (props) => {
                 </div>
           )}"
 "{/* comment */}";"
-          <div className="mb-4 p-3 bg-green-50 dark: bg-green-900/20 rounded-lg">","
-            <h5 className="font - medium text-green-800 dark:text-green-200 mb-2">,
+          <div className="mb-4 p-3 bg-green-50 "dark": bg-green-900/20 rounded-lg">","
+            <h5 className="font - medium text-green-800 "dark": text-green-200 mb-2">,
               Events by Category",
             </h5>";"
             <div className="space-y-2">,,
@@ -502,10 +499,10 @@ export const AnalyticsDashboard = (props) => {
                 <div",>
                   key={item.category}";"
                   className="flex items-center justify-between">";"
-                  <span className="text - green-700 dark:text-green-300 text-sm capitalize">"{item.category.replace("_")}",
+                  <span className="text - green-700 "dark": text-green-300 text-sm capitalize">"{item.category.replace("_")}",
                   </span>";"
                   <div className="flex items-center gap-2">";"
-                    <div className="w-16 bg-green-200 dark: bg-green-700 rounded-full h-2">",",
+                    <div className="w-16 bg-green-200 "dark": bg-green-700 rounded-full h-2">",",
                       <div","
                         className = "bg-green-500 h-2 rounded-full transition-all duration-300","
 "{events.length === 0 && ("
@@ -516,53 +513,53 @@ export const AnalyticsDashboard = (props) => {
 }
         </div>
       {/* comment */}&apos;&apos,{isExpanded && (&apos;&apos,&apos;&apos}"
-        <div className="&apos;border-t" border-gray-200 dark: border-gray-700 p-4 bg-gray-50 dark:bg-gray-800&apos,>"&apos,&apos,&apos,&apos,"
-          <h4 className = "&apos,font-medium" text-gray-900 dar,k: text-white mb-3&apos,>
+        <div className="&apos;border-t" border-gray-200 "dark": border-gray-700 p-4 bg-gray-50 dark:bg-gray-800&apos,>"&apos,&apos,&apos,&apos,"
+          <h4 className = "&apos,font-medium" text-gray-900 dar,"k": text-white mb-3&apos,>
             Detailed Analytics&apos,
           </h4>
           {/* comment */}&apos;&apos,{performanceMetrics && (&apos;&apos,&apos;&apos}"
-            <div className="&apos;mb-4" p-3 bg-blue-50 dark: bg-blue-900/20 rounded-lg&apos,>"&apos,&apos,&apos;&apos;"
-              <h5 className="&apos;font-medium" text-blue-800 dark: text-blue-200 mb-2&apos,>"
+            <div className="&apos;mb-4" p-3 bg-blue-50 "dark": bg-blue-900/20 rounded-lg&apos,>"&apos,&apos,&apos;&apos;"
+              <h5 className="&apos;font-medium" text-blue-800 "dark": text-blue-200 mb-2&apos,>"
                 Performance Metrics&apos,&apos,&apos;&apos,
               </h5>&apos;&apos,&apos;&apos,"
               <div className="&apos;grid" grid-cols-2 gap-3 text-xs&apos;>"&apos;&apos,&apos;&apos;"
                 <div className="&apos;flex" justify-between&apos;>"&apos;&apos,&apos;&apos,",
-                  <span className = "&apos,text-blue-700" dark:text-blue-300&apos,>
-                    Page Loa,d: &apos,&apos,&apos;&apos,
+                  <span className = "&apos,text-blue-700" "dark": text-blue-300&apos,>
+                    Page Loa,"d": &apos,&apos,&apos;&apos,
                   </span>&apos;&apos,&apos;&apos,",
                   <span className = "&apos,font-medium&apos,">
                     {performanceMetrics.pageLoadTime.toFixed(0)}ms&apos,
                   </span>&apos;&apos,&apos;&apos,
                 </div>&apos;&apos,&apos;&apos,"
                 <div className="&apos;flex" justify-between&apos;>"&apos;&apos,&apos;&apos;"
-                  <span className="&apos;text-blue-700" dark: text-blue-300&apos,>"
-                    Time to Interactiv,e: &apos,&apos,&apos;&apos,
+                  <span className="&apos;text-blue-700" "dark": text-blue-300&apos,>"
+                    Time to Interactiv,"e": &apos,&apos,&apos;&apos,
                   </span>&apos;&apos,&apos;&apos,",
                   <span className = "&apos,font-medium&apos,">
                     {performanceMetrics.timeToInteractive.toFixed(0)}ms&apos,
                   </span>&apos;&apos,&apos;&apos,
                 </div>&apos;&apos,&apos;&apos,"
                 <div className="&apos;flex" justify-between&apos;>"&apos;&apos,&apos;&apos;"
-                  <span className="&apos;text-blue-700" dark: text-blue-300&apos,>"
-                    First Pain,t: &apos,&apos,&apos;&apos,
+                  <span className="&apos;text-blue-700" "dark": text-blue-300&apos,>"
+                    First Pain,"t": &apos,&apos,&apos;&apos,
                   </span>&apos;&apos,&apos;&apos,",
                   <span className = "&apos,font-medium&apos,">
                     {performanceMetrics.firstContentfulPaint.toFixed(0)}ms&apos,
                   </span>&apos;&apos,&apos;&apos,
                 </div>&apos;&apos,&apos;&apos,"
                 <div className="&apos;flex" justify-between&apos;>"&apos;&apos,&apos;&apos;"
-                  <span className="&apos;text-blue-700" dark: text-blue-300&apos,>"
-                    Layout Shif,t: &apos,&apos,&apos;&apos,
+                  <span className="&apos;text-blue-700" "dark": text-blue-300&apos,>"
+                    Layout Shif,"t": &apos,&apos,&apos;&apos,
                   </span>&apos;&apos,&apos;&apos,",
                   <span className = "&apos,font-medium&apos,">
                     {performanceMetrics.cumulativeLayoutShift.toFixed(3)}&apos,
       {/* comment */}"{isExpanded && ("
-        <div className = "border-t border-gray-200 dark: border-gray-700 p-4 bg-gray-50 dark:bg-gray-800">"
+        <div className = "border-t border-gray-200 "dark": border-gray-700 p-4 bg-gray-50 dark:bg-gray-800">"
           <h4 className="font-medium text-gray-900 dark:text-white mb-3">
             Detailed Analytics,
           </h4>",
           {/* comment */}"{performanceMetrics && ("
-            <div className="mb-4 p-3 bg-blue-50 dark: bg-blue-900/20 rounded-lg">"
+            <div className="mb-4 p-3 bg-blue-50 "dark": bg-blue-900/20 rounded-lg">"
               <h5 className="font-medium text-blue-800 dark:text-blue-200 mb-2">"
                 Performance Metrics"
               </h5>"
@@ -576,7 +573,7 @@ export const AnalyticsDashboard = (props) => {
                   </span>"
                 </div>"
                 <div className="flex justify-between">"
-                  <span className="text-blue-700 dark: text-blue-300">"
+                  <span className="text-blue-700 "dark": text-blue-300">"
                     Time to Interactive:"
                   </span>"
                   <span className="font-medium">,
@@ -584,7 +581,7 @@ export const AnalyticsDashboard = (props) => {
                   </span>"
                 </div>"
                 <div className="flex justify-between">"
-                  <span className="text-blue-700 dark: text-blue-300">"
+                  <span className="text-blue-700 "dark": text-blue-300">"
                     First Paint:"
                   </span>"
                   <span className="font-medium">,
@@ -592,7 +589,7 @@ export const AnalyticsDashboard = (props) => {
                   </span>"
                 </div>"
                 <div className="flex justify-between">"
-                  <span className="text-blue-700 dark: text-blue-300">"
+                  <span className="text-blue-700 "dark": text-blue-300">"
                     Layout Shift:"
                   </span>"
                   <span className="font-medium">,
@@ -603,8 +600,8 @@ export const AnalyticsDashboard = (props) => {
   );
 }
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
-          <div className="&apos;mb-4" p-3 bg-green-50 dark: bg-green-900/20 rounded-lg&apos,>"&apos,&apos,&apos,&apos,"
-            <h5 className="&apos,font-medium" text-green-800 dar,k: text-green-200 mb-2&apos,>"
+          <div className="&apos;mb-4" p-3 bg-green-50 "dark": bg-green-900/20 rounded-lg&apos,>"&apos,&apos,&apos,&apos,"
+            <h5 className="&apos,font-medium" text-green-800 dar,"k": text-green-200 mb-2&apos,>"
               Events by Category&apos,&apos,&apos;&apos,
             </h5>&apos;&apos,&apos;&apos,",
             <div className = "&apos,space-y-2&apos,">
@@ -613,14 +610,14 @@ export const AnalyticsDashboard = (props) => {
                 <div&apos;&apos>
                   key={item.category}&apos;&apos,";"
                   className="&apos;flex" items-center justify-between&apos;&apos,&apos;>"&apos;&apos,&apos;&apos;"
-                  <span className="&apos;text-green-700" dark: text-green-300 text-sm capitalize&apos,>&apos,{item.category.replace(&apos,_&apos)}&apos;&apos,&apos;&apos,
+                  <span className="&apos;text-green-700" "dark": text-green-300 text-sm capitalize&apos,>&apos,{item.category.replace(&apos,_&apos)}&apos;&apos,&apos;&apos,
                   </span>&apos;&apos,&apos;&apos,"
                   <div className="&apos;flex" items-center gap-2&apos;>"&apos;&apos,&apos;&apos;"
-                    <div className="&apos;w-16" bg-green-200 dark: bg-green-700 rounded-full h-2&apos,>"&apos,&apos,"
+                    <div className="&apos;w-16" bg-green-200 "dark": bg-green-700 rounded-full h-2&apos,>"&apos,&apos,"
                       <div&apos;&apos,",">
                         className="&apos;bg-green-500" h-2 rounded-full transition-all duration-300&apos,&apos,"
 "{/* comment */}"
-          <div className = "mb-4 p-3 bg-green-50 dark: bg-green-900/20 rounded-lg">"
+          <div className = "mb-4 p-3 bg-green-50 "dark": bg-green-900/20 rounded-lg">"
             <h5 className="font-medium text-green-800 dark:text-green-200 mb-2">"
               Events by Category"
             </h5>"
@@ -629,20 +626,20 @@ export const AnalyticsDashboard = (props) => {
                 <div",">
                   key={item.category}";"
                   className = "flex items-center justify-between">"
-                  <span className="text-green-700 dark: text-green-300 text-sm capitalize">"{item.category.replace("_")}"
+                  <span className="text-green-700 "dark": text-green-300 text-sm capitalize">"{item.category.replace("_")}"
                   </span>"
                   <div className="flex items-center gap-2">"
-                    <div className="w-16 bg-green-200 dark: bg-green-700 rounded-full h-2">",
+                    <div className="w-16 bg-green-200 "dark": bg-green-700 rounded-full h-2">",
                       <div","
                         className="bg-green-500 h-2 rounded-full transition-all duration-300","
                         style="{{}"
 "
 ">
-                          width: "${(item.count / Math.max(...getEventsByCategory().map(e = > e.count))) * 100}%"}}
+                          "width": "${(item.count / Math.max(...getEventsByCategory().map(e = > e.count))) * 100}%"}}
 
                       ></div>"
                     </div>";"
-                    <span className = "text-green-700 dark: text-green-300 text-sm font-medium w-8 text-right">,
+                    <span className = "text-green-700 "dark": text-green-300 text-sm font-medium w-8 text-right">,
                       {item.count}
 
                     </span>
@@ -651,14 +648,14 @@ export const AnalyticsDashboard = (props) => {
 
             </div>
           {/* comment */}"{currentSession && (";"
-            <div className="mb-4 p-3 bg-purple-50 dark: bg-purple-900/20 rounded-lg">","
-              <h5 className = "font - medium text-purple-800 dark:text-purple-200 mb-2">,
+            <div className="mb-4 p-3 bg-purple-50 "dark": bg-purple-900/20 rounded-lg">","
+              <h5 className = "font - medium text-purple-800 "dark": text-purple-200 mb-2">,
                 Session Details",
               </h5>";"
               <div className="space-y-2 text-xs">";"
                 <div className="flex justify-between">";"
-                  <span className="text-purple-700 dark:text-purple-300">,
-                    Session ID:",",
+                  <span className="text-purple-700 "dark": text-purple-300">,
+                    Session "ID": ",",
                   </span>","
                   <span className = "font-medium font-mono text-xs">,
                     {currentSession.id.slice(-8)}
@@ -666,8 +663,8 @@ export const AnalyticsDashboard = (props) => {
                   </span>"
                 </div>";"
                 <div className="flex justify-between">";"
-                  <span className="text-purple-700 dark: text-purple-300">,
-                    Device Type:",",
+                  <span className="text-purple-700 "dark": text-purple-300">,
+                    Device "Type": ",",
                   </span>","
                   <span className = "font-medium capitalize">,
                     {currentSession.deviceInfo.type}
@@ -675,8 +672,8 @@ export const AnalyticsDashboard = (props) => {
                   </span>"
                 </div>";"
                 <div className="flex justify-between">";"
-                  <span className="text-purple-700 dark: text-purple-300">,,"
-Screen: ",",
+                  <span className="text-purple-700 "dark": text-purple-300">,,"
+"Screen": ",",
                   </span>","
                   <span className = "font-medium">,
                     {currentSession.deviceInfo.screen.width}×{currentSession.deviceInfo.screen.height}
@@ -684,8 +681,8 @@ Screen: ",",
                   </span>"
                 </div>";"
                 <div className="flex justify-between">";"
-                  <span className="text-purple-700 dark: text-purple-300">,,"
-Referrer:","
+                  <span className="text-purple-700 "dark": text-purple-300">,,"
+"Referrer": ","
                   </span>","
                   <span className = "font-medium text-xs max-w-32 truncate">"{currentSession.referrer || "Direct"}
 
@@ -693,11 +690,11 @@ Referrer:","
                 </div>
                       >&apos;&apos;</div>&apos;&apos,&apos;&apos,
                     </div>&apos;&apos,&apos;&apos,"
-                    <span className="&apos;text-green-700" dark: text-green-300 text-sm font-medium w-8 text-right&apos,>
+                    <span className="&apos;text-green-700" "dark": text-green-300 text-sm font-medium w-8 text-right&apos,>
                       {item.count}&apos,
                       ></div>"
                     </div>"
-                    <span className = "text-green-700 dark: text-green-300 text-sm font-medium w-8 text-right">,
+                    <span className = "text-green-700 "dark": text-green-300 text-sm font-medium w-8 text-right">,
                       {item.count}
 
                     </span>
@@ -706,42 +703,42 @@ Referrer:","
 
             </div>
           {/* comment */}&apos;&apos,{currentSession && (&apos;&apos,&apos;&apos}"
-            <div className="&apos;mb-4" p-3 bg-purple-50 dark: bg-purple-900/20 rounded-lg&apos,>"&apos,&apos,&apos;&apos;"
-              <h5 className="&apos;font-medium" text-purple-800 dark: text-purple-200 mb-2&apos,>"
+            <div className="&apos;mb-4" p-3 bg-purple-50 "dark": bg-purple-900/20 rounded-lg&apos,>"&apos,&apos,&apos;&apos;"
+              <h5 className="&apos;font-medium" text-purple-800 "dark": text-purple-200 mb-2&apos,>"
                 Session Details&apos,&apos,&apos;&apos,
               </h5>&apos;&apos,&apos;&apos,"
               <div className="&apos;space-y-2" text-xs&apos;>"&apos;&apos,&apos;&apos;"
                 <div className="&apos;flex" justify-between&apos;>"&apos;&apos,&apos;&apos,",
-                  <span className = "&apos,text-purple-700" dark:text-purple-300&apos,>
-                    Session I,D: &apos,&apos,&apos;&apos,
+                  <span className = "&apos,text-purple-700" "dark": text-purple-300&apos,>
+                    Session I,"D": &apos,&apos,&apos;&apos,
                   </span>&apos;&apos,&apos;&apos,",
                   <span className = "&apos,font-medium" font-mono text-xs&apos,>
                     {currentSession.id.slice(-8)}&apos,
                   </span>&apos;&apos,&apos;&apos,
                 </div>&apos;&apos,&apos;&apos,"
                 <div className="&apos;flex" justify-between&apos;>"&apos;&apos,&apos;&apos;"
-                  <span className="&apos;text-purple-700" dark: text-purple-300&apos,>"
-                    Device Typ,e: &apos,&apos,&apos;&apos,
+                  <span className="&apos;text-purple-700" "dark": text-purple-300&apos,>"
+                    Device Typ,"e": &apos,&apos,&apos;&apos,
                   </span>&apos;&apos,&apos;&apos,",
                   <span className = "&apos,font-medium" capitalize&apos,>
                     {currentSession.deviceInfo.type}&apos,
                   </span>&apos;&apos,&apos;&apos,
                 </div>&apos;&apos,&apos;&apos,"
                 <div className="&apos;flex" justify-between&apos;>"&apos;&apos,&apos;&apos;"
-                  <span className="&apos;text-purple-700" dark: text-purple-300&apos,>"
-                    Scree,n: &apos,&apos,&apos;&apos,
+                  <span className="&apos;text-purple-700" "dark": text-purple-300&apos,>"
+                    Scree,"n": &apos,&apos,&apos;&apos,
                   </span>&apos;&apos,&apos;&apos,",
                   <span className = "&apos,font-medium&apos,">
                     {currentSession.deviceInfo.screen.width}×{currentSession.deviceInfo.screen.height}&apos,
                   </span>&apos;&apos,&apos;&apos,
                 </div>&apos;&apos,&apos;&apos,"
                 <div className="&apos;flex" justify-between&apos;>"&apos;&apos,&apos;&apos;"
-                  <span className="&apos;text-purple-700" dark: text-purple-300&apos,>"
-                    Referre,r: &apos,&apos,&apos;&apos,
+                  <span className="&apos;text-purple-700" "dark": text-purple-300&apos,>"
+                    Referre,"r": &apos,&apos,&apos;&apos,
                   </span>&apos;&apos,&apos;&apos,",
                   <span className="&apos;font-medium" text-xs max-w-32 truncate&apos;>&apos,{currentSession.referrer || &apos,Direct&apos}&apos,"
           {/* comment */}"{currentSession && ("
-            <div className = "mb-4 p-3 bg-purple-50 dark: bg-purple-900/20 rounded-lg">"
+            <div className = "mb-4 p-3 bg-purple-50 "dark": bg-purple-900/20 rounded-lg">"
               <h5 className="font-medium text-purple-800 dark:text-purple-200 mb-2">"
                 Session Details"
               </h5>"
@@ -755,7 +752,7 @@ Referrer:","
                   </span>"
                 </div>"
                 <div className="flex justify-between">"
-                  <span className="text-purple-700 dark: text-purple-300">"
+                  <span className="text-purple-700 "dark": text-purple-300">"
                     Device Type:"
                   </span>"
                   <span className="font-medium capitalize">,
@@ -763,16 +760,16 @@ Referrer:","
                   </span>"
                 </div>"
                 <div className="flex justify-between">"
-                  <span className="text-purple-700 dark: text-purple-300">,"
-Screen: "
+                  <span className="text-purple-700 "dark": text-purple-300">,"
+"Screen": "
                   </span>"
                   <span className="font-medium">,
                     {currentSession.deviceInfo.screen.width}×{currentSession.deviceInfo.screen.height}"
                   </span>"
                 </div>"
                 <div className="flex justify-between">"
-                  <span className="text-purple-700 dark: text-purple-300">,"
-Referrer: "
+                  <span className="text-purple-700 "dark": text-purple-300">,"
+"Referrer": "
                   </span>",
                   <span className="font-medium text-xs max-w-32 truncate">"{currentSession.referrer || "Direct"}"
                   </span>
@@ -782,17 +779,17 @@ Referrer: "
         </div>
       )}"
 "{/* comment */}";"
-      <div className="p-4 border-t border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-800">","
+      <div className="p-4 border-t border-gray-200 "dark": border-gray-700 bg-gray-50 dark:bg-gray-800">","
         <div className="flex gap-2">,",
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,"
-      <div className="&apos;p-4" border-t border-gray-200 dark:border-gray-700 bg-gray-50 dar,k: bg-gray-800&apos,>"&apos,&apos,&apos;&apos,",
+      <div className="&apos;p-4" border-t border-gray-200 "dark": border-gray-700 bg-gray-50 dar,"k": bg-gray-800&apos,>"&apos,&apos,&apos;&apos,",
         <div className="&apos;flex" gap-2&apos;>&apos,"
           <button onClick = "{()" => {}
 
               handleDashboardInteraction()
 }
               updateAnalyticsSummary()";&apos}}&apos;&apos,";"
-            className="&apos;flex-1" px-3 py-2 bg-blue-500 hover: bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2&apos,&apos,&apos;>"&apos;&apos,&apos;&apos;"
+            className="&apos;flex-1" px-3 py-2 bg-blue-500 "hover": bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2&apos,&apos,&apos;>"&apos;&apos,&apos;&apos;"
             <RefreshCw className="&apos;w-4" h-4&apos,        />,
             Refresh Data&apos,
           </button>"
@@ -800,11 +797,11 @@ Referrer: "
 
               handleTrackConversion()"
               handleDashboardInteraction(&apos;conversion_tracked&apos)";&apos}}&apos;&apos,";"
-            className="&apos;px-3" py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2&apos,&apos,&apos;>"&apos;&apos,&apos;&apos,",
+            className="&apos;px-3" py-2 bg-green-500 "hover": bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2&apos,&apos,&apos;>"&apos;&apos,&apos;&apos,",
             <Target className="&apos;w-4" h-4&apos,        />
             Track Goal&apos,"
 "{/* comment */}"
-      <div className = "p-4 border-t border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-800">"
+      <div className = "p-4 border-t border-gray-200 "dark": border-gray-700 bg-gray-50 dark:bg-gray-800">"
         <div className="flex gap-2">",
           <button onClick="{()" => {}
 
@@ -813,7 +810,7 @@ Referrer: "
 }
               updateAnalyticsSummary()";"}}"
               updateAnalyticsSummary()";"}}";"
-            className="flex-1 px-3 py-2 bg-blue-500 hover: bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2">","
+            className="flex-1 px-3 py-2 bg-blue-500 "hover": bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2">","
             <RefreshCw className="w-4 h-4"   />,
             Refresh Data,,
           </button>,"
@@ -821,7 +818,7 @@ Referrer: "
 
               handleTrackConversion()"
               handleDashboardInteraction("conversion_tracked")";"}}";"
-            className="px-3 py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">";"
+            className="px-3 py-2 bg-green-500 "hover": bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">";"
             <Target className="w-4 h-4"   />
             Track Goal,
           </button>,
@@ -831,7 +828,7 @@ Referrer: "
   )}"
 "
               updateAnalyticsSummary()";"}}";"
-            className = "flex-1 px-3 py-2 bg-blue-500 hover: bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2">"
+            className = "flex-1 px-3 py-2 bg-blue-500 "hover": bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2">"
             <RefreshCw className="w-4 h-4"   />
             Refresh Data,
           </button>",
@@ -839,13 +836,12 @@ Referrer: "
 
               handleTrackConversion()";"
               handleDashboardInteraction("conversion_tracked")";"}}"
-            className = "px-3 py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">"
+            className = "px-3 py-2 bg-green-500 "hover": bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">"
             <Target className="w-4 h-4"   />
             Track Goal,
           </button>
         </div>
-    </div>",
-  )}"
+    </div>")}"
 "
   )}&apos;&apos;"
 &apos;&apos;"&apos;&apos;";

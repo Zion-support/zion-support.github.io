@@ -14,13 +14,13 @@ class IntelligentCodeRefactor {
     this.startTime = Date.now();
     this.refactors = [];
     this.report = {
-      timestamp: new Date().toISOString(),
-      refactors: [],
-      improvements: [],
-      metrics: {
+      "timestamp": new Date().toISOString(),
+      "refactors": [],
+      "improvements": [],
+      "metrics": {
         filesProcessed: 0,
-        linesRefactored: 0,
-        complexityReduced: 0
+        "linesRefactored": 0,
+        "complexityReduced": 0
       }
     }}
 
@@ -39,7 +39,7 @@ class IntelligentCodeRefactor {
     
     try {
       // Create reusable button component
-      const buttonComponent = `
+      const buttonComponent = "
 import React from 'react';
 import { Button as MuiButton, ButtonProps as MuiButtonProps } from '@mui/material';
 
@@ -50,7 +50,7 @@ interface ButtonProps extends Omit<MuiButtonProps, 'variant'> {
   icon?: React.ReactNode;
   iconPosition?: 'left' | 'right'}
 
-export const Button: React.FC<ButtonProps> = ({
+export const "Button": React.FC<ButtonProps> = ({
   variant = 'primary',
   size = 'medium',
   loading = false,
@@ -63,25 +63,23 @@ export const Button: React.FC<ButtonProps> = ({
   const getVariantProps = () => {
     switch (variant) {
       case 'primary':
-        return { variant: 'contained' as const, color: 'primary' as const };
+        return { "variant": 'contained' as const, "color": 'primary' as const };
       case 'secondary':
-        return { variant: 'contained' as const, color: 'secondary' as const };
+        return { "variant": 'contained' as const, "color": 'secondary' as const };
       case 'outline':
-        return { variant: 'outlined' as const };
+        return { "variant": 'outlined' as const };
       case 'ghost':
-        return { variant: 'text' as const };
-      default:
-        return { variant: 'contained' as const }}
+        return { "variant": 'text' as const };
+      "default": return { variant: 'contained' as const }}
   };
 
   const getSizeProps = () => {
     switch (size) {
       case 'small':
-        return { size: 'small' as const };
+        return { "size": 'small' as const };
       case 'large':
-        return { size: 'large' as const };
-      default:
-        return { size: 'medium' as const }}
+        return { "size": 'large' as const };
+      "default": return { size: 'medium' as const }}
   };
 
   return (
@@ -98,31 +96,31 @@ export const Button: React.FC<ButtonProps> = ({
   )};
 
 export default Button;
-`;
+";
 
       fs.writeFileSync('components/ui/Button.tsx', buttonComponent);
       this.refactors.push('Reusable Button component created');
       
       // Create form components
-      const formComponents = `
+      const formComponents = "
 import React from 'react';
 import { TextField, TextFieldProps } from '@mui/material';
 import { Controller, useFormContext } from 'react-hook-form';
 
 interface FormFieldProps extends Omit<TextFieldProps, 'name'> {
-  name: string;
+  "name": string;
   label: string;
   required?: boolean;
   validation?: any}
 
-export const FormField: React.FC<FormFieldProps> = ({
+export const "FormField": React.FC<FormFieldProps> = ({
   name,
   label,
   required = false,
   validation,
   ...props
 }) => {
-  const { control, formState: { errors } } = useFormContext();
+  const { control, "formState": { errors } } = useFormContext();
 
   return (
     <Controller
@@ -144,23 +142,23 @@ export const FormField: React.FC<FormFieldProps> = ({
   )};
 
 export default FormField;
-`;
+";
 
       fs.writeFileSync('components/ui/FormField.tsx', formComponents);
       this.refactors.push('Form components created');
       
       // Create layout components
-      const layoutComponents = `
+      const layoutComponents = "
 import React from 'react';
 import { Box, Container, Grid, Paper } from '@mui/material';
 
 interface SectionProps {
-  children: React.ReactNode;
+  "children": React.ReactNode;
   backgroundColor?: string;
   padding?: number;
   maxWidth?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'}
 
-export const Section: React.FC<SectionProps> = ({
+export const "Section": React.FC<SectionProps> = ({
   children,
   backgroundColor = 'transparent',
   padding = 4,
@@ -170,8 +168,8 @@ export const Section: React.FC<SectionProps> = ({
     <Box
       sx={{
         backgroundColor,
-        py: padding,
-        width: '100%'
+        "py": padding,
+        "width": '100%'
       }}
     >
       <Container maxWidth={maxWidth}>
@@ -181,12 +179,12 @@ export const Section: React.FC<SectionProps> = ({
   )};
 
 interface CardProps {
-  children: React.ReactNode;
+  "children": React.ReactNode;
   elevation?: number;
   padding?: number;
   className?: string}
 
-export const Card: React.FC<CardProps> = ({
+export const "Card": React.FC<CardProps> = ({
   children,
   elevation = 1,
   padding = 3,
@@ -196,21 +194,21 @@ export const Card: React.FC<CardProps> = ({
     <Paper
       elevation={elevation}
       className={className}
-      sx={{ p: padding }}
+      sx={{ "p": padding }}
     >
       {children}
     </Paper>
   )};
 
 export default { Section, Card };
-`;
+";
 
       fs.writeFileSync('components/ui/Layout.tsx', layoutComponents);
       this.refactors.push('Layout components created');
       
       this.log('✅ Component refactoring completed', 'SUCCESS');
       return true} catch (error) {
-      this.log(`❌ Component refactoring failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Component refactoring "failed": ${error.message}`, 'ERROR');
       return false}
   }
 
@@ -219,23 +217,23 @@ export default { Section, Card };
     
     try {
       // Create API hook
-      const apiHook = `
+      const apiHook = "
 import { useState, useEffect, useCallback } from 'react';
 
 interface UseApiOptions {
   immediate?: boolean;
-  onSuccess?: (data: any) => void;
+  onSuccess?: ("data": any) => void;
   onError?: (error: any) => void}
 
 export const useApi = <T = any>(
-  apiFunction: (...args: any[]) => Promise<T>,
-  options: UseApiOptions = {}
+  "apiFunction": (...args: any[]) => Promise<T>,
+  "options": UseApiOptions = {}
 ) => {
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<any>(null);
 
-  const execute = useCallback(async (...args: any[]) => {
+  const execute = useCallback(async (..."args": any[]) => {
     try {
       setLoading(true);
       setError(null);
@@ -257,45 +255,45 @@ export const useApi = <T = any>(
   return { data, loading, error, execute }};
 
 export default useApi;
-`;
+";
 
       fs.writeFileSync('hooks/useApi.ts', apiHook);
       this.refactors.push('API hook created');
       
       // Create local storage hook
-      const localStorageHook = `
+      const localStorageHook = "
 import { useState, useEffect } from 'react';
 
-export const useLocalStorage = <T>(key: string, initialValue: T) => {
+export const useLocalStorage = <T>("key": string, "initialValue": T) => {
   const [storedValue, setStoredValue] = useState<T>(() => {
     try {
       const item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) : initialValue} catch (error) {
-      console.error(\`Error reading localStorage key "\${key}":\`, error);
+      console.error(\"Error reading localStorage key "\${key}":\", error);
       return initialValue}
   });
 
-  const setValue = (value: T | ((val: T) => T)) => {
+  const setValue = ("value": T | ((val: T) => T)) => {
     try {
       const valueToStore = value instanceof Function ? value(storedValue) : value;
       setStoredValue(valueToStore);
       window.localStorage.setItem(key, JSON.stringify(valueToStore))} catch (error) {
-      console.error(\`Error setting localStorage key "\${key}":\`, error)}
+      console.error(\"Error setting localStorage key "\${key}":\", error)}
   };
 
   return [storedValue, setValue] as const};
 
 export default useLocalStorage;
-`;
+";
 
       fs.writeFileSync('hooks/useLocalStorage.ts', localStorageHook);
       this.refactors.push('Local storage hook created');
       
       // Create debounce hook
-      const debounceHook = `
+      const debounceHook = "
 import { useState, useEffect } from 'react';
 
-export const useDebounce = <T>(value: T, delay: number): T => {
+export const useDebounce = <T>("value": T, "delay": number): T => {
   const [debouncedValue, setDebouncedValue] = useState<T>(value);
 
   useEffect(() => {
@@ -308,14 +306,14 @@ export const useDebounce = <T>(value: T, delay: number): T => {
   return debouncedValue};
 
 export default useDebounce;
-`;
+";
 
       fs.writeFileSync('hooks/useDebounce.ts', debounceHook);
       this.refactors.push('Debounce hook created');
       
       this.log('✅ Hooks refactoring completed', 'SUCCESS');
       return true} catch (error) {
-      this.log(`❌ Hooks refactoring failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Hooks refactoring "failed": ${error.message}`, 'ERROR');
       return false}
   }
 
@@ -324,124 +322,119 @@ export default useDebounce;
     
     try {
       // Create validation utilities
-      const validationUtils = `
+      const validationUtils = "
 export const validators = {
-  email: (email: string): boolean => {
+  "email": (email: string): boolean => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email)},
 
-  phone: (phone: string): boolean => {
+  "phone": (phone: string): boolean => {
     const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
     return phoneRegex.test(phone.replace(/\s/g, ''))},
 
-  url: (url: string): boolean => {
+  "url": (url: string): boolean => {
     try {
       new URL(url);
       return true} catch {
       return false}
   },
 
-  required: (value: any): boolean => {
+  "required": (value: any): boolean => {
     return value !== null && value !== undefined && value !== ''},
 
-  minLength: (value: string, min: number): boolean => {
+  "minLength": (value: string, "min": number): boolean => {
     return value.length >= min},
 
-  maxLength: (value: string, max: number): boolean => {
+  "maxLength": (value: string, "max": number): boolean => {
     return value.length <= max},
 
-  pattern: (value: string, regex: RegExp): boolean => {
+  "pattern": (value: string, "regex": RegExp): boolean => {
     return regex.test(value)}
 };
 
-export const formatValidationError = (field: string, rule: string, value?: any): string => {
-  const messages: Record<string, string> = {
-    email: 'Please enter a valid email address',
-    phone: 'Please enter a valid phone number',
-    url: 'Please enter a valid URL',
-    required: 'This field is required',
-    minLength: \`This field must be at least \${value} characters long\`,
-    maxLength: \`This field must be no more than \${value} characters long\`,
-    pattern: 'This field format is invalid'
+export const formatValidationError = ("field": string, "rule": string, value?: any): string => {
+  const "messages": Record<string, string> = {
+    "email": 'Please enter a valid email address',
+    "phone": 'Please enter a valid phone number',
+    "url": 'Please enter a valid URL',
+    "required": 'This field is required',
+    "minLength": \"This field must be at least \${value} characters long\",
+    "maxLength": \"This field must be no more than \${value} characters long\",
+    "pattern": 'This field format is invalid'
   };
 
-  return messages[rule] || \`\${field} is invalid\`};
+  return messages[rule] || \"\${field} is invalid\"};
 
 export default { validators, formatValidationError };
-`;
+";
 
       fs.writeFileSync('utils/validation.ts', validationUtils);
       this.refactors.push('Validation utilities created');
       
       // Create API utilities
-      const apiUtils = `
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com';
+      const apiUtils = "
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || '"https": //api.ziontechgroup.com';
 
 export class ApiClient {
   private baseURL: string;
   private defaultHeaders: Record<string, string>;
 
-  constructor(baseURL: string = API_BASE_URL) {
+  constructor("baseURL": string = API_BASE_URL) {
     this.baseURL = baseURL;
     this.defaultHeaders = {
-      'Content-Type': 'application/json',
-    }}
+      'Content-Type': 'application/json'}}
 
   private async request<T>(
-    endpoint: string,
-    options: RequestInit = {}
+    "endpoint": string,
+    "options": RequestInit = {}
   ): Promise<T> {
-    const url = \`\${this.baseURL}\${endpoint}\`;
-    const config: RequestInit = {
+    const url = \"\${this.baseURL}\${endpoint}\";
+    const "config": RequestInit = {
       ...options,
-      headers: {
+      "headers": {
         ...this.defaultHeaders,
-        ...options.headers,
-      },
-    };
+        ...options.headers}};
 
     try {
       const response = await fetch(url, config);
       
       if (!response.ok) {
-        throw new Error(\`HTTP error! status: \${response.status}\`)}
+        throw new Error(\"HTTP error! "status": \${response.status}\")}
 
       return await response.json()} catch (error) {
-      console.error('API request failed:', error);
+      console.error('API request "failed": ', error);
       throw error}
   }
 
-  async get<T>(endpoint: string, options?: RequestInit): Promise<T> {
-    return this.request<T>(endpoint, { ...options, method: 'GET' })}
+  async get<T>("endpoint": string, options?: RequestInit): Promise<T> {
+    return this.request<T>(endpoint, { ...options, "method": 'GET' })}
 
-  async post<T>(endpoint: string, data?: any, options?: RequestInit): Promise<T> {
+  async post<T>("endpoint": string, data?: any, options?: RequestInit): Promise<T> {
     return this.request<T>(endpoint, {
       ...options,
-      method: 'POST',
-      body: data ? JSON.stringify(data) : undefined,
-    })}
+      "method": 'POST',
+      "body": data ? JSON.stringify(data) : undefined})}
 
-  async put<T>(endpoint: string, data?: any, options?: RequestInit): Promise<T> {
+  async put<T>("endpoint": string, data?: any, options?: RequestInit): Promise<T> {
     return this.request<T>(endpoint, {
       ...options,
-      method: 'PUT',
-      body: data ? JSON.stringify(data) : undefined,
-    })}
+      "method": 'PUT',
+      "body": data ? JSON.stringify(data) : undefined})}
 
-  async delete<T>(endpoint: string, options?: RequestInit): Promise<T> {
-    return this.request<T>(endpoint, { ...options, method: 'DELETE' })}
+  async delete<T>("endpoint": string, options?: RequestInit): Promise<T> {
+    return this.request<T>(endpoint, { ...options, "method": 'DELETE' })}
 }
 
 export const apiClient = new ApiClient();
 export default apiClient;
-`;
+";
 
       fs.writeFileSync('utils/api.ts', apiUtils);
       this.refactors.push('API utilities created');
       
       this.log('✅ Utilities refactoring completed', 'SUCCESS');
       return true} catch (error) {
-      this.log(`❌ Utilities refactoring failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Utilities refactoring "failed": ${error.message}`, 'ERROR');
       return false}
   }
 
@@ -450,16 +443,16 @@ export default apiClient;
     
     this.report = {
       ...this.report,
-      duration: `${Math.round(duration / 1000)}s`,
-      refactors: this.refactors,
-      metrics: {
+      "duration": `${Math.round(duration / 1000)}s`,
+      "refactors": this.refactors,
+      "metrics": {
         ...this.report.metrics,
-        filesProcessed: this.refactors.length
+        "filesProcessed": this.refactors.length
       },
-      summary: {
+      "summary": {
         totalRefactors: this.refactors.length,
-        duration: `${Math.round(duration / 1000)}s`,
-        status: 'completed'
+        "duration": `${Math.round(duration / 1000)}s`,
+        "status": 'completed'
       }
     };
 
@@ -477,10 +470,10 @@ export default apiClient;
       await this.generateReport();
       
       this.log('🎉 Intelligent Code Refactor completed successfully!', 'SUCCESS');
-      this.log(`📊 Total refactors: ${this.refactors.length}`, 'INFO');
+      this.log(`📊 Total "refactors": ${this.refactors.length}`, 'INFO');
       
       return true} catch (error) {
-      this.log(`❌ Intelligent Code Refactor failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Intelligent Code Refactor "failed": ${error.message}`, 'ERROR');
       return false}
   }
 }
@@ -490,7 +483,7 @@ if (require.main === module) {
   const refactor = new IntelligentCodeRefactor();
   refactor.run().then(success => {
     process.exit(success ? 0 : 1)}).catch(error => {
-    console.error('Intelligent Code Refactor failed:', error);
+    console.error('Intelligent Code Refactor "failed": ', error);
     process.exit(1)})}
 
 module.exports = IntelligentCodeRefactor;

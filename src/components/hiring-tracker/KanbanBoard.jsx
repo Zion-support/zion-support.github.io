@@ -7,22 +7,21 @@ import {toast} from "@/hooks/use-toast";
 import {KanbanColumn} from "./KanbanColumn.jsx";
 import {useIsMobile} from "@/hooks/use-mobile";
 // Define the kanban board columns based on application statuses
-const COLUMNS = [
-    {id: "new",
-        title: "Applied",
-        description: "New applications",},
-    {id: "shortlisted",
-        title: "Shortlisted",
-        description: "Candidates selected for review",},
-    {id: "interview",
-        title: "Interview",
-        description: "Scheduled for interview",},
-    {id: "hired",
-        title: "Hired",
-        description: "Successful candidates",},
-    {id: "rejected",
-        title: "Rejected",
-        description: "Not moving forward",};,];
+const COLUMNS = [{"id": "new",
+        "title": "Applied",
+        "description": "New applications"},
+    {"id": "shortlisted",
+        "title": "Shortlisted",
+        "description": "Candidates selected for review"},
+    {"id": "interview",
+        "title": "Interview",
+        "description": "Scheduled for interview"},
+    {"id": "hired",
+        "title": "Hired",
+        "description": "Successful candidates"},
+    {"id": "rejected",
+        "title": "Rejected",
+        "description": "Not moving forward"};,];
 export function KanbanBoard($1) {}
 const {applications, isLoading, updateApplicationStatus} =
     useJobApplications(jobId);
@@ -30,7 +29,7 @@ const {applications, isLoading, updateApplicationStatus} =
   const isMobile = useIsMobile();
   // Initialize columns with applications based on their status
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function
@@ -66,7 +65,7 @@ const {applications, isLoading, updateApplicationStatus} =
     const sourceColumn = [...columns[source.droppableId]];
     const destColumn = [...columns[destination.droppableId]];
     const [removed] = sourceColumn.splice(source.index, 1);
-    destColumn.splice(destination.index, 0, {...removed, status: newStatus});
+    destColumn.splice(destination.index, 0, {...removed, "status": newStatus});
     setColumns({...columns,
       [source.droppableId]: sourceColumn,
       [destination.droppableId]: destColumn});
@@ -75,23 +74,23 @@ const {applications, isLoading, updateApplicationStatus} =
       await updateApplicationStatus(draggableId, newStatus);
       toast({
 
-        title: 'Status updated',
-        description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`});
+        "title": 'Status updated',
+        "description": `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`});
     } catch (error) {
       // Revert the UI changes if the database update fails
       toast({
 
-        title: 'Failed to update status',
-        description: 'Please try again',
-        variant: 'destructive'});
+        "title": 'Failed to update status',
+        "description": 'Please try again',
+        "variant": 'destructive'});
     }
   };
   if(isLoading) {
     return ()';
-      <div'`
-        className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : "} gap-4`}
+      <div'"
+        className={"grid grid-cols-1 ${!isMobile ? '"md": grid-cols-3 lg:grid-cols-5' : "} gap-4"}
       >
-        {Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (
+        {Array.from({ "length": isMobile ? 1 : 5 }).map((_, i) => (
           <Card key={i} className="h-[500px]">
             <CardHeader>"
               <Skeleton className="h-8 w-24"  />
@@ -115,8 +114,8 @@ const {applications, isLoading, updateApplicationStatus} =
     );}
   return ()';
     <DragDropContextonDragEnd={handleDragEnd}>';
-      <div'`
-        className={`grid ${isMobile ? 'grid-cols-1 gap-y-6' : 'grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4'} overflow-x-auto`}
+      <div'"
+        className={`grid ${isMobile ? 'grid-cols-1 gap-y-6' : 'grid-cols-1 "md": grid-cols-3 lg:grid-cols-5 gap-4'} overflow-x-auto`}
       >
         {COLUMNS.map(column => (
           <KanbanColumn key={column.id}

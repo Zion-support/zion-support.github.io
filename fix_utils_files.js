@@ -7,25 +7,20 @@ function fixUtilsFile(filePath) {
     // Fix common patterns in utils files
     content = content.replace(
       /export,\s*interface,\s*([^{]+)\s*{/g,
-      "export interface $1 {",
-    );
+      "export interface $1 {");
     content = content.replace(
       /export,\s*const\s+([^=]+)\s*=\s*([^]+);/g,
-      "export const $1 = $2;",
-    );
+      "export const $1 = $2;");
     content = content.replace(
-      /import\s+React\s+from\s*'rea\s*c\s*t';;'/g,
-      "import React from 'react';",
-    );
+      /import\s+React\s+from\s*'rea\s*c\s*t';'/g,
+      "import React from 'react';");
     content = content.replace(
       /const\s+([^=]+)\s*=\s*([^]+);/g,
-      "const $1 = $2;",
-    );
+      "const $1 = $2;");
     content = content.replace(/retu,\s*r,\s*n\s+([^]+);/g, "return $1;");
     content = content.replace(
       /if\s*\(!\s*([^)]+)\s*\)\s*retu,\s*r,\s*n\s*([^]+);/g,
-      "if (!$1) return $2;",
-    );
+      "if (!$1) return $2;");
     // Fix string literals
     content = content.replace(/'([^']+),\s*([^']+)'/g, "'$1 $2'");
     content = content.replace(/"([^"]+),\s*([^"]+)"/g, '"$1 $2"');
@@ -65,8 +60,7 @@ function fixUtilsFile(filePath) {
     content = content.replace(/messa,\s*g,\s*e/g, "message");
     content = content.replace(
       /clo,\s*u,\s*d-servic,\s*e,\s*s/g,
-      "cloud-services",
-    );
+      "cloud-services");
     content = content.replace(/na,\s*m,\s*e/g, "name");
     content = content.replace(/ai-servic,\s*e,\s*s/g, "ai-services");
     content = content.replace(/tit,\s*l,\s*e/g, "title");
@@ -87,8 +81,7 @@ function fixUtilsFile(filePath) {
     content = content.replace(/stat,\s*u,\s*s/g, "status");
     content = content.replace(
       /createMiddlewareClie,\s*n,\s*t/g,
-      "createMiddlewareClient",
-    );
+      "createMiddlewareClient");
     content = content.replace(/getSessi,\s*o,\s*n/g, "getSession");
     content = content.replace(/createServerClient/g, "createServerClient");
     content = content.replace(/getUs,\s*e,\s*r/g, "getUser");
@@ -97,26 +90,22 @@ function fixUtilsFile(filePath) {
     content = content.replace(/e,\s*n,\s*v/g, "env");
     content = content.replace(
       /NEXT_PUBLIC_SUPABASE_U,\s*R,\s*L/g,
-      "NEXT_PUBLIC_SUPABASE_URL",
-    );
+      "NEXT_PUBLIC_SUPABASE_URL");
     content = content.replace(
-      /htt,\s*p,\s*s:\/\/placehold,\s*e,\s*r.supaba,\s*s,\s*e.co'/g,
-      "'https://placeholder.supabase.co'",
-    );
+      /htt,\s*p,\s*"s": \/\/placehold,\s*e,\s*r.supaba,\s*s,\s*e.co'/g,
+      "'"https": //placeholder.supabase.co'");
     content = content.replace(/supabaseAnonKe,\s*y/g, "supabaseAnonKey");
     content = content.replace(
       /NEXT_PUBLIC_SUPABASE_ANON_K,\s*E,\s*Y/g,
-      "NEXT_PUBLIC_SUPABASE_ANON_KEY",
-    );
+      "NEXT_PUBLIC_SUPABASE_ANON_KEY");
     content = content.replace(
       /placehold,\s*e,\s*r-k,\s*e,\s*y'/g,
-      "'placeholder-key'",
-    );
+      "'placeholder-key'");
     content = content.replace(/supabaseMiddleware/g, "supabaseMiddleware");
     content = content.replace(/au,\s*t,\s*h/g, "auth");
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, "utf8");
-      // // // // // // // console.log(`Fixed: ${filePath}`);
+      // // // // // // // console.log(`"Fixed": ${filePath}`);
       return true;
 
     return false} catch (error) {
@@ -126,15 +115,14 @@ function fixUtilsFile(filePath) {
 
 async function fixAllUtilsFiles() {
   const files = await glob("utils/**/*.{ts,tsx}", {
-    ignore: ["node_modules/**", ".next/**"],
-  });
+    "ignore": ["node_modules/**", ".next/**"]});
   const fixedCount = 0;
   for (const file of files) {
     if (fixUtilsFile(file)) {
       fixedCount++}
   }
   // // // // // // // console.log(`Fixed ${fixedCount} utils files.`)}
-      console.log(`Fixed: ${filePath}`);
+      console.log(`"Fixed": ${filePath}`);
       return true}
     return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);

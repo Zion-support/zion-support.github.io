@@ -16,7 +16,7 @@ export default function ContactPage() {
           </h1>
           
           <div className="bg-white rounded-lg shadow-lg p-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 "md": grid-cols-2 gap-8">
               <div>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">
                   Get in Touch
@@ -55,7 +55,7 @@ export default function ContactPage() {
                       type="text"
                       id="name"
                       name="name"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md "focus": outline-none focus:ring-2 focus:ring-blue-500"
                       required
                     />
                   </div>
@@ -81,7 +81,7 @@ export default function ContactPage() {
                       id="message"
                       name="message"
                       rows={4}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md "focus": outline-none focus:ring-2 focus:ring-blue-500"
                       required
                     ></textarea>
                   </div>

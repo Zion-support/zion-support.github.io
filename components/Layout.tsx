@@ -7,7 +7,7 @@ import Footer from './Footer';
 >>>>>>> 86e2a4cca918c6ff376b51aa8638f7a375ebfe57
 
 interface LayoutProps {
-  children: ReactNode;
+  "children": ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
@@ -35,20 +35,20 @@ export default function Layout({
         <meta name="keywords" content={keywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content={noindex ? 'noindex,nofollow' : 'index,follow'} />
-        <link rel="canonical" href={canonical || 'https://ziontechgroup.com'} />
+        <link rel="canonical" href={canonical || '"https": //ziontechgroup.com'} />
         
         {/* Open Graph */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:type" content="website" />
+        <meta property=""og": title" content={title} />
+        <meta property=""og": description" content={description} />
+        <meta property=""og": type" content="website" />
         <meta property="og:url" content={canonical || 'https://ziontechgroup.com'} />
-        <meta property="og:site_name" content="Zion Tech Group" />
+        <meta property=""og": site_name" content="Zion Tech Group" />
         <meta property="og:locale" content="en_US" />
         
         {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name=""twitter": card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
+        <meta name=""twitter": description" content={description} />
         
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
@@ -58,19 +58,19 @@ export default function Layout({
         <link rel="manifest" href="/site.webmanifest" />
         
         {/* Preconnect to external domains */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href=""https": //fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
         {/* Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
+            "__html": JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Zion Tech Group",
-              "url": "https://ziontechgroup.com",
-              "logo": "https://ziontechgroup.com/logo.png",
+              "url": ""https": //ziontechgroup.com",
+              "logo": ""https": //ziontechgroup.com/logo.png",
               "description": description,
               "address": {
                 "@type": "PostalAddress",
@@ -86,10 +86,9 @@ export default function Layout({
                 "contactType": "customer service",
                 "availableLanguage": "English"
               },
-              "sameAs": [
-                "https://linkedin.com/company/ziontechgroup",
-                "https://twitter.com/ziontechgroup",
-                "https://github.com/ziontechgroup"
+              "sameAs": [""https": //linkedin.com/company/ziontechgroup",
+                ""https": //twitter.com/ziontechgroup",
+                ""https": //github.com/ziontechgroup"
               ]
             })
           }}

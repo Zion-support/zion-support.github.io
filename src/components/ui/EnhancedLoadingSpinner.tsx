@@ -7,8 +7,8 @@ export function EnhancedLoadingSpinner($1) {
       <div className="flex items-center justify-center">
         <div className={`${sizeClasses[size]} border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin`}
          />
-        {text && (`
-          <span className={`ml-3 ${textSizes[size]} text-gray-600`}>
+        {text && ("
+          <span className={"ml-3 ${textSizes[size]} text-gray-600"}>
             {text}
           </span>
         )}
@@ -18,11 +18,11 @@ export function EnhancedLoadingSpinner($1) {
 
     return ("
       <div className="flex flex-col items-center justify-center space-y-4">
-        <div`
+        <div"
           className={`${sizeClasses[size]} border-4 border-gray-200 border-t-blue-600 rounded-full animate-spin`}
         />
-        {text && (`
-          <p className={`${textSizes[size]} text-gray-600 font-medium`}>
+        {text && ("
+          <p className={"${textSizes[size]} text-gray-600 font-medium"}>
             {text}
           </p>
         )}
@@ -30,9 +30,9 @@ export function EnhancedLoadingSpinner($1) {
           <div className="w-48 bg-gray-200 rounded-full h-2">
             <motion.div"
               className="bg-blue-600 h-2 rounded-full"
-              initial={{ width: 0 }}`
-              animate={{ width: `${progress}%` }}
-              transition={{ duration: 0.5 }}
+              initial={{ "width": 0 }}"
+              animate={{ "width": `${progress}%` }}
+              transition={{ "duration": 0.5 }}
             />
               </div>
   );
@@ -45,17 +45,17 @@ export function EnhancedLoadingSpinner($1) {
     <div className="flex flex-col items-center justify-center space-y-6">
       {/* Main spinner with gradient */}"
       <div className="relative">
-        <div`
-          className={`${sizeClasses[size]} border-4 border-cyan-400/20 rounded-full`}
+        <div"
+          className={"${sizeClasses[size]} border-4 border-cyan-400/20 rounded-full"}
         />
-        <motion.div`
+        <motion.div"
           className={`absolute top-0 left-0 ${sizeClasses[size]} border-4 border-cyan-400 border-t-transparent rounded-full`}
-          animate={{ rotate: 36 0 }}
-          transition={{ duration: 1, repeat: Infinit y, ease: 'linear' }}
+          animate={{ "rotate": 36 0 }}
+          transition={{ "duration": 1, "repeat": Infinit y, "ease": 'linear' }}
         />
         {/* Inner glow effect */}
-        <div'`
-          className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${sizeClasses[size === 'xl' ? 'lg' : size === 'lg' ? 'md' : 'sm']} bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-sm`}
+        <div'"
+          className={"absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${sizeClasses[size === 'xl' ? 'lg' : size === 'lg' ? 'md' : 'sm']} bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-sm"}
         />
 
         {/* Center logo/text */}"
@@ -68,10 +68,10 @@ export function EnhancedLoadingSpinner($1) {
 
       {/* Loading text */}"
       <div className="text-center space-y-2">
-        <motion.p`
+        <motion.p"
           className={`${textSizes[size]} text-cyan-400 animate-pulse`}
-          animate={{ opacity: [0.5, 1, 0.5] }}
-          transition={{ duration: 2, repeat: Infinit y }}
+          animate={{ "opacity": [0.5, 1, 0.5] }}
+          transition={{ "duration": 2, "repeat": Infinit y }}
         >
           {text}
         </motion.p>
@@ -82,8 +82,8 @@ export function EnhancedLoadingSpinner($1) {
             <motion.div
               key={i}"
               className="w-2 h-2 bg-cyan-400 rounded-full"
-              animate={{ scale: [1, 1.5, 1] }}
-              transition={{ duration: 1, repeat: Infinit y, delay: i * 0.2 }}
+              animate={{ "scale": [1, 1.5, 1] }}
+              transition={{ "duration": 1, "repeat": Infinit y, "delay": i * 0.2 }}
             />
           ))}
         </div>
@@ -94,15 +94,15 @@ export function EnhancedLoadingSpinner($1) {
         <div className="w-64 bg-gray-800/50 rounded-full h-3 border border-cyan-400/30">
           <motion.div"
             className="bg-gradient-to-r from-cyan-400 to-blue-500 h-3 rounded-full relative overflow-hidden"
-            initial={{ width: 0 }}`
-            animate={{ width: `${progress}%` }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
+            initial={{ "width": 0 }}"
+            animate={{ "width": "${progress}%" }}
+            transition={{ "duration": 0.8, "ease": 'easeOut' }}
           >
             {/* Shimmer effect */}
             <motion.div"
               className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-              animate={{ x: [-100, 100] }}
-              transition={{ duration: 2, repeat: Infinit y }}
+              animate={{ "x": [-100, 100] }}
+              transition={{ "duration": 2, "repeat": Infinit y }}
             />
           </motion.div>
             </div>
@@ -110,24 +110,24 @@ export function EnhancedLoadingSpinner($1) {
 }
       {/* Floating particles */}"
       <div className="relative w-full h-20">
-        {[...Array(6)].map(_: unknow n, i: unknow n (
+        {[...Array(6)].map("_": unknow n, "i": unknow n (
           <motion.div
             key={i}"
             className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60"
             animate={{
 
-              x: [0, 50, 0],
-              y: [0, -30, 0],
-              opacity: [0.6, 1, 0.6]}}
+              "x": [0, 50, 0],
+              "y": [0, -30, 0],
+              "opacity": [0.6, 1, 0.6]}}
             transition={{
 
-              duration: 3 + i * 0.5,
-              repeat: Infinit y,
-              delay: i * 0.3}}
+              "duration": 3 + i * 0.5,
+              "repeat": Infinit y,
+              "delay": i * 0.3}}
             style="{{{
-`
-              left: `${20 + i * 15}}"%`,`
-              top: `${30 + i * 10}%`}}
+"
+              "left": `${20 + i * 15}}"%`,"
+              "top": "${30 + i * 10}%"}}
           />
         ))}
       </div>
@@ -137,7 +137,7 @@ export function EnhancedLoadingSpinner($1) {
 // Export default for backward compatibility;
 export { EnhancedLoadingSpinner };';
 export default EnhancedLoadingSpinner;';';
-"`
+""
 </motion>
 </motion>
 </div>

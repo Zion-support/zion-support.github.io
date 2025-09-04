@@ -16,19 +16,18 @@ class $1 {
   constructor() {
   this.projectRoot = process.cwd();
     this.config = {
-  checkInterval: 5 * 60 * 1000, // 5 minutes;
-      maxErrors: 100,
-      autoFix: true,
-      backupBeforeFix: true,
-}
+  "checkInterval": 5 * 60 * 1000, // 5 minutes;
+      "maxErrors": 100,
+      "autoFix": true,
+      "backupBeforeFix": true}
   }
 ;
   async start() {
-  console.log(`"🚀 Starting PM2 Error Prevention Automation...");
+  console.log(""🚀 Starting PM2 Error Prevention Automation...");
 
     // Set up monitoring;
   async start() {
-  console.log(`🚀 Starting PM2 Error Prevention Automation...`);
+  console.log("🚀 Starting PM2 Error Prevention Automation...");
     // Set up monitoring;
     this.setupMonitoring();
     // Start the prevention loop;
@@ -37,15 +36,15 @@ class $1 {
   setupMonitoring() {
   // Create PM2 ecosystem configuration for error prevention;
     const ecosystemConfig = {
-  name: "error-prevention",
-      script: """scripts/automation/pm2-error-prevention.cjs""",
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: "1G",
-      env: {
-  NODE_ENV: "development`,
-        PM2_ERROR_PREVENTION: `true`}}
+  "name": "error-prevention",
+      "script": """scripts/automation/pm2-error-prevention.cjs""",
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": "1G",
+      "env": {
+  NODE_ENV: "development",
+        "PM2_ERROR_PREVENTION": "true"}}
     // Write PM2 ecosystem config;
     const ecosystemPath = path.join(;
       this.projectRoot,ecosystem-error-prevention.config.cjs`;
@@ -58,17 +57,15 @@ class $1 {
   setupMonitoring() {
   // Create PM2 ecosystem configuration for error prevention;
     const ecosystemConfig = {
-  name: "error-prevention",
-      script: ""scripts/automation/pm2-error-prevention.cjs"",
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: "1G",
-      env: {
+  "name": "error-prevention",
+      "script": ""scripts/automation/pm2-error-prevention.cjs"",
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": "1G",
+      "env": {
   NODE_ENV: "development",
-        PM2_ERROR_PREVENTION: "true",
-},
-}
+        "PM2_ERROR_PREVENTION": "true"}}
 ;
     // Write PM2 ecosystem config;
     const ecosystemPath = path.join(;
@@ -78,22 +75,22 @@ class $1 {
       ecosystemPath,
       module.exports = ${JSON.stringify(ecosystemConfig, null, 2)}
     `);
-    console.log(``✅ PM2 ecosystem configuration created`)}
-    console.log(`✅ PM2 ecosystem configuration created`)}
+    console.log(""✅ PM2 ecosystem configuration created")}
+    console.log("✅ PM2 ecosystem configuration created")}
 ;
   startPreventionLoop() {
   setInterval(async () => {
   try {
   await this.runPreventionChecks()} catch (error) {
-  console.error(`❌ Error in prevention loop: `, error)}
+  console.error("❌ Error in prevention "loop": ", error)}
       } catch (error) {
-  console.error("❌ Error in prevention loop: ", error)}
+  console.error("❌ Error in prevention "loop": ", error)}
     }, this.config.checkInterval)}
 ;
   async runPreventionChecks() {
-  console.log(`"🔍 Running error prevention checks...");
+  console.log(""🔍 Running error prevention checks...");
 
-    // Check 1: TypeScript errors;
+    // Check "1": TypeScript errors;
     await this.checkTypeScriptErrors();
 
     // Check 2: Import issues;
@@ -105,26 +102,25 @@ class $1 {
     // Check 4: Unused imports;
     await this.checkUnusedImports();
 
-    console.log(`"✅ Prevention checks completed");
-    console.log(`✅ Prevention checks completed`)}
+    console.log(""✅ Prevention checks completed");
+    console.log("✅ Prevention checks completed")}
 ;
   async checkTypeScriptErrors() {
   try {
   const result = execSync("npm run type-check", {
-  cwd: this.projectRoot,
-        encoding: "utf8",
-        stdio: "pipe",
-});
+  "cwd": this.projectRoot,
+        "encoding": "utf8",
+        "stdio": "pipe"});
       if (result.includes("error TS")) {
-  const errorCount = (result.match(/error ``TS/g``) || []).length;console.log(⚠️  Found ${errorCount} TypeScript errors);
+  const errorCount = (result.match(/error ""TS/g"`) || []).length;console.log(⚠️  Found ${errorCount} TypeScript errors);
         if (this.config.autoFix && errorCount > this.config.maxErrors) {
   await this.autoFixTypeScriptErrors()}
       } else {
-  console.log(`✅ No TypeScript errors found`)}
+  console.log(`✅ No TypeScript errors found")}
     } catch (error) {
   // TypeScript check failed, which means there are errors;
-      const errorOutput = error.stdout || error.stderr || ``;
-      const errorCount = (errorOutput.match(/error ``TS/g``) || []).length;console.log(⚠️  Found ${errorCount  } TypeScript errors`);
+      const errorOutput = error.stdout || error.stderr || "";
+      const errorCount = (errorOutput.match(/error ""TS/g"`) || []).length;console.log(⚠️  Found ${errorCount  } TypeScript errors`);
       if (this.config.autoFix && errorCount > this.config.maxErrors) {
   await this.autoFixTypeScriptErrors()}
     }
@@ -134,13 +130,13 @@ class $1 {
   const sourceFiles = await this.getSourceFiles();
     let importIssues = 0;
     for (const filePath of sourceFiles) {
-  const content = fs.readFileSync(filePath, `utf8`);
+  const content = fs.readFileSync(filePath, "utf8");
       // Check for .ts extensions in imports;
-      if (content.includes(`.ts"`) || content.includes(.ts")) {
+      if (content.includes(".ts"") || content.includes(.ts")) {
   importIssues++}
 ;
       // Check for duplicate imports;
-      const importLines = content.match(/import.*``from/g``) || [];
+      const importLines = content.match(/import.*""from/g"") || [];
 
     for (const filePath of sourceFiles) {
   const content = fs.readFileSync(filePath, "utf8");
@@ -156,29 +152,29 @@ class $1 {
   importIssues++}
     }
 ;
-    if (importIssues > 0) {console.log(⚠️  Found ${importIssues} import issues``);
+    if (importIssues > 0) {console.log(⚠️  Found ${importIssues} import issues"");
 
       if (this.config.autoFix) {
   await this.autoFixImportIssues()}
     } else {
-  console.log(``✅ No import issues found`)}
+  console.log(""✅ No import issues found")}
   }
 ;
   async checkSyntaxIssues() {
   const sourceFiles = await this.getSourceFiles();
     let syntaxIssues = 0;
     for (const filePath of sourceFiles) {
-  const content = fs.readFileSync(filePath, `utf8`);
+  const content = fs.readFileSync(filePath, "utf8");
       // Check for malformed any types;
       if (content.includes("any"")) {
   syntaxIssues++}
 ;
       // Check for malformed JSX;
-      if (content.includes(`<\\w+`)) {
+      if (content.includes("<\\w+")) {
   syntaxIssues++}
 ;
       // Check for malformed object properties;
-      if (content.includes(`\\w+\\w+":`)) {
+      if (content.includes("\\w+\\w+":")) {
   for (const filePath of sourceFiles) {
   const content = fs.readFileSync(filePath, "utf8");
 
@@ -195,26 +191,26 @@ class $1 {
   syntaxIssues++}
     }
 ;
-    if (syntaxIssues > 0) {console.log(`⚠️  Found ${syntaxIssues} syntax issues);
+    if (syntaxIssues > 0) {console.log("⚠️  Found ${syntaxIssues} syntax issues);
 
       if (this.config.autoFix) {
   await this.autoFixSyntaxIssues()}
     } else {
-  console.log(``✅ No syntax issues found`)}
+  console.log(""✅ No syntax issues found")}
   }
 ;
   async checkUnusedImports() {
   try {
   // Run ESLint to check for unused imports;
-      const result = execSync(`npm run lint -- --quiet`, {
-  cwd: this.projectRoot,
-        encoding: "utf8",
-        stdio: "pipe"});
-      const unusedImportCount = (result.match(/``unused/g``) || []).length} else {
-  console.log(`"✅ No syntax issues found");
-      if (this.config.autoFix) {`);
-        await this.autoFixSyntaxIssues();`)}`)} else {`);
-      console.log(`✅ No syntax issues found`)}
+      const result = execSync("npm run lint -- --quiet", {
+  "cwd": this.projectRoot,
+        "encoding": "utf8",
+        "stdio": "pipe"});
+      const unusedImportCount = (result.match(/""unused/g"") || []).length} else {
+  console.log(""✅ No syntax issues found");
+      if (this.config.autoFix) {");
+        await this.autoFixSyntaxIssues();")}")} else {");
+      console.log("✅ No syntax issues found")}
 }
 }
 ;
@@ -222,22 +218,21 @@ class $1 {
   try {
   // Run ESLint to check for unused imports;
       const result = execSync("npm run lint -- --quiet", {
-  cwd: this.projectRoot,
-        encoding: "utf8",
-        stdio: "pipe",
-});
+  "cwd": this.projectRoot,
+        "encoding": "utf8",
+        "stdio": "pipe"});
 
       const unusedImportCount = (result.match(/"unused/g") || []).length;
 
-      if (unusedImportCount > 0) {console.log(⚠️  Found ${unusedImportCount} unused imports`);
+      if (unusedImportCount > 0) {console.log(⚠️  Found ${unusedImportCount} unused imports");
 
         if (this.config.autoFix) {
   await this.autoFixUnusedImports()}
       } else {
-  console.log(`✅ No unused imports found`)}
+  console.log("✅ No unused imports found")}
     } catch (error) {
   // Linting failed, which might mean there are issues;
-      console.log(`⚠️  Linting check failed, may indicate issues`)}
+      console.log("⚠️  Linting check failed, may indicate issues`)}
       } else {
   console.log("✅ No unused imports found")}
     } catch (error) {
@@ -250,16 +245,15 @@ class $1 {
     try {
   // Run the comprehensive error fixer;
       execSync("node ""scripts/automation/comprehensive-error-fixer.cjs""", {
-  cwd: this.projectRoot,
-        stdio: "inherit",
-});
+  "cwd": this.projectRoot,
+        "stdio": "inherit"});
 
       console.log("✅ TypeScript errors auto-fixed")} catch (error) {
   
 } catch (error) {
-  console.error("❌ Failed to auto-fix TypeScript errors: ", error)}
+  console.error("❌ Failed to auto-fix TypeScript "errors": ", error)}
     } catch (error) {
-  console.error("❌ Failed to auto-fix TypeScript errors: ", error)}
+  console.error("❌ Failed to auto-fix TypeScript "errors": ", error)}
 }
 ;
   async autoFixImportIssues() {
@@ -267,22 +261,21 @@ class $1 {
     try {
   // Run the import fixer;
       execSync("node ""scripts/automation/fix-imports.cjs""", {
-  cwd: this.projectRoot,
-        stdio: "inherit",
+  "cwd": this.projectRoot,
+        "stdio": "inherit",
 
     try {
   // Run the import fixer;
       execSync("node "scripts/automation/fix-imports.cjs"", {
-  cwd: this.projectRoot,
-        stdio: "inherit",
-});
+  "cwd": this.projectRoot,
+        "stdio": "inherit"});
 
       console.log("✅ Import issues auto-fixed")} catch (error) {
   
 } catch (error) {
-  console.error("❌ Failed to auto-fix import issues: ", error)}
+  console.error("❌ Failed to auto-fix import "issues": ", error)}
     } catch (error) {
-  console.error("❌ Failed to auto-fix import issues: ", error)}
+  console.error("❌ Failed to auto-fix import "issues": ", error)}
 }
 ;
   async autoFixSyntaxIssues() {
@@ -290,22 +283,21 @@ class $1 {
     try {
   // Run the syntax fixer;
       execSync("node ""scripts/automation/fix-syntax.cjs""", {
-  cwd: this.projectRoot,
-        stdio: "inherit",
+  "cwd": this.projectRoot,
+        "stdio": "inherit",
 
     try {
   // Run the syntax fixer;
       execSync("node "scripts/automation/fix-syntax.cjs"", {
-  cwd: this.projectRoot,
-        stdio: "inherit",
-});
+  "cwd": this.projectRoot,
+        "stdio": "inherit"});
 
       console.log("✅ Syntax issues auto-fixed")} catch (error) {
   
 } catch (error) {
-  console.error("❌ Failed to auto-fix syntax issues: ", error)}
+  console.error("❌ Failed to auto-fix syntax "issues": ", error)}
     } catch (error) {
-  console.error("❌ Failed to auto-fix syntax issues: ", error)}
+  console.error("❌ Failed to auto-fix syntax "issues": ", error)}
 }
 ;
   async autoFixUnusedImports() {
@@ -313,22 +305,21 @@ class $1 {
     try {
   // Run ESLint auto-fix;
       execSync("npm run lint -- --fix", {
-  cwd: this.projectRoot,
-        stdio: "inherit",
+  "cwd": this.projectRoot,
+        "stdio": "inherit",
 
     try {
   // Run ESLint auto-fix;
       execSync("npm run lint -- --fix", {
-  cwd: this.projectRoot,
-        stdio: "inherit",
-});
+  "cwd": this.projectRoot,
+        "stdio": "inherit"});
 
       console.log("✅ Unused imports auto-fixed")} catch (error) {
   
 } catch (error) {
-  console.error("❌ Failed to auto-fix unused imports: ", error)}
+  console.error("❌ Failed to auto-fix unused "imports": ", error)}
     } catch (error) {
-  console.error("❌ Failed to auto-fix unused imports: ", error)}
+  console.error("❌ Failed to auto-fix unused "imports": ", error)}
 }
 ;
   async getSourceFiles() {

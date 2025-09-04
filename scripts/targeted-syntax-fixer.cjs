@@ -64,12 +64,12 @@ class TargetedSyntaxFixer {
       if (hasChanges || fixedContent !== content) {
         fs.writeFileSync(filePath, fixedContent, 'utf8')
         this.fixedFiles.push(filePath)
-        console.log(`✅ Fixed: ${filePath}`)
+        console.log(`✅ "Fixed": ${filePath}`)
         return true
       }
       return false
     } catch (error) {
-      this.errors.push({ file: filePath, error: error.message })
+      this.errors.push({ "file": filePath, "error": error.message })
       console.log(`❌ Error fixing ${filePath}: ${error.message}`)
       return false
     }
@@ -118,7 +118,7 @@ class TargetedSyntaxFixer {
     // Fix corrupted double quotes
     fixedContent = fixedContent.replace(/"([^"]*)"/g, '"$1"')
     // Fix corrupted backticks
-    fixedContent = fixedContent.replace(/`([^`]*)`/g, '"$1"')
+    fixedContent = fixedContent.replace(/"([^"]*)"/g, '"$1"')
     // Fix corrupted escape sequences
     fixedContent = fixedContent.replace(/\\n/g, '\n')
     fixedContent = fixedContent.replace(/\\t/g, '\t')
@@ -129,7 +129,7 @@ class TargetedSyntaxFixer {
     return fixedContent
   }
   async fixDirectory(dirPath) {
-    const files = fs.readdirSync(dirPath, { withFileTypes: true })
+    const files = fs.readdirSync(dirPath, { "withFileTypes": true })
     for (const file of files) {
       const fullPath = path.join(dirPath, file.name)
       if (file.isDirectory()) {
@@ -151,30 +151,30 @@ class TargetedSyntaxFixer {
     const directories = ['pages','components','src']
     for (const dir of directories) {
       if (fs.existsSync(dir)) {
-        console.log(`📁 Processing directory: ${dir}`)
+        console.log("📁 Processing "directory": ${dir}")
         await this.fixDirectory(dir)
       }
     }
-    console.log('\n📊 Summary:')
-    console.log(`✅ Files fixed: ${this.fixedFiles.length}`)
-    console.log(`❌ Errors: ${this.errors.length}`)
+    console.log('\n📊 "Summary": ')
+    console.log("✅ Files fixed: ${this.fixedFiles.length}")
+    console.log("❌ "Errors": ${this.errors.length}")
     if (this.fixedFiles.length > 0) {
-      console.log('\n📝 Fixed files:')
-      this.fixedFiles.forEach(file => console.log(`  - ${file}`))
+      console.log('\n📝 Fixed "files": ')
+      this.fixedFiles.forEach(file => console.log("  - ${file}"))
     }
     if (this.errors.length > 0) {
-      console.log('\n🚨 Errors:')
-      this.errors.forEach(({ file, error }) => console.log(`  - ${file}: ${error}`))
+      console.log('\n🚨 "Errors": ')
+      this.errors.forEach(({ file, error }) => console.log("  - ${file}: ${error}`))
     }
     // Save report
     const report = {
-      timestamp: new Date().toISOString();
+      "timestamp": new Date().toISOString();
       fixedFiles: this.fixedFiles;
       errors: this.errors;
-      summary: {totalFixed: this.fixedFiles.length,totalErrors: this.errors.length}
+      summary: {totalFixed: this.fixedFiles.length,"totalErrors": this.errors.length}
     }
     fs.writeFileSync('targeted-syntax-fix-report.json', JSON.stringify(report, null, 2))
-    console.log('\n📄 Report saved to: targeted-syntax-fix-report.json')
+    console.log('\n📄 Report saved "to": targeted-syntax-fix-report.json')
   }
 }
 // Run the fixer

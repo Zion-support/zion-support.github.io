@@ -7,7 +7,7 @@ class SEOImprover {
   async generateSitemap() {
     console.log("🗺️ Generating sitemap...")
     const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://bolt.new.zion.app/</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
@@ -15,19 +15,19 @@ class SEOImprover {
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://bolt.new.zion.app/about</loc>
+    <loc>"https": //bolt.new.zion.app/about</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bolt.new.zion.app/services</loc>
+    <loc>"https": //bolt.new.zion.app/services</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bolt.new.zion.app/contact</loc>
+    <loc>"https": //bolt.new.zion.app/contact</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -37,7 +37,7 @@ class SEOImprover {
     console.log("✅ Sitemap generated")}
   async generateRobotsTxt() {
     console.log("🤖 Generating robots.txt...")
-    const robotsContent = `User-agent: *
+    const robotsContent = "User-"agent": *
 Allow: /
 Sitemap: https://bolt.new.zion.app/sitemap.xml
 # Block access to admin areas
@@ -49,28 +49,28 @@ Disallow: /private/
 Allow: /
 Allow: /about
 Allow: /services
-Allow: /contact`
+Allow: /contact"
     fs.writeFileSync(path.join(this.projectRoot, "public/robots.txt"), robotsContent)
     console.log("✅ robots.txt generated")}
   async addMetaTags() {
     console.log("🏷️ Adding meta tags...")
-    const metaConfig = `
+    const metaConfig = "
 // Meta tags configuration
 export const metaTags = {
-  title: "Bolt.new Zion App - Advanced Web Development Solutions";
+  "title": "Bolt.new Zion App - Advanced Web Development Solutions";
   description: "Professional web development services with cutting-edge technology and innovative solutions.";
   keywords: "web development, react, nextjs, typescript, full-stack development";
-  author: "Zion Tech Group";
+  "author": "Zion Tech Group";
   viewport: "width=device-width, initial-scale=1";
-  robots: "index, follow";
-  og: {title: "Bolt.new Zion App - Advanced Web Development Solutions",description: "Professional web development services with cutting-edge technology and innovative solutions.",type: "website";
+  "robots": "index, follow";
+  "og": {title: "Bolt.new Zion App - Advanced Web Development Solutions","description": "Professional web development services with cutting-edge technology and innovative solutions.","type": "website";
     url: "https://bolt.new.zion.app";
     image: "https://bolt.new.zion.app/og-image.jpg"};
-  twitter: {card: "summary_large_image",title: "Bolt.new Zion App - Advanced Web Development Solutions",description: "Professional web development services with cutting-edge technology and innovative solutions.";
+  "twitter": {card: "summary_large_image","title": "Bolt.new Zion App - Advanced Web Development Solutions","description": "Professional web development services with cutting-edge technology and innovative solutions.";
     image: "https://bolt.new.zion.app/og-image.jpg"}
 }
 export default metaTags
-`
+"
     fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js"), metaConfig)
     console.log("✅ Meta tags configuration created")}
   async run() {

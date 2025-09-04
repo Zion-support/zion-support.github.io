@@ -3,52 +3,48 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, ArrowUp, Github, Twitter, Linkedin, Instagram } from 'lucide-react';
 
-const FuturisticFooter: React.FC = (props) => {
+const "FuturisticFooter": React.FC = (props) => {
   const contactInfo = {
     mobile: '+1 (555) 123-4567',
-    email: 'info@ziontechgroup.com',
-    address: '123 Innovation Drive, Tech City, TC 12345'
-  };;
+    "email": 'info@ziontechgroup.com',
+    "address": '123 Innovation Drive, Tech City, TC 12345'
+  };
 
-  const socialLinks = [
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-600' },
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-500' };
+  const socialLinks = [{ "name": 'GitHub', "href": 'https://github.com/ziontechgroup', "icon": Github, "color": 'hover:text-gray-400' },
+    { "name": 'Twitter', "href": 'https://twitter.com/ziontechgroup', "icon": Twitter, "color": 'hover:text-blue-400' },
+    { "name": 'LinkedIn', "href": 'https://linkedin.com/company/ziontechgroup', "icon": Linkedin, "color": 'hover:text-blue-600' },
+    { "name": 'Instagram', "href": 'https://instagram.com/ziontechgroup', "icon": Instagram, "color": 'hover:text-pink-500' };
   ];
 
   const footerSections = {
-    services: {
+    "services": {
       title: 'Services',
-      items: [
-        { name: 'AI Solutions', href: '/services/ai', icon: ArrowUp },
-        { name: 'Cloud Infrastructure', href: '/services/cloud', icon: ArrowUp },
-        { name: 'Digital Transformation', href: '/services/transformation', icon: ArrowUp },
-        { name: 'Cybersecurity', href: '/services/security', icon: ArrowUp }
+      "items": [{ name: 'AI Solutions', "href": '/services/ai', "icon": ArrowUp },
+        { "name": 'Cloud Infrastructure', "href": '/services/cloud', "icon": ArrowUp },
+        { "name": 'Digital Transformation', "href": '/services/transformation', "icon": ArrowUp },
+        { "name": 'Cybersecurity', "href": '/services/security', "icon": ArrowUp }
       ]
     },
-    company: {
+    "company": {
       title: 'Company',
-      items: [
-        { name: 'About Us', href: '/about', icon: ArrowUp },
-        { name: 'Our Team', href: '/team', icon: ArrowUp },
-        { name: 'Careers', href: '/careers', icon: ArrowUp },
-        { name: 'Contact', href: '/contact', icon: ArrowUp }
+      "items": [{ name: 'About Us', "href": '/about', "icon": ArrowUp },
+        { "name": 'Our Team', "href": '/team', "icon": ArrowUp },
+        { "name": 'Careers', "href": '/careers', "icon": ArrowUp },
+        { "name": 'Contact', "href": '/contact', "icon": ArrowUp }
       ]
     },
-    resources: {
+    "resources": {
       title: 'Resources',
-      items: [
-        { name: 'Documentation', href: '/docs', icon: ArrowUp },
-        { name: 'Blog', href: '/blog', icon: ArrowUp },
-        { name: 'Case Studies', href: '/case-studies', icon: ArrowUp },
-        { name: 'Support', href: '/support', icon: ArrowUp }
+      "items": [{ name: 'Documentation', "href": '/docs', "icon": ArrowUp },
+        { "name": 'Blog', "href": '/blog', "icon": ArrowUp },
+        { "name": 'Case Studies', "href": '/case-studies', "icon": ArrowUp },
+        { "name": 'Support', "href": '/support', "icon": ArrowUp }
       ]
     }
-  };;
+  };
 
   const scrollToTop = (props) => {
-    window.scrollTo({ top: 0, behavior: 'smooth' };);
+    window.scrollTo({ "top": 0, "behavior": 'smooth' };);
   };
 
   return (
@@ -59,15 +55,15 @@ const FuturisticFooter: React.FC = (props) => {
 
       <div className="relative z-10">
         {/* Main footer content */}
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="container mx-auto px-4 "sm": px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-8">
             {/* Company info */}
-            <div className="lg:col-span-2">
+            <div className=""lg": col-span-2">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0, "y": 20 }}
+                whileInView={{ "opacity": 1, "y": 0 }}
+                transition={{ "duration": 0.5 }}
+                viewport={{ "once": true }}
                 className="space-y-6"
               >
                 <div className="flex items-center space-x-3">
@@ -89,15 +85,15 @@ const FuturisticFooter: React.FC = (props) => {
 
                 {/* Contact Information */}
                 <div className="space-y-3">
-                  <div className="flex items-center space-x-3 text-slate-300 hover:text-cyan-400 transition-colors duration-300">
+                  <div className="flex items-center space-x-3 text-slate-300 "hover": text-cyan-400 transition-colors duration-300">
                     <Phone className="w-4 h-4 text-cyan-400" />
-                    <a href={`tel:${contactInfo.mobile}`} className="hover:text-cyan-400 transition-colors duration-300">
+                    <a href={`tel:${contactInfo.mobile}`} className=""hover": text-cyan-400 transition-colors duration-300">
                       {contactInfo.mobile}
                     </a>
                   </div>
-                  <div className="flex items-center space-x-3 text-slate-300 hover:text-cyan-400 transition-colors duration-300">
+                  <div className="flex items-center space-x-3 text-slate-300 "hover": text-cyan-400 transition-colors duration-300">
                     <Mail className="w-4 h-4 text-cyan-400" />
-                    <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-400 transition-colors duration-300">
+                    <a href={`mailto:${contactInfo.email}`} className=""hover": text-cyan-400 transition-colors duration-300">
                       {contactInfo.email}
                     </a>
                   </div>
@@ -115,9 +111,9 @@ const FuturisticFooter: React.FC = (props) => {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      whileHover={{ scale: 1.1, y: -2 }}
-                      whileTap={{ scale: 0.95 }}
-                      className={`p-2 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-slate-300 ${social.color} hover:bg-cyan-400/10 hover:border-cyan-400/40 transition-all duration-300`}
+                      whileHover={{ "scale": 1.1, "y": -2 }}
+                      whileTap={{ "scale": 0.95 }}
+                      className={`p-2 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-slate-300 ${social.color} "hover": bg-cyan-400/10 hover:border-cyan-400/40 transition-all duration-300`}
                     >
                       <social.icon className="w-5 h-5" />
                     </motion.a>
@@ -130,32 +126,32 @@ const FuturisticFooter: React.FC = (props) => {
             {Object.entries(footerSections).map(([key, section]) => (
               <div key={key}>
                 <motion.h3
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.1 }}
-                  viewport={{ once: true }}
+                  initial={{ "opacity": 0, "y": 20 }}
+                  whileInView={{ "opacity": 1, "y": 0 }}
+                  transition={{ "duration": 0.5, "delay": 0.1 }}
+                  viewport={{ "once": true }}
                   className="text-lg font-semibold text-white mb-4"
                 >
                   {section.title}
                 </motion.h3>
                 <motion.ul
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                  viewport={{ once: true }}
+                  initial={{ "opacity": 0, "y": 20 }}
+                  whileInView={{ "opacity": 1, "y": 0 }}
+                  transition={{ "duration": 0.5, "delay": 0.2 }}
+                  viewport={{ "once": true }}
                   className="space-y-2"
                 >
                   {section.items.map((item, index) => (
                     <motion.li
                       key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.3, delay: index * 0.05 }}
-                      viewport={{ once: true }}
+                      initial={{ "opacity": 0, "x": -20 }}
+                      whileInView={{ "opacity": 1, "x": 0 }}
+                      transition={{ "duration": 0.3, "delay": index * 0.05 }}
+                      viewport={{ "once": true }}
                     >
                       <Link
                         to={item.href}
-                        className="text-slate-300 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center space-x-2 group"
+                        className="text-slate-300 "hover": text-cyan-400 transition-colors duration-300 text-sm flex items-center space-x-2 group"
                       >
                         <item.icon className="w-3 h-3 text-cyan-400 group-hover:scale-110 transition-transform duration-300" />
                         <span>{item.name}</span>
@@ -170,14 +166,14 @@ const FuturisticFooter: React.FC = (props) => {
 
         {/* Bottom Footer */}
         <div className="border-t border-cyan-400/20">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="container mx-auto px-4 "sm": px-6 lg:px-8 py-6">
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
               <div className="text-slate-300 text-sm">
                 © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
               </div>
               
               <div className="flex items-center space-x-6 text-sm">
-                <Link to="/privacy" className="text-slate-300 hover:text-cyan-400 transition-colors duration-300">
+                <Link to="/privacy" className="text-slate-300 "hover": text-cyan-400 transition-colors duration-300">
                   Privacy Policy
                 </Link>
                 <Link to="/terms" className="text-slate-300 hover:text-cyan-400 transition-colors duration-300">
@@ -194,9 +190,9 @@ const FuturisticFooter: React.FC = (props) => {
         {/* Scroll to top button */}
         <motion.button
           onClick={scrollToTop}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center text-white shadow-lg shadow-cyan-400/25 hover:shadow-xl hover:shadow-cyan-400/40 transition-all duration-300 z-50"
+          whileHover={{ "scale": 1.1 }}
+          whileTap={{ "scale": 0.9 }}
+          className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center text-white shadow-lg shadow-cyan-400/25 "hover": shadow-xl hover:shadow-cyan-400/40 transition-all duration-300 z-50"
         >
           <ArrowUp className="w-5 h-5" />
         </motion.button>

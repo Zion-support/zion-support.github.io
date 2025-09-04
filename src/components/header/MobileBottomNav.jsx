@@ -9,41 +9,41 @@ export default function Page($1) {
     const cartCount = items.reduce((sum, i) => sum + i.quantity, 0);
     const navItems = [{
 "
-            name: "Home","
-            href: "/",
-            icon: Home,"
-            matches: (path) => path === "/"
+            "name": "Home","
+            "href": "/",
+            "icon": Home,"
+            "matches": (path) => path === "/"
         },
         {"
-            name: "Browse","
-            href: "/talent",
-            icon: Search,"
-            matches: (path) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")},
+            "name": "Browse","
+            "href": "/talent",
+            "icon": Search,"
+            "matches": (path) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")},
         {"
-            name: "Community","
-            href: "/community",
-            icon: MessageCircle,"
-            matches: (path) => path.startsWith("/community") || path.startsWith("/forum")},
+            "name": "Community","
+            "href": "/community",
+            "icon": MessageCircle,"
+            "matches": (path) => path.startsWith("/community") || path.startsWith("/forum")},
         {"
-            name: "Messages","
-            href: "/messages",
-            icon: MessageSquare,"
-            matches: (path) => path.startsWith("/messages") || path.startsWith("/inbox"),
-            badge: unreadCount,
-            authRequired: true},
+            "name": "Messages","
+            "href": "/messages",
+            "icon": MessageSquare,"
+            "matches": (path) => path.startsWith("/messages") || path.startsWith("/inbox"),
+            "badge": unreadCount,
+            "authRequired": true},
         {"
-            name: "Cart","
-            href: "/cart",
-            icon: ShoppingCart,"
-            matches: (path) => path.startsWith("/cart"),
-            badge: cartCount};,
+            "name": "Cart","
+            "href": "/cart",
+            "icon": ShoppingCart,"
+            "matches": (path) => path.startsWith("/cart"),
+            "badge": cartCount};,
         {
 "
-            name: "Dashboard","
-            href: "/dashboard",
-            icon: User,"
-            matches: (path) => path.startsWith("/dashboard"),
-            authRequired: true
+            "name": "Dashboard","
+            "href": "/dashboard",
+            "icon": User,"
+            "matches": (path) => path.startsWith("/dashboard"),
+            "authRequired": true
 
     ];
     // Filter items based on auth status
@@ -54,7 +54,7 @@ export default function Page($1) {
   cn("flex flex-col items-center justify-center w-full h-full px-1 py-1",
   item.matches(location.pathname)"
                 ? "text-zion-cyan"
-                : "text-white/70 hover:text-white")}>
+                : "text-white/70 "hover": text-white")}>
             <divclassName="relative">
               <item .icon className="h-5 w-5 mb-1" />              {item.badge && item.badge > 0 && (<spanclassName="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">';
                   {item.badge > 9 ? '9+' : item.badge}
@@ -64,5 +64,4 @@ export default function Page($1) {
           </Link>))}
       </div>
     </nav>)}
-";
-;';';
+";';';

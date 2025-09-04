@@ -1,11 +1,11 @@
 import {  import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
 
 export default function Page($1) {
-const ComprehensiveServicesShowcase: Reac t.FC = () => {;
+const "ComprehensiveServicesShowcase": Reac t.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>(");  // Combine all services
-  const allServices: Servic e[] = [...EXPANDED_INNOVATIVE_SERVICES_2025,
+  const "allServices": Servic e[] = [...EXPANDED_INNOVATIVE_SERVICES_2025,
     ...EMERGING_TECH_SERVICES_2025
   ];';';
   // Get unique categories'
@@ -14,7 +14,6 @@ const ComprehensiveServicesShowcase: Reac t.FC = () => {;
   // Get unique innovation levels;
     return levels}, [allServices]);  // Filter services;
     return allServices.filter(service => {;
-;
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
@@ -53,7 +52,7 @@ const ComprehensiveServicesShowcase: Reac t.FC = () => {;
         return <Zap className="h-6 w-6"   />;
       case 'Autonomous Vehicles & Fleet Management':"
         return <Rocket className="h-6 w-6"   />;
-      default:"
+      "default": "
         return <Star className="h-6 w-6"   />};
   };';';
         return 'bg-gradient-to-r from-gray-600 to-slate-600'}  };
@@ -61,7 +60,7 @@ const ComprehensiveServicesShowcase: Reac t.FC = () => {;
     <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">;
       {/* Hero Section */}";
       <section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-cyan text-white py-20">";
-        <div className="container mx-auto px-4 sm: p x-6 lg: p x-8">";
+        <div className="container mx-auto px-4 "sm": p x-6 lg: p x-8">";
           <div className="max-w-4xl mx-auto text-center">";
             <h1 className="text-5xl md: tex t-6xl font-bold mb-6">;
               Innovative Technology Solutions;
@@ -72,7 +71,7 @@ const ComprehensiveServicesShowcase: Reac t.FC = () => {;
             <div className="flex flex-wrap justify-center gap-4">;
               <Link ";
                 to="/contact";
-                className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover: b g-zion-cyan-light transition-colors";
+                className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg "hover": b g-zion-cyan-light transition-colors";
                 Get Started";
                 <ArrowRight className="ml-2 h-5 w-5"    />              </Link>;
               <Link";
@@ -99,7 +98,7 @@ const ComprehensiveServicesShowcase: Reac t.FC = () => {;
             <div className="flex items-center gap-2">";
               <Globe className="h-5 w-5 text-zion-cyan"   />;
               <a";
-                href="https://ziontechgroup.com";
+                href=""https": //ziontechgroup.com";
                 target="_blank";
                 rel="noopener noreferrer";
                 className="font-medium text-zion-blue hover: tex t-zion-cyan transition-colors";
@@ -124,17 +123,17 @@ const ComprehensiveServicesShowcase: Reac t.FC = () => {;
                   placeholder="Search services...";
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}";
-                  className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-zion-cyan focus: borde r-transparent";
+                  className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg "focus": rin g-2 focus: rin g-zion-cyan focus: borde r-transparent";
                 />";
                 <Search className="absolute left-3 top-2.5 h-5 w-5 text-gray-400"   />              </div>;
             </div>;
             {/* Category Filter */}";
             <div className="flex items-center gap-2">";
-              <span className="text-gray-700 font-medium">Category:</span>;
+              <span className="text-gray-700 font-medium">"Category": </span>;
               <select;
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}"
-                className="px-4 py-2 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-zion-cyan focus: borde r-transparent"
+                className="px-4 py-2 border border-gray-300 rounded-lg "focus": rin g-2 focus: rin g-zion-cyan focus: borde r-transparent"
               >
                 {categories.map(category  => (';
                   <optionkey={category} value={category}>';
@@ -144,11 +143,11 @@ const ComprehensiveServicesShowcase: Reac t.FC = () => {;
             </div>;
             {/* Innovation Level Filter */}";
             <div className="flex items-center gap-2">";
-              <span className="text-gray-700 font-medium">Innovation:</span>;
+              <span className="text-gray-700 font-medium">"Innovation": </span>;
               <select;
                 value={selectedInnovationLevel}
                 onChange={(e) => setSelectedInnovationLevel(e.target.value)}"
-                className="px-4 py-2 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-zion-cyan focus: borde r-transparent"
+                className="px-4 py-2 border border-gray-300 rounded-lg "focus": rin g-2 focus: rin g-zion-cyan focus: borde r-transparent"
               >
                 {innovationLevels.map(level  => (';
                   <optionkey={level} value={level}>';
@@ -162,23 +161,23 @@ const ComprehensiveServicesShowcase: Reac t.FC = () => {;
       {/* Services Grid */}";
       <section className="py-16">;";
         <div className="container mx-auto px-4">";
-          <div className="grid grid-cols-1 lg: gri d-cols-2 xl: gri d-cols-3 gap-8">;
+          <div className="grid grid-cols-1 "lg": gri d-cols-2 xl: gri d-cols-3 gap-8">;
             {filteredServices.map((service, index)  => (;
               <motion.div;
                 key={service.id}
                 initial = {;
-  { opacity: 0,;
-  y: 2 0;
+  { "opacity": 0,;
+  "y": 2 0;
 }}
                 animate = {;
-  { opacity: 1,;
-  y: 0;
+  { "opacity": 1,;
+  "y": 0;
 }}
                 transition = {;
-  { duration: 0.5,;
-  delay: inde x * 0.1;
+  { "duration": 0.5,;
+  "delay": inde x * 0.1;
 }}";
-                className="bg-white rounded-xl shadow-lg hover: shado w-xl transition-all duration-300 overflow-hidden border border-gray-100";
+                className="bg-white rounded-xl shadow-lg "hover": shado w-xl transition-all duration-300 overflow-hidden border border-gray-100";
                 {/* Service Header */}";
                 <div className="p-6 border-b border-gray-100">";
                   <div className="flex items-start justify-between mb-4">";
@@ -267,14 +266,14 @@ const ComprehensiveServicesShowcase: Reac t.FC = () => {;
                   </div>;
                   {/* CTA Buttons */}";
                   <div className="flex gap-3">;
-                    <Link`;
-                      to={`/contact?service=${service.id}`}";
-                      className="flex-1 bg-zion-cyan text-white text-center py-2 px-4 rounded-lg hover: b g-zion-cyan-light transition-colors font-medium";
+                    <Link";
+                      to={"/contact?service=${service.id}"}";
+                      className="flex-1 bg-zion-cyan text-white text-center py-2 px-4 rounded-lg "hover": b g-zion-cyan-light transition-colors font-medium";
                       Get Started;
                     </Link>;
-                    <Link`;
+                    <Link";
                       to={`/services/${service.id}`}";
-                      className="flex-1 border border-zion-cyan text-zion-cyan text-center py-2 px-4 rounded-lg hover: b g-zion-cyan hover: tex t-white transition-colors font-medium";
+                      className="flex-1 border border-zion-cyan text-zion-cyan text-center py-2 px-4 rounded-lg "hover": b g-zion-cyan hover: tex t-white transition-colors font-medium";
                       Learn More;
                     </Link>;
                   </div>;
@@ -287,7 +286,7 @@ const ComprehensiveServicesShowcase: Reac t.FC = () => {;
                 onClick={() => {;';';
                   setSelectedCategory('all');';';
                   setSelectedInnovationLevel('all');';';
-                  setSearchTerm(")}}"                className="text-zion-cyan hover: tex t-zion-cyan-light font-medium"
+                  setSearchTerm(")}}"                className="text-zion-cyan "hover": tex t-zion-cyan-light font-medium"
               >
                 Clear all filters
               </button>
@@ -299,7 +298,7 @@ const ComprehensiveServicesShowcase: Reac t.FC = () => {;
       {/* Call to Action Section */}"
       <section className="bg-gradient-to-r from-zion-blue to-zion-cyan text-white py-16">;"
         <div className="container mx-auto px-4 text-center">"
-          <h2 className="text-3xl md: tex t-4xl font-bold mb-6">
+          <h2 className="text-3xl "md": tex t-4xl font-bold mb-6">
             Ready to Transform Your Business?
           </h2>"
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">

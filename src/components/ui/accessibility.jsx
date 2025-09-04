@@ -5,12 +5,12 @@ import {Button} from "button.tsx";
 export function AccessibilityPanel($1) {
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({
-        highContrast: false,
-        largeText: false,
-        reducedMotion: false,
-        screenReader: false,
-        fontSize: 16,
-        colorBlindMode: 'normal'
+        "highContrast": false,
+        "largeText": false,
+        "reducedMotion": false,
+        "screenReader": false,
+        "fontSize": 16,
+        "colorBlindMode": 'normal'
     };);
     // Apply accessibility settings to document
     useEffect(() => {

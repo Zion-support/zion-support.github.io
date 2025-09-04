@@ -3,11 +3,10 @@ import {Link} from 'react-router-dom';
 import {Menu, X, Search, User, Briefcase, HardDrive, Users, Lightbulb} from 'lucide-react';
 import {Button} from '@/components/ui/button';
 
-const mobileMenuItems = [
-  {name: 'Services', icon: <Briefcase className="w-5 h-5"  />, href: '/services'},
-  {name: 'Talent', icon: <Users className="w-5 h-5"  />, href: '/talent'},
-  {name: 'Equipment', icon: <HardDrive className="w-5 h-5"  />, href: '/equipment'},
-  {name: 'Innovation', icon: <Lightbulb className="w-5 h-5"  />, href: '/category/innovation'};
+const mobileMenuItems = [{"name": 'Services', "icon": <Briefcase className="w-5 h-5"  />, "href": '/services'},
+  {"name": 'Talent', "icon": <Users className="w-5 h-5"  />, "href": '/talent'},
+  {"name": 'Equipment', "icon": <HardDrive className="w-5 h-5"  />, "href": '/equipment'},
+  {"name": 'Innovation', "icon": <Lightbulb className="w-5 h-5"  />, "href": '/category/innovation'};
 ];
 
 export function MobileNavigation($1) {
@@ -23,7 +22,7 @@ export function MobileNavigation($1) {
     <div className="min-h-screen bg-white">
       <button
         onClick={toggleMenu}
-        className="p-2 rounded-lg text-gray-300 hover:text-cyan-300 hover:bg-gray-800/50 transition-colors duration-200"
+        className="p-2 rounded-lg text-gray-300 "hover": text-cyan-300 hover:bg-gray-800/50 transition-colors duration-200"
         aria-label="Toggle mobile menu"
       >
         {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
@@ -38,7 +37,7 @@ export function MobileNavigation($1) {
                   key={item.name}
                   to={item.href}
                   onClick={closeMenu}
-                  className="flex items-center space-x-3 px-3 py-2 text-gray-300 hover:text-cyan-300 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
+                  className="flex items-center space-x-3 px-3 py-2 text-gray-300 "hover": text-cyan-300 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
                 >
                   {item.icon}
                   <span>{item.name}</span>

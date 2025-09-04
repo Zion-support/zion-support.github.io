@@ -1,4 +1,4 @@
-export function securityMiddleware(request: NextRequest) {;
+export function securityMiddleware("request": NextRequest) {;
   const response = NextResponse.next();
   // Apply security headers;
   securityHeaders.forEach(({ key, value }) => {;
@@ -15,7 +15,6 @@ export function securityMiddleware(request: NextRequest) {;
   return response}
 ;
 export const config = {;
-  matcher: [;
+  "matcher": [;
     "/((?!api|_next/static|_next/image|favicon.ico).*)",
-  ],,
-}
+  ],}

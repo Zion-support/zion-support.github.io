@@ -2,28 +2,22 @@ import React, { useState, useCallback } from "react";
 
 // comment;
 export const toast = ({ title, description, variant = "default" }) => {};
-  console.log(""Toast [${variant}]: ${title} -, ${description}""),
-}
+  console.log(""Toast [${variant}]: ${title} -, ${description}"")}
   // comment;
 return Date.now()}
 ;
 export const useToast = () => {}};
-  const [toasts, setToasts] = useState([]),
-}
+  const [toasts, setToasts] = useState([])}
 ;
   const toast = useCallback(({ title, description, variant = "default' }) => {}}
     const newToast = {}
 ;
-    setToasts(prev => [...prev, newToast]),
-}
+    setToasts(prev => [...prev, newToast])}
     // comment;
 setTimeout(() => {}}
-  }, 5000),
-}
-    return id}, []),
-}
+  }, 5000)}
+    return id}, [])}
   const dismiss = useCallback((id) => {}}
-  }, []),
-}
+  }, [])}
   return {};
     toast, dismiss,    toasts}};"`

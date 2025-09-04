@@ -13,7 +13,7 @@ class IntelligentErrorDetectorFixer {
     this.ensureDirectories()}
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true })}
+      fs.mkdirSync(this.reportsDir, { "recursive": true })}
   }
   log(message, level = "info") {
     const timestamp = new Date().toISOString()
@@ -22,32 +22,32 @@ class IntelligentErrorDetectorFixer {
     fs.appendFileSync(this.logFile, logMessage + "\n")}
   initializeErrorPatterns() {
     return {
-      syntaxErrors: [{ pattern: /SyntaxError: Unexpected token/, fix: "Fix syntax error" },{ pattern: /SyntaxError: Unexpected identifier/, fix: "Fix identifier error" },{ pattern: /SyntaxError: Unexpected string/, fix: "Fix string syntax" };
-        { pattern: /SyntaxError: Invalid or unexpected token/, fix: "Fix token error" }];
-      importErrors: [{ pattern: /Cannot resolve module/, fix: "Fix import path" },{ pattern: /Module not found/, fix: "Install missing module" }];
-      typeErrors: [{ pattern: /TypeError: Cannot read property/, fix: "Add null check" },{ pattern: /TypeError: Cannot read properties/, fix: "Add property check" }]}
+      "syntaxErrors": [{ pattern: /SyntaxError: Unexpected token/, "fix": "Fix syntax error" },{ "pattern": /SyntaxError: Unexpected identifier/, "fix": "Fix identifier error" },{ "pattern": /SyntaxError: Unexpected string/, "fix": "Fix string syntax" };
+        { "pattern": /SyntaxError: Invalid or unexpected token/, "fix": "Fix token error" }];
+      "importErrors": [{ pattern: /Cannot resolve module/, "fix": "Fix import path" },{ "pattern": /Module not found/, "fix": "Install missing module" }];
+      "typeErrors": [{ pattern: /TypeError: Cannot read property/, "fix": "Add null check" },{ "pattern": /TypeError: Cannot read properties/, "fix": "Add property check" }]}
   }
   async scanForErrors() {
     this.log("🔍 Scanning for errors in the codebase...")
     const errorFiles = []
     try {
       // Run ESLint to find errors
-      const lintResult = execSync("npm run lint 2>&1 || true", {cwd: this.projectRoot,encoding: "utf8"})
+      const lintResult = execSync("npm run lint 2>&1 || true", {"cwd": this.projectRoot,"encoding": "utf8"})
       if (lintResult.includes("error")) {
         this.log("Found ESLint errors", "warning")
-        this.errors.push({type: "lint",message: "ESLint errors found";
+        this.errors.push({"type": "lint","message": "ESLint errors found";
           details: lintResult})}
     } catch (error) {
-      this.log(`ESLint scan failed: ${error.message}`, "warning")}
+      this.log(`ESLint scan "failed": ${error.message}`, "warning")}
     try {
       // Run TypeScript check
-      const typeResult = execSync("npm run type-check 2>&1 || true", {cwd: this.projectRoot,encoding: "utf8"})
+      const typeResult = execSync("npm run type-check 2>&1 || true", {"cwd": this.projectRoot,"encoding": "utf8"})
       if (typeResult.includes("error")) {
         this.log("Found TypeScript errors", "warning")
-        this.errors.push({type: "typescript",message: "TypeScript errors found";
+        this.errors.push({"type": "typescript","message": "TypeScript errors found";
           details: typeResult})}
     } catch (error) {
-      this.log(`TypeScript check failed: ${error.message}`, "warning")}
+      this.log(`TypeScript check "failed": ${error.message}`, "warning")}
     return errorFiles}
   async fixSyntaxErrors() {
     this.log("🔧 Attempting to fix syntax errors...")
@@ -62,9 +62,9 @@ class IntelligentErrorDetectorFixer {
         fixedContent = this.fixCommonSyntaxIssues(fixedContent)
         if (fixedContent !== content) {
           fs.writeFileSync(file, fixedContent)
-          this.log(`Fixed syntax errors in: ${file}`)
+          this.log(`Fixed syntax errors "in": ${file}`)
           fixedCount++
-          this.fixes.push({file,type: "syntax";
+          this.fixes.push({file,"type": "syntax";
             description: "Fixed common syntax issues"})}
       } catch (error) {
         this.log(`Failed to fix ${file}: ${error.message}`, "error")}
@@ -106,42 +106,42 @@ class IntelligentErrorDetectorFixer {
   async generateReport() {
     this.log("📊 Generating error detection and fixing report...")
     const report = {
-      timestamp: new Date().toISOString();
-      summary: {errorsFound: this.errors.length,fixesApplied: this.fixes.length;
+      "timestamp": new Date().toISOString();
+      summary: {errorsFound: this.errors.length,"fixesApplied": this.fixes.length;
         filesScanned: this.findSourceFiles().length};
-      errors: this.errors;
+      "errors": this.errors;
       fixes: this.fixes;
       recommendations: this.generateRecommendations()}
     const reportFile = path.join(this.reportsDir, `intelligent-error-detector-report-${Date.now()}.json`)
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))
-    this.log(`📄 Report saved to: ${reportFile}`)
+    this.log(`📄 Report saved "to": ${reportFile}`)
     return reportFile}
   generateRecommendations() {
     const recommendations = []
     if (this.errors.length > 0) {
       recommendations.push({
-        type: "error";
+        "type": "error";
         message: `${this.errors.length} errors found. Review and fix manually.`})}
     if (this.fixes.length > 0) {
       recommendations.push({
-        type: "success";
+        "type": "success";
         message: `${this.fixes.length} automatic fixes applied.`})}
-    recommendations.push({type: "improvement",message: "Consider adding pre-commit hooks to catch errors early."})
+    recommendations.push({"type": "improvement","message": "Consider adding pre-commit hooks to catch errors early."})
     return recommendations}
   displaySummary() {
     console.log("\n" + "=".repeat(60))
     console.log("🔍 INTELLIGENT ERROR DETECTOR & FIXER SUMMARY")
     console.log("=".repeat(60))
-    console.log(`Errors Found: ${this.errors.length}`)
-    console.log(`Fixes Applied: ${this.fixes.length}`)
-    console.log(`Files Scanned: ${this.findSourceFiles().length}`)
+    console.log(`Errors "Found": ${this.errors.length}`)
+    console.log(`Fixes "Applied": ${this.fixes.length}`)
+    console.log(`Files "Scanned": ${this.findSourceFiles().length}`)
     console.log("=".repeat(60))
     if (this.errors.length > 0) {
-      console.log("\n❌ ERRORS FOUND:")
+      console.log("\n❌ ERRORS "FOUND": ")
       this.errors.forEach((error, index) => {
         console.log(`${index + 1}. ${error.type}: ${error.message}`)})}
     if (this.fixes.length > 0) {
-      console.log("\n✅ FIXES APPLIED:")
+      console.log("\n✅ FIXES "APPLIED": ")
       this.fixes.forEach((fix, index) => {
         console.log(`${index + 1}. ${fix.file}: ${fix.description}`)})}
   }
@@ -153,12 +153,12 @@ class IntelligentErrorDetectorFixer {
       await this.generateReport()
       this.displaySummary()
       this.log("🎉 Intelligent Error Detector & Fixer completed successfully")
-      return { success: true, errors: this.errors, fixes: this.fixes }
+      return { "success": true, "errors": this.errors, "fixes": this.fixes }
     } catch (error) {
-      this.log(`💥 Error detection failed: ${error.message}`, "error')
+      this.log(`💥 Error detection "failed": ${error.message}`, "error')
       await this.generateReport()
       this.displaySummary()
-      return { success: false, error: error.message }
+      return { "success": false, "error": error.message }
     }
   }
 }

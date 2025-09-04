@@ -9,10 +9,10 @@ export default function ECommerceReturnManagement() {
         <meta name="description" content="Automate return labels, approvals, status tracking and refunds with carrier and e‑commerce integrations." />
       </Head>
       <main className="relative z-10 mx-auto max-w-4xl px-6 py-16">
-        <h1 className="text-4xl md:text-5xl font-extrabold gradient-text">E‑commerce Return Management</h1>
+        <h1 className="text-4xl "md": text-5xl font-extrabold gradient-text">E‑commerce Return Management</h1>
         <p className="mt-4 text-white/80">Streamline returns to increase shopper trust and reduce support load across Shopify, WooCommerce, BigCommerce and custom stores.</p>
 
-        <section className="mt-8 grid md:grid-cols-2 gap-6">
+        <section className="mt-8 grid "md": grid-cols-2 gap-6">
           <div className="space-y-3">
             <h2 className="text-xl font-semibold">Capabilities</h2>
             <ul className="list-disc pl-5 text-white/80 space-y-2">
@@ -40,7 +40,7 @@ export default function ECommerceReturnManagement() {
         <section className="mt-8">
           <h2 className="text-xl font-semibold">Learn more</h2>
           <ul className="list-disc pl-5 text-white/80 space-y-2">
-            <li><a className="underline hover:text-blue-300" href="https://apps.shopify.com/" target="_blank" rel="noreferrer">Shopify App Store</a></li>
+            <li><a className="underline "hover": text-blue-300" href="https://apps.shopify.com/" target="_blank" rel="noreferrer">Shopify App Store</a></li>
             <li><a className="underline hover:text-blue-300" href="https://woocommerce.com/products/" target="_blank" rel="noreferrer">WooCommerce Extensions</a></li>
           </ul>
         </section>

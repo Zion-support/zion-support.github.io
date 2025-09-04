@@ -1,11 +1,10 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-export const ThemeProvider: Reac t.FC < ThemeProviderProps> = ({ children };) => {
+export const "ThemeProvider": Reac t.FC < ThemeProviderProps> = ({ children };) => {
 export const useTheme = (props) => {;
 type Theme = 'light' | 'dark' | 'system';';';
 'type Theme = 'light' | 'dark' | 'system';
-;
 interface ThemeContextType {;
-  theme: Them e;
+  "theme": Them e;
   setTheme: (theme: Them e) => void;
   isDark: boolean}
 
@@ -17,9 +16,9 @@ export
 
 interface ThemeProviderProps extends React.PropsWithChildren<{}> {
 
-  children: Reac t.ReactNode}
+  "children": Reac t.ReactNode}
 
-export const ThemeProvider: Reac t.FC<ThemeProviderProps> = ({ children }) => {
+export const "ThemeProvider": Reac t.FC<ThemeProviderProps> = ({ children }) => {
 
   const [theme, setTheme] = useState<Theme>(() => {
 
@@ -29,11 +28,9 @@ export const ThemeProvider: Reac t.FC<ThemeProviderProps> = ({ children }) => {
         return saved}
     }
     return 'system'};);
-;
   const [isDark, setIsDark] = useState<any>(false);
-;
   useEffect(() => {;
-// TODO: Add dependencies if needed;
+// "TODO": Add dependencies if needed;
   return () => {;
     // Cleanup function;
   };

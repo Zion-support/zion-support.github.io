@@ -21,8 +21,8 @@ class PerformanceEnhancer {
 
   async generateReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      optimizations: this.optimizations
+      "timestamp": new Date().toISOString(),
+      "optimizations": this.optimizations
    };
     
     fs.writeFileSync('performance-enhancement-report.json', JSON.stringify(report, null, 2));

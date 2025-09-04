@@ -7,8 +7,7 @@ console.log('🔧 Fixing Remaining Corrupted Files...');
 console.log('======================================');
 
 // List of remaining corrupted files to fix
-const corruptedFiles = [
-  'pages/docs/integration-examples.tsx',
+const corruptedFiles = ['pages/docs/integration-examples.tsx',
   'pages/docs/sdk.tsx',
   'pages/enterprise.tsx',
   'pages/help.tsx',
@@ -17,23 +16,23 @@ const corruptedFiles = [
 
 // Function to fix a corrupted file by rewriting it with proper content
 function fixCorruptedFile(filePath) {
-  console.log(`\n🔍 Fixing: ${filePath}`);
+  console.log(`\n🔍 "Fixing": ${filePath}`);
   
   try {
     let content = '';
     
     if (filePath === 'pages/docs/integration-examples.tsx') {
-      content = `import React from 'react';
+      content = "import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowLeft, Code, Zap, ExternalLink } from 'lucide-react';
 
 export default function IntegrationExamples() {
   const contact = { 
-    phone: '+1 302 464 0950', 
-    email: 'kleber@ziontechgroup.com', 
-    address: '364 E Main St STE 1008 Middletown DE 19709', 
-    site: 'https://ziontechgroup.com' 
+    "phone": '+1 302 464 0950', 
+    "email": 'kleber@ziontechgroup.com', 
+    "address": '364 E Main St STE 1008 Middletown DE 19709', 
+    "site": 'https://ziontechgroup.com' 
   };
 
   return (
@@ -41,14 +40,14 @@ export default function IntegrationExamples() {
       <Head>
         <title>Integration Examples - Zion Tech Group Documentation</title>
         <meta name="description" content="Real-world integration examples for Zion Tech Group's APIs and services." />
-        <link rel="canonical" href={\`\${contact.site}/docs/integration-examples\`} />
+        <link rel="canonical" href={\"\${contact.site}/docs/integration-examples\"} />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-6xl mx-auto px-4 py-8">
           {/* Header */}
           <div className="mb-8">
-            <Link href="/docs" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-4">
+            <Link href="/docs" className="inline-flex items-center text-blue-600 "hover": text-blue-700 mb-4">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Documentation
             </Link>
@@ -70,41 +69,41 @@ export default function IntegrationExamples() {
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Basic API Client</h3>
                 <div className="bg-gray-900 rounded-lg p-6">
                   <pre className="text-blue-400 text-sm">
-{\`class ZionTechAPI {
-  constructor(apiKey, baseURL = 'https://api.ziontechgroup.com/v1') {
+{\"class ZionTechAPI {
+  constructor(apiKey, baseURL = '"https": //api.ziontechgroup.com/v1') {
     this.apiKey = apiKey;
     this.baseURL = baseURL}
 
   async getServices() {
     try {
       const response = await fetch(\`\${this.baseURL}/services\`, {
-        headers: {
+        "headers": {
           'Authorization': \`Bearer \${this.apiKey}\`,
           'Content-Type': 'application/json'
         }
       });
       
       if (!response.ok) {
-        throw new Error(\`HTTP error! status: \${response.status}\`)}
+        throw new Error(\`HTTP error! "status": \${response.status}\`)}
       
       return await response.json()} catch (error) {
-      console.error('Error fetching services:', error);
+      console.error('Error fetching "services": ', error);
       throw error}
   }
 
   async submitContact(data) {
     try {
       const response = await fetch(\`\${this.baseURL}/contact\`, {
-        method: 'POST',
-        headers: {
+        "method": 'POST',
+        "headers": {
           'Authorization': \`Bearer \${this.apiKey}\`,
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(data)
+        "body": JSON.stringify(data)
       });
       
       return await response.json()} catch (error) {
-      console.error('Error submitting contact:', error);
+      console.error('Error submitting "contact": ', error);
       throw error}
   }
 }
@@ -112,7 +111,7 @@ export default function IntegrationExamples() {
 // Usage
 const api = new ZionTechAPI('your-api-key');
 const services = await api.getServices();
-console.log(services);\`}
+console.log(services);\"}
                   </pre>
                 </div>
               </div>
@@ -131,11 +130,10 @@ console.log(services);\`}
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Python API Client</h3>
                 <div className="bg-gray-900 rounded-lg p-6">
                   <pre className="text-green-400 text-sm">
-{\`import requests
+{\"import requests
 import json
 
-class ZionTechAPI:
-    def __init__(self, api_key, base_url='https://api.ziontechgroup.com/v1'):
+class "ZionTechAPI": def __init__(self, api_key, base_url='"https": //api.ziontechgroup.com/v1'):
         self.api_key = api_key
         self.base_url = base_url
         self.headers = {
@@ -144,31 +142,27 @@ class ZionTechAPI:
         }
     
     def get_services(self):
-        try:
-            response = requests.get(f'{self.base_url}/services', headers=self.headers)
+        "try": response = requests.get(f'{self.base_url}/services', headers=self.headers)
             response.raise_for_status()
             return response.json()
-        except requests.exceptions.RequestException as e:
-            print(f'Error fetching services: {e}')
+        except requests.exceptions.RequestException as "e": print(f'Error fetching services: {e}')
             raise
     
     def submit_contact(self, data):
-        try:
-            response = requests.post(
+        "try": response = requests.post(
                 f'{self.base_url}/contact',
                 headers=self.headers,
                 data=json.dumps(data)
             )
             response.raise_for_status()
             return response.json()
-        except requests.exceptions.RequestException as e:
-            print(f'Error submitting contact: {e}')
+        except requests.exceptions.RequestException as "e": print(f'Error submitting contact: {e}')
             raise
 
 # Usage
 api = ZionTechAPI('your-api-key')
 services = api.get_services()
-print(services)\`}
+print(services)\"}
                   </pre>
                 </div>
               </div>
@@ -187,7 +181,7 @@ print(services)\`}
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">React Hook for API</h3>
                 <div className="bg-gray-900 rounded-lg p-6">
                   <pre className="text-purple-400 text-sm">
-{\`import { useState, useEffect } from 'react';
+{\"import { useState, useEffect } from 'react';
 
 const useZionTechAPI = (apiKey) => {
   const [services, setServices] = useState([]);
@@ -199,15 +193,15 @@ const useZionTechAPI = (apiKey) => {
     setError(null);
     
     try {
-      const response = await fetch('https://api.ziontechgroup.com/v1/services', {
-        headers: {
+      const response = await fetch('"https": //api.ziontechgroup.com/v1/services', {
+        "headers": {
           'Authorization': \`Bearer \${apiKey}\`,
           'Content-Type': 'application/json'
         }
       });
       
       if (!response.ok) {
-        throw new Error(\`HTTP error! status: \${response.status}\`)}
+        throw new Error(\`HTTP error! "status": \${response.status}\`)}
       
       const data = await response.json();
       setServices(data.data.services)} catch (err) {
@@ -220,9 +214,9 @@ const useZionTechAPI = (apiKey) => {
       fetchServices()}
   }, [apiKey]);
 
-  return { services, loading, error, refetch: fetchServices }};
+  return { services, loading, error, "refetch": fetchServices }};
 
-export default useZionTechAPI;\`}
+export default useZionTechAPI;\"}
                   </pre>
                 </div>
               </div>
@@ -235,11 +229,11 @@ export default useZionTechAPI;\`}
             <p className="text-gray-600 mb-6">
               Our technical team can help you integrate our services into your application.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
               <Link href="/contact" className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
                 Get Integration Support
               </Link>
-              <a href={\`mailto:\${contact.email}\`} className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
+              <a href={\"mailto:\${contact.email}\"} className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg "hover": bg-blue-50 transition-colors">
                 Email Technical Team
               </a>
             </div>
@@ -247,18 +241,18 @@ export default useZionTechAPI;\`}
         </div>
       </div>
     </>
-  )}`} else if (filePath === 'pages/docs/sdk.tsx') {
-      content = `import React from 'react';
+  )}"} else if (filePath === 'pages/docs/sdk.tsx') {
+      content = "import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowLeft, Download, Code, Package } from 'lucide-react';
 
 export default function SDK() {
   const contact = { 
-    phone: '+1 302 464 0950', 
-    email: 'kleber@ziontechgroup.com', 
-    address: '364 E Main St STE 1008 Middletown DE 19709', 
-    site: 'https://ziontechgroup.com' 
+    "phone": '+1 302 464 0950', 
+    "email": 'kleber@ziontechgroup.com', 
+    "address": '364 E Main St STE 1008 Middletown DE 19709', 
+    "site": 'https://ziontechgroup.com' 
   };
 
   return (
@@ -266,14 +260,14 @@ export default function SDK() {
       <Head>
         <title>SDK - Zion Tech Group Documentation</title>
         <meta name="description" content="Official SDKs and libraries for integrating with Zion Tech Group's APIs." />
-        <link rel="canonical" href={\`\${contact.site}/docs/sdk\`} />
+        <link rel="canonical" href={\"\${contact.site}/docs/sdk\"} />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-4xl mx-auto px-4 py-8">
           {/* Header */}
           <div className="mb-8">
-            <Link href="/docs" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-4">
+            <Link href="/docs" className="inline-flex items-center text-blue-600 "hover": text-blue-700 mb-4">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Documentation
             </Link>
@@ -295,11 +289,11 @@ export default function SDK() {
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Installation</h3>
                 <div className="bg-gray-900 rounded-lg p-6">
                   <pre className="text-green-400 text-sm">
-{\`npm install @ziontechgroup/sdk
+{\"npm install @ziontechgroup/sdk
 
 # or
 
-yarn add @ziontechgroup/sdk\`}
+yarn add @ziontechgroup/sdk\"}
                   </pre>
                 </div>
               </div>
@@ -308,7 +302,7 @@ yarn add @ziontechgroup/sdk\`}
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Basic Usage</h3>
                 <div className="bg-gray-900 rounded-lg p-6">
                   <pre className="text-blue-400 text-sm">
-{\`import { ZionTechAPI } from '@ziontechgroup/sdk';
+{\"import { ZionTechAPI } from '@ziontechgroup/sdk';
 
 const api = new ZionTechAPI('your-api-key');
 
@@ -317,13 +311,13 @@ const services = await api.services.getAll();
 
 // Submit contact form
 const result = await api.contact.submit({
-  name: 'John Doe',
-  email: 'john@example.com',
-  service: 'micro-saas',
-  message: 'Looking for a custom solution'
+  "name": 'John Doe',
+  "email": 'john@example.com',
+  "service": 'micro-saas',
+  "message": 'Looking for a custom solution'
 });
 
-console.log(result);\`}
+console.log(result);\"}
                   </pre>
                 </div>
               </div>
@@ -342,7 +336,7 @@ console.log(result);\`}
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Installation</h3>
                 <div className="bg-gray-900 rounded-lg p-6">
                   <pre className="text-green-400 text-sm">
-{\`pip install ziontechgroup-sdk\`}
+{\"pip install ziontechgroup-sdk\"}
                   </pre>
                 </div>
               </div>
@@ -351,7 +345,7 @@ console.log(result);\`}
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Basic Usage</h3>
                 <div className="bg-gray-900 rounded-lg p-6">
                   <pre className="text-blue-400 text-sm">
-{\`from ziontechgroup import ZionTechAPI
+{\"from ziontechgroup import ZionTechAPI
 
 api = ZionTechAPI('your-api-key')
 
@@ -366,7 +360,7 @@ result = api.contact.submit({
     'message': 'Looking for a custom solution'
 })
 
-print(result)\`}
+print(result)\"}
                   </pre>
                 </div>
               </div>
@@ -385,7 +379,7 @@ print(result)\`}
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Installation</h3>
                 <div className="bg-gray-900 rounded-lg p-6">
                   <pre className="text-green-400 text-sm">
-{\`npm install @ziontechgroup/react-hooks\`}
+{\"npm install @ziontechgroup/react-hooks\"}
                   </pre>
                 </div>
               </div>
@@ -394,14 +388,14 @@ print(result)\`}
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Usage in React Component</h3>
                 <div className="bg-gray-900 rounded-lg p-6">
                   <pre className="text-purple-400 text-sm">
-{\`import React from 'react';
+{\"import React from 'react';
 import { useZionTechAPI } from '@ziontechgroup/react-hooks';
 
 function ServicesList() {
   const { services, loading, error } = useZionTechAPI('your-api-key');
 
   if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
+  if (error) return <div>"Error": {error}</div>;
 
   return (
     <div>
@@ -412,7 +406,7 @@ function ServicesList() {
         </div>
       ))}
     </div>
-  )}\`}
+  )}\"}
                   </pre>
                 </div>
               </div>
@@ -425,11 +419,11 @@ function ServicesList() {
             <p className="text-gray-600 mb-6">
               Our technical team can help you get started with our SDKs and libraries.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
               <Link href="/contact" className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
                 Get SDK Support
               </Link>
-              <a href={\`mailto:\${contact.email}\`} className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
+              <a href={\"mailto:\${contact.email}\"} className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg "hover": bg-blue-50 transition-colors">
                 Email Technical Team
               </a>
             </div>
@@ -437,31 +431,30 @@ function ServicesList() {
         </div>
       </div>
     </>
-  )}`} else if (filePath === 'pages/enterprise.tsx') {
-      content = `import React from 'react';
+  )}"} else if (filePath === 'pages/enterprise.tsx') {
+      content = "import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Shield, Users, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 
 export default function Enterprise() {
-  const solutions = [
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: 'Enterprise Security',
-      description: 'Comprehensive cybersecurity solutions including threat detection, compliance management, and data protection.',
-      features: ['Advanced Threat Detection', 'Compliance Automation', 'Data Encryption', 'Security Monitoring']
+  const solutions = [{
+      "icon": <Shield className="w-8 h-8" />,
+      "title": 'Enterprise Security',
+      "description": 'Comprehensive cybersecurity solutions including threat detection, compliance management, and data protection.',
+      "features": ['Advanced Threat Detection', 'Compliance Automation', 'Data Encryption', 'Security Monitoring']
     },
     {
-      icon: <Users className="w-8 h-8" />,
-      title: 'Team Collaboration',
-      description: 'Advanced collaboration tools and platforms to enhance team productivity and communication.',
-      features: ['Unified Communication', 'Project Management', 'Document Sharing', 'Real-time Collaboration']
+      "icon": <Users className="w-8 h-8" />,
+      "title": 'Team Collaboration',
+      "description": 'Advanced collaboration tools and platforms to enhance team productivity and communication.',
+      "features": ['Unified Communication', 'Project Management', 'Document Sharing', 'Real-time Collaboration']
     },
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: 'Performance Optimization',
-      description: 'Optimize your enterprise systems for maximum performance and efficiency.',
-      features: ['System Monitoring', 'Performance Analytics', 'Automated Scaling', 'Resource Optimization']
+      "icon": <Zap className="w-8 h-8" />,
+      "title": 'Performance Optimization',
+      "description": 'Optimize your enterprise systems for maximum performance and efficiency.',
+      "features": ['System Monitoring', 'Performance Analytics', 'Automated Scaling', 'Resource Optimization']
     }
   ];
 
@@ -486,9 +479,9 @@ export default function Enterprise() {
           </div>
 
           {/* Solutions Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">
             {solutions.map((solution, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div key={index} className="bg-white rounded-lg shadow-lg p-8 "hover": shadow-xl transition-shadow">
                 <div className="text-blue-600 mb-4">
                   {solution.icon}
                 </div>
@@ -519,7 +512,7 @@ export default function Enterprise() {
               Let's discuss how our enterprise solutions can help your organization 
               achieve its technology goals.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
               <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
                 Contact Enterprise Team
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -532,106 +525,102 @@ export default function Enterprise() {
         </div>
       </div>
     </>
-  )}`} else if (filePath === 'pages/help.tsx') {
-      content = `import React from 'react';
+  )}"} else if (filePath === 'pages/help.tsx') {
+      content = "import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Search, MessageCircle, Phone, Mail } from 'lucide-react';
 
 export default function Help() {
   const contact = { 
-    phone: '+1 302 464 0950', 
-    email: 'kleber@ziontechgroup.com', 
-    address: '364 E Main St STE 1008 Middletown DE 19709', 
-    site: 'https://ziontechgroup.com' 
+    "phone": '+1 302 464 0950', 
+    "email": 'kleber@ziontechgroup.com', 
+    "address": '364 E Main St STE 1008 Middletown DE 19709', 
+    "site": 'https://ziontechgroup.com' 
   };
 
-  const helpCategories = [
-    {
-      title: "Getting Started",
-      icon: "🚀",
-      articles: [
+  const helpCategories = [{
+      "title": "Getting Started",
+      "icon": "🚀",
+      "articles": [
         {
           title: "How to Get Started with Our Services",
-          description: "Step-by-step guide to begin your technology journey"
+          "description": "Step-by-step guide to begin your technology journey"
         },
         {
-          title: "Account Setup and Configuration",
-          description: "Learn how to set up your account and configure settings"
+          "title": "Account Setup and Configuration",
+          "description": "Learn how to set up your account and configure settings"
         },
         {
-          title: "Understanding Our Service Portfolio",
-          description: "Overview of all available services and solutions"
+          "title": "Understanding Our Service Portfolio",
+          "description": "Overview of all available services and solutions"
         },
         {
-          title: "Initial Consultation Process",
-          description: "What to expect during your first consultation"
+          "title": "Initial Consultation Process",
+          "description": "What to expect during your first consultation"
         }
       ]
     },
     {
-      title: "Technical Support",
-      icon: "🔧",
-      articles: [
-        {
+      "title": "Technical Support",
+      "icon": "🔧",
+      "articles": [{
           title: "Troubleshooting Common Issues",
-          description: "Solutions to frequently encountered problems"
+          "description": "Solutions to frequently encountered problems"
         },
         {
-          title: "System Requirements and Compatibility",
-          description: "Technical specifications and compatibility information"
+          "title": "System Requirements and Compatibility",
+          "description": "Technical specifications and compatibility information"
         },
         {
-          title: "Performance Optimization",
-          description: "Tips for improving system performance"
+          "title": "Performance Optimization",
+          "description": "Tips for improving system performance"
         },
         {
-          title: "Integration and API Documentation",
-          description: "Technical documentation for integrations"
+          "title": "Integration and API Documentation",
+          "description": "Technical documentation for integrations"
         }
       ]
     },
     {
-      title: "Billing & Account",
-      icon: "💳",
-      articles: [
-        {
+      "title": "Billing & Account",
+      "icon": "💳",
+      "articles": [{
           title: "Understanding Your Bill",
-          description: "How to read and understand your service charges"
+          "description": "How to read and understand your service charges"
         },
         {
-          title: "Payment Methods and Billing Cycles",
-          description: "Available payment options and billing schedules"
+          "title": "Payment Methods and Billing Cycles",
+          "description": "Available payment options and billing schedules"
         },
         {
-          title: "Upgrading or Downgrading Services",
-          description: "How to modify your service plan"
+          "title": "Upgrading or Downgrading Services",
+          "description": "How to modify your service plan"
         },
         {
-          title: "Cancellation and Refund Policy",
-          description: "Information about service cancellation and refunds"
+          "title": "Cancellation and Refund Policy",
+          "description": "Information about service cancellation and refunds"
         }
       ]
     },
     {
-      title: "Security & Privacy",
-      icon: "🛡️",
-      articles: [
-        {
+      "title": "Security & Privacy",
+      "icon": "🛡️",
+      "articles": [{
           title: "Security Best Practices",
-          description: "Guidelines for maintaining security"
+          "description": "Guidelines for maintaining security"
         },
         {
-          title: "Data Privacy and Protection",
-          description: "How we protect your data and privacy"
+          "title": "Data Privacy and Protection",
+          "description": "How we protect your data and privacy"
         },
         {
-          title: "Two-Factor Authentication Setup",
-          description: "How to enable 2FA for your account"
+          "title": "Two-Factor Authentication Setup",
+          "description": "How to enable 2FA for your account"
         },
         {
-          title: "Reporting Security Issues",
-          description: "How to report security concerns"
+          "title": "Reporting Security Issues",
+          "description": "How to report security concerns"
         }
       ]
     }
@@ -662,16 +651,16 @@ export default function Help() {
                 <input
                   type="text"
                   placeholder="Search for help articles..."
-                  className="w-full pl-12 pr-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full pl-12 pr-4 py-4 border border-gray-300 rounded-lg "focus": ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
             </div>
           </div>
 
           {/* Help Categories */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {helpCategories.map((category, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+              <div key={index} className="bg-white rounded-lg shadow-lg p-6 "hover": shadow-xl transition-shadow">
                 <div className="text-4xl mb-4">{category.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   {category.title}
@@ -679,7 +668,7 @@ export default function Help() {
                 <ul className="space-y-3">
                   {category.articles.map((article, articleIndex) => (
                     <li key={articleIndex}>
-                      <a href="#" className="text-blue-600 hover:text-blue-800 hover:underline">
+                      <a href="#" className="text-blue-600 "hover": text-blue-800 hover:underline">
                         {article.title}
                       </a>
                       <p className="text-sm text-gray-600 mt-1">
@@ -701,7 +690,7 @@ export default function Help() {
               Our support team is here to help you with any questions or issues you may have.
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 "md": grid-cols-3 gap-8">
               <div className="flex flex-col items-center">
                 <div className="bg-blue-100 rounded-full p-4 mb-4">
                   <MessageCircle className="w-8 h-8 text-blue-600" />
@@ -719,7 +708,7 @@ export default function Help() {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone Support</h3>
                 <p className="text-gray-600 mb-4">Call us for immediate assistance</p>
-                <a href={\`tel:\${contact.phone}\`} className="text-green-600 hover:text-green-800 font-semibold">
+                <a href={\"tel:\${contact.phone}\"} className="text-green-600 "hover": text-green-800 font-semibold">
                   {contact.phone}
                 </a>
               </div>
@@ -730,7 +719,7 @@ export default function Help() {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Support</h3>
                 <p className="text-gray-600 mb-4">Send us a detailed message</p>
-                <a href={\`mailto:\${contact.email}\`} className="text-purple-600 hover:text-purple-800 font-semibold">
+                <a href={\""mailto": \${contact.email}\"} className="text-purple-600 "hover": text-purple-800 font-semibold">
                   {contact.email}
                 </a>
               </div>
@@ -739,27 +728,27 @@ export default function Help() {
         </div>
       </div>
     </>
-  )}`} else if (filePath === 'pages/login.tsx') {
-      content = `import React, { useState } from 'react';
+  )}"} else if (filePath === 'pages/login.tsx') {
+      content = "import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Eye, EyeOff, Mail, Lock } from 'lucide-react';
 
 export default function Login() {
   const [formData, setFormData] = useState({
-    email: '',
-    password: ''
+    "email": '',
+    "password": ''
   });
   const [showPassword, setShowPassword] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = ("e": React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }))};
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = ("e": React.FormEvent) => {
     e.preventDefault();
     // Handle login logic here
     console.log('Login attempt:', formData);
@@ -772,7 +761,7 @@ export default function Login() {
         <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 flex items-center justify-center py-12 px-4 "sm": px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <div>
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
@@ -780,7 +769,7 @@ export default function Login() {
             </h2>
             <p className="mt-2 text-center text-sm text-gray-600">
               Or{' '}
-              <Link href="/signup" className="font-medium text-blue-600 hover:text-blue-500">
+              <Link href="/signup" className="font-medium text-blue-600 "hover": text-blue-500">
                 create a new account
               </Link>
             </p>
@@ -804,7 +793,7 @@ export default function Login() {
                     required
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="appearance-none relative block w-full pl-10 pr-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+                    className="appearance-none relative block w-full pl-10 pr-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg "focus": outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -826,7 +815,7 @@ export default function Login() {
                     required
                     value={formData.password}
                     onChange={handleInputChange}
-                    className="appearance-none relative block w-full pl-10 pr-10 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+                    className="appearance-none relative block w-full pl-10 pr-10 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg "focus": outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
                     placeholder="Enter your password"
                   />
                   <div className="absolute inset-y-0 right-0 pr-3 flex items-center">
@@ -852,7 +841,7 @@ export default function Login() {
                   id="remember-me"
                   name="remember-me"
                   type="checkbox"
-                  className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                  className="h-4 w-4 text-blue-600 "focus": ring-blue-500 border-gray-300 rounded"
                 />
                 <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
                   Remember me
@@ -878,7 +867,7 @@ export default function Login() {
         </div>
       </div>
     </>
-  )}`}
+  )}"}
 
     if (content) {
       fs.writeFileSync(filePath, content, 'utf8');

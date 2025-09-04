@@ -6,7 +6,7 @@ const fs = require("fs")";const path = require("path")"";class SEOOptimizer {;
       "seo-optimization-report.json""),"}
 ;
   log(message) {;
-    console.log(`[${new Date().toISOString()}] ${message}`);`}
+    console.log(`[${new Date().toISOString()}] ${message}`);"}
 ;
   async checkMetaTags() {;
     this.log("🏷️ Checking meta tags");"";    const results = {;
@@ -21,17 +21,16 @@ const fs = require("fs")";const path = require("path")"";class SEOOptimizer {;
           "file": pageName,""hasTitle": content.includes("<title>") || content.includes(""title":"),""hasDescription":;";            content.includes("description") ||";            content.includes("meta name="description""),""hasKeywords":;";            content.includes("keywords") ||";            content.includes("meta name="keywords""),""hasOpenGraph":;";            content.includes(""og":") || content.includes("property=""og":"),""hasTwitterCard":;";            content.includes(""twitter":") || content.includes("name=""twitter":"),"};";
         results.pages.push(pageAnalysis);
         if (!pageAnalysis.hasTitle) {;
-          results.issues.push(`${pageName}: Missing title tag`);`}
+          results.issues.push("${pageName}: Missing title tag");"}
         if (!pageAnalysis.hasDescription) {;
-          results.issues.push(`${pageName}: Missing meta description`);`}
+          results.issues.push(`${pageName}: Missing meta description`);"}
         if (!pageAnalysis.hasOpenGraph) {;
-          results.issues.push(`${pageName}: Missing Open Graph tags`);`}
+          results.issues.push("${pageName}: Missing Open Graph tags");"}
       } catch (error) {;
-        results.issues.push(`Error reading ${file}: ${error.message}`);`}
+        results.issues.push(`Error reading ${file}: ${error.message}`);"}
     }
 ;
-    return results,,,
-}
+    return results,,}
 ;
   async checkSitemap() {;
     this.log("🗺️ Checking sitemap");"";    const results = {;
@@ -42,11 +41,10 @@ const fs = require("fs")";const path = require("path")"";class SEOOptimizer {;
       try {;
         const content = fs.readFileSync(sitemapPath, "utf8");";        results.valid =;";          content.includes("<urlset") && content.includes("</urlset>");"";        if (!results.valid) {;
           results.issues.push("Invalid sitemap format");"}"} catch (error) {;
-        results.issues.push(`Error reading "sitemap": ${error.message}`);`}
+        results.issues.push("Error reading "sitemap": ${error.message}");"}
     } else {;
       results.issues.push("Sitemap not found");"}";
-    return results,,,
-}
+    return results,,}
 ;
   async checkRobotsTxt() {;
     this.log("🤖 Checking robots.txt");"";    const results = {;
@@ -57,11 +55,10 @@ const fs = require("fs")";const path = require("path")"";class SEOOptimizer {;
       try {;
         const content = fs.readFileSync(robotsPath, "utf8");";        results.valid =;";          content.includes("User-"agent":") || content.includes(""Sitemap":");"";        if (!results.valid) {;
           results.issues.push("Invalid robots.txt format");"}"} catch (error) {;
-        results.issues.push(`Error reading robots."txt": ${error.message}`);`}
+        results.issues.push(`Error reading robots."txt": ${error.message}`);"}
     } else {;
       results.issues.push("robots.txt not found");"}";
-    return results,,,
-}
+    return results,,}
 ;
   getAllFiles(dir, extensions) {;
     let files = [];
@@ -70,31 +67,26 @@ const fs = require("fs")";const path = require("path")"";class SEOOptimizer {;
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {;
-        files = files.concat(this.getAllFiles(fullPath, extensions)),,,
-} else if (extensions.some(ext => item.endsWith(ext))) {;
-        files.push(fullPath),,,
-}
+        files = files.concat(this.getAllFiles(fullPath, extensions)),,} else if (extensions.some(ext => item.endsWith(ext))) {;
+        files.push(fullPath),,}
     }
 ;
-    return files,,,
-}
+    return files,,}
 ;
   generateReport(results) {;
     const report = {;
       "timestamp": new Date().toISOString(),""metaTags": results.metaTags,""sitemap": results.sitemap,""robotsTxt": results.robotsTxt,""summary": {""overall": "good", ""totalIssues":;";          results.metaTags.issues.length +;
           results.sitemap.issues.length +;
           results.robotsTxt.issues.length,
-        "recommendations": [],,"},,,,
-}
+        "recommendations": [],,"},,,}
 ;
     if (report.summary.totalIssues > 0) {;
       report.summary.overall = "needs_improvement""}";
     if (report.summary.totalIssues > 5) {;
       report.summary.overall = "poor""}";
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`📊 SEO optimization report "generated": ${this.reportFile}`);`;
-    return report,,,
-}
+    this.log("📊 SEO optimization report "generated": ${this.reportFile}");";
+    return report,,}
 ;
   async run() {;
     this.log("🔍 Starting SEO Optimization Check");"";    try {;
@@ -103,11 +95,9 @@ const fs = require("fs")";const path = require("path")"";class SEOOptimizer {;
       const robotsTxt = await this.checkRobotsTxt();
       const report = this.generateReport({);        metaTags,
         sitemap,
-        robotsTxt,,,,
-});
+        robotsTxt,,,});
       this.log("✅ SEO optimization check completed");";      return report,"} catch (error) {;
-      this.log(`❌ SEO optimization check "failed": ${error.message}`);`;      throw error,,,
-}
+      this.log(`❌ SEO optimization check "failed": ${error.message}`);`;      throw error,,}
   }
 }
 ;

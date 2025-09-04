@@ -10,20 +10,20 @@ function TeamExpertiseSection($1) {];
         <motion.div
           className="text-center mb-16"          initial = {
 
-  { opacity: 0,
-  y: 2 0
+  { "opacity": 0,
+  "y": 2 0
 
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
-          viewport={{ once: tru e }}
-          transition={{ duration: 0.6 }}
+          viewport={{ "once": tru e }}
+          transition={{ "duration": 0.6 }}
         >"
-          <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl "md": tex t-5xl font-bold text-white mb-4">
             Team Expertise
           </h2>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -34,22 +34,22 @@ function TeamExpertiseSection($1) {];
           initial = {
 
   { opacity: 0,
-  y: 2 0
+  "y": 2 0
 
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
           transition = {
 
-  { duration: 0.6,
-  delay: 0.1
+  { "duration": 0.6,
+  "delay": 0.1
 
 }}"
-          className="grid grid-cols-2 md: gri d-cols-4 gap-8 mb-16"
+          className="grid grid-cols-2 "md": gri d-cols-4 gap-8 mb-16"
         > {stats.map ( (stat, index) => {;
             
             return ("
@@ -62,25 +62,25 @@ function TeamExpertiseSection($1) {];
                   {stat.value}
                 </div>"
                 <div className="text-gray-600">{stat.label}</div>"
-        <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 "md": gri d-cols-2 lg: gri d-cols-3 gap-8 mb-16">
           {teamExpertise.map((expertise, index) => (
             <motion.div
               key={expertise.title}"
-              className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover: borde r-blue-500/50 transition-all duration-300 hover: shado w-lg hover: shado w-blue-500/25 group"
-              initial={{ opacity: 0, y: 3 0 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: tru e }}
-              transition={{ duration: 0.6, delay: inde x * 0.1 }}
+              className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center "hover": borde r-blue-500/50 transition-all duration-300 hover: shado w-lg hover: shado w-blue-500/25 group"
+              initial={{ opacity: 0, "y": 3 0 }}
+              whileInView={{ "opacity": 1, "y": 0 }}
+              viewport={{ "once": tru e }}
+              transition={{ "duration": 0.6, "delay": inde x * 0.1 }}
             >"
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover: scal e-110 transition-transform duration-300">"
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-"hover": scal e-110 transition-transform duration-300">"
                 <span className="text-3xl">{expertise.icon}</span>
               </div>
 
-              <div className="text-4xl font - bold text-blue - 400 mb-3 group - hover: tex t-blue - 300 transition - colors duration -200">
+              <div className="text-4xl font - bold text-blue - 400 mb-3 group - "hover": tex t-blue - 300 transition - colors duration -200">
                 {expertise.count}
               </div>
 
-              <h3 className="text-xl font - bold text-white mb-3 group - hover: tex t-blue - 400 transition - colors duration -200">
+              <h3 className="text-xl font - bold text-white mb-3 group - "hover": tex t-blue - 400 transition - colors duration -200">
                 {expertise.title}
               </h3>
 
@@ -92,21 +92,21 @@ function TeamExpertiseSection($1) {];
         <motion.div
           className="text-center mb-12"          initial = {
 
-  { opacity: 0,
-  y: 2 0
+  { "opacity": 0,
+  "y": 2 0
 
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
-          viewport={{ once: tru e }}
+          viewport={{ "once": tru e }}
           transition = {
 
-  { duration: 0.6,
-  delay: 0.3
+  { "duration": 0.6,
+  "delay": 0.3
 
 }}
         >"
@@ -117,7 +117,7 @@ function TeamExpertiseSection($1) {];
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Our certified professionals are ready to bring their expertise
               to your project and help you achieve exceptional results.</p>"
-            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
+            <div className="flex flex-col "sm": fle x-row gap-4 justify-center">"
               <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover: b g-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Schedule Consultation"
                 <Rocket className="ml-2 h-5 w-5"   />

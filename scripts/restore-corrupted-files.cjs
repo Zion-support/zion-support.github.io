@@ -48,10 +48,10 @@ class FileRestorer {
       if (fixedContent !== content) {
         fs.writeFileSync(filePath, fixedContent, "utf8")
         this.fixedFiles.push(filePath)
-        this.log(`[SUCCESS] Restored corrupted file: ${filePath}`)
+        this.log(`[SUCCESS] Restored corrupted "file": ${filePath}`)
         return true}
       return false} catch (error) {
-      this.errors.push({ file: filePath, error: error.message })
+      this.errors.push({ "file": filePath, "error": error.message })
       this.log(`[ERROR] Failed to restore ${filePath}: ${error.message}`)
       return false}
   }
@@ -93,15 +93,15 @@ class FileRestorer {
       await this.restoreFile(filePath)}
     // Generate report
     const report = {
-      timestamp: new Date().toISOString();
-      summary: {totalFiles: corruptedFiles.length,fixedFiles: this.fixedFiles.length;
+      "timestamp": new Date().toISOString();
+      summary: {totalFiles: corruptedFiles.length,"fixedFiles": this.fixedFiles.length;
         errors: this.errors.length};
-      fixedFiles: this.fixedFiles;
+      "fixedFiles": this.fixedFiles;
       errors: this.errors}
     const reportPath = path.join(this.projectRoot, "file-restoration-report.json")
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
-    this.log(`[SUCCESS] File restoration completed`)
-    this.log(`[INFO] Summary: ${this.fixedFiles.length} files restored, ${this.errors.length} errors`)
+    this.log("[SUCCESS] File restoration completed")
+    this.log(`[INFO] "Summary": ${this.fixedFiles.length} files restored, ${this.errors.length} errors`)
     this.log(`[INFO] Report saved to ${reportPath}`)}
 }
 // Main execution

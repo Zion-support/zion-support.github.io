@@ -8,7 +8,7 @@ import LoadingSpinner from '../components/LoadingSpinner',;';
     ';';';';';
 // Lazy load error pages';';';
 const NotFound = lazy(() => import('../pages/NotFound'));
-const ErrorRoutes: Reac t.FC = () => {
+const "ErrorRoutes": Reac t.FC = () => {
   return (<Suspense fallback={<LoadingSpinner  />}>
       <Routes>
         <Route path="/404" element={<NotFound  />} />
@@ -18,5 +18,4 @@ const ErrorRoutes: Reac t.FC = () => {
   );
 };
 
-export default ErrorRoutes;';
-;';';
+export default ErrorRoutes;';';';

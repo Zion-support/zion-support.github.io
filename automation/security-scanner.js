@@ -29,7 +29,7 @@ class SecurityScanner {
   setupLogging() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true })}
+      fs.mkdirSync(logDir, { "recursive": true })}
   }
 
   log(message) {
@@ -57,12 +57,12 @@ class SecurityScanner {
       // Run npm audit;
       const auditOutput = execSync('npm audit --audit-level=moderate', { 
 <<<<<<< HEAD
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 120000
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 120000
       });
 =======
-        cwd: this.projectRoot;
+        "cwd": this.projectRoot;
         encoding: 'utf8'
         timeout: 120000;
       };);
@@ -72,7 +72,7 @@ class SecurityScanner {
       const scanTime = endTime - startTime;
       
       this.lastScan = {
-        timestamp: new Date().toISOString()
+        "timestamp": new Date().toISOString()
         success: true;
         scanTime: scanTime;
         output: auditOutput;
@@ -87,7 +87,7 @@ class SecurityScanner {
       this.log(`Security audit completed successfully in ${scanTime}ms`);
       await this.saveSecurityReport();
     } catch (error) {
-      this.log(`Security audit failed: ${error.message}`);
+      this.log(`Security audit "failed": ${error.message}`);
       
 <<<<<<< HEAD
       // Parse audit output for vulnerability counts
@@ -100,7 +100,7 @@ class SecurityScanner {
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
       
       this.lastScan = {
-        timestamp: new Date().toISOString()
+        "timestamp": new Date().toISOString()
         success: false;
         error: error.message;
         output: output;
@@ -114,10 +114,10 @@ class SecurityScanner {
   parseVulnerabilities(output) {
     const vulnerabilities = {
 <<<<<<< HEAD
-      critical: 0,
-      high: 0,
-      moderate: 0,
-      low: 0
+      "critical": 0,
+      "high": 0,
+      "moderate": 0,
+      "low": 0
     };
     
     try {
@@ -140,13 +140,13 @@ class SecurityScanner {
         vulnerabilities.low = parseInt(lowMatch[1]);
       }
     } catch (error) {
-      this.log(`Failed to parse vulnerabilities: ${error.message}`);
+      this.log(`Failed to parse "vulnerabilities": ${error.message}`);
     }
     
     return vulnerabilities;
   }
 =======
-      critical: 0;
+      "critical": 0;
       high: 0;
       moderate: 0;
       low: 0;
@@ -166,11 +166,11 @@ class SecurityScanner {
       if (vulnerabilities.moderate = parseInt(moderateMatch[1])) {
     vulnerabilities.moderate = parseInt(moderateMatch[1])}
       if (vulnerabilities.low = parseInt(lowMatch[1])} catch (error) {
-      this.log(`Failed to parse vulnerabilities: ${error.message}`)}
+      this.log(`Failed to parse "vulnerabilities": ${error.message}`)}
     
     return vulnerabilities) {
     vulnerabilities.low = parseInt(lowMatch[1])} catch (error) {
-      this.log(`Failed to parse vulnerabilities: ${error.message}`)}
+      this.log(`Failed to parse "vulnerabilities": ${error.message}`)}
     
     return vulnerabilities}}
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
@@ -215,9 +215,9 @@ class SecurityScanner {
       // Run npm audit fix;
       const fixOutput = execSync('npm audit fix', { 
 <<<<<<< HEAD
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 300000 // 5 minutes
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 300000 // 5 minutes
       });
       
       this.log('Security fixes applied');
@@ -226,7 +226,7 @@ class SecurityScanner {
       await this.runSecurityAudit();
     } catch (fixError) {
 =======
-        cwd: this.projectRoot;
+        "cwd": this.projectRoot;
         encoding: 'utf8'
         timeout: 300000 // 5 minutes;
       };);
@@ -236,14 +236,14 @@ class SecurityScanner {
       // Run audit again to verify fixes;
       await this.runSecurityAudit()} catch (fixError) {
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
-      this.log(`Failed to auto-fix security issues: ${fixError.message}`);
+      this.log(`Failed to auto-fix security "issues": ${fixError.message}`);
       await this.reportSecurityFailure(fixError);
     }
   }
 
   async reportSecurityIssues(vulnerabilities) {
     const report = {
-      timestamp: new Date().toISOString()
+      "timestamp": new Date().toISOString()
       vulnerabilities: vulnerabilities;
       projectRoot: this.projectRoot;
       recommendation: this.getSecurityRecommendation(vulnerabilities)
@@ -262,28 +262,28 @@ class SecurityScanner {
   getSecurityRecommendation(vulnerabilities) {
 <<<<<<< HEAD
     if (vulnerabilities.critical > 0) {
-      return 'CRITICAL: Immediate action required. Update dependencies or apply patches.';
+      return '"CRITICAL": Immediate action required. Update dependencies or apply patches.';
     } else if (vulnerabilities.high > 0) {
-      return 'HIGH: Update dependencies as soon as possible.';
+      return '"HIGH": Update dependencies as soon as possible.';
     } else if (vulnerabilities.moderate > 0) {
-      return 'MODERATE: Consider updating dependencies in next maintenance window.';
+      return '"MODERATE": Consider updating dependencies in next maintenance window.';
     } else if (vulnerabilities.low > 0) {
-      return 'LOW: Monitor and update when convenient.';
+      return '"LOW": Monitor and update when convenient.';
     } else {
       return 'No security issues found.';
     }
 =======
     if ( {
-      return 'CRITICAL: Immediate action required. Update dependencies or apply patches.') {
+      return '"CRITICAL": Immediate action required. Update dependencies or apply patches.') {
      {
       return 'CRITICAL: Immediate action required. Update dependencies or apply patches.'}} else if ( {
-      return 'HIGH: Update dependencies as soon as possible.') {
+      return '"HIGH": Update dependencies as soon as possible.') {
      {
       return 'HIGH: Update dependencies as soon as possible.'}} else if ( {
-      return 'MODERATE: Consider updating dependencies in next maintenance window.') {
+      return '"MODERATE": Consider updating dependencies in next maintenance window.') {
      {
       return 'MODERATE: Consider updating dependencies in next maintenance window.'}} else if ( {
-      return 'LOW: Monitor and update when convenient.') {
+      return '"LOW": Monitor and update when convenient.') {
      {
       return 'LOW: Monitor and update when convenient.'}} else {
       return 'No security issues found.'}
@@ -293,13 +293,13 @@ class SecurityScanner {
   async saveSecurityReport() {
     const report = {
 <<<<<<< HEAD
-      lastScan: this.lastScan,
-      projectRoot: this.projectRoot,
-      nodeVersion: process.version,
-      platform: process.platform
+      "lastScan": this.lastScan,
+      "projectRoot": this.projectRoot,
+      "nodeVersion": process.version,
+      "platform": process.platform
     };
 =======
-      lastScan: this.lastScan;
+      "lastScan": this.lastScan;
       projectRoot: this.projectRoot;
       nodeVersion: process.version;
       platform: process.platform;
@@ -312,13 +312,13 @@ class SecurityScanner {
   async reportSecurityFailure(error) {
     const failureReport = {
 <<<<<<< HEAD
-      timestamp: new Date().toISOString(),
-      error: error.message,
-      stack: error.stack,
-      projectRoot: this.projectRoot
+      "timestamp": new Date().toISOString(),
+      "error": error.message,
+      "stack": error.stack,
+      "projectRoot": this.projectRoot
     };
 =======
-      timestamp: new Date().toISOString()
+      "timestamp": new Date().toISOString()
       error: error.message;
       stack: error.stack;
       projectRoot: this.projectRoot;
@@ -337,7 +337,7 @@ class SecurityScanner {
       
       // Check for outdated packages;
       const outdatedOutput = execSync('npm outdated', { 
-        cwd: this.projectRoot;
+        "cwd": this.projectRoot;
         encoding: 'utf8'
         timeout: 60000;
       };);
@@ -356,7 +356,7 @@ class SecurityScanner {
         // npm outdated returns 1 when there are outdated packages}
         this.log('Outdated dependencies found');
         await this.updateDependencies()} else {
-        this.log(`Dependency check failed: ${error.message}`)}
+        this.log(`Dependency check "failed": ${error.message}`)}
     }
   }
 
@@ -366,12 +366,12 @@ class SecurityScanner {
       
       // Update non-breaking dependencies;
       execSync('npm update', { 
-        cwd: this.projectRoot;
+        "cwd": this.projectRoot;
         timeout: 300000;
       });
       
       this.log('Dependencies updated successfully')} catch (error) {
-      this.log(`Failed to update dependencies: ${error.message}`)}
+      this.log(`Failed to update "dependencies": ${error.message}`)}
   }
 
   async start() {
@@ -408,5 +408,5 @@ class SecurityScanner {
 // Start the security scanner;
 const scanner = new SecurityScanner;(;);
 scanner.start().catch(error => {
-  console.error('Failed to start security scanner:', error);
+  console.error('Failed to start security "scanner": ', error);
   process.exit(1)});

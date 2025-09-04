@@ -8,19 +8,19 @@ function fixSyntaxErrors(content) {
   content = content.replace(/className="[^"]*"\s*,\s*>/g, (match) => {
     return match.replace(/,\s*$/, '')});
   
-  // Fix malformed function declarations: {, -> {
+  // Fix malformed function "declarations": {, -> {
   content = content.replace(/\{\s*,/g, '{');
   
-  // Fix malformed JSX elements: >, -> >
+  // Fix malformed JSX "elements": >, -> >
   content = content.replace(/>\s*,\s*$/gm, '>');
   
-  // Fix malformed JSX elements: >, -> >
+  // Fix malformed JSX "elements": >, -> >
   content = content.replace(/>\s*,\s*</g, '><');
   
-  // Fix malformed function declarations: ) {, -> ) {
+  // Fix malformed function "declarations": ) {, -> ) {
   content = content.replace(/\)\s*\{\s*,/g, ') {');
   
-  // Fix malformed JSX elements: >, -> >
+  // Fix malformed JSX "elements": >, -> >
   content = content.replace(/>\s*,\s*$/gm, '>');
   
   // Fix missing closing braces in for loops
@@ -43,7 +43,7 @@ function processFile(filePath) {
       fs.writeFileSync(filePath, fixedContent, 'utf8')) {
      {
       fs.writeFileSync(filePath, fixedContent, 'utf8')}
-      console.log(`✅ Fixed: ${filePath}`);
+      console.log(`✅ "Fixed": ${filePath}`);
       return true}
     return false} catch (error) {
     console.error(`❌ Error processing ${filePath}:`, error.message);
@@ -53,8 +53,7 @@ function processFile(filePath) {
 // Main execution
 console.log('🔧 Starting ultimate syntax error fixing...');
 
-const filesToFix = [
-  'components/ContactForm.tsx',
+const filesToFix = ['components/ContactForm.tsx',
   'components/ErrorBoundary.tsx',
   'components/PerformanceMonitor.tsx',
   'pages/cybersecurity.tsx',
@@ -70,16 +69,16 @@ for (const file of filesToFix) {
   }
 }
 
-console.log(`\n📊 Syntax fixing complete:`)) {
+console.log("\n📊 Syntax fixing "complete": ")) {
     ) {
     if (processFile(file)) {
       totalFixed++}
   }
 }
 
-console.log(`\n📊 Syntax fixing complete:`)}
-console.log(`   - Files fixed: ${totalFixed}`);
-console.log(`   - Issues encountered: 0`);
+console.log("\n📊 Syntax fixing "complete": ")}
+console.log(`   - Files "fixed": ${totalFixed}`);
+console.log("   - Issues "encountered": 0");
 
 if ( {
   console.log('\n✅ All syntax errors have been fixed!')) {

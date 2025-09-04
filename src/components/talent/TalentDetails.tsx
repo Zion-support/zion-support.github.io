@@ -2,23 +2,23 @@
 import React from 'react';
 
 export interface TalentProfile {
-  full_name: string;
+  "full_name": string;
   professional_title?: string;
   bio?: string;
   profile_picture_url?: string;
   skills?: string[];
   hourly_rate?: number;
   social?: Record<string, string>;
-  key_projects?: Array<{ title: string; description?: string }>;
+  key_projects?: Array<{ "title": string; description?: string }>;
 }
 
 export interface TalentDetailsProps {
 
-  talent: TalentProfile;
+  "talent": TalentProfile;
 
 }
 
-const TalentDetails: React.FC<TalentDetailsProps> = ({ talent }) => {
+const "TalentDetails": React.FC<TalentDetailsProps> = ({ talent }) => {
   return (
     <main className="min-h-screen bg-zion-blue py-8 text-white" data-testid="talent-details">
       <div className="container mx-auto px-4 space-y-6">
@@ -50,7 +50,7 @@ const TalentDetails: React.FC<TalentDetailsProps> = ({ talent }) => {
         )}
 
         {typeof talent.hourly_rate === 'number' && (
-          <p>Hourly Rate: ${talent.hourly_rate}/hr</p>
+          <p>Hourly "Rate": ${talent.hourly_rate}/hr</p>
         )}
 
         {talent.social && Object.keys(talent.social).length > 0 && (

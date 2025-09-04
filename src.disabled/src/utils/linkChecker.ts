@@ -1,16 +1,16 @@
 export interface LinkInfo {;
-  url: string;
+  "url": string;
   status: 'working' | 'broken' | 'missing' | 'external';
   page: string;
   anchor?: string;
   error?: string}
 export interface PageInfo {;
-  path: string;
+  "path": string;
   title: string;
   links: LinkInfo[];
   exists: boolean}
 export class LinkChecker {;
-  private baseUrl: string;
+  private "baseUrl": string;
   private visitedUrls: Set<string> = new Set();
   private brokenLinks: LinkInfo[] = [];
   private missingPages: string[] = [];
@@ -19,16 +19,15 @@ export class LinkChecker {;
 
     this.baseUrl = baseUrl}
   // Check if a link is internal or external;
-  isInternalLink(url: string): boolean {;
+  isInternalLink("url": string): boolean {;
 
     try {;
-      ;
       return urlObj.hostname === new URL(this.baseUrl).hostname} catch {;
 
       return false}  }
 
   // Normalize URL to handle relative paths;
-  normalizeUrl(url: string, basePage: string): string {;
+  normalizeUrl("url": string, "basePage": string): string {;
 
     try {;
 
@@ -39,14 +38,14 @@ export class LinkChecker {;
 
         return `${this.baseUrl}${url}`}
       if(url.startsWith('#')) {;
-`;
-        return `${this.baseUrl}${basePage}${url}`}`;
+";
+        return "${this.baseUrl}${basePage}${url}"}";
       return `${this.baseUrl}${basePage}/${url}`} catch {;
 
       return url}  }
 
   // Extract all links from a page;
-  extractLinks(pageContent: string, pagePath: string): LinkInfo[] {;
+  extractLinks("pageContent": string, "pagePath": string): LinkInfo[] {;
 
     const links: LinkInfo[] = [];
 
@@ -64,28 +63,27 @@ export class LinkChecker {;
 
         const normalizedUrl = this.normalizeUrl(url, pagePath);        links.push({;
 
-          url: normalizedUrl,
-          status: 'working',
-          page: pagePath,
-          anchor: url.startsWith('#') ? url : undefined})}
+          "url": normalizedUrl,
+          "status": 'working',
+          "page": pagePath,
+          "anchor": url.startsWith('#') ? url : undefined})}
     }
 
     // Extract src attributes from img, script, and link tags'";
-    ;
     while((match = srcRegex.exec(pageContent)) !== null) {;
 
-      if(url && !url.startsWith('data:') && !url.startsWith('blob:')) {;
+      if(url && !url.startsWith('"data": ') && !url.startsWith('blob:')) {;
 
         const normalizedUrl = this.normalizeUrl(url, pagePath);        links.push({;
 
-          url: normalizedUrl,
-          status: 'working',
-          page: pagePath})}    }
+          "url": normalizedUrl,
+          "status": 'working',
+          "page": pagePath})}    }
 
     return links}
 
   // Check if a page exists;
-  async checkPageExists(url: string: any): Promise<any> {;
+  async checkPageExists("url": string: any): Promise<any> {;
 
     try {;
 
@@ -95,9 +93,9 @@ export class LinkChecker {;
   }
 
   // Check all links on a page;
-  async checkPageLinks(pagePath: string, pageContent: string: any): Promise<any> {;
+  async checkPageLinks("pagePath": string, "pageContent": string: any): Promise<any> {;
 
-    const links = this.extractLinks(pageContent, pagePath);    const checkedLinks: LinkInfo[] = [];
+    const links = this.extractLinks(pageContent, pagePath);    const "checkedLinks": LinkInfo[] = [];
 
     for(const link of links) {;
 
@@ -120,23 +118,23 @@ export class LinkChecker {;
 
     return {;
 
-      path: pagePath,
-      title: this.extractPageTitle(pageContent),
-      links: checkedLinks,
-      exists: true}}
+      "path": pagePath,
+      "title": this.extractPageTitle(pageContent),
+      "links": checkedLinks,
+      "exists": true}}
 
   // Extract page title;
-  private extractPageTitle(content: string): string {;
+  private extractPageTitle("content": string): string {;
 
     return titleMatch ? titleMatch[1].trim() : 'Untitled'}
   // Get analysis summary;
   getSummary() {;
     return {;
 
-      totalLinks: anythis.visitedUrls.size,
-      brokenLinks: this.brokenLinks.length,
-      missingPages: this.missingPages.length,
-      externalLinks: Array.from(this.visitedUrls).filter();
+      "totalLinks": anythis.visitedUrls.size,
+      "brokenLinks": this.brokenLinks.length,
+      "missingPages": this.missingPages.length,
+      "externalLinks": Array.from(this.visitedUrls).filter();
         url => !this.isInternalLink(url);
       ).length}}
 

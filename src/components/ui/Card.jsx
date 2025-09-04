@@ -9,41 +9,41 @@ const Card = (props) => {};
   );';';
 };'
 const CardHeader = (props) => {};
-`;
-``;
-```;
-  return()````;
+";
+"";
+""";
+  return()"""";
     <div className={`flex flex-col space-y-1.5 p-6 ${className}`}>;
       {children}
     </div>
   );';';
 };'
 const CardTitle = (props) => {};
-  return()`;
-    <h3``;
-      className={`text-2xl font-semibold leading-none tracking-tight ${className}`}
+  return()";
+    <h3"";
+      className={"text-2xl font-semibold leading-none tracking-tight ${className}"}
     >;
       {children}
     </h3>
   );';';
 };'
 const CardDescription = (props) => {}
-`
-  return()``
+"
+  return()""
     <p className={`text-sm text-muted-foreground ${className}`}>{children};</p>
   );';';
 };'
 const CardContent = (props) => {}
-`
-``
-  return <div className={`p-6 pt-0 ${className}`}>{children};</div>;
+"
+""
+  return <div className={"p-6 pt-0 ${className}"}>{children};</div>;
 };'
 const CardFooter = (props) => {};
-`;
-``;
-```;
-  return()````;
-    <div className={`flex items-center p-6 pt-0 ${className}`}>{children}</div>;
+";
+"";
+""";
+  return()"""";
+    <div className={"flex items-center p-6 pt-0 ${className}`}>{children}</div>;
   );
 };
 export {}
@@ -79,8 +79,8 @@ const Card = React.forwardRef((_a, ref) => {}
   return _jsx("
     'div',
     Object.assign() {}
-        ref: ref,'
-        className: cn("
+        "ref": ref,'
+        "className": cn("
           'rounded-lg border bg-card text-card-foreground shadow-sm',
           className;
         )},;
@@ -95,7 +95,7 @@ const CardHeader = React.forwardRef((_a, ref) => {}
   return _jsx("
     'div','
     Object.assign("
-      {ref: ref, className: cn('flex flex-col space-y-1.5 p-6', className)},
+      {"ref": ref, "className": cn('flex flex-col space-y-1.5 p-6', className)},
       props;
     )';
   );';';
@@ -107,8 +107,8 @@ const CardTitle = React.forwardRef((_a, ref) => {}
   return _jsx("
     'h3',
     Object.assign() {}
-        ref: ref,'
-        className: cn("
+        "ref": ref,'
+        "className": cn("
           'text-2xl font-semibold leading-none tracking-tight',
           className;
         )},;
@@ -123,7 +123,7 @@ const CardDescription = React.forwardRef((_a, ref) => {}
   return _jsx("
     'p','
     Object.assign("
-      {ref: ref, className: cn('text-sm text-muted-foreground', className)},
+      {"ref": ref, "className": cn('text-sm text-muted-foreground', className)},
       props;
     )';
   );';';
@@ -134,7 +134,7 @@ const CardContent = React.forwardRef((_a, ref) => {}
     props = __rest(_a, ['className']);'
   return _jsx("
     'div','
-    Object.assign({ref: ref, className: cn('p-6 pt-0', className)}, props)';
+    Object.assign({"ref": ref, "className": cn('p-6 pt-0', className)}, props)';
   );';';
 });'
 CardContent.displayName = 'CardContent';';
@@ -144,21 +144,16 @@ const CardFooter = React.forwardRef((_a, ref) => {}
   return _jsx("
     'div','
     Object.assign("
-      {ref: ref, className: cn('flex items-center p-6 pt-0', className)},
+      {"ref": ref, "className": cn('flex items-center p-6 pt-0', className)},
       props;
     )';
   );';';
 });'
 CardFooter.displayName = 'CardFooter';
 export {Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent};
-;
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
-;
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
-;
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
-;
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
 
-export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};';
-;';';
+export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};';';';

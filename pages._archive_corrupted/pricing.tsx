@@ -4,14 +4,13 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { CheckCircle, ArrowRight, Users, Zap, Shield } from 'lucide-react';
 
-const PricingPage: React.FC = () => {
-  const pricingPlans = [
-    {
+const "PricingPage": React.FC = () => {
+  const pricingPlans = [{
       name: 'Starter',
-      description: 'Perfect for small businesses and startups',
-      price: '$2,500',
-      period: 'per month',
-      features: [
+      "description": 'Perfect for small businesses and startups',
+      "price": '$2,500',
+      "period": 'per month',
+      "features": [
         'Basic website development',
         'Up to 5 pages',
         'Mobile responsive design',
@@ -26,13 +25,13 @@ import { Check, Star, Zap, Shield, Users, Clock, ArrowRight } from 'lucide-react
 export default function PricingPage() {
   const plans = [
     {
-      name: "Starter",
-      description: "Perfect for small businesses and startups",
-      price: "$2,999",
-      period: "/month",
-      icon: Zap,
-      color: "from-green-500 to-emerald-500",
-      features: [
+      "name": "Starter",
+      "description": "Perfect for small businesses and startups",
+      "price": "$2,999",
+      "period": "/month",
+      "icon": Zap,
+      "color": "from-green-500 to-emerald-500",
+      "features": [
         "Up to 5 users",
         "Basic AI automation",
         "Standard security features",
@@ -41,24 +40,23 @@ export default function PricingPage() {
         "Monthly reports"
 >>>>>>> origin/merge-pr-11195
       ],
-      popular: false
+      "popular": false
     },
     {
 <<<<<<< HEAD
-      name: 'Professional',
-      description: 'Ideal for growing businesses',
-      price: '$5,000',
-      period: 'per month',
+      "name": 'Professional',
+      "description": 'Ideal for growing businesses',
+      "price": '$5,000',
+      "period": 'per month',
 =======
-      name: "Professional",
-      description: "Ideal for growing businesses",
-      price: "$7,999",
-      period: "/month",
-      icon: Shield,
-      color: "from-cyan-500 to-blue-500",
+      "name": "Professional",
+      "description": "Ideal for growing businesses",
+      "price": "$7,999",
+      "period": "/month",
+      "icon": Shield,
+      "color": "from-cyan-500 to-blue-500",
 >>>>>>> origin/merge-pr-11195
-      features: [
-        'Advanced website development',
+      "features": ['Advanced website development',
         'Up to 15 pages',
         'Custom functionality',
         'Advanced SEO optimization',
@@ -67,15 +65,14 @@ export default function PricingPage() {
         'Analytics integration',
         'Content management system'
       ],
-      popular: true
+      "popular": true
     },
     {
-      name: 'Enterprise',
-      description: 'For large organizations and enterprises',
-      price: '$10,000',
-      period: 'per month',
-      features: [
-        'Full-stack development',
+      "name": 'Enterprise',
+      "description": 'For large organizations and enterprises',
+      "price": '$10,000',
+      "period": 'per month',
+      "features": ['Full-stack development',
         'Unlimited pages',
         'Custom integrations',
         'Advanced security features',
@@ -86,7 +83,7 @@ export default function PricingPage() {
         'API development',
         'Third-party integrations'
       ],
-      popular: false
+      "popular": false
     }
   ];
 
@@ -98,7 +95,7 @@ export default function PricingPage() {
       </Head>
 
       <div className="min-h-screen bg-gray-50 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
               Simple, Transparent Pricing
@@ -108,7 +105,7 @@ export default function PricingPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">
             {pricingPlans.map((plan, index) => (
               <div
                 key={plan.name}
@@ -146,7 +143,7 @@ export default function PricingPage() {
                   href="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular
-                      ? 'bg-blue-600 text-white hover:bg-blue-700'
+                      ? 'bg-blue-600 text-white "hover": bg-blue-700'
                       : 'bg-gray-900 text-white hover:bg-gray-800'
                   }`}
                 >
@@ -164,7 +161,7 @@ export default function PricingPage() {
             <p className="text-xl text-gray-600 mb-8">
               Contact us today for a free consultation and custom quote.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"

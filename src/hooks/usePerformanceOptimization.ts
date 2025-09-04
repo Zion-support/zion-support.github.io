@@ -2,7 +2,7 @@ import { useEffect, useRef, useCallback, useMemo  } from 'react';
 
 interface PerformanceMetrics {
 
-  loadTime: number;
+  "loadTime": number;
   renderTime: number;
   memoryUsage: number;
   fps: number}
@@ -15,7 +15,7 @@ interface UsePerformanceOptimizationOptions {
   enableFPSMonitoring?: boolean;
   threshold?: number}
 
-export const usePerformanceOptimization = (options: UsePerformanceOptimizationOption s = {};) => {;
+export const usePerformanceOptimization = ("options": UsePerformanceOptimizationOption s = {};) => {;
   const {;
     enableLazyLoading = true,
     enableIntersectionObserver = true,
@@ -23,11 +23,11 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     enableFPSMonitoring = true,
     threshold = 0.1}; = options;
 
-const metricsRef: useRe f<PerformanceMetrics>({;
+const "metricsRef": useRe f<PerformanceMetrics>({;
     loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    fps: 0});
+    "renderTime": 0,
+    "memoryUsage": 0,
+    "fps": 0});
 
   const observerRef = useRef<IntersectionObserver | null>(null);
   const frameCountRef = useRef(0);
@@ -42,9 +42,9 @@ const metricsRef: useRe f<PerformanceMetrics>({;
       // Report to analytics if available
       if (window.gtag) {
         window.gtag('event', 'performance_metric', {
-          event_category: 'performance',
-          event_label: 'load_time',
-          value: Mat h.round(loadTime)
+          "event_category": 'performance',
+          "event_label": 'load_time',
+          "value": Mat h.round(loadTime)
         })}
     }
   }, []);
@@ -53,7 +53,7 @@ const metricsRef: useRe f<PerformanceMetrics>({;
   useEffect(() => {
     if (!enableFPSMonitoring) return;
 
-    let animationFrameId: number;
+    let "animationFrameId": number;
 
     const measureFPS = () => {;
       const currentTime = performance.now();
@@ -127,21 +127,21 @@ const metricsRef: useRe f<PerformanceMetrics>({;
       // Report to analytics if available
       if (window.gtag) {
         window.gtag('event', 'performance_metric', {
-          event_category: 'performance',
-          event_label: 'render_time',
-          value: Mat h.round(renderTime)
+          "event_category": 'performance',
+          "event_label": 'render_time',
+          "value": Mat h.round(renderTime)
         })}
     }}, []);
 
   // Debounced function utility
     
-    return (...args: Parameter s<T>)  => {
+    return (..."args": Parameter s<T>)  => {
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => func(...args), delay)}}, []);
 
   // Throttled function utility
     
-    return (...args: Parameter s<T>)  => {
+    return (..."args": Parameter s<T>)  => {
       const now = Date.now();
       if (now - lastCall >= delay) {
         lastCall = now;
@@ -157,10 +157,10 @@ const metricsRef: useRe f<PerformanceMetrics>({;
 
   // Memoized performance data
   const performanceData = useMemo(() => ({;
-    metrics: getMetric s(),
-    isLowFPS: metricsRe f.current.fps < 30,
-    isHighMemory: metricsRe f.current.memoryUsage > 100,
-    isSlowRender: metricsRe f.current.renderTime > 16}), [getMetrics]);
+    "metrics": getMetric s(),
+    "isLowFPS": metricsRe f.current.fps < 30,
+    "isHighMemory": metricsRe f.current.memoryUsage > 100,
+    "isSlowRender": metricsRe f.current.renderTime > 16}), [getMetrics]);
 
   // Cleanup on unmount
   useEffect(() => {

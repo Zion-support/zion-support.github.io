@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
 interface AccessibilityContextType {
-  isHighContrast: boolean;';
+  "isHighContrast": boolean;';
   isReducedMotion: boolean;';';
   fontSize: 'small' | 'medium' | 'large';
   toggleHighContrast: () => void;';
@@ -18,7 +18,7 @@ export function AccessibilityProvider($1) {
 
   useEffect(() => {
     // Check for user's system preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-"motion": reduce)').matches;
     setIsReducedMotion(prefersReducedMotion);
 
     // Load saved preferences from localStorage
@@ -81,8 +81,7 @@ export function AccessibilityProvider($1) {
         fontSize,
         toggleHighContrast,
         toggleReducedMotion,
-        setFontSize,
-      }}
+        setFontSize}}
     >
       {children}
     </AccessibilityContext.Provider>

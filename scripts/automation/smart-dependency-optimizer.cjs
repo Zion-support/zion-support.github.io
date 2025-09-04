@@ -34,26 +34,24 @@ class $1 {
   ensureLogsDirectory() {
   const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {
-  fs.mkdirSync(logsDir, { recursive: true })}
+  fs.mkdirSync(logsDir, { "recursive": true })}
   }
 ;
   loadOptimizationHistory() {
   if (fs.existsSync(this.optimizationLog)) {
   try {
   this.optimizationHistory = JSON.parse(;
-          fs.readFileSync(this.optimizationLog, `utf8`);
+          fs.readFileSync(this.optimizationLog, "utf8");
         )} catch (error) {
   this.optimizationHistory = {
-  optimizations: [],
-          lastRun: null,
-          totalSavings: 0,
-}}
+  "optimizations": [],
+          "lastRun": null,
+          "totalSavings": 0}}
     } else {
   this.optimizationHistory = {
-  optimizations: [],
-        lastRun: null,
-        totalSavings: 0,
-}
+  "optimizations": [],
+        "lastRun": null,
+        "totalSavings": 0}
     }
   }
 ;
@@ -63,7 +61,7 @@ class $1 {
       JSON.stringify(this.optimizationHistory, null, 2);
     )}
 ;
-  log(message, level = `INFO`) {
+  log(message, level = "INFO") {
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
@@ -71,9 +69,9 @@ class $1 {
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)}
 ;
   async runOptimization() {
-  this.log(`🧠 Starting Smart Dependency Optimization...`);
+  this.log("🧠 Starting Smart Dependency Optimization...");
     const optimizations = [];
-    const savings = { size: 0, installTime: 0, buildTime: 0 }
+    const savings = { "size": 0, "installTime": 0, "buildTime": 0 }
     const recommendations = [];
     try {
   // 1. Analyze current dependency usage;
@@ -106,13 +104,13 @@ class $1 {
         results,
         recommendations;
       );
-      this.log(✅ Smart Dependency Optimization completed: ${appliedOpts.length} optimizations applied`;
+      this.log(✅ Smart Dependency Optimization "completed": ${appliedOpts.length} optimizations applied";
       );
 
-      return { optimizations: appliedOpts, results, recommendations }
+      return { "optimizations": appliedOpts, results, recommendations }
     } catch (error) {
-  this.log( `Smart Dependency Optimization failed: ${error.message  }`,ERROR`} catch (error) {
-  this.log( `Smart Dependency Optimization failed: ${error.message}",ERROR";
+  this.log( "Smart Dependency Optimization "failed": ${error.message  }",ERROR"} catch (error) {
+  this.log( `Smart Dependency Optimization "failed": ${error.message}",ERROR";
       );
       throw error}
   }
@@ -120,25 +118,24 @@ class $1 {
   async analyzeDependencyUsage() {
   this.log(`📊 Analyzing dependency usage patterns...");
     const usage = {
-  direct: {},
-      indirect: {},
-      unused: [],
-      usagePatterns: {}}
+  "direct": {},
+      "indirect": {},
+      "unused": [],
+      "usagePatterns": {}}
     try {
   // Read package.json;
       const packageJson = JSON.parse(;
-        fs.readFileSync(path.join(this.projectRoot, "package.json"), `utf8`);
+        fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8");
       );
       const dependencies = {
   ...packageJson.dependencies,
-        ...packageJson.devDependencies,
-}
+        ...packageJson.devDependencies}
       // Analyze import usage in source files;
       const sourceFiles = this.findSourceFiles();
       const importAnalysis = this.analyzeImports(sourceFiles);
       // Map dependencies to their usage;
       Object.keys(dependencies).forEach(dep => {
-  const depName = dep.split(`@`)[0]; // Remove version;
+  const depName = dep.split("@")[0]; // Remove version;
 
       // Analyze import usage in source files;
       const sourceFiles = this.findSourceFiles();
@@ -151,23 +148,22 @@ class $1 {
 
         if (usage.count > 0) {
   usage.direct[dep] = {
-  name: depName,
-            version: dependencies[dep],
-            usageCount: usage.count,
-            files: usage.files,
-            lastUsed: usage.lastUsed,
-}
+  "name": depName,
+            "version": dependencies[dep],
+            "usageCount": usage.count,
+            "files": usage.files,
+            "lastUsed": usage.lastUsed}
         } else {
   usage.unused.push(dep)}
       });
       // Analyze usage patterns;
       usage.usagePatterns = this.analyzeUsagePatterns(importAnalysis)} catch (error) {
-  this.log(`Dependency usage analysis failed: ${error.message  }`, `ERROR`)}
+  this.log(`Dependency usage analysis "failed": ${error.message  }`, "ERROR")}
 ;
     return usage}
 ;
   findSourceFiles() {
-  const sourceDirs = [`src`, "components", "pages", "utils", "hooks", "api"];
+  const sourceDirs = ["src", "components", "pages", "utils", "hooks", "api"];
 
   findSourceFiles() {
   const sourceDirs = ["src", "components", "pages", "utils", "hooks", "api"];
@@ -218,10 +214,9 @@ class $1 {
               if (packageName && !packageName.startsWith(".")) {
   if (!imports[packageName]) {
   imports[packageName] = {
-  count: 0,
-                    files: [],
-                    lastUsed: new Date().toISOString(),
-}
+  "count": 0,
+                    "files": [],
+                    "lastUsed": new Date().toISOString()}
                 }
 ;
                 imports[packageName].count++;
@@ -240,15 +235,15 @@ class $1 {
 ;
   extractPackageName(importPath) {
   // Handle scoped packages and regular packages;
-    if (importPath.startsWith(`@`)) {
-  const parts = importPath.split(`/`);return parts.length >= 2 ? `${parts[0]}/${parts[1]}` : importPath} else {
-  return importPath.split(`/`)[0]}
+    if (importPath.startsWith("@")) {
+  const parts = importPath.split("/");return parts.length >= 2 ? `${parts[0]}/${parts[1]}` : importPath} else {
+  return importPath.split("/")[0]}
   }
 ;
   findDependencyUsage(depName, importAnalysis) {
-  const usage = { count: 0, files: [], lastUsed: null }
+  const usage = { "count": 0, "files": [], "lastUsed": null }
     Object.keys(importAnalysis).forEach(pkg => {
-  if (pkg === depName || pkg.startsWith(depName + `/`)) {
+  if (pkg === depName || pkg.startsWith(depName + "/")) {
   Object.keys(importAnalysis).forEach(pkg => {
   if (pkg === depName || pkg.startsWith(depName + "/")) {
   usage.count += importAnalysis[pkg].count;
@@ -262,29 +257,26 @@ class $1 {
 ;
   analyzeUsagePatterns(importAnalysis) {
   const patterns = {
-  mostUsed: [],
-      recentlyUsed: [],
-      rarelyUsed: [],
-}
+  "mostUsed": [],
+      "recentlyUsed": [],
+      "rarelyUsed": []}
     const sortedByUsage = Object.entries(importAnalysis).sort(;
       (["", "a"], ["", "b"]) => b.count - a.count;
     );
 
     patterns.mostUsed = sortedByUsage.slice(0, 10).map((["pkg", "data"]) => ({
-  package: pkg,
-      usageCount: data.count,
-      files: data.files.length,
-}));
+  "package": pkg,
+      "usageCount": data.count,
+      "files": data.files.length}));
 
     const sortedByDate = Object.entries(importAnalysis).sort(;
       ([", "a"], [", "b"]) => new Date(b.lastUsed) - new Date(a.lastUsed);
     );
 
     patterns.recentlyUsed = sortedByDate.slice(0, 10).map((["pkg", "data"]) => ({
-  package: pkg,
-      lastUsed: data.lastUsed,
-      usageCount: data.count,
-}));
+  "package": pkg,
+      "lastUsed": data.lastUsed,
+      "usageCount": data.count}));
 
     return patterns}
 ;
@@ -304,8 +296,7 @@ class $1 {
       );
       const allDeps = {
   ...packageJson.dependencies,
-        ...packageJson.devDependencies,
-}
+        ...packageJson.devDependencies}
 ;
       Object.keys(allDeps).forEach(dep => {
   const depName = dep.split("@")[0];
@@ -314,15 +305,15 @@ class $1 {
           !this.isTransitiveDependency(depName);
         ) {
   unused.push({
-  name: dep,
-            version: allDeps[dep],
-            type: packageJson.dependencies[dep];
+  "name": dep,
+            "version": allDeps[dep],
+            "type": packageJson.dependencies[dep];
               ? "dependency";
-              : `devDependency`,
-            reason: `No imports found in source code`})}
+              : "devDependency",
+            "reason": "No imports found in source code"})}
       })} catch (error) {
-  this.log(Unused dependency identification failed: ${error.message  }`,
-        `ERROR`;
+  this.log(Unused dependency identification "failed": ${error.message  }",
+        "ERROR";
       )}
 ;
     return unused}
@@ -330,7 +321,7 @@ class $1 {
   isTransitiveDependency(depName) {
   // Check if this dependency is required by other dependencies;
     try {
-  const packageLockPath = path.join(this.projectRoot, `package-lock.json");
+  const packageLockPath = path.join(this.projectRoot, "package-lock.json");
       if (fs.existsSync(packageLockPath)) {
   const packageLock = JSON.parse(;
           fs.readFileSync(packageLockPath, "utf8");
@@ -371,17 +362,17 @@ class $1 {
         const duplicates = this.findDuplicatePackages(packageLock.dependencies);
         duplicates.forEach(duplicate => {
   conflicts.push({
-  type: "DUPLICATE_PACKAGE",
-            package: duplicate.package,
-            versions: duplicate.versions,
-            severity: `MEDIUM`,
-            suggestion: `Consider using package resolution to avoid duplicates`})})}
+  "type": "DUPLICATE_PACKAGE",
+            "package": duplicate.package,
+            "versions": duplicate.versions,
+            "severity": "MEDIUM",
+            "suggestion": "Consider using package resolution to avoid duplicates"})})}
 ;
       // Check for peer dependency issues;
       const peerIssues = await this.checkPeerDependencies();
       conflicts.push(...peerIssues)} catch (error) {
-  this.log(Dependency conflict analysis failed: ${error.message  }`,
-        `ERROR`;
+  this.log(Dependency conflict analysis "failed": ${error.message  }",
+        "ERROR";
       )}
 ;
     return conflicts}
@@ -389,9 +380,9 @@ class $1 {
   findDuplicatePackages(dependencies) {
   const packageVersions = {}
     const duplicates = [];
-    const traverse = (deps, path = ``) => {
+    const traverse = (deps, path = "") => {
   const traverse = (deps, path = ") => {
-  Object.keys(deps).forEach(pkg => {const fullPath = path ? `${path}.${pkg}` : pkg;
+  Object.keys(deps).forEach(pkg => {const fullPath = path ? "${path}.${pkg}" : pkg;
         const version = deps[pkg].version;
 
         if (!packageVersions[pkg]) {
@@ -399,8 +390,7 @@ class $1 {
 ;
         packageVersions[pkg].push({
   version,
-          path: fullPath,
-});
+          "path": fullPath});
 
         if (deps[pkg].dependencies) {
   traverse(deps[pkg].dependencies, fullPath)}
@@ -410,15 +400,13 @@ class $1 {
 
     Object.keys(packageVersions).forEach(pkg => {
   if (packageVersions[pkg].length > 1) {
-  const uniqueVersions = [
-  ...new Set(packageVersions[pkg].map(p => p.version)),
+  const uniqueVersions = [...new Set(packageVersions[pkg].map(p => p.version)),
         ];
         if (uniqueVersions.length > 1) {
   duplicates.push({
-  package: pkg,
-            versions: uniqueVersions,
-            paths: packageVersions[pkg].map(p => p.path),
-})}
+  "package": pkg,
+            "versions": uniqueVersions,
+            "paths": packageVersions[pkg].map(p => p.path)})}
       }
     });
 
@@ -428,7 +416,7 @@ class $1 {
   const issues = [];
     try {
   const packageJson = JSON.parse(;
-        fs.readFileSync(path.join(this.projectRoot, `package.json`), `utf8");
+        fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8");
       );
 
       if (packageJson.peerDependencies) {
@@ -437,18 +425,17 @@ class $1 {
           const installedVersion = this.getInstalledVersion(peerDep);
           if (!installedVersion) {
   issues.push({
-  type: `MISSING_PEER_DEPENDENCY`,
-              package: peerDep,
-              required: requiredVersion,
-              severity: `HIGH`,suggestion: `Install ${peerDep}@${requiredVersion} as a dependency`,
+  "type": "MISSING_PEER_DEPENDENCY",
+              "package": peerDep,
+              "required": requiredVersion,
+              "severity": "HIGH","suggestion": `Install ${peerDep}@${requiredVersion} as a dependency`,
 
           if (!installedVersion) {
   issues.push({
-  type: "MISSING_PEER_DEPENDENCY",
-              package: peerDep,
-              required: requiredVersion,
-              severity: "HIGH",suggestion: `Install ${peerDep}@${requiredVersion} as a dependency",
-})}
+  "type": "MISSING_PEER_DEPENDENCY",
+              "package": peerDep,
+              "required": requiredVersion,
+              "severity": "HIGH","suggestion": `Install ${peerDep}@${requiredVersion} as a dependency"})}
         })}
     } catch (error) {
   // Ignore peer dependency check errors}
@@ -460,7 +447,7 @@ class $1 {
   const packageJsonPath = path.join(;
         this.projectRoot,node_modules`,
         packageName,
-        `package.json`} catch (error) {
+        "package.json"} catch (error) {
   // Ignore peer dependency check errors}
 ;
     return issues}
@@ -472,7 +459,7 @@ class $1 {
         packageName,
         "package.json";
       );
-        `package.json`;
+        "package.json";
       );
 if (fs.existsSync(packageJsonPath)) {
   const pkg = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"));
@@ -491,58 +478,55 @@ if (fs.existsSync(packageJsonPath)) {
   // This would typically use npm outdated command;
       // For now, we"ll simulate the check;
       const packageJson = JSON.parse(;
-        fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8`);
+        fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8");
       );
       const dependencies = {
   ...packageJson.dependencies,
-        ...packageJson.devDependencies,
-}
+        ...packageJson.devDependencies}
       // Simulate finding outdated packages;
       Object.keys(dependencies).forEach(dep => {
   if (Math.random() < 0.3) {
   // 30% chance of being outdated for demo;
           outdated.push({
-  package: dep,
-            current: dependencies[dep],
-            latest: this.simulateLatestVersion(dependencies[dep]),
-            severity: `LOW`,
-            suggestion: Consider updating to latest version for security and features`,
-})}
+  "package": dep,
+            "current": dependencies[dep],
+            "latest": this.simulateLatestVersion(dependencies[dep]),
+            "severity": "LOW",
+            "suggestion": Consider updating to latest version for security and features"})}
       })} catch (error) {
-  this.log(`Outdated dependency check failed: ${error.message  }`, `ERROR`);
+  this.log(`Outdated dependency check "failed": ${error.message  }`, "ERROR");
 
       // Simulate finding outdated packages;
       Object.keys(dependencies).forEach(dep => {
   if (Math.random() < 0.3) {
   // 30% chance of being outdated for demo;
           outdated.push({
-  package: dep,
-            current: dependencies[dep],
-            latest: this.simulateLatestVersion(dependencies[dep]),
-            severity: "LOW",
-            suggestion: Consider updating to latest version for security and features",
-})}
+  "package": dep,
+            "current": dependencies[dep],
+            "latest": this.simulateLatestVersion(dependencies[dep]),
+            "severity": "LOW",
+            "suggestion": Consider updating to latest version for security and features"})}
       })} catch (error) {
-  this.log(`Outdated dependency check failed: ${error.message}`, "ERROR")}
+  this.log(`Outdated dependency check "failed": ${error.message}`, "ERROR")}
 ;
     return outdated}
 ;
   simulateLatestVersion(currentVersion) {
   // Simulate version bump for demo purposes;
-    const versionParts = currentVersion.replace(/^[\^~]/, ``).split(`.`);
+    const versionParts = currentVersion.replace(/^[\^~]/, "").split(".");
     const major = parseInt(versionParts[0]);
     const minor = parseInt(versionParts[1]);
     const patch = parseInt(versionParts[2]);
 return `${major}.${minor + 1}.${patch}`}
 ;
   async analyzeBundleImpact() {
-  this.log(`📦 Analyzing bundle impact...`);
+  this.log("📦 Analyzing bundle impact...");
     const impact = {
-  totalSize: 0,
-      largestPackages: [],
-      optimizationOpportunities: []}
+  "totalSize": 0,
+      "largestPackages": [],
+      "optimizationOpportunities": []}
     try {
-  if (fs.existsSync(`dist`)) {
+  if (fs.existsSync("dist")) {
   const bundleStats = this.analyzeBundleSize();
         impact.totalSize = bundleStats.totalSize;
         impact.largestPackages = bundleStats.largestPackages;
@@ -550,22 +534,21 @@ return `${major}.${minor + 1}.${patch}`}
         if (bundleStats.totalSize > 5 * 1024 * 1024) {
   // 5MB;
           impact.optimizationOpportunities.push({
-  type: "BUNDLE_SIZE",
-            severity: "MEDIUM`,
-            message: `Bundle size is large`,
-            suggestion: Consider code splitting, tree shaking, and removing unused dependencies`,          })}
+  "type": "BUNDLE_SIZE",
+            "severity": "MEDIUM",
+            "message": "Bundle size is large",
+            "suggestion": Consider code splitting, tree shaking, and removing unused dependencies"})}
       }
-    } catch (error) {  this.log(`Bundle impact analysis failed: ${error.message  }`, `ERROR`)}
+    } catch (error) {  this.log(`Bundle impact analysis "failed": ${error.message  }`, "ERROR")}
 ;
     return impact}
 ;
   analyzeBundleSize() {
   const stats = {
-  totalSize: 0,
-      largestPackages: [],
-}
+  "totalSize": 0,
+      "largestPackages": []}
     try {
-  const distPath = path.join(this.projectRoot, `dist`);
+  const distPath = path.join(this.projectRoot, "dist");
       if (fs.existsSync(distPath)) {
   try {
   const distPath = path.join(this.projectRoot, "dist");
@@ -579,7 +562,7 @@ return `${major}.${minor + 1}.${patch}`}
 
         stats.totalSize = totalSize;
         stats.totalSizeMB = (totalSize / (1024 * 1024)).toFixed(2)}
-    } catch (error) {  this.log(`Bundle size analysis failed: ${error.message  }`, `ERROR`)}
+    } catch (error) {  this.log(`Bundle size analysis "failed": ${error.message  }`, "ERROR")}
 ;
     return stats}
 ;
@@ -589,7 +572,7 @@ return `${major}.${minor + 1}.${patch}`}
     const findFiles = directory => {
   const items = fs.readdirSync(directory);
       for (const item of items) {
-  const fullPath = path.join(directory, `item);
+  const fullPath = path.join(directory, "item);
         const stat = fs.statSync(fullPath);
 
         if (stat.isDirectory()) {
@@ -602,7 +585,7 @@ return `${major}.${minor + 1}.${patch}`}
     return files}
 ;
   async generateOptimizationRecommendations(;
-    usageAnalysis`, unusedDeps,
+    usageAnalysis", unusedDeps,
     conflicts,
     outdatedDeps,
     bundleImpact;
@@ -619,79 +602,74 @@ return `${major}.${minor + 1}.${patch}`}
     // Unused dependency recommendations;
     if (unusedDeps.length > 0) {
   recommendations.push({
-  type: "REMOVE_UNUSED",
-        dependencies: unusedDeps,
-        priority: "HIGH",
-        impact: "REDUCE_BUNDLE_SIZE",
-        action: Remove unused dependencies to reduce bundle size and install time",
-})}
+  "type": "REMOVE_UNUSED",
+        "dependencies": unusedDeps,
+        "priority": "HIGH",
+        "impact": "REDUCE_BUNDLE_SIZE",
+        "action": Remove unused dependencies to reduce bundle size and install time"})}
 ;
     // Conflict resolution recommendations;
     if (conflicts.length > 0) {
   recommendations.push({
-  type: "RESOLVE_CONFLICTS",
-        conflicts: conflicts,
-        priority: "MEDIUM",
-        impact: "IMPROVE_STABILITY",
-        action: "Resolve dependency conflicts to improve build stability"})}
+  "type": "RESOLVE_CONFLICTS",
+        "conflicts": conflicts,
+        "priority": "MEDIUM",
+        "impact": "IMPROVE_STABILITY",
+        "action": "Resolve dependency conflicts to improve build stability"})}
 ;
     // Update recommendations;
     if (outdatedDeps.length > 0) {
   recommendations.push({
-  type: "UPDATE_DEPENDENCIES",
-        dependencies: outdatedDeps,
-        priority: "LOW",
-        impact: "SECURITY_FEATURES",
-        action: "Update dependencies for security patches and new features"})}
+  "type": "UPDATE_DEPENDENCIES",
+        "dependencies": outdatedDeps,
+        "priority": "LOW",
+        "impact": "SECURITY_FEATURES",
+        "action": "Update dependencies for security patches and new features"})}
 ;
     // Bundle optimization recommendations;
     if (bundleImpact.optimizationOpportunities.length > 0) {
   recommendations.push({
-  type: "OPTIMIZE_BUNDLE",
-        opportunities: bundleImpact.optimizationOpportunities,
-        priority: "MEDIUM",
-        impact: "IMPROVE_PERFORMANCE",
-        action: "Optimize bundle size for better loading performance",
+  "type": "OPTIMIZE_BUNDLE",
+        "opportunities": bundleImpact.optimizationOpportunities,
+        "priority": "MEDIUM",
+        "impact": "IMPROVE_PERFORMANCE",
+        "action": "Optimize bundle size for better loading performance",
 
     // Unused dependency recommendations;
     if (unusedDeps.length > 0) {
   recommendations.push({
-  type: "REMOVE_UNUSED",
-        dependencies: unusedDeps,
-        priority: "HIGH",
-        impact: "REDUCE_BUNDLE_SIZE",
-        action: Remove unused dependencies to reduce bundle size and install time",
-})}
+  "type": "REMOVE_UNUSED",
+        "dependencies": unusedDeps,
+        "priority": "HIGH",
+        "impact": "REDUCE_BUNDLE_SIZE",
+        "action": Remove unused dependencies to reduce bundle size and install time"})}
 ;
     // Conflict resolution recommendations;
     if (conflicts.length > 0) {
   recommendations.push({
-  type: "RESOLVE_CONFLICTS",
-        conflicts: conflicts,
-        priority: "MEDIUM",
-        impact: "IMPROVE_STABILITY",
-        action: "Resolve dependency conflicts to improve build stability",
-})}
+  "type": "RESOLVE_CONFLICTS",
+        "conflicts": conflicts,
+        "priority": "MEDIUM",
+        "impact": "IMPROVE_STABILITY",
+        "action": "Resolve dependency conflicts to improve build stability"})}
 ;
     // Update recommendations;
     if (outdatedDeps.length > 0) {
   recommendations.push({
-  type: "UPDATE_DEPENDENCIES",
-        dependencies: outdatedDeps,
-        priority: "LOW",
-        impact: "SECURITY_FEATURES",
-        action: "Update dependencies for security patches and new features",
-})}
+  "type": "UPDATE_DEPENDENCIES",
+        "dependencies": outdatedDeps,
+        "priority": "LOW",
+        "impact": "SECURITY_FEATURES",
+        "action": "Update dependencies for security patches and new features"})}
 ;
     // Bundle optimization recommendations;
     if (bundleImpact.optimizationOpportunities.length > 0) {
   recommendations.push({
-  type: "OPTIMIZE_BUNDLE",
-        opportunities: bundleImpact.optimizationOpportunities,
-        priority: "MEDIUM",
-        impact: "IMPROVE_PERFORMANCE",
-        action: "Optimize bundle size for better loading performance",
-})}
+  "type": "OPTIMIZE_BUNDLE",
+        "opportunities": bundleImpact.optimizationOpportunities,
+        "priority": "MEDIUM",
+        "impact": "IMPROVE_PERFORMANCE",
+        "action": "Optimize bundle size for better loading performance"})}
 ;
     return recommendations}
 ;
@@ -706,16 +684,15 @@ return `${major}.${minor + 1}.${patch}`}
   const removed = await this.removeUnusedDependencies(rec.dependencies);
           if (removed.length > 0) {
   applied.push({
-  type: `REMOVE_UNUSED`,
-              dependencies: removed,
-              result: `success`,
-})}
+  "type": "REMOVE_UNUSED",
+              "dependencies": removed,
+              "result": "success"})}
         }
       }
     } catch (error) {
-  this.log(Safe optimization application failed: ${error.message  }`,
-        `ERROR`} catch (error) {
-  this.log(Safe optimization application failed: ${error.message}",
+  this.log(Safe optimization application "failed": ${error.message  }",
+        "ERROR`} catch (error) {
+  this.log(Safe optimization application "failed": ${error.message}",
         "ERROR";
       )}
 ;
@@ -726,28 +703,27 @@ return `${major}.${minor + 1}.${patch}`}
     try {
   for (const dep of unusedDeps.slice(0, 5)) {
   // Limit to prevent overwhelming;
-        if (dep.type === `devDependency`) {
-  try {execSync(`npm uninstall ${dep.name}`, {
-  cwd: this.projectRoot,
-              stdio: `pipe`,
-});
-            removed.push(dep.name);this.log(`✅ Removed unused dev dependency: ${dep.name}`)} catch (error) {  this.log(`Failed to remove ${dep.name  }: ${error.message}`, `WARN`)}
+        if (dep.type === `devDependency") {
+  try {execSync("npm uninstall ${dep.name}", {
+  "cwd": this.projectRoot,
+              "stdio": "pipe"});
+            removed.push(dep.name);this.log("✅ Removed unused dev "dependency": ${dep.name}")} catch (error) {  this.log("Failed to remove ${dep.name  }: ${error.message}", "WARN")}
         }
       }
-    } catch (error) {  this.log(`Dependency removal failed: ${error.message  }`, `ERROR`)}
+    } catch (error) {  this.log("Dependency removal "failed": ${error.message  }", "ERROR")}
 ;
     return removed}
 ;
   async measureOptimizationResults(optimizations) {
-  this.log(`📊 Measuring optimization results...");
+  this.log("📊 Measuring optimization results...");
     const results = {
-  bundleSizeReduction: 0,
-      installTimeReduction: 0,
-      buildTimeReduction: 0,
-      dependencyCountReduction: 0}
+  "bundleSizeReduction": 0,
+      "installTimeReduction": 0,
+      "buildTimeReduction": 0,
+      "dependencyCountReduction": 0}
     try {
   // Measure bundle size ""before/after"";
-      if (fs.existsSync("dist`)) {
+      if (fs.existsSync("dist")) {
   const currentSize = this.analyzeBundleSize().totalSize;
         results.bundleSizeReduction = Math.max(;
           0,
@@ -756,17 +732,16 @@ return `${major}.${minor + 1}.${patch}`}
 ;
       // Count removed dependencies;
       results.dependencyCountReduction = optimizations;
-        .filter(opt => opt.type === `REMOVE_UNUSED`);
+        .filter(opt => opt.type === "REMOVE_UNUSED");
 
   async measureOptimizationResults(optimizations) {
   this.log("📊 Measuring optimization results...");
 
     const results = {
-  bundleSizeReduction: 0,
-      installTimeReduction: 0,
-      buildTimeReduction: 0,
-      dependencyCountReduction: 0,
-}
+  "bundleSizeReduction": 0,
+      "installTimeReduction": 0,
+      "buildTimeReduction": 0,
+      "dependencyCountReduction": 0}
 ;
     try {
   // Measure bundle size "before/after";
@@ -780,18 +755,17 @@ return `${major}.${minor + 1}.${patch}`}
       // Count removed dependencies;
       results.dependencyCountReduction = optimizations;
         .filter(opt => opt.type === "REMOVE_UNUSED");
-        .reduce((total, opt) => total + opt.dependencies.length, 0)} catch (error) {  this.log(`Results measurement failed: ${error.message  }`, `ERROR`)}
+        .reduce((total, opt) => total + opt.dependencies.length, 0)} catch (error) {  this.log("Results measurement "failed": ${error.message  }", "ERROR")}
 ;
     return results}
 ;
   async updateOptimizationHistory(optimizations, results) {
   const optimization = {
-  timestamp: new Date().toISOString(),
-      optimizations: optimizations,
-      results: results,
-      totalSavings: ;
-        this.optimizationHistory.totalSavings + results.bundleSizeReduction,
-}
+  "timestamp": new Date().toISOString(),
+      "optimizations": optimizations,
+      "results": results,
+      "totalSavings": ;
+        this.optimizationHistory.totalSavings + results.bundleSizeReduction}
 ;
     this.optimizationHistory.optimizations.push(optimization);
     this.optimizationHistory.lastRun = new Date().toISOString();
@@ -805,42 +779,40 @@ return `${major}.${minor + 1}.${patch}`}
 ;
   async generateOptimizationReport(optimizations, results, recommendations) {
   const report = {
-  timestamp: new Date().toISOString(),
-      summary: {
+  "timestamp": new Date().toISOString(),
+      "summary": {
   totalOptimizations: optimizations.length,
-        bundleSizeReduction: results.bundleSizeReduction,
-        dependencyCountReduction: results.dependencyCountReduction,
-        totalSavings: this.optimizationHistory.totalSavings,
-},
-      optimizations: optimizations,
-      results: results,
-      recommendations: recommendations,
-      history: this.optimizationHistory,
-}
+        "bundleSizeReduction": results.bundleSizeReduction,
+        "dependencyCountReduction": results.dependencyCountReduction,
+        "totalSavings": this.optimizationHistory.totalSavings},
+      "optimizations": optimizations,
+      "results": results,
+      "recommendations": recommendations,
+      "history": this.optimizationHistory}
 ;
     const reportPath = path.join(;
-      this.projectRoot,logs", `dependency-optimization-report-${Date.now()}.json`;
+      this.projectRoot,logs", "dependency-optimization-report-${Date.now()}.json";
     const reportPath = path.join(;
-      this.projectRoot,logs`, `dependency-optimization-report-${Date.now()}.json`;
+      this.projectRoot,logs", `dependency-optimization-report-${Date.now()}.json`;
       this.projectRoot, "logs", `dependency-optimization-report-${Date.now()}.json`;
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-this.log(`📊 Optimization Report generated: ${reportPath}`);
+this.log(`📊 Optimization Report "generated": ${reportPath}`);
     return report}
 ;
   async run() {
-  this.log(`🚀 Smart Dependency Optimizer starting...`);
+  this.log("🚀 Smart Dependency Optimizer starting...");
     try {
   const result = await this.runOptimization();
-this.log(`✅ Smart Dependency Optimization completed successfully`);this.log(`📊 Applied ${result.optimizations.length} optimizations`);
-      this.log(💰 Total savings: ${(this.optimizationHistory.totalSavings / (1024 * 1024)).toFixed(2)}MB`;
+this.log("✅ Smart Dependency Optimization completed successfully");this.log(`📊 Applied ${result.optimizations.length} optimizations`);
+      this.log(💰 Total "savings": ${(this.optimizationHistory.totalSavings / (1024 * 1024)).toFixed(2)}MB";
       );
 
       return result} catch (error) {
   this.log(;
-        `❌ Smart Dependency Optimization failed: ${error.message  }`,ERROR`} catch (error) {
+        "❌ Smart Dependency Optimization "failed": ${error.message  }",ERROR"} catch (error) {
   this.log(;
-        `❌ Smart Dependency Optimization failed: ${error.message}",ERROR';
+        `❌ Smart Dependency Optimization "failed": ${error.message}",ERROR';
       );
       throw error}
   }

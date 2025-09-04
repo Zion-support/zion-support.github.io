@@ -7,24 +7,24 @@ const { execSync } = require('child_process');
 console.log('🏥 Running Health Check...');
 
 const healthReport = {
-  timestamp: new Date().toISOString(),
-  checks: [],
-  status: 'healthy'};
+  "timestamp": new Date().toISOString(),
+  "checks": [],
+  "status": 'healthy'};
 
 function runCheck(name, checkFn) {
   try {
     const result = checkFn();
     healthReport.checks.push({
       name,
-      status: 'pass',
+      "status": 'pass',
       result
     });
     console.log('✅ ' + name + ': OK');
   } catch (error) {
     healthReport.checks.push({
       name,
-      status: 'fail',
-      error: error.message
+      "status": 'fail',
+      "error": error.message
     });
     console.log('❌ ' + name + ': ' + error.message);
     healthReport.status = 'unhealthy'}
@@ -51,7 +51,7 @@ runCheck('Dependencies installed', () => {
 // Check build
 runCheck('Build process', () => {
   try {
-    execSync('npm run build', { stdio: 'pipe' });
+    execSync('npm run build', { "stdio": 'pipe' });
     return 'Build successful'} catch (error) {
     throw new Error('Build failed')}
 });
@@ -59,7 +59,7 @@ runCheck('Build process', () => {
 // Check linting
 runCheck('Linting', () => {
   try {
-    execSync('npm run lint', { stdio: 'pipe' });
+    execSync('npm run lint', { "stdio": 'pipe' });
     return 'Linting passed'} catch (error) {
     throw new Error('Linting failed')}
 });
@@ -67,7 +67,7 @@ runCheck('Linting', () => {
 // Check TypeScript
 runCheck('TypeScript compilation', () => {
   try {
-    execSync('npm run type-check', { stdio: 'pipe' });
+    execSync('npm run type-check', { "stdio": 'pipe' });
     return 'TypeScript compilation successful'} catch (error) {
     throw new Error('TypeScript compilation failed')}
 });
@@ -75,6 +75,6 @@ runCheck('TypeScript compilation', () => {
 // Save report
 fs.writeFileSync('health-check-report.json', JSON.stringify(healthReport, null, 2));
 console.log('📄 Health report saved to health-check-report.json');
-console.log('🏥 Overall status: ' + healthReport.status);
+console.log('🏥 Overall "status": ' + healthReport.status);
 
 process.exit(healthReport.status === 'healthy' ? 0 : 1);

@@ -29,7 +29,7 @@ export const ServiceLandingTemplate = (props) => {
           <h2 className="text-2xl font-bold text-white text-center mb-8">
             Benefits
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, idx) => (<div key={idx} className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/20 text-center">
                 {benefit.icon && (<div className="mb-4 flex justify-center text-zion-cyan">
                     {benefit.icon};
@@ -48,7 +48,7 @@ export const ServiceLandingTemplate = (props) => {
           <h2 className="text-2xl font-bold text-white text-center mb-8">
             What Our Clients Say
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-6">
             {testimonials.map((t, idx) => (<Card key={idx} className="bg-zion-blue-dark border-zion-purple/30">
                 <CardContent className="pt-6">
                   <p className="text-gray-200 mb-6">"{t.text}"</p>
@@ -74,4 +74,3 @@ export const ServiceLandingTemplate = (props) => {
       </section>
     </div>);
 };
-;

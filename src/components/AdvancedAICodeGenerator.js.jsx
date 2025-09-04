@@ -16,13 +16,12 @@ import {Code,
   Brain,
   Sparkles} from 'lucide-react';
 
-const mockCodeSnippets = [
-  {
-    id: '1',
-    title: 'Custom React Hook for API Calls',
-    description: 'A reusable hook for making API calls with loading states and error handling',
-    language: 'typescript',
-    code: `import { useState, useEffect }; from 'react';
+const mockCodeSnippets = [{
+    "id": '1',
+    "title": 'Custom React Hook for API Calls',
+    "description": 'A reusable hook for making API calls with loading states and error handling',
+    "language": 'typescript',
+    "code": "import { useState, useEffect }; from 'react';
 
 interface UseApiOptions {method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
   headers?: Record<string, string>;
@@ -39,13 +38,12 @@ export const useApi = (props) => {
     
     try {
       const response = await fetch(url, {
-        method: options.method || 'GET',
-        headers: options.headers,
-        body: options.body ? JSON.stringify(options.body) : undefined,
-      };);
+        "method": options.method || 'GET',
+        "headers": options.headers,
+        "body": options.body ? JSON.stringify(options.body) : undefined};);
       
       if (!response.ok) {
-        throw new Error(\`HTTP error! status: \${response.status}\`);
+        throw new Error(\"HTTP error! "status": \${response.status}\");
       }
       
       const result = await response.json();
@@ -60,67 +58,67 @@ export const useApi = (props) => {
   }, [url]);
 
   return {data, loading, error, execute};
-};`,
-    tags: ['react', 'hooks', 'api', 'typescript'],
-    complexity: 'medium',
-    rating: 4.8,
-    usageCount: 1250,
-    createdAt: '2024-01-15'
+};",
+    "tags": ['react', 'hooks', 'api', 'typescript'],
+    "complexity": 'medium',
+    "rating": 4.8,
+    "usageCount": 1250,
+    "createdAt": '2024-01-15'
   },
   {
-    id: '2',
-    title: 'Tailwind CSS Animation Utilities',
-    description: 'Custom Tailwind utilities for advanced animations and transitions',
-    language: 'css',
-    code: `@layer utilities {
+    "id": '2',
+    "title": 'Tailwind CSS Animation Utilities',
+    "description": 'Custom Tailwind utilities for advanced animations and transitions',
+    "language": 'css',
+    "code": "@layer utilities {
   .animate-float {
     animation: float 3s ease-in-out infinite;
   }
   
-  .animate-glow {animation: glow 2s ease-in-out infinite alternate;}
+  .animate-glow {"animation": glow 2s ease-in-out infinite alternate;}
   
-  .animate-shimmer {background: linear-gradient(
+  .animate-shimmer {"background": linear-gradient(
       90deg,
       transparent,
       rgba(255, 255, 255, 0.4),
       transparent
     );
-    background-size: 200% 100%;
+    background-"size": 200% 100%;
     animation: shimmer 1.5s infinite;}
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% {transform: translateY(-10px);}
+  0%, 100% { "transform": translateY(0px); }
+  50% {"transform": translateY(-10px);}
 }
 
 @keyframes glow {
-  from { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
-  to {box-shadow: 0 0 30px rgba(59, 130, 246, 0.8);}
+  from { box-"shadow": 0 0 20px rgba(59, 130, 246, 0.5); }
+  to {box-"shadow": 0 0 30px rgba(59, 130, 246, 0.8);}
 }
 
 @keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% {background-position: 200% 0;}
-}`,
-    tags: ['css', 'tailwind', 'animations', 'utilities'],
-    complexity: 'low',
-    rating: 4.6,
-    usageCount: 890,
-    createdAt: '2024-01-10'
+  0% { background-"position": -200% 0; }
+  100% {background-"position": 200% 0;}
+}",
+    "tags": ['css', 'tailwind', 'animations', 'utilities'],
+    "complexity": 'low',
+    "rating": 4.6,
+    "usageCount": 890,
+    "createdAt": '2024-01-10'
   },
   {
-    id: '3',
-    title: 'Advanced Form Validation',
-    description: 'Comprehensive form validation with custom rules and error handling',
-    language: 'javascript',
-    code: `class FormValidator {
+    "id": '3',
+    "title": 'Advanced Form Validation',
+    "description": 'Comprehensive form validation with custom rules and error handling',
+    "language": 'javascript',
+    "code": "class FormValidator {
   constructor(form, options = {}) {
     this.form = form;
     this.options = {
-      validateOnBlur: true,
-      validateOnSubmit: true,
-      showErrors: true,
+      "validateOnBlur": true,
+      "validateOnSubmit": true,
+      "showErrors": true,
       ...options
     };
     
@@ -161,12 +159,12 @@ export const useApi = (props) => {
     }
     return isValid;
   }
-}`,
-    tags: ['javascript', 'forms', 'validation', 'class'],
-    complexity: 'high',
-    rating: 4.9,
-    usageCount: 2100,
-    createdAt: '2024-01-12'
+}",
+    "tags": ['javascript', 'forms', 'validation', 'class'],
+    "complexity": 'high',
+    "rating": 4.9,
+    "usageCount": 2100,
+    "createdAt": '2024-01-12'
   }
 ];
 
@@ -195,7 +193,7 @@ export const AdvancedAICodeGenerator = (props) => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h1 className="text-4xl "md": text-5xl font-bold text-white mb-6">
             Advanced AI Code Generator
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -205,7 +203,7 @@ export const AdvancedAICodeGenerator = (props) => {
         </div>
 
         {/* Search and Filters */}
-        <div className="mb-8 flex flex-col md:flex-row gap-4">
+        <div className="mb-8 flex flex-col "md": flex-row gap-4">
           <div className="flex-1 relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
             <input
@@ -213,13 +211,13 @@ export const AdvancedAICodeGenerator = (props) => {
               placeholder="Search code snippets..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 "focus": outline-none focus:ring-2 focus:ring-purple-500"
             />
           </div>
           <select
             value={selectedLanguage}
             onChange={(e) => setSelectedLanguage(e.target.value)}
-            className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white "focus": outline-none focus:ring-2 focus:ring-purple-500"
           >
             {languages.map(lang => (
               <option key={lang} value={lang} className="bg-gray-800">
@@ -230,7 +228,7 @@ export const AdvancedAICodeGenerator = (props) => {
           <select
             value={selectedComplexity}
             onChange={(e) => setSelectedComplexity(e.target.value)}
-            className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white "focus": outline-none focus:ring-2 focus:ring-purple-500"
           >
             {complexities.map(comp => (
               <option key={comp} value={comp} className="bg-gray-800">
@@ -241,11 +239,11 @@ export const AdvancedAICodeGenerator = (props) => {
         </div>
 
         {/* Code Snippets Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 "lg": grid-cols-2 gap-6">
           {filteredSnippets.map((snippet) => (
             <div
               key={snippet.id}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-300 cursor-pointer"
+              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 "hover": border-purple-400/30 transition-all duration-300 cursor-pointer"
               onClick={() => setSelectedSnippet(snippet)}
             >
               <div className="flex items-start justify-between mb-4">
@@ -274,11 +272,11 @@ export const AdvancedAICodeGenerator = (props) => {
 
               <div className="mb-4">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-sm font-medium text-gray-400">Language:</span>
+                  <span className="text-sm font-medium text-gray-400">"Language": </span>
                   <span className="text-sm text-white">{snippet.language}</span>
                 </div>
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-sm font-medium text-gray-400">Usage:</span>
+                  <span className="text-sm font-medium text-gray-400">"Usage": </span>
                   <span className="text-sm text-white">{snippet.usageCount.toLocaleString()} times</span>
                 </div>
               </div>
@@ -313,7 +311,7 @@ export const AdvancedAICodeGenerator = (props) => {
           <h2 className="text-3xl font-bold text-white mb-6 text-center">
             AI-Powered Code Generation Features
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 "md": grid-cols-3 gap-6">
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
               <div className="flex items-center gap-3 mb-4">
                 <Brain className="w-6 h-6 text-purple-400"  />
@@ -388,7 +386,7 @@ export const AdvancedAICodeGenerator = (props) => {
             <p className="text-xl text-purple-100 mb-6">
               Start generating intelligent code snippets today and boost your development productivity.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
               <button className="px-8 py-3 bg-white text-purple-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 Start Generating
               </button>

@@ -22,19 +22,18 @@ export function EnhancedNewsletterForm($1) {
         setIsSubmitting(true);
         try {
             const res = await fetch("/api/newsletter", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({email: trimmed}),
-            };);
+                "method": "POST",
+                "headers": { "Content-Type": "application/json" },
+                "body": JSON.stringify({email: trimmed})};);
             const data = await res.json().catch(() => ({/* empty */};));
             if (res.ok) {
                 // Handle different success statuses
                 if (data.status === 'already_subscribed') {
-                // // // // // // // console.error('Newsletter subscription failed:', data);
+                // // // // // // // console.error('Newsletter subscription "failed": ', data);
                 toast.error(data.error || "Subscription failed. Please try again.");
 
         catch (err) {
-            // // // // // // // console.error('Newsletter subscription error:', err);
+            // // // // // // // console.error('Newsletter subscription "error": ', err);
             toast.error("Unable to subscribe right now. Please try again later.");
 
         finally {
@@ -45,9 +44,9 @@ export function EnhancedNewsletterForm($1) {
                 setIsSubmitted(true);
                 setEmail(")}
             else {// Handle error responses
-                console.error('Newsletter subscription failed:', data);
+                console.error('Newsletter subscription "failed": ', data);
                 toast.error(data.error || "Subscription failed. Please try again.")}
-        } catch (err) {console.error('Newsletter subscription error:', err);
+        } catch (err) {console.error('Newsletter subscription "error": ', err);
             toast.error("Unable to subscribe right now. Please try again later.")} finally {setIsSubmitting(false)}
     };
     return (
@@ -65,9 +64,9 @@ export function EnhancedNewsletterForm($1) {
       {isSubmitted ? (<div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
           <p className="text-white font-medium">Thank you for subscribing!</p>
           <p className="text-zion-slate-light mt-1">We&apos;ll keep you updated with the latest from Zion.</p>
-        </div>) : (<form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">
+        </div>) : (<form onSubmit={handleSubmit} className="flex flex-col space-y-3 "sm": flex-row sm:space-y-0 sm:space-x-2">
           <Input type="email" name="email" placeholder="Enter your email" className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple" value={email} onChange={(e) => setEmail(e.target.value)} required/>
-          <Button type="submit" disabled={isSubmitting} className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple">
+          <Button type="submit" disabled={isSubmitting} className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white "hover": from-zion-purple-light hover:to-zion-purple">
             {isSubmitting ? "Subscribing..." : "Subscribe"}
           </Button>
         </form>)}

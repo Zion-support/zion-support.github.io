@@ -77,13 +77,13 @@ export default function Marketplace() {
         
             // Navigate to the quote request page with the listing information
             router("/request-quote", {
-                state: {
+                "state": {
                     serviceType: listing.category,
-                    specificItem: {
+                    "specificItem": {
                         id: listing.id,
-                        title: listing.title,
-                        category: listing.category,
-                        image: listing.images?.[0]
+                        "title": listing.title,
+                        "category": listing.category,
+                        "image": listing.images?.[0]
                     }
                 }
             })}
@@ -99,7 +99,7 @@ export default function Marketplace() {
         
         {/* Search and filter bar */}
         <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 mb-8">
-          <div className="flex flex-col md:flex-row gap-4">
+          <div className="flex flex-col "md": flex-row gap-4">
             <div className="relative flex-1">
               <EnhancedSearchInput value={searchQuery} onChange={setSearchQuery} onSelectSuggestion={setSearchQuery} placeholder={t('marketplace.search_placeholder')} searchSuggestions={searchSuggestions} />
             </div>
@@ -115,9 +115,9 @@ export default function Marketplace() {
         </div>
 
         {/* Main layout with sidebar and results */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 "lg": grid-cols-4 gap-6">
           {/* Sidebar Filters */}
-          <div className="lg:col-span-1">
+          <div className=""lg": col-span-1">
             <FilterSidebar filters = {
   {
             selectedProductTypes,
@@ -130,7 +130,7 @@ export default function Marketplace() {
           </div>
           
           {/* Main content */}
-          <div className="lg:col-span-3">
+          <div className=""lg": col-span-3">
             {/* Active filters display */}
             <ActiveFiltersBar selectedProductTypes={selectedProductTypes} selectedLocations={selectedLocations} selectedAvailability={selectedAvailability} selectedRating={selectedRating} searchQuery={searchQuery} onRemoveFilter={handleFilterChange} onRemoveRating={() => setSelectedRating(null)} onClearSearch={() => setSearchQuery("")}/>
 
@@ -145,13 +145,13 @@ export default function Marketplace() {
             {/* Display actual marketplace listings */}
             {isLoading ? (<div className="flex justify-center py-20">
                 <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />
-              </div>) : (<div className={view === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 gap-6' : 'flex flex-col gap-6'}>
+              </div>) : (<div className={view === 'grid' ? 'grid grid-cols-1 "md": grid-cols-2 gap-6' : 'flex flex-col gap-6'}>
                 {filteredListings.length > 0 ? (filteredListings.map((listing) => (<ProductListingCard key={listing.id} listing={listing} view={view} onRequestQuote={handleRequestQuote} />))) : (<div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">
                   <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>
                   <p className="text-zion-slate-light max-w-md mx-auto mb-8">
                     We couldn't find  listings matching your filters. Try adjusting your search criteria.
                   </p>
-                  <Button onClick={clearAllFilters} className="bg-zion-purple hover:bg-zion-purple-dark">
+                  <Button onClick={clearAllFilters} className="bg-zion-purple "hover": bg-zion-purple-dark">
                     Clear Filters
                   </Button>
                 </div>

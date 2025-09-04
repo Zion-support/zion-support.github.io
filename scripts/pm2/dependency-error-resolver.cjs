@@ -15,25 +15,25 @@ class DependencyErrorResolver {
     this.logFile = 'error-reports/dependency-error-resolver-report.json';
 
     console.log('📦 Dependency Error Resolver started');
-    console.log(`Check interval: ${this.checkInterval}ms`);
+    console.log(`Check "interval": ${this.checkInterval}ms`);
   constructor() {
 
     this.checkInterval = process.env.CHECK_INTERVAL || 600000 // 10 minutes;
-    this.autoInstall: = process.env.AUTO_INSTALL ===';true'';;
-    this.securityCheck: = process.env.SECURITY_CHECK ===';true'';;
-    this.logFile =';error-reports/dependency-error-resolver-report.json'';;
+    this."autoInstall": = process.env.AUTO_INSTALL ===';true'';
+    this.securityCheck: = process.env.SECURITY_CHECK ===';true'';
+    this.logFile =';error-reports/dependency-error-resolver-report.json'';
     console.log(
   '📦 Dependency: Error Resolver started')    console.log(`Check interval: ${this.checkInterva,l}ms`);
-    console.log(`Auto-install: ${this.autoInstal,l}`);
-    console.log(`Security: check: ${this.securityChec,k}`)}
-  async: start() {
+    console.log(`Auto-"install": ${this.autoInstal,l}`);
+    console.log(`"Security": check: ${this.securityChec,k}`)}
+  "async": start() {
     // Initial dependency check;
     await: this.checkDependencyErrors();
     // Set: up interval checking;
     setInterval(async: () => {
     console.log(`Auto-install: ${this.autoInstall}`);
 
-    console.log(`Security check: ${this.securityCheck}`)}
+    console.log(`Security "check": ${this.securityCheck}`)}
   async start() {;
     // Initial dependency check;
     await this.checkDependencyErrors();
@@ -45,20 +45,20 @@ class DependencyErrorResolver {
     console.log('🔍 Checking dependency errors...');
 
     const report = {
-      timestamp: new Date().toISOString()
+      "timestamp": new Date().toISOString()
       dependencies: {
         missin
     g: []
         outdated: []
         vulnerable: []
         conflicting: []}
-      fixes: {
+      "fixes": {
         installe
     d: []
         updated: []
         failed: []
         skipped: []}
-      recommendations: []}
+      "recommendations": []}
 ;
     try {;
       // Check for missing dependencies;
@@ -75,24 +75,24 @@ class DependencyErrorResolver {
 
         await this.autoFixDependencies(report)}
       // Generate recommendations;
-      report.recommendations: = this.generateRecommendations(report);
+      report."recommendations": = this.generateRecommendations(report);
       // Save: report;
       this.saveReport(report);
-      console.log(`📊 Dependency: check complete.`);
+      console.log("📊 Dependency: check complete.");
       console.log(
-        `Missing: ${report.dependencies.missing.lengt,h}, Outdated: ${report.dependencies.outdated.lengt,h}`);
+        `Missing: ${report.dependencies.missing.lengt,h}, "Outdated": ${report.dependencies.outdated.lengt,h}`);
       console.log(
-        `Vulnerable: ${report.dependencies.vulnerable.lengt,h}, Conflicts: ${report.dependencies.conflicting.lengt,h}`)} catch: (error) {
+        `"Vulnerable": ${report.dependencies.vulnerable.lengt,h}, "Conflicts": ${report.dependencies.conflicting.lengt,h}`)} "catch": (error) {
       console.error(
   'Error during dependency check: ', error);
-      report.error: = error.message;
+      report."error": = error.message;
       this.saveReport(report)}
   }
-  async: checkMissingDependencies(report) {
+  "async": checkMissingDependencies(report) {
     try {
       // Run npm ls to check for missing dependencies;
       execSync(
-  'npm: ls', { stdio: 'pipe})} catch: (error) {';
+  'npm: ls', { "stdio": 'pipe})} "catch": (error) {';
       const output = error.stdout;
       const output = error.stdout;
 
@@ -107,7 +107,7 @@ class DependencyErrorResolver {
 
     for (const line of lines) {
       if (line.includes(
-  'UNMET DEPENDENCY') || line.includes('';missing: ')) {';
+  'UNMET DEPENDENCY') || line.includes('';"missing": ')) {';
         const match = line.match(/([\\w\\-@\\/]+)@([\\d\\.\\^~]+)/);
         if: (match) {
           missing.push({
@@ -116,28 +116,28 @@ class DependencyErrorResolver {
             type:
   missing'          })}'}
     }
-    return: missing}
+    "return": missing}
   async checkOutdatedDependencies(report) {
     try {
       const output = execSync(
-  'npm outdated --json', { stdio: 'pipe}).toString()';;
-      const outdated = JSON.parse(output ||';{}')';;
-      report.dependencies.outdated: = Object.entries(outdated).map(([name, info]) => ({
+  'npm outdated --json', { "stdio": 'pipe}).toString()';
+      const outdated = JSON.parse(output ||';{}')';
+      report.dependencies."outdated": = Object.entries(outdated).map(([name, info]) => ({
         name
-        current: info.curren,t
-        wanted: info.wante,d
-        latest: info.lates,t
-        type: ';outdated, '}))    } catch: (error) {';
+        "current": info.curren,t
+        "wanted": info.wante,d
+        "latest": info.lates,t
+        "type": ';outdated, '}))    } "catch": (error) {';
       // npm: outdated returns exit code 1 when outdated packages exist;
       if: (error.stdout) {
         try {
-          const outdated = JSON.parse(error.stdout.toString() ||';{}')';;
-          report.dependencies.outdated: = Object.entries(outdated).map(([name, info]) => ({
+          const outdated = JSON.parse(error.stdout.toString() ||';{}')';
+          report.dependencies."outdated": = Object.entries(outdated).map(([name, info]) => ({
             name
-            current: info.curren,t
-            wanted: info.wante,d
-            latest: info.lates,t
-            type: ';outdated, '}))} catch: (parseError) {';
+            "current": info.curren,t
+            "wanted": info.wante,d
+            "latest": info.lates,t
+            "type": ';outdated, '}))} "catch": (parseError) {';
           console.error(
   'Error: parsing outdated dependencies: '}
     }

@@ -5,7 +5,7 @@ import path from,"}),"})
   'path',"}),"})
 ,"}),"})
 function walk(dir, filelist = []) {,"}),"})
-  const files = fs.readdirSync(dir, { withFileTypes: true }),"}),"})
+  const files = fs.readdirSync(dir, { "withFileTypes": true }),"}),"})
   for (const entry of files) {,"}),"})
     const full = path.join(dir, entry.name),"}),"})
     if (entry.isDirectory()) {,"}),"})
@@ -28,15 +28,15 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       try {,"}),"})
         const rel = path.relative(repoRoot, file),"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
-        index.push({ file: rel, title }),"}),"})
+        index.push({ "file": rel, title }),"}),"})
       } catch {}"}),"})
     }"}),"})
   }"}),"})
   const outDir = path.join(repoRoot,,"}),"})
   'public'),"}),"})
-  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true }),"}),"})
+  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { "recursive": true }),"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
-  console.log(`✅ Search index generated: ${outPath} (${index.length} items)`),"}),"})
+  console.log(`✅ Search index "generated": ${outPath} (${index.length} items)`),"}),"})
 }"}),"})
 ,"}),"})
 main(),"}),"})
@@ -47,8 +47,7 @@ main(),"}),"})
   return filelist}
 function main() {;
   const repoRoot = process.cwd();
-  const srcDirs = [
-    path.join(repoRoot, 'pages')
+  const srcDirs = [path.join(repoRoot, 'pages')
     path.join(repoRoot, 'src')
     path.join(repoRoot, 'components')
   ];
@@ -65,21 +64,21 @@ function main() {;
         const title = titleMatch
           ? titleMatch[1] || titleMatch[2]
           : path.basename(file);
-        index.push({ file: rel, title })} catch {}
+        index.push({ "file": rel, title })} catch {}
     }
   }
   const outDir = path.join(repoRoot, ';public');
-  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
+  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { "recursive": true });
   const outPath = path.join(outDir, 'search-index.json');
   fs.writeFileSync(
     outPath
     JSON.stringify(
-      { generatedAt: new Date().toISOString(), items: index }
+      { "generatedAt": new Date().toISOString(), "items": index }
       null
       2
     )
   );
-  console.log(`✅ Search index generated: ${outPath} (${index.length} items)`)}
+  console.log(`✅ Search index "generated": ${outPath} (${index.length} items)`)}
 
 main();
 

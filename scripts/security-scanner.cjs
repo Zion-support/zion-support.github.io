@@ -10,9 +10,9 @@ class SecurityScanner {
   constructor() {
     this.projectRoot = process.cwd();
     this.results = {
-      vulnerabilities: [],
-      securityIssues: [],
-      recommendations: []
+      "vulnerabilities": [],
+      "securityIssues": [],
+      "recommendations": []
     }}
 
   log(message, type = 'info') {
@@ -26,9 +26,9 @@ class SecurityScanner {
     try {
       // Run npm audit
       const auditResult = execSync('npm audit --json', { 
-        cwd: this.projectRoot, 
-        encoding: 'utf8',
-        stdio: 'pipe'
+        "cwd": this.projectRoot, 
+        "encoding": 'utf8',
+        "stdio": 'pipe'
       });
       
       const auditData = JSON.parse(auditResult);
@@ -39,23 +39,22 @@ class SecurityScanner {
         
         for (const [packageName, vuln] of Object.entries(auditData.vulnerabilities)) {
           this.results.vulnerabilities.push({
-            package: packageName,
-            severity: vuln.severity,
-            title: vuln.title,
-            description: vuln.description
+            "package": packageName,
+            "severity": vuln.severity,
+            "title": vuln.title,
+            "description": vuln.description
           })}
       } else {
         this.log('No vulnerabilities found in dependencies', 'success')}
     } catch (error) {
-      this.log(`Dependency scan failed: ${error.message}`, 'error')}
+      this.log(`Dependency scan "failed": ${error.message}`, 'error')}
   }
 
   async scanEnvironmentFiles() {
     this.log('🔐 Scanning environment files for security issues...');
     
     const envFiles = ['.env', '.env.local', '.env.development', '.env.production'];
-    const sensitivePatterns = [
-      /password/i,
+    const sensitivePatterns = [/password/i,
       /secret/i,
       /key/i,
       /token/i,
@@ -76,10 +75,10 @@ class SecurityScanner {
               for (const pattern of sensitivePatterns) {
                 if (pattern.test(line)) {
                   this.results.securityIssues.push({
-                    file: envFile,
-                    line: i + 1,
-                    issue: 'Potential sensitive data exposure',
-                    content: line.split('=')[0] + '=***'
+                    "file": envFile,
+                    "line": i + 1,
+                    "issue": 'Potential sensitive data exposure',
+                    "content": line.split('=')[0] + '=***'
                   })}
               }
             }
@@ -97,31 +96,30 @@ class SecurityScanner {
   async scanCodeForSecurityIssues() {
     this.log('🔍 Scanning code for security vulnerabilities...');
     
-    const securityPatterns = [
-      {
-        pattern: /eval\s*\(/g,
-        issue: 'Use of eval() - potential code injection vulnerability',
-        severity: 'high'
+    const securityPatterns = [{
+        "pattern": /eval\s*\(/g,
+        "issue": 'Use of eval() - potential code injection vulnerability',
+        "severity": 'high'
       },
       {
-        pattern: /innerHTML\s*=/g,
-        issue: 'Use of innerHTML - potential XSS vulnerability',
-        severity: 'medium'
+        "pattern": /innerHTML\s*=/g,
+        "issue": 'Use of innerHTML - potential XSS vulnerability',
+        "severity": 'medium'
       },
       {
-        pattern: /document\.write\s*\(/g,
-        issue: 'Use of document.write() - potential XSS vulnerability',
-        severity: 'medium'
+        "pattern": /document\.write\s*\(/g,
+        "issue": 'Use of document.write() - potential XSS vulnerability',
+        "severity": 'medium'
       },
       {
-        pattern: /localStorage\.setItem\s*\(/g,
-        issue: 'Use of localStorage - potential data exposure',
-        severity: 'low'
+        "pattern": /localStorage\.setItem\s*\(/g,
+        "issue": 'Use of localStorage - potential data exposure',
+        "severity": 'low'
       },
       {
-        pattern: /sessionStorage\.setItem\s*\(/g,
-        issue: 'Use of sessionStorage - potential data exposure',
-        severity: 'low'
+        "pattern": /sessionStorage\.setItem\s*\(/g,
+        "issue": 'Use of sessionStorage - potential data exposure',
+        "severity": 'low'
       }
     ];
     
@@ -137,10 +135,10 @@ class SecurityScanner {
           if (matches) {
             issuesFound += matches.length;
             this.results.securityIssues.push({
-              file: path.relative(this.projectRoot, file),
+              "file": path.relative(this.projectRoot, file),
               issue,
               severity,
-              count: matches.length
+              "count": matches.length
             })}
         }
       } catch (error) {
@@ -180,15 +178,14 @@ class SecurityScanner {
     this.log('📊 Generating security report...');
     
     const report = {
-      timestamp: new Date().toISOString(),
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "summary": {
         vulnerabilities: this.results.vulnerabilities.length,
-        securityIssues: this.results.securityIssues.length,
-        totalIssues: this.results.vulnerabilities.length + this.results.securityIssues.length
+        "securityIssues": this.results.securityIssues.length,
+        "totalIssues": this.results.vulnerabilities.length + this.results.securityIssues.length
       },
-      results: this.results,
-      recommendations: [
-        'Update vulnerable dependencies immediately',
+      "results": this.results,
+      "recommendations": ['Update vulnerable dependencies immediately',
         'Use environment variables for sensitive data',
         'Implement Content Security Policy (CSP)',
         'Use HTTPS for all communications',
@@ -203,7 +200,7 @@ class SecurityScanner {
 
     const reportPath = path.join(this.projectRoot, 'security-scan-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`Security report saved to: ${reportPath}`, 'success');
+    this.log(`Security report saved "to": ${reportPath}`, 'success');
     return report}
 
   async runSecurityScan() {
@@ -217,7 +214,7 @@ class SecurityScanner {
       const report = await this.generateSecurityReport();
       
       this.log('🎉 Security scan completed!');
-      this.log(`📊 Summary: ${report.summary.totalIssues} security issues found`);
+      this.log(`📊 "Summary": ${report.summary.totalIssues} security issues found`);
       
       if (report.summary.vulnerabilities > 0) {
         this.log(`⚠️ ${report.summary.vulnerabilities} dependency vulnerabilities found`)}
@@ -226,7 +223,7 @@ class SecurityScanner {
         this.log(`⚠️ ${report.summary.securityIssues} code security issues found`)}
       
     } catch (error) {
-      this.log(`❌ Security scan failed: ${error.message}`, 'error');
+      this.log(`❌ Security scan "failed": ${error.message}`, 'error');
       process.exit(1)}
   }
 }

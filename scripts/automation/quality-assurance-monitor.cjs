@@ -18,46 +18,46 @@ class QualityAssuranceMonitor {
   async runCommand(command, options = {}) {
     try {
       const result = execSync(command, {
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        stdio: options.silent ? 'pipe' : 'inherit',
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "stdio": options.silent ? 'pipe' : 'inherit',
         ...options
       });
-      return { success: true, output: result }} catch (error) {
-      return { success: false, output: error.stdout || error.stderr || error.message }}
+      return { "success": true, "output": result }} catch (error) {
+      return { "success": false, "output": error.stdout || error.stderr || error.message }}
   }
 
   async checkCodeQuality() {
     this.log('Running quality assurance checks...');
     
     // Check TypeScript errors
-    const tsResult = await this.runCommand('npx tsc --noEmit', { silent: true });
+    const tsResult = await this.runCommand('npx tsc --noEmit', { "silent": true });
     if (!tsResult.success) {
       this.issuesFound.push({
-        type: 'typescript',
-        severity: 'high',
-        description: 'TypeScript compilation errors found',
-        details: tsResult.output.substring(0, 500)
+        "type": 'typescript',
+        "severity": 'high',
+        "description": 'TypeScript compilation errors found',
+        "details": tsResult.output.substring(0, 500)
       })}
 
     // Check ESLint errors
-    const eslintResult = await this.runCommand('npx eslint src/**/*.{js,jsx,ts,tsx}', { silent: true });
+    const eslintResult = await this.runCommand('npx eslint src/**/*.{js,jsx,ts,tsx}', { "silent": true });
     if (!eslintResult.success) {
       this.issuesFound.push({
-        type: 'eslint',
-        severity: 'medium',
-        description: 'ESLint errors found',
-        details: eslintResult.output.substring(0, 500)
+        "type": 'eslint',
+        "severity": 'medium',
+        "description": 'ESLint errors found',
+        "details": eslintResult.output.substring(0, 500)
       })}
 
     // Check for security vulnerabilities
-    const auditResult = await this.runCommand('npm audit --audit-level=high', { silent: true });
+    const auditResult = await this.runCommand('npm audit --audit-level=high', { "silent": true });
     if (!auditResult.success) {
       this.issuesFound.push({
-        type: 'security',
-        severity: 'high',
-        description: 'Security vulnerabilities found',
-        details: auditResult.output.substring(0, 500)
+        "type": 'security',
+        "severity": 'high',
+        "description": 'Security vulnerabilities found',
+        "details": auditResult.output.substring(0, 500)
       })}
 
     this.log(`Quality assurance check completed. Found ${this.issuesFound.length} issues.`);
@@ -76,9 +76,9 @@ class QualityAssuranceMonitor {
       } else {
         this.log('No quality issues found', 'info')}
       
-      return { success: true, issuesFound: issues.length }} catch (error) {
-      this.log(`Error during quality check: ${error.message}`, 'error');
-      return { success: false, error: error.message }}
+      return { "success": true, "issuesFound": issues.length }} catch (error) {
+      this.log(`Error during quality "check": ${error.message}`, 'error');
+      return { "success": false, "error": error.message }}
   }
 }
 

@@ -5,9 +5,8 @@ export const Steps = (props) => {
       {React.Children.map(children, (child, index) => {
             if (React.isValidElement(child)) {
                 return React.cloneElement(child, {
-                    isActive: index === currentStep,
-                    isCompleted: index < currentStep,
-                };);
+                    "isActive": index === currentStep,
+                    "isCompleted": index < currentStep};);
             }
             return child;
         })}
@@ -20,5 +19,4 @@ export const Step = (props) => {
         {isCompleted ? "✓" : children};
       </div>
     </div>);
-};';
-;';';
+};';';';

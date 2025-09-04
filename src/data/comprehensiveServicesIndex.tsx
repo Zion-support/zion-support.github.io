@@ -86,11 +86,8 @@ export ';';
 
 // Contact Information
 export 
-  ;
-  ;';
-  ;';';
+  ;';';';
   Middletown DE 19709';
-;
 
 };
 :src/data/comprehensiveServicesIndex.tsx
@@ -99,24 +96,21 @@ export
 // Service Statistics
 export 
   ;
-  pricingModels: PRICING_MODEL S.length};
+  "pricingModels": PRICING_MODEL S.length};
 
 :src/data/comprehensiveServicesIndex.tsx
 // Helper Functions;
 export 
   return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category)};
-;
 export 
   return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level)};
 
 export 
 };
-;
 export 
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>;
     tags.some(tag => service.tags.includes(tag));
   )};
-;
 export 
 // Helper Functions
 export 

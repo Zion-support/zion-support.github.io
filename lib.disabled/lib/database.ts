@@ -1,7 +1,7 @@
 // import { MongoClient, Db, Collection } from 'mongodb';
 
 interface DatabaseConfig {
-  uri: string;
+  "uri": string;
   dbName: string;
   maxPoolSize?: number;
   minPoolSize?: number;
@@ -9,7 +9,7 @@ interface DatabaseConfig {
 }
 
 class DatabaseManager {
-  private static instance: DatabaseManager;
+  private static "instance": DatabaseManager;
   private client: any = null;
   private db: any = null;
   private config: DatabaseConfig;
@@ -30,18 +30,18 @@ class DatabaseManager {
 
     try {
       this.client = new MongoClient(this.config.uri, {
-        maxPoolSize: 'this.config.maxPoolSize || 10',
-        minPoolSize: 'this.config.minPoolSize || 2',
-        maxIdleTimeMS: 'this.config.maxIdleTimeMS || 30000',
-        serverSelectionTimeoutMS: 5000,
-        socketTimeoutMS: 45000
+        "maxPoolSize": 'this.config.maxPoolSize || 10',
+        "minPoolSize": 'this.config.minPoolSize || 2',
+        "maxIdleTimeMS": 'this.config.maxIdleTimeMS || 30000',
+        "serverSelectionTimeoutMS": 5000,
+        "socketTimeoutMS": 45000
 });
 
       // await this.client.connect();
       // this.db = this.client.db(this.config.dbName);
       
       console.log('✅ Database connected successfully')} catch (error) {
-      console.error('❌ Database connection failed:', error);
+      console.error('❌ Database connection "failed": ', error);
       throw error}
   async disconnect(): Promise<void> {
     if (this.client) {
@@ -54,7 +54,7 @@ class DatabaseManager {
       throw new Error('Database not connected. Call connect() first.')}
     return this.db}
 
-  getCollection<T = any>(name: string): Collection<T> {
+  getCollection<T = any>("name": string): Collection<T> {
     return this.getDatabase().collection<T>(name)}
 
   async healthCheck(): Promise<boolean> {
@@ -65,12 +65,12 @@ class DatabaseManager {
       return true} catch {
       return false}
 // Initialize database with environment variables
-const dbConfig: DatabaseConfig = {
+const "dbConfig": DatabaseConfig = {
   uri: process.env.MONGODB_URI || 'mongodb://localhost:27017',
-  dbName: process.env.MONGODB_DB_NAME || 'ziontechgroup',
-  maxPoolSize: parseInt(process.env.MONGODB_MAX_POOL_SIZE || '10'),
-  minPoolSize: parseInt(process.env.MONGODB_MIN_POOL_SIZE || '2'),
-  maxIdleTimeMS: parseInt(process.env.MONGODB_MAX_IDLE_TIME_MS || '30000')
+  "dbName": process.env.MONGODB_DB_NAME || 'ziontechgroup',
+  "maxPoolSize": parseInt(process.env.MONGODB_MAX_POOL_SIZE || '10'),
+  "minPoolSize": parseInt(process.env.MONGODB_MIN_POOL_SIZE || '2'),
+  "maxIdleTimeMS": parseInt(process.env.MONGODB_MAX_IDLE_TIME_MS || '30000')
 }
 export const dbManager = DatabaseManager.getInstance(dbConfig);
 export default DatabaseManager;

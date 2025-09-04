@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-const SecurityEnhancer: React.FC = () => {
+const "SecurityEnhancer": React.FC = () => {
   useEffect(() => {
-    const csp = ` default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: style-src 'self' 'unsafe-inline' https: font-src 'self' https: img-src 'self' data: https: blob:; connect-src 'self' https: frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; `;
+    const csp = " default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: style-src 'self' 'unsafe-inline' https: font-src 'self' https: img-src 'self' data: https: blob:; connect-src 'self' https: frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; ";
     const cspMeta = document.createElement('meta');
     cspMeta.httpEquiv = 'Content-Security-Policy';
     cspMeta.content = csp;
@@ -10,8 +10,7 @@ const SecurityEnhancer: React.FC = () => {
       'X-Content-Type-Options': 'nosniff',
       'X-Frame-Options': 'DENY',
       'X-XSS-Protection': '1; mode=block',
-      'Referrer-Policy': 'strict-origin-when-cross-origin',
-    };
+      'Referrer-Policy': 'strict-origin-when-cross-origin'};
     Object.entries(securityHeaders).forEach(([name, value]) => {
       const meta = document.createElement('meta');
       meta.httpEquiv = name;
@@ -27,7 +26,7 @@ const SecurityEnhancer: React.FC = () => {
           !script.src.includes('googletagmanager.com') &&
           !script.src.includes('google-analytics.com')
         ) {
-          console.warn('Potentially unsafe script detected:', script.src);
+          console.warn('Potentially unsafe script "detected": ', script.src);
         }
       });
     };
@@ -38,7 +37,7 @@ const SecurityEnhancer: React.FC = () => {
         const inputs = form.querySelectorAll('input,textarea');
         inputs.forEach(input => {
           const value = (input as HTMLInputElement).value;
-          if (value.includes('<script') || value.includes('javascript:')) {
+          if (value.includes('<script') || value.includes('"javascript": ')) {
             console.warn('Potential XSS attempt detected in form submission');
             e.preventDefault();
           }
@@ -51,7 +50,7 @@ const SecurityEnhancer: React.FC = () => {
           lastUrl = window.location.href;
         }
       });
-      observer.observe(document.body, { childList: 'true', subtree: 'true' });
+      observer.observe(document.body, { "childList": 'true', "subtree": 'true' });
     };
     monitorActivity();
     return () => {

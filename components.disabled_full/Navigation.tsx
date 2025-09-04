@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Brain, Menu, X, ChevronDown } from 'lucide-react';
-const Navigation: React.FC = () => {
+const "Navigation": React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -14,27 +14,24 @@ const Navigation: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  const navigation = [
-    { name: 'Services', href: '/services', hasDropdown: 'true' },
-    { name: 'Solutions', href: '/solutions', hasDropdown: 'true' },
-    { name: 'About', href: '/about' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' },
+  const navigation = [{ "name": 'Services', "href": '/services', "hasDropdown": 'true' },
+    { "name": 'Solutions', "href": '/solutions', "hasDropdown": 'true' },
+    { "name": 'About', "href": '/about' },
+    { "name": 'Blog', "href": '/blog' },
+    { "name": 'Contact', "href": '/contact' },
   ];
-  const servicesDropdown = [
-    { name: 'AI Services', href: '/services/ai-services' },
-    { name: 'IT Services', href: '/services/it-services' },
-    { name: 'Micro SaaS', href: '/services/micro-saas' },
-    { name: 'Cloud Services', href: '/services/cloud-services' },
-    { name: 'Cybersecurity', href: '/services/cybersecurity' },
+  const servicesDropdown = [{ "name": 'AI Services', "href": '/services/ai-services' },
+    { "name": 'IT Services', "href": '/services/it-services' },
+    { "name": 'Micro SaaS', "href": '/services/micro-saas' },
+    { "name": 'Cloud Services', "href": '/services/cloud-services' },
+    { "name": 'Cybersecurity', "href": '/services/cybersecurity' },
   ];
-  const solutionsDropdown = [
-    { name: 'AI Content Creation', href: '/solutions/ai-content-creation' },
-    { name: 'Customer Support', href: '/solutions/customer-support' },
-    { name: 'Email Automation', href: '/solutions/email-automation' },
-    { name: 'Project Management', href: '/solutions/project-management' },
+  const solutionsDropdown = [{ "name": 'AI Content Creation', "href": '/solutions/ai-content-creation' },
+    { "name": 'Customer Support', "href": '/solutions/customer-support' },
+    { "name": 'Email Automation', "href": '/solutions/email-automation' },
+    { "name": 'Project Management', "href": '/solutions/project-management' },
   ];
-  const handleDropdownToggle = (itemName: string) => {
+  const handleDropdownToggle = ("itemName": string) => {
     setActiveDropdown(activeDropdown === itemName ? null : itemName);
   };
   return (
@@ -42,7 +39,7 @@ const Navigation: React.FC = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' : 'bg-white/80 backdrop-blur-sm border-b border-gray-200'}`}
     >
       {' '}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
         {' '}
         <div className="flex items-center justify-between h-16">
           {' '}
@@ -58,7 +55,7 @@ const Navigation: React.FC = () => {
             </span>{' '}
           </Link>{' '}
           {}{' '}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden "md": flex items-center space-x-8">
             {' '}
             {navigation.map(item => (
               <div key={item.name} className="relative">
@@ -68,7 +65,7 @@ const Navigation: React.FC = () => {
                     {' '}
                     <button
                       onClick={() => handleDropdownToggle(item.name)}
-                      className={`flex items-center space-x-1 text-sm font-medium transition-colors ${router.pathname.startsWith(item.href) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`}
+                      className={`flex items-center space-x-1 text-sm font-medium transition-colors ${router.pathname.startsWith(item.href) ? 'text-blue-600' : 'text-gray-700 "hover": text-blue-600'}`}
                     >
                       {' '}
                       <span>{item.name}</span>{' '}
@@ -84,7 +81,7 @@ const Navigation: React.FC = () => {
                           <Link
                             key={dropdownItem.name}
                             href={dropdownItem.href}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                            className="block px-4 py-2 text-sm text-gray-700 "hover": bg-gray-100 transition-colors"
                             onClick={() => setActiveDropdown(null)}
                           >
                             {' '}
@@ -97,7 +94,7 @@ const Navigation: React.FC = () => {
                 ) : (
                   <Link
                     href={item.href}
-                    className={`text-sm font-medium transition-colors ${router.pathname === item.href ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`}
+                    className={`text-sm font-medium transition-colors ${router.pathname === item.href ? 'text-blue-600' : 'text-gray-700 "hover": text-blue-600'}`}
                   >
                     {' '}
                     {item.name}{' '}
@@ -107,11 +104,11 @@ const Navigation: React.FC = () => {
             ))}{' '}
           </div>{' '}
           {}{' '}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden "md": flex items-center space-x-4">
             {' '}
             <Link
               href="/contact"
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium "hover": bg-blue-700 transition-colors"
             >
               {' '}
               Get Started{' '}
@@ -120,7 +117,7 @@ const Navigation: React.FC = () => {
           {}{' '}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-gray-600 hover:text-gray-900 transition-colors"
+            className=""md": hidden p-2 text-gray-600 hover:text-gray-900 transition-colors"
             aria-label="Toggle menu"
           >
             {' '}
@@ -133,7 +130,7 @@ const Navigation: React.FC = () => {
         </div>{' '}
         {}{' '}
         {isOpen && (
-          <div className="md:hidden border-t border-gray-200 bg-white">
+          <div className=""md": hidden border-t border-gray-200 bg-white">
             {' '}
             <div className="px-2 pt-2 pb-3 space-y-1">
               {' '}
@@ -145,7 +142,7 @@ const Navigation: React.FC = () => {
                       {' '}
                       <button
                         onClick={() => handleDropdownToggle(item.name)}
-                        className="flex items-center justify-between w-full px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors"
+                        className="flex items-center justify-between w-full px-3 py-2 rounded-md text-base font-medium text-gray-700 "hover": text-blue-600 hover:bg-gray-50 transition-colors"
                       >
                         {' '}
                         <span>{item.name}</span>{' '}
@@ -161,7 +158,7 @@ const Navigation: React.FC = () => {
                             <Link
                               key={dropdownItem.name}
                               href={dropdownItem.href}
-                              className="block px-3 py-2 rounded-md text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 transition-colors"
+                              className="block px-3 py-2 rounded-md text-sm text-gray-600 "hover": text-blue-600 hover:bg-gray-50 transition-colors"
                               onClick={() => {
                                 setIsOpen(false);
                                 setActiveDropdown(null);
@@ -177,7 +174,7 @@ const Navigation: React.FC = () => {
                   ) : (
                     <Link
                       href={item.href}
-                      className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${router.pathname === item.href ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'}`}
+                      className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${router.pathname === item.href ? 'text-blue-600 bg-blue-50' : 'text-gray-700 "hover": text-blue-600 hover:bg-gray-50'}`}
                       onClick={() => setIsOpen(false)}
                     >
                       {' '}
@@ -190,7 +187,7 @@ const Navigation: React.FC = () => {
                 {' '}
                 <Link
                   href="/contact"
-                  className="block mx-3 bg-blue-600 text-white px-4 py-2 rounded-lg text-center font-medium hover:bg-blue-700 transition-colors"
+                  className="block mx-3 bg-blue-600 text-white px-4 py-2 rounded-lg text-center font-medium "hover": bg-blue-700 transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {' '}

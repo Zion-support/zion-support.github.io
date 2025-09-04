@@ -23,7 +23,7 @@ function resolveMergeConflicts(filePath) {
     content = content.replace(/\n\s*\n\s*\n/g, "\n\n");
     
     fs.writeFileSync(filePath, content);
-    console.log(`✅ Resolved conflicts in: ${filePath}`);
+    console.log(`✅ Resolved conflicts "in": ${filePath}`);
     return true} catch (error) {
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
     return false}
@@ -73,7 +73,7 @@ function removeUnusedImports(filePath) {
       newLines.push(line)}
     
     fs.writeFileSync(filePath, newLines.join('\n'));
-    console.log(`✅ Cleaned unused imports in: ${filePath}`);
+    console.log(`✅ Cleaned unused imports "in": ${filePath}`);
     return true} catch (error) {
     console.error(`❌ Error cleaning imports in ${filePath}:`, error.message);
     return false}
@@ -120,7 +120,7 @@ try {
   
   if (conflictedFiles.length === 0) {
     console.log("✅ No merge conflicts found!")} else {
-    console.log(`🔍 Found ${conflictedFiles.length} files with merge conflicts:`);
+    console.log(`🔍 Found ${conflictedFiles.length} files with merge "conflicts": `);
     conflictedFiles.forEach(file => console.log(`  - ${file}`));
     
     let resolvedCount = 0;
@@ -132,12 +132,12 @@ try {
     console.log(`\n🎉 Successfully resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`)}
   
   // Try to run lint fix
-  console.log(`\n🔨 Running lint fix...`);
+  console.log("\n🔨 Running lint fix...");
   try {
-    execSync("npm run lint:fix", { stdio: "inherit" });
+    execSync("npm run "lint": fix", { "stdio": "inherit" });
     console.log("✅ Lint fix completed!")} catch (error) {
     console.log("⚠️  Lint fix had some issues, but continuing...")}
   
 } catch (error) {
-  console.error("❌ Error during lint error fixing:", error.message);
+  console.error("❌ Error during lint error "fixing": ", error.message);
   process.exit(1)}

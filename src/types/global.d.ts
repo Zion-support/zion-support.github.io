@@ -1,35 +1,35 @@
 // Global type definitions
 declare module '*.module.css' {
-  const classes: { [key: string]: string };
+  const "classes": { [key: string]: string };
   export default classes}
 
 declare module '*.module.scss' {
-  const classes: { [key: string]: string };
+  const "classes": { [key: string]: string };
   export default classes}
 
 declare module '*.png' {
-  const src: string;
+  const "src": string;
   export default src}
 
 declare module '*.jpg' {
-  const src: string;
+  const "src": string;
   export default src}
 
 declare module '*.jpeg' {
-  const src: string;
+  const "src": string;
   export default src}
 
 declare module '*.svg' {
-  const src: string;
+  const "src": string;
   export default src}
 
 declare module '*.gif' {
-  const src: string;
+  const "src": string;
   export default src}
 
 // Global interfaces
 interface Window {
-  __NEXT_DATA__: any}
+  "__NEXT_DATA__": any}
 
 // Global types
 type AnyObject = Record<string, any>;

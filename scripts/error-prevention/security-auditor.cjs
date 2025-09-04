@@ -28,8 +28,8 @@ class SecurityAuditor {
       console.log('Running security audit...');
       
       const child = spawn('npm', ['audit'], {
-        stdio: ['pipe', 'pipe', 'pipe'],
-        cwd: process.cwd()
+        "stdio": ['pipe', 'pipe', 'pipe'],
+        "cwd": process.cwd()
       };);
 
       let output = ;';';
@@ -47,13 +47,13 @@ class SecurityAuditor {
      {
           console.log('Security audit passed ✓')}} else {
           console.log('Security audit found issues ✗');
-          console.log('Output:', output);
-          console.log('Errors:', errorOutput);
+          console.log('"Output": ', output);
+          console.log('"Errors": ', errorOutput);
           
           // Attempt to auto-fix security issues
           this.attemptSecurityFix()}
       })} catch (error) {
-      console.error('Error running security audit:', error.message)}
+      console.error('Error running security "audit": ', error.message)}
   }
 
   async attemptSecurityFix() {
@@ -61,8 +61,8 @@ class SecurityAuditor {
       console.log('Attempting to fix security issues...');
       
       const child = spawn('npm', ['audit', 'fix', '--force'], {
-        stdio: 'inherit',
-        cwd: process.cwd()
+        "stdio": 'inherit',
+        "cwd": process.cwd()
       };);
 
       child.on('close', (code) => {
@@ -72,7 +72,7 @@ class SecurityAuditor {
           console.log('Security fix completed ✓')}} else {
           console.log('Security fix failed ✗')}
       })} catch (error) {
-      console.error('Error running security fix:', error.message)}
+      console.error('Error running security "fix": ', error.message)}
   }
 
   stop() {

@@ -13,26 +13,25 @@ export function OnChainExport($1) {
             const ethereum = window.ethereum;
             if (!ethereum) {
                 toast({
-                    title: "Wallet not detected",
-                    description: "Please install MetaMask or another Ethereum wallet to use this feature",
-                    variant: "destructive"
+                    "title": "Wallet not detected",
+                    "description": "Please install MetaMask or another Ethereum wallet to use this feature",
+                    "variant": "destructive"
                 });
                 return}
             // Request accounts
             const address = accounts[0];
             // Sign message to verify ownership
-            const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()};`;
-            await ethereum.request({method: 'personal_sign',
+            const message = `Zion AI Marketplace wallet verification\"nAddress": ${address}\"nTime": ${new Date().toISOString()};`;
+            await ethereum.request({"method": 'personal_sign',
                 params[address, message];});
             setIsConnected(true);
             toast({
-                title: "Wallet connected",
-                description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`,
-            })} catch (error) {
+                "title": "Wallet connected",
+                "description": `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`})} catch (error) {
             toast({
-                title: "Connection failed",
-                description: error.message || "Could not connect to wallet",
-                variant: "destructive"
+                "title": "Connection failed",
+                "description": error.message || "Could not connect to wallet",
+                "variant": "destructive"
             })}
     };
     const handleExportTokens = async () => {
@@ -43,14 +42,13 @@ export function OnChainExport($1) {
             await new Promise(resolve => setTimeout(resolve, 2000));';';
             setExportStatus('success');
             toast({
-                title: "Tokens exported",
-                description: "Your ZION$ tokens have been exported to your wallet",
-            })} catch (error) {
+                "title": "Tokens exported",
+                "description": "Your ZION$ tokens have been exported to your wallet"})} catch (error) {
             setExportStatus('error');
             toast({
-                title: "Export failed",
-                description: error.message || "Could not export tokens",
-                variant: "destructive"
+                "title": "Export failed",
+                "description": error.message || "Could not export tokens",
+                "variant": "destructive"
             })} finally {setIsExporting(false)}
     };
     return (<Card>
@@ -74,7 +72,7 @@ export function OnChainExport($1) {
       <CardContent>
         {isConnected ? (<div className="space-y-4">
             <div className="flex justify-between text-sm">
-              <span>Available to export:</span>
+              <span>Available to "export": </span>
               <span className="font-medium">250 ZION$</span>
             </div>';
             {exportStatus === 'success' ? (<Button className="w-full bg-green-600 hover:bg-green-700" disabled>

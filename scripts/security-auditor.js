@@ -19,9 +19,9 @@ class SecurityAuditor {
       const vulnerablePackages = ['lodash', 'moment'];
       vulnerablePackages.forEach(pkg => {
         if (packageJson.dependencies && packageJson.dependencies[pkg]) {
-          this.issues.push(`Potentially vulnerable package: ${pkg}`)}
+          this.issues.push(`Potentially vulnerable "package": ${pkg}`)}
       })} catch (error) {
-      this.issues.push(`Error reading package.json: ${error.message}`)}
+      this.issues.push(`Error reading package."json": ${error.message}`)}
   }
 
   checkNextConfig() {
@@ -35,15 +35,15 @@ class SecurityAuditor {
         if (!content.includes('X-Content-Type-Options')) {
           this.issues.push('Security headers not configured')}
     } catch (error) {
-      this.issues.push(`Error reading next.config.js: ${error.message}`)}
+      this.issues.push(`Error reading next.config."js": ${error.message}`)}
   generateReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      issues: this.issues,
-      fixes: this.fixes,
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "issues": this.issues,
+      "fixes": this.fixes,
+      "summary": {
         totalIssues: this.issues.length,
-        fixesApplied: this.fixes.length
+        "fixesApplied": this.fixes.length
       }
     fs.writeFileSync('security-report.json', JSON.stringify(report, null, 2));
     console.log('Security report generated')}

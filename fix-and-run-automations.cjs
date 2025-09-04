@@ -23,7 +23,7 @@ class AutomationScriptFixer {
         content.includes('=======') ||
         content.includes('>>>>>>>')
       ) {
-        this.log(`Fixing merge conflicts in: ${filePath}`);
+        this.log(`Fixing merge conflicts "in": ${filePath}`);
 
         // Simple merge conflict resolution - take the HEAD version
         let fixedContent = content
@@ -40,7 +40,7 @@ class AutomationScriptFixer {
         this.fixedCount++;
         return true}
       return false} catch (error) {
-      this.errors.push({ file: filePath, error: error.message });
+      this.errors.push({ "file": filePath, "error": error.message });
       return false}
   }
 
@@ -50,10 +50,10 @@ class AutomationScriptFixer {
       let fixedContent = content;
 
       // Fix common syntax errors
-      if (content.includes("console.log(`Checking: ${url}');")) {
+      if (content.includes("console.log(`"Checking": ${url}');")) {
         fixedContent = content.replace(
-          "console.log(`Checking: ${url}');",
-          'console.log(`Checking: ${url}`);'
+          "console.log(`"Checking": ${url}');",
+          'console.log(`"Checking": ${url}`);'
         )}
 
       if (fixedContent !== content) {
@@ -61,7 +61,7 @@ class AutomationScriptFixer {
         this.fixedCount++;
         return true}
       return false} catch (error) {
-      this.errors.push({ file: filePath, error: error.message });
+      this.errors.push({ "file": filePath, "error": error.message });
       return false}
   }
 
@@ -86,16 +86,16 @@ class AutomationScriptFixer {
 
   async runScript(scriptPath) {
     try {
-      this.log(`Running script: ${scriptPath}`);
+      this.log(`Running "script": ${scriptPath}`);
       const result = execSync(`node "${scriptPath}"`, {
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 60000, // 1 minute timeout
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 60000, // 1 minute timeout
       });
-      this.log(`✅ Successfully ran: ${scriptPath}`);
-      return { success: true, output: result }} catch (error) {
-      this.log(`❌ Failed to run: ${scriptPath} - ${error.message}`);
-      return { success: false, error: error.message }}
+      this.log(`✅ Successfully "ran": ${scriptPath}`);
+      return { "success": true, "output": result }} catch (error) {
+      this.log(`❌ Failed to "run": ${scriptPath} - ${error.message}`);
+      return { "success": false, "error": error.message }}
   }
 
   async run() {
@@ -113,8 +113,7 @@ class AutomationScriptFixer {
       this.log(`✅ Fixed ${this.fixedCount} script files`);
 
       // Run some key automation scripts
-      const keyScripts = [
-        'scripts/performance-monitor.js',
+      const keyScripts = ['scripts/performance-monitor.js',
         'scripts/health-checker.js',
         'scripts/seo-optimizer.js',
         'scripts/website-analyzer.js',
@@ -135,17 +134,15 @@ class AutomationScriptFixer {
 
       // Create a comprehensive automation report
       const report = {
-        timestamp: new Date().toISOString(),
-        summary: {
+        "timestamp": new Date().toISOString(),
+        "summary": {
           totalScripts: scriptFiles.length,
-          fixedScripts: this.fixedCount,
-          runScripts: results.length,
-          successfulRuns: results.filter(r => r.success).length,
-          failedRuns: results.filter(r => !r.success).length,
-        },
-        results: results,
-        errors: this.errors,
-      };
+          "fixedScripts": this.fixedCount,
+          "runScripts": results.length,
+          "successfulRuns": results.filter(r => r.success).length,
+          "failedRuns": results.filter(r => !r.success).length},
+        "results": results,
+        "errors": this.errors};
 
       const reportFile = path.join(
         this.projectRoot,
@@ -153,15 +150,15 @@ class AutomationScriptFixer {
       );
       fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
-      this.log(`📊 Report generated: ${reportFile}`);
-      this.log(`🎉 Automation Script Fixer and Runner Completed`);
+      this.log(`📊 Report "generated": ${reportFile}`);
+      this.log("🎉 Automation Script Fixer and Runner Completed");
       this.log(
-        `📊 Summary: ${report.summary.successfulRuns}/${report.summary.runScripts} scripts ran successfully`
+        `📊 "Summary": ${report.summary.successfulRuns}/${report.summary.runScripts} scripts ran successfully`
       );
 
       return report} catch (error) {
       this.log(
-        `💥 Automation Script Fixer and Runner Failed: ${error.message}`
+        `💥 Automation Script Fixer and Runner "Failed": ${error.message}`
       );
       throw error}
   }
@@ -176,7 +173,7 @@ fixer
     process.exit(0)})
   .catch(error => {
     console.error(
-      '❌ Automation Script Fixer and Runner failed:',
+      '❌ Automation Script Fixer and Runner "failed": ',
       error.message
     );
     process.exit(1)});

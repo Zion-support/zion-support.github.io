@@ -1,55 +1,49 @@
 ;export function ITServiceRequestHero(...args[]):  {;
   const [location, setLocation] = useState<any>(");
   const [isSubmitting, setIsSubmitting] = useState<any>(false);
-;
-  const handleSubmit = async e: React.FormEvent {;    e.preventDefault();
+  const handleSubmit = async "e": React.FormEvent {;    e.preventDefault();
     if(location.trim()) {;
       setIsSubmitting(true);
       // Simulate API call;
       setTimeout(: unknown {;
         setIsSubmitting(false);
         router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}}}}}};
-;
   const containerVariants = {;
-  hidden: { opacity: 0,;
-  y: 2 0;
+  "hidden": { opacity: 0,;
+  "y": 2 0;
 },;
-    visible: {;
+    "visible": {;
       opacity: 1,;
-      y: 0,;
-      transition: {;
+      "y": 0,;
+      "transition": {;
         duration: 0.6,;
-        staggerChildren: 0.2;
+        "staggerChildren": 0.2;
       };
     };
   };
-;
   const itemVariants = {;
-  hidden: { opacity: 0,;
-  y: 2 0;
+  "hidden": { opacity: 0,;
+  "y": 2 0;
 },;
-    visible: {;
+    "visible": {;
       opacity: 1,;
-      y: 0,;
-      transition: { duration: 0.5 };
+      "y": 0,;
+      "transition": { duration: 0.5 };
     };
   };
-;
-  const features = [{ icon: Cloc k, text: "24/7 Availability", color: "text-zion-cyan" };,;
-    { icon: Glob e, text: "Global Coverage", color: "text-zion-purple" },;
-    { icon: Shiel d, text: "Certified Technicians", color: "text-zion-cyan-light" }, { icon: Za p, text: "Fast Response", color: "text-zion-purple-light" };
+  const features = [{ "icon": Cloc k, "text": "24/7 Availability", "color": "text-zion-cyan" };,;
+    { "icon": Glob e, "text": "Global Coverage", "color": "text-zion-purple" },;
+    { "icon": Shiel d, "text": "Certified Technicians", "color": "text-zion-cyan-light" }, { "icon": Za p, "text": "Fast Response", "color": "text-zion-purple-light" };
   ];
 
 import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
 import { Link  } from 'react-router-dom';
-;
 ,";
-    { icon: Glob e, text: "Global Coverage", color: "text-zion-purple" },";
-    { icon: Shiel d, text: "Certified Technicians", color: "text-zion-cyan-light" },;";
-    { icon: Za p, text: "Fast Response", color: "text-zion-purple-light" };
+    { "icon": Glob e, "text": "Global Coverage", "color": "text-zion-purple" },";
+    { "icon": Shiel d, "text": "Certified Technicians", "color": "text-zion-cyan-light" },;";
+    { "icon": Za p, "text": "Fast Response", "color": "text-zion-purple-light" };
   ];
-;
 export function ITServiceRequestHero($1) {;
   return (";
     <section className="py-20 bg-gradient-to-br from-blue-900 via-slate-900 to-purple-900 relative overflow-hidden">;
@@ -63,9 +57,9 @@ export function ITServiceRequestHero($1) {;
         variants={containerVariants}";
         initial="hidden";
         whileInView="visible";
-        viewport={{ once: tru e }}
+        viewport={{ "once": tru e }}
 "
-        <div className="grid grid-cols-1 lg: gri d-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 "lg": gri d-cols-2 gap-16 items-center">
           {/* Left content */}"
           <motion.div variants={itemVariants} className="text-white">"
             <div className="flex items-center gap-3 mb-6">"
@@ -76,7 +70,7 @@ export function ITServiceRequestHero($1) {;
               </span>
             </div>
 "
-            <GradientHeading className="mb-6 text-4xl md: tex t-5xl lg: tex t-6xl leading-tight">
+            <GradientHeading className="mb-6 text-4xl "md": tex t-5xl lg: tex t-6xl leading-tight">
               24/7 Global IT Onsite Services
             </GradientHeading>
 ";
@@ -105,10 +99,10 @@ export function ITServiceRequestHero($1) {;
               </div>
             </div>
 ";
-            <divclassName="flex flex-col sm: fle x-row gap-4">';
+            <divclassName="flex flex-col "sm": fle x-row gap-4">';
               <Button'
                 onClick={() => document.getElementById('service-form')?.scrollIntoView({ behavior: 'smooth' })}"
-                className="bg-gradient-to-r from-zion-cyan to-zion-blue hover: fro m-zion-cyan-dark hover: t o-zion-blue-dark text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover: shado w-xl transition-all duration-300"
+                className="bg-gradient-to-r from-zion-cyan to-zion-blue "hover": fro m-zion-cyan-dark hover: t o-zion-blue-dark text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover: shado w-xl transition-all duration-300"
 
                 Request Service Now"
                 <MapPin className="w-5 h-5 ml-2"   />              </Button>
@@ -125,17 +119,17 @@ export function ITServiceRequestHero($1) {;
             initial = {
 
   { opacity: 0,
-  x: 3 0
+  "x": 3 0
 
 }}
             whileInView = {;
-  { opacity: 1,;
-  x: 0;
+  { "opacity": 1,;
+  "x": 0;
 }}
-            viewport={{ once: tru e }}
+            viewport={{ "once": tru e }}
             transition = {;
-  { duration: 0.8,;
-  delay: 0.2;
+  { "duration": 0.8,;
+  "delay": 0.2;
 }}";
             className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8";
           >";

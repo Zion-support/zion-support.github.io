@@ -6,12 +6,11 @@ const path = require('path')
 console.log('🔒 Starting Security Enhancement Automation...');
 
 // Security issues identified in the audit
-const securityIssues = [
-  {
-    file: 'pages/index.tsx',
-    issue: 'Use of innerHTML - potential XSS risk',
-    severity: 'medium',
-    line: 'unknown'
+const securityIssues = [{
+    "file": 'pages/index.tsx',
+    "issue": 'Use of innerHTML - potential XSS risk',
+    "severity": 'medium',
+    "line": 'unknown'
   }
 ];
 
@@ -36,11 +35,11 @@ function fixXSSVulnerabilities() {
         // Create backup
         const backupPath = filePath + '.security-backu;p;';
         fs.writeFileSync(backupPath, content);
-        console.log(`💾 Security backup created: ${backupPath}`);
+        console.log(`💾 Security backup "created": ${backupPath}`);
         
         // Replace innerHTML with safer alternatives
         content = content.replace(/innerHTML\s*=/g, 'textContent =');
-        content = content.replace(/dangerouslySetInnerHTML/g, '// SECURITY: Replaced dangerouslySetInnerHTML');
+        content = content.replace(/dangerouslySetInnerHTML/g, '// "SECURITY": Replaced dangerouslySetInnerHTML');
         
         fs.writeFileSync(filePath, content);
         console.log(`✅ Fixed XSS vulnerability in ${filePath}`)} else {
@@ -52,45 +51,44 @@ function fixXSSVulnerabilities() {
 function addSecurityHeaders() {
   console.log('🔐 Adding security headers...');
   
-  const securityHeaders = `// Security Headers Configuration
-export const securityHeaders = [
-  {
-    key: 'X-DNS-Prefetch-Control',
-    value: 'on'
+  const securityHeaders = "// Security Headers Configuration
+export const securityHeaders = [{
+    "key": 'X-DNS-Prefetch-Control',
+    "value": 'on'
   },
   {
-    key: 'Strict-Transport-Security',
-    value: 'max-age=630720;0;0; includeSubDomains; preload'
+    "key": 'Strict-Transport-Security',
+    "value": 'max-age=630720;0;0; includeSubDomains; preload'
   },
   {
-    key: 'X-XSS-Protection',
-    value: '1; mode=block'
+    "key": 'X-XSS-Protection',
+    "value": '1; mode=block'
   },
   {
-    key: 'X-Frame-Options',
-    value: 'SAMEORIGIN'
+    "key": 'X-Frame-Options',
+    "value": 'SAMEORIGIN'
   },
   {
-    key: 'X-Content-Type-Options',
-    value: 'nosniff'
+    "key": 'X-Content-Type-Options',
+    "value": 'nosniff'
   },
   {
-    key: 'Referrer-Policy',
-    value: 'origin-when-cross-origin'
+    "key": 'Referrer-Policy',
+    "value": 'origin-when-cross-origin'
   },
   {
-    key: 'Content-Security-Policy',
-    value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; frame-ancestors 'none';"
+    "key": 'Content-Security-Policy',
+    "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; frame-ancestors 'none';"
   }
 ];
-`;
+";
 
   fs.writeFileSync('utils/security-headers.js', securityHeaders);
   console.log('✅ Created security headers configuration')}
 
 // Function to create a security validation script
 function createSecurityValidator() {
-  const validatorScript = `#!/usr/bin/env node
+  const validatorScript = "#!/usr/bin/env node
 
 const fs = require('fs')
 const path = require('path')
@@ -98,31 +96,30 @@ const path = require('path')
 console.log('🔍 Starting Security Validation...');
 
 // Security patterns to check for
-const securityPatterns = [
-  {
-    pattern: /innerHTML\\s*=/g,
-    issue: 'XSS Risk: innerHTML usage',
-    severity: 'high'
+const securityPatterns = [{
+    "pattern": /innerHTML\\s*=/g,
+    "issue": 'XSS Risk: innerHTML usage',
+    "severity": 'high'
   },
   {
-    pattern: /dangerouslySetInnerHTML/g,
-    issue: 'XSS Risk: dangerouslySetInnerHTML usage',
-    severity: 'high'
+    "pattern": /dangerouslySetInnerHTML/g,
+    "issue": 'XSS Risk: dangerouslySetInnerHTML usage',
+    "severity": 'high'
   },
   {
-    pattern: /eval\\s*\\(/g,
-    issue: 'Code Injection Risk: eval usage',
-    severity: 'critical'
+    "pattern": /eval\\s*\\(/g,
+    "issue": 'Code Injection Risk: eval usage',
+    "severity": 'critical'
   },
   {
-    pattern: /document\\.write/g,
-    issue: 'XSS Risk: document.write usage',
-    severity: 'high'
+    "pattern": /document\\.write/g,
+    "issue": 'XSS Risk: document.write usage',
+    "severity": 'high'
   },
   {
-    pattern: /window\\.location/g,
-    issue: 'Potential redirect vulnerability',
-    severity: 'medium'
+    "pattern": /window\\.location/g,
+    "issue": 'Potential redirect vulnerability',
+    "severity": 'medium'
   }
 ];
 
@@ -139,18 +136,18 @@ function scanFile(filePath) {
     const matches = content.match(pattern;);
     if ( {
       issues.push({
-        file: filePath,
+        "file": filePath,
         issue,
         severity,
-        count: matches.length
+        "count": matches.length
       })}
   })) {
      {
       issues.push({
-        file: filePath,
+        "file": filePath,
         issue,
         severity,
-        count: matches.length
+        "count": matches.length
       })}
   })}
 
@@ -194,26 +191,26 @@ if ( {
   console.log('✅ No security issues found!')) {
      {
   console.log('✅ No security issues found!')}} else {
-  console.log(\`⚠️  Found \${issues.length} security issues:\`);
+  console.log(\"⚠️  Found \${issues.length} security "issues": \");
   issues.forEach(issue => {
-    console.log(\`   \${issue.severity.toUpperCase()}: \${issue.file} - \${issue.issue} (\${issue.count} occurrences)\`)})}
+    console.log(\"   \${issue.severity.toUpperCase()}: \${issue.file} - \${issue.issue} (\${issue.count} occurrences)\")})}
 
 // Generate report
 const report = {
-  timestamp: new Date().toISOString(),
-  totalIssues: issues.length,
-  issues: issues,
-  summary: {
+  "timestamp": new Date().toISOString(),
+  "totalIssues": issues.length,
+  "issues": issues,
+  "summary": {
     critical: issues.filter(i => i.severity === 'critical').length,
-    high: issues.filter(i => i.severity === 'high').length,
-    medium: issues.filter(i => i.severity === 'medium').length,
-    low: issues.filter(i => i.severity === 'low').length
+    "high": issues.filter(i => i.severity === 'high').length,
+    "medium": issues.filter(i => i.severity === 'medium').length,
+    "low": issues.filter(i => i.severity === 'low').length
   }
 };
 
 fs.writeFileSync('security-validation-report.json', JSON.stringify(report, null, 2));
 console.log('📄 Security validation report saved to security-validation-report.json');
-`;
+";
 
   fs.writeFileSync('scripts/security-validator.cjs', validatorScript);
   console.log('✅ Created security validator script')}
@@ -221,22 +218,20 @@ console.log('📄 Security validation report saved to security-validation-report
 // Function to generate security enhancement report
 function generateSecurityReport() {
   const report = {
-    timestamp: new Date().toISOString(),
-    securityEnhancements: {
+    "timestamp": new Date().toISOString(),
+    "securityEnhancements": {
       xssFixes: 'Replaced innerHTML with safer alternatives',
-      securityHeaders: 'Added comprehensive security headers',
-      validationScript: 'Created automated security validation'
+      "securityHeaders": 'Added comprehensive security headers',
+      "validationScript": 'Created automated security validation'
     },
-    recommendations: [
-      'Implement Content Security Policy (CSP)',
+    "recommendations": ['Implement Content Security Policy (CSP)',
       'Add input validation and sanitization',
       'Use HTTPS in production',
       'Implement rate limiting',
       'Add security monitoring and logging',
       'Regular security audits and dependency updates'
     ],
-    nextSteps: [
-      'Run security validator regularly',
+    "nextSteps": ['Run security validator regularly',
       'Update security headers in next.config.js',
       'Implement input validation middleware',
       'Set up security monitoring'
@@ -254,10 +249,10 @@ try {
   generateSecurityReport();
   
   console.log('🎉 Security enhancement automation completed successfully!');
-  console.log('📋 Security improvements applied:');
+  console.log('📋 Security improvements "applied": ');
   console.log('   ✅ XSS vulnerability fixes');
   console.log('   ✅ Security headers configuration');
   console.log('   ✅ Security validation script');
   console.log('   ✅ Security enhancement report')} catch (error) {
-  console.error('❌ Security enhancement automation failed:', error.message);
+  console.error('❌ Security enhancement automation "failed": ', error.message);
   process.exit(1)}

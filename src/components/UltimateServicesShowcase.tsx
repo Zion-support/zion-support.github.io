@@ -12,37 +12,28 @@ import { ultimateInnovativeServices2025 } from '../../data / 2025 - ultimate - i
  from 'lucide - react';
 
 // Import the new services
-  ;';
-  ;';';
-  website: 'https://ziontechgroup.com';
-};
-;';
+  ;';';';
+  "website": 'https://ziontechgroup.com';
+};';
 
-    name: 'Micro SAAS Solutions',
-    description: 'Innovative software solutions for small businesses',";
-    icon: <Code className="w-8 h-8"   />,;';';
-    color: 'from-green-600 to-emerald-700',
-    services: innovativeMicroSaasSolutions202 5};
+    "name": 'Micro SAAS Solutions',
+    "description": 'Innovative software solutions for small businesses',";
+    "icon": <Code className="w-8 h-8"   />,;';';
+    "color": 'from-green-600 to-emerald-700',
+    "services": innovativeMicroSaasSolutions202 5};
 ];
-;
 
-  ;
-  ;  ;';
-  ;';';
+  ;  ;';';';
   'Emerging': 'from-green-600 to-emerald-700';
 };
-;
 
-  ;';
-  ;';';
+  ;';';';
 '
   'Patented': 'from-green-600 to-emerald-700','
   'Patent Pending': 'from-yellow-600 to-orange-700','
-  'Trade Secret': 'from-blue-600 to-indigo-700',;  ;
-  ;';
-  ;';';
+  'Trade Secret': 'from-blue-600 to-indigo-700',;
+  ;';';';
   'Open Source': 'from-purple-600 to-violet-700';
-;
 
 };
 
@@ -55,31 +46,31 @@ export function UltimateServicesShowcase(...args[]):  {
     ...enterpriseITInfrastructureServices2025,;
     ...innovativeMicroSaasSolutions2025;
   ];
-      y: 0,;
-      transition: {
+      "y": 0,;
+      "transition": {
         duration: 0.6,;"
-        ease: "easeOut"}}};
+        "ease": "easeOut"}}};
   return ("
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"
-      <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+      <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">
         {/* Header */}
         <motion.div"
           className="text-center mb-16"
           initial = {
 
-  { opacity: 0,
-  y: 2 0
+  { "opacity": 0,
+  "y": 2 0
 
 }}
           animate = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
-          transition={{ duration: 0.8 }}
+          transition={{ "duration": 0.8 }}
 "
-          <h1 className="text-5xl md: tex t-6xl font-bold text-white mb-6">"
+          <h1 className="text-5xl "md": tex t-6xl font-bold text-white mb-6">"
             <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">
               Ultimate Innovation
             </span>
@@ -110,20 +101,20 @@ export function UltimateServicesShowcase(...args[]):  {
           className="flex flex-wrap justify-center gap-4 mb-12"
           initial = {
 
-  { opacity: 0,
-  y: 2 0
+  { "opacity": 0,
+  "y": 2 0
 
 }}
           animate = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
           transition = {
 
-  { duration: 0.8,
-  delay: 0.2
+  { "duration": 0.8,
+  "delay": 0.2
 
 }}
         >
@@ -131,19 +122,19 @@ export function UltimateServicesShowcase(...args[]):  {
             onClick={() => setSelectedCategory('all')}
             className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === 'all"
                 ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25"
-                : 'bg-zion-slate-light text-zion-gray-light hover: b g-zion-slate hover: tex t-white'`
-            }`}
+                : 'bg-zion-slate-light text-zion-gray-light "hover": b g-zion-slate hover: tex t-white'`
+            }"}
 
             All Services({allServices.length})
           </button>
           {categories.map((category)  => (
             <button
               key={category.id}
-              onClick={() => setSelectedCategory(category.id)}`
+              onClick={() => setSelectedCategory(category.id)}"
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === category.id'
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25"
-                  : 'bg-zion-slate-light text-zion-gray-light hover: b g-zion-slate hover: tex t-white'`
-              }`}
+                  : 'bg-zion-slate-light text-zion-gray-light "hover": b g-zion-slate hover: tex t-white'`
+              }"}
 
               {category.name} ({category.services.length}) ;
             </button>;) ) }
@@ -151,7 +142,7 @@ export function UltimateServicesShowcase(...args[]):  {
 
         {/* Services Grid */}
         <motion.div"
-          className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8"
+          className="grid grid-cols-1 "md": gri d-cols-2 lg: gri d-cols-3 gap-8"
           variants={containerVariants}"
           initial="hidden"
           animate="visible"
@@ -161,7 +152,7 @@ export function UltimateServicesShowcase(...args[]):  {
               variants={itemVariants}"
               className="group relative"
 "
-              <div className="bg-zion-slate-light rounded-2xl p-6 h-full border border-zion-slate hover: borde r-zion-cyan transition-all duration-300 hover: shado w-2xl hover: shado w-zion-cyan/20">
+              <div className="bg-zion-slate-light rounded-2xl p-6 h-full border border-zion-slate "hover": borde r-zion-cyan transition-all duration-300 hover: shado w-2xl hover: shado w-zion-cyan/20">
                 {/* Service Header */}"
                 <div className="mb-4">"
                   <div className="flex items-center justify-between mb-3">"
@@ -172,7 +163,7 @@ export function UltimateServicesShowcase(...args[]):  {
                       </span>
                     )}
                   </div>"
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover: tex t-zion-cyan transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-white mb-2 group-"hover": tex t-zion-cyan transition-colors duration-300">
                     {service.name}
                   </h3>"
                   <p className="text-zion-gray-light text-sm leading-relaxed">
@@ -196,18 +187,18 @@ export function UltimateServicesShowcase(...args[]):  {
                 </div>
 
                 {/* Innovation Level & Patent Status */}"
-                <div className="flex flex-wrap gap-2 mb-4">`
+                <div className="flex flex-wrap gap-2 mb-4">"
                   <span className={`bg-gradient-to-r ${innovationLevelColors[service.innovationLevel]} text-white text-xs px-3 py-1 rounded-full font-semibold`}>
                     {service.innovationLevel}
-                  </span>`
-                  <span className={`bg-gradient-to-r ${patentStatusColors[service.patentStatus]} text-white text-xs px-3 py-1 rounded-full font-semibold`}>
+                  </span>"
+                  <span className={"bg-gradient-to-r ${patentStatusColors[service.patentStatus]} text-white text-xs px-3 py-1 rounded-full font-semibold"}>
                     {service.patentStatus}
                   </span>
                 </div>
 
                 {/* Key Features */}"
                 <div className="mb-4">"
-                  <h4 className="text-white font-semibold mb-2">Key Features:</h4>"
+                  <h4 className="text-white font-semibold mb-2">Key "Features": </h4>"
                   <ul className="space-y-1">
                     {service.features.slice(0, 3).map((feature, index) => ("
                       <li key={index} className="flex items-center gap-2 text-sm text-zion-gray-light">"
@@ -218,12 +209,12 @@ export function UltimateServicesShowcase(...args[]):  {
 
                 {/* ROI & Market Info */}"
                 <div className="mb-4 p-3 bg-zion-slate rounded-lg">"
-                  <p className="text-zion-cyan text-sm font-semibold mb-1">ROI & Market:</p>"
+                  <p className="text-zion-cyan text-sm font-semibold mb-1">ROI & "Market": </p>"
                   <p className="text-zion-gray-light text-xs leading-relaxed">
                     {service.roi}
                   </p>"
                   <p className="text-zion-gray-light text-xs mt-1">
-                    Market: {service.marketSize} • Growth: {service.growthRate}
+                    "Market": {service.marketSize} • "Growth": {service.growthRate}
                   </p>
                 </div>
 
@@ -242,13 +233,13 @@ export function UltimateServicesShowcase(...args[]):  {
                 <div className="flex gap-2">
                   <button
                     onClick={() => setSelectedService(service)}"
-                    className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg font-semibold hover: fro m-zion-blue hover: t o-zion-cyan transition-all duration-300 flex items-center justify-center gap-2"
+                    className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg font-semibold "hover": fro m-zion-blue hover: t o-zion-cyan transition-all duration-300 flex items-center justify-center gap-2"
 
                     Learn More"
                     <ArrowRight className="w-4 h-4"   />
                   </button>
                   <Link to={service.link}"
-                    className="bg-zion-slate-light border border-zion-cyan text-zion-cyan px-4 py-2 rounded-lg font-semibold hover: b g-zion-cyan hover: tex t-white transition-all duration-300 flex items-center justify-center"
+                    className="bg-zion-slate-light border border-zion-cyan text-zion-cyan px-4 py-2 rounded-lg font-semibold "hover": b g-zion-cyan hover: tex t-white transition-all duration-300 flex items-center justify-center"
 "
                     <Zap className="w-4 h-4"    />                  </Link>
                 </div>;
@@ -261,14 +252,14 @@ export function UltimateServicesShowcase(...args[]):  {
           className="text-center mt-16"
           initial = {
 
-  { opacity: 0,
-  y: 2 0 }}          animate = {
+  { "opacity": 0,
+  "y": 2 0 }}          animate = {
 
-  { opacity: 1,
-  y: 0 }}          transition = {
+  { "opacity": 1,
+  "y": 0 }}          transition = {
 
-  { duration: 0.8,
-  delay: 0.4 }}
+  { "duration": 0.8,
+  "delay": 0.4 }}
         >"
           <div className="bg-gradient-to-r from-zion-slate to-zion-slate-light rounded-2xl p-8 border border-zion-cyan">"            <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -278,15 +269,15 @@ export function UltimateServicesShowcase(...args[]):  {
             <div className="flex flex-wrap justify-center gap-4">
               <Link "
                 to="/contact"
-                className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-semibold hover: fro m-zion-blue hover: t o-zion-cyan transition-all duration-300 flex items-center gap-2"
+                className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-semibold "hover": fro m-zion-blue hover: t o-zion-cyan transition-all duration-300 flex items-center gap-2"
 
                 Get Started Today"
                 <ArrowRight className="w-5 h-5"    />              </Link>
-              <a`
+              <a"
                 href={`tel:${contact.mobile}`'
-                  .replace(/\s/g,)
-                  .replace(/[^\d+]/g,)}"
-                className="bg-zion-slate-light border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover: b g-zion-cyan hover: tex t-white transition-all duration-300 flex items-center gap-2"
+                  .replace(/\s/g)
+                  .replace(/[^\d+]/g)}"
+                className="bg-zion-slate-light border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold "hover": b g-zion-cyan hover: tex t-white transition-all duration-300 flex items-center gap-2"
 "
                 <Phone className="w-5 h-5"   />                Call Now
               </a>
@@ -312,7 +303,7 @@ export function UltimateServicesShowcase(...args[]):  {
                 </div>
                 <button
                   onClick={() => setSelectedService(null)}"
-                  className="text-zion-gray-light hover: tex t-white text-2xl"
+                  className="text-zion-gray-light "hover": tex t-white text-2xl"
 
                   ×
                 </button>
@@ -346,19 +337,19 @@ export function UltimateServicesShowcase(...args[]):  {
                   <h3 className="text-xl font-bold text-white mb-3">Market Information</h3>"
                   <div className="space-y-3 mb-4">
                     <div>"
-                      <span className="text-zion-cyan font-semibold">Market Position:</span>"
+                      <span className="text-zion-cyan font-semibold">Market "Position": </span>"
                       <p className="text-zion-gray-light text-sm">{selectedService.marketPosition}</p>
                     </div>
                     <div>"
-                      <span className="text-zion-cyan font-semibold">Target Audience:</span>"
+                      <span className="text-zion-cyan font-semibold">Target "Audience": </span>"
                       <p className="text-zion-gray-light text-sm">{selectedService.targetAudience}</p>
                     </div>
                     <div>"
-                      <span className="text-zion-cyan font-semibold">ROI:</span>"
+                      <span className="text-zion-cyan font-semibold">"ROI": </span>"
                       <p className="text-zion-gray-light text-sm">{selectedService.roi}</p>
                     </div>
                     <div>"
-                      <span className="text-zion-cyan font-semibold">Market Disruption:</span>"
+                      <span className="text-zion-cyan font-semibold">Market "Disruption": </span>"
                       <p className="text-zion-gray-light text-sm">{selectedService.marketDisruption}</p>
                     </div>
                   </div>
@@ -366,7 +357,7 @@ export function UltimateServicesShowcase(...args[]):  {
                   <h3 className="text-xl font-bold text-white mb-3">Technology & Integrations</h3>"
                   <div className="space-y-3 mb-4">
                     <div>"
-                      <span className="text-zion-cyan font-semibold">Technology:</span>"
+                      <span className="text-zion-cyan font-semibold">"Technology": </span>"
                       <div className="flex flex-wrap gap-2 mt-1">
                         {selectedService.technology.map((tech, index) => ("
                           <span key={index} className="bg-zion-slate text-zion-cyan text-xs px-2 py-1 rounded">
@@ -375,7 +366,7 @@ export function UltimateServicesShowcase(...args[]):  {
                       </div>
                     </div>
                     <div>"
-                      <span className="text-zion-cyan font-semibold">Integrations:</span>"
+                      <span className="text-zion-cyan font-semibold">"Integrations": </span>"
                       <div className="flex flex-wrap gap-2 mt-1">
                         {selectedService.integrations.map((integration, index) => ("
                           <span key={index} className="bg-zion-slate text-zion-cyan text-xs px-2 py-1 rounded">
@@ -387,15 +378,15 @@ export function UltimateServicesShowcase(...args[]):  {
 "
                   <div className="flex gap-3">
                     <Linkto={selectedService.link}"
-                      className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-6 py-3 rounded-lg font-semibold hover: fro m-zion-blue hover: t o-zion-cyan transition-all duration-300 text-center"
+                      className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-6 py-3 rounded-lg font-semibold "hover": fro m-zion-blue hover: t o-zion-cyan transition-all duration-300 text-center"
 
                       Get Started
                     </Link>
-                    <a`
-                      href={`tel:${contact.mobile}`'
-                        .replace(/\s/g,)
-                        .replace(/[^\d+]/g,)}"
-                      className="bg-zion-slate border border-zion-cyan text-zion-cyan px-6 py-3 rounded-lg font-semibold hover: b g-zion-cyan hover: tex t-white transition-all duration-300 flex items-center justify-center"
+                    <a"
+                      href={"tel:${contact.mobile}"'
+                        .replace(/\s/g)
+                        .replace(/[^\d+]/g)}"
+                      className="bg-zion-slate border border-zion-cyan text-zion-cyan px-6 py-3 rounded-lg font-semibold "hover": b g-zion-cyan hover: tex t-white transition-all duration-300 flex items-center justify-center"
 "
                       <Phone className="w-5 h-5"   />                    </a>
                   </div>
@@ -409,7 +400,7 @@ export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;';
 export default UltimateServicesShowcase;';';
-"`
+""
 
 </motion>
 </motion>

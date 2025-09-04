@@ -15,11 +15,11 @@ class IntelligentDashboard {
   constructor() {
     this.port = process.env.DASHBOARD_PORT || 3001;
     this.metrics = {
-      system: {},
-      processes: [],
-      performance: {},
-      alerts: [],
-      trends: {}
+      "system": {},
+      "processes": [],
+      "performance": {},
+      "alerts": [],
+      "trends": {}
     };
     this.reportDir = path.join(process.cwd(), 'dashboard-reports');
     this.ensureDirectories();
@@ -27,8 +27,8 @@ class IntelligentDashboard {
 
   async ensureDirectories() {
     try {
-      await fs.mkdir(this.reportDir, { recursive: true });
-      await fs.mkdir(path.join(process.cwd(), 'logs'), { recursive: true });
+      await fs.mkdir(this.reportDir, { "recursive": true });
+      await fs.mkdir(path.join(process.cwd(), 'logs'), { "recursive": true });
     } catch (error) {
       console.log('Directories already exist or created');
     }
@@ -38,7 +38,7 @@ class IntelligentDashboard {
     return new Promise((resolve, reject) => {
       pm2.connect((err) => {
         if (err) {
-          console.error('❌ Failed to connect to PM2:', err);
+          console.error('❌ Failed to connect to "PM2": ', err);
           reject(err);
           return;
         }
@@ -68,21 +68,21 @@ class IntelligentDashboard {
     try {
       // Collect system metrics
       this.metrics.system = {
-        timestamp: Date.now(),
-        memory: {
+        "timestamp": Date.now(),
+        "memory": {
           total: os.totalmem(),
-          free: os.freemem(),
-          used: os.totalmem() - os.freemem(),
-          percentage: ((os.totalmem() - os.freemem()) / os.totalmem()) * 100
+          "free": os.freemem(),
+          "used": os.totalmem() - os.freemem(),
+          "percentage": ((os.totalmem() - os.freemem()) / os.totalmem()) * 100
         },
-        cpu: {
+        "cpu": {
           loadAverage: os.loadavg(),
-          cores: os.cpus().length,
-          model: os.cpus()[0].model
+          "cores": os.cpus().length,
+          "model": os.cpus()[0].model
         },
-        uptime: os.uptime(),
-        platform: os.platform(),
-        arch: os.arch()
+        "uptime": os.uptime(),
+        "platform": os.platform(),
+        "arch": os.arch()
       };
 
       // Collect process metrics
@@ -98,7 +98,7 @@ class IntelligentDashboard {
       this.metrics.trends = this.calculateTrends();
 
     } catch (error) {
-      console.error('❌ Error updating metrics:', error);
+      console.error('❌ Error updating "metrics": ', error);
     }
   }
 
@@ -111,16 +111,16 @@ class IntelligentDashboard {
         }
 
         const processMetrics = processes.map(process => ({
-          name: process.name,
-          pid: process.pid,
-          memory: process.monit.memory,
-          cpu: process.monit.cpu,
-          status: process.pm2_env.status,
-          uptime: process.pm2_env.pm_uptime,
-          restarts: process.pm2_env.restart_time,
-          instances: process.pm2_env.instances,
-          heapUsed: process.monit.heap_used,
-          heapTotal: process.monit.heap_total
+          "name": process.name,
+          "pid": process.pid,
+          "memory": process.monit.memory,
+          "cpu": process.monit.cpu,
+          "status": process.pm2_env.status,
+          "uptime": process.pm2_env.pm_uptime,
+          "restarts": process.pm2_env.restart_time,
+          "instances": process.pm2_env.instances,
+          "heapUsed": process.monit.heap_used,
+          "heapTotal": process.monit.heap_total
         }));
 
         resolve(processMetrics);
@@ -133,11 +133,11 @@ class IntelligentDashboard {
     
     if (processes.length === 0) {
       return {
-        totalMemory: 0,
-        averageCpu: 0,
-        totalInstances: 0,
-        onlineProcesses: 0,
-        totalRestarts: 0
+        "totalMemory": 0,
+        "averageCpu": 0,
+        "totalInstances": 0,
+        "onlineProcesses": 0,
+        "totalRestarts": 0
       };
     }
 
@@ -153,8 +153,8 @@ class IntelligentDashboard {
       totalInstances,
       onlineProcesses,
       totalRestarts,
-      memoryEfficiency: (totalMemory / (os.totalmem() / 1024 / 1024)) * 100, // MB
-      cpuEfficiency: 100 - averageCpu
+      "memoryEfficiency": (totalMemory / (os.totalmem() / 1024 / 1024)) * 100, // MB
+      "cpuEfficiency": 100 - averageCpu
     };
   }
 
@@ -166,34 +166,34 @@ class IntelligentDashboard {
     // Memory alerts
     if (system.memory.percentage > 90) {
       alerts.push({
-        type: 'memory',
-        severity: 'critical',
-        message: `High memory usage: ${system.memory.percentage.toFixed(2)}%`,
-        timestamp: Date.now()
+        "type": 'memory',
+        "severity": 'critical',
+        "message": `High memory usage: ${system.memory.percentage.toFixed(2)}%`,
+        "timestamp": Date.now()
       });
     } else if (system.memory.percentage > 80) {
       alerts.push({
-        type: 'memory',
-        severity: 'warning',
-        message: `Memory usage: ${system.memory.percentage.toFixed(2)}%`,
-        timestamp: Date.now()
+        "type": 'memory',
+        "severity": 'warning',
+        "message": `Memory usage: ${system.memory.percentage.toFixed(2)}%`,
+        "timestamp": Date.now()
       });
     }
 
     // CPU alerts
     if (system.cpu.loadAverage[0] > 4) {
       alerts.push({
-        type: 'cpu',
-        severity: 'critical',
-        message: `High CPU load: ${system.cpu.loadAverage[0].toFixed(2)}`,
-        timestamp: Date.now()
+        "type": 'cpu',
+        "severity": 'critical',
+        "message": `High CPU load: ${system.cpu.loadAverage[0].toFixed(2)}`,
+        "timestamp": Date.now()
       });
     } else if (system.cpu.loadAverage[0] > 2) {
       alerts.push({
-        type: 'cpu',
-        severity: 'warning',
-        message: `CPU load: ${system.cpu.loadAverage[0].toFixed(2)}`,
-        timestamp: Date.now()
+        "type": 'cpu',
+        "severity": 'warning',
+        "message": `CPU load: ${system.cpu.loadAverage[0].toFixed(2)}`,
+        "timestamp": Date.now()
       });
     }
 
@@ -201,19 +201,19 @@ class IntelligentDashboard {
     for (const process of this.metrics.processes) {
       if (process.status !== 'online') {
         alerts.push({
-          type: 'process',
-          severity: 'critical',
-          message: `Process ${process.name} is ${process.status}`,
-          timestamp: Date.now()
+          "type": 'process',
+          "severity": 'critical',
+          "message": `Process ${process.name} is ${process.status}`,
+          "timestamp": Date.now()
         });
       }
 
       if (process.restarts > 5) {
         alerts.push({
-          type: 'process',
-          severity: 'warning',
-          message: `Process ${process.name} has restarted ${process.restarts} times`,
-          timestamp: Date.now()
+          "type": 'process',
+          "severity": 'warning',
+          "message": `Process ${process.name} has restarted ${process.restarts} times`,
+          "timestamp": Date.now()
         });
       }
     }
@@ -225,10 +225,10 @@ class IntelligentDashboard {
     // This would typically use historical data
     // For now, return basic trend indicators
     return {
-      memoryTrend: 'stable',
-      cpuTrend: 'stable',
-      processTrend: 'stable',
-      performanceTrend: 'improving'
+      "memoryTrend": 'stable',
+      "cpuTrend": 'stable',
+      "processTrend": 'stable',
+      "performanceTrend": 'improving'
     };
   }
 
@@ -265,8 +265,8 @@ class IntelligentDashboard {
     });
 
     server.listen(this.port, () => {
-      console.log(`🌐 Dashboard server running on http://localhost:${this.port}`);
-      console.log(`📊 Dashboard available at: http://localhost:${this.port}`);
+      console.log(`🌐 Dashboard server running on "http": //localhost:${this.port}`);
+      console.log(`📊 Dashboard available "at": http://localhost:${this.port}`);
     });
   }
 
@@ -297,7 +297,7 @@ class IntelligentDashboard {
   }
 
   generateDashboardHTML() {
-    return `
+    return "
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -306,117 +306,117 @@ class IntelligentDashboard {
     <title>Zion Tech Group - Intelligent PM2 Dashboard</title>
     <style>
         * {
-            margin: 0;
+            "margin": 0;
             padding: 0;
             box-sizing: border-box;
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #333;
+            font-"family": 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            "background": linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            "color": #333;
             min-height: 100vh;
         }
         
         .container {
-            max-width: 1200px;
+            max-"width": 1200px;
             margin: 0 auto;
             padding: 20px;
         }
         
         .header {
-            text-align: center;
+            text-"align": center;
             color: white;
             margin-bottom: 30px;
         }
         
         .header h1 {
-            font-size: 2.5rem;
+            font-"size": 2.5rem;
             margin-bottom: 10px;
         }
         
         .header p {
-            font-size: 1.2rem;
+            font-"size": 1.2rem;
             opacity: 0.9;
         }
         
         .dashboard-grid {
-            display: grid;
+            "display": grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            "gap": 20px;
             margin-bottom: 30px;
         }
         
         .card {
-            background: white;
+            "background": white;
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            "transition": transform 0.3s ease;
         }
         
-        .card:hover {
+        ."card": hover {
             transform: translateY(-5px);
         }
         
         .card h3 {
-            color: #4a5568;
+            "color": #4a5568;
             margin-bottom: 15px;
             font-size: 1.3rem;
         }
         
         .metric {
-            display: flex;
+            "display": flex;
             justify-content: space-between;
             align-items: center;
             padding: 10px 0;
             border-bottom: 1px solid #e2e8f0;
         }
         
-        .metric:last-child {
+        ."metric": last-child {
             border-bottom: none;
         }
         
         .metric-label {
-            font-weight: 500;
+            font-"weight": 500;
             color: #4a5568;
         }
         
         .metric-value {
-            font-weight: bold;
+            font-"weight": bold;
             color: #2d3748;
         }
         
         .status-online {
-            color: #38a169;
+            "color": #38a169;
         }
         
         .status-offline {
-            color: #e53e3e;
+            "color": #e53e3e;
         }
         
         .status-warning {
-            color: #dd6b20;
+            "color": #dd6b20;
         }
         
         .alert {
-            padding: 10px;
+            "padding": 10px;
             border-radius: 5px;
             margin: 5px 0;
         }
         
         .alert-critical {
-            background-color: #fed7d7;
+            background-"color": #fed7d7;
             border-left: 4px solid #e53e3e;
         }
         
         .alert-warning {
-            background-color: #fef5e7;
+            background-"color": #fef5e7;
             border-left: 4px solid #dd6b20;
         }
         
         .refresh-btn {
-            background: #4299e1;
+            "background": #4299e1;
             color: white;
             border: none;
             padding: 10px 20px;
@@ -426,12 +426,12 @@ class IntelligentDashboard {
             margin: 10px 0;
         }
         
-        .refresh-btn:hover {
+        .refresh-"btn": hover {
             background: #3182ce;
         }
         
         .footer {
-            text-align: center;
+            text-"align": center;
             color: white;
             margin-top: 30px;
             opacity: 0.8;
@@ -541,7 +541,7 @@ class IntelligentDashboard {
         
         <div class="footer">
             <p>Zion Tech Group - Intelligent PM2 Dashboard v3.0</p>
-            <p>Last updated: <span id="last-updated">Loading...</span></p>
+            <p>Last "updated": <span id="last-updated">Loading...</span></p>
         </div>
     </div>
     
@@ -552,7 +552,7 @@ class IntelligentDashboard {
                 const data = await response.json();
                 updateDashboard(data);
             } catch (error) {
-                console.error('Error fetching data:', error);
+                console.error('Error fetching "data": ', error);
             }
         }
         
@@ -592,9 +592,9 @@ class IntelligentDashboard {
                 alertList.innerHTML = '<div class="metric"><span class="metric-label">No active alerts</span></div>';
             } else {
                 alertList.innerHTML = alerts.map(alert => 
-                    \`<div class="alert alert-\${alert.severity}">
+                    \"<div class="alert alert-\${alert.severity}">
                         <strong>\${alert.type.toUpperCase()}:</strong> \${alert.message}
-                    </div>\`
+                    </div>\"
                 ).join('');
             }
         }
@@ -602,12 +602,12 @@ class IntelligentDashboard {
         function updateProcessDetails(processes) {
             const processDetails = document.getElementById('process-details');
             processDetails.innerHTML = processes.map(process => 
-                \`<div class="metric">
+                \"<div class="metric">
                     <span class="metric-label">\${process.name}</span>
                     <span class="metric-value status-\${process.status === 'online' ? 'online' : 'offline'}">
                         \${process.status} (\${process.instances} instances)
                     </span>
-                </div>\`
+                </div>\"
             ).join('');
         }
         
@@ -615,7 +615,7 @@ class IntelligentDashboard {
             const days = Math.floor(seconds / 86400);
             const hours = Math.floor((seconds % 86400) / 3600);
             const minutes = Math.floor((seconds % 3600) / 60);
-            return \`\${days}d \${hours}h \${minutes}m\`;
+            return \"\${days}d \${hours}h \${minutes}m\";
         }
         
         function refreshData() {
@@ -629,26 +629,26 @@ class IntelligentDashboard {
         fetchData();
     </script>
 </body>
-</html>`;
+</html>";
   }
 
   async generateDashboardReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      metrics: this.metrics,
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "metrics": this.metrics,
+      "summary": {
         totalProcesses: this.metrics.processes.length,
-        onlineProcesses: this.metrics.performance.onlineProcesses,
-        totalInstances: this.metrics.performance.totalInstances,
-        activeAlerts: this.metrics.alerts.length,
-        systemHealth: this.calculateSystemHealth()
+        "onlineProcesses": this.metrics.performance.onlineProcesses,
+        "totalInstances": this.metrics.performance.totalInstances,
+        "activeAlerts": this.metrics.alerts.length,
+        "systemHealth": this.calculateSystemHealth()
       }
     };
 
     const reportPath = path.join(this.reportDir, `dashboard-report-${Date.now()}.json`);
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
     
-    console.log(`📊 Dashboard report saved to: ${reportPath}`);
+    console.log(`📊 Dashboard report saved "to": ${reportPath}`);
     return report;
   }
 
@@ -703,7 +703,7 @@ async function main() {
     });
 
   } catch (error) {
-    console.error('❌ Dashboard System failed:', error);
+    console.error('❌ Dashboard System "failed": ', error);
     process.exit(1);
   }
 }

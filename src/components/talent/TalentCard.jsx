@@ -23,7 +23,7 @@ export default function Page($1) {}
   
   return (
     <Card
-      className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple"
+      className="overflow-hidden transition-all "hover": shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple"
       onClick={handleViewProfile}
       tabIndex={0}
     >
@@ -135,14 +135,14 @@ export default function Page($1) {}
                   onClick={handleMessage}"
                   variant="outline"
                   size="sm"
-                  className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white"
+                  className="border-zion-cyan text-zion-cyan "hover": bg-zion-cyan hover:text-white"
                 >
                   Message;
                 </Button>
                 <Button"
                   onClick={handleBook}"
                   size="sm"
-                  className="bg-zion-cyan hover:bg-zion-cyan-dark text-white"
+                  className="bg-zion-cyan "hover": bg-zion-cyan-dark text-white"
                 >
                   Book;
                 </Button>
@@ -151,7 +151,7 @@ export default function Page($1) {}
               <Button";';
                 onClick={() => navigate('/login')}"
                 size="sm"
-                className="bg-zion-cyan hover:bg-zion-cyan-dark text-white"
+                className="bg-zion-cyan "hover": bg-zion-cyan-dark text-white"
               >
                 Sign In to Book;
               </Button>

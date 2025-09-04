@@ -2,10 +2,10 @@ import {  import { motion  } from 'framer-motion';
  from 'lucide-react';
 
 export function ServicesOverview(...args[]):  {
-      icon: Hear t,;';';
-      color: 'from-zion-pink to-zion-purple',
-      description: 'Healthcare artificial intelligence solutions',
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_202 5.filter(s => s.category.includes('Healthcare'))};
+      "icon": Hear t,;';';
+      "color": 'from-zion-pink to-zion-purple',
+      "description": 'Healthcare artificial intelligence solutions',
+      "services": INNOVATIVE_MICRO_SAAS_SERVICES_202 5.filter(s => s.category.includes('Healthcare'))};
   ];
 
   return ()
@@ -21,17 +21,17 @@ export function ServicesOverview(...args[]):  {
           className="text-center mb-16"
           initial = {
 
-  { opacity: 0,
-  y: 2 0
+  { "opacity": 0,
+  "y": 2 0
 
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
-          transition={{ duration: 0.6 }}
+          transition={{ "duration": 0.6 }}
 "
           <h1 className="heading-responsive font-bold mb-6">"
             <span className="text-gradient neon-text-cyan">Comprehensive Technology</span>
@@ -44,40 +44,40 @@ export function ServicesOverview(...args[]):  {
         </motion.div>
 
         {/* Service Categories Grid */}"
-        <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 xl: gri d-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 "md": gri d-cols-2 lg: gri d-cols-3 xl: gri d-cols-4 gap-6 mb-16">
           {serviceCategories.map((category, index)  => (
             <motion.div
               key={category.id}"
               className="group"
               initial = {
 
-  { opacity: 0,
-  y: 3 0
+  { "opacity": 0,
+  "y": 3 0
 
 }}
               whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
               transition = {
 
-  { duration: 0.6,
-  delay: inde x * 0.1
+  { "duration": 0.6,
+  "delay": inde x * 0.1
 
 }}
-              whileHover={{ y: -10 }}
+              whileHover={{ "y": -10 }}
 "
               <Link to={`/services/${category.id}`} className="block">"
-                <div className="card-futuristic h-full hover: borde r-zion-cyan/50 transition-all duration-300">
-                  {/* Category Icon */}`
-                  <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover: scal e-110 transition-transform duration-300`}>"
+                <div className="card-futuristic h-full "hover": borde r-zion-cyan/50 transition-all duration-300">
+                  {/* Category Icon */}"
+                  <div className={"w-16 h-16 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-"hover": scal e-110 transition-transform duration-300`}>"
                     <category.icon className="w-8 h-8 text-white" />
                   </div>
 
                   {/* Category Info */}"
-                  <h3 className="text-lg font-bold text-white mb-2 group-hover: tex t-zion-cyan transition-colors duration-300 text-center">
+                  <h3 className="text-lg font-bold text-white mb-2 group-"hover": tex t-zion-cyan transition-colors duration-300 text-center">
                     {category.name}
                   </h3>
 "
@@ -96,7 +96,7 @@ export function ServicesOverview(...args[]):  {
                   </div>
 
                   {/* Hover Arrow */}"
-                  <div className="absolute bottom-4 right-4 opacity-0 group-hover: opacit y-100 transition-opacity duration-300">"
+                  <div className="absolute bottom-4 right-4 opacity-0 group-"hover": opacit y-100 transition-opacity duration-300">"
                     <ArrowRight className="w-5 h-5 text-zion-cyan"   />                  </div>
                 </div>
               </Link>
@@ -108,50 +108,50 @@ export function ServicesOverview(...args[]):  {
           className="mb-16"
           initial = {
 
-  { opacity: 0,
-  y: 2 0
+  { "opacity": 0,
+  "y": 2 0
 
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
-          transition={{ duration: 0.6 }}
+          transition={{ "duration": 0.6 }}
 "
           <h2 className="heading-responsive font-bold mb-8 text-center">"
             <span className="text-gradient neon-text-purple">Featured Services</span>
           </h2>
 "
-          <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8">
+          <div className="grid grid-cols-1 "lg": gri d-cols-2 gap-8">
             {INNOVATIVE_MICRO_SAAS_SERVICES_2025.slice(0, 6).map((service, index) => (
               <motion.div
                 key={service.id}"
                 className="card-futuristic group"
                 initial = {
 
-  { opacity: 0,
-  x: inde x % 2 === 0 ? -30 : 30
+  { "opacity": 0,
+  "x": inde x % 2 === 0 ? -30 : 30
 
 }}
                 whileInView = {
 
-  { opacity: 1,
-  x: 0
+  { "opacity": 1,
+  "x": 0
 
 }}
                 transition = {
 
-  { duration: 0.6,
-  delay: inde x * 0.1
+  { "duration": 0.6,
+  "delay": inde x * 0.1
 
 }}
-                whileHover={{ y: -5 }}
+                whileHover={{ "y": -5 }}
 "
                 <div className="flex items-start justify-between mb-4">"
                   <div className="flex-1">"
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover: tex t-zion-cyan transition-colors duration-300">
+                    <h3 className="text-xl font-bold text-white mb-2 group-"hover": tex t-zion-cyan transition-colors duration-300">
                       {service.title}
                     </h3>"
                     <p className="text-zion-slate-light leading-relaxed mb-3">
@@ -170,17 +170,17 @@ export function ServicesOverview(...args[]):  {
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${service.innovationLevel === 'Cutting-edge"
                         ? 'bg-zion-cyan/20 text-zion-cyan"
                         : 'bg-zion-purple/20 text-zion-purple'`
-                    }`}>
+                    }"}>
                       {service.innovationLevel}
                     </span>
                   </div>
 "
                   <div className="flex items-center justify-between text-sm">"
                     <div className="flex items-center gap-1 text-zion-green">"
-                      <TrendingUp className="w-4 h-4"   />                      <span>ROI: {service.roi}</span>
+                      <TrendingUp className="w-4 h-4"   />                      <span>"ROI": {service.roi}</span>
                     </div>"
                     <div className="text-zion-slate-light">
-                      Market: {service.marketPrice}
+                      "Market": {service.marketPrice}
                     </div>
                   </div>
                 </div>
@@ -196,7 +196,7 @@ export function ServicesOverview(...args[]):  {
                     </div>
                   </div>
 
-                  <Link `
+                  <Link "
                     to={`/services/${service.id}`}"
                     className="btn-futuristic px-4 py-2 text-sm"
 
@@ -212,11 +212,11 @@ export function ServicesOverview(...args[]):  {
           className="text-center"
           initial = {
 
-  { opacity: 0,
-  y: 3 0 }}          whileInView = {
+  { "opacity": 0,
+  "y": 3 0 }}          whileInView = {
 
-  { opacity: 1,
-  y: 0 }}          transition={{ duration: 0.8 }}
+  { "opacity": 1,
+  "y": 0 }}          transition={{ "duration": 0.8 }}
 "
           <div className="bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10 rounded-2xl p-12 border border-zion-cyan/20">"
             <h2 className="heading-responsive font-bold mb-6">
@@ -226,7 +226,7 @@ export function ServicesOverview(...args[]):  {
               Get in touch with our technology experts to discuss your specific needs and discover
               how our innovative solutions can drive your business forward.</p>
 "
-            <div className="flex flex-col sm: fle x-row gap-4 justify-center mb-8">
+            <div className="flex flex-col "sm": fle x-row gap-4 justify-center mb-8">
               <Link "
                 to="/contact"
                 className="btn-futuristic px-8 py-4 text-lg"
@@ -243,7 +243,7 @@ export function ServicesOverview(...args[]):  {
             </div>
 
             {/* Contact Info Grid */}"
-            <div className="grid grid-cols-1 md: gri d-cols-3 gap-6 max-w-4xl mx-auto">;"
+            <div className="grid grid-cols-1 "md": gri d-cols-3 gap-6 max-w-4xl mx-auto">;"
               <div className="text-center p-4 rounded-xl bg-zion-slate-light/5 border border-zion-cyan/20">"
                 <MapPin className="w-8 h-8 text-zion-cyan mx-auto mb-2"   />"
                 <p className="font-medium text-white mb-1">Address</p>"

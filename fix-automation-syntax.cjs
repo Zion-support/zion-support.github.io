@@ -4,8 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 // List of automation files to fix
-const automationFiles = [
-  'automation/dependency-fixer.cjs',
+const automationFiles = ['automation/dependency-fixer.cjs',
   'automation/typescript-fixer.cjs',
   'automation/health-check.cjs',
   'automation/security-scanner.cjs',
@@ -21,10 +20,10 @@ function fixSyntaxErrors(content) {
     .replace(/\),/g, ');')
     .replace(/\],/g, '];')
     // Remove extra semicolons after closing braces
-    .replace(/\[\];;/g, '[];')
-    .replace(/\{\};;/g, '{};')
-    .replace(/\);;/g, ');')
-    .replace(/\];;/g, '];')
+    .replace(/\[\];/g, '[];')
+    .replace(/\{\};/g, '{};')
+    .replace(/\);/g, ');')
+    .replace(/\];/g, '];')
     // Fix class name issues
     .replace(/class \$1/g, 'class DependencyFixer')
     .replace(/class \$2/g, 'class TypeScriptFixer')
@@ -33,10 +32,10 @@ function fixSyntaxErrors(content) {
     .replace(/class \$5/g, 'class PerformanceOptimizer')
     // Fix constructor issues
     .replace(/constructor\(\) \{[\s\S]*?this\.projectRoot = process\.cwd\(\);[\s\S]*?this\.fixes = \[\];[\s\S]*?this\.errors = \[\],?\s*\}/g, (match) => {
-      return match.replace(/\[\],/g, '[];').replace(/\[\];;/g, '[];')})
+      return match.replace(/\[\],/g, '[];').replace(/\[\];/g, '[];')})
     // Fix method definitions
-    .replace(/log\(message, type = "INFO"\) \{[\s\S]*?console\.log\(`\[.*?\] \[.*?\] \$\{message\}`\),?\s*\}/g, (match) => {
-      return match.replace(/\),/g, ');').replace(/\);;/g, ');')})
+    .replace(/log\(message, type = "INFO"\) \{[\s\S]*?console\.log\("\[.*?\] \[.*?\] \$\{message\}"\),?\s*\}/g, (match) => {
+      return match.replace(/\),/g, ');').replace(/\);/g, ');')})
     // Remove standalone semicolons
     .replace(/^\s*;\s*$/gm, '')
     // Fix object property syntax

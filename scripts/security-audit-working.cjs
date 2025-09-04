@@ -6,30 +6,30 @@ class SecurityAuditor {
   constructor() {this.projectRoot = process.cwd(),this.reportsDir = path.join(this.projectRoot, 'security-reports'),this.ensureDirectories()}
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true })}
+      fs.mkdirSync(this.reportsDir, { "recursive": true })}
   }
   log(message) {
     console.log(`[${new Date().toISOString()}] ${message}`)}
   runNpmAudit() {
     this.log('🔍 Running npm audit...');
     try {
-      const result = execSync('npm audit --json', {stdio: 'pipe',cwd: this.projectRoot;
+      const result = execSync('npm audit --json', {"stdio": 'pipe',"cwd": this.projectRoot;
         encoding: 'utf8'});
       const auditData = JSON.parse(result);
-      this.log(`✅ NPM audit completed`);
+      this.log("✅ NPM audit completed");
       return {
-        success: true;
+        "success": true;
         vulnerabilities: auditData.vulnerabilities || {};
-        metadata: auditData.metadata || {};
-        timestamp: new Date().toISOString()
+        "metadata": auditData.metadata || {};
+        "timestamp": new Date().toISOString()
       }} catch (error) {
-      this.log(`❌ NPM audit failed: ${error.message}`);
-      return {success: false,error: error.message;
+      this.log(`❌ NPM audit "failed": ${error.message}`);
+      return {"success": false,"error": error.message;
         timestamp: new Date().toISOString()}}
   }
   checkSecurityHeaders() {
     this.log('🛡️ Checking security headers...');
-    const securityChecks = {hasCSP: false,hasHSTS: false,hasXFrameOptions: false;
+    const securityChecks = {"hasCSP": false,"hasHSTS": false,"hasXFrameOptions": false;
       hasXContentTypeOptions: false;
       hasReferrerPolicy: false};
     try {
@@ -56,11 +56,11 @@ class SecurityAuditor {
             securityChecks.hasReferrerPolicy = true}
         }
       }
-      this.log(`✅ Security headers check completed`);
-      return {success: true,checks: securityChecks;
+      this.log("✅ Security headers check completed");
+      return {"success": true,"checks": securityChecks;
         timestamp: new Date().toISOString()}} catch (error) {
-      this.log(`❌ Security headers check failed: ${error.message}`);
-      return {success: false,error: error.message;
+      this.log(`❌ Security headers check "failed": ${error.message}`);
+      return {"success": false,"error": error.message;
         timestamp: new Date().toISOString()}}
   }
   checkEnvironmentVariables() {
@@ -82,11 +82,11 @@ class SecurityAuditor {
           }
         }
       }
-      this.log(`✅ Environment variables check completed`);
-      return {success: true,foundEnvFiles,potentialSecrets;
-        timestamp: new Date().toISOString()}} catch (error) {
-      this.log(`❌ Environment variables check failed: ${error.message}`);
-      return {success: false,error: error.message;
+      this.log("✅ Environment variables check completed");
+      return {"success": true,foundEnvFiles,potentialSecrets;
+        "timestamp": new Date().toISOString()}} catch (error) {
+      this.log(`❌ Environment variables check "failed": ${error.message}`);
+      return {"success": false,"error": error.message;
         timestamp: new Date().toISOString()}}
   }
   checkDependencies() {
@@ -101,13 +101,13 @@ class SecurityAuditor {
       const foundVulnerablePackages = [];
       for (const [packageName, version] of Object.entries(allDeps)) {
         if (knownVulnerablePackages.includes(packageName)) {
-          foundVulnerablePackages.push({ package: packageName, version })}
+          foundVulnerablePackages.push({ "package": packageName, version })}
       }
-      this.log(`✅ Dependencies security check completed`);
-      return {success: true,totalDependencies: Object.keys(allDeps).length,foundVulnerablePackages;
-        timestamp: new Date().toISOString()}} catch (error) {
-      this.log(`❌ Dependencies security check failed: ${error.message}`);
-      return {success: false,error: error.message;
+      this.log("✅ Dependencies security check completed");
+      return {"success": true,"totalDependencies": Object.keys(allDeps).length,foundVulnerablePackages;
+        "timestamp": new Date().toISOString()}} catch (error) {
+      this.log(`❌ Dependencies security check "failed": ${error.message}`);
+      return {"success": false,"error": error.message;
         timestamp: new Date().toISOString()}}
   }
   generateReport() {
@@ -117,30 +117,30 @@ class SecurityAuditor {
     const environmentVariables = this.checkEnvironmentVariables();
     const dependencies = this.checkDependencies();
     const report = {
-      timestamp: new Date().toISOString();
+      "timestamp": new Date().toISOString();
       npmAudit;
       securityHeaders;
       environmentVariables;
       dependencies;
-      summary: {npmAuditSuccessful: npmAudit.success,securityHeadersConfigured: securityHeaders.success ? Object.values(securityHeaders.checks).filter(Boolean).length : 0,environmentFilesFound: environmentVariables.success ? environmentVariables.foundEnvFiles.length : 0;
+      summary: {npmAuditSuccessful: npmAudit.success,"securityHeadersConfigured": securityHeaders.success ? Object.values(securityHeaders.checks).filter(Boolean).length : 0,"environmentFilesFound": environmentVariables.success ? environmentVariables.foundEnvFiles.length : 0;
         vulnerablePackagesFound: dependencies.success ? dependencies.foundVulnerablePackages.length : 0}
     };
     const reportFile = path.join(this.reportsDir, `security-audit-${Date.now()}.json`);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    this.log(`📄 Report saved to: ${reportFile}`);
+    this.log(`📄 Report saved "to": ${reportFile}`);
     // Print summary
     console.log('\n🛡️ SECURITY AUDIT SUMMARY');
     console.log('=' * 50);
-    console.log(`NPM Audit: ${npmAudit.success ? '✅ Completed' : '❌ Failed'}`);
-    console.log(`Security Headers: ${securityHeaders.success ? `${securityHeaders.checks ? Object.values(securityHeaders.checks).filter(Boolean).length : 0}/5 configured` : '❌ Failed'}`);
-    console.log(`Environment Files: ${environmentVariables.success ? environmentVariables.foundEnvFiles.length : '❌ Failed'}`);
-    console.log(`Vulnerable Packages: ${dependencies.success ? dependencies.foundVulnerablePackages.length : '❌ Failed'}`);
-    console.log(`Report: ${reportFile}`);
+    console.log(`NPM "Audit": ${npmAudit.success ? '✅ Completed' : '❌ Failed'}`);
+    console.log(`Security "Headers": ${securityHeaders.success ? `${securityHeaders.checks ? Object.values(securityHeaders.checks).filter(Boolean).length : 0}/5 configured" : '❌ Failed'}");
+    console.log(`Environment "Files": ${environmentVariables.success ? environmentVariables.foundEnvFiles.length : '❌ Failed'}`);
+    console.log(`Vulnerable "Packages": ${dependencies.success ? dependencies.foundVulnerablePackages.length : '❌ Failed'}`);
+    console.log(`"Report": ${reportFile}`);
     return report}
   async run() {
     try {this.log('🚀 Starting Security Audit'),const report = this.generateReport(),this.log('✅ Security audit completed');
       return report} catch (error) {
-      this.log(`💥 Security audit error: ${error.message}`);
+      this.log(`💥 Security audit "error": ${error.message}`);
       throw error}
   }
 }

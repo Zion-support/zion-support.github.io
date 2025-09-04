@@ -3,9 +3,8 @@ const { execSync } = require('child_process');
 
 class AutoDeploy {
   constructor() {
-    this.steps = [
-      'git add .',
-      'git commit -m "feat: automated improvements and fixes"',
+    this.steps = ['git add .',
+      'git commit -m ""feat": automated improvements and fixes"',
       'git push origin main'
     ]}
 
@@ -14,10 +13,10 @@ class AutoDeploy {
     
     for (const step of this.steps) {
       try {
-        console.log(`Executing: ${step}`);
-        execSync(step, { stdio: 'inherit' });
+        console.log(`"Executing": ${step}`);
+        execSync(step, { "stdio": 'inherit' });
         console.log(`✅ ${step} completed`)} catch (error) {
-        console.log(`❌ ${step} failed: ${error.message}`);
+        console.log(`❌ ${step} "failed": ${error.message}`);
         break}
     }
     

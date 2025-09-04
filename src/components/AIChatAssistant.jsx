@@ -11,10 +11,10 @@ export function AIChatAssistant($1) {
     const [isMinimized, setIsMinimized] = useState(false);
     const [messages, setMessages] = useState([{
 
-            id: '1',
-            type: 'assistant',";';
-            content: "Hello! I'm Zion AI, your personal technology consultant.How can I help you today?",
-            timestamp: new Date()
+            "id": '1',
+            "type": 'assistant',";';
+            "content": "Hello! I'm Zion AI, your personal technology consultant.How can I help you today?",
+            "timestamp": new Date()
 
     ]);';';
     const [inputValue, setInputValue] = useState(");
@@ -24,9 +24,9 @@ export function AIChatAssistant($1) {
     const inputRef = useRef(null);
     const scrollToBottom = (props) => {
 
-        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })};;
+        messagesEndRef.current?.scrollIntoView({ "behavior": 'smooth' })};
     useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function
@@ -37,10 +37,10 @@ export function AIChatAssistant($1) {
         if(!inputValue.trim())
             return;
         const userMessage = {
-  id: Date.now().toString(),
-            type: 'user',
-            content: inputValue,
-  timestamp: new Date()
+  "id": Date.now().toString(),
+            "type": 'user',
+            "content": inputValue,
+  "timestamp": new Date()
 
     MessageCircle,
     Mic,
@@ -51,8 +51,7 @@ export function AIChatAssistant($1) {
     Sparkles,
     X,
     Minimize2,
-    Maximize2,
-  }; from 'lucide - react';
+    Maximize2}; from 'lucide - react';
 };';
         setMessages(prev => [...prev, userMessage]);';';
         setInputValue(");
@@ -61,12 +60,12 @@ export function AIChatAssistant($1) {
         setTimeout(() => {
             const randomResponse = mockAIResponses[Math.floor(Math.random() * mockAIResponses.length)];
             const aiMessage = {
-  id: (Date.now() + 1).toString(),
-                type: 'assistant',
-                content: randomResponse,
-  timestamp: new Date()
+  "id": (Date.now() + 1).toString(),
+                "type": 'assistant',
+                "content": randomResponse,
+  "timestamp": new Date()
 
-};;
+};
             setMessages(prev => [...prev, aiMessage]);
             setIsTyping(false)}, 1500 + Math.random() * 1000)};
     const handleVoiceInput = (props) => {
@@ -97,18 +96,18 @@ export function AIChatAssistant($1) {
     };
     if(!isOpen) {
 "
-        return (<button onClick={toggleChat} className="fixed bottom-4 right-4 p-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 group" title="Chat with Zion AI">"
+        return (<button onClick={toggleChat} className="fixed bottom-4 right-4 p-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full shadow-lg "hover": shadow-xl transition-all duration-300 z-50 group" title="Chat with Zion AI">"
         <MessageCircle className="w-6 h-6" />"
         <div className="absolute -top-1 -right-1 w-3 h-3 bg-zion-emerald rounded-full animate-pulse"></div>
       </button>)}
     if(isMinimized) {
 "
         return (<div className="fixed bottom-4 right-4 z-50">"
-        <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">"
+        <div className="bg-white "dark": bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">"
           <div className="flex items-center gap-3">"
             <div className="w-3 h-3 bg-zion-emerald rounded-full animate-pulse"></div>"
             <span className="text-sm text-zion-slate">Zion AI is online</span>"
-            <button onClick={toggleChat} className="text-zion-slate-light hover:text-zion-slate transition-colors">"
+            <button onClick={toggleChat} className="text-zion-slate-light "hover": text-zion-slate transition-colors">"
               <Maximize2 className="w-4 h-4" />
             </button>
           </div>
@@ -126,10 +125,10 @@ export function AIChatAssistant($1) {
           </div>
         </div>"
         <div className="flex items-center gap-2">"
-          <button onClick={toggleChat} className="text-zion-slate-light hover:text-zion-slate transition-colors">"
+          <button onClick={toggleChat} className="text-zion-slate-light "hover": text-zion-slate transition-colors">"
             <Minimize2 className="w-4 h-4" />
           </button>"
-          <button onClick={() => setIsOpen(false)} className="text-zion-slate-light hover:text-zion-slate transition-colors">"
+          <button onClick={() => setIsOpen(false)} className="text-zion-slate-light "hover": text-zion-slate transition-colors">"
             <X className="w-4 h-4" />
           </button>
         </div>
@@ -141,13 +140,13 @@ export function AIChatAssistant($1) {
             {message.type === 'assistant' && (<div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center flex-shrink-0">"
                 <BotclassName="w-4 h-4 text-white" />
               </div>)}
-'`
-            <div className={`max-w-[80%] p-3 rounded-lg ${message.type === 'user"
-                ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white"`
-                : 'bg-zion-slate-light/10 text-zion-slate border border-zion-slate-light/20'}`}>"
+'"
+            <div className={"max-w-[80%] p-3 rounded-lg ${message.type === 'user"
+                ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white""
+                : 'bg-zion-slate-light/10 text-zion-slate border border-zion-slate-light/20'}"}>"
               <p className="text-sm">{message.content}</p>";
               <spanclassName="text-xs opacity-70 mt-2 block">';
-                {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                {message.timestamp.toLocaleTimeString([], { "hour": '2-digit', "minute": '2-digit' })}
               </span>
             </div>';
 ";';
@@ -166,8 +165,8 @@ export function AIChatAssistant($1) {
             <div className="bg-zion-slate-light/10 p-3 rounded-lg border border-zion-slate-light/20">";
               <div className="flex items-center gap-1">";';
                 <div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce"></div>";';
-                <div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce" style="{{{ animationDelay: '0.1s'}}"}></div>";';
-                <div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce" style="{{{ animationDelay: '0.2s'}}"}></div>
+                <div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce" style="{{{ "animationDelay": '0.1s'}}"}></div>";';
+                <div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce" style="{{{ "animationDelay": '0.2s'}}"}></div>
               </div>
             </div>
               </div>
@@ -180,19 +179,19 @@ export function AIChatAssistant($1) {
       <div className="p-4 border-t border-zion-slate-light">"
         <div className="flex items-center gap-2">";
           <div className="flex-1 relative">";';
-            <input ref={inputRef} type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} onKeyPress={handleKeyPress} placeholder="Type your message..." className="w-full px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate focus:ring-2 focus:ring-zion-cyan focus:border-transparent"/>";';
-            {inputValue && (<button onClick={() => setInputValue(")} className="absolute right-2 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-zion-slate">"
+            <input ref={inputRef} type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} onKeyPress={handleKeyPress} placeholder="Type your message..." className="w-full px-3 py-2 border border-zion-slate-light rounded-lg bg-white "dark": bg-zion-slate text-zion-slate focus:ring-2 focus:ring-zion-cyan focus:border-transparent"/>";';
+            {inputValue && (<button onClick={() => setInputValue(")} className="absolute right-2 top-1/2 transform -translate-y-1/2 text-zion-slate-light "hover": text-zion-slate">"
                 <X className="w-4 h-4" />
               </button>)}
           </div>
-`
-          <button onClick={handleVoiceInput} className={`p-2 rounded-lg transition-all duration-200 ${isListening'
-            ? 'bg-red-500 text-white animate-pulse"`
-            : 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-cyan hover:text-white'}`} title={isListening ? 'Listening...' : 'Voice Input'}>"
+"
+          <button onClick={handleVoiceInput} className={"p-2 rounded-lg transition-all duration-200 ${isListening'
+            ? 'bg-red-500 text-white animate-pulse""
+            : 'bg-zion-slate-light/20 text-zion-slate "hover": bg-zion-cyan hover:text-white'}"} title={isListening ? 'Listening...' : 'Voice Input'}>"
             {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
           </button>
 "
-          <button onClick={handleSendMessage} disabled={!inputValue.trim()} className="p-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:from-zion-cyan-light hover:to-zion-purple-light transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed" title="Send Message">"
+          <button onClick={handleSendMessage} disabled={!inputValue.trim()} className="p-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg "hover": from-zion-cyan-light hover:to-zion-purple-light transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed" title="Send Message">"
             <Send className="w-4 h-4" />
           </button>
         </div>

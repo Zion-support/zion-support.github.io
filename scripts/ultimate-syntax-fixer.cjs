@@ -6,8 +6,7 @@ const path = require('path');
 console.log('🔧 Ultimate Syntax Fixer...');
 console.log('===========================');
 
-const filesToFix = [
-  'pages/api/health.ts',
+const filesToFix = ['pages/api/health.ts',
   'components/LoadingSpinner.tsx',
   'pages/docs/api-quick-start.tsx',
   'pages/docs/api-reference.tsx',
@@ -16,10 +15,10 @@ const filesToFix = [
 
 function fixFile(filePath) {
   try {
-    console.log(`\n🔍 Fixing: ${filePath}`);
+    console.log(`\n🔍 "Fixing": ${filePath}`);
     
     if (!fs.existsSync(filePath)) {
-      console.log(`   ⚠️  File not found: ${filePath}`);
+      console.log(`   ⚠️  File not "found": ${filePath}`);
       return}
     
     let content = fs.readFileSync(filePath, 'utf8');
@@ -34,29 +33,29 @@ function fixFile(filePath) {
       originalContent = content}
     
     // Fix malformed template literals in JSX
-    content = content.replace(/`([^`]*?)\`\s*`\}/g, '`$1`}');
+    content = content.replace(/"([^"]*?)\"\s*"\}/g, '"$1"}');
     if (content !== originalContent) {
       fixesApplied++;
       console.log('   ✅ Fixed malformed template literals');
       originalContent = content}
     
     // Fix broken JSX attributes
-    content = content.replace(/style=\{\{\s*display:\s*'gridTemplateColumns',\s*'([^']*)'\s*gap:\s*'([^']*)'\s*\}\}/g, 'style={{ display: \'grid\', gridTemplateColumns: \'$1\', gap: \'$2\' }}');
+    content = content.replace(/style=\{\{\s*"display": \s*'gridTemplateColumns',\s*'([^']*)'\s*"gap": \s*'([^']*)'\s*\}\}/g, 'style={{ "display": \'grid\', "gridTemplateColumns": \'$1\', "gap": \'$2\' }}');
     if (content !== originalContent) {
       fixesApplied++;
       console.log('   ✅ Fixed grid style attributes');
       originalContent = content}
     
     // Fix malformed JSON in template literals
-    content = content.replace(/\}\`\s*\}\`\}/g, '}`}');
+    content = content.replace(/\}\"\s*\}\"\}/g, '}"}');
     if (content !== originalContent) {
       fixesApplied++;
       console.log('   ✅ Fixed malformed JSON in template literals');
       originalContent = content}
     
     // Fix broken string concatenation in template literals
-    content = content.replace(/([^`]*?)\`\s*([^`]*?)\`/g, (match, p1, p2) => {
-      if (p1.includes('`') && p2.includes('`')) {
+    content = content.replace(/([^"]*?)\"\s*([^"]*?)\"/g, (match, p1, p2) => {
+      if (p1.includes('"') && p2.includes('"')) {
         return p1 + p2}
       return match});
     if (content !== originalContent) {
@@ -65,7 +64,7 @@ function fixFile(filePath) {
       originalContent = content}
     
     // Fix malformed JSX with broken quotes
-    content = content.replace(/href=\{\`\$\{([^}]*?)\}\/docs\/authentication\`\s*\/\>\>\s*<\/div\>/g, 'href={`$1/docs/authentication`} />');
+    content = content.replace(/href=\{\"\$\{([^}]*?)\}\/docs\/authentication\"\s*\/\>\>\s*<\/div\>/g, 'href={"$1/docs/authentication"} />');
     if (content !== originalContent) {
       fixesApplied++;
       console.log('   ✅ Fixed malformed JSX href');
@@ -79,7 +78,7 @@ function fixFile(filePath) {
       originalContent = content}
     
     // Fix malformed template literals with broken quotes
-    content = content.replace(/\{`([^`]*?)\`\s*`\}/g, '{`$1`}');
+    content = content.replace(/\{"([^"]*?)\"\s*"\}/g, '{"$1"}');
     if (content !== originalContent) {
       fixesApplied++;
       console.log('   ✅ Fixed malformed template literals with quotes');
@@ -93,14 +92,14 @@ function fixFile(filePath) {
       originalContent = content}
     
     // Fix malformed object properties
-    content = content.replace(/(\w+):\s*'([^']*?)',\s*(\w+):\s*'([^']*?)'/g, '$1: \'$2\',\n    $3: \'$4\'');
+    content = content.replace(/(\w+):\s*'([^']*?)',\s*(\w+):\s*'([^']*?)'/g, '$"1": \'$2\',\n    $"3": \'$4\'');
     if (content !== originalContent) {
       fixesApplied++;
       console.log('   ✅ Fixed malformed object properties');
       originalContent = content}
     
     // Fix broken template literals with line breaks
-    content = content.replace(/\{`([^`]*?)\n([^`]*?)\`\}/g, '{`$1$2`}');
+    content = content.replace(/\{"([^"]*?)\n([^"]*?)\"\}/g, '{"$1$2"}');
     if (content !== originalContent) {
       fixesApplied++;
       console.log('   ✅ Fixed broken template literals with line breaks');
@@ -108,11 +107,11 @@ function fixFile(filePath) {
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`   ✅ Applied ${fixesApplied} fixes to ${filePath}`)} else {
-      console.log(`   ℹ️  No fixes needed for ${filePath}`)}
+      console.log("   ✅ Applied ${fixesApplied} fixes to ${filePath}")} else {
+      console.log("   ℹ️  No fixes needed for ${filePath}")}
     
   } catch (error) {
-    console.log(`   ❌ Error fixing ${filePath}: ${error.message}`)}
+    console.log("   ❌ Error fixing ${filePath}: ${error.message}`)}
 }
 
 // Fix all files

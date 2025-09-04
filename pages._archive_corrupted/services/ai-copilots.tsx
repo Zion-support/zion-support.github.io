@@ -3,8 +3,7 @@ import Link from 'next/link';
 import { Brain, ArrowRight, CheckCircle, DollarSign, Clock } from 'lucide-react';
 
 export default function AICopilots() {
-  const benefits = [
-    'Accelerate employee productivity by 25-40% with task automation',
+  const benefits = ['Accelerate employee productivity by 25-40% with task automation',
     'Reduce support response times with context-aware assistance',
     'Integrate securely with your tools (Google, Microsoft 365, Slack, Jira)',
     'On-prem or VPC deployment options to keep data private',
@@ -13,7 +12,7 @@ export default function AICopilots() {
   return (
     <main className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-16">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 "sm": px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-6">
             <div className="p-3 rounded-lg bg-blue-600 text-white w-fit">
               <Brain className="w-6 h-6" />
@@ -27,7 +26,7 @@ export default function AICopilots() {
       </section>
 
       <section className="py-12">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-6">
+        <div className="max-w-5xl mx-auto px-4 "sm": px-6 lg:px-8 grid md:grid-cols-3 gap-6">
           <div className="bg-white rounded-lg border p-6">
             <h3 className="font-semibold text-gray-900 mb-2">Starter</h3>
             <p className="text-sm text-gray-600 mb-4">Single copilot for one team</p>
@@ -74,7 +73,7 @@ export default function AICopilots() {
       </section>
 
       <section className="pb-16">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 "sm": px-6 lg:px-8">
           <p className="text-sm text-gray-500">Questions? Call +1 302 464 0950 or email <a className="underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
         </div>
       </section>

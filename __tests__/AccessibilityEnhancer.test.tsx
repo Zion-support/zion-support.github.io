@@ -37,9 +37,9 @@ describe('AccessibilityEnhancer', () => {
       </AccessibilityEnhancer>
     );
     const element = screen.getByRole('button');
-    fireEvent.keyDown(element, { key: 'Enter' });
+    fireEvent.keyDown(element, { "key": 'Enter' });
     expect(handleClick).toHaveBeenCalledTimes(1);
-    fireEvent.keyDown(element, { key: ' ' });
+    fireEvent.keyDown(element, { "key": ' ' });
     expect(handleClick).toHaveBeenCalledTimes(2);
   });
 
@@ -48,7 +48,7 @@ describe('AccessibilityEnhancer', () => {
       <AccessibilityEnhancer
         role="button"
         tabIndex={0}
-        className="focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className=""focus": outline-none focus:ring-2 focus:ring-blue-500"
       >
         <span>Focusable Element</span>
       </AccessibilityEnhancer>
@@ -56,8 +56,8 @@ describe('AccessibilityEnhancer', () => {
     const element = screen.getByRole('button');
     expect(element).toHaveClass(
       'focus:outline-none',
-      'focus:ring-2',
-      'focus:ring-blue-500'
+      '"focus": ring-2',
+      '"focus": ring-blue-500'
     );
   });
 

@@ -10,8 +10,7 @@ class SecurityAuditor {
         console.log('🔒 Auditing dependencies...');
         
         // Check for known vulnerabilities
-        const vulnerabilities = [
-            // Add actual vulnerability checks here
+        const vulnerabilities = [// Add actual vulnerability checks here
         ];
 
         this.vulnerabilities = vulnerabilities;
@@ -20,8 +19,7 @@ class SecurityAuditor {
     async auditCode() {
         console.log('🔍 Auditing code security...');
         
-        const securityIssues = [
-            // Add code security checks here
+        const securityIssues = [// Add code security checks here
         ];
 
         this.recommendations = securityIssues;
@@ -29,15 +27,15 @@ class SecurityAuditor {
 
     async generateReport() {
         const report = {
-            timestamp: new Date().toISOString(),
-            vulnerabilities: this.vulnerabilities,
-            recommendations: this.recommendations,
-            status: this.vulnerabilities.length === 0 ? 'secure' : 'needs_attention'
+            "timestamp": new Date().toISOString(),
+            "vulnerabilities": this.vulnerabilities,
+            "recommendations": this.recommendations,
+            "status": this.vulnerabilities.length === 0 ? 'secure' : 'needs_attention'
         };
 
         const reportPath = `security-audit-${Date.now()}.json`;
         fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-        console.log(`📊 Security audit report generated: ${reportPath}`);
+        console.log(`📊 Security audit report "generated": ${reportPath}`);
         return report}
 }
 

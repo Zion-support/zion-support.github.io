@@ -1,48 +1,48 @@
 // Global type declarations
 declare module "*.svg" {
-  const content: string;
+  const "content": string;
   export default content}
 
 declare module "*.png" {
-  const content: string;
+  const "content": string;
   export default content}
 
 declare module "*.jpg" {
-  const content: string;
+  const "content": string;
   export default content}
 
 declare module "*.jpeg" {
-  const content: string;
+  const "content": string;
   export default content}
 
 declare module "*.gif" {
-  const content: string;
+  const "content": string;
   export default content}
 
 declare module "*.webp" {
-  const content: string;
+  const "content": string;
   export default content}
 
 declare module "*.css" {
-  const content: { [className: string]: string };
+  const "content": { [className: string]: string };
   export default content}
 
 declare module "*.scss" {
-  const content: { [className: string]: string };
+  const "content": { [className: string]: string };
   export default content}
 
 declare module "*.module.css" {
-  const content: { [className: string]: string };
+  const "content": { [className: string]: string };
   export default content}
 
 declare module "*.module.scss" {
-  const content: { [className: string]: string };
+  const "content": { [className: string]: string };
   export default content}
 
 // Next.js specific types
 declare namespace NodeJS {
   interface ProcessEnv {
-    NODE_ENV: "development" | "production" | "test";
+    "NODE_ENV": "development" | "production" | "test";
     NEXT_PUBLIC_SUPABASE_URL?: string;
     NEXT_PUBLIC_SUPABASE_ANON_KEY?: string;
     SUPABASE_SERVICE_ROLE_KEY?: string;
@@ -52,7 +52,7 @@ declare namespace NodeJS {
 // Global window extensions
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
+    gtag?: (..."args": any[]) => void;
     dataLayer?: any[]}
 }
 

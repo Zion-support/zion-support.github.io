@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number;
+  "loadTime": number;
   memoryUsage: number;
   renderTime: number}
 
-const PerformanceMonitor: React.FC = () => {
+const "PerformanceMonitor": React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    memoryUsage: 0,
-    renderTime: 0
+    "loadTime": 0,
+    "memoryUsage": 0,
+    "renderTime": 0
   };);
 
   useEffect(() => {
@@ -25,17 +25,17 @@ const PerformanceMonitor: React.FC = () => {
       const memory = (performance as any).memory;
       setMetrics(prev => ({ 
         ...prev, 
-        memoryUsage: Math.round(memory.usedJSHeapSize / 1024 / 1024) 
+        "memoryUsage": Math.round(memory.usedJSHeapSize / 1024 / 1024) 
       }))}
 
     // Measure render time
     const endTime = performance.now();
-    setMetrics(prev => ({ ...prev, renderTime: Math.round(endTime - startTime) }))}, []);
+    setMetrics(prev => ({ ...prev, "renderTime": Math.round(endTime - startTime) }))}, []);
 
   return (
     <div className="bg-gray-100 p-4 rounded-lg">
       <h3 className="text-lg font-semibold mb-4">Performance Metrics</h3>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 "md": grid-cols-3 gap-4">
         <div className="bg-white p-3 rounded">
           <div className="text-sm text-gray-600">Load Time</div>
           <div className="text-2xl font-bold text-blue-600">{metrics.loadTime}ms</div>

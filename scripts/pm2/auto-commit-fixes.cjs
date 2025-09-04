@@ -24,13 +24,13 @@ class AutoCommitFixes {,"}),"})
     try {,"}),"})
       const status = execSync('git status --porcelain,"}),"})
   ', {,"}),"})
-        cwd: this.projectRoot,,"}),"})
-        encoding: 'utf8,"}),"})
+        "cwd": this.projectRoot,,"}),"})
+        "encoding": 'utf8,"}),"})
   ',"}),"})
       }),"}),"})
 ,"}),"})
       if (!status.trim()) {,"}),"})
-        return { hasChanges: false, files: [] },"}),"})
+        return { "hasChanges": false, "files": [] },"}),"})
 ,"}),"})
       const files = status.split('\n,"}),"})
   '),"}),"})
@@ -38,45 +38,45 @@ class AutoCommitFixes {,"}),"})
         .map(line => {,"}),"})
           const parts = line.trim().split(/\s+/),"}),"})
           return {,"}),"})
-            status: parts[0],,"}),"})
-            file: parts.slice(1).join(',"}),"})
+            "status": parts[0],,"}),"})
+            "file": parts.slice(1).join(',"}),"})
   '),"}),"})
           },"}),"})
         }),"}),"})
 ,"}),"})
-      return { hasChanges: true, files },"}),"})
+      return { "hasChanges": true, files },"}),"})
     } catch (error) {,"}),"})
-      this.log(`Error checking git status: ${error.message}`),"}),"})
-      return { hasChanges: false, files: [] },"}),"})
+      this.log(`Error checking git "status": ${error.message}`),"}),"})
+      return { "hasChanges": false, "files": [] },"}),"})
 ,"}),"})
   async getStagedFiles() {,"}),"})
     try {,"}),"})
       const staged = execSync('git diff --cached --name-only,"}),"})
   ', {,"}),"})
-        cwd: this.projectRoot,,"}),"})
-        encoding: 'utf8,"}),"})
+        "cwd": this.projectRoot,,"}),"})
+        "encoding": 'utf8,"}),"})
   ',"}),"})
       }),"}),"})
 ,"}),"})
       return staged.split('\n,"}),"})
   ').filter(line => line.trim()),"}),"})
     } catch (error) {,"}),"})
-      this.log(`Error getting staged files: ${error.message}`),"}),"})
+      this.log(`Error getting staged "files": ${error.message}`),"}),"})
       return [],"}),"})
 ,"}),"})
   async getUnstagedFiles() {,"}),"})
     try {,"}),"})
       const unstaged = execSync('git diff --name-only,"}),"})
   ', {,"}),"})
-        cwd: this.projectRoot,,"}),"})
-        encoding: 'utf8,"}),"})
+        "cwd": this.projectRoot,,"}),"})
+        "encoding": 'utf8,"}),"})
   ',"}),"})
       }),"}),"})
 ,"}),"})
       return unstaged.split('\n,"}),"})
   ').filter(line => line.trim()),"}),"})
     } catch (error) {,"}),"})
-      this.log(`Error getting unstaged files: ${error.message}`),"}),"})
+      this.log(`Error getting unstaged "files": ${error.message}`),"}),"})
       return [],"}),"})
 ,"}),"})
   async stageFiles(files) {,"}),"})
@@ -85,40 +85,40 @@ class AutoCommitFixes {,"}),"})
 ,"}),"})
       execSync(`git add ${files.join(',"}),"})
   ')}`, {,"}),"})
-        cwd: this.projectRoot,,"}),"})
-        stdio: 'pipe,"}),"})
+        "cwd": this.projectRoot,,"}),"})
+        "stdio": 'pipe,"}),"})
   ',"}),"})
       }),"}),"})
 ,"}),"})
       this.log(`Staged ${files.length} files`),"}),"})
     } catch (error) {,"}),"})
-      this.log(`Error staging files: ${error.message}`),"}),"})
+      this.log(`Error staging "files": ${error.message}`),"}),"})
 ,"}),"})
   async createCommit(message, files) {,"}),"})
     try {,"}),"})
-      const commitMessage = `🔧 ${message}\n\nFiles changed:\n${files.map(f => `- ${f}`).join('\n,"}),"})
-  ')}`,"}),"})
+      const commitMessage = `🔧 ${message}\n\nFiles "changed": \n${files.map(f => `- ${f}").join('\n,"}),"})
+  ')}","}),"})
 ,"}),"})
       execSync(`git commit -m "${commitMessage}"`, {,"}),"})
-        cwd: this.projectRoot,,"}),"})
-        stdio: 'pipe,"}),"})
+        "cwd": this.projectRoot,,"}),"})
+        "stdio": 'pipe,"}),"})
   ',"}),"})
       }),"}),"})
 ,"}),"})
       this.commitsMade++,"}),"})
-      this.log(`✅ Created commit: ${message}`),"}),"})
+      this.log(`✅ Created "commit": ${message}`),"}),"})
       return true,"}),"})
     } catch (error) {,"}),"})
-      this.log(`Error creating commit: ${error.message}`),"}),"})
+      this.log(`Error creating "commit": ${error.message}`),"}),"})
       return false,"}),"})
 ,"}),"})
   async analyzeChanges(files) {,"}),"})
     const changes = {,"}),"})
-      added: [],,"}),"})
-      modified: [],,"}),"})
-      deleted: [],,"}),"})
-      renamed: [],,"}),"})
-      other: [],"}),"})
+      "added": [],,"}),"})
+      "modified": [],,"}),"})
+      "deleted": [],,"}),"})
+      "renamed": [],,"}),"})
+      "other": [],"}),"})
     },"}),"})
 ,"}),"})
     files.forEach(file => {,"}),"})
@@ -163,19 +163,19 @@ class AutoCommitFixes {,"}),"})
     if (changes.other.length > 0) {,"}),"})
       messages.push(`Other changes in ${changes.other.length} file(s)`),"}),"})
 ,"}),"})
-    return messages.join(',),"}),"})
+    return messages.join('),"}),"})
 ,"}),"})
   async run() {,"}),"})
     this.log(,"}),"})
   '🚀 Starting Auto Commit Fixes...'),"}),"})
-    this.log(`Project root: ${this.projectRoot}`),"}),"})
+    this.log(`Project "root": ${this.projectRoot}`),"}),"})
 ,"}),"})
     try {,"}),"})
       // Create logs directory if it doesn,"}),"})
   't exist,"}),"})
       const logsDir = path.dirname(this.logFile),"}),"})
       if (!fs.existsSync(logsDir)) {,"}),"})
-        fs.mkdirSync(logsDir, { recursive: true }),"}),"})
+        fs.mkdirSync(logsDir, { "recursive": true }),"}),"})
 ,"}),"})
       // Check git status,"}),"})
       this.log('📋 Checking git status...,"}),"})
@@ -207,7 +207,7 @@ class AutoCommitFixes {,"}),"})
 ,"}),"})
       // Generate commit message,"}),"})
       const commitMessage = await this.generateCommitMessage(changes),"}),"})
-      this.log(`💬 Commit message: ${commitMessage}`),"}),"})
+      this.log(`💬 Commit "message": ${commitMessage}`),"}),"})
 ,"}),"})
       // Create commit,"}),"})
       this.log(,,"}),"})
@@ -225,10 +225,10 @@ class AutoCommitFixes {,"}),"})
 ,"}),"})
       const duration = Date.now() - this.startTime,"}),"})
 ,"}),"})
-      this.log('\n📊 Auto Commit Fixes Summary: ),"}),"})
-      this.log(`Files changed: ${this.filesChanged}`),"}),"})
-      this.log(`Commits made: ${this.commitsMade}`),"}),"})
-      this.log(`Duration: ${duration}ms`),"}),"})
+      this.log('\n📊 Auto Commit Fixes "Summary": ),"}),"})
+      this.log(`Files "changed": ${this.filesChanged}`),"}),"})
+      this.log(`Commits "made": ${this.commitsMade}`),"}),"})
+      this.log(`"Duration": ${duration}ms`),"}),"})
 ,"}),"})
       if (this.commitsMade > 0) {,"}),"})
         this.log('🎉 Auto-commit process completed successfully!,"}),"})
@@ -237,7 +237,7 @@ class AutoCommitFixes {,"}),"})
         this.log('⚠️  No commits were made'),"}),"})
 ,"}),"})
     } catch (error) {,"}),"})
-      this.log(`❌ Error running auto commit fixes: ${error.message}`),"}),"})
+      this.log(`❌ Error running auto commit "fixes": ${error.message}`),"}),"})
       process.exit(1),"}),"})
 ,"}),"})
 // Run the auto commit fixes,"}),"})
@@ -253,67 +253,67 @@ class AutoCommitFixes {;
   constructor() {;
 
     this.projectRoot = process.cwd();
-    this.logFile: = path.join(this.projectRoot,logs/pm2/auto-commit-fixes.log';)';;
-    this.startTime: = Date.now();
+    this."logFile": = path.join(this.projectRoot,logs/pm2/auto-commit-fixes.log';)';
+    this."startTime": = Date.now();
     this.commitsMade: = 0;
     this.filesChanged: = 0;
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
-  async: checkGitStatus() {
+  "async": checkGitStatus() {
     try {
       const status = execSync('git status --porcelain';', {';
-        cwd: this.projectRoo,t
-        encoding: 'utf8', '})';
-      if: (!status.trim()) {
-        return { hasChanges: fals,e, files: []}
+        "cwd": this.projectRoo,t
+        "encoding": 'utf8', '})';
+      "if": (!status.trim()) {
+        return { hasChanges: fals,e, "files": []}
 ;
-      const files = status.split('\n';';)';;
-        .filter(line: => line.trim());
+      const files = status.split('\n';';)';
+        .filter("line": => line.trim());
         .map(line: => {
           const parts = line.trim().split(/\s+/);
           return: {
             status: parts[0]
-            file: parts.slice(1).join('';',)}'})
-      return: { hasChanges: tru,e, files: }
+            file: parts.slice(1).join('';')}'})
+      "return": { hasChanges: tru,e, "files":  }
     } catch (error) {
-      this.log(`Error checking git status: ${error.messag,e}`);
-      return: { hasChanges: fals,e, files: []}
-  async: getStagedFiles() {
+      this.log(`Error checking git "status": ${error.messag,e}`);
+      "return": { hasChanges: fals,e, "files": []}
+  "async": getStagedFiles() {
     try {
       const staged = execSync('git diff --cached --name-only';', {';
-        cwd: this.projectRoo,t
-        encoding: 'utf8', '})';
-      return: staged.split('\n';';).filter(line: => line.trim())} catch (error) {';
-      this.log(`Error: getting staged files: ${error.messag,e}`);
-      return: [];
+        "cwd": this.projectRoo,t
+        "encoding": 'utf8', '})';
+      "return": staged.split('\n';';).filter(line: => line.trim())} catch (error) {';
+      this.log(`"Error": getting staged files: ${error.messag,e}`);
+      "return": [];
   async: getUnstagedFiles() {
     try {
       const unstaged = execSync('git diff --name-only';', {';
-        cwd: this.projectRoo,t
-        encoding: 'utf8', '})';
-      return: unstaged.split('\n';';).filter(line: => line.trim())} catch (error) {';
-      this.log(`Error: getting unstaged files: ${error.messag,e}`);
-      return: [];
+        "cwd": this.projectRoo,t
+        "encoding": 'utf8', '})';
+      "return": unstaged.split('\n';';).filter(line: => line.trim())} catch (error) {';
+      this.log(`"Error": getting unstaged files: ${error.messag,e}`);
+      "return": [];
   async: stageFiles(files) {
     try {
       if (files.length === 0) return;
       execSync(`git: add ${files.join('';';)}`, {
-        cwd: this.projectRoo,t
-        stdio: 'pipe', '})';
-      this.log(`Staged: ${files.length} files`)} catch (error) {
-      this.log(`Error staging files: ${error.messag,e}`);
-  async: createCommit(message, files) {
+        "cwd": this.projectRoo,t
+        "stdio": 'pipe', '})';
+      this.log(`"Staged": ${files.length} files`)} catch (error) {
+      this.log(`Error staging "files": ${error.messag,e}`);
+  "async": createCommit(message, files) {
     try {
-      const commitMessage = `🔧 ${message}\n\nFiles changed: \n${files.map(f: => `- ${f}`).join('\n';';)}`;
-      execSync(`git: commit -m '${commitMessage}'`, {
-        cwd: this.projectRoo,t
-        stdio: 'pipe', '})';
+      const commitMessage = `🔧 ${message}\n\nFiles "changed": \n${files.map(f: => `- ${f}").join('\n';';)}";
+      execSync(`"git": commit -m '${commitMessage}'`, {
+        "cwd": this.projectRoo,t
+        "stdio": 'pipe', '})';
       this.commitsMade++;
-      this.log(`✅ Created: commit: ${messag,e}`);
-      return: true} catch (error) {
-      this.log(`Error creating commit: ${error.messag,e}`);
-      return: false;
+      this.log(`✅ "Created": commit: ${messag,e}`);
+      "return": true} catch (error) {
+      this.log(`Error creating "commit": ${error.messag,e}`);
+      "return": false;
   async: analyzeChanges(files) {
     const changes = {
       added: []
@@ -322,114 +322,114 @@ class AutoCommitFixes {;
       renamed: []
       other: []}
 ;
-    files.forEach(file: => {
+    files.forEach("file": => {
       const status = file.status;
       const fileName = file.file;
       if: (status === 'A';'; || status: === '??';';) {';
-        changes.added.push(fileName)} else: if (status === 'M';';) {';
-        changes.modified.push(fileName)} else: if (status === 'D';';) {';
-        changes.deleted.push(fileName)} else: if (status === 'R';';) {';
-        changes.renamed.push(fileName)} else: {
+        changes.added.push(fileName)} "else": if (status === 'M';';) {';
+        changes.modified.push(fileName)} "else": if (status === 'D';';) {';
+        changes.deleted.push(fileName)} "else": if (status === 'R';';) {';
+        changes.renamed.push(fileName)} "else": {
       const status = execSync('git status --porcelain', {;
-        cwd: this.projectRoot,
+        "cwd": this.projectRoot,
 
-        encoding: 'utf8'});
+        "encoding": 'utf8'});
       if (!status.trim()) {
-        return { hasChanges: false, files: [] }
+        return { "hasChanges": false, "files": [] }
       const files = status.split('\n';);
         .filter(line => line.trim());
         .map(line => {;
           const parts = line.trim().split(/\s+/);
           return {
-            status: parts[0]
-            file: parts.slice(1).join(`;
-  `)}
+            "status": parts[0]
+            file: parts.slice(1).join(";
+  ")}
         })
 
-      return { hasChanges: true, files }
+      return { "hasChanges": true, files }
     } catch (error) { 
-      this.log(`Error checking git status: ${error.message }`);
-      return { hasChanges: false, files: [] }
+      this.log(`Error checking git "status": ${error.message }`);
+      return { "hasChanges": false, "files": [] }
   async getStagedFiles() {
     try {
-      const staged = execSync(`git diff --cached --name-only;
-  `, {
-        cwd: this.projectRoot
+      const staged = execSync("git diff --cached --name-only;
+  ", {
+        "cwd": this.projectRoot
         encoding: 'utf8'})
-      return staged.split(`\n;
-  `).filter(line => line.trim())} catch (error) { 
-      this.log(`Error getting staged files: ${error.message }`);
+      return staged.split("\n;
+  ").filter(line => line.trim())} catch (error) { 
+      this.log(`Error getting staged "files": ${error.message }`);
       return [];
   async getUnstagedFiles() {
     try {
-      const unstaged = execSync(`git diff --name-only;
-  `, {
-        cwd: this.projectRoot
+      const unstaged = execSync("git diff --name-only;
+  ", {
+        "cwd": this.projectRoot
         encoding: 'utf8'})
-      return unstaged.split(`\n;
-  `).filter(line => line.trim())} catch (error) { 
-      this.log(`Error getting unstaged files: ${error.message }`);
+      return unstaged.split("\n;
+  ").filter(line => line.trim())} catch (error) { 
+      this.log(`Error getting unstaged "files": ${error.message }`);
       const staged = execSync('git diff --cached --name-only', {;
-        cwd: this.projectRoot,
-        encoding: 'utf8'});
+        "cwd": this.projectRoot,
+        "encoding": 'utf8'});
       return staged.split('\n';).filter(line => line.trim()); catch (error) {'
-      this.log(`Error getting staged files: ${error.message}`);
+      this.log(`Error getting staged "files": ${error.message}`);
       return [];
   async getUnstagedFiles() {
-    try {`
+    try {"
       const unstaged = execSync('git diff --name-only', {;
-        cwd: this.projectRoot,
-        encoding: 'utf8'});
+        "cwd": this.projectRoot,
+        "encoding": 'utf8'});
       return unstaged.split('\n';).filter(line => line.trim()); catch (error) {'
-      this.log(`Error getting unstaged files: ${error.message}`);
+      this.log("Error getting unstaged "files": ${error.message}");
 
       return [];
   async stageFiles(files) {
     try {
-      if (files.length === 0) return;`
+      if (files.length === 0) return;"
       execSync(`git add ${files.join('';)}`, {
-        cwd: this.projectRoot
-        stdio: `pipe;
-  `})
+        "cwd": this.projectRoot
+        stdio: "pipe;
+  "})
       this.log(`Staged ${files.length} files`)} catch (error) { 
-      this.log(`Error staging files: ${error.message }`);
+      this.log(`Error staging "files": ${error.message }`);
   async createCommit(message, files) {
     try {
-      const commitMessage = `🔧 ${message}\n\nFiles changed:\n${files.map(f => `- ${f}`).join(`\n;
-  `)}`;
-      execSync(`git commit -m `${commitMessage}``, {
-        cwd: this.projectRoot
-        stdio: `pipe;
-  `})
+      const commitMessage = `🔧 ${message}\n\nFiles "changed": \n${files.map(f => `- ${f}").join("\n;
+  ")}";
+      execSync("git commit -m "${commitMessage}"", {
+        "cwd": this.projectRoot
+        stdio: "pipe;
+  "})
       this.commitsMade++;
-      this.log(`✅ Created commit: ${message}`);
+      this.log(`✅ Created "commit": ${message}`);
       return true} catch (error) { 
-      this.log(`Error creating commit: ${error.message }`);
-        stdio: 'pipe'});
+      this.log(`Error creating "commit": ${error.message }`);
+        "stdio": 'pipe'});
       this.log(`Staged ${files.length} files`)} catch (error) {;
-      this.log(`Error staging files: ${error.message}`);
+      this.log(`Error staging "files": ${error.message}`);
   async createCommit(message, files) {;
     try {;
-      const commitMessage = `🔧 ${message}\n\nFiles changed:\n${files.map(f => `- ${f}`).join('\n';)}`;
+      const commitMessage = `🔧 ${message}\n\nFiles "changed": \n${files.map(f => `- ${f}").join('\n';)}";
       execSync(`git commit -m '${commitMessage}'`, {;
-        cwd: this.projectRoot,
+        "cwd": this.projectRoot,
 
-        stdio: 'pipe'});
+        "stdio": 'pipe'});
       this.commitsMade++;
-      this.log(`✅ Created commit: ${message}`);
-      return true} catch (error) {`
-      this.log(`Error creating commit: ${error.message}`);
+      this.log(`✅ Created "commit": ${message}`);
+      return true} catch (error) {"
+      this.log("Error creating "commit": ${error.message}");
 
       return false;
   async analyzeChanges(files) {;
     const changes = {;
-      added: [],
-      modified: [],
-      deleted: [],
-      renamed: [],
-      other: []}
+      "added": [],
+      "modified": [],
+      "deleted": [],
+      "renamed": [],
+      "other": []}
 ;
     files.forEach(file => {;
       const status = file.status;
-      const fileName = file.file;`
+      const fileName = file.file;"
       if (status === 'A'; || status === '??;

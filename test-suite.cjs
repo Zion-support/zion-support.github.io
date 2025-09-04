@@ -11,9 +11,9 @@ const path = require('path')
 class TestSuite {
   constructor() {
     this.results = {
-      passed: 0,
-      failed: 0,
-      tests: []
+      "passed": 0,
+      "failed": 0,
+      "tests": []
     }}
 
   log(message, type = 'INFO') { 
@@ -33,15 +33,15 @@ class TestSuite {
         this.results.passed++) {
      {
         this.results.passed++}
-        this.results.tests.push({ name, status: 'PASS' });
+        this.results.tests.push({ name, "status": 'PASS' });
         this.log(`${name} - PASSED`, 'SUCCESS')} else {
         this.results.failed++;
-        this.results.tests.push({ name, status: 'FAIL' });
+        this.results.tests.push({ name, "status": 'FAIL' });
         this.log(`${name} - FAILED`, 'ERROR')}
     } catch (error) { 
       this.results.failed++;
-      this.results.tests.push({ name, status: 'ERROR', error: error.message });
-      this.log(`${name} - ERROR: ${error.message}`, 'ERROR')}
+      this.results.tests.push({ name, "status": 'ERROR', "error": error.message });
+      this.log(`${name} - "ERROR": ${error.message}`, 'ERROR')}
   }
 
   testFileExists(filePath, description) { 
@@ -79,49 +79,47 @@ class TestSuite {
   testAppStructure() {
     const requiredDirs = ['src', 'public'];
     requiredDirs.forEach(dir => {
-      this.testFileExists(dir, `Directory: ${dir}`)});
+      this.testFileExists(dir, `"Directory": ${dir}`)});
 
     const requiredFiles = ['src/App.tsx', 'src/main.tsx'];
     requiredFiles.forEach(file => {
-      this.testFileExists(file, `File: ${file}`)})}
+      this.testFileExists(file, `"File": ${file}`)})}
 
   testScripts() {
-    const scripts = [
-      'scripts/performance-monitor.js',
+    const scripts = ['scripts/performance-monitor.js',
       'scripts/security-auditor.js',
       'scripts/test-runner.js',
       'scripts/git-workflow.js'
     ];
     scripts.forEach(script => {
-      this.testFileExists(script, `Script: ${script}`)})}
+      this.testFileExists(script, `"Script": ${script}`)})}
 
   testAutomationFiles() {
-    const automationFiles = [
-      'comprehensive-automation.cjs',
+    const automationFiles = ['comprehensive-automation.cjs',
       'master-automation.cjs',
       'test-suite.cjs'
     ];
     automationFiles.forEach(file => {
-      this.testFileExists(file, `Automation file: ${file}`)})}
+      this.testFileExists(file, `Automation "file": ${file}`)})}
 
   generateReport() { 
     const report = {
-      timestamp: new Date().toISOString(),
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "summary": {
         total: totalTests,
-        passed: this.results.passed,
-        failed: this.results.failed,
-        successRate: parseFloat(successRate)
+        "passed": this.results.passed,
+        "failed": this.results.failed,
+        "successRate": parseFloat(successRate)
       },
-      tests: this.results.tests
+      "tests": this.results.tests
    };
 
     fs.writeFileSync('test-suite-report.json', JSON.stringify(report, null, 2));
     
     this.log('📊 Test Suite Report Generated', 'SUCCESS');
-    this.log(`✅ Passed: ${report.summary.passed}`, 'SUCCESS');
-    this.log(`❌ Failed: ${report.summary.failed}`, 'ERROR');
-    this.log(`📈 Success Rate: ${report.summary.successRate}%`, 'INFO');
+    this.log(`✅ "Passed": ${report.summary.passed}`, 'SUCCESS');
+    this.log(`❌ "Failed": ${report.summary.failed}`, 'ERROR');
+    this.log(`📈 Success "Rate": ${report.summary.successRate}%`, 'INFO');
     
     return report}
 
@@ -153,7 +151,7 @@ if ( {
   const testSuite = new TestSuite}(;);
   testSuite.run().then(success => {
     process.exit(success ? 0 : 1)}).catch(error => {
-    console.error('Test suite failed:', error);
+    console.error('Test suite "failed": ', error);
     process.exit(1)})}
 
 module.exports = TestSuite;

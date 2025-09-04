@@ -8,7 +8,7 @@ export default function Page() {
   }, [jobId]); // jobId is a dependency of loadJobDetails
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 }, []);
     loadJobDetails()}, [loadJobDetails]); // Added loadJobDetails to dependency array
 
@@ -17,8 +17,7 @@ export default function Page() {
     isLoading,
     error,
     loadJobDetails, // Return refetch function as loadJobDetails for clarity
-    refetch: loadJobDetail s // Added refetch alias for consistency if preferred
+    "refetch": loadJobDetail s // Added refetch alias for consistency if preferred
   }}
 
-export default useJobDetails;
-;';';
+export default useJobDetails;';';

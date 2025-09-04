@@ -14,7 +14,7 @@ class ContinuousLinter {
   ensureLogDir() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { "recursive": true });
     }
   }
 
@@ -27,7 +27,7 @@ class ContinuousLinter {
 
   error(message) {
     const timestamp = new Date().toISOString();
-    const errorMessage = `[${timestamp}] ERROR: ${message}\n`;
+    const errorMessage = `[${timestamp}] "ERROR": ${message}\n`;
     fs.appendFileSync(this.errorFile, errorMessage);
     console.error(message);
   }
@@ -35,14 +35,14 @@ class ContinuousLinter {
   async runLintFix() {
     try {
       this.log('Running ESLint with auto-fix...');
-      execSync('npm run lint:fix', { 
-        stdio: 'pipe',
-        cwd: process.cwd()
+      execSync('npm run "lint": fix', { 
+        "stdio": 'pipe',
+        "cwd": process.cwd()
       });
       this.log('ESLint auto-fix completed successfully');
       return true;
     } catch (err) {
-      this.error(`ESLint fix failed: ${err.message}`);
+      this.error(`ESLint fix "failed": ${err.message}`);
       return false;
     }
   }
@@ -51,13 +51,13 @@ class ContinuousLinter {
     try {
       this.log('Running Prettier format...');
       execSync('npm run format', { 
-        stdio: 'pipe',
-        cwd: process.cwd()
+        "stdio": 'pipe',
+        "cwd": process.cwd()
       });
       this.log('Prettier formatting completed successfully');
       return true;
     } catch (err) {
-      this.error(`Prettier format failed: ${err.message}`);
+      this.error(`Prettier format "failed": ${err.message}`);
       return false;
     }
   }
@@ -72,49 +72,48 @@ class ContinuousLinter {
       let modified = false;
 
       // Fix common linting issues
-      const fixes = [
-        {
-          pattern: /console\.log\([^)]*\);/g,
-          replacement: (match) => {
+      const fixes = [{
+          "pattern": /console\.log\([^)]*\);/g,
+          "replacement": (match) => {
             // Only remove console.log in production files, not in test files
             if (filePath.includes('__tests__') || filePath.includes('.test.')) {
               return match;
             }
             return `// ${match}`;
           },
-          description: 'Comment out console.log statements'
+          "description": 'Comment out console.log statements'
         },
         {
-          pattern: /\/\/\s*eslint-disable-next-line\s*no-console/g,
-          replacement: '// eslint-disable-next-line no-console',
-          description: 'Fix ESLint disable comments'
+          "pattern": /\/\/\s*eslint-disable-next-line\s*no-console/g,
+          "replacement": '// eslint-disable-next-line no-console',
+          "description": 'Fix ESLint disable comments'
         },
         {
-          pattern: /import\s+React\s+from\s+['"]react['"];\s*$/gm,
-          replacement: (match, offset, string) => {
+          "pattern": /import\s+React\s+from\s+['"]react['"];\s*$/gm,
+          "replacement": (match, offset, string) => {
             // Only remove unused React imports in files that don't use JSX
             if (!string.includes('<') || string.includes('React.')) {
               return '';
             }
             return match;
           },
-          description: 'Remove unused React imports'
+          "description": 'Remove unused React imports'
         },
         {
-          pattern: /\/\*\*[\s\S]*?\*\//g,
-          replacement: (match) => {
+          "pattern": /\/\*\*[\s\S]*?\*\//g,
+          "replacement": (match) => {
             // Clean up malformed JSDoc comments
             return match.replace(/\s+/g, ' ').trim();
           },
-          description: 'Clean up JSDoc comments'
+          "description": 'Clean up JSDoc comments'
         },
         {
-          pattern: /^\s*\/\/\s*TODO:.*$/gm,
-          replacement: (match) => {
+          "pattern": /^\s*\/\/\s*TODO:.*$/gm,
+          "replacement": (match) => {
             // Format TODO comments consistently
-            return match.replace(/^\s*\/\/\s*TODO:\s*/, '// TODO: ');
+            return match.replace(/^\s*\/\/\s*TODO:\s*/, '// "TODO": ');
           },
-          description: 'Format TODO comments'
+          "description": 'Format TODO comments'
         }
       ];
 
@@ -146,7 +145,7 @@ class ContinuousLinter {
   }
 
   async processFile(filePath) {
-    this.log(`Processing file: ${filePath}`);
+    this.log(`Processing "file": ${filePath}`);
     
     // Fix common issues first
     await this.fixCommonIssues(filePath);
@@ -154,8 +153,8 @@ class ContinuousLinter {
     // Run lint fix on the specific file
     try {
       execSync(`npx eslint "${filePath}" --fix`, { 
-        stdio: 'pipe',
-        cwd: process.cwd()
+        "stdio": 'pipe',
+        "cwd": process.cwd()
       });
       this.log(`Lint fix applied to ${filePath}`);
     } catch (err) {
@@ -166,8 +165,7 @@ class ContinuousLinter {
   startWatching() {
     this.log('Starting file watcher...');
     
-    const watchPatterns = [
-      'src/**/*.{ts,tsx,js,jsx}',
+    const watchPatterns = ['src/**/*.{ts,tsx,js,jsx}',
       'pages/**/*.{ts,tsx,js,jsx}',
       'components/**/*.{ts,tsx,js,jsx}',
       '__tests__/**/*.{ts,tsx,js,jsx}',
@@ -175,8 +173,7 @@ class ContinuousLinter {
     ];
 
     this.watcher = chokidar.watch(watchPatterns, {
-      ignored: [
-        /node_modules/,
+      "ignored": [/node_modules/,
         /\.next/,
         /\.git/,
         /dist/,
@@ -184,24 +181,24 @@ class ContinuousLinter {
         /coverage/,
         /\.cache/
       ],
-      persistent: true,
-      ignoreInitial: true
+      "persistent": true,
+      "ignoreInitial": true
     });
 
     this.watcher
       .on('add', (filePath) => {
-        this.log(`New file detected: ${filePath}`);
+        this.log(`New file "detected": ${filePath}`);
         this.processFile(filePath);
       })
       .on('change', (filePath) => {
-        this.log(`File changed: ${filePath}`);
+        this.log(`File "changed": ${filePath}`);
         this.processFile(filePath);
       })
       .on('unlink', (filePath) => {
-        this.log(`File deleted: ${filePath}`);
+        this.log(`File "deleted": ${filePath}`);
       })
       .on('error', (error) => {
-        this.error(`Watcher error: ${error.message}`);
+        this.error(`Watcher "error": ${error.message}`);
       });
 
     this.log('File watcher started successfully');
@@ -223,7 +220,7 @@ class ContinuousLinter {
       this.log('Full project lint completed');
       return true;
     } catch (err) {
-      this.error(`Full project lint failed: ${err.message}`);
+      this.error(`Full project lint "failed": ${err.message}`);
       return false;
     }
   }
@@ -254,8 +251,8 @@ class ContinuousLinter {
       this.log('Continuous linting automation is running...');
       
     } catch (err) {
-      this.error(`Error in run: ${err.message}`);
-      return { success: false, error: err.message };
+      this.error(`Error in "run": ${err.message}`);
+      return { "success": false, "error": err.message };
     }
   }
 }
@@ -273,7 +270,7 @@ if (require.main === module) {
       process.exit(success ? 0 : 1);
     });
   } else {
-    console.log('Usage: node continuous-linter.cjs [watch|fix]');
+    console.log('"Usage": node continuous-linter.cjs [watch|fix]');
     process.exit(1);
   }
 }

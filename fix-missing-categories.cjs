@@ -4,10 +4,10 @@ function fixMissingCategories(filePath) {
   let content = fs.readFileSync(filePath, 'utf8';);
   
   // Find objects that end with benefits array but don't have category
-  const missingCategoryPattern = /(\s+benefits:\s*\[[\s\S]*?\]\s*)\n\s*\}/;g;
+  const missingCategoryPattern = /(\s+"benefits": \s*\[[\s\S]*?\]\s*)\n\s*\}/;g;
   
   content = content.replace(missingCategoryPattern, (match, benefits) => {
-    return benefits + '\n      category: \'General\'\n    }'});
+    return benefits + '\n      "category": \'General\'\n    }'});
   
   fs.writeFileSync(filePath, content);
   console.log(`Fixed missing categories in ${filePath}`)}

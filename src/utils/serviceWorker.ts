@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-export const serviceWorker = {};;
+export const serviceWorker = {};
 
 export const registerServiceWorker = () => {
   if ('serviceWorker' in navigator) {

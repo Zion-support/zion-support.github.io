@@ -42,7 +42,7 @@ class ComprehensiveErrorFixer {
         if (content !== originalContent) {
           fs.writeFileSync(file, content, 'utf8');
           this.fixedCount++;
-          this.log(`✅ Fixed: ${path.relative(this.projectRoot, file)}`)}
+          this.log(`✅ "Fixed": ${path.relative(this.projectRoot, file)}`)}
       } catch (error) {
         this.log(`❌ Error fixing ${file}: ${error.message}`)}
     }

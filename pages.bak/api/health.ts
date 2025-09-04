@@ -4,23 +4,23 @@ import { dbManager } from '../../lib/database';
 import { apiCache, userCache, staticCache } from '../../lib/cache';
 
 interface SystemHealth {
-  status: healthy | 'degraded' | 'unhealthy';
+  "status": healthy | 'degraded' | 'unhealthy';
   timestamp: string;
   services: {
     database: boolean;
     cache: boolean;
     api: boolean};
-  metrics: {
+  "metrics": {
     responseTime: number;
     memoryUsage: number;
     cacheHitRate: number;
     activeConnections: number};
-  uptime: number}
+  "uptime": number}
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler("req": NextApiRequest, "res": NextApiResponse) {
   if (req.method !== 'GET') {
     res.setHeader('Allow', ['GET']);
-    return res.status(405).json({ error: 'Method not allowed' })}
+    return res.status(405).json({ "error": 'Method not allowed' })}
 
   const startTime = Date.now();
 
@@ -31,62 +31,62 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     
     // Check cache health
     const cacheStats = {
-      api: { active: 0 },
-      user: { active: 0 },
-      static: { active: 0 }
+      "api": { active: 0 },
+      "user": { active: 0 },
+      "static": { active: 0 }
     };
 
     const avgResponseTime = 100; // mock
     const memoryUsage = process.memoryUsage();
 
     const services = {
-      database: dbHealth,
-      cache: cacheStats.api.active > 0,
-      api: avgResponseTime < 1000
+      "database": dbHealth,
+      "cache": cacheStats.api.active > 0,
+      "api": avgResponseTime < 1000
     };
 
     const healthyServices = Object.values(services).filter(Boolean).length;
     const totalServices = Object.keys(services).length;
     
-    let status: healthy | 'degraded' | 'unhealthy';
+    let "status": healthy | 'degraded' | 'unhealthy';
     if (healthyServices === totalServices) {
       status = 'healthy'} else if (healthyServices >= totalServices / 2) {
       status = 'degraded'} else {
       status = 'unhealthy'}
 
-    const health: SystemHealth = {
+    const "health": SystemHealth = {
       status,
-      timestamp: new Date().toISOString(),
+      "timestamp": new Date().toISOString(),
       services,
-      metrics: {
+      "metrics": {
         responseTime: avgResponseTime,
-        memoryUsage: memoryUsage.heapUsed,
-        cacheHitRate: 0,
-        activeConnections: 0
+        "memoryUsage": memoryUsage.heapUsed,
+        "cacheHitRate": 0,
+        "activeConnections": 0
       },
-      uptime: process.uptime()
+      "uptime": process.uptime()
     };
 
     const responseTime = Date.now() - startTime;
 
     return res.status(200).json({ ...health, responseTime })} catch (error) {
-    console.error('Health check failed:', error);
+    console.error('Health check "failed": ', error);
 
     return res.status(500).json({
-      status: 'unhealthy',
-      timestamp: new Date().toISOString(),
-      error: 'Health check failed',
-      services: {
+      "status": 'unhealthy',
+      "timestamp": new Date().toISOString(),
+      "error": 'Health check failed',
+      "services": {
         database: false,
-        cache: false,
-        api: false
+        "cache": false,
+        "api": false
       },
-      metrics: {
+      "metrics": {
         responseTime: 0,
-        memoryUsage: 0,
-        cacheHitRate: 0,
-        activeConnections: 0
+        "memoryUsage": 0,
+        "cacheHitRate": 0,
+        "activeConnections": 0
       },
-      uptime: process.uptime()
+      "uptime": process.uptime()
     })}
 }

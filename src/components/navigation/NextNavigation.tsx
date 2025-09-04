@@ -38,78 +38,78 @@ const NextNavigation = (props) => {
     return () => window.removeEventListener('scroll', handleScroll);';
   }, []);';';';';';
   const navigationItems = [',
-    ';';' { name: 'Home', href: '/' },' {',';
+    ';';' { "name": 'Home', "href": '/' },' {',';
     ';';';';';
-      name: 'Services',',';
+      "name": 'Services',',';
     ';';';';';
-      href: '/services',';
-      dropdown: [' {',';
+      "href": '/services',';
+      "dropdown": [' {',';
     ';';';';';
-          name: 'AI Services',',';
+          "name": 'AI Services',',';
     ';';';';';
-          href: '/ai-services',';';
-          icon: Brai n,',';
+          "href": '/ai-services',';';
+          "icon": Brai n,',';
     ';';';';';
-          description: 'Cutting-edge AI solutions' },' {',';
+          "description": 'Cutting-edge AI solutions' },' {',';
     ';';';';';
-          name: 'IT Services',',';
+          "name": 'IT Services',',';
     ';';';';';
-          href: '/it-services',';';
-          icon: Clou d,',';
+          "href": '/it-services',';';
+          "icon": Clou d,',';
     ';';';';';
-          description: 'Enterprise IT infrastructure' },' {',';
+          "description": 'Enterprise IT infrastructure' },' {',';
     ';';';';';
-          name: 'Micro SaaS',',';
+          "name": 'Micro SaaS',',';
     ';';';';';
-          href: '/micro-saas',';';
-          icon: Cod e,',';
+          "href": '/micro-saas',';';
+          "icon": Cod e,',';
     ';';';';';
-          description: 'Custom software solutions' },' {',';
+          "description": 'Custom software solutions' },' {',';
     ';';';';';
-          name: 'Cybersecurity',',';
+          "name": 'Cybersecurity',',';
     ';';';';';
-          href: '/services#cybersecurity',';';
-          icon: Shiel d,',';
+          "href": '/services#cybersecurity',';';
+          "icon": Shiel d,',';
     ';';';';';
-          description: 'Advanced security solutions' },' {',';
+          "description": 'Advanced security solutions' },' {',';
     ';';';';';
-          name: 'Cloud & DevOps',',';
+          "name": 'Cloud & DevOps',',';
     ';';';';';
-          href: '/services#cloud',';';
-          icon: Databas e,',';
+          "href": '/services#cloud',';';
+          "icon": Databas e,',';
     ';';';';';
-          description: 'Scalable cloud infrastructure' },' {',';
+          "description": 'Scalable cloud infrastructure' },' {',';
     ';';';';';
-          name: 'Digital Transformation',',';
+          "name": 'Digital Transformation',',';
     ';';';';';
-          href: '/services#ai',';';
-          icon: Za p,',';
+          "href": '/services#ai',';';
+          "icon": Za p,',';
     ';';';';';
-          description: 'Business transformation' }';
+          "description": 'Business transformation' }';
       ] ;';';';';';
 },',';
-    ';';' { name: 'About', href: '/about' },',';
-    ';';' { name: 'Contact', href: '/contact' }
+    ';';' { "name": 'About', "href": '/about' },',';
+    ';';' { "name": 'Contact', "href": '/contact' }
   ]
   const contactInfo = [' {';';
-      icon: Phon e,',';
+      "icon": Phon e,',';
     ';';';';';
-      text: '+1 302 464 0950',',';
+      "text": '+1 302 464 0950',',';
     ';';';';';
-      href: 'tel:+13024640950' },' {';';
-      icon: Mai l,',';
+      "href": 'tel:+13024640950' },' {';';
+      "icon": Mai l,',';
     ';';';';';
-      text: 'kleber@ziontechgroup.com',',';
+      "text": 'kleber@ziontechgroup.com',',';
     ';';';';';
-      href: 'mailto: klebe r@ziontechgroup.com' },' {';';
-      icon: MapPi n,',';
+      "href": 'mailto: klebe r@ziontechgroup.com' },' {';';
+      "icon": MapPi n,',';
     ';';';';';
-      text: '364 E Main St STE 1008, Middletown DE 19709',',';
+      "text": '364 E Main St STE 1008, Middletown DE 19709',',';
     ';';';';';
-      href: '#' }
+      "href": '#' }
   ]
   const toggleDropdown = (props) => {
-    setActiveDropdown(activeDropdown === name ? null : name)};;
+    setActiveDropdown(activeDropdown === name ? null : name)};
   const closeMobileMenu = (props) => {
     setIsOpen(false);';';
     setActiveDropdown(null);';';';
@@ -119,11 +119,11 @@ const NextNavigation = (props) => {
     ';';';';';
       isScrolled ? 'bg-gray-900/95 backdrop-blur-md border-b border-cyan-400/20' : 'bg-transparent';
 }`}>
-      <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+      <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center group-hover: scal e-110 transition-transform duration-300">
+            <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center group-"hover": scal e-110 transition-transform duration-300">
               <Globe className="w-6 h-6 text-white"  />
             </div>
             <span className="text-xl font-bold text-white group-hover: tex t-cyan-300 transition-colors">
@@ -131,7 +131,7 @@ const NextNavigation = (props) => {
             </span>
           </Link>
           {/* Desktop Navigation */}
-          <div className="hidden lg: flex items-center space-x-8">
+          <div className="hidden "lg": flex items-center space-x-8">
             { navigationItems.map((item) => (
               <div key={item.name} className="relative">
                 {item.dropdown ? (
@@ -142,7 +142,7 @@ const NextNavigation = (props) => {
     </div>
   );';
 }
-                      className={`flex items-center space-x-1 text-gray-300 hover: tex t-cyan-300 transition-colors duration-200 py-2`
+                      className={"flex items-center space-x-1 text-gray-300 "hover": tex t-cyan-300 transition-colors duration-200 py-2"
                     >';';';';
                       <span>{item.name}</span>';';';';
                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${',';
@@ -153,11 +153,11 @@ const NextNavigation = (props) => {
                     <AnimatePresence>
                       {activeDropdown === item.name && (
                         <motion.div
-                          initial={{ opacity: 0, y: 1 0, scale: 0.95 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
-                          exit={{ opacity: 0, y: 1 0, scale: 0.95 }}
-                          transition={{ duration: 0.2 }}
-                          className=`absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-cyan-400/20 rounded-xl shadow-2xl shadow-cyan-400/10 overflow-hidden`}
+                          initial={{ "opacity": 0, "y": 1 0, "scale": 0.95 }}
+                          animate={{ "opacity": 1, "y": 0, "scale": 1 }}
+                          exit={{ "opacity": 0, "y": 1 0, "scale": 0.95 }}
+                          transition={{ "duration": 0.2 }}
+                          className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-cyan-400/20 rounded-xl shadow-2xl shadow-cyan-400/10 overflow-hidden"}
                         >
                           <div className="p-4">
                             {item.dropdown.map((dropdownItem) => (
@@ -169,7 +169,7 @@ const NextNavigation = (props) => {
     </div>
   );
 }
-                                className="flex items-start space-x-3 p-3 rounded-lg hover: b g-gray-800/50 transition-colors duration-200 group"
+                                className="flex items-start space-x-3 p-3 rounded-lg "hover": b g-gray-800/50 transition-colors duration-200 group"
                               >
                                 <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center group-hover: fro m-cyan-400/30 group-hover: t o-blue-400/30 transition-all duration-200">
                                   <dropdownItem.icon className="w-5 h-5 text-cyan-400" />
@@ -178,7 +178,7 @@ const NextNavigation = (props) => {
                                   <p className="text-sm font-medium text-white group-hover: tex t-cyan-300 transition-colors">
                                     {dropdownItem.name}
                                   </p>
-                                  <p className={`text-xs text-gray-400 mt-1`>
+                                  <p className={"text-xs text-gray-400 mt-1">
                                     {dropdownItem.description}
                                   </p>
                                 </div>
@@ -199,7 +199,7 @@ const NextNavigation = (props) => {
                   </div>';';
                 ) : (';';';';
                   <Link href={item.href}';';
-                    className={`text-gray-300 hover: tex t-cyan-300 transition-colors duration-200 py-2 ${',';
+                    className={`text-gray-300 "hover": tex t-cyan-300 transition-colors duration-200 py-2 ${',';
     ';';';';';
                       router.pathname === item.href ? 'text-cyan-400' : "}`}
                   >
@@ -218,10 +218,10 @@ const NextNavigation = (props) => {
 }
           </div>
           {/* CTA Button */}
-          <div className=`hidden lg: bloc k`}>
+          <div className="hidden "lg": bloc k"}>
             <Link
               href="/contact"
-              className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: fro m-cyan-600 hover: t o-blue-700 transition-all duration-300 transform hover: scal e-105 shadow-lg hover: shado w-cyan-500/25"
+              className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg "hover": fro m-cyan-600 hover: t o-blue-700 transition-all duration-300 transform hover: scal e-105 shadow-lg hover: shado w-cyan-500/25"
             >
               Get Started
             </Link>
@@ -233,7 +233,7 @@ const NextNavigation = (props) => {
     </div>
   );
 }
-            className="lg: hidden p-2 rounded-lg text-gray-300 hover: tex t-cyan-300 hover: b g-gray-800/50 transition-colors duration-200"
+            className=""lg": hidden p-2 rounded-lg text-gray-300 hover: tex t-cyan-300 hover: b g-gray-800/50 transition-colors duration-200"
             aria-label="Toggle mobile menu"
           >
             {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
@@ -243,12 +243,12 @@ const NextNavigation = (props) => {
       {/* Mobile Menu */}
       <AnimatePresence>' {isOpen && (';';';';
           <motion.div';';';';';
-            initial={{ opacity: 0, height: 0 }}',';
+            initial={{ "opacity": 0, "height": 0 }}',';
     ';';';';';
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="lg: hidden bg-gray-900/95 backdrop-blur-md border-t border-cyan-400/20"
+            animate={{ "opacity": 1, "height": 'auto' }}
+            exit={{ "opacity": 0, "height": 0 }}
+            transition={{ "duration": 0.3 }}
+            className=""lg": hidden bg-gray-900/95 backdrop-blur-md border-t border-cyan-400/20"
           >
             <div className="px-4 py-6 space-y-4">
               {/* Contact Information */}
@@ -261,7 +261,7 @@ const NextNavigation = (props) => {
                     <a
                       key={index}
                       href={contact.href}
-                      className="flex items-center space-x-3 text-sm text-gray-300 hover: tex t-cyan-300 transition-colors"
+                      className="flex items-center space-x-3 text-sm text-gray-300 "hover": tex t-cyan-300 transition-colors"
                     >
                       <contact.icon className="w-4 h-4 text-cyan-400" />
                       <span>{contact.text}</span>
@@ -285,7 +285,7 @@ const NextNavigation = (props) => {
     </div>
   );';
 }
-                          className={`flex items-center justify-between w-full text-left px-3 py-2 text-gray-300 hover: tex t-cyan-300 hover: b g-gray-800/50 rounded-lg transition-colors duration-200`
+                          className={"flex items-center justify-between w-full text-left px-3 py-2 text-gray-300 "hover": tex t-cyan-300 hover: b g-gray-800/50 rounded-lg transition-colors duration-200"
                         >';';';';
                           <span>{item.name}</span>';';';';
                           <ChevronDownclassName={`w-4 h-4 transition-transform duration-200 ${',';
@@ -295,21 +295,21 @@ const NextNavigation = (props) => {
                         </button>';
                         <AnimatePresence>' {activeDropdown === item.name && (';';';';
                             <motion.div';';';';';
-                              initial={{ opacity: 0, height: 0 }}',';
+                              initial={{ "opacity": 0, "height": 0 }}',';
     ';';';';';
-                              animate={{ opacity: 1, height: 'auto' }}
-                              exit={{ opacity: 0, height: 0 }}
-                              transition={{ duration: 0.2 }}
-                              className=`ml-4 mt-2 space-y-1`}
+                              animate={{ "opacity": 1, "height": 'auto' }}
+                              exit={{ "opacity": 0, "height": 0 }}
+                              transition={{ "duration": 0.2 }}
+                              className="ml-4 mt-2 space-y-1"}
                             >
                               {item.dropdown.map((dropdownItem) => (
                                 <Link
                                   key={dropdownItem.name}
                                   href={dropdownItem.href}
                                   onClick={closeMobileMenu}
-                                  className="flex items-center space-x-3 px-3 py-2 text-sm text-gray-400 hover: tex t-cyan-300 hover: b g-gray-800/50 rounded-lg transition-colors duration-200"
+                                  className="flex items-center space-x-3 px-3 py-2 text-sm text-gray-400 "hover": tex t-cyan-300 hover: b g-gray-800/50 rounded-lg transition-colors duration-200"
                                 >
-                                  <dropdownItem.icon className={`w-4 h-4 text-cyan-400` />
+                                  <dropdownItem.icon className={"w-4 h-4 text-cyan-400" />
                                   <span>{dropdownItem.name}</span>
                                 </Link>
                               ))
@@ -333,7 +333,7 @@ const NextNavigation = (props) => {
     ';';';';';
                             ? 'text-cyan-400 bg-cyan-400/10",';
     ';';';';';
-                            : 'text-gray-300 hover: tex t-cyan-300 hover: b g-gray-800/50'}`}
+                            : 'text-gray-300 "hover": tex t-cyan-300 hover: b g-gray-800/50'}`}
                       >
                         {item.name}
                       </Link>
@@ -350,11 +350,11 @@ const NextNavigation = (props) => {
 }
               </div>
               {/* Mobile CTA */}
-              <div className=`pt-4 border-t border-gray-700`}>
+              <div className="pt-4 border-t border-gray-700"}>
                 <Link
                   href="/contact"
                   onClick={closeMobileMenu}
-                  className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium text-center rounded-lg hover: fro m-cyan-600 hover: t o-blue-700 transition-all duration-300 transform hover: scal e-105 shadow-lg hover: shado w-cyan-500/25"
+                  className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium text-center rounded-lg "hover": fro m-cyan-600 hover: t o-blue-700 transition-all duration-300 transform hover: scal e-105 shadow-lg hover: shado w-cyan-500/25"
                 >
                   Get Started Today
                 </Link>

@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 export default function Page($1) {
 ,
-    { value: "quote_received", label: "Quote Request Received" },
-    { value: "milestone_approved", label: "Milestone Approved" },
-    { value: "talent_hired", label: "Talent Hired" }
+    { "value": "quote_received", "label": "Quote Request Received" },
+    { "value": "milestone_approved", "label": "Milestone Approved" },
+    { "value": "talent_hired", "label": "Talent Hired" }
   ];
   
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 }, []);
     fetchWebhooks();
   }, [fetchWebhooks]); // Added fetchWebhooks
@@ -23,15 +23,15 @@ export default function Page($1) {
     
     setNewWebhook({
       ...newWebhook,
-      eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
-      selectedEvent: " as WebhookEventType
+      "eventTypes": [...newWebhook.eventTypes, newWebhook.selectedEvent],
+      "selectedEvent": " as WebhookEventType
     });
   };
   
   const handleRemoveEvent = (props) => {
     setNewWebhook({
       ...newWebhook,
-      eventTypes: newWebhoo k.eventTypes.filter(e => e !== event)
+      "eventTypes": newWebhoo k.eventTypes.filter(e => e !== event)
     };);
   };
   
@@ -49,15 +49,15 @@ export default function Page($1) {
     
     // Reset form
     setNewWebhook({
-      name: ",
-      url: ",
-      selectedEvent: " as WebhookEventType,
-      eventTypes: [],
-      secret: "
+      "name": ",
+      "url": ",
+      "selectedEvent": " as WebhookEventType,
+      "eventTypes": [],
+      "secret": "
     });
   };
   
-  const handleTestWebhook = async(webhookId: string, eventType: WebhookEventTyp e) => {
+  const handleTestWebhook = async("webhookId": string, "eventType": WebhookEventTyp e) => {
     await testWebhook(webhookId, eventType);
   };
   
@@ -70,14 +70,14 @@ export default function Page($1) {
             Define webhooks to notify external systems when events occur in Zion.</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
-          <div className="grid grid-cols-1 md: gri d-cols-2 gap-4">
+          <div className="grid grid-cols-1 "md": gri d-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="webhook-name">Webhook Name</Label>
               <Input 
                 id="webhook-name" 
                 placeholder="e.g., Job Postings Webhook"
                 value={newWebhook.name}
-                onChange={(e) => setNewWebhook({...newWebhook, name: e.target.value})}
+                onChange={(e) => setNewWebhook({...newWebhook, "name": e.target.value})}
               />
             </div>
             
@@ -85,9 +85,9 @@ export default function Page($1) {
               <Label htmlFor="webhook-url">URL</Label>
               <Input 
                 id="webhook-url" 
-                placeholder="https://example.com/webhook"
+                placeholder=""https": //example.com/webhook"
                 value={newWebhook.url}
-                onChange={(e) => setNewWebhook({...newWebhook, url: e.target.value})}
+                onChange={(e) => setNewWebhook({...newWebhook, "url": e.target.value})}
               />
             </div>
           </div>
@@ -107,7 +107,7 @@ export default function Page($1) {
             <div className="flex space-x-2">
               <Select
                 value={newWebhook.selectedEvent}
-                onValueChange={(value) => setNewWebhook({...newWebhook, selectedEvent: value as WebhookEventType})}
+                onValueChange={(value) => setNewWebhook({...newWebhook, "selectedEvent": value as WebhookEventType})}
               >
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select event"  />
@@ -132,7 +132,7 @@ export default function Page($1) {
               id="webhook-secret" 
               placeholder="A secret key to verify the webhook source"
               value={newWebhook.secret}
-              onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
+              onChange={(e) => setNewWebhook({...newWebhook, "secret": e.target.value})}
             />
             <p className="text-xs text-muted-foreground">
               If provided, this secret will be used to sign the webhook payload.</p>
@@ -197,7 +197,7 @@ export default function Page($1) {
                     </div>
                     <div className="text-xs text-muted-foreground">
                       {webhook.last_triggered_at ';
-                        ? `Last triggered: ${new Date(webhook.last_triggered_at).toLocaleString()}`
+                        ? `Last "triggered": ${new Date(webhook.last_triggered_at).toLocaleString()}`
                         : 'Never triggered'}
                     </div>
                   </div>
@@ -240,13 +240,13 @@ export default function Page($1) {
             <CardContent>
               <div className="space-y-2">
                 <divclassName="flex justify-between">
-                  <span className="font-medium">Status:</span>';
+                  <span className="font-medium">"Status": </span>';
                   <span className={testResult.status >= 200 && testResult.status < 300 ? 'text-green-600' : 'text-red-600'}>
                     {testResult.status} {testResult.statusText}
                   </span>
                 </div>
                 <div>
-                  <span className="font-medium">Response:</span>
+                  <span className="font-medium">"Response": </span>
                   <preclassName="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto">';
                     {testResult.responseBody || '<empty>'}
                   </pre>

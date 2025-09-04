@@ -25,8 +25,7 @@ class QuickMergeFix {
   async fixCriticalFiles() {
     this.log('🔧 Fixing Critical Files');
     
-    const criticalFiles = [
-      'package.json',
+    const criticalFiles = ['package.json',
       'next.config.js',
       'tsconfig.json',
       'src/pages/services/AI-Healthcare-Diagnostics-Platform.tsx',
@@ -47,7 +46,7 @@ class QuickMergeFix {
             if (content !== originalContent) {
               fs.writeFileSync(filePath, content, 'utf8');
               this.fixedCount++;
-              this.log(`✅ Fixed merge conflicts in: ${file}`)}
+              this.log(`✅ Fixed merge conflicts "in": ${file}`)}
           }
         } catch (error) {
           this.log(`❌ Error fixing ${file}: ${error.message}`)}

@@ -17,7 +17,7 @@ class AutomationSuiteRunner {
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
+      fs.mkdirSync(this.reportsDir, { "recursive": true });
     }
   }
 
@@ -29,29 +29,28 @@ class AutomationSuiteRunner {
   }
 
   async runCommand(command, description) {
-    this.log(`🚀 Starting: ${description}`);
+    this.log(`🚀 "Starting": ${description}`);
     try {
       const result = execSync(command, {
-        cwd: this.projectRoot,
-        encoding: "utf8",
-        timeout: 300000 // 5 minutes timeout
+        "cwd": this.projectRoot,
+        "encoding": "utf8",
+        "timeout": 300000 // 5 minutes timeout
       });
-      this.log(`✅ Completed: ${description}`);
-      return { success: true, output: result };
+      this.log(`✅ "Completed": ${description}`);
+      return { "success": true, "output": result };
     } catch (error) {
-      this.log(`❌ Failed: ${description} - ${error.message}`);
-      return { success: false, error: error.message };
+      this.log(`❌ "Failed": ${description} - ${error.message}`);
+      return { "success": false, "error": error.message };
     }
   }
 
   async runAutomationScripts() {
     this.log("🔧 Running Core Automation Scripts...");
     
-    const scripts = [
-      { command: "npm run lint:fix", description: "ESLint Fix" },
-      { command: "npm run type-check", description: "TypeScript Check" },
-      { command: "npm run build", description: "Build Application" },
-      { command: "npm test", description: "Run Tests" }
+    const scripts = [{ "command": "npm run lint:fix", "description": "ESLint Fix" },
+      { "command": "npm run type-check", "description": "TypeScript Check" },
+      { "command": "npm run build", "description": "Build Application" },
+      { "command": "npm test", "description": "Run Tests" }
     ];
 
     const results = [];
@@ -66,27 +65,26 @@ class AutomationSuiteRunner {
   async runCustomAutomations() {
     this.log("🛠️ Running Custom Automation Scripts...");
     
-    const customScripts = [
-      { path: "scripts/syntax-fixer.cjs", name: "Syntax Fixer" },
-      { path: "scripts/performance-monitor.cjs", name: "Performance Monitor" },
-      { path: "scripts/security-auditor.cjs", name: "Security Auditor" },
-      { path: "scripts/seo-optimizer.cjs", name: "SEO Optimizer" }
+    const customScripts = [{ "path": "scripts/syntax-fixer.cjs", "name": "Syntax Fixer" },
+      { "path": "scripts/performance-monitor.cjs", "name": "Performance Monitor" },
+      { "path": "scripts/security-auditor.cjs", "name": "Security Auditor" },
+      { "path": "scripts/seo-optimizer.cjs", "name": "SEO Optimizer" }
     ];
 
     const results = [];
     for (const customScript of customScripts) {
       if (fs.existsSync(customScript.path)) {
         try {
-          this.log(`Running: ${customScript.name}`);
+          this.log(`"Running": ${customScript.name}`);
           const result = await this.runCommand(`node ${customScript.path}`, customScript.name);
           results.push({ ...customScript, ...result });
-          this.log(`✅ Completed: ${customScript.name}`);
+          this.log(`✅ "Completed": ${customScript.name}`);
         } catch (error) {
-          this.log(`❌ Failed: ${customScript.name} - ${error.message}`);
-          results.push({ ...customScript, success: false, error: error.message });
+          this.log(`❌ "Failed": ${customScript.name} - ${error.message}`);
+          results.push({ ...customScript, "success": false, "error": error.message });
         }
       } else {
-        this.log(`⚠️ Script not found: ${customScript.path}`);
+        this.log(`⚠️ Script not "found": ${customScript.path}`);
       }
     }
 
@@ -96,11 +94,10 @@ class AutomationSuiteRunner {
   async detectErrors() {
     this.log("🔍 Detecting errors in codebase...");
     
-    const errorPatterns = [
-      { pattern: /SyntaxError|ReferenceError|TypeError/g, type: "JavaScript Error" },
-      { pattern: /console\.log|console\.error|console\.warn/g, type: "Console Statement" },
-      { pattern: /TODO|FIXME|HACK|XXX/g, type: "Code Comment" },
-      { pattern: /debugger/g, type: "Debugger Statement" }
+    const errorPatterns = [{ "pattern": /SyntaxError|ReferenceError|TypeError/g, "type": "JavaScript Error" },
+      { "pattern": /console\.log|console\.error|console\.warn/g, "type": "Console Statement" },
+      { "pattern": /TODO|FIXME|HACK|XXX/g, "type": "Code Comment" },
+      { "pattern": /debugger/g, "type": "Debugger Statement" }
     ];
 
     const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx', '.cjs']);
@@ -113,10 +110,10 @@ class AutomationSuiteRunner {
           const matches = content.match(pattern);
           if (matches) {
             errors.push({
-              file: path.relative(this.projectRoot, file),
+              "file": path.relative(this.projectRoot, file),
               type,
-              count: matches.length,
-              matches: matches.slice(0, 5) // Limit to first 5 matches
+              "count": matches.length,
+              "matches": matches.slice(0, 5) // Limit to first 5 matches
             });
           }
         }
@@ -133,9 +130,9 @@ class AutomationSuiteRunner {
     this.log("📊 Analyzing performance...");
     
     const performanceMetrics = {
-      bundleSize: 0,
-      fileCount: 0,
-      largeFiles: []
+      "bundleSize": 0,
+      "fileCount": 0,
+      "largeFiles": []
     };
 
     const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx', '.cjs']);
@@ -149,8 +146,8 @@ class AutomationSuiteRunner {
         
         if (sizeKB > 100) { // Files larger than 100KB
           performanceMetrics.largeFiles.push({
-            file: path.relative(this.projectRoot, file),
-            size: sizeKB
+            "file": path.relative(this.projectRoot, file),
+            "size": sizeKB
           });
         }
       } catch (error) {
@@ -173,21 +170,20 @@ class AutomationSuiteRunner {
         const content = fs.readFileSync(file, "utf8");
         
         // Check for common security issues
-        const securityPatterns = [
-          { pattern: /eval\s*\(/g, type: "Eval Usage", severity: "high" },
-          { pattern: /innerHTML\s*=/g, type: "innerHTML Usage", severity: "medium" },
-          { pattern: /document\.write/g, type: "document.write Usage", severity: "medium" },
-          { pattern: /localStorage\.setItem/g, type: "localStorage Usage", severity: "low" }
+        const securityPatterns = [{ "pattern": /eval\s*\(/g, "type": "Eval Usage", "severity": "high" },
+          { "pattern": /innerHTML\s*=/g, "type": "innerHTML Usage", "severity": "medium" },
+          { "pattern": /document\.write/g, "type": "document.write Usage", "severity": "medium" },
+          { "pattern": /localStorage\.setItem/g, "type": "localStorage Usage", "severity": "low" }
         ];
 
         for (const { pattern, type, severity } of securityPatterns) {
           const matches = content.match(pattern);
           if (matches) {
             securityIssues.push({
-              file: path.relative(this.projectRoot, file),
+              "file": path.relative(this.projectRoot, file),
               type,
               severity,
-              count: matches.length
+              "count": matches.length
             });
           }
         }
@@ -204,10 +200,10 @@ class AutomationSuiteRunner {
     this.log("📝 Checking code quality...");
     
     const qualityMetrics = {
-      totalLines: 0,
-      commentRatio: 0,
-      functionCount: 0,
-      complexityIssues: []
+      "totalLines": 0,
+      "commentRatio": 0,
+      "functionCount": 0,
+      "complexityIssues": []
     };
 
     const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx', '.cjs']);
@@ -237,9 +233,9 @@ class AutomationSuiteRunner {
         const longLines = lines.filter(line => line.length > 120);
         if (longLines.length > 0) {
           qualityMetrics.complexityIssues.push({
-            file: path.relative(this.projectRoot, file),
-            type: "Long Lines",
-            count: longLines.length
+            "file": path.relative(this.projectRoot, file),
+            "type": "Long Lines",
+            "count": longLines.length
           });
         }
       } catch (error) {
@@ -278,23 +274,23 @@ class AutomationSuiteRunner {
     this.log("📋 Generating comprehensive report...");
     
     const report = {
-      timestamp: new Date().toISOString(),
-      project: path.basename(this.projectRoot),
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "project": path.basename(this.projectRoot),
+      "summary": {
         totalScripts: 0,
-        successfulScripts: 0,
-        failedScripts: 0,
-        errorsDetected: 0,
-        securityIssues: 0,
-        performanceScore: 0
+        "successfulScripts": 0,
+        "failedScripts": 0,
+        "errorsDetected": 0,
+        "securityIssues": 0,
+        "performanceScore": 0
       },
-      results: {
+      "results": {
         automationScripts: [],
-        customScripts: [],
-        errors: [],
-        performance: {},
-        security: [],
-        codeQuality: {}
+        "customScripts": [],
+        "errors": [],
+        "performance": {},
+        "security": [],
+        "codeQuality": {}
       }
     };
 
@@ -308,8 +304,7 @@ class AutomationSuiteRunner {
 
     // Calculate summary
     report.summary.totalScripts = report.results.automationScripts.length + report.results.customScripts.length;
-    report.summary.successfulScripts = [
-      ...report.results.automationScripts,
+    report.summary.successfulScripts = [...report.results.automationScripts,
       ...report.results.customScripts
     ].filter(r => r.success).length;
     report.summary.failedScripts = report.summary.totalScripts - report.summary.successfulScripts;
@@ -321,7 +316,7 @@ class AutomationSuiteRunner {
     const reportFile = path.join(this.reportsDir, `automation-report-${Date.now()}.json`);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-    this.log(`📄 Report saved to: ${reportFile}`);
+    this.log(`📄 Report saved "to": ${reportFile}`);
     return report;
   }
 
@@ -332,7 +327,7 @@ class AutomationSuiteRunner {
       this.log("✅ Automation Suite completed successfully!");
       return report;
     } catch (error) {
-      this.log(`❌ Automation Suite failed: ${error.message}`);
+      this.log(`❌ Automation Suite "failed": ${error.message}`);
       throw error;
     }
   }

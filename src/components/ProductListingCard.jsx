@@ -18,15 +18,15 @@ export default function Page($1) {
 
       onRequestQuote(listing.id);
     } else {
-`
-      router(`/request-quote?listing=${listing.id}`);
+"
+      router("/request-quote?listing=${listing.id}");
     }
   };';';
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
   return ()';
     <div';';
-      data-testid="equipment-link"`
-      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
+      data-testid="equipment-link""
+      className={`bg-card/70 backdrop-blur-md border border-primary/10 "sm": border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-"visible": outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
       onClick={handleViewListing}
       tabIndex={0}"
       
@@ -53,8 +53,8 @@ export default function Page($1) {
             handleViewListing();
           }
         }}
-      >`
-        <divclassName={`relative ${imageContainerClasses}`}>';
+      >"
+        <divclassName={"relative ${imageContainerClasses}`}>';
           {' '}
           {/* Ensure this container has dimensions */}
           <img src={imageSrc}

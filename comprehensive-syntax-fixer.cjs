@@ -22,11 +22,11 @@ function fixSyntaxErrors(content) {
   content = content.replace(/}\s*analyzeApp\(\)/g, '}\n\n  analyzeApp()');
   
   // Fix console.log syntax errors
-  content = content.replace(/console\.log\(`([^`]+)`\)console\.log\(`([^`]+)`\)/g, 'console.log(`$1`);\n  console.log(`$2`);');
-  content = content.replace(/console\.log\(`([^`]+)`\)console\.log\(`([^`]+)`\)/g, 'console.log(`$1`);\n  console.log(`$2`);');
+  content = content.replace(/console\.log\("([^"]+)"\)console\.log\("([^"]+)"\)/g, 'console.log("$1");\n  console.log("$2");');
+  content = content.replace(/console\.log\("([^"]+)"\)console\.log\("([^"]+)"\)/g, 'console.log("$1");\n  console.log("$2");');
   
   // Fix try-catch syntax
-  content = content.replace(/catch\(\)\s*{\s*console\.log\('❌[^']+',\s*,\s*error\.message\)\s*}/g, 'catch(error) {\n  console.log(\'❌ Package.json is invalid:\', error.message);\n}');
+  content = content.replace(/catch\(\)\s*{\s*console\.log\('❌[^']+',\s*,\s*error\.message\)\s*}/g, 'catch(error) {\n  console.log(\'❌ Package.json is "invalid": \', error.message);\n}');
   
   // Fix array syntax
   content = content.replace(/\[\s*;/g, '[');
@@ -76,7 +76,7 @@ function processFile(filePath) {
       fs.writeFileSync(filePath, fixedContent, 'utf8')) {
      {
       fs.writeFileSync(filePath, fixedContent, 'utf8')}
-      console.log(`Fixed syntax errors in: ${filePath}`);
+      console.log(`Fixed syntax errors "in": ${filePath}`);
       return true}
     return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);

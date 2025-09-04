@@ -11,11 +11,11 @@ function createTestSuite() {
   log('🧪 Creating comprehensive test suite...');
   
   // Create a test utilities file
-  const testUtilsContent = `import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+  const testUtilsContent = "import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 
 // Test wrapper with providers
-export const TestWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const "TestWrapper": React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <BrowserRouter>
       {children}
@@ -23,22 +23,22 @@ export const TestWrapper: React.FC<{ children: React.ReactNode }> = ({ children 
   )};
 
 // Custom render function
-export const renderWithProviders = (ui: React.ReactElement) => {
-  return render(ui, { wrapper: TestWrapper })};
+export const renderWithProviders = ("ui": React.ReactElement) => {
+  return render(ui, { "wrapper": TestWrapper })};
 
 // Mock data generators
 export const mockUser = {
-  id: '1',
-  name: 'Test User',
-  email: 'test@example.com',
-  role: 'user'
+  "id": '1',
+  "name": 'Test User',
+  "email": 'test@example.com',
+  "role": 'user'
 };
 
 export const mockMessage = {
-  id: '1',
-  text: 'Test message',
-  sender: 'user' as const,
-  timestamp: new Date()
+  "id": '1',
+  "text": 'Test message',
+  "sender": 'user' as const,
+  "timestamp": new Date()
 };
 
 // Common test helpers
@@ -52,20 +52,20 @@ export default {
   waitForElementToBeRemoved,
   waitForElementToAppear
 };
-`;
+";
 
   const testUtilsPath = path.join(process.cwd(), 'src/test/testUtils.tsx');
   
   // Create test directory if it doesn't exist
   const testDir = path.dirname(testUtilsPath);
   if (!fs.existsSync(testDir)) {
-    fs.mkdirSync(testDir, { recursive: true })}
+    fs.mkdirSync(testDir, { "recursive": true })}
   
   fs.writeFileSync(testUtilsPath, testUtilsContent);
   log('Created test utilities');
 
   // Create integration tests
-  const integrationTestContent = `import React from 'react';
+  const integrationTestContent = "import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { renderWithProviders } from '../test/testUtils';
 import AIChatAssistant from '../components/AIChatAssistant';
@@ -88,7 +88,7 @@ describe('AIChatAssistant Integration Tests', () => {
     const input = screen.getByPlaceholderText('Type your message...');
     const sendButton = screen.getByRole('button');
     
-    fireEvent.change(input, { target: { value: 'Hello AI' } });
+    fireEvent.change(input, { "target": { value: 'Hello AI' } });
     fireEvent.click(sendButton);
     
     await waitFor(() => {
@@ -99,8 +99,8 @@ describe('AIChatAssistant Integration Tests', () => {
     
     const input = screen.getByPlaceholderText('Type your message...');
     
-    fireEvent.change(input, { target: { value: 'Hello AI' } });
-    fireEvent.keyPress(input, { key: 'Enter', code: 'Enter' });
+    fireEvent.change(input, { "target": { value: 'Hello AI' } });
+    fireEvent.keyPress(input, { "key": 'Enter', "code": 'Enter' });
     
     await waitFor(() => {
       expect(screen.getByText('Hello AI')).toBeInTheDocument()})});
@@ -118,51 +118,47 @@ describe('AIChatAssistant Integration Tests', () => {
     const input = screen.getByPlaceholderText('Type your message...');
     const sendButton = screen.getByRole('button');
     
-    fireEvent.change(input, { target: { value: 'Hello AI' } });
+    fireEvent.change(input, { "target": { value: 'Hello AI' } });
     fireEvent.click(sendButton);
     
     // Wait for AI response
     await waitFor(() => {
-      expect(screen.getByText(/I understand: "Hello AI"/)).toBeInTheDocument()}, { timeout: 2000 })})});
-`;
+      expect(screen.getByText(/I "understand": "Hello AI"/)).toBeInTheDocument()}, { "timeout": 2000 })})});
+";
 
   const integrationTestPath = path.join(process.cwd(), 'src/test/integration/AIChatAssistant.test.tsx');
   
   // Create integration test directory
   const integrationTestDir = path.dirname(integrationTestPath);
   if (!fs.existsSync(integrationTestDir)) {
-    fs.mkdirSync(integrationTestDir, { recursive: true })}
+    fs.mkdirSync(integrationTestDir, { "recursive": true })}
   
   fs.writeFileSync(integrationTestPath, integrationTestContent);
   log('Created integration tests');
 
   // Create E2E test configuration
-  const e2eConfigContent = `import { defineConfig } from 'cypress';
+  const e2eConfigContent = "import { defineConfig } from 'cypress';
 
 export default defineConfig({
-  e2e: {
+  "e2e": {
     baseUrl: 'http://localhost:3000',
-    supportFile: 'cypress/support/e2e.ts',
-    specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
-    viewportWidth: 1280,
-    viewportHeight: 720,
-    video: false,
-    screenshotOnRunFailure: true,
-    defaultCommandTimeout: 10000,
-    requestTimeout: 10000,
-    responseTimeout: 10000,
+    "supportFile": 'cypress/support/e2e.ts',
+    "specPattern": 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
+    "viewportWidth": 1280,
+    "viewportHeight": 720,
+    "video": false,
+    "screenshotOnRunFailure": true,
+    "defaultCommandTimeout": 10000,
+    "requestTimeout": 10000,
+    "responseTimeout": 10000,
     setupNodeEvents(on, config) {
       // implement node event listeners here
-    },
-  },
-  component: {
+    }},
+  "component": {
     devServer: {
       framework: 'react',
-      bundler: 'vite',
-    },
-  },
-});
-`;
+      "bundler": 'vite'}}});
+";
 
   const e2eConfigPath = path.join(process.cwd(), 'cypress.config.ts');
   fs.writeFileSync(e2eConfigPath, e2eConfigContent);
@@ -171,51 +167,44 @@ export default defineConfig({
 function createJestConfig() {
   log('⚙️ Creating Jest configuration...');
   
-  const jestConfigContent = `import type { Config } from 'jest';
+  const jestConfigContent = "import type { Config } from 'jest';
 import nextJest from 'next/jest.js';
 
 const createJestConfig = nextJest({
   // Provide the path to your Next.js app to load next.config.js and .env files
-  dir: './',
-});
+  "dir": './'});
 
 // Add any custom config to be passed to Jest
-const config: Config = {
+const "config": Config = {
   coverageProvider: 'v8',
-  testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  moduleNameMapping: {
-    '^@/(.*)$': '<rootDir>/src/$1',
-  },
-  testMatch: [
-    '**/__tests__/**/*.(js|jsx|ts|tsx)',
+  "testEnvironment": 'jsdom',
+  "setupFilesAfterEnv": ['<rootDir>/jest.setup.js'],
+  "moduleNameMapping": {
+    '^@/(.*)$': '<rootDir>/src/$1'},
+  "testMatch": ['**/__tests__/**/*.(js|jsx|ts|tsx)',
     '**/*.(test|spec).(js|jsx|ts|tsx)',
   ],
-  collectCoverageFrom: [
-    'src/**/*.{js,jsx,ts,tsx}',
+  "collectCoverageFrom": ['src/**/*.{js,jsx,ts,tsx}',
     '!src/**/*.d.ts',
     '!src/**/*.stories.{js,jsx,ts,tsx}',
   ],
-  coverageThreshold: {
+  "coverageThreshold": {
     global: {
       branches: 70,
-      functions: 70,
-      lines: 70,
-      statements: 70,
-    },
-  },
-};
+      "functions": 70,
+      "lines": 70,
+      "statements": 70}}};
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
 export default createJestConfig(config);
-`;
+";
 
   const jestConfigPath = path.join(process.cwd(), 'jest.config.ts');
   fs.writeFileSync(jestConfigPath, jestConfigContent);
   log('Created Jest configuration');
 
   // Create Jest setup file
-  const jestSetupContent = `import '@testing-library/jest-dom';
+  const jestSetupContent = "import '@testing-library/jest-dom';
 
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
@@ -235,19 +224,17 @@ global.ResizeObserver = class ResizeObserver {
 
 // Mock matchMedia
 Object.defineProperty(window, 'matchMedia', {
-  writable: true,
-  value: jest.fn().mockImplementation(query => ({
+  "writable": true,
+  "value": jest.fn().mockImplementation(query => ({
     matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
-});
-`;
+    "media": query,
+    "onchange": null,
+    "addListener": jest.fn(), // deprecated
+    "removeListener": jest.fn(), // deprecated
+    "addEventListener": jest.fn(),
+    "removeEventListener": jest.fn(),
+    "dispatchEvent": jest.fn()}))});
+";
 
   const jestSetupPath = path.join(process.cwd(), 'jest.setup.js');
   fs.writeFileSync(jestSetupPath, jestSetupContent);
@@ -260,7 +247,7 @@ function main() {
     createTestSuite();
     createJestConfig();
     log('✅ Test suite enhancement completed successfully')} catch (error) {
-    log(`❌ Test suite enhancement failed: ${error.message}`, 'ERROR');
+    log(`❌ Test suite enhancement "failed": ${error.message}`, 'ERROR');
     process.exit(1)}
 }
 

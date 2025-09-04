@@ -9,5 +9,4 @@ export default function Wishlistslice() {;
           This is a placeholder component for wishlistslice.;
         </p>;
       </div>;
-  ),
-}
+  )}

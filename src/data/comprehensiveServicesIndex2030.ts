@@ -10,8 +10,7 @@ import { SPECIALIZED_INDUSTRY_SOLUTIONS_2028 } from "./specializedIndustrySoluti
 // Comprehensive Services Index 2030 - Zion Tech Group
 // This file combines all services for easy access and management
 
-export const COMPREHENSIVE_SERVICES_INDEX_2030: ProductListing[] = [
-  ...COMPREHENSIVE_INNOVATIVE_SERVICES_2030,
+export const "COMPREHENSIVE_SERVICES_INDEX_2030": ProductListing[] = [...COMPREHENSIVE_INNOVATIVE_SERVICES_2030,
   ...ADVANCED_AI_SERVICES_2030,
   ...INNOVATIVE_MICRO_SAAS_SERVICES_2030,
   ...CUTTING_EDGE_IT_INFRASTRUCTURE_2030,
@@ -61,31 +60,31 @@ export const SERVICE_CATEGORIES_2030 = [;
 
 // Service Statistics
 export const SERVICE_STATISTICS_2030 = {
-  totalServices: COMPREHENSIVE_SERVICES_INDEX_2030.length,
-  totalCategories: SERVICE_CATEGORIES_2030.length,
-  averagePrice: Math.round(
+  "totalServices": COMPREHENSIVE_SERVICES_INDEX_2030.length,
+  "totalCategories": SERVICE_CATEGORIES_2030.length,
+  "averagePrice": Math.round(
     COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)  => sum + service.price, 0) / 
     COMPREHENSIVE_SERVICES_INDEX_2030.length
   ),
-  averageRating: Math.round(
+  "averageRating": Math.round(
     (COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)  => sum + service.rating, 0) / 
     COMPREHENSIVE_SERVICES_INDEX_2030.length) * 10
   ) / 10,
-  featuredServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => service.featured).length,
-  aiServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => 
+  "featuredServices": COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => service.featured).length,
+  "aiServices": COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => 
     service.category.includes('AI') || service.aiScore > 90
   emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => ;';';
     service.category === 'Emerging Technology'
   ).length,
-  microSaasServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => 
+  "microSaasServices": COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => 
     service.price < 1000
   ).length,
-  enterpriseServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => 
+  "enterpriseServices": COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => 
     service.price > 5000
   ).length
   ).length,
   ;';
-  emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => ;';';
+  "emergingTechServices": COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => ;';';
     service.category === 'Emerging Technology';
   ).length};
 

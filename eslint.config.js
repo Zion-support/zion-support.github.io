@@ -1,14 +1,12 @@
 import js from '@eslint/js';
 <<<<<<< HEAD
 
-export default [
-  js.configs.recommended,
+export default [js.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
-    rules: {
-      'no-unused-vars': [
-        'warn',
-        { argsIgnorePattern: '^_' }
+    "files": ['**/*.{js,jsx,ts,tsx}'],
+    "rules": {
+      'no-unused-vars': ['warn',
+        { "argsIgnorePattern": '^_' }
       ],
       'no-console': 'warn',
       'prefer-const': 'warn',
@@ -20,9 +18,8 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 
-export default [
-  {
-    ignores: [
+export default [{
+    "ignores": [
       'node_modules/',
       '.next/',
       'out/',
@@ -62,63 +59,63 @@ export default [
     ]
   },
   {
-    files: ['**/*.{js,jsx}'],
-    languageOptions: {
+    "files": ['**/*.{js,jsx}'],
+    "languageOptions": {
       ecmaVersion: 2021,
-      sourceType: 'module',
-      globals: {
+      "sourceType": 'module',
+      "globals": {
         window: 'readonly',
-        document: 'readonly',
-        navigator: 'readonly',
-        localStorage: 'readonly',
-        sessionStorage: 'readonly',
-        console: 'readonly',
-        setTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearTimeout: 'readonly',
-        clearInterval: 'readonly',
-        requestAnimationFrame: 'readonly',
-        cancelAnimationFrame: 'readonly',
-        fetch: 'readonly',
-        URL: 'readonly',
-        URLSearchParams: 'readonly',
-        Blob: 'readonly',
-        CustomEvent: 'readonly',
-        Intl: 'readonly',
-        performance: 'readonly',
-        caches: 'readonly',
-        Notification: 'readonly',
-        ServiceWorker: 'readonly',
-        ServiceWorkerRegistration: 'readonly',
-        PushSubscription: 'readonly',
-        NotificationPermission: 'readonly',
-        process: 'readonly',
-        global: 'readonly',
-        jest: 'readonly',
-        describe: 'readonly',
-        it: 'readonly',
-        test: 'readonly',
-        expect: 'readonly',
-        vi: 'readonly',
-        Deno: 'readonly',
-        React: 'readonly',
-        require: 'readonly',
-        module: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        exports: 'readonly'
+        "document": 'readonly',
+        "navigator": 'readonly',
+        "localStorage": 'readonly',
+        "sessionStorage": 'readonly',
+        "console": 'readonly',
+        "setTimeout": 'readonly',
+        "setInterval": 'readonly',
+        "clearTimeout": 'readonly',
+        "clearInterval": 'readonly',
+        "requestAnimationFrame": 'readonly',
+        "cancelAnimationFrame": 'readonly',
+        "fetch": 'readonly',
+        "URL": 'readonly',
+        "URLSearchParams": 'readonly',
+        "Blob": 'readonly',
+        "CustomEvent": 'readonly',
+        "Intl": 'readonly',
+        "performance": 'readonly',
+        "caches": 'readonly',
+        "Notification": 'readonly',
+        "ServiceWorker": 'readonly',
+        "ServiceWorkerRegistration": 'readonly',
+        "PushSubscription": 'readonly',
+        "NotificationPermission": 'readonly',
+        "process": 'readonly',
+        "global": 'readonly',
+        "jest": 'readonly',
+        "describe": 'readonly',
+        "it": 'readonly',
+        "test": 'readonly',
+        "expect": 'readonly',
+        "vi": 'readonly',
+        "Deno": 'readonly',
+        "React": 'readonly',
+        "require": 'readonly',
+        "module": 'readonly',
+        "__dirname": 'readonly',
+        "__filename": 'readonly',
+        "exports": 'readonly'
       },
-      parserOptions: {
+      "parserOptions": {
         ecmaFeatures: {
           jsx: true
         }
       }
     },
-    plugins: {
+    "plugins": {
       react,
       'react-hooks': reactHooks
     },
-    rules: {
+    "rules": {
       ...js.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
@@ -129,64 +126,64 @@ export default [
     }
   },
   {
-    files: ['**/*.{ts,tsx}'],
-    languageOptions: {
+    "files": ['**/*.{ts,tsx}'],
+    "languageOptions": {
       parser: tsparser,
-      ecmaVersion: 2021,
-      sourceType: 'module',
-      globals: {
+      "ecmaVersion": 2021,
+      "sourceType": 'module',
+      "globals": {
         window: 'readonly',
-        document: 'readonly',
-        navigator: 'readonly',
-        localStorage: 'readonly',
-        sessionStorage: 'readonly',
-        console: 'readonly',
-        setTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearTimeout: 'readonly',
-        clearInterval: 'readonly',
-        requestAnimationFrame: 'readonly',
-        cancelAnimationFrame: 'readonly',
-        fetch: 'readonly',
-        URL: 'readonly',
-        URLSearchParams: 'readonly',
-        Blob: 'readonly',
-        CustomEvent: 'readonly',
-        Intl: 'readonly',
-        performance: 'readonly',
-        caches: 'readonly',
-        Notification: 'readonly',
-        ServiceWorker: 'readonly',
-        ServiceWorkerRegistration: 'readonly',
-        PushSubscription: 'readonly',
-        NotificationPermission: 'readonly',
-        process: 'readonly',
-        global: 'readonly',
-        jest: 'readonly',
-        describe: 'readonly',
-        it: 'readonly',
-        test: 'readonly',
-        expect: 'readonly',
-        vi: 'readonly',
-        Deno: 'readonly',
-        React: 'readonly',
-        KeyboardEvent: 'readonly',
-        HTMLElement: 'readonly',
-        HTMLButtonElement: 'readonly',
-        HTMLAnchorElement: 'readonly',
-        MutationObserver: 'readonly',
-        RequestInit: 'readonly',
-        AbortController: 'readonly',
-        fs: 'readonly',
-        CodeQualityChecker: 'readonly'
+        "document": 'readonly',
+        "navigator": 'readonly',
+        "localStorage": 'readonly',
+        "sessionStorage": 'readonly',
+        "console": 'readonly',
+        "setTimeout": 'readonly',
+        "setInterval": 'readonly',
+        "clearTimeout": 'readonly',
+        "clearInterval": 'readonly',
+        "requestAnimationFrame": 'readonly',
+        "cancelAnimationFrame": 'readonly',
+        "fetch": 'readonly',
+        "URL": 'readonly',
+        "URLSearchParams": 'readonly',
+        "Blob": 'readonly',
+        "CustomEvent": 'readonly',
+        "Intl": 'readonly',
+        "performance": 'readonly',
+        "caches": 'readonly',
+        "Notification": 'readonly',
+        "ServiceWorker": 'readonly',
+        "ServiceWorkerRegistration": 'readonly',
+        "PushSubscription": 'readonly',
+        "NotificationPermission": 'readonly',
+        "process": 'readonly',
+        "global": 'readonly',
+        "jest": 'readonly',
+        "describe": 'readonly',
+        "it": 'readonly',
+        "test": 'readonly',
+        "expect": 'readonly',
+        "vi": 'readonly',
+        "Deno": 'readonly',
+        "React": 'readonly',
+        "KeyboardEvent": 'readonly',
+        "HTMLElement": 'readonly',
+        "HTMLButtonElement": 'readonly',
+        "HTMLAnchorElement": 'readonly',
+        "MutationObserver": 'readonly',
+        "RequestInit": 'readonly',
+        "AbortController": 'readonly',
+        "fs": 'readonly',
+        "CodeQualityChecker": 'readonly'
       }
     },
-    plugins: {
+    "plugins": {
       '@typescript-eslint': tseslint,
       react,
       'react-hooks': reactHooks
     },
-    rules: {
+    "rules": {
       ...js.configs.recommended.rules,
       ...tseslint.configs.recommended.rules,
       ...react.configs.recommended.rules,
@@ -200,8 +197,7 @@ export default [
 >>>>>>> 86e2a4cca918c6ff376b51aa8638f7a375ebfe57
   },
   {
-    ignores: [
-      'node_modules/**',
+    "ignores": ['node_modules/**',
       '.next/**',
 <<<<<<< HEAD
       'out/**',
