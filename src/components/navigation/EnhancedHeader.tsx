@@ -109,7 +109,7 @@ const EnhancedHeader: React.FC = (props: any) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       // Handle search logic here
-      console.log('Searching for:', searchQuery);
+      
     }
   };
 

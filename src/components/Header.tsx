@@ -45,7 +45,7 @@ const handleScroll = (props: any) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       // Add search logic here
-      console.log('Searching for:', searchQuery);
+      
     }
   };
 

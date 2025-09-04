@@ -36,13 +36,13 @@ export function PrimaryNav(props: any) {
     const handleSubmit = (props: any) => {
         e.preventDefault();
         if (query.trim()) {
-            // // // // // // // console.log('PrimaryNav search submit:', query);
+            // // // // // // // 
             navigate(`/search/${slugify(query)}`);
             setQuery('');
 
-            console.log('PrimaryNav search submit:', query);
+            
             router(`/search/${slugify(query)}`);
-            console.log('PrimaryNav search submit:', query);
+            
             navigate(`/search/${slugify(query)}`);
             setQuery('');
         }
@@ -60,7 +60,7 @@ export function PrimaryNav(props: any) {
           {/* Actions container with responsive layout */}
           <div className="hidden md:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
             {/* Search form with clamped width */}
-            // // // // // // // console.log('PrimaryNav search suggestion selected:', sugg);
+            // // // // // // // 
             // Handle different suggestion types with proper navigation
             if (sugg.id) {
                 // Product listings with IDs go to product detail page
@@ -80,8 +80,7 @@ export function PrimaryNav(props: any) {
             <form onSubmit={handleSubmit} className="flex-shrink-0" style="{{{ width: 'clamp(12rem}}"}>
               <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion = {
   (sugg) => {
-            console.log('PrimaryNav search suggestion selected:',
-  sugg);
+            
             // Handle different suggestion types with proper navigation
             if (sugg.id) {
                 // Product listings with IDs go to product detail page

@@ -1,20 +1,32 @@
 import type { AppProps } from 'next/app';
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import Sidebar from '../components/Sidebar';
+import Head from 'next/head';
+import ErrorBoundary from '../src/components/ErrorBoundary';
+import PerformanceMonitor from '../src/components/PerformanceMonitor';
+import Navigation from '../src/components/Navigation';
+import Footer from '../src/components/Footer';
 
 export default function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      <Header />
-      <div style={{ display: 'flex', flex: 1, maxWidth: 1200, margin: '0 auto', width: '100%' }}>
-        <Sidebar />
-        <main style={{ flex: 1, padding: 20 }}>
-          <Component {...pageProps} />
-        </main>
-      </div>
-      <Footer />
-    </div>
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#2563eb" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+      </Head>
+      
+      <ErrorBoundary>
+        <div className="min-h-screen flex flex-col">
+          <Navigation />
+          <main className="flex-1">
+            <Component {...pageProps} />
+          </main>
+          <Footer />
+        </div>
+        <PerformanceMonitor />
+      </ErrorBoundary>
+    </>
   );
 }

@@ -16,10 +16,10 @@ export default function SavedTalentsPage(props: any) {}
       setIsLoading(true);
       try {}
         if (!user) {}
-          // // // // // // // // console.warn("User not authenticated.");
+          // // // // // // // // 
           return;"""
 """"
-          // console.warn("User not authenticated.");
+          // 
           return;
         }'
         const {data, error} = await supabase''
@@ -81,7 +81,7 @@ export default function Page(props: any) {}
   const handleRequestHire = talent => {}
 """
 """"
-    // // // // // // // // console.log("Request to hire:", talent);
+    // // // // // // // // 
     toast({}
 '`
 '`'`
@@ -94,10 +94,10 @@ export default function Page(props: any) {}
       if (!user) {}
 """
 """"
-        // // // // // // // // console.warn("User not authenticated.");
+        // // // // // // // // 
         return;"""
 """"
-        // console.warn("User not authenticated.");
+        // 
         return;
       }
       if (isCurrentlySaved) {}

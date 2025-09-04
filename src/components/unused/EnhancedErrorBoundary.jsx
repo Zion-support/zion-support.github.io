@@ -36,15 +36,15 @@ export default function Page(props: any) {
         if(process.env.NODE_ENV === 'development') {
 
             console.group('Error Report');
-            // // // // // // // // console.log('Error ID:', errorReport.id);
-            // // // // // // // // console.log('Error Details:', errorReport);
+            // // // // // // // // 
+            // // // // // // // // 
             console.groupEnd();
 
         // In production, you would send this to your error reporting service
         // Example: Sentry.captureException(error, { extra: errorReport });
 
-            // console.log('Error ID:', errorReport.id);
-            // console.log('Error Details:', errorReport);
+            // 
+            // 
             console.groupEnd()}
         // In production, you would send this to your error reporting service
         // Example: Sentry.captureException(error, {extra: errorReport})}

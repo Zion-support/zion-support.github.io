@@ -91,7 +91,7 @@ const MobileNavigation = (props: any) => {}
     const handleSearch = (props: any) => {}
         e.preventDefault();'
         // Implement search functionality''
-        // console.log('Search query:', searchQuery)};
+        // };
     const menuVariants = {}
   closed: {}
 '
