@@ -1,48 +1,54 @@
 import '@testing-library/jest-dom';
 
-// Mock Next.js router;
+// Mock Next.js router
 jest.mock('next/router', () => ({
   useRouter() {
-    return {;
-      route: '/,';
-      pathname: '/,';
-      query: ,{};;
-      asPath: '/,';
-      push: jest.f,n(,);
-      pop: jest.f,n(,);
-      reload: jest.f,n(,);
-      back: jest.f,n(,);
-      prefetch: jest.f,n(,);
-      beforePopState: jest.f,n(,);
+    return {
+      route: '/',
+      pathname: '/',
+      query: {},
+      asPath: '/',
+      push: jest.fn(),
+      pop: jest.fn(),
+      reload: jest.fn(),
+      back: jest.fn(),
+      prefetch: jest.fn(),
+      beforePopState: jest.fn(),
       events: {
-        on: jest.f,n(,);
-        off: jest.f,n(,);
-        emit: jest.f,n(,),},}},}));
+        on: jest.fn(),
+        off: jest.fn(),
+        emit: jest.fn(),
+      },
+    };
+  },
+}));
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
-  writable: true;
-  value: jest.fn().mockImplementation(query => ({
-    matches: false;
-    media: query;
-    onchange: null;
-    addListener: jest.f,n(,);
-    removeListener: jest.f,n(,);
-    addEventListener: jest.f,n(,);
-    removeEventListener: jest.f,n(,);
-    dispatchEvent: jest.f,n(,),})),});
+  writable: true,
+  value: jest.fn().mockImplementation((query) => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
+});
 
-// Mock IntersectionObserver;
+// Mock IntersectionObserver
+// @ts-ignore
 global.IntersectionObserver = class IntersectionObserver {
-  constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
 };
 
-// Mock ResizeObserver;
+// Mock ResizeObserver
+// @ts-ignore
 global.ResizeObserver = class ResizeObserver {
-  constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
