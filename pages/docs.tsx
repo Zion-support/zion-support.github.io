@@ -11,46 +11,78 @@ export default function Documentation() {
   const documentationSections = [
     {
       icon: Book,
-      title: 'Getting Started'
-      description: 'Quick start guides and tutorials to help you begin using our services.'
-      items: [
-        { name: 'Quick Start Guide' link: '/docs/getting-started' },
-        { name: 'API Overview' link: '/docs/api-overview' },
-        { name: 'Authentication' link: '/docs/authentication' },
-        { name: 'First Steps' link: '/docs/first-steps' }
+      title: 'Getting Started',
+  description: 'Quick start guides and tutorials to help you begin using our services.';
+  items: [
+        { name: 'Quick Start Guide',
+  link: '/docs/getting-started'
+},
+        { name: 'API Overview',
+  link: '/docs/api-overview'
+},
+        { name: Authentication,
+  link: '/docs/authentication'
+},
+        { name: 'First Steps',
+  link: '/docs/first-steps'
+}
       ]
     },
     {
       icon: FileText,
-      title: 'API Documentation'
-      description: 'Comprehensive API reference and integration guides.'
-      items: [
-        { name: 'REST API Reference' link: '/docs/api-reference' },
-        { name: 'Webhook Integration' link: '/docs/webhooks' },
-        { name: 'SDK Documentation' link: '/docs/sdk' },
-        { name: 'Rate Limits' link: '/docs/rate-limits' }
+      title: 'API Documentation',
+  description: 'Comprehensive API reference and integration guides.';
+  items: [
+        { name: 'REST API Reference',
+  link: '/docs/api-reference'
+},
+        { name: 'Webhook Integration',
+  link: '/docs/webhooks'
+},
+        { name: 'SDK Documentation',
+  link: '/docs/sdk'
+},
+        { name: 'Rate Limits',
+  link: '/docs/rate-limits'
+}
       ]
     },
     {
       icon: Video,
-      title: 'Tutorials & Guides'
-      description: 'Step-by-step tutorials and best practices.'
-      items: [
-        { name: 'Video Tutorials' link: '/docs/video-tutorials' },
-        { name: 'Code Examples' link: '/docs/code-examples' },
-        { name: 'Best Practices' link: '/docs/best-practices' },
-        { name: 'Troubleshooting' link: '/docs/troubleshooting' }
+      title: 'Tutorials & Guides',
+  description: 'Step-by-step tutorials and best practices.';
+  items: [
+        { name: 'Video Tutorials',
+  link: '/docs/video-tutorials'
+},
+        { name: 'Code Examples',
+  link: '/docs/code-examples'
+},
+        { name: 'Best Practices',
+  link: '/docs/best-practices'
+},
+        { name: Troubleshooting,
+  link: '/docs/troubleshooting'
+}
       ]
     },
     {
       icon: Download,
-      title: 'Resources'
-      description: 'Downloadable resources and additional materials.'
-      items: [
-        { name: 'White Papers' link: '/docs/white-papers' },
-        { name: 'Case Studies' link: '/docs/case-studies' },
-        { name: 'Templates' link: '/docs/templates' },
-        { name: 'Changelog' link: '/docs/changelog' }
+      title: Resources,
+  description: 'Downloadable resources and additional materials.';
+  items: [
+        { name: 'White Papers',
+  link: '/docs/white-papers'
+},
+        { name: 'Case Studies',
+  link: '/docs/case-studies'
+},
+        { name: Templates,
+  link: '/docs/templates'
+},
+        { name: Changelog,
+  link: '/docs/changelog'
+}
       ]
     }
   ];
@@ -59,13 +91,20 @@ export default function Documentation() {
     <>
       <Head>
         <title>Documentation - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive documentation for Zion Tech Group services including API guides, tutorials, and resources. Get started with our services today." />
-        <meta name="keywords" content="documentation, API guide, tutorials, getting started, Zion Tech Group" />
-        <link rel="canonical" href={`${contact.site}/docs`} />
-        <meta property="og: title" content="Documentation - Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive documentation for Zion Tech Group services including API guides and tutorials." />
-        <meta property="og:url" content={`${contact.site}/docs`} />
-        <meta property="og: type" content="website" />
+        <meta name="description"
+  content="Comprehensive documentation for Zion Tech Group services including API guides, tutorials, and resources. Get started with our services today." />
+        <meta name="keywords"
+  content="documentation, API guide, tutorials, getting started, Zion Tech Group" />
+        <link rel="canonical"
+  href={`${contact.site}/docs`} />
+        <meta property="og: title"
+  content="Documentation - Zion Tech Group" />
+        <meta property="og:description"
+  content="Comprehensive documentation for Zion Tech Group services including API guides and tutorials." />
+        <meta property="og:url"
+  content={`${contact.site}/docs`} />
+        <meta property="og: type"
+  content="website" />
       </Head>
 
       <div className="min-h-screen bg-white">
@@ -82,13 +121,13 @@ export default function Documentation() {
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <Link 
                   href="/docs/getting-started"
-                  className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+  className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Get Started
                 </Link>
                 <Link 
                   href="/contact"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
                 >
                   Contact Support
                 </Link>
@@ -104,7 +143,7 @@ export default function Documentation() {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
-                placeholder="Search documentation..."
+  placeholder="Search documentation..."
                 className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
               />
             </div>
@@ -157,7 +196,8 @@ export default function Documentation() {
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">API Quick Start</h3>
                 <p className="text-gray-600 mb-4">Get up and running with our APIs in minutes</p>
-                <Link href="/docs/api-quick-start" className="text-green-600 hover:text-green-700 font-medium">
+                <Link href="/docs/api-quick-start"
+  className="text-green-600 hover:text-green-700 font-medium">
                   Read Guide →
                 </Link>
               </div>
@@ -165,7 +205,8 @@ export default function Documentation() {
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Integration Examples</h3>
                 <p className="text-gray-600 mb-4">Real-world examples and code samples</p>
-                <Link href="/docs/integration-examples" className="text-green-600 hover:text-green-700 font-medium">
+                <Link href="/docs/integration-examples"
+  className="text-green-600 hover:text-green-700 font-medium">
                   View Examples →
                 </Link>
               </div>
@@ -173,7 +214,8 @@ export default function Documentation() {
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Support Center</h3>
                 <p className="text-gray-600 mb-4">Get help from our support team</p>
-                <Link href="/contact" className="text-green-600 hover:text-green-700 font-medium">
+                <Link href="/contact"
+  className="text-green-600 hover:text-green-700 font-medium">
                   Contact Support →
                 </Link>
               </div>

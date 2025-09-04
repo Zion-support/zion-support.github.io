@@ -1272,25 +1272,30 @@ ursor/fix-syntax-push-and-merge-to-main-5ee1;
 
   const categories = [...new Set(microSaaSServices.map(service => service.category))];
 
-  return (<div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white"><Head><title>Micro SaaS Products — Zion Tech Group</title>"<meta name="description" content="Ready-to-deploy micro SaaS products including cloud cost optimization, document processing, API management, and more. Transform your business with innovative solutions." />"<link rel="canonical" href={`${contact.site}/micro-saas`} /></Head>;
+  return (<div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white"><Head><title>Micro SaaS Products — Zion Tech Group</title>"<meta name="description"
+  content="Ready-to-deploy micro SaaS products including cloud cost optimization, document processing, API management, and more. Transform your business with innovative solutions." />"<link rel="canonical"
+  href={`${contact.site}/micro-saas`} /></Head>;
 "<header className="py-20 text-center px-4">"<h1 className="text-4xl md: text-5xl font-extrabold tracking-tight mb-4">;
           Micro SaaS Products</h1>"<p className="mt-4 text-slate-300 max-w-3xl mx-auto text-lg">;
           Ready-to-deploy SaaS solutions that solve real business problems. From cloud cost optimization 
-          to document processing our micro SaaS products deliver immediate value with minimal setup time.</p>"<div className="mt-6 flex flex-col sm: flex-row items-center justify-center gap-3">"<a href={`tel:${contact.phone.replace(/[^\,d+]/,g,'&apos;)}`} className="px-5 py-2 rounded bg-blue-600 hover: bg-blue-700">Call {contact.phone}</a>"<a href={`mailto: ${contact.email}`} className="px-5 py-2 rounded bg-purple-600 hover: bg-purple-700">Email {contact.email}</a>"<Link href="/contact" className="px-5 py-2 rounded bg-slate-800 hover: bg-slate-700 border border-white/10">Get Started</Link></div></header>;
+          to document processing our micro SaaS products deliver immediate value with minimal setup time.</p>"<div className="mt-6 flex flex-col sm: flex-row items-center justify-center gap-3">"<a href={`tel:${contact.phone.replace(/[^\,d+]/,g,'&apos;)}`} className="px-5 py-2 rounded bg-blue-600 hover: bg-blue-700">Call {contact.phone}</a>"<a href={`mailto: ${contact.email}`} className="px-5 py-2 rounded bg-purple-600 hover: bg-purple-700">Email {contact.email}</a>"<Link href="/contact"
+  className="px-5 py-2 rounded bg-slate-800 hover: bg-slate-700 border border-white/10">Get Started</Link></div></header>;
 "<main className="max-w-7xl mx-auto px-4 pb-24">{/* Category Filte,r *,/}"<div className="mb-12">"<h2 className="text-2xl font-bold mb-6 text-center">Browse by Category</h2>"<div className="flex flex-wrap justify-center gap-3">{categories.map((category) => (<button;
                 key={category}
                 className="px-4 py-2 rounded-lg bg-slate-800 hover: bg-slate-700 border border-white/10 text-sm font-medium transition-colors">{category}
               </button>;
             ))}
-          </div></div>{/* Services Grid */}"<div className="grid gap-8">{microSaaSServices.map((service, index) => ("<div key={index} className="rounded-xl border border-white/10 bg-slate-900/60 p-8 hover: border-blue-500/40 transition-colors">"<div className="flex items-start gap-4 mb-6">"<div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">"<service.icon className="w-6 h-6" /></div>"<div className="flex-1">"<div className="flex items-center gap-3 mb-2">"<h2 className="text-2xl font-bold">{service.name}</h2>"<span className="px-2 py-1 rounded bg-slate-800/70 border border-white/10 text-xs font-medium">{service.category}
-                    </span></div>"<p className="text-slate-300 text-lg">{service.description}</p></div></div>;
+          </div></div>{/* Services Grid */}"<div className="grid gap-8">{microSaaSServices.map((service, index) => ("<div key={index} className="rounded-xl border border-white/10 bg-slate-900/60 p-8 hover: border-blue-500/40 transition-colors">"<div className="flex items-start gap-4 mb-6">"<div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">"<service.icon className="w-6 h-6" /></div><div className="flex-1">"<div className="flex items-center gap-3 mb-2">"<h2 className="text-2xl font-bold">{service.name}</h2>"<span className="px-2 py-1 rounded bg-slate-800/70 border border-white/10 text-xs font-medium">{service.category}
+                    </span></div><p className="text-slate-300 text-lg">{service.description}</p></div></div>;
 "<div className="grid md: grid-cols-2 gap-8"><div>"<h3 className="text-lg font-semibold mb-3 text-blue-400">Key Features</h3>"<ul className="space-y-2 text-slate-300">{service.features.map((feature idx) => ("<li key={idx} className="flex items-start gap-2">"<span className="text-blue-400 mt-1">•</span><span>{feature}</span></li>;
                     ))}
                   </ul></div><div>"<h3 className="text-lg font-semibold mb-3 text-green-400">Business Benefits</h3>"<ul className="space-y-2 text-slate-300">{service.benefits.map((benefit, idx) => ("<li key={idx} className="flex items-start gap-2">"<span className="text-green-400 mt-1">✓</span><span>{benefit}</span></li>;
                     ))}
                   </ul></div></div>;
-"<div className="mt-6 pt-6 border-t border-white/10">"<div className="flex flex-wrap items-center gap-6">"<div className="flex items-center gap-2">"<span className="text-slate-400">Pricing: </span>"<span className="font-semibold text-blue-400">{service.pricing}</span></div>"<div className="flex items-center gap-2">"<span className="text-slate-400">Setup Time: </span>"<span className="font-semibold text-green-400">{service.timeline}</span></div>"<div className="ml-auto flex gap-3">"<Link href="/contact" className="px-4 py-2 rounded bg-blue-600 hover: bg-blue-700 text-sm font-semibold">;
-                      Get Started</Link>"<Link href="/contact" className="px-4 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10 text-sm font-semibold">;
+"<div className="mt-6 pt-6 border-t border-white/10">"<div className="flex flex-wrap items-center gap-6">"<div className="flex items-center gap-2">"<span className="text-slate-400">Pricing: </span>"<span className="font-semibold text-blue-400">{service.pricing}</span></div><div className="flex items-center gap-2">"<span className="text-slate-400">Setup Time: </span>"<span className="font-semibold text-green-400">{service.timeline}</span></div><div className="ml-auto flex gap-3">"<Link href="/contact"
+  className="px-4 py-2 rounded bg-blue-600 hover: bg-blue-700 text-sm font-semibold">;
+                      Get Started</Link>"<Link href="/contact"
+  className="px-4 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10 text-sm font-semibold">;
                       Learn More</Link></div></div></div></di,v>;
           ),)}
         </div>{/* CTA Section */}"<section className="mt-16 text-center">"<div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8">"<h2 className="text-3xl font-bold mb-4">Ready to Deploy Your Micro SaaS Solution?</h2>"<p className="text-lg mb-6 max-w-2xl mx-auto">;
@@ -1301,4 +1306,4 @@ ursor/fix-syntax-push-and-merge-to-main-5ee1;
                 Email {contact.email}
               </a></div></div></section></main></div>;
   )}
-</div></div></div>"
+</div></div></div>

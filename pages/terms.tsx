@@ -10,9 +10,12 @@ export default function Terms() {
     <>
       <Head>
         <title>Terms of Service - Zion Tech Group</title>
-        <meta name="description" content="Terms of Service for Zion Tech Group. Read our terms and conditions for using our micro SaaS products, AI services, and IT solutions." />
-        <meta name="keywords" content="terms of service, terms and conditions, legal, zion tech group" />
-        <link rel="canonical" href={`${contact.site}/terms`} />
+        <meta name="description"
+  content="Terms of Service for Zion Tech Group. Read our terms and conditions for using our micro SaaS products, AI services, and IT solutions." />
+        <meta name="keywords"
+  content="terms of service, terms and conditions, legal, zion tech group" />
+        <link rel="canonical"
+  href={`${contact.site}/terms`} />
       </Head>
       
       <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -105,14 +108,16 @@ Permission is granted to temporarily download one copy of Zion Tech Group's serv
                   <strong>Email: </strong> <a href={`mailto:${contact.email}`} className="text-blue-400 hover: text-blue-300">{contact.email}</a>
                 </p>
                 <p className="text-slate-300">
-                  <strong>Address: </strong> {contact.address}
+                  <strong>Address: '</strong> {contact.address'
+}
                 </p>
               </div>
             </section>
           </div>
 
           <div className="mt-12 text-center">
-            <Link href="/" className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors">
+            <Link href="/"
+  className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors">
               Back to Home
             </Link>
           </div>

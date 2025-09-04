@@ -16,7 +16,8 @@ interface State {
 class AdvancedErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false
-  }
+  };
+
   public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
@@ -33,7 +34,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
 
   private handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
+  }
   public render() {
     if (this.state.hasError) {
       if (this.props.fallback) {

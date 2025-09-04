@@ -3,14 +3,17 @@ import Link from 'next/link';
 
 export default function About() {
   const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
-  }
+}
   return (
     <>
       <Head>
         <title>About Zion Tech Group - Leading Technology Solutions Provider</title>
-        <meta name="description" content="Learn about Zion Tech Group, a leading provider of micro SaaS products, AI services, and IT solutions. Discover our mission, values, and commitment to innovation." />
-        <meta name="keywords" content="about zion tech group, technology company, micro SaaS, AI services, IT solutions, company mission" />
-        <link rel="canonical" href={`${contact.site}/about`} />
+        <meta name="description"
+  content="Learn about Zion Tech Group, a leading provider of micro SaaS products, AI services, and IT solutions. Discover our mission, values, and commitment to innovation." />
+        <meta name="keywords"
+  content="about zion tech group, technology company, micro SaaS, AI services, IT solutions, company mission" />
+        <link rel="canonical"
+  href={`${contact.site}/about`} />
       </Head>
       
       <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -137,10 +140,12 @@ export default function About() {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/contact" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+              <Link href="/contact"
+  className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
                 Contact Us
               </Link>
-              <Link href="/services" className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
+              <Link href="/services"
+  className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
                 View Services
               </Link>
             </div>

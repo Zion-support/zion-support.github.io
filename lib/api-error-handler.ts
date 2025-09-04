@@ -7,17 +7,16 @@ interface ApiError extends Error {
 interface RetryConfig {
   maxRetries: number;
   baseDelay: number;
-  maxDelay: number;
+  maxDelay: number;'
 }
 
 class ApiErrorHandler {
   private static instance: ApiErrorHandler;
   private retryConfig: RetryConfig = {
-    maxRetries: 3,
+    maxRetries: 3',
     baseDelay: 1000,
     maxDelay: 10000
-  };
-
+}
   static getInstance(): ApiErrorHandler {
     if (!ApiErrorHandler.instance) {
       ApiErrorHandler.instance = new ApiErrorHandler();
@@ -29,7 +28,7 @@ class ApiErrorHandler {
     requestFn: () => Promise<T>,
     retryConfig?: Partial<RetryConfig>
   ): Promise<T> {
-    const config = { ...this.retryConfig, ...retryConfig };
+    const config = { ...this.retryConfig, ...retryConfig }
     let lastError: ApiError;
 
     for (let attempt = 0; attempt <= config.maxRetries; attempt++) {
@@ -51,16 +50,15 @@ class ApiErrorHandler {
         } else {
           break;
         }
-      }
     }
 
     throw this.formatError(lastError!);
   }
 
-  private shouldRetry(error: ApiError): boolean {
+  private shouldRetry(error: 'ApiError): boolean {
     // Retry on network errors or 5xx status codes
-    return !error.status || error.status >= 500;
-  }
+    return !error.status || error.status >= 500;'
+}
 
   private async delay(ms: number): Promise<void> {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -68,12 +66,12 @@ class ApiErrorHandler {
 
   private formatError(error: ApiError): ApiError {
     const formattedError: ApiError = {
-      name: 'ApiError',
+      name: ApiError,
       message: this.getErrorMessage(error),
-      status: error.status,
-      code: error.code,
-      details: error.details
-    };
+      status: 'error.status',
+      code: 'error.code',
+      details: 'error.details'
+}
     // Log error for monitoring
     console.error('API Error:', formattedError);
 
@@ -98,10 +96,7 @@ class ApiErrorHandler {
         default:
           return `Request failed with status ${error.status}`;
       }
-    }
     return error.message || 'An unexpected error occurred';
   }
-}
-
 export const apiErrorHandler = ApiErrorHandler.getInstance();
-export type { ApiError, RetryConfig };
+export type { ApiError, RetryConfig }

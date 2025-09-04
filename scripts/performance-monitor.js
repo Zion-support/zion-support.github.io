@@ -9,9 +9,7 @@ class PerformanceMonitor {
       bundleSize: 0,
       memoryUsage: 0,
       timestamp: new Date().toISOString()
-    };
-  }
-
+    }
   measureBundleSize() { 
     try {
       const buildDir = path.join(process.cwd(), '.next');
@@ -21,8 +19,6 @@ class PerformanceMonitor {
     } catch (error) { 
       console.error('Error measuring bundle size:', error); 
     }
-  }
-
   getDirectorySize(dirPath) { 
     let totalSize = 0;
     try {
@@ -52,8 +48,7 @@ class PerformanceMonitor {
       timestamp: this.metrics.timestamp,
       metrics: this.metrics,
       recommendations: this.generateRecommendations()
-    };
-
+    }
     const reportPath = path.join(process.cwd(), 'performance-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log('Performance report generated:', reportPath);
@@ -72,8 +67,6 @@ class PerformanceMonitor {
     
     return recommendations;
   }
-}
-
 if (require.main === module) { 
   const monitor = new PerformanceMonitor();
   monitor.measureBundleSize();

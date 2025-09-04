@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
@@ -8,15 +8,18 @@ const PerformanceMonitor: React.FC = () => {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
-            // eslint-disable-next-line no-console
             console.log('LCP:', entry.startTime);
+            // Send to analytics
+            if (entry.startTime > 2500) {
+              console.warn('LCP is slow:', entry.startTime);
+            }
           }
         }
       });
       
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint'] });
-      } catch {
+      } catch (e) {
         // Fallback for browsers that don't support LCP
       }
 
@@ -24,15 +27,19 @@ const PerformanceMonitor: React.FC = () => {
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'first-input') {
-            // eslint-disable-next-line no-console
-            console.log('FID:', (entry as PerformanceEntry & { processingStart: number }).processingStart - entry.startTime);
+            const fidEntry = entry as PerformanceEventTiming;
+            console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
+            // Send to analytics
+            if (fidEntry.processingStart - fidEntry.startTime > 100) {
+              console.warn('FID is slow:', fidEntry.processingStart - fidEntry.startTime);
+            }
           }
         }
       });
 
       try {
         fidObserver.observe({ entryTypes: ['first-input'] });
-      } catch {
+      } catch (e) {
         // Fallback for browsers that don't support FID
       }
 
@@ -40,17 +47,20 @@ const PerformanceMonitor: React.FC = () => {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (!(entry as PerformanceEntry & { hadRecentInput: boolean }).hadRecentInput) {
-            clsValue += (entry as PerformanceEntry & { value: number }).value;
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value;
           }
         }
-        // eslint-disable-next-line no-console
         console.log('CLS:', clsValue);
+        // Send to analytics
+        if (clsValue > 0.1) {
+          console.warn('CLS is poor:', clsValue);
+        }
       });
 
       try {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
-      } catch {
+      } catch (e) {
         // Fallback for browsers that don't support CLS
       }
 
@@ -63,6 +73,6 @@ const PerformanceMonitor: React.FC = () => {
   }, []);
 
   return null; // This component doesn't render anything
-}
+};
 
 export default PerformanceMonitor;

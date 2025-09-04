@@ -33,38 +33,37 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         ? prev.filter(s => s !== section)
         : [...prev, section]
     );
-  };
-
+  }
   const navigation = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'About', href: '/about', icon: Users },
+    { name: 'Home', href: '/', icon: '🏠' },
+    { name: 'About', href: '/about', icon: '👥' },
     { 
       name: 'Services', 
-      icon: Settings, 
+      icon: '⚙️', 
       children: [
         { name: 'All Services', href: '/services' },
         { name: 'Services Catalog', href: '/services-catalog' },
         { name: 'Micro SaaS', href: '/micro-saas' },
         { name: 'AI Services', href: '/ai-services' },
-        { name: 'IT Services', href: '/it-services' },
-        { name: 'Cloud DevOps', href: '/cloud-devops' },
-        { name: 'Cybersecurity', href: '/cybersecurity' },
-        { name: 'Quantum Computing', href: '/quantum-computing' }
+        { name: 'IT Services', href: '/it-services' }
       ]
     },
-    { name: 'Documentation', href: '/docs', icon: BookOpen },
-    { name: 'Pricing', href: '/pricing', icon: DollarSign },
-    { name: 'FAQ', href: '/faq', icon: HelpCircle },
-    { name: 'Contact', href: '/contact', icon: Mail }
+    { name: 'Cloud DevOps', href: '/cloud-devops' },
+    { name: 'Cybersecurity', href: '/cybersecurity' },
+    { name: 'Quantum Computing', href: '/quantum-computing' },
+    { name: 'Documentation', href: '/docs', icon: '📚' },
+    { name: 'Pricing', href: '/pricing', icon: '💰' },
+    { name: 'FAQ', href: '/faq', icon: '❓' },
+    { name: 'Contact', href: '/contact', icon: '📧' }
   ];
 
   const quickLinks = [
-    { name: 'Cloud Migration', href: '/cloud-devops', icon: Cloud },
-    { name: 'Security Audit', href: '/cybersecurity', icon: Shield },
-    { name: 'AI Solutions', href: '/ai-services', icon: Brain },
-    { name: 'Micro SaaS', href: '/micro-saas', icon: Layers },
-    { name: 'IT Support', href: '/it-services', icon: Server },
-    { name: 'Quantum Computing', href: '/quantum-computing', icon: Zap }
+    { name: 'Cloud Migration', href: '/cloud-devops', icon: '☁️' },
+    { name: 'Security Audit', href: '/cybersecurity', icon: '🛡️' },
+    { name: 'AI Solutions', href: '/ai-services', icon: '🧠' },
+    { name: 'Micro SaaS', href: '/micro-saas', icon: '📱' },
+    { name: 'IT Support', href: '/it-services', icon: '🖥️' },
+    { name: 'Quantum Computing', href: '/quantum-computing', icon: '⚡' }
   ];
 
   if (!isOpen) return null;
@@ -74,7 +73,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       {/* Overlay */}
       <div 
         className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
-        onClick={onClose}
+  onClick={onClose}
       />
       
       {/* Sidebar */}
@@ -107,13 +106,13 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                       className="w-full flex items-center justify-between px-3 py-2 text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
                     >
                       <div className="flex items-center space-x-3">
-                        <item.icon className="w-5 h-5" />
+                        <span className="w-5 h-5 flex items-center justify-center">{item.icon}</span>
                         <span>{item.name}</span>
                       </div>
                       {expandedSections.includes('services') ? (
-                        <ChevronDown className="w-4 h-4" />
+                        <span className="w-4 h-4">▼</span>
                       ) : (
-                        <ChevronRight className="w-4 h-4" />
+                        <span className="w-4 h-4">▶</span>
                       )}
                     </button>
                     {expandedSections.includes('services') && (
@@ -123,7 +122,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                             key={child.name}
                             href={child.href}
                             className="block px-3 py-2 text-sm text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
-                            onClick={onClose}
+  onClick={onClose}
                           >
                             {child.name}
                           </Link>
@@ -135,9 +134,9 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                   <Link
                     href={item.href}
                     className="flex items-center space-x-3 px-3 py-2 text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
-                    onClick={onClose}
+  onClick={onClose}
                   >
-                    <item.icon className="w-5 h-5" />
+                    <span className="w-5 h-5 flex items-center justify-center">{item.icon}</span>
                     <span>{item.name}</span>
                   </Link>
                 )}
@@ -156,9 +155,9 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                   key={link.name}
                   href={link.href}
                   className="flex flex-col items-center p-3 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
-                  onClick={onClose}
+  onClick={onClose}
                 >
-                  <link.icon className="w-5 h-5 mb-1" />
+                  <span className="w-5 h-5 mb-1 flex items-center justify-center">{link.icon}</span>
                   <span className="text-xs text-center">{link.name}</span>
                 </Link>
               ))}
@@ -172,10 +171,12 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             </h3>
             <div className="space-y-2 text-sm">
               <div className="text-slate-300">
-                📞 <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300">+1 302 464 0950</a>
+                📞 <a href="tel:+13024640950"
+  className="text-blue-400 hover:text-blue-300">+1 302 464 0950</a>
               </div>
               <div className="text-slate-300">
-                ✉️ <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">kleber@ziontechgroup.com</a>
+                ✉️ <a href="mailto:kleber@ziontechgroup.com"
+  className="text-blue-400 hover:text-blue-300">kleber@ziontechgroup.com</a>
               </div>
               <div className="text-slate-300">
                 📍 Middletown DE 19709

@@ -3,7 +3,9 @@ import Head from 'next/head';
 import { useState, useEffect } from 'react';
 
 export default function EnterpriseSolutions() {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoad,
+  e
+] = useState(false);
   
   useEffect(() => {
     setIsLoaded(true);
@@ -51,13 +53,20 @@ export default function EnterpriseSolutions() {
     <>
       <Head>
         <title>Enterprise Solutions - Zion Tech Group | Large Scale Technology Solutions</title>
-        <meta name="description" content="Comprehensive enterprise solutions including architecture design, digital transformation, security, integration, analytics, and 24/7 support for large organizations." />
-        <meta name="keywords" content="enterprise solutions, digital transformation, enterprise architecture, enterprise security, enterprise integration, enterprise analytics" />
-        <link rel="canonical" href={`${contact.site}/solutions/enterprise`} />
-        <meta property="og:title" content="Enterprise Solutions - Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive enterprise solutions for large organizations" />
-        <meta property="og:url" content={`${contact.site}/solutions/enterprise`} />
-        <meta property="og:type" content="website" />
+        <meta name="description"
+  content="Comprehensive enterprise solutions including architecture design, digital transformation, security, integration, analytics, and 24/7 support for large organizations." />
+        <meta name="keywords"
+  content="enterprise solutions, digital transformation, enterprise architecture, enterprise security, enterprise integration, enterprise analytics" />
+        <link rel="canonical"
+  href={`${contact.site}/solutions/enterprise`} />
+        <meta property="og:title"
+  content="Enterprise Solutions - Zion Tech Group" />
+        <meta property="og:description"
+  content="Comprehensive enterprise solutions for large organizations" />
+        <meta property="og:url"
+  content={`${contact.site}/solutions/enterprise`} />
+        <meta property="og:type"
+  content="website" />
       </Head>
 
       <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
@@ -71,10 +80,12 @@ export default function EnterpriseSolutions() {
               Comprehensive enterprise-grade solutions designed for large organizations seeking digital transformation and operational excellence
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+              <Link href="/contact"
+  className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
                 Schedule Consultation
               </Link>
-              <Link href="/solutions" className="px-8 py-4 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
+              <Link href="/solutions"
+  className="px-8 py-4 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
                 All Solutions
               </Link>
             </div>
@@ -87,7 +98,8 @@ export default function EnterpriseSolutions() {
             <h2 className="text-4xl font-bold text-center mb-16">Enterprise Service Categories</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {enterpriseServices.map((service, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105">
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover: 'border-blue-400/50 transition-all duration-300 hover: transform',
+  hover:scale-105">
                   <h3 className="text-2xl font-bold mb-4 text-blue-400">{service.title}</h3>
                   <p className="text-slate-300 mb-6">{service.description}</p>
                   <ul className="space-y-2 mb-6">
@@ -98,7 +110,8 @@ export default function EnterpriseSolutions() {
                       </li>
                     ))}
                   </ul>
-                  <Link href="/contact" className="inline-block w-full text-center px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+                  <Link href="/contact"
+  className="inline-block w-full text-center px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
                     Get Started
                   </Link>
                 </div>
@@ -158,7 +171,8 @@ export default function EnterpriseSolutions() {
               <a href={`mailto:${contact.email}`} className="px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
                 Email {contact.email}
               </a>
-              <Link href="/contact" className="px-8 py-4 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
+              <Link href="/contact"
+  className="px-8 py-4 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
                 Get Enterprise Quote
               </Link>
             </div>

@@ -30,7 +30,6 @@ async function optimizeImages() {
     } catch (error) {
       console.error(`Error optimizing ${file}:`, error.message);
     }
-  }
 }
 
 optimizeImages();

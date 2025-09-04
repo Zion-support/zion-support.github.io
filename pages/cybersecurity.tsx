@@ -11,39 +11,39 @@ export default function Cybersecurity() {
   const services = [
     {
       icon: Shield,
-      title: 'Security Assessment & Auditing'
-      description: 'Comprehensive security evaluations to identify vulnerabilities and compliance gaps.'
-      features: ['Penetration testing' 'Vulnerability scanning' 'Compliance audits' 'Risk assessments']
+      title: 'Security Assessment & Auditing',
+  description: 'Comprehensive security evaluations to identify vulnerabilities and compliance gaps.';
+  features: ['Penetration testing' 'Vulnerability scanning' 'Compliance audits' 'Risk assessments']
     },
     {
       icon: Lock,
-      title: 'Identity & Access Management'
-      description: 'Robust IAM solutions to control user access and protect sensitive data.'
-      features: ['Multi-factor authentication' 'Single sign-on' 'Role-based access' 'Privileged access management']
+      title: 'Identity & Access Management',
+  description: 'Robust IAM solutions to control user access and protect sensitive data.';
+  features: ['Multi-factor authentication' 'Single sign-on' 'Role-based access' 'Privileged access management']
     },
     {
       icon: Eye,
-      title: 'Security Monitoring & SIEM'
-      description: '24/7 security monitoring with advanced threat detection and incident response.'
-      features: ['Real-time monitoring' 'Threat intelligence' 'Incident response' 'Forensic analysis']
+      title: 'Security Monitoring & SIEM',
+  description: '24/7 security monitoring with advanced threat detection and incident response.';
+  features: ['Real-time monitoring' 'Threat intelligence' 'Incident response' 'Forensic analysis']
     },
     {
       icon: AlertTriangle,
-      title: 'Threat Detection & Response'
-      description: 'Advanced threat hunting and automated response to security incidents.'
-      features: ['Behavioral analytics' 'AI-powered detection' 'Automated response' 'Threat hunting']
+      title: 'Threat Detection & Response',
+  description: 'Advanced threat hunting and automated response to security incidents.';
+  features: ['Behavioral analytics' 'AI-powered detection' 'Automated response' 'Threat hunting']
     },
     {
       icon: Users,
-      title: 'Security Training & Awareness'
-      description: 'Comprehensive security education programs to build a security-conscious culture.'
-      features: ['Phishing simulations' 'Security workshops' 'Compliance training' 'Awareness campaigns']
+      title: 'Security Training & Awareness',
+  description: 'Comprehensive security education programs to build a security-conscious culture.';
+  features: ['Phishing simulations' 'Security workshops' 'Compliance training' 'Awareness campaigns']
     },
     {
       icon: Database,
-      title: 'Data Protection & Encryption'
-      description: 'End-to-end data protection with advanced encryption and backup solutions.'
-      features: ['Data encryption' 'Backup solutions' 'Data loss prevention' 'Privacy compliance']
+      title: 'Data Protection & Encryption',
+  description: 'End-to-end data protection with advanced encryption and backup solutions.';
+  features: ['Data encryption' 'Backup solutions' 'Data loss prevention' 'Privacy compliance']
     }
   ];
 
@@ -51,13 +51,20 @@ export default function Cybersecurity() {
     <>
       <Head>
         <title>Cybersecurity Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive cybersecurity services including security assessments, threat detection, identity management, and compliance. Protect your business with Zion Tech Group." />
-        <meta name="keywords" content="cybersecurity, security assessment, threat detection, identity management, compliance, penetration testing" />
-        <link rel="canonical" href={`${contact.site}/cybersecurity`} />
-        <meta property="og: title" content="Cybersecurity Services - Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive cybersecurity services including security assessments, threat detection, and compliance." />
-        <meta property="og: url" content={`${contact.site}/cybersecurity`} />
-        <meta property="og: type" content="website" />
+        <meta name="description"
+  content="Comprehensive cybersecurity services including security assessments, threat detection, identity management, and compliance. Protect your business with Zion Tech Group." />
+        <meta name="keywords"
+  content="cybersecurity, security assessment, threat detection, identity management, compliance, penetration testing" />
+        <link rel="canonical"
+  href={`${contact.site}/cybersecurity`} />
+        <meta property="og: title"
+  content="Cybersecurity Services - Zion Tech Group" />
+        <meta property="og:description"
+  content="Comprehensive cybersecurity services including security assessments, threat detection, and compliance." />
+        <meta property="og: url"
+  content={`${contact.site}/cybersecurity`} />
+        <meta property="og: type"
+  content="website" />
       </Head>
 
       <div className="min-h-screen bg-white">
@@ -74,13 +81,13 @@ export default function Cybersecurity() {
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <Link 
                   href="/contact"
-                  className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+  className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Get Security Assessment
                 </Link>
                 <Link 
                   href="/services"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
+  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
                 >
                   View All Services
                 </Link>
@@ -135,7 +142,7 @@ Don't wait for a security breach. Let our experts help you build a robust securi
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact"
-                className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
+  className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
               >
                 Schedule Security Audit
               </Link>

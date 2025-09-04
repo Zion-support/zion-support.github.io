@@ -1,14 +1,6 @@
 {
-  "timestamp": "2025-09-04T03:00:22.167Z",
+  "timestamp": "2025-09-04T05:40:49.528Z",
   "optimizations": [
-    {
-      "type": "bundle-analysis",
-      "status": "completed",
-      "details": {
-        "totalSize": 104448,
-        "pageCount": 46
-      }
-    },
     {
       "type": "image-optimization",
       "status": "completed",
@@ -22,8 +14,8 @@
     {
       "type": "javascript-optimization",
       "status": "completed",
-      "totalSize": 893933,
-      "componentCount": 22
+      "totalSize": 975288,
+      "componentCount": 30
     }
   ],
   "recommendations": [
@@ -34,7 +26,7 @@
     }
   ],
   "summary": {
-    "totalOptimizations": 4,
+    "totalOptimizations": 3,
     "highPriorityRecommendations": 0,
     "mediumPriorityRecommendations": 1,
     "lowPriorityRecommendations": 0

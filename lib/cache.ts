@@ -1,26 +1,26 @@
 interface CacheItem<T> {
   value: T;
   expiresAt: number;
-  createdAt: number;
+  createdAt: number;'
 }
 
 interface CacheConfig {
   defaultTTL: number; // Time to live in milliseconds
   maxSize: number;
-  cleanupInterval: number;
+  cleanupInterval: number;'
 }
 
 class CacheManager<T = any> {
-  private cache: Map<string, CacheItem<T>> = new Map();
+  private cache: 'Map<string', CacheItem<T>> = new Map();
   private config: CacheConfig;
   private cleanupTimer: NodeJS.Timeout | null = null;
 
   constructor(config: Partial<CacheConfig> = {}) {
     this.config = {
-      defaultTTL: config.defaultTTL || 5 * 60 * 1000, // 5 minutes
-      maxSize: config.maxSize || 1000,
-      cleanupInterval: config.cleanupInterval || 60 * 1000 // 1 minute
-    };
+      defaultTTL: 'config.defaultTTL || 5 * 60 * 1000', // 5 minutes
+      maxSize: 'config.maxSize || 1000',
+      cleanupInterval: 'config.cleanupInterval || 60 * 1000 // 1 minute'
+}
     this.startCleanup();
   }
 
@@ -57,7 +57,7 @@ class CacheManager<T = any> {
       value,
       expiresAt,
       createdAt: now
-    });
+});
   }
 
   get(key: string): T | null {
@@ -110,13 +110,11 @@ class CacheManager<T = any> {
     });
 
     return {
-      total: this.cache.size,
+      total: 'this.cache.size',
       active,
       expired,
-      hitRate: 0 // This would need to be tracked separately
-    };
-  }
-
+      hitRate: '0 // This would need to be tracked separately'
+}
   destroy() {
     if (this.cleanupTimer) {
       clearInterval(this.cleanupTimer);
@@ -124,21 +122,19 @@ class CacheManager<T = any> {
     }
     this.clear();
   }
-}
-
 // Create cache instances for different purposes
 export const apiCache = new CacheManager({
-  defaultTTL: 5 * 60 * 1000, // 5 minutes
+  defaultTTL: '5 * 60 * 1000', // 5 minutes
   maxSize: 500
 });
 
 export const userCache = new CacheManager({
-  defaultTTL: 15 * 60 * 1000, // 15 minutes
+  defaultTTL: '15 * 60 * 1000', // 15 minutes
   maxSize: 100
 });
 
 export const staticCache = new CacheManager({
-  defaultTTL: 60 * 60 * 1000, // 1 hour
+  defaultTTL: '60 * 60 * 1000', // 1 hour
   maxSize: 200
 });
 

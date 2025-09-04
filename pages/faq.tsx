@@ -53,9 +53,12 @@ export default function FAQ() {
     <>
       <Head>
         <title>Frequently Asked Questions - Zion Tech Group</title>
-        <meta name="description" content="Find answers to common questions about Zion Tech Group's micro SaaS products, AI services, and IT solutions. Get help with pricing, implementation, and support." />
-        <meta name="keywords" content="FAQ, frequently asked questions, zion tech group, micro SaaS, AI services, IT solutions" />
-        <link rel="canonical" href={`${contact.site}/faq`} />
+        <meta name="description"
+  content="Find answers to common questions about Zion Tech Group's micro SaaS products, AI services, and IT solutions. Get help with pricing, implementation, and support." />
+        <meta name="keywords"
+  content="FAQ, frequently asked questions, zion tech group, micro SaaS, AI services, IT solutions" />
+        <link rel="canonical"
+  href={`${contact.site}/faq`} />
       </Head>
       
       <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -107,7 +110,8 @@ implementation, and support. Can't find what you're looking for? Contact us dire
               <a href={`mailto: ${contact.email}`} className="px-8 py-3 bg-purple-600 hover: bg-purple-700 rounded-lg font-semibold transition-colors">
                 Email {contact.email}
               </a>
-              <Link href="/contact" className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
+              <Link href="/contact"
+  className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
                 Contact Form
               </Link>
             </div>

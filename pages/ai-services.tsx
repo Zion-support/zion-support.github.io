@@ -9,7 +9,7 @@ export default function AIServices() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
+}
   const aiServices = [
     {
       icon: Brain,
@@ -1029,8 +1029,10 @@ export default function AIServices() {
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>AI Services — Zion Tech Group</title>
-        <meta name="description" content="Advanced AI services including machine learning, computer vision, NLP, and automation solutions. Transform your business with cutting-edge AI technology." />
-        <link rel="canonical" href={`${contact.site}/ai-services`} />
+        <meta name="description"
+  content="Advanced AI services including machine learning, computer vision, NLP, and automation solutions. Transform your business with cutting-edge AI technology." />
+        <link rel="canonical"
+  href={`${contact.site}/ai-services`} />
       </Head>
 
       <header className="py-20 text-center px-4">
@@ -1044,7 +1046,8 @@ export default function AIServices() {
         <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
           <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-5 py-2 rounded bg-blue-600 hover:bg-blue-700">Call {contact.phone}</a>
           <a href={`mailto:${contact.email}`} className="px-5 py-2 rounded bg-purple-600 hover:bg-purple-700">Email {contact.email}</a>
-          <Link href="/contact" className="px-5 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10">Get Quote</Link>
+          <Link href="/contact"
+  className="px-5 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10">Get Quote</Link>
         </div>
       </header>
 
@@ -1103,10 +1106,12 @@ export default function AIServices() {
                     <span className="font-semibold text-green-400">{service.timeline}</span>
                   </div>
                   <div className="ml-auto flex gap-3">
-                    <Link href="/contact" className="px-4 py-2 rounded bg-blue-600 hover:bg-blue-700 text-sm font-semibold">
+                    <Link href="/contact"
+  className="px-4 py-2 rounded bg-blue-600 hover:bg-blue-700 text-sm font-semibold">
                       Request Quote
                     </Link>
-                    <Link href="/contact" className="px-4 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10 text-sm font-semibold">
+                    <Link href="/contact"
+  className="px-4 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10 text-sm font-semibold">
                       Learn More
                     </Link>
                   </div>

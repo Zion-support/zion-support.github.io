@@ -3,18 +3,19 @@ import { NextApiRequest, NextApiResponse } from 'next';
 interface RateLimitConfig {
   windowMs: number;
   maxRequests: number;
-  message?: string;
+  message?: string;'
 }
 
 interface RateLimitStore {
-  [key: string]: {
+  [key: 'strin,
+  g
+]: {
     count: number;
-    resetTime: number;
-  };
+    resetTime: number;'
 }
-
 class RateLimiter {
-  private store: RateLimitStore = {};
+  private store: 'RateLimitStore = {'
+}
   private config: RateLimitConfig;
 
   constructor(config: RateLimitConfig) {
@@ -29,8 +30,12 @@ class RateLimiter {
   private cleanup() {
     const now = Date.now();
     Object.keys(this.store).forEach(key => {
-      if (this.store[key].resetTime < now) {
-        delete this.store[key];
+      if (this.store[ke,
+  y
+].resetTime < now) {
+        delete this.store[ke,
+  y
+];
       }
     });
   }
@@ -45,44 +50,57 @@ class RateLimiter {
     const now = Date.now();
     const windowStart = now - this.config.windowMs;
 
-    if (!this.store[key] || this.store[key].resetTime < windowStart) {
-      this.store[key] = {
+    if (!this.store[ke,
+  y
+] || this.store[ke,
+  y
+].resetTime < windowStart) {
+      this.store[ke,
+  y
+] = {
         count: 1,
-        resetTime: now + this.config.windowMs
-      };
+        resetTime: 'now + this.config.windowMs'
+}
       return {
         allowed: true,
-        remaining: this.config.maxRequests - 1,
-        resetTime: this.store[key].resetTime
-      };
-    }
-
-    if (this.store[key].count >= this.config.maxRequests) {
+        remaining: 'this.config.maxRequests - 1',
+        resetTime: 'this.store[ke,
+  y
+].resetTime'
+}
+    if (this.store[ke,
+  y
+].count >= this.config.maxRequests) {
       return {
         allowed: false,
         remaining: 0,
-        resetTime: this.store[key].resetTime
-      };
-    }
-
-    this.store[key].count++;
+        resetTime: 'this.store[ke,
+  y
+].resetTime'
+}
+    this.store[ke,
+  y
+].count++;
     return {
       allowed: true,
-      remaining: this.config.maxRequests - this.store[key].count,
-      resetTime: this.store[key].resetTime
-    };
-  }
+      remaining: 'this.config.maxRequests - this.store[ke,
+  y
+].count',
+      resetTime: 'this.store[ke,
+  y
+].resetTime'
+}
 }
 
 // Create rate limiter instances
 export const apiRateLimiter = new RateLimiter({
-  windowMs: 15 * 60 * 1000, // 15 minutes
+  windowMs: '15 * 60 * 1000', // 15 minutes
   maxRequests: 100,
   message: 'Too many requests from this IP, please try again later.'
 });
 
 export const authRateLimiter = new RateLimiter({
-  windowMs: 15 * 60 * 1000, // 15 minutes
+  windowMs: '15 * 60 * 1000', // 15 minutes
   maxRequests: 5,
   message: 'Too many authentication attempts, please try again later.'
 });
@@ -106,4 +124,4 @@ export const rateLimitMiddleware = (limiter: RateLimiter) =>
     }
     
     next();
-  };
+  }

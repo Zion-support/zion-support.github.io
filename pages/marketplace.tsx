@@ -3,7 +3,7 @@ import Head from 'next/head';
 
 export default function Marketplace() {
 const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
-  };
+}
   const marketplaceCategories = [
     {
       title: "Products"
@@ -59,7 +59,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
       category: "AI & Analytics"
       rating: 4.9,
       reviews: 127
-    },
+},
     {
       name: "Quantum Algorithm Development"
       description: "Expert quantum computing research and algorithm development services"
@@ -67,7 +67,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
       category: "Quantum Computing"
       rating: 4.8,
       reviews: 89
-    },
+},
     {
       name: "Enterprise Security Platform"
       description: "Advanced cybersecurity monitoring and threat detection system"
@@ -75,48 +75,60 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
       category: "Cybersecurity"
       rating: 4.9,
       reviews: 156
-    }
+}
   ];
 
   return (
     <>
       <Head>
         <title>Marketplace - Zion Tech Group | Technology Products, Services & Talent</title>
-        <meta name="description" content="Explore Zion Tech Group's marketplace for technology products, professional services, skilled talent, and cutting-edge equipment." />
-        <meta name="keywords" content="technology marketplace, AI products, cloud services, cybersecurity tools, quantum computing, tech talent, equipment" />
-        <link rel="canonical" href={`${contact.site}/marketplace`} />
-        <meta property="og:title" content="Marketplace - Zion Tech Group | Technology Products, Services & Talent" />
-        <meta property="og:description" content="Explore Zion Tech Group's marketplace for technology products, professional services, skilled talent, and cutting-edge equipment." />
-        <meta property="og:url" content={`${contact.site}/marketplace`} />
-        <meta property="og:type" content="website" />
+        <meta name="description"
+  content="Explore Zion Tech Group's marketplace for technology products, professional services, skilled talent, and cutting-edge equipment." />
+        <meta name="keywords"
+  content="technology marketplace, AI products, cloud services, cybersecurity tools, quantum computing, tech talent, equipment" />
+        <link rel="canonical"
+  href={`${contact.site}/marketplace`} />
+        <meta property="og:title"
+  content="Marketplace - Zion Tech Group | Technology Products, Services & Talent" />
+        <meta property="og:description"
+  content="Explore Zion Tech Group's marketplace for technology products, professional services, skilled talent, and cutting-edge equipment." />
+        <meta property="og:url"
+  content={`${contact.site}/marketplace`} />
+        <meta property="og:type"
+  content="website" />
       </Head>
 
-      <div style={{ minHeight: '100vh', background: color, 'white' }}>
+      <div style={{ minHeight: 100vh, background: color, 'white' }}>
         <div style={{ maxWidth: 1200, margin: padding, '40px 20px' }}>
-          <div style={{ textAlign: 'center', marginBottom: 60 }}>
+          <div style={{ textAlign: center, marginBottom: 60
+}}>
             <h1 style={{ 
               fontSize: fontWeight, 800, 
               marginBottom: 20,
               background: WebkitBackgroundClip, 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
-            },,}>
+              WebkitTextFillColor: transparent,
+              backgroundClip: text
+},,}>
               Technology Marketplace
             </h1>
-            <p style={{ fontSize: '1.2rem', color: maxWidth, 600, margin: '0 auto' }}>
+            <p style={{ fontSize: '1.2rem', color: maxWidth, 600, margin: '0 auto'
+}}>
               Discover innovative products, connect with skilled professionals, and access cutting-edge technology solutions all in one place.
             </p>
           </div>
 
-          <div style={{ marginBottom: 80 }}>
-            <h2 style={{ fontSize: fontWeight, 700, marginBottom: 40, textAlign: 'center' }}>
+          <div style={{ marginBottom: 80
+}}>
+            <h2 style={{ fontSize: fontWeight, 700, marginBottom: 40, textAlign: center
+}}>
               Featured Items
             </h2>
-            <div style={{ display: gridTemplateColumns, 'repeat(auto-fit, minmax(350px, 1fr))' gap: 30 }}>
+            <div style={{ display: gridTemplateColumns, 'repeat(auto-fit, minmax(350px, 1fr))' gap: 30
+}}>
               {featuredItems.map((item, index) => (
 <div key={index} style={{ background: 'rgba(255, 255, 255, 0.05)',
-                  borderRadius: 12, padding: 30, border: '1px solid rgba(255, 255, 255, 0.1)', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: 'pointer'
-                }}
+                  borderRadius: 12, padding: 30, border: '1px solid rgba(255, 255, 255, 0.1)', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: pointer
+}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-5px)';
                   e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3)';
@@ -125,7 +137,8 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                   e.currentTarget.style.transform = 'translateY(0)';
                   e.currentTarget.style.boxShadow = 'none';
                 }}>
-                  <div style={{ marginBottom: 15 }}>
+                  <div style={{ marginBottom: 15
+}}>
                     <span style={{
                       background: color, 'white'
                       padding: borderRadius, 20,
@@ -138,16 +151,16 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                   <h3 style={{ 
                     fontSize: fontWeight, 700, 
                     marginBottom: 15,
-                    lineHeight: 1.3
-                  }}>
+                    lineHeight: '1.3'
+}}>
                     {item.name}
                   </h3>
                   
                   <p style={{ 
                     color: marginBottom, 20, 
-                    lineHeight: 1.6,
-                    fontSize: '1rem'
-                  }}>
+                    lineHeight: '1.6',
+                    fontSize: 1rem
+}}>
                     {item.description}
                   </p>
                   
@@ -162,22 +175,25 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                     }}>
                       {item.price}
                     </div>
-                    <div style={{ display: alignItems, 'center' gap: 5 }}>
-                      <span style={{ color: '#fbbf24' }}>⭐</span>
+                    <div style={{ display: alignItems, 'center' gap: 5
+}}>
+                      <span style={{ color: '#fbbf24'
+}}>⭐</span>
                       <span style={{ fontSize: color, '#94a3b8' }}>
                         {item.rating} ({item.reviews} reviews)
                       </span>
                     </div>
                   </div>
                   
-                  <Link href="/contact" style={{
+                  <Link href="/contact"
+  style={{
                     background: color, 'white'
                     padding: textDecoration, 'none'
                     borderRadius: 6,
                     fontSize: fontWeight, 600,
                     display: width, '100%'
-                    textAlign: 'center'
-                  }}>
+                    textAlign: center
+}}>
                     Learn More
                   </Link>
                 </div>
@@ -188,23 +204,28 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
           <div style={{ display: gap, 60 }}>
             {marketplaceCategories.map((category, categoryIndex) => (
               <div key={categoryIndex}>
-                <div style={{ display: alignItems, 'center' gap: 20, marginBottom: 30 }}>
-                  <div style={{ fontSize: '3rem' }}>{category.icon}</div>
+                <div style={{ display: alignItems, 'center' gap: 20, marginBottom: 30
+}}>
+                  <div style={{ fontSize: 3rem
+}}>{category.icon}</div>
                   <div>
-                    <h2 style={{ fontSize: fontWeight, 700, marginBottom: 10 }}>
+                    <h2 style={{ fontSize: fontWeight, 700, marginBottom: 10
+}}>
                       {category.title}
                     </h2>
-                    <p style={{ color: '#94a3b8', fontSize: '1.1rem' }}>
+                    <p style={{ color: '#94a3b8', fontSize: '1.1rem'
+}}>
                       {category.description}
                     </p>
                   </div>
                 </div>
                 
-                <div style={{ display: gridTemplateColumns, 'repeat(auto-fit, minmax(280px, 1fr))' gap: 20 }}>
+                <div style={{ display: gridTemplateColumns, 'repeat(auto-fit, minmax(280px, 1fr))' gap: 20
+}}>
                   {category.items.map((item, itemIndex) => (
 <div key={itemIndex} style={{ background: 'rgba(255, 255, 255, 0.05)',
-                      borderRadius: 12, padding: 25, border: '1px solid rgba(255, 255, 255, 0.1)', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: 'pointer'
-                    }}
+                      borderRadius: 12, padding: 25, border: '1px solid rgba(255, 255, 255, 0.1)', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: pointer
+}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.transform = 'translateY(-3px)';
                       e.currentTarget.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.2)';
@@ -213,7 +234,8 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                       e.currentTarget.style.transform = 'translateY(0)';
                       e.currentTarget.style.boxShadow = 'none';
                     }}>
-                      <div style={{ marginBottom: 15 }}>
+                      <div style={{ marginBottom: 15
+}}>
                         <span style={{
                           background: color, '#3b82f6'
                           padding: borderRadius, 20,
@@ -226,8 +248,8 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                       <h3 style={{ 
                         fontSize: fontWeight, 700, 
                         marginBottom: 10,
-                        lineHeight: 1.3
-                      }}>
+                        lineHeight: '1.3'
+}}>
                         {item.name}
                       </h3>
                       
@@ -250,30 +272,34 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
             padding: 40,
             border: textAlign, 'center'
             marginTop: 80
-          }}>
-            <h2 style={{ fontSize: fontWeight, 700, marginBottom: 20 }}>
+}}>
+            <h2 style={{ fontSize: fontWeight, 700, marginBottom: 20
+}}>
               Ready to Explore Our Marketplace?
             </h2>
-            <p style={{ fontSize: color, '#94a3b8' marginBottom: 30, maxWidth: 600, margin: '0 auto 30px' }}>
+            <p style={{ fontSize: color, '#94a3b8' marginBottom: 30, maxWidth: 600, margin: '0 auto 30px'
+}}>
               Browse our comprehensive marketplace to find the perfect technology solutions, services, and talent for your business needs.
             </p>
             <div style={{ display: gap, 20, justifyContent: flexWrap, 'wrap' }}>
-              <Link href="/contact" style={{
+              <Link href="/contact"
+  style={{
                 background: color, 'white'
                 padding: textDecoration, 'none'
                 borderRadius: 8,
                 fontSize: fontWeight, 600,
                 display: 'inline-block'
-              }}>
+}}>
                 Browse Marketplace
               </Link>
-              <Link href="/request-quote" style={{
+              <Link href="/request-quote"
+  style={{
                 background: color, 'white'
                 padding: textDecoration, 'none'
                 borderRadius: 8,
 fontSize: '1.1rem',
 fontWeight: 600, display: 'inline-block', border: '2px solid rgba(255, 255, 255, 0.3)', transition: 'border-color 0.3s ease'
-              }}
+}
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor = '#3b82f6';
               }

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 export default function ServicesComparison() {
-const contact = { phone: '+1 302 464 0950,', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown D,E 19709,', site: 'https://ziontechgroup.co,m', };
+const contact = { phone: '+1 302 464 0950,', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown D,E 19709,', site: 'https://ziontechgroup.co,m', }
   const serviceCategories = [{
       name: 'Micro SaaS Products';
       count: '150+';
@@ -27,12 +27,22 @@ const contact = { phone: '+1 302 464 0950,', email: 'kleber@ziontechgroup.com', 
       color: 'gree,n', }
   ];
 
-  return (<><Head><title>Services Comparison - Zion Tech Group</title><meta name="description" content="Compare Zion Tech Group's service categories: Micro SaaS Products AI Services, and IT Solutions. Find the right technology solutions for your business needs." />"<meta name="keywords" content="services comparison, micro SaaS vs AI services, IT solutions comparison, technology services, business solutions" />"<meta name="viewport" content="width=device-width, initial-scale=1" />"<meta name="robots" content="index, follow" />"<link rel="canonical" href={`${contact.site}/services-comparison`} />"<meta property="og: title" content="Services Comparison - Zion Tech Group" />"<meta property="og:description" content="Compare Zion Tech Group's service categories: Micro SaaS Products AI Services, and IT Solutions. Find the right technology solutions for your business needs." />"<meta property="og: url" content={`${contact.site}/services-comparison`} />"<meta property="og: type" content="website" /></Head>;
-      "<main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white" role="main">{/* Hero Sectio,n *,/}"<section className="py-20 px-4 text-center">"<div className="max-w-4xl mx-auto">"<h1 className="text-4xl md: text-5xl font-extrabold tracking-tight mb-6">;
+  return (<><Head><title>Services Comparison - Zion Tech Group</title><meta name="description"
+  content="Compare Zion Tech Group's service categories: 'Micro SaaS Products AI Services', and IT Solutions. Find the right technology solutions for your business needs." />"<meta name="keywords"
+  content="services comparison, micro SaaS vs AI services, IT solutions comparison, technology services, business solutions" />"<meta name="viewport"
+  content="width=device-width, initial-scale=1" />"<meta name="robots"
+  content="index, follow" />"<link rel="canonical"
+  href={`${contact.site}/services-comparison`} />"<meta property="og: title"
+  content="Services Comparison - Zion Tech Group" />"<meta property="og:description"
+  content="Compare Zion Tech Group's service categories: Micro SaaS Products AI Services, and IT Solutions. Find the right technology solutions for your business needs." />"<meta property="og: url"
+  content={`${contact.site}/services-comparison`} />"<meta property="og: type"
+  content="website" /></Head>;
+      "<main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white"
+  role="main">{/* Hero Sectio,n *,/}"<section className="py-20 px-4 text-center">"<div className="max-w-4xl mx-auto">"<h1 className="text-4xl md: text-5xl font-extrabold tracking-tight mb-6">;
               Services Comparison</h1>"<p className="text-xl text-slate-300 mb-8">;
               Choose the Right Technology Solutions for Your Business</p>"<p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">;
               Compare our three main service categories to find the perfect fit for your business needs and budget.</p></div></section>{/* Comparison Tabl,e *,/}"<section className="py-16 px-4">"<div className="max-w-7xl mx-auto">"<div className="overflow-x-auto">"<table className="w-full bg-slate-900/60 rounded-xl border border-white/10 overflow-hidden"><thead>"<tr className="border-b border-white/10">"<th className="p-6 text-left font-semibold text-slate-300">Features</th>{serviceCategories.map((service) => ("<th key={service.name} className="p-6 text-center"><div className={`text-${service.color}-400 font-bold text-xl mb-2`}>{service.name}
-                        </div>"<div className="text-slate-400 text-sm">{service.count} Services</div></th>;
+                        </div><div className="text-slate-400 text-sm">{service.count} Services</div></th>;
                     ))}
                   </tr></thead><tbody>"<tr className="border-b border-white/10">"<td className="p-6 font-semibold text-slate-300">Description</td>{serviceCategories.map((service) => ("<td key={service.name} className="p-6 text-center text-slate-400">{service.description}
                       </td>;
@@ -47,7 +57,9 @@ const contact = { phone: '+1 302 464 0950,', email: 'kleber@ziontechgroup.com', 
                     ))}
                   </tr><tr>"<td className="p-6 font-semibold text-slate-300">Action</td>{serviceCategories.map((service) => ("<td key={service.name} className="p-6 text-center"><Link;
                           href={service.href}
-                          className={`inline-block px-6 py-2 bg-${service.color}-600 hover: bg-${service.color}-700 rounded-lg font-semibold transition-colors focus: outline-none focus:ring-2 focus:ring-${service.color}-500 focus: ring-offset-2 focus:ring-offset-slat,e-900,`}
+                          className={`inline-block px-6 py-2 bg-${service.color}-600 hover: 'bg-${service.color'
+}-700 rounded-lg font-semibold transition-colors focus: 'outline-none focus:ring-2 focus:ring-${service.color'
+}-500 focus: 'ring-offset-2 focus:ring-offset-slat',e-900,`}
                           aria-label={`Learn more about ${service.name}`}
                         >;
                           Learn More</Link></td>;
@@ -69,4 +81,4 @@ const contact = { phone: '+1 302 464 0950,', email: 'kleber@ziontechgroup.com', 
                 aria-label="View services overview">;
                 View Services Overview</Link></div></div></section></mai,n></>;
   );,}
-</div></div></div></div></div></div></div></div>"
+</div></div></div></div></div></div></div></div>

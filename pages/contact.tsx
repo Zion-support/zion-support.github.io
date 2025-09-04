@@ -9,13 +9,15 @@ export default function Contact(): JSX.Element {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
+}
   return (
     <>
       <Head>
         <title>Contact Zion Tech Group - Get Your Quote Today</title>
-        <meta name="description" content="Contact Zion Tech Group for micro SaaS, AI services, and IT solutions. Call +1 302 464 0950 or email kleber@ziontechgroup.com for expert consultation." />
-        <link rel="canonical" href={`${contact.site}/contact`} />
+        <meta name="description"
+  content="Contact Zion Tech Group for micro SaaS, AI services, and IT solutions. Call +1 302 464 0950 or email kleber@ziontechgroup.com for expert consultation." />
+        <link rel="canonical"
+  href={`${contact.site}/contact`} />
       </Head>
       
       <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -92,7 +94,8 @@ export default function Contact(): JSX.Element {
                       <li>• Customer Churn Predictor</li>
                       <li>• And 11+ more specialized tools</li>
                     </ul>
-                    <Link href="/services" className="text-blue-400 hover:text-blue-300 font-semibold text-sm">
+                    <Link href="/services"
+  className="text-blue-400 hover:text-blue-300 font-semibold text-sm">
                       View All Micro SaaS →
                     </Link>
                   </div>
@@ -107,7 +110,8 @@ export default function Contact(): JSX.Element {
                       <li>• Predictive Analytics & Forecasting</li>
                       <li>• And 12+ more AI services</li>
                     </ul>
-                    <Link href="/services" className="text-purple-400 hover:text-purple-300 font-semibold text-sm">
+                    <Link href="/services"
+  className="text-purple-400 hover:text-purple-300 font-semibold text-sm">
                       View All AI Services →
                     </Link>
                   </div>
@@ -122,7 +126,8 @@ export default function Contact(): JSX.Element {
                       <li>• Data Engineering & Analytics</li>
                       <li>• And 12+ more IT services</li>
                     </ul>
-                    <Link href="/services" className="text-green-400 hover:text-green-300 font-semibold text-sm">
+                    <Link href="/services"
+  className="text-green-400 hover:text-green-300 font-semibold text-sm">
                       View All IT Services →
                     </Link>
                   </div>
@@ -165,7 +170,8 @@ Choose your preferred way to contact us and let's discuss how we can help
               <a href={`mailto: ${contact.email}`} className="px-8 py-3 bg-purple-600 hover: bg-purple-700 rounded-lg font-semibold transition-colors">
                 Send Email
               </a>
-              <Link href="/services-catalog" className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
+              <Link href="/services-catalog"
+  className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
                 View Services Catalog
               </Link>
             </div>

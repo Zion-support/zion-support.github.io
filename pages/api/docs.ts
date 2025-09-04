@@ -6,14 +6,14 @@ interface ApiEndpoint {
   description: string;
   parameters?: ApiParameter[];
   responses?: ApiResponse[];
-  examples?: ApiExampl,e[];,}
+  examples?: ApiExampl',e[];,}
 
 interface ApiParameter {
   name: string;
   type: string;
   required: boolean;
   description: string;
-  location: 'query' | 'body' | 'header' | 'pat,h';,}
+  location: query | 'body' | 'header' | 'pat,h';,}
 
 interface ApiResponse {
   status: number;
@@ -23,7 +23,7 @@ interface ApiResponse {
 interface ApiExample {
   name: string;
   request: any;
-  response: an,y;,}
+  response: an',y;,}
 
 class ApiDocumentationGenerator {
   private endpoints: ApiEndpoint[] = [];
@@ -42,7 +42,7 @@ class ApiDocumentationGenerator {
           url: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api';
           description: 'Development serve,r', }
       ],;
-      paths: this.generatePath,s(,),;
+      paths: 'this.generatePath',s(,),;
       components: {
         schemas: this.generateSchema,s(), }
     return spec}
@@ -50,18 +50,27 @@ class ApiDocumentationGenerator {
   private generatePaths() {
     const paths: an,y =,{}
     this.endpoints.forEach(endpoint => {
-      if (!paths[endpoint.path]) {
-        paths[endpoint.path] = {}
-      paths[endpoint.path][endpoint.method.toLowerCase()] = {
+      if (!paths[endpoint.pat,
+  h
+]) {
+        paths[endpoint.pat,
+  h
+] = {}
+      paths[endpoint.pat,
+  h
+][endpoint.method.toLowerCase()] = {
         summary: endpoint.description;
         parameters: endpoint.parameters?.map(param => ({
           name: param.name;
           in: param.location;
           required: param.required;
           schema: { type: param.type },;
-          description: param.description })),;
+          description: 'param.description'
+})),;
         responses: endpoint.responses?.reduce((acc response) => {
-          acc[response.status] = {
+          acc[response.statu,
+  s
+] = {
             description: response.description;
             content: response.schema ? {
               'application/json': {
@@ -75,23 +84,22 @@ class ApiDocumentationGenerator {
   private generateSchemas() {
     return {
       Error: {
-        type: 'object';
+        type: object;
         properties: {
           error: {
-            type: 'object';
+            type: object;
             properties: {
               message: { type: 'strin,g', };,;
               statusCode: { type: 'numbe,r', },;
-              timestamp: { type: 'string' format: 'date-tim,e', }
-          }
+              timestamp: { type: string,
+  format: 'date-tim,e', }
       },;
       Success: {
-        type: 'object';
+        type: object;
         properties: {
           success: { type: 'boolea,n', },;
           data: { type: 'objec,t', },;
           message: { type: 'strin,g', }
-      }
   }
 
   generateMarkdown() {
@@ -107,7 +115,7 @@ class ApiDocumentationGenerator {
         markdown += '|------|------|----------|----------|-------------|\n';
         
         endpoint.parameters.forEach(param => {
-          markdown += `| ${param.name} | ${param.type} | ${param.required ? 'Yes' : 'No'} | ${param.location} | ${param.description} |\n`});
+          markdown += `| ${param.name} | ${param.type} | ${param.required ? 'Yes' : No} | ${param.location} | ${param.description} |\n`});
         markdown += '\n'}
 
       if (endpoint.responses && endpoint.responses.length > 0) {
@@ -131,7 +139,8 @@ class ApiDocumentationGenerator {
 export const apiDocGenerator = new ApiDocumentationGenerator();
 
 // API Documentation endpoint;
-export default function handler(req: NextApiRequest res: NextApiResponse) {
+export default function handler(req: NextApiRequest,
+  res: NextApiResponse) {
   if (req.method === 'GET') {
     const format = req.query.format as string || 'json';
     
@@ -143,4 +152,4 @@ export default function handler(req: NextApiRequest res: NextApiResponse) {
   } else {
     res.setHeader('Allow' ['GET']);
     res.status(405).json({ error: 'Method not allowe,d', })}
-}}}}}}}}
+}}}}}}}

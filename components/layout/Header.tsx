@@ -4,17 +4,27 @@ import { Button } from '../ui/Button';
 import { Menu, X } from 'lucide-react';
 
 const Header: React.FC = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOp,
+  e
+] = useState(false);
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'All Services', href: '/services' },
-    { name: 'Catalog', href: '/services-catalog' },
-    { name: 'Cloud DevOps', href: '/cloud-devops' },
-    { name: 'Cybersecurity', href: '/cybersecurity' },
-    { name: 'Quantum', href: '/quantum-computing' },
-    { name: 'Docs', href: '/docs' },
-    { name: 'Pricing', href: '/pricing' }
+    { name: Home, href: '/'
+},
+    { name: 'All Services', href: '/services'
+},
+    { name: Catalog, href: '/services-catalog'
+},
+    { name: 'Cloud DevOps', href: '/cloud-devops'
+},
+    { name: Cybersecurity, href: '/cybersecurity'
+},
+    { name: Quantum, href: '/quantum-computing'
+},
+    { name: Docs, href: '/docs'
+},
+    { name: Pricing, href: '/pricing'
+}
   ];
 
   return (
@@ -22,7 +32,8 @@ const Header: React.FC = () => {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0">
+          <Link href="/"
+  className="flex-shrink-0">
             <span className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
               Zion Tech Group
             </span>
@@ -71,13 +82,14 @@ const Header: React.FC = () => {
                   key={item.name}
                   href={item.href}
                   className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
+  onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
               <div className="pt-4">
-                <Link href="/contact" className="w-full">
+                <Link href="/contact"
+  className="w-full">
                   <Button className="w-full">Contact</Button>
                 </Link>
               </div>
@@ -87,6 +99,5 @@ const Header: React.FC = () => {
       </nav>
     </header>
   );
-};
-
+}
 export default Header;

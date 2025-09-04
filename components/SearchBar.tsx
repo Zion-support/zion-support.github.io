@@ -97,7 +97,7 @@ export default function SearchBar() {
     setQuery('');
     setResults([]);
     setIsOpen(false);
-  }
+  };
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
       setIsOpen(false);
@@ -120,7 +120,7 @@ export default function SearchBar() {
         <input
           ref={inputRef}
           type="text"
-          placeholder="Search services..."
+  placeholder="Search services..."
           value={query}
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
@@ -128,13 +128,13 @@ export default function SearchBar() {
         />
         <svg
           className="absolute left-3 top-2.5 h-5 w-5 text-slate-400"
-          fill="none"
+  fill="none"
           stroke="currentColor"
-          viewBox="0 0 24 24"
+  viewBox="0 0 24 24"
         >
           <path
             strokeLinecap="round"
-            strokeLinejoin="round"
+  strokeLinejoin="round"
             strokeWidth={2}
             d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
           />
