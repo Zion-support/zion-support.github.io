@@ -1,0 +1,66 @@
+{
+  "timestamp": "2025-09-03T16-41-13-742Z",
+  "totalScripts": 5,
+  "successful": 5,
+  "failed": 0,
+  "warnings": 0,
+  "scripts": [
+    {
+      "name": "security-audit",
+      "description": "Security Audit",
+      "startTime": "2025-09-03T16:41:13.746Z",
+      "status": "success",
+      "output": "🔒 Starting security audit...\n\n🔒 Security Audit Results:\n✅ No security issues found\n\n📄 Security audit report saved to security-audit-report.json\n",
+      "error": "",
+      "duration": 28,
+      "endTime": "2025-09-03T16:41:13.774Z"
+    },
+    {
+      "name": "performance-monitor",
+      "description": "Performance Monitoring",
+      "startTime": "2025-09-03T16:41:13.774Z",
+      "status": "success",
+      "output": "⚡ Starting performance monitoring...\n\n📊 Performance Metrics:\n   - .next bundle size: 39.87 MB\n   - node_modules size: 781.94 MB\n   - TypeScript files: 13\n   - JavaScript files: 0\n   - CSS files: 2\n\n✅ No performance issues detected\n\n📄 Performance report saved to performance-metrics.json\n",
+      "error": "",
+      "duration": 660,
+      "endTime": "2025-09-03T16:41:14.434Z"
+    },
+    {
+      "name": "code-quality-monitor",
+      "description": "Code Quality Analysis",
+      "startTime": "2025-09-03T16:41:14.435Z",
+      "status": "success",
+      "output": "📊 Starting code quality monitoring...\n\n📊 Code Quality Report:\n   - Total files analyzed: 13\n   - Total lines of code: 5,643\n   - Average complexity: 0.00\n   - Files with issues: 6\n\n⚠️  Quality Issues:\n\n   📁 pages/_app.tsx:\n      - Duplicate Code: Potential duplicate code detected (11)\n\n   📁 pages/about.tsx:\n      - Duplicate Code: Potential duplicate code detected (10)\n\n   📁 pages/ai-services.tsx:\n      - File Length: Files should be under 500 lines (1)\n      - Duplicate Code: Potential duplicate code detected (33)\n\n   📁 pages/it-services.tsx:\n      - File Length: Files should be under 500 lines (1)\n      - Duplicate Code: Potential duplicate code detected (58)\n\n   📁 pages/micro-saas.tsx:\n      - File Length: Files should be under 500 lines (1)\n      - Duplicate Code: Potential duplicate code detected (29)\n\n   📁 pages/services.tsx:\n      - File Length: Files should be under 500 lines (1)\n      - Duplicate Code: Potential duplicate code detected (50)\n\n💡 Recommendations:\n   - High number of quality issues - consider code review\n\n📄 Code quality report saved to code-quality-report.json\n",
+      "error": "",
+      "duration": 40,
+      "endTime": "2025-09-03T16:41:14.475Z"
+    },
+    {
+      "name": "dependency-updater",
+      "description": "Dependency Update Check",
+      "startTime": "2025-09-03T16:41:14.476Z",
+      "status": "success",
+      "output": "📦 Starting dependency update check...\n🔍 Checking for outdated packages...\n✅ All packages are up to date\n🔒 Checking for security vulnerabilities...\n⚠️  Could not check security vulnerabilities: Command failed: npm audit --json\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\n\n📊 Dependency Update Report:\n   - Outdated packages: 0\n   - Security vulnerabilities: 0\n   - Recommendations: 0\n\n📄 Dependency update report saved to dependency-update-report.json\n",
+      "error": "",
+      "duration": 2074,
+      "endTime": "2025-09-03T16:41:16.550Z"
+    },
+    {
+      "name": "health-check",
+      "description": "System Health Check",
+      "startTime": "2025-09-03T16:41:16.550Z",
+      "status": "success",
+      "output": "🩺 PM2 Automation System Health Check\n======================================\n🔍 Checking PM2 status...\n✅ PM2 is installed\n❌ No PM2 processes are online\n💡 Try running: bash /workspace/scripts/pm2-start.sh\n\n📄 Checking log files...\n✅ Log directory exists\n⚠️  app.log not found\n⚠️  error-monitor.log not found\n⚠️  auto-fixer.log not found\n\n📊 Checking error reports...\n✅ Error reports directory exists\n⚠️  No current error report found\n⚠️  No auto-fix report found\n\n🏗️  Checking project build status...\n✅ Project builds successfully\n\n🔍 Checking linting status...\n⚠️  Linting errors found\n💡 Auto-fixer will attempt to resolve these\n\n💾 Checking disk space...\n✅ Disk space OK (13% used)\n\n🧠 Checking memory usage...\n✅ Memory usage OK (8% used)\n\n🏁 Health check completed!\n💡 For more details, check individual log files in /workspace/logs/\n",
+      "error": "",
+      "duration": 12344,
+      "endTime": "2025-09-03T16:41:28.894Z"
+    }
+  ],
+  "summary": {
+    "successRate": "100.00%",
+    "averageDuration": 3029.2,
+    "recommendations": [
+      "All automation scripts are working correctly"
+    ]
+  }
+}

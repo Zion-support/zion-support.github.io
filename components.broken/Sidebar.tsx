@@ -1,0 +1,51 @@
+import NextLink from 'next/link'
+
+export default function Sidebar() {
+  const groups: { title: string; links: { href: string; label: string }[] }[] = [
+    {
+      title: 'Micro SaaS',
+      links: [
+        { href: '/services/micro-saas', label: 'Overview' },
+        { href: '/services/micro-saas/ai-qa', label: 'AI QA' },
+        { href: '/services/micro-saas/lead-enrichment', label: 'Lead Enrichment' },
+        { href: '/services/micro-saas/contract-ai', label: 'Contract AI' },
+        { href: '/services/micro-saas/ai-seo-auditor', label: 'AI SEO Auditor' }
+      ]
+    },
+    {
+      title: 'IT Services',
+      links: [
+        { href: '/services/it-services', label: 'Overview' },
+        { href: '/services/it/cybersecurity', label: 'Cybersecurity' },
+        { href: '/services/cloud-services', label: 'Cloud' },
+        { href: '/services/web-development', label: 'Web Development' }
+      ]
+    },
+    {
+      title: 'AI Services',
+      links: [
+        { href: '/services/ai-services', label: 'Overview' },
+        { href: '/services/ai/ai-development', label: 'AI Development' },
+        { href: '/services/data-analytics', label: 'Data & Analytics' },
+        { href: '/services/computer-vision', label: 'Computer Vision' }
+      ]
+    }
+  ]
+
+  return (
+    <aside className="ztg-sidebar">
+      {groups.map((group) => (
+        <div key={group.title} className="ztg-sidebar-group">
+          <h5>{group.title}</h5>
+          <ul>
+            {group.links.map((l) => (
+              <li key={l.href}>
+                <NextLink href={l.href}>{l.label}</NextLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </aside>
+  )
+}

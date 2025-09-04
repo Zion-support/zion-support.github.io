@@ -10,19 +10,24 @@ const { execSync } = require('child_process');
 
 class MasterOrchestrator {
   constructor() {
-    this.logFile = path.join(__dirname, '../logs/master-orchestrator.log');
+    this.projectRoot = process.cwd();
+    this.logFile = path.join(this.projectRoot, 'logs', 'master-orchestrator.log');
+    this.reportFile = path.join(this.projectRoot, 'master-automation-report.json');
     this.startTime = new Date();
-    this.results = {}}
+    this.results = {};
+  }
 
   log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString(;);
-    const logMessage = `[${timestamp}] [${level}] ${message}\;n;`;
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     
-    console.log(logMessage.trim(););
+    console.log(logMessage.trim());
     
     try {
-      fs.appendFileSync(this.logFile, logMessage)} catch (error) {
-      console.error('Failed to write to log file:', error.message)}
+      fs.appendFileSync(this.logFile, logMessage);
+    } catch (error) {
+      console.error('Failed to write to log file:', error.message);
+    }
   }
 
   async runHealthCheck() {
@@ -51,8 +56,8 @@ class MasterOrchestrator {
       return false;}
   }
 
-  async runPerformanceMonitor() {
-    this.log('Running performance monitor...');
+  async runPerformanceOptimization() {
+    this.log('Running performance optimization...');
     try {
       const PerformanceMonitor = require('../scripts/performance-monitor.cjs';);
       const monitor = new PerformanceMonitor;(;);
@@ -64,8 +69,8 @@ class MasterOrchestrator {
       return false;}
   }
 
-  async runErrorPrevention() {
-    this.log('Running error prevention...');
+  async runSEOOptimization() {
+    this.log('Running SEO optimization...');
     try {
       const { execSync } = require('child_process');
       execSync('node automation/error-prevention-system.cjs', { stdio: 'pipe' });
@@ -76,8 +81,8 @@ class MasterOrchestrator {
       return false;}
   }
 
-  async runDependencyManager() {
-    this.log('Running dependency manager...');
+  async runLinting() {
+    this.log('Running linting...');
     try {
       const { execSync } = require('child_process');
       execSync('node automation/dependency-manager.cjs', { stdio: 'pipe' });
@@ -88,8 +93,8 @@ class MasterOrchestrator {
       return false;}
   }
 
-  async runCodeQualityMonitor() {
-    this.log('Running code quality monitor...');
+  async runTests() {
+    this.log('Running tests...');
     try {
       const { execSync } = require('child_process');
       execSync('node automation/code-quality-monitor.cjs', { stdio: 'pipe' });
@@ -100,8 +105,8 @@ class MasterOrchestrator {
       return false;}
   }
 
-  async runBuildCheck() {
-    this.log('Running build check...');
+  async runBuild() {
+    this.log('Running build...');
     try {
       execSync('npm run build', { stdio: 'pipe' });
       this.results.buildCheck = { success: true, timestamp: new Date().toISOString() };
@@ -170,14 +175,14 @@ class MasterOrchestrator {
 
     this.log(`Comprehensive system check completed: ${passed}/${total} checks passed in ${duration}ms`);
     
-    // Generate summary
-    const summary = {
+    const report = {
       timestamp: endTime.toISOString(),
       duration: duration,
-      totalChecks: total,
-      passedChecks: passed,
-      failedChecks: total - passed,
-      successRate: ((passed / total) * 100).toFixed(1),
+      summary: {
+        totalAutomations: Object.keys(this.results).length,
+        successfulAutomations: Object.values(this.results).filter(r => r.success).length,
+        failedAutomations: Object.values(this.results).filter(r => !r.success).length
+      },
       results: this.results,
       status: passed === total ? 'HEALTHY' : passed >= total * 0.8 ? 'WARNING' : 'CRITICAL'
    ; ;};
@@ -241,9 +246,12 @@ class MasterOrchestrator {
       return false;}
   }
 
-  async stopPM2Services() {
-    this.log('Stopping PM2 services...');
-    
+  async start() {
+    return await this.runAllAutomations();
+  }
+
+  async stop() {
+    this.log('🛑 Stopping all automations...');
     try {
       execSync('pm2 stop ecosystem.enhanced.config.cjs', { stdio: 'pipe' });
       this.log('PM2 services stopped successfully');
@@ -311,153 +319,8 @@ if ( {
       
     default:
       console.log('Usage: node master-orchestrator.cjs [check|start|stop|restart]');
-      process.exit(1)}
-=======
-    constructor() {
-        this.projectRoot = process.cwd();
-        this.logFile = path.join(this.projectRoot, 'logs', 'master-orchestrator.log');
-        this.reportFile = path.join(this.projectRoot, 'master-automation-report.json');
-        this.ensureLogsDirectory()}
-
-    ensureLogsDirectory() {
-        const logsDir = path.join(this.projectRoot, 'logs';);
-        if () {
-            fs.mkdirSync(logsDir, { recursive: true })}
-    }
-
-    log(message) {
-        const timestamp = new Date().toISOString() {
-    ) {
-            fs.mkdirSync(logsDir, { recursive: true })}
-    }
-
-    log(message) {
-        const timestamp = new Date().toISOString(;
-  });
-        const logMessage = `[${timestamp}] ${message}\;n;`;
-        fs.appendFileSync(this.logFile, logMessage);
-        console.log(message);}
-
-    async runAutomation(scriptPath, name) {
-        this.log(`Running ${name}...`);
-        
-        try {
-            const result = execSync(`node ${scriptPath}`, { 
-                cwd: this.projectRoot, 
-                encoding: 'utf8',
-                stdio: 'pipe'
-            ;};);
-            
-            this.log(`${name} completed successfully`);
-            return { status: 'success', output: result ;}} catch (error) {
-            this.log(`${name} failed: ${error.message}`);
-            return { status: 'failed', error: error.message ;}}
-    }
-
-    async runAllAutomations() {
-        this.log('Starting master automation orchestration...');
-        
-        const automations = [
-            { script: 'scripts/automation/ai-code-analyzer.cjs', name: 'AI Code Analyzer' },
-            { script: 'scripts/automation/smart-performance-optimizer.cjs', name: 'Smart Performance Optimizer' },
-            { script: 'scripts/automation/intelligent-dependency-manager.cjs', name: 'Intelligent Dependency Manager' },
-            { script: 'scripts/automation/smart-deployment-automation.cjs', name: 'Smart Deployment Automation' },
-            { script: 'scripts/automation/enhanced-security-automation.cjs', name: 'Enhanced Security Automation' },
-            { script: 'scripts/automation/project-health-monitor.cjs', name: 'Project Health Monitor' },
-            { script: 'scripts/automation/pm2-sync-automation.cjs', name: 'PM2 Sync Automation' },
-            { script: 'scripts/automation/link-checker-automation.cjs', name: 'Link Checker Automation' },
-            { script: 'scripts/automation/typescript-syntax-fixer.cjs', name: 'TypeScript Syntax Fixer' },
-            { script: 'scripts/automation/console-error-fixer.cjs', name: 'Console Error Fixer' }
-        ;];
-        
-        const results = ;{;};
-        
-        for (const automation of automations) {
-            if ()) {
-                results[automation.name] = await this.runAutomation(automation.script, automation.name)} else {
-                this.log(`Script not found: ${automation.script}`)) {
-    )) {
-                results[automation.name] = await this.runAutomation(automation.script, automation.name)} else {
-                this.log(`Script not found: ${automation.script}`);
+      process.exit(1);
   }
-                results[automation.name] = { status: 'skipped', reason: 'Script not found' }}
-        }
-        
-        return results;}
-
-    generateMasterReport(results) {
-        this.log('Generating master automation report...');
-        
-        const report = {
-            timestamp: new Date().toISOString(),
-            project: this.projectRoot,
-            orchestrator: 'Master Automation Orchestrator',
-            results: results,
-            summary: {
-                total: Object.keys(results).length,
-                successful: Object.values(results).filter(r => r.status === 'success').length,
-                failed: Object.values(results).filter(r => r.status === 'failed').length,
-                skipped: Object.values(results).filter(r => r.status === 'skipped').length
-            },
-            recommendations: this.generateMasterRecommendations(results)
-       ; ;};
-
-        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-        this.log(`Master automation report saved to ${this.reportFile}`);
-        
-        return report;}
-
-    generateMasterRecommendations(results) {
-        const recommendations = [;];
-        
-        const failedCount = Object.values(results).filter(r => r.status === 'failed').lengt;h;
-        const skippedCount = Object.values(results).filter(r => r.status === 'skipped').lengt;h;
-        
-        if ( {
-            recommendations.push('Review and fix failed automation scripts')}
-        
-        if (skippedCount > 0) {
-            recommendations.push('Create missing automation scripts')}
-        
-        recommendations.push('Set up automated scheduling for regular runs')) {
-     {
-            recommendations.push('Review and fix failed automation scripts')}
-        
-        if (skippedCount > 0) {
-            recommendations.push('Create missing automation scripts')}
-        
-        recommendations.push('Set up automated scheduling for regular runs');
-  }
-        recommendations.push('Implement monitoring and alerting for automation failures');
-        recommendations.push('Consider using PM2 for process management');
-        recommendations.push('Implement logging and reporting improvements');
-        
-        return recommendations;}
-
-    async run() {
-        this.log('Master Automation Orchestrator started');
-        
-        try {
-            const results = await this.runAllAutomations(;);
-            const report = this.generateMasterReport(results;);
-            
-            this.log('Master Automation Orchestrator completed successfully');
-            this.log(`Summary: ${report.summary.successful}/${report.summary.total} automations successful`);
-            
-            return report;} catch (error) {
-            this.log(`Master Automation Orchestrator failed: ${error.message}`);
-            throw error}
-    }
-}
-
-// Run the orchestrator if this script is executed directly
-if ( {
-    const orchestrator = new MasterOrchestrator) {
-     {
-    const orchestrator = new MasterOrchestrator;
-  }(;);
-    orchestrator.run().catch(console.error);
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-2df7
 }
 
 module.exports = MasterOrchestrator;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 import Head from 'next/head';
 
@@ -155,7 +156,7 @@ const cookieTypes = [
                     </h4>
                     <ul style={{ color: '#64748b', paddingLeft: 20 }}>
                       {cookie.examples.map((example, exampleIndex) => (
-                        <li key={exampleIndex} style={{ marginBottom: 5, color: '#666' }}>
+                        <li key={exampleIndex} style={{ marginBottom: 5 }}>
                           {example}
                         </li>
                       ))}
@@ -166,7 +167,7 @@ const cookieTypes = [
                     <h4 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: 10, color: '#64748b' }}>
                       Retention Period:
                     </h4>
-                    <p style={{ color: '#666' }}>
+                    <p style={{ color: '#94a3b8' }}>
                       {cookie.retention}
                     </p>
                   </div>
@@ -222,7 +223,7 @@ const cookieTypes = [
               background: '#f8fafc',
               borderRadius: 12,
               padding: 30,
-              border: '1px solid #e2e8f0'
+              border: '1px solid rgba(255, 255, 255, 0.1)'
             }}>
               <p style={{ fontSize: '1rem', lineHeight: 1.6, color: '#94a3b8', marginBottom: 20 }}>
                 Some cookies on our website are set by third-party services that appear on our pages. These third parties 
@@ -256,7 +257,7 @@ const cookieTypes = [
             <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 15 }}>
               Questions About Our Cookie Policy?
             </h2>
-            <p style={{ color: '#666', marginBottom: 20 }}>
+            <p style={{ color: '#94a3b8', marginBottom: 20 }}>
               If you have any questions about our use of cookies or this Cookie Policy, please contact us.
             </p>
             <Link href="/contact" style={{
@@ -276,3 +277,40 @@ const cookieTypes = [
     </>
   );
 }
+=======
+import React from 'react';
+import Navigation from '../src/components/Navigation';
+import Footer from '../src/components/Footer';
+import SEOHead from '../src/components/seo/SEOHead';
+
+export default function CookiePolicy() {
+  return (
+    <>
+      <SEOHead
+        title="Cookie Policy — Zion Tech Group"
+        description="How Zion Tech Group uses cookies and similar technologies."
+        keywords="cookie policy, cookies"
+      />
+      <Navigation />
+      <main className="min-h-screen bg-white">
+        <section className="py-16">
+          <div className="max-w-3xl mx-auto px-4">
+            <h1 className="text-3xl font-bold text-gray-900 mb-6">Cookie Policy</h1>
+            <p className="text-gray-700">
+              We use cookies to personalize content, to provide social media features and to analyze our traffic.
+            </p>
+            <h2 className="text-xl font-semibold mt-6 mb-2">Types of Cookies</h2>
+            <ul className="list-disc pl-6 text-gray-700">
+              <li>Essential cookies for site functionality</li>
+              <li>Analytics cookies to improve performance</li>
+              <li>Preference cookies to remember your settings</li>
+            </ul>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-fe38

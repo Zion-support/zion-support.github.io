@@ -43,14 +43,11 @@ chmod +x complete-merge-process.sh
 **Or manually:**
 ```bash
 # Find conflict files
-grep -r "<<<<<<< HEAD" src/ pages/ components/ --include="*.js" --include="*.jsx" --include="*.ts" --include="*.tsx"
+grep -r "" src/ pages/ components/ --include="*.js" --include="*.jsx" --include="*.ts" --include="*.tsx"
 
 # For each conflict file, edit and remove conflict markers
 # Keep the HEAD version (current changes) and remove:
-# <<<<<<< HEAD
-# =======
-# >>>>>>> branch-name
-
+# # # 
 # Stage and commit resolved files
 git add .
 git commit -m "Resolve merge conflicts and integrate improvements"

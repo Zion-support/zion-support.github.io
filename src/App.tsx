@@ -1,31 +1,37 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import './App.css';
+import { AppHeader } from './layout/AppHeader';
+import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturisticFooter';
+import ErrorBoundary from './components/ErrorBoundary';
 
-function App() {
+// Lazy load pages - only import existing ones
+const Home = React.lazy(() => import('./pages/index'));
+const Services = React.lazy(() => import('./pages/services'));
+const Contact = React.lazy(() => import('./pages/contact'));
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Zion Tech Group</h1>
-        <p>Leading technology solutions provider</p>
-      </header>
-      <main>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <div>
-                <h2>Welcome to Zion Tech Group</h2>
-                <p>
-                  Specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.
-                </p>
+    <ErrorBoundary>
+      <div className="min-h-screen bg-white">
+        <AppHeader />
+        <main className="flex-1">
+          <Suspense fallback={
+            <div className="flex items-center justify-center py-20">
+              <div className="text-center">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-500 mx-auto mb-4"></div>
+                <p className="text-gray-400">Loading...</p>
               </div>
-            }
-          />
-        </Routes>
-      </main>
-    </div>
+            </div>
+          }>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/services/*" element={<Services />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </Suspense>
+        </main>
+        <Footer />
+      </div>
+    </ErrorBoundary>
   );
 }
-
-export default App;

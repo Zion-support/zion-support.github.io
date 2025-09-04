@@ -88,7 +88,7 @@ class MasterAutomation {
     this.log('🧪 Phase 2: Running Test Suite...', 'PROGRESS');
   }
     
-    const result = await this.runModule('Test Suite', './test-suite.cjs';);
+    const result = await this.runModule('Test Suite', './test-suite.cjs');
     this.results.testing = result;
     
     if ( {

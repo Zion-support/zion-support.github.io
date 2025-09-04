@@ -1,0 +1,30 @@
+{
+  "timestamp": "2025-09-01T09:45:49.476Z",
+  "build": {
+    "status": "failed",
+    "duration": 3163,
+    "errors": []
+  },
+  "lint": {
+    "status": "unknown",
+    "issues": []
+  },
+  "typeCheck": {
+    "status": "unknown",
+    "errors": []
+  },
+  "dependencies": {
+    "status": "unknown",
+    "outdated": []
+  },
+  "trends": {
+    "consecutiveFailures": 0,
+    "improvementSinceLastRun": false,
+    "degradationSinceLastRun": false
+  },
+  "healthScore": 60,
+  "recommendations": [
+    "Fix build errors immediately",
+    "Run intelligent error fixer"
+  ]
+}

@@ -1,16 +1,24 @@
+<<<<<<< HEAD
+import type { AppProps } from 'next/app.ts';
+=======
 import type { AppProps } from 'next/app';
 import Link from 'next/link';
 import { useState } from 'react';
-import Breadcrumbs from '../components/Breadcrumbs';
 import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../components/PerformanceMonitor';
+import Layout from '../components/Layout';
+>>>>>>> merge-all-prs-20250904-105408
 import '../styles/globals.css';
-import Sidebar from '../components/Sidebar';
+import ModernLayout from "../components/layout/ModernLayout";
 
-function Header(): any {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+export default function App() {
   return (
+<<<<<<< HEAD
+    <ModernLayout>
+      <Component {...pageProps}  />
+    </ModernLayout>
+  )}
+=======
     <header style={{
       position: 'sticky', top: 0, zIndex: 50, background: 'rgba(11, 18, 32, 0.95)', 
       backdropFilter: 'blur(10px)', color: 'white',
@@ -29,64 +37,28 @@ function Header(): any {
         }}>Zion Tech Group</Link>
         
         {/* Desktop Navigation */}
-        <div className="hidden md:flex" style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+        <div style={{ 
+          display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'center'
+        }}>
           <Link href="/" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Home</Link>
-          <div style={{ position: 'relative' }}>
-            <details>
-              <summary style={{ listStyle: 'none', cursor: 'pointer', color: 'white', padding: '8px 12px', borderRadius: 6, fontSize: '0.9rem' }}>Solutions</summary>
-              <div style={{ position: 'absolute', top: '100%', left: 0, background: 'white', color: '#0b1220', borderRadius: 8, padding: 16, display: 'grid', gridTemplateColumns: 'repeat(2, minmax(180px, 1fr))', gap: 16, boxShadow: '0 10px 30px rgba(0,0,0,0.2)', minWidth: 420 }}>
-                <div style={{ display: 'grid', gap: 8 }}>
-                  <strong>By Business Type</strong>
-                  <Link href="/solutions" style={{ color: '#0b1220', textDecoration: 'none' }}>All Solutions</Link>
-                  <Link href="/solutions/enterprise" style={{ color: '#0b1220', textDecoration: 'none' }}>Enterprise</Link>
-                </div>
-                <div style={{ display: 'grid', gap: 8 }}>
-                  <strong>Featured</strong>
-                  <Link href="/green-it" style={{ color: '#0b1220', textDecoration: 'none' }}>Green IT</Link>
-                  <Link href="/quantum-computing" style={{ color: '#0b1220', textDecoration: 'none' }}>Quantum Computing</Link>
-                </div>
-              </div>
-            </details>
-          </div>
-          <div style={{ position: 'relative' }}>
-            <details>
-              <summary style={{ listStyle: 'none', cursor: 'pointer', color: 'white', padding: '8px 12px', borderRadius: 6, fontSize: '0.9rem' }}>Services</summary>
-              <div style={{ position: 'absolute', top: '100%', left: 0, background: 'white', color: '#0b1220', borderRadius: 8, padding: 16, display: 'grid', gridTemplateColumns: 'repeat(3, minmax(180px, 1fr))', gap: 16, boxShadow: '0 10px 30px rgba(0,0,0,0.2)', minWidth: 640 }}>
-                <div style={{ display: 'grid', gap: 8 }}>
-                  <strong>AI</strong>
-                  <Link href="/ai-services" style={{ color: '#0b1220', textDecoration: 'none' }}>AI Services</Link>
-                  <Link href="/services/ai-analytics" style={{ color: '#0b1220', textDecoration: 'none' }}>AI & Analytics</Link>
-                  <Link href="/services/nlp-chatbots" style={{ color: '#0b1220', textDecoration: 'none' }}>NLP & Chatbots</Link>
-                  <Link href="/services/predictive-analytics" style={{ color: '#0b1220', textDecoration: 'none' }}>Predictive Analytics</Link>
-                </div>
-                <div style={{ display: 'grid', gap: 8 }}>
-                  <strong>IT & Cloud</strong>
-                  <Link href="/it-services" style={{ color: '#0b1220', textDecoration: 'none' }}>IT Services</Link>
-                  <Link href="/cloud-devops" style={{ color: '#0b1220', textDecoration: 'none' }}>Cloud & DevOps</Link>
-                  <Link href="/services/cloud-migration" style={{ color: '#0b1220', textDecoration: 'none' }}>Cloud Migration</Link>
-                  <Link href="/services/managed-it" style={{ color: '#0b1220', textDecoration: 'none' }}>Managed IT</Link>
-                </div>
-                <div style={{ display: 'grid', gap: 8 }}>
-                  <strong>Security</strong>
-                  <Link href="/cybersecurity" style={{ color: '#0b1220', textDecoration: 'none' }}>Cybersecurity</Link>
-                  <Link href="/services/network-security-assessment" style={{ color: '#0b1220', textDecoration: 'none' }}>Security Assessment</Link>
-                </div>
-              </div>
-            </details>
-          </div>
-          <Link href="/micro-saas" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Micro SaaS</Link>
-          <Link href="/marketplace" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Marketplace</Link>
+          <Link href="/solutions" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Solutions</Link>
+          <Link href="/services" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>All Services</Link>
+          <Link href="/services-catalog" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Catalog</Link>
           <Link href="/about" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>About</Link>
-          <Link href="/blog" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Blog</Link>
+          <Link href="/careers" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Careers</Link>
+          <Link href="/docs" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Docs</Link>
           <Link href="/pricing" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Pricing</Link>
-          <Link href="/contact" style={{ background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', color: 'white', padding: '8px 16px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem', fontWeight: 600 }}>Contact</Link>
+          <Link href="/contact" style={{ 
+            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+            color: 'white', padding: '8px 16px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem', fontWeight: 600
+          }}>Contact</Link>
         </div>
 
         {/* Mobile Menu Button */}
         <button 
-                    className="md:hidden"
                     style={{
-            background: 'none', border: 'none', color: 'white', fontSize: '1.5rem', cursor: 'pointer'
+            background: 'none', border: 'none', color: 'white', fontSize: '1.5rem', cursor: 'pointer',
+            display: 'none'
           }}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle mobile menu"
@@ -108,13 +80,9 @@ function Header(): any {
             <Link href="/solutions" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Solutions</Link>
             <Link href="/services" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>All Services</Link>
             <Link href="/services-catalog" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
-            <Link href="/micro-saas" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Micro SaaS</Link>
-            <Link href="/ai-services" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>AI Services</Link>
-            <Link href="/it-services" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>IT Services</Link>
             <Link href="/about" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>About</Link>
             <Link href="/careers" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Careers</Link>
             <Link href="/docs" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Docs</Link>
-            <Link href="/blog" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Blog</Link>
             <Link href="/pricing" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
             <Link href="/contact" style={{ 
               background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
@@ -242,11 +210,6 @@ function Footer(): any {
           <Link href="/privacy" style={{ color: '#93c5fd', marginLeft: 8, textDecoration: 'none' }}>Privacy Policy</Link> | 
           <Link href="/terms" style={{ color: '#93c5fd', marginLeft: 8, textDecoration: 'none' }}>Terms of Service</Link>
         </small>
-        <div style={{ marginTop: 12, display: 'flex', gap: 12, justifyContent: 'center' }}>
-          <a href="https://www.linkedin.com/company/zion-tech-group" target="_blank" rel="noopener noreferrer" style={{ color: '#93c5fd', textDecoration: 'none' }}>LinkedIn</a>
-          <a href="https://x.com/ziontechgroup" target="_blank" rel="noopener noreferrer" style={{ color: '#93c5fd', textDecoration: 'none' }}>X</a>
-          <a href="https://github.com/Zion-Holdings" target="_blank" rel="noopener noreferrer" style={{ color: '#93c5fd', textDecoration: 'none' }}>GitHub</a>
-        </div>
       </div>
     </footer>
   );
@@ -256,17 +219,12 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <ErrorBoundary>
       <PerformanceMonitor />
-      <Header />
-      <Breadcrumbs />
-      <div style={{ display: 'grid', gridTemplateColumns: '240px 1fr', minHeight: '60vh' }}>
-        <div style={{ background: 'white' }}>
-          <Sidebar />
-        </div>
-        <main style={{ padding: 24 }}>
-          <Component {...pageProps} />
-        </main>
-      </div>
-      <Footer />
+      <Layout>
+        <Header />
+        <Component {...pageProps} />
+        <Footer />
+      </Layout>
     </ErrorBoundary>
   );
 }
+>>>>>>> merge-all-prs-20250904-105408

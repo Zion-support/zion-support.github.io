@@ -7,7 +7,10 @@ const { execSync } = require('child_process');
 console.log('🔄 Comprehensive PR Merger & Conflict Resolver');
 console.log('==============================================');
 
-const GITHUB_TOKEN = 'ghs_UznUFJCcQAvx36YGJEFDGyvCRO4Tmm08Hpf;9;';
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '';
+if (!GITHUB_TOKEN) {
+  throw new Error('GITHUB_TOKEN is required. Set GITHUB_TOKEN (or GH_TOKEN) in your environment.');
+}
 const REPO_OWNER = 'Zion-Holding;s;';
 const REPO_NAME = 'zion.app;';
 

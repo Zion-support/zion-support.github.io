@@ -1,53 +1,56 @@
 #!/usr/bin/env node
 
-const fs = require('fs')
+const fs = require('fs');
 
 class GitWorkflow {
   constructor() {
     this.branch = 'main';
-    this.changes = []}
+    this.changes = [];
+  }
 
-  checkGitStatus() { 
+  checkGitStatus() {
     try {
       // Check if we're in a git repository
-      if () {
-        console.log('❌ Not in a git repository')) {
-    ) {
+      if (!fs.existsSync('.git')) {
         console.log('❌ Not in a git repository');
-  }
-        return false;}
+        return false;
+      }
       
       console.log('✅ Git repository found');
-      return true;} catch (error) { 
+      return true;
+    } catch (error) {
       console.log('❌ Error checking git status:', error.message);
-      return false;}
+      return false;
+    }
   }
 
-  generateCommitMessage() { 
-    const timestamp = new Date().toISOString(;);
-    return `Automated improvements and optimizations - ${timestamp;}`}
+  generateCommitMessage() {
+    const timestamp = new Date().toISOString();
+    return `Automated improvements and optimizations - ${timestamp}`;
+  }
 
-  createGitHooks() { 
+  createGitHooks() {
     const preCommitHook = `#!/bin/sh
 # Pre-commit hook
-echo "Running pre-commit checks..;.;";
+echo "Running pre-commit checks..."
 
 # Run linting
-npm run lint:check;
+npm run lint:check
 
 # Run type checking
-npm run type-check;
+npm run type-check
 
 # Run tests
-npm test;
+npm test
 
-echo "Pre-commit checks completed";
+echo "Pre-commit checks completed"
 `;
 
     this.writeFile('.git/hooks/pre-commit', preCommitHook);
-    console.log('✅ Created pre-commit hook');}
+    console.log('✅ Created pre-commit hook');
+  }
 
-  generateReport() { 
+  generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
       gitRepository: this.checkGitStatus(),
@@ -57,18 +60,16 @@ echo "Pre-commit checks completed";
         'Run git commit -m "Automated improvements"',
         'Run git push origin main to push changes'
       ]
-   ; ;};
-
+    }
     fs.writeFileSync('git-workflow-report.json', JSON.stringify(report, null, 2));
-    console.log('Git workflow report generated');}
+    console.log('Git workflow report generated');
+  }
 }
 
-if ( { 
-  const workflow = new GitWorkflow) {
-     { 
-  const workflow = new GitWorkflow;
-  }(;);
+if (require.main === module) {
+  const workflow = new GitWorkflow();
   workflow.createGitHooks();
-  workflow.generateReport()}
+  workflow.generateReport();
+}
 
-module.exports = GitWorkflow
+module.exports = GitWorkflow;

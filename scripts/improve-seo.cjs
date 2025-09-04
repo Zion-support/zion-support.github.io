@@ -18,12 +18,12 @@ export default function Page() {
         <title>Zion Tech Group - Professional IT Services</title>
         <meta name="description" content="Leading provider of comprehensive IT services, cloud solutions, and digital transformation services." />
         <meta name="keywords" content="IT services, cloud solutions, digital transformation, cybersecurity, software development" />
-        <meta property="og:title" content="Zion Tech Group - Professional IT Services" />
-        <meta property="og:description" content="Leading provider of comprehensive IT services, cloud solutions, and digital transformation services." />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion Tech Group - Professional IT Services" />
-        <meta name="twitter:description" content="Leading provider of comprehensive IT services, cloud solutions, and digital transformation services." />
+        <meta property="og: title" content="Zion Tech Group - Professional IT Services" />
+        <meta property="og: description" content="Leading provider of comprehensive IT services, cloud solutions, and digital transformation services." />
+        <meta property="og: type" content="website" />
+        <meta name="twitter: card" content="summary_large_image" />
+        <meta name="twitter: title" content="Zion Tech Group - Professional IT Services" />
+        <meta name="twitter: description" content="Leading provider of comprehensive IT services, cloud solutions, and digital transformation services." />
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Head>
       {/* Page content */}
