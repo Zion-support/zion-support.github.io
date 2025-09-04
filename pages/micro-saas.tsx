@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Cloud, FileText, Users, BarChart3, Mail, Clock, Shield, Zap, TrendingUp, Settings, Globe, Code, Brain } from 'lucide-react';
+import { Cloud, FileText, Users, BarChart3, Mail, Shield, Zap, TrendingUp, Settings, Globe } from 'lucide-react';
 
 export default function MicroSaaS(): any {
   const contact = {
