@@ -1,16 +1,11 @@
 .App {
-  text-align: center;
+  text-align: left;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-.App-header {
-  background-color: #17072b;
-  padding: 20px;
-  color: white;
-  margin-bottom: 20px;
-}
+.App-header { display: none; }
 
 .App-header h1 {
   margin: 0;
@@ -26,7 +21,7 @@
 
 main {
   flex: 1;
-  padding: 20px;
+  padding: 16px;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
@@ -39,9 +34,28 @@ main h2 {
 }
 
 main p {
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  line-height: 1.7;
   color: #333;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .layout {
+    grid-template-columns: 240px 1fr;
+  }
+}
+
+.card {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  background: #fff;
 }

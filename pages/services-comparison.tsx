@@ -5,10 +5,9 @@ export default function ServicesComparison() {
   const contact = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown, DE 19709',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
-
+  }
   const serviceCategories = [
     {
       name: 'Micro SaaS Products',
@@ -43,93 +42,103 @@ export default function ServicesComparison() {
     <>
       <Head>
         <title>Services Comparison - Zion Tech Group</title>
-        <meta name="description" content="Compare Zion Tech Group's service categories: Micro SaaS Products, AI Services, and IT Solutions. Find the right technology solutions for your business needs." />
-        <meta name="keywords" content="services comparison, micro SaaS vs AI services, IT solutions comparison, technology services, business solutions" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="robots" content="index, follow" />
+        <meta name="description" content="Compare Zion Tech Group's service categories: Micro SaaS Products, AI Services, and IT Solutions." />
         <link rel="canonical" href={`${contact.site}/services-comparison`} />
-        <meta property="og:title" content="Services Comparison - Zion Tech Group" />
-        <meta property="og:description" content="Compare Zion Tech Group's service categories: Micro SaaS Products, AI Services, and IT Solutions. Find the right technology solutions for your business needs." />
-        <meta property="og:url" content={`${contact.site}/services-comparison`} />
-        <meta property="og:type" content="website" />
       </Head>
-      
-      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white" role="main">
-        {/* Hero Section */}
-        <section className="py-20 px-4 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
+
+      <div style={{ 
+        minHeight: '100vh', 
+        background: 'linear-gradient(135deg, #0b1220 0%, #1a1f3a 100%)', 
+        color: 'white' 
+      }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '40px 20px' }}>
+          <div style={{ textAlign: 'center', marginBottom: 60 }}>
+            <h1 style={{ 
+              fontSize: '3rem', 
+              fontWeight: 800, 
+              marginBottom: 20,
+              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent'
+            }}>
               Services Comparison
             </h1>
-            <p className="text-xl text-slate-300 mb-8">
+            <p style={{ fontSize: '1.2rem', color: '#94a3b8', maxWidth: 600, margin: '0 auto' }}>
               Choose the Right Technology Solutions for Your Business
             </p>
-            <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
-              Compare our three main service categories to find the perfect fit for your business needs and budget.
-            </p>
           </div>
-        </section>
 
-        {/* Comparison Table */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="overflow-x-auto">
-              <table className="w-full bg-slate-900/60 rounded-xl border border-white/10 overflow-hidden">
+          <div style={{ 
+            background: 'rgba(255, 255, 255, 0.05)', 
+            borderRadius: 12, 
+            border: '1px solid rgba(255, 255, 255, 0.1)',
+            overflow: 'hidden',
+            marginBottom: 60
+          }}>
+            <div style={{ overflowX: 'auto' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                 <thead>
-                  <tr className="border-b border-white/10">
-                    <th className="p-6 text-left font-semibold text-slate-300">Features</th>
+                  <tr style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}>
+                    <th style={{ padding: '20px', textAlign: 'left', fontWeight: 600, color: '#e2e8f0' }}>
+                      Features
+                    </th>
                     {serviceCategories.map((service) => (
-                      <th key={service.name} className="p-6 text-center">
-                        <div className={`text-${service.color}-400 font-bold text-xl mb-2`}>
+                      <th key={service.name} style={{ padding: '20px', textAlign: 'center' }}>
+                        <div style={{ 
+                          color: service.color === 'blue' ? '#3b82f6' : 
+                                 service.color === 'purple' ? '#8b5cf6' : '#10b981',
+                          fontWeight: 700, 
+                          fontSize: '1.2rem', 
+                          marginBottom: 8 
+                        }}>
                           {service.name}
                         </div>
-                        <div className="text-slate-400 text-sm">{service.count} Services</div>
+                        <div style={{ color: '#94a3b8', fontSize: '0.9rem' }}>
+                          {service.count} Services
+                        </div>
                       </th>
                     ))}
                   </tr>
                 </thead>
                 <tbody>
-                  <tr className="border-b border-white/10">
-                    <td className="p-6 font-semibold text-slate-300">Description</td>
+                  <tr style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}>
+                    <td style={{ padding: '20px', fontWeight: 600, color: '#e2e8f0' }}>
+                      Description
+                    </td>
                     {serviceCategories.map((service) => (
-                      <td key={service.name} className="p-6 text-center text-slate-400">
+                      <td key={service.name} style={{ padding: '20px', textAlign: 'center', color: '#94a3b8' }}>
                         {service.description}
                       </td>
                     ))}
                   </tr>
-                  <tr className="border-b border-white/10">
-                    <td className="p-6 font-semibold text-slate-300">Key Features</td>
+                  <tr style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}>
+                    <td style={{ padding: '20px', fontWeight: 600, color: '#e2e8f0' }}>
+                      Pricing
+                    </td>
                     {serviceCategories.map((service) => (
-                      <td key={service.name} className="p-6">
-                        <ul className="text-slate-400 space-y-2">
-                          {service.features.map((feature, index) => (
-                            <li key={index} className="flex items-center">
-                              <span className="text-green-400 mr-2">✓</span>
-                              {feature}
-                            </li>
-                          ))}
-                        </ul>
-                      </td>
-                    ))}
-                  </tr>
-                  <tr className="border-b border-white/10">
-                    <td className="p-6 font-semibold text-slate-300">Starting Price</td>
-                    {serviceCategories.map((service) => (
-                      <td key={service.name} className="p-6 text-center">
-                        <span className={`text-${service.color}-400 font-bold text-lg`}>
-                          {service.pricing}
-                        </span>
+                      <td key={service.name} style={{ padding: '20px', textAlign: 'center', color: '#10b981', fontWeight: 600 }}>
+                        {service.pricing}
                       </td>
                     ))}
                   </tr>
                   <tr>
-                    <td className="p-6 font-semibold text-slate-300">Action</td>
+                    <td style={{ padding: '20px', fontWeight: 600, color: '#e2e8f0' }}>
+                      Action
+                    </td>
                     {serviceCategories.map((service) => (
-                      <td key={service.name} className="p-6 text-center">
-                        <Link
+                      <td key={service.name} style={{ padding: '20px', textAlign: 'center' }}>
+                        <Link 
                           href={service.href}
-                          className={`inline-block px-6 py-2 bg-${service.color}-600 hover:bg-${service.color}-700 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-${service.color}-500 focus:ring-offset-2 focus:ring-offset-slate-900`}
-                          aria-label={`Learn more about ${service.name}`}
+                          style={{
+                            display: 'inline-block',
+                            padding: '10px 20px',
+                            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+                            color: 'white',
+                            textDecoration: 'none',
+                            borderRadius: 8,
+                            fontSize: '0.9rem',
+                            fontWeight: 600
+                          }}
                         >
                           Learn More
                         </Link>
@@ -140,94 +149,40 @@ export default function ServicesComparison() {
               </table>
             </div>
           </div>
-        </section>
 
-        {/* Use Cases */}
-        <section className="py-16 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">When to Choose Each Service</h2>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10">
-                <h3 className="text-2xl font-bold mb-4 text-blue-400">Micro SaaS Products</h3>
-                <p className="text-slate-300 mb-6">
-                  Perfect for businesses looking for:
-                </p>
-                <ul className="text-slate-400 space-y-2 mb-6">
-                  <li>• Quick solutions to specific problems</li>
-                  <li>• Cost-effective software tools</li>
-                  <li>• Easy-to-use applications</li>
-                  <li>• Rapid deployment and setup</li>
-                  <li>• Minimal maintenance requirements</li>
-                </ul>
-                <div className="text-sm text-slate-500">
-                  <strong>Best for:</strong> Small to medium businesses, startups, individual professionals
-                </div>
-              </div>
-
-              <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10">
-                <h3 className="text-2xl font-bold mb-4 text-purple-400">AI Services</h3>
-                <p className="text-slate-300 mb-6">
-                  Ideal for organizations needing:
-                </p>
-                <ul className="text-slate-400 space-y-2 mb-6">
-                  <li>• Intelligent automation</li>
-                  <li>• Data-driven insights</li>
-                  <li>• Advanced analytics</li>
-                  <li>• Machine learning capabilities</li>
-                  <li>• Competitive advantage through AI</li>
-                </ul>
-                <div className="text-sm text-slate-500">
-                  <strong>Best for:</strong> Data-driven companies, enterprises, tech-forward organizations
-                </div>
-              </div>
-
-              <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10">
-                <h3 className="text-2xl font-bold mb-4 text-green-400">IT Solutions</h3>
-                <p className="text-slate-300 mb-6">
-                  Essential for businesses requiring:
-                </p>
-                <ul className="text-slate-400 space-y-2 mb-6">
-                  <li>• Robust infrastructure</li>
-                  <li>• Enterprise-grade security</li>
-                  <li>• Scalable systems</li>
-                  <li>• 24/7 support and monitoring</li>
-                  <li>• Compliance and governance</li>
-                </ul>
-                <div className="text-sm text-slate-500">
-                  <strong>Best for:</strong> Large enterprises, regulated industries, mission-critical operations
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Still Not Sure Which Service is Right for You?</h2>
-            <p className="text-xl text-slate-300 mb-8">
-              Our experts can help you choose the perfect combination of services for your specific needs.
+          <div style={{ 
+            textAlign: 'center', 
+            background: 'rgba(59, 130, 246, 0.1)', 
+            padding: 40, 
+            borderRadius: 12, 
+            border: '1px solid rgba(59, 130, 246, 0.2)' 
+          }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 20 }}>
+              Need Help Choosing?
+            </h2>
+            <p style={{ fontSize: '1.1rem', color: '#94a3b8', marginBottom: 30, maxWidth: 600, margin: '0 auto 30px' }}>
+              Our experts can help you choose the right solutions for your specific business needs and budget.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
-                href="/contact"
-                className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900"
-                aria-label="Get a free consultation"
+            <div style={{ display: 'flex', gap: 20, justifyContent: 'center', flexWrap: 'wrap' }}>
+              <Link 
+                href="/contact" 
+                style={{ 
+                  display: 'inline-block',
+                  padding: '15px 30px',
+                  background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+                  color: 'white',
+                  textDecoration: 'none',
+                  borderRadius: 8,
+                  fontSize: '1.1rem',
+                  fontWeight: 600
+                }}
               >
-                Get Free Consultation
-              </Link>
-              <Link
-                href="/services-overview"
-                className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900"
-                aria-label="View services overview"
-              >
-                View Services Overview
+                Get Consultation
               </Link>
             </div>
           </div>
-        </section>
-      </main>
+        </div>
+      </div>
     </>
   );
 }

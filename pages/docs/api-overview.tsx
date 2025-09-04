@@ -1,148 +1,174 @@
-import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
-import { Code, Key, Zap, Shield } from 'lucide-react';
+import Head from 'next/head';
 
 export default function APIOverview() {
-  const contact = { 
-    phone: '+1 302 464 0950', 
-    email: 'kleber@ziontechgroup.com', 
-    address: '364 E Main St STE 1008 Middletown DE 19709', 
-    site: 'https://ziontechgroup.com' 
-  };
-
   return (
     <>
       <Head>
         <title>API Overview - Zion Tech Group Documentation</title>
-        <meta name="description" content="Comprehensive overview of Zion Tech Group's API services and integration capabilities." />
-        <link rel="canonical" href={`${contact.site}/docs/api-overview`} />
+        <meta name="description" content="Comprehensive API overview for Zion Tech Group services. Learn about our REST APIs, authentication, and integration methods." />
+        <meta name="keywords" content="API, REST API, documentation, integration, authentication" />
+        <link rel="canonical" href="https://ziontechgroup.com/docs/api-overview" />
       </Head>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        <div className="max-w-4xl mx-auto px-4 py-8">
-          {/* Header */}
-          <div className="mb-8">
-            <Link href="/docs" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-4">
-              <span className="mr-2">←</span>
-              Back to Documentation
-            </Link>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">API Overview</h1>
-            <p className="text-xl text-gray-600">
-              Comprehensive API services for integrating Zion Tech Group&apos;s solutions into your applications.
-            </p>
+      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+        <div className="max-w-4xl mx-auto px-4 py-12">
+          {/* Breadcrumb */}
+          <nav className="mb-8">
+            <Link href="/" className="text-blue-400 hover:text-blue-300">Home</Link>
+            <span className="mx-2 text-slate-400">/</span>
+            <Link href="/docs" className="text-blue-400 hover:text-blue-300">Documentation</Link>
+            <span className="mx-2 text-slate-400">/</span>
+            <span className="text-slate-300">API Overview</span>
+          </nav>
+
+          <h1 className="text-4xl font-bold mb-6">API Overview</h1>
+          <p className="text-xl text-slate-300 mb-8">
+            Zion Tech Group provides comprehensive APIs for integrating our services into your applications.
+          </p>
+
+          <div className="space-y-8">
+            {/* Base URL */}
+            <section className="bg-slate-900/60 rounded-lg p-6 border border-white/10">
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">Base URL</h2>
+              <div className="bg-slate-800 p-4 rounded-lg">
+                <code className="text-green-400">https://api.ziontechgroup.com/v1</code>
+              </div>
+            </section>
+
+            {/* Authentication */}
+            <section className="bg-slate-900/60 rounded-lg p-6 border border-white/10">
+              <h2 className="text-2xl font-bold mb-4 text-purple-400">Authentication</h2>
+              <p className="text-slate-300 mb-4">
+                All API requests require authentication using API keys. Include your API key in the Authorization header:
+              </p>
+              <div className="bg-slate-800 p-4 rounded-lg">
+                <code className="text-green-400">Authorization: Bearer YOUR_API_KEY</code>
+              </div>
+              <p className="text-slate-300 mt-4">
+                <Link href="/docs/authentication" className="text-blue-400 hover:text-blue-300">Learn more about authentication →</Link>
+              </p>
+            </section>
+
+            {/* API Endpoints */}
+            <section className="bg-slate-900/60 rounded-lg p-6 border border-white/10">
+              <h2 className="text-2xl font-bold mb-4 text-green-400">API Endpoints</h2>
+              <div className="space-y-4">
+                <div className="bg-slate-800 p-4 rounded-lg">
+                  <div className="flex items-center space-x-4 mb-2">
+                    <span className="bg-green-600 text-white px-2 py-1 rounded text-sm font-mono">GET</span>
+                    <code className="text-blue-400">/services</code>
+                  </div>
+                  <p className="text-slate-300 text-sm">Retrieve all available services</p>
+                </div>
+                <div className="bg-slate-800 p-4 rounded-lg">
+                  <div className="flex items-center space-x-4 mb-2">
+                    <span className="bg-blue-600 text-white px-2 py-1 rounded text-sm font-mono">POST</span>
+                    <code className="text-blue-400">/services/&#123;id&#125;/request</code>
+                  </div>
+                  <p className="text-slate-300 text-sm">Request a specific service</p>
+                </div>
+                <div className="bg-slate-800 p-4 rounded-lg">
+                  <div className="flex items-center space-x-4 mb-2">
+                    <span className="bg-green-600 text-white px-2 py-1 rounded text-sm font-mono">GET</span>
+                    <code className="text-blue-400">/ai/generate</code>
+                  </div>
+                  <p className="text-slate-300 text-sm">Generate content using AI services</p>
+                </div>
+                <div className="bg-slate-800 p-4 rounded-lg">
+                  <div className="flex items-center space-x-4 mb-2">
+                    <span className="bg-yellow-600 text-white px-2 py-1 rounded text-sm font-mono">PUT</span>
+                    <code className="text-blue-400">/account/profile</code>
+                  </div>
+                  <p className="text-slate-300 text-sm">Update account profile</p>
+                </div>
+              </div>
+            </section>
+
+            {/* Response Format */}
+            <section className="bg-slate-900/60 rounded-lg p-6 border border-white/10">
+              <h2 className="text-2xl font-bold mb-4 text-yellow-400">Response Format</h2>
+              <p className="text-slate-300 mb-4">All API responses are returned in JSON format:</p>
+              <div className="bg-slate-800 p-4 rounded-lg">
+                <pre className="text-green-400 text-sm overflow-x-auto">
+{`{
+  "success": true,
+  "data": {
+    "id": "service-123",
+    "name": "AI Content Generator",
+    "status": "active"
+  },
+  "message": "Service retrieved successfully"
+}`}
+                </pre>
+              </div>
+            </section>
+
+            {/* Error Handling */}
+            <section className="bg-slate-900/60 rounded-lg p-6 border border-white/10">
+              <h2 className="text-2xl font-bold mb-4 text-red-400">Error Handling</h2>
+              <p className="text-slate-300 mb-4">API errors are returned with appropriate HTTP status codes:</p>
+              <div className="space-y-2">
+                <div className="flex items-center space-x-4">
+                  <span className="bg-red-600 text-white px-2 py-1 rounded text-sm font-mono w-16 text-center">400</span>
+                  <span className="text-slate-300">Bad Request - Invalid parameters</span>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <span className="bg-red-600 text-white px-2 py-1 rounded text-sm font-mono w-16 text-center">401</span>
+                  <span className="text-slate-300">Unauthorized - Invalid API key</span>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <span className="bg-red-600 text-white px-2 py-1 rounded text-sm font-mono w-16 text-center">404</span>
+                  <span className="text-slate-300">Not Found - Resource not found</span>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <span className="bg-red-600 text-white px-2 py-1 rounded text-sm font-mono w-16 text-center">500</span>
+                  <span className="text-slate-300">Internal Server Error</span>
+                </div>
+              </div>
+            </section>
+
+            {/* Rate Limits */}
+            <section className="bg-slate-900/60 rounded-lg p-6 border border-white/10">
+              <h2 className="text-2xl font-bold mb-4 text-orange-400">Rate Limits</h2>
+              <p className="text-slate-300 mb-4">
+                API requests are rate limited to ensure fair usage. Current limits:
+              </p>
+              <ul className="text-slate-300 space-y-2">
+                <li>• <strong>Free Tier:</strong> 100 requests per hour</li>
+                <li>• <strong>Professional:</strong> 1,000 requests per hour</li>
+                <li>• <strong>Enterprise:</strong> 10,000 requests per hour</li>
+              </ul>
+              <p className="text-slate-300 mt-4">
+                <Link href="/docs/rate-limits" className="text-blue-400 hover:text-blue-300">Learn more about rate limits →</Link>
+              </p>
+            </section>
           </div>
 
-          {/* API Features */}
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <div className="flex items-center mb-4">
-                <Code className="w-8 h-8 text-blue-600 mr-3" />
-                <h2 className="text-xl font-semibold text-gray-900">RESTful APIs</h2>
-              </div>
-              <p className="text-gray-600 mb-4">
-                Clean intuitive REST APIs with comprehensive documentation and SDKs for popular languages.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>• JSON-based request/response format</li>
-                <li>• HTTP status codes for clear error handling</li>
-                <li>• Comprehensive API documentation</li>
-                <li>• SDKs for JavaScript, Python, PHP, and more</li>
-              </ul>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <div className="flex items-center mb-4">
-                <Key className="w-8 h-8 text-green-600 mr-3" />
-                <h2 className="text-xl font-semibold text-gray-900">Authentication</h2>
-              </div>
-              <p className="text-gray-600 mb-4">
-                Secure API authentication using industry-standard methods including API keys and OAuth 2.0.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>• API key authentication</li>
-                <li>• OAuth 2.0 support</li>
-                <li>• JWT token validation</li>
-                <li>• Rate limiting and quotas</li>
-              </ul>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <div className="flex items-center mb-4">
-                <Zap className="w-8 h-8 text-yellow-600 mr-3" />
-                <h2 className="text-xl font-semibold text-gray-900">Performance</h2>
-              </div>
-              <p className="text-gray-600 mb-4">
-                High-performance APIs with global CDN, caching, and optimized response times.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>• Global CDN distribution</li>
-                <li>• Intelligent caching strategies</li>
-                <li>• Sub-100ms response times</li>
-                <li>• 99.9% uptime SLA</li>
-              </ul>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <div className="flex items-center mb-4">
-                <Shield className="w-8 h-8 text-red-600 mr-3" />
-                <h2 className="text-xl font-semibold text-gray-900">Security</h2>
-              </div>
-              <p className="text-gray-600 mb-4">
-                Enterprise-grade security with encryption, monitoring, and compliance standards.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>• End-to-end encryption</li>
-                <li>• SOC 2 Type II compliance</li>
-                <li>• Real-time monitoring</li>
-                <li>• DDoS protection</li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Service APIs */}
-          <div className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-6">Available Service APIs</h2>
+          {/* Next Steps */}
+          <div className="mt-12 bg-slate-900/60 rounded-lg p-6 border border-white/10">
+            <h2 className="text-2xl font-bold mb-4">Next Steps</h2>
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="border border-gray-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">AI Service APIs</h3>
-                <p className="text-gray-600 mb-4">
-                  Machine learning and artificial intelligence APIs for natural language processing, computer vision, and predictive analytics.
-                </p>
-                <Link href="/ai-services" className="text-blue-600 hover:text-blue-700 font-medium">
-                  View AI Services →
-                </Link>
+              <div>
+                <h3 className="font-semibold text-lg mb-2">Get Started</h3>
+                <ul className="text-slate-300 space-y-1">
+                  <li>• <Link href="/docs/authentication" className="text-blue-400 hover:text-blue-300">Set up authentication</Link></li>
+                  <li>• <Link href="/docs/code-examples" className="text-blue-400 hover:text-blue-300">View code examples</Link></li>
+                  <li>• <Link href="/docs/first-steps" className="text-blue-400 hover:text-blue-300">First steps guide</Link></li>
+                </ul>
               </div>
-              
-              <div className="border border-gray-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">IT Service APIs</h3>
-                <p className="text-gray-600 mb-4">
-                  Infrastructure and enterprise APIs for cloud management, DevOps, and cybersecurity services.
-                </p>
-                <Link href="/it-services" className="text-blue-600 hover:text-blue-700 font-medium">
-                  View IT Services →
-                </Link>
+              <div>
+                <h3 className="font-semibold text-lg mb-2">Resources</h3>
+                <ul className="text-slate-300 space-y-1">
+                  <li>• <Link href="/docs/api-reference" className="text-blue-400 hover:text-blue-300">Complete API reference</Link></li>
+                  <li>• <Link href="/docs/sdk" className="text-blue-400 hover:text-blue-300">SDK documentation</Link></li>
+                  <li>• <Link href="/contact" className="text-blue-400 hover:text-blue-300">Contact support</Link></li>
+                </ul>
               </div>
-            </div>
-          </div>
-
-          {/* Getting Started */}
-          <div className="bg-blue-50 rounded-lg p-8 text-center">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Ready to Get Started?</h2>
-            <p className="text-gray-600 mb-6">
-              Contact our team to get your API access and start integrating our services.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                Get API Access
-              </Link>
-              <a href={`mailto:${contact.email}`} className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
-                Contact Support
-              </a>
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </>
   );
 }

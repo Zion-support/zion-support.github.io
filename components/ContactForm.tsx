@@ -11,9 +11,28 @@ interface FormData {
 }
 
 const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({ name: '', email: '', company: '', phone: '', service: '', message: '' });
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    message: '',
+  });
+  
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errors, setErrors] = useState<Partial<FormData>>({});
+
+  const validateForm = useCallback((data: FormData): Partial<FormData> => {
+    const newErrors: Partial<FormData> = {}
+    if (!data.name.trim()) newErrors.name = 'Name is required';
+    if (!data.email.trim()) newErrors.email = 'Email is required';
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) newErrors.email = 'Invalid email format';
+    if (!data.message.trim()) newErrors.message = 'Message is required';
+    
+    return newErrors;
+  }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -21,39 +40,39 @@ const ContactForm: React.FC = () => {
       ...prev,
       [name]: value,
     }));
-  };
-
+    
+    // Clear error when user starts typing
+    if (errors[name as keyof FormData]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: undefined
+      }));
+    }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      // Simulate form submission
+      await new Promise(resolve => window.setTimeout(resolve, 2000));
       setSubmitStatus('success');
-      setFormData({ name: '', email: '', company: '', phone: '', service: '', message: '' });
-    } catch (_error) {
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        message: '',
+      });
+    } catch {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
     }
-  };
-
   return (
     <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
-      {submitStatus === 'success' && (
-        <div className="p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
-          Thank you for your message! We&apos;ll get back to you soon.
-        </div>
-      )}
-
-      {submitStatus === 'error' && (
-        <div className="p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
-          There was an error sending your message. Please try again.
-        </div>
-      )}
-
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md: grid-cols-2 gap-6">,
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">
             Full Name *
@@ -69,6 +88,11 @@ const ContactForm: React.FC = () => {
             placeholder="Your full name"
             aria-describedby="name-error"
           />
+          {errors.name && (
+            <p id="name-error" className="mt-1 text-sm text-red-400" role="alert">
+              {errors.name}
+            </p>
+          )}
         </div>
 
         <div>
@@ -86,10 +110,15 @@ const ContactForm: React.FC = () => {
             placeholder="your.email@company.com"
             aria-describedby="email-error"
           />
+          {errors.email && (
+            <p id="email-error" className="mt-1 text-sm text-red-400" role="alert">
+              {errors.email}
+            </p>
+          )}
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md: grid-cols-2 gap-6">,
         <div>
           <label htmlFor="company" className="block text-sm font-medium text-slate-300 mb-2">
             Company
@@ -133,9 +162,11 @@ const ContactForm: React.FC = () => {
           className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         >
           <option value="">Select a service</option>
-          <option value="micro-saas">Micro SaaS Products</option>
-          <option value="ai-services">AI Services</option>
-          <option value="it-services">IT & Cloud Services</option>
+          <option value="web-development">Web Development</option>
+          <option value="mobile-development">Mobile Development</option>
+          <option value="cloud-solutions">Cloud Solutions</option>
+          <option value="ai-ml">AI & Machine Learning</option>
+          <option value="cybersecurity">Cybersecurity</option>
           <option value="consulting">Consulting</option>
           <option value="other">Other</option>
         </select>
@@ -151,22 +182,30 @@ const ContactForm: React.FC = () => {
           value={formData.message}
           onChange={handleInputChange}
           required
-          rows={5}
+          rows={6}
           className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-vertical"
-          placeholder="Tell us about your project requirements..."
+          placeholder="Tell us about your project or how we can help you..."
           aria-describedby="message-error"
         />
+        {errors.message && (
+          <p id="message-error" className="mt-1 text-sm text-red-400" role="alert">
+            {errors.message}
+          </p>
+        )}
       </div>
 
+      {/* Status Messages */}
       {submitStatus === 'success' && (
         <div className="p-4 bg-green-900/50 border border-green-500 rounded-lg text-green-300" role="alert">
-          Thank you for your message! We'll get back to you within 24 hours.
+          Thank you for your message! We&apos;ll get back to you within 24 hours.
         </div>
       )}
 
       {submitStatus === 'error' && (
-        <div className="p-4 bg-red-900/50 border border-red-500 rounded-lg text-red-300" role="alert">
-          There was an error sending your message. Please try again or contact us directly.
+        <div className="p-4 bg-red-900/20 border border-red-500/30 rounded-lg">
+          <p className="text-red-400 text-sm">
+            ❌ Sorry, there was an error sending your message. Please try again.
+          </p>
         </div>
       )}
 
@@ -187,6 +226,5 @@ const ContactForm: React.FC = () => {
       </button>
     </form>
   );
-};
-
+}
 export default ContactForm;

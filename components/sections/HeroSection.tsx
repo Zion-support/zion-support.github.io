@@ -37,11 +37,11 @@ const HeroSection: React.FC = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button size="lg" className="group">
+            <Button size="large" className="group">
               Explore Our Services
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10">
+            <Button variant="outline" size="large" className="border-white/20 text-white hover:bg-white/10">
               Get Free Consultation
             </Button>
           </div>

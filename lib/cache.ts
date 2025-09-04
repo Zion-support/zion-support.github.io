@@ -20,7 +20,7 @@ class CacheManager<T = any> {
       defaultTTL: config.defaultTTL || 5 * 60 * 1000, // 5 minutes
       maxSize: config.maxSize || 1000,
       cleanupInterval: config.cleanupInterval || 60 * 1000 // 1 minute
-    };
+    }
     this.startCleanup();
   }
 
@@ -35,7 +35,7 @@ class CacheManager<T = any> {
     const keysToDelete: string[] = [];
 
     this.cache.forEach((item, key) => {
-      if (item.expiresAt <= now) {
+      if (item.expiresAt < now) {
         keysToDelete.push(key);
       }
     });
@@ -47,9 +47,7 @@ class CacheManager<T = any> {
     // Remove oldest items if cache is full
     if (this.cache.size >= this.config.maxSize) {
       const firstKey = this.cache.keys().next().value;
-      if (firstKey) {
-        this.cache.delete(firstKey);
-      }
+      this.cache.delete(firstKey);
     }
 
     const now = Date.now();
@@ -104,7 +102,7 @@ class CacheManager<T = any> {
     let active = 0;
 
     this.cache.forEach(item => {
-      if (item.expiresAt <= now) {
+      if (item.expiresAt < now) {
         expired++;
       } else {
         active++;
@@ -116,9 +114,7 @@ class CacheManager<T = any> {
       active,
       expired,
       hitRate: 0 // This would need to be tracked separately
-    };
-  }
-
+    }
   destroy() {
     if (this.cleanupTimer) {
       clearInterval(this.cleanupTimer);
@@ -126,8 +122,6 @@ class CacheManager<T = any> {
     }
     this.clear();
   }
-}
-
 // Create cache instances for different purposes
 export const apiCache = new CacheManager({
   defaultTTL: 5 * 60 * 1000, // 5 minutes

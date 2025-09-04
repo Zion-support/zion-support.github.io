@@ -20,6 +20,31 @@ const Layout: React.FC<LayoutProps> = ({
   canonical = 'https://ziontechgroup.com',
   ogImage = 'https://ziontechgroup.com/og-image.svg'
 }) => {
+  const structuredData = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/favicon.svg",
+    "description": description,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com"
+    },
+    "sameAs": [
+      "https://ziontechgroup.com"
+    ]
+  });
   return (
     <>
       <Head>
@@ -76,9 +101,11 @@ const Layout: React.FC<LayoutProps> = ({
                 "contactType": "customer service",
                 "email": "kleber@ziontechgroup.com"
               },
-              "sameAs": ["https://ziontechgroup.com"]
+              "sameAs": [
+                "https://ziontechgroup.com"
+              ]
             })
-          }}
+          }
         />
       </Head>
       
@@ -91,6 +118,5 @@ const Layout: React.FC<LayoutProps> = ({
       </div>
     </>
   );
-};
-
+}
 export default Layout;

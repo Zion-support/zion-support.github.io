@@ -8,7 +8,7 @@ export default function Sitemap() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
+  }
   const pages = [
     { href: '/', title: 'Home', description: 'Main homepage with company overview and services' },
     { href: '/about', title: 'About Us', description: 'Learn about Zion Tech Group and our mission' },
@@ -70,7 +70,7 @@ export default function Sitemap() {
                 {pages.map((page) => (
                   <div key={page.href} className="border-b border-white/10 pb-3 last:border-b-0">
                     <Link 
-                      href={page.href} 
+                      href={page.href}
                       className="text-white hover:text-blue-400 font-semibold text-lg transition-colors"
                     >
                       {page.title}
@@ -88,7 +88,7 @@ export default function Sitemap() {
                 {services.map((service) => (
                   <div key={service.href} className="border-b border-white/10 pb-3 last:border-b-0">
                     <Link 
-                      href={service.href} 
+                      href={service.href}
                       className="text-white hover:text-purple-400 font-semibold text-lg transition-colors"
                     >
                       {service.title}
@@ -106,7 +106,7 @@ export default function Sitemap() {
                 {documentation.map((doc) => (
                   <div key={doc.href} className="border-b border-white/10 pb-3 last:border-b-0">
                     <Link 
-                      href={doc.href} 
+                      href={doc.href}
                       className="text-white hover:text-green-400 font-semibold text-lg transition-colors"
                     >
                       {doc.title}
@@ -114,36 +114,6 @@ export default function Sitemap() {
                     <p className="text-slate-400 text-sm mt-1">{doc.description}</p>
                   </div>
                 ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Contact Information */}
-          <div className="mt-12 text-center">
-            <div className="bg-slate-900/60 rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold mb-4">Need Help Finding Something?</h2>
-              <p className="text-slate-300 mb-6">
-                If you can&apos;t find what you&apos;re looking for, our team is here to help.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a 
-                  href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} 
-                  className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
-                >
-                  Call {contact.phone}
-                </a>
-                <a 
-                  href={`mailto:${contact.email}`} 
-                  className="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors"
-                >
-                  Email {contact.email}
-                </a>
-                <Link 
-                  href="/contact" 
-                  className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
-                >
-                  Contact Form
-                </Link>
               </div>
             </div>
           </div>

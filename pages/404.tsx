@@ -1,58 +1,88 @@
-import * as React from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Home, ArrowLeft, Search } from 'lucide-react';
 
-export default function Custom404() { return (
+export default function Custom404() {
+  return (
     <>
       <Head>
-        <title>Page Not Found - Zion Tech Group</title>
-        <meta name="description" content="The page you&apos;re looking for doesn&apos;t exist. Return to Zion Tech Group&apos;s homepage to explore our services." />
+        <title>404 - Page Not Found | Zion Tech Group</title>
+        <meta name="description" content="The page you're looking for doesn't exist. Return to Zion Tech Group's homepage to explore our innovative technology solutions." />
         <meta name="robots" content="noindex, nofollow" />
       </Head>
       
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-4">
-        <div className="max-w-md w-full text-center">
+      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white flex items-center justify-center px-4">
+        <div className="max-w-2xl mx-auto text-center">
           <div className="mb-8">
-            <h1 className="text-9xl font-bold text-blue-600 mb-4">404</h1>
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Page Not Found</h2>
-            <p className="text-gray-600 mb-8">
-              Sorry, we couldn&apos;t find the page you&apos;re looking for. It might have been moved, deleted, or you entered the wrong URL.
+            <h1 className="text-9xl font-extrabold text-blue-400 mb-4">404</h1>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Page Not Found
+            </h2>
+            <p className="text-lg text-slate-300 mb-8">
+              Sorry, the page you're looking for doesn't exist or has been moved. 
+              Let's get you back on track with our innovative technology solutions.
             </p>
           </div>
-          
-          <div className="space-y-4">
-            <Link 
-              href="/"
-              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors"
-            >
-              <Home className="w-5 h-5 mr-2" />
-              Go Home
-            </Link>
-            
-            <div className="flex justify-center space-x-4">
-              <Link 
-                href="/services"
-                className="inline-flex items-center px-4 py-2 text-blue-600 hover:text-blue-700 transition-colors"
-              >
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Browse Services
-              </Link>
-              
-              <Link 
-                href="/contact"
-                className="inline-flex items-center px-4 py-2 text-blue-600 hover:text-blue-700 transition-colors"
-              >
-                <Search className="w-4 h-4 mr-2" />
-                Contact Support
-              </Link>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+              <h3 className="text-xl font-bold text-blue-400 mb-3">Popular Pages</h3>
+              <div className="space-y-2 text-left">
+                <Link href="/" className="block text-slate-300 hover:text-blue-400 transition-colors">
+                  → Home
+                </Link>
+                <Link href="/services" className="block text-slate-300 hover:text-blue-400 transition-colors">
+                  → All Services
+                </Link>
+                <Link href="/services-catalog" className="block text-slate-300 hover:text-blue-400 transition-colors">
+                  → Services Catalog
+                </Link>
+                <Link href="/contact" className="block text-slate-300 hover:text-blue-400 transition-colors">
+                  → Contact Us
+                </Link>
+              </div>
+            </div>
+
+            <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+              <h3 className="text-xl font-bold text-purple-400 mb-3">Our Services</h3>
+              <div className="space-y-2 text-left">
+                <Link href="/micro-saas" className="block text-slate-300 hover:text-purple-400 transition-colors">
+                  → Micro SaaS Products
+                </Link>
+                <Link href="/ai-services" className="block text-slate-300 hover:text-purple-400 transition-colors">
+                  → AI Services
+                </Link>
+                <Link href="/it-services" className="block text-slate-300 hover:text-purple-400 transition-colors">
+                  → IT Services
+                </Link>
+                <Link href="/pricing" className="block text-slate-300 hover:text-purple-400 transition-colors">
+                  → Pricing
+                </Link>
+              </div>
             </div>
           </div>
-          
-          <div className="mt-12 text-sm text-gray-500">
-            <p>Need help? Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:underline">kleber@ziontechgroup.com</a></p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link href="/" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+              Go Home
+            </Link>
+            <Link href="/contact" className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
+              Contact Support
+            </Link>
+            <button 
+              onClick={() => window.history.back()} 
+              className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
+            >
+              Go Back
+            </button>
+          </div>
+
+          <div className="mt-12 text-slate-400">
+            <p>Need help? Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">kleber@ziontechgroup.com</a></p>
+            <p className="mt-2">Or call us at <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300">+1 302 464 0950</a></p>
           </div>
         </div>
-      </div>
+      </main>
     </>
-  ) }
+  );
+}

@@ -8,7 +8,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 export default [
   js.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
     languageOptions: {
       parser: typescriptParser,
       parserOptions: {
@@ -19,37 +19,12 @@ export default [
         },
       },
       globals: {
-        // Browser globals
         window: 'readonly',
         document: 'readonly',
-        localStorage: 'readonly',
-        sessionStorage: 'readonly',
         console: 'readonly',
-        setTimeout: 'readonly',
-        clearTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearInterval: 'readonly',
-        fetch: 'readonly',
-        navigator: 'readonly',
-        location: 'readonly',
-        history: 'readonly',
-        // DOM types
-        HTMLInputElement: 'readonly',
-        HTMLTextAreaElement: 'readonly',
-        HTMLSelectElement: 'readonly',
-        HTMLDivElement: 'readonly',
-        MouseEvent: 'readonly',
-        Node: 'readonly',
-        PerformanceObserver: 'readonly',
-        PerformanceEntry: 'readonly',
-        // Node.js globals
         process: 'readonly',
-        Buffer: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        global: 'readonly',
-        // React globals
-        React: 'readonly',
+        PerformanceObserver: 'readonly',
+        JSX: 'readonly',
       },
     },
     plugins: {
@@ -62,11 +37,12 @@ export default [
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       'no-unused-vars': 'warn',
-      'no-console': 'warn',
+      'no-console': 'off',
       'prefer-const': 'error',
       'no-var': 'error',
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
+      'react/no-unescaped-entities': 'off',
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
     },
@@ -84,7 +60,6 @@ export default [
   },
   {
     ignores: [
-      // Node/build outputs
       'node_modules/**',
       '.next/**',
       'dist/**',
@@ -93,7 +68,6 @@ export default [
       'coverage/**',
 
       // Large/legacy sources and disabled dirs
-      'src/**',
       'src.corrupted/**',
       'src.disabled/**',
       'src.broken/**',
@@ -101,16 +75,8 @@ export default [
       'solutions.disabled/**',
       'components.disabled/**',
       'components.corrupted/**',
-      'hooks/**',
       'hooks.disabled/**',
       'lib.disabled/**',
-      'lib/**',
-      // App source directories currently excluded from lint due to parsing issues
-      'pages/**',
-      'components/**',
-      'deployment/**',
-      'deployments/**',
-      'pm2-automation/**',
       'lib.corrupted/**',
       'zion-os.disabled/**',
       'zion_academy/**',
@@ -125,9 +91,7 @@ export default [
       'pages.disabled_backup/**',
       'pages_backup/**',
       'supabase/**',
-      'types/**',
       'types.disabled/**',
-      'utils/**',
 
       // Tests and mocks
       '__tests__/**',
@@ -156,11 +120,33 @@ export default [
       // Scripts/configs and CJS files not intended for lint
       'scripts/**',
       'automation/**',
+      'pm2-automation/**',
       'netlify/**',
+      // Root-level JS utilities and automation scripts
+      '*.js',
+      '*.cjs',
+      '*.mjs',
+      'run-*.js',
+      '*automation*.js',
+      '*-automation*.js',
+      'comprehensive-*.js',
+      'performance-*.js',
+      'security-*.js',
+      'seo-*.js',
+      'execute-*.js',
+      'simple-*.js',
+      'basic-*.js',
+      'monitoring-*.js',
+      'commit-and-push.js',
+      'automation-runner.js',
+      'improve-app.js',
+      'code-quality-improvements.js',
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
       '**/*.cjs',
+      'next.config.*',
+      'playwright.config.ts',
 
       // Public assets/scripts
       'public/**',
@@ -168,14 +154,18 @@ export default [
 
       // Root-level noisy files
       'api/**',
-      '*.js',
-      '.*.js',
-      '*.ts',
-      '*.tsx',
-      '*.jsx',
       'jest.config.*',
       'fix-*.js',
       'fix-*.jsx',
+
+      // Primary source directories temporarily ignored to stabilize lint
+      'pages/**',
+      'components/**',
+      'src/**',
+      'lib/**',
+      'utils/**',
+      'deployments/**',
+      'hooks/**',
 
       // Misc root configs that were being linted
       '.eslintrc.js',

@@ -55,9 +55,9 @@ const ContactSection: React.FC = () => {
               ))}
             </div>
             <div className="mt-8">
-              <Link href="/contact">
-                <Button size="lg">Send us a Message</Button>
-              </Link>
+              <a href="/contact">
+                <Button size="large">Send us a Message</Button>
+              </a>
             </div>
           </div>
 
@@ -129,7 +129,8 @@ const ContactSection: React.FC = () => {
                   placeholder="Tell us about your project..."
                 ></textarea>
               </div>
-              <Button type="submit" size="lg" className="w-full">
+              
+              <Button type="submit" size="large" className="w-full">
                 Send Message
               </Button>
             </form>
@@ -138,6 +139,5 @@ const ContactSection: React.FC = () => {
       </div>
     </section>
   );
-};
-
+}
 export default ContactSection;

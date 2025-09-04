@@ -1,60 +1,57 @@
-import { useEffect, ReactNode } from 'react';
+import { useEffect } from 'react';
 
-interface PerformanceOptimizerProps {
-  children: ReactNode;
-}
-
-export default function PerformanceOptimizer({ children }: PerformanceOptimizerProps) {
+export default function PerformanceOptimizer() {
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
-      const criticalImages = [
-        '/og-image.jpg',
-        '/favicon.svg'
+      const criticalFonts = [
+        'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap'
       ];
-
-      criticalImages.forEach((src) => {
+      
+      criticalFonts.forEach(font => {
         const link = document.createElement('link');
         link.rel = 'preload';
-        link.as = 'image';
-        link.href = src;
+        link.as = 'style';
+        link.href = font;
         document.head.appendChild(link);
       });
-    }
-    // Optimize images with lazy loading
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            img.src = img.dataset.src || '';
-            img.classList.remove('lazy');
-            imageObserver.unobserve(img);
-          }
-        });
-      });
+    };
 
-      images.forEach((img) => imageObserver.observe(img));
-    }
-    // Initialize optimizations
+    // Optimize images
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img');
+      images.forEach(img => {
+        if (!img.loading) {
+          img.loading = 'lazy';
+        }
+        if (!img.decoding) {
+          img.decoding = 'async';
+        }
+      });
+    };
+
+    // Add performance monitoring
+    const monitorPerformance = () => {
+      if ('performance' in window) {
+        window.addEventListener('load', () => {
+          setTimeout(() => {
+            const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+            if (perfData) {
+              console.log('Performance Metrics:', {
+                domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
+                loadComplete: perfData.loadEventEnd - perfData.loadEventStart,
+                totalTime: perfData.loadEventEnd - perfData.fetchStart
+              });
+            }
+          }, 0);
+        });
+      }
+    };
+
     preloadCriticalResources();
     optimizeImages();
-
-    // Cleanup
-    return () => {
-      // Cleanup if needed
-    }
+    monitorPerformance();
   }, []);
 
-  return <>{children}</>; // Render children
+  return null;
 }
-
-// Web Vitals monitoring
-export const reportWebVitals = (metric: { name: string; value: number; delta: number }) => {
-  if (process.env.NODE_ENV === 'production') {
-    // Send to analytics service
-    // eslint-disable-next-line no-console
-    console.log('Web Vital:', metric);
-  }
-};

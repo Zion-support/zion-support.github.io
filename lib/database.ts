@@ -29,18 +29,18 @@ class DatabaseManager {
   }
 
   async connect(): Promise<void> {
-    if (this.client) {
+    if (this.client && this.db) {
       return;
     }
 
     try {
-      // this.client = new MongoClient(this.config.uri, {
-      //   maxPoolSize: this.config.maxPoolSize || 10,
-      //   minPoolSize: this.config.minPoolSize || 2,
-      //   maxIdleTimeMS: this.config.maxIdleTimeMS || 30000,
-      //   serverSelectionTimeoutMS: 5000,
-      //   socketTimeoutMS: 45000
-      // });
+      this.client = new MongoClient(this.config.uri, {
+        maxPoolSize: this.config.maxPoolSize || 10,
+        minPoolSize: this.config.minPoolSize || 2,
+        maxIdleTimeMS: this.config.maxIdleTimeMS || 30000,
+        serverSelectionTimeoutMS: 5000,
+        socketTimeoutMS: 45000
+      });
 
       // await this.client.connect();
       // this.db = this.client.db(this.config.dbName);
@@ -50,8 +50,6 @@ class DatabaseManager {
       console.error('❌ Database connection failed:', error);
       throw error;
     }
-  }
-
   async disconnect(): Promise<void> {
     if (this.client) {
       await this.client.close();
@@ -59,17 +57,15 @@ class DatabaseManager {
       this.db = null;
       console.log('✅ Database disconnected');
     }
-  }
-
-  getDatabase(): any {
+  getDatabase(): Db {
     if (!this.db) {
       throw new Error('Database not connected. Call connect() first.');
     }
     return this.db;
   }
 
-  getCollection<T = any>(name: string): any {
-    return this.getDatabase().collection(name);
+  getCollection<T = any>(name: string): Collection<T> {
+    return this.getDatabase().collection<T>(name);
   }
 
   async healthCheck(): Promise<boolean> {
@@ -82,9 +78,6 @@ class DatabaseManager {
     } catch {
       return false;
     }
-  }
-}
-
 // Initialize database with environment variables
 const dbConfig: DatabaseConfig = {
   uri: process.env.MONGODB_URI || 'mongodb://localhost:27017',
@@ -92,7 +85,6 @@ const dbConfig: DatabaseConfig = {
   maxPoolSize: parseInt(process.env.MONGODB_MAX_POOL_SIZE || '10'),
   minPoolSize: parseInt(process.env.MONGODB_MIN_POOL_SIZE || '2'),
   maxIdleTimeMS: parseInt(process.env.MONGODB_MAX_IDLE_TIME_MS || '30000')
-};
-
+}
 export const dbManager = DatabaseManager.getInstance(dbConfig);
 export default DatabaseManager;

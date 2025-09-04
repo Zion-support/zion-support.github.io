@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowLeft, Play, CheckCircle, ArrowRight, Book } from 'lucide-react';
+import { ArrowLeft, CheckCircle, Phone, Mail, MessageCircle } from 'lucide-react';
 
 export default function FirstSteps() {
   const contact = {
@@ -9,15 +9,15 @@ export default function FirstSteps() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
+  }
   return (
     <>
       <Head>
         <title>First Steps - Zion Tech Group Documentation</title>
-        <meta name="description" content="Your first steps to getting started with Zion Tech Group&apos;s services and solutions." />
+        <meta name="description" content="Your first steps to getting started with Zion Tech Group's services and solutions." />
         <link rel="canonical" href={`${contact.site}/docs/first-steps`} />
       </Head>
-
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-4xl mx-auto px-4 py-8">
           {/* Header */}
@@ -28,7 +28,7 @@ export default function FirstSteps() {
             </Link>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">First Steps</h1>
             <p className="text-xl text-gray-600">
-              A step-by-step guide to begin your journey with Zion Tech Group&apos;s innovative solutions.
+              A step-by-step guide to begin your journey with Zion Tech Group's innovative solutions.
             </p>
           </div>
 
@@ -36,12 +36,12 @@ export default function FirstSteps() {
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8 text-white mb-8">
             <h2 className="text-2xl font-semibold mb-4">Welcome to Zion Tech Group!</h2>
             <p className="text-blue-100 mb-6">
-              You&apos;re about to discover how our 350+ services can transform your business operations, 
+              You're about to discover how our 350+ services can transform your business operations, 
               from micro SaaS applications to AI-powered automation and comprehensive IT solutions.
             </p>
             <div className="flex items-center">
               <Play className="w-5 h-5 mr-2" />
-              <span className="font-medium">Let&apos;s get started on your digital transformation journey</span>
+              <span className="font-medium">Let's get started on your digital transformation journey</span>
             </div>
           </div>
 
@@ -54,11 +54,10 @@ export default function FirstSteps() {
                 </div>
                 <h2 className="text-2xl font-semibold text-gray-900">Assess Your Needs</h2>
               </div>
-              
               <p className="text-gray-600 mb-6">
-                Before diving in, let&apos;s understand what you&apos;re looking to achieve. Our services span three main categories:
+                Before diving in, let's understand what you're looking to achieve. Our services span three main categories:
               </p>
-
+              
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="border border-gray-200 rounded-lg p-6">
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">Micro SaaS Solutions</h3>
@@ -141,11 +140,10 @@ export default function FirstSteps() {
                 </div>
                 <h2 className="text-2xl font-semibold text-gray-900">Explore Our Catalog</h2>
               </div>
-              
               <p className="text-gray-600 mb-6">
                 Browse our comprehensive services catalog to find the perfect solutions for your business needs.
               </p>
-
+              
               <div className="bg-gray-50 rounded-lg p-6 mb-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Popular Starting Points</h3>
                 <div className="grid md:grid-cols-2 gap-4">
@@ -187,7 +185,7 @@ export default function FirstSteps() {
                   </div>
                 </div>
               </div>
-
+              
               <Link href="/services-catalog" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
                 <Book className="w-5 h-5 mr-2" />
                 Browse Full Catalog
@@ -201,18 +199,17 @@ export default function FirstSteps() {
                 </div>
                 <h2 className="text-2xl font-semibold text-gray-900">Get Your Custom Quote</h2>
               </div>
-              
               <p className="text-gray-600 mb-6">
-                Once you&apos;ve identified the services you need, contact our team for a personalized quote and implementation plan.
+                Once you've identified the services you need, contact our team for a personalized quote and implementation plan.
               </p>
-
+              
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">What to Include in Your Request</h3>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                      Specific services you&apos;re interested in
+                      Specific services you're interested in
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
@@ -250,12 +247,12 @@ export default function FirstSteps() {
                   </ul>
                 </div>
               </div>
-
+              
               <div className="mt-6 flex flex-col sm:flex-row gap-4">
-                <Link href="/contact" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                <Link href="/contact" className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-center">
                   Request Quote
                 </Link>
-                <a href={`tel:${contact.phone}`} className="inline-flex items-center px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
+                <a href={`tel:${contact.phone}`} className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors text-center">
                   Call {contact.phone}
                 </a>
               </div>
@@ -266,7 +263,7 @@ export default function FirstSteps() {
           <div className="bg-green-50 border border-green-200 rounded-lg p-8 text-center">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Ready for the Next Step?</h2>
             <p className="text-gray-600 mb-6">
-              You&apos;re now ready to explore our services and start your digital transformation journey.
+              You're now ready to explore our services and start your digital transformation journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/services-catalog" className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">

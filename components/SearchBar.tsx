@@ -1,63 +1,62 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 
 interface SearchResult {
-  title: string;
-  description: string;
-  url: string;
+  title: string;,
+  description: string;,
+  url: string;,
   type: 'service' | 'page' | 'category';
 }
 
-const SearchBar: React.FC = () => {
+const SearchBar: React.FC = () => {,
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isOpen, setIsOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const searchRef = useRef<HTMLDivElement>(null);
 
-  // Mock search data - in a real app, this would come from an API
-  const searchData: SearchResult[] = [
+  // Memoized search data - in a real app, this would come from an API
+  const searchData: SearchResult[] = useMemo(() => [,
     {
       title: 'Micro SaaS Products',
       description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',
       url: '/micro-saas',
-      type: 'category'
+      type: 'category',
     },
     {
       title: 'AI Services',
       description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',
       url: '/ai-services',
-      type: 'category'
+      type: 'category',
     },
     {
       title: 'IT Services',
       description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',
       url: '/it-services',
-      type: 'category'
+      type: 'category',
     },
     {
       title: 'Cloud Cost Guard',
       description: 'FinOps Assistant for anomaly detection and cost optimization',
       url: '/services',
-      type: 'service'
+      type: 'service',
     },
     {
       title: 'Contact Us',
       description: 'Get in touch with our experts for consultation and quotes',
       url: '/contact',
-      type: 'page'
+      type: 'page',
     },
     {
       title: 'Pricing',
       description: 'View our transparent pricing for all services',
       url: '/pricing',
-      type: 'page'
+      type: 'page',
     }
   ];
 
-  const handleSearch = async (searchQuery: string) => {
-    if (!searchQuery.trim()) {
+  const handleSearch = useCallback(async (searchQuery: string) => {,
+    if (!searchQuery.trim()) {;
       setResults([]);
       setIsOpen(false);
       return;
@@ -70,41 +69,40 @@ const SearchBar: React.FC = () => {
     
     const filteredResults = searchData.filter(item =>
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.description.toLowerCase().includes(searchQuery.toLowerCase())
+      item.description.toLowerCase().includes(searchQuery.toLowerCase());
     );
     
     setResults(filteredResults);
     setIsOpen(true);
     setIsLoading(false);
-  }
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  }, [searchData]);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {,;
     const value = e.target.value;
     setQuery(value);
     handleSearch(value);
-  }
-  const handleResultClick = () => {
+  };
+
+  const handleResultClick = () => {;
     setIsOpen(false);
     setQuery('');
-  }
-  
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Escape') {
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {,
+    if (e.key === 'Escape') {;
       setIsOpen(false);
       inputRef.current?.blur();
     }
-  };
-  
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+    const handleClickOutside = (event: MouseEvent) => {,
+      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {;
         setIsOpen(false);
       }
-    };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
   return (
-    <div className="relative" ref={searchRef}>
+    <div ref={searchRef} className="relative w-full max-w-md">
       <div className="relative">
         <input
           ref={inputRef}
@@ -114,7 +112,7 @@ const SearchBar: React.FC = () => {
           onKeyDown={handleKeyDown}
           onFocus={() => query && setIsOpen(true)}
           placeholder="Search services, products, or pages..."
-          className="w-full md:w-80 px-4 py-2 pl-10 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full md: w-80 px-4 py-2 pl-10 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent",
           aria-label="Search"
           aria-expanded={isOpen}
           aria-haspopup="listbox"
@@ -143,39 +141,32 @@ const SearchBar: React.FC = () => {
         )}
       </div>
 
-      {isOpen && (
-        <div className="absolute top-full left-0 right-0 mt-1 bg-slate-800 border border-slate-600 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto">
-          {results.length > 0 ? (
-            <div role="listbox" aria-label="Search results">
-              {results.map((result, index) => (
-                <Link
-                  key={index}
-                  href={result.url}
-                  onClick={handleResultClick}
-                  className="block px-4 py-3 hover:bg-slate-700 transition-colors border-b border-slate-700 last:border-b-0"
-                  role="option"
-                  aria-selected="false"
-                >
-                  <div className="flex items-start gap-3">
-                    <div className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${
-                      result.type === 'service' ? 'bg-blue-500' :
-                      result.type === 'category' ? 'bg-purple-500' : 'bg-green-500'
-                    }`} />
-                    <div>
-                      <h3 className="font-semibold text-white">{result.title}</h3>
-                      <p className="text-sm text-slate-300 mt-1">{result.description}</p>
-                      <span className="text-xs text-slate-400 capitalize">{result.type}</span>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          ) : query && !isLoading ? (
-            <div className="px-4 py-8 text-center text-slate-400">
-              <p>No results found for &quot;{query}&quot;</p>
-              <p className="text-sm mt-1">Try different keywords or browse our services</p>
-            </div>
-          ) : null}
+      {isOpen && results.length > 0 && (
+        <div className="absolute top-full left-0 right-0 mt-2 bg-slate-800 border border-white/20 rounded-lg shadow-xl z-50 max-h-96 overflow-y-auto">
+          {results.map((result, index) => (
+            <Link
+              key={index}
+              href={result.url}
+              onClick={handleResultClick}
+              className="block px-4 py-3 hover:bg-slate-700/50 transition-colors border-b border-white/10 last:border-b-0"
+            >
+              <div className="flex items-start justify-between">
+                <div className="flex-1">
+                  <h3 className="text-white font-medium">{result.title}</h3>
+                  <p className="text-slate-300 text-sm mt-1">{result.description}</p>
+                </div>
+                <span className="ml-2 px-2 py-1 bg-blue-600/20 text-blue-400 text-xs rounded">
+                  {result.category}
+                </span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      )}
+
+      {isOpen && query.length > 2 && results.length === 0 && (
+        <div className="absolute top-full left-0 right-0 mt-2 bg-slate-800 border border-white/20 rounded-lg shadow-xl z-50 p-4">
+          <p className="text-slate-300 text-center">No results found for &quot;{query}&quot;</p>
         </div>
       )}
     </div>

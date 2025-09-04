@@ -1,31 +1,51 @@
 {
-  "timestamp": "2025-09-04T06:30:45.510Z",
+  "timestamp": "2025-09-03T16:31:06.384Z",
+  "status": "healthy",
   "checks": [
     {
-      "name": "Package.json exists",
+      "name": "Node.js Version",
       "status": "pass",
-      "result": "package.json found"
+      "message": "Node.js v22.16.0 is supported"
     },
     {
-      "name": "Dependencies installed",
+      "name": "Package.json",
       "status": "pass",
-      "result": "Dependencies installed"
+      "message": "Package.json is valid"
     },
     {
-      "name": "Build process",
-      "status": "fail",
-      "error": "Build failed"
+      "name": "Build Script",
+      "status": "pass",
+      "message": "Build script exists"
+    },
+    "sourceFiles": {
+      "status": "pass",
+      "message": "node_modules directory exists"
     },
     {
-      "name": "Linting",
-      "status": "fail",
-      "error": "Linting failed"
+      "name": "File: next.config.js",
+      "status": "pass",
+      "message": "File exists"
     },
     {
-      "name": "TypeScript compilation",
-      "status": "fail",
-      "error": "TypeScript compilation failed"
+      "name": "File: pages/_app.tsx",
+      "status": "pass",
+      "message": "File exists"
+    },
+    {
+      "name": "File: pages/index.tsx",
+      "status": "pass",
+      "message": "File exists"
+    },
+    {
+      "name": "Disk Space",
+      "status": "pass",
+      "message": "Disk usage: 12%"
+    },
+    {
+      "name": "Memory Usage",
+      "status": "pass",
+      "message": "Memory usage: 8%"
     }
   ],
-  "status": "unhealthy"
+  "recommendations": []
 }

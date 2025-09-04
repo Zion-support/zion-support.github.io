@@ -5,155 +5,66 @@ export default function Blockchain() {
   return (
     <>
       <Head>
-        <title>Blockchain Services - Zion Tech Group | Secure Decentralized Solutions</title>
-        <meta name="description" content="Leverage blockchain technology for secure, transparent, and decentralized solutions. Smart contracts, DeFi, NFTs, and enterprise blockchain development." />
-        <meta name="keywords" content="blockchain, smart contracts, DeFi, NFTs, cryptocurrency, decentralized applications, enterprise blockchain" />
+        <title>Blockchain Services - Zion Tech Group</title>
+        <meta name="description" content="Blockchain development and Web3 solutions including smart contracts, DeFi, and NFT platforms." />
+        <meta name="keywords" content="blockchain, Web3, smart contracts, DeFi, NFT, cryptocurrency, distributed ledger" />
         <link rel="canonical" href="https://ziontechgroup.com/services/blockchain" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="robots" content="index, follow" />
-        {/* Open Graph */}
-        <meta property="og:title" content="Blockchain Services - Zion Tech Group | Secure Decentralized Solutions" />
-        <meta property="og:description" content="Leverage blockchain technology for secure, transparent, and decentralized solutions." />
-        <meta property="og:url" content="https://ziontechgroup.com/services/blockchain" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Blockchain Services - Zion Tech Group | Secure Decentralized Solutions" />
-        <meta name="twitter:description" content="Leverage blockchain technology for secure, transparent, and decentralized solutions." />
-        <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
       </Head>
       
-      <div className="min-h-screen bg-gray-50">
-        {/* Header */}
-        <header className="bg-white shadow-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center py-6">
-              <div className="flex items-center">
-                <Link href="/" className="text-2xl font-bold text-blue-600">
-                  Zion Tech Group
-                </Link>
-              </div>
-              <nav className="hidden md:flex space-x-8">
-                <Link href="/" className="text-gray-700 hover:text-blue-600">Home</Link>
-                <Link href="/services" className="text-gray-700 hover:text-blue-600">Services</Link>
-                <Link href="/about" className="text-gray-700 hover:text-blue-600">About</Link>
-                <Link href="/contact" className="text-gray-700 hover:text-blue-600">Contact</Link>
-              </nav>
-            </div>
-          </div>
-        </header>
-
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Blockchain Services
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Build secure, transparent, and decentralized solutions with our comprehensive blockchain development services.
+      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+        <div className="max-w-6xl mx-auto px-4 py-16">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Blockchain Services</h1>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Build the future with blockchain and Web3 solutions
             </p>
           </div>
-        </section>
 
-        {/* Services Overview */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Blockchain Solutions
-              </h2>
-              <p className="text-xl text-gray-600">
-                Comprehensive blockchain development services for modern businesses.
-              </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+              <h3 className="text-xl font-bold mb-4 text-yellow-400">Smart Contracts</h3>
+              <p className="text-slate-300 mb-4">Develop and deploy smart contracts on various blockchains</p>
+              <ul className="text-slate-400 space-y-2">
+                <li>• Ethereum development</li>
+                <li>• Solana integration</li>
+                <li>• Polygon solutions</li>
+                <li>• Security auditing</li>
+              </ul>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-gray-50 rounded-lg p-6">
-                <div className="text-4xl mb-4">🔗</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Smart Contracts</h3>
-                <p className="text-gray-600">Automated, self-executing contracts with built-in business logic and security.</p>
-              </div>
-              
-              <div className="bg-gray-50 rounded-lg p-6">
-                <div className="text-4xl mb-4">🏦</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">DeFi Solutions</h3>
-                <p className="text-gray-600">Decentralized finance applications for lending, trading, and yield farming.</p>
-              </div>
-              
-              <div className="bg-gray-50 rounded-lg p-6">
-                <div className="text-4xl mb-4">🎨</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">NFT Platforms</h3>
-                <p className="text-gray-600">Non-fungible token marketplaces and digital asset management systems.</p>
-              </div>
+
+            <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+              <h3 className="text-xl font-bold mb-4 text-orange-400">DeFi Platforms</h3>
+              <p className="text-slate-300 mb-4">Decentralized finance applications and protocols</p>
+              <ul className="text-slate-400 space-y-2">
+                <li>• DEX development</li>
+                <li>• Yield farming</li>
+                <li>• Liquidity pools</li>
+                <li>• Staking mechanisms</li>
+              </ul>
+            </div>
+
+            <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+              <h3 className="text-xl font-bold mb-4 text-pink-400">NFT Solutions</h3>
+              <p className="text-slate-300 mb-4">Non-fungible token platforms and marketplaces</p>
+              <ul className="text-slate-400 space-y-2">
+                <li>• NFT minting</li>
+                <li>• Marketplace development</li>
+                <li>• Metadata management</li>
+                <li>• Royalty systems</li>
+              </ul>
             </div>
           </div>
-        </section>
 
-        {/* CTA Section */}
-        <section className="py-16 bg-blue-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Build on the Blockchain?
-            </h2>
-            <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-              Let our blockchain experts help you create secure, decentralized solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
-                Get Started
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors">
-                Learn More
-              </button>
-            </div>
+          <div className="text-center">
+            <Link href="/contact" className="px-8 py-3 bg-yellow-600 hover:bg-yellow-700 rounded-lg font-semibold transition-colors mr-4">
+              Start Blockchain Project
+            </Link>
+            <Link href="/services" className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
+              View All Services
+            </Link>
           </div>
-        </section>
-
-        {/* Footer */}
-        <footer className="bg-gray-900 text-white py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div>
-                <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
-                <p className="text-gray-400">
-                  Leading provider of innovative technology solutions and services.
-                </p>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-4">Services</h4>
-                <ul className="space-y-2 text-gray-400">
-                  <li><Link href="/services" className="hover:text-white">All Services</Link></li>
-                  <li><Link href="/ai-services" className="hover:text-white">AI Services</Link></li>
-                  <li><Link href="/micro-saas" className="hover:text-white">Micro SaaS</Link></li>
-                  <li><Link href="/it-services" className="hover:text-white">IT Services</Link></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-4">Company</h4>
-                <ul className="space-y-2 text-gray-400">
-                  <li><Link href="/about" className="hover:text-white">About Us</Link></li>
-                  <li><Link href="/team" className="hover:text-white">Team</Link></li>
-                  <li><Link href="/careers" className="hover:text-white">Careers</Link></li>
-                  <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-4">Resources</h4>
-                <ul className="space-y-2 text-gray-400">
-                  <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
-                  <li><Link href="/docs" className="hover:text-white">Documentation</Link></li>
-                  <li><Link href="/faq" className="hover:text-white">FAQ</Link></li>
-                  <li><Link href="/help" className="hover:text-white">Help Center</Link></li>
-                </ul>
-              </div>
-            </div>
-            <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-              <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
-            </div>
-          </div>
-        </footer>
-      </div>
+        </div>
+      </main>
     </>
   );
 }

@@ -39,6 +39,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button
       type={type}
+      className={classes}
       disabled={disabled || loading}
       onClick={onClick}
       className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className} ${(disabled || loading) ? 'opacity-50 cursor-not-allowed' : ''}`}
