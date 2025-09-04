@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Mail, Code, Cog, Search, Users } from 'lucide-react';
+import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Mail, Code, Cog, Search } from 'lucide-react';
 
 export default function AIServices() {
   const contact = {
@@ -844,7 +844,8 @@ export default function AIServices() {
         '60% faster drug discovery process',
         'Reduced research and development costs',
         'Improved success rates in clinical trials',
-        'Enhanced drug safety profiles'      ]
+        'Enhanced drug safety profiles'
+      ]
     },
     {
       icon: Eye,
@@ -865,7 +866,8 @@ export default function AIServices() {
         '95% accuracy in medical diagnosis',
         'Faster diagnostic turnaround times',
         'Reduced human error in analysis',
-        'Improved patient outcomes'      ]
+        'Improved patient outcomes'
+      ]
     },
     {
       icon: TrendingUp,
@@ -930,7 +932,8 @@ export default function AIServices() {
         '90% reduction in document review time',
         'Improved accuracy in legal analysis',
         'Automated compliance monitoring',
-        'Reduced legal costs and risks'      ]
+        'Reduced legal costs and risks'
+      ]
     },
     {
       icon: Mic,
@@ -951,7 +954,8 @@ export default function AIServices() {
         '95% translation accuracy',
         'Real-time communication support',
         'Multi-language business expansion',
-        'Enhanced global collaboration'      ]
+        'Enhanced global collaboration'
+      ]
     },
     {
       icon: Database,
@@ -1016,7 +1020,8 @@ export default function AIServices() {
         'Enhanced vehicle safety',
         'Reduced transportation costs',
         'Improved fleet efficiency',
-        'Advanced autonomous capabilities'      ]
+        'Advanced autonomous capabilities'
+      ]
     }
   ];
 

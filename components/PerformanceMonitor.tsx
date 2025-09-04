@@ -4,29 +4,11 @@ const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
     if (typeof window !== 'undefined' && 'performance' in window) {
-      // Send performance data to analytics in production
-      const sendToAnalytics = (metric: string, value: number) => {
-        if (process.env.NODE_ENV === 'production') {
-          // Send to Google Analytics or other analytics service
-          if (typeof (window as any).gtag !== 'undefined') {
-            (window as any).gtag('event', 'web_vitals', {
-              metric_name: metric,
-              metric_value: Math.round(value),
-              metric_rating: value < 2.5 ? 'good' : value < 4 ? 'needs-improvement' : 'poor'
-            });
-          }
-        }
-      };
       // Monitor Largest Contentful Paint (LCP)
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
-            // Log LCP in development only
-            if (process.env.NODE_ENV === 'development') {
-              console.log('LCP:', entry.startTime);
             }
-            sendToAnalytics('LCP', entry.startTime);
-          }
         }
       });
       
@@ -40,11 +22,7 @@ const PerformanceMonitor: React.FC = () => {
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'first-input') {
-            // Log FID in development only
-            if (process.env.NODE_ENV === 'development') {
-              console.log('FID:', entry.processingStart - entry.startTime);
-            }
-            sendToAnalytics('FID', entry.processingStart - entry.startTime);
+            console.log('FID:', (entry as any).processingStart - entry.startTime);
           }
         }
       });
@@ -63,12 +41,7 @@ const PerformanceMonitor: React.FC = () => {
             clsValue += (entry as any).value;
           }
         }
-        // Log CLS in development only
-        if (process.env.NODE_ENV === 'development') {
-          console.log('CLS:', clsValue);
-        }
-        sendToAnalytics('CLS', clsValue);
-      });
+        });
 
       try {
         clsObserver.observe({ entryTypes: ['layout-shift'] });

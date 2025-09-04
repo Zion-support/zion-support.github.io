@@ -13,8 +13,7 @@ interface State {
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false
-  };
-  
+  }
   public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
@@ -37,7 +36,7 @@ class ErrorBoundary extends Component<Props, State> {
               Something went wrong
             </h1>
             <p className="text-slate-300 mb-6">
-              We&apos;re sorry, but something unexpected happened. Please try refreshing the page.
+              We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
             <div className="space-y-3">
               <button
