@@ -554,6 +554,282 @@ export default function AIServices() {
       ],
       marketPrice: "$500-800/month",
       savings: "Save up to $500/month"
+    },
+    {
+      name: "AI Quantum Computing Simulator",
+      description: "Advanced quantum computing simulation platform for research, optimization problems, and cryptographic applications with real quantum hardware integration.",
+      price: "$1,999/month",
+      features: [
+        "Quantum algorithm development",
+        "Real quantum hardware access",
+        "Optimization problem solving",
+        "Cryptographic analysis",
+        "Quantum machine learning",
+        "Simulation environment",
+        "Research collaboration tools",
+        "Advanced analytics dashboard"
+      ],
+      benefits: [
+        "Solve complex optimization problems",
+        "Advance quantum research",
+        "Develop quantum algorithms",
+        "Access cutting-edge technology"
+      ],
+      marketPrice: "$5,000-10,000/month",
+      savings: "Save up to $8,000/month"
+    },
+    {
+      name: "AI Autonomous Vehicle Platform",
+      description: "Complete autonomous vehicle development platform with AI perception, decision-making, and safety systems for automotive manufacturers.",
+      price: "$4,999/month",
+      features: [
+        "Computer vision AI",
+        "Sensor fusion algorithms",
+        "Path planning optimization",
+        "Safety system integration",
+        "Real-time decision making",
+        "Simulation environment",
+        "Regulatory compliance tools",
+        "Fleet management system"
+      ],
+      benefits: [
+        "Accelerate AV development",
+        "Ensure safety compliance",
+        "Reduce development costs",
+        "Improve vehicle performance"
+      ],
+      marketPrice: "$15,000-30,000/month",
+      savings: "Save up to $25,000/month"
+    },
+    {
+      name: "AI Drug Discovery Platform",
+      description: "Revolutionary AI platform for pharmaceutical research with molecular design, drug interaction prediction, and clinical trial optimization.",
+      price: "$2,999/month",
+      features: [
+        "Molecular design AI",
+        "Drug interaction prediction",
+        "Clinical trial optimization",
+        "Biomarker identification",
+        "Toxicity prediction",
+        "Patent analysis",
+        "Regulatory pathway guidance",
+        "Collaboration tools"
+      ],
+      benefits: [
+        "Reduce drug development time by 60%",
+        "Lower research costs by 70%",
+        "Improve success rates",
+        "Accelerate time to market"
+      ],
+      marketPrice: "$10,000-20,000/month",
+      savings: "Save up to $17,000/month"
+    },
+    {
+      name: "AI Climate Modeling System",
+      description: "Advanced climate modeling with AI-powered weather prediction, environmental impact analysis, and sustainability optimization.",
+      price: "$1,499/month",
+      features: [
+        "Weather prediction AI",
+        "Climate change modeling",
+        "Environmental impact analysis",
+        "Carbon footprint optimization",
+        "Renewable energy planning",
+        "Disaster prediction",
+        "Policy impact assessment",
+        "Real-time monitoring"
+      ],
+      benefits: [
+        "Improve weather accuracy by 40%",
+        "Optimize environmental strategies",
+        "Reduce climate risks",
+        "Support sustainability goals"
+      ],
+      marketPrice: "$5,000-10,000/month",
+      savings: "Save up to $8,500/month"
+    },
+    {
+      name: "AI Space Mission Planner",
+      description: "Intelligent space mission planning with trajectory optimization, resource management, and autonomous decision-making for space agencies.",
+      price: "$3,999/month",
+      features: [
+        "Trajectory optimization",
+        "Resource management AI",
+        "Mission risk assessment",
+        "Autonomous decision making",
+        "Satellite constellation planning",
+        "Launch window optimization",
+        "Ground station coordination",
+        "Mission simulation"
+      ],
+      benefits: [
+        "Optimize mission success rates",
+        "Reduce mission costs by 50%",
+        "Improve resource utilization",
+        "Enable autonomous operations"
+      ],
+      marketPrice: "$15,000-25,000/month",
+      savings: "Save up to $21,000/month"
+    },
+    {
+      name: "AI Financial Trading Algorithm",
+      description: "Advanced AI trading system with real-time market analysis, risk management, and automated trading strategies for financial institutions.",
+      price: "$2,499/month",
+      features: [
+        "Real-time market analysis",
+        "Algorithmic trading strategies",
+        "Risk management AI",
+        "Portfolio optimization",
+        "Market sentiment analysis",
+        "Regulatory compliance",
+        "Backtesting environment",
+        "Performance analytics"
+      ],
+      benefits: [
+        "Increase trading profits by 35%",
+        "Reduce risk exposure",
+        "Automate trading decisions",
+        "Improve portfolio performance"
+      ],
+      marketPrice: "$10,000-20,000/month",
+      savings: "Save up to $17,500/month"
+    },
+    {
+      name: "AI Medical Diagnosis Assistant",
+      description: "Advanced medical AI for diagnostic assistance, treatment recommendations, and patient monitoring with FDA compliance.",
+      price: "$1,999/month",
+      features: [
+        "Medical image analysis",
+        "Diagnostic assistance",
+        "Treatment recommendations",
+        "Patient monitoring",
+        "Drug interaction checking",
+        "Clinical decision support",
+        "FDA compliance tools",
+        "Integration with EHR systems"
+      ],
+      benefits: [
+        "Improve diagnostic accuracy by 45%",
+        "Reduce medical errors",
+        "Accelerate diagnosis time",
+        "Enhance patient outcomes"
+      ],
+      marketPrice: "$8,000-15,000/month",
+      savings: "Save up to $13,000/month"
+    },
+    {
+      name: "AI Cybersecurity Threat Hunter",
+      description: "Advanced AI cybersecurity platform with threat hunting, attack prediction, and automated response for enterprise security.",
+      price: "$1,799/month",
+      features: [
+        "Threat hunting AI",
+        "Attack prediction models",
+        "Automated incident response",
+        "Behavioral analysis",
+        "Zero-day detection",
+        "Threat intelligence integration",
+        "Compliance monitoring",
+        "Security orchestration"
+      ],
+      benefits: [
+        "Detect threats 90% faster",
+        "Prevent 95% of attacks",
+        "Reduce response time by 80%",
+        "Minimize security breaches"
+      ],
+      marketPrice: "$6,000-12,000/month",
+      savings: "Save up to $10,200/month"
+    },
+    {
+      name: "AI Smart City Platform",
+      description: "Comprehensive smart city management with AI-powered traffic optimization, energy management, and citizen services.",
+      price: "$2,999/month",
+      features: [
+        "Traffic optimization AI",
+        "Energy management system",
+        "Citizen service automation",
+        "Infrastructure monitoring",
+        "Emergency response coordination",
+        "Environmental monitoring",
+        "Data analytics dashboard",
+        "Integration with city systems"
+      ],
+      benefits: [
+        "Reduce traffic congestion by 40%",
+        "Lower energy consumption by 30%",
+        "Improve citizen satisfaction",
+        "Optimize city operations"
+      ],
+      marketPrice: "$10,000-20,000/month",
+      savings: "Save up to $17,000/month"
+    },
+    {
+      name: "AI Agricultural Optimization",
+      description: "Precision agriculture AI with crop monitoring, yield prediction, and automated farming operations for modern agriculture.",
+      price: "$899/month",
+      features: [
+        "Crop monitoring AI",
+        "Yield prediction models",
+        "Automated irrigation",
+        "Pest and disease detection",
+        "Soil analysis",
+        "Weather integration",
+        "Equipment optimization",
+        "Farm management dashboard"
+      ],
+      benefits: [
+        "Increase crop yields by 25%",
+        "Reduce water usage by 35%",
+        "Minimize pesticide use",
+        "Optimize farming operations"
+      ],
+      marketPrice: "$3,000-6,000/month",
+      savings: "Save up to $5,100/month"
+    },
+    {
+      name: "AI Legal Research Assistant",
+      description: "Advanced legal AI for case research, document analysis, and legal strategy development with comprehensive law database integration.",
+      price: "$1,299/month",
+      features: [
+        "Legal case research",
+        "Document analysis AI",
+        "Legal strategy development",
+        "Precedent identification",
+        "Contract analysis",
+        "Regulatory compliance checking",
+        "Legal writing assistance",
+        "Case outcome prediction"
+      ],
+      benefits: [
+        "Reduce research time by 80%",
+        "Improve case success rates",
+        "Accelerate document review",
+        "Enhance legal strategies"
+      ],
+      marketPrice: "$5,000-10,000/month",
+      savings: "Save up to $8,700/month"
+    },
+    {
+      name: "AI Manufacturing Quality Control",
+      description: "Intelligent manufacturing quality control with computer vision, defect detection, and process optimization for industrial production.",
+      price: "$1,599/month",
+      features: [
+        "Computer vision inspection",
+        "Defect detection AI",
+        "Process optimization",
+        "Predictive maintenance",
+        "Quality analytics",
+        "Real-time monitoring",
+        "Integration with production systems",
+        "Custom quality standards"
+      ],
+      benefits: [
+        "Reduce defects by 90%",
+        "Improve production efficiency by 40%",
+        "Lower quality control costs",
+        "Ensure consistent quality"
+      ],
+      marketPrice: "$6,000-12,000/month",
+      savings: "Save up to $10,400/month"
     }
   ];
 

@@ -577,6 +577,305 @@ export default function ITServices() {
       ],
       marketPrice: "$4,500-7,000/month",
       savings: "Save up to $4,200/month"
+    },
+    {
+      name: "Enterprise Blockchain Solutions",
+      description: "Comprehensive blockchain implementation for enterprise applications including smart contracts, supply chain tracking, and digital identity management.",
+      price: "$3,999/project",
+      features: [
+        "Custom blockchain development",
+        "Smart contract implementation",
+        "Supply chain tracking",
+        "Digital identity management",
+        "Tokenization services",
+        "Consensus mechanism design",
+        "Security auditing",
+        "Integration with existing systems"
+      ],
+      benefits: [
+        "Increase transparency and trust",
+        "Reduce transaction costs by 60%",
+        "Improve supply chain visibility",
+        "Enable new business models"
+      ],
+      marketPrice: "$8,000-15,000/project",
+      savings: "Save up to $11,000/project"
+    },
+    {
+      name: "Advanced IoT Infrastructure",
+      description: "Complete IoT infrastructure setup with sensor networks, data processing, and real-time analytics for smart buildings and industrial applications.",
+      price: "$2,499/month",
+      features: [
+        "IoT sensor deployment",
+        "Edge computing setup",
+        "Real-time data processing",
+        "Predictive analytics",
+        "Device management platform",
+        "Security implementation",
+        "Integration with cloud services",
+        "Custom dashboard development"
+      ],
+      benefits: [
+        "Improve operational efficiency by 45%",
+        "Reduce maintenance costs by 50%",
+        "Enable predictive maintenance",
+        "Optimize resource utilization"
+      ],
+      marketPrice: "$5,000-10,000/month",
+      savings: "Save up to $7,500/month"
+    },
+    {
+      name: "Quantum-Safe Security Implementation",
+      description: "Future-proof security solutions with quantum-resistant cryptography, post-quantum algorithms, and advanced threat protection.",
+      price: "$1,999/month",
+      features: [
+        "Quantum-resistant cryptography",
+        "Post-quantum algorithm implementation",
+        "Advanced threat protection",
+        "Security assessment and testing",
+        "Compliance with quantum standards",
+        "Migration planning",
+        "Staff training programs",
+        "Ongoing security monitoring"
+      ],
+      benefits: [
+        "Future-proof security infrastructure",
+        "Protect against quantum threats",
+        "Ensure long-term data security",
+        "Maintain regulatory compliance"
+      ],
+      marketPrice: "$4,000-8,000/month",
+      savings: "Save up to $6,000/month"
+    },
+    {
+      name: "Edge Computing Platform",
+      description: "Distributed edge computing infrastructure with low-latency processing, real-time analytics, and intelligent data distribution.",
+      price: "$1,799/month",
+      features: [
+        "Edge server deployment",
+        "Low-latency processing",
+        "Real-time analytics",
+        "Intelligent data routing",
+        "Load balancing",
+        "Security implementation",
+        "Monitoring and management",
+        "Integration with cloud services"
+      ],
+      benefits: [
+        "Reduce latency by 80%",
+        "Improve application performance",
+        "Lower bandwidth costs",
+        "Enable real-time processing"
+      ],
+      marketPrice: "$3,500-7,000/month",
+      savings: "Save up to $5,200/month"
+    },
+    {
+      name: "Advanced Data Lake Architecture",
+      description: "Comprehensive data lake implementation with advanced analytics, machine learning integration, and real-time data processing capabilities.",
+      price: "$2,299/month",
+      features: [
+        "Data lake architecture design",
+        "ETL/ELT pipeline development",
+        "Real-time data processing",
+        "Machine learning integration",
+        "Data governance framework",
+        "Security and compliance",
+        "Analytics dashboard development",
+        "Data quality management"
+      ],
+      benefits: [
+        "Centralize data management",
+        "Enable advanced analytics",
+        "Improve data accessibility",
+        "Reduce data silos"
+      ],
+      marketPrice: "$5,000-10,000/month",
+      savings: "Save up to $7,700/month"
+    },
+    {
+      name: "Microservices Architecture Migration",
+      description: "Complete migration to microservices architecture with containerization, service mesh, and API gateway implementation.",
+      price: "$4,999/project",
+      features: [
+        "Legacy system analysis",
+        "Microservices design",
+        "Containerization with Docker/Kubernetes",
+        "Service mesh implementation",
+        "API gateway setup",
+        "Monitoring and logging",
+        "Security implementation",
+        "Performance optimization"
+      ],
+      benefits: [
+        "Improve scalability and flexibility",
+        "Reduce deployment time by 70%",
+        "Enable independent service updates",
+        "Improve system resilience"
+      ],
+      marketPrice: "$10,000-20,000/project",
+      savings: "Save up to $15,000/project"
+    },
+    {
+      name: "Advanced API Management Platform",
+      description: "Comprehensive API management with security, monitoring, analytics, and developer portal for enterprise API ecosystems.",
+      price: "$1,299/month",
+      features: [
+        "API gateway implementation",
+        "Security and authentication",
+        "Rate limiting and throttling",
+        "API analytics and monitoring",
+        "Developer portal",
+        "API versioning",
+        "Documentation generation",
+        "Integration with existing systems"
+      ],
+      benefits: [
+        "Centralize API management",
+        "Improve API security",
+        "Enable API monetization",
+        "Accelerate development cycles"
+      ],
+      marketPrice: "$3,000-6,000/month",
+      savings: "Save up to $4,700/month"
+    },
+    {
+      name: "Zero-Trust Security Architecture",
+      description: "Complete zero-trust security implementation with identity verification, network segmentation, and continuous monitoring.",
+      price: "$2,799/month",
+      features: [
+        "Identity and access management",
+        "Network segmentation",
+        "Continuous monitoring",
+        "Multi-factor authentication",
+        "Privileged access management",
+        "Security analytics",
+        "Compliance reporting",
+        "Incident response automation"
+      ],
+      benefits: [
+        "Enhance security posture",
+        "Reduce attack surface",
+        "Improve compliance",
+        "Enable secure remote work"
+      ],
+      marketPrice: "$6,000-12,000/month",
+      savings: "Save up to $9,200/month"
+    },
+    {
+      name: "Advanced Backup and Disaster Recovery",
+      description: "Comprehensive backup and disaster recovery solution with automated failover, data replication, and business continuity planning.",
+      price: "$1,599/month",
+      features: [
+        "Automated backup systems",
+        "Real-time data replication",
+        "Automated failover",
+        "Disaster recovery testing",
+        "Business continuity planning",
+        "Ransomware protection",
+        "Cloud backup integration",
+        "Recovery time optimization"
+      ],
+      benefits: [
+        "Minimize downtime to minutes",
+        "Protect against data loss",
+        "Ensure business continuity",
+        "Meet compliance requirements"
+      ],
+      marketPrice: "$3,500-7,000/month",
+      savings: "Save up to $5,400/month"
+    },
+    {
+      name: "Advanced Network Security",
+      description: "Comprehensive network security solution with next-generation firewalls, intrusion detection, and threat intelligence integration.",
+      price: "$1,899/month",
+      features: [
+        "Next-generation firewalls",
+        "Intrusion detection systems",
+        "Threat intelligence integration",
+        "Network segmentation",
+        "VPN implementation",
+        "DDoS protection",
+        "Security monitoring",
+        "Incident response"
+      ],
+      benefits: [
+        "Protect against advanced threats",
+        "Improve network visibility",
+        "Reduce security incidents",
+        "Ensure regulatory compliance"
+      ],
+      marketPrice: "$4,000-8,000/month",
+      savings: "Save up to $6,100/month"
+    },
+    {
+      name: "Cloud-Native Application Development",
+      description: "Complete cloud-native application development with serverless architecture, containerization, and DevOps integration.",
+      price: "$3,499/project",
+      features: [
+        "Cloud-native architecture design",
+        "Serverless application development",
+        "Container orchestration",
+        "CI/CD pipeline setup",
+        "Monitoring and logging",
+        "Security implementation",
+        "Performance optimization",
+        "Scalability planning"
+      ],
+      benefits: [
+        "Improve application scalability",
+        "Reduce operational costs",
+        "Accelerate development cycles",
+        "Enable rapid deployment"
+      ],
+      marketPrice: "$8,000-15,000/project",
+      savings: "Save up to $11,500/project"
+    },
+    {
+      name: "Advanced Database Optimization",
+      description: "Comprehensive database optimization with performance tuning, query optimization, and advanced indexing strategies.",
+      price: "$1,499/month",
+      features: [
+        "Database performance analysis",
+        "Query optimization",
+        "Index optimization",
+        "Database tuning",
+        "Capacity planning",
+        "Backup optimization",
+        "Security hardening",
+        "Monitoring and alerting"
+      ],
+      benefits: [
+        "Improve database performance by 60%",
+        "Reduce query response time",
+        "Optimize resource utilization",
+        "Ensure data integrity"
+      ],
+      marketPrice: "$3,000-6,000/month",
+      savings: "Save up to $4,500/month"
+    },
+    {
+      name: "Enterprise Integration Platform",
+      description: "Comprehensive integration platform connecting disparate systems with real-time data synchronization and workflow automation.",
+      price: "$2,199/month",
+      features: [
+        "System integration design",
+        "Real-time data synchronization",
+        "Workflow automation",
+        "API integration",
+        "Data transformation",
+        "Error handling and monitoring",
+        "Security implementation",
+        "Performance optimization"
+      ],
+      benefits: [
+        "Eliminate data silos",
+        "Improve operational efficiency",
+        "Enable real-time insights",
+        "Reduce manual processes"
+      ],
+      marketPrice: "$5,000-10,000/month",
+      savings: "Save up to $7,800/month"
     }
   ];
 
