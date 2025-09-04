@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Mail, Code, Cog, Search, Users } from 'lucide-react';
+import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Mail, Code, Cog, Search, Users, BarChart3, Globe } from 'lucide-react';
 
 export default function AIServices() {
   const contact = {
@@ -827,26 +827,6 @@ export default function AIServices() {
     },
     {
       icon: Brain,
-<<<<<<< HEAD
-      name: 'AI-Powered Drug Discovery Platform',
-      description: 'Advanced AI platform for pharmaceutical research, drug discovery, and molecular analysis using deep learning.',
-      features: [
-        'Molecular structure prediction and analysis',
-        'Drug-target interaction modeling',
-        'Side effect prediction and assessment',
-        'Clinical trial optimization',
-        'Biomarker discovery and validation',
-        'Regulatory compliance and documentation'
-      ],
-      pricing: '$50,000 – $500,000 project',
-      perUnit: 'Custom pricing based on research scope',
-      timeline: '12–24 weeks',
-      benefits: [
-        '60% faster drug discovery process',
-        'Reduced research and development costs',
-        'Improved success rates in clinical trials',
-        'Enhanced drug safety profiles'
-=======
       name: 'Generative AI Content Studio',
       description: 'Advanced AI-powered content creation platform that generates high-quality text, images, videos, and audio content for marketing, education, and entertainment.',
       features: [
@@ -865,31 +845,10 @@ export default function AIServices() {
         'Consistent brand messaging across all channels',
         'Reduced content creation costs by 70%',
         'Improved content engagement and conversion rates'
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
       ]
     },
     {
       icon: Eye,
-<<<<<<< HEAD
-      name: 'AI-Powered Medical Imaging Analysis',
-      description: 'Advanced computer vision for medical imaging diagnosis, radiology, and pathology analysis.',
-      features: [
-        'Radiology image analysis and diagnosis',
-        'Pathology slide examination',
-        'Tumor detection and classification',
-        'Medical image enhancement and processing',
-        'Diagnostic report generation',
-        'Integration with medical systems'
-      ],
-      pricing: '$25,000 – $150,000 setup',
-      perUnit: '$0.50 – $5.00 per image',
-      timeline: '8–16 weeks',
-      benefits: [
-        '95% accuracy in medical diagnosis',
-        'Faster diagnostic turnaround times',
-        'Reduced human error in analysis',
-        'Improved patient outcomes'
-=======
       name: 'AI-Powered Quality Assurance',
       description: 'Intelligent quality control system that uses computer vision and machine learning to detect defects, ensure compliance, and optimize manufacturing processes.',
       features: [
@@ -908,12 +867,10 @@ export default function AIServices() {
         '50% reduction in quality control costs',
         'Real-time quality monitoring and alerts',
         'Improved product consistency and customer satisfaction'
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
       ]
     },
     {
       icon: TrendingUp,
-<<<<<<< HEAD
       name: 'AI-Powered Financial Trading Algorithm',
       description: 'Sophisticated AI trading algorithms for automated investment strategies and risk management.',
       features: [
@@ -976,7 +933,10 @@ export default function AIServices() {
         'Improved accuracy in legal analysis',
         'Automated compliance monitoring',
         'Reduced legal costs and risks'
-=======
+      ]
+    },
+    {
+      icon: TrendingUp,
       name: 'AI Financial Risk Management',
       description: 'Advanced AI system for financial risk assessment, fraud detection, and regulatory compliance with real-time monitoring and predictive analytics.',
       features: [
@@ -995,31 +955,10 @@ export default function AIServices() {
         'Real-time risk monitoring and mitigation',
         'Automated compliance and regulatory reporting',
         'Improved financial decision making'
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
       ]
     },
     {
       icon: Mic,
-<<<<<<< HEAD
-      name: 'AI-Powered Real-Time Translation',
-      description: 'Advanced real-time translation system with voice recognition and natural language processing.',
-      features: [
-        'Real-time voice translation',
-        'Multi-language support (100+ languages)',
-        'Context-aware translation',
-        'Offline translation capabilities',
-        'Custom domain adaptation',
-        'Integration with communication platforms'
-      ],
-      pricing: '$5,000 – $30,000 setup',
-      perUnit: '$0.01 – $0.10 per minute',
-      timeline: '4–8 weeks',
-      benefits: [
-        '95% translation accuracy',
-        'Real-time communication support',
-        'Multi-language business expansion',
-        'Enhanced global collaboration'
-=======
       name: 'AI Voice Analytics & Sentiment Analysis',
       description: 'Advanced voice processing system that analyzes speech patterns, emotions, and sentiment for customer service, market research, and healthcare applications.',
       features: [
@@ -1038,12 +977,10 @@ export default function AIServices() {
         'Improved customer service quality',
         'Real-time conversation insights',
         'Enhanced security with voice biometrics'
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
       ]
     },
     {
       icon: Database,
-<<<<<<< HEAD
       name: 'AI-Powered Supply Chain Optimization',
       description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics planning.',
       features: [
@@ -1106,7 +1043,10 @@ export default function AIServices() {
         'Reduced transportation costs',
         'Improved fleet efficiency',
         'Advanced autonomous capabilities'
-=======
+      ]
+    },
+    {
+      icon: Database,
       name: 'AI Data Intelligence Platform',
       description: 'Comprehensive AI platform that automatically discovers, cleans, and enriches data while providing intelligent insights and recommendations.',
       features: [
@@ -1213,7 +1153,138 @@ export default function AIServices() {
         'Increased user engagement and conversion',
         'Personalized user experiences',
         'Better content discovery and recommendations'
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
+      ]
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Cybersecurity Threat Detection',
+      description: 'Advanced AI system that detects, analyzes, and responds to cybersecurity threats in real-time using machine learning and behavioral analysis.',
+      features: [
+        'Real-time threat detection and analysis',
+        'Behavioral anomaly detection using ML',
+        'Automated incident response and remediation',
+        'Predictive threat intelligence and forecasting',
+        'Zero-day attack detection and prevention',
+        'Integration with existing security infrastructure'
+      ],
+      pricing: '$2,000 – $15,000/month',
+      perUnit: '$0.50 – $2.00 per endpoint',
+      timeline: '4–8 weeks',
+      benefits: [
+        '99.9% threat detection accuracy',
+        '90% reduction in false positives',
+        'Automated incident response',
+        'Proactive threat prevention'
+      ]
+    },
+    {
+      icon: Zap,
+      name: 'AI-Powered Code Review & Quality Assurance',
+      description: 'Intelligent code analysis platform that automatically reviews code quality, identifies bugs, and suggests improvements using advanced AI.',
+      features: [
+        'Automated code quality analysis and scoring',
+        'Bug detection and vulnerability scanning',
+        'Performance optimization recommendations',
+        'Code style and best practices enforcement',
+        'Security vulnerability identification',
+        'Integration with CI/CD pipelines'
+      ],
+      pricing: '$500 – $3,000/month',
+      perUnit: '$0.10 – $0.50 per line of code',
+      timeline: '2–4 weeks',
+      benefits: [
+        '80% reduction in code review time',
+        '50% fewer bugs in production',
+        'Improved code quality and maintainability',
+        'Faster development cycles'
+      ]
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Talent Acquisition Platform',
+      description: 'Intelligent recruitment system that automates candidate screening, matching, and assessment using advanced AI and machine learning.',
+      features: [
+        'Automated resume screening and parsing',
+        'AI-powered candidate-job matching',
+        'Video interview analysis and scoring',
+        'Predictive hiring success modeling',
+        'Bias detection and mitigation',
+        'Integration with ATS and HR systems'
+      ],
+      pricing: '$1,000 – $8,000/month',
+      perUnit: '$5 – $25 per candidate',
+      timeline: '4–6 weeks',
+      benefits: [
+        '70% reduction in time-to-hire',
+        '60% improvement in candidate quality',
+        'Reduced hiring bias and discrimination',
+        'Better candidate experience'
+      ]
+    },
+    {
+      icon: BarChart3,
+      name: 'AI-Powered Business Intelligence & Analytics',
+      description: 'Advanced analytics platform that transforms raw data into actionable business insights using AI and machine learning.',
+      features: [
+        'Automated data analysis and pattern recognition',
+        'Predictive analytics and forecasting',
+        'Natural language query interface',
+        'Automated report generation and distribution',
+        'Real-time dashboard and visualization',
+        'Integration with multiple data sources'
+      ],
+      pricing: '$1,500 – $10,000/month',
+      perUnit: '$0.05 – $0.20 per data point',
+      timeline: '6–10 weeks',
+      benefits: [
+        '90% faster data analysis',
+        'Data-driven decision making',
+        'Automated insight generation',
+        'Improved business performance'
+      ]
+    },
+    {
+      icon: Globe,
+      name: 'AI-Powered Language Translation & Localization',
+      description: 'Advanced translation platform that provides real-time, context-aware translation and localization services for global businesses.',
+      features: [
+        'Real-time translation in 100+ languages',
+        'Context-aware and industry-specific translation',
+        'Voice and text translation capabilities',
+        'Cultural adaptation and localization',
+        'Quality assurance and human review',
+        'API integration for applications'
+      ],
+      pricing: '$200 – $2,000/month',
+      perUnit: '$0.01 – $0.05 per word',
+      timeline: '2–4 weeks',
+      benefits: [
+        '99% translation accuracy',
+        'Real-time multilingual communication',
+        'Reduced localization costs',
+        'Faster global market entry'
+      ]
+    },
+    {
+      icon: Shield,
+      name: 'AI-Powered Fraud Detection & Prevention',
+      description: 'Intelligent fraud detection system that identifies and prevents fraudulent activities across multiple channels using advanced AI.',
+      features: [
+        'Real-time fraud detection and scoring',
+        'Multi-channel fraud pattern analysis',
+        'Behavioral biometrics and authentication',
+        'Machine learning model training and updates',
+        'Automated fraud prevention workflows',
+        'Integration with payment and banking systems'
+      ],
+      pricing: '$1,000 – $7,000/month',
+      perUnit: '$0.02 – $0.10 per transaction',
+      timeline: '4–8 weeks',
+      benefits: [
+        '95% fraud detection accuracy',
+        '80% reduction in false positives',
+        'Real-time fraud prevention',
+        'Reduced financial losses'
       ]
     }
   ];

@@ -1,11 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-import { Layers, Cloud, FileText, Users, BarChart3, Mail, Clock, Shield, Zap, TrendingUp, Settings, Globe, Code, Brain, Calendar, Headphones, RefreshCw, Video, Stethoscope, Cpu } from 'lucide-react';
-=======
 import { Layers, Cloud, FileText, Users, BarChart3, Mail, Clock, Shield, Zap, TrendingUp, Settings, Globe, Code, Brain, Smartphone, Calendar, Video, Package, Target } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
 
 export default function MicroSaaS() {
   const contact = {
@@ -1074,8 +1070,7 @@ export default function MicroSaaS() {
     {
       icon: Brain,
       name: 'AI-Powered Email Responder',
-<<<<<<< HEAD
-      description: 'Intelligent email automation that reads, analyzes, and responds to emails with human-like accuracy and context awareness.',
+      description: 'Intelligent email automation that analyzes incoming messages, generates contextual responses, and flags critical communications for human review.',
       features: [
         'Natural language processing for email understanding',
         'Context-aware response generation',
@@ -1150,13 +1145,90 @@ export default function MicroSaaS() {
         'Integration with payment and marketing tools',
         'Mobile app for attendees and organizers'
       ],
-      pricing: '$249 – $1,599/month',
-=======
+      pricing: '$299 – $1,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '50% reduction in event planning time',
+        'Automated attendee management',
+        'Increased event attendance and engagement',
+        'Streamlined event operations'
+      ],
+      category: 'Event Management'
+    },
+    {
+      icon: Video,
+      name: 'AI Video Content Generator',
+      description: 'Automated video creation platform that generates engaging marketing videos from text, images, and data.',
+      features: [
+        'AI-powered video script generation',
+        'Automated video editing and production',
+        'Multiple video formats and aspect ratios',
+        'Voice synthesis and background music',
+        'Brand customization and template library',
+        'Social media optimization and scheduling'
+      ],
+      pricing: '$399 – $2,499/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '90% reduction in video production time',
+        'Consistent brand messaging across videos',
+        'Scalable video content creation',
+        'Improved social media engagement'
+      ],
+      category: 'Content Creation'
+    },
+    {
+      icon: Package,
+      name: 'Smart Inventory Optimizer',
+      description: 'AI-driven inventory management system that predicts demand, prevents stockouts, and optimizes warehouse operations.',
+      features: [
+        'Predictive demand forecasting using ML',
+        'Automated reorder point calculations',
+        'Multi-location inventory synchronization',
+        'Real-time stock level monitoring',
+        'Supplier performance analytics',
+        'Integration with e-commerce platforms'
+      ],
+      pricing: '$499 – $2,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '30% reduction in inventory carrying costs',
+        '99% reduction in stockout incidents',
+        'Improved cash flow management',
+        'Enhanced customer satisfaction'
+      ],
+      category: 'Supply Chain'
+    },
+    {
+      icon: Target,
+      name: 'Personalized Learning Management System',
+      description: 'AI-powered LMS that adapts content delivery based on individual learning patterns and performance metrics.',
+      features: [
+        'Adaptive learning paths and content delivery',
+        'AI-powered skill gap analysis',
+        'Personalized course recommendations',
+        'Real-time progress tracking and analytics',
+        'Gamification and achievement systems',
+        'Integration with HR and performance systems'
+      ],
+      pricing: '$199 – $1,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '50% improvement in learning outcomes',
+        'Reduced training time and costs',
+        'Better employee engagement and retention',
+        'Data-driven learning optimization'
+      ],
+      category: 'Education Technology'
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Email Responder',
       description: 'Intelligent email automation that analyzes incoming messages, generates contextual responses, and flags critical communications for human review.',
       features: [
         'Natural language processing for email understanding',
         'Context-aware response generation',
-        'Priority classification and flagging',
+        'Priority classification and urgent flagging',
         'Multi-language support and translation',
         'Integration with CRM and helpdesk systems',
         'Learning from user feedback and corrections'
@@ -1206,24 +1278,17 @@ export default function MicroSaaS() {
         'Mobile app for attendees and organizers'
       ],
       pricing: '$299 – $1,999/month',
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
       timeline: '3–4 weeks',
       benefits: [
         '50% reduction in event planning time',
         'Automated attendee management',
-<<<<<<< HEAD
-        'Improved event ROI tracking',
-        'Enhanced attendee experience'
-=======
         'Increased event attendance and engagement',
         'Streamlined event operations'
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
       ],
       category: 'Event Management'
     },
     {
-<<<<<<< HEAD
-      icon: FileText,
+      icon: Video,
       name: 'AI-Powered Content Creation Suite',
       description: 'Comprehensive content generation platform with AI writing, editing, and optimization tools.',
       features: [
@@ -1242,61 +1307,6 @@ export default function MicroSaaS() {
         'Improved SEO performance',
         'Reduced content creation costs'
       ],
-      category: 'Content Management'
-    },
-    {
-      icon: Headphones,
-      name: 'Customer Support & Helpdesk Platform',
-      description: 'All-in-one customer support solution with AI chatbots, ticket management, and knowledge base.',
-      features: [
-        'AI-powered chatbots and virtual assistants',
-        'Intelligent ticket routing and prioritization',
-        'Comprehensive knowledge base management',
-        'Multi-channel support (chat, email, phone)',
-        'Customer satisfaction tracking and analytics',
-        'Integration with CRM and business tools'
-      ],
-      pricing: '$299 – $1,999/month',
-      timeline: '3–4 weeks',
-      benefits: [
-        '70% reduction in support response time',
-        '24/7 automated customer assistance',
-        'Improved customer satisfaction scores',
-        'Reduced support team workload'
-      ],
-      category: 'Customer Support'
-    },
-    {
-      icon: RefreshCw,
-      name: 'E-Commerce Return Management SaaS',
-      description: 'Automated return processing platform with intelligent routing, label generation, and analytics.',
-      features: [
-        'Automated return request processing',
-        'Intelligent return routing and approval',
-        'Automated return label generation',
-        'Real-time return status tracking',
-        'Return analytics and insights',
-        'Integration with e-commerce platforms'
-=======
-      icon: Video,
-      name: 'AI Video Content Generator',
-      description: 'Automated video creation platform that transforms text, images, and data into engaging video content for marketing, training, and social media.',
-      features: [
-        'AI-powered script generation and voice synthesis',
-        'Automated video editing and scene transitions',
-        'Multi-format output (MP4, GIF, social media optimized)',
-        'Brand template library and customization',
-        'Bulk video generation and batch processing',
-        'Analytics and performance tracking'
-      ],
-      pricing: '$399 – $2,499/month',
-      timeline: '4–6 weeks',
-      benefits: [
-        '90% faster video content production',
-        'Consistent brand messaging across videos',
-        'Reduced video production costs',
-        'Scalable content creation for marketing campaigns'
-      ],
       category: 'Content Creation'
     },
     {
@@ -1310,60 +1320,18 @@ export default function MicroSaaS() {
         'Return analytics and fraud detection',
         'Integration with major e-commerce platforms',
         'Customer self-service return portal'
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
       ],
       pricing: '$199 – $1,299/month',
       timeline: '2–3 weeks',
       benefits: [
-<<<<<<< HEAD
-        '60% faster return processing',
-        'Automated return workflows',
-        'Improved customer experience',
-        'Reduced return processing costs'
-=======
         '70% reduction in return processing time',
         'Automated fraud detection and prevention',
         'Improved customer satisfaction with returns',
         'Better inventory management and restocking'
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
       ],
       category: 'E-Commerce'
     },
     {
-<<<<<<< HEAD
-      icon: Mail,
-      name: 'Automated Email Follow-up Service',
-      description: 'Intelligent email sequence automation with personalization, A/B testing, and conversion optimization.',
-      features: [
-        'Automated email sequence management',
-        'Personalized content and timing',
-        'A/B testing and optimization',
-        'Behavioral trigger-based emails',
-        'Conversion tracking and analytics',
-        'Integration with CRM and marketing tools'
-      ],
-      pricing: '$149 – $999/month',
-      timeline: '2–3 weeks',
-      benefits: [
-        '45% increase in email conversion rates',
-        'Automated lead nurturing',
-        'Personalized customer communication',
-        'Improved sales pipeline management'
-      ],
-      category: 'Email Marketing'
-    },
-    {
-      icon: Video,
-      name: 'AI-Powered Video Clip Maker',
-      description: 'Automated video editing platform that transforms long-form content into engaging social media clips.',
-      features: [
-        'AI-powered video clip extraction',
-        'Automatic highlight detection',
-        'Social media format optimization',
-        'Brand consistency and watermarking',
-        'Multi-platform publishing',
-        'Performance analytics and insights'
-=======
       icon: Target,
       name: 'AI-Powered Lead Scoring Engine',
       description: 'Advanced lead qualification system that uses machine learning to score, prioritize, and route leads for maximum conversion rates.',
@@ -1374,40 +1342,16 @@ export default function MicroSaaS() {
         'Predictive analytics for conversion probability',
         'Integration with CRM and marketing automation',
         'Custom scoring models and rule configuration'
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
       ],
       pricing: '$299 – $1,999/month',
       timeline: '3–4 weeks',
       benefits: [
-<<<<<<< HEAD
-        '90% faster video content creation',
-        'Automated social media optimization',
-        'Increased content engagement',
-        'Reduced video production costs'
+        '40% increase in lead conversion rates',
+        'Automated lead qualification and routing',
+        'Improved sales team efficiency',
+        'Better ROI on marketing investments'
       ],
-      category: 'Video Marketing'
-    },
-    {
-      icon: Stethoscope,
-      name: 'Hospital Appointment Scheduler',
-      description: 'Specialized healthcare scheduling platform with patient management, medical history, and compliance features.',
-      features: [
-        'Secure patient appointment scheduling',
-        'Medical history and record integration',
-        'HIPAA-compliant data management',
-        'Automated reminders and notifications',
-        'Provider availability management',
-        'Insurance verification and billing integration'
-      ],
-      pricing: '$399 – $2,499/month',
-      timeline: '4–6 weeks',
-      benefits: [
-        '50% reduction in no-show rates',
-        'Improved patient experience',
-        'Automated compliance management',
-        'Enhanced operational efficiency'
-      ],
-      category: 'Healthcare'
+      category: 'Sales Automation'
     },
     {
       icon: Users,
@@ -1430,60 +1374,10 @@ export default function MicroSaaS() {
         'Enhanced hiring success rates'
       ],
       category: 'Recruitment'
-=======
-        '45% increase in lead conversion rates',
-        'Automated lead prioritization',
-        'Improved sales team efficiency',
-        'Data-driven lead qualification'
-      ],
-      category: 'Sales Automation'
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
     },
     {
       icon: Shield,
       name: 'Cybersecurity Compliance Manager',
-<<<<<<< HEAD
-      description: 'Automated compliance monitoring and reporting platform for cybersecurity standards and regulations.',
-      features: [
-        'Automated compliance monitoring',
-        'Real-time security posture assessment',
-        'Regulatory reporting and documentation',
-        'Risk assessment and mitigation',
-        'Audit trail and evidence collection',
-        'Integration with security tools'
-      ],
-      pricing: '$599 – $3,999/month',
-      timeline: '4–6 weeks',
-      benefits: [
-        '90% reduction in compliance effort',
-        'Automated risk assessment',
-        'Improved security posture',
-        'Reduced compliance costs'
-      ],
-      category: 'Cybersecurity'
-    },
-    {
-      icon: Cpu,
-      name: 'Quantum Computing Solutions Platform',
-      description: 'Access to quantum computing resources for complex optimization, cryptography, and scientific research.',
-      features: [
-        'Quantum algorithm development and testing',
-        'Optimization problem solving',
-        'Cryptographic security enhancement',
-        'Scientific research and simulation',
-        'Quantum machine learning applications',
-        'Expert consultation and support'
-      ],
-      pricing: '$999 – $9,999/month',
-      timeline: '6–8 weeks',
-      benefits: [
-        'Exponential computational power',
-        'Advanced optimization capabilities',
-        'Enhanced security solutions',
-        'Cutting-edge research capabilities'
-      ],
-      category: 'Quantum Computing'
-=======
       description: 'Automated compliance monitoring and reporting system for GDPR, HIPAA, SOC 2, and other regulatory frameworks with real-time risk assessment.',
       features: [
         'Automated compliance gap analysis',
@@ -1546,7 +1440,138 @@ export default function MicroSaaS() {
         'Better customer satisfaction and retention'
       ],
       category: 'Customer Engagement'
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Email Responder',
+      description: 'Intelligent email automation that categorizes, prioritizes, and responds to customer inquiries with human-like accuracy.',
+      features: [
+        'AI-powered email categorization and prioritization',
+        'Automated response generation with personalization',
+        'Sentiment analysis and escalation triggers',
+        'Multi-language support and translation',
+        'Integration with CRM and helpdesk systems',
+        'Learning from human feedback and corrections'
+      ],
+      pricing: '$199 – $1,299/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '80% reduction in email response time',
+        '24/7 automated customer support',
+        'Improved customer satisfaction scores',
+        'Reduced support team workload'
+      ],
+      category: 'AI Automation'
+    },
+    {
+      icon: Smartphone,
+      name: 'Mobile-First Survey Platform',
+      description: 'Advanced survey creation tool optimized for mobile devices with adaptive questioning and real-time analytics.',
+      features: [
+        'Mobile-optimized survey design and templates',
+        'Adaptive questioning based on responses',
+        'Real-time analytics and data visualization',
+        'Multi-channel distribution (SMS, email, social)',
+        'Advanced branching logic and skip patterns',
+        'Integration with marketing automation tools'
+      ],
+      pricing: '$149 – $899/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        '40% higher mobile completion rates',
+        'Real-time customer insights',
+        'Improved data quality and accuracy',
+        'Faster decision-making with instant analytics'
+      ],
+      category: 'Data Collection'
+    },
+    {
+      icon: Calendar,
+      name: 'Event Management Dashboard',
+      description: 'Comprehensive event planning platform with ticket sales, attendee management, and post-event analytics.',
+      features: [
+        'End-to-end event planning and management',
+        'Integrated ticket sales and payment processing',
+        'Attendee registration and check-in systems',
+        'Real-time event analytics and reporting',
+        'Marketing automation and email campaigns',
+        'Mobile app for attendees and organizers'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        'Streamlined event planning process',
+        'Increased ticket sales and attendance',
+        'Better attendee engagement and satisfaction',
+        'Comprehensive event performance insights'
+      ],
+      category: 'Event Management'
+    },
+    {
+      icon: Video,
+      name: 'AI Video Content Generator',
+      description: 'Automated video creation platform that generates engaging marketing videos from text, images, and data.',
+      features: [
+        'AI-powered video script generation',
+        'Automated video editing and production',
+        'Multiple video formats and aspect ratios',
+        'Voice synthesis and background music',
+        'Brand customization and template library',
+        'Social media optimization and scheduling'
+      ],
+      pricing: '$399 – $2,499/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '90% reduction in video production time',
+        'Consistent brand messaging across videos',
+        'Scalable video content creation',
+        'Improved social media engagement'
+      ],
+      category: 'Content Creation'
+    },
+    {
+      icon: Package,
+      name: 'Smart Inventory Optimizer',
+      description: 'AI-driven inventory management system that predicts demand, prevents stockouts, and optimizes warehouse operations.',
+      features: [
+        'Predictive demand forecasting using ML',
+        'Automated reorder point calculations',
+        'Multi-location inventory synchronization',
+        'Real-time stock level monitoring',
+        'Supplier performance analytics',
+        'Integration with e-commerce platforms'
+      ],
+      pricing: '$499 – $2,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '30% reduction in inventory carrying costs',
+        '99% reduction in stockout incidents',
+        'Improved cash flow management',
+        'Enhanced customer satisfaction'
+      ],
+      category: 'Supply Chain'
+    },
+    {
+      icon: Target,
+      name: 'Personalized Learning Management System',
+      description: 'AI-powered LMS that adapts content delivery based on individual learning patterns and performance metrics.',
+      features: [
+        'Adaptive learning paths and content delivery',
+        'AI-powered skill gap analysis',
+        'Personalized course recommendations',
+        'Real-time progress tracking and analytics',
+        'Gamification and achievement systems',
+        'Integration with HR and performance systems'
+      ],
+      pricing: '$199 – $1,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '50% improvement in learning outcomes',
+        'Reduced training time and costs',
+        'Better employee engagement and retention',
+        'Data-driven learning optimization'
+      ],
+      category: 'Education Technology'
     }
   ];
 
