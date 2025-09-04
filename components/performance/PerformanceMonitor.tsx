@@ -95,4 +95,4 @@ const PerformanceMonitor: React.FC = () => {
   }, []);
   return null // This component doesn&apos;t render anything'}
 
-export default PerformanceMonitor
+export default PerformanceMonitor;

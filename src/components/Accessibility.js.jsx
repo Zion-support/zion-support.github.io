@@ -5,9 +5,9 @@ import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucid
 export const useAccessibility = () => {}
   const context = useContext(AccessibilityContext);
   if (!context) {}
-'
 ''
-'''
+''
+''''
     throw new Error(''''
       'useAccessibility must be used within an AccessibilityProvider'
     );
@@ -22,7 +22,6 @@ export const AccessibilityProvider = ({ children }) => {}
   const [colorBlindMode, setColorBlindMode] = useState('none');
   // Load settings from localStorage;
   useEffect(() => {}
-'
 ''
 '''
     const savedSettings = localStorage.getItem('zion-accessibility-settings');

@@ -8,7 +8,6 @@ import {}
   COMPREHENSIVE_SERVICES,'
   CONTACT_INFO} from '@/data/comprehensiveServices';
 export function ServicesComparisonTable() {}
-'
 ''
 '''
   const serviceCategories = ['AI Services',IT Services',Micro SAAS'];

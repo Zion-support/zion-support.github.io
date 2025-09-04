@@ -40,8 +40,8 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   useEffect(() => {
     if (priority || !imgRef.current) return;
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+      entries => {
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
             // Image is in viewport, trigger load;
             observer.unobserve(entry.target)}
@@ -62,14 +62,18 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
         role='img';
         aria-label={alt}
       >
-        <span className='text-gray-500 text-sm'>Image failed to load</span>
+        <span className="text-gray-500 text-sm">Image failed to load</span>
       </div>
     )}
   return(
     <div
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
-      style={fill ? { position: 'relative', width: '100%', height: '100%' } : { width, height, ...style }}
+      style={
+        fill
+          ? { position: 'relative', width: '100%', height: '100%' }
+          : { width, height, ...style }
+      }
     >
       <img
         src={src}
@@ -92,4 +96,4 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     </div>
   )}
 
-export default ImageOptimizer
+export default ImageOptimizer;

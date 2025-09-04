@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { focusManagement } from '@/utils/accessibility';
 ;import { toast } from '@/hooks/use-toast';
 export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) {}
-'
 ''
 '''
     const [subject, setSubject] = useState('');'''
