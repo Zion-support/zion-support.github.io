@@ -49,7 +49,8 @@ export default function Home() {
               },
               "sameAs": [contact.site]
             })
-          }}
+          }
+        }
         />
       </Head>
       
@@ -63,8 +64,16 @@ export default function Home() {
             <p className="text-xl md:text-2xl text-slate-300 mb-8">
               Innovative Micro SaaS, AI Services & IT Solutions
             </p>
+<<<<<<< HEAD
             <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
  (feat: Add 30+ new innovative services across micro SaaS, AI, and IT categories)
+=======
+            <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+              We deliver cutting-edge technology solutions with 150+ innovative micro SaaS products, 
+              100+ advanced AI services, and 100+ comprehensive IT solutions. From cloud optimization 
+              to AI automation, quantum computing to blockchain solutions, we help businesses scale 
+              efficiently and securely with next-generation technology.
+>>>>>>> 096f02a7e2e3b05cae0a7bd6d98a4a409598860e
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -84,8 +93,13 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-blue-400 mb-2">150+</h3>
                 <p className="text-slate-300">Micro SaaS Products</p>
               </div>
+<<<<<<< HEAD
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
  (feat: Add 30+ new innovative services across micro SaaS, AI, and IT categories)
+=======
+              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
+                <h3 className="text-2xl font-bold text-purple-400 mb-2" aria-label="100 plus AI services">100+</h3>
+>>>>>>> 096f02a7e2e3b05cae0a7bd6d98a4a409598860e
                 <p className="text-slate-300">AI Services</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">

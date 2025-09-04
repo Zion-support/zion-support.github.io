@@ -53,7 +53,23 @@ const ContactForm: React.FC = () => {
       setIsSubmitting(false);
     }
   return (
+<<<<<<< HEAD
     <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
+=======
+    <form onSubmit={handleSubmit} className="space-y-6">
+      {submitStatus === 'success' && (
+        <div className="p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+          Thank you for your message! We&apos;ll get back to you soon.
+        </div>
+      )}
+      
+      {submitStatus === 'error' && (
+        <div className="p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+          There was an error sending your message. Please try again.
+        </div>
+      )}
+
+>>>>>>> 096f02a7e2e3b05cae0a7bd6d98a4a409598860e
       <div className="grid md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">
