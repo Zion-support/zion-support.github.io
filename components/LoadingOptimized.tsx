@@ -18,8 +18,8 @@ export default function LoadingOptimized({ children, fallback, delay = 0 }: Load
   }, [delay]);
 
   if (isLoading) {
-    return <>{fallback}</>;
+    return <>{fallback}</>
   }
 
-  return <>{children}</>;
+  return <>{children}</>
 }

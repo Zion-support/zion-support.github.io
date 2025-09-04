@@ -57,4 +57,3 @@ export const reportWebVitals = (metric: { name: string; value: number; delta: nu
     // eslint-disable-next-line no-console
     console.log('Web Vital:', metric);
   }
-};

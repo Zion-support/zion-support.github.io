@@ -80,8 +80,32 @@ const Layout: React.FC<LayoutProps> = ({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: structuredData
-          }}
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "url": "https://ziontechgroup.com",
+              "logo": "https://ziontechgroup.com/favicon.svg",
+              "description": description,
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "364 E Main St STE 1008",
+                "addressLocality": "Middletown",
+                "addressRegion": "DE",
+                "postalCode": "19709",
+                "addressCountry": "US"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-302-464-0950",
+                "contactType": "customer service",
+                "email": "kleber@ziontechgroup.com"
+              },
+              "sameAs": [
+                "https://ziontechgroup.com"
+              ]
+            })
+          }
         />
       </Head>
       
@@ -94,6 +118,5 @@ const Layout: React.FC<LayoutProps> = ({
       </div>
     </>
   );
-};
-
+}
 export default Layout;

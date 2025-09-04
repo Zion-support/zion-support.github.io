@@ -1,12 +1,13 @@
 {
-  "timestamp": "2025-09-04T05:43:32.818Z",
+  "timestamp": "2025-09-04T02:50:15.065Z",
   "duration": "0s",
   "results": {
     "automation": {
       "success": true
     },
     "testing": {
-      "success": true
+      "success": false,
+      "error": "Cannot find module './test-suite.js'\nRequire stack:\n- /workspace/master-automation.cjs"
     },
     "git": {
       "success": true

@@ -33,8 +33,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         ? prev.filter(s => s !== section)
         : [...prev, section]
     );
-  };
-
+  }
   const navigation = [
     { name: 'Home', href: '/', icon: Home },
     { name: 'About', href: '/about', icon: Users },
