@@ -57,7 +57,7 @@ const ContactForm: React.FC = () => {
       setIsSubmitting(false);
     }
   };
-  
+
   return (
     <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
       {submitStatus === 'success' && (

@@ -45,8 +45,10 @@ function Header(): React.JSX.Element {
         <button 
           className="md:hidden bg-none border-none text-white text-2xl cursor-pointer"
           style={{ 
-            background: 'none', border: 'none', color: 'white', fontSize: '1.5rem', cursor: 'pointer'
-          }
+            background: 'none', border: 'none', color: 'white', fontSize: '1.5rem', cursor: 'pointer',
+            display: 'none',
+            '@media (max-width: 768px)': { display: 'block' } as any
+          }}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle mobile menu"
           aria-expanded={mobileMenuOpen}
