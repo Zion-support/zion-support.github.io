@@ -7,8 +7,7 @@ export default function RequestQuote() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
-
+  }
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -33,8 +32,7 @@ export default function RequestQuote() {
       ...prev,
       [name]: value
     }));
-  };
-
+  }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -44,8 +42,7 @@ export default function RequestQuote() {
     
     setIsSubmitting(false);
     setIsSubmitted(true);
-  };
-
+  }
   const serviceTypes = [
     'Micro SaaS Development',
     'AI Services & Machine Learning',
