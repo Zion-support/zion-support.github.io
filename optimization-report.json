@@ -1,21 +1,21 @@
 {
-  "timestamp": "2025-09-04T02:02:41.275Z",
+  "timestamp": "2025-09-04T02:48:41.751Z",
   "optimizations": [
-    {
-      "type": "bundle_optimization",
-      "status": "completed",
-      "details": "Bundle size analyzed and optimized"
-    },
     {
       "type": "code_optimization",
       "status": "completed",
       "details": "Code optimized for better performance"
     }
   ],
-  "errors": [],
+  "errors": [
+    {
+      "type": "bundle_optimization",
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nFailed to compile.\n\n./components/ContactForm.tsx:13:7\nType error: Type '() => void' is not assignable to type 'FC<{}>'.\n  Type 'void' is not assignable to type 'ReactNode | Promise<ReactNode>'.\n\n\u001b[0m \u001b[90m 11 |\u001b[39m }\n \u001b[90m 12 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m \u001b[36mconst\u001b[39m \u001b[33mContactForm\u001b[39m\u001b[33m:\u001b[39m \u001b[33mReact\u001b[39m\u001b[33m.\u001b[39m\u001b[33mFC\u001b[39m \u001b[33m=\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36mconst\u001b[39m [formData\u001b[33m,\u001b[39m setFormData] \u001b[33m=\u001b[39m useState\u001b[33m<\u001b[39m\u001b[33mFormData\u001b[39m\u001b[33m>\u001b[39m({\n \u001b[90m 15 |\u001b[39m     name\u001b[33m:\u001b[39m \u001b[32m''\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 16 |\u001b[39m     email\u001b[33m:\u001b[39m \u001b[32m''\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\nNext.js build worker exited with code: 1 and signal: null\n"
+    }
+  ],
   "summary": {
-    "totalOptimizations": 2,
-    "totalErrors": 0,
-    "successRate": 100
+    "totalOptimizations": 1,
+    "totalErrors": 1,
+    "successRate": 50
   }
 }

@@ -10,7 +10,8 @@ export default function ThemeToggle() {
       if (savedTheme) {
         setIsDark(savedTheme === 'dark');
       }
-    }, []);
+    }
+  }, []);
 
   useEffect(() => {
     // Apply theme to document
@@ -22,6 +23,7 @@ export default function ThemeToggle() {
         document.documentElement.classList.remove('dark');
         localStorage.setItem('theme', 'light');
       }
+    }
   }, [isDark]);
 
   const toggleTheme = () => {

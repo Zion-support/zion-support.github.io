@@ -4,13 +4,13 @@
 console.log('🚀 Executing Master Automation...');
 
 try {
-  const MasterAutomation = require('./master-automation.js');
+  const MasterAutomation = require('./master-automation.cjs');
   const master = new MasterAutomation();
   
   master.run().then(success => {
     if (success) {
       console.log('🎉 All automation completed successfully!');
-      console.log('📋 Next steps:');
+      console.log('📋 Next steps: ');
       console.log('1. Review the generated reports');
       console.log('2. Run: chmod +x git-workflow.sh');
       console.log('3. Execute: ./git-workflow.sh');

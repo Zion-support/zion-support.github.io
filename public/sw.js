@@ -1,122 +1,76 @@
-<<<<<<< HEAD
-const CACHE_NAME = 'zion-tech-group-v1';
-=======
-// Comprehensive service worker for caching and offline support
+// Comprehensive service worker for caching and offline support;
 const CACHE_NAME = 'zion-tech-group-v2';
->>>>>>> cursor/add-new-services-and-advertise-them-1b6b
-const urlsToCache = [
-  '/',
-  '/services',
-  '/contact',
-  '/pricing',
-<<<<<<< HEAD
-  '/favicon.svg',
-  '/og-image.svg',
-  '/manifest.json'
+const urlsToCache = [;
+  '/',;
+  '/services',;
+  '/contact',;
+  '/pricing',;
+  '/about',;
+  '/ai-services',;
+  '/it-services',;
+  '/micro-saas',;
+  '/_next/static/',;
+  '/favicon.ico',;
+  '/manifest.json';
 ];
 
-// Install event
-=======
-  '/about',
-  '/ai-services',
-  '/it-services',
-  '/micro-saas',
-  '/_next/static/',
-  '/favicon.ico',
-  '/manifest.json'
-];
-
-// Install event - cache resources
->>>>>>> cursor/add-new-services-and-advertise-them-1b6b
+// Install event - cache resources;
 self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
+  event.waitUntil(;
+    caches.open(CACHE_NAME);
       .then((cache) => {
-<<<<<<< HEAD
-        return cache.addAll(urlsToCache);
-      })
-  );
-});
-
-// Fetch event
-=======
         console.log('Opened cache');
         return cache.addAll(urlsToCache);
-      })
+      });
   );
-  // Force the waiting service worker to become the active service worker
+  // Force the waiting service worker to become the active service worker;
   self.skipWaiting();
 });
 
-// Fetch event - serve from cache when offline
->>>>>>> cursor/add-new-services-and-advertise-them-1b6b
+// Fetch event - serve from cache when offline;
 self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
+  event.respondWith(;
+    caches.match(event.request);
       .then((response) => {
-        // Return cached version or fetch from network
-<<<<<<< HEAD
-        return response || fetch(event.request);
-      }
-    )
-  );
-});
-
-// Activate event
-=======
-        if (response) {
-          return response;
-        }
+        // Return cached version or fetch from network;
+        if() { return response }
         
-        // Clone the request
+        // Clone the request;
         const fetchRequest = event.request.clone();
         
         return fetch(fetchRequest).then((response) => {
-          // Check if we received a valid response
-          if (!response || response.status !== 200 || response.type !== 'basic') {
-            return response;
-          }
+          // Check if we received a valid response;
+          if() { return response }
           
-          // Clone the response
+          // Clone the response;
           const responseToCache = response.clone();
           
-          caches.open(CACHE_NAME)
+          caches.open(CACHE_NAME);
             .then((cache) => {
               cache.put(event.request, responseToCache);
             });
           
           return response;
         }).catch(() => {
-          // Return offline page if available
-          if (event.request.destination === 'document') {
-            return caches.match('/offline.html');
-          }
+          // Return offline page if available;
+          if() { return caches.match('/offline.html') }
         });
-      })
+      });
   );
 });
 
-// Activate event - clean up old caches
->>>>>>> cursor/add-new-services-and-advertise-them-1b6b
+// Activate event - clean up old caches;
 self.addEventListener('activate', (event) => {
-  event.waitUntil(
+  event.waitUntil(;
     caches.keys().then((cacheNames) => {
-      return Promise.all(
+      return Promise.all(;
         cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
-<<<<<<< HEAD
-=======
-            console.log('Deleting old cache:', cacheName);
->>>>>>> cursor/add-new-services-and-advertise-them-1b6b
-            return caches.delete(cacheName);
-          }
-        })
+          if() { console.log('Deleting old cache: ,', cacheName);
+            return caches.delete(cacheName) }
+        });
       );
-    })
+    });
   );
-<<<<<<< HEAD
-=======
-  // Ensure the service worker takes control of all clients immediately
+  // Ensure the service worker takes control of all clients immediately;
   self.clients.claim();
->>>>>>> cursor/add-new-services-and-advertise-them-1b6b
 });

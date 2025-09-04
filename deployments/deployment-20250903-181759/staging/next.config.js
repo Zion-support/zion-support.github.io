@@ -7,7 +7,7 @@ const nextConfig = {
   typescript: { ignoreBuildErrors: true },
   trailingSlash: true,
   generateBuildId: async () => {
-    return 'build-' + Date.now()
+    return 'build-' + Date.now();
   },
   // Ensure standard Next.js page extensions are recognized alongside any custom route files
   pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'route.tsx', 'route.ts'],
@@ -21,8 +21,7 @@ const nextConfig = {
     scrollRestoration: true
   },
   async headers() {
-    return [
-      {
+    return [{
         source: '/(.*)',
         headers: [
           { key: 'X-Content-Type-Options', value: 'nosniff' },
@@ -36,4 +35,3 @@ const nextConfig = {
 };
 
 export default nextConfig;
-

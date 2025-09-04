@@ -1,74 +1,56 @@
 import { useEffect } from 'react';
 
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
-}
-
-export default function PerformanceOptimizer({ children }: PerformanceOptimizerProps) {
+export default function PerformanceOptimizer() {
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
       const criticalImages = [
-        '/favicon.svg',
-        '/og-image.svg'
+        '/og-image.jpg',
+        '/favicon.svg'
       ];
-      
-      criticalImages.forEach(src => {
+
+      criticalImages.forEach((src) => {
         const link = document.createElement('link');
         link.rel = 'preload';
         link.as = 'image';
         link.href = src;
         document.head.appendChild(link);
       });
-    };
-
-    // Optimize images
+    }
+    // Optimize images with lazy loading
     const optimizeImages = () => {
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        if (!img.loading) {
-          img.loading = 'lazy';
-        }
-        if (!img.decoding) {
-          img.decoding = 'async';
-        }
+      const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            img.src = img.dataset.src || '';
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
+          }
+        });
       });
-    };
 
-    // Service Worker registration
-    const registerServiceWorker = async () => {
-      if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
-        try {
-          const registration = await navigator.serviceWorker.register('/sw.js');
-          console.log('SW registered: ', registration);
-        } catch (registrationError) {
-          console.log('SW registration failed: ', registrationError);
-        }
-      }
-    };
-
+      images.forEach((img) => imageObserver.observe(img));
+    }
+    // Initialize optimizations
     preloadCriticalResources();
     optimizeImages();
-    registerServiceWorker();
 
-    // Performance monitoring
-    const reportWebVitals = (metric: any) => {
-      if (process.env.NODE_ENV === 'production') {
-        // Send to analytics
-        console.log(metric);
-      }
-    };
-
-    // Monitor Core Web Vitals
-    if (typeof window !== 'undefined') {
-      import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
-        onCLS(reportWebVitals);
-        onFCP(reportWebVitals);
-        onLCP(reportWebVitals);
-        onTTFB(reportWebVitals);
-      });
+    // Cleanup
+    return () => {
+      // Cleanup if needed
     }
   }, []);
 
-  return <>{children}</>;
+  return null; // This component doesn't render anything
 }
+
+// Web Vitals monitoring
+export const reportWebVitals = (metric: { name: string; value: number; delta: number }) => {
+  if (process.env.NODE_ENV === 'production') {
+    // Send to analytics service
+    // eslint-disable-next-line no-console
+    console.log('Web Vital:', metric);
+  }
+};
