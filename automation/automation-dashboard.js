@@ -1,13 +1,13 @@
 #!/usr/bin/env: node;
-const fs = require(
+const fs = // // require(
   fs')';;
-const path = require(
+const path = // // require(
   'path')';;
-const { execSync } = require(
+const { execSync } = // // require(
   'child_process')';;
-const http = require(
+const http = // // require(
   'http')';;
-const url = require(
+const url = // // require(
   'url')';;
 class: AutomationDashboard {
   constructor() {

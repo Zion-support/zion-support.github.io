@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const chokidar = require('chokidar');
-const { execSync } = require('child_process');
+const fs = // // require('fs');
+const path = // // require('path');
+const chokidar = // // require('chokidar');
+const { execSync } = // // require('child_process');
 
 /**
  * File Watcher - Real-time monitoring of file changes for immediate error detection
@@ -284,7 +284,7 @@ class FileWatcher {
 
 // Install chokidar if not present
 try {
-  require('chokidar');
+  // // require('chokidar');
 } catch (error) {
   console.log('Installing chokidar...');
   execSync('yarn add chokidar', { stdio: 'inherit' });

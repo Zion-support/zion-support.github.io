@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import Head from 'next/head';
 
 export default function ITServices() {
   const itServices = [
@@ -225,13 +226,13 @@ export default function ITServices() {
 
                 <div className="flex gap-4">
                   <Link
-                    to="/contact"
+                    href="/contact"
                     className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors flex-1 text-center"
                   >
                     Get Started
                   </Link>
                   <Link
-                    to="/request-quote"
+                    href="/request-quote"
                     className="bg-transparent border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-6 py-2 rounded-lg font-semibold transition-colors flex-1 text-center"
                   >
                     Request Quote
@@ -268,13 +269,13 @@ export default function ITServices() {
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact"
+              href="/contact"
               className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Contact Us Now
             </Link>
             <Link
-              to="/request-quote"
+              href="/request-quote"
               className="bg-transparent border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Get Free IT Assessment

@@ -1,8 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import Head from 'next/head';
 
 export default function NotFound() {
   return (
+    <>
+      <Head>
+        <title>NotFound — Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group NotFound page" />
+      </Head>
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
       <div className="text-center px-4">
         <h1 className="text-9xl font-bold text-cyan-400 mb-4">404</h1>
@@ -14,13 +20,13 @@ export default function NotFound() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
-            to="/"
+            href="/"
             className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
           >
             Go Home
           </Link>
           <Link
-            to="/contact"
+            href="/contact"
             className="bg-transparent border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
           >
             Contact Us
@@ -28,5 +34,6 @@ export default function NotFound() {
         </div>
       </div>
     </div>
+    </>
   );
 }

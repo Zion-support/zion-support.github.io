@@ -178,7 +178,7 @@
     "monitor:health": "node scripts/health-monitor-enhanced.cjs",
     "audit:security": "node scripts/security-audit-enhanced.cjs",
     "optimize:ux": "node scripts/ux-optimizer.cjs",
-    "improve:all": "bash scripts/comprehensive-app-improvements.sh",
+    "improve:all": "bash scripts/comprehensive-improvements-v2.sh",
     "automation:safe": "bash scripts/run-safe-automations.sh",
     "ci:smoke": "npm run build && npm run test:smoke",
     "ci:consolidated": "bash scripts/ci-consolidated.sh",
@@ -186,7 +186,16 @@
     "dev:setup": "bash scripts/dev-setup.sh",
     "quick:test": "bash scripts/quick-test.sh",
     "deploy:app": "bash scripts/deploy.sh",
-    "health:check": "bash scripts/health-check.sh"
+    "health:check": "bash scripts/health-check.sh",
+    "dev:enhanced": "bash scripts/enhanced-dev-setup.sh",
+    "deploy:production": "bash scripts/production-deploy.sh",
+    "monitor:app": "bash scripts/monitor-app.sh",
+    "quick:fix": "bash scripts/quick-fix.sh",
+    "test:comprehensive": "bash scripts/comprehensive-test.sh",
+    "monitor:performance": "node scripts/performance-monitor-enhanced.js",
+    "monitor:security": "node scripts/security-monitor-enhanced.js",
+    "monitor:seo": "node scripts/seo-monitor-enhanced.js",
+    "monitor:accessibility": "node scripts/accessibility-monitor-enhanced.js"
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"

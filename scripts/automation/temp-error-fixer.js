@@ -14,7 +14,7 @@
         };
         
         try {
-          require('/workspace/scripts/automation/console-error-fixer.cjs');
+          // // require('/workspace/scripts/automation/console-error-fixer.cjs');
           setTimeout(() => {
             process.exit(0);
           }, 5000);

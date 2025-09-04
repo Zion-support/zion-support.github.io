@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import Head from 'next/head';
 
 export default function WhitePapers() {
   const whitePapers = [
@@ -7,133 +8,73 @@ export default function WhitePapers() {
       title: "The Future of AI in Business: A Comprehensive Guide",
       description: "Explore how artificial intelligence is transforming business operations and what it means for your organization.",
       date: "January 2025",
-      category: "AI & Machine Learning",
-      downloadUrl: "/contact"
-    },
-    {
-      title: "Cybersecurity Best Practices for Small and Medium Businesses",
-      description: "Learn essential cybersecurity strategies to protect your business from evolving threats and attacks.",
-      date: "December 2024",
-      category: "Cybersecurity",
-      downloadUrl: "/contact"
+      category: "AI & Machine Learning"
     },
     {
       title: "Digital Transformation: A Step-by-Step Implementation Guide",
       description: "Discover the key steps and strategies for successfully implementing digital transformation in your organization.",
       date: "November 2024",
-      category: "Digital Transformation",
-      downloadUrl: "/contact"
+      category: "Digital Transformation"
     },
     {
       title: "Cloud Migration Strategies: From Planning to Execution",
       description: "Comprehensive guide to migrating your infrastructure to the cloud with minimal disruption and maximum benefits.",
       date: "October 2024",
-      category: "Cloud Computing",
-      downloadUrl: "/contact"
-    },
-    {
-      title: "Micro SaaS Solutions: The Future of Business Software",
-      description: "Understanding the micro SaaS revolution and how it's changing the way businesses approach software solutions.",
-      date: "September 2024",
-      category: "Micro SaaS",
-      downloadUrl: "/contact"
-    },
-    {
-      title: "Data Analytics and Business Intelligence: Driving Growth Through Insights",
-      description: "Learn how to leverage data analytics and business intelligence to make informed decisions and drive growth.",
-      date: "August 2024",
-      category: "Data Analytics",
-      downloadUrl: "/contact"
+      category: "Cloud Computing"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      {/* Header */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            White Papers
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            In-depth research and insights on the latest technology trends and best practices
-          </p>
-        </div>
-      </section>
+    <>
+      <Head>
+        <title>White Papers — Zion Tech Group</title>
+        <meta name="description" content="In-depth research and insights on the latest technology trends and best practices." />
+      </Head>
 
-      {/* White Papers Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <main className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              White Papers
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              In-depth research and insights on the latest technology trends and best practices.
+            </p>
+          </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whitePapers.map((paper, index) => (
-              <div key={index} className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors">
+              <div key={index} className="bg-white p-6 rounded-lg shadow-lg border">
                 <div className="mb-4">
-                  <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                  <span className="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">
                     {paper.category}
                   </span>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {paper.title}
-                </h3>
-                <p className="text-gray-300 mb-4">
-                  {paper.description}
-                </p>
-                <div className="flex justify-between items-center mb-4">
-                  <span className="text-gray-400 text-sm">
-                    {paper.date}
-                  </span>
+                <h3 className="text-xl font-semibold mb-2">{paper.title}</h3>
+                <p className="text-gray-600 mb-4">{paper.description}</p>
+                <div className="text-sm text-gray-500 mb-4">
+                  <p>Published: {paper.date}</p>
                 </div>
                 <Link
-                  to={paper.downloadUrl}
-                  className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
+                  href="/contact"
+                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
                 >
-                  Download PDF
+                  Download
                 </Link>
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-            Need More Information?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Contact us for more detailed information about any of our white papers or to discuss your specific needs
-          </p>
-          <div className="grid md:grid-cols-3 gap-8 text-gray-300 mb-8">
-            <div>
-              <h3 className="text-xl font-semibold text-cyan-400 mb-2">Phone</h3>
-              <p>+1 302 464 0950</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-cyan-400 mb-2">Email</h3>
-              <p>kleber@ziontechgroup.com</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-cyan-400 mb-2">Address</h3>
-              <p>364 E Main St STE 1008<br />Middletown DE 19709</p>
-            </div>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="text-center mt-16">
             <Link
-              to="/contact"
-              className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+              href="/contact"
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
             >
               Contact Us
             </Link>
-            <Link
-              to="/services"
-              className="bg-transparent border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Explore Services
-            </Link>
           </div>
         </div>
-      </section>
-    </div>
+      </main>
+    </>
   );
 }

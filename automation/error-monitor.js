@@ -6,13 +6,13 @@
  * Monitors the application for errors and automatically fixes common issues
  */
 
-const fs = require('fs')
-const path = require('path')
-const { execSync, spawn } = require('child_process');
+const fs = // // require('fs')
+const path = // // require('path')
+const { execSync, spawn } = // // require('child_process');
 =======
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = // // require('fs');
+const path = // // require('path');
+const { execSync } = // // require('child_process');
 >>>>>>> origin/merge-pr-10625
 
 class ErrorMonitor {
@@ -488,7 +488,7 @@ monitor.start().catch(error => {
     console.log('🚀 Triggering error fixer...');
     
     try {
-      const ErrorFixerAutomation = require('./error-fixer-automation.js');
+      const ErrorFixerAutomation = // // require('./error-fixer-automation.js');
       const automation = new ErrorFixerAutomation();
       await automation.run();
       

@@ -2,9 +2,9 @@
 /**
  * Advanced Monitoring Script
  */
-const pm2 = require("child_process");
-const fs = require("child_process");
-const path = require("path")
+const pm2 = // // require("child_process");
+const fs = // // require("child_process");
+const path = // // require("path")
 class AdvancedMonitor {
   constructor() {
     this.logPath = path.join(__dirname, "..", "logs", "monitoring.log")}
@@ -28,7 +28,7 @@ class AdvancedMonitor {
       const logEntry = `[${timestamp}] PM2 processes: ${list.length} running\n`
       fs.appendFileSync(this.logPath, logEntry)})}
   checkDiskSpace() {
-    const { execSync } = require("child_process")
+    const { execSync } = // // require("child_process")
     try {
       const diskUsage = execSync("df -h /", { encoding: "utf8" })
       const timestamp = new Date().toISOString()
@@ -37,7 +37,7 @@ class AdvancedMonitor {
       console.error("Disk space check error:", error)}
   }
   checkMemoryUsage() {
-    const { execSync } = require("child_process")
+    const { execSync } = // // require("child_process")
     try {
       const memoryUsage = execSync("free -h", { encoding: "utf8" })
       const timestamp = new Date().toISOString()

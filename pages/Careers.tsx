@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import Head from 'next/head';
 
 export default function Careers() {
   const jobOpenings = [
@@ -21,9 +22,9 @@ export default function Careers() {
       type: "Full-time",
       description: "Manage and optimize our cloud infrastructure and deployment pipelines.",
       requirements: [
-        "3+ years DevOps experience",
-        "AWS/Azure/GCP certification",
-        "Docker and Kubernetes expertise",
+        "3+ years experience in DevOps",
+        "Experience with AWS, Azure, or GCP",
+        "Knowledge of Docker and Kubernetes",
         "CI/CD pipeline experience"
       ]
     },
@@ -33,163 +34,72 @@ export default function Careers() {
       type: "Full-time",
       description: "Build responsive and interactive user interfaces for our web applications.",
       requirements: [
-        "3+ years React/Next.js experience",
-        "TypeScript proficiency",
-        "UI/UX design skills",
-        "Responsive design expertise"
-      ]
-    },
-    {
-      title: "Sales Engineer",
-      location: "Remote / Middletown, DE",
-      type: "Full-time",
-      description: "Help clients understand and implement our technology solutions.",
-      requirements: [
-        "Technical background",
-        "Sales experience in tech",
-        "Strong communication skills",
-        "Client relationship management"
+        "3+ years experience in React/Next.js",
+        "Proficiency in TypeScript",
+        "Experience with Tailwind CSS",
+        "Strong UI/UX skills"
       ]
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      {/* Header */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Careers
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join our team and help shape the future of technology
-          </p>
-        </div>
-      </section>
+    <>
+      <Head>
+        <title>Careers — Zion Tech Group</title>
+        <meta name="description" content="Join our team of innovative professionals and help shape the future of technology." />
+      </Head>
 
-      {/* Why Work With Us */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Why Work With Us?
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-cyan-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <span className="text-2xl font-bold text-white">🚀</span>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Innovation</h3>
-              <p className="text-gray-300">
-                Work on cutting-edge AI and technology solutions that make a real impact.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-cyan-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <span className="text-2xl font-bold text-white">🏠</span>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Remote Work</h3>
-              <p className="text-gray-300">
-                Enjoy the flexibility of remote work with a supportive team environment.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-cyan-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <span className="text-2xl font-bold text-white">📈</span>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Growth</h3>
-              <p className="text-gray-300">
-                Continuous learning opportunities and career advancement in a growing company.
-              </p>
-            </div>
+      <main className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              Careers at Zion Tech Group
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Join our team of innovative professionals and help shape the future of technology.
+            </p>
           </div>
-        </div>
-      </section>
 
-      {/* Job Openings */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Current Openings
-          </h2>
-          <div className="space-y-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {jobOpenings.map((job, index) => (
-              <div key={index} className="bg-gray-800 p-8 rounded-lg hover:bg-gray-700 transition-colors">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                  <div>
-                    <h3 className="text-2xl font-semibold text-cyan-400 mb-2">
-                      {job.title}
-                    </h3>
-                    <div className="flex flex-wrap gap-4 text-gray-300">
-                      <span>📍 {job.location}</span>
-                      <span>⏰ {job.type}</span>
-                    </div>
-                  </div>
-                  <Link
-                    to="/contact"
-                    className="mt-4 md:mt-0 bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
-                  >
-                    Apply Now
-                  </Link>
-                </div>
-                <p className="text-gray-300 mb-6">
-                  {job.description}
-                </p>
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-3">Requirements:</h4>
-                  <ul className="text-gray-300 space-y-2">
-                    {job.requirements.map((requirement, reqIndex) => (
-                      <li key={reqIndex} className="flex items-center">
-                        <span className="text-cyan-400 mr-2">✓</span>
-                        {requirement}
-                      </li>
+              <div key={index} className="bg-white p-6 rounded-lg shadow-lg border">
+                <h3 className="text-xl font-semibold mb-2">{job.title}</h3>
+                <p className="text-gray-600 mb-2">{job.location} • {job.type}</p>
+                <p className="text-gray-700 mb-4">{job.description}</p>
+                <div className="mb-4">
+                  <h4 className="font-semibold mb-2">Requirements:</h4>
+                  <ul className="list-disc list-inside text-sm text-gray-600">
+                    {job.requirements.map((req, reqIndex) => (
+                      <li key={reqIndex}>{req}</li>
                     ))}
                   </ul>
                 </div>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+                >
+                  Apply Now
+                </Link>
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-            Don't See a Perfect Match?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            We're always looking for talented individuals. Send us your resume and let's talk!
-          </p>
-          <div className="grid md:grid-cols-3 gap-8 text-gray-300 mb-8">
-            <div>
-              <h3 className="text-xl font-semibold text-cyan-400 mb-2">Phone</h3>
-              <p>+1 302 464 0950</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-cyan-400 mb-2">Email</h3>
-              <p>kleber@ziontechgroup.com</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-cyan-400 mb-2">Address</h3>
-              <p>364 E Main St STE 1008<br />Middletown DE 19709</p>
-            </div>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="text-center mt-16">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              Don't See a Perfect Match?
+            </h2>
+            <p className="text-gray-600 mb-8">
+              We're always looking for talented individuals. Send us your resume and let's talk!
+            </p>
             <Link
-              to="/contact"
-              className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+              href="/contact"
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
             >
               Send Resume
             </Link>
-            <Link
-              to="/about"
-              className="bg-transparent border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Learn About Us
-            </Link>
           </div>
         </div>
-      </section>
-    </div>
+      </main>
+    </>
   );
 }
