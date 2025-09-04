@@ -73,6 +73,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       },
       uptime: process.uptime()
     };
+    
+    const health: SystemHealth = {
+      status,
+      timestamp: new Date().toISOString(),
+      services,
+      metrics: {
+        responseTime: avgResponseTime,
+        memoryUsage: memoryUsage.heapUsed,
+        cacheHitRate: 0, // This would need to be tracked separately
+        activeConnections: 0 // This would need to be tracked separately
+      },
+      uptime: process.uptime()
+    };
     const responseTime = Date.now() - startTime;
     
     res.status(200).json({
