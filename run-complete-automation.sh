@@ -71,7 +71,7 @@ echo "🔒 Phase 3: Security & Performance"
 echo "================================="
 
 # Security scan
-run_with_log "Security Scanner" "node automation/security-scanner.cjs"
+run_with_log "Security Scanner" "node scripts/security-audit.cjs"
 
 # Security audit
 run_optional "Security Audit" "node scripts/security-audit.cjs"
@@ -84,10 +84,10 @@ echo "📊 Phase 4: Quality Analysis"
 echo "============================"
 
 # Code quality monitoring
-run_optional "Code Quality Monitor" "node scripts/code-quality-monitor.cjs"
+run_optional "Code Quality Monitor" "node scripts/automation/code-quality-monitor.cjs"
 
 # Dependency update check
-run_optional "Dependency Update Check" "node scripts/dependency-updater.cjs"
+run_optional "Dependency Update Check" "node scripts/automation/dependency-updater.cjs"
 
 echo ""
 echo "🏗️  Phase 5: Build & Test"

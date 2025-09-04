@@ -252,10 +252,10 @@ export default function FirstSteps() {
               </div>
 
               <div className="mt-6 flex flex-col sm:flex-row gap-4">
-                <Link href="/contact" className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-center">
+                <Link href="/contact" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
                   Request Quote
                 </Link>
-                <a href={`tel:${contact.phone}`} className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors text-center">
+                <a href={`tel:${contact.phone}`} className="inline-flex items-center px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
                   Call {contact.phone}
                 </a>
               </div>

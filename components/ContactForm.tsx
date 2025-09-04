@@ -12,29 +12,26 @@ interface FormData {
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({ name: '', email: '', company: '', phone: '', service: '', message: '' });
-  
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
-  }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise((resolve) => setTimeout(resolve, 2000));
       setSubmitStatus('success');
       setFormData({ name: '', email: '', company: '', phone: '', service: '', message: '' });
-      
-      setSubmitStatus('success');
     } catch (_error) {
       setSubmitStatus('error');
     } finally {
@@ -49,7 +46,7 @@ const ContactForm: React.FC = () => {
           Thank you for your message! We&apos;ll get back to you soon.
         </div>
       )}
-      
+
       {submitStatus === 'error' && (
         <div className="p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
           There was an error sending your message. Please try again.
@@ -190,6 +187,6 @@ const ContactForm: React.FC = () => {
       </button>
     </form>
   );
-}
+};
 
 export default ContactForm;
