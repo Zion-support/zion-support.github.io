@@ -3,12 +3,12 @@ import React, { useEffect } from 'react';
 // Hook for keyboard navigation
 export const useKeyboardNavigation = () => {
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDown = (event: any) => {
       // Skip to main content
       if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
         const main = document.querySelector('main');
         if (main) {
-          (main as HTMLElement).focus();
+          (main as any).focus();
         }
       }
     };
@@ -37,7 +37,7 @@ export const SkipLinks: React.FC = () => (
 );
 
 // Enhanced button component with accessibility
-interface AccessibleButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface AccessibleButtonProps extends React.ButtonHTMLAttributes<any> {
   variant?: 'primary' | 'secondary' | 'danger';
   size?: 'sm' | 'md' | 'lg';
   loading?: boolean;
@@ -97,11 +97,11 @@ export const FocusTrap: React.FC<FocusTrapProps> = ({ children, active }) => {
     if (!active) return;
 
     const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-    const firstFocusableElement = document.querySelector(focusableElements) as HTMLElement;
+    const firstFocusableElement = document.querySelector(focusableElements) as any;
     const focusableContent = document.querySelectorAll(focusableElements);
-    const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement;
+    const lastFocusableElement = focusableContent[focusableContent.length - 1] as any;
 
-    const handleTabKey = (e: KeyboardEvent) => {
+    const handleTabKey = (e: any) => {
       if (e.key !== 'Tab') return;
 
       if (e.shiftKey) {

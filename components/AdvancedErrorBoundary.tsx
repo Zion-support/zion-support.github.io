@@ -17,13 +17,11 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     hasError: false
   };
 
-  public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+  public static getDerivedStateFromError(): State {
+    return { hasError: true };
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('AdvancedErrorBoundary caught an error:', error, errorInfo);
-    
     // Report to error tracking service
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
@@ -49,7 +47,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
             <div className="text-red-400 text-6xl mb-4">⚠️</div>
             <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
             <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified.
+              We&apos;re sorry, but something unexpected happened. Our team has been notified.
             </p>
             <div className="space-y-3">
               <button

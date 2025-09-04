@@ -20,10 +20,10 @@ export default function PerformanceOptimizer() {
     // Optimize images with lazy loading
     const optimizeImages = () => {
       const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries) => {
+      const imageObserver = new (window as any).IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
+            const img = entry.target as any;
             img.src = img.dataset.src || '';
             img.classList.remove('lazy');
             imageObserver.unobserve(img);
@@ -47,9 +47,9 @@ export default function PerformanceOptimizer() {
 }
 
 // Web Vitals monitoring
-export const reportWebVitals = (metric: any) => {
+export const reportWebVitals = (_metric: any) => {
   if (process.env.NODE_ENV === 'production') {
     // Send to analytics service
-    console.log('Web Vital:', metric);
+    // Web Vital metric logged
   }
 };

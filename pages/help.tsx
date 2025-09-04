@@ -193,7 +193,7 @@ export default function Help() {
               Still Need Help?
             </h2>
             <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-              Can't find what you're looking for? Our support team is here to help you.
+              Can&apos;t find what you&apos;re looking for? Our support team is here to help you with any questions or issues.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

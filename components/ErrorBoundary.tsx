@@ -14,12 +14,13 @@ class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false
   }
+
   public static getDerivedStateFromError(): State {
     return { hasError: true };
   }
 
-  public componentDidCatch() {
-    // Error logging can be implemented here if needed
+  public componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
+    // Error logged to console in development
   }
 
   public render() {

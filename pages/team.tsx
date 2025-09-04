@@ -156,7 +156,8 @@ export default function Team() {
               Join Our Team
             </h2>
             <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-              We're always looking for talented individuals who share our passion for innovation and technology.
+              We&apos;re always looking for talented individuals who share our passion for technology and innovation. 
+              Join us in building the future of technology.
             </p>
             <Link
               href="/careers"
