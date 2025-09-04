@@ -51,9 +51,8 @@ function Header({ onSidebarOpen }: { onSidebarOpen: () => void }): any {
         
         {/* Desktop Navigation */}
         <div style={{ 
-          display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'center',
-          '@media (max-width: 768px)': { display: 'none' } as any
-        }}>
+          display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'center'
+        }} className="hidden md:flex">
           <Link href="/" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Home</Link>
           <Link href="/about" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>About</Link>
           <Link href="/services" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>All Services</Link>
@@ -76,10 +75,9 @@ function Header({ onSidebarOpen }: { onSidebarOpen: () => void }): any {
         {/* Mobile Menu Button */}
         <button 
           style={{ 
-            background: 'none', border: 'none', color: 'white', fontSize: '1.5rem', cursor: 'pointer',
-            display: 'none',
-            '@media (max-width: 768px)': { display: 'block' } as any
+            background: 'none', border: 'none', color: 'white', fontSize: '1.5rem', cursor: 'pointer'
           }}
+          className="md:hidden"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle mobile menu"
           aria-expanded={mobileMenuOpen}

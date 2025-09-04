@@ -40,11 +40,12 @@ const PerformanceMonitor: React.FC = () => {
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'first-input') {
+            const fidEntry = entry as PerformanceEventTiming;
             // Log FID in development only
             if (process.env.NODE_ENV === 'development') {
-              console.log('FID:', entry.processingStart - entry.startTime);
+              console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
             }
-            sendToAnalytics('FID', entry.processingStart - entry.startTime);
+            sendToAnalytics('FID', fidEntry.processingStart - fidEntry.startTime);
           }
         }
       });
