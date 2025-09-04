@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 
 interface SearchResult {
@@ -69,6 +69,8 @@ export default function SearchBar() {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isOpen, setIsOpen] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const searchRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (query.length > 2) {
@@ -85,11 +87,12 @@ export default function SearchBar() {
     }
   }, [query]);
 
+
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setQuery(value);
-    handleSearch(value);
-  }
+  };
   const handleResultClick = () => {
     setQuery('');
     setResults([]);
@@ -100,22 +103,27 @@ export default function SearchBar() {
       setIsOpen(false);
       inputRef.current?.blur();
     }
+  };
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
+    };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
   return (
-    <div className="relative w-full max-w-md">
+    <div ref={searchRef} className="relative w-full max-w-md">
       <div className="relative">
         <input
+          ref={inputRef}
           type="text"
           placeholder="Search services..."
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={handleInputChange}
+          onKeyDown={handleKeyDown}
           className="w-full px-4 py-2 pl-10 bg-slate-800/50 border border-white/20 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         />
         <svg
@@ -158,7 +166,7 @@ export default function SearchBar() {
 
       {isOpen && query.length > 2 && results.length === 0 && (
         <div className="absolute top-full left-0 right-0 mt-2 bg-slate-800 border border-white/20 rounded-lg shadow-xl z-50 p-4">
-          <p className="text-slate-300 text-center">No results found for "{query}"</p>
+          <p className="text-slate-300 text-center">No results found for &quot;{query}&quot;</p>
         </div>
       )}
     </div>

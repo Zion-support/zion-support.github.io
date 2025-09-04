@@ -5,31 +5,31 @@ import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Mail, Cod
 
 export default function AIServices() {
   const contact = {
-    phone: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  }
+  };
   const aiServices = [
     {
       icon: Brain,
-      name: 'AI Customer Support Automation'
-      description: 'Intelligent chatbots and automated customer service solutions that reduce response times by 80% and improve customer satisfaction.'
+      name: 'AI Customer Support Automation',
+      description: 'Intelligent chatbots and automated customer service solutions that reduce response times by 80% and improve customer satisfaction.',
       features: [
-        'Natural language processing and understanding'
-        'Multi-channel support (chat, email, phone)'
-        'Human-in-the-loop escalation'
-        'Knowledge base integration and mining'
-        'Sentiment analysis and mood detection'
+        'Natural language processing and understanding',
+        'Multi-channel support (chat, email, phone)',
+        'Human-in-the-loop escalation',
+        'Knowledge base integration and mining',
+        'Sentiment analysis and mood detection',
         '24/7 availability with instant responses'
       ],
-      pricing: '$2,000 – $8,000 setup'
-      perUnit: '$0.02 – $0.20 per session'
-      timeline: '4–8 weeks'
+      pricing: '$2,000 – $8,000 setup',
+      perUnit: '$0.02 – $0.20 per session',
+      timeline: '4–8 weeks',
       benefits: [
-        '80% reduction in response time'
-        '60% decrease in support costs'
-        '24/7 customer availability'
+        '80% reduction in response time',
+        '60% decrease in support costs',
+        '24/7 customer availability',
         'Improved customer satisfaction scores'
       ]
     },

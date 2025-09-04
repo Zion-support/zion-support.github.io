@@ -47,8 +47,10 @@ export default function PerformanceOptimizer() {
 }
 
 // Web Vitals monitoring
-export const reportWebVitals = (metric: any) => {
+export const reportWebVitals = (metric: { name: string; value: number; delta: number }) => {
   if (process.env.NODE_ENV === 'production') {
     // Send to analytics service
+    // eslint-disable-next-line no-console
     console.log('Web Vital:', metric);
   }
+};

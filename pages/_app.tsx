@@ -12,39 +12,39 @@ function Header(): any {
   return (
     <header style={{
             position: 'sticky', top: 0, zIndex: 50, background: 'rgba(11, 18, 32, 0.95)',
-      backdropFilter: 'blur(10px)', color: 'white'
+      backdropFilter: 'blur(10px)', color: 'white',
       borderBottom: '1px solid rgba(255,255,255,0.1)'}}>
       <nav style={{
-        maxWidth: 1400, margin: '0 auto' padding: '12px 20px' display: 'flex'
-        alignItems: 'center' justifyContent: 'space-between' gap: 16}}>
+        maxWidth: 1400, margin: '0 auto', padding: '12px 20px', display: 'flex',
+        alignItems: 'center', justifyContent: 'space-between', gap: 16}}>
         <Link href="/" style={{ 
-          fontWeight: 800, letterSpacing: 0.3, fontSize: '1.25rem'
-          background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)'
-          WebkitBackgroundClip: 'text'
-          WebkitTextFillColor: 'transparent'
-          backgroundClip: 'text'
+          fontWeight: 800, letterSpacing: 0.3, fontSize: '1.25rem',
+          background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text',
           textDecoration: 'none'}}>Zion Tech Group        </Link>
         
         {/* Desktop Navigation */}
-        <div className="hidden md: flex gap-1 flex-wrap items-center">,
-          <Link href="/" style={{ color: 'white' padding: '8px 12px' textDecoration: 'none' borderRadius: 6, fontSize: '0.9rem'}}>Home</Link>
-          <Link href="/services" style={{ color: 'white' padding: '8px 12px' textDecoration: 'none' borderRadius: 6, fontSize: '0.9rem'}}>Services</Link>
-          <Link href="/solutions" style={{ color: 'white' padding: '8px 12px' textDecoration: 'none' borderRadius: 6, fontSize: '0.9rem'}}>Solutions</Link>
-          <Link href="/about" style={{ color: 'white' padding: '8px 12px' textDecoration: 'none' borderRadius: 6, fontSize: '0.9rem'}}>About</Link>
-          <Link href="/team" style={{ color: 'white' padding: '8px 12px' textDecoration: 'none' borderRadius: 6, fontSize: '0.9rem'}}>Team</Link>
-          <Link href="/blog" style={{ color: 'white' padding: '8px 12px' textDecoration: 'none' borderRadius: 6, fontSize: '0.9rem'}}>Blog</Link>
-          <Link href="/news" style={{ color: 'white' padding: '8px 12px' textDecoration: 'none' borderRadius: 6, fontSize: '0.9rem'}}>News</Link>
-          <Link href="/careers" style={{ color: 'white' padding: '8px 12px' textDecoration: 'none' borderRadius: 6, fontSize: '0.9rem'}}>Careers</Link>
+        <div className="hidden md:flex gap-1 flex-wrap items-center">
+          <Link href="/" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem'}}>Home</Link>
+          <Link href="/services" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem'}}>Services</Link>
+          <Link href="/solutions" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem'}}>Solutions</Link>
+          <Link href="/about" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem'}}>About</Link>
+          <Link href="/team" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem'}}>Team</Link>
+          <Link href="/blog" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem'}}>Blog</Link>
+          <Link href="/news" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem'}}>News</Link>
+          <Link href="/careers" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem'}}>Careers</Link>
           <Link href="/contact" style={{ 
-            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)'
-            color: 'white' padding: '8px 16px' textDecoration: 'none' borderRadius: 6, fontSize: '0.9rem' fontWeight: 600}}>Contact</Link>
+            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+            color: 'white', padding: '8px 16px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem', fontWeight: 600}}>Contact</Link>
         </div>
 
         {/* Mobile Menu Button */}
         <button 
           className="md: hidden bg-none border-none text-white text-2xl cursor-pointer"
           style={{ 
-            background: 'none' border: 'none' color: 'white' fontSize: '1.5rem' cursor: 'pointer'}
+            background: 'none', border: 'none', color: 'white', fontSize: '1.5rem', cursor: 'pointer'}}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle mobile menu"
           aria-expanded={mobileMenuOpen}
@@ -56,18 +56,18 @@ function Header(): any {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div style={{ 
-          background: 'rgba(11, 18, 32, 0.98)' 
-          borderTop: '1px solid rgba(255,255,255,0.1)'
+          background: 'rgba(11, 18, 32, 0.98)', 
+          borderTop: '1px solid rgba(255,255,255,0.1)',
           padding: '20px'}}>
-          <div style={{ display: 'flex' flexDirection: 'column' gap: 12, maxWidth: 1400, margin: '0 auto'}}>
-            <Link href="/" style={{ color: 'white' padding: '12px 0' textDecoration: 'none' borderBottom: '1px solid rgba(255,255,255,0.1)'}} onClick={() => setMobileMenuOpen(false)}>Home</Link>
-            <Link href="/services" style={{ color: 'white' padding: '12px 0' textDecoration: 'none' borderBottom: '1px solid rgba(255,255,255,0.1)'}} onClick={() => setMobileMenuOpen(false)}>Services</Link>
-            <Link href="/solutions" style={{ color: 'white' padding: '12px 0' textDecoration: 'none' borderBottom: '1px solid rgba(255,255,255,0.1)'}} onClick={() => setMobileMenuOpen(false)}>Solutions</Link>
-            <Link href="/about" style={{ color: 'white' padding: '12px 0' textDecoration: 'none' borderBottom: '1px solid rgba(255,255,255,0.1)'}} onClick={() => setMobileMenuOpen(false)}>About</Link>
-            <Link href="/team" style={{ color: 'white' padding: '12px 0' textDecoration: 'none' borderBottom: '1px solid rgba(255,255,255,0.1)'}} onClick={() => setMobileMenuOpen(false)}>Team</Link>
-            <Link href="/blog" style={{ color: 'white' padding: '12px 0' textDecoration: 'none' borderBottom: '1px solid rgba(255,255,255,0.1)'}} onClick={() => setMobileMenuOpen(false)}>Blog</Link>
-            <Link href="/news" style={{ color: 'white' padding: '12px 0' textDecoration: 'none' borderBottom: '1px solid rgba(255,255,255,0.1)'}} onClick={() => setMobileMenuOpen(false)}>News</Link>
-            <Link href="/careers" style={{ color: 'white' padding: '12px 0' textDecoration: 'none' borderBottom: '1px solid rgba(255,255,255,0.1)'}} onClick={() => setMobileMenuOpen(false)}>Careers</Link>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12, maxWidth: 1400, margin: '0 auto'}}>
+            <Link href="/" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)'}} onClick={() => setMobileMenuOpen(false)}>Home</Link>
+            <Link href="/services" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)'}} onClick={() => setMobileMenuOpen(false)}>Services</Link>
+            <Link href="/solutions" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)'}} onClick={() => setMobileMenuOpen(false)}>Solutions</Link>
+            <Link href="/about" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)'}} onClick={() => setMobileMenuOpen(false)}>About</Link>
+            <Link href="/team" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)'}} onClick={() => setMobileMenuOpen(false)}>Team</Link>
+            <Link href="/blog" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)'}} onClick={() => setMobileMenuOpen(false)}>Blog</Link>
+            <Link href="/news" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)'}} onClick={() => setMobileMenuOpen(false)}>News</Link>
+            <Link href="/careers" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)'}} onClick={() => setMobileMenuOpen(false)}>Careers</Link>
             <Link href="/contact" style={{ 
               background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)'
               color: 'white' padding: '12px 16px' textDecoration: 'none' borderRadius: 6, textAlign: 'center' fontWeight: 600, marginTop: 8}} onClick={() => setMobileMenuOpen(false)}>Contact</Link>

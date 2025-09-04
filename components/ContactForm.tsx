@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React, {  useState, useCallback  } from "react";
-import LoadingSpinner from './LoadingSpinner';
-
-interface FormData { name: string; email: string; company: string; phone: string; service: string; message: string;
-}
-=======
 import React, { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
@@ -14,11 +7,17 @@ interface FormData {
   company: string;
   phone: string;
   service: string;
-  message: string}
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
+  message: string;
+}
 
 const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({ name: '', email: '', company: '', phone: '', service: '', message: ''
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    message: ''
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -30,7 +29,7 @@ const ContactForm: React.FC = () => {
       ...prev,
       [name]: value
     }));
-  }
+  };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -40,13 +39,21 @@ const ContactForm: React.FC = () => {
       // Simulate form submission
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
-      setFormData({ name: '', email: '', company: '', phone: '', service: '', message: ''
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        message: ''
       });
     } catch {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
     }
+  };
+
   return (
     <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
       <div className="grid md: grid-cols-2 gap-6">
@@ -156,7 +163,7 @@ const ContactForm: React.FC = () => {
 
       {submitStatus === 'success' && (
         <div className="p-4 bg-green-900/50 border border-green-500 rounded-lg text-green-300" role="alert">
-          Thank you for your message! We'll get back to you within 24 hours.
+          Thank you for your message! We&apos;ll get back to you within 24 hours.
         </div>
       )}
 

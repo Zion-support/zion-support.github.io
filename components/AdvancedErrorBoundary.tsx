@@ -3,6 +3,7 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
+  // eslint-disable-next-line no-unused-vars
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
@@ -17,7 +18,9 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     hasError: false
   }
   public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error }
+    return { hasError: true, error };
+  }
+
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Report to error tracking service
     if (this.props.onError) {
@@ -30,7 +33,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
 
   private handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  }
+  };
   public render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
@@ -75,4 +78,6 @@ class AdvancedErrorBoundary extends Component<Props, State> {
 
     return this.props.children;
   }
+}
+
 export default AdvancedErrorBoundary;

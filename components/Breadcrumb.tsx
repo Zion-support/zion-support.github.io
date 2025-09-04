@@ -1,21 +1,16 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-<<<<<<< HEAD
-interface BreadcrumbItem { label: string;
-  href?: string;
-}
-=======
 interface BreadcrumbItem {
   label: string;
-  href?: string}
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
+  href?: string;
+}
 
 export default function Breadcrumb() {
   const router = useRouter();
   const pathSegments = router.asPath.split('/').filter(segment => segment !== '');
   const breadcrumbs: BreadcrumbItem[] = [
-    { label: 'Home', href: '/'  }
+    { label: 'Home', href: '/' }
   ];
 
   // Build breadcrumbs from path segments
@@ -31,16 +26,19 @@ export default function Breadcrumb() {
       .join(' ');
     
     breadcrumbs.push({
-      label, href: isLast ? undefined : currentPath
+      label,
+      href: isLast ? undefined : currentPath
     });
   });
 
   // Don't show breadcrumbs on home page
-  if (breadcrumbs.length <= 1) { return null; }
+  if (breadcrumbs.length <= 1) {
+    return null;
+  }
 
   return (
     <nav className="bg-slate-900/50 border-b border-white/10" aria-label="Breadcrumb">
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ol className="flex items-center space-x-2 py-3 text-sm">
           {breadcrumbs.map((item, index) => (
             <li key={index} className="flex items-center">
@@ -57,7 +55,7 @@ export default function Breadcrumb() {
               {item.href ? (
                 <Link
                   href={item.href}
-                  className="text-slate-300 hover: text-white transition-colors"
+                  className="text-slate-300 hover:text-white transition-colors"
                 >
                   {item.label}
                 </Link>

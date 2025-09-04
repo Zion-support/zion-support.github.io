@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-const PerformanceMonitor: React.FC = (): JSX.Element => {
+const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -8,14 +8,15 @@ const PerformanceMonitor: React.FC = (): JSX.Element => {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
+            // eslint-disable-next-line no-console
             console.log('LCP:', entry.startTime);
           }
-      }
+        }
       });
       
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint'] });
-      } catch (e) {
+      } catch {
         // Fallback for browsers that don't support LCP
       }
 
@@ -23,14 +24,15 @@ const PerformanceMonitor: React.FC = (): JSX.Element => {
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'first-input') {
-            console.log('FID:', (entry as any).processingStart - entry.startTime);
+            // eslint-disable-next-line no-console
+            console.log('FID:', (entry as PerformanceEntry & { processingStart: number }).processingStart - entry.startTime);
           }
-      }
+        }
       });
 
       try {
         fidObserver.observe({ entryTypes: ['first-input'] });
-      } catch (e) {
+      } catch {
         // Fallback for browsers that don't support FID
       }
 
@@ -38,15 +40,17 @@ const PerformanceMonitor: React.FC = (): JSX.Element => {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
+          if (!(entry as PerformanceEntry & { hadRecentInput: boolean }).hadRecentInput) {
+            clsValue += (entry as PerformanceEntry & { value: number }).value;
           }
+        }
+        // eslint-disable-next-line no-console
         console.log('CLS:', clsValue);
       });
 
       try {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
-      } catch (e) {
+      } catch {
         // Fallback for browsers that don't support CLS
       }
 
@@ -54,9 +58,11 @@ const PerformanceMonitor: React.FC = (): JSX.Element => {
         observer.disconnect();
         fidObserver.disconnect();
         clsObserver.disconnect();
-      }
+      };
+    }
   }, []);
 
   return null; // This component doesn't render anything
 }
+
 export default PerformanceMonitor;
