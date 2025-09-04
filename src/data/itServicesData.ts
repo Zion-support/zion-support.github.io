@@ -682,5 +682,330 @@ export const IT_SERVICES: ITService[] = [
     },
     competitors: ["IBM", "HPE", "Dell Technologies", "Cisco", "Microsoft"],
     marketSize: "$23.4 billion by 2025"
+  },
+
+  // Cloud Migration & Modernization Services
+  {
+    id: "cloud-migration-modernization-services",
+    title: "Cloud Migration & Modernization Services",
+    description: "Comprehensive cloud migration services that help businesses move their infrastructure, applications, and data to the cloud while modernizing legacy systems for optimal performance and cost efficiency.",
+    category: "Cloud Services",
+    subcategory: "Migration & Modernization",
+    price: 15000,
+    currency: "$",
+    pricingModel: "project",
+    features: [
+      "Cloud readiness assessment",
+      "Migration strategy planning",
+      "Legacy application modernization",
+      "Data migration and synchronization",
+      "Cloud-native architecture design",
+      "Security and compliance migration",
+      "Performance optimization",
+      "Cost optimization strategies",
+      "Training and documentation",
+      "24/7 migration support"
+    ],
+    benefits: [
+      "Reduce infrastructure costs by 40%",
+      "Improve scalability and flexibility",
+      "Enhance security and compliance",
+      "Increase operational efficiency",
+      "Future-proof your technology stack"
+    ],
+    useCases: [
+      "On-premises to cloud migration",
+      "Multi-cloud strategy implementation",
+      "Legacy system modernization",
+      "Disaster recovery setup",
+      "Hybrid cloud architecture"
+    ],
+    targetAudience: [
+      "Enterprise companies",
+      "Mid-market businesses",
+      "Government agencies",
+      "Healthcare organizations",
+      "Financial institutions"
+    ],
+    tags: ["Cloud Migration", "Modernization", "AWS", "Azure", "GCP"],
+    estimatedDelivery: "8-16 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$15,000 - $100,000/project",
+    roi: "200-400%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["AWS", "Azure", "GCP", "Docker", "Kubernetes", "Terraform"],
+      integrations: ["VMware", "Hyper-V", "On-premises systems", "Database systems", "Storage systems"],
+      apiEndpoints: 500,
+      uptime: "99.9%",
+      security: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "Encryption"]
+    },
+    competitors: ["Accenture", "Deloitte", "IBM", "Microsoft", "Amazon"],
+    marketSize: "$35.2 billion by 2025"
+  },
+
+  // Cybersecurity Assessment & Implementation
+  {
+    id: "cybersecurity-assessment-implementation",
+    title: "Cybersecurity Assessment & Implementation",
+    description: "Comprehensive cybersecurity services including security assessments, penetration testing, vulnerability management, and implementation of enterprise-grade security solutions to protect against evolving threats.",
+    category: "Cybersecurity",
+    subcategory: "Assessment & Implementation",
+    price: 12000,
+    currency: "$",
+    pricingModel: "project",
+    features: [
+      "Security risk assessment",
+      "Penetration testing",
+      "Vulnerability scanning",
+      "Security architecture design",
+      "Identity and access management",
+      "Network security implementation",
+      "Endpoint protection setup",
+      "Security monitoring deployment",
+      "Incident response planning",
+      "Security training and awareness"
+    ],
+    benefits: [
+      "Identify and fix security vulnerabilities",
+      "Comply with industry regulations",
+      "Protect against cyber threats",
+      "Reduce security risks by 80%",
+      "Improve security posture"
+    ],
+    useCases: [
+      "Security compliance audits",
+      "Penetration testing",
+      "Security architecture design",
+      "Incident response setup",
+      "Security awareness training"
+    ],
+    targetAudience: [
+      "Large enterprises",
+      "Government agencies",
+      "Healthcare organizations",
+      "Financial institutions",
+      "Critical infrastructure"
+    ],
+    tags: ["Cybersecurity", "Penetration Testing", "Risk Assessment", "Compliance", "Security"],
+    estimatedDelivery: "6-12 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$12,000 - $75,000/project",
+    roi: "300-600%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Nessus", "Metasploit", "Burp Suite", "Wireshark", "SIEM", "Firewalls"],
+      integrations: ["Active Directory", "LDAP", "SIEM systems", "Firewall management", "Endpoint protection"],
+      apiEndpoints: 200,
+      uptime: "99.9%",
+      security: ["Confidentiality agreements", "Secure data handling", "Audit logging", "Compliance reporting"]
+    },
+    competitors: ["IBM Security", "Deloitte", "PwC", "KPMG", "EY"],
+    marketSize: "$28.7 billion by 2025"
+  },
+
+  // DevOps & CI/CD Pipeline Implementation
+  {
+    id: "devops-cicd-pipeline-implementation",
+    title: "DevOps & CI/CD Pipeline Implementation",
+    description: "Complete DevOps transformation services including CI/CD pipeline setup, infrastructure automation, monitoring implementation, and team training to accelerate software delivery and improve quality.",
+    category: "DevOps & Automation",
+    subcategory: "CI/CD Implementation",
+    price: 18000,
+    currency: "$",
+    pricingModel: "project",
+    features: [
+      "CI/CD pipeline design and implementation",
+      "Infrastructure as Code (IaC)",
+      "Automated testing integration",
+      "Deployment automation",
+      "Monitoring and logging setup",
+      "Security scanning integration",
+      "Performance optimization",
+      "Team training and documentation",
+      "Best practices implementation",
+      "Ongoing support and maintenance"
+    ],
+    benefits: [
+      "Reduce deployment time by 90%",
+      "Improve code quality and reliability",
+      "Increase deployment frequency",
+      "Reduce manual errors",
+      "Accelerate time to market"
+    ],
+    useCases: [
+      "Software development acceleration",
+      "Quality assurance automation",
+      "Infrastructure automation",
+      "Deployment optimization",
+      "Team productivity improvement"
+    ],
+    targetAudience: [
+      "Software development companies",
+      "Technology startups",
+      "Enterprise IT departments",
+      "Digital transformation projects",
+      "Agile development teams"
+    ],
+    tags: ["DevOps", "CI/CD", "Automation", "Infrastructure", "Deployment"],
+    estimatedDelivery: "10-16 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$18,000 - $120,000/project",
+    roi: "250-500%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Jenkins", "GitLab CI", "GitHub Actions", "Docker", "Kubernetes", "Terraform"],
+      integrations: ["Git repositories", "Cloud platforms", "Monitoring tools", "Testing frameworks", "Security scanners"],
+      apiEndpoints: 300,
+      uptime: "99.9%",
+      security: ["Secure pipeline design", "Access control", "Audit logging", "Compliance monitoring"]
+    },
+    competitors: ["Red Hat", "GitLab", "GitHub", "Atlassian", "Microsoft"],
+    marketSize: "$19.8 billion by 2025"
+  },
+
+  // Data Analytics & Business Intelligence Implementation
+  {
+    id: "data-analytics-business-intelligence-implementation",
+    title: "Data Analytics & Business Intelligence Implementation",
+    description: "Comprehensive data analytics and BI implementation services that help businesses collect, process, analyze, and visualize data to make informed decisions and gain competitive advantages.",
+    category: "Data & Analytics",
+    subcategory: "BI Implementation",
+    price: 20000,
+    currency: "$",
+    pricingModel: "project",
+    features: [
+      "Data architecture design",
+      "ETL/ELT pipeline development",
+      "Data warehouse implementation",
+      "Business intelligence dashboard creation",
+      "Advanced analytics implementation",
+      "Machine learning model deployment",
+      "Data governance setup",
+      "Performance optimization",
+      "User training and documentation",
+      "Ongoing support and maintenance"
+    ],
+    benefits: [
+      "Make data-driven decisions",
+      "Improve operational efficiency",
+      "Identify new business opportunities",
+      "Reduce costs through insights",
+      "Gain competitive advantage"
+    ],
+    useCases: [
+      "Business intelligence implementation",
+      "Data warehouse development",
+      "Advanced analytics setup",
+      "Machine learning deployment",
+      "Data governance implementation"
+    ],
+    targetAudience: [
+      "Large enterprises",
+      "Mid-market companies",
+      "Government agencies",
+      "Healthcare organizations",
+      "Financial institutions"
+    ],
+    tags: ["Data Analytics", "Business Intelligence", "Data Warehouse", "Machine Learning", "Visualization"],
+    estimatedDelivery: "12-20 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$20,000 - $150,000/project",
+    roi: "300-700%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "R", "SQL", "Tableau", "Power BI", "Apache Spark"],
+      integrations: ["Databases", "Cloud platforms", "ERP systems", "CRM systems", "External APIs"],
+      apiEndpoints: 400,
+      uptime: "99.9%",
+      security: ["Data encryption", "Access control", "Audit logging", "Compliance reporting"]
+    },
+    competitors: ["Deloitte", "Accenture", "IBM", "Microsoft", "SAS"],
+    marketSize: "$31.5 billion by 2025"
+  },
+
+  // IT Infrastructure Management & Support
+  {
+    id: "it-infrastructure-management-support",
+    title: "IT Infrastructure Management & Support",
+    description: "Comprehensive IT infrastructure management services including server management, network administration, backup solutions, disaster recovery, and 24/7 technical support to ensure optimal performance and reliability.",
+    category: "Infrastructure Management",
+    subcategory: "Managed Services",
+    price: 5000,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Server and network monitoring",
+      "Proactive maintenance and updates",
+      "Backup and disaster recovery",
+      "Security patch management",
+      "Performance optimization",
+      "Capacity planning",
+      "24/7 technical support",
+      "Incident response and resolution",
+      "Documentation and reporting",
+      "Vendor management"
+    ],
+    benefits: [
+      "Reduce IT downtime by 70%",
+      "Lower IT operational costs",
+      "Improve system reliability",
+      "Enhance security posture",
+      "Focus on core business activities"
+    ],
+    useCases: [
+      "Infrastructure monitoring",
+      "System maintenance",
+      "Disaster recovery",
+      "Performance optimization",
+      "Technical support"
+    ],
+    targetAudience: [
+      "Small to medium businesses",
+      "Growing companies",
+      "Non-profit organizations",
+      "Government agencies",
+      "Healthcare providers"
+    ],
+    tags: ["Infrastructure", "Managed Services", "Monitoring", "Support", "Maintenance"],
+    estimatedDelivery: "2-4 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$5,000 - $25,000/month",
+    roi: "200-400%",
+    innovationLevel: "Standard",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Windows Server", "Linux", "VMware", "Hyper-V", "Backup software", "Monitoring tools"],
+      integrations: ["Active Directory", "Exchange", "SQL Server", "Network equipment", "Storage systems"],
+      apiEndpoints: 100,
+      uptime: "99.9%",
+      security: ["Secure remote access", "User authentication", "Audit logging", "Data protection"]
+    },
+    competitors: ["IBM", "HPE", "Dell Technologies", "Cisco", "Microsoft"],
+    marketSize: "$23.4 billion by 2025"
   }
 ];
