@@ -1352,6 +1352,446 @@ export default function MicroSaaS() {
         'Cutting-edge research capabilities'
       ],
       category: 'Quantum Computing'
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Voice Analytics Platform',
+      description: 'Advanced voice analysis for customer service, sales calls, and team meetings with sentiment analysis and insights.',
+      features: [
+        'Real-time voice sentiment analysis',
+        'Call quality and performance metrics',
+        'Automated transcription and summarization',
+        'Customer emotion detection',
+        'Sales coaching recommendations',
+        'Compliance monitoring and recording'
+      ],
+      pricing: '$399 – $2,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '40% improvement in customer satisfaction',
+        'Automated call quality assessment',
+        'Enhanced sales team performance',
+        'Reduced compliance risks'
+      ],
+      category: 'Voice Analytics'
+    },
+    {
+      icon: Zap,
+      name: 'Smart Energy Management System',
+      description: 'IoT-powered energy monitoring and optimization for buildings and facilities.',
+      features: [
+        'Real-time energy consumption monitoring',
+        'Predictive maintenance alerts',
+        'Automated energy optimization',
+        'Carbon footprint tracking',
+        'Cost analysis and reporting',
+        'Integration with smart devices'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '25% reduction in energy costs',
+        'Automated energy optimization',
+        'Improved sustainability metrics',
+        'Predictive maintenance capabilities'
+      ],
+      category: 'IoT & Energy'
+    },
+    {
+      icon: Shield,
+      name: 'AI Fraud Detection Engine',
+      description: 'Real-time fraud detection and prevention for financial transactions and user activities.',
+      features: [
+        'Real-time transaction monitoring',
+        'Machine learning fraud detection',
+        'Behavioral analysis and scoring',
+        'Risk assessment and alerts',
+        'False positive reduction',
+        'Compliance reporting and audit trails'
+      ],
+      pricing: '$499 – $3,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '99.5% fraud detection accuracy',
+        'Reduced false positives',
+        'Automated risk assessment',
+        'Enhanced security compliance'
+      ],
+      category: 'Financial Security'
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Recruitment Assistant',
+      description: 'Intelligent candidate screening, interview scheduling, and hiring process automation.',
+      features: [
+        'AI-powered resume screening',
+        'Automated interview scheduling',
+        'Candidate scoring and ranking',
+        'Video interview analysis',
+        'Background check integration',
+        'Hiring team collaboration tools'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '60% reduction in time-to-hire',
+        'Improved candidate quality',
+        'Automated screening processes',
+        'Enhanced hiring team efficiency'
+      ],
+      category: 'HR Technology'
+    },
+    {
+      icon: Globe,
+      name: 'Smart City IoT Platform',
+      description: 'Comprehensive IoT platform for smart city infrastructure management and optimization.',
+      features: [
+        'Traffic flow optimization',
+        'Environmental monitoring',
+        'Public safety analytics',
+        'Infrastructure health monitoring',
+        'Citizen engagement tools',
+        'Data visualization dashboards'
+      ],
+      pricing: '$2,999 – $15,999/month',
+      timeline: '6–8 weeks',
+      benefits: [
+        '30% improvement in traffic flow',
+        'Enhanced public safety',
+        'Optimized resource utilization',
+        'Better citizen services'
+      ],
+      category: 'Smart Cities'
+    },
+    {
+      icon: FileText,
+      name: 'AI Legal Document Analyzer',
+      description: 'Intelligent legal document analysis, contract review, and compliance monitoring.',
+      features: [
+        'Automated contract analysis',
+        'Legal risk assessment',
+        'Compliance monitoring',
+        'Document comparison and review',
+        'Legal research assistance',
+        'Case law analysis and insights'
+      ],
+      pricing: '$599 – $3,999/month',
+      timeline: '4–5 weeks',
+      benefits: [
+        '80% reduction in document review time',
+        'Enhanced legal accuracy',
+        'Automated compliance checking',
+        'Improved legal research efficiency'
+      ],
+      category: 'Legal Technology'
+    },
+    {
+      icon: TrendingUp,
+      name: 'Predictive Maintenance Platform',
+      description: 'AI-driven equipment maintenance prediction and optimization for industrial operations.',
+      features: [
+        'Equipment health monitoring',
+        'Predictive failure analysis',
+        'Maintenance scheduling optimization',
+        'Spare parts inventory management',
+        'Cost analysis and reporting',
+        'Integration with IoT sensors'
+      ],
+      pricing: '$499 – $2,999/month',
+      timeline: '4–5 weeks',
+      benefits: [
+        '40% reduction in unplanned downtime',
+        'Optimized maintenance schedules',
+        'Reduced maintenance costs',
+        'Improved equipment reliability'
+      ],
+      category: 'Industrial IoT'
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Medical Diagnosis Assistant',
+      description: 'Advanced medical image analysis and diagnostic support for healthcare professionals.',
+      features: [
+        'Medical image analysis (X-ray, MRI, CT)',
+        'Symptom analysis and recommendations',
+        'Drug interaction checking',
+        'Patient history analysis',
+        'Diagnostic confidence scoring',
+        'Integration with EMR systems'
+      ],
+      pricing: '$1,999 – $9,999/month',
+      timeline: '6–8 weeks',
+      benefits: [
+        '95% diagnostic accuracy improvement',
+        'Faster diagnosis times',
+        'Reduced medical errors',
+        'Enhanced patient care quality'
+      ],
+      category: 'Healthcare AI'
+    },
+    {
+      icon: Shield,
+      name: 'Blockchain Supply Chain Tracker',
+      description: 'Transparent supply chain tracking and verification using blockchain technology.',
+      features: [
+        'End-to-end supply chain visibility',
+        'Product authenticity verification',
+        'Quality assurance tracking',
+        'Sustainability monitoring',
+        'Compliance documentation',
+        'Real-time tracking and alerts'
+      ],
+      pricing: '$399 – $2,499/month',
+      timeline: '4–5 weeks',
+      benefits: [
+        '100% supply chain transparency',
+        'Enhanced product authenticity',
+        'Improved compliance tracking',
+        'Better quality control'
+      ],
+      category: 'Blockchain'
+    },
+    {
+      icon: Users,
+      name: 'AI Customer Experience Optimizer',
+      description: 'Comprehensive customer experience analysis and optimization across all touchpoints.',
+      features: [
+        'Customer journey mapping',
+        'Experience analytics and insights',
+        'Personalization recommendations',
+        'Churn prediction and prevention',
+        'Customer satisfaction tracking',
+        'Multi-channel experience optimization'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '35% improvement in customer satisfaction',
+        'Reduced customer churn',
+        'Enhanced personalization',
+        'Data-driven experience optimization'
+      ],
+      category: 'Customer Experience'
+    },
+    {
+      icon: Zap,
+      name: 'Smart Home Automation Hub',
+      description: 'AI-powered smart home management with energy optimization and security monitoring.',
+      features: [
+        'Intelligent device control',
+        'Energy usage optimization',
+        'Security monitoring and alerts',
+        'Predictive maintenance',
+        'Voice and app control',
+        'Integration with 1000+ devices'
+      ],
+      pricing: '$199 – $1,299/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '30% reduction in energy costs',
+        'Enhanced home security',
+        'Automated home management',
+        'Improved comfort and convenience'
+      ],
+      category: 'Smart Home'
+    },
+    {
+      icon: FileText,
+      name: 'AI Content Moderation Platform',
+      description: 'Automated content moderation for social media, forums, and user-generated content.',
+      features: [
+        'Real-time content analysis',
+        'Multi-language moderation',
+        'Context-aware filtering',
+        'Custom moderation rules',
+        'Human review workflows',
+        'Analytics and reporting'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '99% accuracy in content moderation',
+        'Reduced moderation costs',
+        'Faster content review',
+        'Improved platform safety'
+      ],
+      category: 'Content Moderation'
+    },
+    {
+      icon: Globe,
+      name: 'Edge Computing Analytics Platform',
+      description: 'Real-time data processing and analytics at the edge for IoT and mobile applications.',
+      features: [
+        'Real-time data processing',
+        'Edge AI model deployment',
+        'Low-latency analytics',
+        'Offline capability',
+        'Data synchronization',
+        'Performance monitoring'
+      ],
+      pricing: '$399 – $2,499/month',
+      timeline: '4–5 weeks',
+      benefits: [
+        '90% reduction in latency',
+        'Improved data privacy',
+        'Reduced bandwidth costs',
+        'Enhanced application performance'
+      ],
+      category: 'Edge Computing'
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Trading Algorithm Platform',
+      description: 'Advanced algorithmic trading platform with AI-driven market analysis and execution.',
+      features: [
+        'AI market analysis and prediction',
+        'Automated trading strategies',
+        'Risk management and controls',
+        'Backtesting and optimization',
+        'Real-time market monitoring',
+        'Portfolio management tools'
+      ],
+      pricing: '$999 – $4,999/month',
+      timeline: '5–6 weeks',
+      benefits: [
+        'Improved trading performance',
+        'Automated market analysis',
+        'Enhanced risk management',
+        '24/7 market monitoring'
+      ],
+      category: 'Financial Technology'
+    },
+    {
+      icon: Shield,
+      name: 'Zero Trust Security Platform',
+      description: 'Comprehensive zero trust security implementation with continuous verification and monitoring.',
+      features: [
+        'Identity and access management',
+        'Continuous security monitoring',
+        'Micro-segmentation',
+        'Threat detection and response',
+        'Compliance automation',
+        'Security analytics and reporting'
+      ],
+      pricing: '$599 – $3,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        'Enhanced security posture',
+        'Reduced attack surface',
+        'Automated threat response',
+        'Improved compliance management'
+      ],
+      category: 'Cybersecurity'
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Learning Management System',
+      description: 'Intelligent learning platform with personalized content and adaptive learning paths.',
+      features: [
+        'Personalized learning paths',
+        'Adaptive content delivery',
+        'Progress tracking and analytics',
+        'AI tutoring and assistance',
+        'Skill gap analysis',
+        'Integration with HR systems'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '50% improvement in learning outcomes',
+        'Personalized learning experience',
+        'Automated skill assessment',
+        'Enhanced employee development'
+      ],
+      category: 'Education Technology'
+    },
+    {
+      icon: Zap,
+      name: 'Autonomous Vehicle Fleet Management',
+      description: 'AI-powered fleet management for autonomous vehicles with route optimization and safety monitoring.',
+      features: [
+        'Route optimization and planning',
+        'Real-time vehicle monitoring',
+        'Predictive maintenance',
+        'Safety and compliance tracking',
+        'Fleet performance analytics',
+        'Integration with traffic systems'
+      ],
+      pricing: '$1,999 – $9,999/month',
+      timeline: '6–8 weeks',
+      benefits: [
+        '30% reduction in operational costs',
+        'Enhanced safety and compliance',
+        'Optimized fleet utilization',
+        'Improved service reliability'
+      ],
+      category: 'Autonomous Vehicles'
+    },
+    {
+      icon: FileText,
+      name: 'AI-Powered Research Assistant',
+      description: 'Intelligent research platform for academic and business research with automated analysis and insights.',
+      features: [
+        'Automated literature review',
+        'Data analysis and visualization',
+        'Research paper generation',
+        'Citation and reference management',
+        'Collaborative research tools',
+        'Plagiarism detection and prevention'
+      ],
+      pricing: '$199 – $1,299/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '70% reduction in research time',
+        'Enhanced research quality',
+        'Automated data analysis',
+        'Improved collaboration'
+      ],
+      category: 'Research Technology'
+    },
+    {
+      icon: Globe,
+      name: '5G Network Optimization Platform',
+      description: 'Advanced 5G network management with AI-driven optimization and performance monitoring.',
+      features: [
+        'Network performance monitoring',
+        'AI-driven optimization',
+        'Capacity planning and management',
+        'Quality of service optimization',
+        'Predictive maintenance',
+        'Real-time analytics and reporting'
+      ],
+      pricing: '$2,999 – $15,999/month',
+      timeline: '6–8 weeks',
+      benefits: [
+        '40% improvement in network efficiency',
+        'Reduced operational costs',
+        'Enhanced user experience',
+        'Proactive network management'
+      ],
+      category: '5G Technology'
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Drug Discovery Platform',
+      description: 'Advanced AI platform for pharmaceutical drug discovery and development optimization.',
+      features: [
+        'Molecular design and optimization',
+        'Drug-target interaction prediction',
+        'Clinical trial optimization',
+        'Adverse effect prediction',
+        'Patent analysis and research',
+        'Collaboration and workflow management'
+      ],
+      pricing: '$4,999 – $25,999/month',
+      timeline: '8–12 weeks',
+      benefits: [
+        '50% reduction in discovery time',
+        'Improved success rates',
+        'Reduced development costs',
+        'Enhanced drug safety'
+      ],
+      category: 'Pharmaceutical AI'
     }
   ];
 
