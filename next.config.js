@@ -1,7 +1,9 @@
 
 // Performance optimizations
 const nextConfig = {
-  reactStrictMode: false,
+
+  reactStrictMode: true,
+  swcMinify: true,
   compress: true,
   poweredByHeader: false,
   eslint: { 
@@ -13,6 +15,7 @@ const nextConfig = {
   },
   trailingSlash: true,
   generateBuildId: async () => 'build-' + Date.now(),
+
   // Temporarily exclude default pages to allow build while we quarantine corrupted pages
   pageExtensions: ['page.tsx'],
   images: {

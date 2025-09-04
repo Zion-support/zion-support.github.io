@@ -1,5 +1,4 @@
 
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Users, MapPin, Clock, Briefcase, Heart, Zap, Brain, Shield, Cloud, Rocket } from 'lucide-react';
@@ -100,7 +99,6 @@ export default function CareersPage() {
   return (
     <>
 
-
       <Helmet>
         <title>Careers - Zion Tech Group | Join Our Team</title>
         <meta name="description" content="Join Zion Tech Group and be part of a team that's shaping the future of technology. Explore career opportunities in AI, cybersecurity, cloud, and more." />
@@ -147,7 +145,7 @@ export default function CareersPage() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {companyBenefits.map((benefit, index) => (
+              {benefits.map((benefit, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
                     <benefit.icon className="w-6 h-6 text-white" />
@@ -262,14 +260,14 @@ export default function CareersPage() {
 
           {/* Company Benefits */}
           <section className="py-20 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
                   Why Work With Us?
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -277,14 +275,14 @@ export default function CareersPage() {
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
                 {companyBenefits.map((benefit, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 2 0 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center"
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                    className="bg-white rounded-xl p-8 shadow-lg hover: shado w-xl transition-shadow duration-300 text-center"
                   >
                     <div className="text-blue-600 mb-4 flex justify-center">
                       {benefit.icon}
@@ -353,14 +351,14 @@ export default function CareersPage() {
 
           {/* Job Openings */}
           <section id="openings" className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
                   Open Positions
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -372,13 +370,13 @@ export default function CareersPage() {
                 {jobOpenings.map((job, index) => (
                   <motion.div
                     key={job.id}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 2 0 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg hover: shado w-xl transition-shadow duration-300 overflow-hidden"
                   >
                     <div className="p-8">
-                      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
+                      <div className="flex flex-col lg: fle x-row lg: item s-center lg: justif y-between mb-6">
                         <div>
                           <h3 className="text-2xl font-bold text-gray-900 mb-2">
                             {job.title}
@@ -459,15 +457,15 @@ export default function CareersPage() {
                 transition={{ duration: 0.6 }}
                 className="text-center"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-6">
                   Don't See Your Role?
                 </h2>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                   We're always looking for talented individuals. Send us your resume and let us know how you can contribute to our team.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                   <motion.a
-                    href="mailto:careers@ziontechgroup.com"
+                    href="mailto: career s@ziontechgroup.com"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
@@ -491,7 +489,6 @@ export default function CareersPage() {
         </main>
       </PageTransition>
     </>
-
 
   );
 }

@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import EnhancedLayout from '../../components/EnhancedLayout';
 import Link from 'next/link';
 
 const CategoryIndexPage: NextPage = () => {

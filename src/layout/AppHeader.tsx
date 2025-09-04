@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+
+import { Link, Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 export function AppHeader() {
@@ -19,9 +20,9 @@ export function AppHeader() {
         <Link to="/" className="font-bold text-gray-900">Zion Tech Group</Link>
         <nav className="hidden md:flex items-center gap-6">
           {nav.map(item => (
-            <NavLink key={item.to} to={item.to} className={({ isActive }) => isActive ? 'text-indigo-600 font-semibold' : 'text-gray-700 hover:text-gray-900'}>
+            <Link key={item.to} to={item.to} className={({ isActive }) => isActive ? 'text-indigo-600 font-semibold' : 'text-gray-700 hover:text-gray-900'}>
               {item.name}
-            </NavLink>
+            </Link>
           ))}
         </nav>
         <button className="md:hidden p-2" aria-label="Toggle menu" onClick={() => setMobileOpen(v => !v)}>
@@ -39,6 +40,25 @@ export function AppHeader() {
           </nav>
         </div>
       )}
+    </header>
+  );
+}
+
+
+import { Link } from 'react-router-dom';
+
+export function AppHeader() {
+  return (
+    <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+        <Link to="/" className="text-lg font-bold">Zion Tech Group</Link>
+        <nav className="hidden md:flex items-center space-x-6">
+          <Link to="/" className="text-gray-700 hover:text-cyan-600">Home</Link>
+          <Link to="/services" className="text-gray-700 hover:text-cyan-600">Services</Link>
+          <Link to="/about" className="text-gray-700 hover:text-cyan-600">About</Link>
+          <Link to="/contact" className="text-gray-700 hover:text-cyan-600">Contact</Link>
+        </nav>
+      </div>
     </header>
   );
 }

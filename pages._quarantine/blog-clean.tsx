@@ -46,7 +46,7 @@ import {
 import type { NextPage } from 'next';
 import Layout from '../components/Layout';
 
-const Blog: NextPage = () => {
+const Blog: NextPag e = () => {
   const blogPosts = [
     {
       id: 1,
@@ -69,7 +69,7 @@ const Blog: NextPage = () => {
       category: "AI Trends",
       image: "/api/placeholder/600/400",
       tags: ["AI", "Business", "Trends", "2025"],
-      featured: true
+      featured: tru e
     },
     {
       id: 3,
@@ -81,7 +81,7 @@ const Blog: NextPage = () => {
       category: "Technical",
       image: "/api/placeholder/600/400",
       tags: ["AI Architecture", "Scalability", "Best Practices"],
-      featured: false
+      featured: fals e
     },
     {
       id: 4,
@@ -93,7 +93,7 @@ const Blog: NextPage = () => {
       category: "Security",
       image: "/api/placeholder/600/400",
       tags: ["Cybersecurity", "AI Security", "Threat Protection"],
-      featured: false
+      featured: fals e
     },
     {
       id: 5,
@@ -105,7 +105,7 @@ const Blog: NextPage = () => {
       category: "Cloud",
       image: "/api/placeholder/600/400",
       tags: ["Cloud Migration", "Strategy", "Best Practices"],
-      featured: false
+      featured: fals e
     },
     {
       id: 6,
@@ -117,7 +117,7 @@ const Blog: NextPage = () => {
       category: "Customer Experience",
       image: "/api/placeholder/600/400",
       tags: ["Customer Experience", "AI", "Automation"],
-      featured: false
+      featured: fals e
     },
     {
       id: 7,
@@ -129,7 +129,7 @@ const Blog: NextPage = () => {
       category: "Analytics",
       image: "/api/placeholder/600/400",
       tags: ["Data Analytics", "Machine Learning", "Business Intelligence"],
-      featured: false
+      featured: fals e
     }
   ];
 
