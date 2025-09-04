@@ -6,10 +6,11 @@ This document describes the migration of automation tasks from GitHub Actions wo
 
 ## Migration Summary
 
-**Date:** August 29, 2025  
+**Date:** September 3, 2025  
 **Status:** Completed  
 **Total Workflows Migrated:** 35+ workflows  
-**PM2 Processes Created:** 13 automation processes
+**PM2 Processes Created:** 8 automation processes  
+**Active GitHub Actions Removed:** 2 workflows (ci-cd.yml, continuous-automation.yml)
 
 ## What Was Migrated
 
@@ -51,19 +52,21 @@ This document describes the migration of automation tasks from GitHub Actions wo
 
 ### Core Processes
 
-1. **zion-app** - Main application server
-2. **zion-backend** - Backend server
-3. **console-error-fixer** - Console error fixing (every 15 minutes)
-4. **link-checker** - Link validation (every 30 minutes)
-5. **continuous-improvement** - Continuous improvement tasks (every 2 hours)
-6. **daily-build-test** - Build and test automation (every hour)
-7. **security-audit** - Security auditing (every 4 hours)
-8. **dependency-updates** - Dependency management (every 6 hours)
-9. **performance-monitor** - Performance monitoring (every 2 hours)
-10. **quality-checks** - Quality assurance (every 3 hours)
-11. **link-integrity** - Link integrity checking (every 2 hours)
-12. **front-maximizer** - Frontend optimization (every 4 hours)
-13. **sitemap-runner** - Sitemap generation (every 6 hours)
+1. **ziontechgroup-web** - Main application server
+2. **automation-health-check** - Health monitoring (every 5 minutes)
+3. **automation-security-scanner** - Security scanning (every 6 hours)
+4. **automation-performance-monitor** - Performance monitoring (every 2 hours)
+5. **ci-cd-automation** - CI/CD pipeline automation (every hour)
+6. **continuous-automation** - Continuous automation tasks (every 6 hours)
+7. **build-test-automation** - Build and test automation (every 2 hours)
+8. **quality-checks** - Quality assurance checks (every 3 hours)
+
+### Newly Added PM2 Processes (September 3, 2025)
+
+- **ci-cd-automation** - Replaces GitHub Actions CI/CD Pipeline
+- **continuous-automation** - Replaces GitHub Actions Continuous Automation
+- **build-test-automation** - Replaces GitHub Actions Build and Test workflows
+- **quality-checks** - Replaces GitHub Actions Quality Assurance workflows
 
 ### Configuration
 
