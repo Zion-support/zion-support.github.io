@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import NextLink from 'next/link';
+import { useRouter } from 'next/router';
 import {
   Home,
   Users,
@@ -29,7 +30,7 @@ interface SidebarProps {
 }
 
 export default function Sidebar({ isOpen, onClose }: SidebarProps) {
-  const location = useLocation();
+  const router = useRouter();
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
   const toggleSection = (section: string) => {
@@ -49,12 +50,12 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   ];
 
   const services = [
-    { name: 'AI Services', href: '/ai-services', icon: Brain },
+    { name: 'AI Services', href: '/services/ai-development', icon: Brain },
     { name: 'IT Services', href: '/it-services', icon: Network },
     { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud },
-    { name: 'Web Development', href: '/services/web-development', icon: Code },
-    { name: 'Cloud Services', href: '/services/cloud-services', icon: Server },
-    { name: 'AI Development', href: '/services/ai-development', icon: Cpu }
+    { name: 'Cloud Services', href: '/services/cloud', icon: Server },
+    { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+    { name: 'Web Development', href: '/services/website-analytics', icon: Code }
   ];
 
   const solutions = [
@@ -126,13 +127,12 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                 <div className="space-y-2 ml-4">
                   {section.items.map((item) => {
                     const Icon = item.icon;
-                    const isActive = location.pathname === item.href;
+                    const isActive = router.pathname === item.href;
                     
                     return (
-                      <Link
+                      <NextLink
                         key={item.name}
-                        to={item.href}
-                        onClick={onClose}
+                        href={item.href}
                         className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors ${
                           isActive
                             ? 'bg-blue-600 text-white'
@@ -141,7 +141,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                       >
                         <Icon className="w-5 h-5"  />
                         <span>{item.name}</span>
-                      </Link>
+                      </NextLink>
                     );
                   })}
                 </div>

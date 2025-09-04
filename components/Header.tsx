@@ -3,12 +3,12 @@ import NextLink from 'next/link'
 const navLinks: { href: string; label: string }[] = [
   { href: '/', label: 'Home' },
   { href: '/services', label: 'Services' },
-  { href: '/services/micro-saas', label: 'Micro SaaS' },
-  { href: '/services/it-services', label: 'IT Services' },
-  { href: '/services/ai-services', label: 'AI Services' },
+  { href: '/micro-saas', label: 'Micro SaaS' },
+  { href: '/it-services', label: 'IT Services' },
+  { href: '/services/ai-development', label: 'AI Services' },
   { href: '/solutions', label: 'Solutions' },
   { href: '/pricing', label: 'Pricing' },
-  { href: '/blog', label: 'Blog' },
+  { href: '/news', label: 'News' },
   { href: '/contact', label: 'Contact' }
 ]
 

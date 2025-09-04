@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import NextLink from 'next/link';
 import {
   Mail,
   Phone,
@@ -25,12 +25,12 @@ const Footer: React.FC = () => {
         <div className="py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center space-x-2 mb-6">
+            <NextLink href="/" className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
               <span className="text-white font-bold text-2xl">Zion Tech</span>
-            </Link>
+            </NextLink>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Leading technology solutions provider helping businesses transform their digital presence
               with cutting-edge AI, cloud architecture, and innovative development services.
@@ -80,29 +80,29 @@ const Footer: React.FC = () => {
             <h3 className="text-white font-bold text-lg mb-6">Services</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/ai-services" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <NextLink href="/services/ai-development" className="text-gray-400 hover:text-white transition-colors duration-200">
                   AI Services
-                </Link>
+                </NextLink>
               </li>
               <li>
-                <Link to="/it-services" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <NextLink href="/it-services" className="text-gray-400 hover:text-white transition-colors duration-200">
                   IT Services
-                </Link>
+                </NextLink>
               </li>
               <li>
-                <Link to="/micro-saas" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <NextLink href="/micro-saas" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Micro SaaS
-                </Link>
+                </NextLink>
               </li>
               <li>
-                <Link to="/services/cloud-services" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <NextLink href="/services/cloud" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Cloud Services
-                </Link>
+                </NextLink>
               </li>
               <li>
-                <Link to="/services/cybersecurity" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <NextLink href="/services/cybersecurity" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Cybersecurity
-                </Link>
+                </NextLink>
               </li>
             </ul>
           </div>
@@ -112,29 +112,29 @@ const Footer: React.FC = () => {
             <h3 className="text-white font-bold text-lg mb-6">Company</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/about" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <NextLink href="/about" className="text-gray-400 hover:text-white transition-colors duration-200">
                   About Us
-                </Link>
+                </NextLink>
               </li>
               <li>
-                <Link to="/careers" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <NextLink href="/careers" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Careers
-                </Link>
+                </NextLink>
               </li>
               <li>
-                <Link to="/blog" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Blog
-                </Link>
+                <NextLink href="/news" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  News
+                </NextLink>
               </li>
               <li>
-                <Link to="/pricing" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <NextLink href="/pricing" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Pricing
-                </Link>
+                </NextLink>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <NextLink href="/contact" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Contact
-                </Link>
+                </NextLink>
               </li>
             </ul>
           </div>
@@ -144,29 +144,29 @@ const Footer: React.FC = () => {
             <h3 className="text-white font-bold text-lg mb-6">Resources</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/docs" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <NextLink href="/docs" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Documentation
-                </Link>
+                </NextLink>
               </li>
               <li>
-                <Link to="/support" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <NextLink href="/support" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Support
-                </Link>
+                </NextLink>
               </li>
               <li>
-                <Link to="/solutions" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <NextLink href="/solutions" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Solutions
-                </Link>
+                </NextLink>
               </li>
               <li>
-                <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <NextLink href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Privacy Policy
-                </Link>
+                </NextLink>
               </li>
               <li>
-                <Link to="/terms" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <NextLink href="/terms" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Terms of Service
-                </Link>
+                </NextLink>
               </li>
             </ul>
           </div>
@@ -212,15 +212,15 @@ const Footer: React.FC = () => {
         <div className="py-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-400 text-sm mb-4 md:mb-0">© {currentYear} Zion Tech Group. All rights reserved.</div>
           <div className="flex space-x-6 text-sm">
-            <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">
+            <NextLink href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">
               Privacy Policy
-            </Link>
-            <Link to="/terms" className="text-gray-400 hover:text-white transition-colors duration-200">
+            </NextLink>
+            <NextLink href="/terms" className="text-gray-400 hover:text-white transition-colors duration-200">
               Terms of Service
-            </Link>
-            <Link to="/cookies" className="text-gray-400 hover:text-white transition-colors duration-200">
+            </NextLink>
+            <NextLink href="/cookies" className="text-gray-400 hover:text-white transition-colors duration-200">
               Cookie Policy
-            </Link>
+            </NextLink>
           </div>
         </div>
       </div>
