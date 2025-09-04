@@ -1,19 +1,14 @@
 #!/usr/bin/env node
 
-<<<<<<< HEAD
-=======
 /**
  * Master Automation Orchestrator
  * Coordinates all automation processes
  */
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-2df7
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
 class MasterOrchestrator {
-<<<<<<< HEAD
   constructor() {
     this.logFile = path.join(__dirname, '../logs/master-orchestrator.log');
     this.startTime = new Date();
