@@ -1,40 +1,17 @@
 {
-<<<<<<< HEAD
-  "timestamp": "2025-09-03T22:18:49.800Z",
-=======
-<<<<<<< HEAD
-  "timestamp": "2025-09-03T20:36:49.970Z",
+  "timestamp": "2025-09-03T16:31:19.468Z",
   "bundleSize": {
     ".next": {
-      "size": 0,
-      "sizeMB": "0.00"
->>>>>>> cursor/add-new-services-and-advertise-them-334b
-=======
-  "timestamp": "2025-09-04T00:00:07.357Z",
-=======
-  "timestamp": "2025-09-04T02:00:48.117Z",
->>>>>>> d92321314d9 (Checkpoint before follow-up message)
-  "bundleSize": {
-    ".next": {
-      "size": 49474164,
-      "sizeMB": "47.18"
+      "size": 41811549,
+      "sizeMB": "39.87"
     },
     "node_modules": {
-<<<<<<< HEAD
-      "size": 820676108,
-      "sizeMB": "782.66"
+      "size": 819927451,
+      "sizeMB": "781.94"
     }
   },
   "fileCounts": {
-    ".tsx": 26,
-=======
-      "size": 0,
-      "sizeMB": "0.00"
-    }
-  },
-  "fileCounts": {
-    ".tsx": 25,
->>>>>>> cursor/add-new-services-and-advertise-them-334b
+    ".tsx": 13,
     ".ts": 0,
     ".jsx": 0,
     ".js": 0,

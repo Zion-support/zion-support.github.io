@@ -1,31 +1,49 @@
 {
-  "timestamp": "2025-09-04T06:30:45.510Z",
-  "checks": [
-    {
-      "name": "Package.json exists",
+  "timestamp": "2025-09-03T16:31:06.384Z",
+  "status": "healthy",
+  "checks": {
+    "nodeVersion": {
       "status": "pass",
-      "result": "package.json found"
+      "value": "v22.16.0"
     },
-    {
-      "name": "Dependencies installed",
+    "memory": {
       "status": "pass",
-      "result": "Dependencies installed"
+      "value": {
+        "rss": "47MB",
+        "heapUsed": "4MB",
+        "heapTotal": "5MB"
+      }
+    },
+    "diskSpace": {
+      "status": "pass",
+      "value": "overlay         126G   15G  106G  12% /"
+    },
+    "sourceFiles": {
+      "status": "pass",
+      "value": "exists"
+    },
+    "nodeModules": {
+      "status": "pass",
+      "value": "exists"
+    },
+    "pm2Processes": {
+      "status": "pass",
+      "message": "File exists"
     },
     {
-      "name": "Build process",
-      "status": "fail",
-      "error": "Build failed"
+      "name": "File: pages/index.tsx",
+      "status": "pass",
+      "message": "File exists"
     },
     {
-      "name": "Linting",
-      "status": "fail",
-      "error": "Linting failed"
+      "name": "Disk Space",
+      "status": "pass",
+      "message": "Disk usage: 12%"
     },
     {
-      "name": "TypeScript compilation",
-      "status": "fail",
-      "error": "TypeScript compilation failed"
+      "name": "Memory Usage",
+      "status": "pass",
+      "message": "Memory usage: 8%"
     }
-  ],
-  "status": "unhealthy"
+  }
 }

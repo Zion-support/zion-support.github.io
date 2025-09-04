@@ -1,21 +1,11 @@
 {
-  "timestamp": "2025-09-02T21:37:50.841Z",
-  "securityScore": 55,
-  "vulnerabilities": [
-    "Dependency vulnerabilities found",
-    "XSS risk in SEOEnhancer.tsx",
-    "Code injection risk in helpers.js"
-  ],
-  "recommendations": [
-    "Run \"npm audit fix\" to resolve dependency issues",
-    "Sanitize HTML in SEOEnhancer.tsx",
-    "Remove eval/Function usage in helpers.js",
-    "Configure HTTPS for production"
-  ],
-  "summary": [
-    "🟠 Moderate security concerns",
-    "Security Score: 55/100",
-    "Vulnerabilities: 3",
-    "Recommendations: 4"
-  ]
+  "timestamp": "2025-09-03T13:52:01.849Z",
+  "issues": [],
+  "fixes": [],
+  "summary": {
+    "totalIssues": 0,
+    "fixedIssues": 0,
+    "criticalIssues": 0,
+    "highIssues": 0
+  }
 }

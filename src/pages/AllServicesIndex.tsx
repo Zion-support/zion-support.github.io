@@ -1,0 +1,1 @@
+import React from 'react'; export default AllServicesIndex; const AllServicesIndex: Reac t.FC = () : JSX.Element => {; const [searchTerm, setSearchTerm] = useState("); const [selectedCategory, setSelectedCategory] = useState("all"); const allServices = [

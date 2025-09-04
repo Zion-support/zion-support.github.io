@@ -8,7 +8,10 @@ class BulkPRMerger {
   constructor() {
     this.owner = 'Zion-Holdings';
     this.repo = 'zion.app';
-    this.token = process.env.GITHUB_TOKEN || 'ghs_3aPvRQYJhOrEtrdy0AdRsDxXNa46QH3TQD82';
+    this.token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '';
+    if (!this.token) {
+      throw new Error('GITHUB_TOKEN is required. Set GITHUB_TOKEN (or GH_TOKEN) in your environment.');
+    }
     this.results = {
       timestamp: new Date().toISOString(),
       prs: [],

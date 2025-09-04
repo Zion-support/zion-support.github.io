@@ -1,254 +1,308 @@
-import Link from 'next/link';
-import Head from 'next/head';
-import { useState } from 'react';
+import React from 'react'
+import dynamic from 'next/dynamic'
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+import { 
+  MessageCircle, 
+  Phone, 
+  Mail, 
+  BookOpen, 
+  ArrowRight, 
+  CheckCircle, 
+  Star,
+  Users,
+  Clock,
+  Globe,
+  Shield,
+  Zap
+} from 'lucide-react'
 
-export default function Help() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: fals e })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: fals e })
 
-  const categories = ['All', 'Getting Started', 'Account & Billing', 'Technical Support', 'API Documentation', 'Troubleshooting'];
-
-  const helpArticles = [
+const HelpPage: Reac t.FC = () => {
+  const supportOptions = [
     {
-      id: 1,
-      title: "Getting Started with Zion Tech Group Services",
-      category: "Getting Started",
-      description: "Learn how to set up your account and start using our services effectively.",
-      readTime: "5 min read"
+      icon: <MessageCircle className="w-8 h-8"  />,
+      title: "Live Chat Support",
+      description: "Get instant help from our support team",
+      action: "Start Chat",
+      availability: "24/7",
+      responseTime: "Immediate"
     },
     {
-      id: 2,
-      title: "Understanding Your Billing and Subscription",
-      category: "Account & Billing",
-      description: "Everything you need to know about billing, subscriptions, and payment methods.",
-      readTime: "3 min read"
+      icon: <Phone className="w-8 h-8"  />,
+      title: "Phone Support",
+      description: "Speak directly with our technical experts",
+      action: "Call Now",
+      availability: "Mon-Fri 9AM-6PM",
+      responseTime: "Immediate"
     },
     {
-      id: 3,
-      title: "API Integration Guide",
-      category: "API Documentation",
-      description: "Step-by-step guide to integrating our APIs into your applications.",
-      readTime: "10 min read"
+      icon: <Mail className="w-8 h-8"  />,
+      title: "Email Support",
+      description: "Send us your questions and get detailed responses",
+      action: "Send Email",
+      availability: "24/7",
+      responseTime: "Within 4 hours"
     },
     {
-      id: 4,
-      title: "Troubleshooting Common Issues",
-      category: "Troubleshooting",
-      description: "Solutions to the most common problems users encounter.",
-      readTime: "7 min read"
-    },
-    {
-      id: 5,
-      title: "Security Best Practices",
-      category: "Technical Support",
-      description: "Essential security practices to keep your data and systems secure.",
-      readTime: "8 min read"
-    },
-    {
-      id: 6,
-      title: "Performance Optimization Tips",
-      category: "Technical Support",
-      description: "How to optimize your applications for better performance.",
-      readTime: "6 min read"
+      icon: <BookOpen className="w-8 h-8"  />,
+      title: "Documentation",
+      description: "Comprehensive guides and API references",
+      action: "View Docs",
+      availability: "24/7",
+      responseTime: "Immediate"
     }
-  ];
+  ]
 
-  const filteredArticles = helpArticles.filter(article => {
-    const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         article.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'All' || article.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+  const faqs = [
+    {
+      question: "How do I get started with your services?",
+      answer: "Getting started is easy! Contact us through our website, call us at +1 302 464 0950, or email us at kleber@ziontechgroup.com. We'll schedule a consultation to understand your needs and provide a customized solution."
+    },
+    {
+      question: "What types of AI services do you offer?",
+      answer: "We offer comprehensive AI services including machine learning models, natural language processing, computer vision, predictive analytics, and AI consulting. Our team can help you implement AI solutions tailored to your specific business needs."
+    },
+    {
+      question: "Do you provide 24/7 support?",
+      answer: "Yes! We offer 24/7 support for all our services. Our team is always available to help you with any technical issues or questions you may have."
+    },
+    {
+      question: "What is your typical project timeline?",
+      answer: "Project timelines vary depending on the scope and complexity. Simple projects can be completed in 1-2 weeks, while complex AI implementations may take 2-8 weeks. We'll provide a detailed timeline during our initial consultation."
+    },
+    {
+      question: "Do you offer custom development?",
+      answer: "Absolutely! We specialize in custom development solutions. Whether you need a custom AI model, micro SaaS application, or IT infrastructure setup, we can create a solution that meets your specific requirements."
+    },
+    {
+      question: "What security measures do you have in place?",
+      answer: "Security is our top priority. We implement comprehensive cybersecurity measures including data encryption, access controls, regular security audits, and compliance with industry standards like SOC 2 and ISO 27001."
+    }
+  ]
+
+  const contactInfo = [
+    {
+      icon: <Phone className="w-6 h-6"  />,
+      title: "Phone",
+      details: "+1 302 464 0950",
+      link: "tel:+13024640950"
+    },
+    {
+      icon: <Mail className="w-6 h-6"  />,
+      title: "Email",
+      details: "kleber@ziontechgroup.com",
+      link: "mailto: klebe r@ziontechgroup.com"
+    },
+    {
+      icon: <Globe className="w-6 h-6"  />,
+      title: "Address",
+      details: "364 E Main St STE 1008\nMiddletown, DE 19709",
+      link: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
+    }
+  ]
 
   return (
     <>
-      <Head>
-        <title>Help Center - Zion Tech Group | Support & Documentation</title>
-        <meta name="description" content="Get help and support for Zion Tech Group services. Find documentation, troubleshooting guides, and contact our support team." />
-        <meta name="keywords" content="help, support, documentation, troubleshooting, FAQ, customer service, Zion Tech Group" />
-        <link rel="canonical" href="https://ziontechgroup.com/help" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="robots" content="index, follow" />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content="Help Center - Zion Tech Group | Support & Documentation" />
-        <meta property="og:description" content="Get help and support for Zion Tech Group services." />
-        <meta property="og:url" content="https://ziontechgroup.com/help" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Help Center - Zion Tech Group | Support & Documentation" />
-        <meta name="twitter:description" content="Get help and support for Zion Tech Group services." />
-        <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
-      </Head>
-
-      <div className="min-h-screen bg-gray-50">
-        {/* Header */}
-        <header className="bg-white shadow-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center py-6">
-              <div className="flex items-center">
-                <Link href="/" className="text-2xl font-bold text-blue-600">
-                  Zion Tech Group
-                </Link>
-              </div>
-              <nav className="hidden md:flex space-x-8">
-                <Link href="/" className="text-gray-700 hover:text-blue-600">Home</Link>
-                <Link href="/services" className="text-gray-700 hover:text-blue-600">Services</Link>
-                <Link href="/about" className="text-gray-700 hover:text-blue-600">About</Link>
-                <Link href="/help" className="text-blue-600 font-medium">Help</Link>
-                <Link href="/contact" className="text-gray-700 hover:text-blue-600">Contact</Link>
-              </nav>
-            </div>
-          </div>
-        </header>
-
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Help Center</h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Find answers, get support, and learn how to make the most of our services.
-            </p>
-            
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto">
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Search for help articles..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full px-6 py-4 text-gray-900 rounded-lg focus:ring-2 focus:ring-blue-300 focus:border-transparent"
-                />
-                <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
-                  <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Category Filter */}
-        <section className="py-8 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-wrap gap-2 justify-center">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                    selectedCategory === category
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Help Articles */}
-        <section className="py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredArticles.map((article) => (
-                <div key={article.id} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm font-medium text-blue-600">{article.category}</span>
-                    <span className="text-sm text-gray-500">{article.readTime}</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{article.title}</h3>
-                  <p className="text-gray-600 mb-4">{article.description}</p>
-                  <Link
-                    href={`/help/${article.id}`}
-                    className="text-blue-600 hover:text-blue-800 font-medium text-sm"
-                  >
-                    Read Article →
-                  </Link>
-                </div>
-              ))}
-            </div>
-
-            {filteredArticles.length === 0 && (
-              <div className="text-center py-12">
-                <p className="text-gray-500 text-lg">No articles found matching your search criteria.</p>
-              </div>
-            )}
-          </div>
-        </section>
-
-        {/* Contact Support */}
-        <section className="py-16 bg-blue-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Still Need Help?</h2>
-            <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-              Can&apos;t find what you&apos;re looking for? Our support team is here to help you with any questions or issues.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors inline-block"
+      <SEO title="Help & Support - Zion Tech Group"
+        description="Get help and support for Zion Tech Group services. Contact our team for assistance with AI services, IT solutions, and micro SaaS development."
+        keywords="help, support, contact, Zion Tech Group, AI services, IT solutions"
+        canonical="https://ziontechgroup.com/help"
+       />
+      
+      <PageTransition>
+        <main className="min-h-screen bg-white">
+          {/* Hero Section */}
+          <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+              <motion.div
+                initial={{ opacity: 0, y: 2 0 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center"
               >
-                Contact Support
-              </Link>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors">
-                Live Chat
-              </button>
-            </div>
-          </div>
-        </section>
-
-        {/* Footer */}
-        <footer className="bg-gray-900 text-white py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div>
-                <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
-                <p className="text-gray-400">
-                  Leading provider of innovative technology solutions and services.
+                <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6">
+                  Help & <span className="text-blue-600">Support</span>
+                </h1>
+                <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                  We're here to help! Get support for our AI services, IT solutions, and micro SaaS development.
                 </p>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-4">Services</h4>
-                <ul className="space-y-2 text-gray-400">
-                  <li><Link href="/services" className="hover:text-white">All Services</Link></li>
-                  <li><Link href="/ai-services" className="hover:text-white">AI Services</Link></li>
-                  <li><Link href="/micro-saas" className="hover:text-white">Micro SaaS</Link></li>
-                  <li><Link href="/it-services" className="hover:text-white">IT Services</Link></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-4">Company</h4>
-                <ul className="space-y-2 text-gray-400">
-                  <li><Link href="/about" className="hover:text-white">About Us</Link></li>
-                  <li><Link href="/team" className="hover:text-white">Team</Link></li>
-                  <li><Link href="/careers" className="hover:text-white">Careers</Link></li>
-                  <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-4">Resources</h4>
-                <ul className="space-y-2 text-gray-400">
-                  <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
-                  <li><Link href="/docs" className="hover:text-white">Documentation</Link></li>
-                  <li><Link href="/help" className="hover:text-white">Help Center</Link></li>
-                  <li><Link href="/faq" className="hover:text-white">FAQ</Link></li>
-                </ul>
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+                  <motion.a
+                    href="tel:+13024640950"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <Phone className="w-5 h-5"  />
+                    Call Now: +1 302 464 0950
+                  </motion.a>
+                  <motion.a
+                    href="mailto: klebe r@ziontechgroup.com"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <Mail className="w-5 h-5"  />
+                    Send Email
+                  </motion.a>
+                </div>
+              </motion.div>
+            </div>
+          </section>
+
+          {/* Support Options */}
+          <section className="py-20">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+              <motion.div
+                initial={{ opacity: 0, y: 2 0 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
+                  Support Options
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Choose the support option that works best for you.
+                </p>
+              </motion.div>
+
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+                {supportOptions.map((option, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 2 0 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg p-8 text-center hover: shado w-xl transition-shadow duration-300"
+                  >
+                    <div className="text-blue-600 mb-4 flex justify-center">
+                      {option.icon}
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {option.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      {option.description}
+                    </p>
+                    <div className="mb-6">
+                      <div className="text-sm text-gray-500 mb-1">
+                        Availability: {option.availability}
+                      </div>
+                      <div className="text-sm text-gray-500">
+                        Response: {option.responseTime}
+                      </div>
+                    </div>
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover: b g-blue-700 transition-colors"
+                    >
+                      {option.action}
+                    </motion.button>
+                  </motion.div>
+                ))}
               </div>
             </div>
-            <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-              <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
+          </section>
+
+          {/* FAQ Section */}
+          <section className="bg-gray-50 py-20">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+              <motion.div
+                initial={{ opacity: 0, y: 2 0 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
+                  Frequently Asked Questions
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Find answers to common questions about our services.
+                </p>
+              </motion.div>
+
+              <div className="max-w-4xl mx-auto">
+                <div className="space-y-6">
+                  {faqs.map((faq, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 2 0 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                      className="bg-white rounded-xl shadow-lg p-8"
+                    >
+                      <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                        {faq.question}
+                      </h3>
+                      <p className="text-gray-600">
+                        {faq.answer}
+                      </p>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
             </div>
-          </div>
-        </footer>
-      </div>
+          </section>
+
+          {/* Contact Information */}
+          <section className="py-20">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+              <motion.div
+                initial={{ opacity: 0, y: 2 0 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
+                  Contact Information
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Get in touch with us through any of these channels.
+                </p>
+              </motion.div>
+
+              <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
+                {contactInfo.map((info, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 2 0 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg p-8 text-center"
+                  >
+                    <div className="text-blue-600 mb-4 flex justify-center">
+                      {info.icon}
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {info.title}
+                    </h3>
+                    {info.link ? (
+                      <a
+                        href={info.link}
+                        className="text-gray-600 hover: tex t-blue-600 transition-colors whitespace-pre-line"
+                      >
+                        {info.details}
+                      </a>
+                    ) : (
+                      <p className="text-gray-600 whitespace-pre-line">
+                        {info.details}
+                      </p>
+                    )}
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+        </main>
+      </PageTransition>
     </>
-  );
+  )
 }
+
+export default HelpPage

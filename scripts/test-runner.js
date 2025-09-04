@@ -9,42 +9,40 @@ class TestRunner {
       unit: { passed: 0, failed: 0 },
       integration: { passed: 0, failed: 0 },
       e2e: { passed: 0, failed: 0 }
-    };
   }
 
   checkTestFiles() {
     const testDirs = ['__tests__', 'src/__tests__', 'tests'];
     let testFilesFound = 0;
-
-    for (const dir of testDirs) {
-      try {
-        if (fs.existsSync(dir)) {
-          const files = fs.readdirSync(dir);
-          const testFiles = files.filter(
-            (file) => file.includes('.test.') || file.includes('.spec.')
-          );
-          testFilesFound += testFiles.length;
-        }
-      } catch {}
-    }
-
+    
+    testDirs.forEach(dir => {
+      if (fs.existsSync(dir)) {
+        const files = fs.readdirSync(dir);
+        const testFiles = files.filter(file => 
+          file.includes('.test.') || file.includes('.spec.')
+        );
+        testFilesFound += testFiles.length;
+      }
+    });
+    
     if (testFilesFound === 0) {
-      console.log('⚠️  No test files found');
+      console.log('⚠️ No test files found');
     } else {
       console.log(`✅ Found ${testFilesFound} test files`);
     }
-
+    
     return testFilesFound;
   }
 
   checkPackageJsonScripts() {
     try {
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-      const hasTestScript = Boolean(packageJson.scripts && packageJson.scripts.test);
-      if (!hasTestScript) {
-        console.log('⚠️  No test script found in package.json');
+      
+      if (!packageJson.scripts.test) {
+        console.log('⚠️ No test script found in package.json');
         return false;
       }
+      
       console.log('✅ Test script found in package.json');
       return true;
     } catch (error) {
@@ -61,8 +59,6 @@ class TestRunner {
         testFilesFound: this.checkTestFiles(),
         testScriptExists: this.checkPackageJsonScripts()
       }
-    };
-
     fs.writeFileSync('test-report.json', JSON.stringify(report, null, 2));
     console.log('Test report generated');
   }

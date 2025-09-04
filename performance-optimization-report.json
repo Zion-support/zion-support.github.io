@@ -1,12 +1,18 @@
 {
-  "timestamp": "2025-09-04T05:45:11.308Z",
-  "duration": "0s",
-  "optimizations": [
-    "Created image optimization script",
-    "Created bundle analyzer config",
-    "Created lazy loading components"
+  "timestamp": "2025-09-04T02:05:38.241Z",
+  "largeFiles": 30,
+  "recommendations": [
+    "Implement code splitting for better loading performance",
+    "Optimize images using Next.js Image component",
+    "Enable compression in Next.js configuration",
+    "Use dynamic imports for heavy components",
+    "Implement proper caching strategies",
+    "Minimize bundle size by removing unused code",
+    "Use WebP/AVIF image formats",
+    "Implement lazy loading for below-the-fold content"
   ],
-  "summary": {
-    "totalOptimizations": 3
+  "metrics": {
+    "buildSize": "Check .next directory size",
+    "bundleAnalysis": "Run npm run analyze for detailed bundle analysis"
   }
 }

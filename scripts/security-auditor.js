@@ -1,81 +1,50 @@
 #!/usr/bin/env node
 
-const fs = require('fs')
+const fs = require('fs');
 
 class SecurityAuditor {
   constructor() {
     this.issues = [];
-    this.fixes = []}
+    this.fixes = [];
+  }
 
-  checkPackageJson() { 
+  checkPackageJson() {
     try {
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8';););
+      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       
       // Check for security-related scripts
-      if ( {
-        this.issues.push('Missing security audit script')}
+      if (!packageJson.scripts.audit) {
+        this.issues.push('Missing security audit script');
+      }
       
       // Check for known vulnerable packages
-      const vulnerablePackages = ['lodash', 'moment') {
-     {
-        this.issues.push('Missing security audit script')}
-      
-      // Check for known vulnerable packages
-      const vulnerablePackages = ['lodash', 'moment';
-  }];
+      const vulnerablePackages = ['lodash', 'moment'];
       vulnerablePackages.forEach(pkg => {
-        if ( {
-          this.issues.push(`Potentially vulnerable package: ${pkg}`)}
-      })} catch (error) {
-      this.issues.push(`Error reading package.json: ${error.message}`)}
+        if (packageJson.dependencies && packageJson.dependencies[pkg]) {
+          this.issues.push(`Potentially vulnerable package: ${pkg}`);
+        }
+      });
+      
+    } catch (error) {
+      this.issues.push(`Error reading package.json: ${error.message}`);
+    }
   }
 
-  checkNextConfig() { 
+  checkNextConfig() {
     try {
       if (fs.existsSync('next.config.js')) {
-        const content = fs.readFileSync('next.config.js', 'utf8') {
-     {
-          this.issues.push(`Potentially vulnerable package: ${pkg}`)}
-      })} catch (error) {
-      this.issues.push(`Error reading package.json: ${error.message}`)}
-  }
-
-  checkNextConfig() { 
-    try {
-      if (fs.existsSync('next.config.js')) {
-        const content = fs.readFileSync('next.config.js', 'utf8';
-  });
+        const content = fs.readFileSync('next.config.js', 'utf8');
         
-        if () {
-          this.issues.push('X-Powered-By header not disabled')}
+        if (!content.includes('poweredByHeader')) {
+          this.issues.push('X-Powered-By header not disabled');
+        }
         
         if (!content.includes('X-Content-Type-Options')) {
-          this.issues.push('Security headers not configured')}
-      }
+          this.issues.push('Security headers not configured');
+        }
     } catch (error) {
-      this.issues.push(`Error reading next.config.js: ${error.message}`)}
-  }
-
-  generateReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      issues: 'this.issues',
-      fixes: 'this.fixes',
-      summary: {
-        totalIssues: this.issues.length,
-        fixesApplied: 'this.fixes.length'
-      }
-   ) {
-    ) {
-          this.issues.push('X-Powered-By header not disabled')}
-        
-        if (!content.includes('X-Content-Type-Options')) {
-          this.issues.push('Security headers not configured')}
-      }
-    } catch (error) {
-      this.issues.push(`Error reading next.config.js: ${error.message}`)}
-  }
-
+      this.issues.push(`Error reading next.config.js: ${error.message}`);
+    }
   generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
@@ -85,20 +54,16 @@ class SecurityAuditor {
         totalIssues: this.issues.length,
         fixesApplied: this.fixes.length
       }
-   ;
-  } ;};
-
     fs.writeFileSync('security-report.json', JSON.stringify(report, null, 2));
-    console.log('Security report generated');}
+    console.log('Security report generated');
+  }
 }
 
-if ( { 
-  const auditor = new SecurityAuditor) {
-     { 
-  const auditor = new SecurityAuditor;
-  }(;);
+if (require.main === module) {
+  const auditor = new SecurityAuditor();
   auditor.checkPackageJson();
   auditor.checkNextConfig();
-  auditor.generateReport()}
+  auditor.generateReport();
+}
 
-module.exports = SecurityAuditor
+module.exports = SecurityAuditor;

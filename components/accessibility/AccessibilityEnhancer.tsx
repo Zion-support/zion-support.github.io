@@ -1,127 +1,124 @@
 import React, { useEffect } from 'react';
 
-// Hook for keyboard navigation
-export const useKeyboardNavigation = () => {
+interface AccessibilityEnhancerProps {
+  children: Reac t.ReactNode;
+   skipToContent?: boolean;
+   focusManagement?: boolean;
+   keyboardNavigation?: boolean}
+const AccessibilityEnhancer: Reac t.FC<AccessibilityEnhancerProps> = ({
+  children, skipToContent = true,
+  focusManagement = true, keyboardNavigation = true}) => {
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Skip to main content
-      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-        const main = document.querySelector('main');
-        if (main) {
-          (main as HTMLElement).focus();
+    // Add skip to content functionality;
+    if (skipToContent) {
+      const handleSkipToContent = (e: KeyboardEven t) => {
+        if (e.key === 'Tab' && !e.shiftKey) {
+          const skipLink = document.getElementById('skip-to-content');
+          if (skipLink && document.activeElement === document.body) {
+            skipLink.focus()}
         }
       }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
-};
-
-// Component for skip links
-export const SkipLinks: React.FC = () => (
-  <div className="sr-only focus-within:not-sr-only">
-    <a
-      href="#main-content"
-      className="absolute top-0 left-0 bg-blue-600 text-white px-4 py-2 rounded-br-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-    >
-      Skip to main content
-    </a>
-    <a
-      href="#navigation"
-      className="absolute top-0 left-20 bg-blue-600 text-white px-4 py-2 rounded-br-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-    >
-      Skip to navigation
-    </a>
-  </div>
-);
-
-// Enhanced button component with accessibility
-interface AccessibleButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'danger';
-  size?: 'sm' | 'md' | 'lg';
-  loading?: boolean;
-  children: React.ReactNode;
-}
-
-export const AccessibleButton: React.FC<AccessibleButtonProps> = ({
-  variant = 'primary',
-  size = 'md',
-  loading = false,
-  children,
-  className = '',
-  disabled,
-  ...props
-}) => {
-  const baseClasses = 'font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
-  
-  const variantClasses = {
-    primary: 'bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500',
-    secondary: 'bg-gray-600 hover:bg-gray-700 text-white focus:ring-gray-500',
-    danger: 'bg-red-600 hover:bg-red-700 text-white focus:ring-red-500'
-  };
-  
-  const sizeClasses = {
-    sm: 'px-3 py-1.5 text-sm',
-    md: 'px-4 py-2 text-base',
-    lg: 'px-6 py-3 text-lg'
-  };
-
+;
+      document.addEventListener('keydown', handleSkipToContent);
+      return () => document.removeEventListener('keydown', handleSkipToContent)}
+  }, [skipToContent]);
+  useEffect(() => {
+    // Focus management for modals and dynamic content;
+    if (focusManagement) {
+      const handleFocusManagement = () => {
+        // Add focus trap for modals;
+        const modals = document.querySelectorAll('[role='dialog']');
+        modals.forEach(modal => {
+          const focusableElements = modal.querySelectorAll(
+            'button, [href], input, select, textarea, [tabindex]: not([tabindex='-1'])');
+          if (focusableElements.length > 0) {
+            const firstElement = focusableElements[0] as HTMLElement;
+            const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+            const handleTabKey = (e: KeyboardEven t) => {
+              if (e.key === 'Tab') {
+                if (e.shiftKey) {
+                  if (document.activeElement === firstElement) {
+                    e.preventDefault();
+                    lastElement.focus()}
+                } else {
+                  if (document.activeElement === lastElement) {
+                    e.preventDefault();
+                    firstElement.focus()}
+                }
+              }
+            }
+;
+            modal.addEventListener('keydown', handleTabKey)}
+        })}
+;
+      // Run on mount and when DOM changes;
+      handleFocusManagement();
+      // Use MutationObserver to handle dynamic content;
+      const observer = new MutationObserver(handleFocusManagement);
+      observer.observe(document.body, { childList: tru e, subtree: tru e })
+      return () => observer.disconnect()}
+  }, [focusManagement]);
+  useEffect(() => {
+    // Enhanced keyboard navigation;
+    if (keyboardNavigation) {
+      const handleKeyboardNavigation = (e: KeyboardEven t) => {
+        // Escape key to close modals/dropdowns;
+        if (e.key === 'Escape') {
+          const openModal = document.querySelector('[role='dialog'][aria-hidden='false']');
+          const openDropdown = document.querySelector('[aria-expanded='true']');
+          if (openModal) {
+            const closeButton = openModal.querySelector('[aria-label*='close'], [aria-label*='Close']') as HTMLElement;
+            closeButton?.click()} else if (openDropdown) {
+            (openDropdown as HTMLElement).click()}
+        }
+        // Arrow keys for menu navigation;
+        if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+          const menu = document.querySelector('[role='menu']');
+          if (menu && document.activeElement?.closest('[role='menu']')) {
+            e.preventDefault();
+            const menuItems = Array.from(menu.querySelectorAll('[role='menuitem']')) as HTMLElement[];
+            const currentIndex = menuItems.indexOf(document.activeElement as HTMLElement);
+            if (currentIndex !== -1) {
+              const nextIndex = e.key === 'ArrowDown';
+                ? (currentIndex + 1) % menuItems.length;
+                : (currentIndex - 1 + menuItems.length) % menuItems.length;
+              menuItems[nextIndex]?.focus()}
+          }
+        }
+      }
+;
+      document.addEventListener('keydown', handleKeyboardNavigation)
+      return () => document.removeEventListener('keydown', handleKeyboardNavigation)}
+  }, [keyboardNavigation])
   return (
-    <button
-      className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
-      disabled={disabled || loading}
-      aria-disabled={disabled || loading}
-      {...props}
-    >
-      {loading ? (
-        <span className="flex items-center">
-          <div className="animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent mr-2" />
-          Loading...
-        </span>
-      ) : (
-        children
+    <>{skipToContent && (
+        <a;
+          id='skip-to-content';
+          href='#main-content';
+          className='sr-only focus: no t-sr-only focus: absolute focus:top-4 focus: lef t-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: rin g-offset-2';
+          onFocus={(e) => {
+            e.currentTarget.scrollIntoView({ behavior: 'smooth', block: 'start' })}}
+        >
+          Skip to main content
+        </a>
       )}
-    </button>
-  );
-};
+      {children}
+</>
+  )}
+;
+// Utility function to generate accessible IDs;
+export const generateAccessibleId = (prefix: string, text: string): string => {
+  return `${prefix}-${text.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '')}`}
+;
+// Utility function to announce changes to screen readers;
+export const announceToScreenReader = (message: string, priority: 'polite' | 'assertive' = 'polite') => {
+  const announcement = document.createElement('div');
+  announcement.setAttribute('aria-live', priority);
+  announcement.setAttribute('aria-atomic', 'true');
+  announcement.className = 'sr-only';
+  announcement.textContent = message;
+  document.body.appendChild(announcement);
+  setTimeout(() => {
+    document.body.removeChild(announcement)}, 1000)}
 
-// Focus trap component
-interface FocusTrapProps {
-  children: React.ReactNode;
-  active: boolean;
-}
-
-export const FocusTrap: React.FC<FocusTrapProps> = ({ children, active }) => {
-  useEffect(() => {
-    if (!active) return;
-
-    const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-    const firstFocusableElement = document.querySelector(focusableElements) as HTMLElement;
-    const focusableContent = document.querySelectorAll(focusableElements);
-    const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement;
-
-    const handleTabKey = (e: KeyboardEvent) => {
-      if (e.key !== 'Tab') return;
-
-      if (e.shiftKey) {
-        if (document.activeElement === firstFocusableElement) {
-          lastFocusableElement.focus();
-          e.preventDefault();
-        }
-      } else {
-        if (document.activeElement === lastFocusableElement) {
-          firstFocusableElement.focus();
-          e.preventDefault();
-        }
-      }
-    };
-
-    document.addEventListener('keydown', handleTabKey);
-    firstFocusableElement?.focus();
-
-    return () => document.removeEventListener('keydown', handleTabKey);
-  }, [active]);
-
-  return <>{children}</>;
-};
+export default AccessibilityEnhancer

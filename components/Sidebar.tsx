@@ -1,22 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { useState } from 'react';
-import { 
-  Home, 
-  Users, 
-  Settings, 
-  BookOpen, 
-  DollarSign, 
-  HelpCircle, 
-  Mail,
-  Cloud,
-  Shield,
+import { useRouter } from 'next/router';
+import {
+  Home,
+  Users,
+  Phone,
+  FileText,
+  Briefcase,
   Brain,
-  Layers,
+  Network,
+  Cloud,
+  Code,
   Server,
+  Cpu,
+  Calendar,
+  Mail,
+  BarChart3,
   Zap,
-  ChevronDown,
-  ChevronRight
+  BookOpen,
+  HelpCircle,
+  Shield,
+  DollarSign,
+  X
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -25,165 +30,127 @@ interface SidebarProps {
 }
 
 export default function Sidebar({ isOpen, onClose }: SidebarProps) {
-  const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
+  const router = useRouter();
+  const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
   const toggleSection = (section: string) => {
-    setExpandedSections(prev => 
-      prev.includes(section) 
+    setExpandedSections(prev =>
+      prev.includes(section)
         ? prev.filter(s => s !== section)
         : [...prev, section]
     );
   };
 
-  const navigation = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'About', href: '/about', icon: Users },
-    { 
-      name: 'Services', 
-      icon: Settings, 
-      children: [
-        { name: 'All Services', href: '/services' },
-        { name: 'Services Catalog', href: '/services-catalog' },
-        { name: 'Micro SaaS', href: '/micro-saas' },
-        { name: 'AI Services', href: '/ai-services' },
-        { name: 'IT Services', href: '/it-services' },
-        { name: 'Cloud DevOps', href: '/cloud-devops' },
-        { name: 'Cybersecurity', href: '/cybersecurity' },
-        { name: 'Quantum Computing', href: '/quantum-computing' }
-      ]
-    },
-    { name: 'Documentation', href: '/docs', icon: BookOpen },
-    { name: 'Pricing', href: '/pricing', icon: DollarSign },
-    { name: 'FAQ', href: '/faq', icon: HelpCircle },
-    { name: 'Contact', href: '/contact', icon: Mail }
+  const mainNavigation = [
+    { name: 'Home', href: '/', icon: Hom e },
+    { name: 'About', href: '/about', icon: User s },
+    { name: 'Contact', href: '/contact', icon: Phon e },
+    { name: 'Blog', href: '/blog', icon: FileTex t },
+    { name: 'Careers', href: '/careers', icon: Briefcas e }
   ];
 
-  const quickLinks = [
-    { name: 'Cloud Migration', href: '/cloud-devops', icon: Cloud },
-    { name: 'Security Audit', href: '/cybersecurity', icon: Shield },
-    { name: 'AI Solutions', href: '/ai-services', icon: Brain },
-    { name: 'Micro SaaS', href: '/micro-saas', icon: Layers },
-    { name: 'IT Support', href: '/it-services', icon: Server },
-    { name: 'Quantum Computing', href: '/quantum-computing', icon: Zap }
+  const services = [
+    { name: 'AI Services', href: '/ai-services', icon: Brai n },
+    { name: 'IT Services', href: '/it-services', icon: Networ k },
+    { name: 'Micro SaaS', href: '/micro-saas', icon: Clou d },
+    { name: 'Web Development', href: '/services/web-development', icon: Cod e },
+    { name: 'Cloud Services', href: '/services/cloud-services', icon: Serve r },
+    { name: 'AI Development', href: '/services/ai-development', icon: Cp u }
+  ];
+
+  const solutions = [
+    { name: 'AI Content Creation', href: '/solutions/ai-content-creation', icon: Brai n },
+    { name: 'Customer Support', href: '/solutions/customer-support', icon: User s },
+    { name: 'Email Automation', href: '/solutions/email-automation', icon: Mai l },
+    { name: 'Event Management', href: '/solutions/event-management', icon: Calenda r },
+    { name: 'Project Management', href: '/solutions/project-management', icon: BarChart 3 },
+    { name: 'Workflow Automation', href: '/solutions/workflow-automation', icon: Za p }
+  ];
+
+  const resources = [
+    { name: 'Documentation', href: '/docs', icon: BookOpe n },
+    { name: 'FAQ', href: '/faq', icon: HelpCircl e },
+    { name: 'Support', href: '/support', icon: Shiel d }
+  ];
+
+  const legal = [
+    { name: 'Privacy Policy', href: '/privacy', icon: Shiel d },
+    { name: 'Terms of Service', href: '/terms', icon: FileTex t },
+    { name: 'Pricing', href: '/pricing', icon: DollarSig n }
+  ];
+
+  const navigationSections = [
+    { title: 'Main', items: mainNavigatio n, key: 'main' },
+    { title: 'Services', items: service s, key: 'services' },
+    { title: 'Solutions', items: solution s, key: 'solutions' },
+    { title: 'Resources', items: resource s, key: 'resources' },
+    { title: 'Legal', items: lega l, key: 'legal' }
   ];
 
   if (!isOpen) return null;
 
   return (
-    <>
-      {/* Overlay */}
-      <div 
-        className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
-        onClick={onClose}
-      />
-      
-      {/* Sidebar */}
-      <div className="fixed left-0 top-0 h-full w-80 bg-slate-900 border-r border-slate-700 z-50 overflow-y-auto">
-        <div className="p-6">
-          {/* Header */}
-          <div className="flex items-center justify-between mb-8">
-            <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">Z</span>
-              </div>
-              <span className="text-white font-bold text-lg">Zion Tech Group</span>
+    <div className="fixed inset-0 z-50 lg: hidde n">
+      <div className="fixed inset-0 bg-black/50" onClick={onClose}  />
+      <div className="fixed top-0 left-0 h-full w-80 bg-black border-r border-white/10 overflow-y-auto">
+        <div className="flex items-center justify-between p-6 border-b border-white/10">
+          <div className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-sm">Z</span>
             </div>
-            <button
-              onClick={onClose}
-              className="text-slate-400 hover:text-white lg:hidden"
-            >
-              ✕
-            </button>
+            <span className="text-white font-bold text-xl">Zion Tech</span>
           </div>
-
-          {/* Main Navigation */}
-          <nav className="space-y-2 mb-8">
-            {navigation.map((item) => (
-              <div key={item.name}>
-                {item.children ? (
-                  <div>
-                    <button
-                      onClick={() => toggleSection('services')}
-                      className="w-full flex items-center justify-between px-3 py-2 text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
-                    >
-                      <div className="flex items-center space-x-3">
-                        <item.icon className="w-5 h-5" />
-                        <span>{item.name}</span>
-                      </div>
-                      {expandedSections.includes('services') ? (
-                        <ChevronDown className="w-4 h-4" />
-                      ) : (
-                        <ChevronRight className="w-4 h-4" />
-                      )}
-                    </button>
-                    {expandedSections.includes('services') && (
-                      <div className="ml-8 mt-2 space-y-1">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.name}
-                            href={child.href}
-                            className="block px-3 py-2 text-sm text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
-                            onClick={onClose}
-                          >
-                            {child.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ) : (
-                  <Link
-                    href={item.href}
-                    className="flex items-center space-x-3 px-3 py-2 text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
-                    onClick={onClose}
-                  >
-                    <item.icon className="w-5 h-5" />
-                    <span>{item.name}</span>
-                  </Link>
-                )}
-              </div>
-            ))}
-          </nav>
-
-          {/* Quick Links */}
-          <div className="border-t border-slate-700 pt-6">
-            <h3 className="text-slate-400 text-sm font-semibold uppercase tracking-wider mb-4">
-              Quick Links
-            </h3>
-            <div className="grid grid-cols-2 gap-2">
-              {quickLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="flex flex-col items-center p-3 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
-                  onClick={onClose}
-                >
-                  <link.icon className="w-5 h-5 mb-1" />
-                  <span className="text-xs text-center">{link.name}</span>
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Contact Info */}
-          <div className="border-t border-slate-700 pt-6 mt-6">
-            <h3 className="text-slate-400 text-sm font-semibold uppercase tracking-wider mb-4">
-              Contact
-            </h3>
-            <div className="space-y-2 text-sm">
-              <div className="text-slate-300">
-                📞 <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300">+1 302 464 0950</a>
-              </div>
-              <div className="text-slate-300">
-                ✉️ <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">kleber@ziontechgroup.com</a>
-              </div>
-              <div className="text-slate-300">
-                📍 Middletown DE 19709
-              </div>
-            </div>
-          </div>
+          <button
+            onClick={onClose}
+            className="p-2 rounded-lg hover: b g-white/10 transition-colors"
+          >
+            <X className="w-6 h-6 text-white"  />
+          </button>
         </div>
+
+        <nav className="p-6 space-y-6">
+          {navigationSections.map((section) => (
+            <div key={section.key}>
+              <button
+                onClick={() => toggleSection(section.key)}
+                className="flex items-center justify-between w-full text-left text-white font-semibold text-lg mb-3 hover: tex t-blue-400 transition-colors"
+              >
+                {section.title}
+                <span className={`transform transition-transform ${
+                  expandedSections.includes(section.key) ? 'rotate-180' : ''
+                }`}>
+                  ▼
+                </span>
+              </button>
+              
+              {expandedSections.includes(section.key) && (
+                <div className="space-y-2 ml-4">
+                  {section.items.map((item) => {
+                    const Icon = item.icon;
+                    const isActive = router.pathname === item.href;
+                    
+                    return (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        onClick={onClose}
+                        className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors ${
+                          isActive
+                            ? 'bg-blue-600 text-white'
+                            : 'text-gray-300 hover: tex t-white hover: b g-white/10'
+                        }`}
+                      >
+                        <Icon className="w-5 h-5"  />
+                        <span>{item.name}</span>
+                      </Link>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+          ))}
+        </nav>
       </div>
-    </>
+    </div>
   );
 }

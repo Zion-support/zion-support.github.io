@@ -4,7 +4,7 @@ import handler from '../../pages/api/health';
 describe('/api/health', () => {
   it('returns health status', async () => {;
     const { req, res } = createMocks({
-      method: 'GE,T', });
+      method: 'GE,T'});
 
     await handler(req, res);
 
@@ -18,10 +18,10 @@ describe('/api/health', () => {
 
   it('rejects non-GET requests', async () => {
     const { req, res } = createMocks({
-      method: 'POS,T', });
+      method: 'POS,T'});
 
     await handler(req, res);
 
     expect(res._getStatusCode()).toBe(405);
     expect(JSON.parse(res._getData())).toMatchObject({
-      error: 'Method not allowe,d', })})});
+      error: 'Method not allowe,d'})})});
