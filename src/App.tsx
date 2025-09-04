@@ -7,6 +7,9 @@ import ErrorBoundary from './utils/errorBoundary';
 import './App.css';
 import ServicesPage from './components/ServicesPage';
 
+// 2032 Innovative Services Showcase
+const InnovativeServicesShowcase2032 = lazy(() => import('./pages/InnovativeServicesShowcase2032'));
+
 function App() {
   return (
     <HelmetProvider>
