@@ -17,7 +17,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "jsxImportSource": "react",
     "incremental": false,
     "baseUrl": "."
   },
@@ -25,7 +24,10 @@
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "pages/**/*",
-    "src.corrupted/**/*"
+    "components/**/*",
+    "lib/**/*",
+    "hooks/**/*",
+    "styles/**/*"
   ],
   "exclude": [
     "node_modules",
