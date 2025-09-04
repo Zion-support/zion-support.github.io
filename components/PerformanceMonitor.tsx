@@ -25,6 +25,7 @@ const PerformanceMonitor: React.FC = () => {
           if (entry.entryType === 'first-input') {
             console.log('FID:', entry.processingStart - entry.startTime);
           }
+        }
       });
 
       try {
@@ -40,6 +41,7 @@ const PerformanceMonitor: React.FC = () => {
           if (!(entry as any).hadRecentInput) {
             clsValue += (entry as any).value;
           }
+        }
         console.log('CLS:', clsValue);
       });
 
@@ -54,6 +56,7 @@ const PerformanceMonitor: React.FC = () => {
         fidObserver.disconnect();
         clsObserver.disconnect();
       }
+    };
   }, []);
 
   return null; // This component doesn't render anything
