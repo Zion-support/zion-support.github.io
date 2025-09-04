@@ -10,12 +10,9 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-<<<<<<< HEAD
     "paths": {
       "@/*": ["src/*"]
     },
-=======
->>>>>>> pr-11559
     "resolveJsonModule": true,
     "isolatedModules": true,
     "incremental": false,
@@ -23,15 +20,10 @@
     "noEmit": true
   },
   "include": [
-    "next-env.d.ts",
-<<<<<<< HEAD
-    ".next/types/**/*.ts",
-=======
     "src/**/*.ts",
     "src/**/*.tsx",
     "scripts/**/*.ts",
     "automation/**/*.ts",
->>>>>>> pr-11559
     "types/**/*.ts"
   ],
   "exclude": [
@@ -39,19 +31,15 @@
     ".next",
     "out",
     "dist",
-<<<<<<< HEAD
     "data_backup/**",
     "src.corrupted/**",
     "pages/**",
     "components/**",
-    "src/**",
     "utils/next-link-shim.tsx",
     "playwright.config.ts",
     "api-backup",
     "api-disabled",
     "api.disabled.temp",
-=======
->>>>>>> pr-11559
     "pages.disabled",
     "backup-pages",
     "automation/**",
