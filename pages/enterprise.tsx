@@ -219,7 +219,7 @@ export default function Enterprise() {
             </h2>
             <p className="text-slate-300 mb-8 max-w-3xl mx-auto">
               Our enterprise team is ready to discuss your specific requirements and create 
-              a customized solution that meets your organization's unique needs. 
+              a customized solution that meets your organization&apos;s unique needs. 
               Contact us today for a consultation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

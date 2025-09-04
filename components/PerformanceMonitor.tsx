@@ -1,5 +1,15 @@
 import React, { useEffect } from 'react';
 
+// Extend PerformanceEntry for CLS
+interface LayoutShiftEntry {
+  entryType: string;
+  name: string;
+  startTime: number;
+  duration: number;
+  hadRecentInput?: boolean;
+  value?: number;
+}
+
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
@@ -8,14 +18,14 @@ const PerformanceMonitor: React.FC = () => {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
-            
+            console.log('LCP:', entry.startTime);
           }
         }
       });
       
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint'] });
-      } catch (e) {
+      } catch {
         // Fallback for browsers that don't support LCP
       }
 
@@ -23,31 +33,31 @@ const PerformanceMonitor: React.FC = () => {
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'first-input') {
-            
+            console.log('FID:', entry.processingStart - entry.startTime);
           }
         }
       });
 
       try {
         fidObserver.observe({ entryTypes: ['first-input'] });
-      } catch (e) {
+      } catch {
         // Fallback for browsers that don't support FID
       }
 
       // Monitor Cumulative Layout Shift (CLS)
-      let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
+          const layoutEntry = entry as LayoutShiftEntry;
+          if (!layoutEntry.hadRecentInput) {
+            const value = layoutEntry.value || 0;
+            console.log('CLS:', value);
           }
         }
-        
       });
 
       try {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
-      } catch (e) {
+      } catch {
         // Fallback for browsers that don't support CLS
       }
 

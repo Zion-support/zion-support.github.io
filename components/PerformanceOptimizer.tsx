@@ -37,9 +37,9 @@ export default function PerformanceOptimizer({ children }: PerformanceOptimizerP
 
     // Service Worker registration
     const registerServiceWorker = async () => {
-      if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+      if (typeof window !== 'undefined' && 'serviceWorker' in window.navigator && process.env.NODE_ENV === 'production') {
         try {
-          const registration = await navigator.serviceWorker.register('/sw.js');
+          const registration = await window.navigator.serviceWorker.register('/sw.js');
           console.log('SW registered: ', registration);
         } catch (registrationError) {
           console.log('SW registration failed: ', registrationError);
@@ -52,7 +52,7 @@ export default function PerformanceOptimizer({ children }: PerformanceOptimizerP
     registerServiceWorker();
 
     // Performance monitoring
-    const reportWebVitals = (metric: any) => {
+    const reportWebVitals = (metric: { name: string; value: number; delta: number }) => {
       if (process.env.NODE_ENV === 'production') {
         // Send to analytics
         console.log(metric);

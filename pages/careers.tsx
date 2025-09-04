@@ -97,7 +97,7 @@ export default function Careers() {
               Join Our Team
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Help us build the future of technology. We're looking for passionate 
+              Help us build the future of technology. We&apos;re looking for passionate 
               individuals who want to make a difference in AI, cloud computing, 
               cybersecurity, and software development.
             </p>
@@ -201,11 +201,11 @@ export default function Careers() {
           <div className="text-center bg-slate-800/30 backdrop-blur-sm rounded-xl p-8 border border-white/10">
             <Heart className="w-12 h-12 text-red-400 mx-auto mb-4" />
             <h2 className="text-2xl font-bold text-white mb-4">
-              Don't See Your Perfect Role?
+              Don&apos;t See Your Perfect Role?
             </h2>
             <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
-              We're always looking for talented individuals who share our passion for innovation. 
-              Send us your resume and let us know how you'd like to contribute to our mission.
+              We&apos;re always looking for talented individuals who share our passion for innovation. 
+              Send us your resume and let us know how you&apos;d like to contribute to our mission.
             </p>
             <a 
               href={`mailto:${contact.email}?subject=General Career Inquiry`}
