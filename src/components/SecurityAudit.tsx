@@ -1,18 +1,4 @@
-#!/usr/bin/env node
-
-const fs = require('fs');
-const path = require('path');
-
-function log(message, level = 'INFO') {
-  const timestamp = new Date().toISOString();
-  console.log(`[${timestamp}] [${level}] ${message}`);
-}
-
-function createSecurityComponents() {
-  log('🔒 Creating security components...');
-  
-  // Create a security audit component
-  const securityAuditContent = `import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Shield, CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
 
 interface SecurityCheck {
@@ -107,7 +93,7 @@ const SecurityAudit: React.FC = () => {
         {checks.map((check, index) => (
           <div
             key={index}
-            className={\`p-3 rounded-lg border \${getStatusColor(check.status)}\`}
+            className={`p-3 rounded-lg border ${getStatusColor(check.status)}`}
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center">
@@ -124,81 +110,3 @@ const SecurityAudit: React.FC = () => {
 };
 
 export default SecurityAudit;
-`;
-
-  const securityPath = path.join(process.cwd(), 'src/components/SecurityAudit.tsx');
-  fs.writeFileSync(securityPath, securityAuditContent);
-  log('Created SecurityAudit component');
-}
-
-function createSecurityConfig() {
-  log('🛡️ Creating security configuration...');
-  
-  // Create a security configuration file
-  const securityConfigContent = `// Security Configuration
-export const securityConfig = {
-  // Content Security Policy
-  csp: {
-    'default-src': ["'self'"],
-    'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'"],
-    'style-src': ["'self'", "'unsafe-inline'"],
-    'img-src': ["'self'", "data:", "https:"],
-    'connect-src': ["'self'"],
-    'font-src': ["'self'"],
-    'object-src': ["'none'"],
-    'media-src': ["'self'"],
-    'frame-src': ["'none'"]
-  },
-  
-  // Security headers
-  headers: {
-    'X-Content-Type-Options': 'nosniff',
-    'X-Frame-Options': 'DENY',
-    'X-XSS-Protection': '1; mode=block',
-    'Referrer-Policy': 'strict-origin-when-cross-origin',
-    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
-  },
-  
-  // Rate limiting
-  rateLimit: {
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 100 // limit each IP to 100 requests per windowMs
-  },
-  
-  // Input validation
-  validation: {
-    maxLength: 1000,
-    allowedTags: ['p', 'br', 'strong', 'em', 'u'],
-    sanitize: true
-  }
-};
-
-export default securityConfig;
-`;
-
-  const configPath = path.join(process.cwd(), 'src/config/security.ts');
-  
-  // Create config directory if it doesn't exist
-  const configDir = path.dirname(configPath);
-  if (!fs.existsSync(configDir)) {
-    fs.mkdirSync(configDir, { recursive: true });
-  }
-  
-  fs.writeFileSync(configPath, securityConfigContent);
-  log('Created security configuration');
-}
-
-function main() {
-  log('🛡️ Starting Security Enhancements');
-  
-  try {
-    createSecurityComponents();
-    createSecurityConfig();
-    log('✅ Security enhancements completed successfully');
-  } catch (error) {
-    log(`❌ Security enhancements failed: ${error.message}`, 'ERROR');
-    process.exit(1);
-  }
-}
-
-main();

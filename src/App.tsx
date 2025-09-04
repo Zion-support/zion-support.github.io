@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
@@ -39,9 +40,20 @@ const ComprehensiveServicesShowcase2026 = React.lazy(() => import('./pages/Compr
 const ComprehensivePricingGuide2026 = React.lazy(() => import('./pages/ComprehensivePricingGuide2026'));
 const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/ComprehensivePricingGuide2030'));
 const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
+=======
+import React from 'react';
+import { AppProps } from 'next/app';
+import Head from 'next/head';
+import { HelmetProvider } from 'react-helmet-async';
+import { ErrorBoundary } from 'react-error-boundary';
+import Layout from './components/Layout';
+import LoadingSpinner from './components/ui/loading-spinner';
+import '../styles/globals.css';
+>>>>>>> origin/main
 
-function App() {
+function App({ Component, pageProps }: AppProps) {
   return (
+<<<<<<< HEAD
     <ErrorBoundary>
       <Router>
         <div className="min-h-screen bg-futuristic">
@@ -102,6 +114,21 @@ function App() {
         </div>
       </Router>
     </ErrorBoundary>
+=======
+    <HelmetProvider>
+      <ErrorBoundary fallback={<div>Something went wrong</div>}>
+        <Head>
+          <title>Zion Tech Group - Advanced Technology Solutions</title>
+          <meta name="description" content="Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services." />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ErrorBoundary>
+    </HelmetProvider>
+>>>>>>> origin/main
   );
 }
 
