@@ -1,7 +1,8 @@
 import type { AppProps } from 'next/app';
 import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../components/PerformanceMonitor';
-import SEOHead from '../components/SEOHead';
+import WebVitals from '../components/WebVitals';
+import Analytics from '../components/Analytics';
 import '../styles/globals.css';
 
 function Header(): React.JSX.Element {
@@ -202,6 +203,8 @@ export default function App({ Component, pageProps }: AppProps) {
     <ErrorBoundary>
       <SEOHead />
       <PerformanceMonitor />
+      <WebVitals />
+      <Analytics />
       <Header />
       <main>
         <Component {...pageProps} />
