@@ -25,16 +25,16 @@ export default function ApiReference() {
 
         <div style={{ display: 'grid', gap: 32 }}>
           {/* Base URL */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16  }}>🌐 Base URL</h2>
+          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)' }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16 }}>🌐 Base URL</h2>
             <div style={{ background: '#1e293b', padding: 20, borderRadius: 8 }}>
               <code style={{ fontSize: '1.2rem', color: '#93c5fd' }}>https://api.ziontechgroup.com/v1</code>
             </div>
           </section>
 
           {/* Authentication */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16  }}>🔐 Authentication</h2>
+          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)' }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16 }}>🔐 Authentication</h2>
             <p style={{ opacity: '0.8', marginBottom: 20 }}>All API requests require authentication using a Bearer token in the Authorization header.</p>
             
             <div style={{ background: '#1e293b', padding: 20, borderRadius: 8 }}>
@@ -46,8 +46,8 @@ export default function ApiReference() {
           </section>
 
           {/* Services Endpoints */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 24  }}>📋 Services Endpoints</h2>
+          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)' }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 24 }}>📋 Services Endpoints</h2>
             
             <div style={{ display: 'grid', gap: 20 }}>
               <div style={{ padding: 20, background: '#1e293b', borderRadius: 8 }}>
@@ -56,7 +56,7 @@ export default function ApiReference() {
                 
                 <div style={{ marginBottom: 16 }}>
                   <h4 style={{ fontWeight: 600, marginBottom: 8, color: '#fbbf24' }}>Query Parameters</h4>
-                  <div style={{ background: '#1e293b', padding: 12, borderRadius: 6, fontSize: '0.9rem'  }}>
+                  <div style={{ background: '#1e293b', padding: 12, borderRadius: 6, fontSize: '0.9rem' }}>
                     <div><code>page</code> - Page number (default: 1)</div>
                     <div><code>limit</code> - Items per page (default: 10, max: 100)</div>
                     <div><code>category</code> - Filter by service category</div>
@@ -66,16 +66,16 @@ export default function ApiReference() {
                 
                 <div style={{ marginBottom: 16 }}>
                   <h4 style={{ fontWeight: 600, marginBottom: 8, color: '#fbbf24' }}>Response</h4>
-                  <pre style={{ background: '#0f172a', padding: 12, borderRadius: 6, overflow: 'auto', fontSize: '0.8rem' }}>`
+                  <pre style={{ background: '#0f172a', padding: 12, borderRadius: 6, overflow: 'auto', fontSize: '0.8rem' }}>
 {`{
   "success": true,
   "data": [
     {
-      "id": "micro-saas"
-      "name": "Micro SaaS Products"
-      "description": "Ready-to-use software solutions"
-      "category": "software"
-      "pricing": "custom"
+      "id": "micro-saas",
+      "name": "Micro SaaS Products",
+      "description": "Ready-to-use software solutions",
+      "category": "software",
+      "pricing": "custom",
       "endpoints": ["/v1/micro-saas"]
     }
   ],
@@ -84,7 +84,7 @@ export default function ApiReference() {
     "limit": 10,
     "total": 67,
     "pages": 7
-  }`
+  }
 }`}
                   </pre>
                 </div>
@@ -96,29 +96,29 @@ export default function ApiReference() {
                 
                 <div style={{ marginBottom: 16 }}>
                   <h4 style={{ fontWeight: 600, marginBottom: 8, color: '#fbbf24' }}>Path Parameters</h4>
-                  <div style={{ background: '#1e293b', padding: 12, borderRadius: 6, fontSize: '0.9rem'  }}>
+                  <div style={{ background: '#1e293b', padding: 12, borderRadius: 6, fontSize: '0.9rem' }}>
                     <div><code>id</code> - Service identifier (required)</div>
                   </div>
                 </div>
                 
                 <div style={{ marginBottom: 16 }}>
                   <h4 style={{ fontWeight: 600, marginBottom: 8, color: '#fbbf24' }}>Response</h4>
-                  <pre style={{ background: '#0f172a', padding: 12, borderRadius: 6, overflow: 'auto', fontSize: '0.8rem' }}>`
+                  <pre style={{ background: '#0f172a', padding: 12, borderRadius: 6, overflow: 'auto', fontSize: '0.8rem' }}>
 {`{
   "success": true,
   "data": {
-    "id": "micro-saas"
-    "name": "Micro SaaS Products"
-    "description": "Ready-to-use software solutions for specific business needs"
-    "category": "software"
-    "features": ["Cloud-based" "Scalable" "API-first"],
+    "id": "micro-saas",
+    "name": "Micro SaaS Products",
+    "description": "Ready-to-use software solutions for specific business needs",
+    "category": "software",
+    "features": ["Cloud-based", "Scalable", "API-first"],
     "pricing": {
-      "type": "custom"
+      "type": "custom",
       "starting_from": "$99/month"
     },
-    "documentation": "/docs/micro-saas"
+    "documentation": "/docs/micro-saas",
     "endpoints": ["/v1/micro-saas"]
-  }`
+  }
 }`}
                   </pre>
                 </div>
@@ -127,8 +127,8 @@ export default function ApiReference() {
           </section>
 
           {/* Quotes Endpoints */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 24  }}>💰 Quotes Endpoints</h2>
+          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)' }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 24 }}>💰 Quotes Endpoints</h2>
             
             <div style={{ padding: 20, background: '#1e293b', borderRadius: 8 }}>
               <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#86efac' }}>POST /quotes</h3>
@@ -136,41 +136,41 @@ export default function ApiReference() {
               
               <div style={{ marginBottom: 16 }}>
                 <h4 style={{ fontWeight: 600, marginBottom: 8, color: '#fbbf24' }}>Request Body</h4>
-                <pre style={{ background: '#0f172a', padding: 12, borderRadius: 6, overflow: 'auto', fontSize: '0.8rem' }}>`
+                <pre style={{ background: '#0f172a', padding: 12, borderRadius: 6, overflow: 'auto', fontSize: '0.8rem' }}>
 {`{
-  "service_id": "micro-saas"
+  "service_id": "micro-saas",
   "requirements": {
     "users": 100,
-    "features": ["analytics" "api-access"],
+    "features": ["analytics", "api-access"],
     "timeline": "3 months"
   },
   "contact": {
-    "name": "John Doe"
-    "email": "john@example.com"
-    "company": "Example Corp"
+    "name": "John Doe",
+    "email": "john@example.com",
+    "company": "Example Corp",
     "phone": "+1-555-0123"
   },
-  "budget_range": "1000-5000"
-  "additional_notes": "Looking for a custom solution..."`
+  "budget_range": "1000-5000",
+  "additional_notes": "Looking for a custom solution..."
 }`}
                 </pre>
               </div>
               
               <div style={{ marginBottom: 16 }}>
                 <h4 style={{ fontWeight: 600, marginBottom: 8, color: '#fbbf24' }}>Response</h4>
-                <pre style={{ background: '#0f172a', padding: 12, borderRadius: 6, overflow: 'auto', fontSize: '0.8rem' }}>`
+                <pre style={{ background: '#0f172a', padding: 12, borderRadius: 6, overflow: 'auto', fontSize: '0.8rem' }}>
 {`{
   "success": true,
   "data": {
-    "quote_id": "qt_123456789"
-    "status": "pending"
-    "estimated_timeline": "2-3 business days"
+    "quote_id": "qt_123456789",
+    "status": "pending",
+    "estimated_timeline": "2-3 business days",
     "next_steps": [
-      "Our team will review your requirements"
-      "We'll prepare a detailed proposal"
+      "Our team will review your requirements",
+      "We'll prepare a detailed proposal",
       "Schedule a consultation call"
     ]
-  }`
+  }
 }`}
                 </pre>
               </div>
@@ -178,8 +178,8 @@ export default function ApiReference() {
           </section>
 
           {/* Error Codes */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 24  }}>⚠️ Error Codes</h2>
+          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)' }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 24 }}>⚠️ Error Codes</h2>
             
             <div style={{ display: 'grid', gap: 16 }}>
               <div style={{ padding: 16, background: '#1e293b', borderRadius: 8, border: '1px solid rgba(239, 68, 68, 0.2)' }}>
@@ -210,12 +210,12 @@ export default function ApiReference() {
           </section>
 
           {/* Rate Limits */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16  }}>⏱️ Rate Limits</h2>
+          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)' }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16 }}>⏱️ Rate Limits</h2>
             <p style={{ opacity: '0.8', marginBottom: 20 }}>API requests are rate limited to ensure fair usage and system stability.</p>
             
             <div style={{ background: '#1e293b', padding: 20, borderRadius: 8 }}>
-              <div style={{ display: 'gridTemplateColumns', 'repeat(auto-fit, minmax(200px, 1fr))' gap: 16 }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 16 }}>
                 <div>
                   <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#93c5fd' }}>Free Tier</h3>
                   <p style={{ opacity: '0.8', fontSize: '0.9rem' }}>100 requests/hour</p>
@@ -235,4 +235,4 @@ export default function ApiReference() {
       </div>
     </>
   );
-}`
+}

@@ -9,41 +9,43 @@ export default function EnterpriseSolutions() {
     setIsLoaded(true);
   }, []);
 
-  const contact ={
-    phone: 'email', 'kleber@ziontechgroup.com'
-    address: 'site', 'https://ziontechgroup.com'
-  }
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown, DE 19709',
+    site: 'https://ziontechgroup.com'
+  };
 
   const enterpriseServices = [
     {
-      title: "Enterprise Architecture"
-      description: "Design and implement scalable enterprise architectures"
-      features: ["Microservices Architecture" "API Gateway Design" "Service Mesh" "Event-Driven Architecture"]
+      title: "Enterprise Architecture",
+      description: "Design and implement scalable enterprise architectures",
+      features: ["Microservices Architecture", "API Gateway Design", "Service Mesh", "Event-Driven Architecture"]
     },
     {
-      title: "Digital Transformation"
-      description: "Transform your business with modern digital solutions"
-      features: ["Process Automation" "Legacy System Modernization" "Cloud Migration" "Data Analytics"]
+      title: "Digital Transformation",
+      description: "Transform your business with modern digital solutions",
+      features: ["Process Automation", "Legacy System Modernization", "Cloud Migration", "Data Analytics"]
     },
     {
-      title: "Enterprise Security"
-      description: "Comprehensive security solutions for large organizations"
-      features: ["Identity & Access Management" "Zero Trust Architecture" "Security Monitoring" "Compliance"]
+      title: "Enterprise Security",
+      description: "Comprehensive security solutions for large organizations",
+      features: ["Identity & Access Management", "Zero Trust Architecture", "Security Monitoring", "Compliance"]
     },
     {
-      title: "Enterprise Integration"
-      description: "Seamless integration of enterprise systems and applications"
-      features: ["API Management" "ESB Solutions" "Data Integration" "Workflow Automation"]
+      title: "Enterprise Integration",
+      description: "Seamless integration of enterprise systems and applications",
+      features: ["API Management", "ESB Solutions", "Data Integration", "Workflow Automation"]
     },
     {
-      title: "Enterprise Analytics"
-      description: "Advanced analytics and business intelligence solutions"
-      features: ["Big Data Analytics" "Real-time Dashboards" "Predictive Analytics" "Machine Learning"]
+      title: "Enterprise Analytics",
+      description: "Advanced analytics and business intelligence solutions",
+      features: ["Big Data Analytics", "Real-time Dashboards", "Predictive Analytics", "Machine Learning"]
     },
     {
-      title: "Enterprise Support"
-      description: "24/7 enterprise-grade support and maintenance"
-      features: ["Dedicated Support Team" "SLA Management" "Proactive Monitoring" "Incident Response"]
+      title: "Enterprise Support",
+      description: "24/7 enterprise-grade support and maintenance",
+      features: ["Dedicated Support Team", "SLA Management", "Proactive Monitoring", "Incident Response"]
     }
   ];
 
@@ -55,11 +57,11 @@ export default function EnterpriseSolutions() {
         <meta name="keywords" content="enterprise solutions, digital transformation, enterprise architecture, enterprise security, enterprise integration, enterprise analytics" />
         <link rel="canonical" href={`${contact.site}/solutions/enterprise`} />
         <meta property="og:title" content="Enterprise Solutions - Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive enterprise solutions for large organizations" />`
+        <meta property="og:description" content="Comprehensive enterprise solutions for large organizations" />
         <meta property="og:url" content={`${contact.site}/solutions/enterprise`} />
         <meta property="og:type" content="website" />
       </Head>
-`
+      
       <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
         {/* Hero Section */}
         <section className="relative py-20 px-4">
@@ -151,10 +153,10 @@ export default function EnterpriseSolutions() {
             <p className="text-xl text-slate-300 mb-8">
               Let our enterprise experts help you design and implement the perfect solution for your organization
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">`
-              <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href={`tel:${contact.phone}`} className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
                 Call {contact.phone}
-              </a>`
+              </a>
               <a href={`mailto:${contact.email}`} className="px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
                 Email {contact.email}
               </a>
@@ -167,4 +169,4 @@ export default function EnterpriseSolutions() {
       </div>
     </>
   );
-}`
+}
