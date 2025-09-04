@@ -69,10 +69,7 @@ export default function AISolutions() {};
   ];
 
   const stats = [
-    { value: '25+', label: 'AI Services', icon: Brain },
-    { value: '99.9%', label: 'Accuracy Rate', icon: CheckCircle },
-    { value: '24/7', label: 'AI Monitoring', icon: Eye },
-    { value: '500+', label: 'AI Models', icon: Cpu }
+    { value: '25+', label: 'AI Services', icon: "Brain "},"    { value: '99.9%', label: 'Accuracy Rate', icon: "CheckCircle "},"    { value: '24/7', label: 'AI Monitoring', icon: "Eye "},"    { value: '500+', label: 'AI Models', icon: "Cpu "}
   ];
 
   const benefits = [
@@ -91,26 +88,17 @@ export default function AISolutions() {};
       <div>Broken JSX</div>
       />
       
-      {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
-        
-        <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
+      {/* Hero Section */}"      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10" />
+        "        <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
           <div>Broken JSX</div>
-          >
-            <div className="flex justify-center mb-6">
-              <div className="w-20 h-20 bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center">
-                <Brain className="w-10 h-10 text-white" />
+          >"            <div className="flex justify-center mb-6">"              <div className="w-20 h-20 bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center">"                <Brain className="w-10 h-10 text-white" />
               </div>
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+            </div>"            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               AI Solutions
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+            </h1>"            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Transform your business with cutting-edge artificial intelligence solutions. From business intelligence to automation, 
               our AI-powered services drive innovation and deliver measurable results.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </p>"            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <div>Broken JSX</div>
               >
                 Get AI Consultation
@@ -124,34 +112,22 @@ export default function AISolutions() {};
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {};
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-slate-300">{stat.label}</div>
+      {/* Stats Section */}"      <section className="py-16 bg-slate-800">"        <div className="container mx-auto px-4">"          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {};"                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>"                <div className="text-slate-300">{stat.label}</div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-16 bg-slate-900">
-        <div className="container mx-auto px-4">
+      {/* Benefits Section */}"      <section className="py-16 bg-slate-900">"        <div className="container mx-auto px-4">
           <div>Broken JSX</div>
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose AI Solutions?</h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+          >"            <h2 className="text-4xl font-bold text-white mb-4">Why Choose AI Solutions?</h2>"            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Our AI solutions deliver tangible benefits that transform your business operations and drive growth
             </p>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {};
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                <p className="text-slate-300 text-sm leading-relaxed">
+"          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {};"                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>"                <p className="text-slate-300 text-sm leading-relaxed">
                   {benefit.description}
                 </p>
               </motion.div>
@@ -160,41 +136,24 @@ export default function AISolutions() {};
         </div>
       </section>
 
-      {/* Featured Solutions */}
-      <section className="py-16 bg-slate-950">
-        <div className="container mx-auto px-4">
+      {/* Featured Solutions */}"      <section className="py-16 bg-slate-950">"        <div className="container mx-auto px-4">
           <div>Broken JSX</div>
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">Featured AI Solutions</h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+          >"            <h2 className="text-4xl font-bold text-white mb-4">Featured AI Solutions</h2>"            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Our most popular and innovative AI solutions that are transforming businesses worldwide
             </p>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {};
-                <Link to={solution.href} className="block">
-                  <div className="bg-slate-900 rounded-xl p-8 h-full hover:bg-slate-800 transition-all duration-300 transform hover:scale-105 border border-slate-700 hover:border-purple-500">
-                    <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${solution.color} flex items-center justify-center mb-6`}>
-                      <solution.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
+"          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {};"                <Link to={solution.href} className="block">"                  <div className="bg-slate-900 rounded-xl p-8 h-full hover:bg-slate-800 transition-all duration-300 transform hover:scale-105 border border-slate-700 hover:border-purple-500">
+                    <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${solution.color} flex items-center justify-center mb-6`}>"                      <solution.icon className="w-8 h-8 text-white" />
+                    </div>"                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
                       {solution.name}
-                    </h3>
-                    <p className="text-slate-300 mb-6 leading-relaxed">
+                    </h3>"                    <p className="text-slate-300 mb-6 leading-relaxed">
                       {solution.description}
-                    </p>
-                    <div className="space-y-2 mb-6">
-                      {};
-                        <div key={featureIndex} className="flex items-center space-x-2">
-                          <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0" />
-                          <span className="text-sm text-slate-300">{feature}</span>
+                    </p>"                    <div className="space-y-2 mb-6">
+                      {};"                        <div key={featureIndex} className="flex items-center space-x-2">"                          <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0" />"                          <span className="text-sm text-slate-300">{feature}</span>
                         </div>
                       ))}
-                    </div>
-                    <div className="flex items-center text-purple-400 group-hover:text-purple-300 transition-colors">
-                      <span className="font-semibold">Learn More</span>
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </div>"                    <div className="flex items-center text-purple-400 group-hover:text-purple-300 transition-colors">"                      <span className="font-semibold">Learn More</span>"                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
                 </Link>
@@ -204,46 +163,28 @@ export default function AISolutions() {};
         </div>
       </section>
 
-      {/* AI Service Categories */}
-      <section className="py-16 bg-slate-900">
-        <div className="container mx-auto px-4">
+      {/* AI Service Categories */}"      <section className="py-16 bg-slate-900">"        <div className="container mx-auto px-4">
           <div>Broken JSX</div>
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">Complete AI Service Portfolio</h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+          >"            <h2 className="text-4xl font-bold text-white mb-4">Complete AI Service Portfolio</h2>"            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Explore our comprehensive range of AI services organized by category and business function
             </p>
           </motion.div>
-
-          <div className="space-y-12">
+"          <div className="space-y-12">
             {};
-                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center`}>
-                    <category.icon className="w-8 h-8 text-white" />
+                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center`}>"                    <category.icon className="w-8 h-8 text-white" />
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white">{category.name}</h3>
-                    <p className="text-slate-300">{category.description}</p>
+                  <div>"                    <h3 className="text-2xl font-bold text-white">{category.name}</h3>"                    <p className="text-slate-300">{category.description}</p>
                   </div>
                 </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {};
-                      <Link to={service.href} className="block">
-                        <div className="bg-slate-700 rounded-lg p-6 hover:bg-slate-600 transition-all duration-300 group h-full">
-                          <h4 className="font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">
+"                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {};"                      <Link to={service.href} className="block">"                        <div className="bg-slate-700 rounded-lg p-6 hover:bg-slate-600 transition-all duration-300 group h-full">"                          <h4 className="font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">
                             {service.name}
-                          </h4>
-                          <p className="text-sm text-slate-300 mb-4">
+                          </h4>"                          <p className="text-sm text-slate-300 mb-4">
                             {service.description}
-                          </p>
-                          <div className="text-lg font-bold text-purple-400 mb-4">
+                          </p>"                          <div className="text-lg font-bold text-purple-400 mb-4">
                             {service.price}
-                          </div>
-                          <div className="space-y-2">
-                            {};
-                              <div key={featureIndex} className="flex items-center space-x-2">
-                                <CheckCircle className="w-3 h-3 text-purple-400 flex-shrink-0" />
-                                <span className="text-xs text-slate-300">{feature}</span>
+                          </div>"                          <div className="space-y-2">
+                            {};"                              <div key={featureIndex} className="flex items-center space-x-2">"                                <CheckCircle className="w-3 h-3 text-purple-400 flex-shrink-0" />"                                <span className="text-xs text-slate-300">{feature}</span>
                               </div>
                             ))}
                           </div>
@@ -258,18 +199,13 @@ export default function AISolutions() {};
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-600">
-        <div className="container mx-auto px-4 text-center">
+      {/* CTA Section */}"      <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-600">"        <div className="container mx-auto px-4 text-center">
           <div>Broken JSX</div>
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
+          >"            <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Harness the Power of AI?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
+            </h2>"            <p className="text-xl text-purple-100 mb-8">
               Let our AI experts help you implement intelligent solutions that transform your business operations and drive growth.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </p>"            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <div>Broken JSX</div>
               >
                 Start AI Journey
@@ -284,4 +220,4 @@ export default function AISolutions() {};
       </section>
     </>
   );
-}
+}"

@@ -3,8 +3,8 @@ import { RouteObject } from 'react-router-dom'
 import { Layout } from './shared/Layout'
 import { Home } from './routes/Home'
 
-const Placeholder = (props: { title: string }) => (
-  <div style={{ padding: 32 }}>
+const Placeholder = (props: { title: "string "}) => (
+  <div style={{ padding: 32  }}>
     <h1>{props.title}</h1>
     <p>This page is under construction. Content coming soon.</p>
   </div>
@@ -16,8 +16,7 @@ export const routes: RouteObject[] = [
   {
     path: '/',
     element: <Layout />,
-    children: [
-      { index: true, element: <Home /> },
+    children: ["      { index: "true", element: <Home /> },
       { path: 'about', element: simple('About')() },
       { path: 'contact', element: simple('Contact')() },
       { path: 'services', element: simple('Services')() },
@@ -62,7 +61,7 @@ export const routes: RouteObject[] = [
       { path: 'it-services/consulting', element: simple('IT Consulting')() },
       { path: 'it-services/onsite-support', element: simple('IT Onsite Support')() },
       { path: 'it-services/green-it', element: simple('IT Green IT')() },
-      { path: 'it-services/5g-solutions', element: simple('IT 5G Solutions')() },
+      { path: 'it-services/5g-solutions', element: simple('IT: 5G Solutions')() },
       // Marketplace and others
       { path: 'marketplace', element: simple('Marketplace')() },
       { path: 'marketplace/products', element: simple('Marketplace Products')() },
@@ -83,4 +82,4 @@ export const routes: RouteObject[] = [
       { path: '*', element: simple('Not Found')() }
     ]
   }
-]
+]"

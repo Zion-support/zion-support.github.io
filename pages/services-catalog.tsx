@@ -5,9 +5,9 @@ import { Brain, Cloud, Layers, Shield, Sparkles, BarChart3, Zap, Database, Bot, 
 
 export default function ServicesCatalog() {
   const contact = {
-    phone: '+1 302 464 0950',
+    phone: '+1: 302 464: 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    address: '364 E Main St STE: 1008 Middletown DE: 19709',
     site: 'https://ziontechgroup.com'
   }
 
@@ -22,13 +22,12 @@ export default function ServicesCatalog() {
       eta: string
       bullets: string[]
       link: string
-      refs?: Array<{ label: string; href: string }>
+      refs?: Array<{ label: string; href: "string "}>
     }>
   }> = [
     {
       id: 'micro-saas',
-      title: 'Micro SaaS Products',
-      icon: Layers,
+      title: 'Micro SaaS Products',"      icon: "Layers",
       items: [
         {
           name: 'Cloud Cost Guard (FinOps Assistant)',
@@ -202,8 +201,7 @@ export default function ServicesCatalog() {
     },
     {
       id: 'ai',
-      title: 'AI Services & Platforms',
-      icon: Brain,
+      title: 'AI Services & Platforms',"      icon: "Brain",
       items: [
         {
           name: 'RAG Platform‑in‑a‑Box',
@@ -372,8 +370,7 @@ export default function ServicesCatalog() {
     },
     {
       id: 'it',
-      title: 'IT & Cloud Services',
-      icon: Cloud,
+      title: 'IT & Cloud Services',"      icon: "Cloud",
       items: [
         {
           name: 'Cloud Landing Zone + Migration',
@@ -539,56 +536,26 @@ export default function ServicesCatalog() {
     }
   ]
 
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+  return ("    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
-        <title>Services Catalog — Zion Tech Group</title>
-        <meta name="description" content="Expanded catalog of Micro SaaS products, AI platforms, and IT services with transparent pricing and timelines." />
-        <link rel="canonical" href={`${contact.site}/services-catalog`} />
+        <title>Services Catalog — Zion Tech Group</title>"        <meta name="description" content="Expanded catalog of Micro SaaS products, AI platforms, and IT services with transparent pricing and timelines." />"        <link rel="canonical" href={`${contact.site}/services-catalog`} />
       </Head>
-
-      <header className="py-20 text-center px-4">
-        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">Services Catalog</h1>
-        <p className="mt-4 text-slate-300 max-w-3xl mx-auto">
+"      <header className="py-20 text-center px-4">"        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">Services Catalog</h1>"        <p className="mt-4 text-slate-300 max-w-3xl mx-auto">
           Production‑ready Micro SaaS, AI, and Cloud solutions. Transparent pricing, clear timelines, and measurable outcomes.
-        </p>
-        <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-5 py-2 rounded bg-blue-600 hover:bg-blue-700">Call {contact.phone}</a>
-          <a href={`mailto:${contact.email}`} className="px-5 py-2 rounded bg-purple-600 hover:bg-purple-700">Email {contact.email}</a>
-          <Link href="/contact" className="px-5 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10">Contact Form</Link>
-        </div>
-        <div className="mt-2 text-slate-400 text-sm">{contact.address}</div>
+        </p>"        <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">"          <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-5 py-2 rounded bg-blue-600 hover:bg-blue-700">Call {contact.phone}</a>"          <a href={`mailto:${contact.email}`} className="px-5 py-2 rounded bg-purple-600 hover:bg-purple-700">Email {contact.email}</a>"          <Link href="/contact" className="px-5 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10">Contact Form</Link>
+        </div>"        <div className="mt-2 text-slate-400 text-sm">{contact.address}</div>
       </header>
-
-      <main className="max-w-6xl mx-auto px-4 pb-24 space-y-16">
+"      <main className="max-w-6xl mx-auto px-4 pb-24 space-y-16">
         {sections.map(section => (
-          <section key={section.id} id={section.id}>
-            <div className="flex items-center gap-3 mb-6">
-              <section.icon className="w-6 h-6 text-blue-400" />
-              <h2 className="text-2xl md:text-3xl font-bold">{section.title}</h2>
-            </div>
-            <div className="grid md:grid-cols-2 gap-6">
-              {section.items.map(item => (
-                <div key={item.name} className="rounded-xl border border-white/10 bg-slate-900/60 p-6 hover:border-blue-500/40 transition-colors">
-                  <h3 className="text-xl font-semibold">{item.name}</h3>
-                  <p className="mt-2 text-slate-300">{item.blurb}</p>
-                  <div className="mt-4 flex flex-wrap items-center gap-3 text-sm">
-                    <span className="px-2.5 py-1 rounded bg-slate-800/70 border border-white/10">{item.price}</span>
-                    <span className="px-2.5 py-1 rounded bg-slate-800/70 border border-white/10">Lead time: {item.eta}</span>
-                  </div>
-                  <ul className="mt-4 space-y-2 text-slate-300 list-disc list-inside">
+          <section key={section.id} id={section.id}>"            <div className="flex items-center gap-3 mb-6">"              <section.icon className="w-6 h-6 text-blue-400" />"              <h2 className="text-2xl md:text-3xl font-bold">{section.title}</h2>
+            </div>"            <div className="grid md:grid-cols-2 gap-6">
+              {section.items.map(item => ("                <div key={item.name} className="rounded-xl border border-white/10 bg-slate-900/60 p-6 hover:border-blue-500/40 transition-colors">"                  <h3 className="text-xl font-semibold">{item.name}</h3>"                  <p className="mt-2 text-slate-300">{item.blurb}</p>"                  <div className="mt-4 flex flex-wrap items-center gap-3 text-sm">"                    <span className="px-2.5 py-1 rounded bg-slate-800/70 border border-white/10">{item.price}</span>"                    <span className="px-2.5 py-1 rounded bg-slate-800/70 border border-white/10">Lead time: {item.eta}</span>
+                  </div>"                  <ul className="mt-4 space-y-2 text-slate-300 list-disc list-inside">
                     {item.bullets.map(point => (<li key={point}>{point}</li>))}
-                  </ul>
-                  <div className="mt-4 flex flex-wrap gap-3">
-                    <Link href={item.link} className="px-3 py-1.5 rounded bg-blue-600 hover:bg-blue-700 text-sm">Learn more</Link>
-                    <Link href="/contact" className="px-3 py-1.5 rounded bg-slate-800 hover:bg-slate-700 border border-white/10 text-sm">Request quote</Link>
+                  </ul>"                  <div className="mt-4 flex flex-wrap gap-3">"                    <Link href={item.link} className="px-3 py-1.5 rounded bg-blue-600 hover:bg-blue-700 text-sm">Learn more</Link>"                    <Link href="/contact" className="px-3 py-1.5 rounded bg-slate-800 hover:bg-slate-700 border border-white/10 text-sm">Request quote</Link>
                   </div>
-                  {item.refs && item.refs.length > 0 && (
-                    <div className="mt-4 text-xs text-slate-400">
-                      <div className="mb-1">References:</div>
-                      <ul className="list-disc list-inside space-y-1">
-                        {item.refs.map(r => (
-                          <li key={r.href}><a className="underline hover:text-slate-200" href={r.href} target="_blank" rel="noopener noreferrer">{r.label}</a></li>
+                  {item.refs && item.refs.length > 0 && ("                    <div className="mt-4 text-xs text-slate-400">"                      <div className="mb-1">References:</div>"                      <ul className="list-disc list-inside space-y-1">
+                        {item.refs.map(r => ("                          <li key={r.href}><a className="underline hover:text-slate-200" href={r.href} target="_blank" rel="noopener noreferrer">{r.label}</a></li>
                         ))}
                       </ul>
                     </div>
@@ -598,16 +565,11 @@ export default function ServicesCatalog() {
             </div>
           </section>
         ))}
-
-        <section className="pt-4">
-          <h2 className="text-xl font-semibold mb-2">Need something custom?</h2>
-          <p className="text-slate-300">We scope custom builds with fixed‑bid or time‑and‑materials. Typical rates: $120 – $220/hr depending on skillset and urgency.</p>
-          <div className="mt-3">
-            <a href={`${contact.site}/contact`} className="underline">Discuss your project</a>
+"        <section className="pt-4">"          <h2 className="text-xl font-semibold mb-2">Need something custom?</h2>"          <p className="text-slate-300">We scope custom builds with fixed‑bid or time‑and‑materials. Typical rates: $120 – $220/hr depending on skillset and urgency.</p>"          <div className="mt-3">"            <a href={`${contact.site}/contact`} className="underline">Discuss your project</a>
           </div>
         </section>
       </main>
     </div>
   )
 }
-
+"

@@ -6,37 +6,18 @@ export default function CodeExamples() {
     <>
       <Head>
         <title>Code Examples - Zion Tech Group Documentation</title>
-        <meta name="description" content="Code examples and integration guides for Zion Tech Group APIs. Learn how to integrate our services with popular programming languages." />
-        <meta name="keywords" content="code examples, integration, API, programming, SDK" />
-        <link rel="canonical" href="https://ziontechgroup.com/docs/code-examples" />
+        <meta name="description" content="Code examples and integration guides for Zion Tech Group APIs. Learn how to integrate our services with popular programming languages." />"        <meta name="keywords" content="code examples, integration, API, programming, SDK" />"        <link rel="canonical" href="https://ziontechgroup.com/docs/code-examples" />
       </Head>
-      
-      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-        <div className="max-w-4xl mx-auto px-4 py-12">
-          {/* Breadcrumb */}
-          <nav className="mb-8">
-            <Link href="/" className="text-blue-400 hover:text-blue-300">Home</Link>
-            <span className="mx-2 text-slate-400">/</span>
-            <Link href="/docs" className="text-blue-400 hover:text-blue-300">Documentation</Link>
-            <span className="mx-2 text-slate-400">/</span>
-            <span className="text-slate-300">Code Examples</span>
+      "      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">"        <div className="max-w-4xl mx-auto px-4 py-12">
+          {/* Breadcrumb */}"          <nav className="mb-8">"            <Link href="/" className="text-blue-400 hover:text-blue-300">Home</Link>"            <span className="mx-2 text-slate-400">/</span>"            <Link href="/docs" className="text-blue-400 hover:text-blue-300">Documentation</Link>"            <span className="mx-2 text-slate-400">/</span>"            <span className="text-slate-300">Code Examples</span>
           </nav>
-
-          <h1 className="text-4xl font-bold mb-6">Code Examples</h1>
-          <p className="text-xl text-slate-300 mb-8">
+"          <h1 className="text-4xl font-bold mb-6">Code Examples</h1>"          <p className="text-xl text-slate-300 mb-8">
             Learn how to integrate Zion Tech Group services with practical code examples.
           </p>
-
-          <div className="space-y-8">
-            {/* JavaScript/Node.js */}
-            <section className="bg-slate-900/60 rounded-lg p-6 border border-white/10">
-              <h2 className="text-2xl font-bold mb-4 text-blue-400">JavaScript/Node.js</h2>
-              
-              <div className="space-y-6">
-                <div>
-                  <h3 className="font-semibold text-lg mb-2">Basic API Request</h3>
-                  <div className="bg-slate-800 p-4 rounded-lg">
-                    <pre className="text-green-400 text-sm overflow-x-auto">
+"          <div className="space-y-8">
+            {/* JavaScript/Node.js */}"            <section className="bg-slate-900/60 rounded-lg p-6 border border-white/10">"              <h2 className="text-2xl font-bold mb-4 text-blue-400">JavaScript/Node.js</h2>
+              "              <div className="space-y-6">
+                <div>"                  <h3 className="font-semibold text-lg mb-2">Basic API Request</h3>"                  <div className="bg-slate-800 p-4 rounded-lg">"                    <pre className="text-green-400 text-sm overflow-x-auto">
 {`const fetch = require('node-fetch');
 
 async function getServices() {
@@ -60,10 +41,7 @@ getServices();`}
                   </div>
                 </div>
 
-                <div>
-                  <h3 className="font-semibold text-lg mb-2">AI Content Generation</h3>
-                  <div className="bg-slate-800 p-4 rounded-lg">
-                    <pre className="text-green-400 text-sm overflow-x-auto">
+                <div>"                  <h3 className="font-semibold text-lg mb-2">AI Content Generation</h3>"                  <div className="bg-slate-800 p-4 rounded-lg">"                    <pre className="text-green-400 text-sm overflow-x-auto">
 {`async function generateContent(prompt) {
   const response = await fetch('https://api.ziontechgroup.com/v1/ai/generate', {
     method: 'POST',
@@ -71,8 +49,7 @@ getServices();`}
       'Authorization': \`Bearer \${process.env.ZION_API_KEY}\`,
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({
-      prompt: prompt,
+    body: JSON.stringify({"      prompt: "prompt",
       model: 'gpt-4',
       max_tokens: 1000
     })
@@ -91,21 +68,14 @@ console.log(content);`}
               </div>
             </section>
 
-            {/* Python */}
-            <section className="bg-slate-900/60 rounded-lg p-6 border border-white/10">
-              <h2 className="text-2xl font-bold mb-4 text-purple-400">Python</h2>
-              
-              <div className="space-y-6">
-                <div>
-                  <h3 className="font-semibold text-lg mb-2">Using requests library</h3>
-                  <div className="bg-slate-800 p-4 rounded-lg">
-                    <pre className="text-green-400 text-sm overflow-x-auto">
+            {/* Python */}"            <section className="bg-slate-900/60 rounded-lg p-6 border border-white/10">"              <h2 className="text-2xl font-bold mb-4 text-purple-400">Python</h2>
+              "              <div className="space-y-6">
+                <div>"                  <h3 className="font-semibold text-lg mb-2">Using requests library</h3>"                  <div className="bg-slate-800 p-4 rounded-lg">"                    <pre className="text-green-400 text-sm overflow-x-auto">
 {`import requests
 import os
 
 def get_services():
-    headers = {
-        'Authorization': f'Bearer {os.getenv("ZION_API_KEY")}',
+    headers = {"        'Authorization': f'Bearer {os.getenv("ZION_API_KEY")}',
         'Content-Type': 'application/json'
     }
     
@@ -126,10 +96,7 @@ print(services)`}
                   </div>
                 </div>
 
-                <div>
-                  <h3 className="font-semibold text-lg mb-2">AI Service Integration</h3>
-                  <div className="bg-slate-800 p-4 rounded-lg">
-                    <pre className="text-green-400 text-sm overflow-x-auto">
+                <div>"                  <h3 className="font-semibold text-lg mb-2">AI Service Integration</h3>"                  <div className="bg-slate-800 p-4 rounded-lg">"                    <pre className="text-green-400 text-sm overflow-x-auto">
 {`import requests
 
 class ZionTechClient:
@@ -167,15 +134,9 @@ print(result['content'])`}
               </div>
             </section>
 
-            {/* React */}
-            <section className="bg-slate-900/60 rounded-lg p-6 border border-white/10">
-              <h2 className="text-2xl font-bold mb-4 text-green-400">React</h2>
-              
-              <div className="space-y-6">
-                <div>
-                  <h3 className="font-semibold text-lg mb-2">Custom Hook</h3>
-                  <div className="bg-slate-800 p-4 rounded-lg">
-                    <pre className="text-green-400 text-sm overflow-x-auto">
+            {/* React */}"            <section className="bg-slate-900/60 rounded-lg p-6 border border-white/10">"              <h2 className="text-2xl font-bold mb-4 text-green-400">React</h2>
+              "              <div className="space-y-6">
+                <div>"                  <h3 className="font-semibold text-lg mb-2">Custom Hook</h3>"                  <div className="bg-slate-800 p-4 rounded-lg">"                    <pre className="text-green-400 text-sm overflow-x-auto">
 {`import { useState, useEffect } from 'react';
 
 function useZionTechAPI() {
@@ -218,10 +179,7 @@ export default useZionTechAPI;`}
                   </div>
                 </div>
 
-                <div>
-                  <h3 className="font-semibold text-lg mb-2">Component Usage</h3>
-                  <div className="bg-slate-800 p-4 rounded-lg">
-                    <pre className="text-green-400 text-sm overflow-x-auto">
+                <div>"                  <h3 className="font-semibold text-lg mb-2">Component Usage</h3>"                  <div className="bg-slate-800 p-4 rounded-lg">"                    <pre className="text-green-400 text-sm overflow-x-auto">
 {`import React from 'react';
 import useZionTechAPI from './useZionTechAPI';
 
@@ -255,15 +213,9 @@ export default ServicesList;`}
               </div>
             </section>
 
-            {/* PHP */}
-            <section className="bg-slate-900/60 rounded-lg p-6 border border-white/10">
-              <h2 className="text-2xl font-bold mb-4 text-yellow-400">PHP</h2>
-              
-              <div className="space-y-6">
-                <div>
-                  <h3 className="font-semibold text-lg mb-2">cURL Implementation</h3>
-                  <div className="bg-slate-800 p-4 rounded-lg">
-                    <pre className="text-green-400 text-sm overflow-x-auto">
+            {/* PHP */}"            <section className="bg-slate-900/60 rounded-lg p-6 border border-white/10">"              <h2 className="text-2xl font-bold mb-4 text-yellow-400">PHP</h2>
+              "              <div className="space-y-6">
+                <div>"                  <h3 className="font-semibold text-lg mb-2">cURL Implementation</h3>"                  <div className="bg-slate-800 p-4 rounded-lg">"                    <pre className="text-green-400 text-sm overflow-x-auto">
 {`<?php
 
 class ZionTechAPI {
@@ -330,15 +282,9 @@ $content = $api->generateContent('Write a product description');
               </div>
             </section>
 
-            {/* Error Handling */}
-            <section className="bg-slate-900/60 rounded-lg p-6 border border-white/10">
-              <h2 className="text-2xl font-bold mb-4 text-red-400">Error Handling</h2>
-              
-              <div className="space-y-4">
-                <div>
-                  <h3 className="font-semibold text-lg mb-2">JavaScript Error Handling</h3>
-                  <div className="bg-slate-800 p-4 rounded-lg">
-                    <pre className="text-green-400 text-sm overflow-x-auto">
+            {/* Error Handling */}"            <section className="bg-slate-900/60 rounded-lg p-6 border border-white/10">"              <h2 className="text-2xl font-bold mb-4 text-red-400">Error Handling</h2>
+              "              <div className="space-y-4">
+                <div>"                  <h3 className="font-semibold text-lg mb-2">JavaScript Error Handling</h3>"                  <div className="bg-slate-800 p-4 rounded-lg">"                    <pre className="text-green-400 text-sm overflow-x-auto">
 {`async function safeApiCall(endpoint) {
   try {
     const response = await fetch(endpoint, {
@@ -351,11 +297,9 @@ $content = $api->generateContent('Write a product description');
       throw new Error(\`HTTP error! status: \${response.status}\`);
     }
     
-    const data = await response.json();
-    return { success: true, data };
+    const data = await response.json();"    return { success: "true", data };
   } catch (error) {
-    console.error('API call failed:', error);
-    return { success: false, error: error.message };
+    console.error('API call failed:', error);"    return { success: "false", error: error.message };
   }
 }
 
@@ -373,24 +317,11 @@ if (result.success) {
             </section>
           </div>
 
-          {/* Next Steps */}
-          <div className="mt-12 bg-slate-900/60 rounded-lg p-6 border border-white/10">
-            <h2 className="text-2xl font-bold mb-4">Next Steps</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="font-semibold text-lg mb-2">Explore More</h3>
-                <ul className="text-slate-300 space-y-1">
-                  <li>• <Link href="/docs/api-reference" className="text-blue-400 hover:text-blue-300">Complete API reference</Link></li>
-                  <li>• <Link href="/docs/sdk" className="text-blue-400 hover:text-blue-300">SDK documentation</Link></li>
-                  <li>• <Link href="/docs/best-practices" className="text-blue-400 hover:text-blue-300">Best practices</Link></li>
+          {/* Next Steps */}"          <div className="mt-12 bg-slate-900/60 rounded-lg p-6 border border-white/10">"            <h2 className="text-2xl font-bold mb-4">Next Steps</h2>"            <div className="grid md:grid-cols-2 gap-6">
+              <div>"                <h3 className="font-semibold text-lg mb-2">Explore More</h3>"                <ul className="text-slate-300 space-y-1">"                  <li>• <Link href="/docs/api-reference" className="text-blue-400 hover:text-blue-300">Complete API reference</Link></li>"                  <li>• <Link href="/docs/sdk" className="text-blue-400 hover:text-blue-300">SDK documentation</Link></li>"                  <li>• <Link href="/docs/best-practices" className="text-blue-400 hover:text-blue-300">Best practices</Link></li>
                 </ul>
               </div>
-              <div>
-                <h3 className="font-semibold text-lg mb-2">Get Help</h3>
-                <ul className="text-slate-300 space-y-1">
-                  <li>• <Link href="/contact" className="text-blue-400 hover:text-blue-300">Contact support</Link></li>
-                  <li>• <Link href="/docs/troubleshooting" className="text-blue-400 hover:text-blue-300">Troubleshooting guide</Link></li>
-                  <li>• <Link href="/faq" className="text-blue-400 hover:text-blue-300">Frequently asked questions</Link></li>
+              <div>"                <h3 className="font-semibold text-lg mb-2">Get Help</h3>"                <ul className="text-slate-300 space-y-1">"                  <li>• <Link href="/contact" className="text-blue-400 hover:text-blue-300">Contact support</Link></li>"                  <li>• <Link href="/docs/troubleshooting" className="text-blue-400 hover:text-blue-300">Troubleshooting guide</Link></li>"                  <li>• <Link href="/faq" className="text-blue-400 hover:text-blue-300">Frequently asked questions</Link></li>
                 </ul>
               </div>
             </div>
@@ -398,5 +329,4 @@ if (result.success) {
         </div>
       </main>
     </>
-  );
-}
+  );"}

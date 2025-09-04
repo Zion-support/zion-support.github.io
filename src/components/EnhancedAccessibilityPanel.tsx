@@ -157,9 +157,7 @@
 `
             id: `button-${index}`,
             type: 'warning',
-            message: 'Button missing type attribute',
-            element: element.tagName.toLowerCase(),"
-            recommendation: 'Add type="button" to prevent form submission',
+            message: 'Button missing type attribute',"            element: element.tagName.toLowerCase(),""            recommendation: 'Add type="button" to prevent form submission',
             severity: 'medium'})}
       })} catch(error) {
 
@@ -169,13 +167,7 @@
     setIsScanning(false) }, []) ;
 
   // Get issue icon
-  
-      case 'warning':"
-        return <AlertTriangle className="w-4 h-4 text-yellow-500"  />;
-      case 'info':"
-        return <Info className="w-4 h-4 text-blue-500"  />;
-      default:"
-        return <Info className="w-4 h-4 text-gray-500"  />}
+  "      case 'warning':""        return <AlertTriangle className="w-4 h-4 text-yellow-500"  />;"      case 'info':""        return <Info className="w-4 h-4 text-blue-500"  />;"      default:""        return <Info className="w-4 h-4 text-gray-500"  />}
   };
 
   // Get severity color
@@ -189,61 +181,29 @@
 
   return ()
     <>
-      {/* Floating Action Button */}
-      <motion.button"
-        className="fixed bottom-6 left-6 z-50 bg-zion-blue hover:bg-zion-blue-dark text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+      {/* Floating Action Button */}"      <motion.button""        className="fixed bottom-6 left-6 z-50 bg-zion-blue hover:bg-zion-blue-dark text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
         onClick={() => setIsVisible(!isVisible)}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}"
-        title="Accessibility Panel"
-        
-      >"
-        <Accessibility className="w-6 h-6"  />      </motion.button>
+        whileHover={{ scale: 1.1 }}"        whileTap={{ scale: 0.9 }}""        title="Accessibility Panel"
+        "      >""        <Accessibility className="w-6 h-6"  />      </motion.button>
 
       {/* Accessibility Panel */}
       <AnimatePresence>
         {isVisible && (<motion.div
             initial={{ opacity: 0, x: -300 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -300 }}"
-            className="fixed top-0 left-0 h-full w-96 bg-white dark:bg-gray-900 shadow-2xl z-40 overflow-y-auto"
-            role="dialog"
-            
-          >"
-            <div className="p-6">
-              {/* Header */}"
-              <div className="flex items-center justify-between mb-6">"
-                <div className="flex items-center space-x-2">"
-                  <Accessibility className="w-6 h-6 text-zion-blue"  />"                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+            animate={{ opacity: 1, x: 0 }}"            exit={{ opacity: 0, x: -300 }}""            className="fixed top-0 left-0 h-full w-96 bg-white dark:bg-gray-900 shadow-2xl z-40 overflow-y-auto""            role="dialog"
+            "          >""            <div className="p-6">"              {/* Header */}""              <div className="flex items-center justify-between mb-6">""                <div className="flex items-center space-x-2">""                  <Accessibility className="w-6 h-6 text-zion-blue"  />"                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">
                     Accessibility
-                  </h2>
-                </div>"
-                <div className="flex items-center space-x-2">
-                  <button
-                    onClick={() => setIsExpanded(!isExpanded)}"
-                    className="p-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"'
+                  </h2>"                </div>""                <div className="flex items-center space-x-2">
+                  <button"                    onClick={() => setIsExpanded(!isExpanded)}""                    className="p-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"'
                     aria-label={isExpanded ? 'Collapse panel' : 'Expand panel'}
-                  >
-                    {isExpanded ? ("
-                      <ChevronUp className="w-4 h-4"  />
-                    ) : ("
-                      <ChevronDown className="w-4 h-4"  />
+                  >"                    {isExpanded ? (""                      <ChevronUp className="w-4 h-4"  />"                    ) : (""                      <ChevronDown className="w-4 h-4"  />
                     )}                  </button>
-                  <button
-                    onClick={() => setIsVisible(false)}"
-                    className="p-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
-                    
-                  >"
-                    <X className="w-5 h-5"  />                  </button>
+                  <button"                    onClick={() => setIsVisible(false)}""                    className="p-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+                    "                  >""                    <X className="w-5 h-5"  />                  </button>
                 </div>
               </div>
-
-              {/* Quick Actions */}"
-              <div className="mb-6">"
-                <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">
-                  Quick Actions
-                </h3>"
-                <div className="grid grid-cols-2 gap-3">
+"              {/* Quick Actions */}""              <div className="mb-6">""                <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">
+                  Quick Actions"                </h3>""                <div className="grid grid-cols-2 gap-3">
                   <button
                     onClick={() =>
                       applySettings({ highContrast: !settings.highContrast })
@@ -252,9 +212,7 @@
                         ? 'border-zion-blue bg-zion-blue text-white''
                         : 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300'`
                     }`}
-                    aria-pressed={settings.highContrast}
-                  >"
-                    <Contrast className="w-4 h-4"  />"                    <span className="text-sm">High Contrast</span>
+                    aria-pressed={settings.highContrast}"                  >""                    <Contrast className="w-4 h-4"  />"                    <span className="text-sm">High Contrast</span>
                   </button>
 
                   <button
@@ -265,9 +223,7 @@
                         ? 'border-zion-blue bg-zion-blue text-white''
                         : 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300'`
                     }`}
-                    aria-pressed={settings.largeText}
-                  >"
-                    <Type className="w-4 h-4"  />"                    <span className="text-sm">Large Text</span>
+                    aria-pressed={settings.largeText}"                  >""                    <Type className="w-4 h-4"  />"                    <span className="text-sm">Large Text</span>
                   </button>
 
                   <button
@@ -278,9 +234,7 @@
                         ? 'border-zion-blue bg-zion-blue text-white''
                         : 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300'`
                     }`}
-                    aria-pressed={settings.reducedMotion}
-                  >"
-                    <Pause className="w-4 h-4"  />"                    <span className="text-sm">Reduced Motion</span>
+                    aria-pressed={settings.reducedMotion}"                  >""                    <Pause className="w-4 h-4"  />"                    <span className="text-sm">Reduced Motion</span>
                   </button>
 
                   <button
@@ -293,62 +247,33 @@
                         ? 'border-zion-blue bg-zion-blue text-white''
                         : 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300'`
                     }`}
-                    aria-pressed={settings.focusIndicator}
-                  >"
-                    <Keyboard className="w-4 h-4"  />"                    <span className="text-sm">Focus Indicator</span>
+                    aria-pressed={settings.focusIndicator}"                  >""                    <Keyboard className="w-4 h-4"  />"                    <span className="text-sm">Focus Indicator</span>
                   </button>
                 </div>
               </div>
-
-              {/* Typography Controls */}"
-              <div className="mb-6">"
-                <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">
-                  Typography
-                </h3>"
-                <div className="space-y-3">
-                  <div>"
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+"              {/* Typography Controls */}""              <div className="mb-6">""                <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">
+                  Typography"                </h3>""                <div className="space-y-3">"                  <div>""                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                       Font Size: {settings.fontSize}px
-                    </label>
-                    <input"
-                      type="range"
-                      min="12"
-                      max="24"
+                    </label>"                    <input""                      type="range""                      min="12""                      max="24"
                       value={settings.fontSize}
                       onChange={e =>
-                        applySettings({ fontSize: parseInt(e.target.value) })
-                      }"
-                      className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                        applySettings({ fontSize: parseInt(e.target.value) })"                      }""                      className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
                     />
                   </div>
-
-                  <div>"
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+"                  <div>""                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                       Line Height: {settings.lineHeight}
-                    </label>
-                    <input"
-                      type="range"
-                      min="1.2"
-                      max="2.0"
-                      step="0.1"
+                    </label>"                    <input""                      type="range""                      min="1.2""                      max="2.0""                      step="0.1"
                       value={settings.lineHeight}
                       onChange={e =>
                         applySettings({
 
-                          lineHeight: parseFloat(e.target.value)})
-                      }"
-                      className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                          lineHeight: parseFloat(e.target.value)})"                      }""                      className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
                     />
                   </div>
                 </div>
               </div>
-
-              {/* Color Blindness Simulation */}"
-              <div className="mb-6">"
-                <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">
-                  Color Vision
-                </h3>"
-                <div className="space-y-2">
+"              {/* Color Blindness Simulation */}""              <div className="mb-6">""                <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">
+                  Color Vision"                </h3>""                <div className="space-y-2">
                   {['
                     { value: 'none', label: 'Normal Vision' },
                     { value: 'protanopia', label: 'Protanopia(Red-Blind)},
@@ -358,72 +283,42 @@
                       label: 'Deuteranopia(Green-Blind)},
                     { value: 'tritanopia', label: 'Tritanopia(Blue-Blind)},
                   ].map(option => (
-                    <label
-                      key={option.value}"
-                      className="flex items-center space-x-2"
-                    >
-                      <input"
-                        type="radio"
-                        name="colorBlindness"
+                    <label"                      key={option.value}""                      className="flex items-center space-x-2"
+                    >"                      <input""                        type="radio""                        name="colorBlindness"
                         value={option.value}
                         checked={settings.colorBlindness === option.value}
                         onChange={e =>
                           applySettings({
 
-                            colorBlindness: e.target.value as any})
-                        }"
-                        className="text-zion-blue focus:ring-zion-blue"
-                      />"
-                      <span className="text-sm text-gray-700 dark:text-gray-300">
+                            colorBlindness: e.target.value as any})"                        }""                        className="text-zion-blue focus:ring-zion-blue""                      />""                      <span className="text-sm text-gray-700 dark:text-gray-300">
                         {option.label}
                       </span>
                     </label>
                   ))}
                 </div>
               </div>
-
-              {/* Accessibility Audit */}"
-              <div className="mb-6">"
-                <div className="flex items-center justify-between mb-3">"
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+"              {/* Accessibility Audit */}""              <div className="mb-6">""                <div className="flex items-center justify-between mb-3">""                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                     Accessibility Audit
                   </h3>
                   <button
-                    onClick={runAccessibilityAudit}
-                    disabled={isScanning}"
-                    className="flex items-center space-x-2 px-3 py-1 bg-zion-blue hover:bg-zion-blue-dark text-white text-sm rounded-lg transition-colors disabled:opacity-50"
+                    onClick={runAccessibilityAudit}"                    disabled={isScanning}""                    className="flex items-center space-x-2 px-3 py-1 bg-zion-blue hover:bg-zion-blue-dark text-white text-sm rounded-lg transition-colors disabled:opacity-50"
                   >
-                    {isScanning ? (
-                      <>"
-                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                    {isScanning ? ("                      <>""                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
                         <span>Scanning...</span>
                       </>
-                    ) : (
-                      <>"
-                        <Eye className="w-4 h-4"  />                        <span>Run Audit</span>
+                    ) : ("                      <>""                        <Eye className="w-4 h-4"  />                        <span>Run Audit</span>
                       </>
                     )}
                   </button>
                 </div>
-
-                {issues.length > 0 && ("
-                  <div className="space-y-2 max-h-48 overflow-y-auto">
+"                {issues.length > 0 && (""                  <div className="space-y-2 max-h-48 overflow-y-auto">
                     {issues.map(issue => (
                       <div
                         key={issue.id}`
-                        className={`p-3 rounded-lg border-l-4 ${getSeverityColor(issue.severity)}`}
-                      >"
-                        <div className="flex items-start space-x-2">
-                          {getIssueIcon(issue.type)}"
-                          <div className="flex-1 min-w-0">"
-                            <p className="text-sm font-medium text-gray-900 dark:text-white">
-                              {issue.message}
-                            </p>"
-                            <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
+                        className={`p-3 rounded-lg border-l-4 ${getSeverityColor(issue.severity)}`}"                      >""                        <div className="flex items-start space-x-2">"                          {getIssueIcon(issue.type)}""                          <div className="flex-1 min-w-0">""                            <p className="text-sm font-medium text-gray-900 dark:text-white">
+                              {issue.message}"                            </p>""                            <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
                               {issue.recommendation}
-                            </p>
-                            {issue.element && ("
-                              <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">
+                            </p>"                            {issue.element && (""                              <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">
                                 Element: {issue.element}
                               </p>) }
                           </div>
@@ -431,13 +326,8 @@
                       </div>) ) }
                   </div>) }
               </div>
-
-              {/* Keyboard Navigation Info */}"
-              <div className="mb-6">"
-                <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">
-                  Keyboard Navigation
-                </h3>"
-                <div className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+"              {/* Keyboard Navigation Info */}""              <div className="mb-6">""                <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">
+                  Keyboard Navigation"                </h3>""                <div className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                   <p>• Use Tab to navigate between interactive elements</p>
                   <p>• Use Arrow keys to navigate within components</p>
                   <p>• Press Enter or Space to activate buttons</p>
@@ -448,28 +338,17 @@
               {/* Reset Button */}
               <button      onClick={ () => {
                   const defaultSettings: AccessibilitySettings = {
-
-                    highContrast: false,
-                    largeText: false,
-                    reducedMotion: false,
-                    screenReader: false,
-                    focusIndicator: true,
+"                    highContrast: "false","                    largeText: "false","                    reducedMotion: "false","                    screenReader: "false","                    focusIndicator: "true",
                     colorBlindness: 'none',
                     fontSize: 16,
                     lineHeight: 1.5,
                     letterSpacing: 0,
                     wordSpacing: 0};
-                  setSettings(defaultSettings);
-                  applySettings(defaultSettings)}}"
-                className="w-full flex items-center justify-center space-x-2 bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg transition-colors"
-              >"
-                <RotateCcw className="w-4 h-4"  />                <span>Reset to Defaults</span>
+                  setSettings(defaultSettings);"                  applySettings(defaultSettings)}}""                className="w-full flex items-center justify-center space-x-2 bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg transition-colors""              >""                <RotateCcw className="w-4 h-4"  />                <span>Reset to Defaults</span>
               </button>
             </div>
           </motion.div>) }
       </AnimatePresence>
-    </>) }
-'"`
-
-;,"});,})";
-
+    </>) }"'"`
+";,"});,})";
+"

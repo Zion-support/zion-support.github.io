@@ -5,10 +5,7 @@
 export: default function Layout() {
 
   return: <div>{children}</div>
-React from"
-  "react""import Footer from "react"
-  "./Footer"import Footer  from "react./Footer,
+React from""  "react""import Footer from "react""  "./Footer"import Footer  from "react./Footer,
 export default function Layout({ children }: LayoutProps) {
 
-    </div>
-  )"; type: LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div> } " 
+    </div>"  )"; type: LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div> } " "

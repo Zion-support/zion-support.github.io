@@ -22,7 +22,7 @@ export default function ComprehensiveSitemap() {;
   const sitemapSections: SitemapSection[] = [;
     {;
       title: 'Main Pages',;
-      icon: Home,;
+      icon: "Home",;
       description: 'Core website pages and navigation',;
       links: [;
         { name: 'Home', href: '/', description: 'Main landing page' },;
@@ -115,11 +115,11 @@ export default function ComprehensiveSitemap() {;
       ];,
 },;
     {};
-        { name: 'Comprehensive Pricing Guide 2025', href: '/comprehensive-pricing-guide-2025', description: 'Detailed pricing information' },;
+        { name: 'Comprehensive Pricing Guide: 2025', href: '/comprehensive-pricing-guide-2025', description: 'Detailed pricing information' },;
         { name: 'Pricing Overview', href: '/pricing', description: 'Service pricing' },;
         { name: 'Pricing Guide', href: '/pricing-guide', description: 'Detailed pricing info' },;
-        { name: 'Comprehensive Pricing 2026', href: '/comprehensive-pricing-guide-2026', description: 'Future pricing' },;
-        { name: 'Pricing Guide 2025', href: '/pricing-guide-2025', description: 'Current pricing' },;
+        { name: 'Comprehensive Pricing: 2026', href: '/comprehensive-pricing-guide-2026', description: 'Future pricing' },;
+        { name: 'Pricing Guide: 2025', href: '/pricing-guide-2025', description: 'Current pricing' },;
         { name: 'Get Custom Quote', href: '/contact', description: 'Request personalized pricing' },;
         { name: 'Schedule Demo', href: '/schedule-demo', description: 'Book a product demonstration' }
       ];,
@@ -163,10 +163,7 @@ export default function ComprehensiveSitemap() {;
         { name: 'Schedule Demo', href: '/schedule-demo', description: 'Book a product demonstration' },;
         { name: 'Support', href: '/support', description: 'Technical support' },;
         { name: 'Helpdesk', href: '/help', description: 'Help and support center' },;
-        { name: 'Training', href: '/training', description: 'Training and education' },;
-        { name: 'Phone: +1 (302) 464-0950', href: 'tel:+13024640950', description: 'Call us directly', external: true },;
-        { name: 'Email: kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com', description: 'Send us an email', external: true },;
-        { name: 'Address: 364 E Main St STE 1008, Middletown DE 19709', href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709', description: 'Visit our office', external: true }
+        { name: 'Training', href: '/training', description: 'Training and education' },;"        { name: 'Phone: +1 (302) 464-0950', href: 'tel:+13024640950', description: 'Call us directly', external: "true "},;"        { name: 'Email: kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com', description: 'Send us an email', external: "true "},;"        { name: 'Address: 364 E Main St STE: 1008, Middletown DE: 19709', href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709', description: 'Visit our office', external: "true "}
       ];,
 }
   ];
@@ -174,34 +171,21 @@ export default function ComprehensiveSitemap() {;
   return (;
     <>;
       <Helmet>;
-        <title>Comprehensive Sitemap - Zion Tech Group</title>;
-        <meta name="description" content="Complete sitemap of Zion Tech Group's website. Find all our services, pages, and navigation routes for easy access." />;
-        <meta name="keywords" content="sitemap, navigation, services, pages, Zion Tech Group" />;
-        <link rel="canonical" href="https://ziontechgroup.com/comprehensive-sitemap" />;
+        <title>Comprehensive Sitemap - Zion Tech Group</title>;"        <meta name="description" content="Complete sitemap of Zion Tech Group's website. Find all our services, pages, and navigation routes for easy access." />;"        <meta name="keywords" content="sitemap, navigation, services, pages, Zion Tech Group" />;"        <link rel="canonical" href="https://ziontechgroup.com/comprehensive-sitemap" />;
       </Helmet>;
-
-      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-darker">;
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
-          <div className="max-w-7xl mx-auto text-center">;
+"      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-darker">;
+        {/* Hero Section */}"        <section className="relative py-20 px-4 sm:px-6 lg:px-8">;"          <div className="max-w-7xl mx-auto text-center">;
             <div>Broken JSX</div>
-            >;
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
-                Comprehensive;
-                <span className="text-zion-cyan"> Sitemap</span>;
-              </h1>;
-              <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">;
+            >;"              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
+                Comprehensive;"                <span className="text-zion-cyan"> Sitemap</span>;
+              </h1>;"              <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">;
                 Navigate our complete website structure and discover all our services, ;
                 solutions, and resources in one organized location.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <div>Broken JSX</div>
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105">;
-                  Explore Services;
-                  <ArrowRight className="ml-2 w-5 h-5" />;
+              </p>;"              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+                <div>Broken JSX</div>"                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105">;
+                  Explore Services;"                  <ArrowRight className="ml-2 w-5 h-5" />;
                 </Link>;
-                <div>Broken JSX</div>
-                  className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">;
+                <div>Broken JSX</div>"                  className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">;
                   View Pricing;
                 </Link>;
               </div>;
@@ -209,17 +193,11 @@ export default function ComprehensiveSitemap() {;
           </div>;
         </section>;
 
-        {/* Sitemap Sections */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">;
-          <div className="max-w-7xl mx-auto">;
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">;
-              {};
-                        <h2 className="text-xl font-bold text-white">{section.title}</h2>;
-                        <p className="text-zion-slate-light text-sm">{section.description}</p>;
+        {/* Sitemap Sections */}"        <section className="py-16 px-4 sm:px-6 lg:px-8">;"          <div className="max-w-7xl mx-auto">;"            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">;
+              {};"                        <h2 className="text-xl font-bold text-white">{section.title}</h2>;"                        <p className="text-zion-slate-light text-sm">{section.description}</p>;
                       </div>;
                     </div>;
-
-                    <div className="space-y-3">;
+"                    <div className="space-y-3">;
                       {};
                                       {link.name}
                                     </div>;
@@ -228,16 +206,11 @@ export default function ComprehensiveSitemap() {;
                                       </div>;
                                     )}
                                   </div>;
-                                </div>;
-                                <ExternalLink className="w-4 h-4 text-zion-slate-light group-hover:text-zion-cyan transition-colors" />;
+                                </div>;"                                <ExternalLink className="w-4 h-4 text-zion-slate-light group-hover:text-zion-cyan transition-colors" />;
                               </a>;
                             ) : (;
-                              <div>Broken JSX</div>
-                                className="flex items-center justify-between p-3 rounded-lg text-zion-slate-light hover:text-zion-cyan hover:bg-zion-slate-darker transition-all duration-300 group">;
-                                <div className="flex items-center space-x-3">;
-                                  <LinkIcon className="w-4 h-4 text-zion-cyan" />;
-                                  <div>;
-                                    <div className="font-medium text-white group-hover:text-zion-cyan transition-colors">;
+                              <div>Broken JSX</div>"                                className="flex items-center justify-between p-3 rounded-lg text-zion-slate-light hover:text-zion-cyan hover:bg-zion-slate-darker transition-all duration-300 group">;"                                <div className="flex items-center space-x-3">;"                                  <LinkIcon className="w-4 h-4 text-zion-cyan" />;
+                                  <div>;"                                    <div className="font-medium text-white group-hover:text-zion-cyan transition-colors">;
                                       {link.name}
                                     </div>;
                                     {};
@@ -245,8 +218,7 @@ export default function ComprehensiveSitemap() {;
                                       </div>;
                                     )}
                                   </div>;
-                                </div>;
-                                <ArrowRight className="w-4 h-4 text-zion-slate-light group-hover:text-zion-cyan transition-colors" />;
+                                </div>;"                                <ArrowRight className="w-4 h-4 text-zion-slate-light group-hover:text-zion-cyan transition-colors" />;
                               </Link>;
                             )}
                           </motion.div>;
@@ -260,25 +232,17 @@ export default function ComprehensiveSitemap() {;
           </div>;
         </section>;
 
-        {/* Quick Actions */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">;
-          <div className="max-w-4xl mx-auto text-center">;
+        {/* Quick Actions */}"        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">;"          <div className="max-w-4xl mx-auto text-center">;
             <div>Broken JSX</div>
-            >;
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
+            >;"              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
                 Need Help Finding Something?;
-              </h2>;
-              <p className="text-xl text-zion-slate-light mb-8">;
+              </h2>;"              <p className="text-xl text-zion-slate-light mb-8">;
                 Our team is here to help you navigate our services and find the right solution;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <div>Broken JSX</div>
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300">;
-                  Contact Support;
-                  <ArrowRight className="ml-2 w-5 h-5" />;
+              </p>;"              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+                <div>Broken JSX</div>"                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300">;
+                  Contact Support;"                  <ArrowRight className="ml-2 w-5 h-5" />;
                 </Link>;
-                <div>Broken JSX</div>
-                  className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">;
+                <div>Broken JSX</div>"                  className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">;
                   Call +1 (302) 464-0950;
                 </a>;
               </div>;
@@ -287,5 +251,4 @@ export default function ComprehensiveSitemap() {;
         </section>;
       </div>;
     </>;
-  );,
-}
+  );,"}

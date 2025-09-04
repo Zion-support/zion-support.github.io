@@ -7,8 +7,7 @@ export default function ResearchDevelopmentPage() {
     {
       id: 'ai-ethics',
       title: 'AI Ethics & Responsible AI',
-      description: 'Developing frameworks and methodologies for building ethical, transparent, and accountable AI systems.',
-      icon: Brain,
+      description: 'Developing frameworks and methodologies for building ethical, transparent, and accountable AI systems.',"      icon: "Brain",
       focus: [
         'Bias detection and mitigation',
         'Explainable AI (XAI)',
@@ -28,8 +27,7 @@ export default function ResearchDevelopmentPage() {
     {
       id: 'quantum-computing',
       title: 'Quantum Computing Applications',
-      description: 'Exploring practical applications of quantum computing for optimization, cryptography, and machine learning.',
-      icon: Zap,
+      description: 'Exploring practical applications of quantum computing for optimization, cryptography, and machine learning.',"      icon: "Zap",
       focus: [
         'Quantum machine learning algorithms',
         'Post-quantum cryptography',
@@ -49,8 +47,7 @@ export default function ResearchDevelopmentPage() {
     {
       id: 'edge-computing',
       title: 'Edge Computing & IoT',
-      description: 'Researching distributed computing architectures and intelligent edge devices for real-time processing.',
-      icon: Cloud,
+      description: 'Researching distributed computing architectures and intelligent edge devices for real-time processing.',"      icon: "Cloud",
       focus: [
         'Edge AI and machine learning',
         'Distributed computing architectures',
@@ -70,8 +67,7 @@ export default function ResearchDevelopmentPage() {
     {
       id: 'cybersecurity',
       title: 'Advanced Cybersecurity',
-      description: 'Developing next-generation security solutions using AI, machine learning, and behavioral analysis.',
-      icon: Shield,
+      description: 'Developing next-generation security solutions using AI, machine learning, and behavioral analysis.',"      icon: "Shield",
       focus: [
         'AI-powered threat detection',
         'Zero Trust architecture',
@@ -175,30 +171,17 @@ export default function ResearchDevelopmentPage() {
   ];
 
   return (
-    <ModernLayout
-      title="Research & Development | Zion Tech Group"
-      description="Exploring the frontiers of technology through innovative research, development, and collaboration."
-      canonical="https://ziontechgroup.com/research-development"
+    <ModernLayout"      title="Research & Development | Zion Tech Group""      description="Exploring the frontiers of technology through innovative research, development, and collaboration.""      canonical="https://ziontechgroup.com/research-development"
     >
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-20">
-        <div className="mx-auto max-w-7xl px-6 text-center">
-          <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+      {/* Hero Section */}"      <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-20">"        <div className="mx-auto max-w-7xl px-6 text-center">"          <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
             Research & Development
-          </h1>
-          <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          </h1>"          <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Pushing the boundaries of technology through innovative research, cutting-edge development, and strategic partnerships.
           </p>
         </div>
       </section>
 
-      {/* Mission Statement */}
-      <section className="py-20 bg-white">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 lg:p-12 text-white">
-            <FlaskConical className="h-16 w-16 mx-auto mb-6 text-blue-200" />
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6">Our R&D Mission</h2>
-            <p className="text-lg lg:text-xl text-blue-100 leading-relaxed">
+      {/* Mission Statement */}"      <section className="py-20 bg-white">"        <div className="mx-auto max-w-4xl px-6 text-center">"          <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 lg:p-12 text-white">"            <FlaskConical className="h-16 w-16 mx-auto mb-6 text-blue-200" />"            <h2 className="text-3xl lg:text-4xl font-bold mb-6">Our R&D Mission</h2>"            <p className="text-lg lg:text-xl text-blue-100 leading-relaxed">
               To advance the state of technology through innovative research, develop practical solutions that solve real-world problems, 
               and contribute to the broader technology community through collaboration and knowledge sharing.
             </p>
@@ -206,60 +189,34 @@ export default function ResearchDevelopmentPage() {
         </div>
       </section>
 
-      {/* Research Areas */}
-      <section className="py-20 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Research Focus Areas</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+      {/* Research Areas */}"      <section className="py-20 bg-gray-50">"        <div className="mx-auto max-w-7xl px-6">"          <div className="text-center mb-16">"            <h2 className="text-4xl font-bold text-gray-900 mb-4">Research Focus Areas</h2>"            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our research spans multiple cutting-edge technology domains, each focused on solving real-world challenges.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {researchAreas.map((area) => (
-              <div key={area.id} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300">
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="h-16 w-16 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <area.icon className="h-8 w-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900">{area.title}</h3>
+          "          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {researchAreas.map((area) => ("              <div key={area.id} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300">"                <div className="flex items-center space-x-4 mb-6">"                  <div className="h-16 w-16 bg-blue-100 rounded-lg flex items-center justify-center">"                    <area.icon className="h-8 w-8 text-blue-600" />
+                  </div>"                  <h3 className="text-2xl font-bold text-gray-900">{area.title}</h3>
                 </div>
-                
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                "                <p className="text-gray-600 mb-6 leading-relaxed">
                   {area.description}
                 </p>
-                
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Research Focus</h4>
-                  <ul className="space-y-2">
-                    {area.focus.map((item, index) => (
-                      <li key={index} className="flex items-start space-x-2 text-sm text-gray-600">
-                        <div className="h-2 w-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                "                <div className="mb-6">"                  <h4 className="font-semibold text-gray-900 mb-3">Research Focus</h4>"                  <ul className="space-y-2">
+                    {area.focus.map((item, index) => ("                      <li key={index} className="flex items-start space-x-2 text-sm text-gray-600">"                        <div className="h-2 w-2 bg-blue-600 rounded-full mt-2 flex-shrink-0" />
                         <span>{item}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
-                
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Current Projects</h4>
-                  <ul className="space-y-2">
-                    {area.currentProjects.map((project, index) => (
-                      <li key={index} className="flex items-start space-x-2 text-sm text-gray-600">
-                        <div className="h-2 w-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                "                <div className="mb-6">"                  <h4 className="font-semibold text-gray-900 mb-3">Current Projects</h4>"                  <ul className="space-y-2">
+                    {area.currentProjects.map((project, index) => ("                      <li key={index} className="flex items-start space-x-2 text-sm text-gray-600">"                        <div className="h-2 w-2 bg-green-500 rounded-full mt-2 flex-shrink-0" />
                         <span>{project}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
                 
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Recent Publications</h4>
-                  <ul className="space-y-2">
-                    {area.publications.map((pub, index) => (
-                      <li key={index} className="flex items-start space-x-2 text-sm text-gray-600">
-                        <BookOpen className="h-4 w-4 text-blue-600 mt-0.5" />
+                <div>"                  <h4 className="font-semibold text-gray-900 mb-3">Recent Publications</h4>"                  <ul className="space-y-2">
+                    {area.publications.map((pub, index) => ("                      <li key={index} className="flex items-start space-x-2 text-sm text-gray-600">"                        <BookOpen className="h-4 w-4 text-blue-600 mt-0.5" />
                         <span>{pub}</span>
                       </li>
                     ))}
@@ -271,40 +228,22 @@ export default function ResearchDevelopmentPage() {
         </div>
       </section>
 
-      {/* Innovation Labs */}
-      <section className="py-20 bg-white">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Innovation Labs</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+      {/* Innovation Labs */}"      <section className="py-20 bg-white">"        <div className="mx-auto max-w-7xl px-6">"          <div className="text-center mb-16">"            <h2 className="text-4xl font-bold text-gray-900 mb-4">Innovation Labs</h2>"            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               State-of-the-art facilities where our research teams experiment, prototype, and develop innovative solutions.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {innovationLabs.map((lab) => (
-              <div key={lab.id} className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{lab.title}</h3>
-                <p className="text-gray-600 mb-6">{lab.description}</p>
-                
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Capabilities</h4>
-                  <ul className="space-y-2">
-                    {lab.capabilities.map((capability, index) => (
-                      <li key={index} className="flex items-start space-x-2 text-sm text-gray-600">
-                        <div className="h-2 w-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+          "          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {innovationLabs.map((lab) => ("              <div key={lab.id} className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-6">"                <h3 className="text-xl font-bold text-gray-900 mb-4">{lab.title}</h3>"                <p className="text-gray-600 mb-6">{lab.description}</p>
+                "                <div className="mb-6">"                  <h4 className="font-semibold text-gray-900 mb-3">Capabilities</h4>"                  <ul className="space-y-2">
+                    {lab.capabilities.map((capability, index) => ("                      <li key={index} className="flex items-start space-x-2 text-sm text-gray-600">"                        <div className="h-2 w-2 bg-blue-600 rounded-full mt-2 flex-shrink-0" />
                         <span>{capability}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
                 
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Active Projects</h4>
-                  <ul className="space-y-2">
-                    {lab.projects.map((project, index) => (
-                      <li key={index} className="flex items-start space-x-2 text-sm text-gray-600">
-                        <Lightbulb className="h-4 w-4 text-yellow-600 mt-0.5" />
+                <div>"                  <h4 className="font-semibold text-gray-900 mb-3">Active Projects</h4>"                  <ul className="space-y-2">
+                    {lab.projects.map((project, index) => ("                      <li key={index} className="flex items-start space-x-2 text-sm text-gray-600">"                        <Lightbulb className="h-4 w-4 text-yellow-600 mt-0.5" />
                         <span>{project}</span>
                       </li>
                     ))}
@@ -316,26 +255,14 @@ export default function ResearchDevelopmentPage() {
         </div>
       </section>
 
-      {/* Partnerships */}
-      <section className="py-20 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Research Partnerships</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+      {/* Partnerships */}"      <section className="py-20 bg-gray-50">"        <div className="mx-auto max-w-7xl px-6">"          <div className="text-center mb-16">"            <h2 className="text-4xl font-bold text-gray-900 mb-4">Research Partnerships</h2>"            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We believe in the power of collaboration and actively seek partnerships that accelerate innovation.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {partnerships.map((partnership) => (
-              <div key={partnership.name} className="bg-white rounded-xl shadow-lg p-6 text-center">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{partnership.name}</h3>
-                <p className="text-gray-600 mb-6">{partnership.description}</p>
-                
-                <ul className="space-y-2 text-left">
-                  {partnership.benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-start space-x-2 text-sm text-gray-600">
-                      <div className="h-2 w-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+          "          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {partnerships.map((partnership) => ("              <div key={partnership.name} className="bg-white rounded-xl shadow-lg p-6 text-center">"                <h3 className="text-xl font-bold text-gray-900 mb-4">{partnership.name}</h3>"                <p className="text-gray-600 mb-6">{partnership.description}</p>
+                "                <ul className="space-y-2 text-left">
+                  {partnership.benefits.map((benefit, index) => ("                    <li key={index} className="flex items-start space-x-2 text-sm text-gray-600">"                      <div className="h-2 w-2 bg-blue-600 rounded-full mt-2 flex-shrink-0" />
                       <span>{benefit}</span>
                     </li>
                   ))}
@@ -346,42 +273,20 @@ export default function ResearchDevelopmentPage() {
         </div>
       </section>
 
-      {/* Get Involved */}
-      <section className="py-20 bg-white">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Get Involved in Our Research</h2>
-          <p className="text-xl text-gray-600 mb-8">
+      {/* Get Involved */}"      <section className="py-20 bg-white">"        <div className="mx-auto max-w-4xl px-6 text-center">"          <h2 className="text-4xl font-bold text-gray-900 mb-6">Get Involved in Our Research</h2>"          <p className="text-xl text-gray-600 mb-8">
             Whether you're a researcher, student, or industry professional, there are many ways to collaborate with us.
           </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="text-center">
-              <Users className="h-16 w-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4 text-blue-600" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Join Our Team</h3>
-              <p className="text-gray-600">Work on cutting-edge research projects with our team of experts.</p>
-            </div>
-            <div className="text-center">
-              <BookOpen className="h-16 w-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4 text-blue-600" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Collaborate</h3>
-              <p className="text-gray-600">Partner with us on research projects and joint publications.</p>
-            </div>
-            <div className="text-center">
-              <Lightbulb className="h-16 w-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4 text-blue-600" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Share Ideas</h3>
-              <p className="text-gray-600">Propose research topics or suggest areas for exploration.</p>
+          "          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">"            <div className="text-center">"              <Users className="h-16 w-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4 text-blue-600" />"              <h3 className="text-xl font-semibold text-gray-900 mb-2">Join Our Team</h3>"              <p className="text-gray-600">Work on cutting-edge research projects with our team of experts.</p>
+            </div>"            <div className="text-center">"              <BookOpen className="h-16 w-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4 text-blue-600" />"              <h3 className="text-xl font-semibold text-gray-900 mb-2">Collaborate</h3>"              <p className="text-gray-600">Partner with us on research projects and joint publications.</p>
+            </div>"            <div className="text-center">"              <Lightbulb className="h-16 w-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4 text-blue-600" />"              <h3 className="text-xl font-semibold text-gray-900 mb-2">Share Ideas</h3>"              <p className="text-gray-600">Propose research topics or suggest areas for exploration.</p>
             </div>
           </div>
-          
-          <div className="flex flex-wrap justify-center gap-4">
-            <a 
-              href="/careers" 
-              className="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-blue-700 transition-all duration-200"
+          "          <div className="flex flex-wrap justify-center gap-4">
+            <a "              href="/careers" "              className="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-blue-700 transition-all duration-200"
             >
               View Open Positions
             </a>
-            <a 
-              href="/contact" 
-              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-blue-50 transition-all duration-200"
+            <a "              href="/contact" "              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-blue-50 transition-all duration-200"
             >
               Contact Our Research Team
             </a>
@@ -389,5 +294,4 @@ export default function ResearchDevelopmentPage() {
         </div>
       </section>
     </ModernLayout>
-  );
-}
+  );"}

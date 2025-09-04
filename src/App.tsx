@@ -13,9 +13,7 @@ function App({ Component, pageProps }: AppProps) {
       <ErrorBoundary fallback={<div>Something went wrong</div>}>
         <Head>
           <title>Zion Tech Group - Advanced Technology Solutions</title>
-          <meta name="description" content="Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services." />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" href="/favicon.ico" />
+          <meta name="description" content="Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services." />"          <meta name="viewport" content="width=device-width, initial-scale=1" />"          <link rel="icon" href="/favicon.ico" />
         </Head>
         <Layout>
           <Component {...pageProps} />
@@ -24,5 +22,4 @@ function App({ Component, pageProps }: AppProps) {
     </HelmetProvider>
   );
 }
-
-export default App;
+"export default App;

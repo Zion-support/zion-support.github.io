@@ -72,12 +72,9 @@
           animate={{ opacity: 1, scale: 1 }}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          onClick={() => setIsExpanded(!isExpanded)}
-          className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-500/50"
-          
-          title="Accessibility Settings"
-        >
-          <Settings className="w-6 h-6"  />
+          onClick={() => setIsExpanded(!isExpanded)}"          className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-500/50"
+          "          title="Accessibility Settings"
+        >"          <Settings className="w-6 h-6"  />
         </motion.button>
       </div>
 
@@ -87,30 +84,19 @@
           <motion.div
             initial={{ opacity: 0, x: -100, scale: 0.9 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
-            exit={{ opacity: 0, x: -100, scale: 0.9 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-            className="fixed inset-y-0 left-0 w-96 bg-slate-900/95 backdrop-blur-xl border-r border-cyan-400/20 shadow-2xl shadow-cyan-400/10 overflow-y-auto z-40"
-          >
-            <div className="p-6">
-              {/* Header */}
-              <div className="flex items-center justify-between mb-6">
-                <h2 className="text-2xl font-bold text-cyan-400 flex items-center gap-2">
-                  <Settings className="w-6 h-6"  />
+            exit={{ opacity: 0, x: -100, scale: 0.9 }}"            transition={{ duration: 0.3, ease: "easeOut" }}"            className="fixed inset-y-0 left-0 w-96 bg-slate-900/95 backdrop-blur-xl border-r border-cyan-400/20 shadow-2xl shadow-cyan-400/10 overflow-y-auto z-40"
+          >"            <div className="p-6">
+              {/* Header */}"              <div className="flex items-center justify-between mb-6">"                <h2 className="text-2xl font-bold text-cyan-400 flex items-center gap-2">"                  <Settings className="w-6 h-6"  />
                   Accessibility
                 </h2>
                 <button
-                  onClick={() => setIsExpanded(false)}
-                  className="p-2 hover:bg-cyan-400/20 text-cyan-400 rounded-lg transition-colors"
+                  onClick={() => setIsExpanded(false)}"                  className="p-2 hover:bg-cyan-400/20 text-cyan-400 rounded-lg transition-colors"
                   
-                >
-                  <X className="w-5 h-5"  />
+                >"                  <X className="w-5 h-5"  />
                 </button>
               </div>
 
-              {/* Quick Actions */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-white mb-4">Quick Actions</h3>
-                <div className="grid grid-cols-2 gap-3">
+              {/* Quick Actions */}"              <div className="mb-6">"                <h3 className="text-lg font-semibold text-white mb-4">Quick Actions</h3>"                <div className="grid grid-cols-2 gap-3">
                   {quickActions.map((action) => (
                     <button
                       key={action.name}
@@ -120,22 +106,14 @@
                           : 'bg-slate-800/50 border-slate-600 text-gray-300 hover:bg-slate-700/50'
                       }`}
                       title={action.description}
-                    >
-                      <div className="flex flex-col items-center space-y-2">
-                        <action.icon className="w-5 h-5" />
-                        <span className="text-xs font-medium text-center">{action.name}</span>
+                    >"                      <div className="flex flex-col items-center space-y-2">"                        <action.icon className="w-5 h-5" />"                        <span className="text-xs font-medium text-center">{action.name}</span>
                       </div>
                     </button>
                   ))}
                 </div>
               </div>
 
-              {/* Font Size Control */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-white mb-4">Font Size</h3>
-                <div className="flex items-center space-x-2">
-                  <ZoomOut className="w-5 h-5 text-cyan-400"  />
-                  <div className="flex-1 grid grid-cols-4 gap-2">
+              {/* Font Size Control */}"              <div className="mb-6">"                <h3 className="text-lg font-semibold text-white mb-4">Font Size</h3>"                <div className="flex items-center space-x-2">"                  <ZoomOut className="w-5 h-5 text-cyan-400"  />"                  <div className="flex-1 grid grid-cols-4 gap-2">
                     {fontSizes.map((size) => (
                       <button
                         key={size}
@@ -148,78 +126,55 @@
                         {size}
                       </button>
                     ))}
-                  </div>
-                  <ZoomIn className="w-5 h-5 text-cyan-400"  />
+                  </div>"                  <ZoomIn className="w-5 h-5 text-cyan-400"  />
                 </div>
               </div>
 
               {/* Reset Button */}
               <button
-                onClick={resetSettings}
-                className="w-full py-3 px-4 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition-colors flex items-center justify-center gap-2"
-              >
-                <RotateCcw className="w-4 h-4"  />
+                onClick={resetSettings}"                className="w-full py-3 px-4 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition-colors flex items-center justify-center gap-2"
+              >"                <RotateCcw className="w-4 h-4"  />
                 Reset to Default
               </button>
 
-              {/* WCAG Compliance Info */}
-              <div className="mt-6 p-4 bg-cyan-500/10 border border-cyan-400/20 rounded-lg">
-                <h4 className="font-semibold text-cyan-400 mb-2 flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4"  />
-                  WCAG 2.1 AA Compliant
-                </h4>
-                <p className="text-sm text-gray-300">
-                  This website meets Web Content Accessibility Guidelines 2.1 Level AA standards for accessibility.</p>
+              {/* WCAG Compliance Info */}"              <div className="mt-6 p-4 bg-cyan-500/10 border border-cyan-400/20 rounded-lg">"                <h4 className="font-semibold text-cyan-400 mb-2 flex items-center gap-2">"                  <CheckCircle className="w-4 h-4"  />
+                  WCAG: 2.1 AA Compliant
+                </h4>"                <p className="text-sm text-gray-300">
+                  This website meets Web Content Accessibility Guidelines: 2.1 Level AA standards for accessibility.</p>
               </div>
             </div>
 
-            {/* Accessibility Scan */}
-            <div className="mb-6">
-              <div className="flex items - center justify - between mb-3">
-                <h4 className="text-sm font - semibold text-gray -300">Accessibility Scan</h4>
+            {/* Accessibility Scan */}"            <div className="mb-6">"              <div className="flex items - center justify - between mb-3">"                <h4 className="text-sm font - semibold text-gray -300">Accessibility Scan</h4>
                 <button     onClick={scanForIssues}
-                  disabled={isScanning}
-                  className="px-3 py-1 text-xs bg-blue - 600 hover:bg-blue - 700 disabled:bg-gray - 600 text-white rounded-lg transition -colors"
+                  disabled={isScanning}"                  className="px-3 py-1 text-xs bg-blue - 600 hover:bg-blue - 700 disabled:bg-gray - 600 text-white rounded-lg transition -colors"
                 >
                   {isScanning ? 'Scanning...' : 'Scan Now'}
                 </button>
               </div>
-
-              {issues.length > 0 && (<div className="space - y-2 max - h-32 overflow-y-auto">
+"              {issues.length > 0 && (<div className="space - y-2 max - h-32 overflow-y-auto">
                   {issues.map((issue) => (<div
                       key={issue.id}
                       className={`p - 2 rounded-lg text-xs ${issue.type === 'error' ? 'bg-red - 500 / 20 border border-red - 500 / 30' :
                         issue.type === 'warning' ? 'bg-yellow-500 / 20 border border-yellow-500 / 30' :
                         'bg-blue - 500 / 20 border border-blue - 500 / 30'
                       }`}
-                    >
-                      <div className="flex items - start gap-2">
-                        {issue.type === 'error' ? <AlertTriangle className="w-3 h-3 text-red - 400 mt-0.5" /> :
-                         issue.type === 'warning' ? <AlertTriangle className="w-3 h-3 text-yellow-400 mt-0.5" /> :
-                         <Info className="w-3 h-3 text-blue - 400 mt-0.5" />}
-                        <div>
-                          <div className="font - medium text-white">{issue.element}</div>
-                          <div className="text-gray -300">{issue.description}</div>
+                    >"                      <div className="flex items - start gap-2">"                        {issue.type === 'error' ? <AlertTriangle className="w-3 h-3 text-red - 400 mt-0.5" /> :"                         issue.type === 'warning' ? <AlertTriangle className="w-3 h-3 text-yellow-400 mt-0.5" /> :"                         <Info className="w-3 h-3 text-blue - 400 mt-0.5" />}
+                        <div>"                          <div className="font - medium text-white">{issue.element}</div>"                          <div className="text-gray -300">{issue.description}</div>
                         </div>
                       </div>
                     </div>) ) }
                 </div>) }
-
-              {issues.length === 0 && !isScanning && (<div className="text-center py-4 text-gray - 400 text-sm">
-                  <CheckCircle className="w-8 h-8 mx - auto mb-2 text-green -400" />
+"              {issues.length === 0 && !isScanning && (<div className="text-center py-4 text-gray - 400 text-sm">"                  <CheckCircle className="w-8 h-8 mx - auto mb-2 text-green -400" />
                   No accessibility issues found
                 </div>) }
             </div>
 
-            {/* Actions */}
-            <div className="flex gap-3">
-              <button     onClick={resetSettings}
-                className="flex - 1 px-4 py-2 bg-slate - 600 hover:bg-slate - 700 text-white text-sm rounded-lg transition -colors"
+            {/* Actions */}"            <div className="flex gap-3">
+              <button     onClick={resetSettings}"                className="flex - 1 px-4 py-2 bg-slate - 600 hover:bg-slate - 700 text-white text-sm rounded-lg transition -colors"
               >
                 Reset All
               </button>
-              <button     onClick={ () => setIsExpanded(false) }
-                className="flex - 1 px-4 py-2 bg-green - 600 hover:bg-green - 700 text-white text-sm rounded-lg transition -colors"
+              <button     onClick={ () => setIsExpanded(false) }"                className="flex - 1 px-4 py-2 bg-green - 600 hover:bg-green - 700 text-white text-sm rounded-lg transition -colors"
               >
                 Apply
               </button>
@@ -230,20 +185,12 @@
             animate={{ opacity: 1, scale: 1 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={ () => setIsExpanded(true) }
-            className="w-14 h-14 bg-green - 600 hover:bg-green - 700 rounded-full shadow-lg flex items - center justify - center text-white transition - all duration -200"
+            onClick={ () => setIsExpanded(true) }"            className="w-14 h-14 bg-green - 600 hover:bg-green - 700 rounded-full shadow-lg flex items - center justify - center text-white transition - all duration -200"
             
-          >
-            <Eye className="w-6 h-6" />
+          >"            <Eye className="w-6 h-6" />
           </motion.button>) }
       </AnimatePresence > const DEFAULT_SETTINGS: AccessibilitySettings = {
-  fontSize: 16,;
-  highContrast: false,
-  reducedMotion: false,
-  screenReader: false,
-  keyboardNavigation: false,
-  focusIndicator: true
-};
+  fontSize: 16,;"  highContrast: "false","  reducedMotion: "false","  screenReader: "false","  keyboardNavigation: "false","  focusIndicator: "true""};
 
   className = '',
   showPanel = false,
@@ -319,8 +266,7 @@
       document.body.classList.remove('keyboard - navigation') ;
     }
   }, []) ;
-
-  const updateSetting = useCallback((key: keyof AccessibilitySettings, value: any) => {
+"  const updateSetting = useCallback((key: "keyof AccessibilitySettings", value: any) => {
     const newSettings = { ...settings, [key]: value };
     setSettings(newSettings) ;
     applySettings(newSettings) ;
@@ -364,10 +310,7 @@
   const toggleFocusIndicator = useCallback(() => {
     updateSetting('focusIndicator', !settings.focusIndicator) ;
   }, [settings.focusIndicator, updateSetting]) ;
-
-  const tabs = [{ id: 'general', label: 'General', icon: Settings },;
-    { id: 'visual', label: 'Visual', icon: Eye },;
-    { id: 'navigation', label: 'Navigation', icon: Keyboard }
+"  const tabs = [{ id: 'general', label: 'General', icon: "Settings "},;"    { id: 'visual', label: 'Visual', icon: "Eye "},;"    { id: 'navigation', label: 'Navigation', icon: "Keyboard "}
   ] as const;
 
   return (<>
@@ -379,45 +322,34 @@
         whileTap={{ scale: 0.9 }}
         
         aria-expanded={isOpen}
-      >
-        <Accessibility className="w-6 h-6" />
+      >"        <Accessibility className="w-6 h-6" />
       </motion.button>
 
       {/* Accessibility Panel */}
       <AnimatePresence>
-        {isOpen && (<motion.div
-            className="fixed inset - 0 z - 40 bg-black / 50 backdrop - blur -sm"
+        {isOpen && (<motion.div"            className="fixed inset - 0 z - 40 bg-black / 50 backdrop - blur -sm"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={ () => setIsOpen(false) }
           >
-            <motion.div
-              className="fixed bottom - 24 right - 6 w-96 max - h-[80vh] bg-white dark:bg-gray - 800 rounded-2xl shadow-2xl border border-gray - 200 dark:border-gray - 700 overflow-hidden"
+            <motion.div"              className="fixed bottom - 24 right - 6 w-96 max - h-[80vh] bg-white dark:bg-gray - 800 rounded-2xl shadow-2xl border border-gray - 200 dark:border-gray - 700 overflow-hidden"
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}"              transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
               onClick={ (e) => e.stopPropagation () }
             >
-              {/* Header */}
-              <div className="flex items - center justify - between p - 6 border-b border-gray - 200 dark:border-gray -700">
-                <div className="flex items - center space - x-3">
-                  <Accessibility className="w-6 h-6 text-cyan -500" />
-                  <h2 className="text-xl font - bold text-gray - 900 dark:text-white">
+              {/* Header */}"              <div className="flex items - center justify - between p - 6 border-b border-gray - 200 dark:border-gray -700">"                <div className="flex items - center space - x-3">"                  <Accessibility className="w-6 h-6 text-cyan -500" />"                  <h2 className="text-xl font - bold text-gray - 900 dark:text-white">
                     Accessibility
                   </h2>
                 </div>
-                <button     onClick={ () => setIsOpen(false) }
-                  className="p - 2 hover:bg-gray - 100 dark:hover:bg-gray - 700 rounded-lg transition -colors"
+                <button     onClick={ () => setIsOpen(false) }"                  className="p - 2 hover:bg-gray - 100 dark:hover:bg-gray - 700 rounded-lg transition -colors"
                   
-                >
-                  <X className="w-5 h-5 text-gray -500" />
+                >"                  <X className="w-5 h-5 text-gray -500" />
                 </button>
               </div>
 
-              {/* Tabs */}
-              <div className="flex border-b border-gray - 200 dark:border-gray -700">
+              {/* Tabs */}"              <div className="flex border-b border-gray - 200 dark:border-gray -700">
                 {tabs.map((tab) => {
                   const Icon = tab.icon;
                   const isActive = activeTab === tab.id;
@@ -428,67 +360,48 @@
                           ? 'text-cyan - 600 border-b-2 border-cyan - 500 bg-cyan - 50 dark:bg-cyan - 900 / 20'
                           : 'text-gray - 500 hover:text-gray - 700 dark:text-gray - 400 dark:hover:text-gray - 200'
                       }`}
-                    >
-                      <Icon className="w-4 h-4" />
+                    >"                      <Icon className="w-4 h-4" />
                       <span>{tab.label}</span>
                     </button>) ;
                 }) }
               </div>
 
-              {/* Content */}
-              <div className="p - 6 max - h-[60vh] overflow-y-auto">
-                <AnimatePresence mode="wait">
-                  {activeTab === 'general' && (<motion.div
-                      key="general"
+              {/* Content */}"              <div className="p - 6 max - h-[60vh] overflow-y-auto">"                <AnimatePresence mode="wait">
+                  {activeTab === 'general' && (<motion.div"                      key="general"
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
-                      className="space - y-6"
+                      exit={{ opacity: 0, x: -20 }}"                      className="space - y-6"
                     >
                       {/* Font Size Control */}
-                      <div>
-                        <label className="block text-sm font - medium text-gray - 700 dark:text-gray - 300 mb-3">
+                      <div>"                        <label className="block text-sm font - medium text-gray - 700 dark:text-gray - 300 mb-3">
                           Font Size: {settings.fontSize}px
-                        </label>
-                        <div className="flex items - center space - x-3">
-                          <button     onClick={decreaseFontSize}
-                            className="p - 2 bg-gray - 100 dark:bg-gray - 700 rounded-lg hover:bg-gray - 200 dark:hover:bg-gray - 600 transition -colors"
+                        </label>"                        <div className="flex items - center space - x-3">
+                          <button     onClick={decreaseFontSize}"                            className="p - 2 bg-gray - 100 dark:bg-gray - 700 rounded-lg hover:bg-gray - 200 dark:hover:bg-gray - 600 transition -colors"
                             
-                          >
-                            <Minus className="w-4 h-4" />
-                          </button>
-                          <div className="flex - 1 bg-gray - 200 dark:bg-gray - 700 rounded-full h-2">
-                            <div
-                              className="bg-cyan - 500 h-2 rounded-full transition - all duration -300"
+                          >"                            <Minus className="w-4 h-4" />
+                          </button>"                          <div className="flex - 1 bg-gray - 200 dark:bg-gray - 700 rounded-full h-2">
+                            <div"                              className="bg-cyan - 500 h-2 rounded-full transition - all duration -300"
                               style={{ width: `${( (settings.fontSize - 12) / 12) * 100}%` }}
                             />
                           </div>
-                          <button     onClick={increaseFontSize}
-                            className="p - 2 bg-gray - 100 dark:bg-gray - 700 rounded-lg hover:bg-gray - 200 dark:hover:bg-gray - 600 transition -colors"
+                          <button     onClick={increaseFontSize}"                            className="p - 2 bg-gray - 100 dark:bg-gray - 700 rounded-lg hover:bg-gray - 200 dark:hover:bg-gray - 600 transition -colors"
                             
-                          >
-                            <Plus className="w-4 h-4" />
+                          >"                            <Plus className="w-4 h-4" />
                           </button>
                         </div>
                       </div>
 
-                      {/* Screen Reader Support */}
-                      <div className="flex items - center justify -between">
-                        <div className="flex items - center space - x-3">
-                          <Volume2 className="w-5 h-5 text-gray -500" />
-                          <div>
-                            <label className="text-sm font - medium text-gray - 700 dark:text-gray -300">
+                      {/* Screen Reader Support */}"                      <div className="flex items - center justify -between">"                        <div className="flex items - center space - x-3">"                          <Volume2 className="w-5 h-5 text-gray -500" />
+                          <div>"                            <label className="text-sm font - medium text-gray - 700 dark:text-gray -300">
                               Screen Reader Support
-                            </label>
-                            <p className="text-xs text-gray - 500 dark:text-gray -400">
+                            </label>"                            <p className="text-xs text-gray - 500 dark:text-gray -400">
                               Enhanced ARIA labels and descriptions
                             </p>
                           </div>
                         </div>
                         <button     onClick={toggleScreenReader}
                           className={`relative inline - flex h-6 w-11 items - center rounded-full transition - colors ${settings.screenReader ? 'bg-cyan - 500' : 'bg-gray - 200 dark:bg-gray - 700'
-                          }`}
-                          role="switch"
+                          }`}"                          role="switch"
                           aria-checked={settings.screenReader}
                         >
                           <span
@@ -499,30 +412,22 @@
                       </div>
                     </motion.div>) }
 
-                  {activeTab === 'visual' && (<motion.div
-                      key="visual"
+                  {activeTab === 'visual' && (<motion.div"                      key="visual"
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
-                      className="space - y-6"
+                      exit={{ opacity: 0, x: -20 }}"                      className="space - y-6"
                     >
-                      {/* High Contrast */}
-                      <div className="flex items - center justify -between">
-                        <div className="flex items - center space - x-3">
-                          <Contrast className="w-5 h-5 text-gray -500" />
-                          <div>
-                            <label className="text-sm font - medium text-gray - 700 dark:text-gray -300">
+                      {/* High Contrast */}"                      <div className="flex items - center justify -between">"                        <div className="flex items - center space - x-3">"                          <Contrast className="w-5 h-5 text-gray -500" />
+                          <div>"                            <label className="text-sm font - medium text-gray - 700 dark:text-gray -300">
                               High Contrast
-                            </label>
-                            <p className="text-xs text-gray - 500 dark:text-gray -400">
+                            </label>"                            <p className="text-xs text-gray - 500 dark:text-gray -400">
                               Enhanced color contrast for better visibility
                             </p>
                           </div>
                         </div>
                         <button     onClick={toggleHighContrast}
                           className={`relative inline - flex h-6 w-11 items - center rounded-full transition - colors ${settings.highContrast ? 'bg-cyan - 500' : 'bg-gray - 200 dark:bg-gray - 700'
-                          }`}
-                          role="switch"
+                          }`}"                          role="switch"
                           aria-checked={settings.highContrast}
                         >
                           <span
@@ -532,23 +437,17 @@
                         </button>
                       </div>
 
-                      {/* Reduced Motion */}
-                      <div className="flex items - center justify -between">
-                        <div className="flex items - center space - x-3">
-                          <MousePointer className="w-5 h-5 text-gray -500" />
-                          <div>
-                            <label className="text-sm font - medium text-gray - 700 dark:text-gray -300">
+                      {/* Reduced Motion */}"                      <div className="flex items - center justify -between">"                        <div className="flex items - center space - x-3">"                          <MousePointer className="w-5 h-5 text-gray -500" />
+                          <div>"                            <label className="text-sm font - medium text-gray - 700 dark:text-gray -300">
                               Reduced Motion
-                            </label>
-                            <p className="text-xs text-gray - 500 dark:text-gray -400">
+                            </label>"                            <p className="text-xs text-gray - 500 dark:text-gray -400">
                               Minimize animations and transitions
                             </p>
                           </div>
                         </div>
                         <button     onClick={toggleReducedMotion}
                           className={`relative inline - flex h-6 w-11 items - center rounded-full transition - colors ${settings.reducedMotion ? 'bg-cyan - 500' : 'bg-gray - 200 dark:bg-gray - 700'
-                          }`}
-                          role="switch"
+                          }`}"                          role="switch"
                           aria-checked={settings.reducedMotion}
                         >
                           <span
@@ -559,30 +458,22 @@
                       </div>
                     </motion.div>) }
 
-                  {activeTab === 'navigation' && (<motion.div
-                      key="navigation"
+                  {activeTab === 'navigation' && (<motion.div"                      key="navigation"
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
-                      className="space - y-6"
+                      exit={{ opacity: 0, x: -20 }}"                      className="space - y-6"
                     >
-                      {/* Keyboard Navigation */}
-                      <div className="flex items - center justify -between">
-                        <div className="flex items - center space - x-3">
-                          <Keyboard className="w-5 h-5 text-gray -500" />
-                          <div>
-                            <label className="text-sm font - medium text-gray - 700 dark:text-gray -300">
+                      {/* Keyboard Navigation */}"                      <div className="flex items - center justify -between">"                        <div className="flex items - center space - x-3">"                          <Keyboard className="w-5 h-5 text-gray -500" />
+                          <div>"                            <label className="text-sm font - medium text-gray - 700 dark:text-gray -300">
                               Enhanced Keyboard Navigation
-                            </label>
-                            <p className="text-xs text-gray - 500 dark:text-gray -400">
+                            </label>"                            <p className="text-xs text-gray - 500 dark:text-gray -400">
                               Improved tab order and keyboard shortcuts
                             </p>
                           </div>
                         </div>
                         <button     onClick={toggleKeyboardNavigation}
                           className={`relative inline - flex h-6 w-11 items - center rounded-full transition - colors ${settings.keyboardNavigation ? 'bg-cyan - 500' : 'bg-gray - 200 dark:bg-gray - 700'
-                          }`}
-                          role="switch"
+                          }`}"                          role="switch"
                           aria-checked={settings.keyboardNavigation}
                         >
                           <span
@@ -592,23 +483,17 @@
                         </button>
                       </div>
 
-                      {/* Focus Indicator */}
-                      <div className="flex items - center justify -between">
-                        <div className="flex items - center space - x-3">
-                          <Eye className="w-5 h-5 text-gray -500" />
-                          <div>
-                            <label className="text-sm font - medium text-gray - 700 dark:text-gray -300">
+                      {/* Focus Indicator */}"                      <div className="flex items - center justify -between">"                        <div className="flex items - center space - x-3">"                          <Eye className="w-5 h-5 text-gray -500" />
+                          <div>"                            <label className="text-sm font - medium text-gray - 700 dark:text-gray -300">
                               Focus Indicators
-                            </label>
-                            <p className="text-xs text-gray - 500 dark:text-gray -400">
+                            </label>"                            <p className="text-xs text-gray - 500 dark:text-gray -400">
                               Clear focus indicators for keyboard users
                             </p>
                           </div>
                         </div>
                         <button     onClick={toggleFocusIndicator}
                           className={`relative inline - flex h-6 w-11 items - center rounded-full transition - colors ${settings.focusIndicator ? 'bg-cyan - 500' : 'bg-gray - 200 dark:bg-gray - 700'
-                          }`}
-                          role="switch"
+                          }`}"                          role="switch"
                           aria-checked={settings.focusIndicator}
                         >
                           <span
@@ -620,10 +505,8 @@
                     </motion.div>) }
                 </AnimatePresence>
 
-                {/* Reset Button */}
-                <div className="pt - 6 border-t border-gray - 200 dark:border-gray -700">
-                  <button     onClick={resetSettings}
-                    className="w-full px-4 py-2 text-sm font - medium text-gray - 700 dark:text-gray - 300 bg-gray - 100 dark:bg-gray - 700 rounded-lg hover:bg-gray - 200 dark:hover:bg-gray - 600 transition -colors"
+                {/* Reset Button */}"                <div className="pt - 6 border-t border-gray - 200 dark:border-gray -700">
+                  <button     onClick={resetSettings}"                    className="w-full px-4 py-2 text-sm font - medium text-gray - 700 dark:text-gray - 300 bg-gray - 100 dark:bg-gray - 700 rounded-lg hover:bg-gray - 200 dark:hover:bg-gray - 600 transition -colors"
                   >
                     Reset to Defaults
                   </button>
@@ -633,6 +516,5 @@
           </motion.div>) }      </AnimatePresence>
     </>
   )}
-
-import React, { useState, useEffect } from 'react'; interface AccessibilityEnhancerProps { children: React.ReactNode;   } const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => { const [accessibilitySettings, setAccessibilitySettings] = useState({ highContrast: false, largeText: false, reducedMotion: false, focusVisible: true }); useEffect(() => {
-
+"import React, { useState, useEffect } from 'react'; interface AccessibilityEnhancerProps { children: React.ReactNode;   } const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => { const [accessibilitySettings, setAccessibilitySettings] = useState({ highContrast: "false", largeText: "false", reducedMotion: "false", focusVisible: "true "}); useEffect(() => {
+"

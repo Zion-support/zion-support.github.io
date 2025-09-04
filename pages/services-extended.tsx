@@ -4,9 +4,9 @@ import Link from 'next/link';
 
 export default function ServicesExtended() {
   const contact = {
-    phone: '+1 302 464 0950',
+    phone: '+1: 302 464: 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    address: '364 E Main St STE: 1008 Middletown DE: 19709',
     site: 'https://ziontechgroup.com'
   };
 
@@ -209,57 +209,32 @@ export default function ServicesExtended() {
     <>
       <Head>
         <title>Extended Services - Zion Tech Group</title>
-        <meta name="description" content="Explore newly added Micro SaaS, AI, and IT solutions by Zion Tech Group with features, benefits, pricing, and links." />
-        <link rel="canonical" href={`${contact.site}/services-extended`} />
-      </Head>
-      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white" role="main">
-        <section className="py-16 px-4 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">Extended Services</h1>
-            <p className="text-slate-300 text-lg">We keep expanding practical solutions that deliver measurable outcomes.</p>
-            <div className="mt-6 text-slate-400 text-sm">
-              <p>Contact: <a href="tel:+13024640950" className="underline">{contact.phone}</a> · <a href="mailto:kleber@ziontechgroup.com" className="underline">{contact.email}</a></p>
-              <p className="mt-1">{contact.address}</p>
+        <meta name="description" content="Explore newly added Micro SaaS, AI, and IT solutions by Zion Tech Group with features, benefits, pricing, and links." />"        <link rel="canonical" href={`${contact.site}/services-extended`} />
+      </Head>"      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white" role="main">"        <section className="py-16 px-4 text-center">"          <div className="max-w-4xl mx-auto">"            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">Extended Services</h1>"            <p className="text-slate-300 text-lg">We keep expanding practical solutions that deliver measurable outcomes.</p>"            <div className="mt-6 text-slate-400 text-sm">"              <p>Contact: <a href="tel:+13024640950" className="underline">{contact.phone}</a> · <a href="mailto:kleber@ziontechgroup.com" className="underline">{contact.email}</a></p>"              <p className="mt-1">{contact.address}</p>
             </div>
           </div>
         </section>
-
-        <section className="px-4 pb-24">
-          <div className="max-w-6xl mx-auto space-y-14">
+"        <section className="px-4 pb-24">"          <div className="max-w-6xl mx-auto space-y-14">
             {sections.map((section) => (
               <div key={section.title}>
-                <h2 className={`text-3xl font-bold mb-6 ${section.color}`}>{section.title}</h2>
-                <div className="grid md:grid-cols-2 gap-6">
-                  {offerings.filter(o => o.category === section.category).map((o) => (
-                    <div key={o.name} className="p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-white/20">
-                      <h3 className="text-xl font-semibold mb-2">{o.name}</h3>
-                      <p className="text-slate-300 mb-4">{o.description}</p>
-                      <div className="grid md:grid-cols-2 gap-4 mb-4">
-                        <div>
-                          <h4 className="font-semibold mb-2">Features</h4>
-                          <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <h2 className={`text-3xl font-bold mb-6 ${section.color}`}>{section.title}</h2>"                <div className="grid md:grid-cols-2 gap-6">
+                  {offerings.filter(o => o.category === section.category).map((o) => ("                    <div key={o.name} className="p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-white/20">"                      <h3 className="text-xl font-semibold mb-2">{o.name}</h3>"                      <p className="text-slate-300 mb-4">{o.description}</p>"                      <div className="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>"                          <h4 className="font-semibold mb-2">Features</h4>"                          <ul className="list-disc list-inside text-slate-300 space-y-1">
                             {o.features.map((f) => (<li key={f}>{f}</li>))}
                           </ul>
                         </div>
-                        <div>
-                          <h4 className="font-semibold mb-2">Benefits</h4>
-                          <ul className="list-disc list-inside text-slate-300 space-y-1">
+                        <div>"                          <h4 className="font-semibold mb-2">Benefits</h4>"                          <ul className="list-disc list-inside text-slate-300 space-y-1">
                             {o.benefits.map((b) => (<li key={b}>{b}</li>))}
                           </ul>
                         </div>
-                      </div>
-                      <div className="flex items-center justify-between mt-2">
-                        <span className="text-slate-400">{o.pricing}</span>
-                        <Link href={o.link} className="text-blue-400 hover:text-blue-300 font-semibold">Learn more →</Link>
+                      </div>"                      <div className="flex items-center justify-between mt-2">"                        <span className="text-slate-400">{o.pricing}</span>"                        <Link href={o.link} className="text-blue-400 hover:text-blue-300 font-semibold">Learn more →</Link>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
             ))}
-
-            <div className="text-center pt-8">
-              <Link href="/services-overview" className="text-slate-300 hover:text-white underline">Back to Services Overview</Link>
+"            <div className="text-center pt-8">"              <Link href="/services-overview" className="text-slate-300 hover:text-white underline">Back to Services Overview</Link>
             </div>
           </div>
         </section>
@@ -267,4 +242,4 @@ export default function ServicesExtended() {
     </>
   );
 }
-
+"

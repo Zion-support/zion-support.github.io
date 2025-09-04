@@ -21,7 +21,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
       // Track page view
       if (pageName) {
         window.gtag('config', process.env.NEXT_PUBLIC_GA_TRACKING_ID || '', {
-          page_title: pageName,
+          page_title: "pageName",
           page_location: window.location.href,
         });
       }
@@ -60,5 +60,4 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
     </Head>
   );
 };
-
-export default AnalyticsTracker;
+"export default AnalyticsTracker;

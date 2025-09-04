@@ -154,10 +154,7 @@ setFilters(prev: > ({;
     setFilters({ type: [], category: [], tags: [] }) };
 
     switch(type) {;
-      case 'service': return <Code className="h-4 w-4"  />;'"
-      case 'page': return <Globe className="h-4 w-4"  />;'"
-      case 'blog': return <TrendingUp className="h-4 w-4"  />;'"
-      case 'case-study': return <Building className="h-4 w-4"  />}
+      case 'service': return <Code className="h-4 w-4"  />;'""      case 'page': return <Globe className="h-4 w-4"  />;'""      case 'blog': return <TrendingUp className="h-4 w-4"  />;'""      case 'case-study': return <Building className="h-4 w-4"  />}
   };
 
     setResults([]);
@@ -173,28 +170,15 @@ setFilters(prev: > ({;
   };
 
   return ()
-    <div ref = {searchRef} className={`relative ${className}`}>`
-      <div className={`relative rounded-xl ${getVariantStyles()}`}>"
-        <div className="flex items-center px-4 py-3">"
-          <Search className="w-5 h-5 text-gray-400 mr-3"  />          <input
-            ref={inputRef}"
-            type="text"
+    <div ref = {searchRef} className={`relative ${className}`}>`"      <div className={`relative rounded-xl ${getVariantStyles()}`}>""        <div className="flex items-center px-4 py-3">""          <Search className="w-5 h-5 text-gray-400 mr-3"  />          <input"            ref={inputRef}""            type="text"
             value={query}
             onChange={handleInputChange}
-            onFocus={handleInputFocus}
-            placeholder={placeholder}"
-            className="flex-1 bg-transparent text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none"
+            onFocus={handleInputFocus}"            placeholder={placeholder}""            className="flex-1 bg-transparent text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none"
           />
           {query && (
-            <button
-              onClick={clearSearch}"
-              className="ml-2 p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-            >"
-              <X className="w-4 h-4 text-gray-400"  />
+            <button"              onClick={clearSearch}""              className="ml-2 p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors""            >""              <X className="w-4 h-4 text-gray-400"  />
             </button>
-          )}
-        </div>;"
-      default: return <Search className="h-4 w-4"  />};
+          )}"        </div>;""      default: return <Search className="h-4 w-4"  />};
 
     switch(variant) {;
       case 'futuristic':;
@@ -206,23 +190,13 @@ setFilters(prev: > ({;
 
   return ()`
     <div ref = {searchRef} className={`relative ${className}`}>
-      {/* Search Input */}`
-      <div className={`relative flex items-center rounded-xl transition-all duration-300 ${getVariantClasses()}`}>"
-        <Search className="absolute left-4 h-5 w-5 text-gray-400"  />        <input
-          ref={inputRef}"
-          type="text"
+      {/* Search Input */}`"      <div className={`relative flex items-center rounded-xl transition-all duration-300 ${getVariantClasses()}`}>""        <Search className="absolute left-4 h-5 w-5 text-gray-400"  />        <input"          ref={inputRef}""          type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          onFocus={() => setIsOpen(true)}
-          placeholder={placeholder}"
-          className="w-full pl-12 pr-12 py-3 bg-transparent border-none outline-none text-gray-900 placeholder-gray-500"
+          onFocus={() => setIsOpen(true)}"          placeholder={placeholder}""          className="w-full pl-12 pr-12 py-3 bg-transparent border-none outline-none text-gray-900 placeholder-gray-500"
         />
         {query && (
-          <button'
-            onClick={() => setQuery('')}"
-            className="absolute right-4 p-1 text-gray-400 hover:text-gray-600 transition-colors"
-          >"
-            <X className="h-4 w-4"  />          </button>
+          <button'"            onClick={() => setQuery('')}""            className="absolute right-4 p-1 text-gray-400 hover:text-gray-600 transition-colors""          >""            <X className="h-4 w-4"  />          </button>
         )}
       </div>
 
@@ -244,22 +218,12 @@ setFilters(prev: > ({;
 
   { opacity: 0,
   y: -10
-
-}}"
-            className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-xl shadow-xl z-50 max-h-96 overflow-hidden"
-          >
-            {/* Filters Toggle */}"
-            <div className="flex items-center justify-between p-4 border-b border-gray-200">
-              <button
-                onClick={() => setShowFilters(!showFilters)}"
-                className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
-              >"
-                <Filter className="h-4 w-4"  />                Filters
+"}}""            className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-xl shadow-xl z-50 max-h-96 overflow-hidden"
+          >"            {/* Filters Toggle */}""            <div className="flex items-center justify-between p-4 border-b border-gray-200">
+              <button"                onClick={() => setShowFilters(!showFilters)}""                className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors""              >""                <Filter className="h-4 w-4"  />                Filters
               </button>
               {(filters.type.length > 0 || filters.category.length > 0 || filters.tags.length > 0) && (
-                <button
-                  onClick={clearFilters}"
-                  className="text-sm text-red-500 hover:text-red-600 transition-colors"
+                <button"                  onClick={clearFilters}""                  className="text-sm text-red-500 hover:text-red-600 transition-colors"
                 >
                   Clear all
                 </button>) }
@@ -284,15 +248,8 @@ setFilters(prev: > ({;
 
   { height: 0,
   opacity: 0
-
-}}"
-                  className="border-b border-gray-200 overflow-hidden"
-                >"
-                  <div className="p-4 space-y-4">
-                    {/* Type Filters */}
-                    <div>"
-                      <h4 className="text-sm font-medium text-gray-900 mb-2">Type</h4>"
-                      <div className="flex flex-wrap gap-2">
+"}}""                  className="border-b border-gray-200 overflow-hidden""                >""                  <div className="p-4 space-y-4">
+                    {/* Type Filters */}"                    <div>""                      <h4 className="text-sm font-medium text-gray-900 mb-2">Type</h4>""                      <div className="flex flex-wrap gap-2">
                         {['service',page',blog',case-study'].map(type => (
                           <button
                             key={type}
@@ -312,10 +269,7 @@ setFilters(prev: > ({;
                       </div>
                     </div>
 
-                    {/* Category Filters */}
-                    <div>"
-                      <h4 className="text-sm font-medium text-gray-900 mb-2">Category</h4>"
-                      <div className="flex flex-wrap gap-2">
+                    {/* Category Filters */}"                    <div>""                      <h4 className="text-sm font-medium text-gray-900 mb-2">Category</h4>""                      <div className="flex flex-wrap gap-2">
                         {categories.map(category => (
                           <button
                             key={category.id}
@@ -337,78 +291,43 @@ setFilters(prev: > ({;
                   </div>
                 </motion.div>) }
             </AnimatePresence>
-
-            {/* Search Results */}"
-            <div className="max-h-96 overflow-y-auto">
-              {query.trim().length < 2 ? ("
-                <div className="p-4 space-y-4">
+"            {/* Search Results */}""            <div className="max-h-96 overflow-y-auto">"              {query.trim().length < 2 ? (""                <div className="p-4 space-y-4">
                   {/* Recent Searches */}
-                  {recentSearches.length > 0 && (
-                    <div>"
-                      <h4 className="text-sm font-medium text-gray-900 mb-2 flex items-center gap-2">"
-                        <Clock className="h-4 w-4"  />                        Recent Searches;
-                      </h4>;"
-                      <div className="space-y-2">;
+                  {recentSearches.length > 0 && ("                    <div>""                      <h4 className="text-sm font-medium text-gray-900 mb-2 flex items-center gap-2">""                        <Clock className="h-4 w-4"  />                        Recent Searches;"                      </h4>;""                      <div className="space-y-2">;
                         {recentSearches.map((search, index) => (;
                           <button;
                             key={index};
                             onClick={() => {;
-                              setQuery(search);
-                              handleSearch()}}"                            className="w-full text-left p-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg transition-colors"
+                              setQuery(search);"                              handleSearch()}}"                            className="w-full text-left p-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg transition-colors"
                           >
                             {search}
                           </button>) ) }
                       </div>
                     </div>;) }
 
-                  {/* Popular Searches */}
-                  <div>"
-                    <h4 className="text-sm font-medium text-gray-900 mb-2 flex items-center gap-2">"
-                      <TrendingUp className="h-4 w-4"  />                      Popular Searches;
-                    </h4>;"
-                    <div className="flex flex-wrap gap-2">;
+                  {/* Popular Searches */}"                  <div>""                    <h4 className="text-sm font-medium text-gray-900 mb-2 flex items-center gap-2">""                      <TrendingUp className="h-4 w-4"  />                      Popular Searches;"                    </h4>;""                    <div className="flex flex-wrap gap-2">;
                       {popularSearches.map((search, index) => (;
                         <button;
                           key={index};
                           onClick={() => {;
-                            setQuery(search);
-                            handleSearch()}}"                          className="px-3 py-1 text-sm bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200 transition-colors"
+                            setQuery(search);"                            handleSearch()}}"                          className="px-3 py-1 text-sm bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200 transition-colors"
                         >
                           {search}
                         </button>) ) }
                     </div>
                   </div>
-                </div>
-              ) : isLoading ? (;"
-                <div className="p-8 text-center">"
-                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto"></div>"
-                  <p className="text-gray-600 mt-2">Searching...</p>
-                </div>
-              ) : results.length > 0 ? ("
-                <div className="p-4 space-y-2">
+                </div>"              ) : isLoading ? (;""                <div className="p-8 text-center">""                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto" />""                  <p className="text-gray-600 mt-2">Searching...</p>
+                </div>"              ) : results.length > 0 ? (""                <div className="p-4 space-y-2">
                   {results.map((result, index) => (
                     <button
                       key={result.id}
                       onClick={() => handleResultClick(result)}`
                       className={`w-full text-left p-3 hover:bg-gray-50 rounded-lg transition-colors group ${index === selectedIndex ? 'bg-blue-50' : ''`
-                      }`}
-                    >"
-                      <div className="flex items-start gap-3">"
-                        <div className="flex-shrink-0 mt-1">
-                          {getTypeIcon(result.type)}
-                        </div>"
-                        <div className="flex-1 min-w-0">"
-                          <h4 className="text-sm font-medium text-gray-900 group-hover:text-blue-600 transition-colors">
-                            {result.title}
-                          </h4>"
-                          <p className="text-sm text-gray-600 mt-1 line-clamp-2">
-                            {result.description}
-                          </p>"
-                          <div className="flex items-center gap-2 mt-2">"
-                            <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
-                              {result.category}
-                            </span>"
-                            <span className="text-xs text-gray-500">
+                      }`}"                    >""                      <div className="flex items-start gap-3">""                        <div className="flex-shrink-0 mt-1">
+                          {getTypeIcon(result.type)}"                        </div>""                        <div className="flex-1 min-w-0">""                          <h4 className="text-sm font-medium text-gray-900 group-hover:text-blue-600 transition-colors">
+                            {result.title}"                          </h4>""                          <p className="text-sm text-gray-600 mt-1 line-clamp-2">
+                            {result.description}"                          </p>""                          <div className="flex items-center gap-2 mt-2">""                            <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                              {result.category}"                            </span>""                            <span className="text-xs text-gray-500">
                               {result.type}
                             </span>
                           </div>
@@ -416,21 +335,14 @@ setFilters(prev: > ({;
                       </div>
                     </button>
                   ))}
-                </div>
-              ) : ("
-                <div className="p-8 text-center">"
-                  <Search className="h-12 w-12 text-gray-400 mx-auto mb-4"  />"                  <h3 className="text-lg font-medium text-gray-900 mb-2">
-                    No results found
-                  </h3>"
-                  <p className="text-gray-600">
+                </div>"              ) : (""                <div className="p-8 text-center">""                  <Search className="h-12 w-12 text-gray-400 mx-auto mb-4"  />"                  <h3 className="text-lg font-medium text-gray-900 mb-2">
+                    No results found"                  </h3>""                  <p className="text-gray-600">
                     Try adjusting your search terms or filters
                   </p>
                 </div>) }
             </div>;
           </motion.div>;) };
       </AnimatePresence>;
-    </div>;) }
-'"`
-
-;,"});,})";
-
+    </div>;) }"'"`
+";,"});,})";
+"

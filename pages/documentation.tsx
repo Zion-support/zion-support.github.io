@@ -10,7 +10,7 @@ export default function Documentation() {
     {
       title: 'Getting Started',
       description: 'Quick start guides and setup instructions',
-      icon: Zap,
+      icon: "Zap",
       color: 'from-blue-500 to-cyan-500',
       articles: [
         { title: 'Quick Start Guide', description: 'Get up and running in minutes', href: '/docs/quick-start' },
@@ -21,8 +21,7 @@ export default function Documentation() {
     },
     {
       title: 'AI Services',
-      description: 'AI-powered solutions and APIs',
-      icon: Brain,
+      description: 'AI-powered solutions and APIs',"      icon: "Brain",
       color: 'from-purple-500 to-pink-500',
       articles: [
         { title: 'AI Content Generation', description: 'Generate content with AI', href: '/docs/ai-content-generation' },
@@ -33,8 +32,7 @@ export default function Documentation() {
     },
     {
       title: 'Cloud Infrastructure',
-      description: 'Cloud deployment and management',
-      icon: Cloud,
+      description: 'Cloud deployment and management',"      icon: "Cloud",
       color: 'from-green-500 to-emerald-500',
       articles: [
         { title: 'Cloud Migration', description: 'Migrate to the cloud', href: '/docs/cloud-migration' },
@@ -45,8 +43,7 @@ export default function Documentation() {
     },
     {
       title: 'Security',
-      description: 'Security best practices and tools',
-      icon: Shield,
+      description: 'Security best practices and tools',"      icon: "Shield",
       color: 'from-red-500 to-orange-500',
       articles: [
         { title: 'Authentication', description: 'User authentication and authorization', href: '/docs/authentication' },
@@ -57,8 +54,7 @@ export default function Documentation() {
     },
     {
       title: 'APIs & Integration',
-      description: 'API documentation and integration guides',
-      icon: Code,
+      description: 'API documentation and integration guides',"      icon: "Code",
       color: 'from-indigo-500 to-purple-500',
       articles: [
         { title: 'REST API Reference', description: 'Complete API documentation', href: '/docs/api-reference' },
@@ -69,8 +65,7 @@ export default function Documentation() {
     },
     {
       title: 'Database',
-      description: 'Database setup and management',
-      icon: Database,
+      description: 'Database setup and management',"      icon: "Database",
       color: 'from-yellow-500 to-orange-500',
       articles: [
         { title: 'Database Setup', description: 'Configure your database', href: '/docs/database-setup' },
@@ -81,11 +76,7 @@ export default function Documentation() {
     }
   ];
 
-  const quickLinks = [
-    { title: 'API Reference', href: '/docs/api-reference', icon: Code },
-    { title: 'SDKs & Libraries', href: '/docs/sdks', icon: Book },
-    { title: 'Status Page', href: '/status', icon: Zap },
-    { title: 'Support Center', href: '/support', icon: Shield }
+  const quickLinks = ["    { title: 'API Reference', href: '/docs/api-reference', icon: "Code "},"    { title: 'SDKs & Libraries', href: '/docs/sdks', icon: "Book "},"    { title: 'Status Page', href: '/status', icon: "Zap "},"    { title: 'Support Center', href: '/support', icon: "Shield "}
   ];
 
   const filteredSections = documentationSections.filter(section =>
@@ -100,31 +91,18 @@ export default function Documentation() {
   return (
     <>
       <Head>
-        <title>Documentation - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive documentation for Zion Tech Group's services, APIs, and tools." />
+        <title>Documentation - Zion Tech Group</title>"        <meta name="description" content="Comprehensive documentation for Zion Tech Group's services, APIs, and tools." />
       </Head>
-
-      <div className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+"      <div className="min-h-screen bg-white">
+        {/* Hero Section */}"        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">"          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"            <div className="text-center">"              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Documentation
-              </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              </h1>"              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
                 Everything you need to get started with Zion Tech Group's services, 
                 APIs, and tools. From quick start guides to advanced configurations.
-              </p>
-              <div className="max-w-md mx-auto">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <input
-                    type="text"
-                    placeholder="Search documentation..."
+              </p>"              <div className="max-w-md mx-auto">"                <div className="relative">"                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input"                    type="text""                    placeholder="Search documentation..."
                     value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    onChange={(e) => setSearchQuery(e.target.value)}"                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
               </div>
@@ -132,61 +110,37 @@ export default function Documentation() {
           </div>
         </section>
 
-        {/* Quick Links */}
-        <section className="py-12 border-b">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {/* Quick Links */}"        <section className="py-12 border-b">"          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {quickLinks.map((link, index) => (
                 <Link
                   key={index}
-                  href={link.href}
-                  className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
-                >
-                  <link.icon className="w-5 h-5 text-blue-600" />
-                  <span className="font-medium text-gray-900">{link.title}</span>
-                  <ExternalLink className="w-4 h-4 text-gray-400 ml-auto" />
+                  href={link.href}"                  className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                >"                  <link.icon className="w-5 h-5 text-blue-600" />"                  <span className="font-medium text-gray-900">{link.title}</span>"                  <ExternalLink className="w-4 h-4 text-gray-400 ml-auto" />
                 </Link>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Documentation Sections */}
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                {searchQuery ? `Search Results for "${searchQuery}"` : 'Documentation Sections'}
+        {/* Documentation Sections */}"        <section className="py-16">"          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"            <div className="mb-8">"              <h2 className="text-2xl font-bold text-gray-900 mb-4">"                {searchQuery ? `Search Results for "${searchQuery}"` : 'Documentation Sections'}
               </h2>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredSections.map((section, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow overflow-hidden">
-                  <div className={`h-2 bg-gradient-to-r ${section.color}`}></div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className={`w-10 h-10 bg-gradient-to-r ${section.color} rounded-lg flex items-center justify-center`}>
-                        <section.icon className="w-5 h-5 text-white" />
+            </div>"            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredSections.map((section, index) => ("                <div key={index} className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow overflow-hidden">
+                  <div className={`h-2 bg-gradient-to-r ${section.color}`} />"                  <div className="p-6">"                    <div className="flex items-center gap-3 mb-4">
+                      <div className={`w-10 h-10 bg-gradient-to-r ${section.color} rounded-lg flex items-center justify-center`}>"                        <section.icon className="w-5 h-5 text-white" />
                       </div>
-                      <div>
-                        <h3 className="text-xl font-semibold text-gray-900">{section.title}</h3>
-                        <p className="text-sm text-gray-600">{section.description}</p>
+                      <div>"                        <h3 className="text-xl font-semibold text-gray-900">{section.title}</h3>"                        <p className="text-sm text-gray-600">{section.description}</p>
                       </div>
-                    </div>
-                    <div className="space-y-2">
+                    </div>"                    <div className="space-y-2">
                       {section.articles.map((article, articleIndex) => (
                         <Link
                           key={articleIndex}
-                          href={article.href}
-                          className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+                          href={article.href}"                          className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors group"
                         >
-                          <div>
-                            <h4 className="font-medium text-gray-900 group-hover:text-blue-600">
+                          <div>"                            <h4 className="font-medium text-gray-900 group-hover:text-blue-600">
                               {article.title}
-                            </h4>
-                            <p className="text-sm text-gray-600">{article.description}</p>
-                          </div>
-                          <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600" />
+                            </h4>"                            <p className="text-sm text-gray-600">{article.description}</p>
+                          </div>"                          <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600" />
                         </Link>
                       ))}
                     </div>
@@ -194,55 +148,26 @@ export default function Documentation() {
                 </div>
               ))}
             </div>
-            {filteredSections.length === 0 && searchQuery && (
-              <div className="text-center py-12">
-                <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Search className="w-8 h-8 text-gray-400" />
-                </div>
-                <h3 className="text-lg font-medium text-gray-900 mb-2">No results found</h3>
-                <p className="text-gray-600">Try adjusting your search terms or browse our documentation sections.</p>
+            {filteredSections.length === 0 && searchQuery && ("              <div className="text-center py-12">"                <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">"                  <Search className="w-8 h-8 text-gray-400" />
+                </div>"                <h3 className="text-lg font-medium text-gray-900 mb-2">No results found</h3>"                <p className="text-gray-600">Try adjusting your search terms or browse our documentation sections.</p>
               </div>
             )}
           </div>
         </section>
 
-        {/* Getting Help */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Need Help?</h2>
-              <p className="text-xl text-gray-600">
+        {/* Getting Help */}"        <section className="py-16 bg-gray-50">"          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"            <div className="text-center mb-12">"              <h2 className="text-3xl font-bold text-gray-900 mb-4">Need Help?</h2>"              <p className="text-xl text-gray-600">
                 Can't find what you're looking for? We're here to help.
               </p>
-            </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white rounded-xl p-6 text-center shadow-sm">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Book className="w-6 h-6 text-blue-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Knowledge Base</h3>
-                <p className="text-gray-600 mb-4">Browse our comprehensive knowledge base for answers to common questions.</p>
-                <Link href="/faq" className="text-blue-600 hover:text-blue-700 font-medium">
+            </div>"            <div className="grid md:grid-cols-3 gap-8">"              <div className="bg-white rounded-xl p-6 text-center shadow-sm">"                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">"                  <Book className="w-6 h-6 text-blue-600" />
+                </div>"                <h3 className="text-lg font-semibold text-gray-900 mb-2">Knowledge Base</h3>"                <p className="text-gray-600 mb-4">Browse our comprehensive knowledge base for answers to common questions.</p>"                <Link href="/faq" className="text-blue-600 hover:text-blue-700 font-medium">
                   Browse FAQ →
                 </Link>
-              </div>
-              <div className="bg-white rounded-xl p-6 text-center shadow-sm">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-6 h-6 text-green-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Support Center</h3>
-                <p className="text-gray-600 mb-4">Get help from our support team for technical issues and questions.</p>
-                <Link href="/contact" className="text-green-600 hover:text-green-700 font-medium">
+              </div>"              <div className="bg-white rounded-xl p-6 text-center shadow-sm">"                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">"                  <Shield className="w-6 h-6 text-green-600" />
+                </div>"                <h3 className="text-lg font-semibold text-gray-900 mb-2">Support Center</h3>"                <p className="text-gray-600 mb-4">Get help from our support team for technical issues and questions.</p>"                <Link href="/contact" className="text-green-600 hover:text-green-700 font-medium">
                   Contact Support →
                 </Link>
-              </div>
-              <div className="bg-white rounded-xl p-6 text-center shadow-sm">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Code className="w-6 h-6 text-purple-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Developer Community</h3>
-                <p className="text-gray-600 mb-4">Join our developer community to connect with other users and share knowledge.</p>
-                <Link href="/community" className="text-purple-600 hover:text-purple-700 font-medium">
+              </div>"              <div className="bg-white rounded-xl p-6 text-center shadow-sm">"                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">"                  <Code className="w-6 h-6 text-purple-600" />
+                </div>"                <h3 className="text-lg font-semibold text-gray-900 mb-2">Developer Community</h3>"                <p className="text-gray-600 mb-4">Join our developer community to connect with other users and share knowledge.</p>"                <Link href="/community" className="text-purple-600 hover:text-purple-700 font-medium">
                   Join Community →
                 </Link>
               </div>
@@ -250,33 +175,12 @@ export default function Documentation() {
           </div>
         </section>
 
-        {/* API Status */}
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white rounded-xl shadow-sm border p-8">
-              <div className="flex items-center justify-between mb-6">
-                <h2 className="text-2xl font-bold text-gray-900">API Status</h2>
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <span className="text-sm font-medium text-gray-900">All Systems Operational</span>
+        {/* API Status */}"        <section className="py-16">"          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"            <div className="bg-white rounded-xl shadow-sm border p-8">"              <div className="flex items-center justify-between mb-6">"                <h2 className="text-2xl font-bold text-gray-900">API Status</h2>"                <div className="flex items-center gap-2">"                  <div className="w-3 h-3 bg-green-500 rounded-full" />"                  <span className="text-sm font-medium text-gray-900">All Systems Operational</span>
                 </div>
-              </div>
-              <div className="grid md:grid-cols-4 gap-4">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-gray-900">99.9%</div>
-                  <div className="text-sm text-gray-600">Uptime</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-gray-900">&lt;100ms</div>
-                  <div className="text-sm text-gray-600">Response Time</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-gray-900">24/7</div>
-                  <div className="text-sm text-gray-600">Monitoring</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-gray-900">99.9%</div>
-                  <div className="text-sm text-gray-600">SLA</div>
+              </div>"              <div className="grid md:grid-cols-4 gap-4">"                <div className="text-center">"                  <div className="text-2xl font-bold text-gray-900">99.9%</div>"                  <div className="text-sm text-gray-600">Uptime</div>
+                </div>"                <div className="text-center">"                  <div className="text-2xl font-bold text-gray-900">&lt;100ms</div>"                  <div className="text-sm text-gray-600">Response Time</div>
+                </div>"                <div className="text-center">"                  <div className="text-2xl font-bold text-gray-900">24/7</div>"                  <div className="text-sm text-gray-600">Monitoring</div>
+                </div>"                <div className="text-center">"                  <div className="text-2xl font-bold text-gray-900">99.9%</div>"                  <div className="text-sm text-gray-600">SLA</div>
                 </div>
               </div>
             </div>
@@ -284,5 +188,4 @@ export default function Documentation() {
         </section>
       </div>
     </>
-  );
-}
+  );"}

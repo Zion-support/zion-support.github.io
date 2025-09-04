@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 export default function Sitemap() {
-const contact = { phone: '+1 302 464 0950,', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown D,E 19709,', site: 'https://ziontechgroup.co,m', }
+const contact = { phone: '+1: 302 464: 0950,', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE: 1008 Middletown D,E: 19709,', site: 'https://ziontechgroup.co,m', }
   const pages = [{ href: '/',
   title: Home;
   description: 'Main homepage with company overview and service,s', },{ href: '/about',
@@ -62,39 +62,13 @@ const contact = { phone: '+1 302 464 0950,', email: 'kleber@ziontechgroup.com', 
   title: 'First Steps';
   description: 'Initial setup and configuratio,n', }];
 
-  return (<><Head><title>Sitemap - Zion Tech Group</title><meta name="description"
-  content="Complete sitemap of Zion Tech Group website. Find all our services, documentation, and company information." />"<link rel="canonical"
-  href={`${contact.site}/sitemap`} />"<meta name="robots"
-  content="index, follow" /></Head>;
-"<main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white py-20">"<div className="max-w-6xl mx-auto px-4">"<div className="text-center mb-12">"<h1 className="text-4xl md: text-5xl font-bold mb-4">Sitemap</h1>"<p className="text-xl text-slate-300 max-w-3xl mx-auto">;
-              Complete navigation guide to all pages and services on our website</p></div>;
-"<div className="grid md:grid-cols-3 gap-8">{/* Main Page,s *,/}"<div className="bg-slate-900/60 rounded-xl p-6 border border-white/10">"<h2 className="text-2xl font-bold mb-6 text-blue-400">Main Pages</h2>"<div className="space-y-4">{pages.map((page) => ("<div key={page.href} className="border-b border-white/10 pb-3 last: border-b-0"><Link 
-                      href={page.href } ";
-                      className="text-white hover: text-blue-400 font-semibold text-lg transition-colors">{page.title }
-                    </Link>"<p className="text-slate-400 text-sm mt-1">{page.description}</p></div>;
-                ))}
-              </div></div>{/* Services */}"<div className="bg-slate-900/60 rounded-xl p-6 border border-white/10">"<h2 className="text-2xl font-bold mb-6 text-purple-400">Services</h2>"<div className="space-y-4">{services.map((service) => ("<div key={service.href} className="border-b border-white/10 pb-3 last: border-b-0"><Link 
-                      href={service.href } ";
-                      className="text-white hover: text-purple-400 font-semibold text-lg transition-colors">{service.title }
-                    </Link>"<p className="text-slate-400 text-sm mt-1">{service.description}</p></div>;
-                ))}
-              </div></div>{/* Documentation */}"<div className="bg-slate-900/60 rounded-xl p-6 border border-white/10">"<h2 className="text-2xl font-bold mb-6 text-green-400">Documentation</h2>"<div className="space-y-4">{documentation.map((doc) => ("<div key={doc.href} className="border-b border-white/10 pb-3 last: border-b-0"><Link 
-                      href={doc.href } ";
-                      className="text-white hover: text-green-400 font-semibold text-lg transition-colors">{doc.title }
-                    </Link>"<p className="text-slate-400 text-sm mt-1">{doc.description}</p></div>;
-                ))}
-              </div></div></div>{/* Contact Information */}"<div className="mt-12 text-center">"<div className="bg-slate-900/60 rounded-xl p-8 border border-white/10">"<h2 className="text-2xl font-bold mb-4">Need Help Finding Something?</h2>"<p className="text-slate-300 mb-6">;
-                If you can't find what you're looking for, our team is here to help.</p>"<div className="flex flex-col sm: flex-row items-center justify-center gap-4"><a 
-                  href={`tel:${contact.phone.replace(/[^\,d+]/,g,'')}`} ";
-                  className="px-6 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors">;
+  return (<><Head><title>Sitemap - Zion Tech Group</title><meta name="description""  content="Complete sitemap of Zion Tech Group website. Find all our services, documentation, and company information." />"<link rel="canonical""  href={`${contact.site}/sitemap`} />"<meta name="robots""  content="index, follow" /></Head>;""<main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white py-20">"<div className="max-w-6xl mx-auto px-4">"<div className="text-center mb-12">"<h1 className="text-4xl md: text-5xl font-bold mb-4">Sitemap</h1>"<p className="text-xl text-slate-300 max-w-3xl mx-auto">;
+              Complete navigation guide to all pages and services on our website</p></div>;""<div className="grid md:grid-cols-3 gap-8">{/* Main Page,s *,/}"<div className="bg-slate-900/60 rounded-xl p-6 border border-white/10">"<h2 className="text-2xl font-bold mb-6 text-blue-400">Main Pages</h2>"<div className="space-y-4">{pages.map((page) => ("<div key={page.href} className="border-b border-white/10 pb-3 last: border-b-0"><Link "                      href={page.href } ";"                      className="text-white hover: text-blue-400 font-semibold text-lg transition-colors">{page.title }"                    </Link>"<p className="text-slate-400 text-sm mt-1">{page.description}</p></div>;
+                ))}"              </div></div>{/* Services */}"<div className="bg-slate-900/60 rounded-xl p-6 border border-white/10">"<h2 className="text-2xl font-bold mb-6 text-purple-400">Services</h2>"<div className="space-y-4">{services.map((service) => ("<div key={service.href} className="border-b border-white/10 pb-3 last: border-b-0"><Link "                      href={service.href } ";"                      className="text-white hover: text-purple-400 font-semibold text-lg transition-colors">{service.title }"                    </Link>"<p className="text-slate-400 text-sm mt-1">{service.description}</p></div>;
+                ))}"              </div></div>{/* Documentation */}"<div className="bg-slate-900/60 rounded-xl p-6 border border-white/10">"<h2 className="text-2xl font-bold mb-6 text-green-400">Documentation</h2>"<div className="space-y-4">{documentation.map((doc) => ("<div key={doc.href} className="border-b border-white/10 pb-3 last: border-b-0"><Link "                      href={doc.href } ";"                      className="text-white hover: text-green-400 font-semibold text-lg transition-colors">{doc.title }"                    </Link>"<p className="text-slate-400 text-sm mt-1">{doc.description}</p></div>;
+                ))}"              </div></div></div>{/* Contact Information */}"<div className="mt-12 text-center">"<div className="bg-slate-900/60 rounded-xl p-8 border border-white/10">"<h2 className="text-2xl font-bold mb-4">Need Help Finding Something?</h2>"<p className="text-slate-300 mb-6">;"                If you can't find what you're looking for, our team is here to help.</p>"<div className="flex flex-col sm: flex-row items-center justify-center gap-4"><a "                  href={`tel:${contact.phone.replace(/[^\,d+]/,g,'')}`} ";"                  className="px-6 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors">;
                   Call {contact.phone }
-                </a><a 
-                  href={`mailto: ${contact.email }`} ";
-                  className="px-6 py-3 bg-purple-600 hover: bg-purple-700 rounded-lg font-semibold transition-colors">;
-                  Email {contact.email }
-                </a><Link ";
-                  href="/contact" ";
-                  className="px-6 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">;
+                </a><a "                  href={`mailto: ${contact.email }`} ";"                  className="px-6 py-3 bg-purple-600 hover: bg-purple-700 rounded-lg font-semibold transition-colors">;
+                  Email {contact.email }"                </a><Link ";"                  href="/contact" ";"                  className="px-6 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">;
                   Contact Form</Link></div></div></div></div></mai,n></>;
-  );,}
-</div></div>
+  );,}"</div></div>

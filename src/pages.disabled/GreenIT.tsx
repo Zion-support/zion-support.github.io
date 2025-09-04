@@ -15,7 +15,7 @@ export default function GreenIT(...args: unknown[]): unknown {};
       id: 'energy - monitoring',;
       name: 'Smart Energy Monitoring',;
       category: 'energy',;
-      icon: Activity,;
+      icon: "Activity",;
       description: 'Real - time energy consumption tracking and optimization',;
       features: [];
         'Real - time energy consumption monitoring',;
@@ -25,7 +25,7 @@ export default function GreenIT(...args: unknown[]): unknown {};
         'Integration with smart building systems',;
         'Mobile app for remote monitoring';
       ],;
-      benefits: ['Reduce energy costs by 15 - 25%',;
+      benefits: ['Reduce energy costs by: 15 - 25%',;
         'Identify energy waste patterns',;
         'Optimize equipment performance',;
         'Meet sustainability goals',;
@@ -38,8 +38,7 @@ export default function GreenIT(...args: unknown[]): unknown {};
     {}
       id: 'virtualization',;
       name: 'Server Virtualization',;
-      category: 'hardware',;
-      icon: Server,;
+      category: 'hardware',;"      icon: "Server",;
       description: 'Consolidate physical servers to reduce power consumption',;
       features: ['Server consolidation and virtualization',;
         'Dynamic resource allocation',;
@@ -48,7 +47,7 @@ export default function GreenIT(...args: unknown[]): unknown {};
         'Performance monitoring and optimization',;
         'Green computing best practices';
       ],;
-      benefits: ['Reduce server power consumption by 60 - 80%',;
+      benefits: ['Reduce server power consumption by: 60 - 80%',;
         'Lower cooling requirements',;
         'Decrease hardware maintenance costs',;
         'Improve resource utilization',;
@@ -61,8 +60,7 @@ export default function GreenIT(...args: unknown[]): unknown {};
     {}
       id: 'cloud - optimization',;
       name: 'Cloud Infrastructure Optimization',;
-      category: 'software',;
-      icon: Cloud,;
+      category: 'software',;"      icon: "Cloud",;
       description: 'Optimize cloud resources for maximum efficiency',;
       features: ['Cloud resource optimization',;
         'Auto - scaling and load balancing',;
@@ -71,7 +69,7 @@ export default function GreenIT(...args: unknown[]): unknown {};
         'Carbon footprint tracking',;
         'Sustainable cloud practices';
       ],;
-      benefits: ['Reduce cloud costs by 20 - 40%',;
+      benefits: ['Reduce cloud costs by: 20 - 40%',;
         'Lower carbon emissions',;
         'Improve application performance',;
         'Better resource utilization',;
@@ -84,8 +82,7 @@ export default function GreenIT(...args: unknown[]): unknown {};
     {}
       id: 'data - center - efficiency',;
       name: 'Data Center Efficiency',;
-      category: 'data',;
-      icon: Database,;
+      category: 'data',;"      icon: "Database",;
       description: 'Optimize data center operations for sustainability',;
       features: ['Cooling system optimization',;
         'Power distribution efficiency',;
@@ -94,7 +91,7 @@ export default function GreenIT(...args: unknown[]): unknown {};
         'Energy - efficient equipment',;
         'Environmental monitoring';
       ],;
-      benefits: ['Reduce data center energy by 30 - 50%',;
+      benefits: ['Reduce data center energy by: 30 - 50%',;
         'Lower operational costs',;
         'Improve equipment lifespan',;
         'Meet sustainability certifications',;
@@ -107,8 +104,7 @@ export default function GreenIT(...args: unknown[]): unknown {};
     {}
       id: 'smart - lighting',;
       name: 'Smart Lighting Systems',;
-      category: 'energy',;
-      icon: Lightbulb,;
+      category: 'energy',;"      icon: "Lightbulb",;
       description: 'Intelligent lighting control for energy savings',;
       features: ['Motion - sensing controls',;
         'Daylight harvesting',;
@@ -117,7 +113,7 @@ export default function GreenIT(...args: unknown[]): unknown {};
         'Mobile app control',;
         'Integration with building systems';
       ],;
-      benefits: ['Reduce lighting energy by 40 - 60%',;
+      benefits: ['Reduce lighting energy by: 40 - 60%',;
         'Improve occupant comfort',;
         'Extend bulb lifespan',;
         'Reduce maintenance costs',;
@@ -130,8 +126,7 @@ export default function GreenIT(...args: unknown[]): unknown {};
     {}
       id: 'green - software',;
       name: 'Sustainable Software Development',;
-      category: 'software',;
-      icon: Code,;
+      category: 'software',;"      icon: "Code",;
       description: 'Eco - friendly software development practices',;
       features: ['Energy - efficient algorithms',;
         'Code optimization techniques',;
@@ -153,8 +148,7 @@ export default function GreenIT(...args: unknown[]): unknown {};
     {}
       id: 'renewable - energy',;
       name: 'Renewable Energy Integration',;
-      category: 'energy',;
-      icon: Sun,;
+      category: 'energy',;"      icon: "Sun",;
       description: 'Integrate solar, wind, and other renewable sources',;
       features: ['Solar panel installation',;
         'Wind turbine integration',;
@@ -176,8 +170,7 @@ export default function GreenIT(...args: unknown[]): unknown {};
     {}
       id: 'green - hardware',;
       name: 'Energy - Efficient Hardware',;
-      category: 'hardware',;
-      icon: Cpu,;
+      category: 'hardware',;"      icon: "Cpu",;
       description: 'Select and deploy energy - efficient computing equipment',;
       features: ['Energy Star certified equipment',;
         'Low-power processors',;
@@ -199,8 +192,7 @@ export default function GreenIT(...args: unknown[]): unknown {};
     {}
       id: 'waste - reduction',;
       name: 'Electronic Waste Reduction',;
-      category: 'hardware',;
-      icon: Recycle,;
+      category: 'hardware',;"      icon: "Recycle",;
       description: 'Comprehensive e - waste management and recycling',;
       features: ['E - waste assessment and audit',;
         'Secure data destruction',;
@@ -222,8 +214,7 @@ export default function GreenIT(...args: unknown[]): unknown {};
     {}
       id: 'carbon - tracking',;
       name: 'Carbon Footprint Tracking',;
-      category: 'software',;
-      icon: BarChart3,;
+      category: 'software',;"      icon: "BarChart3",;
       description: 'Monitor and reduce carbon emissions',;
       features: ['Carbon emission calculation',;
         'Real - time monitoring',;
@@ -245,8 +236,7 @@ export default function GreenIT(...args: unknown[]): unknown {};
     {}
       id: 'green - networking',;
       name: 'Energy - Efficient Networking',;
-      category: 'data',;
-      icon: Network,;
+      category: 'data',;"      icon: "Network",;
       description: 'Optimize network infrastructure for energy efficiency',;
       features: ['Network equipment optimization',;
         'Traffic management',;
@@ -268,8 +258,7 @@ export default function GreenIT(...args: unknown[]): unknown {};
     {}
       id: 'sustainability - reporting',;
       name: 'Sustainability Reporting Platform',;
-      category: 'software',;
-      icon: FileText,;
+      category: 'software',;"      icon: "FileText",;
       description: 'Comprehensive sustainability reporting and analytics',;
       features: ['Environmental data collection',;
         'Sustainability metrics tracking',;
@@ -294,84 +283,34 @@ export {};
   const [expandedSection, setExpandedSection] = useState<string | null>(null);';
   const [selectedCategory, setSelectedCategory] = useState('all')};
 ;
-  return();
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
+  return();"    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
       <div>Broken JSX</div>
-      />;
-";
-      {/* Hero Section */}"";
-      <section className="relative py-20 overflow-hidden">"";
-        <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10"></div>"        <div className="container mx-auto px-6 relative z-10">;
-          <div>Broken JSX</div>
-            className="text-center"">"";
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">"";
-              <Leaf className="w-10 h-10 text-green-400"  />";
-            </div>"";
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"";
-              <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">';
+      />;"";"      {/* Hero Section */}"";"      <section className="relative py-20 overflow-hidden">"";"        <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10" />"        <div className="container mx-auto px-6 relative z-10">;
+          <div>Broken JSX</div>"            className="text-center"">"";"            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">"";"              <Leaf className="w-10 h-10 text-green-400"  />";"            </div>"";"            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"";"              <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">';
                 Green IT'';
-              </span>{' '}
-              Solutions";
-            </h1>"            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">;
+              </span>{' '}"              Solutions";"            </h1>"            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">;
               Transform your technology infrastructure with sustainable;
-              solutions that reduce energy consumption, lower costs, and;
-              minimize environmental impact.";
-            </p>"";
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">"";
-              <button className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105">;
-                Get Green IT Assessment";
-              </button>"";
-              <button className="px-8 py-3 border border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-200">;
+              solutions that reduce energy consumption, lower costs, and;"              minimize environmental impact.";"            </p>"";"            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">"";"              <button className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105">;"                Get Green IT Assessment";"              </button>"";"              <button className="px-8 py-3 border border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-200">;
                 View Case Studies;
               </button>;
             </div>;
           </motion.div>;
         </div>;
-      </section>;
-";
-      {/* Environmental Impact */}"";
-      <section className="py-20">"";
-        <div className="container mx-auto px-6">;
-          <div>Broken JSX</div>
-            className="text-center mb-16"">"";
-            <h2 className="text-4xl font-bold text-white mb-4">;
-              Our Environmental Impact";
-            </h2>"";
-            <p className="text-xl text-gray-300">;
+      </section>;"";"      {/* Environmental Impact */}"";"      <section className="py-20">"";"        <div className="container mx-auto px-6">;
+          <div>Broken JSX</div>"            className="text-center mb-16"">"";"            <h2 className="text-4xl font-bold text-white mb-4">;"              Our Environmental Impact";"            </h2>"";"            <p className="text-xl text-gray-300">;
               Real results from implementing sustainable technology solutions;
-            </p>;
-          </motion.div>";
-"";
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {};
-                  {impact.metric}";
-                </div>"";
-                <div className="text-lg font-semibold text-green-400 mb-2">;
-                  {impact.label}";
-                </div>"";
-                <p className="text-gray-300 text-sm">{impact.description}</p>;
+            </p>;"          </motion.div>";""";"          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
+            {};"                  {impact.metric}";"                </div>"";"                <div className="text-lg font-semibold text-green-400 mb-2">;"                  {impact.label}";"                </div>"";"                <p className="text-gray-300 text-sm">{impact.description}</p>;
               </motion.div>;
             ))}
           </div>;
         </div>;
-      </section>;
-";
-      {/* Green IT Solutions */}"";
-      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">"";
-        <div className="container mx-auto px-6">;
-          <div>Broken JSX</div>
-            className="text-center mb-16"">"";
-            <h2 className="text-4xl font-bold text-white mb-4">;
-              Green IT Solutions";
-            </h2>"";
-            <p className="text-xl text-gray-300">;
+      </section>;"";"      {/* Green IT Solutions */}"";"      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">"";"        <div className="container mx-auto px-6">;
+          <div>Broken JSX</div>"            className="text-center mb-16"">"";"            <h2 className="text-4xl font-bold text-white mb-4">;"              Green IT Solutions";"            </h2>"";"            <p className="text-xl text-gray-300">;
               Comprehensive sustainable technology solutions for your;
               organization;
             </p>;
-          </motion.div>;
-";
-          {/* Category Filter */}"";
-          <div className="flex flex-wrap justify-center gap-4 mb-12">;
+          </motion.div>;"";"          {/* Category Filter */}"";"          <div className="flex flex-wrap justify-center gap-4 mb-12">;
             {};
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${}
@@ -383,69 +322,31 @@ export {};
                     : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50'````;,
 }`}
               >;
-                {category.name} ({category.count}) </button>) ) }
-          </div>";
-"";
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+                {category.name} ({category.count}) </button>) ) }"          </div>";""";"          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {};
                         {categories.find(c => c.id === solution.category) ?.name}
-                      </span>;
-                    </div>";
-"";
-                    <div className="flex items-center gap-3 mb-4">"";
-                      <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-xl">"";
-                        <solution.icon className="w-6 h-6 text-green-400" />";
-                      </div>"";
-                      <h3 className="text-xl font-bold text-white group-hover:text-green-400 transition-colors duration-200">;
+                      </span>;"                    </div>";""";"                    <div className="flex items-center gap-3 mb-4">"";"                      <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-xl">"";"                        <solution.icon className="w-6 h-6 text-green-400" />";"                      </div>"";"                      <h3 className="text-xl font-bold text-white group-hover:text-green-400 transition-colors duration-200">;
                         {solution.name}
-                      </h3>;
-                    </div>";
-"";
-                    <p className="text-gray-300 text-sm mb-4 leading-relaxed">;
-                      {solution.description}
-                    </p>";
-"";
-                    <div className="grid grid-cols-2 gap-4 mb-4 text-sm">";
-                      <div>"";
-                        <div className="text-gray-400">Savings</div>"";
-                        <div className="text-green-400 font-medium">;
+                      </h3>;"                    </div>";""";"                    <p className="text-gray-300 text-sm mb-4 leading-relaxed">;
+                      {solution.description}"                    </p>";""";"                    <div className="grid grid-cols-2 gap-4 mb-4 text-sm">";"                      <div>"";"                        <div className="text-gray-400">Savings</div>"";"                        <div className="text-green-400 font-medium">;
                           {solution.savings}
-                        </div>;
-                      </div>";
-                      <div>"";
-                        <div className="text-gray-400">Timeline</div>"";
-                        <div className="text-blue-400 font-medium">;
+                        </div>;"                      </div>";"                      <div>"";"                        <div className="text-gray-400">Timeline</div>"";"                        <div className="text-blue-400 font-medium">;
                           {solution.implementation}
-                        </div>;
-                      </div>";
-                      <div>"";
-                        <div className="text-gray-400">Starting from</div>"";
-                        <div className="text-purple-400 font-medium">;
+                        </div>;"                      </div>";"                      <div>"";"                        <div className="text-gray-400">Starting from</div>"";"                        <div className="text-purple-400 font-medium">;
                           {solution.pricing}
                         </div>;
                       </div>;
                     </div>;
 
-                    <div>Broken JSX</div>
-                      onClick={() => toggleSection(solution.id)}"";
-                      className="w-full px-4 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105">';
+                    <div>Broken JSX</div>"                      onClick={() => toggleSection(solution.id)}"";"                      className="w-full px-4 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105">';
                       {};
                         : 'Learn More'}
                     </button>;
 
-                    {};
-                                <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0"  />                                {feature}
+                    {};"                                <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0"  />                                {feature}
                               </li>) ) }
-                          </ul>;
-                        </div>";
-"";
-                        <div className="mb-4">"";
-                          <h4 className="text-sm font-semibold text-white mb-2">;
-                            Benefits:";
-                          </h4>"";
-                          <ul className="space-y-1">;
-                            {};
-                                <Star className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0"  />                                {benefit}
+                          </ul>;"                        </div>";""";"                        <div className="mb-4">"";"                          <h4 className="text-sm font-semibold text-white mb-2">;"                            Benefits:";"                          </h4>"";"                          <ul className="space-y-1">;
+                            {};"                                <Star className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0"  />                                {benefit}
                               </li>) ) }
                           </ul>;
                         </div>;
@@ -455,95 +356,29 @@ export {};
               </motion.div>) ) }
           </div>;
         </div>;
-      </section>;
-";
-      {/* Certifications */}"";
-      <section className="py-20">"";
-        <div className="container mx-auto px-6">;
-          <div>Broken JSX</div>
-            className="text-center mb-16"">"";
-            <h2 className="text-4xl font-bold text-white mb-4">;
-              Our Certifications";
-            </h2>"";
-            <p className="text-xl text-gray-300">;
+      </section>;"";"      {/* Certifications */}"";"      <section className="py-20">"";"        <div className="container mx-auto px-6">;
+          <div>Broken JSX</div>"            className="text-center mb-16"">"";"            <h2 className="text-4xl font-bold text-white mb-4">;"              Our Certifications";"            </h2>"";"            <p className="text-xl text-gray-300">;
               Recognized for our commitment to environmental sustainability;
-            </p>;
-          </motion.div>";
-"";
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {};
-                  className={`inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r ${cert.color} rounded-2xl mb-6`}">"";
-                  <cert.icon className="w-10 h-10 text-white" />";
-                </div>"";
-                <h3 className="text-lg font-bold text-white mb-2">;
-                  {cert.name}";
-                </h3>"";
-                <p className="text-gray-300 text-sm">{cert.description}</p>;
+            </p>;"          </motion.div>";""";"          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
+            {};"                  className={`inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r ${cert.color} rounded-2xl mb-6`}">"";"                  <cert.icon className="w-10 h-10 text-white" />";"                </div>"";"                <h3 className="text-lg font-bold text-white mb-2">;"                  {cert.name}";"                </h3>"";"                <p className="text-gray-300 text-sm">{cert.description}</p>;
               </motion.div>;
             ))}
           </div>;
         </div>;
-      </section>;
-";
-      {/* Case Studies */}"";
-      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">"";
-        <div className="container mx-auto px-6">;
-          <div>Broken JSX</div>
-            className="text-center mb-16"">"";
-            <h2 className="text-4xl font-bold text-white mb-4">;
-              Success Stories";
-            </h2>"";
-            <p className="text-xl text-gray-300">;
+      </section>;"";"      {/* Case Studies */}"";"      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">"";"        <div className="container mx-auto px-6">;
+          <div>Broken JSX</div>"            className="text-center mb-16"">"";"            <h2 className="text-4xl font-bold text-white mb-4">;"              Success Stories";"            </h2>"";"            <p className="text-xl text-gray-300">;
               Real results from organizations implementing our Green IT;
               solutions;
-            </p>;
-          </motion.div>";
-"";
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
+            </p>;"          </motion.div>";""";"          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {};
                       {study.industry}
-                    </span>;
-                  </div>";
-"";
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors duration-200">;
-                    {study.title}
-                  </h3>";
-"";
-                  <div className="mb-4">"";
-                    <h4 className="text-sm font-semibold text-white mb-2">;
-                      Challenge:";
-                    </h4>"";
-                    <p className="text-gray-300 text-sm">{study.challenge}</p>;
-                  </div>";
-"";
-                  <div className="mb-4">"";
-                    <h4 className="text-sm font-semibold text-white mb-2">;
-                      Solution:";
-                    </h4>"";
-                    <p className="text-gray-300 text-sm">{study.solution}</p>;
-                  </div>";
-"";
-                  <div className="mb-4">"";
-                    <h4 className="text-sm font-semibold text-white mb-2">;
-                      Results:";
-                    </h4>"";
-                    <ul className="space-y-1">;
-                      {};
-                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0"  />                          {result}
+                    </span>;"                  </div>";""";"                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors duration-200">;
+                    {study.title}"                  </h3>";""";"                  <div className="mb-4">"";"                    <h4 className="text-sm font-semibold text-white mb-2">;"                      Challenge:";"                    </h4>"";"                    <p className="text-gray-300 text-sm">{study.challenge}</p>;"                  </div>";""";"                  <div className="mb-4">"";"                    <h4 className="text-sm font-semibold text-white mb-2">;"                      Solution:";"                    </h4>"";"                    <p className="text-gray-300 text-sm">{study.solution}</p>;"                  </div>";""";"                  <div className="mb-4">"";"                    <h4 className="text-sm font-semibold text-white mb-2">;"                      Results:";"                    </h4>"";"                    <ul className="space-y-1">;
+                      {};"                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0"  />                          {result}
                         </li>) ) }
-                    </ul>;
-                  </div>";
-"";
-                  <div className="grid grid-cols-2 gap-4 text-sm">";
-                    <div>"";
-                      <div className="text-gray-400">Annual Savings</div>"";
-                      <div className="text-green-400 font-medium">;
+                    </ul>;"                  </div>";""";"                  <div className="grid grid-cols-2 gap-4 text-sm">";"                    <div>"";"                      <div className="text-gray-400">Annual Savings</div>"";"                      <div className="text-green-400 font-medium">;
                         {study.savings}
-                      </div>;
-                    </div>";
-                    <div>"";
-                      <div className="text-gray-400">Implementation</div>"";
-                      <div className="text-blue-400 font-medium">;
+                      </div>;"                    </div>";"                    <div>"";"                      <div className="text-gray-400">Implementation</div>"";"                      <div className="text-blue-400 font-medium">;
                         {study.timeline}
                       </div>;
                     </div>;
@@ -552,34 +387,15 @@ export {};
               </motion.div>) ) }
           </div>;
         </div>;
-      </section>;
-";
-      {/* Call to Action */}"";
-      <section className="py-20">"";
-        <div className="container mx-auto px-6 text-center">;
-          <div>Broken JSX</div>
-            transition={{ duration: 0.8 }}">"";
-            <h2 className="text-4xl font-bold text-white mb-6">;
-              Ready to Go Green?";
-            </h2>"";
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
+      </section>;"";"      {/* Call to Action */}"";"      <section className="py-20">"";"        <div className="container mx-auto px-6 text-center">;
+          <div>Broken JSX</div>"            transition={{ duration: 0.8 }}">"";"            <h2 className="text-4xl font-bold text-white mb-6">;"              Ready to Go Green?";"            </h2>"";"            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
               Start your sustainability journey today. Our Green IT experts will;
               assess your current infrastructure and provide a customized plan;
-              to reduce costs and environmental impact.;
-            </p>";
-"";
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"";
-              <button className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105">;
-                Schedule Green IT Assessment;
-              </button>";
-              <div>Broken JSX</div>
-                className="px-8 py-3 border border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-200">;
+              to reduce costs and environmental impact.;"            </p>";""";"            <div className="flex flex-col sm:flex-row gap-4 justify-center">"";"              <button className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105">;
+                Schedule Green IT Assessment;"              </button>";
+              <div>Broken JSX</div>"                className="px-8 py-3 border border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-200">;
                 Contact Green IT Team;
-              </a>;
-            </div>";
-"";
-            <div className="mt-8 text-center">"";
-              <p className="text-gray-400 text-sm">;
+              </a>;"            </div>";""";"            <div className="mt-8 text-center">"";"              <p className="text-gray-400 text-sm">;
                 Get a free sustainability assessment and customized Green IT;
                 roadmap;
               </p>;
@@ -600,4 +416,4 @@ export { GreenIT };
 ;
 export { GreenIT };
 ;
-export { GreenIT, GreenIT };
+export { GreenIT, GreenIT };"

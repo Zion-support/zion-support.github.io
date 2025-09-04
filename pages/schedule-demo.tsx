@@ -3,9 +3,9 @@ import { useState } from 'react';
 
 export default function ScheduleDemo() {
   const contact = { 
-    phone: '+1 302 464 0950', 
+    phone: '+1: 302 464: 0950', 
     email: 'kleber@ziontechgroup.com', 
-    address: '364 E Main St STE 1008 Middletown DE 19709', 
+    address: '364 E Main St STE: 1008 Middletown DE: 19709', 
     site: 'https://ziontechgroup.com' 
   };
 
@@ -49,182 +49,130 @@ export default function ScheduleDemo() {
     <>
       <Head>
         <title>Schedule a Demo - Zion Tech Group</title>
-        <meta name="description" content="Schedule a personalized demo of our technology solutions." />
-        <link rel="canonical" href="https://ziontechgroup.com/schedule-demo" />
+        <meta name="description" content="Schedule a personalized demo of our technology solutions." />"        <link rel="canonical" href="https://ziontechgroup.com/schedule-demo" />
       </Head>
-
-      <div style={{ 
-        minHeight: '100vh', 
-        background: 'linear-gradient(135deg, #0b1220 0%, #1a1f3a 100%)', 
+"      <div style={{ minHeight: "'100vh'", "        background: 'linear-gradient(135deg, #0b1220: "0%", #1a1f3a: "100%)'", 
         color: 'white' 
-      }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '40px 20px' }}>
-          <div style={{ textAlign: 'center', marginBottom: 60 }}>
-            <h1 style={{ 
-              fontSize: '3rem', 
+       }}>"        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '40px: "20px"'  }}>
+          <div style={{ textAlign: 'center', marginBottom: 60  }}>"            <h1 style={{ fontSize: "'3rem'", 
               fontWeight: 800, 
               marginBottom: 20,
               background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent'
-            }}>
+             }}>
               Schedule a Demo
-            </h1>
-            <p style={{ fontSize: '1.2rem', color: '#94a3b8', maxWidth: 600, margin: '0 auto' }}>
+            </h1>"            <p style={{ fontSize: "'1.2rem'", color: '#94a3b8', maxWidth: 600, margin: '0 auto'  }}>
               See our technology solutions in action. Schedule a personalized demo tailored to your business needs.
             </p>
           </div>
 
-          <div style={{ 
-            background: 'rgba(255, 255, 255, 0.05)', 
+          <div style={{ background: 'rgba(255, 255, 255, 0.05)', 
             padding: 40, 
-            borderRadius: 12, 
-            border: '1px solid rgba(255, 255, 255, 0.1)',
+            borderRadius: 12, "            border: "'1px solid rgba(255", 255, 255, 0.1)',
             maxWidth: 600,
             margin: '0 auto'
-          }}>
-            <h2 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: 30 }}>
+           }}>"            <h2 style={{ fontSize: "'1.5rem'", fontWeight: 600, marginBottom: 30  }}>
               Book Your Demo
             </h2>
             
             <form onSubmit={handleSubmit}>
-              <div style={{ display: 'grid', gap: 20 }}>
-                <div>
-                  <label style={{ display: 'block', marginBottom: 8, fontSize: '0.9rem', fontWeight: 600 }}>
+              <div style={{ display: 'grid', gap: 20  }}>
+                <div>"                  <label style={{ display: 'block', marginBottom: 8, fontSize: "'0.9rem'", fontWeight: 600  }}>
                     Full Name *
                   </label>
-                  <input
-                    type="text"
-                    name="name"
+                  <input"                    type="text""                    name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    required
-                    style={{
-                      width: '100%',
-                      padding: '12px 16px',
-                      background: 'rgba(255, 255, 255, 0.1)',
-                      border: '1px solid rgba(255, 255, 255, 0.2)',
+                    required"                    style={{ width: "'100%'","                      padding: "'12px: "16px"'",
+                      background: 'rgba(255, 255, 255, 0.1)',"                      border: "'1px solid rgba(255", 255, 255, 0.2)',
                       borderRadius: 8,
                       color: 'white',
                       outline: 'none'
-                    }}
+                     }}
                   />
                 </div>
 
-                <div>
-                  <label style={{ display: 'block', marginBottom: 8, fontSize: '0.9rem', fontWeight: 600 }}>
+                <div>"                  <label style={{ display: 'block', marginBottom: 8, fontSize: "'0.9rem'", fontWeight: 600  }}>
                     Email Address *
                   </label>
-                  <input
-                    type="email"
-                    name="email"
+                  <input"                    type="email""                    name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    required
-                    style={{
-                      width: '100%',
-                      padding: '12px 16px',
-                      background: 'rgba(255, 255, 255, 0.1)',
-                      border: '1px solid rgba(255, 255, 255, 0.2)',
+                    required"                    style={{ width: "'100%'","                      padding: "'12px: "16px"'",
+                      background: 'rgba(255, 255, 255, 0.1)',"                      border: "'1px solid rgba(255", 255, 255, 0.2)',
                       borderRadius: 8,
                       color: 'white',
                       outline: 'none'
-                    }}
+                     }}
                   />
                 </div>
 
-                <div>
-                  <label style={{ display: 'block', marginBottom: 8, fontSize: '0.9rem', fontWeight: 600 }}>
+                <div>"                  <label style={{ display: 'block', marginBottom: 8, fontSize: "'0.9rem'", fontWeight: 600  }}>
                     Company
                   </label>
-                  <input
-                    type="text"
-                    name="company"
+                  <input"                    type="text""                    name="company"
                     value={formData.company}
-                    onChange={handleChange}
-                    style={{
-                      width: '100%',
-                      padding: '12px 16px',
-                      background: 'rgba(255, 255, 255, 0.1)',
-                      border: '1px solid rgba(255, 255, 255, 0.2)',
+                    onChange={handleChange}"                    style={{ width: "'100%'","                      padding: "'12px: "16px"'",
+                      background: 'rgba(255, 255, 255, 0.1)',"                      border: "'1px solid rgba(255", 255, 255, 0.2)',
                       borderRadius: 8,
                       color: 'white',
                       outline: 'none'
-                    }}
+                     }}
                   />
                 </div>
 
-                <div>
-                  <label style={{ display: 'block', marginBottom: 8, fontSize: '0.9rem', fontWeight: 600 }}>
+                <div>"                  <label style={{ display: 'block', marginBottom: 8, fontSize: "'0.9rem'", fontWeight: 600  }}>
                     Service Interest
                   </label>
-                  <select
-                    name="service"
+                  <select"                    name="service"
                     value={formData.service}
-                    onChange={handleChange}
-                    style={{
-                      width: '100%',
-                      padding: '12px 16px',
-                      background: 'rgba(255, 255, 255, 0.1)',
-                      border: '1px solid rgba(255, 255, 255, 0.2)',
+                    onChange={handleChange}"                    style={{ width: "'100%'","                      padding: "'12px: "16px"'",
+                      background: 'rgba(255, 255, 255, 0.1)',"                      border: "'1px solid rgba(255", 255, 255, 0.2)',
                       borderRadius: 8,
                       color: 'white',
                       outline: 'none'
-                    }}
-                  >
-                    <option value="">Select a service</option>
+                     }}
+                  >"                    <option value="">Select a service</option>
                     {services.map((service, index) => (
-                      <option key={index} value={service} style={{ background: '#1a1f3a' }}>
+                      <option key={index} value={service} style={{ background: '#1a1f3a'  }}>
                         {service}
                       </option>
                     ))}
                   </select>
                 </div>
-
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 15 }}>
-                  <div>
-                    <label style={{ display: 'block', marginBottom: 8, fontSize: '0.9rem', fontWeight: 600 }}>
+"                <div style={{ display: 'grid', gridTemplateColumns: '1fr: "1fr"', gap: 15  }}>
+                  <div>"                    <label style={{ display: 'block', marginBottom: 8, fontSize: "'0.9rem'", fontWeight: 600  }}>
                       Preferred Date *
                     </label>
-                    <input
-                      type="date"
+                    <input"                      type="date"
                       value={selectedDate}
                       onChange={(e) => setSelectedDate(e.target.value)}
                       required
-                      min={new Date().toISOString().split('T')[0]}
-                      style={{
-                        width: '100%',
-                        padding: '12px 16px',
-                        background: 'rgba(255, 255, 255, 0.1)',
-                        border: '1px solid rgba(255, 255, 255, 0.2)',
+                      min={new Date().toISOString().split('T')[0]}"                      style={{ width: "'100%'","                        padding: "'12px: "16px"'",
+                        background: 'rgba(255, 255, 255, 0.1)',"                        border: "'1px solid rgba(255", 255, 255, 0.2)',
                         borderRadius: 8,
                         color: 'white',
                         outline: 'none'
-                      }}
+                       }}
                     />
                   </div>
 
-                  <div>
-                    <label style={{ display: 'block', marginBottom: 8, fontSize: '0.9rem', fontWeight: 600 }}>
+                  <div>"                    <label style={{ display: 'block', marginBottom: 8, fontSize: "'0.9rem'", fontWeight: 600  }}>
                       Preferred Time *
                     </label>
                     <select
                       value={selectedTime}
                       onChange={(e) => setSelectedTime(e.target.value)}
-                      required
-                      style={{
-                        width: '100%',
-                        padding: '12px 16px',
-                        background: 'rgba(255, 255, 255, 0.1)',
-                        border: '1px solid rgba(255, 255, 255, 0.2)',
+                      required"                      style={{ width: "'100%'","                        padding: "'12px: "16px"'",
+                        background: 'rgba(255, 255, 255, 0.1)',"                        border: "'1px solid rgba(255", 255, 255, 0.2)',
                         borderRadius: 8,
                         color: 'white',
                         outline: 'none'
-                      }}
-                    >
-                      <option value="">Select time</option>
+                       }}
+                    >"                      <option value="">Select time</option>
                       {timeSlots.map((time, index) => (
-                        <option key={index} value={time} style={{ background: '#1a1f3a' }}>
+                        <option key={index} value={time} style={{ background: '#1a1f3a'  }}>
                           {time}
                         </option>
                       ))}
@@ -232,42 +180,30 @@ export default function ScheduleDemo() {
                   </div>
                 </div>
 
-                <div>
-                  <label style={{ display: 'block', marginBottom: 8, fontSize: '0.9rem', fontWeight: 600 }}>
+                <div>"                  <label style={{ display: 'block', marginBottom: 8, fontSize: "'0.9rem'", fontWeight: 600  }}>
                     Additional Message
                   </label>
-                  <textarea
-                    name="message"
+                  <textarea"                    name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    rows={4}
-                    placeholder="Tell us about your specific needs or questions..."
-                    style={{
-                      width: '100%',
-                      padding: '12px 16px',
-                      background: 'rgba(255, 255, 255, 0.1)',
-                      border: '1px solid rgba(255, 255, 255, 0.2)',
+                    rows={4}"                    placeholder="Tell us about your specific needs or questions...""                    style={{ width: "'100%'","                      padding: "'12px: "16px"'",
+                      background: 'rgba(255, 255, 255, 0.1)',"                      border: "'1px solid rgba(255", 255, 255, 0.2)',
                       borderRadius: 8,
                       color: 'white',
                       outline: 'none',
                       resize: 'vertical'
-                    }}
+                     }}
                   />
                 </div>
 
-                <button
-                  type="submit"
-                  style={{
-                    width: '100%',
-                    padding: '15px 24px',
+                <button"                  type="submit""                  style={{ width: "'100%'","                    padding: "'15px: "24px"'",
                     background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
                     color: 'white',
                     border: 'none',
-                    borderRadius: 8,
-                    fontSize: '1rem',
+                    borderRadius: 8,"                    fontSize: "'1rem'",
                     fontWeight: 600,
                     cursor: 'pointer'
-                  }}
+                   }}
                 >
                   Schedule Demo
                 </button>
@@ -277,5 +213,4 @@ export default function ScheduleDemo() {
         </div>
       </div>
     </>
-  );
-}
+  );"}

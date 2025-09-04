@@ -7,32 +7,28 @@ import { motion } from 'framer-motion';
 
 const SupportPage: NextPage = () => {
   const supportOptions = [
-    {
-      icon: Phone,
+    {"      icon: "Phone",
       title: 'Phone Support',
       description: 'Speak directly with our technical experts',
       availability: '24/7 for Enterprise clients',
-      contact: '+1 302 464 0950',
+      contact: '+1: 302 464: 0950',
       color: 'blue'
     },
-    {
-      icon: Mail,
+    {"      icon: "Mail",
       title: 'Email Support',
       description: 'Get detailed responses to your technical questions',
-      availability: 'Response within 2 hours',
+      availability: 'Response within: 2 hours',
       contact: 'kleber@ziontechgroup.com',
       color: 'green'
     },
-    {
-      icon: MessageCircle,
+    {"      icon: "MessageCircle",
       title: 'Live Chat',
       description: 'Instant support through our website chat',
       availability: 'Monday - Friday, 9 AM - 6 PM EST',
       contact: 'Available on website',
       color: 'purple'
     },
-    {
-      icon: Book,
+    {"      icon: "Book",
       title: 'Knowledge Base',
       description: 'Comprehensive documentation and guides',
       availability: 'Always available',
@@ -51,7 +47,7 @@ const SupportPage: NextPage = () => {
         },
         {
           question: 'How do I get started with your services?',
-          answer: 'You can get started by contacting us through our contact form, calling us at +1 302 464 0950, or emailing kleber@ziontechgroup.com. We offer free consultations to understand your needs.'
+          answer: 'You can get started by contacting us through our contact form, calling us at +1: 302 464: 0950, or emailing kleber@ziontechgroup.com. We offer free consultations to understand your needs.'
         },
         {
           question: 'Do you offer custom development services?',
@@ -68,11 +64,11 @@ const SupportPage: NextPage = () => {
         },
         {
           question: 'Do you provide ongoing maintenance and support?',
-          answer: 'Yes, we offer comprehensive maintenance and support packages including 24/7 monitoring, regular updates, security patches, and technical support for all our solutions.'
+          answer: 'Yes, we offer comprehensive maintenance and support packages including: 24/7 monitoring, regular updates, security patches, and technical support for all our solutions.'
         },
         {
           question: 'How do you ensure data security and compliance?',
-          answer: 'We implement industry-standard security measures including encryption, secure coding practices, regular security audits, and compliance with regulations like GDPR, HIPAA, and SOC 2.'
+          answer: 'We implement industry-standard security measures including encryption, secure coding practices, regular security audits, and compliance with regulations like GDPR, HIPAA, and SOC: 2.'
         }
       ]
     },
@@ -96,26 +92,22 @@ const SupportPage: NextPage = () => {
   ];
 
   const resources = [
-    {
-      icon: FileText,
+    {"      icon: "FileText",
       title: 'Documentation',
       description: 'Comprehensive guides and API documentation',
       link: '/documentation'
     },
-    {
-      icon: Users,
+    {"      icon: "Users",
       title: 'Community Forum',
       description: 'Connect with other users and get help from the community',
       link: '/community'
     },
-    {
-      icon: Book,
+    {"      icon: "Book",
       title: 'Tutorials',
       description: 'Step-by-step tutorials and best practices',
       link: '/tutorials'
     },
-    {
-      icon: MessageCircle,
+    {"      icon: "MessageCircle",
       title: 'Status Page',
       description: 'Real-time system status and incident updates',
       link: '/status'
@@ -123,23 +115,17 @@ const SupportPage: NextPage = () => {
   ];
 
   return (
-    <MainLayout
-      title="Support - Zion Tech Group"
-      description="Get help and support for all your technology needs. 24/7 support available for enterprise clients."
+    <MainLayout"      title="Support - Zion Tech Group""      description="Get help and support for all your technology needs. 24/7 support available for enterprise clients."
     >
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <motion.h1 
-            className="text-4xl md:text-5xl font-bold mb-6"
+      {/* Hero Section */}"      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"        <div className="container mx-auto px-4 text-center">
+          <motion.h1 "            className="text-4xl md:text-5xl font-bold mb-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             We're Here to Help
           </motion.h1>
-          <motion.p 
-            className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-200"
+          <motion.p "            className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-200"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -149,45 +135,31 @@ const SupportPage: NextPage = () => {
         </div>
       </section>
 
-      {/* Support Options */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-16"
+      {/* Support Options */}"      <section className="py-20 bg-gray-50">"        <div className="container mx-auto px-4">
+          <motion.div "            className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get Support</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            transition={{ duration: 0.8 }}"            viewport={{ once: "true "}}
+          >"            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get Support</h2>"            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Choose the support option that works best for you
             </p>
           </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+"          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {supportOptions.map((option, index) => {
               const IconComponent = option.icon;
               return (
                 <motion.div
-                  key={option.title}
-                  className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300"
+                  key={option.title}"                  className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}"                  viewport={{ once: "true "}}
                   whileHover={{ scale: 1.05 }}
                 >
                   <div className={`bg-${option.color}-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4`}>
                     <IconComponent className={`w-8 h-8 text-${option.color}-600`} />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{option.title}</h3>
-                  <p className="text-gray-600 mb-4">{option.description}</p>
-                  <div className="text-sm text-gray-500 mb-4">
-                    <Clock className="w-4 h-4 inline mr-1" />
+                  </div>"                  <h3 className="text-xl font-bold text-gray-900 mb-2">{option.title}</h3>"                  <p className="text-gray-600 mb-4">{option.description}</p>"                  <div className="text-sm text-gray-500 mb-4">"                    <Clock className="w-4 h-4 inline mr-1" />
                     {option.availability}
-                  </div>
-                  <div className="text-sm font-semibold text-gray-900">
+                  </div>"                  <div className="text-sm font-semibold text-gray-900">
                     {option.contact}
                   </div>
                 </motion.div>
@@ -197,38 +169,24 @@ const SupportPage: NextPage = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-16"
+      {/* FAQ Section */}"      <section className="py-20 bg-white">"        <div className="container mx-auto px-4">
+          <motion.div "            className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            transition={{ duration: 0.8 }}"            viewport={{ once: "true "}}
+          >"            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>"            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Find answers to common questions about our services and support
             </p>
           </motion.div>
-
-          <div className="max-w-4xl mx-auto">
+"          <div className="max-w-4xl mx-auto">
             {faqCategories.map((category, categoryIndex) => (
               <motion.div
-                key={category.category}
-                className="mb-12"
+                key={category.category}"                className="mb-12"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">{category.category}</h3>
-                <div className="space-y-4">
-                  {category.questions.map((faq, faqIndex) => (
-                    <div key={faqIndex} className="bg-gray-50 rounded-lg p-6">
-                      <h4 className="text-lg font-semibold text-gray-900 mb-3">{faq.question}</h4>
-                      <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}"                viewport={{ once: "true "}}
+              >"                <h3 className="text-2xl font-bold text-gray-900 mb-6">{category.category}</h3>"                <div className="space-y-4">
+                  {category.questions.map((faq, faqIndex) => ("                    <div key={faqIndex} className="bg-gray-50 rounded-lg p-6">"                      <h4 className="text-lg font-semibold text-gray-900 mb-3">{faq.question}</h4>"                      <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
                     </div>
                   ))}
                 </div>
@@ -238,41 +196,27 @@ const SupportPage: NextPage = () => {
         </div>
       </section>
 
-      {/* Resources Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-16"
+      {/* Resources Section */}"      <section className="py-20 bg-gray-50">"        <div className="container mx-auto px-4">
+          <motion.div "            className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Helpful Resources</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            transition={{ duration: 0.8 }}"            viewport={{ once: "true "}}
+          >"            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Helpful Resources</h2>"            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Access our comprehensive library of resources and documentation
             </p>
           </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+"          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {resources.map((resource, index) => {
               const IconComponent = resource.icon;
               return (
                 <motion.div
-                  key={resource.title}
-                  className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300"
+                  key={resource.title}"                  className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}"                  viewport={{ once: "true "}}
                   whileHover={{ scale: 1.05 }}
-                >
-                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{resource.title}</h3>
-                  <p className="text-gray-600 mb-4">{resource.description}</p>
-                  <Link href={resource.link} className="text-blue-600 hover:text-blue-700 font-semibold">
+                >"                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">"                    <IconComponent className="w-8 h-8 text-blue-600" />
+                  </div>"                  <h3 className="text-xl font-bold text-gray-900 mb-2">{resource.title}</h3>"                  <p className="text-gray-600 mb-4">{resource.description}</p>"                  <Link href={resource.link} className="text-blue-600 hover:text-blue-700 font-semibold">
                     Access Resource →
                   </Link>
                 </motion.div>
@@ -282,28 +226,18 @@ const SupportPage: NextPage = () => {
         </div>
       </section>
 
-      {/* Contact CTA */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-4 text-center">
+      {/* Contact CTA */}"      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"        <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Still Need Help?</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
+            transition={{ duration: 0.8 }}"            viewport={{ once: "true "}}
+          >"            <h2 className="text-3xl md:text-4xl font-bold mb-4">Still Need Help?</h2>"            <p className="text-xl mb-8 max-w-2xl mx-auto">
               Can't find what you're looking for? Our expert team is ready to assist you with any questions or concerns.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="/contact" className="group">
-                <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105">
+            </p>"            <div className="flex flex-col sm:flex-row justify-center gap-4">"              <Link href="/contact" className="group">"                <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105">
                   Contact Support
                 </button>
-              </Link>
-              <a href="tel:+13024640950" className="group">
-                <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105">
-                  Call Now: +1 302 464 0950
+              </Link>"              <a href="tel:+13024640950" className="group">"                <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                  Call Now: +1: 302 464: 0950
                 </button>
               </a>
             </div>
@@ -313,5 +247,4 @@ const SupportPage: NextPage = () => {
     </MainLayout>
   );
 };
-
-export default SupportPage;
+"export default SupportPage;

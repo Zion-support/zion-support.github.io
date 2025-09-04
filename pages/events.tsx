@@ -6,15 +6,14 @@ export default function EventsPage() {
   const upcomingEvents = [
     {
       id: 'ai-summit-2025',
-      title: 'AI Innovation Summit 2025',
+      title: 'AI Innovation Summit: 2025',
       description: 'Join industry leaders and AI experts for a comprehensive exploration of the latest developments in artificial intelligence and machine learning.',
       date: '2025-03-15',
       time: '9:00 AM - 5:00 PM EST',
       location: 'Virtual Event',
       type: 'Conference',
       attendees: '500+',
-      price: 'Free',
-      featured: true,
+      price: 'Free',"      featured: "true",
       image: '/events/ai-summit-2025.jpg',
       speakers: ['Dr. Sarah Chen', 'Kleber', 'Dr. Michael Rodriguez'],
       topics: ['AI Ethics', 'Machine Learning', 'Business Applications', 'Future Trends']
@@ -28,8 +27,7 @@ export default function EventsPage() {
       location: 'Virtual Event',
       type: 'Workshop',
       attendees: '100',
-      price: '$99',
-      featured: false,
+      price: '$99',"      featured: "false",
       image: '/events/zero-trust-workshop.jpg',
       speakers: ['Security Team'],
       topics: ['Zero Trust', 'Security Architecture', 'Implementation', 'Case Studies']
@@ -43,8 +41,7 @@ export default function EventsPage() {
       location: 'Virtual Event',
       type: 'Webinar',
       attendees: '200',
-      price: 'Free',
-      featured: false,
+      price: 'Free',"      featured: "false",
       image: '/events/cloud-finops.jpg',
       speakers: ['Cloud Team'],
       topics: ['Cloud Cost Optimization', 'FinOps', 'AWS', 'Azure', 'GCP']
@@ -61,8 +58,7 @@ export default function EventsPage() {
       location: 'Virtual Event',
       type: 'Panel Discussion',
       attendees: '150',
-      price: 'Free',
-      featured: false,
+      price: 'Free',"      featured: "false",
       image: '/events/micro-saas-panel.jpg',
       speakers: ['Product Team', 'Industry Experts'],
       topics: ['Micro SaaS', 'Digital Transformation', 'Business Software']
@@ -76,8 +72,7 @@ export default function EventsPage() {
       location: 'Virtual Event',
       type: 'Masterclass',
       attendees: '75',
-      price: '$199',
-      featured: false,
+      price: '$199',"      featured: "false",
       image: '/events/kubernetes-masterclass.jpg',
       speakers: ['DevOps Team'],
       topics: ['Kubernetes', 'Production', 'Monitoring', 'Troubleshooting']
@@ -87,27 +82,17 @@ export default function EventsPage() {
   const eventTypes = ['All Events', 'Conference', 'Workshop', 'Webinar', 'Panel Discussion', 'Masterclass'];
 
   return (
-    <ModernLayout
-      title="Events | Zion Tech Group"
-      description="Join us for upcoming events, webinars, and conferences on the latest technology trends and innovations."
-      canonical="https://ziontechgroup.com/events"
+    <ModernLayout"      title="Events | Zion Tech Group""      description="Join us for upcoming events, webinars, and conferences on the latest technology trends and innovations.""      canonical="https://ziontechgroup.com/events"
     >
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-20">
-        <div className="mx-auto max-w-7xl px-6 text-center">
-          <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+      {/* Hero Section */}"      <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-20">"        <div className="mx-auto max-w-7xl px-6 text-center">"          <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
             Events & Webinars
-          </h1>
-          <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          </h1>"          <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Join us for insightful discussions, hands-on workshops, and thought leadership events on emerging technologies.
           </p>
         </div>
       </section>
 
-      {/* Event Type Filter */}
-      <section className="py-12 bg-white border-b border-gray-200">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="flex flex-wrap justify-center gap-4">
+      {/* Event Type Filter */}"      <section className="py-12 bg-white border-b border-gray-200">"        <div className="mx-auto max-w-7xl px-6">"          <div className="flex flex-wrap justify-center gap-4">
             {eventTypes.map((type) => (
               <button
                 key={type}
@@ -125,57 +110,28 @@ export default function EventsPage() {
       </section>
 
       {/* Featured Event */}
-      {upcomingEvents.find(event => event.featured) && (
-        <section className="py-20 bg-white">
-          <div className="mx-auto max-w-7xl px-6">
-            <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 lg:p-12 text-white">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                  <div className="inline-block bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
+      {upcomingEvents.find(event => event.featured) && ("        <section className="py-20 bg-white">"          <div className="mx-auto max-w-7xl px-6">"            <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 lg:p-12 text-white">"              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>"                  <div className="inline-block bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
                     Featured Event
-                  </div>
-                  <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+                  </div>"                  <h2 className="text-3xl lg:text-4xl font-bold mb-4">
                     {upcomingEvents.find(event => event.featured)?.title}
-                  </h2>
-                  <p className="text-lg text-blue-100 mb-6 leading-relaxed">
+                  </h2>"                  <p className="text-lg text-blue-100 mb-6 leading-relaxed">
                     {upcomingEvents.find(event => event.featured)?.description}
                   </p>
-                  
-                  <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div className="flex items-center space-x-2">
-                      <Calendar className="h-5 w-5 text-blue-200" />
-                      <span className="text-sm">
+                  "                  <div className="grid grid-cols-2 gap-4 mb-6">"                    <div className="flex items-center space-x-2">"                      <Calendar className="h-5 w-5 text-blue-200" />"                      <span className="text-sm">
                         {new Date(upcomingEvents.find(event => event.featured)?.date || '').toLocaleDateString()}
                       </span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Clock className="h-5 w-5 text-blue-200" />
-                      <span className="text-sm">{upcomingEvents.find(event => event.featured)?.time}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <MapPin className="h-5 w-5 text-blue-200" />
-                      <span className="text-sm">{upcomingEvents.find(event => event.featured)?.location}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Users className="h-5 w-5 text-blue-200" />
-                      <span className="text-sm">{upcomingEvents.find(event => event.featured)?.attendees}</span>
+                    </div>"                    <div className="flex items-center space-x-2">"                      <Clock className="h-5 w-5 text-blue-200" />"                      <span className="text-sm">{upcomingEvents.find(event => event.featured)?.time}</span>
+                    </div>"                    <div className="flex items-center space-x-2">"                      <MapPin className="h-5 w-5 text-blue-200" />"                      <span className="text-sm">{upcomingEvents.find(event => event.featured)?.location}</span>
+                    </div>"                    <div className="flex items-center space-x-2">"                      <Users className="h-5 w-5 text-blue-200" />"                      <span className="text-sm">{upcomingEvents.find(event => event.featured)?.attendees}</span>
                     </div>
                   </div>
-                  
-                  <button className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all duration-200 flex items-center space-x-2">
-                    <span>Register Now</span>
-                    <ArrowRight className="h-5 w-5" />
+                  "                  <button className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all duration-200 flex items-center space-x-2">
+                    <span>Register Now</span>"                    <ArrowRight className="h-5 w-5" />
                   </button>
                 </div>
-                
-                <div className="hidden lg:block">
-                  <div className="bg-white/10 rounded-xl p-6">
-                    <h3 className="text-xl font-semibold mb-4">Event Highlights</h3>
-                    <div className="space-y-3">
-                      {upcomingEvents.find(event => event.featured)?.topics.map((topic, index) => (
-                        <div key={index} className="flex items-center space-x-2">
-                          <div className="h-2 w-2 bg-blue-200 rounded-full"></div>
-                          <span className="text-blue-100">{topic}</span>
+                "                <div className="hidden lg:block">"                  <div className="bg-white/10 rounded-xl p-6">"                    <h3 className="text-xl font-semibold mb-4">Event Highlights</h3>"                    <div className="space-y-3">
+                      {upcomingEvents.find(event => event.featured)?.topics.map((topic, index) => ("                        <div key={index} className="flex items-center space-x-2">"                          <div className="h-2 w-2 bg-blue-200 rounded-full" />"                          <span className="text-blue-100">{topic}</span>
                         </div>
                       ))}
                     </div>
@@ -187,53 +143,28 @@ export default function EventsPage() {
         </section>
       )}
 
-      {/* Upcoming Events */}
-      <section className="py-20 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Upcoming Events</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+      {/* Upcoming Events */}"      <section className="py-20 bg-gray-50">"        <div className="mx-auto max-w-7xl px-6">"          <div className="text-center mb-16">"            <h2 className="text-4xl font-bold text-gray-900 mb-4">Upcoming Events</h2>"            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Mark your calendar for these upcoming events and webinars.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {upcomingEvents.filter(event => !event.featured).map((event) => (
-              <div key={event.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
-                <div className="h-48 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                  <span className="text-gray-500 font-medium">Event Image</span>
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">
+          "          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {upcomingEvents.filter(event => !event.featured).map((event) => ("              <div key={event.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">"                <div className="h-48 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">"                  <span className="text-gray-500 font-medium">Event Image</span>
+                </div>"                <div className="p-6">"                  <div className="flex items-center justify-between mb-4">"                    <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">
                       {event.type}
-                    </span>
-                    <span className="text-2xl font-bold text-blue-600">{event.price}</span>
+                    </span>"                    <span className="text-2xl font-bold text-blue-600">{event.price}</span>
                   </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{event.title}</h3>
-                  <p className="text-gray-600 mb-4">{event.description}</p>
-                  
-                  <div className="grid grid-cols-2 gap-4 mb-6 text-sm text-gray-500">
-                    <div className="flex items-center space-x-2">
-                      <Calendar className="h-4 w-4" />
+                  "                  <h3 className="text-xl font-bold text-gray-900 mb-3">{event.title}</h3>"                  <p className="text-gray-600 mb-4">{event.description}</p>
+                  "                  <div className="grid grid-cols-2 gap-4 mb-6 text-sm text-gray-500">"                    <div className="flex items-center space-x-2">"                      <Calendar className="h-4 w-4" />
                       <span>{new Date(event.date).toLocaleDateString()}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Clock className="h-4 w-4" />
+                    </div>"                    <div className="flex items-center space-x-2">"                      <Clock className="h-4 w-4" />
                       <span>{event.time}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <MapPin className="h-4 w-4" />
+                    </div>"                    <div className="flex items-center space-x-2">"                      <MapPin className="h-4 w-4" />
                       <span>{event.location}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Users className="h-4 w-4" />
+                    </div>"                    <div className="flex items-center space-x-2">"                      <Users className="h-4 w-4" />
                       <span>{event.attendees}</span>
                     </div>
                   </div>
-                  
-                  <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+                  "                  <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors">
                     Register for Event
                   </button>
                 </div>
@@ -243,41 +174,22 @@ export default function EventsPage() {
         </div>
       </section>
 
-      {/* Past Events */}
-      <section className="py-20 bg-white">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Past Events</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+      {/* Past Events */}"      <section className="py-20 bg-white">"        <div className="mx-auto max-w-7xl px-6">"          <div className="text-center mb-16">"            <h2 className="text-4xl font-bold text-gray-900 mb-4">Past Events</h2>"            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Missed an event? Check out recordings and materials from our previous events.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {pastEvents.map((event) => (
-              <div key={event.id} className="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-all duration-300">
-                <div className="flex items-center space-x-2 mb-4">
-                  <Video className="h-5 w-5 text-blue-600" />
-                  <span className="text-sm text-gray-500">Recording Available</span>
+          "          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {pastEvents.map((event) => ("              <div key={event.id} className="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-all duration-300">"                <div className="flex items-center space-x-2 mb-4">"                  <Video className="h-5 w-5 text-blue-600" />"                  <span className="text-sm text-gray-500">Recording Available</span>
                 </div>
-                
-                <h3 className="text-lg font-bold text-gray-900 mb-3">{event.title}</h3>
-                <p className="text-gray-600 text-sm mb-4">{event.description}</p>
-                
-                <div className="space-y-2 text-sm text-gray-500 mb-4">
-                  <div className="flex items-center space-x-2">
-                    <Calendar className="h-4 w-4" />
+                "                <h3 className="text-lg font-bold text-gray-900 mb-3">{event.title}</h3>"                <p className="text-gray-600 text-sm mb-4">{event.description}</p>
+                "                <div className="space-y-2 text-sm text-gray-500 mb-4">"                  <div className="flex items-center space-x-2">"                    <Calendar className="h-4 w-4" />
                     <span>{new Date(event.date).toLocaleDateString()}</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Clock className="h-4 w-4" />
+                  </div>"                  <div className="flex items-center space-x-2">"                    <Clock className="h-4 w-4" />
                     <span>{event.time}</span>
                   </div>
                 </div>
-                
-                <button className="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center space-x-1">
-                  <span>Watch Recording</span>
-                  <ArrowRight className="h-4 w-4" />
+                "                <button className="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center space-x-1">
+                  <span>Watch Recording</span>"                  <ArrowRight className="h-4 w-4" />
                 </button>
               </div>
             ))}
@@ -285,23 +197,14 @@ export default function EventsPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-blue-600 text-white">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <h2 className="text-4xl font-bold mb-4">Hosting an Event?</h2>
-          <p className="text-xl text-blue-100 mb-8">
+      {/* CTA Section */}"      <section className="py-20 bg-blue-600 text-white">"        <div className="mx-auto max-w-4xl px-6 text-center">"          <h2 className="text-4xl font-bold mb-4">Hosting an Event?</h2>"          <p className="text-xl text-blue-100 mb-8">
             We'd love to partner with you on technology events, webinars, or conferences.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a 
-              href="/contact" 
-              className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all duration-200"
+          </p>"          <div className="flex flex-wrap justify-center gap-4">
+            <a "              href="/contact" "              className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all duration-200"
             >
               Get in Touch
             </a>
-            <a 
-              href="mailto:events@ziontechgroup.com" 
-              className="border-2 border-white/20 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-200"
+            <a "              href="mailto:events@ziontechgroup.com" "              className="border-2 border-white/20 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-200"
             >
               Email Us
             </a>
@@ -309,5 +212,4 @@ export default function EventsPage() {
         </div>
       </section>
     </ModernLayout>
-  );
-}
+  );"}

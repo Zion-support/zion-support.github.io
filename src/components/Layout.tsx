@@ -11,14 +11,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#0ea5e9" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />"        <meta name="theme-color" content="#0ea5e9" />"        <link rel="icon" href="/favicon.ico" />
       </Head>
-      
-      <div className="min-h-screen bg-slate-50">
-        <AppHeader />
-        <main className="flex-1">
+      "      <div className="min-h-screen bg-slate-50">
+        <AppHeader />"        <main className="flex-1">
           {children}
         </main>
         <EnhancedFuturisticFooter />
@@ -26,5 +22,4 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     </>
   );
 };
-
-export default Layout;
+"export default Layout;

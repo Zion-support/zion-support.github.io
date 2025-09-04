@@ -71,10 +71,7 @@ export default function ServicesOverview() {};
   ];
 
   const stats = [
-    { value: '50+', label: 'Services Available', icon: Zap },
-    { value: '99.9%', label: 'Uptime Guarantee', icon: Shield },
-    { value: '24/7', label: 'Support Available', icon: Clock },
-    { value: '500+', label: 'Global Clients', icon: Users }
+    { value: '50+', label: 'Services Available', icon: "Zap "},"    { value: '99.9%', label: 'Uptime Guarantee', icon: "Shield "},"    { value: '24/7', label: 'Support Available', icon: "Clock "},"    { value: '500+', label: 'Global Clients', icon: "Users "}
   ];
 
   return (
@@ -82,20 +79,14 @@ export default function ServicesOverview() {};
       <div>Broken JSX</div>
       />
       
-      {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
-        
-        <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
+      {/* Hero Section */}"      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10" />
+        "        <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
           <div>Broken JSX</div>
-          >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+          >"            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               Our Services
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            </h1>"            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Comprehensive technology solutions designed to transform your business and drive innovation across all industries.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </p>"            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <div>Broken JSX</div>
               >
                 Get Started
@@ -109,41 +100,26 @@ export default function ServicesOverview() {};
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {};
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-slate-300">{stat.label}</div>
+      {/* Stats Section */}"      <section className="py-16 bg-slate-800">"        <div className="container mx-auto px-4">"          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {};"                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>"                <div className="text-slate-300">{stat.label}</div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Featured Services */}
-      <section className="py-16 bg-slate-900">
-        <div className="container mx-auto px-4">
+      {/* Featured Services */}"      <section className="py-16 bg-slate-900">"        <div className="container mx-auto px-4">
           <div>Broken JSX</div>
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">Featured Services</h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+          >"            <h2 className="text-4xl font-bold text-white mb-4">Featured Services</h2>"            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Our most popular and innovative solutions that are transforming businesses worldwide
             </p>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {};
-                <Link to={service.href} className="block">
-                  <div className="bg-slate-800 rounded-xl p-6 h-full hover:bg-slate-700 transition-all duration-300 transform hover:scale-105">
-                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${service.color} flex items-center justify-center mb-4`}>
-                      <service.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+"          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {};"                <Link to={service.href} className="block">"                  <div className="bg-slate-800 rounded-xl p-6 h-full hover:bg-slate-700 transition-all duration-300 transform hover:scale-105">
+                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${service.color} flex items-center justify-center mb-4`}>"                      <service.icon className="w-6 h-6 text-white" />
+                    </div>"                    <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                       {service.name}
-                    </h3>
-                    <p className="text-slate-300 text-sm">
+                    </h3>"                    <p className="text-slate-300 text-sm">
                       {service.description}
                     </p>
                   </div>
@@ -154,36 +130,23 @@ export default function ServicesOverview() {};
         </div>
       </section>
 
-      {/* Service Categories */}
-      <section className="py-16 bg-slate-950">
-        <div className="container mx-auto px-4">
+      {/* Service Categories */}"      <section className="py-16 bg-slate-950">"        <div className="container mx-auto px-4">
           <div>Broken JSX</div>
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">Complete Service Portfolio</h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+          >"            <h2 className="text-4xl font-bold text-white mb-4">Complete Service Portfolio</h2>"            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Explore our comprehensive range of technology services organized by category
             </p>
           </motion.div>
-
-          <div className="space-y-12">
+"          <div className="space-y-12">
             {};
-                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center`}>
-                    <category.icon className="w-8 h-8 text-white" />
+                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center`}>"                    <category.icon className="w-8 h-8 text-white" />
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white">{category.name}</h3>
-                    <p className="text-slate-300">{category.description}</p>
+                  <div>"                    <h3 className="text-2xl font-bold text-white">{category.name}</h3>"                    <p className="text-slate-300">{category.description}</p>
                   </div>
                 </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {};
-                      <Link to={service.href} className="block">
-                        <div className="bg-slate-800 rounded-lg p-4 hover:bg-slate-700 transition-all duration-300 group">
-                          <h4 className="font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+"                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {};"                      <Link to={service.href} className="block">"                        <div className="bg-slate-800 rounded-lg p-4 hover:bg-slate-700 transition-all duration-300 group">"                          <h4 className="font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                             {service.name}
-                          </h4>
-                          <p className="text-sm text-slate-300">
+                          </h4>"                          <p className="text-sm text-slate-300">
                             {service.description}
                           </p>
                         </div>
@@ -197,18 +160,13 @@ export default function ServicesOverview() {};
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-cyan-600 to-blue-600">
-        <div className="container mx-auto px-4 text-center">
+      {/* CTA Section */}"      <section className="py-16 bg-gradient-to-r from-cyan-600 to-blue-600">"        <div className="container mx-auto px-4 text-center">
           <div>Broken JSX</div>
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
+          >"            <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-cyan-100 mb-8">
+            </h2>"            <p className="text-xl text-cyan-100 mb-8">
               Let our experts help you choose the right services and implement solutions that drive real results.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </p>"            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <div>Broken JSX</div>
               >
                 Get Free Consultation
@@ -222,5 +180,4 @@ export default function ServicesOverview() {};
         </div>
       </section>
     </>
-  );
-}
+  );"}

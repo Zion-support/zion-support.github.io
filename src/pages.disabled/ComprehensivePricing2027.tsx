@@ -22,12 +22,9 @@
 };
 ;
 export default ComprehensivePricing2027;
-import React from "react";
-import { SEO } from "@/components/SEO";
-;,"});,"});,
+import React from "react";"import { SEO } from "@/components/SEO";";,"});,"});,
 }
 export default function ComprehensivePricing2027() {};
   return null;
 }
-}
-}
+}"}

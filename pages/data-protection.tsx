@@ -4,22 +4,20 @@ import MainLayout from '../components/layout/MainLayout';
 import { Shield, AlertTriangle } from "lucide-react";
 
 const DataProtection: NextPage = () => {
-  const lastUpdated = 'January 27, 2025';
+  const lastUpdated = 'January: 27, 2025';
 
   const protectionMeasures = [
-    {
-      icon: Lock,
+    {"      icon: "Lock",
       title: 'Data Encryption',
       description: 'All data is encrypted both in transit and at rest using industry-standard encryption protocols.',
       details: [
         'AES-256 encryption for data at rest',
-        'TLS 1.3 for data in transit',
+        'TLS: 1.3 for data in transit',
         'End-to-end encryption for sensitive communications',
         'Regular encryption key rotation'
       ]
     },
-    {
-      icon: Shield,
+    {"      icon: "Shield",
       title: 'Access Controls',
       description: 'Strict access controls ensure only authorized personnel can access your data.',
       details: [
@@ -29,8 +27,7 @@ const DataProtection: NextPage = () => {
         'Regular access reviews and audits'
       ]
     },
-    {
-      icon: Eye,
+    {"      icon: "Eye",
       title: 'Monitoring & Logging',
       description: 'Comprehensive monitoring and logging of all data access and modifications.',
       details: [
@@ -40,8 +37,7 @@ const DataProtection: NextPage = () => {
         '24/7 security operations center'
       ]
     },
-    {
-      icon: Database,
+    {"      icon: "Database",
       title: 'Data Backup & Recovery',
       description: 'Regular backups and disaster recovery procedures to protect against data loss.',
       details: [
@@ -73,13 +69,13 @@ const DataProtection: NextPage = () => {
       icon: '🏥'
     },
     {
-      name: 'SOC 2',
-      description: 'Service Organization Control 2 Type II certification',
+      name: 'SOC: 2',
+      description: 'Service Organization Control: 2 Type II certification',
       status: 'Certified',
       icon: '🔒'
     },
     {
-      name: 'ISO 27001',
+      name: 'ISO: 27001',
       description: 'International standard for information security management',
       status: 'Certified',
       icon: '🌍'
@@ -114,45 +110,20 @@ const DataProtection: NextPage = () => {
   ];
 
   return (
-    <MainLayout
-      title="Data Protection - Zion Tech Group"
-      description="Learn about Zion Tech Group's comprehensive data protection measures, compliance standards, and your data rights."
-      keywords="data protection, GDPR compliance, data security, privacy rights, data encryption, compliance standards"
-    >
-      <div className="min-h-screen bg-gray-50">
-        {/* Header */}
-        <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <Shield className="w-16 h-16 mx-auto mb-6 text-blue-400" />
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">Data Protection</h1>
-              <p className="text-xl text-gray-200 mb-4">
+    <MainLayout"      title="Data Protection - Zion Tech Group""      description="Learn about Zion Tech Group's comprehensive data protection measures, compliance standards, and your data rights.""      keywords="data protection, GDPR compliance, data security, privacy rights, data encryption, compliance standards"
+    >"      <div className="min-h-screen bg-gray-50">
+        {/* Header */}"        <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-16">"          <div className="container mx-auto px-4">"            <div className="max-w-4xl mx-auto text-center">"              <Shield className="w-16 h-16 mx-auto mb-6 text-blue-400" />"              <h1 className="text-4xl md:text-5xl font-bold mb-6">Data Protection</h1>"              <p className="text-xl text-gray-200 mb-4">
                 Your data security and privacy are our top priorities. Learn about our comprehensive 
                 protection measures and compliance standards.
-              </p>
-              <p className="text-sm text-gray-300">Last updated: {lastUpdated}</p>
+              </p>"              <p className="text-sm text-gray-300">Last updated: {lastUpdated}</p>
             </div>
           </div>
         </section>
 
-        {/* Protection Measures */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Data Protection Measures</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {protectionMeasures.map((measure, index) => (
-                  <div key={index} className="bg-white rounded-lg shadow-lg p-8">
-                    <div className="flex items-center mb-6">
-                      <measure.icon className="w-8 h-8 text-blue-600 mr-4" />
-                      <h3 className="text-2xl font-bold text-gray-900">{measure.title}</h3>
-                    </div>
-                    <p className="text-gray-600 mb-6">{measure.description}</p>
-                    <ul className="space-y-3">
-                      {measure.details.map((detail, detailIndex) => (
-                        <li key={detailIndex} className="flex items-start">
-                          <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                          <span className="text-gray-600">{detail}</span>
+        {/* Protection Measures */}"        <section className="py-16">"          <div className="container mx-auto px-4">"            <div className="max-w-6xl mx-auto">"              <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Data Protection Measures</h2>"              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {protectionMeasures.map((measure, index) => ("                  <div key={index} className="bg-white rounded-lg shadow-lg p-8">"                    <div className="flex items-center mb-6">"                      <measure.icon className="w-8 h-8 text-blue-600 mr-4" />"                      <h3 className="text-2xl font-bold text-gray-900">{measure.title}</h3>
+                    </div>"                    <p className="text-gray-600 mb-6">{measure.description}</p>"                    <ul className="space-y-3">
+                      {measure.details.map((detail, detailIndex) => ("                        <li key={detailIndex} className="flex items-start">"                          <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" />"                          <span className="text-gray-600">{detail}</span>
                         </li>
                       ))}
                     </ul>
@@ -163,17 +134,8 @@ const DataProtection: NextPage = () => {
           </div>
         </section>
 
-        {/* Compliance Standards */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Compliance Standards</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {complianceStandards.map((standard, index) => (
-                  <div key={index} className="bg-gray-50 rounded-lg p-6 text-center">
-                    <div className="text-4xl mb-4">{standard.icon}</div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{standard.name}</h3>
-                    <p className="text-gray-600 mb-4">{standard.description}</p>
+        {/* Compliance Standards */}"        <section className="py-16 bg-white">"          <div className="container mx-auto px-4">"            <div className="max-w-6xl mx-auto">"              <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Compliance Standards</h2>"              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {complianceStandards.map((standard, index) => ("                  <div key={index} className="bg-gray-50 rounded-lg p-6 text-center">"                    <div className="text-4xl mb-4">{standard.icon}</div>"                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{standard.name}</h3>"                    <p className="text-gray-600 mb-4">{standard.description}</p>
                     <span className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${
                       standard.status === 'Compliant' || standard.status === 'Certified'
                         ? 'bg-green-100 text-green-800'
@@ -188,16 +150,8 @@ const DataProtection: NextPage = () => {
           </div>
         </section>
 
-        {/* Data Rights */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Your Data Rights</h2>
-              <div className="space-y-6">
-                {dataRights.map((right, index) => (
-                  <div key={index} className="bg-white rounded-lg shadow-lg p-6">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{right.title}</h3>
-                    <p className="text-gray-600">{right.description}</p>
+        {/* Data Rights */}"        <section className="py-16">"          <div className="container mx-auto px-4">"            <div className="max-w-4xl mx-auto">"              <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Your Data Rights</h2>"              <div className="space-y-6">
+                {dataRights.map((right, index) => ("                  <div key={index} className="bg-white rounded-lg shadow-lg p-6">"                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{right.title}</h3>"                    <p className="text-gray-600">{right.description}</p>
                   </div>
                 ))}
               </div>
@@ -205,33 +159,16 @@ const DataProtection: NextPage = () => {
           </div>
         </section>
 
-        {/* Data Breach Response */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-red-50 border border-red-200 rounded-lg p-8">
-                <div className="flex items-center mb-4">
-                  <AlertTriangle className="w-8 h-8 text-red-600 mr-4" />
-                  <h2 className="text-2xl font-bold text-gray-900">Data Breach Response</h2>
-                </div>
-                <p className="text-gray-600 mb-4">
+        {/* Data Breach Response */}"        <section className="py-16 bg-white">"          <div className="container mx-auto px-4">"            <div className="max-w-4xl mx-auto">"              <div className="bg-red-50 border border-red-200 rounded-lg p-8">"                <div className="flex items-center mb-4">"                  <AlertTriangle className="w-8 h-8 text-red-600 mr-4" />"                  <h2 className="text-2xl font-bold text-gray-900">Data Breach Response</h2>
+                </div>"                <p className="text-gray-600 mb-4">
                   In the unlikely event of a data breach, we have comprehensive procedures in place to:
-                </p>
-                <ul className="space-y-2 text-gray-600">
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-red-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                </p>"                <ul className="space-y-2 text-gray-600">"                  <li className="flex items-start">"                    <div className="w-2 h-2 bg-red-600 rounded-full mt-2 mr-3 flex-shrink-0" />
                     <span>Immediately contain and assess the breach</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-red-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span>Notify affected individuals within 72 hours</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-red-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  </li>"                  <li className="flex items-start">"                    <div className="w-2 h-2 bg-red-600 rounded-full mt-2 mr-3 flex-shrink-0" />
+                    <span>Notify affected individuals within: 72 hours</span>
+                  </li>"                  <li className="flex items-start">"                    <div className="w-2 h-2 bg-red-600 rounded-full mt-2 mr-3 flex-shrink-0" />
                     <span>Report to relevant authorities as required by law</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-red-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  </li>"                  <li className="flex items-start">"                    <div className="w-2 h-2 bg-red-600 rounded-full mt-2 mr-3 flex-shrink-0" />
                     <span>Implement additional security measures to prevent future breaches</span>
                   </li>
                 </ul>
@@ -240,24 +177,14 @@ const DataProtection: NextPage = () => {
           </div>
         </section>
 
-        {/* Contact Information */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center text-white">
-              <h2 className="text-3xl font-bold mb-6">Data Protection Questions?</h2>
-              <p className="text-xl mb-8 text-blue-100">
+        {/* Contact Information */}"        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600">"          <div className="container mx-auto px-4">"            <div className="max-w-4xl mx-auto text-center text-white">"              <h2 className="text-3xl font-bold mb-6">Data Protection Questions?</h2>"              <p className="text-xl mb-8 text-blue-100">
                 Our data protection team is here to help with any questions about your data rights or our security measures.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="mailto:privacy@ziontechgroup.com"
-                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              </p>"              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a"                  href="mailto:privacy@ziontechgroup.com""                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Contact Privacy Team
                 </a>
-                <a
-                  href="/privacy"
-                  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+                <a"                  href="/privacy""                  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
                   Privacy Policy
                 </a>
@@ -269,5 +196,4 @@ const DataProtection: NextPage = () => {
     </MainLayout>
   );
 };
-
-export default DataProtection;
+"export default DataProtection;

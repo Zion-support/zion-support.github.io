@@ -6,38 +6,21 @@ export default function IntegrationExamples() {
     <>
       <Head>
         <title>Integration Examples - Zion Tech Group Documentation</title>
-        <meta name="description"
-  content="Real-world integration examples for Zion Tech Group services. Learn how to integrate our APIs into your applications." />
-        <link rel="canonical"
-  href="https://ziontechgroup.com/docs/integration-examples" />
+        <meta name="description""  content="Real-world integration examples for Zion Tech Group services. Learn how to integrate our APIs into your applications." />"        <link rel="canonical""  href="https://ziontechgroup.com/docs/integration-examples" />
       </Head>
-      
-      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-        {/* Header */}
-        <section className="py-20 px-4 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
+      "      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+        {/* Header */}"        <section className="py-20 px-4 text-center">"          <div className="max-w-4xl mx-auto">"            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
               Integration Examples
-            </h1>
-            <p className="text-xl md:text-2xl text-slate-300 mb-8">
+            </h1>"            <p className="text-xl md:text-2xl text-slate-300 mb-8">
               Real-world examples of integrating Zion Tech Group services
             </p>
           </div>
         </section>
 
-        {/* Content */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="prose prose-invert max-w-none">
-              <h2 className="text-3xl font-bold mb-6">Cloud Cost Guard Integration</h2>
-              
-              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 mb-8">
-                <h3 className="text-xl font-bold mb-4 text-blue-400">AWS Cost Monitoring</h3>
-                <p className="text-slate-300 mb-4">
+        {/* Content */}"        <section className="py-16 px-4">"          <div className="max-w-4xl mx-auto">"            <div className="prose prose-invert max-w-none">"              <h2 className="text-3xl font-bold mb-6">Cloud Cost Guard Integration</h2>
+              "              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 mb-8">"                <h3 className="text-xl font-bold mb-4 text-blue-400">AWS Cost Monitoring</h3>"                <p className="text-slate-300 mb-4">
                   Monitor AWS costs and get alerts for unusual spending:
-                </p>
-                <pre className="bg-slate-800 p-4 rounded-lg overflow-x-auto">
-                  <code className="text-green-400">
+                </p>"                <pre className="bg-slate-800 p-4 rounded-lg overflow-x-auto">"                  <code className="text-green-400">
 {`// Node.js example
 const axios = require('axios');
 
@@ -78,16 +61,10 @@ async function sendSlackAlert(anomalies) {
                   </code>
                 </pre>
               </div>
-
-              <h2 className="text-3xl font-bold mb-6">AI Code Review Integration</h2>
-              
-              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 mb-8">
-                <h3 className="text-xl font-bold mb-4 text-purple-400">GitHub Webhook Integration</h3>
-                <p className="text-slate-300 mb-4">
+"              <h2 className="text-3xl font-bold mb-6">AI Code Review Integration</h2>
+              "              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 mb-8">"                <h3 className="text-xl font-bold mb-4 text-purple-400">GitHub Webhook Integration</h3>"                <p className="text-slate-300 mb-4">
                   Automatically review code when pull requests are created:
-                </p>
-                <pre className="bg-slate-800 p-4 rounded-lg overflow-x-auto">
-                  <code className="text-green-400">
+                </p>"                <pre className="bg-slate-800 p-4 rounded-lg overflow-x-auto">"                  <code className="text-green-400">
 {`// Express.js webhook handler
 const express = require('express');
 const axios = require('axios');
@@ -106,8 +83,7 @@ app.post('/webhook/github', async (req, res) => {
       // Send to AI Code Review service
       const reviewResponse = await axios.post(
         'https://api.ziontechgroup.com/v1/ai-code-review/analyze',
-        {
-          code: diff,
+        {"          code: "diff",
           language: detectLanguage(diff),
           rules: ['security', 'performance', 'best-practices']
         },
@@ -157,16 +133,10 @@ function generateReviewComment(issues, suggestions, score) {
                   </code>
                 </pre>
               </div>
-
-              <h2 className="text-3xl font-bold mb-6">Smart Invoice Processing</h2>
-              
-              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 mb-8">
-                <h3 className="text-xl font-bold mb-4 text-green-400">Document Upload and Processing</h3>
-                <p className="text-slate-300 mb-4">
+"              <h2 className="text-3xl font-bold mb-6">Smart Invoice Processing</h2>
+              "              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 mb-8">"                <h3 className="text-xl font-bold mb-4 text-green-400">Document Upload and Processing</h3>"                <p className="text-slate-300 mb-4">
                   Upload invoices and automatically extract data:
-                </p>
-                <pre className="bg-slate-800 p-4 rounded-lg overflow-x-auto">
-                  <code className="text-green-400">
+                </p>"                <pre className="bg-slate-800 p-4 rounded-lg overflow-x-auto">"                  <code className="text-green-400">
 {`// React component for invoice upload
 import React, { useState } from 'react';
 import axios from 'axios';
@@ -207,20 +177,15 @@ function InvoiceUpload() {
     }
   };
 
-  return (
-    <div className="p-6">
+  return ("    <div className="p-6">
       <h2>Invoice Processing</h2>
-      <input
-        type="file"
-        accept=".pdf,.jpg,.png"
-        onChange={handleFileUpload}
-        className="mb-4"
+      <input"        type="file""        accept=".pdf,.jpg,.png"
+        onChange={handleFileUpload}"        className="mb-4"
       />
       
       {processing && <p>Processing invoice...</p>}
       
-      {result && (
-        <div className="mt-4 p-4 bg-gray-100 rounded">
+      {result && ("        <div className="mt-4 p-4 bg-gray-100 rounded">
           <h3>Extracted Data:</h3>
           <ul>
             <li>Vendor: \${result.vendor}</li>
@@ -236,16 +201,10 @@ function InvoiceUpload() {
                   </code>
                 </pre>
               </div>
-
-              <h2 className="text-3xl font-bold mb-6">Webhook Configuration</h2>
-              
-              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-xl font-bold mb-4 text-yellow-400">Setting Up Webhooks</h3>
-                <p className="text-slate-300 mb-4">
+"              <h2 className="text-3xl font-bold mb-6">Webhook Configuration</h2>
+              "              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">"                <h3 className="text-xl font-bold mb-4 text-yellow-400">Setting Up Webhooks</h3>"                <p className="text-slate-300 mb-4">
                   Configure webhooks to receive real-time updates from our services:
-                </p>
-                <pre className="bg-slate-800 p-4 rounded-lg overflow-x-auto">
-                  <code className="text-green-400">
+                </p>"                <pre className="bg-slate-800 p-4 rounded-lg overflow-x-auto">"                  <code className="text-green-400">
 {`// Configure webhook endpoint
 const webhookConfig = {
   url: 'https://your-app.com/webhooks/ziontechgroup',
@@ -291,17 +250,11 @@ app.post('/webhooks/ziontechgroup', (req, res) => {
                   </code>
                 </pre>
               </div>
-
-              <div className="mt-12 p-6 bg-blue-900/20 rounded-lg border border-blue-500/30">
-                <h3 className="text-xl font-bold mb-3 text-blue-400">Need More Examples?</h3>
-                <p className="text-slate-300 mb-4">
+"              <div className="mt-12 p-6 bg-blue-900/20 rounded-lg border border-blue-500/30">"                <h3 className="text-xl font-bold mb-3 text-blue-400">Need More Examples?</h3>"                <p className="text-slate-300 mb-4">
                   Check out our complete API documentation or contact our support team for custom integration help.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Link href="/docs/api-quick-start" className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+                </p>"                <div className="flex flex-col sm:flex-row gap-4">"                  <Link href="/docs/api-quick-start" className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
                     API Documentation
-                  </Link>
-                  <Link href="/contact" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
+                  </Link>"                  <Link href="/contact" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
                     Contact Support
                   </Link>
                 </div>
@@ -311,5 +264,4 @@ app.post('/webhooks/ziontechgroup', (req, res) => {
         </section>
       </main>
     </>
-  );
-}
+  );"}

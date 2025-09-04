@@ -8,8 +8,7 @@ interface SEOProps {title: string;
   url?: string;
 }
 
-import Head from "next/head"
-import React from "react"
+import Head from "next/head""import React from "react"
 
 interface SEOProps {
   title: string
@@ -27,4 +26,4 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-
+"
