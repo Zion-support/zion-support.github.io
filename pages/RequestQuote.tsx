@@ -1,224 +1,27 @@
-import React, { useState } from 'react';
+import React from 'react';
+import Head from 'next/head';
 
 export default function RequestQuote() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    budget: '',
-    timeline: '',
-    description: ''
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      {/* Header */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Request a Quote
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Get a customized quote for your project. We'll respond within 24 hours.
+    <>
+      <Head>
+        <title>RequestQuote | Zion Tech Group</title>
+        <meta name="description" content="RequestQuote page for Zion Tech Group." />
+        <link rel="canonical" href="https://ziontechgroup.com/requestquote" />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-center mb-8">RequestQuote</h1>
+          <p className="text-xl text-center text-gray-600 mb-12">
+            RequestQuote information for Zion Tech Group.
           </p>
-        </div>
-      </section>
-
-      {/* Quote Form */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-gray-800 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-6">Project Details</h2>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  />
-                </div>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                    Company
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  />
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                    Service Type *
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    required
-                    value={formData.service}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  >
-                    <option value="">Select a service</option>
-                    <option value="ai-content-creation">AI Content Creation</option>
-                    <option value="ai-email-automation">AI Email Automation</option>
-                    <option value="ai-business-intelligence">AI Business Intelligence</option>
-                    <option value="cloud-migration">Cloud Migration</option>
-                    <option value="cybersecurity">Cybersecurity</option>
-                    <option value="digital-transformation">Digital Transformation</option>
-                    <option value="ecommerce-returns">E-commerce Return Management</option>
-                    <option value="customer-support">Customer Support Platform</option>
-                    <option value="project-management">Project Management AI</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="budget" className="block text-sm font-medium text-gray-300 mb-2">
-                    Budget Range
-                  </label>
-                  <select
-                    id="budget"
-                    name="budget"
-                    value={formData.budget}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  >
-                    <option value="">Select budget range</option>
-                    <option value="under-1000">Under $1,000</option>
-                    <option value="1000-5000">$1,000 - $5,000</option>
-                    <option value="5000-10000">$5,000 - $10,000</option>
-                    <option value="10000-25000">$10,000 - $25,000</option>
-                    <option value="25000-50000">$25,000 - $50,000</option>
-                    <option value="over-50000">Over $50,000</option>
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="timeline" className="block text-sm font-medium text-gray-300 mb-2">
-                  Project Timeline
-                </label>
-                <select
-                  id="timeline"
-                  name="timeline"
-                  value={formData.timeline}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                >
-                  <option value="">Select timeline</option>
-                  <option value="asap">ASAP</option>
-                  <option value="1-month">Within 1 month</option>
-                  <option value="2-3-months">2-3 months</option>
-                  <option value="3-6-months">3-6 months</option>
-                  <option value="6-months-plus">6+ months</option>
-                  <option value="flexible">Flexible</option>
-                </select>
-              </div>
-
-              <div>
-                <label htmlFor="description" className="block text-sm font-medium text-gray-300 mb-2">
-                  Project Description *
-                </label>
-                <textarea
-                  id="description"
-                  name="description"
-                  rows={6}
-                  required
-                  value={formData.description}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  placeholder="Please describe your project requirements, goals, and any specific features you need..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-              >
-                Request Quote
-              </button>
-            </form>
-          </div>
-
-          {/* Contact Info */}
-          <div className="mt-12 text-center">
-            <h3 className="text-2xl font-bold text-white mb-6">Need Immediate Assistance?</h3>
-            <div className="grid md:grid-cols-3 gap-8 text-gray-300">
-              <div>
-                <h4 className="text-lg font-semibold text-cyan-400 mb-2">Phone</h4>
-                <p>+1 302 464 0950</p>
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-cyan-400 mb-2">Email</h4>
-                <p>kleber@ziontechgroup.com</p>
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-cyan-400 mb-2">Address</h4>
-                <p>364 E Main St STE 1008<br />Middletown DE 19709</p>
-              </div>
-            </div>
+          <div className="text-center">
+            <a href="mailto:kleber@ziontechgroup.com" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+              Contact Us
+            </a>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </>
   );
 }
