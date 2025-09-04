@@ -26,15 +26,76 @@ function Header(): React.JSX.Element {
         }}>Zion Tech Group</Link>
         
         {/* Desktop Navigation */}
-        <div className="hidden md: flex gap-2 flex-wrap items-center">,
-          <Link href="/" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem', }}>Home</Link>
-          <Link href="/services" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem', }}>All Services</Link>
-          <Link href="/services-catalog" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem', }}>Catalog</Link>
-          <Link href="/cloud-devops" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem', }}>Cloud DevOps</Link>
-          <Link href="/cybersecurity" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem', }}>Cybersecurity</Link>
-          <Link href="/quantum-computing" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem', }}>Quantum</Link>
-          <Link href="/docs" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem', }}>Docs</Link>
-          <Link href="/pricing" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem', }}>Pricing</Link>
+        <div style={{ 
+          display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'center'
+        }} className="hidden md:flex">
+          <Link href="/" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }}>Home</Link>
+          
+          {/* Services Dropdown */}
+          <div style={{ position: 'relative' }}>
+            <button style={{ 
+              padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+              transition: 'all 0.2s ease', background: 'none', border: 'none',
+              color: 'white', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4
+            }}>
+              Services ▼
+            </button>
+            <div style={{
+              position: 'absolute', top: '100%', left: 0, background: 'rgba(11, 18, 32, 0.98)',
+              backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.1)',
+              borderRadius: 8, padding: '12px', minWidth: 200, display: 'none'
+            }} className="dropdown-menu">
+              <Link href="/services" style={{ 
+                display: 'block', padding: '6px 8px', borderRadius: 4, opacity: 0.9,
+                transition: 'all 0.2s ease', textDecoration: 'none', color: 'white', marginBottom: 4
+              }}>All Services</Link>
+              <Link href="/micro-saas" style={{ 
+                display: 'block', padding: '6px 8px', borderRadius: 4, opacity: 0.9,
+                transition: 'all 0.2s ease', textDecoration: 'none', color: 'white', marginBottom: 4
+              }}>Micro SaaS Products</Link>
+              <Link href="/ai-services" style={{ 
+                display: 'block', padding: '6px 8px', borderRadius: 4, opacity: 0.9,
+                transition: 'all 0.2s ease', textDecoration: 'none', color: 'white', marginBottom: 4
+              }}>AI Services</Link>
+              <Link href="/it-services" style={{ 
+                display: 'block', padding: '6px 8px', borderRadius: 4, opacity: 0.9,
+                transition: 'all 0.2s ease', textDecoration: 'none', color: 'white', marginBottom: 4
+              }}>IT Services</Link>
+              <Link href="/services-catalog" style={{ 
+                display: 'block', padding: '6px 8px', borderRadius: 4, opacity: 0.9,
+                transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+              }}>Services Catalog</Link>
+            </div>
+          </div>
+
+          <Link href="/solutions" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }}>Solutions</Link>
+          
+          <Link href="/marketplace" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }}>Marketplace</Link>
+          
+          <Link href="/docs" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }}>Documentation</Link>
+          
+          <Link href="/pricing" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }}>Pricing</Link>
+          
+          <Link href="/about" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }}>About</Link>
+          
           <Link href="/contact" style={{ 
             background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
             color: 'white', padding: '8px 16px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem', fontWeight: 600,
@@ -64,20 +125,59 @@ function Header(): React.JSX.Element {
           borderTop: '1px solid rgba(255,255,255,0.1)',
           padding: '20px',
         }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 12, maxWidth: 1400, margin: '0 auto', }}>
-            <Link href="/" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)', }} onClick={() => setMobileMenuOpen(false)}>Home</Link>
-            <Link href="/services" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)', }} onClick={() => setMobileMenuOpen(false)}>All Services</Link>
-            <Link href="/services-catalog" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)', }} onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
-            <Link href="/cloud-devops" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)', }} onClick={() => setMobileMenuOpen(false)}>Cloud DevOps</Link>
-            <Link href="/cybersecurity" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)', }} onClick={() => setMobileMenuOpen(false)}>Cybersecurity</Link>
-            <Link href="/quantum-computing" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)', }} onClick={() => setMobileMenuOpen(false)}>Quantum</Link>
-            <Link href="/docs" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)', }} onClick={() => setMobileMenuOpen(false)}>Docs</Link>
-            <Link href="/pricing" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)', }} onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
-            <Link href="/contact" style={{ 
-              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-              color: 'white', padding: '12px 16px', textDecoration: 'none', borderRadius: 6, textAlign: 'center', fontWeight: 600, marginTop: 8,
-            }} onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+          <Link href="/" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>Home</Link>
+          
+          <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '12px' }}>
+            <div style={{ fontWeight: 600, color: '#93c5fd', marginBottom: '8px' }}>Services</div>
+            <Link href="/services" style={{ 
+              padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+              transition: 'all 0.2s ease', textDecoration: 'none', color: 'white', display: 'block'
+            }} onClick={() => setMobileMenuOpen(false)}>All Services</Link>
+            <Link href="/micro-saas" style={{ 
+              padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+              transition: 'all 0.2s ease', textDecoration: 'none', color: 'white', display: 'block'
+            }} onClick={() => setMobileMenuOpen(false)}>Micro SaaS Products</Link>
+            <Link href="/ai-services" style={{ 
+              padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+              transition: 'all 0.2s ease', textDecoration: 'none', color: 'white', display: 'block'
+            }} onClick={() => setMobileMenuOpen(false)}>AI Services</Link>
+            <Link href="/it-services" style={{ 
+              padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+              transition: 'all 0.2s ease', textDecoration: 'none', color: 'white', display: 'block'
+            }} onClick={() => setMobileMenuOpen(false)}>IT Services</Link>
+            <Link href="/services-catalog" style={{ 
+              padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+              transition: 'all 0.2s ease', textDecoration: 'none', color: 'white', display: 'block'
+            }} onClick={() => setMobileMenuOpen(false)}>Services Catalog</Link>
           </div>
+          
+          <Link href="/solutions" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>Solutions</Link>
+          
+          <Link href="/marketplace" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>Marketplace</Link>
+          
+          <Link href="/docs" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>Documentation</Link>
+          
+          <Link href="/pricing" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
+          
+          <Link href="/about" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>About</Link>
         </div>
       )}
     </header>
@@ -125,13 +225,33 @@ function Footer(): React.JSX.Element {
         <div style={{ display: 'grid', gap: 12 }}>
           <h3 style={{ fontWeight: 700, fontSize: '1.1rem', }}>Our Services</h3>
           <div style={{ display: 'grid', gap: 8 }}>
-            <Link href="/services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white', }}>All Services</Link>
-            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white', }}>Micro SaaS Products</Link>
-            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white', }}>AI Services</Link>
-            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white', }}>IT Services</Link>
-            <Link href="/cloud-devops" style={{ opacity: 0.8, textDecoration: 'none', color: 'white', }}>Cloud DevOps</Link>
-            <Link href="/cybersecurity" style={{ opacity: 0.8, textDecoration: 'none', color: 'white', }}>Cybersecurity</Link>
-            <Link href="/quantum-computing" style={{ opacity: 0.8, textDecoration: 'none', color: 'white', }}>Quantum Computing</Link>
+            <Link href="/services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>All Services</Link>
+            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Micro SaaS Products</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>AI Services</Link>
+            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>IT Services</Link>
+            <Link href="/services-catalog" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Services Catalog</Link>
+            <Link href="/marketplace" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Marketplace</Link>
+            <Link href="/pricing" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Pricing</Link>
+            <div style={{ opacity: 0.8, fontSize: '0.9rem', marginTop: 8 }}>
+              <div>• 150+ Micro SaaS Products</div>
+              <div>• 100+ AI Services</div>
+              <div>• 100+ IT Solutions</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Solutions */}
+        <div style={{ display: 'grid', gap: 12 }}>
+          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Solutions</h3>
+          <div style={{ display: 'grid', gap: 8 }}>
+            <Link href="/solutions" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Digital Transformation</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>AI & Machine Learning</Link>
+            <Link href="/cybersecurity" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cybersecurity</Link>
+            <Link href="/cloud-devops" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cloud & DevOps</Link>
+            <Link href="/quantum-computing" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Quantum Computing</Link>
+            <Link href="/green-it" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Green IT</Link>
+            <Link href="/research-development" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Research & Development</Link>
+            <Link href="/request-quote" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Request Quote</Link>
           </div>
         </div>
 
@@ -139,11 +259,34 @@ function Footer(): React.JSX.Element {
         <div style={{ display: 'grid', gap: 12 }}>
           <h3 style={{ fontWeight: 700, fontSize: '1.1rem', }}>Company</h3>
           <div style={{ display: 'grid', gap: 8 }}>
-            <Link href="/about" style={{ opacity: 0.8, textDecoration: 'none', color: 'white', }}>About Us</Link>
-            <Link href="/docs" style={{ opacity: 0.8, textDecoration: 'none', color: 'white', }}>Documentation</Link>
-            <Link href="/pricing" style={{ opacity: 0.8, textDecoration: 'none', color: 'white', }}>Pricing</Link>
-            <Link href="/faq" style={{ opacity: 0.8, textDecoration: 'none', color: 'white', }}>FAQ</Link>
-            <Link href="/contact" style={{ opacity: 0.8, textDecoration: 'none', color: 'white', }}>Contact</Link>
+            <Link href="/" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Home</Link>
+            <Link href="/about" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>About Us</Link>
+            <Link href="/team" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Our Team</Link>
+            <Link href="/careers" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Careers</Link>
+            <Link href="/partners" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Partners</Link>
+            <Link href="/news" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>News</Link>
+            <Link href="/blog" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Blog</Link>
+            <Link href="/contact" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Contact Us</Link>
+            <Link href="/help" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Help & Support</Link>
+            <Link href="/faq" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>FAQ</Link>
+            <Link href="/security" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Security</Link>
+            <Link href="/status" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>System Status</Link>
+          </div>
+        </div>
+
+        {/* Resources */}
+        <div style={{ display: 'grid', gap: 12 }}>
+          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Resources</h3>
+          <div style={{ display: 'grid', gap: 8 }}>
+            <Link href="/docs" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Documentation</Link>
+            <Link href="/marketplace" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Marketplace</Link>
+            <Link href="/talent" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Talent</Link>
+            <Link href="/equipment" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Equipment</Link>
+            <Link href="/research-development" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Research & Development</Link>
+            <Link href="/request-quote" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Request Quote</Link>
+            <Link href="/privacy" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Privacy Policy</Link>
+            <Link href="/terms" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Terms of Service</Link>
+            <Link href="/cookies" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cookie Policy</Link>
           </div>
         </div>
 
