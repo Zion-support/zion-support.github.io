@@ -1,1 +1,8 @@
-{"/_app":"pages/_app.js","/_error":"pages/_error.js","/_document":"pages/_document.js","/NotFound":"pages/NotFound.html","/about":"pages/about.html","/accessibility":"pages/accessibility.html","/api-reference":"pages/api-reference.html","/careers":"pages/careers.html","/contact":"pages/contact.html","/data-protection":"pages/data-protection.html","/docs":"pages/docs.html","/events":"pages/events.html","/faq":"pages/faq.html","/":"pages/index.html","/partners":"pages/partners.html","/news":"pages/news.html","/pricing":"pages/pricing.html","/search":"pages/search.html","/research-development":"pages/research-development.html","/services-overview":"pages/services-overview.html","/services/ai-content-generator":"pages/services/ai-content-generator.html","/services/ai-solutions":"pages/services/ai-solutions.html","/services/cloud":"pages/services/cloud.html","/services/data":"pages/services/data.html","/services":"pages/services.html","/services/transformation":"pages/services/transformation.html","/solutions/smb":"pages/solutions/smb.html","/solutions":"pages/solutions.html","/solutions/startup":"pages/solutions/startup.html","/support":"pages/support.html","/system-status":"pages/system-status.html","/team":"pages/team.html","/404":"pages/404.html"}
+{
+  "/_app": "pages/_app.js",
+  "/": "pages/index.html",
+  "/services": "pages/services.html",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.html"
+}

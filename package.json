@@ -4,11 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "next dev",
+    "build": "next build",
     "prebuild": "echo \"Starting build...\"",
-    "export": "vite build",
-    "start": "vite preview --port 4173",
+    "export": "next export",
+    "start": "next start -p 3000",
     "postbuild": "echo \"Build completed\"",
     "lint": "echo 'Linting skipped - ESLint configuration needs fixing'",
     "lint:fix": "echo 'Linting skipped - ESLint configuration needs fixing'",
@@ -171,18 +171,7 @@
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
-<<<<<<< HEAD
     "clsx": "^2.1.1",
-    "framer-motion": "^10.16.4",
-    "i18next": "^25.4.2",
-    "lucide-react": "^0.294.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-i18next": "^15.7.3",
-    "react-router-dom": "^6.20.0",
-    "tailwind-merge": "^3.3.1"
-=======
-    "clsx": "^2.0.0",
     "critters": "^0.0.23",
     "cron-parser": "^5.3.0",
     "events": "^3.3.0",
@@ -191,6 +180,7 @@
     "fs-extra": "^11.3.1",
     "glob": "^11.0.3",
     "https": "^1.0.0",
+    "i18next": "^25.4.2",
     "import-fresh": "^3.3.1",
     "lucide-react": "^0.536.0",
     "mongodb": "^6.19.0",
@@ -205,10 +195,10 @@
     "react-dom": "^18.3.1",
     "react-error-boundary": "^6.0.0",
     "react-helmet-async": "^2.0.5",
+    "react-i18next": "^15.7.3",
     "react-router-dom": "^7.8.2",
     "sharp": "^0.34.3",
     "tailwind-merge": "^3.3.1",
-    
     "tailwindcss-animate": "^1.0.7",
     "uuid": "^11.1.0",
     "web-vitals": "^5.1.0"
@@ -219,17 +209,12 @@
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1"
->>>>>>> origin/main
   },
   "devDependencies": {
     "@babel/plugin-transform-class-properties": "^7.27.1",
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
-<<<<<<< HEAD
-    "@esbuild/linux-x64": "^0.25.9",
-=======
->>>>>>> origin/main
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^8.57.1",
     "@netlify/plugin-nextjs": "^5.12.1",
@@ -247,7 +232,6 @@
     "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^8.42.0",
     "@typescript-eslint/parser": "^8.42.0",
-    "@vitejs/plugin-react": "^5.0.2",
     "esbuild": "0.25.9",
     "autoprefixer": "^10.4.16",
     "eslint": "^9.34.0",
@@ -269,9 +253,7 @@
     "terser": "^5.43.1",
     "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.2",
-    "vite": "^7.1.4",
-    "@vitejs/plugin-react": "^5.0.2"
+    "typescript": "^5.9.2"
   },
   "engines": {
     "node": ">=18.0.0",
