@@ -242,7 +242,10 @@ services: [ { name: "AI-Quantum Hybrid Computing Platform", href: "/services/ai-
       title: "Resources","
 links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href: "/white-papers" }, { name: "Support Center", href: "/help" }, { name: "Training", href: "/training" }, { name: "Blog", href: "/blog" }, { name: "Research", href: "/research-development" }
 
-      ]}
+export function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   ]"
   const solutions = []
@@ -254,12 +257,22 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
     { icon: Glob e, label: "Website", value: "ziontechgroup.com", href: "https://ziontechgroup.com" }
 ];
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  const legalLinks = [
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Terms of Service", href: "/terms" },
+    { name: "Cookie Policy", href: "/cookies" },
+    { name: "Data Protection", href: "/data-protection" },
+    { name: "Accessibility", href: "/accessibility" }
+  ];
+
+  const socialLinks = [
+    { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook },
+    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },
+    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },
+    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram },
+    { name: "YouTube", href: "https://youtube.com/ziontechgroup", icon: Youtube },
+    { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github }
+  ];
 
   const currentYear = new Date().getFullYear();
 
