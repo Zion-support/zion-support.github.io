@@ -65,7 +65,10 @@ export default function Home() {
               Innovative Micro SaaS, AI Services & IT Solutions
             </p>
             <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
-              (feat: Add 30+ new innovative services across micro SaaS, AI, and IT categories)
+              We deliver cutting-edge technology solutions with 150+ micro SaaS products, 
+              100+ advanced AI services, and 100+ comprehensive IT solutions. From cloud optimization 
+              to AI automation, quantum computing to blockchain solutions, we help businesses scale 
+              efficiently and securely in the digital age.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
               <Link href="/services" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
