@@ -587,6 +587,126 @@ const microSaaS: Service[] = [
     name: 'AI-Powered Smart City Management',
     summary: 'Comprehensive smart city platform for traffic, utilities, and public services optimization.',
     pricing: 'Typical: $2,999–$19,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Legal Document Analyzer',
+    summary: 'Intelligent legal document analysis with contract review, risk assessment, and compliance checking.',
+    pricing: 'Typical: $599–$3,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Threat Intelligence Platform',
+    summary: 'Real-time cybersecurity threat intelligence with automated threat hunting and incident response.',
+    pricing: 'Typical: $799–$4,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Market Research Platform',
+    summary: 'Intelligent market research automation with sentiment analysis, competitor tracking, and trend prediction.',
+    pricing: 'Typical: $399–$2,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Customer Success Platform',
+    summary: 'Intelligent customer success management with churn prediction, health scoring, and automated engagement.',
+    pricing: 'Typical: $299–$2,499/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Website Accessibility Checker',
+    summary: 'Automated web accessibility testing and remediation with WCAG compliance and inclusive design recommendations.',
+    pricing: 'Typical: $199–$1,499/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Patent Research Platform',
+    summary: 'Intelligent patent research and analysis with prior art detection, patentability assessment, and IP strategy recommendations.',
+    pricing: 'Typical: $499–$3,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Energy Trading Platform',
+    summary: 'Intelligent energy trading with real-time market analysis, price prediction, and automated trading strategies.',
+    pricing: 'Typical: $999–$7,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Drug Discovery Platform',
+    summary: 'Intelligent drug discovery with molecular analysis, compound screening, and clinical trial optimization.',
+    pricing: 'Typical: $1,999–$14,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Insurance Risk Assessment',
+    summary: 'Intelligent insurance risk evaluation with automated underwriting, fraud detection, and claims processing.',
+    pricing: 'Typical: $699–$4,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Supply Chain Optimizer',
+    summary: 'Intelligent supply chain optimization with demand forecasting, route optimization, and inventory management.',
+    pricing: 'Typical: $599–$3,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Mental Health Platform',
+    summary: 'Intelligent mental health support with mood tracking, therapy recommendations, and crisis intervention.',
+    pricing: 'Typical: $199–$1,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Carbon Footprint Tracker',
+    summary: 'Intelligent carbon footprint monitoring with sustainability recommendations and ESG reporting automation.',
+    pricing: 'Typical: $299–$2,499/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Grant Writing Assistant',
+    summary: 'Intelligent grant writing platform with proposal generation, compliance checking, and success prediction.',
+    pricing: 'Typical: $199–$1,499/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Voice Analytics Platform',
+    summary: 'Intelligent voice analysis with emotion detection, sentiment analysis, and conversation optimization.',
+    pricing: 'Typical: $399–$2,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Data Privacy Manager',
+    summary: 'Intelligent data privacy management with GDPR compliance, consent tracking, and privacy impact assessment.',
+    pricing: 'Typical: $299–$2,499/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Real Estate Analytics',
+    summary: 'Intelligent real estate market analysis with property valuation, investment recommendations, and market forecasting.',
+    pricing: 'Typical: $399–$2,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Employee Wellness Platform',
+    summary: 'Intelligent employee wellness management with health monitoring, stress detection, and wellness recommendations.',
+    pricing: 'Typical: $199–$1,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Language Learning Platform',
+    summary: 'Intelligent language learning with personalized curriculum, pronunciation analysis, and conversation practice.',
+    pricing: 'Typical: $149–$1,299/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Scientific Research Assistant',
+    summary: 'Intelligent research platform with literature analysis, hypothesis generation, and experimental design optimization.',
+    pricing: 'Typical: $299–$2,499/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Personal Finance Advisor',
+    summary: 'Intelligent personal finance management with budgeting, investment recommendations, and financial goal tracking.',
+    pricing: 'Typical: $99–$799/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Food Safety Monitor',
+    summary: 'Intelligent food safety management with contamination detection, quality monitoring, and compliance tracking.',
+    pricing: 'Typical: $399–$2,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Sports Analytics Platform',
+    summary: 'Intelligent sports performance analysis with player tracking, injury prediction, and strategy optimization.',
+    pricing: 'Typical: $499–$3,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Elderly Care Platform',
+    summary: 'Intelligent elderly care management with health monitoring, medication reminders, and emergency response.',
+    pricing: 'Typical: $199–$1,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Smart City Platform',
+    summary: 'Intelligent smart city management with traffic optimization, resource management, and citizen services.',
+    pricing: 'Typical: $999–$7,999/month',
     link: 'https://ziontechgroup.com/micro-saas'}
 ];
 
@@ -1794,7 +1914,7 @@ export default function Services(): any {
               background: 'rgba(59, 130, 246, 0.1)', padding: '12px 20px', 
               borderRadius: 12, border: '1px solid rgba(59, 130, 246, 0.2)'
             }}>
-              <div style={{ fontSize: 24, fontWeight: 700, color: '#3b82f6' }}>60+</div>
+              <div style={{ fontSize: 24, fontWeight: 700, color: '#3b82f6' }}>80+</div>
               <div style={{ fontSize: 14, opacity: 0.8 }}>Micro SaaS</div>
             </div>
             <div style={{ 
