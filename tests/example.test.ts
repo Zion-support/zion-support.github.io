@@ -1,4 +1,4 @@
-// Example unit test
+// Example unit test;
 describe('Example Test Suite', () => {
   it('should pass basic test', () => {
     expect(1 + 1).toBe(2);

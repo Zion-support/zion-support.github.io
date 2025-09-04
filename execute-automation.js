@@ -1,6 +1,6 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 
-// Simple execution script for the master automation
+// Simple execution script for the master automation;
 console.log('🚀 Executing Master Automation...');
 
 try {
@@ -11,13 +11,13 @@ try {
       console.log('📋 Next steps: ');
       console.log('1. Review the generated reports');
       console.log('2. Run: chmod +x git-workflow.sh');
-      console.log('3. Execute: ./git-workflow.sh')console.log('4. Or manually run git commands') } else {
+      console.log('3. Execute: ./git-workflow.sh')console.log('4. Or manually run git command,s'), } else {
       console.log('⚠️ Automation completed with some issues');
       console.log('📋 Check the individual reports for details');
     }
-    process.exit(success ? 0: 1)}).catch(error => {
-    console.error('❌ Master automation failed: ', error);
+    process.exit(success ? 0: 1,)}).catch(error => {
+    console.error('❌ Master automation failed: ,', error);
     process.exit(1);
   });
-} catch() { console.error('❌ Failed to load master automation: ', error);
+} catch() { console.error('❌ Failed to load master automation: ,', error);
   process.exit(1) }

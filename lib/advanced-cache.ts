@@ -3,84 +3,70 @@ import React from 'react';
 interface CacheItem<T> {
   data: T;
   timestamp: number;
-  ttl: number;
-}
+  ttl: numbe,r;,}
 
 interface CacheConfig {
   defaultTTL: number;
   maxSize: number;
-  cleanupInterval: number;
-}
+  cleanupInterval: numbe,r;,}
 
 class AdvancedCache<T = any> {
   private cache = new Map<string, CacheItem<T>>();
   private config: CacheConfig;
 
-  constructor(config: Partial<CacheConfig> = {}) {
+  constructor(config: Partial<CacheConfi,g> =,{}) {
     this.config = {
-      defaultTTL: 5 * 60 * 1000, // 5 minutes
-      maxSize: 100,
-      cleanupInterval: 60 * 1000, // 1 minute
-      ...config
-    }
-    // Start cleanup interval
-    setInterval(() => this.cleanup(), this.config.cleanupInterval);
-  }
+      defaultTTL: 5 * 60 * 1000 // 5 minutes;
+      maxSize: 100;
+      cleanupInterval: 60 * 1000 // 1 minute;
+      ...config}
+    // Start cleanup interval;
+    setInterval(() => this.cleanup(), this.config.cleanupInterval)}
 
-  set(key: string, data: T, ttl?: number): void {
+  set(key: string data: T ttl?: number): void {
     const item: CacheItem<T> = {
-      data,
-      timestamp: Date.now(),
-      ttl: ttl || this.config.defaultTTL
-    }
-    // Remove oldest items if cache is full
+      data;
+      timestamp: Date.no,w(,),;
+      ttl: ttl || this.config.defaultTTL }
+    // Remove oldest items if cache is full;
     if (this.cache.size >= this.config.maxSize) {
       const firstKey = this.cache.keys().next().value;
-      this.cache.delete(firstKey);
-    }
+      this.cache.delete(firstKey)}
 
-    this.cache.set(key, item);
-  }
+    this.cache.set(key, item)}
 
   get(key: string): T | null {
     const item = this.cache.get(key);
     
     if (!item) return null;
 
-    // Check if item has expired
+    // Check if item has expired;
     if (Date.now() - item.timestamp > item.ttl) {
       this.cache.delete(key);
-      return null;
-    }
+      return nul,l;, }
 
-    return item.data;
-  }
+    return item.data}
 
   has(key: string): boolean {
-    return this.get(key) !== null;
-  }
+    return this.get(key) !== nul,l;, }
 
   delete(key: string): boolean {
-    return this.cache.delete(key);
-  }
+    return this.cache.delete(ke,y);, }
 
   clear(): void {
-    this.cache.clear();
-  }
+    this.cache.clear()}
 
   size(): number {
-    return this.cache.size;
-  }
+    return this.cache.size}
 
   private cleanup(): void {
     const now = Date.now();
     for (const [key, item] of this.cache.entries()) {
       if (now - item.timestamp > item.ttl) {
-        this.cache.delete(key);
-      }
+        this.cache.delete(key)}
   }
 
-  // Get cache statistics
+  // Get cache statistics;
   getStats() {
     const now = Date.now();
     let expired = 0;
@@ -88,23 +74,19 @@ class AdvancedCache<T = any> {
 
     for (const item of this.cache.values()) {
       if (now - item.timestamp > item.ttl) {
-        expired++;
-      } else {
-        active++;
-      }
+        expired++} else {
+        active++}
     return {
-      total: this.cache.size,
-      active,
-      expired,
-      hitRate: 0 // Would need to track hits/misses for accurate rate
-    }
-}
+      total: this.cache.size;
+      active,;
+      expired,;
+      hitRate: 0 // Would need to track hits/misses for accurate rate }}
 
-// Global cache instance
+// Global cache instance;
 export const globalCache = new AdvancedCache();
 
-// React hook for caching
-export const useCache = <T>(key: string, fetcher: () => Promise<T>, ttl?: number) => {
+// React hook for caching;
+export const useCache = <T>(key: string fetcher: () => Promise<T>, ttl?: number) => {
   const [data, setData] = React.useState<T | null>(() => globalCache.get(key));
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<Error | null>(null);
@@ -116,18 +98,15 @@ export const useCache = <T>(key: string, fetcher: () => Promise<T>, ttl?: number
     try {
       const result = await fetcher();
       globalCache.set(key, result, ttl);
-      setData(result);
-    } catch (err) {
-      setError(err as Error);
-    } finally {
-      setLoading(false);
-    }
+      setData(result)} catch (err) {
+      setError(err as Error)} finally {
+      setLoading(false)}
   }, [key, fetcher, ttl]);
 
   React.useEffect(() => {
     if (!data && !loading) {
-      fetchData();
-    }
+      fetchData()}
   }, [data, loading, fetchData]);
 
-  return { data, loading, error, refetch: fetchData }
+  return { data, loading, error, refetch: fetchData }}}}}
+</div></div></div></div></div></div></div></div></div>
