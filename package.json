@@ -4,11 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "next dev",
+    "build": "next build",
     "prebuild": "echo \"Starting build...\"",
-    "export": "vite build",
-    "start": "vite preview --port 4173",
+    "export": "next build && next export",
+    "start": "next start",
     "postbuild": "echo \"Build completed\"",
     "lint": "echo 'Linting skipped - ESLint configuration needs fixing'",
     "lint:fix": "echo 'Linting skipped - ESLint configuration needs fixing'",
@@ -334,4 +334,8 @@
   ],
   "author": "Zion Tech Group",
   "license": "MIT"
+  ,
+  "overrides": {
+    "globals": "^16.3.0"
+  }
 }
