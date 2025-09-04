@@ -1,8 +1,1 @@
-// sitemapGenerator utility
-export const sitemapGenerator = {
-  // Placeholder utility functions
-  init: () => {
-    
-  }
-};
-export default sitemapGenerator;
+export const sitemapGenerator = { init: () => { } }; export default sitemapGenerator;
