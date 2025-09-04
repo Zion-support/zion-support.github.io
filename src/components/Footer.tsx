@@ -54,42 +54,17 @@ import {
 export default function Footer() {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['company']));
 
-  // Handle scroll to show/hide scroll to top button
   React.useEffect(() => {
     const handleScroll = () => {
-      const scrollToTopButton = document.getElementById('scroll-to-top');
-      if (scrollToTopButton) {
-        if (window.pageYOffset > 300) {
-          scrollToTopButton.classList.remove('hidden');
-        } else {
-          scrollToTopButton.classList.add('hidden');
-        }
-      }
+      setShowScrollTop(window.pageYOffset > 300);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Toggle section expansion (for mobile)
-  const toggleSection = (title: string) => {
-    setExpandedSections(prev => {
-      const newSet = new Set(prev);
-      if (newSet.has(title)) {
-        newSet.delete(title);
-      } else {
-        newSet.add(title);
-      }
-      return newSet;
-    });
-  };
-
-  // Scroll to top function
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const footerSections = [
