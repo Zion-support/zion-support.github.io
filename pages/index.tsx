@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import Head from 'next/head';
 
-import { useState, useEffect } from 'react';
-
 export default function Home() {
   const contact = {
     phone: '+1 302 464 0950',
@@ -65,7 +63,7 @@ export default function Home() {
               Innovative Micro SaaS, AI Services & IT Solutions
             </p>
             <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
-              We deliver cutting-edge technology solutions with 150+ micro SaaS products, 
+              We deliver cutting-edge technology solutions with 150+ innovative micro SaaS products, 
               100+ advanced AI services, and 100+ comprehensive IT solutions. From cloud optimization 
               to AI automation, quantum computing to blockchain solutions, we help businesses scale 
               efficiently and securely in the digital age.

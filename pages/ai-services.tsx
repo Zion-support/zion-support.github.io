@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Code, Cog, Search, Users } from 'lucide-react';
+import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Cog, Search } from 'lucide-react';
 
 export default function AIServices() {
   const plans = [
