@@ -1,208 +1,138 @@
 module.exports = {
   apps: [
     {
-      name: 'zion-website',
+      name: 'ziontechgroup-web',
       script: 'npm',
-      args: 'run dev',
+      args: 'start',
       cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'development',
-        PORT: 3000
-      },
-      env_production: {
         NODE_ENV: 'production',
         PORT: 3000
       },
-      log_file: './logs/zion-website.log',
-      out_file: './logs/zion-website-out.log',
-      error_file: './logs/zion-website-error.log',
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-      merge_logs: false,
-      time: false
+      env_development: {
+        NODE_ENV: 'development',
+        PORT: 3000
+      },
+      log_file: './logs/web.log',
+      out_file: './logs/web-out.log',
+      error_file: './logs/web-error.log',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
     },
-
-    // Error Monitor - runs every 10 minutes
     {
-      name: 'error-monitor',
-      script: './scripts/error-monitor.js',
+      name: 'automation-health-check',
+      script: 'node',
+      args: 'automation/health-check.cjs',
+      cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '500M',
+      cron_restart: '*/5 * * * *', // Restart every 5 minutes
       env: {
         NODE_ENV: 'production'
       },
-      error_file: './logs/error-monitor-error.log',
-      out_file: './logs/error-monitor-out.log',
-      log_file: './logs/error-monitor-combined.log',
-      time: false,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-      merge_logs: false,
-      max_restarts: 10,
-      min_uptime: '5s',
-      restart_delay: 2000,
-      cron_restart: '*/10 * * * *', // Run every 10 minutes
-      pmx: true
+      log_file: './logs/health-check.log',
+      out_file: './logs/health-check-out.log',
+      error_file: './logs/health-check-error.log'
     },
-
-    // Health Checker - runs every 5 minutes
     {
-      name: 'health-checker',
-      script: './scripts/health-checker.js',
+      name: 'automation-security-scanner',
+      script: 'node',
+      args: 'automation/security-scanner.cjs',
+      cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '300M',
+      cron_restart: '0 */6 * * *', // Restart every 6 hours
       env: {
         NODE_ENV: 'production'
       },
-      error_file: './logs/health-checker-error.log',
-      out_file: './logs/health-checker-out.log',
-      log_file: './logs/health-checker-combined.log',
-      time: false,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-      merge_logs: false,
-      max_restarts: 5,
-      min_uptime: '5s',
-      restart_delay: 2000,
-      cron_restart: '*/5 * * * *', // Run every 5 minutes
-      pmx: true
+      log_file: './logs/security-scanner.log',
+      out_file: './logs/security-scanner-out.log',
+      error_file: './logs/security-scanner-error.log'
     },
-
-    // Auto Fixer - runs every 2 hours
     {
-      name: 'auto-fixer',
-      script: './scripts/auto-fixer.js',
+      name: 'automation-performance-monitor',
+      script: 'node',
+      args: 'scripts/performance-monitor.cjs',
+      cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      cron_restart: '0 */2 * * *', // Restart every 2 hours
       env: {
         NODE_ENV: 'production'
       },
-      error_file: './logs/auto-fixer-error.log',
-      out_file: './logs/auto-fixer-out.log',
-      log_file: './logs/auto-fixer-combined.log',
-      time: false,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-      merge_logs: false,
-      max_restarts: 3,
-      min_uptime: '10s',
-      restart_delay: 5000,
-      cron_restart: '0 */2 * * *', // Run every 2 hours
-      pmx: true
+      log_file: './logs/performance-monitor.log',
+      out_file: './logs/performance-monitor-out.log',
+      error_file: './logs/performance-monitor-error.log'
     },
-
-    // Syntax Fixer - runs every 30 minutes
     {
-      name: 'syntax-fixer',
-      script: './scripts/automation/syntax-error-fixer.cjs',
+      name: 'ci-cd-automation',
+      script: 'node',
+      args: 'automation/ci-cd-automation.cjs',
+      cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '800M',
+      cron_restart: '0 */1 * * *', // Restart every hour
       env: {
         NODE_ENV: 'production'
       },
-      error_file: './logs/syntax-fixer-error.log',
-      out_file: './logs/syntax-fixer-out.log',
-      log_file: './logs/syntax-fixer-combined.log',
-      time: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-      merge_logs: true,
-      max_restarts: 5,
-      min_uptime: '15s',
-      restart_delay: 3000,
-      cron_restart: '*/30 * * * *', // Run every 30 minutes
-      pmx: true
+      log_file: './logs/ci-cd-automation.log',
+      out_file: './logs/ci-cd-automation-out.log',
+      error_file: './logs/ci-cd-automation-error.log'
     },
-
-    // Dependency Manager - runs every hour
     {
-      name: 'dependency-manager',
-      script: './scripts/automation/intelligent-dependency-manager.cjs',
+      name: 'continuous-automation',
+      script: 'node',
+      args: 'automation/continuous-automation.cjs',
+      cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '600M',
+      cron_restart: '0 */6 * * *', // Restart every 6 hours
       env: {
         NODE_ENV: 'production'
       },
-      error_file: './logs/dependency-manager-error.log',
-      out_file: './logs/dependency-manager-out.log',
-      log_file: './logs/dependency-manager-combined.log',
-      time: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-      merge_logs: true,
-      max_restarts: 3,
-      min_uptime: '20s',
-      restart_delay: 5000,
-      cron_restart: '0 * * * *', // Run every hour
-      pmx: true
+      log_file: './logs/continuous-automation.log',
+      out_file: './logs/continuous-automation-out.log',
+      error_file: './logs/continuous-automation-error.log'
     },
-
-    // Build Monitor - runs every 15 minutes
     {
-      name: 'build-monitor',
-      script: './scripts/automation/build-monitor.cjs',
+      name: 'build-test-automation',
+      script: 'node',
+      args: 'automation/build-test-automation.cjs',
+      cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '400M',
+      cron_restart: '0 */2 * * *', // Restart every 2 hours
       env: {
         NODE_ENV: 'production'
       },
-      error_file: './logs/build-monitor-error.log',
-      out_file: './logs/build-monitor-out.log',
-      log_file: './logs/build-monitor-combined.log',
-      time: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-      merge_logs: true,
-      max_restarts: 5,
-      min_uptime: '10s',
-      restart_delay: 2000,
-      cron_restart: '*/15 * * * *', // Run every 15 minutes
-      pmx: true
+      log_file: './logs/build-test-automation.log',
+      out_file: './logs/build-test-automation-out.log',
+      error_file: './logs/build-test-automation-error.log'
     },
-
-    // Log Cleaner - runs daily at 2 AM
     {
-      name: 'log-cleaner',
-      script: './scripts/log-cleaner.js',
+      name: 'quality-checks',
+      script: 'node',
+      args: 'automation/quality-checks.cjs',
+      cwd: '/workspace',
       instances: 1,
-      autorestart: false,
+      autorestart: true,
       watch: false,
-      max_memory_restart: '200M',
+      cron_restart: '0 */3 * * *', // Restart every 3 hours
       env: {
         NODE_ENV: 'production'
       },
-      error_file: './logs/log-cleaner-error.log',
-      out_file: './logs/log-cleaner-out.log',
-      log_file: './logs/log-cleaner-combined.log',
-      time: false,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-      merge_logs: false,
-      max_restarts: 3,
-      min_uptime: '5s',
-      restart_delay: 2000,
-      cron_restart: '0 2 * * *', // Run daily at 2 AM
-      pmx: true
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
+      log_file: './logs/quality-checks.log',
+      out_file: './logs/quality-checks-out.log',
+      error_file: './logs/quality-checks-error.log'
     }
-  ],
-
-  deploy: {
-    production: {
-      user: 'deploy',
-      host: 'localhost',
-      ref: 'origin/main',
-      repo: 'git@github.com:your-username/your-repo.git',
-      path: '/var/www/production',
-      'post-deploy': 'npm install && pm2 reload ecosystem.config.cjs --env production'
-    }
-  }
+  ]
 };

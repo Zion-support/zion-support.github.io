@@ -1,3 +1,29 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd "$(dirname "$0")/.."
+
+LOG_DIR="automation-reports"
+mkdir -p "$LOG_DIR"
+
+echo "[start-all-automations] Running orchestrators..."
+
+# Run Node orchestrators if present
+if [ -f "run-automation-suite.cjs" ]; then
+  node run-automation-suite.cjs | tee -a "$LOG_DIR/start-all-automations.log" || true
+fi
+
+if [ -f "scripts/master-automation-orchestrator.cjs" ]; then
+  node scripts/master-automation-orchestrator.cjs | tee -a "$LOG_DIR/start-all-automations.log" || true
+fi
+
+# Health checks
+if [ -f "scripts/health-check.cjs" ]; then
+  node scripts/health-check.cjs | tee -a "$LOG_DIR/start-all-automations.log" || true
+fi
+
+echo "[start-all-automations] Done"
+
 #!/bin/bash
 
 # Start All PM2 Automations Script
