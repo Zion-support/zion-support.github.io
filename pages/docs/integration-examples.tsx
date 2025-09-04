@@ -41,9 +41,9 @@ class ZionTechClient {
 
   async getServices() {
     try {
-      const response = await axios.get(`${this.baseURL}/services`, {
+      const response = await axios.get(\`\${this.baseURL}/services\`, {
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
+          'Authorization': \`Bearer \${this.apiKey}\`,
           'Content-Type': 'application/json'
         }
       });
@@ -56,9 +56,9 @@ class ZionTechClient {
 
   async requestQuote(serviceData) {
     try {
-      const response = await axios.post(`${this.baseURL}/quotes`, serviceData, {
+      const response = await axios.post(\`\${this.baseURL}/quotes\`, serviceData, {
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
+          'Authorization': \`Bearer \${this.apiKey}\`,
           'Content-Type': 'application/json'
         }
       });
@@ -85,7 +85,7 @@ client.getServices().then(services => {
             
             <div style={{ background: '#1e293b', padding: 20, borderRadius: 8, marginBottom: 20  }}>
               <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#10b981' }}>AI Services Integration</h3>
-              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>`
+              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>
 {`import requests
 import json
 
@@ -108,6 +108,7 @@ class ZionTechAI:
                 'format': 'json'
             }
         }
+        
         try:
             response = requests.post(
                 f'{self.base_url}/ai/process',
@@ -155,7 +156,7 @@ print(result)`}
             
             <div style={{ background: '#1e293b', padding: 20, borderRadius: 8, marginBottom: 20  }}>
               <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#61dafb' }}>Service Catalog Component</h3>
-              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>`
+              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>
 {`import { useState, useEffect } from 'react';
 
 const ServiceCatalog = () => {
@@ -168,7 +169,7 @@ const ServiceCatalog = () => {
       try {
         const response = await fetch('/api/ziontech/services', {
           headers: {
-            'Authorization': `Bearer ${process.env.NEXT_PUBLIC_ZIONTECH_API_KEY}`,
+            'Authorization': \`Bearer \${process.env.NEXT_PUBLIC_ZIONTECH_API_KEY}\`,
             'Content-Type': 'application/json'
           }
         });
@@ -185,6 +186,7 @@ const ServiceCatalog = () => {
         setLoading(false);
       }
     };
+    
     fetchServices();
   }, []);
 
@@ -222,7 +224,7 @@ export default ServiceCatalog;`}
             
             <div style={{ background: '#1e293b', padding: 20, borderRadius: 8, marginBottom: 20  }}>
               <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#8b5cf6' }}>WordPress Plugin Integration</h3>
-              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>`
+              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>
 {`<?php
 class ZionTechWordPress {
     private $api_key;
@@ -272,6 +274,8 @@ class ZionTechWordPress {
         $body = wp_remote_retrieve_body($response);
         return json_decode($body, true);
     }
+}
+
 // Usage in WordPress
 $ziontech = new ZionTechWordPress(get_option('ziontech_api_key'));
 $services = $ziontech->get_services();
@@ -295,7 +299,7 @@ if ($services && $services['success']) {
             <div style={{ display: 'grid', gap: 20 }}>
               <div style={{ padding: 20, background: 'rgba(34, 197, 94, 0.1)', borderRadius: 8, border: '1px solid rgba(34, 197, 94, 0.2)' }}>
                 <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#86efac' }}>🔒 Security</h3>
-                <ul style={{ opacity: '0.8', paddingLeft: 20 }}>
+                <ul style={{ opacity: '0.8', fontSize: '0.9rem', paddingLeft: 20 }}>
                   <li>Never expose API keys in client-side code</li>
                   <li>Use environment variables for sensitive data</li>
                   <li>Implement proper error handling</li>
@@ -305,7 +309,7 @@ if ($services && $services['success']) {
               
               <div style={{ padding: 20, background: 'rgba(59, 130, 246, 0.1)', borderRadius: 8, border: '1px solid rgba(59, 130, 246, 0.2)' }}>
                 <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#93c5fd' }}>⚡ Performance</h3>
-                <ul style={{ opacity: '0.8', paddingLeft: 20 }}>
+                <ul style={{ opacity: '0.8', fontSize: '0.9rem', paddingLeft: 20 }}>
                   <li>Implement caching for frequently accessed data</li>
                   <li>Use pagination for large datasets</li>
                   <li>Handle rate limits gracefully</li>
@@ -315,7 +319,7 @@ if ($services && $services['success']) {
               
               <div style={{ padding: 20, background: 'rgba(139, 92, 246, 0.1)', borderRadius: 8, border: '1px solid rgba(139, 92, 246, 0.2)' }}>
                 <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#c4b5fd' }}>🛠️ Development</h3>
-                <ul style={{ opacity: '0.8', paddingLeft: 20 }}>
+                <ul style={{ opacity: '0.8', fontSize: '0.9rem', paddingLeft: 20 }}>
                   <li>Use TypeScript for better type safety</li>
                   <li>Implement proper logging and monitoring</li>
                   <li>Write comprehensive tests</li>
@@ -329,19 +333,28 @@ if ($services && $services['success']) {
           <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
             <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16  }}>🤝 Need Help?</h2>
             <p style={{ opacity: '0.8', marginBottom: 20 }}>Our team is here to help you integrate our services successfully.</p>
-            <div style={{ display: 'gap', 16, flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
               <Link href="/contact" style={{ 
-                display: 'padding', '12px 24px' 
-                background: 'color', 'white' >
-                textDecoration: 'borderRadius', 8, >
-                fontWeight: '600 >'}}>
+                display: 'inline-block',
+                padding: '12px 24px',
+                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                color: 'white',
+                textDecoration: 'none',
+                borderRadius: 8,
+                fontWeight: '600'
+              }}>
                 Contact Support
               </Link>
               <Link href="/docs/api-reference" style={{ 
-                display: 'padding', '12px 24px' 
-                background: 'color', 'white' >
-                textDecoration: 'borderRadius', 8, >
-                fontWeight: '600 >'}}>
+                display: 'inline-block',
+                padding: '12px 24px',
+                background: 'transparent',
+                color: 'white',
+                textDecoration: 'none',
+                borderRadius: 8,
+                border: '1px solid rgba(255,255,255,0.2)',
+                fontWeight: '600'
+              }}>
                 API Reference
               </Link>
             </div>
@@ -350,4 +363,4 @@ if ($services && $services['success']) {
       </div>
     </>
   );
-}`
+}

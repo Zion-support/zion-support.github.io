@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowLeft, Key, Shield, Lock } from 'lucide-react';
+import { ArrowLeft, Key, Shield, Lock, User } from 'lucide-react';
 
 export default function Authentication() {
   const contact = { 
@@ -29,7 +29,7 @@ export default function Authentication() {
             </Link>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Authentication</h1>
             <p className="text-xl text-gray-600">
-              Secure authentication methods for accessing Zion Tech Group&apos;s APIs and services.
+              Secure authentication methods for accessing Zion Tech Group's APIs and services.
             </p>
           </div>
 
@@ -103,6 +103,28 @@ client_secret=YOUR_CLIENT_SECRET&
 redirect_uri=YOUR_REDIRECT_URI`}
                 </pre>
               </div>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">OAuth Flow</h3>
+                  <ol className="list-decimal list-inside space-y-2 text-gray-600">
+                    <li>Redirect user to authorization URL</li>
+                    <li>User grants permission</li>
+                    <li>Receive authorization code</li>
+                    <li>Exchange code for access token</li>
+                    <li>Use access token for API calls</li>
+                  </ol>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Scopes</h3>
+                  <ul className="list-disc list-inside space-y-2 text-gray-600">
+                    <li><code className="bg-gray-100 px-2 py-1 rounded">read</code> - Read access to resources</li>
+                    <li><code className="bg-gray-100 px-2 py-1 rounded">write</code> - Write access to resources</li>
+                    <li><code className="bg-gray-100 px-2 py-1 rounded">admin</code> - Administrative access</li>
+                    <li><code className="bg-gray-100 px-2 py-1 rounded">billing</code> - Billing information access</li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
             <div className="bg-white rounded-lg shadow-lg p-8">
@@ -111,7 +133,7 @@ redirect_uri=YOUR_REDIRECT_URI`}
                 <h2 className="text-2xl font-semibold text-gray-900">JWT Tokens</h2>
               </div>
               <p className="text-gray-600 mb-6">
-                JSON Web Tokens provide a secure way to transmit information between parties.
+                JSON Web Tokens for stateless authentication with built-in expiration and claims.
               </p>
               
               <div className="bg-gray-900 rounded-lg p-4 mb-6">
@@ -127,17 +149,38 @@ redirect_uri=YOUR_REDIRECT_URI`}
     "iat": 1640995200,
     "exp": 1641081600,
     "scope": "read write"
-  },
-  "signature": "..."`}
+  }
+}`}
                 </pre>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Token Features</h3>
+                  <ul className="list-disc list-inside space-y-2 text-gray-600">
+                    <li>Self-contained with user information</li>
+                    <li>Built-in expiration handling</li>
+                    <li>Stateless authentication</li>
+                    <li>Cross-service compatibility</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Security</h3>
+                  <ul className="list-disc list-inside space-y-2 text-gray-600">
+                    <li>HMAC SHA-256 signing</li>
+                    <li>Short expiration times</li>
+                    <li>Refresh token support</li>
+                    <li>Token revocation capability</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Rate Limits */}
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Rate Limits</h2>
-            <p className="text-gray-600 mb-6">
+          {/* Rate Limiting */}
+          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-8">
+            <h2 className="text-xl font-semibold text-gray-900 mb-4">Rate Limiting</h2>
+            <p className="text-gray-600 mb-4">
               API requests are rate limited to ensure fair usage and system stability.
             </p>
             <div className="grid md:grid-cols-3 gap-4 text-sm">

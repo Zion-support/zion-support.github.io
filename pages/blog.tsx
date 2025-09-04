@@ -10,7 +10,7 @@ export default function Blog() {
   }
   const blogPosts = [
     {
-      id: '1',
+      id: 1,
       title: "The Future of Micro SaaS: Trends and Opportunities in 2025",
       excerpt: "Explore the latest trends in micro SaaS development and how businesses can leverage these innovative solutions for growth.",
       date: "2025-01-26",
@@ -19,7 +19,7 @@ export default function Blog() {
       image: "/api/placeholder/400/250"
     },
     {
-      id: '2',
+      id: 2,
       title: "AI-Powered Automation: Transforming Business Operations",
       excerpt: "Discover how AI automation is revolutionizing business processes and driving efficiency across industries.",
       date: "2025-01-25",
@@ -28,7 +28,7 @@ export default function Blog() {
       image: "/api/placeholder/400/250"
     },
     {
-      id: '3',
+      id: 3,
       title: "Cybersecurity Best Practices for Modern Enterprises",
       excerpt: "Learn essential cybersecurity strategies to protect your business from evolving threats and vulnerabilities.",
       date: "2025-01-24",
@@ -37,7 +37,7 @@ export default function Blog() {
       image: "/api/placeholder/400/250"
     },
     {
-      id: '4',
+      id: 4,
       title: "Cloud Computing Optimization: Reducing Costs and Improving Performance",
       excerpt: "Strategies for optimizing cloud infrastructure to maximize ROI while maintaining high performance standards.",
       date: "2025-01-23",
@@ -46,7 +46,7 @@ export default function Blog() {
       image: "/api/placeholder/400/250"
     },
     {
-      id: '5',
+      id: 5,
       title: "Quantum Computing: The Next Frontier in Technology",
       excerpt: "Understanding quantum computing capabilities and their potential impact on various industries.",
       date: "2025-01-22",
@@ -55,7 +55,7 @@ export default function Blog() {
       image: "/api/placeholder/400/250"
     },
     {
-      id: '6',
+      id: 6,
       title: "Digital Transformation: A Complete Guide for Businesses",
       excerpt: "Comprehensive guide to digital transformation strategies that drive business growth and innovation.",
       date: "2025-01-21",

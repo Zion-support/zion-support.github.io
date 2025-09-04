@@ -3,18 +3,13 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 export default function Sitemap() {
-<<<<<<< HEAD
-  const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
-  };
-
-=======
   const contact = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    address: '364 E Main St STE 1008 Middletown, DE 19709',
     site: 'https://ziontechgroup.com'
-  }
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
+  };
+
   const pages = [
     { href: '/', title: 'Home', description: 'Main homepage with company overview and services' },
     { href: '/about', title: 'About Us', description: 'Learn about Zion Tech Group and our mission' },
@@ -26,7 +21,8 @@ export default function Sitemap() {
     { href: '/privacy', title: 'Privacy Policy', description: 'Our privacy policy and data protection' },
     { href: '/terms', title: 'Terms of Service', description: 'Terms and conditions for our services' },
     { href: '/schedule-demo', title: 'Schedule Demo', description: 'Book a personalized demo of our solutions' },
-    { href: '/enterprise', title: 'Enterprise Solutions', description: 'Enterprise-grade technology solutions' }];
+    { href: '/enterprise', title: 'Enterprise Solutions', description: 'Enterprise-grade technology solutions' }
+  ];
 
   const services = [
     { href: '/services', title: 'All Services', description: 'Complete overview of all our services' },
@@ -38,14 +34,16 @@ export default function Sitemap() {
     { href: '/it-services', title: 'IT Services', description: '100+ comprehensive IT solutions' },
     { href: '/cloud-devops', title: 'Cloud & DevOps', description: 'Cloud computing and DevOps solutions' },
     { href: '/cybersecurity', title: 'Cybersecurity', description: 'Security solutions and consulting' },
-    { href: '/quantum-computing', title: 'Quantum Computing', description: 'Quantum computing consulting and solutions' }];
+    { href: '/quantum-computing', title: 'Quantum Computing', description: 'Quantum computing consulting and solutions' }
+  ];
 
   const documentation = [
     { href: '/docs', title: 'Documentation', description: 'Main documentation hub' },
     { href: '/docs/getting-started', title: 'Getting Started', description: 'Quick start guide for new users' },
     { href: '/docs/api-overview', title: 'API Overview', description: 'API documentation and reference' },
     { href: '/docs/authentication', title: 'Authentication', description: 'Authentication and security guide' },
-    { href: '/docs/first-steps', title: 'First Steps', description: 'Initial setup and configuration' }];
+    { href: '/docs/first-steps', title: 'First Steps', description: 'Initial setup and configuration' }
+  ];
 
   return (
     <>
@@ -55,7 +53,7 @@ export default function Sitemap() {
         <link rel="canonical" href={`${contact.site}/sitemap`} />
         <meta name="robots" content="index, follow" />
       </Head>
-
+      
       <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white py-20">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
@@ -72,8 +70,8 @@ export default function Sitemap() {
               <div className="space-y-4">
                 {pages.map((page) => (
                   <div key={page.href} className="border-b border-white/10 pb-3 last:border-b-0">
-                    <Link 
-                      href={page.href} 
+                    <Link
+                      href={page.href}
                       className="text-white hover:text-blue-400 font-semibold text-lg transition-colors"
                     >
                       {page.title}
@@ -90,8 +88,8 @@ export default function Sitemap() {
               <div className="space-y-4">
                 {services.map((service) => (
                   <div key={service.href} className="border-b border-white/10 pb-3 last:border-b-0">
-                    <Link 
-                      href={service.href} 
+                    <Link
+                      href={service.href}
                       className="text-white hover:text-purple-400 font-semibold text-lg transition-colors"
                     >
                       {service.title}
@@ -108,8 +106,8 @@ export default function Sitemap() {
               <div className="space-y-4">
                 {documentation.map((doc) => (
                   <div key={doc.href} className="border-b border-white/10 pb-3 last:border-b-0">
-                    <Link 
-                      href={doc.href} 
+                    <Link
+                      href={doc.href}
                       className="text-white hover:text-green-400 font-semibold text-lg transition-colors"
                     >
                       {doc.title}
@@ -126,23 +124,23 @@ export default function Sitemap() {
             <div className="bg-slate-900/60 rounded-xl p-8 border border-white/10">
               <h2 className="text-2xl font-bold mb-4">Need Help Finding Something?</h2>
               <p className="text-slate-300 mb-6">
-                If you can&apos;t find what you&apos;re looking for, our team is here to help.
+                If you can't find what you're looking for, our team is here to help.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a 
-                  href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} 
+                <a
+                  href={`tel:${contact.phone}`}
                   className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
                 >
                   Call {contact.phone}
                 </a>
-                <a 
-                  href={`mailto:${contact.email}`} 
+                <a
+                  href={`mailto:${contact.email}`}
                   className="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors"
                 >
                   Email {contact.email}
                 </a>
-                <Link 
-                  href="/contact" 
+                <Link
+                  href="/contact"
                   className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
                 >
                   Contact Form

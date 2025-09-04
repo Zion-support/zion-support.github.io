@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-import React, {  Component, ErrorInfo, ReactNode  } from "react";
-=======
-import React, { Component, ReactNode } from 'react';
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-interface Props { children: ReactNode;
+interface Props {
+  children: ReactNode;
   fallback?: ReactNode;
 }
 
@@ -16,16 +13,19 @@ interface State {
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false
-  }
-
-  public static getDerivedStateFromError(): State {
-    return { hasError: true };
-  }
-
-  public componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
-    // Error logged to console in development
+  };
+  public static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
   }
   
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    // Log error in development only
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
+    }
+  }
+
   public render() {
     if (this.state.hasError) {
       if (this.props.fallback) {

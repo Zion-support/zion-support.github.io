@@ -3,14 +3,26 @@ import Link from 'next/link';
 import { Shield, Users, Zap, CheckCircle, ArrowRight, Building, Globe, Lock } from 'lucide-react';
 
 export default function Enterprise() {
-  const solutions = [
-    { icon: <Shield className="w-8 h-8" />, title: 'Enterprise Security', description: 'Comprehensive cybersecurity solutions including threat detection, compliance management, and data protection.', features: ['Advanced Threat Detection', 'Compliance Automation', 'Data Encryption', 'Security Monitoring']
-    },
-    { icon: <Users className="w-8 h-8" />, title: 'Digital Transformation', description: 'End-to-end digital transformation services to modernize your enterprise infrastructure and processes.', features: ['Cloud Migration', 'Process Automation', 'Legacy Modernization', 'Change Management']
-    },
-    { icon: <Zap className="w-8 h-8" />, title: 'AI & Automation', description: 'Enterprise-grade AI solutions and automation platforms to optimize operations and drive innovation.', features: ['Machine Learning', 'Process Automation', 'Predictive Analytics', 'Intelligent Workflows']
-    },
-    { icon: <Globe className="w-8 h-8" />, title: 'Cloud Solutions', description: 'Scalable cloud infrastructure and services designed for enterprise workloads and global operations.', features: ['Multi-Cloud Strategy', 'Infrastructure as Code', 'Disaster Recovery', 'Global Deployment']
+  const solutions = [{
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Enterprise Security',
+      description: 'Comprehensive cybersecurity solutions including threat detection, compliance management, and data protection.',
+      features: ['Advanced Threat Detection', 'Compliance Automation', 'Data Encryption', 'Security Monitoring'],
+    },{
+      icon: <Users className="w-8 h-8" />,
+      title: 'Digital Transformation',
+      description: 'End-to-end digital transformation services to modernize your enterprise infrastructure and processes.',
+      features: ['Cloud Migration', 'Process Automation', 'Legacy Modernization', 'Change Management'],
+    },{
+      icon: <Zap className="w-8 h-8" />,
+      title: 'AI & Automation',
+      description: 'Enterprise-grade AI solutions and automation platforms to optimize operations and drive innovation.',
+      features: ['Machine Learning', 'Process Automation', 'Predictive Analytics', 'Intelligent Workflows'],
+    },{
+      icon: <Globe className="w-8 h-8" />,
+      title: 'Cloud Solutions',
+      description: 'Scalable cloud infrastructure and services designed for enterprise workloads and global operations.',
+      features: ['Multi-Cloud Strategy', 'Infrastructure as Code', 'Disaster Recovery', 'Global Deployment'],
     }
   ];
 
@@ -35,7 +47,7 @@ export default function Enterprise() {
         <meta property="og:url" content="https://ziontechgroup.com/enterprise" />
         <meta property="og:type" content="website" />
       </Head>
-
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         {/* Hero Section */}
         <div className="container mx-auto px-4 py-20">
@@ -143,7 +155,7 @@ export default function Enterprise() {
                 </div>
               </div>
             </div>
-
+            
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold text-white mb-6">Enterprise Capabilities</h3>
               <div className="space-y-4">
@@ -165,7 +177,7 @@ export default function Enterprise() {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-300">Compliance</span>
-                  <span className="text-white font-semibold">SOC 2, ISO 27001</span>
+                  <span className="text-white font-semibold">SOC2, ISO 27001</span>
                 </div>
               </div>
             </div>
@@ -175,7 +187,7 @@ export default function Enterprise() {
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Enterprise?</h2>
             <p className="text-gray-300 mb-8 max-w-3xl mx-auto">
-              Let&apos;s discuss how our enterprise solutions can help you achieve your digital transformation goals 
+              Let's discuss how our enterprise solutions can help you achieve your digital transformation goals 
               and drive sustainable growth for your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
