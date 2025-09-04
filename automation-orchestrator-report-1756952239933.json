@@ -1,0 +1,60 @@
+{
+  "timestamp": "2025-09-04T02:17:16.931Z",
+  "tasks": [
+    {
+      "name": "Health Check",
+      "status": "success",
+      "duration": 504,
+      "output": "🏥 Starting Comprehensive Health Check...\n[2025-09-04T02:17:16.951Z] [INFO] 🚀 Starting comprehensive health check...\n[2025-09-04T02:17:16.951Z] [INFO] Running: Node.js Version\n[2025-09-04T02:17:16.951Z] [SUCCESS] ✅ Node.js Version: Node.js version v22.16.0 is supported\n[2025-09-04T02:17:16.952Z] [INFO] Running: Package Configuration\n[2025-09-04T02:17:16.952Z] [SUCCESS] ✅ Package Configuration: package.json is valid\n[2025-09-04T02:17:16.952Z] [INFO] Running: Dependencies\n[2025-09-04T02:17:17.353Z] [SUCCESS] ✅ Dependencies: All dependencies are installed correctly\n[2025-09-04T02:17:17.353Z] [INFO] Running: Build System\n[2025-09-04T02:17:17.353Z] [SUCCESS] ✅ Build System: Build system configuration is complete\n[2025-09-04T02:17:17.353Z] [INFO] Running: Source Files\n[2025-09-04T02:17:17.354Z] [SUCCESS] ✅ Source Files: Source files found: 18 pages, 9 components\n[2025-09-04T02:17:17.354Z] [INFO] Running: Git Repository\n[2025-09-04T02:17:17.431Z] [SUCCESS] ✅ Git Repository: Git repository on",
+      "error": null
+    },
+    {
+      "name": "Security Scan",
+      "status": "success",
+      "duration": 33,
+      "output": "🔒 Starting security audit...\n\n🔒 Security Audit Results:\n\n⚠️  Warnings (1):\n   - pages/index.tsx: Use of innerHTML - potential XSS risk\n\n📄 Security audit report saved to security-audit-report.json\n",
+      "error": null
+    },
+    {
+      "name": "Syntax Fix",
+      "status": "success",
+      "duration": 30,
+      "output": "🔧 Starting syntax error fixing...\n\n📊 Syntax fixing complete:\n   - Files processed: 7\n   - Fixes applied: 0\n   - Issues encountered: 0\n\n📄 Report saved to syntax-fix-report.json\n",
+      "error": null
+    },
+    {
+      "name": "Performance Monitor",
+      "status": "success",
+      "duration": 566,
+      "output": "⚡ Starting performance monitoring...\n\n📊 Performance Metrics:\n   - .next bundle size: 0.00 MB\n   - node_modules size: 510.19 MB\n   - TypeScript files: 27\n   - JavaScript files: 0\n   - CSS files: 2\n\n✅ No performance issues detected\n\n📄 Performance report saved to performance-metrics.json\n",
+      "error": null
+    },
+    {
+      "name": "Security Audit",
+      "status": "success",
+      "duration": 26,
+      "output": "🔒 Starting security audit...\n\n🔒 Security Audit Results:\n\n⚠️  Warnings (1):\n   - pages/index.tsx: Use of innerHTML - potential XSS risk\n\n📄 Security audit report saved to security-audit-report.json\n",
+      "error": null
+    },
+    {
+      "name": "Code Quality Monitor",
+      "status": "success",
+      "duration": 44,
+      "output": "📊 Starting code quality monitoring...\n\n📊 Code Quality Report:\n   - Total files analyzed: 29\n   - Total lines of code: 9,186\n   - Average complexity: 1.90\n   - Files with issues: 7\n\n⚠️  Quality Issues:\n\n   📁 pages/404.tsx:\n      - Function Length: Functions should be under 50 lines (1)\n\n   📁 pages/_app.tsx:\n      - Duplicate Code: Potential duplicate code detected (10)\n\n   📁 pages/about.tsx:\n      - Duplicate Code: Potential duplicate code detected (10)\n\n   📁 pages/ai-services.tsx:\n      - File Length: Files should be under 500 lines (1)\n      - Duplicate Code: Potential duplicate code detected (82)\n\n   📁 pages/it-services.tsx:\n      - File Length: Files should be under 500 lines (1)\n      - Duplicate Code: Potential duplicate code detected (127)\n\n   📁 pages/micro-saas.tsx:\n      - File Length: Files should be under 500 lines (1)\n      - Duplicate Code: Potential duplicate code detected (87)\n\n   📁 pages/services.tsx:\n      - File Length: Files should be under 500 lines (1)\n    ",
+      "error": null
+    },
+    {
+      "name": "Dependency Update Check",
+      "status": "success",
+      "duration": 1798,
+      "output": "📦 Starting dependency update check...\n🔍 Checking for outdated packages...\n✅ All packages are up to date\n🔒 Checking for security vulnerabilities...\n⚠️  Could not check security vulnerabilities: Command failed: npm audit --json\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\n\n📊 Dependency Update Report:\n   - Outdated packages: 0\n   - Security vulnerabilities: 0\n   - Recommendations: 0\n\n📄 Dependency update report saved to dependency-update-report.json\n",
+      "error": null
+    }
+  ],
+  "summary": {
+    "total": 7,
+    "successful": 7,
+    "failed": 0,
+    "criticalFailures": 0
+  }
+}

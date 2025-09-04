@@ -1,0 +1,179 @@
+import Head from 'next/head';
+import Link from 'next/link';
+import { Search, Filter, ArrowRight, Star, Clock, DollarSign } from 'lucide-react';
+import { useState } from 'react';
+
+export default function ServicesCatalog() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const services = [
+    { id: 1, name: 'Cloud Cost Guard (FinOps Assistant)', category: 'micro-saas', description: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.', pricing: '$299–$1,499/month', rating: 4.9, delivery: '2-4 weeks', features: ['Anomaly Detection', 'Cost Optimization', 'Budget Alerts', 'Multi-Cloud Support'] },
+    { id: 2, name: 'LLM Evaluation & Safety Suite', category: 'ai-services', description: 'Prompt evaluation, bias/toxicity checks, jailbreak tests and guardrail policies.', pricing: '$799–$3,500/month', rating: 4.8, delivery: '3-6 weeks', features: ['Bias Detection', 'Safety Testing', 'Prompt Optimization', 'Compliance Monitoring'] },
+    { id: 3, name: 'Customer Feedback & NPS Micro-App', category: 'micro-saas', description: 'Embed surveys, analyze sentiment and route issues to the right team automatically.', pricing: '$149–$799/month', rating: 4.7, delivery: '1-3 weeks', features: ['Survey Builder', 'Sentiment Analysis', 'Auto-Routing', 'Analytics Dashboard'] },
+    { id: 4, name: 'API Rate Limiter & Analytics', category: 'micro-saas', description: 'Intelligent rate limiting, usage analytics, and API monetization for SaaS platforms.', pricing: '$199–$999/month', rating: 4.6, delivery: '2-4 weeks', features: ['Rate Limiting', 'Usage Analytics', 'Monetization', 'Security Monitoring'] },
+    { id: 5, name: 'Smart Document Processing', category: 'ai-services', description: 'AI-powered OCR, data extraction, and document workflow automation for businesses.', pricing: '$399–$1,999/month', rating: 4.8, delivery: '4-8 weeks', features: ['OCR Technology', 'Data Extraction', 'Workflow Automation', 'Integration APIs'] },
+    { id: 6, name: 'Social Media Scheduler Pro', category: 'micro-saas', description: 'Multi-platform scheduling, content optimization, and engagement analytics.', pricing: '$99–$499/month', rating: 4.5, delivery: '1-2 weeks', features: ['Multi-Platform', 'Content Optimization', 'Analytics', 'Auto-Posting'] }
+  ];
+
+  const categories = [
+    { id: 'all', name: 'All Services' },
+    { id: 'micro-saas', name: 'Micro SaaS' },
+    { id: 'ai-services', name: 'AI Services' },
+    { id: 'it-services', name: 'IT Services' },
+    { id: 'cloud', name: 'Cloud Solutions' },
+    { id: 'security', name: 'Cybersecurity' }
+  ];
+
+  const filteredServices = services.filter(service => {
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
+
+  return (
+    <>
+      <Head>
+        <title>Services Catalog - Zion Tech Group</title>
+        <meta name="description" content="Browse our comprehensive catalog of technology services including AI solutions, micro SaaS products, and IT services." />
+        <meta name="keywords" content="services catalog, AI services, micro SaaS, IT solutions, technology services" />
+        <link rel="canonical" href="https://ziontechgroup.com/services-catalog" />
+        <meta property="og:title" content="Services Catalog - Zion Tech Group" />
+        <meta property="og:description" content="Browse our comprehensive catalog of technology services including AI solutions, micro SaaS products, and IT services." />
+        <meta property="og:url" content="https://ziontechgroup.com/services-catalog" />
+        <meta property="og:type" content="website" />
+      </Head>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Services <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Catalog</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Explore our comprehensive portfolio of technology solutions designed to accelerate your digital transformation.
+            </p>
+          </div>
+
+          {/* Search and Filter */}
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 mb-12">
+            <div className="flex flex-col md:flex-row gap-4">
+              <div className="flex-1 relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search services..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400"
+                />
+              </div>
+              <div className="flex gap-2">
+                <Filter className="w-5 h-5 text-gray-400 mt-3" />
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-blue-400"
+                >
+                  {categories.map(category => (
+                    <option key={category.id} value={category.id} className="bg-slate-800">
+                      {category.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          </div>
+
+          {/* Services Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service) => (
+              <div key={service.id} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 group">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm font-medium">
+                    {categories.find(cat => cat.id === service.category)?.name}
+                  </span>
+                  <div className="flex items-center gap-1">
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <span className="text-white font-medium">{service.rating}</span>
+                  </div>
+                </div>
+
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">
+                  {service.name}
+                </h3>
+
+                <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                  {service.description}
+                </p>
+
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center gap-2 text-sm text-gray-300">
+                    <DollarSign className="w-4 h-4" />
+                    <span>{service.pricing}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-gray-300">
+                    <Clock className="w-4 h-4" />
+                    <span>Delivery: {service.delivery}</span>
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {service.features.map((feature, index) => (
+                      <span key={index} className="px-2 py-1 bg-white/5 text-gray-300 rounded text-xs">
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <Link 
+                  href="/contact" 
+                  className="inline-flex items-center justify-center w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-blue-500/25"
+                >
+                  Get Started
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          {/* No Results */}
+          {filteredServices.length === 0 && (
+            <div className="text-center py-12">
+              <div className="w-16 h-16 bg-gray-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Search className="w-8 h-8 text-gray-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">No services found</h3>
+              <p className="text-gray-300 mb-6">Try adjusting your search terms or filters</p>
+              <button
+                onClick={() => {
+                  setSearchTerm('');
+                  setSelectedCategory('all');
+                }}
+                className="text-blue-400 hover:text-blue-300 transition-colors"
+              >
+                Clear filters
+              </button>
+            </div>
+          )}
+
+          {/* CTA Section */}
+          <div className="text-center mt-16">
+            <h2 className="text-3xl font-bold text-white mb-6">Need a Custom Solution?</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Don&apos;t see what you&apos;re looking for? Our team can create custom solutions tailored to your specific needs.
+            </p>
+            <Link href="/contact" className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
+              Discuss Your Project
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-09-03T15:42:33Z",
+  "session_id": "20250903-154150",
+  "summary": {
+    "total_processes": 15,
+    "successful": 1,
+    "failed": 2,
+    "success_rate": 6
+  },
+  "logs_directory": "automation-reports",
+  "status": "PARTIAL"
+}

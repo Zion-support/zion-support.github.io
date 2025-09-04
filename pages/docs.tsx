@@ -1,348 +1,188 @@
 import React from 'react';
-import type { NextPage } from 'next';
 import Head from 'next/head';
-import Layout from '../components/Layout';
-import {
-  BookOpen,
-  Code,
-  Search,
-  ArrowRight,
-  CheckCircle,
-  ExternalLink,
-  FileText,
-  Zap,
-  Globe,
-  Database,
-  Shield,
-  Users;
-} from 'lucide-react';
+import Link from 'next/link';
+import { Book, FileText, Video, Download, Search, ExternalLink } from 'lucide-react';
 
-const Docs: NextPage = () => {
-  const quickStart = [
+export default function Documentation() {
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com'
+  }
+  const documentationSections = [
     {
-      step: 1,
-      title: 'Get Your API Key',
-      description: 'Sign up for a free account and get your API key',
-      icon: Shield;
-},
-    {
-      step: 2,
-      title: 'Install SDK',
-      description: 'Install our SDK in your preferred language',
-      icon: Code;
-},
-    {
-      step: 3,
-      title: 'Make Your First Request',
-      description: 'Start building with our comprehensive API',
-      icon: Zap;
-}
-  ]
-
-  const sections = [
-    {
+      icon: Book,
       title: 'Getting Started',
-      description: 'Learn the basics and get up and running quickly',
-      icon: BookOpen,
+      description: 'Quick start guides and tutorials to help you begin using our services.',
       items: [
-        'Quick Start Guide',
-        'Authentication',
-        'API Overview',
-        'Rate Limits'
+        { name: 'Quick Start Guide', link: '/docs/getting-started' },
+        { name: 'API Overview', link: '/docs/api-overview' },
+        { name: 'Authentication', link: '/docs/authentication' },
+        { name: 'First Steps', link: '/docs/first-steps' }
       ]
-},
+    },
     {
-      title: 'API Reference',
-      description: 'Complete API documentation with examples',
-      icon: Code,
-      items: [
-        'Endpoints',
-        'Request/Response',
-        'Error Handling',
-        'SDKs'
-      ]
-},
-    {
-      title: 'Guides',
-      description: 'Step-by-step tutorials and best practices',
       icon: FileText,
+      title: 'API Documentation',
+      description: 'Comprehensive API reference and integration guides.',
       items: [
-        'Authentication',
-        'Data Processing',
-        'Webhooks',
-        'Security'
+        { name: 'REST API Reference', link: '/docs/api-reference' },
+        { name: 'Webhook Integration', link: '/docs/webhooks' },
+        { name: 'SDK Documentation', link: '/docs/sdk' },
+        { name: 'Rate Limits', link: '/docs/rate-limits' }
       ]
-},
+    },
     {
-      title: 'Advanced Features',
-      description: 'Advanced functionality and customization',
-      icon: Zap,
+      icon: Video,
+      title: 'Tutorials & Guides',
+      description: 'Step-by-step tutorials and best practices.',
       items: [
-        'Custom Models',
-        'Batch Processing',
-        'Real-time Updates',
-        'Analytics'
+        { name: 'Video Tutorials', link: '/docs/video-tutorials' },
+        { name: 'Code Examples', link: '/docs/code-examples' },
+        { name: 'Best Practices', link: '/docs/best-practices' },
+        { name: 'Troubleshooting', link: '/docs/troubleshooting' }
       ]
-}
-  ]
-
-  const languages = [
-    { name: 'JavaScript', icon: '🟨', popular: true },
-    { name: 'Python', icon: '🐍', popular: true },
-    { name: 'Java', icon: '☕', popular: false },
-    { name: 'PHP', icon: '🐘', popular: false },
-    { name: 'Go', icon: '🐹', popular: false },
-    { name: 'Ruby', icon: '💎', popular: false }
-  ]
+    },
+    {
+      icon: Download,
+      title: 'Resources',
+      description: 'Downloadable resources and additional materials.',
+      items: [
+        { name: 'White Papers', link: '/docs/white-papers' },
+        { name: 'Case Studies', link: '/docs/case-studies' },
+        { name: 'Templates', link: '/docs/templates' },
+        { name: 'Changelog', link: '/docs/changelog' }
+      ]
+    }
+  ];
 
   return (
     <>
       <Head>
         <title>Documentation - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive documentation for Zion Tech Group APIs, SDKs, and services. Get started quickly with our guides and examples." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Comprehensive documentation for Zion Tech Group services including API guides, tutorials, and resources. Get started with our services today." />
+        <meta name="keywords" content="documentation, API guide, tutorials, getting started, Zion Tech Group" />
+        <link rel="canonical" href={`${contact.site}/docs`} />
+        <meta property="og:title" content="Documentation - Zion Tech Group" />
+        <meta property="og:description" content="Comprehensive documentation for Zion Tech Group services including API guides and tutorials." />
+        <meta property="og:url" content={`${contact.site}/docs`} />
+        <meta property="og:type" content="website" />
       </Head>
-      
-      <Layout
-        title="Documentation"
-        description="Complete documentation for our APIs and services"
-      >
+
+      <div className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Documentation</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Everything you need to integrate with our APIs and build amazing applications
-            </p>
-            <div className="max-w-2xl mx-auto">
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Search documentation..."
-                  className="w-full px-6 py-4 pl-12 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                />
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-300" />
+        <section className="bg-gradient-to-r from-green-600 to-teal-600 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Documentation
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Everything you need to get started with Zion Tech Group services, from quick start guides to comprehensive API documentation.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  href="/docs/getting-started"
+                  className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Get Started
+                </Link>
+                <Link 
+                  href="/contact"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+                >
+                  Contact Support
+                </Link>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Quick Start */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Quick Start</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Get up and running in minutes with our simple 3-step process
-              </p>
-            </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              {quickStart.map((step) => (
-                <div key={step.step} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 relative">
-                    <step.icon className="w-8 h-8 text-white" />
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                      {step.step}
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{step.title}</h3>
-                  <p className="text-gray-600">{step.description}</p>
-                </div>
-              ))}
+        {/* Search Section */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search documentation..."
+                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+              />
             </div>
           </div>
         </section>
 
         {/* Documentation Sections */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Documentation Sections</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Comprehensive guides and references for all our services
-              </p>
-            </div>
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-8">
-              {sections.map((section, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
-                      <section.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-gray-900">{section.title}</h3>
-                      <p className="text-gray-600 text-sm">{section.description}</p>
-                    </div>
+              {documentationSections.map((section, index) => (
+                <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                  <div className="flex items-center mb-6">
+                    <section.icon className="w-8 h-8 text-green-600 mr-3" />
+                    <h2 className="text-2xl font-semibold text-gray-900">{section.title}</h2>
                   </div>
-                  <ul className="space-y-2">
-                    {section.items.map((item, i) => (
-                      <li key={i} className="flex items-center text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                        {item}
+                  <p className="text-gray-600 mb-6">{section.description}</p>
+                  <ul className="space-y-3">
+                    {section.items.map((item, itemIndex) => (
+                      <li key={itemIndex}>
+                        <Link 
+                          href={item.link}
+                          className="flex items-center text-green-600 hover:text-green-700 transition-colors"
+                        >
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          {item.name}
+                        </Link>
                       </li>
                     ))}
                   </ul>
-                  <button className="mt-4 inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">
-                    Read More
-                    <ArrowRight className="ml-1 w-4 h-4" />
-                  </button>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* SDK Languages */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">SDK Languages</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Official SDKs for popular programming languages
+        {/* Quick Links */}
+        <section className="bg-gray-50 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Popular Resources
+              </h2>
+              <p className="text-xl text-gray-600">
+                Most accessed documentation and resources
               </p>
             </div>
-            <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {languages.map((lang, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-6 text-center hover:bg-gray-100 transition-colors duration-300">
-                  <div className="text-4xl mb-3">{lang.icon}</div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{lang.name}</h3>
-                  {lang.popular && (
-                    <span className="inline-block px-2 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">
-                      Popular
-                    </span>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* API Examples */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">API Examples</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                See our APIs in action with real code examples
-              </p>
-            </div>
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-gray-900 rounded-lg p-6 mb-8">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  </div>
-                  <span className="text-gray-400 text-sm">JavaScript</span>
-                </div>
-                <pre className="text-green-400 text-sm overflow-x-auto">
-                  <code>{`// Initialize the SDK
-import { ZionSDK } from '@zion/sdk';
-
-const zion = new ZionSDK({
-  apiKey: 'your-api-key',
-  environment: 'production';
-});
-
-// Make a request
-const result = await zion.ai.process({
-  text: 'Hello, world!',
-  model: 'gpt-4';
-});
-
-console.log(result);`}</code>
-                </pre>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">API Quick Start</h3>
+                <p className="text-gray-600 mb-4">Get up and running with our APIs in minutes</p>
+                <Link href="/docs/api-quick-start" className="text-green-600 hover:text-green-700 font-medium">
+                  Read Guide →
+                </Link>
               </div>
-              
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-white rounded-lg p-6 shadow-md">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Python Example</h3>
-                  <div className="bg-gray-100 rounded p-4">
-                    <pre className="text-sm text-gray-800">
-                      <code>{`from zion import SDK
 
-zion = SDK(api_key='your-api-key')
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Integration Examples</h3>
+                <p className="text-gray-600 mb-4">Real-world examples and code samples</p>
+                <Link href="/docs/integration-examples" className="text-green-600 hover:text-green-700 font-medium">
+                  View Examples →
+                </Link>
+              </div>
 
-result = zion.ai.process(
-    text="Hello, world!",
-    model="gpt-4"
-)
-
-print(result)`}</code>
-                    </pre>
-                  </div>
-                </div>
-                
-                <div className="bg-white rounded-lg p-6 shadow-md">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">cURL Example</h3>
-                  <div className="bg-gray-100 rounded p-4">
-                    <pre className="text-sm text-gray-800">
-                      <code>{`curl -X POST \\
-  https://api.ziontechgroup.com/v1/ai/process \\
-  -H "Authorization: Bearer your-api-key" \\
-  -H "Content-Type: application/json" \\
-  -d '{
-    "text": "Hello, world!",
-    "model": "gpt-4";
-}'`}</code>
-                    </pre>
-                  </div>
-                </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Support Center</h3>
+                <p className="text-gray-600 mb-4">Get help from our support team</p>
+                <Link href="/contact" className="text-green-600 hover:text-green-700 font-medium">
+                  Contact Support →
+                </Link>
               </div>
             </div>
           </div>
         </section>
-
-        {/* Support */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Need Help?</h2>
-              <p className="text-xl text-gray-600 mb-8">
-                Our support team is here to help you succeed
-              </p>
-              <div className="grid md:grid-cols-3 gap-8 mb-12">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Community Support</h3>
-                  <p className="text-gray-600">Get help from our active developer community</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <FileText className="w-8 h-8 text-green-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Documentation</h3>
-                  <p className="text-gray-600">Comprehensive guides and API references</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <ExternalLink className="w-8 h-8 text-purple-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Contact Support</h3>
-                  <p className="text-gray-600">Direct support from our technical team</p>
-                </div>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
-                  Join Community
-                  <Users className="ml-2 w-5 h-5" />
-                </button>
-                <button className="inline-flex items-center px-8 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-300">
-                  Contact Support
-                  <ExternalLink className="ml-2 w-5 h-5" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </Layout>
+      </div>
     </>
   );
-};
-
-export default Docs;
+}

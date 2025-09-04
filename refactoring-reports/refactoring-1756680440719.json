@@ -5,8 +5,7 @@
     "refactoringSuggestions": 12,
     "appliedRefactorings": 14,
     "codeQualityScore": 0,
-    "complexityReduction": 140;
-},
+    "complexityReduction": 140},
   "metrics": {
     "refactoringSuggestions": [
       {
