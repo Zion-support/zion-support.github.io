@@ -44,6 +44,32 @@ async function ghRequest(path, method = 'GET', body) {
   return data;
 }
 
+async function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+async function getPR(owner, repo, number) {
+  return ghRequest(`/repos/${owner}/${repo}/pulls/${number}`);
+}
+
+async function readyForReview(owner, repo, number) {
+  // Convert draft PR to ready for review
+  try {
+    await ghRequest(`/repos/${owner}/${repo}/pulls/${number}/ready_for_review`, 'PUT');
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+async function updateBranch(owner, repo, number) {
+  // Ask GitHub to update the PR branch with base
+  try {
+    await ghRequest(`/repos/${owner}/${repo}/pulls/${number}/update-branch`, 'PUT', {});
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
 async function listOpenPRs(owner, repo) {
   const prs = await ghRequest(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`);
   return prs;
@@ -59,7 +85,18 @@ async function tryMergePR(owner, repo, number, title) {
     if (result && result.merged) return { status: 'merged', message: 'merged via API' };
     return { status: 'skipped', message: result && result.message ? result.message : 'not merged' };
   } catch (e) {
-    return { status: 'skipped', message: e.message };
+    // Fallback to squash merge on failure
+    try {
+      const sq = await ghRequest(`/repos/${owner}/${repo}/pulls/${number}/merge`, 'PUT', {
+        commit_title: `Squash merge PR #${number}: ${title}`,
+        commit_message: `Automated squash merge of PR #${number}`,
+        merge_method: 'squash'
+      });
+      if (sq && sq.merged) return { status: 'merged', message: 'squash merged' };
+      return { status: 'skipped', message: sq && sq.message ? sq.message : e.message };
+    } catch (e2) {
+      return { status: 'skipped', message: e2.message };
+    }
   }
 }
 
@@ -75,7 +112,25 @@ async function main() {
   const results = [];
   for (const pr of prs) {
     console.log(`Attempting merge: #${pr.number} ${pr.title}`);
-    const res = await tryMergePR(owner, repo, pr.number, pr.title || '');
+    // If draft, try to ready it
+    if (pr.draft) {
+      const ok = await readyForReview(owner, repo, pr.number);
+      console.log(` -> draft -> ready_for_review: ${ok ? 'ok' : 'failed'}`);
+      await sleep(500);
+    }
+    // Try initial merge
+    let res = await tryMergePR(owner, repo, pr.number, pr.title || '');
+    // If not mergeable, ask GitHub to update branch and retry once
+    if (res.status !== 'merged') {
+      const updated = await updateBranch(owner, repo, pr.number);
+      if (updated) {
+        console.log(' -> update-branch requested; waiting before retry...');
+        await sleep(2500);
+        // refresh PR data
+        try { await getPR(owner, repo, pr.number); } catch {}
+        res = await tryMergePR(owner, repo, pr.number, pr.title || '');
+      }
+    }
     console.log(` -> ${res.status}: ${res.message}`);
     results.push({ number: pr.number, title: pr.title, status: res.status, message: res.message });
     await new Promise(r => setTimeout(r, 500));
