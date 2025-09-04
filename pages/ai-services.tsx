@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Mail, Code, Cog, Search, Cpu, Globe, Users } from 'lucide-react';
+import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Code, Cog, Search, Users } from 'lucide-react';
 
 export default function AIServices(): any {
   const contact = {
@@ -1022,7 +1022,7 @@ export default function AIServices(): any {
       ]
     },
     {
-      icon: TrendingUp,
+      icon: Shield,
       name: 'AI Financial Risk Management',
       description: 'Advanced AI system for financial risk assessment, fraud detection, and regulatory compliance with real-time monitoring and predictive analytics.',
       features: [,
@@ -1154,9 +1154,9 @@ export default function AIServices(): any {
       ]
     },
     {
-      icon: Brain,
-      name: 'Quantum AI Computing Platform',
-      description: 'Revolutionary quantum-enhanced AI platform that leverages quantum computing to solve complex optimization problems and accelerate machine learning algorithms.',
+      icon: Database,
+      name: 'AI Data Intelligence Platform',
+      description: 'Comprehensive AI platform that automatically discovers, cleans, and enriches data while providing intelligent insights and recommendations.',
       features: [
         'Quantum machine learning algorithms',
         'Quantum optimization for complex problems',
@@ -1499,120 +1499,10 @@ export default function AIServices(): any {
       perUnit: '$0.01 – $0.10 per personalization',
       timeline: '6–12 weeks',
       benefits: [
-        'Enhanced user engagement',
-        'Personalized experiences',
-        'Improved conversion rates',
-        'Data-driven personalization'
-      ]
-    },
-    {
-      icon: Shield,
-      name: 'AI-Powered Cybersecurity Intelligence',
-      description: 'Advanced AI cybersecurity platform with threat detection, incident response, and security automation capabilities.',
-      features: [
-        'Advanced threat detection and analysis',
-        'Automated incident response',
-        'Behavioral anomaly detection',
-        'Security orchestration and automation',
-        'Threat intelligence integration',
-        'Predictive security analytics'
-      ],
-      pricing: '$5,000 – $40,000/setup',
-      perUnit: '$0.05 – $0.50 per security event',
-      timeline: '8–16 weeks',
-      benefits: [
-        'Proactive threat prevention',
-        'Automated security response',
-        'Enhanced threat visibility',
-        'Reduced security incidents'
-      ]
-    },
-    {
-      icon: Brain,
-      name: 'AI-Powered Drug Discovery Platform',
-      description: 'Revolutionary AI platform for pharmaceutical research, drug discovery, and molecular design with accelerated development timelines.',
-      features: [
-        'Molecular design and optimization',
-        'Drug-target interaction prediction',
-        'Clinical trial optimization',
-        'Side effect prediction and analysis',
-        'Biomarker discovery and validation',
-        'Regulatory pathway optimization'
-      ],
-      pricing: '$25,000 – $500,000/setup',
-      perUnit: 'Custom pricing based on research scope',
-      timeline: '20–40 weeks',
-      benefits: [
-        'Accelerated drug discovery',
-        'Reduced development costs',
-        'Enhanced success rates',
-        'Innovative therapeutic solutions'
-      ]
-    },
-    {
-      icon: Cpu,
-      name: 'AI-Powered Manufacturing Intelligence',
-      description: 'Comprehensive AI platform for smart manufacturing with predictive maintenance, quality control, and process optimization.',
-      features: [
-        'Predictive maintenance and quality control',
-        'Manufacturing process optimization',
-        'Supply chain intelligence',
-        'Defect detection and prevention',
-        'Energy efficiency optimization',
-        'Autonomous manufacturing systems'
-      ],
-      pricing: '$10,000 – $80,000/setup',
-      perUnit: '$0.10 – $1.00 per manufacturing event',
-      timeline: '12–24 weeks',
-      benefits: [
-        'Reduced manufacturing costs',
-        'Enhanced product quality',
-        'Optimized production processes',
-        'Predictive maintenance capabilities'
-      ]
-    },
-    {
-      icon: Globe,
-      name: 'AI-Powered Smart City Platform',
-      description: 'Comprehensive AI platform for smart city management with traffic optimization, resource management, and citizen services.',
-      features: [
-        'Traffic flow optimization',
-        'Resource allocation and management',
-        'Citizen service automation',
-        'Environmental monitoring and control',
-        'Public safety and emergency response',
-        'Urban planning and development'
-      ],
-      pricing: '$50,000 – $500,000/setup',
-      perUnit: 'Custom pricing based on city size',
-      timeline: '24–48 weeks',
-      benefits: [
-        'Improved city operations',
-        'Enhanced citizen services',
-        'Optimized resource utilization',
-        'Data-driven urban planning'
-      ]
-    },
-    {
-      icon: Zap,
-      name: 'AI-Powered Autonomous Systems',
-      description: 'Advanced AI platform for developing autonomous systems including vehicles, drones, and robotics with real-world deployment capabilities.',
-      features: [
-        'Autonomous vehicle AI systems',
-        'Drone and UAV intelligence',
-        'Robotic process automation',
-        'Autonomous navigation and mapping',
-        'Real-time decision making',
-        'Safety and reliability systems'
-      ],
-      pricing: '$15,000 – $150,000/setup',
-      perUnit: '$0.50 – $5.00 per autonomous action',
-      timeline: '16–32 weeks',
-      benefits: [
-        'Fully autonomous operations',
-        'Enhanced safety and reliability',
-        'Reduced operational costs',
-        'Advanced autonomous capabilities'
+        '40% improvement in search relevance',
+        'Increased user engagement and conversion',
+        'Personalized user experiences',
+        'Better content discovery and recommendations'
       ]
     }
   ];

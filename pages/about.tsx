@@ -51,10 +51,10 @@ export default function About(): any {
                 </p>
               </div>
 
-              <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10">";
-                <h2 className="text-3xl font-bold mb-6 text-purple-400">Our Vision</h2>";
-                <p className="text-lg text-slate-300 mb-4">";
-                  To be the world's leading provider of micro SaaS products and AI-powered solutions, 
+              <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10">
+                <h2 className="text-3xl font-bold mb-6 text-purple-400">Our Vision</h2>
+                <p className="text-lg text-slate-300 mb-4">
+                  To be the world&apos;s leading provider of micro SaaS products and AI-powered solutions, 
                   transforming how businesses operate and compete in the digital age.
                 </p>
                 <p className="text-slate-400">";
