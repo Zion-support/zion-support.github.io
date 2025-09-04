@@ -5,8 +5,9 @@ import { Book, FileText, Video, Download, Search, ExternalLink } from 'lucide-re
 
 export default function Documentation() {
   const contact = {
-    phone: 'kleber@ziontechgroup.com',
-    address: 'https://ziontechgroup.com'
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    site: 'https://ziontechgroup.com'
   };
   const documentationSections = [
     {

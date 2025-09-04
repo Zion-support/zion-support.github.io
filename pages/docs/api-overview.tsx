@@ -4,11 +4,11 @@ import Link from 'next/link';
 import { Code, Key, Zap, Shield } from 'lucide-react';
 
 export default function APIOverview() {
-  const contact = { 
-    phone: '+1 302 464 0950', 
-    email: 'kleber@ziontechgroup.com', 
-    address: '364 E Main St STE 1008 Middletown DE 19709', 
-    site: 'https://ziontechgroup.com' 
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com'
   };
 
   return (
@@ -41,7 +41,7 @@ export default function APIOverview() {
                 <h2 className="text-xl font-semibold text-gray-900">RESTful APIs</h2>
               </div>
               <p className="text-gray-600 mb-4">
-                Clean, intuitive REST APIs with comprehensive documentation and SDKs for popular languages.
+                Clean intuitive REST APIs with comprehensive documentation and SDKs for popular languages.
               </p>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li>• JSON-based request/response format</li>

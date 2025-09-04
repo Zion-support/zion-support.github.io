@@ -5,8 +5,9 @@ import { Shield, Lock, Eye, AlertTriangle, Users, Database } from 'lucide-react'
 
 export default function Cybersecurity() {
   const contact = {
-    phone: 'kleber@ziontechgroup.com',
-    address: 'https://ziontechgroup.com'
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    site: 'https://ziontechgroup.com'
   };
   const services = [
     {

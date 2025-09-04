@@ -113,14 +113,14 @@ export default function Careers() {
         <meta property="og:type" content="website" />
       </Head>
       <main style={{ padding: '20px', maxWidth: 1200, margin: '0 auto' }}>
-        <h1 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '20px', textAlign: 'center' }}>Join Our Team</h1>
+        <h1 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '1rem', textAlign: 'center' }}>Join Our Team</h1>
         <p style={{ fontSize: '1.1rem', lineHeight: 1.6, textAlign: 'center', color: '#ccc' }}>
           Be part of our mission to revolutionize technology and help businesses thrive in the digital age.
         </p>
-        <div style={{ marginTop: '20px', textAlign: 'center' }}>
+        <div style={{ marginTop: '2rem', textAlign: 'center' }}>
           <Link href="/" style={{
-            background: 'white',
-            color: '#333',
+            background: '#3b82f6',
+            color: 'white',
             padding: '12px 24px',
             textDecoration: 'none',
             borderRadius: 8,

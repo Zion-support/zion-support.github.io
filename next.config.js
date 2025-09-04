@@ -28,7 +28,7 @@ const nextConfig = {
         chunks: 'all',
         cacheGroups: {
           vendor: {
-            test: /[\/]node_modules[\/]/,
+            test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
             chunks: 'all',
           },
@@ -50,8 +50,7 @@ const nextConfig = {
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
           { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' }
         ]
-      }
-    ]
+    }]
   },
 }
 
