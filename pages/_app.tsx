@@ -3,8 +3,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../components/PerformanceMonitor';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import '../styles/globals.css';
 
 // Add CSS for dropdown functionality
@@ -71,44 +70,65 @@ function Header(): any {
           Zion Tech Group
         </Link>
         
-        <div className="header-nav-links">
-          <Link href="/" className="header-nav-link">Home</Link>
-          <div className="header-nav-dropdown">
-            <span className="header-nav-link">Services</span>
-            <div className="header-nav-dropdown-content">
-              <Link href="/services" className="header-nav-dropdown-link">All Services</Link>
-              <Link href="/micro-saas" className="header-nav-dropdown-link">Micro SaaS</Link>
-              <Link href="/ai-services" className="header-nav-dropdown-link">AI Services</Link>
-              <Link href="/it-services" className="header-nav-dropdown-link">IT Services</Link>
-              <Link href="/services-catalog" className="header-nav-dropdown-link">Catalog</Link>
-            </div>
-          </div>
-          <div className="header-nav-dropdown">
-            <span className="header-nav-link">Solutions</span>
-            <div className="header-nav-dropdown-content">
-              <Link href="/cloud-devops" className="header-nav-dropdown-link">Cloud DevOps</Link>
-              <Link href="/cybersecurity" className="header-nav-dropdown-link">Cybersecurity</Link>
-              <Link href="/quantum-computing" className="header-nav-dropdown-link">Quantum Computing</Link>
-            </div>
-          </div>
-          <div className="header-nav-dropdown">
-            <span className="header-nav-link">Resources</span>
-            <div className="header-nav-dropdown-content">
-              <Link href="/docs" className="header-nav-dropdown-link">Documentation</Link>
-              <Link href="/docs/getting-started" className="header-nav-dropdown-link">Getting Started</Link>
-              <Link href="/docs/api-quick-start" className="header-nav-dropdown-link">API Guide</Link>
-              <Link href="/faq" className="header-nav-dropdown-link">FAQ</Link>
-            </div>
-          </div>
-          <Link href="/about" className="header-nav-link">About</Link>
-          <Link href="/pricing" className="header-nav-link">Pricing</Link>
-          <div className="hidden md:block">
-            <SearchBar />
-          </div>
-          <Link href="/about" className="header-nav-link">About</Link>
-          <Link href="/pricing" className="header-nav-link">Pricing</Link>
-          <Link href="/faq" className="header-nav-link">FAQ</Link>
-          <Link href="/contact" className="header-nav-cta">Contact</Link>
+        {/* Mobile Menu Toggle */}
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          style={{
+            display: 'block',
+            background: 'none',
+            border: 'none',
+            color: 'white',
+            fontSize: '1.5rem',
+            cursor: 'pointer',
+            padding: '8px'
+          }}
+          className="md:hidden"
+          aria-label="Toggle mobile menu"
+        >
+          {mobileMenuOpen ? '✕' : '☰'}
+        </button>
+        
+        {/* Desktop Navigation */}
+        <div style={{ 
+          display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'center'
+        }} className="hidden md:flex">
+          <Link href="/" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }}>Home</Link>
+          <Link href="/services" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }}>All Services</Link>
+          <Link href="/micro-saas" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }}>Micro SaaS</Link>
+          <Link href="/ai-services" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }}>AI Services</Link>
+          <Link href="/it-services" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }}>IT Services</Link>
+          <Link href="/services-catalog" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }}>Catalog</Link>
+          <Link href="/pricing" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }}>Pricing</Link>
+          <Link href="/about" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }}>About</Link>
+          <Link href="/contact" style={{ 
+            fontWeight: 600, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
+            color: 'white', padding: '8px 16px', borderRadius: 8,
+            transition: 'all 0.2s ease', textDecoration: 'none'
+          }}>Contact</Link>
         </div>
 
         <button 
@@ -122,16 +142,47 @@ function Header(): any {
         </button>
       </nav>
       
-      <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
-        <Link href="/" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-        
-        <div className="mobile-menu-section">
-          <h4 className="mobile-menu-section-title">Services</h4>
-          <Link href="/services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>All Services</Link>
-          <Link href="/micro-saas" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Micro SaaS</Link>
-          <Link href="/ai-services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>AI Services</Link>
-          <Link href="/it-services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>IT Services</Link>
-          <Link href="/services-catalog" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div style={{
+          position: 'absolute', top: '100%', left: 0, right: 0, 
+          background: 'rgba(11, 18, 32, 0.98)', backdropFilter: 'blur(10px)',
+          borderBottom: '1px solid rgba(255,255,255,0.1)',
+          padding: '20px', display: 'flex', flexDirection: 'column', gap: '12px',
+          zIndex: 1000
+        }}>
+          <Link href="/" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>Home</Link>
+          <Link href="/services" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>All Services</Link>
+          <Link href="/micro-saas" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>Micro SaaS</Link>
+          <Link href="/ai-services" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>AI Services</Link>
+          <Link href="/it-services" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>IT Services</Link>
+          <Link href="/services-catalog" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
+          <Link href="/pricing" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
+          <Link href="/about" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>About</Link>
         </div>
         
         <div className="mobile-menu-section">
@@ -227,16 +278,18 @@ function Footer(): any {
           <Link href="/docs/api-quick-start">API Guide</Link>
         </div>
 
-        {/* Quick Links */}
-        <div className="footer-section">
-          <h3>Quick Links</h3>
-          <Link href="/">Home</Link>
-          <Link href="/about">About Us</Link>
-          <Link href="/contact">Contact Us</Link>
-          <Link href="/faq">FAQ</Link>
-          <Link href="/privacy">Privacy Policy</Link>
-          <Link href="/terms">Terms of Service</Link>
-          <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer">Main Website</a>
+        {/* Company */}
+        <div style={{ display: 'grid', gap: 12 }}>
+          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Company</h3>
+          <div style={{ display: 'grid', gap: 8 }}>
+            <Link href="/" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Home</Link>
+            <Link href="/about" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>About Us</Link>
+            <Link href="/contact" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Contact Us</Link>
+            <Link href="/faq" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>FAQ</Link>
+            <Link href="/privacy" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Privacy Policy</Link>
+            <Link href="/terms" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Terms of Service</Link>
+            <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Main Website</a>
+          </div>
         </div>
 
         {/* Get Started */}
@@ -291,21 +344,12 @@ export default function App({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
-    <>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#3b82f6" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/manifest.json" />
-      </Head>
-      <GoogleAnalytics />
-      <ErrorBoundary>
-        <PerformanceMonitor />
-        <Header />
-        <Component {...pageProps} />
-        <Footer />
-      </ErrorBoundary>
-    </>
+    <ErrorBoundary>
+      <PerformanceOptimizer />
+      <PerformanceMonitor />
+      <Header />
+      <Component {...pageProps} />
+      <Footer />
+    </ErrorBoundary>
   );
 };

@@ -24,7 +24,10 @@ const nextConfig = {
   experimental: {
     scrollRestoration: true,
     optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production'

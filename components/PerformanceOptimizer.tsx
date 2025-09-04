@@ -1,23 +1,18 @@
 import { useEffect } from 'react';
 
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
-}
-
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+export default function PerformanceOptimizer() {
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
-      const criticalImages = [
-        '/favicon.svg',
-        // Add other critical images here
+      const criticalFonts = [
+        'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap'
       ];
-
-      criticalImages.forEach(src => {
+      
+      criticalFonts.forEach(font => {
         const link = document.createElement('link');
         link.rel = 'preload';
-        link.as = 'image';
-        link.href = src;
+        link.as = 'style';
+        link.href = font;
         document.head.appendChild(link);
       });
     };
@@ -35,38 +30,28 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       });
     };
 
-    // Defer non-critical scripts
-    const deferNonCriticalScripts = () => {
-      const scripts = document.querySelectorAll('script[data-defer]');
-      scripts.forEach(script => {
-        script.defer = true;
-      });
+    // Add performance monitoring
+    const monitorPerformance = () => {
+      if ('performance' in window) {
+        window.addEventListener('load', () => {
+          setTimeout(() => {
+            const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+            if (perfData) {
+              console.log('Performance Metrics:', {
+                domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
+                loadComplete: perfData.loadEventEnd - perfData.loadEventStart,
+                totalTime: perfData.loadEventEnd - perfData.fetchStart
+              });
+            }
+          }, 0);
+        });
+      }
     };
 
-    // Run optimizations
     preloadCriticalResources();
     optimizeImages();
-    deferNonCriticalScripts();
-
-    // Monitor performance
-    if ('performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'navigation') {
-            console.log('Page Load Time:', entry.loadEventEnd - entry.loadEventStart);
-          }
-        }
-      });
-
-      try {
-        observer.observe({ entryTypes: ['navigation'] });
-      } catch (e) {
-        // Fallback for browsers that don't support navigation timing
-      }
-    }
+    monitorPerformance();
   }, []);
 
-  return <>{children}</>;
-};
-
-export default PerformanceOptimizer;
+  return null;
+}
