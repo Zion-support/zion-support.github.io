@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
@@ -15,46 +14,10 @@ import {
   Globe
 } from 'lucide-react'
 
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: fals e })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: fals e })
-=======
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
 
-export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-    }, 2000);
-  };
->>>>>>> merge-all-prs-20250904-105408
-
-const ContactPage: Reac t.FC = () => {
+const ContactPage: React.FC = () => {
   const contactInfo = [
     {
       icon: <Phone className="w-6 h-6"  />,
@@ -77,8 +40,8 @@ const ContactPage: Reac t.FC = () => {
     {
       icon: <Clock className="w-6 h-6"  />,
       title: "Business Hours",
-      details: "Monday - Friday: 9: 00 AM - 6: 00 PM\nSaturday: 1 0:00 AM - 4: 00 PM",
-      link: nul l
+      details: "Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM",
+      link: null
     }
   ]
 
@@ -95,7 +58,6 @@ const ContactPage: Reac t.FC = () => {
 
   return (
     <>
-<<<<<<< HEAD
       <SEO title="Contact Us - Zion Tech Group"
         description="Get in touch with Zion Tech Group for AI services, IT solutions, and micro SaaS development. Call +1 302 464 0950 or email kleber@ziontechgroup.com"
         keywords="contact, Zion Tech Group, AI services, IT solutions, micro SaaS, phone, email, address"
@@ -106,14 +68,14 @@ const ContactPage: Reac t.FC = () => {
         <main className="min-h-screen bg-white">
           {/* Hero Section */}
           <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <motion.div
-                initial={{ opacity: 0, y: 2 0 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center"
               >
-                <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6">
+                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
                   Get In <span className="text-blue-600">Touch</span>
                 </h1>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
@@ -145,9 +107,9 @@ const ContactPage: Reac t.FC = () => {
 
           {/* Contact Information */}
           <section className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <motion.div
-                initial={{ opacity: 0, y: 2 0 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-center mb-16"
@@ -164,9 +126,9 @@ const ContactPage: Reac t.FC = () => {
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 2 0 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="bg-white rounded-xl p-8 shadow-lg hover: shado w-xl transition-shadow duration-300 text-center"
                   >
                     <div className="text-blue-600 mb-4 flex justify-center">
@@ -195,9 +157,9 @@ const ContactPage: Reac t.FC = () => {
 
           {/* Contact Form */}
           <section className="bg-gray-50 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <motion.div
-                initial={{ opacity: 0, y: 2 0 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center mb-16"
@@ -212,7 +174,7 @@ const ContactPage: Reac t.FC = () => {
 
               <div className="max-w-4xl mx-auto">
                 <motion.form
-                  initial={{ opacity: 0, y: 2 0 }}
+                  initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="bg-white rounded-xl shadow-lg p-8"
@@ -498,16 +460,15 @@ const ContactPage: Reac t.FC = () => {
                     </div>
                   ))}
                 </div>
->>>>>>> merge-all-prs-20250904-105408
               </div>
             </div>
           </section>
 
           {/* Services Overview */}
           <section className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <motion.div
-                initial={{ opacity: 0, y: 2 0 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center mb-16"
@@ -524,7 +485,7 @@ const ContactPage: Reac t.FC = () => {
                 {services.map((service, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 2 0 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: inde x * 0.1 }}
                     className="bg-white rounded-xl p-6 shadow-lg hover: shado w-xl transition-shadow duration-300 text-center"

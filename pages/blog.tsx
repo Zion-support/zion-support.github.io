@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 import Link from 'next/link';
 import { Calendar, User, ArrowRight, Tag, Clock } from 'lucide-react';
 
-const Blog: NextPag e = () => {
+const Blog: NextPage = () => {
   const blogPosts = [
     {
       id: 1,

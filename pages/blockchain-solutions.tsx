@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { ArrowRight, Users, Award, Shield } from 'lucide-react'
 import Layout from '../components/Layout'
 
-export default function BlockchainSolutions() {
+function BlockchainSolutions() {
   return (
     <>
 <Head>
@@ -34,28 +34,28 @@ export default function BlockchainSolutions() {
             </div>
           </div>
         </section>
-,
-        {/*   */}"
-        <section className="py-20" bg-white">"
-          <div className="container mx-auto px-4>"
-            <div className="text-center" mb-16">"
-              <h2 className="text-4xl font-bold text-gray-900 mb-4>Our Blockchain Services</h2>"
-              <p className="text-xl" text-gray-600 max-w-2xl mx-auto">
+
+        {/* Services Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Blockchain Services</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Comprehensive blockchain solutions tailored to your business needs,
               </p>
-            </div>"
-            <div className="grid md: gri d-cols-2 lg: gri d-cols-4 gap-8>,
-              {services.map((service, index) => ("
-                <div key="{index}" className="bg-white" border border-gray-200 rounded-xl p-6 hover: shado w-lg transition-shadow duration-300">"
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4>"
-                    <service.icon className="w-8" h-8 text-white" />
-                  </div>",
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3>{service.title}</h3>"
-                  <p className="text-gray-600" mb-4">{service.description}</p>"
-                  <ul className="space-y-2>
-                    {service.features.map((feature, i) => ("
-                      <li key="{i}" className="flex" items-center text-sm text-gray-600">"
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0  />
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {services.map((service, index) => (
+                <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, i) => (
+                      <li key={i} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -116,5 +116,4 @@ export default function BlockchainSolutions() {
     </>
   )
 }
-"
 export default BlockchainSolutions

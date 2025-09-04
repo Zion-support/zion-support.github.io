@@ -3,7 +3,7 @@ import Header from './Header'
 import Footer from './Footer'
 
 interface LayoutProps {
-  children: Reac t.ReactNode;
+  children: React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
@@ -25,17 +25,9 @@ const Layout = ({
         <meta name="viewport" content="width=device-width, initial-scale=1"  />
         <link rel="icon" href="/favicon.ico"  />
       </Head>
-<<<<<<< HEAD
-      <Header  />
+      <Header />
       {children}
-      <Footer  />
-=======
-      <EnhancedNavigation />
-      <main>
-        {children}
-      </main>
-      <EnhancedFooter />
->>>>>>> merge-all-prs-20250904-105408
+      <Footer />
     </>
   )
 }

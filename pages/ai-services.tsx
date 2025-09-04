@@ -79,7 +79,7 @@ export default function AIServices() {
     {
       title: 'Intelligent Document Processing',
       description: 'AI-powered document analysis, extraction, and processing for business automation',
-      icon: FileTex t,
+      icon: FileText,
       features: [
         'Automated data extraction from PDFs and forms',
         'Document classification and routing',
@@ -94,7 +94,7 @@ export default function AIServices() {
     {
       title: 'AI-Powered Talent Matching',
       description: 'Advanced recruitment platform with AI-driven candidate screening and matching',
-      icon: User s,
+      icon: Users,
       features: [
         'Resume parsing and skill extraction',
         'Cultural fit and personality analysis',
@@ -109,7 +109,7 @@ export default function AIServices() {
     {
       title: 'Computer Vision Solutions',
       description: 'Image and video analysis for quality control, security, and automation',
-      icon: Ey e,
+      icon: Eye,
       features: [
         'Real-time object detection and recognition',
         'Quality control and defect detection',
@@ -124,7 +124,7 @@ export default function AIServices() {
     {
       title: 'AI Chatbot & Virtual Assistant',
       description: 'Intelligent conversational AI for customer support and business automation',
-      icon: Bo t,
+      icon: Bot,
       features: [
         'Natural language understanding',
         'Multi-channel deployment (web, mobile, voice)',
@@ -139,7 +139,7 @@ export default function AIServices() {
     {
       title: 'Predictive Analytics Platform',
       description: 'AI-driven forecasting and predictive modeling for business intelligence',
-      icon: TrendingU p,
+      icon: TrendingUp,
       features: [
         'Sales forecasting and demand planning',
         'Customer churn prediction',
@@ -154,7 +154,7 @@ export default function AIServices() {
     {
       title: 'AI-Powered Search Engine',
       description: 'Intelligent search with semantic understanding and personalized results',
-      icon: Searc h,
+      icon: Search,
       features: [
         'Semantic search with natural language queries',
         'Personalized search results',
@@ -169,7 +169,7 @@ export default function AIServices() {
     {
       title: 'AI Voice & Speech Processing',
       description: 'Advanced voice recognition, synthesis, and real-time translation services',
-      icon: Mi c,
+      icon: Mic,
       features: [
         'Real-time speech-to-text with 99% accuracy',
         'Multi-language voice synthesis',
@@ -185,7 +185,7 @@ export default function AIServices() {
     {
       title: 'AI-Powered Fraud Detection',
       description: 'Real-time fraud prevention and risk assessment using machine learning',
-      icon: Shiel d,
+      icon: Shield,
       features: [
         'Real-time transaction monitoring',
         'Behavioral pattern analysis',
@@ -201,7 +201,7 @@ export default function AIServices() {
     {
       title: 'AI Recommendation Engine',
       description: 'Personalized recommendation system for e-commerce, content, and services',
-      icon: Sta r,
+      icon: Star,
       features: [
         'Collaborative and content-based filtering',
         'Real-time personalization',
@@ -217,7 +217,7 @@ export default function AIServices() {
     {
       title: 'AI-Powered Video Analytics',
       description: 'Intelligent video processing for security, marketing, and business insights',
-      icon: Vide o,
+      icon: Video,
       features: [
         'Real-time video object detection',
         'Facial recognition and tracking',
@@ -233,7 +233,7 @@ export default function AIServices() {
     {
       title: 'AI Process Mining & Optimization',
       description: 'Intelligent process analysis and optimization for business workflows',
-      icon: Setting s,
+      icon: Settings,
       features: [
         'Automated process discovery',
         'Bottleneck identification and analysis',
@@ -249,7 +249,7 @@ export default function AIServices() {
     {
       title: 'AI-Powered Supply Chain Optimization',
       description: 'Intelligent supply chain management with predictive analytics and automation',
-      icon: Networ k,
+      icon: Network,
       features: [
         'Demand forecasting and planning',
         'Supplier risk assessment',
@@ -265,7 +265,7 @@ export default function AIServices() {
     {
       title: 'AI Customer Sentiment Analysis',
       description: 'Real-time customer sentiment monitoring across all communication channels',
-      icon: MessageSquar e,
+      icon: MessageSquare,
       features: [
         'Multi-channel sentiment monitoring',
         'Real-time emotion detection',
@@ -281,7 +281,7 @@ export default function AIServices() {
     {
       title: 'AI-Powered Code Generation',
       description: 'Intelligent code generation and software development assistance',
-      icon: Cod e,
+      icon: Code,
       features: [
         'Automated code generation from specifications',
         'Code review and optimization suggestions',
@@ -489,19 +489,19 @@ export default function AIServices() {
   ];
 
   const aiTechnologies = [
-    { name: 'Machine Learning', icon: Brai n, description: 'Custom ML models and algorithms' },
-    { name: 'Natural Language Processing', icon: MessageSquar e, description: 'Text analysis and generation' },
-    { name: 'Computer Vision', icon: Ey e, description: 'Image and video processing' },
-    { name: 'Deep Learning', icon: Cp u, description: 'Neural networks and deep architectures' },
-    { name: 'Reinforcement Learning', icon: Targe t, description: 'Autonomous decision making' },
-    { name: 'Generative AI', icon: FileTex t, description: 'Content creation and synthesis' }
+    { name: 'Machine Learning', icon: Brain, description: 'Custom ML models and algorithms' },
+    { name: 'Natural Language Processing', icon: MessageSquare, description: 'Text analysis and generation' },
+    { name: 'Computer Vision', icon: Eye, description: 'Image and video processing' },
+    { name: 'Deep Learning', icon: Cpu, description: 'Neural networks and deep architectures' },
+    { name: 'Reinforcement Learning', icon: Target, description: 'Autonomous decision making' },
+    { name: 'Generative AI', icon: FileText, description: 'Content creation and synthesis' }
   ];
 
   const benefits = [
     {
       title: 'Increased Efficiency',
       description: 'Automate repetitive tasks and processes',
-      icon: Za p,
+      icon: Zap,
       stat: '80%'
     },
     {

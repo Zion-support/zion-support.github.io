@@ -20,7 +20,8 @@
     "incremental": false,
     "baseUrl": ".",
     "allowJs": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "noEmit": true
   },
   "include": [
     "next-env.d.ts",
