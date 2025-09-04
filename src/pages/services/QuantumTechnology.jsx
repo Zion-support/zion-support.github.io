@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Box, Cpu, Zap, Globe, Rocket, Shield } from 'lucide-react';
 const QuantumTechnology = () => {

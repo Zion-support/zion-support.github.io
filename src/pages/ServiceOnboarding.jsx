@@ -1,4 +1,3 @@
-import React from "react";
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
