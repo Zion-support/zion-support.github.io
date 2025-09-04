@@ -15,9 +15,10 @@ const Loading: React.FC<LoadingProps> = ({
     lg: 'w-12 h-12'
   }
   return (
-    <div className="flex flex-col items-center justify-center p-8">
+    <div className="flex flex-col items-center justify-center p-8 min-h-screen bg-slate-950">
       <div className={`${sizeClasses[size]} animate-spin rounded-full border-4 border-slate-300 border-t-blue-600`}></div>
       <p className="mt-4 text-slate-400 text-center">{message}</p>
+      <div className="text-slate-500 text-sm mt-2">Zion Tech Group</div>
     </div>
   );
 }
