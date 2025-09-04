@@ -44,10 +44,12 @@ function Header(): any {
         
         <div className="header-nav-links">
           <Link href="/" className="header-nav-link">Home</Link>
-          <Link href="/solutions" className="header-nav-link">Solutions</Link>
-          <Link href="/services" className="header-nav-link">Services</Link>
           <Link href="/about" className="header-nav-link">About</Link>
-          <Link href="/careers" className="header-nav-link">Careers</Link>
+          <Link href="/services" className="header-nav-link">Services</Link>
+          <Link href="/micro-saas" className="header-nav-link">Micro SaaS</Link>
+          <Link href="/ai-services" className="header-nav-link">AI Services</Link>
+          <Link href="/it-services" className="header-nav-link">IT Services</Link>
+          <Link href="/pricing" className="header-nav-link">Pricing</Link>
           <Link href="/contact" className="header-nav-cta">Contact</Link>
         </div>
 
@@ -67,10 +69,12 @@ function Header(): any {
       
       <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
         <Link href="/" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-        <Link href="/solutions" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Solutions</Link>
-        <Link href="/services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Services</Link>
         <Link href="/about" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>About</Link>
-        <Link href="/careers" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Careers</Link>
+        <Link href="/services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Services</Link>
+        <Link href="/micro-saas" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Micro SaaS</Link>
+        <Link href="/ai-services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>AI Services</Link>
+        <Link href="/it-services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>IT Services</Link>
+        <Link href="/pricing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
         <Link href="/contact" className="header-nav-cta" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
       </div>
     </header>
