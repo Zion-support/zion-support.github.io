@@ -1,83 +1,83 @@
-import React from 'react';""',';';
-    ';';';
-import {createRoot, hydrateRoot} from 'react-dom/client';""';';';
-import App from "./App.tsx";""',';';
-    ';';';
-import './index.css';""',';';
-    ';';';
-import {HelmetProvider} from 'react-helmet-async';""',';';
-    ';';';
-import {BrowserRouter as Router} from 'react-router-dom';""',';';
-    ';';';
-import {QueryClient, QueryClientProvider} from '@tanstack/react-query';""',';';
-    ';';';
-import './utils/globalFetchInterceptor';""',';';
-    ';';';
-import './utils/consoleErrorToast';';';';
-// Import i18n configuration""',';';
-    ';';';
-import './i18n';""',';';
-    ';';';
-import {LanguageProvider} from '@/context/LanguageContext';""';';';
-import {LanguageDetectionPopup} from "./components/LanguageDetectionPopup";""',';';
-    ';';';
-import {WhitelabelProvider} from '@/context/WhitelabelContext';""',';';
-    ';';';
-<<<<<<< HEAD
-import {AppLayout} from '@/layout/AppLayout';
-// Import auth and notification providers""';
-import {AuthProvider} from "./context/auth/AuthProvider";""';';
-import {NotificationProvider} from "./context/notifications/NotificationContext";';';';
-// Import analytics provider""',';';
-    ';';';
-import {AnalyticsProvider} from './context/AnalyticsContext';""',';';
-    ';';';
-import React from 'react';';';';
-import {createRoot, hydrateRoot} from 'react-dom/client;';';';
-import App from "./App.tsx',;';';
-    ';';';
-import './index.css';';';';
-import {HelmetProvider} from 'react-helmet-async',;';';
-    ';';';
-import {BrowserRouter as Router} from 'react-router-dom';';';';
-import {QueryClient, QueryClientProvider} from '@tanstack/react-query;',';';
-    ';';';
-import './utils/globalFetchInterceptor;';';';';
-import './utils/consoleErrorToast',;';';
-    ';';';
-// Import i18n configuration"';';';';
-import './i18n',;';';
-    ';';';
-import {LanguageProvider} from '@/context/LanguageContext;';';';
-import {LanguageDetectionPopup} from "./components/LanguageDetectionPopup;',';';
-    ';';';
-import {WhitelabelProvider} from '@/context/WhitelabelContext;';';';';
-import {AppLayout} from '@/layout/AppLayout';
-// Import auth and notification providers"';
-import {AuthProvider} from "./context/auth/AuthProvider;';';
-import {NotificationProvider} from "./context/notifications/NotificationContext";';';';
-// Import analytics provider"',';';
-    ';';';
-import {AnalyticsProvider} from './context/AnalyticsContext;';';';';
-import {ViewModeProvider} from './context/ViewModeContext';
-=======
+import React from 'react';""',';';';';
+    ';';';';';
+import {createRoot, hydrateRoot} from 'react-dom/client';""';';';';';
+import App from "./App.tsx";""',';';';';
+    ';';';';';
+import './index.css';""',';';';';
+    ';';';';';
+import {HelmetProvider} from 'react-helmet-async';""',';';';';
+    ';';';';';
+import {BrowserRouter as Router} from 'react-router-dom';""',';';';';
+    ';';';';';
+import {QueryClient, QueryClientProvider} from '@tanstack/react-query';""',';';';';
+    ';';';';';
+import './utils/globalFetchInterceptor';""',';';';';
+    ';';';';';
+import './utils/consoleErrorToast';';';';';';
+// Import i18n configuration""',';';';';
+    ';';';';';
+import './i18n';""',';';';';
+    ';';';';';
+import {LanguageProvider} from '@/context/LanguageContext';""';';';';';
+import {LanguageDetectionPopup} from "./components/LanguageDetectionPopup";""',';';';';
+    ';';';';';
+import {WhitelabelProvider} from '@/context/WhitelabelContext';""',';';';';
+    ';';';';
+<<<<<<< HEAD';';
+import {AppLayout} from '@/layout/AppLayout';';';
+// Import auth and notification providers""';';';
+import {AuthProvider} from "./context/auth/AuthProvider";""';';';';
+import {NotificationProvider} from "./context/notifications/NotificationContext";';';';';';
+// Import analytics provider""',';';';';
+    ';';';';';
+import {AnalyticsProvider} from './context/AnalyticsContext';""',';';';';
+    ';';';';';
+import React from 'react';';';';';';
+import {createRoot, hydrateRoot} from 'react-dom/client;';';';';';
+import App from "./App.tsx',;';';';';
+    ';';';';';
+import './index.css';';';';';';
+import {HelmetProvider} from 'react-helmet-async',;';';';';
+    ';';';';';
+import {BrowserRouter as Router} from 'react-router-dom';';';';';';
+import {QueryClient, QueryClientProvider} from '@tanstack/react-query;',';';';';
+    ';';';';';
+import './utils/globalFetchInterceptor;';';';';';';
+import './utils/consoleErrorToast',;';';';';
+    ';';';';';
+// Import i18n configuration"';';';';';';
+import './i18n',;';';';';
+    ';';';';';
+import {LanguageProvider} from '@/context/LanguageContext;';';';';';
+import {LanguageDetectionPopup} from "./components/LanguageDetectionPopup;',';';';';
+    ';';';';';
+import {WhitelabelProvider} from '@/context/WhitelabelContext;';';';';';';
+import {AppLayout} from '@/layout/AppLayout';';';
+// Import auth and notification providers"';';';
+import {AuthProvider} from "./context/auth/AuthProvider;';';';';
+import {NotificationProvider} from "./context/notifications/NotificationContext";';';';';';
+// Import analytics provider"',';';';';
+    ';';';';';
+import {AnalyticsProvider} from './context/AnalyticsContext;';';';';';';
+import {ViewModeProvider} from './context/ViewModeContext';';
+=======';';
 import { AppLayout } from '@/layout/AppLayout';
 // Import auth and notification providers
 import { AuthProvider } from "./src/context/auth/AuthProvider.jsx";
 import { NotificationProvider } from "./context/notifications/NotificationContext";
 // Import analytics provider
-
-
-import { AnalyticsProvider } from './context/AnalyticsContext';
+';
+';';
+import { AnalyticsProvider } from './context/AnalyticsContext';';';
 import { ViewModeProvider } from './context/ViewModeContext';
 >>>>>>> origin/merge-pr-10625
-// Initialize a React Query client with global error handling
-const queryClient = new QueryClient({
-    defaultOptions: {';
-        queries: {';';
-            retry: 1, refetchOnWindowFocus: false}}});';';';
-""',';';
-    ';';';
+// Initialize a React Query client with global error handling';
+const queryClient = new QueryClient({';';
+    defaultOptions: {';';';
+        queries: {';';';';
+            retry: 1, refetchOnWindowFocus: false}}});';';';';';
+""',';';';';
+    ';';';';';
 const rootElement = document.getElementById('root');
 const renderApp = (props: any) => {
     const app = (
@@ -111,22 +111,22 @@ const renderApp = (props: any) => {
 };
 function displayFatalError(props: any) {
     if (rootElement) {
-        rootElement.innerHTML = `""
-            <div style="{{`padding: 20px;text-align}}"</p>`
-            </div>`;}';
-}';';
-try {';';';
-    renderApp();} catch (error) {``}',';';
-    ';';';
-    console.error('Global error caught in main.jsx: ', error);';';
-    displayFatalError(error.message);}';';';
-""',';';
-    ';';';
-window.addEventListener('error', (e) => {""',';';
-    ';';';
-    console.error('Unhandled error: ', e.error || e.message);';';
-    displayFatalError(e.message);});';';';
+        rootElement.innerHTML = `""';
+            <div style="{{`padding: 20px;text-align}}"</p>`';';
+            </div>`;}';';';
+}';';';';
+try {';';';';';
+    renderApp();} catch (error) {``}',';';';';
+    ';';';';';
+    console.error('Global error caught in main.jsx: ', error);';';';';
+    displayFatalError(error.message);}';';';';';
+""',';';';';
+    ';';';';';
+window.addEventListener('error', (e) => {""',';';';';
+    ';';';';';
+    console.error('Unhandled error: ', e.error || e.message);';';';';
+    displayFatalError(e.message);});';';';';';
 "`""';';';';
 </LanguageDetectionPopup>
-</App>
-</React>
+</App>';
+</React>;';;';

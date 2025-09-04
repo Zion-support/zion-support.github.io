@@ -18,21 +18,18 @@ class EnhancedDeploymentAutomation {
         status: 'pending',
         steps: []
       }
-    };
-  }
+    }}
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+      fs.mkdirSync(this.reportsDir, { recursive: true })}
   }
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
     console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
-  }
+    fs.appendFileSync(this.logFile, logMessage + '\n')}
 
   async runCommand(command, description, timeout = 60000) {
     this.log(`🚀 Executing: ${description}`);
@@ -61,8 +58,7 @@ class EnhancedDeploymentAutomation {
         timestamp: new Date().toISOString()
       });
       
-      return { success: true, output: result };
-    } catch (error) {
+      return { success: true, output: result }} catch (error) {
       this.log(`❌ Failed: ${description} - ${error.message}`, 'ERROR');
       this.results.summary.failed++;
       this.results.details.push({
@@ -79,8 +75,7 @@ class EnhancedDeploymentAutomation {
         timestamp: new Date().toISOString()
       });
       
-      return { success: false, error: error.message };
-    }
+      return { success: false, error: error.message }}
   }
 
   async preDeploymentChecks() {
@@ -106,8 +101,7 @@ class EnhancedDeploymentAutomation {
     ];
 
     for (const check of checks) {
-      await this.runCommand(check.command, check.description, 10000);
-    }
+      await this.runCommand(check.command, check.description, 10000)}
   }
 
   async runQualityChecks() {
@@ -129,8 +123,7 @@ class EnhancedDeploymentAutomation {
     ];
 
     for (const check of qualityChecks) {
-      await this.runCommand(check.command, check.description, 30000);
-    }
+      await this.runCommand(check.command, check.description, 30000)}
   }
 
   async runTests() {
@@ -144,8 +137,7 @@ class EnhancedDeploymentAutomation {
     ];
 
     for (const test of testCommands) {
-      await this.runCommand(test.command, test.description, 60000);
-    }
+      await this.runCommand(test.command, test.description, 60000)}
   }
 
   async buildApplication() {
@@ -174,8 +166,7 @@ class EnhancedDeploymentAutomation {
     ];
 
     for (const opt of optimizationCommands) {
-      await this.runCommand(opt.command, opt.description, 120000);
-    }
+      await this.runCommand(opt.command, opt.description, 120000)}
   }
 
   async commitChanges() {
@@ -193,8 +184,7 @@ class EnhancedDeploymentAutomation {
     ];
 
     for (const commit of commitCommands) {
-      await this.runCommand(commit.command, commit.description, 30000);
-    }
+      await this.runCommand(commit.command, commit.description, 30000)}
   }
 
   async pushToRepository() {
@@ -208,8 +198,7 @@ class EnhancedDeploymentAutomation {
     ];
 
     for (const push of pushCommands) {
-      await this.runCommand(push.command, push.description, 60000);
-    }
+      await this.runCommand(push.command, push.description, 60000)}
   }
 
   async mergeToMain() {
@@ -235,8 +224,7 @@ class EnhancedDeploymentAutomation {
     ];
 
     for (const merge of mergeCommands) {
-      await this.runCommand(merge.command, merge.description, 60000);
-    }
+      await this.runCommand(merge.command, merge.description, 60000)}
   }
 
   async postDeploymentTasks() {
@@ -254,8 +242,7 @@ class EnhancedDeploymentAutomation {
     ];
 
     for (const task of postTasks) {
-      await this.runCommand(task.command, task.description, 30000);
-    }
+      await this.runCommand(task.command, task.description, 30000)}
   }
 
   async generateDeploymentReport() {
@@ -277,8 +264,7 @@ class EnhancedDeploymentAutomation {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`📊 Deployment report generated: ${reportPath}`);
     
-    return reportPath;
-  }
+    return reportPath}
 
   async run() {
     this.log('🎯 Starting Enhanced Deployment Automation');
@@ -318,8 +304,7 @@ class EnhancedDeploymentAutomation {
         reportPath,
         summary: this.results.summary,
         deployment: this.results.deployment
-      };
-    } catch (error) {
+      }} catch (error) {
       this.results.deployment.status = 'failed';
       this.log(`💥 Deployment failed: ${error.message}`, 'ERROR');
       
@@ -331,8 +316,7 @@ class EnhancedDeploymentAutomation {
         reportPath,
         summary: this.results.summary,
         deployment: this.results.deployment
-      };
-    }
+      }}
   }
 }
 
@@ -340,8 +324,6 @@ class EnhancedDeploymentAutomation {
 if (require.main === module) {
   const deployment = new EnhancedDeploymentAutomation();
   deployment.run().then(result => {
-    process.exit(result.success ? 0 : 1);
-  });
-}
+    process.exit(result.success ? 0 : 1)})}
 
 module.exports = EnhancedDeploymentAutomation;

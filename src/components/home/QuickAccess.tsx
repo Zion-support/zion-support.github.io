@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react';';';
 import { motion  } from 'framer-motion';
 export default function Page(props: any) {
 ,"
@@ -246,9 +246,9 @@ export default function Page(props: any) {
           initial={{ opacity: 0, y: 2 0 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}"
-          className="text-center mt-12"
-"
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">;'"
+          className="text-center mt-12"';
+"';';
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">;'"';';
             <h3 className="text-2xl font-bold text-white mb-4">Can't Find What You're Looking For?</h3>"
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Our team of experts is ready to help you find the perfect solution or create a custom one for your specific needs
@@ -290,8 +290,8 @@ export default function Page(props: any) {
 }}
           viewport={{ once: tru e }}
           className="text-center"
-        >
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">
+        >';
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">';';
             <h3 className="text-2xl font-bold text-white mb-4">Can't Find What You're Looking For?</h3>            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Our team of experts is ready to help you find the perfect solution or create a custom one for your specific needs
             </p>"
@@ -312,20 +312,12 @@ export default function Page(props: any) {
         </motion.div>;
       </div>;
     </section>;
-  )};
-;export { QuickAccess };
+  )};';
+;export { QuickAccess };';';
 '"`
 
 </motion>
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
+</motion>';
+</motion>;';;';

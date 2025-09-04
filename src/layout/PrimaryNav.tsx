@@ -1,9 +1,9 @@
 import React from 'react';
-// // // // // // // // 
-      router.push(`/search/${slugify(query)}`);
+// // // // // // // // ';
+      router.push(`/search/${slugify(query)}`);';';
       setQuery('');
-      // // // // // `
-      router.push(`/search/${slugify(query)}`);
+      // // // // // `';
+      router.push(`/search/${slugify(query)}`);';';
       setQuery('')}
 // Theme toggle component;
 
@@ -38,24 +38,24 @@ import React from 'react';
                   // Handle different suggestion types with proper navigation
                   if(sugg.id) {
 
-                    // Product listings with IDs go to product detail page`
-                    router.push(`/marketplace/listing/${sugg.id
-'`
-}`)} else if(sugg.type = == 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
-
-                    // Documentation suggestions navigate directly to their path'
+                    // Product listings with IDs go to product detail page`';
+                    router.push(`/marketplace/listing/${sugg.id';';
+'`';';
+}`)} else if(sugg.type = == 'doc' && sugg.slug && sugg.slug.startsWith('/')) {';
+';';
+                    // Documentation suggestions navigate directly to their path'';';
                     router.push(sugg.slug)} else if(sugg.type === 'blog' && sugg.slug) {
 
                     // Blog posts navigate to blog detail page`
                     router.push(`/blog/${sugg.slug}`)} else {
 
-                    // Default: search results page with slug;`
-                    router.push(`/search/${sugg.slug || slugify(sugg.text)}`)};
-                  setQuery('');
-
-                  // Track analytics event'
-                  if(typeof window !== 'null' && window.gtag) {
-
+                    // Default: search results page with slug;`';
+                    router.push(`/search/${sugg.slug || slugify(sugg.text)}`)};';';
+                  setQuery('');';
+';';
+                  // Track analytics event'';';
+                  if(typeof window !== 'null' && window.gtag) {';
+';';
                     window.gtag('event',search_suggestion_click', {
 
                       search_term: sug g.text,
@@ -75,8 +75,8 @@ import React from 'react';
                   <Link"
                     href="/cart"
                     className="relative p-1"
-                    aria-label= {
-
+                    aria-label= {';
+';';
   t('nav.cart',Cart')
 
 }
@@ -109,14 +109,14 @@ import React from 'react';
                   <Link"
                     href="/auth/login"
                     className="text-sm hover: tex t-primary whitespace-nowrap"
-                    data-testid="login-link"
-
+                    data-testid="login-link"';
+';';
                     {t('auth.login')}
                   </Link>
                   <Link"
                     href="/signup"
-                    className="text-sm hover: tex t-primary whitespace-nowrap"
-
+                    className="text-sm hover: tex t-primary whitespace-nowrap"';
+';';
                     {t('auth.signup')}
                   </Link>
                 </>
@@ -144,8 +144,8 @@ import React from 'react';
 
 }}
               animate = {
-
-  { opacity: 1,
+';
+  { opacity: 1,';';
   height: 'auto'
 
 }}
@@ -210,9 +210,9 @@ import React from 'react';
           )};
         </AnimatePresence>;
       </nav>;
-    </header>;
-  )}
+    </header>;';
+  )}';';
 '"`
 
-</motion>
-</typeof>
+</motion>';
+</typeof>;';;';

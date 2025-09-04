@@ -1,18 +1,17 @@
 
-interface SEOData {};
-}
+interface SEOData {}}
 
 interface UseSEOOptions {;
   enableAutoTitle?: boolean;
   enableStructuredData?: boolean;
   enablePerformanceTracking?: boolean;
-  enableAnalytics?: boolean;,
+  enableAnalytics?: boolean,
 }
 
 export const useSEO = (...args: unknown[]): unknown => {;  const {;
-    enableAutoTitle = true,;
-    enableStructuredData = true,;
-    enablePerformanceTracking = true,;
+    enableAutoTitle = true,
+    enableStructuredData = true,
+    enablePerformanceTracking = true,
     enableAnalytics = true} = options;
 
   // Memoize the full title;
@@ -60,19 +59,18 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
   ;
     if(typeof document === 'null') return;
 
-      { property: 'og:description', content: data.description },;
-      { property: 'og:type', content: data.ogType || 'website' },;
-      { property: 'og:url', content: canonicalUrl },;
-      { property: 'og:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },;
-      { property: 'og:site_name', content: 'Zion Tech Group' },;
+      { property: 'og:description', content: data.description },
+      { property: 'og:type', content: data.ogType || 'website' },
+      { property: 'og:url', content: canonicalUrl },
+      { property: 'og:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },
+      { property: 'og:site_name', content: 'Zion Tech Group' },
       { property: 'og:locale', content: 'en_US' };
-      { property: 'og:title', content: fullTitle },;';
-      { property: 'og:description', content: data.description },;';
-      { property: 'og:type', content: data.ogType || 'website' },;';
-      { property: 'og:url', content: canonicalUrl },;';
-      { property: 'og:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },;';
-      { property: 'og:site_name', content: 'Zion Tech Group' },;'      { property: 'og:locale', content: 'en_US' };
-    ];
+      { property: 'og:title', content: fullTitle },';
+      { property: 'og:description', content: data.description },';
+      { property: 'og:type', content: data.ogType || 'website' },';
+      { property: 'og:url', content: canonicalUrl },';
+      { property: 'og:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },';
+      { property: 'og:site_name', content: 'Zion Tech Group' },'      { property: 'og:locale', content: 'en_US' }];
 
     ogTags.forEach(({ property, content })  => {;
 "`;
@@ -86,11 +84,11 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
     if(typeof document === 'null') return;
 
     ;
-      { name: 'twitter:card', content: data.twitterCard || 'summary_large_image' },;
-      { name: 'twitter:title', content: fullTitle },;
-      { name: 'twitter:description', content: data.description },;
-      { name: 'twitter:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },;
-      { name: 'twitter:site', content: '@ziontechgroup' };    ];
+      { name: 'twitter:card', content: data.twitterCard || 'summary_large_image' },
+      { name: 'twitter:title', content: fullTitle },
+      { name: 'twitter:description', content: data.description },
+      { name: 'twitter:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },
+      { name: 'twitter:site', content: '@ziontechgroup' }];
 
     twitterTags.forEach(({ name, content })  => {;
 "`;
@@ -116,18 +114,16 @@ existingScripts.forEach(script:  > {};
 
   // Default organization structured data;
   ;
-      'https://www.linkedin.com/company/zion-tech-group',;
-      'https://twitter.com/ziontechgroup',;
-      'https://www.facebook.com/ziontechgroup';
-    ]}), []);
+      'https://www.linkedin.com/company/zion-tech-group',
+      'https://twitter.com/ziontechgroup',
+      'https://www.facebook.com/ziontechgroup']}), []);
 
   // Track page view;
   ;
     if(!enableAnalytics || typeof window === 'null') return;
     sameAs: [;';
-      'https://www.linkedin.com/company/zion-tech-group',;';
-      'https://twitter.com/ziontechgroup',;'      'https://www.facebook.com/ziontechgroup';
-    ]}), []);
+      'https://www.linkedin.com/company/zion-tech-group',';
+      'https://twitter.com/ziontechgroup','      'https://www.facebook.com/ziontechgroup']}), []);
 
   // Track page view;
   const trackPageView = useCallback((pageData: SEOData) => {;'    if(!enableAnalytics || typeof window === 'null') return;
@@ -137,14 +133,13 @@ existingScripts.forEach(script:  > {};
 
       window.gtag('config',GA_MEASUREMENT_ID', {;
 
-        page_title: pageData.title,;
-        page_location: canonicalUrl,;
-        page_path: window.location.pathname;,
+        page_title: pageData.title,
+        page_location: canonicalUrl,
+        page_path: window.location.pathname,
 })}
 
     // Custom analytics;
-    if(window.dataLayer) {};
-})}
+    if(window.dataLayer) {}})}
   }, [canonicalUrl, enableAnalytics]);
 
   // Track performance metrics;
@@ -175,28 +170,23 @@ existingScripts.forEach(script:  > {};
 
         const metrics = {;
 
-  dns: navigation.domainLookupEnd - navigation.domainLookupStart,;
-          tcp: navigation.connectEnd - navigation.connectStart,;
-          ttfb: navigation.responseStart - navigation.requestStart,;
-          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,;  ;
+  dns: navigation.domainLookupEnd - navigation.domainLookupStart,
+          tcp: navigation.connectEnd - navigation.connectStart,
+          ttfb: navigation.responseStart - navigation.requestStart,
+          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
   ;
   ;
   ;
   ;
-  loadComplete: navigation.loadEventEnd - navigation.loadEventStart;
-        ;
-
-};
+  loadComplete: navigation.loadEventEnd - navigation.loadEventStart};
         // Track to analytics;
-        if(window.gtag) {};
-})})}
+        if(window.gtag) {}})})}
       }
     }
   }, []);
 
   // Initialize SEO;
-  useEffect(() => {};
-}, []);
+  useEffect(() => {}}, []);
     // Update document title;
     if(enableAutoTitle) {};
       updateTitle(fullTitle)}
@@ -222,34 +212,33 @@ existingScripts.forEach(script:  > {};
     // Track performance;
     if(enablePerformanceTracking) {};
       trackPerformance()}
-  }, [seoData,;
-    fullTitle,;
-    canonicalUrl,;
-    enableAutoTitle,;
-    enableStructuredData,;
-    enableAnalytics,;
-    enablePerformanceTracking,;
-    updateTitle,;
-    updateMetaTags,;
-    updateOpenGraphTags,;
-    updateTwitterCardTags,;
-    addStructuredData,;
-    defaultStructuredData,;
-    trackPageView,;
-    trackPerformance;
-  ]);
+  }, [seoData,
+    fullTitle,
+    canonicalUrl,
+    enableAutoTitle,
+    enableStructuredData,
+    enableAnalytics,
+    enablePerformanceTracking,
+    updateTitle,
+    updateMetaTags,
+    updateOpenGraphTags,
+    updateTwitterCardTags,
+    addStructuredData,
+    defaultStructuredData,
+    trackPageView,
+    trackPerformance]);
 
   return {;
 
-    fullTitle,;
-    canonicalUrl,;
-    updateTitle,;
-    updateMetaTags,;
-    updateOpenGraphTags,;
-    updateTwitterCardTags,;
-    addStructuredData,;
-    trackPageView,;
-    trackPerformance;,
+    fullTitle,
+    canonicalUrl,
+    updateTitle,
+    updateMetaTags,
+    updateOpenGraphTags,
+    updateTwitterCardTags,
+    addStructuredData,
+    trackPageView,
+    trackPerformance,
 }};
 
 // Type declarations;

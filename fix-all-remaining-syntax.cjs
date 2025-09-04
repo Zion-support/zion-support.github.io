@@ -12,8 +12,7 @@ function fixSyntaxErrors(filePath) {
       { pattern: /style=\{\{\s*([^}]+)\s*\}\}/g, replacement: (match, styleContent) => {
         // Fix missing commas in style objects
         const fixed = styleContent.replace(/(\w+):\s*([^,}]+)\s+(\w+):/g, '$1: $2,\n            $3:');
-        return `style={{\n            ${fixed}\n          }}`;
-      }},
+        return `style={{\n            ${fixed}\n          }}`}},
       
       // Fix malformed variable names
       { pattern: /\bmaxWidth\b/g, replacement: 'maxWidth' },
@@ -57,20 +56,16 @@ function fixSyntaxErrors(filePath) {
     fixes.forEach(fix => {
       if (fix.pattern.test(content)) {
         content = content.replace(fix.pattern, fix.replacement);
-        modified = true;
-      }
+        modified = true}
     });
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed syntax errors in: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
+      return true}
+    return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 // Get all TypeScript/JavaScript files in pages directory
@@ -83,14 +78,11 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
     const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-      files = files.concat(getAllFiles(fullPath, extensions));
-    } else if (extensions.some(ext => item.endsWith(ext))) {
-      files.push(fullPath);
-    }
+      files = files.concat(getAllFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath)}
   }
   
-  return files;
-}
+  return files}
 
 // Main execution
 const pagesFiles = getAllFiles('./pages');
@@ -100,8 +92,7 @@ console.log('Starting comprehensive syntax error fixes...');
 
 pagesFiles.forEach(file => {
   if (fixSyntaxErrors(file)) {
-    fixedCount++;
-  }
+    fixedCount++}
 });
 
 console.log(`Fixed syntax errors in ${fixedCount} files.`);

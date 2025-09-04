@@ -497,14 +497,14 @@ x: -10}}
                   >&apos;&apos,&apos;&apos;"
                     <div className="{"p-6" rounded-lg bg-gradient-to-br ${category.color} text-white transition-all duration-300 group-hover: scal e-105"}>&apos;&apos,&apos;&apos,"
                       <div className="&apos;flex" items-center gap-3 mb-4&apos;>"&apos;&apos,&apos;&apos;"
-                        <span className="&apos;text-2xl&apos;">{category.icon}&apos;</span>&apos;&apos,&apos;&apos,
+                        <span className="&apos;text-2xl&apos">{category.icon}&apos;</span>&apos;&apos,&apos;&apos,
                         <div>&apos;&apos,&apos;&apos,"
                           <h4 className="&apos;text-lg" font-semibold&apos;>{category.name}&apos;</h4>&apos;&apos,&apos;&apos,"
                           <p className="&apos;text-sm" opacity-90&apos;>{category.description}&apos;</p>
                         </div>
                       </div>&apos;&apos,
                       &apos;&apos,&apos;&apos,"
-                      <div className="&apos;space-y-2&apos;">
+                      <div className="&apos;space-y-2&apos">
                         {category.services.map((service, serviceIndex) => (&apos}"
   { duration: 0.3, """;""
   delay: categoryInde x * 0.1","}}"""";"
@@ -566,11 +566,11 @@ delay: serviceInde x * 0.05","}}"";"
   { duration: 0.2,"
   delay: serviceInde x * 0.05",&apos}}&apos;&apos,";"
                             className="&apos;flex" items-center justify-between p-2 rounded bg-white/20 hover: b g-white/30 transition-colors duration-200&apos,&apos,&apos;>"&apos;&apos,&apos;&apos;"
-                            <div className="&apos;flex-1&apos;">"&apos;&apos,&apos;&apos,",
+                            <div className="&apos;flex-1&apos">"&apos;&apos,&apos;&apos,",
                               <div className="&apos,font-medium" text-sm&apos,>{service.title}&apos;</div>&apos;&apos,&apos;&apos,"
                               <div className="&apos;text-xs" opacity-80&apos;>{service.description}&apos;</div>&apos;&apos,&apos;&apos,
                             </div>&apos;&apos,&apos;&apos,"
-                            <div className="&apos;text-right&apos;">"&apos;&apos,&apos;&apos;"
+                            <div className="&apos;text-right&apos">"&apos;&apos,&apos;&apos;"
                               <div className="&apos;text-xs" font-semibold&apos;>{service.pricing}&apos;</div>"
   { duration: 0.2, delay: serviceInde x * 0.05","}}"""";"
                             className = "flex items-center justify-between p-2 rounded bg-white/20 hover: b g-white/30 transition-colors duration-200""">""""""
@@ -743,15 +743,15 @@ Need: help choosing the right service?"""",,",
                       ✉️ <span: classNam e="font-medium">kleber@ziontechgroup.com</span>",,",
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,"
               <div className="&apos;mt-6" p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200&apos;>"&apos;&apos,&apos;&apos;"
-                <div className="&apos;text-center&apos;">"&apos;&apos,&apos;&apos;"
+                <div className="&apos;text-center&apos">"&apos;&apos,&apos;&apos;"
                   <p className="&apos;text-sm" text-gray-700 mb-2&apos;>"
                     Need help choosing the right service?&apos;&apos,&apos;&apos,
                   </p>&apos;&apos,&apos;&apos,"
                   <div className="&apos;flex" flex-col sm: fle x-row gap-2 justify-center text-sm&apos,>"&apos,&apos,&apos;&apos;"
-                    <span className="&apos;text-gray-600&apos;">"&apos;&apos,"
-                      📱&apos;&apos; <span className="&apos;font-medium&apos;">+1 302 464 0950&apos;</span>&apos;&apos,&apos;&apos,
+                    <span className="&apos;text-gray-600&apos">"&apos;&apos,"
+                      📱&apos;&apos; <span className="&apos;font-medium&apos">+1 302 464 0950&apos;</span>&apos;&apos,&apos;&apos,
                     </span>&apos;&apos,&apos;&apos,"
-                    <span className="&apos;text-gray-600&apos;">"&apos;&apos,",
+                    <span className="&apos;text-gray-600&apos">"&apos;&apos,",
                       ✉️&apos;&apos; <span className="&apos;font-medium&apos,">kleber@ziontechgroup.com&apos,</span>"
 """{/* comment */}"""""
               <div className = "mt-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200">""""
@@ -795,26 +795,15 @@ export { EnhancedServicesNavigation };
 </motion>
 </span>
 </div>
-</div>
-</div>
 </span>
 </div>
-</div>
-</div>
 </motion>
-</div>
-</div>
-</div>
-</div>
-</motion>
-</div>
 </div>
 </motion>
 </div>
 </motion>
 </div>
-</div>
-</div>
+</motion>
 </div>
 </span>
 </button>
@@ -824,9 +813,6 @@ export { EnhancedServicesNavigation };
 </motion>
 </div>
 </motion>
-</motion>
-</div>
 </div>
 </motion>
-</motion>
-</div>
+</div>;;

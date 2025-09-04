@@ -11,4 +11,4 @@ export default function ProductActions(props: any) {return (
       </div>
   );"}"
 
-</div>
+</div>;;

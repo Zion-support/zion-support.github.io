@@ -2,9 +2,5 @@ import React from 'react'; const [currentSlide, setCurrentSlide] = useState(0); 
 
 </button>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
+</motion>';
+</motion>;';;';

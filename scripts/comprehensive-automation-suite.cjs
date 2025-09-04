@@ -51,8 +51,7 @@ async function runComprehensiveAutomation() {
         automationSuite.metrics.totalTasks += 1;
         automationSuite.metrics.successfulTasks += 1;
 
-        console.log(`✅ ${task.name} completed in ${duration}ms`);
-      } catch (error) {
+        console.log(`✅ ${task.name} completed in ${duration}ms`)} catch (error) {
         const duration = Date.now() - taskStartTime;
 
         phase.tasks.push({
@@ -69,15 +68,13 @@ async function runComprehensiveAutomation() {
 
         if (task.critical) {
           phase.status = 'failed';
-          break;
-        }
+          break}
       }
     }
 
     phase.endTime = new Date().toISOString();
     if (phase.status === 'running') {
-      phase.status = phase.tasks.some(t => t.status === 'error') ? 'partial' : 'success';
-    }
+      phase.status = phase.tasks.some(t => t.status === 'error') ? 'partial' : 'success'}
 
     automationSuite.phases.push(phase);
 
@@ -85,8 +82,7 @@ async function runComprehensiveAutomation() {
     console.log(`   - Status: ${phase.status.toUpperCase()}`);
     console.log(`   - Tasks: ${phase.tasks.length}`);
     console.log(`   - Successful: ${phase.tasks.filter(t => t.status === 'success').length}`);
-    console.log(`   - Failed: ${phase.tasks.filter(t => t.status === 'error').length}`);
-  }
+    console.log(`   - Failed: ${phase.tasks.filter(t => t.status === 'error').length}`)}
 
   // Phase 1: System Health & Dependencies
   await runAutomationPhase('System Health & Dependencies', [
@@ -95,24 +91,21 @@ async function runComprehensiveAutomation() {
       critical: true,
       fn: async () => {
         execSync('npm install', { stdio: 'inherit' });
-        return { dependenciesInstalled: true };
-      },
+        return { dependenciesInstalled: true }},
     },
     {
       name: 'Health Check',
       critical: false,
       fn: async () => {
         execSync('node automation/health-check.cjs', { stdio: 'inherit' });
-        return { healthStatus: 'healthy' };
-      },
+        return { healthStatus: 'healthy' }},
     },
     {
       name: 'Security Scan',
       critical: false,
       fn: async () => {
         execSync('node automation/security-scanner.cjs', { stdio: 'inherit' });
-        return { securityStatus: 'secure' };
-      },
+        return { securityStatus: 'secure' }},
     },
   ]);
 
@@ -123,32 +116,28 @@ async function runComprehensiveAutomation() {
       critical: false,
       fn: async () => {
         execSync('node scripts/fix-syntax-errors.cjs', { stdio: 'inherit' });
-        return { syntaxFixed: true };
-      },
+        return { syntaxFixed: true }},
     },
     {
       name: 'TypeScript Type Check',
       critical: false,
       fn: async () => {
         execSync('npx tsc --noEmit', { stdio: 'inherit' });
-        return { typeCheckPassed: true };
-      },
+        return { typeCheckPassed: true }},
     },
     {
       name: 'ESLint Linting',
       critical: false,
       fn: async () => {
         execSync('npm run lint', { stdio: 'inherit' });
-        return { lintingPassed: true };
-      },
+        return { lintingPassed: true }},
     },
     {
       name: 'Advanced App Optimization',
       critical: false,
       fn: async () => {
         execSync('node scripts/advanced-app-optimizer.cjs', { stdio: 'inherit' });
-        return { optimizationCompleted: true };
-      },
+        return { optimizationCompleted: true }},
     },
   ]);
 
@@ -159,8 +148,7 @@ async function runComprehensiveAutomation() {
       critical: true,
       fn: async () => {
         execSync('npm run build', { stdio: 'inherit' });
-        return { buildSuccessful: true };
-      },
+        return { buildSuccessful: true }},
     },
     {
       name: 'Test Suite',
@@ -168,10 +156,8 @@ async function runComprehensiveAutomation() {
       fn: async () => {
         try {
           execSync('npm test', { stdio: 'inherit' });
-          return { testsPassed: true };
-        } catch (error) {
-          return { testsPassed: false, message: 'No tests configured or tests failed' };
-        }
+          return { testsPassed: true }} catch (error) {
+          return { testsPassed: false, message: 'No tests configured or tests failed' }}
       },
     },
     {
@@ -179,8 +165,7 @@ async function runComprehensiveAutomation() {
       critical: false,
       fn: async () => {
         execSync('node scripts/performance-monitor.cjs', { stdio: 'inherit' });
-        return { performanceMonitored: true };
-      },
+        return { performanceMonitored: true }},
     },
   ]);
 
@@ -191,8 +176,7 @@ async function runComprehensiveAutomation() {
       critical: false,
       fn: async () => {
         execSync('node scripts/smart-deployment-automation.cjs', { stdio: 'inherit' });
-        return { deploymentPrepared: true };
-      },
+        return { deploymentPrepared: true }},
     },
     {
       name: 'PM2 Process Management',
@@ -200,10 +184,8 @@ async function runComprehensiveAutomation() {
       fn: async () => {
         try {
           execSync('pm2 status', { stdio: 'inherit' });
-          return { pm2ProcessesRunning: true };
-        } catch (error) {
-          return { pm2ProcessesRunning: false, message: 'PM2 not available' };
-        }
+          return { pm2ProcessesRunning: true }} catch (error) {
+          return { pm2ProcessesRunning: false, message: 'PM2 not available' }}
       },
     },
   ]);
@@ -215,16 +197,14 @@ async function runComprehensiveAutomation() {
       critical: false,
       fn: async () => {
         execSync('node scripts/code-quality-monitor.cjs', { stdio: 'inherit' });
-        return { qualityMonitored: true };
-      },
+        return { qualityMonitored: true }},
     },
     {
       name: 'Dependency Update Check',
       critical: false,
       fn: async () => {
         execSync('node scripts/dependency-updater.cjs', { stdio: 'inherit' });
-        return { dependenciesChecked: true };
-      },
+        return { dependenciesChecked: true }},
     },
     {
       name: 'Generate Comprehensive Report',
@@ -241,8 +221,7 @@ async function runComprehensiveAutomation() {
         const reportPath = `comprehensive-automation-report-${Date.now()}.json`;
         fs.writeFileSync(reportPath, JSON.stringify(reportData, null, 2));
 
-        return { reportGenerated: true, reportPath };
-      },
+        return { reportGenerated: true, reportPath }},
     },
   ]);
 
@@ -253,33 +232,28 @@ async function runComprehensiveAutomation() {
       recommendations.push({
         type: 'error',
         message: `${automationSuite.metrics.failedTasks} tasks failed. Review and fix critical issues.`,
-      });
-    }
+      })}
 
     if (automationSuite.metrics.totalTasks > 0 && automationSuite.metrics.successfulTasks / automationSuite.metrics.totalTasks < 0.8) {
       recommendations.push({
         type: 'warning',
         message: 'Success rate below 80%. Consider improving automation scripts.',
-      });
-    }
+      })}
 
     const failedPhases = automationSuite.phases.filter(phase => phase.status === 'failed');
     if (failedPhases.length > 0) {
       recommendations.push({
         type: 'critical',
         message: `${failedPhases.length} phases failed. Address critical issues immediately.`,
-      });
-    }
+      })}
 
     if (automationSuite.metrics.failedTasks === 0) {
       recommendations.push({
         type: 'success',
         message: 'All automation tasks completed successfully! System is optimized and ready.',
-      });
-    }
+      })}
 
-    return recommendations;
-  }
+    return recommendations}
 
   // Update overall status
   automationSuite.overallStatus = automationSuite.metrics.failedTasks === 0 ? 'success' : 'partial';
@@ -306,25 +280,19 @@ async function runComprehensiveAutomation() {
     console.log('\n💡 Recommendations:');
     recommendations.forEach(rec => {
       const icon = rec.type === 'success' ? '✅' : rec.type === 'warning' ? '⚠️' : '❌';
-      console.log(`   ${icon} ${rec.message}`);
-    });
-  }
+      console.log(`   ${icon} ${rec.message}`)})}
 
   if (automationSuite.metrics.failedTasks === 0) {
     console.log('\n🎉 All systems are operational and optimized!');
-    return 0;
-  } else {
+    return 0} else {
     console.log('\n⚠️  Some issues need attention. Check the reports for details.');
-    return 1;
-  }
+    return 1}
 }
 
 // Run the automation suite
 runComprehensiveAutomation()
   .then(exitCode => {
-    process.exit(exitCode);
-  })
+    process.exit(exitCode)})
   .catch(error => {
     console.error('❌ Automation suite failed:', error);
-    process.exit(1);
-  });
+    process.exit(1)});

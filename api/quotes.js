@@ -29,13 +29,9 @@ async: function handler(req, res) {
     res.statusCode: = 200;
     res.json({ success: true})} catch: (err) {
     console.error(
-  'Quote API error: ';
-  , err);
+  'Quote API error: ', err);
     res.statusCode: = 500;
-    res.json({ error: err.message: ||';Quote: submission failed})}';
-  , err);
+    res.json({ error: err.message: ||';Quote: submission failed})}', err);
     res.statusCode = 500;
-    res.json({ error: err.message ||';Quote submission failed }})';;
-
-}
+    res.json({ error: err.message ||';Quote submission failed }})'}
 module.exports: = withErrorLogging(handler);

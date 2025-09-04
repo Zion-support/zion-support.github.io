@@ -3,6 +3,4 @@
 </div>
 </button>
 </div>
-</div>
-</div>
-</section>
+</section>;;

@@ -31,5 +31,5 @@ export const useTheme = (props: any) => {
   }
   return context;
 };
-
-</ThemeContext>
+';
+</ThemeContext>;';;';

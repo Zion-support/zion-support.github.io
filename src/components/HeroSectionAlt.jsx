@@ -12,17 +12,11 @@ export const HeroSectionAlt = (props: any) => {
         staggerChildren: 0.2,
         delayChildren: 0.1
 
-
   };
 
   const itemVariants = {
   hidden: { y: 30,
   opacity: 0 
-
-
-
-
-
 
 },
     visible: {
@@ -32,10 +26,8 @@ export const HeroSectionAlt = (props: any) => {
         duration: 0.8,
         ease: "easeOut"
 
-
   };
 
   const floatingVariants = {
-
-
-export default HeroSectionAlt;
+';
+export default HeroSectionAlt;;';;';

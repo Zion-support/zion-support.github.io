@@ -10,14 +10,12 @@ console.log('============================');
 const cacheContent = `interface CacheItem<T> {
   value: T;
   expiresAt: number;
-  createdAt: number;
-}
+  createdAt: number}
 
 interface CacheConfig {
   defaultTTL: number; // Time to live in milliseconds
   maxSize: number;
-  cleanupInterval: number;
-}
+  cleanupInterval: number}
 
 class CacheManager<T = any> {
   private cache: Map<string, CacheItem<T>> = new Map();
@@ -31,8 +29,7 @@ class CacheManager<T = any> {
       cleanupInterval: 60 * 1000, // 1 minute
       ...config
     };
-    this.startCleanup();
-  }
+    this.startCleanup()}
 
   set(key: string, value: T, ttl?: number): void {
     const now = Date.now();
@@ -47,8 +44,7 @@ class CacheManager<T = any> {
     // Remove oldest items if cache is full
     if (this.cache.size > this.config.maxSize) {
       const oldestKey = this.cache.keys().next().value;
-      this.cache.delete(oldestKey);
-    }
+      this.cache.delete(oldestKey)}
   }
 
   get(key: string): T | null {
@@ -57,41 +53,32 @@ class CacheManager<T = any> {
 
     if (Date.now() > item.expiresAt) {
       this.cache.delete(key);
-      return null;
-    }
+      return null}
 
-    return item.value;
-  }
+    return item.value}
 
   delete(key: string): boolean {
-    return this.cache.delete(key);
-  }
+    return this.cache.delete(key)}
 
   clear(): void {
-    this.cache.clear();
-  }
+    this.cache.clear()}
 
   size(): number {
-    return this.cache.size;
-  }
+    return this.cache.size}
 
   private startCleanup(): void {
     this.cleanupTimer = setInterval(() => {
       const now = Date.now();
       for (const [key, item] of this.cache.entries()) {
         if (now > item.expiresAt) {
-          this.cache.delete(key);
-        }
+          this.cache.delete(key)}
       }
-    }, this.config.cleanupInterval);
-  }
+    }, this.config.cleanupInterval)}
 
   destroy(): void {
     if (this.cleanupTimer) {
-      clearInterval(this.cleanupTimer);
-    }
-    this.cache.clear();
-  }
+      clearInterval(this.cleanupTimer)}
+    this.cache.clear()}
 }
 
 // Export singleton instances
@@ -110,8 +97,7 @@ interface DatabaseConfig {
   dbName: string;
   maxPoolSize?: number;
   minPoolSize?: number;
-  maxIdleTimeMS?: number;
-}
+  maxIdleTimeMS?: number}
 
 class DatabaseManager {
   private static instance: DatabaseManager;
@@ -120,18 +106,14 @@ class DatabaseManager {
   private config: DatabaseConfig;
 
   private constructor(config: DatabaseConfig) {
-    this.config = config;
-  }
+    this.config = config}
 
   static getInstance(config?: DatabaseConfig): DatabaseManager {
     if (!DatabaseManager.instance) {
       if (!config) {
-        throw new Error('Database configuration is required for first initialization');
-      }
-      DatabaseManager.instance = new DatabaseManager(config);
-    }
-    return DatabaseManager.instance;
-  }
+        throw new Error('Database configuration is required for first initialization')}
+      DatabaseManager.instance = new DatabaseManager(config)}
+    return DatabaseManager.instance}
 
   async connect(): Promise<void> {
     try {
@@ -143,11 +125,9 @@ class DatabaseManager {
 
       await this.client.connect();
       this.db = this.client.db(this.config.dbName);
-      console.log('Connected to MongoDB');
-    } catch (error) {
+      console.log('Connected to MongoDB')} catch (error) {
       console.error('Failed to connect to MongoDB:', error);
-      throw error;
-    }
+      throw error}
   }
 
   async disconnect(): Promise<void> {
@@ -155,24 +135,19 @@ class DatabaseManager {
       await this.client.close();
       this.client = null;
       this.db = null;
-      console.log('Disconnected from MongoDB');
-    }
+      console.log('Disconnected from MongoDB')}
   }
 
   getDatabase(): Db {
     if (!this.db) {
-      throw new Error('Database not connected. Call connect() first.');
-    }
-    return this.db;
-  }
+      throw new Error('Database not connected. Call connect() first.')}
+    return this.db}
 
   getCollection<T = any>(name: string): Collection<T> {
-    return this.getDatabase().collection<T>(name);
-  }
+    return this.getDatabase().collection<T>(name)}
 
   isConnected(): boolean {
-    return this.client !== null && this.db !== null;
-  }
+    return this.client !== null && this.db !== null}
 }
 
 // Export singleton instance
@@ -361,8 +336,7 @@ print(data)\`}
         </div>
       </div>
     </>
-  );
-}
+  )}
 `;
 
 // Write the fixed files
@@ -376,10 +350,8 @@ filesToFix.forEach(({ path: filePath, content }) => {
   try {
     console.log(`\n🔍 Fixing: ${filePath}`);
     fs.writeFileSync(filePath, content, 'utf8');
-    console.log(`   ✅ Fixed ${filePath}`);
-  } catch (error) {
-    console.log(`   ❌ Error fixing ${filePath}: ${error.message}`);
-  }
+    console.log(`   ✅ Fixed ${filePath}`)} catch (error) {
+    console.log(`   ❌ Error fixing ${filePath}: ${error.message}`)}
 });
 
 console.log('\n🎉 Corrupted files fixed!');

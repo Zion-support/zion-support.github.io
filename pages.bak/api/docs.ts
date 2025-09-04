@@ -7,20 +7,17 @@ interface ApiParameter {
   type: string;
   required: boolean;
   description: string;
-  location: 'query' | 'body' | 'header' | 'path';
-}
+  location: 'query' | 'body' | 'header' | 'path'}
 
 interface ApiResponse {
   status: number;
   description: string;
-  schema?: unknown;
-}
+  schema?: unknown}
 
 interface ApiExample {
   name: string;
   request: unknown;
-  response: unknown;
-}
+  response: unknown}
 
 
 interface Endpoint {
@@ -29,15 +26,13 @@ interface Endpoint {
   description: string;
   parameters?: ApiParameter[];
   responses?: ApiResponse[];
-  examples?: ApiExample[];
-}
+  examples?: ApiExample[]}
 
 class ApiDocumentationGenerator {
   private endpoints: Endpoint[] = [];
 
   public addEndpoint(endpoint: Endpoint) {
-    this.endpoints.push(endpoint);
-  }
+    this.endpoints.push(endpoint)}
 
   public generateOpenAPISpec() {
     return {
@@ -58,8 +53,7 @@ class ApiDocumentationGenerator {
       components: {
         schemas: this.generateSchemas(),
       },
-    };
-  }
+    }}
 
   private generatePaths() {
     const paths: Record<string, any> = {};
@@ -67,8 +61,7 @@ class ApiDocumentationGenerator {
 
     this.endpoints.forEach((endpoint) => {
       if (!paths[endpoint.path]) {
-        paths[endpoint.path] = {};
-      }
+        paths[endpoint.path] = {}}
       paths[endpoint.path][endpoint.method.toLowerCase()] = {
         summary: endpoint.description,
 
@@ -92,13 +85,10 @@ class ApiDocumentationGenerator {
                 }
               : undefined,
           };
-          return acc;
-        }, {} as Record<string, any>),
-      };
-    });
+          return acc}, {} as Record<string, any>),
+      }});
 
-    return paths;
-  }
+    return paths}
 
   private generateSchemas() {
     return {
@@ -125,8 +115,7 @@ class ApiDocumentationGenerator {
           message: { type: 'string' },
         },
       },
-    };
-  }
+    }}
 
   public generateMarkdown() {
     let markdown = '# API Documentation\n\n';
@@ -142,18 +131,14 @@ class ApiDocumentationGenerator {
 
 
         endpoint.parameters.forEach((param) => {
-          markdown += `| ${param.name} | ${param.type} | ${param.required ? 'Yes' : 'No'} | ${param.location} | ${param.description} |\n`;
-        });
-        markdown += '\n';
-      }
+          markdown += `| ${param.name} | ${param.type} | ${param.required ? 'Yes' : 'No'} | ${param.location} | ${param.description} |\n`});
+        markdown += '\n'}
 
       if (endpoint.responses && endpoint.responses.length > 0) {
         markdown += '### Responses\n\n';
         endpoint.responses.forEach((response) => {
-          markdown += `- **${response.status}**: ${response.description}\n`;
-        });
-        markdown += '\n';
-      }
+          markdown += `- **${response.status}**: ${response.description}\n`});
+        markdown += '\n'}
 
       if (endpoint.examples && endpoint.examples.length > 0) {
         markdown += '### Examples\n\n';
@@ -162,15 +147,11 @@ class ApiDocumentationGenerator {
           markdown += `**Request:**\n`;
           markdown += `\`\`\`json\n${JSON.stringify(example.request, null, 2)}\n\`\`\`\n\n`;
           markdown += `**Response:**\n`;
-          markdown += `\`\`\`json\n${JSON.stringify(example.response, null, 2)}\n\`\`\`\n\n`;
-        });
-      }
+          markdown += `\`\`\`json\n${JSON.stringify(example.response, null, 2)}\n\`\`\`\n\n`})}
 
-      markdown += '---\n\n';
-    });
+      markdown += '---\n\n'});
 
-    return markdown;
-  }
+    return markdown}
 }
 
 export const apiDocGenerator = new ApiDocumentationGenerator();
@@ -181,13 +162,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     if (format === 'markdown') {
       res.setHeader('Content-Type', 'text/markdown');
-      res.status(200).send(apiDocGenerator.generateMarkdown());
-    } else {
+      res.status(200).send(apiDocGenerator.generateMarkdown())} else {
       res.setHeader('Content-Type', 'application/json');
-      res.status(200).json(apiDocGenerator.generateOpenAPISpec());
-    }
+      res.status(200).json(apiDocGenerator.generateOpenAPISpec())}
   } else {
     res.setHeader('Allow', ['GET']);
-    res.status(405).json({ error: 'Method not allowed' });
-  }
+    res.status(405).json({ error: 'Method not allowed' })}
 }

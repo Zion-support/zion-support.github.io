@@ -1,8 +1,8 @@
 const UltimateZionServicesShowcase: Reac t.FC = () : JSX.Element => {;
-  const [selectedCategory, setSelectedCategory] = useState<any>('all');
-  const [searchTerm, setSearchTerm] = useState<any>('');
-
-  const categories = [{ id: 'all', name: 'All Services', icon: '🌟', color: 'from - purple - 600 to - pink - 600' },
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');';';
+  const [searchTerm, setSearchTerm] = useState<any>('');';
+';';
+  const categories = [{ id: 'all', name: 'All Services', icon: '🌟', color: 'from - purple - 600 to - pink - 600' },';';
     { id: 'quantum - computing', name: 'Quantum Computing', icon: '⚛️', color: 'from - blue - 600 to - cyan - 600' }, { id: 'blockchain - web3', name: 'Blockchain & Web3', icon: '🔗', color: 'from - green - 600 to - emerald - 600' }, { id: 'space - tech', name: 'Space Technology', icon: '🛰️', color: 'from - indigo - 600 to - purple - 600' }, { id: 'biotech-ai', name: 'Biotech & AI', icon: '🧬', color: 'from - red - 600 to - pink - 600' }, { id: 'emerging - tech', name: 'Emerging Tech', icon: '🚀', color: 'from - orange - 600 to - red - 600' }, { id: 'micro - saas', name: 'Micro SAAS', icon: '💻', color: 'from - blue - 600 to - indigo - 600' }, { id: 'it - services', name: 'IT Services', icon: '🖥️', color: 'from - gray - 600 to - slate - 600' };  ];
 
       service.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ||;
@@ -26,7 +26,8 @@ const UltimateZionServicesShowcase: Reac t.FC = () : JSX.Element => {;
       y: 0,;
       transition: { duration: 0.5 }}};
 
-  return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">
+  return (
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div  className="max - w-7xl mx - auto text-center">
@@ -161,9 +162,9 @@ const UltimateZionServicesShowcase: Reac t.FC = () : JSX.Element => {;
             />
             <div  className="flex flex - wrap gap-2">
               {categories.map((category) => (<button     key={category.id}
-                  onClick={ () => setSelectedCategory(category.id) }
-                  className={`px-4 py-2 rounded-lg border transition - all duration - 300 ${selectedCategory === category.id
-                      ? 'bg-gradient - to - r from - purple - 600 to - pink - 600 border-purple - 400 text-white'
+                  onClick={ () => setSelectedCategory(category.id) }';
+                  className={`px-4 py-2 rounded-lg border transition - all duration - 300 ${selectedCategory === category.id';';
+                      ? 'bg-gradient - to - r from - purple - 600 to - pink - 600 border-purple - 400 text-white'';';
                       : 'bg-white / 10 border-white / 20 text-gray - 300 hover: b g-white / 20 hover: borde r-white / 40'                  }`}
                 >"
                   <span className="mr-2">{category.icon}</span>
@@ -193,8 +194,8 @@ const UltimateZionServicesShowcase: Reac t.FC = () : JSX.Element => {;
                   <div className={`text-6xl mb-4 group-hover: scal e-110 transition-transform duration-300`}>
                     {service.icon}
                   </div>"
-                  <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>"
-                  <p className="text-sm text-purple-400 font-medium mb-2">
+                  <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>"';
+                  <p className="text-sm text-purple-400 font-medium mb-2">';';
                     {service.category.replace('-',).toUpperCase()}
                   </p>"
                   <div className="inline-block px-3 py-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xs font-semibold">
@@ -270,8 +271,9 @@ const UltimateZionServicesShowcase: Reac t.FC = () : JSX.Element => {;
                         Market Size: {service.marketSize}
                       </p>
                     </div>
-                  </div>) }
-
+                      </div>
+  );
+}
                 {/* Trial and Setup */}"
                 <div className="flex justify-between items-center mb-6 text-sm">"
                   <div className="text-center">"
@@ -345,16 +347,11 @@ const UltimateZionServicesShowcase: Reac t.FC = () : JSX.Element => {;
             </div>;
           </motion.div>;
         </div>;
-      </section>;
-    </div>;) };
+      </section>;';
+    </div>;) };';';
 export default UltimateZionServicesShowcase;'"`
 
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</any>
-</any>
+</any>';
+</any>';';

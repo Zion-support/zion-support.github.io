@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-export default FloatingActionButton;
+import React, {useState} from 'react';';
+export default FloatingActionButton;';';
 import {motion, AnimatePresence} from 'framer-motion';
 icon: ChatBubbleLeftRightIcon,"
       label: &apos,Live Chat&apos,"
@@ -150,8 +150,9 @@ initial="{{" opacity: 0, x: -10 }}&apos;&apos;"
           ) : (""""
               key="open""";"
               <PlusIcon className = "w-6 h-6"   />
-    </div>)}
-
+        </div>
+  );
+}
 export default FloatingActionButton;
 
 export {FloatingActionButton};
@@ -167,15 +168,8 @@ export {FloatingActionButton};
 </motion>
 </AnimatePresence>
 </motion>
-</motion>
 </AnimatePresence>
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</AnimatePresence>
-</div>
+</AnimatePresence>';
+</div>;';;';

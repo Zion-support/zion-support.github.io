@@ -6,8 +6,7 @@ export const performanceTestUtils = {
     const startTime = Date.now();
     await page.goto('/');
     const loadTime = Date.now() - startTime;
-    return loadTime;
-  },
+    return loadTime},
   
   // Measure Core Web Vitals
   measureCoreWebVitals: async (page) => {
@@ -19,23 +18,16 @@ export const performanceTestUtils = {
           
           entries.forEach((entry) => {
             if (entry.entryType === 'largest-contentful-paint') {
-              vitals.lcp = entry.startTime;
-            }
+              vitals.lcp = entry.startTime}
             if (entry.entryType === 'first-input') {
-              vitals.fid = entry.processingStart - entry.startTime;
-            }
+              vitals.fid = entry.processingStart - entry.startTime}
             if (entry.entryType === 'layout-shift') {
-              vitals.cls = entry.value;
-            }
+              vitals.cls = entry.value}
           });
           
-          resolve(vitals);
-        });
+          resolve(vitals)});
         
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-      });
-    });
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] })})});
     
-    return vitals;
-  }
+    return vitals}
 };

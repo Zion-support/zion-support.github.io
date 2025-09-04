@@ -8,8 +8,7 @@ export const trackError = (error, context = {}) => {
       description: error.message,
       fatal: false,
       ...context
-    });
-  }
+    })}
 };
 
 export const trackPerformance = (metric, value) => {
@@ -19,8 +18,7 @@ export const trackPerformance = (metric, value) => {
     window.gtag('event', 'timing_complete', {
       name: metric,
       value: Math.round(value)
-    });
-  }
+    })}
 };
 
 export const trackUserAction = (action, category, label) => {
@@ -30,6 +28,5 @@ export const trackUserAction = (action, category, label) => {
     window.gtag('event', action, {
       event_category: category,
       event_label: label
-    });
-  }
+    })}
 };

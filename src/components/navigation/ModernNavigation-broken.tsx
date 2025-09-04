@@ -1,7 +1,7 @@
 
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';';';
+import { Link, useLocation } from 'react-router-dom';';';
+import { motion, AnimatePresence } from 'framer-motion';';';
 import { Menu, X, ChevronDown, Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin } from 'lucide-react';
 
 const ModernNavigation = (props: any) => {
@@ -14,32 +14,32 @@ const ModernNavigation = (props: any) => {
 
     const handleScroll = (props: any) => {
       setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener('scroll', handleScroll);
+    };';
+';';
+    window.addEventListener('scroll', handleScroll);';';
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const navigationItems = [
-    { name: 'Home', href: '/' },
-    { 
-      name: 'Services', 
-      href: '/services', 
-      dropdown: [
-        { name: 'AI Solutions', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI services' },
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Scalable infrastructure' },
-        { name: 'Cybersecurity', href: '/services/ai-compliance-copilot', icon: Shield, description: 'Advanced security' },
-        { name: 'Edge & IoT', href: '/services/edge-computing-platform', icon: Zap, description: 'IoT solutions' },
+';
+  const navigationItems = [';';
+    { name: 'Home', href: '/' },';
+    { ';';
+      name: 'Services', ';';
+      href: '/services', ';
+      dropdown: [';';
+        { name: 'AI Solutions', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI services' },';';
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Scalable infrastructure' },';';
+        { name: 'Cybersecurity', href: '/services/ai-compliance-copilot', icon: Shield, description: 'Advanced security' },';';
+        { name: 'Edge & IoT', href: '/services/edge-computing-platform', icon: Zap, description: 'IoT solutions' },';';
         { name: 'Digital Transformation', href: '/it-services', icon: Users, description: 'Business transformation' }
-      ]
-    },
-    { name: 'About', href: '/about' },
+      ]';
+    },';';
+    { name: 'About', href: '/about' },';';
     { name: 'Contact', href: '/contact' }
   ];
-
-  const contactInfo = [
-    { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
-    { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
+';
+  const contactInfo = [';';
+    { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },';';
+    { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },';';
     { icon: MapPin, text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' }
   ];
 
@@ -52,8 +52,8 @@ const ModernNavigation = (props: any) => {
     setActiveDropdown(null);
   };
 
-  return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+  return (';
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${';';
       isScrolled ? 'bg-gray-900/95 backdrop-blur-md border-b border-cyan-400/20' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,8 +76,8 @@ const ModernNavigation = (props: any) => {
                       onClick={() => toggleDropdown(item.name)}
                       className="flex items-center space-x-1 text-gray-300 hover:text-cyan-300 transition-colors duration-200 py-2"
                     >
-                      <span>{item.name}</span>
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                      <span>{item.name}</span>';
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${';';
                         activeDropdown === item.name ? 'rotate-180' : ''
                       }`} />
                     </button>
@@ -119,8 +119,8 @@ const ModernNavigation = (props: any) => {
                   </div>
                 ) : (
                   <Link
-                    to={item.href}
-                    className={`text-gray-300 hover:text-cyan-300 transition-colors duration-200 py-2 ${
+                    to={item.href}';
+                    className={`text-gray-300 hover:text-cyan-300 transition-colors duration-200 py-2 ${';';
                       location.pathname === item.href ? 'text-cyan-400' : ''
                     }`}
                   >
@@ -152,8 +152,8 @@ const ModernNavigation = (props: any) => {
 
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
+          <motion.div';
+            initial={{ opacity: 0, height: 0 }}';';
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
@@ -189,15 +189,15 @@ const ModernNavigation = (props: any) => {
                           onClick={() => toggleDropdown(item.name)}
                           className="flex items-center justify-between w-full text-left px-3 py-2 text-gray-300 hover:text-cyan-300 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
                         >
-                          <span>{item.name}</span>
-                          <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                          <span>{item.name}</span>';
+                          <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${';';
                             activeDropdown === item.name ? 'rotate-180' : ''
                           }`} />
                         </button>
                         <AnimatePresence>
                           {activeDropdown === item.name && (
-                            <motion.div
-                              initial={{ opacity: 0, height: 0 }}
+                            <motion.div';
+                              initial={{ opacity: 0, height: 0 }}';';
                               animate={{ opacity: 1, height: 'auto' }}
                               exit={{ opacity: 0, height: 0 }}
                               transition={{ duration: 0.2 }}
@@ -222,9 +222,9 @@ const ModernNavigation = (props: any) => {
                       <Link
                         to={item.href}
                         onClick={closeMobileMenu}
-                        className={`block px-3 py-2 rounded-lg transition-colors duration-200 ${
-                          location.pathname === item.href
-                            ? 'text-cyan-400 bg-cyan-400/10'
+                        className={`block px-3 py-2 rounded-lg transition-colors duration-200 ${';
+                          location.pathname === item.href';';
+                            ? 'text-cyan-400 bg-cyan-400/10'';';
                             : 'text-gray-300 hover:text-cyan-300 hover:bg-gray-800/50'
                         }`}
                       >
@@ -257,8 +257,7 @@ export default ModernNavigation;
 </motion>
 </ChevronDown>
 </motion>
-</motion>
 </ChevronDown>
 </string>
-</any>
-</any>
+</any>';
+</any>;';;';

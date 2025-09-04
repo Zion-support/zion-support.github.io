@@ -221,9 +221,9 @@ export function ModernHeader(props: any) {;
                 >
                   Get Started,
                 </Link>
-              </div>
-        )}
-
+                  </div>
+  );
+}
       </header>
     </>
   );"
@@ -232,10 +232,5 @@ export function ModernHeader(props: any) {;
 export default Component
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</any>
-</any>
+</any>';
+</any>;';;';

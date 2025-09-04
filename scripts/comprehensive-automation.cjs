@@ -38,9 +38,9 @@ const automationTasks = [
     command: 'npm run type-check',
     critical: false
   }
-;];
+];
 
-const results = [;];
+const results = [];
 let criticalFailures = ;0;
 
 console.log('\n🔄 Starting Comprehensive Automation...\n');
@@ -85,8 +85,7 @@ for (const task of automationTasks) {
       criticalFailures++}
   }
   
-  console.log('');
-  }}
+  console.log('')}}
 
 // Generate comprehensive report
 const report = {
@@ -98,8 +97,7 @@ const report = {
     criticalFailures
   },
   results,
-  status: criticalFailures === 0 ? 'success' : 'failed';
-;};
+  status: criticalFailures === 0 ? 'success' : 'failed'};
 
 // Save report
 const reportPath = path.join(process.cwd(), 'comprehensive-automation-report.json;';);
@@ -115,11 +113,10 @@ console.log(`Critical Failures: ${report.summary.criticalFailures}`);
 if ( {
   console.log('\n🎉 All critical tasks completed successfully!')) {
      {
-  console.log('\n🎉 All critical tasks completed successfully!');
-  }
-  console.log('✅ Your application is ready for deployment.');} else {
+  console.log('\n🎉 All critical tasks completed successfully!')}
+  console.log('✅ Your application is ready for deployment.')} else {
   console.log('\n⚠️  Some critical tasks failed. Please review the errors above.');
-  console.log('❌ Do not deploy until critical issues are resolved.');}
+  console.log('❌ Do not deploy until critical issues are resolved.')}
 
 console.log(`\n📄 Comprehensive report saved to: ${reportPath}`);
 
@@ -132,8 +129,7 @@ results.forEach((result, index) => {
   if ( {
     console.log(`      Error: ${result.error}`)) {
      {
-    console.log(`      Error: ${result.error}`);
-  }}
+    console.log(`      Error: ${result.error}`)}}
 });
 
 console.log('\n🎯 Comprehensive automation completed!');

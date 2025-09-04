@@ -12,8 +12,7 @@ export interface InnovativeMicroSaas2034 {
   icon: string;
   color: string;
   launchDate?: string;
-  rating?: number;
-}
+  rating?: number}
 
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas2034[] = [
   {

@@ -19,7 +19,7 @@ const fixes = [
   
   // Fix missing semicolons after import statements
   {
-    pattern: /import\s+([^;]+)\s*$/gm,
+    pattern: /import\s+([^]+)\s*$/gm,
     replacement: 'import $1;'
   },
   
@@ -73,8 +73,7 @@ function fixFile(filePath) {
     
     // Apply fixes
     fixes.forEach(fix => {
-      content = content.replace(fix.pattern, fix.replacement);
-    });
+      content = content.replace(fix.pattern, fix.replacement)});
     
     // Additional cleanup
     content = content
@@ -85,20 +84,16 @@ function fixFile(filePath) {
     
     // Ensure proper file ending
     if (!content.endsWith('}') && !content.endsWith(';')) {
-      content += '\n}';
-    }
+      content += '\n}'}
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
       console.log(`Fixed: ${filePath}`);
-      return true;
-    }
+      return true}
     
-    return false;
-  } catch (error) {
+    return false} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 function findTsxFiles(dir) {
@@ -112,16 +107,13 @@ function findTsxFiles(dir) {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.jsx')) {
-        files.push(fullPath);
-      }
+        traverse(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.jsx')) {
+        files.push(fullPath)}
     }
   }
   
   traverse(dir);
-  return files;
-}
+  return files}
 
 // Main execution
 const srcDir = path.join(__dirname, 'src');
@@ -132,8 +124,7 @@ console.log(`Found ${files.length} files to check...`);
 let fixedCount = 0;
 files.forEach(file => {
   if (fixFile(file)) {
-    fixedCount++;
-  }
+    fixedCount++}
 });
 
 console.log(`Fixed ${fixedCount} files.`);

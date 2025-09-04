@@ -17,28 +17,23 @@ class SimpleAutomationOrchestrator {
       fixes: [],
       improvements: [],
       newScripts: []
-    };
-  }
+    }}
 
   ensureDirectories() {
     const dirs = ["automation/logs", "scripts/automation/reports", "reports"];
     dirs.forEach(dir => {
       const dirPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(dirPath)) {
-        fs.mkdirSync(dirPath, { recursive: true });
-      }
-    });
-  }
+        fs.mkdirSync(dirPath, { recursive: true })}
+    })}
 
   log(message, level = "INFO") {
     const timestamp = new Date().toISOString();
     const logMessage = "[" + timestamp + "] [" + level + "] " + message;
     console.log(logMessage);
     try {
-      fs.appendFileSync(this.logFile, logMessage + "\n");
-    } catch(error) {
-      console.error("Failed to write to log file:", error.message);
-    }
+      fs.appendFileSync(this.logFile, logMessage + "\n")} catch(error) {
+      console.error("Failed to write to log file:", error.message)}
   }
 
   async runStep(stepName, stepFunction) {
@@ -54,8 +49,7 @@ class SimpleAutomationOrchestrator {
         result: result
       });
       this.log(`Completed step: ${stepName} in ${duration}ms`);
-      return result;
-    } catch (error) {
+      return result} catch (error) {
       const duration = Date.now() - stepStart;
       this.results.steps.push({
         name: stepName,
@@ -69,8 +63,7 @@ class SimpleAutomationOrchestrator {
         timestamp: new Date().toISOString()
       });
       this.log(`Failed step: ${stepName} - ${error.message}`, "ERROR");
-      throw error;
-    }
+      throw error}
   }
 
   async runCommand(command, description, timeout = 300000) {
@@ -82,11 +75,9 @@ class SimpleAutomationOrchestrator {
         timeout: timeout
       });
       this.log(`✅ Completed: ${description}`);
-      return { success: true, output: result, description };
-    } catch (error) {
+      return { success: true, output: result, description }} catch (error) {
       this.log(`❌ Failed: ${description} - ${error.message}`, "ERROR");
-      return { success: false, error: error.message, description };
-    }
+      return { success: false, error: error.message, description }}
   }
 
   async runAutomationSuite() {
@@ -113,44 +104,36 @@ class SimpleAutomationOrchestrator {
 
     for (const step of steps) {
       try {
-        await this.runStep(step.name, step.fn);
-      } catch (error) {
-        this.log(`Step ${step.name} failed, continuing...`, "WARN");
-      }
+        await this.runStep(step.name, step.fn)} catch (error) {
+        this.log(`Step ${step.name} failed, continuing...`, "WARN")}
     }
 
     this.results.status = "completed";
     this.saveResults();
     this.log("🎉 Automation suite completed");
-    return this.results;
-  }
+    return this.results}
 
   saveResults() {
     const resultsFile = path.join(this.projectRoot, "automation-reports", "automation-results.json");
     try {
       fs.writeFileSync(resultsFile, JSON.stringify(this.results, null, 2));
-      this.log(`Results saved to: ${resultsFile}`);
-    } catch (error) {
-      this.log(`Failed to save results: ${error.message}`, "ERROR");
-    }
+      this.log(`Results saved to: ${resultsFile}`)} catch (error) {
+      this.log(`Failed to save results: ${error.message}`, "ERROR")}
   }
 
   async run() {
     try {
-      await this.runAutomationSuite();
-    } catch (error) {
+      await this.runAutomationSuite()} catch (error) {
       this.log(`Automation suite failed: ${error.message}`, "ERROR");
       this.results.status = "failed";
       this.saveResults();
-      process.exit(1);
-    }
+      process.exit(1)}
   }
 }
 
 // Run the orchestrator if this file is executed directly
 if (require.main === module) {
   const orchestrator = new SimpleAutomationOrchestrator();
-  orchestrator.run().catch(console.error);
-}
+  orchestrator.run().catch(console.error)}
 
 module.exports = SimpleAutomationOrchestrator;

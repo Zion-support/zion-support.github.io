@@ -11,28 +11,24 @@ function fixFile(filePath) {
       if ( {
         return `style={{ background: '#1e293b', padding: ${val2) {
      {
-        return `style={{ background: '#1e293b', padding: ${val2;
-  }}, ${val3} }}`}
+        return `style={{ background: '#1e293b', padding: ${val2}}, ${val3} }}`}
       if ( {
         return `style={{ fontSize: '2rem', fontWeight: ${val2) {
      {
-        return `style={{ fontSize: '2rem', fontWeight: ${val2;
-  }}, ${val3} }}`}
-      return match;});
+        return `style={{ fontSize: '2rem', fontWeight: ${val2}}, ${val3} }}`}
+      return match});
     
     // Fix style objects with missing colons
     content = content.replace(/style=\{\{\s*([^:}]+)\s+([^,}]+),\s*([^,}]+)\s*\}\}/g, (match, prop1, val1, val2) => {
       if ( {
         return `style={{ background: '#1e293b', padding: ${val2) {
      {
-        return `style={{ background: '#1e293b', padding: ${val2;
-  }} }}`}
+        return `style={{ background: '#1e293b', padding: ${val2}} }}`}
       if ( {
         return `style={{ fontSize: '1.5rem', fontWeight: ${val2) {
      {
-        return `style={{ fontSize: '1.5rem', fontWeight: ${val2;
-  }} }}`}
-      return match;});
+        return `style={{ fontSize: '1.5rem', fontWeight: ${val2}} }}`}
+      return match});
     
     // Fix missing quotes in object properties
     content = content.replace(/(\w+):\s*([^,}]+)(?=[}])/g, (match, key, value) => {
@@ -40,42 +36,37 @@ function fixFile(filePath) {
       if (|| value.includes('"') || value.includes('`') || value.includes('{') || value.includes('}') || value.includes('(') || value.includes(')')) {
         return match) {
     || value.includes('"') || value.includes('`') || value.includes('{') || value.includes('}') || value.includes('(') || value.includes(')')) {
-        return match;
-  }}
+        return match}}
       // Don't fix if it looks like a number or boolean
       if () || value.trim() === 'true' || value.trim() === 'false') {
         return match) {
     ) || value.trim() === 'true' || value.trim() === 'false') {
-        return match;
-  }}
-      return `${key;}: '${value.trim()}'`});
+        return match}}
+      return `${key}: '${value.trim()}'`});
     
     // Fix unterminated strings in JSX
     content = content.replace(/(<[^>]+)\s*$/gm, (match) => {
       if (&& !match.includes('>') && !match.includes('/>')) {
         return match + '>') {
     && !match.includes('>') && !match.includes('/>')) {
-        return match + '>';
-  }}
-      return match;});
+        return match + '>'}}
+      return match});
     
     // Fix missing closing tags
     content = content.replace(/(<[^>]+)\s*$/gm, (match) => {
       if (&& !match.includes('>') && !match.includes('/>')) {
         return match + '>') {
     && !match.includes('>') && !match.includes('/>')) {
-        return match + '>';
-  }}
-      return match;});
+        return match + '>'}}
+      return match});
     
     // Fix unterminated template literals
     content = content.replace(/`([^`]*)$/gm, (match, content) => {
       if () {
         return match + '`') {
     ) {
-        return match + '`';
-  }}
-      return match;});
+        return match + '`'}}
+      return match});
     
     // Fix missing commas in object literals
     content = content.replace(/(\w+):\s*'([^']+)'\s*(\w+):/g, "$1: '$2',\n    $3:");
@@ -83,13 +74,12 @@ function fixFile(filePath) {
     if ( {
       fs.writeFileSync(filePath, content, 'utf8')) {
      {
-      fs.writeFileSync(filePath, content, 'utf8');
-  }
+      fs.writeFileSync(filePath, content, 'utf8')}
       console.log(`Fixed: ${filePath}`);
-      return true;}
-    return false;} catch (error) {
+      return true}
+    return false} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;}
+    return false}
 }
 
 // Files to fix
@@ -134,7 +124,7 @@ const filesToFix = [
   'pages/terms.tsx',
   'src/App.tsx',
   'src/main.tsx'
-;];
+];
 
 let fixedCount = ;0;
 filesToFix.forEach(file => {
@@ -147,7 +137,6 @@ filesToFix.forEach(file => {
     if (fixFile(file)) {
       fixedCount++}
   }
-});
-  }
+})}
 
 console.log(`Fixed ${fixedCount} files`);

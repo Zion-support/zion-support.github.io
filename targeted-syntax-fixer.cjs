@@ -11,7 +11,7 @@ class TargetedSyntaxFixer {
 
   log(message) {
     const timestamp = new Date().toISOString(;);
-    console.log(`[${timestamp}] ${message}`);}
+    console.log(`[${timestamp}] ${message}`)}
 
   fixFile(filePath) {
     try {
@@ -24,90 +24,78 @@ class TargetedSyntaxFixer {
       // Fix style={{> syntax errors
       fixedContent = fixedContent.replace(/style=\{\{>/g, 'style={{');
       if (hasChanges = true) {
-    hasChanges = true;
-  }
+    hasChanges = true}
 
       // Fix function declarations with trailing commas
       fixedContent = fixedContent.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{,/g, 'const $1: React.FC = () => {');
       if (hasChanges = true) {
-    hasChanges = true;
-  }
+    hasChanges = true}
 
       // Fix type definitions with trailing commas
       fixedContent = fixedContent.replace(/(\w+):\s*string;/g, '$1: string;');
       fixedContent = fixedContent.replace(/(\w+):\s*any;/g, '$1: any;');
       fixedContent = fixedContent.replace(/(\w+):\s*Array<\{,/g, '$1: Array<{');
       if (hasChanges = true) {
-    hasChanges = true;
-  }
+    hasChanges = true}
 
       // Fix JSX with trailing commas
       fixedContent = fixedContent.replace(/>";/g, '>');
       fixedContent = fixedContent.replace(/>";/g, '>');
       if (hasChanges = true) {
-    hasChanges = true;
-  }
+    hasChanges = true}
 
       // Fix standalone semicolons
       fixedContent = fixedContent.replace(/^;\s*$/gm, '');
       if (hasChanges = true) {
-    hasChanges = true;
-  }
+    hasChanges = true}
 
       // Fix malformed object literals
       fixedContent = fixedContent.replace(/\{\s*,/g, '{');
       fixedContent = fixedContent.replace(/,\s*\}/g, '}');
       if (hasChanges = true) {
-    hasChanges = true;
-  }
+    hasChanges = true}
 
       // Fix malformed function parameters
       fixedContent = fixedContent.replace(/\(\s*,/g, '(');
       fixedContent = fixedContent.replace(/,\s*\)/g, ')');
       if (hasChanges = true) {
-    hasChanges = true;
-  }
+    hasChanges = true}
 
       // Fix malformed array literals
       fixedContent = fixedContent.replace(/\[\s*,/g, '[');
       fixedContent = fixedContent.replace(/,\s*\]/g, ']');
       if (hasChanges = true) {
-    hasChanges = true;
-  }
+    hasChanges = true}
 
       // Fix malformed JSX attributes
       fixedContent = fixedContent.replace(/=\{\{>/g, '={{');
       fixedContent = fixedContent.replace(/=\{\{>/g, '={{');
       if (hasChanges = true) {
-    hasChanges = true;
-  }
+    hasChanges = true}
 
       // Fix malformed template literals
       fixedContent = fixedContent.replace(/`\s*,/g, '`');
       if (hasChanges = true) {
-    hasChanges = true;
-  }
+    hasChanges = true}
 
       // Fix malformed string literals
       fixedContent = fixedContent.replace(/"\s*,/g, '"');
       fixedContent = fixedContent.replace(/'\s*,/g, "'");
       if (hasChanges = true) {
-    hasChanges = true;
-  }
+    hasChanges = true}
 
       if ( {
         fs.writeFileSync(filePath, fixedContent, 'utf8')) {
      {
-        fs.writeFileSync(filePath, fixedContent, 'utf8');
-  }
+        fs.writeFileSync(filePath, fixedContent, 'utf8')}
         this.fixedFiles.push(filePath);
         this.log(`✅ Fixed: ${filePath}`);
-        return true;}
+        return true}
 
-      return false;} catch (error) {
+      return false} catch (error) {
       this.errors.push({ file: filePath, error: error.message });
       this.log(`❌ Error fixing ${filePath}: ${error.message}`);
-      return false;}
+      return false}
   }
 
   scanDirectory(dir) {
@@ -122,8 +110,7 @@ class TargetedSyntaxFixer {
           const ext = path.extname(file) {
     && !file.startsWith('.') && file !== 'node_modules') {
           this.scanDirectory(filePath)} else if (stat.isFile()) {
-          const ext = path.extname(file;
-  });
+          const ext = path.extname(file});
           if () {
             this.fixFile(filePath)}
         }
@@ -141,17 +128,15 @@ class TargetedSyntaxFixer {
   }
 
   async run() {
-    this.log('🚀 Starting targeted syntax fixing...');
-  }
+    this.log('🚀 Starting targeted syntax fixing...')}
 
     // Focus on pages directory first since that's where the errors are
-    const scanDirs = ['pages';];
+    const scanDirs = ['pages'];
     scanDirs.forEach(dir => {
       if () {
         this.log(`📁 Scanning directory: ${dir}`)) {
     ) {
-        this.log(`📁 Scanning directory: ${dir}`);
-  }
+        this.log(`📁 Scanning directory: ${dir}`)}
         this.scanDirectory(dir)}
     });
 

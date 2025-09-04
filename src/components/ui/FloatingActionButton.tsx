@@ -12,32 +12,17 @@
   { opacity: 0,
   scale: 0 
 
-
-
-
-
-
 }}
         animate = {
 
   { opacity: 1,
   scale: 1 
 
-
-
-
-
-
 }}
         transition = {
 
   { delay: 0.5,
   duration: 0.3 
-
-
-
-
-
 
 }}
         onClick={scrollToTop}
@@ -52,32 +37,17 @@
   { opacity: 0,
   scale: 0 
 
-
-
-
-
-
 }}
         animate = {
 
   { opacity: 1,
   scale: 1 
 
-
-
-
-
-
 }}
         transition = {
 
   { delay: 0.6,
   duration: 0.3 
-
-
-
-
-
 
 }}
         onClick={() => setIsOpen(!isOpen)}"
@@ -92,32 +62,17 @@
   { rotate: -90,
   opacity: 0 
 
-
-
-
-
-
 }}
               animate = {
 
   { rotate: 0,
   opacity: 1 
 
-
-
-
-
-
 }}
               exit = {
 
   { rotate: 9 0,
   opacity: 0 
-
-
-
-
-
 
 }}
               transition={{ duration: 0.2 }}
@@ -131,32 +86,17 @@
   { rotate: 9 0,
   opacity: 0 
 
-
-
-
-
-
 }}
               animate = {
 
   { rotate: 0,
   opacity: 1 
 
-
-
-
-
-
 }}
               exit = {
 
   { rotate: -90,
   opacity: 0 
-
-
-
-
-
 
 }}
               transition={{ duration: 0.2 }}
@@ -185,11 +125,6 @@
   stiffness: 20 0
                 
 
-
-
-
-
-
 }}"
                 className="flex items-center space-x-3 w-auto bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-3 hover: b g-white/20 transition-all duration-300 group"
 `
@@ -204,11 +139,9 @@
           </div>;
         )};
       </AnimatePresence>;
-    </div>;
-  )};
+    </div>;';
+  )};';';
 '"`
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
+</motion>';
+</motion>';';

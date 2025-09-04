@@ -15,15 +15,14 @@ function hasSyntaxErrors(filePath) {
       /['"]use: client['"]/,  // Malformed directive
       /declare: global/,  // Malformed declaration
       /interface.*\{,/,  // Extra comma
-      /\[\];,/,  // Extra comma after array
-      /\{\};,/,  // Extra comma after object
-      /\);,/,  // Extra comma after function call
+      /\[\],/,  // Extra comma after array
+      /\{\},/,  // Extra comma after object
+      /\),/,  // Extra comma after function call
       /script1\.async: = true/,  // Malformed assignment
       /script1\.src: =/,  // Malformed assignment
     ];
     
-    return corruptionPatterns.some(pattern => pattern.test(content));
-  } catch (error) {
+    return corruptionPatterns.some(pattern => pattern.test(content))} catch (error) {
     return true; // If we can't read the file, consider it corrupted
   }
 }
@@ -34,8 +33,7 @@ function fixSyntaxErrors(content) {
     // Fix import statements
     .replace(/import.*from.*['"]react;['"]/g, "import React from 'react'")
     .replace(/import.*\{.*\}.*from.*['"]react;['"]/g, (match) => {
-      return match.replace(/['"]react;['"]/, "'react'");
-    })
+      return match.replace(/['"]react;['"]/, "'react'")})
     // Fix use client directive
     .replace(/['"]use: client['"]/, '"use client"')
     // Fix declare global
@@ -43,9 +41,9 @@ function fixSyntaxErrors(content) {
     // Fix interface declarations
     .replace(/interface.*\{,/g, (match) => match.replace(/,$/, ''))
     // Fix array/object declarations
-    .replace(/\[\];,/g, '[];')
-    .replace(/\{\};,/g, '{};')
-    .replace(/\);,/g, ');')
+    .replace(/\[\],/g, '[];')
+    .replace(/\{\},/g, '{};')
+    .replace(/\),/g, ');')
     // Fix malformed assignments
     .replace(/script1\.async: = true/g, 'script1.async = true')
     .replace(/script1\.src: =/g, 'script1.src =')
@@ -54,8 +52,7 @@ function fixSyntaxErrors(content) {
     // Fix malformed quotes
     .replace(/['"]react;['"]/g, "'react'")
     .replace(/['"]framer-motion;['"]/g, "'framer-motion'")
-    .replace(/['"]lucide-react;['"]/g, "'lucide-react'");
-}
+    .replace(/['"]lucide-react;['"]/g, "'lucide-react'")}
 
 // Function to process a file
 function processFile(filePath) {
@@ -67,13 +64,10 @@ function processFile(filePath) {
       
       if (content !== fixed) {
         fs.writeFileSync(filePath, fixed);
-        console.log(`✅ Fixed ${filePath}`);
-      } else {
-        console.log(`ℹ️  No changes needed for ${filePath}`);
-      }
+        console.log(`✅ Fixed ${filePath}`)} else {
+        console.log(`ℹ️  No changes needed for ${filePath}`)}
     } catch (error) {
-      console.error(`❌ Error fixing ${filePath}:`, error.message);
-    }
+      console.error(`❌ Error fixing ${filePath}:`, error.message)}
   }
 }
 
@@ -89,17 +83,14 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        files.push(...findFiles(fullPath, extensions));
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
-      }
+        files.push(...findFiles(fullPath, extensions))} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath)}
     }
   } catch (error) {
     // Ignore errors for directories we can't read
   }
   
-  return files;
-}
+  return files}
 
 // Main execution
 console.log('🔍 Scanning for corrupted files...');

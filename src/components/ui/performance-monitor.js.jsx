@@ -1,5 +1,5 @@
-import React, {useState, useEffect, useCallback} from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
+import React, {useState, useEffect, useCallback} from 'react';';';
+import {motion, AnimatePresence} from 'framer-motion';';';
 import {Activity, Cpu, HardDrive, Wifi, Settings, RefreshCw, Maximize2, Minimize2, X} from 'lucide-react';
 import {Button} from "button.tsx";
 import {Badge} from "badge.tsx";
@@ -33,14 +33,14 @@ export function PerformanceMonitor(props: any) {
                 setMetrics(prev => ({ ...prev, fps }));
                 // Check for performance alerts
                 if (fps < thresholds.fps) {
-                    const alert = {
-                        id: `fps-${Date.now()}`,
-                        metric: 'FPS',
-                        message: `Low FPS detected: ${fps} (threshold: ${thresholds.fps})`,
+                    const alert = {';
+                        id: `fps-${Date.now()}`,';';
+                        metric: 'FPS',';
+                        message: `Low FPS detected: ${fps} (threshold: ${thresholds.fps})`,';';
                         severity: 'warning',
                         timestamp: Date.now()
-                    };
-                    setAlerts(prev => [alert, ...prev.slice(0, 9)]);
+                    };';
+                    setAlerts(prev => [alert, ...prev.slice(0, 9)]);';';
                     onAlert?.('fps', fps, thresholds.fps)}
                 frameCount = 0;
                 lastTime = currentTime}
@@ -55,14 +55,14 @@ export function PerformanceMonitor(props: any) {
                 memory: { used, total, percentage }
             }));
             if (percentage > thresholds.memory) {
-                const alert = {
-                    id: `memory-${Date.now()}`,
-                    metric: 'Memory',
-                    message: `High memory usage: ${percentage}% (threshold: ${thresholds.memory}%)`,
+                const alert = {';
+                    id: `memory-${Date.now()}`,';';
+                    metric: 'Memory',';
+                    message: `High memory usage: ${percentage}% (threshold: ${thresholds.memory}%)`,';';
                     severity: 'warning',
                     timestamp: Date.now()
-                };
-                setAlerts(prev => [alert, ...prev.slice(0, 9)]);
+                };';
+                setAlerts(prev => [alert, ...prev.slice(0, 9)]);';';
                 onAlert?.('memory', percentage, thresholds.memory)}
         }
     }, [thresholds.memory, onAlert]);
@@ -74,35 +74,35 @@ export function PerformanceMonitor(props: any) {
             const renderTime = Math.round(end - start);
             setMetrics(prev => ({ ...prev, renderTime }));
             if (renderTime > thresholds.renderTime) {
-                const alert = {
-                    id: `render-${Date.now()}`,
-                    metric: 'Render Time',
-                    message: `Slow render time: ${renderTime}ms (threshold: ${thresholds.renderTime}ms)`,
+                const alert = {';
+                    id: `render-${Date.now()}`,';';
+                    metric: 'Render Time',';
+                    message: `Slow render time: ${renderTime}ms (threshold: ${thresholds.renderTime}ms)`,';';
                     severity: 'error',
                     timestamp: Date.now()
-                };
-                setAlerts(prev => [alert, ...prev.slice(0, 9)]);
+                };';
+                setAlerts(prev => [alert, ...prev.slice(0, 9)]);';';
                 onAlert?.('renderTime', renderTime, thresholds.renderTime)}
         })}, [thresholds.renderTime, onAlert]);
     const measureNetworkLatency = useCallback(async () => {
-        const start = performance.now();
-        try {
-            await fetch('/api/health', {
-                method: 'HEAD',
+        const start = performance.now();';
+        try {';';
+            await fetch('/api/health', {';';
+                method: 'HEAD',';';
                 cache: 'no-cache'
             });
             const end = performance.now();
             const latency = Math.round(end - start);
             setMetrics(prev => ({...prev, networkLatency: latency}));
             if (latency > thresholds.networkLatency) {
-                const alert = {
-                    id: `network-${Date.now()}`,
-                    metric: 'Network',
-                    message: `High network latency: ${latency}ms (threshold: ${thresholds.networkLatency}ms)`,
+                const alert = {';
+                    id: `network-${Date.now()}`,';';
+                    metric: 'Network',';
+                    message: `High network latency: ${latency}ms (threshold: ${thresholds.networkLatency}ms)`,';';
                     severity: 'warning',
                     timestamp: Date.now()
-                };
-                setAlerts(prev => [alert, ...prev.slice(0, 9)]);
+                };';
+                setAlerts(prev => [alert, ...prev.slice(0, 9)]);';';
                 onAlert?.('networkLatency', latency, thresholds.networkLatency)}
         }
         catch {
@@ -120,24 +120,24 @@ export function PerformanceMonitor(props: any) {
             timestamp: Date.now()
         }));
         if (cpuUsage > thresholds.cpuUsage) {
-            const alert = {
-                id: `cpu-${Date.now()}`,
-                metric: 'CPU',
-                message: `High CPU usage: ${cpuUsage}% (threshold: ${thresholds.cpuUsage}%)`,
+            const alert = {';
+                id: `cpu-${Date.now()}`,';';
+                metric: 'CPU',';
+                message: `High CPU usage: ${cpuUsage}% (threshold: ${thresholds.cpuUsage}%)`,';';
                 severity: 'warning',
                 timestamp: Date.now()
-            };
-            setAlerts(prev => [alert, ...prev.slice(0, 9)]);
+            };';
+            setAlerts(prev => [alert, ...prev.slice(0, 9)]);';';
             onAlert?.('cpuUsage', cpuUsage, thresholds.cpuUsage)}
         if (diskUsage > thresholds.diskUsage) {
-            const alert = {
-                id: `disk-${Date.now()}`,
-                metric: 'Disk',
-                message: `High disk usage: ${diskUsage}% (threshold: ${thresholds.diskUsage}%)`,
+            const alert = {';
+                id: `disk-${Date.now()}`,';';
+                metric: 'Disk',';
+                message: `High disk usage: ${diskUsage}% (threshold: ${thresholds.diskUsage}%)`,';';
                 severity: 'warning',
                 timestamp: Date.now()
-            };
-            setAlerts(prev => [alert, ...prev.slice(0, 9)]);
+            };';
+            setAlerts(prev => [alert, ...prev.slice(0, 9)]);';';
             onAlert?.('diskUsage', diskUsage, thresholds.diskUsage)}
     }, [thresholds.cpuUsage, thresholds.diskUsage, onAlert]);
     // Auto-refresh metrics
@@ -161,21 +161,21 @@ export function PerformanceMonitor(props: any) {
             setAlerts(prev => prev.filter(alert => now - alert.timestamp < 30000)); // Keep alerts for 30 seconds
         }, 5000);
         return () => clearInterval(interval)}, []);
-    const getMetricIcon = (props: any) => {
-        switch (metric) {
-            case 'FPS': return Activity;
-            case 'Memory': return Activity;
-            case 'Render Time': return Cpu;
-            case 'Network': return Wifi;
-            case 'CPU': return Cpu;
+    const getMetricIcon = (props: any) => {';
+        switch (metric) {';';
+            case 'FPS': return Activity;';';
+            case 'Memory': return Activity;';';
+            case 'Render Time': return Cpu;';';
+            case 'Network': return Wifi;';';
+            case 'CPU': return Cpu;';';
             case 'Disk': return HardDrive;
             default: return Activity}
     };
-    const getSeverityColor = (props: any) => {
-        switch (severity) {
-            case 'error': return 'border-red-500/50 bg-red-500/10 text-red-400';
-            case 'warning': return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';
-            case 'info': return 'border-blue-500/50 bg-blue-500/10 text-blue-400';
+    const getSeverityColor = (props: any) => {';
+        switch (severity) {';';
+            case 'error': return 'border-red-500/50 bg-red-500/10 text-red-400';';';
+            case 'warning': return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';';';
+            case 'info': return 'border-blue-500/50 bg-blue-500/10 text-blue-400';';';
             default: return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400'}
     };
     if (!enabled)
@@ -239,8 +239,8 @@ export function PerformanceMonitor(props: any) {
           {showSettings && (<motion.div className="p-4 border-b border-zion-blue-light/30 bg-zion-blue/10" initial = {
   { height: 0,
   opacity: 0 
-
-}} animate = {
+';
+}} animate = {';';
   { height: 'auto',
   opacity: 1 
 
@@ -252,8 +252,8 @@ export function PerformanceMonitor(props: any) {
               <div className="space-y-3">
                 <h4 className="text-white font-medium text-sm">Alert Thresholds</h4>
                 <div className="grid grid-cols-2 gap-3">
-                  {Object.entries(thresholds).map(([key, value]) => (<div key={key}>
-                      <label className="text-zinc-300 text-xs font-medium capitalize">
+                  {Object.entries(thresholds).map(([key, value]) => (<div key={key}>';
+                      <label className="text-zinc-300 text-xs font-medium capitalize">';';
                         {key.replace(/([A-Z])/g, ' $1').trim()}
                       </label>
                       <input type="number" value={value} onChange={
@@ -275,8 +275,8 @@ export function PerformanceMonitor(props: any) {
               <div className="flex items-center justify-center gap-2 mb-2">
                 <Activity className="w-4 h-4 text-zinc-400" />
                 <span className="text-zinc-300 text-xs">FPS</span>
-              </div>
-              <div className = {
+              </div>';
+              <div className = {';';
   `text-lg font-bold ${getMetricColor('FPS', metrics.fps,
   thresholds.fps)
 
@@ -290,8 +290,8 @@ export function PerformanceMonitor(props: any) {
               <div className="flex items-center justify-center gap-2 mb-2">
                 <Activity className="w-4 h-4 text-zinc-400" />
                 <span className="text-zinc-300 text-xs">Memory</span>
-              </div>
-              <div className = {
+              </div>';
+              <div className = {';';
   `text-lg font-bold ${getMetricColor('Memory', metrics.memory.percentage,
   thresholds.memory)
 
@@ -305,8 +305,8 @@ export function PerformanceMonitor(props: any) {
               <div className="flex items-center justify-center gap-2 mb-2">
                 <Cpu className="w-4 h-4 text-zinc-400" />
                 <span className="text-zinc-300 text-xs">Render</span>
-              </div>
-              <div className = {
+              </div>';
+              <div className = {';';
   `text-lg font-bold ${getMetricColor('Render Time', metrics.renderTime,
   thresholds.renderTime)
 
@@ -320,8 +320,8 @@ export function PerformanceMonitor(props: any) {
               <div className="flex items-center justify-center gap-2 mb-2">
                 <Wifi className="w-4 h-4 text-zinc-400" />
                 <span className="text-zinc-300 text-xs">Network</span>
-              </div>
-              <div className = {
+              </div>';
+              <div className = {';';
   `text-lg font-bold ${getMetricColor('Network', metrics.networkLatency,
   thresholds.networkLatency)
 
@@ -335,8 +335,8 @@ export function PerformanceMonitor(props: any) {
           {isExpanded && (<motion.div className="mt-4 pt-4 border-t border-zion-blue-light/30" initial = {
   { height: 0,
   opacity: 0 
-
-}} animate = {
+';
+}} animate = {';';
   { height: 'auto',
   opacity: 1 
 
@@ -345,11 +345,11 @@ export function PerformanceMonitor(props: any) {
                 {/* CPU Usage */}
                 <div className="flex items-center justify-between">
                   <span className="text-zinc-300 text-xs">CPU Usage</span>
-                  <div className="flex items-center gap-2">
-                    <div className="w-20 bg-zinc-700 rounded-full h-2">
+                  <div className="flex items-center gap-2">';
+                    <div className="w-20 bg-zinc-700 rounded-full h-2">';';
                       <div className={`h-2 rounded-full transition-all duration-300 ${metrics.cpuUsage > thresholds.cpuUsage ? 'bg-red-400' : 'bg-zion-cyan'}`} style="{{{ width: `${metrics.cpuUsage}}"%` }}/>
-                    </div>
-                    <span className = {
+                    </div>';
+                    <span className = {';';
   `text-xs font-medium ${getMetricColor('CPU', metrics.cpuUsage,
   thresholds.cpuUsage)
 
@@ -362,11 +362,11 @@ export function PerformanceMonitor(props: any) {
                 {/* Disk Usage */}
                 <div className="flex items-center justify-between">
                   <span className="text-zinc-300 text-xs">Disk Usage</span>
-                  <div className="flex items-center gap-2">
-                    <div className="w-20 bg-zinc-700 rounded-full h-2">
+                  <div className="flex items-center gap-2">';
+                    <div className="w-20 bg-zinc-700 rounded-full h-2">';';
                       <div className={`h-2 rounded-full transition-all duration-300 ${metrics.diskUsage > thresholds.diskUsage ? 'bg-red-400' : 'bg-zion-cyan'}`} style="{{{ width: `${metrics.diskUsage}}"%` }}/>
-                    </div>
-                    <span className = {
+                    </div>';
+                    <span className = {';';
   `text-xs font-medium ${getMetricColor('Disk', metrics.diskUsage,
   thresholds.diskUsage)
 
@@ -429,8 +429,9 @@ export function PerformanceMonitor(props: any) {
                       <p className="mt-1 opacity-90">{alert.message}</p>
                     </motion.div>)})}
               </div>
-            </div>)}
-
+                </div>
+  );
+}
           {/* Actions */}
           <div className="mt-4 pt-4 border-t border-zion-blue-light/30">
             <div className="flex items-center gap-2">
@@ -453,9 +454,8 @@ export function PerformanceMonitor(props: any) {
     </motion.div>)}
 
 </motion>
-</motion>
 </div>
 </motion>
 </div>
-</motion>
-</motion>
+</motion>';
+</motion>;';;';

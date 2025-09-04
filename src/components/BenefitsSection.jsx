@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
+import React, {useState} from 'react';';';
+import {motion, AnimatePresence} from 'framer-motion';';';
 import {Zap, Shield, TrendingUp, CheckCircle, Users, Clock, Star, Award} from 'lucide-react';
 
 const benefits = [
@@ -107,8 +107,8 @@ export function BenefitsSection(props: any) {
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Enhanced background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style="{{{
+      <div className="absolute inset-0 opacity-5">';
+        <div className="absolute inset-0" style="{{{';';
           backgroundImage: `radial-gradient(circle at 75% 75%; backgroundSize: '60px 60px'}}"} />
       </div>
       
@@ -307,17 +307,9 @@ export function BenefitsSection(props: any) {
     </section>
   )}
 
-
 export default BenefitsSection;
 </motion>
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</div>
-</number>
+</div>';
+</number>;';;';

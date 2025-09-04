@@ -1,34 +1,33 @@
-import React, {useState, useEffect} from 'react';
-import {Link} from 'react-router-dom';
-;
-import {UserMenu} from './UserMenu.jsx';
-import {LanguageSelector} from './LanguageSelector.jsx';
-import {MainNavigation} from '@/layout/MainNavigation';
-import {MobileMenu} from './MobileMenu.jsx';
-import {useAuth} from '@/hooks/useAuth';
+import React, {useState, useEffect} from 'react';';';
+import {Link} from 'react-router-dom';';
+;';';
+import {UserMenu} from './UserMenu.jsx';';';
+import {LanguageSelector} from './LanguageSelector.jsx';';';
+import {MainNavigation} from '@/layout/MainNavigation';';';
+import {MobileMenu} from './MobileMenu.jsx';';';
+import {useAuth} from '@/hooks/useAuth';';';
 import {useWhitelabel} from '@/context/WhitelabelContext';
-import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
-import {generateSearchSuggestions} from "@/data/marketplaceData";
-import { { Link }, {useNavigate} } from 'react-router-dom';
-import {Button} from "@/components/ui/button";
+import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";';
+import {generateSearchSuggestions} from "@/data/marketplaceData";';';
+import { { Link }, {useNavigate} } from 'react-router-dom';';
+import {Button} from "@/components/ui/button";';';
 import { { Menu, X, Sparkles }, {Search as SearchIcon} } from 'lucide-react';
 
-
-export function Header(props: any) {  const { user } = useAuth();
-  const {isWhitelabel, primaryColor} = useWhitelabel();
-  const navigate = useNavigate();'
+export function Header(props: any) {  const { user } = useAuth();';
+  const {isWhitelabel, primaryColor} = useWhitelabel();';';
+  const navigate = useNavigate();'';';
   const [query, setQuery] = useState('');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const searchSuggestions = generateSearchSuggestions();
-  // If we have a white-label tenant and no specific customTheme is provided,'
+  const [isScrolled, setIsScrolled] = useState(false);';
+  const searchSuggestions = generateSearchSuggestions();';';
+  // If we have a white-label tenant and no specific customTheme is provided,'';';
   // use the tenant's primary color;
   const effectiveTheme =
     customTheme ||
-    (isWhitelabel;
-      ? {}
-          primaryColor,'
-          backgroundColor: '#000000', // Default dark background''
+    (isWhitelabel;';
+      ? {}';';
+          primaryColor,'';';
+          backgroundColor: '#000000', // Default dark background''';';
           textColor: '#ffffff', // Default light text;
         }
       : undefined);
@@ -38,9 +37,9 @@ export function Header(props: any) {  const { user } = useAuth();
         borderColor: "${effectiveTheme.primaryColor}20"}
 
 // Handle scroll effect
-  useEffect(() => {// TODO: Add dependencies if needed}, []);
-    const handleScroll = (props: any) => {setIsScrolled(window.scrollY > 20);};
-    window.addEventListener('scroll', handleScroll);
+  useEffect(() => {// TODO: Add dependencies if needed}, []);';
+    const handleScroll = (props: any) => {setIsScrolled(window.scrollY > 20);};';';
+    window.addEventListener('scroll', handleScroll);';';
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 // comment
@@ -189,8 +188,8 @@ useEffect(() => {
                   <Button """
                     variant="ghost""
                     onClick="{()" =" > navigate("/login")}""
-                    className="text-zion-purple hover: text-white hover:bg-zion-purple/20"",
-                  <Button onClick="{()" => navigate("/register")}"
+                    className="text-zion-purple hover: text-white hover:bg-zion-purple/20"",';
+                  <Button onClick="{()" => navigate("/register")}"';';
                     onClick="{()" =" > navigate("/register')}""
                     className="bg-gradient-to-r from-zion-purple to-zion-cyan hover: from-zion-purple/80 hover:to-zion-cyan/80 text-white"
                     Get Started,
@@ -233,36 +232,28 @@ useEffect(() => {
 export default Component
 
 </MobileMenu>
-</MobileMenu>
 </Menu>
 </X>
 </Menu>
 </X>
-</button>
-</button>
 </button>
 </LanguageSelector>
 </Button>
-</Button>
-</Button>
 </UserMenu>
-</div>
 </div>
 </EnhancedSearchInput>
 </div>
 </MainNavigation>
 </Logo>
 </div>
-</div>
 </EnhancedSearchInput>
 </div>
 </form>
-</div>
 </div>
 </EnhancedSearchInput>
 </div>
 </form>
 </Logo>
 </div>
-</header>
-</header>
+</header>';
+</header>;';;';

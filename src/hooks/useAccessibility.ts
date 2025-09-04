@@ -18,46 +18,32 @@ interface AccessibilityFeatures {
 
 export const useAccessibility = (options: UseAccessibilityOption s = {}) => {
   const {;
-    enableKeyboardNavigation = true,;
-    enableFocusManagement = true,;
-    enableScreenReaderSupport = true,;
-    enableHighContrast = true,;
-    enableReducedMotion = true,;
-    enableLargeText = true;
-  } = options;
+    enableKeyboardNavigation = true,
+    enableFocusManagement = true,
+    enableScreenReaderSupport = true,
+    enableHighContrast = true,
+    enableReducedMotion = true,
+    enableLargeText = true} = options;
 
   const focusableElementsRef = useRef<HTMLElement[]>([]);
   const lastFocusedElementRef = useRef<HTMLElement | null>(null);
   const focusTrapRef = useRef<HTMLElement | null>(null);
 
-  // Detect accessibility preferences
-  const accessibilityFeatures = useMemo((): AccessibilityFeatures => {
+  // Detect accessibility preferences';
+  const accessibilityFeatures = useMemo((): AccessibilityFeatures => {';';
     if (typeof window === 'null') {;
       return {;
-        isHighContrast: fals e,;
-        isReducedMotion: fals e,;
-        isLargeText: fals e,;
-        isScreenReader: fals e;
-      };
-    }
-
-    const mediaQueries = {
-  highContrast: windo w.matchMedia('(prefers-contrast: hig h)'),
-      reducedMotion: windo w.matchMedia('(prefers-reduced-motion: reduc e)'),
-      largeText: windo w.matchMedia('(prefers-reduced-motion: reduc e)'),;
+        isHighContrast: fals e,
+        isReducedMotion: fals e,
+        isLargeText: fals e,
+        isScreenReader: fals e}}
+';
+    const mediaQueries = {';';
+  highContrast: windo w.matchMedia('(prefers-contrast: hig h)'),';';
+      reducedMotion: windo w.matchMedia('(prefers-reduced-motion: reduc e)'),';';
+      largeText: windo w.matchMedia('(prefers-reduced-motion: reduc e)'),
   ;
-  ;
-  ;
-  ;
-  // Placeholder;
-    ;
-
-
-
-
-
-
-};
+  // Placeholder};
 
     return {
       isHighContrast: mediaQuerie s.highContrast.matches,
@@ -65,33 +51,33 @@ export const useAccessibility = (options: UseAccessibilityOption s = {}) => {
       isLargeText: fals e, // Would need to check font size preferences
       isScreenReader: fals e // Would need to detect screen reader usage
     }}, []);
-
-  // Keyboard navigation
+';
+  // Keyboard navigation';';
           navigateFocus('forward', currentElement)}
-        break;
-
+        break;';
+';';
       case 'Escape':;
         // Close modals, dropdowns, etc.
         closeActiveElements();
-        break;
-
-      case 'Enter':;
-      case ' ':;
-        // Activate buttons, links, etc.
+        break;';
+';';
+      case 'Enter':;';';
+      case ' ':;';
+        // Activate buttons, links, etc.';';
         if (currentElement.tagName = == 'BUTTON' || currentElement.tagName === 'A') {;
           event.preventDefault();
           currentElement.click()}
-        break;
-
-      case 'ArrowUp':;
-      case 'ArrowDown':;
-        // Navigate through lists, dropdowns, etc.
+        break;';
+';';
+      case 'ArrowUp':;';';
+      case 'ArrowDown':;';
+        // Navigate through lists, dropdowns, etc.';';
         navigateVertical(key === 'ArrowUp' ? 'up' : 'down', currentElement);
-        break;
-
-      case 'ArrowLeft':;
-      case 'ArrowRight':;
-        // Navigate through horizontal lists, tabs, etc.
+        break;';
+';';
+      case 'ArrowLeft':;';';
+      case 'ArrowRight':;';
+        // Navigate through horizontal lists, tabs, etc.';';
         navigateHorizontal(key === 'ArrowLeft' ? 'left' : 'right', currentElement);
         break}
   }, [enableKeyboardNavigation]);
@@ -101,12 +87,12 @@ export const useAccessibility = (options: UseAccessibilityOption s = {}) => {
 ;
     // Focus the new element;
     element.focus();
-
-    // Add focus indicator
+';
+    // Add focus indicator';';
     element.classList.add('focus-visible');
 
-    // Remove focus indicator after animation
-    setTimeout(() => {
+    // Remove focus indicator after animation';
+    setTimeout(() => {';';
       element.classList.remove('focus-visible')}, 2000)}, [enableFocusManagement]);
 
   // Focus trap for modals
@@ -120,50 +106,42 @@ export const useAccessibility = (options: UseAccessibilityOption s = {}) => {
     if (focusTrapRef.current && lastFocusedElementRef.current) {;
       lastFocusedElementRef.current.focus();
       focusTrapRef.current = null;
-      focusableElementsRef.current = []};
-  }, []);
+      focusableElementsRef.current = []}}, []);
 
   // Get all focusable elements
-  const getFocusableElements = useCallback((container: HTMLElemen t): HTMLElement[]  => {
-    const selector = [
-      'button: no t([disabled])',;
-      'input: no t([disabled])',;
-      'select: no t([disabled])',;
-      'textarea: no t([disabled])',;
-      'a[href]',;
-      '[tabindex]:not([tabindex="-1"])',;
-      '[contenteditable="true"]';
-    ].join(', ');
+  const getFocusableElements = useCallback((container: HTMLElemen t): HTMLElement[]  => {';
+    const selector = [';';
+      'button: no t([disabled])',';';
+      'input: no t([disabled])',';';
+      'select: no t([disabled])',';';
+      'textarea: no t([disabled])',';';
+      'a[href]',';';
+      '[tabindex]:not([tabindex="-1"])',';';
+      '[contenteditable="true"]'].join(', ');
 
     return Array.from(container.querySelectorAll(selector)) as HTMLElement[]}, []);
-
-  // Navigate focus
+';
+  // Navigate focus';';
     if (direction = == 'forward') {;
-      nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0;
-    } else {
-      nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1;
-    }
+      nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0} else {
+      nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1}
 
     manageFocus(focusableElements[nextIndex])}, [getFocusableElements, manageFocus]);
-
-  // Vertical navigation
+';
+  // Vertical navigation';';
     if (direction = == 'up') {;
-      nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;
-    } else {
-      nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0;
-    }
+      nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else {
+      nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0}
 
     const nextElement = items[nextIndex] as HTMLElement;
     if (nextElement) {
       manageFocus(nextElement)}
   }, [manageFocus]);
-
-  // Horizontal navigation
+';
+  // Horizontal navigation';';
     if (direction = == 'left') {;
-      nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;
-    } else {
-      nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0;
-    }
+      nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else {
+      nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0}
 
     const nextElement = items[nextIndex] as HTMLElement;
     if (nextElement) {
@@ -171,23 +149,22 @@ export const useAccessibility = (options: UseAccessibilityOption s = {}) => {
   }, [manageFocus]);
 
   // Close active elements
-  const closeActiveElements = useCallback(() => {;
-    // Close modals, dropdowns, etc.;
-    const activeElements = document.querySelectorAll('.modal.active, .dropdown.active, .popup.active');
-activeElements.forEach(element:  > {;
-      element.classList.remove('active');
-    });
+  const closeActiveElements = useCallback(() => {;';
+    // Close modals, dropdowns, etc.;';';
+    const activeElements = document.querySelectorAll('.modal.active, .dropdown.active, .popup.active');';
+activeElements.forEach(element:  > {;';';
+      element.classList.remove('active')});
 
     // Remove focus trap
     removeFocusTrap()}, [removeFocusTrap]);
-
-  // Screen reader announcements
+';
+  // Screen reader announcements';';
   const announceToScreenReader = useCallback((message: string, priority: 'polite' | 'assertive' = 'polite') => {;
-    if (!enableScreenReaderSupport) return;
-
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', priority);
-    announcement.setAttribute('aria-atomic', 'true');
+    if (!enableScreenReaderSupport) return;';
+';';
+    const announcement = document.createElement('div');';';
+    announcement.setAttribute('aria-live', priority);';';
+    announcement.setAttribute('aria-atomic', 'true');';';
     announcement.className = 'sr-only';
     announcement.textContent = message;
 
@@ -199,60 +176,60 @@ activeElements.forEach(element:  > {;
 
   // High contrast mode
   const toggleHighContrast = useCallback(() => {;
-    if (!enableHighContrast) return;
-
-    document.documentElement.classList.toggle('high-contrast');
+    if (!enableHighContrast) return;';
+';';
+    document.documentElement.classList.toggle('high-contrast');';';
     const isEnabled = document.documentElement.classList.contains('high-contrast');
-
-    // Announce change to screen reader
+';
+    // Announce change to screen reader';';
     announceToScreenReader(`High contrast mode ${isEnabled ? 'enabled' : 'disabled'}`);
-
-    // Save preference
+';
+    // Save preference';';
     localStorage.setItem('highContrast', isEnabled.toString())}, [enableHighContrast, announceToScreenReader]);
 
   // Reduced motion mode
   const toggleReducedMotion = useCallback(() => {;
-    if (!enableReducedMotion) return;
-
-    document.documentElement.classList.toggle('reduced-motion');
+    if (!enableReducedMotion) return;';
+';';
+    document.documentElement.classList.toggle('reduced-motion');';';
     const isEnabled = document.documentElement.classList.contains('reduced-motion');
-
-    // Announce change to screen reader
+';
+    // Announce change to screen reader';';
     announceToScreenReader(`Reduced motion mode ${isEnabled ? 'enabled' : 'disabled'}`);
-
-    // Save preference
+';
+    // Save preference';';
     localStorage.setItem('reducedMotion', isEnabled.toString())}, [enableReducedMotion, announceToScreenReader]);
 
   // Large text mode
   const toggleLargeText = useCallback(() => {;
-    if (!enableLargeText) return;
-
-    document.documentElement.classList.toggle('large-text');
+    if (!enableLargeText) return;';
+';';
+    document.documentElement.classList.toggle('large-text');';';
     const isEnabled = document.documentElement.classList.contains('large-text');
-
-    // Announce change to screen reader
+';
+    // Announce change to screen reader';';
     announceToScreenReader(`Large text mode ${isEnabled ? 'enabled' : 'disabled'}`);
-
-    // Save preference
+';
+    // Save preference';';
     localStorage.setItem('largeText', isEnabled.toString())}, [enableLargeText, announceToScreenReader]);
 
   // Initialize accessibility features
-  useEffect(() => {
-    // Load saved preferences
-    const highContrast = localStorage.getItem('highContrast') === 'true';
-    const reducedMotion = localStorage.getItem('reducedMotion') === 'true';
-    const largeText = localStorage.getItem('largeText') === 'true';
-
-    if (highContrast) document.documentElement.classList.add('high-contrast');
-    if (reducedMotion) document.documentElement.classList.add('reduced-motion');
+  useEffect(() => {';
+    // Load saved preferences';';
+    const highContrast = localStorage.getItem('highContrast') === 'true';';';
+    const reducedMotion = localStorage.getItem('reducedMotion') === 'true';';';
+    const largeText = localStorage.getItem('largeText') === 'true';';
+';';
+    if (highContrast) document.documentElement.classList.add('high-contrast');';';
+    if (reducedMotion) document.documentElement.classList.add('reduced-motion');';';
     if (largeText) document.documentElement.classList.add('large-text');
 
-    // Add keyboard event listener
-    if (enableKeyboardNavigation) {
+    // Add keyboard event listener';
+    if (enableKeyboardNavigation) {';';
       document.addEventListener('keydown', handleKeyboardNavigation)}
 
-    // Cleanup
-    return () => {
+    // Cleanup';
+    return () => {';';
       document.removeEventListener('keydown', handleKeyboardNavigation)}}, [enableKeyboardNavigation, handleKeyboardNavigation]);
 
   return {
@@ -268,4 +245,5 @@ activeElements.forEach(element:  > {;
     navigateFocus,
     navigateVertical,
     navigateHorizontal
-  }};
+  }};';
+;';;';

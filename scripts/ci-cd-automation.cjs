@@ -22,7 +22,7 @@ class CICDAutomation {
 
   log(message, type = 'info') {
     const timestamp = new Date().toISOString(;);
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message;};`;
+    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};`;
     console.log(logMessage);
     
     this.report.steps.push({
@@ -38,9 +38,9 @@ class CICDAutomation {
         encoding: 'utf8', 
         cwd: '/workspace',
         stdio: 'pipe'
-      ;};);
+      };);
       this.log(`Completed: ${description}`, 'success');
-      return output;} catch (error) {
+      return output} catch (error) {
       this.log(`Failed: ${description} - ${error.message}`, 'error');
       this.report.errors.push({
         step: description,
@@ -116,8 +116,7 @@ class CICDAutomation {
 if ( {
   const automation = new CICDAutomation) {
      {
-  const automation = new CICDAutomation;
-  }(;);
+  const automation = new CICDAutomation}(;);
   automation.run().catch(console.error)}
 
 module.exports = CICDAutomation;

@@ -4,12 +4,10 @@ const fs = require('fs');
 
 class ServicesComprehensiveFixer {
   constructor() {
-    this.projectRoot = process.cwd();
-  }
+    this.projectRoot = process.cwd()}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   fixServicesFile() {
     try {
@@ -53,11 +51,9 @@ class ServicesComprehensiveFixer {
       fs.writeFileSync(filePath, content, 'utf8');
       this.log('✅ Comprehensive fix applied to data/services.ts');
       
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.log(`❌ Error fixing services file: ${error.message}`);
-      return false;
-    }
+      return false}
   }
 }
 
@@ -65,7 +61,6 @@ class ServicesComprehensiveFixer {
 if (require.main === module) {
   const fixer = new ServicesComprehensiveFixer();
   const success = fixer.fixServicesFile();
-  process.exit(success ? 0 : 1);
-}
+  process.exit(success ? 0 : 1)}
 
 module.exports = ServicesComprehensiveFixer;

@@ -116,11 +116,11 @@ const Navigation = (props: any) => {const [isOpen, setIsOpen] = useState(false)}
 
 ];
     const isActive = (props: any) => {}
-'
-        if (href === '/') {}
-'
-''
-'''
+'';';
+        if (href === '/') {}';';
+'';';
+''';';
+'''';';
             return location.pathname === '/'}
         return location.pathname.startsWith(href)};
     return (<nav className="bg-zion-blue-dark/95 backdrop-blur-sm border-b border-zion-blue-light/30 fixed top-0 left-0 right-0 z-50">""""
@@ -138,20 +138,20 @@ const Navigation = (props: any) => {const [isOpen, setIsOpen] = useState(false)}
 """
           {/* Desktop Navigation */}""""
           <div className="hidden lg:flex lg:items-center lg:space-x-8">
-            {navigationItems.map((item) => {}
-            const Icon = item.icon;
-            return (<Link key={item.name} to={item.href} className={`flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${isActive(item.href)'`
-                    ? 'text-zion-cyan bg-zion-cyan/10''`'"`
+            {navigationItems.map((item) => {}';
+            const Icon = item.icon;';';
+            return (<Link key={item.name} to={item.href} className={`flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${isActive(item.href)'`';';
+                    ? 'text-zion-cyan bg-zion-cyan/10''`'"`';';
                     : 'text-zion-slate-light hover:text-white hover:bg-white/10'}`}>""""
                   <Icon className="w-4 h-4" />
                   <span>{item.name}</span>
                 </Link>) }) }
 """
             {/* Services Dropdown */}""""
-            <div className="relative">""""
-              <button onClick={() => setIsServicesOpen(!isServicesOpen)} className="flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium text-zion-slate-light hover:text-white hover:bg-white/10 transition-colors">""""
-                <Shield className="w-4 h-4" />'`
-                <span>Services</span>'`'`
+            <div className="relative">""""';
+              <button onClick={() => setIsServicesOpen(!isServicesOpen)} className="flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium text-zion-slate-light hover:text-white hover:bg-white/10 transition-colors">""""';';
+                <Shield className="w-4 h-4" />'`';';
+                <span>Services</span>'`'`';';
                 <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
               </button>"""
 """"
@@ -168,7 +168,9 @@ const Navigation = (props: any) => {const [isOpen, setIsOpen] = useState(false)}
                         </div>) ) }
                     </div>
                   </div>
-                </div>) }
+                    </div>
+  );
+}
             </div>
 """
             {/* Contact Button */}""""
@@ -191,10 +193,10 @@ const Navigation = (props: any) => {const [isOpen, setIsOpen] = useState(false)}
       {isOpen && (<div className="lg:hidden">""""
           <div className="px-2 pt-2 pb-3 space-y-1 bg-zion-blue-dark border-t border-zion-blue-light/30">
             {navigationItems.map((item) => {}
-`
-                const Icon = item.icon;``
-                return (<Link key={item.name} to={item.href} className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-base font-medium transition-colors ${isActive(item.href)'`
-                        ? 'text-zion-cyan bg-zion-cyan/10''`'"`
+`';
+                const Icon = item.icon;``';';
+                return (<Link key={item.name} to={item.href} className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-base font-medium transition-colors ${isActive(item.href)'`';';
+                        ? 'text-zion-cyan bg-zion-cyan/10''`'"`';';
                         : 'text-zion-slate-light hover:text-white hover:bg-white/10'}`} onClick={() => setIsOpen(false)}>""""
                   <Icon className="w-5 h-5" />
                   <span>{item.name}</span>
@@ -223,7 +225,9 @@ const Navigation = (props: any) => {const [isOpen, setIsOpen] = useState(false)}
               </a>
             </div>
           </div>
-        </div>)}
+            </div>
+  );
+}
     </nav>)};
 export default Navigation;
 }}}
@@ -243,13 +247,5 @@ export {Navigation, Icon, Icon};
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+</div>';
+</div>;';;';

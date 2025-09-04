@@ -149,8 +149,8 @@
     "search:index": "node scripts/generate-search-index.js",
     "content:fix": "node automation/content-quality-fixer.cjs && node automation/content-quality-analyzer.cjs",
     "perf:monitor": "node scripts/performance-monitor.js",
-    "perf:audit": "npm run perf:monitor",
-    "perf:lighthouse": "npx --yes lighthouse https://ziontechgroup.com --output=html --output-path=./lighthouse-report.html",
+    "perf:audit": "npm run build:analyze",
+    "perf:lighthouse": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
     "format": "prettier --write .",
     "automation:accessibility": "node automation/accessibility-checker.cjs",
     "automation:security-audit": "node automation/security-audit.cjs",
@@ -186,7 +186,8 @@
     "dev:setup": "bash scripts/dev-setup.sh",
     "quick:test": "bash scripts/quick-test.sh",
     "deploy:app": "bash scripts/deploy.sh",
-    "health:check": "bash scripts/health-check.sh"
+    "health:check": "bash scripts/health-check.sh",
+    "build:production": "NODE_ENV=production npm run build"
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"
@@ -330,7 +331,9 @@
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2",
-    "vite": "^7.1.4"
+    "vite": "^7.1.4",
+    "lighthouse": "^12.0.0",
+    "web-vitals": "^5.1.0"
   },
   "engines": {
     "node": ">=18.0.0",

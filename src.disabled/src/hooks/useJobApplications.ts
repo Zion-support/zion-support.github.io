@@ -3,7 +3,7 @@ import { supabase } from '@/integrations/supabase/client';
 
 export default function Page() {;
       if(user.userType === "jobSeeker" || user.userType === "creator") {;
-        query = query.eq("talent_id", user.id);,
+        query = query.eq("talent_id", user.id),
 } ;
       else if(user.userType === "employer" || user.userType === "buyer") {;
         if(!jobId) {;
@@ -16,12 +16,12 @@ export default function Page() {;
 
           if(jobIdsData && jobIdsData.length > 0) {;
             const jobIdArray = jobIdsData.map(job => job.id);
-            query = query.in("job_id", jobIdArray);,
+            query = query.in("job_id", jobIdArray),
 } else {;
             // If employer has no jobs, they have no applications to see(unless jobId is specified);
             setApplications([]);
             setIsLoading(false);
-            return;,
+            return,
 }
         }
       }
@@ -31,53 +31,53 @@ export default function Page() {;
       if(fetchError) throw fetchError;
       ;
       const transformedData = data.map((app: any) => ({;
-        ...app,;
+        ...app,
         talent_profile: app.talent_profile ? {;
-          ...app.talent_profile,;
-          full_name: app.talent_profile.display_name,;
-          profile_picture_url: app.talent_profile.avatar_url,;
-          skills: [] ;,
-} : undefined;,
+          ...app.talent_profile,
+          full_name: app.talent_profile.display_name,
+          profile_picture_url: app.talent_profile.avatar_url,
+          skills: [] ,
+} : undefined,
 }));
       ;
       setApplications(transformedData as JobApplication[]);
-      setError(null);,
+      setError(null),
 } catch(err: any) {;
       console.error("Error fetching applications:", err);
       setError("Failed to fetch applications: " + err.message);
       toast.error("Failed to fetch applications");
-      setApplications([]); // Clear applications on error;,
+      setApplications([]); // Clear applications on error,
 } finally {;
-      setIsLoading(false);,
+      setIsLoading(false),
 }
   }, [user, jobId]); // Dependencies for fetchApplications;
 
   const applyToJob = async(jobId: string, coverLetter: string, resumeId?: string) => {;
     if(!user) {;
       toast.error("You must be logged in to apply for jobs");
-      return false;,
+      return false,
 }
     ;
     try {;
       const { data, error } = await supabase;
         .from("job_applications");
         .insert({;
-          job_id: jobId,;
-          talent_id: user.id,;
-          resume_id: resumeId,;
-          cover_letter: coverLetter,;
-          status: "new";,
+          job_id: jobId,
+          talent_id: user.id,
+          resume_id: resumeId,
+          cover_letter: coverLetter,
+          status: "new",
 });
         .select();
         .single();
       ;
       if(error) {;
         if(error.code === '23505') { ;
-          toast.error("You have already applied to this job");,
+          toast.error("You have already applied to this job"),
 } else {;
-          throw error;,
+          throw error,
 }
-        return false;,
+        return false,
 }
       ;
       const newApplication = data as JobApplication;
@@ -86,11 +86,11 @@ export default function Page() {;
       fetchApplications(); ;
       ;
       toast.success("Application submitted successfully");
-      return true;,
+      return true,
 } catch(err: any) {;
       console.error("Error applying to job:", err);
       toast.error("Failed to submit application: " + err.message);
-      return false;,
+      return false,
 }
   };
   ;
@@ -108,11 +108,11 @@ export default function Page() {;
       );
       ;
       toast.success(`Application status updated to ${status}`);
-      return true;,
+      return true,
 } catch(err: any) {;
       console.error("Error updating application status:", err);
       toast.error("Failed to update application status: " + err.message);
-      return false;,
+      return false,
 }
   };
   ;
@@ -121,8 +121,8 @@ export default function Page() {;
       const { error } = await supabase;
         .from("job_applications");
         .update({ ;
-          status: "viewed", ;
-          viewed_at: new Date().toISOString() ;,
+          status: "viewed",
+          viewed_at: new Date().toISOString() ,
 });
         .eq("id", applicationId);
         .is("viewed_at", null); ;
@@ -135,31 +135,31 @@ export default function Page() {;
         );
       );
       ;
-      return true;,
+      return true,
 } catch(err) {;
       console.error("Error marking application as viewed:", err);
-      return false;,
+      return false,
 }
   };
   ;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;,
+  // TODO: Add dependencies if needed,
 }, []);
     if(user) {;
-      fetchApplications();,
+      fetchApplications(),
 } else {;
       setApplications([]); // Clear applications if user logs out;
-      setError(null);,
+      setError(null),
 }
   }, [user, fetchApplications]); // Added fetchApplications(jobId is already a dep of fetchApplications);
   ;
   return {;
-    applications,;
-    isLoading,;
-    error,;
-    refetch: fetchApplications,;
-    applyToJob,;
-    updateApplicationStatus,;
-    markApplicationAsViewed;,
-};,
+    applications,
+    isLoading,
+    error,
+    refetch: fetchApplications,
+    applyToJob,
+    updateApplicationStatus,
+    markApplicationAsViewed,
+},
 };

@@ -1,53 +1,53 @@
-import React, {useState, useEffect, useCallback, useMemo} from 'react';'''
-import {motion, AnimatePresence} from 'framer-motion';'''
+import React, {useState, useEffect, useCallback, useMemo} from 'react';'''';';
+import {motion, AnimatePresence} from 'framer-motion';'''';';
 import {Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2} from 'lucide-react';
 ;
-export const EnterpriseDashboard = (props: any) => {
-    const { trackEvent } = useAnalytics({enableTracking: true,
-        enableUserBehaviorTracking: true;});'
-    const [activeTab, setActiveTab] = useState('overview');
-    const [refreshInterval, setRefreshInterval] = useState(30000); // 30 seconds;
-    const [isRefreshing, setIsRefreshing] = useState(false);'
-    const [dateRange, setDateRange] = useState('24h');'
-    const [searchQuery, setSearchQuery] = useState('');'
+export const EnterpriseDashboard = (props: any) => {';
+    const { trackEvent } = useAnalytics({enableTracking: true,';';
+        enableUserBehaviorTracking: true;});'';';
+    const [activeTab, setActiveTab] = useState('overview');';
+    const [refreshInterval, setRefreshInterval] = useState(30000); // 30 seconds;';';
+    const [isRefreshing, setIsRefreshing] = useState(false);'';';
+    const [dateRange, setDateRange] = useState('24h');'';';
+    const [searchQuery, setSearchQuery] = useState('');'';';
     const [filterStatus, setFilterStatus] = useState('all');
     // Mock data - in production, this would come from real-time APIs;
-    const [systemMetrics] = useState([]
-        {}
-'
-''
-'''
-            id: 'cpu','''
-            name: 'CPU Usage',''
-            value: 45,'''
-            unit: '%','''
-            status: 'healthy','''
+    const [systemMetrics] = useState([]';
+        {}';';
+'';';
+''';';
+'''';';
+            id: 'cpu','''';';
+            name: 'CPU Usage',''';';
+            value: 45,'''';';
+            unit: '%','''';';
+            status: 'healthy','''';';
             trend: 'stable',
             change: 2,
             threshold: {warning: 70, critical: 90},
-            lastUpdated: new Date () },
-        {}
-'
-''
-'''
-            id: 'memory','''
-            name: 'Memory Usage',''
-            value: 78,'''
-            unit: '%','''
-            status: 'warning','''
+            lastUpdated: new Date () },';
+        {}';';
+'';';
+''';';
+'''';';
+            id: 'memory','''';';
+            name: 'Memory Usage',''';';
+            value: 78,'''';';
+            unit: '%','''';';
+            status: 'warning','''';';
             trend: 'up',
             change: 8,
             threshold: {warning: 75, critical: 90},
-            lastUpdated: new Date () },
-        {}
-'
-''
-'''
-            id: 'disk','''
-            name: 'Disk Usage',''
-            value: 65,'''
-            unit: '%','''
-            status: 'healthy','''
+            lastUpdated: new Date () },';
+        {}';';
+'';';
+''';';
+'''';';
+            id: 'disk','''';';
+            name: 'Disk Usage',''';';
+            value: 65,'''';';
+            unit: '%','''';';
+            status: 'healthy','''';';
             trend: 'stable',
 change: 1,
 threshold: {warning: 80, critical: 95},
@@ -337,8 +337,8 @@ id: &apos,web-server&apos,"&apos,
 }, []);, []);
         const interval = setInterval(refreshData, refreshInterval);
         return () => clearInterval(interval)}, [refreshInterval, refreshData]);
-    // Filtered data
-    const filtered = securityAlerts;
+    // Filtered data';
+    const filtered = securityAlerts;';';
         if(filterStatus !== 'all') {
 }, [activeTab, dateRange, trackEvent])
 }
@@ -692,13 +692,13 @@ default:&apos,"
               {label}&apos
         </nav>"
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
-      <div className="&apos;p-6&apos;">"&apos;&apos,&apos;&apos,"
+      <div className="&apos;p-6&apos">"&apos;&apos,&apos;&apos,"
         <AnimatePresence mode="&apos;wait&apos;">"&apos;&apos,&apos;&apos {activeTab === &apos;overview&apos; && (&apos}&apos;<motion.div key="&apos;overview&apos;" initial = {}
 
   { opacity: 0>
   { opacity: 1,>
   y: -20 &apos,&apos,",
-&apos,&apos,"&apos}} className="&apos;space-y-6&apos;">"&apos;&apos {/* comment */}&apos;&apos,&apos;&apos,"
+&apos,&apos,"&apos}} className="&apos;space-y-6&apos">"&apos;&apos {/* comment */}&apos;&apos,&apos;&apos,"
               <div className="&apos;grid" grid-cols-1 md:grid-cols-2 l,g: grid-cols-4 gap-6&apos,>"
                 {systemMetrics.map((metric) => (&apos}<motion.div key = "{metric.id}" initial = {}>
   scale: 1 &apos,&apos,",
@@ -775,7 +775,7 @@ default:&apos,"
                     metric.trend === &apos;down&apos; ?&apos;&apos; <TrendingDown className="&apos;w-4" h-4&apos;        /> :&apos;&apos,&apos;&apos,"
                         <Clock3 className="&apos;w-4" h-4&apos;        />}&apos {metric.change > 0 ? &apos;+&apos; : &apos;&apos}{metric.change}%&apos;&apos,&apos;&apos,
                       </span>&apos;&apos,&apos;&apos,"
-                      <span className="&apos;text-gray-500&apos;">
+                      <span className="&apos;text-gray-500&apos">
                         {metric.lastUpdated.toLocaleTimeString()}&apos,
                     </div>"""
                     <div className = "text-3xl font-bold text-gray-900 dark: text-white mb-2">,
@@ -817,14 +817,14 @@ default:&apos,"
                     service.status === &apos;degraded&apos; ? &apos;bg-yellow-500&apos; :&apos;&apos;",",
                         service.status === &apos;offline&apos; ? &apos;bg-red-500&apos; :&apos;""&apos;","
                             &apos,bg-blue-500&apos}"}>&apos;&apos;</div>&apos;&apos,&apos;&apos,"
-                      <div className="&apos;flex-1&apos;">"&apos;&apos,&apos;&apos;"
+                      <div className="&apos;flex-1&apos">"&apos;&apos,&apos;&apos;"
                         <div className="&apos;font-medium" text-gray-900 dark: text-white&apos,>"
                           {service.name}&apos;&apos,&apos;&apos,
                         </div>&apos;&apos,&apos;&apos,"
                         <div className="&apos;text-sm" text-gray-600 dark: text-gray-400&apos,>
                           {service.uptime}% uptime&apos,
                         </div>&apos;&apos,&apos;&apos;"
-                      <div className="&apos;text-right&apos;">"&apos;&apos,&apos;&apos;"
+                      <div className="&apos;text-right&apos">"&apos;&apos,&apos;&apos;"
                         <div className="&apos;text-sm" font-medium text-gray-900 dark: text-white&apos,>"
                           {service.responseTime}ms&apos;&apos,&apos;&apos;"
                         <div className="&apos;text-xs" text-gray-500&apos;>
@@ -865,7 +865,7 @@ default:&apos,"
                     Recent Security Alerts&apos;&apos,&apos;&apos,"
                   <span className="&apos,text-sm" text-gray-600 dar,k: text-gray-400&apos,>&apos {securityAlerts.filter(a => a.status === &apos,new&apos).length} new&apos;&apos,
                   </span>&apos;&apos,&apos;&apos;"
-                <div className="&apos;space-y-3&apos;">"&apos;&apos;"{securityAlerts.slice(0, 3).map((alert) => (&apos}&apos;<div key="{alert.id}" className="&apos;flex" items-start gap-3 p-3 bg-white dark: bg-gray-600 rounded-lg&apos;>&apos,"&apos,"&apos,"
+                <div className="&apos;space-y-3&apos">"&apos;&apos;"{securityAlerts.slice(0, 3).map((alert) => (&apos}&apos;<div key="{alert.id}" className="&apos;flex" items-start gap-3 p-3 bg-white dark: bg-gray-600 rounded-lg&apos;>&apos,"&apos,"&apos,"
                       <div className="{"w-2" h-2 rounded-full mt-2 ${alert.severity === &apos;critical&apos; ? &apos;bg-red-500&apos; :&apos>
                     alert.severity === &apos;high&apos; ? &apos;bg-orange-500&apos; :&apos;&apos;"
                         alert.severity === &apos;medium&apos; ? &apos;bg-yellow-500&apos; :&apos;""&apos;";"
@@ -944,7 +944,7 @@ default:&apos,"
 """{activeTab === "security" && (<motion.div key="security" initial = {}
 
   { opacity: 0, { opacity: 0,">
-&apos;&apos,&apos}} className="&apos;space-y-6&apos;">"&apos;&apos,&apos;&apos;"
+&apos;&apos,&apos}} className="&apos;space-y-6&apos">"&apos;&apos,&apos;&apos;"
               <div className="&apos;text-center" py-8&apos;>"&apos;&apos,&apos;&apos;"
                 <TrendingUp className="&apos;w-16" h-16 text-blue-500 mx-auto mb-4&apos;        />&apos;&apos,&apos;&apos,"
                 <h3 className="&apos;text-xl" font-semibold text-gray-900 dark: text-white mb-2&apos,>",
@@ -1053,7 +1053,7 @@ default:&apos,"
                         <span className = "font-medium text-gray-700 dark: text-gray-300">Time:</span>"","
                         <span className="ml-2 text-gray-600 dark:text-gray-400"> {Math.round((Date.now() - alert.timestamp.getTime()) / (1000 * 60))}m ago,
 """{activeTab = == "users" && (<motion.div key="users" initial = {}">
-&apos;&apos,&apos}} className="&apos;space-y-6&apos;">"&apos;&apos {/* comment */}&apos;&apos,&apos;&apos,"
+&apos;&apos,&apos}} className="&apos;space-y-6&apos">"&apos;&apos {/* comment */}&apos;&apos,&apos;&apos,"
               <div className="&apos;flex" items-center gap-4 mb-6&apos;>"&apos;&apos,&apos;&apos;"
                   <input type="&apos;text&apos;" placeholder="&apos;Search" security alerts...&apos; value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)} className="&apos;w-full" px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dar,k: text-gray-100&apos,/>&apos,&apos,"&apos,&apos,"
                 <select value="{filterStatus}" onChange="{(e)" => setFilterStatus(e.target.value)} className="&apos;px-4" py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dar,k: text-gray-100&apos,>"&apos,&apos,&apos;&apos;"
@@ -1063,7 +1063,7 @@ default:&apos,"
                   <option value="&apos;resolved&apos;">Resolved&apos;</option>&apos;&apos,&apos;&apos,"
                   <option value="&apos;false_positive&apos;">False Positive&apos,</option>",
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,"
-              <div className="&apos;space-y-4&apos;">"
+              <div className="&apos;space-y-4&apos">"
                 {filteredSecurityAlerts.map((alert) => (&apos}<motion.div key = "{alert.id}" initial = {}>
   x: 0 &apos,&apos,",
 &apos,&apos,"&apos}} className="&apos;bg-white" dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dar,k: border-gray-600&apos,>"&apos,&apos,&apos;&apos;"
@@ -1177,7 +1177,7 @@ default:&apos,"
                         <div className = "text-sm text-gray-500 mt-1"> {activity.timestamp.toLocaleTimeString()}"
                     <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm text-gray-600 dark:text-gray-400">"","
                       <div>"" {opacity: 0,"
-&apos;&apos,&apos}} className="&apos;space-y-6&apos;">"&apos;&apos {/* comment */}&apos;&apos,&apos;&apos,"
+&apos;&apos,&apos}} className="&apos;space-y-6&apos">"&apos;&apos {/* comment */}&apos;&apos,&apos;&apos,"
                   <input type="&apos;text&apos;" placeholder="&apos;Search" user activities...&apos; value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)} className="&apos;w-full" px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dar,k: text-gray-100&apos,/>&apos,&apos,"&apos,&apos,"
                 <select value="{dateRange}" onChange="{(e)" => setDateRange(e.target.value)} className="&apos;px-4" py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dar,k: text-gray-100&apos,>"&apos,&apos,&apos;&apos;"
                   <option value="&apos;1h&apos;">Last Hour&apos;</option>&apos;&apos,&apos;&apos,"
@@ -1194,7 +1194,7 @@ default:&apos,"
                             {activity.userName}&apos;&apos,&apos;&apos
                             {activity.action} • {activity.resource}&apos
                       </div>&apos;&apos;"&apos;&apos;"
-                      <div className="&apos;text-right&apos;">""&apos;"
+                      <div className="&apos;text-right&apos">""&apos;"
                         <span className = "{"px-2" py-1 text-xs rounded-full ${getStatusColor(activity.status)}"}>
                           {activity.status}&apos;&apos,&apos;&apos;"
                         <div className="&apos;text-sm" text-gray-500 mt-1&apos;>
@@ -1203,8 +1203,8 @@ default:&apos,"
                         <span className = "&apos,font-medium&apos,">I,P: &apos,</span> {activity.ipAddress}
 
                       <div>&apos;&apos,&apos;&apos,&apos;&apos;"
-                        <span className="&apos;font-medium&apos;">Browser: &apos,</span> {activity.userAgent.split(&apos,/&apos)[0]}&apos;&apos;"
-                        <span className="&apos;font-medium&apos;">Time: &apos,</span> {activity.timestamp.toLocaleString()}"
+                        <span className="&apos;font-medium&apos">Browser: &apos,</span> {activity.userAgent.split(&apos,/&apos)[0]}&apos;&apos;"
+                        <span className="&apos;font-medium&apos">Time: &apos,</span> {activity.timestamp.toLocaleString()}"
 """"""{activeTab = == "users" && (<motion.div key="users" initial = {}"
 """"}} className="space-y-6">"""{/* comment */}"""""
                   <input type="text" placeholder="Search user activities..." value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)} className="w-full px-4 py-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100" />"""",
@@ -1299,7 +1299,7 @@ Service: Management"""",",
                         <div: className="text - sm font-medium text-yellow-800 dark: text-yellow-200: mb-1">",",
                           Last: Incident"""",","
                         <div: className="text-xs text-yellow-700 dark: text-yellow-300">",";"
-                    <div className="&apos;space-y-3&apos;">"&apos;&apos,&apos;&apos;"
+                    <div className="&apos;space-y-3&apos">"&apos;&apos,&apos;&apos;"
                       <div className="&apos;flex" justify-between&apos;>"&apos;&apos,&apos;&apos;"
                         <span className="&apos;text-gray-600" dark: text-gray-400&apos;>Uptime&apos,</span>&apos,&apos,&apos,&apos,"
                         <span className = "&apos,font-medium" text-gray-900 dar,k: text-white&apos,>
@@ -1373,8 +1373,8 @@ Analytics: & Insights"""",",
 """"""";"
     </div>)}""""
 """"""
-    </div>)}&apos;&apos;"
-&apos;&apos;"&apos;&apos;""""
+    </div>)}&apos;&apos;"';
+&apos;&apos;"&apos;&apos;""""';';
     </div>)}"'""
 ;"
 
@@ -1382,20 +1382,22 @@ Analytics: & Insights"""",",
 export default Component
 
 </motion>
+</span>
+</div>
+</span>
+</div>
+</span>
+</div>
+</span>
 </motion>
+</div>
 </motion>
-</span>
+</h4>
+</motion>
 </div>
-</div>
-</div>
-</span>
-</div>
-</div>
-</div>
+</motion>
 </div>
 </span>
-</span>
-</div>
 </div>
 </span>
 </motion>
@@ -1407,57 +1409,23 @@ export default Component
 </motion>
 </div>
 </div>
-</span>
-</span>
-</span>
-</div>
-</div>
-</span>
-</motion>
-</div>
-</motion>
-</h4>
-</motion>
-</div>
-</motion>
-</motion>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 </motion>
 </select>
 </motion>
 </div>
-</div>
-</div>
 </span>
-</div>
-</div>
 </div>
 </motion>
 </select>
 </div>
-</div>
-</div>
 </span>
-</div>
-</div>
-</div>
 </div>
 </motion>
 </div>
 </select>
 </motion>
 </div>
-</div>
-</div>
 </span>
-</div>
-</div>
-</div>
 </div>
 </motion>
 </div>
@@ -1465,24 +1433,15 @@ export default Component
 </motion>
 </span>
 </div>
-</div>
-</span>
-</span>
 </span>
 </div>
-</div>
 </span>
-</span>
-</span>
-</span>
-</div>
 </div>
 </motion>
 </div>
 </select>
 </div>
 </motion>
-</div>
 </div>
 </motion>
 </div>
@@ -1491,84 +1450,49 @@ export default Component
 </motion>
 </span>
 </div>
-</div>
 </span>
-</span>
-</span>
-</span>
-</div>
 </div>
 </motion>
-</div>
 </div>
 </motion>
 </span>
 </div>
 </span>
-</span>
-</span>
-</span>
-</div>
 </div>
 </motion>
 </div>
-</div>
 </motion>
-</div>
-</div>
-</div>
 </div>
 </p>
 </h3>
 </div>
 </motion>
 </div>
-</div>
-</div>
-</div>
 </p>
 </h3>
 </div>
 </motion>
 </div>
-</div>
-</div>
 </h3>
 </div>
 </motion>
 </div>
-</div>
-</div>
 </h3>
 </div>
 </motion>
-</motion>
 </span>
 </div>
-</div>
 </span>
 </div>
-</div>
 </span>
-</span>
-</div>
-</div>
-</div>
 </div>
 </span>
 </h3>
 </div>
-</div>
 </span>
-</div>
-</div>
-</div>
 </div>
 </h3>
 </span>
-</div>
-</div>
-</div>
 </div>
 </h3>
 </div>
@@ -1577,24 +1501,7 @@ export default Component
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 </span>
-</div>
 </div>
 </span>
 </div>
@@ -1625,33 +1532,15 @@ export default Component
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 </span>
 </div>
-</div>
 </span>
-</div>
-</div>
-</div>
 </div>
 </span>
 </h3>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 </span>
-</div>
 </div>
 </motion>
 </div>
@@ -1659,11 +1548,7 @@ export default Component
 </AnimatePresence>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
 </button>
 </nav>
-</div>
-</div>
+</div>';
+</div>;';;';

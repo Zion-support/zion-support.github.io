@@ -648,8 +648,7 @@ function findAllMissingImports(content, filePath) {
       const existingImport = content.match(importRegex);
 
       if (!existingImport) {
-        missingImports.push(icon);
-      }
+        missingImports.push(icon)}
     }
   });
 
@@ -661,8 +660,7 @@ function fixAllMissingImports(content, filePath) {
   const missingImports = findAllMissingImports(content, filePath);
 
   if (missingImports.length === 0) {
-    return { content, changes: 0 };
-  }
+    return { content, changes: 0 }}
 
   let fixedContent = content;
   let changes = 0;
@@ -683,8 +681,7 @@ function fixAllMissingImports(content, filePath) {
 
     const newImport = `import { ${allIcons.join(', ')} } from 'lucide-react';`;
     fixedContent = fixedContent.replace(existingImportRegex, newImport);
-    changes++;
-  } else {
+    changes++} else {
     // Create new import statement
     const newImport = `import { ${missingImports.join(', ')} } from 'lucide-react';\n`;
 
@@ -696,15 +693,11 @@ function fixAllMissingImports(content, filePath) {
         fixedContent.slice(0, nextLineIndex) +
         '\n' +
         newImport +
-        fixedContent.slice(nextLineIndex);
-    } else {
-      fixedContent = newImport + fixedContent;
-    }
-    changes++;
-  }
+        fixedContent.slice(nextLineIndex)} else {
+      fixedContent = newImport + fixedContent}
+    changes++}
 
-  return { content: fixedContent, changes };
-}
+  return { content: fixedContent, changes }}
 
 // Process individual file
 function processFile(filePath) {
@@ -715,13 +708,10 @@ function processFile(filePath) {
     if (result.changes > 0) {
       fs.writeFileSync(filePath, result.content, 'utf8');
       totalFixes += result.changes;
-      console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`);
-    }
+      console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)}
 
-    filesProcessed++;
-  } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
-  }
+    filesProcessed++} catch (error) {
+    console.error(`❌ Error processing ${filePath}:`, error.message)}
 }
 
 // Main function
@@ -753,15 +743,13 @@ async function main() {
     });
 
     for (const file of files) {
-      processFile(file);
-    }
+      processFile(file)}
   }
 
   console.log(`\n📊 Comprehensive Missing Imports Fix Summary:`);
   console.log(`   Files processed: ${filesProcessed}`);
   console.log(`   Total import fixes: ${totalFixes}`);
-  console.log(`\n✨ Comprehensive missing imports fix completed!`);
-}
+  console.log(`\n✨ Comprehensive missing imports fix completed!`)}
 
 // Run the script
 main().catch(console.error);

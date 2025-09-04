@@ -26,7 +26,7 @@ class ResourceMonitor {;
   private setupErrorListeners() {;
     // Listen for script loading errors;
     window.addEventListener(';
-      'error',;
+      'error',
       event => {;
 
         if (event.target && event.target !== window) {;
@@ -34,12 +34,12 @@ class ResourceMonitor {;
           if(url) {;
 
             this.handleResourceError();
-              url,;
-              this.getResourceType(target),;
+              url,
+              this.getResourceType(target),
               event.error?.message || 'Unknown error';
             )}
         }
-      },;
+      },
       true;
     );
 
@@ -53,7 +53,7 @@ class ResourceMonitor {;
       ) {;
 
         this.handleResourceError(';
-          'unknown',other',;
+          'unknown',other',
           `MIME type error: ${event.reason}`;
         )}
     })}
@@ -134,16 +134,16 @@ class ResourceMonitor {;
       this.handleResourceError(url,other', `Fetch error: ${error}`)}
   }
   private handleResourceError();
-    url: string,;
-    type: ResourceError['type'],;
+    url: string,
+    type: ResourceError['type'],
     error: string;
   ) {;
 
     const resourceError: ResourceError = {;
 
-      url,;
-      type,;
-      error,;
+      url,
+      type,
+      error,
       timestamp: Date.now()};
 
     this.errors.push(resourceError);
@@ -166,9 +166,9 @@ class ResourceMonitor {;
 
     setTimeout();
       () => {;
-        this.retryResource(url, type)},;
+        this.retryResource(url, type)},
       Math.pow(2, attempts) * 1000;
-    ); // Exponential backoff;,
+    ); // Exponential backoff,
 }
   private retryResource(url: string, type: ResourceError['type']) {;
 `;
@@ -212,7 +212,7 @@ class ResourceMonitor {;
     if(process.env.NODE_ENV === 'production') {;
 
       // Example: Sentry, LogRocket, etc.';
-      // console.log('📊 Reporting error to monitoring service:', error);,
+      // console.log('📊 Reporting error to monitoring service:', error),
 }
   }
   private getResourceType(element: HTMLElement): ResourceError['type'] {;

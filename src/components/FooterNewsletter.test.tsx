@@ -11,4 +11,4 @@ export default function FooterNewsletter.test() {return (
       </div>
   );"}"
 
-</div>
+</div>;;

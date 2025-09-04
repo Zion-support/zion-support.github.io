@@ -29,7 +29,7 @@ class DeploymentAutomation {
       await this.initialize();
       await this.loadDeploymentHistory();
       this.startDeploymentMonitoring();
-      console.log('✅ Deployment Automation started successfully');} catch (error) {
+      console.log('✅ Deployment Automation started successfully')} catch (error) {
       console.error('❌ Failed to start Deployment Automation:', error)}
   }
 
@@ -39,7 +39,7 @@ class DeploymentAutomation {
     await fs.mkdir('./deployments', { recursive: true });
     await fs.mkdir('./backups', { recursive: true });
     
-    console.log('📁 Deployment Automation initialized');}
+    console.log('📁 Deployment Automation initialized')}
 
   async deploy(environment = 'staging', options = {}) {
     console.log(`🚀 Starting deployment to ${environment}...`);
@@ -51,7 +51,7 @@ class DeploymentAutomation {
       startTime: new Date().toISOString(),
       options,
       steps: []
-   ; ;};
+   };
     
     this.currentDeployment = deployment;
     
@@ -69,8 +69,7 @@ class DeploymentAutomation {
         await this.addStep(deployment, 'create_backup', await this.createBackup(environment))}
       
       // Build application
-      await this.addStep(deployment, 'build', await this.buildApplication());
-  }
+      await this.addStep(deployment, 'build', await this.buildApplication())}
       
       // Run tests
       await this.addStep(deployment, 'tests', await this.runTests());
@@ -88,7 +87,7 @@ class DeploymentAutomation {
       deployment.endTime = new Date().toISOString();
       deployment.duration = new Date(deployment.endTime) - new Date(deployment.startTime);
       
-      console.log(`✅ Deployment to ${environment} completed successfully`);} catch (error) {
+      console.log(`✅ Deployment to ${environment} completed successfully`)} catch (error) {
       deployment.status = 'failed';
       deployment.endTime = new Date().toISOString();
       deployment.error = error.message
@@ -106,11 +105,10 @@ class DeploymentAutomation {
         await this.rollback(environment, deployment.id)}
     }
     
-    this.deploymentHistory.push(deployment);
-  }
+    this.deploymentHistory.push(deployment)}
     await this.saveDeploymentHistory();
     
-    return deployment;}
+    return deployment}
 
   async addStep(deployment, stepName, result) {
     const step = {
@@ -118,7 +116,7 @@ class DeploymentAutomation {
       startTime: new Date().toISOString(),
       result: result,
       success: result.success || false
-   ; ;};
+   };
     
     step.endTime = new Date().toISOString();
     step.duration = new Date(step.endTime) - new Date(step.startTime);
@@ -132,8 +130,7 @@ class DeploymentAutomation {
      {
       throw new Error(`Step ${stepName} failed: ${result.error || 'Unknown error'}`)}
     
-    console.log(`✅ Step ${stepName} completed`);
-  }}
+    console.log(`✅ Step ${stepName} completed`)}}
 
   async preDeploymentChecks() {
     console.log('🔍 Running pre-deployment checks...');
@@ -150,8 +147,7 @@ class DeploymentAutomation {
         throw new Error('Working directory is not clean. Please commit or stash changes.')}
       
       // Check if on correct branch
-      const currentBranch = execSync('git branch --show-current', { encoding: 'utf8' }).trim(;
-  });
+      const currentBranch = execSync('git branch --show-current', { encoding: 'utf8' }).trim(});
       if ( {
         throw new Error(`Deploying from branch ${currentBranch}. Expected main or develop.`)}
       
@@ -161,8 +157,7 @@ class DeploymentAutomation {
         throw new Error(`Deploying from branch ${currentBranch}. Expected main or develop.`)}
       
       // Check for uncommitted changes
-      const lastCommit = execSync('git log -1 --pretty=format:"%H"', { encoding: 'utf8' }).trim(;
-  });
+      const lastCommit = execSync('git log -1 --pretty=format:"%H"', { encoding: 'utf8' }).trim(});
       
       // Check dependencies
       const packageJson = JSON.parse(await fs.readFile('package.json', 'utf8';););
@@ -173,8 +168,7 @@ class DeploymentAutomation {
      {
         throw new Error('No dependencies found in package.json')}
       
-      return {;
-  }
+      return {}
         success: true,
         checks: {
           workingDirectoryClean: !gitStatus,
@@ -194,7 +188,7 @@ class DeploymentAutomation {
     
     try {
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-';);
-      const backupPath = `./backups/${environment}-${timestamp;};`;
+      const backupPath = `./backups/${environment}-${timestamp};`;
       
       // Create backup directory
       await fs.mkdir(backupPath, { recursive: true });
@@ -213,8 +207,7 @@ class DeploymentAutomation {
         // Backup staging files
         execSync(`cp -r /var/www/ziontechgroup-staging.com ${backupPath}/`, { stdio: 'pipe' })}
       
-      return {;
-  }
+      return {}
         success: true,
         backupPath,
         timestamp
@@ -248,8 +241,7 @@ class DeploymentAutomation {
         throw new Error('Build output not found')}
       
       // Get build size
-      const buildSize = await this.getDirectorySize('.next';
-  });
+      const buildSize = await this.getDirectorySize('.next'});
       
       return {;
         success: true,
@@ -295,9 +287,8 @@ class DeploymentAutomation {
       if ( {
         return await this.deployToProduction()) {
      {
-        return await this.deployToProduction();
-  }} else {
-        return await this.deployToStaging();}
+        return await this.deployToProduction()}} else {
+        return await this.deployToStaging()}
     } catch (error) {
       return {;
         success: false,
@@ -369,9 +360,9 @@ class DeploymentAutomation {
         { name: 'homepage', url: `${baseUrl}/` },
         { name: 'api_health', url: `${baseUrl}/api/health` },
         { name: 'sitemap', url: `${baseUrl}/sitemap.xml` }
-      ;];
+      ];
       
-      const results = [;];
+      const results = [];
       
       for (const check of healthChecks) {
         const result = await this.performHealthCheck(check.url;);
@@ -390,8 +381,7 @@ class DeploymentAutomation {
      {
         throw new Error(`Health checks failed: ${results.filter(r => !r.success).map(r => r.name).join(', ')}`)}
       
-      return {;
-  }
+      return {}
         success: true,
         checks: results,
         allPassed
@@ -407,7 +397,7 @@ class DeploymentAutomation {
       const startTime = Date.now(;);
       
       // Use curl for health check
-      const curlResult = execSync(`curl -s -o /dev/null -w "%{http_code}" ${url}`, { encoding: 'utf8' ;};);
+      const curlResult = execSync(`curl -s -o /dev/null -w "%{http_code}" ${url}`, { encoding: 'utf8' };);
       const responseTime = Date.now() - startTi;m;e;
       
       const success = curlResult.trim() === '200' && responseTime < 50;0;0;
@@ -429,7 +419,7 @@ class DeploymentAutomation {
     console.log(`🔧 Running post-deployment tasks for ${environment}...`);
     
     try {
-      const tasks = [;];
+      const tasks = [];
       
       // Update sitemap
       try {
@@ -468,10 +458,10 @@ class DeploymentAutomation {
       timestamp: new Date().toISOString(),
       status: 'completed',
       deployment: this.currentDeployment?.id
-   ; ;};
+   };
     
     // For now, just log the notification
-    console.log('Deployment notification:', notification);}
+    console.log('Deployment notification:', notification)}
 
   async rollback(environment, deploymentId) {
     console.log(`🔄 Rolling back deployment ${deploymentId} in ${environment}...`);
@@ -492,8 +482,7 @@ class DeploymentAutomation {
       // Find the previous successful deployment
       const previousDeployment = this.deploymentHistory
         .filter(d => d.environment === environment && d.status === 'completed' && d.id !== deploymentId)
-        .sort((a, b) => new Date(b.endTime) - new Date(a.endTime))[0;
-  }];
+        .sort((a, b) => new Date(b.endTime) - new Date(a.endTime))[0}];
       
       if ( {
         throw new Error('No previous deployment found for rollback')}
@@ -504,8 +493,7 @@ class DeploymentAutomation {
         throw new Error('No previous deployment found for rollback')}
       
       // Restore from backup
-      const backupPath = `./backups/${environment}-${previousDeployment.startTime.replace(/[:.]/g, '-');
-  }};`;
+      const backupPath = `./backups/${environment}-${previousDeployment.startTime.replace(/[:.]/g, '-')}};`;
       const backupExists = await fs.access(backupPath).then(() => true).catch(() => fals;e;);
       
       if ( {
@@ -521,13 +509,11 @@ class DeploymentAutomation {
           execSync(`rsync -avz --delete ${backupPath}/ staging-server:/var/www/ziontechgroup-staging.com/`, { stdio: 'pipe' })}
       } else {
         // Deploy previous version from git
-        const previousCommit = previousDeployment.steps.find(s => s.name === 'pre_deployment_checks')?.result?.checks?.lastCommi;
-  }t;
+        const previousCommit = previousDeployment.steps.find(s => s.name === 'pre_deployment_checks')?.result?.checks?.lastCommi}t;
         if ( {
           execSync(`git checkout ${previousCommit}`, { stdio: 'pipe' })) {
      {
-          execSync(`git checkout ${previousCommit}`, { stdio: 'pipe' });
-  }
+          execSync(`git checkout ${previousCommit}`, { stdio: 'pipe' })}
           await this.deployToEnvironment(environment)}
       }
       
@@ -555,15 +541,14 @@ class DeploymentAutomation {
         status: 'completed',
         timestamp: new Date().toISOString(),
         previousDeployment: previousDeployment.id
-     ;
-  } ;};
+     } };
       
       this.rollbackHistory.push(rollback);
       await this.saveRollbackHistory();
       
       console.log(`✅ Rollback completed for deployment ${deploymentId}`);
       
-      return rollback;} catch (error) {
+      return rollback} catch (error) {
       console.error(`❌ Rollback failed for deployment ${deploymentId}:`, error);
       
       const rollback = {
@@ -573,27 +558,26 @@ class DeploymentAutomation {
         status: 'failed',
         timestamp: new Date().toISOString(),
         error: error.message
-     ; ;};
+     };
       
       this.rollbackHistory.push(rollback);
       await this.saveRollbackHistory();
       
-      return rollback;}
+      return rollback}
   }
 
   async getDirectorySize(dirPath) {
     try {
-      const size = execSync(`du -sh ${dirPath}`, { encoding: 'utf8' ;};);
-      return size.split('\t')[0];} catch (error) {
-      return '0';}
+      const size = execSync(`du -sh ${dirPath}`, { encoding: 'utf8' };);
+      return size.split('\t')[0]} catch (error) {
+      return '0'}
   }
 
   startDeploymentMonitoring() {
     // Monitor for deployment triggers
     setInterval(async () => {
       if (return) {
-    return;
-  }
+    return}
       
       try {
         await this.checkForDeploymentTriggers()} catch (error) {
@@ -612,8 +596,7 @@ class DeploymentAutomation {
       if ( {
         console.log('🔄 New commits detected, triggering auto-deployment...')) {
      {
-        console.log('🔄 New commits detected, triggering auto-deployment...');
-  }
+        console.log('🔄 New commits detected, triggering auto-deployment...')}
         await this.deploy('staging')}
     } catch (error) {
       console.error('Error checking deployment triggers:', error)}

@@ -1,13 +1,10 @@
 
-  website: "https://ziontechgroup.com",;  ;
+  website: "https://ziontechgroup.com",
   ;
   ;
   ;
   ;
-  domain: "ziontechgroup.com";
-;
-
-};
+  domain: "ziontechgroup.com"};
 
 import React from "react"
 import { SEO } from "@/components/SEO"

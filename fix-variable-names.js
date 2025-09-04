@@ -17,8 +17,7 @@ function toCamelCase(str) {
   '0': 'Zero'
 
 };
-      return numberWords[match] || match;
-    })
+      return numberWords[match] || match})
     .replace(/[-_](.)/g, (match, group1) => group1.toUpperCase())
     .replace(/^(.)/, (match) => match.toUpperCase())}
 function fixFile(filePath) {
@@ -64,8 +63,7 @@ export default ${camelCaseName};`;
       // // // // // // // console.log(`Fixed: ${filePath}`);
       return true;
 
-    return false;
-  } catch (error) {
+    return false} catch (error) {
     // // // // // // // console.error(`Error fixing ${filePath}:`, error.message);
     return false;
 

@@ -28,8 +28,8 @@ export default function Page(props: any) {
 
 }}
                     animate = {
-
-  { opacity: 1,
+';
+  { opacity: 1,';';
   height: 'auto'
 
 }}
@@ -66,8 +66,9 @@ export default function Page(props: any) {
                         <item.icon className="w-4 h-4" />
                         <span>{item.name}</span>
                         {isActive(item.href) && ("
-                          <div className="w-2 h-2 bg-cyan-400 rounded-full ml-auto"></div>
-                        )}
+                          <div className="w-2 h-2 bg-cyan-400 rounded-full ml-auto">    </div>
+  );
+}
                       </Link>
                     ))}
                   </motion.div>
@@ -113,9 +114,9 @@ export default function Page(props: any) {
             </div>;
           </div>;
         </motion.div>;
-      </div>;
-    </aside>;) };
+      </div>;';
+    </aside>;) };';';
 '"`
 
-</motion>
-</motion>
+</motion>';
+</motion>;';;';

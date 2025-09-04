@@ -13,4 +13,4 @@ export: interface ZionService {
    mobile: string;
    email: string;
    address: string;
-   website: strin,g} ctaLabel: string: href: string: external?: boolean} export: const zionTechGroup2025Services: ZionService[] = ['';,;
+   website: strin,g} ctaLabel: string: href: string: external?: boolean} export: const zionTechGroup2025Services: ZionService[] = ['',

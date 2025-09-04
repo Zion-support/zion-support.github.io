@@ -11,13 +11,11 @@ class ComprehensiveMergeConflictResolver {
     this.projectRoot = path.join(__dirname, '..');
     this.fixedFiles = [];
     this.errors = [];
-    this.totalFiles = 0;
-  }
+    this.totalFiles = 0}
 
   async log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level}] ${message}`);
-  }
+    console.log(`[${timestamp}] [${level}] ${message}`)}
 
   async findFilesWithConflicts() {
     const filesWithConflicts = [];
@@ -29,12 +27,10 @@ class ComprehensiveMergeConflictResolver {
       
       for (const file of conflictedFiles) {
         if (file) {
-          filesWithConflicts.push(path.join(this.projectRoot, file));
-        }
+          filesWithConflicts.push(path.join(this.projectRoot, file))}
       }
     } catch (error) {
-      await this.log(`Git command failed, scanning files manually: ${error.message}`, 'WARN');
-    }
+      await this.log(`Git command failed, scanning files manually: ${error.message}`, 'WARN')}
 
     // Also scan for files with merge conflict markers
     const allFiles = await this.getAllFiles(this.projectRoot);
@@ -44,16 +40,14 @@ class ComprehensiveMergeConflictResolver {
         const content = await fs.readFile(file, 'utf8');
         if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
           if (!filesWithConflicts.includes(file)) {
-            filesWithConflicts.push(file);
-          }
+            filesWithConflicts.push(file)}
         }
       } catch (error) {
         // Skip files that can't be read
       }
     }
 
-    return filesWithConflicts;
-  }
+    return filesWithConflicts}
 
   async getAllFiles(dir) {
     const files = [];
@@ -68,21 +62,18 @@ class ComprehensiveMergeConflictResolver {
           // Skip certain directories
           if (!['node_modules', '.git', '.next', 'dist', 'build', 'coverage'].includes(entry.name)) {
             const subFiles = await this.getAllFiles(fullPath);
-            files.push(...subFiles);
-          }
+            files.push(...subFiles)}
         } else if (entry.isFile()) {
           // Only process certain file types
           if (['.ts', '.tsx', '.js', '.jsx', '.json', '.md', '.cjs', '.mjs'].includes(path.extname(entry.name))) {
-            files.push(fullPath);
-          }
+            files.push(fullPath)}
         }
       }
     } catch (error) {
       // Skip directories that can't be read
     }
     
-    return files;
-  }
+    return files}
 
   async resolveMergeConflicts(filePath) {
     try {
@@ -92,8 +83,7 @@ class ComprehensiveMergeConflictResolver {
       // Remove merge conflict markers and keep the HEAD version (first part)
       const conflictPattern = /\s*\n([\s\S]*?)\n\s*\n([\s\S]*?)\nresolvedContent = resolvedContent.replace(conflictPattern, (match, headContent, otherContent) => {
         // Keep the HEAD version (first part before )
-        return headContent.trim() + '\n';
-      });
+        return headContent.trim() + '\n'});
 
       // Clean up any remaining conflict markers
       resolvedContent = resolvedContent.replace(/\s*\n?/g, '');
@@ -108,19 +98,16 @@ class ComprehensiveMergeConflictResolver {
           file: path.relative(this.projectRoot, filePath),
           timestamp: new Date().toISOString()
         });
-        return true;
-      }
+        return true}
 
-      return false;
-    } catch (error) {
+      return false} catch (error) {
       await this.log(`Error resolving conflicts in ${filePath}: ${error.message}`, 'ERROR');
       this.errors.push({
         file: path.relative(this.projectRoot, filePath),
         error: error.message,
         timestamp: new Date().toISOString()
       });
-      return false;
-    }
+      return false}
   }
 
   async run() {
@@ -138,8 +125,7 @@ class ComprehensiveMergeConflictResolver {
       
       const wasResolved = await this.resolveMergeConflicts(file);
       if (wasResolved) {
-        resolvedCount++;
-      }
+        resolvedCount++}
     }
 
     await this.log(`Merge conflict resolution completed. Resolved ${resolvedCount} files, found ${this.errors.length} errors`, 'INFO');
@@ -160,14 +146,12 @@ class ComprehensiveMergeConflictResolver {
     await fs.mkdir(path.dirname(reportPath), { recursive: true });
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
 
-    return report;
-  }
+    return report}
 }
 
 // Run the resolver
 if (require.main === module) {
   const resolver = new ComprehensiveMergeConflictResolver();
-  resolver.run().catch(console.error);
-}
+  resolver.run().catch(console.error)}
 
 module.exports = ComprehensiveMergeConflictResolver;

@@ -1,42 +1,42 @@
-import React, {useState, useRef, useEffect} from 'react';
-import {BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, RefreshCw, X, Maximize2, Minimize2, Calendar, Activity} from 'lucide-react';
-,
-  {id: 'model-2',
-    name: 'Revenue Forecasting Model',
-    accuracy: 89.7,
-    lastTrained: '2024-01-08T00:00:00.000Z',
-    status: 'active',
-    predictions: 2847500,
-    category: 'Financial Analytics'},
-  {id: 'model-3',
-    name: 'Churn Prediction Model',
-    accuracy: 91.5,
-    lastTrained: '2024-01-12T00:00:00.000Z',
-    status: 'training',
-    predictions: 15420,
+import React, {useState, useRef, useEffect} from 'react';';';
+import {BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, RefreshCw, X, Maximize2, Minimize2, Calendar, Activity} from 'lucide-react';';
+,';';
+  {id: 'model-2',';';
+    name: 'Revenue Forecasting Model',';
+    accuracy: 89.7,';';
+    lastTrained: '2024-01-08T00:00:00.000Z',';';
+    status: 'active',';
+    predictions: 2847500,';';
+    category: 'Financial Analytics'},';';
+  {id: 'model-3',';';
+    name: 'Churn Prediction Model',';
+    accuracy: 91.5,';';
+    lastTrained: '2024-01-12T00:00:00.000Z',';';
+    status: 'training',';
+    predictions: 15420,';';
     category: 'Customer Analytics'},
 ];
 export function AdvancedBusinessIntelligence(props: any) {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMinimized, setIsMinimized] = useState(false);
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  const [activeTab, setActiveTab] = useState('overview');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [isMinimized, setIsMinimized] = useState(false);';
+  const [isFullscreen, setIsFullscreen] = useState(false);';';
+  const [activeTab, setActiveTab] = useState('overview');';';
+  const [selectedCategory, setSelectedCategory] = useState('all');';';
   const [timeRange, setTimeRange] = useState('30d');
   const [autoRefresh, setAutoRefresh] = useState(true);
   const [showPredictions, setShowPredictions] = useState(true);
   const [data, setData] = useState(mockMetrics);
   const [insights, setInsights] = useState(mockInsights);
-  const [models, setModels] = useState(mockModels);
-  const [isRefreshing, setIsRefreshing] = useState(false);
-  const categories = ['all',Financial',Customer',Operations',Growth'];
-  const timeRanges = ['
-    { value: '7d', label: '7 Days' },
-    {value: '30d', label: '30 Days'},
-    {value: '90d', label: '90 Days'},
-    {value: '1y', label: '1 Year'},
-  ];
-  const filteredMetrics ='
+  const [models, setModels] = useState(mockModels);';
+  const [isRefreshing, setIsRefreshing] = useState(false);';';
+  const categories = ['all',Financial',Customer',Operations',Growth'];';';
+  const timeRanges = ['';';
+    { value: '7d', label: '7 Days' },';';
+    {value: '30d', label: '30 Days'},';';
+    {value: '90d', label: '90 Days'},';';
+    {value: '1y', label: '1 Year'},';
+  ];';';
+  const filteredMetrics ='';';
     selectedCategory === 'all'
       ? data
       : data.filter(metric => metric.category === selectedCategory);
@@ -56,10 +56,10 @@ export function AdvancedBusinessIntelligence(props: any) {
   }, [autoRefresh]);
   const getTrendIcon = trend => {
 
-    switch(trend) {
-
-      case 'up':
-        return <TrendingUp className="w-4 h-4 text-green-500"  />;
+    switch(trend) {';
+';';
+      case 'up':';
+        return <TrendingUp className="w-4 h-4 text-green-500"  />;';';
       case 'down':"
         return <TrendingUp className="w-4 h-4 text-red-500 rotate-180"  />;
       default:"
@@ -68,47 +68,47 @@ export function AdvancedBusinessIntelligence(props: any) {
   };
   const getPriorityColor = priority => {
 
-    switch(priority) {
-
-      case 'high':'
-        return 'border-red-500 bg-red-50 dark:bg-red-900/20';
-      case 'medium':'
-        return 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20';
-      default:'
+    switch(priority) {';
+';';
+      case 'high':'';';
+        return 'border-red-500 bg-red-50 dark:bg-red-900/20';';';
+      case 'medium':'';';
+        return 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20';';';
+      default:'';';
         return 'border-green-500 bg-green-50 dark:bg-green-900/20';
     }
   };
   const getInsightIcon = type => {
 
-    switch(type) {
-
-      case 'prediction':"
-        return <Brain className="w-5 h-5 text-blue-500"  />;
-      case 'anomaly':"
-        return <AlertTriangle className="w-5 h-5 text-red-500"  />;
-      case 'opportunity':"
-        return <Target className="w-5 h-5 text-green-500"  />;
+    switch(type) {';
+';';
+      case 'prediction':"';
+        return <Brain className="w-5 h-5 text-blue-500"  />;';';
+      case 'anomaly':"';
+        return <AlertTriangle className="w-5 h-5 text-red-500"  />;';';
+      case 'opportunity':"';
+        return <Target className="w-5 h-5 text-green-500"  />;';';
       case 'risk':"
         return <AlertTriangle className="w-5 h-5 text-orange-500"  />;
       default:"
         return <Zap className="w-5 h-5 text-purple-500"  />;
     }
   };
-  const formatValue = (props: any) => {
-
-    if(unit === 'USD') {
-
-      return new Intl.NumberFormat('en-US', {
-
-        style: 'currency',
+  const formatValue = (props: any) => {';
+';';
+    if(unit === 'USD') {';
+';';
+      return new Intl.NumberFormat('en-US', {';
+';';
+        style: 'currency',';';
         currency: 'USD',
         minimumFractionDigits: 0,
-        maximumFractionDigits: 0}).format(value);
-    }
+        maximumFractionDigits: 0}).format(value);';
+    }';';
     if(unit === '%') {
 
-      return `${value.toFixed(1)}%`;
-    }
+      return `${value.toFixed(1)}%`;';
+    }';';
     return new Intl.NumberFormat('en-US').format(value);
   };
   if(!isOpen) {
@@ -141,9 +141,9 @@ export function AdvancedBusinessIntelligence(props: any) {
         </div>
       </div>
     );
-  }
-  return ()
-    <div'`
+  }';
+  return ()';';
+    <div'`';';
       className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1200px] h-[800px]'}`}
       ref={containerRef}
     >
@@ -160,13 +160,13 @@ export function AdvancedBusinessIntelligence(props: any) {
             </p>
           </div>
         </div>"
-        <div className="flex items-center gap-2">
-          <button
-            onClick={() => setAutoRefresh(!autoRefresh)}'`
-            className={`p-2 rounded-lg transition-colors ${autoRefresh ? 'bg-white/20' : 'hover:bg-white/10'}`}
-            title={autoRefresh ? 'Auto-refresh enabled' : 'Auto-refresh disabled'}
-          >
-            <RefreshCw '`
+        <div className="flex items-center gap-2">';
+          <button';';
+            onClick={() => setAutoRefresh(!autoRefresh)}'`';';
+            className={`p-2 rounded-lg transition-colors ${autoRefresh ? 'bg-white/20' : 'hover:bg-white/10'}`}';';
+            title={autoRefresh ? 'Auto-refresh enabled' : 'Auto-refresh disabled'}';
+          >';';
+            <RefreshCw '`';';
               className={`w-4 h-4 ${autoRefresh ? 'animate-spin' : ''}`}
              />
           </button>
@@ -204,8 +204,8 @@ export function AdvancedBusinessIntelligence(props: any) {
               onChange={e => setSelectedCategory(e.target.value)}"
               className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate"
             >
-              {categories.map(category => (
-                <option key={category} value={category}>
+              {categories.map(category => (';
+                <option key={category} value={category}>';';
                   {category === 'all' ? 'All Categories' : category}
                 </option>
               ))}
@@ -224,9 +224,9 @@ export function AdvancedBusinessIntelligence(props: any) {
             <button
               onClick={refreshData}
               disabled={isRefreshing}"
-              className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors disabled:opacity-50 flex items-center gap-2"
-            >
-              <RefreshCw '`
+              className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors disabled:opacity-50 flex items-center gap-2"';
+            >';';
+              <RefreshCw '`';';
                 className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`}
                />
               Refresh
@@ -250,22 +250,22 @@ export function AdvancedBusinessIntelligence(props: any) {
         </div>
       </div>
 
-      {/* Tabs */}"
-      <div className="flex border-b border-zion-slate-light">
-        {['
-          { id: 'overview', label: 'Overview', icon: BarChart3 },
-          {id: 'insights', label: 'AI Insights', icon: Brain},
-          {id: 'models', label: 'ML Models', icon: Zap},
+      {/* Tabs */}"';
+      <div className="flex border-b border-zion-slate-light">';';
+        {['';';
+          { id: 'overview', label: 'Overview', icon: BarChart3 },';';
+          {id: 'insights', label: 'AI Insights', icon: Brain},';';
+          {id: 'models', label: 'ML Models', icon: Zap},';';
           {id: 'analytics', label: 'Analytics', icon: TrendingUp},
         ].map(tab => {
 
           const Icon = tab.icon;
           return ()
             <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}`
-              className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${activeTab === tab.id'
-                  ? 'border-zion-purple text-zion-purple bg-zion-purple/5''
+              key={tab.id}';
+              onClick={() => setActiveTab(tab.id)}`';';
+              className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${activeTab === tab.id'';';
+                  ? 'border-zion-purple text-zion-purple bg-zion-purple/5''';';
                   : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'`
               }`}
             >"
@@ -276,8 +276,8 @@ export function AdvancedBusinessIntelligence(props: any) {
         })}
       </div>
 
-      {/* Content */}"
-      <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">
+      {/* Content */}"';
+      <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">';';
         {activeTab === 'overview' && ("
           <div className="space-y-6">
             {/* Key Metrics Grid */}"
@@ -296,15 +296,15 @@ export function AdvancedBusinessIntelligence(props: any) {
                   <div className="text-2xl font-bold text-zion-slate mb-2">
                     {formatValue(metric.value, metric.unit)}
                   </div>"
-                  <div className="flex items-center justify-between text-sm">
-                    <span`
-                      className={`font-medium ${metric.trend === 'up''
-                          ? 'text-green-600''
-                          : metric.trend === 'down''
-                            ? 'text-red-600''
+                  <div className="flex items-center justify-between text-sm">';
+                    <span`';';
+                      className={`font-medium ${metric.trend === 'up''';';
+                          ? 'text-green-600''';';
+                          : metric.trend === 'down''';';
+                            ? 'text-red-600''';';
                             : 'text-gray-600'`
-                      }`}
-                    >
+                      }`}';
+                    >';';
                       {metric.trend === 'up' ? '+' : ''}
                       {metric.change}%
                     </span>"
@@ -313,16 +313,17 @@ export function AdvancedBusinessIntelligence(props: any) {
                     </span>
                   </div>
                   {showPredictions && ("
-                    <div className="mt-3 pt-3 border-t border-zion-slate-light/30">"
-                      <div className="text-xs text-zion-slate-light">
+                    <div className="mt-3 pt-3 border-t border-zion-slate-light/30">"';
+                      <div className="text-xs text-zion-slate-light">';';
                         AI Prediction:{' '}
                         {formatValue()
                           metric.value * (1 + metric.change / 100),
                           metric.unit
                         )}
                       </div>
-                    </div>
-                  )}
+                        </div>
+  );
+}
                 </div>
               ))}
             </div>
@@ -334,21 +335,21 @@ export function AdvancedBusinessIntelligence(props: any) {
                 Quick Actions
               </h3>"
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                {[{
-
+                {[{';
+';';
                     label: 'Generate Report',
                     icon: Download,
                     action: () => {}},
-                  {
-
+                  {';
+';';
                     label: 'Schedule Review',
                     icon: Calendar,
                     action: () => {}},
-                  {
-
+                  {';
+';';
                     label: 'Set Alerts',
-                    icon: AlertTriangle,
-                    action: () => {}},
+                    icon: AlertTriangle,';
+                    action: () => {}},';';
                   { label: 'Export Data', icon: Download, action: () => {} },
                 ].map((item, index) => {
 
@@ -366,9 +367,10 @@ export function AdvancedBusinessIntelligence(props: any) {
                 })}
               </div>
             </div>
-          </div>
-        )}
-
+              </div>
+  );
+}';
+';';
         {activeTab === 'insights' && ("
           <div className="space-y-4">
             {insights.map(insight => (
@@ -382,12 +384,12 @@ export function AdvancedBusinessIntelligence(props: any) {
                     <div className="flex items-center gap-3 mb-2">"
                       <h3 className="font-semibold text-zion-slate">
                         {insight.title}
-                      </h3>
-                      <span`
-                        className={`px-2 py-1 rounded-full text-xs font-medium ${insight.impact === 'high''
-                            ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300''
-                            : insight.impact === 'medium''
-                              ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300''
+                      </h3>';
+                      <span`';';
+                        className={`px-2 py-1 rounded-full text-xs font-medium ${insight.impact === 'high''';';
+                            ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300''';';
+                            : insight.impact === 'medium''';';
+                              ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300''';';
                               : 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'`
                         }`}
                       >
@@ -415,15 +417,17 @@ export function AdvancedBusinessIntelligence(props: any) {
                             </span>
                           ))}
                         </div>
-                      </div>
-                    )}
+                          </div>
+  );
+}
                   </div>
                 </div>
               </div>
             ))}
-          </div>
-        )}
-
+              </div>
+  );
+}';
+';';
         {activeTab === 'models' && ("
           <div className="space-y-4">
             {models.map(model => (
@@ -434,12 +438,12 @@ export function AdvancedBusinessIntelligence(props: any) {
                 <div className="flex items-center justify-between mb-3">"
                   <h3 className="font-semibold text-zion-slate">
                     {model.name}
-                  </h3>
-                  <span`
-                    className={`px-3 py-1 rounded-full text-sm font-medium ${model.status === 'active''
-                        ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300''
-                        : model.status === 'training''
-                          ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300''
+                  </h3>';
+                  <span`';';
+                    className={`px-3 py-1 rounded-full text-sm font-medium ${model.status === 'active''';';
+                        ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300''';';
+                        : model.status === 'training''';';
+                          ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300''';';
                           : 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300'`
                     }`}
                   >
@@ -466,17 +470,18 @@ export function AdvancedBusinessIntelligence(props: any) {
                     </div>
                   </div>
                   <div>"
-                    <span className="text-zion-slate-light">Predictions:</span>"
-                    <div className="font-semibold text-zion-slate">
+                    <span className="text-zion-slate-light">Predictions:</span>"';
+                    <div className="font-semibold text-zion-slate">';';
                       {new Intl.NumberFormat('en-US').format(model.predictions)}
                     </div>
                   </div>
                 </div>
               </div>
             ))}
-          </div>
-        )}
-
+              </div>
+  );
+}';
+';';
         {activeTab === 'analytics' && ("
           <div className="space-y-6">"
             <div className="text-center text-zion-slate-light">"
@@ -484,12 +489,13 @@ export function AdvancedBusinessIntelligence(props: any) {
               <h3 className="text-lg font-semibold mb-2">Advanced Analytics</h3>
               <p>Detailed analytics and custom reports coming soon...</p>
             </div>
-          </div>
-        )}
+              </div>
+  );
+}
       </div>
     </div>
   );}
 "export default ComponentName;"
 
-</RefreshCw>
-</RefreshCw>
+</RefreshCw>';
+</RefreshCw>;';;';

@@ -1,4 +1,4 @@
-import React from 'react';'''
+import React from 'react';'''';';
 import {motion} from 'framer-motion';
 ;
 const Tabs = (props: any) => {}
@@ -8,13 +8,13 @@ const Tabs = (props: any) => {}
         {tabs.map(tab => (
           <button;
             key={tab.id}
-            onClick={() => onTabChange(tab.id)}
-            className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-all duration-200 ${}
-'
-''
-'''`
-              activeTab === tab.id'''`'`
-                ? 'bg-white text-gray-900 shadow-sm'''`'`'`
+            onClick={() => onTabChange(tab.id)}';
+            className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-all duration-200 ${}';';
+'';';
+''';';
+'''`';';
+              activeTab === tab.id'''`'`';';
+                ? 'bg-white text-gray-900 shadow-sm'''`'`'`';';
                 : 'text-gray-600 hover:text-gray-900'````
             }`}
           >
@@ -46,5 +46,5 @@ export {Tabs};
 export {Tabs};
 
 export {Tabs};
-
-</motion>
+';
+</motion>;';;';

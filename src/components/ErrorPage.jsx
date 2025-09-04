@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react';';';
 ;import {Link} from 'react-router-dom';
 export const ErrorPage = (props: any) => {}
   return()
@@ -14,8 +14,8 @@ export const ErrorPage = (props: any) => {}
           <Button variant="outline" asChild" >"""""
             <Link to="/contact">Contact Support</Link>
           </Button>
-        </div>
-  )
+            </div>
+  );
 }
 };"
 export default ErrorPage"";""
@@ -28,5 +28,5 @@ export default ErrorPage&apos,&quot;&quot,
 export default ErrorPage&apos,"
 &apos;&apos,&apos,&quot;"&quot;""
 
-</div>
-</div>
+</div>';
+</div>;';;';

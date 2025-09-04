@@ -7,129 +7,125 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // List of remaining corrupted files;
 const remainingCorruptedFiles = [
-  "src/pages/services/Blockchain-Supply-Chain-Transparency.tsx",;
-  "src/pages/services/BlockchainAsAService.tsx",;
-  "src/pages/services/BlockchainSolutions.tsx",;
-  "src/pages/services/BlockchainWeb3Platform.tsx",;
-  "src/pages/services/CloudDevOps.jsx",;
-  "src/pages/services/CloudFinOpsOptimizer.tsx",;
-  "src/pages/services/CloudServices.tsx",;
-  "src/pages/services/Consulting.tsx",;
-  "src/pages/services/CybersecurityServices.tsx",;
-  "src/pages/services/DSRPortal.tsx",;
-  "src/pages/services/DataAnalytics.tsx",;
-  "src/pages/services/DigitalTransformation.jsx",;
-  "src/pages/services/DigitalTwin.tsx",;
-  "src/pages/services/EnterpriseIT.js.jsx",;
-  "src/pages/services/EnterpriseIT.jsx",;
-  "src/pages/services/EnterpriseIT.tsx",;
-  "src/pages/services/FinOpsAdvisor.tsx",;
-  "src/pages/services/FiveGEnterpriseNetwork.js.jsx",;
-  "src/pages/services/FiveGEnterpriseNetwork.jsx",;
-  "src/pages/services/FiveGEnterpriseSolutions.js.jsx",;
-  "src/pages/services/FiveGEnterpriseSolutions.jsx",;
-  "src/pages/services/FiveGNetworkOptimization.js.jsx",;
-  "src/pages/services/FiveGNetworkOptimization.jsx",;
-  "src/pages/services/FiveGPrivateNetworkSolutions.js.jsx",;
-  "src/pages/services/FiveGPrivateNetworkSolutions.jsx",;
-  "src/pages/services/GreenIT.js.jsx",;
-  "src/pages/services/GreenIT.jsx",;
-  "src/pages/services/HelpdeskPlatform.tsx",;
-  "src/pages/services/ITConsulting.tsx",;
-  "src/pages/services/ITOnsiteServices.js.jsx",;
-  "src/pages/services/ITOnsiteServices.jsx",;
-  "src/pages/services/IncidentResponsePlatform.jsx",;
-  "src/pages/services/IndustrySolutions.js.jsx",;
-  "src/pages/services/IndustrySolutions.jsx",;
-  "src/pages/services/Infrastructure.jsx",;
-  "src/pages/services/InterviewAssessmentAI.tsx",;
-  "src/pages/services/IoTEdgeComputing.jsx",;
-  "src/pages/services/IoTServices.js.jsx",;
-  "src/pages/services/IoTServices.jsx",;
-  "src/pages/services/MachineLearning.tsx",;
-  "src/pages/services/ManufacturingSolutions.js.jsx",;
-  "src/pages/services/ManufacturingSolutions.jsx",;
-  "src/pages/services/Marketplace.js.jsx",;
-  "src/pages/services/Marketplace.jsx",;
-  "src/pages/services/MicroSAASSolutions.jsx",;
-  "src/pages/services/MicroSAASSolutions.tsx",;
-  "src/pages/services/MicroSaaSPlatformElite.tsx",;
-  "src/pages/services/MicroSaasServices.js.jsx",;
-  "src/pages/services/MicroSaasServices.jsx",;
-  "src/pages/services/MobileServices.js.jsx",;
-  "src/pages/services/MobileServices.jsx",;
-  "src/pages/services/QuantumCloudInfrastructure.js.jsx",;
-  "src/pages/services/QuantumCloudInfrastructure.jsx",;
-  "src/pages/services/QuantumComputingElite.tsx",;
-  "src/pages/services/QuantumEdgeComputingPlatform.js.jsx",;
-  "src/pages/services/QuantumEdgeComputingPlatform.jsx",;
-  "src/pages/services/QuantumFinancialTrading.js.jsx",;
-  "src/pages/services/QuantumFinancialTrading.jsx",;
-  "src/pages/services/QuantumNeuralNetworkPlatform.js.jsx",;
-  "src/pages/services/QuantumNeuralNetworkPlatform.jsx",;
-  "src/pages/services/QuantumServices.js.jsx",;
-  "src/pages/services/QuantumServices.jsx",;
-  "src/pages/services/QuantumTechnology.js.jsx",;
-  "src/pages/services/QuantumTechnology.jsx",;
-  "src/pages/services/RoboticsAutomation.tsx",;
-  "src/pages/services/SecurityHeadersCSP.tsx",;
-  "src/pages/services/ServiceComparison.js.jsx",;
-  "src/pages/services/ServiceComparison.jsx",;
-  "src/pages/services/ServiceInnovationHub.js.jsx",;
-  "src/pages/services/ServiceInnovationHub.jsx",;
-  "src/pages/services/ServicePortfolioDashboard.js.jsx",;
-  "src/pages/services/ServicePortfolioDashboard.jsx",;
-  "src/pages/services/ServiceRecommendations.js.jsx",;
-  "src/pages/services/ServiceRecommendations.jsx",;
-  "src/pages/services/SpaceTech.js.jsx",;
-  "src/pages/services/SpaceTech.jsx",;
-  "src/pages/services/Transformation.jsx",;
-  "src/pages/services/WebsiteAnalytics.tsx",;
-  "src/pages/services/ZeroTrustNetworkAccess.tsx";
-];
+  "src/pages/services/Blockchain-Supply-Chain-Transparency.tsx",
+  "src/pages/services/BlockchainAsAService.tsx",
+  "src/pages/services/BlockchainSolutions.tsx",
+  "src/pages/services/BlockchainWeb3Platform.tsx",
+  "src/pages/services/CloudDevOps.jsx",
+  "src/pages/services/CloudFinOpsOptimizer.tsx",
+  "src/pages/services/CloudServices.tsx",
+  "src/pages/services/Consulting.tsx",
+  "src/pages/services/CybersecurityServices.tsx",
+  "src/pages/services/DSRPortal.tsx",
+  "src/pages/services/DataAnalytics.tsx",
+  "src/pages/services/DigitalTransformation.jsx",
+  "src/pages/services/DigitalTwin.tsx",
+  "src/pages/services/EnterpriseIT.js.jsx",
+  "src/pages/services/EnterpriseIT.jsx",
+  "src/pages/services/EnterpriseIT.tsx",
+  "src/pages/services/FinOpsAdvisor.tsx",
+  "src/pages/services/FiveGEnterpriseNetwork.js.jsx",
+  "src/pages/services/FiveGEnterpriseNetwork.jsx",
+  "src/pages/services/FiveGEnterpriseSolutions.js.jsx",
+  "src/pages/services/FiveGEnterpriseSolutions.jsx",
+  "src/pages/services/FiveGNetworkOptimization.js.jsx",
+  "src/pages/services/FiveGNetworkOptimization.jsx",
+  "src/pages/services/FiveGPrivateNetworkSolutions.js.jsx",
+  "src/pages/services/FiveGPrivateNetworkSolutions.jsx",
+  "src/pages/services/GreenIT.js.jsx",
+  "src/pages/services/GreenIT.jsx",
+  "src/pages/services/HelpdeskPlatform.tsx",
+  "src/pages/services/ITConsulting.tsx",
+  "src/pages/services/ITOnsiteServices.js.jsx",
+  "src/pages/services/ITOnsiteServices.jsx",
+  "src/pages/services/IncidentResponsePlatform.jsx",
+  "src/pages/services/IndustrySolutions.js.jsx",
+  "src/pages/services/IndustrySolutions.jsx",
+  "src/pages/services/Infrastructure.jsx",
+  "src/pages/services/InterviewAssessmentAI.tsx",
+  "src/pages/services/IoTEdgeComputing.jsx",
+  "src/pages/services/IoTServices.js.jsx",
+  "src/pages/services/IoTServices.jsx",
+  "src/pages/services/MachineLearning.tsx",
+  "src/pages/services/ManufacturingSolutions.js.jsx",
+  "src/pages/services/ManufacturingSolutions.jsx",
+  "src/pages/services/Marketplace.js.jsx",
+  "src/pages/services/Marketplace.jsx",
+  "src/pages/services/MicroSAASSolutions.jsx",
+  "src/pages/services/MicroSAASSolutions.tsx",
+  "src/pages/services/MicroSaaSPlatformElite.tsx",
+  "src/pages/services/MicroSaasServices.js.jsx",
+  "src/pages/services/MicroSaasServices.jsx",
+  "src/pages/services/MobileServices.js.jsx",
+  "src/pages/services/MobileServices.jsx",
+  "src/pages/services/QuantumCloudInfrastructure.js.jsx",
+  "src/pages/services/QuantumCloudInfrastructure.jsx",
+  "src/pages/services/QuantumComputingElite.tsx",
+  "src/pages/services/QuantumEdgeComputingPlatform.js.jsx",
+  "src/pages/services/QuantumEdgeComputingPlatform.jsx",
+  "src/pages/services/QuantumFinancialTrading.js.jsx",
+  "src/pages/services/QuantumFinancialTrading.jsx",
+  "src/pages/services/QuantumNeuralNetworkPlatform.js.jsx",
+  "src/pages/services/QuantumNeuralNetworkPlatform.jsx",
+  "src/pages/services/QuantumServices.js.jsx",
+  "src/pages/services/QuantumServices.jsx",
+  "src/pages/services/QuantumTechnology.js.jsx",
+  "src/pages/services/QuantumTechnology.jsx",
+  "src/pages/services/RoboticsAutomation.tsx",
+  "src/pages/services/SecurityHeadersCSP.tsx",
+  "src/pages/services/ServiceComparison.js.jsx",
+  "src/pages/services/ServiceComparison.jsx",
+  "src/pages/services/ServiceInnovationHub.js.jsx",
+  "src/pages/services/ServiceInnovationHub.jsx",
+  "src/pages/services/ServicePortfolioDashboard.js.jsx",
+  "src/pages/services/ServicePortfolioDashboard.jsx",
+  "src/pages/services/ServiceRecommendations.js.jsx",
+  "src/pages/services/ServiceRecommendations.jsx",
+  "src/pages/services/SpaceTech.js.jsx",
+  "src/pages/services/SpaceTech.jsx",
+  "src/pages/services/Transformation.jsx",
+  "src/pages/services/WebsiteAnalytics.tsx",
+  "src/pages/services/ZeroTrustNetworkAccess.tsx"];
 // Template for a basic service page;
 const servicePageTemplate = (serviceName, displayName) => `import React from "react";
 import { Database, Check, Phone, Mail, ArrowRight, Target, Zap } from "lucide-react";
 export default function ${serviceName}() {
   const features = [
-  "AI-powered ${displayName.toLowerCase()} optimization",;
-    "Automated ${displayName.toLowerCase()} management",;
-    "Real-time ${displayName.toLowerCase()} analytics",;
-    "Predictive ${displayName.toLowerCase()} insights",;
-    "Custom AI models for ${displayName.toLowerCase()}",;
-    "Enterprise-grade security and compliance";
-  ];
+  "AI-powered ${displayName.toLowerCase()} optimization",
+    "Automated ${displayName.toLowerCase()} management",
+    "Real-time ${displayName.toLowerCase()} analytics",
+    "Predictive ${displayName.toLowerCase()} insights",
+    "Custom AI models for ${displayName.toLowerCase()}",
+    "Enterprise-grade security and compliance"];
   const benefits = [
-  "Improve ${displayName.toLowerCase()} performance by 50-80%",;
-    "Reduce operational costs by 35-65%",;
-    "Enhance scalability and reliability",;
-    "Optimize resource utilization",;
-    "Scale operations efficiently",;
-    "Maximize ROI and efficiency";
-  ];
+  "Improve ${displayName.toLowerCase()} performance by 50-80%",
+    "Reduce operational costs by 35-65%",
+    "Enhance scalability and reliability",
+    "Optimize resource utilization",
+    "Scale operations efficiently",
+    "Maximize ROI and efficiency"];
   const useCases = [
-  "Software Development",;
-    "E-commerce & Retail",;
-    "Financial Services",;
-    "Healthcare & Life Sciences",;
-    "Media & Entertainment",;
-    "Technology & SaaS";
-  ];
+  "Software Development",
+    "E-commerce & Retail",
+    "Financial Services",
+    "Healthcare & Life Sciences",
+    "Media & Entertainment",
+    "Technology & SaaS"];
   const pricing = [
   {
-  name: "Starter",;
-      price: "$299/mo",;
-      details: ["Up to 10 users", "Basic features", "Email support", "Standard SLA"];,
-},;
+  name: "Starter",
+      price: "$299/mo",
+      details: ["Up to 10 users", "Basic features", "Email support", "Standard SLA"],
+},
     {
-  name: "Professional",;
-      price: "$799/mo",;
-      details: ["Up to 50 users", "Advanced features", "Priority support", "99.9% SLA"];,
-},;
+  name: "Professional",
+      price: "$799/mo",
+      details: ["Up to 50 users", "Advanced features", "Priority support", "99.9% SLA"],
+},
     {
-  name: "Enterprise",;
-      price: "$1,999/mo",;
-      details: ["Unlimited users", "Custom AI models", "Full ${displayName.toLowerCase()} suite", "24/7 dedicated support"];,
+  name: "Enterprise",
+      price: "$1,999/mo",
+      details: ["Unlimited users", "Custom AI models", "Full ${displayName.toLowerCase()} suite", "24/7 dedicated support"],
 }
   ];
   return (;
@@ -241,22 +237,19 @@ export default function ${serviceName}() {
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}
 `;
 // Function to extract service name from file path;
 function getServiceName(filePath) {
   const fileName = path.basename(filePath, path.extname(filePath));
   // Handle special cases with multiple extensions;
   if (fileName.includes(".js.jsx")) {
-  return path.basename(filePath, ".js.jsx");
-}
+  return path.basename(filePath, ".js.jsx")}
   // Convert kebab-case or camelCase to PascalCase;
   return fileName;
     .split(/[-_]/);
     .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
-    .join("");
-}
+    .join("")}
 ;
 // Function to extract display name from service name;
 function getDisplayName(serviceName) {
@@ -264,8 +257,7 @@ function getDisplayName(serviceName) {
   return serviceName;
     .replace(/^AI/, "");
     .replace(/([A-Z])/g, " $1");
-    .trim();
-}
+    .trim()}
 ;
 // Fix corrupted files;
 remainingCorruptedFiles.forEach(filePath => {
@@ -276,15 +268,12 @@ remainingCorruptedFiles.forEach(filePath => {
     // Ensure directory exists;
     const dir = path.dirname(filePath);
     if (!fs.existsSync(dir)) {
-  fs.mkdirSync(dir, { recursive: true });
-}
+  fs.mkdirSync(dir, { recursive: true })}
     ;
     // Write the fixed content;
     const content = servicePageTemplate(serviceName, displayName);
     fs.writeFileSync(filePath, content, "utf8");
-    console.log(`✓ Fixed ${filePath}`);
-} catch (error) {
-  console.error(`✗ Error fixing ${filePath}:`, error.message);
-}
+    console.log(`✓ Fixed ${filePath}`)} catch (error) {
+  console.error(`✗ Error fixing ${filePath}:`, error.message)}
 });
 console.log("\\nFixed all remaining corrupted service files!")

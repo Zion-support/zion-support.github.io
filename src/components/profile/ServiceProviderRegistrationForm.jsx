@@ -95,7 +95,6 @@ export function ServiceProviderRegistrationForm(props: any) {
                         services: serviceTags,
                         location: formData.location
 
-
             });
             if (error) {throw new Error(error.message)}
             setGeneratedContent(data);
@@ -113,8 +112,8 @@ export function ServiceProviderRegistrationForm(props: any) {
     // Apply generated content to form
     const applyGeneratedContent = (props: any) => {
         if (generatedContent) {
-            form.setValue("bio", generatedContent.summary);
-            if (generatedContent.services && generatedContent.services.length > 0) {
+            form.setValue("bio", generatedContent.summary);';
+            if (generatedContent.services && generatedContent.services.length > 0) {';';
                 const newServices = generatedContent.services.filter(service => typeof service === 'string' && service && !serviceTags.includes(service));
                 if (newServices.length > 0) {
                     setServiceTags([...serviceTags, ...newServices])}
@@ -137,8 +136,8 @@ export function ServiceProviderRegistrationForm(props: any) {
                 throw new Error("User not authenticated")}
             // Enhance profile if not already done
             let finalServices = serviceTags;
-            if (values.enhancedProfile && !generatedContent) {
-                try {
+            if (values.enhancedProfile && !generatedContent) {';
+                try {';';
                     const { data: aiData } = await supabase.functions.invoke('service-profile-enhancer', {
                         body: {
                             providerData: {
@@ -147,7 +146,6 @@ export function ServiceProviderRegistrationForm(props: any) {
                                 bio: values.bio,
                                 services: serviceTags,
                                 location: values.location
-
 
                     });
                     if (aiData) {finalSummary = aiData.summary || values.bio;
@@ -159,31 +157,30 @@ export function ServiceProviderRegistrationForm(props: any) {
                     // // // // // // // console.error("Error enhancing profile:", error);
                     // Continue with submission even if enhancement fails
 
-
             else if (generatedContent) {
                 finalSummary = generatedContent.summary;
                 finalServices = [...new Set([...serviceTags, ...generatedContent.services])]}
             // Get user email for notification
             const {data: userData} = await supabase.auth.getUser();
             const userEmail = userData.user?.email;
-            // Create the service profile
-            const {data: profileData, error} = await supabase
+            // Create the service profile';
+            const {data: profileData, error} = await supabase';';
                 .from('profiles')
                 .update({display_name: values.name,
                 bio: finalSummary,
                 user_type: "creator", // Set as service provider
                 profile_complete: true,
                 updated_at: new Date().toISOString(),
-                headline: values.title,
-                // Additional fields that might be in profiles table})
+                headline: values.title,';
+                // Additional fields that might be in profiles table})';';
                 .eq('id', user.id)
                 .select();
             if (error)
                 throw error;
             // Store service-specific data in service_profiles table
             // (This assumes you have a service_profiles table in your database)
-            /*
-            const {error: serviceError} = await supabase
+            /*';
+            const {error: serviceError} = await supabase';';
               .from('service_profiles')
               .insert({user_id: user.id,
                 services: finalServices,
@@ -195,16 +192,16 @@ export function ServiceProviderRegistrationForm(props: any) {
             if (serviceError) throw serviceError;
             */
             // Send notification email if available
-            if (userEmail && values.enhancedProfile) {
-                try {
+            if (userEmail && values.enhancedProfile) {';
+                try {';';
                     await supabase.functions.invoke('send-email', {
                         body: {
                             to: userEmail,
                             subject: "Your Zion Service Profile Is Ready",
                             html: `
               <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-                <h2 style="color: #6D28D9;">Service Profile Created!</h2>
-                <p>Your service provider profile has been successfully created and published.</p>
+                <h2 style="color: #6D28D9;">Service Profile Created!</h2>';
+                <p>Your service provider profile has been successfully created and published.</p>';';
                 <p>We've enhanced your profile with AI to help you stand out to potential clients.</p>
                 <p>You can now start receiving service requests and connecting with clients.</p>
                 <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
@@ -217,7 +214,6 @@ export function ServiceProviderRegistrationForm(props: any) {
                 catch (emailError) {
                     // // // // // // // console.error("Failed to send notification email:", emailError);
                     // Continue with submission even if email fails
-
 
             toast({
                 title: "Profile Created Successfully",
@@ -234,7 +230,8 @@ export function ServiceProviderRegistrationForm(props: any) {
             })}
         finally {setIsSubmitting(false)}
     };
-    return (<div className="max-w-4xl mx-auto p-4 md:p-6">
+    return (
+    <div className="min-h-screen bg-white">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle className="text-2xl text-white">Create Your Service Provider Profile</CardTitle>
@@ -312,7 +309,9 @@ export function ServiceProviderRegistrationForm(props: any) {
                           <img loading="lazy" src={uploadedAvatar} alt="Avatar preview" className="w-full h-full object-cover"  />
                         </AspectRatio>) : (<div className="flex items-center justify-center h-full">
                           <UserRound className="h-10 w-10 text-zion-slate opacity-50" />
-                        </div>)}
+                            </div>
+  );
+}
                     </div>
 
                     <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">
@@ -364,8 +363,9 @@ export function ServiceProviderRegistrationForm(props: any) {
                       <Sparkles className="mr-2 h-4 w-4" />
                       {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
                     </Button>
-                  </div>)}
-
+                      </div>
+  );
+}
                 {/* Generated Content Display */}
                 {generatedContent && (<div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4">
                     <div className="flex items-center justify-between mb-3">
@@ -391,9 +391,13 @@ export function ServiceProviderRegistrationForm(props: any) {
                                 {service}
                               </Badge>))}
                           </div>
-                        </div>)}
+                            </div>
+  );
+}
                     </div>
-                  </div>)}
+                      </div>
+  );
+}
               </div>
 
               <Separator className="bg-zion-blue-light/50" />
@@ -495,16 +499,11 @@ export function ServiceProviderRegistrationForm(props: any) {
           </form>
         </Form>
       </Card>
-    </div>)}
-
-
+        </div>
+  );
+}
 export default ServiceProviderRegistrationForm;
 </FormField>
 </FormField>
-</FormField>
-</FormField>
-</FormField>
-</FormField>
-</FormField>
-</FormField>
-</FormField>
+</FormField>';
+</FormField>;';;';

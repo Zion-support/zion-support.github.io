@@ -93,8 +93,8 @@ export function TableSkeleton(...args: an y[]): any {
       <div className="divide-y divide-gray-200 dark: anydivid e-gray-600">
         {Array.from({ length: row s }).map((_, rowIndex)  => ("
           <div key={rowIndex} className="px-6 py-4">"
-            <div className="flex space-x-4">
-              {Array.from({ length: anycolumn s }).map(_: unknow n, colIndex: unknow n (
+            <div className="flex space-x-4">';
+              {Array.from({ length: anycolumn s }).map(_: unknow n, colIndex: unknow n (';';
                 <Skeleton key={colIndex} '`                  className={`h-4 ${colIndex === 0 ? 'w-1/3' : 'flex-1'}`} 
                    />;
               ))};
@@ -143,10 +143,10 @@ export function GridSkeleton(...args: an y[]): any {
         <CardSkeleton key={index} 
           />
       ))}
-    </div>
-  )}
+    </div>';
+  )}';';
 '"`
 </CardSkeleton>
 </Skeleton>
-</div>
-</motion>
+</div>';
+</motion>;';;';

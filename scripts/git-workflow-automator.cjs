@@ -8,19 +8,16 @@ class GitWorkflowAutomator {
   constructor() {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'git-workflow-reports');
-    this.ensureDirectories();
-  }
+    this.ensureDirectories()}
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+      fs.mkdirSync(this.reportsDir, { recursive: true })}
   }
 
   log(message) {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
+    console.log(`[${timestamp}] ${message}`)}
 
   async checkGitStatus() {
     this.log('🔍 Checking git status...');
@@ -46,11 +43,9 @@ class GitWorkflowAutomator {
         deleted,
         total: changes.length,
         status: changes.length === 0 ? 'clean' : 'has_changes'
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`❌ Git status check failed: ${error.message}`);
-      return { error: error.message };
-    }
+      return { error: error.message }}
   }
 
   async checkCurrentBranch() {
@@ -68,11 +63,9 @@ class GitWorkflowAutomator {
       return {
         branch: currentBranch,
         status: currentBranch === 'main' || currentBranch === 'master' ? 'main_branch' : 'feature_branch'
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`❌ Current branch check failed: ${error.message}`);
-      return { error: error.message };
-    }
+      return { error: error.message }}
   }
 
   async checkRemoteStatus() {
@@ -86,8 +79,7 @@ class GitWorkflowAutomator {
       
       const remotes = result.trim().split('\n').map(line => {
         const [name, url] = line.split('\t');
-        return { name, url };
-      });
+        return { name, url }});
       
       this.log(`🔍 Found ${remotes.length} remotes`);
       
@@ -95,11 +87,9 @@ class GitWorkflowAutomator {
         remotes,
         count: remotes.length,
         status: remotes.length > 0 ? 'has_remotes' : 'no_remotes'
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`❌ Remote status check failed: ${error.message}`);
-      return { error: error.message };
-    }
+      return { error: error.message }}
   }
 
   async checkCommitHistory() {
@@ -116,8 +106,7 @@ class GitWorkflowAutomator {
         return {
           hash: hash.substring(0, 7),
           message: message.join(' ')
-        };
-      });
+        }});
       
       this.log(`🔍 Found ${commits.length} recent commits`);
       
@@ -125,11 +114,9 @@ class GitWorkflowAutomator {
         commits,
         count: commits.length,
         status: commits.length > 0 ? 'has_commits' : 'no_commits'
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`❌ Commit history check failed: ${error.message}`);
-      return { error: error.message };
-    }
+      return { error: error.message }}
   }
 
   async checkBranchStatus() {
@@ -149,8 +136,7 @@ class GitWorkflowAutomator {
           name: isRemote ? name.replace('remotes/', '') : name,
           isCurrent,
           isRemote
-        };
-      });
+        }});
       
       const localBranches = branches.filter(b => !b.isRemote);
       const remoteBranches = branches.filter(b => b.isRemote);
@@ -163,11 +149,9 @@ class GitWorkflowAutomator {
         local: localBranches,
         remote: remoteBranches,
         total: branches.length
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`❌ Branch status check failed: ${error.message}`);
-      return { error: error.message };
-    }
+      return { error: error.message }}
   }
 
   async checkMergeConflicts() {
@@ -189,11 +173,9 @@ class GitWorkflowAutomator {
         conflicts,
         count: conflicts.length,
         status: conflicts.length === 0 ? 'no_conflicts' : 'has_conflicts'
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`❌ Merge conflicts check failed: ${error.message}`);
-      return { error: error.message };
-    }
+      return { error: error.message }}
   }
 
   async checkStashStatus() {
@@ -213,11 +195,9 @@ class GitWorkflowAutomator {
         stashes,
         count: stashes.length,
         status: stashes.length === 0 ? 'no_stashes' : 'has_stashes'
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`❌ Stash status check failed: ${error.message}`);
-      return { error: error.message };
-    }
+      return { error: error.message }}
   }
 
   async generateGitWorkflowReport() {
@@ -244,8 +224,7 @@ class GitWorkflowAutomator {
     
     this.log(`📄 Git workflow report generated: ${reportFile}`);
     
-    return report;
-  }
+    return report}
 
   generateRecommendations(analysis) {
     const recommendations = [];
@@ -256,8 +235,7 @@ class GitWorkflowAutomator {
         priority: 'medium',
         message: `Found ${analysis.status.total} uncommitted changes. Consider committing them.`,
         impact: 'Prevents loss of work'
-      });
-    }
+      })}
 
     if (analysis.conflicts && analysis.conflicts.count > 0) {
       recommendations.push({
@@ -265,8 +243,7 @@ class GitWorkflowAutomator {
         priority: 'high',
         message: `Found ${analysis.conflicts.count} merge conflicts. Resolve them before proceeding.`,
         impact: 'Prevents deployment issues'
-      });
-    }
+      })}
 
     if (analysis.stashes && analysis.stashes.count > 0) {
       recommendations.push({
@@ -274,8 +251,7 @@ class GitWorkflowAutomator {
         priority: 'low',
         message: `Found ${analysis.stashes.count} stashed changes. Consider applying or dropping them.`,
         impact: 'Keeps repository clean'
-      });
-    }
+      })}
 
     if (analysis.currentBranch && analysis.currentBranch.status === 'feature_branch') {
       recommendations.push({
@@ -283,8 +259,7 @@ class GitWorkflowAutomator {
         priority: 'low',
         message: 'Working on a feature branch. Consider merging to main when ready.',
         impact: 'Integrates changes to main branch'
-      });
-    }
+      })}
 
     if (analysis.remotes && analysis.remotes.count === 0) {
       recommendations.push({
@@ -292,11 +267,9 @@ class GitWorkflowAutomator {
         priority: 'medium',
         message: 'No remote repositories configured. Consider adding a remote for backup.',
         impact: 'Provides backup and collaboration'
-      });
-    }
+      })}
 
-    return recommendations;
-  }
+    return recommendations}
 
   async run() {
     this.log('🔧 Starting Git Workflow Automator...');
@@ -311,11 +284,9 @@ class GitWorkflowAutomator {
       this.log(`🔍 Stashes: ${report.analysis.stashes.count || 0}`);
       this.log(`💡 Recommendations: ${report.recommendations.length}`);
       
-      return report;
-    } catch (error) {
+      return report} catch (error) {
       this.log(`💥 Git workflow analysis failed: ${error.message}`);
-      throw error;
-    }
+      throw error}
   }
 }
 
@@ -327,12 +298,9 @@ if (require.main === module) {
       console.log('\n🎉 Git Workflow Automator completed successfully!');
       console.log(`🔍 Current branch: ${report.analysis.currentBranch.branch || 'unknown'}`);
       console.log(`💡 Recommendations: ${report.recommendations.length}`);
-      process.exit(0);
-    })
+      process.exit(0)})
     .catch((error) => {
       console.error('\n💥 Git Workflow Automator failed:', error.message);
-      process.exit(1);
-    });
-}
+      process.exit(1)})}
 
 module.exports = GitWorkflowAutomator;

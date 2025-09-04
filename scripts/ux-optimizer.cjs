@@ -3,23 +3,19 @@ const path = require('path');
 
 class UXOptimizer {
     constructor() {
-        this.improvements = [];
-    }
+        this.improvements = []}
 
     async optimizeLoading() {
         console.log('⚡ Optimizing loading performance...');
-        this.improvements.push('Loading optimization completed');
-    }
+        this.improvements.push('Loading optimization completed')}
 
     async optimizeAccessibility() {
         console.log('♿ Optimizing accessibility...');
-        this.improvements.push('Accessibility improvements completed');
-    }
+        this.improvements.push('Accessibility improvements completed')}
 
     async optimizeMobile() {
         console.log('📱 Optimizing mobile experience...');
-        this.improvements.push('Mobile optimization completed');
-    }
+        this.improvements.push('Mobile optimization completed')}
 
     async generateReport() {
         const report = {
@@ -34,8 +30,7 @@ class UXOptimizer {
         };
 
         fs.writeFileSync('ux-report.json', JSON.stringify(report, null, 2));
-        console.log('📊 UX report generated');
-    }
+        console.log('📊 UX report generated')}
 }
 
 const uxOptimizer = new UXOptimizer();

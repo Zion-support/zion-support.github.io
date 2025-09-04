@@ -23,6 +23,5 @@ export const securityTests = {
     return {
       xss: vulnerabilities.filter(v => xssPatterns.some(p => p.test(v))),
       csrf: vulnerabilities.filter(v => csrfPatterns.some(p => p.test(v)))
-    };
-  }
+    }}
 };

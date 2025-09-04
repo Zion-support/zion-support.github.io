@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState} from 'react';';';
 import {motion, AnimatePresence} from 'framer-motion';
 
 export default function Page(props: any) {
@@ -10,4 +10,5 @@ const partnerships = [{
 "
 
   );
-export default Component
+export default Component';
+;';;';

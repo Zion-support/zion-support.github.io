@@ -2,8 +2,7 @@ export function securityMiddleware(request: NextRequest) {;
   const response = NextResponse.next();
   // Apply security headers;
   securityHeaders.forEach(({ key, value }) => {;
-    response.headers.set(key, value);
-});
+    response.headers.set(key, value)});
   // Apply Content Security Policy;
   const cspString = Object.entries(contentSecurityPolicy.directives);
     .map(([key, values]) => `${key} ${values.join(" ")}`);
@@ -17,6 +16,6 @@ export function securityMiddleware(request: NextRequest) {;
 ;
 export const config = {;
   matcher: [;
-    "/((?!api|_next/static|_next/image|favicon.ico).*)",;
-  ],;,
+    "/((?!api|_next/static|_next/image|favicon.ico).*)",
+  ],,
 }

@@ -12,8 +12,7 @@ class AutomationTestRunner {
     this.results = {
       timestamp: new Date().toISOString(),
       tests: []
-    };
-  }
+    }}
 
   async runTest(scriptPath, description) {
     console.log(`🧪 Testing: ${description}`);
@@ -33,8 +32,7 @@ class AutomationTestRunner {
       });
       
       console.log(`✅ ${description}: PASSED`);
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.results.tests.push({
         script: scriptPath,
         description,
@@ -43,8 +41,7 @@ class AutomationTestRunner {
       });
       
       console.log(`❌ ${description}: FAILED - ${error.message}`);
-      return false;
-    }
+      return false}
   }
 
   async runAllTests() {
@@ -62,15 +59,13 @@ class AutomationTestRunner {
     for (const test of testScripts) {
       if (fs.existsSync(test.path)) {
         const success = await this.runTest(test.path, test.desc);
-        if (success) passed++;
-      } else {
+        if (success) passed++} else {
         console.log(`⚠️  ${test.desc}: Script not found`);
         this.results.tests.push({
           script: test.path,
           description: test.desc,
           status: 'not_found'
-        });
-      }
+        })}
     }
 
     // Save results
@@ -79,14 +74,12 @@ class AutomationTestRunner {
     console.log(`\n📊 Test Results: ${passed}/${total} tests passed`);
     console.log('📄 Detailed results saved to automation-test-results.json');
     
-    return this.results;
-  }
+    return this.results}
 }
 
 // Run if called directly
 if (require.main === module) {
   const runner = new AutomationTestRunner();
-  runner.runAllTests().catch(console.error);
-}
+  runner.runAllTests().catch(console.error)}
 
 module.exports = AutomationTestRunner;

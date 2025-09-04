@@ -6,24 +6,24 @@ export default function Page() {;
       if(fetchError) throw fetchError;
       ;
       const transformedData = data.map((dispute: any) => ({;
-        ...dispute,;
-        client_profile: dispute.client_profile?.client_profile,;
-        talent_profile: dispute.talent_profile?.talent_profile,;
+        ...dispute,
+        client_profile: dispute.client_profile?.client_profile,
+        talent_profile: dispute.talent_profile?.talent_profile,
         project: {;
-          ...dispute.project,;
-          title: dispute.project?.job?.title || 'Untitled Project';,
+          ...dispute.project,
+          title: dispute.project?.job?.title || 'Untitled Project',
 }
       }));
       ;
       setDisputes(transformedData as Dispute[]);
-      setError(null);,
+      setError(null),
 } catch(err: any) {;
       console.error("Error fetching disputes:", err);
       setError("Failed to fetch disputes: " + err.message);
       toast.error("Failed to fetch disputes");
-      setDisputes([]); // Clear disputes on error;,
+      setDisputes([]); // Clear disputes on error,
 } finally {;
-      setIsLoading(false);,
+      setIsLoading(false),
 }
   }, [user]); // user is a dependency of fetchDisputes;
 
@@ -32,15 +32,15 @@ export default function Page() {;
       const { data, error } = await supabase;
         .from("disputes");
         .select(`;
-          *,;
+          *,
           project:projects(;
-            scope_summary,;
-            job_id,;
-            client_id,;
-            talent_id,;
+            scope_summary,
+            job_id,
+            client_id,
+            talent_id,
             job:jobs(title);
-          ),;
-          client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url)),;
+          ),
+          client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url)),
           talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url));
         `);
         .eq("id", disputeId);
@@ -49,18 +49,18 @@ export default function Page() {;
       if(error) throw error;
       ;
       return {;
-        ...data,;
-        client_profile: data.client_profile?.client_profile,;
-        talent_profile: data.talent_profile?.talent_profile,;
+        ...data,
+        client_profile: data.client_profile?.client_profile,
+        talent_profile: data.talent_profile?.talent_profile,
         project: {;
-          ...data.project,;
-          title: data.project?.job?.title || 'Untitled Project';,
+          ...data.project,
+          title: data.project?.job?.title || 'Untitled Project',
 }
-      } as Dispute;,
+      } as Dispute,
 } catch(err: any) {;
       console.error("Error fetching dispute:", err);
       toast.error("Failed to fetch dispute details");
-      return null;,
+      return null,
 }
   };
 
@@ -68,19 +68,19 @@ export default function Page() {;
     project_id: string;
     milestone_id?: string;
     reason_code: string;
-    description: string;,
+    description: string,
 }): Promise<Dispute | null> => {;
     if(!user) {;
       toast.error("You must be logged in to create a dispute");
-      return null;,
+      return null,
 }
 
     try {;
       const { data, error } = await supabase;
         .from("disputes");
         .insert({;
-          ...disputeData,;
-          raised_by: user.id;,
+          ...disputeData,
+          raised_by: user.id,
 });
         .select();
         .single();
@@ -90,11 +90,11 @@ export default function Page() {;
       toast.success("Dispute submitted successfully");
       fetchDisputes(); ;
       ;
-      return data as Dispute;,
+      return data as Dispute,
 } catch(err: any) {;
       console.error("Error creating dispute:", err);
       toast.error("Failed to submit dispute");
-      return null;,
+      return null,
 }
   };
 
@@ -114,25 +114,25 @@ export default function Page() {;
       );
       ;
       toast.success(`Dispute status updated to ${status}`);
-      return true;,
+      return true,
 } catch(err: any) {;
       console.error("Error updating dispute status:", err);
       toast.error("Failed to update dispute status");
-      return false;,
+      return false,
 }
   };
 
-  const resolveDispute = async(disputeId: string, ;
-    resolution: { summary: string; resolution_type: string; }
+  const resolveDispute = async(disputeId: string,
+    resolution: { summary: string; resolution_type: string}
   ): Promise<boolean> => {;
     try {;
       const { error } = await supabase;
         .from("disputes");
         .update({;
-          status: 'resolved',;
-          resolved_at: new Date().toISOString(),;
-          resolution_summary: resolution.summary,;
-          resolution_type: resolution.resolution_type;,
+          status: 'resolved',
+          resolved_at: new Date().toISOString(),
+          resolution_summary: resolution.summary,
+          resolution_type: resolution.resolution_type,
 });
         .eq("id", disputeId);
       ;
@@ -142,22 +142,22 @@ export default function Page() {;
         prevDisputes.map(dispute => ;
           dispute.id === disputeId ;
             ? { ;
-                ...dispute, ;
-                status: 'resolved', ;
-                resolved_at: new Date().toISOString(),;
-                resolution_summary: resolution.summary,;
-                resolution_type: resolution.resolution_type as any;,
+                ...dispute,
+                status: 'resolved',
+                resolved_at: new Date().toISOString(),
+                resolution_summary: resolution.summary,
+                resolution_type: resolution.resolution_type as any,
 } ;
             : dispute;
         );
       );
       ;
       toast.success("Dispute resolved successfully");
-      return true;,
+      return true,
 } catch(err: any) {;
       console.error("Error resolving dispute:", err);
       toast.error("Failed to resolve dispute");
-      return false;,
+      return false,
 }
   };
 
@@ -166,7 +166,7 @@ export default function Page() {;
       const { data, error } = await supabase;
         .from("dispute_messages");
         .select(`;
-          *,;
+          *,
           user_profile:profiles!dispute_messages_user_id_fkey(display_name, avatar_url);
         `);
         .eq("dispute_id", disputeId);
@@ -174,62 +174,62 @@ export default function Page() {;
       ;
       if(error) throw error;
       ;
-      return data as DisputeMessage[];,
+      return data as DisputeMessage[],
 } catch(err: any) {;
       console.error("Error fetching dispute messages:", err);
       toast.error("Failed to fetch messages");
-      return [];,
+      return [],
 }
   };
 
   const addDisputeMessage = async(disputeId: string, message: string, isAdminNote = false): Promise<boolean> => {;
     if(!user) {;
       toast.error("You must be logged in to send a message");
-      return false;,
+      return false,
 }
 
     try {;
       const { error } = await supabase;
         .from("dispute_messages");
         .insert({;
-          dispute_id: disputeId,;
-          user_id: user.id,;
-          message,;
-          is_admin_note: isAdminNote;,
+          dispute_id: disputeId,
+          user_id: user.id,
+          message,
+          is_admin_note: isAdminNote,
 });
       ;
       if(error) throw error;
       ;
       toast.success("Message sent successfully");
-      return true;,
+      return true,
 } catch(err: any) {;
       console.error("Error sending message:", err);
       toast.error("Failed to send message");
-      return false;,
+      return false,
 }
   };
 
   useEffect(() => {;
-  // TODO: Add dependencies if needed;,
+  // TODO: Add dependencies if needed,
 }, []);
     if(user) {;
-      fetchDisputes();,
+      fetchDisputes(),
 } else {;
       setDisputes([]); // Clear disputes if user logs out;
-      setError(null);,
+      setError(null),
 }
   }, [user, fetchDisputes]); // Added fetchDisputes;
 
   return {;
-    disputes,;
-    isLoading,;
-    error,;
-    refetch: fetchDisputes,;
-    getDisputeById,;
-    createDispute,;
-    updateDisputeStatus,;
-    resolveDispute,;
-    getDisputeMessages,;
-    addDisputeMessage;,
-};,
+    disputes,
+    isLoading,
+    error,
+    refetch: fetchDisputes,
+    getDisputeById,
+    createDispute,
+    updateDisputeStatus,
+    resolveDispute,
+    getDisputeMessages,
+    addDisputeMessage,
+},
 }

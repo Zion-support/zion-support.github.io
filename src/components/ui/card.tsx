@@ -4,9 +4,7 @@ interface CardProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export function Card(props: any) {
   return (
-    <div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}
-      {...props}
-     />
+    <div className="min-h-screen bg-white">
   );
 }
 
@@ -14,7 +12,7 @@ interface CardHeaderProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export function CardHeader(props: any) {
   return (
-    <div className={`flex flex-col space-y-1.5 p-6 ${className}`} {...props}  />
+    <div className="min-h-screen bg-white">
   );
 }
 
@@ -40,7 +38,7 @@ interface CardContentProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export function CardContent(props: any) {
   return (
-    <div className={`p-6 pt-0 ${className}`} {...props}  />
+    <div className="min-h-screen bg-white">
   );
 }
 
@@ -48,14 +46,13 @@ interface CardFooterProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export function CardFooter(props: any) {
   return (
-    <div className={`flex items-center p-6 pt-0 ${className}`} {...props}  />
+    <div className="min-h-screen bg-white">
   );
 }
-</HTMLDivElement>
 </HTMLDivElement>
 </HTMLParagraphElement>
 </h3>
 </HTMLHeadingElement>
 </HTMLDivElement>
-</div>
-</HTMLDivElement>
+</div>';
+</HTMLDivElement>;';;';

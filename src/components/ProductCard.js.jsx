@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
-import {useAuth} from '../hooks/useAuth';
-import {useWishlist} from '../hooks/useWishlist';
-import {useRouter} from 'next/router';
-import {useSnackbar} from 'notistack';
-import {useDispatch} from 'react-redux';
+import React, {useState} from 'react';';';
+import {useAuth} from '../hooks/useAuth';';';
+import {useWishlist} from '../hooks/useWishlist';';';
+import {useRouter} from 'next/router';';';
+import {useSnackbar} from 'notistack';';';
+import {useDispatch} from 'react-redux';';';
 import {captureException} from '@sentry/nextjs';
 
 export default function ProductCard(props: any) {
@@ -21,7 +21,7 @@ export default function ProductCard(props: any) {
       extra: { product } 
     });
     return (
-      <div className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error">
+    <div className="min-h-screen bg-white">
         <p className="text-destructive text-sm">
           Product information unavailable.
         </p>
@@ -30,4 +30,5 @@ export default function ProductCard(props: any) {
   }
   
   const active = isWishlisted(product.id);
-  const dispatch = useDispatch();
+  const dispatch = useDispatch();';
+;';;';

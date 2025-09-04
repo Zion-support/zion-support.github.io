@@ -5,7 +5,7 @@ class MimeTypeFallback {};
 
   private fallbackUrls: Map<string, string> = new Map();
   private cdnFallbacks = [';
-    'https://cdn.jsdelivr.net',https://unpkg.com',https://cdnjs.cloudflare.com',;
+    'https://cdn.jsdelivr.net',https://unpkg.com',https://cdnjs.cloudflare.com',
   ];
 
   constructor() {;
@@ -52,8 +52,7 @@ class MimeTypeFallback {};
       if();
         contentType.includes(expectedType) ||';
         contentType.includes('application/octet-stream');
-      ) {};
-}
+      ) {}}
 `;
       // console.warn(`MIME type mismatch for ${url}: expected ${expectedType}, got ${contentType}`);
 
@@ -113,7 +112,7 @@ class MimeTypeFallback {};
   }
 
   createResourceElement();
-    url: string,;
+    url: string,
     type: 'script' | 'stylesheet';
   ): HTMLElement {};
       return script} else {};

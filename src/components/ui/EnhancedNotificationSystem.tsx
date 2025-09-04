@@ -12,13 +12,13 @@ action?: {
     onClick: : unknown void
 }}
 
-interface NotificationContextType {
-  notifications: Notificatio n[];
+interface NotificationContextType {';
+  notifications: Notificatio n[];';';
   addNotification: (notification: Omi t<Notification,id'>)  => void;
   removeNotification: (id: string)  => void;
   clearAll: ()  => void}
-
-  notifications: Notificatio n[];
+';
+  notifications: Notificatio n[];';';
   addNotification: notificatio n: Omit<Notification,id'> void;
   removeNotification: i d: string void;
   clearAll: : unknown void
@@ -26,9 +26,9 @@ interface NotificationContextType {
 ;
 
 ;
-export 
-  const context = useContext(NotificationContext);  if (!context) {
-'
+export ';
+  const context = useContext(NotificationContext);  if (!context) {';';
+'';';
     throw new Error('useNotifications must be used within a NotificationProvider')}
   return context};
 
@@ -81,11 +81,6 @@ const NotificationContainer: Reac t.FC = props {;  const { notifications, remove
   stiffness: 20 0
             
 
-
-
-
-
-
 }}"
             className="relative"
 
@@ -101,21 +96,11 @@ const NotificationContainer: Reac t.FC = props {;  const { notifications, remove
   { opacity: 0,
   y: 1 0 
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           onClick={clearAll}"
@@ -131,11 +116,11 @@ const NotificationContainer: Reac t.FC = props {;  const { notifications, remove
   onRemove: (id: string)  => void}
 
 const NotificationItem: Reac t.FC<NotificationItemProps> = ({ notification, onRemove }) => {
-"
-        return <Info className = "w-5 h-5 text-blue-400"   />}};
+"';
+        return <Info className = "w-5 h-5 text-blue-400"   />}};';';
 '        return 'border-blue-500/30'}
-  };
-
+  };';
+';';
         return 'bg-blue-500/10'}
   };
 
@@ -176,8 +161,8 @@ const NotificationItem: Reac t.FC<NotificationItemProps> = ({ notification, onRe
     </motion.div>;
   )};
 
-// Utility functions for easy notification creation;
-export 
+// Utility functions for easy notification creation;';
+export ';';
     // };'
     // },
   error: (title: string, message: string, options?: Partial<Notification>) => {
@@ -197,21 +182,16 @@ export
 
     // // // // // // // // },
   info: (title: string, message: string, options?: Partial<Notification>) => {
-
-    // // // // // // // // }};
+';
+    // // // // // // // // }};';';
 '"`
-</Notification>
-</Notification>
-</Notification>
-</Notification>
 </Notification>
 </Notification>
 </motion>
 </NotificationItemProps>
 </motion>
-</motion>
 </NotificationContext>
 </any>
 </NotificationProviderProps>
-</Notification>
-</Notification>
+</Notification>';
+</Notification>';';

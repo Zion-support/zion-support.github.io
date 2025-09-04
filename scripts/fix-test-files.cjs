@@ -9,19 +9,16 @@ class TestFileFixer {
     this.projectRoot = process.cwd();
     this.testDir = path.join(this.projectRoot, '__tests__');
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.ensureDirectories();
-  }
+    this.ensureDirectories()}
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+      fs.mkdirSync(this.reportsDir, { recursive: true })}
   }
 
   log(message) {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
+    console.log(`[${timestamp}] ${message}`)}
 
   getAllTestFiles() {
     const testFiles = [];
@@ -35,16 +32,12 @@ class TestFileFixer {
         const stat = fs.statSync(filePath);
         
         if (stat.isDirectory()) {
-          findTestFiles(filePath);
-        } else if (file.match(/\.(test|spec)\.(js|jsx|ts|tsx)$/)) {
-          testFiles.push(filePath);
-        }
-      });
-    };
+          findTestFiles(filePath)} else if (file.match(/\.(test|spec)\.(js|jsx|ts|tsx)$/)) {
+          testFiles.push(filePath)}
+      })};
 
     findTestFiles(this.testDir);
-    return testFiles;
-  }
+    return testFiles}
 
   fixTestFile(filePath) {
     try {
@@ -55,19 +48,15 @@ class TestFileFixer {
       const unterminatedStringRegex = /import\s+.*?from\s+['"]([^'"]*?)['"]\s*['"]/g;
       if (unterminatedStringRegex.test(content)) {
         content = content.replace(unterminatedStringRegex, (match, importPath) => {
-          return match.replace(/['"]\s*['"]$/, '"');
-        });
-        fixed = true;
-      }
+          return match.replace(/['"]\s*['"]$/, '"')});
+        fixed = true}
 
       // Fix missing quotes in import statements
       const missingQuoteRegex = /import\s+.*?from\s+['"]([^'"]*?)['"]\s*$/gm;
       content = content.replace(missingQuoteRegex, (match) => {
         if (!match.endsWith('"') && !match.endsWith("'")) {
-          return match + '"';
-        }
-        return match;
-      });
+          return match + '"'}
+        return match});
 
       // Fix JSX syntax issues
       const jsxIssues = [
@@ -78,8 +67,7 @@ class TestFileFixer {
       jsxIssues.forEach(({ pattern, replacement }) => {
         if (pattern.test(content)) {
           content = content.replace(pattern, replacement);
-          fixed = true;
-        }
+          fixed = true}
       });
 
       // Fix component import names
@@ -88,22 +76,17 @@ class TestFileFixer {
         // Fix common naming issues
         if (componentName.includes('test') && !componentName.endsWith('Test')) {
           const cleanName = componentName.replace(/test/g, '');
-          return match.replace(componentName, cleanName);
-        }
-        return match;
-      });
+          return match.replace(componentName, cleanName)}
+        return match});
 
       if (fixed) {
         fs.writeFileSync(filePath, content, 'utf8');
         this.log(`✅ Fixed: ${path.relative(this.projectRoot, filePath)}`);
-        return true;
-      }
+        return true}
 
-      return false;
-    } catch (error) {
+      return false} catch (error) {
       this.log(`❌ Error fixing ${filePath}: ${error.message}`);
-      return false;
-    }
+      return false}
   }
 
   createBasicTestTemplate(componentName, filePath) {
@@ -115,19 +98,15 @@ import ${componentName} from '../components/${componentName}';
 describe('${componentName}', () => {
   test('renders without crashing', () => {
     render(<${componentName} />);
-    expect(screen.getByRole('main')).toBeInTheDocument();
-  });
+    expect(screen.getByRole('main')).toBeInTheDocument()});
 
   test('displays correct content', () => {
     render(<${componentName} />);
-    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
-  });
-});
+    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
 `;
 
     fs.writeFileSync(filePath, template, 'utf8');
-    this.log(`✅ Created basic test template: ${path.relative(this.projectRoot, filePath)}`);
-  }
+    this.log(`✅ Created basic test template: ${path.relative(this.projectRoot, filePath)}`)}
 
   async run() {
     this.log('🔧 Starting Test File Fixer');
@@ -141,8 +120,7 @@ describe('${componentName}', () => {
     // Fix existing test files
     for (const filePath of testFiles) {
       if (this.fixTestFile(filePath)) {
-        fixedCount++;
-      }
+        fixedCount++}
     }
 
     // Create missing test files for main components
@@ -157,8 +135,7 @@ describe('${componentName}', () => {
       const testFilePath = path.join(this.testDir, `${component}.test.tsx`);
       if (!fs.existsSync(testFilePath)) {
         this.createBasicTestTemplate(component, testFilePath);
-        createdCount++;
-      }
+        createdCount++}
     }
 
     // Generate report
@@ -173,8 +150,7 @@ describe('${componentName}', () => {
         fixedFiles: testFiles.filter(file => this.fixTestFile(file)),
         createdFiles: mainComponents.filter(comp => {
           const testPath = path.join(this.testDir, `${comp}.test.tsx`);
-          return !fs.existsSync(testPath);
-        })
+          return !fs.existsSync(testPath)})
       }
     };
 
@@ -186,14 +162,12 @@ describe('${componentName}', () => {
     this.log(`   Created: ${createdCount} files`);
     this.log(`   Report: ${reportPath}`);
 
-    return report;
-  }
+    return report}
 }
 
 // Run the fixer
 if (require.main === module) {
   const fixer = new TestFileFixer();
-  fixer.run().catch(console.error);
-}
+  fixer.run().catch(console.error)}
 
 module.exports = TestFileFixer;

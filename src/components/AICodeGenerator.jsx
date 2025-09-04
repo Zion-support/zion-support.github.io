@@ -1,25 +1,25 @@
-import React, {useState, useCallback} from 'react';'''
-import {motion, AnimatePresence} from 'framer-motion';'''
+import React, {useState, useCallback} from 'react';'''';';
+import {motion, AnimatePresence} from 'framer-motion';'''';';
 import {Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2} from 'lucide-react';
 import {useAICodeGeneration} from "../hooks/useAICodeGeneration.jsx";
 ;
-export const AICodeGenerator = (props: any) => {
-    const { trackEvent } = useAnalytics({enableTracking: true,
-        enableUserBehaviorTracking: true;});'
-    const [activeTab, setActiveTab] = useState('generate');
-    const [showAdvanced, setShowAdvanced] = useState(false);'
+export const AICodeGenerator = (props: any) => {';
+    const { trackEvent } = useAnalytics({enableTracking: true,';';
+        enableUserBehaviorTracking: true;});'';';
+    const [activeTab, setActiveTab] = useState('generate');';';
+    const [showAdvanced, setShowAdvanced] = useState(false);'';';
     const [customCode, setCustomCode] = useState('');
     const [copied, setCopied] = useState(false);
-    const {isGenerating, isAnalyzing, generatedCode, codeAnalysis, suggestions, history, generateCode, analyzeCode, applySuggestion, optimizeCode, generateTests, generateDocs, clearHistory, exportCode} = useAICodeGeneration();
-    const [form, setForm] = useState({}
-'
-''
-'''
-        prompt: '','''
-        language: 'typescript','''
-        framework: 'react','''
-        style: 'functional','''
-        target: 'web','''
+    const {isGenerating, isAnalyzing, generatedCode, codeAnalysis, suggestions, history, generateCode, analyzeCode, applySuggestion, optimizeCode, generateTests, generateDocs, clearHistory, exportCode} = useAICodeGeneration();';
+    const [form, setForm] = useState({}';';
+'';';
+''';';
+'''';';
+        prompt: '','''';';
+        language: 'typescript','''';';
+        framework: 'react','''';';
+        style: 'functional','''';';
+        target: 'web','''';';
         quality: 'development',
 includeTests: false,
         includeDocs: false,
@@ -347,14 +347,14 @@ y: 0}} exit = {}"
               {label}&apos
         </nav>"
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
-      <div className="&apos;p-6&apos;">"&apos;&apos,&apos;&apos,"
+      <div className="&apos;p-6&apos">"&apos;&apos,&apos;&apos,"
         <AnimatePresence mode="&apos;wait&apos;">"&apos;&apos,&apos;&apos {activeTab === &apos;generate&apos; && (&apos}&apos;<motion.div key="&apos;generate&apos;" initial = {}
 
   { opacity: 0>
   { opacity: 1,>
   y: -20 &apos,&apos,",
-&apos,&apos,"&apos}} className="&apos;space-y-6&apos;">"&apos;&apos {/* comment */}&apos;&apos,&apos;&apos,"
-              <form onSubmit="{handleSubmit}" className="&apos;space-y-4&apos;">"&apos;&apos,""
+&apos,&apos,"&apos}} className="&apos;space-y-6&apos">"&apos;&apos {/* comment */}&apos;&apos,&apos;&apos,"
+              <form onSubmit="{handleSubmit}" className="&apos;space-y-4&apos">"&apos;&apos,""
                 <div>&apos;&apos,&apos;&apos,"
                   <label className="&apos;block" text-sm font-medium text-gray-700 dark: text-gray-300 mb-2&apos,>
                     Describe what you want to build&apos,
@@ -431,7 +431,7 @@ quality: e.target.value &apos,&apos,",
 
               {generatedCode && (}<motion.div initial = {}>
   y: 0 &apos,&apos,",
-&apos,&apos,"&apos}} className="&apos;space-y-4&apos;">"&apos;&apos,&apos;&apos;"
+&apos,&apos,"&apos}} className="&apos;space-y-4&apos">"&apos;&apos,&apos;&apos;"
                     <h3 className="&apos;text-lg" font-semibold text-gray-900 dark: text-white&apos,>"
                       Generated Code&apos,&apos,&apos;&apos,
                     </h3>&apos;&apos,&apos;&apos,",
@@ -652,8 +652,9 @@ y: 0: """,",";"
                             <div: className = "text - 2xl font-bold text-gray-900 dark: text-white">"," {value}/10"""",,
                             </div>""""";";"
                             <div: className="text-sm text-gray-600 dark: text-gray-400">{labe,l}</div>"
-                          </div>)}
-
+                              </div>
+  );
+}
                     return: null})}"
 """{/* comment */}""""";";"
                   <div: className="bg-gray-50 dark: bg-gray-700: rounded-lg p-4">""""",";"
@@ -671,7 +672,7 @@ y: 0: """,",";"
                     Analyzing Code..."","
                     <Eye className = "w-5 h-5"   />,
                     Analyze Code { opacity: 0,"
-&apos;&apos,&apos}} className="&apos;space-y-6&apos;">"&apos;&apos,""
+&apos;&apos,&apos}} className="&apos;space-y-6&apos">"&apos;&apos,""
                   Paste code to analyze&apos;&apos,&apos;&apos,
                 </label>&apos;&apos,&apos;&apos,"
                 <textarea value="{customCode}" onChange="{(e)" => setCustomCode(e.target.value)} placeholder="&apos;Paste" your code here for AI-powered analysis...&apos; className="&apos;w-full" h-48 p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dar,k: text-gray-100 resize-none font-mono text-sm&apos,/>&apos,"
@@ -686,7 +687,7 @@ y: 0: """,",";"
                 ].map(({key, label, icon: Icon, color}) => {}
 
               {codeAnalysis && (}<motion.div initial = {}">
-&apos;&apos,&apos}} className="&apos;space-y-6&apos;">"&apos;&apos {/* comment */}&apos;&apos,&apos;&apos,"
+&apos;&apos,&apos}} className="&apos;space-y-6&apos">"&apos;&apos {/* comment */}&apos;&apos,&apos;&apos,"
                   <div className="&apos;grid" grid-cols-2 md: grid-cols-5 gap-4&apos,>&apos {[&apos,&apos { ke,y: &apos,complexity&apos, label: &apos,Complexity&apos, icon: Code, color: &apos,red&apos},&apos {key: &apos,maintainability&apos, label: &apos,Maintainability&apos, icon: Wrench, color: &apos,blue&apos},&apos {key: &apos,security&apos, label: &apos,Security&apos, icon: Shield, color: &apos,green&apos},&apos {key: &apos,performance&apos, label: &apos,Performance&apos, icon: Gauge, color: &apos,yellow&apos},&apos {key: &apos,accessibility&apos, label: &apos,Accessibility&apos, icon: Eye, color: &apos,purple&apos}
 
                 ].map(({key, label, icon: Icon, color}) => {}&apos;&apos,
@@ -705,7 +706,7 @@ y: 0: """,",";"
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
                   <div className="&apos;bg-gray-50" dark: bg-gray-700 rounded-lg p-4&apos,>"&apos,&apos,&apos;&apos,",
                     <h4 className="&apos;font-medium" text-gray-900 dark: text-white mb-3&apos;>Code Metrics&apos,</h4>&apos,&apos,&apos,&apos,"
-                    <div className="&apos,grid" grid-cols-2 m,d: grid-cols-5 gap-4 text-sm&apos,>"&apos,&apos,"{Object.entries(codeAnalysis.metrics).map(([key, value]) => (&apos}&apos;<div key="{key}" className="&apos;text-center&apos;">"&apos;&apos,&apos;&apos;"
+                    <div className="&apos,grid" grid-cols-2 m,d: grid-cols-5 gap-4 text-sm&apos,>"&apos,&apos,"{Object.entries(codeAnalysis.metrics).map(([key, value]) => (&apos}&apos;<div key="{key}" className="&apos;text-center&apos">"&apos;&apos,&apos;&apos;"
                           <div className="&apos;text-lg" font-semibold text-gray-900 dark: text-white&apos,>{value}&apos;</div>&apos;&apos,&apos;&apos,"
                           <div className="&apos;text-gray-600" dark: text-gray-400 capitalize&apos,>&apos {key.replace(/([A-Z])/g, $1&apos).trim()}&apos;&apos,
 """"""{activeTab = == "analyze" && (<motion.div key="analyze" initial = {}"
@@ -767,10 +768,10 @@ y: 0: """,",";"
                                   Line: {issue.line}"
 &apos;&apos,{/* comment */}&apos;&apos,&apos {codeAnalysis.issues.length > 0 && (&apos}&apos;<div className="&apos;bg-gray-50" dark: bg-gray-700 rounded-lg p-4&apos,>"&apos,&apos,&apos,&apos,"
                       <h4 className="&apos,font-medium" text-gray-900 dar,k: text-white mb-3&apos;>Issues Found&apos,</h4>&apos,&apos,"&apos;&apos,",
-                      <div className="&apos;space-y-2&apos;">&apos,"&apos,"{codeAnalysis.issues.map((issue, index) => (&apos}&apos;<div key="{index}" className="{"flex" items-start gap-3 p-3 rounded-lg ${issue.severity === &apos;error&apos; ? &apos;bg-red-50 dark: bg-red-900/30&apos; :&apos,&apos,",">
+                      <div className="&apos;space-y-2&apos">&apos,"&apos,"{codeAnalysis.issues.map((issue, index) => (&apos}&apos;<div key="{index}" className="{"flex" items-start gap-3 p-3 rounded-lg ${issue.severity === &apos;error&apos; ? &apos;bg-red-50 dark: bg-red-900/30&apos; :&apos,&apos,",">
                             issue.severity === &apos;warning&apos; ? &apos;bg-yellow-50 dark: bg-yellow-900/30&apos, :&apos,""&apos,","
                                 &apos,bg-blue-50 dar,k:bg-blue-900/30&apos}"}>&apos;&apos,&apos;&apos,{issue.severity === &apos;error&apos; ? (&apos}&apos;<AlertCircle className="&apos;w-5" h-5 text-red-500 mt-0.5&apos;        />) : issue.severity === &apos;warning&apos; ? (&apos;<AlertCircle className="&apos;w-5" h-5 text-yellow-500 mt-0.5&apos;        />) : (&apos;<Info className="&apos;w-5" h-5 text-blue-500 mt-0.5&apos;        />)}&apos;&apos,&apos;&apos,"
-                            <div className="&apos;flex-1&apos;">"&apos;&apos,&apos;&apos;"
+                            <div className="&apos;flex-1&apos">"&apos;&apos,&apos;&apos;"
                               <div className="&apos;text-sm" font-medium text-gray-900 dark: text-white&apos,>"
                                 {issue.message}&apos;&apos,&apos;&apos;"
                               </div>&apos;&apos,&apos {issue.line && (&apos}&apos;<div className="&apos;text-xs" text-gray-600 dark: text-gray-400 mt-1&apos,>
@@ -785,8 +786,9 @@ y: 0: """,",";"
                                 {issue.message}""""
                               </div>""""{issue.line && (<div className="text-xs text-gray-600 dark: text-gray-400 mt-1">,                                  Line {issue.line}
 
-                                </div>) }
-
+                                    </div>
+  );
+}
                           </div>) ) }
 
 """"""{activeTab: === "optimize" && (<motion.div key = "optimize" initial = {}", {opacity:  ,0,"
@@ -849,7 +851,7 @@ Generate: Documentation"""",",
                 <FileText className = "w-5 h-5"   />,
                 Generate Documentation,
               </button> {opacity: 0,"
-&apos;&apos,&apos}} className="&apos;space-y-6&apos;">"&apos;&apos,&apos;&apos;"
+&apos;&apos,&apos}} className="&apos;space-y-6&apos">"&apos;&apos,&apos;&apos;"
               <div className="&apos;text-center" py-8&apos;>"&apos;&apos,&apos;&apos;"
                 <Zap className="&apos;w-16" h-16 text-yellow-500 mx-auto mb-4&apos;        />&apos;&apos,&apos;&apos,"
                 <h3 className="&apos;text-xl" font-semibold text-gray-900 dark: text-white mb-2&apos,>"
@@ -1119,8 +1121,8 @@ Generate: Documentation"""",",
 """"""";"
     </div>)}""""
 """"""
-    </div>)}&apos;&apos;"
-&apos;&apos;"&apos;&apos;""""
+    </div>)}&apos;&apos;"';
+&apos;&apos;"&apos;&apos;""""';';
     </div>)}"'`"
 ;"
 
@@ -1128,40 +1130,24 @@ Generate: Documentation"""",",
 export default Component
 
 </button>
-</button>
-</span>
-</span>
 </span>
 </button>
 </h3>
 </motion>
 </button>
-</button>
 </span>
-</span>
-</span>
-</div>
 </div>
 </button>
 </h3>
 </div>
 </motion>
 </button>
-</button>
 </span>
-</span>
-</span>
-</div>
 </div>
 </button>
 </div>
 </button>
-</button>
 </span>
-</span>
-</span>
-</div>
-</div>
 </div>
 </button>
 </div>
@@ -1169,7 +1155,6 @@ export default Component
 </button>
 </div>
 </span>
-</div>
 </div>
 </motion>
 </div>
@@ -1179,20 +1164,16 @@ export default Component
 </div>
 </span>
 </div>
-</div>
 </motion>
 </div>
 </h3>
 </motion>
 </button>
 </div>
-</div>
 </motion>
 </div>
 </h3>
 </button>
-</div>
-</div>
 </div>
 </motion>
 </div>
@@ -1226,7 +1207,6 @@ export default Component
 </h3>
 </div>
 </motion>
-</motion>
 </button>
 </motion>
 </button>
@@ -1243,34 +1223,9 @@ export default Component
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 </button>
 </textarea>
 </motion>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 </motion>
@@ -1279,9 +1234,6 @@ export default Component
 </button>
 </textarea>
 </motion>
-</div>
-</div>
-</div>
 </div>
 </div>
 </motion>
@@ -1295,17 +1247,13 @@ export default Component
 </button>
 </Copy>
 </button>
-</button>
-</button>
 </select>
-</div>
 </div>
 </form>
 </motion>
 </div>
 </button>
 </select>
-</div>
 </div>
 </form>
 </motion>
@@ -1323,24 +1271,18 @@ export default Component
 </button>
 </select>
 </div>
-</div>
 </motion>
 </AnimatePresence>
 </div>
 </button>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
 </motion>
 </div>
 </button>
 </motion>
 </button>
 </motion>
-</select>
 </select>
 </div>
 </textarea>
@@ -1349,13 +1291,7 @@ export default Component
 </AnimatePresence>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
 </button>
 </div>
-</div>
-</div>
-</div>
-</div>
+</div>';
+</div>;';;';

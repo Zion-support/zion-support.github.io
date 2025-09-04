@@ -3,6 +3,6 @@ declare module 'jspdf' {
 		constructor(...args: an y[]);
 		addImage(...args: an y[]): any;
 		text(...args: an y[]): any;
-		save(filename?: string): void;
-	}
-}
+		save(filename?: string): void}
+}';
+';';

@@ -20,18 +20,15 @@ export interface MicroSaasService {
   contactInfo: {
     phone: string;
     email: string;
-    website: string;
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
+    security: string[]};
   competitors?: string[];
-  marketSize?: string;
-}
+  marketSize?: string}
 
 export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
   // Social Media Management & Analytics Platform
