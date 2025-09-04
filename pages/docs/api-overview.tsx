@@ -18,7 +18,7 @@ export default function APIOverview() {
         <meta name="description" content="Comprehensive overview of Zion Tech Group's API services and integration capabilities." />
         <link rel="canonical" href={`${contact.site}/docs/api-overview`} />
       </Head>
-
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-4xl mx-auto px-4 py-8">
           {/* Header */}
@@ -41,7 +41,7 @@ export default function APIOverview() {
                 <h2 className="text-xl font-semibold text-gray-900">RESTful APIs</h2>
               </div>
               <p className="text-gray-600 mb-4">
-                Clean intuitive REST APIs with comprehensive documentation and SDKs for popular languages.
+                Clean, intuitive REST APIs with comprehensive documentation and SDKs for popular languages.
               </p>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li>• JSON-based request/response format</li>

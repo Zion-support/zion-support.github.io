@@ -5,30 +5,10 @@ import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 const ContactSection: React.FC = () => {
   const contactInfo = [
-    { 
-      icon: Phone, 
-      title: 'Phone', 
-      value: '+1 302 464 0950', 
-      href: 'tel:+13024640950' 
-    },
-    { 
-      icon: Mail, 
-      title: 'Email', 
-      value: 'kleber@ziontechgroup.com', 
-      href: 'mailto:kleber@ziontechgroup.com' 
-    },
-    { 
-      icon: MapPin, 
-      title: 'Address', 
-      value: '364 E Main St STE 1008, Middletown, DE 19709', 
-      href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709' 
-    },
-    { 
-      icon: Clock, 
-      title: 'Business Hours', 
-      value: 'Mon-Fri: 9:00 AM - 6:00 PM EST', 
-      href: null 
-    }
+    { icon: Phone, title: 'Phone', value: '+1 302 464 0950', href: 'tel:+13024640950' },
+    { icon: Mail, title: 'Email', value: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
+    { icon: MapPin, title: 'Address', value: '364 E Main St STE 1008, Middletown, DE 19709', href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709' },
+    { icon: Clock, title: 'Business Hours', value: 'Mon-Fri: 9:00 AM - 6:00 PM EST', href: null }
   ];
 
   return (
@@ -147,7 +127,7 @@ const ContactSection: React.FC = () => {
                   rows={4}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Tell us about your project..."
-                />
+                ></textarea>
               </div>
               <Button type="submit" size="lg" className="w-full">
                 Send Message
