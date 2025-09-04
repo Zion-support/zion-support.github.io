@@ -185,20 +185,28 @@ export default function ComprehensiveContact() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {SERVICE_CATEGORIES.map((category) => (<Card key={category.id} className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-300">
+            {SERVICE_CATEGORIES.map((category, index) => (<Card key={index} className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-300">
                 <CardHeader className="text-center">
-                  <div className="text-4xl mb-4">{category.icon}</div>
-                  <CardTitle className="text-white">{category.name}</CardTitle>
+                  <div className="text-4xl mb-4">🚀</div>
+                  <CardTitle className="text-white">{category}</CardTitle>
                   <CardDescription className="text-zion-cyan-light">
-                    {category.description}
+                    Professional {category.toLowerCase()} services
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2">
-                    {category.services.slice(0, 3).map((service) => (<div key={service.id} className="flex items-center gap-2 text-sm">
-                        <CheckCircle className="h-3 w-3 text-green-400" />
-                        <span className="text-zion-cyan-light">{service.title}</span>
-                      </div>))}
+                    <div className="flex items-center gap-2 text-sm">
+                      <CheckCircle className="h-3 w-3 text-green-400" />
+                      <span className="text-zion-cyan-light">Professional consultation</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm">
+                      <CheckCircle className="h-3 w-3 text-green-400" />
+                      <span className="text-zion-cyan-light">Custom solutions</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm">
+                      <CheckCircle className="h-3 w-3 text-green-400" />
+                      <span className="text-zion-cyan-light">24/7 support</span>
+                    </div>
                   </div>
                   <Button variant="outline" className="w-full mt-4 border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
                     View Services

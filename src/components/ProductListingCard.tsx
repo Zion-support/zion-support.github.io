@@ -1,3 +1,108 @@
-;,"});,})
->>>>>>> pr-10728,});,"})"
+import React from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Star, MapPin, Clock, User } from 'lucide-react';
+import { ProductListing } from '@/data/enhancedServices';
+
+interface ProductListingCardProps {
+  listing: ProductListing;
+  onBook: (listing: ProductListing) => void;
+  onViewProfile: (listing: ProductListing) => void;
+}
+
+export function ProductListingCard({ listing, onBook, onViewProfile }: ProductListingCardProps) {
+  return (
+    <Card className="hover:shadow-lg transition-shadow">
+      <CardHeader>
+        <div className="flex items-start justify-between">
+          <div className="flex-1">
+            <CardTitle className="text-lg">{listing.title}</CardTitle>
+            <CardDescription className="mt-1">{listing.description}</CardDescription>
+          </div>
+          <div className="text-right">
+            <div className="text-2xl font-bold text-green-600">
+              {listing.currency}{listing.price}
+            </div>
+            <div className="text-sm text-gray-500">{listing.deliveryTime}</div>
+          </div>
+        </div>
+      </CardHeader>
+      
+      <CardContent>
+        <div className="space-y-3">
+          {/* Rating */}
+          <div className="flex items-center gap-2">
+            <div className="flex items-center">
+              {[...Array(5)].map((_, i) => (
+                <Star
+                  key={i}
+                  className={`w-4 h-4 ${
+                    i < Math.floor(listing.rating) 
+                      ? 'text-yellow-400 fill-current' 
+                      : 'text-gray-300'
+                  }`}
+                />
+              ))}
+            </div>
+            <span className="text-sm text-gray-600">
+              {listing.rating} ({listing.reviews} reviews)
+            </span>
+          </div>
+
+          {/* Author */}
+          <div className="flex items-center gap-2">
+            <User className="w-4 h-4 text-gray-400" />
+            <span className="text-sm text-gray-600">{listing.author.name}</span>
+          </div>
+
+          {/* Tags */}
+          <div className="flex flex-wrap gap-1">
+            {listing.tags.slice(0, 3).map((tag, index) => (
+              <span
+                key={index}
+                className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full"
+              >
+                {tag}
+              </span>
+            ))}
+            {listing.tags.length > 3 && (
+              <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
+                +{listing.tags.length - 3} more
+              </span>
+            )}
+          </div>
+
+          {/* Features */}
+          <div className="space-y-1">
+            <h4 className="text-sm font-medium text-gray-900">Key Features:</h4>
+            <ul className="text-sm text-gray-600 space-y-1">
+              {listing.features.slice(0, 3).map((feature, index) => (
+                <li key={index} className="flex items-center gap-2">
+                  <div className="w-1 h-1 bg-gray-400 rounded-full" />
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Actions */}
+          <div className="flex gap-2 pt-4">
+            <Button
+              variant="outline"
+              onClick={() => onViewProfile(listing)}
+              className="flex-1"
+            >
+              View Details
+            </Button>
+            <Button
+              onClick={() => onBook(listing)}
+              className="flex-1 bg-blue-600 hover:bg-blue-700"
+            >
+              Book Now
+            </Button>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
 }
