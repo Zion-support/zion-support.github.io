@@ -12,7 +12,6 @@ export const useKeyboardNavigation = () => {
         }
       }
     };
-
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
