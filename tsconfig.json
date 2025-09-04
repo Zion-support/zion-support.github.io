@@ -1,33 +1,40 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "lib": ["dom", "dom.iterable", "es2022"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es2022"
+    ],
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "allowJs": true,
+    "allowJs": false,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "types": ["jest", "node"],
-    "baseUrl": "."
+    "types": [
+      "jest",
+      "node"
+    ],
+    "baseUrl": ".",
+    "incremental": true
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
-    "lib/**/*",
-    "hooks/**/*",
-    "styles/**/*",
-    "automation/**/*",
-    "scripts/**/*",
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.js",
-    "**/*.d.ts",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "lib/**/*.ts",
+    "lib/**/*.tsx",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
     "types/**/*.ts"
   ],
   "exclude": [
@@ -38,6 +45,12 @@
     "api-backup",
     "pages.disabled",
     "backup-pages",
+    "automation/**",
+    "scripts/**",
+    "src.corrupted/**",
+    "deployments/**",
+    "deployment/**",
+    "backup/**",
     "automation/backups",
     "automation_backup",
     "broken_files_backup",

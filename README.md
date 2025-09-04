@@ -81,6 +81,20 @@ npm run security:audit # Security audit
 npm run security:fix   # Fix security issues
 ```
 
+## 🔁 Automations
+
+You can run consolidated automations and improvements locally:
+
+```bash
+# Run health, security, performance, build, PM2 bootstrap, and reports
+bash scripts/run-all-improvements.sh
+
+# Or quick CI locally (type-check, lint, tests)
+npm run ci:quick
+```
+
+Generated reports are written under `automation/reports/` and project root (final report JSON).
+
 ## 🏗️ Project Structure
 
 ```
