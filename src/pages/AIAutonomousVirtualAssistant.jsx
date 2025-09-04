@@ -1,11 +1,12 @@
-import { Helmet } from 'react-helmet-async';
-const AIAutonomousVirtualAssistant = () => {
+import React from 'react';
+import {Helmet} from 'react-helmet-async';
+const AIAutonomousVirtualAssistant = (props: any) => {
     return (<>
       <Helmet>
         <title>AI Autonomous Virtual Assistant | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous virtual assistant that provides 24/7 intelligent support, task automation, and personalized assistance with advanced AI capabilities."/>
-        <meta name="keywords" content="AI virtual assistant, autonomous assistant, AI assistant, virtual AI, intelligent assistant, AI automation"/>
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-virtual-assistant"/>
+        <meta name="description" content="Revolutionary AI autonomous virtual assistant that provides 24/7 intelligent support, task automation, and personalized assistance with advanced AI capabilities."  />
+        <meta name="keywords" content="AI virtual assistant, autonomous assistant, AI assistant, virtual AI, intelligent assistant, AI automation"  />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-virtual-assistant"  />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">

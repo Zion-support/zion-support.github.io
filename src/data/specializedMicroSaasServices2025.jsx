@@ -53,10 +53,8 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [;
         technologyStack["GPT-5", "Claude 3.5", "NLP", "Machine Learning", "React"],;
         complianceStandards["GDPR", "Data Privacy"],;
         integrationCapabilities["WordPress", "Shopify", "Mailchimp", "Social Media APIs", "CMS Platforms"],;
-        freeTier: {
-            features["5 content generations per month", "Basic SEO tools", "Standard templates"],;
-            limitations["Limited AI models", "Basic analytics", "No custom branding"];
-        }
+        freeTier: {features["5 content generations per month", "Basic SEO tools", "Standard templates"],;
+            limitations["Limited AI models", "Basic analytics", "No custom branding"];}
     },
     // Smart Invoice Management System
     {
@@ -112,10 +110,8 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [;
         technologyStack["OCR Technology", "AI/ML", "React", "Node.js", "Cloud Computing"],;
         complianceStandards["GDPR", "Financial Regulations", "Data Security"],;
         integrationCapabilities["QuickBooks", "Xero", "Stripe", "PayPal", "Bank APIs"],;
-        freeTier: {
-            features["10 invoices per month", "Basic reporting", "Email support"],;
-            limitations["No API access", "Limited integrations", "Basic templates"];
-        }
+        freeTier: {features["10 invoices per month", "Basic reporting", "Email support"],;
+            limitations["No API access", "Limited integrations", "Basic templates"];}
     },
     // AI-Powered Customer Support Platform
     {
@@ -171,10 +167,8 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [;
         technologyStack["NLP", "Machine Learning", "React", "Node.js", "WebSocket"],;
         complianceStandards["GDPR", "Data Privacy", "Security Standards"],;
         integrationCapabilities["Slack", "Discord", "Website Chat", "Mobile Apps", "CRM Systems"],;
-        freeTier: {
-            features["100 conversations per month", "Basic chatbot", "Email support"],;
-            limitations["Limited AI models", "Basic analytics", "No custom branding"];
-        }
+        freeTier: {features["100 conversations per month", "Basic chatbot", "Email support"],;
+            limitations["Limited AI models", "Basic analytics", "No custom branding"];}
     },
     // Smart Project Management Tool
     {
@@ -230,10 +224,8 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [;
         technologyStack["AI/ML", "React", "Node.js", "Real-time Analytics", "Cloud Computing"],;
         complianceStandards["GDPR", "Data Security"],;
         integrationCapabilities["Slack", "Microsoft Teams", "GitHub", "Jira", "Trello"],;
-        freeTier: {
-            features["3 projects", "5 team members", "Basic analytics"],;
-            limitations["Limited AI features", "No advanced reporting", "Basic integrations"];
-        }
+        freeTier: {features["3 projects", "5 team members", "Basic analytics"],;
+            limitations["Limited AI features", "No advanced reporting", "Basic integrations"];}
     },
     // AI-Powered Email Marketing Platform
     {
@@ -289,10 +281,8 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [;
         technologyStack["Machine Learning", "NLP", "React", "Node.js", "Email APIs"],;
         complianceStandards["GDPR", "CAN-SPAM", "Data Privacy"],;
         integrationCapabilities["Shopify", "WooCommerce", "CRM Systems", "Analytics Tools", "Social Media"],;
-        freeTier: {
-            features["1,000 emails per month", "Basic AI features", "Standard templates"],;
-            limitations["Limited AI models", "Basic analytics", "No custom branding"];
-        }
+        freeTier: {features["1,000 emails per month", "Basic AI features", "Standard templates"],;
+            limitations["Limited AI models", "Basic analytics", "No custom branding"];}
     },
     // Smart Inventory Management System
     {
@@ -348,10 +338,8 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [;
         technologyStack["Machine Learning", "Predictive Analytics", "React", "Node.js", "IoT Integration"],;
         complianceStandards["GDPR", "Data Security", "Industry Standards"],;
         integrationCapabilities["POS Systems", "E-commerce Platforms", "ERP Systems", "Supplier APIs", "Shipping Carriers"],;
-        freeTier: {
-            features["100 SKUs", "Basic forecasting", "Email support"],;
-            limitations["Limited AI features", "Basic reporting", "No API access"];
-        }
+        freeTier: {features["100 SKUs", "Basic forecasting", "Email support"],;
+            limitations["Limited AI features", "Basic reporting", "No API access"];}
     },
     // AI-Powered Social Media Manager
     {
@@ -407,10 +395,8 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [;
         technologyStack["NLP", "Machine Learning", "React", "Node.js", "Social Media APIs"],;
         complianceStandards["GDPR", "Data Privacy", "Platform Policies"],;
         integrationCapabilities["Facebook", "Instagram", "Twitter", "LinkedIn", "TikTok", "YouTube"],;
-        freeTier: {
-            features["2 social media accounts", "Basic AI features", "Standard templates"],;
-            limitations["Limited AI models", "Basic analytics", "No custom branding"];
-        }
+        freeTier: {features["2 social media accounts", "Basic AI features", "Standard templates"],;
+            limitations["Limited AI models", "Basic analytics", "No custom branding"];}
     },
     // Smart Time Tracking Solution
     {
@@ -466,10 +452,8 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [;
         technologyStack["Machine Learning", "Computer Vision", "React", "Node.js", "Mobile Apps"],;
         complianceStandards["GDPR", "Data Privacy"],;
         integrationCapabilities["Project Management Tools", "CRM Systems", "Accounting Software", "Calendar Apps"],;
-        freeTier: {
-            features["Basic time tracking", "1 project", "Email support"],;
-            limitations["No AI features", "Basic reporting", "Limited integrations"];
-        }
+        freeTier: {features["Basic time tracking", "1 project", "Email support"],;
+            limitations["No AI features", "Basic reporting", "Limited integrations"];}
     },
     // AI-Powered Lead Generation Platform
     {
@@ -525,10 +509,8 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [;
         technologyStack["Machine Learning", "NLP", "React", "Node.js", "Data Analytics"],;
         complianceStandards["GDPR", "CAN-SPAM", "Data Privacy"],;
         integrationCapabilities["CRM Systems", "Email Platforms", "Social Media", "Website Forms", "Analytics Tools"],;
-        freeTier: {
-            features["100 leads per month", "Basic AI features", "Email support"],;
-            limitations["Limited AI models", "Basic analytics", "No custom branding"];
-        }
+        freeTier: {features["100 leads per month", "Basic AI features", "Email support"],;
+            limitations["Limited AI models", "Basic analytics", "No custom branding"];}
     },
     // Smart Document Management System
     {
@@ -584,10 +566,8 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [;
         technologyStack["OCR", "Machine Learning", "React", "Node.js", "Cloud Storage"],;
         complianceStandards["GDPR", "SOC2", "Data Security", "Industry Standards"],;
         integrationCapabilities["Microsoft Office", "Google Workspace", "CRM Systems", "ERP Systems", "Cloud Storage"],;
-        freeTier: {
-            features["5GB storage", "Basic AI features", "Email support"],;
-            limitations["Limited AI models", "Basic workflow", "No advanced security"];
-        }
+        freeTier: {features["5GB storage", "Basic AI features", "Email support"],;
+            limitations["Limited AI models", "Basic workflow", "No advanced security"];}
     }
 ];
 }}}}}}}}}}}

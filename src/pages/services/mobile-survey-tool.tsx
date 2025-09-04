@@ -126,8 +126,8 @@ const MobileSurveyTool: Reac t.FC = () => {
     <>
       <Helmet>
         <title>Mobile-First Survey Tool | Zion Tech Group</title>
-        <meta name="description" content="Create engaging, mobile-optimized surveys that adapt based on user responses. Increase completion rates by 65% with our intelligent survey platform."  />
-        <meta name="keywords" content="mobile survey tool, survey software, market research, customer feedback, mobile surveys"  />
+        <meta name="description" content="Create engaging, mobile-optimized surveys that adapt based on user responses. Increase completion rates by 65% with our intelligent survey platform."   />
+        <meta name="keywords" content="mobile survey tool, survey software, market research, customer feedback, mobile surveys"   />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100">
         {/* Hero Section */}

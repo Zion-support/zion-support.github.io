@@ -1,15 +1,13 @@
 import React from 'react';
-import { SEO } from '../components/SEO';
+import {SEO} from '../components/SEO';
 
-const Documentation = () => {
-    return (
+const Documentation = (props: any) => {return (
       <>
-        <SEO 
-          title="Documentation - Zion Tech Group"
+        <SEO title="Documentation - Zion Tech Group"
           description="Access comprehensive documentation for Zion Tech Group services, APIs, and tools."
           canonical="/docs"
           url="https://ziontechgroup.com/docs"
-        />
+         />
         
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,17 +26,18 @@ const Documentation = () => {
           </div>
         </div>
       </>
-    );
-};
+    );};
 
 export default Documentation;
 
-export { Documentation };
+export {Documentation};
 
-export { Documentation };
+export {Documentation};
 
-export { Documentation };
+export {Documentation};
 
-export { Documentation };
+export {Documentation};
 
-export { Documentation };
+export {Documentation};
+
+</SEO>

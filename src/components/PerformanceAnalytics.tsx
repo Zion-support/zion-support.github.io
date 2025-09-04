@@ -1,5 +1,5 @@
 import {  import { motion  } from 'framer-motion';
-export default function Page() {
+export default function Page(props: any) {
 ,
       {
 
@@ -310,3 +310,11 @@ export default function Page() {
 </div>};
 
 export default PerformanceAnalytics}}}}}}}}'"`
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

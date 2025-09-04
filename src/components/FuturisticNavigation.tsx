@@ -1,5 +1,6 @@
+import React from 'react';
 import {  import { MobileSidebarToggle } from './MobileSidebarToggle';
-export default function Page() {
+export default function Page(props: any) {
 , [location.pathname]);
 e.preventDefault();
 e.preventDefault();
@@ -138,11 +139,11 @@ if(searchQuery.trim()) {
 
 }}
               >
-                <Link"
+                <Link "
                   to="/about"
                   className="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group hover: tex t-zion-cyan hover: b g-zion-cyan/5 hover: shado w-lg hover: shado w-zion-cyan/10"
 "
-                  <Users className="w-4 h-4 group-hover: scal e-110 transition-transform duration-300"   />"                  <span className="font-medium">About</span>
+                  <Users className="w-4 h-4 group-hover: scal e-110 transition-transform duration-300"    />"                  <span className="font-medium">About</span>
                 </Link>
               </motion.div>
               <motion.div
@@ -165,11 +166,11 @@ if(searchQuery.trim()) {
 
 }}
               >
-                <Link"
+                <Link "
                   to="/partners"
                   className="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group hover: tex t-zion-cyan hover: b g-zion-cyan/5 hover: shado w-lg hover: shado w-zion-cyan/10"
 "
-                  <Handshake className="w-4 h-4 group-hover: scal e-110 transition-transform duration-300"   />"                  <span className="font-medium">Partners</span>
+                  <Handshake className="w-4 h-4 group-hover: scal e-110 transition-transform duration-300"    />"                  <span className="font-medium">Partners</span>
                 </Link>
               </motion.div>
               {/* Service Categories */}
@@ -320,3 +321,14 @@ if(searchQuery.trim()) {
   )};
 '"`
 ;,"});,})";
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</ChevronDown>
+</motion>
+</motion>
+</motion>
+</motion>

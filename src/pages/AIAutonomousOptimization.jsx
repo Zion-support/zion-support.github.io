@@ -1,11 +1,12 @@
-import { Helmet } from 'react-helmet-async';
-const AIAutonomousOptimization = () => {
+import React from 'react';
+import {Helmet} from 'react-helmet-async';
+const AIAutonomousOptimization = (props: any) => {
     return (<>
       <Helmet>
         <title>AI Autonomous Optimization Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous optimization platform that continuously optimizes systems, processes, and performance with advanced AI capabilities and autonomous operation."/>
-        <meta name="keywords" content="AI optimization, autonomous optimization, system optimization, performance optimization, autonomous operations, AI optimization platform"/>
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-optimization"/>
+        <meta name="description" content="Revolutionary AI autonomous optimization platform that continuously optimizes systems, processes, and performance with advanced AI capabilities and autonomous operation."  />
+        <meta name="keywords" content="AI optimization, autonomous optimization, system optimization, performance optimization, autonomous operations, AI optimization platform"  />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-optimization"  />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">

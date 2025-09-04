@@ -32,13 +32,15 @@ Rocket,
 } from 'lucide-react';
 
 interface MainNavigationProps {
+
   className?: string;
+
 }
 
-export function MainNavigation({ className = '' }: MainNavigationProps) {
-const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
+export function MainNavigation(props: any) {
+const [isServicesOpen, setIsServicesOpen] = useState<any>(false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState<any>(false);
+  const [isCompanyOpen, setIsCompanyOpen] = useState<any>(false);
 
   return (
     <nav className={`flex items-center space-x-8 ${className}`}>
@@ -378,3 +380,9 @@ onMouseLeave={() => setIsCompanyOpen(false)}
 
 
 export default MainNavigation;
+</li>
+</ul>
+</div>
+</any>
+</any>
+</any>

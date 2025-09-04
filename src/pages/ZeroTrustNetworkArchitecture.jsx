@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Star, Clock, TrendingUp, Zap, Globe } from 'lucide-react';
-const ZeroTrustNetworkArchitecture = () => {
+import {Link} from 'react-router-dom';
+import {Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Star, Clock, TrendingUp, Zap, Globe} from 'lucide-react';
+const ZeroTrustNetworkArchitecture = (props: any) => {
     const features = [
         "Identity verification & authentication",
         "Continuous monitoring & validation",
@@ -17,25 +17,18 @@ const ZeroTrustNetworkArchitecture = () => {
             title: "Enhanced Security",
             description: "Eliminate trust assumptions and verify every access request"
         },
-        {
-            icon: Eye,
+        {icon: Eye,
             title: "Continuous Monitoring",
-            description: "Real-time visibility into network activities and potential threats"
-        },
-        {
-            icon: TrendingUp,
+            description: "Real-time visibility into network activities and potential threats"},
+        {icon: TrendingUp,
             title: "Reduced Risk",
-            description: "Minimize attack surface and prevent lateral movement"
-        },
-        {
-            icon: Zap,
+            description: "Minimize attack surface and prevent lateral movement"},
+        {icon: Zap,
             title: "Compliance Ready",
-            description: "Meet regulatory requirements with comprehensive security controls"
-        }
+            description: "Meet regulatory requirements with comprehensive security controls"}
     ];
     const pricingPlans = [
-        {
-            name: "Essential",
+        {name: "Essential",
             price: "$2,199",
             period: "/month",
             description: "Perfect for small to medium businesses",
@@ -46,10 +39,8 @@ const ZeroTrustNetworkArchitecture = () => {
                 "Email support",
                 "Basic threat monitoring",
                 "SSL/TLS encryption"
-            ]
-        },
-        {
-            name: "Professional",
+            ]},
+        {name: "Professional",
             price: "$4,999",
             period: "/month",
             description: "Ideal for growing enterprises",
@@ -63,10 +54,8 @@ const ZeroTrustNetworkArchitecture = () => {
                 "Custom integration support",
                 "Compliance reporting"
             ],
-            popular: true
-        },
-        {
-            name: "Enterprise",
+            popular: true},
+        {name: "Enterprise",
             price: "$9,999",
             period: "/month",
             description: "For large-scale deployments",
@@ -80,30 +69,21 @@ const ZeroTrustNetworkArchitecture = () => {
                 "On-site implementation",
                 "SLA guarantees",
                 "Custom training programs"
-            ]
-        }
+            ]}
     ];
     const useCases = [
-        {
-            title: "Remote Workforce",
+        {title: "Remote Workforce",
             description: "Secure access for distributed teams with zero trust principles",
-            icon: Users
-        },
-        {
-            title: "Cloud Migration",
+            icon: Users},
+        {title: "Cloud Migration",
             description: "Secure cloud adoption with zero trust security framework",
-            icon: Globe
-        },
-        {
-            title: "IoT Security",
+            icon: Globe},
+        {title: "IoT Security",
             description: "Protect connected devices with zero trust network segmentation",
-            icon: Network
-        },
-        {
-            title: "Data Protection",
+            icon: Network},
+        {title: "Data Protection",
             description: "Safeguard sensitive data with granular access controls",
-            icon: Lock
-        }
+            icon: Lock}
     ];
     const industries = [
         "Healthcare",
@@ -116,30 +96,22 @@ const ZeroTrustNetworkArchitecture = () => {
         "Energy & Utilities"
     ];
     const securityLayers = [
-        {
-            title: "Identity Layer",
+        {title: "Identity Layer",
             description: "Multi-factor authentication and identity verification",
             icon: Users,
-            color: "from-blue-500 to-cyan-500"
-        },
-        {
-            title: "Device Layer",
+            color: "from-blue-500 to-cyan-500"},
+        {title: "Device Layer",
             description: "Device health checks and compliance validation",
             icon: Shield,
-            color: "from-green-500 to-emerald-500"
-        },
-        {
-            title: "Network Layer",
+            color: "from-green-500 to-emerald-500"},
+        {title: "Network Layer",
             description: "Micro-segmentation and encrypted communications",
             icon: Network,
-            color: "from-purple-500 to-pink-500"
-        },
-        {
-            title: "Application Layer",
+            color: "from-purple-500 to-pink-500"},
+        {title: "Application Layer",
             description: "Application-level security and access controls",
             icon: Lock,
-            color: "from-orange-500 to-red-500"
-        }
+            color: "from-orange-500 to-red-500"}
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
       {/* Hero Section */}
@@ -149,7 +121,7 @@ const ZeroTrustNetworkArchitecture = () => {
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="flex justify-center mb-6">
             <div className="w-20 h-20 bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl flex items-center justify-center">
-              <Shield className="w-10 h-10 text-white"/>
+              <Shield className="w-10 h-10 text-white" />
             </div>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gradient">
@@ -162,7 +134,7 @@ const ZeroTrustNetworkArchitecture = () => {
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Link to="/contact" className="btn-primary text-lg px-8 py-4 flex items-center space-x-2">
               <span>Get Started</span>
-              <ArrowRight className="w-5 h-5"/>
+              <ArrowRight className="w-5 h-5" />
             </Link>
             <Link to="/contact" className="btn-secondary text-lg px-8 py-4">
               Security Assessment
@@ -170,15 +142,15 @@ const ZeroTrustNetworkArchitecture = () => {
           </div>
           <div className="flex flex-wrap justify-center items-center gap-8 text-sm text-gray-400">
             <div className="flex items-center space-x-2">
-              <Star className="w-4 h-4 text-yellow-400"/>
+              <Star className="w-4 h-4 text-yellow-400" />
               <span>Trusted by 200+ enterprises</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Clock className="w-4 h-4 text-red-400"/>
+              <Clock className="w-4 h-4 text-red-400" />
               <span>99.99% security uptime</span>
             </div>
             <div className="flex items-center space-x-2">
-              <TrendingUp className="w-4 h-4 text-green-400"/>
+              <TrendingUp className="w-4 h-4 text-green-400" />
               <span>95% reduction in security incidents</span>
             </div>
           </div>
@@ -199,7 +171,7 @@ const ZeroTrustNetworkArchitecture = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (<div key={index} className="text-center group">
                 <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Shield className="w-8 h-8 text-white"/>
+                  <Shield className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
               </div>))}
@@ -221,7 +193,7 @@ const ZeroTrustNetworkArchitecture = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {securityLayers.map((layer, index) => (<div key={index} className="flex items-start space-x-4 group">
                 <div className={`w-12 h-12 bg-gradient-to-r ${layer.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                  <layer.icon className="w-6 h-6 text-white"/>
+                  <layer .icon className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-2">{layer.title}</h3>
@@ -246,7 +218,7 @@ const ZeroTrustNetworkArchitecture = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (<div key={index} className="flex items-start space-x-4 group">
                 <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <benefit.icon className="w-6 h-6 text-white"/>
+                  <benefit .icon className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
@@ -271,7 +243,7 @@ const ZeroTrustNetworkArchitecture = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (<div key={index} className="text-center group">
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <useCase.icon className="w-8 h-8 text-white"/>
+                  <useCase .icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
                 <p className="text-gray-300 text-sm">{useCase.description}</p>
@@ -294,7 +266,7 @@ const ZeroTrustNetworkArchitecture = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {industries.map((industry, index) => (<div key={index} className="bg-gray-800/30 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-red-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-6 h-6 text-white"/>
+                  <Shield className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white">{industry}</h3>
               </div>))}
@@ -332,7 +304,7 @@ const ZeroTrustNetworkArchitecture = () => {
                 </div>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-red-400 flex-shrink-0"/>
+                      <CheckCircle className="w-5 h-5 text-red-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
                     </li>))}
                 </ul>

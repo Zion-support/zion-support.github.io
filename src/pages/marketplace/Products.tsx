@@ -52,12 +52,12 @@ import {
   Infinity,
   Zap as ZapIcon,
   MessageCircle} from 'lucide-react';
-export default function MarketplaceProducts() {
+export default function MarketplaceProducts(props: any) {
 
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-  const [sortBy, setSortBy] = useState('featured');
+  const [searchQuery, setSearchQuery] = useState<any>('');
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<any>('all');
+  const [sortBy, setSortBy] = useState<any>('featured');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [showFilters, setShowFilters] = useState<typeof false>(false);
 
@@ -303,7 +303,7 @@ export default function MarketplaceProducts() {
 
                         viewMode === 'list' ? 'h-full' : 'h-48'`
                       }`}
-                     />
+                      />
                     {product.featured && ("
                       <div className="absolute top-4 left-4">"
                         <span className="inline-flex items-center px-3 py-1 bg-yellow-500 text-white text-xs font-medium rounded-full">"
@@ -479,3 +479,14 @@ export default function MarketplaceProducts() {
     </div>
   )}
 '"`
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</SEO>
+</typeof>
+</any>
+</any>
+</any>
+</any>

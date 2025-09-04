@@ -1,7 +1,7 @@
 import React from 'react';
-import { motion  } from 'framer-motion';
+import {motion} from 'framer-motion';
 
-export default function Page() {
+export default function Page(props: any) {
 ,
         visible: {
 
@@ -33,8 +33,10 @@ export default function Page() {
 
       {/* Floating Elements */}"
       <div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full blur-xl animate-pulse"></div>'"
-      <div className="absolute bottom-20 right-10 w-40 h-40 bg-zion-purple/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute bottom-20 right-10 w-40 h-40 bg-zion-purple/20 rounded-full blur-xl animate-pulse" style="{{{ animationDelay: '1s'}}"}></div>
 "
 
   );
 export default Component
+
+</section>

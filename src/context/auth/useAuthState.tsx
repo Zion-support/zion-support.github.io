@@ -79,3 +79,10 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
     tokens,
     setTokens
   }};
+
+</any>
+</typeof>
+</typeof>
+</any>
+</any>
+</React>

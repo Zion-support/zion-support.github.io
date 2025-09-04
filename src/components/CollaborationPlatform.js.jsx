@@ -1,27 +1,21 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Video, VideoOff, Mic, MicOff, Monitor, Users, MessageSquare, X, Maximize2, Minimize2, PhoneOff  } from 'lucide-react';
+import React, {useState, useRef, useEffect} from 'react';
+import {Video, VideoOff, Mic, MicOff, Monitor, Users, MessageSquare, X, Maximize2, Minimize2, PhoneOff} from 'lucide-react';
 ,
-  {
-
-    id: '2',
+  {id: '2',
     name: 'Sarah Johnson',
     isVideoOn: false,
     isAudioOn: true,
     isScreenSharing: true,
     isSpeaking: false,
     avatar: '👩‍💻'},
-  {
-
-    id: '3',
+  {id: '3',
     name: 'Mike Chen',
     isVideoOn: true,
     isAudioOn: false,
     isScreenSharing: false,
     isSpeaking: false,
     avatar: '👨‍🔬'},
-  {
-
-    id: '4',
+  {id: '4',
     name: 'Emily Davis',
     isVideoOn: true,
     isAudioOn: true,
@@ -29,7 +23,7 @@ import { Video, VideoOff, Mic, MicOff, Monitor, Users, MessageSquare, X, Maximiz
     isSpeaking: false,
     avatar: '👩‍🎨'},
 ];
-export function CollaborationPlatform() {
+export function CollaborationPlatform(props: any) {
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -41,15 +35,11 @@ export function CollaborationPlatform() {
     isScreenSharing: false,
     isMuted: false});
   const [activeChat, setActiveChat] = useState(false);
-  const [chatMessages, setChatMessages] = useState([{
-
-      id: '1',
+  const [chatMessages, setChatMessages] = useState([{id: '1',
       user: 'John Smith',
       message: 'Great presentation!',
       timestamp: new Date()},
-    {
-
-      id: '2',
+    {id: '2',
       user: 'Sarah Johnson',
       message: 'I have some questions about the implementation',
       timestamp: new Date()},
@@ -65,18 +55,14 @@ export function CollaborationPlatform() {
     // Cleanup function
   };
 }, []);, []);
-    const interval = setInterval(() => {
-      setMeetingDuration(prev => prev + 1);
-    }, 1000);
+    const interval = setInterval(() => {setMeetingDuration(prev => prev + 1);}, 1000);
     return () => clearInterval(interval);
   }, []);
-  const toggleMute = () => {
+  const toggleMute = (props: any) => {
     setLocalUser(prev => ({ ...prev, isMuted: !prev.isMuted }));
   };
-  const toggleRecording = () => {
-    setIsRecording(!isRecording);
-  };
-  const sendMessage = () => {
+  const toggleRecording = (props: any) => {setIsRecording(!isRecording);};
+  const sendMessage = (props: any) => {
     if(newMessage.trim()) {
 
       const message = {
@@ -96,9 +82,7 @@ export function CollaborationPlatform() {
     const secs = seconds % 60;
     return `${hours.toString().padStart(2,0')}:${minutes.toString().padStart(2,0')}:${secs.toString().padStart(2,0')}`;
   };
-  const toggleChat = () => {
-    setActiveChat(!activeChat);
-  };
+  const toggleChat = (props: any) => {setActiveChat(!activeChat);};
   if(!isOpen) {
 
     return ()
@@ -107,7 +91,7 @@ export function CollaborationPlatform() {
         className="fixed bottom-4 right-20 p-3 bg-zion-purple hover:bg-zion-purple-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50"
         title="Start Collaboration Session"
       >"
-        <Users className="w-5 h-5" />
+        <Users className="w-5 h-5"  />
       </button>
     );
   }
@@ -125,7 +109,7 @@ export function CollaborationPlatform() {
               onClick={() => setIsMinimized(false)}"
               className="text-zion-slate-light hover:text-zion-slate transition-colors"
             >"
-              <Maximize2 className="w-4 h-4" />
+              <Maximize2 className="w-4 h-4"  />
             </button>
           </div>
         </div>
@@ -142,7 +126,7 @@ export function CollaborationPlatform() {
         <div className="flex items-center gap-3">"
           <div className="w-3 h-3 bg-zion-emerald rounded-full animate-pulse"></div>"
           <div className="flex items-center gap-2">"
-            <Users className="w-5 h-5 text-zion-purple" />"
+            <Users className="w-5 h-5 text-zion-purple"  />"
             <span className="font-semibold text-zion-slate">
               Collaboration Session
             </span>
@@ -168,9 +152,9 @@ export function CollaborationPlatform() {
             title={isFullscreen ? 'Exit Fullscreen' : 'Fullscreen'}
           >
             {isFullscreen ? ("
-              <Minimize2 className="w-4 h-4" />
+              <Minimize2 className="w-4 h-4"  />
             ) : ("
-              <Maximize2 className="w-4 h-4" />
+              <Maximize2 className="w-4 h-4"  />
             )}
           </button>
           <button
@@ -178,16 +162,18 @@ export function CollaborationPlatform() {
             className="p-2 text-zion-slate-light hover:text-zion-slate transition-colors"
             title="Minimize"
           >"
-            <Minimize2 className="w-4 h-4" />
+            <Minimize2 className="w-4 h-4"  />
           </button>
           <button
             onClick={() => setIsOpen(false)}"
             className="p-2 text-zion-slate-light hover:text-zion-slate transition-colors"
             title="Close"
           >"
-            <X className="w-4 h-4" />
+            <X className="w-4 h-4"  />
           </button>
         </div>
       </div>"
 
 export default Component
+
+</div>

@@ -1,5 +1,5 @@
 import React from 'react',',';';
-    ''export default function ExpandedServicesPlus() {
+    ''export default function ExpandedServicesPlus(props: any) {
   return (
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">"      <section className="py-12 border-b border-slate-800">"        <div className="container mx-auto px-4 sm: p x-6 lg: p x-8">"          <div className="mb-6 inline-flex items-center rounded-full border border-slate-700 bg-slate-800/60 px-4 py-1 text-sm text-slate-300">"            Zion Tech Group • Expanded Services Catalog"          </div>"
@@ -37,7 +37,7 @@ import React from 'react',',';';
               <p className="mt-3 text-sm text-purple-300">Pricing: $199–$799/month</p>"              <a href="https://ziontechgroup.com/services" target="_blank" rel="noreferrer" className="mt-3 inline-block text-sm text-cyan-300 hover: tex t-cyan-200">Learn more</a>"            </div>"          </div>";
 ,"});,"})
 ;,"});,"})
-export default function ExpandedServicesPlus() {;,"});,"})
+export default function ExpandedServicesPlus(props: any) {;,"});,"})
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">;,"});,"})
       <section className="py-12 border-b border-slate-800">;,"});,"})
@@ -263,7 +263,7 @@ export default function ExpandedServicesPlus() {;,"});,"})
 ,"});,"})',';';
     ';';';
 import {Carbon, Center, Cloud, Fast, High, Instant, User } from 'lucide-react';';';';
-export: default function ExpandedServicesPlus() {;',';';
+export: default function ExpandedServicesPlus(props: any) {;',';';
     ';';';
   return: (<div className="min-h-screen bg-slate-950 text-slate-100">',';';';
     ',';';
@@ -425,7 +425,7 @@ export: default function ExpandedServicesPlus() {;',';';
     ';';';';
               <a: hre f='https: //ziontechgroup.com/services' target='_blank' rel='noreferrer' className="mt-3: inlin e-block text-sm text-cyan-300 hover: tex t-cyan-200">Learn: mor e</a>',',',';';
     ';';';';
-export default function ExpandedServicesPlus() {'
+export default function ExpandedServicesPlus(props: any) {'
   return (
     <div className="min-h-screen bg-white">';
       <section className="py-12 border-b border-slate-800>';';
@@ -457,7 +457,7 @@ export default function ExpandedServicesPlus() {'
               Visit ziontechgroup.com',';';
     ';';';
             </a>'
-export default function ExpandedServicesPlus() {;
+export default function ExpandedServicesPlus(props: any) {;
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">;
       <section className="py-12 border-b border-slate-800">;
@@ -774,9 +774,9 @@ export default function ExpandedServicesPlus() {;
     </div>
   );
 }';
-export default function ExpandedServicesPlus()   {return (';';
+export default function ExpandedServicesPlus(props: any) {return (';';
     <div className="min-h-screen bg-white">';';';
-export default function ExpandedServicesPlus()  {',';';
+export default function ExpandedServicesPlus(props: any) {',';';
     ';';';
   return (}<div className=&apos;min-h-screen bg-slate-950 text-slate-100&apos;>&apos;'';';';';
       <section className=&apos;py-12 border-b border-slate-800&apos;>&apos;'',';';
@@ -857,7 +857,7 @@ export default function ExpandedServicesPlus()  {',';';
               <p className=&apos;mt-2 text-sm text-slate-300&apos;>Self-updating KPIs with predictive insights.&apos;</p>',';';
     ';';';
               <ul className=&apos;mt-3 list-disc pl-5 text-sm text-slate-300 space-y-1&apos;>&apos;'
-export default function ExpandedServicesPlus() {""
+export default function ExpandedServicesPlus(props: any) {""
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">""
       <section className="py-12 border-b border-slate-800">""
@@ -874,13 +874,13 @@ export default function ExpandedServicesPlus() {""
             <a href='tel: +13024640950' className="rounded-lg bg-purple-600 px-4 py-2 font-semibold hover: b g-purple-500">
               Call +1 302 464 0950""
             </a>""
-export default function ExpandedServicesPlus() {
+export default function ExpandedServicesPlus(props: any) {
   return (
   return (
     <div className="min-h-screen bg-white">
       <section className="py-12 border-b border-slate-800">
         <div className="container mx-auto px-4 sm: p x-6 lg: p x-8">
-export default function ExpandedServicesPlus() {"
+export default function ExpandedServicesPlus(props: any) {"
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">"
       <section className="py-12 border-b border-slate-800">"
@@ -2036,3 +2036,52 @@ export default function ExpandedServicesPlus() {"
     </div>"';';
   )}"';';';
 "';';';';
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</section>
+</div>

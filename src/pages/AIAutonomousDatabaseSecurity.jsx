@@ -1,11 +1,12 @@
-import { Helmet } from 'react-helmet-async';
-const AIAutonomousDatabaseSecurity = () => {
+import React from 'react';
+import {Helmet} from 'react-helmet-async';
+const AIAutonomousDatabaseSecurity = (props: any) => {
     return (<>
       <Helmet>
         <title>AI Autonomous Database Security Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous database security platform that continuously secures databases, detects threats, and protects database infrastructure with advanced AI capabilities and autonomous operation."/>
-        <meta name="keywords" content="AI database security, autonomous database security, database protection, threat detection, autonomous operations, AI database security platform"/>
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-database-security"/>
+        <meta name="description" content="Revolutionary AI autonomous database security platform that continuously secures databases, detects threats, and protects database infrastructure with advanced AI capabilities and autonomous operation."  />
+        <meta name="keywords" content="AI database security, autonomous database security, database protection, threat detection, autonomous operations, AI database security platform"  />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-database-security"  />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">

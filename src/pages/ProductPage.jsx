@@ -1,18 +1,18 @@
-import { useParams } from 'react-router-dom';'''
-import { useState } from 'react';'''
-import { Button } from '@/components/ui/button';'''
-import { NEW_PRODUCTS } from '@/data/newProductsData';'''
-import { useCart } from '@/context/CartContext';'''
-import { toast } from '@/hooks/use-toast';
-export default function ProductPage() {}
-  const { id } = useParams();
+import {useParams} from 'react-router-dom';'''
+import {useState} from 'react';'''
+import {Button} from '@/components/ui/button';'''
+import {NEW_PRODUCTS} from '@/data/newProductsData';'''
+import {useCart} from '@/context/CartContext';'''
+import {toast} from '@/hooks/use-toast';
+export default function ProductPage(props: any) {}
+  const {id} = useParams();
   const product = NEW_PRODUCTS.find(p => p.id === id);
-  const { dispatch } = useCart();
+  const {dispatch} = useCart();
   const [adding, setAdding] = useState(false);
   if (!product) {}
     return <div className="p-6 text-white">Product not found</div>;
   }
-  const handleAdd = () => {}
+  const handleAdd = (props: any) => {}
     setAdding(true);
     dispatch({}
 '
@@ -24,7 +24,7 @@ export default function ProductPage() {}
         name: product.title,
         price: product.price ?? 0,
         quantity: 1}});'
-    toast({ title: 'Added to cart', variant: 'success' });
+    toast({title: 'Added to cart', variant: 'success'});
     setTimeout(() => setAdding(false), 500);
   };"""
   return (""""
@@ -36,12 +36,12 @@ export default function ProductPage() {}
       </Button>
     </div>)}
 
-export { ProductPage };
+export {ProductPage};
 
-export { ProductPage };
+export {ProductPage};
 
-export { ProductPage };
+export {ProductPage};
 
-export { ProductPage };
+export {ProductPage};
 
-export { ProductPage };
+export {ProductPage};

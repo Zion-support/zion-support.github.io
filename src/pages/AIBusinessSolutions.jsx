@@ -1,6 +1,6 @@
 import React from 'react';'''
-import { Link } from 'react-router-dom';
-export default function AIBusinessSolutions() {}
+import {Link} from 'react-router-dom';
+export default function AIBusinessSolutions(props: any) {}
     const benefits = []
         {}
 '
@@ -214,12 +214,12 @@ export default function AIBusinessSolutions() {}
       </div>
     </div>)}
 
-export { AIBusinessSolutions };
+export {AIBusinessSolutions};
 
-export { AIBusinessSolutions };
+export {AIBusinessSolutions};
 
-export { AIBusinessSolutions };
+export {AIBusinessSolutions};
 
-export { AIBusinessSolutions };
+export {AIBusinessSolutions};
 
-export { AIBusinessSolutions };
+export {AIBusinessSolutions};

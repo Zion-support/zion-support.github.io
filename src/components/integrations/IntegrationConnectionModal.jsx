@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
-import { toast } from "sonner";
-export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
+import React, {useState} from "react";
+import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle} from "@/components/ui/dialog";
+import {Button} from "@/components/ui/button";
+import {Label} from "@/components/ui/label";
+import {Checkbox} from "@/components/ui/checkbox";
+import {toast} from "sonner";
+export function IntegrationConnectionModal(props: any) {
     const [isConnecting, setIsConnecting] = useState(false);
     const [syncSettings, setSyncSettings] = useState({
         autoCreateContacts: true,
@@ -12,7 +12,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
         syncJobDetails: true,
         syncApplicantData: true
     });
-    const handleConnectOAuth = () => {
+    const handleConnectOAuth = (props: any) => {
         setIsConnecting(true);
         // Simulate OAuth flow
         setTimeout(() => {
@@ -21,12 +21,11 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
             onClose()}, 2000);
         // In a real application, this would open a popup for OAuth authentication
         // window.open(`/api/oauth/${integration.id}`, 'oauth', 'width=600,height=600')};
-    const handleDisconnect = () => {
+    const handleDisconnect = (props: any) => {
         // In a real application, this would revoke the OAuth token
         toast.info(`Disconnected from ${integration.name}`);
         onClose()};
-    const handleSaveSettings = () => {
-        // In a real application, this would save the sync settings
+    const handleSaveSettings = (props: any) => {// In a real application, this would save the sync settings
         toast.success("Integration settings saved");
         onClose()};
     return (<Dialog open={isOpen} onOpenChange={onClose}>
@@ -153,3 +152,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
 
 
 export default IntegrationConnectionModal;
+</Checkbox>
+</Checkbox>
+</Checkbox>
+</Checkbox>

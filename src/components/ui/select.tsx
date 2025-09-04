@@ -5,7 +5,7 @@ interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
   className?: string;
 }
 
-export function Select({ children, className = '', ...props }: SelectProps) {
+export function Select(props: any) {
   const baseClasses = 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus: outlin e-none focus: rin g-2 focus: rin g-ring focus: rin g-offset-2 disabled: curso r-not-allowed disabled: opacit y-50';
   
   return (
@@ -19,11 +19,13 @@ export function Select({ children, className = '', ...props }: SelectProps) {
 }
 
 interface SelectTriggerProps {
+
   children: Reac t.ReactNode;
   className?: string;
+
 }
 
-export function SelectTrigger({ children, className = '' }: SelectTriggerProps) {
+export function SelectTrigger(props: any) {
   return (
     <div className={`flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus: outlin e-none focus: rin g-2 focus: rin g-ring focus: rin g-offset-2 disabled: curso r-not-allowed disabled: opacit y-50 ${className}`}>
       {children}
@@ -32,11 +34,13 @@ export function SelectTrigger({ children, className = '' }: SelectTriggerProps) 
 }
 
 interface SelectContentProps {
+
   children: Reac t.ReactNode;
   className?: string;
+
 }
 
-export function SelectContent({ children, className = '' }: SelectContentProps) {
+export function SelectContent(props: any) {
   return (
     <div className={`relative ${className}`}>
       {children}
@@ -45,11 +49,13 @@ export function SelectContent({ children, className = '' }: SelectContentProps) 
 }
 
 interface SelectValueProps {
+
   children?: React.ReactNode;
   placeholder?: string;
+
 }
 
-export function SelectValue({ children, placeholder }: SelectValueProps) {
+export function SelectValue(props: any) {
   return (
     <span className="block truncate">
       {children || placeholder}
@@ -58,15 +64,18 @@ export function SelectValue({ children, placeholder }: SelectValueProps) {
 }
 
 interface SelectItemProps {
+
   children: Reac t.ReactNode;
   value: string;
   className?: string;
+
 }
 
-export function SelectItem({ children, value, className = '' }: SelectItemProps) {
+export function SelectItem(props: any) {
   return (
     <option value={value} className={className}>
       {children}
     </option>
   );
 }
+</HTMLSelectElement>

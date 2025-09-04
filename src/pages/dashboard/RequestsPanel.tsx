@@ -19,7 +19,7 @@ export { RequestsPanel }(...args[]):  {
   const { user } = useAuth();
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
-  const [showDetails, setShowDetails] = useState(false);
+  const [showDetails, setShowDetails] = useState<any>(false);
 
   const {
     quotes,
@@ -98,3 +98,10 @@ export { RequestsPanel }(...args[]):  {
       </div>
     </ProtectedRoute>
   )}
+
+</QuoteDetails>
+</QuoteRequestsList>
+</QuoteRequestsList>
+</RequestsHeader>
+</any>
+</QuoteRequest>

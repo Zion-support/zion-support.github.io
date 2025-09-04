@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Footer() {
+export default function Footer(props: any) {
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
@@ -186,4 +186,5 @@ export default function Footer() {
       </div>
     </footer>
   );
+
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function ITServicesIndex() {
+export default function ITServicesIndex(props: any) {
   const tiers = [
     { name: 'Managed IT Essentials', price: 'From $1,999/mo', bullets: ['Helpdesk (24/7)', 'Endpoint mgmt', 'Patch & backups'] },
     { name: 'Cybersecurity Suite', price: 'From $2,999/mo', bullets: ['MDR/XDR', 'Vulnerability scans', 'Incident response runbook'] },

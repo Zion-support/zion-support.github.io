@@ -8,10 +8,10 @@ import { Link  } from 'react-router-dom';
 import { Calendar, Clock, Video  } from 'lucide-react';
 import { Avatar } from '@/components/ui/avatar'; // Assuming AvatarImage and AvatarFallback are part of this or separate
 
-export function UpcomingInterviewsCard() {
+export function UpcomingInterviewsCard(props: any) {
   const { fetchInterviews } = useInterviews();
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState<any>(true);
 
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -119,7 +119,7 @@ export function UpcomingInterviewsCard() {
                   {interview.client_avatar || interview.talent_avatar ? (
                     <img src={interview.client_avatar || interview.talent_avatar || undefined} // Ensure src is string | undefined
                       alt={interview.client_name || interview.talent_name || "User"} // Ensure alt is string
-                     />
+                      />
                   ) : (
                     <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">
                       {(interview.client_name || interview.talent_name || "U").charAt(0)}
@@ -158,3 +158,6 @@ export function UpcomingInterviewsCard() {
     </Card>
   );
 }
+
+</any>
+</Interview>

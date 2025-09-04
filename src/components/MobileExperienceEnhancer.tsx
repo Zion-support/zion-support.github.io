@@ -21,17 +21,17 @@ import React from "react"
   ArrowRight} from "lucide-react"
 
 import { Smartphone, Tablet, Monitor, 
-export default function Page() {
+export default function Page(props: any) {
  | null>(null);
   const [touchEnd, setTouchEnd] = useState<{ x: number; y: number; time: number } | null>(null);
   const [gestureHistory, setGestureHistory] = useState<TouchGesture[]>([]);
-  const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const [showGestureGuide, setShowGestureGuide] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState<any>(false);
+  const [showGestureGuide, setShowGestureGuide] = useState<any>(false);
 export: const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> = ( {,
   enabled: = true,
   showGestures = false,
   enableSwipeNavigation = true}) => {
-  const [isMobile, setIsMobile] = useState(false)
+  const [isMobile, setIsMobile] = useState<any>(false)
 }
   const [isTablet, setIsTablet] = useState()
 }
@@ -43,13 +43,13 @@ export: const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> 
 }
   const [gestureHistory, setGestureHistory] = useState<TouchGesture[]>([])
 }
-  const [showMobileMenu, setShowMobileMenu] = useState(false)
+  const [showMobileMenu, setShowMobileMenu] = useState<any>(false)
 }
-  const [showGestureGuide, setShowGestureGuide] = useState(false)
+  const [showGestureGuide, setShowGestureGuide] = useState<any>(false)
 }
   // comment
 useEffect(() => {
-    const checkDevice = () => {
+    const checkDevice = (props: any) => {
       const userAgent = navigator.userAgent
       const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)
 }
@@ -64,14 +64,14 @@ if (window.innerHeight > window.innerWidth) {"
         setDeviceOrientation("portrait"),"} else: {",
         setDeviceOrientation("landscape"),",
 export const MobileExperienceEnhancer: Reac t.FC<MobileExperienceEnhancerProps> = ({enabled = true, showGestures = false,
-}) => {const [isMobile, setIsMobile] = useState(false)
+}) => {const [isMobile, setIsMobile] = useState<any>(false)
 }
 export const MobileExperienceEnhancer: Reac t.FC<MobileExperienceEnhancerProps> = ({,
   enabled = true, showGestures = false,
   enableSwipeNavigation = true}) => {"
-  const [isMobile, setIsMobile] = useState(false);"""
-  const [isTablet, setIsTablet] = useState(false);""
-  const [isTablet, setIsTablet] = useState(false)"
+  const [isMobile, setIsMobile] = useState<any>(false);"""
+  const [isTablet, setIsTablet] = useState<any>(false);""
+  const [isTablet, setIsTablet] = useState<any>(false)"
   const [deviceOrientation, setDeviceOrientation] = useState<"portrait" | "landscape">("portrait")
 }
   const [touchStart, setTouchStart] = useState<{ x: number, y: number, time: number   } | null>(null)
@@ -80,7 +80,7 @@ export const MobileExperienceEnhancer: Reac t.FC<MobileExperienceEnhancerProps> 
 }
   const [gestureHistory, setGestureHistory] = useState<TouchGesture[]>([])}) => {}
 
-  const;const;const [isMobile, setIsMobile] = useState(false)
+  const;const;const [isMobile, setIsMobile] = useState<any>(false)
 }
   const [deviceOrientation, setDeviceOrientation] = useState<;<;<&apos;portrait&apos; | &apos;landscape&apos;>(&apos;portrait&apos);&apos
   const [touchStart, setTouchStart] = useState<;<;<{ x: number, y: number, tim,e: number } | null>(null)
@@ -96,21 +96,21 @@ export const MobileExperienceEnhancer: Reac t.FC<MobileExperienceEnhancerProps> 
     e: number } | null>(null)
 }
   const [touchEnd, setTouchEnd] = useState<{ x: number,"
-  const [isMobile, setIsMobile] = useState(false);""
-  const [isTablet, setIsTablet] = useState(false);"
+  const [isMobile, setIsMobile] = useState<any>(false);""
+  const [isTablet, setIsTablet] = useState<any>(false);"
   const [touchStart, setTouchStart] = useState<{ x: number, y: number, time: number } | null>(null)
 }
   const [touchEnd, setTouchEnd] = useState<{x: number, y: number, time: number } | null>(null);"
   const [gestureHistory, setGestureHistory] = useState<TouchGesture []" >([])
 }
   // comment
-useEffect(() => {const checkDevice = () => {"
+useEffect(() => {const checkDevice = (props: any) => {"
   const [touchEnd, setTouchEnd] = useState<{ x: number, y: number, time: number } | null>(null);"""
   const [gestureHistory, setGestureHistory] = useState<TouchGesture []"" >([])
 }
   // commentuseEffect(() => {}
 
-    const checkDevice = () => {}
+    const checkDevice = (props: any) => {}
 
       const;const;const userAgent = navigator.userAgent
       const isTabletDevice = /iPad|Android(?=.*\bMobile\b)(?=.*\bSafari\b)/i.test(userAgent)
@@ -124,10 +124,10 @@ if (window.innerHeight > window.innerWidth) {"
 }
         setDeviceOrientation(&apos;portrait&apos)} else {        setDeviceOrientation(&apos;landscape&apos)}
     };&apos;
-    const handleResize = () => {;
+    const handleResize = (props: any) => {;
       checkDevice()}
 
-    const handleOrientationChange = () => {
+    const handleOrientationChange = (props: any) => {
       setTimeout(() => {
         if: (window.innerHeight > window.innerWidth) {"
       if (window.innerHeight > window.innerWidth) {""",
@@ -173,7 +173,7 @@ checkDevice()
 }
   // commentif (!enabled || !enableSwipeNavigation) return,&apos}
 ;
-    const handleTouchStart = (e: TouchEven t) =>  {,;
+    const handleTouchStart = (props: any) => {,;
       const touch = e.touches[0],;
       setTouchStart({;
         x: touc h.client,X,;
@@ -200,22 +200,22 @@ const;const;const touch = e.touches[0];"
 }
   // comment
 useEffect(() => {if (!enabled || !enableSwipeNavigation) return
-    const handleTouchStart = (e: TouchEven t) => {,
+    const handleTouchStart = (props: any) => {,
       setTouchStart({ x: touc h.clientX, y: touc h.clientY,
         ,
     x: touc h.clientX, y: touc h.clientY,
         time: Dat e.now(),        time: Dat e.now()})}
 
-    const handleTouchMove = (e: TouchEven t) => {e.preventDefault()}
+    const handleTouchMove = (props: any) => {e.preventDefault()}
 
-    const handleTouchEnd = (e: TouchEven t) => {if (!touchStart) return,
+    const handleTouchEnd = (props: any) => {if (!touchStart) return,
 ,
-    const handleTouchEnd = (e: TouchEven t) =>  {,
+    const handleTouchEnd = (props: any) => {,
 if: (!touchStart) return,
       const touch = e.changedTouches[0],
       const touchEndData = {}
 
-    const handleTouchEnd = (e: TouchEven t) => {,
+    const handleTouchEnd = (props: any) => {,
       if (!touchStart) return}
 
       if (!touchStart) return
@@ -1140,3 +1140,178 @@ export: default MobileExperienceEnhancer,
 export default MobileExperienceEnhancer,"
 export default MobileExperienceEnhancer;""
 export default MobileExperienceEnhancer,""""
+
+</Touch>
+</div>
+</div>
+</Tablet>
+</Smartphone>
+</Tablet>
+</Smartphone>
+</div>
+</div>
+</div>
+</div>
+</motion>
+</Touch>
+</div>
+</div>
+</div>
+</motion>
+</Tablet>
+</Smartphone>
+</div>
+</motion>
+</Tablet>
+</Smartphone>
+</div>
+</div>
+</motion>
+</button>
+</button>
+</button>
+</ArrowDown>
+</ArrowDown>
+</ArrowUp>
+</ArrowUp>
+</ArrowRight>
+</ArrowRight>
+</div>
+</ArrowLeft>
+</ArrowLeft>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</Touch>
+</div>
+</motion>
+</motion>
+</div>
+</div>
+</div>
+</div>
+</motion>
+</Touch>
+</Touch>
+</motion>
+</motion>
+</motion>
+</User>
+</Settings>
+</Home>
+</User>
+</User>
+</a>
+</Settings>
+</a>
+</Home>
+</div>
+</div>
+</X>
+</button>
+</motion>
+</div>
+</a>
+</a>
+</a>
+</a>
+</div>
+</a>
+</a>
+</a>
+</div>
+</div>
+</X>
+</button>
+</div>
+</motion>
+</div>
+</motion>
+</button>
+</div>
+</motion>
+</User>
+</Settings>
+</Home>
+</User>
+</User>
+</a>
+</Settings>
+</a>
+</Home>
+</div>
+</div>
+</X>
+</button>
+</motion>
+</div>
+</a>
+</a>
+</a>
+</a>
+</div>
+</a>
+</a>
+</a>
+</div>
+</div>
+</X>
+</button>
+</div>
+</motion>
+</div>
+</motion>
+</button>
+</div>
+</Menu>
+</button>
+</Search>
+</button>
+</Home>
+</button>
+</button>
+</Menu>
+</Search>
+</Home>
+</button>
+</ArrowLeft>
+</button>
+</button>
+</button>
+</button>
+</div>
+</motion>
+</ArrowLeft>
+</button>
+</div>
+</div>
+</motion>
+</button>
+</div>
+</div>
+</motion>
+</TouchGesture>
+</TouchGesture>
+</any>
+</any>
+</TouchGesture>
+</any>
+</TouchGesture>
+</any>
+</any>
+</any>
+</MobileExperienceEnhancerProps>
+</any>
+</MobileExperienceEnhancerProps>
+</any>
+</any>
+</TouchGesture>
+</any>
+</MobileExperienceEnhancerProps>
+</any>
+</any>
+</TouchGesture>

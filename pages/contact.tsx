@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
@@ -14,47 +15,16 @@ import {
   MessageCircle,
   Globe
 } from 'lucide-react'
-
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: fals e })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: fals e })
 =======
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+>>>>>>> origin/merge-pr-11195
 
-export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-    }, 2000);
-  };
->>>>>>> merge-all-prs-20250904-105408
-
-const ContactPage: Reac t.FC = () => {
+const ContactPage: React.FC = () => {
   const contactInfo = [
     {
       icon: <Phone className="w-6 h-6"  />,
@@ -77,8 +47,8 @@ const ContactPage: Reac t.FC = () => {
     {
       icon: <Clock className="w-6 h-6"  />,
       title: "Business Hours",
-      details: "Monday - Friday: 9: 00 AM - 6: 00 PM\nSaturday: 1 0:00 AM - 4: 00 PM",
-      link: nul l
+      details: "Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM",
+      link: null
     }
   ]
 
@@ -95,7 +65,6 @@ const ContactPage: Reac t.FC = () => {
 
   return (
     <>
-<<<<<<< HEAD
       <SEO title="Contact Us - Zion Tech Group"
         description="Get in touch with Zion Tech Group for AI services, IT solutions, and micro SaaS development. Call +1 302 464 0950 or email kleber@ziontechgroup.com"
         keywords="contact, Zion Tech Group, AI services, IT solutions, micro SaaS, phone, email, address"
@@ -106,14 +75,14 @@ const ContactPage: Reac t.FC = () => {
         <main className="min-h-screen bg-white">
           {/* Hero Section */}
           <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <motion.div
-                initial={{ opacity: 0, y: 2 0 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center"
               >
-                <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6">
+                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
                   Get In <span className="text-blue-600">Touch</span>
                 </h1>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
@@ -142,12 +111,326 @@ const ContactPage: Reac t.FC = () => {
               </motion.div>
             </div>
           </section>
+=======
+import type { NextPage } from 'next';
+import MainLayout from '../components/layout/MainLayout';
+import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+
+const Contact: NextPage = () => {
+  const contactInfo = [
+    {
+      icon: Mail,
+      title: 'Email Us',
+      details: 'info@ziontechgroup.com',
+      link: 'mailto:info@ziontechgroup.com'
+    },
+    {
+      icon: Phone,
+      title: 'Call Us',
+      details: '+1 (555) 123-4567',
+      link: 'tel:+1-555-123-4567'
+    },
+    {
+      icon: MapPin,
+      title: 'Visit Us',
+      details: '123 Tech Street, San Francisco, CA 94105',
+      link: 'https://maps.google.com'
+    },
+    {
+      icon: Clock,
+      title: 'Business Hours',
+      details: 'Mon-Fri: 9AM-6PM PST',
+      link: null
+    }
+  ];
+
+  const offices = [
+    {
+      city: 'San Francisco',
+      address: '123 Tech Street, San Francisco, CA 94105',
+      phone: '+1 (555) 123-4567',
+      email: 'sf@ziontechgroup.com'
+    },
+    {
+      city: 'New York',
+      address: '456 Innovation Ave, New York, NY 10001',
+      phone: '+1 (555) 987-6543',
+      email: 'ny@ziontechgroup.com'
+    },
+    {
+      city: 'London',
+      address: '789 Digital Lane, London, UK EC1A 1BB',
+      phone: '+44 20 7123 4567',
+      email: 'london@ziontechgroup.com'
+    }
+  ];
+
+  return (
+    <MainLayout
+      title="Contact Us - Zion Tech Group"
+      description="Get in touch with Zion Tech Group. We're here to help you transform your business with innovative technology solutions."
+    >
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold mb-6">Get In Touch</h1>
+            <p className="text-xl max-w-3xl mx-auto">
+              Ready to transform your business? Let's discuss how our technology solutions 
+              can help you achieve your goals.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Information */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {contactInfo.map((info) => (
+              <div key={info.title} className="text-center">
+                <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <info.icon className="h-8 w-8" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  {info.title}
+                </h3>
+                {info.link ? (
+                  <a
+                    href={info.link}
+                    className="text-blue-600 hover:text-blue-700 transition-colors"
+                  >
+                    {info.details}
+                  </a>
+                ) : (
+                  <p className="text-gray-600">{info.details}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form & Office Locations */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
+              <form className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
+                      First Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
+                      Last Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                    Company
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+                    Service of Interest
+                  </label>
+                  <select
+                    id="service"
+                    name="service"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  >
+                    <option value="">Select a service</option>
+                    <option value="ai-development">AI Development</option>
+                    <option value="cloud-solutions">Cloud Solutions</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="mobile-development">Mobile Development</option>
+                    <option value="blockchain">Blockchain Solutions</option>
+                    <option value="iot-platforms">IoT Platforms</option>
+                    <option value="data-analytics">Data Analytics</option>
+                    <option value="cybersecurity">Cybersecurity</option>
+                    <option value="consulting">Technology Consulting</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    Message *
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={6}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Tell us about your project or how we can help you..."
+                  ></textarea>
+                </div>
+                
+                <button
+                  type="submit"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center"
+                >
+                  <Send className="mr-2 h-5 w-5" />
+                  Send Message
+                </button>
+              </form>
+            </div>
+
+            {/* Office Locations */}
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Offices</h2>
+              <div className="space-y-6">
+                {offices.map((office) => (
+                  <div key={office.city} className="bg-white rounded-lg shadow-lg p-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                      {office.city}
+                    </h3>
+                    <div className="space-y-2 text-gray-600">
+                      <div className="flex items-start">
+                        <MapPin className="h-5 w-5 mr-2 mt-0.5 text-blue-600" />
+                        <span>{office.address}</span>
+                      </div>
+                      <div className="flex items-center">
+                        <Phone className="h-5 w-5 mr-2 text-blue-600" />
+                        <a href={`tel:${office.phone}`} className="hover:text-blue-600">
+                          {office.phone}
+                        </a>
+                      </div>
+                      <div className="flex items-center">
+                        <Mail className="h-5 w-5 mr-2 text-blue-600" />
+                        <a href={`mailto:${office.email}`} className="hover:text-blue-600">
+                          {office.email}
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Get answers to common questions about our services and process
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                What is your typical project timeline?
+              </h3>
+              <p className="text-gray-600">
+                Project timelines vary depending on complexity and scope. Simple websites 
+                can take 2-4 weeks, while complex applications may take 3-6 months. 
+                We'll provide a detailed timeline during our initial consultation.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                Do you provide ongoing support?
+              </h3>
+              <p className="text-gray-600">
+                Yes, we offer comprehensive support and maintenance packages to ensure 
+                your solutions continue to perform optimally. This includes updates, 
+                security patches, and technical support.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                What technologies do you specialize in?
+              </h3>
+              <p className="text-gray-600">
+                We work with modern technologies including React, Node.js, Python, 
+                AWS, Azure, AI/ML frameworks, and blockchain platforms. We choose 
+                the best technology stack for each project's specific needs.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                How do you ensure project quality?
+              </h3>
+              <p className="text-gray-600">
+                We follow industry best practices including code reviews, automated 
+                testing, continuous integration, and regular client feedback sessions 
+                to ensure high-quality deliverables.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </MainLayout>
+  );
+};
+>>>>>>> origin/merge-pr-10614
 
           {/* Contact Information */}
           <section className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <motion.div
-                initial={{ opacity: 0, y: 2 0 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-center mb-16"
@@ -164,9 +447,9 @@ const ContactPage: Reac t.FC = () => {
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 2 0 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="bg-white rounded-xl p-8 shadow-lg hover: shado w-xl transition-shadow duration-300 text-center"
                   >
                     <div className="text-blue-600 mb-4 flex justify-center">
@@ -195,9 +478,9 @@ const ContactPage: Reac t.FC = () => {
 
           {/* Contact Form */}
           <section className="bg-gray-50 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <motion.div
-                initial={{ opacity: 0, y: 2 0 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center mb-16"
@@ -212,7 +495,7 @@ const ContactPage: Reac t.FC = () => {
 
               <div className="max-w-4xl mx-auto">
                 <motion.form
-                  initial={{ opacity: 0, y: 2 0 }}
+                  initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="bg-white rounded-xl shadow-lg p-8"
@@ -311,13 +594,6 @@ const ContactPage: Reac t.FC = () => {
                     Send Message
                   </motion.button>
                 </motion.form>
-=======
-      <Helmet>
-        <title>Contact Us - Zion Tech Group | Get in Touch</title>
-        <meta name="description" content="Contact Zion Tech Group for AI, cybersecurity, cloud, and technology solutions. Get expert consultation and support for your business needs." />
-        <meta name="keywords" content="contact zion tech group, technology consultation, AI services, cybersecurity support" />
-        <link rel="canonical" href="https://ziontechgroup.com/contact" />
-      </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -498,16 +774,16 @@ const ContactPage: Reac t.FC = () => {
                     </div>
                   ))}
                 </div>
->>>>>>> merge-all-prs-20250904-105408
               </div>
             </div>
+<<<<<<< HEAD
           </section>
 
           {/* Services Overview */}
           <section className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <motion.div
-                initial={{ opacity: 0, y: 2 0 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center mb-16"
@@ -524,7 +800,7 @@ const ContactPage: Reac t.FC = () => {
                 {services.map((service, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 2 0 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: inde x * 0.1 }}
                     className="bg-white rounded-xl p-6 shadow-lg hover: shado w-xl transition-shadow duration-300 text-center"
@@ -542,8 +818,13 @@ const ContactPage: Reac t.FC = () => {
     </>
   )
 }
-<<<<<<< HEAD
 
 export default ContactPage
 =======
->>>>>>> merge-all-prs-20250904-105408
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}
+>>>>>>> origin/merge-pr-11195

@@ -321,7 +321,7 @@ import { Shield,
   CloudSleet10
  } from 'lucide-react';
 
-const AIFinancialCompliancePlatform = () => {
+const AIFinancialCompliancePlatform = (props: any) => {
   const features = [
     {
       icon: Brai n,
@@ -855,3 +855,23 @@ const AIFinancialCompliancePlatform = () => {
 };
 
 export default AIFinancialCompliancePlatform;
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

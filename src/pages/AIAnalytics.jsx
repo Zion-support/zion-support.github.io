@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  Brain,
+import React, {useState} from 'react';
+import {motion} from 'framer-motion';
+import {Brain,
   BarChart3,
   TrendingUp,
   Target,
@@ -22,32 +21,25 @@ import {
   Code,
   FileText,
   PieChart,
-  LineChart
-} from 'lucide-react';
+  LineChart} from 'lucide-react';
 
     integrations["Python", "Scikit-learn", "TensorFlow", "Custom APIs"]
   }
 ];
 
 const aiCapabilities = [
-  {
-    title: "Machine Learning",
+  {title: "Machine Learning",
     description: "Advanced algorithms that learn from data and improve over time",
     icon: Brain,
-    impact: "High"
-  },
-  {
-    title: "Deep Learning",
+    impact: "High"},
+  {title: "Deep Learning",
     description: "Neural networks for complex pattern recognition and analysis",
     icon: Code,
-    impact: "High"
-  },
-  {
-    title: "Natural Language Processing",
+    impact: "High"},
+  {title: "Natural Language Processing",
     description: "Understanding and processing human language for insights",
     icon: FileText,
-    impact: "Critical"
-  },
+    impact: "Critical"},
   {
     title: "Computer Vision",
     description: "Image and video analysis for visual data insights",
@@ -66,15 +58,13 @@ const successStories = [
     results: "30% reduction in stockouts, 25% cost savings, improved customer satisfaction",
     logo: "EG"
   },
-  {
-    id: 2,
+  {id: 2,
     comp: "Financial Services Corp",
     industry: "Finance",
     challenge: "Required real-time fraud detection system",
     solution: "Implemented AI-powered anomaly detection with machine learning",
     results: "90% fraud detection rate, 60% reduction in false positives, $2M saved",
-    logo: "FS"
-  },
+    logo: "FS"},
   {
     id: 3,
     comp: "Healthcare Network",
@@ -94,20 +84,16 @@ const processSteps = [
     icon: Database,
     duration: "1-2 weeks"
   },
-  {
-    step: 2,
+  {step: 2,
     title: "AI Model Design",
     description: "Design and select appropriate AI/ML models for the use case",
     icon: Brain,
-    duration: "2-3 weeks"
-  },
-  {
-    step: 3,
+    duration: "2-3 weeks"},
+  {step: 3,
     title: "Development & Training",
     description: "Build AI models and train them with relevant data",
     icon: Code,
-    duration: "8-20 weeks"
-  },
+    duration: "8-20 weeks"},
   {
     step: 4,
     title: "Deployment & Optimization",
@@ -139,7 +125,7 @@ export { AIAnalytics }() {
         </div>
 
         <div className="container-responsive relative z-10">
-          <motion.div
+          <motion .div
             initial = {
   { opacity: 0,
   y: 30 
@@ -196,7 +182,7 @@ export { AIAnalytics }() {
 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
 
-              <Brain className="w-10 h-10 text-white" />
+              <Brain className="w-10 h-10 text-white"  />
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -211,15 +197,15 @@ export { AIAnalytics }() {
 
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-zion-cyan">
-                <Brain className="w-4 h-4" />
+                <Brain className="w-4 h-4"  />
                 <span>Machine Learning</span>
               </div>
               <div className="flex items-center gap-2 text-zion-purple">
-                <BarChart3 className="w-4 h-4" />
+                <BarChart3 className="w-4 h-4"  />
                 <span>Data Insights</span>
               </div>
               <div className="flex items-center gap-2 text-zion-blue">
-                <TrendingUp className="w-4 h-4" />
+                <TrendingUp className="w-4 h-4"  />
                 <span>Predictive Power</span>
               </div>
             </div>
@@ -297,7 +283,7 @@ export { AIAnalytics }() {
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <capability.icon className="w-8 h-8 text-white" />
+                  <capability .icon className="w-8 h-8 text-white"  />
                 </div>
 
                 <h3 className="text-xl font-bold text-white mb-3">{capability.title}</h3>
@@ -389,7 +375,7 @@ export { AIAnalytics }() {
 
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
-                    <step.icon className="w-8 h-8 text-white" />
+                    <step .icon className="w-8 h-8 text-white"  />
                   </div>
                   <div className="absolute -top-2 -right-2 w-8 h-8 bg-zion-blue rounded-full flex items-center justify-center text-white text-sm font-bold">
                     {step.step}
@@ -495,7 +481,7 @@ export { AIAnalytics }() {
                 onClick={() => setSelectedSolution(solution)}
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
-                  <solution.icon className="w-8 h-8 text-white" />
+                  <solution .icon className="w-8 h-8 text-white"  />
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
@@ -504,7 +490,7 @@ export { AIAnalytics }() {
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0"  />
                       <span className="text-zion-slate-light text-sm">{feature}</span>
                     </div>
                   ))}
@@ -532,7 +518,7 @@ export { AIAnalytics }() {
                   </span>
                   <button className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors duration-300">
                     <span className="text-sm font-medium">Learn More</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4"  />
                   </button>
                 </div>
               </motion.div>
@@ -637,7 +623,7 @@ export { AIAnalytics }() {
 
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current"  />
                   ))}
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
@@ -699,3 +685,15 @@ export { AIAnalytics }() {
       </section>
     </div>
   )}
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

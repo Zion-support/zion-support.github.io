@@ -1,11 +1,10 @@
-import { useState, useEffect, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
-import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from 'lucide-react';
+import {useState, useEffect, useCallback} from 'react';'
+import {motion, AnimatePresence} from 'framer-motion';'
+import {Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building} from 'lucide-react';
 ;
-export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className = '', enableAnalytics = true, showProgressBar = true }) => {
-    const { trackEvent, trackConversion } = useAnalytics({        enableTracking: enableAnalytics,
-        enableUserBehaviorTracking: true;
-    });
+export const AdvancedForm = (props: any) => {
+    const { trackEvent, trackConversion } = useAnalytics({enableTracking: enableAnalytics,
+        enableUserBehaviorTracking: true;});
     const [formData, setFormData] = useState({});
 const [validation, setValidation] = useState({});
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -25,8 +24,8 @@ const [validation, setValidation] = useState({});
 import React from "react"
 import { useState, useEffect, useCallback } from "react";,"});,"})","});,"})","});,"})"
 ;,"});,"})"
-export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle = "Get in touch with our team", submitText = "Send Message", className = "", enableAnalytics = true, showProgressBar = true }) => {;,"});,"})"
-    const { trackEvent, trackConversion } = useAnalytics({        enableTracking: enableAnalytics,"});,"})"
+export const AdvancedForm = (props: any) => {;,"});,"})"
+    const {trackEvent, trackConversion} = useAnalytics({enableTracking: enableAnalytics,"});,"})"
         enableUserBehaviorTracking: true,"});,"});"
 });,"});,"})"
     const [formData, setFormData] = useState({});,"});,"})"
@@ -119,7 +118,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
         return null}, [fields]);,"});,"})"
     // comment
     const handleFieldChange = useCallback((name, value) => {}"});,"})"
-        setFormData(prev => ({ ...prev, [name]: value }));,"});,"})"
+        setFormData(prev => ({...prev, [name]: value}));,"});,"})"
         // comment
         const error = validateField(name, value);,"});,"})"
         setValidation(prev => ({}"});,"})"
@@ -135,7 +134,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
 ";,"});,"})"
 "";,"});,"})"
 """;,"});,"})"
-            trackEvent("form",field_changed", name, null, { fieldName: name, value: String(value) })}"});,"});"
+            trackEvent("form",field_changed", name, null, {fieldName: name, value: String(value)})}"});,"});"
 }, [validateField, enableAnalytics, trackEvent]);,"});,"})"
     // comment
     const handleFieldBlur = useCallback((name) => {}"});,"})"
@@ -179,7 +178,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
 "";,"});,"})"
 """;,"});,"})"
                 trackEvent();"";,"});,"})"
-                trackConversion("form_submission", 1, { formType: title })}"});,"})"
+                trackConversion("form_submission", 1, {formType: title})}"});,"})"
             setIsSubmitted(true);,"});,"})"
             // comment
             setTimeout(() => {}"});,"})"
@@ -203,27 +202,27 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
 }, [formData, validation, isFormValid, onSubmit, enableAnalytics, trackEvent, trackConversion, title]);,"});,"})"
     // comment
     const togglePasswordVisibility = useCallback((fieldName) => {}"});,"})"
-        setShowPassword(prev => ({ ...prev, [fieldName]: !prev[fieldName] }))}, []);,"});,"})"
+        setShowPassword(prev => ({...prev, [fieldName]: !prev[fieldName]}))}, []);,"});,"})"
     // comment
     const getFieldIcon = useCallback((field) => {}"});,"})"
         switch(field.type) {}"});,"})"
 """;,"});,"})"
 """"";,"});,"})"
-            case "email": return <Mail className="w-4 h-4"  />;"""";,"});,"})"
-            case "tel": return <Phone className="w-4 h-4"  />;"""";,"});,"})"
-            case "textarea": return <MessageSquare className="w-4 h-4"  />;"""";,"});,"})"
-            case "select": return <Building className="w-4 h-4"  />;"""";,"});,"})"
-            default: return <User className="w-4 h-4"  />}"});,"});"
+            case "email": return <Mail className="w-4 h-4"   />;"""";,"});,"})"
+            case "tel": return <Phone className="w-4 h-4"   />;"""";,"});,"})"
+            case "textarea": return <MessageSquare className="w-4 h-4"   />;"""";,"});,"})"
+            case "select": return <Building className="w-4 h-4"   />;"""";,"});,"})"
+            default: return <User className="w-4 h-4"   />}"});,"});"
 }, []);,"});,"})"
     // comment
     const renderField = useCallback((field) => {}"});,"})"
         const fieldValidation = validation[field.name];,"});,"})"
         const isPasswordField = field.name.toLowerCase().includes("password");,"});,"})"
         return (<motion.div key="{field.name}" initial = {}"});,"})"
-  { opacity: 0,"});,"})"
+  {opacity: 0,"});,"})"
   y: 20,"});,"});"
 }} animate = {}"});,"})"
-  { opacity: 1,"});,"})"
+  {opacity: 1,"});,"})"
   y: 0 ""","});,"})"
 """";,"});,"});"
 }} className="space-y-2">"""";,"});,"})"
@@ -280,20 +279,20 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
 """;,"});,"})"
           {/* comment */}"""";,"});,"})"
           {isPasswordField && (<button type="button" onClick="{()" => togglePasswordVisibility(field.name)} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: text-gray-600 transition-colors">"""","});,"})"
-              {showPassword[field.name] ? <EyeOff className="w-4 h-4"  /> : <Eye className="w-4 h-4"  />}"});,"})"
+              {showPassword[field.name] ? <EyeOff className="w-4 h-4"   /> : <Eye className="w-4 h-4"   />}"});,"})"
             </button>)}"});,"})"
 """;,"});,"})"
           {/* comment */}"""";,"});,"})"
           {fieldValidation?.isTouched && (<div className="absolute right-3 top-1/2 transform -translate-y-1/2">"""";,"});,"})"
-              {fieldValidation.isValid ? (<CheckCircle className="w-5 h-5 text-green-500"  />) : (<AlertCircle className="w-5 h-5 text-red-500"  />)}"});,"})"
+              {fieldValidation.isValid ? (<CheckCircle className="w-5 h-5 text-green-500"   />) : (<AlertCircle className="w-5 h-5 text-red-500"   />)}"});,"})"
             </div>)}"});,"})"
         </div>;,"});,"})"
         {/* comment */}"});,"})"
         {fieldValidation?.isTouched && fieldValidation.message && (<motion.p initial = {}"});,"})"
-  { opacity: 0,"});,"})"
+  {opacity: 0,"});,"})"
   height: 0,"});,"});"
 }} animate = {}"});,"})"
-  { opacity: 1,";,"});,"})"
+  {opacity: 1,";,"});,"})"
   height: "auto" ""","});,"})"
 """";,"});,"});"
 }} className="text-sm text-red-600 dark: text-red-400">,"});,"})"
@@ -302,14 +301,14 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
       </motion.div>)}, [formData, validation, showPassword, getFieldIcon, handleFieldChange, handleFieldBlur, togglePasswordVisibility]);,"});,"})"
     if(isSubmitted) {}"});,"})"
         return (<motion.div initial = {}"});,"})"
-  { opacity: 0,"});,"})"
+  {opacity: 0,"});,"})"
   scale: 0.9,"});,"});"
 }} animate = {}"});,"})"
-  { opacity: 1,"});,"})"
+  {opacity: 1,"});,"})"
   scale: 1 ""","});,"})"
 """";,"});,"});"
 }} className="text-center p-8 bg-green-50 dark: bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700">"""","});,"})"
-        <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"  />"""";,"});,"})"
+        <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"   />"""";,"});,"})"
         <h3 className="text-2xl font-bold text-green-800 dark: text-green-200 mb-2">,"});,"})"
           Thank You!""";,"});,"})"
         </h3>"""";,"});,"})"
@@ -318,10 +317,10 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
         </p>;,"});,"})"
       </motion.div>)}"});,"})"
     return (<motion.div initial = {}"});,"})"
-  { opacity: 0,"});,"})"
+  {opacity: 0,"});,"})"
   y: 20,"});,"});"
 }} animate = {}"});,"})"
-  { opacity: 1,"});,"})"
+  {opacity: 1,"});,"})"
   y: 0 ","});,"})"
 "";,"});,"});"
 }} className="{"bg-white" dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}"}>""";,"});,"})"
@@ -338,7 +337,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
             <span>{Math.round(progress)}%</span>""";,"});,"})"
           </div>""";,"});,"})"
           <div className="w-full bg-gray-200 dark: bg-gray-700 rounded-full h-2">"""","});,"})"
-            <motion.div className="{"bg-gradient-to-r" from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300" initial="{{" width: 0 }} animate="{{" width: "${progress}%" }}/>;,"});,"}})"
+            <motion .div className="{"bg-gradient-to-r" from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300" initial="{{" width: 0 }} animate="{{" width: "${progress}%" }} />;,"});,"}})"
           </div>;,"});,"})"
         </div>) }"});,"})"
 """;,"});,"})"
@@ -353,23 +352,23 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
             ? "bg-gray-400 cursor-not-allowed""""";,"}});,"})"
             : "bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105"}"} whileHover="{isFormValid()" && !isSubmitting ? { scale: 1.02 } : {}} whileTap="{isFormValid()" && !isSubmitting ? { scale: 0.98 } : {}}>""";,"});,"})"
           {isSubmitting ? (<>"""";,"});,"})"
-              <Loader2 className="w-5 h-5 animate-spin"  />;,"});,"})"
+              <Loader2 className="w-5 h-5 animate-spin"   />;,"});,"})"
               Sending...""";,"});,"})"
             </>) : (<>"""";,"});,"})"
-              <Send className="w-5 h-5"  />;,"});,"})"
+              <Send className="w-5 h-5"   />;,"});,"})"
               {submitText}"});,"})"
             </>) }"});,"})"
         </motion.button>;,"});,"})"
         {/* comment */}"});,"})"
         <AnimatePresence>;,"});,"})"
           {Object.values(validation).some(v => !v.isValid && v.isTouched) && (<motion.div initial = {}"});,"})"
-  { opacity: 0,"});,"})"
+  {opacity: 0,"});,"})"
   height: 0,"});,"});"
 }} animate = {}"});,"})"
-  { opacity: 1,";,"});,"})"
+  {opacity: 1,";,"});,"})"
   height: "auto","});,"});"
 }} exit = {}"});,"})"
-  { opacity: 0,"});,"})"
+  {opacity: 0,"});,"})"
   height: 0 ""","});,"})"
 """";,"});,"});"
 }} className="p-3 bg-red-50 dark: bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg">"""","});,"})"
@@ -380,7 +379,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
       </form>;,"});,"})"
     </motion.div>)};"";,"});,"})"
 """"";,"});,"})"""""""""
-    const { trackEvent, trackConversion } = useAnalytics()
+    const {trackEvent, trackConversion} = useAnalytics()
 }
     const [formData, setFormData] = useState()
 }
@@ -477,7 +476,7 @@ if(field.validation?.custom) {}
     // comment
 const handleFieldChange = useCallback((name, value) => {}
 
-        setFormData(prev => ({ ...prev, [name]: value }))
+        setFormData(prev => ({...prev, [name]: value}))
 }
         // comment
 const error = validateField()
@@ -493,7 +492,7 @@ const error = validateField()
 if (enableAnalytics) {}""
 """
 """"
-            trackEvent("form", field_changed", name, null, { fieldName: name, value: String(value) })}
+            trackEvent("form", field_changed", name, null, {fieldName: name, value: String(value)})}
 
 }, [validateField, enableAnalytics, trackEvent])
 }
@@ -549,7 +548,7 @@ if (enableAnalytics) {}""
 """;"""
                 trackEvent("form", submission_success",form_completed")";""
                 trackEvent("form",submission_success",form_completed")"
-                trackConversion("form_submission", 1, { formType: title })}
+                trackConversion("form_submission", 1, {formType: title})}
 
             setIsSubmitted()
 }
@@ -582,7 +581,7 @@ if (enableAnalytics) {}""
     // comment
 const togglePasswordVisibility = useCallback((fieldName) => {}
 
-        setShowPassword(prev => ({ ...prev, [fieldName]: !prev[fieldName] }))}, [])
+        setShowPassword(prev => ({...prev, [fieldName]: !prev[fieldName]}))}, [])
 }
     // comment
 const getFieldIcon = useCallback((field) => {}"
@@ -607,8 +606,8 @@ const renderField = useCallback((field) => {}""
         const fieldValidation = validation[field.name]"""
         const isPasswordField = field.name.toLowerCase().includes("password")"
         return (<motion.div key="{field.name}" initial = {}"
-  { opacity: 0, y: 20}} animate = {}""
-  { opacity: 1, y: 0 """"">
+  {opacity: 0, y: 20}} animate = {}""
+  {opacity: 1, y: 0 """"">
 """"}} className="space-y-2">""""
         <label className="block text-sm font-medium text-gray-700 dark: text-gray-300">""""",
           {field.label}""""
@@ -670,8 +669,8 @@ const renderField = useCallback((field) => {}""
         {/* comment */}
 
         {fieldValidation?.isTouched && fieldValidation.message && (<motion.p initial = {}"
-  { opacity: 0, height: 0}} animate = {}""
-  { opacity: 1, """
+  {opacity: 0, height: 0}} animate = {}""
+  {opacity: 1, """
   height: "auto" """"">
 """"}} className="text-sm text-red-600 dark: text-red-400">,            {fieldValidation.message}
 
@@ -682,8 +681,8 @@ const renderField = useCallback((field) => {}""
     if(isSubmitted) {}
 
         return (<motion.div initial = {}"
-  { opacity: 0, scale: 0.9}} animate = {}""
-  { opacity: 1, scale: 1 """"">
+  {opacity: 0, scale: 0.9}} animate = {}""
+  {opacity: 1, scale: 1 """"">
 """"}} className="text-center p-8 bg-green-50 dark: bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700">""""
         <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"/" >"""""
         <h3 className="text-2xl font-bold text-green-800 dark:text-green-200 mb-2">""
@@ -695,10 +694,9 @@ const renderField = useCallback((field) => {}""
 
     return (<motion .div initial = {}
 
-  { opacity: 0, y: 20}} animate = {}">
-  { opacity: 1, y: 0 "",,
-""","";"
-}} className = "{"bg-white" dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}"}" >""""
+  {opacity: 0, y: 20}} animate = {}">
+  {opacity: 1, y: 0 "",,
+""","";"}} className = "{"bg-white" dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}"}" >""""
       {/* comment */}"""""
       <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-6 text-white">""""
         <h2 className="text-2xl font-bold mb-2">{title}</h2>""""
@@ -739,10 +737,10 @@ const renderField = useCallback((field) => {}""
 
         <AnimatePresence>
           {Object.values(validation).some(v => !v.isValid && v.isTouched) && (<motion.div initial = {}"
-  { opacity: 0, height: 0}} animate = {}""
-  { opacity: 1, """
+  {opacity: 0, height: 0}} animate = {}""
+  {opacity: 1, """
   height: "auto"}} exit = {}""
-  { opacity: 0, height: 0 """"">
+  {opacity: 0, height: 0 """"">
 """"}} className="p-3 bg-red-50 dark: bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg">""""
               <p className="text-sm text-red-600 dark:text-red-400">
                 Please fix the errors above before submitting the form.</p>,
@@ -754,7 +752,38 @@ const renderField = useCallback((field) => {}""
 """"""`'"
 "
 
-  } catch (error) {
-    console.error(error);
-  }
+  } catch (error) {console.error(error);}
 export default Component
+
+</motion>
+</Send>
+</Loader2>
+</motion>
+</motion>
+</motion>
+</CheckCircle>
+</motion>
+</motion>
+</AlertCircle>
+</CheckCircle>
+</Eye>
+</EyeOff>
+</textarea>
+</motion>
+</User>
+</Building>
+</MessageSquare>
+</Phone>
+</Mail>
+</User>
+</Building>
+</MessageSquare>
+</Phone>
+</Mail>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</textarea>
+</motion>

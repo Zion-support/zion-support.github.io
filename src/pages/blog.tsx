@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Blog: React.FC = () => {
+const Blog: React.FC = (props: any) => {
   return (
     <>
       <Head>
         <title>blog - Zion Tech Group</title>
-        <meta name="description" content="Professional blog services"   />
+        <meta name="description" content="Professional blog services"    />
       </Head>
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-12">
@@ -47,3 +47,7 @@ const Blog: React.FC = () => {
   );
 
 export default blog
+</div>
+</div>
+</div>
+</div>

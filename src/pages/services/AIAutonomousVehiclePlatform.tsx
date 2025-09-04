@@ -1,5 +1,6 @@
+import React from 'react';
 
-export default function AIAutonomousVehiclePlatform() {
+export default function AIAutonomousVehiclePlatform(props: any) {
   
     'Advanced computer vision and sensor fusion',;
     'Real-time decision making and path planning',;
@@ -271,3 +272,4 @@ export default function AIAutonomousVehiclePlatform() {
       </div>;
     </>
   )}}}'"`
+</SEO>

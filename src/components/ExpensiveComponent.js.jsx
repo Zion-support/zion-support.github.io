@@ -1,4 +1,4 @@
-import React from "react"; export default function ExpensiveComponent() { const [data, setData] = useState([]); const [loading, setLoading] = useState(true); useEffect(() => {}
+import React from "react"; export default function ExpensiveComponent(props: any) { const [data, setData] = useState([]); const [loading, setLoading] = useState(true); useEffect(() => {}
 
 const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -28,15 +28,15 @@ if(loading) {}
       </div>
     </div>)}
 
-export { ExpensiveComponent };
+export {ExpensiveComponent};
 
-export { ExpensiveComponent };
+export {ExpensiveComponent};
 
-export { ExpensiveComponent };
+export {ExpensiveComponent};
 
-export { ExpensiveComponent };
+export {ExpensiveComponent};
 
-export { ExpensiveComponent };
+export {ExpensiveComponent};
 const [data, setData] = useState()
 }
   const [loading, setLoading] = useState()
@@ -48,7 +48,7 @@ const timer = setTimeout(() => {}
 
       const expensiveData = Array.from()
 }
-        { length: 10000 }, (_, i) => Math.sqrt(i) * Math.PI * Math.random()
+        {length: 10000}, (_, i) => Math.sqrt(i) * Math.PI * Math.random()
 }
       )
 }
@@ -64,24 +64,24 @@ const timer = setTimeout(() => {}
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"> <// comment
       </div>    </div>)}
 ;
-export { ExpensiveComponent }
+export {ExpensiveComponent}
 ;
-export { ExpensiveComponent }
+export {ExpensiveComponent}
 ;
-export { ExpensiveComponent }
+export {ExpensiveComponent}
 ;
-export { ExpensiveComponent }
+export {ExpensiveComponent}
 ;
-export { ExpensiveComponent }";
+export {ExpensiveComponent}";
 ;"";
-export { ExpensiveComponent }
+export {ExpensiveComponent}
 ;
-export { ExpensiveComponent }
+export {ExpensiveComponent}
 ;
-export { ExpensiveComponent }
+export {ExpensiveComponent}
 ;
-export { ExpensiveComponent }
+export {ExpensiveComponent}
 ;
-export { ExpensiveComponent };";
+export {ExpensiveComponent};";
 ;"";
 "

@@ -1,8 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from "../../components/SEO";
-import { 
-  Leaf, 
+import {motion} from 'framer-motion';
+import {SEO} from "../../components/SEO";
+import {Leaf, 
   Zap, 
   Globe, 
   Shield, 
@@ -17,11 +16,10 @@ import {
   Monitor,
   HardDrive,
   Network,
-  Battery
-} from 'lucide-react';
+  Battery} from 'lucide-react';
 
 export default function GreenIT
-export { GreenIT }() {
+export {GreenIT}() {
   const services = [
     {
       icon: Leaf,
@@ -29,90 +27,63 @@ export { GreenIT }() {
       description: 'Energy-efficient data center design and optimization',
       features: ['Renewable energy integration', 'Cooling system optimization', 'Energy monitoring', 'Carbon footprint reduction']
     },
-    {
-      icon: Zap,
+    {icon: Zap,
       title: 'Energy Management',
       description: 'Smart energy monitoring and optimization systems',
-      features: ['Real-time energy tracking', 'Automated optimization', 'Peak demand management', 'Energy cost reduction']
-    },
-    {
-      icon: Cloud,
+      features: ['Real-time energy tracking', 'Automated optimization', 'Peak demand management', 'Energy cost reduction']},
+    {icon: Cloud,
       title: 'Cloud Optimization',
       description: 'Eco-friendly cloud infrastructure and services',
-      features: ['Green cloud providers', 'Resource optimization', 'Carbon-aware computing', 'Sustainable scaling']
-    },
-    {
-      icon: Server,
+      features: ['Green cloud providers', 'Resource optimization', 'Carbon-aware computing', 'Sustainable scaling']},
+    {icon: Server,
       title: 'Hardware Efficiency',
       description: 'Energy-efficient hardware selection and management',
-      features: ['Low-power processors', 'Efficient storage', 'Smart power management', 'Hardware lifecycle optimization']
-    },
-    {
-      icon: Network,
+      features: ['Low-power processors', 'Efficient storage', 'Smart power management', 'Hardware lifecycle optimization']},
+    {icon: Network,
       title: 'Network Optimization',
       description: 'Efficient network infrastructure and protocols',
-      features: ['Traffic optimization', 'Bandwidth management', 'Network virtualization', 'Green networking protocols']
-    },
-    {
-      icon: Monitor,
+      features: ['Traffic optimization', 'Bandwidth management', 'Network virtualization', 'Green networking protocols']},
+    {icon: Monitor,
       title: 'Software Efficiency',
       description: 'Energy-efficient software development and deployment',
-      features: ['Code optimization', 'Resource management', 'Efficient algorithms', 'Green software practices']
-    }
+      features: ['Code optimization', 'Resource management', 'Efficient algorithms', 'Green software practices']}
   ];
 
   const benefits = [
-    {
-      icon: TrendingUp,
+    {icon: TrendingUp,
       title: 'Cost Reduction',
-      description: 'Lower energy costs and operational expenses'
-    },
-    {
-      icon: Shield,
+      description: 'Lower energy costs and operational expenses'},
+    {icon: Shield,
       title: 'Compliance',
-      description: 'Meet environmental regulations and standards'
-    },
-    {
-      icon: Users,
+      description: 'Meet environmental regulations and standards'},
+    {icon: Users,
       title: 'Brand Value',
-      description: 'Enhanced reputation and customer trust'
-    },
-    {
-      icon: Award,
+      description: 'Enhanced reputation and customer trust'},
+    {icon: Award,
       title: 'Innovation',
-      description: 'Leading-edge sustainable technology solutions'
-    }
+      description: 'Leading-edge sustainable technology solutions'}
   ];
 
   const technologies = [
-    {
-      icon: Battery,
+    {icon: Battery,
       title: 'Renewable Energy',
-      description: 'Solar, wind, and hydroelectric power integration'
-    },
-    {
-      icon: Cpu,
+      description: 'Solar, wind, and hydroelectric power integration'},
+    {icon: Cpu,
       title: 'AI Optimization',
-      description: 'Machine learning for energy efficiency'
-    },
-    {
-      icon: Database,
+      description: 'Machine learning for energy efficiency'},
+    {icon: Database,
       title: 'Smart Monitoring',
-      description: 'IoT sensors and real-time analytics'
-    },
-    {
-      icon: Globe,
+      description: 'IoT sensors and real-time analytics'},
+    {icon: Globe,
       title: 'Carbon Tracking',
-      description: 'Comprehensive carbon footprint measurement'
-    }
+      description: 'Comprehensive carbon footprint measurement'}
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Green IT Services - Zion Tech Group"
+      <SEO title="Green IT Services - Zion Tech Group"
         description="Sustainable and energy-efficient IT solutions. Green data centers, energy management, cloud optimization, and eco-friendly technology services."
-      />
+       />
       
       {/* Hero Section */}
       <section className="relative py-20 px-4">
@@ -132,7 +103,7 @@ export { GreenIT }() {
           >
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-green-400 via-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center">
-                <Leaf className="w-10 h-10 text-white" />
+                <Leaf className="w-10 h-10 text-white"  />
               </div>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -208,14 +179,14 @@ export { GreenIT }() {
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-green-400/50 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
-                  <service.icon className="w-8 h-8 text-white" />
+                  <service .icon className="w-8 h-8 text-white"  />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-slate-300 mb-4">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-sm text-slate-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}
@@ -274,7 +245,7 @@ export { GreenIT }() {
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-white" />
+                  <benefit .icon className="w-8 h-8 text-white"  />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
                 <p className="text-slate-300 text-sm">{benefit.description}</p>
@@ -332,7 +303,7 @@ export { GreenIT }() {
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-teal-400 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <tech.icon className="w-8 h-8 text-white" />
+                  <tech .icon className="w-8 h-8 text-white"  />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{tech.title}</h3>
                 <p className="text-slate-300 text-sm">{tech.description}</p>
@@ -386,12 +357,22 @@ export { GreenIT }() {
   );
 }
 
-export { GreenIT };
+export {GreenIT};
 
-export { GreenIT };
+export {GreenIT};
 
-export { GreenIT };
+export {GreenIT};
 
-export { GreenIT };
+export {GreenIT};
 
-export { GreenIT };
+export {GreenIT};
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</SEO>

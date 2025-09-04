@@ -1,13 +1,14 @@
-import { useEffect, useState } from "react";
-import { Input } from "@/components/ui/input";
-import { Card } from "@/components/ui/card";
+import React from 'react';
+import {useEffect, useState} from "react";
+import {Input} from "@/components/ui/input";
+import {Card} from "@/components/ui/card";
 import { Search import { ListingScoreCard } from "@/components/ListingScoreCard";
-import { captureException } from "@/utils/sentry";
-import { Skeleton } from "@/components/ui/skeleton";
-import { useDebounce } from "@/hooks/useDebounce";
-import { z } from "zod";
+import {captureException} from "@/utils/sentry";
+import {Skeleton} from "@/components/ui/skeleton";
+import {useDebounce} from "@/hooks/useDebounce";
+import {z} from "zod";
 const listingsSchema = z.array(listingSchema);
-export function ServiceTypeStep({ formData, updateFormData }) {
+export function ServiceTypeStep(props: any) {
     const [searchQuery, setSearchQuery] = useState("");
     const debouncedQuery = useDebounce(searchQuery, 300);
     const [listings, setListings] = useState([]);
@@ -54,18 +55,16 @@ export function ServiceTypeStep({ formData, updateFormData }) {
                     if (attempt === maxRetries - 1) {
                         if (process.env.NODE_ENV === 'development') {
                             console.error('Failed to load services:', err)}
-                        else {
-                            captureException(err)}
+                        else {captureException(err)}
                         setListings([]);
                         setError('Failed to load services');
                         setLoading(false)}
-                    else {
-                        await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 500))}
+                    else {await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 500))}
                 }
             }
         };
         fetchServices()}, [formData.serviceType, debouncedQuery]);
-    const handleItemSelect = (item) => {
+    const handleItemSelect = (props: any) => {
         updateFormData({
             specificItem: item,
             serviceCategory: item.category,
@@ -113,7 +112,7 @@ export function ServiceTypeStep({ formData, updateFormData }) {
           <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>
 
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4"/>
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
             <Input placeholder={`Search ${formData.serviceType}...`} value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple"/>
           </div>
 
@@ -121,11 +120,11 @@ export function ServiceTypeStep({ formData, updateFormData }) {
 
           <div className="grid grid-cols-1 gap-4 mt-4">
             {loading ? (<>
-                <Skeleton className="h-[120px] w-full"/>
-                <Skeleton className="h-[120px] w-full"/>
-                <Skeleton className="h-[120px] w-full"/>
+                <Skeleton className="h-[120px] w-full" />
+                <Skeleton className="h-[120px] w-full" />
+                <Skeleton className="h-[120px] w-full" />
               </>) : filteredListings.length > 0 ? (filteredListings.map((item) => (<div key={item.id} onClick={() => handleItemSelect(item)} className={`cursor-pointer transition-all ${formData.specificItem?.id === item.id ? "ring-2 ring-zion-purple rounded-lg" : ""}`}>
-                  <ListingScoreCard title={item.title} category={item.category} aiScore={Math.floor(Math.random() * 30) + 70} rating={Math.floor(Math.random() * 2) + 3} reviewCount={Math.floor(Math.random() * 50) + 10} image={item.image} description="Sample listing description"/>
+                  <ListingScoreCard title={item.title} category={item.category} aiScore={Math.floor(Math.random() * 30) + 70} rating={Math.floor(Math.random() * 2) + 3} reviewCount={Math.floor(Math.random() * 50) + 10} image={item.image} description="Sample listing description" />
                 </div>))) : (<div className="text-center py-8 text-zion-slate-light">
                 No items found. Please try a different search.
               </div>)}

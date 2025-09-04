@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import { Box, Cpu, Zap, Globe, Rocket, Shield } from 'lucide-react';
-const QuantumTechnology = () => {
+import {Link} from 'react-router-dom';
+import {Box, Cpu, Zap, Globe, Rocket, Shield} from 'lucide-react';
+const QuantumTechnology = (props: any) => {
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
@@ -8,7 +8,7 @@ const QuantumTechnology = () => {
           <div className="text-center">
             <div className="flex justify-center mb-6">
               <div className="p-3 bg-purple-600/20 rounded-full">
-                <Box className="h-12 w-12 text-purple-400"/>
+                <Box className="h-12 w-12 text-purple-400" />
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -60,7 +60,7 @@ const QuantumTechnology = () => {
             </div>
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 p-8 rounded-2xl border border-purple-500/30">
               <div className="text-center">
-                <CpuChipIcon className="h-24 w-24 text-purple-400 mx-auto mb-4"/>
+                <CpuChipIcon className="h-24 w-24 text-purple-400 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold mb-2">Quantum Advantage</h3>
                 <p className="text-gray-300">
                   Solve problems in minutes that would take classical computers thousands of years
@@ -80,7 +80,7 @@ const QuantumTechnology = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300">
               <div className="p-3 bg-purple-600/20 rounded-lg w-fit mb-4">
-                <Box className="h-8 w-8 text-purple-400"/>
+                <Box className="h-8 w-8 text-purple-400" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Quantum Neural Networks</h3>
               <p className="text-gray-300">
@@ -90,7 +90,7 @@ const QuantumTechnology = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300">
               <div className="p-3 bg-blue-600/20 rounded-lg w-fit mb-4">
-                <Zap className="h-8 w-8 text-blue-400"/>
+                <Zap className="h-8 w-8 text-blue-400" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Quantum Edge Computing</h3>
               <p className="text-gray-300">
@@ -100,7 +100,7 @@ const QuantumTechnology = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300">
               <div className="p-3 bg-green-600/20 rounded-lg w-fit mb-4">
-                <Globe className="h-8 w-8 text-green-400"/>
+                <Globe className="h-8 w-8 text-green-400" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Quantum Cloud Infrastructure</h3>
               <p className="text-gray-300">
@@ -110,7 +110,7 @@ const QuantumTechnology = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300">
               <div className="p-3 bg-orange-600/20 rounded-lg w-fit mb-4">
-                <Rocket className="h-8 w-8 text-orange-400"/>
+                <Rocket className="h-8 w-8 text-orange-400" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Quantum Financial Trading</h3>
               <p className="text-gray-300">
@@ -120,7 +120,7 @@ const QuantumTechnology = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300">
               <div className="p-3 bg-cyan-600/20 rounded-lg w-fit mb-4">
-                <Shield className="h-8 w-8 text-cyan-400"/>
+                <Shield className="h-8 w-8 text-cyan-400" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Quantum Cryptography</h3>
               <p className="text-gray-300">
@@ -130,7 +130,7 @@ const QuantumTechnology = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300">
               <div className="p-3 bg-pink-600/20 rounded-lg w-fit mb-4">
-                <Cpu className="h-8 w-8 text-pink-400"/>
+                <Cpu className="h-8 w-8 text-pink-400" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Quantum Optimization</h3>
               <p className="text-gray-300">
@@ -215,7 +215,7 @@ const QuantumTechnology = () => {
               <div className="flex items-start space-x-4">
                 <div className="bg-purple-600/20 p-2 rounded-lg">
                   <svg className="h-6 w-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
                 <div>
@@ -226,7 +226,7 @@ const QuantumTechnology = () => {
               <div className="flex items-start space-x-4">
                 <div className="bg-purple-600/20 p-2 rounded-lg">
                   <svg className="h-6 w-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
                 <div>
@@ -237,7 +237,7 @@ const QuantumTechnology = () => {
               <div className="flex items-start space-x-4">
                 <div className="bg-purple-600/20 p-2 rounded-lg">
                   <svg className="h-6 w-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
                 <div>
@@ -250,7 +250,7 @@ const QuantumTechnology = () => {
               <div className="flex items-start space-x-4">
                 <div className="bg-purple-600/20 p-2 rounded-lg">
                   <svg className="h-6 w-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
                 <div>
@@ -261,7 +261,7 @@ const QuantumTechnology = () => {
               <div className="flex items-start space-x-4">
                 <div className="bg-purple-600/20 p-2 rounded-lg">
                   <svg className="h-6 w-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
                 <div>
@@ -272,7 +272,7 @@ const QuantumTechnology = () => {
               <div className="flex items-start space-x-4">
                 <div className="bg-purple-600/20 p-2 rounded-lg">
                   <svg className="h-6 w-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
                 <div>
@@ -308,12 +308,12 @@ const QuantumTechnology = () => {
 };
 export default QuantumTechnology;
 
-export { QuantumTechnology };
+export {QuantumTechnology};
 
-export { QuantumTechnology };
+export {QuantumTechnology};
 
-export { QuantumTechnology };
+export {QuantumTechnology};
 
-export { QuantumTechnology };
+export {QuantumTechnology};
 
-export { QuantumTechnology };
+export {QuantumTechnology};

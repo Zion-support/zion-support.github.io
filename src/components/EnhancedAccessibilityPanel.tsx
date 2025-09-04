@@ -3,7 +3,7 @@ import {  import { motion, AnimatePresence  } from 'framer-motion';
  params - Function parameters
  * @returns {*} Function return value
  */
-function EnhancedAccessibilityPanel () {
+function EnhancedAccessibilityPanel(props: any) {
 
   Accessibility,
   Eye,
@@ -52,9 +52,9 @@ interface AccessibilityIssue {
   element?: string;
   recommendation: string;
   severity: 'low' | 'medium' | 'high';
-export function EnhancedAccessibilityPanel() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
+export function EnhancedAccessibilityPanel(props: any) {
+  const [isVisible, setIsVisible] = useState<any>(false);
+  const [isExpanded, setIsExpanded] = useState<any>(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
 
     highContrast: fals e,
@@ -68,9 +68,9 @@ export function EnhancedAccessibilityPanel() {
     letterSpacing: 0,
     wordSpacing: 0});
   const [issues, setIssues] = useState<AccessibilityIssue[]>([]);
-  const [isScanning, setIsScanning] = useState(false);
+  const [isScanning, setIsScanning] = useState<any>(false);
   const [currentFocus, setCurrentFocus] = useState<string>('');
-  const [keyboardMode, setKeyboardMode] = useState(false);
+  const [keyboardMode, setKeyboardMode] = useState<any>(false);
 
   // Apply accessibility settings
   
@@ -145,3 +145,11 @@ export function EnhancedAccessibilityPanel() {
     // Cleanup function
   };
 }, []);, []);
+
+</any>
+</string>
+</any>
+</AccessibilityIssue>
+</AccessibilitySettings>
+</any>
+</any>

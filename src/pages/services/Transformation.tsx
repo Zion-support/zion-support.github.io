@@ -1,7 +1,7 @@
 import React from 'react';
 import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowRight  } from 'lucide-react';
 
-const DigitalTransformation = () => {
+const DigitalTransformation = (props: any) => {
   const transformationServices = [
     {
       title: "Process Automation",
@@ -138,7 +138,7 @@ const DigitalTransformation = () => {
             {transformationAreas.map((area, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover: borde r-indigo-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <area.icon className="w-8 h-8 text-white"/>
+                  <area .icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{area.name}</h3>
                 <p className="text-gray-300 mb-4">{area.description}</p>

@@ -49,3 +49,4 @@ const EcommercePersonalization: Reac t.FC = (): JSX.Element => {
 export default EcommercePersonalization;
 
 }
+</SEO>

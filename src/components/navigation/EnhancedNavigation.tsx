@@ -32,13 +32,13 @@ import {
   Home
 } from "lucide-react"
 
-const EnhancedNavigation = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
+const EnhancedNavigation = (props: any) => {
+  const [isOpen, setIsOpen] = useState<any>(false)
+  const [isScrolled, setIsScrolled] = useState<any>(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = (props: any) => {
       setIsScrolled(window.scrollY > 20)
     }
     window.addEventListener("scroll", handleScroll)
@@ -216,11 +216,11 @@ const EnhancedNavigation = () => {
     }
   ]
 
-  const toggleDropdown = (name: string) => {
+  const toggleDropdown = (props: any) => {
     setActiveDropdown(activeDropdown === name ? null : name)
   }
 
-  const closeMobileMenu = () => {
+  const closeMobileMenu = (props: any) => {
     setIsOpen(false)
     setActiveDropdown(null)
   }
@@ -401,3 +401,8 @@ const EnhancedNavigation = () => {
 }
 
 export default EnhancedNavigation
+</ChevronDown>
+</ChevronDown>
+</string>
+</any>
+</any>

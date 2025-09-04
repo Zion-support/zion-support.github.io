@@ -25,6 +25,66 @@ const services = [
     href: '/services/cloud-finops-optimizer',
     price: 'From $1,499/month',
     bullets: ['Cost insights', 'Savings plans', 'Kubernetes rightsizing']
+  },
+  {
+    title: 'AI Sales Forecasting & Inventory',
+    href: '/services/ai-sales-forecasting-inventory',
+    price: 'From $2,500/month',
+    bullets: ['Demand planning', 'Automated replenishment', 'Price elasticity']
+  },
+  {
+    title: 'AI Agent Fleet Automation',
+    href: '/services/ai-agent-fleet-automation',
+    price: 'From $3,500/month',
+    bullets: ['Multi-agent orchestration', 'Guardrails', 'Human approvals']
+  },
+  {
+    title: 'Security Posture Management',
+    href: '/services/security-posture-management',
+    price: 'From $2,000/month',
+    bullets: ['CSPM/CIEM', 'SBOM scanning', 'Compliance automation']
+  },
+  {
+    title: 'Modern Data Platform Accelerator',
+    href: '/services/data-platform-accelerator',
+    price: 'From $35,000 (project)',
+    bullets: ['Ingestion', 'dbt models', 'Observability & BI']
+  },
+  {
+    title: 'AI Marketing Content Engine',
+    href: '/services/ai-marketing-content-engine',
+    price: 'From $1,200/month',
+    bullets: ['SEO briefs', 'Brand-safe generation', 'Omni-channel']
+  },
+  {
+    title: 'GDPR/CCPA DSAR Automation',
+    href: '/services/gdpr-dsar-automation',
+    price: 'From $1,800/month',
+    bullets: ['Verification', 'Discovery', 'Redaction & SLA']
+  },
+  {
+    title: 'Website Performance Optimization',
+    href: '/services/website-performance-optimization',
+    price: 'From $3,000 (audit)',
+    bullets: ['Core Web Vitals', 'Code-splitting', 'CDN & images']
+  },
+  {
+    title: 'M365 Security AI Copilot',
+    href: '/services/ai-m365-security-copilot',
+    price: 'From $2,200/month',
+    bullets: ['Defender', 'Sentinel', 'Purview & Entra']
+  },
+  {
+    title: 'Developer Experience & Platform Eng.',
+    href: '/services/devx-platform-engineering',
+    price: 'From $7,500 (discovery)',
+    bullets: ['IDP/Backstage', 'Golden paths', 'Secure templates']
+  },
+  {
+    title: 'Enterprise RAG Knowledge Base',
+    href: '/services/enterprise-rag-knowledgebase',
+    price: 'From $2,200/month',
+    bullets: ['Connectors', 'Hybrid retrieval', 'Citations & evals']
   }
 ];
 

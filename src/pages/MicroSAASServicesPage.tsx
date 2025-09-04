@@ -1,7 +1,7 @@
 import React from 'react';
 import SEO from '@/components/SEO';
 
-const MicroSAASServicesPage = () => {
+const MicroSAASServicesPage = (props: any) => {
   return (
     <>
       <SEO
@@ -169,3 +169,4 @@ const MicroSAASServicesPage = () => {
 
 
 export default MicroSAASServicesPage;
+</SEO>

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, ArrowUp, Github, Twitter, Linkedin, Instagram } from 'lucide-react';
 
-const FuturisticFooter: React.FC = () => {
+const FuturisticFooter: React.FC = (props: any) => {
   const contactInfo = {
     mobile: '+1 (555) 123-4567',
     email: 'info@ziontechgroup.com',
@@ -47,7 +47,7 @@ const FuturisticFooter: React.FC = () => {
     }
   };
 
-  const scrollToTop = () => {
+  const scrollToTop = (props: any) => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -206,3 +206,9 @@ const FuturisticFooter: React.FC = () => {
 };
 
 export { FuturisticFooter };
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

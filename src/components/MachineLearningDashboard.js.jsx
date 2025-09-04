@@ -1,16 +1,15 @@
-import React, { useState, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
-import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2 } from 'lucide-react';
+import React, {useState, useCallback} from 'react';'
+import {motion, AnimatePresence} from 'framer-motion';'
+import {Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2} from 'lucide-react';
 ;
 ;
-export const MachineLearningDashboard = ({ className = '' }) => {
-    const { trackEvent } = useAnalytics({        enableTracking: true,
-        enableUserBehaviorTracking: true;
-    });'
+export const MachineLearningDashboard = (props: any) => {
+    const { trackEvent } = useAnalytics({enableTracking: true,
+        enableUserBehaviorTracking: true;});'
     const [activeTab, setActiveTab] = useState('overview');
     const [showCreateModel, setShowCreateModel] = useState(false);
     const [showImportModel, setShowImportModel] = useState(false);
-    const { models, trainingJobs, predictions, metrics, isPredicting, createModel, startTraining, stopTraining, deployModel, archiveModel, makePrediction, exportModel, importModel } = useMachineLearning();
+    const {models, trainingJobs, predictions, metrics, isPredicting, createModel, startTraining, stopTraining, deployModel, archiveModel, makePrediction, exportModel, importModel} = useMachineLearning();
     const [newModelForm, setNewModelForm] = useState({}
 '
 ''
@@ -33,7 +32,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                 type: newModelForm.type,
                 framework: newModelForm.framework;
             });'
-            setNewModelForm({ name: '', type: 'classification', framework: 'tensorflow' });
+            setNewModelForm({name: '', type: 'classification', framework: 'tensorflow'});
             setShowCreateModel(false);'
             trackEvent('ml',dashboard',model_created')}
     }, [newModelForm, createModel, trackEvent]);
@@ -48,7 +47,7 @@ if(predictionForm.modelId && predictionForm.input.trim()) {}
                 const input = JSON.parse(predictionForm.input)""
                 const result = await makePrediction(predictionForm.modelId, input)"""
                 // comment
-                setPredictionForm({ modelId: "", input: "" })"""
+                setPredictionForm({modelId: "", input: ""})"""
                 trackEvent("ml", dashboard",prediction_made")}"
             catch (error) {}""
 """
@@ -96,7 +95,7 @@ importModel(modelData)""
 
     }, [importModel, trackEvent])
 }
-    const getStatusColor = (status) => {}"
+    const getStatusColor = (props: any) => {}"
         switch (status) {}""
 """
 """""
@@ -108,7 +107,7 @@ importModel(modelData)""
 
     }
 
-    const getJobStatusColor = (status) => {}"
+    const getJobStatusColor = (props: any) => {}"
         switch (status) {}""
 """
 """""
@@ -120,7 +119,7 @@ importModel(modelData)""
 
     }
 
-    const getModelTypeIcon = (type) => {}"
+    const getModelTypeIcon = (props: any) => {}"
         switch(type) {}""
 """"
 """""";"""
@@ -179,11 +178,11 @@ importModel(modelData)""
       <div className="flex border-b border-gray-200 dark: border-gray-700">"""
         {[""",
             { id: "overview", label: "Overview", icon: BarChart3 }, """
-            { id: "models", label: "Models", icon: Brain },"""
-            { id: "training", label: "Training", icon: Activity }, """
-            { id: "predictions", label: "Predictions", icon: Target },""""""
-            { id: "analytics", label: "Analytics", icon: TrendingUp }"""", """
-].map(({ id, label, icon: Icon }) => (<button key="{id}" onClick="{()" =" > setActiveTab(id)} className="{"flex" items-center space-x-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${activeTab === id""""""
+            {id: "models", label: "Models", icon: Brain},"""
+            {id: "training", label: "Training", icon: Activity}, """
+            {id: "predictions", label: "Predictions", icon: Target},""""""
+            {id: "analytics", label: "Analytics", icon: TrendingUp}"""", """
+].map(({id, label, icon: Icon}) => (<button key="{id}" onClick="{()" =" > setActiveTab(id)} className="{"flex" items-center space-x-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${activeTab === id""""""
                 ? "border-purple-500 text-purple-600 dark: text-purple-400""""""""",
                 : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"}"}>""""
             <Icon className="w-4 h-4"/" >"
@@ -196,9 +195,9 @@ importModel(modelData)""
         <AnimatePresence mode="wait">"""""""
           {activeTab === "overview" && (<motion.div key="overview" initial = {}
 
-  { opacity: 0, y: 20}} animate = {}"
-  { opacity: 1, y: 0}} exit = {}""
-  { opacity: 0, y: -20 """"">
+  {opacity: 0, y: 20}} animate = {}"
+  {opacity: 1, y: 0}} exit = {}""
+  {opacity: 0, y: -20 """"">
 """"}} className="space-y-6">"""""
               {/* comment */}""""
               <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">""""
@@ -298,9 +297,9 @@ importModel(modelData)""
 """""""
           {activeTab === "models" && (<motion.div key="models" initial = {}
 
-  { opacity: 0, y: 20}} animate = {}"
-  { opacity: 1, y: 0}} exit = {}""
-  { opacity: 0, y: -20 """"">
+  {opacity: 0, y: 20}} animate = {}"
+  {opacity: 1, y: 0}} exit = {}""
+  {opacity: 0, y: -20 """"">
 """"}} className="space-y-4">""""
               <div className="flex items-center justify-between">""""
                 <h3 className="text-lg font-semibold text-gray-900 dark: text-white">AI Models</h3>""""
@@ -315,18 +314,18 @@ importModel(modelData)""
 
               <AnimatePresence>
                 {showCreateModel && (<motion.div initial = {}"
-  { opacity: 0, height: 0}} animate = {}""
-  { opacity: 1, """
+  {opacity: 0, height: 0}} animate = {}""
+  {opacity: 1, """
   height: "auto"}} exit = {}""
-  { opacity: 0, height: 0 """"">
+  {opacity: 0, height: 0 """"">
 """"}} className="bg-gray-50 dark: bg-gray-800 p-4 rounded-lg">""""
                     <h4 className="font-medium text-gray-900 dark:text-white mb-3">Create New Model</h4>""""
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">"""",
                       <input type="text" placeholder="Model Name" value="{newModelForm.name}" onChange = {}"""
-  (e) =" > setNewModelForm(prev => ({ ...prev, name: e.target.value """"",
+  (e) =" > setNewModelForm(prev => ({...prev, name: e.target.value """"",
 """"}))} className="px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" />",
                       <select value="{newModelForm.type}" onChange = {}"""
-  (e) =" > setNewModelForm(prev => ({ ...prev, type: e.target.value """"",
+  (e) =" > setNewModelForm(prev => ({...prev, type: e.target.value """"",
 """"}))} className="px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white">"""""
                         <option value="classification">Classification</option>"""""
                         <option value="regression">Regression</option>"""""
@@ -336,7 +335,7 @@ importModel(modelData)""
                         <option value="recommendation">Recommendation</option>
                       </select>",
                       <select value="{newModelForm.framework}" onChange = {}"""
-  (e) =" > setNewModelForm(prev => ({ ...prev, framework: e.target.value """"",
+  (e) =" > setNewModelForm(prev => ({...prev, framework: e.target.value """"",
 """"}))} className="px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white">"""""
                         <option value="tensorflow">TensorFlow</option>"""""
                         <option value="pytorch">PyTorch</option>"""""
@@ -359,10 +358,10 @@ importModel(modelData)""
 
               <AnimatePresence>
                 {showImportModel && (<motion.div initial = {}"
-  { opacity: 0, height: 0}} animate = {}""
-  { opacity: 1, """
+  {opacity: 0, height: 0}} animate = {}""
+  {opacity: 1, """
   height: "auto"}} exit = {}""
-  { opacity: 0, height: 0 """"">
+  {opacity: 0, height: 0 """"">
 """"}} className="bg-gray-50 dark: bg-gray-800 p-4 rounded-lg">""""
                     <h4 className="font-medium text-gray-900 dark:text-white mb-3">Import Model</h4>"""",
                     <input type="file" accept=".json" onChange="{handleImportModel}" className="block w-full text-sm text-gray-500 file: mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-purple-50 file:text-purple-700 hover:file:bg-purple-100"/" >""""",
@@ -441,9 +440,9 @@ importModel(modelData)""
 """""""
           {activeTab === "training" && (<motion.div key="training" initial = {}
 
-  { opacity: 0, y: 20}} animate = {}"
-  { opacity: 1, y: 0}} exit = {}""
-  { opacity: 0, y: -20 """"">
+  {opacity: 0, y: 20}} animate = {}"
+  {opacity: 1, y: 0}} exit = {}""
+  {opacity: 0, y: -20 """"">
 """"}} className="space-y-4">""""
               <h3 className="text-lg font-semibold text-gray-900 dark: text-white">Training Jobs</h3>"""""
               """"
@@ -515,7 +514,7 @@ Started: {job.startTime.toLocaleString()}"
                         {job.status === "failed" && (<div className="text-sm text-red-600 dark: text-red-400 flex items-center">""""
                             <XCircle className="w-4 h-4 mr-2"/" >"
                             Training failed,
-                          </div>) }"
+                          </div>)}"
                       </div>""
                     </div>)})}"""""
                 """""
@@ -529,9 +528,9 @@ Started: {job.startTime.toLocaleString()}"
 """""""
           {activeTab === "predictions" && (<motion.div key="predictions" initial = {}
 
-  { opacity: 0, y: 20}} animate = {}"
-  { opacity: 1, y: 0}} exit = {}""
-  { opacity: 0, y: -20 """"">
+  {opacity: 0, y: 20}} animate = {}"
+  {opacity: 1, y: 0}} exit = {}""
+  {opacity: 0, y: -20 """"">
 """"}} className="space-y-4">""""
               <h3 className="text-lg font-semibold text-gray-900 dark: text-white">Make Predictions</h3>""
               """"",
@@ -539,7 +538,7 @@ Started: {job.startTime.toLocaleString()}"
               <div className="bg-gray-50 dark: bg-gray-800 p-4 rounded-lg">""""
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">",
                   <select value="{predictionForm.modelId}" onChange = {}"""
-  (e) =" > setPredictionForm(prev => ({ ...prev, modelId: e.target.value """"",
+  (e) =" > setPredictionForm(prev => ({...prev, modelId: e.target.value """"",
 """"}))} className="px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white">"""""
                     <option value="">Select a deployed model</option>"",
                     {models.filter(m => m.status === "deployed").map(model => (<option key="{model.id}" value={model.id}" >""
@@ -552,7 +551,7 @@ Started: {job.startTime.toLocaleString()}"
                   </button>"""""
                 </div>"""""
                 <textarea placeholder="Enter input data (JSON format)" value="{predictionForm.input}" onChange = {}"""
-  (e) =" > setPredictionForm(prev => ({ ...prev, input: e.target.value """"",
+  (e) =" > setPredictionForm(prev => ({...prev, input: e.target.value """"",
 """"}))} rows="{3}" className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" />"
               </div>""
 """"",
@@ -608,9 +607,9 @@ Started: {job.startTime.toLocaleString()}"
 """""""
           {activeTab === "analytics" && (<motion.div key="analytics" initial = {}
 
-  { opacity: 0, y: 20}} animate = {}"
-  { opacity: 1, y: 0}} exit = {}""
-  { opacity: 0, y: -20 """"">
+  {opacity: 0, y: 20}} animate = {}"
+  {opacity: 1, y: 0}} exit = {}""
+  {opacity: 0, y: -20 """"">
 """"}} className="space-y-4">""""
               <h3 className="text-lg font-semibold text-gray-900 dark: text-white">Performance Analytics</h3>"""""
               """"
@@ -662,7 +661,57 @@ Started: {job.startTime.toLocaleString()}"
 """"'""`""
 "
 
-  } catch (error) {
-    console.error(error);
-  }
+  } catch (error) {console.error(error);}
 export default Component
+
+</div>
+</div>
+</div>
+</motion>
+</Target>
+</div>
+</textarea>
+</Target>
+</Loader2>
+</motion>
+</Activity>
+</XCircle>
+</CheckCircle>
+</Square>
+</Brain>
+</div>
+</div>
+</motion>
+</Play>
+</Trash2>
+</Download>
+</motion>
+</motion>
+</Plus>
+</motion>
+</Zap>
+</Target>
+</CheckCircle>
+</Brain>
+</motion>
+</div>
+</Icon>
+</Plus>
+</Upload>
+</Brain>
+</div>
+</Brain>
+</Zap>
+</Eye>
+</Brain>
+</Activity>
+</TrendingUp>
+</Target>
+</div>
+</Brain>
+</Zap>
+</Eye>
+</Brain>
+</Activity>
+</TrendingUp>
+</Target>

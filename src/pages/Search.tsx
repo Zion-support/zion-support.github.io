@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 export default Search;
 import { motion  } from 'framer-motion';
-export default function Page() {
+export default function Page(props: any) {
 ,
     { id: 'equipment', name: 'Equipment', count: 0 },
     { id: 'companies', name: 'Companies', count: 0 },
@@ -129,7 +129,7 @@ export default function Page() {
     }
   };
 
-  const getTypeIcon = (type: string) => {
+  const getTypeIcon = (props: any) => {
     switch(type) {
       case 'services':
         return < Server className="w-5 h-5 text-blue -400" />;
@@ -141,7 +141,7 @@ export default function Page() {
     }
   };
 
-  const getTypeLabel = (type: string) => {
+  const getTypeLabel = (props: any) => {
     switch(type) {
       case 'services':
         return 'Service';
@@ -214,3 +214,10 @@ export default function Page() {
   );
 }
 export default Search
+
+</form>
+</motion>
+</div>
+</section>
+</div>
+</SEO>

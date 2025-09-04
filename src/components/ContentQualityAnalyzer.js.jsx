@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion  } from 'framer-motion';
-export default function Page() {
+import React, {useState, useEffect} from 'react';
+import {motion} from 'framer-motion';
+export default function Page(props: any) {
 ,
   ];
   useEffect(() => {
@@ -28,24 +28,22 @@ export default function Page() {
       pagesWithMetaDescriptions: 32, // Sample data
       lastUpdated: new Date()});
   };
-  const startAnalysis = async () => {
-    setIsAnalyzing(true);
+  const startAnalysis = async () => {setIsAnalyzing(true);
     // Simulate content analysis
     await new Promise(resolve => setTimeout(resolve, 3000));
-    setIsAnalyzing(false);
-  };
+    setIsAnalyzing(false);};
   const getSeverityIcon = severity => {
 
     switch(severity) {
 
       case 'high':
-        return <AlertTriangle className="w-4 h-4 text-red-400" />;
+        return <AlertTriangle className="w-4 h-4 text-red-400"  />;
       case 'medium':"
-        return <AlertTriangle className="w-4 h-4 text-yellow-400" />;
+        return <AlertTriangle className="w-4 h-4 text-yellow-400"  />;
       case 'low':"
-        return <Info className="w-4 h-4 text-blue-400" />;
+        return <Info className="w-4 h-4 text-blue-400"  />;
       default:"
-        return <Info className="w-4 h-4 text-gray-400" />;
+        return <Info className="w-4 h-4 text-gray-400"  />;
     }
   };
   const getSeverityColor = severity => {
@@ -76,13 +74,10 @@ export default function Page() {
         return 'text-gray-400';
     }
   };
-  const filteredIssues = contentIssues.filter(issue => {
-
-    const matchesSearch =
+  const filteredIssues = contentIssues.filter(issue => {const matchesSearch =
       issue.pageTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
       issue.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesFilter && matchesSearch;
-  });
+    return matchesFilter && matchesSearch;});
   const getIssueTypeLabel = type => {
 
     switch(type) {
@@ -110,7 +105,7 @@ export default function Page() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       >"
-        <FileText className="w-6 h-6" />
+        <FileText className="w-6 h-6"  />
       </motion.button>
 
       {/* Modal */}
@@ -133,7 +128,7 @@ export default function Page() {
             <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-6 text-white">"
               <div className="flex items-center justify-between">"
                 <div className="flex items-center space-x-3">"
-                  <FileText className="w-8 h-8" />"
+                  <FileText className="w-8 h-8"  />"
                   <h2 className="text-2xl font-bold">
                     Content Quality Analyzer
                   </h2>
@@ -231,9 +226,9 @@ export default function Page() {
                   className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-lg font-medium hover:from-purple-600 hover:to-pink-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
                 >
                   {isAnalyzing ? ("
-                    <Zap className="w-4 h-4 animate-spin" />
+                    <Zap className="w-4 h-4 animate-spin"  />
                   ) : ("
-                    <Search className="w-4 h-4" />
+                    <Search className="w-4 h-4"  />
                   )}
                   <span>
                     {isAnalyzing ? 'Analyzing...' : 'Analyze Content'}
@@ -243,7 +238,7 @@ export default function Page() {
 
               {/* Search */}"
               <div className="relative">"
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                 <input"
                   type="text"
                   placeholder="Search issues by page title or description..."
@@ -344,19 +339,19 @@ export default function Page() {
                                 className="p-2 text-blue-400 hover:text-blue-300 transition-colors"
                                 title="View Page"
                               >"
-                                <Eye className="w-4 h-4" />
+                                <Eye className="w-4 h-4"  />
                               </button>
                               <button"
                                 className="p-2 text-green-400 hover:text-green-300 transition-colors"
                                 title="Mark as Resolved"
                               >"
-                                <CheckCircle className="w-4 h-4" />
+                                <CheckCircle className="w-4 h-4"  />
                               </button>
                               <button"
                                 className="p-2 text-yellow-400 hover:text-yellow-300 transition-colors"
                                 title="Edit"
                               >"
-                                <Edit3 className="w-4 h-4" />
+                                <Edit3 className="w-4 h-4"  />
                               </button>
                             </div>
                           </td>
@@ -371,7 +366,7 @@ export default function Page() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">"
                 <div className="bg-gradient-to-r from-green-900/20 to-emerald-900/20 border border-green-500/20 rounded-lg p-4">"
                   <h3 className="text-lg font-semibold text-green-400 mb-2 flex items-center">"
-                    <CheckCircle className="w-5 h-5 mr-2" />
+                    <CheckCircle className="w-5 h-5 mr-2"  />
                     Quick Fixes
                   </h3>"
                   <ul className="text-green-200 text-sm space-y-1">
@@ -387,14 +382,18 @@ export default function Page() {
     </>)};
 export default ContentQualityAnalyzer;
 
-export { ContentQualityAnalyzer };
+export {ContentQualityAnalyzer};
 
-export { ContentQualityAnalyzer };
+export {ContentQualityAnalyzer};
 
-export { ContentQualityAnalyzer };
+export {ContentQualityAnalyzer};
 
-export { ContentQualityAnalyzer };
+export {ContentQualityAnalyzer};
 
-export { ContentQualityAnalyzer };"
+export {ContentQualityAnalyzer};"
 ""
 }""
+
+</motion>
+</motion>
+</motion>

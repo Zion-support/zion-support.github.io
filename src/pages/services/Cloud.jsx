@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-const CloudServices = () => {
+import {Link} from 'react-router-dom';
+const CloudServices = (props: any) => {
     const cloudServices = [
         {
             title: "Cloud Migration & Strategy",
@@ -7,18 +7,14 @@ const CloudServices = () => {
             price: "From $8,500/project",
             features: ["Cloud readiness assessment", "Multi-cloud strategy planning", "Migration roadmap development", "Cost optimization analysis"]
         },
-        {
-            title: "Cloud-Native Development",
+        {title: "Cloud-Native Development",
             description: "Build scalable applications using cloud-native technologies and microservices architecture.",
             price: "From $12,000/project",
-            features: ["Microservices architecture", "Serverless development", "API-first design", "Cloud-native databases"]
-        },
-        {
-            title: "Cloud Security & Compliance",
+            features: ["Microservices architecture", "Serverless development", "API-first design", "Cloud-native databases"]},
+        {title: "Cloud Security & Compliance",
             description: "Enterprise-grade security solutions with compliance frameworks and threat protection.",
             price: "From $6,500/month",
-            features: ["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"]
-        }
+            features: ["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"]}
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       <section className="pt-24 pb-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white">

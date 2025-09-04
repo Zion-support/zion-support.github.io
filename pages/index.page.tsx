@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
@@ -19,40 +20,8 @@ export default function HomePage() {
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="canonical" href="https://ziontechgroup.com/"  />
       </Head>
-      <main className="min-h-screen bg-gray-50">
-        <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">Zion Tech Group</h1>
-          <p className="text-lg md:text-2xl text-gray-600 mb-8">
-            AI services, micro SaaS platforms, and enterprise-grade IT solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700" href="/services">
-              Explore Services
-            </Link>
-            <Link className="border border-gray-300 px-6 py-3 rounded-lg hover:bg-gray-100" href="/category/contact">
-              Contact Us
-            </Link>
-          </div>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 text-left">
-            <Link href="/services/ai-revenue-operations-platform" className="block p-4 bg-white rounded border hover:shadow">
-              <div className="font-semibold">AI Revenue Optimization</div>
-              <div className="text-sm text-gray-600">Dynamic pricing and forecasting</div>
-            </Link>
-            <Link href="/services/ai-autonomous-devops-platform" className="block p-4 bg-white rounded border hover:shadow">
-              <div className="font-semibold">AI Autonomous DevOps</div>
-              <div className="text-sm text-gray-600">Self-healing infra</div>
-            </Link>
-            <Link href="/services/micro-crm" className="block p-4 bg-white rounded border hover:shadow">
-              <div className="font-semibold">Micro CRM</div>
-              <div className="text-sm text-gray-600">SMB CRM with automation</div>
-            </Link>
-            <Link href="/services/cloud-finops-optimizer" className="block p-4 bg-white rounded border hover:shadow">
-              <div className="font-semibold">Cloud FinOps</div>
-              <div className="text-sm text-gray-600">Reduce cloud spend</div>
-            </Link>
-          </div>
-          <div className="mt-8 text-sm text-gray-600">
             <p>
+
               Mobile: <a className="text-blue-700" href="tel:+13024640950">+1 302 464 0950</a> · Email:{' '}
               <a className="text-blue-700" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · Address: 364 E
               Main St STE 1008 Middletown DE 19709
@@ -62,5 +31,6 @@ export default function HomePage() {
       </main>
     </>
   );
+>>>>>>> origin/pr-11573
 }
 

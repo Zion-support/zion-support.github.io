@@ -1,4 +1,4 @@
-import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Sparkles, Target, TrendingUp, Shield, Briefcase, Award export default function AIHRTalentPlatform() {
+import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Sparkles, Target, TrendingUp, Shield, Briefcase, Award export default function AIHRTalentPlatform(props: any) {
   
     'Intelligent interview scheduling and feedback',;
     'Employee performance analytics and insights',;

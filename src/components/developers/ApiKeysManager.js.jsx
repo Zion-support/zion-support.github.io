@@ -1,27 +1,27 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 ;
-import { Button } from "../ui/button";
-import { Checkbox } from "../ui/checkbox";
-import { Label } from "../ui/label.jsx";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "../ui/dialog.jsx";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../ui/dropdown-menu";
-import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover.jsx";
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogHeader, AlertDialogTitle } from "../ui/alert-dialog.jsx";
-import CodeBlock from "./CodeBlock.jsx";import { Copy, MoreHorizontal, Eye, EyeOff, RotateCcw, Trash2, Settings } from 'lucide-react';
-export { function };
-export default function ApiKeysManager() {}
-    const { apiKeys, loading, newApiKey, fetchApiKeys, createApiKey, deleteApiKey, toggleApiKey, updateApiKeyScopes, regenerateApiKey, revokeApiKey, clearNewApiKey } = useApiKeys();
+import {Button} from "../ui/button";
+import {Checkbox} from "../ui/checkbox";
+import {Label} from "../ui/label.jsx";
+import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "../ui/dialog.jsx";
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "../ui/dropdown-menu";
+import {Popover, PopoverContent, PopoverTrigger} from "../ui/popover.jsx";
+import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogHeader, AlertDialogTitle} from "../ui/alert-dialog.jsx";
+import CodeBlock from "./CodeBlock.jsx";import {Copy, MoreHorizontal, Eye, EyeOff, RotateCcw, Trash2, Settings} from 'lucide-react';
+export {function};
+export default function ApiKeysManager(props: any) {}
+    const {apiKeys, loading, newApiKey, fetchApiKeys, createApiKey, deleteApiKey, toggleApiKey, updateApiKeyScopes, regenerateApiKey, revokeApiKey, clearNewApiKey} = useApiKeys();
     const [showCreateDialog, setShowCreateDialog] = useState(false);'
     const [newKeyName, setNewKeyName] = useState('');
     const [selectedScopes, setSelectedScopes] = useState([]);'
     const [showRegenerateConfirm, setShowRegenerateConfirm] = useState(null);''
     const [showDeleteConfirm, setShowDeleteConfirm] = useState(null);'''
     const scopeOptions = [''''
-        { value: 'jobs:read', label: 'Read Jobs', description: 'Access to view job listings' },'''
-        { value: 'jobs:write', label: 'Write Jobs', description: 'Create and manage job listings' },'''
-        { value: 'talent:read', label: 'Read Talent', description: 'Access to view talent profiles' },'''
-        { value: 'quotes:write', label: 'Write Quotes', description: 'Create and manage quotes' },'''
-        { value: 'webhooks:manage', label: 'Manage Webhooks', description: 'Set up and manage webhook endpoints' }
+        {value: 'jobs:read', label: 'Read Jobs', description: 'Access to view job listings'},'''
+        {value: 'jobs:write', label: 'Write Jobs', description: 'Create and manage job listings'},'''
+        {value: 'talent:read', label: 'Read Talent', description: 'Access to view talent profiles'},'''
+        {value: 'quotes:write', label: 'Write Quotes', description: 'Create and manage quotes'},'''
+        {value: 'webhooks:manage', label: 'Manage Webhooks', description: 'Set up and manage webhook endpoints'}
     ];
     const handleCreateKey = async () => {}
         if(!newKeyName.trim() || selectedScopes.length === 0)
@@ -30,11 +30,11 @@ export default function ApiKeysManager() {}
         setNewKeyName('');
         setSelectedScopes([]);
         setShowCreateDialog(false)};
-    const handleScopeToggle = (scope) => {}
+    const handleScopeToggle = (props: any) => {}
         setSelectedScopes(prev => prev.includes(scope)
             ? prev.filter(s => s !== scope)
             [...prev, scope])};
-    const getExampleCode = (apiKey) => {}
+    const getExampleCode = (props: any) => {}
 """
 """"
         return `curl -X GET "https://ziontechgroup.com/api/v1/jobs" \\""`
@@ -100,10 +100,10 @@ export default function ApiKeysManager() {}
           <p className="text-green-300 text-sm mb-3">'
             Copy this key now. You won't be able to see it again."""
           </p>""""
-          <CodeBlock code={newApiKey} className="mb-3"/>""""
+          <CodeBlock code={newApiKey} className="mb-3" />""""
           <div className="space-y-2">""""
             <p className="text-green-300 text-sm font-medium">Example Usage:</p>""""
-            <CodeBlock code={getExampleCode(newApiKey)} language="bash"/>"""
+            <CodeBlock code={getExampleCode(newApiKey)} language="bash" />"""
           </div>""""
           <Button onClick={clearNewApiKey} className="mt-3 bg-green-600 hover:bg-green-700">'
             I've Copied the Key;
@@ -141,21 +141,21 @@ export default function ApiKeysManager() {}
               """"
               <div className="flex items-center gap-2">""""
                 <Button variant="ghost" size="icon" onClick={() => toggleApiKey(apiKey.id)} className="text-zinc-400 hover:text-white">""""
-                  {apiKey.isActive ? <EyeOff className="h-4 w-4"/> : <Eye className="h-4 w-4"/>}
+                  {apiKey.isActive ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                 </Button>
                 <DropdownMenu>"""
                   <DropdownMenuTrigger asChild>""""
                     <Button variant="ghost" size="icon" className="text-zinc-400 hover:text-white">""""
-                      <MoreHorizontal className="h-4 w-4"/>
+                      <MoreHorizontal className="h-4 w-4" />
                     </Button>"""
                   </DropdownMenuTrigger>""""
                   <DropdownMenuContent align="end" className="bg-zinc-900 border-zinc-800 text-white">""""
                     <DropdownMenuItem onClick={() => setShowRegenerateConfirm(apiKey.id)} className="cursor-pointer">""""
-                      <RotateCcw className="h-4 w-4 mr-2"/>
+                      <RotateCcw className="h-4 w-4 mr-2" />
                       Regenerate Key"""
                     </DropdownMenuItem>""""
                     <DropdownMenuItem onClick={() => setShowDeleteConfirm(apiKey.id)} className="cursor-pointer text-red-500">""""
-                      <Trash2 className="h-4 w-4 mr-2"/>
+                      <Trash2 className="h-4 w-4 mr-2" />
                       Delete Key;
                     </DropdownMenuItem>
                   </DropdownMenuContent>
@@ -167,7 +167,7 @@ export default function ApiKeysManager() {}
             <div className="mt-3 pt-3 border-t border-zinc-800">"""
               <Popover>""""
                 <PopoverTrigger className="flex items-center hover:text-zinc-300">""""
-                  <Settings className="h-4 w-4 mr-2"/>""""
+                  <Settings className="h-4 w-4 mr-2" />""""
                   <span className="text-sm text-zinc-400">View Key</span>"""
                 </PopoverTrigger>""""
                 <PopoverContent className="bg-zinc-900 border-zinc-800 text-white w-64 p-3">""""
@@ -175,7 +175,7 @@ export default function ApiKeysManager() {}
                     <p className="text-xs text-zinc-400">API Key (first 8 characters):</p>""""
                     <code className="text-zinc-300 text-sm">{apiKey.key.substring(0, 8)}...</code>""""
                     <Button variant="ghost" size="sm" onClick={() => navigator.clipboard.writeText(apiKey.key)} className="w-full text-zinc-400 hover:text-white">""""
-                      <Copy className="h-4 w-4 mr-2"/>
+                      <Copy className="h-4 w-4 mr-2" />
                       Copy Full Key;
                     </Button>
                   </div>
@@ -232,12 +232,14 @@ export default function ApiKeysManager() {}
       </AlertDialog>
     </div>)}
 
-export { ApiKeysManager };
+export {ApiKeysManager};
 
-export { ApiKeysManager };
+export {ApiKeysManager};
 
-export { ApiKeysManager };
+export {ApiKeysManager};
 
-export { ApiKeysManager };
+export {ApiKeysManager};
 
-export { ApiKeysManager };
+export {ApiKeysManager};
+
+</Checkbox>

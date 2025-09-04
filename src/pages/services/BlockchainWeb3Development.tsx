@@ -7,7 +7,7 @@ import {
   Phone, Mail, MapPin, Smartphone, Database, Cpu
 } from 'lucide-react';
 
-const BlockchainWeb3Development = () => {
+const BlockchainWeb3Development = (props: any) => {
   const services = [
     {
       icon: Coin s,
@@ -545,3 +545,16 @@ const BlockchainWeb3Development = () => {
 };
 
 export default BlockchainWeb3Development;
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

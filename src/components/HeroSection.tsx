@@ -1,6 +1,6 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page() {
+export default function Page(props: any) {
 []}
 ;
 const heroSlides: HeroSlid e[] = [  {
@@ -66,10 +66,10 @@ const heroSlides: HeroSlid e[] = [  {
     ]},
 ];
 };
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const [direction, setDirection] = useState(0);
-  const [isLoading, setIsLoading] = useState(true);
+  const [currentSlide, setCurrentSlide] = useState<any>(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState<any>(true);
+  const [direction, setDirection] = useState<any>(0);
+  const [isLoading, setIsLoading] = useState<any>(true);
 
   // Memoize slides to prevent unnecessary re - renders
   
@@ -327,3 +327,19 @@ const heroSlides: HeroSlid e[] = [  {
     </section>) }
 export { HeroSection };
 '"`
+
+</button>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</any>
+</any>
+</any>
+</any>
+</5min>

@@ -1,9 +1,9 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import Link from 'next/link';
-import { Brain, Cpu, Shield, Zap, Rocket, Star, ChevronRight, CheckCircle, TrendingUp, Globe, Settings, Users, Play } from 'lucide-react';
+import {Brain, Cpu, Shield, Zap, Rocket, Star, ChevronRight, CheckCircle, TrendingUp, Globe, Settings, Users, Play} from 'lucide-react';
 export default function NextGenServicesShowcase2025
-export { NextGenServicesShowcase2025 }() {
+export {NextGenServicesShowcase2025}() {
     const featuredServices = [
         {
             id: 'ai-consciousness-simulator',
@@ -20,8 +20,7 @@ export { NextGenServicesShowcase2025 }() {
             ctaText: 'Explore AI Consciousness',
             path: '/ai-consciousness-simulation'
         },
-        {
-            id: 'quantum-ai-optimization',
+        {id: 'quantum-ai-optimization',
             title: 'Quantum-Enhanced AI Optimization Suite',
             description: 'Cutting-edge quantum computing integration with AI for exponentially faster optimization and breakthrough problem-solving.',
             price: '$35,000/month',
@@ -33,10 +32,8 @@ export { NextGenServicesShowcase2025 }() {
             popular: false,
             demoUrl: 'https://ziontechgroup.com/demo/quantum-ai',
             ctaText: 'Experience Quantum Power',
-            path: '/quantum-ai-optimization'
-        },
-        {
-            id: 'intelligent-edge-computing',
+            path: '/quantum-ai-optimization'},
+        {id: 'intelligent-edge-computing',
             title: 'Intelligent Edge Computing Platform',
             description: 'Next-generation edge computing infrastructure with AI acceleration, 5G integration, and real-time decision-making capabilities.',
             price: '$15,000/month',
@@ -48,10 +45,8 @@ export { NextGenServicesShowcase2025 }() {
             popular: false,
             demoUrl: 'https://ziontechgroup.com/demo/edge-computing',
             ctaText: 'Power Your Edge',
-            path: '/intelligent-edge-computing'
-        },
-        {
-            id: 'multimodal-ai-platform',
+            path: '/intelligent-edge-computing'},
+        {id: 'multimodal-ai-platform',
             title: 'Unified Multimodal AI Intelligence Platform',
             description: 'Advanced AI platform that processes text, images, audio, video, and sensor data simultaneously for comprehensive understanding.',
             price: '$22,000/month',
@@ -63,57 +58,44 @@ export { NextGenServicesShowcase2025 }() {
             popular: false,
             demoUrl: 'https://ziontechgroup.com/demo/multimodal-ai',
             ctaText: 'Unite Your AI',
-            path: '/multimodal-ai-platform'
-        }
+            path: '/multimodal-ai-platform'}
     ];
     const microSaasServices = [
-        {
-            title: 'AI-Powered Social Media Scheduling Suite',
+        {title: 'AI-Powered Social Media Scheduling Suite',
             description: 'Intelligent social media management with AI content generation and optimal posting optimization.',
             price: '$149/month',
             features['AI content generation', 'Optimal posting times', 'Multi-platform management'],;
             category: 'Marketing Automation',
-            trial: '14 days free'
-        },
-        {
-            title: 'Smart Inventory Optimization System',
+            trial: '14 days free'},
+        {title: 'Smart Inventory Optimization System',
             description: 'AI-driven inventory management that predicts demand and automates reordering to prevent stockouts.',
             price: '$299/month',
             features['Demand forecasting AI', 'Automated reorder points', 'Multi-location management'],;
             category: 'Supply Chain',
-            trial: '30 days free'
-        },
-        {
-            title: 'Customer Behavior Prediction Engine',
+            trial: '30 days free'},
+        {title: 'Customer Behavior Prediction Engine',
             description: 'Advanced analytics platform that predicts customer behavior and identifies churn risks.',
             price: '$399/month',
             features['Churn prediction modeling', 'Customer lifetime value', 'Behavioral pattern analysis'],;
             category: 'Customer Analytics',
-            trial: '21 days free'
-        }
+            trial: '21 days free'}
     ];
     const infrastructureServices = [
-        {
-            title: 'Quantum-Secure Cloud Infrastructure',
+        {title: 'Quantum-Secure Cloud Infrastructure',
             description: 'Revolutionary cloud infrastructure protected by quantum-resistant encryption for ultimate security.',
             price: '$25,000/month',
             features['Post-quantum cryptography', 'Quantum key distribution', 'Zero-trust security model'],;
-            category: 'Cloud Security'
-        },
-        {
-            title: 'Autonomous Infrastructure Management',
+            category: 'Cloud Security'},
+        {title: 'Autonomous Infrastructure Management',
             description: 'Self-managing IT infrastructure that automatically optimizes performance and resolves issues.',
             price: '$12,000/month',
             features['Autonomous healing systems', 'Predictive failure analysis', '24/7 automated operations'],;
-            category: 'Infrastructure Automation'
-        },
-        {
-            title: 'Blockchain Infrastructure as a Service',
+            category: 'Infrastructure Automation'},
+        {title: 'Blockchain Infrastructure as a Service',
             description: 'Complete blockchain platform supporting multiple protocols and enterprise-grade security.',
             price: '$20,000/month',
             features['Multi-protocol blockchain support', 'Smart contract deployment', 'DeFi integration platform'],;
-            category: 'Blockchain Infrastructure'
-        }
+            category: 'Blockchain Infrastructure'}
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
@@ -141,7 +123,7 @@ export { NextGenServicesShowcase2025 }() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 group">
                 Start Your Transformation
-                <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"/>
+                <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link to="/pricing" className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300">
                 View Pricing
@@ -187,14 +169,14 @@ export { NextGenServicesShowcase2025 }() {
 }} className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm group hover:border-cyan-500/50 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400/50' : ''}`}>
                 {service.popular && (<div className="absolute -top-3 left-8">
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
-                      <Star className="h-4 w-4 mr-1"/>
+                      <Star className="h-4 w-4 mr-1" />
                       Most Popular
                     </span>
                   </div>)}
                 
                 <div className="flex items-center mb-6">
                   <div className={`p-3 rounded-xl bg-gradient-to-r ${service.gradient} mr-4`}>
-                    <service.icon className="h-8 w-8 text-white"/>
+                    <service .icon className="h-8 w-8 text-white" />
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white">{service.title}</h3>
@@ -208,7 +190,7 @@ export { NextGenServicesShowcase2025 }() {
                   <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                   <ul className="space-y-2">
                     {service.features.map((feature, idx) => (<li key={idx} className="flex items-center text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0"/>
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>))}
                   </ul>
@@ -218,7 +200,7 @@ export { NextGenServicesShowcase2025 }() {
                   <h4 className="text-white font-semibold mb-3">Benefits:</h4>
                   <ul className="space-y-2">
                     {service.benefits.map((benefit, idx) => (<li key={idx} className="flex items-center text-gray-300">
-                        <TrendingUp className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0"/>
+                        <TrendingUp className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>))}
                   </ul>
@@ -231,7 +213,7 @@ export { NextGenServicesShowcase2025 }() {
                   </div>
                   <div className="flex gap-3">
                     <a href={service.demoUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-colors">
-                      <Play className="h-4 w-4 mr-2"/>
+                      <Play className="h-4 w-4 mr-2" />
                       Demo
                     </a>
                     <Link to="/contact" className={`inline-flex items-center px-6 py-2 bg-gradient-to-r ${service.gradient} text-white font-semibold rounded-lg hover:opacity-90 transition-opacity`}>
@@ -289,7 +271,7 @@ export { NextGenServicesShowcase2025 }() {
                 <div className="mb-4">
                   <ul className="space-y-1">
                     {service.features.map((feature, idx) => (<li key={idx} className="flex items-center text-gray-300 text-sm">
-                        <CheckCircle className="h-3 w-3 text-green-400 mr-2 flex-shrink-0"/>
+                        <CheckCircle className="h-3 w-3 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>))}
                   </ul>
@@ -354,7 +336,7 @@ export { NextGenServicesShowcase2025 }() {
                 <div className="mb-4">
                   <ul className="space-y-1">
                     {service.features.map((feature, idx) => (<li key={idx} className="flex items-center text-gray-300 text-sm">
-                        <Shield className="h-3 w-3 text-purple-400 mr-2 flex-shrink-0"/>
+                        <Shield className="h-3 w-3 text-purple-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>))}
                   </ul>
@@ -396,7 +378,7 @@ export { NextGenServicesShowcase2025 }() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-cyan-500 rounded-full mb-4">
-                  <Users className="h-6 w-6 text-white"/>
+                  <Users className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Expert Consultation</h3>
                 <p className="text-gray-300 text-sm">Get personalized recommendations from our technology experts</p>
@@ -404,7 +386,7 @@ export { NextGenServicesShowcase2025 }() {
               
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-500 rounded-full mb-4">
-                  <Settings className="h-6 w-6 text-white"/>
+                  <Settings className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Custom Solutions</h3>
                 <p className="text-gray-300 text-sm">Tailored implementations designed for your specific requirements</p>
@@ -412,7 +394,7 @@ export { NextGenServicesShowcase2025 }() {
               
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-green-500 rounded-full mb-4">
-                  <Rocket className="h-6 w-6 text-white"/>
+                  <Rocket className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Rapid Deployment</h3>
                 <p className="text-gray-300 text-sm">Fast implementation with dedicated support throughout the process</p>
@@ -432,13 +414,13 @@ export { NextGenServicesShowcase2025 }() {
                 </div>
                 <div>
                   <p className="text-cyan-400 font-semibold mb-2">📍 Address</p>
-                  <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                  <p className="text-white">364 E Main St STE 1008<br  />Middletown DE 19709</p>
                 </div>
               </div>
               <div className="mt-6">
                 <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 group">
                   Get Your Custom Quote
-                  <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"/>
+                  <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </div>
@@ -446,3 +428,13 @@ export { NextGenServicesShowcase2025 }() {
         </div>
       </section>
     </div>)}
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</1ms>

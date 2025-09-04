@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, {useState, useEffect} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
 
-export const AccessibilityPanel = ({ isOpen, onToggle }) => {
+export const AccessibilityPanel = (props: any) => {
     const [settings, setSettings] = useState({
         highContrast: false,
         fontSize: 100,
@@ -22,67 +22,47 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
             try {
                 const parsed = JSON.parse(savedSettings);
                 setSettings(prev => ({ ...prev, ...parsed }));
-            } catch (error) {
-                console.error('Failed to parse accessibility settings:', error);
-            }
+            } catch (error) {console.error('Failed to parse accessibility settings:', error);}
         }
     }, []);
 
-    useEffect(() => {
-        // Apply settings to document
+    useEffect(() => {// Apply settings to document
         applySettings(settings);
         // Save to localStorage
-        localStorage.setItem('accessibility-settings', JSON.stringify(settings));
-    }, [settings]);
+        localStorage.setItem('accessibility-settings', JSON.stringify(settings));}, [settings]);
 
-    const applySettings = (newSettings) => {
+    const applySettings = (props: any) => {
         const root = document.documentElement;
         
         // High contrast
         if (newSettings.highContrast) {
             root.style.setProperty('--high-contrast', '1');
             root.classList.add('high-contrast');
-        } else {
-            root.style.setProperty('--high-contrast', '0');
-            root.classList.remove('high-contrast');
-        }
+        } else {root.style.setProperty('--high-contrast', '0');
+            root.classList.remove('high-contrast');}
         
         // Font size
         root.style.setProperty('--font-size', `${newSettings.fontSize}%`);
         
         // Reduced motion
-        if (newSettings.reducedMotion) {
-            root.classList.add('reduced-motion');
-        } else {
-            root.style.setProperty('--reduced-motion', 'no-preference');
-        }
+        if (newSettings.reducedMotion) {root.classList.add('reduced-motion');} else {root.style.setProperty('--reduced-motion', 'no-preference');}
         
         // Apply focus indicator
-        if (settings.focusIndicator) {
-            root.style.setProperty('--focus-visible', 'auto');
-        } else {
-            root.style.setProperty('--focus-visible', 'none');
-        }
+        if (settings.focusIndicator) {root.style.setProperty('--focus-visible', 'auto');} else {root.style.setProperty('--focus-visible', 'none');}
         
         // Color blindness
         root.classList.remove('protanopia', 'deuteranopia', 'tritanopia');
-        if (newSettings.colorBlindness !== 'none') {
-            root.classList.add(newSettings.colorBlindness);
-        }
+        if (newSettings.colorBlindness !== 'none') {root.classList.add(newSettings.colorBlindness);}
         
         // Focus indicator
-        if (newSettings.focusIndicator) {
-            root.classList.add('focus-visible');
-        } else {
-            root.classList.remove('focus-visible');
-        }
+        if (newSettings.focusIndicator) {root.classList.add('focus-visible');} else {root.classList.remove('focus-visible');}
     };
 
-    const updateSetting = (key, value) => {
+    const updateSetting = (props: any) => {
         setSettings(prev => ({ ...prev, [key]: value }));
     };
 
-    const resetSettings = () => {
+    const resetSettings = (props: any) => {
         const defaultSettings = {
             highContrast: false,
             fontSize: 100,
@@ -186,3 +166,5 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
         </AnimatePresence>
     );
 };
+
+</motion>

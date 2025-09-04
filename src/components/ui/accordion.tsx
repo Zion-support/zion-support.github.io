@@ -15,12 +15,7 @@
             onToggle: : unknown handleToggle(child.props.value)
           })}
         return child})}
-export function Accordion({
-
-  children, ;
-  className = '', ;
-  type = 'single',;
-  defaultValue }: AccordionProps) {;
+export function Accordion(props: any) {;
   const [openItems, setOpenItems] = useState<string[]>(;
     defaultValue ? (Array.isArray(defaultValue) ? defaultValue : [defaultValue]) : [];
   );
@@ -58,12 +53,7 @@ interface AccordionItemProps extends React.PropsWithChildren<{}> {
   isOpen?: boolean;
   onToggle?: ()  => void}
 
-export function AccordionItem({
-
-  children,
-  className = '',
-  isOpen = false,;
-  onToggle}: AccordionItemProps) {;
+export function AccordionItem(props: any) {;
   return (;`    <div className={`border-b border-gray-200 ${className}`}> {React.Children.map(children: unknow n, (child: unknow n {;
         if (React.isValidElement(child)) {;
           return React.cloneElement(child, { isOpen, onToggle });
@@ -79,13 +69,7 @@ interface AccordionTriggerProps extends React.PropsWithChildren<{}> {
   isOpen?: boolean;
   onToggle?: ()  => void}
 
-export function AccordionTrigger({
-
-  children,
-  className = '',
-  isOpen = false,
-  onToggle
-}: AccordionTriggerProps) {
+export function AccordionTrigger(props: any) {
 
   return ()
     <button`
@@ -112,11 +96,7 @@ interface AccordionContentProps extends React.PropsWithChildren<{}> {;`
   className?: string;
   isOpen?: boolean}
 
-export function AccordionContent({
-
-  children,
-  className = '',
-  isOpen = false}: AccordionContentProps) {
+export function AccordionContent(props: any) {
 
   if (!isOpen) return null;
 
@@ -125,10 +105,7 @@ export function AccordionContent({
       {children}
     </div>
   )}
-export function AccordionContent({ ;
-  children, ;
-  className = '',;
-  isOpen = false}: AccordionContentProps) {;
+export function AccordionContent(props: any) {;
   if (!isOpen) return null;
 
   return ()`
@@ -136,3 +113,6 @@ export function AccordionContent({ ;
     </div>;
   )}
 '`
+</ChevronDown>
+</string>
+</div>

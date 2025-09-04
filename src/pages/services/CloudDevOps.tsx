@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Cloud, Code, CheckCircle, Users, Clock, ArrowRight, Play, Settings, Target, Cpu, Activity, Sparkles, Search, Zap, Globe, Building, DollarSign, BarChart3, TrendingUp, Network, Key, Fingerprint, Monitor, AlertTriangle, ShieldCheck, Globe2, Server, Database, Smartphone, GitBranch, Docker, Kubernetes, Terminal, Workflow, Rocket, RefreshCw, Shield, Lock } from 'lucide-react';
 
-const CloudDevOps = () => {
+const CloudDevOps = (props: any) => {
   const features = [
     {
       icon: Cloud,
@@ -328,3 +328,15 @@ const CloudDevOps = () => {
 
 export default CloudDevOps;
 
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

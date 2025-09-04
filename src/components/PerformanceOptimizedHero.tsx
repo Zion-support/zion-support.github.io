@@ -1,14 +1,14 @@
 import { Link  } from 'react-router-dom';
-export default function Page() {
+export default function Page(props: any) {
 </motion.div>}
 import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page() {
+export default function Page(props: any) {
 , { icon: Za p, text: "Digital Transformation", color: "from - yellow-500 to - orange - 500" };
   ];
 }) => {;
-  const [currentFeature, setCurrentFeature] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [currentFeature, setCurrentFeature] = useState<any>(0);
+  const [isVisible, setIsVisible] = useState<any>(false);
 
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -24,10 +24,10 @@ export default function Page() {
     }, 3000) ;
 return () => clearInterval(interval)}, [features.length]);
 
-    // // // // // // // // console.log('Hero CTA clicked');
+    // // // // // // // // 
   
     // Analytics tracking could be added here;
-    // console.log('Hero CTA clicked')}, []);
+    // }, []);
 
   const containerVariants = {
 
@@ -77,3 +77,9 @@ return ("
   )}
 
 export default PerformanceOptimizedHero;""
+
+</div>
+</SEO>
+</div>
+</any>
+</any>

@@ -3,12 +3,14 @@ import { Sun, Moon, Monitor type Theme = 'dark' | 'light' | 'system';
 type Theme = 'dark' | 'light' | 'system';
 
 interface ThemeToggleProps {
-  // Add your props here
 
-  className?: string}
+  // Add your props here: any;
+
+  className?: string
+}
 
 export const ThemeToggle: Reac t.FC<ThemeToggleProps> = ({ className = '' }) => {;
-  const [theme, setTheme] = useState<Theme>('system');  const [mounted, setMounted] = useState(false);
+  const [theme, setTheme] = useState<Theme>('system');  const [mounted, setMounted] = useState<any>(false);
 
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -154,3 +156,13 @@ export const ThemeToggle: Reac t.FC<ThemeToggleProps> = ({ className = '' }) => 
     </div>) };
 export default ThemeToggle;
 '"`
+
+</motion>
+</motion>
+</motion>
+</any>
+</motion>
+</any>
+</any>
+</Theme>
+</ThemeToggleProps>

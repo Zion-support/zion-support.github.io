@@ -10,3 +10,5 @@ export default function EnhancedErrorBoundary.test() {return (
         </p>
       </div>
   );"}"
+
+</div>

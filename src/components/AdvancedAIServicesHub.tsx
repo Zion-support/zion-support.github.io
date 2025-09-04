@@ -1,9 +1,9 @@
 import { Link  } from 'react-router-dom';
-export default function Page() {
+export default function Page(props: any) {
 }}}
 import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page() {
+export default function Page(props: any) {
 ,
     {
       id: 'ai-customer-support',
@@ -307,3 +307,12 @@ export default function Page() {
       </div>;
     </div>;) ;
 };
+
+</motion>
+</motion>
+</AnimatePresence>
+</motion>
+</button>
+</motion>
+</motion>
+</motion>

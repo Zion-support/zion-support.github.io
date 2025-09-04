@@ -1,16 +1,16 @@
-import React, { useState, createContext, useContext, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, CheckCircle, AlertTriangle, Info, AlertCircle, Bell } from 'lucide-react';
-import { Button } from "button.tsx";
+import React, {useState, createContext, useContext, useCallback} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {X, CheckCircle, AlertTriangle, Info, AlertCircle, Bell} from 'lucide-react';
+import {Button} from "button.tsx";
 // Context
 const NotificationContext = createContext(null);
 // Hook
-export function useNotifications() {
+export function useNotifications(props: any) {
     const context = useContext(NotificationContext);
     if (!context) {
         throw new Error('useNotifications must be used within a NotificationProvider')}
     return context}
-export function NotificationProvider({ children, maxNotifications = 5, position = 'top-right' }) {
+export function NotificationProvider(props: any) {
     const [notifications, setNotifications] = useState([]);
     const removeNotification = useCallback((id) => {
         setNotifications(prev => prev.filter(n => n.id !== id))}, []);
@@ -24,31 +24,25 @@ export function NotificationProvider({ children, maxNotifications = 5, position 
         
 
 };
-        setNotifications(prev => {
-            const updated = [newNotification, ...prev];
+        setNotifications(prev => {const updated = [newNotification, ...prev];
             return updated.slice(0, maxNotifications)});
         // Auto-dismiss after duration
         if (newNotification.duration && newNotification.duration > 0) {
             setTimeout(() => {
                 removeNotification(newNotification.id)}, newNotification.duration)}
     }, [maxNotifications, removeNotification]);
-    const clearAll = useCallback(() => {
-        setNotifications([])}, []);
-    const value = {
-  notifications,
+    const clearAll = useCallback(() => {setNotifications([])}, []);
+    const value = {notifications,
         addNotification,
         removeNotification,
-  clearAll
-    
-
-};
+  clearAll};
     return (<NotificationContext.Provider value={value}>
       {children}
-      <NotificationContainer position={position}/>
+      <NotificationContainer position={position} />
     </NotificationContext.Provider>)}
-function NotificationContainer({ position }) {
+function NotificationContainer(props: any) {
     const { notifications, clearAll } = useNotifications();
-    const getPositionClasses = (pos) => {
+    const getPositionClasses = (props: any) => {
         switch (pos) {
             case 'top-right':
                 return 'top-4 right-4';
@@ -71,7 +65,7 @@ function NotificationContainer({ position }) {
       {/* Header with clear all button */}
       {notifications.length > 1 && (<div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
-            <Bell className="w-4 h-4 text-zion-cyan"/>
+            <Bell className="w-4 h-4 text-zion-cyan" />
             <span className="text-zinc-300 text-sm font-medium">
               {notifications.length} notifications
             </span>
@@ -84,26 +78,26 @@ function NotificationContainer({ position }) {
       {/* Notifications */}
       <div className="space-y-2">
         <AnimatePresence mode="popLayout">
-          {notifications.map((notification) => (<NotificationItem key={notification.id} notification={notification}/>))}
+          {notifications.map((notification) => (<NotificationItem key={notification.id} notification={notification} />))}
         </AnimatePresence>
       </div>
     </div>)}
-function NotificationItem({ notification }) {
+function NotificationItem(props: any) {
     const { removeNotification } = useNotifications();
-    const getIcon = (type) => {
+    const getIcon = (props: any) => {
         switch (type) {
             case 'success':
-                return <CheckCircle className="w-5 h-5 text-green-400"/>;
+                return <CheckCircle className="w-5 h-5 text-green-400" />;
             case 'error':
-                return <AlertCircle className="w-5 h-5 text-red-400"/>;
+                return <AlertCircle className="w-5 h-5 text-red-400" />;
             case 'warning':
-                return <AlertTriangle className="w-5 h-5 text-yellow-400"/>;
+                return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
             case 'info':
-                return <Info className="w-5 h-5 text-blue-400"/>;
+                return <Info className="w-5 h-5 text-blue-400" />;
             default:
-                return <Info className="w-5 h-5 text-blue-400"/>}
+                return <Info className="w-5 h-5 text-blue-400" />}
     };
-    const getTypeClasses = (type) => {
+    const getTypeClasses = (props: any) => {
         switch (type) {
             case 'success':
                 return 'border-green-500/30 bg-green-500/10';
@@ -116,7 +110,7 @@ function NotificationItem({ notification }) {
             default:
                 return 'border-zion-blue-light/30 bg-zion-blue/10'}
     };
-    const getProgressColor = (type) => {
+    const getProgressColor = (props: any) => {
         switch (type) {
             case 'success':
                 return 'bg-green-400';
@@ -151,11 +145,11 @@ function NotificationItem({ notification }) {
 }
         }} className={`relative overflow-hidden border rounded-xl p-4 backdrop-blur-sm ${getTypeClasses(notification.type)}`}>
       {/* Progress Bar */}
-      {notification.duration && notification.duration > 0 && (<motion.div className={`absolute top-0 left-0 h-1 ${getProgressColor(notification.type)}`} initial={{ width: '100%' }} animate={{ width: '0%' }} transition = {
+      {notification.duration && notification.duration > 0 && (<motion .div className={`absolute top-0 left-0 h-1 ${getProgressColor(notification.type)}`} initial={{ width: '100%' }} animate={{ width: '0%' }} transition = {
   { duration: notification.duration / 1000,
   ease: "linear" 
 
-}}/>)}
+}} />)}
 
       <div className="flex items-start gap-3">
         {/* Icon */}
@@ -182,7 +176,7 @@ function NotificationItem({ notification }) {
 
         {/* Dismiss Button */}
         {notification.dismissible && (<button onClick={() => removeNotification(notification.id)} className="flex-shrink-0 p-1 rounded hover:bg-white/10 transition-colors duration-200">
-            <X className="w-4 h-4 text-zinc-400 hover:text-white"/>
+            <X className="w-4 h-4 text-zinc-400 hover:text-white" />
           </button>)}
       </div>
 
@@ -192,5 +186,9 @@ function NotificationItem({ notification }) {
       </div>
     </motion.div>)}
 // Convenience functions for quick notifications
-export function showInfo(title, message, options) {
+export function showInfo(props: any) {
     return { type: 'info', title, message, ...options }}
+
+</motion>
+</motion>
+</NotificationContext>

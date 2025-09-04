@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  Brain,
+import React, {useState} from 'react';
+import {motion} from 'framer-motion';
+import {Brain,
   Zap,
   Shield,
   CheckCircle,
@@ -575,35 +574,28 @@ import {
   CheckCircle,
   Shield,
   Zap,
-  Brain
-} from 'lucide-react';
+  Brain} from 'lucide-react';
 
     technologies["AI", "Financial Analytics", "Risk Models", "Machine Learning"]
   }
 ];
 
 const businessTechnologies = [
-  {
-    name: "AI & Machine Learning",
+  {name: "AI & Machine Learning",
     description: "Advanced AI algorithms for business intelligence",
     icon: Brain,
     useCase: "Business Intelligence",
-    reliability: "Critical"
-  },
-  {
-    name: "Data Analytics",
+    reliability: "Critical"},
+  {name: "Data Analytics",
     description: "Comprehensive data analysis and visualization",
     icon: BarChart3,
     useCase: "Data Insights",
-    reliability: "Critical"
-  },
-  {
-    name: "Process Automation",
+    reliability: "Critical"},
+  {name: "Process Automation",
     description: "Intelligent automation of business processes",
     icon: Cog,
     useCase: "Process Optimization",
-    reliability: "High"
-  },
+    reliability: "High"},
   {
     name: "Predictive Analytics",
     description: "AI-powered forecasting and planning",
@@ -623,15 +615,13 @@ const successStories = [
     results: "30% cost reduction, 40% efficiency improvement, 25% revenue increase, better decision making",
     logo: "GMC"
   },
-  {
-    id: 2,
+  {id: 2,
     comp: "Financial Services Group",
     industry: "Finance",
     challenge: "Required autonomous financial management and risk assessment",
     solution: "Implemented AI-driven financial planning and risk management system",
     results: "50% faster financial planning, 60% risk reduction, improved compliance, better ROI",
-    logo: "FSG"
-  },
+    logo: "FSG"},
   {
     id: 3,
     comp: "Retail Chain Network",
@@ -651,20 +641,16 @@ const processSteps = [
     icon: FileText,
     duration: "2-4 weeks"
   },
-  {
-    step: 2,
+  {step: 2,
     title: "AI Strategy Development",
     description: "Develop AI strategy and implementation roadmap",
     icon: Code,
-    duration: "4-8 weeks"
-  },
-  {
-    step: 3,
+    duration: "4-8 weeks"},
+  {step: 3,
     title: "System Implementation",
     description: "Build and deploy AI business management systems",
     icon: Wrench,
-    duration: "16-40 weeks"
-  },
+    duration: "16-40 weeks"},
   {
     step: 4,
     title: "Optimization & Training",
@@ -681,28 +667,22 @@ const businessBenefits = [
     icon: Brain,
     examples["Data-driven insights", "Predictive analytics", "Risk assessment", "Strategic planning"];
   },;
-  {
-    title: "Process Automation",
+  {title: "Process Automation",
     description: "Automated workflows reduce manual effort and improve efficiency",
     icon: Zap,
-    examples["Workflow automation", "Process optimization", "Reduced errors", "Faster execution"];
-  },;
-  {
-    title: "Cost Optimization",
+    examples["Workflow automation", "Process optimization", "Reduced errors", "Faster execution"];},;
+  {title: "Cost Optimization",
     description: "AI identifies cost-saving opportunities and optimizes resource allocation",
     icon: TrendingUp,
-    examples["Resource optimization", "Cost reduction", "Efficiency improvement", "Better ROI"];
-  },;
-  {
-    title: "Competitive Advantage",
+    examples["Resource optimization", "Cost reduction", "Efficiency improvement", "Better ROI"];},;
+  {title: "Competitive Advantage",
     description: "AI capabilities provide strategic advantages in the marketplace",
     icon: Rocket,
-    examples["Market insights", "Customer intelligence", "Innovation acceleration", "Strategic positioning"];
-  }
+    examples["Market insights", "Customer intelligence", "Innovation acceleration", "Strategic positioning"];}
 ];
 
 export default function AIAutonomousBusinessManager
-export { AIAutonomousBusinessManager }() {
+export {AIAutonomousBusinessManager}() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 
@@ -723,7 +703,7 @@ export { AIAutonomousBusinessManager }() {
         </div>
 
         <div className="container-responsive relative z-10">
-          <motion.div
+          <motion .div
             initial = {
   { opacity: 0,
   y: 30 
@@ -780,7 +760,7 @@ export { AIAutonomousBusinessManager }() {
 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
 
-              <Brain className="w-10 h-10 text-white" />
+              <Brain className="w-10 h-10 text-white"  />
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -795,15 +775,15 @@ export { AIAutonomousBusinessManager }() {
 
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-zion-cyan">
-                <Brain className="w-4 h-4" />
+                <Brain className="w-4 h-4"  />
                 <span>AI Intelligence</span>
               </div>
               <div className="flex items-center gap-2 text-zion-purple">
-                <BarChart3 className="w-4 h-4" />
+                <BarChart3 className="w-4 h-4"  />
                 <span>Business Analytics</span>
               </div>
               <div className="flex items-center gap-2 text-zion-blue">
-                <Cog className="w-4 h-4" />
+                <Cog className="w-4 h-4"  />
                 <span>Process Automation</span>
               </div>
             </div>
@@ -881,7 +861,7 @@ export { AIAutonomousBusinessManager }() {
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="w-8 h-8 text-white" />
+                  <benefit .icon className="w-8 h-8 text-white"  />
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">{benefit.title}</h3>
@@ -891,7 +871,7 @@ export { AIAutonomousBusinessManager }() {
                   <h4 className="text-zion-cyan font-semibold mb-3">Examples:</h4>
                   {benefit.examples.map((example, exampleIndex) => (
                     <div key={exampleIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0"  />
                       <span className="text-zion-slate-light text-sm">{example}</span>
                     </div>
                   ))}
@@ -972,7 +952,7 @@ export { AIAutonomousBusinessManager }() {
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <technology.icon className="w-8 h-8 text-white" />
+                  <technology .icon className="w-8 h-8 text-white"  />
                 </div>
 
                 <h3 className="text-xl font-bold text-white mb-3">{technology.name}</h3>
@@ -1065,7 +1045,7 @@ export { AIAutonomousBusinessManager }() {
 
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
-                    <step.icon className="w-8 h-8 text-white" />
+                    <step .icon className="w-8 h-8 text-white"  />
                   </div>
                   <div className="absolute -top-2 -right-2 w-8 h-8 bg-zion-blue rounded-full flex items-center justify-center text-white text-sm font-bold">
                     {step.step}
@@ -1171,7 +1151,7 @@ export { AIAutonomousBusinessManager }() {
                 onClick={() => setSelectedSolution(solution)}
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
-                  <solution.icon className="w-8 h-8 text-white" />
+                  <solution .icon className="w-8 h-8 text-white"  />
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
@@ -1180,7 +1160,7 @@ export { AIAutonomousBusinessManager }() {
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0"  />
                       <span className="text-zion-slate-light text-sm">{feature}</span>
                     </div>
                   ))}
@@ -1208,7 +1188,7 @@ export { AIAutonomousBusinessManager }() {
                   </span>
                   <button className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors duration-300">
                     <span className="text-sm font-medium">Learn More</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4"  />
                   </button>
                 </div>
               </motion.div>
@@ -1313,7 +1293,7 @@ export { AIAutonomousBusinessManager }() {
 
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current"  />
                   ))}
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
@@ -1375,3 +1355,17 @@ export { AIAutonomousBusinessManager }() {
       </section>
     </div>
   )}
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

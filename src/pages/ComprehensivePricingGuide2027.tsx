@@ -98,10 +98,10 @@ import {
 import { SEO } from '../components/SEO';
 import { COMPREHENSIVE_SERVICES_INDEX_2030 } from '../data/comprehensiveServicesIndex2030';
 
-export default function ComprehensivePricingGuide2027() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-  const [sortBy, setSortBy] = useState('rating');
+export default function ComprehensivePricingGuide2027(props: any) {
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<any>('all');
+  const [sortBy, setSortBy] = useState<any>('rating');
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Zap, color: 'from-cyan-500 to-blue-500' },
@@ -171,14 +171,14 @@ export default function ComprehensivePricingGuide2027() {
     }
   });
 
-  const getPriceRangeColor = (price: number) => {
+  const getPriceRangeColor = (props: any) => {
     if (price <= 500) return 'text-green-400';
     if (price <= 2000) return 'text-yellow-400';
     if (price <= 5000) return 'text-orange-400';
     return 'text-red-400';
   };
 
-  const getPriceRangeBadge = (price: number) => {
+  const getPriceRangeBadge = (props: any) => {
     if (price <= 500) return { text: 'Budget', color: 'bg-green-500/20 text-green-400' };
     if (price <= 2000) return { text: 'Mid-Range', color: 'bg-yellow-500/20 text-yellow-400' };
     if (price <= 5000) return { text: 'Premium', color: 'bg-orange-500/20 text-orange-400' };
@@ -653,3 +653,10 @@ export default function ComprehensivePricingGuide2027() {
     </>
   );
 }
+
+</motion>
+</motion>
+</SEO>
+</any>
+</any>
+</any>

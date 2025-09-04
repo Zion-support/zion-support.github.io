@@ -1,9 +1,9 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion';
-import { Eye, Heart, Share2, Play, Pause, RotateCcw, Grid, List, Search, Star, Zap, Shield, Globe, Rocket, Brain, Settings, TrendingUp, X } from 'lucide-react';
-import { Button } from "button.tsx";
-import { Badge } from "badge.tsx";
-export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = false, showFilters = true, onCardClick, onAction, className = "" }) {
+import React, {useState, useRef, useEffect, useCallback} from 'react';
+import {motion, AnimatePresence, useMotionValue, useSpring, useTransform} from 'framer-motion';
+import {Eye, Heart, Share2, Play, Pause, RotateCcw, Grid, List, Search, Star, Zap, Shield, Globe, Rocket, Brain, Settings, TrendingUp, X} from 'lucide-react';
+import {Button} from "button.tsx";
+import {Badge} from "badge.tsx";
+export function Card3DGallery(props: any) {
     const [selectedItem, setSelectedItem] = useState(null);
     const [viewMode, setViewMode] = useState('grid');
     const [filters, setFilters] = useState({
@@ -21,8 +21,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
     const galleryRef = useRef(null);
     // Filter and sort items
     const filteredAndSortedItems = items
-        .filter(item => {
-        const matchesComplexity = filters.complexity.length === 0 || filters.complexity.includes(item.metadata.complexity);
+        .filter(item => {const matchesComplexity = filters.complexity.length === 0 || filters.complexity.includes(item.metadata.complexity);
         const matchesFeatured = !filters.featured || item.metadata.featured;
         return matchesSearch && matchesCategory && matchesStatus && matchesComplexity && matchesVerified && matchesFeatured})
         .sort((a, b) => {
@@ -46,10 +45,8 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                 break;
             default:
                 return 0}
-        if (sortOrder === 'asc') {
-            return aValue > bValue ? 1 : -1}
-        else {
-            return aValue < bValue ? 1 : -1}
+        if (sortOrder === 'asc') {return aValue > bValue ? 1 : -1}
+        else {return aValue < bValue ? 1 : -1}
     });
     // Auto-play carousel
     useEffect(() => {
@@ -59,14 +56,12 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
             setCurrentCarouselIndex(prev => (prev + 1) % filteredAndSortedItems.length)}, 3000);
         return () => clearInterval(interval)}, [isPlaying, viewMode, filteredAndSortedItems.length]);
     // Handle card click
-    const handleCardClick = useCallback((item) => {
-        setSelectedItem(item);
+    const handleCardClick = useCallback((item) => {setSelectedItem(item);
         onCardClick?.(item)}, [onCardClick]);
     // Handle action click
-    const handleActionClick = useCallback((itemId, action) => {
-        onAction?.(itemId, action)}, [onAction]);
+    const handleActionClick = useCallback((itemId, action) => {onAction?.(itemId, action)}, [onAction]);
     // Get status color
-    const getStatusColor = (status) => {
+    const getStatusColor = (props: any) => {
         switch (status) {
             case 'active':
                 return 'border-green-500/50 bg-green-500/10 text-green-400';
@@ -80,7 +75,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                 return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400'}
     };
     // Get complexity color
-    const getComplexityColor = (complexity) => {
+    const getComplexityColor = (props: any) => {
         switch (complexity) {
             case 'beginner':
                 return 'border-green-500/50 bg-green-500/10 text-green-400';
@@ -94,7 +89,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                 return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400'}
     };
     // Get category icon
-    const getCategoryIcon = (category) => {
+    const getCategoryIcon = (props: any) => {
         const iconMap = {
   'AI & ML': Brain,
             'Cybersecurity': Shield,
@@ -125,20 +120,20 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
             {['grid', 'list', 'carousel'].map((mode) => (<button key={mode} onClick={() => setViewMode(mode)} className={`px-3 py-1 rounded-md text-xs font-medium transition-all duration-200 ${viewMode === mode
                 ? 'bg-zion-cyan text-zion-blue-dark'
                 : 'text-zinc-400 hover:text-white'}`}>
-                {mode === 'grid' ? <Grid className="w-4 h-4"/> :
-                mode === 'list' ? <List className="w-4 h-4"/> :
-                    <Play className="w-4 h-4"/>}
+                {mode === 'grid' ? <Grid className="w-4 h-4" /> :
+                mode === 'list' ? <List className="w-4 h-4" /> :
+                    <Play className="w-4 h-4" />}
               </button>))}
           </div>
           
           {/* Carousel Controls */}
           {viewMode === 'carousel' && (<div className="flex items-center gap-2 bg-zion-blue/20 rounded-lg p-1">
               <Button size="sm" variant="ghost" onClick={() => setIsPlaying(!isPlaying)} className="text-zinc-400 hover:text-white p-2">
-                {isPlaying ? <Pause className="w-4 h-4"/> : <Play className="w-4 h-4"/>}
+                {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
               </Button>
               
               <Button size="sm" variant="ghost" onClick={() => setCurrentCarouselIndex(0)} className="text-zinc-400 hover:text-white p-2">
-                <RotateCcw className="w-4 h-4"/>
+                <RotateCcw className="w-4 h-4" />
               </Button>
             </div>)}
           
@@ -160,32 +155,32 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
       {showFilters && (<div className="mb-6 space-y-4">
           {/* Search */}
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zinc-400"/>
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zinc-400" />
             <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search cards..." className="w-full pl-10 pr-4 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"/>
           </div>
           
           {/* Filter Chips */}
           <div className="flex flex-wrap gap-2">
-            <Button size="sm" variant={filters.verified ? "default" : "outline"} onClick = {
+            <Button size="sm" variant={filters.verified ? "default" : "outline"} onClick={
   () => setFilters(prev => ({ ...prev,
   verified: !prev.verified 
 
 }))} className={filters.verified ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-300 hover:text-white'}>
-              <Shield className="w-4 h-4 mr-1"/>
+              <Shield className="w-4 h-4 mr-1" />
               Verified Only
             </Button>
             
-            <Button size="sm" variant={filters.featured ? "default" : "outline"} onClick = {
+            <Button size="sm" variant={filters.featured ? "default" : "outline"} onClick={
   () => setFilters(prev => ({ ...prev,
   featured: !prev.featured 
 
 }))} className={filters.featured ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-300 hover:text-white'}>
-              <Star className="w-4 h-4 mr-1"/>
+              <Star className="w-4 h-4 mr-1" />
               Featured Only
             </Button>
             
             {/* Category Filters */}
-            {['AI & ML', 'Cybersecurity', 'Cloud', 'Development', 'Analytics'].map((category) => (<Button key={category} size="sm" variant={filters.category.includes(category) ? "default" : "outline"} onClick = {
+            {['AI & ML', 'Cybersecurity', 'Cloud', 'Development', 'Analytics'].map((category) => (<Button key={category} size="sm" variant={filters.category.includes(category) ? "default" : "outline"} onClick={
   () => setFilters(prev => ({
                     ...prev,
                     category: prev.category.includes(category)
@@ -224,7 +219,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
               <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-zion-cyan to-zion-blue flex items-center justify-center">
                 {(() => {
                     const CategoryIcon = getCategoryIcon(item.category);
-                    return <CategoryIcon className="w-8 h-8 text-white"/>})()}
+                    return <CategoryIcon className="w-8 h-8 text-white" />})()}
               </div>
               
               {/* Content */}
@@ -241,7 +236,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                 <p className="text-zinc-400 text-sm line-clamp-2">{item.description}</p>
                 <div className="flex items-center gap-4 mt-2 text-xs text-zinc-500">
                   <span className="flex items-center gap-1">
-                    <Star className="w-3 h-3 fill-yellow-400 text-yellow-400"/>
+                    <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
                     {item.rating}
                   </span>
                   <span>({item.reviews} reviews)</span>
@@ -255,7 +250,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                 {item.actions?.map((action, actionIndex) => (<Button key={actionIndex} size="sm" variant={action.variant || 'outline'} onClick={(e) => {
                         e.stopPropagation();
                         action.action()}} disabled={action.disabled} className="text-xs">
-                    <action.icon className="w-3 h-3 mr-1"/>
+                    <action .icon className="w-3 h-3 mr-1" />
                     {action.label}
                   </Button>))}
               </div>
@@ -302,7 +297,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-xl font-semibold text-white">{selectedItem.title}</h3>
                 <Button size="sm" variant="ghost" onClick={() => setSelectedItem(null)} className="text-zinc-400 hover:text-white">
-                  <X className="w-4 h-4"/>
+                  <X className="w-4 h-4" />
                 </Button>
               </div>
               
@@ -312,7 +307,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                   <div className="w-full h-48 rounded-lg bg-gradient-to-br from-zion-cyan to-zion-blue flex items-center justify-center mb-4">
                     {(() => {
                 const CategoryIcon = getCategoryIcon(selectedItem.category);
-                return <CategoryIcon className="w-24 h-24 text-white"/>})()}
+                return <CategoryIcon className="w-24 h-24 text-white" />})()}
                   </div>
                   
                   <div className="space-y-3">
@@ -330,7 +325,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                     
                     <div className="flex items-center gap-4 text-sm text-zinc-400">
                       <span className="flex items-center gap-1">
-                        <Star className="w-4 h-4 fill-yellow-400 text-yellow-400"/>
+                        <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                         {selectedItem.rating} ({selectedItem.reviews} reviews)
                       </span>
                       <span>•</span>
@@ -349,7 +344,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                     <h4 className="text-white font-medium mb-2">Features</h4>
                     <div className="space-y-1">
                       {selectedItem.features.map((feature, index) => (<div key={index} className="flex items-center gap-2 text-sm text-zinc-300">
-                          <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"/>
+                          <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full" />
                           {feature}
                         </div>))}
                     </div>
@@ -368,7 +363,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                       <h4 className="text-white font-medium mb-2">Actions</h4>
                       <div className="flex flex-wrap gap-2">
                         {selectedItem.actions.map((action, index) => (<Button key={index} size="sm" variant={action.variant || 'outline'} onClick={action.action} disabled={action.disabled}>
-                            <action.icon className="w-4 h-4 mr-2"/>
+                            <action .icon className="w-4 h-4 mr-2" />
                             {action.label}
                           </Button>))}
                       </div>
@@ -379,26 +374,23 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
           </motion.div>)}
       </AnimatePresence>
     </div>)}
-function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, getComplexityColor, getCategoryIcon, isCarousel = false }) {
+function Card3D(props: any) {
     const [isHovered, setIsHovered] = useState(false);
     const [isLiked, setIsLiked] = useState(false);
     const x = useMotionValue(0);
     const y = useMotionValue(0);
     const rotateY = useSpring(useTransform(x, [-100, 100], [-15, 15]), { stiffness: 300, damping: 30 });
     const CategoryIcon = getCategoryIcon(item.category);
-    const handleMouseMove = useCallback((event) => {
-        if (!isHovered)
+    const handleMouseMove = useCallback((event) => {if (!isHovered)
             return;
         const rect = event.currentTarget.getBoundingClientRect();
         const centerY = rect.top + rect.height / 2;
         x.set(event.clientX - centerX);
         y.set(event.clientY - centerY)}, [isHovered, x, y]);
-    const handleMouseLeave = useCallback(() => {
-        x.set(0);
+    const handleMouseLeave = useCallback(() => {x.set(0);
         y.set(0);
         setIsHovered(false)}, [x, y]);
-    const handleLike = useCallback((e) => {
-        e.stopPropagation();
+    const handleLike = useCallback((e) => {e.stopPropagation();
         setIsLiked(!isLiked)}, [isLiked]);
     return (<motion.div className={`relative group cursor-pointer ${isCarousel ? 'mx-4' : ''}`} onMouseEnter={() => setIsHovered(true)} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} onClick={onClick} initial = {
   { opacity: 0,
@@ -413,24 +405,17 @@ function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, get
   delay: index * 0.1 
 
 }} whileHover={{ scale: 1.02 }}>
-      <motion.div className="relative w-full h-80 rounded-xl border border-zion-blue-light/30 overflow-hidden bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue/40 backdrop-blur-sm" style = {
-  {
-            transformStyle: 'preserve-3d',
-            rotateX,
-            rotateY,
-  transform: isHovered ? 'translateZ(20px)' : 'translateZ(0px)'
-        
-
-}} transition={{ duration: 0.3 }}>
+      <motion.div className="relative w-full h-80 rounded-xl border border-zion-blue-light/30 overflow-hidden bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue/40 backdrop-blur-sm" style="{{{
+            transformStyle: 'preserve-3d'; transform: isHovered ? 'translateZ(20px)'}}"} transition={{ duration: 0.3 }}>
         {/* Background Image/Pattern */}
-        <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-transparent to-zion-purple/20"/>
+        <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-transparent to-zion-purple/20" />
         
         {/* Content */}
         <div className="relative z-10 p-6 h-full flex flex-col">
           {/* Header */}
           <div className="flex items-start justify-between mb-4">
             <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-zion-cyan to-zion-blue flex items-center justify-center">
-              <CategoryIcon className="w-6 h-6 text-white"/>
+              <CategoryIcon className="w-6 h-6 text-white" />
             </div>
             
             <div className="flex items-center gap-2">
@@ -458,7 +443,7 @@ function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, get
             {/* Rating and Downloads */}
             <div className="flex items-center justify-between text-xs text-zinc-400">
               <span className="flex items-center gap-1">
-                <Star className="w-3 h-3 fill-yellow-400 text-yellow-400"/>
+                <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
                 {item.rating} ({item.reviews})
               </span>
               <span>{item.metadata.downloads.toLocaleString()} downloads</span>
@@ -474,21 +459,32 @@ function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, get
             {/* Actions */}
             <div className="flex items-center gap-2">
               <Button size="sm" variant="ghost" onClick={handleLike} className={`p-2 text-xs ${isLiked ? 'text-red-400 hover:text-red-300' : 'text-zinc-400 hover:text-white'}`}>
-                <Heart className={`w-4 h-4 ${isLiked ? 'fill-current' : ''}`}/>
+                <Heart className={`w-4 h-4 ${isLiked ? 'fill-current' : ''}`} />
               </Button>
               
               <Button size="sm" variant="ghost" className="p-2 text-zinc-400 hover:text-white text-xs">
-                <Share2 className="w-4 h-4"/>
+                <Share2 className="w-4 h-4" />
               </Button>
               
               <Button size="sm" variant="ghost" className="p-2 text-zinc-400 hover:text-white text-xs">
-                <Eye className="w-4 h-4"/>
+                <Eye className="w-4 h-4" />
               </Button>
             </div>
           </div>
         </div>
         
         {/* Hover Overlay */}
-        <motion.div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" initial={{ opacity: 0 }} whileHover={{ opacity: 1 }}/>
+        <motion .div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" initial={{ opacity: 0 }} whileHover={{ opacity: 1 }} />
       </motion.div>
     </motion.div>)}
+
+</motion>
+</motion>
+</motion>
+</motion>
+</button>
+</Card3D>
+</motion>
+</motion>
+</Card3D>
+</div>

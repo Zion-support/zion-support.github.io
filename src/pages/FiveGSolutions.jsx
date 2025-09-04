@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  Wifi,
+import React, {useState} from 'react';
+import {motion} from 'framer-motion';
+import {Wifi,
   Zap,
   Shield,
   CheckCircle,
@@ -45,35 +44,28 @@ import {
   Satellite,
   Antenna,
   Router,
-  Tower
-} from 'lucide-react';
+  Tower} from 'lucide-react';
 
     technologies["5G Networks", "Industrial IoT", "AI Analytics", "Predictive Maintenance"]
   }
 ];
 
 const fiveGTechnologies = [
-  {
-    name: "5G Core Network",
+  {name: "5G Core Network",
     description: "Next-generation core network architecture for 5G services",
     icon: Server,
     useCase: "Network Services",
-    reliability: "Critical"
-  },
-  {
-    name: "Radio Access Network",
+    reliability: "Critical"},
+  {name: "Radio Access Network",
     description: "Advanced radio technologies for high-speed wireless connectivity",
     icon: Antenna,
     useCase: "Wireless Access",
-    reliability: "Critical"
-  },
-  {
-    name: "Edge Computing",
+    reliability: "Critical"},
+  {name: "Edge Computing",
     description: "Distributed computing at the network edge for low-latency applications",
     icon: Cloud,
     useCase: "Low-latency Apps",
-    reliability: "High"
-  },
+    reliability: "High"},
   {
     name: "Network Slicing",
     description: "Virtual network segmentation for different service requirements",
@@ -93,15 +85,13 @@ const successStories = [
     results: "10x faster data transmission, 50% reduction in response times, enhanced smart city services",
     logo: "MC"
   },
-  {
-    id: 2,
+  {id: 2,
     comp: "Advanced Manufacturing Corp",
     industry: "Manufacturing",
     challenge: "Required real-time monitoring and control of 500+ production machines",
     solution: "Built private 5G network with industrial IoT and edge computing",
     results: "Real-time machine monitoring, 30% improvement in production efficiency, predictive maintenance",
-    logo: "AMC"
-  },
+    logo: "AMC"},
   {
     id: 3,
     comp: "Regional Hospital Network",
@@ -121,20 +111,16 @@ const processSteps = [
     icon: FileText,
     duration: "2-4 weeks"
   },
-  {
-    step: 2,
+  {step: 2,
     title: "Network Design",
     description: "Design 5G network architecture and infrastructure",
     icon: Code,
-    duration: "4-8 weeks"
-  },
-  {
-    step: 3,
+    duration: "4-8 weeks"},
+  {step: 3,
     title: "Infrastructure Deployment",
     description: "Deploy 5G core network, RAN, and edge computing",
     icon: Wrench,
-    duration: "24-72 weeks"
-  },
+    duration: "24-72 weeks"},
   {
     step: 4,
     title: "Testing & Optimization",
@@ -151,28 +137,22 @@ const fiveGBenefits = [
     icon: Zap,
     examples["Gigabit speeds", "Instant downloads", "Real-time streaming"];
   },;
-  {
-    title: "Low Latency",
+  {title: "Low Latency",
     description: "Ultra-low latency for real-time applications and services",
     icon: Clock,
-    examples["Real-time gaming", "Autonomous vehicles", "Remote surgery"];
-  },;
-  {
-    title: "Massive Connectivity",
+    examples["Real-time gaming", "Autonomous vehicles", "Remote surgery"];},;
+  {title: "Massive Connectivity",
     description: "Support for millions of IoT devices per square kilometer",
     icon: Network,
-    examples["Smart cities", "Industrial IoT", "Connected devices"];
-  },;
-  {
-    title: "Network Slicing",
+    examples["Smart cities", "Industrial IoT", "Connected devices"];},;
+  {title: "Network Slicing",
     description: "Virtual network segmentation for different service requirements",
     icon: Layers,
-    examples["Customized services", "Service isolation", "Quality guarantees"];
-  }
+    examples["Customized services", "Service isolation", "Quality guarantees"];}
 ];
 
 export default function FiveGSolutions
-export { FiveGSolutions }() {
+export {FiveGSolutions}() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 
@@ -193,7 +173,7 @@ export { FiveGSolutions }() {
         </div>
 
         <div className="container-responsive relative z-10">
-          <motion.div
+          <motion .div
             initial = {
   { opacity: 0,
   y: 30 
@@ -250,7 +230,7 @@ export { FiveGSolutions }() {
 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
 
-              <Signal className="w-10 h-10 text-white" />
+              <Signal className="w-10 h-10 text-white"  />
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -265,15 +245,15 @@ export { FiveGSolutions }() {
 
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-zion-cyan">
-                <Zap className="w-4 h-4" />
+                <Zap className="w-4 h-4"  />
                 <span>Ultra-High Speed</span>
               </div>
               <div className="flex items-center gap-2 text-zion-purple">
-                <Clock className="w-4 h-4" />
+                <Clock className="w-4 h-4"  />
                 <span>Low Latency</span>
               </div>
               <div className="flex items-center gap-2 text-zion-blue">
-                <Network className="w-4 h-4" />
+                <Network className="w-4 h-4"  />
                 <span>Massive Connectivity</span>
               </div>
             </div>
@@ -351,7 +331,7 @@ export { FiveGSolutions }() {
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="w-8 h-8 text-white" />
+                  <benefit .icon className="w-8 h-8 text-white"  />
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">{benefit.title}</h3>
@@ -361,7 +341,7 @@ export { FiveGSolutions }() {
                   <h4 className="text-zion-cyan font-semibold mb-3">Examples:</h4>
                   {benefit.examples.map((example, exampleIndex) => (
                     <div key={exampleIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0"  />
                       <span className="text-zion-slate-light text-sm">{example}</span>
                     </div>
                   ))}
@@ -442,7 +422,7 @@ export { FiveGSolutions }() {
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <technology.icon className="w-8 h-8 text-white" />
+                  <technology .icon className="w-8 h-8 text-white"  />
                 </div>
 
                 <h3 className="text-xl font-bold text-white mb-3">{technology.name}</h3>
@@ -535,7 +515,7 @@ export { FiveGSolutions }() {
 
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
-                    <step.icon className="w-8 h-8 text-white" />
+                    <step .icon className="w-8 h-8 text-white"  />
                   </div>
                   <div className="absolute -top-2 -right-2 w-8 h-8 bg-zion-blue rounded-full flex items-center justify-center text-white text-sm font-bold">
                     {step.step}
@@ -641,7 +621,7 @@ export { FiveGSolutions }() {
                 onClick={() => setSelectedSolution(solution)}
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
-                  <solution.icon className="w-8 h-8 text-white" />
+                  <solution .icon className="w-8 h-8 text-white"  />
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
@@ -650,7 +630,7 @@ export { FiveGSolutions }() {
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0"  />
                       <span className="text-zion-slate-light text-sm">{feature}</span>
                     </div>
                   ))}
@@ -678,7 +658,7 @@ export { FiveGSolutions }() {
                   </span>
                   <button className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors duration-300">
                     <span className="text-sm font-medium">Learn More</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4"  />
                   </button>
                 </div>
               </motion.div>
@@ -783,7 +763,7 @@ export { FiveGSolutions }() {
 
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current"  />
                   ))}
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
@@ -845,3 +825,17 @@ export { FiveGSolutions }() {
       </section>
     </div>
   )}
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

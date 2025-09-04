@@ -2,7 +2,7 @@ import React from 'react',;',';';
     ';';';';
 import {SEO } from '@/components/SEO';
 ,"});,"})
-export default function InnovativeAIServicesShowcase() {return (
+export default function InnovativeAIServicesShowcase(props: any) {return (
     <div className="min-h-screen bg-white">
       <SEO title="InnovativeAIServicesShowcase - Zion Tech Group" description="Professional InnovativeAIServicesShowcase services by Zion Tech Group"  />
       <div className="container mx-auto px-4 py-20">

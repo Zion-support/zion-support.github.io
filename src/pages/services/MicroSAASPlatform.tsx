@@ -202,9 +202,9 @@ export { MicroSAASPlatform }(...args: an y[]): any {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-indigo-50">
       <Helmet>
         <title>Micro SAAS Platform - Zion Tech Group</title>
-        <meta name="description" content="Build and launch micro SAAS applications in weeks with our comprehensive platform. Rapid development, AI features, and enterprise-grade infrastructure."  />
-        <meta name="keywords" content="micro SAAS, rapid development, SAAS platform, application development, cloud platform, business software"  />
-        <link rel="canonical" href="https://ziontechgroup.com/services/micro-saas-platform"  />
+        <meta name="description" content="Build and launch micro SAAS applications in weeks with our comprehensive platform. Rapid development, AI features, and enterprise-grade infrastructure."   />
+        <meta name="keywords" content="micro SAAS, rapid development, SAAS platform, application development, cloud platform, business software"   />
+        <link rel="canonical" href="https://ziontechgroup.com/services/micro-saas-platform"   />
       </Helmet>
 
       {/* Hero Section */}

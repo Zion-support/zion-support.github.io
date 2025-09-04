@@ -1,25 +1,25 @@
 import React from 'react',;',';';
     ';';';';
-import {useLocation } from 'react-router-dom',;';';
+import {useLocation} from 'react-router-dom',;';';
     ';';';';
-import {ArrowRight, Home, ChevronRight } from 'lucide-react',;',';';
+import {ArrowRight, Home, ChevronRight} from 'lucide-react',;',';';
     ';';';';
-import {Link } from 'react-router-dom',;';';
+import {Link} from 'react-router-dom',;';';
     ';';';';
 import React from 'react';""',';';
     ';';';
-import { useLocation } from 'react-router-dom';""',';';
+import {useLocation} from 'react-router-dom';""',';';
     ';';';
-import { ArrowRight, Home, ChevronRight } from 'lucide-react';""',';';
+import {ArrowRight, Home, ChevronRight} from 'lucide-react';""',';';
     ';';';
 import React from 'react';';';';
-import { useLocation } from 'react-router-dom;',';';
+import {useLocation} from 'react-router-dom;',';';
     ';';';
-import { ArrowRight, Home, ChevronRight } from 'lucide-react;';';';';
-import { Link } from 'react-router-dom';';
-export default function SimplePage()   {const location = useLocation();';';
+import {ArrowRight, Home, ChevronRight} from 'lucide-react;';';';';
+import {Link} from 'react-router-dom';';
+export default function SimplePage(props: any) {const location = useLocation();';';
   // Generate page title and content based on the current path';';';
-  const getPageInfo = (pathname) => {',';';
+  const getPageInfo = (props: any) => {',';';
     ';';';
     const pathMap = {'',',';';
     '/services': {'',';';
@@ -961,7 +961,7 @@ export default function SimplePage()   {const location = useLocation();';';
       <div className="container mx-auto px-4 py-6">
         <nav className="flex items-center space-x-2 text-sm text-zion-slate-light">
           <Link to="/" className="flex items-center hover: text-zion-cyan transition-colors">
-            <Home className="h-4 w-4 mr-1" />
+            <Home className="h-4 w-4 mr-1"  />
       {/* Breadcrumbs */}""
       <div className="container mx-auto px-4 py-6">""
         <nav className="flex items-center space-x-2 text-sm text-zion-slate-light">""
@@ -971,7 +971,7 @@ export default function SimplePage()   {const location = useLocation();';';
           </Link>
           {breadcrumbs.map((crumb, index) => ("
             <div key={index} className="flex items-center">"
-              <ChevronRight className="h-4 w-4 mx-2 text-zion-purple/50" />"
+              <ChevronRight className="h-4 w-4 mx-2 text-zion-purple/50"  />"
           {breadcrumbs.map((crumb, index) => (""
             <div key={index} className="flex items-center">""
               <ChevronRight className="h-4 w-4 mx-2 text-zion-purple/50" /" >"
@@ -1036,7 +1036,7 @@ export default function SimplePage()   {const location = useLocation();';';
                   >
                     Learn More"
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hove
-    r:translate-x-1" />
+    r:translate-x-1"  />
       {/* Page Content */}, {pageInfo.sections.length > 0 && (
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -1058,7 +1058,7 @@ export default function SimplePage()   {const location = useLocation();';';
                   </p>
                   <Link to={section.link} className="inline-flex items-center text-zion-cyan hover: text-white transition-colors group-hover:translate-x-1" >
                     Learn More
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"  />
                   <Link to={section.link}""
                     className="inline-flex items-center text-zion-cyan hover:text-white transition-colors group-hover:translate-x-1"" >"
                     Learn More""
@@ -1094,7 +1094,7 @@ export default function SimplePage()   {const location = useLocation();';';
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25"
               >
                 Contact Us"
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Link>
               <Link"
                 to="/services""
@@ -1124,7 +1124,7 @@ export default function SimplePage()   {const location = useLocation();';';
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25" >
                 Contact Us
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Link>
               <Link to="/services" className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300" >
             </p>""
@@ -1148,3 +1148,32 @@ export default function SimplePage()   {const location = useLocation();';';
   )}"';';
   );}""';';';
 "';';';';
+</ArrowRight>
+</div>
+</section>
+</div>
+</div>
+</div>
+</section>
+</ArrowRight>
+</div>
+</section>
+</ArrowRight>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</section>
+</div>
+</div>
+</section>
+</ChevronRight>
+</Home>
+</nav>
+</div>
+</div>
+</nav>
+</div>
+</div>

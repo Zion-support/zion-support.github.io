@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Heart, Leaf, Zap, Globe, BarChart3, ArrowRight, Shield, Cloud, Database, Cpu } from 'lucide-react';
 
-export default function Sustainability() {
+export default function Sustainability(props: any) {
   const features = [
     {
       icon: Heart,
@@ -203,3 +203,10 @@ export default function Sustainability() {
     </div>
   );
 }
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

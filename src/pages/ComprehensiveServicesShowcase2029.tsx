@@ -34,8 +34,8 @@ import { Brain,
 ;
 
 export default function ComprehensiveServicesShowcase2029(...args: unknow n[]): unknown {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [searchTerm, setSearchTerm] = useState<any>('');
 
   const categories = {
     'all': { name: 'All Services', icon: <Rocket className="w-6 h-6"  />, color: 'from-cyan-500 to-blue-500' },
@@ -262,8 +262,8 @@ export default function ComprehensiveServicesShowcase2029(...args: unknow n[]): 
 '
 ''
 '''
-  const [selectedCategory, setSelectedCategory] = useState('all');'''
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');'''
+  const [searchTerm, setSearchTerm] = useState<any>('');
 
     return matchesCategory && matchesSearch}) ;
 
@@ -563,3 +563,17 @@ export { ComprehensiveServicesShowcase2029 };
 export { ComprehensiveServicesShowcase2029 };
 
 export { ComprehensiveServicesShowcase2029, ComprehensiveServicesShowcase2029 };
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</SEO>
+</any>
+</any>
+</any>
+</any>

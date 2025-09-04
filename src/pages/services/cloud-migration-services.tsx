@@ -20,7 +20,7 @@ import {
   Lock
 } from 'lucide-react';
 
-const CloudMigrationServices = () => {
+const CloudMigrationServices = (props: any) => {
   const features = [
     'Zero-downtime migration',
     'Data security & encryption',
@@ -356,3 +356,11 @@ const CloudMigrationServices = () => {
 };
 
 export default CloudMigrationServices;
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

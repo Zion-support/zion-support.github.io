@@ -10,3 +10,5 @@ export default function BlogSection.test() {return (
         </p>
       </div>
   );"}"
+
+</div>

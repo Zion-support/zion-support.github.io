@@ -60,11 +60,11 @@ export default function Signup() {
     'Other'
   ]
 
-      // // // // // // // console.log('Signup successful:', formData)
+      // // // // // // // 
 
     } catch (error) {
       // // // // // // // console.error('Signup error:', error)
-      // // // // console.log('Signup successful:', formData)
+      // // // // 
       
     } catch (error) {
       // // // // console.error('Signup error:', error)

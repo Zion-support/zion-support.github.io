@@ -7,7 +7,7 @@ import {
   Type, Palette, Camera, Music, Headphones, BookOpen, Newspaper, Megaphone
 } from 'lucide-react';
 
-export default function AIContentCreationPlatform() {
+export default function AIContentCreationPlatform(props: any) {
   const features = [
     {
       icon: PenTool,
@@ -492,3 +492,20 @@ export default function AIContentCreationPlatform() {
     </div>
   );
 }
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

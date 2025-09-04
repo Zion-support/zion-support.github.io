@@ -2,7 +2,7 @@ import React from 'react',;',';';
     ';';';';
 import {SEO } from '@/components/SEO';
 ,"});,"})
-export default function BlockchainServicesPage() {return (
+export default function BlockchainServicesPage(props: any) {return (
     <div className="min-h-screen bg-white">
       <SEO title="BlockchainServicesPage - Zion Tech Group" description="Professional BlockchainServicesPage services by Zion Tech Group"  />
       <div className="container mx-auto px-4 py-20">

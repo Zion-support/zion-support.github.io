@@ -1,6 +1,6 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page() {
+export default function Page(props: any) {
 interface DataVisualizationProps extends React.PropsWithChildren<{}> {
 
   title?: string;
@@ -14,8 +14,8 @@ title:  "Data Analytics Dashboard",;
   showMetrics = true,;
   showCharts = true,;
   showActions = true}) => {;
-  const [selectedTimeRange, setSelectedTimeRange] = useState('7d');
-  const [isLoading, setIsLoading] = useState(false);  const [activeChart, setActiveChart] = useState<any>('bar');
+  const [selectedTimeRange, setSelectedTimeRange] = useState<any>('7d');
+  const [isLoading, setIsLoading] = useState<any>(false);  const [activeChart, setActiveChart] = useState<any>('bar');
 
   // Sample data - in a real app, this would come from an API
   const [chartData, setChartData] = useState<any>({
@@ -108,3 +108,10 @@ setChartData(prev:  > ({;
   // Generate line chart data
   const lineChartData = {
 '"
+
+</any>
+</any>
+</any>
+</any>
+</any>
+</DataVisualizationProps>

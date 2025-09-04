@@ -2,7 +2,7 @@ import React from 'react',;',';';
     ';';';';
 import {SEO } from '@/components/SEO';
 ,"});,"})
-export default function InnovativeServicesLanding2025() {return (
+export default function InnovativeServicesLanding2025(props: any) {return (
     <div className="min-h-screen bg-white">
       <SEO title="InnovativeServicesLanding2025 - Zion Tech Group" description="Professional InnovativeServicesLanding2025 services by Zion Tech Group"  />
       <div className="container mx-auto px-4 py-20">

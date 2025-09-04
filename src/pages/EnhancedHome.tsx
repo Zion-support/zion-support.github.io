@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   Users, 
   TrendingUp, 
@@ -78,10 +79,9 @@ import {
             delay: particl e.delay,"
             ease: "easeInOut"
           }}
-          style={{
+          style="{{{
 
-            left: particl e.left,
-            top: particl e.top}}
+            left: particl e.left; top: particl e.top}}"}
         />
       ))}
     </div>
@@ -95,7 +95,7 @@ FuturisticBackground.displayName = 'FuturisticBackground';
   
   }, [heroSlides.length]) }, [heroSlides.length]) ;
 
-  useEffect ( () => {
+  useEffect(() => {
     
     return () => clearInterval (interval) }, [nextSlide]) ;
   return ("
@@ -297,9 +297,9 @@ CTASection.displayName = 'CTASection';
 
 // Main EnhancedHome component
 const EnhancedHome: Reac t.FC = () => {
-  const [isLoaded, setIsLoaded] = useState (false) ;
+  const [isLoaded, setIsLoaded] = useState<any>(false) ;
 
-  useEffect ( () => {
+  useEffect(() => {
     setIsLoaded (true) }, []) ;
 
   
@@ -341,3 +341,13 @@ const EnhancedHome: Reac t.FC = () => {
       </div>
     </>) };
 export default EnhancedHome;'"`
+</EnhancedSEO>
+</any>
+</motion>
+</motion>
+</motion>
+</button>
+</motion>
+</motion>
+</motion>
+</motion>

@@ -1,7 +1,7 @@
 import React from 'react';''
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
-export default function Support() {}
+export default function Support(props: any) {}
 '
 ''
 '''
@@ -187,12 +187,15 @@ export default function Support() {}
     );
 }
 
-export { Support };
+export {Support};
 
-export { Support };
+export {Support};
 
-export { Support };
+export {Support};
 
-export { Support };
+export {Support};
 
-export { Support };
+export {Support};
+
+</div>
+</div>

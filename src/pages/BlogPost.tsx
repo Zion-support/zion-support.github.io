@@ -2,7 +2,7 @@ import React from 'react',;',';';
     ';';';';
 import {SEO } from '@/components/SEO';
 ,"});,"})
-export default function BlogPost() {return (
+export default function BlogPost(props: any) {return (
     <div className="min-h-screen bg-white">
       <SEO title="BlogPost - Zion Tech Group" description="Professional BlogPost services by Zion Tech Group"  />
       <div className="container mx-auto px-4 py-20">

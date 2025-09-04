@@ -1,14 +1,14 @@
 import React from 'react';
 
 
-export function ErrorBoundaryFallback({ error, onRetry }) {
+export function ErrorBoundaryFallback(props: any) {
 	return (
-		<div style={{padding: 24, textAlign: 'center'}}>
+		<div style="{{{padding: 24; textAlign: 'center'}}"}>
 			<h2>Something went wrong</h2>
 			{error ? (
-				<pre style={{whiteSpace: 'pre-wrap', color: '#b91c1c'}}>{String(error)}</pre>
+				<pre style="{{{whiteSpace: 'pre-wrap'; color: '#b91c1c'}}"}>{String(error)}</pre>
 			) : null}
-			<button onClick={onRetry} style={{marginTop: 12}}>Try again</button>
+			<button onClick={onRetry} style="{{{marginTop: 12}}"}>Try again</button>
 		</div>
 	);
 }
@@ -36,7 +36,7 @@ export class ErrorBoundary extends React.Component {
 	render() {
 		if (this.state.hasError) {
 			const Fallback = this.props.fallback || ErrorBoundaryFallback;
-			return <Fallback error={this.state.error} onRetry={this.handleRetry} />;
+			return <Fallback error={this.state.error} onRetry={this.handleRetry}  />;
 		}
 		return this.props.children;
 	}

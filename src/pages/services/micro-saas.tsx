@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function MicroSaaSServices() {
+export default function MicroSaaSServices(props: any) {
   const offerings = [
     {
       name: 'AI Email Responder',
@@ -61,7 +61,7 @@ export default function MicroSaaSServices() {
 // Additional showcase (non-exported) retained for future expansion
 import { Cpu, Check, Phone, Mail, ArrowRight, Target, Zap, Layers } from 'lucide-react';
 
-function MicroSaaSShowcase() {
+function MicroSaaSShowcase(props: any) {
   const features = [
     'AI-powered business process automation',
     'Custom micro SaaS application development',

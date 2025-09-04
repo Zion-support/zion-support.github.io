@@ -1,11 +1,12 @@
-import { Helmet } from 'react-helmet-async';
-const AIAutonomousForensics = () => {
+import React from 'react';
+import {Helmet} from 'react-helmet-async';
+const AIAutonomousForensics = (props: any) => {
     return (<>
       <Helmet>
         <title>AI Autonomous Forensics Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous forensics platform that continuously investigates incidents, analyzes evidence, and provides forensic insights with advanced AI capabilities and autonomous operation."/>
-        <meta name="keywords" content="AI forensics, autonomous forensics, incident investigation, evidence analysis, autonomous operations, AI forensics platform"/>
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-forensics"/>
+        <meta name="description" content="Revolutionary AI autonomous forensics platform that continuously investigates incidents, analyzes evidence, and provides forensic insights with advanced AI capabilities and autonomous operation."  />
+        <meta name="keywords" content="AI forensics, autonomous forensics, incident investigation, evidence analysis, autonomous operations, AI forensics platform"  />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-forensics"  />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">

@@ -1,9 +1,10 @@
+import React from 'react';
 const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
   const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState<any>('');
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
 
-  const getFilteredServices = () => {;
+  const getFilteredServices = (props: any) => {;
     let services: an y[] = [];
     switch(activeTab) {
 
@@ -30,7 +31,7 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
 ;
     return services};
 
-  const getCategories = () => {;
+  const getCategories = (props: any) => {;
     let services: an y[] = [];
     switch(activeTab) {
 
@@ -46,7 +47,7 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
 
     return categories};
 
-  const renderServiceCard = (service)  => {
+  const renderServiceCard = (props: any) => {
 
     if(activeTab === 'microsaas') {
 
@@ -535,3 +536,7 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
   )};
 
 export default ComprehensiveServicesShowcase2030}}}}}'"`
+
+</SEO>
+</any>
+</any>

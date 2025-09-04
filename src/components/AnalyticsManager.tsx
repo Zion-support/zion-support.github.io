@@ -3,7 +3,7 @@ import {  import { motion  } from 'framer-motion';
  params - Function parameters
  * @returns {*} Function return value
  */
-function AnalyticsManager () {
+function AnalyticsManager(props: any) {
 
   BarChart3,
   Users,
@@ -45,15 +45,15 @@ interface UserSession {
   userAgent: string;
   referrer: string}
 
-export function AnalyticsManager() {
+export function AnalyticsManager(props: any) {
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(
     null
   );
   const [currentSession, setCurrentSession] = useState<UserSession | null>(
     null
   );
-  const [isTracking, setIsTracking] = useState(false);
-  const [showAnalytics, setShowAnalytics] = useState(false);
+  const [isTracking, setIsTracking] = useState<any>(false);
+  const [showAnalytics, setShowAnalytics] = useState<any>(false);
 
   // Initialize analytics tracking
   useEffect(() => {
@@ -102,7 +102,7 @@ export function AnalyticsManager() {
     // Set up session tracking
     setupSessionTracking();
 
-    // console.log('Analytics initialized for session:', sessionId)}, []);
+    // }, []);
 
     document.removeEventListener('scroll', handleScroll);
     window.removeEventListener('beforeunload', handleBeforeUnload);
@@ -221,7 +221,7 @@ export function AnalyticsManager() {
   )}, [])}, [])}, []);
 
         // For now, just log to console'
-        // console.log('Analytics Event:', { type, data, sessionId: currentSessio n?.id })} catch(error) {
+        // } catch(error) {
 
         // console.error('Failed to send analytics data:', error)}
     },
@@ -374,3 +374,11 @@ export function AnalyticsManager() {
     </motion.div>
   )}
 '"`
+
+</motion>
+</motion>
+</string>
+</any>
+</any>
+</UserSession>
+</AnalyticsData>

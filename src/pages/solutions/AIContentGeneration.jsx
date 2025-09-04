@@ -1,5 +1,5 @@
-import { Target, TrendingUp, Users, Globe, Cpu, Lightbulb, FileText, PenTool, Image, Video, Music } from 'lucide-react';
-const AIContentGeneration = () => {
+import {Target, TrendingUp, Users, Globe, Cpu, Lightbulb, FileText, PenTool, Image, Video, Music} from 'lucide-react';
+const AIContentGeneration = (props: any) => {
     const contentFeatures = [
         {
             icon: FileText,
@@ -7,62 +7,44 @@ const AIContentGeneration = () => {
             description: "AI-powered content creation for various text formats",
             features: ["Article writing", "Copywriting", "Technical documentation", "Creative storytelling"]
         },
-        {
-            icon: Image,
+        {icon: Image,
             title: "Visual Content",
             description: "Generate images, graphics, and visual elements",
-            features: ["Image generation", "Graphic design", "Illustrations", "Visual branding"]
-        },
-        {
-            icon: Video,
+            features: ["Image generation", "Graphic design", "Illustrations", "Visual branding"]},
+        {icon: Video,
             title: "Video Production",
             description: "AI-enhanced video creation and editing",
-            features: ["Video generation", "Content editing", "Animation", "Visual effects"]
-        },
-        {
-            icon: Music,
+            features: ["Video generation", "Content editing", "Animation", "Visual effects"]},
+        {icon: Music,
             title: "Audio Content",
             description: "Generate audio content and music compositions",
-            features: ["Music generation", "Voice synthesis", "Sound effects", "Audio editing"]
-        }
+            features: ["Music generation", "Voice synthesis", "Sound effects", "Audio editing"]}
     ];
     const contentTypes = [
-        {
-            title: "Marketing Content",
+        {title: "Marketing Content",
             description: "Engaging marketing materials and campaigns",
             icon: Target,
-            capabilities: ["Social media posts", "Email campaigns", "Ad copy", "Brand messaging"]
-        },
-        {
-            title: "Educational Content",
+            capabilities: ["Social media posts", "Email campaigns", "Ad copy", "Brand messaging"]},
+        {title: "Educational Content",
             description: "Learning materials and educational resources",
             icon: Users,
-            capabilities: ["Course materials", "Tutorials", "Documentation", "Learning guides"]
-        },
-        {
-            title: "Creative Writing",
+            capabilities: ["Course materials", "Tutorials", "Documentation", "Learning guides"]},
+        {title: "Creative Writing",
             description: "Fiction, poetry, and creative content",
             icon: PenTool,
-            capabilities: ["Story generation", "Poetry creation", "Character development", "Plot generation"]
-        },
-        {
-            title: "Technical Content",
+            capabilities: ["Story generation", "Poetry creation", "Character development", "Plot generation"]},
+        {title: "Technical Content",
             description: "Technical documentation and specifications",
             icon: Cpu,
-            capabilities: ["API documentation", "User manuals", "Technical guides", "Specifications"]
-        },
-        {
-            title: "Business Content",
+            capabilities: ["API documentation", "User manuals", "Technical guides", "Specifications"]},
+        {title: "Business Content",
             description: "Professional business communications",
             icon: TrendingUp,
-            capabilities: ["Reports", "Presentations", "Proposals", "Business plans"]
-        },
-        {
-            title: "Multimedia Content",
+            capabilities: ["Reports", "Presentations", "Proposals", "Business plans"]},
+        {title: "Multimedia Content",
             description: "Combined text, image, and video content",
             icon: Globe,
-            capabilities: ["Interactive content", "Rich media", "Cross-platform content", "Engagement materials"]
-        }
+            capabilities: ["Interactive content", "Rich media", "Cross-platform content", "Engagement materials"]}
     ];
     const benefits = [
         "Significantly faster content creation",
@@ -73,36 +55,24 @@ const AIContentGeneration = () => {
         "24/7 content creation availability"
     ];
     const implementation = [
-        {
-            phase: "Content Strategy",
+        {phase: "Content Strategy",
             description: "Define content goals and requirements",
-            duration: "1-2 weeks"
-        },
-        {
-            phase: "AI Training",
+            duration: "1-2 weeks"},
+        {phase: "AI Training",
             description: "Train AI models on your brand and content style",
-            duration: "2-4 weeks"
-        },
-        {
-            phase: "Content Templates",
+            duration: "2-4 weeks"},
+        {phase: "Content Templates",
             description: "Create templates and guidelines for different content types",
-            duration: "2-3 weeks"
-        },
-        {
-            phase: "Integration",
+            duration: "2-3 weeks"},
+        {phase: "Integration",
             description: "Integrate AI content generation into your workflow",
-            duration: "3-5 weeks"
-        },
-        {
-            phase: "Testing & Refinement",
+            duration: "3-5 weeks"},
+        {phase: "Testing & Refinement",
             description: "Test content quality and refine AI parameters",
-            duration: "2-4 weeks"
-        },
-        {
-            phase: "Deployment",
+            duration: "2-4 weeks"},
+        {phase: "Deployment",
             description: "Full deployment and team training",
-            duration: "1-2 weeks"
-        }
+            duration: "1-2 weeks"}
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -110,7 +80,7 @@ const AIContentGeneration = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-emerald-500/10 text-emerald-400 rounded-full text-sm font-medium mb-6">
-              <FileText className="w-4 h-4 mr-2"/>
+              <FileText className="w-4 h-4 mr-2" />
               AI Content Solution
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -149,7 +119,7 @@ const AIContentGeneration = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {contentFeatures.map((feature, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-emerald-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-white"/>
+                  <feature .icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -180,7 +150,7 @@ const AIContentGeneration = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {contentTypes.map((contentType, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-emerald-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <contentType.icon className="w-8 h-8 text-white"/>
+                  <contentType .icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{contentType.title}</h3>
                 <p className="text-gray-300 mb-4">{contentType.description}</p>
@@ -216,7 +186,7 @@ const AIContentGeneration = () => {
             </div>
             <div className="bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-2xl p-8 border border-emerald-500/30">
               <div className="text-center">
-                <Lightbulb className="w-24 h-24 text-emerald-400 mx-auto mb-4"/>
+                <Lightbulb className="w-24 h-24 text-emerald-400 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-2">Content Innovation</h3>
                 <p className="text-gray-300 mb-6">
                   Leverage AI to create engaging, high-quality content that 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
-export default function Page() {
+export default function Page(props: any) {
 ,"
     { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },"
     { name: "Innovation", count: 1 0, color: "from-green-500 to-teal-500" },;"
@@ -106,7 +106,7 @@ export default function Page() {
                   whileHover={{ rotate: 36 0 }}
                   transition={{ duration: 0.6 }}
                 >"
-                  <link.icon className="w-6 h-6 text-white" />
+                  <link .icon className="w-6 h-6 text-white"  />
                 </motion.div>
 
                 <motion.div
@@ -315,3 +315,17 @@ export default function Page() {
   )};
 ;export { QuickAccess };
 '"`
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

@@ -8,7 +8,7 @@ import {
   MessageCircle, Search, Settings, Palette, Cpu, HardDrive
 } from 'lucide-react';
 
-export default function EnterpriseCybersecurityPlatform() {
+export default function EnterpriseCybersecurityPlatform(props: any) {
   const features = [
     {
       icon: Shield,
@@ -470,3 +470,20 @@ export default function EnterpriseCybersecurityPlatform() {
     </div>
   );
 }
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

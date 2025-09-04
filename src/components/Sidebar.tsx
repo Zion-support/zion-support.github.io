@@ -19,15 +19,17 @@ import {
 } from 'lucide-react';
 
 interface SidebarProps {
+
   isOpen?: boolean;
   onClose?: () => void;
+
 }
 
-export default function Sidebar({ isOpen = true, onClose }: SidebarProps) {
+export default function Sidebar(props: any) {
   const [expandedSections, setExpandedSections] = useState<string[]>(['Services']);
   const location = useLocation();
 
-  const toggleSection = (sectionName: string) => {
+  const toggleSection = (props: any) => {
     setExpandedSections(prev => 
       prev.includes(sectionName) 
         ? prev.filter(name => name !== sectionName)
@@ -121,7 +123,7 @@ export default function Sidebar({ isOpen = true, onClose }: SidebarProps) {
     }
   ];
 
-  const renderSidebarItem = (item: an y) => {
+  const renderSidebarItem = (props: any) => {
     if (item.type === 'link') {
       return (
         <Link
@@ -292,16 +294,18 @@ import {
 } from 'lucide-react';
 
 interface SidebarProps {
+
   isOpen: boolean;
   onClose: () => void;
->>>>>>> merge-all-prs-20250904-105408
+  >>>>>>> merge-all-prs-20250904-105408: any;
+
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const location = useLocation();
   const [expandedSections, setExpandedSections] = useState<string[]>(['2026 Services']);
 
-  const toggleSection = (section: string) => {
+  const toggleSection = (props: any) => {
     setExpandedSections(prev => 
       prev.includes(section) 
         ? prev.filter(s => s !== section)
@@ -595,7 +599,7 @@ type SidebarProps = {
   onClose: () => void;
 };
 
-export default function Sidebar({ isOpen, onClose }: SidebarProps) {
+export default function Sidebar(props: any) {
   if (!isOpen) return null;
 
   const quickLinks = [
@@ -646,7 +650,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                 className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
                 onClick={onClose}
               >
-                <link.icon className="w-5 h-5 text-gray-500 group-hover:text-blue-600" />
+                <link .icon className="w-5 h-5 text-gray-500 group-hover:text-blue-600"  />
                 <span className="text-gray-700 group-hover:text-blue-600">{link.name}</span>
                 <ArrowRight className="w-4 h-4 text-gray-400 ml-auto group-hover:text-blue-600" />
               </Link>
@@ -701,3 +705,12 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   );
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-fe38
+
+</item>
+</motion>
+</ChevronRight>
+</motion>
+</motion>
+</string>
+</SidebarProps>
+</string>

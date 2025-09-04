@@ -1,11 +1,11 @@
 import React from 'react';
-import { useEffect } from 'react';
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
-import { toast } from "sonner";
+import {useEffect} from 'react';
+import {useAuth} from "@/hooks/useAuth";
+import {Button} from "@/components/ui/button";
+import {useNavigate} from "react-router-dom";
+import {toast} from "sonner";
 export default function Profile
-export { Profile }() {
+export {Profile}() {
     const { user, isLoading, logout } = useAuth();
     const navigate = useNavigate();
     useEffect(() => {
@@ -13,8 +13,7 @@ export { Profile }() {
             toast.error("Please log in to view your profile");
             router("/login?redirect=/profile")}
     }, [user, isLoading, navigate]);
-    if (isLoading) {
-        return (<>
+    if (isLoading) {return (<>
         
         <div className="min-h-screen bg-zion-blue flex items-center justify-center">
           <div className="animate-pulse text-white">Loading profile...</div>

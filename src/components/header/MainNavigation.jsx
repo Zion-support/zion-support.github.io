@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
-import { Link  } from 'react-router-dom';
+import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
 
-export default function Page() {      >
-        <Home className="w-4 h-4 mr-1" />
+export default function Page(props: any) {>
+        <Home className="w-4 h-4 mr-1"  />
         Home
-      </NavLink>
-}
+      </NavLink>}
 
   ]
 
-  const handleDropdownToggle = (index) => {setActiveDropdown(activeDropdown === index ? null : index)};"
+  const handleDropdownToggle = (props: any) => {setActiveDropdown(activeDropdown === index ? null : index)};"
     {"""
       name: "Home", """
       href: "/","""
@@ -18,27 +17,27 @@ export default function Page() {      >
       href: "/services","""
       current: location.pathname.startsWith("/services"), children: [""",
         { name: "AI Services", href: "/services/ai" }, """
-        { name: "Cloud Solutions", href: "/services/cloud" }, """
-        { name: "Cybersecurity", href: "/services/cybersecurity" }, """
-        { name: "IT Infrastructure", href: "/services/infrastructure" }, """
-        { name: "Digital Transformation", href: "/services/transformation" }, ""
-        { name: "Consulting", href: "/services/consulting" }"
+        {name: "Cloud Solutions", href: "/services/cloud"}, """
+        {name: "Cybersecurity", href: "/services/cybersecurity"}, """
+        {name: "IT Infrastructure", href: "/services/infrastructure"}, """
+        {name: "Digital Transformation", href: "/services/transformation"}, ""
+        {name: "Consulting", href: "/services/consulting"}"
       ]} {"""
       name: "Solutions", """
       href: "/solutions","""
       current: location.pathname.startsWith("/solutions"), children: [""",
         { name: "Industry Solutions", href: "/solutions/industry" }, """
-        { name: "Manufacturing", href: "/solutions/manufacturing" }, """
-        { name: "Financial Services", href: "/solutions/financial" }, """
-        { name: "Healthcare", href: "/solutions/healthcare" }, ""
-        { name: "Retail", href: "/solutions/retail" }""
+        {name: "Manufacturing", href: "/solutions/manufacturing"}, """
+        {name: "Financial Services", href: "/solutions/financial"}, """
+        {name: "Healthcare", href: "/solutions/healthcare"}, ""
+        {name: "Retail", href: "/solutions/retail"}""
       name: "About", """
       href: "/about","""
       current: location.pathname.startsWith("/about"), children: [""",
-        { name: "Company", href: "/about" }, """
-        { name: "Team", href: "/about/team" }, """
-        { name: "Careers", href: "/careers" }, ""
-        { name: "Partners", href: "/partners" }""
+        {name: "Company", href: "/about"}, """
+        {name: "Team", href: "/about/team"}, """
+        {name: "Careers", href: "/careers"}, ""
+        {name: "Partners", href: "/partners"}""
       name: "Resources", """
   {"
       name: "Home,"
@@ -48,43 +47,43 @@ export default function Page() {      >
       href: "/services,"
       children: ["",
         { name: "AI Services", href: "/services/ai" },""
-        { name: "Cloud Solutions", href: "/services/cloud" },""
-        { name: "Cybersecurity", href: "/services/cybersecurity" },""
-        { name: "IT Infrastructure", href: "/services/infrastructure" },""
-        { name: "Digital Transformation", href: "/services/transformation" },""
+        {name: "Cloud Solutions", href: "/services/cloud"},""
+        {name: "Cybersecurity", href: "/services/cybersecurity"},""
+        {name: "IT Infrastructure", href: "/services/infrastructure"},""
+        {name: "Digital Transformation", href: "/services/transformation"},""
       ]} {"
       name: "Solutions,"
       href: "/solutions,""
         { name: "Industry Solutions", href: "/solutions/industry" },""
-        { name: "Manufacturing", href: "/solutions/manufacturing" },""
-        { name: "Financial Services", href: "/solutions/financial" },""
-        { name: "Healthcare", href: "/solutions/healthcare" },""
+        {name: "Manufacturing", href: "/solutions/manufacturing"},""
+        {name: "Financial Services", href: "/solutions/financial"},""
+        {name: "Healthcare", href: "/solutions/healthcare"},""
       name: "About,"
       href: "/about,"
-        { name: "Company", href: "/about" },""
-        { name: "Team", href: "/about/team" },""
-        { name: "Careers", href: "/careers" },""
+        {name: "Company", href: "/about"},""
+        {name: "Team", href: "/about/team"},""
+        {name: "Careers", href: "/careers"},""
       name: "Resources,"
       current: false, children: [""",
-        { name: "Case Studies", href: "/case-studies" }, """
-        { name: "Research & Development", href: "/research-development" }, """
-        { name: "Events", href: "/events" }, """
-        { name: "News", href: "/news" }, """
-        { name: "Blog", href: "/blog" }, """
-        { name: "White Papers", href: "/white-papers" }, ""
-        { name: "Webinars", href: "/webinars" }""
+        {name: "Case Studies", href: "/case-studies"}, """
+        {name: "Research & Development", href: "/research-development"}, """
+        {name: "Events", href: "/events"}, """
+        {name: "News", href: "/news"}, """
+        {name: "Blog", href: "/blog"}, """
+        {name: "White Papers", href: "/white-papers"}, ""
+        {name: "Webinars", href: "/webinars"}""
       name: "Support", """
       href: "/support","""
       current: location.pathname.startsWith("/support"), children: [""",
-        { name: "Help Center", href: "/support" }, """
-        { name: "Documentation", href: "/docs" }, """
-        { name: "Training", href: "/training" }, ""
+        {name: "Help Center", href: "/support"}, """
+        {name: "Documentation", href: "/docs"}, """
+        {name: "Training", href: "/training"}, ""
       name: "Support,"
       href: "/support,""
-        { name: "Help Center", href: "/support" },""
-        { name: "Documentation", href: "/docs" },""
-        { name: "Training", href: "/training" },""
-        { name: "Contact", href: "/contact" }
+        {name: "Help Center", href: "/support"},""
+        {name: "Documentation", href: "/docs"},""
+        {name: "Training", href: "/training"},""
+        {name: "Contact", href: "/contact"}
 
       ]}
 
@@ -106,7 +105,7 @@ export default function Page() {      >
                 <span>{item.name}</span>
                 <ChevronDown ""
                   className="{"h-4" w-4 transition-transform ${""
-                    activeDropdown === index ? "rotate-180" : """  />
+                    activeDropdown === index ? "rotate-180" : """   />
               </button>
               {/* comment */}
 
@@ -120,8 +119,7 @@ export default function Page() {      >
     r: bg-zion-purple/10 transition-colors"">
                         onClick="{()" => setActiveDropdown(null)}
 
-  const handleDropdownToggle = (index) => {
-    setActiveDropdown(activeDropdown === index ? null : index)}
+  const handleDropdownToggle = (props: any) => {setActiveDropdown(activeDropdown === index ? null : index)}
 
 "
   return ("""
@@ -132,7 +130,7 @@ export default function Page() {      >
                   item.current"""
                     ? "text-zion-cyan bg-zion-purple/10""
                     : "text-zion-slate-light hover: text-white hover:bg-zion-purple/10",
-                <ChevronDown className="{"h-4" w-4 transition-transform ${ activeDropdown === index ? "rotate-180" : "" }"}       />
+                <ChevronDown className="{"h-4" w-4 transition-transform ${ activeDropdown === index ? "rotate-180" : "" }"}        />
               
               {/* comment */} {activeDropdown === index && ("
                 <div className=""absolute" top-full left-0 mt-2 w-64 bg-zion-blue-dark/95 backdrop-blur-xl border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">"
@@ -175,3 +173,14 @@ export default function Page() {      >
 "
 
 export default Component
+
+</ChevronDown>
+</ChevronDown>
+</div>
+</button>
+</button>
+</div>
+</div>
+</ChevronDown>
+</div>
+</div>

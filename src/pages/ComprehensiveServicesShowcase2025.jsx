@@ -1,9 +1,9 @@
-import React, { useState } from 'react';'''
-import { motion } from 'framer-motion';
-import { Sparkles, ArrowRight, CheckCircle, Phone, Mail, MapPin, TrendingUp, Play, Download, ExternalLink, Search } from 'lucide-react';
-import { CUTTING_EDGE_SERVICES_2025 } from "../data/enhanced-2025-cutting-edge-services.jsx";
-import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from "../data/specialized-industry-solutions-2025.jsx";
-const ComprehensiveServicesShowcase2025 = () => {
+import React, {useState} from 'react';'''
+import {motion} from 'framer-motion';
+import {Sparkles, ArrowRight, CheckCircle, Phone, Mail, MapPin, TrendingUp, Play, Download, ExternalLink, Search} from 'lucide-react';
+import {CUTTING_EDGE_SERVICES_2025} from "../data/enhanced-2025-cutting-edge-services.jsx";
+import {SPECIALIZED_INDUSTRY_SOLUTIONS_2025} from "../data/specialized-industry-solutions-2025.jsx";
+const ComprehensiveServicesShowcase2025 = (props: any) => {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedIndustry, setSelectedIndustry] = useState('all');
@@ -52,7 +52,7 @@ const ComprehensiveServicesShowcase2025 = () => {
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
                 Cutting-Edge;
               </span>"""
-              <br />""""
+              <br  />""""
               <span className="text-white">AI & IT Services</span>"""
             </h1>""""
             <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
@@ -66,7 +66,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                 whileTap={{ scale: 0.95 }}""""
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 hover:from-blue-700 hover:to-purple-700 transition-all duration-300""""
               >""""
-                <Play className="w-5 h-5" />
+                <Play className="w-5 h-5"  />
                 Watch Demo;
               </motion.button>
               <motion.button;
@@ -74,7 +74,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                 whileTap={{ scale: 0.95 }}""""
                 className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 hover:bg-blue-400 hover:text-white transition-all duration-300""""
               >""""
-                <Download className="w-5 h-5" />
+                <Download className="w-5 h-5"  />
                 Download Brochure;
               </motion.button>
             </div>
@@ -87,15 +87,15 @@ const ComprehensiveServicesShowcase2025 = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
           <div className="flex flex-col md:flex-row justify-between items-center text-white">""""
             <div className="flex items-center gap-4 mb-4 md:mb-0">""""
-              <Phone className="w-5 h-5 text-blue-300" />""""
+              <Phone className="w-5 h-5 text-blue-300"  />""""
               <span className="font-semibold">+1 302 464 0950</span>"""
             </div>""""
             <div className="flex items-center gap-4 mb-4 md:mb-0">""""
-              <Mail className="w-5 h-5 text-blue-300" />""""
+              <Mail className="w-5 h-5 text-blue-300"  />""""
               <span className="font-semibold">kleber@ziontechgroup.com</span>"""
             </div>""""
             <div className="flex items-center gap-4">""""
-              <MapPin className="w-5 h-5 text-blue-300" />""""
+              <MapPin className="w-5 h-5 text-blue-300"  />""""
               <span className="font-semibold">
                 364 E Main St STE 1008, Middletown DE 19709;
               </span>
@@ -117,7 +117,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                   onChange={e => setSearchTerm(e.target.value)}""""
                   className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400""""
                 />""""
-                <Search className="absolute right-3 top-3 w-5 h-5 text-white/60" />
+                <Search className="absolute right-3 top-3 w-5 h-5 text-white/60"  />
               </div>
             </div>
             <select;
@@ -196,13 +196,13 @@ const ComprehensiveServicesShowcase2025 = () => {
               {/* Features */}""""
               <div className="mb-6">""""
                 <h4 className="text-white font-semibold mb-3 flex items-center gap-2">""""
-                  <Sparkles className="w-4 h-4 text-yellow-400" />
+                  <Sparkles className="w-4 h-4 text-yellow-400"  />
                   Key Features"""
                 </h4>""""
                 <div className="space-y-2">"""
                   {service.features.slice(0, 4).map((feature, featureIndex) => (""""
                     <div key={featureIndex} className="flex items-start gap-2">""""
-                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />""""
+                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0"  />""""
                       <span className="text-blue-100 text-sm">{feature}</span>
                     </div>
                   ))}"""
@@ -217,13 +217,13 @@ const ComprehensiveServicesShowcase2025 = () => {
               {/* Benefits */}""""
               <div className="mb-6">""""
                 <h4 className="text-white font-semibold mb-3 flex items-center gap-2">""""
-                  <TrendingUp className="w-4 h-4 text-green-400" />
+                  <TrendingUp className="w-4 h-4 text-green-400"  />
                   Benefits"""
                 </h4>""""
                 <div className="space-y-2">"""
                   {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (""""
                     <div key={benefitIndex} className="flex items-start gap-2">""""
-                      <ArrowRight className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0" />""""
+                      <ArrowRight className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0"  />""""
                       <span className="text-blue-100 text-sm">{benefit}</span>
                     </div>
                   ))}
@@ -296,7 +296,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                   whileTap={{ scale: 0.98 }}""""
                   className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-3 rounded-lg font-semibold text-sm flex items-center justify-center gap-2 hover:from-blue-700 hover:to-purple-700 transition-all duration-300""""
                 >""""
-                  <Play className="w-4 h-4" />
+                  <Play className="w-4 h-4"  />
                   Request Demo;
                 </motion.button>
                 <motion.button;
@@ -304,7 +304,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                   whileTap={{ scale: 0.98 }}""""
                   className="px-4 py-3 border border-blue-400 text-blue-400 rounded-lg font-semibold text-sm flex items-center gap-2 hover:bg-blue-400 hover:text-white transition-all duration-300""""
                 >""""
-                  <ExternalLink className="w-4 h-4" />
+                  <ExternalLink className="w-4 h-4"  />
                   Learn More;
                 </motion.button>
               </div>
@@ -314,7 +314,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                 <div className="flex items-center justify-between text-sm">""""
                   <span className="text-blue-200">Contact:</span>""""
                   <div className="flex items-center gap-2">""""
-                    <Phone className="w-3 h-3 text-blue-300" />""""
+                    <Phone className="w-3 h-3 text-blue-300"  />""""
                     <span className="text-blue-100">
                       {service.contactInfo.phone}
                     </span>
@@ -323,7 +323,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                 <div className="flex items-center justify-between text-sm mt-1">""""
                   <span className="text-blue-200">Email:</span>""""
                   <div className="flex items-center gap-2">""""
-                    <Mail className="w-3 h-3 text-blue-300" />""""
+                    <Mail className="w-3 h-3 text-blue-300"  />""""
                     <span className="text-blue-100">
                       {service.contactInfo.email}
                     </span>
@@ -391,12 +391,23 @@ const ComprehensiveServicesShowcase2025 = () => {
     </div>)};
 export default ComprehensiveServicesShowcase2025;
 
-export { ComprehensiveServicesShowcase2025 };
+export {ComprehensiveServicesShowcase2025};
 
-export { ComprehensiveServicesShowcase2025 };
+export {ComprehensiveServicesShowcase2025};
 
-export { ComprehensiveServicesShowcase2025 };
+export {ComprehensiveServicesShowcase2025};
 
-export { ComprehensiveServicesShowcase2025 };
+export {ComprehensiveServicesShowcase2025};
 
-export { ComprehensiveServicesShowcase2025 };
+export {ComprehensiveServicesShowcase2025};
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

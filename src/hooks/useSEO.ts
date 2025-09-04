@@ -195,12 +195,12 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
     // Core Web Vitals'
     if ('web-vital' in window) {
       // This would require the web-vitals library
-      // // // // // // // console.log('Web Vitals available')}
-      console.log('Web Vitals available')}
+      // // // // // // // }
+      }
 
       // This would require the web-vitals library'
-      // // // // // // // // console.log('Web Vitals available')}
-      // console.log('Web Vitals available')}
+      // // // // // // // // }
+      // }
 
     // Navigation Timing API'
     if ('performance' in window) {

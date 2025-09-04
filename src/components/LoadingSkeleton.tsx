@@ -136,3 +136,6 @@ export const FormSkeleton: Reac t.FC<{ count?: number }> = ({ count = 4 }) => ("
   <LoadingSkeleton type="form" count={count}   />);
 
 export default LoadingSkeleton;'"`
+
+</LoadingSkeletonProps>
+</motion>

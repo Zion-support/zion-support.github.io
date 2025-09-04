@@ -1,5 +1,6 @@
+import React from 'react';
 import {  import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
-export default function Page() {
+export default function Page(props: any) {
 , { id: 'Metaverse', name: 'Metaverse', count: allService s.filter(s => s.category === 'Metaverse').length, icon: '🌍' }, { id: 'Edge Computing', name: 'Edge Computing', count: allService s.filter(s => s.category === 'Edge Computing').length, icon: '🌐' }, { id: 'Cybersecurity', name: 'Cybersecurity', count: allService s.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' };
   ] { id: 'all', name: 'All Levels', icon: '🌟' }, { id: 'Advanced', name: 'Advanced', icon: '🚀' }, { id: 'Cutting-edge', name: 'Cutting-edge', icon: '⚡' }, { id: 'Revolutionary', name: 'Revolutionary', icon: '💫' };
   ];
@@ -128,7 +129,7 @@ export default function Page() {
                   min="0"
                   max="10000"
                   value={priceRange[0]}
-                  onChange = {
+                  onChange={
 
   (e) => setPriceRange([parseInt(e.target.value),
   priceRange[1]])
@@ -141,7 +142,7 @@ export default function Page() {
                   min="0"
                   max="10000"
                   value={priceRange[1]}
-                  onChange = {
+                  onChange={
 
   (e) => setPriceRange([priceRange[0],
   parseInt(e.target.value)])
@@ -294,7 +295,7 @@ export default function Page() {
               <p className="text-zion-slate-400 mb-6">
                 Try adjusting your search criteria or filters
               </p>
-              <button      onClick = {;
+              <button      onClick={;
   ;
   ;
   ;
@@ -498,3 +499,9 @@ export default function Page() {
 </div></div></div></div></div></div></div>};
 
 export default ComprehensiveServicesShowcase2025}}}}}}}}}}'"`
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

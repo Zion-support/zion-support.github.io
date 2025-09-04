@@ -1,14 +1,14 @@
 import React from 'react';'''
-import { Helmet } from 'react-helmet-async';
-const MobileLaunch = () => {}
+import {Helmet} from 'react-helmet-async';
+const MobileLaunch = (props: any) => {}
   return()
     <>
       <Helmet>
         <title>Mobile Launch - Zion Tech Group</title>
-        <meta'
+        <meta '
           name="description"'"'"""
           content="Launch Zion Tech Group's mobile applications. Access our services on the go with our mobile apps."""
-        />
+          />
       </Helmet>"""
 """"
       <div className="min-h-screen bg-gray-50 py-12">""""
@@ -34,12 +34,12 @@ const MobileLaunch = () => {}
     </>)};
 export default MobileLaunch;
 
-export { MobileLaunch };
+export {MobileLaunch};
 
-export { MobileLaunch };
+export {MobileLaunch};
 
-export { MobileLaunch };
+export {MobileLaunch};
 
-export { MobileLaunch };
+export {MobileLaunch};
 
-export { MobileLaunch };
+export {MobileLaunch};

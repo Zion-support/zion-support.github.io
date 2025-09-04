@@ -13,25 +13,25 @@ const microSaaS: Service[] = [
   { name: 'Dynamic Pricing Engine', summary: 'Optimize price by demand and competition.', pricing: '$299–$1,499/month' },
 ];
 
-export default function MicroSaaS() {
+export default function MicroSaaS(props: any) {
   return (
-    <main style={{ padding: '40px 20px' }}>
+    <main style="{{{ padding: '40px 20px'}}"}>
       <Helmet>
         <title>Micro SaaS — Zion Tech Group</title>
-        <meta name="description" content="Production-ready micro SaaS products with auth, billing and analytics." />
-        <link rel="canonical" href="https://ziontechgroup.com/micro-saas" />
+        <meta name="description" content="Production-ready micro SaaS products with auth, billing and analytics."  />
+        <link rel="canonical" href="https://ziontechgroup.com/micro-saas"  />
       </Helmet>
-      <div style={{ maxWidth: 1100, margin: '0 auto' }}>
-        <header style={{ textAlign: 'center', marginBottom: 24 }}>
-          <h1 style={{ fontSize: 34, fontWeight: 800 }}>Micro SaaS Products</h1>
-          <p style={{ color: '#64748b' }}>Launch faster with prebuilt modules: authentication, subscriptions, analytics, and CRM hooks.</p>
+      <div style="{{{ maxWidth: 1100; margin: '0 auto'}}"}>
+        <header style="{{{ textAlign: 'center'; marginBottom: 24}}"}>
+          <h1 style="{{{ fontSize: 34; fontWeight: 800}}"}>Micro SaaS Products</h1>
+          <p style="{{{ color: '#64748b'}}"}>Launch faster with prebuilt modules: authentication, subscriptions, analytics, and CRM hooks.</p>
         </header>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: 20 }}>
+        <div style="{{{ display: 'grid'; gridTemplateColumns: 'repeat(auto-fit; gap: 20}}"}>
           {microSaaS.map((s) => (
-            <div key={s.name} style={{ background: 'white', border: '1px solid #e5e7eb', borderRadius: 12, padding: 20 }}>
-              <h3 style={{ fontSize: 18, fontWeight: 700 }}>{s.name}</h3>
-              <p style={{ color: '#64748b', margin: '8px 0' }}>{s.summary}</p>
-              <p style={{ fontWeight: 600 }}>Pricing: {s.pricing}</p>
+            <div key={s.name} style="{{{ background: 'white'; border: '1px solid #e5e7eb'; borderRadius: 12; padding: 20}}"}>
+              <h3 style="{{{ fontSize: 18; fontWeight: 700}}"}>{s.name}</h3>
+              <p style="{{{ color: '#64748b'; margin: '8px 0'}}"}>{s.summary}</p>
+              <p style="{{{ fontWeight: 600}}"}>Pricing: {s.pricing}</p>
             </div>
           ))}
         </div>

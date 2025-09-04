@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, XCircle, AlertTriangle, ExternalLink  } from 'lucide-react';
+import React, {useState, useEffect} from 'react';
+import {CheckCircle, XCircle, AlertTriangle, ExternalLink} from 'lucide-react';
 
-export default function Page() {
-;
-      }
+export default function Page(props: any) {;}
       // For internal links, we'll assume they're healthy since they're part of our app'
       if(url.startsWith('/') || url.includes('ziontechgroup.com')) {
 
@@ -15,9 +13,7 @@ export default function Page() {
       }
       // For external links, we could implement actual health checking'
       // For now, we'll mark them as external
-      return {
-
-        url,
+      return {url,
         status: 'external',
         responseTime: Date.now() - startTime};
     } catch(error) {
@@ -38,9 +34,7 @@ export default function Page() {
     setLinkStatuses(statuses);
     setIsChecking(false);
   };
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
+  useEffect(() => {// TODO: Add dependencies if needed}, []);
     // Auto-check links when component mounts
     checkAllLinks();
   }, [links]);
@@ -49,17 +43,17 @@ export default function Page() {
     switch(status) {
 
       case 'healthy':
-        return <CheckCircle className="w-5 h-5 text-green-500" />;
+        return <CheckCircle className="w-5 h-5 text-green-500"  />;
       case 'broken':"
-        return <XCircle className="w-5 h-5 text-red-500" />;
+        return <XCircle className="w-5 h-5 text-red-500"  />;
       case 'external':"
-        return <ExternalLink className="w-5 h-5 text-blue-500" />;
+        return <ExternalLink className="w-5 h-5 text-blue-500"  />;
       case 'checking':
         return ("
-          <AlertTriangle className="w-5 h-5 text-yellow-500 animate-pulse" />
+          <AlertTriangle className="w-5 h-5 text-yellow-500 animate-pulse"  />
         );
       default:"
-        return <AlertTriangle className="w-5 h-5 text-gray-500" />;
+        return <AlertTriangle className="w-5 h-5 text-gray-500"  />;
     }
   };
   const getStatusText = status => {
@@ -120,12 +114,12 @@ export default function Page() {
         >
           {isChecking ? (
             <>"
-              <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+              <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"  />
               Checking...
             </>
           ) : (
             <>"
-              <CheckCircle className="w-4 h-4" />
+              <CheckCircle className="w-4 h-4"  />
               Recheck
             </>
           )}
@@ -217,12 +211,12 @@ Great job! All links are working properly. Your website is in excellent health.
     </div>)};
 export default LinkHealthChecker;
 
-export { LinkHealthChecker };
+export {LinkHealthChecker};
 
-export { LinkHealthChecker };
+export {LinkHealthChecker};
 
-export { LinkHealthChecker };
+export {LinkHealthChecker};
 
-export { LinkHealthChecker };
+export {LinkHealthChecker};
 
-export { LinkHealthChecker };
+export {LinkHealthChecker};

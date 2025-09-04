@@ -1,6 +1,6 @@
 import React from 'react';
 import EnhancedComprehensiveServicesShowcase from "../components/EnhancedComprehensiveServicesShowcase.jsx";
-const InnovativeServicesShowcase2025 = () => {
+const InnovativeServicesShowcase2025 = (props: any) => {
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -308,7 +308,7 @@ const InnovativeServicesShowcase2025 = () => {
 """
       {/* Services Showcase */}""""
       <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
-        <EnhancedComprehensiveServicesShowcase />
+        <EnhancedComprehensiveServicesShowcase  />
       </section>
 """
       {/* Contact & Get Started */}""""
@@ -363,7 +363,7 @@ const InnovativeServicesShowcase2025 = () => {
               </p>""""
               <p className="text-blue-400 text-sm">
                 364 E Main St STE 1008;
-                <br />
+                <br  />
                 Middletown DE 19709;
               </p>
             </div>
@@ -388,12 +388,12 @@ const InnovativeServicesShowcase2025 = () => {
     </div>)};
 export default InnovativeServicesShowcase2025;
 
-export { InnovativeServicesShowcase2025 };
+export {InnovativeServicesShowcase2025};
 
-export { InnovativeServicesShowcase2025 };
+export {InnovativeServicesShowcase2025};
 
-export { InnovativeServicesShowcase2025 };
+export {InnovativeServicesShowcase2025};
 
-export { InnovativeServicesShowcase2025 };
+export {InnovativeServicesShowcase2025};
 
-export { InnovativeServicesShowcase2025 };
+export {InnovativeServicesShowcase2025};

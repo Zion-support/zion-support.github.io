@@ -1,14 +1,14 @@
 import React, { useState } from "react"
-export function ModernHeader() {;
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+export function ModernHeader(props: any) {;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<any>(false)
 }
-  const [isServicesOpen, setIsServicesOpen] = useState(false)
+  const [isServicesOpen, setIsServicesOpen] = useState<any>(false)
 }
-  const toggleMobileMenu = () => {
+  const toggleMobileMenu = (props: any) => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
 }
 
-  const closeMobileMenu = () => {
+  const closeMobileMenu = (props: any) => {
     setIsMobileMenuOpen(false)
 }
     setIsServicesOpen(false)
@@ -230,3 +230,12 @@ export function ModernHeader() {;
 }"
 
 export default Component
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</any>
+</any>

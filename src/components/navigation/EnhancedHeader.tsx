@@ -4,15 +4,15 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin, Search, User, ShoppingCart, Bell } from 'lucide-react';
 
-const EnhancedHeader: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+const EnhancedHeader: React.FC = (props: any) => {
+  const [isOpen, setIsOpen] = useState<any>(false);
+  const [isScrolled, setIsScrolled] = useState<any>(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState<any>('');
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = (props: any) => {
       setIsScrolled(window.scrollY > 20);
     };
 
@@ -96,20 +96,20 @@ const EnhancedHeader: React.FC = () => {
     { icon: MapPin, text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' }
   ];
 
-  const toggleDropdown = (name: string) => {
+  const toggleDropdown = (props: any) => {
     setActiveDropdown(activeDropdown === name ? null : name);
   };
 
-  const closeMobileMenu = () => {
+  const closeMobileMenu = (props: any) => {
     setIsOpen(false);
     setActiveDropdown(null);
   };
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = (props: any) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       // Handle search logic here
-      console.log('Searching for:', searchQuery);
+      
     }
   };
 
@@ -321,3 +321,13 @@ const EnhancedHeader: React.FC = () => {
 };
 
 export default EnhancedHeader;
+
+</motion>
+</ChevronDown>
+</motion>
+</motion>
+</ChevronDown>
+</any>
+</string>
+</any>
+</any>

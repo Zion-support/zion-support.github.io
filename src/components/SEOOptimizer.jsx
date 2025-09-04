@@ -11,7 +11,7 @@
     useEffect(() => {}"});,"})"
         // comment
         analyzeSEO()}, [analyzeSEO]);,"});,"})"
-    const calculateSEOScore = (page) => {}"});,"})"
+    const calculateSEOScore = (props: any) => {}"});,"})"
         let score = 0,"});,"})"
         const maxScore = 0,"});,"})"
         // comment
@@ -64,7 +64,7 @@
         if (page.url !== "/" && !page.url.includes("-")) {}"});,"})"
             issues.push("URL could be more SEO-friendly (consider using hyphens))}"});,"})"
         return issues};,"});,"})"
-    const generateSEORecommendations = (issues) => {}"});,"})"
+    const generateSEORecommendations = (props: any) => {}"});,"})"
         const recommendations = [];,"});,"})"
         if (issues.some(issue => issue.includes("Title"))) {}"});,"})"
             recommendations.push("Optimize page titles with relevant keywords and compelling copy")}";,"});,"})"
@@ -83,7 +83,7 @@
         recommendations.push();"";,"});,"})"
         recommendations.push("Optimize page loading speed for better user experience and SEO");,"});,"})"
         return recommendations};,"});,"})"
-    const generateSummary = (pageAnalyses, topIssues) => {}"});,"})"
+    const generateSummary = (props: any) => {}"});,"})"
         const totalPages = pageAnalyses.length,"});,"})"
         const excellentPages = pageAnalyses.filter(page => page.score >= 80) .length,"});,"})"
         const goodPages = pageAnalyses.filter(page => page.score >= 60) .length,"});,"})"
@@ -106,7 +106,7 @@
 """""""";,"});,"})"
             summary += "Top SEO issues to address: ${topIssues.slice(0, 3).join(")}."}"});,"})"
         return summary};,"});,"})"
-    const exportSEOReport = () => {}"});,"})"
+    const exportSEOReport = (props: any) => {}"});,"})"
         if (!report);,"});,"})"
             return,"});,"})"
         const csvContent = [],,"});,"})"
@@ -124,7 +124,7 @@
         a.download = "seo-optimization-report.csv";,"});,"})"
         a.click();,"});,"})"
         window.URL.revokeObjectURL(url)};,"});,"})"
-    const getScoreColor = (score) => {}"});,"})"
+    const getScoreColor = (props: any) => {}"});,"})"
         if (score >= 80)";,"});,"})"
             return "text-green-600 bg-green-50 border-green-200";,"});,"})"
         if (score >= 60)";,"});,"})"
@@ -132,7 +132,7 @@
         if (score >= 40)";,"});,"})"
             return "text-orange-600 bg-orange-50 border-orange-200";,"});,"})"
         return "text-red-600 bg-red-50 border-red-200"};,"});,"})"
-    const getScoreText = (score) => {}"});,"})"
+    const getScoreText = (props: any) => {}"});,"})"
             return "Excellent";,"});,"})"
             return "Good";,"});,"})"
             return "Fair";""";,"});,"})"
@@ -142,7 +142,7 @@
     <div className="fixed bottom-6 right-24 z-50">""";,"});,"})"
       {/* comment */}"""";,"});,"})"
       <button onClick="{()" => setIsOpen(!isOpen)} className="bg-gradient-to-r from-purple-600 to-pink-600 hover: from-purple-700 hover:to-pink-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" aria-label="Toggle SEO Optimizer">"""","});,"})"
-        <Search className="w-6 h-6"  />;,"});,"})"
+        <Search className="w-6 h-6"   />;,"});,"})"
       </button>;,"});,"})"
 """;,"});,"})"
       {/* comment */}"""";,"});,"})"
@@ -151,7 +151,7 @@
           <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4">"""";,"});,"})"
             <div className="flex items-center justify-between">"""";,"});,"})"
               <h3 className="text-lg font-semibold flex items-center gap-2">"""";,"});,"})"
-                <TrendingUp className="w-5 h-5"  />;,"});,"})"
+                <TrendingUp className="w-5 h-5"   />;,"});,"})"
                 SEO Optimizer""";,"});,"})"
               </h3>"""";,"});,"})"
               <button onClick="{()" => setIsOpen(false)} className="text-white/80 hover: text-white transition-colors">,"});,"})"
@@ -171,13 +171,13 @@
           {/* comment */}"""";,"});,"})"
           <div className="p-4 max-h-[500px] overflow-y-auto">"""";,"});,"})"
             {isAnalyzing ? (<div className="flex items-center justify-center py-8">"""";,"});,"})"
-                <RefreshCw className="w-6 h-6 animate-spin text-purple-600"  />"""";,"});,"})"
+                <RefreshCw className="w-6 h-6 animate-spin text-purple-600"   />"""";,"});,"})"
                 <span className="ml-2 text-gray-600">Analyzing SEO...</span>"""";,"});,"})"
               </div>) : report ? (<div className="space-y-4">""";,"});,"})"
                 {/* comment */}"""";,"});,"})"
                 {report.topIssues.length > 0 && (<div className="bg-yellow-50 dark: bg-yellow-900/20 p-4 rounded-lg">"""","});,"})"
                     <h4 className="font-medium text-yellow-800 dark: text-yellow-200 mb-2 flex items-center gap-2">"""","});,"})"
-                      <AlertTriangle className="w-4 h-4"  />;,"});,"})"
+                      <AlertTriangle className="w-4 h-4"   />;,"});,"})"
                       Top SEO Issues to Address""";,"});,"})"
                     </h4>"""";,"});,"})"
                     <div className="space-y-1">"""";,"});,"})"
@@ -243,12 +243,12 @@
                             <h4 className="font-medium text-red-600 dark: text-red-400 mb-2">SEO Issues Found</h4>"""","});,"})"
                             <div className="space-y-2">"""";,"});,"})"
                               {selectedPage.issues.map((issue, index) => (<div key="{index}" className="flex items-start gap-2 text-sm text-red-600 dark: text-red-400">"""","});,"})"
-                                  <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0"  />;,"});,"})"
+                                  <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0"   />;,"});,"})"
                                   <span>{issue}</span>;,"});,"})"
                         {selectedPage.recommendations.length > 0 && (<div>"""";,"});,"})"
                             <h4 className="font-medium text-green-600 dark: text-green-400 mb-2">SEO Recommendations</h4>"""","});,"})"
                               {selectedPage.recommendations.map((rec, index) => (<div key="{index}" className="flex items-start gap-2 text-sm text-green-600 dark: text-green-400">"""","});,"})"
-                                  <Zap className="w-4 h-4 mt-0.5 flex-shrink-0"  />;,"});,"})"
+                                  <Zap className="w-4 h-4 mt-0.5 flex-shrink-0"   />;,"});,"})"
                                   <span>{rec}</span>;,"});,"})"
                   </div>)}"""";,"});,"})"
               </div>) : (<div className="text-center py-8 text-gray-500">;,"});,"})"
@@ -256,26 +256,24 @@
           {/* comment */}"""";,"});,"})"
           <div className="bg-gray-50 dark: bg-gray-800 p-3 flex gap-2">""","});,"})"
             <button onClick="{analyzeSEO}" disabled="{isAnalyzing}" className="flex-1 bg-purple-600 hover: bg-purple-700 disabled:bg-purple-400 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2">"""","});,"})"
-              <RefreshCw className="{"w-4" h-4 ${isAnalyzing ? "animate-spin" : ""}"}       />";,"});,"})"
+              <RefreshCw className="{"w-4" h-4 ${isAnalyzing ? "animate-spin" : ""}"}        />";,"});,"})"
               {isAnalyzing ? "Analyzing..." : "Analyze SEO"}""";,"});,"})"
             </button>"""";,"});,"})"
             <button onClick="{exportSEOReport}" className="px-3 py-2 bg-pink-600 hover: bg-pink-700 text-white rounded-md transition-colors flex items-center gap-2">"""","});,"})"
-              <Download className="w-4 h-4"  />;,"});,"})"
+              <Download className="w-4 h-4"   />;,"});,"})"
               Export,"});,"})"
         </div>)}"});,"})"
     </div>)};,"});,"})"
-  } catch (error) {
-    console.error(error);
-  }
+  } catch (error) {console.error(error);}
 export default SEOOptimizer,"});,"});"
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}"});,"})"
-export { SEOOptimizer };,"});,"})"
- const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {";import React { useState, useEffect, useCallback } from "react"
- const SEOOptimizer = () => {const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {"";import React { useState, useEffect, useCallback } from "react"";""const;const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {&apos;import React { useState, useEffect, useCallback } from &apos;react&apos,lucide-react";&apos;&apos,
- const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {"";import React { useState, useEffect, useCallback } from "react"";"""
+export {SEOOptimizer};,"});,"})"
+ const SEOOptimizer = (props: any) => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {";import React { useState, useEffect, useCallback } from "react"
+ const SEOOptimizer = (props: any) => {const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {"";import React { useState, useEffect, useCallback } from "react"";""const;const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {&apos;import React { useState, useEffect, useCallback } from &apos;react&apos,lucide-react";&apos;&apos,
+ const SEOOptimizer = (props: any) => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {"";import React { useState, useEffect, useCallback } from "react"";"""
 ""}}}
 
-const SEOOptimizer = () => {}
+const SEOOptimizer = (props: any) => {}
 
     const;const;const [isOpen, setIsOpen] = useState (false)
 }
@@ -449,4 +447,28 @@ issues,
 }, []);, []);
         // Auto-analyze SEO when component mounts
         analyzeSEO()}, [analyzeSEO]);
-    const calculateSEOScore = (page) => {
+    const calculateSEOScore = (props: any) => {
+
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</button>
+</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</button>
+</div>
+</div>
+</div>

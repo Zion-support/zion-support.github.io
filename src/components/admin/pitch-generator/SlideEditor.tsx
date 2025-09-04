@@ -9,12 +9,14 @@ interface Slide {
 }
 
 interface SlideEditorProps {
+
   generatedSlides: Slid e[];
   setGeneratedSlides: (slides: Slid e[]) => void;
   onBack: () => void;
   onExport: () => void;
   isGenerating: boolean;
   setIsGenerating: (generating: boolean) => void;
+
 }
 
 const SlideEditor: Reac t.FC<SlideEditorProps> = ({
@@ -69,7 +71,7 @@ const SlideEditor: Reac t.FC<SlideEditorProps> = ({
     setIsGenerating(false);
   };
 
-  const updateSlide = (id: string, field: keyof Slide, value: string) => {
+  const updateSlide = (props: any) => {
     setGeneratedSlides(prev => 
       prev.map(slide => 
         slide.id === id ? { ...slide, [field]: value } : slide
@@ -77,11 +79,11 @@ const SlideEditor: Reac t.FC<SlideEditorProps> = ({
     );
   };
 
-  const removeSlide = (id: string) => {
+  const removeSlide = (props: any) => {
     setGeneratedSlides(prev => prev.filter(slide => slide.id !== id));
   };
 
-  const addSlide = () => {
+  const addSlide = (props: any) => {
     const newSlide: Slid e = {
       id: Dat e.now().toString(),
       title: 'New Slide',
@@ -207,3 +209,5 @@ const SlideEditor: Reac t.FC<SlideEditorProps> = ({
 };
 
 export default SlideEditor;
+</textarea>
+</SlideEditorProps>

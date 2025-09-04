@@ -9,8 +9,8 @@ export { FinOpsAdvisor }(...args: []):  {
     <>
       <Helmet>
         <title>FinOps Advisor - Zion Tech Group</title>
-        <meta name = "description" content="Optimize your cloud costs with AI-powered FinOps advisory services. Reduce cloud spending, improve resource utilization, and maximize ROI."  />
-        <meta name="keywords" content="FinOps, cloud cost optimization, cloud financial management, cost reduction, cloud ROI, financial operations"  />
+        <meta name = "description" content="Optimize your cloud costs with AI-powered FinOps advisory services. Reduce cloud spending, improve resource utilization, and maximize ROI."   />
+        <meta name="keywords" content="FinOps, cloud cost optimization, cloud financial management, cost reduction, cloud ROI, financial operations"   />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -39,7 +39,7 @@ export { FinOpsAdvisor }(...args: []):  {
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover: fro m-emerald-600 hover: t o-teal-700 transition-all duration-200 shadow-lg hover: shado w-xl"
 
                   Get Started
-                  <ArrowRight className="ml-2 w-5 h-5"  />
+                  <ArrowRight className="ml-2 w-5 h-5"   />
                 </Link>
                 <button className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover: b g-emerald-500/10 transition-all duration-200">
                   <Play className="mr-2 w-5 h-5"  />
@@ -161,7 +161,7 @@ export { FinOpsAdvisor }(...args: []):  {
               ].map((area, index)  => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover: b g-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">
-                    <area.icon className="w-6 h-6 text-white" />
+                    <area .icon className="w-6 h-6 text-white"  />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{area.title}</h3>
                   <p className="text-slate-300 mb-4">{area.description}</p>
@@ -405,7 +405,7 @@ export { FinOpsAdvisor }(...args: []):  {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover: fro m-emerald-600 hover: t o-teal-700 transition-all duration-200"
 
                 Schedule a Consultation
-                <ArrowRight className="ml-2 w-5 h-5"  />
+                <ArrowRight className="ml-2 w-5 h-5"   />
               </Link>
               <Link
                 to="/services"

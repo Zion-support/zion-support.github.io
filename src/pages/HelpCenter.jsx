@@ -1,6 +1,6 @@
-import React, { useState } from 'react';'''
-import { Helmet } from 'react-helmet-async';'''
-import { Link } from 'react-router-dom';
+import React, {useState} from 'react';'''
+import {Helmet} from 'react-helmet-async';'''
+import {Link} from 'react-router-dom';
 import {}
   Search,
   BookOpen,
@@ -11,7 +11,7 @@ import {}
   ChevronDown,'''
   ChevronRight} from 'lucide-react';
 
-export default function HelpCenter() {}
+export default function HelpCenter(props: any) {}
 '
   const [searchQuery, setSearchQuery] = useState('');'
   const [expandedCategories, setExpandedCategories] = useState([''
@@ -40,12 +40,12 @@ export default function HelpCenter() {}
 '''
           title: 'How to create your first account','''
           href: '/help/create-account'},'''
-        { title: 'Complete profile setup guide', href: '/help/profile-setup' },
+        {title: 'Complete profile setup guide', href: '/help/profile-setup'},
         {}
 '
           title: 'Understanding the marketplace','
           href: '/help/marketplace-guide'},'
-        { title: 'First steps for new users', href: '/help/first-steps' }
+        {title: 'First steps for new users', href: '/help/first-steps'}
       ]},
     marketplace: {}
 '
@@ -60,8 +60,8 @@ export default function HelpCenter() {}
 '''
           title: 'How to list products and services','''
           href: '/help/list-products'},'''
-        { title: 'Managing your listings', href: '/help/manage-listings' },'''
-        { title: 'Understanding pricing and fees', href: '/help/pricing-fees' },
+        {title: 'Managing your listings', href: '/help/manage-listings'},'''
+        {title: 'Understanding pricing and fees', href: '/help/pricing-fees'},
         {}
 '
           title: 'Marketplace policies and guidelines','
@@ -74,13 +74,13 @@ export default function HelpCenter() {}
       title: 'Talent & Hiring',''
       icon: BookOpen,'''
       articles: [''''
-        { title: 'Creating a talent profile', href: '/help/talent-profile' },'''
-        { title: 'Finding and hiring talent', href: '/help/hire-talent' },
+        {title: 'Creating a talent profile', href: '/help/talent-profile'},'''
+        {title: 'Finding and hiring talent', href: '/help/hire-talent'},
         {}
 '
           title: 'Managing projects and contracts','
           href: '/help/manage-projects'},'
-        { title: 'Payment and escrow system', href: '/help/payment-system' }
+        {title: 'Payment and escrow system', href: '/help/payment-system'}
       ]},
     technical: {}
 '
@@ -89,13 +89,13 @@ export default function HelpCenter() {}
       title: 'Technical Support',''
       icon: BookOpen,'''
       articles: [''''
-        { title: 'Common technical issues', href: '/help/technical-issues' },'''
-        { title: 'Browser compatibility', href: '/help/browser-compatibility' },
+        {title: 'Common technical issues', href: '/help/technical-issues'},'''
+        {title: 'Browser compatibility', href: '/help/browser-compatibility'},
         {}
 '
           title: 'Mobile app troubleshooting','
           href: '/help/mobile-troubleshooting'},'
-        { title: 'API and integration support', href: '/help/api-support' }
+        {title: 'API and integration support', href: '/help/api-support'}
       ]},
     billing: {}
 '
@@ -104,7 +104,7 @@ export default function HelpCenter() {}
       title: 'Billing & Payments',''
       icon: BookOpen,'''
       articles: [''''
-        { title: 'Understanding your invoice', href: '/help/invoice-guide' },
+        {title: 'Understanding your invoice', href: '/help/invoice-guide'},
         {}
 '
 ''
@@ -135,7 +135,7 @@ export default function HelpCenter() {}
 '''
           title: 'Account security best practices','''
           href: '/help/account-security'},'''
-        { title: 'Two-factor authentication setup', href: '/help/2fa-setup' },
+        {title: 'Two-factor authentication setup', href: '/help/2fa-setup'},
         {}
 '
 ''
@@ -153,15 +153,15 @@ export default function HelpCenter() {}
   return (<>
       <Helmet>
         <title>Help Center - Zion Tech Group</title>
-        <meta'
+        <meta '
           name="description"'"'"""
           content="Get help and support for Zion Tech Group's platform. Find answers to common questions, tutorials, and contact information."""
-        />"""
-        <meta""""
+          />"""
+        <meta """"
           name="keywords""""
           content="help center, support, FAQ, tutorials, Zion Tech Group""""
-        />""""
-        <link rel="canonical" href="https://ziontechgroup.com/help-center" />
+          />""""
+        <link rel="canonical" href="https://ziontechgroup.com/help-center"   />
       </Helmet>"""
 """"
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">"""
@@ -181,7 +181,7 @@ export default function HelpCenter() {}
 """
             {/* Search Bar */}""""
             <div className="max-w-2xl mx-auto relative">""""
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />"""
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />"""
               <input""""
                 type="text""""
                 placeholder="Search for help articles, tutorials, or topics..."""
@@ -208,7 +208,7 @@ export default function HelpCenter() {}
                   <div className="flex items-center justify-between mb-4">""""
                     <div className="flex items-center gap-3">""""
                       <div className="w-10 h-10 bg-zion-cyan/20 rounded-lg flex items-center justify-center">""""
-                        <category.icon className="w-5 h-5 text-zion-cyan" />"""
+                        <category .icon className="w-5 h-5 text-zion-cyan"  />"""
                       </div>""""
                       <h3 className="text-xl font-bold text-white">
                         {category.title}
@@ -219,9 +219,9 @@ export default function HelpCenter() {}
                       className="text-zion-slate-light hover:text-zion-cyan transition-colors"""
                     >"""
                       {expandedCategories.includes(key) ? (""""
-                        <ChevronDown className="w-5 h-5" />"""
+                        <ChevronDown className="w-5 h-5"  />"""
                       ) : (""""
-                        <ChevronRight className="w-5 h-5" />
+                        <ChevronRight className="w-5 h-5"  />
                       )}
                     </button>
                   </div>
@@ -262,7 +262,7 @@ export default function HelpCenter() {}
                     className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light font-medium transition-colors"""
                   >"""
                     Read Article""""
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <ArrowRight className="w-4 h-4 ml-2"  />
                   </Link>
                 </div>) ) }
             </div>
@@ -283,7 +283,7 @@ export default function HelpCenter() {}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">""""
               <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-blue-light/20 rounded-xl p-6">""""
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">""""
-                  <MessageSquare className="w-6 h-6 text-zion-cyan" />"""
+                  <MessageSquare className="w-6 h-6 text-zion-cyan"  />"""
                 </div>""""
                 <h3 className="text-lg font-semibold text-white mb-2">
                   Live Chat"""
@@ -298,7 +298,7 @@ export default function HelpCenter() {}
 """"
               <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-blue-light/20 rounded-xl p-6">""""
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">""""
-                  <Mail className="w-6 h-6 text-zion-cyan" />"""
+                  <Mail className="w-6 h-6 text-zion-cyan"  />"""
                 </div>""""
                 <h3 className="text-lg font-semibold text-white mb-2">
                   Email Support"""
@@ -316,7 +316,7 @@ export default function HelpCenter() {}
 """"
               <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-blue-light/20 rounded-xl p-6">""""
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">""""
-                  <Phone className="w-6 h-6 text-zion-cyan" />"""
+                  <Phone className="w-6 h-6 text-zion-cyan"  />"""
                 </div>""""
                 <h3 className="text-lg font-semibold text-white mb-2">
                   Phone Support"""
@@ -339,12 +339,12 @@ export default function HelpCenter() {}
   );
   }
 
-export { HelpCenter };
+export {HelpCenter};
 
-export { HelpCenter };
+export {HelpCenter};
 
-export { HelpCenter };
+export {HelpCenter};
 
-export { HelpCenter };
+export {HelpCenter};
 
-export { HelpCenter };
+export {HelpCenter};

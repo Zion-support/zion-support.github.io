@@ -2,7 +2,7 @@ import React from 'react',;',';';
     ';';';';
 import {SEO } from '@/components/SEO';
 ,"});,"})
-export default function HelpCenter() {return (
+export default function HelpCenter(props: any) {return (
     <div className="min-h-screen bg-white">
       <SEO title="HelpCenter - Zion Tech Group" description="Professional HelpCenter services by Zion Tech Group"  />
       <div className="container mx-auto px-4 py-20">

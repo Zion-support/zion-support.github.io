@@ -1,12 +1,12 @@
 import React from "react"
 import Head from "next/head"
 import Link from "next/link"
-const ZionTechGroup2025ComprehensiveShowcase = () => {
+const ZionTechGroup2025ComprehensiveShowcase = (props: any) => {
   return (
     <>
       <Head>
         <title>Zion Tech Group2025 Comprehensive Showcase - Zion Tech Group</title>
-        <meta name="description" content="Professional Zion Tech Group2025 Comprehensive Showcase services"   />
+        <meta name="description" content="Professional Zion Tech Group2025 Comprehensive Showcase services"    />
       </Head>
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-12">
@@ -48,3 +48,8 @@ const ZionTechGroup2025ComprehensiveShowcase = () => {
   );
 }
 export default ZionTechGroup2025ComprehensiveShowcase
+
+</div>
+</div>
+</div>
+</div>

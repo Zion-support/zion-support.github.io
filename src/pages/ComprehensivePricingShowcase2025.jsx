@@ -1,13 +1,13 @@
-import React, { useState } from 'react';'''
-import { Link } from 'react-router-dom';
+import React, {useState} from 'react';'''
+import {Link} from 'react-router-dom';
 ;
-const ComprehensivePricingShowcase2025 = () => {
+const ComprehensivePricingShowcase2025 = (props: any) => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [priceRange, setPriceRange] = useState('all');
     const allServices = [
         ...advancedInnovativeServices2025V3.map(service => ({ ...service, type: 'Micro SAAS' })),
-        ...advancedITServices2025.map(service => ({ ...service, type: 'IT Service' })),
-        ...advancedAIServices2025.map(service => ({ ...service, type: 'AI Service' }))
+        ...advancedITServices2025.map(service => ({...service, type: 'IT Service'})),
+        ...advancedAIServices2025.map(service => ({...service, type: 'AI Service'}))
     ];
     const categories = [
         'all',
@@ -27,10 +27,10 @@ const ComprehensivePricingShowcase2025 = () => {
         'AI & Customer Experience'
     ];
     const priceRanges = [
-        { value: 'all', label: 'All Prices' },
-        { value: 'low', label: 'Under $500/month', max: 500 },
-        { value: 'medium', label: '$500 - $2,000/month', min: 500, max: 2000 },
-        { value: 'high', label: 'Over $2,000/month', min: 2000 }
+        {value: 'all', label: 'All Prices'},
+        {value: 'low', label: 'Under $500/month', max: 500},
+        {value: 'medium', label: '$500 - $2,000/month', min: 500, max: 2000},
+        {value: 'high', label: 'Over $2,000/month', min: 2000}
     ];
     const filteredServices = allServices        .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
         .filter(service => {}
@@ -52,7 +52,7 @@ const ComprehensivePricingShowcase2025 = () => {
                 return price >= range.min}
         }
         return true}) ;
-    const getServiceTypeColor = (type) => {}
+    const getServiceTypeColor = (props: any) => {}
         switch (type) {}
 '
 ''
@@ -66,7 +66,7 @@ const ComprehensivePricingShowcase2025 = () => {
             default:''''
                 return 'bg-gray-100 text-gray-800 border-gray-200'}
     };
-    const getCategoryIcon = (category) => {
+    const getCategoryIcon = (props: any) => {
         const icons = {
   'Legal Tech & Compliance': '⚖️',
             'Quantum Computing & Security': '🔐',
@@ -84,10 +84,10 @@ const ComprehensivePricingShowcase2025 = () => {
 
 export { ComprehensivePricingShowcase2025 };
 
-export { ComprehensivePricingShowcase2025 };
+export {ComprehensivePricingShowcase2025};
 
-export { ComprehensivePricingShowcase2025 };
+export {ComprehensivePricingShowcase2025};
 
-export { ComprehensivePricingShowcase2025 };
+export {ComprehensivePricingShowcase2025};
 
-export { ComprehensivePricingShowcase2025 };
+export {ComprehensivePricingShowcase2025};

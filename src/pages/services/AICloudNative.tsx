@@ -1,12 +1,12 @@
 import React from "react"
 import Link from "next/link"
 import Head from "next/head"
-const AICloudNative = () => {
+const AICloudNative = (props: any) => {
   return (
     <>
       <Head>
         <title>Cloud Native - AI Services</title>
-        <meta name="description" content="Professional Cloud Native services powered by AI"   />
+        <meta name="description" content="Professional Cloud Native services powered by AI"    />
       </Head>
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-12">
@@ -49,3 +49,7 @@ const AICloudNative = () => {
 }
 
 export default AICloudNative
+</div>
+</div>
+</div>
+</div>

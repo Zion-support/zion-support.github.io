@@ -1,5 +1,6 @@
+import React from 'react';
 import { Link, useSearchParams  } from 'react-router-dom';
-export default function Page() {
+export default function Page(props: any) {
 ,
     {
       id: 'ai - sales',
@@ -173,14 +174,14 @@ export default function Page() {
     setIsSearching(false) ;
   };
 
-  const toggleFilter = (filterType: keyof typeof activeFilters, value: string) => {
+  const toggleFilter = (props: any) => {
     setActiveFilters(prev => ({
       ...prev,
       [filterType]: prev[filterType].includes (value) ? prev[filterType].filter(v => v !== value) : [...prev[filterType], value]
     }) ) ;
   };
 
-  const clearAllFilters = () => {
+  const clearAllFilters = (props: any) => {
     setActiveFilters({
       type: [],
       category: [],
@@ -200,7 +201,7 @@ export default function Page() {
     }
   };
 
-  const toggleFilter = (filterId: string) => {
+  const toggleFilter = (props: any) => {
     const newFilters = new Set(selectedFilters) ;
     if(newFilters.has (filterId) ) {
       newFilters.delete(filterId) ;
@@ -211,14 +212,14 @@ export default function Page() {
   };
 
   // Clear all filters
-  const clearFilters = () => {
+  const clearFilters = (props: any) => {
     setSelectedCategory('all') ;
     setSelectedTags([]) ;
     setSearchQuery('') ;
     setSearchParams({}) ;
   };
 
-  const getResultIcon = (type: string) => {
+  const getResultIcon = (props: any) => {
     switch(type) {
       case 'service': return Zap;
       case 'page': return FileText;
@@ -229,7 +230,7 @@ export default function Page() {
     }
   };
 
-  const getResultColor = (type: string) => {
+  const getResultColor = (props: any) => {
     switch(type) {
       case 'service': return 'from - blue - 500 to - indigo - 500';
       case 'blog': return 'from - green - 500 to - emerald - 500';
@@ -380,3 +381,12 @@ export default function Page() {
   );
 }
 export default SearchPage
+
+</div>
+</div>
+</motion>
+</div>
+</motion>
+</div>
+</motion>
+</div>

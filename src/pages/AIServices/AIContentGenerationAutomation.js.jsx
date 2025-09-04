@@ -1,43 +1,35 @@
 import React from 'react';'''
-import { motion } from 'framer-motion';'''
-import { Link } from 'react-router-dom';
-import { Brain, TrendingUp, Zap, BarChart3, CheckCircle, ArrowRight, Play } from 'lucide-react';
+import {motion} from 'framer-motion';'''
+import {Link} from 'react-router-dom';
+import {Brain, TrendingUp, Zap, BarChart3, CheckCircle, ArrowRight, Play} from 'lucide-react';
 ;
 const features = [
-    {
-        title: "AI-Powered Content Generation Automation",
+    {title: "AI-Powered Content Generation Automation",
         description: "Intelligent content generation automation system that learns and adapts to your specific needs and requirements.",
         icon: Brain,
-        color: "from-purple-500 to-pink-500"
-    },
-    {
-        title: "Automated Operations",
+        color: "from-purple-500 to-pink-500"},
+    {title: "Automated Operations",
         description: "Streamline content generation automation processes with intelligent automation and optimization.",
         icon: Zap,
-        color: "from-blue-500 to-cyan-500"
-    },
-    {
-        title: "Real-time Insights",
+        color: "from-blue-500 to-cyan-500"},
+    {title: "Real-time Insights",
         description: "Get instant insights and analytics for better decision-making and performance optimization.",
         icon: BarChart3,
-        color: "from-green-500 to-emerald-500"
-    },
-    {
-        title: "Scalable Solution",
+        color: "from-green-500 to-emerald-500"},
+    {title: "Scalable Solution",
         description: "Built to grow with your business needs, from startup to enterprise scale.",
         icon: TrendingUp,
-        color: "from-orange-500 to-red-500"
-    }];
-export { function };
-export default function AIContentGenerationAutomation() {}
+        color: "from-orange-500 to-red-500"}];
+export {function};
+export default function AIContentGenerationAutomation(props: any) {}
   return()
     <div className="min-h-screen bg-background relative overflow-hidden">"""
-      <SEO""""
+      <SEO """"
         title="Content Generation Automation - Zion Tech Group""""
         description="AI-powered content generation automation solution that transforms your operations with intelligent automation and real-time insights.""""
         keywords="AI content generation automation, automation, intelligent systems, business optimization""""
         canonical="https://ziontechgroup.com/aicontentgenerationautomation/"""
-      />
+       />
 """
       {/* Hero Section */}""""
       <section className="relative pt-32 pb-20 overflow-hidden">""""
@@ -50,7 +42,7 @@ export default function AIContentGenerationAutomation() {}
             className="text-center""""
           >""""
             <div className="inline-flex items-center gap-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full px-4 py-2 text-zion-cyan text-sm font-medium mb-6">""""
-              <Brain className="w-4 h-4" />
+              <Brain className="w-4 h-4"  />
               AI-Powered Content Generation Automation;
             </div>"""
 """"
@@ -73,7 +65,7 @@ export default function AIContentGenerationAutomation() {}
                 whileTap={{ scale: 0.95 }}""""
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center""""
               >""""
-                <Play className="w-5 h-5" />
+                <Play className="w-5 h-5"  />
                 Watch Demo;
               </motion.button>"""
               <Link""""
@@ -81,7 +73,7 @@ export default function AIContentGenerationAutomation() {}
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2 justify-center"""
               >"""
                 Get Started""""
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </Link>
             </div>
           </motion.div>
@@ -120,7 +112,7 @@ export default function AIContentGenerationAutomation() {}
                   <div;
                     className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl mb-6 flex items-center justify-center text-white`}"""
                   >""""
-                    <IconComponent className="w-8 h-8" />"""
+                    <IconComponent className="w-8 h-8"  />"""
                   </div>""""
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {feature.title}"""
@@ -162,7 +154,7 @@ export default function AIContentGenerationAutomation() {}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""""
                 className="flex items-start gap-3""""
               >""""
-                <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />""""
+                <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0"  />""""
                 <span className="text-zion-slate-light">{benefit}</span>
               </motion.div>
             ))}
@@ -191,14 +183,14 @@ export default function AIContentGenerationAutomation() {}
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center"""
               >"""
                 Get Started Today""""
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </Link>"""
               <Link""""
                 to="/pricing""""
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2 justify-center"""
               >"""
                 View Pricing""""
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </Link>
             </div>
           </motion.div>
@@ -206,12 +198,21 @@ export default function AIContentGenerationAutomation() {}
       </section>
     </div>)}
 
-export { AIContentGenerationAutomation, IconComponent };
+export {AIContentGenerationAutomation, IconComponent};
 
-export { AIContentGenerationAutomation, IconComponent };
+export {AIContentGenerationAutomation, IconComponent};
 
-export { AIContentGenerationAutomation, IconComponent };
+export {AIContentGenerationAutomation, IconComponent};
 
-export { AIContentGenerationAutomation, IconComponent };
+export {AIContentGenerationAutomation, IconComponent};
 
-export { AIContentGenerationAutomation, IconComponent };
+export {AIContentGenerationAutomation, IconComponent};
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</SEO>

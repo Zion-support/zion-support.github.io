@@ -1,5 +1,5 @@
 import React from 'react';'
-const Card = ({ children, className = '' }) => {}
+const Card = (props: any) => {}
   return()
     <div;
       className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}
@@ -8,7 +8,7 @@ const Card = ({ children, className = '' }) => {}
     </div>
   );
 };'
-const CardHeader = ({ children, className = '' }) => {}
+const CardHeader = (props: any) => {}
 `
 ``
 ```
@@ -18,7 +18,7 @@ const CardHeader = ({ children, className = '' }) => {}
     </div>
   );
 };'
-const CardTitle = ({ children, className = '' }) => {}
+const CardTitle = (props: any) => {}
   return()`
     <h3``
       className={`text-2xl font-semibold leading-none tracking-tight ${className}`}
@@ -27,18 +27,18 @@ const CardTitle = ({ children, className = '' }) => {}
     </h3>
   );
 };'
-const CardDescription = ({ children, className = '' }) => {}
+const CardDescription = (props: any) => {}
 `
   return()``
     <p className={`text-sm text-muted-foreground ${className}`}>{children}</p>
   );
 };'
-const CardContent = ({ children, className = '' }) => {}
+const CardContent = (props: any) => {}
 `
 ``
   return <div className={`p-6 pt-0 ${className}`}>{children}</div>;
 };'
-const CardFooter = ({ children, className = '' }) => {}
+const CardFooter = (props: any) => {}
 `
 ``
 ```
@@ -46,29 +46,29 @@ const CardFooter = ({ children, className = '' }) => {}
     <div className={`flex items-center p-6 pt-0 ${className}`}>{children}</div>
   );
 };
-const CardDescription = ({ children, className = '' }) => {
+const CardDescription = (props: any) => {
     return (<p className={`text-sm text-muted-foreground ${className}`}>
       {children}
     </p>);
 };
-const CardContent = ({ children, className = '' }) => {
+const CardContent = (props: any) => {
     return (<div className={`p-6 pt-0 ${className}`}>
       {children}
     </div>);
 };
-const CardFooter = ({ children, className = '' }) => {
+const CardFooter = (props: any) => {
     return (<div className={`flex items-center p-6 pt-0 ${className}`}>
       {children}
     </div>);
 };
-export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
+export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
 
-export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
+export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
 
-export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
+export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
 
-export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
+export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
 
-export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
+export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
 
-export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, CardDescription, CardContent, CardFooter };
+export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, CardDescription, CardContent, CardFooter};

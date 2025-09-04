@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  Brain,
+import React, {useState} from 'react';
+import {motion} from 'framer-motion';
+import {Brain,
   Zap,
   Shield,
   CheckCircle,
@@ -575,35 +574,28 @@ import {
   CheckCircle,
   Shield,
   Zap,
-  Brain
-} from 'lucide-react';
+  Brain} from 'lucide-react';
 
     technologies["5G Analytics", "Performance Insights", "Predictive", "Reporting"]
   }
 ];
 
 const fiveGTechnologies = [
-  {
-    name: "5G Core Network",
+  {name: "5G Core Network",
     description: "Advanced 5G core network technologies",
     icon: Network,
     useCase: "Network Infrastructure",
-    reliability: "Critical"
-  },
-  {
-    name: "5G RAN",
+    reliability: "Critical"},
+  {name: "5G RAN",
     description: "Radio access network technologies",
     icon: Wifi,
     useCase: "Wireless Access",
-    reliability: "Critical"
-  },
-  {
-    name: "Network Slicing",
+    reliability: "Critical"},
+  {name: "Network Slicing",
     description: "5G network slicing capabilities",
     icon: Layers,
     useCase: "Network Management",
-    reliability: "High"
-  },
+    reliability: "High"},
   {
     name: "Edge Computing",
     description: "5G edge computing solutions",
@@ -623,15 +615,13 @@ const successStories = [
     results: "50% efficiency improvement, 60% cost reduction, real-time operations, better connectivity",
     logo: "GMC"
   },
-  {
-    id: 2,
+  {id: 2,
     comp: "Healthcare Technology Ltd",
     industry: "Healthcare",
     challenge: "Required 5G solutions for remote patient monitoring and telemedicine",
     solution: "Implemented 5G network with custom healthcare applications",
     results: "70% faster data transmission, 80% improved patient care, better connectivity, enhanced services",
-    logo: "HTL"
-  },
+    logo: "HTL"},
   {
     id: 3,
     comp: "Smart City Solutions",
@@ -651,20 +641,16 @@ const processSteps = [
     icon: FileText,
     duration: "2-4 weeks"
   },
-  {
-    step: 2,
+  {step: 2,
     title: "5G Strategy Development",
     description: "Develop 5G strategy and implementation roadmap",
     icon: Code,
-    duration: "4-8 weeks"
-  },
-  {
-    step: 3,
+    duration: "4-8 weeks"},
+  {step: 3,
     title: "5G Implementation",
     description: "Build and deploy 5G network and applications",
     icon: Wrench,
-    duration: "18-48 weeks"
-  },
+    duration: "18-48 weeks"},
   {
     step: 4,
     title: "Testing & Optimization",
@@ -681,28 +667,22 @@ const fiveGBenefits = [
     icon: Zap,
     examples["High speed", "Low latency", "High bandwidth", "Better performance"];
   },;
-  {
-    title: "Network Slicing",
+  {title: "Network Slicing",
     description: "Custom network slices for different enterprise applications and requirements",
     icon: Layers,
-    examples["Custom networks", "Application isolation", "Better security", "Optimized performance"];
-  },;
-  {
-    title: "Edge Computing",
+    examples["Custom networks", "Application isolation", "Better security", "Optimized performance"];},;
+  {title: "Edge Computing",
     description: "Local processing and reduced latency for enterprise applications",
     icon: Server,
-    examples["Local processing", "Reduced latency", "Better performance", "Cost optimization"];
-  },;
-  {
-    title: "IoT Integration",
+    examples["Local processing", "Reduced latency", "Better performance", "Cost optimization"];},;
+  {title: "IoT Integration",
     description: "Seamless integration of IoT devices and applications",
     icon: Wifi,
-    examples["Device connectivity", "Data collection", "Real-time monitoring", "Automation"];
-  }
+    examples["Device connectivity", "Data collection", "Real-time monitoring", "Automation"];}
 ];
 
 export default function FiveGEnterpriseSolutions
-export { FiveGEnterpriseSolutions }() {
+export {FiveGEnterpriseSolutions}() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 
@@ -723,7 +703,7 @@ export { FiveGEnterpriseSolutions }() {
         </div>
 
         <div className="container-responsive relative z-10">
-          <motion.div
+          <motion .div
             initial = {
   { opacity: 0,
   y: 30 
@@ -780,7 +760,7 @@ export { FiveGEnterpriseSolutions }() {
 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
 
-              <Network className="w-10 h-10 text-white" />
+              <Network className="w-10 h-10 text-white"  />
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -795,15 +775,15 @@ export { FiveGEnterpriseSolutions }() {
 
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-zion-cyan">
-                <Network className="w-4 h-4" />
+                <Network className="w-4 h-4"  />
                 <span>5G Networks</span>
               </div>
               <div className="flex items-center gap-2 text-zion-purple">
-                <Server className="w-4 h-4" />
+                <Server className="w-4 h-4"  />
                 <span>Edge Computing</span>
               </div>
               <div className="flex items-center gap-2 text-zion-blue">
-                <Wifi className="w-4 h-4" />
+                <Wifi className="w-4 h-4"  />
                 <span>IoT Solutions</span>
               </div>
             </div>
@@ -881,7 +861,7 @@ export { FiveGEnterpriseSolutions }() {
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="w-8 h-8 text-white" />
+                  <benefit .icon className="w-8 h-8 text-white"  />
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">{benefit.title}</h3>
@@ -891,7 +871,7 @@ export { FiveGEnterpriseSolutions }() {
                   <h4 className="text-zion-cyan font-semibold mb-3">Examples:</h4>
                   {benefit.examples.map((example, exampleIndex) => (
                     <div key={exampleIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0"  />
                       <span className="text-zion-slate-light text-sm">{example}</span>
                     </div>
                   ))}
@@ -972,7 +952,7 @@ export { FiveGEnterpriseSolutions }() {
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <technology.icon className="w-8 h-8 text-white" />
+                  <technology .icon className="w-8 h-8 text-white"  />
                 </div>
 
                 <h3 className="text-xl font-bold text-white mb-3">{technology.name}</h3>
@@ -1065,7 +1045,7 @@ export { FiveGEnterpriseSolutions }() {
 
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
-                    <step.icon className="w-8 h-8 text-white" />
+                    <step .icon className="w-8 h-8 text-white"  />
                   </div>
                   <div className="absolute -top-2 -right-2 w-8 h-8 bg-zion-blue rounded-full flex items-center justify-center text-white text-sm font-bold">
                     {step.step}
@@ -1171,7 +1151,7 @@ export { FiveGEnterpriseSolutions }() {
                 onClick={() => setSelectedSolution(solution)}
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
-                  <solution.icon className="w-8 h-8 text-white" />
+                  <solution .icon className="w-8 h-8 text-white"  />
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
@@ -1180,7 +1160,7 @@ export { FiveGEnterpriseSolutions }() {
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0"  />
                       <span className="text-zion-slate-light text-sm">{feature}</span>
                     </div>
                   ))}
@@ -1208,7 +1188,7 @@ export { FiveGEnterpriseSolutions }() {
                   </span>
                   <button className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors duration-300">
                     <span className="text-sm font-medium">Learn More</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4"  />
                   </button>
                 </div>
               </motion.div>
@@ -1313,7 +1293,7 @@ export { FiveGEnterpriseSolutions }() {
 
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current"  />
                   ))}
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
@@ -1375,3 +1355,17 @@ export { FiveGEnterpriseSolutions }() {
       </section>
     </div>
   )}
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

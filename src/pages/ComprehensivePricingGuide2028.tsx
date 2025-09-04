@@ -148,8 +148,8 @@ const ComprehensivePricingGuide2028: Reac t.FC = (): JSX.Element => {;''
       targetAudience: 'Development teams, DevOps engineers, Technology companies'};''
   ]};'''
 const ComprehensivePricingGuide2028: Reac t.FC = () => {;''''
-  const [selectedCategory, setSelectedCategory] = useState('all');''''
-  const [priceRange, setPriceRange] = useState('all');'
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');''''
+  const [priceRange, setPriceRange] = useState<any>('all');'
 ''
   '''
     { id: 'all', name: 'All Services', icon: Glob e, color: 'from-zion-cyan to-zion-purple' },;'''
@@ -439,19 +439,19 @@ const ComprehensivePricingGuide2028: Reac t.FC = () => {;''''
                   </div>"""
                   <div>""""
                     <label className="block text-zion-slate-light mb-2">Current Monthly Cost</label>"""
-                    <input""""
+                    <input """"
                       type="number""""
                       placeholder="$0""""
                       className="w-full px-4 py-2 bg-zion-slate/50 border border-zion-slate/30 rounded-lg text-white focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan/50"""
-                    />
+                     />
                   </div>"""
                   <div>""""
                     <label className="block text-zion-slate-light mb-2">Expected Efficiency Gain (%)</label>"""
-                    <input""""
+                    <input """"
                       type="number""""
                       placeholder="25""""
                       className="w-full px-4 py-2 bg-zion-slate/50 border border-zion-slate/30 rounded-lg text-white focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan/50"""
-                    />
+                     />
                   </div>
                 </div>"""
               </div>""""
@@ -535,3 +535,20 @@ export { ComprehensivePricingGuide2028, ComprehensivePricingGuide2028 };
 export { ComprehensivePricingGuide2028, ComprehensivePricingGuide2028 };
 
 export { ComprehensivePricingGuide2028, ComprehensivePricingGuide2028 };
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</any>
+</any>

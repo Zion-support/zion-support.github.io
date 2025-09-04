@@ -1,15 +1,15 @@
 import React from 'react';""',';';
     ';';';
-import { createRoot, hydrateRoot } from 'react-dom/client';""';';';
+import {createRoot, hydrateRoot} from 'react-dom/client';""';';';
 import App from "./App.tsx";""',';';
     ';';';
 import './index.css';""',';';
     ';';';
-import { HelmetProvider } from 'react-helmet-async';""',';';
+import {HelmetProvider} from 'react-helmet-async';""',';';
     ';';';
-import { BrowserRouter as Router } from 'react-router-dom';""',';';
+import {BrowserRouter as Router} from 'react-router-dom';""',';';
     ';';';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';""',';';
+import {QueryClient, QueryClientProvider} from '@tanstack/react-query';""',';';
     ';';';
 import './utils/globalFetchInterceptor';""',';';
     ';';';
@@ -18,28 +18,29 @@ import './utils/consoleErrorToast';';';';
     ';';';
 import './i18n';""',';';
     ';';';
-import { LanguageProvider } from '@/context/LanguageContext';""';';';
-import { LanguageDetectionPopup } from "./components/LanguageDetectionPopup";""',';';
+import {LanguageProvider} from '@/context/LanguageContext';""';';';
+import {LanguageDetectionPopup} from "./components/LanguageDetectionPopup";""',';';
     ';';';
-import { WhitelabelProvider } from '@/context/WhitelabelContext';""',';';
+import {WhitelabelProvider} from '@/context/WhitelabelContext';""',';';
     ';';';
-import { AppLayout } from '@/layout/AppLayout';
+<<<<<<< HEAD
+import {AppLayout} from '@/layout/AppLayout';
 // Import auth and notification providers""';
-import { AuthProvider } from "./context/auth/AuthProvider";""';';
-import { NotificationProvider } from "./context/notifications/NotificationContext";';';';
+import {AuthProvider} from "./context/auth/AuthProvider";""';';
+import {NotificationProvider} from "./context/notifications/NotificationContext";';';';
 // Import analytics provider""',';';
     ';';';
-import { AnalyticsProvider } from './context/AnalyticsContext';""',';';
+import {AnalyticsProvider} from './context/AnalyticsContext';""',';';
     ';';';
 import React from 'react';';';';
-import { createRoot, hydrateRoot } from 'react-dom/client;';';';
+import {createRoot, hydrateRoot} from 'react-dom/client;';';';
 import App from "./App.tsx',;';';
     ';';';
 import './index.css';';';';
-import { HelmetProvider } from 'react-helmet-async',;';';
+import {HelmetProvider} from 'react-helmet-async',;';';
     ';';';
-import { BrowserRouter as Router } from 'react-router-dom';';';';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query;',';';
+import {BrowserRouter as Router} from 'react-router-dom';';';';
+import {QueryClient, QueryClientProvider} from '@tanstack/react-query;',';';
     ';';';
 import './utils/globalFetchInterceptor;';';';';
 import './utils/consoleErrorToast',;';';
@@ -47,18 +48,29 @@ import './utils/consoleErrorToast',;';';
 // Import i18n configuration"';';';';
 import './i18n',;';';
     ';';';
-import { LanguageProvider } from '@/context/LanguageContext;';';';
-import { LanguageDetectionPopup } from "./components/LanguageDetectionPopup;',';';
+import {LanguageProvider} from '@/context/LanguageContext;';';';
+import {LanguageDetectionPopup} from "./components/LanguageDetectionPopup;',';';
     ';';';
-import { WhitelabelProvider } from '@/context/WhitelabelContext;';';';';
-import { AppLayout } from '@/layout/AppLayout';
+import {WhitelabelProvider} from '@/context/WhitelabelContext;';';';';
+import {AppLayout} from '@/layout/AppLayout';
 // Import auth and notification providers"';
-import { AuthProvider } from "./context/auth/AuthProvider;';';
-import { NotificationProvider } from "./context/notifications/NotificationContext";';';';
+import {AuthProvider} from "./context/auth/AuthProvider;';';
+import {NotificationProvider} from "./context/notifications/NotificationContext";';';';
 // Import analytics provider"',';';
     ';';';
-import { AnalyticsProvider } from './context/AnalyticsContext;';';';';
+import {AnalyticsProvider} from './context/AnalyticsContext;';';';';
+import {ViewModeProvider} from './context/ViewModeContext';
+=======
+import { AppLayout } from '@/layout/AppLayout';
+// Import auth and notification providers
+import { AuthProvider } from "./src/context/auth/AuthProvider.jsx";
+import { NotificationProvider } from "./context/notifications/NotificationContext";
+// Import analytics provider
+
+
+import { AnalyticsProvider } from './context/AnalyticsContext';
 import { ViewModeProvider } from './context/ViewModeContext';
+>>>>>>> origin/merge-pr-10625
 // Initialize a React Query client with global error handling
 const queryClient = new QueryClient({
     defaultOptions: {';
@@ -67,7 +79,7 @@ const queryClient = new QueryClient({
 ""',';';
     ';';';
 const rootElement = document.getElementById('root');
-const renderApp = () => {
+const renderApp = (props: any) => {
     const app = (
         <React .StrictMode" >"
             <HelmetProvider>
@@ -95,16 +107,12 @@ const renderApp = () => {
             </HelmetProvider>
         </React.StrictMode>
     );
-    if (rootElement?.hasChildNodes()) {
-        hydrateRoot(rootElement, app);} else if (rootElement) {
-        createRoot(rootElement).render(app);}
+    if (rootElement?.hasChildNodes()) {hydrateRoot(rootElement, app);} else if (rootElement) {createRoot(rootElement).render(app);}
 };
-function displayFatalError(message) {
+function displayFatalError(props: any) {
     if (rootElement) {
         rootElement.innerHTML = `""
-            <div style={`padding: 20px;text-align: center;font-family: sans-serif;`>
-                <h1>Application Error</h1>
-                <p>${message}</p>`
+            <div style="{{`padding: 20px;text-align}}"</p>`
             </div>`;}';
 }';';
 try {';';';
@@ -119,3 +127,6 @@ window.addEventListener('error', (e) => {""',';';
     console.error('Unhandled error: ', e.error || e.message);';';
     displayFatalError(e.message);});';';';
 "`""';';';';
+</LanguageDetectionPopup>
+</App>
+</React>

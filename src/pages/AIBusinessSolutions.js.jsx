@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 export default function AIBusinessSolutions
-export { AIBusinessSolutions }() {
+export {AIBusinessSolutions}() {
     const benefits = [
         {
             title: 'Increased Efficiency',
@@ -9,50 +9,32 @@ export { AIBusinessSolutions }() {
             metric: '40%',
             detail: 'Average efficiency improvement'
         },
-        {
-            title: 'Cost Reduction',
+        {title: 'Cost Reduction',
             description: 'Reduce operational costs through intelligent automation',
             metric: '30%',
-            detail: 'Average cost savings'
-        },
-        {
-            title: 'Better Decision Making',
+            detail: 'Average cost savings'},
+        {title: 'Better Decision Making',
             description: 'Data-driven insights for strategic decisions',
             metric: '60%',
-            detail: 'Faster decision making'
-        },
-        {
-            title: 'Enhanced Customer Experience',
+            detail: 'Faster decision making'},
+        {title: 'Enhanced Customer Experience',
             description: 'Personalized and responsive customer interactions',
             metric: '50%',
-            detail: 'Customer satisfaction improvement'
-        }
+            detail: 'Customer satisfaction improvement'}
     ];
     const industries = [
-        {
-            name: 'Healthcare',
-            applications['Patient diagnosis', 'Drug discovery', 'Medical imaging', 'Predictive healthcare'];
-        },;
-        {
-            name: 'Manufacturing',
-            applications['Predictive maintenance', 'Quality control', 'Supply chain optimization', 'Production planning'];
-        },;
-        {
-            name: 'Retail',
-            applications['Inventory management', 'Customer segmentation', 'Price optimization', 'Demand forecasting'];
-        },;
-        {
-            name: 'Financial Services',
-            applications['Risk assessment', 'Fraud detection', 'Portfolio management', 'Customer service'];
-        },;
-        {
-            name: 'Transportation',
-            applications['Route optimization', 'Fleet management', 'Predictive maintenance', 'Demand forecasting'];
-        },;
-        {
-            name: 'Energy',
-            applications['Grid optimization', 'Predictive maintenance', 'Energy trading', 'Sustainability analysis'];
-        }
+        {name: 'Healthcare',
+            applications['Patient diagnosis', 'Drug discovery', 'Medical imaging', 'Predictive healthcare'];},;
+        {name: 'Manufacturing',
+            applications['Predictive maintenance', 'Quality control', 'Supply chain optimization', 'Production planning'];},;
+        {name: 'Retail',
+            applications['Inventory management', 'Customer segmentation', 'Price optimization', 'Demand forecasting'];},;
+        {name: 'Financial Services',
+            applications['Risk assessment', 'Fraud detection', 'Portfolio management', 'Customer service'];},;
+        {name: 'Transportation',
+            applications['Route optimization', 'Fleet management', 'Predictive maintenance', 'Demand forecasting'];},;
+        {name: 'Energy',
+            applications['Grid optimization', 'Predictive maintenance', 'Energy trading', 'Sustainability analysis'];}
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       <div className="max-w-7xl mx-auto px-4 py-16">

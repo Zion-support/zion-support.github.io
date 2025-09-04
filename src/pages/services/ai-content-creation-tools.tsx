@@ -130,8 +130,8 @@ const AIContentCreationTools: Reac t.FC = () => {
     <>
       <Helmet>
         <title>AI Content Creation Tools | Zion Tech Group</title>
-        <meta name="description" content="Accelerate content production with AI-powered writing, image generation, and video creation tools. Reduce creation time by 75% and scale your content strategy."  />
-        <meta name="keywords" content="AI content creation, content writing, AI writing assistant, content marketing, AI tools"  />
+        <meta name="description" content="Accelerate content production with AI-powered writing, image generation, and video creation tools. Reduce creation time by 75% and scale your content strategy."   />
+        <meta name="keywords" content="AI content creation, content writing, AI writing assistant, content marketing, AI tools"   />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-100">
         {/* Hero Section */}

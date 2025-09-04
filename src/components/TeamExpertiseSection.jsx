@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, {useState} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
 
-export default function Page() {
+export default function Page(props: any) {
 ,
     {
 
@@ -20,9 +20,7 @@ export default function Page() {
         linkedin: "https://linkedin.com/in/lisa-patel","
         github: "https://github.com/lisapatel-sec"
     },
-    {
-
-        id: 6,"
+    {id: 6,"
         name: "Alex Johnson","
         role: "DevOps Engineer","
         expertise: "Automation & CI/CD","
@@ -35,75 +33,62 @@ export default function Page() {
         projects: 81,"
         location: "Denver, CO","
         linkedin: "https://linkedin.com/in/alex-johnson","
-        github: "https://github.com/alexjohnson-devops"
-    }
+        github: "https://github.com/alexjohnson-devops"}
 ];
-const expertiseAreas = [{
-"
+const expertiseAreas = [{"
         name: "Artificial Intelligence","
-        icon: <Brain className="w-8 h-8"/>,"
+        icon: <Brain className="w-8 h-8" />,"
         color: "from-zion-purple to-zion-purple-dark","
         description: "Machine learning, computer vision, NLP, and AI solutions",
         experts: 12,
         projects: 150,"
-        success: "98%"
-    },
-    {
-"
+        success: "98%"},
+    {"
         name: "Cloud Infrastructure","
-        icon: <Cloud className="w-8 h-8"/>,"
+        icon: <Cloud className="w-8 h-8" />,"
         color: "from-zion-cyan to-zion-blue","
         description: "AWS, Azure, Google Cloud, and hybrid solutions",
         experts: 18,
         projects: 200,"
-        success: "99%"
-    },
-    {
-"
+        success: "99%"},
+    {"
         name: "Web Development","
-        icon: <Globe className="w-8 h-8"/>,"
+        icon: <Globe className="w-8 h-8" />,"
         color: "from-zion-cyan-light to-zion-cyan","
         description: "Modern web applications and progressive web apps",
         experts: 25,
         projects: 300,"
-        success: "97%"
-    },
-    {
-"
+        success: "97%"},
+    {"
         name: "Mobile Development","
-        icon: <Zap className="w-8 h-8"/>,"
+        icon: <Zap className="w-8 h-8" />,"
         color: "from-zion-purple-light to-zion-purple","
         description: "iOS, Android, and cross-platform solutions",
         experts: 20,
         projects: 180,"
-        success: "96%"
-    },
-    {
-"
+        success: "96%"},
+    {"
         name: "Data Analytics","
-        icon: <Database className="w-8 h-8"/>,"
+        icon: <Database className="w-8 h-8" />,"
         color: "from-zion-cyan to-zion-purple","
         description: "Business intelligence and predictive analytics",
         experts: 15,
         projects: 120,"
-        success: "98%"
-    },
-    {
-"
+        success: "98%"},
+    {"
         name: "Cybersecurity","
-        icon: <Shield className="w-8 h-8"/>,"
+        icon: <Shield className="w-8 h-8" />,"
         color: "from-zion-purple to-zion-cyan","
         description: "Security auditing, compliance, and threat protection",
         experts: 10,
         projects: 80,"
-        success: "99%"
-    }
+        success: "99%"}
 ];
 const stats = ["
-    { icon: <Users className="w-6 h-6"/>, value: "100+", label: "Expert Team Members" },"
-    { icon: <Award className="w-6 h-6"/>, value: "500+", label: "Projects Completed" },"
-    { icon: <Star className="w-6 h-6"/>, value: "4.9/5", label: "Average Rating" },"
-    { icon: <Globe className="w-6 h-6"/>, value: "25+", label: "Countries Served" }
+    {icon: <Users className="w-6 h-6" />, value: "100+", label: "Expert Team Members"},"
+    {icon: <Award className="w-6 h-6" />, value: "500+", label: "Projects Completed"},"
+    {icon: <Star className="w-6 h-6" />, value: "4.9/5", label: "Average Rating"},"
+    {icon: <Globe className="w-6 h-6" />, value: "25+", label: "Countries Served"}
 ];
     const [selectedMember, setSelectedMember] = useState(null);
     const [hoveredExpertise, setHoveredExpertise] = useState(null);
@@ -225,7 +210,7 @@ const stats = ["
   { duration: 0.4,
   delay: index * 0.1
 
-}} onHoverStart={ () => setHoveredExpertise(index) } onHoverEnd={ () => setHoveredExpertise(null) } whileHover={{ y: -4 }} className="p - 6 rounded-2xl bg-gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border-zion - blue - light / 30 hover:border-zion - cyan / 50 transition - all duration - 300 hover:shadow-lg hover:shadow-zion -cyan / 20">
+}} onHoverStart={() => setHoveredExpertise(index)} onHoverEnd={() => setHoveredExpertise(null)} whileHover={{ y: -4 }} className="p - 6 rounded-2xl bg-gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border-zion - blue - light / 30 hover:border-zion - cyan / 50 transition - all duration - 300 hover:shadow-lg hover:shadow-zion -cyan / 20">
                 <div className={`inline - flex items - center justify - center w-16 h-16 rounded-2xl bg-gradient - to - br ${area.color} mb-4 shadow-lg`}>
                   <div className="text-white">
                     {area.icon}
@@ -279,12 +264,12 @@ const stats = ["
   stiffness: 300
 
 }} className="relative">
-                <div className="h-full p - 6 rounded-2xl bg-gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border-zion - blue - light / 30 hover:border-zion - cyan / 50 transition - all duration - 300 hover:shadow-2xl hover:shadow-zion - cyan / 20 group cursor -pointer" onClick={ () => setSelectedMember(selectedMember === member.id ? null : member.id) }>
+                <div className="h-full p - 6 rounded-2xl bg-gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border-zion - blue - light / 30 hover:border-zion - cyan / 50 transition - all duration - 300 hover:shadow-2xl hover:shadow-zion - cyan / 20 group cursor -pointer" onClick={() => setSelectedMember(selectedMember === member.id ? null : member.id)}>
                   {/* Header */}
                   <div className="text-center mb-6">
                     <div className="inline - flex items - center justify - center w-20 h-20 rounded-2xl bg-gradient - to - br from - zion - cyan to - zion - purple mb-4 shadow-lg group - hover:shadow-xl transition - all duration -300">
                       <span className="text-white font - bold text-2xl">
-                        {member.name.charAt(0) }
+                        {member.name.charAt(0)}
                       </span>
                     </div>
 
@@ -324,7 +309,7 @@ const stats = ["
                     <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
                       View Profile
                     </span>"
-                    <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
+                    <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300" />
                   </div>
 
                   {/* Expanded details */}
@@ -358,29 +343,29 @@ const stats = ["
   x: 0
 
 }} transition={{ delay: idx * 0.1 }}>"
-                              <CheckCircle className="w-3 h-3 text-zion-cyan"/>
+                              <CheckCircle className="w-3 h-3 text-zion-cyan" />
                               <span>{achievement}</span>
                             </motion.div>) ) }
                         </div>
 "
                         <div className="flex items-center justify-between">"
                           <div className="flex items-center gap-1">"
-                            <Star className="w-4 h-4 text-yellow-400 fill-current"/>"
+                            <Star className="w-4 h-4 text-yellow-400 fill-current" />"
                             <span className="text-white font-semibold text-sm">{member.rating}</span>
                           </div>"
                           <div className="flex gap-2">"
                             <a href={member.linkedin} className="text-zion-cyan hover:text-zion-cyan-light transition-colors">"
-                              <Linkedin className="w-4 h-4"/>
+                              <Linkedin className="w-4 h-4" />
                             </a>"
                             <a href={member.github} className="text-zion-cyan hover:text-zion-cyan-light transition-colors">"
-                              <Github className="w-4 h-4"/>
+                              <Github className="w-4 h-4" />
                             </a>
                             <a href = {
 '`
   `mailto:${member.name.toLowerCase().replace(' ',.')
 "`
 }@ziontechgroup.com`} className="text-zion-cyan hover:text-zion-cyan-light transition-colors">"
-                              <Mail className="w-4 h-4"/>
+                              <Mail className="w-4 h-4" />
                             </a>
                           </div>
                         </div>
@@ -429,3 +414,13 @@ const stats = ["
       </div>
     </section>)}
 '"`
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

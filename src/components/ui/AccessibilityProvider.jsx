@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 const AccessibilityContext = createContext(null);
-export const useAccessibility = () => {
+export const useAccessibility = (props: any) => {
     const context = useContext(AccessibilityContext);
     if (!context) {
         throw new Error('useAccessibility must be used within an AccessibilityProvider')}
     return context};
-export const AccessibilityProvider = ({ children }) => {
+export const AccessibilityProvider = (props: any) => {
     const [isHighContrast, setIsHighContrast] = useState(false);
     const [isReducedMotion, setIsReducedMotion] = useState(false);
     const [isLargeText, setIsLargeText] = useState(false);
@@ -34,16 +34,11 @@ export const AccessibilityProvider = ({ children }) => {
         const body = document.body;
         if (isHighContrast) {
             body.classList.add('high-contrast')}
-        else {
-            body.classList.remove('high-contrast')}
-        if (isReducedMotion) {
-            body.classList.add('reduced-motion')}
-        else {
-            body.classList.remove('reduced-motion')}
-        if (isLargeText) {
-            body.classList.add('large-text')}
-        else {
-            body.classList.remove('large-text')}
+        else {body.classList.remove('high-contrast')}
+        if (isReducedMotion) {body.classList.add('reduced-motion')}
+        else {body.classList.remove('reduced-motion')}
+        if (isLargeText) {body.classList.add('large-text')}
+        else {body.classList.remove('large-text')}
     }, [isHighContrast, isReducedMotion, isLargeText]);
     // Focus trap functionality
     const focusableElements = element.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
@@ -51,7 +46,7 @@ export const AccessibilityProvider = ({ children }) => {
             return;
         const firstElement = focusableElements[0];
         const lastElement = focusableElements[focusableElements.length - 1];
-        const handleKeyDown = (e) => {
+        const handleKeyDown = (props: any) => {
             if (e.key === 'Tab') {
                 if (e.shiftKey) {
                     if (document.activeElement === firstElement) {
@@ -67,8 +62,7 @@ export const AccessibilityProvider = ({ children }) => {
         };
         element.addEventListener('keydown', handleKeyDown);
         firstElement.focus();
-        return () => {
-            element.removeEventListener('keydown', handleKeyDown)}};
+        return () => {element.removeEventListener('keydown', handleKeyDown)}};
     // Screen reader announcements
     const announcement = document.createElement('div');
         announcement.setAttribute('aria-live', 'polite');
@@ -77,11 +71,10 @@ export const AccessibilityProvider = ({ children }) => {
         announcement.textContent = message;
         document.body.appendChild(announcement);
         // Remove after announcement
-        setTimeout(() => {
-            document.body.removeChild(announcement)}, 1000)};
+        setTimeout(() => {document.body.removeChild(announcement)}, 1000)};
     // Keyboard shortcuts
     useEffect(() => {
-        const handleKeyDown = (e) => {
+        const handleKeyDown = (props: any) => {
             // Ctrl/Cmd + K for high contrast toggle
             if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
                 e.preventDefault();
@@ -102,23 +95,19 @@ export const AccessibilityProvider = ({ children }) => {
         return () => document.removeEventListener('keydown', handleKeyDown);
     }, [isHighContrast, isReducedMotion, isLargeText]);
     const toggleLargeText = () => setIsLargeText(prev => !prev);
-    const value = {
-  isHighContrast,
+    const value = {isHighContrast,
         isReducedMotion,
         isLargeText,
         toggleHighContrast,
         toggleReducedMotion,
         toggleLargeText,
         focusTrap,
-        announceToScreenReader,
-  
-
-};
+        announceToScreenReader,};
     return (<AccessibilityContext.Provider value={value}>
       {children}
     </AccessibilityContext.Provider>)};
 // Accessibility toolbar component
-export const AccessibilityToolbar = () => {
+export const AccessibilityToolbar = (props: any) => {
     const { isHighContrast, isReducedMotion, isLargeText, toggleHighContrast, toggleReducedMotion, toggleLargeText, } = useAccessibility();
     return (<div className="fixed bottom-4 left-4 z-50 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-cyan/20 rounded-2xl p-4 shadow-2xl shadow-zion-cyan/20">
       <div className="space-y-3">
@@ -151,7 +140,8 @@ export const AccessibilityToolbar = () => {
       </div>
     </div>)};
 // Skip to main content link
-export const SkipToMainContent = () => {
-    return (<a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-zion-blue-dark">
+export const SkipToMainContent = (props: any) => {return (<a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-zion-blue-dark">
       Skip to main content
     </a>)};
+
+</AccessibilityContext>

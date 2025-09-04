@@ -13,7 +13,7 @@ import {
   Shield,
   Rocket
 } from 'lucide-react';
-export default function AISalesCopilotPage() {
+export default function AISalesCopilotPage(props: any) {
   return (
   return (
     <div className="min-h-screen bg-white">

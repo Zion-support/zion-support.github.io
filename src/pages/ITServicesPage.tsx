@@ -1,6 +1,7 @@
+import React from 'react';
 import { SEO } from '@/components/SEO';
 
-const ITServicesPage = () => {
+const ITServicesPage = (props: any) => {
   return (
     <>
       <SEO 
@@ -46,3 +47,4 @@ const ITServicesPage = () => {
 };
 
 export default ITServicesPage;
+</SEO>

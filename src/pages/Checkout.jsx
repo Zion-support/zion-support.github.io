@@ -1,23 +1,23 @@
-import React, { useEffect, useState } from 'react';'''
-import { useTranslation } from 'react-i18next';'''
-import { useForm } from 'react-hook-form';'''
-import { useNavigate } from 'react-router-dom';'''
-import { safeStorage } from '@/utils/safeStorage';'''
-import { getCartKey } from '@/utils/cartUtils';'''
-import { getStripe } from '@/utils/getStripe';'''
-import { apiClient } from '@/utils/apiClient';
-export default function CheckoutPage() {}
+import React, {useEffect, useState} from 'react';'''
+import {useTranslation} from 'react-i18next';'''
+import {useForm} from 'react-hook-form';'''
+import {useNavigate} from 'react-router-dom';'''
+import {safeStorage} from '@/utils/safeStorage';'''
+import {getCartKey} from '@/utils/cartUtils';'''
+import {getStripe} from '@/utils/getStripe';'''
+import {apiClient} from '@/utils/apiClient';
+export default function CheckoutPage(props: any) {}
     const navigate = useNavigate();
-    const { t } = useTranslation();
+    const {t} = useTranslation();
     const [items, setItems] = useState([]);
     const form = useForm({}
 '
 ''
 '''
-        defaultValues: { name: '', email: '', address: '', city: '', country: '' }});
+        defaultValues: {name: '', email: '', address: '', city: '', country: ''}});
     useEffect(() => {}
         if (sku) {}
-            setItems([{ id: sku, name: sku, price: 25, quantity: 1 }]);
+            setItems([{id: sku, name: sku, price: 25, quantity: 1}]);
             return}
         const stored = safeStorage.getItem(getCartKey (user?.id) ) ;
         if(stored) {}
@@ -40,8 +40,8 @@ export default function CheckoutPage() {}
 '
 ''
 '''
-                        card: { token: 'tok_visa' },
-                        billing_details: { name: data.name, email: data.email }
+                        card: {token: 'tok_visa'},
+                        billing_details: {name: data.name, email: data.email}
                     }
                 }) ;
                 if(payment.error) throw payment.error;
@@ -53,8 +53,8 @@ export default function CheckoutPage() {}
 ''
 '''
                             method: 'POST','''
-                            headers: { 'Content-Type': 'application/json' },''
-                            body: JSON.stringify({ userId: user.id, amount: subtotal, orderId: result.id }),'''
+                            headers: {'Content-Type': 'application/json'},''
+                            body: JSON.stringify({userId: user.id, amount: subtotal, orderId: result.id}),'''
                         // // // // // // // // console.error('Failed to add points', e);
                     }
                         }) }
@@ -78,7 +78,7 @@ export default function CheckoutPage() {}
     };
     return (<div className="max-w-2xl mx-auto p-6">""""
       <h1 className="text-2xl font-bold mb-6">Checkout</h1>""""
-      <CheckoutProgress currentStep={0} className="mb-6"/>
+      <CheckoutProgress currentStep={0} className="mb-6" />
 """
       {/* Order Summary */}""""
       <div className="bg-gray-50 p-4 rounded-md mb-6">""""
@@ -108,12 +108,12 @@ export default function CheckoutPage() {}
       </div>
     </div>)}
 
-export { CheckoutPage };
+export {CheckoutPage};
 
-export { CheckoutPage };
+export {CheckoutPage};
 
-export { CheckoutPage };
+export {CheckoutPage};
 
-export { CheckoutPage };
+export {CheckoutPage};
 
-export { CheckoutPage };
+export {CheckoutPage};

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';'''
-import { innovativeServices2025 } from '../data/innovativeServices2025';'''
-import { ULTIMATE_INNOVATIVE_SERVICES_2027 } from '../data/ultimateInnovativeServices2027';'''
-import { motion } from 'framer-motion';
+import React, {useState} from 'react';'''
+import {innovativeServices2025} from '../data/innovativeServices2025';'''
+import {ULTIMATE_INNOVATIVE_SERVICES_2027} from '../data/ultimateInnovativeServices2027';'''
+import {motion} from 'framer-motion';
 import {}
   Brain,
   Cloud,
@@ -17,7 +17,7 @@ import {}
   Mail,'''
   MapPin} from 'lucide-react';
 
-const EnhancedComprehensiveServicesShowcase = () => {}
+const EnhancedComprehensiveServicesShowcase = (props: any) => {}
 '
 ''
 '''
@@ -145,7 +145,7 @@ const EnhancedComprehensiveServicesShowcase = () => {}
     setSelectedService(service);
   };
 
-  const closeModal = () => {}
+  const closeModal = (props: any) => {}
     setSelectedService(null);
   };
 
@@ -207,12 +207,12 @@ const EnhancedComprehensiveServicesShowcase = () => {}
                 stroke="currentColor""""
                 viewBox="0 0 24 24"""
               >"""
-                <path""""
+                <path """"
                   strokeLinecap="round""""
                   strokeLinejoin="round""""
                   strokeWidth={2}""""
                   d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"""
-                />
+                 />
               </svg>
             </div>
           </div>
@@ -368,12 +368,15 @@ const EnhancedComprehensiveServicesShowcase = () => {}
 
 export default EnhancedComprehensiveServicesShowcase;
 
-export { EnhancedComprehensiveServicesShowcase };
+export {EnhancedComprehensiveServicesShowcase};
 
-export { EnhancedComprehensiveServicesShowcase };
+export {EnhancedComprehensiveServicesShowcase};
 
-export { EnhancedComprehensiveServicesShowcase };
+export {EnhancedComprehensiveServicesShowcase};
 
-export { EnhancedComprehensiveServicesShowcase };
+export {EnhancedComprehensiveServicesShowcase};
 
-export { EnhancedComprehensiveServicesShowcase };
+export {EnhancedComprehensiveServicesShowcase};
+
+</path>
+</div>

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Heart, Stethoscope, Brain, Target, CheckCircle, Star, Clock, Users, Globe, Shield, BarChart3, Rocket, Sparkles, Database, Zap, Activity, Monitor, AlertTriangle, TrendingUp, Award, ArrowRight, Pill, Microscope, TestTube, FileText, Lock, Eye, Cpu, Network } from 'lucide-react';
 
-const AIHealthcarePlatform = () => {
+const AIHealthcarePlatform = (props: any) => {
   const features = [
     {
       icon: <Brain className="w-8 h-8 text-blue-400" />,
@@ -354,7 +354,7 @@ const AIHealthcarePlatform = () => {
                       feature.status === '100%' ? 'bg-green-400' : 
                       feature.status === 'Pending' ? 'bg-yellow-400' : 'bg-blue-400'
                     }`}
-                    style={{ width: feature.status === 'Pending' ? '75%' : '100%' }}
+                    style="{{{ width: feature.status === 'Pending' ? '75%'}}"}
                   ></div>
                 </div>
               </motion.div>
@@ -577,3 +577,24 @@ const AIHealthcarePlatform = () => {
 };
 
 export default AIHealthcarePlatform;
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

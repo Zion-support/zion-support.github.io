@@ -18,10 +18,10 @@ import {
   Shield
 } from 'lucide-react'
 
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: fals e })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: fals e })
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
 
-const LoginPage: Reac t.FC = () => {
+const LoginPage: React.FC = () => {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -29,7 +29,7 @@ const LoginPage: Reac t.FC = () => {
   const [showPassword, setShowPassword] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
 
-  const handleInputChange = (e: Reac t.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
@@ -37,7 +37,7 @@ const LoginPage: Reac t.FC = () => {
     }))
   }
 
-  const handleSubmit = async (e: Reac t.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsLoading(true)
     

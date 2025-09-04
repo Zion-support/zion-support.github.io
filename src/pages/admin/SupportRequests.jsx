@@ -1,17 +1,16 @@
-import React, { useState } from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
-import { Search, Filter } from "lucide-react";
+import React, {useState} from "react";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
+import {Search, Filter} from "lucide-react";
 import SEO from "@/components/SEO";
 // Mock data for support requests
 const MOCK_SUPPORT_REQUESTS = [
-    {
-        id: "SR-1001",
+    {id: "SR-1001",
         user: "john.doe@example.com",
         userId: "user-123",
         issue: "Cannot access account after password reset",
@@ -19,10 +18,8 @@ const MOCK_SUPPORT_REQUESTS = [
         priority: "high",
         createdAt: "2023-12-15T14:30:00Z",
         lastUpdated: "2023-12-15T15:45:00Z",
-        category: "authentication"
-    },
-    {
-        id: "SR-1002",
+        category: "authentication"},
+    {id: "SR-1002",
         user: "sarah.smith@company.co",
         userId: "user-456",
         issue: "Payment failed but funds were deducted",
@@ -30,10 +27,8 @@ const MOCK_SUPPORT_REQUESTS = [
         priority: "high",
         createdAt: "2023-12-14T09:15:00Z",
         lastUpdated: "2023-12-15T13:20:00Z",
-        category: "billing"
-    },
-    {
-        id: "SR-1003",
+        category: "billing"},
+    {id: "SR-1003",
         user: "tech.guru@startup.io",
         userId: "user-789",
         issue: "Unable to download invoice PDF",
@@ -41,10 +36,8 @@ const MOCK_SUPPORT_REQUESTS = [
         priority: "medium",
         createdAt: "2023-12-15T11:00:00Z",
         lastUpdated: "2023-12-15T11:00:00Z",
-        category: "billing"
-    },
-    {
-        id: "SR-1004",
+        category: "billing"},
+    {id: "SR-1004",
         user: "developer@codelab.dev",
         userId: "user-235",
         issue: "API integration documentation is outdated",
@@ -52,10 +45,8 @@ const MOCK_SUPPORT_REQUESTS = [
         priority: "low",
         createdAt: "2023-12-13T16:45:00Z",
         lastUpdated: "2023-12-13T16:45:00Z",
-        category: "api"
-    },
-    {
-        id: "SR-1005",
+        category: "api"},
+    {id: "SR-1005",
         user: "maria.rodriguez@design.co",
         userId: "user-567",
         issue: "Dispute with freelancer over delivered work quality",
@@ -63,10 +54,8 @@ const MOCK_SUPPORT_REQUESTS = [
         priority: "high",
         createdAt: "2023-12-12T10:30:00Z",
         lastUpdated: "2023-12-15T09:15:00Z",
-        category: "disputes"
-    },
-    {
-        id: "SR-1006",
+        category: "disputes"},
+    {id: "SR-1006",
         user: "alex.wong@datacompany.com",
         userId: "user-890",
         issue: "Profile verification pending for over 7 days",
@@ -74,8 +63,7 @@ const MOCK_SUPPORT_REQUESTS = [
         priority: "medium",
         createdAt: "2023-12-08T13:20:00Z",
         lastUpdated: "2023-12-15T08:30:00Z",
-        category: "verification"
-    },
+        category: "verification"},
     {
         id: "SR-1007",
         user: "jamie.taylor@tech.org",
@@ -103,26 +91,22 @@ export { SupportRequests }() {
             !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
             return false}
         // Apply status filter
-        if (statusFilter && request.status !== statusFilter) {
-            return false}
+        if (statusFilter && request.status !== statusFilter) {return false}
         // Apply priority filter
-        if (priorityFilter && request.priority !== priorityFilter) {
-            return false}
+        if (priorityFilter && request.priority !== priorityFilter) {return false}
         // Apply category filter
-        if (categoryFilter && request.category !== categoryFilter) {
-            return false}
+        if (categoryFilter && request.category !== categoryFilter) {return false}
         return true});
     // Count by status for the summary dashboard
     const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;
     const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;
     const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
     const totalCount = MOCK_SUPPORT_REQUESTS.length;
-    const resetFilters = () => {
-        setSearchQuery("");
+    const resetFilters = (props: any) => {setSearchQuery("");
         setStatusFilter(null);
         setPriorityFilter(null);
         setCategoryFilter(null)};
-    return (<SEO title="Support Requests | Admin Dashboard" description="Manage and track user support requests and issues"/>
+    return (<SEO title="Support Requests | Admin Dashboard" description="Manage and track user support requests and issues" />
         ,
             <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">
@@ -185,13 +169,13 @@ export { SupportRequests }() {
             {/* Search and Filters */}
             <div className="flex flex-col md:flex-row gap-4 mb-6">
               <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400"/>
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
                 <Input placeholder="Search by ID, user or issue..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10"/>
               </div>
 
               <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Status"/>
+                  <SelectValue placeholder="Status" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="">All Statuses</SelectItem>
@@ -203,7 +187,7 @@ export { SupportRequests }() {
 
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Priority"/>
+                  <SelectValue placeholder="Priority" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="">All Priorities</SelectItem>
@@ -215,7 +199,7 @@ export { SupportRequests }() {
 
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Category"/>
+                  <SelectValue placeholder="Category" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="">All Categories</SelectItem>
@@ -229,7 +213,7 @@ export { SupportRequests }() {
               </Select>
 
               <Button variant="outline" onClick={resetFilters} className="md:w-auto">
-                <Filter className="h-4 w-4 mr-2"/> Reset Filters
+                <Filter className="h-4 w-4 mr-2" /> Reset Filters
               </Button>
             </div>
 

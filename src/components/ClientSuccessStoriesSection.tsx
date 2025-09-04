@@ -3,8 +3,8 @@ import {  import { motion  } from 'framer-motion';
  params - Function parameters
  * @returns {*} Function return value
  */
-function ClientSuccessStoriesSection () {
-export function ClientSuccessStoriesSection() {
+function ClientSuccessStoriesSection(props: any) {
+export function ClientSuccessStoriesSection(props: any) {
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
@@ -256,3 +256,8 @@ export default ClientSuccessStoriesSection;"
 export default ClientSuccessStoriesSection;
 export default ClientSuccessStoriesSection;
 '"
+
+</motion>
+</motion>
+</motion>
+</motion>

@@ -1,9 +1,10 @@
 import React from "react"
-import dynamic from "next/dynamic"
-const Component = () => {
+import type { NextPage } from 'next'
+
 const Contact: NextPage = () => {
   return (
-    <>,
-  )}
-";
+    <div>Contact Backup</div>
+  )
+}
+
 export default Contact

@@ -1,6 +1,6 @@
-import React, { useEffect, useMemo, useCallback } from 'react';
-import { useLocation  } from 'react-router-dom';
-export default function Page() {
+import React, {useEffect, useMemo, useCallback} from 'react';
+import {useLocation} from 'react-router-dom';
+export default function Page(props: any) {
 "
                 // Add decoding="async" for better performance'
                 img.decoding = 'async';
@@ -9,12 +9,8 @@ export default function Page() {
 
                     img.style.display = 'none'}})};
         // Use requestIdleCallback for non-critical optimization'
-        if('requestIdleCallback' in window) {
-
-            requestIdleCallback(optimizeImages)}
-        else {
-
-            setTimeout(optimizeImages, 100)}
+        if('requestIdleCallback' in window) {requestIdleCallback(optimizeImages)}
+        else {setTimeout(optimizeImages, 100)}
     }, [location.pathname]);
     // Memoize expensive computations
     const optimizedChildren = useMemo(() => children, [children]);
@@ -28,16 +24,12 @@ export default function Page() {
                 window.scrollTimeout = null}, 16); // ~60fps
         }
     }, []);
-    useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
+    useEffect(() => {// TODO: Add dependencies if needed}, []);
 
-        window.addEventListener('scroll', handleScroll, { passive: true });
+        window.addEventListener('scroll', handleScroll, {passive: true});
         return () => window.removeEventListener('scroll', handleScroll)}, [handleScroll]);
     // Service Worker registration for caching
-    useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
+    useEffect(() => {// TODO: Add dependencies if needed}, []);
 
         if('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
 
@@ -46,14 +38,10 @@ export default function Page() {
                 .then((registration) => {
 
                 // console.log('SW registered: ', registration)})
-                .catch((registrationError) => {
-
-                // console.log('SW registration failed: ', registrationError)})}
+                .catch((registrationError) => {// console.log('SW registration failed: ', registrationError)})}
     }, []);
     // Intersection Observer for lazy loading
-    useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
+    useEffect(() => {// TODO: Add dependencies if needed}, []);
 
         if('IntersectionObserver' in window) {
 
@@ -70,9 +58,7 @@ export default function Page() {
                             target.removeAttribute('data-src');
                             observer.unobserve(target)}
                     }
-                })}, {
-
-                rootMargin: '50px',
+                })}, {rootMargin: '50px',
                 threshold: 0.1});
             // Observe all images with data-src'
             const lazyImages = document.querySelectorAll('img[data-src]');
@@ -88,7 +74,7 @@ if(typeof window !== 'null') {
 
         window.scheduler.postTask(() => {
             // Run non-critical tasks during idle time'
-        }, { priority: 'background' })}
+        }, {priority: 'background'})}
     // Optimize memory usage'
     if('memory' in performance) {
 
