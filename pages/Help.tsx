@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export default function Help() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -126,7 +126,7 @@ export default function Help() {
                   {category.articles.map((article, articleIndex) => (
                     <li key={articleIndex}>
                       <Link
-                        to="/contact"
+                        href="/contact"
                         className="text-gray-300 hover:text-cyan-400 transition-colors"
                       >
                         {article}
@@ -189,13 +189,13 @@ export default function Help() {
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact"
+              href="/contact"
               className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Contact Support
             </Link>
             <Link
-              to="/request-quote"
+              href="/request-quote"
               className="bg-transparent border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Request Quote
