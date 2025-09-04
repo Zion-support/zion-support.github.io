@@ -2,53 +2,57 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 export default function Cookies() {
-const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
-  };
+const contact = { 
+  phone: '+1 302 464 0950', 
+  email: 'kleber@ziontechgroup.com', 
+  address: '364 E Main St STE 1008 Middletown DE 19709', 
+  site: 'https://ziontechgroup.com'
+};
   const cookieTypes = [
     {
-      type: "Essential Cookies"
-      description: "These cookies are necessary for the website to function and cannot be switched off in our systems."
-      purpose: "Enable basic website functionality, security, and user authentication."
+      type: "Essential Cookies",
+      description: "These cookies are necessary for the website to function and cannot be switched off in our systems.",
+      purpose: "Enable basic website functionality, security, and user authentication.",
       examples: [
-        "Session management cookies"
-        "Security and authentication cookies"
-        "Load balancing cookies"
+        "Session management cookies",
+        "Security and authentication cookies",
+        "Load balancing cookies",
         "User interface customization cookies"
       ],
       retention: "Session or up to 1 year"
     },
     {
-      type: "Analytics Cookies"
-      description: "These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site."
-      purpose: "Help us understand how visitors interact with our website by collecting and reporting information anonymously."
+      type: "Analytics Cookies",
+      description: "These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site.",
+      purpose: "Help us understand how visitors interact with our website by collecting and reporting information anonymously.",
       examples: [
-        "Google Analytics cookies"
-        "Page view tracking"
-        "User behavior analysis"
+        "Google Analytics cookies",
+        "Page view tracking",
+        "User behavior analysis",
         "Performance monitoring"
       ],
       retention: "Up to 2 years"
     },
     {
-      type: "Functional Cookies"
-      description: "These cookies enable enhanced functionality and personalization, such as videos and live chat."
-      purpose: "Provide enhanced features and personalization options for a better user experience."
+      type: "Functional Cookies",
+      description: "These cookies enable enhanced functionality and personalization, such as videos and live chat.",
+      purpose: "Provide enhanced features and personalization options for a better user experience.",
       examples: [
-        "Language preference cookies"
-        "Chat widget cookies"
-        "Video player cookies"
+        "Language preference cookies",
+        "Chat widget cookies",
+        "Video player cookies",
         "Form data cookies"
       ],
       retention: "Up to 1 year"
     },
     {
-      type: "Marketing Cookies"
-      description: "These cookies may be set through our site by our advertising partners to build a profile of your interests."
-      purpose: "Show you relevant advertisements on other websites and measure the effectiveness of our marketing campaigns."
+      type: "Marketing Cookies",
+      description: "These cookies may be set through our site by our advertising partners to build a profile of your interests.",
+      purpose: "Show you relevant advertisements on other websites and measure the effectiveness of our marketing campaigns.",
       examples: [
-        "Advertising network cookies"
-        "Social media tracking cookies"
-        "Remarketing cookies"
+        "Advertising network cookies",
+        "Social media tracking cookies",
+        "Remarketing cookies",
         "Conversion tracking cookies"
       ],
       retention: "Up to 2 years"
