@@ -6,107 +6,129 @@ export default function GettingStarted() {
     <>
       <Head>
         <title>Getting Started - Zion Tech Group Documentation</title>
-        <meta name="description" content="Get started with Zion Tech Group services. Learn how to set up and use our micro SaaS products, AI services, and IT solutions." />
+        <meta name="description" content="Quick start guide for Zion Tech Group services and APIs. Learn how to integrate our micro SaaS products, AI services, and IT solutions." />
+        <meta name="keywords" content="getting started, documentation, API, integration, quick start" />
         <link rel="canonical" href="https://ziontechgroup.com/docs/getting-started" />
       </Head>
       
       <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-        {/* Header */}
-        <section className="py-20 px-4 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
-              Getting Started
-            </h1>
-            <p className="text-xl md:text-2xl text-slate-300 mb-8">
-              Welcome to Zion Tech Group! This guide will help you get up and running with our services.
-            </p>
-          </div>
-        </section>
+        <div className="max-w-4xl mx-auto px-4 py-12">
+          {/* Breadcrumb */}
+          <nav className="mb-8">
+            <Link href="/" className="text-blue-400 hover:text-blue-300">Home</Link>
+            <span className="mx-2 text-slate-400">/</span>
+            <Link href="/docs" className="text-blue-400 hover:text-blue-300">Documentation</Link>
+            <span className="mx-2 text-slate-400">/</span>
+            <span className="text-slate-300">Getting Started</span>
+          </nav>
 
-        {/* Content */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="prose prose-invert max-w-none">
-              <h2 className="text-3xl font-bold mb-6">Quick Start Guide</h2>
-              
-              <div className="space-y-8">
-                <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                  <h3 className="text-2xl font-bold mb-4 text-blue-400">1. Choose Your Service</h3>
-                  <p className="text-slate-300 mb-4">
-                    Browse our comprehensive catalog of services:
-                  </p>
-                  <ul className="text-slate-300 space-y-2">
-                    <li>• <Link href="/micro-saas" className="text-blue-400 hover:text-blue-300">Micro SaaS Products</Link> - 120+ specialized tools</li>
-                    <li>• <Link href="/ai-services" className="text-purple-400 hover:text-purple-300">AI Services</Link> - 80+ AI-powered solutions</li>
-                    <li>• <Link href="/it-services" className="text-green-400 hover:text-green-300">IT Services</Link> - 80+ enterprise solutions</li>
-                  </ul>
+          <h1 className="text-4xl font-bold mb-6">Getting Started</h1>
+          <p className="text-xl text-slate-300 mb-8">
+            Welcome to Zion Tech Group! This guide will help you get up and running with our services quickly.
+          </p>
+
+          <div className="space-y-8">
+            {/* Overview */}
+            <section className="bg-slate-900/60 rounded-lg p-6 border border-white/10">
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">Overview</h2>
+              <p className="text-slate-300 mb-4">
+                Zion Tech Group offers three main categories of services:
+              </p>
+              <ul className="list-disc list-inside text-slate-300 space-y-2">
+                <li><strong>Micro SaaS Products</strong> - 150+ focused software solutions</li>
+                <li><strong>AI Services</strong> - 100+ artificial intelligence solutions</li>
+                <li><strong>IT Services</strong> - 100+ comprehensive IT solutions</li>
+              </ul>
+            </section>
+
+            {/* Quick Start Steps */}
+            <section className="bg-slate-900/60 rounded-lg p-6 border border-white/10">
+              <h2 className="text-2xl font-bold mb-4 text-purple-400">Quick Start Steps</h2>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-4">
+                  <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">1</div>
+                  <div>
+                    <h3 className="font-semibold text-lg">Choose Your Service</h3>
+                    <p className="text-slate-300">Browse our <Link href="/services-catalog" className="text-blue-400 hover:text-blue-300">services catalog</Link> to find the solution that fits your needs.</p>
+                  </div>
                 </div>
-
-                <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                  <h3 className="text-2xl font-bold mb-4 text-purple-400">2. Get a Quote</h3>
-                  <p className="text-slate-300 mb-4">
-                    Contact our team to discuss your specific needs and get a customized quote.
-                  </p>
-                  <Link href="/contact" className="inline-block px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
-                    Request Quote
-                  </Link>
+                <div className="flex items-start space-x-4">
+                  <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">2</div>
+                  <div>
+                    <h3 className="font-semibold text-lg">Get a Quote</h3>
+                    <p className="text-slate-300">Contact us through our <Link href="/contact" className="text-blue-400 hover:text-blue-300">contact form</Link> or call us at +1 302 464 0950.</p>
+                  </div>
                 </div>
-
-                <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                  <h3 className="text-2xl font-bold mb-4 text-green-400">3. Implementation</h3>
-                  <p className="text-slate-300 mb-4">
-                    Our team will work with you to implement the solution and provide training.
-                  </p>
-                  <ul className="text-slate-300 space-y-2">
-                    <li>• Dedicated project manager</li>
-                    <li>• Custom configuration</li>
-                    <li>• Training and documentation</li>
-                    <li>• Ongoing support</li>
-                  </ul>
+                <div className="flex items-start space-x-4">
+                  <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">3</div>
+                  <div>
+                    <h3 className="font-semibold text-lg">Implementation</h3>
+                    <p className="text-slate-300">Our team will work with you to implement the solution and provide training.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">4</div>
+                  <div>
+                    <h3 className="font-semibold text-lg">Ongoing Support</h3>
+                    <p className="text-slate-300">We provide continuous support and updates to ensure your success.</p>
+                  </div>
                 </div>
               </div>
+            </section>
 
-              <h2 className="text-3xl font-bold mb-6 mt-12">Popular Services</h2>
-              
+            {/* Service Categories */}
+            <section className="bg-slate-900/60 rounded-lg p-6 border border-white/10">
+              <h2 className="text-2xl font-bold mb-4 text-green-400">Service Categories</h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="p-4 bg-slate-800/60 rounded-lg">
+                  <h3 className="font-semibold text-lg mb-2 text-blue-400">Micro SaaS</h3>
+                  <p className="text-slate-300 text-sm mb-3">Focused software solutions for specific business needs.</p>
+                  <Link href="/micro-saas" className="text-blue-400 hover:text-blue-300 text-sm">Learn More →</Link>
+                </div>
+                <div className="p-4 bg-slate-800/60 rounded-lg">
+                  <h3 className="font-semibold text-lg mb-2 text-purple-400">AI Services</h3>
+                  <p className="text-slate-300 text-sm mb-3">Artificial intelligence and machine learning solutions.</p>
+                  <Link href="/ai-services" className="text-purple-400 hover:text-purple-300 text-sm">Learn More →</Link>
+                </div>
+                <div className="p-4 bg-slate-800/60 rounded-lg">
+                  <h3 className="font-semibold text-lg mb-2 text-green-400">IT Services</h3>
+                  <p className="text-slate-300 text-sm mb-3">Comprehensive IT infrastructure and support services.</p>
+                  <Link href="/it-services" className="text-green-400 hover:text-green-300 text-sm">Learn More →</Link>
+                </div>
+              </div>
+            </section>
+
+            {/* Next Steps */}
+            <section className="bg-slate-900/60 rounded-lg p-6 border border-white/10">
+              <h2 className="text-2xl font-bold mb-4 text-yellow-400">Next Steps</h2>
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                  <h3 className="text-xl font-bold mb-3 text-blue-400">Cloud Cost Guard</h3>
-                  <p className="text-slate-300 mb-4">
-                    FinOps assistant for AWS, Azure, and GCP with anomaly detection and cost optimization.
-                  </p>
-                  <Link href="/micro-saas" className="text-blue-400 hover:text-blue-300 font-semibold">
-                    Learn More →
-                  </Link>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">Explore Documentation</h3>
+                  <ul className="text-slate-300 space-y-1">
+                    <li>• <Link href="/docs/api-overview" className="text-blue-400 hover:text-blue-300">API Overview</Link></li>
+                    <li>• <Link href="/docs/authentication" className="text-blue-400 hover:text-blue-300">Authentication</Link></li>
+                    <li>• <Link href="/docs/code-examples" className="text-blue-400 hover:text-blue-300">Code Examples</Link></li>
+                  </ul>
                 </div>
-
-                <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                  <h3 className="text-xl font-bold mb-3 text-purple-400">AI Code Review</h3>
-                  <p className="text-slate-300 mb-4">
-                    Automated code review with AI-powered suggestions and security scanning.
-                  </p>
-                  <Link href="/ai-services" className="text-purple-400 hover:text-purple-300 font-semibold">
-                    Learn More →
-                  </Link>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">Get Help</h3>
+                  <ul className="text-slate-300 space-y-1">
+                    <li>• <Link href="/contact" className="text-blue-400 hover:text-blue-300">Contact Support</Link></li>
+                    <li>• <Link href="/faq" className="text-blue-400 hover:text-blue-300">FAQ</Link></li>
+                    <li>• <Link href="/docs/troubleshooting" className="text-blue-400 hover:text-blue-300">Troubleshooting</Link></li>
+                  </ul>
                 </div>
               </div>
-
-              <div className="mt-12 p-6 bg-blue-900/20 rounded-lg border border-blue-500/30">
-                <h3 className="text-xl font-bold mb-3 text-blue-400">Need Help?</h3>
-                <p className="text-slate-300 mb-4">
-                  Our support team is here to help you get started. Contact us for personalized assistance.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Link href="/contact" className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
-                    Contact Support
-                  </Link>
-                  <Link href="/faq" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
-                    View FAQ
-                  </Link>
-                </div>
-              </div>
-            </div>
+            </section>
           </div>
-        </section>
+
+          {/* CTA */}
+          <div className="mt-12 text-center">
+            <Link href="/contact" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+              Get Started Today
+            </Link>
+          </div>
+        </div>
       </main>
     </>
   );
