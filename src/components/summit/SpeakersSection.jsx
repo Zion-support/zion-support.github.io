@@ -1,11 +1,11 @@
 const speakers = [
-    {name: 'Alex Zion',';';
-        title: 'Founder & CEO',';';
-        avatar: 'https://placehold.co/100x100',';';
-        twitter: '#',';';
-        linkedin: '#',},
+    {name: 'Alex Zion',
+        title: 'Founder & CEO',
+        avatar: 'https://placehold.co/100x100',
+        twitter: '#',
+        linkedin: '#',};,
 ];
-export function SpeakersSection(props: any) {
+export function SpeakersSection($1) {
     return (<section className="py-12 bg-zion-blue-dark text-white" id="speakers">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8 text-center">Speakers</h2>
@@ -22,5 +22,4 @@ export function SpeakersSection(props: any) {
         </div>
       </div>
     </section>)}
-';
-export default SpeakersSection;';';
+export default SpeakersSection;

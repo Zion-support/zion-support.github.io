@@ -47,8 +47,8 @@ const TalentDetails: React.FC<TalentDetailsProps> = ({ talent }) => {
               ))}
             </ul>
           </section>
-        )}';
-';';
+        )}
+
         {typeof talent.hourly_rate === 'number' && (
           <p>Hourly Rate: ${talent.hourly_rate}/hr</p>
         )}
@@ -88,12 +88,12 @@ const TalentDetails: React.FC<TalentDetailsProps> = ({ talent }) => {
               ))}
             </ul>
           </section>
-        )}
+        )};
       </div>
     </main>
   );
 };
 
 export default TalentDetails;
-</TalentDetailsProps>';
-</string>;';;';
+</TalentDetailsProps>
+</string>;';';

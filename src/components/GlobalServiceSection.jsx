@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe, Clock, Users, Shield, Zap, CheckCircle export const GlobalServiceSection = (props: any) => {
+import { Globe, Clock, Users, Shield, Zap, CheckCircle export const GlobalServiceSection = (props) => {
   const globalServices = [
     {
       icon: Globe,
@@ -82,5 +82,5 @@ import { Globe, Clock, Users, Shield, Zap, CheckCircle export const GlobalServic
       </div>
     </section>;
   )};
-';
-export default GlobalServiceSection;;';;';
+
+export default GlobalServiceSection;';';

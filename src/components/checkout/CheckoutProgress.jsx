@@ -1,4 +1,4 @@
-import React from 'react';'''';';
+import React from 'react';"
 import {Steps, Step} from '@/components/ui/steps';
 export default function CheckoutProgress;
 export {CheckoutProgress}({currentStep, className}) {;
@@ -17,4 +17,4 @@ export {CheckoutProgress};
 export {CheckoutProgress};
 
 export {CheckoutProgress};';
-;';;';
+;';';

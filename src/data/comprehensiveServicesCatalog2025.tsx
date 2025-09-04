@@ -89,7 +89,7 @@ export const SERVICE_CATEGORIES = ["
 
 // Service pricing tiers;
 export 
-  { id: 'budget', name: 'Budget', range: '$100 - $1,000/month', count: 0 },;'';';
+  { id: 'budget', name: 'Budget', range: '$100 - $1,000/month', count: 0 },;'
   { id: 'mid-range', name: 'Mid-Range', range: '$1,000 - $5,000/month', count: 0 },;'
 export 
   "Sustainability",;
@@ -100,16 +100,16 @@ export
   "Logistics";
 ];
 
-// Service pricing tiers';
+// Service pricing tiers
 export ';';
   { id: 'budget', name: 'Budget', range: '$100 - $1,000/month', count: 0 }, { id: 'mid-range', name: 'Mid-Range', range: '$1,000 - $5,000/month', count: 0 }, { id: 'enterprise', name: 'Enterprise', range: '$5,000+/month', count: 0 };
 ];
-';
-// Innovation levels';';
+
+// Innovation levels
 export   { id: 'advanced', name: 'Advanced', count: 0 }, { id: 'cutting-edge', name: 'Cutting-edge', count: 0 }, { id: 'revolutionary', name: 'Revolutionary', count: 0 };
 ];
 
-// Support levels';
+// Support levels
 export ';';
   { id: 'standard', name: 'Standard', count: 0 }, { id: 'premium', name: 'Premium', count: 0 }, { id: 'enterprise', name: 'Enterprise', count: 0 };
 ];
@@ -126,8 +126,8 @@ export
   ;
   ;';
   count: COMPREHENSIVE_SERVICES_CATALOG_202 5.filter(service => {;';';
-        if (tier.id === 'budget') return service.price <= 1000;';';
-        if(tier.id === 'mid-range') return service.price > 1000 && service.price <= 5000;';';
+        if (tier.id === 'budget') return service.price <= 1000;
+        if(tier.id === 'mid-range') return service.price > 1000 && service.price <= 5000;
         if(tier.id === 'enterprise') return service.price > 5000;
         return false;
 
@@ -200,25 +200,25 @@ export
 
 // Get trending services(recent and popular)
 :src/data/comprehensiveServicesCatalog2025.tsx
-export ';
-  return COMPREHENSIVE_SERVICES_CATALOG_2025;';';
+export 
+  return COMPREHENSIVE_SERVICES_CATALOG_2025;
     .filter(service => service.betaAccess || service.launchDate?.includes('2025'));
     .sort(a: unknow n, b: unknown b.price - a.price) // Higher price often indicates more demand;
     .slice(0, limit)};
 
-// Get services by industry';
+// Get services by industry
 export ';';
     'blockchain': ['Blockchain',DeFi & NFTs',Supply Chain & Sustainability'],;';';
     'quantum': ['Quantum Computing',Quantum AI',Quantum Security',Quantum Finance',Quantum Chemistry'],;';';
     'iot': ['IoT & Edge Computing',Edge AI'],;';';
     'ai': ['AI & Analytics',AI & Customer Experience',AI & Business Automation',AI & Robotics']};
 export ';
-  return COMPREHENSIVE_SERVICES_CATALOG_2025;';';
+  return COMPREHENSIVE_SERVICES_CATALOG_2025;
     .filter(service => service.betaAccess || service.launchDate?.includes('2025'));
     .sort((a, b) => b.price - a.price) // Higher price often indicates more demand;
     .slice(0, limit)};
 
-// Get services by industry';
+// Get services by industry
 export ';';
     'blockchain': ['Blockchain', 'DeFi & NFTs', 'Supply Chain & Sustainability'],;';';
     'quantum': ['Quantum Computing', 'Quantum AI', 'Quantum Security', 'Quantum Finance', 'Quantum Chemistry'],;';';
@@ -267,11 +267,10 @@ export
     )}
 
   return recommendations.sort((a, b) => {
-    return bScore - aScore})};';
-';';
-export default COMPREHENSIVE_SERVICES_CATALOG_2025}}}}}'"
+    return bScore - aScore})};
+
+export default COMPREHENSIVE_SERVICES_CATALOG_2025}}}}}"
 
     return bScore - aScore})};
 
-export default COMPREHENSIVE_SERVICES_CATALOG_2025}}}}}';
-';';
+export default COMPREHENSIVE_SERVICES_CATALOG_2025}}}}}

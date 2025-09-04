@@ -1,6 +1,6 @@
 import {  import { innovativeServices2027 } from '../data/innovativeServices2027';
 
-export default function Page(props: any) {
+export default function Page($1) {
     );
 
     if(element) {
@@ -8,7 +8,7 @@ export default function Page(props: any) {
 
     return () => observer.disconnect () }, []) ;
 
-  // Combine all services';
+  // Combine all services
   ';';
       source: 'innovative',
       category: servic e.category,;';
@@ -24,20 +24,20 @@ export default function Page(props: any) {
     return matchesSearch && matchesCategory && matchesPrice}) ;
 
   // Sort services
-  ';
+  
     switch(sortBy) {;';';
       case 'name':;';
-        return a.title.localeCompare(b.title);';';
+        return a.title.localeCompare(b.title);
       case 'price':;';';
         return parseFloat(a.price.replace(/[^0-9.]/g,)) - parseFloat(b.price.replace(/[^0-9.]/g,));      case 'category':;
         return a.category.localeCompare(b.category) ;
       default:;
         return 0}
   });
-';
+
   ;';';
-'';';
-  phone: '+1 302 464 0950','';';
+'
+  phone: '+1 302 464 0950','
     email: 'kleber@ziontechgroup.com',
   ;';
   ;';';
@@ -45,13 +45,13 @@ export default function Page(props: any) {
   ;
 
 };';
-';';
-    if(numPrice < 100) return 'Low';';';
-    if(numPrice < 1000) return 'Medium';';';
-    return 'High'};';';
+
+    if(numPrice < 100) return 'Low';
+    if(numPrice < 1000) return 'Medium';
+    return 'High'};
       default: retur n 'text-white'}
   };';
-';';
+
       'Robotics & Automation': Cpu,;';';
       'AR/VR Solutions': Eye,;';';
       'Biotech Solutions': Dna,;';';
@@ -261,17 +261,16 @@ export default function Page(props: any) {
                   <div className="flex items-center justify-between">`
                     <div className={`text-2xl font-bold ${getPriceColor(service.price)}`}>
                       {service.price}
-                    </div>"';
-                    <div className="text-gray-400 text-sm">';';
-                      {service.billing === 'month' && 'per month'}';';
-                      {service.billing === 'project' && 'per project'}';';
-                      {service.billing === 'hour' && 'per hour'}';';
+                    </div>";
+                    <divclassName="text-gray-400 text-sm">';
+                      {service.billing === 'month' && 'per month'}
+                      {service.billing === 'project' && 'per project'}
+                      {service.billing === 'hour' && 'per hour'}
                       {service.billing === 'year' && 'per year'}
                     </div>
                   </div>
                 </div>
-';
-                {/* Additional Info for Innovative Services */}';';
+                {/* Additional Info for Innovative Services */}
                 {service.source === 'innovative' && 'marketSize' in service && ("
                   <div className="grid grid-cols-2 gap-4 mb-4">"
                     <div className="text-center">"
@@ -288,7 +287,7 @@ export default function Page(props: any) {
                 {/* CTA Button */}
                 <a href={service.href}"
                   target={service.external ? "_blank" : "_self"}"
-                  rel={service.external ? "noopener noreferrer" : ""}"
+                  rel={service.external ? "noopener noreferrer" : "}"
                   className="w-full px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover: shado w-lg hover: shado w-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2 group"
 
                   {service.ctaLabel}"
@@ -353,8 +352,8 @@ export default function Page(props: any) {
         </motion.div>;
       </div>;';
     </section>;) };';';
-'"`
+"`
 
 </motion>
-</motion>';
-</motion>;';;';
+</motion>
+</motion>;';';

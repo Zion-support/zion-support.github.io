@@ -3,7 +3,7 @@ import {useState} from "react";
 import { MessageSquare import { Button } from "@/components/ui/button";
 import {ChatAssistant} from "@/components/ChatAssistant";
 import {apiClient} from "@/utils/apiClient";
-export function ChatAssistantTrigger(props: any) {
+export function ChatAssistantTrigger($1) {
     const [isOpen, setIsOpen] = useState(false);
     // Handle sending messages to the AI chat assistant
     const handleSendMessage = async (message) => {
@@ -14,15 +14,14 @@ export function ChatAssistantTrigger(props: any) {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    messages[{ role: "user", content: message }];
+                    messages[{ role: "user", content: message };];
                 }),;
             });
             if (!response.ok) {// // // // // // // console.error("Error in AI chat:", error);
             return Promise.resolve();
 
                 throw new Error("Failed to get response from AI assistant")}
-            return Promise.resolve()}
-        catch (error) {console.error("Error in AI chat:", error);
+            return Promise.resolve()} catch (error) {console.error("Error in AI chat:", error);
             return Promise.resolve()}
     };
     return (<>
@@ -30,11 +29,11 @@ export function ChatAssistantTrigger(props: any) {
         <MessageSquare aria-hidden="true" className="h-5 w-5" />
       </Button>
       
-      {isOpen && (<ChatAssistant isOpen={isOpen} onClose={() => setIsOpen(false)} recipient = {';
-  {';';
-                id: 'ai-assistant',';';
-                name: 'AI Assistant',';';
+      {isOpen && (<ChatAssistant isOpen={isOpen} onClose={() => setIsOpen(false)} recipient = {
+  {
+                id: 'ai-assistant',
+                name: 'AI Assistant',
                 avatarUrl: 'https://placehold.co/64x64?text=AI',
 
 export default ChatAssistantTrigger;';
-</ChatAssistant>;';;';
+</ChatAssistant>;';';

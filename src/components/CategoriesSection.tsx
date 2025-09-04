@@ -2,7 +2,7 @@
  * @param {*} params - Function parameters
  * @returns {*} Function return value
  */
-function CategoriesSection(props: any) {
+function CategoriesSection($1) {
 
 const categories = [{
     title: "AI Services",
@@ -31,7 +31,7 @@ const categories = [{
     icon: "📈",
     link: "/all - services",
     color: "from - emerald - 500 to - green - 600",
-  },
+  };,
 ];
 
 const specialServices = [{
@@ -45,7 +45,7 @@ const specialServices = [{
   {
     title: "Services Comparison",
     link: "/services - comparison"
-  }
+  };
 ];
 interface CategoriesSectionProps {
 
@@ -57,7 +57,7 @@ interface CategoriesSectionProps {
 
 ;
 
-export function CategoriesSection(props: any) {
+export function CategoriesSection($1) {
 
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
@@ -148,10 +148,10 @@ export function CategoriesSection(props: any) {
             <span className="text-sm group-hover: translat e-x-1 transition-transform duration-300">→</span>
           </Link>
         </motion.div>
-      </div>';
+      </div>
     </section>;';';
-  )}}}}}}}}}}'"`
+  )}}}}}}}}}}"`
 
 </motion>
+</motion>
 </motion>';
-</motion>';';

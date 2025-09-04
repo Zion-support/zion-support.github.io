@@ -1,12 +1,12 @@
 export const safeStorage = {
 export default safeStorage;
 
-// In - memory storage for fallback with optimizationsconst inMemoryStore = {};
+// In - memory storage for fallback with optimizationsconst inMemoryStore = {};;
 let localStorageAvailable = null; // Cache the availability check
 let lastAvailabilityCheck = 0;
 const AVAILABILITY_CHECK_INTERVAL = 5000; // Check every 5 seconds max
 
-function isLocalStorageAvailable(props: any) {
+function isLocalStorageAvailable($1) {
   const now = Date.now();
   // Use cached result if checked recently
   if()
@@ -23,9 +23,9 @@ function isLocalStorageAvailable(props: any) {
 
       localStorageAvailable = false;
       return false;
-    }';
-';';
-    const testKey = '__localStorage_test__';';';
+    }
+
+    const testKey = '__localStorage_test__';
     localStorage.setItem(testKey,test');
     localStorage.removeItem(testKey);
     localStorageAvailable = true;
@@ -37,10 +37,10 @@ function isLocalStorageAvailable(props: any) {
   }
 }
 
-function safeConsoleError(props: any) {';
-';';
-  const env = globalThis.process?.env?.NODE_ENV ?? 'production';';';
-  // Prevent infinite recursion in console logging'';';
+function safeConsoleError($1) {
+
+  const env = globalThis.process?.env?.NODE_ENV ?? 'production';
+  // Prevent infinite recursion in console logging'
   if(env === 'production') return;
 
   try {
@@ -56,7 +56,7 @@ export const safeStorage = {
 
     try {
       return localStorage.getItem(key);
-    } catch(error) {
+    } catch (error) {
 
       // 
       return null;
@@ -68,7 +68,7 @@ export const safeStorage = {
     try {
       localStorage.setItem(key, value);
       return true;
-    } catch(error) {
+    } catch (error) {
 
       // 
       return false;
@@ -80,7 +80,7 @@ export const safeStorage = {
     try {
       localStorage.removeItem(key);
       return true;
-    } catch(error) {
+    } catch (error) {
 
       // 
       return false;
@@ -91,7 +91,7 @@ export const safeStorage = {
     try {
       localStorage.clear();
       return true;
-    } catch(error) {
+    } catch (error) {
 
       // 
       return false;
@@ -102,7 +102,7 @@ export const safeStorage = {
 
     try {
       return localStorage.key(index);
-    } catch(error) {
+    } catch (error) {
 
       // 
       return null;    }
@@ -111,11 +111,10 @@ export const safeStorage = {
   get length() {
     try {
       return localStorage.length;
-    } catch(error) {
+    } catch (error) {
 
       // 
       return 0;    }
   }};
 
 export default safeStorage;';
-';';

@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react';';';
+import React, {useState, useEffect} from 'react';
 import {motion} from 'framer-motion';
-export default function Page(props: any) {
+export default function Page($1) {
 ,
   ];
   useEffect(() => {
@@ -11,10 +11,10 @@ export default function Page(props: any) {
   }, []);
   const generateReport = issues => {
 
-    const totalPages = 79; // From analysis report';
-    const pagesWithIssues = issues.length;';';
-    const criticalIssues = issues.filter(i => i.severity === 'high').length;';';
-    const mediumIssues = issues.filter(i => i.severity === 'medium').length;';';
+    const totalPages = 79; // From analysis report
+    const pagesWithIssues = issues.length;
+    const criticalIssues = issues.filter(i => i.severity === 'high').length;
+    const mediumIssues = issues.filter(i => i.severity === 'medium').length;
     const lowIssues = issues.filter(i => i.severity === 'low').length;
     setReport({
 
@@ -34,12 +34,12 @@ export default function Page(props: any) {
     setIsAnalyzing(false);};
   const getSeverityIcon = severity => {
 
-    switch(severity) {';
-';';
-      case 'high':';
-        return <AlertTriangle className="w-4 h-4 text-red-400"  />;';';
-      case 'medium':"';
-        return <AlertTriangle className="w-4 h-4 text-yellow-400"  />;';';
+    switch(severity) {
+
+      case 'high':
+        return <AlertTriangle className="w-4 h-4 text-red-400"  />;
+      case 'medium':";
+        return <AlertTriangle className="w-4 h-4 text-yellow-400"  />;
       case 'low':"
         return <Info className="w-4 h-4 text-blue-400"  />;
       default:"
@@ -48,29 +48,29 @@ export default function Page(props: any) {
   };
   const getSeverityColor = severity => {
 
-    switch(severity) {';
-';';
-      case 'high':'';';
-        return 'text-red-400';';';
-      case 'medium':'';';
-        return 'text-yellow-400';';';
-      case 'low':'';';
-        return 'text-blue-400';';';
-      default:'';';
+    switch(severity) {
+
+      case 'high':'
+        return 'text-red-400';
+      case 'medium':'
+        return 'text-yellow-400';
+      case 'low':'
+        return 'text-blue-400';
+      default:'
         return 'text-gray-400';
     }
   };
   const getStatusColor = status => {
 
-    switch(status) {';
-';';
-      case 'resolved':'';';
-        return 'text-green-400';';';
-      case 'in_progress':'';';
-        return 'text-yellow-400';';';
-      case 'open':'';';
-        return 'text-red-400';';';
-      default:'';';
+    switch(status) {
+
+      case 'resolved':'
+        return 'text-green-400';
+      case 'in_progress':'
+        return 'text-yellow-400';
+      case 'open':'
+        return 'text-red-400';
+      default:'
         return 'text-gray-400';
     }
   };
@@ -80,17 +80,17 @@ export default function Page(props: any) {
     return matchesFilter && matchesSearch;});
   const getIssueTypeLabel = type => {
 
-    switch(type) {';
-';';
-      case 'missing_title':'';';
-        return 'Missing Title';';';
-      case 'missing_meta':'';';
-        return 'Missing Meta Description';';';
-      case 'no_headings':'';';
-        return 'No Headings';';';
-      case 'minimal_content':'';';
-        return 'Minimal Content';';';
-      case 'no_images':'';';
+    switch(type) {
+
+      case 'missing_title':'
+        return 'Missing Title';
+      case 'missing_meta':'
+        return 'Missing Meta Description';
+      case 'no_headings':'
+        return 'No Headings';
+      case 'minimal_content':'
+        return 'Minimal Content';
+      case 'no_images':'
         return 'No Images';
       default:
         return type;
@@ -180,39 +180,39 @@ export default function Page(props: any) {
   );
 }
               {/* Actions */}"
-              <div className="flex items-center justify-between">"';
-                <div className="flex space-x-2">';';
-                  <button'';';
-                    onClick={() => setSelectedFilter('all')}';';
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'all''';';
-                        ? 'bg-purple-500 text-white''';';
+              <div className="flex items-center justify-between">";
+                <divclassName="flex space-x-2">';
+                  <button'
+                    onClick={() => setSelectedFilter('all')}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'all"
+                        ? 'bg-purple-500 text-white"
                         : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`
                     }`}
                   >
                     All Issues';
-                  </button>';';
-                  <button'';';
-                    onClick={() => setSelectedFilter('critical')}`';';
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'critical''';';
-                        ? 'bg-red-500 text-white''';';
+                  </button>';
+                  <button'
+                    onClick={() => setSelectedFilter('critical')}`
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'critical"
+                        ? 'bg-red-500 text-white"
                         : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`
                     }`}
                   >
                     Critical';
-                  </button>';';
-                  <button'';';
-                    onClick={() => setSelectedFilter('medium')}`';';
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'medium''';';
-                        ? 'bg-yellow-500 text-white''';';
+                  </button>';
+                  <button'
+                    onClick={() => setSelectedFilter('medium')}`
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'medium"
+                        ? 'bg-yellow-500 text-white"
                         : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`
                     }`}
                   >
                     Medium';
-                  </button>';';
-                  <button'';';
-                    onClick={() => setSelectedFilter('low')}`';';
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'low''';';
-                        ? 'bg-blue-500 text-white''';';
+                  </button>';
+                  <button'
+                    onClick={() => setSelectedFilter('low')}`
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'low"
+                        ? 'bg-blue-500 text-white"
                         : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`
                     }`}
                   >
@@ -229,8 +229,8 @@ export default function Page(props: any) {
                     <Zap className="w-4 h-4 animate-spin"  />
                   ) : ("
                     <Search className="w-4 h-4"  />
-                  )}';
-                  <span>';';
+                  )}
+                  <span>';
                     {isAnalyzing ? 'Analyzing...' : 'Analyze Content'}
                   </span>
                 </button>
@@ -292,8 +292,8 @@ export default function Page(props: any) {
                             </div>
                           </td>"
                           <td className="px-6 py-4 whitespace-nowrap">"
-                            <div className="max-w-xs">"';
-                              <div className="text-sm font-medium text-white">';';
+                            <div className="max-w-xs">";
+                              <divclassName="text-sm font-medium text-white">';
                                 {issue.pageTitle || 'Untitled'}
                               </div>
                               <a
@@ -315,8 +315,8 @@ export default function Page(props: any) {
                             <div className="max-w-md">"
                               <div className="text-sm text-gray-300 mb-2">
                                 {issue.description}
-                              </div>"';
-                              <div className="text-xs text-purple-400">';';
+                              </div>";
+                              <divclassName="text-xs text-purple-400">';
                                 <strong>Recommendation:</strong>{' '}
                                 {issue.recommendation}
                               </div>
@@ -324,12 +324,12 @@ export default function Page(props: any) {
                           </td>"
                           <td className="px-6 py-4 whitespace-nowrap">
                             <span`
-                              className={`text-sm font-medium ${getStatusColor(issue.status)}`}';
-                            >';';
-                              {issue.status'';';
+                              className={`text-sm font-medium ${getStatusColor(issue.status)}`}
+                            >';
+                              {issue.status'
                                 .replace('_',)';
                                 .charAt(0)';';
-                                .toUpperCase() +'';';
+                                .toUpperCase() +'
                                 issue.status.replace('_',).slice(1)}
                             </span>
                           </td>"
@@ -391,8 +391,8 @@ export {ContentQualityAnalyzer};
 export {ContentQualityAnalyzer};
 
 export {ContentQualityAnalyzer};"
-""
-}""
+"
+}"
 
-</motion>';
-</motion>;';;';
+</motion>
+</motion>;';';

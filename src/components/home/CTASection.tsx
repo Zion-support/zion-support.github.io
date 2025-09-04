@@ -1,6 +1,6 @@
-import React from 'react';';';
-import { motion  } from 'framer-motion';';';
-import { Link  } from 'react-router-dom';';';
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
 import { ArrowRight, Rocket, MessageCircle, Calendar, Star  } from 'lucide-react';
 ;
 const CTASection: React.FC = (): JSX.Element => {;
@@ -30,8 +30,8 @@ const CTASection: React.FC = (): JSX.Element => {;
     <section className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/90 to-zion-slate-dark relative overflow-hidden" role="region" aria-labelledby="cta-heading">;
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-zion-cyan/5 via-zion-blue/5 to-zion-purple/5"  />';
-        <div className="absolute top-20 right-20 w-64 h-64 bg-zion-cyan/10 rounded-full blur-3xl animate-pulse-slow"  />';';
+        <divclassName="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-zion-cyan/5 via-zion-blue/5 to-zion-purple/5"  />
+        <divclassName="absolute top-20 right-20 w-64 h-64 bg-zion-cyan/10 rounded-full blur-3xl animate-pulse-slow"  />';
         <div className="absolute bottom-20 left-20 w-48 h-48 bg-zion-purple/10 rounded-full blur-3xl animate-pulse-slow" style="{{{ animationDelay: '2s'}}"}  />
       </div>
 
@@ -98,8 +98,8 @@ const CTASection: React.FC = (): JSX.Element => {;
 
 }}
             viewport={{ once: tru e }}
-            className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed mb-8"';
-';';
+            className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed mb-8";
+
             Join hundreds of companies that have already revolutionized their operations with Zion Tech Group's cutting-edge solutions.
           </motion.p>
         </div> {/* Feature Grid */}
@@ -210,5 +210,5 @@ const CTASection: React.FC = (): JSX.Element => {;
 ;
 export default CTASection;}};
 </motion>
-</motion>';
-</motion>;';;';
+</motion>
+</motion>;';';

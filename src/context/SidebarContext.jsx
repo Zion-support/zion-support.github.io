@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 const SidebarProvider({children}) {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-    const toggleSidebar = (props: any) => {
+    const toggleSidebar = (props) => {
         setIsSidebarOpen(!isSidebarOpen);
     };
     return (<SidebarContext.Provider value = {
@@ -11,12 +11,11 @@ const SidebarProvider({children}) {
 }}>
       {children}
     </SidebarContext.Provider>)}
-export function useSidebar(props: any) {
-    const context = useContext(SidebarContext);';
-    if (context === null) {';';
+export function useSidebar($1) {
+    const context = useContext(SidebarContext);
+    if (context === null) {
         throw new Error('useSidebar must be used within a SidebarProvider');
 
     return context;
 }
-';
-</SidebarContext>;';;';
+</SidebarContext>;';';

@@ -7,15 +7,15 @@ interface InputFieldsProps {;
 ;
 }
 ;
-const InputFields: React.FC<InputFieldsProps> = ({ inputData, setInputData, onNext }) => {;
-  const handleInputChange = (props: any) => {;
+const InputFields: React.FC<InputFieldsProps> = ({ inputData, setInputData, onNext };) => {;
+  const handleInputChange = (props) => {;
     setInputData({;
       ...inputData,;
       [field]: value;
     });
   };
 ;
-  const handleSubmit = (props: any) => {;
+  const handleSubmit = (props) => {;
     e.preventDefault();
     if (inputData?.companyName && inputData?.industry) {;
       onNext();
@@ -29,8 +29,8 @@ const InputFields: React.FC<InputFieldsProps> = ({ inputData, setInputData, onNe
         <div>
           <label className="block text-sm font-medium mb-2">Company Name</label>
           <input';
-            type="text"';';
-            value={inputData?.companyName || ''}';';
+            type="text";';
+            value={inputData?.companyName || "}
             onChange={(e) => handleInputChange('companyName', e.target.value)}
             className="w-full p-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
             placeholder="Enter company name"
@@ -39,14 +39,14 @@ const InputFields: React.FC<InputFieldsProps> = ({ inputData, setInputData, onNe
         </div>
         
         <div>
-          <label className="block text-sm font-medium mb-2">Industry</label>';
+          <label className="block text-sm font-medium mb-2">Industry</label>
           <select';';
-            value={inputData?.industry || ''}';';
+            value={inputData?.industry || "}
             onChange={(e) => handleInputChange('industry', e.target.value)}
             className="w-full p-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
             required
           >
-            <option value="">Select industry</option>
+            <option value=">Select industry</option>
             <option value="technology">Technology</option>
             <option value="healthcare">Healthcare</option>
             <option value="finance">Finance</option>
@@ -58,9 +58,9 @@ const InputFields: React.FC<InputFieldsProps> = ({ inputData, setInputData, onNe
         </div>
         
         <div>
-          <label className="block text-sm font-medium mb-2">Company Description</label>';
+          <label className="block text-sm font-medium mb-2">Company Description</label>
           <textarea';';
-            value={inputData?.description || ''}';';
+            value={inputData?.description || "}
             onChange={(e) => handleInputChange('description', e.target.value)}
             className="w-full p-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent";
             rows={4}
@@ -71,8 +71,8 @@ const InputFields: React.FC<InputFieldsProps> = ({ inputData, setInputData, onNe
         <div>
           <label className="block text-sm font-medium mb-2">Target Audience</label>
           <input';
-            type="text"';';
-            value={inputData?.targetAudience || ''}';';
+            type="text";';
+            value={inputData?.targetAudience || "}
             onChange={(e) => handleInputChange('targetAudience', e.target.value)}
             className="w-full p-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent";
             placeholder="e.g., Small businesses, Enterprise clients";
@@ -90,5 +90,5 @@ const InputFields: React.FC<InputFieldsProps> = ({ inputData, setInputData, onNe
 };
 ;
 export default InputFields;
-</textarea>';
-</InputFieldsProps>;';;';
+</textarea>
+</InputFieldsProps>;';';

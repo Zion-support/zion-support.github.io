@@ -1,111 +1,111 @@
 
-import React, { useState, useEffect } from 'react';';';
-import { Link, useLocation } from 'react-router-dom';';';
-import { motion, AnimatePresence } from 'framer-motion';';';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin, Search, User, ShoppingCart, Bell } from 'lucide-react';
 
-const EnhancedHeader: React.FC = (props: any) => {
+const EnhancedHeader: React.FC = (props) => {
   const [isOpen, setIsOpen] = useState<any>(false);
-  const [isScrolled, setIsScrolled] = useState<any>(false);';
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);';';
-  const [searchQuery, setSearchQuery] = useState<any>('');
+  const [isScrolled, setIsScrolled] = useState<any>(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState<any>(");
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = (props: any) => {
+    const handleScroll = (props) => {
       setIsScrolled(window.scrollY > 20);
     };';
-';';
+
     window.addEventListener('scroll', handleScroll);';';
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-';
-  const navigationItems = [';';
-    { name: 'Home', href: '/' },';
-    { ';';
-      name: 'Services', ';';
+
+  const navigationItems = [
+    { name: 'Home', href: '/' },
+    {
+      name: 'Services',
       href: '/services', 
-      dropdown: [';
-        { ';';
-          name: 'AI Solutions', ';';
-          href: '/services/ai-services', ';
-          icon: Brain, ';';
-          description: 'Cutting-edge AI services',';
-          subItems: [';';
-            { name: 'Content Intelligence', href: '/services/ai-content-intelligence-platform' },';';
-            { name: 'Customer Success', href: '/services/ai-customer-success-automation' },';';
-            { name: 'Financial Forecasting', href: '/services/ai-financial-forecasting-engine' },';';
+      dropdown: [
+        {
+          name: 'AI Solutions',
+          href: '/services/ai-services',
+          icon: Brain,
+          description: 'Cutting-edge AI services',
+          subItems: [
+            { name: 'Content Intelligence', href: '/services/ai-content-intelligence-platform' },
+            { name: 'Customer Success', href: '/services/ai-customer-success-automation' },
+            { name: 'Financial Forecasting', href: '/services/ai-financial-forecasting-engine' },
             { name: 'Healthcare Diagnostics', href: '/services/ai-healthcare-diagnostic-platform' }
           ]
-        },';
-        { ';';
-          name: 'IT & Security', ';';
-          href: '/services/it-services', ';
-          icon: Shield, ';';
-          description: 'Enterprise security & infrastructure',';
-          subItems: [';';
-            { name: 'Zero Trust Security', href: '/services/zero-trust-security-platform' },';';
-            { name: 'Edge Computing', href: '/services/edge-computing-orchestrator' },';';
-            { name: 'Cloud DevOps', href: '/services/cloud-devops' },';';
+        },
+        {
+          name: 'IT & Security',
+          href: '/services/it-services',
+          icon: Shield,
+          description: 'Enterprise security & infrastructure',
+          subItems: [
+            { name: 'Zero Trust Security', href: '/services/zero-trust-security-platform' },
+            { name: 'Edge Computing', href: '/services/edge-computing-orchestrator' },
+            { name: 'Cloud DevOps', href: '/services/cloud-devops' },
             { name: 'Cybersecurity', href: '/services/cybersecurity' }
           ]
-        },';
-        { ';';
-          name: 'Blockchain & Web3', ';';
-          href: '/services/blockchain-services', ';
-          icon: Globe, ';';
-          description: 'Next-gen blockchain solutions',';
-          subItems: [';';
-            { name: 'DeFi Platform', href: '/services/defi-yield-optimization-platform' },';';
-            { name: 'NFT Marketplace', href: '/services/nft-marketplace-platform' },';';
-            { name: 'Supply Chain', href: '/services/blockchain-supply-chain-platform' },';';
+        },
+        {
+          name: 'Blockchain & Web3',
+          href: '/services/blockchain-services',
+          icon: Globe,
+          description: 'Next-gen blockchain solutions',
+          subItems: [
+            { name: 'DeFi Platform', href: '/services/defi-yield-optimization-platform' },
+            { name: 'NFT Marketplace', href: '/services/nft-marketplace-platform' },
+            { name: 'Supply Chain', href: '/services/blockchain-supply-chain-platform' },
             { name: 'Smart Contracts', href: '/services/smart-contract-development' }
           ]
-        },';
-        { ';';
-          name: 'Sustainability', ';';
-          href: '/services/sustainability', ';
-          icon: Zap, ';';
-          description: 'Green tech solutions',';
-          subItems: [';';
-            { name: 'Carbon Tracking', href: '/services/carbon-footprint-tracking-platform' },';';
-            { name: 'Energy Management', href: '/services/sustainable-technology' },';';
+        },
+        {
+          name: 'Sustainability',
+          href: '/services/sustainability',
+          icon: Zap,
+          description: 'Green tech solutions',
+          subItems: [
+            { name: 'Carbon Tracking', href: '/services/carbon-footprint-tracking-platform' },
+            { name: 'Energy Management', href: '/services/sustainable-technology' },
             { name: 'ESG Reporting', href: '/services/esg-analytics-platform' }
           ]
         }
       ]
-    },';
-    { ';';
-      name: 'Solutions', ';';
-      href: '/solutions', ';
-      dropdown: [';';
-        { name: 'Enterprise', href: '/solutions/enterprise', description: 'Large-scale business solutions' },';';
-        { name: 'Startups', href: '/solutions/startups', description: 'Growth-focused solutions' },';';
-        { name: 'Healthcare', href: '/solutions/healthcare', description: 'Medical technology solutions' },';';
+    },
+    {
+      name: 'Solutions',
+      href: '/solutions',
+      dropdown: [
+        { name: 'Enterprise', href: '/solutions/enterprise', description: 'Large-scale business solutions' },
+        { name: 'Startups', href: '/solutions/startups', description: 'Growth-focused solutions' },
+        { name: 'Healthcare', href: '/solutions/healthcare', description: 'Medical technology solutions' },
         { name: 'Financial Services', href: '/solutions/financial', description: 'Fintech and banking solutions' }
-      ]';
-    },';';
-    { name: 'About', href: '/about' },';';
-    { name: 'Blog', href: '/blog' },';';
-    { name: 'Contact', href: '/contact' }
-  ];
-';
-  const contactInfo = [';';
-    { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },';';
-    { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },';';
-    { icon: MapPin, text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' }
+      ]
+    },
+    { name: 'About', href: '/about' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' };
   ];
 
-  const toggleDropdown = (props: any) => {
+  const contactInfo = [
+    { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
+    { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
+    { icon: MapPin, text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' };
+  ];
+
+  const toggleDropdown = (props) => {
     setActiveDropdown(activeDropdown === name ? null : name);
   };
 
-  const closeMobileMenu = (props: any) => {
+  const closeMobileMenu = (props) => {
     setIsOpen(false);
     setActiveDropdown(null);
   };
 
-  const handleSearch = (props: any) => {
+  const handleSearch = (props) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       // Handle search logic here
@@ -114,7 +114,7 @@ const EnhancedHeader: React.FC = (props: any) => {
   };
 
   return (';
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${';';
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-gray-900/95 backdrop-blur-md border-b border-cyan-400/20' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -137,9 +137,9 @@ const EnhancedHeader: React.FC = (props: any) => {
                       onClick={() => toggleDropdown(item.name)}
                       className="flex items-center space-x-1 text-gray-300 hover:text-cyan-300 transition-colors duration-200 py-2"
                     >
-                      <span>{item.name}</span>';
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${';';
-                        activeDropdown === item.name ? 'rotate-180' : ''
+                      <span>{item.name}</span>
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                        activeDropdown === item.name ? 'rotate-180' : "
                       }`} />
                     </button>
                     <AnimatePresence>
@@ -179,9 +179,9 @@ const EnhancedHeader: React.FC = (props: any) => {
                   </div>
                 ) : (
                   <Link
-                    to={item.href}';
-                    className={`text-gray-300 hover:text-cyan-300 transition-colors duration-200 py-2 ${';';
-                      location.pathname === item.href ? 'text-cyan-400' : ''
+                    to={item.href}
+                    className={`text-gray-300 hover:text-cyan-300 transition-colors duration-200 py-2 ${
+                      location.pathname === item.href ? 'text-cyan-400' : "
                     }`}
                   >
                     {item.name}
@@ -223,7 +223,7 @@ const EnhancedHeader: React.FC = (props: any) => {
       <AnimatePresence>
         {isOpen && (
           <motion.div';
-            initial={{ opacity: 0, height: 0 }}';';
+            initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
@@ -257,15 +257,15 @@ const EnhancedHeader: React.FC = (props: any) => {
                           onClick={() => toggleDropdown(item.name)}
                           className="flex items-center justify-between w-full text-left px-3 py-2 text-gray-300 hover:text-cyan-300 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
                         >
-                          <span>{item.name}</span>';
-                          <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${';';
-                            activeDropdown === item.name ? 'rotate-180' : ''
+                          <span>{item.name}</span>
+                          <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                            activeDropdown === item.name ? 'rotate-180' : "
                           }`} />
                         </button>
                         <AnimatePresence>
                           {activeDropdown === item.name && (
                             <motion.div';
-                              initial={{ opacity: 0, height: 0 }}';';
+                              initial={{ opacity: 0, height: 0 }}
                               animate={{ opacity: 1, height: 'auto' }}
                               exit={{ opacity: 0, height: 0 }}
                               transition={{ duration: 0.2 }}
@@ -290,9 +290,9 @@ const EnhancedHeader: React.FC = (props: any) => {
                       <Link
                         to={item.href}
                         onClick={closeMobileMenu}
-                        className={`block px-3 py-2 rounded-lg transition-colors duration-200 ${';
+                        className={`block px-3 py-2 rounded-lg transition-colors duration-200 ${
                           location.pathname === item.href';';
-                            ? 'text-cyan-400 bg-cyan-400/10'';';
+                            ? 'text-cyan-400 bg-cyan-400/10'
                             : 'text-gray-300 hover:text-cyan-300 hover:bg-gray-800/50'
                         }`}
                       >
@@ -328,5 +328,5 @@ export default EnhancedHeader;
 </ChevronDown>
 </any>
 </string>
-</any>';
-</any>;';;';
+</any>
+</any>;';';

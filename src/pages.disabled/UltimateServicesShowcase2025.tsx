@@ -40,7 +40,7 @@ import {
 } from 'lucide-react';
 
 const UltimateServicesShowcase2025: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState(");
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedType, setSelectedType] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -67,7 +67,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
         'micro-saas': 'Micro SAAS',
         'it-services': 'IT Services',
         'ai-services': 'AI Services'
-      };
+      };;
       services = services.filter(service => 
         service.serviceType === serviceTypeMap[selectedType]
       );
@@ -78,7 +78,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
         'budget': [1000, 2999],
         'mid-range': [3000, 6999],
         'enterprise': [7000, 999999]
-      };
+      };;
       const [min, max] = priceRanges[selectedPriceRange] || [0, 999999];
       services = services.filter(service => service.price >= min && service.price <= max);
     }

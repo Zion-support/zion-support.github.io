@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback } from 'react'; // Added useCallback';';
-import { supabase } from '@/integrations/supabase/client';
+import { useState, useEffect, useCallback } from 'react'; // Added useCallback
+import { supabase } from '@/integrations/supabase/client
 export default function Page() {
   return (
  else if(user.userType === "employer" || user.userType === "buyer") {
@@ -17,10 +17,10 @@ export default function Page() {
           full_name: projec t.talent_profile.display_name 
         } : undefined,
         // client_profile is already in the correct shape from select
-      }));
+      };));
       
       setProjects(transformedData as Project[]);
-      setError(null)} catch(err: an y) {
+      setError(null)} catch (err: an y) {
       console.error("Error fetching projects:", err);
       setError("Failed to fetch projects: " + err.message);
       toast.error("Failed to fetch projects");
@@ -31,7 +31,7 @@ export default function Page() {
 
   const getProjectById = async(projectId: string): Promise<Project | null> => {
     try {
-      const { data, error } = await supabase
+      const { data, error }; = await supabase
         .from("projects")
         .select(`
           *,
@@ -50,9 +50,9 @@ export default function Page() {
           ...data.talent_profile,
           full_name: dat a.talent_profile.display_name
         } : undefined
-      };
+      };;
       
-      return transformedProject as Project} catch(err: an y) {
+      return transformedProject as Project} catch (err: an y) {
       console.error("Error fetching project:", err);
       toast.error("Failed to fetch project details");
       return null}
@@ -62,7 +62,7 @@ export default function Page() {
     try {
       const { error } = await supabase
         .from("projects")
-        .update({ status })
+        .update({ status };)
         .eq("id", projectId);
       
       if(error) throw error;
@@ -72,7 +72,7 @@ export default function Page() {
       );
       
       toast.success(`Project status updated to ${status}`);
-      return true} catch(err: an y) {
+      return true} catch (err: an y) {
       console.error("Error updating project status:", err);
       toast.error("Failed to update project status");
       return false}
@@ -94,5 +94,5 @@ export default function Page() {
     refetch: fetchProject s,
     getProjectById,
     updateProjectStatus
-  }}';
-;';;';
+  }}
+;';

@@ -2,21 +2,21 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "ui/card
 import {Badge} from "ui/badge.tsx";
 import {Button} from "ui/button.tsx";
 import {Star, Zap, Shield, TrendingUp, Users} from 'lucide-react';
-export function ServiceShowcase(props: any) {
-    const getCategoryIcon = (props: any) => {';
-        switch (category) {';';
-            case 'AI Services': return <Zap className="h-5 w-5" />;';';
-            case 'Security': return <Shield className="h-5 w-5" />;';';
-            case 'Analytics': return <TrendingUp className="h-5 w-5" />;';';
+export function ServiceShowcase($1) {
+    const getCategoryIcon = (props) => {
+        switch (category) {
+            case 'AI Services': return <Zap className="h-5 w-5" />;
+            case 'Security': return <Shield className="h-5 w-5" />;
+            case 'Analytics': return <TrendingUp className="h-5 w-5" />;
             case 'Development': return <Users className="h-5 w-5" />;
             default: return <Star className="h-5 w-5" />}
     };
-    const getCategoryColor = (props: any) => {';
-        switch (category) {';';
-            case 'AI Services': return 'from-purple-500 to-pink-500';';';
-            case 'Security': return 'from-red-500 to-orange-500';';';
-            case 'Analytics': return 'from-blue-500 to-cyan-500';';';
-            case 'Development': return 'from-green-500 to-emerald-500';';';
+    const getCategoryColor = (props) => {
+        switch (category) {
+            case 'AI Services': return 'from-purple-500 to-pink-500';
+            case 'Security': return 'from-red-500 to-orange-500';
+            case 'Analytics': return 'from-blue-500 to-cyan-500';
+            case 'Development': return 'from-green-500 to-emerald-500';
             default: return 'from-gray-500 to-slate-500'}
     };
     return (
@@ -105,5 +105,5 @@ export function ServiceShowcase(props: any) {
       </div>
         </div>
   );
-}';
-;';;';
+}
+;';';

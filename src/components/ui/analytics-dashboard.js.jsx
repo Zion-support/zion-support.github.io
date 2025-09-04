@@ -1,8 +1,8 @@
-import React, {useState, useEffect, useCallback} from 'react';';';
-import {motion, AnimatePresence} from 'framer-motion';';';
+import React, {useState, useEffect, useCallback} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
 import {TrendingUp, Users, Download, RefreshCw, BarChart3, Eye, EyeOff, Target} from 'lucide-react';
 import {Button} from "button.tsx";
-export function AnalyticsDashboard(props: any) {
+export function AnalyticsDashboard($1) {
     const [showTargets, setShowTargets] = useState(true);
     const [isLoading, setIsLoading] = useState(false);
     const [selectedMetric, setSelectedMetric] = useState(null);
@@ -12,7 +12,7 @@ export function AnalyticsDashboard(props: any) {
         activeUsers: 8920,
         revenue: 456780,
         growth: 23.5
-    });
+    };);
     // Simulate real-time data updates
     useEffect(() => {
         if (!enabled || !isExpanded)
@@ -22,13 +22,13 @@ export function AnalyticsDashboard(props: any) {
                 ...prev,
                 revenue: prev.revenue + Math.floor(Math.random() * 1000) - 500,
                 growth: prev.growth + (Math.random() * 2 - 1)
-            }))}, 5000);
+            }))};, 5000);
         return () => clearInterval(interval)}, [enabled, isExpanded]);
     // Handle metric click
     const handleMetricClick = useCallback((metricId) => {setSelectedMetric(metricId);
         onMetricClick?.(metricId)}, [onMetricClick]);
     // Calculate progress percentage
-    const calculateProgress = (props: any) => {return Math.min((current / target) * 100, 100)};
+    const calculateProgress = (props) => {return Math.min((current / target) * 100, 100)};;
     // Refresh data
     const refreshData = useCallback(async () => {
         setIsLoading(true);
@@ -64,9 +64,9 @@ export function AnalyticsDashboard(props: any) {
         <div className="flex items-center gap-2">
           <Button size="sm" variant="ghost" onClick={() => setShowTargets(!showTargets)} className="text-zinc-400 hover:text-white p-2">
             {showTargets ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-          </Button>';
-          <Button size="sm" variant="outline" onClick={refreshData} disabled={isLoading} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">';';
-            <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
+          </Button>
+          <Buttonsize="sm" variant="outline" onClick={refreshData} disabled={isLoading} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">';
+            <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : "}`} />
           </Button>
           <Button size="sm" variant="outline" className="border-zion-blue-light/30 text-zinc-300 hover:text-white">
             <Download className="w-4 h-4" />
@@ -75,8 +75,8 @@ export function AnalyticsDashboard(props: any) {
       </div>
 
       {/* Metrics Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">';
-        {/* Total Users */}';';
+      <divclassName="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        {/* Total Users */}
         <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover:border-zion-cyan/50 transition-all duration-300" whileHover={{ scale: 1.02 }} onClick={() => handleMetricClick('totalUsers')}>
           <div className="flex items-center justify-between mb-3">
             <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
@@ -101,8 +101,8 @@ export function AnalyticsDashboard(props: any) {
   );
 }
         </motion.div>
-';
-        {/* Active Users */}';';
+
+        {/* Active Users */}
         <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover:border-zion-cyan/50 transition-all duration-300" whileHover={{ scale: 1.02 }} onClick={() => handleMetricClick('activeUsers')}>
           <div className="flex items-center justify-between mb-3">
             <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
@@ -127,8 +127,8 @@ export function AnalyticsDashboard(props: any) {
   );
 }
         </motion.div>
-';
-        {/* Revenue */}';';
+
+        {/* Revenue */}
         <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover:border-zion-cyan/50 transition-all duration-300" whileHover={{ scale: 1.02 }} onClick={() => handleMetricClick('revenue')}>
           <div className="flex items-center justify-between mb-3">
             <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
@@ -153,8 +153,8 @@ export function AnalyticsDashboard(props: any) {
   );
 }
         </motion.div>
-';
-        {/* Growth Rate */}';';
+
+        {/* Growth Rate */}
         <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover:border-zion-cyan/50 transition-all duration-300" whileHover={{ scale: 1.02 }} onClick={() => handleMetricClick('growth')}>
           <div className="flex items-center justify-between mb-3">
             <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
@@ -187,8 +187,8 @@ export function AnalyticsDashboard(props: any) {
   { opacity: 0,
   height: 0 
 
-}} animate = {';
-  { opacity: 1,';';
+}} animate = {
+  { opacity: 1,
   height: 'auto' 
 
 }} exit = {
@@ -205,5 +205,5 @@ export function AnalyticsDashboard(props: any) {
     </motion.div>)}
 
 </motion>
-</motion>';
-</motion>;';;';
+</motion>
+</motion>;';';

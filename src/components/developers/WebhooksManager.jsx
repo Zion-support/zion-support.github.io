@@ -14,44 +14,44 @@ import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger
 import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from "@/components/ui/alert-dialog";
 import {ScrollArea} from "@/components/ui/scroll-area";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-export function WebhooksManager(props: any) {
+export function WebhooksManager($1) {
     const { webhooks, loading, testResult, fetchWebhooks, createWebhook, toggleWebhook, deleteWebhook, testWebhook, clearTestResult } = useWebhooks();
     const [showCreateDialog, setShowCreateDialog] = useState(false);
     const [showDeleteConfirm, setShowDeleteConfirm] = useState(null);
     const [showTestDialog, setShowTestDialog] = useState(null);
     const [showTestResult, setShowTestResult] = useState(false);
     // Create webhook form state
-    const [webhookName, setWebhookName] = useState("");
-    const [webhookUrl, setWebhookUrl] = useState("");
-    const [webhookSecret, setWebhookSecret] = useState("");';
-    const [selectedEvents, setSelectedEvents] = useState([]);';';
+    const [webhookName, setWebhookName] = useState(");
+    const [webhookUrl, setWebhookUrl] = useState(");
+    const [webhookSecret, setWebhookSecret] = useState(");
+    const [selectedEvents, setSelectedEvents] = useState([]);
     const [testEventType, setTestEventType] = useState('new_application');
     // Load webhooks on mount
     useEffect(() => {fetchWebhooks()}, []);
-    const handleCreateWebhook = async () => {if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0)
+    const handleCreateWebhook = async () => {if (webhookName.trim() === " || webhookUrl.trim() === " || selectedEvents.length === 0)
             return;
-        await createWebhook(webhookName, webhookUrl, selectedEvents, webhookSecret.trim() === "" ? null : webhookSecret);
+        await createWebhook(webhookName, webhookUrl, selectedEvents, webhookSecret.trim() === " ? null : webhookSecret);
         setShowCreateDialog(false);
         resetWebhookForm()};
     const handleDeleteWebhook = async (webhookId) => {await deleteWebhook(webhookId);
         setShowDeleteConfirm(null)};
     const handleTestWebhook = async (webhookId) => {await testWebhook(webhookId, testEventType);
         setShowTestResult(true)};
-    const resetWebhookForm = (props: any) => {setWebhookName("");
-        setWebhookUrl("");
-        setWebhookSecret("");
+    const resetWebhookForm = (props) => {setWebhookName(");
+        setWebhookUrl(");
+        setWebhookSecret(");
         setSelectedEvents([])};
-    // Event type options';
-    const eventOptions = [';';
-        {value: 'new_application', label: 'New Application', description: 'When a talent applies to a job'},';';
-        {value: 'quote_received', label: 'Quote Received', description: 'When a quote is received from talent'},';';
-        {value: 'milestone_approved', label: 'Milestone Approved', description: 'When a project milestone is approved'},';';
-        {value: 'talent_hired', label: 'Talent Hired', description: 'When talent is hired for a project'},
+    // Event type options
+    const eventOptions = [
+        {value: 'new_application', label: 'New Application', description: 'When a talent applies to a job'},
+        {value: 'quote_received', label: 'Quote Received', description: 'When a quote is received from talent'},
+        {value: 'milestone_approved', label: 'Milestone Approved', description: 'When a project milestone is approved'},
+        {value: 'talent_hired', label: 'Talent Hired', description: 'When talent is hired for a project'};,
     ];
     // Toggle an event selection
-    const toggleEvent = (props: any) => {setSelectedEvents(prev => prev.includes(event)
+    const toggleEvent = (props) => {setSelectedEvents(prev => prev.includes(event)
             ? prev.filter(e => e !== event)
-            [...prev, event])};
+            [...prev, event])};;
     return (<Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
         <CardTitle className="text-xl flex items-center">
@@ -63,8 +63,8 @@ export function WebhooksManager(props: any) {
       </CardHeader>
 
       <CardContent>
-        <div className="flex justify-between items-center mb-6">';
-          <p className="text-sm text-zinc-400">';';
+        <divclassName="flex justify-between items-center mb-6">
+          <pclassName="text-sm text-zinc-400">';
             You have {webhooks.length} {webhooks.length === 1 ? 'webhook' : 'webhooks'}
           </p>
 
@@ -124,8 +124,8 @@ export function WebhooksManager(props: any) {
             resetWebhookForm()}}>
                   Cancel
                 </Button>
-                <Button onClick={handleCreateWebhook} disabled={webhookName.trim() === "" ||
-            webhookUrl.trim() === "" ||
+                <Button onClick={handleCreateWebhook} disabled={webhookName.trim() === " ||
+            webhookUrl.trim() === " ||
             selectedEvents.length === 0}>
                   Create Webhook
                 </Button>
@@ -182,9 +182,8 @@ export function WebhooksManager(props: any) {
                       {event}
                     </Badge>))}
                 </div>
-';
-                <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">';';
-                  <span>Created: {format(new Date(webhook.created_at), 'MMM d, yyyy')}</span>';';
+                <divclassName="mt-3 text-xs text-zinc-500 flex items-center space-x-4">';
+                  <span>Created: {format(new Date(webhook.created_at), 'MMM d, yyyy')}</span>';
                   {webhook.last_triggered_at && (<span>Last triggered: {format(new Date(webhook.last_triggered_at), 'MMM d, yyyy HH:mm')}</span>)}
                 </div>
               </div>)))}
@@ -202,7 +201,7 @@ export function WebhooksManager(props: any) {
 
       {/* Test Webhook Dialog */}
       <Dialog open={showTestDialog !== null} onOpenChange={(open) => {
-            if (!open) {';
+            if (!open) {
                 setShowTestDialog(null);';';
                 setTestEventType('new_application');
                 if (showTestResult) {
@@ -309,5 +308,5 @@ export function WebhooksManager(props: any) {
     </Card>)}
 
 export default WebhooksManager;
-</Switch>';
-</Checkbox>;';;';
+</Switch>
+</Checkbox>;';';

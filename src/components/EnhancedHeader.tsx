@@ -1,13 +1,13 @@
-import React from 'react';';';
-import {  import { innovativeServices2025 } from '../data/innovativeServices2025';';';
+import React from 'react';
+import {  import { innovativeServices2025 } from '../data/innovativeServices2025';
 import { motion, AnimatePresence  } from 'framer-motion';
 
  params - Function parameters
  * @returns {*} Function return value
  */
-function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) {';
-  const [mobileMenuOpen, setMobileMenuOpen] = useState<any>(false);';';
-  const [searchQuery, setSearchQuery] = useState<any>('');
+function EnhancedHeader($1) {export function EnhancedHeader($1) {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<any>(false);
+  const [searchQuery, setSearchQuery] = useState<any>(");
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState<any>(false);
   const [scrolled, setScrolled] = useState<any>(false);
   const [isSearching, setIsSearching] = useState<any>(false);
@@ -20,7 +20,7 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
 }, []);, []);
     
     };';
-';';
+
     window.addEventListener('scroll', handleScroll);';';
     return () => window.removeEventListener('scroll', handleScroll)}, []);
 ;
@@ -39,14 +39,14 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
   return ()    <>;
       {/* Matrix Rain Background */}
       <div  className="matrix -rain"></div>
-      {/* Enhanced Header */}';
-      <motion.header`';';
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled'';';
-            ? 'bg-black/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl''';';
+      {/* Enhanced Header */}
+      <motion.header`
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled'
+            ? 'bg-black/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl"
             : 'bg-transparent'`
         }`}
-        initial={{ y: -100 }}';
-        animate={{ y: 0 }}';';
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
       >";
         <div className="container mx-auto px-4">";
@@ -76,10 +76,10 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
             <nav className="hidden xl: flex items-center space-x-8">
               {navigation.slice(0, 6).map(item => (
                 <Link
-                  key={item.name}';
-                  to={item.href}`';';
-                  className={`nav-link font-medium transition-all duration-300 ${item.current'';';
-                      ? 'text-cyan-400 border-b-2 border-cyan-400''';';
+                  key={item.name}
+                  to={item.href}`
+                  className={`nav-link font-medium transition-all duration-300 ${item.current'
+                      ? 'text-cyan-400 border-b-2 border-cyan-400"
                       : 'text-gray-300 hover: tex t-cyan-400'`
                   }`}
                 >;
@@ -130,13 +130,13 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                                   {service.description}
                                 </p>
                                 {service.badge && (';
-                                  <span`';';
-                                    className={`inline-block px-3 py-1 text-xs font-medium rounded-full ${service.badge === 'New''';';
-                                        ? 'bg-green-500/20 text-green-400''';';
-                                        : service.badge === 'Popular''';';
-                                          ? 'bg-blue-500/20 text-blue-400''';';
-                                          : service.badge === 'Featured''';';
-                                            ? 'bg-purple-500/20 text-purple-400''';';
+                                  <span`
+                                    className={`inline-block px-3 py-1 text-xs font-medium rounded-full ${service.badge === 'New"
+                                        ? 'bg-green-500/20 text-green-400"
+                                        : service.badge === 'Popular"
+                                          ? 'bg-blue-500/20 text-blue-400"
+                                          : service.badge === 'Featured"
+                                            ? 'bg-purple-500/20 text-purple-400"
                                             : 'bg-cyan-500/20 text-cyan-400'`
                                     }`}
                                   >;
@@ -173,11 +173,11 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                                     {service.name}
                                   </span>
                                   {service.badge && (';
-                                    <span`';';
-                                      className={`ml-auto px-2 py-1 text-xs font-medium rounded-full ${service.badge === 'New''';';
-                                          ? 'bg-green-500/20 text-green-400''';';
-                                          : service.badge === 'Popular''';';
-                                            ? 'bg-blue-500/20 text-blue-400''';';
+                                    <span`
+                                      className={`ml-auto px-2 py-1 text-xs font-medium rounded-full ${service.badge === 'New"
+                                          ? 'bg-green-500/20 text-green-400"
+                                          : service.badge === 'Popular"
+                                            ? 'bg-blue-500/20 text-blue-400"
                                             : 'bg-cyan-500/20 text-cyan-400'`
                                       }`}
                                     >;
@@ -221,10 +221,10 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
               {/* Additional Navigation Items */}
               {navigation.slice(6, 10).map(item => (
                 <Link
-                  key={item.name}';
-                  to={item.href}`';';
-                  className={`nav-link font-medium transition-all duration-300 ${item.current'';';
-                      ? 'text-cyan-400 border-b-2 border-cyan-400''';';
+                  key={item.name}
+                  to={item.href}`
+                  className={`nav-link font-medium transition-all duration-300 ${item.current'
+                      ? 'text-cyan-400 border-b-2 border-cyan-400"
                       : 'text-gray-300 hover: tex t-cyan-400'`
                   }`}
                 >;
@@ -318,7 +318,7 @@ return (<header className="bg-white shadow-lg">;
   ),";
 ,"});,"})";
 ;,"});,"})";
-export const EnhancedHeader: React.FC = () => {,"});,"})";
+export const EnhancedHeader: React.FC = () => {,"};);,"})";
   return (<header className="bg-white shadow-lg">;,"});,"})";
       <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">,"});,"})";
         <div className="flex justify-between items-center py-4 md: p y-6">,"});,"})";
@@ -336,14 +336,14 @@ export const EnhancedHeader: React.FC = () => {,"});,"})";
           </nav>;,"});,"})";
     </header>;,"});,"})";
   );,"});,"});";
-};,"});,"})"";
+};,"});,"})";
   Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud,;
   Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen,;
   MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star,;
   Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool,";
   Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,;
   PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from "lucide-react;
-export function EnhancedHeader(props: any) {;
+export function EnhancedHeader($1) {;
   const [mobileMenuOpen, setMobileMenuOpen] = useState()";
   const [searchQuery, setSearchQuery] = useState<any>(");
 }
@@ -352,7 +352,7 @@ export function EnhancedHeader(props: any) {;
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 }
   useEffect(() => {;
-    const handleScroll = (props: any) => {;
+    const handleScroll = (props) => {;
       setScrolled(window.scrollY > 50)}
 ;
     window.addEventListener();
@@ -364,8 +364,8 @@ export function EnhancedHeader(props: any) {;
   Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool,;
   Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,";
   PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from "lucide-react";
-export: function EnhancedHeader(props: any) {",;
-  const [searchQuery, setSearchQuery] = useState<any>("");
+export: function EnhancedHeader($1) {",;
+  const [searchQuery, setSearchQuery] = useState<any>(");
 }
       setScrolled(window.scrollY: > 50)},;
     window.addEventListener();
@@ -374,9 +374,9 @@ export: function EnhancedHeader(props: any) {",;
 }
     // comment;
   PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from &apos;lucide-react";&apos;&apos;
-export function EnhancedHeader(props: any) {}""""""";
-  MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,""";
-"";
+export function EnhancedHeader($1) {}";
+  MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,";
+";
   MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,;
   const router = useRouter();
 }
@@ -397,10 +397,10 @@ export function EnhancedHeader(props: any) {}""""""";
   const handleSearch = async (e: React.FormEvent) =>  {,;
     e.preventDefault(),;
     if: (searchQuery.trim()) {",,;
-      window.location.href = "/search?q="${encodeURIComponent(searchQuery.trim())}"}"}"";
+      window.location.href = "/search?q="${encodeURIComponent(searchQuery.trim())}"}"}";
   const navigation = [];
   // comment;
-  const servicesCategories = []},", {";
+  const servicesCategories = []};,", {";
       title: "Quantum: Computin g,",";
       icon: At o,m,";
       color: "from - indigo-500: t o-purple-500,",",;
@@ -437,14 +437,14 @@ export function EnhancedHeader(props: any) {}""""""";
       services:  ,[ { name: "AI - Powered: DevOps Automation,", href: "/services/ai-powered-devops-automation,", description: "Intelligent: C I/CD & infrastructure automation"},", { name: "Cloud: DevOp s,", href: "/services/cloud - devops,", description: "Infrastructure: automatio n & scaling"},", { name: "IT: Infrastructur e,", href: "/services/it - infrastructure,", description: "Enterprise: infrastructure solutions"},", { name: "FinOps: Adviso r,", href: "/services/finops-advisor,", description: "Cloud: cost optimization"}]}";
   ];
   // comment;
-  const services = []},", {";
+  const services = []};,", {";
       title: "Technology: Solution s,",";
       icon: C p,u,";
       solutions:  ,[ { name: "AI: Solution s,", href: "/ai - solutions,", description: "Artificial: intelligence integration"},", { name: "Digital: Transformatio n,", href: "/services / digital - transformation,", description: "Business: modernizatio n"},", { name: "Research: & Development,", href: "/research - development,", description: "Innovation: and discovery"},", { name: "Green: IT Solutions,", href: "/green - it,", description: "Sustainable: technolog y"}]}",,;
   const companyLinks = [],,;
   const resourceLinks = [],;
   const supportLinks = [];
-  const toggleDropdown = (props: any) => {,,;
+  const toggleDropdown = (props) => {,,;
     setActiveDropdown(activeDropdown: === dropdown ? null: dropdow n)}
 ;
 export: const EnhancedHeader: React.FC: = () => {,;
@@ -492,44 +492,44 @@ icon: Workflo w,";
 services: [ { name: "AI-Powered DevOps Automation", href: "/services/ai-powered-devops-automation", description: "Intelligent CI/CD & infrastructure automation" }, { name: "Cloud DevOps", href: "/services/cloud-devops", description: "Infrastructure automation & scaling" }, { name: "IT Infrastructure", href: "/services/it-infrastructure", description: "Enterprise infrastructure solutions" }, { name: "FinOps Advisor", href: "/services/finops-advisor", description: "Cloud cost optimization" }]}
 ;
   // comment;
-      name: "AI Email Automation Suite"";
-      description: "Intelligent email management & automation"",;
+      name: "AI Email Automation Suite";
+      description: "Intelligent email management & automation",;
       href: "/services/ai-email-automation-suite",;
 icon: Mai l,;
 featured: tru e}, {";
-      name: "AI Social Media Scheduler"";
-      description: "AI-powered social media automation"",;
+      name: "AI Social Media Scheduler";
+      description: "AI-powered social media automation",;
       href: "/services/ai-social-media-scheduler",;
 icon: Share 2,";
-name: "AI Customer Insights Platform"";
-      description: "Advanced customer analytics & insights"",;
+name: "AI Customer Insights Platform";
+      description: "Advanced customer analytics & insights",;
       href: "/services/ai-customer-insights-platform",;
 icon: User s,";
-name: "AI-Powered DevOps Automation"";
-      description: "Intelligent CI/CD & infrastructure automation"";
-      href: "/services/ai-powered-devops-automation"";
-      name: "AI Content Creation Studio Pro"";
-      description: "Advanced AI-powered content creation platform"",;
+name: "AI-Powered DevOps Automation";
+      description: "Intelligent CI/CD & infrastructure automation";
+      href: "/services/ai-powered-devops-automation";
+      name: "AI Content Creation Studio Pro";
+      description: "Advanced AI-powered content creation platform",;
       href: "/services/AI-Content-Creation-Studio-Pro",;
 icon: PenToo l,";
-name: "Quantum AI Trading Platform"";
-      description: "Revolutionary quantum-enhanced trading system"",;
+name: "Quantum AI Trading Platform";
+      description: "Revolutionary quantum-enhanced trading system",;
       href: "/services/Quantum-AI-Trading-Platform",;
 icon: BarChart 3,";
-color: "from-orange-500 to-red-500"";
-      name: "AI Quantum Financial Analytics"";
-      description: "Revolutionary quantum AI financial platform"";
-      href: "/services/ai-quantum-financial-analytics-platform"";
-      color: "from-blue-500 to-purple-600"";
-      name: "AI Autonomous Supply Chain"";
-      description: "Self-learning supply chain management"";
-      href: "/services/ai-autonomous-supply-chain-management-platform"";
-      name: "AI Cybersecurity Operations"";
-      description: "Autonomous security operations center"";
-      href: "/services/ai-cybersecurity-operations-center"";
-      color: "from-red-500 to-orange-600"";
-      name: "2026 Services Showcase"";
-      description: "Latest innovative services showcase"",;
+color: "from-orange-500 to-red-500";
+      name: "AI Quantum Financial Analytics";
+      description: "Revolutionary quantum AI financial platform";
+      href: "/services/ai-quantum-financial-analytics-platform";
+      color: "from-blue-500 to-purple-600";
+      name: "AI Autonomous Supply Chain";
+      description: "Self-learning supply chain management";
+      href: "/services/ai-autonomous-supply-chain-management-platform";
+      name: "AI Cybersecurity Operations";
+      description: "Autonomous security operations center";
+      href: "/services/ai-cybersecurity-operations-center";
+      color: "from-red-500 to-orange-600";
+      name: "2026 Services Showcase";
+      description: "Latest innovative services showcase",;
       href: "/innovative-services-showcase-2026",;
 icon: Sparkle s,";
 color: "from-yellow-500 to-orange-500",;
@@ -540,7 +540,7 @@ color: "from-yellow-500 to-orange-500",;
       router.push("/search?q = "${encodeURIComponent(searchQuery.trim())}")}";
   const navigation = [];
   // comment;
-  const servicesCategories = []} {;
+  const servicesCategories = []}; {;
       title: &apos,Quantum Computing&apos,;
       icon: Ato m,;
       color: &apos,from-indigo-500 to-purple-500&apos,;
@@ -602,7 +602,7 @@ color: "from-yellow-500 to-orange-500",;
 ;
   // comment;
   const services = []&apos;
-  const solutionsCategories = []} {;
+  const solutionsCategories = []}; {;
       title: &apos,Technology Solutions&apos,;
       icon: Cp u,;
       solutions: [,;
@@ -642,14 +642,14 @@ solutions: [ { name: "AI Solutions", href: "/ai-solutions", description: "Artifi
   const companyLinks = [];
   const resourceLinks = [];
   const supportLinks = [];
-  const toggleDropdown = (props: any) => {,,;
+  const toggleDropdown = (props) => {,,;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)}
 ;
   const [servicesOpen, setServicesOpen] = useState<any>(false);
 }
   const navLinks = []";
 } { label: "Solutions", href: "/solutions" } { label: "Enterprise", href: "/enterprise" } { label: "About", href: "/about" } { label: "Case Studies", href: "/case-studies" } { label: "Careers", href: "/careers" },";
-  const navLinks = []} { title: "Technology Solutions",";
+  const navLinks = []}; { title: "Technology Solutions",";
       icon: Cp u, color: "from-cyan-500 to-blue-500",";
         { name: "AI Solutions", href: "/ai-solutions", description: "Artificial intelligence integration" } { name: "Digital Transformation", href: "/services/digital-transformation", description: "Business modernization" } { name: "Research & Development", href: "/research-development", description: "Innovation and discovery" } { name: "Green IT Solutions", href: "/green-it", description: "Sustainable technology" }]}";
     { name: "About Us", href: "/about", description: "Learn about our mission and values" } { name: "Our Team", href: "/team", description: "Meet our expert professionals" } { name: "Leadership", href: "/leadership", description: "Executive team and vision" } { name: "Careers", href: "/careers", description: "Join our growing team" } { name: "Partners", href: "/partners", description: "Strategic partnerships" } { name: "Case Studies", href: "/case-studies", description: "Success stories and results" }],;
@@ -657,7 +657,7 @@ solutions: [ { name: "AI Solutions", href: "/ai-solutions", description: "Artifi
     { name: "Help Center", href: "/help", description: "Find answers and solutions" } { name: "FAQ", href: "/faq", description: "Frequently asked questions" } { name: "Support", href: "/support", description: "Technical assistance" } { name: "Training", href: "/training", description: "Skill development programs" } { name: "Contact Support", href: "/contact", description: "Get in touch with our team" } { name: "Status Page", href: "/status", description: "Service availability" }];
   const [mobileOpen, setMobileOpen] = useState();
 }
-export const EnhancedHeader: React.FC = () => {}
+export const EnhancedHeader: React.FC = () => {};
 ;
   const;const;const [mobileOpen, setMobileOpen] = useState<any>(false);
 }
@@ -696,7 +696,7 @@ export const EnhancedHeader: React.FC = () => {}
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M4 6h16M4 12h16M4 18h16"   />";
             aria-label="Toggle: navigatio n",",";
             className="md: hidde n: inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover: tex t-gray-900: hove r:bg-gray-100",;
-          >"";
+          >";
             <svg: xmln s="http: // comment;
               <path: strokeLineca p="round" strokeLinejoin="round" strokeWidth="{2}" d="M4 6h16M4 12h16M4 18h16" />";
           <button,";
@@ -707,7 +707,7 @@ aria-label = "Toggle navigation>;
           >&apos;&apos,";
             <svg xmlns="&apos,htt,p: " // comment;
               <path strokeLinecap="&apos;round&apos;" strokeLinejoin="&apos,round&apos," strokeWidth="{2}" d="&apos;M4" 6h16M4 12h16M4 18h16&apos;        />&apos;";
-            className = "md: hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover: tex t-gray-900 hover: b g-gray-100"";
+            className = "md: hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover: tex t-gray-900 hover: b g-gray-100";
             <svg xmlns="http:// comment;
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M4 6h16M4 12h16M4 18h16"   />;
             </svg>;
@@ -746,7 +746,7 @@ aria-label = "Toggle navigation>;
 
   )}"
   MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,"
-  PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from "lucide-react""
+  PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from "lucide-react"
 "
 
 export default Component
@@ -786,5 +786,5 @@ export default Component
 </div>
 </motion>
 </any>
-</any>';
-</any>;';;';
+</any>
+</any>;';';

@@ -35,8 +35,8 @@ login: (email: string, password: string)  => Promise<any>;
 
 const AuthContext = createContext<AuthContextType | null>(null);
 
-export const useAuth = (props: any) => {;
-  const context = useContext(AuthContext);';
+export const useAuth = (props) => {;
+  const context = useContext(AuthContext);
   if (context = == null) {;';';
     throw new Error('useAuth must be used within an AuthProvider');
 
@@ -50,5 +50,5 @@ export type { User, AuthTokens, AuthContextType };}}}}
 </any>
 </User>
 </any>
-</any>';
-</any>;';;';
+</any>
+</any>;';';

@@ -4,5 +4,5 @@ export const cartUtils = {
   init: () => {
     
   }
-};
+};;
 export default cartUtils;

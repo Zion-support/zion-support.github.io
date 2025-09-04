@@ -1,4 +1,4 @@
-import React from 'react',;',';';';';
+import React from 'react',;',';
     ';';';';';';
 import {SEO } from '@/components/SEO';
 export default function ComprehensivePricingGuide2027.test() {return (
@@ -8,8 +8,8 @@ export default function ComprehensivePricingGuide2027.test() {return (
         <h1 className="text-4xl font-bold text-white mb-8">ComprehensivePricingGuide2027.test</h1>
         <p className="text-gray-300 text-lg">
           Professional ComprehensivePricingGuide2027.test services to help your business grow.';
-        </p>';';
-      </div>';';';
-    </div>';';';';
+        </p>';
+      </div>';';
+    </div>';';';
   );';';';';';
-}"';';';';;';;';
+}";';';';';';

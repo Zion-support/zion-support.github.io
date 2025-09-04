@@ -4,5 +4,4 @@ declare module 'jspdf' {
 		addImage(...args: an y[]): any;
 		text(...args: an y[]): any;
 		save(filename?: string): void}
-}';
-';';
+}

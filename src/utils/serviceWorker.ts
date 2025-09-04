@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-export const serviceWorker = {};
+export const serviceWorker = {};;
 
 export const registerServiceWorker = () => {
   if ('serviceWorker' in navigator) {
@@ -10,7 +10,7 @@ export const registerServiceWorker = () => {
         })
         .catch((registrationError) => {
           
-        });
+        };);
     });
   }
 };
@@ -18,7 +18,7 @@ export const registerServiceWorker = () => {
 export default serviceWorker;
 =======
 // comment
-export const serviceWorker = {}
+export const serviceWorker = {};
 
 export default serviceWorker
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599

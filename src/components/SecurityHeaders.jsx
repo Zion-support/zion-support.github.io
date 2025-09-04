@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeaders(props: any) {
+import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeaders($1) {
     const securityFeatures = [
         {
             icon: Shield,
@@ -17,7 +17,7 @@ import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeader
             title: "GDPR & CCPA Compliant",
             description: "Full data protection compliance",
             status: "verified",
-            color: "text-zion-cyan"},
+            color: "text-zion-cyan"};,
         {
             icon: Shield,
             title: "Zero-Knowledge Architecture",
@@ -31,9 +31,9 @@ import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeader
         {name: "ISO 27001", status: "Certified", year: "2024", icon: CheckCircle},
         {name: "GDPR", status: "Compliant", year: "2024", icon: CheckCircle},
         {name: "CCPA", status: "Compliant", year: "2024", icon: CheckCircle},
-        {name: "HIPAA", status: "Ready", year: "2024", icon: AlertTriangle}';
+        {name: "HIPAA", status: "Ready", year: "2024", icon: AlertTriangle};
     ];';';
-    return (<section className={`py-16 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark ${className || ''}`}>
+    return (<section className={`py-16 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark ${className || "}`}>
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -70,18 +70,18 @@ import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeader
           <h3 className="text-2xl font-bold text-white text-center mb-8">
             Compliance & Certifications
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">';
-            {complianceBadges.map((badge, index) => (<div key={index} className="text-center p-4 bg-white/5 rounded-lg border border-white/10">';';
-                <div className={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 ${badge.status === 'Certified' || badge.status === 'Compliant'';';
-                ? 'bg-zion-cyan/20'';';
-                : 'bg-yellow-500/20'}`}>';';
-                  <badge .icon className={`w-6 h-6 ${badge.status === 'Certified' || badge.status === 'Compliant'';';
-                ? 'text-zion-cyan'';';
+          <divclassName="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+            {complianceBadges.map((badge, index) => (<divkey={index} className="text-center p-4 bg-white/5 rounded-lg border border-white/10">';
+                <divclassName={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 ${badge.status === 'Certified' || badge.status === 'Compliant'
+                ? 'bg-zion-cyan/20'
+                : 'bg-yellow-500/20'}`}>';
+                  <badge .icon className={`w-6 h-6 ${badge.status === 'Certified' || badge.status === 'Compliant'
+                ? 'text-zion-cyan'
                 : 'text-yellow-500'}`} />
-                </div>';
-                <h4 className="font-semibold text-white mb-1">{badge.name}</h4>';';
-                <div className={`text-sm font-medium mb-1 ${badge.status === 'Certified' || badge.status === 'Compliant'';';
-                ? 'text-zion-cyan'';';
+                </div>
+                <h4 className="font-semibold text-white mb-1">{badge.name}</h4>';
+                <div className={`text-sm font-medium mb-1 ${badge.status === 'Certified' || badge.status === 'Compliant'
+                ? 'text-zion-cyan'
                 : 'text-yellow-500'}`}>
                   {badge.status}
                 </div>
@@ -120,8 +120,8 @@ import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeader
         </div>
       </div>
     </section>)}
-// Compact version for smaller spaces';
-export function SecurityHeadersCompact(props: any) {';
+// Compact version for smaller spaces
+export function SecurityHeadersCompact($1) {
     return (
     <div className="min-h-screen bg-white">
       <div className="flex items-center gap-2 text-zion-cyan text-sm">
@@ -144,4 +144,4 @@ export function SecurityHeadersCompact(props: any) {';
   );
 }
 export default SecurityHeaders;';
-</badge>;';;';
+</badge>;';';

@@ -15,7 +15,7 @@ export function useToast(...args[]):  {
 
   
     
-    const newToast: Toas t = { id, title, description, variant, duration };
+    const newToast: Toas t = { id, title, description, variant, duration };;
 
     setToasts(prev => [...prev, newToast]);
 
@@ -42,11 +42,11 @@ export function useToast(...args[]):  {
 
     toasts,
     toast,
-    dismiss,';
+    dismiss,
 :src/hooks/use-toast.tsx';';
     dismissAll'
-  // // // // // // // // }}}';
-';';
+  // // // // // // // // }}}
+
 // Export a default toast function for backward compatibility'
 export 
   // In a real implementation, this would dispatch to a global toast system;';
@@ -59,5 +59,5 @@ export
 export 
   // In a real implementation, this would dispatch to a global toast system;
   };
-';
-</any>';';
+
+</any>';

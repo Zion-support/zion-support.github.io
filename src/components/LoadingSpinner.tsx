@@ -4,32 +4,31 @@ import { Brain, Zap, Globe, Rocket } from 'lucide-react';
 ;
 interface LoadingSpinnerProps {;
   message?: string;
-import React from 'react';';';
-import { motion } from 'framer-motion';';';
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Brain, Zap, Globe, Rocket } from 'lucide-react';
 
 interface LoadingSpinnerProps {
-';
   message?: string;';';
   size?: 'sm' | 'md' | 'lg';
 ;
 }
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ ';
-  message = "Loading...", ';';
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  message = "Loading...",
   size = 'md' 
-}) => {';
-  const sizeClasses = {';';
-    sm: 'w-8 h-8',';';
-    md: 'w-16 h-16',';';
+}) => {
+  const sizeClasses = {
+    sm: 'w-8 h-8',
+    md: 'w-16 h-16',
     lg: 'w-24 h-24'
-  };
-';
-  const textSizeClasses = {';';
-    sm: 'text-sm',';';
-    md: 'text-base',';';
+  };;
+
+  const textSizeClasses = {
+    sm: 'text-sm',
+    md: 'text-base',
     lg: 'text-lg'
-  };
+  };;
 ;
   const icons = [Brain, Zap, Globe, Rocket];
   const [currentIcon, setCurrentIcon] = React.useState<any>(0);
@@ -119,4 +118,4 @@ export default LoadingSpinner;
 </any>
 </LoadingSpinnerProps>
 export default LoadingSpinner;
-;';;';
+;';';

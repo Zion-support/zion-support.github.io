@@ -559,7 +559,7 @@ export const enhancedServices2025: EnhancedService[] = [
       demoAvailable: true,
       freeTrialDays: 7
     }
-  }
+  };
 ];
 
 // Contact information
@@ -568,7 +568,7 @@ export const zionContactInfo = {
   email: 'kleber@ziontechgroup.com',
   website: 'https://ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown DE 19709'
-};
+};;
 
 // Service categories for filtering
 export const serviceCategories = [
@@ -577,7 +577,7 @@ export const serviceCategories = [
   { id: 'it', name: 'IT Services', count: enhancedServices2025.filter(s => s.category === 'IT').length },
   { id: 'microsaas', name: 'Micro SaaS', count: enhancedServices2025.filter(s => s.category === 'MicroSaaS').length },
   { id: 'consulting', name: 'Consulting', count: enhancedServices2025.filter(s => s.category === 'Consulting').length },
-  { id: 'support', name: 'Support', count: enhancedServices2025.filter(s => s.category === 'Support').length }
+  { id: 'support', name: 'Support', count: enhancedServices2025.filter(s => s.category === 'Support').length };
 ];
 
 export default enhancedServices2025;

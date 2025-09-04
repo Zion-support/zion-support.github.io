@@ -17,16 +17,16 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,";
   noindex = false,;
   showPerformanceMetrics = false,;
   showSEOAnalysis = false}) => {;
-  const fullTitle = title.includes("Zion Tech Group") ? title : "${title} | Zion Tech Group";
-  const canonicalUrl = canonical || (typeof window !== "undefined" ? window.location.href : "");
+  const fullTitle = title.includes("Zion Tech Group") ? title : "${title}; | Zion Tech Group";
+  const canonicalUrl = canonical || (typeof window !== "undefined" ? window.location.href : ");
 }
   return (";
     <PerformanceOptimizer enabled = "{true}" ";
-      showMetrics="{showPerformanceMetrics}"";
-      optimizeImages="{true}"";
+      showMetrics="{showPerformanceMetrics}";
+      optimizeImages="{true}";
       lazyLoadThreshold="{0.1}";
     >";
-      <SEOOptimizer autoAnalyze="{true}"";
+      <SEOOptimizer autoAnalyze="{true}";
         showDetails="{showSEOAnalysis}">;
       >;
 <Head>;
@@ -103,7 +103,7 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,";
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"    />";
           <link rel="manifest" href="/site.webmanifest"    />;
           {/* comment */}";
-          <script type="application/ld+json"";
+          <script type="application/ld+json";
             dangerouslySetInnerHTML="{{";
               __html: JSO N.stringify({",;
                 "@context": "https:// comment;
@@ -159,9 +159,9 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,";
        {/* Footer */};
       <FuturisticFooter  />;
     </div>;) };
-'"`
+"`
 
 </script>
 </SEOOptimizer>
-</PerformanceOptimizer>';
-</EnhancedLayoutProps>';';
+</PerformanceOptimizer>
+</EnhancedLayoutProps>';

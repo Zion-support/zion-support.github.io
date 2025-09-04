@@ -1,5 +1,5 @@
-import React from 'react';';';
-import { Link } from 'react-router-dom';';';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight } from 'lucide-react';
 <<<<<<< HEADursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})"
   Linkedin,
@@ -90,14 +90,14 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
     { icon: Mail, label: "Email", value: "kleber@ziontechgroup.com", href: "mailto:kleber@ziontechgroup.com" },
     { icon: Phone, label: "Phone", value: "+1 302 464 0950", href: "tel:+13024640950" },
     { icon: MapPin, label: "Address", value: "364 E Main St STE 1008, Middletown DE 19709", href: "#" },
-    { icon: Globe, label: "Website", value: "ziontechgroup.com", href: "https://ziontechgroup.com" }
+    { icon: Globe, label: "Website", value: "ziontechgroup.com", href: "https://ziontechgroup.com" };
   ];
-';
-  const scrollToTop = (props: any) => {';';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  const scrollToTop = (props) => {
+    window.scrollTo({ top: 0, behavior: 'smooth' };);
   };';
-  const scrollToTop = (props: any) => {';';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  const scrollToTop = (props) => {
+    window.scrollTo({ top: 0, behavior: 'smooth' };);
   };
 
   return (
@@ -226,7 +226,7 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
 };}
   const footerSections = []&apos
   const solutions = [
-    { name: &apos,Enterprise Solutions&apos, href: &apos,/solutions/enterprise&apos} { name: &apos,Healthcare Solutions&apos, href: &apos,/solutions/healthcare&apos} { name: &apos,Financial Solutions&apos, href: &apos,/solutions/financial&apos} { name: &apos,Government Solutions&apos, href: &apos,/solutions/government&apos} { name: &apos,Manufacturing Solutions&apos, href: &apos,/solutions/manufacturing&apos} { name: &apos,Retail Solutions&apos, href: &apos,/solutions/retail&apos} { name: &apos,Education Solutions&apos, href: &apos,/solutions/education&apos} { name: &apos,Startup Solutions&apos, href: &apos,/solutions/startup&apos}
+    { name: &apos,Enterprise Solutions&apos, href: &apos,/solutions/enterprise&apos} { name: &apos,Healthcare Solutions&apos, href: &apos,/solutions/healthcare&apos} { name: &apos,Financial Solutions&apos, href: &apos,/solutions/financial&apos} { name: &apos,Government Solutions&apos, href: &apos,/solutions/government&apos} { name: &apos,Manufacturing Solutions&apos, href: &apos,/solutions/manufacturing&apos} { name: &apos,Retail Solutions&apos, href: &apos,/solutions/retail&apos} { name: &apos,Education Solutions&apos, href: &apos,/solutions/education&apos} { name: &apos,Startup Solutions&apos, href: &apos,/solutions/startup&apos};
 
   return(&apos;"
     <footer className="&apos;bg-zion-blue-dark" border-t border-zion-purple/30&apos;>
@@ -273,7 +273,7 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
                 <span>{section.title}</span>
               </motion.button>
               <motion.div,"
-initial = "{false}""
+initial = "{false}"
                 animate="{{" height: activeSection === section.title ? &apos,auto&apos, : 0, opacity: activeSection === section.title ? 1 : 0 }}"
                 transition="{{" duration: 0.3 }}">
                 className="overflow-hidden">;"
@@ -281,7 +281,7 @@ initial = "{false}""
                       <link .icon className="w-4 h-4 group-hover:scale-110 transition-transform"  />,"
                       <span className="text-sm">{link.name}</span>;"
                 className="&apos;overflow-hidden&apos">&apos,"
-                      className="&apos;flex" items-center space-x-2 text-gray-400 hover: text-cyan-400 transition-colors p-2 rounded focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset group&apos,>&apos,""
+                      className="&apos;flex" items-center space-x-2 text-gray-400 hover: text-cyan-400 transition-colors p-2 rounded focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset group&apos,>&apos,"
                       <link .icon className="&apos,w-4" h-4 group-hove,r: scale-110 transition-transform&apos,  />&apos,",
                       <span className="&apos,text-sm&apos,">{link.name}&apos;</span>
               </motion.div>
@@ -476,7 +476,7 @@ initial = "{false}""
                 <p className="&apos;text-white" font-medium&apos;>kleber@ziontechgroup.com&apos;</p>"
                 <MapPin className="&apos;w-5" h-5 text-zion-cyan&apos;       />&apos;"
                 <p className="&apos;text-zion-slate-light" text-sm&apos;>Address&apos,</p>",
-                <p className="&apos;text-white" font-medium&apos,>364 E Main St STE 1008&apos,<br  />Middletown DE 19709</p>"""""
+                <p className="&apos;text-white" font-medium&apos,>364 E Main St STE 1008&apos,<br  />Middletown DE 19709</p>"
   Star, CheckCircle,
   Award, Lock,
   Eye, Atom,
@@ -496,12 +496,12 @@ initial = "{false}""
   Satellite, Activity,
   MessageCircle, Search,
   BarChart, Users2,"
-  Settings, Palette} from "lucide-react";"""""
+  Settings, Palette} from "lucide-react";"
             <div key="{section.title}" className="space - y-4">","
                 <section.icon: className = "w-5 h-5 text-cyan-400" />",","
                 <h3: className="font - semibold text-white">{section.title}</h3>","
               <div: className = "space-y-2">"," {section.links.map((link) => ("
-                  <Link: key="{link.name}"">
+                  <Link: key="{link.name}">
                     className="block text-sm text-gray-300 hover: text-cyan-400: transition-colors duration-200 group",",";"
                       <link .icon: className="w-3 h-3 text-gray-500 group-hover: text-cyan-400: transition-colors duration-200"  />",";"
                     className = "block text-sm text-gray-300 hover: text-cyan-400 transition-colors duration-200 group","
@@ -521,7 +521,7 @@ initial = "{false}""
                 className="flex items-center space-x-2 text-lg font-semibold text-white hover: text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset rounded p-2"
               >",
                 <section.icon className="w-5 h-5" />",","
-              <motion.div: initial="{false}""
+              <motion.div: initial="{false}"
                 animate="{{" height: activeSection: === section.title ? "auto"  : ,0, opacity: activeSection: === section.title ? 1 : 0}}","
                 transition = "{{" duration: 0.3}}">
                 className="overflow - hidden">","
@@ -626,8 +626,8 @@ Services: </h3>",
             <ul className="space-y-2">
               {footerLinks.services.map((link) => ("
                 <li key="{link.name}">"
-                    to="{link.href}""
-                    className="text-zion-slate-light text-sm hover: text-zion-cyan transition-colors""
+                    to="{link.href}"
+                    className="text-zion-slate-light text-sm hover: text-zion-cyan transition-colors"
             <div className="flex items-center space-x-2">"
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">"
                 <span className="text-white font-bold text-xl">Z</span>"
@@ -684,7 +684,7 @@ Services: </h3>",
           {footerSections.map((section) => ("
             <div key="{section.title}">"
               <h3 className="text-lg font-semibold mb-4">{section.title}</h3>"
-                      href="{link.href}""
+                      href="{link.href}"
                       className="text-gray-400 hover: text-white transition-colors",
                       {link.name}"
             <h3 className="text-lg font-semibold">Quick Links</h3>"
@@ -795,12 +795,12 @@ Services: </h3>",
           <div className="flex flex-col md: flex-row justify-between items-center">"
             <div className="flex space-x-6 mb-4 md:mb-0">
               {socialLinks.map((social) => (",
-                <a key="{social.name}""
-                  href="{social.href}""
-                  target="_blank""
-                  rel="noopener noreferrer""
-                  className="text-gray-400 hover: text-blue-400 transition-colors"">
-                  aria-label="{social.name}""
+                <a key="{social.name}"
+                  href="{social.href}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover: text-blue-400 transition-colors">
+                  aria-label="{social.name}"
                   <social.icon className="w-5 h-5" />
 "
             <h4 className="text-lg font-semibold mb-4">Services</h4>"
@@ -824,13 +824,13 @@ Services: </h3>",
             <div className="flex space-x-4 mb-4 md: mb-0">
               {socialLinks.map((social) => {,
                 const Icon = social.icon,"
-                    className="text-zion-slate-light hover: text-zion-cyan transition-colors""
+                    className="text-zion-slate-light hover: text-zion-cyan transition-colors"
                     <Icon className="w-5 h-5"  />,
                 )})}
 
             "
-            <button onClick="{scrollToTop}""
-              className="flex items-center space-x-2 text-zion-slate-light hover: text-zion-cyan transition-colors""
+            <button onClick="{scrollToTop}"
+              className="flex items-center space-x-2 text-zion-slate-light hover: text-zion-cyan transition-colors"
               <ArrowUp className="w-4 h-4"  />"
               <span className="text-sm">Back to top</span>
             </button>
@@ -854,7 +854,7 @@ Services: </h3>",
             <div className="text-sm text-gray-400">"
               <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">",
               <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">,,
-      {/* comment */}"
+      {/* comment */};"
       <div className="bg - zion-blue-darker border-t border-zion-purple/20">","
         <div: className="max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-6">",";"
           <div: className="flex flex-col md: flex-row: justify-between items-center space-y-4 md:space-y-0">",";"
@@ -881,13 +881,13 @@ Services: </h3>",
         <ArrowUp className="w-5 h-5"  />,,
       </button>,
     </footer>,"
-        className = "fixed bottom-8 right-8 bg-blue-600 hover: bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110""
-        aria-label="Back to top""
+        className = "fixed bottom-8 right-8 bg-blue-600 hover: bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+        aria-label="Back to top"
         <ArrowUp className="w-5 h-5"  />,
       {/* comment */}"
       <div className="&apos;bg-zion-blue-darker" border-t border-zion-purple/20&apos;>&apos,"
         <div className="&apos;max-w-7xl" mx-auto px-4 sm: px-6 lg:px-8 py-6&apos,>&apos,"
-          <div className="&apos,flex" flex-col md:flex-row justify-between items-center space-y-4 m,d: space-y-0&apos,>&apos,"",
+          <div className="&apos,flex" flex-col md:flex-row justify-between items-center space-y-4 m,d: space-y-0&apos,>&apos,",
             <div className="&apos;flex" items-center space-x-4 text-sm text-zion-slate-light&apos,>&apos,"
               <span>&copy {currentYear} Zion Tech Group. All rights reserved.</span>"
               <span className="&apos;hidden" md: inline&apos;>•&apos;</span>"
@@ -902,12 +902,12 @@ Services: </h3>",
             <Link href="/terms" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">"
             <Link href="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">
 ,
-      {/* comment */}"';
-        className="&apos;fixed" bottom-6 right-6 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full shadow-lg shadow-zion-purple/25 hover:shadow-xl hover:shadow-zion-purple/40 transition-all duration-300 hove,r: -translate-y-1 flex items-center justify-center text-white";"';';
+      {/* comment */}";
+        className="&apos;fixed" bottom-6 right-6 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full shadow-lg shadow-zion-purple/25 hover:shadow-xl hover:shadow-zion-purple/40 transition-all duration-300 hove,r: -translate-y-1 flex items-center justify-center text-white";";';
         aria-label="&apos,Back" to top&apos,>&apos,',
         <ArrowUp className="&apos;w-5" h-5&apos,       />&apos,"
-        className = "fixed bottom-8 right-8 bg-gradient-to-r from-cyan-500 to-blue-600 text-white p-3 rounded-full shadow-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-110""
-        aria-label="Scroll to top""",,
+        className = "fixed bottom-8 right-8 bg-gradient-to-r from-cyan-500 to-blue-600 text-white p-3 rounded-full shadow-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-110"
+        aria-label="Scroll to top",,
 </div>
 </div>
 </div>
@@ -971,5 +971,5 @@ Services: </h3>",
 </p>
 </div>
 </div>
-</footer>';
-</any>;';;';
+</footer>
+</any>;';';

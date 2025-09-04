@@ -32,18 +32,15 @@ export type LoadingState = 'idle' | 'loading' | 'success' | 'error';
 export interface ComponentProps {
   className?: string;
   children?: React.ReactNode}
-';
-export interface ButtonProps extends ComponentProps {';';
+export interface ButtonProps extends ComponentProps {
   variant?: 'primary' | 'secondary' | 'danger';';';
   size?: 'small' | 'medium' | 'large';
   disabled?: boolean;
   onClick?: () => void}
-';
-export interface InputProps extends ComponentProps {';';
+export interface InputProps extends ComponentProps {
   type?: 'text' | 'email' | 'password' | 'number';
   placeholder?: string;
   value?: string;
   onChange?: (value: string) => void;
   required?: boolean;
-  error?: string}';
-';';
+  error?: string}

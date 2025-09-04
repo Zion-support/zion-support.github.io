@@ -1,7 +1,7 @@
-import React, {useState} from 'react';';
+import React, {useState} from 'react';
 export default AdvancedServiceRecommendation;';';
-import {Badge} from './ui / badge';';';
-export default function Page(props: any) {from './ui/badge';
+import {Badge} from './ui / badge';
+export default function Page($1) {from './ui/badge';
 const [clientProfile, setClientProfile] = useState()}
     const [recommendations, setRecommendations] = useState([])"
     const [isAnalyzing, setIsAnalyzing] = useState(false)"
@@ -10,48 +10,48 @@ const [clientProfile, setClientProfile] = useState()}
     const compSizes = []
     const mockServices = []{}
 
-            id: "ai - crm-platform","",
-            title: "AI - Powered CRM Platform","",
-            description: "Advanced customer relationship management platform with AI - driven insights and automation.","",
-            category: "ai",""
-            price: "$25,000 / month","",
-            duration: "6 - 12 months","",
+            id: "ai - crm-platform",",
+            title: "AI - Powered CRM Platform",",
+            description: "Advanced customer relationship management platform with AI - driven insights and automation.",",
+            category: "ai","
+            price: "$25,000 / month",",
+            duration: "6 - 12 months",",
             tags["AI",CRM",Automation",Analytics"],"
             features["AI - powered insights",Automated workflows",Predictive analytics"],",
             benefits["Improved customer retention",Increased sales efficiency",Better decision making"],"
             technology["AI / ML",Cloud Computing",Big Data",Automation"],",
             targetAudience["Enterprise",Financial Services",Healthcare",Technology Companies"],"
-            image: "/images / services/ai - crm.jpg","",
+            image: "/images / services/ai - crm.jpg",",
             link: "https:// comment
-            contactInfo: "+1 302 464 0950","",
+            contactInfo: "+1 302 464 0950",",
             email: "kleber@ziontechgroup.com"}, {}"
-            id: "quantum - computing-service","",
-            title: "Quantum Computing as a Service",""
-            description: "Enterprise - grade quantum computing platform for complex computational problems.","",
-            category: "quantum",""
-            price: "$150,000 / month","",
-            duration: "12 - 18 months","",
+            id: "quantum - computing-service",",
+            title: "Quantum Computing as a Service","
+            description: "Enterprise - grade quantum computing platform for complex computational problems.",",
+            category: "quantum","
+            price: "$150,000 / month",",
+            duration: "12 - 18 months",",
             tags["Quantum Computing",Research",Optimization"],"
             features["Quantum processors access",Algorithm development",Research support"],"
             benefits["Solve intractable problems",Research acceleration",Competitive advantage"],"
             technology["Quantum Computing",Quantum Algorithms",Research Tools"],"
             targetAudience["Research Institutions",Pharmaceutical Companies",Financial Services"],"
-            image: "/images / services/quantum - computing.jpg","",
+            image: "/images / services/quantum - computing.jpg",",
             link: "https:// comment
-            id: "blockchain - supply-chain","",
-            title: "Blockchain Supply Chain Solution","",
-            description: "Transparent and secure supply chain management using blockchain technology.",""
-            category: "blockchain",""
-            price: "$75,000 / month","",
-            duration: "8 - 14 months","",
+            id: "blockchain - supply-chain",",
+            title: "Blockchain Supply Chain Solution",",
+            description: "Transparent and secure supply chain management using blockchain technology.","
+            category: "blockchain","
+            price: "$75,000 / month",",
+            duration: "8 - 14 months",",
             tags["Blockchain",Supply Chain",Transparency"],"
             features["End - to-end tracking",Smart contracts",Transparency"],",
             benefits["Enhanced transparency",Reduced fraud",Improved efficiency"],"
             technology["Blockchain",Smart Contracts",IoT",Cloud Computing"],"
             targetAudience["Manufacturing",Retail",Logistics",Food & Beverage"],"
-            image: "/images/services/blockchain - supply-chain.jpg","",
+            image: "/images/services/blockchain - supply-chain.jpg",",
             link: "https:// comment
-export default function AdvancedServiceRecommendation(props: any) {return ("
+export default function AdvancedServiceRecommendation($1) {return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="AdvancedServiceRecommendation - Zion Tech Group" description="Professional AdvancedServiceRecommendation services by Zion Tech Group"   />"
       <div className="container mx-auto px-4 py-20">"
@@ -60,8 +60,8 @@ export default function AdvancedServiceRecommendation(props: any) {return ("
           Professional AdvancedServiceRecommendation services to help your business grow.
         </p>
       </div>
-  )};react&apos;framer-motion&apos,lucide-react;./ui/card&apos;&apos;./ui/button&apos;&apos,./ui/badge";&apos;&apos
-    const;const;const [clientProfile, setClientProfile] = useState({}
+  )};;react&apos;framer-motion&apos,lucide-react;./ui/card&apos;&apos;./ui/button&apos;&apos,./ui/badge";&apos;&apos
+    const;const;const [clientProfile, setClientProfile] = useState({};
 
 &apos
 &apos;&apos
@@ -118,53 +118,53 @@ export default function AdvancedServiceRecommendation(props: any) {return ("
             targetAudience[&apos;Manufacturing&apos,Retail&apos,Logistics&apos,Food & Beverage&apos],"
             image: &apos,/images/services/blockchain-supply-chain.jpg&apos,"&apos,
             link: &apos,http,s: // comment
-            email: &apos,kleber@ziontechgroup.com&apos}"""""""""
-""";""
-        industry: "", """;""
-        compSize: "", """;""
-        budget: "", """;""
-        timeline: "", """;""
-        technologyMaturity: "", primaryGoals[], challenges[]})"
-    const [recommendations, setRecommendations] = useState([])";""
-    const [isAnalyzing, setIsAnalyzing] = useState(false)";""
-    const industries = [], ";""
+            email: &apos,kleber@ziontechgroup.com&apos}"
+";"
+        industry: ", ";"
+        compSize: ", ";"
+        budget: ", ";"
+        timeline: ", ";"
+        technologyMaturity: ", primaryGoals[], challenges[]})"
+    const [recommendations, setRecommendations] = useState([])";"
+    const [isAnalyzing, setIsAnalyzing] = useState(false)";"
+    const industries = [], ";"
             features["AI - powered insights", Automated workflows",Predictive analytics"], ",
             benefits["Improved customer retention", Increased sales efficiency",Better decision making"], "
             technology["AI / ML", Cloud Computing",Big Data", Automation"], ","
-            targetAudience["Enterprise", Financial Services",Healthcare", Technology Companies"], ";""
-            image: "/images / services/ai - crm.jpg", ""","
+            targetAudience["Enterprise", Financial Services",Healthcare", Technology Companies"], ";"
+            image: "/images / services/ai - crm.jpg", ","
             link: "https:// comment
-            contactInfo: "+1 302 464 0950", ""","
+            contactInfo: "+1 302 464 0950", ","
             email: "kleber@ziontechgroup.com"} {}"
-            id: "quantum - computing-service", ""","
-            title: "Quantum Computing as a Service", """;""
-            description: "Enterprise - grade quantum computing platform for complex computational problems.", ""","
-            category: "quantum", """;""
-            price: "$150, 000 / month",""","
-            duration: "12 - 18 months", ""","
+            id: "quantum - computing-service", ","
+            title: "Quantum Computing as a Service", ";"
+            description: "Enterprise - grade quantum computing platform for complex computational problems.", ","
+            category: "quantum", ";"
+            price: "$150, 000 / month",","
+            duration: "12 - 18 months", ","
             tags["Quantum Computing", Research",Optimization"], "
             features["Quantum processors access", Algorithm development",Research support"], "
             benefits["Solve intractable problems", Research acceleration",Competitive advantage"], "
             technology["Quantum Computing", Quantum Algorithms",Research Tools"], "
             targetAudience["Research Institutions", Pharmaceutical Companies",Financial Services"], "
-            image: "/images / services/quantum - computing.jpg", ""","
+            image: "/images / services/quantum - computing.jpg", ","
             link: "https:// comment
-            id: "blockchain - supply-chain", ""","
-            title: "Blockchain Supply Chain Solution", ""","
-            description: "Transparent and secure supply chain management using blockchain technology.", """;""
-            category: "blockchain", """;""
-            price: "$75, 000 / month",""","
-            duration: "8 - 14 months", ""","
+            id: "blockchain - supply-chain", ","
+            title: "Blockchain Supply Chain Solution", ","
+            description: "Transparent and secure supply chain management using blockchain technology.", ";"
+            category: "blockchain", ";"
+            price: "$75, 000 / month",","
+            duration: "8 - 14 months", ","
             tags["Blockchain", Supply Chain",Transparency"], "
             features["End - to-end tracking", Smart contracts",Transparency"], ",
             benefits["Enhanced transparency", Reduced fraud",Improved efficiency"], "
-            technology["Blockchain", Smart Contracts",IoT", Cloud Computing"], ";""
-            targetAudience["Manufacturing", Retail",Logistics", Food & Beverage"], ";""
-            image: "/images/services/blockchain - supply-chain.jpg", ""","
+            technology["Blockchain", Smart Contracts",IoT", Cloud Computing"], ";"
+            targetAudience["Manufacturing", Retail",Logistics", Food & Beverage"], ";"
+            image: "/images/services/blockchain - supply-chain.jpg", ","
             link: "https:// comment
             email: "kleber@ziontechgroup.com"}
 
-    const calculateMatchScore = (props: any) => {}
+    const calculateMatchScore = (props) => {}
 
         let score = 0
         // comment
@@ -175,7 +175,7 @@ export default function AdvancedServiceRecommendation(props: any) {return ("
         // comment
         const servicePrice = parseInt(service.price.replace(/[^0-9]/g))&apos
         if()
-}
+};
             score += 20
         else if (profile.budget === &apos;$50K-$200K&apos; && servicePrice >= 50 && servicePrice&apos;&apos; < 200)>
         else if (profile.budget === &apos;$200K-$500K&apos; && servicePrice >= 200 && servicePrice&apos;&apos; < 500)>
@@ -204,7 +204,7 @@ export default function AdvancedServiceRecommendation(props: any) {return ("
         else if (profile.technologyMaturity === &apos;Early Adopter&apos; && [&apos;basic - services&apos,consulting&apos].includes(service.category)),
             score + = 25}","
         // comment
-        const servicePrice = parseInt(service.price.replace(/[^0-9]/g))""
+        const servicePrice = parseInt(service.price.replace(/[^0-9]/g))"
         if()
 }
             score + = 20","
@@ -219,7 +219,7 @@ export default function AdvancedServiceRecommendation(props: any) {return ("
         // comment
         const serviceDuration = parseInt(service.duration.split("-")[0])"
         // comment
-        const serviceDuration = parseInt(service.duration.split("-")[0])""
+        const serviceDuration = parseInt(service.duration.split("-")[0])"
         if (profile.timeline == = "Immediate (0 - 3 months)" && serviceDuration <= 3),
             score + = 15","
         else if (profile.timeline == = "Short-term (3-6 months)" && serviceDuration <= 6),
@@ -237,16 +237,16 @@ export default function AdvancedServiceRecommendation(props: any) {return ("
         const goalMatches = profile.primaryGoals.filter(goal => service.benefits.some ( (benefit) => benefit.toLowerCase () .includes(goal.toLowerCase () ) ) ) .length
         score += (goalMatches / profile.primaryGoals.length) * 20        return Math.min(100, score) }
 
-    const generateRecommendations = (props: any) => {}
+    const generateRecommendations = (props) => {}
 
         setIsAnalyzing(true)
 }
         // comment        setTimeout(() => {}
 
-            const recs = mockServices.map(service => {}
+            const recs = mockServices.map(service => {};
 
                 const;const;const matchScore = calculateMatchScore(service, clientProfile)
-}
+};
                 let priority,
                 if (matchScore >= 80)"
                     priority = &apos;High"
@@ -260,23 +260,23 @@ export default function AdvancedServiceRecommendation(props: any) {return ("
                 else if (service.category === &apos;blockchain&apos; || service.category === &apos;iot&apos)"
                     complexity = &apos;Moderate"
                     complexity = &apos;Simple";&apos;&apos,
-                if (matchScore >= 80)";""
+                if (matchScore >= 80)";"
                     priority = "High",
-                else if (matchScore >= 60)";""
+                else if (matchScore >= 60)";"
                     priority = "Medium",
                 else"
                     priority = "Low",
-                let complexity";""
+                let complexity";"
                 if (service.category == = "quantum" || service.category === "ai")","
                     complexity = "Complex",
                 else if (service.category == = "blockchain" || service.category === "iot")","
                     complexity = "Moderate",
                     complexity = "Simple
                 const reasoning = []
-                    "High match with ${clientProfile.industry} industry requirements", ""
-                    "Budget alignment with ${clientProfile.budget} range", ""
-                    "Timeline compatibility with ${clientProfile.timeline} expectations", ""
-                    "Technology maturity level appropriate for ${clientProfile.technologyMaturity}"
+                    "High match with ${clientProfile.industry} industry requirements", "
+                    "Budget alignment with ${clientProfile.budget} range", "
+                    "Timeline compatibility with ${clientProfile.timeline} expectations", "
+                    "Technology maturity level appropriate for ${clientProfile.technologyMaturity};"
                 const expectedROI = matchScore >= 80 ? "High ROI expected" :"
                     matchScore >= 60 ? "Moderate ROI expected"  : "ROI to be evaluated",
                 const timeToValue = complexity === "Simple" ? "2-4 months" :
@@ -284,9 +284,9 @@ export default function AdvancedServiceRecommendation(props: any) {return ("
                     matchScore >= 60 ? &apos;Moderate ROI expected&apos; : &apos;ROI to be evaluated";&apos;&apos
                 const timeToValue = complexity === &apos;Simple&apos; ? &apos;2-4 months&apos; :&apos,
                     complexity === &apos;Moderate&apos; ? &apos;4-8 months&apos; : &apos;8 - 12 months",
-                ]";""
-                const expectedROI = matchScore >= 80 ? "High ROI expected" : ""
-                const timeToValue = complexity === "Simple" ? "2-4 months" : ""
+                ]";"
+                const expectedROI = matchScore >= 80 ? "High ROI expected" : "
+                const timeToValue = complexity === "Simple" ? "2-4 months" : "
                     complexity === "Moderate" ? "4-8 months" : "8-12 months
                 return {}
 
@@ -305,9 +305,9 @@ service, matchScore,
 }
             setIsAnalyzing(false)
 }
-            setShowResults(true) }, 2000) }&apos;&apos    const getPriorityColor = (props: any) => {}
+            setShowResults(true) }, 2000) };&apos;&apos    const getPriorityColor = (props) => {}
 
-        switch (priority) {}
+        switch (priority) {};
 
             case "High": return "bg-red-100 text-red-800"
             case "Medium": return "bg-yellow-100 text-yellow-800"
@@ -317,23 +317,23 @@ service, matchScore,
             case &apos;Low&apos;: return &apos;bg-green-100 text-green-800&apos
             default: return &apos,bg-gray-100 text-gray-800&apos}
 
-    }&apos;&apos    const getComplexityColor = (props: any) => {}
+    }&apos;&apos    const getComplexityColor = (props) => {}
 
-        switch (complexity) {}
+        switch (complexity) {};
 
             case &apos;Complex&apos;: return &apos;bg-red-100 text-red-800&apos
             case &apos;Moderate&apos;: return &apos;bg-yellow-100 text-yellow-800&apos
             case &apos;Simple&apos;: return &apos;bg-green-100 text-green-800&apos
-    const isFormComplete = (props: any) => {}
+    const isFormComplete = (props) => {}
 
         return clientProfile.industry && clientProfile.compSize && clientProfile.budget &&
             clientProfile.timeline && clientProfile.technologyMaturity &&"&apos,
-            clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0}";&apos;&apos;"
+            clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0};";&apos;&apos;"
     return (&apos;&apos;<div className="&apos;max-w-7xl" mx-auto p-6&apos;>
       {/* comment */}&apos,
-            case "High": return "bg - red-100 text-red-800"",
-            case "Medium": return "bg - yellow-100 text-yellow-800"",
-            case "Low": return "bg - green-100 text-green-800"",
+            case "High": return "bg - red-100 text-red-800",
+            case "Medium": return "bg - yellow-100 text-yellow-800",
+            case "Low": return "bg - green-100 text-green-800",
             default: return "bg-gray-100 text-gray-800"}
 
     }
@@ -341,16 +341,16 @@ service, matchScore,
             case "Complex": return "bg-red-100 text-red-800"
             case "Moderate": return "bg-yellow-100 text-yellow-800"
             case "Simple": return "bg-green-100 text-green-800"
-            case "Complex": return "bg - red-100 text-red-800"",
-            case "Moderate": return "bg - yellow-100 text-yellow-800"",
-            case "Simple": return "bg - green-100 text-green-800"",
-            clientProfile.timeline && clientProfile.technologyMaturity &&"",
+            case "Complex": return "bg - red-100 text-red-800",
+            case "Moderate": return "bg - yellow-100 text-yellow-800",
+            case "Simple": return "bg - green-100 text-green-800",
+            clientProfile.timeline && clientProfile.technologyMaturity &&",
             clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0}
 
     return ("
     <div className="max - w-7xl mx-auto p-6">,
-            clientProfile.timeline && clientProfile.technologyMaturity &&""","
-            clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0}""""
+            clientProfile.timeline && clientProfile.technologyMaturity &&","
+            clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0}"
     return ("
     <div className = "max-w-7xl mx-auto p-6">
       {/* comment */}
@@ -361,51 +361,51 @@ service, matchScore,
 y: 20}} animate = {}
 
   {opacity: 1,
-y: 0 "",">
-""}} className="text-center mb-8">"";"
+y: 0 ",">
+"}} className="text-center mb-8">";"
         <h1 className="text - 4xl font-bold text-zion-blue-dark mb-4">,
-          AI - Powered Service Recommendation Engine"",
-        </h1>"";"
+          AI - Powered Service Recommendation Engine",
+        </h1>";"
         <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
           Get personalized service recommendations based on your industry, goals, and requirements.Our AI analyzes your profile to suggest the perfect solutions for your business.</p>
       </motion.div> {/* comment */}"
-""}} transition="{{" delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">"";"
-        <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2">"";"
+"}} transition="{{" delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">";"
+        <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2">";"
           <Brain className="w-6 h-6 text-zion-cyan"   />
           Tell Us About Your Business,
-        </h2>"";"
-        <div className="grid grid-cols-1 md: grid-cols-2 gap-6">"",",
-          <div>"","
+        </h2>";"
+        <div className="grid grid-cols-1 md: grid-cols-2 gap-6">",",
+          <div>","
             <label className = "block text-sm font-medium text-zion-slate-dark mb-2">Industry</label>,"
             <select value="{clientProfile.industry}" onChange = {}>
   (e) => setClientProfile(prev = > ({...prev,,
-  industry: e.target.value "","
-""}))} className="w-full p-3 border border-zion-slate-light rounded-md">"";"
+  industry: e.target.value ","
+"}))} className="w-full p-3 border border-zion-slate-light rounded-md">";"
               <option value = ">Select Industry</option> {industries.map(industry => (<option key="{industry}" value="{industry}">{industry}</option>) ) }
 
             </select>
           </div>;"
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Comp Size</label>;"
             <select value = "{clientProfile.compSize}" onChange = {}"
-  compSize: e.target.value "","
+  compSize: e.target.value ","
               <option value=">Select Comp Size</option> {compSizes.map(size => (<option key="{size}" value="{size}">{size}</option>) ) }"
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Budget Range</label>;"
             <select value = "{clientProfile.budget}" onChange = {}"
-  budget: e.target.value "","
+  budget: e.target.value ","
               <option value=">Select Budget Range</option> {budgets.map(budget => (<option key="{budget}" value="{budget}">{budget}</option>) ) }"
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Implementation Timeline</label>;"
             <select value = "{clientProfile.timeline}" onChange = {}"
-  timeline: e.target.value "","
+  timeline: e.target.value ","
               <option value=">Select Timeline</option> {timelines.map(timeline => (<option key="{timeline}" value="{timeline}">{timeline}</option>) ) }"
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Technology Maturity Level</label>;"
             <select value = "{clientProfile.technologyMaturity}" onChange = {}"
-  technologyMaturity: e.target.value "","
+  technologyMaturity: e.target.value ","
               <option value=">Select Technology Maturity</option> {technologyMaturityLevels.map(level => (<option key="{level}" value="{level}">{level}</option>) ) }
 
-        </div>"";"
-        <div className="mt-6">"";"
-          <label className="block text-sm font-medium text-zion-slate-dark mb-2">Primary Business Goals</label>"";"
-          <div className = "grid grid-cols-2 md:grid-cols-3 gap-2">""{primaryGoals.map(goal => (<label key="{goal}" className="flex items-center gap-2 cursor-pointer">"" {opacity: 0, y: 20}} animate = {}
+        </div>";"
+        <div className="mt-6">";"
+          <label className="block text-sm font-medium text-zion-slate-dark mb-2">Primary Business Goals</label>";"
+          <div className = "grid grid-cols-2 md:grid-cols-3 gap-2">"{primaryGoals.map(goal => (<label key="{goal}" className="flex items-center gap-2 cursor-pointer">" {opacity: 0, y: 20}} animate = {}
 
   {opacity: 1,
   y: 0 &apos,&apos,",
@@ -415,11 +415,11 @@ y: 0 "",">
         </h1>&apos;&apos,&apos;&apos,"
         <p className="&apos;text-xl" text-zion-slate-light max-w-3xl mx-auto&apos;>
           Get personalized service recommendations based on your industry, goals, and requirements.Our AI analyzes your profile to suggest the perfect solutions for your business.&apos;</p>"
-  y: 0 ""","
-""""}} className = "text-center mb-8">""""
+  y: 0 ","
+"}} className = "text-center mb-8">"
         <h1 className="text-4xl font-bold text-zion-blue-dark mb-4">"
-          AI-Powered Service Recommendation Engine"""""
-        </h1>""""
+          AI-Powered Service Recommendation Engine"
+        </h1>"
         <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
           Get personalized service recommendations based on your industry, goals, and requirements.Our AI analyzes your profile to suggest the perfect solutions for your business.</p>
       </motion.div>
@@ -432,7 +432,7 @@ y: 0 "",">
           Tell Us About Your Business&apos
         </h2>&apos;&apos,
         &apos;&apos,&apos;&apos,"
-        <div className="&apos;grid" grid-cols-1 md: grid-cols-2 gap-6&apos,>"&apos,&apos,""
+        <div className="&apos;grid" grid-cols-1 md: grid-cols-2 gap-6&apos,>"&apos,&apos,"
           <div>&apos;&apos,&apos;&apos,",
             <label className="&apos;block" text-sm font-medium text-zion-slate-dark mb-2&apos,>Industry&apos,</label>
   (e) => setClientProfile(prev = > ({...prev,
@@ -466,7 +466,7 @@ y: 0 "",">
   industry: e.target.value
 "
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">"
-              <option value="">Select Industry</option>
+              <option value=">Select Industry</option>
               {industries.map(industry => (<option key={industry} value={industry}>{industry}</option>) ) }
 Get AI Recommendations
               </>) }
@@ -475,63 +475,63 @@ Get AI Recommendations
       </motion.div> {/* comment */}
 
       {showResults && (<motion.div initial = {}">
-  y: 0","}} transition="{{" delay: 0.2 }}>"";"
+  y: 0","}} transition="{{" delay: 0.2 }}>";"
           <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 text-center">
             Your Personalized Service Recommendations;"
           <div className = "space-y-6"> {recommendations.map((rec, index) => (<motion.div key="{rec.service.id}" initial = {}
 
   x: -20}} animate = {}">
-  x: 0","}} transition="{{" delay: 0.1 * index }}>"";"
-                <Card className="hover: shadow-lg transition-shadow">"",
-                  <CardHeader>"",",
-                    <div className = "flex items-start justify-between">"","
-                      <div className="flex-1">"","
-                        <CardTitle className="text - xl text-zion-blue-dark mb-2"> {rec.service.title}"",
-                        </CardTitle>"";"
+  x: 0","}} transition="{{" delay: 0.1 * index }}>";"
+                <Card className="hover: shadow-lg transition-shadow">",
+                  <CardHeader>",",
+                    <div className = "flex items-start justify-between">","
+                      <div className="flex-1">","
+                        <CardTitle className="text - xl text-zion-blue-dark mb-2"> {rec.service.title}",
+                        </CardTitle>";"
                         <p className = "text-zion-slate-light mb-3"> {rec.service.description}
 
-                        </p>"";"
+                        </p>";"
                         <div className="flex flex-wrap gap-2 mb-4">;"
                           <Badge className="{getPriorityColor(rec.priority)}">
                             Priority: {rec.priority}
 
                           </Badge>;"
                           <Badge className = "{getComplexityColor" (rec.implementationComplexity)}>,
-                            Complexity: {rec.implementationComplexity}""
-                          </Badge>"";"
+                            Complexity: {rec.implementationComplexity}"
+                          </Badge>";"
                           <Badge className="bg-zion-cyan/10 text-zion-cyan">
                             Match Score: {rec.matchScore}%;"
-                      <div className="text-right ml-4">"";"
-                        <div className="text-2xl font-bold text-zion-cyan mb-1"> {rec.service.price}"";"
+                      <div className="text-right ml-4">";"
+                        <div className="text-2xl font-bold text-zion-cyan mb-1"> {rec.service.price}";"
                         <div className = "text-sm text-zion-slate-light"> {rec.service.duration}
 
                   </CardHeader>
-                  <CardContent>"";"
-                    <div className="grid grid-cols-1 lg: grid-cols-2 gap-6">"","
-                        <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">"","
+                  <CardContent>";"
+                    <div className="grid grid-cols-1 lg: grid-cols-2 gap-6">","
+                        <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">","
                           <Lightbulb className="w-4 h-4 text-zion-purple"   />,",
-                          Why This Service Matches"","
-                        </h4>"","
-                        <ul className="space-y-2">""{rec.reasoning.map((reason, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">"";"
+                          Why This Service Matches","
+                        </h4>","
+                        <ul className="space-y-2">"{rec.reasoning.map((reason, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">";"
                               <CheckCircle className = "w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"   /> {reason}
 
                             </li>) ) }
 
                         </ul>;"
                           <BarChart3 className="w - 4 h-4 text-zion-cyan"   />,
-                          Implementation Details"";"
-                        <div className="space-y-3">"";"
-                          <div className="flex justify-between">"";"
-                            <span className = "text-sm text-zion-slate-light">Expected ROI: </span>"","
-                            <span className="text-sm font-medium text-zion-slate-dark">{rec.expectedROI}</span>"";"
-                            <span className = "text-sm text-zion-slate-light">Time to Value: </span>"","
-                            <span className="text-sm font-medium text-zion-slate-dark">{rec.timeToValue}</span>"";"
-                            <span className = "text-sm text-zion-slate-light">Category: </span>"","
+                          Implementation Details";"
+                        <div className="space-y-3">";"
+                          <div className="flex justify-between">";"
+                            <span className = "text-sm text-zion-slate-light">Expected ROI: </span>","
+                            <span className="text-sm font-medium text-zion-slate-dark">{rec.expectedROI}</span>";"
+                            <span className = "text-sm text-zion-slate-light">Time to Value: </span>","
+                            <span className="text-sm font-medium text-zion-slate-dark">{rec.timeToValue}</span>";"
+                            <span className = "text-sm text-zion-slate-light">Category: </span>","
                             <Badge variant="outline" className="text-xs"> {rec.service.category.toUpperCase()}"
-                        <div className="mt-4">"";"
+                        <div className="mt-4">";"
                           <Button className = "w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark" onClick = {}>
-" () => window.open(rec.service.link,_blank")}>""
-                            Learn More"";"
+" () => window.open(rec.service.link,_blank")}>"
+                            Learn More";"
                             <ArrowRight className="w-4 h-4 ml-2"   />
                   </CardContent>
                 </Card>;"
@@ -544,13 +544,13 @@ Get AI Recommendations
               </>) : (<>&apos;&apos,&apos;&apos,"
                 <Brain className="&apos;w-5" h-5 mr-2&apos;        />
                 Get AI Recommendations&apos;"
-                    setClientProfile(prev = > ({...prev, challenges: prev.challenges.filter(c => c !== challenge)}))}""""}} className="rounded text-zion-cyan" />""""
+                    setClientProfile(prev = > ({...prev, challenges: prev.challenges.filter(c => c !== challenge)}))}"}} className="rounded text-zion-cyan" />"
                 <span className="text-sm text-zion-slate-light">{challenge}</span>"
-        <div className="mt-8 text-center">""""
-          <Button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-cyan-dark hover:to-zion-purple-dark text-lg px-8 py-4" onClick="{generateRecommendations}" disabled="{!isFormComplete()" || isAnalyzing}>"""{isAnalyzing ? (<>"""""
+        <div className="mt-8 text-center">"
+          <Button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-cyan-dark hover:to-zion-purple-dark text-lg px-8 py-4" onClick="{generateRecommendations}" disabled="{!isFormComplete()" || isAnalyzing}>"{isAnalyzing ? (<>"
                 <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>"
-                Analyzing Your Profile..."""""
-</>) : (<>""""
+                Analyzing Your Profile..."
+</>) : (<>"
                 <Brain className="w-5 h-5 mr-2"   />
                 Get AI Recommendations,
           </Button>
@@ -565,7 +565,7 @@ Get AI Recommendations
           <div className="&apos;space-y-6&apos">"
             {recommendations.map((rec, index) => (&apos}<motion.div key = "{rec.service.id}" initial = {}">
   x: 0",&apos}} transition="{{" delay: 0.1 * index }}>&apos;&apos,&apos;&apos,"
-                <Card className="&apos;hover: " shadow-lg transition-shadow&apos,>"&apos,&apos,""
+                <Card className="&apos;hover: " shadow-lg transition-shadow&apos,>"&apos,&apos,"
                   <CardHeader>&apos;&apos,&apos;&apos,"
                     <div className="&apos;flex" items-start justify-between&apos;>"&apos;&apos,&apos;&apos;"
                       <div className="&apos;flex-1&apos">"&apos;&apos,&apos;&apos,",
@@ -576,24 +576,24 @@ Get AI Recommendations
                           {rec.service.description}&apos
                         </p>&apos;&apos;"
                         <div className="&apos;flex" flex-wrap gap-2 mb-4&apos;>&apos,"
-  y: 0","}} transition = "{{" delay: 0.2 }}>""""
+  y: 0","}} transition = "{{" delay: 0.2 }}>"
           <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 text-center">
             Your Personalized Service Recommendations"
           <div className="space-y-6">"
             {recommendations.map((rec, index) => (<motion.div key="{rec.service.id}" initial = {}
 
   {opacity: 0, x: -20}} animate = {}"
-  x: 0","}} transition="{{" delay: 0.1 * index }}>""""
-                <Card className="hover: shadow-lg transition-shadow">"""""
-                  <CardHeader>""""
-                    <div className="flex items-start justify-between">""""
-                      <div className="flex-1">""""
+  x: 0","}} transition="{{" delay: 0.1 * index }}>"
+                <Card className="hover: shadow-lg transition-shadow">"
+                  <CardHeader>"
+                    <div className="flex items-start justify-between">"
+                      <div className="flex-1">"
                         <CardTitle className="text-xl text-zion-blue-dark mb-2">",
-                          {rec.service.title}"""""
-                        </CardTitle>""""
+                          {rec.service.title}"
+                        </CardTitle>"
                         <p className="text-zion-slate-light mb-3">
                           {rec.service.description}"
-                        </p>""""
+                        </p>"
                         <div className="flex flex-wrap gap-2 mb-4">"
                           <Badge className="{getPriorityColor(rec.priority)}">
                           </Badge>"
@@ -608,13 +608,13 @@ Get AI Recommendations
                         </div>&apos;&apos,&apos;&apos,"
                         <div className="&apos;text-sm" text-zion-slate-light&apos;>
                           {rec.service.duration}&apos,
-                            Complexity: {rec.implementationComplexity}"""""
-                          </Badge>""""
+                            Complexity: {rec.implementationComplexity}"
+                          </Badge>"
                           <Badge className = "bg-zion-cyan/10 text-zion-cyan">
                             Match Score: {rec.matchScore}%"
-                      <div className="text-right ml-4">""""
+                      <div className="text-right ml-4">"
                         <div className="text-2xl font-bold text-zion-cyan mb-1">"
-                          {rec.service.price}""""
+                          {rec.service.price}"
                         <div className="text-sm text-zion-slate-light">
                           {rec.service.duration}
 
@@ -635,7 +635,7 @@ Get AI Recommendations
                           <div className="&apos;flex" justify-between&apos;>"&apos;&apos,&apos;&apos;"
                             <span className="&apos;text-sm" text-zion-slate-light&apos;>Expected ROI: &apos,</span>&apos,&apos,&apos;&apos,",
                             <span className="&apos,text-sm" font-medium text-zion-slate-dark&apos,>{rec.expectedROI}&apos;</span>&apos;&apos,&apos;&apos;"
-                            <span className="&apos;text-sm" text-zion-slate-light&apos;>Time to Value: &apos,</span>&apos,&apos,&apos;&apos,"",
+                            <span className="&apos;text-sm" text-zion-slate-light&apos;>Time to Value: &apos,</span>&apos,&apos,&apos;&apos,",
                             <span className="&apos,text-sm" font-medium text-zion-slate-dark&apos,>{rec.timeToValue}&apos;</span>&apos;&apos,&apos;&apos;"
                             <span className="&apos;text-sm" text-zion-slate-light&apos;>Category: &apos,</span>&apos,&apos,&apos;&apos,",
                             <Badge variant="&apos;outline&apos;" className = "&apos,text-xs&apos,">
@@ -645,50 +645,50 @@ Get AI Recommendations
 " () => window.open(rec.service.link,_blank&apos)}>&apos;&apos,
                             Learn More&apos;&apos,&apos;&apos,"
                             <ArrowRight className="&apos;w-4" h-4 ml-2&apos;        />&apos,
-                  <CardContent>""""
-                    <div className = "grid grid-cols-1 lg: grid-cols-2 gap-6">""""
-                        <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">""""
+                  <CardContent>"
+                    <div className = "grid grid-cols-1 lg: grid-cols-2 gap-6">"
+                        <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">"
                           <Lightbulb className="w-4 h-4 text-zion-purple"   />"
-                          Why This Service Matches"""""
-                        </h4>"""",
-                        <ul className="space-y-2">""""{rec.reasoning.map((reason, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">""""
+                          Why This Service Matches"
+                        </h4>",
+                        <ul className="space-y-2">"{rec.reasoning.map((reason, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">"
                               <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"   />
                               {reason}"
                           <BarChart3 className="w-4 h-4 text-zion-cyan"   />"
-                          Implementation Details""""
-                        <div className="space-y-3">""""
-                          <div className="flex justify-between">""""
-                            <span className="text-sm text-zion-slate-light">Expected ROI: </span>"""",
-                            <span className="text-sm font-medium text-zion-slate-dark">{rec.expectedROI}</span>""""
-                            <span className="text-sm text-zion-slate-light">Time to Value: </span>"""",
-                            <span className="text-sm font-medium text-zion-slate-dark">{rec.timeToValue}</span>""""
-                            <span className="text-sm text-zion-slate-light">Category: </span>""""
+                          Implementation Details"
+                        <div className="space-y-3">"
+                          <div className="flex justify-between">"
+                            <span className="text-sm text-zion-slate-light">Expected ROI: </span>",
+                            <span className="text-sm font-medium text-zion-slate-dark">{rec.expectedROI}</span>"
+                            <span className="text-sm text-zion-slate-light">Time to Value: </span>",
+                            <span className="text-sm font-medium text-zion-slate-dark">{rec.timeToValue}</span>"
+                            <span className="text-sm text-zion-slate-light">Category: </span>"
                             <Badge variant="outline" className="text-xs">,
                               {rec.service.category.toUpperCase()}"
-                        <div className="mt-4">""""
+                        <div className="mt-4">"
                           <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-cyan-dark hover:to-zion-purple-dark" onClick = {}"
-  () => window.open(rec.service.link, _blank")}>""""
-                            Learn More""""
+  () => window.open(rec.service.link, _blank")}>"
+                            Learn More"
                             <ArrowRight className="w-4 h-4 ml-2"   />
                   </CardContent>
                 </Card>
               </motion.div>) ) }
 
           </div> {/* comment */}"
-""}} transition="{{" delay: 0.4 }} className="mt-12 text-center">"";"
-            <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"";"
-              <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>"";"
+"}} transition="{{" delay: 0.4 }} className="mt-12 text-center">";"
+            <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">";"
+              <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>";"
               <p className="text-xl mb-6 max-w-2xl mx-auto">
                 Our expert team is ready to help you implement the perfect solution,
-                for your business needs. Contact us today for a personalized consultation."";"
-              <div className = "flex flex-col sm: flex-row gap-4 justify-center">"","
+                for your business needs. Contact us today for a personalized consultation.";"
+              <div className = "flex flex-col sm: flex-row gap-4 justify-center">","
                 <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {}">
 " () => window.open()
 }
-""}>"";"
+"}>";"
                   <Users className = "w - 5 h-5 mr-2"   />,
-                  Get Expert Consultation"",
-                </Button>"";"
+                  Get Expert Consultation",
+                </Button>";"
                 <Button variant = "outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {}>
 " () => window.open("tel:+13024640950",_blank");"
                   <Zap className="w-5 h-5 mr-2`        />
@@ -712,25 +712,25 @@ Get AI Recommendations
 " () => window.open(&apos;tel: +13024640950&apos,_blank&apos);"
                   <Zap className="&apos;w-5" h-5 mr-2&quot;        />
                   Call Now&quot;"
-""""}} transition = "{{" delay: 0.4 }} className="mt-12 text-center">""""
-            <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">""""
-              <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>""""
+"}} transition = "{{" delay: 0.4 }} className="mt-12 text-center">"
+            <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"
+              <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>"
               <p className="text-xl mb-6 max-w-2xl mx-auto">
                 Our expert team is ready to help you implement the perfect solution,"
-for your business needs. Contact us today for a personalized consultation.""""
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">"""",
-  () => window.open("mailto: kleber@ziontechgroup.com?subject="Service" Recommendation Consultation", _blank")""
-"""}>"""""
+for your business needs. Contact us today for a personalized consultation."
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+  () => window.open("mailto: kleber@ziontechgroup.com?subject="Service" Recommendation Consultation", _blank")"
+"}>"
                   <Users className="w-5 h-5 mr-2"   />"
-                  Get Expert Consultation"""""
-                </Button>""""
+                  Get Expert Consultation"
+                </Button>"
                 <Button variant="outline" className="border-white text-white hover: bg-white hover:text-zion-purple" onClick = {}"
   () => window.open("tel: +13024640950", _blank")"
-                  <Zap className="w-5 h-5 mr-2"   />""
+                  <Zap className="w-5 h-5 mr-2"   />"
                   Call Now,        </motion.div>)}
 
-"""
-}>""""
+"
+}>"
                   <Zap className="w-5 h-5 mr-2" />
                   Call Now;
                 </Button>
@@ -808,5 +808,5 @@ export {AdvancedServiceRecommendation};
 </select>
 </motion>
 </div>
-</div>';
-</div>;';;';
+</div>
+</div>;';';

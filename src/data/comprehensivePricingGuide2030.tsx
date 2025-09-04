@@ -344,7 +344,7 @@ export const PRICING_ANALYSIS_2030 = {
   priceRange: {
     min: Mat h.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice)),
   max: Mat h.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice))
-  ;;
+  ;
 ;
 },;
   categoryPricing: COMPREHENSIVE_PRICING_GUIDE_203 0.reduce(acc: unknow n, service: unknow n {;
@@ -381,6 +381,6 @@ export const PAYMENT_OPTIONS_2030 = {
   ];
 ;
 };
-'"
-';
-</string>';';
+"
+
+</string>';

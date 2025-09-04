@@ -11,4 +11,4 @@ export default function TechnologyStackSection.test() {return (
       </div>
   );"}"
 
-</div>;;
+</div>;

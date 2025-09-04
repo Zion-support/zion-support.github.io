@@ -679,5 +679,5 @@ export const AI_SERVICES: AIService[] = [
     },
     competitors: ["Google Speech-to-Text", "Amazon Transcribe", "Microsoft Speech Services", "IBM Watson Speech"],
     marketSize: "$7.5 billion by 2025"
-  }
+  };
 ];

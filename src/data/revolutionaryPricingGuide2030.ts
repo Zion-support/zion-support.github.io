@@ -42,7 +42,7 @@ const zionContact = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com"
-};
+};;
 
 // Revolutionary Micro SAAS Services Pricing
 export const revolutionaryMicroSaasPricing: ServicePricing[] = [;
@@ -474,7 +474,7 @@ export const pricingRecommendations = {
     estimatedMonthlyCost: "$15,000 - $25,000",
     roi: "400-600% within 18 months"
   }
-};
+};;
 
 // Export all pricing data
 export const allRevolutionaryPricing2030 = {
@@ -482,5 +482,4 @@ export const allRevolutionaryPricing2030 = {
   itServices: revolutionaryITServicesPricing,
   aiServices: revolutionaryAIServicesPricing,
   recommendations: pricingRecommendations
-};';
-';';
+};;

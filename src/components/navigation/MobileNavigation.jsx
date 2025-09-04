@@ -1,23 +1,23 @@
-import React, {useState} from 'react';';';
-import {Link} from 'react-router-dom';';';
-import {Menu, X, Search, User, Briefcase, HardDrive, Users, Lightbulb} from 'lucide-react';';';
+import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
+import {Menu, X, Search, User, Briefcase, HardDrive, Users, Lightbulb} from 'lucide-react';
 import {Button} from '@/components/ui/button';
-';
-const mobileMenuItems = [';';
-  {name: 'Services', icon: <Briefcase className="w-5 h-5"  />, href: '/services'},';';
-  {name: 'Talent', icon: <Users className="w-5 h-5"  />, href: '/talent'},';';
-  {name: 'Equipment', icon: <HardDrive className="w-5 h-5"  />, href: '/equipment'},';';
-  {name: 'Innovation', icon: <Lightbulb className="w-5 h-5"  />, href: '/category/innovation'}
+
+const mobileMenuItems = [
+  {name: 'Services', icon: <Briefcase className="w-5 h-5"  />, href: '/services'},
+  {name: 'Talent', icon: <Users className="w-5 h-5"  />, href: '/talent'},
+  {name: 'Equipment', icon: <HardDrive className="w-5 h-5"  />, href: '/equipment'},
+  {name: 'Innovation', icon: <Lightbulb className="w-5 h-5"  />, href: '/category/innovation'};
 ];
 
-export function MobileNavigation(props: any) {
+export function MobileNavigation($1) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = (props: any) => {
+  const toggleMenu = (props) => {
     setIsOpen(!isOpen);
   };
 
-  const closeMenu = (props: any) => {setIsOpen(false);};
+  const closeMenu = (props) => {setIsOpen(false);};
 
   return (
     <div className="min-h-screen bg-white">
@@ -73,5 +73,4 @@ export function MobileNavigation(props: any) {
     </div>
   );
 }
-';
-export default MobileNavigation;;';;';
+export default MobileNavigation;';';

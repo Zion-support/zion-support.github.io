@@ -11,4 +11,4 @@ export default function ModernUIEnhancer.test() {return (
       </div>
   );"}"
 
-</div>;;
+</div>;

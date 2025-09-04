@@ -1,6 +1,6 @@
 
 // In-memory storage for fallback with optimizations
-const inMemoryStore = {};
+const inMemoryStore = {};;
 let localStorageAvailable = null; // Cache the availability check
 let lastAvailabilityCheck = 0;
 const AVAILABILITY_CHECK_INTERVAL = 5000; // Check every 5 seconds max
@@ -15,9 +15,9 @@ function isLocalStorageAvailable() {
     try {
         if (typeof window === 'undefined') {
             localStorageAvailable = false;
-            return false}';
-';';
-        const testKey = '__localStorage_test__';';';
+            return false}
+
+        const testKey = '__localStorage_test__';
         localStorage.setItem(testKey, 'test');
         localStorage.removeItem(testKey);
         localStorageAvailable = true;
@@ -25,10 +25,9 @@ function isLocalStorageAvailable() {
         localStorageAvailable = false;
         return false}
 }
-';
-function safeConsoleError(message, error) {';';
-  const env = globalThis.process?.env?.NODE_ENV ?? 'production';';
-  // Prevent infinite recursion in console logging';';
+function safeConsoleError(message, error) {
+  const env = globalThis.process?.env?.NODE_ENV ?? 'production';
+  // Prevent infinite recursion in console logging
   if (env === 'production') return;
 
     try {
@@ -46,7 +45,7 @@ export const safeStorage = {
       // // // // // 
 
       return null}
-  },
+  };,
 
   setItem: (key, value) => {
     try {
@@ -94,5 +93,3 @@ export const safeStorage = {
 };
 
 export default safeStorage;
-';
-';';

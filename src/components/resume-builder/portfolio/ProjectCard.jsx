@@ -1,15 +1,15 @@
-import {useState} from 'react';';';
-import {Card, CardContent, CardFooter} from '@/components/ui/card';';';
-import {Button} from '@/components/ui/button';';';
-import {Badge} from '@/components/ui/badge';';';
-import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from '@/components/ui/alert-dialog';';';
+import {useState} from 'react';
+import {Card, CardContent, CardFooter} from '@/components/ui/card';
+import {Button} from '@/components/ui/button';
+import {Badge} from '@/components/ui/badge';
+import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from '@/components/ui/alert-dialog';
 import {Edit, Trash2, Github, Link, FileText} from 'lucide-react';
-export function ProjectCard(props: any) {
+export function ProjectCard($1) {
     const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
-    const handleDelete = (props: any) => {
+    const handleDelete = (props) => {
         if (project.id) {
             onDelete(project.id)}
-        setDeleteDialogOpen(false)};
+        setDeleteDialogOpen(false)};;
     return (<Card className="h-full flex flex-col">
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
         {project.image_url ? (<img loading="lazy" src={project.image_url} alt={project.title} className="w-full h-full object-cover"  />) : (<div className="w-full h-full flex items-center justify-center bg-muted">
@@ -77,5 +77,4 @@ export function ProjectCard(props: any) {
         </AlertDialogContent>
       </AlertDialog>
     </Card>)}
-';
-export default ProjectCard;;';;';
+export default ProjectCard;';';

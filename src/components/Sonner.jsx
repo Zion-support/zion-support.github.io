@@ -1,4 +1,4 @@
-export function Sonner(props: any) {
+export function Sonner($1) {
     return (
     <div className="min-h-screen bg-white">
       {/* Sonner toast container */}
@@ -16,7 +16,7 @@ export const toast = {success: (message) => ,
     info: (message) => ,
     warning: (message) => ,
     loading: (message) => ,
-    dismiss: (toastId) => };
+    dismiss: (toastId) => };;
 }
 
 export default Sonner;';';

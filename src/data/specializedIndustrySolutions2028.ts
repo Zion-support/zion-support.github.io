@@ -319,5 +319,5 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2028: ProductListing[] = [
     roi: "700% within 12 months",
     setupTime: "8-10 weeks",
     integrations: ["Smart Meters", "Building Management Systems", "IoT Sensors", "Utility APIs", "Analytics Platforms"]
-  }
-];;;
+  };
+];

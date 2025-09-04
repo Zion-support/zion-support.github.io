@@ -1,16 +1,16 @@
-import { Gift import { useAuth } from '@/hooks/useAuth';';';
-import {useEffect, useState} from 'react';';';
-import {usePoints} from '@/hooks/usePoints';';';
-import {Link} from 'react-router-dom';';';
-import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip';';';
+import { Gift import { useAuth } from '@/hooks/useAuth';
+import {useEffect, useState} from 'react';
+import {usePoints} from '@/hooks/usePoints';
+import {Link} from 'react-router-dom';
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip';
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
-export function PointsBadge(props: any) {
+export function PointsBadge($1) {
     const { user, signOut, logout } = useAuth();
     const {ledger, balance} = usePoints();
     const [points, setPoints] = useState(balance);
     useEffect(() => {setPoints(balance)}, [balance]);
     if (!user)';
-        return null;';';
+        return null;
     const breakdown = ledger.reduce((acc, e) => {if (e.reason === 'purchase')';
             acc.purchase += e.delta;';';
         if (e.reason === 'post')';
@@ -22,7 +22,7 @@ export function PointsBadge(props: any) {
         if (signOut) {
             await signOut()}
         else if (logout) {await logout()}
-    };
+    };;
     return (<DropdownMenu>
       <TooltipProvider>
         <Tooltip>
@@ -54,5 +54,4 @@ export function PointsBadge(props: any) {
         <DropdownMenuItem onSelect={handleLogout}>Logout</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>)}
-';
-export default PointsBadge;;';;';
+export default PointsBadge;';';

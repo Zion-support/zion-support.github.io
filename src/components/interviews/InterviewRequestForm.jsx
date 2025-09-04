@@ -1,17 +1,17 @@
 import React, {useState} from "react";"
-import {Button} from '@/components/ui/button';"';';
-import {Form, FormField, FormItem, FormLabel, FormControl, FormMessage} from '@/components/ui/form';"';';
-import {Input} from '@/components/ui/input';"';';
-import {Textarea} from '@/components/ui/textarea';"';';
-import {Select, SelectTrigger, SelectValue, SelectContent, SelectItem} from '@/components/ui/select';"';';
-import {Calendar} from '@/components/ui/calendar';"';';
-import {Popover, PopoverTrigger, PopoverContent} from '@/components/ui/popover';"';';
-import {cn} from '@/lib/utils';"';';
-import {zodResolver} from '@hookform/resolvers/zod';"';';
-import {useForm} from 'react-hook-form';"';';
-import {z} from 'zod';"';';
-import {format, addDays} from 'date-fns';"';';
-import { CalendarIcon import { toast } from '@/components/ui/use-toast';"';';
+import {Button} from '@/components/ui/button';";';
+import {Form, FormField, FormItem, FormLabel, FormControl, FormMessage} from '@/components/ui/form';";';
+import {Input} from '@/components/ui/input';";';
+import {Textarea} from '@/components/ui/textarea';";';
+import {Select, SelectTrigger, SelectValue, SelectContent, SelectItem} from '@/components/ui/select';";';
+import {Calendar} from '@/components/ui/calendar';";';
+import {Popover, PopoverTrigger, PopoverContent} from '@/components/ui/popover';";';
+import {cn} from '@/lib/utils';";';
+import {zodResolver} from '@hookform/resolvers/zod';";';
+import {useForm} from 'react-hook-form';";';
+import {z} from 'zod';";';
+import {format, addDays} from 'date-fns';";';
+import { CalendarIcon import { toast } from '@/components/ui/use-toast';";';
 import {useInterviews} from '@/hooks/useInterviews';
 ).refine(date => date > new Date(), {"
         message: "Interview date must be in the future"}),"
@@ -21,7 +21,7 @@ import {useInterviews} from '@/hooks/useInterviews';
     meetingLink: z.string().optional(),"
     title: z.string().min(3, "Please provide a brief title for the interview."),
     notes: z.string().optional()});
-export function InterviewRequestForm(props: any) {
+export function InterviewRequestForm($1) {
 
     const { requestInterview } = useInterviews();
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -33,9 +33,9 @@ export function InterviewRequestForm(props: any) {
             title: `Interview with ${talent.full_name}`,"
             duration: "30","
             platform: "zoom","
-            notes: "","
-            meetingLink: ""}});
-    async function onSubmit(props: any) {
+            notes: ","
+            meetingLink: "}};);
+    async function onSubmit($1) {
 
         if(!userDetails?.id) {
 
@@ -46,9 +46,9 @@ export function InterviewRequestForm(props: any) {
                 variant: "destructive"});
             return}
         setIsSubmitting(true);
-        try {';
-            // Combine date and time`';';
-            const dateTimeString = `${format(values.date,yyyy-MM-dd')}T${values.time}:00`;
+        try {
+            // Combine date and time`
+            const dateTimeString = `${format(values.date,yyyy-MM-dd')}T${values.time};:00`;
             const scheduledDate = new Date(dateTimeString);
             // Calculate end time based on duration
             const durationMinutes = parseInt(values.duration);
@@ -65,16 +65,14 @@ export function InterviewRequestForm(props: any) {
 "
                 title: "Interview requested",`
                 description: `Your interview request with ${talent.full_name} has been sent.`});
-            onClose()}
-        catch(error) {
+            onClose()} catch (error) {
 "
             // // // // // // // // console.error("Failed to schedule interview:", error);
             toast({
 "
                 title: "Failed to schedule interview","
                 description: "An error occurred while scheduling the interview.Please try again.","
-                variant: "destructive"})}
-        finally {setIsSubmitting(false)}
+                variant: "destructive"})} finally {setIsSubmitting(false)}
     }
     const timeSlots = ["
         "09:00", "09:30", "10:00", "10:30", "11:00", "11:30","
@@ -179,19 +177,19 @@ export function InterviewRequestForm(props: any) {
                 </Select>
                 <FormMessage  />
               </FormItem>)}/>';
-        </div>';';
-'"';';
-        {form.watch('platform') !== 'in-app' && (<FormField control={form.control} name="meetingLink" render={({ field }) => (<FormItem>';
-                <FormLabel>Meeting Link(Optional)</FormLabel>';';
-                <FormControl>'`';';
+        </div>';
+";';
+        {form.watch('platform') !== 'in-app' && (<FormField control={form.control} name="meetingLink" render={({ field }) => (<FormItem>
+                <FormLabel>Meeting Link(Optional)</FormLabel>';
+                <FormControl>'`
                   <Input placeholder={`Add your ${form.watch('platform')} link here`} {...field}  />
                 </FormControl>
                 <FormMessage  />
               </FormItem>)}/>)}
 "
-        <FormField control={form.control} name="notes" render={({ field }) => (<FormItem>';
-              <FormLabel>Notes(Optional)</FormLabel>';';
-              <FormControl>'"';';
+        <FormField control={form.control} name="notes" render={({ field }) => (<FormItem>
+              <FormLabel>Notes(Optional)</FormLabel>';
+              <FormControl>";';
                 <Textarea placeholder="Share what you'd like to discuss in this interview" className="h-20" {...field} />
               </FormControl>
               <FormMessage  />
@@ -205,12 +203,12 @@ export function InterviewRequestForm(props: any) {
             {isSubmitting ? "Scheduling..." : "Schedule Interview"}
           </Button>
         </div>
-      </form>';
-    </Form>)}';';
-'"`
+      </form>
+    </Form>)}
+"`
 
 </FormField>
 </FormField>
 </Calendar>
-</FormField>';
-</FormField>;';;';
+</FormField>
+</FormField>;';';

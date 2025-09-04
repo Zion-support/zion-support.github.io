@@ -1,6 +1,6 @@
-import React from 'react';';';
-import { Link  } from 'react-router-dom';';
-export default function Page(props: any) {';';
+import React from 'react';
+import { Link  } from 'react-router-dom';
+export default function Page($1) {
  from 'lucide-react';
 ;
 const FloatingCTA: React.FC = () : JSX.Element => {;
@@ -78,9 +78,9 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
           />;) };
       </AnimatePresence>;
     </>';
-  )}';';
-'"
+  )}
+"
 
 </motion>
-</any>';
-</any>;';;';
+</any>
+</any>;';';

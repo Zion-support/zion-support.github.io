@@ -11,83 +11,82 @@ lastPost?: {
     author: string;
     date: string}}
 
-export default function ForumCategories
-export { ForumCategories }(...args[]):  {
+export default function ForumCategories(...args[]):  {
   const categories: ForumCategoryInf o[] = [ {
-      id: '1',';';
-      name: 'General Discussion',';';
+      id: '1',
+      name: 'General Discussion',
       description: 'General topics and discussions about technology, business, and innovation',
-      postCount: 15 0,';
-      adminOnly: fals e,';';
-      icon: 'message-circle',';
-      lastPost: {';';
-        title: 'Welcome to the Zion Tech Group community!',';';
-        author: 'Admin',';';
+      postCount: 15 0,
+      adminOnly: fals e,
+      icon: 'message-circle',
+      lastPost: {
+        title: 'Welcome to the Zion Tech Group community!',
+        author: 'Admin',
         date: '2024-01-15'
 
-    },';
-    {';';
-      id: '2',';';
-      name: 'Technical Support',';';
+    },
+    {
+      id: '2',
+      name: 'Technical Support',
       description: 'Get help with technical issues, API integration, and development questions',
-      postCount: 8 9,';
-      adminOnly: fals e,';';
-      icon: 'code',';
-      lastPost: {';';
-        title: 'API integration question',';';
-        author: 'Developer123',';';
+      postCount: 8 9,
+      adminOnly: fals e,
+      icon: 'code',
+      lastPost: {
+        title: 'API integration question',
+        author: 'Developer123',
         date: '2024-01-14'
 
-    },';
-    {';';
-      id: '3',';';
-      name: 'AI & Machine Learning',';';
+    },
+    {
+      id: '3',
+      name: 'AI & Machine Learning',
       description: 'Discussions about AI, ML, and data science topics',
-      postCount: 23 4,';
-      adminOnly: fals e,';';
-      icon: 'brain',';
-      lastPost: {';';
-        title: 'New AI model deployment strategies',';';
-        author: 'DataScientist',';';
+      postCount: 23 4,
+      adminOnly: fals e,
+      icon: 'brain',
+      lastPost: {
+        title: 'New AI model deployment strategies',
+        author: 'DataScientist',
         date: '2024-01-13'
 
-    },';
-    {';';
-      id: '4',';';
-      name: 'Cloud & DevOps',';';
+    },
+    {
+      id: '4',
+      name: 'Cloud & DevOps',
       description: 'Cloud infrastructure, DevOps practices, and deployment strategies',
-      postCount: 16 7,';
-      adminOnly: fals e,';';
-      icon: 'cloud',';
-      lastPost: {';';
-        title: 'Kubernetes best practices',';';
-        author: 'DevOpsEngineer',';';
+      postCount: 16 7,
+      adminOnly: fals e,
+      icon: 'cloud',
+      lastPost: {
+        title: 'Kubernetes best practices',
+        author: 'DevOpsEngineer',
         date: '2024-01-12'
 
-    },';
-    {';';
-      id: '5',';';
-      name: 'Cybersecurity',';';
+    },
+    {
+      id: '5',
+      name: 'Cybersecurity',
       description: 'Security best practices, threat detection, and compliance discussions',
-      postCount: 9 8,';
-      adminOnly: fals e,';';
-      icon: 'shield',';
-      lastPost: {';';
-        title: 'Zero-day vulnerability response',';';
-        author: 'SecurityExpert',';';
+      postCount: 9 8,
+      adminOnly: fals e,
+      icon: 'shield',
+      lastPost: {
+        title: 'Zero-day vulnerability response',
+        author: 'SecurityExpert',
         date: '2024-01-11'
 
-    },';
-    {';';
-      id: '6',';';
-      name: 'Business & Strategy',';';
+    };,
+    {
+      id: '6',
+      name: 'Business & Strategy',
       description: 'Business development, strategy, and industry insights',
-      postCount: 7 6,';
-      adminOnly: fals e,';';
-      icon: 'trending-up',';
-      lastPost: {';';
-        title: 'Digital transformation case studies',';';
-        author: 'BusinessAnalyst',';';
+      postCount: 7 6,
+      adminOnly: fals e,
+      icon: 'trending-up',
+      lastPost: {
+        title: 'Digital transformation case studies',
+        author: 'BusinessAnalyst',
         date: '2024-01-10'
 
   ];
@@ -176,5 +175,4 @@ export { ForumCategories }(...args[]):  {
       </div>;
     </section>;
   );
-}';
-';';
+}

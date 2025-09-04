@@ -22,12 +22,14 @@ export default function Marketplace() {
     // Automatically append a new listing every 2 minutes
     useEffect(() => {
         const interval = setInterval(() => {
-            setListings(prev => [...prev, generateRandomListing()])}, 120000); // 2 minutes
-        return () => clearInterval(interval)}, []);
+            setListings(prev => [...prev, generateRandomListing()]);
+        }, 120000); // 2 minutes
+        return () => clearInterval(interval);
+    }, []);
     // Filter options are now imported from marketplaceData
     useEffect(() => {setIsLoading(true);
-        const timeout = setTimeout(() => setIsLoading(false), 300);';
-        return () => clearTimeout(timeout)}, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]);';';
+        const timeout = setTimeout(() => setIsLoading(false), 300);
+        return () => clearTimeout(timeout)}, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]);
     useEffect(() => {localStorage.setItem('marketplaceView', view)}, [view]);
     // Filter listings based on selected filters
     const filteredListings = listings.filter(listing => {
@@ -44,27 +46,31 @@ export default function Marketplace() {
         if (selectedAvailability.length > 0 && listing.availability && !selectedAvailability.includes(listing.availability)) {return false}
         // Rating filter
         if (selectedRating && (!listing.rating || listing.rating < selectedRating)) {return false}
-        return true});
-    const handleFilterChange = (props: any) => {';
-        ';';
-        switch (filterType) {case 'productTypes':
-                setSelectedProductTypes(prev => prev.includes(value) ? prev.filter(item => item !== value) [...prev, value]);';
-                break;';';
+        return true;
+    });
+    const handleFilterChange = (props) => {
+        const { filterType, value } = props;
+        switch (filterType) {
+            case 'productTypes':
+                setSelectedProductTypes(prev => prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]);
+                break;
             case 'locations':
-                setSelectedLocations(prev => prev.includes(value) ? prev.filter(item => item !== value) [...prev, value]);';
-                break;';';
+                setSelectedLocations(prev => prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]);
+                break;
             case 'availability':
                 setSelectedAvailability(prev => prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]);
-                break}
+                break;
+            }
     };
     const clearAllFilters = () => {
         setSearchQuery("");
         setSelectedProductTypes([]);
         setSelectedLocations([]);
         setSelectedAvailability([]);
-        setSelectedRating(null)};
+        setSelectedRating(null);
+    };
     // Handle requesting a quote
-    const handleRequestQuote = (props: any) => {
+    const handleRequestQuote = (props) => {
         const listing = listings.find(item => item.id === listingId);
         if (listing) {
                     // Quote request functionality would go here
@@ -93,14 +99,14 @@ export default function Marketplace() {
         
         {/* Search and filter bar */}
         <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 mb-8">
-          <div className="flex flex-col md:flex-row gap-4">';
-            <div className="relative flex-1">';';
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="relative flex-1">
               <EnhancedSearchInput value={searchQuery} onChange={setSearchQuery} onSelectSuggestion={setSearchQuery} placeholder={t('marketplace.search_placeholder')} searchSuggestions={searchSuggestions} />
-            </div>';
-            <div className="flex gap-2">';';
+            </div>
+            <div className="flex gap-2">
               <Button variant="ghost" size="icon" onClick={() => setView('grid')} aria-pressed={view === 'grid'} className={view === 'grid' ? 'text-zion-purple' : 'text-zion-slate-light'}>
-                <Grid3X3 className="h-4 w-4" />';
-              </Button>';';
+                <Grid3X3 className="h-4 w-4" />
+              </Button>
               <Button variant="ghost" size="icon" onClick={() => setView('list')} aria-pressed={view === 'list'} className={view === 'list' ? 'text-zion-purple' : 'text-zion-slate-light'}>
                 <ListFilter className="h-4 w-4" />
               </Button>
@@ -137,26 +143,23 @@ export default function Marketplace() {
             </div>
             
             {/* Display actual marketplace listings */}
-            {isLoading ? (<div className="flex justify-center py-20">';
-                <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />';';
+            {isLoading ? (<div className="flex justify-center py-20">
+                <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />
               </div>) : (<div className={view === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 gap-6' : 'flex flex-col gap-6'}>
                 {filteredListings.length > 0 ? (filteredListings.map((listing) => (<ProductListingCard key={listing.id} listing={listing} view={view} onRequestQuote={handleRequestQuote} />))) : (<div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">
-                  <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>';
-                  <p className="text-zion-slate-light max-w-md mx-auto mb-8">';';
+                  <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>
+                  <p className="text-zion-slate-light max-w-md mx-auto mb-8">
                     We couldn't find  listings matching your filters. Try adjusting your search criteria.
                   </p>
                   <Button onClick={clearAllFilters} className="bg-zion-purple hover:bg-zion-purple-dark">
                     Clear Filters
                   </Button>
-                    </div>
-  );
-}
-                  </div>
-  );
-}
+                </div>
+              </div>
+            )}
           </div>
         </div>
-      </main>)}
-
-</ActiveFiltersBar>';
-</FilterSidebar>;';;';
+      </div>
+    </div>
+  );
+}

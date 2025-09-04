@@ -1,9 +1,9 @@
-import React, {useState, useRef, useEffect, useCallback} from 'react';';';
-import {motion, AnimatePresence, useScroll} from 'framer-motion';';';
+import React, {useState, useRef, useEffect, useCallback} from 'react';
+import {motion, AnimatePresence, useScroll} from 'framer-motion';
 import {Calendar, Clock, CheckCircle, Circle, ArrowRight, Play, Pause, RotateCcw, ZoomIn, ZoomOut, Share2, Download, Star, Award, Users, TrendingUp, Zap, Shield, Globe, Rocket, Filter, X} from 'lucide-react';
 import {Button} from "button.tsx";
 import {Badge} from "badge.tsx";
-export function InteractiveTimeline(props: any) {
+export function InteractiveTimeline($1) {
     const [currentEventIndex, setCurrentEventIndex] = useState(0);
     const [isPlaying, setIsPlaying] = useState(autoPlay);
     const [playbackSpeed, setPlaybackSpeed] = useState(1);
@@ -14,7 +14,7 @@ export function InteractiveTimeline(props: any) {
         category[],;
         priority[],;
         progress: 0';
-    });';';
+    });
     const [viewMode, setViewMode] = useState('timeline');
     const [zoomLevel, setZoomLevel] = useState(1);
     const timelineRef = useRef(null);
@@ -39,73 +39,73 @@ export function InteractiveTimeline(props: any) {
     const handleEventClick = useCallback((event) => {setSelectedEvent(event);
         onEventClick?.(event)}, [onEventClick]);
     // Handle status change
-    const handleStatusChange = useCallback((eventId, newStatus) => {onStatusChange?.(eventId, newStatus)}, [onStatusChange]);
+    const handleStatusChange = useCallback((eventId, newStatus) => {onStatusChange?.(eventId, newStatus)};, [onStatusChange]);
     // Get status icon and color
-    const getStatusIcon = (props: any) => {';
-        switch (status) {';';
-            case 'completed':';';
-                return { icon: CheckCircle, color: 'text-green-400', bgColor: 'bg-green-400/20' };';';
-            case 'in-progress':';';
-                return {icon: Clock, color: 'text-yellow-400', bgColor: 'bg-yellow-400/20'};';';
-            case 'upcoming':';';
-                return {icon: Circle, color: 'text-zinc-400', bgColor: 'bg-zinc-400/20'};';';
-            case 'milestone':';';
-                return {icon: Star, color: 'text-purple-400', bgColor: 'bg-purple-400/20'};';
-            default:';';
+    const getStatusIcon = (props) => {
+        switch (status) {
+            case 'completed':
+                return { icon: CheckCircle, color: 'text-green-400', bgColor: 'bg-green-400/20' };;
+            case 'in-progress':';
+                return {icon: Clock, color: 'text-yellow-400', bgColor: 'bg-yellow-400/20'};
+            case 'upcoming':';
+                return {icon: Circle, color: 'text-zinc-400', bgColor: 'bg-zinc-400/20'};
+            case 'milestone':';
+                return {icon: Star, color: 'text-purple-400', bgColor: 'bg-purple-400/20'};
+            default:';
                 return {icon: Circle, color: 'text-zinc-400', bgColor: 'bg-zinc-400/20'}}
     };
     // Get priority color
-    const getPriorityColor = (props: any) => {';
-        switch (priority) {';';
-            case 'critical':';';
-                return 'border-red-500/50 bg-red-500/10';';';
-            case 'high':';';
-                return 'border-orange-500/50 bg-orange-500/10';';';
-            case 'medium':';';
-                return 'border-yellow-500/50 bg-yellow-500/10';';';
-            case 'low':';';
-                return 'border-green-500/50 bg-green-500/10';';
-            default:';';
+    const getPriorityColor = (props) => {
+        switch (priority) {
+            case 'critical':
+                return 'border-red-500/50 bg-red-500/10';
+            case 'high':';
+                return 'border-orange-500/50 bg-orange-500/10';
+            case 'medium':';
+                return 'border-yellow-500/50 bg-yellow-500/10';
+            case 'low':';
+                return 'border-green-500/50 bg-green-500/10';
+            default:';
                 return 'border-zinc-500/50 bg-zinc-500/10'}
     };
     // Get category icon
-    const getCategoryIcon = (props: any) => {';
-        const iconMap = {';';
-  'AI & ML': Zap,';';
-            'Cybersecurity': Shield,';';
-            'Cloud': Globe,';';
-            'Development': Rocket,';';
-            'Research': TrendingUp,';';
-            'Team': Users,';';
+    const getCategoryIcon = (props) => {
+        const iconMap = {
+  'AI & ML': Zap,
+            'Cybersecurity': Shield,
+            'Cloud': Globe,
+            'Development': Rocket,
+            'Research': TrendingUp,
+            'Team': Users,
   'Launch': Award
         
 
-};
+};;
         return iconMap[category] || Calendar};
     // Toggle play/pause
-    const togglePlayback = useCallback(() => {setIsPlaying(!isPlaying)}, [isPlaying]);
+    const togglePlayback = useCallback(() => {setIsPlaying(!isPlaying)};, [isPlaying]);
     // Reset timeline
     const resetTimeline = useCallback(() => {setCurrentEventIndex(0);
         setIsPlaying(false)}, []);
-    // Export timeline';
-    const exportTimeline = useCallback(() => {';';
-        const dataBlob = new Blob([dataStr], { type: 'application/json' });';
-        const url = URL.createObjectURL(dataBlob);';';
-        const link = document.createElement('a');';
+    // Export timeline
+    const exportTimeline = useCallback(() => {
+        const dataBlob = new Blob([dataStr], { type: 'application/json' };);
+        const url = URL.createObjectURL(dataBlob);
+        const link = document.createElement('a');
         link.href = url;';';
         link.download = `timeline-${new Date().toISOString().split('T')[0]}.json`;
         link.click();
         URL.revokeObjectURL(url)}, [filteredEvents]);
     // Share timeline
     const shareTimeline = useCallback(() => {
-        if (navigator.share) {';
-            navigator.share({';';
-                title: 'Project Timeline',';';
+        if (navigator.share) {
+            navigator.share({
+                title: 'Project Timeline',
                 text: 'Check out our project timeline',
                 url: window.location.href
             })}
         else {navigator.clipboard.writeText(window.location.href)}
-    }, []);
+    };, []);
     if (!enabled || filteredEvents.length === 0)
         return null;
     return (
@@ -118,10 +118,10 @@ export function InteractiveTimeline(props: any) {
         </div>
         
         <div className="flex items-center gap-2">
-          {/* View Mode Toggle */}';
-          <div className="flex bg-zion-blue/20 rounded-lg p-1">';';
+          {/* View Mode Toggle */}
+          <divclassName="flex bg-zion-blue/20 rounded-lg p-1">
             {['timeline', 'list', 'kanban'].map((mode) => (<button key={mode} onClick={() => setViewMode(mode)} className={`px-3 py-1 rounded-md text-xs font-medium transition-all duration-200 ${viewMode === mode';';
-                ? 'bg-zion-cyan text-zion-blue-dark'';';
+                ? 'bg-zion-cyan text-zion-blue-dark'
                 : 'text-zinc-400 hover:text-white'}`}>
                 {mode.charAt(0).toUpperCase() + mode.slice(1)}
               </button>))}
@@ -174,7 +174,7 @@ export function InteractiveTimeline(props: any) {
       {/* Filters */}
       <div className="mb-6">
         <Button size="sm" variant="ghost" onClick={() => setShowFilters(!showFilters)} className="text-zinc-400 hover:text-white mb-3">';
-          <Filter className="w-4 h-4 mr-2" />';';
+          <FilterclassName="w-4 h-4 mr-2" />';
           {showFilters ? 'Hide' : 'Show'} Filters
         </Button>
         
@@ -182,8 +182,8 @@ export function InteractiveTimeline(props: any) {
           {showFilters && (<motion.div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-zion-blue/10 rounded-lg border border-zion-blue-light/20" initial = {
   { height: 0,
   opacity: 0 
-';
-}} animate = {';';
+
+}} animate = {
   { height: 'auto',
   opacity: 1 
 
@@ -262,11 +262,11 @@ export function InteractiveTimeline(props: any) {
 
       {/* Progress Bar */}
       {showProgress && (<div className="mb-6">
-          <div className="flex items-center justify-between text-sm text-zinc-300 mb-2">';
-            <span>Overall Progress</span>';';
+          <divclassName="flex items-center justify-between text-sm text-zinc-300 mb-2">
+            <span>Overall Progress</span>';
             <span>{Math.round((filteredEvents.filter(e => e.status === 'completed').length / filteredEvents.length) * 100)}%</span>
-          </div>';
-          <div className="w-full bg-zinc-700 rounded-full h-2">';';
+          </div>
+          <divclassName="w-full bg-zinc-700 rounded-full h-2">';
             <motion.div className="bg-gradient-to-r from-zion-cyan to-zion-blue h-2 rounded-full" initial={{ width: 0 }} whileInView={{ width: `${(filteredEvents.filter(e => e.status === 'completed').length / filteredEvents.length) * 100}%` }} transition = {
   { duration: 1,
   ease: "easeOut" 
@@ -275,8 +275,8 @@ export function InteractiveTimeline(props: any) {
           </div>
             </div>
   );
-}';
-      {/* Timeline View */}';';
+}
+      {/* Timeline View */}
       {viewMode === 'timeline' && (<div className="relative">
           {/* Timeline Line */}
           <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-zion-cyan via-zion-blue to-zion-purple" />
@@ -285,9 +285,9 @@ export function InteractiveTimeline(props: any) {
           <div className="space-y-6">
             {filteredEvents.map((event, index) => {
                 const statusInfo = getStatusIcon(event.status);
-                const CategoryIcon = getCategoryIcon(event.category);';
-                const isCurrent = index === currentEventIndex;';';
-                return (<motion.div key={event.id} className={`relative flex items-start gap-6 group ${isCurrent ? 'scale-105' : ''}`} initial = {
+                const CategoryIcon = getCategoryIcon(event.category);
+                const isCurrent = index === currentEventIndex;
+                return (<motion.div key={event.id} className={`relative flex items-start gap-6 group ${isCurrent ? 'scale-105' : "}`} initial = {
   { opacity: 0,
   x: -50 
 
@@ -301,9 +301,9 @@ export function InteractiveTimeline(props: any) {
 
 }} whileHover={{ scale: 1.02 }}>
                   {/* Status Indicator */}
-                  <div className="relative z-10">';
+                  <divclassName="relative z-10">
                     <motion.div className={`w-16 h-16 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${isCurrent';';
-                        ? 'border-zion-cyan bg-zion-cyan/20 scale-110'';';
+                        ? 'border-zion-cyan bg-zion-cyan/20 scale-110'
                         : 'border-zion-blue-light/30'}`} animate = {
   isCurrent ? { scale[1, 1.1,;
   1] 
@@ -316,7 +316,7 @@ export function InteractiveTimeline(props: any) {
                       <statusInfo .icon className={`w-8 h-8 ${statusInfo.color}`} />
                     </motion.div>
                     ';
-                    {/* Progress Ring for in-progress events */}';';
+                    {/* Progress Ring for in-progress events */}
                     {event.status === 'in-progress' && (<svg className="absolute inset-0 w-16 h-16 transform -rotate-90">
                         <circle cx="32" cy="32" r="28" stroke="currentColor" strokeWidth="2" fill="none" className="text-zion-cyan/20" />
                         <motion .circle cx="32" cy="32" r="28" stroke="currentColor" strokeWidth="2" fill="none" className="text-zion-cyan" strokeDasharray={2 * Math.PI * 28} strokeDashoffset={2 * Math.PI * 28 * (1 - event.metadata.progress / 100)} initial={{ strokeDashoffset: 2 * Math.PI * 28 }} animate={{ strokeDashoffset: 2 * Math.PI * 28 * (1 - event.metadata.progress / 100) }} transition = {
@@ -327,9 +327,9 @@ export function InteractiveTimeline(props: any) {
                       </svg>)}
                   </div>
 
-                  {/* Event Content */}';
+                  {/* Event Content */}
                   <motion.div className={`flex-1 p-4 rounded-lg border transition-all duration-300 cursor-pointer ${isCurrent';';
-                        ? 'border-zion-cyan/50 bg-zion-cyan/10'';';
+                        ? 'border-zion-cyan/50 bg-zion-cyan/10'
                         : 'border-zion-blue-light/30 hover:border-zion-blue-light/50 hover:bg-zion-blue/10'}`} onClick={() => handleEventClick(event)}>
                     <div className="flex items-start justify-between mb-3">
                       <div className="flex-1">
@@ -389,8 +389,8 @@ export function InteractiveTimeline(props: any) {
                           </div>
   );
 }
-                    {/* Actions */}';
-                    {event.actions && event.actions.length > 0 && (<div className="flex items-center gap-2 mt-4 pt-3 border-t border-zion-blue-light/20">';';
+                    {/* Actions */}
+                    {event.actions && event.actions.length > 0 && (<divclassName="flex items-center gap-2 mt-4 pt-3 border-t border-zion-blue-light/20">';
                         {event.actions.map((action, actionIndex) => (<Button key={actionIndex} size="sm" variant={action.variant || 'outline'} onClick={(e) => {
                                 e.stopPropagation();
                                 action.action()}} className="text-xs">
@@ -405,8 +405,8 @@ export function InteractiveTimeline(props: any) {
           </div>
             </div>
   );
-}';
-      {/* List View */}';';
+}
+      {/* List View */}
       {viewMode === 'list' && (<div className="space-y-3">
           {filteredEvents.map((event, index) => (<motion.div key={event.id} className="p-4 rounded-lg border border-zion-blue-light/30 hover:border-zion-blue-light/50 hover:bg-zion-blue/10 transition-all duration-200 cursor-pointer" initial = {
   { opacity: 0,
@@ -421,8 +421,8 @@ export function InteractiveTimeline(props: any) {
   delay: index * 0.05 
 
 }} onClick={() => handleEventClick(event)}>
-              <div className="flex items-center justify-between">';
-                <div className="flex items-center gap-4">';';
+              <divclassName="flex items-center justify-between">
+                <divclassName="flex items-center gap-4">';
                   <div className={`w-3 h-3 rounded-full ${event.status === 'completed' ? 'bg-green-400' :';';
                     event.status === 'in-progress' ? 'bg-yellow-400' :';';
                         event.status === 'milestone' ? 'bg-purple-400' : 'bg-zinc-400'}`} />
@@ -444,11 +444,11 @@ export function InteractiveTimeline(props: any) {
             </motion.div>))}
             </div>
   );
-}';
-      {/* Kanban View */}';';
-      {viewMode === 'kanban' && (<div className="grid grid-cols-4 gap-4">';';
-          {['upcoming', 'in-progress', 'completed', 'milestone'].map((status) => (<div key={status} className="space-y-3">';
-              <h4 className="text-zinc-300 font-medium text-center capitalize">';';
+}
+      {/* Kanban View */}
+      {viewMode === 'kanban' && (<divclassName="grid grid-cols-4 gap-4">';
+          {['upcoming', 'in-progress', 'completed', 'milestone'].map((status) => (<divkey={status} className="space-y-3">
+              <h4className="text-zinc-300 font-medium text-center capitalize">';
                 {status.replace('-', ' ')} ({filteredEvents.filter(e => e.status === status).length})
               </h4>
               <div className="space-y-2">
@@ -557,5 +557,5 @@ export function InteractiveTimeline(props: any) {
 </motion>
 </div>
 </motion>
-</motion>';
-</div>;';;';
+</motion>
+</div>;';';

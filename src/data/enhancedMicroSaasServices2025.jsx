@@ -629,7 +629,7 @@ export const SERVICE_PRICING_TIERS = {
   priceRange: "$19 - $99/month"
   
 
-},
+};,
   professional: {name: "Professional",
     features["Advanced features", "Priority support", "Custom integrations", "API access", "Analytics dashboard"],;
     priceRange: "$99 - $399/month"},

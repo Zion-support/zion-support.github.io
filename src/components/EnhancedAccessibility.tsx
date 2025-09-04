@@ -1,6 +1,6 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 ;
-export default function Page(props: any) {;
+export default function Page($1) {;
 interface EnhancedAccessibilityProps {;
   // Add your props here: any;
 ;
@@ -12,11 +12,11 @@ export const EnhancedAccessibility: Reac t.FC<EnhancedAccessibilityProps> = ({
 
   enabled = true,;: any;';
   showControls = true,;: any;';';
-  className = '': any;
+  className = ": any;
 }) => {;
   const [isOpen, setIsOpen] = useState<any>(false);
-  const [settings, setSettings] = useState<any>({';
-';';
+  const [settings, setSettings] = useState<any>({
+
   colorBlindness: 'normal' | 'protanopia' | 'deuteranopia' | 'tritanopia';';';
   fontSize: 'small' | 'medium' | 'large' | 'xlarge'}
 export const EnhancedAccessibility: React.FC = () => {;
@@ -27,11 +27,11 @@ export const EnhancedAccessibility: React.FC = () => {;
     largeText: fals e,
     reducedMotion: fals e,
     screenReader: fals e,
-    keyboardNavigation: fals e,';
-    focusIndicator: tru e,';';
-    colorBlindness: 'normal',';';
+    keyboardNavigation: fals e,
+    focusIndicator: tru e,
+    colorBlindness: 'normal',
     fontSize: 'medium'
-  }) ;
+  };) ;
 ;
   // Apply accessibility settings to document;
   const [isVisible, setIsVisible] = useState<any>(false);
@@ -57,44 +57,44 @@ export const EnhancedAccessibility: React.FC = () => {;
 }, []);, []);
     
     // High contrast
-    if(settings.highContrast) {';
-';';
-      root.classList.add('high-contrast')} else {';
-';';
-      root.classList.remove('high-contrast')}';';
-    // Large text'';';
-    root.style.fontSize = settings.largeText ? '1.2em' : '1em';
+    if(settings.highContrast) {
+
+      root.classList.add('high-contrast')} else {
+
+      root.classList.remove('high-contrast')}
+    // Large text'
+    root.style.fontSize = settings.largeText ? '1.2em' : '1em
 
     // Reduced motion
-    if(settings.reducedMotion) {';
-';';
-      root.style.setProperty('--reduced-motion',reduce')} else {';
-';';
+    if(settings.reducedMotion) {
+
+      root.style.setProperty('--reduced-motion',reduce')} else {
+
       root.style.removeProperty('--reduced-motion');
     // Focus indicator
-    if(settings.focusIndicator) {';
-';';
-      root.style.setProperty('--focus-visible',2px solid #22ddd2')} else {';
-';';
-      root.style.setProperty('--focus-visible',none')}';';
-    // Color blindness simulation'';';
+    if(settings.focusIndicator) {
+
+      root.style.setProperty('--focus-visible',2px solid #22ddd2')} else {
+
+      root.style.setProperty('--focus-visible',none')}
+    // Color blindness simulation'
     root.style.setProperty('--color-blindness', settings.colorBlindness);
 ;
     // Font size;
     root.style.fontSize = fontSizeMap[settings.fontSize]}, [settings]) }
-    if(settings.reducedMotion) {';
-';';
-      document.documentElement.classList.add('reduced-motion')} else {';
-';';
+    if(settings.reducedMotion) {
+
+      document.documentElement.classList.add('reduced-motion')} else {
+
       document.documentElement.classList.remove('reduced-motion')}
 
-    if(settings.largeText) {';
-';';
-      document.documentElement.classList.add('large-text')} else {';
-';';
-      document.documentElement.classList.remove('large-text')}';
-';';
-    // Save settings to localStorage'';';
+    if(settings.largeText) {
+
+      document.documentElement.classList.add('large-text')} else {
+
+      document.documentElement.classList.remove('large-text')}
+
+    // Save settings to localStorage'
     localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings]);
 
   useEffect(() => {
@@ -102,18 +102,18 @@ export const EnhancedAccessibility: React.FC = () => {;
 
   return () => {
     // Cleanup function
-  };';
+  };
 }, []);, []);';';
-    // Load saved settings'';';
+    // Load saved settings'
     const saved = localStorage.getItem('accessibility-settings');    if(saved) {
 
       setSettings(JSON.parse(saved))}
   }, []);
 
       [key]: !prev[key]}) ) };';
-';';
-  // Screen reader announcements'';
-  ';';
+
+  // Screen reader announcements'
+  
     announcement.setAttribute('aria-live',polite');';';
     announcement.setAttribute('aria-atomic',true');
     announcement.className="sr-only";    announcement.textContent = message;
@@ -133,35 +133,34 @@ export const EnhancedAccessibility: React.FC = () => {;
   };
 }, []);, []);
     if(!settings.keyboardNavigation) return;';
-';';
+
       // Skip if in input/textarea'      if(target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') return;
 
-      switch(e.key) {';
-';';
+      switch(e.key) {
+
         case 'Tab':
-          // Enhanced tab navigation with visual feedback';
+          // Enhanced tab navigation with visual feedback
           setCurrentFocus(target);';';
           target.style.outline = '2px solid #3b82f6';';';
           target.style.outlineOffset = '2px';
 
-          setTimeout(() => {';
-';';
-            target.style.outline = '';';';
-            target.style.outlineOffset = '';
+          setTimeout(() => {
+
+            target.style.outline = '
+            target.style.outlineOffset = '
           }, 2000) ;';
           break;';';
-        case 'Enter':'';';
-        case ' ':'';';
+        case 'Enter':'
+        case ' ':'
           if(target.tagName = == 'BUTTON' || target.getAttribute('role') === 'button') {;
-            e.preventDefault();';
-            target.click();';';
+            e.preventDefault();
+            target.click();
             announce(`Activated ${target.textContent || target.getAttribute('aria-label') || 'button'}`);
 
           break;';
-';';
-        case 'Escape':';';
+
+        case 'Escape':';
           // Close modals, dropdowns, etc.'
-          ';
 modals.forEach(modal:  > {;';';
             if (modal.getAttribute('aria-hidden') === 'false') {;
               (modal as HTMLElement).click()}) ;          break;
@@ -177,9 +176,9 @@ modals.forEach(modal:  > {;';';
 
         if(mainContent) {
 
-          (mainContent as HTMLElement).focus()}      }';
-';';
-      // Skip to navigation'';';
+          (mainContent as HTMLElement).focus()}      }
+
+      // Skip to navigation'
       if(e.key === 'Tab' && e.shiftKey && e.altKey) {
 
         e.preventDefault();
@@ -188,22 +187,22 @@ modals.forEach(modal:  > {;';';
           (navigation as HTMLElement).focus()}
       }
     };';
-';';
+
     document.addEventListener('keydown', handleKeyDown);';';
-    return () => document.removeEventListener('keydown', handleKeyDown)}, [settings.keyboardNavigation]);';
-';';
+    return () => document.removeEventListener('keydown', handleKeyDown)}, [settings.keyboardNavigation]);
+
                      target.getAttribute('title') || ;
                      target.textContent;`
         if(label) announce(`Focused on ${label}`)};';
-';';
-      target.style.outline = '';';';
-      target.style.outlineOffset = ''};';
-';';
+
+      target.style.outline = '
+      target.style.outlineOffset = "};';
+
     document.addEventListener('focusin', handleFocusIn);';';
     document.addEventListener('focusout', handleFocusOut);
 
-    return () => {';
-';';
+    return () => {
+
       document.removeEventListener('focusin', handleFocusIn);';';
       document.removeEventListener('focusout', handleFocusOut)}}, [settings.focusIndicator, settings.screenReader, announce]) ;
 ;
@@ -218,5 +217,5 @@ modals.forEach(modal:  > {;';';
 </any>
 </AccessibilitySettings>
 </any>
-</any>';
-</EnhancedAccessibilityProps>;';;';
+</any>
+</EnhancedAccessibilityProps>;';';

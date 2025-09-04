@@ -11,10 +11,10 @@ export default function PerformanceOptimizer({ children }) {
       const images = document.querySelectorAll('img');
       images.forEach(img => {
         // Add decoding="async" for better performance
-        img.decoding = 'async';
+        img.decoding = 'async
         // Add error handling
         img.onerror = () => {
-          img.style.display = 'none';
+          img.style.display = 'none
         };
       });
     };
@@ -123,22 +123,22 @@ if (typeof window !== 'undefined') {
       // Trigger garbage collection if available
       if ('gc' in window) {
 =======
-import React, {useEffect, useMemo, useCallback} from 'react';';';
+import React, {useEffect, useMemo, useCallback} from 'react
 import {useLocation} from 'react-router-dom';
 
-export default function Page(props: any) {';
-"';';
-        // Add decoding="async" for better performance'';';
-        img.decoding = 'async';
+export default function Page($1) {
+";';
+        // Add decoding="async" for better performance'
+        img.decoding = 'async
         // Add error handling
-        img.onerror = () => {';
-';';
-          img.style.display = 'none';
+        img.onerror = () => {
+
+          img.style.display = 'none
         };
       });
     };';
-';';
-    // Use requestIdleCallback for non-critical optimization'';';
+
+    // Use requestIdleCallback for non-critical optimization'
     if('requestIdleCallback' in window) {requestIdleCallback(optimizeImages);} else {setTimeout(optimizeImages, 100);}
   }, [location.pathname]);
 
@@ -158,33 +158,33 @@ export default function Page(props: any) {';
   }, []);
 
   useEffect(() => {// TODO: Add dependencies if needed}, []);';
-';';
+
     window.addEventListener('scroll', handleScroll, {passive: true});';';
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
   // Service Worker registration for caching
   useEffect(() => {// TODO: Add dependencies if needed}, []);';
-';';
-    if('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {';
-';';
-      navigator.serviceWorker'';';
+
+    if('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+
+      navigator.serviceWorker'
         .register('/sw.js')
         .then(registration => {
 
-          // // ';
-';';
-          // Check for updates'';';
+          // // 
+
+          // Check for updates'
           registration.addEventListener('updatefound', () => {
             const newWorker = registration.installing;
-            if(newWorker) {';
-';';
-              newWorker.addEventListener('statechange', () => {';';
-                if('';';
+            if(newWorker) {
+
+              newWorker.addEventListener('statechange', () => {
+                if('
                   newWorker.state === 'installed' &&
                   navigator.serviceWorker.controller
-                ) {';
-';';
+                ) {
+
                   // New service worker available'
                   // // 
                 }
@@ -198,7 +198,7 @@ export default function Page(props: any) {';
 
   // Intersection Observer for lazy loading
   useEffect(() => {// TODO: Add dependencies if needed}, []);';
-';';
+
     if('IntersectionObserver' in window) {
 
       const observer = new IntersectionObserver()
@@ -210,19 +210,18 @@ export default function Page(props: any) {';
 
               const target = entry.target;
               if(target.dataset.src) {
-';
                 target.src = target.dataset.src;';';
                 target.removeAttribute('data-src');
                 observer.unobserve(target);
               }
             }
           });';
-        },';';
+        },
         {rootMargin: '50px',
           threshold: 0.1}
       );';
-';';
-      // Observe all images with data-src'';';
+
+      // Observe all images with data-src'
       const lazyImages = document.querySelectorAll('img[data-src]');
       lazyImages.forEach(img => observer.observe(img));
 
@@ -231,29 +230,29 @@ export default function Page(props: any) {';
   }, [location.pathname]);
 
   return <>{optimizedChildren}</>
-};';
-';';
-// Add global performance optimizations'';';
-if(typeof window !== 'undefined') {';
-';';
-  // Optimize long tasks'';';
+};
+
+// Add global performance optimizations'
+if(typeof window !== 'undefined') {
+
+  // Optimize long tasks'
   if('scheduler' in window && 'postTask' in window.scheduler) {
 
     window.scheduler.postTask()
       () => {
-        // Run non-critical tasks during idle time';
-      },';';
+        // Run non-critical tasks during idle time
+      },
       {priority: 'background'}
     );
-  }';
-';';
-  // Optimize memory usage'';';
+  }
+
+  // Optimize memory usage'
   if('memory' in performance) {
 
     const memoryThreshold = 50 * 1024 * 1024; // 50MB
-    if(performance.memory.usedJSHeapSize > memoryThreshold) {';
-';';
-      // Trigger garbage collection if available'';';
+    if(performance.memory.usedJSHeapSize > memoryThreshold) {
+
+      // Trigger garbage collection if available'
       if('gc' in window) {
 
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
@@ -270,6 +269,6 @@ if(typeof window !== 'undefined') {';
 ;"
   });,"})
 }
- export const PerformanceOptimizer = memo(({children}) => { const location = useLocation () """';
-;';;';
+ export const PerformanceOptimizer = memo(({children};) => { const location = useLocation () ";
+;';';
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599

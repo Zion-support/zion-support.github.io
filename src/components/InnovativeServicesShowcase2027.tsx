@@ -1,6 +1,6 @@
 import {  import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from '../data/innovativeServices2027';
 
-export default function Page(props: any) {
+export default function Page($1) {
       },
       { threshold: 0.1 }
     );
@@ -48,9 +48,9 @@ export default function Page(props: any) {
             <br  />"
             <span className="text-white">Technology Services</span>
           </h2>
-"';
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">';';
-            Experience the future of technology with our cutting-edge 2027 services.'';';
+";
+          <pclassName="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">';
+            Experience the future of technology with our cutting-edge 2027 services.'
             From quantum computing to AI consciousness, we're pushing the boundaries of what's possible.</p>
         </motion.div>
 
@@ -75,12 +75,12 @@ export default function Page(props: any) {
 
 }}"
           className="mb-12"
-"';
-          <div className="flex flex-wrap justify-center gap-3">';';
-            <button'';';
-              onClick={() => setSelectedCategory('All')}';';
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === 'All''';';
-                  ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25''';';
+";
+          <div className="flex flex-wrap justify-center gap-3">';
+            <button'
+              onClick={() => setSelectedCategory('All')}
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === 'All"
+                  ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25"
                   : 'bg-zion-slate-light/50 text-gray-300 hover: b g-zion-slate-light/70 hover: tex t-white';`
               }`};
             >;
@@ -88,10 +88,10 @@ export default function Page(props: any) {
             </button> {serviceCategories2027.map((category) => {;
               
               return ()                <button
-                  key = {category}';
-                  onClick={() => setSelectedCategory(category)}`';';
-                  className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 ${selectedCategory === category'';';
-                      ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25''';';
+                  key = {category}
+                  onClick={() => setSelectedCategory(category)}`
+                  className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 ${selectedCategory === category'
+                      ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25"
                       : 'bg-zion-slate-light/50 text-gray-300 hover: b g-zion-slate-light/70 hover: tex t-white'`
                   }`};
                 >;"
@@ -179,8 +179,8 @@ export default function Page(props: any) {
                   <div className="text-2xl font-bold text-white">{service.price}</div>
                   <button
                     onClick={() => toggleServiceExpansion(service.id)}"
-                    className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover: shado w-lg hover: shado w-zion-cyan/25 transition-all duration-300 flex items-center gap-2"';
-';';
+                    className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover: shado w-lg hover: shado w-zion-cyan/25 transition-all duration-300 flex items-center gap-2";
+
                     {expandedService === service.id ? 'Less' : 'Learn More'}"
                     {expandedService === service.id ? <ChevronUp className="w-4 h-4"   /> : <ChevronDown className="w-4 h-4"   />}                  </button>
                 </div>
@@ -196,8 +196,7 @@ export default function Page(props: any) {
 
 }}
                       animate = {
-';
-  { opacity: 1,';';
+  { opacity: 1,
   height: 'auto'
 
 }}
@@ -250,7 +249,7 @@ export default function Page(props: any) {
                         {/* Primary CTA */}
                         <a href={service.href}"
                           target={service.external ? "_blank" : "_self"}"
-                          rel={service.external ? "noopener noreferrer" : ""}"
+                          rel={service.external ? "noopener noreferrer" : "}"
                           className="w-full px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover: shado w-lg hover: shado w-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2 group"
 
                           {service.ctaLabel}"
@@ -317,8 +316,8 @@ export default function Page(props: any) {
         </motion.div>;
       </div>;';
     </section>;) };';';
-'"`
+"`
 
 </motion>
-</motion>';
-</motion>;';;';
+</motion>
+</motion>;';';

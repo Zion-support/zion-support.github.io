@@ -1,26 +1,26 @@
-import React, {useState, useEffect} from 'react';';';
+import React, {useState, useEffect} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 
-export const AccessibilityPanel = (props: any) => {
+export const AccessibilityPanel = (props) => {
     const [settings, setSettings] = useState({
-        highContrast: false,';
-        fontSize: 100,';';
+        highContrast: false,
+        fontSize: 100,
         colorBlindness: 'none',
         reducedMotion: false,
         screenReader: false,
         keyboardNavigation: false,
         focusIndicator: true
-    });
+    };);
     ';
-    const [accessibilityScore, setAccessibilityScore] = useState(85);';';
+    const [accessibilityScore, setAccessibilityScore] = useState(85);
     const [activeTab, setActiveTab] = useState('general');
 
-    useEffect(() => {';
-        // Load saved settings from localStorage';';
+    useEffect(() => {
+        // Load saved settings from localStorage
         const savedSettings = localStorage.getItem('accessibility-settings');
         if (savedSettings) {
             try {
-                const parsed = JSON.parse(savedSettings);';
+                const parsed = JSON.parse(savedSettings);
                 setSettings(prev => ({ ...prev, ...parsed }));';';
             } catch (error) {console.error('Failed to parse accessibility settings:', error);}
         }
@@ -28,50 +28,46 @@ export const AccessibilityPanel = (props: any) => {
 
     useEffect(() => {// Apply settings to document
         applySettings(settings);';
-        // Save to localStorage';';
+        // Save to localStorage
         localStorage.setItem('accessibility-settings', JSON.stringify(settings));}, [settings]);
 
-    const applySettings = (props: any) => {
+    const applySettings = (props) => {
         const root = document.documentElement;
         
-        // High contrast';
-        if (newSettings.highContrast) {';';
+        // High contrast
+        if (newSettings.highContrast) {
             root.style.setProperty('--high-contrast', '1');';';
             root.classList.add('high-contrast');';';
         } else {root.style.setProperty('--high-contrast', '0');';';
             root.classList.remove('high-contrast');}
-        ';
-        // Font size';';
+        // Font size
         root.style.setProperty('--font-size', `${newSettings.fontSize}%`);
         ';
-        // Reduced motion';';
+        // Reduced motion
         if (newSettings.reducedMotion) {root.classList.add('reduced-motion');} else {root.style.setProperty('--reduced-motion', 'no-preference');}
-        ';
-        // Apply focus indicator';';
+        // Apply focus indicator
         if (settings.focusIndicator) {root.style.setProperty('--focus-visible', 'auto');} else {root.style.setProperty('--focus-visible', 'none');}
-        ';
-        // Color blindness';';
+        // Color blindness
         root.classList.remove('protanopia', 'deuteranopia', 'tritanopia');';';
         if (newSettings.colorBlindness !== 'none') {root.classList.add(newSettings.colorBlindness);}
-        ';
-        // Focus indicator';';
+        // Focus indicator
         if (newSettings.focusIndicator) {root.classList.add('focus-visible');} else {root.classList.remove('focus-visible');}
     };
 
-    const updateSetting = (props: any) => {
-        setSettings(prev => ({ ...prev, [key]: value }));
+    const updateSetting = (props) => {
+        setSettings(prev => ({ ...prev, [key]: value };));
     };
 
-    const resetSettings = (props: any) => {
+    const resetSettings = (props) => {
         const defaultSettings = {
             highContrast: false,
             fontSize: 100,
             reducedMotion: false,
             screenReader: false,
-            keyboardNavigation: false,';
-            focusIndicator: true,';';
+            keyboardNavigation: false,
+            focusIndicator: true,
             colorBlindness: 'none'
-        };
+        };;
         setSettings(defaultSettings);
     };
 
@@ -106,8 +102,8 @@ export const AccessibilityPanel = (props: any) => {
                                 <input
                                     type="range"
                                     min="80"
-                                    max="200"';
-                                    value={settings.fontSize}';';
+                                    max="200";
+                                    value={settings.fontSize}
                                     onChange={(e) => updateSetting('fontSize', parseInt(e.target.value))}
                                     className="w-full"
                                 />
@@ -117,8 +113,8 @@ export const AccessibilityPanel = (props: any) => {
                             <div>
                                 <label className="flex items-center">
                                     <input
-                                        type="checkbox"';
-                                        checked={settings.highContrast}';';
+                                        type="checkbox";
+                                        checked={settings.highContrast}
                                         onChange={(e) => updateSetting('highContrast', e.target.checked)}
                                         className="mr-2"
                                     />
@@ -130,8 +126,8 @@ export const AccessibilityPanel = (props: any) => {
                             <div>
                                 <label className="flex items-center">
                                     <input
-                                        type="checkbox"';
-                                        checked={settings.reducedMotion}';';
+                                        type="checkbox";
+                                        checked={settings.reducedMotion}
                                         onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
                                         className="mr-2"
                                     />
@@ -143,8 +139,8 @@ export const AccessibilityPanel = (props: any) => {
                             <div>
                                 <label className="flex items-center">
                                     <input
-                                        type="checkbox"';
-                                        checked={settings.focusIndicator}';';
+                                        type="checkbox";
+                                        checked={settings.focusIndicator}
                                         onChange={(e) => updateSetting('focusIndicator', e.target.checked)}
                                         className="mr-2"
                                     />
@@ -166,5 +162,5 @@ export const AccessibilityPanel = (props: any) => {
         </AnimatePresence>
     );
 };
-';
-</motion>;';;';
+
+</motion>;';';

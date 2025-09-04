@@ -679,16 +679,16 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     },
     competitors: ["Waymo", "Cruise", "Aurora", "TuSimple"],
     marketSize: "$5.6 billion by 2025"
-  }
+  };
 ];
 
 // Import new services
-import { NEW_INNOVATIVE_SERVICES_2025 } from './newInnovativeServices2025';
+import { NEW_INNOVATIVE_SERVICES_2025 } from './newInnovativeServices2025
 import { NEW_IT_SERVICES_2025 } from './newITServices2025';
 import { NEW_MICRO_SAAS_SERVICES_2025 } from './newMicroSaasServices2025';
 
 // Re-export new services
-export { NEW_INNOVATIVE_SERVICES_2025 } from './newInnovativeServices2025';
+export { NEW_INNOVATIVE_SERVICES_2025 } from './newInnovativeServices2025
 export { NEW_IT_SERVICES_2025 } from './newITServices2025';
 export { NEW_MICRO_SAAS_SERVICES_2025 } from './newMicroSaasServices2025';
 

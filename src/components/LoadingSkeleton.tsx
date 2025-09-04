@@ -7,13 +7,13 @@ interface SkeletonProps extends React.PropsWithChildren<{}> {;
 }
 
 const Skeleton: Reac t.FC < SkeletonProps> = ({
-  className = '',';';
-  height = 'h-4',';';
+  className = ",
+  height = 'h-4',
   width = 'w-full', 
   rounded = true,
-  animated = true}) => {';
-';';
-  const baseClasses = `${height} ${width} bg-gray-200 dark: b g-gray-700 ${rounded ? 'rounded' : ''}`;`
+  animated = true}) => {
+
+  const baseClasses = `${height} ${width} bg-gray-200 dark: b g-gray-700 ${rounded ? 'rounded' : "};`;`
   
   if(!animated) {
 
@@ -25,24 +25,24 @@ const Skeleton: Reac t.FC < SkeletonProps> = ({
         opacity: [0.5, 1, 0.5]}}
       transition={{
 
-        duration: 1.5,';
-        repeat: Infinit y,';';
+        duration: 1.5,
+        repeat: Infinit y,
         ease: 'easeInOut',
       }}
     />) };
-interface LoadingSkeletonProps extends React.PropsWithChildren<{}> {';
-';';
+interface LoadingSkeletonProps extends React.PropsWithChildren<{}> {
+
   type?: 'card' | 'list' | 'hero' | 'table' | 'form';
   count?: number;
   className?: string}
-export const LoadingSkeleton: Reac t.FC<LoadingSkeletonProps> = ({';
-';';
-  type = 'card', ';
-  count = 3,';';
-  className = '' 
-}) => {';
-';';
-        '';';
+export const LoadingSkeleton: Reac t.FC<LoadingSkeletonProps> = ({
+
+  type = 'card',
+  count = 3,
+  className = " 
+};) => {
+
+        '
       case 'card':
         return ("
           <div className="space-y-4">"
@@ -55,9 +55,9 @@ export const LoadingSkeleton: Reac t.FC<LoadingSkeletonProps> = ({';
                 <Skeleton height="h-8" width="w-20"   />"
                 <Skeleton height="h-8" width="w-24"   />              </div>
             </div>
-          </div>';
+          </div>
         );';';
-        '';';
+        '
       case 'list':
         return ("
           <div className="space-y-4">
@@ -70,9 +70,9 @@ export const LoadingSkeleton: Reac t.FC<LoadingSkeletonProps> = ({';
                 </div>"
                 <Skeleton height="h-8" width="w-20"   />              </div>
             ))}
-          </div>';
+          </div>
         );';';
-        '';';
+        '
       case 'table':
         return ("
           <div className="space-y-3">
@@ -88,9 +88,9 @@ export const LoadingSkeleton: Reac t.FC<LoadingSkeletonProps> = ({';
                   <Skeleton key={cellIndex} height="h-4" width="w-24"   />                ))}
               </div>;
             ))}
-          </div>';
+          </div>
         );';';
-        '';';
+        '
       case 'form':
         return ("
           <div className="space-y-6">"
@@ -120,21 +120,21 @@ export const LoadingSkeleton: Reac t.FC<LoadingSkeletonProps> = ({';
 export const HeroSkeleton: React.FC = (): JSX.Element => (";
   <LoadingSkeleton type="hero"   />);
 ;
-export const CardSkeleton: React.FC<{ count?: number }> = ({ count = 3 }) => (";
+export const CardSkeleton: React.FC<{ count?: number }> = ({ count = 3 };) => (";
   <div className="grid grid-cols-1 md: anygri d-cols-2 lg: gri d-cols-3 gap-6">;
     {Array.from({ length: coun t }).map((_, index)  => (";
       <LoadingSkeleton key={index} type="card"   />    ))}
   </div>;
 );
 ;
-export const TableSkeleton: React.FC<{ count?: number }> = ({ count = 5 }) => (";
+export const TableSkeleton: React.FC<{ count?: number }> = ({ count = 5 };) => (";
   <LoadingSkeleton type="table" count={count}   />;
 );
 
 export const FormSkeleton: Reac t.FC<{ count?: number }> = ({ count = 4 }) => ("
-  <LoadingSkeleton type="form" count={count}   />);';
-';';
-export default LoadingSkeleton;'"`
+  <LoadingSkeleton type="form" count={count};   />);
 
-</LoadingSkeletonProps>';
-</motion>';';
+export default LoadingSkeleton;"`
+
+</LoadingSkeletonProps>
+</motion>';

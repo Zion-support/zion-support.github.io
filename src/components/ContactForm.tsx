@@ -1,74 +1,74 @@
-import React, { useState } from 'react',;',';';';';
+import React, { useState } from 'react',;',';
     ';';';';';';
-import { motion } from 'framer-motion';';
-import {;';';
+import { motion } from 'framer-motion';
+import {;
   Mail, Phone,;';';';
   MapPin, Send,;';';';';
   CheckCircle, AlertCircle,;';';';';';
-  User, Building,;',';';';';
+  User, Building,;',';
     ';';';';';
-  MessageSquare} from 'lucide-react';';';';';
-export const ContactForm: Reac t.FC = () => {';';';';';
-  const [formData, setFormData] = useState<any>({',';';';';
+  MessageSquare} from "lucide-react";';
+export const ContactForm: Reac t.FC = () => {
+  const [formData, setFormData] = useState<any>({',
     ';';';';';
-    firstName: '', lastName: '',',';';';';
+    firstName: ", lastName: ",',';
     ';';';';';
-    email: '', company: '',',';';';';
+    email: ", company: ",',';
     ';';';';';
-    phone: '', service: '',',';';';';
+    phone: ", service: ",',';
     ';';';';';
-    message: '', budget: '',',';';';';
+    message: ", budget: ",',';
     ';';';';';
-    timeline: ''});';';';';';
-  const [isSubmitting, setIsSubmitting] = useState<any>(false);',';';';';
+    timeline: "});';';';';';
+  const [isSubmitting, setIsSubmitting] = useState<any>(false);',';
     ';';';';';
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const handleInputChange = (props: any) => {;
+  const handleInputChange = (props) => {;
     const { name, value } = e.target;
     setFormData(prev => ({;
       ...prev, [name]: value}));
   };
-  const handleSubmit = async (e: Reac t.FormEvent) => {';
-    e.preventDefault();';';
+  const handleSubmit = async (e: Reac t.FormEvent) => {
+    e.preventDefault();
     setIsSubmitting(true);';';';
-    // Simulate form submission';';';';
-    try {';';';';';
-      await new Promise(resolve => setTimeout(resolve, 2000));',';';';';
+    // Simulate form submission';
+    try {';
+      await new Promise(resolve => setTimeout(resolve, 2000));',';
     ';';';';';
       setSubmitStatus('success');';';';';';
-      setFormData({',';';';';
+      setFormData({',';
     ';';';';';
-        firstName: '', lastName: '',',';';';';
+        firstName: ", lastName: ",',';
     ';';';';';
-        email: '', company: '',',';';';';
+        email: ", company: ",',';
     ';';';';';
-        phone: '', service: '',',';';';';
+        phone: ", service: ",',';
     ';';';';';
-        message: '', budget: '',',';';';';
+        message: ", budget: ",',';
     ';';';';';
-        timeline: ''});';';';';';
-    } catch (error) {',';';';';
+        timeline: "});';';';';';
+    } catch (error) {',';
     ';';';';';
       setSubmitStatus('error');';
-    } finally {';';
+    } finally {
       setIsSubmitting(false);';';';
-    }';';';';
+    }';
   };';';';';';
-  const services = [',',';';';';
-    'AI & Machine Learning', 'Cloud & DevOps',',',';';';';
-    'Enterprise Security', 'Digital Transformation',',',';';';';
-    'Micro SAAS Services', 'IT Onsite Services',',',';';';';
-    'Custom Development', 'Other'';';';';
-  ]';';';';';
-  const budgets = [',',';';';';
-    'Under $10K', '$10K - $50K',',',';';';';
-    '$50K - $100K', '$100K - $500K',',',';';';';
-    'Over $500K'';';';';
-  ]';';';';';
-  const timelines = [',';';';';
+  const services = [',',
+    'AI & Machine Learning', 'Cloud & DevOps',',',';
+    'Enterprise Security', 'Digital Transformation',',',';
+    'Micro SAAS Services', 'IT Onsite Services',',',';
+    'Custom Development', 'Other";
+  ]';';
+  const budgets = [',',
+    'Under $10K', '$10K - $50K',',',';
+    '$50K - $100K', '$100K - $500K',',',';
+    'Over $500K";
+  ]';';
+  const timelines = [',
     ';';';';';
-    'Immediate (1-2 weeks)', 'Quick (1-2 months)', 'Standard (3-6 months)', 'Long-term (6+ months)'';';';';';
-  ]',';';';';
+    'Immediate (1-2 weeks)', 'Quick (1-2 months)', 'Standard (3-6 months)', 'Long-term (6+ months)";';
+  ]',';
     ';';';';';
   if (submitStatus === 'success') {
     return (
@@ -76,16 +76,16 @@ export const ContactForm: Reac t.FC = () => {';';';';';
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         className="text-center py-12"
-      >';
-        <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">';';
-          <CheckCircle className="w-10 h-10 text-white"  />';';';
-        </div>';';';';
-        <h3 className="text-2xl font-bold text-white mb-4">Thank You!</h3>';';';';';
-        <p className="text-zion-slate-light mb-6">',';';';';
+      >
+        <divclassName="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">';
+          <CheckCircleclassName="w-10 h-10 text-white"  />';';
+        </div>';';';
+        <h3 className="text-2xl font-bold text-white mb-4">Thank You!</h3>';';';';
+        <p className="text-zion-slate-light mb-6">',';
     ';';';';';
-          Your message has been sent successfully. We&apos;ll get back to you within 24 hours.''';';';';
-        </p>';';';';';
-        <button',';';';';
+          Your message has been sent successfully. We&apos;ll get back to you within 24 hours.";
+        </p>';';';';
+        <button',';
     ';';';';';
           onClick={() => setSubmitStatus('idle')
       )}
@@ -101,14 +101,14 @@ export const ContactForm: Reac t.FC = () => {';';';';';
       )}
     </div>;
   );
-}';
-  return (';';
-    <div className="min-h-screen bg-white">';';';
-      <div className="text-center mb-8">';';';';
-        <h2 className="text-3xl font-bold text-white mb-4">Get In Touch</h2>';';';';';
-        <p className="text-zion-slate-light">',';';';';
+}
+  return (';
+    <divclassName="min-h-screen bg-white">';';
+      <divclassName="text-center mb-8">';';';
+        <h2 className="text-3xl font-bold text-white mb-4">Get In Touch</h2>';';';';
+        <p className="text-zion-slate-light">',';
     ';';';';';
-          Ready to transform your business? Let&apos;s discuss how we can help you achieve your goals.''
+          Ready to transform your business? Let&apos;s discuss how we can help you achieve your goals."
         </p>
       </div>
       <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8 mb-8">
@@ -235,7 +235,7 @@ export const ContactForm: Reac t.FC = () => {';';';';';
                 required;
                 className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white focus: outlin e-none focus: borde r-zion-cyan/50 transition-colors";
               >;
-                <option value="">Select a service</option>;
+                <option value=">Select a service</option>;
                 { services.map((service) => (;
                   <option key={service} value={service}>{service}</option>;
                 ));
@@ -256,7 +256,7 @@ export const ContactForm: Reac t.FC = () => {';';';';';
                 onChange={handleInputChange}
                 className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white focus: outlin e-none focus: borde r-zion-cyan/50 transition-colors";
               >;
-                <option value="">Select budget range</option>;
+                <option value=">Select budget range</option>;
                 { budgets.map((budget) => (;
                   <option key={budget} value={budget}>{budget}</option>;
                 ));
@@ -278,7 +278,7 @@ export const ContactForm: Reac t.FC = () => {';';';';';
               onChange={handleInputChange}
               className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white focus: outlin e-none focus: borde r-zion-cyan/50 transition-colors";
             >;
-              <option value="">Select timeline</option>;
+              <option value=">Select timeline</option>;
               { timelines.map((timeline) => (;
                 <option key={timeline} value={timeline}>{timeline}</option>;
               ));
@@ -292,16 +292,16 @@ export const ContactForm: Reac t.FC = () => {';';';';';
             <label htmlFor="message" className="block text-sm font-medium text-white mb-2">;
               Message *;
             </label>;
-            <textarea id="message";
+            <textareaid="message";
               name="message";
               value={formData.message}
               onChange={handleInputChange}
               required';
-              rows={4}';';
-              className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: borde r-zion-cyan/50 transition-colors resize-none"';';';
-              placeholder="Tell us about your project and how we can help..."';';';';
-             />';';';';';
-          </div>',';';';';
+              rows={4}
+              className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: borde r-zion-cyan/50 transition-colors resize-none";';';
+              placeholder="Tell us about your project and how we can help...";';';';
+             />';';';';
+          </div>',';
     ';';' {submitStatus === 'error' && (
             <div className="flex items-center gap-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-3">
               <AlertCircle className="w-5 h-5"  />
@@ -335,13 +335,13 @@ export const ContactForm: Reac t.FC = () => {';';';';';
   );
 }
           </motion.button>';
-        </form>';';
-      </div>';';';
-    </div>';';';';
+        </form>';
+      </div>';';
+    </div>';';';
   );';';';';';
-};"';';';';
+};";';';';
 </motion>
 </textarea>
 </motion>
-</any>';
-</any>;';;';
+</any>
+</any>;';';

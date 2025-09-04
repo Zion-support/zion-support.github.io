@@ -1,4 +1,4 @@
-import React from 'react',;',';';';';
+import React from 'react',;',';
     ';';';';';';
 import {SEO } from '@/components/SEO';
 export default function AdvancedAnalyticsDashboard.test() {return (
@@ -8,8 +8,8 @@ export default function AdvancedAnalyticsDashboard.test() {return (
         <h1 className="text-4xl font-bold text-white mb-8">AdvancedAnalyticsDashboard.test</h1>
         <p className="text-gray-300 text-lg">
           Professional AdvancedAnalyticsDashboard.test services to help your business grow.';
-        </p>';';
-      </div>';';';
-    </div>';';';';
+        </p>';
+      </div>';';
+    </div>';';';
   );';';';';';
-}"';';';';;';;';
+}";';';';';';

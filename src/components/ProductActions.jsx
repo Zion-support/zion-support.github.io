@@ -1,17 +1,16 @@
-import {useState} from 'react';';';
-import { Loader2 import { toast } from 'react-toastify';';';
+import {useState} from 'react';
+import { Loader2 import { toast } from 'react-toastify';
 import {Button} from '@/components/ui/button';
-export function ProductActions(props: any) {';
-    const [loading, setLoading] = useState(false);';';
+export function ProductActions($1) {
+    const [loading, setLoading] = useState(false);
     const [label, setLabel] = useState('Add to Cart');
     const addToCart = async () => {
         setLoading(true);
-        try {';
+        try {
             await onAddToCart();';';
             toast('2U Rack Mount Server added to cart');';';
             setLabel('Added!');';';
-            setTimeout(() => setLabel('Add to Cart'), 1500)}
-        finally {setLoading(false)}
+            setTimeout(() => setLabel('Add to Cart'), 1500)} finally {setLoading(false)}
     };
     return (<Button onClick={addToCart} disabled={loading}>
       {loading ? (<span className="flex items-center gap-2">
@@ -19,5 +18,4 @@ export function ProductActions(props: any) {';
           {label}
         </span>) : (label)}
     </Button>)}
-';
-export default ProductActions;;';;';
+export default ProductActions;';';

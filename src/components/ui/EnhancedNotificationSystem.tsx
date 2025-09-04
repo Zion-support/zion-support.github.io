@@ -11,12 +11,11 @@ action?: {;
     onClick: : unknown void;
 }}
 
-interface NotificationContextType {';
+interface NotificationContextType {
   notifications: Notificatio n[];';';
   addNotification: (notification: Omi t<Notification,id'>)  => void;
   removeNotification: (id: string)  => void;
   clearAll: ()  => void}
-';
   notifications: Notificatio n[];';';
   addNotification: notificatio n: Omit<Notification,id'> void;
   removeNotification: i d: string void;
@@ -25,15 +24,15 @@ interface NotificationContextType {';
 ;
 ;
 export ';
-  const context = useContext(NotificationContext);  if (!context) {';';
-'';';
+  const context = useContext(NotificationContext);  if (!context) {
+'
     throw new Error('useNotifications must be used within a NotificationProvider')}
   return context};
 ;
 interface NotificationProviderProps extends React.PropsWithChildren<{}> {;
   children: React.ReactNode}
 ;
-export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {;
+export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children };) => {;
   const [notifications, setNotifications] = useState<any>([]);
 ;
         removeNotification(id)}, notification.duration || 5000)}
@@ -106,12 +105,12 @@ const NotificationContainer: React.FC = props {;  const { notifications, removeN
   notification: Notificatio n;
   onRemove: (id: string)  => void}
 
-const NotificationItem: Reac t.FC<NotificationItemProps> = ({ notification, onRemove }) => {
-"';
-        return <Info className = "w-5 h-5 text-blue-400"   />}};';';
+const NotificationItem: Reac t.FC<NotificationItemProps> = ({ notification, onRemove };) => {
+";
+        return <Info className = "w-5 h-5 text-blue-400"   />}};
 '        return 'border-blue-500/30'}
-  };';
-';';
+  };
+
         return 'bg-blue-500/10'}
   };
 ;
@@ -170,9 +169,8 @@ export ';';
 
     // // // // // // // // },
   info: (title: string, message: string, options?: Partial<Notification>) => {
-';
     // // // // // // // // }};';';
-'"`
+"`
 </Notification>
 </Notification>
 </motion>
@@ -181,5 +179,5 @@ export ';';
 </NotificationContext>
 </any>
 </NotificationProviderProps>
+</Notification>
 </Notification>';
-</Notification>';';

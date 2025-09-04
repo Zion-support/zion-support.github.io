@@ -1,51 +1,51 @@
-import React from 'react',;',';';';';
+import React from 'react',;',';
     ';';';';';';
-import Link from 'next/link';';';
-export function SiteFooter(props: any) {';';';
-  const currentYear = new Date().getFullYear();';';';';
-  const navSections = [';';' {',';';';';
+import Link from 'next/link';
+export function SiteFooter($1) {
+  const currentYear = new Date().getFullYear();
+  const navSections = [' {',';
     ';';';';';
-      title: 'Company',';';';';';
-      links: [',';';';';
-    ';';' { label: 'Home', href: '/' },',';';';';
-    ';';' { label: 'About', href: '/about' },',';';';';
-    ';';' { label: 'Partners', href: '/partners' },',';';';';
-    ';';' { label: 'Careers', href: '/careers' },',';';';';
-    ';';' { label: 'Contact', href: '/contact' }';';';
-]';';';';
-},';';' {',';';';';
+      title: 'Company',';';
+      links: [',';
+    ';';' { label: 'Home', href: '/' },',';
+    ';';' { label: 'About', href: '/about' },',';
+    ';';' { label: 'Partners', href: '/partners' },',';
+    ';';' { label: 'Careers', href: '/careers' },',';
+    ';';' { label: 'Contact', href: '/contact' }
+]';
+},' {',';
     ';';';';';
-      title: 'Services',';';';';';
-      links: [',';';';';
-    ';';' { label: 'All Services', href: '/services' },',';';';';
-    ';';' { label: 'AI Services', href: '/services/ai-services' },',';';';';
-    ';';' { label: 'IT Services', href: '/services/it-services' },',';';';';
-    ';';' { label: 'Micro SaaS', href: '/services/micro-saas' },',';';';';
-    ';';' { label: 'Pricing', href: '/pricing' }';';';
-]';';';';
-},';';' {',';';';';
+      title: 'Services',';';
+      links: [',';
+    ';';' { label: 'All Services', href: '/services' },',';
+    ';';' { label: 'AI Services', href: '/services/ai-services' },',';
+    ';';' { label: 'IT Services', href: '/services/it-services' },',';
+    ';';' { label: 'Micro SaaS', href: '/services/micro-saas' },',';
+    ';';' { label: 'Pricing', href: '/pricing' }
+]';
+},' {',';
     ';';';';';
-      title: 'Resources',';';';';';
-      links: [',';';';';
-    ';';' { label: 'Blog', href: '/blog' },',';';';';
-    ';';' { label: 'Case Studies', href: '/case-studies' },',';';';';
-    ';';' { label: 'White Papers', href: '/white-papers' },',';';';';
-    ';';' { label: 'Webinars', href: '/webinars' },',';';';';
-    ';';' { label: 'Documentation', href: '/documentation' }';';';
-]';';';';
-},';';' {',';';';';
+      title: 'Resources',';';
+      links: [',';
+    ';';' { label: 'Blog', href: '/blog' },',';
+    ';';' { label: 'Case Studies', href: '/case-studies' },',';
+    ';';' { label: 'White Papers', href: '/white-papers' },',';
+    ';';' { label: 'Webinars', href: '/webinars' },',';
+    ';';' { label: 'Documentation', href: '/documentation' }
+]';
+},' {',';
     ';';';';';
-      title: 'Legal',';';';';';
-      links: [',';';';';
-    ';';' { label: 'Privacy Policy', href: '/privacy' },',';';';';
-    ';';' { label: 'Terms of Service', href: '/terms' },',';';';';
-    ';';' { label: 'Sitemap', href: '/sitemap' }';';
-]';';';
-}';';';';
-]';';';';';
-  const social = [',';';';';
-    ';';' { label: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group' },',';';';';
-    ';';' { label: 'Twitter', href: 'https://twitter.com/ziontechgroup' },',';';';';
+      title: 'Legal',';';
+      links: [',';
+    ';';' { label: 'Privacy Policy', href: '/privacy' },',';
+    ';';' { label: 'Terms of Service', href: '/terms' },',';
+    ';';' { label: 'Sitemap', href: '/sitemap' }
+]
+}';
+]';';
+  const social = [',
+    ';';' { label: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group' },',';
+    ';';' { label: 'Twitter', href: 'https://twitter.com/ziontechgroup' },',';
     ';';' { label: 'GitHub', href: 'https://github.com/ziontechgroup' }
 ]
   return (
@@ -127,9 +127,9 @@ export function SiteFooter(props: any) {';';';
 }
             </div>
           </div>
-        </div>';
-      </div>';';
-    </footer>';';';
+        </div>
+      </div>';
+    </footer>';';
   );';';';';
-}';';';';';
-export default SiteFooter;"';';';';;';;';
+}';';
+export default SiteFooter;";';';';';';

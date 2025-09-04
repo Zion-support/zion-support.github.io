@@ -4,7 +4,7 @@ interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {;
   children: React.ReactNode;
 }
 ;
-export function Form(props: any) {;
+export function Form($1) {;
   return (;
     <form {...props}>;
       {children}
@@ -18,7 +18,7 @@ interface FormItemProps {;
 ;
 }
 
-export function FormItem(props: any) {
+export function FormItem($1) {
   return (
     <div className="min-h-screen bg-white">
       {children}
@@ -33,7 +33,7 @@ interface FormLabelProps {;
 ;
 }
 ;
-export function FormLabel(props: any) {;
+export function FormLabel($1) {;
   return (;
     <label;
       htmlFor={htmlFor}
@@ -50,7 +50,7 @@ interface FormFieldProps {;
 ;
 }
 
-export function FormField(props: any) {
+export function FormField($1) {
   return (
     <div className="min-h-screen bg-white">
       {children}
@@ -64,7 +64,7 @@ interface FormMessageProps {;
 ;
 }
 ;
-export function FormMessage(props: any) {;
+export function FormMessage($1) {;
   if (!children) return null;
 ;
   return (;
@@ -72,5 +72,5 @@ export function FormMessage(props: any) {;
       {children}
     </p>;
   );
-}';
-</HTMLFormElement>;';;';
+}
+</HTMLFormElement>;';';

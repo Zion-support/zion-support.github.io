@@ -11,4 +11,4 @@ export default function LoadingOverlay.test() {return (
       </div>
   );"}"
 
-</div>;;
+</div>;

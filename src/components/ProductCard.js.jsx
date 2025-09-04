@@ -1,12 +1,12 @@
-import React, {useState} from 'react';';';
-import {useAuth} from '../hooks/useAuth';';';
-import {useWishlist} from '../hooks/useWishlist';';';
-import {useRouter} from 'next/router';';';
-import {useSnackbar} from 'notistack';';';
-import {useDispatch} from 'react-redux';';';
+import React, {useState} from 'react';
+import {useAuth} from '../hooks/useAuth';
+import {useWishlist} from '../hooks/useWishlist';
+import {useRouter} from 'next/router';
+import {useSnackbar} from 'notistack';
+import {useDispatch} from 'react-redux';
 import {captureException} from '@sentry/nextjs';
 
-export default function ProductCard(props: any) {
+export default function ProductCard($1) {
   const { isAuthenticated } = useAuth();
   const {isWishlisted, toggle} = useWishlist();
   const [imageError, setImageError] = useState(false);
@@ -16,7 +16,7 @@ export default function ProductCard(props: any) {
   if (!product || 
       typeof product.id !== "string" || 
       typeof product.title !== "string" || 
-      product.title.trim() === "") {
+      product.title.trim() === ") {
     captureException(new Error("Invalid product data received by ProductCard"), { 
       extra: { product } 
     });
@@ -30,5 +30,5 @@ export default function ProductCard(props: any) {
   }
   
   const active = isWishlisted(product.id);
-  const dispatch = useDispatch();';
-;';;';
+  const dispatch = useDispatch();
+;';';

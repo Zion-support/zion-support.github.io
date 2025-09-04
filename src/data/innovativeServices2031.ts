@@ -85,7 +85,7 @@ const zionContact: ServiceContact = {
   website: "https://ziontechgroup.com",
 
   address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+};;
 
 // Innovative Micro SAAS Services 2031 (minimal stubbed data to satisfy imports)
 export const innovativeMicroSaasServices2031: MicroSaasService[] = [
@@ -123,7 +123,7 @@ export const innovativeMicroSaasServices2031: MicroSaasService[] = [
     marketSize: "$1.2B by 2025",
 
     growthRate: "45% annually",
-  },
+  };,
 ];
 
 // Innovative IT Infrastructure Services 2031 (minimal stubbed data)
@@ -159,7 +159,7 @@ export const innovativeITInfrastructureServices2031: ITService[] = [
     marketSize: "$2.1B by 2026",
 
     compliance: ["GDPR", "HIPAA"],
-  },
+  };,
 ];
 
 // Innovative AI Services 2031 (minimal stubbed data)
@@ -196,5 +196,5 @@ export const innovativeAIServices2031: AIService[] = [
     innovationLevel: "Breakthrough",
     marketSize: "$3.2B by 2027",
     ethicalAI: ["Transparency", "Fairness"],
-  },
+  };,
 ];

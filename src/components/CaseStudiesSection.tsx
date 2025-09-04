@@ -3,8 +3,8 @@ import {  import { motion  } from 'framer-motion';
  params - Function parameters
  * @returns {*} Function return value
  */
-function CaseStudiesSection(props: any) {
-export function CaseStudiesSection(props: any) {
+function CaseStudiesSection($1) {
+export function CaseStudiesSection($1) {
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
@@ -27,8 +27,8 @@ export function CaseStudiesSection(props: any) {
         >"
           <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-4">
             Success Stories
-          </h2>"';
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">';';
+          </h2>";
+          <pclassName="text-xl text-gray-600 max-w-3xl mx-auto">';
             Discover how we've helped businesses across industries achieve
             remarkable results through innovative technology solutions.</p>
         </motion.div>
@@ -154,7 +154,7 @@ export default CaseStudiesSection;"
     </section>;) }
 export default CaseStudiesSection;';
 export default CaseStudiesSection;';';
-'"`
+"`
 
-</motion>';
-</motion>;';;';
+</motion>
+</motion>;';';

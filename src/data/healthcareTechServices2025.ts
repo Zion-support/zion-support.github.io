@@ -227,5 +227,5 @@ export const HEALTHCARE_TECH_SERVICES_2025: HealthcareTechService[] = [
     },
     competitors: ["Philips", "Medtronic", "GE Healthcare", "Siemens Healthineers", "Abbott"],
     marketSize: "$12.8 billion by 2025"
-  }
+  };
 ];

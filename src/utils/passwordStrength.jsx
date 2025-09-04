@@ -2,60 +2,60 @@ import React from 'react';
 // Password strength utility functions
 
 /**
- * Password strength levels';
+ * Password strength levels
  */';';
-export const PASSWORD_STRENGTH = {VERY_WEAK: 'very-weak',';';
-  WEAK: 'weak',';';
-  MEDIUM: 'medium',';';
-  STRONG: 'strong',';';
-  VERY_STRONG: 'very-strong'};
+export const PASSWORD_STRENGTH = {VERY_WEAK: 'very-weak',
+  WEAK: 'weak',
+  MEDIUM: 'medium',
+  STRONG: 'strong',
+  VERY_STRONG: 'very-strong'};;
 
 /**
  * Password strength colors';
  */';';
-export const PASSWORD_COLORS = {[PASSWORD_STRENGTH.VERY_WEAK]: 'bg-red-500',';';
-  [PASSWORD_STRENGTH.WEAK]: 'bg-orange-500',';';
-  [PASSWORD_STRENGTH.MEDIUM]: 'bg-yellow-500',';';
-  [PASSWORD_STRENGTH.STRONG]: 'bg-blue-500',';';
-  [PASSWORD_STRENGTH.VERY_STRONG]: 'bg-green-500'};
+export const PASSWORD_COLORS = {[PASSWORD_STRENGTH.VERY_WEAK]: 'bg-red-500',
+  [PASSWORD_STRENGTH.WEAK]: 'bg-orange-500',
+  [PASSWORD_STRENGTH.MEDIUM]: 'bg-yellow-500',
+  [PASSWORD_STRENGTH.STRONG]: 'bg-blue-500',
+  [PASSWORD_STRENGTH.VERY_STRONG]: 'bg-green-500'};;
 
 /**
  * Password strength labels';
  */';';
-export const PASSWORD_LABELS = {[PASSWORD_STRENGTH.VERY_WEAK]: 'Very Weak',';';
-  [PASSWORD_STRENGTH.WEAK]: 'Weak',';';
-  [PASSWORD_STRENGTH.MEDIUM]: 'Medium',';';
-  [PASSWORD_STRENGTH.STRONG]: 'Strong',';';
-  [PASSWORD_STRENGTH.VERY_STRONG]: 'Very Strong'};
+export const PASSWORD_LABELS = {[PASSWORD_STRENGTH.VERY_WEAK]: 'Very Weak',
+  [PASSWORD_STRENGTH.WEAK]: 'Weak',
+  [PASSWORD_STRENGTH.MEDIUM]: 'Medium',
+  [PASSWORD_STRENGTH.STRONG]: 'Strong',
+  [PASSWORD_STRENGTH.VERY_STRONG]: 'Very Strong'};;
 
 /**
  * Check if password contains lowercase letters
  * @param {string} password - Password to check
  * @returns {boolean} True if contains lowercase
  */
-export const hasLowercase = (props: any) => {return /[a-z]/.test(password);};
+export const hasLowercase = (props) => {return /[a-z]/.test(password);};
 
 /**
  * Check if password contains uppercase letters
  * @param {string} password - Password to check
  * @returns {boolean} True if contains uppercase
  */
-export const hasUppercase = (props: any) => {return /[A-Z]/.test(password);};
+export const hasUppercase = (props) => {return /[A-Z]/.test(password);};
 
 /**
  * Check if password contains numbers
  * @param {string} password - Password to check
  * @returns {boolean} True if contains numbers
  */
-export const hasNumbers = (props: any) => {return /\d/.test(password);};
+export const hasNumbers = (props) => {return /\d/.test(password);};
 
 /**
  * Check if password contains special characters
  * @param {string} password - Password to check
  * @returns {boolean} True if contains special characters
  */';
-export const hasSpecialChars = (props: any) => {';';
-  return /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(password);
+export const hasSpecialChars = (props) => {
+  return /[!@#$%^&*()_+\-=[\]{};;':"\\|,.<>/?]/.test(password);
 };
 
 /**
@@ -63,7 +63,7 @@ export const hasSpecialChars = (props: any) => {';';
  * @param {string} password - Password to check
  * @returns {number} Length score (0-3)
  */
-export const getLengthScore = (props: any) => {if (!password) return 0;
+export const getLengthScore = (props) => {if (!password) return 0;
 
   if (password.length < 8) return 0;
   if (password.length < 12) return 1;
@@ -75,7 +75,7 @@ export const getLengthScore = (props: any) => {if (!password) return 0;
  * @param {string} password - Password to check
  * @returns {number} Score from 0 to 100
  */
-export const calculatePasswordScore = (props: any) => {if (!password) return 0;
+export const calculatePasswordScore = (props) => {if (!password) return 0;
 
   let score = 0;
 
@@ -100,7 +100,7 @@ export const calculatePasswordScore = (props: any) => {if (!password) return 0;
  * @param {string} password - Password to check
  * @returns {string} Strength level
  */
-export const getPasswordStrength = (props: any) => {const score = calculatePasswordScore(password);
+export const getPasswordStrength = (props) => {const score = calculatePasswordScore(password);
 
   if (score < 20) return PASSWORD_STRENGTH.VERY_WEAK;
   if (score < 40) return PASSWORD_STRENGTH.WEAK;
@@ -113,24 +113,24 @@ export const getPasswordStrength = (props: any) => {const score = calculatePassw
  * @param {string} password - Password to check
  * @returns {Array} Array of feedback messages
  */
-export const getPasswordFeedback = (props: any) => {
+export const getPasswordFeedback = (props) => {
   const feedback = [];
-';
-  if (!password) {';';
+
+  if (!password) {
     feedback.push('Enter a password');
     return feedback;
-  }';
-';';
-  if (password.length < 8) {feedback.push('Password should be at least 8 characters long');}';
-';';
-  if (!hasLowercase(password)) {feedback.push('Include lowercase letters');}';
-';';
-  if (!hasUppercase(password)) {feedback.push('Include uppercase letters');}';
-';';
-  if (!hasNumbers(password)) {feedback.push('Include numbers');}';
-';';
-  if (!hasSpecialChars(password)) {feedback.push('Include special characters');}';
-';';
+  }
+
+  if (password.length < 8) {feedback.push('Password should be at least 8 characters long');}
+
+  if (!hasLowercase(password)) {feedback.push('Include lowercase letters');}
+
+  if (!hasUppercase(password)) {feedback.push('Include uppercase letters');}
+
+  if (!hasNumbers(password)) {feedback.push('Include numbers');}
+
+  if (!hasSpecialChars(password)) {feedback.push('Include special characters');}
+
   if (feedback.length === 0) {feedback.push('Password is strong!');}
 
   return feedback;
@@ -141,7 +141,7 @@ export const getPasswordFeedback = (props: any) => {
  * @param {string} password - Password to validate
  * @returns {Object} Validation result
  */
-export const validatePassword = (props: any) => {
+export const validatePassword = (props) => {
   const score = calculatePasswordScore(password);
   const strength = getPasswordStrength(password);
   const feedback = getPasswordFeedback(password);
@@ -169,5 +169,5 @@ export default {PASSWORD_STRENGTH,
   getPasswordStrength,
   getPasswordFeedback,
   validatePassword};
-';
-;';;';
+
+;';';

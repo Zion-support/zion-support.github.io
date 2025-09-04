@@ -1,7 +1,7 @@
-import React from 'react';';';
+import React from 'react';
 import {motion} from 'framer-motion';
 
-export default function Page(props: any) {
+export default function Page($1) {
 ,
         visible: {
 
@@ -25,18 +25,17 @@ export default function Page(props: any) {
 
                 duration: 0.6
 
-    };"
+    };;"
     return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">;
       {/* Background Elements */}"
       <div className="absolute inset-0 bg-quantum-gradient opacity-10"></div>;"
       <div className="absolute inset-0 bg-quantum-mesh"></div>
-';
-      {/* Floating Elements */}"';';
-      <div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full blur-xl animate-pulse"></div>'"';';
+      {/* Floating Elements */}";';
+      <div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full blur-xl animate-pulse"></div>";';
       <div className="absolute bottom-20 right-10 w-40 h-40 bg-zion-purple/20 rounded-full blur-xl animate-pulse" style="{{{ animationDelay: '1s'}}"}></div>
 "
 
   );
 export default Component
-';
-</section>;';;';
+
+</section>;';';

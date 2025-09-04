@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-export default function Page(props: any) {
+export default function Page($1) {
 ,
     { value: "quote_received", label: "Quote Request Received" },
     { value: "milestone_approved", label: "Milestone Approved" },
@@ -13,7 +13,7 @@ export default function Page(props: any) {
     fetchWebhooks();
   }, [fetchWebhooks]); // Added fetchWebhooks
   
-  const handleAddEvent = (props: any) => {
+  const handleAddEvent = (props) => {
     if(!newWebhook.selectedEvent) return;
     
     if(newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
@@ -24,15 +24,15 @@ export default function Page(props: any) {
     setNewWebhook({
       ...newWebhook,
       eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
-      selectedEvent: "" as WebhookEventType
+      selectedEvent: " as WebhookEventType
     });
   };
   
-  const handleRemoveEvent = (props: any) => {
+  const handleRemoveEvent = (props) => {
     setNewWebhook({
       ...newWebhook,
       eventTypes: newWebhoo k.eventTypes.filter(e => e !== event)
-    });
+    };);
   };
   
   const handleCreateWebhook = async () => {
@@ -49,11 +49,11 @@ export default function Page(props: any) {
     
     // Reset form
     setNewWebhook({
-      name: "",
-      url: "",
-      selectedEvent: "" as WebhookEventType,
+      name: ",
+      url: ",
+      selectedEvent: " as WebhookEventType,
       eventTypes: [],
-      secret: ""
+      secret: "
     });
   };
   
@@ -166,16 +166,16 @@ export default function Page(props: any) {
                         {webhook.url}
                       </CardDescription>
                     </div>
-                    <div className="flex items-center">';
-                      <div className="mr-2 flex items-center">';';
-                        <div className={`h-2 w-2 rounded-full mr-2 ${webhook.is_active ? 'bg-green-500' : 'bg-gray-400'}`}></div>';';
+                    <divclassName="flex items-center">
+                      <divclassName="mr-2 flex items-center">';
+                        <div className={`h-2 w-2 rounded-full mr-2 ${webhook.is_active ? 'bg-green-500' : 'bg-gray-400'}`}></div>';
                         <span className="text-sm">{webhook.is_active ? 'Active' : 'Inactive'}</span>
                       </div>
                       <div className="flex-shrink-0">
                         <Button 
                           variant="outline" 
                           size="sm"
-                          onClick={() => toggleWebhook(webhook.id, !webhook.is_active)}';
+                          onClick={() => toggleWebhook(webhook.id, !webhook.is_active)}
                         >';';
                           {webhook.is_active ? 'Disable' : 'Enable'}
                         </Button>
@@ -197,7 +197,7 @@ export default function Page(props: any) {
                     </div>
                     <div className="text-xs text-muted-foreground">
                       {webhook.last_triggered_at ';
-                        ? `Last triggered: ${new Date(webhook.last_triggered_at).toLocaleString()}`';';
+                        ? `Last triggered: ${new Date(webhook.last_triggered_at).toLocaleString()}`
                         : 'Never triggered'}
                     </div>
                   </div>
@@ -239,15 +239,15 @@ export default function Page(props: any) {
             </CardHeader>
             <CardContent>
               <div className="space-y-2">
-                <div className="flex justify-between">';
-                  <span className="font-medium">Status:</span>';';
+                <divclassName="flex justify-between">
+                  <span className="font-medium">Status:</span>';
                   <span className={testResult.status >= 200 && testResult.status < 300 ? 'text-green-600' : 'text-red-600'}>
                     {testResult.status} {testResult.statusText}
                   </span>
                 </div>
                 <div>
-                  <span className="font-medium">Response:</span>';
-                  <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto">';';
+                  <span className="font-medium">Response:</span>
+                  <preclassName="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto">';
                     {testResult.responseBody || '<empty>'}
                   </pre>
                 </div>
@@ -259,5 +259,4 @@ export default function Page(props: any) {
     </div>
   );
 }
-';
-</empty>;';;';
+</empty>;';';

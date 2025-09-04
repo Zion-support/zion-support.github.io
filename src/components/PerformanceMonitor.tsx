@@ -10,7 +10,7 @@ const PerformanceMonitor: React.FC = () => {
     loadTime: 0,
     memoryUsage: 0,
     renderTime: 0
-  });
+  };);
 
   useEffect(() => {
     const startTime = performance.now();

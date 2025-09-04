@@ -1,6 +1,6 @@
 import {Button} from "@/components/ui/button";
 import {Bell, Users, Settings} from "lucide-react";
-export function WorkspaceHeader(props: any) {
+export function WorkspaceHeader($1) {
     return (
     <div className="min-h-screen bg-white">
       <div className="flex items-center justify-between">
@@ -46,4 +46,4 @@ export function WorkspaceHeader(props: any) {
         </div>
   );
 }
-export default WorkspaceHeader;;;
+export default WorkspaceHeader;

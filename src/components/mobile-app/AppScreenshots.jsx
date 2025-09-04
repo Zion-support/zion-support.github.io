@@ -6,9 +6,9 @@ const mockScreenshots = [
     {id: 2, alt: "Talent matching screen", src: "/placeholder.svg"},
     {id: 3, alt: "Resume builder screen", src: "/placeholder.svg"},
     {id: 4, alt: "Messaging screen", src: "/placeholder.svg"},
-    {id: 5, alt: "Profile screen", src: "/placeholder.svg"},
+    {id: 5, alt: "Profile screen", src: "/placeholder.svg"};,
 ];
-export const AppScreenshots = (props: any) => {
+export const AppScreenshots = (props) => {
     const scrollAmount = 300;
             scrollContainerRef.current.scrollBy({
                 left: direction === "left" ? -scrollAmount : scrollAmount,
@@ -41,5 +41,5 @@ export const AppScreenshots = (props: any) => {
         </div>
       </div>
     </section>)};
-';
-export default AppScreenshots;;';;';
+
+export default AppScreenshots;';';

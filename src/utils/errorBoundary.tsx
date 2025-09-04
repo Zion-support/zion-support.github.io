@@ -1,4 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';';';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { motion } from 'framer-motion';
 
 interface Props extends React.PropsWithChildren<{}> {
@@ -29,8 +29,7 @@ class ErrorBoundary extends Component<Props, State> {
       retryCount: 0
     };
   }
-';
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {';';
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     this.setState({
       error,
@@ -41,9 +40,9 @@ class ErrorBoundary extends Component<Props, State> {
     this.logError(error, errorInfo);
   }
 
-  logError = (error: any, errorInfo: ErrorInfo) => {';
-    // Log to console for development';';
-    if (process.env.NODE_ENV === 'development') {';';
+  logError = (error: any, errorInfo: ErrorInfo) => {
+    // Log to console for development
+    if (process.env.NODE_ENV === 'development') {
       console.group('Error Boundary Error');';';
       console.error('Error:', error);';';
       console.error('Error Info:', errorInfo);
@@ -109,8 +108,7 @@ class ErrorBoundary extends Component<Props, State> {
               <p className="text-gray-300 mb-6">
                 We encountered an unexpected error. This might be due to a temporary issue with asset loading or MIME type configuration.
               </p>
-';
-              {/* Error Details (Development Only) */}';';
+              {/* Error Details (Development Only) */}
               {process.env.NODE_ENV === 'development' && this.state.error && (
                 <details className="text-left mb-6 p-4 bg-red-900/20 rounded-lg border border-red-500/30">
                   <summary className="cursor-pointer text-red-400 font-medium mb-2">
@@ -177,5 +175,5 @@ class ErrorBoundary extends Component<Props, State> {
 export default ErrorBoundary;
 </motion>
 </path>
-</motion>';
-</Props>;';;';
+</motion>
+</Props>;';';

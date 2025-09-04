@@ -44,7 +44,7 @@ const AIServices: React.FC = () => {
       features: ["System integration", "API development", "24/7 support", "Performance monitoring"],
       icon: CheckCircle,
       price: "Starting at $3,000/month"
-    }
+    };
   ];
 
   return (

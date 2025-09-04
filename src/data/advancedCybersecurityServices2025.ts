@@ -162,5 +162,5 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2025: AdvancedCybersecurityService[
     },
     competitors: ["Splunk", "IBM QRadar", "LogRhythm", "Rapid7", "Exabeam"],
     marketSize: "$18.3 billion by 2025"
-  }
+  };
 ];

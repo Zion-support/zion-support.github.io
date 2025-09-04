@@ -300,7 +300,7 @@ export const NEW_IT_SERVICES_2025: NewITService[] = [
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008, Middletown, DE 19709"
     }
-  }
+  };
 ];
 
 export default NEW_IT_SERVICES_2025;

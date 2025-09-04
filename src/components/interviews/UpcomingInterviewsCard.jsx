@@ -4,10 +4,10 @@ import {Button} from "@/components/ui/button";
 import {useInterviews} from "@/hooks/useInterviews";
 import {format, isPast, parseISO} from "date-fns";
 import Link from "next/link";
-import {Link} from 'react-router-dom';';';
+import {Link} from 'react-router-dom';
 import {Calendar, Clock, Video} from 'lucide-react';
 import {Avatar} from "@/components/ui/avatar";
-export function UpcomingInterviewsCard(props: any) {
+export function UpcomingInterviewsCard($1) {
     const { fetchInterviews } = useInterviews();
     const [upcomingInterviews, setUpcomingInterviews] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
@@ -16,19 +16,16 @@ export function UpcomingInterviewsCard(props: any) {
             setIsLoading(true);
             try {
                 const interviews = await fetchInterviews();
-                // Filter for confirmed interviews in the future';
-                const upcoming = interviews';';
+                // Filter for confirmed interviews in the future
+                const upcoming = interviews';
                     .filter(interview => interview.status === 'confirmed' &&
                     !isPast(parseISO(interview.scheduled_date)))
                     .sort((a, b) => parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime())
                     .slice(0, 3); // Take only the next 3 interviews
                 // // // // // // // console.error("Error loading upcoming interviews:", error);
-            }
-            finally {setIsLoading(false);
+            } finally {setIsLoading(false);
 
-                setUpcomingInterviews(upcoming)}
-            catch (error) {console.error("Error loading upcoming interviews:", error)}
-            finally {setIsLoading(false)}
+                setUpcomingInterviews(upcoming)} catch (error) {console.error("Error loading upcoming interviews:", error)} finally {setIsLoading(false)}
         };
         loadInterviews()}, []);
     if (isLoading) {
@@ -77,8 +74,8 @@ export function UpcomingInterviewsCard(props: any) {
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
-          {upcomingInterviews.map(interview => {';
-            const interviewDate = parseISO(interview.scheduled_date);';';
+          {upcomingInterviews.map(interview => {
+            const interviewDate = parseISO(interview.scheduled_date);
             const formattedTime = format(interviewDate, 'h:mm a');
             // Determine if interview is happening soon (within 30 minutes)
             const now = new Date();
@@ -119,5 +116,4 @@ export function UpcomingInterviewsCard(props: any) {
         </div>
       </CardContent>
     </Card>)}
-';
-export default UpcomingInterviewsCard;;';;';
+export default UpcomingInterviewsCard;';';

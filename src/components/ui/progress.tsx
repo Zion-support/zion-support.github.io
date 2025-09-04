@@ -8,7 +8,7 @@ interface ProgressProps {
 
 }
 
-export function Progress(props: any) {
+export function Progress($1) {
   const percentage = Math.min(Math.max((value / max) * 100, 0), 100);
   
   return (
@@ -18,5 +18,5 @@ export function Progress(props: any) {
        />
     </div>
   );
-}';
-</div>;';;';
+}
+</div>;';';

@@ -1,12 +1,12 @@
 import { Helmet } from 'react - helmet -async';
 
-export default function Page(props: any) {
+export default function Page($1) {
  | Zion Tech Group`;
-  const fullUrl = canonical || `${url}${window.location.pathname}`;
+  const fullUrl = canonical || `${url}${window.location.pathname};`;
   // Structured data for better SEO
   const structuredData = {
-"';
-    "@context": "https://schema.org","';';
+";
+    "@context": "https://schema.org",";';
     "@type": type === 'website' ? "Organization" : "Article","
     "name": "Zion Tech Group","
     "url": url,"`
@@ -87,18 +87,18 @@ export default function Page(props: any) {
   };
 
     // Preload critical images
-    if(ogImage) {';
-';';
-      imageLink.rel = 'preload';';';
+    if(ogImage) {
+
+      imageLink.rel = 'preload
       imageLink.as = 'image';
       imageLink.href = ogImage;
       document.head.appendChild(imageLink) }
 
     // DNS prefetch for external domains
     
-    dnsPrefetchDomains.forEach(domain => {';
-';';
-      link.rel = 'dns-prefetch';
+    dnsPrefetchDomains.forEach(domain => {
+
+      link.rel = 'dns-prefetch
       link.href = domain;
       document.head.appendChild(link)});';
   }, [ogImage]);';';
@@ -170,8 +170,8 @@ export default function Page(props: any) {
       {/* Open Graph */}
       <meta property="og: titl e" content={fullTitle}   />
       <meta property="og: descriptio n" content={description}   />
-      <meta property="og: typ e" content={type}   />';
-      <meta property="og: ur l" content={fullUrl}   />';';
+      <metaproperty="og: typ e" content={type}   />
+      <metaproperty="og: ur l" content={fullUrl}   />';
       <meta property="og: imag e" content={image.startsWith('http') ? image : `${url}${image}`}   />
       <meta property="og: site_nam e" content="Zion Tech Group"   />
       <meta property="og: local e" content="en_US"   />
@@ -180,8 +180,8 @@ export default function Page(props: any) {
       <meta name="twitter: car d" content="summary_large_image"   />
       <meta name="twitter: sit e" content="@ziontechgroup"   />
       <meta name="twitter: creato r" content="@ziontechgroup"   />
-      <meta name="twitter: titl e" content={fullTitle}   />';
-      <meta name="twitter: descriptio n" content={description}   />';';
+      <metaname="twitter: titl e" content={fullTitle}   />
+      <metaname="twitter: descriptio n" content={description}   />';
       <meta name="twitter: imag e" content={image.startsWith('http') ? image : `${url}${image}`}   />
 
       {/* Additional Meta Tags */}
@@ -231,5 +231,5 @@ export default function Page(props: any) {
       <meta name="mobile - web - app - capable" content="yes"   />
     </Helmet>) ;
 };
-';
-export default EnhancedSEO;;';;';
+
+export default EnhancedSEO;';';

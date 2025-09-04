@@ -4,15 +4,15 @@ import {Button} from "@/components/ui/button";
 import {Label} from "@/components/ui/label";
 import {Checkbox} from "@/components/ui/checkbox";
 import {toast} from "sonner";
-export function IntegrationConnectionModal(props: any) {
+export function IntegrationConnectionModal($1) {
     const [isConnecting, setIsConnecting] = useState(false);
     const [syncSettings, setSyncSettings] = useState({
         autoCreateContacts: true,
         pushNotes: false,
         syncJobDetails: true,
         syncApplicantData: true
-    });
-    const handleConnectOAuth = (props: any) => {
+    };);
+    const handleConnectOAuth = (props) => {
         setIsConnecting(true);
         // Simulate OAuth flow
         setTimeout(() => {
@@ -21,11 +21,11 @@ export function IntegrationConnectionModal(props: any) {
             onClose()}, 2000);
         // In a real application, this would open a popup for OAuth authentication
         // window.open(`/api/oauth/${integration.id}`, 'oauth', 'width=600,height=600')};
-    const handleDisconnect = (props: any) => {
+    const handleDisconnect = (props) => {
         // In a real application, this would revoke the OAuth token
-        toast.info(`Disconnected from ${integration.name}`);
+        toast.info(`Disconnected from ${integration.name};`);
         onClose()};
-    const handleSaveSettings = (props: any) => {// In a real application, this would save the sync settings
+    const handleSaveSettings = (props) => {// In a real application, this would save the sync settings
         toast.success("Integration settings saved");
         onClose()};
     return (<Dialog open={isOpen} onOpenChange={onClose}>
@@ -105,7 +105,7 @@ export function IntegrationConnectionModal(props: any) {
             </DialogFooter>
           </>) : (<>
             <div className="space-y-4 py-4">
-              <p className="text-sm">';
+              <pclassName="text-sm">
                 Connect your {integration.name} account to sync job contacts, applicants, and more.';';
                 You'll be redirected to {integration.name} to authorize this connection.
               </p>
@@ -132,5 +132,5 @@ export function IntegrationConnectionModal(props: any) {
 
 export default IntegrationConnectionModal;
 </Checkbox>
-</Checkbox>';
-</Checkbox>;';;';
+</Checkbox>
+</Checkbox>;';';

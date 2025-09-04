@@ -1,9 +1,9 @@
-import React, {useState, useEffect, useRef} from 'react';'';';
-import {motion, useInView} from 'framer-motion';';';
+import React, {useState, useEffect, useRef} from 'react';'
+import {motion, useInView} from 'framer-motion';
 import {EnhancedLoading} from "./EnhancedLoading";'
-const LazyWrapper = (props: any) => {}
-export default function Page(props: any) {}
-    }, [inView, isInView]) ;
+const LazyWrapper = (props) => {}
+export default function Page($1) {}
+    };, [inView, isInView]) ;
     if(!isInView) {}
         return (
     <div className="min-h-screen bg-white">
@@ -40,5 +40,5 @@ export {LazyWrapper};
 export {LazyWrapper};
 
 export {LazyWrapper, Page};
-';
-</motion>;';;';
+
+</motion>;';';

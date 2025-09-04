@@ -1,5 +1,5 @@
 import {Star, StarHalf} from 'lucide-react';
-export function RatingStars(props: any) {
+export function RatingStars($1) {
     const filled = Math.floor(value);
     const half = value - filled >= 0.5;
     return (
@@ -14,5 +14,5 @@ export function RatingStars(props: any) {
             return <Star key={i} data-testid="star-outline" className="h-4 w-4 text-gray-300" />;
         })}
     </div>);
-}';
-;';;';
+}
+;';';

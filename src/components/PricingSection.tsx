@@ -6,7 +6,7 @@ import React, { useState } from "react"
  * @param {*} params - Function parameters
  * @returns {*} Function return value
  */
-function PricingSection(props: any) {
+function PricingSection($1) {
 
       icon: Shiel d;
     };  ];
@@ -57,7 +57,7 @@ with no hidden fees or surprises.
               Monthly,
             </span>"
             <button onClick="{()" => setBillingCycle(billingCycle === "monthly" ? "annual" : "monthly")}"
-              className=""relative" w-16 h-8 bg-zion-purple/20 rounded-full p-1 transition-colors duration-200"
+              className="relative" w-16 h-8 bg-zion-purple/20 rounded-full p-1 transition-colors duration-200"
             >
               <motion.div>
 layout,"
@@ -74,7 +74,7 @@ className="{"w-6" h-6 bg-zion-cyan rounded-full shadow-lg ${
               <motion.span,"
 initial="{{" opacity: 0, scale: 0.8 }}"
                 animate="{{" opacity: 1, scale: 1 }}"
-                className=""inline-flex" items-center gap-1 px-3 py-1 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium"}
+                className="inline-flex" items-center gap-1 px-3 py-1 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium"}
 
               >"
                 <Check className="w-4 h-4"   />
@@ -91,19 +91,19 @@ initial="{{" opacity: 0, scale: 0.8 }}"
             const IconComponent = plan.icon
             return (
               <motion.div,"
-key = "{plan.name}""
+key = "{plan.name}"
                 initial="{{" opacity: 0, y: 2 0 }}"
                 whileInView="{{" opacity: 1, y: 0 }}"
                 viewport="{{" once: tru e }}"
                 transition="{{" duration: 0.6, delay: inde x * 0.1 }}"
                 className="{"relative" group ${"
-                  plan.popular ? "md: -mt-4 md: m b-4" : ""}"}
+                  plan.popular ? "md: -mt-4 md: m b-4" : "}"}
 
               >
                 {/* comment */}
 
                 {plan.popular && ("
-                  <div className=""absolute" -top-4 left-1/2 transform -translate-x-1/2 z-10"}>"
+                  <div className="absolute" -top-4 left-1/2 transform -translate-x-1/2 z-10"};>"
                     <div className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">"
                       <Star className="{"w-4" h-4 fill-current"   />
                       Most Popular,
@@ -113,15 +113,15 @@ key = "{plan.name}""
 }
  {/*   */}";
                 <div className="{`relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover: borde r-zion-cyan/50 hover: b g-zion-blue-light/20 transition-all duration-300 hover: shado w-2xl hover: shado w-zion-cyan/20 ${">;
-                  plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : ""}`}> {/*   */}";
+                  plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : "}`}> {/*   */}";
                   <div className="{`w-16" h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover: scal e-110 transition-transform duration-300`}>";
                     <IconComponent className="`w-8" h-8`}  />;
                   </div> {/* comment */}"
                 <div className="{"relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover: borde r-zion-cyan/50 hover: b g-zion-blue-light/20 transition-all duration-300 hover: shado w-2xl hover: shado w-zion-cyan/20 ${">
-                  plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : ""}"}>
+                  plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : "}"}>
                   {/* comment */}"
                   <div className="{"w-16" h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover: scal e-110 transition-transform duration-300"}>"
-                    <IconComponent className=""w-8" h-8"}        />
+                    <IconComponent className="w-8" h-8"}        />
                   </div>
                   {/* comment */}"
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
@@ -131,7 +131,7 @@ key = "{plan.name}""
                     {typeof plan.price === "number" ? ("
                       <div className="flex items-baseline gap-2">"
                         <span className="{"text-4xl" font-bold text-white">${plan.price}</span>"
-                        <span className=""text-zion-slate-light"}">/month</span>
+                        <span className="text-zion-slate-light"}">/month</span>
                         {plan.originalPrice && ("
                           <span className="{"text-lg" text-zion-slate-light line-through">
                             ${plan.originalPrice}
@@ -141,7 +141,7 @@ key = "{plan.name}""
 
                       </div>
                     ) : ("
-                      <div className=""text-3xl" font-bold text-white"}>{plan.price}    </div>
+                      <div className="text-3xl" font-bold text-white"}>{plan.price}    </div>
   );
 }
                   </div>
@@ -164,12 +164,12 @@ whileHover="{{" scale: 1.02 }}"
                       whileTap="{{" scale: 0.98 }}"
                       className="{"w-full" px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${
                         plan.popular"
-                          ? "bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover: fro m-zion-cyan/90 hover: t o-zion-purple/90"">
+                          ? "bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover: fro m-zion-cyan/90 hover: t o-zion-purple/90">
                           : "border border-zion-cyan text-zion-cyan hover: b g-zion-cyan hover: tex t-white"}"}
 
                     >
                       {plan.cta}"
-                      <ArrowRight className=""w-4" h-4"}        />
+                      <ArrowRight className="w-4" h-4"}        />
                     </motion.button>
                   </Link>
                 </div>
@@ -231,7 +231,7 @@ whileHover="{{" scale: 1.05 }}"
         </motion.div>
       </div>
     </section>";,
-export default function PricingSection(props: any) {return ("
+export default function PricingSection($1) {return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="PricingSection - Zion Tech Group" description="Professional PricingSection services by Zion Tech Group"   />"
       <div className="container mx-auto px-4 py-20">"
@@ -247,4 +247,4 @@ export default function PricingSection(props: any) {return ("
 </div>
 </motion>
 </div>
-</section>;;
+</section>;

@@ -799,4 +799,4 @@ export const getEnhancedServicesByPriceRange = (minPrice: number, maxPrice: numb
   )};
 
 export const getEnhancedServicesByAIScore = (minScore: number) => {;
-  return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => service.aiScore >= minScore)}}}}}}}}}}}}}}}}};;
+  return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => service.aiScore >= minScore)}}}}}}}}}}}}}}}}};

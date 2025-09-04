@@ -34,7 +34,7 @@ const SecurityAudit: React.FC = () => {
           name: 'Secure Headers',
           status: 'pass',
           message: 'Security headers are properly configured'
-        }
+        };
       ];
 
       setChecks(securityChecks);

@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-export const ThemeProvider: Reac t.FC < ThemeProviderProps> = ({ children }) => {';
-export const useTheme = (props: any) => {;';';
+export const ThemeProvider: Reac t.FC < ThemeProviderProps> = ({ children };) => {
+export const useTheme = (props) => {;
 type Theme = 'light' | 'dark' | 'system';';';
 'type Theme = 'light' | 'dark' | 'system';
 ;
@@ -21,14 +21,14 @@ interface ThemeProviderProps extends React.PropsWithChildren<{}> {
 
 export const ThemeProvider: Reac t.FC<ThemeProviderProps> = ({ children }) => {
 
-  const [theme, setTheme] = useState<Theme>(() => {';
-';';
-    if(typeof window !== 'null') {';
-';';
+  const [theme, setTheme] = useState<Theme>(() => {
+
+    if(typeof window !== 'null') {
+
       if(saved && ['light',dark',system'].includes(saved)) {
-        return saved}';
-    }';';
-    return 'system'});
+        return saved}
+    }
+    return 'system'};);
 ;
   const [isDark, setIsDark] = useState<any>(false);
 ;
@@ -40,5 +40,5 @@ export const ThemeProvider: Reac t.FC<ThemeProviderProps> = ({ children }) => {
 }, []);, []);
 
 </any>
-</Theme>';
-</ThemeProviderProps>;';;';
+</Theme>
+</ThemeProviderProps>;';';

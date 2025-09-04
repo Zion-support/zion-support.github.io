@@ -679,5 +679,5 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     },
     competitors: ["Tableau", "Power BI", "Looker", "Domo", "Sisense"],
     marketSize: "$33.3 billion by 2025"
-  }
+  };
 ];

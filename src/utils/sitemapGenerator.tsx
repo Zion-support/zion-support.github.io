@@ -4,5 +4,5 @@ export const sitemapGenerator = {
   init: () => {
     
   }
-};
+};;
 export default sitemapGenerator;

@@ -12,5 +12,5 @@ export function Textarea({ className, ...props }: TextareaProps) {
     />
   );
 }
-</textarea>';
-</HTMLTextAreaElement>;';;';
+</textarea>
+</HTMLTextAreaElement>;';';

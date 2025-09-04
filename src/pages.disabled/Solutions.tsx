@@ -50,7 +50,7 @@ const Solutions: React.FC = () => {
       icon: TrendingUp,
       price: "Starting at $4,500",
       category: "Analytics"
-    }
+    };
   ];
 
   const industries = [
@@ -59,7 +59,7 @@ const Solutions: React.FC = () => {
     { name: "Manufacturing", description: "IoT and automation for smart manufacturing" },
     { name: "Retail", description: "E-commerce and customer experience solutions" },
     { name: "Education", description: "Learning management and student information systems" },
-    { name: "Government", description: "Secure, compliant government technology solutions" }
+    { name: "Government", description: "Secure, compliant government technology solutions" };
   ];
 
   return (

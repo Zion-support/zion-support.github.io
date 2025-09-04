@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function CodeBlock(props: any) {
-  const content = code || children || "";
+export default function CodeBlock($1) {
+  const content = code || children || ";
   const text = typeof content === "string" ? content : String(content);
 
-  const handleCopy = (props: any) => {
+  const handleCopy = (props) => {
     try {
       navigator.clipboard.writeText(text);
     } catch (_) {}
@@ -24,4 +24,4 @@ export default function CodeBlock(props: any) {
     </div>
   );
 }
-;;
+;

@@ -4,7 +4,7 @@
  */
 
 // Constants
-const CART_STORAGE_KEY = 'zion_cart_guest';
+const CART_STORAGE_KEY = 'zion_cart_guest
 const TAX_RATE = 0.08; // 8% tax rate
 const SHIPPING_THRESHOLD = 100; // Free shipping over $100
 const SHIPPING_COST = 9.99;
@@ -14,8 +14,8 @@ const SHIPPING_COST = 9.99;
  * @param {Object} item - Cart item to validate
  * @returns {boolean} Whether item is valid
  */';
-export const validateCartItem = (item) => {';';
-  if (!item || typeof item !== 'object') return false;';
+export const validateCartItem = (item) => {
+  if (!item || typeof item !== 'object') return false;
   ';';
   const requiredFields = ['id', 'name', 'price', 'quantity'];
   return requiredFields.every(field => itemObject.prototype.hasOwnProperty.call(field) && item[field] !== null && item[field] !== undefined)};
@@ -26,8 +26,8 @@ export const validateCartItem = (item) => {';';
  * @param {Object} newItem - Item to add
  * @returns {Array} Updated cart
  */
-export const addToCart = (cart, newItem) => {';
-  if (!validateCartItem(newItem)) {';';
+export const addToCart = (cart, newItem) => {
+  if (!validateCartItem(newItem)) {
     console.error('Invalid cart item:', newItem);
     return cart}
 
@@ -52,7 +52,7 @@ export const addToCart = (cart, newItem) => {';
  * @returns {Array} Updated cart
  */
 export const removeFromCart = (cart, itemId) => {
-  return cart.filter(item => item.id !== itemId)};
+  return cart.filter(item => item.id !== itemId)};;
 
 /**
  * Update item quantity
@@ -69,14 +69,14 @@ export const updateItemQuantity = (cart, itemId, quantity) => {
     item.id === itemId 
       ? { ...item, quantity, updatedAt: new Date().toISOString() }
       : item
-  )};
+  )};;
 
 /**
  * Clear cart
  * @returns {Array} Empty cart
  */
 export const clearCart = () => {
-  return []};
+  return []};;
 
 /**
  * Check if cart is empty
@@ -84,7 +84,7 @@ export const clearCart = () => {
  * @returns {boolean} Whether cart is empty
  */
 export const isCartEmpty = (cart) => {
-  return !Array.isArray(cart) || cart.length === 0};
+  return !Array.isArray(cart) || cart.length === 0};;
 
 /**
  * Get cart item count
@@ -110,7 +110,7 @@ export const calculateCartSubtotal = (cart) => {
  * @returns {number} Tax amount
  */
 export const calculateTax = (subtotal) => {
-  return subtotal * TAX_RATE};
+  return subtotal * TAX_RATE};;
 
 /**
  * Calculate shipping cost
@@ -118,7 +118,7 @@ export const calculateTax = (subtotal) => {
  * @returns {number} Shipping cost
  */
 export const calculateShipping = (subtotal) => {
-  return subtotal >= SHIPPING_THRESHOLD ? 0 : SHIPPING_COST};
+  return subtotal >= SHIPPING_THRESHOLD ? 0 : SHIPPING_COST};;
 
 /**
  * Calculate cart total
@@ -146,14 +146,14 @@ export const calculateCartTotal = (cart) => {
  * @param {string} currency - Currency code (default: USD)
  * @returns {string} Formatted price';
  */';';
-export const formatPrice = (price, currency = 'USD') => {';';
-  if (typeof price !== 'number' || isNaN(price)) {';';
-    return '$0.00'}';
-';';
-  return new Intl.NumberFormat('en-US', {';';
+export const formatPrice = (price, currency = 'USD') => {
+  if (typeof price !== 'number' || isNaN(price)) {
+    return '$0.00'}
+
+  return new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: currency
-  }).format(price)};
+  }).format(price)};;
 
 /**
  * Get cart summary for display
@@ -179,9 +179,9 @@ export const getCartSummary = (cart) => {
  * @returns {string} JSON string of cart data
  */
 export const exportCartData = (cart) => {
-  try {';
-    return JSON.stringify(cart, null, 2)} catch (error) {';';
-    console.error('Error exporting cart data:', error);';';
+  try {
+    return JSON.stringify(cart, null, 2)}; catch (error) {
+    console.error('Error exporting cart data:', error);
     return '[]'}
 };
 
@@ -194,8 +194,8 @@ export const importCartData = (cartData) => {
   try {
     const parsed = JSON.parse(cartData);
     if (Array.isArray(parsed)) {
-      return parsed.filter(item => validateCartItem(item))}';
-    return []} catch (error) {';';
+      return parsed.filter(item => validateCartItem(item))}
+    return []} catch (error) {
     console.error('Error importing cart data:', error);
     return []}
 };
@@ -208,7 +208,7 @@ export const importCartData = (cartData) => {
 export const getCartKey = (userId = null) => {
   if (userId) {
     return `zion_cart_${userId}`}
-  return CART_STORAGE_KEY};
+  return CART_STORAGE_KEY};;
 
 /**
  * Merge two carts (useful when user logs in)
@@ -218,7 +218,7 @@ export const getCartKey = (userId = null) => {
  */
 export const mergeCarts = (cart1, cart2) => {
   if (!Array.isArray(cart1) || !Array.isArray(cart2)) {
-    return Array.isArray(cart1) ? cart1 : (Array.isArray(cart2) ? cart2 : [])}
+    return Array.isArray(cart1) ? cart1 : (Array.isArray(cart2) ? cart2 : [])};
 
   const merged = [...cart1];
   
@@ -246,5 +246,5 @@ export const mergeCarts = (cart1, cart2) => {
  * @param {Array} cart2 - Second cart
  * @returns {Array} Merged cart
  */
-export const mergeCartItems = (cart1, cart2) => {';
-  return mergeCarts(cart1, cart2)};';';
+export const mergeCartItems = (cart1, cart2) => {
+  return mergeCarts(cart1, cart2)};;

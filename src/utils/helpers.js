@@ -4,5 +4,5 @@ export const helpers = {
 init: function() {
     
   }
-}
+};
 export default helpers;

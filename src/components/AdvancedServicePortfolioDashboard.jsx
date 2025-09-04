@@ -1,41 +1,41 @@
-import React, {useState, useMemo} from 'react';';
+import React, {useState, useMemo} from 'react';
 export default AdvancedServicePortfolioDashboard;';';
-import {Badge} from './ui / badge';';
-export default function Page(props: any) {';';
- from './ui/badge';"';';
+import {Badge} from './ui / badge';
+export default function Page($1) {
+ from './ui/badge';";';
 import { Input } from './ui/input';
-export default function Page(props: any) {
+export default function Page($1) {
 ,
-        {';
-';';
-            id: 'nanotechnology',';';
-            title: 'Advanced Nanotechnology Platform',';';
-            category: 'biotech-ai',';';
-            price: '$450,000/month',';';
-            duration: '30-42 months',';';
+        {
+
+            id: 'nanotechnology',
+            title: 'Advanced Nanotechnology Platform',
+            category: 'biotech-ai',
+            price: '$450,000/month',
+            duration: '30-42 months',
             status: 'Active',
             performance: 89,
             clientCount: 12,
-            revenue: 5400000,';
-            growth: 34.2,';';
-            complexity: 'Advanced',';';
-            marketDemand: 'High',';';
+            revenue: 5400000,
+            growth: 34.2,
+            complexity: 'Advanced',
+            marketDemand: 'High',
             technologyMaturity: 'Growing'
         },
-        {';
-';';
-            id: 'brain-computer-interface',';';
-            title: 'Advanced Brain-Computer Interface',';';
-            category: 'biotech-ai',';';
-            price: '$600,000/month',';';
-            duration: '30-42 months',';';
+        {
+
+            id: 'brain-computer-interface',
+            title: 'Advanced Brain-Computer Interface',
+            category: 'biotech-ai',
+            price: '$600,000/month',
+            duration: '30-42 months',
             status: 'Active',
             performance: 91,
             clientCount: 6,
-            revenue: 3600000,';
-            growth: 42.1,';';
-            complexity: 'Enterprise',';';
-            marketDemand: 'Exploding',';';
+            revenue: 3600000,
+            growth: 42.1,
+            complexity: 'Enterprise',
+            marketDemand: 'Exploding',
             technologyMaturity: 'Leading'
 
     ];
@@ -44,8 +44,8 @@ export default function Page(props: any) {
 
             const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase());
             return matchesCategory && matchesStatus && matchesComplexity && matchesSearch})}, [selectedCategory, selectedStatus, selectedComplexity, searchTerm]);
-    const portfolioMetrics = useMemo(() => {';
-';';
+    const portfolioMetrics = useMemo(() => {
+
         const activeServices = portfolioData.filter(s => s.status === 'Active');
         const totalClients = portfolioData.reduce((sum, s) => sum + s.clientCount, 0);
         const avgPerformance = activeServices.length > 0
@@ -63,53 +63,53 @@ export default function Page(props: any) {
             portfolioGrowth: Math.round(portfolioGrowth) ,
             marketCoverage: Math.round((portfolioData.length / 50) * 100) // Assuming 50 total possible services
         }}, [portfolioData]) ;
-    const getStatusColor = (props: any) => {
+    const getStatusColor = (props) => {
 
-        switch(status) {';
-';';
-            case 'Active': return 'bg-green-100 text-green-800';';';
-            case 'Development': return 'bg-blue-100 text-blue-800';';';
-            case 'Planning': return 'bg-yellow-100 text-yellow-800';';';
-            case 'Discontinued': return 'bg-red-100 text-red-800';';';
+        switch(status) {
+
+            case 'Active': return 'bg-green-100 text-green-800';
+            case 'Development': return 'bg-blue-100 text-blue-800';
+            case 'Planning': return 'bg-yellow-100 text-yellow-800';
+            case 'Discontinued': return 'bg-red-100 text-red-800';
             default: return 'bg-gray-100 text-gray-800'}
     };
-    const getComplexityColor = (props: any) => {
+    const getComplexityColor = (props) => {
 
-        switch(complexity) {';
-';';
-            case 'Basic': return 'bg-green-100 text-green-800';';';
-            case 'Intermediate': return 'bg-blue-100 text-blue-800';';';
-            case 'Advanced': return 'bg-orange-100 text-orange-800';';';
-            case 'Enterprise': return 'bg-purple-100 text-purple-800';';';
+        switch(complexity) {
+
+            case 'Basic': return 'bg-green-100 text-green-800';
+            case 'Intermediate': return 'bg-blue-100 text-blue-800';
+            case 'Advanced': return 'bg-orange-100 text-orange-800';
+            case 'Enterprise': return 'bg-purple-100 text-purple-800';
             default: return 'bg-gray-100 text-gray-800'}
     };
-    const getMarketDemandColor = (props: any) => {
+    const getMarketDemandColor = (props) => {
 
-        switch(demand) {';
-';';
-            case 'Low': return 'bg-gray-100 text-gray-800';';';
-            case 'Medium': return 'bg-blue-100 text-blue-800';';';
-            case 'High': return 'bg-orange-100 text-orange-800';';';
-            case 'Exploding': return 'bg-red-100 text-red-800';';';
+        switch(demand) {
+
+            case 'Low': return 'bg-gray-100 text-gray-800';
+            case 'Medium': return 'bg-blue-100 text-blue-800';
+            case 'High': return 'bg-orange-100 text-orange-800';
+            case 'Exploding': return 'bg-red-100 text-red-800';
             default: return 'bg-gray-100 text-gray-800'}
     };
-    const getTechnologyMaturityColor = (props: any) => {
+    const getTechnologyMaturityColor = (props) => {
 
-        switch(maturity) {';
-';';
-            case 'Emerging': return 'bg-blue-100 text-blue-800';';';
-            case 'Growing': return 'bg-green-100 text-green-800';';';
-            case 'Mature': return 'bg-orange-100 text-orange-800';';';
-            case 'Leading': return 'bg-purple-100 text-purple-800';';';
-            default: return 'bg-gray-100 text-gray-800'}';
-    };';';
-    const categories = ['';';
-        {id: 'all', name: 'All Categories', count: portfolioData.length},';';
-        {id: 'ai', name: 'AI & Machine Learning', count: portfolioData.filter(s => s.category === 'ai').length},';';
-        {id: 'quantum', name: 'Quantum Computing', count: portfolioData.filter(s => s.category === 'quantum').length},';';
-        {id: 'space-tech', name: 'Space Technology', count: portfolioData.filter(s => s.category === 'space-tech').length},';';
-        {id: 'biotech-ai', name: 'Biotech AI', count: portfolioData.filter(s => s.category === 'biotech-ai').length},';';
-        {id: 'green-tech', name: 'Green Technology', count: portfolioData.filter(s => s.category === 'green-tech').length}
+        switch(maturity) {
+
+            case 'Emerging': return 'bg-blue-100 text-blue-800';
+            case 'Growing': return 'bg-green-100 text-green-800';
+            case 'Mature': return 'bg-orange-100 text-orange-800';
+            case 'Leading': return 'bg-purple-100 text-purple-800';
+            default: return 'bg-gray-100 text-gray-800'}
+    };
+    const categories = ['
+        {id: 'all', name: 'All Categories', count: portfolioData.length},
+        {id: 'ai', name: 'AI & Machine Learning', count: portfolioData.filter(s => s.category === 'ai').length},
+        {id: 'quantum', name: 'Quantum Computing', count: portfolioData.filter(s => s.category === 'quantum').length},
+        {id: 'space-tech', name: 'Space Technology', count: portfolioData.filter(s => s.category === 'space-tech').length},
+        {id: 'biotech-ai', name: 'Biotech AI', count: portfolioData.filter(s => s.category === 'biotech-ai').length},
+        {id: 'green-tech', name: 'Green Technology', count: portfolioData.filter(s => s.category === 'green-tech').length};
     ];"
     return (
     <div className="min-h-screen bg-white">
@@ -134,12 +134,12 @@ export default function Page(props: any) {
             <p className="text-zion-slate-light">
               Comprehensive insights into our cutting-edge service portfolio, performance metrics, and strategic analysis
             </p>
-          </div>';
-"';';
-          <div className="flex gap-2">'"';';
-            {['overview',detailed',analytics'].map((mode) => (<Button key={mode} variant={viewMode === mode ? 'default' : 'outline'} size="sm" onClick={() => setViewMode(mode)}>'"';';
-                {mode === 'overview' && <Eye className="w-4 h-4 mr-2" />}'"';';
-                {mode === 'detailed' && <BarChart3 className="w-4 h-4 mr-2" />}'"';';
+          </div>
+";';
+          <div className="flex gap-2">";';
+            {['overview',detailed',analytics'].map((mode) => (<Button key={mode} variant={viewMode === mode ? 'default' : 'outline'} size="sm" onClick={() => setViewMode(mode)}>";';
+                {mode === 'overview' && <Eye className="w-4 h-4 mr-2" />}";';
+                {mode === 'detailed' && <BarChart3 className="w-4 h-4 mr-2" />}";';
                 {mode === 'analytics' && <PieChart className="w-4 h-4 mr-2" />}
                 {mode.charAt(0).toUpperCase() + mode.slice(1)}
               </Button>))}
@@ -308,12 +308,12 @@ export default function Page(props: any) {
           </div>
 "
           <div className="flex items-end">"
-            <Button variant="outline" className="w-full" onClick={() => {';
-';';
+            <Button variant="outline" className="w-full" onClick={() => {
+
             setSelectedCategory('all');';';
             setSelectedStatus('all');';';
             setSelectedComplexity('all');';';
-            setSearchTerm('')}}>"
+            setSearchTerm(")}}>"
               <Filter className="w-4 h-4 mr-2" />
               Clear Filters
             </Button>
@@ -398,11 +398,11 @@ export default function Page(props: any) {
                       <td className="py-3 px-4">"
                         <span className="font-medium">${(service.revenue / 1000000).toFixed(1)}M</span>
                       </td>"
-                      <td className="py-3 px-4">"';
-                        <div className="flex items-center gap-1">"';';
-                          {service.growth > 0 ? (<ArrowUpRight className="w-4 h-4 text-green-500" />) : (<ArrowDownRight className="w-4 h-4 text-red-500" />)}'`';';
+                      <td className="py-3 px-4">";
+                        <div className="flex items-center gap-1">";';
+                          {service.growth > 0 ? (<ArrowUpRight className="w-4 h-4 text-green-500" />) : (<ArrowDownRight className="w-4 h-4 text-red-500" />)}'`
                           <span className={`text-sm font-medium ${service.growth > 0 ? 'text-green-600' : 'text-red-600'}`}>';';
-                            {service.growth > 0 ? '+' : ''}{service.growth}%
+                            {service.growth > 0 ? '+' : "}{service.growth}%
                           </span>
                         </div>
                       </td>"
@@ -445,8 +445,8 @@ export default function Page(props: any) {
               Service Category Distribution
             </CardTitle>
           </CardHeader>
-          <CardContent>"';
-            <div className="space-y-3">';';
+          <CardContent>";
+            <divclassName="space-y-3">';
               {categories.filter(cat => cat.id !== 'all').map((category, index) => (<motion.div key={category.id} initial = {
 
   { opacity: 0,
@@ -457,22 +457,22 @@ export default function Page(props: any) {
   { opacity: 1,
   x: 0
 
-"';
-}} transition={{ delay: 0.1 * index }} className="flex items-center justify-between">"';';
-                  <div className="flex items-center gap-3">'`';';
-                    <div className={`w-4 h-4 rounded-full ${index === 0 ? 'bg-blue-500' :'';';
-                index === 1 ? 'bg-purple-500' :'';';
-                    index === 2 ? 'bg-green-500' :'';';
-                        index === 3 ? 'bg-orange-500' :'`';';
+";
+}} transition={{ delay: 0.1 * index }} className="flex items-center justify-between">";';
+                  <div className="flex items-center gap-3">'`
+                    <div className={`w-4 h-4 rounded-full ${index === 0 ? 'bg-blue-500' :'
+                index === 1 ? 'bg-purple-500' :'
+                    index === 2 ? 'bg-green-500' :'
+                        index === 3 ? 'bg-orange-500' :'`
                             index === 4 ? 'bg-red-500' : 'bg-gray-500'}`}></div>"
                     <span className="font-medium text-zion-slate-dark">{category.name}</span>
-                  </div>"';
-                  <div className="flex items-center gap-2">"';';
-                    <div className="w-20 bg-zion-slate-light/20 rounded-full h-2">'`';';
-                      <div className={`h-2 rounded-full ${index === 0 ? 'bg-blue-500' :'';';
-                index === 1 ? 'bg-purple-500' :'';';
-                    index === 2 ? 'bg-green-500' :'';';
-                        index === 3 ? 'bg-orange-500' :'`';';
+                  </div>";
+                  <div className="flex items-center gap-2">";';
+                    <div className="w-20 bg-zion-slate-light/20 rounded-full h-2">'`
+                      <div className={`h-2 rounded-full ${index === 0 ? 'bg-blue-500' :'
+                index === 1 ? 'bg-purple-500' :'
+                    index === 2 ? 'bg-green-500' :'
+                        index === 3 ? 'bg-orange-500' :'`
                             index === 4 ? 'bg-red-500' : 'bg-gray-500'}`} style="{{{ width: `${(category.count / portfolioData.length) * 100}}"%` }}></div>
                     </div>"
                     <span className="text-sm font-medium text-zion-slate-light">{category.count}</span>
@@ -515,8 +515,8 @@ export default function Page(props: any) {
               <div className="flex items-start gap-3 p-3 bg-zion-purple/10 rounded-lg">"
                 <Award className="w-5 h-5 text-zion-purple mt-1" />
                 <div>"
-                  <h4 className="font-semibold text-zion-slate-dark">Market Leaders</h4>"';
-                  <p className="text-sm text-zion-slate-light">';';
+                  <h4 className="font-semibold text-zion-slate-dark">Market Leaders</h4>";
+                  <pclassName="text-sm text-zion-slate-light">';
                     {portfolioData.filter(s => s.technologyMaturity === 'Leading').length} services in leading position
                   </p>
                 </div>
@@ -542,12 +542,12 @@ export default function Page(props: any) {
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"
           <h3 className="text-3xl font-bold mb-4">Ready to Expand Your Portfolio?</h3>"
           <p className="text-xl mb-6 max-w-2xl mx-auto">
-            Our comprehensive service portfolio offers cutting-edge solutions across all major technology sectors.Contact us to discuss how we can help you achieve your business goals.</p>"';
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">"';';
+            Our comprehensive service portfolio offers cutting-edge solutions across all major technology sectors.Contact us to discuss how we can help you achieve your business goals.</p>";
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">";';
             <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Portfolio Expansion Consultation',_blank')}>"
               <Users className="w-5 h-5 mr-2" />
               Get Portfolio Consultation';
-            </Button>"';';
+            </Button>";';
             <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick={() => window.open('tel:+13024640950',_blank')}>"
               <Zap className="w-5 h-5 mr-2" />
               Call Now
@@ -571,5 +571,5 @@ export {AdvancedServicePortfolioDashboard};
 
 </motion>
 </motion>
-</motion>';
-</motion>;';;';
+</motion>
+</motion>;';';

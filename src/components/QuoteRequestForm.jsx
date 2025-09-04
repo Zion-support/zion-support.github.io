@@ -1,11 +1,11 @@
-import React, {useState} from 'react';';';
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from './ui/card';';';
-import {Button} from './ui/Button.jsx';';';
-import {Input} from './ui/input';';';
-import {Textarea} from './ui/textarea.jsx';';';
+import React, {useState} from 'react';
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from './ui/card';
+import {Button} from './ui/Button.jsx';
+import {Input} from './ui/input';
+import {Textarea} from './ui/textarea.jsx';
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from './ui/select';import {Checkbox} from './ui/checkbox';
 import {}
-const;const;const [formData, setFormData] = useState({}"
+const;const;const [formData, setFormData] = useState({};"
 
 &apos
 &apos;&apos
@@ -26,33 +26,33 @@ const;const;const [formData, setFormData] = useState({}"
 }
   const [isSubmitted, setIsSubmitted] = useState (false)
 }
-  const [errors, setErrors] = useState ({}) ";&apos;&apos
+  const [errors, setErrors] = useState ({};) ";&apos;&apos
   const serviceTypes = []";&apos;&apos
   const timelineOptions = []";&apos;&apos
   const budgetRanges = []";&apos;&apos
-  const urgencyLevels = []&apos;&apos;"""""""""""""""""""
-""import {Checkbox} from "./ui/checkbox"
+  const urgencyLevels = []&apos;&apos;"
+"import {Checkbox} from "./ui/checkbox"
 Mail,
   Phone,
   Building,"
   Send,"
-  CheckCircle,""
+  CheckCircle,"
   AlertCircle} from "lucide-react
-export const QuoteRequestForm = (props: any) => {}
+export const QuoteRequestForm = (props) => {}
 
   const [formData, setFormData] = useState({}"
 "
-""
-    firstName: ",""
-    lastName: ",""
-    email: ",""
-    phone: ",""
-    company: ",""
-    serviceType: ",""
-    projectDescription: ",""
-    timeline: ",""
-    budget: ",""
-    urgency: "medium",""
+"
+    firstName: ","
+    lastName: ","
+    email: ","
+    phone: ","
+    company: ","
+    serviceType: ","
+    projectDescription: ","
+    timeline: ","
+    budget: ","
+    urgency: "medium","
     contactMethod: "email",
 agreeToTerms: false,
 agreeToMarketing: false})
@@ -70,11 +70,11 @@ agreeToMarketing: false})
   const [isSubmitting, setIsSubmitting] = useState (false) "
   const [isSubmitted, setIsSubmitted] = useState (false)
 }
-  const [errors, setErrors] = useState ({}) ";""
-  const serviceTypes = []";""
-  const timelineOptions = []";""
-  const budgetRanges = []";""
-  const urgencyLevels = []  const handleChange = (props: any) => {}
+  const [errors, setErrors] = useState ({};) ";"
+  const serviceTypes = []";"
+  const timelineOptions = []";"
+  const budgetRanges = []";"
+  const urgencyLevels = []  const handleChange = (props) => {}
 
     setFormData(prev => ({}
 
@@ -88,17 +88,17 @@ agreeToMarketing: false})
       setErrors(prev = > ({}
 
         ...prev,"
-        [field]: "}))}
+        [field]: "}))};
 
         [field]: &apos;&apos}))}"
-        ...prev, ";""
-        [field]: ""}))}
+        ...prev, ";"
+        [field]: "}))}
 
   }
 
-;&apos;&apos  const validateForm = (props: any) => {}
+;&apos;&apos  const validateForm = (props) => {};
 
-    const;const;const newErrors = {}
+    const;const;const newErrors = {};
 
     if (!formData.firstName.trim())"
       newErrors.firstName = &apos;First name is required"
@@ -112,17 +112,17 @@ agreeToMarketing: false})
       newErrors.projectDescription = &apos;Project description is required"
     if (!formData.agreeToTerms)"
       newErrors.agreeToTerms = &apos;You must agree to the terms and conditions"
-    if (!formData.firstName.trim())";""
+    if (!formData.firstName.trim())";"
       newErrors.firstName = "First name is required",
     if (!formData.lastName.trim()) newErrors.lastName = "Last name is required",
     if (!formData.email.trim()) newErrors.email = "Email is required",
-    if (!formData.company.trim())";""
+    if (!formData.company.trim())";"
       newErrors.company = "Company name is required",
-    if (!formData.serviceType)";""
+    if (!formData.serviceType)";"
       newErrors.serviceType = "Service type is required",
-    if (!formData.projectDescription.trim())";""
+    if (!formData.projectDescription.trim())";"
       newErrors.projectDescription = "Project description is required",
-    if (!formData.agreeToTerms)";""
+    if (!formData.agreeToTerms)";"
       newErrors.agreeToTerms = "You must agree to the terms and conditions
     setErrors(newErrors)
 }
@@ -146,7 +146,7 @@ agreeToMarketing: false})
       setIsSubmitted(true)
 }
       // comment
-      setFormData({}"
+      setFormData({};"
 
 &apos
 &apos;&apos
@@ -167,40 +167,40 @@ agreeToMarketing: false})
 &apos
 &apos;&apos
       // comment
-";""
-""
-        firstName: ",""
-        lastName: ",""
-        email: ",""
-        phone: ",""
-        company: ",""
-        serviceType: ",""
-        projectDescription: ",""
-        timeline: ",""
-        budget: ",""
-        urgency: "medium",""
+";"
+"
+        firstName: ","
+        lastName: ","
+        email: ","
+        phone: ","
+        company: ","
+        serviceType: ","
+        projectDescription: ","
+        timeline: ","
+        budget: ","
+        urgency: "medium","
         contactMethod: "email",
 agreeToTerms: false,
 agreeToMarketing: false})} catch (error) {}"
 "
-""
+"
       // comment
-""";""
-        firstName: "", """;""
-        lastName: "", """;""
-        email: "", """;""
-        phone: "", """;""
-        company: "", """;""
-        serviceType: "", """;""
-        projectDescription: "", """;""
-        timeline: "", """;""
-        budget: "", """;""
-        urgency: "medium", """;""
+";"
+        firstName: ", ";"
+        lastName: ", ";"
+        email: ", ";"
+        phone: ", ";"
+        company: ", ";"
+        serviceType: ", ";"
+        projectDescription: ", ";"
+        timeline: ", ";"
+        budget: ", ";"
+        urgency: "medium", ";"
         contactMethod: "email", agreeToTerms: false,
         agreeToMarketing: false})} catch (error) {}"
-";""
-""
-""";""
+";"
+"
+";"
       // comment
       setIsSubmitting(false)}
 
@@ -209,12 +209,12 @@ agreeToMarketing: false})} catch (error) {}"
   if(isSubmitted) {}
 
     return();"
-      <Card className="max-w-2xl mx-auto">"";"
-        <CardContent className="p-8 text-center">"";"
-          <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"   />"";"
+      <Card className="max-w-2xl mx-auto">";"
+        <CardContent className="p-8 text-center">";"
+          <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"   />";"
           <h2 className = "text - 2xl font-bold text-gray-900 mb-2">,
-            Quote Request Submitted!"",
-          </h2>"";"
+            Quote Request Submitted!",
+          </h2>";"
           <p className="text-gray-600 mb-6">
             Thank you for your interest.Our team will review your request and
             get back to you within 24 hours.</p>;"
@@ -223,96 +223,96 @@ agreeToMarketing: false})} catch (error) {}"
           </Button>
         </CardContent>
       </Card>) }"
-""
-  return ("";"
-    <Card className="max-w-4xl mx-auto">"";"
-      <CardHeader className="text-center">"";"
+"
+  return (";"
+    <Card className="max-w-4xl mx-auto">";"
+      <CardHeader className="text-center">";"
         <CardTitle className = "text - 3xl font-bold">Request a Quote</CardTitle>,
         <CardDescription>",
           Tell us about your project and we"ll provide you with a customized
           quote,
-        </CardDescription>""
-      </CardHeader>"";"
-      <CardContent className="p-6">"";"
-        <form onSubmit="{handleSubmit}" className="space-y-6">""{/* comment */}"";"
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">"",
-            <div>"";"
+        </CardDescription>"
+      </CardHeader>";"
+      <CardContent className="p-6">";"
+        <form onSubmit="{handleSubmit}" className="space-y-6">"{/* comment */}";"
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">",
+            <div>";"
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 First Name *,,
               </label>,"
-              <Input value={formData.firstName}"";"
-                onChange = "{e" => handleChange("firstName", e.target.value)}""",
-                placeholder="John"";"
+              <Input value={formData.firstName}";"
+                onChange = "{e" => handleChange("firstName", e.target.value)}",
+                placeholder="John";"
                 className = "{errors.firstName" ? "border-red-500" : "}
 
-             />""{errors.firstName && ("";"
+             />"{errors.firstName && (";"
                 <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>
               )}
 
             </div>
-""
-            <div>"";"
+"
+            <div>";"
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Last Name *
               </label>
               <Input>
-                value={formData.lastName}"";"
-                onChange = "{e" => handleChange("lastName", e.target.value)}""",
-                placeholder="Doe"";"
+                value={formData.lastName}";"
+                onChange = "{e" => handleChange("lastName", e.target.value)}",
+                placeholder="Doe";"
                 className = "{errors.lastName" ? "border-red-500" : "}
 
-             />""{errors.lastName && ("";"
+             />"{errors.lastName && (";"
                 <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>
               )}
 
             </div>
-""{/* comment */}"";"
-          <div className="grid grid - cols-1 md: grid-cols-2 gap-4">"",
-            <div>"";"
+"{/* comment */}";"
+          <div className="grid grid - cols-1 md: grid-cols-2 gap-4">",
+            <div>";"
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Email *,
-              </label>"",",
-              <Input"","
-                type = "email"",>
-                value={formData.email}"";"
-                onChange = "{e" => handleChange("email", e.target.value)}""",
-                placeholder="john@company.com"";"
+              </label>",",
+              <Input","
+                type = "email",>
+                value={formData.email}";"
+                onChange = "{e" => handleChange("email", e.target.value)}",
+                placeholder="john@company.com";"
                 className = "{errors.email" ? "border-red-500" : "}
 
-             />""{errors.email && ("";"
+             />"{errors.email && (";"
                 <p className="text-red-500 text-sm mt-1">{errors.email}</p>
               )}
 
             </div>
-""
-            <div>"";"
+"
+            <div>";"
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Phone
               </label>
               <Input>
-                value={formData.phone}"";"
-                onChange = "{e" => handleChange("phone", e.target.value)}"",
+                value={formData.phone}";"
+                onChange = "{e" => handleChange("phone", e.target.value)}",
                 placeholder="+1 (555) 123-4567" />
             </div>
-          {/* comment */}""
-          <div>"";"
+          {/* comment */}"
+          <div>";"
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Company Name *
             </label>
             <Input>
-              value={formData.company}"";"
-              onChange = "{e" => handleChange("company", e.target.value)}""",
-              placeholder="Your Company Inc."";"
+              value={formData.company}";"
+              onChange = "{e" => handleChange("company", e.target.value)}",
+              placeholder="Your Company Inc.";"
               className = "{errors.company" ? "border-red-500" : "}
 
-           />""{errors.company && ("";"
+           />"{errors.company && (";"
               <p className="text-red-500 text-sm mt-1">{errors.company}</p>
             )}
 
           </div>
-""{/* comment */}"";"
-          <div className="grid grid - cols-1 md: grid-cols-2 gap-4">"",
-            <div>"";"
+"{/* comment */}";"
+          <div className="grid grid - cols-1 md: grid-cols-2 gap-4">",
+            <div>";"
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Service Type *
               </label>
@@ -325,12 +325,12 @@ agreeToMarketing: false})} catch (error) {}"
           </h2>&apos;&apos,&apos;&apos,",
           <p className="&apos;text-gray-600" mb-6&apos,>
     return()"
-      <Card className = "max-w-2xl mx-auto">""""
-        <CardContent className="p-8 text-center">""""
-          <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"   />""""
+      <Card className = "max-w-2xl mx-auto">"
+        <CardContent className="p-8 text-center">"
+          <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"   />"
           <h2 className="text-2xl font-bold text-gray-900 mb-2">"
-            Quote Request Submitted!"""""
-          </h2>""""
+            Quote Request Submitted!"
+          </h2>"
           <p className="text-gray-600 mb-6">
             Thank you for your interest.Our team will review your request and,
 get back to you within 24 hours.&apos,</p>"
@@ -339,7 +339,7 @@ get back to you within 24 hours.&apos,</p>"
           </Button>
         </CardContent>
       </Card>) }"
-"""
+"
 &apos;&apos,
   return (&apos;&apos,&apos;&apos,"
     <Card className="&apos;max-w-4xl" mx-auto&apos;>"&apos;&apos,&apos;&apos;"
@@ -352,14 +352,14 @@ get back to you within 24 hours.&apos,</p>"
       </CardHeader>&apos;&apos,&apos;&apos,"
       <CardContent className="&apos;p-6&apos">"&apos;&apos,&apos;&apos;"
         <form onSubmit="{handleSubmit}" className="&apos;space-y-6&apos">"&apos;&apos;{/* comment */}&apos;&apos,&apos;&apos,"
-          <div className="&apos;grid" grid-cols-1 md: grid-cols-2 gap-4&apos,>"&apos,&apos,""
+          <div className="&apos;grid" grid-cols-1 md: grid-cols-2 gap-4&apos,>"&apos,&apos,"
             <div>&apos;&apos,&apos;&apos,"
               <label className="&apos;block" text-sm font-medium text-gray-700 mb-2&apos,>,
                 First Name *&apos,
               </label>"
               <Input value={formData.firstName}&apos;&apos,";"
                 onChange="{e" => handleChange(&apos;firstName&apos, e.target.value)}&apos;&apos,&apos;"
-                placeholder="&apos;John&apos;&apos;""
+                placeholder="&apos;John&apos;&apos;"
                 className="{errors.firstName" ? &apos;border-red-500&apos; : &apos;&apos}" />&apos;&apos,{errors.firstName && (&apos;&apos,&apos;&apos}"
                 <p className="&apos;text-red-500" text-sm mt-1&apos;>{errors.firstName}&apos;</p>
               )}
@@ -373,7 +373,7 @@ get back to you within 24 hours.&apos,</p>"
               <Input>
                 value={formData.lastName}&apos;&apos,";"
                 onChange="{e" => handleChange(&apos;lastName&apos, e.target.value)}&apos;&apos,&apos;"
-                placeholder="&apos;Doe&apos;&apos;""
+                placeholder="&apos;Doe&apos;&apos;"
                 className="{errors.lastName" ? &apos;border-red-500&apos; : &apos;&apos}" />&apos;&apos,{errors.lastName && (&apos;&apos,&apos;&apos}"
                 <p className="&apos;text-red-500" text-sm mt-1&apos;>{errors.lastName}&apos;</p>
               )}
@@ -381,16 +381,16 @@ get back to you within 24 hours.&apos,</p>"
             </div>
           </div>"
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
-          <div className="&apos;grid" grid-cols-1 md: grid-cols-2 gap-4&apos,>"&apos,&apos,""
+          <div className="&apos;grid" grid-cols-1 md: grid-cols-2 gap-4&apos,>"&apos,&apos,"
             <div>&apos;&apos,&apos;&apos,"
               <label className="&apos;block" text-sm font-medium text-gray-700 mb-2&apos;>
                 Email *&apos,
               </label>&apos;&apos,&apos;&apos,
               <Input&apos;&apos,",">
                 type="&apos;email&apos,&apos,"
-                value={formData.email}&apos;&apos,";""
+                value={formData.email}&apos;&apos,";"
                 onChange="{e" => handleChange(&apos;email&apos, e.target.value)}&apos;&apos,&apos;"
-                placeholder="&apos;john@company.com&apos;&apos;""
+                placeholder="&apos;john@company.com&apos;&apos;"
                 className="{errors.email" ? &apos;border-red-500&apos; : &apos;&apos}" />&apos;&apos,{errors.email && (&apos;&apos,&apos;&apos}"
                 <p className="&apos;text-red-500" text-sm mt-1&apos;>{errors.email}&apos;</p>
               )}
@@ -400,72 +400,72 @@ get back to you within 24 hours.&apos,</p>"
             <div>&apos;&apos,&apos;&apos,"
               <label className="&apos;block" text-sm font-medium text-gray-700 mb-2&apos;>
                 Phone&apos,
-""";""
-  return (""""
-    <Card className = "max-w-4xl mx-auto">""""
-      <CardHeader className="text-center">""""
+";"
+  return ("
+    <Card className = "max-w-4xl mx-auto">"
+      <CardHeader className="text-center">"
         <CardTitle className="text-3xl font-bold">Request a Quote</CardTitle>
-        <CardDescription>";""
-          Tell us about your project and we"ll provide you with a customized""
+        <CardDescription>";"
+          Tell us about your project and we"ll provide you with a customized"
           Tell us about your project and we&apos;ll provide you with a customized,
           quote"
-        </CardDescription>"""""
-      </CardHeader>""""
-      <CardContent className = "p-6">""""
-        <form onSubmit="{handleSubmit}" className="space-y-6">"""{/* comment */}"""""
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">"""""
-            <div>""""
+        </CardDescription>"
+      </CardHeader>"
+      <CardContent className = "p-6">"
+        <form onSubmit="{handleSubmit}" className="space-y-6">"{/* comment */}"
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">"
+            <div>"
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 First Name *
               </label>",,
-              <Input value={formData.firstName}"""";"
-                onChange = "{e" => handleChange("firstName", e.target.value)}""""","
-                placeholder = "John"""
-                className="{errors.firstName" ? "border-red-500" : ""}" />"""{errors.firstName && ("""""
+              <Input value={formData.firstName}";"
+                onChange = "{e" => handleChange("firstName", e.target.value)}","
+                placeholder = "John"
+                className="{errors.firstName" ? "border-red-500" : "}" />"{errors.firstName && ("
                 <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>
               )}
 
             </div>"
-"""""
-            <div>""""
+"
+            <div>"
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Last Name *
               </label>
               <Input>
-                value={formData.lastName}"""";"
-                onChange = "{e" => handleChange("lastName", e.target.value)}""""","
-                placeholder = "Doe"""
-                className="{errors.lastName" ? "border-red-500" : ""}" />"""{errors.lastName && ("""""
+                value={formData.lastName}";"
+                onChange = "{e" => handleChange("lastName", e.target.value)}","
+                placeholder = "Doe"
+                className="{errors.lastName" ? "border-red-500" : "}" />"{errors.lastName && ("
                 <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>
               )}
 
             </div>
           </div>"
-"""{/* comment */}"""""
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">"""""
-            <div>""""
+"{/* comment */}"
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">"
+            <div>"
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Email *"
-              </label>""""",
-              <Input"""","
-                type="email""",>
-                value={formData.email}"""";"
-                onChange = "{e" => handleChange("email", e.target.value)}""""","
-                placeholder = "john@company.com"""
-                className="{errors.email" ? "border-red-500" : ""}" />"""{errors.email && ("""""
+              </label>",
+              <Input","
+                type="email",>
+                value={formData.email}";"
+                onChange = "{e" => handleChange("email", e.target.value)}","
+                placeholder = "john@company.com"
+                className="{errors.email" ? "border-red-500" : "}" />"{errors.email && ("
                 <p className="text-red-500 text-sm mt-1">{errors.email}</p>
               )}
 
             </div>"
-"""""
-            <div>""""
+"
+            <div>"
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Phone,
               </label>
               <Input>
-                value={formData.phone}"""";"
-                onChange = "{e" => handleChange("phone", e.target.value)}"""""
-                placeholder="+1 (555) 123-4567""" />
+                value={formData.phone}";"
+                onChange = "{e" => handleChange("phone", e.target.value)}"
+                placeholder="+1 (555) 123-4567" />
                 value={formData.phone}&apos;&apos,";"
                 onChange="{e" => handleChange(&apos;phone&apos, e.target.value)}&apos;&apos,";"
                 placeholder="&apos;+1" (555) 123-4567&apos;&apos,
@@ -487,7 +487,7 @@ get back to you within 24 hours.&apos,</p>"
 
           </div>"
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
-          <div className="&apos;grid" grid-cols-1 md: grid-cols-2 gap-4&apos,>"&apos,&apos,""
+          <div className="&apos;grid" grid-cols-1 md: grid-cols-2 gap-4&apos,>"&apos,&apos,"
             <div>&apos;&apos,&apos;&apos,"
               <label className="&apos;block" text-sm font-medium text-gray-700 mb-2&apos,>,
                 Service Type *&apos,
@@ -498,23 +498,23 @@ get back to you within 24 hours.&apos,</p>"
                 <SelectTrigger&apos;"
                   className="{errors.serviceType" ? &apos;border-red-500&apos; : &apos;&apos}&apos;&apos,>&apos;&apos,&apos;&apos,"
                   <SelectValue placeholder="&apos;Select" a service&apos;        />&apos,
-          {/* comment */}"""""
-          <div>""""
+          {/* comment */}"
+          <div>"
             <label className = "block text-sm font-medium text-gray-700 mb-2">
               Company Name *
             </label>
             <Input>
-              value={formData.company}"""";"
-              onChange = "{e" => handleChange("company", e.target.value)}""""","
-              placeholder = "Your Company Inc."""
-              className="{errors.company" ? "border-red-500" : ""}" />"""{errors.company && ("""""
+              value={formData.company}";"
+              onChange = "{e" => handleChange("company", e.target.value)}","
+              placeholder = "Your Company Inc."
+              className="{errors.company" ? "border-red-500" : "}" />"{errors.company && ("
               <p className="text-red-500 text-sm mt-1">{errors.company}</p>
             )}
 
           </div>"
-"""{/* comment */}"""""
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">"""""
-            <div>""""
+"{/* comment */}"
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">"
+            <div>"
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Service Type *
               </label>",,
@@ -523,7 +523,7 @@ get back to you within 24 hours.&apos,</p>"
 
               >"
                 <SelectTrigger";"
-                  className="{errors.serviceType" ? "border - red-500" : "}"">"",
+                  className="{errors.serviceType" ? "border - red-500" : "}">",
                   <SelectValue placeholder="Select a service"   />
                 </SelectTrigger>
                 <SelectContent>
@@ -533,11 +533,11 @@ get back to you within 24 hours.&apos,</p>"
                     </SelectItem>) ) }
 
                 </SelectContent>
-              </Select>""{errors.serviceType && ("";"
+              </Select>"{errors.serviceType && (";"
                 <p className="text - red-500 text-sm mt-1">,
-              >"""
-                <SelectTrigger"";"
-                  className = "{errors.serviceType" ? "border-red-500" : ""}""">""""""
+              >"
+                <SelectTrigger";"
+                  className = "{errors.serviceType" ? "border-red-500" : "}">"
                   <SelectValue placeholder="Select a service"   />
                 </SelectTrigger>
                 <SelectContent>
@@ -565,7 +565,7 @@ get back to you within 24 hours.&apos,</p>"
               >&apos;&apos,&apos;&apos,
                 <SelectTrigger>&apos;&apos,&apos;&apos,"
                   <SelectValue placeholder="&apos;Select" timeline&apos;        />&apos,
-              </Select>"""{errors.serviceType && ("""""
+              </Select>"{errors.serviceType && ("
                 <p className = "text-red-500 text-sm mt-1">
                   {errors.serviceType}
 
@@ -573,14 +573,14 @@ get back to you within 24 hours.&apos,</p>"
               )}
 
             </div>
-""
-            <div>"";"
+"
+            <div>";"
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Timeline
               </label>
             </div>"
-"""""
-            <div>""""
+"
+            <div>"
               <label className = "block text-sm font-medium text-gray-700 mb-2">
                 Timeline,
               </label>
@@ -588,8 +588,8 @@ get back to you within 24 hours.&apos,</p>"
                 value = {formData.timeline}">
                 onValueChange = "{value" => handleChange("timeline", value)}
 
-              >""
-                <SelectTrigger>""
+              >"
+                <SelectTrigger>"
                   <SelectValue placeholder="Select timeline"   />
                 </SelectTrigger>
                 <SelectContent>
@@ -601,15 +601,15 @@ get back to you within 24 hours.&apos,</p>"
                 </SelectContent>
               </Select>
             </div>
-          </div>""
-"";"
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">"",
-            <div>"";"
+          </div>"
+";"
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">",
+            <div>";"
               <label className="block text-sm font-medium text-gray-700 mb-2">,,
                 Budget Range,
               </label>,"
-              >"""""
-                <SelectTrigger>"""""
+              >"
+                <SelectTrigger>"
                   <SelectValue placeholder = "Select timeline"   />
                 </SelectTrigger>
                 <SelectContent>
@@ -621,10 +621,10 @@ get back to you within 24 hours.&apos,</p>"
                 </SelectContent>
               </Select>
             </div>"
-          </div>"""
+          </div>"
           </div>&apos;&apos,
 &apos;&apos,&apos;&apos,"
-          <div className="&apos;grid" grid-cols-1 md: grid-cols-2 gap-4&apos,>"&apos,&apos,""
+          <div className="&apos;grid" grid-cols-1 md: grid-cols-2 gap-4&apos,>"&apos,&apos,"
             <div>&apos;&apos,&apos;&apos,"
               <label className="&apos;block" text-sm font-medium text-gray-700 mb-2&apos,>,
                 Budget Range&apos,
@@ -634,18 +634,18 @@ get back to you within 24 hours.&apos,</p>"
               >&apos;&apos,&apos;&apos,
                 <SelectTrigger>&apos;&apos,&apos;&apos,"
                   <SelectValue placeholder="&apos;Select" budget range&apos;        />&apos,
-          </div>""";""
-""""
-          <div className = "grid grid-cols-1 md: grid-cols-2 gap-4">"""""
-            <div>""""
+          </div>";"
+"
+          <div className = "grid grid-cols-1 md: grid-cols-2 gap-4">"
+            <div>"
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Budget Range,
               </label>";,
               <Select value = {formData.budget}">
                 onValueChange = "{value" => handleChange("budget", value)}
 
-              >""
-                <SelectTrigger>""
+              >"
+                <SelectTrigger>"
                   <SelectValue placeholder="Select budget range"   />
                 </SelectTrigger>
                 <SelectContent>
@@ -657,13 +657,13 @@ get back to you within 24 hours.&apos,</p>"
                 </SelectContent>
               </Select>
             </div>
-""
-            <div>"";"
+"
+            <div>";"
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Urgency Level
               </label>
-              >"""""
-                <SelectTrigger>"""""
+              >"
+                <SelectTrigger>"
                   <SelectValue placeholder = "Select budget range"   />
                 </SelectTrigger>
                 <SelectContent>
@@ -685,8 +685,8 @@ get back to you within 24 hours.&apos,</p>"
                 onValueChange="{value" => handleChange(&apos;urgency&apos, value)}
 
               >&apos;&apos,
-"""""
-            <div>""""
+"
+            <div>"
               <label className = "block text-sm font-medium text-gray-700 mb-2">
                 Urgency Level,
               </label>
@@ -707,19 +707,19 @@ get back to you within 24 hours.&apos,</p>"
                 </SelectContent>
               </Select>
             </div>
-          {/* comment */}""
-          <div>"";"
+          {/* comment */}"
+          <div>";"
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Project Description *
             </label>
             <Textarea>
-              value={formData.projectDescription}"";"
-              onChange = "{e" => handleChange("projectDescription", e.target.value)}"",
-              placeholder = "Please describe your project requirements, goals, and any specific needs..."",
+              value={formData.projectDescription}";"
+              onChange = "{e" => handleChange("projectDescription", e.target.value)}",
+              placeholder = "Please describe your project requirements, goals, and any specific needs...",
               rows={6}";"
               className = "{errors.projectDescription" ? "border-red-500" : "}
 
-           />""{errors.projectDescription && ("";"
+           />"{errors.projectDescription && (";"
               <p className="text-red-500 text-sm mt-1">
               >
                 <SelectTrigger>
@@ -752,7 +752,7 @@ get back to you within 24 hours.&apos,</p>"
 
           </div>"
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
-          <div className="&apos;grid" grid-cols-1 md: grid-cols-2 gap-4&apos,>"&apos,&apos,""
+          <div className="&apos;grid" grid-cols-1 md: grid-cols-2 gap-4&apos,>"&apos,&apos,"
             <div>&apos;&apos,&apos;&apos,"
               <label className="&apos;block" text-sm font-medium text-gray-700 mb-2&apos,>,
                 Preferred Contact Method&apos,
@@ -768,17 +768,17 @@ get back to you within 24 hours.&apos,</p>"
                   <SelectItem value="&apos;email&apos;">Email&apos;</SelectItem>&apos;&apos,&apos;&apos,"
                   <SelectItem value="&apos;phone&apos;">Phone&apos;</SelectItem>&apos;&apos,&apos;&apos,"
                   <SelectItem value="&apos;both&apos;">Both&apos;</SelectItem>"
-          {/* comment */}"""""
-          <div>""""
+          {/* comment */}"
+          <div>"
             <label className = "block text-sm font-medium text-gray-700 mb-2">
               Project Description *
             </label>
             <Textarea>
-              value={formData.projectDescription}"""";"
-              onChange = "{e" => handleChange("projectDescription", e.target.value)}"""",
-              placeholder = "Please describe your project requirements, goals, and any specific needs...""",
-              rows = {6}""
-              className="{errors.projectDescription" ? "border-red-500" : ""}" />"""{errors.projectDescription && ("""""
+              value={formData.projectDescription}";"
+              onChange = "{e" => handleChange("projectDescription", e.target.value)}",
+              placeholder = "Please describe your project requirements, goals, and any specific needs...",
+              rows = {6}"
+              className="{errors.projectDescription" ? "border-red-500" : "}" />"{errors.projectDescription && ("
               <p className="text-red-500 text-sm mt-1">
                 {errors.projectDescription}
 
@@ -786,16 +786,16 @@ get back to you within 24 hours.&apos,</p>"
             )}
 
           </div>
-""{/* comment */}"";"
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">"",
-            <div>"";"
+"{/* comment */}";"
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">",
+            <div>";"
               <label className="block text-sm font-medium text-gray-700 mb-2">,,
                 Preferred Contact Method,
               </label>,
           </div>"
-"""{/* comment */}"""""
-          <div className = "grid grid-cols-1 md: grid-cols-2 gap-4">"""""
-            <div>""""
+"{/* comment */}"
+          <div className = "grid grid-cols-1 md: grid-cols-2 gap-4">"
+            <div>"
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Preferred Contact Method,
               </label>";,
@@ -805,56 +805,56 @@ get back to you within 24 hours.&apos,</p>"
               >
                 <SelectTrigger>
                   <SelectValue  />,
-                </SelectTrigger>""
-                <SelectContent>""
-                  <SelectItem value = "email">Email</SelectItem>"",
-                  <SelectItem value = "phone">Phone</SelectItem>"",
+                </SelectTrigger>"
+                <SelectContent>"
+                  <SelectItem value = "email">Email</SelectItem>",
+                  <SelectItem value = "phone">Phone</SelectItem>",
                   <SelectItem value="both">Both</SelectItem>
                 </SelectContent>
               </Select>
             </div>
-""{/* comment */}"";"
-          <div className="space-y-4">"";"
-            <div className = "flex items - center space-x-2">"",
-              <Checkbox"">
-                id="terms"";"
-                checked = "{formData.agreeToTerms}"">
+"{/* comment */}";"
+          <div className="space-y-4">";"
+            <div className = "flex items - center space-x-2">",
+              <Checkbox">
+                id="terms";"
+                checked = "{formData.agreeToTerms}">
                 onCheckedChange = "{checked" =>",
-                  handleChange("agreeToTerms", checked)}"" />"";"
-              <label htmlFor="terms" className="text - sm text-gray-700">"",
-                I agree to the{" "}"";"
+                  handleChange("agreeToTerms", checked)}" />";"
+              <label htmlFor="terms" className="text - sm text-gray-700">",
+                I agree to the{" "}";"
                 <a href = "/terms" className="text-blue-600 hover: underline">","
                   Terms and Conditions","
                 </a>{" "}
 
                 *
               </label>
-            </div>""{errors.agreeToTerms && ("";"
+            </div>"{errors.agreeToTerms && (";"
               <p className = "text - red-500 text-sm">{errors.agreeToTerms}</p>,
-            )}"",
-"";"
-            <div className = "flex items - center space-x-2">"",
-              <Checkbox"">
-                id="marketing"";"
-                checked = "{formData.agreeToMarketing}"">
+            )}",
+";"
+            <div className = "flex items - center space-x-2">",
+              <Checkbox">
+                id="marketing";"
+                checked = "{formData.agreeToMarketing}">
                 onCheckedChange = "{checked" =>",
-                  handleChange("agreeToMarketing", checked)}"" />"";"
+                  handleChange("agreeToMarketing", checked)}" />";"
               <label htmlFor="marketing" className="text-sm text-gray-700">
                 I agree to receive marketing communications from Zion Tech Group
               </label>
             </div>
-""{/* comment */}"";"
-          <div className = "text - center">"",
-            <Button"",
-              type = "submit"">
-              disabled={isSubmitting}"";"
-              className="px - 8 py-3 text-lg ">{isSubmitting ? ("",
-                <>"";"
+"{/* comment */}";"
+          <div className = "text - center">",
+            <Button",
+              type = "submit">
+              disabled={isSubmitting}";"
+              className="px - 8 py-3 text-lg ">{isSubmitting ? (",
+                <>";"
                   <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                   Submitting...
                 </>
-              )  : ("",
-                <>"";"
+              )  : (",
+                <>";"
                   <Send className="w-5 h-5 mr-2"   />
                   Submit Quote Request
                 </>)}
@@ -865,30 +865,30 @@ get back to you within 24 hours.&apos,</p>"
       </CardContent>;"
     </Card>) }";"
 }"
-""
+"
               >
                 <SelectTrigger>
                   <SelectValue  />"
-                </SelectTrigger>"""""
-                <SelectContent>"""""
-                  <SelectItem value = "email">Email</SelectItem>"""""
-                  <SelectItem value="phone">Phone</SelectItem>"""""
+                </SelectTrigger>"
+                <SelectContent>"
+                  <SelectItem value = "email">Email</SelectItem>"
+                  <SelectItem value="phone">Phone</SelectItem>"
                   <SelectItem value="both">Both</SelectItem>
                 </SelectContent>
               </Select>
             </div>
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
           <div className="&apos;space-y-4&apos">"&apos;&apos,&apos;&apos;"
-            <div className="&apos;flex" items-center space-x-2&apos;>"&apos;&apos,""
+            <div className="&apos;flex" items-center space-x-2&apos;>"&apos;&apos,"
               <Checkbox&apos;&apos,";"
-                id="&apos;terms&apos;&apos;""
-                checked = "{formData.agreeToTerms}"">
+                id="&apos;terms&apos;&apos;"
+                checked = "{formData.agreeToTerms}">
                 onCheckedChange = "{checked" =>",
                   handleChange(&apos;agreeToTerms&apos, checked)}&apos;&apos,/>&apos;&apos,&apos;&apos,"
               <label htmlFor="&apos;terms&apos;" className="&apos;text-sm" text-gray-700&apos;>"&apos;&apos,
                 I agree to the{&apos; &apos}&apos;&apos,&apos;&apos,"
                 <a href="&apos;/terms&apos;" className="&apos;text-blue-600" hover: underline&apos,>",",
-                  Terms and Conditions&apos;&apos,""
+                  Terms and Conditions&apos;&apos,"
                 </a>{&apos, &apos}
 
                 *&apos;&apos
@@ -897,10 +897,10 @@ get back to you within 24 hours.&apos,</p>"
               <p className="&apos;text-red-500" text-sm&apos;>{errors.agreeToTerms}&apos;</p>
             )}&apos;&apos,
 &apos;&apos,&apos;&apos,"
-            <div className="&apos;flex" items-center space-x-2&apos;>"&apos;&apos,""
+            <div className="&apos;flex" items-center space-x-2&apos;>"&apos;&apos,"
               <Checkbox&apos;&apos,";"
-                id="&apos;marketing&apos;&apos;""
-                checked = "{formData.agreeToMarketing}"">
+                id="&apos;marketing&apos;&apos;"
+                checked = "{formData.agreeToMarketing}">
                 onCheckedChange = "{checked" =>",
                   handleChange(&apos;agreeToMarketing&apos, checked)}&apos;&apos,/>&apos;&apos,&apos;&apos,"
               <label htmlFor="&apos;marketing&apos;" className="&apos;text-sm" text-gray-700&apos;>
@@ -909,7 +909,7 @@ get back to you within 24 hours.&apos,</p>"
             </div>
           </div>"
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
-          <div className="&apos;text-center&apos">"&apos;&apos,""
+          <div className="&apos;text-center&apos">"&apos;&apos,"
             <Button&apos;&apos,&apos>
               type=&apos;submit&apos;&apos,"
               disabled={isSubmitting}&apos;&apos,";"
@@ -923,49 +923,49 @@ get back to you within 24 hours.&apos,</p>"
                   <Send className="&apos;w-5" h-5 mr-2&apos;        />
                   Submit Quote Request&apos
                 </>) }"
-"""{/* comment */}"""""
-          <div className = "space-y-4">""""
-            <div className="flex items-center space-x-2">""""
-              <Checkbox""""
-                id="terms""";"
-                checked = "{formData.agreeToTerms}""
-                onCheckedChange="{checked" =>"""
-                  handleChange("agreeToTerms", checked)}""" />"""""
-              <label htmlFor="terms" className="text-sm text-gray-700">"""""
-                I agree to the{" "}""""
-                <a href="/terms" className="text-blue-600 hover: underline">"""
-                  Terms and Conditions""",
+"{/* comment */}"
+          <div className = "space-y-4">"
+            <div className="flex items-center space-x-2">"
+              <Checkbox"
+                id="terms";"
+                checked = "{formData.agreeToTerms}"
+                onCheckedChange="{checked" =>"
+                  handleChange("agreeToTerms", checked)}" />"
+              <label htmlFor="terms" className="text-sm text-gray-700">"
+                I agree to the{" "}"
+                <a href="/terms" className="text-blue-600 hover: underline">"
+                  Terms and Conditions",
                 </a>{" "}
 
                 *
               </label>"
-            </div>"""{errors.agreeToTerms && ("""""
+            </div>"{errors.agreeToTerms && ("
               <p className="text-red-500 text-sm">{errors.agreeToTerms}</p>"
-            )}"""""
-""""
-            <div className="flex items-center space-x-2">""""
-              <Checkbox""""
-                id="marketing""";"
-                checked = "{formData.agreeToMarketing}""
-                onCheckedChange="{checked" =>"""
-                  handleChange("agreeToMarketing", checked)}""" />"""""
+            )}"
+"
+            <div className="flex items-center space-x-2">"
+              <Checkbox"
+                id="marketing";"
+                checked = "{formData.agreeToMarketing}"
+                onCheckedChange="{checked" =>"
+                  handleChange("agreeToMarketing", checked)}" />"
               <label htmlFor="marketing" className="text-sm text-gray-700">
                 I agree to receive marketing communications from Zion Tech Group,
               </label>
             </div>
           </div>"
-"""{/* comment */}"""""
-          <div className="text-center">"""""
-            <Button"""">
-              type = "submit"""","
-              disabled={isSubmitting}"""";"
-              className = "px-8 py-3 text-lg ">{isSubmitting ? ("""""
-                <>""""
+"{/* comment */}"
+          <div className="text-center">"
+            <Button">
+              type = "submit","
+              disabled={isSubmitting}";"
+              className = "px-8 py-3 text-lg ">{isSubmitting ? ("
+                <>"
                   <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                   Submitting...
 </>"
-              ) : ("""""
-                <>""""
+              ) : ("
+                <>"
                   <Send className="w-5 h-5 mr-2"   />
                   Submit Quote Request,
 </>)}
@@ -975,15 +975,15 @@ get back to you within 24 hours.&apos,</p>"
         </form>
       </CardContent>
     </Card>) ;"
-}"";"
-}""
-""""""
+}";"
+}"
+"
     </Card>) }&apos;&quot}&apos,
 &apos;&apos,&apos;&apos,"
 &apos,"
-    </Card>) }"";""';
-}"";"""';';
-""""""'
+    </Card>) }";";
+}";";';
+"
 ";"
 ;"
 
@@ -1012,5 +1012,5 @@ export default Component
 </p>
 </CardContent>
 </div>
-</form>';
-</CardContent>;';;';
+</form>
+</CardContent>;';';

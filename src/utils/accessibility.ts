@@ -6,8 +6,8 @@ export const accessibilityUtils = {
     );
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-';
-    const handleTabKey = (e: KeyboardEven t) => {';';
+
+    const handleTabKey = (e: KeyboardEven t) => {
       if (e.key === 'Tab') {
         if (e.shiftKey) {
           if (document.activeElement === firstElement) {
@@ -21,14 +21,14 @@ export const accessibilityUtils = {
 
       }
     };';
-';';
+
     element.addEventListener('keydown', handleTabKey);
     firstElement?.focus();
-';
-    return () => {';';
-      element.removeEventListener('keydown', handleTabKey)}}, // ARIA helpers';
-  announceToScreenReader: (message: string) => {';';
-    const announcement = document.createElement('div');';';
+
+    return () => {
+      element.removeEventListener('keydown', handleTabKey)}}, // ARIA helpers
+  announceToScreenReader: (message: string) => {
+    const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');';';
     announcement.setAttribute('aria-atomic', 'true');';';
     announcement.className = 'sr-only';
@@ -56,5 +56,3 @@ export const accessibilityUtils = {
     
     return (brightest + 0.05) / (darkest + 0.05)}
 };
-';
-';';

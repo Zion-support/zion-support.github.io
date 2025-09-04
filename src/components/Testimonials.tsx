@@ -1,4 +1,4 @@
-export default function Testimonials(props: any) {
+export default function Testimonials($1) {
 interface Testimonial {
   quote: string;
   author: string;

@@ -1,13 +1,13 @@
-import {  import { motion, AnimatePresence  } from 'framer-motion';';';
+import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
 
-interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {';
-';';
+interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
+
   size?: 'sm' | 'md' | 'lg';
   text?: string;
   fullScreen?: boolean}
 
-export function LoadingSpinner(props: any) {
+export function LoadingSpinner($1) {
 
   ;
 }}
@@ -83,8 +83,7 @@ export function SkeletonLoader(...args[]):  {
           animate = {
 
   {
-';
-            opacity: [0.5, 1, 0.5],';';
+            opacity: [0.5, 1, 0.5],
             backgroundPosition: ['200% 0',-200% 0']
 
 }}
@@ -99,11 +98,11 @@ export function SkeletonLoader(...args[]):  {
 }}
           style = {
 
-  {';
-';';
+  {
+
             background: 'linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.1), transparent),"`
 
 </motion>
 </div>
-</motion>';
-</motion>;';;';
+</motion>
+</motion>;';';

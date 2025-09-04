@@ -10,5 +10,4 @@ export function getStripe(): Promise<Stripe | null> {
       : (import.meta.env.VITE_STRIPE_TEST_KEY as string);
     stripePromise = loadStripe(key, { advancedFraudSignals: false })}
   return stripePromise}
-';
-export default getStripe;;';;';
+export default getStripe;';';

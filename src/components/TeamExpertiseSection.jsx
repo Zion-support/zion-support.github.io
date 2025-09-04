@@ -1,7 +1,7 @@
-import React, {useState} from 'react';';';
+import React, {useState} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 
-export default function Page(props: any) {
+export default function Page($1) {
 ,
     {
 
@@ -82,13 +82,13 @@ const expertiseAreas = [{"
         description: "Security auditing, compliance, and threat protection",
         experts: 10,
         projects: 80,"
-        success: "99%"}
+        success: "99%"};
 ];
 const stats = ["
     {icon: <Users className="w-6 h-6" />, value: "100+", label: "Expert Team Members"},"
     {icon: <Award className="w-6 h-6" />, value: "500+", label: "Projects Completed"},"
     {icon: <Star className="w-6 h-6" />, value: "4.9/5", label: "Average Rating"},"
-    {icon: <Globe className="w-6 h-6" />, value: "25+", label: "Countries Served"}
+    {icon: <Globe className="w-6 h-6" />, value: "25+", label: "Countries Served"};
 ];
     const [selectedMember, setSelectedMember] = useState(null);
     const [hoveredExpertise, setHoveredExpertise] = useState(null);
@@ -104,7 +104,7 @@ const stats = ["
                 delayChildren: 0.1
             }
         }
-    };
+    };;
     const itemVariants = {
 
   hidden: { y: 30,
@@ -121,7 +121,7 @@ const stats = ["
                 ease: "easeOut"
             }
         }
-    };"
+    };;"
     return (<section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
       {/* Background decorative elements */}"
       <div className="absolute inset-0 opacity-5">"
@@ -359,9 +359,9 @@ const stats = ["
                             </a>"
                             <a href={member.github} className="text-zion-cyan hover:text-zion-cyan-light transition-colors">"
                               <Github className="w-4 h-4" />
-                            </a>';
-                            <a href = {';';
-'`';';
+                            </a>
+                            <a href = {
+'`
   `mailto:${member.name.toLowerCase().replace(' ',.')
 "`
 }@ziontechgroup.com`} className="text-zion-cyan hover:text-zion-cyan-light transition-colors">"
@@ -397,8 +397,8 @@ const stats = ["
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">"
               <h3 className="text-2xl font-bold text-white mb-4">
                 Ready to Work with Our Experts?
-              </h3>"';
-              <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">';';
+              </h3>";
+              <pclassName="text-zion-slate-light mb-6 max-w-2xl mx-auto">';
                 Our team is ready to bring your vision to life.Let's discuss how we can help you achieve your technology goals.</p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
@@ -411,11 +411,11 @@ const stats = ["
             </div>
           </div>
         </motion.div>
-      </div>';
-    </section>)}';';
-'"`
+      </div>
+    </section>)}
+"`
 
 </motion>
 </motion>
-</motion>';
-</motion>;';;';
+</motion>
+</motion>;';';

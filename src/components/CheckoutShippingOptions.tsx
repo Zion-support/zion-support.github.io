@@ -17,10 +17,10 @@ interface Props {
   toAddress: Addres s | null;
   onSelect?: (rate: ShippingRat e) => void}
 
-export function CheckoutShippingOptions(props: any) {
+export function CheckoutShippingOptions($1) {
   const [rates, setRates] = useState<ShippingRate[]>([]);
   const [loading, setLoading] = useState<any>(false);
-  const [selected, setSelected] = useState<string>('');
+  const [selected, setSelected] = useState<string>(");
 
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -33,10 +33,10 @@ export function CheckoutShippingOptions(props: any) {
     
       try {
 
-        if(res.ok) {';
-          setRates(data.rates || [])} else {';';
-          console.error('Rates error', data)}';
-      } catch(err) {';';
+        if(res.ok) {
+          setRates(data.rates || [])} else {
+          console.error('Rates error', data)}
+      } catch (err) {
         console.error('Rates error', err)} finally {
         setLoading(false)}
     };
@@ -67,5 +67,5 @@ export function CheckoutShippingOptions(props: any) {
 export type { ShippingRate };
 
 </string>
-</any>';
-</ShippingRate>';';
+</any>
+</ShippingRate>';

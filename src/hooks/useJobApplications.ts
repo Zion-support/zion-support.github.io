@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback } from 'react'; // Added useCallback';';
-import { supabase } from '@/integrations/supabase/client';
+import { useState, useEffect, useCallback } from 'react'; // Added useCallback
+import { supabase } from '@/integrations/supabase/client
 
 export default function Page() {
   return (
@@ -36,10 +36,10 @@ export default function Page() {
           profile_picture_url: ap p.talent_profile.avatar_url,
           skills: [] 
         } : undefined
-      }));
+      };));
       
       setApplications(transformedData as JobApplication[]);
-      setError(null)} catch(err: an y) {
+      setError(null)} catch (err: an y) {
       console.error("Error fetching applications:", err);
       setError("Failed to fetch applications: " + err.message);
       toast.error("Failed to fetch applications");
@@ -62,11 +62,11 @@ export default function Page() {
           resume_id: resumeI d,
           cover_letter: coverLette r,
           status: "new"
-        })
+        };)
         .select()
         .single();
       ';
-      if(error) {';';
+      if(error) {
         if(error.code === '23505') { 
           toast.error("You have already applied to this job")} else {
           throw error}
@@ -78,7 +78,7 @@ export default function Page() {
       fetchApplications(); 
       
       toast.success("Application submitted successfully");
-      return true} catch(err: an y) {
+      return true} catch (err: an y) {
       console.error("Error applying to job:", err);
       toast.error("Failed to submit application: " + err.message);
       return false}
@@ -88,7 +88,7 @@ export default function Page() {
     try {
       const { error } = await supabase
         .from("job_applications")
-        .update({ status })
+        .update({ status };)
         .eq("id", applicationId);
       
       if(error) throw error;
@@ -98,7 +98,7 @@ export default function Page() {
       );
       
       toast.success(`Application status updated to ${status}`);
-      return true} catch(err: an y) {
+      return true} catch (err: an y) {
       console.error("Error updating application status:", err);
       toast.error("Failed to update application status: " + err.message);
       return false}
@@ -111,7 +111,7 @@ export default function Page() {
         .update({ 
           status: "viewed", 
           viewed_at: new Date().toISOString() 
-        })
+        };)
         .eq("id", applicationId)
         .is("viewed_at", null); 
       
@@ -123,7 +123,7 @@ export default function Page() {
         )
       );
       
-      return true} catch(err) {
+      return true} catch (err) {
       console.error("Error marking application as viewed:", err);
       return false}
   };
@@ -145,5 +145,5 @@ export default function Page() {
     applyToJob,
     updateApplicationStatus,
     markApplicationAsViewed
-  }};';
-;';;';
+  }};
+;';';

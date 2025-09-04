@@ -7,7 +7,7 @@ import { ProductListingCard } from '@/components/ProductListingCard';
 import { ENHANCED_SERVICES } from '@/data/enhancedServices';
 
 export default function Marketplace() {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState(");
   const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
@@ -54,7 +54,7 @@ export default function Marketplace() {
   };
 
   const clearAllFilters = () => {
-    setSearchQuery('');
+    setSearchQuery(");
     setSelectedProductTypes([]);
     setSelectedLocations([]);
     setSelectedAvailability([]);

@@ -37,9 +37,9 @@ pricing: {
   accuracy: string}
 
 // Zion Tech Group Contact Information;
-const zionContact: unknown = {}
-  phone: "+1 302 464 0950",""""
-  email: "kleber@ziontechgroup.com",""""
+const zionContact: unknown = {};
+  phone: "+1 302 464 0950","
+  email: "kleber@ziontechgroup.com","
   website: "https://ziontechgroup.com",
   ;
   ;"
@@ -61,7 +61,7 @@ export const innovativeAIServices2030: InnovativeAIService[] = [  {
       currency: "$","
       pricingModel: "Monthly subscription with usage-based pricing","
       marketPrice: "$299-599/month"
-    },
+    };,
     features[;"
       "High-quality voice cloning","
       "Multi-language support","

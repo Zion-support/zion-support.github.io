@@ -1,64 +1,64 @@
-import React from 'react';';';
-import Link from 'next/link';';';
+import React from 'react';
+import Link from 'next/link';
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
 
-export function Footer(props: any) {
+export function Footer($1) {
   const currentYear = new Date().getFullYear();
 
-  const footerSections = [';
-    {';';
-      title: 'Services',';
-      links: [';';
-        { name: 'AI Services', href: '/ai-services' },';';
-        { name: 'IT Services', href: '/it-services' },';';
-        { name: 'Micro SaaS', href: '/micro-saas' },';';
-        { name: 'Cloud Solutions', href: '/services/cloud' },';';
-        { name: 'Cybersecurity', href: '/services/cybersecurity' },';';
+  const footerSections = [
+    {
+      title: 'Services',
+      links: [
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'Micro SaaS', href: '/micro-saas' },
+        { name: 'Cloud Solutions', href: '/services/cloud' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity' },
         { name: 'Data Analytics', href: '/services/data-analytics' }
       ]
-    },';
-    {';';
-      title: 'Solutions',';
-      links: [';';
-        { name: 'Enterprise Solutions', href: '/solutions/enterprise' },';';
-        { name: 'SMB Solutions', href: '/solutions/smb' },';';
-        { name: 'Startup Solutions', href: '/solutions/startup' },';';
-        { name: 'Industry Solutions', href: '/solutions/industry' },';';
-        { name: 'Custom Development', href: '/solutions/custom' },';';
+    },
+    {
+      title: 'Solutions',
+      links: [
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+        { name: 'SMB Solutions', href: '/solutions/smb' },
+        { name: 'Startup Solutions', href: '/solutions/startup' },
+        { name: 'Industry Solutions', href: '/solutions/industry' },
+        { name: 'Custom Development', href: '/solutions/custom' },
         { name: 'Digital Transformation', href: '/solutions/digital-transformation' }
       ]
-    },';
-    {';';
-      title: 'Company',';
-      links: [';';
-        { name: 'About Us', href: '/about' },';';
-        { name: 'Our Team', href: '/team' },';';
-        { name: 'Careers', href: '/careers' },';';
-        { name: 'News & Blog', href: '/blog' },';';
-        { name: 'Case Studies', href: '/case-studies' },';';
+    },
+    {
+      title: 'Company',
+      links: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'News & Blog', href: '/blog' },
+        { name: 'Case Studies', href: '/case-studies' },
         { name: 'Partners', href: '/partners' }
       ]
-    },';
-    {';';
-      title: 'Resources',';
-      links: [';';
-        { name: 'Documentation', href: '/docs' },';';
-        { name: 'API Reference', href: '/api' },';';
-        { name: 'Support Center', href: '/support' },';';
-        { name: 'Community', href: '/community' },';';
-        { name: 'Webinars', href: '/webinars' },';';
+    },
+    {
+      title: 'Resources',
+      links: [
+        { name: 'Documentation', href: '/docs' },
+        { name: 'API Reference', href: '/api' },
+        { name: 'Support Center', href: '/support' },
+        { name: 'Community', href: '/community' },
+        { name: 'Webinars', href: '/webinars' },
         { name: 'White Papers', href: '/whitepapers' }
       ]
-    }
+    };
   ];
-';
-  const socialLinks = [';';
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },';';
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },';';
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },';';
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },';';
-    { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },';';
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
+
+  const socialLinks = [
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
+    { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github };
   ];
 
   return (
@@ -178,5 +178,5 @@ export function Footer(props: any) {
         </div>
       </div>
     </footer>
-  );';
-};';;';
+  );
+};';';

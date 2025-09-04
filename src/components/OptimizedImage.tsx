@@ -1,5 +1,5 @@
 import { ImageIcon, AlertCircle, Loader2  } from 'lucide-react';
-export default function Page(props: any) {
+export default function Page($1) {
 ) => {
 
   const [imageSrc, setImageSrc] = useState<any>(src);  const [isLoading, setIsLoading] = useState<any>(true);
@@ -43,17 +43,16 @@ export default function Page(props: any) {
         observerRef.current.disconnect()}
     }}, []) ;
 
-  // Generate optimized src with quality parameter';
-  const getOptimizedSrc = (props: any) => {';';
+  // Generate optimized src with quality parameter
+  const getOptimizedSrc = (props) => {
     if(src.startsWith ('data:') || src.startsWith('blob:') ) {
       return src;
     }
     // Add quality parameter for external images if possible
-    try {';
-      ';';
+    try {
+      
       if(url.searchParams.has('quality')) {
-';
-        return src}';';
+        return src}
       url.searchParams.set('quality', quality.toString());
       return url.toString()} catch {
 
@@ -88,5 +87,5 @@ export default function Page(props: any) {
 export default OptimizedImage;";
 ;"
 
-</any>';
-</any>;';;';
+</any>
+</any>;';';

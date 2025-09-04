@@ -1,21 +1,20 @@
-import React, {useState} from 'react';';';
-import {Button} from '@/components/ui/button';';';
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';';';
-import {Input} from '@/components/ui/input';';';
-import {Textarea} from '@/components/ui/textarea';';';
-import {Label} from '@/components/ui/label';';';
-import {Phone, Mail, MapPin, Globe, Users, Shield, CheckCircle, ExternalLink, Send, Building, Award, TrendingUp, Star, MessageSquare, Calendar, FileText} from 'lucide-react';';';
+import React, {useState} from 'react';
+import {Button} from '@/components/ui/button';
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
+import {Input} from '@/components/ui/input';
+import {Textarea} from '@/components/ui/textarea';
+import {Label} from '@/components/ui/label';
+import {Phone, Mail, MapPin, Globe, Users, Shield, CheckCircle, ExternalLink, Send, Building, Award, TrendingUp, Star, MessageSquare, Calendar, FileText} from 'lucide-react';
 import {SERVICE_CATEGORIES} from '@/data/enhancedServices';
-export default function ComprehensiveContact
-export {ComprehensiveContact}() {';
-    const [formData, setFormData] = useState({';';
-        name: '',';';
-        email: '',';';
-        comp: '',';';
-        phone: '',';';
-        service: '',';';
-        message: ''
-    });
+export default function ComprehensiveContact() {
+    const [formData, setFormData] = useState({
+        name: ",
+        email: ",
+        comp: ",
+        phone: ",
+        service: ",
+        message: "
+    };);
     const handleSubmit = (e) => {
         e.preventDefault();
         // Handle form submission
@@ -24,7 +23,7 @@ export {ComprehensiveContact}() {';
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
-        })};
+        })};;
     return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -33,8 +32,8 @@ export {ComprehensiveContact}() {';
         <div className="relative z-10 container mx-auto px-4 py-20 text-center text-white">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
             Contact Zion Tech Group
-          </h1>';
-          <p className="text-xl md:text-2xl mb-8 text-zion-cyan-light max-w-4xl mx-auto">';';
+          </h1>
+          <pclassName="text-xl md:text-2xl mb-8 text-zion-cyan-light max-w-4xl mx-auto">';
             Ready to Transform Your Business? Let's Discuss Your Technology Needs
           </p>
           <p className="text-lg text-zion-cyan-light mb-12 max-w-3xl mx-auto">
@@ -50,8 +49,8 @@ export {ComprehensiveContact}() {';
           <div>
             <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30">
               <CardHeader>
-                <CardTitle className="text-2xl text-white">Get In Touch</CardTitle>';
-                <CardDescription className="text-zion-cyan-light">';';
+                <CardTitle className="text-2xl text-white">Get In Touch</CardTitle>
+                <CardDescriptionclassName="text-zion-cyan-light">';
                   Fill out the form below and we'll get back to you within 24 hours.
                 </CardDescription>
               </CardHeader>
@@ -82,7 +81,7 @@ export {ComprehensiveContact}() {';
                   <div>
                     <Label htmlFor="service" className="text-white">Service Interest</Label>
                     <select id="service" name="service" value={formData.service} onChange={handleChange} className="w-full p-3 rounded-md bg-white/10 border border-zion-cyan/30 text-white">
-                      <option value="">Select a service</option>
+                      <option value=">Select a service</option>
                       <option value="ai-automation">AI & Automation</option>
                       <option value="cybersecurity">Cybersecurity</option>
                       <option value="cloud-services">Cloud Services</option>
@@ -295,8 +294,8 @@ export {ComprehensiveContact}() {';
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Get Started?
-          </h2>';
-          <p className="text-xl text-zion-cyan-light mb-8 max-w-3xl mx-auto">';';
+          </h2>
+          <pclassName="text-xl text-zion-cyan-light mb-8 max-w-3xl mx-auto">';
             Let's discuss how our innovative solutions can transform your business and drive growth.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -361,5 +360,5 @@ export {ComprehensiveContact}() {';
       </footer>
         </div>
   );
-}';
-;';;';
+}
+;';';

@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback } from 'react'; // Added useCallback';';
-import { supabase } from '@/integrations/supabase/client';
+import { useState, useEffect, useCallback } from 'react'; // Added useCallback
+import { supabase } from '@/integrations/supabase/client
 export default function Page() {
   return (
   return (';
@@ -26,10 +26,10 @@ export default function Page() {
         skills: [],
         certifications: [],
         is_active: resum e.is_active
-      }));
+      };));
       
       setResumes(transformedResumes);';
-      return transformedResumes} catch(e: an y) {';';
+      return transformedResumes} catch (e: an y) {
       console.error('Error fetching resumes:', e);
       setError(e.message);
       setResumes([]); // Clear resumes on error
@@ -53,5 +53,5 @@ export default function Page() {
     error,
     resumes,
     fetchResumes
-  }}';
-;';;';
+  }}
+;';

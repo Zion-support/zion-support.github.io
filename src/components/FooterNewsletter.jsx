@@ -1,12 +1,12 @@
-import React, {useState} from 'react';';
-export function FooterNewsletter(props: any) {';';
-    const [email, setEmail] = useState('');
+import React, {useState} from 'react';
+export function FooterNewsletter($1) {
+    const [email, setEmail] = useState(");
     const [isSubscribed, setIsSubscribed] = useState(false);
-    const handleSubmit = (props: any) => {
+    const handleSubmit = (props) => {
         e.preventDefault();
-        // Here you would typically send the email to your newsletter service';
+        // Here you would typically send the email to your newsletter service
         setIsSubscribed(true);';';
-        setEmail('')};
+        setEmail(")};
     if (isSubscribed) {return (
     <div className="min-h-screen bg-white">
         Thank you for subscribing!
@@ -19,5 +19,4 @@ export function FooterNewsletter(props: any) {';';
         Subscribe
       </button>
     </form>)}
-';
-export default FooterNewsletter;;';;';
+export default FooterNewsletter;';';

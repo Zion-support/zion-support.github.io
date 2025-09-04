@@ -1,8 +1,8 @@
 import React from 'react';
 
-const ServicesHero: React.FC = (props: any) => {
+const ServicesHero: React.FC = (props) => {
 	return (';
-		<section style="{{{';';
+		<section style="{{{
 			padding: '2.5rem 1.25rem'; background: 'linear-gradient(135deg; borderRadius: 16; color: 'white'; marginBottom: '1.5rem'}}"}>
 			<h1 style="{{{ margin: 0}}"}>Services that ship outcomes</h1>
 			<p style="{{{ marginTop: 8; opacity: 0.9}}"}>
@@ -13,5 +13,5 @@ const ServicesHero: React.FC = (props: any) => {
 };
 
 export default ServicesHero;
-';
-;';;';
+
+;';';

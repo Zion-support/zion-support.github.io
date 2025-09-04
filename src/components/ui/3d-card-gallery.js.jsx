@@ -1,10 +1,10 @@
-import React, {useState, useRef, useEffect, useCallback} from 'react';';';
-import {motion, AnimatePresence, useMotionValue, useSpring, useTransform} from 'framer-motion';';';
+import React, {useState, useRef, useEffect, useCallback} from 'react';
+import {motion, AnimatePresence, useMotionValue, useSpring, useTransform} from 'framer-motion';
 import {Eye, Heart, Share2, Play, Pause, RotateCcw, Grid, List, Search, Star, Zap, Shield, Globe, Rocket, Brain, Settings, TrendingUp, X} from 'lucide-react';
 import {Button} from "button.tsx";
 import {Badge} from "badge.tsx";
-export function Card3DGallery(props: any) {';
-    const [selectedItem, setSelectedItem] = useState(null);';';
+export function Card3DGallery($1) {
+    const [selectedItem, setSelectedItem] = useState(null);
     const [viewMode, setViewMode] = useState('grid');
     const [filters, setFilters] = useState({
         category[],;
@@ -12,9 +12,9 @@ export function Card3DGallery(props: any) {';
         complexity[],;
         verified: false,
         featured: false';
-    });';';
-    const [searchQuery, setSearchQuery] = useState('');';';
-    const [sortBy, setSortBy] = useState('rating');';';
+    });
+    const [searchQuery, setSearchQuery] = useState(");
+    const [sortBy, setSortBy] = useState('rating');
     const [sortOrder, setSortOrder] = useState('desc');
     const [isPlaying, setIsPlaying] = useState(autoPlay);
     const [currentCarouselIndex, setCurrentCarouselIndex] = useState(0);
@@ -25,8 +25,8 @@ export function Card3DGallery(props: any) {';
         const matchesFeatured = !filters.featured || item.metadata.featured;
         return matchesSearch && matchesCategory && matchesStatus && matchesComplexity && matchesVerified && matchesFeatured})
         .sort((a, b) => {
-        let aValue, bValue;';
-        switch (sortBy) {';';
+        let aValue, bValue;
+        switch (sortBy) {
             case 'rating':
                 aValue = a.rating;
                 bValue = b.rating;';
@@ -43,64 +43,64 @@ export function Card3DGallery(props: any) {';
                 aValue = a.title.toLowerCase();
                 bValue = b.title.toLowerCase();
                 break;
-            default:';
-                return 0}';';
+            default:
+                return 0}
         if (sortOrder === 'asc') {return aValue > bValue ? 1 : -1}
         else {return aValue < bValue ? 1 : -1}
     });
-    // Auto-play carousel';
-    useEffect(() => {';';
+    // Auto-play carousel
+    useEffect(() => {
         if (!isPlaying || viewMode !== 'carousel' || filteredAndSortedItems.length === 0)
             return;
         const interval = setInterval(() => {
-            setCurrentCarouselIndex(prev => (prev + 1) % filteredAndSortedItems.length)}, 3000);
+            setCurrentCarouselIndex(prev => (prev + 1) % filteredAndSortedItems.length)};, 3000);
         return () => clearInterval(interval)}, [isPlaying, viewMode, filteredAndSortedItems.length]);
     // Handle card click
     const handleCardClick = useCallback((item) => {setSelectedItem(item);
         onCardClick?.(item)}, [onCardClick]);
     // Handle action click
-    const handleActionClick = useCallback((itemId, action) => {onAction?.(itemId, action)}, [onAction]);
+    const handleActionClick = useCallback((itemId, action) => {onAction?.(itemId, action)};, [onAction]);
     // Get status color
-    const getStatusColor = (props: any) => {';
-        switch (status) {';';
-            case 'active':';';
-                return 'border-green-500/50 bg-green-500/10 text-green-400';';';
-            case 'beta':';';
-                return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';';';
-            case 'coming-soon':';';
-                return 'border-blue-500/50 bg-blue-500/10 text-blue-400';';';
-            case 'deprecated':';';
-                return 'border-red-500/50 bg-red-500/10 text-red-400';';
-            default:';';
+    const getStatusColor = (props) => {
+        switch (status) {
+            case 'active':
+                return 'border-green-500/50 bg-green-500/10 text-green-400';
+            case 'beta':';
+                return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';
+            case 'coming-soon':';
+                return 'border-blue-500/50 bg-blue-500/10 text-blue-400';
+            case 'deprecated':';
+                return 'border-red-500/50 bg-red-500/10 text-red-400';
+            default:';
                 return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400'}
     };
     // Get complexity color
-    const getComplexityColor = (props: any) => {';
-        switch (complexity) {';';
-            case 'beginner':';';
-                return 'border-green-500/50 bg-green-500/10 text-green-400';';';
-            case 'intermediate':';';
-                return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';';';
-            case 'advanced':';';
-                return 'border-orange-500/50 bg-orange-500/10 text-orange-400';';';
-            case 'expert':';';
-                return 'border-red-500/50 bg-red-500/10 text-red-400';';
-            default:';';
+    const getComplexityColor = (props) => {
+        switch (complexity) {
+            case 'beginner':
+                return 'border-green-500/50 bg-green-500/10 text-green-400';
+            case 'intermediate':';
+                return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';
+            case 'advanced':';
+                return 'border-orange-500/50 bg-orange-500/10 text-orange-400';
+            case 'expert':';
+                return 'border-red-500/50 bg-red-500/10 text-red-400';
+            default:';
                 return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400'}
     };
     // Get category icon
-    const getCategoryIcon = (props: any) => {';
-        const iconMap = {';';
-  'AI & ML': Brain,';';
-            'Cybersecurity': Shield,';';
-            'Cloud': Globe,';';
-            'Development': Rocket,';';
-            'Analytics': Zap,';';
-            'Infrastructure': Settings,';';
+    const getCategoryIcon = (props) => {
+        const iconMap = {
+  'AI & ML': Brain,
+            'Cybersecurity': Shield,
+            'Cloud': Globe,
+            'Development': Rocket,
+            'Analytics': Zap,
+            'Infrastructure': Settings,
   'Research': TrendingUp
         
 
-};
+};;
         return iconMap[category] || Globe};
     if (!enabled || filteredAndSortedItems.length === 0)
         return null;
@@ -116,18 +116,17 @@ export function Card3DGallery(props: any) {';
         </div>
         
         <div className="flex items-center gap-2">
-          {/* View Mode Toggle */}';
-          <div className="flex bg-zion-blue/20 rounded-lg p-1">';';
+          {/* View Mode Toggle */}
+          <divclassName="flex bg-zion-blue/20 rounded-lg p-1">
             {['grid', 'list', 'carousel'].map((mode) => (<button key={mode} onClick={() => setViewMode(mode)} className={`px-3 py-1 rounded-md text-xs font-medium transition-all duration-200 ${viewMode === mode';';
-                ? 'bg-zion-cyan text-zion-blue-dark'';';
+                ? 'bg-zion-cyan text-zion-blue-dark'
                 : 'text-zinc-400 hover:text-white'}`}>';';
                 {mode === 'grid' ? <Grid className="w-4 h-4" /> :';';
                 mode === 'list' ? <List className="w-4 h-4" /> :
                     <Play className="w-4 h-4" />}
               </button>))}
           </div>
-          ';
-          {/* Carousel Controls */}';';
+          {/* Carousel Controls */}
           {viewMode === 'carousel' && (<div className="flex items-center gap-2 bg-zion-blue/20 rounded-lg p-1">
               <Button size="sm" variant="ghost" onClick={() => setIsPlaying(!isPlaying)} className="text-zinc-400 hover:text-white p-2">
                 {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
@@ -145,7 +144,7 @@ export function Card3DGallery(props: any) {';
             <option value="downloads">Sort by Downloads</option>
             <option value="lastUpdated">Sort by Date</option>
             <option value="title">Sort by Title</option>
-          </select>';
+          </select>
           ';';
           <Button size="sm" variant="outline" onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">';';
             {sortOrder === 'asc' ? '↑' : '↓'}
@@ -166,7 +165,7 @@ export function Card3DGallery(props: any) {';
             <Button size="sm" variant={filters.verified ? "default" : "outline"} onClick={
   () => setFilters(prev => ({ ...prev,
   verified: !prev.verified ';
-';';
+
 }))} className={filters.verified ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-300 hover:text-white'}>
               <Shield className="w-4 h-4 mr-1" />
               Verified Only
@@ -175,13 +174,12 @@ export function Card3DGallery(props: any) {';
             <Button size="sm" variant={filters.featured ? "default" : "outline"} onClick={
   () => setFilters(prev => ({ ...prev,
   featured: !prev.featured ';
-';';
+
 }))} className={filters.featured ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-300 hover:text-white'}>
               <Star className="w-4 h-4 mr-1" />
               Featured Only
             </Button>
-            ';
-            {/* Category Filters */}';';
+            {/* Category Filters */}
             {['AI & ML', 'Cybersecurity', 'Cloud', 'Development', 'Analytics'].map((category) => (<Button key={category} size="sm" variant={filters.category.includes(category) ? "default" : "outline"} onClick={
   () => setFilters(prev => ({
                     ...prev,
@@ -190,21 +188,21 @@ export function Card3DGallery(props: any) {';
                         [...prev.category,
   category];
                 ';
-';';
+
 }))} className={filters.category.includes(category) ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-300 hover:text-white'}>
                 {category}
               </Button>))}
           </div>
             </div>
   );
-}';
-      {/* Grid View */}';';
+}
+      {/* Grid View */}
       {viewMode === 'grid' && (<div className={`grid gap-6 ${columns === 2 ? 'grid-cols-1 md:grid-cols-2' : columns === 3 ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'}`}>
           {filteredAndSortedItems.map((item, index) => (<Card3D key={item.id} item={item} index={index} onClick={() => handleCardClick(item)} onAction={handleActionClick} getStatusColor={getStatusColor} getComplexityColor={getComplexityColor} getCategoryIcon={getCategoryIcon}/>))}
             </div>
   );
-}';
-      {/* List View */}';';
+}
+      {/* List View */}
       {viewMode === 'list' && (<div className="space-y-4">
           {filteredAndSortedItems.map((item, index) => (<motion.div key={item.id} className="flex items-center gap-4 p-4 rounded-lg border border-zion-blue-light/30 hover:border-zion-blue-light/50 hover:bg-zion-blue/10 transition-all duration-200 cursor-pointer" initial = {
   { opacity: 0,
@@ -249,8 +247,8 @@ export function Card3DGallery(props: any) {';
                 </div>
               </div>
               
-              {/* Actions */}';
-              <div className="flex items-center gap-2">';';
+              {/* Actions */}
+              <divclassName="flex items-center gap-2">
                 {item.actions?.map((action, actionIndex) => (<Button key={actionIndex} size="sm" variant={action.variant || 'outline'} onClick={(e) => {
                         e.stopPropagation();
                         action.action()}} disabled={action.disabled} className="text-xs">
@@ -261,10 +259,10 @@ export function Card3DGallery(props: any) {';
             </motion.div>))}
             </div>
   );
-}';
-      {/* Carousel View */}';';
-      {viewMode === 'carousel' && (<div className="relative">';
-          <div className="overflow-hidden rounded-lg">';';
+}
+      {/* Carousel View */}
+      {viewMode === 'carousel' && (<divclassName="relative">
+          <divclassName="overflow-hidden rounded-lg">';
             <motion.div className="flex" animate={{ x: -currentCarouselIndex * 100 + '%' }} transition = {
   { duration: 0.5,
   ease: "easeInOut" 
@@ -276,8 +274,8 @@ export function Card3DGallery(props: any) {';
             </motion.div>
           </div>
           
-          {/* Carousel Navigation */}';
-          <div className="flex items-center justify-center gap-2 mt-4">';';
+          {/* Carousel Navigation */}
+          <divclassName="flex items-center justify-center gap-2 mt-4">';
             {filteredAndSortedItems.map((_, index) => (<button key={index} onClick={() => setCurrentCarouselIndex(index)} className={`w-2 h-2 rounded-full transition-all duration-200 ${index === currentCarouselIndex ? 'bg-zion-cyan w-6' : 'bg-zinc-600 hover:bg-zinc-500'}`}/>))}
           </div>
             </div>
@@ -368,8 +366,8 @@ export function Card3DGallery(props: any) {';
                   </div>
                   
                   {selectedItem.actions && (<div>
-                      <h4 className="text-white font-medium mb-2">Actions</h4>';
-                      <div className="flex flex-wrap gap-2">';';
+                      <h4 className="text-white font-medium mb-2">Actions</h4>
+                      <divclassName="flex flex-wrap gap-2">';
                         {selectedItem.actions.map((action, index) => (<Button key={index} size="sm" variant={action.variant || 'outline'} onClick={action.action} disabled={action.disabled}>
                             <action .icon className="w-4 h-4 mr-2" />
                             {action.label}
@@ -386,12 +384,12 @@ export function Card3DGallery(props: any) {';
         </div>
   );
 }
-function Card3D(props: any) {
+function Card3D($1) {
     const [isHovered, setIsHovered] = useState(false);
     const [isLiked, setIsLiked] = useState(false);
     const x = useMotionValue(0);
     const y = useMotionValue(0);
-    const rotateY = useSpring(useTransform(x, [-100, 100], [-15, 15]), { stiffness: 300, damping: 30 });
+    const rotateY = useSpring(useTransform(x, [-100, 100], [-15, 15]), { stiffness: 300, damping: 30 };);
     const CategoryIcon = getCategoryIcon(item.category);
     const handleMouseMove = useCallback((event) => {if (!isHovered)
             return;
@@ -402,9 +400,9 @@ function Card3D(props: any) {
     const handleMouseLeave = useCallback(() => {x.set(0);
         y.set(0);
         setIsHovered(false)}, [x, y]);
-    const handleLike = useCallback((e) => {e.stopPropagation();';
+    const handleLike = useCallback((e) => {e.stopPropagation();
         setIsLiked(!isLiked)}, [isLiked]);';';
-    return (<motion.div className={`relative group cursor-pointer ${isCarousel ? 'mx-4' : ''}`} onMouseEnter={() => setIsHovered(true)} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} onClick={onClick} initial = {
+    return (<motion.div className={`relative group cursor-pointer ${isCarousel ? 'mx-4' : "}`} onMouseEnter={() => setIsHovered(true)} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} onClick={onClick} initial = {
   { opacity: 0,
   y: 50 
 
@@ -417,7 +415,7 @@ function Card3D(props: any) {
   delay: index * 0.1 
 
 }} whileHover={{ scale: 1.02 }}>';
-      <motion.div className="relative w-full h-80 rounded-xl border border-zion-blue-light/30 overflow-hidden bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue/40 backdrop-blur-sm" style="{{{';';
+      <motion.div className="relative w-full h-80 rounded-xl border border-zion-blue-light/30 overflow-hidden bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue/40 backdrop-blur-sm" style="{{{
             transformStyle: 'preserve-3d'; transform: isHovered ? 'translateZ(20px)'}}"} transition={{ duration: 0.3 }}>
         {/* Background Image/Pattern */}
         <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-transparent to-zion-purple/20" />
@@ -468,10 +466,10 @@ function Card3D(props: any) {
                 </Badge>))}
             </div>
             
-            {/* Actions */}';
-            <div className="flex items-center gap-2">';';
-              <Button size="sm" variant="ghost" onClick={handleLike} className={`p-2 text-xs ${isLiked ? 'text-red-400 hover:text-red-300' : 'text-zinc-400 hover:text-white'}`}>';';
-                <Heart className={`w-4 h-4 ${isLiked ? 'fill-current' : ''}`} />
+            {/* Actions */}
+            <divclassName="flex items-center gap-2">';
+              <Buttonsize="sm" variant="ghost" onClick={handleLike} className={`p-2 text-xs ${isLiked ? 'text-red-400 hover:text-red-300' : 'text-zinc-400 hover:text-white'}`}>';
+                <Heart className={`w-4 h-4 ${isLiked ? 'fill-current' : "}`} />
               </Button>
               
               <Button size="sm" variant="ghost" className="p-2 text-zinc-400 hover:text-white text-xs">
@@ -494,5 +492,5 @@ function Card3D(props: any) {
 </button>
 </Card3D>
 </motion>
-</Card3D>';
-</div>;';;';
+</Card3D>
+</div>;';';

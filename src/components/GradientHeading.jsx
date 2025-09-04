@@ -1,7 +1,7 @@
 import {cn} from "@/lib/utils";
 import React from "react";
 
-export function GradientHeading(props: any) {
+export function GradientHeading($1) {
     const Tag = level;
     
     return (
@@ -17,4 +17,4 @@ export function GradientHeading(props: any) {
     );
 }
 
-export default GradientHeading;;;
+export default GradientHeading;

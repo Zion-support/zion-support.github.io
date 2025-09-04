@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-export const WebsiteAnalyzer: Reac t.FC = () : JSX.Element => {';
+export const WebsiteAnalyzer: Reac t.FC = () : JSX.Element => {
 export default WebsiteAnalyzer;';';
 import { CheckCircle, import { LinkChecker, LinkInfo, PageInfo } from '../utils / linkChecker';
 ;
-export default function Page(props: any) {;
+export default function Page($1) {;
  catch(error) {;
 `;
           // console.error(`Error analyzing ${page}:`, error)}
@@ -17,38 +17,38 @@ export default function Page(props: any) {;
         pages: result s,
         brokenLinks,
         missingPages
-      }) } catch(error) {';
-';';
+      }) } catch (error) {
+
       // console.error('Analysis failed:', error)} finally {
 
       setIsAnalyzing(false);';
       setProgress(100);';';
-      setCurrentPage('')}
+      setCurrentPage(")}
   };
-';
+
     a.href = url;';';
     a.download = 'zion-website-analysis.json';    document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url)};';
-';';
-      case 'broken':"';
-        return <XCircle className="w-4 h-4 text-red-500"   />;';';
-      case 'missing':"';
-        return <AlertTriangle className="w-4 h-4 text-yellow-500"   />;';';
+
+      case 'broken':";
+        return <XCircle className="w-4 h-4 text-red-500"   />;
+      case 'missing':";
+        return <AlertTriangle className="w-4 h-4 text-yellow-500"   />;
       case 'external':"
         return <ExternalLink className="w-4 h-4 text-blue-500"   />;
       default:";
         return <AlertTriangle className="w-4 h-4 text-gray-500"   />}
-  };';
-';';
-      case 'broken':'';';
-        return 'text-red-600 bg-red-100';';';
-      case 'missing':'';';
-        return 'text-yellow-600 bg-yellow-100';';';
-      case 'external':'';';
-        return 'text-blue-600 bg-blue-100';';';
-      default:'';';
+  };
+
+      case 'broken':'
+        return 'text-red-600 bg-red-100';
+      case 'missing':'
+        return 'text-yellow-600 bg-yellow-100';
+      case 'external':'
+        return 'text-blue-600 bg-blue-100';
+      default:'
         return 'text-gray-600 bg-gray-100'}  };
 ;
   return (";
@@ -70,8 +70,8 @@ export default function Page(props: any) {;
               {isAnalyzing ? ("
                 <RefreshCw className="w-4 h-4 mr-2 animate-spin"   />
               ) : ("
-                <Search className="w-4 h-4 mr-2"   />';
-              )}';';
+                <SearchclassName="w-4 h-4 mr-2"   />
+              )}
               {isAnalyzing ? 'Analyzing...' : 'Start Analysis'}            </button>
             {analysisResult && (
               <button
@@ -218,8 +218,7 @@ export default function Page(props: any) {;
               </div>
   );
 }
-      </div>';
+      </div>
     </div>) };';';
-export default WebsiteAnalyzer;'"`
-';
-</div>;';;';
+export default WebsiteAnalyzer;"`
+</div>;';';

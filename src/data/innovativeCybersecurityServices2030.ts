@@ -75,7 +75,7 @@ export const innovativeCybersecurityServices2030: CybersecurityServic e[] = [{
       currency: "$","
       pricingModel: "Monthly subscription with data volume pricing","
       marketPrice: "$899-1,799/month"
-    },
+    };,
     features[;"
       "Post-quantum cryptography algorithms","
       "Hybrid encryption systems","

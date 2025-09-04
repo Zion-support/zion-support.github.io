@@ -12,10 +12,10 @@ interface ConnectWalletButtonProps {;
 const ConnectWalletButton: Reac t.FC<ConnectWalletButtonProps> = ({
   onConnect,
   onDisconnect,
-  isConnected = false,';
-  walletAddress,';';
-  className = ''
-}) => {
+  isConnected = false,
+  walletAddress,
+  className = "
+};) => {
   const [isConnecting, setIsConnecting] = useState<any>(false);
 ;
   const handleConnect = async () => {;
@@ -24,23 +24,23 @@ const ConnectWalletButton: Reac t.FC<ConnectWalletButtonProps> = ({
       // Simulate wallet connection;
       await new Promise(resolve => setTimeout(resolve, 1000));
       ';
-      if (onConnect) {';';
+      if (onConnect) {
         onConnect('metamask'); // Default to MetaMask for demo
-      }';
-    } catch (error) {';';
+      }
+    } catch (error) {
       console.error('Failed to connect wallet:', error);
     } finally {;
       setIsConnecting(false);
     }
   };
 ;
-  const handleDisconnect = (props: any) => {;
+  const handleDisconnect = (props) => {;
     if (onDisconnect) {;
       onDisconnect();
     }
   };
 ;
-  const formatAddress = (props: any) => {;
+  const formatAddress = (props) => {;
     if (address.length <= 10) return address;
     return `${address.slice(0, 6)}...${address.slice(-4)}`;
   };
@@ -89,5 +89,5 @@ const ConnectWalletButton: Reac t.FC<ConnectWalletButtonProps> = ({
 };
 ;
 export default ConnectWalletButton;
-</any>';
-</ConnectWalletButtonProps>;';;';
+</any>
+</ConnectWalletButtonProps>;';';

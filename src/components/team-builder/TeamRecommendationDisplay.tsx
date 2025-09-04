@@ -60,7 +60,7 @@ export;
   )};
 ;
 // Helper component for summary cards;
-const InfoCard = ({ title, value, icon }: { title: string; value: string; icon: React.ReactNode })  => (";
+const InfoCard = ({ title, value, icon };: { title: string; value: string; icon: React.ReactNode })  => (";
   <Card className="bg-secondary/50 p-3 shadow-sm">";
     <div className="flex items-center text-muted-foreground mb-1">;
       {icon}";
@@ -69,7 +69,7 @@ const InfoCard = ({ title, value, icon }: { title: string; value: string; icon: 
     <p className="font-semibold text-primary text-base pl-1">{value}</p>;
   </Card>;';
 );';';
-'"`
+"`
 
-</BudgetStatusDisplay>';
-</InfoCard>';';
+</BudgetStatusDisplay>
+</InfoCard>';

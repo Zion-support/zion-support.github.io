@@ -1,6 +1,6 @@
 export const ErrorFallback: Reac t.FC < ErrorFallbackProps> = ({ error, resetErrorBoundary }) => {
 
-interface ErrorFallbackProps extends React.PropsWithChildren<{}> {
+interface ErrorFallbackProps extends React.PropsWithChildren<{};> {
 
   error: anyErro r;
   resetErrorBoundary: () => void;
@@ -19,14 +19,14 @@ interface ErrorFallbackProps extends React.PropsWithChildren<{}> {
             className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover: b g-blue-700 transition-colors"
           >
             Try Again';
-          </button>';';
-          <button'';';
+          </button>';
+          <button'
             onClick={() => window.location.href = '/'}"
             className="w-full bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover: b g-gray-300 transition-colors"
           >
             Go Home
-          </button>';
-        </div>';';
+          </button>
+        </div>';
         {process.env.NODE_ENV === 'development' && ("
           <details className="mt-6 text-left">"
             <summary className="cursor-pointer text-sm text-gray-500 hover: tex t-gray-700">
@@ -38,5 +38,4 @@ interface ErrorFallbackProps extends React.PropsWithChildren<{}> {
           </details>;) };
       </div>;';
     </div>;) };';';
-'"';
-';';
+";

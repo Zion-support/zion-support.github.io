@@ -235,7 +235,7 @@ const AIContentCreation: React.FC = () => {
           </div>
         </section>
 
-        {/* Contact Section */}
+        {/* Contact Section */};
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">

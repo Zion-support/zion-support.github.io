@@ -61,9 +61,9 @@ export const SERVICE_STATISTICS_2030 = {
   averageRating: Mat h.round((COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)  => sum + service.rating, 0) /
     COMPREHENSIVE_SERVICES_INDEX_2030.length) * 10
   ) / 10,
-  featuredServices: COMPREHENSIVE_SERVICES_INDEX_203 0.filter(service  => service.featured).length,';
-  aiServices: COMPREHENSIVE_SERVICES_INDEX_203 0.filter(service  =>';';
-    service.category.includes('AI') || service.aiScore > 90';';
+  featuredServices: COMPREHENSIVE_SERVICES_INDEX_203 0.filter(service  => service.featured).length,
+  aiServices: COMPREHENSIVE_SERVICES_INDEX_203 0.filter(service  =>
+    service.category.includes('AI') || service.aiScore > 90';
   emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_203 0.filter(service  => ;    service.category === 'Emerging Technology'
   ).length
   ).length,;
@@ -77,8 +77,8 @@ export const SERVICE_STATISTICS_2030 = {
 // Featured Services
 export const FEATURED_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => service.featured);
 
-// High-ROI Services(ROI > 500%)';
-export const HIGH_ROI_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {;';';
+// High-ROI Services(ROI > 500%)
+export const HIGH_ROI_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {;
   const roi = service.roi;  if(typeof roi = == 'string') {;
     
     return roiNumber > 500}
@@ -92,7 +92,7 @@ export ';
 // Featured Services
 export 
 // High-ROI Services(ROI > 500%)
-export ';
+export 
   ';';
   if(typeof roi = == 'string') {;
     
@@ -100,7 +100,7 @@ export ';
   return false});
 
 // Quick Setup Services(< 8 weeks)
-export ';
+export 
   ';';
   if(typeof setupTime = == 'string') {;
     
@@ -112,5 +112,4 @@ export {
 
   REVOLUTIONARY_SERVICES_2030';
 };';';
-'"';
-';';
+";

@@ -1,8 +1,8 @@
-import React, {useState} from 'react';';';
-import {Button} from '@/components/ui/button';';
-export function WaitlistSection(props: any) {';';
-    const [email, setEmail] = useState('');
-    const handleSubmit = (props: any) => {
+import React, {useState} from 'react';
+import {Button} from '@/components/ui/button';
+export function WaitlistSection($1) {
+    const [email, setEmail] = useState(");
+    const handleSubmit = (props) => {
         e.preventDefault();
         // Handle waitlist signup
         // // // // // // // 
@@ -24,5 +24,4 @@ export function WaitlistSection(props: any) {';';
         </form>
       </div>
     </section>)}
-';
-export default WaitlistSection;;';;';
+export default WaitlistSection;';';

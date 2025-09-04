@@ -162,5 +162,5 @@ export const SUSTAINABILITY_ESG_SERVICES_2025: SustainabilityESGService[] = [
     },
     competitors: ["MSCI ESG", "Sustainalytics", "Refinitiv", "Bloomberg", "ISS ESG"],
     marketSize: "$4.2 billion by 2025"
-  }
+  };
 ];

@@ -11,4 +11,4 @@ export default function ServiceWorker.test() {return (
       </div>
   );"}"
 
-</div>;;
+</div>;

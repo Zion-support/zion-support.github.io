@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback } from 'react'; // Added useCallback';';
-import { supabase } from '@/integrations/supabase/client';
+import { useState, useEffect, useCallback } from 'react'; // Added useCallback
+import { supabase } from '@/integrations/supabase/client
 
 export default function Page() {
   return (
@@ -13,7 +13,7 @@ export default function Page() {
       if(fetchError) throw fetchError;
       
       setJobs(data as Job[] || []); // Ensure data is not null
-      setError(null)} catch(err: an y) {
+      setError(null)} catch (err: an y) {
       console.error("Error fetching jobs:", err);
       setError("Failed to fetch jobs.Please try again.");
       toast.error("Failed to fetch jobs");
@@ -27,7 +27,7 @@ export default function Page() {
     try {
       const { error: updateErro r } = await supabase
         .from("jobs")
-        .update({ status: newStatu s })
+        .update({ status: newStatu s };)
         .eq("id", jobId)
         .eq("client_id", clientId); 
       
@@ -35,7 +35,7 @@ export default function Page() {
       
       setJobs(prevJobs => prevJobs.map(job => job.id === jobId ? {...job, status: newStatu s} : job));
       toast.success("Job status updated successfully");
-      return true} catch(err: an y) {
+      return true} catch (err: an y) {
       console.error("Error updating job status:", err);
       toast.error("Failed to update job status");
       return false}
@@ -54,7 +54,7 @@ export default function Page() {
       
       setJobs(prevJobs => prevJobs.filter(job => job.id !== jobId));
       toast.success("Job deleted successfully");
-      return true} catch(err: an y) {
+      return true} catch (err: an y) {
       console.error("Error deleting job:", err);
       toast.error("Failed to delete job");
       return false}
@@ -75,5 +75,5 @@ export default function Page() {
     createJob: createJobServic e, // Use aliased service functions
     updateJob: updateJobServic e, // Use aliased service functions
     getJobById
-  }};';
-;';;';
+  }};
+;';';

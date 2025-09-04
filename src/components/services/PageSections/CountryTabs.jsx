@@ -1,5 +1,5 @@
-import React, {useState} from 'react';';
-import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = (props: any) => {';';
+import React, {useState} from 'react';
+import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = (props) => {
   const [activeCountry, setActiveCountry] = useState('us');
 
   const currentCountry = countries.find(c => c.id === activeCountry);
@@ -24,9 +24,9 @@ import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = (props: an
             <button
               key={country.id}
               onClick={() => setActiveCountry(country.id)}
-              className={`flex items-center space-x-3 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${';
-                activeCountry === country.id';';
-                  ? 'bg-blue-600 text-white shadow-lg'';';
+              className={`flex items-center space-x-3 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
+                activeCountry === country.id';
+                  ? 'bg-blue-600 text-white shadow-lg'
                   : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
               }`}
 
@@ -194,5 +194,5 @@ import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = (props: an
       </div>
     </section>
   )};
-';
-export default CountryTabs;;';;';
+
+export default CountryTabs;';';

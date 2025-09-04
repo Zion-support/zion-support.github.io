@@ -1,8 +1,8 @@
 import {TalentCard} from "@/components/talent/TalentCard";
 import {TalentSkeleton} from "@/components/talent/TalentSkeleton";
-export function TalentGrid(props: any) {// // // // // // // }
+export function TalentGrid($1) {// // // // // // // }
     };
-    const handleMessageInternal = (props: any) => {
+    const handleMessageInternal = (props) => {
         if (handleMessage) {
             handleMessage(talent);
 
@@ -13,11 +13,11 @@ export function TalentGrid(props: any) {// // // // // // // }
     if (isLoading) {
         return <TalentSkeleton  />;
 
-    const handleMessageInternal = (props: any) => {
+    const handleMessageInternal = (props) => {
         if (handleMessage) {
             handleMessage(talent)}
         else {onTalentClick(talent.id)}
-    };
+    };;
     if (isLoading) {return <TalentSkeleton  />}
     if (!talents || talents.length === 0) {
         return <div className="py-8 text-center bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6">
@@ -33,4 +33,4 @@ export function TalentGrid(props: any) {// // // // // // // }
   );
 }
 export default TalentGrid;
-</TalentCard>;;
+</TalentCard>;

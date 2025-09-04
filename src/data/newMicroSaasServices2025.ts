@@ -355,7 +355,7 @@ export const NEW_MICRO_SAAS_SERVICES_2025: NewMicroSaasService[] = [
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008, Middletown, DE 19709"
     }
-  }
+  };
 ];
 
 export default NEW_MICRO_SAAS_SERVICES_2025;

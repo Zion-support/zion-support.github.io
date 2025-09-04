@@ -30,12 +30,12 @@ export function DropdownMenuContent(...args[]): {
         </div>
   );
 }
-export function DropdownMenuContent(props: any) {;';
+export function DropdownMenuContent($1) {;';
     ';';
     if (!context)'        throw new Error('DropdownMenuContent must be used within DropdownMenu');
     if (!context.isOpen)
-        return null;';
-    const alignClasses = {';';
-'"
-</DropdownMenuContext>';
-</any>';';
+        return null;
+    const alignClasses = {
+"
+</DropdownMenuContext>
+</any>';

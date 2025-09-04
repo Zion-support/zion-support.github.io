@@ -1,5 +1,5 @@
 import React, {useEffect, useRef} from 'react';
-export function FuturisticBackground(props: any) {
+export function FuturisticBackground($1) {
     const canvasRef = useRef(null);
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -9,25 +9,25 @@ export function FuturisticBackground(props: any) {
         if (!ctx)
             return;
         // Set canvas size
-        const resizeCanvas = (props: any) => {
+        const resizeCanvas = (props) => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight};';
         resizeCanvas();';';
         window.addEventListener('resize', resizeCanvas);';
-        // Particle system';';
+        // Particle system
         if (variant === 'particles') {
-            const particles = [];';
-            const colors = [';';
-                '#00ffff', // Cyan';';
-                '#ff00ff', // Magenta';';
-                '#ffff00', // Yellow';';
-                '#00ff00', // Green';';
-                '#ff0080', // Pink';';
-                '#8000ff', // Purple';';
-                '#00ff80', // Mint';';
+            const particles = [];
+            const colors = [
+                '#00ffff', // Cyan
+                '#ff00ff', // Magenta
+                '#ffff00', // Yellow
+                '#00ff00', // Green
+                '#ff0080', // Pink
+                '#8000ff', // Purple
+                '#00ff80', // Mint
                 '#ff8000' // Orange
             ];';
-            // Create particles';';
+            // Create particles
             const particleCount = intensity === 'high' ? 200 : intensity === 'medium' ? 100 : 50;
             for (let i = 0; i < particleCount; i++) {
                 particles.push({
@@ -40,7 +40,7 @@ export function FuturisticBackground(props: any) {
                     color: colors[Math.floor(Math.random() * colors.length)]
                 })}
             // Animation loop
-            const animate = (props: any) => {
+            const animate = (props) => {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
                 // Update and draw particles
                 particles.forEach((particle, index) => {
@@ -88,14 +88,14 @@ export function FuturisticBackground(props: any) {
                         }
                     })});
                 requestAnimationFrame(animate)};
-            animate()}';
-        // Grid system';';
-        if (variant === 'grid') {';';
+            animate()}
+        // Grid system
+        if (variant === 'grid') {
             const gridSize = intensity === 'high' ? 20 : intensity === 'medium' ? 30 : 40;
-            const animate = (props: any) => {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);';
-                // Draw grid';';
-                ctx.strokeStyle = '#00ffff';
+            const animate = (props) => {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                // Draw grid
+                ctx.strokeStyle = '#00ffff
                 ctx.lineWidth = 1;
                 ctx.globalAlpha = 0.3;
                 for (let x = 0; x < canvas.width; x += gridSize) {
@@ -112,19 +112,19 @@ export function FuturisticBackground(props: any) {
                 for (let x = 0; x < canvas.width; x += gridSize) {
                     for (let y = 0; y < canvas.height; y += gridSize) {
                         const pulse = Math.sin(time + x * 0.01 + y * 0.01) * 0.5 + 0.5;
-                        ctx.beginPath();';
+                        ctx.beginPath();
                         ctx.arc(x, y, 2 * pulse, 0, Math.PI * 2);';';
                         ctx.fillStyle = '#00ffff';
                         ctx.globalAlpha = 0.8 * pulse;
                         ctx.fill()}
                 }
                 requestAnimationFrame(animate)};
-            animate()}';
-        // Wave system';';
+            animate()}
+        // Wave system
         if (variant === 'waves') {
-            const animate = (props: any) => {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);';
-                const time = Date.now() * 0.001;';';
+            const animate = (props) => {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                const time = Date.now() * 0.001;
                 const waveCount = intensity === 'high' ? 5 : intensity === 'medium' ? 3 : 2;
                 for (let i = 0; i < waveCount; i++) {
                     ctx.beginPath();
@@ -141,16 +141,16 @@ export function FuturisticBackground(props: any) {
                     }
                     ctx.stroke()}
                 requestAnimationFrame(animate)};
-            animate()}';
-        // Matrix system';';
-        if (variant === 'matrix') {';';
-            const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';';
-            const drops = [];';';
+            animate()}
+        // Matrix system
+        if (variant === 'matrix') {
+            const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン
+            const drops = [];
             const fontSize = intensity === 'high' ? 12 : intensity === 'medium' ? 16 : 20;
             const columns = Math.floor(canvas.width / fontSize);
             for (let i = 0; i < columns; i++) {
-                drops[i] = 1}';
-            const animate = (props: any) => {';';
+                drops[i] = 1}
+            const animate = (props) => {
                 ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';';
                 ctx.fillRect(0, 0, canvas.width, canvas.height);';';
                 ctx.fillStyle = '#0f0';
@@ -162,27 +162,27 @@ export function FuturisticBackground(props: any) {
                         drops[i] = 0}
                     drops[i]++}
                 requestAnimationFrame(animate)};';
-            animate()}';';
+            animate()}
         return () => {window.removeEventListener('resize', resizeCanvas);};
     }, [variant, intensity]);';
-    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style="{{{';';
+    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style="{{{
             background: 'linear-gradient(135deg}}"} />);
 }
-// Neon text component';
-export function NeonText(props: any) {';';
+// Neon text component
+export function NeonText($1) {
     const glowSize = glowIntensity === 'high' ? '0 0 20px' : glowIntensity === 'medium' ? '0 0 15px' : '0 0 10px';
     return (<span className={className} style="{{{
             color: color; textShadow: `
           ${glowSize}}" ${color},
           0 0 30px ${color},
-          0 0 40px ${color}';
-        `,';';
+          0 0 40px ${color}
+        `,
             animation: 'neon-pulse 2s ease-in-out infinite alternate'
         }}>
       {children}
     </span>)}
-// Futuristic card component';
-export function FuturisticCard(props: any) {';';
+// Futuristic card component
+export function FuturisticCard($1) {
     const glowSize = intensity === 'high' ? '0 0 30px' : intensity === 'medium' ? '0 0 20px' : '0 0 10px';
     return (
     <div className="min-h-screen bg-white">
@@ -190,14 +190,14 @@ export function FuturisticCard(props: any) {';';
       <div className="relative z-10 p-6">
         {children}
       </div>
-      <div className="absolute inset-0 opacity-20" style="{{{';
-            background: `linear-gradient(45deg}}"20 50%, transparent 70%)`,';';
+      <div className="absolute inset-0 opacity-20" style="{{{
+            background: `linear-gradient(45deg}}"20 50%, transparent 70%)`,
             animation: 'shimmer 3s ease-in-out infinite'
         }} />
         </div>
   );
-}';
-// Add CSS animations';';
+}
+// Add CSS animations
 const style = document.createElement('style');
 style.textContent = `
   @keyframes neon-pulse {
@@ -216,5 +216,5 @@ document.head.appendChild(style);
 }}}}}}
 
 export default FuturisticBackground;
-</div>';
-</canvas>;';;';
+</div>
+</canvas>;';';

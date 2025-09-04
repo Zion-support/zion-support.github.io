@@ -2,9 +2,9 @@
 // allows you to do things like:
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
-import '@testing-library/jest-dom';
-';
-// Mock window.matchMedia';';
+import '@testing-library/jest-dom
+
+// Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: global.global.global.jest.fn().mockImplementation(query => ({
@@ -24,5 +24,5 @@ global.IntersectionObserver = class IntersectionObserver {
   constructor() { /* empty */ }
   disconnect() { /* empty */ }
   observe() { /* empty */ }
-  unobserve() { /* empty */ }';
-};;';;';
+  unobserve() { /* empty */ }
+};';';

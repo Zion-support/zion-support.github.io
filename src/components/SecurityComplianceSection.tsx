@@ -3,7 +3,7 @@ import {  import { motion  } from 'framer-motion';
  params - Function parameters
  * @returns {*} Function return value
  */
-function SecurityComplianceSection(props: any) {];
+function SecurityComplianceSection($1) {];
 
   return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <div className="max - w-7xl mx - auto px-6">
@@ -87,9 +87,9 @@ function SecurityComplianceSection(props: any) {];
                 </div>"
                 <div className="flex-1">"
                   <h3 className="text-lg font-bold text-white mb-2">{feature.title}</h3>"
-                  <p className="text-gray-400 text-sm mb-3">{feature.description}</p>"';
-                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-700 rounded-full">`';';
-                    <div className={`w-2 h-2 rounded-full ${feature.status === 'Certified' ? 'bg-green-400' :'';';
+                  <p className="text-gray-400 text-sm mb-3">{feature.description}</p>";
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-700 rounded-full">`
+                    <div className={`w-2 h-2 rounded-full ${feature.status === 'Certified' ? 'bg-green-400' :'
                       feature.status === 'Compliant' ? 'bg-blue-400' : 'bg-purple-400'`
                     }`}></div>"
                     <span className="text-gray-300 text-sm font-medium">{feature.status}</span>
@@ -239,8 +239,8 @@ export default SecurityComplianceSection;"
     </section>;) }
 export default SecurityComplianceSection;';
 export default SecurityComplianceSection;';';
-'"`
+"`
 
 </motion>
-</motion>';
-</div>;';;';
+</motion>
+</div>;';';

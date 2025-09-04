@@ -4,5 +4,5 @@ export const performanceOptimizer = {
 init: () => {
     ,
   }
-}
+};
 export default performanceOptimizer;

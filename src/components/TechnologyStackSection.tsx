@@ -3,7 +3,7 @@ import {  import { motion  } from 'framer-motion';
  params - Function parameters
  * @returns {*} Function return value
  */
-function TechnologyStackSection(props: any) {export function TechnologyStackSection(props: any) {
+function TechnologyStackSection($1) {export function TechnologyStackSection($1) {
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
@@ -222,8 +222,8 @@ export default TechnologyStackSection;"
     </section>;) }
 export default TechnologyStackSection;';
 export default TechnologyStackSection;';';
-'"`
+"`
 
 </motion>
-</motion>';
-</motion>;';;';
+</motion>
+</motion>;';';

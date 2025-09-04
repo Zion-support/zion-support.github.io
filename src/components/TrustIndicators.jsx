@@ -1,6 +1,6 @@
 import React from 'react';
-export function TrustIndicatorsCompact(props: any) {
-import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export function TrustIndicators(props: any) {
+export function TrustIndicatorsCompact($1) {
+import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export function TrustIndicators($1) {
     const indicators = [{
 
             icon: Shield,
@@ -15,7 +15,7 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
         {icon: Award,"
             title: "Industry Leader","
             description: "Recognized by Gartner & Forrester as market leader","
-            color: "text-zion-cyan"},
+            color: "text-zion-cyan"};,
         {
 
             icon: Users,"
@@ -28,15 +28,15 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
         { name: "SOC 2 Type II", status: "Certified", year: "2024" },"
         {name: "ISO 27001", status: "Certified", year: "2024"},"
         {name: "GDPR", status: "Compliant", year: "2024"},"
-        {name: "CCPA", status: "Compliant", year: "2024"}
+        {name: "CCPA", status: "Compliant", year: "2024"};
     ];
     const stats = ["
         {label: "Active Users", value: "50K+", icon: Users},"
         {label: "Countries", value: "100+", icon: Globe},"
         {label: "Projects", value: "$10M+", icon: Award},"
-        {label: "Uptime", value: "99.9%", icon: Zap}';
+        {label: "Uptime", value: "99.9%", icon: Zap};
     ];';';
-    return (<section className={`py-16 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark ${className || ''}`}>"
+    return (<section className={`py-16 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark ${className || "}`}>"
       <div className="container mx-auto px-4">
         {/* Header */}"
         <div className="text-center mb-16">"
@@ -102,19 +102,19 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
         {/* Customer Testimonials Preview */}"
         <div className="mt-16 text-center">"
           <div className="flex justify-center items-center gap-2 mb-4">"
-            {[...Array(5)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />))}';
-          </div>"';';
-          <p className="text-zion-slate-light mb-2">'"';';
+            {[...Array(5)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />))}
+          </div>";';
+          <p className="text-zion-slate-light mb-2">";';
             "Zion Tech Group has transformed how we source tech talent.The platform's security and reliability give us complete confidence."
           </p>"
           <p className="text-white font-medium">- Sarah Chen, CTO at TechCorp</p>
         </div>
       </div>
     </section>) }
-// Compact version for smaller spaces';
-export function TrustIndicatorsCompact(props: any) {';';
-'`';';
-    return (<div className={`flex flex-wrap justify-center gap-6 ${className || ''}`}>"
+// Compact version for smaller spaces
+export function TrustIndicatorsCompact($1) {
+'`
+    return (<div className={`flex flex-wrap justify-center gap-6 ${className || "}`}>"
       <div className="flex items-center gap-2 text-zion-cyan text-sm">"
         <Shield className="w-4 h-4" />
         <span>SOC 2 Certified</span>
@@ -130,7 +130,7 @@ export function TrustIndicatorsCompact(props: any) {';';
       <div className="flex items-center gap-2 text-zion-purple text-sm">"
         <Zap className="w-4 h-4" />
         <span>99.9% Uptime</span>
-      </div>';
-    </div>)}';';
-'"`';
-;';;';
+      </div>
+    </div>)}
+"`
+;';';

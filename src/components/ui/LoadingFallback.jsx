@@ -1,15 +1,15 @@
 import {motion} from "framer-motion";
-import { Loader2 export function LoadingFallback(props: any) {
+import { Loader2 export function LoadingFallback($1) {
     const sizeClasses = {
   sm: "w-6 h-6",
         md: "w-8 h-8",
   lg: "w-12 h-12"
     
 
-};
+};;
     const textSizes = {sm: "text-sm",
         md: "text-base",
-  lg: "text-lg"};
+  lg: "text-lg"};;
     return (
     <div className="min-h-screen bg-white">
       <motion.div animate={{ rotate: 360 }} transition = {
@@ -48,7 +48,7 @@ import { Loader2 export function LoadingFallback(props: any) {
         </div>
   );
 }
-export function PageLoadingFallback(props: any) {
+export function PageLoadingFallback($1) {
     return (
     <div className="min-h-screen bg-white">
       <div className="text-center">
@@ -62,4 +62,4 @@ export function PageLoadingFallback(props: any) {
 }
 export default LoadingFallback;
 </motion>
-</motion>;;
+</motion>;

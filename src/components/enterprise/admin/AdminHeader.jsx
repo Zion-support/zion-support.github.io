@@ -1,7 +1,7 @@
 import {Button} from "@/components/ui/button";
 import {Download, Settings} from "lucide-react";
 import {useCompWorkspace} from "@/hooks/useCompWorkspace";
-export function AdminHeader(props: any) {
+export function AdminHeader($1) {
     // const { user } = useAuth(); // Unused but available
     const {comp} = useCompWorkspace();
     return (
@@ -56,5 +56,5 @@ export function AdminHeader(props: any) {
       </div>
         </div>
   );
-}';
-export default AdminHeader;;';;';
+}
+export default AdminHeader;';';

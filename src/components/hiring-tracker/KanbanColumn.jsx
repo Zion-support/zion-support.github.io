@@ -2,9 +2,9 @@ import {Droppable} from "@hello-pangea/dnd";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {CandidateCard} from "CandidateCard.jsx";
-export function KanbanColumn(props: any) {
+export function KanbanColumn($1) {
     // Add color based on column type
-    const getBadgeVariant = (props: any) => {
+    const getBadgeVariant = (props) => {
         switch (columnId) {
             case "new":
                 return "secondary";
@@ -19,7 +19,7 @@ export function KanbanColumn(props: any) {
             default:
                 return "outline"}
     };
-    const getColumnBgColor = (props: any) => {
+    const getColumnBgColor = (props) => {
         switch (columnId) {
             case "hired":
                 return "bg-green-50";
@@ -56,4 +56,4 @@ export function KanbanColumn(props: any) {
       </CardContent>
     </Card>)}
 
-export default KanbanColumn;;;
+export default KanbanColumn;

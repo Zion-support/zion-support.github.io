@@ -1,5 +1,5 @@
 import {cn} from '@/lib/utils';
-export const Steps = (props: any) => {
+export const Steps = (props) => {
     return (
     <div className="min-h-screen bg-white">
       {React.Children.map(children, (child, index) => {
@@ -7,18 +7,18 @@ export const Steps = (props: any) => {
                 return React.cloneElement(child, {
                     isActive: index === currentStep,
                     isCompleted: index < currentStep,
-                });
+                };);
             }
             return child;
         })}
     </div>);
 };
-export const Step = (props: any) => {
+export const Step = (props) => {
     return (
     <div className="min-h-screen bg-white">
       <div className={cn("flex h-8 w-8 items-center justify-center rounded-full border-2 text-sm font-medium", isActive && "border-primary bg-primary text-white", isCompleted && "border-green-600 bg-green-600 text-white", !isActive && !isCompleted && "border-gray-300 text-gray-500")}>
-        {isCompleted ? "✓" : children}
+        {isCompleted ? "✓" : children};
       </div>
     </div>);
 };';
-;';;';
+;';';

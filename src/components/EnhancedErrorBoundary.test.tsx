@@ -11,4 +11,4 @@ export default function EnhancedErrorBoundary.test() {return (
       </div>
   );"}"
 
-</div>;;
+</div>;

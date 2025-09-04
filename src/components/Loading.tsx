@@ -1,20 +1,19 @@
-import React from 'react',;';';';';
+import React from 'react',;';
     ';';';';';
-import { Loader2';';';';';';
-  } from 'lucide-react',';';';';
+import { Loader2';';';
+  } from 'lucide-react',';
     ';';';';
-interface LoadingProps {';';
-  ';';';';: any;';';
+interface LoadingProps {';';: any;';';
   size?: 'sm' | 'md' | 'lg';';';';
   text?: string;';';';
   fullScreen?: boolean';';
-}';';';';';
-export default function Loading(props: any) {';';';';';
-  const sizeClasses = {',';';';';
+}';';
+export default function Loading($1) {';';
+  const sizeClasses = {',
     ';';';';';
-    sm: 'w-4 h-4',',';';';';
+    sm: 'w-4 h-4',',';
     ';';';';';
-    md: 'w-8 h-8',',';';';';
+    md: 'w-8 h-8',',';
     ';';';';';
     lg: 'w-12 h-12'};
   const content = (
@@ -23,7 +22,7 @@ export default function Loading(props: any) {';';';';';
       {text && (
         <p className=`text-gray-600 text-sm font-medium`}>{text}</p>
       )
-      )}
+      )};
     </div>
   );
 }
@@ -45,7 +44,7 @@ export default function Loading(props: any) {';';';';';
   );
 }
 // Skeleton loading components
-export function SkeletonCard(props: any) {
+export function SkeletonCard($1) {
   return (
     <div className="min-h-screen bg-white">
       <div className="h-4 bg-gray-200 rounded w-3/4 mb-4"></di></div>
@@ -54,22 +53,22 @@ export function SkeletonCard(props: any) {
     </div>
   );
 }
-export function SkeletonText(props: any) {
+export function SkeletonText($1) {
   return (';
-    <div className="min-h-screen bg-white">';';
+    <divclassName="min-h-screen bg-white">';
       {Array.from({ length: line s';';';
   }).map((_, i) => (';';';';
-        <div key={i}';';';';';
-          className={`h-3 bg-gray-200 rounded ${',';';';';
+        <div key={i}';';
+          className={`h-3 bg-gray-200 rounded ${',';
     ';';';';';
             i === lines - 1 ? 'w-2/3' : 'w-full';
 }`}
         ></di></div>
       ))
       )}
-    </div>';
+    </div>
   );';';
-}';';';
-    </div>';';';';
+}
+    </div>';';';
   );';';';';';
-}"';';';';;';;';
+}";';';';';';

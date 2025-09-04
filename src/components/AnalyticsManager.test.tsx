@@ -11,4 +11,4 @@ export default function AnalyticsManager.test() {return (
       </div>
   );"}"
 
-</div>;;
+</div>;

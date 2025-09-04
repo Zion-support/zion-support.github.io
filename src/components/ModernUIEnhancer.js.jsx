@@ -1,7 +1,7 @@
-import React, {useEffect, useState, useRef} from 'react';';';
+import React, {useEffect, useState, useRef} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 
-export default function Page(props: any) {
+export default function Page($1) {
         };';
         updateDeviceType();';';
         window.addEventListener('resize', updateDeviceType);';';
@@ -9,54 +9,52 @@ export default function Page(props: any) {
     // Scroll effects
     useEffect(() => {// TODO: Add dependencies if needed}, []);
         if(!enableScrollEffects) return;
-        const handleScroll = (props: any) => {
+        const handleScroll = (props) => {
             const scrollTop = window.pageYOffset;
             setShowScrollToTop(scrollTop > 300) ;
-            // Parallax effect for background elements';
-            const scrolled = window.pageYOffset;';';
+            // Parallax effect for background elements
+            const scrolled = window.pageYOffset;
             const parallaxElements = document.querySelectorAll('[data-parallax]');
-            parallaxElements.forEach((element) => {';
-';';
+            parallaxElements.forEach((element) => {
+
                 const speed = parseFloat(element.getAttribute('data-parallax') || '0.5');
-                const yPos = -(scrolled * speed);';
+                const yPos = -(scrolled * speed);
                 element.style.transform = `translateY(${yPos}px)`});';';
-            // Fade in elements on scroll'';';
+            // Fade in elements on scroll'
             const fadeElements = document.querySelectorAll('[data-fade-in]');
             fadeElements.forEach((element) => {
 
                 const rect = element.getBoundingClientRect();
                 const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-                if(isVisible) {';
-';';
-                    element.classList.add('fade-in-visible')}';
+                if(isVisible) {
+
+                    element.classList.add('fade-in-visible')}
             })};';';
         window.addEventListener('scroll', handleScroll);';';
         return () => window.removeEventListener('scroll', handleScroll)}, [enableScrollEffects]);
     // Theme management
     useEffect(() => {// TODO: Add dependencies if needed}, []);';
-';';
+
         const savedTheme = localStorage.getItem('theme') || 'auto';
         setCurrentTheme(savedTheme);
         applyTheme(savedTheme)}, []);
-    const applyTheme = (props: any) => {
-';
-        const root = document.documentElement;';';
-        if(theme === 'auto') {';
-';';
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)).matches;';';
-            root.classList.toggle('dark', prefersDark)}';';
-        else {root.classList.toggle('dark', theme === 'dark')}';';
+    const applyTheme = (props) => {
+        const root = document.documentElement;
+        if(theme === 'auto') {
+
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)).matches;
+            root.classList.toggle('dark', prefersDark)}
+        else {root.classList.toggle('dark', theme === 'dark')}
         localStorage.setItem('theme', theme)};';';
     const themes = ['light',dark',auto'];
         const currentIndex = themes.indexOf(currentTheme) ;
         const nextTheme = themes[(currentIndex + 1) % themes.length];
         setCurrentTheme(nextTheme) ;
         applyTheme(nextTheme) };
-    const scrollToTop = (props: any) => {
+    const scrollToTop = (props) => {
         window.scrollTo({
-';
-            top: 0,';';
-            behavior: 'smooth'})};
+            top: 0,
+            behavior: 'smooth'})};;
     // Add CSS animations to the document
     useEffect(() => {// TODO: Add dependencies if needed}, []);
         if(!enableAnimations)';
@@ -159,13 +157,12 @@ export default function Page(props: any) {
             entries.forEach((entry) => {
 
                 if(entry.isIntersecting) {
-';
-                    const element = entry.target;';';
+                    const element = entry.target;
                     const animationType = element.getAttribute('data-animation');
                     if(animationType) {
 `
                         element.classList.add(`${animationType}-visible`)}
-                }';
+                }
             })}, observerOptions);';';
         const animatedElements = document.querySelectorAll('[data-animation]');
         animatedElements.forEach((element) => {observer.observe(element)});
@@ -184,9 +181,9 @@ export default function Page(props: any) {
 
   { opacity: 1,
   scale: 1 
-`';
-}} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={toggleTheme} className="fixed top-6 right-6 z-50 p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700" title={`Current theme: ${currentTheme}`}>"';';
-          <AnimatePresence mode="wait">'"';';
+`
+}} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={toggleTheme} className="fixed top-6 right-6 z-50 p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700" title={`Current theme: ${currentTheme}`}>";
+          <AnimatePresence mode="wait">";';
             {currentTheme === 'light' && (<motion.div key="light" initial = {
 
   { opacity: 0,
@@ -202,9 +199,9 @@ export default function Page(props: any) {
   { opacity: 0,
   rotate: 90 
 
-}} transition={{ duration: 0.3 }}>"';
-                <Sun className="w-5 h-5 text-yellow-500" />';';
-              </motion.div>)}'"';';
+}} transition={{ duration: 0.3 }}>";
+                <SunclassName="w-5 h-5 text-yellow-500" />';
+              </motion.div>)}";';
             {currentTheme === 'dark' && (<motion.div key="dark" initial = {
 
   { opacity: 0,
@@ -220,9 +217,9 @@ export default function Page(props: any) {
   { opacity: 0,
   rotate: 90 
 
-}} transition={{ duration: 0.3 }}>"';
-                <Moon className="w-5 h-5 text-blue-400" />';';
-              </motion.div>)}'"';';
+}} transition={{ duration: 0.3 }}>";
+                <MoonclassName="w-5 h-5 text-blue-400" />';
+              </motion.div>)}";';
             {currentTheme === 'auto' && (<motion.div key="auto" initial = {
 
   { opacity: 0,
@@ -254,11 +251,11 @@ export default function Page(props: any) {
 
   { opacity: 1,
   x: 0 
-"';
-}} className="fixed top-6 left-6 z-50 p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">"';';
-          <div className="flex items-center space-x-2 text-sm">'"';';
-            {deviceType === 'desktop' && <Monitor className="w-4 h-4 text-blue-500" />}'"';';
-            {deviceType === 'tablet' && <Tablet className="w-4 h-4 text-green-500" />}'"';';
+";
+}} className="fixed top-6 left-6 z-50 p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">";';
+          <div className="flex items-center space-x-2 text-sm">";';
+            {deviceType === 'desktop' && <Monitor className="w-4 h-4 text-blue-500" />}";';
+            {deviceType === 'tablet' && <Tablet className="w-4 h-4 text-green-500" />}";
             {deviceType === 'mobile' && <Smartphone className="w-4 h-4 text-purple-500" />}"
             <span className="text-gray-700 dark:text-gray-300 capitalize">{deviceType}</span>
           </div>
@@ -379,13 +376,13 @@ export default function Page(props: any) {
 
               {/* Performance Info */}"
               <div className="space-y-3">"
-                <h4 className="font-semibold text-gray-900 dark:text-white">Performance</h4>"';
-                <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">"';';
-                  <div className="text-sm text-gray-600 dark:text-gray-400">Animations Enabled</div>'"';';
+                <h4 className="font-semibold text-gray-900 dark:text-white">Performance</h4>";
+                <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">";';
+                  <div className="text-sm text-gray-600 dark:text-gray-400">Animations Enabled</div>";';
                   <div className="text-lg font-semibold text-green-600">{enableAnimations ? 'Yes' : 'No'}</div>
-                </div>"';
-                <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">"';';
-                  <div className="text-sm text-gray-600 dark:text-gray-400">Scroll Effects</div>'"';';
+                </div>";
+                <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">";';
+                  <div className="text-sm text-gray-600 dark:text-gray-400">Scroll Effects</div>";';
                   <div className="text-lg font-semibold text-blue-600">{enableScrollEffects ? 'Yes' : 'No'}</div>
                 </div>
               </div>
@@ -419,9 +416,9 @@ export default function Page(props: any) {
 }
     </>)};';
 export default ModernUIEnhancer;';';
-'"`
+"`
 
 </motion>
 </motion>
-</motion>';
-</motion>;';;';
+</motion>
+</motion>;';';

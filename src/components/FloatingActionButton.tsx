@@ -9,9 +9,9 @@ Plus,
   HelpCircle,
   Star,
   Share2,
-  Bookmark,';
-  Download,';';
-  Printer'';';
+  Bookmark,
+  Download,
+  Printer'
 } from 'lucide-react';
 ;
 interface FloatingAction {;
@@ -24,7 +24,6 @@ interface FloatingAction {;
   priority: 'high' | 'medium' | 'low'}
 
 interface FloatingActionButtonProps {
-';
   actions?: FloatingAction[];';';
   position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';';';
   theme?: 'light' | 'dark' | 'auto';
@@ -33,7 +32,6 @@ interface FloatingActionButtonProps {
   showUtilityActions?: boolean;
 
 const FloatingActionButton: Reac t.FC<FloatingActionButtonProps> = ({
-';
   actions = [],: any;';';
   position = 'bottom-right',: any;';';
   theme = 'auto',: any;
@@ -42,8 +40,8 @@ const FloatingActionButton: Reac t.FC<FloatingActionButtonProps> = ({
   showUtilityActions = true: any;
 }) => {
 
-  const [isExpanded, setIsExpanded] = useState<any>(false);';
-  const [showScrollButton, setShowScrollButton] = useState<any>(false);';';
+  const [isExpanded, setIsExpanded] = useState<any>(false);
+  const [showScrollButton, setShowScrollButton] = useState<any>(false);
   const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light');
 ;
   // Detect theme;
@@ -53,11 +51,11 @@ const FloatingActionButton: Reac t.FC<FloatingActionButtonProps> = ({
     // Cleanup function;
   };
 }, []);, []);';
-';';
-    if(theme === 'auto') {';
-';';
+
+    if(theme === 'auto') {
+
       setCurrentTheme(mediaQuery.matches ? 'dark' : 'light')};';';
-      '';';
+      '
       mediaQuery.addEventListener('change', handleChange);';';
       return () => mediaQuery.removeEventListener('change', handleChange)} else {
 
@@ -73,67 +71,67 @@ const FloatingActionButton: Reac t.FC<FloatingActionButtonProps> = ({
 }, []);, []);
     
     };';
-';';
+
     window.addEventListener('scroll', handleScroll);';';
     return () => window.removeEventListener('scroll', handleScroll)}, []);
 
   // Default actions
   const defaultActions: FloatingActio n[] = [// Contact actions
     ...(showContactActions ? [
-      {';
-';';
-        id: 'contact',';
-        icon: MessageCircl e,';';
+      {
+
+        id: 'contact',
+        icon: MessageCircl e,
         label: 'Contact Us',
         action: () => {
 
-          if(contactSection) {';
-';';
-            contactSection.scrollIntoView({ behavior: 'smooth' })}';
-        },';';
-        color: 'bg-blue-500 hover: b g-blue-600',';';
+          if(contactSection) {
+
+            contactSection.scrollIntoView({ behavior: 'smooth' })}
+        },
+        color: 'bg-blue-500 hover: b g-blue-600',
         priority: 'high' as const
       },
-      {';
-';';
-        id: 'phone',';
-        icon: Phon e,';';
+      {
+
+        id: 'phone',
+        icon: Phon e,
         label: 'Call Now',
-        action: () => {';
-';';
-          window.location.href = 'tel:+1234567890'},';';
-        color: 'bg-green-500 hover: b g-green-600',';';
+        action: () => {
+
+          window.location.href = 'tel:+1234567890'},
+        color: 'bg-green-500 hover: b g-green-600',
         priority: 'high' as const
       },
-      {';
-';';
-        id: 'email',';
-        icon: Mai l,';';
+      {
+
+        id: 'email',
+        icon: Mai l,
         label: 'Send Email',
-        action: () => {';
-';';
-          window.location.href = 'mailto: inf o@ziontechgroup.com'},';';
-        color: 'bg-purple-500 hover: b g-purple-600',';';
+        action: () => {
+
+          window.location.href = 'mailto: inf o@ziontechgroup.com'},
+        color: 'bg-purple-500 hover: b g-purple-600',
         priority: 'medium' as const
       },
-      {';
-';';
-        id: 'location',';
-        icon: MapPi n,';';
+      {
+
+        id: 'location',
+        icon: MapPi n,
         label: 'Get Directions',
-        action: () => {';
-';';
-          window.open('https://maps.google.com/?q=Zion+Tech+Group',_blank')},';';
-        color: 'bg-red-500 hover: b g-red-600',';';
+        action: () => {
+
+          window.open('https://maps.google.com/?q=Zion+Tech+Group',_blank')},
+        color: 'bg-red-500 hover: b g-red-600',
         priority: 'medium' as const
       }
     ] : []),
     
     // Utility actions
-    ...(showUtilityActions ? [{';
-';';
-        id: 'bookmark',';
-        icon: Bookmar k,';';
+    ...(showUtilityActions ? [{
+
+        id: 'bookmark',
+        icon: Bookmar k,
         label: 'Bookmark Page',
         action: () => {
           if(navigator.share) {
@@ -145,18 +143,18 @@ const FloatingActionButton: Reac t.FC<FloatingActionButtonProps> = ({
             })} else {
 
             // Fallback for browsers without share API
-            ';
-            navigator.clipboard.writeText(url).then(() => {';';
-              // Show success message'';';
-              showNotification('Page URL copied to clipboard!')})}';
-        },';';
-        color: 'bg-yellow-500 hover: b g-yellow-600',';';
+            
+            navigator.clipboard.writeText(url).then(() => {
+              // Show success message'
+              showNotification('Page URL copied to clipboard!')})}
+        },
+        color: 'bg-yellow-500 hover: b g-yellow-600',
         priority: 'low' as const
       },
-      {';
-';';
-        id: 'share',';
-        icon: Share 2,';';
+      {
+
+        id: 'share',
+        icon: Share 2,
         label: 'Share Page',
         action: () => {
           if(navigator.share) {
@@ -169,39 +167,38 @@ const FloatingActionButton: Reac t.FC<FloatingActionButtonProps> = ({
 
             // Fallback for browsers without share API
             
-            navigator.clipboard.writeText(url).then(() => {';
-';';
-              showNotification('Page URL copied to clipboard!')})}';
-        },';';
-        color: 'bg-indigo-500 hover: b g-indigo-600',';';
-        priority: 'low' as const
-      },
-      {';
-';';
-        id: 'download',';
-        icon: Downloa d,';';
-        label: 'Download Brochure',';
-        action: () => {';';
-          // Create a temporary link to trigger download'';
-          ';';
-          link.href = '/brochure.pdf'; // Adjust path as needed'';';
-          link.download = 'Zion-Tech-Group-Brochure.pdf';
+            navigator.clipboard.writeText(url).then(() => {
+
+              showNotification('Page URL copied to clipboard!')})}
+        },
+        color: 'bg-indigo-500 hover: b g-indigo-600',
+        priority: 'low' as const };,
+      {
+
+        id: 'download',
+        icon: Downloa d,
+        label: 'Download Brochure',
+        action: () => {
+          // Create a temporary link to trigger download'
+          
+          link.href = '/brochure.pdf // Adjust path as needed'
+          link.download = 'Zion-Tech-Group-Brochure.pdf
           document.body.appendChild(link);
-          link.click();';
-          document.body.removeChild(link)},';';
-        color: 'bg-teal-500 hover: b g-teal-600',';';
+          link.click();
+          document.body.removeChild(link)},
+        color: 'bg-teal-500 hover: b g-teal-600',
         priority: 'low' as const
       },
-      {';
-';';
-        id: 'print',';
-        icon: Printe r,';';
+      {
+
+        id: 'print',
+        icon: Printe r,
         label: 'Print Page',
-        action: () => {';
-          window.print()},';';
-        color: 'bg-gray-500 hover: b g-gray-600',';';
+        action: () => {
+          window.print()},
+        color: 'bg-gray-500 hover: b g-gray-600',
         priority: 'low' as const
-      }
+      };
     ] : []),;
     // Custom actions;
     ...actions,;
@@ -226,24 +223,24 @@ const FloatingActionButton: Reac t.FC<FloatingActionButtonProps> = ({
     document.body.appendChild(notification) ;
 
     // Animate in
-    setTimeout(() => {';
-';';
+    setTimeout(() => {
+
       notification.classList.remove('translate-x-full')}, 100);
     
     // Remove after 3 seconds
-    setTimeout(() => {';
-';';
+    setTimeout(() => {
+
       notification.classList.add('translate-x-full');
       setTimeout(() => {;
         document.body.removeChild(notification)}, 300)}, 3000)}, []);
 
-  // Get position classes';
+  // Get position classes
   ';';
-      case 'top-right':'';';
-        return 'top-6 right-6';';';
-      case 'top-left':'';';
-        return 'top-6 left-6';';';
-      default:'';';
+      case 'top-right':'
+        return 'top-6 right-6';
+      case 'top-left':'
+        return 'top-6 left-6';
+      default:'
         return 'bottom-6 right-6'}
   };
 ;
@@ -252,10 +249,10 @@ const FloatingActionButton: Reac t.FC<FloatingActionButtonProps> = ({
 
   return ()
     <>
-      {/* Main Floating Action Button */}`';
-      <div className={`fixed ${getPositionClasses()} z-50`}>';';
-        {/* Action Buttons */}'`';';
-        <div className={`relative ${isExpanded ? 'mb-4' : ''}`}>
+      {/* Main Floating Action Button */}`
+      <divclassName={`fixed ${getPositionClasses()} z-50`}>
+        {/* Action Buttons */}'`
+        <div className={`relative ${isExpanded ? 'mb-4' : "}`}>
           {isExpanded && (
             <div className="absolute bottom-full mb-4 space-y-3">
               {sortedActions.map((action, index) => (
@@ -267,8 +264,8 @@ const FloatingActionButton: Reac t.FC<FloatingActionButtonProps> = ({
                     hover: scal e-105 focus: outlin e-none focus: rin g-2 focus: rin g-white/50`
                   `}
                   style="{{{
-`';
-                    animationDelay: `${index * 100}}"ms`,';';
+`
+                    animationDelay: `${index * 100}}"ms`,
                     animation: 'slideInUp 0.3s ease-out forwards'
                   }}
                 >;
@@ -286,9 +283,9 @@ const FloatingActionButton: Reac t.FC<FloatingActionButtonProps> = ({
             className={`
               p-4 rounded-full shadow-lg transition-all duration-300';
               ${getThemeClasses()} border-2';';
-              hover: scal e-110 focus: outlin e-none focus: rin g-4 focus: rin g-zion-cyan/30'';';
-              ${isExpanded ? 'rotate-45' : ''}`';
-            `}';';
+              hover: scal e-110 focus: outlin e-none focus: rin g-4 focus: rin g-zion-cyan/30'
+              ${isExpanded ? 'rotate-45' : "}`
+            `}
             aria-label={isExpanded ? 'Close actions' : 'Open actions'}
             aria-expanded={isExpanded}
           >";
@@ -340,7 +337,7 @@ type FloatingActionButtonProps = {;
   enabled?: boolean;
 };
 ;
-const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ enabled = true }) => {;
+const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ enabled = true };) => {;
   const [open, setOpen] = useState<any>(false);
   if(!enabled) return null;
   return (<button;
@@ -357,5 +354,5 @@ export default FloatingActionButton;
 
 </any>
 </FloatingActionButtonProps>
-</any>';
-</FloatingActionButtonProps>;';;';
+</any>
+</FloatingActionButtonProps>;';';

@@ -32,13 +32,13 @@ import {
   Home
 } from "lucide-react"
 
-const EnhancedNavigation = (props: any) => {
+const EnhancedNavigation = (props) => {
   const [isOpen, setIsOpen] = useState<any>(false)
   const [isScrolled, setIsScrolled] = useState<any>(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
 
   useEffect(() => {
-    const handleScroll = (props: any) => {
+    const handleScroll = (props) => {
       setIsScrolled(window.scrollY > 20)
     }
     window.addEventListener("scroll", handleScroll)
@@ -216,11 +216,11 @@ const EnhancedNavigation = (props: any) => {
     }
   ]
 
-  const toggleDropdown = (props: any) => {
+  const toggleDropdown = (props) => {
     setActiveDropdown(activeDropdown === name ? null : name)
   }
 
-  const closeMobileMenu = (props: any) => {
+  const closeMobileMenu = (props) => {
     setIsOpen(false)
     setActiveDropdown(null)
   }
@@ -253,7 +253,7 @@ const EnhancedNavigation = (props: any) => {
                     >
                       <span>{item.name}</span>
                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                        activeDropdown === item.name ? "rotate-180" : ""
+                        activeDropdown === item.name ? "rotate-180" : "
                       }`}  />
                     </button>
                     {activeDropdown === item.name && (
@@ -278,7 +278,7 @@ const EnhancedNavigation = (props: any) => {
                                 </p>
                               </div>
                             </Link>
-                          ))}
+                          ))};
                         </div>
                           </div>
   );
@@ -352,7 +352,7 @@ const EnhancedNavigation = (props: any) => {
                       >
                         <span>{item.name}</span>
                         <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                          activeDropdown === item.name ? "rotate-180" : ""
+                          activeDropdown === item.name ? "rotate-180" : "
                         }`}  />
                       </button>
                       {activeDropdown === item.name && (
@@ -407,4 +407,4 @@ export default EnhancedNavigation
 </ChevronDown>
 </string>
 </any>
-</any>;;
+</any>;

@@ -27,7 +27,7 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
 
     accessToken: nul l,
     refreshToken: nul l
-  });
+  };);
 
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -37,8 +37,8 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
     
         if(typeof window !== 'null') {;
           
-          if(auth) {';
-';';
+          if(auth) {
+
         if(typeof window !== 'null') {;
           
           if(auth) {
@@ -48,19 +48,19 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
               setUser(parsed.user);
               setTokens({
 
-                accessToken: parse d.token,';
+                accessToken: parse d.token,
 :src/context/auth/useAuthState.tsx';';
-                refreshToken: parse d.refreshToken || null'';';
+                refreshToken: parse d.refreshToken || null'
         // // // // // // // // console.error('Error checking auth state:', error)} finally {
 
-        setIsLoading(false)})}';
-                refreshToken: parse d.refreshToken || null';';
+        setIsLoading(false)})}
+                refreshToken: parse d.refreshToken || null
         // // // // // // // console.error('Error checking auth state:', error)} finally {
         setIsLoading(false)})}
           }
         }
-      } catch(error) {';
-';';
+      } catch (error) {
+
         // console.error('Error checking auth state:', error)} finally {
 
         setIsLoading(false)}
@@ -82,5 +82,5 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
 
 </any>
 </typeof>
-</any>';
-</React>';';
+</any>
+</React>';

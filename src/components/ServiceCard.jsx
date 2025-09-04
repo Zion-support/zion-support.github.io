@@ -1,8 +1,8 @@
-import React from 'react';';
+import React from 'react';
 export default ServiceCard;';';
 import {motion} from 'framer-motion';
 
-export default function Page(props: any) {
+export default function Page($1) {
 ;
     const iconVariants = {
 
@@ -19,7 +19,7 @@ export default function Page(props: any) {
                 duration: 0.5,"
                 ease: "easeOut"
 
-        },
+        };,
         hover: {
 
             scale: 1.2,
@@ -42,7 +42,7 @@ export default function Page(props: any) {
 
 }
         }
-    };
+    };;
     const badgeVariants = {
 
   hidden: { scale: 0,
@@ -58,7 +58,7 @@ export default function Page(props: any) {
                 duration: 0.3,"
                 ease: "backOut"
 
-    };"
+    };;"
     return (<motion.div variants={cardVariants} initial="hidden" whileInView="visible" whileHover="hover" viewport={{ once: true }} className="group relative h-full">;
       {/* Enhanced Popular Badge */}"
       {isPopular && (<motion.div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10" initial={{ scale: 0 }} animate={{ scale: 1 }} transition = {
@@ -202,5 +202,5 @@ export {ServiceCard};
 
 </motion>
 </motion>
-</motion>';
-</motion>;';;';
+</motion>
+</motion>;';';

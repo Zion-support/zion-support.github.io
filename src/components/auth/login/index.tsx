@@ -1,6 +1,6 @@
 import React from "react"
 import { SEO } from "@/components/SEO"
-export default function index(props: any) {return (
+export default function index($1) {return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="index - Zion Tech Group" description="Professional index services by Zion Tech Group"   />"
       <div className="container mx-auto px-4 py-20">"
@@ -11,4 +11,4 @@ export default function index(props: any) {return (
       </div>
   );"}"
 
-</div>;;
+</div>;

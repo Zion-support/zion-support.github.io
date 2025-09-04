@@ -1,16 +1,16 @@
-import React, { useState } from 'react';';';
-import { Loader2 } from 'lucide-react';';';
-import { Button } from '@/components/ui/button';';';
-import { Card } from '@/components/ui/card';';';
-import { Textarea } from '@/components/ui/textarea';';';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';';';
-import { useRequestQuoteWizard } from '@/hooks/useQuoteWizard';';
-';';
+import React, { useState } from 'react';
+import { Loader2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { Textarea } from '@/components/ui/textarea';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { useRequestQuoteWizard } from '@/hooks/useQuoteWizard';
+
 type WizardStep = 'Services' | 'Details' | 'Success';';
-';';
+
 const WIZARD_STEPS: WizardSte p[] = ['Services', 'Details', 'Success'];
 
-function StepIndicator(props: any) {
+function StepIndicator($1) {
   const index = WIZARD_STEPS.indexOf(step);
   
   return (
@@ -20,22 +20,22 @@ function StepIndicator(props: any) {
   );
 }
 
-export function QuoteWizard(props: any) {
-  const { step, selectService, submitQuote } = useRequestQuoteWizard();';
-  const [selectedItem, setSelectedItem] = useState<string | null>(null);';';
-  const [message, setMessage] = useState<any>('');
+export function QuoteWizard($1) {
+  const { step, selectService, submitQuote } = useRequestQuoteWizard();
+  const [selectedItem, setSelectedItem] = useState<string | null>(null);
+  const [message, setMessage] = useState<any>(");
   
-  // Mock data for services - in real app this would come from an API';
-  const services = [';';
-    { id: '1', title: 'Web Development' },';';
-    { id: '2', title: 'Mobile App Development' },';';
-    { id: '3', title: 'UI/UX Design' },';';
-    { id: '4', title: 'Consulting' }
+  // Mock data for services - in real app this would come from an API
+  const services = [
+    { id: '1', title: 'Web Development' },
+    { id: '2', title: 'Mobile App Development' },
+    { id: '3', title: 'UI/UX Design' },
+    { id: '4', title: 'Consulting' };
   ];
   
   const loading = false;
-  const error = null;';
-';';
+  const error = null;
+
   if (step === 'Services') {
     return (
     <div className="min-h-screen bg-white">
@@ -59,8 +59,8 @@ export function QuoteWizard(props: any) {
           <div className="grid grid-cols-1 md: gri d-cols-2 gap-4">
             {services.map((item) => (
               <Card
-                data-testid={`service-card-${item.id}`}';
-                key={item.id}';';
+                data-testid={`service-card-${item.id}`}
+                key={item.id}
                 className={`p-4 cursor-pointer border-2 transition-colors ${selectedItem === item.id ? 'border-purple-500' : 'hover: borde r-purple-500/50'}`}
                 onClick={() => setSelectedItem(item.id)}
               >
@@ -78,8 +78,8 @@ export function QuoteWizard(props: any) {
         </Button>
       </div>
     );
-  }';
-';';
+  }
+
   if (step === 'Details') {
     return (
     <div className="min-h-screen bg-white">
@@ -93,8 +93,8 @@ export function QuoteWizard(props: any) {
         <Button onClick={() => submitQuote(message)}>Submit</Button>
       </div>
     );
-  }';
-';';
+  }
+
   if (step === 'Success') {
     return (
     <div className="min-h-screen bg-white">
@@ -108,5 +108,5 @@ export function QuoteWizard(props: any) {
 }
 
 </Textarea>
-</any>';
-</string>;';;';
+</any>
+</string>;';';

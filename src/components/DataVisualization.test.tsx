@@ -11,4 +11,4 @@ export default function DataVisualization.test() {return (
       </div>
   );"}"
 
-</div>;;
+</div>;

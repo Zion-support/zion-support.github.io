@@ -1,17 +1,17 @@
-import React from 'react';';';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export function SEOHead(props: any) {
-  const fullTitle = `${title} | Zion Tech Group - AI & Technology Solutions`;';
-  const defaultKeywords = [';';
-    'AI services',';';
-    'technology solutions',';';
-    'enterprise automation',';';
-    'cybersecurity',';';
-    'quantum computing',';';
-    'blockchain solutions',';';
-    'cloud services',';';
-    'digital transformation',';';
+export function SEOHead($1) {
+  const fullTitle = `${title}; | Zion Tech Group - AI & Technology Solutions`;
+  const defaultKeywords = [
+    'AI services',
+    'technology solutions',
+    'enterprise automation',
+    'cybersecurity',
+    'quantum computing',
+    'blockchain solutions',
+    'cloud services',
+    'digital transformation',
     'Zion Tech Group'
   ];
 
@@ -19,19 +19,19 @@ export function SEOHead(props: any) {
 
   return (
     <Helmet>
-      <title>{fullTitle}</title>';
-      <meta name="description" content={description}  />';';
-      <meta name="keywords" content={allKeywords.join(', ')}  />';
-      <meta name="author" content="Zion Tech Group"  />';';
+      <title>{fullTitle}</title>
+      <metaname="description" content={description}  />';
+      <metaname="keywords" content={allKeywords.join(', ')}  />
+      <metaname="author" content="Zion Tech Group"  />';
       <meta name="robots" content={`${noIndex ? 'noindex' : 'index'},${noFollow ? 'nofollow' : 'follow'}`}  />
       
       {canonicalUrl && <link rel="canonical" href={canonicalUrl}  />}
       
       <meta property="og:title" content={fullTitle}  />
       <meta property="og:description" content={description}  />
-      <meta property="og:type" content={ogType}  />';
-      <meta property="og:image" content={ogImage}  />';';
-      <meta property="og:url" content={canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '')}  />
+      <metaproperty="og:type" content={ogType}  />
+      <metaproperty="og:image" content={ogImage}  />';
+      <meta property="og:url" content={canonicalUrl || (typeof window !== 'undefined' ? window.location.href : ")}  />
       <meta property="og:site_name" content="Zion Tech Group"  />
       <meta property="og:locale" content="en_US"  />
       
@@ -77,4 +77,4 @@ export function SEOHead(props: any) {
       </script>
     </Helmet>
   );';
-};';;';
+};';';

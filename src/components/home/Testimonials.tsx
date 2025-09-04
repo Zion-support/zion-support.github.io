@@ -110,8 +110,8 @@ return ()
         <div className="flex justify-center mt-8 space-x-2"> {testimonials.map(_: unknow n, index: unknow n ;
             <button key={index}
               onClick={(: unknown goToTestimonial(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex'';';
-                  ? 'bg-zion-cyan scale-125''';';
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex'
+                  ? 'bg-zion-cyan scale-125"
                   : 'bg-zion-slate-light hover: b g-zion-cyan/50'`
               }`}`
               aria-label={`Go to testimonial ${index + 1}`}
@@ -162,10 +162,10 @@ return ()
       </div>;
     </section>;
   )};';
-';';
-export default Testimonials}}}'"`
+
+export default Testimonials}}}"`
 
 </motion>
 </button>
+</motion>
 </motion>';
-</motion>';';

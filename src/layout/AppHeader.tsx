@@ -1,9 +1,9 @@
-import React from 'react';';
-';';
-import { Link, Link } from 'react-router-dom';';';
+import React from 'react';
+
+import { Link, Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
-  const handleDropdownToggle = (props: any) => {
+  const handleDropdownToggle = (props) => {
     setActiveDropdown(activeDropdown === itemName ? null : itemName);
   };
 
@@ -12,18 +12,18 @@ export function AppHeader() {
 <<<<<<< HEAD
   const [mobileOpen, setMobileOpen] = React.useState(false);
 =======';
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);';';
-  const [searchQuery, setSearchQuery] = useState('');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState(");
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
 >>>>>>> origin/merge-pr-11195
 
 <<<<<<< HEAD';
-  const nav = [';';
-    { name: 'Home', to: '/' },';';
-    { name: 'Services', to: '/services' },';';
-    { name: 'Solutions', to: '/solutions' },';';
-    { name: 'Resources', to: '/resources' },';';
-    { name: 'Contact', to: '/contact' }
+  const nav = [
+    { name: 'Home', to: '/' },
+    { name: 'Services', to: '/services' },
+    { name: 'Solutions', to: '/solutions' },
+    { name: 'Resources', to: '/resources' },
+    { name: 'Contact', to: '/contact' };
 =======
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,87 +34,87 @@ export function AppHeader() {
   };
 
 <<<<<<< HEAD';
-  const navigation = [';';
-    { name: 'Home', href: '/', current: true },';';
-    { name: 'Services', href: '/services', current: false, hasDropdown: true },';';
-    { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true },';';
-    { name: 'Resources', href: '/resources', current: false, hasDropdown: true },';';
-    { name: 'About', href: '/about', current: false },';';
-    { name: 'Contact', href: '/contact', current: false },
+  const navigation = [
+    { name: 'Home', href: '/', current: true },
+    { name: 'Services', href: '/services', current: false, hasDropdown: true },
+    { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true },
+    { name: 'Resources', href: '/resources', current: false, hasDropdown: true },
+    { name: 'About', href: '/about', current: false },
+    { name: 'Contact', href: '/contact', current: false };,
   ];
 
-  // Featured Services Showcase';
-  const featuredServicesShowcase = {';';
-    title: 'Innovative Services 2032',';';
-    href: '/innovative-services-showcase-2032',';
-    icon: Rocket,';';
-    color: 'from-indigo-500 to-purple-600',';';
+  // Featured Services Showcase
+  const featuredServicesShowcase = {
+    title: 'Innovative Services 2032',
+    href: '/innovative-services-showcase-2032',
+    icon: Rocket,
+    color: 'from-indigo-500 to-purple-600',
     description: 'Cutting-edge AI & Micro SAAS Solutions',
     featured: true
-  };
+  };;
 
   // Organized Services Categories
-  const servicesCategories = [';
-    {';';
-      title: 'AI & Machine Learning',';
-icon: Brain,';';
-      color: 'from-zion-cyan to-zion-purple',';
-      dropdown: [';';
-        { name: 'Machine Learning', href: '/ai-solutions/machine-learning', icon: Brain, color: 'from-zion-cyan to-zion-purple' },';';
-        { name: 'Computer Vision', href: '/ai-solutions/computer-vision', icon: Eye, color: 'from-zion-purple to-zion-pink' },';';
-        { name: 'NLP & Chatbots', href: '/ai-solutions/nlp-chatbots', icon: MessageCircle, color: 'from-zion-green to-zion-cyan' },';';
-        { name: 'Predictive Analytics', href: '/ai-solutions/predictive-analytics', icon: TrendingUp, color: 'from-zion-blue to-zion-green' },';';
-        { name: 'AI Consulting', href: '/ai-solutions/consulting', icon: Users, color: 'from-zion-pink to-zion-purple' },';';
+  const servicesCategories = [
+    {
+      title: 'AI & Machine Learning',
+icon: Brain,
+      color: 'from-zion-cyan to-zion-purple',
+      dropdown: [
+        { name: 'Machine Learning', href: '/ai-solutions/machine-learning', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
+        { name: 'Computer Vision', href: '/ai-solutions/computer-vision', icon: Eye, color: 'from-zion-purple to-zion-pink' },
+        { name: 'NLP & Chatbots', href: '/ai-solutions/nlp-chatbots', icon: MessageCircle, color: 'from-zion-green to-zion-cyan' },
+        { name: 'Predictive Analytics', href: '/ai-solutions/predictive-analytics', icon: TrendingUp, color: 'from-zion-blue to-zion-green' },
+        { name: 'AI Consulting', href: '/ai-solutions/consulting', icon: Users, color: 'from-zion-pink to-zion-purple' },
         { name: 'Custom AI Models', href: '/ai-solutions/custom-models', icon: Code, color: 'from-zion-orange to-zion-purple' }
       ]
-    },';
-    {';';
-      name: 'Innovation Lab',';';
-      href: '/innovation-lab',';
-      icon: Sparkles,';';
-      color: 'from-zion-purple to-zion-pink',';
-      dropdown: [';';
-        { name: 'Research & Development', href: '/innovation-lab/research', icon: Sparkles, color: 'from-zion-purple to-zion-pink' },';';
-        { name: 'Emerging Tech', href: '/innovation-lab/emerging-tech', icon: Rocket, color: 'from-zion-purple to-zion-cyan' },';';
-        { name: 'Prototyping', href: '/innovation-lab/prototyping', icon: Code, color: 'from-zion-green to-zion-cyan' },';';
-        { name: 'Innovation Consulting', href: '/innovation-lab/consulting', icon: Users, color: 'from-zion-pink to-zion-purple' },';';
+    },
+    {
+      name: 'Innovation Lab',
+      href: '/innovation-lab',
+      icon: Sparkles,
+      color: 'from-zion-purple to-zion-pink',
+      dropdown: [
+        { name: 'Research & Development', href: '/innovation-lab/research', icon: Sparkles, color: 'from-zion-purple to-zion-pink' },
+        { name: 'Emerging Tech', href: '/innovation-lab/emerging-tech', icon: Rocket, color: 'from-zion-purple to-zion-cyan' },
+        { name: 'Prototyping', href: '/innovation-lab/prototyping', icon: Code, color: 'from-zion-green to-zion-cyan' },
+        { name: 'Innovation Consulting', href: '/innovation-lab/consulting', icon: Users, color: 'from-zion-pink to-zion-purple' },
         { name: 'Tech Partnerships', href: '/innovation-lab/partnerships', icon: Handshake, color: 'from-zion-blue to-zion-green' }
       ]
     }
 =======
-  const navigationItems = [';
-    {';';
-      name: 'Services',';';
-      href: '/services',';
-      icon: Zap,';';
-      color: 'from-cyan-500 to-blue-500',';
-      dropdown: [';';
-        { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain, color: 'from-cyan-500 to-purple-500' },';';
-        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, color: 'from-purple-500 to-red-500' },';';
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, color: 'from-blue-500 to-cyan-500' },';';
-        { name: 'IoT & Edge', href: '/services/iot-edge', icon: Cpu, color: 'from-green-500 to-cyan-500' },';';
-        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket, color: 'from-purple-500 to-cyan-500' },';';
-        { name: 'Blockchain', href: '/services/blockchain', icon: Lock, color: 'from-orange-500 to-purple-500' },';';
-        { name: 'Digital Twin', href: '/services/digital-twin', icon: Globe, color: 'from-blue-500 to-purple-500' },';';
+  const navigationItems = [
+    {
+      name: 'Services',
+      href: '/services',
+      icon: Zap,
+      color: 'from-cyan-500 to-blue-500',
+      dropdown: [
+        { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain, color: 'from-cyan-500 to-purple-500' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, color: 'from-purple-500 to-red-500' },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, color: 'from-blue-500 to-cyan-500' },
+        { name: 'IoT & Edge', href: '/services/iot-edge', icon: Cpu, color: 'from-green-500 to-cyan-500' },
+        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket, color: 'from-purple-500 to-cyan-500' },
+        { name: 'Blockchain', href: '/services/blockchain', icon: Lock, color: 'from-orange-500 to-purple-500' },
+        { name: 'Digital Twin', href: '/services/digital-twin', icon: Globe, color: 'from-blue-500 to-purple-500' },
         { name: 'Sustainability', href: '/services/sustainability', icon: Heart, color: 'from-green-500 to-blue-500' }
       ]
-    },';
-    {';';
-      name: 'Micro SAAS',';';
-      href: '/micro-saas-services',';
-      icon: Code,';';
-      color: 'from-purple-500 to-pink-500',';
-      dropdown: [';';
-        { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence', icon: Brain, color: 'from-cyan-500 to-blue-500' },';';
-        { name: 'Customer Experience', href: '/micro-saas/customer-experience', icon: Users, color: 'from-purple-500 to-pink-500' },';';
-        { name: 'Supply Chain', href: '/micro-saas/supply-chain', icon: Network, color: 'from-green-500 to-cyan-500' },';';
-        { name: 'Cybersecurity', href: '/micro-saas/cybersecurity', icon: Shield, color: 'from-purple-500 to-red-500' },';';
+    },
+    {
+      name: 'Micro SAAS',
+      href: '/micro-saas-services',
+      icon: Code,
+      color: 'from-purple-500 to-pink-500',
+      dropdown: [
+        { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence', icon: Brain, color: 'from-cyan-500 to-blue-500' },
+        { name: 'Customer Experience', href: '/micro-saas/customer-experience', icon: Users, color: 'from-purple-500 to-pink-500' },
+        { name: 'Supply Chain', href: '/micro-saas/supply-chain', icon: Network, color: 'from-green-500 to-cyan-500' },
+        { name: 'Cybersecurity', href: '/micro-saas/cybersecurity', icon: Shield, color: 'from-purple-500 to-red-500' },
         { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge', icon: Cpu, color: 'from-green-500 to-cyan-500' }
-      ]';
-    },';';
-    { name: 'About', href: '/about', icon: Users, color: 'from-blue-500 to-purple-500' },';';
-    { name: 'Blog', href: '/blog', icon: Globe, color: 'from-green-500 to-blue-500' },';';
-    { name: 'Contact', href: '/contact', icon: Heart, color: 'from-pink-500 to-red-500' }
+      ]
+    },
+    { name: 'About', href: '/about', icon: Users, color: 'from-blue-500 to-purple-500' },
+    { name: 'Blog', href: '/blog', icon: Globe, color: 'from-green-500 to-blue-500' },
+    { name: 'Contact', href: '/contact', icon: Heart, color: 'from-pink-500 to-red-500' };
 >>>>>>> origin/merge-pr-11195
   ];
 setServicesDropdownOpen(true);
@@ -157,9 +157,9 @@ setServicesDropdownOpen(true);
     setActiveNav(null)};
 
   return ()
-    <>`';
-      <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${        scrolled';';
-          ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10'';';
+    <>`
+      <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${        scrolled';
+          ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10'
           : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'      }`}>
         <div className="container-responsive">"
           <div className="flex h-20 items-center justify-between">
@@ -188,8 +188,8 @@ setServicesDropdownOpen(true);
                   {item.hasDropdown ? ("
                     <div className="relative">
                       <button
-                        onClick={() => {';
-<AnimatePresence>';';
+                        onClick={() => {
+<AnimatePresence>';
                 {activeDropdown === 'services' && (
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
@@ -228,18 +228,17 @@ setServicesDropdownOpen(true);
             </div>
 
             {/* Solutions Dropdown */}
-            <div className="relative dropdown-container">';
+            <divclassName="relative dropdown-container">
               <button';';
-                onClick={() => toggleDropdown('solutions')}';
-                className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 transition-colors"';';
+                onClick={() => toggleDropdown('solutions')}
+                className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 transition-colors";';
                 aria-expanded={activeDropdown === 'solutions'}
                 aria-haspopup="true"
               >';
                 Solutions';';
-                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'solutions' ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'solutions' ? 'rotate-180' : "}`} />
               </button>
-';
-              <AnimatePresence>';';
+              <AnimatePresence>';
                 {activeDropdown === 'solutions' && (
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
@@ -278,18 +277,17 @@ setServicesDropdownOpen(true);
             </div>
 
             {/* Resources Dropdown */}
-            <div className="relative dropdown-container">';
+            <divclassName="relative dropdown-container">
               <button';';
-                onClick={() => toggleDropdown('resources')}';
-                className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 transition-colors"';';
+                onClick={() => toggleDropdown('resources')}
+                className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 transition-colors";';
                 aria-expanded={activeDropdown === 'resources'}
                 aria-haspopup="true"
               >';
                 Resources';';
-                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'resources' ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'resources' ? 'rotate-180' : "}`} />
               </button>
-';
-              <AnimatePresence>';';
+              <AnimatePresence>';
                 {activeDropdown === 'resources' && (
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
@@ -321,18 +319,17 @@ setServicesDropdownOpen(true);
             </div>
 
             {/* Company Dropdown */}
-            <div className="relative dropdown-container">';
+            <divclassName="relative dropdown-container">
               <button';';
-                onClick={() => toggleDropdown('company')}';
-                className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 transition-colors"';';
+                onClick={() => toggleDropdown('company')}
+                className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 transition-colors";';
                 aria-expanded={activeDropdown === 'company'}
                 aria-haspopup="true"
               >';
                 Company';';
-                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : "}`} />
               </button>
-';
-              <AnimatePresence>';';
+              <AnimatePresence>';
                 {activeDropdown === 'company' && (
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
@@ -375,9 +372,9 @@ setServicesDropdownOpen(true);
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   onFocus={() => setSearchFocused(true)}
-                  onBlur={() => setSearchFocused(false)}';
-                  className={`w-64 px-4 py-2 pl-10 bg-zion-slate/20 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan transition-all duration-200 ${';';
-                    searchFocused ? 'w-80' : ''
+                  onBlur={() => setSearchFocused(false)}
+                  className={`w-64 px-4 py-2 pl-10 bg-zion-slate/20 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan transition-all duration-200 ${
+                    searchFocused ? 'w-80' : "
                   }`}
                 />
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
@@ -386,10 +383,10 @@ setServicesDropdownOpen(true);
 
             {/* User Menu */}
             {user ? (
-              <div className="relative dropdown-container">';
+              <divclassName="relative dropdown-container">
                 <button';';
-                  onClick={() => toggleDropdown('user')}';
-                  className="flex items-center space-x-2 p-2 rounded-lg hover:bg-zion-cyan/10 transition-colors"';';
+                  onClick={() => toggleDropdown('user')}
+                  className="flex items-center space-x-2 p-2 rounded-lg hover:bg-zion-cyan/10 transition-colors";';
                   aria-expanded={activeDropdown === 'user'}
                   aria-haspopup="true"
 =======
@@ -424,8 +421,7 @@ setServicesDropdownOpen(true);
                   <span className="text-white text-sm hidden lg:block">{user.name}</span>
                   <ChevronDown className="w-4 h-4 text-zion-slate-light" />
                 </button>
-';
-                <AnimatePresence>';';
+                <AnimatePresence>';
                   {activeDropdown === 'user' && (
                     <motion.div
                       initial={{ opacity: 0, y: -10 }}
@@ -480,20 +476,20 @@ setServicesDropdownOpen(true);
 
           {/* Right side actions */}
           <div className="flex items-center space-x-4">
-            {/* Search */}';
-            <form onSubmit={handleSearch} className="hidden md:flex relative">  const navigation = [';';
-    { name: 'Home', href: '/', current: true },';';
-    { name: 'About', href: '/about', current: false },';';
-    { name: 'Contact', href: '/contact', current: false },
+            {/* Search */}
+            <form onSubmit={handleSearch} className="hidden md:flex relative">  const navigation = [
+    { name: 'Home', href: '/', current: true },
+    { name: 'About', href: '/about', current: false },
+    { name: 'Contact', href: '/contact', current: false };,
   ];
-';
-  const services = [';';
-    { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & NLP' },';';
-    { name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' },';';
-    { name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' },';';
-    { name: 'Consulting', href: '/consulting', description: 'Digital Transformation' },';';
-    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Compliance' },';';
-    { name: 'Cloud Services', href: '/services/cloud', description: 'DevOps & Infrastructure' },
+
+  const services = [
+    { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & NLP' },
+    { name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' },
+    { name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' },
+    { name: 'Consulting', href: '/consulting', description: 'Digital Transformation' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Compliance' },
+    { name: 'Cloud Services', href: '/services/cloud', description: 'DevOps & Infrastructure' };,
 >>>>>>> origin/merge-pr-10615
   ];
 
@@ -502,7 +498,7 @@ setServicesDropdownOpen(true);
     <header className="border-b border-gray-200 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link to="/" className="font-bold text-gray-900">Zion Tech Group</Link>
-        <nav className="hidden md:flex items-center gap-6">';
+        <navclassName="hidden md:flex items-center gap-6">
           {nav.map(item => (';';
             <Link key={item.to} to={item.to} className={({ isActive }) => isActive ? 'text-indigo-600 font-semibold' : 'text-gray-700 hover:text-gray-900'}>
               {item.name}
@@ -536,7 +532,7 @@ setServicesDropdownOpen(true);
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <motion.div';
-            initial={{ opacity: 0, height: 0 }}';';
+            initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             className="lg:hidden border-t border-gray-200/50 py-4"
@@ -548,10 +544,10 @@ setServicesDropdownOpen(true);
 =======
 
   useEffect(() => {
-    const handleScroll = (props: any) => {
+    const handleScroll = (props) => {
       setScrolled(window.scrollY > 10);
     };';
-';';
+
     window.addEventListener('scroll', handleScroll);';';
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -559,240 +555,239 @@ setServicesDropdownOpen(true);
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-';
-    { ';';
-      name: 'AI Business Intelligence', ';';
-      href: '/services/ai-business-intelligence', ';
-      icon: Brain, ';';
-      description: 'Machine Learning & Data Science',';
-      featured: true,';';
+    {
+      name: 'AI Business Intelligence',
+      href: '/services/ai-business-intelligence',
+      icon: Brain,
+      description: 'Machine Learning & Data Science',
+      featured: true,
       color: 'from-purple-500 to-cyan-500'
-    },';
-    { ';';
-      name: 'AI Healthcare Analytics', ';';
-      href: '/services/ai-healthcare-analytics-platform', ';
-      icon: Heart, ';';
-      description: 'Medical AI & Diagnostics',';
-      featured: true,';';
+    },
+    {
+      name: 'AI Healthcare Analytics',
+      href: '/services/ai-healthcare-analytics-platform',
+      icon: Heart,
+      description: 'Medical AI & Diagnostics',
+      featured: true,
       color: 'from-red-500 to-pink-500'
-    },';
-    { ';';
-      name: 'AI Cybersecurity', ';';
-      href: '/services/ai-cybersecurity-threat-detection', ';
-      icon: Shield, ';';
-      description: 'AI-Powered Security',';
-      featured: true,';';
+    },
+    {
+      name: 'AI Cybersecurity',
+      href: '/services/ai-cybersecurity-threat-detection',
+      icon: Shield,
+      description: 'AI-Powered Security',
+      featured: true,
       color: 'from-green-500 to-blue-500'
-    },';
-    { ';';
-      name: 'Quantum Computing', ';';
-      href: '/services/quantum-computing', ';
-      icon: Atom, ';';
-      description: 'Quantum AI & Optimization',';
-      featured: true,';';
+    },
+    {
+      name: 'Quantum Computing',
+      href: '/services/quantum-computing',
+      icon: Atom,
+      description: 'Quantum AI & Optimization',
+      featured: true,
       color: 'from-purple-500 to-pink-500'
-    },';
-    { ';';
-      name: 'IoT Edge Computing', ';';
-      href: '/services/iot-edge', ';
-      icon: Cpu, ';';
-      description: 'IoT & Real-time Processing',';
-      featured: true,';';
+    },
+    {
+      name: 'IoT Edge Computing',
+      href: '/services/iot-edge',
+      icon: Cpu,
+      description: 'IoT & Real-time Processing',
+      featured: true,
       color: 'from-blue-500 to-cyan-500'
-    },';
-    { ';';
-      name: 'Digital Twin Platform', ';';
-      href: '/services/digital-twin', ';
-      icon: Globe, ';';
-      description: 'Virtual Replicas & Simulation',';
-      featured: true,';';
+    },
+    {
+      name: 'Digital Twin Platform',
+      href: '/services/digital-twin',
+      icon: Globe,
+      description: 'Virtual Replicas & Simulation',
+      featured: true,
       color: 'from-green-500 to-emerald-500'
-    },';
-    { ';';
-      name: 'Cloud DevOps', ';';
-      href: '/services/cloud-devops', ';
-      icon: Cloud, ';';
-      description: 'DevOps & Infrastructure',';
-      featured: true,';';
+    },
+    {
+      name: 'Cloud DevOps',
+      href: '/services/cloud-devops',
+      icon: Cloud,
+      description: 'DevOps & Infrastructure',
+      featured: true,
       color: 'from-blue-500 to-cyan-500'
-    },';
-    { ';';
-      name: 'Micro SaaS Products', ';';
-      href: '/services/micro-saas', ';
-      icon: ShoppingCart, ';';
-      description: 'AI automations with transparent pricing',';
-      featured: true,';';
+    },
+    {
+      name: 'Micro SaaS Products',
+      href: '/services/micro-saas',
+      icon: ShoppingCart,
+      description: 'AI automations with transparent pricing',
+      featured: true,
       color: 'from-orange-500 to-red-500'
-    },';
-    { ';';
-      name: 'Data Analytics', ';';
-      href: '/services/data-analytics', ';
-      icon: BarChart3, ';';
-      description: 'Business Intelligence & Analytics',';
-      featured: false,';';
+    },
+    {
+      name: 'Data Analytics',
+      href: '/services/data-analytics',
+      icon: BarChart3,
+      description: 'Business Intelligence & Analytics',
+      featured: false,
       color: 'from-blue-500 to-indigo-500'
-    },';
-    { ';';
-      name: 'IT Infrastructure', ';';
-      href: '/services/it-infrastructure', ';
-      icon: Server, ';';
-      description: 'Enterprise IT Solutions',';
-      featured: false,';';
+    },
+    {
+      name: 'IT Infrastructure',
+      href: '/services/it-infrastructure',
+      icon: Server,
+      description: 'Enterprise IT Solutions',
+      featured: false,
       color: 'from-gray-500 to-slate-500'
-    },';
-    { ';';
-      name: 'Green IT Solutions', ';';
-      href: '/services/green-it', ';
-      icon: Leaf, ';';
-      description: 'Sustainable Technology',';
-      featured: false,';';
+    },
+    {
+      name: 'Green IT Solutions',
+      href: '/services/green-it',
+      icon: Leaf,
+      description: 'Sustainable Technology',
+      featured: false,
       color: 'from-green-500 to-emerald-500'
-    },';
-    { ';';
-      name: 'Space Technology', ';';
-      href: '/services/space-tech', ';
-      icon: Satellite, ';';
-      description: 'Aerospace & Space Tech',';
-      featured: false,';';
+    },
+    {
+      name: 'Space Technology',
+      href: '/services/space-tech',
+      icon: Satellite,
+      description: 'Aerospace & Space Tech',
+      featured: false,
       color: 'from-indigo-500 to-purple-500'
     }
   ];
-  const solutions = [';
-    {';';
-      name: 'Healthcare Solutions',';';
-      href: '/solutions/healthcare',';
-      icon: Heart,';';
+  const solutions = [
+    {
+      name: 'Healthcare Solutions',
+      href: '/solutions/healthcare',
+      icon: Heart,
       description: 'Digital health transformation',
       featured: true
-    },';
-    {';';
-      name: 'Financial Solutions',';';
-      href: '/solutions/financial',';
-      icon: TrendingUp,';';
+    },
+    {
+      name: 'Financial Solutions',
+      href: '/solutions/financial',
+      icon: TrendingUp,
       description: 'Fintech innovation & compliance',
       featured: true
-    },';
-    {';';
-      name: 'Manufacturing Solutions',';';
-      href: '/solutions#manufacturing',';
-      icon: Building,';';
+    },
+    {
+      name: 'Manufacturing Solutions',
+      href: '/solutions#manufacturing',
+      icon: Building,
       description: 'Smart manufacturing & automation',
       featured: true
-    },';
-    {';';
-      name: 'Retail Solutions',';';
-      href: '/solutions/retail',';
-      icon: ShoppingCart,';';
+    },
+    {
+      name: 'Retail Solutions',
+      href: '/solutions/retail',
+      icon: ShoppingCart,
       description: 'E-commerce & retail innovation',
       featured: true
-    },';
-    {';';
-      name: 'Education Solutions',';';
-      href: '/solutions/education',';
-      icon: BookOpen,';';
+    },
+    {
+      name: 'Education Solutions',
+      href: '/solutions/education',
+      icon: BookOpen,
       description: 'EdTech & learning platforms',
       featured: true
-    },';
-    {';';
-      name: 'Legal Tech Solutions',';';
-      href: '/solutions/legal-tech',';
-      icon: Scale,';';
+    },
+    {
+      name: 'Legal Tech Solutions',
+      href: '/solutions/legal-tech',
+      icon: Scale,
       description: 'Legal tech & compliance',
       featured: true
-    },';
-    {';';
-      name: 'Research & Development',';';
-      href: '/research-development',';
-      icon: Code,';';
+    },
+    {
+      name: 'Research & Development',
+      href: '/research-development',
+      icon: Code,
       description: 'Innovation & R&D support',
       featured: true
-    },';
-    {';';
-      name: 'Government Solutions',';';
-      href: '/solutions#government',';
-      icon: Building2,';';
+    },
+    {
+      name: 'Government Solutions',
+      href: '/solutions#government',
+      icon: Building2,
       description: 'Public sector digital transformation',
       featured: false
-    },';
-    {';';
-      name: 'Education Solutions',';';
-      href: '/solutions#education',';
-      icon: GraduationCap,';';
+    },
+    {
+      name: 'Education Solutions',
+      href: '/solutions#education',
+      icon: GraduationCap,
       description: 'EdTech & learning platforms',
       featured: false
-    }
+    };
   ];
-  const resources = [';
-    {';';
-      name: 'Blog & Insights',';';
-      href: '/blog',';
-      icon: BookOpen,';';
+  const resources = [
+    {
+      name: 'Blog & Insights',
+      href: '/blog',
+      icon: BookOpen,
       description: 'Latest industry trends and insights',
       featured: true
-    },';
-    {';';
-      name: 'Case Studies',';';
-      href: '/case-studies',';
-      icon: Target,';';
+    },
+    {
+      name: 'Case Studies',
+      href: '/case-studies',
+      icon: Target,
       description: 'Real-world success stories',
       featured: true
-    },';
-    {';';
-      name: 'White Papers',';';
-      href: '/white-papers',';
-      icon: FileText,';';
+    },
+    {
+      name: 'White Papers',
+      href: '/white-papers',
+      icon: FileText,
       description: 'In-depth research and analysis',
       featured: true
-    },';
-    {';';
-      name: 'Webinars',';';
-      href: '/webinars',';
-      icon: Users,';';
+    },
+    {
+      name: 'Webinars',
+      href: '/webinars',
+      icon: Users,
       description: 'Expert-led learning sessions',
       featured: true
-    },';
-    {';';
-      name: 'Documentation',';';
-      href: '/docs',';
-      icon: Code,';';
+    },
+    {
+      name: 'Documentation',
+      href: '/docs',
+      icon: Code,
       description: 'Technical guides and APIs',
       featured: true
-    },';
-    {';';
-      name: 'FAQ & Support',';';
-      href: '/faq',';
-      icon: HelpCircle,';';
+    },
+    {
+      name: 'FAQ & Support',
+      href: '/faq',
+      icon: HelpCircle,
       description: 'Get help and answers',
       featured: true
-    },';
-    {';';
-      name: 'Pricing Guide',';';
-      href: '/pricing',';
-      icon: DollarSign,';';
+    },
+    {
+      name: 'Pricing Guide',
+      href: '/pricing',
+      icon: DollarSign,
       description: 'Complete pricing information',
       featured: true
-    },';
-    {';';
-      name: 'Training & Certification',';';
-      href: '/training',';
-      icon: BookOpen,';';
+    },
+    {
+      name: 'Training & Certification',
+      href: '/training',
+      icon: BookOpen,
       description: 'Professional development',
       featured: true
-    },';
-    {';';
-      name: 'Developer Portal',';';
-      href: '/developers',';
-      icon: Code,';';
+    },
+    {
+      name: 'Developer Portal',
+      href: '/developers',
+      icon: Code,
       description: 'API documentation & tools',
       featured: false
-    },';
-    {';';
-      name: 'Community Forum',';';
-      href: '/community',';
-      icon: Users,';';
+    },
+    {
+      name: 'Community Forum',
+      href: '/community',
+      icon: Users,
       description: 'Connect with experts',
       featured: false
-    }
+    };
   ];
 
   const quickLinks = [
@@ -806,18 +801,18 @@ setServicesDropdownOpen(true);
                   >
                     <div className="flex items-center space-x-2">
                       <item.icon className="w-4 h-4" />
-                      <span>{item.name}</span>
+                      <span>{item.name};</span>
                     </div>
                     {item.dropdown && (';
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${';';
-                        activeDropdown === item.name ? 'rotate-180' : ''
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
+                        activeDropdown === item.name ? 'rotate-180' : "
                       }`} />
                     )}
                   </button>
 
                   {item.dropdown && activeDropdown === item.name && (
                     <motion.div';
-                      initial={{ opacity: 0, height: 0 }}';';
+                      initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
                       className="ml-6 space-y-2"
@@ -922,7 +917,7 @@ setServicesDropdownOpen(true);
                       {item.hasDropdown ? (
                         <div>
                           <button';
-                            onClick={() => {';';
+                            onClick={() => {
                               if (item.name === 'Services') {
                                 setServicesDropdownOpen(!servicesDropdownOpen);
                                 setSolutionsDropdownOpen(false);';
@@ -939,16 +934,15 @@ setServicesDropdownOpen(true);
                             }}
                             className="w-full flex items-center justify-between px-4 py-3 text-left text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50 rounded-lg transition-all duration-200"
                           >
-                            {item.name}';
-                            <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${';';
+                            {item.name}
+                            <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${
                               (item.name === 'Services' && servicesDropdownOpen) ||';';
                               (item.name === 'Solutions' && solutionsDropdownOpen) ||';';
                               (item.name === 'Resources' && resourcesDropdownOpen)';';
-                                ? 'rotate-180' : ''
+                                ? 'rotate-180' : "
                             }`} />
                           </button>
-                          ';
-                          {/* Mobile Services Dropdown */}';';
+                          {/* Mobile Services Dropdown */}
                           {item.name === 'Services' && servicesDropdownOpen && (
                             <div className="ml-4 mt-2 space-y-2">
                               {services.map((service) => (
@@ -963,8 +957,8 @@ setServicesDropdownOpen(true);
                               ))}
                                 </div>
   );
-}';
-                          {/* Mobile Solutions Dropdown */}';';
+}
+                          {/* Mobile Solutions Dropdown */}
                           {item.name === 'Solutions' && solutionsDropdownOpen && (
                             <div className="ml-4 mt-2 space-y-2">
                               {solutions.map((solution) => (
@@ -979,8 +973,8 @@ setServicesDropdownOpen(true);
                               ))}
                                 </div>
   );
-}';
-                          {/* Mobile Resources Dropdown */}';';
+}
+                          {/* Mobile Resources Dropdown */}
                           {item.name === 'Resources' && resourcesDropdownOpen && (
                             <div className="ml-4 mt-2 space-y-2">
                               {resources.map((resource) => (
@@ -1003,16 +997,15 @@ setServicesDropdownOpen(true);
                           className="block px-4 py-3 text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50 rounded-lg transition-all duration-200"
                           onClick={() => setMobileMenuOpen(false)}
                         >
-                          {item.name}';
-                          <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${';';
+                          {item.name}
+                          <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${
                             (item.name === 'Services' && servicesDropdownOpen) ||';';
                             (item.name === 'Solutions' && solutionsDropdownOpen) ||';';
                             (item.name === 'Resources' && resourcesDropdownOpen)';';
-                              ? 'rotate-180' : ''
+                              ? 'rotate-180' : "
                           }`} />
                         </button>
-';
-                        {/* Mobile Services Dropdown */}';';
+                        {/* Mobile Services Dropdown */}
                         {item.name === 'Services' && servicesDropdownOpen && (
                           <div className="ml-4 mt-2 space-y-2">
                             {services.slice(0, 6).map((service) => (
@@ -1073,8 +1066,7 @@ setServicesDropdownOpen(true);
     </header>
   );
 }
-';
-';';
+
 import { Link } from 'react-router-dom';
 
 export function AppHeader() {
@@ -1092,5 +1084,4 @@ export function AppHeader() {
     </header>
   );
 }
-';
-;';;';
+;';';

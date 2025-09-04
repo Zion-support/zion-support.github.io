@@ -287,5 +287,5 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2028: ProductListing[] = [
     roi: "900% within 24 months",
     setupTime: "16-20 weeks",
     integrations: ["Firewall Systems", "VPN Services", "Identity Management", "SIEM Platforms", "Compliance Tools"]
-  }
-];;;
+  };
+];

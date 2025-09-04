@@ -440,7 +440,7 @@ export const REVOLUTIONARY_SERVICES_2030: RevolutionaryService2030[] = [
     aiCapabilities: ["Automated Testing", "Pattern Recognition", "Natural Language Processing", "Image Analysis"],
     quantumFeatures: ["Quantum Pattern Recognition"],
     blockchainFeatures: ["Compliance Certification", "Audit Trail Verification"]
-  }
+  };
 ];
 
 export const serviceCategories2030 = [

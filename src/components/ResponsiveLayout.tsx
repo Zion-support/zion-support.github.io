@@ -38,7 +38,7 @@ export function ResponsiveLayout({ children }: ResponsiveLayoutProps) {
 // Responsive container component
 export function ResponsiveContainer({ 
   children, 
-  className = '',
+  className = ",
   padding = true 
 }: { 
   children: React.ReactNode;
@@ -48,7 +48,7 @@ export function ResponsiveContainer({
   return (
     <div className={`
       w-full max-w-7xl mx-auto
-      ${padding ? 'px-4 sm:px-6 lg:px-8' : ''}
+      ${padding ? 'px-4 sm:px-6 lg:px-8' : "}
       ${className}
     `}>
       {children}
@@ -61,7 +61,7 @@ export function ResponsiveGrid({
   children, 
   cols = { sm: 1, md: 2, lg: 3, xl: 4 },
   gap = 6,
-  className = ''
+  className = "
 }: {
   children: React.ReactNode;
   cols?: { sm?: number; md?: number; lg?: number; xl?: number };
@@ -71,10 +71,10 @@ export function ResponsiveGrid({
   const gridClasses = `
     grid gap-${gap}
     grid-cols-${cols.sm || 1}
-    ${cols.md ? `md:grid-cols-${cols.md}` : ''}
-    ${cols.lg ? `lg:grid-cols-${cols.lg}` : ''}
-    ${cols.xl ? `xl:grid-cols-${cols.xl}` : ''}
-    ${className}
+    ${cols.md ? `md:grid-cols-${cols.md}` : "}
+    ${cols.lg ? `lg:grid-cols-${cols.lg}` : "}
+    ${cols.xl ? `xl:grid-cols-${cols.xl}` : "}
+    ${className};
   `;
 
   return (
@@ -87,7 +87,7 @@ export function ResponsiveGrid({
 // Responsive card component
 export function ResponsiveCard({ 
   children, 
-  className = '',
+  className = ",
   hover = true,
   padding = true
 }: {
@@ -99,8 +99,8 @@ export function ResponsiveCard({
   return (
     <div className={`
       bg-white rounded-lg shadow-md border border-gray-200
-      ${hover ? 'hover:shadow-lg hover:scale-105 transition-all duration-300' : ''}
-      ${padding ? 'p-4 sm:p-6' : ''}
+      ${hover ? 'hover:shadow-lg hover:scale-105 transition-all duration-300' : "}
+      ${padding ? 'p-4 sm:p-6' : "}
       ${className}
     `}>
       {children}
@@ -112,7 +112,7 @@ export function ResponsiveCard({
 export function ResponsiveText({ 
   children, 
   size = 'base',
-  className = ''
+  className = "
 }: {
   children: React.ReactNode;
   size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
@@ -127,7 +127,7 @@ export function ResponsiveText({
     '2xl': 'text-2xl sm:text-3xl',
     '3xl': 'text-3xl sm:text-4xl',
     '4xl': 'text-4xl sm:text-5xl'
-  };
+  };;
 
   return (
     <div className={`${sizeClasses[size]} ${className}`}>
@@ -141,7 +141,7 @@ export function ResponsiveButton({
   children,
   variant = 'primary',
   size = 'md',
-  className = '',
+  className = ",
   onClick,
   disabled = false,
   type = 'button'
@@ -161,15 +161,15 @@ export function ResponsiveButton({
     secondary: 'bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500',
     outline: 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white focus:ring-blue-500',
     ghost: 'text-blue-600 hover:bg-blue-50 focus:ring-blue-500'
-  };
+  };;
 
   const sizeClasses = {
     sm: 'px-3 py-2 text-sm',
     md: 'px-4 py-2 text-base sm:px-6 sm:py-3',
     lg: 'px-6 py-3 text-lg sm:px-8 sm:py-4'
-  };
+  };;
 
-  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : '';
+  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : '
 
   return (
     <button
@@ -184,7 +184,7 @@ export function ResponsiveButton({
         ${className}
       `}
     >
-      {children}
+      {children};
     </button>
   );
 }

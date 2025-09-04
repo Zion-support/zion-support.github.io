@@ -11,4 +11,4 @@ export default function HeroSection.test() {return (
       </div>
   );"}"
 
-</div>;;
+</div>;

@@ -1,7 +1,7 @@
 import {Card, CardContent} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
-import { FileText export function ProfileProjects(props: any) {
+import { FileText export function ProfileProjects($1) {
     return (
     <div className="min-h-screen bg-white">
       <h3 className="text-xl font-bold text-white mb-4">Projects</h3>
@@ -35,4 +35,4 @@ import { FileText export function ProfileProjects(props: any) {
         </div>
   );
 }
-export default ProfileProjects;;;
+export default ProfileProjects;

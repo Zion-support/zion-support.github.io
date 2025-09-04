@@ -1,11 +1,11 @@
-import {Link} from 'react-router-dom';';';
-import {Button} from '@/components/ui/button';';';
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';';';
-import {Badge} from '@/components/ui/badge';';';
+import {Link} from 'react-router-dom';
+import {Button} from '@/components/ui/button';
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
+import {Badge} from '@/components/ui/badge';
 import { Brain, Shield, Users, TrendingUp, ArrowRight, Star import { ADVANCED_SERVICES } from '@/data/advancedServices';
 // Featured services for the showcase
 const FEATURED_SERVICES = ADVANCED_SERVICES.filter(service => service.featured).slice(0, 6);
-export function AdvancedServicesShowcase(props: any) {
+export function AdvancedServicesShowcase($1) {
     return (<section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
       <div className="container mx-auto px-4">
         {/* Header */}
@@ -171,5 +171,4 @@ export function AdvancedServicesShowcase(props: any) {
         </div>
       </div>
     </section>)}
-';
-export default AdvancedServicesShowcase;;';;';
+export default AdvancedServicesShowcase;';';

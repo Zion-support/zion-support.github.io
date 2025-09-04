@@ -26,27 +26,27 @@ export
 :src/data/comprehensiveServicesIndex.tsx
 // Service Categories;
 export 
-  'AI & Analytics','';';
-  'AI & Customer Experience','';';
-  'AI & Supply Chain','';';
-  'AI & Legal Tech','';';
-  'AI & Healthcare','';';
-  'AI & Financial Services','';';
-  'AI & Content Marketing','';';
-  'Cybersecurity & AI','';';
-  'Cybersecurity & Quantum','';';
-  'Blockchain & Supply Chain','';';
-  'IoT & Edge Computing','';';
-  'Quantum Computing','';';
-  'AR/VR & Immersive Tech','';';
-  '5G & Telecommunications','';';
-  'Space Technology',;'';';
-  'Neuromorphic Computing',;'';';
-  'Digital Twin & Simulation',;'';';
-  'Synthetic Biology',;'';';
-  'Brain-Computer Interface',;'';';
+  'AI & Analytics','
+  'AI & Customer Experience','
+  'AI & Supply Chain','
+  'AI & Legal Tech','
+  'AI & Healthcare','
+  'AI & Financial Services','
+  'AI & Content Marketing','
+  'Cybersecurity & AI','
+  'Cybersecurity & Quantum','
+  'Blockchain & Supply Chain','
+  'IoT & Edge Computing','
+  'Quantum Computing','
+  'AR/VR & Immersive Tech','
+  '5G & Telecommunications','
+  'Space Technology',;'
+  'Neuromorphic Computing',;'
+  'Digital Twin & Simulation',;'
+  'Synthetic Biology',;'
+  'Brain-Computer Interface',;'
   'Sustainability & Energy',;'
-// Service Categories';
+// Service Categories
 export ';';
   'Neuromorphic Computing',;';';
   'Digital Twin & Simulation',;';';
@@ -55,20 +55,20 @@ export ';';
   'Sustainability & Energy',;';';
   'Autonomous Vehicles & Fleet Management';
 ];
-';
-// Innovation Levels';';
+
+// Innovation Levels
 export   'Cutting-edge',;';';
   'Advanced',;';';
   'Professional';
 ];
-';
-// Support Levels';';
+
+// Support Levels
 export   'enterprise',;';';
   'professional',;';';
   'basic';
 ];
 
-// Pricing Models';
+// Pricing Models
 export ';';
   'monthly',;';';
   'annual',;';';
@@ -140,6 +140,5 @@ export
     service.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||;
     service.category.toLowerCase().includes(searchTerm);
   )};';
-';';
-export default ALL_COMPREHENSIVE_SERVICES;'"';
-';';
+
+export default ALL_COMPREHENSIVE_SERVICES;";

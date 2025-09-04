@@ -1,8 +1,8 @@
 const partners = [
-    {name: 'Partner A', logo: 'https://placehold.co/150x80'},';';
-    {name: 'Partner B', logo: 'https://placehold.co/150x80'},
+    {name: 'Partner A', logo: 'https://placehold.co/150x80'},
+    {name: 'Partner B', logo: 'https://placehold.co/150x80'};,
 ];
-export function PartnersSection(props: any) {
+export function PartnersSection($1) {
     return (<section className="py-12 bg-background" id="partners">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8 text-center">Partners</h2>
@@ -14,5 +14,4 @@ export function PartnersSection(props: any) {
         </div>
       </div>
     </section>)}
-';
-export default PartnersSection;';';
+export default PartnersSection;

@@ -2,5 +2,5 @@ import React, { useEffect, useState, useCallback } from 'react'; ; interface Ana
 
 </any>
 </UserBehavior>
-</PerformanceMetrics>';
-</AnalyticsEvent>;';;';
+</PerformanceMetrics>
+</AnalyticsEvent>;';';

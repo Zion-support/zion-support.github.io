@@ -11,4 +11,4 @@ export default function SecurityEnhancer.test() {return (
       </div>
   );"}"
 
-</div>;;
+</div>;

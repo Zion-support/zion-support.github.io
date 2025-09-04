@@ -1,8 +1,8 @@
-import React, {createContext, useContext, useReducer, useEffect} from "react";""""""""";"
+import React, {createContext, useContext, useReducer, useEffect} from "react";";"
 const initialState = {}"
 
-function cartReducer(props: any) {"
-    switch (action.type) {""
+function cartReducer($1) {"
+    switch (action.type) {"
         case "ADD_ITEM": {
             const existing = state.items.find(i => i.id === action.payload.id)
 }
@@ -12,29 +12,29 @@ function cartReducer(props: any) {"
                     ? { ...i, quantity: i.quantity + action.payload.quantity }
 
                     : i)} else {items = [...state.items, action.payload]}"
-            return {items}}"""
-        case "REMOVE_ITEM": return {items: state.items.filter(i => i.id !== action.payload)};""
+            return {items}}"
+        case "REMOVE_ITEM": return {items: state.items.filter(i => i.id !== action.payload)};;"
         case "UPDATE_QUANTITY": {
             const { id, quantity } = action.payload
             return {
                 items: state.items.map(item = >,,
                     item.id === id ? { ...item, quantity } : item"
-                )}}"""
-        case "CLEAR_CART": return {items: []};""
+                )}}"
+        case "CLEAR_CART": return {items: []};;"
         case "SET_ITEMS": return {items: action.payload}
 
         default: return state}
 
 const CartContext = createContext(null)
-}
-export function useCart(props: any) {
+};
+export function useCart($1) {
 
     const ctx = useContext(CartContext);"
-    if (!ctx) {""
+    if (!ctx) {"
         throw new Error("useCart must be used within a CartProvider")}
 
     return ctx}
-export function CartProvider(props: any) {
+export function CartProvider($1) {
 const { user } = useAuth();
   const [state, dispatch] = useReducer(cartReducer, initialState);
   const cartKey = getCartKey(user?.id);
@@ -72,35 +72,35 @@ const { user } = useAuth();
     if(state.items.length > 0) {safeStorage.setItem(cartKey, JSON.stringify(state.items));} else {safeStorage.removeItem(cartKey);}
   }, [state.items, cartKey]);
 
-  const addItem = item => {';
-';';
-    dispatch({ type: 'ADD_ITEM', payload: item });
+  const addItem = item => {
+
+    dispatch({ type: 'ADD_ITEM', payload: item };);
   };
 
-  const removeItem = id => {';
-';';
-    dispatch({ type: 'REMOVE_ITEM', payload: id });
+  const removeItem = id => {
+
+    dispatch({ type: 'REMOVE_ITEM', payload: id };);
   };
 
-  const updateQuantity = (props: any) => {
+  const updateQuantity = (props) => {
 
     if(quantity <= 0) {
 
       removeItem(id);
-    } else {';
-';';
+    } else {
+
       dispatch({ type: 'UPDATE_QUANTITY', payload: { id, quantity } });
     }
   };
 
-  const clearCart = (props: any) => {';
-';';
-    dispatch({ type: 'CLEAR_CART' });
+  const clearCart = (props) => {
+
+    dispatch({ type: 'CLEAR_CART' };);
   };
 
-  const getTotalItems = (props: any) => {return state.items.reduce((total, item) => total + item.quantity, 0);};
+  const getTotalItems = (props) => {return state.items.reduce((total, item) => total + item.quantity, 0);};
 
-  const getTotalPrice = (props: any) => {return state.items.reduce()
+  const getTotalPrice = (props) => {return state.items.reduce()
       (total, item) => total + item.price * item.quantity,
       0
     );};
@@ -112,7 +112,7 @@ const { user } = useAuth();
     clearCart,
     getTotalItems,
     getTotalPrice,
-    dispatch};
+    dispatch};;
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }
@@ -139,19 +139,19 @@ if (user?.id) {const guestStored = safeStorage.getItem(getCartKey())}
                 safeStorage.removeItem(getCartKey())}
 
         }"
-""
+"
         dispatch({type: "SET_ITEMS", payload: items})}, [cartKey, user?.id])
 }
     useEffect(() => {safeStorage.setItem(cartKey, JSON.stringify(state.items))}, [state.items, cartKey])
 }
-    const value = {}), """
-        removeItem: (id) => dispatch({type: "REMOVE_ITEM", payload: id}), """';
-        updateQuantity: (id, quantity) => dispatch({ type: "UPDATE_QUANTITY", payload: { id, quantity } }), ""';';
+    const value = {}), "
+        removeItem: (id) => dispatch({type: "REMOVE_ITEM", payload: id};), ";
+        updateQuantity: (id, quantity) => dispatch({ type: "UPDATE_QUANTITY", payload: { id, quantity } }), ";';
         clearCart: () => dispatch({type: "CLEAR_CART'}), getTotalItems: () => state.items.reduce((total, item) => total + item.quantity, 0), getTotalPrice: () => state.items.reduce((total, item) => total + (item.price * item.quantity), 0)}
 
 "
     return <CartContext .Provider value={value}" >{children}</CartContext.Provider>;,"
-}""""
+}"
 
-</CartContext>';
-</CartContext>;';;';
+</CartContext>
+</CartContext>;';';

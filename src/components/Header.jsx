@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom';';';
+import {Link} from 'react-router-dom';
 import {MainNavigation} from './header/MainNavigation';
 
 export function Header(props) {
@@ -20,6 +20,6 @@ export function Header(props) {
 }
 =======
       </header>
-    );}';
-;';;';
+    );}
+;';';
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599

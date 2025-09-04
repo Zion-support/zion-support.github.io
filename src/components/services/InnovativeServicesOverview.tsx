@@ -11,8 +11,8 @@ maxServices:  6,;
   showViewAllButton = true;';
 }) => {;';';
   const [activeTab, setActiveTab] = useState<any>('featured');
-';
-  const tabs = [;';';
+
+  const tabs = [;
     { id: 'featured', label: 'Featured', count: 3 },;';';
     { id: 'ai', label: 'AI Services', count: getServicesByCategory('AI Services').length },;';';
     { id: 'it', label: 'IT Services', count: getServicesByCategory('IT Services').length },;';';
@@ -25,7 +25,7 @@ maxServices:  6,;
     let services = INNOVATIVE_SERVICES_2025;
 
     if (category) {
-      services = getServicesByCategory(category)} else {';
+      services = getServicesByCategory(category)} else {
       switch (activeTab) {;';';
         case 'featured':;
           services = INNOVATIVE_SERVICES_2025.filter(service => service.rating >= 4.5).slice(0, 3);';
@@ -87,7 +87,7 @@ maxServices:  6,;
       <div className="border-t pt-3">
         <div className="flex items-center justify-between text-xs text-gray-500 mb-3">
           <span>Delivery: {service.estimatedDelivery}</span>
-          <span>Support: {service.supportLevel}</span>
+          <span>Support: {service.supportLevel};</span>
         </div>
 
         <div className="flex space-x-2">
@@ -110,8 +110,8 @@ maxServices:  6,;
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Innovative Services 2025</h2>';
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">';';
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Innovative Services 2025</h2>
+          <pclassName="text-xl text-gray-600 max-w-3xl mx-auto mb-8">';
             Discover Zion Tech Group's comprehensive suite of cutting-edge AI, IT, and Micro SAAS solutions designed to transform your business operations and drive innovation.
           </p>
 
@@ -164,9 +164,9 @@ maxServices:  6,;
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-colors ${';
+                  className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                     activeTab === tab.id';';
-                      ? 'bg-blue-600 text-white'';';
+                      ? 'bg-blue-600 text-white'
                       : 'bg-white text-gray-700 hover:bg-gray-100'
                   }`}
 
@@ -187,8 +187,8 @@ maxServices:  6,;
 
         {/* CTA Section */}
         <div className="text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Business?</h3>';
-          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">';';
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Business?</h3>
+          <pclassName="text-gray-600 mb-6 max-w-2xl mx-auto">';
             Our innovative services are designed to give you a competitive edge in today's rapidly evolving technology landscape.
           </p>
 
@@ -222,5 +222,5 @@ maxServices:  6,;
 };
 
 export default InnovativeServicesOverview;}}};
-</any>';
-</InnovativeServicesOverviewProps>;';;';
+</any>
+</InnovativeServicesOverviewProps>;';';

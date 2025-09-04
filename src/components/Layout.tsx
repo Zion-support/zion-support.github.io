@@ -1,6 +1,6 @@
-import React from 'react';';';
-import Head from 'next/head';';';
-import { AppHeader } from '../layout/AppHeader';';';
+import React from 'react';
+import Head from 'next/head';
+import { AppHeader } from '../layout/AppHeader';
 import { FuturisticFooter } from './FuturisticFooter';
 
 interface LayoutProps {
@@ -21,7 +21,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <div className="min-h-screen bg-slate-50">
         <AppHeader />
         <main className="flex-1">
-          {children}
+          {children};
         </main>
         <FuturisticFooter />
       </div>
@@ -30,4 +30,4 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 };
 
 export default Layout;';
-</LayoutProps>;';;';
+</LayoutProps>;';';

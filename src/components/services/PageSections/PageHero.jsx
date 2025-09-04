@@ -1,29 +1,29 @@
 import {ArrowRight, Star, Users, Clock, Shield} from 'lucide-react';
 
-export const PageHero = (props: any) => {
+export const PageHero = (props) => {
   const defaultFeatures = [
-    {';
-      icon: Star,';';
-      text: 'Professional Service',';';
+    {
+      icon: Star,
+      text: 'Professional Service',
       color: 'text-yellow-500'
-    },';
-    {icon: Users,';';
-      text: 'Expert Team',';';
-      color: 'text-blue-500'},';
-    {icon: Clock,';';
-      text: '24/7 Support',';';
-      color: 'text-green-500'},';
-    {icon: Shield,';';
-      text: 'Secure & Reliable',';';
-      color: 'text-purple-500'}
+    },
+    {icon: Users,
+      text: 'Expert Team',
+      color: 'text-blue-500'},
+    {icon: Clock,
+      text: '24/7 Support',
+      color: 'text-green-500'},
+    {icon: Shield,
+      text: 'Secure & Reliable',
+      color: 'text-purple-500'};
   ];
 
-  const displayFeatures = features.length > 0 ? features : defaultFeatures;';
-  const displayStats = stats.length > 0 ? stats : [';';
-    {value: '500+', label: 'Happy Clients'},';';
-    {value: '99.9%', label: 'Uptime'},';';
-    {value: '24/7', label: 'Support'},';';
-    {value: '15+', label: 'Years Experience'}
+  const displayFeatures = features.length > 0 ? features : defaultFeatures;
+  const displayStats = stats.length > 0 ? stats : [
+    {value: '500+', label: 'Happy Clients'},
+    {value: '99.9%', label: 'Uptime'},
+    {value: '24/7', label: 'Support'},
+    {value: '15+', label: 'Years Experience'};
   ];
 
   return (
@@ -128,5 +128,5 @@ export const PageHero = (props: any) => {
     </section>
   );
 };
-</path>';
-</path>;';;';
+</path>
+</path>;';';

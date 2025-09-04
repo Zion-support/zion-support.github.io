@@ -227,5 +227,5 @@ export const FINTECH_SERVICES_2025: FinTechService[] = [
     },
     competitors: ["FICO", "Experian", "Equifax", "TransUnion", "ZestFinance"],
     marketSize: "$2.1 billion by 2025"
-  }
+  };
 ];

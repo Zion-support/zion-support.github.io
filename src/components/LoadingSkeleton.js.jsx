@@ -1,18 +1,16 @@
 import {cn} from '@/lib/utils';
-export function Skeleton(props: any) {';
-    const roundedClasses = {';';
-  none: '',';';
-        sm: 'rounded-sm',';';
-        md: 'rounded-md',';';
-        lg: 'rounded-lg',';';
+export function Skeleton($1) {
+    const roundedClasses = {
+  none: ",
+        sm: 'rounded-sm',
+        md: 'rounded-md',
+        lg: 'rounded-lg',
   full: 'rounded-full'
-    
-';
-};';';
+};;';';
     return (<div className = {cn('bg-muted', roundedClasses[rounded], animated && 'animate-pulse',
   className)} style="{{{
             width: width; height: height}}"} />)}
-export function CardSkeleton(props: any) {
+export function CardSkeleton($1) {
     return (
     <div className="min-h-screen bg-white">
       {showImage && (<Skeleton className="w-full h-48 rounded-lg" />)}
@@ -36,7 +34,7 @@ export function CardSkeleton(props: any) {
         </div>
   );
 }
-export function ListSkeleton(props: any) {
+export function ListSkeleton($1) {
     return (
     <div className="min-h-screen bg-white">
       {Array.from({ length: items }).map((_, i) => (<div key={i} className="flex gap-4 items-start">
@@ -58,7 +56,7 @@ export function ListSkeleton(props: any) {
         </div>
   );
 }
-export function TableSkeleton(props: any) {
+export function TableSkeleton($1) {
     return (
     <div className="min-h-screen bg-white">
       {showHeader && (<div className="flex gap-4 pb-2 border-b border-border">
@@ -75,14 +73,14 @@ export function TableSkeleton(props: any) {
         </div>
   );
 }
-export function GridSkeleton(props: any) {
+export function GridSkeleton($1) {
     return (
     <div className="min-h-screen bg-white">
       {Array.from({ length: items }).map((_, i) => (<CardSkeleton key={i} showImage={showImage} showTitle={showTitle} showDescription={showDescription} showActions={false} lines={2} />))}
         </div>
   );
 }
-export function HeroSkeleton(props: any) {
+export function HeroSkeleton($1) {
     return (
     <div className="min-h-screen bg-white">
       {showImage && (<div className="lg:w-1/2">
@@ -114,7 +112,7 @@ export function HeroSkeleton(props: any) {
   );
 }
 // Shimmer effect component
-export function Shimmer(props: any) {
+export function Shimmer($1) {
     return (
     <div className="min-h-screen bg-white">
       <div className="absolute inset-0 -translate-x-full animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
@@ -130,5 +128,5 @@ export const shimmerAnimation = `;
   }
 `;
 
-</Skeleton>';
-</div>;';;';
+</Skeleton>
+</div>;';';

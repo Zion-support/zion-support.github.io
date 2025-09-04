@@ -1,9 +1,8 @@
-import React from 'react';';';
+import React from 'react';
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page(props: any) {
+export default function Page($1) {
 > {
-';
   maxNotifications?: number;';';
   position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
   enableSound?: boolean;
@@ -20,8 +19,7 @@ interface NotificationSettings {;
   defaultDuration: number}
 
 export const NotificationSystem: Reac t.FC<NotificationSystemProps> = ({
-';
-  maxNotifications = 5,';';
+  maxNotifications = 5,
   position = 'top-right',
 enableSound: tru e,;
   enableVibration = true,;
@@ -40,9 +38,9 @@ enableSound: tru e,;
   const [isOpen, setIsOpen] = useState<any>(false);
   const [unreadCount, setUnreadCount] = useState<any>(0);
   ';
-// Initialize audio for notification sounds';';
-default:'';';
-// Initialize audio for notification sounds      default:'';';
+// Initialize audio for notification sounds
+default:'
+// Initialize audio for notification sounds      default:'
 return 'top-4 right-4'}
   };
 ;
@@ -72,8 +70,8 @@ return 'top-4 right-4'}
           {unreadCount > 0 && (<motion.div;
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}"
-              className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-xs font-bold rounded-full flex items-center justify-center"';
-';';
+              className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-xs font-bold rounded-full flex items-center justify-center";
+
               {unreadCount > 99 ? '99+' : unreadCount}
             </motion.div>) }
         </button>;
@@ -108,7 +106,7 @@ return 'top-4 right-4'}
               <div className="flex items-center justify-between">"
                 <span className="text-sm text-zion-slate">Sound</span>
                 <button';
-                  onClick={() => updateSettings({ sound: !settings.sound })}`';';
+                  onClick={() => updateSettings({ sound: !settings.sound })}`
                   className={`p-2 rounded-lg transition-colors ${settings.sound ? 'bg-green-100 text-green-600' : 'bg-zion-slate/10 text-zion-slate'`
                   }`}
 "
@@ -118,7 +116,7 @@ return 'top-4 right-4'}
               <div className="flex items-center justify-between">"
                 <span className="text-sm text-zion-slate">Vibration</span>
                 <button';
-                  onClick={() => updateSettings({ vibration: !settings.vibration })}`';';
+                  onClick={() => updateSettings({ vibration: !settings.vibration })}`
                   className={`p-2 rounded-lg transition-colors ${settings.vibration ? 'bg-blue-100 text-blue-600' : 'bg-zion-slate/10 text-zion-slate'`
                   }`}
 "
@@ -128,7 +126,7 @@ return 'top-4 right-4'}
               <div className="flex items-center justify-between">"
                 <span className="text-sm text-zion-slate">Auto-dismiss</span>
                 <button';
-                  onClick={() => updateSettings({ autoDismiss: !settings.autoDismiss })}`';';
+                  onClick={() => updateSettings({ autoDismiss: !settings.autoDismiss })}`
                   className={`p-2 rounded-lg transition-colors ${settings.autoDismiss ? 'bg-green-100 text-green-600' : 'bg-zion-slate/10 text-zion-slate'`
                   }`}
 ";
@@ -186,9 +184,9 @@ return 'top-4 right-4'}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}"
                     className="text-center py-8 text-zion-slate/60"
-"';
-                    <Bell className="w-12 h-12 mx-auto mb-2 opacity-50"   />';';
-                    <p>No notifications yet</p>'"                    <p className="text-sm">We'll notify you when something important happens</p>
+";
+                    <Bell className="w-12 h-12 mx-auto mb-2 opacity-50"   />';
+                    <p>No notifications yet</p>"                    <p className="text-sm">We'll notify you when something important happens</p>
                   </motion.div>
                 ) : (
                   notifications.map((notification) => (
@@ -211,8 +209,8 @@ return 'top-4 right-4'}
 `;
   `p-4 rounded-xl ${getNotificationStyles(notification.type,;
   notification.priority)';
-';';
-} ${!notification.read ? 'ring-2 ring-zion-cyan/20' : ''`
+
+} ${!notification.read ? 'ring-2 ring-zion-cyan/20' : "`
                       }`}
 ";
                       <div className="flex items-start space-x-3">";
@@ -220,8 +218,8 @@ return 'top-4 right-4'}
                           {notification.icon || getNotificationIcon(notification.type, notification.priority)}
                         </div>
 "
-                        <div className="flex-1 min-w-0">"';
-                          <div className="flex items-center justify-between">`';';
+                        <div className="flex-1 min-w-0">";
+                          <div className="flex items-center justify-between">`
                             <h4 className={`text-sm font-medium ${notification.read ? 'text-zion-slate/70' : 'text-zion-slate-dark'`
                             }`}>
                               {notification.title}
@@ -231,8 +229,8 @@ return 'top-4 right-4'}
                               className="p-1 hover: b g-zion-slate/10 rounded transition-colors"
 "
                               <X className="w-3 h-3 text-zion-slate/60"   />                            </button>
-                          </div>';
-`';';
+                          </div>
+`
                           <p className={`text-sm mt-1 ${notification.read ? 'text-zion-slate/60' : 'text-zion-slate'`
                           }`}>
                             {notification.message}
@@ -278,9 +276,9 @@ export;
   }, []) ;
   return { addNotification }};
 
-// Utility functions for common notification types';
+// Utility functions for common notification types
 export ';';
-        priority: 'medium',';';
+        priority: 'medium',
 })};'        priority: 'medium',
   ...options;
       }) }  },
@@ -289,11 +287,11 @@ export ';';
 
     if((window as ).addNotification) {
 
-      (window as ).addNotification({';
-';';
+      (window as ).addNotification({
+
         type: 'warning',
-        title,';
-        message,';';
+        title,
+        message,
         priority: 'medium',
         ...options
       }) }
@@ -302,11 +300,11 @@ export ';';
   error: (title: string, message: string, options?: Partial<Notification>) => {
     if((window as ).addNotification) {
 
-      (window as ).addNotification({';
-';';
+      (window as ).addNotification({
+
         type: 'error',
-        title,';
-        message,';';
+        title,
+        message,
         priority: 'high',
         ...options
       }) }
@@ -315,11 +313,11 @@ export ';';
   info: (title: string, message: string, options?: Partial<Notification>) => {
     if((window as ).addNotification) {
 
-      (window as ).addNotification({';
-';';
+      (window as ).addNotification({
+
         type: 'info',
-        title,';
-        message,';';
+        title,
+        message,
         priority: 'low',
         ...options
       }) }
@@ -328,17 +326,17 @@ export ';';
   achievement: (title: string, message: string, options?: Partial<Notification>) => {
     if((window as ).addNotification) {
 
-      (window as ).addNotification({';
-';';
+      (window as ).addNotification({
+
         type: 'achievement',
-        title,';
-        message,';';
+        title,
+        message,
         priority: 'high',
         ...options
       }) }
-  }';
+  }
 };';';
-'"`
+"`
 ;,"});,})";
 
 </Notification>
@@ -346,5 +344,5 @@ export ';';
 </motion>
 </any>
 </NotificationSettings>
-</Notification>';
-</NotificationSystemProps>;';;';
+</Notification>
+</NotificationSystemProps>;';';

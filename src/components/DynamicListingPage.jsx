@@ -7,9 +7,9 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {Search, Filter, LayoutGrid, List, Star} from "lucide-react";
 import {toast} from "@/hooks/use-toast";
 
-export function DynamicListingPage(props: any) {
+export function DynamicListingPage($1) {
   const navigate = useNavigate();
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState(");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [view, setView] = useState("grid");
   const [isLoading, setIsLoading] = useState(false);
@@ -28,7 +28,7 @@ export function DynamicListingPage(props: any) {
     }
   }, [allListings]);
 
-  const handleSliderChange = (props: any) => {setCurrentPriceFilter([values[0], values[1]]);};
+  const handleSliderChange = (props) => {setCurrentPriceFilter([values[0], values[1]]);};
 
   const filteredListings = allListings.filter(listing => {const matchesSearch = listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          listing.description.toLowerCase().includes(searchQuery.toLowerCase());
@@ -49,7 +49,7 @@ export function DynamicListingPage(props: any) {
 
   useEffect(() => {setCurrentPage(1);}, [searchQuery, selectedCategory, currentPriceFilter, selectedRating]);
 
-  const handleRequestQuote = (props: any) => {
+  const handleRequestQuote = (props) => {
     setIsLoading(true);
     const listing = allListings.find(item => item.id === listingId);
     
@@ -111,12 +111,12 @@ export function DynamicListingPage(props: any) {
               </SelectContent>
             </Select>
 
-            <Select value={selectedRating?.toString() || ""} onValueChange={(value) => setSelectedRating(value ? parseInt(value) : null)}>
+            <Select value={selectedRating?.toString() || "} onValueChange={(value) => setSelectedRating(value ? parseInt(value) : null)}>
               <SelectTrigger>
                 <SelectValue placeholder="Rating"  />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">Any Rating</SelectItem>
+                <SelectItem value=">Any Rating</SelectItem>
                 <SelectItem value="4">4+ Stars</SelectItem>
                 <SelectItem value="3">3+ Stars</SelectItem>
                 <SelectItem value="2">2+ Stars</SelectItem>
@@ -204,4 +204,4 @@ export function DynamicListingPage(props: any) {
       </div>
     </div>
   );
-};;
+};

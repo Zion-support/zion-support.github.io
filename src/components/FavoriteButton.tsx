@@ -32,4 +32,4 @@ export function FavoriteButton({ talentId, isFavorite, onToggle, className }: Fa
       />
     </Button>
   )
-}
+};

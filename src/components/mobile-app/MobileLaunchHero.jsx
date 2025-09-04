@@ -1,4 +1,4 @@
-export const MobileLaunchHero = (props: any) => {return (
+export const MobileLaunchHero = (props) => {return (
     <div className="min-h-screen bg-white">
       <div className="container mx-auto px-4 text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-6">

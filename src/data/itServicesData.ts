@@ -679,5 +679,5 @@ export const IT_SERVICES: ITService[] = [
     },
     competitors: ["IBM", "HPE", "Dell Technologies", "Cisco", "Microsoft"],
     marketSize: "$23.4 billion by 2025"
-  }
+  };
 ];

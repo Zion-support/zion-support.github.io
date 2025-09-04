@@ -9,7 +9,7 @@ interface ResponsiveContainerProps {
 
 export function ResponsiveContainer({ 
   children, 
-  className = '', 
+  className = ", 
   maxWidth = 'xl',
   padding = 'md'
 }: ResponsiveContainerProps) {
@@ -20,14 +20,14 @@ export function ResponsiveContainer({
     xl: 'max-w-7xl',
     '2xl': 'max-w-8xl',
     full: 'max-w-full'
-  };
+  };;
 
   const paddingClasses = {
-    none: '',
+    none: ",
     sm: 'px-2 sm:px-4',
     md: 'px-4 sm:px-6 lg:px-8',
     lg: 'px-6 sm:px-8 lg:px-12'
-  };
+  };;
 
   const containerClasses = [
     'mx-auto',

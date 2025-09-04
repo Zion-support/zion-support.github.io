@@ -1,91 +1,91 @@
-import React, { useState, useEffect } from 'react';';';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-export default function Header(props: any) {
+export default function Header($1) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState<any>(false);
   const [scrolled, setScrolled] = useState<any>(false);
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = (props: any) => {
-      setScrolled(window.scrollY > 50);';
+    const handleScroll = (props) => {
+      setScrolled(window.scrollY > 50);
     };';';
     window.addEventListener('scroll', handleScroll);';';
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-';
-  const isCurrent = (path: string) => {';';
+
+  const isCurrent = (path: string) => {
     if (path === '/') return location.pathname === '/';
     return location.pathname.startsWith(path);
   };
-';
-  const navigation = [';';
-    { name: 'Home', href: '/', current: isCurrent('/') },';
-    {';';
-      name: 'Services',';';
-      href: '/services',';';
-      current: isCurrent('/services'),';
-      dropdown: [';';
-        { name: 'AI & Machine Learning', href: '/services/ai-machine-learning' },';';
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops' },';';
-        { name: 'Cybersecurity', href: '/services/cybersecurity' },';';
-        { name: 'Digital Transformation', href: '/services/digital-transformation' },';';
-        { name: 'Financial Solutions', href: '/services/financial-solutions' },';';
-        { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' },';';
-        { name: 'Industry Solutions', href: '/services/industry-solutions' },';';
-        { name: 'Micro SaaS Solutions', href: '/services/micro-saas' },';';
-        { name: 'AI Content Creation', href: '/services/ai-content-creation' },';';
-        { name: 'Email Automation', href: '/services/email-automation' },';';
-        { name: 'Customer Support Platform', href: '/services/customer-support' },';';
+
+  const navigation = [
+    { name: 'Home', href: '/', current: isCurrent('/') },
+    {
+      name: 'Services',
+      href: '/services',
+      current: isCurrent('/services'),
+      dropdown: [
+        { name: 'AI & Machine Learning', href: '/services/ai-machine-learning' },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity' },
+        { name: 'Digital Transformation', href: '/services/digital-transformation' },
+        { name: 'Financial Solutions', href: '/services/financial-solutions' },
+        { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' },
+        { name: 'Industry Solutions', href: '/services/industry-solutions' },
+        { name: 'Micro SaaS Solutions', href: '/services/micro-saas' },
+        { name: 'AI Content Creation', href: '/services/ai-content-creation' },
+        { name: 'Email Automation', href: '/services/email-automation' },
+        { name: 'Customer Support Platform', href: '/services/customer-support' },
         { name: 'Event Management', href: '/services/event-management' }
       ],
-    },';
-    {';';
-      name: 'Solutions',';';
-      href: '/solutions',';';
-      current: isCurrent('/solutions'),';
-      dropdown: [';';
-        { name: 'Enterprise Solutions', href: '/solutions/enterprise' },';';
-        { name: 'Startup Solutions', href: '/solutions/startup' },';';
-        { name: 'Space Technology', href: '/solutions/space-tech' },';';
-        { name: 'Supply Chain', href: '/solutions/supply-chain' },';';
-        { name: 'AI-Powered Solutions', href: '/solutions/ai-powered' },';';
+    },
+    {
+      name: 'Solutions',
+      href: '/solutions',
+      current: isCurrent('/solutions'),
+      dropdown: [
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+        { name: 'Startup Solutions', href: '/solutions/startup' },
+        { name: 'Space Technology', href: '/solutions/space-tech' },
+        { name: 'Supply Chain', href: '/solutions/supply-chain' },
+        { name: 'AI-Powered Solutions', href: '/solutions/ai-powered' },
         { name: 'Quantum Computing', href: '/solutions/quantum-computing' }
       ],
-    },';
-    {';';
-      name: 'About',';';
-      href: '/about',';';
-      current: isCurrent('/about'),';
-      dropdown: [';';
-        { name: 'Our Story', href: '/about/story' },';';
-        { name: 'Team', href: '/about/team' },';';
-        { name: 'Careers', href: '/careers' },';';
-        { name: 'Partners', href: '/partners' },';';
+    },
+    {
+      name: 'About',
+      href: '/about',
+      current: isCurrent('/about'),
+      dropdown: [
+        { name: 'Our Story', href: '/about/story' },
+        { name: 'Team', href: '/about/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' },
         { name: 'Contact', href: '/contact' }
       ],
-    },';
-    {';';
-      name: 'Resources',';';
-      href: '/resources',';';
-      current: isCurrent('/resources'),';
-      dropdown: [';';
-        { name: 'Blog', href: '/blog' },';';
-        { name: 'Case Studies', href: '/case-studies' },';';
-        { name: 'White Papers', href: '/white-papers' },';';
-        { name: 'Webinars', href: '/webinars' },';';
-        { name: 'Training', href: '/training' },';';
-        { name: 'Documentation', href: '/docs' },';';
+    },
+    {
+      name: 'Resources',
+      href: '/resources',
+      current: isCurrent('/resources'),
+      dropdown: [
+        { name: 'Blog', href: '/blog' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Webinars', href: '/webinars' },
+        { name: 'Training', href: '/training' },
+        { name: 'Documentation', href: '/docs' },
         { name: 'API Documentation', href: '/api-docs' }
-      ],';
-    },';';
-    { name: 'Contact', href: '/contact', current: isCurrent('/contact') },
+      ],
+    },
+    { name: 'Contact', href: '/contact', current: isCurrent('/contact') };,
   ];
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${';
-      scrolled';';
-        ? 'bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-lg'';';
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      scrolled';
+        ? 'bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-lg'
         : 'bg-white/90 backdrop-blur-md'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -104,8 +104,8 @@ export default function Header(props: any) {
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
                 {item.dropdown ? (
-                  <div className="relative">';
-                    <button className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${';';
+                  <divclassName="relative">
+                    <button className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                       item.current ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
                     }`}>
                       {item.name}
@@ -129,8 +129,8 @@ export default function Header(props: any) {
                   </div>
                 ) : (
                   <Link
-                    to={item.href}';
-                    className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${';';
+                    to={item.href}
+                    className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                       item.current ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
                     }`}
                   >
@@ -210,5 +210,5 @@ export default function Header(props: any) {
     </header>
   );
 }
-</any>';
-</any>;';;';
+</any>
+</any>;';';

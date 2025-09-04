@@ -1,14 +1,14 @@
 import React, { useState } from "react"
-export function ModernHeader(props: any) {;
+export function ModernHeader($1) {;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<any>(false)
 }
   const [isServicesOpen, setIsServicesOpen] = useState<any>(false)
 }
-  const toggleMobileMenu = (props: any) => {
+  const toggleMobileMenu = (props) => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
 }
 
-  const closeMobileMenu = (props: any) => {
+  const closeMobileMenu = (props) => {
     setIsMobileMenuOpen(false)
 }
     setIsServicesOpen(false)
@@ -69,7 +69,7 @@ export function ModernHeader(props: any) {;
               ,
               {/* comment */}"
               <div className="relative">"
-                <button className="flex items-center text-gray-700 hover: text-blue-600 transition-colors font-medium"">
+                <button className="flex items-center text-gray-700 hover: text-blue-600 transition-colors font-medium">
                   onMouseEnter="{()" => setIsServicesOpen(true)}"
                   onMouseLeave="{()" => setIsServicesOpen(false)}
 
@@ -78,15 +78,15 @@ export function ModernHeader(props: any) {;
                   <ChevronDown className="ml-1 h-4 w-4"  />
                 </button>
                 {isServicesOpen && ("
-                  <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4""
+                  <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                     onMouseEnter="{()" => setIsServicesOpen(true)}"
                     onMouseLeave="{()" => setIsServicesOpen(false)}
 
                   >"
                     <div className="grid grid-cols-2 gap-4 px-6">
                       {services.map((service) => ("
-                        <Link key="{service.name}""
-                          href="{service.href}""
+                        <Link key="{service.name}"
+                          href="{service.href}"
                           className="block p-3 rounded-lg hover: bg-gray-50 transition-colors"
                         >",
                           <div className="font-medium text-gray-900">{service.name}</div>"
@@ -96,7 +96,7 @@ export function ModernHeader(props: any) {;
 
                     </div>"
                     <div className="mt-4 pt-4 border-t border-gray-200 px-6">"
-                      <Link href="/services""
+                      <Link href="/services"
                         className="text-blue-600 hover: text-blue-700 font-medium"
                       >
                         View All Services →
@@ -129,7 +129,7 @@ export function ModernHeader(props: any) {;
 ,
             {/* comment */}"
             <div className="hidden lg: flex items-center space-x-4">"
-              <Link href="/contact""
+              <Link href="/contact"
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
               >
                 Get Started,
@@ -138,7 +138,7 @@ export function ModernHeader(props: any) {;
 ,
             {/* comment */}"
             <div className="lg: hidden">",
-              <button onClick="{toggleMobileMenu}""
+              <button onClick="{toggleMobileMenu}"
                 className="text-gray-700 hover: text-blue-600 transition-colors"
               >",
                 {isMobileMenuOpen ? <X className="h-6 w-6"  /> : <Menu className="h-6 w-6"  />}
@@ -150,8 +150,8 @@ export function ModernHeader(props: any) {;
         {isMobileMenuOpen && ("
           <div className="lg: hidden bg-white border-t border-gray-200">"
             <div className="px-4 py-6 space-y-4">"
-              <Link href="/""
-                className="block text-gray-700 hover:text-blue-600 transition-colors font-medium"">
+              <Link href="/"
+                className="block text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 onClick="{closeMobileMenu}"
               >
                 Home,
@@ -160,64 +160,64 @@ export function ModernHeader(props: any) {;
               <div className="space-y-2">"
                 <div className="text-gray-700 font-medium">Services</div>
                 {services.map((service) => ("
-                  <Link key="{service.name}""
-                    href="{service.href}""
-                    className="block pl-4 text-gray-600 hover: text-blue-600 transition-colors"">
+                  <Link key="{service.name}"
+                    href="{service.href}"
+                    className="block pl-4 text-gray-600 hover: text-blue-600 transition-colors">
                     onClick="{closeMobileMenu}"
                   >
                     {service.name}
 
                   </Link>
                 ))}"
-                <Link href="/services""
-                  className="block pl-4 text-blue-600 hover: text-blue-700 transition-colors font-medium"">
+                <Link href="/services"
+                  className="block pl-4 text-blue-600 hover: text-blue-700 transition-colors font-medium">
                   onClick="{closeMobileMenu}"
                 >
                   View All Services,
                 </Link>
               </div>
 "
-              <Link href="/about""
-                className="block text-gray-700 hover: text-blue-600 transition-colors font-medium"">
+              <Link href="/about"
+                className="block text-gray-700 hover: text-blue-600 transition-colors font-medium">
                 onClick="{closeMobileMenu}"
               >
                 About,
               </Link>"
-              <Link href="/solutions""
-                className="block text-gray-700 hover: text-blue-600 transition-colors font-medium"">
+              <Link href="/solutions"
+                className="block text-gray-700 hover: text-blue-600 transition-colors font-medium">
                 onClick="{closeMobileMenu}"
               >
                 Solutions,
               </Link>"
-              <Link href="/case-studies""
-                className="block text-gray-700 hover: text-blue-600 transition-colors font-medium"">
+              <Link href="/case-studies"
+                className="block text-gray-700 hover: text-blue-600 transition-colors font-medium">
                 onClick="{closeMobileMenu}"
               >
                 Case Studies,
               </Link>"
-              <Link href="/blog""
-                className="block text-gray-700 hover: text-blue-600 transition-colors font-medium"">
+              <Link href="/blog"
+                className="block text-gray-700 hover: text-blue-600 transition-colors font-medium">
                 onClick="{closeMobileMenu}"
               >
                 Blog,
               </Link>"
-              <Link href="/pricing""
-                className="block text-gray-700 hover: text-blue-600 transition-colors font-medium"">
+              <Link href="/pricing"
+                className="block text-gray-700 hover: text-blue-600 transition-colors font-medium">
                 onClick="{closeMobileMenu}"
               >
                 Pricing,
               </Link>"
-              <Link href="/contact""
-                className="block text-gray-700 hover: text-blue-600 transition-colors font-medium"">
+              <Link href="/contact"
+                className="block text-gray-700 hover: text-blue-600 transition-colors font-medium">
                 onClick="{closeMobileMenu}"
               >
                 Contact,
               </Link>
               "
               <div className="pt-4 border-t border-gray-200">"
-                <Link href="/contact""
-                  className="block w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors font-medium text-center"">
-                  onClick="{closeMobileMenu}"
+                <Link href="/contact"
+                  className="block w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors font-medium text-center">
+                  onClick="{closeMobileMenu};"
                 >
                   Get Started,
                 </Link>
@@ -232,5 +232,5 @@ export function ModernHeader(props: any) {;
 export default Component
 </div>
 </div>
-</any>';
-</any>;';;';
+</any>
+</any>;';';

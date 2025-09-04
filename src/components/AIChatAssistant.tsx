@@ -1,4 +1,4 @@
-import React, { useState } from 'react';';';
+import React, { useState } from 'react';
 import { Send, Bot, User } from 'lucide-react';
 
 interface Message {
@@ -7,29 +7,29 @@ interface Message {
   sender: 'user' | 'ai';
 }
 
-const AIChatAssistant: React.FC = (props: any) => {';
-  const [messages, setMessages] = useState<Message[]>([]);';';
-  const [input, setInput] = useState<any>('');
+const AIChatAssistant: React.FC = (props) => {
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [input, setInput] = useState<any>(");
 
-  const handleSend = (props: any) => {
+  const handleSend = (props) => {
     if (!input.trim()) return;
 
     const userMessage: Message = {
-      id: Date.now().toString(),';
-      text: input,';';
+      id: Date.now().toString(),
+      text: input,
       sender: 'user'
-    };
-';
+    };;
+
     setMessages(prev => [...prev, userMessage]);';';
-    setInput('');
+    setInput(");
 
     // Simulate AI response
     setTimeout(() => {
       const aiMessage: Message = {
-        id: (Date.now() + 1).toString(),';
-        text: `I understand: "${userMessage.text}". How can I help?`,';';
+        id: (Date.now() + 1).toString(),
+        text: `I understand: "${userMessage.text}". How can I help?`,
         sender: 'ai'
-      };
+      };;
       setMessages(prev => [...prev, aiMessage]);
     }, 1000);
   };
@@ -43,9 +43,9 @@ const AIChatAssistant: React.FC = (props: any) => {';
         </h3>
       </div>
       
-      <div className="h-96 overflow-y-auto p-4 space-y-4">';
+      <divclassName="h-96 overflow-y-auto p-4 space-y-4">
         {messages.map((message) => (';';
-          <div key={message.id} className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>';';
+          <divkey={message.id} className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>';
             <div className={`max-w-xs px-4 py-2 rounded-lg ${message.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-100'}`}>
               <p>{message.text}</p>
             </div>
@@ -57,8 +57,8 @@ const AIChatAssistant: React.FC = (props: any) => {';
         <div className="flex space-x-2">
           <input
             type="text"
-            value={input}';
-            onChange={(e) => setInput(e.target.value)}';';
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
             onKeyPress={(e) => e.key === 'Enter' && handleSend()}
             placeholder="Type your message..."
             className="flex-1 px-3 py-2 border rounded-lg"
@@ -77,5 +77,5 @@ const AIChatAssistant: React.FC = (props: any) => {';
 
 export default AIChatAssistant;
 
-</any>';
-</Message>;';;';
+</any>
+</Message>;';';

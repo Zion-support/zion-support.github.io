@@ -12,7 +12,7 @@ const HeroStats = memo(({stats}) => (<div className="grid grid - cols - 1 md:gri
           {stat.number}
         </div>"
         <div className="text-gray-400 font-medium">{stat.label}</div>
-      </div>))}
+      </div>))};
   </div>));
 const PerformanceOptimizedHero = memo(() => {
     const [isVisible, setIsVisible] = useState(false);
@@ -32,7 +32,7 @@ const PerformanceOptimizedHero = memo(() => {
         {number: "100+", label: "AI Services", icon: "🤖", color: "from-cyan-400 to-blue-400"},"
         {number: "150+", label: "Micro SAAS Solutions", icon: "💻", color: "from-blue-400 to-purple-400"},"
         {number: "24/7", label: "IT Support", icon: "🔧", color: "from-purple-400 to-pink-400"},"
-        {number: "Global", label: "Service Coverage", icon: "🌍", color: "from-green-400 to-teal-400"}
+        {number: "Global", label: "Service Coverage", icon: "🌍", color: "from-green-400 to-teal-400"};
     ];
     if(!isVisible) {"
         return (<section className="relative py-20 px-4 overflow-hidden min-h-[600px] flex items-center justify-center">"
@@ -54,12 +54,12 @@ const PerformanceOptimizedHero = memo(() => {
 
       {/* Optimized Matrix Rain Effect - Only render when loaded */}"
       {isLoaded && (<div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">"
-          {[...Array(10)].map((_, i) => (<div key={i} className="absolute text-cyan-400 text-xs animate-matrix-rain opacity-20" style="{{{
+          {[...Array(10)].map((_, i) => (<divkey={i} className="absolute text-cyan-400 text-xs animate-matrix-rain opacity-20" style="{{{
 `
                     left: `${Math.random() * 100}}"%`,`
                     animationDelay: `${Math.random() * 20}s`,`
-                    animationDuration: `${20 + Math.random() * 10}s`';
-                }}>';';
+                    animationDuration: `${20 + Math.random() * 10}s`
+                }}>
               {Math.random() > 0.5 ? '1' : '0'}
             </div>))}
             </div>
@@ -100,7 +100,7 @@ const PerformanceOptimizedHero = memo(() => {
           <div className="absolute bottom-32 left-32 w-3 h-3 bg-blue-400 rounded-full animate-pulse" aria-hidden="true"></div>"
           <div className="absolute top-1/2 left-20 w-1 h-1 bg-purple-400 rounded-full animate-bounce" aria-hidden="true"></div>"
           <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-green-400 rounded-full animate-ping animation-delay-1000" aria-hidden="true"></div>
-        </>)}';
+        </>)}
     </section>)});';';
 PerformanceOptimizedHero.displayName = 'PerformanceOptimizedHero';
 export default PerformanceOptimizedHero;
@@ -115,4 +115,4 @@ export {HeroStats, PerformanceOptimizedHero};
 export {HeroStats, PerformanceOptimizedHero};
 
 export {Page, HeroStats, PerformanceOptimizedHero};';
-;';;';
+;';';

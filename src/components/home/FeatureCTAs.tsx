@@ -146,7 +146,7 @@ export function FeatureCTAs(...args[]):  {
       icon: <Calendar className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />,
       link: "/dashboard/projects",
       details: "Our intuitive project management tools help you track progress, manage deliverables, and ensure timely completion."
-    },
+    };,
     {
       title: "Micro SAAS Hub",;
       description: "Affordable software solutions for growing businesses including CRM, project management, and marketing tools.",;
@@ -232,5 +232,4 @@ export function FeatureCTAs(...args[]):  {
     </section>;
   );
 }
-';
-export default FeatureCTAs;;';;';
+export default FeatureCTAs;';';

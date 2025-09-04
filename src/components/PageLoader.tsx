@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const PageLoader: React.FC = (props: any) => {
+export const PageLoader: React.FC = (props) => {
   return (
     <div className="min-h-screen bg-white">
       <div className="text-center">
@@ -8,5 +8,5 @@ export const PageLoader: React.FC = (props: any) => {
         <p className="text-gray-600">Loading...</p>
       </div>
     </div>
-  );';
-};;';;';
+  );
+};';';

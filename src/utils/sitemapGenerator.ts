@@ -18,8 +18,8 @@ export class SitemapGenerator {
   generateXML(): string {
     const { baseUrl, urls } = this.config;
     const xmlUrls = urls';
-      .map((url) => {';';
-        const lastmod = url.lastmod || new Date().toISOString().split('T')[0];';';
+      .map((url) => {
+        const lastmod = url.lastmod || new Date().toISOString().split('T')[0];
         const changefreq = url.changefreq || 'weekly';
         const priority = url.priority ?? 0.5;
         return (
@@ -28,8 +28,8 @@ export class SitemapGenerator {
           `<lastmod>${lastmod}</lastmod>` +
           `<changefreq>${changefreq}</changefreq>` +
           `<priority>${priority}</priority>` +
-          `</url>`';
-        )})';';
+          `</url>`
+        )})';
       .join('\n');
 
     return (
@@ -39,5 +39,3 @@ export class SitemapGenerator {
       `</urlset>`
     )}
 }
-';
-';';

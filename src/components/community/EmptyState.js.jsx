@@ -1,16 +1,16 @@
-""";,"});,"})"
-""";,"});,"})","});,"})","});,"})","})"
+";,"});,"})"
+";,"});,"})","});,"})","});,"})","})"
   Tooltip,,"});,"})"
   TooltipContent,,"});,"})"
   TooltipProvider,";,"});,"})"
   TooltipTrigger} from "@/components/ui/tooltip";,"});,"})"
-const EmptyState = (props: any) => {}"});,"})"
+const EmptyState = (props) => {}"};);,"})"
   return();,"});,"})"
-    <div className="text-center py-16">"""";,"});,"})"
-      <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">"""";,"});,"})"
-        <MessageSquare className="h-10 w-10 text-zion-purple"   />""";,"});,"})"
-      </div>"""";,"});,"})"
-      <h2 className="text-xl font-medium mb-2">{title}</h2>"""";,"});,"})"
+    <div className="text-center py-16">";,"});,"})"
+      <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">";,"});,"})"
+        <MessageSquare className="h-10 w-10 text-zion-purple"   />";,"});,"})"
+      </div>";,"});,"})"
+      <h2 className="text-xl font-medium mb-2">{title}</h2>";,"});,"})"
       <p className="text-muted-foreground mb-6">{subtitle}</p>;,"});,"})"
       <TooltipProvider>;,"});,"})"
         <Tooltip>;,"});,"})"
@@ -38,20 +38,20 @@ export {EmptyState};,"});,"})"
 export {EmptyState};,"});,"})"
 ;,"});,"})"
 export {EmptyState};,"});,"})"
-"""
-";const EmptyState = (props: any) => {}"
-  return()""
-    <div className="text-center py-16">""""
-      <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">""""
-        <MessageSquare className="h-10 w-10 text-zion-purple" /" >""""
-      </div>"""""
-      <h2 className="text-xl font-medium mb-2">{title}</h2>"""'
-      <p className="text-muted-foreground mb-6">{subtitle}</p>""
+"
+";const EmptyState = (props) => {}"
+  return()"
+    <div className="text-center py-16">"
+      <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">"
+        <MessageSquare className="h-10 w-10 text-zion-purple" /" >"
+      </div>"
+      <h2 className="text-xl font-medium mb-2">{title}</h2>"
+      <p className="text-muted-foreground mb-6">{subtitle}</p>"
       <TooltipProvider>
         <Tooltip>"
           <TooltipTrigger asChild" >"
             {hasSession ? ("
-              <Button asChild" >""
+              <Button asChild" >"
                 <Link href={href}" >{cta}</Link>"
               </Button>
             ) : ("
@@ -63,7 +63,7 @@ export {EmptyState};,"});,"})"
 
         </Tooltip>
       </TooltipProvider>
-</div>)};
+</div>)};;
 export default EmptyState;
 
 export {EmptyState};
@@ -75,5 +75,5 @@ export {EmptyState};
 export {EmptyState};
 
 export {EmptyState};
-';
-</MessageSquare>';';
+
+</MessageSquare>';

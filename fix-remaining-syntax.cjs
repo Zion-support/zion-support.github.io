@@ -3,137 +3,111 @@
 const fs = require('fs');
 const path = require('path');
 
-// Final targeted fixes for remaining syntax errors
-const fixes = [
-  // Fix missing semicolons in import statements
-  {
-    pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*$/gm,
-    replacement: 'import { $1 } from \'$2\';'
-  },
-  
-  // Fix malformed import statements
-  {
-    pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*export\s*default\s*function/g,
-    replacement: 'import { $1 } from \'$2\';\n\nexport default function'
-  },
-  
-  // Fix missing semicolons after import statements
-  {
-    pattern: /import\s+([^]+)\s*$/gm,
-    replacement: 'import $1;'
-  },
-  
-  // Fix unterminated string literals
-  {
-    pattern: /'([^']*)\s*$/gm,
-    replacement: '\'$1\';'
-  },
-  
-  // Fix malformed function declarations
-  {
-    pattern: /export\s*default\s*function\s*(\w+)\s*\(\s*\)\s*{\s*$/gm,
-    replacement: 'export default function $1() {\n  return ('
-  },
-  
-  // Fix missing closing brackets and parentheses
-  {
-    pattern: /return\s*\(\s*<div[^>]*>\s*$/gm,
-    replacement: 'return (\n    <div className="min-h-screen bg-white">'
-  },
-  
-  // Fix malformed JSX attributes
-  {
-    pattern: /className="([^"]*);\s*"/g,
-    replacement: 'className="$1"'
-  },
-  
-  // Fix missing semicolons in object properties
-  {
-    pattern: /(\w+):\s*'([^']*)',\s*;/g,
-    replacement: '$1: \'$2\','
-  },
-  
-  // Fix malformed return statements
-  {
-    pattern: /return\s*\(\s*<div";"/g,
-    replacement: 'return (\n    <div className="min-h-screen bg-white">'
-  },
-  
-  // Fix duplicated content (remove duplicate lines)
-  {
-    pattern: /^(.*)\n\1$/gm,
-    replacement: '$1'
-  },
-  
-  // Fix missing closing brackets in arrays
-  {
-    pattern: /(\[.*?);\s*\]\s*},/g,
-    replacement: '$1\n  ]\n},'
-  },
-  
-  // Fix malformed JSX closing tags
-  {
-    pattern: /<\/div>\s*\)\s*}\s*$/gm,
-    replacement: '    </div>\n  );\n}'
-  }
-];
-
-function fixFile(filePath) {
-    if (!fs.existsSync(filePath)) {
-        console.log(`⚠️  File not found: ${filePath}`);
-        return;
-    }
-
+// Function to fix remaining syntax errors in a file
+function fixRemainingSyntax(filePath) {
+  try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let fixes = 0;
-
-    // Fix extra semicolons
-    content = content.replace(/;\s*;/g, ';');
-    content = content.replace(/;\s*$/gm, '');
-    content = content.replace(/^\s*;\s*$/gm, '');
+    let originalContent = content;
     
-    fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true}
+    // Fix unterminated string constants
+    content = content.replace(/useState\("\)/g, 'useState("")');
+    content = content.replace(/useState\('\)/g, "useState('')");
+    content = content.replace(/parsed\.didHandle \|\| "\)/g, 'parsed.didHandle || "")');
+    content = content.replace(/parsed\.didHandle \|\| '\)/g, "parsed.didHandle || '')");
+    
+    // Fix extra semicolons in object properties
+    content = content.replace(/,\s*';';/g, ',');
+    content = content.replace(/,\s*';/g, ',');
+    
+    // Fix function parameters with TypeScript types
+    content = content.replace(/\(props: any\) => \{/g, '(props) => {');
+    content = content.replace(/\([^)]*: any\)/g, '($1)');
+    
+    // Fix supabase method calls
+    content = content.replace(/await supabase';/g, 'await supabase');
+    content = content.replace(/\.from\('[^']*'\)';';/g, (match) => match.replace(/';';$/, ''));
+    content = content.replace(/\.from\('[^']*'\)';/g, (match) => match.replace(/';$/, ''));
+    content = content.replace(/\.delete\(\)';';/g, '.delete()');
+    content = content.replace(/\.delete\(\)';/g, '.delete()');
+    content = content.replace(/\.eq\('[^']*',[^)]*\)';';/g, (match) => match.replace(/';';$/, ''));
+    content = content.replace(/\.eq\('[^']*',[^)]*\)';/g, (match) => match.replace(/';$/, ''));
+    content = content.replace(/\.insert\([^)]*\)';';/g, (match) => match.replace(/';';$/, ''));
+    content = content.replace(/\.insert\([^)]*\)';/g, (match) => match.replace(/';$/, ''));
+    content = content.replace(/\.select\('[^']*'\)';';/g, (match) => match.replace(/';';$/, ''));
+    content = content.replace(/\.select\('[^']*'\)';/g, (match) => match.replace(/';$/, ''));
+    content = content.replace(/\.single\(\)';';/g, '.single()');
+    content = content.replace(/\.single\(\)';/g, '.single()');
+    
+    // Fix comments with extra semicolons
+    content = content.replace(/\/\/ [^;]*';';/g, (match) => match.replace(/';';$/, ''));
+    content = content.replace(/\/\/ [^;]*';/g, (match) => match.replace(/';$/, ''));
+    
+    // Fix standalone semicolons and quotes
+    content = content.replace(/^';';?\s*$/gm, '');
+    content = content.replace(/^';\s*$/gm, '');
+    
+    // Fix multiple consecutive semicolons
+    content = content.replace(/;+;+/g, ';');
+    
+    // Fix multiple consecutive quotes
+    content = content.replace(/['"]+['"]+/g, '"');
+    
+    // Fix missing semicolons after statements
+    content = content.replace(/}\s*catch\s*\(/g, '} catch (');
+    content = content.replace(/}\s*finally\s*\{/g, '} finally {');
+    
+    // Fix missing semicolons after variable declarations
+    content = content.replace(/const\s+[^=]+=[^;]+(?!;)\s*}/g, (match) => {
+      if (!match.endsWith(';')) {
+        return match + ';';
+      }
+      return match;
     });
     
-    if (modified) {
+    // Fix missing semicolons after function calls
+    content = content.replace(/setDisplayWeb3\([^)]+\)(?!;)\s*}/g, (match) => {
+      if (!match.endsWith(';')) {
+        return match + ';';
+      }
+      return match;
+    });
+    
+    // Write the fixed content back
+    if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true}
+      console.log(`Fixed remaining syntax errors in: ${filePath}`);
+      return true;
+    }
+    
+    return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message)}
-  return false}
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
+}
 
-function walkDirectory(dir) {
+// Function to recursively find and fix files
+function fixFilesInDirectory(dirPath) {
+  const files = fs.readdirSync(dirPath);
   let fixedCount = 0;
   
-  try {
-    const files = fs.readdirSync(dir);
+  for (const file of files) {
+    const filePath = path.join(dirPath, file);
+    const stat = fs.statSync(filePath);
     
-    for (const file of files) {
-      const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
-      
-      if (stat.isDirectory()) {
-        fixedCount += walkDirectory(filePath)} else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
-        if (fixFile(filePath)) {
-          fixedCount++}
+    if (stat.isDirectory()) {
+      fixedCount += fixFilesInDirectory(filePath);
+    } else if (file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx')) {
+      if (fixRemainingSyntax(filePath)) {
+        fixedCount++;
       }
     }
-  } catch (error) {
-    console.error(`Error reading directory ${dir}:`, error.message)}
+  }
   
-  return fixedCount}
-
-console.log(`\n📊 Summary:`);
-console.log(`   Files processed: ${filesToFix.length}`);
-console.log(`   Total fixes applied: ${totalFixes}`);
-
-if (totalFixes > 0) {
-    console.log(`\n✨ Syntax error fixing completed!`);
-} else {
-    console.log(`\n✨ No syntax errors found to fix.`);
+  return fixedCount;
 }
+
+// Main execution
+console.log('Starting remaining syntax error fixing...');
+const fixedCount = fixFilesInDirectory('./src');
+console.log(`Fixed ${fixedCount} files with remaining syntax errors.`);

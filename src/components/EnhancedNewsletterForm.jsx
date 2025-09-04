@@ -2,8 +2,8 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {useState, useRef} from "react";
 import { Mail import { useToast } from "@/hooks/use-toast";
-export function EnhancedNewsletterForm(props: any) {
-    const [email, setEmail] = useState("");
+export function EnhancedNewsletterForm($1) {
+    const [email, setEmail] = useState(");
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     const { toast } = useToast();
@@ -25,32 +25,30 @@ export function EnhancedNewsletterForm(props: any) {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({email: trimmed}),
-            });
-            const data = await res.json().catch(() => ({/* empty */}));
+            };);
+            const data = await res.json().catch(() => ({/* empty */};));
             if (res.ok) {
                 // Handle different success statuses
-                if (data.status === 'already_subscribed') {';';
+                if (data.status === 'already_subscribed') {
                 // // // // // // // console.error('Newsletter subscription failed:', data);
                 toast.error(data.error || "Subscription failed. Please try again.");
-';
-        catch (err) {';';
+
+        catch (err) {
             // // // // // // // console.error('Newsletter subscription error:', err);
             toast.error("Unable to subscribe right now. Please try again later.");
 
         finally {
             setIsSubmitting(false);';
-';';
+
                     toast.success(data.message || "You're already subscribed!")}
                 else {toast.success(data.message || "Thanks for subscribing!")}
                 setIsSubmitted(true);
-                setEmail("")}';
-            else {// Handle error responses';';
+                setEmail(")}
+            else {// Handle error responses
                 console.error('Newsletter subscription failed:', data);
-                toast.error(data.error || "Subscription failed. Please try again.")}';
-        }';';
-        catch (err) {console.error('Newsletter subscription error:', err);
-            toast.error("Unable to subscribe right now. Please try again later.")}
-        finally {setIsSubmitting(false)}
+                toast.error(data.error || "Subscription failed. Please try again.")}
+        } catch (err) {console.error('Newsletter subscription error:', err);
+            toast.error("Unable to subscribe right now. Please try again later.")} finally {setIsSubmitting(false)}
     };
     return (
     <div className="min-h-screen bg-white">
@@ -84,5 +82,5 @@ export function EnhancedNewsletterForm(props: any) {
       </div>
         </div>
   );
-}';
-export default EnhancedNewsletterForm;;';;';
+}
+export default EnhancedNewsletterForm;';';

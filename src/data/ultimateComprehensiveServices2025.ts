@@ -53,28 +53,28 @@ export const zionContact: UltimateComprehensiveService2025['contactInfo'] = {
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709"
-};
+};;
 
 // Convert and combine all services
 const convertMicroSaasServices = (services: AdvancedMicroSaasService2025[]): UltimateComprehensiveService2025[] => {
   return services.map(service => ({
     ...service,
     serviceType: 'Micro SAAS' as const
-  }));
+  };));
 };
 
 const convertITServices = (services: AdvancedITService2025[]): UltimateComprehensiveService2025[] => {
   return services.map(service => ({
     ...service,
     serviceType: 'IT Services' as const
-  }));
+  };));
 };
 
 const convertAIServices = (services: AdvancedAIService2025[]): UltimateComprehensiveService2025[] => {
   return services.map(service => ({
     ...service,
     serviceType: 'AI Services' as const
-  }));
+  };));
 };
 
 // Ultimate Comprehensive Services Catalog 2025
@@ -121,28 +121,28 @@ export const ULTIMATE_SERVICE_CATEGORIES = [
 export const SERVICE_TYPES = [
   { id: 'micro-saas', name: 'Micro SAAS', count: 0 },
   { id: 'it-services', name: 'IT Services', count: 0 },
-  { id: 'ai-services', name: 'AI Services', count: 0 }
+  { id: 'ai-services', name: 'AI Services', count: 0 };
 ];
 
 // Pricing tiers
 export const ULTIMATE_PRICING_TIERS = [
   { id: 'budget', name: 'Budget', range: '$1,000 - $2,999/month', count: 0 },
   { id: 'mid-range', name: 'Mid-Range', range: '$3,000 - $6,999/month', count: 0 },
-  { id: 'enterprise', name: 'Enterprise', range: '$7,000+/month', count: 0 }
+  { id: 'enterprise', name: 'Enterprise', range: '$7,000+/month', count: 0 };
 ];
 
 // Innovation levels
 export const ULTIMATE_INNOVATION_LEVELS = [
   { id: 'advanced', name: 'Advanced', count: 0 },
   { id: 'cutting-edge', name: 'Cutting-edge', count: 0 },
-  { id: 'revolutionary', name: 'Revolutionary', count: 0 }
+  { id: 'revolutionary', name: 'Revolutionary', count: 0 };
 ];
 
 // Support levels
 export const ULTIMATE_SUPPORT_LEVELS = [
   { id: 'standard', name: 'Standard', count: 0 },
   { id: 'premium', name: 'Premium', count: 0 },
-  { id: 'enterprise', name: 'Enterprise', count: 0 }
+  { id: 'enterprise', name: 'Enterprise', count: 0 };
 ];
 
 // Calculate comprehensive statistics
@@ -152,7 +152,7 @@ export const getUltimateServiceStats = () => {
     serviceTypes: SERVICE_TYPES.map(type => ({
       ...type,
       count: ULTIMATE_COMPREHENSIVE_SERVICES_2025.filter(service => {
-        if (type.id === 'micro-saas') return service.serviceType === 'Micro SAAS';
+        if (type.id === 'micro-saas') return service.serviceType === 'Micro SAAS
         if (type.id === 'it-services') return service.serviceType === 'IT Services';
         if (type.id === 'ai-services') return service.serviceType === 'AI Services';
         return false;
@@ -226,8 +226,8 @@ export const searchUltimateServices = (searchTerm: string) => {
 export const getFeaturedUltimateServices = (limit: number = 15) => {
   return ULTIMATE_COMPREHENSIVE_SERVICES_2025
     .sort((a, b) => {
-      const aScore = parseFloat(a.roi.replace('%', '')) + (a.innovationLevel === 'Revolutionary' ? 100 : a.innovationLevel === 'Cutting-edge' ? 50 : 0);
-      const bScore = parseFloat(b.roi.replace('%', '')) + (b.innovationLevel === 'Revolutionary' ? 100 : b.innovationLevel === 'Cutting-edge' ? 50 : 0);
+      const aScore = parseFloat(a.roi.replace('%', ")) + (a.innovationLevel === 'Revolutionary' ? 100 : a.innovationLevel === 'Cutting-edge' ? 50 : 0);
+      const bScore = parseFloat(b.roi.replace('%', ")) + (b.innovationLevel === 'Revolutionary' ? 100 : b.innovationLevel === 'Cutting-edge' ? 50 : 0);
       return bScore - aScore;
     })
     .slice(0, limit);
@@ -252,7 +252,7 @@ export const getUltimateServicesByIndustry = (industry: string) => {
     'legal': ['AI & Legal Tech', 'AI Automation', 'Cybersecurity'],
     'real-estate': ['AI & Real Estate', 'Predictive Analytics', 'Data Analytics'],
     'education': ['AI & Education', 'Natural Language Processing', 'AI & Marketing']
-  };
+  };;
 
   const categories = industryCategories[industry.toLowerCase()] || [];
   return ULTIMATE_COMPREHENSIVE_SERVICES_2025.filter(service =>
@@ -297,8 +297,8 @@ export const getUltimateServiceRecommendations = (preferences: {
   }
 
   return recommendations.sort((a, b) => {
-    const aScore = parseFloat(a.roi.replace('%', '')) + (a.innovationLevel === 'Revolutionary' ? 100 : a.innovationLevel === 'Cutting-edge' ? 50 : 0);
-    const bScore = parseFloat(b.roi.replace('%', '')) + (b.innovationLevel === 'Revolutionary' ? 100 : b.innovationLevel === 'Cutting-edge' ? 50 : 0);
+    const aScore = parseFloat(a.roi.replace('%', ")) + (a.innovationLevel === 'Revolutionary' ? 100 : a.innovationLevel === 'Cutting-edge' ? 50 : 0);
+    const bScore = parseFloat(b.roi.replace('%', ")) + (b.innovationLevel === 'Revolutionary' ? 100 : b.innovationLevel === 'Cutting-edge' ? 50 : 0);
     return bScore - aScore;
   });
 };

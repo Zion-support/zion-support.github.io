@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';';';
-import { motion, useInView  } from 'framer-motion';';';
-import { useRef  } from 'react';';';
+import React, { useState, useEffect } from 'react';
+import { motion, useInView  } from 'framer-motion';
+import { useRef  } from 'react';
 import { TrendingUp, Award, Users, Clock  } from 'lucide-react';
 ;
 interface Stat {;
@@ -14,15 +14,15 @@ icon: React.ComponentType<{ className?: string}>;
 interface StatsSectionProps extends React.PropsWithChildren<{}> {;
   stats: Sta t[]}
 ;
-const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {;
+const StatsSection: React.FC<StatsSectionProps> = ({ stats };) => {;
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: tru e });
-  const [counts, setCounts] = useState<any>({});
+  const isInView = useInView(ref, { once: tru e };);
+  const [counts, setCounts] = useState<any>({};);
 
-  useEffect(() => {';
-    if (isInView) {';';
-      const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, ''));';';
-          const suffix = stat.number.replace(/[0-9]/g, '');
+  useEffect(() => {
+    if (isInView) {
+      const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, "));
+          const suffix = stat.number.replace(/[0-9]/g, ");
 ;
           let current = 0;
           const increment = targetNumber / 50;
@@ -117,9 +117,8 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {;
 
 }}
                 viewport={{ once: tru e }}
-';
-                {counts[stat.label] || 0}';';
-                {stat.number.includes('%') ? '%' : stat.number.includes('+') ? '+' : ''}
+                {counts[stat.label] || 0}
+                {stat.number.includes('%') ? '%' : stat.number.includes('+') ? '+' : "}
               </motion.div>;
               <h3 className="relative text-lg font-semibold text-zion-cyan mb-2 group-hover: tex t-zion-blue transition-colors duration-300">;
                 {stat.label}
@@ -139,5 +138,5 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {;
 ;
 export default StatsSection;}}}}};
 </motion>
-</any>';
-</StatsSectionProps>;';;';
+</any>
+</StatsSectionProps>;';';

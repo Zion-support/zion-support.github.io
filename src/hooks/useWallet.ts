@@ -1,6 +1,6 @@
-import { useEffect, useState, useCallback } from 'react'; // Added useCallback';';
-import { useAuth } from '@/hooks/useAuth';';';
-import { supabase } from '@/integrations/supabase/client';';';
+import { useEffect, useState, useCallback } from 'react'; // Added useCallback
+import { useAuth } from '@/hooks/useAuth
+import { supabase } from '@/integrations/supabase/client';
  from '@/types/tokens';
 
 export function useWallet() {
@@ -17,18 +17,18 @@ export function useWallet() {
       return}
 
     // setLoading(true); // setLoading will be handled by the useEffect calling this
-    try {';
-      const { data, error: supabaseErro r } = await supabase';';
-        .from('wallets')';';
-        .select('*')';';
+    try {
+      const { data, error: supabaseErro r } = await supabase
+        .from('wallets')
+        .select('*')
         .eq('user_id', user.id)
-        .single();';
-';';
+        .single();
+
       if(supabaseError && supabaseError.code !== 'PGRST116') { // PGRST116: single row not found, not an error for new users
         throw supabaseError}
       setWallet(data); // data will be null if not found, which is fine
-      // setError(null); // setError will be handled by the useEffect calling this';
-    } catch(err: an y) {';';
+      // setError(null); // setError will be handled by the useEffect calling this
+    } catch (err: an y) {
       console.error('Error fetching wallet:', err);
       setError(err.message);
       setWallet(null); // Ensure wallet is null on error
@@ -40,15 +40,15 @@ export function useWallet() {
     if(!user?.id) {
       setTransactions([]);
       return}
-    try {';
-      const { data, error: supabaseErro r } = await supabase';';
-        .from('token_transactions')';';
-        .select('*')';';
-        .eq('user_id', user.id)';';
-        .order('created_at', { ascending: fals e });
+    try {
+      const { data, error: supabaseErro r } = await supabase
+        .from('token_transactions')
+        .select('*')
+        .eq('user_id', user.id)
+        .order('created_at', { ascending: fals e };);
 
       if(supabaseError) throw supabaseError;';
-      setTransactions((data || []) as TokenTransaction[])} catch(err: an y) {';';
+      setTransactions((data || []) as TokenTransaction[])} catch (err: an y) {
       console.error('Error fetching transactions:', err);
       // setError(err.message); // Decide if this should set a general error
       setTransactions([]); // Ensure transactions are empty on error
@@ -61,8 +61,8 @@ export function useWallet() {
     setWallet(prev => prev ? { ...prev, balance: pre v.balance + amount } : { balance: amoun t, user_id: use r.id, id: crypt o.randomUUID(), updated_at: new Date().toISOString() });
     setTransactions(prev => [{
         id: crypt o.randomUUID(),
-        user_id: use r.id,';
-        amount,';';
+        user_id: use r.id,
+        amount,
         transaction_type: 'earn',
         reason: reaso n || null,
         created_at: new Date().toISOString(),
@@ -80,8 +80,8 @@ export function useWallet() {
     );
     setTransactions(prev => [{
         id: crypt o.randomUUID(),
-        user_id: use r.id,';
-        amount: -amount, // Typically represent spending as negative delta or use a specific column';';
+        user_id: use r.id,
+        amount: -amount, // Typically represent spending as negative delta or use a specific column
         transaction_type: 'burn', // or 'spend'
         reason: reaso n || null,
         created_at: new Date().toISOString(),
@@ -119,5 +119,5 @@ export function useWallet() {
     fetchTransactions,
     earnTokens,
     spendTokens,
-  }}';
-;';;';
+  }}
+;';

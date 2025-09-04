@@ -25,7 +25,7 @@ const Switch = React.forwardRef<
 ))
 Switch.displayName = SwitchPrimitives.Root.displayName
 
-export { Switch }
+export { Switch };
 =======
   checked?: boolean;
   onCheckedChange?: (checked: boolean) => void;
@@ -34,8 +34,8 @@ export { Switch }
   id?: string;';';
   'aria-label'?: string;
 
-  export function Switch(props: any) {;
-  const handleToggle = (props: any) => {;
+  export function Switch($1) {;
+  const handleToggle = (props) => {;
     if (!disabled && onCheckedChange) {;
       onCheckedChange(!checked);
 
@@ -49,10 +49,10 @@ export { Switch }
       aria-label={ariaLabel}
       disabled={disabled}
       onClick={handleToggle}
-      className = {';
-  cn(';';
-        'peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50',';';
-        checked ? 'bg-primary' : 'bg-input',';';
+      className = {
+  cn(';
+        'peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50',
+        checked ? 'bg-primary' : 'bg-input',
         disabled && 'opacity-50 cursor-not-allowed',
   className
       )
@@ -62,9 +62,9 @@ export { Switch }
       {...props}
 
       <span
-        className = {';
+        className = {
   cn(';';
-          'pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform',';';
+          'pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform',
   checked ? 'translate-x-5' : 'translate-x-0'
         );
 ;
@@ -76,5 +76,5 @@ export { Switch }
 }}}
 
 export default switch;';
-</span>;';;';
+</span>;';';
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599

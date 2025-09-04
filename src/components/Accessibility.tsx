@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { 
   Accessibility as AccessibilityIcon,
   Sun,
-  Moon,';
+  Moon,
   Settings';';
 } from 'lucide-react';
 
@@ -19,76 +19,75 @@ export function Accessibility(): void {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     fontSize: 1 6,
     highContrast: fals e,
-    reducedMotion: fals e,';
-    soundEnabled: tru e,';';
+    reducedMotion: fals e,
+    soundEnabled: tru e,
     theme: 'auto'
-  });
+  };);
 
-  const updateSetting = (props: any) => {
+  const updateSetting = (props) => {
     const newSettings = {
       ...settings,
       [key]: value
-    };
+    };;
     setSettings(newSettings);';
     applySettings(newSettings);';';
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
   };
-';
-  const increaseFontSize = (props: any) => {';';
+
+  const increaseFontSize = (props) => {
     updateSetting('fontSize', Math.min(settings.fontSize + 2, 24));
   };
-';
-  const decreaseFontSize = (props: any) => {';';
+
+  const decreaseFontSize = (props) => {
     updateSetting('fontSize', Math.max(settings.fontSize - 2, 12));
   };
 
-  const resetSettings = (props: any) => {
+  const resetSettings = (props) => {
     const defaultSettings: AccessibilitySetting s = {
       fontSize: 1 6,
       highContrast: fals e,
-      reducedMotion: fals e,';
-      soundEnabled: tru e,';';
+      reducedMotion: fals e,
+      soundEnabled: tru e,
       theme: 'auto'
-    };
+    };;
     setSettings(defaultSettings);';
     applySettings(defaultSettings);';';
     localStorage.setItem('accessibility-settings', JSON.stringify(defaultSettings));
   };
 
-  const applySettings = (props: any) => {
+  const applySettings = (props) => {
     const root = document.documentElement;
 
     // Apply font size
     root.style.fontSize = `${newSettings.fontSize}px`;
 
-    // Apply high contrast';
-    if (newSettings.highContrast) {';';
+    // Apply high contrast
+    if (newSettings.highContrast) {
       root.classList.add('high-contrast');';
-    } else {';';
+    } else {
       root.classList.remove('high-contrast');
     }
 
-    // Apply reduced motion';
-    if (newSettings.reducedMotion) {';';
+    // Apply reduced motion
+    if (newSettings.reducedMotion) {
       root.classList.add('reduced-motion');';
-    } else {';';
+    } else {
       root.classList.remove('reduced-motion');
     }
-';
-    // Apply theme';';
-    if (newSettings.theme === 'light') {';';
+    // Apply theme
+    if (newSettings.theme === 'light') {
       root.classList.add('light-theme');';';
       root.classList.remove('dark-theme');';';
-    } else if (newSettings.theme === 'dark') {';';
+    } else if (newSettings.theme === 'dark') {
       root.classList.add('dark-theme');';';
       root.classList.remove('light-theme');';
-    } else {';';
+    } else {
       root.classList.remove('light-theme', 'dark-theme');
     }
   };
 
-  useEffect(() => {';
-    // Load settings from localStorage';';
+  useEffect(() => {
+    // Load settings from localStorage
     const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
       const parsed = JSON.parse(savedSettings);
@@ -97,10 +96,10 @@ export function Accessibility(): void {
     }
 
     // Add keyboard shortcuts
-    const handleKeyDown = (props: any) => {
-      if (e.ctrlKey) {';
-        switch (e.key) {';';
-          case '=':';';
+    const handleKeyDown = (props) => {
+      if (e.ctrlKey) {
+        switch (e.key) {
+          case '=':
           case '+':
             e.preventDefault();
             increaseFontSize();';
@@ -116,7 +115,7 @@ export function Accessibility(): void {
         }
       }
     };';
-';';
+
     document.addEventListener('keydown', handleKeyDown);';';
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
@@ -172,8 +171,8 @@ export function Accessibility(): void {
             <div>
               <label className="flex items-center">
                 <input
-                  type="checkbox"';
-                  checked={settings.highContrast}';';
+                  type="checkbox";
+                  checked={settings.highContrast}
                   onChange={(e) => updateSetting('highContrast', e.target.checked)}
                   className="mr-2"
                 />
@@ -185,8 +184,8 @@ export function Accessibility(): void {
             <div>
               <label className="flex items-center">
                 <input
-                  type="checkbox"';
-                  checked={settings.reducedMotion}';';
+                  type="checkbox";
+                  checked={settings.reducedMotion}
                   onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
                   className="mr-2"
                 />
@@ -200,7 +199,7 @@ export function Accessibility(): void {
                 Theme
               </label>
               <select';
-                value={settings.theme}';';
+                value={settings.theme}
                 onChange={(e) => updateSetting('theme', e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 dark: borde r-gray-600 rounded-md bg-white dark: b g-gray-700 text-gray-900 dark: tex t-white"
               >
@@ -224,5 +223,5 @@ export function Accessibility(): void {
     </>
   );
 }
-</AccessibilitySettings>';
-</any>;';;';
+</AccessibilitySettings>
+</any>;';';

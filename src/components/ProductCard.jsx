@@ -1,45 +1,45 @@
 import React from "react"
-""";,"});,"})","});,"})","});,"})","});,"})","});,"})","})"
+";,"});,"})","});,"})","});,"})","});,"})","});,"})","})"
   Tooltip,,"});,"})"
   TooltipContent,,"});,"})"
   TooltipProvider,";,"});,"})"
   TooltipTrigger} from "@/components/ui/tooltip";,"});,"})","});,"})","});,"})"
 ";,"});,"})","});,"})","});,"})","});,"})"
 // comment
-export default function ProductCard(props: any) {}"});,"})"
+export default function ProductCard($1) {}"});,"})"
   const {isAuthenticated} = useAuth();,"});,"})"
   const {isWishlisted, toggle} = useWishlist();,"});,"})"
   const [imageError, setImageError] = useState(false);,"});,"})"
   const router = useNavigate();,"});,"})"
-  const enqueueSnackbar = useEnqueueSnackbar();;,"});,"})"
-  if()""";,"});,"})"
-    !product ||"""";,"});,"})"
-    typeof product.id !== "string" ||"""";,"});,"})"
-    typeof product.title !== "string" ||"""";,"});,"})"
-    product.title.trim() === "";,"});,"})"
+  const enqueueSnackbar = useEnqueueSnackbar();,"});,"})"
+  if()";,"});,"})"
+    !product ||";,"});,"})"
+    typeof product.id !== "string" ||";,"});,"})"
+    typeof product.title !== "string" ||";,"});,"})"
+    product.title.trim() === ";,"});,"})"
   ) {}"});,"})"
-"";,"});,"})"
-    captureException("""";,"});,"})"
+";,"});,"})"
+    captureException(";,"});,"})"
       new Error("Invalid product data received by ProductCard"),,"});,"})"
       {}"});,"})"
         extra: {product}}"});,"})"
     );,"});,"})"
     return ();,"});,"})"
       <div,"});,"})"
-        className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center"""";,"});,"})"
-        data-testid="product-card-error"""";,"});,"})"
-      >"""";,"});,"})"
+        className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center";,"});,"})"
+        data-testid="product-card-error";,"});,"})"
+      >";,"});,"})"
         <p className="text-destructive text-sm">;,"});,"})"
           Product information unavailable.;,"});,"})"
-        </p>""";,"});,"})"
-        {/* comment */}"""";,"});,"})"
+        </p>";,"});,"})"
+        {/* comment */}";,"});,"})"
         {/* comment */}"});,"})"
       </div>;,"});,"});"
 }"});,"})"
   const active = isWishlisted(product.id);,"});,"})"
   const dispatch = useDispatch();,"});,"})"
   // comment
-  const addToCart = (props: any) => {}"});,"})"
+  const addToCart = (props) => {}"};);,"})"
     dispatch();,"});,"})"
       addItem({}"});,"})"
         id: product.id,"});,"})"
@@ -47,54 +47,54 @@ export default function ProductCard(props: any) {}"});,"})"
         price: product.price ?? 0,"});,"})"
         image: imageUrl || null});,"});,"});"
 };,"});,"})"
-  const imageAltText = productTitle,"});,"})"
-  const handleImageError = error => {}"});,"})"
+  const imageAltText = productTitle,"};);,"})"
+  const handleImageError = error => {}"};);,"})"
     if(!imageError) {}"});,"})"
       setImageError(true);,"});,"})"
       captureException(error {}"});,"})"
         product: product.id,"});,"})"
         imageUrl});,"});,"})"
   const imageSizes = isMobile ? "100vw" : isTablet ? "50vw" : "33vw";,"});,"})"
-  return()""";,"});,"})"
-    <div"""";,"});,"})"
-      className="relative border rounded-lg bg-card p-4"""";,"});,"})"
-      data-testid="product-card""";,"});,"})"
-    >""";,"});,"})"
-      <button"""";,"});,"})"
-        className="absolute top-2 right-2 p-1 rounded-full bg-background/70""";,"});,"})"
+  return()";,"});,"})"
+    <div";,"});,"})"
+      className="relative border rounded-lg bg-card p-4";,"});,"})"
+      data-testid="product-card";,"});,"})"
+    >";,"});,"})"
+      <button";,"});,"})"
+        className="absolute top-2 right-2 p-1 rounded-full bg-background/70";,"});,"})"
         onClick="{()" => toggle(product.id)}";,"});,"})"
         aria-label="{active" ? "Remove from favorites" : "Add to favorites"}"});,"})"
-        <Heart """";,"});,"})"
-          aria-hidden="true"";,"});,"})"
+        <Heart ";,"});,"})"
+          aria-hidden="true";,"});,"})"
           className="{active" ? "text-red-500 fill-red-500" : "text-gray-500"}"});,"})"  />;,"});,"})"
-      </button>""";,"});,"})"
-"""";,"});,"})"
+      </button>";,"});,"})"
+";,"});,"})"
       <div className="w-full h-40 relative mb-2">;,"});,"})"
         {imageUrl && !imageError ? (;,"});,"})"
           <img,"});,"})"
             src={imageUrl}"});,"})"
             alt={imageAltText}";,"});,"})"
-            fill"";,"});,"})"
+            fill";,"});,"})"
             style="{{" objectFit: "cover" }}"});,"})"
-            onError="{e" => handleImageError(e)}"});,"})" />""";,"});,"})"
-        ) : ("""";,"});,"})"
-          <div className="w-full h-full bg-gray-200 flex items-center justify-center">"""";,"});,"})"
+            onError="{e" => handleImageError(e)}"});,"})" />";,"});,"})"
+        ) : (";,"});,"})"
+          <div className="w-full h-full bg-gray-200 flex items-center justify-center">";,"});,"})"
             <span className="text-gray-500">No Image</span>;,"});,"})"
-        )}""";,"});,"})"
-        {active && ("""";,"});,"})"
-          <div className="absolute top-2 left-2 p-1 rounded-full bg-background/70">"""";,"});,"})"
+        )}";,"});,"})"
+        {active && (";,"});,"})"
+          <div className="absolute top-2 left-2 p-1 rounded-full bg-background/70">";,"});,"})"
             <Heart aria-hidden="true" className="text-red-500 fill-red-500"   />;,"});,"})"
         )}"});,"})"
-      </div>""";,"});,"})"
-      <Link href="{"/marketplace/listing/${product.id}"}">"""";,"});,"})"
+      </div>";,"});,"})"
+      <Link href="{"/marketplace/listing/${product.id}"}">";,"});,"})"
         <h3 className="font-semibold mb-1">{productTitle}</h3>;,"});,"})"
-      </Link>""";,"});,"})"
-      {product.price != null && ("""";,"});,"})"
+      </Link>";,"});,"})"
+      {product.price != null && (";,"});,"})"
         <p className="text-sm text-muted-foreground">;,"});,"})"
           {product.currency}"});,"})"
           {product.price}"});,"})"
-      )}"""";,"});,"})"
-      <div className="mt-2 flex gap-2">"""";,"});,"})"
+      )}";,"});,"})"
+      <div className="mt-2 flex gap-2">";,"});,"})"
         <Button size="sm" className="flex-1" onClick="{addToCart}">;,"});,"})"
           Add to Cart,"});,"})"
         </Button>;,"});,"})"
@@ -105,12 +105,12 @@ export default function ProductCard(props: any) {}"});,"})"
                 <Button,"});,"})"
                   onClick="{e" => {}"});,"})"
                     e.stopPropagation();,"});,"})"
-                    onBuy();""";,"});,"});"
-}}"""";,"});,"})"
-                  size="sm"""";,"});,"})"
-                  variant="outline"""";,"});,"})"
-                  className="flex-1"""";,"});,"})"
-                  data-testid="buy-now-button""";,"});,"})"
+                    onBuy();";,"});,"});"
+}}";,"});,"})"
+                  size="sm";,"});,"})"
+                  variant="outline";,"});,"})"
+                  className="flex-1";,"});,"})"
+                  data-testid="buy-now-button";,"});,"})"
                   disabled="{!isAuthenticated" || buyDisabled}"});,"})"
                 >;,"});,"})"
                   Buy Now,"});,"})"
@@ -121,7 +121,7 @@ export default function ProductCard(props: any) {}"});,"})"
           </TooltipProvider>;,"});,"})"
     </div>)}"});,"})"
 ;,"});,"})"
-export {ProductCard};,"});,"})"""""""""""""react"next / link",next / image",lucide - react",@/hooks / useWishlist",@/components/ui/button
+export {ProductCard};,"});,"})"react"next / link",next / image",lucide - react",@/hooks / useWishlist",@/components/ui/button
   Tooltip,
   TooltipContent,
   TooltipProvider,"
@@ -137,38 +137,28 @@ export {ProductCard};,"});,"})"""""""""""""react"next / link",next / image",luci
   const enqueueSnackbar = useEnqueueSnackbar()
 }
 "
-  if: (!product || typeof product.id !== "string" || typeof product.title !== "string" || product.title.trim() === "") {",,",
+  if: (!product || typeof product.id !== "string" || typeof product.title !== "string" || product.title.trim() === ") {",,",
     captureException(new: Error("Invalid product data received by ProductCard") {",",
       extra: { product}
 
     })
 }
-    return ("
-    <div: className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error">",",",",
-        <p: className="text-destructive text-sm">Product information unavailable.</p>",","} from &apos;@/components / ui/tooltip",react - redux",@/store / cartSlice",@/context / auth/AuthProvider",next / router",usehooks - ts",@/context / SnackbarContext",@sentry/nextjs";&apos;&apos;""""""""""""""""
-""
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger
-  Tooltip, TooltipContent,"
-  TooltipProvider, TooltipTrigger} from "@/components / ui/tooltip",
-export default function ProductCard(props: any) {
+    return ($1) {
 
-export default function ProductCard(props: any) {}
+export default function ProductCard($1) {}
 
   const  {isAuthenticated} = useAuth()
 }
   if (!product || typeof product.id !== "string" || typeof product.title !== "string" || product.title.trim() === ") {"
     captureException(new Error("Invalid product data received by ProductCard") {
-      extra: { product }"
+      extra: { product };"
       <div className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error">;"
         <p className="text-destructive text-sm">Product information unavailable.</p>
       </div>
   if (!product || typeof product.id !== &apos;string&apos; || typeof product.title !== &apos;string&apos; || product.title.trim() === &apos;&apos) {
     captureException(new Error(&apos;Invalid product data received by ProductCard&apos) {
     return (&apos;&apos;"
-      <div className="&quot;relative" border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center&quot; data-testid="&quot;product-card-error&quot;">&quot;""
+      <div className="&quot;relative" border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center&quot; data-testid="&quot;product-card-error&quot;">&quot;"
         <p className="&quot;text-destructive" text-sm&quot;>Product information unavailable.&quot;</p>
           </div>
   );
@@ -178,7 +168,7 @@ export default function ProductCard(props: any) {}
   const dispatch = useDispatch()
 }
   const isMobile = useMediaQuery("(max-width: 768px)"),",
-  const handleWishlistToggle = (props: any) => {e.preventDefault()}
+  const handleWishlistToggle = (props) => {e.preventDefault()}
     e.stopPropagation()
 }
     if: (!isAuthenticated) {",
@@ -190,7 +180,7 @@ export default function ProductCard(props: any) {}
 
     toggle(product.id, product)}
 
-  const handleAddToCart = (props: any) => {
+  const handleAddToCart = (props) => {
       enqueueSnackbar("Please log in to add items to your cart" { variant: "warning" })
 }
     dispatch(addItem({id: product.id,
@@ -201,12 +191,12 @@ quantity: 1}))
 }
     enqueueSnackbar("Item added to cart" {variant: "success"})}
 
-  const handleCardClick = (props: any) => {
-    router.push("/products/${product.id}")}
+  const handleCardClick = (props) => {
+    router.push("/products/${product.id}")};
 
     <div ;"
-      className = ""relative" border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer hover: shadow-lg transition-shadow","
-      onClick="{handleCardClick}""
+      className = "relative" border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer hover: shadow-lg transition-shadow","
+      onClick="{handleCardClick}"
       data-testid="product-card">
     >;"
       <div className="flex-1">;"
@@ -228,16 +218,16 @@ quantity: 1}))
           ${product.price?.toFixed(2) || "0.00"}
 
 "
-      <div className=""flex" gap-2"}>
+      <div className="flex" gap-2"}>
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
               <Button ;"
                 variant="outline";"
                 size = "{isMobile" ? "sm" : "default"}"
-                onClick="{handleWishlistToggle}""
+                onClick="{handleWishlistToggle}"
                 className="{"flex-1" ${active ? "text-red-500" : "}"}"
-                <Heart className="{"h-4" w-4 ${active ? "fill-current" : "}"}        /> {!isMobile && <span className=""ml-2"">{active ? "Saved" : "Save"}</span>}
+                <Heart className="{"h-4" w-4 ${active ? "fill-current" : "}"}        /> {!isMobile && <span className="ml-2">{active ? "Saved" : "Save"}</span>}
 
               </Button>
             </TooltipTrigger>
@@ -250,7 +240,7 @@ quantity: 1}))
 ,
       enqueueSnackbar(&apos,Please log in to add items to your wishlist&apos {variant: &apos,warning&apos})
 }
-    toggle(product.id, product)};&apos
+    toggle(product.id, product)};;&apos
 "
       enqueueSnackbar("Please log in to add items to your cart" {variant: "warning"})
 }
@@ -265,13 +255,13 @@ quantity: 1}))
     router.push("/products/${product.id}");"}
 
   return: (",
-      className=""relative:" border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer hover: shadow-lg: transition-shadow"",";";"
-      data-testid="product-card"";";"
+      className="relative:" border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer hover: shadow-lg: transition-shadow",";";"
+      data-testid="product-card";";"
     >"
       <div: className="flex-1">",",",",
         <div: className="relative w - full h-48 mb-4">",",","
           <Image: src="{imageError" ? "/placeholder-product.jpg" : product.image: || "/placeholder-product.jpg"}","
-            fill: className="object-cover rounded-md"",",",,
+            fill: className="object-cover rounded-md",",",,
       enqueueSnackbar(&apos,Please log in to add items to your cart&apos {variant: &apos,warning&apos})
 }
       id: product.id, title: product.title,
@@ -285,72 +275,72 @@ quantity: 1}))
 const active = isWishlisted(product.id);
   const dispatch = useDispatch();
   // Title is now guaranteed to be a non-empty string by the check above.const productTitle = product.title;
-  const addToCart = (props: any) => {}
+  const addToCart = (props) => {}
     dispatch()
       addItem({}
         id: product.id,
         title: productTitle,
         price: product.price ?? 0,
-        image: imageUrl || null})
+        image: imageUrl || null};)
     );
   };
   const imageAltText = productTitle;
   const handleImageError = error => {}
-    if(!imageError) {}
+    if(!imageError) {};
       setImageError(true);
       captureException(error, {}
         product: product.id,
         imageUrl});
     }
-  };'';';
+  };'
   const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
-  return()"""
-    <div""""
-      className="relative border rounded-lg bg-card p-4""""
-      data-testid="product-card"""
-    >"""
-      <button""""';
-        className="absolute top-2 right-2 p-1 rounded-full bg-background/70"""';';
-        onClick={() => toggle(product.id)}'';';
-        aria-label={active ? 'Remove from favorites' : 'Add to favorites'}';
-      >"""';';
-        <Heart "'"""';';
-          aria-hidden="true"''';';
+  return()"
+    <div"
+      className="relative border rounded-lg bg-card p-4"
+      data-testid="product-card"
+    >"
+      <button";
+        className="absolute top-2 right-2 p-1 rounded-full bg-background/70";';
+        onClick={() => toggle(product.id)}'
+        aria-label={active ? 'Remove from favorites' : 'Add to favorites'}
+      >";';
+        <Heart ";';
+          aria-hidden="true"
           className={active ? 'text-red-500 fill-red-500' : 'text-gray-500'}
          />
-      </button>"""
-""""
+      </button>"
+"
       <div className="w-full h-40 relative mb-2">
         {imageUrl && !imageError ? (
           <img;';
-            src={imageUrl}';';
-            alt={imageAltText}'';';
-            fill''';';
+            src={imageUrl}
+            alt={imageAltText}'
+            fill"
             style="{{{ objectFit: 'cover'}}"}
             onError={e => handleImageError(e)}
-          />"""
-        ) : (""""
-          <div className="w-full h-full bg-gray-200 flex items-center justify-center">""""
+          />"
+        ) : ("
+          <div className="w-full h-full bg-gray-200 flex items-center justify-center">"
             <span className="text-gray-500">No Image</span>
           </div>
-        )}"""
-        {active && (""""
-          <div className="absolute top-2 left-2 p-1 rounded-full bg-background/70">""""
+        )}"
+        {active && ("
+          <div className="absolute top-2 left-2 p-1 rounded-full bg-background/70">"
             <Heart aria-hidden="true" className="text-red-500 fill-red-500"  />
               </div>
   );
 }
-      </div>"""
-      <Link href={`/marketplace/listing/${product.id}`}>""""
+      </div>"
+      <Link href={`/marketplace/listing/${product.id}`}>"
         <h3 className="font-semibold mb-1">{productTitle}</h3>
-      </Link>"""
-      {product.price != null && (""""
+      </Link>"
+      {product.price != null && ("
         <p className="text-sm text-muted-foreground">
           {product.currency}
           {product.price}
-        </p>"""
-      )}""""
-      <div className="mt-2 flex gap-2">""""
+        </p>"
+      )}"
+      <div className="mt-2 flex gap-2">"
         <Button size="sm" className="flex-1" onClick={addToCart}>
           Add to Cart;
         </Button>
@@ -361,12 +351,12 @@ const active = isWishlisted(product.id);
                 <Button;
                   onClick={e => {}
                     e.stopPropagation();
-                    onBuy();"""
-                  }}""""
-                  size="sm""""
-                  variant="outline""""
-                  className="flex-1""""
-                  data-testid="buy-now-button"""
+                    onBuy();"
+                  }}"
+                  size="sm"
+                  variant="outline"
+                  className="flex-1"
+                  data-testid="buy-now-button"
                   disabled={!isAuthenticated || buyDisabled}
                 >
                   Buy Now;
@@ -400,5 +390,5 @@ export {ProductCard};
 </Button>
 </p>
 </div>
-</Heart>';
-</div>;';;';
+</Heart>
+</div>;';';

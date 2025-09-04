@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
-export function AppLayout(props: any) {
+export function AppLayout($1) {
 	return (
 		<div className = "min-h-screen bg-black text-white">;
 			<main className="pt-20">;
@@ -10,5 +10,4 @@ export function AppLayout(props: any) {
 		</div>;
 	);
 }
-';
-export default AppLayout;;';;';
+export default AppLayout;';';

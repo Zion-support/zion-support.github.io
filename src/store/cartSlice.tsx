@@ -73,5 +73,5 @@ export const { addItem, removeItem, updateQuantity, clearCart } = cartSlice.acti
 export { cartSlice };
 export default cartSlice.reducer;
 
-</string>';
-</CartItem>';';
+</string>
+</CartItem>';

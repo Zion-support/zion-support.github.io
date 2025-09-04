@@ -1,8 +1,8 @@
 import {cn} from '@/lib/utils';
-export function Skeleton(props: any) {
+export function Skeleton($1) {
     return (<div className={cn("animate-pulse rounded-md bg-zion-slate/20", className)} {...props} />);
 }
-export function CardSkeleton(props: any) {return (
+export function CardSkeleton($1) {return (
     <div className="min-h-screen bg-white">
       <Skeleton className="h-4 w-3/4" />
       <Skeleton className="h-4 w-1/2" />
@@ -12,7 +12,7 @@ export function CardSkeleton(props: any) {return (
         <Skeleton className="h-6 w-20" />
       </div>
     </div>);}
-export function ProfileSkeleton(props: any) {
+export function ProfileSkeleton($1) {
     return (
     <div className="min-h-screen bg-white">
       <div className="flex items-center space-x-4">
@@ -32,10 +32,10 @@ export function ProfileSkeleton(props: any) {
       </div>
     </div>);
 }
-export function GridSkeleton(props: any) {
+export function GridSkeleton($1) {
     return (
     <div className="min-h-screen bg-white">
       {Array.from({ length: count }).map((_, i) => (<CardSkeleton key={i} />))}
     </div>);
-}';
-;';;';
+}
+;';';

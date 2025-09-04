@@ -1,6 +1,6 @@
-type Reporter = (metric: any) => void;
+type Reporter = ($1) => void;
 
-function defaultReporter(metric: any): void {
+function defaultReporter($1): void {
   // Replace with analytics endpoint or gtag if desired
   // eslint-disable-next-line no-console
   .rating,
@@ -11,7 +11,7 @@ export function reportWebVitals(reporter: Reporter = defaultReporter): void {
   // and avoid breaking the bundle on missing named exports
   // no-floating-promises
   import('web-vitals')
-    .then((mod: any) => {
+    .then($1) => {
       const onCLS = mod.onCLS ?? mod.getCLS;
       const onFID = mod.onFID ?? mod.getFID;
       const onFCP = mod.onFCP ?? mod.getFCP;
@@ -24,8 +24,7 @@ export function reportWebVitals(reporter: Reporter = defaultReporter): void {
       try { onLCP && onLCP(reporter)} catch {}
       try { onTTFB && onTTFB(reporter)} catch {}
     })';
-    .catch(() => {';';
+    .catch(() => {
       // ignore if web-vitals isn't available
     })}
-';
-;';;';
+;';';

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Skeleton(props: any) {
+function Skeleton($1) {
   return (
     <div className="min-h-screen bg-white">
   );
@@ -9,4 +9,4 @@ function Skeleton(props: any) {
 export {Skeleton};
 
 export default skeleton;';
-</div>;';;';
+</div>;';';

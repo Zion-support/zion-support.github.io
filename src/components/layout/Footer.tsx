@@ -1,4 +1,4 @@
-import React from 'react';';';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import {
 
@@ -57,11 +57,11 @@ import {
   Search,
   Layers,
   Database,
-  Home,';
+  Home,
   Leaf';';
 } from 'lucide-react';
 
-export function Footer(props: any) {
+export function Footer($1) {
 
   const currentYear = new Date().getFullYear();
 
@@ -137,7 +137,7 @@ export function Footer(props: any) {
         { name: "Micro SAAS Solutions Comprehensive", href: "/services/micro-saas-solutions-comprehensive", icon: Layer s },
         { name: "Micro SAAS Innovation Hub", href: "/micro-saas-innovation-hub-2029", icon: Sparkle s }
       ]
-    }
+    };
   ];
 
   const quickLinks = [
@@ -148,7 +148,7 @@ export function Footer(props: any) {
     { name: "Careers", href: "/careers", icon: Briefcas e },
     { name: "Blog", href: "/blog", icon: FileTex t },
     { name: "Support", href: "/help-center", icon: HelpCircl e },
-    { name: "Documentation", href: "/documentation", icon: BookOpe n }
+    { name: "Documentation", href: "/documentation", icon: BookOpe n };
   ];
 
   const contactInfo = [
@@ -169,7 +169,7 @@ export function Footer(props: any) {
       icon: MapPi n,
       text: "364 E Main St STE 1008 Middletown DE 19709",
       href: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
-    }
+    };
   ];
 
   const socialLinks = [
@@ -177,7 +177,7 @@ export function Footer(props: any) {
     { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitte r },
     { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Githu b },
     { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Faceboo k },
-    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagra m }
+    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagra m };
   ];
 
   return (
@@ -243,10 +243,10 @@ export function Footer(props: any) {
             <div className="space-y-3">
               {contactInfo.map((contact, index) => (
                 <a
-                  key={index}';
-                  href={contact.href}';';
-                  target={contact.href.startsWith('http') ? '_blank' : '_self'}';';
-                  rel={contact.href.startsWith('http') ? 'noopener noreferrer' : ''}
+                  key={index}
+                  href={contact.href}
+                  target={contact.href.startsWith('http') ? '_blank' : '_self'}
+                  rel={contact.href.startsWith('http') ? 'noopener noreferrer' : "}
                   className="text-gray-300 hover: tex t-zion-purple transition-colors text-sm flex items-start space-x-2 group"
                 >
                   <contact.icon className="h-4 w-4 mt-0.5 group-hover: tex t-zion-purple flex-shrink-0" />
@@ -335,7 +335,7 @@ export function Footer(props: any) {
         </div>
       </div>
 
-      {/* Back to Top Button */}';
+      {/* Back to Top Button */}
       <button';';
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         className="fixed bottom-6 right-6 bg-zion-purple hover: b g-zion-purple-dark text-white p-3 rounded-full shadow-lg transition-all duration-300 hover: scal e-110"
@@ -345,5 +345,5 @@ export function Footer(props: any) {
       </button>
     </footer>
   );
-}';
-;';;';
+}
+;';';

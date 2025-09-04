@@ -1,5 +1,5 @@
-import React, {useState} from 'react';';';
-import {motion, AnimatePresence} from 'framer-motion';';';
+import React, {useState} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
 import {Zap, Shield, TrendingUp, CheckCircle, Users, Clock, Star, Award} from 'lucide-react';
 
 const benefits = [
@@ -50,17 +50,17 @@ const benefits = [
       "Code quality standards",
       "Performance benchmarks",
       "User experience focus"
-    ]}
+    ]};
 ];
 
 const additionalStats = [
   {icon: <Users className="w-8 h-8"  />, value: "500+", label: "Happy Clients"},
   {icon: <Clock className="w-8 h-8"  />, value: "24/7", label: "Support"},
   {icon: <Star className="w-8 h-8"  />, value: "4.9/5", label: "Rating"},
-  {icon: <Award className="w-8 h-8"  />, value: "50+", label: "Awards"}
+  {icon: <Award className="w-8 h-8"  />, value: "50+", label: "Awards"};
 ];
 
-export function BenefitsSection(props: any) {
+export function BenefitsSection($1) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const containerVariants = {
@@ -72,7 +72,7 @@ export function BenefitsSection(props: any) {
         delayChildren: 0.1
       }
     }
-  };
+  };;
 
   const itemVariants = {
   hidden: { y: 30,
@@ -87,7 +87,7 @@ export function BenefitsSection(props: any) {
         ease: "easeOut"
       }
     }
-  };
+  };;
 
   const statsVariants = {
   hidden: { scale: 0.8,
@@ -102,13 +102,13 @@ export function BenefitsSection(props: any) {
         ease: "easeOut"
       }
     }
-  };
+  };;
 
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Enhanced background pattern */}
-      <div className="absolute inset-0 opacity-5">';
-        <div className="absolute inset-0" style="{{{';';
+      <divclassName="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style="{{{
           backgroundImage: `radial-gradient(circle at 75% 75%; backgroundSize: '60px 60px'}}"} />
       </div>
       
@@ -311,5 +311,5 @@ export default BenefitsSection;
 </motion>
 </motion>
 </motion>
-</div>';
-</number>;';;';
+</div>
+</number>;';';

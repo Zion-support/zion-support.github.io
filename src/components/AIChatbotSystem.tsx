@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';';';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   MessageCircle, 
@@ -11,7 +11,7 @@ import {
   MicOff, 
   Sparkles, 
   Clock,
-  Settings,';
+  Settings,
   HelpCircle';';
 } from 'lucide-react';
 
@@ -43,37 +43,37 @@ export const AIChatbotSystem: Reac t.FC<AIChatbotSystemProps> = ({
   showSettings = true,
   maxMessages = 50,
   autoScroll = true
-}) => {';
-  const [messages, setMessages] = useState<ChatMessage[]>([]);';';
-  const [inputValue, setInputValue] = useState<any>('');
+};) => {
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [inputValue, setInputValue] = useState<any>(");
   const [isTyping, setIsTyping] = useState<any>(false);
   const [isOpen, setIsOpen] = useState<any>(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   // Sample welcome message
   useEffect(() => {
-    if (isOpen && messages.length === 0) {';
-      const welcomeMessage: ChatMessag e = {';';
-        id: 'welcome',';';
-        content: "Hello! I'm Zion AI, your intelligent assistant. I can help you with:\n\n• Information about our services\n• Technical support and guidance\n• Project inquiries and quotes\n• General questions about Zion Tech Group\n\nHow can I assist you today?",';';
-        sender: 'bot',';
-        timestamp: new Date(),';';
-        type: 'text',';';
+    if (isOpen && messages.length === 0) {
+      const welcomeMessage: ChatMessag e = {
+        id: 'welcome',
+        content: "Hello! I'm Zion AI, your intelligent assistant. I can help you with:\n\n• Information about our services\n• Technical support and guidance\n• Project inquiries and quotes\n• General questions about Zion Tech Group\n\nHow can I assist you today?",
+        sender: 'bot',
+        timestamp: new Date(),
+        type: 'text',
         status: 'sent',
-        metadata: {';
-          confidence: 0.95,';';
-          suggestions: ['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],';';
+        metadata: {
+          confidence: 0.95,
+          suggestions: ['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],
           relatedServices: ['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],
           estimatedResponseTime: 2
         }
-      };
+      };;
       setMessages([welcomeMessage]);
     }
   }, [isOpen, messages.length]);
 
   // Auto-scroll to bottom
-  useEffect(() => {';
-    if (autoScroll && messagesEndRef.current) {';';
+  useEffect(() => {
+    if (autoScroll && messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   }, [messages, autoScroll]);
@@ -86,31 +86,31 @@ export const AIChatbotSystem: Reac t.FC<AIChatbotSystemProps> = ({
     await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
 
     const responses = [
-      {';
-        content: "We offer comprehensive AI solutions including machine learning, natural language processing, computer vision, and predictive analytics. Our services help businesses automate processes, gain insights from data, and create intelligent applications.",';';
-        suggestions: ['AI Consulting', 'Machine Learning', 'Data Analytics', 'Automation'],';';
+      {
+        content: "We offer comprehensive AI solutions including machine learning, natural language processing, computer vision, and predictive analytics. Our services help businesses automate processes, gain insights from data, and create intelligent applications.",
+        suggestions: ['AI Consulting', 'Machine Learning', 'Data Analytics', 'Automation'],
         relatedServices: ['AI Solutions', 'Data Science', 'Process Automation']
       },
-      {';
-        content: "Our cybersecurity services include threat detection, vulnerability assessment, security audits, and compliance management. We help protect your digital assets with enterprise-grade security solutions.",';';
-        suggestions: ['Security Assessment', 'Compliance', 'Threat Detection', 'Incident Response'],';';
+      {
+        content: "Our cybersecurity services include threat detection, vulnerability assessment, security audits, and compliance management. We help protect your digital assets with enterprise-grade security solutions.",
+        suggestions: ['Security Assessment', 'Compliance', 'Threat Detection', 'Incident Response'],
         relatedServices: ['Cybersecurity', 'Compliance', 'Security Operations']
       },
-      {';
-        content: "Digital transformation is our specialty! We help businesses modernize their technology stack, improve processes, and enhance customer experiences. Our approach includes strategy development, implementation, and change management.",';';
-        suggestions: ['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],';';
+      {
+        content: "Digital transformation is our specialty! We help businesses modernize their technology stack, improve processes, and enhance customer experiences. Our approach includes strategy development, implementation, and change management.",
+        suggestions: ['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],
         relatedServices: ['Digital Transformation', 'Process Optimization', 'Change Management']
-      }
+      };
     ];
 ;
     const randomResponse = responses[Math.floor(Math.random() * responses.length)];
 
     const botMessage: ChatMessag e = {
-      id: Dat e.now().toString(),';
-      content: randomRespons e.content,';';
-      sender: 'bot',';
-      timestamp: new Date(),';';
-      type: 'text',';';
+      id: Dat e.now().toString(),
+      content: randomRespons e.content,
+      sender: 'bot',
+      timestamp: new Date(),
+      type: 'text',
       status: 'sent',
       metadata: {
         confidence: 0.85 + Math.random() * 0.1,
@@ -118,7 +118,7 @@ export const AIChatbotSystem: Reac t.FC<AIChatbotSystemProps> = ({
         relatedServices: randomRespons e.relatedServices,
         estimatedResponseTime: 1 + Math.random() * 2
       }
-    };
+    };;
 ;
     setMessages(prev => [...prev, botMessage]);
     setIsTyping(false);
@@ -130,22 +130,22 @@ export const AIChatbotSystem: Reac t.FC<AIChatbotSystemProps> = ({
     if (!inputValue.trim() || isTyping) return;
 
     const userMessage: ChatMessag e = {
-      id: Dat e.now().toString(),';
-      content: inputValu e.trim(),';';
-      sender: 'user',';
-      timestamp: new Date(),';';
-      type: 'text',';';
+      id: Dat e.now().toString(),
+      content: inputValu e.trim(),
+      sender: 'user',
+      timestamp: new Date(),
+      type: 'text',
       status: 'sent'
-    };
-';
+    };;
+
     setMessages(prev => [...prev, userMessage]);';';
-    setInputValue('');
+    setInputValue(");
 ;
     await simulateAIResponse(inputValue.trim());
   }, [inputValue, isTyping, simulateAIResponse]);
 ;
   // Handle suggestion click;
-  const handleSuggestionClick = (props: any) => {;
+  const handleSuggestionClick = (props) => {;
     setInputValue(suggestion);
     }, []);
 ;
@@ -154,13 +154,13 @@ export const AIChatbotSystem: Reac t.FC<AIChatbotSystemProps> = ({
     const file = e.target.files?.[0];
     if (file) {
       const fileMessage: ChatMessag e = {
-        id: Dat e.now().toString(),';
-        content: `Uploaded: ${file.name}`,';';
-        sender: 'user',';
-        timestamp: new Date(),';';
-        type: 'file',';';
+        id: Dat e.now().toString(),
+        content: `Uploaded: ${file.name}`,
+        sender: 'user',
+        timestamp: new Date(),
+        type: 'file',
         status: 'sent'
-      };
+      };;
       setMessages(prev => [...prev, fileMessage]);
     }
   }, []);
@@ -171,7 +171,7 @@ export const AIChatbotSystem: Reac t.FC<AIChatbotSystemProps> = ({
     }, [isListening]);
 ;
   // Clear chat;
-  const clearChat = (props: any) => {;
+  const clearChat = (props) => {;
     setMessages([]);
   };
 ;
@@ -192,8 +192,8 @@ export const AIChatbotSystem: Reac t.FC<AIChatbotSystemProps> = ({
         {isOpen && (;
           <motion.div;
             initial={{ opacity: 0, scale: 0.9, y: 2 0 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}';
-            exit={{ opacity: 0, scale: 0.9, y: 2 0 }}';';
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.9, y: 2 0 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}
             className="fixed bottom-20 right-4 z-40 w-96 h-[600px] bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-xl shadow-2xl overflow-hidden";
           >;
@@ -232,10 +232,10 @@ export const AIChatbotSystem: Reac t.FC<AIChatbotSystemProps> = ({
               {messages.map((message) => (;
                 <motion.div;
                   key={message.id}
-                  initial={{ opacity: 0, y: 1 0 }}';
-                  animate={{ opacity: 1, y: 0 }}';';
-                  className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}';
-                >';';
+                  initial={{ opacity: 0, y: 1 0 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
+                >';
                   <div className={`max-w-[80%] ${message.sender === 'user' ? 'bg-cyan-500 text-white' : 'bg-gray-800 text-white'} rounded-lg p-3`}>
                     <p className="text-sm whitespace-pre-wrap">{message.content}</p>
                     {message.metadata?.suggestions && (
@@ -264,9 +264,9 @@ export const AIChatbotSystem: Reac t.FC<AIChatbotSystemProps> = ({
                   className="flex justify-start"
                 >
                   <div className="flex items-center gap-2 p-3 bg-gray-800/50 rounded-lg">
-                    <div className="flex space-x-1">';
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>';';
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="{{{ animationDelay: '0.1s'}}"}></div>';';
+                    <divclassName="flex space-x-1">
+                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>';
+                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="{{{ animationDelay: '0.1s'}}"}></div>';
                       <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="{{{ animationDelay: '0.2s'}}"}></div>
                     </div>
                     <span className="text-sm text-gray-400">Zion AI is typing...</span>
@@ -323,5 +323,5 @@ export default AIChatbotSystem;
 </HTMLInputElement>
 </HTMLDivElement>
 </any>
-</ChatMessage>';
-</AIChatbotSystemProps>;';;';
+</ChatMessage>
+</AIChatbotSystemProps>;';';

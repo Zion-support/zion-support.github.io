@@ -64,7 +64,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
       "API management",
       "Multi-tenant architecture"
     ]
-  }
+  };
 ];
 
 export const SERVICE_CATEGORIES = [
@@ -1324,7 +1324,7 @@ export const ENHANCED_SERVICES: ProductListin g[] = [// AI & Machine Learning Se
     reviewCount: 7 8,"
     location: "Global","
     availability: "3-4 Weeks",
-    aiScore: 9 1}];
+    aiScore: 9 1};];
 
 // Append additional diversified, real micro SaaS, IT, and AI services;
 export const MORE_ENHANCED_SERVICES: ProductListin g[] = [{
@@ -1406,7 +1406,7 @@ export const MORE_ENHANCED_SERVICES: ProductListin g[] = [{
     createdAt: "2025-02-01T08: 0 0:00.000Z",
     rating: 4.7,
     reviewCount: 2 8,"
-    link: "https://ziontechgroup.com/services/pdf-render-api"}];
+    link: "https://ziontechgroup.com/services/pdf-render-api"};];
 ;
 export const ALL_ENHANCED_SERVICES: ProductListin g[] = [...ENHANCED_SERVICES,
   ...MORE_ENHANCED_SERVICES
@@ -1428,12 +1428,12 @@ export const SERVICE_PRICING_TIERS = {
   premium: { range: "$25,000 - $50,000+", description: "Specialized industry solutions and cutting-edge technology" }};
 
 // Contact information;
-export const CONTACT_INFO: unknow n = {}
-"""
-""""
-  mobile: "+1 302 464 0950",""""
-  email: "kleber@ziontechgroup.com",""""
-  address: "364 E Main St STE 1008 Middletown DE 19709",""""
+export const CONTACT_INFO: unknow n = {};
+"
+"
+  mobile: "+1 302 464 0950","
+  email: "kleber@ziontechgroup.com","
+  address: "364 E Main St STE 1008 Middletown DE 19709","
 website: "https://ziontechgroup.com",
   ;
   domain: "ziontechgroup.com"};
@@ -1448,6 +1448,6 @@ export default function enhancedServices() {return (
           Professional enhancedServices services to help your business grow.
         </p>
       </div>
-  );"}"';
-;';;';
+  );"}";
+;';';
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599

@@ -1,50 +1,50 @@
-import React, {useState} from 'react';';';
+import React, {useState} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 
-export default function Page(props: any) {
+export default function Page($1) {
 ,
-    {';
-';';
-        id: 'iot-solutions',';';
-        title: 'IoT Solutions',';';
-        description: 'Connected devices and smart systems for the modern world',"';
-        icon: <Cpu className="w-8 h-8" />,';';
-        color: 'from-zion-cyan to-zion-purple',';';
-        bgColor: 'from-zion-cyan/20 to-zion-purple/20',';';
-        features = ['';';
-            'Device connectivity management',Real-time monitoring',Data collection & analysis',Remote control systems',Predictive maintenance'';
-        ],';';
-        benefits = ['';';
-            'Monitor assets in real-time',Reduce maintenance costs by 30%',Improve operational efficiency'';
-        ],';';
+    {
+
+        id: 'iot-solutions',
+        title: 'IoT Solutions',
+        description: 'Connected devices and smart systems for the modern world',";
+        icon: <Cpu className="w-8 h-8" />,
+        color: 'from-zion-cyan to-zion-purple',
+        bgColor: 'from-zion-cyan/20 to-zion-purple/20',
+        features = ['
+            'Device connectivity management',Real-time monitoring',Data collection & analysis',Remote control systems',Predictive maintenance'
+        ],
+        benefits = ['
+            'Monitor assets in real-time',Reduce maintenance costs by 30%',Improve operational efficiency'
+        ],
         useCases['Manufacturing',Smart Cities',Agriculture',Healthcare'],
-        rating: 4.6,';
-        projects: 90,';';
-        category: 'Connected Devices'';
-    },';';
-    {id: 'mobile-apps',';';
-        title: 'Mobile Applications',';';
-        description: 'Native and cross-platform mobile solutions for all devices',"';
-        icon: <Smartphone className="w-8 h-8" />,';';
-        color: 'from-zion-purple to-zion-cyan',';';
-        bgColor: 'from-zion-purple/20 to-zion-cyan/20',';';
-        features = ['';';
-            'iOS & Android development',Cross-platform solutions',UI/UX design',Performance optimization',App store deployment'';
-        ],';';
-        benefits = ['';';
-            'Reach customers on all devices',Improve user engagement',Increase brand visibility'';
-        ],';';
+        rating: 4.6,
+        projects: 90,
+        category: 'Connected Devices'
+    },
+    {id: 'mobile-apps',
+        title: 'Mobile Applications',
+        description: 'Native and cross-platform mobile solutions for all devices',";
+        icon: <Smartphone className="w-8 h-8" />,
+        color: 'from-zion-purple to-zion-cyan',
+        bgColor: 'from-zion-purple/20 to-zion-cyan/20',
+        features = ['
+            'iOS & Android development',Cross-platform solutions',UI/UX design',Performance optimization',App store deployment'
+        ],
+        benefits = ['
+            'Reach customers on all devices',Improve user engagement',Increase brand visibility'
+        ],
         useCases['Retail',Entertainment',Education',Healthcare'],
-        rating: 4.8,';
-        projects: 250,';';
-        category: 'Mobile'}';
+        rating: 4.8,
+        projects: 250,
+        category: 'Mobile'}
 ];';';
-const industries = ['"';';
-    {name: 'Healthcare', icon: <Shield className="w-5 h-5" />, projects: 80},"';';
-    {name: 'Finance', icon: <TrendingUp className="w-5 h-5" />, projects: 120},"';';
-    {name: 'Retail', icon: <Globe className="w-5 h-5" />, projects: 95},"';';
-    {name: 'Manufacturing', icon: <Cpu className="w-5 h-5" />, projects: 75},"';';
-    {name: 'Education', icon: <Users className="w-5 h-5" />, projects: 60},"';';
+const industries = [";
+    {name: 'Healthcare', icon: <Shield className="w-5 h-5" />, projects: 80},";';
+    {name: 'Finance', icon: <TrendingUp className="w-5 h-5" />, projects: 120},";';
+    {name: 'Retail', icon: <Globe className="w-5 h-5" />, projects: 95},";';
+    {name: 'Manufacturing', icon: <Cpu className="w-5 h-5" />, projects: 75},";';
+    {name: 'Education', icon: <Users className="w-5 h-5" />, projects: 60},";';
     {name: 'Government', icon: <Lock className="w-5 h-5" />, projects: 45}
 ];
     const [selectedSolution, setSelectedSolution] = useState(null);
@@ -61,7 +61,7 @@ const industries = ['"';';
                 delayChildren: 0.1
             }
         }
-    };
+    };;
     const itemVariants = {
 
   hidden: { y: 30,
@@ -78,7 +78,7 @@ const industries = ['"';';
                 ease: "easeOut"
             }
         }
-    };
+    };;
     const cardVariants = {
 
   hidden: { scale: 0.95,
@@ -95,7 +95,7 @@ const industries = ['"';';
                 ease: "easeOut"
             }
         }
-    };"
+    };;"
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Background decorative elements */}"
       <div className="absolute inset-0 opacity-5">"
@@ -297,10 +297,10 @@ const industries = ['"';';
             </div>
           </div>
         </motion.div>
-      </div>';
-    </section>)}';';
-'"`
+      </div>
+    </section>)}
+"`
 
 </motion>
-</motion>';
-</motion>;';;';
+</motion>
+</motion>;';';

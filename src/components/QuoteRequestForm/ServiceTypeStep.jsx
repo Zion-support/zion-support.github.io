@@ -8,8 +8,8 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {useDebounce} from "@/hooks/useDebounce";
 import {z} from "zod";
 const listingsSchema = z.array(listingSchema);
-export function ServiceTypeStep(props: any) {
-    const [searchQuery, setSearchQuery] = useState("");
+export function ServiceTypeStep($1) {
+    const [searchQuery, setSearchQuery] = useState(");
     const debouncedQuery = useDebounce(searchQuery, 300);
     const [listings, setListings] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -22,15 +22,15 @@ export function ServiceTypeStep(props: any) {
         const fetchServices = async () => {
             setLoading(true);
             setError(null);
-            const url = `/api/public/services?category=${encodeURIComponent(formData.serviceType)}&q=${encodeURIComponent(debouncedQuery)}`;
+            const url = `/api/public/services?category=${encodeURIComponent(formData.serviceType)}&q=${encodeURIComponent(debouncedQuery)};`;
             const maxRetries = 3;
             for (let attempt = 0; attempt < maxRetries; attempt++) {
                 try {
-                    const response = await fetch(url);';
+                    const response = await fetch(url);
                     if (!response.ok)';';
                         throw new Error('Failed to fetch');
                     const data = await response.json();
-                    const parsed = listingsSchema.safeParse(data);';
+                    const parsed = listingsSchema.safeParse(data);
                     if (!parsed.success)';';
                         throw new Error('Invalid response');
                     setListings(parsed.data);
@@ -40,7 +40,7 @@ export function ServiceTypeStep(props: any) {
                         }
                         else {
                             captureException(err);
-';
+
                         setListings([]);';';
                         setError('Failed to load services');
                         setLoading(false);
@@ -48,12 +48,11 @@ export function ServiceTypeStep(props: any) {
                     else {
                         await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 500));
 
-                    return}
-                catch (err) {';
-                    if (attempt === maxRetries - 1) {';';
-                        if (process.env.NODE_ENV === 'development') {';';
+                    return} catch (err) {
+                    if (attempt === maxRetries - 1) {
+                        if (process.env.NODE_ENV === 'development') {
                             console.error('Failed to load services:', err)}
-                        else {captureException(err)}';
+                        else {captureException(err)}
                         setListings([]);';';
                         setError('Failed to load services');
                         setLoading(false)}
@@ -62,20 +61,20 @@ export function ServiceTypeStep(props: any) {
             }
         };
         fetchServices()}, [formData.serviceType, debouncedQuery]);
-    const handleItemSelect = (props: any) => {
+    const handleItemSelect = (props) => {
         updateFormData({
             specificItem: item,
             serviceCategory: item.category,
             serviceType: item.category.toLowerCase()
-        })};
+        })};;
     const sourceListings = listings;
     const filteredListings = sourceListings.filter(item => {
         // Filter by category only when a service type has been selected
-        if (formData.serviceType !== "") {
+        if (formData.serviceType !== ") {
             const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase();
             if (!categoryMatch)
                 return false}
-        if (searchQuery.trim() === "")
+        if (searchQuery.trim() === ")
             return true;
         return item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.category.toLowerCase().includes(searchQuery.toLowerCase())});
@@ -121,7 +120,7 @@ export function ServiceTypeStep(props: any) {
           <div className="grid grid-cols-1 gap-4 mt-4">
             {loading ? (<>
                 <Skeleton className="h-[120px] w-full" />
-              </>) : filteredListings.length > 0 ? (filteredListings.map((item) => (<div key={item.id} onClick={() => handleItemSelect(item)} className={`cursor-pointer transition-all ${formData.specificItem?.id === item.id ? "ring-2 ring-zion-purple rounded-lg" : ""}`}>
+              </>) : filteredListings.length > 0 ? (filteredListings.map((item) => (<div key={item.id} onClick={() => handleItemSelect(item)} className={`cursor-pointer transition-all ${formData.specificItem?.id === item.id ? "ring-2 ring-zion-purple rounded-lg" : "}`}>
                   <ListingScoreCard title={item.title} category={item.category} aiScore={Math.floor(Math.random() * 30) + 70} rating={Math.floor(Math.random() * 2) + 3} reviewCount={Math.floor(Math.random() * 50) + 10} image={item.image} description="Sample listing description" />
                 </div>))) : (<div className="text-center py-8 text-zion-slate-light">
                 No items found. Please try a different search.
@@ -134,5 +133,5 @@ export function ServiceTypeStep(props: any) {
 }
         </div>
   );
-}';
-export default ServiceTypeStep;;';;';
+}
+export default ServiceTypeStep;';';

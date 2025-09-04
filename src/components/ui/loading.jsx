@@ -1,24 +1,24 @@
 import {cn} from '@/lib/utils';
-export function Loading(props: any) {';
-    const sizeClasses = {';';
-  sm: 'w-4 h-4',';';
-        md: 'w-6 h-6',';';
-        lg: 'w-8 h-8',';';
+export function Loading($1) {
+    const sizeClasses = {
+  sm: 'w-4 h-4',
+        md: 'w-6 h-6',
+        lg: 'w-8 h-8',
   xl: 'w-12 h-12'
     
 
-};
-    const renderContent = (props: any) => {';
-        switch (variant) {';';
-            case 'dots':';
-                return renderDots();';';
-            case 'pulse':';
-                return renderPulse();';';
+};;
+    const renderContent = (props) => {
+        switch (variant) {
+            case 'dots':
+                return renderDots();
+            case 'pulse':
+                return renderPulse();
             case 'skeleton':
                 return renderSkeleton();
             default:
-                return renderSpinner()}';
-    };';
+                return renderSpinner()}
+    };
     return (
     <div className="min-h-screen bg-white">
       {renderContent()}
@@ -27,15 +27,15 @@ export function Loading(props: any) {';
   );
 }
 // Skeleton loading for content
-export function Skeleton(props: any) {';
-    return (<div className = {';';
+export function Skeleton($1) {
+    return (<div className = {
   cn('animate-pulse rounded-md bg-zion-slate-light/20',
   className)
 
 } {...props} />);
 }
 // Page loading component
-export function PageLoading(props: any) {return (
+export function PageLoading($1) {return (
     <div className="min-h-screen bg-white">
       <div className="text-center space-y-4">
         <Loading size="xl" variant="spinner" className="text-zion-cyan" />
@@ -46,7 +46,7 @@ export function PageLoading(props: any) {return (
   );
 }
 // Content skeleton loading
-export function CardSkeleton(props: any) {return (
+export function CardSkeleton($1) {return (
     <div className="min-h-screen bg-white">
       <div className="h-6 bg-zion-slate-light/20 rounded w-1/2"></div>
       <div className="space-y-2">
@@ -58,4 +58,4 @@ export function CardSkeleton(props: any) {return (
   );
 }
 export default loading;';
-</div>;';;';
+</div>;';';

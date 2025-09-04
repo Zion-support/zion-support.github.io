@@ -1,11 +1,11 @@
-import React, {useState} from 'react';';';
-import {motion} from 'framer-motion';';';
-import {  import { motion  } from 'framer-motion';';';
+import React, {useState} from 'react';
+import {motion} from 'framer-motion';
+import {  import { motion  } from 'framer-motion';
  from 'lucide-react';
 
-export function NewsletterSection(props: any) {';
-';';
-  const [email, setEmail] = useState('');
+export function NewsletterSection($1) {
+
+  const [email, setEmail] = useState(");
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -19,31 +19,31 @@ export function NewsletterSection(props: any) {';
 
     setIsSubscribed(true);';
     setIsLoading(false);';';
-    setEmail('');
+    setEmail(");
   };
-';
-  const benefits = [{icon: <Star className="w-6 h-6"  />,';';
-      title: 'Exclusive Content',';';
-      description: 'Access to premium tech insights and industry reports'},
-    {"';
-      icon: <Zap className="w-6 h-6"  />,';';
-      title: 'Early Access',';';
+
+  const benefits = [{icon: <Star className="w-6 h-6"  />,
+      title: 'Exclusive Content',
+      description: 'Access to premium tech insights and industry reports'};,
+    {";
+      icon: <Zap className="w-6 h-6"  />,
+      title: 'Early Access',
       description: 'Be the first to know about new services and features'},
-    {"';
-      icon: <Shield className="w-6 h-6"  />,';';
-      title: 'Expert Tips',';';
+    {";
+      icon: <Shield className="w-6 h-6"  />,
+      title: 'Expert Tips',
       description: 'Weekly tips from our technology experts'},
-    {"';
-      icon: <Users className="w-6 h-6"  />,';';
-      title: 'Community Access',';';
+    {";
+      icon: <Users className="w-6 h-6"  />,
+      title: 'Community Access',
       description: 'Join our exclusive tech community'},
   ];';
-';';
-  const stats = ['';';
-    {value: '50K+', label: 'Subscribers'},';';
-    {value: '95%', label: 'Satisfaction'},';';
-    {value: '24/7', label: 'Support'},';';
-    {value: '100%', label: 'Free'},
+
+  const stats = ['
+    {value: '50K+', label: 'Subscribers'},
+    {value: '95%', label: 'Satisfaction'},
+    {value: '24/7', label: 'Support'},
+    {value: '100%', label: 'Free'};,
   ];
 
   const containerVariants = {
@@ -55,12 +55,12 @@ export function NewsletterSection(props: any) {';
       transition: {
 
         staggerChildren: 0.2,
-        delayChildren: 0.1}}};
+        delayChildren: 0.1}}};;
 
   const itemVariants = {
 
     hidden: { opacity: 0, y: 20 },
-    visible: {opacity: 1, y: 0}};
+    visible: {opacity: 1, y: 0}};;
 
   if(isSubscribed) {
 
@@ -83,8 +83,8 @@ export function NewsletterSection(props: any) {';
             </div>"
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Welcome to the Family!
-            </h2>"';
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">';';
+            </h2>";
+            <pclassName="text-xl text-zion-slate-light max-w-2xl mx-auto">';
               Thank you for subscribing! You're now part of our exclusive tech
               community.</p>
           </motion.div>
@@ -140,8 +140,8 @@ export function NewsletterSection(props: any) {';
             </div>
 "
             <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">
-              Stay Ahead with"';
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-blue">';';
+              Stay Ahead with";
+              <spanclassName="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-blue">';
                 {' '}
                 Tech Insights
               </span>
@@ -231,8 +231,8 @@ export function NewsletterSection(props: any) {';
                 </button>
               </form>
 "
-              <div className="text-center mt-6">"';
-                <p className="text-xs text-zion-slate-light">';';
+              <div className="text-center mt-6">";
+                <pclassName="text-xs text-zion-slate-light">';
                   By subscribing, you agree to our{' '}"
                   <a href="/privacy" className="text-zion-cyan hover:underline">
                     Privacy Policy
@@ -244,8 +244,8 @@ export function NewsletterSection(props: any) {';
         </div>
       </motion.div>
     </section>) ;';
-}';';
-const benefits = [] const stats = [] export function NewsletterSection(props: any) { const [email, setEmail] = useState(') const [isSubscribed, setIsSubscribed] = useState(false) const [isLoading, setIsLoading] = useState(false) const [showBenefits, setShowBenefits] = useState(false) const handleSubmit = (props: any) => { e.preventDefault()"""
+}
+const benefits = [] const stats = [] export function NewsletterSection($1) { const [email, setEmail] = useState(") const [isSubscribed, setIsSubscribed] = useState(false) const [isLoading, setIsLoading] = useState(false) const [showBenefits, setShowBenefits] = useState(false) const handleSubmit = (props) => { e.preventDefault()"
 </motion>
-</motion>';
-</motion>;';;';
+</motion>
+</motion>;';';

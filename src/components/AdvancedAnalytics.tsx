@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react';';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
 export /**';';
 import { motion, AnimatePresence  } from 'framer-motion';
 
@@ -54,9 +54,9 @@ function AdvancedAnalytics({
       viewport: `${window.innerWidth}x${window.innerHeight}`,
       language: navigato r.language,
       timezone: Int l.DateTimeFormat () .resolvedOptions () .timeZone
-    };
-';
-    // Send to analytics service';';
+    };;
+
+    // Send to analytics service
     this.sendAnalyticsData('pageview', pageViewData) ;
     // Update local state
     setAnalyticsData(prev => ({
@@ -64,12 +64,12 @@ function AdvancedAnalytics({
       ...prev,
       pageViews: pre v.pageViews + 1
     }) ) }, [enabled, userSession]) ;';
-';';
+
   // Track user interactions'
 
     // Update tracking ref
-    switch(type) {';
-';';
+    switch(type) {
+
       case 'click':
         trackingRef.current.clicks++;';
         break;';';
@@ -81,46 +81,46 @@ function AdvancedAnalytics({
         break;';';
       case 'error':
         trackingRef.current.errors++;
-        break}';
-';';
-    // Send to analytics service'';';
+        break}
+
+    // Send to analytics service'
     this.sendAnalyticsData('interaction', interactionData);
 
     // Update local state
     setAnalyticsData(prev => ({
 
       ...prev,
-      interactions: {';
-        ...prev.interactions,';';
+      interactions: {
+        ...prev.interactions,
         [type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`]:          prev.interactions[type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`] + 1
       }
     }) ) }, [enabled, userSession, currentPage]) ;
 
-  // Track performance metrics';
+  // Track performance metrics
   ';';
-    // Use Performance API to get metrics'';';
-    if('performance' in window) {';';
-      const navigation = performance.getEntriesByType('navigation') [0] as PerformanceNavigationTiming;';';
+    // Use Performance API to get metrics'
+    if('performance' in window) {
+      const navigation = performance.getEntriesByType('navigation') [0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint') ;
 
       const performanceData = {
-        sessionId: userSessio n,';
-        loadTime: navigatio n.loadEventEnd - navigation.loadEventStart,';';
-        firstPaint: pain t.find(entry => entry.name === 'first - paint') ?.startTime || 0,';';
+        sessionId: userSessio n,
+        loadTime: navigatio n.loadEventEnd - navigation.loadEventStart,
+        firstPaint: pain t.find(entry => entry.name === 'first - paint') ?.startTime || 0,
         firstContentfulPaint: pain t.find(entry => entry.name === 'first - contentful - paint') ?.startTime || 0,
         largestContentfulPaint: 0, // Will be updated by observer
-timestamp: new Date () .toISOString () };
+timestamp: new Date () .toISOString () };;
 // Add to heatmap data
 timestamp: new Date () .toISOString () };      // Add to heatmap data
-if(enableHeatmap) {';
-';';
+if(enableHeatmap) {
+
         setHeatmapData(prev => [...prev, { x: positio n.x, y: positio n.y, type: 'click' }])}    };
 
     // Setup scroll tracking
     let scrollTimeout: NodeJ S.Timeout;
-    const handleScroll = (props: any) => {
-      clearTimeout(scrollTimeout) ;';
-      scrollTimeout = setTimeout(() => {';';
+    const handleScroll = (props) => {
+      clearTimeout(scrollTimeout) ;
+      scrollTimeout = setTimeout(() => {
         trackInteraction('scroll', {
           scrollY: windo w.scrollY,
           scrollHeight: documen t.documentElement.scrollHeight
@@ -129,8 +129,8 @@ if(enableHeatmap) {';
     };
 
     // Setup form submission tracking
-    const handleFormSubmit = (props: any) => {';
-      const form = e.target as HTMLFormElement;';';
+    const handleFormSubmit = (props) => {
+      const form = e.target as HTMLFormElement;
       trackInteraction('form', {        formId: for m.id || form.className,
         formAction: for m.action,
         formMethod: for m.method
@@ -141,15 +141,15 @@ if(enableHeatmap) {';
     };
 
     // Setup unhandled promise rejection tracking
-    const handleUnhandledRejection = (props: any) => {';
-';';
-      trackInteraction('error', {';
-';';
+    const handleUnhandledRejection = (props) => {
+
+      trackInteraction('error', {
+
         message: e.reason?.message || 'Unhandled Promise Rejection',
         reason: e.reason
-      }) };';
-';';
-    // Add event listeners'';';
+      }) };;';
+
+    // Add event listeners'
     document.addEventListener('click', handleClick);';';
     document.addEventListener('scroll', handleScroll);';';
     document.addEventListener('submit', handleFormSubmit);';';
@@ -169,13 +169,13 @@ if(enableHeatmap) {';
 
         // Page visible - track session resume
         setSessionStart(Date.now () ) ;
-      }';
+      }
     };';';
     document.addEventListener('visibilitychange', handleVisibilityChange);
 
     // Cleanup
-    return () => {';
-';';
+    return () => {
+
       document.removeEventListener('click', handleClick);';';
       document.removeEventListener('scroll', handleScroll);';';
       document.removeEventListener('submit', handleFormSubmit);';';
@@ -191,7 +191,7 @@ if(enableHeatmap) {';
     // Cleanup function
   };
 }, []);, []);';
-';';
+
     if(!enabled || !('PerformanceObserver' in window)) return;
 
     try {
@@ -207,26 +207,26 @@ if(enableHeatmap) {';
               largestContentfulPaint: lastEntr y.startTime
             }
           }) ) ;
-        }';
+        }
       });';';
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
-      return () => lcpObserver.disconnect () } catch(error) {
+      return () => lcpObserver.disconnect () } catch (error) {
 
       // }
   }, [enabled]) ;
 
   // Send analytics data to service
   
-    try {';
-      ';';
-      // Send to analytics endpoint'';';
-      await fetch('/api/analytics', {';';
+    try {
+      
+      // Send to analytics endpoint'
+      await fetch('/api/analytics', {
         method: 'POST',
-        headers: {';
-';';
+        headers: {
+
           'Content-Type': 'application/json'},
-        body: JSO N.stringify(analyticsPayload)})} catch(error) {
+        body: JSO N.stringify(analyticsPayload)})} catch (error) {
 
       // }
   }, [trackingId, userSession]) ;
@@ -246,23 +246,23 @@ if(enableHeatmap) {';
       pageViews: Mat h.floor(Math.random() * 1000) + 500,
       uniqueVisitors: Mat h.floor(Math.random() * 500) + 200,
       sessionDuration: Mat h.floor(Math.random() * 300) + 120,
-      bounceRate: Mat h.random() * 40 + 20,';
-      conversionRate: Mat h.random() * 5 + 1,';';
-      topPages: ['';';
-        { path: '/', views: Mat h.floor(Math.random() * 500) + 200 },';';
-        { path: '/services', views: Mat h.floor(Math.random() * 300) + 150 },';';
-        { path: '/about', views: Mat h.floor(Math.random() * 200) + 100 },';';
-        { path: '/contact', views: Mat h.floor(Math.random() * 150) + 80 }';
-      ],';';
-      userAgents: ['';';
-        { device: 'Desktop', count: Mat h.floor(Math.random() * 400) + 200 },';';
-        { device: 'Mobile', count: Mat h.floor(Math.random() * 300) + 150 },';';
-        { device: 'Tablet', count: Mat h.floor(Math.random() * 100) + 50 }';
-      ],';';
-      locations: ['';';
-        { country: 'United States', count: Mat h.floor(Math.random() * 300) + 150 },';';
-        { country: 'United Kingdom', count: Mat h.floor(Math.random() * 150) + 80 },';';
-        { country: 'Canada', count: Mat h.floor(Math.random() * 100) + 50 },';';
+      bounceRate: Mat h.random() * 40 + 20,
+      conversionRate: Mat h.random() * 5 + 1,
+      topPages: ['
+        { path: '/', views: Mat h.floor(Math.random() * 500) + 200 },
+        { path: '/services', views: Mat h.floor(Math.random() * 300) + 150 },
+        { path: '/about', views: Mat h.floor(Math.random() * 200) + 100 },
+        { path: '/contact', views: Mat h.floor(Math.random() * 150) + 80 }
+      ],
+      userAgents: ['
+        { device: 'Desktop', count: Mat h.floor(Math.random() * 400) + 200 },
+        { device: 'Mobile', count: Mat h.floor(Math.random() * 300) + 150 },
+        { device: 'Tablet', count: Mat h.floor(Math.random() * 100) + 50 }
+      ],
+      locations: ['
+        { country: 'United States', count: Mat h.floor(Math.random() * 300) + 150 },
+        { country: 'United Kingdom', count: Mat h.floor(Math.random() * 150) + 80 },
+        { country: 'Canada', count: Mat h.floor(Math.random() * 100) + 50 },
         { country: 'Germany', count: Mat h.floor(Math.random() * 80) + 40 }
       ],
       performance: {
@@ -279,7 +279,7 @@ if(enableHeatmap) {';
         formSubmissions: Mat h.floor(Math.random() * 50) + 20,
         errors: Mat h.floor(Math.random() * 10) + 2
       }
-    };
+    };;
 
     setAnalyticsData(mockData) }, [enabled]) ;
   if(!enabled) return null;
@@ -398,11 +398,11 @@ if(enableHeatmap) {';
             {/* Device Distribution */}"
             <div className="mb-6">"
               <h3 className="text-sm font-medium text-gray-700 mb-3">Device Distribution</h3>"
-              <div className="space-y-2">';
-                {analyticsData.userAgents.map((device, index) => ("';';
-                  <div key={index} className="flex items-center gap-2 text-xs">'"';';
-                    {device.device === 'Desktop' && <Monitor className="w-3 h-3 text-blue-500"   />}'"';';
-                    {device.device === 'Mobile' && <Smartphone className="w-3 h-3 text-green-500"   />}'"';';
+              <divclassName="space-y-2">
+                {analyticsData.userAgents.map((device, index) => (";';
+                  <div key={index} className="flex items-center gap-2 text-xs">";';
+                    {device.device === 'Desktop' && <Monitor className="w-3 h-3 text-blue-500"   />}";';
+                    {device.device === 'Mobile' && <Smartphone className="w-3 h-3 text-green-500"   />}";';
                     {device.device === 'Tablet' && <Tablet className="w-3 h-3 text-purple-500"   />}"
                     <span className="flex-1">{device.device}</span>"                    <span className="font-mono text-gray-600">{device.count}</span>
                   </div>
@@ -411,10 +411,10 @@ if(enableHeatmap) {';
             </div>
 
             {/* Status Indicators */}"
-            <div className="pt-4 border-t border-gray-200">"';
-              <div className="flex items-center justify-between text-xs text-gray-500">"';';
-                <div className="flex items-center gap-2">'`';';
-                  <div className={`w-2 h-2 rounded-full ${isTracking ? 'bg-green-500' : 'bg-red-500'}`}  />';';
+            <div className="pt-4 border-t border-gray-200">";
+              <div className="flex items-center justify-between text-xs text-gray-500">";';
+                <div className="flex items-center gap-2">'`
+                  <divclassName={`w-2 h-2 rounded-full ${isTracking ? 'bg-green-500' : 'bg-red-500'}`}  />';
                   <span>{isTracking ? 'Tracking Active' : 'Tracking Inactive'}</span>
                 </div>
                 <button
@@ -425,10 +425,10 @@ if(enableHeatmap) {';
               </div>
             </div>
           </motion.div>) }
-      </AnimatePresence>';
+      </AnimatePresence>
     </>';';
-  )}}}}}}}}}}}}}'"`
+  )}}}}}}}}}}}}}"`
 ;,"});,})";
 
-</motion>';
-</motion>;';;';
+</motion>
+</motion>;';';

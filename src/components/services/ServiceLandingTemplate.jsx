@@ -1,7 +1,7 @@
 import {GradientHeading} from "@/components/GradientHeading";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardFooter} from "@/components/ui/card";
-export const ServiceLandingTemplate = (props: any) => {
+export const ServiceLandingTemplate = (props) => {
     return (
     <div className="min-h-screen bg-white">
       <section className="bg-zion-blue py-16 px-4 text-center">
@@ -32,7 +32,7 @@ export const ServiceLandingTemplate = (props: any) => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, idx) => (<div key={idx} className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/20 text-center">
                 {benefit.icon && (<div className="mb-4 flex justify-center text-zion-cyan">
-                    {benefit.icon}
+                    {benefit.icon};
                       </div>
   );
 }
@@ -74,4 +74,4 @@ export const ServiceLandingTemplate = (props: any) => {
       </section>
     </div>);
 };
-;;
+;

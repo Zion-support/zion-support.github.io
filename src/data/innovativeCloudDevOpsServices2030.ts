@@ -51,9 +51,9 @@ pricing: {
   trending: boolean}
 
 // Zion Tech Group Contact Information;
-const zionContact: unknown = {}
-  phone: "+1 302 464 0950",""""
-  email: "kleber@ziontechgroup.com",""""
+const zionContact: unknown = {};
+  phone: "+1 302 464 0950","
+  email: "kleber@ziontechgroup.com","
   website: "https://ziontechgroup.com",
   ;
   ;"
@@ -74,7 +74,7 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [{
       currency: "$","
       pricingModel: "Monthly subscription with resource-based pricing","
       marketPrice: "$799-1,599/month"
-    },
+    };,
     features[;"
       "Unified cloud dashboard","
       "Automated resource provisioning","

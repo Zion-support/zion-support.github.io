@@ -4,8 +4,7 @@ interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {;
   children: React.ReactNode;
   className?: string;
 }
-';
-export function Select(props: any) {';';
+export function Select($1) {
   const baseClasses = 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus: outlin e-none focus: rin g-2 focus: rin g-ring focus: rin g-offset-2 disabled: curso r-not-allowed disabled: opacit y-50';
 ;
   return (;
@@ -24,7 +23,7 @@ interface SelectTriggerProps {;
 ;
 }
 
-export function SelectTrigger(props: any) {
+export function SelectTrigger($1) {
   return (
     <div className="min-h-screen bg-white">
       {children}
@@ -38,7 +37,7 @@ interface SelectContentProps {;
 ;
 }
 
-export function SelectContent(props: any) {
+export function SelectContent($1) {
   return (
     <div className="min-h-screen bg-white">
       {children}
@@ -52,7 +51,7 @@ interface SelectValueProps {;
 ;
 }
 ;
-export function SelectValue(props: any) {;
+export function SelectValue($1) {;
   return (;
     <span className="block truncate">;
       {children || placeholder}
@@ -67,11 +66,11 @@ interface SelectItemProps {;
 ;
 }
 ;
-export function SelectItem(props: any) {;
+export function SelectItem($1) {;
   return (;
     <option value={value} className={className}>;
       {children}
     </option>;
   );
-}';
-</HTMLSelectElement>;';;';
+}
+</HTMLSelectElement>;';';

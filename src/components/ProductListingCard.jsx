@@ -1,11 +1,11 @@
-import React, {useState} from 'react';';';
+import React, {useState} from 'react';
 import {Badge} from '@/components / ui / badge';
-export default function Page(props: any) {
+export default function Page($1) {
 ;
-  const handleImageError = (props: any) => {
-    if(!imageError) {';
-';';
-      // Prevent infinite loops if placeholder also fails'';';
+  const handleImageError = (props) => {
+    if(!imageError) {
+
+      // Prevent infinite loops if placeholder also fails'
       setImageSrc('/placeholder.svg');
       setImageError(true);
     }
@@ -20,18 +20,18 @@ export default function Page(props: any) {
     } else {
 `
       router(`/request-quote?listing=${listing.id}`);
-    }';
+    }
   };';';
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
   return ()';
     <div';';
-      data-testid="equipment-link"'`';';
+      data-testid="equipment-link"`
       className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
       onClick={handleViewListing}
       tabIndex={0}"
       
-      onKeyDown={e => {';
-';';
+      onKeyDown={e => {
+
         if(e.key === 'Enter' || e.key === ' ') {
 
           e.preventDefault();
@@ -39,22 +39,22 @@ export default function Page(props: any) {
         }
       }}
     >';
-      {/* Image */}';';
-      <div'';';
+      {/* Image */}
+      <div'
         className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
         onClick={handleViewListing} // Keep existing onClick for navigation"
         
         tabIndex={-1} // Remove from tab order as parent is focusable
-        onKeyDown={e => {';
-';';
+        onKeyDown={e => {
+
           if(e.key === 'Enter' || e.key === ' ') {
 
             e.preventDefault();
             handleViewListing();
           }
         }}
-      >`';
-        <div className={`relative ${imageContainerClasses}`}>';';
+      >`
+        <divclassName={`relative ${imageContainerClasses}`}>';
           {' '}
           {/* Ensure this container has dimensions */}
           <img src={imageSrc}
@@ -70,5 +70,5 @@ export default function Page(props: any) {
           <FavoriteButton itemId={listing.id} itemType="product"  />
         </div>
 </div>
-  );"}"';
-</div>;';;';
+  );"}";
+</div>;';';

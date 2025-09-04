@@ -25,8 +25,8 @@ import React from 'react';
               ;"
               <div className="space-y-2"> {group.options.map((option: unknow n {;
                   ';
-                  return ("                    <label key = {option.value} className="flex items-center gap-3 cursor-pointer">';';
-                      <input'';';
+                  return ("                    <labelkey = {option.value} className="flex items-center gap-3 cursor-pointer">
+                      <input'
                         type={group.type === 'radio' ? 'radio' : 'checkbox'}
                         name={group.key}
                         value={option.value}
@@ -55,5 +55,5 @@ import React from 'react';
         </div>
       </div>
     </>';
-  )}';';
-'"`;';;';
+  )}
+"`;';';

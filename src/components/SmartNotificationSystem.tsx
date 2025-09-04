@@ -1,4 +1,4 @@
-import {  import { motion, AnimatePresence  } from 'framer-motion';';';
+import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
 ;
   id: string;
@@ -24,11 +24,11 @@ interface SmartNotificationSystemProps {;
 ;
 };
 ;
-const SmartNotificationSystem: React.FC<SmartNotificationSystemProps> = ({ enabled = true }) => {;
+const SmartNotificationSystem: React.FC<SmartNotificationSystemProps> = ({ enabled = true };) => {;
   if(!enabled) return null;
   return <div className="hidden" aria-hidden="true"  />};
 ;
 export default SmartNotificationSystem;
 ;,"});,})";
-';
-</SmartNotificationSystemProps>;';;';
+
+</SmartNotificationSystemProps>;';';

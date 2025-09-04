@@ -3,8 +3,8 @@ import {  import { motion  } from 'framer-motion';
  params - Function parameters
  * @returns {*} Function return value
  */
-function TechSolutionsSection(props: any) {
-export function TechSolutionsSection(props: any) {
+function TechSolutionsSection($1) {
+export function TechSolutionsSection($1) {
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
@@ -126,8 +126,8 @@ export function TechSolutionsSection(props: any) {
           <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">"
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Ready to Transform Your Business?
-            </h3>"';
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">';';
+            </h3>";
+            <pclassName="text-gray-600 mb-6 max-w-2xl mx-auto">';
               Let's discuss how our technology solutions can help you achieve
               your business goals and stay ahead of the competition.</p>"
             <div className="flex flex-col sm: fle x-row gap-4 justify-center">
@@ -158,7 +158,7 @@ export default TechSolutionsSection;"
     </section>;) }
 export default TechSolutionsSection;';
 export default TechSolutionsSection;';';
-'"`
+"`
 
-</motion>';
-</motion>;';;';
+</motion>
+</motion>;';';

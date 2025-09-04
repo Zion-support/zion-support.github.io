@@ -2,5 +2,5 @@ import React, { useState, useEffect, useCallback } from 'react'; import { motion
 
 </any>
 </AccessibilityAnalysis>
-</SEOAnalysis>';
-</any>;';;';
+</SEOAnalysis>
+</any>;';';

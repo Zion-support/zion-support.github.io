@@ -5,7 +5,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
   variant?: 'default' | 'outline' | 'ghost' | 'link';
 =======
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {';
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: Reac t.ReactNode;';';
   variant?: 'default' | 'outline' | 'ghost' | 'link';';';
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
@@ -19,7 +19,7 @@ export function Button({
   variant = 'default', 
   size = 'md', 
   asChild = false, 
-  className = '', 
+  className = ", 
   ...props 
 }: ButtonProps) {
   const baseClasses = 'inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none';
@@ -29,33 +29,33 @@ export function Button({
     outline: 'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
     ghost: 'hover:bg-accent hover:text-accent-foreground',
     link: 'text-primary underline-offset-4 hover:underline'
-  };
+  };;
   
   const sizeClasses = {
     sm: 'h-9 px-3 rounded-md text-sm',
     md: 'h-10 px-4 py-2',
     lg: 'h-11 px-8 rounded-md',
 =======
-';
-export function Button(props: any) {';';
+
+export function Button($1) {
   const baseClasses = 'inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible: outlin e-none focus-visible: rin g-2 focus-visible: rin g-ring focus-visible: rin g-offset-2 disabled: opacit y-50 disabled: pointe r-events-none';
   ';
-  const variantClasses = {';';
-    default: 'bg-primary text-primary-foreground hover: b g-primary/90',';';
-    outline: 'border border-input bg-background hover: b g-accent hover: tex t-accent-foreground',';';
-    ghost: 'hover: b g-accent hover: tex t-accent-foreground',';';
+  const variantClasses = {
+    default: 'bg-primary text-primary-foreground hover: b g-primary/90',
+    outline: 'border border-input bg-background hover: b g-accent hover: tex t-accent-foreground',
+    ghost: 'hover: b g-accent hover: tex t-accent-foreground',
     link: 'text-primary underline-offset-4 hover: underlin e'
-  };
+  };;
   ';
-  const sizeClasses = {';';
-    sm: 'h-9 px-3 rounded-md text-sm',';';
-    md: 'h-10 px-4 py-2',';';
-    lg: 'h-11 px-8 rounded-md',';';
+  const sizeClasses = {
+    sm: 'h-9 px-3 rounded-md text-sm',
+    md: 'h-10 px-4 py-2',
+    lg: 'h-11 px-8 rounded-md',
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
     icon: 'h-10 w-10'
-  };
+  };;
 
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className};`;
 
   if (asChild) {
     return <span className={classes}>{props.children}</span>;
@@ -69,5 +69,5 @@ export function Button(props: any) {';';
       {props.children}
     </button>
   );
-}';
-</HTMLButtonElement>;';;';
+}
+</HTMLButtonElement>;';';

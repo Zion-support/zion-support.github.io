@@ -11,28 +11,28 @@ import { ErrorBoundary } from 'react-error-boundary';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 
 // Enhanced Components
-import PerformanceOptimizer from './components/PerformanceOptimizer';
+import PerformanceOptimizer from './components/PerformanceOptimizer
 import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
 import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
-// import { ChatAssistant } from './components/ChatAssistant';
-import React, { Suspense, lazy } from 'react';';';
-import { Routes, Route } from 'react-router-dom';';';
-import { Header } from './src/components/Header.tsx';';';
-import { Footer } from './src/components/Footer.tsx';';';
-import { Sidebar } from './src/components/Sidebar.tsx';';';
-import { ErrorBoundary } from 'react-error-boundary';';';
+// import { ChatAssistant } from './components/ChatAssistant
+import React, { Suspense, lazy } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { Header } from './src/components/Header.tsx';
+import { Footer } from './src/components/Footer.tsx';
+import { Sidebar } from './src/components/Sidebar.tsx';
+import { ErrorBoundary } from 'react-error-boundary';
 import { LoadingSpinner } from './src/components/ui/loading-spinner.tsx';
-';
-// Enhanced Components';';
-import PerformanceOptimizer from './src/components/PerformanceOptimizer.tsx';';';
-import EnhancedAccessibilityEnhancer from './src/components/EnhancedAccessibilityEnhancer.tsx';';';
-import { MobileExperienceEnhancer } from './src/components/MobileExperienceEnhancer.tsx';';';
+
+// Enhanced Components
+import PerformanceOptimizer from './src/components/PerformanceOptimizer.tsx
+import EnhancedAccessibilityEnhancer from './src/components/EnhancedAccessibilityEnhancer.tsx';
+import { MobileExperienceEnhancer } from './src/components/MobileExperienceEnhancer.tsx';
 import { ChatAssistant } from './components/ChatAssistant';
 
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
   const LazyComponent = lazy(importFn);
-  return (props: any) => (
+  return ($1) => (
     <Suspense fallback={fallback || <LoadingSpinner />}>
       <LazyComponent {...props} />
     </Suspense>
@@ -41,11 +41,11 @@ const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.Reac
 <<<<<<< HEAD
 
 // Lazy load pages for better performance - only import existing pages
-const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ default: module.default })));
+const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ default: module.default };)));
 
 // Service Pages
-const AISolutions = lazy(() => import('./pages/AIServices').then(module => ({ default: module.default })));
-const ITServices = lazy(() => import('./pages/ITServices').then(module => ({ default: module.default })));
+const AISolutions = lazy(() => import('./pages/AIServices').then(module => ({ default: module.default };)));
+const ITServices = lazy(() => import('./pages/ITServices').then(module => ({ default: module.default };)));
 
 // Create placeholder components for missing pages
 const HomePage = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Zion Tech Group - Home</h1></div>;
@@ -68,32 +68,32 @@ const ComprehensiveServicesShowcase = () => <div className="min-h-screen flex it
 const QuantumComputing = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Quantum Computing</h1></div>;
 const Cybersecurity = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Cybersecurity</h1></div>;
 =======
-';
-// Lazy load pages for better performance';';
-const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));';';
-const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.default })));';';
-const SolutionsPage = lazy(() => import('./pages/SolutionsPage').then(module => ({ default: module.SolutionsPage })));';';
-const AboutPage = lazy(() => import('./pages/AboutPage').then(module => ({ default: module.AboutPage })));';';
-const ContactPage = lazy(() => import('./pages/ContactPage').then(module => ({ default: module.ContactPage })));';';
-const BlogPage = lazy(() => import('./pages/BlogPage').then(module => ({ default: module.BlogPage })));';';
-const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(module => ({ default: module.NotFoundPage })));';';
-const ComprehensiveServicesPage = lazy(() => import('./pages/ComprehensiveServicesPage').then(module => ({ default: module.ComprehensiveServicesPage })));';';
-const Sitemap = lazy(() => import('./pages/Sitemap').then(module => ({ default: module.default })));';';
-const ComprehensiveSitemap = lazy(() => import('./pages/ComprehensiveSitemap').then(module => ({ default: module.ComprehensiveSitemap })));';';
-const Support = lazy(() => import('./pages/Support').then(module => ({ default: module.default })));';';
-const Training = lazy(() => import('./pages/Training').then(module => ({ default: module.default })));';';
-const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default: module.default })));';';
-const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServicesPage').then(module => ({ default: module.RevolutionaryServicesPage })));';';
-const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025').then(module => ({ default: module.NewServicesShowcase2025 })));';';
-const EnhancedNewServices2025 = lazy(() => import('./pages/EnhancedNewServices2025').then(module => ({ default: module.EnhancedNewServices2025 })));';';
-const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));';';
-const ComprehensiveServicesShowcase = lazy(() => import('./pages/ComprehensiveServicesShowcase').then(module => ({ default: module.default })));
-';
-// Service Pages';';
-const AISolutions = lazy(() => import('./pages/services/AISolutions').then(module => ({ default: module.AISolutions })));';';
-const QuantumComputing = lazy(() => import('./pages/services/QuantumComputing').then(module => ({ default: module.QuantumComputing })));';';
-const Cybersecurity = lazy(() => import('./pages/services/Cybersecurity').then(module => ({ default: module.Cybersecurity })));
-const AIContentCreation = lazy(() => import('./pages/services/AIContentCreation').then(module => ({ default: module.default })));
+
+// Lazy load pages for better performance
+const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage };)));
+const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.default };)));
+const SolutionsPage = lazy(() => import('./pages/SolutionsPage').then(module => ({ default: module.SolutionsPage };)));
+const AboutPage = lazy(() => import('./pages/AboutPage').then(module => ({ default: module.AboutPage };)));
+const ContactPage = lazy(() => import('./pages/ContactPage').then(module => ({ default: module.ContactPage };)));
+const BlogPage = lazy(() => import('./pages/BlogPage').then(module => ({ default: module.BlogPage };)));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(module => ({ default: module.NotFoundPage };)));
+const ComprehensiveServicesPage = lazy(() => import('./pages/ComprehensiveServicesPage').then(module => ({ default: module.ComprehensiveServicesPage };)));
+const Sitemap = lazy(() => import('./pages/Sitemap').then(module => ({ default: module.default };)));
+const ComprehensiveSitemap = lazy(() => import('./pages/ComprehensiveSitemap').then(module => ({ default: module.ComprehensiveSitemap };)));
+const Support = lazy(() => import('./pages/Support').then(module => ({ default: module.default };)));
+const Training = lazy(() => import('./pages/Training').then(module => ({ default: module.default };)));
+const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default: module.default };)));
+const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServicesPage').then(module => ({ default: module.RevolutionaryServicesPage };)));
+const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025').then(module => ({ default: module.NewServicesShowcase2025 };)));
+const EnhancedNewServices2025 = lazy(() => import('./pages/EnhancedNewServices2025').then(module => ({ default: module.EnhancedNewServices2025 };)));
+const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage };)));
+const ComprehensiveServicesShowcase = lazy(() => import('./pages/ComprehensiveServicesShowcase').then(module => ({ default: module.default };)));
+
+// Service Pages
+const AISolutions = lazy(() => import('./pages/services/AISolutions').then(module => ({ default: module.AISolutions };)));
+const QuantumComputing = lazy(() => import('./pages/services/QuantumComputing').then(module => ({ default: module.QuantumComputing };)));
+const Cybersecurity = lazy(() => import('./pages/services/Cybersecurity').then(module => ({ default: module.Cybersecurity };)));
+const AIContentCreation = lazy(() => import('./pages/services/AIContentCreation').then(module => ({ default: module.default };)));
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 
 // Loading component
@@ -131,26 +131,26 @@ const ComprehensivePricing = () => <div className="min-h-screen flex items-cente
 
 export default function App() {
 =======
-';
-// Lazy load pages - only import existing ones';';
-const Home = createLazyComponent(() => import('./pages/Home'));';';
-const About = createLazyComponent(() => import('./pages/About'));';';
-const Contact = createLazyComponent(() => import('./pages/Contact'));';';
-const Services = createLazyComponent(() => import('./pages/Services'));';';
-const Solutions = createLazyComponent(() => import('./pages/Solutions'));';';
-const RequestQuote = createLazyComponent(() => import('./pages/RequestQuote'));';';
-const Dashboard = createLazyComponent(() => import('./pages/Dashboard'));';';
-const Login = createLazyComponent(() => import('./pages/Login'));';';
-const FAQ = createLazyComponent(() => import('./pages/FAQ'));';';
-const Privacy = createLazyComponent(() => import('./pages/Privacy'));';';
-const Terms = createLazyComponent(() => import('./pages/Terms'));';';
-const Cookies = createLazyComponent(() => import('./pages/Cookies'));';';
-const Pricing = createLazyComponent(() => import('./pages/Pricing'));';';
-const Help = createLazyComponent(() => import('./pages/Help'));';';
-const News = createLazyComponent(() => import('./pages/News'));';';
-const Careers = createLazyComponent(() => import('./pages/Careers'));';';
-const Support = createLazyComponent(() => import('./pages/Support'));';';
-const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));';';
+
+// Lazy load pages - only import existing ones
+const Home = createLazyComponent(() => import('./pages/Home'));
+const About = createLazyComponent(() => import('./pages/About'));
+const Contact = createLazyComponent(() => import('./pages/Contact'));
+const Services = createLazyComponent(() => import('./pages/Services'));
+const Solutions = createLazyComponent(() => import('./pages/Solutions'));
+const RequestQuote = createLazyComponent(() => import('./pages/RequestQuote'));
+const Dashboard = createLazyComponent(() => import('./pages/Dashboard'));
+const Login = createLazyComponent(() => import('./pages/Login'));
+const FAQ = createLazyComponent(() => import('./pages/FAQ'));
+const Privacy = createLazyComponent(() => import('./pages/Privacy'));
+const Terms = createLazyComponent(() => import('./pages/Terms'));
+const Cookies = createLazyComponent(() => import('./pages/Cookies'));
+const Pricing = createLazyComponent(() => import('./pages/Pricing'));
+const Help = createLazyComponent(() => import('./pages/Help'));
+const News = createLazyComponent(() => import('./pages/News'));
+const Careers = createLazyComponent(() => import('./pages/Careers'));
+const Support = createLazyComponent(() => import('./pages/Support'));
+const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));
 const ComprehensivePricing = createLazyComponent(() => import('./pages/ComprehensivePricing'));
 
 const App: React.FC = memo(() => {
@@ -161,12 +161,12 @@ const App: React.FC = memo(() => {
   }, []);
 
   // Memoize error boundary fallback
-  const errorFallback = useCallback(({ error, resetErrorBoundary }: any) => (
+  const errorFallback = useCallback($1) => (
     <div className="error-boundary">
       <div className="error-boundary-content">
         <h1>Something went wrong</h1>
         <p>{error?.message}</p>
-        <button onClick={resetErrorBoundary}>
+        <button onClick={resetErrorBoundary};>
           Try again
         </button>
       </div>
@@ -320,12 +320,12 @@ const App: React.FC = memo(() => {
   }, []);
 
   // Memoize error boundary fallback
-  const errorFallback = useCallback(({ error, resetErrorBoundary }: any) => (
+  const errorFallback = useCallback($1) => (
     <div className="error-boundary">
       <div className="error-boundary-content">
         <h1>Something went wrong</h1>
         <p>{error?.message}</p>
-        <button onClick={resetErrorBoundary}>
+        <button onClick={resetErrorBoundary};>
           Try again
         </button>
       </div>
@@ -476,7 +476,7 @@ const App: React.FC = memo(() => {
 App.displayName = 'App';
 
 export default App;
-export default function App(props: any) {
+export default function App($1) {
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-gray-50">
@@ -609,6 +609,6 @@ export default function App(props: any) {
         <ChatAssistant />
       </div>
     </ErrorBoundary>
-  );';
-};';;';
+  );
+};';';
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599

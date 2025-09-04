@@ -3,9 +3,9 @@ import React, {useState, useEffect} from 'react';
 import * as React from "react";
 
 const ThemeContext = React.createContext({theme: "dark",
-  setTheme: () => null,});
+  setTheme: () => null,};);
 
-export const ThemeProvider = (props: any) => {
+export const ThemeProvider = (props) => {
   const [theme, setTheme] = React.useState("dark");
   
   React.useEffect(() => {
@@ -15,7 +15,7 @@ export const ThemeProvider = (props: any) => {
   }, [theme]);
 
   const value = {theme,
-    setTheme,};
+    setTheme,};;
 
   return (
     <ThemeContext.Provider value={value}>
@@ -24,12 +24,12 @@ export const ThemeProvider = (props: any) => {
   );
 };
 
-export const useTheme = (props: any) => {
+export const useTheme = (props) => {
   const context = React.useContext(ThemeContext);
   if (context === null) {
     throw new Error("useTheme must be used within a ThemeProvider");
   }
   return context;
 };
-';
-</ThemeContext>;';;';
+
+</ThemeContext>;';';

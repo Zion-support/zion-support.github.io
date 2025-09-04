@@ -7,7 +7,7 @@ interface EnhancedMarketplaceCardProps {
 const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({ 
   title,: any;
   description,: any;
-  className = "" ;: any;
+  className = " ;: any;
 
 }) => {;
   return (;

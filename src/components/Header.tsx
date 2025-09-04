@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';';';
-import { Link, useLocation } from 'react-router-dom';';';
-import { MainNavigation } from './header/MainNavigation';';';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { MainNavigation } from './header/MainNavigation';
 import { Zap, Search, Sun, Moon, User, Menu, X } from 'lucide-react';
 
 interface HeaderProps {
@@ -8,17 +8,17 @@ interface HeaderProps {
   className?: string;
 
 }
-export function Header(props: any) {const router = useRouter()
-}
-export function Header(props: any) {
+export function Header($1) {const router = useRouter()
+};
+export function Header($1) {
 
-export function Header(props: any) {
+export function Header($1) {
   const [isScrolled, setIsScrolled] = useState<any>(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<any>(false);
-  const [isUserMenuOpen, setIsUserMenuOpen] = useState<any>(false);';
-  const [isSearchOpen, setIsSearchOpen] = useState<any>(false);';';
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');';';
-  const [searchQuery, setSearchQuery] = useState<any>('');
+  const [isUserMenuOpen, setIsUserMenuOpen] = useState<any>(false);
+  const [isSearchOpen, setIsSearchOpen] = useState<any>(false);
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+  const [searchQuery, setSearchQuery] = useState<any>(");
   const location = useLocation();
 
   useEffect(() => {
@@ -28,20 +28,20 @@ export function Header(props: any) {
     // Cleanup function
   };
 }, []);, []);
-const handleScroll = (props: any) => {
+const handleScroll = (props) => {
       setIsScrolled(window.scrollY > 10);
     };';
-';';
+
     window.addEventListener('scroll', handleScroll);';';
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-';
-  const toggleTheme = (props: any) => {';';
+
+  const toggleTheme = (props) => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
     // You can add theme switching logic here
   };
 
-  const handleSearch = (props: any) => {
+  const handleSearch = (props) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       // Add search logic here
@@ -65,7 +65,7 @@ const handleScroll = (props: any) => {
     },
     { name: 'Solutions', href: '/solutions' },
     { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Contact', href: '/contact' };
   ];
 
 =======
@@ -119,10 +119,9 @@ const handleScroll = (props: any) => {
             </button>
 
             {/* Theme toggle */}
-            <button
-              onClick={toggleTheme}
-              className="p-2 text-gray-300 hover: tex t-blue-400 transition-colors"';
-            >';';
+            <buttononClick={toggleTheme}
+              className="p-2 text-gray-300 hover: tex t-blue-400 transition-colors";
+            >';
               {theme === 'dark' ? <Sun className="w-5 h-5"  /> : <Moon className="w-5 h-5"  />}
             </button>
 
@@ -208,14 +207,14 @@ const handleScroll = (props: any) => {
 const router = useRouter()
 }
   const [mobileMenuOpen, setMobileMenuOpen] = useState()"
-  const [searchQuery, setSearchQuery] = useState<any>("")
+  const [searchQuery, setSearchQuery] = useState<any>(")
 }
   const [searchQuery, setSearchQuery] = useState()
 }
   const [scrolled, setScrolled] = useState<any>(false)
 }
   useEffect(() => {
-    const handleScroll = (props: any) => {
+    const handleScroll = (props) => {
       setScrolled(window.scrollY > 50)
 }
     },
@@ -237,41 +236,41 @@ const router = useRouter()
   return ("
     <header className="{"fixed" w-full z-50 transition-all duration-300 ${"
       scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm">
-}"}>""
-      <div className = ""max-w-7xl" mx-auto px-4 sm: p x-6 l,"
+}"}>"
+      <div className = "max-w-7xl" mx-auto px-4 sm: p x-6 l,"
     g: p x-8">"
   return (",
     <header className="{"fixed" w-full z-50 transition-all duration-300 ${ scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm" }"}>"
-      <div className=""max-w-7xl" mx-auto px-4 sm: p x-6 lg: p x-8">"
+      <div className="max-w-7xl" mx-auto px-4 sm: p x-6 lg: p x-8">"
     <header className="{"fixed" w-full z-50 transition-all duration-300 ${"
   return (<header className="{"fixed" w-full z-50 transition-all duration-300 ${">
       scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm"}"}>"
-      <div className=""max-w-7xl" mx-auto px-4 sm: p x-6 lg: p x-8">"
+      <div className="max-w-7xl" mx-auto px-4 sm: p x-6 lg: p x-8">"
         <div className="flex justify-between items-center py-4">",
-          {/* comment */}""
-          <div className="flex items-center">""
-            <Link href="/" className="flex items-center space-x-2">""
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">""
+          {/* comment */}"
+          <div className="flex items-center">"
+            <Link href="/" className="flex items-center space-x-2">"
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">"
                 <span className="text-white font-bold text-sm">Z</span>"
-              </div>""
+              </div>"
               <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
             </Link>
           </div>
 "
-          {/* comment */}""
+          {/* comment */}"
           <nav className="hidden md: flex items-center space-x-8">,
           {/* comment */}"
           <nav className="{"hidden" md: flex items-center space-x-8">
             {navigation.map((item) => (",
               <Link key="{item.name}" href="{item.href}" className="{"text-sm" font-medium transition-colors ${ router.pathname === item.href ? "text-blue-600" : "text-gray-700 hover: tex t-blue-600" }"} >"
-              <Link key="{item.name}""
-                href="{item.href}"""
-                href="{item.href}""
-                className=""}text-gray-700" hover: tex t-blue-600 transition-colors font-medium""
+              <Link key="{item.name}"
+                href="{item.href}"
+                href="{item.href}"
+                className="}text-gray-700" hover: tex t-blue-600 transition-colors font-medium"
                 className="{"text-sm" font-medium transition-colors ${
-                  router.pathname === item.href""
-                    ? "text-blue-600""">
-                    : "text-gray-700 hover: tex t-blue-600""}"}
+                  router.pathname === item.href"
+                    ? "text-blue-600">
+                    : "text-gray-700 hover: tex t-blue-600"}"}
 
               >
                 {item.name}
@@ -280,23 +279,23 @@ const router = useRouter()
             ))}
 
           </nav>
-          {/* comment */}""
-          <div className=""hidden" md: flex items-center space-x-4">"",
+          {/* comment */}"
+          <div className="hidden" md: flex items-center space-x-4">",
             <form onSubmit="{handleSearch}" className="relative">"
-              <input""
-                type="text"""
-                placeholder="Search...""
-                value="{searchQuery}""
-                onChange="{(e)" => setSearchQuery(e.target.value)}""
+              <input"
+                type="text"
+                placeholder="Search..."
+                value="{searchQuery}"
+                onChange="{(e)" => setSearchQuery(e.target.value)}"
                 className="w-64 px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg focus: outlin e-none focus: rin g-2 focu,
     s: rin g-blue-500 focu,"
-    s: borde r-transparent"" />"",
+    s: borde r-transparent" />",
               <input type="text" placeholder="Search..." value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)}"
-              <input type="text""
-                placeholder="Search...""
-                value="{searchQuery}""
+              <input type="text"
+                placeholder="Search..."
+                value="{searchQuery}"
                 onChange="{(e)" => setSearchQuery(e.target.value)}"
-                className="w-64 px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent""
+                className="w-64 px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
                 className="w-64 px-4 py-2 pl-10 pr-4 text-sm border border-gray-300 rounded-lg focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent" />"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"   />
             </form>"
@@ -310,20 +309,20 @@ const router = useRouter()
             </a>"
                 className="w-64 px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent" />"
               <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400"   />"
-            </form>""
-            <div className="flex items-center space-x-2 text-sm text-gray-600">""
+            </form>"
+            <div className="flex items-center space-x-2 text-sm text-gray-600">"
               <Phone className="h-4 w-4"   />
               <span>+1 (555) 123-4567</span>
             </div>
 ,
           {/* comment */}"
           <button onClick="{()" => setMobileMenuOpen(!mobileMenuOpen)}"
-          <button onClick="{()" => setMobileMenuOpen(!mobileMenuOpen)}""
+          <button onClick="{()" => setMobileMenuOpen(!mobileMenuOpen)}"
             className="md: hidden p-2 rounded-md text-gray-600 hove,
     r: tex t-gray-900 hove,"
-    r: b g-gray-100""
-          >""
-            className="md: hidden p-2 rounded-md text-gray-700 hover: tex t-blue-600 hover: b g-gray-100 transition-colors"",
+    r: b g-gray-100"
+          >"
+            className="md: hidden p-2 rounded-md text-gray-700 hover: tex t-blue-600 hover: b g-gray-100 transition-colors",
             onClick="{()" => setMobileMenuOpen(!mobileMenuOpen)}
 
           >"
@@ -336,7 +335,7 @@ const router = useRouter()
           </button>
         </div>
         {/* comment */}"
-        {mobileMenuOpen && (""
+        {mobileMenuOpen && ("
           <div className="md: hidde n">",
         {/* comment */}, {mobileMenuOpen && ("
           <div className="md: hidde n">"
@@ -347,39 +346,39 @@ const router = useRouter()
         {/* comment */}
 
         {mobileMenuOpen && ("
-          <div className=""md: hidde n" py-4 border-t border-gray-200"}>"
+          <div className="md: hidde n" py-4 border-t border-gray-200"}>"
             <nav className="flex flex-col space-y-4">
               {navigation.map((item) => ("
-                <Link key="{item.name}""
-                  href="{item.href}"""
+                <Link key="{item.name}"
+                  href="{item.href}"
                   className="{"block" px-3 py-2 text-base font-medium rounded-md ${
-                    router.pathname === item.href""
-                      ? "text-blue-600 bg-blue-50"""
+                    router.pathname === item.href"
+                      ? "text-blue-600 bg-blue-50"
                       : "text-gray-700 hover: tex t-blue-600 hove,"
-    r: b g-gray-50""}"}"
+    r: b g-gray-50"}"}"
                   onClick="{()" => setMobileMenuOpen(false)}
 
                 >
                   {item.name}
 
                 </Link>
-              ))}""
-              <div className=""px-3" py-2">""
+              ))}"
+              <div className="px-3" py-2">"
                 <form onSubmit="{handleSearch}" className="relative">"
-                  <input""
-                    type="text"""
-                    placeholder="Search...""
-                    value="{searchQuery}""
-                    onChange="{(e)" => setSearchQuery(e.target.value)}""
+                  <input"
+                    type="text"
+                    placeholder="Search..."
+                    value="{searchQuery}"
+                    onChange="{(e)" => setSearchQuery(e.target.value)}"
                     className="w-full px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg focus: outlin e-none focus: rin g-2 focu,
     s: rin g-blue-500 focu,"
-    s: borde r-transparent"" />"",
-                  href="{item.href}""
-                  className="text-gray-700 hover: tex t-blue-600 transition-colors font-medium py-2"",
+    s: borde r-transparent" />",
+                  href="{item.href}"
+                  className="text-gray-700 hover: tex t-blue-600 transition-colors font-medium py-2",
                   onClick="{()" => setMobileMenuOpen(false)}"
         {mobileMenuOpen && (<div className="md: hidde n">",
-            <div className="{"px-2" pt-2 pb-3 space-y-1 bg-white border-t">, {navigation.map((item) => (<Link key="{item.name}""
-                  href="{item.href}""
+            <div className="{"px-2" pt-2 pb-3 space-y-1 bg-white border-t">, {navigation.map((item) => (<Link key="{item.name}"
+                  href="{item.href}"
                   className="{"block" px-3 py-2 text-base font-medium rounded-md ${
                     router.pathname === item.href"
                       ? "text-blue-600 bg-blue-50"
@@ -392,11 +391,11 @@ const router = useRouter()
               ))}
 
             </nav>"
-            <div className=""mt-4" pt-4 border-t border-gray-200`}>"
+            <div className="mt-4" pt-4 border-t border-gray-200`}>"
               <form onSubmit="{handleSearch}" className="relative mb-4">"
-                <input type="text""
-                  placeholder="Search...""
-                  value="{searchQuery}""
+                <input type="text"
+                  placeholder="Search..."
+                  value="{searchQuery}"
                   onChange="{(e)" => setSearchQuery(e.target.value)}"
                   className="w-full px-4 py-2 pl-10 pr-4 text-sm border border-gray-300 rounded-lg focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent" />"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"   />
@@ -416,8 +415,8 @@ const router = useRouter()
                     className="w-full px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent" />"
                   <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400"   />
                 </form>"
-              </div>""
-              <div className="px-3 py-2 flex items-center space-x-2 text-sm text-gray-600">""
+              </div>"
+              <div className="px-3 py-2 flex items-center space-x-2 text-sm text-gray-600">"
                 <Phone className="h-4 w-4"   />
                 <span>+1 (555) 123-4567</span>
               </div>
@@ -427,7 +426,7 @@ const router = useRouter()
       </div>
     </header>
   )
-}
+};
   );"
 }"
 "
@@ -447,5 +446,5 @@ export default Component
 </div>
 </header>
 </any>
-</any>';
-</any>;';;';
+</any>
+</any>;';';

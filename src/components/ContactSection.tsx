@@ -9,7 +9,7 @@ const contactInfo = [{
       title: "Email",
       value: "kleber@ziontechgroup.com",
       link: "mailto: klebe r@ziontechgroup.com"
-    }, {;
+    };, {;
       icon: MapPi n,;"
       title: "Address",;"
       value: "364 E Main St STE 1008 Middletown DE 19709",;"
@@ -105,7 +105,7 @@ const contactInfo = [{
     </section>;) }
 export default ContactSection;
 export default ContactSection;
-'"
+"
 
+</motion>
 </motion>';
-</motion>';';

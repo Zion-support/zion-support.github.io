@@ -1,6 +1,6 @@
 import React from "react"
 import { SEO } from "@/components/SEO"
-export default function GlobalSpinner(props: any) {return (
+export default function GlobalSpinner($1) {return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="GlobalSpinner - Zion Tech Group" description="Professional GlobalSpinner services by Zion Tech Group"   />"
       <div className="container mx-auto px-4 py-20">"
@@ -11,4 +11,4 @@ export default function GlobalSpinner(props: any) {return (
       </div>
   );"}"
 
-</div>;;
+</div>;

@@ -1,11 +1,10 @@
-import React from 'react';';';
+import React from 'react';
 import {motion} from 'framer-motion';
 
-export default function Page(props: any) {
+export default function Page($1) {
     componentDidCatch(error, errorInfo) {
-';
         this.setState({ errorInfo });';';
-        // Log error to console'';';
+        // Log error to console'
         // // // // // // // // console.error('Error caught by boundary:', error, errorInfo);
         // Call custom error handler if provided
         if(this.props.onError) {this.props.onError(error, errorInfo)}
@@ -30,11 +29,11 @@ export default function Page(props: any) {
             errorInfo: {componentStack: errorInfo.componentStack},
             userAgent: navigator.userAgent,
             url: window.location.href,
-            viewport: {width: window.innerWidth,';
-                height: window.innerHeight};';';
-        // Log to console for development'';';
-        if(process.env.NODE_ENV === 'development') {';
-';';
+            viewport: {width: window.innerWidth,
+                height: window.innerHeight};;';';
+        // Log to console for development'
+        if(process.env.NODE_ENV === 'development') {
+
             console.group('Error Report');
             // // // // // // // // 
             console.groupEnd();
@@ -53,14 +52,14 @@ export default function Page(props: any) {
             error: null,
             errorInfo: null,
             errorId: null,
-            showStackTrace: false';
+            showStackTrace: false
         })};';';
     handleGoHome = () => {window.location.href = '/'};
     handleReportIssue = () => {
         const errorInfo = this.state.errorInfo;
         if(error && errorInfo) {
-`';
-            const issueUrl = `https://github.com/ziontechgroup/zion-website/issues/new?title=Error: ${encodeURIComponent(error.message)}&body=${encodeURIComponent(issueBody)}`;';';
+`
+            const issueUrl = `https://github.com/ziontechgroup/zion-website/issues/new?title=Error: ${encodeURIComponent(error.message)}&body=${encodeURIComponent(issueBody)};`;
             window.open(issueUrl,_blank')}
     };
                 return this.props.fallback}
@@ -80,19 +79,19 @@ export default function Page(props: any) {
             {/* Header */}"
             <div className="bg-gradient-to-r from-red-500 to-pink-500 p-6 text-white">"
               <div className="flex items-center space-x-3">"
-                <ExclamationTriangleIcon className="w-8 h-8" />';
-                <div>"';';
-                  <h1 className="text-2xl font-bold">Something went wrong</h1>'"';';
-                  <p className="text-red-100">We've encountered an unexpected error</p>';
-';';
-    // Add global error handler'';';
+                <ExclamationTriangleIconclassName="w-8 h-8" />
+                <div>";';
+                  <h1 className="text-2xl font-bold">Something went wrong</h1>";';
+                  <p className="text-red-100">We've encountered an unexpected error</p>
+
+    // Add global error handler'
     window.addEventListener('error', handleError);';';
-    window.addEventListener('unhandledrejection', (event) => {';
-';';
+    window.addEventListener('unhandledrejection', (event) => {
+
       handleError(event.reason, { componentStack: 'Promise rejection' });
     });';
-';';
-    return () => {window.removeEventListener('error', handleError);';';
+
+    return () => {window.removeEventListener('error', handleError);
       window.removeEventListener('unhandledrejection', handleError);};
   }, []);
 
@@ -117,12 +116,12 @@ export default function Page(props: any) {
         >"
           <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">"
             <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"  />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}; d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"  />
             </svg>
           </div>
 
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h1>';
-          <p className="text-gray-600 mb-6">';';
+          <h1 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h1>
+          <pclassName="text-gray-600 mb-6">';
             We're sorry, but something unexpected happened.Please try refreshing the page.</p>
           <div className="space-y-3">
             <button
@@ -138,8 +137,8 @@ export default function Page(props: any) {
             >
               Go Back
             </button>
-          </div>';
-';';
+          </div>
+
           {process.env.NODE_ENV === 'development' && error && (
             <details className="mt-6 text-left">              <summary className="cursor-pointer text-sm text-gray-600 hover:text-gray-800">
                 Error Details(Development)
@@ -174,12 +173,12 @@ export default function Page(props: any) {
 };
 ;';
 export {EnhancedErrorBoundary};';';
-export default EnhancedErrorBoundary;'"`';';
-}}}}}}}}}}}}}'"`'"`
+export default EnhancedErrorBoundary;"`
+}}}}}}}}}}}}}"`"`
 
 export {Page};
 
 </motion>
 </div>
-</motion>';
-</div>;';;';
+</motion>
+</div>;';';

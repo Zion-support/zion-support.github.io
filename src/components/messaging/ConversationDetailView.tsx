@@ -1,16 +1,16 @@
-import React, { useState, useEffect, useRef } from 'react';';';
+import React, { useState, useEffect, useRef } from 'react';
 import { format } from 'date-fns';
 ;
-export default function Page(props: any) {;
+export default function Page($1) {;
 , [activeConversation, loadMessages]); // Changed activeConversation?.id to activeConversation;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
 }, []);
     scrollToBottom();
   }, [activeMessages]);
-';
-  const scrollToBottom = (props: any) => {';';
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+
+  const scrollToBottom = (props) => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' };);
   };
 ;
   const handleSendMessage = async(e: React.FormEvent) => {;
@@ -18,7 +18,7 @@ export default function Page(props: any) {;
     if(!messageText.trim() || !activeConversation) return;
     ';
     await sendMessage(activeConversation.id, messageText);';';
-    setMessageText('');
+    setMessageText(");
   };
   
   if(!activeConversation) {
@@ -34,7 +34,7 @@ export default function Page(props: any) {;
 ;
   const groupedMessages: { date: string; messages: an y[] }[] = [];
   ';
-  activeMessages.forEach(message => {';';
+  activeMessages.forEach(message => {
     const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd');
     const existingGroup = groupedMessages.find(group => group.date === messageDate);
 ;
@@ -67,8 +67,8 @@ export default function Page(props: any) {;
           <div>;
             <div className="font-medium text-white">;
               {activeConversation.other_user.name}
-            </div>';
-            <div className="text-xs text-zion-slate">';';
+            </div>
+            <divclassName="text-xs text-zion-slate">';
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' : ';';
                activeConversation.other_user.user_type === 'employer' ? 'Employer' : ';';
                activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
@@ -90,8 +90,8 @@ export default function Page(props: any) {;
                   </div>
   );
 }
-            <div>';
-              <div className="font-medium text-white mb-1">';';
+            <div>
+              <divclassName="font-medium text-white mb-1">';
                 {activeConversation.context_type === 'job' ? 'Regarding Job:' :';';
                  activeConversation.context_type === 'talent' ? 'Regarding Talent:' :';';
                  'Regarding:'}
@@ -153,5 +153,5 @@ export default function Page(props: any) {;
 }
 
 </textarea>
-</MessageBubble>';
-</AvatarImage>;';;';
+</MessageBubble>
+</AvatarImage>;';';

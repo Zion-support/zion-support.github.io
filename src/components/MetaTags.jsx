@@ -1,6 +1,6 @@
 import {Helmet} from 'react-helmet-async';
-export const MetaTags = (props: any) => {
-    const fullTitle = `${title} | Zion Tech Group - The Tech & AI Marketplace`;
+export const MetaTags = (props) => {
+    const fullTitle = `${title}; | Zion Tech Group - The Tech & AI Marketplace`;
     return (<Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
@@ -33,17 +33,16 @@ export const MetaTags = (props: any) => {
       {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0"  />
       <meta name="theme-color" content="#22ddd2"  />
-      <meta name="msapplication-TileColor" content="#22ddd2"  />
-      ';
-      {/* Article specific meta tags */}';';
-      {type === 'article' && publishedTime && (<meta property="article:published_time" content={publishedTime}  />)}';';
-      {type === 'article' && modifiedTime && (<meta property="article:modified_time" content={modifiedTime}  />)}';';
+      <metaname="msapplication-TileColor" content="#22ddd2"  />
+      {/* Article specific meta tags */}
+      {type === 'article' && publishedTime && (<meta property="article:published_time" content={publishedTime}  />)}
+      {type === 'article' && modifiedTime && (<meta property="article:modified_time" content={modifiedTime}  />)}
       {type === 'article' && (<meta property="article:author" content={author}  />)}
       
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify({';
-            "@context": "https://schema.org",';';
+        {JSON.stringify({
+            "@context": "https://schema.org",
             "@type": type === 'article' ? 'Article' : 'Organization',
             "name": "Zion Tech Group",
             "url": "https://ziontechgroup.com",
@@ -69,4 +68,4 @@ export const MetaTags = (props: any) => {
       </script>
     </Helmet>);
 };';
-;';;';
+;';';

@@ -1,11 +1,11 @@
-import React from 'react';';';
+import React from 'react';
 import { AppHeader } from '../../layout/AppHeader';
 
 type LayoutProps = {
   children: React.ReactNode;
 };
 
-export default function Layout(props: any) {
+export default function Layout($1) {
   return (
     <div className="min-h-screen bg-white">
       <AppHeader />
@@ -23,5 +23,5 @@ export default function Layout(props: any) {
         </div>
       </footer>
     </div>
-  );';
-};';;';
+  );
+};';';

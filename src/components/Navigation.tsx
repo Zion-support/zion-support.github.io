@@ -1,38 +1,38 @@
-import React, { useState, useEffect } from 'react';';';
-import Link from 'next/link';';';
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
-  useEffect(() => {';
-    const handleClickOutside = (event: MouseEvent) => {';';
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
       if (activeDropdown && !(event.target as Element).closest('.dropdown')) {
         setActiveDropdown(null);
       }
     };';
-';';
+
     document.addEventListener('mousedown', handleClickOutside);';
-    return () => {';';
+    return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [activeDropdown]);
-';
-  const navigation = [';';
-    { name: 'Home', href: '/' },';
-    { ';';
-      name: 'Services', ';';
-      href: '#',';
-      dropdown: [';';
-        { name: 'AI Services', href: '/ai-services' },';';
-        { name: 'Micro SAAS', href: '/micro-saas-services' },';';
-        { name: 'IT Services', href: '/it-services' },';';
+
+  const navigation = [
+    { name: 'Home', href: '/' },
+    {
+      name: 'Services',
+      href: '#',
+      dropdown: [
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'Micro SAAS', href: '/micro-saas-services' },
+        { name: 'IT Services', href: '/it-services' },
         { name: 'Blockchain', href: '/blockchain-solutions' }
-      ]';
-    },';';
-    { name: 'Careers', href: '/careers' },';';
-    { name: 'Contact', href: '/contact' }
+      ]
+    },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Contact', href: '/contact' };
   ];
 
   return (
@@ -140,5 +140,5 @@ const Navigation: React.FC = () => {
     </nav>
   );
 };
-';
-export default Navigation;;';;';
+
+export default Navigation;';';

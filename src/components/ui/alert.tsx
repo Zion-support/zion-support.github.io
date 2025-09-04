@@ -21,22 +21,20 @@ interface AlertDescriptionProps {
   className?: string;
 
 }
-';
-export function Alert(props: any) {';';
-  const baseClasses = 'relative w-full rounded-lg border p-4';';';
-  const variantClasses = variant === 'destructive'';';
-    ? 'border-red-200 bg-red-50 text-red-800'';';
+export function Alert($1) {
+  const baseClasses = 'relative w-full rounded-lg border p-4';
+  const variantClasses = variant === 'destructive'
+    ? 'border-red-200 bg-red-50 text-red-800'
     : 'border-gray-200 bg-gray-50 text-gray-800';
 
   return <div className={`${baseClasses} ${variantClasses} ${className}`}>{children}</div>;
 }
 
-export function AlertTitle(props: any) {
+export function AlertTitle($1) {
   return <h5 className={`mb-1 font-medium leading-none tracking-tight ${className}`}>{children}</h5>;
 }
 
-export function AlertDescription(props: any) {
+export function AlertDescription($1) {
   return <div className={`text-sm ${className}`}>{children}</div>;
 }
-';
-export default Alert;;';;';
+export default Alert;';';

@@ -1,31 +1,31 @@
 import {  import { motion  } from 'framer-motion';
-export default function Page(props: any) {
+export default function Page($1) {
 ,
-      {';
-';';
-        name: 'Error Rate',';
-        value: Mat h.random() * 2,';';
-        unit: '%',';';
-        trend: Mat h.random() > 0.5 ? 'up' : 'down',';';
+      {
+
+        name: 'Error Rate',
+        value: Mat h.random() * 2,
+        unit: '%',
+        trend: Mat h.random() > 0.5 ? 'up' : 'down',
         status: Mat h.random() > 0.8 ? 'good' : Math.random() > 0.5 ? 'warning' : 'critical',
         icon: AlertTriangl e
       },
-      {';
-';';
-        name: 'Response Time',';
-        value: Mat h.random() * 500 + 100,';';
-        unit: 'ms',';';
-        trend: Mat h.random() > 0.5 ? 'up' : 'down',';';
+      {
+
+        name: 'Response Time',
+        value: Mat h.random() * 500 + 100,
+        unit: 'ms',
+        trend: Mat h.random() > 0.5 ? 'up' : 'down',
         status: Mat h.random() > 0.7 ? 'good' : 'warning',
         icon: Za p
 
     ];';
-';';
+
       'High memory usage detected on server-01',;';';
       'Network latency increased by 15%',;';';
       'Error rate spike detected in last 5 minutes';
     ];';
-';';
+
       'Consider implementing lazy loading for images',;';';
       'Optimize database queries for better performance',;';';
       'Enable CDN for static assets delivery';    ];
@@ -46,21 +46,21 @@ export default function Page(props: any) {
 
       return () => clearInterval(interval) }
   }, [isMonitoring, generateMockData]) ;
-';
+
     switch(status) {;';';
-      case 'good': return 'text-green-400';';';
-      case 'warning': return 'text-yellow-400';';';
-      case 'critical': return 'text-red-400';';';
+      case 'good': return 'text-green-400';
+      case 'warning': return 'text-yellow-400';
+      case 'critical': return 'text-red-400';
       default: retur n 'text-gray-400'};
-';
+
     switch(status) {;';';
-      case 'good': return 'bg-green-500/20';';';
-      case 'warning': return 'bg-yellow-500/20';';';
-      case 'critical': return 'bg-red-500/20';';';
+      case 'good': return 'bg-green-500/20';
+      case 'warning': return 'bg-yellow-500/20';
+      case 'critical': return 'bg-red-500/20';
       default: retur n 'bg-gray-500/20'};
-';
+
     switch(trend) {;';';
-      case 'up': return <TrendingUp className="w-4 h-4 text-red-400"   />;'"';';
+      case 'up': return <TrendingUp className="w-4 h-4 text-red-400"   />;";';
       case 'down': return <TrendingDown className="w-4 h-4 text-green-400"   />;"
       default: retur n <Activity className="w-4 h-4 text-blue-400"   />};
 
@@ -114,20 +114,20 @@ export default function Page(props: any) {
         >"
           <div className="flex gap-2">
             <button
-              onClick={startMonitoring}';
-              disabled={isMonitoring}';';
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${isMonitoring'';';
-                  ? 'bg-gray-600 text-gray-400 cursor-not-allowed''';';
+              onClick={startMonitoring}
+              disabled={isMonitoring}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${isMonitoring'
+                  ? 'bg-gray-600 text-gray-400 cursor-not-allowed"
                   : 'bg-green-600 hover: b g-green-700 text-white'`
               }`}
             >"
               <Activity className="w-5 h-5"   />              Start Monitoring
             </button>
             <button
-              onClick={stopMonitoring}';
-              disabled={!isMonitoring}`';';
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${!isMonitoring'';';
-                  ? 'bg-gray-600 text-gray-400 cursor-not-allowed''';';
+              onClick={stopMonitoring}
+              disabled={!isMonitoring}`
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${!isMonitoring'
+                  ? 'bg-gray-600 text-gray-400 cursor-not-allowed"
                   : 'bg-red-600 hover: b g-red-700 text-white'`
               }`}
             >"
@@ -136,7 +136,7 @@ export default function Page(props: any) {
           </div>
 
           <select';
-            value={selectedTimeframe}';';
+            value={selectedTimeframe}
             onChange={(e) => setSelectedTimeframe(e.target.value as '1h' | '24h' | '7d' | '30d')}"
             className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus: outlin e-none focus: rin g-2 focus: rin g-blue-500"
           >"
@@ -191,8 +191,8 @@ export default function Page(props: any) {
                   {getTrendIcon(metric.trend) }
                 </div>
 "
-                <div className="text-center">"';
-                  <div className="text-3xl font-bold text-white mb-2">';';
+                <div className="text-center">";
+                  <divclassName="text-3xl font-bold text-white mb-2">';
                     {metric.value.toFixed(metric.unit === '%' ? 1 : 0)}"
                     <span className="text-lg text-gray-400 ml-1">{metric.unit}</span>
                   </div>`
@@ -270,7 +270,7 @@ export default function Page(props: any) {
         >
           <BarChart3 className="w-16 h-16 text-gray - 400 mx - auto mb-4"  />
           <h3 className="text-xl font - semibold text-white mb-2">Performance Trends</h3>
-          <p className="text-gray -400">';
+          <pclassName="text-gray -400">
             {isMonitoring';';
               ? 'Real - time performance data is being collected and analyzed...'              : 'Start monitoring to view performance trends and historical data'
             }
@@ -310,9 +310,9 @@ export default function Page(props: any) {
       </div>;
     </div>;) ;
 </div>};';
-';';
-export default PerformanceAnalytics}}}}}}}}'"`
+
+export default PerformanceAnalytics}}}}}}}}"`
 
 </motion>
-</motion>';
-</motion>;';;';
+</motion>
+</motion>;';';

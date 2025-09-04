@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';';';
-import { Button } from '@/components/ui/button';';';
-import { useInterviews } from '@/hooks/useInterviews';';';
-import { Interview } from '@/types/interview';';';
-import { format, isPast, parseISO } from 'date-fns';';';
-import { Link  } from 'react-router-dom';';';
-import { Calendar, Clock, Video  } from 'lucide-react';';';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { useInterviews } from '@/hooks/useInterviews';
+import { Interview } from '@/types/interview';
+import { format, isPast, parseISO } from 'date-fns';
+import { Link  } from 'react-router-dom';
+import { Calendar, Clock, Video  } from 'lucide-react';
 import { Avatar } from '@/components/ui/avatar'; // Assuming AvatarImage and AvatarFallback are part of this or separate
 
-export function UpcomingInterviewsCard(props: any) {
+export function UpcomingInterviewsCard($1) {
   const { fetchInterviews } = useInterviews();
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
   const [isLoading, setIsLoading] = useState<any>(true);
@@ -26,7 +26,7 @@ export function UpcomingInterviewsCard(props: any) {
         const interviews = await fetchInterviews();
         // const now = new Date(); // Not used here, can be removed if only for filtering future
         
-        const upcoming = interviews';
+        const upcoming = interviews
           .filter(interview => ';';
             interview.status === 'confirmed' && 
             !isPast(parseISO(interview.scheduled_date))
@@ -37,7 +37,7 @@ export function UpcomingInterviewsCard(props: any) {
           .slice(0, 3); 
         
         setUpcomingInterviews(upcoming);
-      } catch(error) {
+      } catch (error) {
         console.error("Error loading upcoming interviews:", error);
       } finally {
         setIsLoading(false);
@@ -102,9 +102,9 @@ export function UpcomingInterviewsCard(props: any) {
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
-          {upcomingInterviews.map(interview => {';
-            const interviewDate = parseISO(interview.scheduled_date);';';
-            const formattedDate = format(interviewDate, 'EEE, MMM d');';';
+          {upcomingInterviews.map(interview => {
+            const interviewDate = parseISO(interview.scheduled_date);
+            const formattedDate = format(interviewDate, 'EEE, MMM d');
             const formattedTime = format(interviewDate, 'h: mm a');
             
             const now = new Date();
@@ -161,5 +161,5 @@ export function UpcomingInterviewsCard(props: any) {
   );
 }
 
-</any>';
-</Interview>;';;';
+</any>
+</Interview>;';';

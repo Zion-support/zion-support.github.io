@@ -45,7 +45,7 @@ import {
 } from 'lucide-react';
 
 const ComprehensiveNewServicesShowcase2025: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState(");
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedType, setSelectedType] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -72,7 +72,7 @@ const ComprehensiveNewServicesShowcase2025: React.FC = () => {
         'micro-saas': 'Micro SAAS',
         'it-services': 'IT Services',
         'ai-services': 'AI Services'
-      };
+      };;
       services = services.filter(service => 
         service.serviceType === serviceTypeMap[selectedType]
       );
@@ -84,7 +84,7 @@ const ComprehensiveNewServicesShowcase2025: React.FC = () => {
         'mid-range': [300, 999],
         'premium': [1000, 2499],
         'enterprise': [2500, 999999]
-      };
+      };;
       const [min, max] = priceRanges[selectedPriceRange] || [0, 999999];
       services = services.filter(service => service.price >= min && service.price <= max);
     }
@@ -367,7 +367,7 @@ const ComprehensiveNewServicesShowcase2025: React.FC = () => {
             <h3 className="text-xl font-semibold text-gray-900 mb-2">No services found</h3>
             <p className="text-gray-600 mb-4">Try adjusting your filters or search terms</p>
             <Button onClick={() => {
-              setSearchTerm('');
+              setSearchTerm(");
               setSelectedCategory('all');
               setSelectedType('all');
               setSelectedPriceRange('all');

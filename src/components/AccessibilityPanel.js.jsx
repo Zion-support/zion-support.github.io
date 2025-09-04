@@ -1,75 +1,75 @@
-import React, {useState, useEffect} from 'react';';';
+import React, {useState, useEffect} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 
-export default function Page(props: any) {
-            catch(error) {';
-';';
+export default function Page($1) {
+            catch(error) {
+
                 // console.error('Failed to parse accessibility settings:', error)}
         }
     }, []);
     useEffect(() => {// TODO: Add dependencies if needed}, []);
-        // Apply settings to document';
+        // Apply settings to document
         applySettings(settings);';';
-        // Save to localStorage'';';
+        // Save to localStorage'
         localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings]);
-    const applySettings = (props: any) => {
+    const applySettings = (props) => {
 
         const root = document.documentElement;
         // High contrast
-        if(newSettings.highContrast) {';
-';';
+        if(newSettings.highContrast) {
+
             root.style.setProperty('--high-contrast',1');';';
-            root.classList.add('high-contrast')}';';
+            root.classList.add('high-contrast')}
         else {root.style.setProperty('--high-contrast',0');';';
-            root.classList.remove('high-contrast')}';';
-        // Font size'';';
+            root.classList.remove('high-contrast')}
+        // Font size'
         root.style.setProperty('--font-size', `${newSettings.fontSize}%`);';
-        // Reduced motion';';
-        if(newSettings.reducedMotion) {root.classList.add('reduced-motion')}';';
-        else {root.style.setProperty('--reduced-motion',no-preference')}';
-        // Apply focus indicator';';
-        if(settings.focusIndicator) {root.style.setProperty('--focus-visible',auto')}';';
-        else {root.style.setProperty('--focus-visible',none')}';';
-        // Color blindness'';';
+        // Reduced motion
+        if(newSettings.reducedMotion) {root.classList.add('reduced-motion')}
+        else {root.style.setProperty('--reduced-motion',no-preference')}
+        // Apply focus indicator
+        if(settings.focusIndicator) {root.style.setProperty('--focus-visible',auto')}
+        else {root.style.setProperty('--focus-visible',none')}
+        // Color blindness'
         root.classList.remove('protanopia',deuteranopia',tritanopia');';';
-        if(newSettings.colorBlindness !== 'none') {root.classList.add(newSettings.colorBlindness)}';
-        // Focus indicator';';
-        if(newSettings.focusIndicator) {root.classList.add('focus-visible')}';';
+        if(newSettings.colorBlindness !== 'none') {root.classList.add(newSettings.colorBlindness)}
+        // Focus indicator
+        if(newSettings.focusIndicator) {root.classList.add('focus-visible')}
         else {root.classList.remove('focus-visible')}
     };
-    const updateSetting = (props: any) => {
+    const updateSetting = (props) => {
 
-        setSettings(prev => ({ ...prev, [key]: value }))};
-    const resetSettings = (props: any) => {
+        setSettings(prev => ({ ...prev, [key]: value }))};;
+    const resetSettings = (props) => {
         const defaultSettings = {
 
   highContrast: false,
             fontSize: 100,
             reducedMotion: false,
             screenReader: false,
-            keyboardNavigation: false,';
-            focusIndicator: true,';';
+            keyboardNavigation: false,
+            focusIndicator: true,
   colorBlindness: 'none'
 
-};';
+};;';
         setSettings(defaultSettings)};';';
-    const tabs = ['';';
-        {id: 'general', label: 'General', icon: '⚙️'},';';
-        {id: 'visual', label: 'Visual', icon: '👁️'},';';
-        {id: 'audio', label: 'Audio', icon: '🔊'},';';
-        {id: 'navigation', label: 'Navigation', icon: '⌨️'}
+    const tabs = ['
+        {id: 'general', label: 'General', icon: '⚙️'},
+        {id: 'visual', label: 'Visual', icon: '👁️'},
+        {id: 'audio', label: 'Audio', icon: '🔊'},
+        {id: 'navigation', label: 'Navigation', icon: '⌨️'};
     ];';
-    const getScoreColor = (props: any) => {if(score >= 90)';';
-            return 'text-green-400';';
+    const getScoreColor = (props) => {if(score >= 90)';
+            return 'text-green-400';
         if(score >= 70)';';
-            return 'text-yellow-400';';';
-        return 'text-red-400'};';
-    const getScoreLabel = (props: any) => {if(score >= 90)';';
-            return 'Excellent';';
+            return 'text-yellow-400';
+        return 'text-red-400'};
+    const getScoreLabel = (props) => {if(score >= 90)';
+            return 'Excellent';
         if(score >= 70)';';
-            return 'Good';';
+            return 'Good';
         if(score >= 50)';';
-            return 'Needs Improvement';';';
+            return 'Needs Improvement';
         return 'Poor'};
     if(!isVisible)
         return null;
@@ -111,19 +111,19 @@ export default function Page(props: any) {
               </div>
             </div>
 
-            {/* Tabs */}"';
-            <div className="flex border-b border-gray-200 dark:border-slate-700">`';';
-              {tabs.map((tab) => (<button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex-1 px-4 py-3 text-sm font-medium transition-colors ${activeTab === tab.id'';';
-                    ? 'text-blue-600 border-b-2 border-blue-600 bg-blue-50 dark:bg-blue-900/20''`';';
+            {/* Tabs */}";
+            <div className="flex border-b border-gray-200 dark:border-slate-700">`
+              {tabs.map((tab) => (<button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex-1 px-4 py-3 text-sm font-medium transition-colors ${activeTab === tab.id'
+                    ? 'text-blue-600 border-b-2 border-blue-600 bg-blue-50 dark:bg-blue-900/20"`
                     : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'}`}>"
                   <span className="mr-2">{tab.icon}</span>
                   {tab.label}
                 </button>) ) }
             </div>
 
-            {/* Content */}"';
-            <div className="p-4 max-h-96 overflow-y-auto">"';';
-              <AnimatePresence mode="wait">'"';';
+            {/* Content */}";
+            <div className="p-4 max-h-96 overflow-y-auto">";';
+              <AnimatePresence mode="wait">";';
                 {activeTab === 'general' && (<motion.div key="general" initial = {
 
   { opacity: 0,
@@ -140,8 +140,8 @@ export default function Page(props: any) {
   y: -20 
 "
 }} className="space-y-4">
-                    <div>"';
-                      <label className="flex items-center space-x-3">"';';
+                    <div>";
+                      <label className="flex items-center space-x-3">";';
                         <input type="checkbox" checked={settings.highContrast} onChange={(e) => updateSetting('highContrast',
   e.target.checked)
 "} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>"
@@ -157,14 +157,14 @@ export default function Page(props: any) {
                     <div>"
                       <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                         Font Size: {settings.fontSize}%';
-                      </label>"';';
+                      </label>";';
                       <input type="range" min="50" max="200" step="10" value={settings.fontSize} onChange={(e) => updateSetting('fontSize',
   parseInt(e.target.value))
 "} className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"/>
                     </div>
 
-                    <div>"';
-                      <label className="flex items-center space-x-3">"';';
+                    <div>";
+                      <label className="flex items-center space-x-3">";';
                         <input type="checkbox" checked={settings.reducedMotion} onChange={(e) => updateSetting('reducedMotion',
   e.target.checked)
 "} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>"
@@ -175,9 +175,9 @@ export default function Page(props: any) {
                       <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                         Reduces animations and motion effects
                       </p>
-                    </div>';
-                  </motion.div>)}';';
-'"';';
+                    </div>
+                  </motion.div>)}
+";';
                 {activeTab === 'visual' && (<motion.div key="visual" initial = {
 
   { opacity: 0,
@@ -197,7 +197,7 @@ export default function Page(props: any) {
                     <div>"
                       <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                         Color Blindness Support';
-                      </label>';';
+                      </label>';
                       <select value={settings.colorBlindness} onChange={(e) => updateSetting('colorBlindness',
   e.target.value)
 "} className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">"
@@ -208,8 +208,8 @@ export default function Page(props: any) {
                       </select>
                     </div>
 
-                    <div>"';
-                      <label className="flex items-center space-x-3">"';';
+                    <div>";
+                      <label className="flex items-center space-x-3">";';
                         <input type="checkbox" checked={settings.focusIndicator} onChange={(e) => updateSetting('focusIndicator',
   e.target.checked)
 "} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>"
@@ -220,9 +220,9 @@ export default function Page(props: any) {
                       <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                         Makes focus indicators more visible
                       </p>
-                    </div>';
-                  </motion.div>)}';';
-'"';';
+                    </div>
+                  </motion.div>)}
+";';
                 {activeTab === 'audio' && (<motion.div key="audio" initial = {
 
   { opacity: 0,
@@ -239,8 +239,8 @@ export default function Page(props: any) {
   y: -20 
 "
 }} className="space-y-4">
-                    <div>"';
-                      <label className="flex items-center space-x-3">"';';
+                    <div>";
+                      <label className="flex items-center space-x-3">";';
                         <input type="checkbox" checked={settings.screenReader} onChange={(e) => updateSetting('screenReader',
   e.target.checked)
 "} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>"
@@ -263,9 +263,9 @@ export default function Page(props: any) {
                         <div>• Enter / Space: Activate buttons</div>
                         <div>• Escape: Close modals</div>
                       </div>
-                    </div>';
-                  </motion.div>)}';';
-'"';';
+                    </div>
+                  </motion.div>)}
+";';
                 {activeTab === 'navigation' && (<motion.div key="navigation" initial = {
 
   { opacity: 0,
@@ -282,8 +282,8 @@ export default function Page(props: any) {
   y: -20 
 "
 }} className="space-y-4">
-                    <div>"';
-                      <label className="flex items-center space-x-3">"';';
+                    <div>";
+                      <label className="flex items-center space-x-3">";';
                         <input type="checkbox" checked={settings.keyboardNavigation} onChange={(e) => updateSetting('keyboardNavigation',
   e.target.checked)
 "} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>"
@@ -326,8 +326,8 @@ export default function Page(props: any) {
       </AnimatePresence>
     </>)};';
 export default AccessibilityPanel;';';
-'"`
+"`
 
 </motion>
-</motion>';
-</motion>;';;';
+</motion>
+</motion>;';';

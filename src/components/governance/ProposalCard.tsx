@@ -14,7 +14,6 @@ interface Proposal {;
 }
 
 interface ProposalCardProps {
-';
   proposal: Proposa l;';';
   onVote?: (proposalId: string, vote: 'for' | 'against') => void;
   canVote?: boolean;
@@ -25,27 +24,27 @@ const ProposalCard: Reac t.FC<ProposalCardProps> = ({
   proposal, 
   onVote, 
   canVote = false 
-}) => {
-  const getStatusColor = (props: any) => {';
-    switch (status) {';';
-      case 'active':';';
-        return 'bg-green-100 text-green-800';';';
-      case 'passed':';';
-        return 'bg-blue-100 text-blue-800';';';
-      case 'rejected':';';
-        return 'bg-red-100 text-red-800';';';
-      case 'expired':';';
-        return 'bg-gray-100 text-gray-800';';';
+};) => {
+  const getStatusColor = (props) => {
+    switch (status) {
+      case 'active':';
+        return 'bg-green-100 text-green-800';
+      case 'passed':';
+        return 'bg-blue-100 text-blue-800';
+      case 'rejected':';
+        return 'bg-red-100 text-red-800';
+      case 'expired':';
+        return 'bg-gray-100 text-gray-800';
       default: retur n 'bg-gray-100 text-gray-800';
     }
   };
 ;
-  const getVotePercentage = (props: any) => {;
+  const getVotePercentage = (props) => {;
     if (proposal.totalVotes === 0) return 0;
     return Math.round((votes / proposal.totalVotes) * 100);
   };
 ;
-  const handleVote = (props: any) => {;
+  const handleVote = (props) => {;
     if (onVote && canVote) {;
       onVote(proposal.id, vote);
     }
@@ -93,16 +92,16 @@ const ProposalCard: Reac t.FC<ProposalCardProps> = ({
       <div className="flex justify-between items-center">;
         <div className="text-sm text-gray-500">;
           Ends: {new Date(proposal.endDate).toLocaleDateString()}
-        </div>';
+        </div>
         ';';
         {canVote && proposal.status === 'active' && (
-          <div className="space-x-2">';
+          <divclassName="space-x-2">
             <button';';
               onClick={() => handleVote('for')}
               className="px-4 py-2 bg-green-600 text-white text-sm rounded-lg hover: b g-green-700 transition-colors"
             >
               Vote For
-            </button>';
+            </button>
             <button';';
               onClick={() => handleVote('against')}
               className="px-4 py-2 bg-red-600 text-white text-sm rounded-lg hover: b g-red-700 transition-colors"
@@ -118,5 +117,5 @@ const ProposalCard: Reac t.FC<ProposalCardProps> = ({
 };
 ;
 export default ProposalCard;
-</div>';
-</ProposalCardProps>;';;';
+</div>
+</ProposalCardProps>;';';

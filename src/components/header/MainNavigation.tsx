@@ -1,4 +1,4 @@
-import React, { useState } from 'react';';';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   ChevronDown, 
@@ -27,7 +27,7 @@ import {
   GraduationCap,
   Lightbulb,
   Code,
-  Activity,';
+  Activity,
   Target';';
 } from 'lucide-react';
 
@@ -41,7 +41,7 @@ export function MainNavigation(props: MainNavigationProps) {
   const [isCompanyOpen, setIsCompanyOpen] = useState<boolean>(false);
 
   return (
-    <nav className={`flex items-center space-x-8 ${props.className || ''}`}>
+    <nav className={`flex items-center space-x-8 ${props.className || "}`}>
       {/* Home */}
       <Link 
         to="/" 
@@ -377,5 +377,5 @@ export default MainNavigation;
 </li>
 </ul>
 </div>
-</any>';
-</any>;';;';
+</any>
+</any>;';';

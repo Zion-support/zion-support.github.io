@@ -1,9 +1,9 @@
-import React from 'react';';
-// Next.js routing - no need for react-router-dom';';
-import CommunityPage from '@/pages/CommunityPage';
-export default function CommunityRoutes(props: any) {
+import React from 'react';
+// Next.js routing - no need for react-router-dom
+import CommunityPage from '@/pages/CommunityPage
+export default function CommunityRoutes($1) {
     return (<>
-      <Route path="" element={<CommunityPage  />}/>
+      <Route path=" element={<CommunityPage  />}/>
     </>);
-}';
-;';;';
+}
+;';';

@@ -224,7 +224,7 @@ const serviceCategories = [
                 price: "$2,999",
                 features["3D printing", "PCB design", "Component sourcing", "Design validation"],
                 benefits["Faster development", "Cost reduction", "Design validation", "Market testing"]
-            }
+            };
         ],
         marketPrice: "$2000-8000",
         deliveryTime: "4-6 weeks",
@@ -241,14 +241,14 @@ const whyChooseUs = [
         icon: <Globe className="w-6 h-6 text-zion-purple" />},
     {title: "Fast Delivery",
         description: "Quick turnaround times without compromising quality",
-        icon: <Clock className="w-6 h-6 text-zion-green" />},
+        icon: <Clock className="w-6 h-6 text-zion-green" />};,
     {
         title: "Proven Results",
         description: "Track record of successful project deliveries",
         icon: <Star className="w-6 h-6 text-zion-yellow" />
 
 ];
-export function ServicesOverview(props: any) {
+export function ServicesOverview($1) {
     return (
     <div className="min-h-screen bg-white">
       <div className="container mx-auto px-4">
@@ -369,4 +369,4 @@ export function ServicesOverview(props: any) {
         </div>
   );
 }
-export default ServicesOverview;;;
+export default ServicesOverview;

@@ -7,11 +7,11 @@ export const TestWrapper: React.FC<{ children: React.ReactNode }> = ({ children 
     <BrowserRouter>
       {children}
     </BrowserRouter>
-  )};
+  )};;
 
 // Custom render function
 export const renderWithProviders = (ui: React.ReactElement) => {
-  return render(ui, { wrapper: TestWrapper })};
+  return render(ui, { wrapper: TestWrapper })};;
 
 // Mock data generators
 export const mockUser = {
@@ -19,14 +19,14 @@ export const mockUser = {
   name: 'Test User',
   email: 'test@example.com',
   role: 'user'
-};
+};;
 
 export const mockMessage = {
   id: '1',
   text: 'Test message',
   sender: 'user' as const,
   timestamp: new Date()
-};
+};;
 
 // Common test helpers
 export const waitForElementToBeRemoved = waitFor;

@@ -1,28 +1,28 @@
 // Global type definitions
 declare module '*.module.css' {
   const classes: { [key: string]: string };
-  export default classes}';
-';';
+  export default classes}
+
 declare module '*.module.scss' {
   const classes: { [key: string]: string };
-  export default classes}';
-';';
+  export default classes}
+
 declare module '*.png' {
   const src: string;
-  export default src}';
-';';
+  export default src}
+
 declare module '*.jpg' {
   const src: string;
-  export default src}';
-';';
+  export default src}
+
 declare module '*.jpeg' {
   const src: string;
-  export default src}';
-';';
+  export default src}
+
 declare module '*.svg' {
   const src: string;
-  export default src}';
-';';
+  export default src}
+
 declare module '*.gif' {
   const src: string;
   export default src}
@@ -35,4 +35,3 @@ interface Window {
 type AnyObject = Record<string, any>;
 type Nullable<T> = T | null;
 type Optional<T> = T | undefined;';
-';';

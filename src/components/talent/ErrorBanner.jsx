@@ -1,4 +1,4 @@
-export function ErrorBanner(props: any) {
+export function ErrorBanner($1) {
     return (
     <div className="min-h-screen bg-white">
       {msg}

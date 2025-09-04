@@ -24,6 +24,6 @@ export function useToast(...args[]):  {
   const showToast = (message: string, options?: ToastOptions)  => {
     return toast(message, options)
 
-  return { showToast }};';
-;';;';
+  return { showToast }};;
+;';';
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599

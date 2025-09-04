@@ -6,7 +6,7 @@ import {
   Linkedin, 
   Twitter, 
 import { Link } from 'react-router-dom';
-import React, { useState } from 'react';';';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import {
   Twitter,
@@ -63,26 +63,26 @@ import {
   BarChart,
   Users2,
   Settings,
-  Palette,';
-  ChevronDown,';';
+  Palette,
+  ChevronDown,
 } from 'lucide-react';
-';
-export default function Footer(props: any) {';';
+
+export default function Footer($1) {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['company']));
 
   // Handle scroll to show/hide scroll to top button
   React.useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
-    const handleScroll = (props: any) => {';
-    };';
-';';
+    const handleScroll = (props) => {
+    };;';
+
     window.addEventListener('scroll', handleScroll);';';
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   // Toggle section expansion (for mobile)
-  const toggleSection = (props: any) => {
+  const toggleSection = (props) => {
     setExpandedSections(prev => {
       const newSet = new Set(prev);
       if (newSet.has(title)) {
@@ -157,9 +157,9 @@ services: [ { name: "AI-Quantum Hybrid Computing Platform", href: "/services/ai-
       title: "Resources","
 links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href: "/white-papers" }, { name: "Support Center", href: "/help" }, { name: "Training", href: "/training" }, { name: "Blog", href: "/blog" }, { name: "Research", href: "/research-development" }
 
-export function Footer(props: any) {';
-  const scrollToTop = (props: any) => {';';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+export function Footer($1) {
+  const scrollToTop = (props) => {
+    window.scrollTo({ top: 0, behavior: 'smooth' };);
   };
 
   ]"
@@ -169,7 +169,7 @@ export function Footer(props: any) {';
     { icon: Mai l, label: "Email", value: "kleber@ziontechgroup.com", href: "mailto: klebe r@ziontechgroup.com" },
     { icon: Phon e, label: "Phone", value: "+1 302 464 0950", href: "tel:+13024640950" },
     { icon: MapPi n, label: "Address", value: "364 E Main St STE 1008, Middletown DE 19709", href: "#" },
-    { icon: Glob e, label: "Website", value: "ziontechgroup.com", href: "https://ziontechgroup.com" }
+    { icon: Glob e, label: "Website", value: "ziontechgroup.com", href: "https://ziontechgroup.com" };
 ];
 
   const legalLinks = [
@@ -177,7 +177,7 @@ export function Footer(props: any) {';
     { name: "Terms of Service", href: "/terms" },
     { name: "Cookie Policy", href: "/cookies" },
     { name: "Data Protection", href: "/data-protection" },
-    { name: "Accessibility", href: "/accessibility" }
+    { name: "Accessibility", href: "/accessibility" };
   ];
 
   const socialLinks = [
@@ -186,7 +186,7 @@ export function Footer(props: any) {';
     { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },
     { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram },
     { name: "YouTube", href: "https://youtube.com/ziontechgroup", icon: Youtube },
-    { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github }
+    { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github };
   ];
 
   const currentYear = new Date().getFullYear();
@@ -250,16 +250,16 @@ export function Footer(props: any) {';
   FileText,
   Users,
   Briefcase,
-  Network,';
+  Network,
   Newspaper';';
-} from 'lucide-react';';
+} from "lucide-react";
 import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
-';
-  const scrollToTop = () => {';';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' };);
   };
 
             </div>
@@ -373,23 +373,23 @@ export function Footer() {
               <li><Link href="/support" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Support</Link></li>
               <li><Link href="/help" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Help Center</Link></li>
             </ul>
-  // Scroll to top';
+  // Scroll to top
       const scrollToTopButton = document.getElementById('scroll-to-top');
-      if (scrollToTopButton) {';
-        if (window.pageYOffset > 300) {';';
+      if (scrollToTopButton) {
+        if (window.pageYOffset > 300) {
           scrollToTopButton.classList.remove('hidden');';
-        } else {';';
+        } else {
           scrollToTopButton.classList.add('hidden');
         }
       }
     };';
-';';
+
     window.addEventListener('scroll', handleScroll);';';
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   // Toggle section expansion (for mobile)
-  const toggleSection = (props: any) => {
+  const toggleSection = (props) => {
     setExpandedSections(prev => {
       const newSet = new Set(prev);
       if (newSet.has(title)) {
@@ -402,11 +402,11 @@ export function Footer() {
   };
 
   // Scroll to top function
-  const scrollToTop = (props: any) => {
-    window.scrollTo({';
-      top: 0,';';
+  const scrollToTop = (props) => {
+    window.scrollTo({
+      top: 0,
       behavior: 'smooth'
-    });
+    };);
   };
 
       </div>
@@ -433,7 +433,7 @@ export function Footer() {
                     <div key={index} className="flex items-center gap-3 text-slate-300">
                       <item.icon className="w-4 h-4 text-blue-400" />
                       <a ';
-                        href={item.href} ';';
+                        href={item.href}
                         target={item.href.startsWith('mailto:') || item.href.startsWith('tel:') ? '_self' : '_blank'}
                         rel="noopener noreferrer"
                         className="hover:text-white transition-colors"
@@ -463,8 +463,8 @@ export function Footer() {
                 >
                   <h4 className="text-lg font-semibold text-white">{section.title}</h4>
                   <ChevronDown ';
-                    className={`w-5 h-5 text-slate-400 transition-transform ${';';
-                      expandedSections.has(section.title) ? 'rotate-180' : ''
+                    className={`w-5 h-5 text-slate-400 transition-transform ${
+                      expandedSections.has(section.title) ? 'rotate-180' : "
                     }`} 
                   />
                 </button>
@@ -473,8 +473,8 @@ export function Footer() {
                 <h4 className="text-lg font-semibold text-white hidden lg:block">{section.title}</h4>
 
                 {/* Links */}
-                <AnimatePresence>';
-                  <div className={`space-y-3 ${';';
+                <AnimatePresence>
+                  <div className={`space-y-3 ${
                     expandedSections.has(section.title) ? 'block' : 'hidden lg:block'
                   }`}>
                     {section.links.map((link) => (
@@ -606,69 +606,69 @@ export function Footer() {
     </footer>
   );
 }
-  const footerSections = [';
-    {';';
-      title: 'Company',';
-      links: [';';
-        { name: 'About Us', href: '/about' },';';
-        { name: 'Our Mission', href: '/about#mission' },';';
-        { name: 'Leadership Team', href: '/about#team' },';';
-        { name: 'Careers', href: '/careers' },';';
-        { name: 'Press & News', href: '/newsroom' },';';
+  const footerSections = [
+    {
+      title: 'Company',
+      links: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Mission', href: '/about#mission' },
+        { name: 'Leadership Team', href: '/about#team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Press & News', href: '/newsroom' },
         { name: 'Partners', href: '/partners' }
       ]
-    },';
-    {';';
-      title: 'Services',';
-      links: [';';
-        { name: 'AI Solutions', href: '/services/ai-services' },';';
-        { name: 'IT Services', href: '/services/it-services' },';';
-        { name: 'Micro SaaS', href: '/services/micro-saas' },';';
-        { name: 'Cybersecurity', href: '/services/it/cybersecurity' },';';
-        { name: 'Cloud Services', href: '/services/it/cloud-finops' },';';
+    },
+    {
+      title: 'Services',
+      links: [
+        { name: 'AI Solutions', href: '/services/ai-services' },
+        { name: 'IT Services', href: '/services/it-services' },
+        { name: 'Micro SaaS', href: '/services/micro-saas' },
+        { name: 'Cybersecurity', href: '/services/it/cybersecurity' },
+        { name: 'Cloud Services', href: '/services/it/cloud-finops' },
         { name: 'Platform Engineering', href: '/services/it/platform-engineering' }
       ]
-    },';
-    {';';
-      title: 'Solutions',';
-      links: [';';
-        { name: 'Enterprise Solutions', href: '/solutions' },';';
-        { name: 'Healthcare Tech', href: '/solutions/healthcare' },';';
-        { name: 'Financial Solutions', href: '/solutions/financial' },';';
-        { name: 'Manufacturing', href: '/solutions/manufacturing' },';';
-        { name: 'Industry Solutions', href: '/solutions/industry' },';';
+    },
+    {
+      title: 'Solutions',
+      links: [
+        { name: 'Enterprise Solutions', href: '/solutions' },
+        { name: 'Healthcare Tech', href: '/solutions/healthcare' },
+        { name: 'Financial Solutions', href: '/solutions/financial' },
+        { name: 'Manufacturing', href: '/solutions/manufacturing' },
+        { name: 'Industry Solutions', href: '/solutions/industry' },
         { name: 'Emerging Tech', href: '/solutions/emerging' }
       ]
-    },';
-    {';';
-      title: 'Resources',';
-      links: [';';
-        { name: 'Blog', href: '/blog' },';';
-        { name: 'Case Studies', href: '/case-studies' },';';
-        { name: 'White Papers', href: '/white-papers' },';';
-        { name: 'Webinars', href: '/webinars' },';';
-        { name: 'Documentation', href: '/docs' },';';
+    },
+    {
+      title: 'Resources',
+      links: [
+        { name: 'Blog', href: '/blog' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Webinars', href: '/webinars' },
+        { name: 'Documentation', href: '/docs' },
         { name: 'API Reference', href: '/api' }
       ]
-    },';
-    {';';
-      title: 'Support',';
-      links: [';';
-        { name: 'Help Center', href: '/help' },';';
-        { name: 'Contact Support', href: '/contact' },';';
-        { name: 'Training', href: '/training' },';';
-        { name: 'Community', href: '/community' },';';
-        { name: 'System Status', href: '/status' },';';
+    },
+    {
+      title: 'Support',
+      links: [
+        { name: 'Help Center', href: '/help' },
+        { name: 'Contact Support', href: '/contact' },
+        { name: 'Training', href: '/training' },
+        { name: 'Community', href: '/community' },
+        { name: 'System Status', href: '/status' },
         { name: 'Request Quote', href: '/request-quote' }
       ]
-    }
+    };
   ];
 
   const contactInfo = [
     { icon: Mail, label: "Email", value: "kleber@ziontechgroup.com", href: "mailto:kleber@ziontechgroup.com" },
     { icon: Phone, label: "Phone", value: "+1 302 464 0950", href: "tel:+13024640950" },
     { icon: MapPin, label: "Address", value: "364 E Main St STE 1008, Middletown DE 19709", href: "#" },
-    { icon: Globe, label: "Website", value: "ziontechgroup.com", href: "https://ziontechgroup.com" }
+    { icon: Globe, label: "Website", value: "ziontechgroup.com", href: "https://ziontechgroup.com" };
   ];
 
   const socialLinks = [
@@ -676,12 +676,12 @@ export function Footer() {
     { icon: <Twitter className="w-5 h-5" />, url: "https://twitter.com/ziontechgroup", color: "hover:text-blue-400" },
     { icon: <Facebook className="w-5 h-5" />, url: "https://facebook.com/ziontechgroup", color: "hover:text-blue-400" },
     { icon: <Instagram className="w-5 h-5" />, url: "https://instagram.com/ziontechgroup", color: "hover:text-blue-400" },
-    { icon: <Github className="w-5 h-5" />, url: "https://github.com/ziontechgroup", color: "hover:text-gray-400" }';
-import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
+    { icon: <Github className="w-5 h-5" />, url: "https://github.com/ziontechgroup", color: "hover:text-gray-400" }
+import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight, Facebook, Twitter, Linkedin, Instagram, Youtube, Github }; from 'lucide-react';
 
-export function Footer(props: any) {';
-  const scrollToTop = (props: any) => {';';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+export function Footer($1) {
+  const scrollToTop = (props) => {
+    window.scrollTo({ top: 0, behavior: 'smooth' };);
   };
 
   const footerSections = [
@@ -729,7 +729,7 @@ export function Footer(props: any) {';
         { name: "API Reference", href: "/api" },
         { name: "Status Page", href: "/status" }
       ]
-    }
+    };
   ];
 
   const legalLinks = [
@@ -737,7 +737,7 @@ export function Footer(props: any) {';
     { name: "Terms of Service", href: "/terms" },
     { name: "Cookie Policy", href: "/cookies" },
     { name: "Data Protection", href: "/data-protection" },
-    { name: "Accessibility", href: "/accessibility" }
+    { name: "Accessibility", href: "/accessibility" };
   ];
 
   const socialLinks = [
@@ -746,7 +746,7 @@ export function Footer(props: any) {';
     { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },
     { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram },
     { name: "YouTube", href: "https://youtube.com/ziontechgroup", icon: Youtube },
-    { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github }
+    { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github };
   ];
 
   return (
@@ -1068,4 +1068,4 @@ export default Footer;
 </Set>
 }
 }
-;';;';
+;';';

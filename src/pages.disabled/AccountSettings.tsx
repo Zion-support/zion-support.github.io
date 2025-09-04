@@ -13,7 +13,7 @@ import { toast } from 'sonner';
 export default function AccountSettings() {
   const { user } = useAuth();
   const [displayWeb3, setDisplayWeb3] = useState(false);
-  const [didHandle, setDidHandle] = useState('');
+  const [didHandle, setDidHandle] = useState(");
   const [enableBackup, setEnableBackup] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -23,7 +23,7 @@ export default function AccountSettings() {
       if (stored) {
         const parsed = JSON.parse(stored);
         setDisplayWeb3(parsed.displayWeb3 || false);
-        setDidHandle(parsed.didHandle || '');
+        setDidHandle(parsed.didHandle || ");
         setEnableBackup(parsed.enableBackup || false);
       }
     } catch (e) {
@@ -38,14 +38,14 @@ export default function AccountSettings() {
         return;
       }
 
-      const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+      const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' };);
       if (!accounts.length) {
         toast.error('No accounts found');
         return;
       }
 
       const address = accounts[0];
-      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
+      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()};`;
       
       await window.ethereum.request({
         method: 'personal_sign',

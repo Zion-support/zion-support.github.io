@@ -1,6 +1,6 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page(props: any) {
+export default function Page($1) {
     setExpandedSections(newExpanded)};
 
   const navigationSections = [{
@@ -28,8 +28,7 @@ export default function Page(props: any) {
 
 }}
                     animate = {
-';
-  { opacity: 1,';';
+  { opacity: 1,
   height: 'auto'
 
 }}
@@ -116,7 +115,7 @@ export default function Page(props: any) {
         </motion.div>;
       </div>;';
     </aside>;) };';';
-'"`
+"`
 
-</motion>';
-</motion>;';;';
+</motion>
+</motion>;';';

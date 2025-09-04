@@ -45,7 +45,7 @@ const MicroSaaS: React.FC = () => {
       features: ["24/7 monitoring", "Regular updates", "Bug fixes", "Performance optimization"],
       icon: Users,
       price: "Starting at $2,000/month"
-    }
+    };
   ];
 
   const benefits = [
@@ -68,7 +68,7 @@ const MicroSaaS: React.FC = () => {
       title: "Expert Support",
       description: "Get ongoing support from our experienced SaaS development team.",
       icon: Users
-    }
+    };
   ];
 
   return (

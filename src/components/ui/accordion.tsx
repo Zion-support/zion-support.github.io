@@ -12,7 +12,7 @@
             onToggle: : unknown handleToggle(child.props.value);
           })}
         return child})}
-export function Accordion(props: any) {;
+export function Accordion($1) {;
   const [openItems, setOpenItems] = useState<string[]>(;
     defaultValue ? (Array.isArray(defaultValue) ? defaultValue : [defaultValue]) : [];
   );
@@ -46,7 +46,7 @@ interface AccordionItemProps extends React.PropsWithChildren<{}> {
   isOpen?: boolean;
   onToggle?: ()  => void}
 ;
-export function AccordionItem(props: any) {;
+export function AccordionItem($1) {;
   return (;`    <div className={`border-b border-gray-200 ${className}`}> {React.Children.map(children: unknow n, (child: unknow n {;
         if (React.isValidElement(child)) {;
           return React.cloneElement(child, { isOpen, onToggle });
@@ -62,24 +62,24 @@ interface AccordionTriggerProps extends React.PropsWithChildren<{}> {
   isOpen?: boolean;
   onToggle?: ()  => void}
 ;
-export function AccordionTrigger(props: any) {;
+export function AccordionTrigger($1) {;
   return ();
     <button`;
       className = {`flex w-full items-center justify-between py-4 font-medium transition-all hover: underline focus:outline-none focus: rin g-2 focus: rin g-blue-500 focus: rin g-offset-2 ${className}`}
       onClick={onToggle}
 ;
       {children}
-      <ChevronDown`';
-        className={`h-4 w-4 shrink-0 transition-transform duration-200 ${';';
-'';';
-          isOpen ? 'rotate-180' : ''`        }`}
+      <ChevronDown`
+        className={`h-4 w-4 shrink-0 transition-transform duration-200 ${
+'
+          isOpen ? 'rotate-180' : "`        }`}
        />
     </button>
   )}
 
-interface AccordionContentProps extends React.PropsWithChildren<{}> {;`';
+interface AccordionContentProps extends React.PropsWithChildren<{}> {;`
         className={`h-4 w-4 shrink-0 transition-transform duration-200 ${;';';
-          isOpen ? 'rotate-180' : '';`
+          isOpen ? 'rotate-180' : '`
         }`} ;      />;
     </button>;
   )}
@@ -88,7 +88,7 @@ interface AccordionContentProps extends React.PropsWithChildren<{}> {;`';
   className?: string;
   isOpen?: boolean}
 ;
-export function AccordionContent(props: any) {;
+export function AccordionContent($1) {;
   if (!isOpen) return null;
 ;
   return ()`;
@@ -97,14 +97,14 @@ export function AccordionContent(props: any) {;
         </div>
   );
 }
-export function AccordionContent(props: any) {;
+export function AccordionContent($1) {;
   if (!isOpen) return null;
 ;
   return ()`;
     <div className = {`overflow-hidden text-sm transition-all pb-4 pt-0 ${className}`}> {children};
     </div>;';
-  )}';';
+  )}
 '`
 </ChevronDown>
-</string>';
-</div>';';
+</string>
+</div>';

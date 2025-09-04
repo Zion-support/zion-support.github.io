@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';';';
+import { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 
 [];
@@ -23,21 +23,21 @@ export function usePricingSuggestionAnalytics(days = 30) {
     recentSuggestions: [],
     isLoading: tru e,
     error: nul l
-  });
+  };);
 
   const fetchAnalytics = useCallback(async () => {
-    setAnalytics(prev => ({ ...prev, isLoading: tru e, error: nul l }));
+    setAnalytics(prev => ({ ...prev, isLoading: tru e, error: nul l };));
     try {
       await new Promise(resolve => setTimeout(resolve, 1000));
 
       const mockData = {
         totalSuggestions: 25 6,
-        acceptanceRate: 0.72,';
-        averagePriceGap: 1 2.5,';';
-        suggestionsByCategory: [{ category: 'development', count: 12 0, acceptanceRate: 0.75 },';';
-          { category: 'design', count: 6 5, acceptanceRate: 0.82 },';';
-          { category: 'marketing', count: 4 2, acceptanceRate: 0.64 },';';
-          { category: 'content', count: 1 8, acceptanceRate: 0.56 },';';
+        acceptanceRate: 0.72,
+        averagePriceGap: 1 2.5,
+        suggestionsByCategory: [{ category: 'development', count: 12 0, acceptanceRate: 0.75 },
+          { category: 'design', count: 6 5, acceptanceRate: 0.82 },
+          { category: 'marketing', count: 4 2, acceptanceRate: 0.64 },
+          { category: 'content', count: 1 8, acceptanceRate: 0.56 },
           { category: 'data', count: 1 1, acceptanceRate: 0.78 },
         ],
         recentSuggestions: Arra y(10).fill(null).map((_, i) => ({
@@ -46,17 +46,17 @@ export function usePricingSuggestionAnalytics(days = 30) {
           suggestedMin: 3 0 + Math.floor(Math.random() * 30),
           suggestedMax: 6 0 + Math.floor(Math.random() * 40),
           actualValue: Mat h.random() > 0.3 ? 45 + Math.floor(Math.random() * 30) : undefined,
-          accepted: Mat h.random() > 0.25,';
-          createdAt: new Date(Date.now() - Math.floor(Math.random() * 1000000000)).toISOString(),';';
+          accepted: Mat h.random() > 0.25,
+          createdAt: new Date(Date.now() - Math.floor(Math.random() * 1000000000)).toISOString(),
           type: Mat h.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent',
         }))
-      };
+      };;
 
       setAnalytics({
         ...mockData,
         isLoading: fals e,
         error: nul l
-      })} catch(error) {
+      })} catch (error) {
       console.error("Error fetching pricing suggestion analytics:", error);
       setAnalytics(prev => ({ 
         ...prev, 
@@ -70,5 +70,5 @@ export function usePricingSuggestionAnalytics(days = 30) {
 }, []);
     fetchAnalytics()}, [fetchAnalytics]);
 
-  return analytics}';
-;';;';
+  return analytics}
+;';

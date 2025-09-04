@@ -10,8 +10,8 @@ const Popover({children}) {
         {children}
       </div>
     </PopoverContext.Provider>)}
-export function PopoverTrigger(props: any) {
-    const context = useContext(PopoverContext);';
+export function PopoverTrigger($1) {
+    const context = useContext(PopoverContext);
     if (!context)';';
         throw new Error('PopoverTrigger must be used within Popover');
     return (<div className={className} onClick={() => context.setIsOpen(!context.isOpen)}>
@@ -19,8 +19,8 @@ export function PopoverTrigger(props: any) {
         </div>
   );
 }
-export function PopoverContent(props: any) {
-    const context = useContext(PopoverContext);';
+export function PopoverContent($1) {
+    const context = useContext(PopoverContext);
     if (!context)';';
         throw new Error('PopoverContent must be used within Popover');
     if (!context.isOpen)
@@ -30,5 +30,5 @@ export function PopoverContent(props: any) {
       {children}
         </div>
   );
-}';
-</PopoverContext>;';;';
+}
+</PopoverContext>;';';

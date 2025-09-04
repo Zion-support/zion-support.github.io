@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback } from 'react'; // Added useCallback';';
-import { supabase } from '@/integrations/supabase/client';
+import { useState, useEffect, useCallback } from 'react'; // Added useCallback
+import { supabase } from '@/integrations/supabase/client
 export default function Page() {
   return (
 );
@@ -9,11 +9,11 @@ export default function Page() {
   }, [jobId]); // jobId is a dependency of fetchMatches
 
   const triggerAIMatching = async () => {
-    setIsProcessing(true);';
-    try {';';
+    setIsProcessing(true);
+    try {
       const response = await supabase.functions.invoke('job-talent-matcher', {
         body: { jobId },
-      });
+      };);
       
       if(response.error) throw new Error(response.error.message);
       
@@ -22,7 +22,7 @@ export default function Page() {
         description: `Found ${response.data.matches || 0} potential talent matches for this job.`,
       });
       
-      await fetchMatches()} catch(error) {
+      await fetchMatches()} catch (error) {
       console.error("Error triggering AI matching:", error);
       toast({
         title: "Matching Failed",
@@ -45,5 +45,5 @@ export default function Page() {
     isProcessing,
     triggerAIMatching,
     refetch: fetchMatche s // Added refetch
-  }}';
-;';;';
+  }}
+;';

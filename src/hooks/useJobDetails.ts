@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback } from 'react'; // Added useCallback';';
-import { supabase } from '@/integrations/supabase/client';
+import { useState, useEffect, useCallback } from 'react'; // Added useCallback
+import { supabase } from '@/integrations/supabase/client
 
 export default function Page() {
   return (
@@ -20,5 +20,5 @@ export default function Page() {
     refetch: loadJobDetail s // Added refetch alias for consistency if preferred
   }}
 
-export default useJobDetails;';
-;';;';
+export default useJobDetails;
+;';';

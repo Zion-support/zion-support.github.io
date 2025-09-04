@@ -4,10 +4,10 @@ import { createClient } from '@supabase/supabase-js';
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key';
 =======
-import { createClient } from '@supabase/supabase-js';';
-';';
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';';';
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+import { createClient } from '@supabase/supabase-js';
+
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 
 if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
@@ -20,13 +20,13 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
     persistSession: true,
     detectSessionInUrl: true
   }
-});
+};);
 
 // Helper functions for common operations
 export const supabaseHelpers = {
   // User management
   async getUser() {
-    const { data: { user }, error } = await supabase.auth.getUser();
+    const { data: { user }, error }; = await supabase.auth.getUser();
     if (error) throw error;
     return user},
 
@@ -39,8 +39,8 @@ export const supabaseHelpers = {
     const { error } = await supabase.auth.signOut();
     if (error) throw error},
 
-  // Database operations';
-  async fetchData(table: string, query?: any) {';';
+  // Database operations
+  async fetchData($1) {
     let queryBuilder = supabase.from(table).select('*');
     
     if (query) {
@@ -53,7 +53,7 @@ export const supabaseHelpers = {
     if (error) throw error;
     return data},
 
-  async insertData(table: string, data: any) {
+  async insertData($1) {
     const { data: result, error } = await supabase
       .from(table)
       .insert(data)
@@ -75,10 +75,10 @@ export const supabaseHelpers = {
   async deleteData(table: string, id: string) {
     const { error } = await supabase
       .from(table)';
-      .delete()';';
+      .delete()
       .eq('id', id);
     
     if (error) throw error}
 };
-';
-export default supabase;;';;';
+
+export default supabase;';';

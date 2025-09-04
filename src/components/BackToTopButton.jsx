@@ -1,7 +1,7 @@
-import { ArrowUp import { useEffect, useState } from 'react';';';
-import {useTranslation} from 'react -i18next';';';
+import { ArrowUp import { useEffect, useState } from 'react';
+import {useTranslation} from 'react -i18next';
  from 'react';
-export function BackToTopButton(props: any) {
+export function BackToTopButton($1) {
 
     const [visible, setVisible] = useState(false);
     const { t } = useTranslation () ;
@@ -12,14 +12,14 @@ useEffect(() => {
     // Cleanup function
   };
 }, []);, []);
-const onScroll = (props: any) => {
-useEffect(() => {        const onScroll = (props: any) => {
-setVisible(window.scrollY > 400)};"
+const onScroll = (props) => {
+useEffect(() => {        const onScroll = (props) => {
+setVisible(window.scrollY > 400)};;"
         window.addEventListener("scroll", onScroll);"
-        return () => window.removeEventListener("scroll", onScroll)}, []);"';
-    const scrollToTop = () => window.scrollTo({top: 0, behavior: "smooth"});"';';
+        return () => window.removeEventListener("scroll", onScroll)}, []);";
+    const scrollToTop = () => window.scrollTo({top: 0, behavior: "smooth"};);";';
     return (<button aria-label={t('general.back_to_top')} onClick={scrollToTop} className={`fixed bottom-6 right-6 z-[60] rounded-full bg-primary text-primary-foreground p-2 shadow transition-opacity md:bottom-8 md:right-8 ${visible ? "opacity-100" : "opacity-0 pointer-events-none"}`}>"
-      <ArrowUp aria-hidden="true" className="h-5 w-5" />';
-    </button>)}';';
-'"`';
-;';;';
+      <ArrowUparia-hidden="true" className="h-5 w-5" />
+    </button>)}
+"`
+;';';

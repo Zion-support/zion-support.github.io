@@ -13,7 +13,7 @@ interface ResponsiveGridProps {
 
 export function ResponsiveGrid({ 
   children, 
-  className = '', 
+  className = ", 
   cols = { sm: 1, md: 2, lg: 3, xl: 4 } 
 }: ResponsiveGridProps) {
   const gridClasses = [
@@ -24,7 +24,7 @@ export function ResponsiveGrid({
     `grid-cols-${cols.sm || 1}`,
     `md:grid-cols-${cols.md || 2}`,
     `lg:grid-cols-${cols.lg || 3}`,
-    `xl:grid-cols-${cols.xl || 4}`,
+    `xl:grid-cols-${cols.xl || 4};`,
     className
   ].join(' ');
 

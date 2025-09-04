@@ -1,6 +1,6 @@
-import React, {Suspense, lazy, memo, useMemo, useCallback} from 'react';';';
-import {LoadingSpinner} from './ui / loading -spinner';';
-';';
+import React, {Suspense, lazy, memo, useMemo, useCallback} from 'react';
+import {LoadingSpinner} from './ui / loading -spinner';
+
  from './ui/loading-spinner';
 ) => {
 
@@ -9,7 +9,7 @@ import {LoadingSpinner} from './ui / loading -spinner';';
 
       ...item,
       processed: item.value * 2,
-      timestamp: new Date().toISOString()}));
+      timestamp: new Date().toISOString()};));
   }, [data]);
   const handleClick = useCallback()
     item => {onItemClick(item);},
@@ -33,39 +33,39 @@ import {LoadingSpinner} from './ui / loading -spinner';';
         </div>
       ))}
     </div>
-  );';
+  );
 });';';
 MemoizedDataGrid.displayName = 'MemoizedDataGrid';
 // Virtual scrolling component for large lists;
-const VirtualList = (props: any) => {
+const VirtualList = (props) => {
     const [scrollTop, setScrollTop] = React.useState(0);
     const visibleItems = useMemo(() => {
         const startIndex = Math.floor(scrollTop / itemHeight) ;
         const endIndex = Math.min(startIndex + Math.ceil (containerHeight / itemHeight) + 1, items.length) ;
         return items.slice(startIndex, endIndex) .map((item, index) => ({
             ...item,
-            index: startIndex + index,';
-            style: {';';
+            index: startIndex + index,
+            style: {
                 position: 'absolute',
-                top: (startIndex + index) * itemHeight,';
-                height: itemHeight,';';
+                top: (startIndex + index) * itemHeight,
+                height: itemHeight,
                 width: '100%'
             }
         }) ) }, [items, scrollTop, itemHeight, containerHeight]) ;';
     const handleScroll = useCallback((e) => {setScrollTop(e.currentTarget.scrollTop) ;}, []) ;';';
-    return (<div style="{{{ height: containerHeight; overflow: 'auto'}}"} onScroll={handleScroll} className="border border-zion - slate / 20 rounded-lg">';';
+    return (<divstyle="{{{ height: containerHeight; overflow: 'auto'}}"} onScroll={handleScroll} className="border border-zion - slate / 20 rounded-lg">';
       <div style="{{{ height: items.length * itemHeight; position: 'relative'
-      ...item; index: startIndex + index; style: {';
-';';
+      ...item; index: startIndex + index; style: {
+
         position; top: (startIndex + index) * itemHeight; height: itemHeight; width: '100%'}}"}));
   }, [items, scrollTop, itemHeight, containerHeight]);
   const handleScroll = useCallback(e => {setScrollTop(e.currentTarget.scrollTop);}, []);';
-  return ()';';
-    <div'';';
+  return ()';
+    <div'
       style="{{{ height: containerHeight; overflow: 'auto'}}"}
       onScroll={handleScroll}"
-      className="border border-zion-slate/20 rounded-lg"';
-    >';';
+      className="border border-zion-slate/20 rounded-lg";
+    >';
       <div style="{{{ height: items.length * itemHeight; position: 'relative'}}"}>
         {visibleItems.map(item => (
           <div
@@ -84,16 +84,16 @@ const VirtualList = (props: any) => {
   );
 };
 // Main performance optimizations component
-export function PerformanceOptimizations(props: any) {';
-  const [showExpensive, setShowExpensive] = React.useState(false);';';
-  const [data, setData] = React.useState(['';';
-    { id: 1, title: 'Service 1', description: 'Description 1', value: 100 },';';
-    {id: 2, title: 'Service 2', description: 'Description 2', value: 200},';';
-    {id: 3, title: 'Service 3', description: 'Description 3', value: 300},';';
-    {id: 4, title: 'Service 4', description: 'Description 4', value: 400},';';
-    {id: 5, title: 'Service 5', description: 'Description 5', value: 500},
+export function PerformanceOptimizations($1) {
+  const [showExpensive, setShowExpensive] = React.useState(false);
+  const [data, setData] = React.useState(['
+    { id: 1, title: 'Service 1', description: 'Description 1', value: 100 },
+    {id: 2, title: 'Service 2', description: 'Description 2', value: 200},
+    {id: 3, title: 'Service 3', description: 'Description 3', value: 300},
+    {id: 4, title: 'Service 4', description: 'Description 4', value: 400},
+    {id: 5, title: 'Service 5', description: 'Description 5', value: 500};,
   ]);
-  const handleItemClick = useCallback(item => {// // // // // // // // }, []);
+  const handleItemClick = useCallback(item => {// // // // // // // // };, []);
   // }, []);
   const addItem = useCallback(() => {
     setData(prev => [...prev,
@@ -102,7 +102,7 @@ export function PerformanceOptimizations(props: any) {';
         id: Date.now(),
         title: `Service ${prev.length + 1}`,`
         description: `Description ${prev.length + 1}`,
-        value: Math.floor(Math.random() * 1000)},
+        value: Math.floor(Math.random() * 1000)};,
     ]);
   }, []);
   return ("
@@ -117,7 +117,7 @@ export function PerformanceOptimizations(props: any) {';
           </div>
   );
 }
-}""
+}"
 
-</div>';
-</div>;';;';
+</div>
+</div>;';';

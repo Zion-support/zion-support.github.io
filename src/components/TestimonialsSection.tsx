@@ -1,8 +1,8 @@
-import React, { useState } from 'react';';
-export const TestimonialsSection: Reac t.FC = () => {';';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState } from 'react';
+export const TestimonialsSection: Reac t.FC = () => {
+import { motion, AnimatePresence  }; from 'framer-motion';
 
-export default function Page(props: any) {
+export default function Page($1) {
 ,
   {
 
@@ -10,8 +10,8 @@ export default function Page(props: any) {
     name: "James Thompson","
     position: "CEO","
     company: "FinTech Innovations","
-    avatar: "/images/testimonials/james-thompson.jpg",';
-    rating: 5,"';';
+    avatar: "/images/testimonials/james-thompson.jpg",
+    rating: 5,";';
     content: "The AI financial analytics platform has given us unprecedented insights into market trends.Our investment decisions are now data-driven and we've outperformed the market by 25%.","
     industry: "Finance","
     results: ["25% market outperformance", "Real-time analytics", "Risk reduction"],
@@ -23,8 +23,8 @@ export default function Page(props: any) {
     name: "Lisa Park","
     position: "Head of Marketing","
     company: "E-commerce Dynamics","
-    avatar: "/images/testimonials/lisa-park.jpg",';
-    rating: 5,"';';
+    avatar: "/images/testimonials/lisa-park.jpg",
+    rating: 5,";';
     content: "Zion's AI marketing automation tools have revolutionized our customer acquisition.We've seen a 150% increase in conversion rates and 80% reduction in marketing costs.","
     industry: "E-commerce","
     results: ["150% conversion increase", "80% cost reduction", "Personalized campaigns"],
@@ -43,7 +43,7 @@ export const TestimonialsSection: React.FC = props {;
   const [isAutoPlaying, setIsAutoPlaying] = useState<typeof true>(true);
 ;
   const [currentTestimonial, setCurrentTestimonial] = useState<any>(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState<any>(true) }}};
+  const [isAutoPlaying, setIsAutoPlaying] = useState<any>(true) }}};;
 ;
   // Auto - play functionality;
   React.useEffect(() => {;
@@ -219,10 +219,10 @@ export const TestimonialsSection: React.FC = props {;
             <div className="flex gap-2">
               {testimonials.map((_, index) => (
                 <button
-                  key={index}';
-                  onClick={() => goToTestimonial(index)}';';
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentTestimonial'';';
-                      ? 'bg-cyan-400 scale-125''';';
+                  key={index}
+                  onClick={() => goToTestimonial(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentTestimonial'
+                      ? 'bg-cyan-400 scale-125"
                       : 'bg-white/30 hover: b g-white/50'`
                   }`}`
                   aria-label={`Go to testimonial ${index + 1}`}
@@ -241,11 +241,11 @@ export const TestimonialsSection: React.FC = props {;
           {/* Auto-play Toggle */}"
           <div className="flex justify-center mt-4">
             <button';
-              onClick={() => setIsAutoPlaying(!isAutoPlaying)}`';';
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${isAutoPlaying'';';
-                  ? 'bg-cyan-500 text-white''';';
+              onClick={() => setIsAutoPlaying(!isAutoPlaying)}`
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${isAutoPlaying'
+                  ? 'bg-cyan-500 text-white"
                   : 'bg-white/10 text-gray-300 hover: b g-white/20'`
-              }`}';
+              }`}
             >';';
               {isAutoPlaying ? 'Pause' : 'Play'} Auto-rotation
             </button>
@@ -277,11 +277,11 @@ export const TestimonialsSection: React.FC = props {;
         </motion.div>;
       </div>;';
     </section>;) };';';
-'"`
+"`
 
 </motion>
 </button>
 </motion>
 </any>
-</typeof>';
-</typeof>;';;';
+</typeof>
+</typeof>;';';

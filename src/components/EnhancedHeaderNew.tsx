@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';';';
-import { Link, useLocation } from 'react-router-dom';';';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, 
@@ -53,13 +53,13 @@ import {
   Settings, 
   Eye, 
   Search as SearchIcon, 
-  Phone, ';
+  Phone,
   MapPin ';';
 } from 'lucide-react';
 
-const EnhancedHeaderNew: React.FC = (props: any) => {';
-  const [mobileMenuOpen, setMobileMenuOpen] = useState<any>(false);';';
-  const [searchQuery, setSearchQuery] = useState<any>('');
+const EnhancedHeaderNew: React.FC = (props) => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<any>(false);
+  const [searchQuery, setSearchQuery] = useState<any>(");
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState<any>(false);
   const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState<any>(false);
   const [scrolled, setScrolled] = useState<any>(false);
@@ -67,10 +67,10 @@ const EnhancedHeaderNew: React.FC = (props: any) => {';
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = (props: any) => {
+    const handleScroll = (props) => {
       setScrolled(window.scrollY > 50);
     };';
-';';
+
     window.addEventListener('scroll', handleScroll);';';
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -88,67 +88,67 @@ const EnhancedHeaderNew: React.FC = (props: any) => {';
     }
   };
 
-  const serviceCategories = [';
-    {';';
-      title: 'AI & Machine Learning',';
-      icon: Brain,';';
-      color: 'from-purple-500 to-pink-600',';
-      services: [';';
-        { name: 'AI Content Creation Suite', href: '/services/ai-content-creation-suite', price: 'From $199/month' },';';
-        { name: 'AI Customer Support Automation', href: '/services/ai-customer-support-automation', price: 'From $299/month' },';';
-        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', price: 'From $399/month' },';';
+  const serviceCategories = [
+    {
+      title: 'AI & Machine Learning',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-600',
+      services: [
+        { name: 'AI Content Creation Suite', href: '/services/ai-content-creation-suite', price: 'From $199/month' },
+        { name: 'AI Customer Support Automation', href: '/services/ai-customer-support-automation', price: 'From $299/month' },
+        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', price: 'From $399/month' },
         { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', price: 'From $599/month' }
       ]
-    },';
-    {';';
-      title: 'Micro SaaS Solutions',';
-      icon: ShoppingCart,';';
-      color: 'from-green-500 to-teal-600',';
-      services: [';';
-        { name: 'Affiliate Marketing Tracking', href: '/services/affiliate-tracking', price: 'From $99/month' },';';
-        { name: 'Event Management Dashboard', href: '/services/event-management-dashboard', price: 'From $149/month' },';';
-        { name: 'Helpdesk Platform', href: '/services/helpdesk-platform', price: 'From $79/month' },';';
+    },
+    {
+      title: 'Micro SaaS Solutions',
+      icon: ShoppingCart,
+      color: 'from-green-500 to-teal-600',
+      services: [
+        { name: 'Affiliate Marketing Tracking', href: '/services/affiliate-tracking', price: 'From $99/month' },
+        { name: 'Event Management Dashboard', href: '/services/event-management-dashboard', price: 'From $149/month' },
+        { name: 'Helpdesk Platform', href: '/services/helpdesk-platform', price: 'From $79/month' },
         { name: 'Email Automation Sequencer', href: '/services/email-sequencer', price: 'From $129/month' }
       ]
-    },';
-    {';';
-      title: 'IT Services',';
-      icon: Cloud,';';
-      color: 'from-blue-500 to-cyan-600',';
-      services: [';';
-        { name: 'Cloud Migration Services', href: '/services/cloud-migration', price: 'From $2,999/project' },';';
-        { name: 'DevOps & CI/CD Implementation', href: '/services/devops-cicd', price: 'From $1,999/month' },';';
-        { name: 'Cybersecurity Assessment', href: '/services/cybersecurity-assessment', price: 'From $1,499/assessment' },';';
+    },
+    {
+      title: 'IT Services',
+      icon: Cloud,
+      color: 'from-blue-500 to-cyan-600',
+      services: [
+        { name: 'Cloud Migration Services', href: '/services/cloud-migration', price: 'From $2,999/project' },
+        { name: 'DevOps & CI/CD Implementation', href: '/services/devops-cicd', price: 'From $1,999/month' },
+        { name: 'Cybersecurity Assessment', href: '/services/cybersecurity-assessment', price: 'From $1,499/assessment' },
         { name: 'IT Infrastructure Management', href: '/services/it-infrastructure-management', price: 'From $999/month' }
       ]
-    },';
-    {';';
-      title: 'Emerging Technologies',';
-      icon: Atom,';';
-      color: 'from-indigo-500 to-purple-600',';
-      services: [';';
-        { name: 'Quantum Computing Solutions', href: '/services/quantum-computing', price: 'From $4,999/month' },';';
-        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', price: 'From $1,999/month' },';';
+    },
+    {
+      title: 'Emerging Technologies',
+      icon: Atom,
+      color: 'from-indigo-500 to-purple-600',
+      services: [
+        { name: 'Quantum Computing Solutions', href: '/services/quantum-computing', price: 'From $4,999/month' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', price: 'From $1,999/month' },
         { name: 'Blockchain Development', href: '/services/blockchain-development', price: 'From $2,999/project' }
       ]
-    }
+    };
   ];
-';
-  const industrySolutions = [';';
-    { name: 'Healthcare', icon: Heart, href: '/solutions/healthcare' },';';
-    { name: 'Manufacturing', icon: Factory, href: '/solutions/manufacturing' },';';
-    { name: 'Financial', icon: CreditCard, href: '/solutions/financial' },';';
-    { name: 'Education', icon: GraduationCap, href: '/solutions/education' },';';
-    { name: 'Retail', icon: ShoppingBag, href: '/solutions/retail' },';';
-    { name: 'Enterprise', icon: Building, href: '/solutions/enterprise' }
+
+  const industrySolutions = [
+    { name: 'Healthcare', icon: Heart, href: '/solutions/healthcare' },
+    { name: 'Manufacturing', icon: Factory, href: '/solutions/manufacturing' },
+    { name: 'Financial', icon: CreditCard, href: '/solutions/financial' },
+    { name: 'Education', icon: GraduationCap, href: '/solutions/education' },
+    { name: 'Retail', icon: ShoppingBag, href: '/solutions/retail' },
+    { name: 'Enterprise', icon: Building, href: '/solutions/enterprise' };
   ];
-';
-  const mainNavigation = [';';
-    { name: 'Home', href: '/' },';';
-    { name: 'Services', href: '/services', hasDropdown: true },';';
-    { name: 'Solutions', href: '/solutions', hasDropdown: true },';';
-    { name: 'About', href: '/about' },';';
-    { name: 'Contact', href: '/contact' }
+
+  const mainNavigation = [
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services', hasDropdown: true },
+    { name: 'Solutions', href: '/solutions', hasDropdown: true },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' };
   ];
 
   return (
@@ -187,13 +187,13 @@ const EnhancedHeaderNew: React.FC = (props: any) => {';
 
       {/* Main Header */}
       <motion.header
-        className={`sticky top-0 z-50 transition-all duration-500 ${';
-          scrolled';';
-            ? 'bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-lg'';';
+        className={`sticky top-0 z-50 transition-all duration-500 ${
+          scrolled';
+            ? 'bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-lg'
             : 'bg-white border-b border-gray-200'
         }`}
-        initial={{ y: -100 }}';
-        animate={{ y: 0 }}';';
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -226,13 +226,13 @@ const EnhancedHeaderNew: React.FC = (props: any) => {';
                 <div key={item.name} className="relative">
                   <Link
                     to={item.href}
-                    className={`font-medium transition-all duration-300 ${';
+                    className={`font-medium transition-all duration-300 ${
                       location.pathname === item.href';';
-                        ? 'text-cyan-600 border-b-2 border-cyan-600'';';
+                        ? 'text-cyan-600 border-b-2 border-cyan-600'
                         : 'text-gray-700 hover:text-cyan-600'
                     }`}
-                    onMouseEnter={() => {';
-                      if (item.hasDropdown) {';';
+                    onMouseEnter={() => {
+                      if (item.hasDropdown) {
                         if (item.name === 'Services') setServicesDropdownOpen(true);';';
                         if (item.name === 'Solutions') setSolutionsDropdownOpen(true);
                       }
@@ -382,7 +382,7 @@ const EnhancedHeaderNew: React.FC = (props: any) => {';
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div';
-              initial={{ opacity: 0, height: 0 }}';';
+              initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               className="xl:hidden bg-white border-b border-gray-200"
@@ -432,5 +432,5 @@ export default EnhancedHeaderNew;
 </motion>
 </motion>
 </any>
-</any>';
-</any>;';;';
+</any>
+</any>;';';

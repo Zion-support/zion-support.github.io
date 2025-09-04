@@ -4,13 +4,13 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {useNavigate} from "react-router-dom";
 import {motion} from "framer-motion";
-import {Clock, Globe, Shield, Zap, MapPin, ArrowRight} from 'lucide-react';';
-export function ITServiceRequestHero(props: any) {';';
-  const [location, setLocation] = useState('');
+import {Clock, Globe, Shield, Zap, MapPin, ArrowRight} from 'lucide-react';
+export function ITServiceRequestHero($1) {
+  const [location, setLocation] = useState(");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = (props: any) => {
+  const handleSubmit = (props) => {
     e.preventDefault();
     if (!location.trim()) return;
     
@@ -32,7 +32,7 @@ export function ITServiceRequestHero(props: any) {';';
         staggerChildren: 0.2
       }
     }
-  };
+  };;
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -41,13 +41,13 @@ export function ITServiceRequestHero(props: any) {';';
       y: 0,
       transition: { duration: 0.5 }
     }
-  };
+  };;
 
   const features = [
     {icon: Clock, text: "24/7 Availability", color: "text-zion-cyan"},
     {icon: Globe, text: "Global Coverage", color: "text-zion-purple"},
     {icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light"},
-    {icon: Zap, text: "Fast Response", color: "text-zion-purple-light"}
+    {icon: Zap, text: "Fast Response", color: "text-zion-purple-light"};
   ];
 
   return (
@@ -186,5 +186,5 @@ export function ITServiceRequestHero(props: any) {';';
 }
 
 export default ITServiceRequestHero;
-</motion>';
-</motion>;';;';
+</motion>
+</motion>;';';

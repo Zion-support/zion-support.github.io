@@ -1,21 +1,21 @@
-import { useState, useEffect } from 'react';';';
-import { Star  } from 'lucide-react';';';
-import { ReviewStats } from '@/components/reviews/ReviewStats';';';
-import { ReviewsList } from '@/components/reviews/ReviewsList';';';
-import { useReviews } from '@/hooks/useReviews';';';
-import { Button } from '@/components/ui/button';';';
+import { useState, useEffect } from 'react';
+import { Star  } from 'lucide-react';
+import { ReviewStats } from '@/components/reviews/ReviewStats';
+import { ReviewsList } from '@/components/reviews/ReviewsList';
+import { useReviews } from '@/hooks/useReviews';
+import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
-export function ProfileRatings(props: any) {
+export function ProfileRatings($1) {
   const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
-  const [ratingDistribution, setRatingDistribution] = useState<Record<number, number>>({});
+  const [ratingDistribution, setRatingDistribution] = useState<Record<number, number>>({};);
   
   // Calculate rating distribution
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
     if(reviews.length > 0) {
-      const distribution: Recor d<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+      const distribution: Recor d<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };;
       
       reviews.forEach((review) => {
         if(review.rating >= 1 && review.rating <= 5) {
@@ -83,5 +83,5 @@ export function ProfileRatings(props: any) {
 
 </ReviewsList>
 </ReviewStats>
-</number>';
-</Record>;';;';
+</number>
+</Record>;';';

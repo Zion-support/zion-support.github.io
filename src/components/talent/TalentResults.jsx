@@ -1,7 +1,7 @@
 import {ActiveFilters} from "@/components/talent/ActiveFilters";
 import {ResultsHeader} from "@/components/talent/ResultsHeader";
 import {TalentGrid} from "@/components/talent/TalentGrid";
-export function TalentResults(props: any) {
+export function TalentResults($1) {
     return (
     <div className="min-h-screen bg-white">
       {/* Active filters */}
@@ -15,4 +15,4 @@ export function TalentResults(props: any) {
         </div>
   );
 }
-export default TalentResults;;;
+export default TalentResults;

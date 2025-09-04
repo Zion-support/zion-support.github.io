@@ -1,230 +1,230 @@
-import React, { useState } from 'react';';';
+import React, { useState } from 'react';
 import { Link, useLocation  } from 'react-router-dom';
-export default function Page(props: any) {';
-,';';
-        { name: 'Services', href: '/services', icon: Briefcas e },';';
-        { name: 'Solutions', href: '/solutions', icon: Targe t },';';
-        { name: 'AI Solutions', href: '/ai-solutions', icon: Brai n },';';
-        { name: 'Case Studies', href: '/case-studies', icon: FileTex t },';';
-        { name: 'Research', href: '/research-development', icon: TestTub e },';';
-        { name: 'Events', href: '/events', icon: Vide o },';';
-        { name: 'News', href: '/news', icon: Newspape r },';';
-        { name: 'Contact', href: '/contact', icon: Mai l },';';
+export default function Page($1) {
+,
+        { name: 'Services', href: '/services', icon: Briefcas e },
+        { name: 'Solutions', href: '/solutions', icon: Targe t },
+        { name: 'AI Solutions', href: '/ai-solutions', icon: Brai n },
+        { name: 'Case Studies', href: '/case-studies', icon: FileTex t },
+        { name: 'Research', href: '/research-development', icon: TestTub e },
+        { name: 'Events', href: '/events', icon: Vide o },
+        { name: 'News', href: '/news', icon: Newspape r },
+        { name: 'Contact', href: '/contact', icon: Mai l },
         { name: 'Blog', href: '/blog', icon: FileTex t },
       ]
-    }, {';
-';';
-      name: 'Core Services',';';
+    }, {
+
+      name: 'Core Services',
       href: '#',
       icon: Targe t,
-      children: [{';
-';';
-          name: 'Cloud & DevOps',';';
-          href: '/services/cloud-devops',';
-          icon: Clou d,';';
+      children: [{
+
+          name: 'Cloud & DevOps',
+          href: '/services/cloud-devops',
+          icon: Clou d,
           description: 'Infrastructure & Automation'
         },
-        {';
-';';
-          name: 'Digital Twin',';';
-          href: '/services/digital-twin',';
-          icon: Glob e,';';
+        {
+
+          name: 'Digital Twin',
+          href: '/services/digital-twin',
+          icon: Glob e,
           description: 'Simulation & Monitoring'
         },
-        {';
-';';
-          name: 'Data Analytics',';';
-          href: '/services/data-analytics',';
-          icon: BarChart 3,';';
+        {
+
+          name: 'Data Analytics',
+          href: '/services/data-analytics',
+          icon: BarChart 3,
           description: 'Business Intelligence'
         },
-        {';
-';';
-          name: 'IT Infrastructure',';';
-          href: '/services/it-infrastructure',';
-          icon: Serve r,';';
+        {
+
+          name: 'IT Infrastructure',
+          href: '/services/it-infrastructure',
+          icon: Serve r,
           description: 'Hardware & Network'
         }
       ]
     },
-    {';
-';';
-      name: 'AI Products',';';
+    {
+
+      name: 'AI Products',
       href: '#',
       icon: Brai n,
-      children: [{';
-';';
-          name: 'AI Sales Copilot',';';
-          href: '/services/ai-sales-copilot',';
-          icon: User s,';';
+      children: [{
+
+          name: 'AI Sales Copilot',
+          href: '/services/ai-sales-copilot',
+          icon: User s,
           description: 'Sales Intelligence'
         },
-        {';
-';';
-          name: 'AI Compliance Assistant',';';
-          href: '/services/ai-compliance-assistant',';
-          icon: Shiel d,';';
+        {
+
+          name: 'AI Compliance Assistant',
+          href: '/services/ai-compliance-assistant',
+          icon: Shiel d,
           description: 'Regulatory Compliance'
         },
-        {';
-';';
-          name: 'AI Auto Email Responder',';';
-          href: '/services/ai-auto-email-responder',';
-          icon: MessageCircl e,';';
+        {
+
+          name: 'AI Auto Email Responder',
+          href: '/services/ai-auto-email-responder',
+          icon: MessageCircl e,
           description: 'Email Automation'
         },
-        {';
-';';
-          name: 'LLM Content Studio',';';
-          href: '/services/llm-content-studio',';
-          icon: PenToo l,';';
+        {
+
+          name: 'LLM Content Studio',
+          href: '/services/llm-content-studio',
+          icon: PenToo l,
           description: 'Content Creation'
         }
       ]
     },
-    {';
-';';
-      name: 'Emerging Tech',';';
+    {
+
+      name: 'Emerging Tech',
       href: '#',
       icon: Rocke t,
-      children: [{';
-';';
-          name: 'Quantum Computing',';';
-          href: '/services/quantum-computing',';
-          icon: Ato m,';';
+      children: [{
+
+          name: 'Quantum Computing',
+          href: '/services/quantum-computing',
+          icon: Ato m,
           description: 'Next-gen Computing'
         },
-        {';
-';';
-          name: 'AI Cybersecurity',';';
-          href: '/services/ai-cybersecurity',';
-          icon: Loc k,';';
+        {
+
+          name: 'AI Cybersecurity',
+          href: '/services/ai-cybersecurity',
+          icon: Loc k,
           description: 'Intelligent Security'
         },
-        {';
-';';
-          name: 'IoT Edge Computing',';';
-          href: '/services/iot-edge-computing',';
-          icon: Smartphon e,';';
+        {
+
+          name: 'IoT Edge Computing',
+          href: '/services/iot-edge-computing',
+          icon: Smartphon e,
           description: 'Connected Ecosystems'
         },
-        {';
-';';
-          name: 'AI Content Creation',';';
-          href: '/services/ai-content-creation',';
-          icon: Vide o,';';
+        {
+
+          name: 'AI Content Creation',
+          href: '/services/ai-content-creation',
+          icon: Vide o,
           description: 'Creative AI'
         }
       ]
     },
-    {';
-';';
-      name: 'Business Solutions',';';
+    {
+
+      name: 'Business Solutions',
       href: '#',
       icon: Briefcas e,
-      children: [{';
-';';
-          name: 'Marketplace',';';
-          href: '/marketplace',';
-          icon: ShoppingCar t,';';
+      children: [{
+
+          name: 'Marketplace',
+          href: '/marketplace',
+          icon: ShoppingCar t,
           description: 'Product & Service Hub'
         },
-        {';
-';';
-          name: 'Talent Solutions',';';
-          href: '/talent',';
-          icon: User s,';';
+        {
+
+          name: 'Talent Solutions',
+          href: '/talent',
+          icon: User s,
           description: 'HR & Recruitment'
         },
-        {';
-';';
-          name: 'Equipment Services',';';
-          href: '/equipment',';
-          icon: Serve r,';';
+        {
+
+          name: 'Equipment Services',
+          href: '/equipment',
+          icon: Serve r,
           description: 'Hardware Solutions'
         },
-        {';
-';';
-          name: 'Request Quote',';';
-          href: '/request-quote',';
-          icon: MessageCircl e,';';
+        {
+
+          name: 'Request Quote',
+          href: '/request-quote',
+          icon: MessageCircl e,
           description: 'Get Pricing'
         }
       ]
     },
-    {';
-';';
-      name: 'Company',';';
+    {
+
+      name: 'Company',
       href: '#',
       icon: Inf o,
-      children: [{';
-';';
-          name: 'About Us',';';
-          href: '/about',';
-          icon: Inf o,';';
+      children: [{
+
+          name: 'About Us',
+          href: '/about',
+          icon: Inf o,
           description: 'Our Story'
         },
-        {';
-';';
-          name: 'Team',';';
-          href: '/team',';
-          icon: User s,';';
+        {
+
+          name: 'Team',
+          href: '/team',
+          icon: User s,
           description: 'Meet Our Team'
         },
-        {';
-';';
-          name: 'Careers',';';
-          href: '/careers',';
-          icon: Briefcas e,';';
+        {
+
+          name: 'Careers',
+          href: '/careers',
+          icon: Briefcas e,
           description: 'Join Us'
         },
-        {';
-';';
-          name: 'Partners',';';
-          href: '/partners',';
-          icon: User s,';';
+        {
+
+          name: 'Partners',
+          href: '/partners',
+          icon: User s,
           description: 'Partnerships'
         }
       ]
     },
-    {';
-';';
-      name: 'Resources',';';
+    {
+
+      name: 'Resources',
       href: '#',
       icon: BookOpe n,
-      children: [{';
-';';
-          name: 'Blog',';';
-          href: '/blog',';
-          icon: FileTex t,';';
+      children: [{
+
+          name: 'Blog',
+          href: '/blog',
+          icon: FileTex t,
           description: 'Latest Insights'
         },
-        {';
-';';
-          name: 'FAQ',';';
-          href: '/faq',';
-          icon: HelpCircl e,';';
+        {
+
+          name: 'FAQ',
+          href: '/faq',
+          icon: HelpCircl e,
           description: 'Common Questions'
         },
-        {';
-';';
-          name: 'Help Center',';';
-          href: '/help',';
-          icon: MessageCircl e,';';
+        {
+
+          name: 'Help Center',
+          href: '/help',
+          icon: MessageCircl e,
           description: 'Support Resources'
         },
-        {';
-';';
-          name: 'Documentation',';';
-          href: '/docs',';
-          icon: BookOpe n,';';
+        {
+
+          name: 'Documentation',
+          href: '/docs',
+          icon: BookOpe n,
           description: 'Technical Docs'
         }
       ]
     },
-    {';
-';';
-      name: 'Contact',';';
+    {
+
+      name: 'Contact',
       href: '/contact',
       icon: Phon e
     }
@@ -234,9 +234,9 @@ export default function Page(props: any) {';
         {hasChildren ? (
           <div>
             <button
-              onClick={(: unknown toggleSection(item.name.toLowerCase())}';
-              className={`w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${                level === 0';';
-                  ? 'text-slate-300 hover: tex t-white hover: b g-slate-700/50'';';
+              onClick={(: unknown toggleSection(item.name.toLowerCase())}
+              className={`w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${                level === 0';
+                  ? 'text-slate-300 hover: tex t-white hover: b g-slate-700/50'
                   : 'text-slate-400 hover: tex t-slate-300'              }`}
             >"
               <div className="flex items-center space-x-3">"
@@ -260,11 +260,11 @@ export default function Page(props: any) {';
           </div>
         ) : 
           <Link';
-            to={item.href}`';';
-            className={`flex items-center space-x-3 px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${isActive'';';
-                ? 'text-cyan-400 bg-cyan-400/10 border border-cyan-400/20'';';
-                : level === 0'';';
-                ? 'text-slate-300 hover: tex t-white hover: b g-slate-700/50''';';
+            to={item.href}`
+            className={`flex items-center space-x-3 px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${isActive'
+                ? 'text-cyan-400 bg-cyan-400/10 border border-cyan-400/20'
+                : level === 0'
+                ? 'text-slate-300 hover: tex t-white hover: b g-slate-700/50"
                 : 'text-slate-400 hover: tex t-slate-300'`
             }`}
             onClick={() => setIsOpen(false)}
@@ -288,9 +288,9 @@ export default function Page(props: any) {';
         {isOpen ? <X className="w-6 h-6"   /> : <Menu className="w-6 h-6"   />}      </button>
 
       {/* Sidebar */}`
-      <div className={`';
-        fixed inset-y-0 left-0 z-50 w-80 bg-slate-900/95 border-r border-slate-700/50 backdrop-blur-xl';';
-        transform transition-transform duration-300 ease-in-out lg: translat e-x-0 lg: static lg:inset-0'';';
+      <div className={`
+        fixed inset-y-0 left-0 z-50 w-80 bg-slate-900/95 border-r border-slate-700/50 backdrop-blur-xl';
+        transform transition-transform duration-300 ease-in-out lg: translat e-x-0 lg: static lg:inset-0'
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}`
       `}>"
         <div className="flex flex-col h-full">
@@ -342,6 +342,6 @@ export default function Page(props: any) {';
         </div>;
       </div>;
     </>';
-  )}';';
-'"`';
-;';;';
+  )}
+"`
+;';';

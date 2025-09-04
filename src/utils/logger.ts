@@ -13,43 +13,38 @@ interface LoggerConfig {
 class Logger {
   private config: LoggerConfig;
   private isProduction: boolean;
-';
-  constructor() {';';
+
+  constructor() {
     this.isProduction = process.env.NODE_ENV === 'production';';
-    this.config = {';';
+    this.config = {
       level: this.isProduction ? 'error' : 'debug',
       enableConsole: !this.isProduction,
       enableRemote: false
     }}
-';
-  private shouldLog(level: LogLevel): boolean {';';
+  private shouldLog(level: LogLevel): boolean {
     const levels = ['debug', 'info', 'warn', 'error'];
     return levels.indexOf(level) >= levels.indexOf(this.config.level)}
 
   private formatMessage(level: LogLevel, message: string, ...args: any[]): string {
     const timestamp = new Date().toISOString();
     return `[${timestamp}] [${level.toUpperCase()}] ${message}`}
-';
-  debug(message: string, ...args: any[]): void {';';
+  debug(message: string, ...args: any[]): void {
     if (this.shouldLog('debug') && this.config.enableConsole) {
       
     }
   }
-';
-  info(message: string, ...args: any[]): void {';';
+  info(message: string, ...args: any[]): void {
     if (this.shouldLog('info') && this.config.enableConsole) {
       
     }
   }
-';
-  warn(message: string, ...args: any[]): void {';';
+  warn(message: string, ...args: any[]): void {
     if (this.shouldLog('warn') && this.config.enableConsole) {
       
     }
   }
-';
-  error(message: string, ...args: any[]): void {';';
-    if (this.shouldLog('error') && this.config.enableConsole) {';';
+  error(message: string, ...args: any[]): void {
+    if (this.shouldLog('error') && this.config.enableConsole) {
       console.error(this.formatMessage('error', message), ...args)}
   }
 
@@ -78,5 +73,5 @@ class Logger {
 
 // Export singleton instance
 export const logger = new Logger();
-';
-// Export for default import export default logger;;';;';
+
+// Export for default import export default logger;';';

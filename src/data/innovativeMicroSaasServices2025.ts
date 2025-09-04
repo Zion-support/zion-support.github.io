@@ -49,7 +49,7 @@ export const zionContact: InnovativeMicroSaasService2025['contactInfo'] = {
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709"
-};
+};;
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService2025[] = [
   {
@@ -116,5 +116,5 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService2025
     trialPeriod: "14 days",
     setupTime: "5 minutes",
     growthRate: "21.9% annually"
-  }
+  };
 ];

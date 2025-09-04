@@ -45,14 +45,14 @@ const ITServices: React.FC = () => {
       features: ["Network architecture", "Wireless solutions", "VPN setup", "Load balancing"],
       icon: Globe,
       price: "Starting at $4,000"
-    }
+    };
   ];
 
   const stats = [
     { label: "Years of Experience", value: "15+" },
     { label: "Projects Completed", value: "500+" },
     { label: "Client Satisfaction", value: "99%" },
-    { label: "Uptime Guarantee", value: "99.9%" }
+    { label: "Uptime Guarantee", value: "99.9%" };
   ];
 
   return (

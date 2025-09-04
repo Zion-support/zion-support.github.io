@@ -401,7 +401,7 @@ export const blockchainForgePricing: ServicePricing = {
     startupProgram: "70% off for qualified startups (first year)",
     referralProgram: "25% commission for successful referrals"
   }
-};
+};;
 
 // Export all pricing guides
 export const ALL_PRICING_GUIDES_2026 = [;
@@ -434,7 +434,7 @@ export const PRICING_SUMMARY_2026 = {
 }}}}}}}}}}}}}}}
     aiCapabilities: ["Threat Detection", "Behavioral Analytics", "Anomaly Detection", "Predictive Security", "Automated Response"],
     complianceFeatures: ["SOC 2", "ISO 27001", "NIST", "GDPR", "CCPA", "HIPAA"],
-    scalabilityFeatures: ["Auto-scaling", "Multi-cloud", "Microservices", "Container security", "Serverless security"]},
+    scalabilityFeatures: ["Auto-scaling", "Multi-cloud", "Microservices", "Container security", "Serverless security"]};,
 
   {
     id: "autonomous-supply-chain-platform-2026",

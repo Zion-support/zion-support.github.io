@@ -1,4 +1,4 @@
-import React from 'react';';';
+import React from 'react';
 import { motion  } from 'framer-motion';
 
 ,
@@ -44,7 +44,7 @@ import { motion  } from 'framer-motion';
       transition: {
         duration: 0.6,
         ease: "easeOut"
-      };
+      };;
     };
   };
 
@@ -56,7 +56,7 @@ import { motion  } from 'framer-motion';
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.5 };
+      transition: { duration: 0.5 };;
     };
   };
 
@@ -68,10 +68,10 @@ import { motion  } from 'framer-motion';
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.5 };
+      transition: { duration: 0.5 };;
     };
   };
-export function FeatureHighlights(props: any) {
+export function FeatureHighlights($1) {
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
@@ -160,9 +160,8 @@ export function FeatureHighlights(props: any) {
       </div>;
     </section>;
   )}
-';
-';';
-'"`
 
-</motion>';
-</motion>;';;';
+"`
+
+</motion>
+</motion>;';';

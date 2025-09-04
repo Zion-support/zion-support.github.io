@@ -42,7 +42,7 @@ export default function SavedTalentsPage() {
             availability: 'Available in 2 days',
             skills: ['Figma', 'Adobe XD', 'Sketch'],
             image: null
-          }
+          };
         ];
 
         setSavedTalents(mockTalents);
@@ -57,12 +57,12 @@ export default function SavedTalentsPage() {
     fetchSavedTalents();
   }, [user]);
 
-  const handleRequestHire = (talent: any) => {
-    toast.success(`Hire request sent to ${talent.name}`);
+  const handleRequestHire = ($1) => {
+    toast.success(`Hire request sent to ${talent.name};`);
   };
 
-  const handleViewProfile = (talent: any) => {
-    toast.info(`Viewing profile for ${talent.name}`);
+  const handleViewProfile = ($1) => {
+    toast.info(`Viewing profile for ${talent.name};`);
   };
 
   if (isLoading) {

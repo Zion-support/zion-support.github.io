@@ -7,21 +7,21 @@ import {apiClient} from "@/utils/apiClient";
 import {cn} from "@/lib/utils";
 ;
 import {Send, Loader2} from "lucide-react";import {useTheme} from "@/hooks/useTheme";
-// Define suggested quick replies"""
-const QUICK_REPLIES = [""""
-    {id: "hire", text: "How do I hire?"},""""
-    {id: "match", text: "How do I get matched?"},""""
-    {id: "billing", text: "Billing help"}
+// Define suggested quick replies"
+const QUICK_REPLIES = ["
+    {id: "hire", text: "How do I hire?"},"
+    {id: "match", text: "How do I get matched?"},"
+    {id: "billing", text: "Billing help"};
 ];
-export function ChatBotPanel(props: any) {
+export function ChatBotPanel($1) {
     const [messages, setMessages] = useState([{
 "
             id: "welcome","
             content: "Hi! How can I help you?","
             sender: "bot",
-            timestamp: new Date()},
+            timestamp: new Date()};,
     ]);"
-    const [inputValue, setInputValue] = useState("");
+    const [inputValue, setInputValue] = useState(");
     const [isLoading, setIsLoading] = useState(false);
     const [failedAttempts, setFailedAttempts] = useState(0);
     const scrollAreaRef = useRef(null);
@@ -56,9 +56,9 @@ export function ChatBotPanel(props: any) {
             id: `user-${Date.now()}`,
             content: text,"
             sender: "user",
-            timestamp: new Date()};
+            timestamp: new Date()};;
         setMessages((prev) => [...prev, userMessage]);"
-        setInputValue("");
+        setInputValue(");
         setIsLoading(true);
         try {
             // Call the OpenAI-powered support function
@@ -68,7 +68,7 @@ export function ChatBotPanel(props: any) {
                 id: `bot-${Date.now()}`,"
                 content: response.message || "Sorry, I couldn't process your request.Please try again.","
                 sender: "bot",
-                timestamp: new Date()};
+                timestamp: new Date()};;
             setMessages((prev) => [...prev, botMessage]);
             // Check if the request was successful
             if(!response.success) {
@@ -81,19 +81,17 @@ export function ChatBotPanel(props: any) {
             }
             else {// Reset failed attempts if successful
                 setFailedAttempts(0)}
-        }
-        catch(error) {
+        } catch (error) {
 "
             // console.error("Error in AI chat:", error);
             toast({
 "
-                variant: "destructive","';
-                title: "Communication Error","';';
+                variant: "destructive",";
+                title: "Communication Error",";';
                 description: "We're having trouble connecting to our support service."});
             setFailedAttempts((prev) => prev + 1);
             if(failedAttempts >= 2) {suggestEscalation()}
-        }
-        finally {setIsLoading(false)}
+        } finally {setIsLoading(false)}
     };
     const sendToAIAssistant = async(message) => {
 
@@ -107,32 +105,29 @@ export function ChatBotPanel(props: any) {
                     "Content-Type": "application/json"},
                 body: JSON.stringify({
 "
-                    messages[{ role: "user", content: message }];
+                    messages[{ role: "user", content: message };];
                 }),;
             });
             if(!response.ok) {
 
                 return {
-';
-                    success: false,"';';
+                    success: false,";
                     message: "I'm having trouble connecting to my knowledge base right now."
                 }}
             const data = await response.json();
             return {success: true,
-                message: data.message}}
-        catch(error) {
+                message: data.message}} catch (error) {
 "
             // console.error("Error in AI chat:", error);
             return {
-';
-                success: false,"';';
+                success: false,";
                 message: "I'm experiencing technical difficulties.Please try again later."
             }}
     };
-    const suggestEscalation = (props: any) => {
+    const suggestEscalation = (props) => {
         const escalationMessage = {
-`';
-            id: `bot-escalation-${Date.now()}`,"';';
+`
+            id: `bot-escalation-${Date.now()};`,";';
             content: "I'm having trouble understanding your request.Would you like to speak with a human support agent or send an email to our support team?","
             sender: "bot",
             timestamp: new Date()};
@@ -144,22 +139,21 @@ export function ChatBotPanel(props: any) {
             // Send the conversation to the backend for logging
             // This would be implemented in a real system"
             // )
-            })}
-        catch(error) {"
+            })} catch (error) {"
             // console.error("Failed to log support escalation:", error)}
-    };
-    const handleEscalateToLiveAgent = (props: any) => {
+    };;
+    const handleEscalateToLiveAgent = (props) => {
         setMessages((prev) => [...prev,
             {
-`';
-                id: `user-${Date.now()}`,"';';
+`
+                id: `user-${Date.now()};`,";';
                 content: "I'd like to speak with a human agent","
                 sender: "user",
                 timestamp: new Date()
             },
             {
-`';
-                id: `bot-${Date.now()}`,"';';
+`
+                id: `bot-${Date.now()}`,";';
                 content: "I'm connecting you with a support agent.Please note that our support hours are Monday to Friday, 9AM to 6PM EST.If you're messaging outside these hours, a team member will follow up with you as soon as possible.","
                 sender: "bot",
                 timestamp: new Date()
@@ -169,11 +163,11 @@ export function ChatBotPanel(props: any) {
         toast({"
             title: "Support request submitted","
             description: "A support agent will be with you shortly."})};
-    const handleEmailSupport = (props: any) => {
+    const handleEmailSupport = (props) => {
         setMessages((prev) => [...prev,
             {
-`';
-                id: `user-${Date.now()}`,"';';
+`
+                id: `user-${Date.now()};`,";';
                 content: "I'd like to email support","
                 sender: "user",
                 timestamp: new Date()
@@ -251,8 +245,7 @@ export function ChatBotPanel(props: any) {
             <Send className="h-4 w-4" />
           </Button>
         </form>
-      </div>';
-    </div>)}';';
-'"`
-';
-</QuickReplyButton>;';;';
+      </div>
+    </div>)}
+"`
+</QuickReplyButton>;';';

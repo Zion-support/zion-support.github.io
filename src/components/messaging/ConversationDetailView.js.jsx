@@ -1,15 +1,15 @@
-import React, {useState, useEffect, useRef} from 'react';'''';';
-import {format} from 'date-fns';'''';';
-import {MessageSquare} from 'lucide-react';'''';';
-import {useMessaging} from '@/context/MessagingContext';'''';';
-import {Button} from '@/components/ui/button';'''';';
-import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar';'''';';
-import {AspectRatio} from '@/components/ui/aspect-ratio';'''';';
+import React, {useState, useEffect, useRef} from 'react';"
+import {format} from 'date-fns';"
+import {MessageSquare} from 'lucide-react';"
+import {useMessaging} from '@/context/MessagingContext';"
+import {Button} from '@/components/ui/button';"
+import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar';"
+import {AspectRatio} from '@/components/ui/aspect-ratio';"
 import {useAuth} from '@/hooks/useAuth';
 ;';
-export function ConversationDetailView(props: any) {    const { user } = useAuth();';';
-    const {activeConversation, activeMessages, sendMessage, loadMessages} = useMessaging();'';';
-    const [messageText, setMessageText] = useState('');
+export function ConversationDetailView($1) {    const { user } = useAuth();
+    const {activeConversation, activeMessages, sendMessage, loadMessages} = useMessaging();'
+    const [messageText, setMessageText] = useState(");
     const messagesEndRef = useRef(null);
     useEffect(() => {}
         if (activeConversation) {}
@@ -17,14 +17,14 @@ export function ConversationDetailView(props: any) {    const { user } = useAuth
     }, [activeConversation?.id, loadMessages]);
     useEffect(() => {}
 scrollToBottom()}, [activeMessages]);
-    const scrollToBottom = (props: any) => {';
-';';
-        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })};
+    const scrollToBottom = (props) => {
+
+        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })};;
     const handleSendMessage = async(e) => {e.preventDefault();
         if(!messageText.trim() || !activeConversation)
             return;';
         await sendMessage(activeConversation.id, messageText);';';
-        setMessageText('')};
+        setMessageText(")};
     if(!activeConversation) {"
         return (<div className="flex-1 flex flex-col items-center justify-center p-8">"
         <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4" />"
@@ -36,8 +36,8 @@ scrollToBottom()}, [activeMessages]);
 }
     // Group messages by date
     const groupedMessages = [];
-    activeMessages.forEach(message => {';
-';';
+    activeMessages.forEach(message => {
+
         const messageDate = format(new Date(message.created_at),yyyy-MM-dd');
         const existingGroup = groupedMessages.find(group => group.date === messageDate);
         if(existingGroup) {;
@@ -64,10 +64,10 @@ scrollToBottom()}, [activeMessages]);
           <div>";
             <div className="font-medium text-white">;
               {activeConversation.other_user.name}
-            </div>"';
-            <div className="text-xs text-zion-slate">';';
-              {activeConversation.other_user.user_type === 'talent' ? 'Talent' :'';';
-            activeConversation.other_user.user_type === 'employer' ? 'Employer' :'';';
+            </div>";
+            <divclassName="text-xs text-zion-slate">';
+              {activeConversation.other_user.user_type === 'talent' ? 'Talent' :'
+            activeConversation.other_user.user_type === 'employer' ? 'Employer' :'
                 activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
             </div>
           </div>
@@ -84,10 +84,10 @@ scrollToBottom()}, [activeMessages]);
                   </div>
   );
 }
-            <div>"';
-              <div className="font-medium text-white mb-1">';';
-                {activeConversation.context_type === 'job' ? 'Regarding Job:' :'';';
-                activeConversation.context_type === 'talent' ? 'Regarding Talent:' :'';';
+            <div>";
+              <divclassName="font-medium text-white mb-1">';
+                {activeConversation.context_type === 'job' ? 'Regarding Job:' :'
+                activeConversation.context_type === 'talent' ? 'Regarding Talent:' :'
                     'Regarding:'}
               </div>";
               <div className="text-zion-cyan font-medium">;
@@ -124,8 +124,8 @@ scrollToBottom()}, [activeMessages]);
             Send
           </Button>
         </form>
-      </div>';
-    </div>)}';';
-'"
-';
-</textarea>;';;';
+      </div>
+    </div>)}
+"
+
+</textarea>;';';

@@ -3,17 +3,17 @@ import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Upload, Trash2, Plus} from 'lucide-react';
 import {toast} from "sonner";
-export const ScreenshotManager = (props: any) => {
+export const ScreenshotManager = (props) => {
     const [screenshots, setScreenshots] = useState([]);
     const [isDragging, setIsDragging] = useState(false);
     const fileInputRef = useRef(null);
-    const handleFileSelect = (props: any) => {
+    const handleFileSelect = (props) => {
         if (e.target.files) {
             addScreenshots(Array.from(e.target.files));
         }
     };
-    const addScreenshots = (props: any) => {';
-        // Filter for image files only';';
+    const addScreenshots = (props) => {
+        // Filter for image files only
         const imageFiles = files.filter(file => file.type.startsWith('image/'));
         if (imageFiles.length === 0) {
             toast.error("Please select valid image files");
@@ -29,13 +29,13 @@ export const ScreenshotManager = (props: any) => {
         const filesToAdd = imageFiles.slice(0, availableSlots);
         const newScreenshots = filesToAdd.map(file => ({id: Math.random().toString(36).substring(2, 9),
             url: URL.createObjectURL(file),
-            file}));
+            file};));
         setScreenshots(prev => [...prev, ...newScreenshots]);
         if (filesToAdd.length < imageFiles.length) {
             toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`);
         }
     };
-    const removeScreenshot = (props: any) => {
+    const removeScreenshot = (props) => {
         setScreenshots(prev => {
             const filtered = prev.filter(screenshot => screenshot.id !== id);
             // Revoke object URL to avoid memory leaks
@@ -46,10 +46,10 @@ export const ScreenshotManager = (props: any) => {
             return filtered;
         });
     };
-    const handleDragOver = (props: any) => {e.preventDefault();
+    const handleDragOver = (props) => {e.preventDefault();
         setIsDragging(true);};
-    const handleDragLeave = (props: any) => {setIsDragging(false);};
-    const handleDrop = (props: any) => {
+    const handleDragLeave = (props) => {setIsDragging(false);};
+    const handleDrop = (props) => {
         e.preventDefault();
         setIsDragging(false);
         if (e.dataTransfer.files) {
@@ -90,4 +90,4 @@ export const ScreenshotManager = (props: any) => {
       </CardContent>
     </Card>);
 };';
-;';;';
+;';';

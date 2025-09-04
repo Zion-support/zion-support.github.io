@@ -162,5 +162,5 @@ export const BUSINESS_PROCESS_AUTOMATION_SERVICES_2025: BusinessProcessAutomatio
     },
     competitors: ["Zendesk", "Intercom", "Freshworks", "Help Scout", "Drift"],
     marketSize: "$8.6 billion by 2025"
-  }
+  };
 ];

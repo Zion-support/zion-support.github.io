@@ -1,4 +1,4 @@
-import React, { useState } from 'react';';';
+import React, { useState } from 'react';
 import { useEffect, useRef, useState } from 'react';
 interface PerformanceMetrics {
 
@@ -27,7 +27,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
     enableNavigationTiming = true,
     logToConsole = false,
     sendToAnalytics = false
-  } = options;
+  }; = options;
 
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
@@ -38,7 +38,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
     domLoad: null,
     windowLoad: null,
     navigationStart: null,
-  });
+  };);
 
   const [isMonitoring, setIsMonitoring] = useState(false);
   const observerRef = useRef<PerformanceObserver | null>(null);
@@ -46,8 +46,8 @@ export function usePerformance(options: PerformanceOptions = {}) {
       return;
 
     // First Contentful Paint (FCP)
-    const fcpObserver = new PerformanceObserver((list) => {';
-      const entries = list.getEntries();';';
+    const fcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
       const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
       if (fcpEntry) {
         setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }))});
@@ -59,8 +59,8 @@ export function usePerformance(options: PerformanceOptions = {}) {
         setMetrics(prev => ({ ...prev, lcp: lcpEntry.startTime }))});
     // First Input Delay (FID)
     const fidObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();';
-      const fidEntry = entries[entries.length - 1] as FirstInputEntry;';';
+      const entries = list.getEntries();
+      const fidEntry = entries[entries.length - 1] as FirstInputEntry;
       if (fidEntry && 'processingStart' in fidEntry) {
         setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }))});
     // Cumulative Layout Shift (CLS)
@@ -72,8 +72,8 @@ export function usePerformance(options: PerformanceOptions = {}) {
           clsValue += layoutShiftEntry.value;
 
       setMetrics(prev => ({ ...prev, cls: clsValue }))});
-    // Start observing';
-    try {';';
+    // Start observing
+    try {
       fcpObserver.observe({ entryTypes: ['paint'] });';';
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });';';
       fidObserver.observe({ entryTypes: ['first-input'] });';';
@@ -86,8 +86,8 @@ export function usePerformance(options: PerformanceOptions = {}) {
 
   // Get navigation timing metrics
   const getNavigationTiming = useCallback(() => {
-    if (!enableNavigationTiming || !performance.getEntriesByType) return;';
-';';
+    if (!enableNavigationTiming || !performance.getEntriesByType) return;
+
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
       const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
@@ -104,7 +104,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
           // // // // // // // 
 
       })});';
-    try {';';
+    try {
       longTaskObserver.observe({ entryTypes: ['longtask'] })} catch (error) {
       // // // // // // // 
     }
@@ -117,8 +117,8 @@ export function usePerformance(options: PerformanceOptions = {}) {
 
   // Get resource timing metrics
   const getResourceTiming = useCallback(() => {
-    if (!enableResourceTiming || !performance.getEntriesByType) return;';
-';';
+    if (!enableResourceTiming || !performance.getEntriesByType) return;
+
     const resources = performance.getEntriesByType('resource');
     const slowResources = resources.filter(resource => resource.duration > 1000);
 
@@ -135,13 +135,13 @@ export function usePerformance(options: PerformanceOptions = {}) {
     // First Contentful Paint
     try {
       observerRef.current = new PerformanceObserver((list) => {
-        const entries = list.getEntries();';
-        entries.forEach((entry) => {';';
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
           if (entry.name === 'first-contentful-paint') {
             const fcp = entry.startTime;
             setMetrics(prev => ({ ...prev, fcp }));
             if (logToConsole) 
-          }';
+          }
         })});';';
       observerRef.current.observe({ entryTypes: ['paint'] })} catch (e) {
       
@@ -156,7 +156,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
           const lcp = lastEntry.startTime;
           setMetrics(prev => ({ ...prev, lcp }));
           if (logToConsole) 
-        }';
+        }
       });';';
       lcpObserverRef.current.observe({ entryTypes: ['largest-contentful-paint'] })} catch (e) {
       
@@ -170,7 +170,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
           if (!entry.hadRecentInput) {
             clsValue += (entry as any).value}
         }
-        setMetrics(prev => ({ ...prev, cls: clsValue }));
+        setMetrics(prev => ({ ...prev, cls: clsValue };));
         if (logToConsole) ';
       });';';
       clsObserverRef.current.observe({ entryTypes: ['layout-shift'] })} catch (e) {
@@ -193,13 +193,13 @@ export function usePerformance(options: PerformanceOptions = {}) {
 
       setMetrics(prev => ({ ...prev, fid: firstInputDelay }));
       if (logToConsole) 
-';
-      // Remove listeners after first input';';
+
+      // Remove listeners after first input
       document.removeEventListener('pointerdown', firstInputHandler);';';
       document.removeEventListener('keydown', firstInputHandler);';';
       document.removeEventListener('mousedown', firstInputHandler);';';
       document.removeEventListener('touchstart', firstInputHandler)};';
-';';
+
     document.addEventListener('pointerdown', firstInputHandler);';';
     document.addEventListener('keydown', firstInputHandler);';';
     document.addEventListener('mousedown', firstInputHandler);';';
@@ -217,16 +217,15 @@ export function usePerformance(options: PerformanceOptions = {}) {
     // Monitor First Input
     monitorFirstInput();
     ';
-    // Get initial metrics after page load';';
+    // Get initial metrics after page load
     if (document.readyState === 'complete') {
       getNavigationTiming();';
-      getResourceTiming()} else {';';
+      getResourceTiming()} else {
       window.addEventListener('load', () => {
         getNavigationTiming();
         getResourceTiming()})}
-';
-    // Monitor DOM content loaded';';
-    if (document.readyState === 'loading') {';';
+    // Monitor DOM content loaded
+    if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', getNavigationTiming)} else {
       getNavigationTiming()}
   }, [isMonitoring, monitorWebVitals, monitorFirstInput, getNavigationTiming, getResourceTiming]);
@@ -289,15 +288,14 @@ export function usePerformance(options: PerformanceOptions = {}) {
       timestamp: Date.now(),
       userAgent: navigator.userAgent,
       url: window.location.href
-    };
+    };;
 
-    // Example: Send to Google Analytics';
-    if (window.gtag) {';';
+    // Example: Send to Google Analytics
+    if (window.gtag) {
       window.gtag('event', 'performance_metrics', analyticsData)}
-';
-    // Example: Send to custom endpoint';';
-    fetch('/api/analytics/performance', {';';
-      method: 'POST',';';
+    // Example: Send to custom endpoint
+    fetch('/api/analytics/performance', {
+      method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(analyticsData)
     }).catch(console.error)}, [metrics, sendToAnalytics, getPerformanceScore]);
@@ -308,8 +306,8 @@ export function usePerformance(options: PerformanceOptions = {}) {
       startMonitoring()}
 
     return () => {
-      stopMonitoring()}}, [enableRealUserMonitoring, startMonitoring, stopMonitoring]);';
-';';
+      stopMonitoring()}}, [enableRealUserMonitoring, startMonitoring, stopMonitoring]);
+
   // Auto-send metrics when they're complete
   useEffect(() => {
     if (sendToAnalytics && metrics.fcp && metrics.lcp && metrics.fid && metrics.cls) {
@@ -393,5 +391,4 @@ export function useAPIPerformance() {
     getAPIAverage,
     getSlowAPIs
   }}
-';
-export default usePerformance;;';;';
+export default usePerformance;';';

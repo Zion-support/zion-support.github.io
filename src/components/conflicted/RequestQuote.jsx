@@ -91,10 +91,10 @@ import React, {useState} from 'react';                <Clock className="w-5 h-5 
 
                   {/* Project Type */}
                   <div>"
-                    <label className="block text-white font-medium mb-4">Project Type *</label>"';
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">';';
-                      {projectTypes.map((type) => (<label key={type.value} className={`flex items-start p-4 rounded-lg border cursor-pointer transition-all duration-300 ${formData.projectType === type.value'';';
-                ? 'border-cyan-400 bg-cyan-400/20''`';';
+                    <label className="block text-white font-medium mb-4">Project Type *</label>";
+                    <divclassName="grid grid-cols-1 md:grid-cols-2 gap-4">';
+                      {projectTypes.map((type) => (<label key={type.value} className={`flex items-start p-4 rounded-lg border cursor-pointer transition-all duration-300 ${formData.projectType === type.value'
+                ? 'border-cyan-400 bg-cyan-400/20"`
                 : 'border-white/20 hover:border-cyan-400/50'}`}>"
                           <input type="radio" name="projectType" value={type.value} checked={formData.projectType === type.value} onChange={handleInputChange} className="sr-only"  />"
                           <div className="flex items-start space-x-3">"
@@ -115,7 +115,7 @@ import React, {useState} from 'react';                <Clock className="w-5 h-5 
                     <div>"
                       <label className="block text-white font-medium mb-4">Budget Range</label>"
                       <select name="budget" value={formData.budget} onChange={handleInputChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors">"
-                        <option value="">Select budget range</option>
+                        <option value=">Select budget range</option>
                         {budgetRanges.map((budget) => (<option key={budget.value} value={budget.value}>
                             {budget.label} - {budget.description}
                           </option>))}
@@ -124,7 +124,7 @@ import React, {useState} from 'react';                <Clock className="w-5 h-5 
                     <div>"
                       <label className="block text-white font-medium mb-4">Timeline</label>"
                       <select name="timeline" value={formData.timeline} onChange={handleInputChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors">"
-                        <option value="">Select timeline</option>
+                        <option value=">Select timeline</option>
                         {timelineOptions.map((timeline) => (<option key={timeline.value} value={timeline.value}>
                             {timeline.label} - {timeline.description}
                           </option>))}
@@ -134,10 +134,10 @@ import React, {useState} from 'react';                <Clock className="w-5 h-5 
 
                   {/* Urgency */}
                   <div>"
-                    <label className="block text-white font-medium mb-4">Project Urgency</label>"';
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">`';';
-                      {urgencyLevels.map((level) => (<label key={level.value} className={`flex items-center p-3 rounded-lg border cursor-pointer transition-all duration-300 ${formData.urgency === level.value'';';
-                ? 'border-cyan-400 bg-cyan-400/20''`';';
+                    <label className="block text-white font-medium mb-4">Project Urgency</label>";
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">`
+                      {urgencyLevels.map((level) => (<label key={level.value} className={`flex items-center p-3 rounded-lg border cursor-pointer transition-all duration-300 ${formData.urgency === level.value'
+                ? 'border-cyan-400 bg-cyan-400/20"`
                 : 'border-white/20 hover:border-cyan-400/50'}`}>"
                           <input type="radio" name="urgency" value={level.value} checked={formData.urgency === level.value} onChange={handleInputChange} className="sr-only"  />"
                           <div className="text-center w-full">`
@@ -152,15 +152,15 @@ import React, {useState} from 'react';                <Clock className="w-5 h-5 
                   <div>"
                     <label className="block text-white font-medium mb-2">Project Description *</label>"
                     <textarea name="description" value={formData.description} onChange={handleInputChange} required rows={6} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors resize-none" placeholder="Describe your project requirements, goals, and  specific features you need..." />
-                  </div>';
-';';
-                  {/* Submit Button */}'"`';';
-                  <button type="submit" disabled={!isFormValid || submissionStatus === 'submitting'} className={`w-full py-4 px-6 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center space-x-2 ${!isFormValid || submissionStatus === 'submitting''';';
-            ? 'bg-gray-600 text-gray-400 cursor-not-allowed''`';';
-            : 'bg-gradient-to-r from-cyan-400 to-purple-600 text-white hover:from-cyan-500 hover:to-purple-700 hover:shadow-lg hover:shadow-cyan-400/25'}`}>';';
+                  </div>
+
+                  {/* Submit Button */}"`
+                  <buttontype="submit" disabled={!isFormValid || submissionStatus === 'submitting'} className={`w-full py-4 px-6 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center space-x-2 ${!isFormValid || submissionStatus === 'submitting"
+            ? 'bg-gray-600 text-gray-400 cursor-not-allowed"`
+            : 'bg-gradient-to-r from-cyan-400 to-purple-600 text-white hover:from-cyan-500 hover:to-purple-700 hover:shadow-lg hover:shadow-cyan-400/25'}`}>';
                     {submissionStatus === 'submitting' ? (<>"
-                        <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>';
-                        <span>Submitting...</span>';';
+                        <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                        <span>Submitting...</span>';
                       </>) : submissionStatus === 'success' ? (<>"
                         <CheckCircle className="w-5 h-5" />
                         <span>Quote Requested!</span>
@@ -169,8 +169,7 @@ import React, {useState} from 'react';                <Clock className="w-5 h-5 
                         <span>Request Quote</span>
                       </>)}
                   </button>
-';
-                  {/* Status Messages */}';';
+                  {/* Status Messages */}
                   {submissionStatus === 'success' && (<motion.div initial = {
 
   { opacity: 0,
@@ -181,11 +180,11 @@ import React, {useState} from 'react';                <Clock className="w-5 h-5 
   { opacity: 1,
   y: 0
 
-}} className="flex items-center p-4 bg-green-500/20 border border-green-500/50 rounded-lg">';
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />                      <span className="text-green-400">';';
+}} className="flex items-center p-4 bg-green-500/20 border border-green-500/50 rounded-lg">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />                      <spanclassName="text-green-400">';
                         Thank you! We've received your quote request and will respond within 24 hours.</span>
-                    </motion.div>)}';
-';';
+                    </motion.div>)}
+
                   {submissionStatus === 'error' && (<motion.div initial = {
 
   { opacity: 0,
@@ -350,5 +349,5 @@ export {RequestQuote};
 
 </motion>
 </motion>
-</motion>';
-</motion>;';;';
+</motion>
+</motion>;';';

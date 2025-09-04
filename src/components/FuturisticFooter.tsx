@@ -1,54 +1,54 @@
-import React from 'react';';';
-import { motion } from 'framer-motion';';';
-import { Link } from 'react-router-dom';';';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, ArrowUp, Github, Twitter, Linkedin, Instagram } from 'lucide-react';
 
-const FuturisticFooter: React.FC = (props: any) => {';
-  const contactInfo = {';';
-    mobile: '+1 (555) 123-4567',';';
-    email: 'info@ziontechgroup.com',';';
+const FuturisticFooter: React.FC = (props) => {
+  const contactInfo = {
+    mobile: '+1 (555) 123-4567',
+    email: 'info@ziontechgroup.com',
     address: '123 Innovation Drive, Tech City, TC 12345'
-  };
-';
-  const socialLinks = [';';
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' },';';
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },';';
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-600' },';';
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-500' }
+  };;
+
+  const socialLinks = [
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-600' },
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-500' };
   ];
 
-  const footerSections = {';
-    services: {';';
-      title: 'Services',';
-      items: [';';
-        { name: 'AI Solutions', href: '/services/ai', icon: ArrowUp },';';
-        { name: 'Cloud Infrastructure', href: '/services/cloud', icon: ArrowUp },';';
-        { name: 'Digital Transformation', href: '/services/transformation', icon: ArrowUp },';';
+  const footerSections = {
+    services: {
+      title: 'Services',
+      items: [
+        { name: 'AI Solutions', href: '/services/ai', icon: ArrowUp },
+        { name: 'Cloud Infrastructure', href: '/services/cloud', icon: ArrowUp },
+        { name: 'Digital Transformation', href: '/services/transformation', icon: ArrowUp },
         { name: 'Cybersecurity', href: '/services/security', icon: ArrowUp }
       ]
-    },';
-    company: {';';
-      title: 'Company',';
-      items: [';';
-        { name: 'About Us', href: '/about', icon: ArrowUp },';';
-        { name: 'Our Team', href: '/team', icon: ArrowUp },';';
-        { name: 'Careers', href: '/careers', icon: ArrowUp },';';
+    },
+    company: {
+      title: 'Company',
+      items: [
+        { name: 'About Us', href: '/about', icon: ArrowUp },
+        { name: 'Our Team', href: '/team', icon: ArrowUp },
+        { name: 'Careers', href: '/careers', icon: ArrowUp },
         { name: 'Contact', href: '/contact', icon: ArrowUp }
       ]
-    },';
-    resources: {';';
-      title: 'Resources',';
-      items: [';';
-        { name: 'Documentation', href: '/docs', icon: ArrowUp },';';
-        { name: 'Blog', href: '/blog', icon: ArrowUp },';';
-        { name: 'Case Studies', href: '/case-studies', icon: ArrowUp },';';
+    },
+    resources: {
+      title: 'Resources',
+      items: [
+        { name: 'Documentation', href: '/docs', icon: ArrowUp },
+        { name: 'Blog', href: '/blog', icon: ArrowUp },
+        { name: 'Case Studies', href: '/case-studies', icon: ArrowUp },
         { name: 'Support', href: '/support', icon: ArrowUp }
       ]
     }
-  };
-';
-  const scrollToTop = (props: any) => {';';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };;
+
+  const scrollToTop = (props) => {
+    window.scrollTo({ top: 0, behavior: 'smooth' };);
   };
 
   return (
@@ -207,5 +207,5 @@ const FuturisticFooter: React.FC = (props: any) => {';
 
 export { FuturisticFooter };
 </motion>
-</motion>';
-</motion>;';;';
+</motion>
+</motion>;';';

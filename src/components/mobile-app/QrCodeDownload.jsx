@@ -1,47 +1,45 @@
 import React, {useState} from 'react';
-import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDownload = (props: any) => {';
-  const [copied, setCopied] = useState(false);';';
+import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDownload = (props) => {
+  const [copied, setCopied] = useState(false);
   const [activeTab, setActiveTab] = useState('ios');
 
-  const downloadLinks = {';
-  ios: {';';
-      name: 'iOS App Store',';';
-      url: 'https://apps.apple.com/app/zion-it-asset-management',';';
-      qrCode: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNDAgNDBIMTYwVjE2MEg0MFY0MFoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik02MCA2MEgxNDBWMTQwSDYwVjYwWiIgZmlsbD0iIzAwMCIvPgo8L3N2Zz4K',';';
-      icon: '🍎',';';
+  const downloadLinks = {
+  ios: {
+      name: 'iOS App Store',
+      url: 'https://apps.apple.com/app/zion-it-asset-management',
+      qrCode: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNDAgNDBIMTYwVjE2MEg0MFY0MFoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik02MCA2MEgxNDBWMTQwSDYwVjYwWiIgZmlsbD0iIzAwMCIvPgo8L3N2Zz4K',
+      icon: '🍎',
   description: 'Download for iPhone and iPad'
-    
-';
-},';';
-    android: {name: 'Google Play Store',';';
-      url: 'https://play.google.com/store/apps/details?id=com.zion.mobile',';';
-      qrCode: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNDAgNDBIMTYwVjE2MEg0MFY0MFoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik02MCA2MEgxNDBWMTQwSDYwVjYwWiIgZmlsbD0iIzAwMCIvPgo8L3N2Zz4K',';';
-      icon: '🤖',';';
+},
+    android: {name: 'Google Play Store',
+      url: 'https://play.google.com/store/apps/details?id=com.zion.mobile',
+      qrCode: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNDAgNDBIMTYwVjE2MEg0MFY0MFoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik02MCA2MEgxNDBWMTQwSDYwVjYwWiIgZmlsbD0iIzAwMCIvPgo8L3N2Zz4K',
+      icon: '🤖',
       description: 'Download for Android devices'};
 
   const handleCopyLink = async (url) => {
     try {
-      await navigator.clipboard.writeText(url);';
+      await navigator.clipboard.writeText(url);
       setCopied(true);';';
       // // // // // // // console.error('Failed to copy: ', err);';
-    }';';
+    }
       setTimeout(() => setCopied(false), 2000)} catch (err) {console.error('Failed to copy: ', err)}
   };
 
   const handleShare = async (platform) => {
-    const { url, name } = downloadLinks[platform];
-    const text = `Download ${name} - Zion IT Asset Management App: ${url}`;
+    const { url, name }; = downloadLinks[platform];
+    const text = `Download ${name} - Zion IT Asset Management App: ${url};`;
 
     if (navigator.share) {
-      try {';
-        await navigator.share({';';
+      try {
+        await navigator.share({
           title: 'Zion Mobile App',
-          text: text,';
+          text: text,
           url: url';';
         // // // // // // // console.error('Error sharing:', err);';
-      }';';
-    } else {// Fallback for browsers that don't support Web Share API';';
-      handleCopyLink(url);})} catch (err) {console.error('Error sharing:', err)}';';
+      }
+    } else {// Fallback for browsers that don't support Web Share API
+      handleCopyLink(url);})} catch (err) {console.error('Error sharing:', err)}
     } else {// Fallback for browsers that don't support Web Share API
       handleCopyLink(url)}
   };
@@ -96,9 +94,9 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
                   <button
                     key={platform}
                     onClick={() => setActiveTab(platform)}
-                    className={`flex-1 flex items-center justify-center space-x-2 px-4 py-3 rounded-xl font-medium transition-all duration-300 ${';
-                      activeTab === platform';';
-                        ? 'bg-blue-600 text-white shadow-lg'';';
+                    className={`flex-1 flex items-center justify-center space-x-2 px-4 py-3 rounded-xl font-medium transition-all duration-300 ${
+                      activeTab === platform';
+                        ? 'bg-blue-600 text-white shadow-lg'
                         : 'text-gray-300 hover:text-white hover:bg-white/10'
                     }`}
 
@@ -209,8 +207,8 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
           <div className="bg-white/5 rounded-2xl p-6 border border-white/10 max-w-3xl mx-auto">
             <h3 className="text-xl font-semibold text-white mb-3">
               Having Trouble?
-            </h3>';
-            <p className="text-gray-300 mb-4">';';
+            </h3>
+            <pclassName="text-gray-300 mb-4">';
               If you're experiencing issues with the download or QR code, our support team is here to help.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -232,5 +230,5 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
       </div>
     </section>
   )};
-';
-export default QrCodeDownload;;';;';
+
+export default QrCodeDownload;';';

@@ -1,14 +1,14 @@
-import { Sun, Moon, Monitor type Theme = 'dark' | 'light' | 'system';';
-';';
+import { Sun, Moon, Monitor type Theme = 'dark' | 'light' | 'system';
+
 type Theme = 'dark' | 'light' | 'system';
 ;
 interface ThemeToggleProps {;
   // Add your props here: any;
 
   className?: string
-}';
-';';
-export const ThemeToggle: Reac t.FC<ThemeToggleProps> = ({ className = '' }) => {;';';
+}
+
+export const ThemeToggle: Reac t.FC<ThemeToggleProps> = ({ className = " };) => {;
   const [theme, setTheme] = useState<Theme>('system');  const [mounted, setMounted] = useState<any>(false);
 ;
   useEffect(() => {;
@@ -29,22 +29,22 @@ export const ThemeToggle: Reac t.FC<ThemeToggleProps> = ({ className = '' }) => 
   };
 }, []);, []);
     if(!mounted) return;';
-';';
+
       root.classList.toggle('dark', theme === 'dark') ;
-    }';
-';';
+    }
+
     localStorage.setItem('theme', theme) ;
   }, [theme, mounted]) ;
   if(!mounted) {
 
     return ()
       <div className="w-32 h-10 rounded-lg bg-gray-200 dark: b g-gray-700 animate-pulse"  />
-    )}';
-';';
-  const themes: { value: Them e; label: string; icon: Reac t.ComponentType<any> }[] = ['';';
-    { value: 'light', label: 'Light', icon: Su n },';';
-    { value: 'dark', label: 'Dark', icon: Moo n },';';
-    { value: 'system', label: 'System', icon: Monito r }
+    )}
+
+  const themes: { value: Them e; label: string; icon: Reac t.ComponentType<any> }[] = ['
+    { value: 'light', label: 'Light', icon: Su n },
+    { value: 'dark', label: 'Dark', icon: Moo n },
+    { value: 'system', label: 'System', icon: Monito r };
   ];
 
   return ("
@@ -54,7 +54,7 @@ export const ThemeToggle: Reac t.FC<ThemeToggleProps> = ({ className = '' }) => 
         className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-gray-100 dark: b g-gray-800 border border-gray-200 dark: borde r-gray-700 text-gray-700 dark: tex t-gray-300 hover: b g-gray-200 dark: hove r:bg-gray-700 transition-colors"
         
         aria-expanded={isOpen}"
-        aria-haspopup="true"';
+        aria-haspopup="true";
       >';';
         {themes.find(t => t.value === theme)?.icon({ className: 'w-4 h-4' })}"
         <span className="text-sm font-medium">{themes.find(t => t.value === theme)?.label}</span>
@@ -69,10 +69,10 @@ export const ThemeToggle: Reac t.FC<ThemeToggleProps> = ({ className = '' }) => 
             className="absolute top-full right-0 mt-2 w-32 bg-white dark: b g-gray-800 border border-gray-200 dark: borde r-gray-700 rounded-lg shadow-lg z-50";
           >;
             {themes.map((themeOption) => (<button      key={themeOption.value}
-                onClick={ () => {';
+                onClick={ () => {
                   setTheme(themeOption.value) ;';';
-                  setIsOpen(false) }}                className={`w-full flex items-center space-x-2 px-3 py-2 text-left text-sm hover: b g-gray-100 dark: hove r:bg-gray-700 transition-colors ${theme === themeOption.value'';';
-                    ? 'bg-blue-50 dark: b g-blue-900/20 text-blue-600 dark: tex t-blue-400''';';
+                  setIsOpen(false) }}                className={`w-full flex items-center space-x-2 px-3 py-2 text-left text-sm hover: b g-gray-100 dark: hove r:bg-gray-700 transition-colors ${theme === themeOption.value'
+                    ? 'bg-blue-50 dark: b g-blue-900/20 text-blue-600 dark: tex t-blue-400"
                     : 'text-gray-700 dark: tex t-gray-300'`
                 }`}
               >";
@@ -83,33 +83,33 @@ export const ThemeToggle: Reac t.FC<ThemeToggleProps> = ({ className = '' }) => 
       </AnimatePresence>;
     </div>) ;
 };';
-    const root = document.documentElement;';';
-    const systemTheme = window.matchMedia(' (prefers - color - scheme: dar k) ') .matches ? 'dark' : 'light';';';
-    const effectiveTheme = theme === 'system' ? systemTheme : theme;';
-';';
+    const root = document.documentElement;
+    const systemTheme = window.matchMedia(' (prefers - color - scheme: dar k) ') .matches ? 'dark' : 'light';
+    const effectiveTheme = theme === 'system' ? systemTheme : theme;
+
     root.classList.remove('light', 'dark') ;
     root.classList.add(effectiveTheme) ;
 
     // Update CSS custom properties for smooth transitions    root.classList.add(effectiveTheme);';
     ';';
-    // Update CSS custom properties for smooth transitions'';';
-    if(effectiveTheme === 'dark') {';
-';';
+    // Update CSS custom properties for smooth transitions'
+    if(effectiveTheme === 'dark') {
+
       root.style.setProperty('--zion-bg-primary',#0f172a');';';
       root.style.setProperty('--zion-bg-secondary',#1e293b');';';
       root.style.setProperty('--zion-text-primary',#f8fafc');';';
-      root.style.setProperty('--zion-text-secondary',#cbd5e1')} else {';
-';';
+      root.style.setProperty('--zion-text-secondary',#cbd5e1')} else {
+
       root.style.setProperty('--zion-bg-primary',#ffffff');';';
       root.style.setProperty('--zion-bg-secondary',#f1f5f9');';';
       root.style.setProperty('--zion-text-primary',#0f172a');';';
-      root.style.setProperty('--zion-text-secondary',#475569')}';
-';';
+      root.style.setProperty('--zion-text-secondary',#475569')}
+
     localStorage.setItem('zion-theme', theme)}, [theme, mounted])};';';
-  const themes: { value: Them e; label: string; icon: Reac t.ComponentType<any> }[] = ['';';
-    { value: 'light', label: 'Light theme', icon: Su n },';';
-    { value: 'dark', label: 'Dark theme', icon: Moo n },';';
-    { value: 'system', label: 'System theme', icon: Monito r }
+  const themes: { value: Them e; label: string; icon: Reac t.ComponentType<any> }[] = ['
+    { value: 'light', label: 'Light theme', icon: Su n },
+    { value: 'dark', label: 'Dark theme', icon: Moo n },
+    { value: 'system', label: 'System theme', icon: Monito r };
   ];
 ;
   if(!mounted) {;
@@ -129,10 +129,10 @@ export const ThemeToggle: Reac t.FC<ThemeToggleProps> = ({ className = '' }) => 
           const Icon = themeOption.icon;
           const isActive = theme === themeOption.value;
 
-          return (<motion.button              key={themeOption.value}';
-              onClick={() => handleThemeChange(themeOption.value)}`';';
-              className={`relative p-2 rounded-lg transition-all duration-200 ${isActive'';';
-                  ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg''';';
+          return (<motion.button              key={themeOption.value}
+              onClick={() => handleThemeChange(themeOption.value)}`
+              className={`relative p-2 rounded-lg transition-all duration-200 ${isActive'
+                  ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg"
                   : 'text-gray-300 hover: tex t-white hover: b g-white/10'`
               }`}
               whileHover={{ scale: 1.05 }}
@@ -150,11 +150,11 @@ export const ThemeToggle: Reac t.FC<ThemeToggleProps> = ({ className = '' }) => 
       </motion.div>
     </div>) };';
 export default ThemeToggle;';';
-'"`
+"`
 
 </motion>
 </any>
 </motion>
 </any>
-</Theme>';
-</ThemeToggleProps>;';;';
+</Theme>
+</ThemeToggleProps>;';';

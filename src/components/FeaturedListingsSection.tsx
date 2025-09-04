@@ -1,14 +1,14 @@
-import { Link  } from 'react-router-dom';';';
- from 'react';';';
-import React, { useState } from 'react';';
+import { Link  } from 'react-router-dom';
+ from "react";
+import React, { useState } from 'react';
 export /**';';
-import { motion  } from 'framer-motion';';';
+import { motion  } from 'framer-motion';
 import { motion, AnimatePresence  } from 'framer-motion';
 
  params - Function parameters
  * @returns {*} Function return value
  */
-function FeaturedListingsSection(props: any) {          initial = {
+function FeaturedListingsSection($1) {          initial = {
 
   { opacity: 0,
   y: 2 0
@@ -125,8 +125,8 @@ function FeaturedListingsSection(props: any) {          initial = {
           </Link>;
         </motion.div>;
       </div>;';
-    </section>;) }';';
-'"
+    </section>;) }
+"
 
-</motion>';
-</motion>;';;';
+</motion>
+</motion>;';';

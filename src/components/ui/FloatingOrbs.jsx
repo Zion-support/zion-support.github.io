@@ -1,5 +1,5 @@
 import React, {useEffect, useRef} from 'react';
-export function FloatingOrbs(props: any) {
+export function FloatingOrbs($1) {
     const canvasRef = useRef(null);
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -9,7 +9,7 @@ export function FloatingOrbs(props: any) {
         if (!ctx)
             return;
         // Set canvas size
-        const resizeCanvas = (props: any) => {
+        const resizeCanvas = (props) => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight};';
         resizeCanvas();';';
@@ -44,7 +44,7 @@ export function FloatingOrbs(props: any) {
             draw() {ctx.save();
                 ctx.globalAlpha = this.opacity;
                 // Create gradient
-                const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius);';
+                const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius);
                 gradient.addColorStop(0, this.color);';';
                 gradient.addColorStop(1, 'transparent');
                 ctx.fillStyle = gradient;
@@ -64,9 +64,8 @@ export function FloatingOrbs(props: any) {
                 orb.draw()});
             animationId = requestAnimationFrame(animate)};
         animate();';
-        // Cleanup';';
-        return () => {window.removeEventListener('resize', resizeCanvas);';
+        // Cleanup
+        return () => {window.removeEventListener('resize', resizeCanvas);
             cancelAnimationFrame(animationId)}}, [count]);';';
     return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style="{{{ background: 'transparent'}}"} />)}
-';
-export default FloatingOrbs;;';;';
+export default FloatingOrbs;';';

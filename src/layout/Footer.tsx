@@ -1,78 +1,78 @@
-import React from 'react';';';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Footer(props: any) {
+export default function Footer($1) {
   const currentYear = new Date().getFullYear();
 
-  const footerSections = [';
-    {';';
-      title: 'Services',';
-      links: [';';
-        { name: 'AI & Machine Learning', href: '/services/ai-machine-learning' },';';
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops' },';';
-        { name: 'Cybersecurity', href: '/services/cybersecurity' },';';
-        { name: 'Digital Transformation', href: '/services/digital-transformation' },';';
-        { name: 'Financial Solutions', href: '/services/financial-solutions' },';';
-        { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' },';';
-        { name: 'Micro SaaS Solutions', href: '/services/micro-saas' },';';
-        { name: 'AI Content Creation', href: '/services/ai-content-creation' },';';
-        { name: 'Email Automation', href: '/services/email-automation' },';';
+  const footerSections = [
+    {
+      title: 'Services',
+      links: [
+        { name: 'AI & Machine Learning', href: '/services/ai-machine-learning' },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity' },
+        { name: 'Digital Transformation', href: '/services/digital-transformation' },
+        { name: 'Financial Solutions', href: '/services/financial-solutions' },
+        { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' },
+        { name: 'Micro SaaS Solutions', href: '/services/micro-saas' },
+        { name: 'AI Content Creation', href: '/services/ai-content-creation' },
+        { name: 'Email Automation', href: '/services/email-automation' },
         { name: 'Customer Support Platform', href: '/services/customer-support' },
       ],
-    },';
-    {';';
-      title: 'Solutions',';
-      links: [';';
-        { name: 'Enterprise Solutions', href: '/solutions/enterprise' },';';
-        { name: 'Startup Solutions', href: '/solutions/startup' },';';
-        { name: 'Space Technology', href: '/solutions/space-tech' },';';
-        { name: 'Supply Chain', href: '/solutions/supply-chain' },';';
-        { name: 'AI-Powered Solutions', href: '/solutions/ai-powered' },';';
-        { name: 'Quantum Computing', href: '/solutions/quantum-computing' },';';
+    },
+    {
+      title: 'Solutions',
+      links: [
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+        { name: 'Startup Solutions', href: '/solutions/startup' },
+        { name: 'Space Technology', href: '/solutions/space-tech' },
+        { name: 'Supply Chain', href: '/solutions/supply-chain' },
+        { name: 'AI-Powered Solutions', href: '/solutions/ai-powered' },
+        { name: 'Quantum Computing', href: '/solutions/quantum-computing' },
         { name: 'Industry Solutions', href: '/solutions/industry' },
       ],
-    },';
-    {';';
-      title: 'Company',';
-      links: [';';
-        { name: 'About Us', href: '/about' },';';
-        { name: 'Our Story', href: '/about/story' },';';
-        { name: 'Team', href: '/about/team' },';';
-        { name: 'Careers', href: '/careers' },';';
-        { name: 'Partners', href: '/partners' },';';
+    },
+    {
+      title: 'Company',
+      links: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Story', href: '/about/story' },
+        { name: 'Team', href: '/about/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' },
         { name: 'Contact', href: '/contact' },
       ],
-    },';
-    {';';
-      title: 'Resources',';
-      links: [';';
-        { name: 'Blog', href: '/blog' },';';
-        { name: 'Case Studies', href: '/case-studies' },';';
-        { name: 'White Papers', href: '/white-papers' },';';
-        { name: 'Webinars', href: '/webinars' },';';
-        { name: 'Training', href: '/training' },';';
-        { name: 'Documentation', href: '/docs' },';';
+    },
+    {
+      title: 'Resources',
+      links: [
+        { name: 'Blog', href: '/blog' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Webinars', href: '/webinars' },
+        { name: 'Training', href: '/training' },
+        { name: 'Documentation', href: '/docs' },
         { name: 'API Documentation', href: '/api-docs' },
       ],
-    },';
-    {';';
-      title: 'Support',';
-      links: [';';
-        { name: 'Help Center', href: '/help' },';';
-        { name: 'FAQ', href: '/faq' },';';
-        { name: 'Support', href: '/support' },';';
-        { name: 'System Status', href: '/system-status' },';';
-        { name: 'Request Quote', href: '/request-quote' },';';
+    },
+    {
+      title: 'Support',
+      links: [
+        { name: 'Help Center', href: '/help' },
+        { name: 'FAQ', href: '/faq' },
+        { name: 'Support', href: '/support' },
+        { name: 'System Status', href: '/system-status' },
+        { name: 'Request Quote', href: '/request-quote' },
         { name: 'Contact Support', href: '/contact' },
       ],
-    },
+    };,
   ];
-';
-  const legalLinks = [';';
-    { name: 'Privacy Policy', href: '/privacy-policy' },';';
-    { name: 'Terms of Service', href: '/terms-of-service' },';';
-    { name: 'Cookie Policy', href: '/cookie-policy' },';';
-    { name: 'Accessibility', href: '/accessibility' },
+
+  const legalLinks = [
+    { name: 'Privacy Policy', href: '/privacy-policy' },
+    { name: 'Terms of Service', href: '/terms-of-service' },
+    { name: 'Cookie Policy', href: '/cookie-policy' },
+    { name: 'Accessibility', href: '/accessibility' };,
   ];
 
   return (
@@ -187,5 +187,5 @@ export default function Footer(props: any) {
     </footer>
   );
 
-}';
-;';;';
+}
+;';';

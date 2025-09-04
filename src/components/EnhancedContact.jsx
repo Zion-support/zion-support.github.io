@@ -1,50 +1,50 @@
-import React, {useState} from 'react';';';
-import {motion} from 'framer-motion';';';
-import {Button} from '@/components/ui/button';';';
-import {Input} from '@/components/ui/input';';';
+import React, {useState} from 'react';
+import {motion} from 'framer-motion';
+import {Button} from '@/components/ui/button';
+import {Input} from '@/components/ui/input';
 import {Textarea} from '@/components/ui/Textarea';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe export const EnhancedContact = (props: any) => {';
-    const [formData, setFormData] = useState({';';
-        name: '',';';
-        email: '',';';
-        comp: '',';';
-        phone: '',';';
-        service: '',';';
-        message: ''
-    });
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe export const EnhancedContact = (props) => {
+    const [formData, setFormData] = useState({
+        name: ",
+        email: ",
+        comp: ",
+        phone: ",
+        service: ",
+        message: "
+    };);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
-    const contactMethods = [';
-        {icon: Mail,';';
-            title: 'Email Us',';';
-            description: 'Send us a detailed message',';';
-            action: 'kleber@ziontechgroup.com',';';
-            href: 'mailto:kleber@ziontechgroup.com'},';
-        {icon: Phone,';';
-            title: 'Call Us',';';
-            description: 'Speak with our team directly',';';
-            action: '+1 302 464 0950',';';
-            href: 'tel:+13024640950'},';
-        {icon: MapPin,';';
-            title: 'Visit Us',';';
-            description: 'Our office location',';';
-            action: '364 E Main St STE 1008, Middletown DE 19709',';';
-            href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'},
-        {';
-            icon: Clock,';';
-            title: 'Business Hours',';';
-            description: 'When we\'re available',';';
-            action: 'Mon-Fri: 9AM-6PM EST',';';
+    const contactMethods = [
+        {icon: Mail,
+            title: 'Email Us',
+            description: 'Send us a detailed message',
+            action: 'kleber@ziontechgroup.com',
+            href: 'mailto:kleber@ziontechgroup.com'},
+        {icon: Phone,
+            title: 'Call Us',
+            description: 'Speak with our team directly',
+            action: '+1 302 464 0950',
+            href: 'tel:+13024640950'},
+        {icon: MapPin,
+            title: 'Visit Us',
+            description: 'Our office location',
+            action: '364 E Main St STE 1008, Middletown DE 19709',
+            href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'};,
+        {
+            icon: Clock,
+            title: 'Business Hours',
+            description: 'When we\'re available',
+            action: 'Mon-Fri: 9AM-6PM EST',
             href: '#'
 
     ];';
-    const services = [';';
-        'AI Solutions',';';
-        'Cloud & DevOps',';';
-        'Cybersecurity',';';
-        'Digital Transformation',';';
-        'IT Infrastructure',';';
-        'Consulting',';';
+    const services = [
+        'AI Solutions',
+        'Cloud & DevOps',
+        'Cybersecurity',
+        'Digital Transformation',
+        'IT Infrastructure',
+        'Consulting',
         'Other'
     ];
     const containerVariants = {
@@ -54,7 +54,7 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
             transition: {
                 staggerChildren: 0.1
 
-    };
+    };;
     const itemVariants = {
   hidden: { y: 20,
   opacity: 0 
@@ -67,7 +67,7 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
                 duration: 0.6,
                 ease: "easeOut"
 
-    };
+    };;
     const cardVariants = {
   hidden: { scale: 0.9,
   opacity: 0 
@@ -88,9 +88,9 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
                 duration: 0.3,
                 ease: "easeOut"
 
-    };
-    const handleInputChange = (props: any) => {
-        const { name, value } = e.target;
+    };;
+    const handleInputChange = (props) => {
+        const { name, value }; = e.target;
         setFormData(prev => ({...prev,
             [name]: value}))};
     const handleSubmit = async (e) => {
@@ -103,13 +103,13 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
         // Reset form after 3 seconds
         setTimeout(() => {
             setIsSubmitted(false);';
-            setFormData({';';
-                name: '',';';
-                email: '',';';
-                comp: '',';';
-                phone: '',';';
-                service: '',';';
-                message: ''
+            setFormData({
+                name: ",
+                email: ",
+                comp: ",
+                phone: ",
+                service: ",
+                message: "
             })}, 3000)};
     if (isSubmitted) {
         return (<motion.div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white flex items-center justify-center" initial = {
@@ -123,8 +123,8 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
 }} transition={{ duration: 0.5 }}>
         <div className="text-center max-w-md mx-auto px-4">
           <CheckCircle className="h-24 w-24 text-green-400 mx-auto mb-6" />
-          <h1 className="text-3xl font-bold text-white mb-4">Thank You!</h1>';
-          <p className="text-xl text-gray-300 mb-6">';';
+          <h1 className="text-3xl font-bold text-white mb-4">Thank You!</h1>
+          <pclassName="text-xl text-gray-300 mb-6">';
             Your message has been sent successfully. We'll get back to you within 24 hours.
           </p>
           <Button onClick={() => setIsSubmitted(false)} className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700">
@@ -136,14 +136,14 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <motion.div className="max-w-7xl mx-auto text-center" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>';
-          <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" variants={itemVariants}>';';
+        <motion.div className="max-w-7xl mx-auto text-center" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" variants={itemVariants}>';
             Get in{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
               Touch
             </span>
           </motion.h1>';
-          <motion.p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" variants={itemVariants}>';';
+          <motion.p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" variants={itemVariants}>';
             Ready to transform your business? Let's discuss how our technology solutions can drive your success.
           </motion.p>
         </motion.div>
@@ -151,8 +151,8 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
 
       {/* Contact Methods */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">';
-          <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>';';
+        <divclassName="max-w-7xl mx-auto">
+          <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>';
             {contactMethods.map((method, index) => (<motion.a key={index} href={method.href} target={method.href.startsWith('http') ? '_blank' : null} rel={method.href.startsWith('http') ? 'noopener noreferrer' : null} className="group" variants={cardVariants} whileHover="hover">
                 <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 h-full">
                   <div className="text-4xl mb-4 flex justify-center">
@@ -175,8 +175,8 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
           <motion.div className="text-center mb-12" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Send Us a Message
-            </h2>';
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">';';
+            </h2>
+            <pclassName="text-xl text-gray-300 max-w-2xl mx-auto">';
               Fill out the form below and we'll get back to you as soon as possible
             </p>
           </motion.div>
@@ -222,7 +222,7 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
                 Service of Interest
               </label>
               <select id="service" name="service" value={formData.service} onChange={handleInputChange} className="w-full px-3 py-2 bg-white/20 border border-white/30 rounded-md text-white focus:border-zion-cyan focus:ring-zion-cyan focus:outline-none">
-                <option value="">Select a service</option>
+                <option value=">Select a service</option>
                 {services.map((service, index) => (<option key={index} value={service} className="bg-slate-800 text-white">
                     {service}
                   </option>))}
@@ -293,5 +293,5 @@ export default EnhancedContact;
 </motion>
 </motion>
 </motion>
-</motion>';
-</motion>;';;';
+</motion>
+</motion>;';';

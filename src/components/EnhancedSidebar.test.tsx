@@ -11,4 +11,4 @@ export default function EnhancedSidebar.test() {return (
       </div>
   );"}"
 
-</div>;;
+</div>;

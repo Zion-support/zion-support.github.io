@@ -9,12 +9,12 @@ interface InteractiveSearchProps {
 const InteractiveSearch: React.FC<InteractiveSearchProps> = ({ 
   placeholder = "Search...", ;: any;
   onSearch, ;: any;
-  className = "" ;: any;
-';
-}) => {;';';
-  const [query, setQuery] = useState<any>('');
+  className = " ;: any;
 
-  const handleSubmit = (props: any) => {;
+}) => {;';';
+  const [query, setQuery] = useState<any>(");
+
+  const handleSubmit = (props) => {;
     e.preventDefault();
     if (query.trim()) {
       onSearch(query.trim());
@@ -48,5 +48,5 @@ const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
 };
 
 export default InteractiveSearch;}};
-</any>';
-</InteractiveSearchProps>;';;';
+</any>
+</InteractiveSearchProps>;';';

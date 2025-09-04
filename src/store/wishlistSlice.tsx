@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Wishlistslice(props: any) {
+export default function Wishlistslice($1) {
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-4xl mx-auto px-6 py-16">
@@ -11,5 +11,5 @@ export default function Wishlistslice(props: any) {
       </div>
     </div>
   );
-}';
-;';;';
+}
+;';';

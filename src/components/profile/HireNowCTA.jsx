@@ -1,32 +1,32 @@
 import React, {useState} from 'react';
 import {Button} from "../ui/Button";
 import {Card, CardContent, CardHeader, CardTitle} from "../ui/Card";
-import {Input} from "../ui/Input";';
-import {Textarea} from "../ui/Textarea";';';
+import {Input} from "../ui/Input";
+import {Textarea} from "../ui/Textarea";
 import {DollarSign, MessageSquare} from 'lucide-react';
-export function HireNowCTA(props: any) {
-    const [isFormOpen, setIsFormOpen] = useState(false);';
-    const [formData, setFormData] = useState({';';
-        projectDescription: '',';';
-        budget: '',';';
-        startDate: '',';';
-        message: ''
-    });
-    const handleSubmit = (props: any) => {
+export function HireNowCTA($1) {
+    const [isFormOpen, setIsFormOpen] = useState(false);
+    const [formData, setFormData] = useState({
+        projectDescription: ",
+        budget: ",
+        startDate: ",
+        message: "
+    };);
+    const handleSubmit = (props) => {
         e.preventDefault();
         if (onHire) {
-            onHire(formData)}';
-        // Reset form and close';';
-        setFormData({projectDescription: '',';';
-            budget: '',';';
-            startDate: '',';';
-            message: ''});
+            onHire(formData)}
+        // Reset form and close
+        setFormData({projectDescription: ",
+            budget: ",
+            startDate: ",
+            message: "});
         setIsFormOpen(false)};
-    const handleChange = (props: any) => {
+    const handleChange = (props) => {
         setFormData(prev => ({
             ...prev,
             [e.target.name]: e.target.value
-        }))};
+        }))};;
     return (<Card className="bg-zion-blue-light border-zion-blue-lighter">
       <CardHeader>
         <CardTitle className="text-white flex items-center gap-2">
@@ -90,5 +90,4 @@ export function HireNowCTA(props: any) {
           </form>)}
       </CardContent>
     </Card>)}
-';
-export default HireNowCTA;;';;';
+export default HireNowCTA;';';

@@ -19,15 +19,15 @@ import {
   Settings
 } from "lucide-react"
 
-export function ModernHeader(props: any) {
+export function ModernHeader($1) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<any>(false)
   const [isServicesOpen, setIsServicesOpen] = useState<any>(false)
 
-  const toggleMobileMenu = (props: any) => {
+  const toggleMobileMenu = (props) => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
   }
 
-  const closeMobileMenu = (props: any) => {
+  const closeMobileMenu = (props) => {
     setIsMobileMenuOpen(false)
     setIsServicesOpen(false)
   }
@@ -165,7 +165,7 @@ export function ModernHeader(props: any) {
                           </div>
                           <div className="text-sm text-gray-600">{service.description}</div>
                         </Link>
-                      ))}
+                      ))};
                     </div>
                     <div className="mt-4 pt-4 border-t border-gray-200 px-6">
                       <Link 
@@ -318,4 +318,4 @@ export function ModernHeader(props: any) {
 
 export default ModernHeader
 </any>
-</any>;;
+</any>;

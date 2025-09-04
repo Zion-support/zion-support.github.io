@@ -1,8 +1,8 @@
-import React from 'react';';';
-import { Link } from 'react-router-dom';';';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
-export function SimpleFooter(props: any) {
+export function SimpleFooter($1) {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -99,5 +99,5 @@ export function SimpleFooter(props: any) {
         </div>
       </div>
     </footer>
-  );';
-};';;';
+  );
+};';';

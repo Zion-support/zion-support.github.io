@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';';';
+import React, { useState, useEffect } from 'react';
 import { api, ApiResponse } from '@/services / api';
-export default function Page(props: any) {;
+export default function Page($1) {;
 }}}
 interface User {;
   id: number;
@@ -10,9 +10,9 @@ interface User {;
 ;
 const ApiDemo: React.FC = (): JSX.Element => {;
   const [users, setUsers] = useState<any>([]);
-  const [loading, setLoading] = useState<any>(false);';
-  const [error, setError] = useState<any>(null);';';
-const [newUser, setNewUser] = useState<any>({ name: '', email: ''});';';
+  const [loading, setLoading] = useState<any>(false);
+  const [error, setError] = useState<any>(null);
+const [newUser, setNewUser] = useState<any>({ name: ", email: "};);
   const [healthStatus, setHealthStatus] = useState<any>('Checking...');
 ;
   // Check API health on component mount;
@@ -27,8 +27,8 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''});';';
 ;
     try {;
       
-      setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`) } catch(err) {';
-';';
+      setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`) } catch (err) {
+
       setHealthStatus('❌ API Unhealthy')};
 ;
     setLoading(true) ;
@@ -38,16 +38,16 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''});';';
       
       if(response.success && response.data) {
 
-        setUsers(response.data)} catch(err) {';
-';';
+        setUsers(response.data)} catch (err) {
+
       setError(err instanceof Error ? err.message : 'Failed to fetch users')} finally {
 
       setLoading(false)};
 ;
     e.preventDefault () ;
 
-    if(!newUser.name.trim() || !newUser.email.trim()) {';
-';';
+    if(!newUser.name.trim() || !newUser.email.trim()) {
+
       setError('Name and email are required');
       return;
 ;
@@ -57,10 +57,9 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''});';';
     try {
       
       if(response.success && response.data) {
-';
         setUsers(prev => [...prev, response.data!]);';';
-        setNewUser({ name: '', email: '' })} catch(err) {';
-';';
+        setNewUser({ name: ", email: " })} catch (err) {
+
       setError(err instanceof Error ? err.message : 'Failed to create user')} finally {
 
       setLoading(false)};
@@ -104,8 +103,8 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''});';';
             <button"
               type="submit"
               disabled={loading}"
-              className="px-4 py-2 bg-blue-600 text-white rounded-md hover: b g-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed"';
-';';
+              className="px-4 py-2 bg-blue-600 text-white rounded-md hover: b g-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed";
+
               {loading ? 'Creating...' : 'Create User'}
             </button>;
           </form>;
@@ -124,8 +123,8 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''});';';
             <button
               onClick={fetchUsers}
               disabled={loading}"
-              className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover: b g-gray-700 disabled: opacit y-50"';
-';';
+              className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover: b g-gray-700 disabled: opacit y-50";
+
               {loading ? 'Loading...' : 'Refresh'}
             </button>;
           </div>;
@@ -170,9 +169,9 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''});';';
         </div>;
       </div>;
     </div>;) };';
-';';
-export default ApiDemo}}}}}}}'"`
+
+export default ApiDemo}}}}}}}"`
 
 </any>
-</any>';
-</any>;';;';
+</any>
+</any>;';';
