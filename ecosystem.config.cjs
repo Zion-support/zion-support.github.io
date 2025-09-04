@@ -18,7 +18,7 @@ module.exports = {
     },
     {
       name: 'lint-automation',
-      script: 'automation/lint-automation.js',
+      script: 'automation/linting-automation.js',
       instances: 1,
       autorestart: false,
       watch: false,
