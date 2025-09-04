@@ -80,13 +80,23 @@ const Footer: React.FC = () => {
             <h3 className="text-white font-bold text-lg mb-6">Services</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/services/ai-development" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  AI Development
+                <Link href="/ai-services" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  AI Services
                 </Link>
               </li>
               <li>
-                <Link href="/services/cloud-architecture" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Cloud Architecture
+                <Link href="/it-services" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  IT Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/micro-saas" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  Micro SaaS
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/cloud-services" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  Cloud Services
                 </Link>
               </li>
               <li>
@@ -94,41 +104,68 @@ const Footer: React.FC = () => {
                   Cybersecurity
                 </Link>
               </li>
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h3 className="text-white font-bold text-lg mb-6">Company</h3>
+            <ul className="space-y-3">
               <li>
-                <Link href="/services/data-analytics" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Data Analytics
+                <Link href="/about" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  About Us
                 </Link>
               </li>
               <li>
-                <Link href="/services/devops" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  DevOps
+                <Link href="/careers" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link href="/pricing" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  Pricing
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  Contact
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Solutions */}
+          {/* Resources */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-6">Solutions</h3>
+            <h3 className="text-white font-bold text-lg mb-6">Resources</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/blockchain-solutions" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Blockchain Solutions
+                <Link href="/docs" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  Documentation
                 </Link>
               </li>
               <li>
-                <Link href="/iot-platforms" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  IoT Platforms
+                <Link href="/support" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  Support
                 </Link>
               </li>
               <li>
-                <Link href="/solutions/digital-transformation" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Digital Transformation
+                <Link href="/solutions" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  Solutions
                 </Link>
               </li>
               <li>
-                <Link href="/solutions/enterprise-solutions" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Enterprise Solutions
+                <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  Terms of Service
                 </Link>
               </li>
             </ul>
