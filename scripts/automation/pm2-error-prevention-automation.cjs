@@ -419,6 +419,8 @@ this.log(`Tests passed`);
       this.errorCount++;
 }
   }
+  
+  return files;
 }
 ;
 // Run the automation;
