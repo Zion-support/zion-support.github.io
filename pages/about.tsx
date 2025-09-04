@@ -1,7 +1,44 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Layout from '../components/Layout';
 import Link from 'next/link';
 import { Users, Award, Target, CheckCircle, ArrowRight, Globe, Heart, Zap } from 'lucide-react';
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Brain, Shield, Cloud, Rocket, Users, Award, Target, Heart } from 'lucide-react';
+
+export default function AboutPage() {
+  const values = [
+    {
+      icon: Brain,
+      title: "Innovation First",
+      description: "We push the boundaries of technology, constantly exploring new frontiers in AI, quantum computing, and emerging technologies."
+    },
+    {
+      icon: Shield,
+      title: "Security & Trust",
+      description: "Your data and systems are protected with enterprise-grade security measures and compliance standards."
+    },
+    {
+      icon: Cloud,
+      title: "Scalable Solutions",
+      description: "Our solutions grow with your business, from startup to enterprise scale, ensuring long-term success."
+    },
+    {
+      icon: Rocket,
+      title: "Future-Ready",
+      description: "We build for tomorrow, implementing cutting-edge technologies that prepare you for the digital future."
+    }
+  ];
+
+  const stats = [
+    { number: "500+", label: "Projects Completed" },
+    { number: "50+", label: "Happy Clients" },
+    { number: "99.9%", label: "Uptime Guarantee" },
+    { number: "24/7", label: "Support Available" }
+  ];
+>>>>>>> merge-all-prs-20250904-105408
 
 const About: NextPag e = () => {
   return (
@@ -186,8 +223,14 @@ const About: NextPag e = () => {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
     </Layout>
   );
 };
 
 export default About
+=======
+    </>
+  );
+}
+>>>>>>> merge-all-prs-20250904-105408

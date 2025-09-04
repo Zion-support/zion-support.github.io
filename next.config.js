@@ -5,11 +5,27 @@ const nextConfig = {
   swcMinify: true,
   compress: true,
   poweredByHeader: false,
+<<<<<<< HEAD
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   // Only treat *.route.tsx/ts as pages to avoid compiling corrupted files
   // Compile only whitelisted page files to avoid corrupted files
   pageExtensions: ['route.tsx', 'route.ts'],
+=======
+  eslint: { 
+    ignoreDuringBuilds: true,
+    dirs: ['pages', 'components', 'lib', 'hooks']
+  },
+  typescript: { 
+    ignoreBuildErrors: true 
+  },
+  trailingSlash: true,
+  generateBuildId: async () => {
+    return 'build-' + Date.now();
+  },
+  // Ensure standard Next.js page extensions are recognized alongside any custom route files
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'route.tsx', 'route.ts', 'xpage.tsx'],
+>>>>>>> merge-all-prs-20250904-105408
   images: {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
     formats: ['image/webp', 'image/avif'],
@@ -41,4 +57,12 @@ const nextConfig = {
   }
 };
 
+<<<<<<< HEAD
 module.exports = nextConfig;
+=======
+export default nextConfig;
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-f90f
+>>>>>>> merge-all-prs-20250904-105408

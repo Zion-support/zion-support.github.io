@@ -1,4 +1,5 @@
 module.exports = {
+<<<<<<< HEAD
   extends: [
     'next/core-web-vitals',
   ],
@@ -87,3 +88,62 @@ module.exports = {
     'pages.disabled_auto/',
   ],
 };
+=======
+	extends: [
+		'next/core-web-vitals',
+		'plugin:@typescript-eslint/recommended'
+	],
+	parser: '@typescript-eslint/parser',
+	plugins: ['@typescript-eslint'],
+	rules: {
+		'@typescript-eslint/no-unused-vars': 'warn',
+		'@typescript-eslint/no-explicit-any': 'warn',
+		'react-hooks/exhaustive-deps': 'warn',
+		'react/react-in-jsx-scope': 'off',
+		'no-undef': 'off'
+	},
+	ignorePatterns: [
+		'node_modules/',
+		'.next/',
+		'out/',
+		'dist/',
+		'build/',
+		'coverage/',
+		'*.config.js',
+		'*.config.cjs',
+		'*.config.mjs',
+		'*.report.json',
+		'temp_*/',
+		'test_build/',
+		'tests.disabled/',
+		'pages.disabled/',
+		'src.disabled/',
+		'components.disabled/',
+		'hooks.disabled/',
+		'types.disabled/',
+		'contracts.disabled/',
+		'solutions.disabled/',
+		'zion-os.disabled/',
+		'zion_academy/',
+		'automation_backup/',
+		'automation/backups/',
+		'backup-pages/',
+		'backup/',
+		'lib_backup/',
+		'data_backup/',
+		'styles_backup/',
+		'api-backup/',
+		'temp_backup/',
+		'corrupted_files_backup_2/',
+		'ai-optimization-backups/',
+		'optimization-reports/',
+		'test-generation-reports/',
+		'test-reports/',
+		'test-results/',
+		'security-reports/',
+		'pages.__backup/',
+		'pages-disabled/',
+		'pages.disabled_auto/'
+	]
+};
+>>>>>>> merge-all-prs-20250904-105408

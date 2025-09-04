@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Suspense } from 'react';
+=======
+import React, { Suspense, lazy } from 'react';
+>>>>>>> merge-all-prs-20250904-105408
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturisticFooter';
@@ -128,6 +132,7 @@ function App({ Component, pageProps }: AppProps) {
         </Layout>
       </ErrorBoundary>
     </HelmetProvider>
+<<<<<<< HEAD
 >>>>>>> origin/main
   );
 }
@@ -158,3 +163,9 @@ export default function App() {
     </>
   );
 }
+=======
+  );
+};
+
+export default App;
+>>>>>>> merge-all-prs-20250904-105408

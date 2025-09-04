@@ -18,6 +18,7 @@
     "noEmit": true
   },
   "include": [
+<<<<<<< HEAD
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "components/**/*.ts",
@@ -28,10 +29,24 @@
     "pages/**/*.tsx",
     "src/**/*.ts",
     "src/**/*.tsx",
+=======
+<<<<<<< HEAD
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "lib/**/*",
+    "hooks/**/*",
+    "styles/**/*",
+    "automation/**/*.ts",
+    "scripts/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.d.ts",
+>>>>>>> merge-all-prs-20250904-105408
     "types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
+<<<<<<< HEAD
     "dist",
     "data_backup/**",
     "src.corrupted/**",
@@ -39,6 +54,27 @@
     "src/**",
     "utils/next-link-shim.tsx",
     "playwright.config.ts",
+=======
+    ".next",
+    "out",
+    "dist",
+=======
+    "src/**/*",
+    "pages/**/*",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "data/services.ts",
+    "styles/**/*",
+    "types/**/*",
+    "utils/**/*",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
+>>>>>>> merge-all-prs-20250904-105408
     "api-backup",
     "api-disabled",
     "api.disabled.temp",
@@ -57,6 +93,10 @@
     "data",
     "data/**",
     "cypress",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merge-all-prs-20250904-105408
     "temp_working",
     "supabase/functions",
     "**/*.backup",
@@ -78,6 +118,28 @@
     "temp_backup/**",
     "temp_broken_components",
     "temp_broken_components/**",
+<<<<<<< HEAD
     "src.corrupted/**"
+=======
+    "src.corrupted/**",
+    "scripts/**",
+    "automation/**",
+    "tests/**",
+    "**/*.js",
+    "**/*.cjs"
+=======
+    "**/*.backup",
+    "**/*.disabled",
+    "temp_working",
+    "supabase/functions",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    ".next",
+    "out",
+    "dist"
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
+>>>>>>> merge-all-prs-20250904-105408
   ]
 }
