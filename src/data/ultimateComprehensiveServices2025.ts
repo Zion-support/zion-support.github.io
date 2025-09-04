@@ -53,21 +53,21 @@ export const zionContact: UltimateComprehensiveService2025['contactInfo'] = {
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709"
-};;
+};
 
 // Convert and combine all services
 const convertMicroSaasServices = (services: AdvancedMicroSaasService2025[]): UltimateComprehensiveService2025[] => {
   return services.map(service => ({
     ...service,
     serviceType: 'Micro SAAS' as const
-  };));
+  }));
 };
 
 const convertITServices = (services: AdvancedITService2025[]): UltimateComprehensiveService2025[] => {
   return services.map(service => ({
     ...service,
     serviceType: 'IT Services' as const
-  };));
+  }));
 };
 
 const convertAIServices = (services: AdvancedAIService2025[]): UltimateComprehensiveService2025[] => {
