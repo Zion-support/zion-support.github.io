@@ -1,6 +1,4 @@
-import React from 'react';
-
-const UserEngagementSystem: React.FC = () => {
+const UserEngagementSystem = () => {
   return (
     <div className="bg-white rounded-lg shadow-md p-6">
       <h3 className="text-lg font-semibold mb-4">User Engagement</h3>

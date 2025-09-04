@@ -1,13 +1,13 @@
-import React from 'react';
 import Head from 'next/head';
+import { ReactNode } from 'react';
 
 interface LayoutProps {
-  children: React.ReactNode;
+  children: ReactNode;
   title?: string;
   description?: string;
 }
 
-const Layout: React.FC<LayoutProps> = ({ 
+const Layout = ({ 
   children, 
   title = 'Zion Tech Solutions',
   description = 'Leading technology solutions for modern businesses'
