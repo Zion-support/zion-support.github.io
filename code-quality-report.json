@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-03T21:22:51.525Z",
+  "timestamp": "2025-09-04T02:16:02.849Z",
   "files": {
     "components/Breadcrumb.tsx": {
       "path": "components/Breadcrumb.tsx",
@@ -9,7 +9,7 @@
     },
     "components/ContactForm.tsx": {
       "path": "components/ContactForm.tsx",
-      "lines": 192,
+      "lines": 198,
       "issues": [],
       "complexity": 1
     },
@@ -21,9 +21,15 @@
     },
     "components/Loading.tsx": {
       "path": "components/Loading.tsx",
-      "lines": 24,
+      "lines": 25,
       "issues": [],
       "complexity": 2
+    },
+    "components/LoadingOptimized.tsx": {
+      "path": "components/LoadingOptimized.tsx",
+      "lines": 29,
+      "issues": [],
+      "complexity": 3
     },
     "components/LoadingSpinner.tsx": {
       "path": "components/LoadingSpinner.tsx",
@@ -45,9 +51,9 @@
     },
     "components/ThemeToggle.tsx": {
       "path": "components/ThemeToggle.tsx",
-      "lines": 45,
+      "lines": 47,
       "issues": [],
-      "complexity": 3
+      "complexity": 5
     },
     "pages/404.tsx": {
       "path": "pages/404.tsx",
@@ -87,7 +93,7 @@
     },
     "pages/ai-services.tsx": {
       "path": "pages/ai-services.tsx",
-      "lines": 1137,
+      "lines": 1269,
       "issues": [
         {
           "rule": "File Length",
@@ -96,7 +102,7 @@
         },
         {
           "rule": "Duplicate Code",
-          "value": 72,
+          "value": 82,
           "message": "Potential duplicate code detected"
         }
       ],
@@ -140,7 +146,7 @@
     },
     "pages/it-services.tsx": {
       "path": "pages/it-services.tsx",
-      "lines": 1370,
+      "lines": 1623,
       "issues": [
         {
           "rule": "File Length",
@@ -149,7 +155,7 @@
         },
         {
           "rule": "Duplicate Code",
-          "value": 92,
+          "value": 127,
           "message": "Potential duplicate code detected"
         }
       ],
@@ -157,7 +163,7 @@
     },
     "pages/micro-saas.tsx": {
       "path": "pages/micro-saas.tsx",
-      "lines": 1401,
+      "lines": 1690,
       "issues": [
         {
           "rule": "File Length",
@@ -166,7 +172,7 @@
         },
         {
           "rule": "Duplicate Code",
-          "value": 57,
+          "value": 80,
           "message": "Potential duplicate code detected"
         }
       ],
@@ -233,9 +239,9 @@
     }
   },
   "summary": {
-    "totalFiles": 28,
-    "totalLines": 8473,
-    "averageComplexity": "1.75",
+    "totalFiles": 29,
+    "totalLines": 9185,
+    "averageComplexity": "1.86",
     "issues": [
       {
         "file": "pages/404.tsx",
@@ -277,7 +283,7 @@
           },
           {
             "rule": "Duplicate Code",
-            "value": 72,
+            "value": 82,
             "message": "Potential duplicate code detected"
           }
         ]
@@ -292,7 +298,7 @@
           },
           {
             "rule": "Duplicate Code",
-            "value": 92,
+            "value": 127,
             "message": "Potential duplicate code detected"
           }
         ]
@@ -307,7 +313,7 @@
           },
           {
             "rule": "Duplicate Code",
-            "value": 57,
+            "value": 80,
             "message": "Potential duplicate code detected"
           }
         ]

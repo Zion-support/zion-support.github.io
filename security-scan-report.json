@@ -1,34 +1,10 @@
 {
-  "timestamp": "2025-09-03T16:52:55.156Z",
-  "checks": {
-    "NPM Audit": {
-      "status": "passed",
-      "message": "Audit check completed"
-    },
-    "Sensitive Files": {
-      "status": "passed",
-      "message": "No sensitive files in root directory"
-    },
-    "Hardcoded Secrets": {
-      "status": "passed",
-      "message": "No obvious hardcoded secrets found"
-    },
-    "HTTPS Configuration": {
-      "status": "warning",
-      "warning": true,
-      "message": "HTTPS configuration not found"
-    },
-    "Security Headers": {
-      "status": "passed",
-      "message": "Security headers configured"
-    }
-  },
-  "vulnerabilities": [],
+  "timestamp": "2025-09-04T02:16:02.212Z",
   "summary": {
-    "total": 5,
-    "passed": 4,
-    "failed": 0,
+    "passed": 3,
     "warnings": 1,
-    "vulnerabilities": 0
-  }
+    "errors": 0,
+    "infos": 1
+  },
+  "status": "WARNING"
 }

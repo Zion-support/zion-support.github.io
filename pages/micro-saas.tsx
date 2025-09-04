@@ -1210,8 +1210,7 @@ export default function MicroSaaS() {
         'Automated attendee management',
 
         'Increased event attendance and engagement',
-        'Streamlined event operations'
-
+        'Streamlined event operations',
         'Improved event ROI tracking',
         'Enhanced attendee experience'
 
@@ -1252,7 +1251,7 @@ export default function MicroSaaS() {
         'Return analytics and fraud detection',
         'Integration with major e-commerce platforms',
         'Customer self-service return portal'
-
+      ],
       icon: FileText,
       name: 'AI-Powered Content Creation Suite',
       description: 'Comprehensive content generation platform with AI writing, editing, and optimization tools.',
@@ -1316,8 +1315,7 @@ export default function MicroSaaS() {
         '70% reduction in return processing time',
         'Automated fraud detection and prevention',
         'Improved customer satisfaction with returns',
-        'Better inventory management and restocking'
-
+        'Better inventory management and restocking',
         '60% faster return processing',
         'Automated return workflows',
         'Improved customer experience',
@@ -1338,7 +1336,7 @@ export default function MicroSaaS() {
         'Predictive analytics for conversion probability',
         'Integration with CRM and marketing automation',
         'Custom scoring models and rule configuration'
-
+      ],
       icon: Mail,
       name: 'Automated Email Follow-up Service',
       description: 'Intelligent email sequence automation with personalization, A/B testing, and conversion optimization.',
@@ -1394,8 +1392,7 @@ export default function MicroSaaS() {
         'Regulatory framework mapping and tracking',
         'Automated report generation and submission',
         'Policy management and employee training',
-        'Incident response and breach notification'
-
+        'Incident response and breach notification',
         '90% faster video content creation',
         'Automated social media optimization',
         'Increased content engagement',
@@ -1492,7 +1489,20 @@ export default function MicroSaaS() {
         'Better customer satisfaction and retention'
       ],
       category: 'Customer Engagement'
-
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Recruitment Assistant',
+      description: 'Intelligent recruitment platform with automated candidate screening, interview scheduling, and hiring workflow optimization.',
+      features: [
+        'Automated candidate screening and ranking',
+        'Intelligent interview scheduling',
+        'Skills assessment and matching',
+        'Background verification automation',
+        'Hiring workflow optimization',
+        'Candidate communication automation'
+      ],
+      benefits: [
         '60% reduction in time-to-hire',
         'Improved candidate quality',
         'Automated recruitment workflows',
@@ -1543,7 +1553,6 @@ export default function MicroSaaS() {
         'Cutting-edge research capabilities'
       ],
       category: 'Quantum Computing'
-
     }
   ];
 
@@ -1611,24 +1620,24 @@ export default function MicroSaaS() {
                 <div>
                   <h3 className="text-lg font-semibold mb-3 text-blue-400">Key Features</h3>
                   <ul className="space-y-2 text-slate-300">
-                    {service.features.map((feature, idx) => (
+                    {service.features?.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-2">
                         <span className="text-blue-400 mt-1">•</span>
                         <span>{feature}</span>
                       </li>
-                    ))}
+                    )) || []}
                   </ul>
                 </div>
 
                 <div>
                   <h3 className="text-lg font-semibold mb-3 text-green-400">Business Benefits</h3>
                   <ul className="space-y-2 text-slate-300">
-                    {service.benefits.map((benefit, idx) => (
+                    {service.benefits?.map((benefit, idx) => (
                       <li key={idx} className="flex items-start gap-2">
                         <span className="text-green-400 mt-1">✓</span>
                         <span>{benefit}</span>
                       </li>
-                    ))}
+                    )) || []}
                   </ul>
                 </div>
               </div>
