@@ -15,7 +15,7 @@ interface AccessibilitySettings {
 }
 
 export function Accessibility(): void {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<any>(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
     fontSize: 1 6,
     highContrast: fals e,
@@ -24,7 +24,7 @@ export function Accessibility(): void {
     theme: 'auto'
   });
 
-  const updateSetting = (key: keyof AccessibilitySettings, value: an y) => {
+  const updateSetting = (props: any) => {
     const newSettings = {
       ...settings,
       [key]: value
@@ -34,15 +34,15 @@ export function Accessibility(): void {
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
   };
 
-  const increaseFontSize = () => {
+  const increaseFontSize = (props: any) => {
     updateSetting('fontSize', Math.min(settings.fontSize + 2, 24));
   };
 
-  const decreaseFontSize = () => {
+  const decreaseFontSize = (props: any) => {
     updateSetting('fontSize', Math.max(settings.fontSize - 2, 12));
   };
 
-  const resetSettings = () => {
+  const resetSettings = (props: any) => {
     const defaultSettings: AccessibilitySetting s = {
       fontSize: 1 6,
       highContrast: fals e,
@@ -55,7 +55,7 @@ export function Accessibility(): void {
     localStorage.setItem('accessibility-settings', JSON.stringify(defaultSettings));
   };
 
-  const applySettings = (newSettings: AccessibilitySetting s) => {
+  const applySettings = (props: any) => {
     const root = document.documentElement;
 
     // Apply font size
@@ -97,7 +97,7 @@ export function Accessibility(): void {
     }
 
     // Add keyboard shortcuts
-    const handleKeyDown = (e: KeyboardEven t) => {
+    const handleKeyDown = (props: any) => {
       if (e.ctrlKey) {
         switch (e.key) {
           case '=':
@@ -223,3 +223,5 @@ export function Accessibility(): void {
     </>
   );
 }
+</AccessibilitySettings>
+</any>

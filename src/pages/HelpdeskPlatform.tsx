@@ -2,7 +2,7 @@ import React from "react"
 import { SEO } from "@/components/SEO"
 ;,"});,"})
 }
-export default function HelpdeskPlatform() {return ("
+export default function HelpdeskPlatform(props: any) {return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="HelpdeskPlatform - Zion Tech Group" description="Professional HelpdeskPlatform services by Zion Tech Group"   />"
       <div className="container mx-auto px-4 py-20">"
@@ -14,3 +14,5 @@ export default function HelpdeskPlatform() {return ("
   )
 }
 }""
+
+</div>

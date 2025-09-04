@@ -1,46 +1,35 @@
-import React, { useState } from "react";
-import { useAdminQuotes } from "@/hooks/useAdminQuotes";
-import { useAuth } from "@/hooks/useAuth";
-import { Card } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Navigate } from "react-router-dom";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { QuoteDetails } from "@/components/quotes/QuoteDetails";
-import { ExportToCSV } from "@/components/quotes/ExportToCSV";
-import { QuoteStatusCards, QuotesFilter, QuotesTable } from "@/components/admin/quotes";
+import React, {useState} from "react";
+import {useAdminQuotes} from "@/hooks/useAdminQuotes";
+import {useAuth} from "@/hooks/useAuth";
+import {Card} from "@/components/ui/card";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Navigate} from "react-router-dom";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {QuoteDetails} from "@/components/quotes/QuoteDetails";
+import {ExportToCSV} from "@/components/quotes/ExportToCSV";
+import {QuoteStatusCards, QuotesFilter, QuotesTable} from "@/components/admin/quotes";
 export default function QuoteManager
-export { QuoteManager }() {
+export {QuoteManager}() {
     const { user } = useAuth();
     const isAdmin = user?.userType === 'admin';
     const [selectedQuote, setSelectedQuote] = useState(null);
     const [showDetails, setShowDetails] = useState(false);
-    const { quotes, isLoading, error, statusFilter, setStatusFilter, archiveFilter, setArchiveFilter, searchQuery, setSearchQuery, dateRange, setDateRange, updateStatus, toggleArchive, deleteQuote } = useAdminQuotes();
+    const {quotes, isLoading, error, statusFilter, setStatusFilter, archiveFilter, setArchiveFilter, searchQuery, setSearchQuery, dateRange, setDateRange, updateStatus, toggleArchive, deleteQuote} = useAdminQuotes();
     // Count quotes by status
-    const statusCounts = {
-  new: quotes.filter(q => q.status === 'new').length,
+    const statusCounts = {new: quotes.filter(q => q.status === 'new').length,
         in_review: quotes.filter(q => q.status === 'in_review').length,
         accepted: quotes.filter(q => q.status === 'accepted').length,
         responded: quotes.filter(q => q.status === 'responded').length,
-  closed: quotes.filter(q => q.status === 'closed').length
-    
-
-
-
-
-
-
-};
-    const handleViewDetails = (quote) => {
-        setSelectedQuote(quote);
+  closed: quotes.filter(q => q.status === 'closed').length};
+    const handleViewDetails = (props: any) => {setSelectedQuote(quote);
         setShowDetails(true)};
-    const handleResetFilters = () => {
+    const handleResetFilters = (props: any) => {
         setStatusFilter('all');
         setArchiveFilter('all');
         setSearchQuery('');
         setDateRange({ from: null, to: null });
     };
-    if (!isAdmin) {
-        return <Navigate to="/unauthorized" replace/>}
+    if (!isAdmin) {return <Navigate to="/unauthorized" replace />}
     return (<ProtectedRoute adminOnly>
       <div>
 
@@ -51,14 +40,14 @@ export { QuoteManager }() {
                 <h1 className="text-3xl font-bold text-white mb-2">Quote Request Manager</h1>
                 <p className="text-zion-slate-light">Manage and respond to all talent hire requests</p>
               </div>
-              <ExportToCSV quotes={quotes} filename="zion-quote-requests"/>
+              <ExportToCSV quotes={quotes} filename="zion-quote-requests" />
             </div>
 
             {/* Status Summary Cards */}
-            <QuoteStatusCards statusCounts={statusCounts}/>
+            <QuoteStatusCards statusCounts={statusCounts} />
 
             {/* Filters */}
-            <QuotesFilter searchQuery={searchQuery} setSearchQuery={setSearchQuery} statusFilter={statusFilter} setStatusFilter={setStatusFilter} archiveFilter={archiveFilter} setArchiveFilter={setArchiveFilter} dateRange={dateRange} setDateRange={setDateRange} onReset={handleResetFilters}/>
+            <QuotesFilter searchQuery={searchQuery} setSearchQuery={setSearchQuery} statusFilter={statusFilter} setStatusFilter={setStatusFilter} archiveFilter={archiveFilter} setArchiveFilter={setArchiveFilter} dateRange={dateRange} setDateRange={setDateRange} onReset={handleResetFilters} />
 
             {/* Tabs for Active/Archived */}
             <Tabs defaultValue="active" className="mb-6">
@@ -91,3 +80,7 @@ export { QuoteManager }() {
         
       </div>
     </ProtectedRoute>)}
+
+</QuoteDetails>
+</QuotesTable>
+</QuotesTable>

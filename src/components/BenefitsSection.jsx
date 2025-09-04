@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Zap, Shield, TrendingUp, CheckCircle, Users, Clock, Star, Award } from 'lucide-react';
+import React, {useState} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {Zap, Shield, TrendingUp, CheckCircle, Users, Clock, Star, Award} from 'lucide-react';
 
 const benefits = [
-  {
-    icon: <Zap className="w-10 h-10" />,
+  {icon: <Zap className="w-10 h-10"  />,
     title: "Lightning Fast Delivery",
     description: "Get your projects delivered in record time with our streamlined development process.",
     stats: "50% Faster",
@@ -15,10 +14,8 @@ const benefits = [
       "Parallel development teams",
       "Automated testing pipeline",
       "Continuous deployment"
-    ]
-  },
-  {
-    icon: <Shield className="w-10 h-10" />,
+    ]},
+  {icon: <Shield className="w-10 h-10"  />,
     title: "Enterprise Security",
     description: "Bank-level security with SOC 2 compliance and 24/7 monitoring.",
     stats: "99.9% Secure",
@@ -29,10 +26,8 @@ const benefits = [
       "End-to-end encryption",
       "Regular security audits",
       "GDPR compliance"
-    ]
-  },
-  {
-    icon: <TrendingUp className="w-10 h-10" />,
+    ]},
+  {icon: <TrendingUp className="w-10 h-10"  />,
     title: "Proven ROI",
     description: "Average 300% ROI within 6 months of implementation.",
     stats: "300% ROI",
@@ -43,10 +38,8 @@ const benefits = [
       "Cost reduction strategies",
       "Revenue growth solutions",
       "Efficiency improvements"
-    ]
-  },
-  {
-    icon: <CheckCircle className="w-10 h-10" />,
+    ]},
+  {icon: <CheckCircle className="w-10 h-10"  />,
     title: "Quality Guaranteed",
     description: "30-day money-back guarantee with free migration support.",
     stats: "100% Quality",
@@ -57,18 +50,17 @@ const benefits = [
       "Code quality standards",
       "Performance benchmarks",
       "User experience focus"
-    ]
-  }
+    ]}
 ];
 
 const additionalStats = [
-  { icon: <Users className="w-8 h-8" />, value: "500+", label: "Happy Clients" },
-  { icon: <Clock className="w-8 h-8" />, value: "24/7", label: "Support" },
-  { icon: <Star className="w-8 h-8" />, value: "4.9/5", label: "Rating" },
-  { icon: <Award className="w-8 h-8" />, value: "50+", label: "Awards" }
+  {icon: <Users className="w-8 h-8"  />, value: "500+", label: "Happy Clients"},
+  {icon: <Clock className="w-8 h-8"  />, value: "24/7", label: "Support"},
+  {icon: <Star className="w-8 h-8"  />, value: "4.9/5", label: "Rating"},
+  {icon: <Award className="w-8 h-8"  />, value: "50+", label: "Awards"}
 ];
 
-export function BenefitsSection() {
+export function BenefitsSection(props: any) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const containerVariants = {
@@ -116,18 +108,13 @@ export function BenefitsSection() {
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Enhanced background pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style = {
-  {
-          backgroundImage: `radial-gradient(circle at 75% 75%, currentColor 1px, transparent 1px)`,
-  backgroundSize: '60px 60px'
-        
-
-}}/>
+        <div className="absolute inset-0" style="{{{
+          backgroundImage: `radial-gradient(circle at 75% 75%; backgroundSize: '60px 60px'}}"} />
       </div>
       
       {/* Floating decorative elements */}
       <div className="absolute inset-0">
-        <motion.div 
+        <motion .div 
           className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" 
           animate={{ rotate: 360 }} 
           transition = {
@@ -135,8 +122,8 @@ export function BenefitsSection() {
   ease: "linear" 
 
 }}
-        />
-        <motion.div 
+         />
+        <motion .div 
           className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30" 
           animate={{ rotate: -360 }} 
           transition = {
@@ -144,8 +131,8 @@ export function BenefitsSection() {
   ease: "linear" 
 
 }}
-        />
-        <motion.div 
+         />
+        <motion .div 
           className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20" 
           animate={{
             scale: [1, 1.2, 1]
@@ -155,7 +142,7 @@ export function BenefitsSection() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -322,3 +309,15 @@ export function BenefitsSection() {
 
 
 export default BenefitsSection;
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</div>
+</number>

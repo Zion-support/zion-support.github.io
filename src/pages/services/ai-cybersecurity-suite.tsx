@@ -9,8 +9,8 @@ export { AICybersecuritySuite }(...args: []):  {
     <>
       <Helmet>
         <title>AI Cybersecurity Suite - Zion Tech Group</title>
-        <meta name = "description" content="Protect your organization with AI-powered cybersecurity threat detection, response, and prevention. Advanced security with machine learning."  />
-        <meta name="keywords" content="AI cybersecurity, threat detection, security automation, AI security, cybersecurity suite, threat intelligence"  />
+        <meta name = "description" content="Protect your organization with AI-powered cybersecurity threat detection, response, and prevention. Advanced security with machine learning."   />
+        <meta name="keywords" content="AI cybersecurity, threat detection, security automation, AI security, cybersecurity suite, threat intelligence"   />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -39,7 +39,7 @@ export { AICybersecuritySuite }(...args: []):  {
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover: fro m-red-600 hover: t o-orange-700 transition-all duration-200 shadow-lg hover: shado w-xl"
 
                   Get Protected
-                  <ArrowRight className="ml-2 w-5 h-5"  />
+                  <ArrowRight className="ml-2 w-5 h-5"   />
                 </Link>
                 <button className="inline-flex items-center px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hover: b g-red-500/10 transition-all duration-200">
                   <Play className="mr-2 w-5 h-5"  />
@@ -296,7 +296,7 @@ export { AICybersecuritySuite }(...args: []):  {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover: fro m-red-600 hover: t o-orange-700 transition-all duration-200"
 
                 Schedule Security Assessment
-                <ArrowRight className="ml-2 w-5 h-5"  />
+                <ArrowRight className="ml-2 w-5 h-5"   />
               </Link>
               <Link
                 to="/services"

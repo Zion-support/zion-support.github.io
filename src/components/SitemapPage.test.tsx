@@ -10,3 +10,5 @@ export default function SitemapPage.test() {return (
         </p>
       </div>
   );"}"
+
+</div>

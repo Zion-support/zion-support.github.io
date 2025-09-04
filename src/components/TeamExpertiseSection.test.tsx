@@ -10,3 +10,5 @@ export default function TeamExpertiseSection.test() {return (
         </p>
       </div>
   );"}"
+
+</div>

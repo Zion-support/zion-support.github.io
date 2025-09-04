@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  Users,
+import React, {useState} from 'react';
+import {motion} from 'framer-motion';
+import {Users,
   Zap,
   Shield,
   CheckCircle,
@@ -139,35 +138,28 @@ import {
   Wifi,
   Bluetooth,
   Battery,
-  Signal
-} from 'lucide-react';
+  Signal} from 'lucide-react';
 
     technologies["Business Intelligence", "Machine Learning", "Data Mining", "Visualization Tools"]
   }
 ];
 
 const hrTechnologies = [
-  {
-    name: "Employee Management",
+  {name: "Employee Management",
     description: "Comprehensive employee lifecycle management",
     icon: Users,
     useCase: "HR Operations",
-    reliability: "Critical"
-  },
-  {
-    name: "AI & Automation",
+    reliability: "Critical"},
+  {name: "AI & Automation",
     description: "Intelligent automation for HR processes",
     icon: Brain,
     useCase: "Process Automation",
-    reliability: "High"
-  },
-  {
-    name: "Data Security",
+    reliability: "High"},
+  {name: "Data Security",
     description: "Enterprise-grade security and compliance",
     icon: Shield,
     useCase: "Data Protection",
-    reliability: "Critical"
-  },
+    reliability: "Critical"},
   {
     name: "Cloud Platform",
     description: "Scalable cloud infrastructure for HR applications",
@@ -187,15 +179,13 @@ const successStories = [
     results: "40% reduction in HR processing time, 60% improvement in employee satisfaction, streamlined global operations",
     logo: "GC"
   },
-  {
-    id: 2,
+  {id: 2,
     comp: "Healthcare Network",
     industry: "Healthcare",
     challenge: "Required automated recruitment and onboarding for 500+ annual hires",
     solution: "Implemented AI-powered recruitment system with automated workflows and compliance tracking",
     results: "70% faster hiring process, 50% reduction in administrative overhead, improved compliance",
-    logo: "HN"
-  },
+    logo: "HN"},
   {
     id: 3,
     comp: "Manufacturing Comp",
@@ -215,20 +205,16 @@ const processSteps = [
     icon: FileText,
     duration: "2-4 weeks"
   },
-  {
-    step: 2,
+  {step: 2,
     title: "Platform Design",
     description: "Design HR platform architecture and user experience",
     icon: Code,
-    duration: "4-8 weeks"
-  },
-  {
-    step: 3,
+    duration: "4-8 weeks"},
+  {step: 3,
     title: "Development",
     description: "Build and integrate HR platform components",
     icon: Wrench,
-    duration: "16-32 weeks"
-  },
+    duration: "16-32 weeks"},
   {
     step: 4,
     title: "Deployment & Training",
@@ -245,28 +231,22 @@ const hrBenefits = [
     icon: Zap,
     examples["Automated workflows", "Reduced paperwork", "Faster processing", "Better accuracy"];
   },;
-  {
-    title: "Employee Experience",
+  {title: "Employee Experience",
     description: "Improved self-service capabilities and better communication enhance employee satisfaction",
     icon: Users,
-    examples["Self-service portals", "Mobile access", "Real-time updates", "Better communication"];
-  },;
-  {
-    title: "Data-Driven Decisions",
+    examples["Self-service portals", "Mobile access", "Real-time updates", "Better communication"];},;
+  {title: "Data-Driven Decisions",
     description: "Advanced analytics provide insights for better workforce planning and HR strategy",
     icon: BarChart3,
-    examples["Workforce analytics", "Performance insights", "Trend analysis", "Predictive modeling"];
-  },;
-  {
-    title: "Compliance & Security",
+    examples["Workforce analytics", "Performance insights", "Trend analysis", "Predictive modeling"];},;
+  {title: "Compliance & Security",
     description: "Built-in compliance features and enterprise-grade security protect sensitive HR data",
     icon: Shield,
-    examples["Regulatory compliance", "Data encryption", "Access controls", "Audit trails"];
-  }
+    examples["Regulatory compliance", "Data encryption", "Access controls", "Audit trails"];}
 ];
 
 export default function HRPlatform
-export { HRPlatform }() {
+export {HRPlatform}() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 
@@ -287,7 +267,7 @@ export { HRPlatform }() {
         </div>
 
         <div className="container-responsive relative z-10">
-          <motion.div
+          <motion .div
             initial = {
   { opacity: 0,
   y: 30 
@@ -344,7 +324,7 @@ export { HRPlatform }() {
 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
 
-              <Users className="w-10 h-10 text-white" />
+              <Users className="w-10 h-10 text-white"  />
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -359,15 +339,15 @@ export { HRPlatform }() {
 
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-zion-cyan">
-                <Users className="w-4 h-4" />
+                <Users className="w-4 h-4"  />
                 <span>Employee Management</span>
               </div>
               <div className="flex items-center gap-2 text-zion-purple">
-                <Brain className="w-4 h-4" />
+                <Brain className="w-4 h-4"  />
                 <span>AI Automation</span>
               </div>
               <div className="flex items-center gap-2 text-zion-blue">
-                <Shield className="w-4 h-4" />
+                <Shield className="w-4 h-4"  />
                 <span>Compliance & Security</span>
               </div>
             </div>
@@ -445,7 +425,7 @@ export { HRPlatform }() {
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="w-8 h-8 text-white" />
+                  <benefit .icon className="w-8 h-8 text-white"  />
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">{benefit.title}</h3>
@@ -455,7 +435,7 @@ export { HRPlatform }() {
                   <h4 className="text-zion-cyan font-semibold mb-3">Examples:</h4>
                   {benefit.examples.map((example, exampleIndex) => (
                     <div key={exampleIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0"  />
                       <span className="text-zion-slate-light text-sm">{example}</span>
                     </div>
                   ))}
@@ -536,7 +516,7 @@ export { HRPlatform }() {
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <technology.icon className="w-8 h-8 text-white" />
+                  <technology .icon className="w-8 h-8 text-white"  />
                 </div>
 
                 <h3 className="text-xl font-bold text-white mb-3">{technology.name}</h3>
@@ -629,7 +609,7 @@ export { HRPlatform }() {
 
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
-                    <step.icon className="w-8 h-8 text-white" />
+                    <step .icon className="w-8 h-8 text-white"  />
                   </div>
                   <div className="absolute -top-2 -right-2 w-8 h-8 bg-zion-blue rounded-full flex items-center justify-center text-white text-sm font-bold">
                     {step.step}
@@ -735,7 +715,7 @@ export { HRPlatform }() {
                 onClick={() => setSelectedSolution(solution)}
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
-                  <solution.icon className="w-8 h-8 text-white" />
+                  <solution .icon className="w-8 h-8 text-white"  />
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
@@ -744,7 +724,7 @@ export { HRPlatform }() {
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0"  />
                       <span className="text-zion-slate-light text-sm">{feature}</span>
                     </div>
                   ))}
@@ -772,7 +752,7 @@ export { HRPlatform }() {
                   </span>
                   <button className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors duration-300">
                     <span className="text-sm font-medium">Learn More</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4"  />
                   </button>
                 </div>
               </motion.div>
@@ -877,7 +857,7 @@ export { HRPlatform }() {
 
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current"  />
                   ))}
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
@@ -939,3 +919,17 @@ export { HRPlatform }() {
       </section>
     </div>
   )}
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

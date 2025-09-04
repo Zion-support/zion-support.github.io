@@ -1,7 +1,8 @@
-import { CategoriesSection } from "@/components/CategoriesSection";
-import { GradientHeading } from "@/components/GradientHeading";
+import React from 'react';
+import {CategoriesSection} from "@/components/CategoriesSection";
+import {GradientHeading} from "@/components/GradientHeading";
 export default function Categories
-export { Categories }() {
+export {Categories}() {
     return (<>
       
       <div className="min-h-screen bg-zion-blue">
@@ -17,7 +18,7 @@ export { Categories }() {
           </div>
           
           {/* Reuse the Categories Section component */}
-          <CategoriesSection showTitle={false}/>
+          <CategoriesSection showTitle={false} />
         </div>
       </div>
       

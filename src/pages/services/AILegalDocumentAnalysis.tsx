@@ -24,7 +24,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const AILegalDocumentAnalysis: React.FC = () => {
+const AILegalDocumentAnalysis: React.FC = (props: any) => {
   const features = [
     {
       icon: FileSearch,
@@ -289,3 +289,11 @@ const AILegalDocumentAnalysis: React.FC = () => {
 };
 
 export default AILegalDocumentAnalysis;
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

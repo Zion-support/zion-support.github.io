@@ -1,33 +1,154 @@
 
 // Performance optimizations
 const nextConfig = {
+<<<<<<< HEAD
+  reactStrictMode: true,
+=======
+<<<<<<< HEAD
   reactStrictMode: false,
+=======
+  reactStrictMode: true,
+  swcMinify: true,
+>>>>>>> origin/main
+>>>>>>> origin/pr-11573
   compress: true,
   poweredByHeader: false,
+<<<<<<< HEAD
+  
+  // Enable proper error checking
   eslint: { 
-    ignoreDuringBuilds: true,
-    dirs: ['pages', 'components', 'lib', 'hooks']
+    ignoreDuringBuilds: false,
+    dirs: ['pages', 'src/components', 'src/lib', 'src/hooks']
+=======
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  // Only treat *.route.tsx/ts as pages to avoid compiling corrupted files
+  // Compile only whitelisted page files to avoid corrupted files
+  pageExtensions: ['route.tsx', 'route.ts'],
+  images: {
+    domains: ["localhost", "ziontechgroup.com"],
+>>>>>>> origin/merge-pr-10614
   },
   typescript: { 
     ignoreBuildErrors: true 
   },
+  
   trailingSlash: true,
   output: 'export',
   generateBuildId: async () => 'build-' + Date.now(),
+<<<<<<< HEAD
+
+  // Include all page types
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  
+  // Image optimization
+=======
+<<<<<<< HEAD
+  // Ensure standard Next.js page extensions are recognized alongside any custom route files
+  pageExtensions: ['page.tsx', 'page.jsx'],
+=======
   // Temporarily exclude default pages to allow build while we quarantine corrupted pages
   pageExtensions: ['page.tsx'],
+>>>>>>> origin/main
+>>>>>>> origin/pr-11573
   images: {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 31536000, // 1 year
   },
+  
+  // Performance optimizations
   experimental: {
     optimizeCss: true,
+    scrollRestoration: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-accordion'],
+  },
+  
+  // Webpack optimizations
+  webpack: (config, { dev, isServer }) => {
+    // Production optimizations
+    if (!dev && !isServer) {
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+          },
+          common: {
+            name: 'common',
+            minChunks: 2,
+            chunks: 'all',
+            enforce: true,
+          },
+        },
+      };
+    }
+    
+    return config;
+  },
+  
+  // Security headers
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'X-XSS-Protection', value: '1; mode=block' },
+          { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+          { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' }
+        ]
+      }
+    ];
+  },
+  
+  // Redirects for SEO
+  async redirects() {
+    return [
+      {
+        source: '/home',
+        destination: '/',
+        permanent: true,
+      },
+    ];
+  },
+<<<<<<< HEAD
+=======
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+        ],
+      },
+    ];
+  },
+  experimental: {
     scrollRestoration: true
   },
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production'
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
   },
   async headers() {
     return [
@@ -42,6 +163,7 @@ const nextConfig = {
       }
     ];
   }
+>>>>>>> origin/merge-pr-10614
 };
 
 export default nextConfig;

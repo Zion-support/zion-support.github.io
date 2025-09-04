@@ -19,7 +19,7 @@ interface AccessibilityContextType {
 
 const AccessibilityContext = createContext<AccessibilityContextType | null>(null);
 
-export const useAccessibility = () => {
+export const useAccessibility = (props: any) => {
   const context = useContext(AccessibilityContext);
   if (!context) {
     throw new Error('useAccessibility must be used within an AccessibilityProvider');
@@ -28,15 +28,17 @@ export const useAccessibility = () => {
 };
 
 interface AccessibilityProviderProps {
+
   children: ReactNod e;
+
 }
 
 export const AccessibilityProvider: Reac t.FC<AccessibilityProviderProps> = ({ children }) => {
-  const [highContrast, setHighContrast] = useState(false);
-  const [reducedMotion, setReducedMotion] = useState(false);
-  const [fontSize, setFontSize] = useState(16);
-  const [showSkipLinks, setShowSkipLinks] = useState(false);
-  const [voiceNavigation, setVoiceNavigation] = useState(false);
+  const [highContrast, setHighContrast] = useState<any>(false);
+  const [reducedMotion, setReducedMotion] = useState<any>(false);
+  const [fontSize, setFontSize] = useState<any>(16);
+  const [showSkipLinks, setShowSkipLinks] = useState<any>(false);
+  const [voiceNavigation, setVoiceNavigation] = useState<any>(false);
 
   // Load accessibility preferences from localStorage
   useEffect(() => {
@@ -75,7 +77,7 @@ export const AccessibilityProvider: Reac t.FC<AccessibilityProviderProps> = ({ c
 
   // Keyboard navigation support
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEven t) => {
+    const handleKeyDown = (props: any) => {
       // Show skip links on Tab press
       if (event.key === 'Tab') {
         setShowSkipLinks(true);
@@ -103,36 +105,36 @@ export const AccessibilityProvider: Reac t.FC<AccessibilityProviderProps> = ({ c
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  const toggleHighContrast = () => {
+  const toggleHighContrast = (props: any) => {
     const newValue = !highContrast;
     setHighContrast(newValue);
     localStorage.setItem('zion-high-contrast', newValue.toString());
   };
 
-  const toggleReducedMotion = () => {
+  const toggleReducedMotion = (props: any) => {
     const newValue = !reducedMotion;
     setReducedMotion(newValue);
     localStorage.setItem('zion-reduced-motion', newValue.toString());
   };
 
-  const increaseFontSize = () => {
+  const increaseFontSize = (props: any) => {
     const newSize = Math.min(fontSize + 2, 24);
     setFontSize(newSize);
     localStorage.setItem('zion-font-size', newSize.toString());
   };
 
-  const decreaseFontSize = () => {
+  const decreaseFontSize = (props: any) => {
     const newSize = Math.max(fontSize - 2, 12);
     setFontSize(newSize);
     localStorage.setItem('zion-font-size', newSize.toString());
   };
 
-  const resetFontSize = () => {
+  const resetFontSize = (props: any) => {
     setFontSize(16);
     localStorage.setItem('zion-font-size', '16');
   };
 
-  const toggleVoiceNavigation = () => {
+  const toggleVoiceNavigation = (props: any) => {
     const newValue = !voiceNavigation;
     setVoiceNavigation(newValue);
     localStorage.setItem('zion-voice-navigation', newValue.toString());
@@ -260,7 +262,7 @@ export const FocusTrap: Reac t.FC<{ children: ReactNod e; isActive?: boolean }> 
   useEffect(() => {
     if (!isActive) return;
 
-    const handleKeyDown = (event: KeyboardEven t) => {
+    const handleKeyDown = (props: any) => {
       if (event.key !== 'Tab') return;
 
       const focusableElements = document.querySelectorAll(
@@ -285,3 +287,14 @@ export const FocusTrap: Reac t.FC<{ children: ReactNod e; isActive?: boolean }> 
 
   return <>{children}</>;
 };
+
+</motion>
+</motion>
+</AccessibilityContext>
+</any>
+</any>
+</any>
+</any>
+</any>
+</AccessibilityProviderProps>
+</AccessibilityContextType>

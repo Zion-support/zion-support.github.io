@@ -2,7 +2,7 @@ export const api = {
 export default api;
 import { API_BASE_URL } from '../config / constants';
 
-export default function Page() {
+export default function Page(props: any) {
 : any): Promise < ApiResponse < T>> {
   
   const config: RequestIni t = {

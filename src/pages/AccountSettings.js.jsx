@@ -1,16 +1,17 @@
-import { useState, useEffect } from 'react';
-import { SEO } from '@/components/SEO';
-import { useAuth } from '@/hooks/useAuth';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Wallet, Database, Save } from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
-import { Switch } from '@/components/ui/switch';
-import { Label } from '@/components/ui/label';
-import { toast } from 'sonner';
+import React from 'react';
+import {useState, useEffect} from 'react';
+import {SEO} from '@/components/SEO';
+import {useAuth} from '@/hooks/useAuth';
+import {Button} from '@/components/ui/button';
+import {Input} from '@/components/ui/input';
+import {Wallet, Database, Save} from "lucide-react";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
+import {Separator} from '@/components/ui/separator';
+import {Switch} from '@/components/ui/switch';
+import {Label} from '@/components/ui/label';
+import {toast} from 'sonner';
 export default function AccountSettings
-export { AccountSettings }() {
+export {AccountSettings}() {
     const { user } = useAuth();
     const [displayWeb3, setDisplayWeb3] = useState(false);
     const [didHandle, setDidHandle] = useState('');
@@ -25,22 +26,19 @@ export { AccountSettings }() {
                 setDidHandle(parsed.didHandle || '');
                 setEnableBackup(!!parsed.enableBackup)}
         }
-        catch (e) {
-            console.error('Error loading account settings', e)}
+        catch (e) {console.error('Error loading account settings', e)}
     }, []);
-    const handleSave = () => {
+    const handleSave = (props: any) => {
         setIsSubmitting(true);
         // Simulate API call
         setTimeout(() => {
             try {
                 localStorage.setItem('account_settings', JSON.stringify({ displayWeb3, didHandle, enableBackup }));
-                console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
+                console.log('Saved settings', {displayWeb3, didHandle, enableBackup});
                 toast.success('Account settings updated successfully')}
-            catch (e) {
-                console.error('Failed to save settings', e);
+            catch (e) {console.error('Failed to save settings', e);
                 toast.error('Failed to save settings')}
-            finally {
-                setIsSubmitting(false)}
+            finally {setIsSubmitting(false)}
         }, 1000)};
     const handleConnectWallet = async () => {
         try {
@@ -53,10 +51,8 @@ export { AccountSettings }() {
             const address = accounts[0];
             // Sign message to verify ownership
             const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
-            await ethereum.request({
-                method: 'personal_sign',
-                params[address, message];
-            });
+            await ethereum.request({method: 'personal_sign',
+                params[address, message];});
             // Auto-set DID handle if ENS is available
             try {
                 const provider = new window.ethers.providers.Web3Provider(ethereum);
@@ -64,14 +60,12 @@ export { AccountSettings }() {
                 if (ensName) {
                     setDidHandle(ensName)}
             }
-            catch (error) {
-                console.error('ENS lookup error:', error)}
+            catch (error) {console.error('ENS lookup error:', error)}
             toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`)}
-        catch (error) {
-            toast.error(error.message || 'Failed to connect wallet')}
+        catch (error) {toast.error(error.message || 'Failed to connect wallet')}
     };
     return (<>
-      <SEO title="Account Settings" description="Manage your account"/>
+      <SEO title="Account Settings" description="Manage your account" />
       
       <main className="container mx-auto py-8 px-4">
         <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>
@@ -85,7 +79,7 @@ export { AccountSettings }() {
             <CardContent className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="email">Email Address</Label>
-                <Input id="email" value={user?.email || ''} disabled className="bg-gray-100"/>
+                <Input id="email" value={user?.email || ''} disabled className="bg-gray-100"  />
               </div>
               
               <div className="space-y-2">
@@ -144,3 +138,6 @@ export { AccountSettings }() {
       </main>
       
     </>)}
+
+</Wallet>
+</Button>

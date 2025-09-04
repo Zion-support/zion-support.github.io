@@ -27,7 +27,7 @@ import {
   Code
 } from 'lucide-react';
 
-export function AISolutions() {
+export function AISolutions(props: any) {
   const aiServices = [
     {
       title: 'AI-Powered Analytics',
@@ -246,3 +246,7 @@ export function AISolutions() {
 }
 
 export default AISolutions;
+</motion>
+</motion>
+</motion>
+</motion>

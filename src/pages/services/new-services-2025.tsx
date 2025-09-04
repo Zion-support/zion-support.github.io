@@ -94,7 +94,7 @@ const offerings: Offering[] = [
   }
 ];
 
-export default function NewServices2025() {
+export default function NewServices2025(props: any) {
   const categories: Offering['category'][] = ['Micro SaaS', 'IT Services', 'AI Services'];
   return (
     <div className="min-h-screen bg-white">

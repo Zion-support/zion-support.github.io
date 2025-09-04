@@ -256,7 +256,7 @@ export { Blockchain }(...args[]):  {
               transition={{ duration: 0.8 }}
 
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-sm font-medium mb-6">
-                <Link className="w-4 h-4 mr-2"  />
+                <Link className="w-4 h-4 mr-2"   />
                 Blockchain Innovation
               </div>
               <h1 className="text-5xl md: tex t-6xl font-bold text-white mb-6">
@@ -719,3 +719,18 @@ export { Blockchain }(...args[]):  {
     </div>;
   );
 }
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</section>
+</motion>

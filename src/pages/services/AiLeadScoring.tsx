@@ -85,3 +85,4 @@ const AiLeadScoring: Reac t.FC = (): JSX.Element => {
 export default AiLeadScoring;
 
 }
+</SEO>

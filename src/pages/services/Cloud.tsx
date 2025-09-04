@@ -1,7 +1,7 @@
 import React from 'react';
 import { Cloud, Server, Shield, Zap, Database, Globe, Cpu, BarChart3  } from 'lucide-react';
 
-const CloudServices = () => {
+const CloudServices = (props: any) => {
   const cloudServices = [
     {
       title: "Cloud Migration & Strategy",

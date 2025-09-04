@@ -37,3 +37,9 @@ threshold = 0.1} = options; const metricsRef: useRe f<PerformanceMetrics>({; loa
    : src/hooks/usePerformanceOptimization.tsx threshold?: number}  export threshold?: number} export const { enableLazyLoading = true, enableIntersectionObserver = true, enableMemoryManagement = true, enableFPSMonitoring = true, : src/hooks/usePerformanceOptimization.tsx threshold = 0.1} = options  threshold = 0.1} = options const metricsRef: useRe f<PerformanceMetrics></PerformanceMetrics>({ loadTime: 0, renderTime: 0, memoryUsage: 0, fps: 0})
 "
 }
+</PerformanceMetrics>
+</PerformanceMetrics>
+</PerformanceMetrics>
+</PerformanceMetrics>
+</PerformanceMetrics>
+</PerformanceMetrics>

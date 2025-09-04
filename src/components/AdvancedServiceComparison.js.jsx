@@ -1,13 +1,13 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { Check, X, Star, TrendingUp, Zap, Shield, Clock, DollarSign, BarChart3, Target, Users, Globe, Mail, Phone } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from "ui/card.tsx";
-import { Button } from "ui/button.tsx";
-import { Badge } from "ui/badge.tsx";
-import { Input } from "ui/input.tsx";
+import React, {useState, useMemo} from 'react';
+import {motion} from 'framer-motion';
+import {Check, X, Star, TrendingUp, Zap, Shield, Clock, DollarSign, BarChart3, Target, Users, Globe, Mail, Phone} from 'lucide-react';
+import {Card, CardContent, CardHeader, CardTitle} from "ui/card.tsx";
+import {Button} from "ui/button.tsx";
+import {Badge} from "ui/badge.tsx";
+import {Input} from "ui/input.tsx";
 const COMPLEXITY_LEVELS = ['Basic', 'Intermediate', 'Advanced', 'Enterprise'];
 const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+'];
-export const AdvancedServiceComparison = () => {
+export const AdvancedServiceComparison = (props: any) => {
     const [selectedServices, setSelectedServices] = useState([]);
     const [filters, setFilters] = useState({
         category: 'all',
@@ -19,8 +19,7 @@ export const AdvancedServiceComparison = () => {
     const [viewMode, setViewMode] = useState('grid');
     // Mock data - in real app this would come from props or API
     const mockServices = [
-        {
-            id: 'ai-crm-basic',
+        {id: 'ai-crm-basic',
             name: 'AI CRM Basic',
             category: 'ai',
             price: '$5,000/month',
@@ -34,10 +33,8 @@ export const AdvancedServiceComparison = () => {
             popularity: 'Medium',
             contactInfo: '+1 302 464 0950',
             email: 'kleber@ziontechgroup.com',
-            link: 'https://ziontechgroup.com/services/ai-crm-basic'
-        },
-        {
-            id: 'ai-crm-enterprise',
+            link: 'https://ziontechgroup.com/services/ai-crm-basic'},
+        {id: 'ai-crm-enterprise',
             name: 'AI CRM Enterprise',
             category: 'ai',
             price: '$25,000/month',
@@ -51,10 +48,8 @@ export const AdvancedServiceComparison = () => {
             popularity: 'High',
             contactInfo: '+1 302 464 0950',
             email: 'kleber@ziontechgroup.com',
-            link: 'https://ziontechgroup.com/services/ai-crm-enterprise'
-        },
-        {
-            id: 'quantum-basic',
+            link: 'https://ziontechgroup.com/services/ai-crm-enterprise'},
+        {id: 'quantum-basic',
             name: 'Quantum Computing Basic',
             category: 'quantum',
             price: '$50,000/month',
@@ -68,10 +63,8 @@ export const AdvancedServiceComparison = () => {
             popularity: 'Medium',
             contactInfo: '+1 302 464 0950',
             email: 'kleber@ziontechgroup.com',
-            link: 'https://ziontechgroup.com/services/quantum-basic'
-        },
-        {
-            id: 'quantum-enterprise',
+            link: 'https://ziontechgroup.com/services/quantum-basic'},
+        {id: 'quantum-enterprise',
             name: 'Quantum Computing Enterprise',
             category: 'quantum',
             price: '$200,000/month',
@@ -85,18 +78,16 @@ export const AdvancedServiceComparison = () => {
             popularity: 'Trending',
             contactInfo: '+1 302 464 0950',
             email: 'kleber@ziontechgroup.com',
-            link: 'https://ziontechgroup.com/services/quantum-enterprise'
-        }
+            link: 'https://ziontechgroup.com/services/quantum-enterprise'}
     ];
     const filteredServices = useMemo(() => {
         return mockServices.filter(service => {
             const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase());
             return matchesCategory && matchesComplexity && matchesTechnology && matchesSearch})}, [filters, searchTerm]);
-    const toggleServiceSelection = (serviceId) => {
-        setSelectedServices(prev => prev.includes(serviceId)
+    const toggleServiceSelection = (props: any) => {setSelectedServices(prev => prev.includes(serviceId)
             ? prev.filter(id => id !== serviceId)
             [...prev, serviceId])};
-    const getComplexityColor = (complexity) => {
+    const getComplexityColor = (props: any) => {
         switch (complexity) {
             case 'Basic': return 'bg-green-100 text-green-800';
             case 'Intermediate': return 'bg-blue-100 text-blue-800';
@@ -104,13 +95,13 @@ export const AdvancedServiceComparison = () => {
             case 'Enterprise': return 'bg-purple-100 text-purple-800';
             default: return 'bg-gray-100 text-gray-800'}
     };
-    const getPopularityIcon = (popularity) => {
+    const getPopularityIcon = (props: any) => {
         switch (popularity) {
-            case 'Trending': return <TrendingUp className="w-4 h-4 text-red-500"/>;
-            case 'High': return <Star className="w-4 h-4 text-yellow-500"/>;
-            case 'Medium': return <Zap className="w-4 h-4 text-blue-500"/>;
-            case 'Low': return <Target className="w-4 h-4 text-gray-500"/>;
-            default: return <Users className="w-4 h-4 text-gray-500"/>}
+            case 'Trending': return <TrendingUp className="w-4 h-4 text-red-500" />;
+            case 'High': return <Star className="w-4 h-4 text-yellow-500" />;
+            case 'Medium': return <Zap className="w-4 h-4 text-blue-500" />;
+            case 'Low': return <Target className="w-4 h-4 text-gray-500" />;
+            default: return <Users className="w-4 h-4 text-gray-500" />}
     };
     return (<div className="max-w-7xl mx-auto p-6">
       {/* Header */}
@@ -144,7 +135,7 @@ export const AdvancedServiceComparison = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Category</label>
-            <select value={filters.category} onChange = {
+            <select value={filters.category} onChange={
   (e) => setFilters(prev => ({ ...prev,
   category: e.target.value 
 
@@ -159,7 +150,7 @@ export const AdvancedServiceComparison = () => {
           
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Complexity</label>
-            <select value={filters.complexity} onChange = {
+            <select value={filters.complexity} onChange={
   (e) => setFilters(prev => ({ ...prev,
   complexity: e.target.value 
 
@@ -171,7 +162,7 @@ export const AdvancedServiceComparison = () => {
 
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Price Range</label>
-            <select value={filters.priceRange} onChange = {
+            <select value={filters.priceRange} onChange={
   (e) => setFilters(prev => ({ ...prev,
   priceRange: e.target.value 
 
@@ -183,7 +174,7 @@ export const AdvancedServiceComparison = () => {
 
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Technology</label>
-            <select value={filters.technology} onChange = {
+            <select value={filters.technology} onChange={
   (e) => setFilters(prev => ({ ...prev,
   technology: e.target.value 
 
@@ -200,13 +191,13 @@ export const AdvancedServiceComparison = () => {
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">View Mode</label>
             <div className="flex gap-2">
               <Button variant={viewMode === 'grid' ? 'default' : 'outline'} size="sm" onClick={() => setViewMode('grid')}>
-                <BarChart3 className="w-4 h-4"/>
+                <BarChart3 className="w-4 h-4" />
               </Button>
               <Button variant={viewMode === 'table' ? 'default' : 'outline'} size="sm" onClick={() => setViewMode('table')}>
-                <Target className="w-4 h-4"/>
+                <Target className="w-4 h-4" />
               </Button>
               <Button variant={viewMode === 'detailed' ? 'default' : 'outline'} size="sm" onClick={() => setViewMode('detailed')}>
-                <Globe className="w-4 h-4"/>
+                <Globe className="w-4 h-4" />
               </Button>
             </div>
           </div>
@@ -243,7 +234,7 @@ export const AdvancedServiceComparison = () => {
                     {service.name}
                   </CardTitle>
                   <Button variant="ghost" size="sm" onClick={() => toggleServiceSelection(service.id)} className={selectedServices.includes(service.id) ? 'text-zion-cyan' : 'text-zion-slate-light'}>
-                    {selectedServices.includes(service.id) ? <Check className="w-4 h-4"/> : <X className="w-4 h-4"/>}
+                    {selectedServices.includes(service.id) ? <Check className="w-4 h-4" /> : <X className="w-4 h-4" />}
                   </Button>
                 </div>
                 
@@ -259,15 +250,15 @@ export const AdvancedServiceComparison = () => {
 
                 <div className="flex items-center gap-4 text-sm text-zion-slate-light">
                   <div className="flex items-center gap-1">
-                    <DollarSign className="w-4 h-4"/>
+                    <DollarSign className="w-4 h-4" />
                     {service.price}
                   </div>
                   <div className="flex items-center gap-1">
-                    <Clock className="w-4 h-4"/>
+                    <Clock className="w-4 h-4" />
                     {service.duration}
                   </div>
                   <div className="flex items-center gap-1">
-                    <Star className="w-4 h-4 text-yellow-500"/>
+                    <Star className="w-4 h-4 text-yellow-500" />
                     {service.rating}
                   </div>
                 </div>
@@ -277,12 +268,12 @@ export const AdvancedServiceComparison = () => {
                 <div className="space-y-4">
                   <div>
                     <h4 className="font-semibold text-zion-slate-dark mb-2 flex items-center gap-2">
-                      <Shield className="w-4 h-4 text-zion-cyan"/>
+                      <Shield className="w-4 h-4 text-zion-cyan" />
                       Key Features
                     </h4>
                     <ul className="space-y-1">
                       {service.features.slice(0, 3).map((feature, idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-center gap-2">
-                          <Check className="w-3 h-3 text-green-500"/>
+                          <Check className="w-3 h-3 text-green-500" />
                           {feature}
                         </li>))}
                     </ul>
@@ -290,7 +281,7 @@ export const AdvancedServiceComparison = () => {
 
                   <div>
                     <h4 className="font-semibold text-zion-slate-dark mb-2 flex items-center gap-2">
-                      <Target className="w-4 h-4 text-zion-purple"/>
+                      <Target className="w-4 h-4 text-zion-purple" />
                       Target Audience
                     </h4>
                     <div className="flex flex-wrap gap-1">
@@ -301,11 +292,8 @@ export const AdvancedServiceComparison = () => {
                   </div>
 
                   <div className="pt-2">
-                    <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark" onClick = {
-  () => window.open(service.link,
-  '_blank')
-
-}>
+                    <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark" onClick={() => window.open(service.link,
+  '_blank')}>
                       Learn More
                     </Button>
                   </div>
@@ -350,12 +338,9 @@ export const AdvancedServiceComparison = () => {
           </div>
           
           <div className="mt-6 text-center">
-            <Button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark" onClick = {
-  () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Comparison Inquiry',
-  '_blank')
-
-}>
-              <Mail className="w-4 h-4 mr-2"/>
+            <Button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark" onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Service Comparison Inquiry',
+  '_blank')}>
+              <Mail className="w-4 h-4 mr-2" />
               Get Detailed Comparison
             </Button>
           </div>
@@ -378,20 +363,14 @@ export const AdvancedServiceComparison = () => {
             Contact us today to discuss your specific needs and find the perfect solution.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {
-  () => window.open('mailto:kleber@ziontechgroup.com',
-  '_blank')
-
-}>
-              <Mail className="w-4 h-4 mr-2"/>
+            <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick={() => window.open('mailto:kleber@ziontechgroup.com',
+  '_blank')}>
+              <Mail className="w-4 h-4 mr-2" />
               Get Started
             </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {
-  () => window.open('tel:+13024640950',
-  '_blank')
-
-}>
-              <Phone className="w-4 h-4 mr-2"/>
+            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick={() => window.open('tel:+13024640950',
+  '_blank')}>
+              <Phone className="w-4 h-4 mr-2" />
               Call Now
             </Button>
           </div>
@@ -399,3 +378,10 @@ export const AdvancedServiceComparison = () => {
       </motion.div>
     </div>)};
 export default AdvancedServiceComparison;
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

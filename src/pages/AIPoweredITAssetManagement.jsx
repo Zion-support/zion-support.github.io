@@ -1,10 +1,10 @@
 import React from 'react';'''
-import { Link } from 'react-router-dom';'''
-import { motion } from 'framer-motion';'''
-import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive, Zap, Target, Rocket, CheckCircle, Star, Lightbulb, Cloud, Settings, Brain, Server, Printer, Clock, Globe, BarChart3 } from 'lucide-react';
+import {Link} from 'react-router-dom';'''
+import {motion} from 'framer-motion';'''
+import {Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive, Zap, Target, Rocket, CheckCircle, Star, Lightbulb, Cloud, Settings, Brain, Server, Printer, Clock, Globe, BarChart3} from 'lucide-react';
 import SEOHead from "../components/SEOHead.jsx";
 
-const AIPoweredITAssetManagement = () => {}
+const AIPoweredITAssetManagement = (props: any) => {}
   const features = []
     {}
 """
@@ -71,81 +71,70 @@ const AIPoweredITAssetManagement = () => {}
 """
   return (""""
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">"""
-      <SEOHead""""
+      <SEOHead """"
         title="AI-Powered IT Asset Management | Zion Tech Group""""
         description="Intelligent IT asset management powered by AI for comprehensive monitoring, security, and optimization of your infrastructure.""""
         keywords="AI asset management, IT infrastructure, predictive maintenance, security monitoring, asset discovery"""
-      />
+       />
 """
       {/* Hero Section */}""""
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
             initial = {}
-  { opacity: 0,
-  y: 20;
-}}
+  {opacity: 0,
+  y: 20;}}
             animate = {}
-  { opacity: 1,
-  y: 0;
-}}"""
+  {opacity: 1,
+  y: 0;}}"""
             transition={{ duration: 0.6 }}""""
             className="flex justify-center mb-6""""
 """"
             <div className="p-3 bg-blue-600/20 rounded-full">""""
-              <Server className="h-12 w-12 text-blue-400"/>
+              <Server className="h-12 w-12 text-blue-400" />
             </div>
           </motion.div>
 
           <motion.h1;
             initial = {}
-  { opacity: 0,
-  y: 20;
-}}
+  {opacity: 0,
+  y: 20;}}
             animate = {}
-  { opacity: 1,
-  y: 0;
-}}
+  {opacity: 1,
+  y: 0;}}
             transition = {}
-  { duration: 0.6,
+  {duration: 0.6,
   delay: 0.1;
-"""
-}}""""
+"""}}""""
             className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"""
             AI - Powered IT Asset Management;
           </motion.h1>
 
           <motion.p;
             initial = {}
-  { opacity: 0,
-  y: 20;
-}}
+  {opacity: 0,
+  y: 20;}}
             animate = {}
-  { opacity: 1,
-  y: 0;
-}}
+  {opacity: 1,
+  y: 0;}}
             transition = {}
-  { duration: 0.6,
+  {duration: 0.6,
   delay: 0.2;
-"""
-}}""""
+"""}}""""
             className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"""
             Intelligent monitoring, security, and optimization of your entire IT infrastructure;
             with AI - driven insights and predictive maintenance.</motion.p>
 
           <motion.div;
             initial = {}
-  { opacity: 0,
-  y: 20;
-}}
+  {opacity: 0,
+  y: 20;}}
             animate = {}
-  { opacity: 1,
-  y: 0;
-}}
+  {opacity: 1,
+  y: 0;}}
             transition = {}
-  { duration: 0.6,
-  delay: 0.3;
-}}
+  {duration: 0.6,
+  delay: 0.3;}}
             className="flex flex - col sm:flex - row gap-4 justify -center"""
 """
 }}""""
@@ -170,13 +159,11 @@ const AIPoweredITAssetManagement = () => {}
         <div className="max-w-7xl mx-auto">
           <motion.h2;
             initial = {}
-  { opacity: 0,
-  y: 20;
-}}
+  {opacity: 0,
+  y: 20;}}
             whileInView = {}
-  { opacity: 1,
-  y: 0;
-}}
+  {opacity: 1,
+  y: 0;}}
             transition={{ duration: 0.6 }}"""
             viewport={{ once: true }}""""
             className="text-3xl font-bold text-center mb-12"""
@@ -188,23 +175,20 @@ const AIPoweredITAssetManagement = () => {}
               <motion.div;
                 key={index}
                 initial = {}
-  { opacity: 0,
-  y: 20;
-}}
+  {opacity: 0,
+  y: 20;}}
                 whileInView = {}
-  { opacity: 1,
-  y: 0;
-}}
+  {opacity: 1,
+  y: 0;}}
                 transition = {}
-  { duration: 0.6,
-  delay: index * 0.1;
-}}"""
+  {duration: 0.6,
+  delay: index * 0.1;}}"""
                 viewport={{ once: true }}""""
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300""""
 """"
                 <div className="flex items-center mb-4">""""
                   <div className="p-2 bg-blue-600/20 rounded-lg mr-4">""""
-                    <feature.icon className="h-6 w-6 text-blue-400"/>"""
+                    <feature .icon className="h-6 w-6 text-blue-400" />"""
                   </div>""""
                   <h3 className="text-xl font-semibold">{feature.title}</h3>"""
                 </div>""""
@@ -220,13 +204,11 @@ const AIPoweredITAssetManagement = () => {}
         <div className="max-w-7xl mx-auto">
           <motion.h2;
             initial = {}
-  { opacity: 0,
-  y: 20;
-}}
+  {opacity: 0,
+  y: 20;}}
             whileInView = {}
-  { opacity: 1,
-  y: 0;
-}}
+  {opacity: 1,
+  y: 0;}}
             transition={{ duration: 0.6 }}"""
             viewport={{ once: true }}""""
             className="text-3xl font-bold text-center mb-12"""
@@ -238,23 +220,20 @@ const AIPoweredITAssetManagement = () => {}
               <motion.div;
                 key={index}
                 initial = {}
-  { opacity: 0,
-  y: 20;
-}}
+  {opacity: 0,
+  y: 20;}}
                 whileInView = {}
-  { opacity: 1,
-  y: 0;
-}}
+  {opacity: 1,
+  y: 0;}}
                 transition = {}
-  { duration: 0.6,
-  delay: index * 0.1;
-}}"""
+  {duration: 0.6,
+  delay: index * 0.1;}}"""
                 viewport={{ once: true }}""""
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300""""
 """"
                 <div className="flex items-center mb-4">""""
                   <div className="p-2 bg-cyan-600/20 rounded-lg mr-4">""""
-                    <capability.icon className="h-6 w-6 text-cyan-400"/>"""
+                    <capability .icon className="h-6 w-6 text-cyan-400" />"""
                   </div>""""
                   <h3 className="text-xl font-semibold">{capability.title}</h3>"""
                 </div>""""
@@ -270,13 +249,11 @@ const AIPoweredITAssetManagement = () => {}
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial = {}
-  { opacity: 0,
-  y: 20;
-}}
+  {opacity: 0,
+  y: 20;}}
             whileInView = {}
-  { opacity: 1,
-  y: 0;
-}}
+  {opacity: 1,
+  y: 0;}}
             transition={{ duration: 0.6 }}"""
             viewport={{ once: true }}""""
             className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20""""
@@ -306,12 +283,23 @@ const AIPoweredITAssetManagement = () => {}
 export default AIPoweredITAssetManagement;
 }}}
 
-export { AIPoweredITAssetManagement };
+export {AIPoweredITAssetManagement};
 
-export { AIPoweredITAssetManagement };
+export {AIPoweredITAssetManagement};
 
-export { AIPoweredITAssetManagement };
+export {AIPoweredITAssetManagement};
 
-export { AIPoweredITAssetManagement };
+export {AIPoweredITAssetManagement};
 
-export { AIPoweredITAssetManagement };
+export {AIPoweredITAssetManagement};
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</SEOHead>

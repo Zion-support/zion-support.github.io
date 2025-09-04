@@ -1,17 +1,17 @@
 import React from 'react';'''
 import SEO from '@/components/SEO';'''
-import { DisputeDetail } from '@/components/disputes';'''
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-function DisputeDetailPage() {}
+import {DisputeDetail} from '@/components/disputes';'''
+import {ProtectedRoute} from '@/components/ProtectedRoute';
+function DisputeDetailPage(props: any) {}
     return (<ProtectedRoute>
       <>
-        <SEO title="Dispute Details | Zion AI Marketplace" description="View and manage dispute details"/>
+        <SEO title="Dispute Details | Zion AI Marketplace" description="View and manage dispute details" />
 
-        <DisputeDetail />
+        <DisputeDetail  />
 
       </>
     </ProtectedRoute>)};
-export { DisputeDetailPage };
+export {DisputeDetailPage};
 export default DisputeDetailPage;
 ;
 export default DisputeDetailPage;
@@ -21,12 +21,12 @@ export default DisputeDetailPage;
 export default DisputeDetailPage;
 export default DisputeDetailPage;
 
-export { DisputeDetailPage };
+export {DisputeDetailPage};
 
-export { DisputeDetailPage };
+export {DisputeDetailPage};
 
-export { DisputeDetailPage };
+export {DisputeDetailPage};
 
-export { DisputeDetailPage };
+export {DisputeDetailPage};
 
-export { DisputeDetailPage };
+export {DisputeDetailPage};

@@ -16,10 +16,10 @@ import {
   Users
 } from 'lucide-react'
 
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: fals e })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: fals e })
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
 
-const CybersecurityPage: Reac t.FC = () => {
+const CybersecurityPage: React.FC = () => {
   const services = [
     {
       id: 1,
@@ -140,9 +140,9 @@ const CybersecurityPage: Reac t.FC = () => {
         <main className="min-h-screen bg-white">
           {/* Hero Section */}
           <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <motion.div
-                initial={{ opacity: 0, y: 2 0 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center"
@@ -179,9 +179,9 @@ const CybersecurityPage: Reac t.FC = () => {
 
           {/* Services Grid */}
           <section id="services" className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <motion.div
-                initial={{ opacity: 0, y: 2 0 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-center mb-16"
@@ -194,14 +194,14 @@ const CybersecurityPage: Reac t.FC = () => {
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {services.map((service, index) => (
                   <motion.div
                     key={service.id}
-                    initial={{ opacity: 0, y: 2 0 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
-                    className="bg-white rounded-xl shadow-lg hover: shado w-xl transition-shadow duration-300 overflow-hidden"
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
                   >
                     <div className="p-8">
                       <div className="flex items-center justify-between mb-4">
@@ -255,9 +255,9 @@ const CybersecurityPage: Reac t.FC = () => {
 
           {/* Compliance Standards */}
           <section className="bg-gray-50 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <motion.div
-                initial={{ opacity: 0, y: 2 0 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center mb-16"
@@ -274,10 +274,10 @@ const CybersecurityPage: Reac t.FC = () => {
                 {complianceStandards.map((standard, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 2 0 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
-                    className="bg-white rounded-xl p-6 shadow-lg hover: shado w-xl transition-shadow duration-300 text-center"
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center"
                   >
                     <h3 className="text-lg font-bold text-gray-900 mb-2">
                       {standard.name}
@@ -293,9 +293,9 @@ const CybersecurityPage: Reac t.FC = () => {
 
           {/* CTA Section */}
           <section className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <motion.div
-                initial={{ opacity: 0, y: 2 0 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center"

@@ -10,3 +10,5 @@ export default function Footer.test() {return (
         </p>
       </div>
   );"}"
+
+</div>

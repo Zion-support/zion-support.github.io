@@ -23,9 +23,9 @@ import {
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-const CaseStudies = () => {
-  const [selectedIndustry, setSelectedIndustry] = useState('all');
-  const [selectedService, setSelectedService] = useState('all');
+const CaseStudies = (props: any) => {
+  const [selectedIndustry, setSelectedIndustry] = useState<any>('all');
+  const [selectedService, setSelectedService] = useState<any>('all');
 
   const caseStudies = [
     {
@@ -432,3 +432,13 @@ const CaseStudies = () => {
 };
 
 export default CaseStudies;
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</SEO>
+</any>
+</any>

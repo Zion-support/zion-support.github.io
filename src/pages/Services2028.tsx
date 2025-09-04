@@ -7,10 +7,10 @@ import { INNOVATIVE_MICRO_SAAS_SERVICES_2028  } from '../data/innovativeMicroSaa
 ;
 
 export default function Services2028(...args: unknow n[]): unknown {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-  const [sortBy, setSortBy] = useState('featured');
+  const [searchQuery, setSearchQuery] = useState<any>('');
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<any>('all');
+  const [sortBy, setSortBy] = useState<any>('featured');
   return ()    <div className="min-h-screen bg-cyber-black">"""
       {/* Futuristic Background */}""""
       <div className="futuristic-bg">
@@ -18,8 +18,8 @@ export default function Services2028(...args: unknow n[]): unknown {
           <div
             key={i}
             className="matrix-rain"
-            style={{
-              left: unknow n`${Math.random() * 100}%`,
+            style="{{{
+              left: unknow n`${Math.random() * 100}}"%`,
               animationDelay: `${Math.random() * 20}s`,
               animationDuration: `${15 + Math.random() * 10}s`
             }}          >
@@ -379,3 +379,13 @@ export { Services2028 };
 export { Services2028 };
 
 export { Services2028 };
+
+</motion>
+</motion>
+</motion>
+</SEO>
+</div>
+</any>
+</any>
+</any>
+</any>

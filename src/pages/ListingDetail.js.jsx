@@ -1,20 +1,20 @@
-import { useState } from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { ChatWidget } from "@/components/ChatWidget";
-import { useRouter } from "next/router";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import {useState} from "react";
+import {useAuth} from "@/hooks/useAuth";
+import {ChatWidget} from "@/components/ChatWidget";
+import {useRouter} from "next/router";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
 import ImageWithRetry from '@/components/ui/ImageWithRetry';
-import { Star, MessageSquare, Brain, Shield } from "lucide-react";
-import { cn } from "@/lib/utils";
+import {Star, MessageSquare, Brain, Shield} from "lucide-react";
+import {cn} from "@/lib/utils";
 import Link from 'next/link';
-import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
-import { toast } from "@/hooks/use-toast";
-import { PaymentButton } from "@/components/transactions/PaymentButton";
-import { ProfileContact } from "@/components/profile/ProfileContact";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import {MARKETPLACE_LISTINGS} from "@/data/marketplaceData";
+import {toast} from "@/hooks/use-toast";
+import {PaymentButton} from "@/components/transactions/PaymentButton";
+import {ProfileContact} from "@/components/profile/ProfileContact";
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 export default function ListingDetail
-export { ListingDetail }() {
+export {ListingDetail}() {
     // useParams may be untyped in this environment, so avoid passing a
     // type argument and cast the result instead to prevent TS2347 errors.
     const router = useRouter();
@@ -26,8 +26,7 @@ export { ListingDetail }() {
     const { user } = useAuth();
     // Find the listing from our shared data source - now also checking equipment listings
     const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
-    if (!listing) {
-        return (<div className="min-h-screen bg-zion-blue py-12 px-4">
+    if (!listing) {return (<div className="min-h-screen bg-zion-blue py-12 px-4">
           <div className="container mx-auto">
             <div className="text-center py-20">
               <h1 className="text-3xl font-bold text-white mb-4">Listing Not Found</h1>
@@ -38,11 +37,10 @@ export { ListingDetail }() {
             </div>
           </div>
         </div>)}
-    const handleContact = () => {
+    const handleContact = (props: any) => {
         if (user) {
             setIsChatOpen(true)}
-        else {
-            setIsContactDialogOpen(true)}
+        else {setIsContactDialogOpen(true)}
     };
     return (<div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
@@ -51,18 +49,15 @@ export { ListingDetail }() {
             <div className="lg:col-span-2">
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">
                 <div className="aspect-[16/9] w-full relative">
-                  {listing.images && listing.images.length > 0 ? (<ImageWithRetry src={listing.images[selectedImageIndex]} alt={listing.title} className="w-full h-full object-cover" fallbackSrc="/placeholder.svg"/>) : (<div className="w-full h-full flex items-center justify-center bg-zion-blue-light/20">
+                  {listing.images && listing.images.length > 0 ? (<ImageWithRetry src={listing.images[selectedImageIndex]} alt={listing.title} className="w-full h-full object-cover" fallbackSrc="/placeholder.svg" />) : (<div className="w-full h-full flex items-center justify-center bg-zion-blue-light/20">
                       <span className="text-zion-slate-light">No image available</span>
                     </div>)}
                 </div>
                 
                 {listing.images && listing.images.length > 1 && (<div className="flex p-4 gap-2 overflow-x-auto">
-                    {listing.images.map((image, index) => (<div key={index} onClick={() => setSelectedImageIndex(index)} className = {
-  cn("w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2",
-  index === selectedImageIndex ? "border-zion-purple" : "border-transparent")
-
-}>
-                        <ImageWithRetry src={image} alt={`${listing.title} - image ${index + 1}`} className="w-full h-full object-cover" fallbackSrc="/placeholder.svg"/>
+                    {listing.images.map((image, index) => (<div key={index} onClick={() => setSelectedImageIndex(index)} className = {cn("w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2",
+  index === selectedImageIndex ? "border-zion-purple" : "border-transparent")}>
+                        <ImageWithRetry src={image} alt={`${listing.title} - image ${index + 1}`} className="w-full h-full object-cover" fallbackSrc="/placeholder.svg" />
                       </div>))}
                   </div>)}
               </div>
@@ -78,7 +73,7 @@ export { ListingDetail }() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="flex items-start gap-3">
                       <div className="p-2 rounded-full bg-zion-purple/20">
-                        <Brain className="h-5 w-5 text-zion-purple"/>
+                        <Brain className="h-5 w-5 text-zion-purple" />
                       </div>
                       <div>
                         <h4 className="font-medium text-white">Advanced AI</h4>
@@ -87,7 +82,7 @@ export { ListingDetail }() {
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="p-2 rounded-full bg-zion-cyan/20">
-                        <Shield className="h-5 w-5 text-zion-cyan"/>
+                        <Shield className="h-5 w-5 text-zion-cyan" />
                       </div>
                       <div>
                         <h4 className="font-medium text-white">Enterprise Security</h4>
@@ -125,11 +120,8 @@ export { ListingDetail }() {
                 
                 {listing.rating && (<div className="flex items-center gap-2 mb-6">
                     <div className="flex items-center">
-                      {[...Array(5)].map((_, i) => (<Star key={i} className = {
-  cn("h-5 w-5",
-  i < Math.floor(listing.rating) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light")
-
-}/>))}
+                      {[...Array(5)].map((_, i) => (<Star key={i} className = {cn("h-5 w-5",
+  i < Math.floor(listing.rating) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light")} />))}
                     </div>
                     <span className="text-sm text-zion-slate-light">
                       {listing.rating.toFixed(1)} ({listing.reviewCount} reviews)
@@ -159,7 +151,7 @@ export { ListingDetail }() {
                     </Button>)}
                   
                   <Button variant="outline" onClick={handleContact} disabled={isLoading} className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
-                    <MessageSquare className="h-4 w-4 mr-2"/>
+                    <MessageSquare className="h-4 w-4 mr-2" />
                     Contact Publisher
                   </Button>
                 </div>
@@ -198,14 +190,19 @@ export { ListingDetail }() {
       </div>
         ,
             <ChatWidget roomId={listing.id} recipientId={listing.author.id} isOpen={isChatOpen} onClose={() => setIsChatOpen(false)}/>) /* Contact Dialog */;
-    { /* Contact Dialog */ }
+    {/* Contact Dialog */}
     <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
         <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
           </DialogHeader>
           <ProfileContact email={listing.author.email} // TypeScript now knows this might be null
-     profileName={listing.author.name} profileType="service"/>
+     profileName={listing.author.name} profileType="service" />
         </DialogContent>
       </Dialog>;
     }
+
+</ProfileContact>
+</ChatWidget>
+</PaymentButton>
+</Star>

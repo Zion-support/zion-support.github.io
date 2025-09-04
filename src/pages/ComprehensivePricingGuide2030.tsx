@@ -70,14 +70,14 @@ import {
 import { REVOLUTIONARY_SERVICES_2030, serviceCategories2030, pricingBenefits2030 } from '../data/revolutionaryServices2030';
 import { SEO } from '../components/SEO';
 
-export default function ComprehensivePricingGuide2030() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-  const [selectedROI, setSelectedROI] = useState('all');
-  const [sortBy, setSortBy] = useState('featured');
-  const [viewMode, setViewMode] = useState('grid');
+export default function ComprehensivePricingGuide2030(props: any) {
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<any>('all');
+  const [selectedROI, setSelectedROI] = useState<any>('all');
+  const [sortBy, setSortBy] = useState<any>('featured');
+  const [viewMode, setViewMode] = useState<any>('grid');
   const [selectedService, setSelectedService] = useState<any>(null);
-  const [showROICalculator, setShowROICalculator] = useState(false);
+  const [showROICalculator, setShowROICalculator] = useState<any>(false);
 
   const filteredServices = REVOLUTIONARY_SERVICES_2030.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
@@ -110,7 +110,7 @@ export default function ComprehensivePricingGuide2030() {
     }
   });
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (props: any) => {
     switch (category) {
       case 'Quantum Computing': return <Atom className="w-6 h-6" />;
       case 'Neural Technology': return <Brain className="w-6 h-6" />;
@@ -122,7 +122,7 @@ export default function ComprehensivePricingGuide2030() {
     }
   };
 
-  const getInnovationLevelColor = (level: string) => {
+  const getInnovationLevelColor = (props: any) => {
     switch (level) {
       case 'Revolutionary': return 'from-purple-600 to-pink-600';
       case 'Advanced': return 'from-blue-600 to-cyan-600';
@@ -407,11 +407,10 @@ export default function ComprehensivePricingGuide2030() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
                       <label className="block text-gray-300 mb-2">Current Monthly Revenue</label>
-                      <input
-                        type="number"
+                      <input type="number"
                         placeholder="Enter your current monthly revenue"
                         className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
-                      />
+                       />
                     </div>
                     <div>
                       <label className="block text-gray-300 mb-2">Service Investment (Monthly)</label>
@@ -763,3 +762,15 @@ const X = ({ className }: { className?: string }) => (
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
   </svg>
 );
+</motion>
+</motion>
+</motion>
+</motion>
+</SEO>
+</any>
+</any>
+</any>
+</any>
+</any>
+</any>
+</any>

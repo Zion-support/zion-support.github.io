@@ -3,16 +3,13 @@ import React from 'react',;';';
 import { Loader2';';';';
   } from 'lucide-react',';';
     ';';';
-interface LoadingProps {';';';';
+interface LoadingProps {
+  ';';';';: any;
   size?: 'sm' | 'md' | 'lg';';
   text?: string;';';
-  fullScreen?: boolean}';';';
-export default function Loading({',';';
-    ';';';
-  size = 'md',',';';
-    ';';';
-  text = 'Loading...',';';
-  fullScreen = false}: LoadingProps) {';';';
+  fullScreen?: boolean
+}';';';
+export default function Loading(props: any) {';';';
   const sizeClasses = {',';';
     ';';';
     sm: 'w-4 h-4',',';';
@@ -48,7 +45,7 @@ export default function Loading({',';';
   );
 }
 // Skeleton loading components
-export function SkeletonCard() {
+export function SkeletonCard(props: any) {
   return (
     <div className="min-h-screen bg-white">
       <div className="h-4 bg-gray-200 rounded w-3/4 mb-4"></di></div>
@@ -57,8 +54,7 @@ export function SkeletonCard() {
     </div>
   );
 }
-export function SkeletonText({ lines = 3 }: { lines?: number
-  }) {
+export function SkeletonText(props: any) {
   return (
     <div className="min-h-screen bg-white">
       {Array.from({ length: line s';

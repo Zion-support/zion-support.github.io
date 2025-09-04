@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, {useState, useEffect} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
 ,
-    {
-
-        id: '2',
+    {id: '2',
         name: 'Marcus Rodriguez',
         role: 'Head of Engineering',
         comp: 'InnovateCorp',
@@ -13,11 +11,8 @@ import { motion, AnimatePresence  } from 'framer-motion';
         category: 'Talent Matching',
         date: '1 month ago',
         likes: 89,
-        verified: true
-    },
-    {
-
-        id: '3',
+        verified: true},
+    {id: '3',
         name: 'Dr.Emily Watson',
         role: 'Research Director',
         comp: 'Quantum Labs',
@@ -27,11 +22,8 @@ import { motion, AnimatePresence  } from 'framer-motion';
         category: 'Research & Development',
         date: '3 weeks ago',
         likes: 156,
-        verified: true
-    },
-    {
-
-        id: '4',
+        verified: true},
+    {id: '4',
         name: 'Alex Thompson',
         role: 'Product Manager',
         comp: 'StartupXYZ',
@@ -41,8 +33,7 @@ import { motion, AnimatePresence  } from 'framer-motion';
         category: 'Startup Solutions',
         date: '1 week ago',
         likes: 73,
-        verified: true
-    },
+        verified: true},
     {
 
         id: '5',
@@ -59,7 +50,7 @@ import { motion, AnimatePresence  } from 'framer-motion';
 
 ];
 const categories = ['All',AI Infrastructure',Talent Matching',Research & Development',Startup Solutions',Global Operations'];
-export function InteractiveTestimonials() {
+export function InteractiveTestimonials(props: any) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -75,14 +66,11 @@ export function InteractiveTestimonials() {
   };
 }, []);, []);
         if(!isAutoPlaying) return;
-        const interval = setInterval(() => {
-            setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length) }, 5000) ;
+        const interval = setInterval(() => {setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length)}, 5000) ;
         return () => clearInterval(interval) }, [isAutoPlaying, filteredTestimonials.length]) ;
-    const nextTestimonial = () => {
-        setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length) };
-    const prevTestimonial = () => {
-        setCurrentIndex((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length) };
-    const toggleLike = (testimonialId) => {
+    const nextTestimonial = (props: any) => {setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length)};
+    const prevTestimonial = (props: any) => {setCurrentIndex((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length)};
+    const toggleLike = (props: any) => {
 
         setLikedTestimonials(prev => {
 
@@ -90,13 +78,11 @@ export function InteractiveTestimonials() {
             if(newSet.has(testimonialId)) {
 
                 newSet.delete(testimonialId)}
-            else {
-
-                newSet.add(testimonialId)}
+            else {newSet.add(testimonialId)}
             return newSet})};
-    const renderStars = (rating) => {
+    const renderStars = (props: any) => {
 
-        return Array.from({ length: 5 }, (_, i) => (<Star key={i} className={`w-5 h-5 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400'}`}/>))};
+        return Array.from({ length: 5 }, (_, i) => (<Star key={i} className={`w-5 h-5 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400'}`} />))};
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -135,3 +121,5 @@ export function InteractiveTestimonials() {
       </div>"
 
 export default Component
+
+</section>

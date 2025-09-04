@@ -15,11 +15,11 @@ import {
   Mail
 } from 'lucide-react';
 
-export default function NotFoundPage() {
-  const [searchQuery, setSearchQuery] = useState('');
+export default function NotFoundPage(props: any) {
+  const [searchQuery, setSearchQuery] = useState<any>('');
   const navigate = useNavigate();
 
-  const handleSearch = (e: Reac t.FormEvent) => {
+  const handleSearch = (props: any) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
@@ -115,7 +115,7 @@ export default function NotFoundPage() {
                 className="group p-6 bg-gray-50 rounded-xl hover: b g-white hover: shado w-lg transition-all duration-300 text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover: scal e-110 transition-transform">
-                  <link.icon className="w-8 h-8 text-white" />
+                  <link .icon className="w-8 h-8 text-white"  />
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">{link.name}</h4>
                 <p className="text-sm text-gray-600">{link.description}</p>
@@ -203,3 +203,5 @@ export default function NotFoundPage() {
     </div>
   );
 }
+
+</any>

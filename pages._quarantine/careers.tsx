@@ -1,147 +1,4 @@
-<<<<<<< HEAD
-import React from 'react'
-import dynamic from 'next/dynamic'
-import Head from 'next/head'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { 
-  Code, 
-  Brain, 
-  Shield, 
-  Users, 
-  ArrowRight, 
-  MapPin, 
-  Clock, 
-  DollarSign,
-  CheckCircle,
-  Star
-} from 'lucide-react'
 
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: fals e })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: fals e })
-
-const CareersPage: Reac t.FC = () => {
-  const jobOpenings = [
-    {
-      id: 1,
-      title: "Senior AI Engineer",
-      department: "AI & Machine Learning",
-      location: "Remote / Middletown, DE",
-      type: "Full-time",
-      salary: "$120,000 - $180,000",
-      experience: "5+ years",
-      description: "Lead the development of cutting-edge AI solutions and machine learning models.",
-      requirements: [
-        "Master's degree in Computer Science, AI, or related field",
-        "5+ years experience in machine learning and AI development",
-        "Proficiency in Python, TensorFlow, PyTorch",
-        "Experience with NLP, computer vision, or deep learning",
-        "Strong problem-solving and analytical skills"
-      ],
-      benefits: [
-        "Competitive salary and equity",
-        "Health, dental, and vision insurance",
-        "Flexible work arrangements",
-        "Professional development budget",
-        "401(k) with company matching"
-      ]
-    },
-    {
-      id: 2,
-      title: "Full Stack Developer",
-      department: "Micro SaaS Development",
-      location: "Remote / Middletown, DE",
-      type: "Full-time",
-      salary: "$90,000 - $140,000",
-      experience: "3+ years",
-      description: "Build scalable micro SaaS applications using modern web technologies.",
-      requirements: [
-        "Bachelor's degree in Computer Science or related field",
-        "3+ years experience in full-stack development",
-        "Proficiency in React, Node.js, TypeScript",
-        "Experience with cloud platforms (AWS, Azure, GCP)",
-        "Knowledge of database design and optimization"
-      ],
-      benefits: [
-        "Competitive salary and equity",
-        "Health, dental, and vision insurance",
-        "Flexible work arrangements",
-        "Professional development budget",
-        "401(k) with company matching"
-      ]
-    },
-    {
-      id: 3,
-      title: "DevOps Engineer",
-      department: "IT Infrastructure",
-      location: "Remote / Middletown, DE",
-      type: "Full-time",
-      salary: "$100,000 - $150,000",
-      experience: "4+ years",
-      description: "Manage cloud infrastructure and implement DevOps best practices.",
-      requirements: [
-        "Bachelor's degree in Computer Science or related field",
-        "4+ years experience in DevOps and cloud infrastructure",
-        "Proficiency in AWS, Azure, or GCP",
-        "Experience with Docker, Kubernetes, CI/CD",
-        "Knowledge of infrastructure as code (Terraform, CloudFormation)"
-      ],
-      benefits: [
-        "Competitive salary and equity",
-        "Health, dental, and vision insurance",
-        "Flexible work arrangements",
-        "Professional development budget",
-        "401(k) with company matching"
-      ]
-    },
-    {
-      id: 4,
-      title: "Cybersecurity Specialist",
-      department: "Security",
-      location: "Remote / Middletown, DE",
-      type: "Full-time",
-      salary: "$110,000 - $160,000",
-      experience: "4+ years",
-      description: "Protect our systems and data with advanced cybersecurity measures.",
-      requirements: [
-        "Bachelor's degree in Cybersecurity, Computer Science, or related field",
-        "4+ years experience in cybersecurity",
-        "Certifications: CISS P, CISM, or equivalent",
-        "Experience with security tools and frameworks",
-        "Knowledge of compliance standards (SOC 2, ISO 27001)"
-      ],
-      benefits: [
-        "Competitive salary and equity",
-        "Health, dental, and vision insurance",
-        "Flexible work arrangements",
-        "Professional development budget",
-        "401(k) with company matching"
-      ]
-    },
-    {
-      id: 5,
-      title: "Product Manager",
-      department: "Product",
-      location: "Remote / Middletown, DE",
-      type: "Full-time",
-      salary: "$100,000 - $150,000",
-      experience: "3+ years",
-      description: "Drive product strategy and roadmap for our micro SaaS solutions.",
-      requirements: [
-        "Bachelor's degree in Business, Engineering, or related field",
-        "3+ years experience in product management",
-        "Experience with SaaS products and agile methodologies",
-        "Strong analytical and communication skills",
-        "Experience with user research and data analysis"
-      ],
-      benefits: [
-        "Competitive salary and equity",
-        "Health, dental, and vision insurance",
-        "Flexible work arrangements",
-        "Professional development budget",
-        "401(k) with company matching"
-      ]
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Users, MapPin, Clock, Briefcase, Heart, Zap, Brain, Shield, Cloud, Rocket } from 'lucide-react';
@@ -167,32 +24,10 @@ export default function CareersPage() {
       icon: Zap,
       title: "Innovation Time",
       description: "Dedicated time to explore new technologies and personal projects"
->>>>>>> merge-all-prs-20250904-105408
     }
   ]
 
-<<<<<<< HEAD
-  const companyBenefits = [
-    {
-      icon: <DollarSign className="w-8 h-8"  />,
-      title: "Competitive Compensation",
-      description: "Above-market salaries with equity participation and performance bonuses"
-    },
-    {
-      icon: <Users className="w-8 h-8"  />,
-      title: "Flexible Work Environment",
-      description: "Remote-first culture with flexible hours and work-life balance"
-    },
-    {
-      icon: <Brain className="w-8 h-8"  />,
-      title: "Learning & Development",
-      description: "Annual learning budget, conference attendance, and skill development programs"
-    },
-    {
-      icon: <Shield className="w-8 h-8"  />,
-      title: "Comprehensive Benefits",
-      description: "Health, dental, vision insurance, 401(k) matching, and wellness programs"
-=======
+
   const openPositions = [
     {
       title: "Senior AI/ML Engineer",
@@ -258,56 +93,12 @@ export default function CareersPage() {
       icon: Rocket,
       title: "Excellence",
       description: "We strive for excellence in every project and interaction"
->>>>>>> merge-all-prs-20250904-105408
     }
   ]
 
   return (
     <>
-<<<<<<< HEAD
-      <SEO title="Careers - Zion Tech Group"
-        description="Join our team of innovative developers, AI engineers, and technology experts. Explore career opportunities at Zion Tech Group."
-        keywords="careers, jobs, AI engineer, developer, DevOps, cybersecurity, Zion Tech Group"
-        canonical="https://ziontechgroup.com/careers"
-       />
-      
-      <PageTransition>
-        <main className="min-h-screen bg-white">
-          {/* Hero Section */}
-          <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
-              <motion.div
-                initial={{ opacity: 0, y: 2 0 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="text-center"
-              >
-                <h1 className="text-4xl md: tex t-6xl font-bold mb-6">
-                  Join Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Team</span>
-                </h1>
-                <p className="text-xl md: tex t-2xl text-gray-300 max-w-3xl mx-auto mb-8">
-                  Build the future of technology with innovative AI, micro SaaS, and IT solutions
-                </p>
-                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
-                  <motion.a
-                    href="#openings"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
-                  >
-                    <ArrowRight className="w-5 h-5"  />
-                    View Open Positions
-                  </motion.a>
-                  <motion.a
-                    href="mailto: career s@ziontechgroup.com"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
-                  >
-                    <ArrowRight className="w-5 h-5"  />
-                    Send Resume
-                  </motion.a>
-=======
+
       <Helmet>
         <title>Careers - Zion Tech Group | Join Our Team</title>
         <meta name="description" content="Join Zion Tech Group and be part of a team that's shaping the future of technology. Explore career opportunities in AI, cybersecurity, cloud, and more." />
@@ -462,7 +253,6 @@ export default function CareersPage() {
                     <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
                     <span className="text-gray-300">Regular team events and retreats</span>
                   </div>
->>>>>>> merge-all-prs-20250904-105408
                 </div>
               </motion.div>
             </div>
@@ -699,12 +489,6 @@ export default function CareersPage() {
         </main>
       </PageTransition>
     </>
-<<<<<<< HEAD
-  )
-}
 
-export default CareersPage
-=======
   );
 }
->>>>>>> merge-all-prs-20250904-105408

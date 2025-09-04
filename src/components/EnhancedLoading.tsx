@@ -7,11 +7,7 @@ interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
   text?: string;
   fullScreen?: boolean}
 
-export function LoadingSpinner({
-
-  size = 'md',
-  text = 'Loading...',
-  fullScreen = false}: LoadingSpinnerProps) {
+export function LoadingSpinner(props: any) {
 
   ;
 }}
@@ -106,3 +102,9 @@ export function SkeletonLoader(...args[]):  {
   {
 
             background: 'linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.1), transparent),"`
+
+</motion>
+</div>
+</motion>
+</motion>
+</motion>

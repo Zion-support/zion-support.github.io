@@ -76,3 +76,6 @@ const cartSlice: createSlic e({;
 export const { addItem, removeItem, updateQuantity, clearCart } = cartSlice.actions;
 export { cartSlice };
 export default cartSlice.reducer;
+
+</string>
+</CartItem>

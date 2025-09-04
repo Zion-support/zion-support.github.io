@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  PenTool,
+import React, {useState} from 'react';
+import {motion} from 'framer-motion';
+import {PenTool,
   Zap,
   Shield,
   CheckCircle,
@@ -115,35 +114,28 @@ import {
   Wifi,
   Bluetooth,
   Battery,
-  Signal
-} from 'lucide-react';
+  Signal} from 'lucide-react';
 
     technologies["CDN", "Edge Computing", "Load Balancing", "Performance Monitoring"]
   }
 ];
 
 const contentTechnologies = [
-  {
-    name: "Content Creation Tools",
+  {name: "Content Creation Tools",
     description: "Professional tools for creating digital content",
     icon: PenTool,
     useCase: "Content Production",
-    reliability: "High"
-  },
-  {
-    name: "Media Processing",
+    reliability: "High"},
+  {name: "Media Processing",
     description: "Advanced audio and video processing capabilities",
     icon: Video,
     useCase: "Media Editing",
-    reliability: "Critical"
-  },
-  {
-    name: "AI Content Generation",
+    reliability: "Critical"},
+  {name: "AI Content Generation",
     description: "AI-powered content creation and optimization",
     icon: Brain,
     useCase: "Content Automation",
-    reliability: "High"
-  },
+    reliability: "High"},
   {
     name: "Content Analytics",
     description: "Data-driven insights for content optimization",
@@ -163,15 +155,13 @@ const successStories = [
     results: "300% increase in content production, 50% reduction in creation time, improved client satisfaction",
     logo: "DMA"
   },
-  {
-    id: 2,
+  {id: 2,
     comp: "Educational Platform",
     industry: "Education",
     challenge: "Required video production tools for online course creation",
     solution: "Developed web-based video editing platform with collaboration features",
     results: "200% increase in course production, 40% improvement in video quality, enhanced student engagement",
-    logo: "EP"
-  },
+    logo: "EP"},
   {
     id: 3,
     comp: "E-commerce Brand",
@@ -191,20 +181,16 @@ const processSteps = [
     icon: Target,
     duration: "2-4 weeks"
   },
-  {
-    step: 2,
+  {step: 2,
     title: "Platform Development",
     description: "Build content creation and management tools",
     icon: Code,
-    duration: "12-32 weeks"
-  },
-  {
-    step: 3,
+    duration: "12-32 weeks"},
+  {step: 3,
     title: "Content Production",
     description: "Create and optimize content using the new platform",
     icon: PenTool,
-    duration: "4-8 weeks"
-  },
+    duration: "4-8 weeks"},
   {
     step: 4,
     title: "Distribution & Analytics",
@@ -221,28 +207,22 @@ const contentBenefits = [
     icon: Zap,
     examples["Faster content creation", "Automated workflows", "Collaboration tools", "Template libraries"];
   },;
-  {
-    title: "Better Quality",
+  {title: "Better Quality",
     description: "Professional tools and AI assistance improve content quality and consistency",
     icon: Award,
-    examples["Professional templates", "AI assistance", "Quality checks", "Brand consistency"];
-  },;
-  {
-    title: "Multi-channel Reach",
+    examples["Professional templates", "AI assistance", "Quality checks", "Brand consistency"];},;
+  {title: "Multi-channel Reach",
     description: "Distribute content across multiple platforms and channels simultaneously",
     icon: Globe,
-    examples["Social media", "Website", "Email marketing", "Mobile apps"];
-  },;
-  {
-    title: "Data-driven Insights",
+    examples["Social media", "Website", "Email marketing", "Mobile apps"];},;
+  {title: "Data-driven Insights",
     description: "Analytics and performance tracking optimize content strategy",
     icon: BarChart3,
-    examples["Performance metrics", "Audience insights", "A/B testing", "ROI tracking"];
-  }
+    examples["Performance metrics", "Audience insights", "A/B testing", "ROI tracking"];}
 ];
 
 export default function ContentCreation
-export { ContentCreation }() {
+export {ContentCreation}() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 
@@ -263,7 +243,7 @@ export { ContentCreation }() {
         </div>
 
         <div className="container-responsive relative z-10">
-          <motion.div
+          <motion .div
             initial = {
   { opacity: 0,
   y: 30 
@@ -320,7 +300,7 @@ export { ContentCreation }() {
 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
 
-              <PenTool className="w-10 h-10 text-white" />
+              <PenTool className="w-10 h-10 text-white"  />
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -335,15 +315,15 @@ export { ContentCreation }() {
 
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-zion-cyan">
-                <PenTool className="w-4 h-4" />
+                <PenTool className="w-4 h-4"  />
                 <span>Creative Tools</span>
               </div>
               <div className="flex items-center gap-2 text-zion-purple">
-                <Brain className="w-4 h-4" />
+                <Brain className="w-4 h-4"  />
                 <span>AI Assistance</span>
               </div>
               <div className="flex items-center gap-2 text-zion-blue">
-                <Globe className="w-4 h-4" />
+                <Globe className="w-4 h-4"  />
                 <span>Multi-channel</span>
               </div>
             </div>
@@ -421,7 +401,7 @@ export { ContentCreation }() {
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="w-8 h-8 text-white" />
+                  <benefit .icon className="w-8 h-8 text-white"  />
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">{benefit.title}</h3>
@@ -431,7 +411,7 @@ export { ContentCreation }() {
                   <h4 className="text-zion-cyan font-semibold mb-3">Examples:</h4>
                   {benefit.examples.map((example, exampleIndex) => (
                     <div key={exampleIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0"  />
                       <span className="text-zion-slate-light text-sm">{example}</span>
                     </div>
                   ))}
@@ -512,7 +492,7 @@ export { ContentCreation }() {
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <technology.icon className="w-8 h-8 text-white" />
+                  <technology .icon className="w-8 h-8 text-white"  />
                 </div>
 
                 <h3 className="text-xl font-bold text-white mb-3">{technology.name}</h3>
@@ -605,7 +585,7 @@ export { ContentCreation }() {
 
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
-                    <step.icon className="w-8 h-8 text-white" />
+                    <step .icon className="w-8 h-8 text-white"  />
                   </div>
                   <div className="absolute -top-2 -right-2 w-8 h-8 bg-zion-blue rounded-full flex items-center justify-center text-white text-sm font-bold">
                     {step.step}
@@ -711,7 +691,7 @@ export { ContentCreation }() {
                 onClick={() => setSelectedSolution(solution)}
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
-                  <solution.icon className="w-8 h-8 text-white" />
+                  <solution .icon className="w-8 h-8 text-white"  />
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
@@ -720,7 +700,7 @@ export { ContentCreation }() {
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0"  />
                       <span className="text-zion-slate-light text-sm">{feature}</span>
                     </div>
                   ))}
@@ -748,7 +728,7 @@ export { ContentCreation }() {
                   </span>
                   <button className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors duration-300">
                     <span className="text-sm font-medium">Learn More</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4"  />
                   </button>
                 </div>
               </motion.div>
@@ -853,7 +833,7 @@ export { ContentCreation }() {
 
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current"  />
                   ))}
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
@@ -915,3 +895,17 @@ export { ContentCreation }() {
       </section>
     </div>
   )}
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

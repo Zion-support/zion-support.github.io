@@ -9,8 +9,8 @@ export { LLMContentStudio }(...args: []):  {
     <>
       <Helmet>
         <title>LLM Content Studio - Zion Tech Group</title>
-        <meta name = "description" content="Create high-quality, on-brand content with our AI-powered LLM Content Studio. Generate articles, marketing copy, and creative content at scale."  />
-        <meta name="keywords" content="LLM content studio, AI content generation, content creation, marketing copy, AI writing, content automation"  />
+        <meta name = "description" content="Create high-quality, on-brand content with our AI-powered LLM Content Studio. Generate articles, marketing copy, and creative content at scale."   />
+        <meta name="keywords" content="LLM content studio, AI content generation, content creation, marketing copy, AI writing, content automation"   />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -39,7 +39,7 @@ export { LLMContentStudio }(...args: []):  {
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover: fro m-purple-600 hover: t o-pink-700 transition-all duration-200 shadow-lg hover: shado w-xl"
 
                   Get Started
-                  <ArrowRight className="ml-2 w-5 h-5"  />
+                  <ArrowRight className="ml-2 w-5 h-5"   />
                 </Link>
                 <button className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover: b g-purple-500/10 transition-all duration-200">
                   <Play className="mr-2 w-5 h-5"  />
@@ -397,7 +397,7 @@ export { LLMContentStudio }(...args: []):  {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover: fro m-purple-600 hover: t o-pink-700 transition-all duration-200"
 
                 Start Creating
-                <ArrowRight className="ml-2 w-5 h-5"  />
+                <ArrowRight className="ml-2 w-5 h-5"   />
               </Link>
               <Link
                 to="/services"

@@ -1,5 +1,5 @@
-import React, { useState, useRef } from 'react';
-import { Users, Video, Mic, MicOff, VideoOff, MessageSquare, FileText, Monitor, X, Maximize2, Minimize2, Plus, MoreVertical, PhoneOff, ScreenShare, Square, Hand, Clock, CheckCircle, UserPlus } from 'lucide-react';
+import React, {useState, useRef} from 'react';
+import {Users, Video, Mic, MicOff, VideoOff, MessageSquare, FileText, Monitor, X, Maximize2, Minimize2, Plus, MoreVertical, PhoneOff, ScreenShare, Square, Hand, Clock, CheckCircle, UserPlus} from 'lucide-react';
 const mockMeetings = [
     {
         id: '1',
@@ -12,7 +12,7 @@ const mockMeetings = [
         password: 'Q4Review2024'
 
 ];
-export function AdvancedCollaborationPlatform() {
+export function AdvancedCollaborationPlatform(props: any) {
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);
@@ -30,18 +30,17 @@ export function AdvancedCollaborationPlatform() {
     const [meetings, setMeetings] = useState(mockMeetings);
     const [searchQuery, setSearchQuery] = useState('');
     const containerRef = useRef(null);
-    const toggleMute = () => {
+    const toggleMute = (props: any) => {
         setIsMuted(!isMuted);
         setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, isMuted: !isMuted } : p))};
-    const toggleVideo = () => {
+    const toggleVideo = (props: any) => {
         setIsVideoOff(!isVideoOff);
         setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, isVideoOff: !isVideoOff } : p))};
-    const toggleScreenShare = () => {
+    const toggleScreenShare = (props: any) => {
         setIsScreenSharing(!isScreenSharing);
         setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, isScreenSharing: !isScreenSharing } : p))};
-    const toggleRecording = () => {
-        setIsRecording(!isRecording)};
-    const sendChatMessage = () => {
+    const toggleRecording = (props: any) => {setIsRecording(!isRecording)};
+    const sendChatMessage = (props: any) => {
         if (chatMessage.trim()) {
             const newMessage = {
   id: Date.now().toString(),

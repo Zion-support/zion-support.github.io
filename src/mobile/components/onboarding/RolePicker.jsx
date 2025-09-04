@@ -1,16 +1,14 @@
-import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
-import { Card, CardContent } from "@/components/ui/card";
-import { Briefcase, Users, Check } from "lucide-react";
+import React, {useState} from "react";
+import {useTranslation} from "react-i18next";
+import {Card, CardContent} from "@/components/ui/card";
+import {Briefcase, Users, Check} from "lucide-react";
 
-export function RolePicker({ onSelect }) {
+export function RolePicker(props: any) {
     const [selectedRole, setSelectedRole] = useState(null);
     const { t } = useTranslation();
 
-    const handleSelect = (role) => {
-        setSelectedRole(role);
-        onSelect(role);
-    };
+    const handleSelect = (props: any) => {setSelectedRole(role);
+        onSelect(role);};
 
     return (
         <div className="space-y-4 px-4">
@@ -29,14 +27,14 @@ export function RolePicker({ onSelect }) {
                     <CardContent className="p-5">
                         <div className="flex items-center">
                             <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                                <Briefcase className="h-6 w-6 text-primary"/>
+                                <Briefcase className="h-6 w-6 text-primary" />
                             </div>
                             <div className="flex-1">
                                 <h3 className="font-medium">{t('onboarding.talent_title')}</h3>
                                 <p className="text-sm text-muted-foreground">{t('onboarding.talent_desc')}</p>
                             </div>
                             {selectedRole === 'talent' && (
-                                <Check className="h-5 w-5 text-primary"/>
+                                <Check className="h-5 w-5 text-primary" />
                             )}
                         </div>
                     </CardContent>
@@ -53,14 +51,14 @@ export function RolePicker({ onSelect }) {
                     <CardContent className="p-5">
                         <div className="flex items-center">
                             <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                                <Users className="h-6 w-6 text-primary"/>
+                                <Users className="h-6 w-6 text-primary" />
                             </div>
                             <div className="flex-1">
                                 <h3 className="font-medium">{t('onboarding.client_title')}</h3>
                                 <p className="text-sm text-muted-foreground">{t('onboarding.client_desc')}</p>
                             </div>
                             {selectedRole === 'client' && (
-                                <Check className="h-5 w-5 text-primary"/>
+                                <Check className="h-5 w-5 text-primary" />
                             )}
                         </div>
                     </CardContent>

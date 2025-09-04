@@ -21,7 +21,7 @@ const StatsSection: Reac t.FC<StatsSectionProps> = ({ stats }) => {
   const isInView = useInView(ref, { once: tru e });
   const [counts, setCounts] = useState<any>({});
 
-  useEffect(()  => {
+  useEffect(() => {
     if (isInView) {
       const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, ''));
           const suffix = stat.number.replace(/[0-9]/g, '');
@@ -181,3 +181,8 @@ const StatsSection: Reac t.FC<StatsSectionProps> = ({ stats }) => {
 };
 
 export default StatsSection;}}}}};
+</motion>
+</motion>
+</motion>
+</any>
+</StatsSectionProps>

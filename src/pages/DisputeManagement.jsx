@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 ;
-export default function DisputeManagement() {
+export default function DisputeManagement(props: any) {
     const [activeTab, setActiveTab] = useState('overview');
     return (<>
-      <SEO title="Dispute Management | Zion Tech Group" description="Admin dashboard for managing and resolving marketplace disputes and conflicts" keywords="dispute management, admin dashboard, conflict resolution, marketplace admin, Zion Tech Group" canonical="https://ziontechgroup.com/admin/disputes"/>
+      <SEO title="Dispute Management | Zion Tech Group" description="Admin dashboard for managing and resolving marketplace disputes and conflicts" keywords="dispute management, admin dashboard, conflict resolution, marketplace admin, Zion Tech Group" canonical="https://ziontechgroup.com/admin/disputes" />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
@@ -94,12 +94,12 @@ export default function DisputeManagement() {
                         stroke="currentColor""""
                         viewBox="0 0 24 24"""
                       >"""
-                        <path""""
+                        <path """"
                           strokeLinecap="round""""
                           strokeLinejoin="round""""
                           strokeWidth={2}""""
                           d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"""
-                        />
+                         />
                       </svg>
                     </div>"""
                   </div>""""
@@ -125,12 +125,12 @@ export default function DisputeManagement() {
                         stroke="currentColor""""
                         viewBox="0 0 24 24"""
                       >"""
-                        <path""""
+                        <path """"
                           strokeLinecap="round""""
                           strokeLinejoin="round""""
                           strokeWidth={2}""""
                           d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"""
-                        />
+                         />
                       </svg>
                     </div>"""
                   </div>""""
@@ -156,12 +156,12 @@ export default function DisputeManagement() {
                         stroke="currentColor""""
                         viewBox="0 0 24 24"""
                       >"""
-                        <path""""
+                        <path """"
                           strokeLinecap="round""""
                           strokeLinejoin="round""""
                           strokeWidth={2}""""
                           d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"""
-                        />
+                         />
                       </svg>
                     </div>"""
                   </div>""""
@@ -188,12 +188,12 @@ export default function DisputeManagement() {
                         stroke="currentColor""""
                         viewBox="0 0 24 24"""
                       >"""
-                        <path""""
+                        <path """"
                           strokeLinecap="round""""
                           strokeLinejoin="round""""
                           strokeWidth={2}""""
                           d="M13 10V3L4 14h7v7l9-11h-7z"""
-                        />
+                         />
                       </svg>
                     </div>"""
                   </div>""""
@@ -410,17 +410,22 @@ export default function DisputeManagement() {
                   Configuration and settings for dispute management will be;
                   displayed here.</p>
               </div>
-            </div>) }
+            </div>)}
         </div>
       </main>
     </>)}
 
-export { DisputeManagement };
+export {DisputeManagement};
 
-export { DisputeManagement };
+export {DisputeManagement};
 
-export { DisputeManagement };
+export {DisputeManagement};
 
-export { DisputeManagement };
+export {DisputeManagement};
 
-export { DisputeManagement };
+export {DisputeManagement};
+
+</path>
+</path>
+</path>
+</path>

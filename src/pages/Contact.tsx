@@ -18,8 +18,8 @@ import {
   Star
 } from 'lucide-react';
 
-export default function Contact() {
-  const [formData, setFormData] = useState({
+export default function Contact(props: any) {
+  const [formData, setFormData] = useState<any>({
     firstName: '',
     lastName: '',
     email: '',
@@ -33,11 +33,11 @@ export default function Contact() {
     preferredContact: 'email'
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState<any>(false);
+  const [submitSuccess, setSubmitSuccess] = useState<any>(false);
 
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (props: any) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -206,8 +206,7 @@ export default function Contact() {
                       <label className="block text-sm font-medium text-slate-300 mb-2">
                         First Name *
                       </label>
-                      <input
-                        type="text"
+                      <input type="text"
                         name="firstName"
                         value={formData.firstName}
                         onChange={handleInputChange}
@@ -215,14 +214,13 @@ export default function Contact() {
 
                         className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Your first name"
-                      />
+                       />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-slate-300 mb-2">
                         Last Name *
                       </label>
-                      <input
-                        type="text"
+                      <input type="text"
                         name="lastName"
                         value={formData.lastName}
                         onChange={handleInputChange}
@@ -230,7 +228,7 @@ export default function Contact() {
 
                         className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Your last name"
-                      />
+                       />
                     </div>
                   </div>
 
@@ -239,8 +237,7 @@ export default function Contact() {
                       <label className="block text-sm font-medium text-slate-300 mb-2">
                         Email *
                       </label>
-                      <input
-                        type="email"
+                      <input type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
@@ -248,20 +245,19 @@ export default function Contact() {
 
                         className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="your.email@company.com"
-                      />
+                       />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-slate-300 mb-2">
                         Phone
                       </label>
-                      <input
-                        type="tel"
+                      <input type="tel"
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="+1 (555) 123-4567"
-                      />
+                       />
                     </div>
                   </div>
 
@@ -270,14 +266,13 @@ export default function Contact() {
                     <label className="block text-sm font-medium text-slate-300 mb-2">
                       Company
                     </label>
-                    <input
-                      type="text"
+                    <input type="text"
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       placeholder="Your company name"
-                    />
+                     />
                   </div>
 
                   <div>
@@ -355,25 +350,23 @@ export default function Contact() {
                     </label>
                     <div className="flex gap-4">
                       <label className="flex items-center gap-2">
-                        <input
-                          type="radio"
+                        <input type="radio"
                           name="preferredContact"
                           value="email"
                           checked={formData.preferredContact === 'email'}
                           onChange={handleInputChange}
                           className="text-cyan-500 focus:ring-cyan-500"
-                        />
+                         />
                         <span className="text-slate-300">Email</span>
                       </label>
                       <label className="flex items-center gap-2">
-                        <input
-                          type="radio"
+                        <input type="radio"
                           name="preferredContact"
                           value="phone"
                           checked={formData.preferredContact === 'phone'}
                           onChange={handleInputChange}
                           className="text-cyan-500 focus:ring-cyan-500"
-                        />
+                         />
                         <span className="text-slate-300">Phone</span>
                       </label>
                     </div>
@@ -574,13 +567,13 @@ export default function Contact() {
 =======
 import React from 'react';
 
-export default function Contact() {
+export default function Contact(props: any) {
   return (
     <div className="container mx-auto px-4 py-12 text-white">
       <h1 className="text-3xl font-bold mb-4">Contact Us</h1>
       <p className="text-gray-300 mb-6">Email: info@ziontechgroup.com</p>
       <form className="grid gap-4 max-w-md">
-        <input className="px-3 py-2 rounded bg-gray-900 border border-gray-700" placeholder="Your email" />
+        <input className="px-3 py-2 rounded bg-gray-900 border border-gray-700" placeholder="Your email"  />
         <textarea className="px-3 py-2 rounded bg-gray-900 border border-gray-700" placeholder="Message" rows={5} />
         <button className="px-4 py-2 bg-zion-cyan text-black rounded" type="button">Send</button>
       </form>
@@ -588,3 +581,8 @@ export default function Contact() {
   );
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ccc5
+
+</textarea>
+</any>
+</any>
+</any>

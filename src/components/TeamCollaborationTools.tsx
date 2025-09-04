@@ -1,6 +1,6 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page() {
+export default function Page(props: any) {
 interface Comment {
   id: string;
   author: string;
@@ -55,9 +55,9 @@ showProjects: tru e,;
   const [messages, setMessages] = useState<Message[]>([]);
   const [files, setFiles] = useState<FileItem[]>([]);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [showProjectForm, setShowProjectForm] = useState(false);
-  const [showTaskForm, setShowTaskForm] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [showProjectForm, setShowProjectForm] = useState<any>(false);
+  const [showTaskForm, setShowTaskForm] = useState<any>(false);
+  const [searchQuery, setSearchQuery] = useState<any>('');
   const [selectedDepartment, setSelectedDepartment] = useState<any>('all');
   const [selectedStatus, setSelectedStatus] = useState<any>('all');
 
@@ -710,7 +710,7 @@ showProjects: tru e,;
                       {message.reactions.map((reaction, idx) => (
                         <button
                           key={idx}
-                          onClick = {
+                          onClick={
 
   () => handleMessageReaction(message.id,
   reaction.type)
@@ -743,11 +743,11 @@ showProjects: tru e,;
           <div className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">;"
             <div className="flex items-center gap-3">"
               <div className="flex-1">
-                <input"
+                <input "
                   type="text"
                   placeholder="Type your message..."
                   className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan focus: borde r-transparent"
-                />
+                 />
               </div>
 "
               <button className="p-3 bg-zion-cyan text-white rounded-lg hover: b g-zion-cyan/80 transition-colors">"
@@ -938,3 +938,39 @@ showProjects: tru e,;
         </motion.div>;) };
     </div>;) };
 '"`
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</any>
+</any>
+</any>
+</any>
+</any>
+</Project>
+</FileItem>
+</Message>
+</Project>
+</TeamMember>
+</TeamCollaborationToolsProps>

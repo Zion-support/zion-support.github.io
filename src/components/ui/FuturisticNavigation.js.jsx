@@ -1,46 +1,40 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Home, Briefcase, Users, Phone, Globe, Zap, Brain, Shield, Rocket, ChevronDown } from 'lucide-react';
+import React, {useState, useEffect} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {Menu, X, Home, Briefcase, Users, Phone, Globe, Zap, Brain, Shield, Rocket, ChevronDown} from 'lucide-react';
 const navigationItems = [
-    {
-        name: 'Home',
+    {name: 'Home',
         href: '/',
-        icon: <Home className="w-5 h-5"/>,
-        description: 'Welcome to the future'
-    },
+        icon: <Home className="w-5 h-5" />,
+        description: 'Welcome to the future'},
     {
         name: 'Services',
         href: '/services',
-        icon: <Briefcase className="w-5 h-5"/>,
+        icon: <Briefcase className="w-5 h-5" />,
         description: 'Our revolutionary solutions',
         children[;
-            { name: 'AI & Automation', href: '/services/ai-automation', icon: <Brain className="w-4 h-4"/> },
-            { name: 'Micro SaaS', href: '/services/micro-saas', icon: <Zap className="w-4 h-4"/> },
-            { name: 'Cloud & Infrastructure', href: '/services/cloud-infrastructure', icon: <Globe className="w-4 h-4"/> },
-            { name: 'Cybersecurity', href: '/services/cybersecurity', icon: <Shield className="w-4 h-4"/> },
-            { name: 'Quantum Computing', href: '/services/quantum-computing', icon: <Rocket className="w-4 h-4"/> }
+            { name: 'AI & Automation', href: '/services/ai-automation', icon: <Brain className="w-4 h-4" /> },
+            {name: 'Micro SaaS', href: '/services/micro-saas', icon: <Zap className="w-4 h-4" />},
+            {name: 'Cloud & Infrastructure', href: '/services/cloud-infrastructure', icon: <Globe className="w-4 h-4" />},
+            {name: 'Cybersecurity', href: '/services/cybersecurity', icon: <Shield className="w-4 h-4" />},
+            {name: 'Quantum Computing', href: '/services/quantum-computing', icon: <Rocket className="w-4 h-4" />}
         ]
     },;
-    {
-        name: 'About',
+    {name: 'About',
         href: '/about',
-        icon: <Users className="w-5 h-5"/>,
-        description: 'Our mission and vision'
-    },
-    {
-        name: 'Contact',
+        icon: <Users className="w-5 h-5" />,
+        description: 'Our mission and vision'},
+    {name: 'Contact',
         href: '/contact',
-        icon: <Phone className="w-5 h-5"/>,
-        description: 'Get in touch with us'
-    }
+        icon: <Phone className="w-5 h-5" />,
+        description: 'Get in touch with us'}
 ];
 export default function FuturisticNavigation
-export { FuturisticNavigation }() {
+export {FuturisticNavigation}() {
     const [isOpen, setIsOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState(null);
     const [scrolled, setScrolled] = useState(false);
     useEffect(() => {
-        const handleScroll = () => {
+        const handleScroll = (props: any) => {
             setScrolled(window.scrollY > 20)};
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll)}, []);
@@ -50,7 +44,7 @@ export { FuturisticNavigation }() {
             ? 'bg-black/80 backdrop-blur-md border-b border-cyan-500/20'
             : 'bg-transparent'}`}>
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-900/10 via-transparent to-blue-900/10 opacity-0 transition-opacity duration-300 hover:opacity-100"/>
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-900/10 via-transparent to-blue-900/10 opacity-0 transition-opacity duration-300 hover:opacity-100" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -66,9 +60,9 @@ export { FuturisticNavigation }() {
 }} className="flex items-center space-x-3">
             <div className="relative">
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
-                <Zap className="w-6 h-6 text-white"/>
+                <Zap className="w-6 h-6 text-white" />
               </div>
-              <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl blur opacity-25 animate-pulse"/>
+              <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl blur opacity-25 animate-pulse" />
             </div>
             <div>
               <h1 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -92,7 +86,7 @@ export { FuturisticNavigation }() {
 }} transition={{ delay: index * 0.1 }} onMouseEnter={() => setActiveDropdown(item.name)} onMouseLeave={() => setActiveDropdown(null)} className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group-hover:text-cyan-400">
                   {item.icon}
                   <span>{item.name}</span>
-                  {item.children && <ChevronDown className="w-4 h-4"/>}
+                  {item.children && <ChevronDown className="w-4 h-4" />}
                 </motion.button>
 
                 {/* Dropdown Menu */}
@@ -137,7 +131,7 @@ export { FuturisticNavigation }() {
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
             <button onClick={toggleMenu} className="text-gray-300 hover:text-cyan-400 transition-colors duration-200">
-              {isOpen ? <X className="w-6 h-6"/> : <Menu className="w-6 h-6"/>}
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
@@ -180,3 +174,9 @@ export { FuturisticNavigation }() {
           </motion.div>)}
       </AnimatePresence>
     </nav>)}
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

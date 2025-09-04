@@ -1,7 +1,7 @@
-import React, { useEffect, useMemo, useCallback } from 'react';
-import { useLocation  } from 'react-router-dom';
+import React, {useEffect, useMemo, useCallback} from 'react';
+import {useLocation} from 'react-router-dom';
 
-export default function Page() {
+export default function Page(props: any) {
 "
         // Add decoding="async" for better performance'
         img.decoding = 'async';
@@ -14,13 +14,7 @@ export default function Page() {
     };
 
     // Use requestIdleCallback for non-critical optimization'
-    if('requestIdleCallback' in window) {
-
-      requestIdleCallback(optimizeImages);
-    } else {
-
-      setTimeout(optimizeImages, 100);
-    }
+    if('requestIdleCallback' in window) {requestIdleCallback(optimizeImages);} else {setTimeout(optimizeImages, 100);}
   }, [location.pathname]);
 
   // Memoize expensive computations
@@ -38,18 +32,14 @@ export default function Page() {
     }
   }, []);
 
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
+  useEffect(() => {// TODO: Add dependencies if needed}, []);
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('scroll', handleScroll, {passive: true});
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
   // Service Worker registration for caching
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
+  useEffect(() => {// TODO: Add dependencies if needed}, []);
 
     if('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
 
@@ -77,17 +67,12 @@ export default function Page() {
             }
           });
         })
-        .catch(registrationError => {
-
-          // // console.warn('SW registration failed: ', registrationError);
-        });
+        .catch(registrationError => {// // console.warn('SW registration failed: ', registrationError);});
     }
   }, []);
 
   // Intersection Observer for lazy loading
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
+  useEffect(() => {// TODO: Add dependencies if needed}, []);
 
     if('IntersectionObserver' in window) {
 
@@ -108,9 +93,7 @@ export default function Page() {
             }
           });
         },
-        {
-
-          rootMargin: '50px',
+        {rootMargin: '50px',
           threshold: 0.1}
       );
 
@@ -135,7 +118,7 @@ if(typeof window !== 'undefined') {
       () => {
         // Run non-critical tasks during idle time
       },
-      { priority: 'background' }
+      {priority: 'background'}
     );
   }
 
@@ -158,4 +141,4 @@ if(typeof window !== 'undefined') {
 ;"
   });,"})
 }
- export const PerformanceOptimizer = memo(({ children }) => { const location = useLocation () """
+ export const PerformanceOptimizer = memo(({children}) => { const location = useLocation () """

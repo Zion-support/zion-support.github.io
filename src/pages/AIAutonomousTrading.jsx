@@ -1,11 +1,12 @@
-import { Helmet } from 'react-helmet-async';
-const AIAutonomousTrading = () => {
+import React from 'react';
+import {Helmet} from 'react-helmet-async';
+const AIAutonomousTrading = (props: any) => {
     return (<>
       <Helmet>
         <title>AI Autonomous Trading Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous trading platform that analyzes markets, executes trades, and manages portfolios with advanced AI capabilities and 24/7 market monitoring."/>
-        <meta name="keywords" content="AI trading, autonomous trading, algorithmic trading, AI trading bot, automated trading, AI investment"/>
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-trading"/>
+        <meta name="description" content="Revolutionary AI autonomous trading platform that analyzes markets, executes trades, and manages portfolios with advanced AI capabilities and 24/7 market monitoring."  />
+        <meta name="keywords" content="AI trading, autonomous trading, algorithmic trading, AI trading bot, automated trading, AI investment"  />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-trading"  />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">

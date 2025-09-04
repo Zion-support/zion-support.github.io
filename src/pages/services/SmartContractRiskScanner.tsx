@@ -1,55 +1,4 @@
-import {
-  Shield, 
-  Search, 
-  AlertTriangle, 
-  CheckCircle, 
-  ArrowRight,
-  Lock,
-  Database,
-  BarChart3,
-  Zap,
-  Globe,
-  Clock,
-  DollarSign,
-  Star,
-  Award,
-  Monitor,
-  Smartphone,
-  Cloud,
-  Activity,
-  Target,
-  Lightbulb,
-  Gauge,
-  Code,
-  Bug,
-  Eye,
-  FileText,
-  Settings,
-  Users,
-  TrendingUp'
- } from 'lucide-react';
-;
-export { function };
-export default function SmartContractRiskScanner(...args: []):  {
 
-  
-    {;
-      icon: Cod e,;
-      title: 'Smart Contract Analysis',;
-      description: 'Deep code analysis and optimization recommendations for smart contracts',;
-      benefits: ['Code quality metrics',Gas optimization',Best practices',Performance analysis']};
-  ] {;
-      title: 'Logic Vulnerabilities',;
-      description: 'Identify logical flaws and business logic vulnerabilities',;
-      icon: Lightbul b,;
-      features: ['Business logic analysis',State machine validation',Flow control analysis',Edge case testing']};
-  ];
-
-  
-        'On-premise deployment',;
-        'Compliance certifications';
-      ],;
-=======
         'Unlimited smart contracts','
         'Custom security frameworks','
         'White-label solutions','
@@ -58,7 +7,6 @@ export default function SmartContractRiskScanner(...args: []):  {
         'Custom integrations',;'
         'On-premise deployment',;'        'Compliance certifications';
       ],;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Contact Sales',;
       popular: fals e};
   ];
@@ -763,3 +711,40 @@ export default function SmartContractRiskScanner(...args: []):  {
       </section>;
     </div>;
   )}}}}}'"`
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</SEO>
+=======
+import React from 'react';
+
+export default function SmartContractRiskScanner() {
+  return (
+    <main className="min-h-screen bg-white py-16">
+      <div className="max-w-3xl mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">Smart Contract Risk Scanner</h1>
+        <p className="text-gray-600">
+          This page is under construction. Our Smart Contract Risk Scanner provides AI-assisted analysis to
+          identify vulnerabilities and improve the security of blockchain applications. Please check back soon
+          for the full feature set.
+        </p>
+      </div>
+    </main>
+  );
+}
+>>>>>>> origin/main

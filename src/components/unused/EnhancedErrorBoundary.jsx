@@ -1,16 +1,14 @@
 import React from 'react';
-import { motion  } from 'framer-motion';
+import {motion} from 'framer-motion';
 
-export default function Page() {
+export default function Page(props: any) {
     componentDidCatch(error, errorInfo) {
 
         this.setState({ errorInfo });
         // Log error to console'
         // // // // // // // // console.error('Error caught by boundary:', error, errorInfo);
         // Call custom error handler if provided
-        if(this.props.onError) {
-
-            this.props.onError(error, errorInfo)}
+        if(this.props.onError) {this.props.onError(error, errorInfo)}
         // Send error to error reporting service(if available)
         this.reportError(error, errorInfo)}
     static generateErrorId() {
@@ -29,34 +27,27 @@ export default function Page() {
   stack: error.stack
 
 },
-            errorInfo: {
-
-                componentStack: errorInfo.componentStack
-            },
+            errorInfo: {componentStack: errorInfo.componentStack},
             userAgent: navigator.userAgent,
             url: window.location.href,
-            viewport: {
-
-                width: window.innerWidth,
-                height: window.innerHeight
-
-        };
+            viewport: {width: window.innerWidth,
+                height: window.innerHeight};
         // Log to console for development'
         if(process.env.NODE_ENV === 'development') {
 
             console.group('Error Report');
-            // // // // // // // // console.log('Error ID:', errorReport.id);
-            // // // // // // // // console.log('Error Details:', errorReport);
+            // // // // // // // // 
+            // // // // // // // // 
             console.groupEnd();
 
         // In production, you would send this to your error reporting service
         // Example: Sentry.captureException(error, { extra: errorReport });
 
-            // console.log('Error ID:', errorReport.id);
-            // console.log('Error Details:', errorReport);
+            // 
+            // 
             console.groupEnd()}
         // In production, you would send this to your error reporting service
-        // Example: Sentry.captureException(error, { extra: errorReport })}
+        // Example: Sentry.captureException(error, {extra: errorReport})}
     handleRetry = () => {
         this.setState({
 
@@ -66,9 +57,7 @@ export default function Page() {
             errorId: null,
             showStackTrace: false
         })};
-    handleGoHome = () => {
-
-        window.location.href = '/'};
+    handleGoHome = () => {window.location.href = '/'};
     handleReportIssue = () => {
         const errorInfo = this.state.errorInfo;
         if(error && errorInfo) {
@@ -92,7 +81,7 @@ export default function Page() {
             {/* Header */}"
             <div className="bg-gradient-to-r from-red-500 to-pink-500 p-6 text-white">"
               <div className="flex items-center space-x-3">"
-                <ExclamationTriangleIcon className="w-8 h-8"/>
+                <ExclamationTriangleIcon className="w-8 h-8" />
                 <div>"
                   <h1 className="text-2xl font-bold">Something went wrong</h1>'"
                   <p className="text-red-100">We've encountered an unexpected error</p>
@@ -104,11 +93,8 @@ export default function Page() {
       handleError(event.reason, { componentStack: 'Promise rejection' });
     });
 
-    return () => {
-
-      window.removeEventListener('error', handleError);
-      window.removeEventListener('unhandledrejection', handleError);
-    };
+    return () => {window.removeEventListener('error', handleError);
+      window.removeEventListener('unhandledrejection', handleError);};
   }, []);
 
   if(hasError) {
@@ -132,7 +118,7 @@ export default function Page() {
         >"
           <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">"
             <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"  />
             </svg>
           </div>
 
@@ -185,8 +171,14 @@ export default function Page() {
   return children;
 };
 ;
-export { EnhancedErrorBoundary };
+export {EnhancedErrorBoundary};
 export default EnhancedErrorBoundary;'"`
 }}}}}}}}}}}}}'"`'"`
 
-export { Page };
+export {Page};
+
+</motion>
+</div>
+</div>
+</motion>
+</div>

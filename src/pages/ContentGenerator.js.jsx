@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
-import { Button } from "@/components/ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
-import { Input } from "@/components/ui/input";
-import { Switch } from "@/components/ui/switch";
-import { Label } from "@/components/ui/label";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { toast } from "sonner";
-import { Loader2 } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
-import { useAuth } from "@/hooks/useAuth";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { useRouter } from "next/router";
+import React, {useState} from 'react';
+import {Button} from "@/components/ui/button";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {Textarea} from "@/components/ui/textarea";
+import {Input} from "@/components/ui/input";
+import {Switch} from "@/components/ui/switch";
+import {Label} from "@/components/ui/label";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {toast} from "sonner";
+import {Loader2} from "lucide-react";
+import {supabase} from "@/integrations/supabase/client";
+import {useAuth} from "@/hooks/useAuth";
+import {ScrollArea} from "@/components/ui/scroll-area";
+import {useRouter} from "next/router";
 export default function ContentGenerator
-export { ContentGenerator }() {
+export {ContentGenerator}() {
     const { user, isLoading } = useAuth();
     const router = useRouter();
     const [contentType, setContentType] = useState('blog');
@@ -48,18 +48,15 @@ export { ContentGenerator }() {
                 throw error;
             setPreviewContent(data);
             toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`)}
-        catch (error) {
-            console.error("Error generating content:", error);
+        catch (error) {console.error("Error generating content:", error);
             toast.error("Failed to generate content. Please try again.")}
-        finally {
-            setIsGenerating(false)}
+        finally {setIsGenerating(false)}
     };
     const sendTestNewsletter = async () => {
         if (!testEmail) {
             toast.error("Please enter a test email address");
             return}
-        if (!previewContent) {
-            toast.error("Generate newsletter content first");
+        if (!previewContent) {toast.error("Generate newsletter content first");
             return}
         try {
             const { data, error } = await supabase.functions.invoke('send-newsletter', {
@@ -74,13 +71,11 @@ export { ContentGenerator }() {
             if (error)
                 throw error;
             toast.success(`Test newsletter sent to ${testEmail}!`)}
-        catch (error) {
-            console.error("Error sending test newsletter:", error);
+        catch (error) {console.error("Error sending test newsletter:", error);
             toast.error("Failed to send test newsletter. Please try again.")}
     };
     // Check if user is still loading
-    if (isLoading) {
-        return (<>
+    if (isLoading) {return (<>
         
         <div className="min-h-screen bg-zion-blue flex items-center justify-center">
           <div className="animate-pulse text-white">Loading...</div>
@@ -107,7 +102,7 @@ export { ContentGenerator }() {
                     <Label htmlFor="contentType" className="text-white">Content Type</Label>
                     <Select value={contentType} onValueChange={(value) => setContentType(value)}>
                       <SelectTrigger id="contentType" className="bg-zion-blue border border-zion-blue-light text-white">
-                        <SelectValue placeholder="Select content type"/>
+                        <SelectValue placeholder="Select content type" />
                       </SelectTrigger>
                       <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
                         <SelectItem value="blog" className="text-white">Blog Post</SelectItem>
@@ -118,11 +113,8 @@ export { ContentGenerator }() {
                   
                   <div className="space-y-2">
                     <Label htmlFor="topic" className="text-white">Topic (Optional)</Label>
-                    <Input id="topic" placeholder = {
-  contentType === 'blog' ? "e.g., Hiring AI Freelancers" : "e.g.,
-  May Platform Updates";
-
-} className="bg-zion-blue border border-zion-blue-light text-white" value={topic} onChange={(e) => setTopic(e.target.value)}/>
+                    <Input id="topic" placeholder = {contentType === 'blog' ? "e.g., Hiring AI Freelancers" : "e.g.,
+  May Platform Updates";} className="bg-zion-blue border border-zion-blue-light text-white" value={topic} onChange={(e) => setTopic(e.target.value)}/>
                   </div>
                   
                   <div className="space-y-2">
@@ -133,12 +125,12 @@ export { ContentGenerator }() {
                   {contentType === 'blog' && (<>
                       <div className="flex items-center justify-between">
                         <Label htmlFor="autoPublish" className="text-white">Auto-Publish</Label>
-                        <Switch id="autoPublish" checked={autoPublish} onCheckedChange={setAutoPublish}/>
+                        <Switch id="autoPublish" checked={autoPublish} onCheckedChange={setAutoPublish} />
                       </div>
                       
                       <div className="flex items-center justify-between">
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>
-                        <Switch id="includeImage" checked={includeImage} onCheckedChange={setIncludeImage}/>
+                        <Switch id="includeImage" checked={includeImage} onCheckedChange={setIncludeImage} />
                       </div>
                     </>)}
                   
@@ -150,7 +142,7 @@ export { ContentGenerator }() {
                 <CardFooter>
                   <Button onClick={generateContent} disabled={isGenerating} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
                     {isGenerating ? (<>
-                        <Loader2 className="mr-2 h-4 w-4 animate-spin"/>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                         Generating...
                       </>) : (<>Generate {contentType === 'blog' ? 'Blog Post' : 'Newsletter'}</>)}
                   </Button>
@@ -168,7 +160,7 @@ export { ContentGenerator }() {
                 </CardHeader>
                 <CardContent>
                   {isGenerating ? (<div className="flex flex-col items-center justify-center py-12">
-                      <Loader2 className="h-8 w-8 animate-spin text-zion-purple mb-4"/>
+                      <Loader2 className="h-8 w-8 animate-spin text-zion-purple mb-4" />
                       <p className="text-zion-slate-light">Generating content...</p>
                     </div>) : previewContent ? (contentType === 'blog' ? (<div className="space-y-4">
                         <Tabs defaultValue="preview" className="w-full">
@@ -252,7 +244,7 @@ export { ContentGenerator }() {
                               <h2 className="text-xl font-bold">{previewContent.subject}</h2>
                               <p className="text-gray-500 text-sm mt-2">{previewContent.previewText}</p>
                               <div className="border-t border-gray-200 my-4"></div>
-                              <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: previewContent.body }}/>
+                              <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: previewContent.body }} />
                               <div className="mt-6">
                                 <Button className="bg-zion-purple hover:bg-zion-purple-dark text-white">
                                   {previewContent.cta || "Visit Zion Marketplace"}
@@ -278,10 +270,10 @@ export { ContentGenerator }() {
                       </div>)) : (<div className="flex flex-col items-center justify-center py-12 text-center">
                       <div className="bg-zion-blue-light/20 p-6 rounded-full mb-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8 text-zion-purple">
-                          <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
-                          <polyline points="14 2 14 8 20 8"/>
-                          <path d="M12 18v-6"/>
-                          <path d="M8 15h8"/>
+                          <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+                          <polyline points="14 2 14 8 20 8" />
+                          <path d="M12 18v-6" />
+                          <path d="M8 15h8" />
                         </svg>
                       </div>
                       <h3 className="text-white font-medium mb-2">No Content Generated Yet</h3>
@@ -297,3 +289,7 @@ export { ContentGenerator }() {
       </div>
       
     </>)}
+
+</h>
+</Textarea>
+</div>

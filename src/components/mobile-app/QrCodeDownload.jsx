@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDownload = () => {
+import React, {useState} from 'react';
+import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDownload = (props: any) => {
   const [copied, setCopied] = useState(false);
   const [activeTab, setActiveTab] = useState('ios');
 
@@ -18,14 +18,11 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
 
 
 },
-    android: {
-      name: 'Google Play Store',
+    android: {name: 'Google Play Store',
       url: 'https://play.google.com/store/apps/details?id=com.zion.mobile',
       qrCode: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNDAgNDBIMTYwVjE2MEg0MFY0MFoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik02MCA2MEgxNDBWMTQwSDYwVjYwWiIgZmlsbD0iIzAwMCIvPgo8L3N2Zz4K',
       icon: '🤖',
-      description: 'Download for Android devices'
-
-  };
+      description: 'Download for Android devices'};
 
   const handleCopyLink = async (url) => {
     try {
@@ -33,8 +30,7 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
       setCopied(true);
       // // // // // // // console.error('Failed to copy: ', err);
     }
-      setTimeout(() => setCopied(false), 2000)} catch (err) {
-      console.error('Failed to copy: ', err)}
+      setTimeout(() => setCopied(false), 2000)} catch (err) {console.error('Failed to copy: ', err)}
   };
 
   const handleShare = async (platform) => {
@@ -49,14 +45,9 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
           url: url
         // // // // // // // console.error('Error sharing:', err);
       }
-    } else {
-      // Fallback for browsers that don't support Web Share API
-      handleCopyLink(url);
-
-        })} catch (err) {
-        console.error('Error sharing:', err)}
-    } else {
-      // Fallback for browsers that don't support Web Share API
+    } else {// Fallback for browsers that don't support Web Share API
+      handleCopyLink(url);})} catch (err) {console.error('Error sharing:', err)}
+    } else {// Fallback for browsers that don't support Web Share API
       handleCopyLink(url)}
   };
 
@@ -81,16 +72,15 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
             <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
               <div className="text-center">
                 <div className="flex items-center justify-center mb-6">
-                  <QrCode className="w-8 h-8 text-blue-400 mr-3" />
+                  <QrCode className="w-8 h-8 text-blue-400 mr-3"  />
                   <h3 className="text-2xl font-bold text-white">Scan to Download</h3>
                 </div>
 
                 <div className="bg-white rounded-2xl p-6 mb-6 inline-block">
-                  <img
-                    src={currentPlatform.qrCode}
+                  <img src={currentPlatform.qrCode}
                     alt={`QR Code for ${currentPlatform.name}`}
                     className="w-48 h-48 mx-auto"
-                  />
+                    />
                 </div>
 
                 <p className="text-gray-300 mb-4">
@@ -98,7 +88,7 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
                 </p>
 
                 <div className="flex items-center justify-center space-x-2 text-sm text-gray-400">
-                  <Smartphone className="w-4 h-4" />
+                  <Smartphone className="w-4 h-4"  />
                   <span>Works with  QR code scanner app</span>
                 </div>
               </div>
@@ -139,13 +129,12 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
               </div>
 
               <div className="space-y-4">
-                <a
-                  href={currentPlatform.url}
+                <a href={currentPlatform.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full flex items-center justify-center space-x-3 px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
 
-                  <Download className="w-5 h-5" />
+                  <Download className="w-5 h-5"  />
                   <span>Download Now</span>
                 </a>
 
@@ -154,7 +143,7 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
                     onClick={() => handleShare(activeTab)}
                     className="flex items-center justify-center space-x-2 px-4 py-3 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300"
 
-                    <Share2 className="w-4 h-4" />
+                    <Share2 className="w-4 h-4"  />
                     <span>Share</span>
                   </button>
 
@@ -164,12 +153,12 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
 
                     {copied ? (;
                       <>
-                        <Check className="w-4 h-4 text-green-400" />
+                        <Check className="w-4 h-4 text-green-400"  />
                         <span>Copied!</span>
                       </>
                     ) : (
                       <>
-                        <Copy className="w-4 h-4" />
+                        <Copy className="w-4 h-4"  />
                         <span>Copy Link</span>
                       </>
                     )}

@@ -1,12 +1,12 @@
 import React from "react"
 import Head from "next/head"
 import Link from "next/link"
-const Talent = () => {
+const Talent = (props: any) => {
   return (
     <>
       <Head>
         <title>Talent - Zion Tech Group</title>
-        <meta name="description" content="Professional Talent services"   />
+        <meta name="description" content="Professional Talent services"    />
       </Head>
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-12">
@@ -48,3 +48,8 @@ const Talent = () => {
   );
 }
 export default Talent
+
+</div>
+</div>
+</div>
+</div>

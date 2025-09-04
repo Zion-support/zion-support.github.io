@@ -1,4 +1,4 @@
-import React from 'react'; const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState(false); const [isAnalyzing, setIsAnalyzing] = useState(false); const [report, setReport] = useState(null); const [selectedPage, setSelectedPage] = useState(null); const analyzeSEO = useCallback(async () => { setIsAnalyzing(true) ; try {
+import React from 'react'; const SEOOptimizer = (props: any) => { const [isOpen, setIsOpen] = useState(false); const [isAnalyzing, setIsAnalyzing] = useState(false); const [report, setReport] = useState(null); const [selectedPage, setSelectedPage] = useState(null); const analyzeSEO = useCallback(async () => { setIsAnalyzing(true) ; try {
 }, [])
 }
     useEffect(() => {}
@@ -6,7 +6,7 @@ import React from 'react'; const SEOOptimizer = () => { const [isOpen, setIsOpen
         // comment
 analyzeSEO()}, [analyzeSEO])
 }
-    const calculateSEOScore = (page) => {}
+    const calculateSEOScore = (props: any) => {}
 
         let score = 0,
 let maxScore = 0,
@@ -105,7 +105,7 @@ let maxScore = 0,
 """""
             issues.push("URL could be more SEO-friendly (consider using hyphens))}"
         return issues}"
-    const generateSEORecommendations = (issues) => {}""
+    const generateSEORecommendations = (props: any) => {}""
         const recommendations = []"""
         if (issues.some(issue => issue.includes("Title"))) {}""
 """
@@ -138,7 +138,7 @@ let maxScore = 0,
         recommendations.push()
 }        return recommendations}
 
-    const generateSummary = (pageAnalyses, topIssues) => {}
+    const generateSummary = (props: any) => {}
 
         const totalPages = pageAnalyses.length,
 const excellentPages = pageAnalyses.filter(page => page.score >= 80) .length,
@@ -173,7 +173,7 @@ let summary = "Analyzed ${totalPages} pages for SEO."
             summary += "Top SEO issues to address: ${topIssues.slice(0, 3).join(")}."}"
         return summary}
 
-    const exportSEOReport = () => {}"
+    const exportSEOReport = (props: any) => {}"
         if (!report)""
             return"""
         const csvContent = [], ...report.pageAnalyses.map(page => [page.pageUrl,"""
@@ -184,7 +184,7 @@ let summary = "Analyzed ${totalPages} pages for SEO."
 ])""""""""", """
 ].map(row = > row.map(cell => ""${cell}"").join(")).join("
 ")",""
-        const blob = new Blob([csvContent], { type: "text/csv" })""
+        const blob = new Blob([csvContent], {type: "text/csv"})""
         const url = window.URL.createObjectURL(blob)"
         const a = document.createElement("a")""
         a.href = url","
@@ -196,7 +196,7 @@ let summary = "Analyzed ${totalPages} pages for SEO."
 ])""""""""",""
 ].map(row => row.map(cell => ""${cell}"").join(")).join("
 ")"
-        const blob = new Blob([csvContent], { type: "text/csv" })"
+        const blob = new Blob([csvContent], {type: "text/csv"})"
         const url = window.URL.createObjectURL(blob)"
         const a = document.createElement("a")"
         a.href = url,
@@ -204,7 +204,7 @@ a.download = "seo-optimization-report.csv
         a.click()
 }
         window.URL.revokeObjectURL(url)}"
-    const getScoreColor = (score) => {}""
+    const getScoreColor = (props: any) => {}""
         if (score >= 80)"""
             return "text-green-600 bg-green-50 border-green-200""
         if (score >= 60)"""
@@ -212,7 +212,7 @@ a.download = "seo-optimization-report.csv
         if (score >= 40)"""
             return "text-orange-600 bg-orange-50 border-orange-200""
         return "text-red-600 bg-red-50 border-red-200"}"
-    const getScoreText = (score) => {}""
+    const getScoreText = (props: any) => {}""
         if (score >= 80)"""
             return "Excellent"
         if (score >= 60)""
@@ -407,12 +407,22 @@ a.download = "seo-optimization-report.csv
     </div>)};
 export default SEOOptimizer;
 
-export { SEOOptimizer };
+export {SEOOptimizer};
 
-export { SEOOptimizer };
+export {SEOOptimizer};
 
-export { SEOOptimizer };
+export {SEOOptimizer};
 
-export { SEOOptimizer };
+export {SEOOptimizer};
 
-export { SEOOptimizer };
+export {SEOOptimizer};
+
+</Download>
+</RefreshCw>
+</Zap>
+</AlertTriangle>
+</AlertTriangle>
+</RefreshCw>
+</TrendingUp>
+</Search>
+</div>

@@ -1,44 +1,39 @@
 import React from 'react';'''
-import { Link } from 'react-router-dom';'''
-import { motion } from 'framer-motion';
-import { Home, Search, ArrowRight, AlertTriangle const NotFound = () => {}
+import {Link} from 'react-router-dom';'''
+import {motion} from 'framer-motion';
+import { Home, Search, ArrowRight, AlertTriangle const NotFound = (props: any) => {}
 '
 ''
 '''
     const popularPages = [''''
-        { path: '/', label: 'Home', description: 'Main landing page' },'''
-        { path: '/services', label: 'Services', description: 'All our services' },'''
-        { path: '/about', label: 'About Us', description: 'Learn about Zion Tech Group' },'''
-        { path: '/contact', label: 'Contact', description: 'Get in touch with us' },'''
-        { path: '/blog', label: 'Blog', description: 'Latest insights and news' },'''
-        { path: '/careers', label: 'Careers', description: 'Join our team' }''
+        {path: '/', label: 'Home', description: 'Main landing page'},'''
+        {path: '/services', label: 'Services', description: 'All our services'},'''
+        {path: '/about', label: 'About Us', description: 'Learn about Zion Tech Group'},'''
+        {path: '/contact', label: 'Contact', description: 'Get in touch with us'},'''
+        {path: '/blog', label: 'Blog', description: 'Latest insights and news'},'''
+        {path: '/careers', label: 'Careers', description: 'Join our team'}''
     ];'''
     const servicePages = [''''
-        { path: '/services/ai', label: 'AI Services', description: 'Artificial Intelligence solutions' },'''
-        { path: '/services/cloud', label: 'Cloud Services', description: 'Cloud infrastructure and DevOps' },'''
-        { path: '/services/cybersecurity', label: 'Cybersecurity', description: 'Security and protection' },'''
-        { path: '/services/infrastructure', label: 'IT Infrastructure', description: 'Enterprise IT solutions' }
+        {path: '/services/ai', label: 'AI Services', description: 'Artificial Intelligence solutions'},'''
+        {path: '/services/cloud', label: 'Cloud Services', description: 'Cloud infrastructure and DevOps'},'''
+        {path: '/services/cybersecurity', label: 'Cybersecurity', description: 'Security and protection'},'''
+        {path: '/services/infrastructure', label: 'IT Infrastructure', description: 'Enterprise IT solutions'}
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4">""""
       <motion.div className="max-w-4xl mx-auto text-center" initial = {}
-  { opacity: 0,
-  y: 20;
-}} animate = {}
-  { opacity: 1,
-  y: 0;
-}} transition={{ duration: 0.5 }}>"""
+  {opacity: 0,
+  y: 20;}} animate = {}
+  {opacity: 1,
+  y: 0;}} transition={{ duration: 0.5 }}>"""
         {/* 404 Icon */}""""
         <motion.div className="mb-8" animate = {}
-  { scale: [1, 1.1,
-  1]
-
-}} transition = {}
-  { duration: 2,
+  {scale: [1, 1.1,
+  1]}} transition = {}
+  {duration: 2,
   repeat: Infinity;
-"""
-}}>""""
+"""}}>""""
           <div className="w-32 h-32 mx-auto bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center">""""
-            <AlertTriangle className="w-16 h-16 text-white"/>
+            <AlertTriangle className="w-16 h-16 text-white" />
           </div>
         </motion.div>
 """
@@ -57,8 +52,8 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = () => {}
         {/* Search Section */}""""
         <motion.div className="mb-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>""""
           <div className="max-w-md mx-auto relative">""""
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"/>""""
-            <input type="text" placeholder="Search our website..." className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors"/>
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />""""
+            <input type="text" placeholder="Search our website..." className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors"  />
           </div>
         </motion.div>
 """
@@ -67,13 +62,11 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = () => {}
           <h3 className="text-2xl font-semibold text-white mb-6">Popular Pages</h3>""""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {popularPages.map((page, index) => (<motion.div key={page.path} initial = {}
-  { opacity: 0,
-  y: 20;
-}} animate = {}
-  { opacity: 1,
+  {opacity: 0,
+  y: 20;}} animate = {}
+  {opacity: 1,
   y: 0;
-"""
-}} transition={{ delay: 0.1 * index }}>""""
+"""}} transition={{ delay: 0.1 * index }}>""""
                 <Link to={page.path} className="block p-4 bg-white/10 border border-white/20 rounded-lg hover:border-blue-400 hover:bg-white/20 transition-all duration-300 group">""""
                   <div className="flex items-center justify-between">""""
                     <div className="text-left">""""
@@ -82,7 +75,7 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = () => {}
                       </h4>""""
                       <p className="text-gray-400 text-sm">{page.description}</p>"""
                     </div>""""
-                    <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-300"/>
+                    <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-300" />
                   </div>
                 </Link>
               </motion.div>) ) }
@@ -94,13 +87,11 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = () => {}
           <h3 className="text-2xl font-semibold text-white mb-6">Our Services</h3>""""
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {servicePages.map((service, index) => (<motion.div key={service.path} initial = {}
-  { opacity: 0,
-  y: 20;
-}} animate = {}
-  { opacity: 1,
+  {opacity: 0,
+  y: 20;}} animate = {}
+  {opacity: 1,
   y: 0;
-"""
-}} transition={{ delay: 0.1 * index }}>""""
+"""}} transition={{ delay: 0.1 * index }}>""""
                 <Link to={service.path} className="block p-4 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-400/30 rounded-lg hover:border-blue-400 hover:from-blue-500/30 hover:to-cyan-500/30 transition-all duration-300 group">""""
                   <div className="flex items-center justify-between">""""
                     <div className="text-left">""""
@@ -109,7 +100,7 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = () => {}
                       </h4>""""
                       <p className="text-gray-300 text-sm">{service.description}</p>"""
                     </div>""""
-                    <ArrowRight className="w-5 h-5 text-blue-400 group-hover:text-blue-300 group-hover:translate-x-1 transition-all duration-300"/>
+                    <ArrowRight className="w-5 h-5 text-blue-400 group-hover:text-blue-300 group-hover:translate-x-1 transition-all duration-300" />
                   </div>
                 </Link>
               </motion.div>) ) }
@@ -119,12 +110,12 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = () => {}
         {/* CTA Buttons */}""""
         <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }}>""""
           <Link to="/" className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">""""
-            <Home className="w-5 h-5"/>
+            <Home className="w-5 h-5" />
             Go Home"""
           </Link>""""
           <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 hover:border-white/30 transition-all duration-300">"""
             Contact Support""""
-            <ArrowRight className="w-5 h-5"/>
+            <ArrowRight className="w-5 h-5" />
           </Link>
         </motion.div>
 """
@@ -144,12 +135,22 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = () => {}
 export default NotFound;
 }
 
-export { NotFound };
+export {NotFound};
 
-export { NotFound };
+export {NotFound};
 
-export { NotFound };
+export {NotFound};
 
-export { NotFound };
+export {NotFound};
 
-export { NotFound };
+export {NotFound};
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

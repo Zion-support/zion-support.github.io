@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Grid3X3, ListFilter, Loader2 } from 'lucide-react';
+import React, {useState, useEffect} from 'react';
+import {useNavigate} from 'react-router-dom';
+import {Button} from '@/components/ui/button';
+import {Grid3X3, ListFilter, Loader2} from 'lucide-react';
 
 export default function Marketplace
-export { Marketplace }() {
+export {Marketplace}() {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedProductTypes, setSelectedProductTypes] = useState([]);
@@ -27,27 +27,23 @@ export { Marketplace }() {
         rating: 4.8,
         description: 'Professional AI development and consulting services'
       },
-      {
-        id: 2,
+      {id: 2,
         title: 'Cloud Infrastructure Solutions',
         category: 'IT Services',
         location: 'On-site',
         availability: 'Available',
         rating: 4.9,
-        description: 'Enterprise cloud infrastructure and DevOps solutions'
-      }
+        description: 'Enterprise cloud infrastructure and DevOps solutions'}
     ]);
   }, []);
 
-  const clearAllFilters = () => {
-    setSearchQuery('');
+  const clearAllFilters = (props: any) => {setSearchQuery('');
     setSelectedProductTypes([]);
     setSelectedLocations([]);
     setSelectedAvailability([]);
-    setSelectedRating(null);
-  };
+    setSelectedRating(null);};
 
-  const handleRequestQuote = (listingId) => {
+  const handleRequestQuote = (props: any) => {
     const listing = listings.find(item => item.id === listingId);
     if (listing) {
       navigate('/request-quote', {
@@ -63,15 +59,9 @@ export { Marketplace }() {
     if (searchQuery && !listing.title.toLowerCase().includes(searchQuery.toLowerCase())) {
       return false;
     }
-    if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
-      return false;
-    }
-    if (selectedLocations.length > 0 && !selectedLocations.includes(listing.location)) {
-      return false;
-    }
-    if (selectedRating && listing.rating < selectedRating) {
-      return false;
-    }
+    if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {return false;}
+    if (selectedLocations.length > 0 && !selectedLocations.includes(listing.location)) {return false;}
+    if (selectedRating && listing.rating < selectedRating) {return false;}
     return true;
   });
 
@@ -104,7 +94,7 @@ export { Marketplace }() {
               onClick={() => setView('grid')}
               className={view === 'grid' ? 'text-blue-400' : 'text-gray-400'}
             >
-              <Grid3X3 className="h-4 w-4" />
+              <Grid3X3 className="h-4 w-4"  />
             </Button>
             <Button
               variant="ghost"
@@ -112,7 +102,7 @@ export { Marketplace }() {
               onClick={() => setView('list')}
               className={view === 'list' ? 'text-blue-400' : 'text-gray-400'}
             >
-              <ListFilter className="h-4 w-4" />
+              <ListFilter className="h-4 w-4"  />
             </Button>
           </div>
         </div>
@@ -131,7 +121,7 @@ export { Marketplace }() {
         {/* Display marketplace listings */}
         {isLoading ? (
           <div className="flex justify-center py-20">
-            <Loader2 className="h-8 w-8 animate-spin text-blue-500" />
+            <Loader2 className="h-8 w-8 animate-spin text-blue-500"  />
           </div>
         ) : (
           <div className={view === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 gap-6' : 'flex flex-col gap-6'}>

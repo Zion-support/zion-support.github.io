@@ -1,38 +1,28 @@
 import React from 'react';
-import { FileText, Scale, Shield, AlertTriangle, CheckCircle, Users } from 'lucide-react';
+import {FileText, Scale, Shield, AlertTriangle, CheckCircle, Users} from 'lucide-react';
 
-export default function Terms() {
+export default function Terms(props: any) {
   const sections = [
     {
       icon: Users,
       title: "Acceptance of Terms",
       content: "By accessing and using Zion Tech Group's services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service."
     },
-    {
-      icon: Shield,
+    {icon: Shield,
       title: "Use License",
-      content: "Permission is granted to temporarily download one copy of the materials on Zion Tech Group's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title."
-    },
-    {
-      icon: AlertTriangle,
+      content: "Permission is granted to temporarily download one copy of the materials on Zion Tech Group's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title."},
+    {icon: AlertTriangle,
       title: "Disclaimer",
-      content: "The materials on Zion Tech Group's website are provided on an 'as is' basis. Zion Tech Group makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights."
-    },
-    {
-      icon: Scale,
+      content: "The materials on Zion Tech Group's website are provided on an 'as is' basis. Zion Tech Group makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights."},
+    {icon: Scale,
       title: "Limitations",
-      content: "In no event shall Zion Tech Group or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Zion Tech Group's website."
-    },
-    {
-      icon: FileText,
+      content: "In no event shall Zion Tech Group or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Zion Tech Group's website."},
+    {icon: FileText,
       title: "Accuracy of Materials",
-      content: "The materials appearing on Zion Tech Group's website could include technical, typographical, or photographic errors. Zion Tech Group does not warrant that any of the materials on its website are accurate, complete, or current."
-    },
-    {
-      icon: CheckCircle,
+      content: "The materials appearing on Zion Tech Group's website could include technical, typographical, or photographic errors. Zion Tech Group does not warrant that any of the materials on its website are accurate, complete, or current."},
+    {icon: CheckCircle,
       title: "Modifications",
-      content: "Zion Tech Group may revise these terms of service for its website at any time without notice. By using this website, you are agreeing to be bound by the then current version of these terms of service."
-    }
+      content: "Zion Tech Group may revise these terms of service for its website at any time without notice. By using this website, you are agreeing to be bound by the then current version of these terms of service."}
   ];
 
   return (
@@ -51,16 +41,19 @@ export default function Terms() {
           </div>
         </div>
 </main>
-      <Footer />
+      <Footer  />
     </>);
 }
 
-export { Terms };
+export {Terms};
 
-export { Terms };
+export {Terms};
 
-export { Terms };
+export {Terms};
 
-export { Terms };
+export {Terms};
 
-export { Terms };
+export {Terms};
+
+</div>
+</div>

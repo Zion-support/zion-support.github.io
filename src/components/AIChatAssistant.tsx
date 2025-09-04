@@ -7,11 +7,11 @@ interface Message {
   sender: 'user' | 'ai';
 }
 
-const AIChatAssistant: React.FC = () => {
+const AIChatAssistant: React.FC = (props: any) => {
   const [messages, setMessages] = useState<Message[]>([]);
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState<any>('');
 
-  const handleSend = () => {
+  const handleSend = (props: any) => {
     if (!input.trim()) return;
 
     const userMessage: Message = {
@@ -76,3 +76,6 @@ const AIChatAssistant: React.FC = () => {
 };
 
 export default AIChatAssistant;
+
+</any>
+</Message>

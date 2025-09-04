@@ -1,3 +1,4 @@
+import React from 'react';
 '
     min = parseFloat(budgetString.replace(/[>$,\soverk]/g, ''));'
      if (budgetString.includes('k')) min = kTo1000(budgetString);
@@ -54,20 +55,20 @@ export
     // No clear target for progress bar, maybe show 50% or hide it
     progressValue = 50}
 ;
-  const getAlertVariant = () => {;'"
+  const getAlertVariant = (props: any) => {;'"
     if (status === 'good') return "bg-green-50 border-green-500 text-green-700 dark: b g-green-900/30 dark: tex t-green-300";'"
     if (status === 'warning') return "bg-yellow-50 border-yellow-500 text-yellow-700 dark: b g-yellow-900/30 dark: tex t-yellow-300";'"
     if (status === 'danger') return "bg-red-50 border-red-500 text-red-700 dark: b g-red-900/30 dark: tex t-red-300";"
     return "bg-blue-50 border-blue-500 text-blue-700 dark: b g-blue-900/30 dark: tex t-blue-300"; // Info
   };
 
-  const getIcon = () => {;'"
+  const getIcon = (props: any) => {;'"
     if (status === 'good') return <CheckCircle className="h-5 w-5 text-green-500"   />;'"
     if (status === 'warning') return <AlertTriangle className="h-5 w-5 text-yellow-500"   />;'"
     if (status === 'danger') return <TrendingDown className="h-5 w-5 text-red-500"   />; // Or AlertTriangle"
     return <Info className="h-5 w-5 text-blue-500"   />};
 
-  const getProgressColor = () => {;'"
+  const getProgressColor = (props: any) => {;'"
     if (status === 'good') return "bg-green-500";'"
     if (status === 'warning') return "bg-yellow-500";'"
     if (status === 'danger') return "bg-red-500";"    return "bg-blue-500"}

@@ -2,7 +2,7 @@ import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCircle, Clock, TrendingUp, Network, Server, Smartphone, Monitor } from 'lucide-react';
 
-const IoTEdgeComputing: React.FC = () => {
+const IoTEdgeComputing: React.FC = (props: any) => {
   const features = [
     {
       icon: Cpu,
@@ -263,3 +263,13 @@ const IoTEdgeComputing: React.FC = () => {
 };
 
 export default IoTEdgeComputing;
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</SEO>

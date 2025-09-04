@@ -6,7 +6,7 @@ import React, { useState } from "react"
  * @param {*} params - Function parameters
  * @returns {*} Function return value
  */
-function PricingSection () {
+function PricingSection(props: any) {
 
       icon: Shiel d;
     };  ];
@@ -229,7 +229,7 @@ whileHover="{{" scale: 1.05 }}"
         </motion.div>
       </div>
     </section>";,
-export default function PricingSection() {return ("
+export default function PricingSection(props: any) {return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="PricingSection - Zion Tech Group" description="Professional PricingSection services by Zion Tech Group"   />"
       <div className="container mx-auto px-4 py-20">"
@@ -239,3 +239,16 @@ export default function PricingSection() {return ("
         </p>
       </div>
   );"}"
+
+</div>
+</motion>
+</motion>
+</motion>
+</motion>
+</div>
+</motion>
+</motion>
+</motion>
+</div>
+</div>
+</section>

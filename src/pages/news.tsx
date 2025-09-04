@@ -12,7 +12,7 @@ import {
   Lightbulb
 } from 'lucide-react';
 
-export default function NewsPage() {
+export default function NewsPage(props: any) {
   const newsArticles = [
     {
       title: "Zion Tech Group Named Top AI Innovation Company 2025",
@@ -257,7 +257,7 @@ export default function NewsPage() {
             <input type="email" 
               placeholder="Enter your email address"
               className="flex-1 px-4 py-3 bg-white text-zion-slate-dark rounded-lg focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan"
-             />
+              />
             <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover: fro m-zion-cyan-light hover: t o-zion-blue-light transition-all duration-300">
               Subscribe
             </button>

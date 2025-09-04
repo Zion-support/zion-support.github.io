@@ -1,16 +1,15 @@
-import { useState, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
-import { Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2 } from 'lucide-react';
+import {useState, useCallback} from 'react';'
+import {motion, AnimatePresence} from 'framer-motion';'
+import {Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2} from 'lucide-react';
 ;
 ;
-export const BlockchainWeb3Dashboard = ({ className = '' }) => {
-    const { trackEvent } = useAnalytics({        enableTracking: true,
-        enableUserBehaviorTracking: true;
-    });'
+export const BlockchainWeb3Dashboard = (props: any) => {
+    const { trackEvent } = useAnalytics({enableTracking: true,
+        enableUserBehaviorTracking: true;});'
     const [activeTab, setActiveTab] = useState('overview');
     const [showMintNFT, setShowMintNFT] = useState(false);
     const [showSendTransaction, setShowSendTransaction] = useState(false);
-    const { wallet, contracts, nfts, defiPositions, transactions, metrics, isConnecting, isProcessing, connectWallet, disconnectWallet, switchNetwork, addContract, mintNFT, sendTransaction, createDeFiPosition } = useBlockchainWeb3();
+    const {wallet, contracts, nfts, defiPositions, transactions, metrics, isConnecting, isProcessing, connectWallet, disconnectWallet, switchNetwork, addContract, mintNFT, sendTransaction, createDeFiPosition} = useBlockchainWeb3();
     const [nftForm, setNftForm] = useState({}
 ''
 ''
@@ -47,7 +46,7 @@ if(nftForm.name.trim() && wallet) {}
 }""";", "
 }";""
                 await mintNFT(contracts[1]?.address || "", metadata)","
-                setNftForm({ name : "", description: "", image: "" })"""
+                setNftForm({name : "", description: "", image: ""})"""
                 setShowMintNFT(false)","
                 trackEvent("blockchain", dashboard",nft_minted")}"
             catch (error) {}"""
@@ -55,7 +54,7 @@ if(nftForm.name.trim() && wallet) {}
 """""",",
 }""}"
                 await mintNFT(contracts[1]?.address || "", metadata)"
-                setNftForm({ name: "", description: "", image: "" })"
+                setNftForm({name: "", description: "", image: ""})"
                 setShowMintNFT(false)"
                 trackEvent("blockchain",dashboard",nft_minted")}
 
@@ -74,7 +73,7 @@ if(nftForm.name.trim() && wallet) {}
         if(transactionForm.to.trim() && transactionForm.value && wallet) {}"
             try {}""
                 await sendTransaction(transactionForm.to, transactionForm.value, transactionForm.data || null)"""
-                setTransactionForm({ to: "", value: "", data: "" })""
+                setTransactionForm({to: "", value: "", data: ""})""
                 setShowSendTransaction(false)"""
                 trackEvent("blockchain", dashboard",transaction_sent")}"
             catch (error) {}""
@@ -86,7 +85,7 @@ if(nftForm.name.trim() && wallet) {}
 
     }, [transactionForm, wallet, sendTransaction, trackEvent])
 }
-    const getStatusColor = (status) => {}"
+    const getStatusColor = (props: any) => {}"
         switch (status) {}""
 ""
             case "confirmed": return "text-green-600 bg-green-100"
@@ -172,9 +171,9 @@ if(nftForm.name.trim() && wallet) {}
 """""""
           {activeTab === "contracts" && (<motion.div key="contracts" initial = {}
 
-  { opacity: 0, y: 20}} animate = {}"
-  { opacity: 1, y: 0}} exit = {}""
-  { opacity: 0, y: -20 """"">
+  {opacity: 0, y: 20}} animate = {}"
+  {opacity: 1, y: 0}} exit = {}""
+  {opacity: 0, y: -20 """"">
 """"}} className="space-y-4">""""
               <div className="flex items-center justify-between">""""
                 <h3 className="text-lg font-semibold text-gray-900 dark: text-white">Smart Contracts</h3>,
@@ -242,9 +241,9 @@ if(nftForm.name.trim() && wallet) {}
 """""""
           {activeTab === "nfts" && (<motion.div key="nfts" initial = {}
 
-  { opacity: 0, y: 20}} animate = {}"
-  { opacity: 1, y: 0}} exit = {}""
-  { opacity: 0, y: -20 """"">
+  {opacity: 0, y: 20}} animate = {}"
+  {opacity: 1, y: 0}} exit = {}""
+  {opacity: 0, y: -20 """"">
 """"}} className="space-y-4">""""
               <div className="flex items-center justify-between">""""
                 <h3 className="text-lg font-semibold text-gray-900 dark: text-white">NFT Collection</h3>"""",
@@ -293,9 +292,9 @@ if(nftForm.name.trim() && wallet) {}
 """""""
           {activeTab === "defi" && (<motion.div key="defi" initial = {}
 
-  { opacity: 0, y: 20}} animate = {}"
-  { opacity: 1, y: 0}} exit = {}""
-  { opacity: 0, y: -20 """"">
+  {opacity: 0, y: 20}} animate = {}"
+  {opacity: 1, y: 0}} exit = {}""
+  {opacity: 0, y: -20 """"">
 """"}} className="space-y-4">""""
               <div className="flex items-center justify-between">""""
                 <h3 className="text-lg font-semibold text-gray-900 dark: text-white">DeFi Positions</h3>,
@@ -364,9 +363,9 @@ if(nftForm.name.trim() && wallet) {}
 """""""
           {activeTab === "transactions" && (<motion.div key="transactions" initial = {}
 
-  { opacity: 0, y: 20}} animate = {}"
-  { opacity: 1, y: 0}} exit = {}""
-  { opacity: 0, y: -20 """"">
+  {opacity: 0, y: 20}} animate = {}"
+  {opacity: 1, y: 0}} exit = {}""
+  {opacity: 0, y: -20 """"">
 """"}} className="space-y-4">""""
               <div className="flex items-center justify-between">""""
                 <h3 className="text-lg font-semibold text-gray-900 dark: text-white">Transaction History</h3>"""",
@@ -451,9 +450,9 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
         {showMintNFT && (<motion.div initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} exit="{{" opacity: 0 }} className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <motion.div initial = {}
 
-  { scale: 0.9, opacity: 0}} animate = {}"
-  { scale: 1, opacity: 1}} exit = {}""
-  { scale: 0.9, opacity: 0 """"">
+  {scale: 0.9, opacity: 0}} animate = {}"
+  {scale: 1, opacity: 1}} exit = {}""
+  {scale: 0.9, opacity: 0 """"">
 """"}} className="bg-white dark: bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4">""""
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Mint New NFT</h3>"""""
               """"
@@ -463,7 +462,7 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
                     Name"""""
                   </label>""""",
                   <input type="text" value="{nftForm.name}" onChange = {}"""
-  (e) =" > setNftForm(prev => ({ ...prev, name: e.target.value """"",
+  (e) =" > setNftForm(prev => ({...prev, name: e.target.value """"",
 """"}))} className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="NFT Name" />"
                 </div>""
                 """""
@@ -472,7 +471,7 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
                     Description,
                   </label>",
                   <textarea value="{nftForm.description}" onChange = {}"""
-  (e) =" > setNftForm(prev => ({ ...prev, description: e.target.value """"",
+  (e) =" > setNftForm(prev => ({...prev, description: e.target.value """"",
 """"}))} className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="NFT Description" rows="{3}/">"
                 </div>""
                 """""
@@ -481,7 +480,7 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
                     Image URL (optional)"""""
                   </label>""""",
                   <input type="url" value="{nftForm.image}" onChange = {}"""
-  (e) =" > setNftForm(prev => ({ ...prev, image: e.target.value """"",
+  (e) =" > setNftForm(prev => ({...prev, image: e.target.value """"",
 """"}))} className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="https:// comment
                 </div>""
               </div>"""""
@@ -503,9 +502,9 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
         {showSendTransaction && (<motion.div initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} exit="{{" opacity: 0 }} className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <motion.div initial = {}
 
-  { scale: 0.9, opacity: 0}} animate = {}"
-  { scale: 1, opacity: 1}} exit = {}""
-  { scale: 0.9, opacity: 0 """"">
+  {scale: 0.9, opacity: 0}} animate = {}"
+  {scale: 1, opacity: 1}} exit = {}""
+  {scale: 0.9, opacity: 0 """"">
 """"}} className="bg-white dark: bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4">""""
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Send Transaction</h3>"""""
               """"
@@ -515,7 +514,7 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
                     To Address"""""
                   </label>""""",
                   <input type="text" value="{transactionForm.to}" onChange = {}"""
-  (e) =" > setTransactionForm(prev => ({ ...prev, to: e.target.value """"",
+  (e) =" > setTransactionForm(prev => ({...prev, to: e.target.value """"",
 """"}))} className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="0x..." />"
                 </div>""
                 """""
@@ -524,7 +523,7 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
                     Amount (ETH)"""""
                   </label>""""",
                   <input type="number" step="0.001" value="{transactionForm.value}" onChange = {}"""
-  (e) =" > setTransactionForm(prev => ({ ...prev, value: e.target.value """"",
+  (e) =" > setTransactionForm(prev => ({...prev, value: e.target.value """"",
 """"}))} className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="0.1" />"
                 </div>""
                 """"
@@ -533,7 +532,7 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
                     Data(),
                   </label>",
                   <textarea value="{transactionForm.data}" onChange = {}"""
-  (e) =" > setTransactionForm(prev => ({ ...prev, data: e.target.value """"",
+  (e) =" > setTransactionForm(prev => ({...prev, data: e.target.value """"",
 """"}))} className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="0x..." rows="{3}/">"
                 </div>""
               </div>"""""
@@ -554,7 +553,32 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
 """"'""`""
 "
 
-  } catch (error) {
-    console.error(error);
-  }
+  } catch (error) {console.error(error);}
 export default Component
+
+</textarea>
+</motion>
+</motion>
+</textarea>
+</motion>
+</motion>
+</Coins>
+</Send>
+</motion>
+</div>
+</Plus>
+</motion>
+</div>
+</Plus>
+</motion>
+</div>
+</Plus>
+</Plus>
+</motion>
+</Plus>
+</Send>
+</Download>
+</Wallet>
+</div>
+</div>
+</div>

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 ;
 ;
-const EnhancedComprehensiveServicesShowcase = () => {
+const EnhancedComprehensiveServicesShowcase = (props: any) => {
     const [activeCategory, setActiveCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedService, setSelectedService] = useState(null);
@@ -11,26 +11,21 @@ const EnhancedComprehensiveServicesShowcase = () => {
             type: 'Advanced AI & Innovation',
             displayPrice: service.price
         })),
-        ...specializedEnterpriseSolutions2025.map(service => ({
-            ...service,
+        ...specializedEnterpriseSolutions2025.map(service => ({...service,
             type: 'Specialized Enterprise',
-            displayPrice: service.price
-        }))
+            displayPrice: service.price}))
     ];
-    const filteredServices = allServices.filter(service => {
-        const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const filteredServices = allServices.filter(service => {const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.category.toLowerCase().includes(searchTerm.toLowerCase());
         return matchesCategory && matchesSearch});
     const categories = [
-        { id: 'all', name: 'All Services', count: allServices.length },
-        { id: 'Advanced AI & Innovation', name: 'Advanced AI & Innovation', count: advancedInnovativeServicesExpansionV3.length },
-        { id: 'Specialized Enterprise', name: 'Specialized Enterprise', count: specializedEnterpriseSolutions2025.length }
+        {id: 'all', name: 'All Services', count: allServices.length},
+        {id: 'Advanced AI & Innovation', name: 'Advanced AI & Innovation', count: advancedInnovativeServicesExpansionV3.length},
+        {id: 'Specialized Enterprise', name: 'Specialized Enterprise', count: specializedEnterpriseSolutions2025.length}
     ];
-    const handleServiceClick = (service) => {
-        setSelectedService(service)};
-    const closeModal = () => {
-        setSelectedService(null)};
+    const handleServiceClick = (props: any) => {setSelectedService(service)};
+    const closeModal = (props: any) => {setSelectedService(null)};
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Header Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -458,12 +453,18 @@ enterprise-level reliability,
     </div>)};
 export default EnhancedComprehensiveServicesShowcase;
 
-export { EnhancedComprehensiveServicesShowcase };
+export {EnhancedComprehensiveServicesShowcase};
 
-export { EnhancedComprehensiveServicesShowcase };
+export {EnhancedComprehensiveServicesShowcase};
 
-export { EnhancedComprehensiveServicesShowcase };
+export {EnhancedComprehensiveServicesShowcase};
 
-export { EnhancedComprehensiveServicesShowcase };
+export {EnhancedComprehensiveServicesShowcase};
 
-export { EnhancedComprehensiveServicesShowcase };
+export {EnhancedComprehensiveServicesShowcase};
+
+</path>
+</path>
+</path>
+</svg>
+</div>

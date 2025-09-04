@@ -35,9 +35,9 @@ import {
 import { SEOHead } from '../components/seo/SEOHead';
 import { COMPREHENSIVE_REAL_SERVICES_2025 } from '../data/comprehensiveRealServices2025';
 
-const ComprehensiveServicesShowcase2025 = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [searchTerm, setSearchTerm] = useState('');
+const ComprehensiveServicesShowcase2025 = (props: any) => {
+  const [selectedCategory, setSelectedCategory] = useState<any>('All');
+  const [searchTerm, setSearchTerm] = useState<any>('');
 
   const categories = ['All', 'Micro SAAS', 'IT Services', 'AI Services', 'Cloud Solutions', 'Cybersecurity', 'Digital Transformation'];
 
@@ -48,7 +48,7 @@ const ComprehensiveServicesShowcase2025 = () => {
     return matchesCategory && matchesSearch;
   });
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (props: any) => {
     switch (category) {
       case 'Micro SAAS': return <Smartphone className="w-6 h-6"  />;
       case 'IT Services': return <Server className="w-6 h-6"  />;
@@ -291,3 +291,14 @@ const ComprehensiveServicesShowcase2025 = () => {
 };
 
 export default ComprehensiveServicesShowcase2025;
+</motion>
+</div>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</div>
+</SEOHead>
+</any>
+</any>

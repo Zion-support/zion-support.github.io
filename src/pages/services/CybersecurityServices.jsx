@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud } from 'lucide-react';
-const CybersecurityServices = () => {
+import {Link} from 'react-router-dom';
+import {Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud} from 'lucide-react';
+const CybersecurityServices = (props: any) => {
     const securityServices = [
         {
             title: "Threat Detection & Response",
@@ -14,8 +14,7 @@ const CybersecurityServices = () => {
                 "Threat Hunting"
             ]
         },
-        {
-            title: "Network Security",
+        {title: "Network Security",
             description: "Comprehensive network protection with firewalls, intrusion detection, and secure architecture.",
             icon: Network,
             features: [
@@ -24,10 +23,8 @@ const CybersecurityServices = () => {
                 "VPN Solutions",
                 "Network Segmentation",
                 "Traffic Analysis"
-            ]
-        },
-        {
-            title: "Identity & Access Management",
+            ]},
+        {title: "Identity & Access Management",
             description: "Secure user authentication and authorization with multi-factor authentication and role-based access.",
             icon: Users,
             features: [
@@ -36,10 +33,8 @@ const CybersecurityServices = () => {
                 "Role-Based Access Control",
                 "Privileged Access Management",
                 "Identity Governance"
-            ]
-        },
-        {
-            title: "Data Protection & Encryption",
+            ]},
+        {title: "Data Protection & Encryption",
             description: "End-to-end data encryption and protection for sensitive information at rest and in transit.",
             icon: Lock,
             features: [
@@ -48,10 +43,8 @@ const CybersecurityServices = () => {
                 "Data Loss Prevention",
                 "Backup Security",
                 "Compliance Monitoring"
-            ]
-        },
-        {
-            title: "Security Auditing & Compliance",
+            ]},
+        {title: "Security Auditing & Compliance",
             description: "Comprehensive security assessments and compliance with industry standards and regulations.",
             icon: Shield,
             features: [
@@ -60,10 +53,8 @@ const CybersecurityServices = () => {
                 "Compliance Auditing",
                 "Risk Assessments",
                 "Security Training"
-            ]
-        },
-        {
-            title: "Cloud Security",
+            ]},
+        {title: "Cloud Security",
             description: "Secure cloud environments with advanced security controls and monitoring.",
             icon: Cloud,
             features: [
@@ -72,8 +63,7 @@ const CybersecurityServices = () => {
                 "API Security",
                 "Cloud Access Security",
                 "Data Sovereignty"
-            ]
-        }
+            ]}
     ];
     const benefits = [
         "Protect against evolving cyber threats",
@@ -138,7 +128,7 @@ const CybersecurityServices = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {securityServices.map((service, index) => (<div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-slate-100">
                 <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
-                  <service.icon className="w-8 h-8 text-white"/>
+                  <service .icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">
                   {service.title}
@@ -148,13 +138,13 @@ const CybersecurityServices = () => {
                 </p>
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-slate-600">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"/>
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                       {feature}
                     </li>))}
                 </ul>
                 <Link to="/contact" className="inline-flex items-center text-red-600 hover:text-red-700 font-semibold transition-colors duration-200">
                   Learn More
-                  <ArrowRight className="w-4 h-4 ml-2"/>
+                  <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>))}
           </div>
@@ -177,7 +167,7 @@ const CybersecurityServices = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {complianceStandards.map((standard, index) => (<div key={index} className="bg-slate-50 rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-6 h-6 text-white"/>
+                  <Shield className="w-6 h-6 text-white" />
                 </div>
                 <p className="text-slate-700 font-semibold text-sm">{standard}</p>
               </div>))}
@@ -201,7 +191,7 @@ const CybersecurityServices = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (<div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-8 h-8 text-white"/>
+                  <CheckCircle className="w-8 h-8 text-white" />
                 </div>
                 <p className="text-lg text-slate-700">{benefit}</p>
               </div>))}

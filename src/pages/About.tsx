@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-export default function About() {
+export default function About(props: any) {
   return (
 
 import React from 'react';
@@ -35,7 +35,7 @@ import {
   Atom
 } from 'lucide-react';
 
-export default function About() {
+export default function About(props: any) {
   const stats = [
     { icon: Users, value: "500+", label: "Happy Clients", description: "Trusted by businesses worldwide" },
     { icon: TrendingUp, value: "95%", label: "Success Rate", description: "Proven track record of delivery" },

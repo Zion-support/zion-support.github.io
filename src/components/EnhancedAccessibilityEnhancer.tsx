@@ -1,6 +1,7 @@
+import React from 'react';
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page() {
+export default function Page(props: any) {
       // Apply large text
       if(updatedSettings.largeText) {
 
@@ -449,3 +450,12 @@ export default function Page() {
 
 export default EnhancedAccessibilityEnhancer;
 '"`
+
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</motion>
+</motion>

@@ -27,7 +27,7 @@ import {
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-const Solutions = () => {
+const Solutions = (props: any) => {
   const industrySolutions = [
     {
       title: 'Healthcare Solutions',
@@ -513,3 +513,16 @@ const Solutions = () => {
 };
 
 export default Solutions;
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</SEO>

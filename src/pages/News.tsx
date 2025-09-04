@@ -22,9 +22,9 @@ import {
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-const News = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
+const News = (props: any) => {
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [searchQuery, setSearchQuery] = useState<any>('');
 
   const newsArticles = [
     {
@@ -125,7 +125,7 @@ const News = () => {
     return categoryMatch && searchMatch;
   });
 
-  const formatDate = (dateString: string) => {
+  const formatDate = (props: any) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
       year: 'numeric', 
@@ -370,11 +370,10 @@ const News = () => {
               from Zion Tech Group directly in your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <input
-                type="email"
+              <input type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
-              />
+               />
               <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 Subscribe
               </button>
@@ -388,3 +387,14 @@ const News = () => {
 };
 
 export default News;
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</SEO>
+</any>
+</any>

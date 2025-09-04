@@ -322,7 +322,7 @@ import {
   CloudSleet10
 } from 'lucide-react';
 
-const AIHealthcareAnalyticsPlatform = () => {
+const AIHealthcareAnalyticsPlatform = (props: any) => {
   const features = [
     {
       icon: Brain,
@@ -829,7 +829,7 @@ const AIHealthcareAnalyticsPlatform = () => {
               </div>
               <div className="flex items-center justify-center space-x-3">
                 <MapPin className="w-6 h-6 text-pink-400" />
-                <span className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</span>
+                <span className="text-zion-slate-light">364 E Main St STE 1008<br  />Middletown DE 19709</span>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -856,3 +856,23 @@ const AIHealthcareAnalyticsPlatform = () => {
 };
 
 export default AIHealthcareAnalyticsPlatform;}}}}};
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

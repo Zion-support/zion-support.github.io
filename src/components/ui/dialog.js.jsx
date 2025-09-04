@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
-const Dialog({ children, open, onOpenChange }) {
+import React, {useState} from 'react';
+const Dialog({children, open, onOpenChange}) {
     const [internalOpen, setInternalOpen] = useState(false);
     const isOpen = isControlled ? open : internalOpen;
-    const setIsOpen = (newOpen) => {
+    const setIsOpen = (props: any) => {
         if (!isControlled) {
             setInternalOpen(newOpen)}
-        if (onOpenChange) {
-            onOpenChange(newOpen)}
+        if (onOpenChange) {onOpenChange(newOpen)}
     };
     return (<DialogContext.Provider value = {
   { isOpen,
@@ -17,7 +16,7 @@ const Dialog({ children, open, onOpenChange }) {
         {children}
       </div>
     </DialogContext.Provider>)}
-export function DialogTrigger({ children, asChild = false }) {
+export function DialogTrigger(props: any) {
     const context = useContext(DialogContext);
     if (!context)
         throw new Error('DialogTrigger must be used within Dialog');
@@ -28,7 +27,7 @@ export function DialogTrigger({ children, asChild = false }) {
     return (<div onClick={() => context.setIsOpen(true)}>
       {children}
     </div>)}
-export function DialogContent({ children, className = '' }) {
+export function DialogContent(props: any) {
     const context = useContext(DialogContext);
     if (!context)
         throw new Error('DialogContent must be used within Dialog');
@@ -40,5 +39,8 @@ export function DialogContent({ children, className = '' }) {
         {children}
       </div>
     </div>)}
-export function DialogFooter({ children, className = '' }) {
+export function DialogFooter(props: any) {
     return <div className={`flex justify-end gap-2 mt-6 ${className}`}>{children}</div>}
+
+</div>
+</DialogContext>

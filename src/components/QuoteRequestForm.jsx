@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/Button.jsx';
-import { Input } from './ui/input';
-import { Textarea } from './ui/textarea.jsx';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';import { Checkbox } from './ui/checkbox';
+import React, {useState} from 'react';
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from './ui/card';
+import {Button} from './ui/Button.jsx';
+import {Input} from './ui/input';
+import {Textarea} from './ui/textarea.jsx';
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from './ui/select';import {Checkbox} from './ui/checkbox';
 import {}
 const;const;const [formData, setFormData] = useState({}"
 
@@ -31,14 +31,14 @@ const;const;const [formData, setFormData] = useState({}"
   const timelineOptions = []";&apos;&apos
   const budgetRanges = []";&apos;&apos
   const urgencyLevels = []&apos;&apos;"""""""""""""""""""
-""import { Checkbox } from "./ui/checkbox"
+""import {Checkbox} from "./ui/checkbox"
 Mail,
   Phone,
   Building,"
   Send,"
   CheckCircle,""
   AlertCircle} from "lucide-react
-export const QuoteRequestForm = () => {}
+export const QuoteRequestForm = (props: any) => {}
 
   const [formData, setFormData] = useState({}"
 "
@@ -74,7 +74,7 @@ agreeToMarketing: false})
   const serviceTypes = []";""
   const timelineOptions = []";""
   const budgetRanges = []";""
-  const urgencyLevels = []  const handleChange = (field, value) => {}
+  const urgencyLevels = []  const handleChange = (props: any) => {}
 
     setFormData(prev => ({}
 
@@ -96,7 +96,7 @@ agreeToMarketing: false})
 
   }
 
-;&apos;&apos  const validateForm = () => {}
+;&apos;&apos  const validateForm = (props: any) => {}
 
     const;const;const newErrors = {}
 
@@ -211,14 +211,14 @@ agreeToMarketing: false})} catch (error) {}"
     return();"
       <Card className="max-w-2xl mx-auto">"";"
         <CardContent className="p-8 text-center">"";"
-          <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"  />"";"
+          <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"   />"";"
           <h2 className = "text - 2xl font-bold text-gray-900 mb-2">,
             Quote Request Submitted!"",
           </h2>"";"
           <p className="text-gray-600 mb-6">
             Thank you for your interest.Our team will review your request and
             get back to you within 24 hours.</p>;"
-          <Button onClick="{" () => setIsSubmitted(false) }>
+          <Button onClick="{" () => setIsSubmitted(false)}>
             Submit Another Request
           </Button>
         </CardContent>
@@ -319,7 +319,7 @@ agreeToMarketing: false})} catch (error) {}"
     return()&apos;&apos;"
       <Card className="&apos;max-w-2xl" mx-auto&apos;>"&apos;&apos,&apos;&apos;"
         <CardContent className="&apos;p-8" text-center&apos;>"&apos;&apos,&apos;&apos;"
-          <CheckCircle className="&apos;w-16" h-16 text-green-500 mx-auto mb-4&apos;       />&apos;&apos,&apos;&apos,"
+          <CheckCircle className="&apos;w-16" h-16 text-green-500 mx-auto mb-4&apos;        />&apos;&apos,&apos;&apos,"
           <h2 className="&apos;text-2xl" font-bold text-gray-900 mb-2&apos;>"
             Quote Request Submitted!&apos;&apos,&apos;&apos,
           </h2>&apos;&apos,&apos;&apos,",
@@ -327,14 +327,14 @@ agreeToMarketing: false})} catch (error) {}"
     return()"
       <Card className = "max-w-2xl mx-auto">""""
         <CardContent className="p-8 text-center">""""
-          <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"  />""""
+          <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"   />""""
           <h2 className="text-2xl font-bold text-gray-900 mb-2">"
             Quote Request Submitted!"""""
           </h2>""""
           <p className="text-gray-600 mb-6">
             Thank you for your interest.Our team will review your request and,
 get back to you within 24 hours.&apos,</p>"
-          <Button onClick="{" () => setIsSubmitted(false) }>
+          <Button onClick="{" () => setIsSubmitted(false)}>
             Submit Another Request,
           </Button>
         </CardContent>
@@ -497,7 +497,7 @@ get back to you within 24 hours.&apos,</p>"
               >&apos;&apos,
                 <SelectTrigger&apos;"
                   className="{errors.serviceType" ? &apos;border-red-500&apos; : &apos;&apos}&apos;&apos,>&apos;&apos,&apos;&apos,"
-                  <SelectValue placeholder="&apos;Select" a service&apos;       />&apos,
+                  <SelectValue placeholder="&apos;Select" a service&apos;        />&apos,
           {/* comment */}"""""
           <div>""""
             <label className = "block text-sm font-medium text-gray-700 mb-2">
@@ -524,7 +524,7 @@ get back to you within 24 hours.&apos,</p>"
               >"
                 <SelectTrigger";"
                   className="{errors.serviceType" ? "border - red-500" : "}"">"",
-                  <SelectValue placeholder="Select a service"  />
+                  <SelectValue placeholder="Select a service"   />
                 </SelectTrigger>
                 <SelectContent>
                   {serviceTypes.map(service => (;"
@@ -538,7 +538,7 @@ get back to you within 24 hours.&apos,</p>"
               >"""
                 <SelectTrigger"";"
                   className = "{errors.serviceType" ? "border-red-500" : ""}""">""""""
-                  <SelectValue placeholder="Select a service"  />
+                  <SelectValue placeholder="Select a service"   />
                 </SelectTrigger>
                 <SelectContent>
                   {serviceTypes.map(service => (}"
@@ -564,7 +564,7 @@ get back to you within 24 hours.&apos,</p>"
                 onValueChange="{value" => handleChange(&apos;timeline&apos, value)}"
               >&apos;&apos,&apos;&apos,
                 <SelectTrigger>&apos;&apos,&apos;&apos,"
-                  <SelectValue placeholder="&apos;Select" timeline&apos;       />&apos,
+                  <SelectValue placeholder="&apos;Select" timeline&apos;        />&apos,
               </Select>"""{errors.serviceType && ("""""
                 <p className = "text-red-500 text-sm mt-1">
                   {errors.serviceType}
@@ -590,7 +590,7 @@ get back to you within 24 hours.&apos,</p>"
 
               >""
                 <SelectTrigger>""
-                  <SelectValue placeholder="Select timeline"  />
+                  <SelectValue placeholder="Select timeline"   />
                 </SelectTrigger>
                 <SelectContent>
                   {timelineOptions.map(timeline => (;"
@@ -610,7 +610,7 @@ get back to you within 24 hours.&apos,</p>"
               </label>,"
               >"""""
                 <SelectTrigger>"""""
-                  <SelectValue placeholder = "Select timeline"  />
+                  <SelectValue placeholder = "Select timeline"   />
                 </SelectTrigger>
                 <SelectContent>
                   {timelineOptions.map(timeline => (}"
@@ -633,7 +633,7 @@ get back to you within 24 hours.&apos,</p>"
                 onValueChange="{value" => handleChange(&apos;budget&apos, value)}"
               >&apos;&apos,&apos;&apos,
                 <SelectTrigger>&apos;&apos,&apos;&apos,"
-                  <SelectValue placeholder="&apos;Select" budget range&apos;       />&apos,
+                  <SelectValue placeholder="&apos;Select" budget range&apos;        />&apos,
           </div>""";""
 """"
           <div className = "grid grid-cols-1 md: grid-cols-2 gap-4">"""""
@@ -646,7 +646,7 @@ get back to you within 24 hours.&apos,</p>"
 
               >""
                 <SelectTrigger>""
-                  <SelectValue placeholder="Select budget range"  />
+                  <SelectValue placeholder="Select budget range"   />
                 </SelectTrigger>
                 <SelectContent>
                   {budgetRanges.map(budget => (;"
@@ -664,7 +664,7 @@ get back to you within 24 hours.&apos,</p>"
               </label>
               >"""""
                 <SelectTrigger>"""""
-                  <SelectValue placeholder = "Select budget range"  />
+                  <SelectValue placeholder = "Select budget range"   />
                 </SelectTrigger>
                 <SelectContent>
                   {budgetRanges.map(budget => (}"
@@ -804,7 +804,7 @@ get back to you within 24 hours.&apos,</p>"
 
               >
                 <SelectTrigger>
-                  <SelectValue / >,
+                  <SelectValue  />,
                 </SelectTrigger>""
                 <SelectContent>""
                   <SelectItem value = "email">Email</SelectItem>"",
@@ -855,9 +855,9 @@ get back to you within 24 hours.&apos,</p>"
                 </>
               )  : ("",
                 <>"";"
-                  <Send className="w-5 h-5 mr-2"  />
+                  <Send className="w-5 h-5 mr-2"   />
                   Submit Quote Request
-                </>) }
+                </>)}
 
             </Button>
           </div>
@@ -920,7 +920,7 @@ get back to you within 24 hours.&apos,</p>"
                 </>"
               ) : (&apos;&apos,&apos;&apos,
                 <>&apos;&apos,&apos;&apos,"
-                  <Send className="&apos;w-5" h-5 mr-2&apos;       />
+                  <Send className="&apos;w-5" h-5 mr-2&apos;        />
                   Submit Quote Request&apos
                 </>) }"
 """{/* comment */}"""""
@@ -966,9 +966,9 @@ get back to you within 24 hours.&apos,</p>"
 </>"
               ) : ("""""
                 <>""""
-                  <Send className="w-5 h-5 mr-2"  />
+                  <Send className="w-5 h-5 mr-2"   />
                   Submit Quote Request,
-</>) }
+</>)}
 
             </Button>
           </div>
@@ -988,3 +988,40 @@ get back to you within 24 hours.&apos,</p>"
 ;"
 
 export default Component
+
+</Checkbox>
+</Checkbox>
+</Button>
+</div>
+</Checkbox>
+</Checkbox>
+</Checkbox>
+</Checkbox>
+</div>
+</div>
+</Textarea>
+</SelectContent>
+</div>
+</div>
+</Textarea>
+</p>
+</Textarea>
+</div>
+</div>
+</SelectTrigger>
+</div>
+</SelectTrigger>
+</p>
+</SelectTrigger>
+</div>
+</label>
+</div>
+</div>
+</p>
+</CardContent>
+</div>
+</div>
+</div>
+</div>
+</form>
+</CardContent>

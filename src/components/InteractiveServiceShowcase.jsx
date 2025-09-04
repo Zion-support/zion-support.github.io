@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 export default InteractiveServiceShowcase;
-import { motion, AnimatePresence  } from 'framer-motion';
+import {motion, AnimatePresence} from 'framer-motion';
 
-export default function Page() {
+export default function Page(props: any) {
 ,
         { id: 'security', name: 'Security', icon: '🛡️', count: 6 },
-        { id: 'automation', name: 'Automation', icon: '⚡', count: 3 }
+        {id: 'automation', name: 'Automation', icon: '⚡', count: 3}
     ];
-    const services = [{
-
-            id: 'ai-strategy',
+    const services = [{id: 'ai-strategy',
             title: 'AI Strategy Consulting',
             description: 'Comprehensive AI strategy development and implementation consulting for enterprises',
             icon: '🤖',
@@ -18,11 +16,8 @@ export default function Page() {
             features['Strategic Planning',Implementation Roadmap',ROI Analysis',Team Training'],;
             isPopular: true,
             color: 'from-zion-cyan to-zion-blue',
-            href: '/services/ai'
-        },
-        {
-
-            id: 'quantum-ai',
+            href: '/services/ai'},
+        {id: 'quantum-ai',
             title: 'Quantum AI Fusion Platform',
             description: 'Revolutionary platform combining quantum computing with artificial intelligence',
             icon: '🔮',
@@ -31,11 +26,8 @@ export default function Page() {
             features['Quantum Algorithms',AI Integration',Performance Optimization',Scalable Architecture'],;
             isNew: true,
             color: 'from-zion-purple to-zion-cyan',
-            href: '/services/quantum'
-        },
-        {
-
-            id: 'neuromorphic',
+            href: '/services/quantum'},
+        {id: 'neuromorphic',
             title: 'Neuromorphic Computing Platform',
             description: 'Brain-inspired computing architecture for ultra-efficient AI processing',
             icon: '🧠',
@@ -43,11 +35,8 @@ export default function Page() {
             category: 'ai',
             features['Neural Networks',Efficient Processing',Scalable Architecture',Low Power Consumption'],;
             color: 'from-zion-blue to-zion-cyan',
-            href: '/services/ai'
-        },
-        {
-
-            id: 'edge-ai',
+            href: '/services/ai'},
+        {id: 'edge-ai',
             title: 'Edge AI Orchestration Platform',
             description: 'Intelligent orchestration of AI workloads across distributed edge computing',
             icon: '🌐',
@@ -55,11 +44,8 @@ export default function Page() {
             category: 'cloud',
             features['Edge Deployment',Load Balancing',Real-time Processing',IoT Integration'],;
             color: 'from-zion-cyan to-zion-green',
-            href: '/services/cloud'
-        },
-        {
-
-            id: 'federated-learning',
+            href: '/services/cloud'},
+        {id: 'federated-learning',
             title: 'Federated Learning Platform',
             description: 'Privacy-preserving AI training across distributed data sources',
             icon: '🔒',
@@ -67,11 +53,8 @@ export default function Page() {
             category: 'security',
             features['Data Privacy',Distributed Training',Secure Communication',Compliance Ready'],;
             color: 'from-zion-green to-zion-cyan',
-            href: '/services/security'
-        },
-        {
-
-            id: 'ai-ethics',
+            href: '/services/security'},
+        {id: 'ai-ethics',
             title: 'AI Ethics & Governance Platform',
             description: 'Comprehensive framework for ethical AI development and governance',
             icon: '⚖️',
@@ -79,11 +62,8 @@ export default function Page() {
             category: 'ai',
             features['Ethical Guidelines',Compliance Tools',Audit Trails',Risk Assessment'],;
             color: 'from-zion-yellow to-zion-orange',
-            href: '/services/ai'
-        },
-        {
-
-            id: 'quantum-security',
+            href: '/services/ai'},
+        {id: 'quantum-security',
             title: 'Quantum-Safe Security Suite',
             description: 'Next-generation security solutions resistant to quantum attacks',
             icon: '🔐',
@@ -92,8 +72,7 @@ export default function Page() {
             features['Post-Quantum Cryptography',Quantum Key Distribution',Threat Detection',Zero Trust'],;
             isNew: true,
             color: 'from-zion-purple to-zion-red',
-            href: '/services/security'
-        },
+            href: '/services/security'},
         {
 
             id: 'cloud-automation',
@@ -239,7 +218,7 @@ export default function Page() {
                       {/* Features */}"
                       <div className="space-y-2 mb-6">"
                         {service.features.slice(0, 3).map((feature, index) => (<div key={index} className="flex items-center gap-2 text-zion-slate-light text-xs">"
-                            <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"/>
+                            <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full" />
                             {feature}
                           </div>))}"
                         {service.features.length > 3 && (<div className="text-zion-cyan/60 text-xs">
@@ -255,7 +234,7 @@ export default function Page() {
                     </div>
 
                     {/* Hover Effect Overlay */}"
-                    <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
+                    <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                 </Link>
               </motion.div>) ) }
@@ -304,12 +283,18 @@ export default function Page() {
 export default InteractiveServiceShowcase;
 }}}}}}}
 
-export { InteractiveServiceShowcase };
+export {InteractiveServiceShowcase};
 
-export { InteractiveServiceShowcase };
+export {InteractiveServiceShowcase};
 
-export { InteractiveServiceShowcase };
+export {InteractiveServiceShowcase};
 
-export { InteractiveServiceShowcase };
+export {InteractiveServiceShowcase};
 
-export { InteractiveServiceShowcase };
+export {InteractiveServiceShowcase};
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

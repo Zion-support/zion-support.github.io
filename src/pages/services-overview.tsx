@@ -33,7 +33,7 @@ import {
   Link as LinkIcon
 } from 'lucide-react';
 
-const ServicesOverview = () => {
+const ServicesOverview = (props: any) => {
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -338,3 +338,9 @@ const ServicesOverview = () => {
 };
 
 export default ServicesOverview;
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

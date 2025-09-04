@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Settings, FileText, Eye, Zap, Volume2, VolumeX } from 'lucide-react';
-import { Button } from "button.tsx";
-export function AccessibilityMenu() {
+import React, {useState, useEffect} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {Settings, FileText, Eye, Zap, Volume2, VolumeX} from 'lucide-react';
+import {Button} from "button.tsx";
+export function AccessibilityMenu(props: any) {
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({
         fontSize: 'medium',
@@ -16,12 +16,11 @@ export function AccessibilityMenu() {
         if (savedSettings) {
             setSettings(JSON.parse(savedSettings))}
     }, []);
-    useEffect(() => {
-        // Apply settings to document
+    useEffect(() => {// Apply settings to document
         applySettings(settings);
         // Save to localStorage
         localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings]);
-    const applySettings = (newSettings) => {
+    const applySettings = (props: any) => {
         const root = document.documentElement;
         // Font size
         root.style.setProperty('--font-size-multiplier', newSettings.fontSize === 'small' ? '0.875' :
@@ -29,22 +28,19 @@ export function AccessibilityMenu() {
         // High contrast
         if (newSettings.highContrast) {
             root.classList.add('high-contrast')}
-        else {
-            root.classList.remove('high-contrast')}
+        else {root.classList.remove('high-contrast')}
         // Reduced motion
-        if (newSettings.reducedMotion) {
-            root.classList.add('reduced-motion')}
-        else {
-            root.classList.remove('reduced-motion')}
+        if (newSettings.reducedMotion) {root.classList.add('reduced-motion')}
+        else {root.classList.remove('reduced-motion')}
     };
-    const toggleSetting = (key) => {
+    const toggleSetting = (props: any) => {
         setSettings(prev => ({
             ...prev,
             [key]: !prev[key]
         }))};
-    const updateFontSize = (size) => {
+    const updateFontSize = (props: any) => {
         setSettings(prev => ({ ...prev, fontSize: size }))};
-    const resetSettings = () => {
+    const resetSettings = (props: any) => {
         const defaultSettings = {
   fontSize: 'medium',
             highContrast: false,
@@ -57,7 +53,7 @@ export function AccessibilityMenu() {
     return (<>
       {/* Toggle Button */}
       <motion.button onClick={() => setIsOpen(!isOpen)} className="fixed bottom-24 right-8 z-50 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} aria-label="Accessibility settings" aria-expanded={isOpen}>
-        <Settings className="h-5 w-5"/>
+        <Settings className="h-5 w-5" />
       </motion.button>
 
       {/* Menu Panel */}
@@ -90,7 +86,7 @@ export function AccessibilityMenu() {
               {/* Font Size */}
               <div className="mb-6">
                 <label className="flex items-center gap-3 text-white mb-3">
-                  <FileText className="h-4 w-4 text-zion-cyan"/>
+                  <FileText className="h-4 w-4 text-zion-cyan" />
                   <span className="text-sm font-medium">Font Size</span>
                 </label>
                 <div className="flex gap-2">
@@ -105,7 +101,7 @@ export function AccessibilityMenu() {
               {/* High Contrast */}
               <div className="mb-6">
                 <label className="flex items-center gap-3 text-white mb-3">
-                  <Eye className="h-4 w-4 text-zion-cyan"/>
+                  <Eye className="h-4 w-4 text-zion-cyan" />
                   <span className="text-sm font-medium">High Contrast</span>
                 </label>
                 <Button variant={settings.highContrast ? "default" : "outline"} size="sm" onClick={() => toggleSetting('highContrast')} className={`w-full ${settings.highContrast
@@ -118,7 +114,7 @@ export function AccessibilityMenu() {
               {/* Reduced Motion */}
               <div className="mb-6">
                 <label className="flex items-center gap-3 text-white mb-3">
-                  <Zap className="h-4 w-4 text-zion-cyan"/>
+                  <Zap className="h-4 w-4 text-zion-cyan" />
                   <span className="text-sm font-medium">Reduced Motion</span>
                 </label>
                 <Button variant={settings.reducedMotion ? "default" : "outline"} size="sm" onClick={() => toggleSetting('reducedMotion')} className={`w-full ${settings.reducedMotion
@@ -131,7 +127,7 @@ export function AccessibilityMenu() {
               {/* Sound Toggle */}
               <div className="mb-6">
                 <label className="flex items-center gap-3 text-white mb-3">
-                  {settings.soundEnabled ? (<Volume2 className="h-4 w-4 text-zion-cyan"/>) : (<VolumeX className="h-4 w-4 text-zion-cyan"/>)}
+                  {settings.soundEnabled ? (<Volume2 className="h-4 w-4 text-zion-cyan" />) : (<VolumeX className="h-4 w-4 text-zion-cyan" />)}
                   <span className="text-sm font-medium">Sound Effects</span>
                 </label>
                 <Button variant={settings.soundEnabled ? "default" : "outline"} size="sm" onClick={() => toggleSetting('soundEnabled')} className={`w-full ${settings.soundEnabled
@@ -154,3 +150,7 @@ export function AccessibilityMenu() {
         {isOpen && (<motion.div className="fixed inset-0 z-40 bg-black/20" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setIsOpen(false)}/>)}
       </AnimatePresence>
     </>)}
+
+</motion>
+</motion>
+</motion>

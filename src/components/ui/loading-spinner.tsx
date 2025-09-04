@@ -1,11 +1,13 @@
 import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps {
+
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'cyan' | 'white' | 'blue';
   text?: string;
   showText?: boolean;
   className?: string;
+
 }
 
 const sizeClasses = {
@@ -21,13 +23,7 @@ const colorClasses = {
   blue: 'border-blue-400'
 };
 
-export default function LoadingSpinner({
-  size = 'md',
-  color = 'cyan',
-  text = 'Loading...',
-  showText = true,
-  className = ''
-}: LoadingSpinnerProps) {
+export default function LoadingSpinner(props: any) {
   return (
     <div className={`flex flex-col items-center justify-center ${className}`} role="status">
       <div className="relative">
@@ -105,8 +101,10 @@ export const FullScreenLoader: Reac t.FC<{
         <span className="sr-only">Loading...</span>
       </div>
   )}"
-interface LoadingSpinnerProps {size?: "sm" | "md" | "lg";"
-export const LoadingSpinner: Reac t.FC<LoadingSpinnerProps> = ({size = "md", className=""}) => {const sizeClasses = {}"}" >""
+interface LoadingSpinnerProps {
+size?: "sm" | "md" | "lg";"
+export const LoadingSpinner: Reac t.FC<LoadingSpinnerProps> = ({size = "md", className=""
+}) => {const sizeClasses = {}"}" >""
       <div className="{"${sizeClasses[size]}" border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin"}" role="status" >"
   size?: &apos;sm&apos; | &apos;md&apos; | &apos;lg
    className?: string}&apos;&apos
@@ -126,8 +124,17 @@ export const SkeletonLoader: Reac t.FC<{
     {Array.from({ length: line s }).map((_, index) => (
       <div key={index}
         className="h-4 bg-gray-200 rounded mb-2"
-        style={{ width: `${Math.random() * 40 + 60}%` }}
+        style="{{{ width: `${Math.random() * 40 + 60}}"%` }}
        />
     ))}
   </div>
 );
+
+</div>
+</div>
+</LoadingSpinnerProps>
+</div>
+</motion>
+</LoadingSpinnerProps>
+</div>
+</div>

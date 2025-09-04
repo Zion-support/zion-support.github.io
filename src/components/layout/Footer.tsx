@@ -61,7 +61,7 @@ import {
   Leaf
 } from 'lucide-react';
 
-export function Footer() {
+export function Footer(props: any) {
 
   const currentYear = new Date().getFullYear();
 
@@ -222,7 +222,7 @@ export function Footer() {
                     to={link.href}
                     className="text-gray-300 hover: tex t-zion-purple transition-colors text-sm flex items-center space-x-2 group"
                   >
-                    <link.icon className="h-4 w-4 group-hover: tex t-zion-purple" />
+                    <link .icon className="h-4 w-4 group-hover: tex t-zion-purple"  />
                     <span>{link.name}</span>
                   </Link>
                 </li>
@@ -269,7 +269,7 @@ export function Footer() {
               <input type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-3 py-2 bg-zion-slate border border-zion-slate-light rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: rin g-2 focus: rin g-zion-purple focus: borde r-transparent"
-               />
+                />
               <button className="px-4 py-2 bg-zion-purple hover: b g-zion-purple-dark text-white rounded-lg transition-colors">
                 Subscribe
               </button>
@@ -296,7 +296,7 @@ export function Footer() {
                         to={link.href}
                         className="text-gray-300 hover: tex t-zion-purple transition-colors text-sm flex items-center space-x-2 group"
                       >
-                        <link.icon className="h-4 w-4 group-hover: tex t-zion-purple" />
+                        <link .icon className="h-4 w-4 group-hover: tex t-zion-purple"  />
                         <span>{link.name}</span>
                       </Link>
                     </li>

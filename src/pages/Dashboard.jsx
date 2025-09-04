@@ -1,15 +1,14 @@
-import { SEO } from '@/components/SEO';
+import {SEO} from '@/components/SEO';
 
 export default function Dashboard
-export { Dashboard }() {
+export {Dashboard}() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-        title="Dashboard - Zion Tech Group"
+      <SEO title="Dashboard - Zion Tech Group"
         description="Access your Zion Tech Group dashboard to manage your services, view analytics, and control your account."
         keywords="dashboard, account management, services, analytics"
         canonical="https://ziontechgroup.com/dashboard"
-      />
+       />
 
       {/* Header */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -129,3 +128,5 @@ export { Dashboard }() {
     </div>
   );
 }
+
+</SEO>

@@ -1,12 +1,12 @@
 import React from "react"
 import Link from "next/link"
 import Head from "next/head"
-const AIElasticsearch = () => {
+const AIElasticsearch = (props: any) => {
   return (
     <>
       <Head>
         <title>Elasticsearch - AI Services</title>
-        <meta name="description" content="Professional Elasticsearch services powered by AI"   />
+        <meta name="description" content="Professional Elasticsearch services powered by AI"    />
       </Head>
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-12">
@@ -49,3 +49,7 @@ const AIElasticsearch = () => {
 }
 
 export default AIElasticsearch
+</div>
+</div>
+</div>
+</div>

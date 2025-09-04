@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, {useState, useEffect, useCallback} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
 
-export default function Page() {
+export default function Page(props: any) {
             // Check for very short content
             if(words.length > 0 && words.length < 10) {
 
@@ -63,10 +63,8 @@ export default function Page() {
             }
             // Check for keyword stuffing
             const commonWords = text.toLowerCase().match(/\b\w+\b/g) || [];
-            const wordFrequency = { /* empty */ };
-            commonWords.forEach(word => {
-
-                wordFrequency[word] = (wordFrequency[word] || 0) + 1});
+            const wordFrequency = {/* empty */};
+            commonWords.forEach(word => {wordFrequency[word] = (wordFrequency[word] || 0) + 1});
             Object.entries(wordFrequency).forEach(([word, count]) => {
 
                 if(count > 5 && word.length > 3) {
@@ -217,18 +215,14 @@ export default function Page() {
             })}
         // Calculate overall score
         const overallScore = Math.round((readabilityScore + seoScore + engagementScore) / 3);
-        const analysisResult = {
-
-  wordCount,
+        const analysisResult = {wordCount,
             readabilityScore: Math.max(0, Math.min(100, readabilityScore)),
             seoScore: Math.max(0, Math.min(100, seoScore)),
             engagementScore: Math.max(0, Math.min(100, engagementScore)),
             issues,
             suggestions,
             overallScore: Math.max(0, Math.min(100,
-  overallScore))
-
-};
+  overallScore))};
         setAnalysis(analysisResult);
         setIsAnalyzing(false)}, [targetElements]);
     // Auto-fix content issues
@@ -267,9 +261,7 @@ export default function Page() {
                         break}
             }
         });
-        if(fixedCount > 0) {
-
-            // Re-analyze content after fixes
+        if(fixedCount > 0) {// Re-analyze content after fixes
             setTimeout(analyzeContent, 500)}
         return fixedCount}, [analysis, analyzeContent]);
     // Highlight element in page
@@ -283,39 +275,29 @@ export default function Page() {
         element.classList.add('content-highlight');
         setSelectedElement(element);
         // Scroll to element'
-        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        element.scrollIntoView({behavior: 'smooth', block: 'center'});
         // Remove highlight after 3 seconds
-        setTimeout(() => {
-
-            element.classList.remove('content-highlight');
+        setTimeout(() => {element.classList.remove('content-highlight');
             setSelectedElement(null)}, 3000)}, []);
     // Auto-analyze content
-    useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-        if(autoAnalyze) {
-
-            const timer = setTimeout(analyzeContent, 3000);
+    useEffect(() => {// TODO: Add dependencies if needed}, []);
+        if(autoAnalyze) {const timer = setTimeout(analyzeContent, 3000);
             return () => clearTimeout(timer)}
     }, [autoAnalyze, analyzeContent]);
     // Get score color
-    const getScoreColor = (score) => {
-
-        if(score >= 80)
+    const getScoreColor = (props: any) => {if(score >= 80)
             return 'text-green-600';
         if(score >= 60)
             return 'text-yellow-600';
         return 'text-red-600'};
     // Get score background color
-    const getScoreBgColor = (score) => {
-
-        if(score >= 80)
+    const getScoreBgColor = (props: any) => {if(score >= 80)
             return 'bg-green-100 dark:bg-green-900/20';
         if(score >= 60)
             return 'bg-yellow-100 dark:bg-yellow-900/20';
         return 'bg-red-100 dark:bg-red-900/20'};
     // Get severity color
-    const getSeverityColor = (severity) => {
+    const getSeverityColor = (props: any) => {
 
         switch(severity) {
 
@@ -325,7 +307,7 @@ export default function Page() {
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30'}
     };
     // Get priority color
-    const getPriorityColor = (priority) => {
+    const getPriorityColor = (props: any) => {
 
         switch(priority) {
 
@@ -337,7 +319,7 @@ export default function Page() {
     return (<>
       {/* Content Quality Toggle Button */}"`
       <motion.button initial={{ scale: 0 }} animate={{ scale: 1 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsOpen(!isOpen)} className={`fixed bottom-20 right-4 z-50 w-14 h-14 bg-purple-600 hover:bg-purple-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${className}`}  aria-expanded={isOpen}>"
-        <DocumentTextIcon className="w-6 h-6"/>
+        <DocumentTextIcon className="w-6 h-6" />
       </motion.button>
 
       {/* Content Quality Panel */}
@@ -363,7 +345,7 @@ export default function Page() {
                 Content Quality
               </h2>"
               <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">"
-                <XMarkIcon className="w-5 h-5"/>
+                <XMarkIcon className="w-5 h-5" />
               </button>
             </div>
 
@@ -381,7 +363,7 @@ export default function Page() {
               {/* Overview Tab */}'"
               {activeTab === 'overview' && (<div className="space-y-4">"
                   {!analysis ? (<div className="text-center text-gray-500 dark:text-gray-400">"
-                      <DocumentTextIcon className="w-12 h-12 mx-auto mb-3 text-purple-500"/>"
+                      <DocumentTextIcon className="w-12 h-12 mx-auto mb-3 text-purple-500" />"
                       <p>Click "Analyze Content" to get started</p>
                     </div>) : (<>
                       {/* Overall Score */}`
@@ -463,17 +445,17 @@ export default function Page() {
               {/* Issues Tab */}'"
               {activeTab === 'issues' && (<div className="space-y-4">"
                   {!analysis ? (<div className="text-center text-gray-500 dark:text-gray-400">"
-                      <ExclamationTriangleIcon className="w-12 h-12 mx-auto mb-3 text-yellow-500"/>
+                      <ExclamationTriangleIcon className="w-12 h-12 mx-auto mb-3 text-yellow-500" />
                       <p>No analysis available</p>"
                     </div>) : analysis.issues.length === 0 ? (<div className="text-center text-gray-500 dark:text-gray-400">"
-                      <CheckCircleIcon className="w-12 h-12 mx-auto mb-3 text-green-500"/>
+                      <CheckCircleIcon className="w-12 h-12 mx-auto mb-3 text-green-500" />
                       <p>No issues found! Great job!</p>"
                     </div>) : (<div className="space-y-3">"
                       {analysis.issues.map((issue) => (<div key={issue.id} className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600 transition-colors cursor-pointer" onClick={() => issue.element && highlightElement(issue.element)}>"
                           <div className="flex items-start gap-2">'"
-                            {issue.type === 'error' && (<ExclamationTriangleIcon className="w-4 h-4 text-red-600 mt-0.5"/>)}'"
-                            {issue.type === 'warning' && (<ExclamationTriangleIcon className="w-4 h-4 text-yellow-600 mt-0.5"/>)}'"
-                            {issue.type === 'info' && (<InformationCircleIcon className="w-4 h-4 text-blue-600 mt-0.5"/>)}
+                            {issue.type === 'error' && (<ExclamationTriangleIcon className="w-4 h-4 text-red-600 mt-0.5" />)}'"
+                            {issue.type === 'warning' && (<ExclamationTriangleIcon className="w-4 h-4 text-yellow-600 mt-0.5" />)}'"
+                            {issue.type === 'info' && (<InformationCircleIcon className="w-4 h-4 text-blue-600 mt-0.5" />)}
 "
                             <div className="flex-1">"
                               <h4 className="font-medium text-gray-900 dark:text-white text-sm">
@@ -505,15 +487,15 @@ export default function Page() {
               {/* Suggestions Tab */}'"
               {activeTab === 'suggestions' && (<div className="space-y-4">"
                   {!analysis ? (<div className="text-center text-gray-500 dark:text-gray-400">"
-                      <InformationCircleIcon className="w-12 h-12 mx-auto mb-3 text-blue-500"/>
+                      <InformationCircleIcon className="w-12 h-12 mx-auto mb-3 text-blue-500" />
                       <p>No analysis available</p>"
                     </div>) : analysis.suggestions.length === 0 ? (<div className="text-center text-gray-500 dark:text-gray-400">"
-                      <CheckCircleIcon className="w-12 h-12 mx-auto mb-3 text-green-500"/>
+                      <CheckCircleIcon className="w-12 h-12 mx-auto mb-3 text-green-500" />
                       <p>No suggestions available</p>"
                     </div>) : (<div className="space-y-3">"
                       {analysis.suggestions.map((suggestion) => (<div key={suggestion.id} className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-blue-50 dark:bg-blue-900/20">"
                           <div className="flex items-start gap-2">"
-                            <InformationCircleIcon className="w-4 h-4 text-blue-600 mt-0.5"/>
+                            <InformationCircleIcon className="w-4 h-4 text-blue-600 mt-0.5" />
 "
                             <div className="flex-1">"
                               <h4 className="font-medium text-gray-900 dark:text-white text-sm">
@@ -542,7 +524,7 @@ export default function Page() {
               {/* Actions Tab */}'"
               {activeTab === 'actions' && (<div className="space-y-4">"
                   <div className="text-center text-gray-500 dark:text-gray-400">"
-                    <WrenchScrewdriverIcon className="w-12 h-12 mx-auto mb-3 text-purple-500"/>
+                    <WrenchScrewdriverIcon className="w-12 h-12 mx-auto mb-3 text-purple-500" />
                     <p>Take action to improve content quality</p>
                   </div>
 
@@ -553,12 +535,12 @@ export default function Page() {
 
                   {/* Re-analyze Button */}"
                   <button onClick={analyzeContent} disabled={isAnalyzing} className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">"
-                    <ArrowPathIcon className="w-4 h-4 inline mr-2"/>
+                    <ArrowPathIcon className="w-4 h-4 inline mr-2" />
                     {isAnalyzing ? 'Analyzing...' : 'Re-analyze Content'}
                   </button>
 
                   {/* Export Report */}
-                  {analysis && (<button onClick = {
+                  {analysis && (<button onClick={
 
   () => {
                         const report = JSON.stringify(analysis, null, 2);
@@ -589,6 +571,9 @@ export default function Page() {
           transition: all 0.3s ease !important}`
       `}</style>
     </>)};
-export { ContentQualityEnhancer };
+export {ContentQualityEnhancer};
 export default ContentQualityEnhancer;
 }}}}}}}}}'"`
+
+</motion>
+</motion>

@@ -10,3 +10,5 @@ export default function EnhancedNewsletter.test() {return (
         </p>
       </div>
   );"}"
+
+</div>

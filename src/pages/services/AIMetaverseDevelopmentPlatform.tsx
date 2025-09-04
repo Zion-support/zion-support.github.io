@@ -1,5 +1,6 @@
+import React from 'react';
 
-export default function AIMetaverseDevelopmentPlatform() {
+export default function AIMetaverseDevelopmentPlatform(props: any) {
   
     'AI-powered 3D world generation and design',;
     'Intelligent avatar creation and customization',;
@@ -271,3 +272,4 @@ export default function AIMetaverseDevelopmentPlatform() {
       </div>;
     </>
   )}}}'"`
+</SEO>

@@ -18,10 +18,10 @@ import {
   Cloud
 } from 'lucide-react'
 
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: fals e })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: fals e })
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
 
-const EmergingTechPage: Reac t.FC = () => {
+const EmergingTechPage: React.FC = () => {
   const technologies = [
     {
       icon: <Brain className="w-8 h-8"  />,

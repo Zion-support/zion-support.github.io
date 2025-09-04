@@ -1,14 +1,14 @@
 import React from 'react';'''
-import { Helmet } from 'react-helmet-async';
-const API = () => {}
+import {Helmet} from 'react-helmet-async';
+const API = (props: any) => {}
   return()
     <>
       <Helmet>
         <title>API Reference - Zion Tech Group</title>
-        <meta'
+        <meta '
           name="description"'"'"""
           content="Access Zion Tech Group's API documentation and integration guides for developers."""
-        />
+          />
       </Helmet>"""
 """"
       <div className="min-h-screen bg-gray-50 py-12">""""
@@ -34,12 +34,12 @@ const API = () => {}
     </>)};
 export default API;
 
-export { API };
+export {API};
 
-export { API };
+export {API};
 
-export { API };
+export {API};
 
-export { API };
+export {API};
 
-export { API };
+export {API};

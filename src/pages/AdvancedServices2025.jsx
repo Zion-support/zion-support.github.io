@@ -1,6 +1,6 @@
 import React from 'react';'''
-import { Link } from 'react-router-dom';
-const AdvancedServices2025 = () => {}
+import {Link} from 'react-router-dom';
+const AdvancedServices2025 = (props: any) => {}
     const advancedServices = []
         {}
             category: "Enterprise AI & Machine Learning",""""
@@ -417,7 +417,7 @@ const AdvancedServices2025 = () => {}
                     <Link to="/contact" className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300">"""
                       Get Started""""
                       <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">""""
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                     </Link>
                   </div>) ) }
@@ -459,12 +459,12 @@ const AdvancedServices2025 = () => {}
 export default AdvancedServices2025;
 }}}}}}
 
-export { AdvancedServices2025 };
+export {AdvancedServices2025};
 
-export { AdvancedServices2025 };
+export {AdvancedServices2025};
 
-export { AdvancedServices2025 };
+export {AdvancedServices2025};
 
-export { AdvancedServices2025 };
+export {AdvancedServices2025};
 
-export { AdvancedServices2025 };
+export {AdvancedServices2025};

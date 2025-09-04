@@ -14,7 +14,7 @@ import {
   Zap 
 } from 'lucide-react';
 
-const Contact: React.FC = () => {
+const Contact: React.FC = (props: any) => {
   return (
     <>
       <SEO title="Contact - Zion Tech Group" />

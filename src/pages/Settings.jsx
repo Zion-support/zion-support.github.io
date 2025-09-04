@@ -1,14 +1,14 @@
 import React from 'react';'''
-import { Helmet } from 'react-helmet-async';
-const Settings = () => {}
+import {Helmet} from 'react-helmet-async';
+const Settings = (props: any) => {}
   return()
     <>
       <Helmet>
         <title>Settings - Zion Tech Group</title>
-        <meta;
+        <meta ;
           name="description""""
           content="Configure your Zion Tech Group account settings. Customize notifications, security, and preferences."""
-        />
+          />
       </Helmet>"""
 """"
       <div className="min-h-screen bg-gray-50 py-12">""""
@@ -32,12 +32,12 @@ const Settings = () => {}
     </>)};
 export default Settings;
 
-export { Settings };
+export {Settings};
 
-export { Settings };
+export {Settings};
 
-export { Settings };
+export {Settings};
 
-export { Settings };
+export {Settings};
 
-export { Settings };
+export {Settings};

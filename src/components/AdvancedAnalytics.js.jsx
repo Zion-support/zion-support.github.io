@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, {useState, useEffect} from 'react';
+import {motion} from 'framer-motion';
 
-export function AdvancedAnalytics() {
+export function AdvancedAnalytics(props: any) {
     const [analyticsData, setAnalyticsData] = useState({
         visitors: 0,
         conversions: 0,
@@ -28,21 +28,21 @@ export function AdvancedAnalytics() {
                 avgSessionDuration: Math.floor(Math.random() * 300) + 120,
                 topPages: [
                     { page: '/', views: Math.floor(Math.random() * 5000) + 2000 },
-                    { page: '/services', views: Math.floor(Math.random() * 3000) + 1500 },
-                    { page: '/contact', views: Math.floor(Math.random() * 2000) + 1000 },
-                    { page: '/about', views: Math.floor(Math.random() * 1500) + 800 },
-                    { page: '/pricing', views: Math.floor(Math.random() * 1000) + 500 }
+                    {page: '/services', views: Math.floor(Math.random() * 3000) + 1500},
+                    {page: '/contact', views: Math.floor(Math.random() * 2000) + 1000},
+                    {page: '/about', views: Math.floor(Math.random() * 1500) + 800},
+                    {page: '/pricing', views: Math.floor(Math.random() * 1000) + 500}
                 ],
                 trafficSources: [
-                    { source: 'Organic Search', percentage: 45 },
-                    { source: 'Direct', percentage: 25 },
-                    { source: 'Social Media', percentage: 20 },
-                    { source: 'Referral', percentage: 10 }
+                    {source: 'Organic Search', percentage: 45},
+                    {source: 'Direct', percentage: 25},
+                    {source: 'Social Media', percentage: 20},
+                    {source: 'Referral', percentage: 10}
                 ],
                 deviceTypes: [
-                    { device: 'Desktop', percentage: 60 },
-                    { device: 'Mobile', percentage: 35 },
-                    { device: 'Tablet', percentage: 5 }
+                    {device: 'Desktop', percentage: 60},
+                    {device: 'Mobile', percentage: 35},
+                    {device: 'Tablet', percentage: 5}
                 ]
             });
             setIsLoading(false);
@@ -50,28 +50,24 @@ export function AdvancedAnalytics() {
         fetchData();
     }, [timeRange]);
 
-    const formatNumber = (num) => {
-        if (num >= 1000000)
+    const formatNumber = (props: any) => {if (num >= 1000000)
             return (num / 1000000).toFixed(1) + 'M';
         if (num >= 1000)
             return (num / 1000).toFixed(1) + 'K';
-        return num.toString();
-    };
+        return num.toString();};
 
-    const formatCurrency = (num) => {
+    const formatCurrency = (props: any) => {
         return new Intl.NumberFormat('en-US', {
             style: 'currency',
             currency: 'USD'
         }).format(num);
     };
 
-    if (isLoading) {
-        return (
+    if (isLoading) {return (
             <div className="flex items-center justify-center h-64">
                 <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
             </div>
-        );
-    }
+        );}
 
     return (
         <div className="space-y-6 p-6">
@@ -205,7 +201,7 @@ export function AdvancedAnalytics() {
                                     <div className="w-20 bg-gray-200 rounded-full h-2">
                                         <div 
                                             className="bg-blue-500 h-2 rounded-full" 
-                                            style={{ width: `${source.percentage}%` }}
+                                            style="{{{ width: `${source.percentage}}"%` }}
                                         ></div>
                                     </div>
                                     <span className="text-gray-600 font-medium w-8">{source.percentage}%</span>
@@ -220,3 +216,10 @@ export function AdvancedAnalytics() {
 }
 
 export default AdvancedAnalytics;
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

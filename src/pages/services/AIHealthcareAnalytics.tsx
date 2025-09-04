@@ -1,7 +1,7 @@
 import React from 'react';
 import { Activity, Heart, Shield, Users, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Brain, Clock, Database } from 'lucide-react';
 
-const AIHealthcareAnalytics: React.FC = () => {
+const AIHealthcareAnalytics: React.FC = (props: any) => {
   const features = [
     {
       icon: Brain,
@@ -330,3 +330,14 @@ const AIHealthcareAnalytics: React.FC = () => {
 };
 
 export default AIHealthcareAnalytics;
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

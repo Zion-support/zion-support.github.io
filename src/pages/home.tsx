@@ -37,3 +37,5 @@ const Home: Reac t.FC = () => {
 };
 
 export default Home;
+
+</SEO>

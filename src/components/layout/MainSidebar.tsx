@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation  } from 'react-router-dom';
-export default function Page() {
+export default function Page(props: any) {
 ,
         { name: 'Services', href: '/services', icon: Briefcas e },
         { name: 'Solutions', href: '/solutions', icon: Targe t },

@@ -1,7 +1,7 @@
-import { Button } from '@/components/ui/button';'''
-import { Link } from 'react-router-dom';'''
-import { useState, useEffect } from 'react';'''
-import { Link, useNavigate } from 'react-router-dom';
+import {Button} from '@/components/ui/button';'''
+import {Link} from 'react-router-dom';'''
+import {useState, useEffect} from 'react';'''
+import {Link, useNavigate} from 'react-router-dom';
 
     const navigate = useNavigate () ;
     const [items, setItems] = useState ([]) ;
@@ -23,13 +23,13 @@ import { Link, useNavigate } from 'react-router-dom';
             setShowEmpty(true);
 
     }, [cartLoading, items]) ;
-    const updateQuantity = (id, qty) => {}
-        dispatch(updateQuantityAction ({ id, quantity: qty }) ) ;
+    const updateQuantity = (props: any) => {}
+        dispatch(updateQuantityAction ({id, quantity: qty}) ) ;
     };
-    const removeItem = (id) => {}
+    const removeItem = (props: any) => {}
         dispatch(removeItemAction (id) ) ;
     };
-    const handleCheckout = () => {}
+    const handleCheckout = (props: any) => {}
 '
 ''
 '''
@@ -52,15 +52,15 @@ import { Link, useNavigate } from 'react-router-dom';
     const total = subtotal - discount;
     if (cartLoading) {}
         return (<div className="container py-10 space-y-4">""""
-        <Skeleton className="h-8 w-1/3"/>""""
-        <Skeleton className="h-32 w-full"/>
+        <Skeleton className="h-8 w-1/3" />""""
+        <Skeleton className="h-32 w-full" />
       </div>) ;
 
     if (showEmpty) {}
 """
 """"
         return (<div className="container py-10 text-center">""""
-        <img loading="lazy" src="/images/empty-cart.svg" alt="Empty cart" className="mx-auto mb-4 w-48 h-36"/>'"""
+        <img loading="lazy" src="/images/empty-cart.svg" alt="Empty cart" className="mx-auto mb-4 w-48 h-36"  />'"""
         <p>{t('cart.empty')}</p>""""
         <Button asChild className="mt-4">""""
           <Link href="/marketplace">Browse Marketplace</Link>
@@ -110,8 +110,8 @@ import { Link, useNavigate } from 'react-router-dom';
 """
         return (""""
             <div className="container py-10 space-y-4">""""
-                <div className="h-8 w-1/3 bg-gray-200 rounded animate-pulse"/>""""
-                <div className="h-32 w-full bg-gray-200 rounded animate-pulse"/>
+                <div className="h-8 w-1/3 bg-gray-200 rounded animate-pulse" />""""
+                <div className="h-32 w-full bg-gray-200 rounded animate-pulse" />
             </div>
         );
     }
@@ -149,10 +149,10 @@ import { Link, useNavigate } from 'react-router-dom';
     );
 }
 
-export { CartPage };
+export {CartPage};
 
-export { CartPage };
+export {CartPage};
 
-export { CartPage };
+export {CartPage};
 
-export { CartPage };
+export {CartPage};

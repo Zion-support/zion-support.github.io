@@ -1,35 +1,25 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, {useState, useEffect, useCallback} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
 
-export default function Page() {
+export default function Page(props: any) {
                     else {
 
                         link.status = 'healthy'}
                 }
-                else if(href.startsWith('javascript:')) {
-
-                    // JavaScript links'
+                else if(href.startsWith('javascript:')) {// JavaScript links'
                     link.status = 'unknown';
                     link.error = 'JavaScript link - cannot verify';
                     link.fixable = false}
-                else if(href.startsWith('mailto:') || href.startsWith('tel:')) {
-
-                    // Protocol links'
+                else if(href.startsWith('mailto:') || href.startsWith('tel:')) {// Protocol links'
                     link.status = 'healthy';
                     link.fixable = false}
-                else if(href.startsWith('http')) {
-
-                    // External links - will be checked'
+                else if(href.startsWith('http')) {// External links - will be checked'
                     link.status = 'unknown';
                     link.fixable = true}
-                else if(href.startsWith('/')) {
-
-                    // Internal relative links'
+                else if(href.startsWith('/')) {// Internal relative links'
                     link.status = 'unknown';
                     link.fixable = true}
-                else {
-
-                    // Other relative links'
+                else {// Other relative links'
                     link.status = 'unknown';
                     link.fixable = true}
                 links.push(link)}
@@ -110,17 +100,13 @@ export default function Page() {
             // Check batch
             const checkedBatch = await Promise.all(batch.map(checkLink));
             // Update links with results
-            setLinks(prev => prev.map(link => {
-
-                const checkedLink = checkedBatch.find(checked => checked.url === link.url);
+            setLinks(prev => prev.map(link => {const checkedLink = checkedBatch.find(checked => checked.url === link.url);
                 return checkedLink || link}));
             // Update stats
             setStats(prev => {
 
                 const newStats = { ...prev };
-                checkedBatch.forEach(checkedLink => {
-
-                    if (checkedLink.status === 'healthy')
+                checkedBatch.forEach(checkedLink => {if (checkedLink.status === 'healthy')
                         newStats.healthy++;
                     else if(checkedLink.status === 'broken')
                         newStats.broken++;
@@ -128,9 +114,7 @@ export default function Page() {
                     newStats.unknown--});
                 return newStats});
             // Small delay between batches
-            if(i + batchSize < allLinks.length) {
-
-                await new Promise(resolve => setTimeout(resolve, 100))}
+            if(i + batchSize < allLinks.length) {await new Promise(resolve => setTimeout(resolve, 100))}
         }
         setIsChecking(false)}, [findAllLinks, checkLink]);
     // Auto-fix broken links
@@ -168,9 +152,7 @@ export default function Page() {
                     fixedCount++}
             }
         });
-        if(fixedCount > 0) {
-
-            // Re-check links after fixes
+        if(fixedCount > 0) {// Re-check links after fixes
             setTimeout(checkAllLinks, 1000)}
         return fixedCount}, [links, checkAllLinks]);
     // Highlight broken link in page
@@ -185,22 +167,16 @@ export default function Page() {
         // Add highlight to selected element'
         link.element.classList.add('broken-link-highlight');
         // Scroll to element'
-        link.element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        link.element.scrollIntoView({behavior: 'smooth', block: 'center'});
         // Remove highlight after 3 seconds
-        setTimeout(() => {
-
-            link.element?.classList.remove('broken-link-highlight')}, 3000)}, []);
+        setTimeout(() => {link.element?.classList.remove('broken-link-highlight')}, 3000)}, []);
     // Auto-check links
-    useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-        if(autoCheck) {
-
-            const timer = setTimeout(checkAllLinks, 2000);
+    useEffect(() => {// TODO: Add dependencies if needed}, []);
+        if(autoCheck) {const timer = setTimeout(checkAllLinks, 2000);
             return () => clearTimeout(timer)}
     }, [autoCheck, checkAllLinks]);
     // Get status color
-    const getStatusColor = (status) => {
+    const getStatusColor = (props: any) => {
 
         switch(status) {
 
@@ -210,19 +186,19 @@ export default function Page() {
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30'}
     };
     // Get status icon
-    const getStatusIcon = (status) => {
+    const getStatusIcon = (props: any) => {
 
         switch(status) {
 
-            case 'healthy': return <CheckCircleIcon className="w-4 h-4 text-green-600"/>;'"
-            case 'broken': return <ExclamationTriangleIcon className="w-4 h-4 text-red-600"/>;'"
-            case 'checking': return <ArrowPathIcon className="w-4 h-4 text-yellow-600 animate-spin"/>;"
-            default: return <InformationCircleIcon className="w-4 h-4 text-gray-600"/>}
+            case 'healthy': return <CheckCircleIcon className="w-4 h-4 text-green-600" />;'"
+            case 'broken': return <ExclamationTriangleIcon className="w-4 h-4 text-red-600" />;'"
+            case 'checking': return <ArrowPathIcon className="w-4 h-4 text-yellow-600 animate-spin" />;"
+            default: return <InformationCircleIcon className="w-4 h-4 text-gray-600" />}
     };
     return (<>
       {/* Broken Link Fixer Toggle Button */}"`
       <motion.button initial={{ scale: 0 }} animate={{ scale: 1 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsOpen(!isOpen)} className={`fixed bottom-32 right-4 z-50 w-14 h-14 bg-orange-600 hover:bg-orange-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${className}`}  aria-expanded={isOpen}>"
-        <LinkIcon className="w-6 h-6"/>
+        <LinkIcon className="w-6 h-6" />
       </motion.button>
 
       {/* Broken Link Fixer Panel */}
@@ -248,7 +224,7 @@ export default function Page() {
                 Link Health Checker
               </h2>"
               <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">"
-                <XMarkIcon className="w-5 h-5"/>
+                <XMarkIcon className="w-5 h-5" />
               </button>
             </div>
 
@@ -325,14 +301,14 @@ export default function Page() {
               {/* Broken Links Tab */}'"
               {activeTab === 'broken' && (<div className="space-y-4">'"
                   {links.filter(link => link.status === 'broken').length === 0 ? (<div className="text-center text-gray-500 dark:text-gray-400">"
-                      <CheckCircleIcon className="w-12 h-12 mx-auto mb-3 text-green-500"/>
+                      <CheckCircleIcon className="w-12 h-12 mx-auto mb-3 text-green-500" />
                       <p>No broken links found!</p>"
                     </div>) : (<div className="space-y-3">
                       {links'
                         .filter(link => link.status === 'broken')"`
                         .map((link, index) => (<div key={`${link.url}-${index}`} className="p-3 rounded-lg border border-red-200 dark:border-red-700 bg-red-50 dark:bg-red-900/20 hover:border-red-300 dark:hover:border-red-600 transition-colors cursor-pointer" onClick={() => highlightBrokenLink(link)}>"
                             <div className="flex items-start gap-2">"
-                              <ExclamationTriangleIcon className="w-4 h-4 text-red-600 mt-0.5"/>
+                              <ExclamationTriangleIcon className="w-4 h-4 text-red-600 mt-0.5" />
 "
                               <div className="flex-1">"
                                 <h4 className="font-medium text-gray-900 dark:text-white text-sm break-all">
@@ -361,14 +337,14 @@ export default function Page() {
               {/* Healthy Links Tab */}'"
               {activeTab === 'healthy' && (<div className="space-y-4">'"
                   {links.filter(link => link.status === 'healthy').length === 0 ? (<div className="text-center text-gray-500 dark:text-gray-400">"
-                      <InformationCircleIcon className="w-12 h-12 mx-auto mb-3 text-blue-500"/>
+                      <InformationCircleIcon className="w-12 h-12 mx-auto mb-3 text-blue-500" />
                       <p>No healthy links found</p>"
                     </div>) : (<div className="space-y-3">
                       {links'
                         .filter(link => link.status === 'healthy')"`
                         .map((link, index) => (<div key={`${link.url}-${index}`} className="p-3 rounded-lg border border-green-200 dark:border-green-700 bg-green-50 dark:bg-green-900/20">"
                             <div className="flex items-start gap-2">"
-                              <CheckCircleIcon className="w-4 h-4 text-green-600 mt-0.5"/>
+                              <CheckCircleIcon className="w-4 h-4 text-green-600 mt-0.5" />
 "
                               <div className="flex-1">"
                                 <h4 className="font-medium text-gray-900 dark:text-white text-sm break-all">
@@ -391,7 +367,7 @@ export default function Page() {
               {/* Actions Tab */}'"
               {activeTab === 'actions' && (<div className="space-y-4">"
                   <div className="text-center text-gray-500 dark:text-gray-400">"
-                    <WrenchScrewdriverIcon className="w-12 h-12 mx-auto mb-3 text-orange-500"/>
+                    <WrenchScrewdriverIcon className="w-12 h-12 mx-auto mb-3 text-orange-500" />
                     <p>Take action to fix broken links</p>
                   </div>
 
@@ -402,12 +378,12 @@ export default function Page() {
 
                   {/* Re-check Button */}"
                   <button onClick={checkAllLinks} disabled={isChecking} className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">"
-                    <ArrowPathIcon className="w-4 h-4 inline mr-2"/>
+                    <ArrowPathIcon className="w-4 h-4 inline mr-2" />
                     {isChecking ? 'Checking...' : 'Re-check Links'}
                   </button>
 
                   {/* Export Report */}
-                  {links.length > 0 && (<button onClick = {
+                  {links.length > 0 && (<button onClick={
 
   () => {
                         const report = {
@@ -424,7 +400,7 @@ export default function Page() {
 
 }))
                         };
-                        const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+                        const blob = new Blob([JSON.stringify(report, null, 2)], {type: 'application/json'});
                         const url = URL.createObjectURL(blob);
                         const a = document.createElement('a');
                         a.href = url;
@@ -447,17 +423,18 @@ export default function Page() {
           background-color: rgba(249, 115, 22, 0.1) !important;
           transition: all 0.3s ease !important}
 
-        .link-target-placeholder {
-
-          animation: pulse 2s infinite}
+        .link-target-placeholder {animation: pulse 2s infinite}
 
         @keyframes pulse {
 
           0%, 100% { opacity: 1}
-          50% { opacity: 0.7}
+          50% {opacity: 0.7}
         }`
       `}</style>
     </>)};
-export { BrokenLinkFixer };
+export {BrokenLinkFixer};
 export default BrokenLinkFixer;
 }}}}}}}}}}}}'"`
+
+</motion>
+</motion>

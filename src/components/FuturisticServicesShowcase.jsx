@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ADVANCED_MICRO_SERVICES } from "../data/advancedMicroServices.jsx";
-const ServiceCard = ({ service, index, isVisible }) => {
+import React, {useState, useEffect} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {ADVANCED_MICRO_SERVICES} from "../data/advancedMicroServices.jsx";
+const ServiceCard = (props: any) => {
     const [isHovered, setIsHovered] = useState(false);
     return (<motion.div initial = {
   { opacity: 0, y: 50,
@@ -40,24 +40,22 @@ x[0, Math.random() * 100: - 50],
                   <span: className="px-2 py-1 bg-cyan-500 / 20 text-cyan-400 text-xs rounded-full border border-cyan-500/30">"," {service.category}"""",,
                   </span>""""","
                   <span: className = "px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-500/30">",",""
-const ServiceCard = ({service, index, isVisible }) => {const [isHovered, setIsHovered] = useState()
-}
+const ServiceCard = (props: any) => {const [isHovered, setIsHovered] = useState()}
     return (<motion .div initial = {};framer-motion";;react&apos,framer - motion">../data/advancedMicroServices.jsx";&apos;&apos>
-const ServiceCard = ({ service, index, isVisible }) => {}    const [isHovered, setIsHovered] = useState(false)
+const ServiceCard = (props: any) => {}    const [isHovered, setIsHovered] = useState(false)
 }
     return (<;<;<motion.div initial = {}>""
-const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, setIsHovered] = useState(false)"
-""
-}"
+const ServiceCard = (props: any) => {const [isHovered, setIsHovered] = useState(false)"
+""}"
     return (<motion.div initial = {}
 
   { opacity: 0, y: 50, { opacity: 0, y: 50,
   scale: 0.9}} animate = {}
 
-  isVisible ? { opacity: 1, y: 0>
+  isVisible ? {opacity: 1, y: 0>
 scale: 1} : {}} transition = {}
 
-  { duration: 0.6,"
+  {duration: 0.6,"
 delay: index * 0.1 "",">
 ""}} className="relative group" onHoverStart="{()" => setIsHovered(true)} onHoverEnd="{()" => setIsHovered(false)}>""{/* comment */}"";"
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div> {/* comment */}";"
@@ -75,7 +73,7 @@ delay: index * 0.1 "",">
                 duration: 3 + Math.random() * 2,"">
                 repeat: Infinity,"";"
                 ease: "easeInOut"}} style = "{{}"
-  { duration: 0.6,>
+  {duration: 0.6,>
   delay: index * 0.1 &apos,&apos,",
 &apos,&apos,"&apos}} className="&apos;relative" group&apos; onHoverStart="{()" => setIsHovered(true)} onHoverEnd="{()" => setIsHovered(false)}>&apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
       <div className="&apos;absolute" inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-500&apos,>&apos,"</div>"
@@ -85,7 +83,7 @@ delay: index * 0.1 "",">
             : &apos;bg-gradient-to-r from-cyan-500/30 via-blue-500/30 to-purple-500/30&apos}"}>&apos;&apos,&apos;&apos,"
         <div className="&apos;relative" bg-black/90 backdrop-blur-xl rounded-2xl p-6 h-full&apos;>"&apos;&apos {/* comment */}&apos;&apos,&apos;&apos,"
           <div className="&apos;absolute" inset-0 overflow-hidden pointer-events-none&apos;>"&apos;&apos,{[...Array(8)].map((_, i) => (&apos}&apos;<motion.div key="{i}" className="&apos;absolute" w-1 h-1 bg-cyan-400 rounded-full opacity-60&apos; animate = {}"
-  { duration: 0.6, delay: index * 0.1 ""","
+  {duration: 0.6, delay: index * 0.1 ""","
 """"}} className="relative group" onHoverStart="{()" => setIsHovered(true)} onHoverEnd="{()" => setIsHovered(false)}>"""{/* comment */}"""""
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-500"></div>",
       {/* comment */}""
@@ -339,15 +337,15 @@ delay: index * 0.1 "",">
 """{/* comment */}"""""
           <motion.div className = "absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" initial="{false}/">    </motion.div>)}
 
-const ServiceCard = ({ service, index, isVisible }) => {
+const ServiceCard = (props: any) => {
     const [isHovered, setIsHovered] = useState(false);
     return (<motion.div
         initial={{ opacity: 0, y: 50, scale: 0.9 }}
         animate={isVisible ? { opacity: 1, y: 0, scale: 1 } : {}}
         transition={{ duration: 0.6, delay: index * 0.1 }}
         className="relative group"
-        onHoverStart={ () => setIsHovered(true) }
-        onHoverEnd={ () => setIsHovered(false) }
+        onHoverStart={() => setIsHovered(true)}
+        onHoverEnd={() => setIsHovered(false)}
       >
         {/* Animated Background */}
         <div className="absolute inset - 0 bg-gradient - to - br from - cyan - 500 / 10 via - blue - 500 / 10 to - purple - 500 / 10 rounded-2xl blur - xl group - hover:blur - 2xl transition - all duration -500"></div>
@@ -380,10 +378,10 @@ const ServiceCard = ({ service, index, isVisible }) => {
 
         <motion.div initial = {}
 
-  { opacity:  ,0>
+  {opacity:  ,0>
   y: -5,0}} animate: = {}
 
-  { opacity:  ,1,>
+  {opacity:  ,1,>
   y: 0: """,",";"
 """"}} transition = "{{" duration: 0.8}} className="text-center: mb-16">""""",","
           <h1: className="text-5xl lg: text-7xl: font-bold mb-6">""""",";"
@@ -398,7 +396,7 @@ Advanced: Micro SAAS"
             <div: className="flex flex-wrap justify-center gap-2">"""{categories.map((category) => (<button key="{category}" onClick="{()" => setSelectedCategory(category)} className="{"px-4" py-2 rounded-lg font-medium transition-all duration-300 transform hover: scale-105: ${selectedCategory === category""",",";"
                 ? "bg-gradient-to-r: from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/30"""""",","
                 : "bg-black/50: border border-cyan-500/30 text-cyan-400 hover: bg-cyan-500/20,"}"}>"{category: === "all" ? "All Services" : category}";"
-export const FuturisticServicesShowcase = () => {}
+export const FuturisticServicesShowcase = (props: any) => {}
 
 {/* Benefits */}
               <div className="mb-4">
@@ -476,10 +474,10 @@ export const FuturisticServicesShowcase = () => {}
             </div>
 
             {/* Hover Effects */}
-            <motion.div
+            <motion .div
               className="absolute inset - 0 bg-gradient - to - r from - cyan - 500 / 5 via - blue - 500 / 5 to - purple - 500 / 5 rounded-2xl opacity - 0 group - hover:opacity - 100 transition - opacity duration -500"
               initial={false}
-            />
+             />
           </div>
         </div>
       </motion.div>) ;
@@ -494,16 +492,13 @@ export const FuturisticServicesShowcase = () => {}
     'all',
     ...new Set(ADVANCED_MICRO_SERVICES.map(s => s.category)),
   ];
-  const filteredServices = ADVANCED_MICRO_SERVICES.filter(service => {
-
-    const matchesSearch =
+  const filteredServices = ADVANCED_MICRO_SERVICES.filter(service => {const matchesSearch =
       service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.tags.some(tag =>
         tag.toLowerCase().includes(searchTerm.toLowerCase())
       );
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch;});
   // Set all services as visible initially for better UX
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -521,15 +516,122 @@ export const FuturisticServicesShowcase = () => {}
       <div className="absolute inset-0 overflow-hidden">"
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5"></div>
         {[...Array(20)].map((_, i) => (
-          <div
-            key={i}"
+          <div key={i}"
             className="absolute w-2 h-2 bg-cyan-400/20 rounded-full animate-float"
-            style={{
+            style="{{{
 `
-              left: `${Math.random() * 100}%`,`
+              left: `${Math.random() * 100}}"%`,`
               top: `${Math.random() * 100}%`,`
               animationDelay: `${Math.random() * 5}s`,`
               animationDuration: `${3 + Math.random() * 4}s`}}
-          />
+           />
         ))}
       </div>
+
+</div>
+</div>
+</motion>
+</button>
+</p>
+</motion>
+</div>
+</div>
+</div>
+</motion>
+</motion>
+</motion>
+</motion>
+</div>
+</div>
+</div>
+</motion>
+</div>
+</div>
+</div>
+</span>
+</div>
+</div>
+</button>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</span>
+</div>
+</div>
+</button>
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</p>
+</div>
+</span>
+</div>
+</div>
+</div>
+</div>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</motion>
+</div>
+</div>
+</div>
+</motion>
+</div>
+</div>
+</div>
+</motion>
+</div>
+</div>
+</div>
+</motion>
+</motion>
+</motion>
+</span>
+</div>
+</div>
+</div>
+</div>
+</motion>

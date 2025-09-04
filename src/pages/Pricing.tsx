@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-export default function Pricing() {
+export default function Pricing(props: any) {
   return (
     <div className="container mx-auto px-4 py-12 text-white">
       <h1 className="text-3xl font-bold mb-4">Pricing</h1>
@@ -19,7 +19,7 @@ import { motion } from 'framer-motion';
 import { Check, Star, Zap, Brain, Shield, Cloud, Code, Users, Building, Globe } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-const Pricing = () => {
+const Pricing = (props: any) => {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
 
@@ -414,3 +414,16 @@ const Pricing = () => {
 export default Pricing;
 =======
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ccc5
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</span>
+</motion>
+</motion>
+</motion>
+</SEO>
+</string>

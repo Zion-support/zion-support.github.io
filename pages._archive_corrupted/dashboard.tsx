@@ -16,10 +16,10 @@ import {
   Star
 } from 'lucide-react'
 
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: fals e })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: fals e })
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
 
-const DashboardPage: Reac t.FC = () => {
+const DashboardPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview')
   
   const stats = [
@@ -59,7 +59,7 @@ const DashboardPage: Reac t.FC = () => {
       name: 'AI Customer Analytics Platform',
       client: 'E-commerce Retailer',
       status: 'In Progress',
-      progress: 7 5,
+      progress: 75,
       deadline: '2024-02-15'
     },
     {
@@ -67,7 +67,7 @@ const DashboardPage: Reac t.FC = () => {
       name: 'Micro SaaS Inventory System',
       client: 'Manufacturing Co.',
       status: 'Completed',
-      progress: 10 0,
+      progress: 100,
       deadline: '2024-01-30'
     },
     {
@@ -75,7 +75,7 @@ const DashboardPage: Reac t.FC = () => {
       name: 'Cloud Migration Project',
       client: 'Financial Services',
       status: 'In Progress',
-      progress: 6 0,
+      progress: 60,
       deadline: '2024-03-01'
     },
     {
@@ -83,7 +83,7 @@ const DashboardPage: Reac t.FC = () => {
       name: 'Cybersecurity Assessment',
       client: 'Healthcare Provider',
       status: 'Planning',
-      progress: 2 5,
+      progress: 25,
       deadline: '2024-02-28'
     }
   ]
@@ -97,7 +97,7 @@ const DashboardPage: Reac t.FC = () => {
     },
     {
       title: 'IT Infrastructure',
-      count: 1 2,
+      count: 12,
       revenue: '$1.2M',
       icon: <Cloud className="w-6 h-6"  />
     },
@@ -127,9 +127,9 @@ const DashboardPage: Reac t.FC = () => {
         <main className="min-h-screen bg-gray-50">
           {/* Header */}
           <section className="bg-white shadow-sm">
-            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-6">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
               <motion.div
-                initial={{ opacity: 0, y: 2 0 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="flex items-center justify-between"
@@ -154,14 +154,14 @@ const DashboardPage: Reac t.FC = () => {
 
           {/* Stats Grid */}
           <section className="py-8">
-            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-6">
                 {stats.map((stat, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 2 0 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="bg-white rounded-xl shadow-lg p-6"
                   >
                     <div className="flex items-center justify-between">
@@ -182,12 +182,12 @@ const DashboardPage: Reac t.FC = () => {
 
           {/* Main Content */}
           <section className="pb-8">
-            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="grid grid-cols-1 lg: gri d-cols-3 gap-8">
                 {/* Recent Projects */}
-                <div className="lg: co l-span-2">
+                <div className="lg:col-span-2">
                   <motion.div
-                    initial={{ opacity: 0, y: 2 0 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="bg-white rounded-xl shadow-lg p-6"
@@ -199,7 +199,7 @@ const DashboardPage: Reac t.FC = () => {
                           key={project.id}
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                          transition={{ duration: 0.6, delay: index * 0.1 }}
                           className="border border-gray-200 rounded-lg p-4 hover: shado w-md transition-shadow"
                         >
                           <div className="flex items-center justify-between mb-2">

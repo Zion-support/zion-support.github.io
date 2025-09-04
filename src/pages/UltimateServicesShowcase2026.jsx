@@ -9,10 +9,10 @@ export default UltimateServicesShowcase2026
     ';';';';
 import React from 'react',;',';';
     ';';';';
-import {SEO } from '@/components/SEO';
-export default function UltimateServicesShowcase2026() {return (
+import {SEO} from '@/components/SEO';
+export default function UltimateServicesShowcase2026(props: any) {return (
     <div className="min-h-screen bg-white">
-      <SEO title="UltimateServicesShowcase2026 - Zion Tech Group" description="Professional UltimateServicesShowcase2026 services by Zion Tech Group" />
+      <SEO title="UltimateServicesShowcase2026 - Zion Tech Group" description="Professional UltimateServicesShowcase2026 services by Zion Tech Group"  />
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold text-white mb-8">UltimateServicesShowcase2026</h1>
         <p className="text-gray-300 text-lg">
@@ -20,22 +20,19 @@ export default function UltimateServicesShowcase2026() {return (
         </p>
       </div>
     </div>
-  );';
-}';';
+  );';}';';
  export default UltimateServicesShowcase2026';';';
  export default UltimateServicesShowcase2026&apos;&apos;',',';';
     ''';';';';
 import React from 'react',;',';';
     ';';';';
-import { SEO } from '@/components/SEO';
-const UltimateServicesShowcase2026: React.FC = () => {
-  return (
+import {SEO} from '@/components/SEO';
+const UltimateServicesShowcase2026: React.FC = () => {return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="UltimateServicesShowcase2026 - Zion Tech Group"
+      <SEO title="UltimateServicesShowcase2026 - Zion Tech Group"
         description="Professional UltimateServicesShowcase2026 services by Zion Tech Group"
         keywords="ultimateservicesshowcase2026, technology, services"
-      />
+       />
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">UltimateServicesShowcase2026</h1>
@@ -56,3 +53,4 @@ const UltimateServicesShowcase2026: React.FC = () => {
   )};';';
 export default UltimateServicesShowcase2026;';';';
 "';';';';
+</SEO>

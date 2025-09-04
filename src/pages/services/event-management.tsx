@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Calendar, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3, Users, Clock, DollarSign, Ticket } from 'lucide-react';
 
-export default function EventManagement() {
+export default function EventManagement(props: any) {
   const features = [
     'AI-powered event planning and optimization',
     'Automated registration and ticketing system',

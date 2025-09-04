@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { BarChart3, FileText, AlertTriangle, Zap, RefreshCw, Download, Search, X } from 'lucide-react';
+import React, {useState, useEffect, useCallback} from 'react';
+import {BarChart3, FileText, AlertTriangle, Zap, RefreshCw, Download, Search, X} from 'lucide-react';
 import ContentQualityAnalyzer from "../utils/contentQualityAnalyzer.jsx";
-const ContentQualityDashboard = ({ className = '' }) => {
+const ContentQualityDashboard = (props: any) => {
     const [isOpen, setIsOpen] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [report, setReport] = useState(null);
@@ -23,29 +23,24 @@ const ContentQualityDashboard = ({ className = '' }) => {
                     images['/images/hero-ai-solutions.jpg', '/images/hero-it-services.jpg'],;
                     links['/services', '/ai-solutions', '/about', '/contact'];
                 },;
-                {
-                    url: '/services',
+                {url: '/services',
                     title: 'Our Services - Comprehensive Technology Solutions',
                     content: 'We offer a wide range of technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation. Our expert team delivers innovative solutions tailored to your business needs.',
                     metaDescription: 'Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.',
                     images['/images/services-overview.jpg'],;
-                    links['/ai-solutions', '/cloud-devops', '/cybersecurity', '/about'];
-                },;
-                {
-                    url: '/ai-solutions',
+                    links['/ai-solutions', '/cloud-devops', '/cybersecurity', '/about'];},;
+                {url: '/ai-solutions',
                     title: 'AI Solutions - Artificial Intelligence Services',
                     content: 'Cutting-edge artificial intelligence solutions for modern businesses. Machine learning, predictive analytics, and AI automation to drive innovation and efficiency.',
                     metaDescription: 'Cutting-edge artificial intelligence solutions including machine learning, predictive analytics, and AI automation.',
                     images['/images/ai-solutions.jpg'],;
-                    links['/services', '/about', '/contact'];
-                },;
-                {                    url: '/about',
+                    links['/services', '/about', '/contact'];},;
+                {url: '/about',
 title: 'About Us - Zion Tech Group',
                     content: 'Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions.Discover our team of experts and our journey in the tech industry.',
                     metaDescription: 'Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions.',
                     images['/images/about-team.jpg'],;
-                    links['/services',/team',/contact',/mission'];
-                },;
+                    links['/services',/team',/contact',/mission'];},;
                 {
 
                     url: '/contact',
@@ -53,9 +48,9 @@ title: 'About Us - Zion Tech Group',
                     content: 'Contact Zion Tech Group for all your technology needs.Our team is ready to help you transform your business with cutting-edge solutions.',
                     metaDescription: 'Contact Zion Tech Group for all your technology needs.Our team is ready to help you transform your business.',
 import React, { useState, useEffect, useCallback } from 'react';'
-import { BarChart3, FileText, AlertTriangle, Zap, RefreshCw, Download, Search, X } from 'lucide-react';
+import {BarChart3, FileText, AlertTriangle, Zap, RefreshCw, Download, Search, X} from 'lucide-react';
 import ContentQualityAnalyzer from "../utils/contentQualityAnalyzer.jsx";'
-const ContentQualityDashboard = ({ className = '' }) => {}
+const ContentQualityDashboard = (props: any) => {}
     const [isOpen, setIsOpen] = useState(false);
     const [isLoading, setIsLoading] = useState(false);'
     const [report, setReport] = useState(null);''

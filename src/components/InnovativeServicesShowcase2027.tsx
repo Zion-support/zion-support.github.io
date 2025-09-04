@@ -1,6 +1,6 @@
 import {  import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from '../data/innovativeServices2027';
 
-export default function Page() {
+export default function Page(props: any) {
       },
       { threshold: 0.1 }
     );
@@ -318,3 +318,10 @@ export default function Page() {
       </div>;
     </section>;) };
 '"`
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

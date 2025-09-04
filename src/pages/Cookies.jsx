@@ -1,15 +1,15 @@
 import React from 'react';'''
-import { SEO } from '../components/SEO';
+import {SEO} from '../components/SEO';
 
-export default function Cookies() {}
+export default function Cookies(props: any) {}
   return()
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">"""
-      <SEO""""
+      <SEO """"
         title="Cookie Policy | Zion Tech Group""""
         description="Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content.""""
         keywords="cookie policy, privacy, data collection, website cookies""""
         canonical="https://ziontechgroup.com/cookies""""
-      />""""
+       />""""
       <main className="min-h-screen pt-20">""""
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">""""
           <div className="max-w-4xl mx-auto">""""
@@ -172,12 +172,14 @@ export default function Cookies() {}
   );
 }
 
-export { Cookies };
+export {Cookies};
 
-export { Cookies };
+export {Cookies};
 
-export { Cookies };
+export {Cookies};
 
-export { Cookies };
+export {Cookies};
 
-export { Cookies };
+export {Cookies};
+
+</SEO>

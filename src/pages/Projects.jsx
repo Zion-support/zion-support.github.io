@@ -1,14 +1,14 @@
 import React from "react";""""
-import { useProjects } from "@/hooks/useProjects";""""
+import {useProjects} from "@/hooks/useProjects";""""
 import SEO from "@/components/SEO";""""
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";""""
-import { Button } from "@/components/ui/button";""""
-import { Badge } from "@/components/ui/badge";""""
-import { Link } from "react-router-dom";
-import { Clock, Briefcase function ProjectsContent() {}
-    const { projects, isLoading } = useProjects();"""
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";""""
+import {Button} from "@/components/ui/button";""""
+import {Badge} from "@/components/ui/badge";""""
+import {Link} from "react-router-dom";
+import { Clock, Briefcase function ProjectsContent(props: any) {}
+    const {projects, isLoading} = useProjects();"""
     return (<>""""
-      <SEO title="My Projects | Zion AI Marketplace" description="View and manage your projects."/>"""
+      <SEO title="My Projects | Zion AI Marketplace" description="View and manage your projects." />"""
 """"
       <main className="container mx-auto px-4 py-8">""""
         <div className="mb-8">""""
@@ -19,14 +19,14 @@ import { Clock, Briefcase function ProjectsContent() {}
             {projects.map((project) => (<Card key={project.id}>"""
                 <CardHeader>""""
                   <CardTitle className="flex items-center gap-2">""""
-                    <Briefcase className="h-5 w-5 text-primary"/>""""
+                    <Briefcase className="h-5 w-5 text-primary" />""""
                     <span>{project.job?.title || "Project"}</span>"""
                   </CardTitle>""""
                   <CardDescription className="flex items-center gap-2 mt-1">""""
                     <Badge variant="outline">{project.status}</Badge>""""
                     <span className="flex items-center gap-1 text-xs text-muted-foreground">""""
-                      <Clock className="h-3 w-3"/>
-                      Started {new Date(project.start_date) .toLocaleDateString () }
+                      <Clock className="h-3 w-3" />
+                      Started {new Date(project.start_date) .toLocaleDateString ()}
                     </span>
                   </CardDescription>
                 </CardHeader>"""
@@ -46,15 +46,14 @@ import { Clock, Briefcase function ProjectsContent() {}
 
     </>)}
 export default function Projects
-export { Projects }() {
-    return <ProjectsContent />}
+export {Projects}() {return <ProjectsContent  />}
 
-export { ProjectsContent, Projects };
+export {ProjectsContent, Projects};
 
-export { ProjectsContent, Projects };
+export {ProjectsContent, Projects};
 
-export { ProjectsContent, Projects };
+export {ProjectsContent, Projects};
 
-export { ProjectsContent, Projects };
+export {ProjectsContent, Projects};
 
-export { ProjectsContent, Projects };
+export {ProjectsContent, Projects};

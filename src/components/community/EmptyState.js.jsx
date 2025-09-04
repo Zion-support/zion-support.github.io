@@ -4,11 +4,11 @@
   TooltipContent,,"});,"})"
   TooltipProvider,";,"});,"})"
   TooltipTrigger} from "@/components/ui/tooltip";,"});,"})"
-const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}"});,"})"
+const EmptyState = (props: any) => {}"});,"})"
   return();,"});,"})"
     <div className="text-center py-16">"""";,"});,"})"
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">"""";,"});,"})"
-        <MessageSquare className="h-10 w-10 text-zion-purple"  />""";,"});,"})"
+        <MessageSquare className="h-10 w-10 text-zion-purple"   />""";,"});,"})"
       </div>"""";,"});,"})"
       <h2 className="text-xl font-medium mb-2">{title}</h2>"""";,"});,"})"
       <p className="text-muted-foreground mb-6">{subtitle}</p>;,"});,"})"
@@ -29,17 +29,17 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}"});,"})"
     </div>)};,"});,"})"
 export default EmptyState,"});,"})"
 ;,"});,"})"
-export { EmptyState };,"});,"})"
+export {EmptyState};,"});,"})"
 ;,"});,"})"
-export { EmptyState };,"});,"})"
+export {EmptyState};,"});,"})"
 ;,"});,"})"
-export { EmptyState };,"});,"})"
+export {EmptyState};,"});,"})"
 ;,"});,"})"
-export { EmptyState };,"});,"})"
+export {EmptyState};,"});,"})"
 ;,"});,"})"
-export { EmptyState };,"});,"})"
+export {EmptyState};,"});,"})"
 """
-";const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}"
+";const EmptyState = (props: any) => {}"
   return()""
     <div className="text-center py-16">""""
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">""""
@@ -66,12 +66,14 @@ export { EmptyState };,"});,"})"
 </div>)};
 export default EmptyState;
 
-export { EmptyState };
+export {EmptyState};
 
-export { EmptyState };
+export {EmptyState};
 
-export { EmptyState };
+export {EmptyState};
 
-export { EmptyState };
+export {EmptyState};
 
-export { EmptyState };
+export {EmptyState};
+
+</MessageSquare>

@@ -1,6 +1,6 @@
 '
-  const [searchQuery, setSearchQuery] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('All');'
+  const [searchQuery, setSearchQuery] = useState<any>('');'
+  const [selectedCategory, setSelectedCategory] = useState<any>('All');'
   const [viewMode, setViewMode] = useState<any>('grid');'
   const [sortBy, setSortBy] = useState<any>('aiScore');
   
@@ -37,9 +37,9 @@
           {[...Array(20)].map((_, i) => (
             <div key={i}"
               className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-20 animate-float"
-              style={{
+              style="{{{
 
-                left: `${Math.random() * 100}%`,`
+                left: `${Math.random() * 100}}"%`,`
                 top: `${Math.random() * 100}%`,`
                 animationDelay: `${Math.random() * 3}s`,`
                 animationDuration: `${3 + Math.random() * 2}s`
@@ -273,7 +273,7 @@
                         className="bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20 h-full group cursor-pointer"
                         variants={cardVariants}"
                         whileHover="hover"
-                        onClick = {
+                        onClick={
 
   () => window.open(service.website,_blank')
 
@@ -289,7 +289,7 @@
                           <img src={service.images[0]}
                             alt={service.title}"
                             className="w-full h-48 object-cover group-hover: scal e-110 transition-transform duration-300"
-                           />"
+                            />"
                           <div className="absolute top-4 right-4 bg-zion-cyan text-black px-3 py-1 rounded-full text-sm font-semibold">
                             {service.category}
                           </div>
@@ -345,7 +345,7 @@
                           <img src={service.images[0]}
                             alt={service.title}"
                             className="w-full h-full object-cover"
-                           />"
+                            />"
                           <div className="absolute top-2 right-2 bg-zion-cyan text-black px-2 py-1 rounded-full text-xs font-semibold">
                             {service.category}
                           </div>
@@ -451,3 +451,19 @@
       </motion.section>;
     </div>;) }
 '"`
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</div>
+</any>
+</any>
+</any>
+</any>

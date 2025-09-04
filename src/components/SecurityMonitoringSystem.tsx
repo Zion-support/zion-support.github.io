@@ -1,3 +1,4 @@
+import React from 'react';
 import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
 
@@ -35,23 +36,19 @@ interface ComplianceStatus {
     nonCompliant: number;
     pending: number}}
 interface SecurityMonitoringSystemProps {
-  // Add your props here
+
+  // Add your props here: any;
 
   enabled?: boolean;
   showRealTime?: boolean;
   autoScan?: boolean;
   onThreatDetected?: threat: SecurityThreat void;
-export function SecurityMonitoringSystem({
+  export function SecurityMonitoringSystem(props: any) {
 
-  enabled = true,
-  showRealTime = true,
-  autoScan = true,
-  onThreatDetected}: SecurityMonitoringSystemProps) {
-
-  const [isOpen, setIsOpen] = useState(false);
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  const [isScanning, setIsScanning] = useState(false);
-  const [scanComplete, setScanComplete] = useState(false);
+  const [isOpen, setIsOpen] = useState<any>(false);
+  const [isFullscreen, setIsFullscreen] = useState<any>(false);
+  const [isScanning, setIsScanning] = useState<any>(false);
+  const [scanComplete, setScanComplete] = useState<any>(false);
   const [threats, setThreats] = useState<SecurityThreat[]>([]);
   const [vulnerabilities, setVulnerabilities] = useState<
     VulnerabilityAssessment[]
@@ -62,9 +59,9 @@ export function SecurityMonitoringSystem({
   const [selectedView, setSelectedView] = useState<'
     'threats' | 'vulnerabilities' | 'compliance''
   >('threats');
-  const [showAdvanced, setShowAdvanced] = useState(false);
-  const [securityScore, setSecurityScore] = useState(0);
-  const [targetScore, setTargetScore] = useState(95);
+  const [showAdvanced, setShowAdvanced] = useState<any>(false);
+  const [securityScore, setSecurityScore] = useState<any>(0);
+  const [targetScore, setTargetScore] = useState<any>(95);
 
   // Generate sample security threats
 
@@ -202,7 +199,7 @@ export function SecurityMonitoringSystem({
     return colors[type as keyof typeof colors] || colors.low};
 
   // Get status icon
-  const getStatusIcon = (status: string) => {
+  const getStatusIcon = (props: any) => {
 
     const icons = {
 
@@ -345,9 +342,9 @@ export function SecurityMonitoringSystem({
                                     ? 'bg-yellow-500''
                                     : 'bg-red-500'`
                               }`}
-                              style={{
+                              style="{{{
 `
-                                width: `${Math.min((securityScore / targetScore) * 100, 100)}%`}}
+                                width: `${Math.min((securityScore / targetScore) * 100}}"%`}}
                             ></div>
                           </div>
                         </div>
@@ -643,3 +640,20 @@ export function SecurityMonitoringSystem({
     </>
   )}
 '"`
+
+</motion>
+</motion>
+</motion>
+</RefreshCw>
+</motion>
+</motion>
+</motion>
+</any>
+</any>
+</any>
+</ComplianceStatus>
+</SecurityThreat>
+</any>
+</any>
+</any>
+</any>

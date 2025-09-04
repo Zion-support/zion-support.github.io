@@ -1,13 +1,13 @@
 import React from 'react';'''
-import { SEO } from '@/components/SEO';
+import {SEO} from '@/components/SEO';
 import {}
   Card,
   CardContent,'
   CardDescription,''
   CardHeader,'''
   CardTitle} from '@/components/ui/card';'''
-import { Button } from '@/components/ui/button';'''
-import { Badge } from '@/components/ui/badge';
+import {Button} from '@/components/ui/button';'''
+import {Badge} from '@/components/ui/badge';
 import {}
   Code,
   BookOpen,
@@ -21,8 +21,8 @@ import {}
   Webhook,''
   Key,'''
   Mail} from 'lucide-react';'''
-import { Link } from 'react-router-dom';
-export default function DeveloperPortal() {}
+import {Link} from 'react-router-dom';
+export default function DeveloperPortal(props: any) {}
   const apiFeatures = []
     {}
 '
@@ -137,18 +137,18 @@ export default function DeveloperPortal() {}
   ];
   return()
     <div className="min-h-screen bg-background">"""
-      <SEO"'"""
+      <SEO "'"""
         title="Developer Portal | Zion Tech Group"'"'"""
         description="Build powerful applications with Zion Tech Group's comprehensive APIs, SDKs, and developer tools.""""
         keywords="developer portal, API, SDK, documentation, Zion Tech Group, developers""""
         canonical="https://ziontechgroup.com/developers"""
-      />"""
+       />"""
 """"
       <div className="container mx-auto px-4 py-8">"""
         {/* Header */}""""
         <div className="text-center mb-12">""""
           <div className="flex justify-center mb-4">""""
-            <Code className="h-16 w-16 text-zion-cyan" />"""
+            <Code className="h-16 w-16 text-zion-cyan"  />"""
           </div>""""
           <h1 className="text-4xl font-bold text-white mb-4">
             Developer Portal"""
@@ -164,7 +164,7 @@ export default function DeveloperPortal() {}
               className="bg-zion-purple hover:bg-zion-purple/90""""
             >""""
               <Link to="/api-docs">""""
-                <BookOpen className="h-5 w-5 mr-2" />
+                <BookOpen className="h-5 w-5 mr-2"  />
                 View API Documentation;
               </Link>"""
             </Button>""""
@@ -174,7 +174,7 @@ export default function DeveloperPortal() {}
                 target="_blank""""
                 rel="noopener noreferrer""""
               >""""
-                <Github className="h-5 w-5 mr-2" />
+                <Github className="h-5 w-5 mr-2"  />
                 View on GitHub;
               </a>
             </Button>
@@ -196,7 +196,7 @@ export default function DeveloperPortal() {}
                 >""""
                   <CardHeader className="pb-3">""""
                     <div className="flex items-center justify-between">""""
-                      <IconComponent className="h-8 w-8 text-zion-cyan" />
+                      <IconComponent className="h-8 w-8 text-zion-cyan"  />
                       <Badge;
                         variant={}
 '
@@ -224,7 +224,7 @@ export default function DeveloperPortal() {}
                     >
                       <Link to={feature.docs}>"""
                         View Docs""""
-                        <ExternalLink className="h-4 w-4 ml-2" />
+                        <ExternalLink className="h-4 w-4 ml-2"  />
                       </Link>
                     </Button>
                   </CardContent>
@@ -281,7 +281,7 @@ export default function DeveloperPortal() {}
                 >""""
                   <CardHeader className="pb-3">""""
                     <div className="flex items-center justify-between">""""
-                      <IconComponent className="h-6 w-6 text-zion-cyan" />""""
+                      <IconComponent className="h-6 w-6 text-zion-cyan"  />""""
                       <Badge variant="outline" className="text-xs">
                         {resource.badge}
                       </Badge>"""
@@ -304,7 +304,7 @@ export default function DeveloperPortal() {}
                         {resource.badge === 'Download'''
                           ? 'Download'''"""
                           : 'Learn More'}""""
-                        <ExternalLink className="h-4 w-4 ml-2" />
+                        <ExternalLink className="h-4 w-4 ml-2"  />
                       </Link>
                     </Button>
                   </CardContent>
@@ -317,7 +317,7 @@ export default function DeveloperPortal() {}
         <Card className="mb-16 border-zion-blue-light">"""
           <CardHeader>""""
             <CardTitle className="text-white text-2xl flex items-center">""""
-              <Shield className="h-6 w-6 mr-2 text-zion-cyan" />
+              <Shield className="h-6 w-6 mr-2 text-zion-cyan"  />
               API Status & Performance"""
             </CardTitle>""""
             <CardDescription className="text-zion-slate-light">
@@ -351,7 +351,7 @@ export default function DeveloperPortal() {}
               <Button asChild variant="outline">""""
                 <a href="/api-status" target="_blank" rel="noopener noreferrer">"""
                   View Detailed Status""""
-                  <ExternalLink className="h-4 w-4 ml-2" />
+                  <ExternalLink className="h-4 w-4 ml-2"  />
                 </a>
               </Button>
             </div>
@@ -376,13 +376,13 @@ export default function DeveloperPortal() {}
                 className="bg-zion-purple hover:bg-zion-purple/90""""
               >""""
                 <Link to="/contact">""""
-                  <MessageSquare className="h-5 w-5 mr-2" />
+                  <MessageSquare className="h-5 w-5 mr-2"  />
                   Contact Developer Support;
                 </Link>"""
               </Button>""""
               <Button asChild variant="outline">""""
                 <a href="mailto:dev-support@ziontechgroup.com">""""
-                  <Mail className="h-5 w-5 mr-2" />
+                  <Mail className="h-5 w-5 mr-2"  />
                   Email Support;
                 </a>
               </Button>"""
@@ -395,12 +395,14 @@ export default function DeveloperPortal() {}
       </div>
     </div>)}
 
-export { DeveloperPortal, IconComponent, IconComponent };
+export {DeveloperPortal, IconComponent, IconComponent};
 
-export { DeveloperPortal, IconComponent, IconComponent };
+export {DeveloperPortal, IconComponent, IconComponent};
 
-export { DeveloperPortal, IconComponent, IconComponent };
+export {DeveloperPortal, IconComponent, IconComponent};
 
-export { DeveloperPortal, IconComponent, IconComponent };
+export {DeveloperPortal, IconComponent, IconComponent};
 
-export { DeveloperPortal, IconComponent, IconComponent };
+export {DeveloperPortal, IconComponent, IconComponent};
+
+</SEO>

@@ -19,9 +19,9 @@ import {
   Filter} from 'lucide-react';';';';
 const AIServicesPricingComparison2025: Reac t.FC = () => {',';';
     ';';';
-  const [activeCategory, setActiveCategory] = useState('all');',';';
+  const [activeCategory, setActiveCategory] = useState<any>('all');',';';
     ';';';
-  const [searchTerm, setSearchTerm] = useState('');';';';
+  const [searchTerm, setSearchTerm] = useState<any>('');';';';
   const categories = [',';';
     ';';' { id: 'all', name: 'All Services', icon: '🚀' },',';';
     ';';' { id: 'Legal Technology', name: 'Legal Technology', icon: '⚖️' },',';';
@@ -397,9 +397,9 @@ const AIServicesPricingComparison2025: Reac t.FC = () => {',';';
       <Helmet>';';';
         <title>AI Services Pricing Comparison 2025 | Zion Tech Group</title>',';';
     ';';';
-        <meta name="description" content="Compare Zion Tech Group's AI autonomous services pricing with competitors. See how our advanced AI solutions offer better value and ROI than traditional alternatives."  />
-        <meta name="keywords" content="AI services pricing, pricing comparison, ROI comparison, cost analysis, AI automation pricing"  />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-services-pricing-comparison-2025"  />
+        <meta name="description" content="Compare Zion Tech Group's AI autonomous services pricing with competitors. See how our advanced AI solutions offer better value and ROI than traditional alternatives."   />
+        <meta name="keywords" content="AI services pricing, pricing comparison, ROI comparison, cost analysis, AI automation pricing"   />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-services-pricing-comparison-2025"   />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -660,3 +660,10 @@ const AIServicesPricingComparison2025: Reac t.FC = () => {',';';
     </>';';
   )};';';';
 export default AIServicesPricingComparison2025;"';';';';
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</any>
+</any>

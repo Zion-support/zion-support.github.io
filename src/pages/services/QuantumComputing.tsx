@@ -35,7 +35,7 @@ import {
   Cloud
 } from 'lucide-react';
 
-export function QuantumComputing() {
+export function QuantumComputing(props: any) {
   const quantumServices = [
     {
       title: 'Quantum Algorithm Development',
@@ -317,3 +317,9 @@ export function QuantumComputing() {
 }
 
 export default QuantumComputing;
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

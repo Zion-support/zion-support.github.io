@@ -1,10 +1,10 @@
 import React from 'react';'''
-import { Button } from '@/components/ui/button';'''
-import { Card } from '@/components/ui/card';'''
-import { MapPin, Clock, CheckCircle2 } from 'lucide-react';'''
-import { FavoriteButton } from '@/components/FavoriteButton';'''
-import { useNavigate } from 'react-router-dom';
-export default function Page() {}
+import {Button} from '@/components/ui/button';'''
+import {Card} from '@/components/ui/card';'''
+import {MapPin, Clock, CheckCircle2} from 'lucide-react';'''
+import {FavoriteButton} from '@/components/FavoriteButton';'''
+import {useNavigate} from 'react-router-dom';
+export default function Page(props: any) {}
   };
   const handleBook = e => {}
     e.preventDefault();
@@ -13,7 +13,7 @@ export default function Page() {}
       onBook(talent);
     }
   };
-  const handleViewProfile = () => {}
+  const handleViewProfile = (props: any) => {}
 `
 ``
     navigate(`/talent/${talent.id}`);
@@ -32,12 +32,12 @@ export default function Page() {}
           <div className="relative mr-4">""""
             <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">
               {talent.profile_picture_url ? ("""
-                <img""""
+                <img """"
                   loading="lazy"""
                   src={talent.profile_picture_url}"""
                   alt={talent.full_name}""""
                   className="w-full h-full object-cover"""
-                />"""
+                  />"""
               ) : (""""
                 <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">'
                   {talent.full_name?.charAt(0) || 'T'}
@@ -46,7 +46,7 @@ export default function Page() {}
             </div>"""
             {talent.is_verified && (""""
               <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">""""
-                <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
+                <CheckCircle2 className="w-5 h-5 text-zion-cyan"  />
               </div>
             )}
           </div>
@@ -57,11 +57,11 @@ export default function Page() {}
               <h3 className="text-lg font-bold text-white">
                 {talent.full_name}
               </h3>
-              <FavoriteButton"""
+              <FavoriteButton """
                 itemId={talent.id}""""
                 itemType="talent""""
                 className="-mt-1"""
-              />"""
+               />"""
             </div>""""
             <p className="text-white font-medium">
               {talent.professional_title}
@@ -71,13 +71,13 @@ export default function Page() {}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">"""
               {talent.location && (""""
                 <div className="flex items-center text-zion-slate-light">""""
-                  <MapPin className="h-4 w-4 mr-1" />
+                  <MapPin className="h-4 w-4 mr-1"  />
                   <span>{talent.location}</span>
                 </div>
               )}"""
               {talent.availability_type && (""""
                 <div className="flex items-center text-zion-slate-light">""""
-                  <Clock className="h-4 w-4 mr-1" />
+                  <Clock className="h-4 w-4 mr-1"  />
                   <span>{talent.availability_type}</span>
                 </div>
               )}
@@ -155,12 +155,14 @@ export default function Page() {}
 
 export default TalentCardComponent;
 
-export { TalentCardComponent };
+export {TalentCardComponent};
 
-export { TalentCardComponent };
+export {TalentCardComponent};
 
-export { TalentCardComponent };
+export {TalentCardComponent};
 
-export { TalentCardComponent };
+export {TalentCardComponent};
 
-export { Page };
+export {Page};
+
+</FavoriteButton>

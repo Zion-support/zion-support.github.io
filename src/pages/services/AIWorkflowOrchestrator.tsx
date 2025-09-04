@@ -1,6 +1,6 @@
 import { Workflow, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Zap, Target, Clock, Cpu, Globe } from 'lucide-react';
 
-export default function AIWorkflowOrchestrator() {
+export default function AIWorkflowOrchestrator(props: any) {
   const features = [
     'AI-powered workflow automation and orchestration',
     'Intelligent process optimization and decision making',

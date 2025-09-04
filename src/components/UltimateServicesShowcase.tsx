@@ -53,7 +53,7 @@ import { ultimateInnovativeServices2025 } from '../../data / 2025 - ultimate - i
 
 export function UltimateServicesShowcase(...args[]):  {
 
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [selectedService, setSelectedService] = useState<any>(null);
 
     ...ultimateInnovativeServices2025,;
@@ -255,7 +255,7 @@ export function UltimateServicesShowcase(...args[]):  {
                   <Link to={service.link}"
                     className="bg-zion-slate-light border border-zion-cyan text-zion-cyan px-4 py-2 rounded-lg font-semibold hover: b g-zion-cyan hover: tex t-white transition-all duration-300 flex items-center justify-center"
 "
-                    <Zap className="w-4 h-4"   />                  </Link>
+                    <Zap className="w-4 h-4"    />                  </Link>
                 </div>;
               </div>
             </motion.div>) ) }
@@ -281,12 +281,12 @@ export function UltimateServicesShowcase(...args[]):  {
             <p className="text-zion-gray-light text-lg mb-6 max-w-2xl mx-auto">
               Join hundreds of companies already using our innovative solutions to gain competitive advantages and achieve breakthrough results.</p>"
             <div className="flex flex-wrap justify-center gap-4">
-              <Link"
+              <Link "
                 to="/contact"
                 className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-semibold hover: fro m-zion-blue hover: t o-zion-cyan transition-all duration-300 flex items-center gap-2"
 
                 Get Started Today"
-                <ArrowRight className="w-5 h-5"   />              </Link>
+                <ArrowRight className="w-5 h-5"    />              </Link>
               <a`
                 href={`tel:${contact.mobile}`'
                   .replace(/\s/g,)
@@ -420,3 +420,11 @@ export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
 '"`
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</any>
+</any>

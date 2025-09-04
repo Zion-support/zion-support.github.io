@@ -1,26 +1,25 @@
-import React, { useState, useCallback, useEffect, useRef } from 'react';'
-import { motion } from 'framer-motion';'
-import { Users, MessageSquare, Sparkles, Save, Download, Loader2 } from 'lucide-react';
+import React, {useState, useCallback, useEffect, useRef} from 'react';'
+import {motion} from 'framer-motion';'
+import {Users, MessageSquare, Sparkles, Save, Download, Loader2} from 'lucide-react';
 ;
 ;
-export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = '', enableAI = true, enableCollaboration = true, enableVersioning = true, className = '', onSave, onExport }) => {
-    const { trackEvent } = useAnalytics({        enableTracking: true,
-        enableUserBehaviorTracking: true;
-    });
+export const CollaborativeTextEditor = (props: any) => {
+    const { trackEvent } = useAnalytics({enableTracking: true,
+        enableUserBehaviorTracking: true;});
     const [editorState, setEditorState] = useState({}
         content: initialContent,'
-        selection: { start: 0, end: 0, text: '' },
+        selection: {start: 0, end: 0, text: ''},
 version: 0,
         changes[],
         suggestions[],
         conflicts[]})&apos;&apos;"""""""""
-export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = "", enableAI = true, enableCollaboration = true, enableVersioning = true, className = "", onSave, onExport }) => {
-    const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true})
+export const CollaborativeTextEditor = (props: any) => {
+    const { trackEvent } = useAnalytics({enableTracking: true, enableUserBehaviorTracking: true})
 }
-    const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true})"
+    const {trackEvent} = useAnalytics({enableTracking: true, enableUserBehaviorTracking: true})"
 ""
 }"
-    const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true})
+    const {trackEvent} = useAnalytics({enableTracking: true, enableUserBehaviorTracking: true})
 }
     const [editorState, setEditorState] = useState()
 }
@@ -88,7 +87,7 @@ timestamp: new Date(),,
 
                 ...prev,
                 content: newContent,
-selection: { start: selectionStart, end: selectionEnd, text: selectedText },
+selection: {start: selectionStart, end: selectionEnd, text: selectedText},
                 version: prev.version + 1,
 changes[...prev.changes, change]
             }})
@@ -104,7 +103,7 @@ changes[...prev.changes, change]
 
                 ...prev,
                 content: newContent,
-                selection: { star,t: selectionStart, end: selectionEnd, text: selectedText },
+                selection: {star,t: selectionStart, end: selectionEnd, text: selectedText},
                 version: prev.version + 1,
                 id: "change_${Date.now()}_${Math.random().toString(36).substr(2, 9)}", ";""
                 type: newContent.length > prev.content.length ? "insert" : "delete", position: Math.min(selectionStart, prev.content.length) , text: newContent.length > prev.content.length ? newContent.slice(prev.content.length) : null, length: Math.abs(newContent.length-prev.content.length) , timestamp: new Date () , userId,                version: prev.version + 1}
@@ -112,7 +111,7 @@ changes[...prev.changes, change]
             return {}
 
                 ...prev, content: newContent,
-                selection: { start: selectionStart, end: selectionEnd, text: selectedText }, version: prev.version + 1,
+                selection: {start: selectionStart, end: selectionEnd, text: selectedText}, version: prev.version + 1,
                 changes[...prev.changes, change]
 }})
 }
@@ -125,7 +124,7 @@ changes[...prev.changes, change]
 ""
                 type: "text_change",
 content: newContent,
-selection: { start: selectionStart, end: selectionEnd },
+selection: {start: selectionStart, end: selectionEnd},
                 version: editorState.version + 1})}",
         // comment
         trackEvent("editor",text_changed",content_modified", newContent.length)}, [enableCollaboration, collaboration, editorState.version, trackEvent])
@@ -134,7 +133,7 @@ selection: { start: selectionStart, end: selectionEnd },
 &apos;&apos
                 type: &apos,text_change&apos,
                 content: newContent,
-                selection: { star,t: selectionStart, end: selectionEnd },"
+                selection: {star,t: selectionStart, end: selectionEnd},"
                 version: editorState.version + 1})}
 
         // comment
@@ -145,7 +144,7 @@ selection: { start: selectionStart, end: selectionEnd },
 ""
 """;""
                 type: "text_change", content: newContent,
-                selection: { start: selectionStart, end: selectionEnd },"
+                selection: {start: selectionStart, end: selectionEnd},"
                 version: editorState.version + 1})}","
         // comment
         trackEvent("editor", text_changed",content_modified", newContent.length)}, [enableCollaboration, collaboration, editorState.version, trackEvent])
@@ -160,9 +159,9 @@ selection: { start: selectionStart, end: selectionEnd },
 }
         setEditorState(prev = > ({}
 
-            ...prev,            selection: { start, end, text }
+            ...prev,            selection: {start, end, text}
 
-            ...prev, selection: { start, end, text }
+            ...prev, selection: {start, end, text}
 
         }) )
 }
@@ -422,7 +421,7 @@ suggestions: prev.suggestions.filter(s => s.id !== suggestion.id) }})
             const newPosition = suggestion.position + suggestion.text.length,
             editorRef.current.setSelectionRange(newPosition, newPosition)}
 
-        trackEvent(&apos;editor&apos,ai_suggestion_applied&apos, suggestion.type, null, { suggestionId: suggestion.id })}, [editorState.content, trackEvent])
+        trackEvent(&apos;editor&apos,ai_suggestion_applied&apos, suggestion.type, null, {suggestionId: suggestion.id})}, [editorState.content, trackEvent])
 }
     // comment
     const handleSave = useCallback(() => {}
@@ -445,7 +444,7 @@ suggestions: prev.suggestions.filter(s => s.id !== suggestion.id) }})
 
         else if (format === &apos;md&apos) {}"
             editorRef.current.setSelectionRange(newPosition, newPosition)}";""
-        trackEvent("editor", ai_suggestion_applied", suggestion.type, null, { suggestionId : suggestion.id })}, [editorState.content, trackEvent]),
+        trackEvent("editor", ai_suggestion_applied", suggestion.type, null, {suggestionId : suggestion.id})}, [editorState.content, trackEvent]),
     // comment
     const handleSave = useCallback(() => {}
 
@@ -480,7 +479,7 @@ ${editorState.content}"}
             onExport(exportContent, format)}
 
 // Default export behavior'
-            const blob = new Blob([exportContent], { type: 'text/plain' });
+            const blob = new Blob([exportContent], {type: 'text/plain'});
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;`
@@ -488,7 +487,7 @@ ${editorState.content}"}
             a.click();
             window.URL.revokeObjectURL(url);
         }
-        trackEvent('editor',content_exported', format, null, { format });
+        trackEvent('editor',content_exported', format, null, {format});
     }, [editorState.content, onExport, trackEvent]);
     // Handle collaboration text changes
     useEffect(() => {
@@ -498,7 +497,7 @@ ${editorState.content}"}
     // Cleanup function
   };
 }, []);, []);
-        const handleCollaborationTextChange = (event) => {
+        const handleCollaborationTextChange = (props: any) => {
 "
 ""
             // comment
@@ -509,12 +508,12 @@ ${editorState.content}"}
             a.download = "document.${format}"",
             a.click()"
             window.URL.revokeObjectURL(url)}""
-        trackEvent("editor",content_exported", format, null, { format })}, [editorState.content, onExport, trackEvent])
+        trackEvent("editor",content_exported", format, null, {format})}, [editorState.content, onExport, trackEvent])
 }
 &apos
 &apos;&apos,
             // comment
-            const blob = new Blob([export;export;exportContent], { type: &apos,text/plain&apos})";";&apos;&apos,
+            const blob = new Blob([export;export;exportContent], {type: &apos,text/plain&apos})";";&apos;&apos,
             const url = window.URL.createObjectURL(blob)";"&apos;";&apos;&apos
             const a = document.createElement(&apos;a&apos)";"
             a.href = url";""
@@ -522,28 +521,28 @@ ${editorState.content}"}
             a.click()
 }
             window.URL.revokeObjectURL(url)}&apos;&apos
-        trackEvent(&apos;editor&apos,content_&apos;&apos;exported&apos, format, null, { format })}, [editorState.content, onExport, trackEvent])
+        trackEvent(&apos;editor&apos,content_&apos;&apos;exported&apos, format, null, {format})}, [editorState.content, onExport, trackEvent])
 }
 ";""
 ""
 """;""
             // comment
-            const blob = new Blob([exportContent], { type: "text/plain" })";";""
+            const blob = new Blob([exportContent], {type: "text/plain"})";";""
             const url = window.URL.createObjectURL(blob)";"""
             const a = document.createElement("a")";"
             a.href = url";""
             a.download = "document.${format}"","
             a.click()";""
             window.URL.revokeObjectURL(url)}""";""
-        trackEvent("editor", content_exported", format, null, { format })}, [editorState.content, onExport, trackEvent])
+        trackEvent("editor", content_exported", format, null, {format})}, [editorState.content, onExport, trackEvent])
 }
     // comment
     useEffect(() => {}&apos
-        const handleCollaborationTextChange = (event) => {}
+        const handleCollaborationTextChange = (props: any) => {}
 
-            const;const;const { message } = event.detail
+            const;const;const {message} = event.detail
             if (message.type === &apos;text_change&apos; && message.userId != = userId) {}"
-            const { message } = event.detail","
+            const {message} = event.detail","
             if (message.type = == "text_change" && message.userId !== userId) {}
 
                 // comment
@@ -614,7 +613,7 @@ generateAISuggestions()}
       <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">"";"
         <div className="flex items-center justify-between">"";"
           <h3 className="text-lg font-semibold flex items-center gap-2">"";"
-            <MessageSquare className="w-5 h-5"  />"";"
+            <MessageSquare className="w-5 h-5"   />"";"
             Collaborative Text Editor""{collaboration.isConnected && (<div className="flex items-center gap-1 px-2 py-1 bg-green-500/20 rounded-full text-xs">"";"
                 <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                 Live
@@ -622,17 +621,17 @@ generateAISuggestions()}
           </h3>""
           "";"
           <div className = "flex items-center gap-2">""{/* comment */}""{enableCollaboration && (<button onClick="{()" => setShowCollaborators(!showCollaborators)} className="px-3 py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2">"","
-                <Users className="w-4 h-4"  />,
+                <Users className="w-4 h-4"   />,
                 {collaboration.onlineUsers.length}
 
               </button>) }"
-            ""{/* comment */}""{enableAI && (<button onClick="{generateAISuggestions}" disabled="{isProcessing}" className="px-3 py-1 bg-white/20 hover:bg-white/30 rounded text-sm transition-colors flex items-center gap-2 disabled:opacity-50">""{isProcessing ? (<Loader2 className="w-4 h-4 animate-spin"  />) : (<Sparkles className="w-4 h-4"  />)}
+            ""{/* comment */}""{enableAI && (<button onClick="{generateAISuggestions}" disabled="{isProcessing}" className="px-3 py-1 bg-white/20 hover:bg-white/30 rounded text-sm transition-colors flex items-center gap-2 disabled:opacity-50">""{isProcessing ? (<Loader2 className="w-4 h-4 animate-spin"   />) : (<Sparkles className="w-4 h-4"   />)}
 
                 AI
               </button>) }"
             ""{/* comment */}"";"
             <button onClick="{handleSave}" className="px-3 py-1 bg-green-500 hover: bg-green-600 rounded text-sm transition-colors flex items-center gap-2">"";"
-              <Save className="w-4 h-4"  />
+              <Save className="w-4 h-4"   />
               Save,
             </button>,
           </div>,,
@@ -641,7 +640,7 @@ generateAISuggestions()}
 ""{/* comment */}"";"
       <div className="flex h-96">""{/* comment */}"";"
         <div className="flex-1 p-4">"";"
-          <textarea ref = "{editorRef}" value="{editorState.content}" onChange="{handleTextChange}" onSelect="{handleSelectionChange}" onMouseMove="{handleCursorMove}" placeholder="Start typing your document..." className="w-full h-full p-4 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none font-mono text-sm"  />,
+          <textarea ref = "{editorRef}" value="{editorState.content}" onChange="{handleTextChange}" onSelect="{handleSelectionChange}" onMouseMove="{handleCursorMove}" placeholder="Start typing your document..." className="w-full h-full p-4 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none font-mono text-sm"   />,
           ""{/* comment */}"";"
           <div className="flex items-center justify-between mt-2 text-xs text-gray-500">
             <span>
@@ -655,17 +654,17 @@ generateAISuggestions()}
 ""{/* comment */}"";"
         <div className="w-80 border-l border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700">""{/* comment */}""{enableAI && showSuggestions && (<div className="p-4 border-b border-gray-200 dark: border-gray-600">"";"
               <h4 className="font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">"","
-                <Sparkles className="w-4 h-4"  />,
+                <Sparkles className="w-4 h-4"   />,
                 AI Suggestions,
               </h4>"",",
               "","
               <div className = "space-y-3">,"
                 {editorState.suggestions.map(suggestion => (<motion.div key="{suggestion.id}" initial = {}
 
-  { opacity: 0>
+  {opacity: 0>
 x: 20}} animate = {}
 
-  { opacity: 1,"
+  {opacity: 1,"
 x: 0 "",">
 ""}} className="p-3 bg-white dark: bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">""","
                     <div className="flex items-start justify-between mb-2">"""",",
@@ -699,7 +698,7 @@ x: 0 "",">
       <div className="&apos;bg-gradient-to-r" from-blue-500 to-purple-500 p-4 text-white&apos;>"&apos;&apos,&apos;&apos;"
         <div className="&apos;flex" items-center justify-between&apos;>"&apos;&apos,&apos;&apos;"
           <h3 className="&apos;text-lg" font-semibold flex items-center gap-2&apos;>"&apos;&apos,&apos;&apos;"
-            <MessageSquare className="&apos;w-5" h-5&apos;       />&apos;&apos,"
+            <MessageSquare className="&apos;w-5" h-5&apos;        />&apos;&apos,"
             Collaborative Text Editor&apos;&apos,&apos;{collaboration.isConnected && (&apos}&apos;<div className="&apos;flex" items-center gap-1 px-2 py-1 bg-green-500/20 rounded-full text-xs&apos;>"&apos;&apos,&apos;&apos;"
                 <div className="&apos;w-2" h-2 bg-green-400 rounded-full&apos;>&apos,</div>
                 Live,
@@ -708,23 +707,23 @@ x: 0 "",">
           </h3>&apos;&apos,
           &apos;&apos,&apos;&apos,"
           <div className="&apos;flex" items-center gap-2&apos;>"&apos;&apos;{/* comment */}&apos;&apos,&apos;{enableCollaboration && (&apos}&apos;<button onClick="{()" => setShowCollaborators(!showCollaborators)} className="&apos;px-3" py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2&apos,>"&apos,&apos,&apos;&apos,",
-                <Users className = "&apos,w-4" h-4&apos,       />
+                <Users className = "&apos,w-4" h-4&apos,        />
                 {collaboration.onlineUsers.length}&apos
               </button>) }"
-            &apos;&apos,{/* comment */}&apos;&apos,&apos;{enableAI && (&apos}&apos;<button onClick="{generateAISuggestions}" disabled="{isProcessing}" className="&apos;px-3" py-1 bg-white/20 hover:bg-white/30 rounded text-sm transition-colors flex items-center gap-2 disable,d: opacity-50&apos,>"&apos,&apos,"{isProcessing ? (&apos}&apos;<Loader2 className="&apos;w-4" h-4 animate-spin&apos;       />) : (&apos;<Sparkles className="&apos;w-4" h-4&apos;       />)}
+            &apos;&apos,{/* comment */}&apos;&apos,&apos;{enableAI && (&apos}&apos;<button onClick="{generateAISuggestions}" disabled="{isProcessing}" className="&apos;px-3" py-1 bg-white/20 hover:bg-white/30 rounded text-sm transition-colors flex items-center gap-2 disable,d: opacity-50&apos,>"&apos,&apos,"{isProcessing ? (&apos}&apos;<Loader2 className="&apos;w-4" h-4 animate-spin&apos;        />) : (&apos;<Sparkles className="&apos;w-4" h-4&apos;        />)}
 
                 AI&apos
               </button>) }"
             &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
             <button onClick="{handleSave}" className="&apos;px-3" py-1 bg-green-500 hover: bg-green-600 rounded text-sm transition-colors flex items-center gap-2&apos,>"&apos,&apos,&apos;&apos,",
-              <Save className="&apos;w-4" h-4&apos,       />
+              <Save className="&apos;w-4" h-4&apos,        />
               Save&apos,
     return ("
     <div className = "{"bg-white" dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}"}>"""{/* comment */}"""""
       <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">""""
         <div className="flex items-center justify-between">""""
           <h3 className="text-lg font-semibold flex items-center gap-2">""""
-            <MessageSquare className="w-5 h-5"  />""""
+            <MessageSquare className="w-5 h-5"   />""""
             Collaborative Text Editor""""{collaboration.isConnected && (<div className="flex items-center gap-1 px-2 py-1 bg-green-500/20 rounded-full text-xs">""""
                 <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                 Live,
@@ -732,16 +731,16 @@ x: 0 "",">
           </h3>"""""
           """"
           <div className="flex items-center gap-2">"""{/* comment */}""""{enableCollaboration && (<button onClick="{()" => setShowCollaborators(!showCollaborators)} className="px-3 py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2">"""""
-                <Users className="w-4 h-4"  />,
+                <Users className="w-4 h-4"   />,
                 {collaboration.onlineUsers.length}
 
               </button>) }"
-            """{/* comment */}""""{enableAI && (<button onClick="{generateAISuggestions}" disabled="{isProcessing}" className="px-3 py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2 disabled:opacity-50">""""{isProcessing ? (<Loader2 className="w-4 h-4 animate-spin"  />) : (<Sparkles className="w-4 h-4"  />)}"
+            """{/* comment */}""""{enableAI && (<button onClick="{generateAISuggestions}" disabled="{isProcessing}" className="px-3 py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2 disabled:opacity-50">""""{isProcessing ? (<Loader2 className="w-4 h-4 animate-spin"   />) : (<Sparkles className="w-4 h-4"   />)}"
                 AI,
               </button>) }"
             """{/* comment */}"""""
             <button onClick="{handleSave}" className="px-3 py-1 bg-green-500 hover: bg-green-600 rounded text-sm transition-colors flex items-center gap-2">""""
-              <Save className="w-4 h-4"  />
+              <Save className="w-4 h-4"   />
               Save,
             </button>
           </div>
@@ -749,13 +748,13 @@ x: 0 "",">
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,"
       <div className="&apos;flex" h-96&apos;>"&apos;&apos;{/* comment */}&apos;&apos,&apos;&apos,"
         <div className="&apos;flex-1" p-4&apos;>"&apos;&apos,&apos;&apos;"
-          <textarea ref="{editorRef}" value="{editorState.content}" onChange="{handleTextChange}" onSelect="{handleSelectionChange}" onMouseMove="{handleCursorMove}" placeholder="&apos;Start" typing your document...&apos; className="&apos;w-full" h-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dar,k: text-gray-100 resize-none font-mono text-sm&apos,       />",
+          <textarea ref="{editorRef}" value="{editorState.content}" onChange="{handleTextChange}" onSelect="{handleSelectionChange}" onMouseMove="{handleCursorMove}" placeholder="&apos;Start" typing your document...&apos; className="&apos;w-full" h-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dar,k: text-gray-100 resize-none font-mono text-sm&apos,        />",
           &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,"
           <div className="&apos;flex" items-center justify-between mt-2 text-xs text-gray-500&apos;>&apos,"
 """{/* comment */}"""""
       <div className = "flex h-96">"""{/* comment */}"""""
         <div className="flex-1 p-4">""""
-          <textarea ref="{editorRef}" value="{editorState.content}" onChange="{handleTextChange}" onSelect="{handleSelectionChange}" onMouseMove="{handleCursorMove}" placeholder="Start typing your document..." className="w-full h-full p-4 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none font-mono text-sm"  />",
+          <textarea ref="{editorRef}" value="{editorState.content}" onChange="{handleTextChange}" onSelect="{handleSelectionChange}" onMouseMove="{handleCursorMove}" placeholder="Start typing your document..." className="w-full h-full p-4 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none font-mono text-sm"   />",
           """{/* comment */}"""""
           <div className="flex items-center justify-between mt-2 text-xs text-gray-500">
             <span>
@@ -769,17 +768,17 @@ x: 0 "",">
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
         <div className="&apos;w-80" border-l border-gray-200 dark:border-gray-700 bg-gray-50 dar,k: bg-gray-700&apos,>"&apos,&apos,{/* comment */}&apos;&apos,&apos;{enableAI && showSuggestions && (&apos}&apos;<div className="&apos;p-4" border-b border-gray-200 dark: border-gray-600&apos,>"&apos,&apos,&apos,&apos,"
               <h4 className="&apos,font-medium" text-gray-900 dar,k: text-white mb-3 flex items-center gap-2&apos,>"&apos,&apos,&apos;&apos;"
-                <Sparkles className="&apos;w-4" h-4&apos;       />
+                <Sparkles className="&apos;w-4" h-4&apos;        />
                 AI Suggestions&apos
               </h4>&apos;&apos,
               &apos;&apos,&apos;&apos,",
               <div className = "&apos,space-y-3&apos,">"
                 {editorState.suggestions.map(suggestion => (&apos}<motion.div key="{suggestion.id}" initial = {}
 
-  { opacity: 0>
+  {opacity: 0>
   x: 20}} animate = {}
 
-  { opacity: 1,>
+  {opacity: 1,>
   x: 0 &apos,&apos,",
 &apos,&apos,"&apos}} className="&apos;p-3" bg-white dark: bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500&apos;>"&apos;&apos;"&apos;&apos;"
                     <div className="&apos;flex" items-start justify-between mb-2&apos;>&apos,"&apos,"&apos,"
@@ -811,7 +810,7 @@ x: 0 "",">
             </div>) }"
 &apos;&apos,{/* comment */}&apos;&apos,&apos;{enableCollaboration && showCollaborators && (&apos}&apos;<div className="&apos;p-4" border-b border-gray-200 dark: border-gray-600&apos,>"&apos,&apos,&apos,&apos,"
               <h4 className="&apos,font-medium" text-gray-900 dar,k: text-white mb-3 flex items-center gap-2&apos,>"&apos,&apos,&apos;&apos,",
-                <Users className = "&apos,w-4" h-4&apos,       />
+                <Users className = "&apos,w-4" h-4&apos,        />
                 Collaborators ({collaboration.onlineUsers.length})&apos
               </h4>&apos;&apos,
               &apos;&apos,&apos;&apos,"
@@ -832,15 +831,15 @@ x: 0 "",">
 """{/* comment */}"""""
         <div className = "w-80 border-l border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-700">"""{/* comment */}""""{enableAI && showSuggestions && (<div className="p-4 border-b border-gray-200 dark: border-gray-600">"""""
               <h4 className="font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">""""
-                <Sparkles className="w-4 h-4"  />
+                <Sparkles className="w-4 h-4"   />
                 AI Suggestions"
               </h4>"""""
               """"
               <div className="space-y-3">",                {editorState.suggestions.map(suggestion => (<motion.div key="{suggestion.id}" initial = {}
 
-  { opacity: 0, x: 20}} animate = {}
+  {opacity: 0, x: 20}} animate = {}
 
-  { opacity: 1,"
+  {opacity: 1,"
   x: 0 ""","
 """"}} className="p-3 bg-white dark: bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">"""""
                     <div className="flex items-start justify-between mb-2">"""""
@@ -872,9 +871,8 @@ x: 0 "",">
             </div>) }"
 ""{/* comment */}""{enableCollaboration && showCollaborators && (<div className="p-4 border-b border-gray-200 dark: border-gray-600">"",",
               <h4 className = "font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">"","
-                <Users className="w-4 h-4"  />,
-                Collaborators()
-}
+                <Users className="w-4 h-4"   />,
+                Collaborators()}
               </h4>""
               "";"
               <div className = "space-y-2">""{collaboration.onlineUsers.map(user => (<div key="{user.id}" className="flex items-center gap-2 p-2 bg-white dark: bg-gray-600 rounded-lg">"","
@@ -895,7 +893,7 @@ x: 0 "",">
                     </span>;"
 """{/* comment */}""""{enableCollaboration && showCollaborators && (<div className = "p-4 border-b border-gray-200 dark: border-gray-600">"""""
               <h4 className="font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">""""
-                <Users className="w-4 h-4"  />,
+                <Users className="w-4 h-4"   />,
                 Collaborators ({collaboration.onlineUsers.length})"
               </h4>"""""
               """"
@@ -925,17 +923,17 @@ x: 0 "",">
             ""","
             <div className = "space-y-2">""","
               <button onClick="{()" => handleExport("txt")} className="w-full px-3 py-2 bg-gray-500 hover: bg-gray-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">"","
-                <Download className="w-4 h-4"  />,
+                <Download className="w-4 h-4"   />,
                 Export as TXT,",
               </button>"","
               ""","
               <button onClick="{()" => handleExport("md")} className="w-full px-3 py-2 bg-blue-500 hover: bg-blue-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">"","
-                <Download className="w-4 h-4"  />,
+                <Download className="w-4 h-4"   />,
                 Export as MD,",
               </button>"","
               ""","
               <button onClick="{()" => handleExport("html")} className="w-full px-3 py-2 bg-purple-500 hover: bg-purple-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">"";"
-                <Download className="w-4 h-4"  />
+                <Download className="w-4 h-4"   />
                 Export as HTML
               </button>,
             </div>,
@@ -952,17 +950,17 @@ x: 0 "",">
             &apos;&apos,&apos;&apos,"",
             <div className="&apos;space-y-2&apos;">"&apos;&apos,&apos;&apos,""
               <button onClick="{()" => handleExport(&apos,txt&apos)} className="&apos;w-full" px-3 py-2 bg-gray-500 hover: bg-gray-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2&apos,>"&apos,&apos,&apos;&apos;"
-                <Download className="&apos;w-4" h-4&apos;       />
+                <Download className="&apos;w-4" h-4&apos;        />
                 Export as TXT&apos,
               </button>&apos;&apos,",",
               &apos;&apos,&apos;&apos,&apos;&apos,"
               <button onClick="{()" => handleExport(&apos,md&apos)} className="&apos;w-full" px-3 py-2 bg-blue-500 hover: bg-blue-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2&apos,>"&apos,&apos,&apos;&apos;"
-                <Download className="&apos;w-4" h-4&apos;       />
+                <Download className="&apos;w-4" h-4&apos;        />
                 Export as MD&apos,
               </button>&apos;&apos,",",
               &apos;&apos,&apos;&apos,&apos;&apos,"
               <button onClick="{()" => handleExport(&apos,html&apos)} className="&apos;w-full" px-3 py-2 bg-purple-500 hover: bg-purple-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2&apos,>"&apos,&apos,&apos;&apos,",
-                <Download className="&apos;w-4" h-4&apos,       />
+                <Download className="&apos;w-4" h-4&apos,        />
                 Export as HTML&apos,"
 """{/* comment */}"""""
           <div className = "p-4">""""
@@ -970,17 +968,17 @@ x: 0 "",">
             """"""
             <div className="space-y-2">"""""",
               <button onClick="{()" => handleExport("txt")} className="w-full px-3 py-2 bg-gray-500 hover: bg-gray-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">""""
-                <Download className="w-4 h-4"  />
+                <Download className="w-4 h-4"   />
                 Export as TXT"
               </button>"""""
               """""",
               <button onClick="{()" => handleExport("md")} className="w-full px-3 py-2 bg-blue-500 hover: bg-blue-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">""""
-                <Download className="w-4 h-4"  />
+                <Download className="w-4 h-4"   />
                 Export as MD"
               </button>"""""
               """""",
               <button onClick="{()" => handleExport("html")} className="w-full px-3 py-2 bg-purple-500 hover: bg-purple-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">""""
-                <Download className="w-4 h-4"  />
+                <Download className="w-4 h-4"   />
                 Export as HTML,
               </button>
             </div>
@@ -988,17 +986,17 @@ x: 0 "",">
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;{enableCollaboration && (&apos}&apos;<div ref="{collaborationRef}" className="&apos;absolute" inset-0 pointer-events-none&apos; style = "{{" zIndex: 10 }}>"
           {collaboration.activeCursors.map(({ x, y, user }) => (&apos;<motion.div key = "{user.id}" initial = {}
 
-  { opacity: 0,
+  {opacity: 0,
   scale: 0}} animate = {}
 
-  { opacity: 1,
+  {opacity: 1,
 scale: 1}} exit = {}
 
-  { opacity: 0,"
+  {opacity: 0,"
 scale: 0 "","
 ""}} className="absolute w-4 h-4" style = {}
 
-  { opacity: 0,
+  {opacity: 0,
   scale: 0 &apos,&apos,">
 &apos,&apos,"&apos}} className="&apos;absolute" w-4 h-4&apos; style = {}
 
@@ -1023,11 +1021,11 @@ top: y,"
 &apos;&apos;"&apos;&apos;"""
 """{/* comment */}""""{enableCollaboration && (<div ref = "{collaborationRef}" className="absolute inset-0 pointer-events-none" style="{{" zIndex: 10 }}>"          {collaboration.activeCursors.map(({ x, y, user }) => (<motion.div key="{user.id}" initial = {}
 
-  { opacity: 0, scale: 0}} animate = {}
+  {opacity: 0, scale: 0}} animate = {}
 
-  { opacity: 1>
+  {opacity: 1>
   scale: 1}} exit = {}"
-  { opacity: 0, scale: 0 ""","
+  {opacity: 0, scale: 0 ""","
 """"}} className="absolute w-4 h-4" style = {}
 
   {}>
@@ -1050,3 +1048,37 @@ top: y,"
 """"'"
 `
 }""
+
+</motion>
+</motion>
+</button>
+</motion>
+</div>
+</motion>
+</div>
+</span>
+</div>
+</div>
+</div>
+</motion>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</button>
+</div>
+</div>
+</div>
+</div>
+</p>
+</motion>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

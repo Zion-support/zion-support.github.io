@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, {useState} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
 import { Brain, Cpu, Database, Globe, Zap, ArrowRight, Code, Bot, Scan import { Link } from 'react-router-dom';
 const aiServices = [
-    {
-        id: 'ai-chat',
+    {id: 'ai-chat',
         name: 'ZionGPT Pro',
         description: 'Advanced conversational AI with enterprise-grade security and customization',
         category: 'Conversational AI',
@@ -13,10 +12,8 @@ const aiServices = [
         features['Multi-language support', 'Custom training', 'API access', 'Analytics'],
         icon: Brain,
         color: 'from-purple-500 to-purple-700',
-        status: 'active'
-    },
-    {
-        id: 'ai-vision',
+        status: 'active'},
+    {id: 'ai-vision',
         name: 'VisionAI Suite',
         description: 'Computer vision solutions for image recognition, analysis, and processing',
         category: 'Computer Vision',
@@ -26,10 +23,8 @@ const aiServices = [
         features['Real-time processing', 'Custom models', 'Batch processing', 'SDK'],
         icon: Cpu,
         color: 'from-blue-500 to-blue-700',
-        status: 'beta'
-    },
-    {
-        id: 'ai-data',
+        status: 'beta'},
+    {id: 'ai-data',
         name: 'DataMind Analytics',
         description: 'Intelligent data analysis and predictive modeling platform',
         category: 'Data Analytics',
@@ -39,10 +34,8 @@ const aiServices = [
         features['Predictive analytics', 'Real-time insights', 'Custom dashboards', 'API'],
         icon: Database,
         color: 'from-green-500 to-green-700',
-        status: 'active'
-    },
-    {
-        id: 'ai-global',
+        status: 'active'},
+    {id: 'ai-global',
         name: 'GlobalAI Network',
         description: 'Distributed AI computing network for global scale operations',
         category: 'Infrastructure',
@@ -52,10 +45,8 @@ const aiServices = [
         features['Global deployment', 'Auto-scaling', 'Load balancing', 'Monitoring'],
         icon: Globe,
         color: 'from-orange-500 to-orange-700',
-        status: 'new'
-    },
-    {
-        id: 'ai-code-review',
+        status: 'new'},
+    {id: 'ai-code-review',
         name: 'AI Code Reviewer',
         description: 'Automated pull request reviews with security and quality checks',
         category: 'Developer AI',
@@ -65,10 +56,8 @@ const aiServices = [
         features['PR annotations', 'OWASP checks', 'Refactor suggestions'],
         icon: Code,
         color: 'from-cyan-500 to-blue-600',
-        status: 'active'
-    },
-    {
-        id: 'ai-rag-assistant',
+        status: 'active'},
+    {id: 'ai-rag-assistant',
         name: 'Knowledge RAG Assistant',
         description: 'Private, secure chat over your documents with access controls',
         category: 'Conversational AI',
@@ -78,8 +67,7 @@ const aiServices = [
         features['Policy-aware retrieval', 'Redaction', 'Human-in-the-loop'],
         icon: Bot,
         color: 'from-purple-600 to-fuchsia-600',
-        status: 'active'
-    },
+        status: 'active'},
     {
         id: 'ai-vision-edge',
         name: 'Edge Vision Inspector',
@@ -95,14 +83,14 @@ const aiServices = [
 
 ];
 const categories = ['All', 'Conversational AI', 'Computer Vision', 'Data Analytics', 'Infrastructure', 'Developer AI'];
-export function AIServicesShowcase() {
+export function AIServicesShowcase(props: any) {
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [selectedService, setSelectedService] = useState(null);
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);
     const filteredServices = selectedCategory === 'All'
         ? aiServices
         : aiServices.filter(service => service.category === selectedCategory);
-    const getStatusBadge = (status) => {
+    const getStatusBadge = (props: any) => {
         const statusConfig = {
   active: { color: 'bg-green-500',
   text: 'Active' 
@@ -113,8 +101,8 @@ export function AIServicesShowcase() {
 
 
 },
-            beta: { color: 'bg-yellow-500', text: 'Beta' },
-            new: { color: 'bg-blue-500', text: 'New' }
+            beta: {color: 'bg-yellow-500', text: 'Beta'},
+            new: {color: 'bg-blue-500', text: 'New'}
         };
         const config = statusConfig[status];
         return (<span className={`${config.color} text-white text-xs px-2 py-1 rounded-full font-medium`}>
@@ -180,7 +168,7 @@ export function AIServicesShowcase() {
 
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6">
-            <Zap className="w-5 h-5 text-purple-400"/>
+            <Zap className="w-5 h-5 text-purple-400" />
             <span className="text-purple-300 font-medium">Latest AI Services</span>
           </div>
 
@@ -278,12 +266,12 @@ export function AIServicesShowcase() {
 
 }
             }} className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 overflow-hidden group">
-                <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-10 group-hover:opacity-20 transition-opacity duration-300`}/>
+                <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-10 group-hover:opacity-20 transition-opacity duration-300`} />
                 <div className="relative z-10">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
-                        <service.icon className="w-6 h-6 text-white"/>
+                        <service .icon className="w-6 h-6 text-white" />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold text-white">{service.name}</h3>
@@ -305,7 +293,7 @@ export function AIServicesShowcase() {
                   <div className="flex items-center justify-between">
                     <div className="text-zion-cyan font-semibold">{service.price}</div>
                     <Link to="/services" className="inline-flex items-center gap-2 text-white/90 hover:text-white">
-                      Learn more <ArrowRight className="w-4 h-4"/>
+                      Learn more <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
                 </div>
@@ -316,7 +304,7 @@ export function AIServicesShowcase() {
         {/* CTA */}
         <div className="text-center">
           <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-zion-cyan to-zion-blue text-white border border-zion-cyan/30">
-            Talk to sales <ArrowRight className="w-4 h-4"/>
+            Talk to sales <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </div>
@@ -324,3 +312,8 @@ export function AIServicesShowcase() {
 
 
 export default AIServicesShowcase;
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

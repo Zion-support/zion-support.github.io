@@ -8,7 +8,7 @@ import React from 'react',;';';
     ';';';';
 import {SEO } from '@/components/SEO';
 ,"});,"})
-export default function Blog() {return (
+export default function Blog(props: any) {return (
     <div className="min-h-screen bg-white">
       <SEO title="Blog - Zion Tech Group" description="Professional Blog services by Zion Tech Group"  />
       <div className="container mx-auto px-4 py-20">
@@ -32,7 +32,7 @@ import { ;';';';
   Calendar, User, ArrowRight, Tag, Clock, TrendingUp, ;',';';
     ';';';
   Brain, Atom, Rocket, Shield, Globe, Code} from &apos;lucide-react';&apos;&apos;
-export default function Blog() {}
+export default function Blog(props: any) {}
   const blogPosts = [
      {
       id: 1,
@@ -54,7 +54,7 @@ import { ;';';';
   Calendar, User, ArrowRight, Tag, Clock, TrendingUp, ;',';';
     ';';';
   Brain, Atom, Rocket, Shield, Globe, Code} from 'lucide-react';
-export default function Blog() {;
+export default function Blog(props: any) {;
   const blogPosts = [
   {;
       id: 1 title: "The Future of AI in Enterprise: 2025 Trends and Predictions"
@@ -149,7 +149,7 @@ return (';
                     className="px-4 py-2 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-sm";
                   > {category.name}
                   </span>;
-export default function Blog() {
+export default function Blog(props: any) {
   return (
   return (
   const blogPosts = [
@@ -655,11 +655,11 @@ export default function Blog() {
                     Get the latest technology insights delivered to your inbox.;
                   </p>;
                   <div className="space-y-3">;
-                    <input;
+                    <input ;
                       type="email";
                       placeholder="Enter your email";
                       className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: rin g-2 focus: rin g-blue-500";
-                    />;
+                     />;
                     <button className="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover: fro m-blue-700 hover: t o-purple-700 transition-all duration-200">;
                       Subscribe;
                     </button>;
@@ -694,7 +694,7 @@ export default function Blog() {
                     <input type=&quot;email&quot;
                       placeholder=&quot;Enter your email&quot;
                       className=&quot;w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: rin g-2 focus: rin g-blue-500&quot;
-                     />&quot;
+                      />&quot;
                     <button className=&quot;w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover: fro m-blue-700 hove,r: t o-purple-700 transition-all duration-200&quot;>
                       Subscribe&quot;
                       type="email"
@@ -718,3 +718,22 @@ export default function Blog() {
   );';';
 }';';';
 "';';';';
+</button>
+</motion>
+</motion>
+</section>
+</motion>
+</motion>
+</section>
+</div>
+</div>
+</p>
+</h1>
+</motion>
+</SEO>
+</div>
+</motion>
+</div>
+</section>
+</div>
+</SEO>

@@ -775,3 +775,15 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 };
 
 export default AIContentOptimizerPro;}}}}};
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</SEO>

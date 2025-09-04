@@ -47,7 +47,7 @@ const caseStudies: CaseStud y[] = [{ id: '1',
     duration: '4 months'
   }
 ]
-export default function CaseStudies() {
+export default function CaseStudies(props: any) {
   return (
   return (
   return (<section className="py-24 sm: p y-32 bg-gradient-to-br from-slate-50 to-blue-50">
@@ -171,3 +171,9 @@ export default function CaseStudies() {
     </section>
   )
 }
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

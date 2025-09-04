@@ -1,37 +1,30 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { SEO } from "@/components/SEO";
-import { BarChart3, TrendingUp, Brain, Zap, ArrowRight, CheckCircle, Star } from "lucide-react";
-import { Link } from "react-router-dom";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {SEO} from "@/components/SEO";
+import {BarChart3, TrendingUp, Brain, Zap, ArrowRight, CheckCircle, Star} from "lucide-react";
+import {Link} from "react-router-dom";
 export default function AIAnalyticsDashboard
-export { AIAnalyticsDashboard }() {
+export {AIAnalyticsDashboard}() {
     const features = [
         {
             title: "AI-Powered Insights",
             description: "Advanced machine learning algorithms analyze your data to uncover hidden patterns and opportunities",
-            icon: <Brain className="h-6 w-6 text-zion-cyan"/>
+            icon: <Brain className="h-6 w-6 text-zion-cyan" />
         },
-        {
-            title: "Real-time Analytics",
+        {title: "Real-time Analytics",
             description: "Monitor your business metrics in real-time with live dashboards and instant notifications",
-            icon: <Zap className="h-6 w-6 text-zion-purple"/>
-        },
-        {
-            title: "Predictive Analytics",
+            icon: <Zap className="h-6 w-6 text-zion-purple" />},
+        {title: "Predictive Analytics",
             description: "Forecast future trends and make data-driven decisions with confidence",
-            icon: <TrendingUp className="h-6 w-6 text-zion-blue"/>
-        },
-        {
-            title: "Custom Dashboards",
+            icon: <TrendingUp className="h-6 w-6 text-zion-blue" />},
+        {title: "Custom Dashboards",
             description: "Build personalized dashboards tailored to your specific business needs",
-            icon: <BarChart3 className="h-6 w-6 text-zion-cyan"/>
-        }
+            icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />}
     ];
     const pricingPlans = [
-        {
-            name: "Starter",
+        {name: "Starter",
             price: "$99",
             period: "/month",
             description: "Perfect for small businesses getting started with AI analytics",
@@ -42,10 +35,8 @@ export { AIAnalyticsDashboard }() {
                 "Email support",
                 "Monthly reports"
             ],;
-            popular: false
-        },
-        {
-            name: "Professional",
+            popular: false},
+        {name: "Professional",
             price: "$299",
             period: "/month",
             description: "Advanced analytics for growing businesses",
@@ -57,10 +48,8 @@ export { AIAnalyticsDashboard }() {
                 "Real-time alerts",
                 "API access"
             ],;
-            popular: true
-        },
-        {
-            name: "Enterprise",
+            popular: true},
+        {name: "Enterprise",
             price: "$799",
             period: "/month",
             description: "Full-scale AI analytics for large organizations",
@@ -72,31 +61,24 @@ export { AIAnalyticsDashboard }() {
                 "Advanced security",
                 "Custom integrations"
             ],;
-            popular: false
-        }
+            popular: false}
     ];
     const testimonials = [
-        {
-            name: "Sarah Chen",
+        {name: "Sarah Chen",
             role: "CTO, TechFlow Inc.",
             content: "Zion's AI Analytics Dashboard transformed how we understand our customer data. The insights are game-changing.",
-            rating: 5
-        },
-        {
-            name: "Marcus Rodriguez",
+            rating: 5},
+        {name: "Marcus Rodriguez",
             role: "Data Scientist, DataCorp",
             content: "The predictive analytics capabilities are incredible. We've improved our forecasting accuracy by 40%.",
-            rating: 5
-        },
-        {
-            name: "Emily Watson",
+            rating: 5},
+        {name: "Emily Watson",
             role: "VP Operations, GrowthTech",
             content: "Real-time dashboards help us make faster, better decisions. ROI was immediate.",
-            rating: 5
-        }
+            rating: 5}
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
-      <SEO title="AI Analytics Dashboard - Zion Tech Group" description="Transform your business with AI-powered analytics, real-time insights, and predictive intelligence. Get started today!" keywords="AI analytics, business intelligence, predictive analytics, data insights, Zion Tech Group" canonical="https://ziontechgroup.com/ai-analytics-dashboard"/>
+      <SEO title="AI Analytics Dashboard - Zion Tech Group" description="Transform your business with AI-powered analytics, real-time insights, and predictive intelligence. Get started today!" keywords="AI analytics, business intelligence, predictive analytics, data insights, Zion Tech Group" canonical="https://ziontechgroup.com/ai-analytics-dashboard" />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4">
@@ -116,7 +98,7 @@ export { AIAnalyticsDashboard }() {
             <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-4 text-lg">
               <Link to="/contact">
                 Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5"/>
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg">
@@ -188,7 +170,7 @@ export { AIAnalyticsDashboard }() {
                 <CardContent>
                   <ul className="space-y-3 mb-6">
                     {plan.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-zion-slate-light">
-                        <CheckCircle className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0"/>
+                        <CheckCircle className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0" />
                         {feature}
                       </li>))}
                   </ul>
@@ -219,7 +201,7 @@ export { AIAnalyticsDashboard }() {
             {testimonials.map((testimonial, index) => (<Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">
                 <CardContent className="pt-6">
                   <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="h-5 w-5 text-yellow-400 fill-current"/>))}
+                    {[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />))}
                   </div>
                   <p className="text-zion-slate-light mb-4 italic">"{testimonial.content}"</p>
                   <div>
@@ -245,7 +227,7 @@ export { AIAnalyticsDashboard }() {
             <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-4 text-lg">
               <Link to="/contact">
                 Start Your Free Trial
-                <ArrowRight className="ml-2 h-5 w-5"/>
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg">

@@ -1,6 +1,6 @@
 import { Users, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Heart, TrendingUp, MessageSquare, Eye, Zap, Target, Globe } from 'lucide-react';
 
-export default function AICustomerExperienceAnalytics() {
+export default function AICustomerExperienceAnalytics(props: any) {
   const features = [
     'AI-powered customer journey mapping and analysis',
     'Real-time sentiment analysis and emotion detection',

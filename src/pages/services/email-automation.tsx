@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Mail, Check, ExternalLink, Phone, ArrowRight, Target, Zap, Shield, FileText, BarChart3, Users, Clock, DollarSign, Send } from 'lucide-react';
 
-export default function EmailAutomation() {
+export default function EmailAutomation(props: any) {
   const features = [
     'AI-powered email sequence automation',
     'Smart lead nurturing campaigns',

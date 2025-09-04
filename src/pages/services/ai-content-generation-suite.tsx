@@ -17,7 +17,7 @@ import {
   TrendingUp
 } from 'lucide-react';
 
-const AIContentGenerationSuite = () => {
+const AIContentGenerationSuite = (props: any) => {
   const features = [
     'AI-powered blog post generation',
     'Social media content creation',
@@ -283,3 +283,10 @@ const AIContentGenerationSuite = () => {
 };
 
 export default AIContentGenerationSuite;
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

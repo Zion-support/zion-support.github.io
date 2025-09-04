@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  Brain,
+import React, {useState} from 'react';
+import {motion} from 'framer-motion';
+import {Brain,
   Zap,
   Shield,
   CheckCircle,
@@ -575,35 +574,28 @@ import {
   CheckCircle,
   Shield,
   Zap,
-  Brain
-} from 'lucide-react';
+  Brain} from 'lucide-react';
 
     technologies["AI", "Exit Planning", "Market Analysis", "Optimization"]
   }
 ];
 
 const vcTechnologies = [
-  {
-    name: "AI & Machine Learning",
+  {name: "AI & Machine Learning",
     description: "Advanced AI algorithms for investment analysis",
     icon: Brain,
     useCase: "Investment Analysis",
-    reliability: "Critical"
-  },
-  {
-    name: "Financial Analytics",
+    reliability: "Critical"},
+  {name: "Financial Analytics",
     description: "Comprehensive financial data analysis",
     icon: BarChart3,
     useCase: "Financial Modeling",
-    reliability: "Critical"
-  },
-  {
-    name: "Market Intelligence",
+    reliability: "Critical"},
+  {name: "Market Intelligence",
     description: "Real-time market data and insights",
     icon: TrendingUp,
     useCase: "Market Analysis",
-    reliability: "High"
-  },
+    reliability: "High"},
   {
     name: "Risk Management",
     description: "AI-powered risk assessment and management",
@@ -623,15 +615,13 @@ const successStories = [
     results: "45% better investment decisions, 60% faster due diligence, 35% improved returns, better risk management",
     logo: "ICP"
   },
-  {
-    id: 2,
+  {id: 2,
     comp: "Tech Growth Fund",
     industry: "Investment Fund",
     challenge: "Required autonomous deal sourcing and evaluation system",
     solution: "Implemented AI-driven deal sourcing and evaluation platform",
     results: "50% more deal flow, 40% faster evaluation, better quality investments, improved efficiency",
-    logo: "TGF"
-  },
+    logo: "TGF"},
   {
     id: 3,
     comp: "Startup Ventures Ltd",
@@ -651,20 +641,16 @@ const processSteps = [
     icon: FileText,
     duration: "2-4 weeks"
   },
-  {
-    step: 2,
+  {step: 2,
     title: "AI Strategy Development",
     description: "Develop AI strategy and implementation roadmap",
     icon: Code,
-    duration: "4-8 weeks"
-  },
-  {
-    step: 3,
+    duration: "4-8 weeks"},
+  {step: 3,
     title: "System Implementation",
     description: "Build and deploy AI venture capital systems",
     icon: Wrench,
-    duration: "22-48 weeks"
-  },
+    duration: "22-48 weeks"},
   {
     step: 4,
     title: "Testing & Optimization",
@@ -681,28 +667,22 @@ const vcBenefits = [
     icon: Brain,
     examples["Data-driven insights", "Market analysis", "Risk assessment", "Portfolio optimization"];
   },;
-  {
-    title: "Increased Deal Flow",
+  {title: "Increased Deal Flow",
     description: "AI systems identify more investment opportunities",
     icon: Zap,
-    examples["Deal sourcing", "Market scanning", "Opportunity identification", "Better coverage"];
-  },;
-  {
-    title: "Improved Returns",
+    examples["Deal sourcing", "Market scanning", "Opportunity identification", "Better coverage"];},;
+  {title: "Improved Returns",
     description: "AI optimization leads to better portfolio performance",
     icon: TrendingUp,
-    examples["Portfolio optimization", "Risk management", "Exit timing", "Better performance"];
-  },;
-  {
-    title: "Operational Efficiency",
+    examples["Portfolio optimization", "Risk management", "Exit timing", "Better performance"];},;
+  {title: "Operational Efficiency",
     description: "Automation reduces manual effort and improves processes",
     icon: Rocket,
-    examples["Process automation", "Due diligence", "Reporting", "Better efficiency"];
-  }
+    examples["Process automation", "Due diligence", "Reporting", "Better efficiency"];}
 ];
 
 export default function AIAutonomousVentureCapitalist
-export { AIAutonomousVentureCapitalist }() {
+export {AIAutonomousVentureCapitalist}() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 
@@ -723,7 +703,7 @@ export { AIAutonomousVentureCapitalist }() {
         </div>
 
         <div className="container-responsive relative z-10">
-          <motion.div
+          <motion .div
             initial = {
   { opacity: 0,
   y: 30 
@@ -780,7 +760,7 @@ export { AIAutonomousVentureCapitalist }() {
 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
 
-              <TrendingUp className="w-10 h-10 text-white" />
+              <TrendingUp className="w-10 h-10 text-white"  />
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -795,15 +775,15 @@ export { AIAutonomousVentureCapitalist }() {
 
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-zion-cyan">
-                <Brain className="w-4 h-4" />
+                <Brain className="w-4 h-4"  />
                 <span>AI Intelligence</span>
               </div>
               <div className="flex items-center gap-2 text-zion-purple">
-                <BarChart3 className="w-4 h-4" />
+                <BarChart3 className="w-4 h-4"  />
                 <span>Investment Analytics</span>
               </div>
               <div className="flex items-center gap-2 text-zion-blue">
-                <Target className="w-4 h-4" />
+                <Target className="w-4 h-4"  />
                 <span>Deal Sourcing</span>
               </div>
             </div>
@@ -881,7 +861,7 @@ export { AIAutonomousVentureCapitalist }() {
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="w-8 h-8 text-white" />
+                  <benefit .icon className="w-8 h-8 text-white"  />
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">{benefit.title}</h3>
@@ -891,7 +871,7 @@ export { AIAutonomousVentureCapitalist }() {
                   <h4 className="text-zion-cyan font-semibold mb-3">Examples:</h4>
                   {benefit.examples.map((example, exampleIndex) => (
                     <div key={exampleIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0"  />
                       <span className="text-zion-slate-light text-sm">{example}</span>
                     </div>
                   ))}
@@ -972,7 +952,7 @@ export { AIAutonomousVentureCapitalist }() {
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <technology.icon className="w-8 h-8 text-white" />
+                  <technology .icon className="w-8 h-8 text-white"  />
                 </div>
 
                 <h3 className="text-xl font-bold text-white mb-3">{technology.name}</h3>
@@ -1065,7 +1045,7 @@ export { AIAutonomousVentureCapitalist }() {
 
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
-                    <step.icon className="w-8 h-8 text-white" />
+                    <step .icon className="w-8 h-8 text-white"  />
                   </div>
                   <div className="absolute -top-2 -right-2 w-8 h-8 bg-zion-blue rounded-full flex items-center justify-center text-white text-sm font-bold">
                     {step.step}
@@ -1171,7 +1151,7 @@ export { AIAutonomousVentureCapitalist }() {
                 onClick={() => setSelectedSolution(solution)}
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
-                  <solution.icon className="w-8 h-8 text-white" />
+                  <solution .icon className="w-8 h-8 text-white"  />
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
@@ -1180,7 +1160,7 @@ export { AIAutonomousVentureCapitalist }() {
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0"  />
                       <span className="text-zion-slate-light text-sm">{feature}</span>
                     </div>
                   ))}
@@ -1208,7 +1188,7 @@ export { AIAutonomousVentureCapitalist }() {
                   </span>
                   <button className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors duration-300">
                     <span className="text-sm font-medium">Learn More</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4"  />
                   </button>
                 </div>
               </motion.div>
@@ -1313,7 +1293,7 @@ export { AIAutonomousVentureCapitalist }() {
 
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current"  />
                   ))}
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
@@ -1375,3 +1355,17 @@ export { AIAutonomousVentureCapitalist }() {
       </section>
     </div>
   )}
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

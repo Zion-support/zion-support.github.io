@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 ;
 ;
-const RevolutionaryServicesShowcase2025 = () => {
+const RevolutionaryServicesShowcase2025 = (props: any) => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     const allServices = [
         ...REVOLUTIONARY_2025_ADVANCED_SERVICES.map(service => ({ ...service, source: 'revolutionary' })),
-        ...EMERGING_TECH_2025_SPECIALIZED_SERVICES.map(service => ({ ...service, source: 'emerging' }))
+        ...EMERGING_TECH_2025_SPECIALIZED_SERVICES.map(service => ({...service, source: 'emerging'}))
     ];
     const categories = [
         'all',
@@ -20,8 +20,7 @@ const RevolutionaryServicesShowcase2025 = () => {
         'Biotechnology',
         'Quantum Technology'
     ];
-    const filteredServices = allServices.filter(service => {
-        const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const filteredServices = allServices.filter(service => {const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
         return matchesCategory && matchesSearch});
@@ -320,12 +319,12 @@ const RevolutionaryServicesShowcase2025 = () => {
     </div>)};
 export default RevolutionaryServicesShowcase2025;
 
-export { RevolutionaryServicesShowcase2025 };
+export {RevolutionaryServicesShowcase2025};
 
-export { RevolutionaryServicesShowcase2025 };
+export {RevolutionaryServicesShowcase2025};
 
-export { RevolutionaryServicesShowcase2025 };
+export {RevolutionaryServicesShowcase2025};
 
-export { RevolutionaryServicesShowcase2025 };
+export {RevolutionaryServicesShowcase2025};
 
-export { RevolutionaryServicesShowcase2025 };
+export {RevolutionaryServicesShowcase2025};

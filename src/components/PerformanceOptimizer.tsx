@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 export default PerformanceOptimizer;
 import {   
-export default function Page() {
+export default function Page(props: any) {
 ,
     {
 
@@ -45,7 +45,7 @@ export default function Page() {
       implemented: fals e},
   ]);
 
-  const [isMonitoring, setIsMonitoring] = useState(false);
+  const [isMonitoring, setIsMonitoring] = useState<any>(false);
   const [history, setHistory] = useState < PerformanceMetrics[]> ([]) ;
 
   // Simulate performance monitoring
@@ -86,7 +86,7 @@ export const PerformanceOptimizer: Reac t.FC<PerformanceOptimizerProps> = ({ chi
 }, []);, []);
     if(isMonitoring) {
 // Optimize images
-    const optimizeImages = () => {
+    const optimizeImages = (props: any) => {
       const images = document.querySelectorAll('img');
       images.forEach(img => {
         if (!img.loading) {
@@ -277,7 +277,7 @@ return ("
               {history.map((metric, index) => (
                 <div key={index}"
                   className="flex-1 bg-gradient-to-t from-zion-cyan to-zion-cyan-light rounded-t"`
-                  style={{ height: `${metric.score}%` }}`
+                  style="{{{ height: `${metric.score}}"%` }}`
                   title={`Score: ${Math.round(metric.score)}`}
                  />
               ))}
@@ -285,12 +285,14 @@ return ("
           </div>
         </div>) }
     </div>) ;};
-interface PerformanceOptimizerProps { children: Reac t.ReactNode}
+interface PerformanceOptimizerProps {
+ children: Reac t.ReactNode
+}
 
 export const PerformanceOptimizer: Reac t.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
     // comment
-const preloadCriticalResources = () => {
+const preloadCriticalResources = (props: any) => {
       const criticalFonts = []
       
       criticalFonts.forEach(font => {,
@@ -301,7 +303,7 @@ const preloadCriticalResources = () => {
         document.head.appendChild(link)})}
 
     // comment
-const optimizeImages = () => {
+const optimizeImages = (props: any) => {
       const images = document.querySelectorAll("img")
 }
       images.forEach(img = > {
@@ -334,14 +336,14 @@ const observer = new IntersectionObserver((entries) => {
 ;,"});,"})" PerformanceOptimizerProps {,"});,"})"
   children: Reac t.ReactNode,"});,"});"
 }export const PerformanceOptimizer: Reac t.FC < PerformanceOptimizerProps> = ({ children }) => {,"});,"})"
-  useEffect ( () => {,"});,"})"
+  useEffect(() => {,"});,"})"
     // comment
-const preloadCriticalResources = () => {,"});,"})"
+const preloadCriticalResources = (props: any) => {,"});,"})"
       const criticalFonts = []"criticalFonts.forEach (font => {,"});,"})"
         const link = document.createElement ("link") ;        link.rel = "preload",        link.as = "style",        link.href = font,        document.head.appendChild (link) }) ;,"});,"});"
 };,"});,"})"
     // comment
-const optimizeImages = () => {,"});,"})"
+const optimizeImages = (props: any) => {,"});,"})"
       const images = document.querySelectorAll ("img") ;      images.forEach (img => {"        if (!img.loading) {,"});,"})"
           img.loading = "lazy",        }"        if (!img.decoding) {,"});,"})"
           img.decoding = "async",        }"      }) };// comment
@@ -359,8 +361,10 @@ target.style.backgroundImage = "url (${target.dataset.src}) ";"              tar
     const lazyElements = document.querySelectorAll ("[data - src]") ;    lazyElements.forEach (el = > observer.observe (el) ) ,return () => {,"});,"})"
       observer.disconnect () ;,"});,"});"
 }, []) ;,"});,"})","});,"})"
-export default function Page() {,"});,"})"
-interface PerformanceOptimizerProps { children: Reac t.ReactNode,"});,"});"
+export default function Page(props: any) {,"});,"})"
+interface PerformanceOptimizerProps {
+ children: Reac t.ReactNode,"
+});,"});"
 }"});,"})"
 export const PerformanceOptimizer: Reac t.FC<PerformanceOptimizerProps> = ({ children }) => {,"});,"})"
   useEffect(() => {,"});,"})"
@@ -401,33 +405,39 @@ export const PerformanceOptimizer: Reac t.FC<PerformanceOptimizerProps> = ({ chi
 }, []);,"});,"})"
   return <>{children}</>"});,"})"interface PerformanceOptimizerProps {
 
-   children: Reac t.ReactNode}export const PerformanceOptimizer: Reac t.FC < PerformanceOptimizerProps> = ({ children }) => {
-  useEffect ( () => {
+
+   children: Reac t.ReactNode
+}export const PerformanceOptimizer: Reac t.FC < PerformanceOptimizerProps> = ({ children }) => {
+  useEffect(() => {
     // comment
-      const criticalFonts = []",criticalFonts.forEach (font => {;interface PerformanceOptimizerProps {"
-   children: Reac t.ReactNode}export const PerformanceOptimizer: Reac t.FC < PerformanceOptimizerProps> = ({children }) => {useEffect ( () => {
+      const criticalFonts = []",criticalFonts.forEach (font => {;interface PerformanceOptimizerProps {
+  ": any;
+   children: Reac t.ReactNode
+}export const PerformanceOptimizer: Reac t.FC < PerformanceOptimizerProps> = ({children }) => {useEffect(() => {
     // comment
-const preloadCriticalResources = () => {""
+const preloadCriticalResources = (props: any) => {""
       const criticalFonts = []criticalFonts.forEach (font => {""
         const link = document.createElement ("link") "        link.rel = "preload"        link.as = "style"        link.href = font"        document.head.appendChild (link) })}
 
     // comment
-const optimizeImages = () => {"
+const optimizeImages = (props: any) => {"
       const images = document.querySelectorAll ("img") "      images.forEach (img => {"        if (!img.loading) {"
           img.loading = "lazy"        }        if (!img.decoding) {""
           img.decoding = "async"        }      })}// comment
-const optimizeImages = () => {const images = document.querySelectorAll ("img") "      images.forEach (img => {"        if (!img.loading) {;react&apos;interface PerformanceOptimizerProps {
+const optimizeImages = (props: any) => {const images = document.querySelectorAll ("img") "      images.forEach (img => {"        if (!img.loading) {;react&apos;interface PerformanceOptimizerProps {
 
-   children: Reac t.ReactNode}&apos;&apos;export const PerformanceOptimizer: Reac t.FC < PerformanceOptimizerProps> = ({ children }) => {
+
+   children: Reac t.ReactNode
+}&apos;&apos;export const PerformanceOptimizer: Reac t.FC < PerformanceOptimizerProps> = ({ children }) => {
     // comment
 
-const preloadCriticalResources = () => {}
+const preloadCriticalResources = (props: any) => {}
 
       const;const;const criticalFonts = []",criticalFonts.forEach (font => {&apos}&apos
         const link = document.createElement (&apos;link&apos) &apos;        link.rel = &apos;preload&apos;        link.as = &apos;style&apos;        link.href = font&apos;        document.head.appendChild (link) })}
 
     // comment
-const optimizeImages = () => {}
+const optimizeImages = (props: any) => {}
 
       const;const;const images = document.querySelectorAll (&apos;img&apos) &apos;      images.forEach (img => {&apos;        if (!img.loading) {
           img.loading = &apos;lazy&apos}&apos;        if (!img.decoding) {
@@ -438,9 +448,9 @@ const optimizeImages = () => {}
       const images = document.querySelectorAll ("img") "      images.forEach (img => {"        if (!img.loading) {
           img.loading = "lazy"        }"        if (!img.decoding) {
           img.decoding = "async"        }"      })}// comment
-const optimizeImages = () => {"""
+const optimizeImages = (props: any) => {"""
       const images = document.querySelectorAll ("img") "      images.forEach (img => {"        if (!img.loading) {""
-const optimizeImages = () => {"
+const optimizeImages = (props: any) => {"
       const images = document.querySelectorAll ("img") "      images.forEach (img => {"        if (!img.loading) {"
           img.loading = "lazy"        }"        if (!img.decoding) {"
           img.decoding = "async"        }"      })}// comment
@@ -504,3 +514,9 @@ target.style.backgroundImage = "url (${target.dataset.src}) "              targe
   })} { rootMargin: "50px" }") ";// comment
   return <>{children}</>}""""
 "`"""
+
+</PerformanceOptimizerProps>
+</PerformanceOptimizerProps>
+</div>
+</PerformanceOptimizerProps>
+</any>

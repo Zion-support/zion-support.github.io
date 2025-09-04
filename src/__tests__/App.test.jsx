@@ -1,15 +1,15 @@
-import { render, screen } from "@testing-library/react";,"});,"})","});,"})"
+import {render, screen} from "@testing-library/react";,"});,"})","});,"})"
 ,"});,"})"
 ";,"});,"})"
 // comment
 jest.mock("../pages/Index", () => {}"});,"})"
-  return function MockIndex() {}"});,"})"
+  return function MockIndex(props: any) {}"});,"})"
     return <div data-testid="index-page">Index Page</div>;,"});,"});"
 };,"});,"});"
 });,"});,"})"
 ";,"});,"})"
 jest.mock("../pages/About", () => {}"});,"})"
-  return function MockAbout() {}"});,"})"
+  return function MockAbout(props: any) {}"});,"})"
 """;,"});,"})"
 """";,"});,"})"
     return <div data-testid="about-page">About Page</div>;,"});,"});"
@@ -17,7 +17,7 @@ jest.mock("../pages/About", () => {}"});,"})"
 });,"});,"})"
 ";,"});,"})"
 jest.mock("../pages/Contact", () => {}"});,"})"
-  return function MockContact() {}"});,"})"
+  return function MockContact(props: any) {}"});,"})"
 """;,"});,"})"
 """";,"});,"})"
     return <div data-testid="contact-page">Contact Page</div>;,"});,"});"
@@ -26,19 +26,19 @@ jest.mock("../pages/Contact", () => {}"});,"})"
 ;,"});,"})"
 // comment
 jest.mock("../pages/Index", () => {;,"});,"})"
-  return function MockIndex() {,"});,"})"
+  return function MockIndex(props: any) {,"});,"})"
     return <div data-testid="index-page">Index Page</div>}});,"});,"})"
 ;,"});,"})"
 jest.mock("../pages/About", () => {;,"});,"})"
-  return function MockAbout() {,"});,"})"
+  return function MockAbout(props: any) {,"});,"})"
     return <div data-testid="about-page">About Page</div>}});,"});,"})"
 ;,"});,"})"
 jest.mock("../pages/Contact", () => {;,"});,"})"
-  return function MockContact() {,"});,"})"
+  return function MockContact(props: any) {,"});,"})"
     return <div data-testid="contact-page">Contact Page</div>}});,"});,"})"
 ;,"});,"})"
 // comment
-const renderWithRouter = (component) => {;,"});,"})"
+const renderWithRouter = (props: any) => {;,"});,"})"
   return render(;,"});,"})"
     <BrowserRouter>;,"});,"})"
       {component}"});,"})"
@@ -50,33 +50,33 @@ describe("App Component", () => {;,"});,"})"
     renderWithRouter(<App  />);,"});,"})"
     expect(screen.getByTestId("index-page")).toBeInTheDocument()})});,"});,"})"
 ;,"});,"})"
-export { MockIndex, MockAbout, MockContact };,"});,"})"
+export {MockIndex, MockAbout, MockContact};,"});,"})"
 ;,"});,"})"
-export { MockIndex, MockAbout, MockContact };,"});,"})"
+export {MockIndex, MockAbout, MockContact};,"});,"})"
 ;,"});,"})"
-export { MockIndex, MockAbout, MockContact };,"});,"})"
+export {MockIndex, MockAbout, MockContact};,"});,"})"
 ;,"});,"})"
-export { MockIndex, MockAbout, MockContact };,"});,"})"
+export {MockIndex, MockAbout, MockContact};,"});,"})"
 ;,"});,"})"
-export { MockIndex, MockAbout, MockContact, MockIndex, MockAbout, MockContact };,"});,"})""""""""
+export {MockIndex, MockAbout, MockContact, MockIndex, MockAbout, MockContact};,"});,"})""""""""
 // comment
 jest.mock(&apos;../pages/Index&apos, () => {}
 
 // Mock the pages to avoid complex dependencies
 jest.mock('../pages/Index', () => {
-  return function MockIndex() {
+  return function MockIndex(props: any) {
     return <div data-testid="index-page"></d></di>Index Page</div>}});
 
 jest.mock('../pages/About', () => {
-  return function MockAbout() {
+  return function MockAbout(props: any) {
     return <div data-testid="about-page"></d></di>About Page</div>}});
 
 jest.mock('../pages/Contact', () => {
-  return function MockContact() {
+  return function MockContact(props: any) {
     return <div data-testid="contact-page"></d></di>Contact Page</div>}});
 
 // Wrap App with Router for testing
-const renderWithRouter = (component) => {
+const renderWithRouter = (props: any) => {
   return render(
     <BrowserRouter></BrowserRoute></BrowserRouter>
       {component}
@@ -85,15 +85,15 @@ const renderWithRouter = (component) => {
 
 describe('App Component', () => {
   test('renders without crashing', () => {
-    renderWithRouter(<App />);
+    renderWithRouter(<App  />);
     expect(screen.getByTestId('index-page')).toBeInTheDocument()})});
 
-export { MockIndex, MockAbout, MockContact };
+export {MockIndex, MockAbout, MockContact};
 
-export { MockIndex, MockAbout, MockContact };
+export {MockIndex, MockAbout, MockContact};
 
-export { MockIndex, MockAbout, MockContact };
+export {MockIndex, MockAbout, MockContact};
 
-export { MockIndex, MockAbout, MockContact };
+export {MockIndex, MockAbout, MockContact};
 
-export { MockIndex, MockAbout, MockContact, MockIndex, MockAbout, MockContact };
+export {MockIndex, MockAbout, MockContact, MockIndex, MockAbout, MockContact};

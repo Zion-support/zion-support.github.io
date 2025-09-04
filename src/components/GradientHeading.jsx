@@ -1,7 +1,7 @@
-import { cn } from "@/lib/utils";
+import {cn} from "@/lib/utils";
 import React from "react";
 
-export function GradientHeading({ children, className, level = "h2", id }) {
+export function GradientHeading(props: any) {
     const Tag = level;
     
     return (

@@ -9,24 +9,19 @@ import { motion, AnimatePresence  } from 'framer-motion';
   icon?: React.ComponentType < any>}
 ];
 
-export function EnhancedSearch({
-
-  className = '',;
-  placeholder = 'Search for AI services, quantum solutions...',;
-  onSearch,;
-  variant = 'default'}: EnhancedSearchProps) {;
-  const [isOpen, setIsOpen] = useState(false);
-  const [query, setQuery] = useState('');  const [results, setResults] = useState<SearchResult[]>([]);
+export function EnhancedSearch(props: any) {;
+  const [isOpen, setIsOpen] = useState<any>(false);
+  const [query, setQuery] = useState<any>('');  const [results, setResults] = useState<SearchResult[]>([]);
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(-1);
+  const [isLoading, setIsLoading] = useState<any>(false);
+  const [selectedIndex, setSelectedIndex] = useState<any>(-1);
   const [filters, setFilters] = useState<SearchFilter>({
 
     type: [],
     category: [],
     tags: []
   }) ;
-  const [showFilters, setShowFilters] = useState(false);
+  const [showFilters, setShowFilters] = useState<any>(false);
   const [recentSearches, setRecentSearches] = useState < string[]> ([]) ;
 
 // Mock suggestions
@@ -37,20 +32,14 @@ const mockSuggestions: SearchSuggestio n[] = ['
   { text: 'Cloud DevOps automation', type: 'trending' }
 ];
 
-export function EnhancedSearch({
+export function EnhancedSearch(props: any) {
 
-  className = '',
-  placeholder = 'Search for AI services, quantum solutions...',
-  onSearch,
-  variant = 'default'
-}: EnhancedSearchProps) {
-
-  const [isOpen, setIsOpen] = useState(false);
-  const [query, setQuery] = useState('');
+  const [isOpen, setIsOpen] = useState<any>(false);
+  const [query, setQuery] = useState<any>('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(-1);
+  const [isLoading, setIsLoading] = useState<any>(false);
+  const [selectedIndex, setSelectedIndex] = useState<any>(-1);
   const [filters, setFilters] = useState<SearchFilter>({
 
     type: [],
@@ -70,7 +59,7 @@ export function EnhancedSearch({
     // Cleanup function
   };
 }, []);, []);
-    const handleKeyDown = (event: anyKeyboardEven t) => {
+    const handleKeyDown = (props: any) => {
       if(event.key === 'Escape') {
         setIsOpen(false) ;
         setSelectedIndex(-1) ;
@@ -174,7 +163,7 @@ handleResultClick(results[selectedIndex])}      }
 
     handleSearch(result.title) ;
     router(result.url) ;
-    const handleKeyDown = (event: KeyboardEven t) => {;      if(!isOpen) return;
+    const handleKeyDown = (props: any) => {;      if(!isOpen) return;
 
       switch(event.key) {
 
@@ -265,7 +254,7 @@ setFilters(prev: > ({;
             onFocus={handleInputFocus}
             placeholder={placeholder}"
             className="flex-1 bg-transparent text-gray-900 dark: tex t-white placeholder-gray-500 dark: placeholde r-gray-400 focus: outlin e-none"
-           />
+            />
           {query && (
             <button
               onClick={clearSearch}"
@@ -377,7 +366,7 @@ setFilters(prev: > ({;
                         {['service',page',blog',case-study'].map(type => (
                           <button
                             key={type}
-                            onClick = {
+                            onClick={
 
   () => toggleFilter('type',
   type)
@@ -400,7 +389,7 @@ setFilters(prev: > ({;
                         {categories.map(category => (
                           <button
                             key={category.id}
-                            onClick = {
+                            onClick={
 
   () => toggleFilter('category',
   category.name)
@@ -511,3 +500,23 @@ setFilters(prev: > ({;
     </div>;) }
 '"`
 ;,"});,})";
+
+</motion>
+</motion>
+</div>
+</div>
+</SearchFilter>
+</any>
+</any>
+</SearchSuggestion>
+</SearchResult>
+</any>
+</any>
+</any>
+</SearchFilter>
+</any>
+</any>
+</SearchSuggestion>
+</SearchResult>
+</any>
+</any>

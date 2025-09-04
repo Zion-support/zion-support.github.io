@@ -1,8 +1,10 @@
 import { cn } from '@/lib/utils';
-interface SkeletonProps {;
+interface SkeletonProps {
+  ;: any;
   className?: string;
-  lines?: number}
-export default function Skeleton({ className, lines = 1 }: SkeletonProps) {';
+  lines?: number
+}
+export default function Skeleton(props: any) {';
   if (lines === 1) {';';
     return (';';';
     <div',';';
@@ -10,7 +12,7 @@ export default function Skeleton({ className, lines = 1 }: SkeletonProps) {';
         className={cn('',',';';
     'animate-pulse bg-gray-200 rounded', className
 ;
-export default function Skeleton({ className, lines = 1 }: SkeletonProps) {;
+export default function Skeleton(props: any) {;
   if (lines === 1) {;
     return (
     <div className="min-h-screen bg-white">
@@ -28,9 +30,11 @@ export default function Skeleton({ className, lines = 1 }: SkeletonProps) {;
         <div;',';';
     ';';';
 import {cn } from '@/lib/utils';
-interface SkeletonProps {className?: string;
-  lines?: number}
-export default function Skeleton(  {className, lines = 1 }: SkeletonProps) {if (lines === 1) {
+interface SkeletonProps {
+className?: string;
+  lines?: number
+}
+export default function Skeleton(props: any) {if (lines === 1) {
     return (
     <div className="min-h-screen bg-white">
     )
@@ -46,9 +50,11 @@ export default function Skeleton(  {className, lines = 1 }: SkeletonProps) {if (
     ';';';
 import { cn } from &apos;@/lib/utils';
 interface SkeletonProps {
+
   className?: string;
-  lines?: number}&apos;&apos;
-export default function Skeleton({ className, lines = 1 }: SkeletonProps) {
+  lines?: number
+}&apos;&apos;
+export default function Skeleton(props: any) {
   if (lines === 1) {
     return (}}
       <div

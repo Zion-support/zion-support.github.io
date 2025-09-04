@@ -9,7 +9,7 @@ import {;
     ';';';
   MessageSquare} from 'lucide-react';';';
 export const ContactForm: Reac t.FC = () => {';';';
-  const [formData, setFormData] = useState({',';';
+  const [formData, setFormData] = useState<any>({',';';
     ';';';
     firstName: '', lastName: '',',';';
     ';';';
@@ -20,10 +20,10 @@ export const ContactForm: Reac t.FC = () => {';';';
     message: '', budget: '',',';';
     ';';';
     timeline: ''});';';';
-  const [isSubmitting, setIsSubmitting] = useState(false);',';';
+  const [isSubmitting, setIsSubmitting] = useState<any>(false);',';';
     ';';';
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const handleInputChange = (e: Reac t.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (props: any) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev, [name]: value}));
@@ -163,7 +163,7 @@ export const ContactForm: Reac t.FC = () => {';';';
                 required
                 className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: borde r-zion-cyan/50 transition-colors"
                 placeholder="Enter your first name"
-               />
+                />
             </div>
             <div>
               <label htmlFor="lastName" className="block text-sm font-medium text-white mb-2">
@@ -177,7 +177,7 @@ export const ContactForm: Reac t.FC = () => {';';';
                 required
                 className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: borde r-zion-cyan/50 transition-colors"
                 placeholder="Enter your last name"
-               />
+                />
             </div>
           </div>
           <div className="grid grid-cols-1 md: gri d-cols-2 gap-4">
@@ -193,7 +193,7 @@ export const ContactForm: Reac t.FC = () => {';';';
                 required
                 className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: borde r-zion-cyan/50 transition-colors"
                 placeholder="Enter your email"
-               />
+                />
             </div>
             <div>
               <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
@@ -206,7 +206,7 @@ export const ContactForm: Reac t.FC = () => {';';';
                 onChange={handleInputChange}
                 className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: borde r-zion-cyan/50 transition-colors"
                 placeholder="Enter your phone number"
-               />
+                />
             </div>
           </div>
           <div>
@@ -220,7 +220,7 @@ export const ContactForm: Reac t.FC = () => {';';';
               onChange={handleInputChange}
               className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: borde r-zion-cyan/50 transition-colors"
               placeholder="Enter your company name"
-             />
+              />
           </div>
           <div className="grid grid-cols-1 md: gri d-cols-2 gap-4">
             <div>
@@ -340,3 +340,8 @@ export const ContactForm: Reac t.FC = () => {';';';
     </div>';';
   );';';';
 };"';';';';
+</motion>
+</textarea>
+</motion>
+</any>
+</any>

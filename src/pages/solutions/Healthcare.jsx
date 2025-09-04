@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
-import { Heart, Shield, Users, Activity, Microscope, Pill } from 'lucide-react';
+import {Link} from 'react-router-dom';
+import {Heart, Shield, Users, Activity, Microscope, Pill} from 'lucide-react';
 
-const HealthcareSolutions = () => {
+const HealthcareSolutions = (props: any) => {
     const solutions = [
         {
             title: 'AI-Powered Patient Care',
@@ -16,8 +16,7 @@ const HealthcareSolutions = () => {
             icon: Heart,
             href: '/services/ai-autonomous-systems'
         },
-        {
-            title: 'Medical Imaging AI',
+        {title: 'Medical Imaging AI',
             description: 'Advanced AI for diagnostic imaging and analysis.',
             features: [
                 'Radiology image analysis',
@@ -27,10 +26,8 @@ const HealthcareSolutions = () => {
                 'Quality assurance tools'
             ],
             icon: Microscope,
-            href: '/services/ai-autonomous-systems'
-        },
-        {
-            title: 'Drug Discovery Platform',
+            href: '/services/ai-autonomous-systems'},
+        {title: 'Drug Discovery Platform',
             description: 'AI-driven pharmaceutical research and development.',
             features: [
                 'Molecular modeling',
@@ -40,10 +37,8 @@ const HealthcareSolutions = () => {
                 'Safety prediction'
             ],
             icon: Pill,
-            href: '/services/quantum-technology'
-        },
-        {
-            title: 'Healthcare Compliance',
+            href: '/services/quantum-technology'},
+        {title: 'Healthcare Compliance',
             description: 'Automated compliance management for healthcare regulations.',
             features: [
                 'HIPAA compliance',
@@ -53,25 +48,18 @@ const HealthcareSolutions = () => {
                 'Document management'
             ],
             icon: Shield,
-            href: '/services/cybersecurity'
-        }
+            href: '/services/cybersecurity'}
     ];
     const benefits = [
-        {
-            title: 'Improved Patient Outcomes',
+        {title: 'Improved Patient Outcomes',
             description: 'AI-driven insights lead to better diagnosis and treatment.',
-            icon: Activity
-        },
-        {
-            title: 'Operational Efficiency',
+            icon: Activity},
+        {title: 'Operational Efficiency',
             description: 'Streamlined workflows reduce costs and improve care delivery.',
-            icon: Users
-        },
-        {
-            title: 'Enhanced Security',
+            icon: Users},
+        {title: 'Enhanced Security',
             description: 'HIPAA-compliant solutions protect patient data.',
-            icon: Shield
-        }
+            icon: Shield}
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header Section */}
@@ -108,7 +96,7 @@ const HealthcareSolutions = () => {
             return (<div key={index} className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4">
-                      <Icon className="w-8 h-8 text-white"/>
+                      <Icon className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-2xl font-bold">{solution.title}</h3>
                   </div>
@@ -125,7 +113,7 @@ const HealthcareSolutions = () => {
                   <Link to={solution.href} className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
                     Learn More
                     <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </Link>
                 </div>);
@@ -146,7 +134,7 @@ const HealthcareSolutions = () => {
             const Icon = benefit.icon;
             return (<div key={index} className="text-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <Icon className="w-10 h-10 text-white"/>
+                    <Icon className="w-10 h-10 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-4">{benefit.title}</h3>
                   <p className="text-gray-300">{benefit.description}</p>
@@ -183,12 +171,12 @@ const HealthcareSolutions = () => {
 
 export default HealthcareSolutions;
 
-export { HealthcareSolutions, Icon, Icon };
+export {HealthcareSolutions, Icon, Icon};
 
-export { HealthcareSolutions, Icon, Icon };
+export {HealthcareSolutions, Icon, Icon};
 
-export { HealthcareSolutions, Icon, Icon };
+export {HealthcareSolutions, Icon, Icon};
 
-export { HealthcareSolutions, Icon, Icon };
+export {HealthcareSolutions, Icon, Icon};
 
-export { HealthcareSolutions, Icon, Icon };
+export {HealthcareSolutions, Icon, Icon};

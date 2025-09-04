@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Star, CheckCircle, Clock, Users, TrendingUp, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-import { advancedRealServices2025 } from "../data/2025-advanced-real-services-expansion";
-import { specializedITServices2025 } from "../data/2025-specialized-it-ai-services";
+import React, {useState} from 'react';
+import {motion} from 'framer-motion';
+import {Star, CheckCircle, Clock, Users, TrendingUp, Phone, Mail, MapPin, ExternalLink} from 'lucide-react';
+import {advancedRealServices2025} from "../data/2025-advanced-real-services-expansion";
+import {specializedITServices2025} from "../data/2025-specialized-it-ai-services";
 import SEOHead from "../components/SEOHead";
-const AdvancedServicesShowcase2025 = () => {
+const AdvancedServicesShowcase2025 = (props: any) => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     const [sortBy, setSortBy] = useState('name');
@@ -48,7 +48,7 @@ const AdvancedServicesShowcase2025 = () => {
             default:
                 return a.name.localeCompare(b.name)}
     });
-    const getCategoryIcon = (category) => {
+    const getCategoryIcon = (props: any) => {
         const icons = {
   'AI & Machine Learning': '🤖',
             'Cybersecurity': '🔐',

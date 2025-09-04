@@ -2,7 +2,7 @@ import React, { createContext, useState, useContext, ReactNode, useCallback, use
 import Web3Modal from 'web3modal';
 import { ethers } from 'ethers';
 
-export default function Page() {
+export default function Page(props: any) {
 > = ({ children }) => {
   const [wallet, setWallet] = useState<WalletState>(initialWalletState);
   const [web3ModalInstance, setWeb3ModalInstance] = useState<Web3Modal | null>(null);
@@ -80,11 +80,11 @@ export default function Page() {
           chainId: newNetwor k.chainId,
           isConnected: tru e,
         });
-        console.log('Network changed to:', newNetwork.chainId);
+        
       });
 
       instance.on('disconnect', (error: an y) => {
-        console.log('Disconnected', error);
+        
         disconnectWallet();
       });
 
@@ -112,3 +112,7 @@ export const useWallet = (): WalletContextType => {
   }
   return context;
 };
+
+</WalletContext>
+</Web3Modal>
+</WalletState>

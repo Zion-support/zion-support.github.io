@@ -1,21 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { Skeleton } from "@/components/ui/skeleton";
-import { Search, Filter, LayoutGrid, List, Star } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
+import React, {useState, useEffect} from "react";
+import {useNavigate} from "react-router-dom";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Select, SelectValue, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
+import {Skeleton} from "@/components/ui/skeleton";
+import {Search, Filter, LayoutGrid, List, Star} from "lucide-react";
+import {toast} from "@/hooks/use-toast";
 
-export function DynamicListingPage({ 
-  title, 
-  description, 
-  categorySlug, 
-  listings: allListings, 
-  categoryFilters, 
-  initialPrice = { min: 0, max: 10000 }, 
-  detailBasePath = '/marketplace/listing' 
-}) {
+export function DynamicListingPage(props: any) {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -36,20 +28,16 @@ export function DynamicListingPage({
     }
   }, [allListings]);
 
-  const handleSliderChange = (values) => {
-    setCurrentPriceFilter([values[0], values[1]]);
-  };
+  const handleSliderChange = (props: any) => {setCurrentPriceFilter([values[0], values[1]]);};
 
-  const filteredListings = allListings.filter(listing => {
-    const matchesSearch = listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  const filteredListings = allListings.filter(listing => {const matchesSearch = listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          listing.description.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesCategory = selectedCategory === "all" || listing.category === selectedCategory;
     const matchesPrice = listing.price >= currentPriceFilter[0] && listing.price <= currentPriceFilter[1];
     const matchesRating = selectedRating === null ||
                          (listing.rating !== null && listing.rating >= selectedRating);
     
-    return matchesSearch && matchesCategory && matchesPrice && matchesRating;
-  });
+    return matchesSearch && matchesCategory && matchesPrice && matchesRating;});
 
   const totalPages = itemsPerPage
     ? Math.ceil(filteredListings.length / itemsPerPage)
@@ -59,11 +47,9 @@ export function DynamicListingPage({
     ? filteredListings.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
     : filteredListings;
 
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [searchQuery, selectedCategory, currentPriceFilter, selectedRating]);
+  useEffect(() => {setCurrentPage(1);}, [searchQuery, selectedCategory, currentPriceFilter, selectedRating]);
 
-  const handleRequestQuote = (listingId) => {
+  const handleRequestQuote = (props: any) => {
     setIsLoading(true);
     const listing = allListings.find(item => item.id === listingId);
     
@@ -102,7 +88,7 @@ export function DynamicListingPage({
         <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4"  />
               <Input
                 placeholder="Search listings..."
                 value={searchQuery}
@@ -113,7 +99,7 @@ export function DynamicListingPage({
             
             <Select value={selectedCategory} onValueChange={setSelectedCategory}>
               <SelectTrigger>
-                <SelectValue placeholder="Category" />
+                <SelectValue placeholder="Category"  />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All Categories</SelectItem>
@@ -127,7 +113,7 @@ export function DynamicListingPage({
 
             <Select value={selectedRating?.toString() || ""} onValueChange={(value) => setSelectedRating(value ? parseInt(value) : null)}>
               <SelectTrigger>
-                <SelectValue placeholder="Rating" />
+                <SelectValue placeholder="Rating"  />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="">Any Rating</SelectItem>
@@ -143,14 +129,14 @@ export function DynamicListingPage({
                 size="sm"
                 onClick={() => setView("grid")}
               >
-                <LayoutGrid className="w-4 h-4" />
+                <LayoutGrid className="w-4 h-4"  />
               </Button>
               <Button
                 variant={view === "list" ? "default" : "outline"}
                 size="sm"
                 onClick={() => setView("list")}
               >
-                <List className="w-4 h-4" />
+                <List className="w-4 h-4"  />
               </Button>
             </div>
           </div>
@@ -183,7 +169,7 @@ export function DynamicListingPage({
               <div className="flex items-center justify-between mb-3">
                 <span className="text-2xl font-bold text-white">${listing.price}</span>
                 <div className="flex items-center gap-1">
-                  <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                  <Star className="w-4 h-4 text-yellow-400 fill-current"  />
                   <span className="text-white text-sm">{listing.rating || 0}</span>
                 </div>
               </div>
