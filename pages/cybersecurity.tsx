@@ -4,28 +4,29 @@ import Link from 'next/link';
 import { Shield, Lock, Eye, AlertTriangle, Users, Database } from 'lucide-react';
 
 export default function Cybersecurity() {
-  const contact ={
-    phone: email, 'kleber@ziontechgroup.com'
-    address: site, 'https://ziontechgroup.com'
-  }
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    site: 'https://ziontechgroup.com'
+  };
   const services = [
     {
       icon: Shield,
-      title: 'Security Assessment & Auditing'
-      description: 'Comprehensive security evaluations to identify vulnerabilities and compliance gaps.'
-      features: ['Penetration testing' 'Vulnerability scanning' 'Compliance audits' 'Risk assessments']
+      title: 'Security Assessment & Auditing',
+      description: 'Comprehensive security evaluations to identify vulnerabilities and compliance gaps.',
+      features: ['Penetration testing', 'Vulnerability scanning', 'Compliance audits', 'Risk assessments']
     },
     {
       icon: Lock,
-      title: 'Identity & Access Management'
-      description: 'Robust IAM solutions to control user access and protect sensitive data.'
-      features: ['Multi-factor authentication' 'Single sign-on' 'Role-based access' 'Privileged access management']
+      title: 'Identity & Access Management',
+      description: 'Robust IAM solutions to control user access and protect sensitive data.',
+      features: ['Multi-factor authentication', 'Single sign-on', 'Role-based access', 'Privileged access management']
     },
     {
       icon: Eye,
-      title: 'Security Monitoring & SIEM'
-      description: '24/7 security monitoring with advanced threat detection and incident response.'
-      features: ['Real-time monitoring' 'Threat intelligence' 'Incident response' 'Forensic analysis']
+      title: 'Security Monitoring & SIEM',
+      description: '24/7 security monitoring with advanced threat detection and incident response.',
+      features: ['Real-time monitoring', 'Threat intelligence', 'Incident response', 'Forensic analysis']
     },
     {
       icon: AlertTriangle,

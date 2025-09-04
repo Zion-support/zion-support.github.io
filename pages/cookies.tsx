@@ -132,7 +132,8 @@ const contact = {
                   </h3>
                   
                   <p style={{ 
-                    color: marginBottom, 20, 
+                    color: '#666',
+                    marginBottom: 20, 
                     lineHeight: 1.6,
                     fontSize: '1.1rem'
                   }}>
@@ -140,19 +141,19 @@ const contact = {
                   </p>
                   
                   <div style={{ marginBottom: 20 }}>
-                    <h4 style={{ fontSize: fontWeight, 600, marginBottom: 10, color: '#e5e7eb' }}>
+                    <h4 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
                       Purpose:
                     </h4>
-                    <p style={{ color: lineHeight, 1.5 }}>
+                    <p style={{ color: '#666', lineHeight: 1.5 }}>
                       {cookie.purpose}
                     </p>
                   </div>
                   
                   <div style={{ marginBottom: 20 }}>
-                    <h4 style={{ fontSize: fontWeight, 600, marginBottom: 10, color: '#e5e7eb' }}>
+                    <h4 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
                       Examples:
                     </h4>
-                    <ul style={{ color: paddingLeft, 20 }}>
+                    <ul style={{ color: '#666', paddingLeft: 20 }}>
                       {cookie.examples.map((example, exampleIndex) => (
                         <li key={exampleIndex} style={{ marginBottom: 5 }}>
                           {example}
@@ -162,7 +163,7 @@ const contact = {
                   </div>
                   
                   <div>
-                    <h4 style={{ fontSize: fontWeight, 600, marginBottom: 10, color: '#e5e7eb' }}>
+                    <h4 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
                       Retention Period:
                     </h4>
                     <p style={{ color: '#94a3b8' }}>
@@ -175,24 +176,25 @@ const contact = {
           </div>
 
           <div style={{ marginBottom: 60 }}>
-            <h2 style={{ fontSize: fontWeight, 700, marginBottom: 20 }}>
+            <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: 20 }}>
               Managing Your Cookie Preferences
             </h2>
             <div style={{
-              background: borderRadius, 12,
+              background: '#f8f9fa',
+              borderRadius: 12,
               padding: 30,
-              border: '1px solid rgba(255, 255, 255, 0.1)'
+              border: '1px solid #e9ecef'
             }}>
-              <p style={{ fontSize: lineHeight, 1.6, color: '#94a3b8', marginBottom: 20 }}>
+              <p style={{ fontSize: '1rem', lineHeight: 1.6, color: '#94a3b8', marginBottom: 20 }}>
                 You have the right to choose whether to accept or reject cookies. You can exercise your cookie rights by 
                 setting your preferences in our cookie banner or by adjusting your browser settings.
               </p>
               
               <div style={{ marginBottom: 20 }}>
-                <h3 style={{ fontSize: fontWeight, 600, marginBottom: 10, color: '#e5e7eb' }}>
+                <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
                   Browser Settings:
                 </h3>
-                <p style={{ color: lineHeight, 1.5 }}>
+                <p style={{ color: '#666', lineHeight: 1.5 }}>
                   Most web browsers allow you to control cookies through their settings preferences. You can set your 
                   browser to refuse cookies or delete certain cookies. However, if you choose to delete or refuse cookies, 
                   some features of our website may not function properly.
@@ -200,10 +202,10 @@ const contact = {
               </div>
               
               <div>
-                <h3 style={{ fontSize: fontWeight, 600, marginBottom: 10, color: '#e5e7eb' }}>
+                <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
                   Cookie Banner:
                 </h3>
-                <p style={{ color: lineHeight, 1.5 }}>
+                <p style={{ color: '#666', lineHeight: 1.5 }}>
                   When you first visit our website, you will see a cookie banner that allows you to accept or reject 
                   non-essential cookies. You can change your preferences at any time by clicking the cookie settings 
                   link in our website footer.
@@ -213,30 +215,31 @@ const contact = {
           </div>
 
           <div style={{ marginBottom: 60 }}>
-            <h2 style={{ fontSize: fontWeight, 700, marginBottom: 20 }}>
+            <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: 20 }}>
               Third-Party Cookies
             </h2>
             <div style={{
-              background: borderRadius, 12,
+              background: '#f8f9fa',
+              borderRadius: 12,
               padding: 30,
-              border: '1px solid rgba(255, 255, 255, 0.1)'
+              border: '1px solid #e9ecef'
             }}>
-              <p style={{ fontSize: lineHeight, 1.6, color: '#94a3b8', marginBottom: 20 }}>
+              <p style={{ fontSize: '1rem', lineHeight: 1.6, color: '#94a3b8', marginBottom: 20 }}>
                 Some cookies on our website are set by third-party services that appear on our pages. These third parties 
                 may use cookies to collect information about your online activities across different websites.
               </p>
               
               <div style={{ display: 'grid', gap: 15 }}>
-                <div style={{ display: alignItems, 'center' gap: 10 }}>
-                  <div style={{ width: 6, height: 6, background: borderRadius, '50%' }} />
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                  <div style={{ width: 6, height: 6, background: '#3b82f6', borderRadius: '50%' }} />
                   <span style={{ color: '#94a3b8' }}>Google Analytics - Website analytics and performance monitoring</span>
                 </div>
-                <div style={{ display: alignItems, 'center' gap: 10 }}>
-                  <div style={{ width: 6, height: 6, background: borderRadius, '50%' }} />
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                  <div style={{ width: 6, height: 6, background: '#3b82f6', borderRadius: '50%' }} />
                   <span style={{ color: '#94a3b8' }}>Social Media Platforms - Social sharing and engagement tracking</span>
                 </div>
-                <div style={{ display: alignItems, 'center' gap: 10 }}>
-                  <div style={{ width: 6, height: 6, background: borderRadius, '50%' }} />
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                  <div style={{ width: 6, height: 6, background: '#3b82f6', borderRadius: '50%' }} />
                   <span style={{ color: '#94a3b8' }}>Advertising Networks - Targeted advertising and campaign measurement</span>
                 </div>
               </div>
@@ -244,10 +247,12 @@ const contact = {
           </div>
 
           <div style={{ 
-            background: borderRadius, 12,
+            background: '#f8f9fa',
+            borderRadius: 12,
             padding: 30,
-            border: textAlign, 'center'
-          },,}>
+            border: '1px solid #e9ecef',
+            textAlign: 'center'
+          }}>
             <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 15 }}>
               Questions About Our Cookie Policy?
             </h2>
@@ -255,11 +260,11 @@ const contact = {
               If you have any questions about our use of cookies or this Cookie Policy, please contact us.
             </p>
             <Link href="/contact" style={{
-              background: color, 'white',
+              background: '#3b82f6',
               padding: '12px 24px',
               textDecoration: 'none',
               borderRadius: 8,
-              fontSize: fontWeight, 600,
+              fontSize: '1rem', fontWeight: 600,
               display: 'inline-block'
             }}>
               Contact Us
