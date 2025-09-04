@@ -7,6 +7,7 @@ import '../styles/globals.css';
 
 function Header(): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
 
   return (
     <header style={{
@@ -34,26 +35,49 @@ function Header(): any {
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
           }}>Home</Link>
-          <Link href="/services" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>All Services</Link>
-          <Link href="/micro-saas" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>Micro SaaS</Link>
-          <Link href="/ai-services" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>AI Services</Link>
-          <Link href="/it-services" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>IT Services</Link>
-          <Link href="/services-catalog" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>Catalog</Link>
+          
+          {/* Services Dropdown */}
+          <div style={{ position: 'relative', display: 'inline-block' }}>
+            <button 
+              onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+              style={{ 
+                padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+                transition: 'all 0.2s ease', textDecoration: 'none', color: 'white',
+                background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4
+              }}
+            >
+              Services {servicesDropdownOpen ? '▲' : '▼'}
+            </button>
+            {servicesDropdownOpen && (
+              <div style={{
+                position: 'absolute', top: '100%', left: 0, background: 'rgba(11, 18, 32, 0.98)',
+                backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.1)',
+                borderRadius: 8, padding: 8, minWidth: 200, zIndex: 1000
+              }}>
+              <Link href="/services" style={{ 
+                display: 'block', padding: '8px 12px', borderRadius: 4, opacity: 0.9,
+                transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+              }}>All Services</Link>
+              <Link href="/micro-saas" style={{ 
+                display: 'block', padding: '8px 12px', borderRadius: 4, opacity: 0.9,
+                transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+              }}>Micro SaaS (150+ Products)</Link>
+              <Link href="/ai-services" style={{ 
+                display: 'block', padding: '8px 12px', borderRadius: 4, opacity: 0.9,
+                transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+              }}>AI Services (100+ Solutions)</Link>
+              <Link href="/it-services" style={{ 
+                display: 'block', padding: '8px 12px', borderRadius: 4, opacity: 0.9,
+                transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+              }}>IT Services (100+ Solutions)</Link>
+              <Link href="/services-catalog" style={{ 
+                display: 'block', padding: '8px 12px', borderRadius: 4, opacity: 0.9,
+                transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+              }}>Services Catalog</Link>
+              </div>
+            )}
+          </div>
+
           <Link href="/pricing" style={{ 
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
@@ -92,7 +116,7 @@ function Header(): any {
         </div>
       </nav>
       
-      {/* Mobile Menu */}
+              {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div style={{
           position: 'absolute', top: '100%', left: 0, right: 0, 
@@ -104,34 +128,45 @@ function Header(): any {
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
           }} onClick={() => setMobileMenuOpen(false)}>Home</Link>
-          <Link href="/services" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>All Services</Link>
-          <Link href="/micro-saas" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>Micro SaaS</Link>
-          <Link href="/ai-services" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>AI Services</Link>
-          <Link href="/it-services" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>IT Services</Link>
-          <Link href="/services-catalog" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
-          <Link href="/pricing" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
-          <Link href="/about" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>About</Link>
+          
+          <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: 12, marginTop: 8 }}>
+            <div style={{ fontWeight: 600, marginBottom: 8, color: '#93c5fd' }}>Services</div>
+            <Link href="/services" style={{ 
+              padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+              transition: 'all 0.2s ease', textDecoration: 'none', color: 'white', display: 'block'
+            }} onClick={() => setMobileMenuOpen(false)}>All Services</Link>
+            <Link href="/micro-saas" style={{ 
+              padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+              transition: 'all 0.2s ease', textDecoration: 'none', color: 'white', display: 'block'
+            }} onClick={() => setMobileMenuOpen(false)}>Micro SaaS (150+ Products)</Link>
+            <Link href="/ai-services" style={{ 
+              padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+              transition: 'all 0.2s ease', textDecoration: 'none', color: 'white', display: 'block'
+            }} onClick={() => setMobileMenuOpen(false)}>AI Services (100+ Solutions)</Link>
+            <Link href="/it-services" style={{ 
+              padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+              transition: 'all 0.2s ease', textDecoration: 'none', color: 'white', display: 'block'
+            }} onClick={() => setMobileMenuOpen(false)}>IT Services (100+ Solutions)</Link>
+            <Link href="/services-catalog" style={{ 
+              padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+              transition: 'all 0.2s ease', textDecoration: 'none', color: 'white', display: 'block'
+            }} onClick={() => setMobileMenuOpen(false)}>Services Catalog</Link>
+          </div>
+          
+          <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: 12, marginTop: 8 }}>
+            <Link href="/pricing" style={{ 
+              padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+              transition: 'all 0.2s ease', textDecoration: 'none', color: 'white', display: 'block'
+            }} onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
+            <Link href="/about" style={{ 
+              padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+              transition: 'all 0.2s ease', textDecoration: 'none', color: 'white', display: 'block'
+            }} onClick={() => setMobileMenuOpen(false)}>About</Link>
+            <Link href="/contact" style={{ 
+              padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+              transition: 'all 0.2s ease', textDecoration: 'none', color: 'white', display: 'block'
+            }} onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+          </div>
         </div>
       )}
     </header>
@@ -182,9 +217,9 @@ function Footer(): any {
             <Link href="/services-catalog" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Services Catalog</Link>
             <Link href="/pricing" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Pricing</Link>
             <div style={{ opacity: 0.8, fontSize: '0.9rem', marginTop: 8 }}>
-              <div>• 150+ Micro SaaS Products</div>
-              <div>• 100+ AI Services</div>
-              <div>• 100+ IT Solutions</div>
+              <div>• 180+ Micro SaaS Products</div>
+              <div>• 120+ AI Services</div>
+              <div>• 125+ IT Solutions</div>
             </div>
           </div>
         </div>
