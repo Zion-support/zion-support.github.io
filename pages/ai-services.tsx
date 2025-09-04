@@ -49,7 +49,7 @@ export default function AIServices() {
     {
       title: 'AI-Powered Email Responder',
       description: 'Automated email responses with sentiment analysis and intelligent categorization',
-      icon: MessageSquar e,
+      icon: MessageSquare,
       features: [
         'Smart email categorization and prioritization',
         'Automated response generation with personalization',
@@ -64,7 +64,7 @@ export default function AIServices() {
     {
       title: 'AI Content Creation Suite',
       description: 'Comprehensive AI-powered content generation for marketing, social media, and documentation',
-      icon: FileTex t,
+      icon: FileText,
       features: [
         'Automated blog posts and articles',
         'Social media content generation',

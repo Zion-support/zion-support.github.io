@@ -30,7 +30,7 @@ const Navigation: React.FC = () => {
         { name: 'Workflow Automation', href: '/solutions/workflow-automation' }
       ]
     },
-    { name: 'Pricing', href: '/pricing-guide' },
+    { name: 'Pricing', href: '/pricing' },
     { name: 'About', href: '/about' },
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' }

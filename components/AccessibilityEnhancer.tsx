@@ -1,149 +1,29 @@
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
+import React, { useEffect, PropsWithChildren } from 'react';
 
-const AccessibilityEnhancer: Reac t.FC = () => {
+export default function AccessibilityEnhancer({ children }: PropsWithChildren) {
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Add keyboard navigation support
-      const handleKeyDown = (event: KeyboardEven t) => {
-        if (event.key === 'Tab') {
-          document.body.classList.add('keyboard-navigation');
-        }
-      };
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
+      }
+    };
+    const handleMouseDown = () => {
+      document.body.classList.remove('keyboard-navigation');
+    };
 
-      const handleMouseDown = () => {
-        document.body.classList.remove('keyboard-navigation');
-      };
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('mousedown', handleMouseDown);
 
-      document.addEventListener('keydown', handleKeyDown);
-      document.addEventListener('mousedown', handleMouseDown);
+    const style = document.createElement('style');
+    style.textContent = `.keyboard-navigation *:focus { outline: 2px solid #3B82F6 !important; outline-offset: 2px !important; }`;
+    document.head.appendChild(style);
 
-      // Add focus indicators
-      const style = document.createElement('style');
-      style.textContent = `
-        .keyboard-navigation *:focus {
-          outline: 2px solid #3B82F6 !important;
-          outline-offset: 2p x !important;
-        }
-      `;
-      document.head.appendChild(style);
-
-      return () => {
-        document.removeEventListener('keydown', handleKeyDown);
-        document.removeEventListener('mousedown', handleMouseDown);
-      };
-    }
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleMouseDown);
+      document.head.removeChild(style);
+    };
   }, []);
 
-  return null;
-};
-
-export default AccessibilityEnhancer;
-=======
-import React, { useEffect, useState } from 'react';
-
-interface AccessibilityEnhancerProps {
-	children: React.ReactNode;
+  return <>{children}</>;
 }
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-	const [isHighContrast, setIsHighContrast] = useState(false);
-	const [fontSize, setFontSize] = useState<'small' | 'normal' | 'large' | 'extra-large'>('normal');
-	const [reducedMotion, setReducedMotion] = useState(false);
-
-	useEffect(() => {
-		const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-		setReducedMotion(prefersReducedMotion);
-
-		const savedHighContrast = localStorage.getItem('highContrast') === 'true';
-		const savedFontSize = (localStorage.getItem('fontSize') as 'small' | 'normal' | 'large' | 'extra-large') || 'normal';
-		setIsHighContrast(savedHighContrast);
-		setFontSize(savedFontSize);
-	}, []);
-
-	const applyAccessibilityStyles = (highContrast: boolean, size: string, motionReduced: boolean) => {
-		const root = document.documentElement;
-
-		if (highContrast) {
-			root.classList.add('high-contrast');
-		} else {
-			root.classList.remove('high-contrast');
-		}
-
-		root.classList.remove('font-small', 'font-normal', 'font-large', 'font-extra-large');
-		root.classList.add(`font-${size}`);
-
-		if (motionReduced) {
-			root.classList.add('reduced-motion');
-		} else {
-			root.classList.remove('reduced-motion');
-		}
-	};
-
-	const toggleHighContrast = () => {
-		const newValue = !isHighContrast;
-		setIsHighContrast(newValue);
-		localStorage.setItem('highContrast', newValue.toString());
-		applyAccessibilityStyles(newValue, fontSize, reducedMotion);
-	};
-
-	const changeFontSize = (newSize: 'small' | 'normal' | 'large' | 'extra-large') => {
-		setFontSize(newSize);
-		localStorage.setItem('fontSize', newSize);
-		applyAccessibilityStyles(isHighContrast, newSize, reducedMotion);
-	};
-
-	return (
-		<>
-			<div className="accessibility-controls fixed top-4 right-4 z-50 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 border">
-				<h3 className="text-sm font-semibold mb-2 text-gray-900 dark:text-white">Accessibility Options</h3>
-				<div className="space-y-2">
-					<button
-						onClick={toggleHighContrast}
-						className={`w-full px-3 py-1 text-xs rounded ${
-							isHighContrast ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-						}`}
-						aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode`}
-					>
-						{isHighContrast ? 'Disable' : 'Enable'} High Contrast
-					</button>
-					<div className="text-xs text-gray-600 dark:text-gray-300">Font Size:</div>
-					<div className="flex gap-1">
-						{(['small', 'normal', 'large', 'extra-large'] as const).map((size) => (
-							<button
-								key={size}
-								onClick={() => changeFontSize(size)}
-								className={`px-2 py-1 text-xs rounded ${
-									fontSize === size ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-								}`}
-								aria-label={`Set font size to ${size}`}
-							>
-								{size.charAt(0).toUpperCase()}
-							</button>
-						))}
-					</div>
-				</div>
-			</div>
-
-			<a
-				href="#main-content"
-				className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
-			>
-				Skip to main content
-			</a>
-
-			<div className="sr-only">
-				<h1>Zion Tech Group - Technology Solutions Provider</h1>
-				<p>
-					Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI,
-					quantum computing, blockchain infrastructure, and innovative development services.
-				</p>
-			</div>
-
-			<div id="main-content">{children}</div>
-		</>
-	);
-};
-
-export default AccessibilityEnhancer;
->>>>>>> merge-all-prs-20250904-105408
