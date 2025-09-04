@@ -7,6 +7,8 @@ import '../styles/globals.css';
 
 function Header(): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
 
   return (
     <header style={{
@@ -34,26 +36,114 @@ function Header(): any {
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
           }}>Home</Link>
-          <Link href="/services" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>All Services</Link>
-          <Link href="/micro-saas" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>Micro SaaS</Link>
-          <Link href="/ai-services" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>AI Services</Link>
-          <Link href="/it-services" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>IT Services</Link>
-          <Link href="/services-catalog" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>Catalog</Link>
+          
+          {/* Services Dropdown */}
+          <div style={{ position: 'relative', display: 'inline-block' }}>
+            <button 
+              style={{ 
+                padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+                transition: 'all 0.2s ease', background: 'none', border: 'none',
+                color: 'white', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4
+              }}
+              onMouseEnter={() => setServicesDropdownOpen(true)}
+              onMouseLeave={() => setServicesDropdownOpen(false)}
+            >
+              Services ▼
+            </button>
+            <div 
+              style={{
+                position: 'absolute', top: '100%', left: 0, background: 'rgba(11, 18, 32, 0.98)',
+                backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.1)',
+                borderRadius: 8, padding: 8, minWidth: 200, zIndex: 1000, 
+                display: servicesDropdownOpen ? 'block' : 'none'
+              }} 
+              className="services-dropdown"
+              onMouseEnter={() => setServicesDropdownOpen(true)}
+              onMouseLeave={() => setServicesDropdownOpen(false)}
+            >
+              <Link href="/services" style={{ 
+                display: 'block', padding: '8px 12px', borderRadius: 4, opacity: 0.9,
+                transition: 'all 0.2s ease', textDecoration: 'none', color: 'white',
+                marginBottom: 4
+              }}>All Services</Link>
+              <Link href="/micro-saas" style={{ 
+                display: 'block', padding: '8px 12px', borderRadius: 4, opacity: 0.9,
+                transition: 'all 0.2s ease', textDecoration: 'none', color: 'white',
+                marginBottom: 4
+              }}>Micro SaaS (150+ Products)</Link>
+              <Link href="/ai-services" style={{ 
+                display: 'block', padding: '8px 12px', borderRadius: 4, opacity: 0.9,
+                transition: 'all 0.2s ease', textDecoration: 'none', color: 'white',
+                marginBottom: 4
+              }}>AI Services (100+ Solutions)</Link>
+              <Link href="/it-services" style={{ 
+                display: 'block', padding: '8px 12px', borderRadius: 4, opacity: 0.9,
+                transition: 'all 0.2s ease', textDecoration: 'none', color: 'white',
+                marginBottom: 4
+              }}>IT Services (100+ Solutions)</Link>
+              <Link href="/services-catalog" style={{ 
+                display: 'block', padding: '8px 12px', borderRadius: 4, opacity: 0.9,
+                transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+              }}>Services Catalog</Link>
+            </div>
+          </div>
+
+          {/* Solutions Dropdown */}
+          <div style={{ position: 'relative', display: 'inline-block' }}>
+            <button 
+              style={{ 
+                padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+                transition: 'all 0.2s ease', background: 'none', border: 'none',
+                color: 'white', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4
+              }}
+              onMouseEnter={() => setSolutionsDropdownOpen(true)}
+              onMouseLeave={() => setSolutionsDropdownOpen(false)}
+            >
+              Solutions ▼
+            </button>
+            <div 
+              style={{
+                position: 'absolute', top: '100%', left: 0, background: 'rgba(11, 18, 32, 0.98)',
+                backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.1)',
+                borderRadius: 8, padding: 8, minWidth: 250, zIndex: 1000, 
+                display: solutionsDropdownOpen ? 'block' : 'none'
+              }} 
+              className="solutions-dropdown"
+              onMouseEnter={() => setSolutionsDropdownOpen(true)}
+              onMouseLeave={() => setSolutionsDropdownOpen(false)}
+            >
+              <Link href="/micro-saas" style={{ 
+                display: 'block', padding: '8px 12px', borderRadius: 4, opacity: 0.9,
+                transition: 'all 0.2s ease', textDecoration: 'none', color: 'white',
+                marginBottom: 4
+              }}>Cloud Cost Optimization</Link>
+              <Link href="/ai-services" style={{ 
+                display: 'block', padding: '8px 12px', borderRadius: 4, opacity: 0.9,
+                transition: 'all 0.2s ease', textDecoration: 'none', color: 'white',
+                marginBottom: 4
+              }}>AI Automation & ML</Link>
+              <Link href="/it-services" style={{ 
+                display: 'block', padding: '8px 12px', borderRadius: 4, opacity: 0.9,
+                transition: 'all 0.2s ease', textDecoration: 'none', color: 'white',
+                marginBottom: 4
+              }}>Digital Transformation</Link>
+              <Link href="/micro-saas" style={{ 
+                display: 'block', padding: '8px 12px', borderRadius: 4, opacity: 0.9,
+                transition: 'all 0.2s ease', textDecoration: 'none', color: 'white',
+                marginBottom: 4
+              }}>Process Automation</Link>
+              <Link href="/ai-services" style={{ 
+                display: 'block', padding: '8px 12px', borderRadius: 4, opacity: 0.9,
+                transition: 'all 0.2s ease', textDecoration: 'none', color: 'white',
+                marginBottom: 4
+              }}>Predictive Analytics</Link>
+              <Link href="/it-services" style={{ 
+                display: 'block', padding: '8px 12px', borderRadius: 4, opacity: 0.9,
+                transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+              }}>Cybersecurity & Compliance</Link>
+            </div>
+          </div>
+
           <Link href="/pricing" style={{ 
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
@@ -191,16 +281,33 @@ function Footer(): any {
 
         {/* Solutions */}
         <div style={{ display: 'grid', gap: 12 }}>
-          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Solutions</h3>
+          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Popular Solutions</h3>
           <div style={{ display: 'grid', gap: 8 }}>
             <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cloud Cost Optimization</Link>
-            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>AI Automation</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>AI Automation & ML</Link>
             <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Digital Transformation</Link>
             <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Process Automation</Link>
             <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Predictive Analytics</Link>
-            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cybersecurity</Link>
-            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Content Creation</Link>
-            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Customer Support</Link>
+            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cybersecurity & Compliance</Link>
+            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Content Creation Tools</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Customer Support AI</Link>
+            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>5G & Edge Computing</Link>
+            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Blockchain Solutions</Link>
+          </div>
+        </div>
+
+        {/* Emerging Technologies */}
+        <div style={{ display: 'grid', gap: 12 }}>
+          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Emerging Technologies</h3>
+          <div style={{ display: 'grid', gap: 8 }}>
+            <Link href="/quantum-computing" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Quantum Computing</Link>
+            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>5G & Edge Computing</Link>
+            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Blockchain & Web3</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Machine Learning Ops</Link>
+            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>IoT & Smart Devices</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Computer Vision</Link>
+            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Zero Trust Security</Link>
+            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>API Management</Link>
           </div>
         </div>
 
@@ -212,6 +319,7 @@ function Footer(): any {
             <Link href="/about" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>About Us</Link>
             <Link href="/contact" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Contact Us</Link>
             <Link href="/faq" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>FAQ</Link>
+            <Link href="/docs" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Documentation</Link>
             <Link href="/privacy" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Privacy Policy</Link>
             <Link href="/terms" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Terms of Service</Link>
             <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Main Website</a>
