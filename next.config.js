@@ -33,9 +33,9 @@ const nextConfig = {
             chunks: 'all',
           },
         },
-      }
+      };
     }
-    return config
+    return config;
   },
   
   // Headers for performance
@@ -50,8 +50,9 @@ const nextConfig = {
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
           { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' }
         ]
-    }]
+      }
+    ];
   },
-}
+};
 
 export default nextConfig
