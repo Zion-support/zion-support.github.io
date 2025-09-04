@@ -1,44 +1,51 @@
 {
-  "timestamp": "2025-09-03T18:20:00.360Z",
-  "checks": {
-    "packageJson": {
+  "timestamp": "2025-09-03T16:31:06.384Z",
+  "status": "healthy",
+  "checks": [
+    {
+      "name": "Node.js Version",
       "status": "pass",
-      "message": "package.json found"
+      "message": "Node.js v22.16.0 is supported"
     },
-    "nodeModules": {
+    {
+      "name": "Package.json",
       "status": "pass",
-      "message": "node_modules found"
+      "message": "Package.json is valid"
     },
-    "buildDirectory": {
+    {
+      "name": "Build Script",
       "status": "pass",
-      "message": ".next directory found"
+      "message": "Build script exists"
     },
     "sourceFiles": {
       "status": "pass",
-      "message": "Source files found"
+      "message": "node_modules directory exists"
     },
-    "diskSpace": {
+    {
+      "name": "File: next.config.js",
       "status": "pass",
-      "message": "Disk space available"
+      "message": "File exists"
     },
-    "memoryUsage": {
+    {
+      "name": "File: pages/_app.tsx",
       "status": "pass",
-      "message": "Memory usage: 4MB",
-      "value": 4
+      "message": "File exists"
     },
-    "typeScriptConfig": {
+    {
+      "name": "File: pages/index.tsx",
       "status": "pass",
-      "message": "tsconfig.json found"
+      "message": "File exists"
     },
-    "eslintConfig": {
+    {
+      "name": "Disk Space",
       "status": "pass",
-      "message": "ESLint configuration found"
+      "message": "Disk usage: 12%"
+    },
+    {
+      "name": "Memory Usage",
+      "status": "pass",
+      "message": "Memory usage: 8%"
     }
-  },
-  "summary": {
-    "total": 8,
-    "passed": 8,
-    "failed": 0,
-    "warnings": 0
-  }
+  ],
+  "recommendations": []
 }
