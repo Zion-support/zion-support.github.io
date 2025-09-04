@@ -7,12 +7,10 @@ const EnhancedNavigation: React.FC = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   const services = [
+    { name: 'All Services', href: '/services' },
     { name: 'AI Services', href: '/ai-services' },
     { name: 'IT Services', href: '/it-services' },
-    { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
     { name: 'Micro SaaS', href: '/micro-saas' },
-    { name: 'Security', href: '/security' },
-    { name: 'Case Studies', href: '/case-studies' },
   ];
 
   return (
@@ -57,12 +55,6 @@ const EnhancedNavigation: React.FC = () => {
             <Link href="/about">
               <span className="text-gray-600 hover:text-blue-600 transition-colors">About</span>
             </Link>
-            <Link href="/blog">
-              <span className="text-gray-600 hover:text-blue-600 transition-colors">Blog</span>
-            </Link>
-            <Link href="/talent">
-              <span className="text-gray-600 hover:text-blue-600 transition-colors">Careers</span>
-            </Link>
             <Link href="/contact">
               <span className="text-gray-600 hover:text-blue-600 transition-colors">Contact</span>
             </Link>
@@ -102,12 +94,6 @@ const EnhancedNavigation: React.FC = () => {
               </div>
               <Link href="/about">
                 <span className="block py-2 text-gray-600 hover:text-blue-600">About</span>
-              </Link>
-              <Link href="/blog">
-                <span className="block py-2 text-gray-600 hover:text-blue-600">Blog</span>
-              </Link>
-              <Link href="/talent">
-                <span className="block py-2 text-gray-600 hover:text-blue-600">Careers</span>
               </Link>
               <Link href="/contact">
                 <span className="block py-2 text-gray-600 hover:text-blue-600">Contact</span>

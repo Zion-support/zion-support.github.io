@@ -7,31 +7,21 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const services = [
-    { name: 'AI Development', href: '/services/ai-development' },
-    { name: 'Cloud Solutions', href: '/services/cloud-solutions' },
-    { name: 'Web Development', href: '/services/web-development' },
-    { name: 'Mobile Apps', href: '/services/mobile-development' },
-    { name: 'Blockchain Solutions', href: '/services/blockchain' },
-    { name: 'IoT Platforms', href: '/services/iot-platforms' },
-    { name: 'Data Analytics', href: '/services/data-analytics' },
-    { name: 'Cybersecurity', href: '/services/cybersecurity' }
+    { name: 'All Services', href: '/services' },
+    { name: 'AI Services', href: '/ai-services' },
+    { name: 'IT Services', href: '/it-services' },
+    { name: 'Micro SaaS', href: '/micro-saas' }
   ];
 
   const company = [
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/about#team' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'News & Updates', href: '/blog' },
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' }
+    { name: 'Contact', href: '/contact' }
   ];
 
   const resources = [
-    { name: 'Blog', href: '/blog' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Documentation', href: '/docs' },
-    { name: 'Support', href: '/support' },
-    { name: 'FAQ', href: '/faq' }
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' }
   ];
 
   const socialLinks = [
@@ -52,19 +42,14 @@ const Footer: React.FC = () => {
           <div className="text-white font-semibold mb-3">Company</div>
           <nav className="flex flex-col gap-2 text-gray-300 text-sm">
             <Link href="/about" className="hover:text-white">About</Link>
-            <Link href="/careers" className="hover:text-white">Careers</Link>
-            <Link href="/pricing" className="hover:text-white">Pricing</Link>
             <Link href="/contact" className="hover:text-white">Contact</Link>
           </nav>
         </div>
         <div>
           <div className="text-white font-semibold mb-3">Resources</div>
           <nav className="flex flex-col gap-2 text-gray-300 text-sm">
-            <Link href="/blog" className="hover:text-white">Blog</Link>
-            <Link href="/docs" className="hover:text-white">Docs</Link>
             <Link href="/privacy" className="hover:text-white">Privacy</Link>
             <Link href="/terms" className="hover:text-white">Terms</Link>
-            <Link href="/sitemap" className="hover:text-white">Sitemap</Link>
           </nav>
         </div>
       </div>
@@ -156,8 +141,8 @@ const Footer: React.FC = () => {
             <div className="space-y-2">
               <div className="flex items-center text-gray-300">
                 <Mail className="h-4 w-4 mr-2" />
-                <a href="mailto:info@ziontechgroup.com" className="hover:text-blue-400">
-                  info@ziontechgroup.com
+                <a href="mailto:contact@ziontechgroup.com" className="hover:text-blue-400">
+                  contact@ziontechgroup.com
                 </a>
               </div>
               <div className="flex items-center text-gray-300">
@@ -169,8 +154,8 @@ const Footer: React.FC = () => {
               <div className="flex items-start text-gray-300">
                 <MapPin className="h-4 w-4 mr-2 mt-0.5" />
                 <span>
-                  123 Tech Street<br />
-                  San Francisco, CA 94105
+                  123 Technology Drive<br />
+                  Innovation City, IC 12345
                 </span>
               </div>
             </div>
