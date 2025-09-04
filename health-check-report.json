@@ -1,40 +1,47 @@
 {
-  "timestamp": "2025-09-03T17:32:53.642Z",
-  "checks": {
-    "Node.js Version": {
-      "status": "passed",
-      "message": "Node.js v22.16.0"
+  "timestamp": "2025-09-03T23:23:47.106Z",
+  "status": "warning",
+  "checks": [
+    {
+      "name": "Node.js Version",
+      "status": "pass",
+      "value": "v22.16.0",
+      "message": "Node.js version is compatible"
     },
-    "Package.json": {
-      "status": "passed",
-      "message": "package.json exists"
+    {
+      "name": "Package.json",
+      "status": "pass",
+      "value": "ziontechgroup.com",
+      "message": "Package.json found and valid"
     },
-    "Dependencies": {
-      "status": "passed",
-      "message": "Dependencies installed"
+    {
+      "name": "Dependencies",
+      "status": "pass",
+      "message": "Node modules directory exists"
     },
-    "Disk Space": {
-      "status": "passed",
-      "message": "Disk usage: 12%"
+    {
+      "name": "Next.js Config",
+      "status": "pass",
+      "message": "Next.js configuration found"
     },
-    "Memory Usage": {
-      "status": "passed",
-      "message": "Memory usage: 9%"
+    {
+      "name": "TypeScript Config",
+      "status": "pass",
+      "message": "TypeScript configuration found"
     },
-    "Build Test": {
-      "status": "passed",
-      "message": "Build successful"
+    {
+      "name": "Source Files",
+      "status": "pass",
+      "message": "Source directory found"
     },
-    "Linting": {
-      "status": "warning",
-      "warning": true,
-      "message": "Linting errors found"
+    {
+      "name": "Environment Variables",
+      "status": "warn",
+      "message": "Environment file not found, but example exists"
     }
-  },
-  "summary": {
-    "total": 7,
-    "passed": 6,
-    "failed": 0,
-    "warnings": 1
-  }
+  ],
+  "issues": [],
+  "recommendations": [
+    "Copy .env.example to .env.local and configure"
+  ]
 }
