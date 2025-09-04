@@ -1,5 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { SEO } from '../components/SEO';
+import { 
+  Mail, 
+  Phone, 
+  MapPin, 
+  Clock, 
+  Send, 
+  CheckCircle, 
+  AlertCircle, 
+  Shield, 
+  Award, 
+  Users, 
+  Zap 
+} from 'lucide-react';
 
 const Contact: Reac t.FC = () => {
   return (<>

@@ -1,11 +1,8 @@
-* SEO function
- * @param {*} params - Function parameters
- * @returns {*} Function return value
- */
-function SEO({
+import React from 'react';
 
-interface SEOProps {  title?: string;
-description?: string;
+interface SEOProps {
+  title?: string;
+  description?: string;
   keywords?: string;
   image?: string;
   url?: string;
@@ -24,7 +21,7 @@ export const SEO: Reac t.FC<SEOProps> = ({
   keywords = 'AI, cybersecurity, cloud infrastructure, digital transformation, technology solutions, Zion Tech Group',
   image = '/og-image.svg',
   url = 'https://ziontechgroup.com',
-type = 'website',
+  type = 'website',
   author = 'Zion Tech Group',
   publishedTime,
   modifiedTime,
