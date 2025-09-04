@@ -113,12 +113,12 @@ const ServicesSection: React.FC = () => {
 
         {/* Bottom CTA */}
         <div className="text-center">
-          <Button size="lg" asChild>
-            <Link href="/services">
+          <Link href="/services">
+            <Button size="lg">
               View All Services
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

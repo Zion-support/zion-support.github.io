@@ -4,8 +4,8 @@
   "description": "Leading provider of micro SaaS products, AI services, and IT solutions. 340+ innovative services including quantum computing, AI automation, blockchain, edge computing, and enterprise technology solutions.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0b1220",
-  "theme_color": "#3b82f6",
+  "background_color": "#17072b",
+  "theme_color": "#17072b",
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en-US",
@@ -22,10 +22,10 @@
       "type": "image/svg+xml"
     },
     {
-      "src": "/icon-192.png",
+      "src": "/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "maskable any"
     },
     {
       "src": "/icon-512.png",
@@ -50,11 +50,16 @@
   ],
   "shortcuts": [
     {
-      "name": "Services",
-      "short_name": "Services",
-      "description": "Browse our technology services",
-      "url": "/services",
-      "icons": [{ "src": "/favicon.ico", "sizes": "32x32" }]
+      "name": "AI Services",
+      "short_name": "AI",
+      "description": "Explore our AI services",
+      "url": "/ai-services",
+      "icons": [
+        {
+          "src": "/icon-ai.png",
+          "sizes": "96x96"
+        }
+      ]
     },
     {
       "name": "Contact",
@@ -72,5 +77,8 @@
     }
   ],
   "related_applications": [],
-  "prefer_related_applications": false
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
 }

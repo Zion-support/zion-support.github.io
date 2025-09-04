@@ -1,17 +1,36 @@
 {
-  "timestamp": "2025-09-04T00:00:08.000Z",
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "timestamp": "2025-09-03T20:36:49.970Z",
+=======
+  "timestamp": "2025-09-03T21:22:51.475Z",
+>>>>>>> origin/main
   "bundleSize": {
     ".next": {
-      "size": 49011715,
-      "sizeMB": "46.74"
+      "size": 0,
+      "sizeMB": "0.00"
+<<<<<<< HEAD
+=======
+  "timestamp": "2025-09-03T20:00:06.726Z",
+  "bundleSize": {
+    ".next": {
+      "size": 28534499,
+      "sizeMB": "27.21"
+>>>>>>> 2a05819f8ad7f9ba18431a36ff65088a0d741ce0
+=======
+>>>>>>> origin/main
     },
     "node_modules": {
-      "size": 820676108,
-      "sizeMB": "782.66"
+      "size": 0,
+      "sizeMB": "0.00"
     }
   },
   "fileCounts": {
+<<<<<<< HEAD
     ".tsx": 25,
+=======
+    ".tsx": 26,
+>>>>>>> origin/main
     ".ts": 0,
     ".jsx": 0,
     ".js": 0,
