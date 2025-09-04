@@ -334,30 +334,7 @@ if (require.main === module) {
       console.log('Usage: node master-orchestrator.cjs [check|start|stop|restart]');
       process.exit(1);
   }
-=======
-    constructor() {
-        this.projectRoot = process.cwd();
-        this.logFile = path.join(this.projectRoot, 'logs', 'master-orchestrator.log');
-        this.reportFile = path.join(this.projectRoot, 'master-automation-report.json');
-        this.ensureLogsDirectory();
-    }
-
-    ensureLogsDirectory() {
-        const logsDir = path.join(this.projectRoot, 'logs');
-        if (!fs.existsSync(logsDir)) {
-            fs.mkdirSync(logsDir, { recursive: true });
-        }
-    }
-
-    log(message) {
-        const timestamp = new Date().toISOString();
-        const logMessage = `[${timestamp}] ${message}\n`;
-        fs.appendFileSync(this.logFile, logMessage);
-        console.log(message);
-    }
-
-    async runAutomation(scriptPath, name) {
-        this.log(`Running ${name}...`);
+}
         
         try {
             const result = execSync(`node ${scriptPath}`, { 
