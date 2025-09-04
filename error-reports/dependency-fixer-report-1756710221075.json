@@ -1,0 +1,16 @@
+{
+  "timestamp": "2025-09-01T07:03:41.078Z",
+  "duration": "3ms",
+  "summary": {
+    "totalIssuesFound": 0,
+    "issuesFixed": 0,
+    "successRate": "0%"
+  },
+  "fixesApplied": [],
+  "metadata": {
+    "script": "dependency-fixer",
+    "version": "1.0.0",
+    "nodeVersion": "v22.16.0",
+    "platform": "linux"
+  }
+}
