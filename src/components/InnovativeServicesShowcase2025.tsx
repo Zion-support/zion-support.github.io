@@ -369,7 +369,7 @@ export default function Page() {
                     <div className="mb-6">"
                       <h4 className="text-lg font-semibold text-white mb-3">Tags</h4>"
                       <div className="flex flex-wrap gap-2">
-                        {selectedService.tags.map((tag: anystring)  => (
+                        {selectedService.tags.map((tag: unknownstring)  => (
                           <span
                             key={tag}"
                             className="px-3 py-1 bg-gray-800/50 border border-gray-600 rounded-full text-sm text-gray-300"
