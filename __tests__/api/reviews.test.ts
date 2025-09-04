@@ -90,7 +90,7 @@ describe('/api/reviews API Endpoint', () => {
         companyId: null,
         headline: null,
         lastLoginAt: null,
-        notifications: {}
+        notifications: {},
         profileComplete: false,
         resetToken: null,
         resetTokenExpiry: null,
@@ -202,8 +202,8 @@ describe('/api/reviews API Endpoint', () => {
       const { req, res } = createMocks({
         method: 'POST' as RequestMethod,
         body: {
-          productId: 'prod1'
-          rating: 'five-stars'
+          productId: 'prod1',
+          rating: 'five-stars',
           comment: 'Text rating!'
         }
       })
@@ -218,14 +218,14 @@ describe('/api/reviews API Endpoint', () => {
     })
     it('should fail if not authenticated (401)', async () => {
       (supabase.auth.getSession as jest.Mock).mockResolvedValue({
-        data: { session: null }
+        data: { session: null },
         error: null
-      })
+      });
       const { req, res } = createMocks({
         method: 'POST' as RequestMethod,
         body: {
-          productId: 'prod1'
-          rating: 5
+          productId: 'prod1',
+          rating: 5,
           comment: 'Trying to review without login'
         }
       })

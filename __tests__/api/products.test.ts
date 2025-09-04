@@ -2,6 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import { createMocks, createRequest, createResponse } from 'node-mocks-http'
 import productHandler from '@/pages/api/products/index'
 import { PrismaClient } from '@prisma/client'
+import { jest, beforeEach } from '@jest/globals'
 // Mock Prisma Client
 jest.mock('@prisma/client', () => {
   const mPrismaClient = {
@@ -65,7 +66,7 @@ describe('/api/products API Endpoint', () => {
           id: 'product-gpt-high-score',
           name: 'Super GPT Model',
           description: 'Latest generation AI',
-          images: []
+          images: [],
           price: null,
           currency: 'USD',
           tags: []
@@ -74,7 +75,7 @@ describe('/api/products API Endpoint', () => {
           id: 'product-gpt-medium-score',
           name: 'Advanced GPT Assistant',
           description: 'Your personal AI helper powered by GPT',
-          images: []
+          images: [],
           price: null,
           currency: 'USD',
           tags: []
@@ -89,18 +90,18 @@ describe('/api/products API Endpoint', () => {
         .sort((a, b) =>
           Math.max(b.name_similarity, b.description_similarity) -
           Math.max(a.name_similarity, a.description_similarity)
-        )
+        );
       // Expected order by GREATEST:
       // 1. product-gpt-high-score (GREATEST is 0.9)
       // 2. product-gpt-medium-score (GREATEST is 0.85)
-      (prisma.$queryRawUnsafe as jest.Mock).mockResolvedValue(filteredMockRawResults)
+      (prisma.$queryRawUnsafe as jest.Mock).mockResolvedValue(filteredMockRawResults);
       // findMany will be called with IDs from filteredMockRawResults
-      const expectedProductIds = filteredMockRawResults.map(p => p.id)
+      const expectedProductIds = filteredMockRawResults.map(p => p.id);
       (prisma.product.findMany as jest.Mock).mockImplementation(
         async ({ where }: { where: { id: { in: string[] } } }) => {
-          return mockProductsData.filter(p => where.id.in.includes(p.id))
+          return mockProductsData.filter(p => where.id.in.includes(p.id));
         }
-      )
+      );
       // 2. Create mock request and response
       const { req, res } = createMocks({
         method: 'GET',
