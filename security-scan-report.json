@@ -1,47 +1,30 @@
 {
-  "timestamp": "2025-09-04T01:33:54.765Z",
-  "status": "completed",
-  "vulnerabilities": [
+  "timestamp": "2025-09-03T18:00:09.877Z",
+  "vulnerabilities": [],
+  "warnings": [
     {
-      "name": "NPM Security Audit",
-      "status": "checked",
-      "result": {
-        "status": "vulnerabilities_found"
-      },
-      "timestamp": "2025-09-04T01:33:55.529Z"
+      "type": "gitignore",
+      "severity": "medium",
+      "message": "Consider adding to .gitignore: *.key, *.pem, secrets/"
     },
     {
-      "name": "Sensitive Files Check",
-      "status": "checked",
-      "result": {
-        "foundFiles": []
-      },
-      "timestamp": "2025-09-04T01:33:55.530Z"
-    },
-    {
-      "name": "Gitignore Security Check",
-      "status": "checked",
-      "result": {
-        "missingEntries": []
-      },
-      "timestamp": "2025-09-04T01:33:55.530Z"
-    },
-    {
-      "name": "Hardcoded Secrets Check",
-      "status": "checked",
-      "result": {
-        "scannedFiles": 3082,
-        "suspiciousFiles": 0
-      },
-      "timestamp": "2025-09-04T01:33:55.661Z"
+      "type": "audit",
+      "severity": "low",
+      "message": "Could not run npm audit - check network connection"
     }
   ],
   "recommendations": [
     {
-      "type": "npm_vulnerabilities",
-      "message": "NPM vulnerabilities detected - review and fix",
-      "severity": "high"
+      "type": "configuration",
+      "severity": "medium",
+      "message": "Consider enabling HTTPS and security headers in next.config.js"
     }
   ],
-  "completedAt": "2025-09-04T01:33:55.662Z"
+  "summary": {
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 1,
+    "info": 0
+  }
 }

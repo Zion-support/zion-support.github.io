@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-04T01:33:55.278Z",
+  "timestamp": "2025-09-03T17:05:14.567Z",
   "files": {
     "components/Breadcrumb.tsx": {
       "path": "components/Breadcrumb.tsx",
@@ -57,11 +57,11 @@
     },
     "pages/_app.tsx": {
       "path": "pages/_app.tsx",
-      "lines": 271,
+      "lines": 164,
       "issues": [
         {
           "rule": "Duplicate Code",
-          "value": 21,
+          "value": 11,
           "message": "Potential duplicate code detected"
         }
       ],
@@ -69,7 +69,7 @@
     },
     "pages/about.tsx": {
       "path": "pages/about.tsx",
-      "lines": 155,
+      "lines": 156,
       "issues": [
         {
           "rule": "Duplicate Code",
@@ -81,30 +81,19 @@
     },
     "pages/ai-services.tsx": {
       "path": "pages/ai-services.tsx",
-      "lines": 1137,
-      "issues": [
-        {
-          "rule": "File Length",
-          "value": 1,
-          "message": "Files should be under 500 lines"
-        },
-        {
-          "rule": "Duplicate Code",
-          "value": 76,
-          "message": "Potential duplicate code detected"
-        }
-      ],
-      "complexity": 0
-    },
-    "pages/cloud-devops.tsx": {
-      "path": "pages/cloud-devops.tsx",
-      "lines": 156,
+      "lines": 301,
       "issues": [],
       "complexity": 0
     },
     "pages/contact.tsx": {
       "path": "pages/contact.tsx",
-      "lines": 183,
+      "lines": 166,
+      "issues": [],
+      "complexity": 0
+    },
+    "pages/faq.tsx": {
+      "path": "pages/faq.tsx",
+      "lines": 121,
       "issues": [],
       "complexity": 0
     },
@@ -176,119 +165,37 @@
     },
     "pages/index.tsx": {
       "path": "pages/index.tsx",
-      "lines": 197,
+      "lines": 163,
       "issues": [],
       "complexity": 0
     },
     "pages/it-services.tsx": {
       "path": "pages/it-services.tsx",
-      "lines": 1439,
-      "issues": [
-        {
-          "rule": "File Length",
-          "value": 1,
-          "message": "Files should be under 500 lines"
-        },
-        {
-          "rule": "Duplicate Code",
-          "value": 112,
-          "message": "Potential duplicate code detected"
-        }
-      ],
-      "complexity": 0
-    },
-    "pages/login.tsx": {
-      "path": "pages/login.tsx",
-      "lines": 204,
+      "lines": 427,
       "issues": [
         {
           "rule": "Duplicate Code",
-          "value": 7,
+          "value": 16,
           "message": "Potential duplicate code detected"
         }
       ],
-      "complexity": 1
-    },
-    "pages/marketplace.tsx": {
-      "path": "pages/marketplace.tsx",
-      "lines": 339,
-      "issues": [
-        {
-          "rule": "Duplicate Code",
-          "value": 17,
-          "message": "Potential duplicate code detected"
-        }
-      ],
-      "complexity": 0
-    },
-    "pages/login.tsx": {
-      "path": "pages/login.tsx",
-      "lines": 202,
-      "issues": [
-        {
-          "rule": "Duplicate Code",
-          "value": 7,
-          "message": "Potential duplicate code detected"
-        }
-      ],
-      "complexity": 1
-    },
-    "pages/marketplace.tsx": {
-      "path": "pages/marketplace.tsx",
-      "lines": 338,
-      "issues": [
-        {
-          "rule": "Duplicate Code",
-          "value": 17,
-          "message": "Potential duplicate code detected"
-        }
-      ],
-      "complexity": 0
-    },
-    "pages/login.tsx": {
-      "path": "pages/login.tsx",
-      "lines": 142,
-      "issues": [],
-      "complexity": 1
-    },
-    "pages/marketplace.tsx": {
-      "path": "pages/marketplace.tsx",
-      "lines": 120,
-      "issues": [],
       "complexity": 0
     },
     "pages/micro-saas.tsx": {
       "path": "pages/micro-saas.tsx",
-      "lines": 1489,
+      "lines": 367,
       "issues": [
         {
-          "rule": "File Length",
-          "value": 1,
-          "message": "Files should be under 500 lines"
-        },
-        {
           "rule": "Duplicate Code",
-          "value": 61,
+          "value": 7,
           "message": "Potential duplicate code detected"
         }
       ],
       "complexity": 0
     },
-    "pages/news.tsx": {
-      "path": "pages/news.tsx",
-      "lines": 28,
-      "issues": [],
-      "complexity": 0
-    },
-    "pages/partners.tsx": {
-      "path": "pages/partners.tsx",
-      "lines": 28,
-      "issues": [],
-      "complexity": 0
-    },
     "pages/pricing.tsx": {
       "path": "pages/pricing.tsx",
-      "lines": 219,
+      "lines": 87,
       "issues": [],
       "complexity": 0
     },
@@ -307,6 +214,29 @@
     "pages/services-catalog.tsx": {
       "path": "pages/services-catalog.tsx",
       "lines": 253,
+      "issues": [],
+      "complexity": 0
+    },
+    "pages/services.tsx": {
+      "path": "pages/services.tsx",
+      "lines": 696,
+      "issues": [
+        {
+          "rule": "File Length",
+          "value": 1,
+          "message": "Files should be under 500 lines"
+        },
+        {
+          "rule": "Duplicate Code",
+          "value": 26,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 0
+    },
+    "pages/terms.tsx": {
+      "path": "pages/terms.tsx",
+      "lines": 127,
       "issues": [],
       "complexity": 0
     },
@@ -354,26 +284,16 @@
     }
   },
   "summary": {
-    "totalFiles": 26,
-    "totalLines": 8387,
-    "averageComplexity": "1.38",
+    "totalFiles": 13,
+    "totalLines": 3074,
+    "averageComplexity": "0.00",
     "issues": [
-      {
-        "file": "pages/404.tsx",
-        "issues": [
-          {
-            "rule": "Function Length",
-            "value": 1,
-            "message": "Functions should be under 50 lines"
-          }
-        ]
-      },
       {
         "file": "pages/_app.tsx",
         "issues": [
           {
             "rule": "Duplicate Code",
-            "value": 21,
+            "value": 11,
             "message": "Potential duplicate code detected"
           }
         ]
@@ -389,102 +309,17 @@
         ]
       },
       {
-        "file": "pages/ai-services.tsx",
-        "issues": [
-          {
-            "rule": "File Length",
-            "value": 1,
-            "message": "Files should be under 500 lines"
-          },
-          {
-            "rule": "Duplicate Code",
-            "value": 76,
-            "message": "Potential duplicate code detected"
-          }
-        ]
-      },
-      {
         "file": "pages/it-services.tsx",
         "issues": [
           {
-            "rule": "File Length",
-            "value": 1,
-            "message": "Files should be under 500 lines"
-          },
-          {
             "rule": "Duplicate Code",
-            "value": 112,
+            "value": 16,
             "message": "Potential duplicate code detected"
           }
         ]
       },
       {
         "file": "pages/micro-saas.tsx",
-        "issues": [
-          {
-            "rule": "File Length",
-            "value": 1,
-            "message": "Files should be under 500 lines"
-          },
-          {
-            "rule": "Duplicate Code",
-            "value": 61,
-            "message": "Potential duplicate code detected"
-          }
-        ]
-      },
-      {
-        "file": "pages/security.tsx",
-        "issues": [
-          {
-            "rule": "Duplicate Code",
-            "value": 13,
-            "message": "Potential duplicate code detected"
-          }
-        ]
-      },
-      {
-        "file": "pages/services-comparison.tsx",
-        "issues": [
-          {
-            "rule": "Duplicate Code",
-            "value": 9,
-            "message": "Potential duplicate code detected"
-          }
-        ]
-      },
-      {
-        "file": "pages/security.tsx",
-        "issues": [
-          {
-            "rule": "Duplicate Code",
-            "value": 13,
-            "message": "Potential duplicate code detected"
-          }
-        ]
-      },
-      {
-        "file": "pages/services-comparison.tsx",
-        "issues": [
-          {
-            "rule": "Duplicate Code",
-            "value": 61,
-            "message": "Potential duplicate code detected"
-          }
-        ]
-      },
-      {
-        "file": "pages/signup.tsx",
-        "issues": [
-          {
-            "rule": "Duplicate Code",
-            "value": 8,
-            "message": "Potential duplicate code detected"
-          }
-        ]
-      },
-      {
-        "file": "pages/status.tsx",
         "issues": [
           {
             "rule": "Duplicate Code",
@@ -494,31 +329,16 @@
         ]
       },
       {
-        "file": "pages/team.tsx",
+        "file": "pages/services.tsx",
         "issues": [
           {
-            "rule": "Duplicate Code",
-            "value": 14,
-            "message": "Potential duplicate code detected"
-          }
-        ]
-      },
-      {
-        "file": "pages/docs/authentication.tsx",
-        "issues": [
+            "rule": "File Length",
+            "value": 1,
+            "message": "Files should be under 500 lines"
+          },
           {
             "rule": "Duplicate Code",
-            "value": 10,
-            "message": "Potential duplicate code detected"
-          }
-        ]
-      },
-      {
-        "file": "pages/docs/first-steps.tsx",
-        "issues": [
-          {
-            "rule": "Duplicate Code",
-            "value": 12,
+            "value": 26,
             "message": "Potential duplicate code detected"
           }
         ]
