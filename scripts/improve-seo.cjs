@@ -6,9 +6,9 @@ function improveSEO() {
   try {
     const pagesDir = path.join(process.cwd(), 'pages');
     const componentsDir = path.join(process.cwd(), 'components');
-  
-  // Add meta tags to pages
-  const metaTemplate = `
+    
+    // Add meta tags to pages
+    const metaTemplate = `
 import Head from 'next/head';
 
 export default function Page() {
