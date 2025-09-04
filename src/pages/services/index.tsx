@@ -1,62 +1,89 @@
 import React from 'react';
-import Link from 'next/link';
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3, Cpu, Headphones, Calendar, Send, Layers } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-export default function Index() {
+export default function ServicesIndex() {
+  const groups = [
+    { title: 'AI', href: '/ai-services', desc: 'LLMs, CV, NLP, and MLOps' },
+    { title: 'IT', href: '/it-services', desc: 'Managed services, security, cloud' },
+    { title: 'Micro SaaS', href: '/services/micro-saas', desc: 'Ready-to-use vertical tools' }
+  ];
+  return (
+    <main className="min-h-screen bg-white py-16">
+      <div className="max-w-6xl mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">Services</h1>
+        <p className="text-gray-600 mb-8">Explore our solutions across AI, IT, and micro SaaS.</p>
+        <div className="grid md:grid-cols-3 gap-6">
+          {groups.map(g => (
+            <Link key={g.href} to={g.href} className="border rounded-xl p-6 hover:shadow-lg transition">
+              <h3 className="text-xl font-semibold mb-1">{g.title}</h3>
+              <p className="text-gray-600">{g.desc}</p>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </main>
+  );
+}
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Database, Brain, Check, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3, Cpu, Headphones, Calendar, Send, Layers } from 'lucide-react';
+
+function FullServicesShowcase() {
   const services = [
     {
       name: 'AI & Machine Learning',
       description: 'Advanced AI solutions for business automation and intelligence',
-      icon: Brai n,
+      icon: Brain,
       href: '/services/ai-machine-learning',
       features: ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
     },
     {
       name: 'Micro SaaS Solutions',
       description: 'Specialized software solutions for specific business needs',
-      icon: Cp u,
+      icon: Cpu,
       href: '/services/micro-saas',
       features: ['Custom Applications', 'API Integration', 'Scalable Infrastructure', 'Multi-tenant Support']
     },
     {
       name: 'AI Content Creation',
       description: 'Generate high-quality content at scale with AI-powered tools',
-      icon: FileTex t,
+      icon: FileText,
       href: '/services/ai-content-creation',
       features: ['Blog Posts', 'Social Media', 'Email Campaigns', 'SEO Optimization']
     },
     {
       name: 'Email Automation',
       description: 'Automate email marketing campaigns with intelligent sequences',
-      icon: Sen d,
+      icon: Send,
       href: '/services/email-automation',
       features: ['Lead Nurturing', 'Behavioral Triggers', 'A/B Testing', 'Analytics']
     },
     {
       name: 'Customer Support Platform',
       description: 'AI-powered customer support with chatbots and ticketing',
-      icon: Headphone s,
+      icon: Headphones,
       href: '/services/customer-support',
       features: ['Live Chat', 'Ticket Management', 'Knowledge Base', 'Analytics']
     },
     {
       name: 'Event Management',
       description: 'Complete event planning and management solution',
-      icon: Calenda r,
+      icon: Calendar,
       href: '/services/event-management',
       features: ['Registration', 'Ticketing', 'Analytics', 'Mobile App']
     },
     {
       name: 'Cloud & DevOps',
       description: 'Scalable cloud infrastructure and deployment automation',
-      icon: Databas e,
+      icon: Database,
       href: '/services/cloud-devops',
       features: ['Cloud Migration', 'CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring']
     },
     {
       name: 'Cybersecurity',
       description: 'Comprehensive security solutions for digital protection',
-      icon: Shiel d,
+      icon: Shield,
       href: '/services/cybersecurity',
       features: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response']
     }
@@ -120,7 +147,7 @@ export default function Index() {
                   ))}
                 </ul>
                 <Link 
-                  href={service.href}
+                  to={service.href}
                   className="w-full bg-indigo-600 text-white px-4 py-2 rounded-lg hover: b g-indigo-700 transition-colors inline-flex items-center justify-center"
                 >
                   Learn More <ArrowRight className="w-4 h-4 ml-2"  />
@@ -171,11 +198,11 @@ export default function Index() {
           <p className="text-indigo-100 text-xl mb-8">
             Get started with our comprehensive technology solutions today.
           </p>
-          <div className="flex flex-col sm: fle x-row gap-4 justify-center">
-            <Link href="/contact" className="px-8 py-3 bg-white text-indigo-600 rounded-lg hover: b g-gray-100 transition-colors inline-flex items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/contact" className="px-8 py-3 bg-white text-indigo-600 rounded-lg hover: b g-gray-100 transition-colors inline-flex items-center">
               Get Started <ArrowRight className="w-4 h-4 ml-2"  />
             </Link>
-            <Link href="/demo" className="px-8 py-3 border border-white text-white rounded-lg hover: b g-white/10 transition-colors inline-flex items-center">
+            <Link to="/demo" className="px-8 py-3 border border-white text-white rounded-lg hover: b g-white/10 transition-colors inline-flex items-center">
               Schedule Demo <Mail className="w-4 h-4 ml-2"  />
             </Link>
           </div>

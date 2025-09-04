@@ -46,7 +46,7 @@ const Navigation: React.FC = () => {
         <div className='flex justify-between items-center h-16'>
           {/* Logo */}
           <div className='flex-shrink-0'>
-            <Link href='/' className='text-white text-2xl font-bold hover: tex t-blue-300 transition-colors'>
+            <Link to='/' className='text-white text-2xl font-bold hover:text-blue-300 transition-colors'>
               Zion Tech Group
             </Link>
           </div>
@@ -62,14 +62,14 @@ const Navigation: React.FC = () => {
                         className='text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center'
                       >
                         {item.name}
-                        <ChevronDown className='ml-1 h-4 w-4'  />
+                        <ChevronDown className='ml-1 h-4 w-4' />
                       </button>
                       {activeDropdown === item.name && (
                         <div className='absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg py-1 z-50'>
                           {item.dropdown.map((dropdownItem) => (
                             <Link
                               key={dropdownItem.name}
-                              href={dropdownItem.href}
+                              to={dropdownItem.href}
                               className='block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors'
                               onClick={() => setActiveDropdown(null)}
                             >
@@ -81,7 +81,7 @@ const Navigation: React.FC = () => {
                     </div>
                   ) : (
                     <Link
-                      href={item.href}
+                      to={item.href}
                       className='text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors'
                     >
                       {item.name}
@@ -89,49 +89,12 @@ const Navigation: React.FC = () => {
                   )}
                 </div>
               ))}
-              
-              {/* Services Dropdown */}
-              <div className="relative">
-                <button
-                  onClick={() => setIsServicesOpen(!isServicesOpen)}
-                  className="text-gray-700 hover: tex t-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 flex items-center"
-                >
-                  <Shield className="h-4 w-4 mr-2"  />
-                  Services
-                  <ChevronDown className="h-4 w-4 ml-1"  />
-                </button>
-                
-                {isServicesOpen && (
-                  <div className="absolute right-0 mt-2 w-96 bg-white rounded-md shadow-lg py-1 z-50 border">
-                    <div className="grid grid-cols-3 gap-4 p-4">
-                      {serviceCategories.map((category) => (
-                        <div key={category.name}>
-                          <h3 className="text-sm font-semibold text-gray-900 mb-2">{category.name}</h3>
-                          <ul className="space-y-1">
-                            {category.services.map((service) => (
-                              <li key={service.name}>
-                                <Link
-                                  href={service.href}
-                                  className="text-sm text-gray-600 hover: tex t-blue-600 block py-1"
-                                  onClick={() => setIsServicesOpen(false)}
-                                >
-                                  {service.name}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
 
               <Link
-                href="/contact"
-                className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: b g-blue-700 transition-colors duration-200 flex items-center"
+                to="/contact"
+                className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors duration-200 flex items-center"
               >
-                <Phone className="h-4 w-4 mr-2"  />
+                <Phone className="h-4 w-4 mr-2" />
                 Contact Us
               </Link>
             </div>
@@ -142,7 +105,7 @@ const Navigation: React.FC = () => {
               onClick={() => setIsOpen(!isOpen)}
               className='text-white hover:text-blue-300 p-2 rounded-md transition-colors'
             >
-              {isOpen ? <X className='h-6 w-6'  /> : <Menu className='h-6 w-6'  />}
+              {isOpen ? <X className='h-6 w-6' /> : <Menu className='h-6 w-6' />}
             </button>
           </div>
         </div>
@@ -160,14 +123,14 @@ const Navigation: React.FC = () => {
                       className='text-white hover:text-blue-300 block px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center justify-between'
                     >
                       {item.name}
-                      <ChevronDown className='h-4 w-4'  />
+                      <ChevronDown className='h-4 w-4' />
                     </button>
                     {activeDropdown === item.name && (
                       <div className='pl-4 space-y-1'>
                         {item.dropdown.map((dropdownItem) => (
                           <Link
                             key={dropdownItem.name}
-                            href={dropdownItem.href}
+                            to={dropdownItem.href}
                             className='text-gray-300 hover:text-white block px-3 py-2 rounded-md text-sm'
                             onClick={() => {
                               setIsOpen(false);
@@ -182,7 +145,7 @@ const Navigation: React.FC = () => {
                   </div>
                 ) : (
                   <Link
-                    href={item.href}
+                    to={item.href}
                     className='text-white hover:text-blue-300 block px-3 py-2 rounded-md text-base font-medium'
                     onClick={() => setIsOpen(false)}
                   >

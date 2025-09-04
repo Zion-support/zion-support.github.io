@@ -1,8 +1,67 @@
 import React from 'react';
-import Link from 'next/link';
-import { Cpu, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3, Users, Clock, DollarSign, Layers } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-export default function MicroSaaS() {
+export default function MicroSaaSServices() {
+  const offerings = [
+    {
+      name: 'AI Email Responder',
+      price: 'From $199/mo',
+      link: 'https://ziontechgroup.com/services/ai-email-responder',
+      features: ['Gmail/Outlook integration', 'Intent detection', 'Auto-drafts with approval', 'CRM sync']
+    },
+    {
+      name: 'Affiliate Attribution Hub',
+      price: 'From $149/mo',
+      link: 'https://ziontechgroup.com/services/affiliate-attribution',
+      features: ['Link generation', 'Cross-device attribution', 'Fraud protection', 'Payout workflows']
+    },
+    {
+      name: 'Event Management Dashboard',
+      price: 'From $129/mo',
+      link: 'https://ziontechgroup.com/services/event-dashboard',
+      features: ['Ticketing', 'Schedule builder', 'Check-in app', 'Feedback forms']
+    },
+    {
+      name: 'Returns & RMA for E‑commerce',
+      price: 'From $179/mo',
+      link: 'https://ziontechgroup.com/services/returns-automation',
+      features: ['Self-serve portal', 'Label generation', 'Warehouse updates', 'Refund automation']
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-white py-16">
+      <div className="max-w-6xl mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">Micro SaaS Services</h1>
+        <p className="text-gray-600 mb-10">Launch-ready, hosted tools tailored to a single problem with fast ROI.</p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+          {offerings.map((item) => (
+            <div key={item.name} className="border rounded-xl p-6 hover:shadow-lg transition">
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-xl font-semibold">{item.name}</h3>
+                <span className="text-blue-600 font-medium">{item.price}</span>
+              </div>
+              <ul className="list-disc pl-5 text-gray-600 space-y-1 mb-4">
+                {item.features.map((f) => (<li key={f}>{f}</li>))}
+              </ul>
+              <a href={item.link} className="text-blue-600 hover:underline" target="_blank" rel="noreferrer">Learn more</a>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10">
+          <Link to="/contact" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-md">Talk to an expert</Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Additional showcase (non-exported) retained for future expansion
+import { Cpu, Check, Phone, Mail, ArrowRight, Target, Zap, Layers } from 'lucide-react';
+
+function MicroSaaSShowcase() {
   const features = [
     'AI-powered business process automation',
     'Custom micro SaaS application development',
@@ -165,12 +224,12 @@ export default function MicroSaaS() {
               ))}
             </div>
             <div className="mt-6 flex flex-wrap gap-3">
-              <Link href="/contact" className="px-5 py-3 bg-indigo-600 text-white rounded-lg hover: b g-indigo-700 transition-colors inline-flex items-center">
+              <a href="/contact" className="px-5 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors inline-flex items-center">
                 Start Free Trial <ArrowRight className="w-4 h-4 ml-2"  />
-              </Link>
-              <Link href="/demo" className="px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover: b g-indigo-50 transition-colors inline-flex items-center">
+              </a>
+              <a href="/demo" className="px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors inline-flex items-center">
                 Schedule Demo <Phone className="w-4 h-4 ml-2"  />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -179,7 +238,7 @@ export default function MicroSaaS() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Micro SaaS Solutions</h2>
-          <div className="grid md: gri d-cols-2 lg: gri d-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaaSSolutions.map((solution, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
                 <div className="flex items-center mb-4">
@@ -205,7 +264,7 @@ export default function MicroSaaS() {
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Key Benefits</h2>
-          <div className="grid md: gri d-cols-2 lg: gri d-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
                 <div className="flex items-center mb-3">
@@ -242,13 +301,13 @@ export default function MicroSaaS() {
           <p className="text-indigo-100 text-xl mb-8">
             Start creating specialized software solutions that solve specific business problems efficiently.
           </p>
-          <div className="flex flex-col sm: fle x-row gap-4 justify-center">
-            <Link href="/contact" className="px-8 py-3 bg-white text-indigo-600 rounded-lg hover: b g-gray-100 transition-colors inline-flex items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contact" className="px-8 py-3 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center">
               Get Started <ArrowRight className="w-4 h-4 ml-2"  />
-            </Link>
-            <Link href="/demo" className="px-8 py-3 border border-white text-white rounded-lg hover: b g-white/10 transition-colors inline-flex items-center">
+            </a>
+            <a href="/demo" className="px-8 py-3 border border-white text-white rounded-lg hover:bg-white/10 transition-colors inline-flex items-center">
               Schedule Demo <Mail className="w-4 h-4 ml-2"  />
-            </Link>
+            </a>
           </div>
         </div>
       </section>

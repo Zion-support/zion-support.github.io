@@ -5,7 +5,11 @@ import Layout from './components/layout/Layout';
 import HomePage from './pages/HomePage';
 import ErrorBoundary from './utils/errorBoundary';
 import './index.css';
-import ServicesPage from './components/ServicesPage';
+import ServicesPage from './pages/ServicesPage';
+import ServicesIndex from './pages/services/index';
+import MicroSaaSServices from './pages/services/micro-saas';
+import AIServicesIndex from './pages/ai-services/index';
+import ITServicesIndex from './pages/it-services/index';
 
 function App() {
   return (
@@ -20,7 +24,10 @@ function App() {
           </header>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services" element={<ServicesIndex />} />
+            <Route path="/services/micro-saas" element={<MicroSaaSServices />} />
+            <Route path="/ai-services" element={<AIServicesIndex />} />
+            <Route path="/it-services" element={<ITServicesIndex />} />
           </Routes>
         </Layout>
       </ErrorBoundary>
