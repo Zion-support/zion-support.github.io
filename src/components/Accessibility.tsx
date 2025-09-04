@@ -14,7 +14,7 @@ interface AccessibilitySettings {
   theme: 'light' | 'dark' | 'auto';
 }
 
-export function Accessibility() {
+export function Accessibility(): void {
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
     fontSize: 1 6,
