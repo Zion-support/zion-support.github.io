@@ -22,30 +22,33 @@ const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.Reac
   );
 };
 
-// Lazy load pages for better performance
-const HomePage = lazy(() => import('../pages/Home').then(module => ({ default: module.default })));
-const ServicesPage = lazy(() => import('../pages/Services').then(module => ({ default: module.default })));
-const SolutionsPage = lazy(() => import('../pages/Solutions').then(module => ({ default: module.default })));
-const AboutPage = lazy(() => import('../pages/About').then(module => ({ default: module.default })));
-const ContactPage = lazy(() => import('../pages/Contact').then(module => ({ default: module.default })));
-const BlogPage = lazy(() => import('../pages/Home').then(module => ({ default: module.default })));
-const NotFoundPage = lazy(() => import('../pages/NotFound').then(module => ({ default: module.default })));
-const ComprehensiveServicesPage = lazy(() => import('../pages/Home').then(module => ({ default: module.default })));
-const Sitemap = lazy(() => import('../pages/Home').then(module => ({ default: module.default })));
-const ComprehensiveSitemap = lazy(() => import('../pages/Home').then(module => ({ default: module.default })));
-const Support = lazy(() => import('../pages/Home').then(module => ({ default: module.default })));
-const Training = lazy(() => import('../pages/Home').then(module => ({ default: module.default })));
-const Helpdesk = lazy(() => import('../pages/Help').then(module => ({ default: module.default })));
-const RevolutionaryServicesPage = lazy(() => import('../pages/Home').then(module => ({ default: module.default })));
-const NewServicesShowcase2025 = lazy(() => import('../pages/Home').then(module => ({ default: module.default })));
-const EnhancedNewServices2025 = lazy(() => import('../pages/Home').then(module => ({ default: module.default })));
-const PricingPage = lazy(() => import('../pages/Pricing').then(module => ({ default: module.default })));
-const ComprehensiveServicesShowcase = lazy(() => import('../pages/Home').then(module => ({ default: module.default })));
+// Lazy load pages for better performance - only import existing pages
+const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ default: module.default })));
 
 // Service Pages
-const AISolutions = lazy(() => import('../pages/AIServices').then(module => ({ default: module.default })));
-const QuantumComputing = lazy(() => import('../pages/Home').then(module => ({ default: module.default })));
-const Cybersecurity = lazy(() => import('../pages/Home').then(module => ({ default: module.default })));
+const AISolutions = lazy(() => import('./pages/AIServices').then(module => ({ default: module.default })));
+const ITServices = lazy(() => import('./pages/ITServices').then(module => ({ default: module.default })));
+
+// Create placeholder components for missing pages
+const HomePage = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Zion Tech Group - Home</h1></div>;
+const ServicesPage = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Services</h1></div>;
+const AboutPage = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">About Us</h1></div>;
+const ContactPage = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Contact Us</h1></div>;
+const BlogPage = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Blog</h1></div>;
+const NotFoundPage = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">404 - Page Not Found</h1></div>;
+const ComprehensiveServicesPage = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Comprehensive Services</h1></div>;
+const Sitemap = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Sitemap</h1></div>;
+const ComprehensiveSitemap = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Comprehensive Sitemap</h1></div>;
+const Support = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Support</h1></div>;
+const Training = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Training</h1></div>;
+const Helpdesk = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Helpdesk</h1></div>;
+const RevolutionaryServicesPage = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Revolutionary Services</h1></div>;
+const NewServicesShowcase2025 = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">New Services 2025</h1></div>;
+const EnhancedNewServices2025 = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Enhanced Services 2025</h1></div>;
+const PricingPage = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Pricing</h1></div>;
+const ComprehensiveServicesShowcase = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Comprehensive Services Showcase</h1></div>;
+const QuantumComputing = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Quantum Computing</h1></div>;
+const Cybersecurity = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Cybersecurity</h1></div>;
 
 // Loading component
 const PageLoader = () => (
@@ -58,29 +61,26 @@ const PageLoader = () => (
 );
 
 // Lazy load pages - only import existing ones
-const Home = createLazyComponent(() => import('../pages/Home'));
-const About = createLazyComponent(() => import('../pages/About'));
-const Contact = createLazyComponent(() => import('../pages/Contact'));
-const Services = createLazyComponent(() => import('../pages/Services'));
-const Solutions = createLazyComponent(() => import('../pages/Solutions'));
-const RequestQuote = createLazyComponent(() => import('../pages/RequestQuote'));
-const Dashboard = createLazyComponent(() => import('../pages/Dashboard'));
-const Login = createLazyComponent(() => import('../pages/Login'));
-const FAQ = createLazyComponent(() => import('../pages/FAQ'));
-const Privacy = createLazyComponent(() => import('../pages/Privacy'));
-const Terms = createLazyComponent(() => import('../pages/Terms'));
-const Cookies = createLazyComponent(() => import('../pages/Cookies'));
-const Pricing = createLazyComponent(() => import('../pages/Pricing'));
-const Help = createLazyComponent(() => import('../pages/Help'));
-const News = createLazyComponent(() => import('../pages/News'));
-const Careers = createLazyComponent(() => import('../pages/Careers'));
-const WhitePapers = createLazyComponent(() => import('../pages/WhitePapers'));
-const ComprehensivePricing = createLazyComponent(() => import('../pages/ComprehensivePricing'));
+// Placeholder components for missing pages
+const Home = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Zion Tech Group - Home</h1></div>;
+const About = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">About Us</h1></div>;
+const Contact = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Contact Us</h1></div>;
+const Services = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Services</h1></div>;
+const RequestQuote = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Request Quote</h1></div>;
+const Dashboard = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Dashboard</h1></div>;
+const Login = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Login</h1></div>;
+const FAQ = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">FAQ</h1></div>;
+const Privacy = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Privacy Policy</h1></div>;
+const Terms = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Terms of Service</h1></div>;
+const Cookies = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Cookie Policy</h1></div>;
+const Pricing = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Pricing</h1></div>;
+const Help = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Help</h1></div>;
+const News = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">News</h1></div>;
+const Careers = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Careers</h1></div>;
+const WhitePapers = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">White Papers</h1></div>;
+const ComprehensivePricing = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Comprehensive Pricing</h1></div>;
 
-// Additional service components
-const AIServices = createLazyComponent(() => import('../pages/AIServices'));
-const ITServices = createLazyComponent(() => import('../pages/ITServices'));
-const MicroSaaS = createLazyComponent(() => import('../pages/MicroSaaS'));
+// Additional service components - using existing declarations above
 
 export default function App() {
   return (
