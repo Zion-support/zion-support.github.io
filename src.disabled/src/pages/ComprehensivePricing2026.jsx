@@ -92,7 +92,7 @@ const ComprehensivePricing2026 = () => {;
           </div>;
     </div>;,;
   )}
-;
+
           {/* No Results */}
           {filteredServices.length === 0 && (";
             <motion.div"";
@@ -272,14 +272,12 @@ const ComprehensivePricing2026 = () => {;
     </div>);,
 };
 export default ComprehensivePricing2026;
-;
+export { ComprehensivePricing2026 };
 
 export { ComprehensivePricing2026 };
-;
+
 export { ComprehensivePricing2026 };
-;
+
 export { ComprehensivePricing2026 };
-;
-export { ComprehensivePricing2026 };
-;
+
 export { ComprehensivePricing2026 };

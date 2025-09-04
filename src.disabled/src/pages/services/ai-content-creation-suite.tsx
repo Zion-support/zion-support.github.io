@@ -23,7 +23,7 @@ import { ;
   Calendar,;
   Award;,
 } from 'lucide-react';
-;
+
 const AIContentCreationSuite = () => {;
   const contactInfo = {;
     phone: "+1 302 464 0950",;
@@ -31,7 +31,7 @@ const AIContentCreationSuite = () => {;
     address: "364 E Main St STE 1008, Middletown DE 19709",;
     website: "https://ziontechgroup.com";,
 };
-;
+
   const features = [;
     {;
       title: "Multi-Language Support",;
@@ -64,7 +64,7 @@ const AIContentCreationSuite = () => {;
       icon: Users;,
 }
   ];
-;
+
   const pricingPlans = [;
     {;
       name: "Starter",;
@@ -114,7 +114,7 @@ const AIContentCreationSuite = () => {;
       popular: false;,
 }
   ];
-;
+
   const testimonials = [;
     {;
       name: "Sarah Johnson",;
@@ -138,7 +138,7 @@ const AIContentCreationSuite = () => {;
       rating: 5;,
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">;
       {/* Header */}
@@ -269,7 +269,7 @@ const AIContentCreationSuite = () => {;
                     </span>;
                   </div>;
                 )}
-;
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <div className="flex items-baseline justify-center mb-4">;
@@ -386,5 +386,5 @@ const AIContentCreationSuite = () => {;
     </div>;
   );,
 };
-;
+
 export default AIContentCreationSuite;

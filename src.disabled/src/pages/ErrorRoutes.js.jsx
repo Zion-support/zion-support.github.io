@@ -116,14 +116,12 @@ const ErrorRoutes = () => {;
       <Route path="*" element={<NotFound />}/>;
     </Routes>)};
 export default ErrorRoutes;
-;
+export { NotFound, ServerError, ErrorRoutes };
 
 export { NotFound, ServerError, ErrorRoutes };
-;
+
 export { NotFound, ServerError, ErrorRoutes };
-;
+
 export { NotFound, ServerError, ErrorRoutes };
-;
-export { NotFound, ServerError, ErrorRoutes };
-;
+
 export { NotFound, ServerError, ErrorRoutes };

@@ -135,26 +135,16 @@ const AIWorkflowAutomation = () => {;
             opacity: 1,;
             transition: {;
                 staggerChildren: 0.1;
-
-;,
 };
     const itemVariants = {;
   hidden: { y: 20,;
   opacity: 0 ;
-
-;
-
-;
-
-;,
 },;
         visible: {;
             y: 0,;
             opacity: 1,;
             transition: {;
                 duration: 0.5;
-
-;,
 };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       {/* Hero Section */}
@@ -165,21 +155,9 @@ const AIWorkflowAutomation = () => {;
           <motion.div initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }} animate = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }} transition={{ duration: 0.8 }} className="text-center">;
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-600 to-red-600 rounded-full mb-6">;
               <Zap className="w-10 h-10 text-white"/>;
@@ -246,21 +224,9 @@ const AIWorkflowAutomation = () => {;
           <motion.div initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }} whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">;
             <h2 className="text-4xl font-bold text-white mb-6">Solutions by Department</h2>;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
@@ -273,30 +239,12 @@ const AIWorkflowAutomation = () => {;
             {solutions.map((category, index) => (<motion.div key={category.category} initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }} whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }} viewport={{ once: true }} transition = {;
   { duration: 0.5,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6">;
                 <div className="flex items-center mb-6">;
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-600 to-red-600 rounded-lg flex items-center justify-center mr-4">;
@@ -321,21 +269,9 @@ const AIWorkflowAutomation = () => {;
         <motion.div initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }} whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">;
           <h2 className="text-4xl font-bold text-white mb-6">Business Benefits</h2>;
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
@@ -348,30 +284,12 @@ const AIWorkflowAutomation = () => {;
           {benefits.map((benefit, index) => (<motion.div key={benefit.title} initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }} whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }} viewport={{ once: true }} transition = {;
   { duration: 0.5,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-orange-500/50 transition-all duration-300">;
               <div className="w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">;
                 <benefit.icon className="w-8 h-8 text-white"/>;
@@ -388,21 +306,9 @@ const AIWorkflowAutomation = () => {;
           <motion.div initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }} whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">;
             <h2 className="text-4xl font-bold text-white mb-6">Technology Stack</h2>;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
@@ -415,30 +321,12 @@ const AIWorkflowAutomation = () => {;
             {technologies.map((tech, index) => (<motion.div key={tech.name} initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }} whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }} viewport={{ once: true }} transition = {;
   { duration: 0.5,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-orange-500/50 transition-all duration-300">;
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">;
                   <tech.icon className="w-8 h-8 text-white"/>;
@@ -455,21 +343,9 @@ const AIWorkflowAutomation = () => {;
         <motion.div initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }} whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">;
           <h2 className="text-4xl font-bold text-white mb-6">;
             Ready to Automate Your Workflows?;
@@ -491,13 +367,13 @@ const AIWorkflowAutomation = () => {;
     </div>)};
 export default AIWorkflowAutomation;,
 }}}}}}}}}
-;
+
 export { AIWorkflowAutomation };
-;
+
 export { AIWorkflowAutomation };
-;
+
 export { AIWorkflowAutomation };
-;
+
 export { AIWorkflowAutomation };
-;
+
 export { AIWorkflowAutomation };

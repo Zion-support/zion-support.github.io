@@ -25,19 +25,19 @@ const NextNavigation = () => {;
 },";
     { name: "About", href: "/about" },";
     { name: "Contact", href: "/contact" }
-;
+
   ];
 
   const contactInfo = [];
   const toggleDropdown = (name: string) => {,,;
     setActiveDropdown(activeDropdown === name ? null : name)}
-;
+
   const closeMobileMenu = () => {;
     setIsOpen(false);,
 }
     setActiveDropdown(null);,
 }
-;
+
   return (;
     <nav className = "{"fixed" top-0 left-0 right-0 z-50 transition-all duration-300 ${;
       isScrolled ? "bg-gray-900/95 backdrop-blur-md border-b border-cyan-400/20" : "bg-transparent>;,
@@ -75,7 +75,7 @@ initial="{{" opacity: 0, y: 10, scale: 0.95 }}";
                           exit="{{" opacity: 0, y: 10, scale: 0.95 }}";
                           transition="{{" duration: 0.2 }}";
                           className=""absolute" top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-cyan-400/20 rounded-xl shadow-2xl shadow-cyan-400/10 overflow-hidden"}
-;
+
                         >";
                           <div className="p-4">;
                             {item.dropdown.map((dropdownItem) => (";
@@ -89,36 +89,36 @@ initial="{{" opacity: 0, y: 10, scale: 0.95 }}";
                                 <div className="flex-1 min-w-0">";
                                   <p className="text-sm font-medium text-white group-hover:text-cyan-300 transition-colors">,;
                                     {dropdownItem.name}
-;
+
                                   </p>";
                                   <p className="{"text-xs" text-gray-400 mt-1">;
                                     {dropdownItem.description}
-;
+
                                   </p>;
                                 </div>;
                               </Link>;
                             ))}
-;
+
                           </div>;
                         </motion.div>;
                       )}
-;
+
                     </AnimatePresence>;
                   </div>;
                 ) : (";
                   <Link href="{item.href}
                     className="{"text-gray-300" hover: text-cyan-300 transition-colors duration-200 py-2 ${">;
                       router.pathname === item.href ? "text-cyan-400" : ""}"}
-;
+
                   >;
                     {item.name}
-;
+
                   </Link>;
                 )}
-;
+
               </div>;
             ))}
-;
+
           </div>;
           {/* comment */}";
           <div className=""hidden" lg:block"}>";
@@ -133,11 +133,11 @@ initial="{{" opacity: 0, y: 10, scale: 0.95 }}";
             className="lg: hidden p-2 rounded-lg text-gray-300 hover:text-cyan-300 hover:bg-gray-800/50 transition-colors duration-200;
             aria-label="Toggle mobile menu">",;
             {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
-;
+
           </button>;
         </div>;
       {/* comment */}
-;
+
       <AnimatePresence>;
         {isOpen && (;
           <motion.div,";
@@ -161,7 +161,7 @@ initial="{{" opacity: 0, height: 0 }}";
                       <span>{contact.text}</span>;
                     </a>;
                   ))}
-;
+
                 </div>;
               {/* comment */}";
               <div className="space-y-2">;
@@ -184,7 +184,7 @@ initial="{{" opacity: 0, height: 0 }}";
                               exit="{{" opacity: 0, height: 0 }}";
                               transition="{{" duration: 0.2 }}";
                               className=""ml-4" mt-2 space-y-1"}
-;
+
                             >;
                               {item.dropdown.map((dropdownItem) => (";
                                 <Link key="{dropdownItem.name}
@@ -195,10 +195,10 @@ initial="{{" opacity: 0, height: 0 }}";
                                   <span>{dropdownItem.name}</span>;
                                 </Link>;
                               ))}
-;
+
                             </motion.div>;
                           )}
-;
+
                         </AnimatePresence>;
                       </div>;
                     ) : (";
@@ -208,16 +208,16 @@ initial="{{" opacity: 0, height: 0 }}";
                           router.pathname === item.href ";
                             ? "text-cyan-400 bg-cyan-400/10" ";
                             : "text-gray-300 hover: text-cyan-300 hover:bg-gray-800/50"}"}
-;
+
                       >;
                         {item.name}
-;
+
                       </Link>;
                     )}
-;
+
                   </div>;
                 ))}
-;
+
               </div>;
               {/* comment */}";
               <div className=""pt-4" border-t border-gray-700"}>";
@@ -229,7 +229,7 @@ initial="{{" opacity: 0, height: 0 }}";
               </div>;
           </motion.div>,;
         )}
-;
+
       </AnimatePresence>;
     </nav>;
   )}

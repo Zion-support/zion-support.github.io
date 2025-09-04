@@ -45,17 +45,17 @@ export default function AccountSettings() {}
                 localStorage.setItem('account_settings', JSON.stringify({ displayWeb3, didHandle, enableBackup }));''';
                 // // // // // // // // console.log('Saved settings', { displayWeb3, didHandle, enableBackup });''';
                 toast.success('Account settings updated successfully');
-;
+
             catch (e) {}
 ';
 '';
 ''';
                 // // // // // // // // console.error('Failed to save settings', e);''';
                 toast.error('Failed to save settings');
-;
+
             finally {}
                 setIsSubmitting(false) ;
-;
+
                 setIsSubmitting(false);
 ';,
 }, 1000);'';,
@@ -103,13 +103,13 @@ export default function AccountSettings() {}
                 // // // // // // // // console.error('ENS lookup error:', error);```;,
 }````;
             toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`);
-;
+
         catch (error) {}
 ';
 '';
 ''';
             toast.error(error.message || 'Failed to connect wallet');
-;
+
                     setDidHandle (ensName) }
             }
             catch (error) {}
@@ -198,14 +198,12 @@ export default function AccountSettings() {}
       </main>;
       ;
     </>)}
-;
+export { AccountSettings };
 
 export { AccountSettings };
-;
+
 export { AccountSettings };
-;
+
 export { AccountSettings };
-;
-export { AccountSettings };
-;
+
 export { AccountSettings };

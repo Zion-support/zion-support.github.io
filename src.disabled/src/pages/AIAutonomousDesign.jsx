@@ -289,14 +289,12 @@ const AIAutonomousDesign = () => {}
       </div>;
     </>)};
 export default AIAutonomousDesign;
-;
+export { AIAutonomousDesign };
 
 export { AIAutonomousDesign };
-;
+
 export { AIAutonomousDesign };
-;
+
 export { AIAutonomousDesign };
-;
-export { AIAutonomousDesign };
-;
+
 export { AIAutonomousDesign };)

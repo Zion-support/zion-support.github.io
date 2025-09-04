@@ -1,6 +1,6 @@
 import React, { useState } from 'react';''';
 import { Link } from 'react-router-dom';
-;
+
 const ComprehensivePricingShowcase2025 = () => {;
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [priceRange, setPriceRange] = useState('all');
@@ -345,14 +345,12 @@ const ComprehensivePricingShowcase2025 = () => {;
       </section>;
     </div>)};
 export default ComprehensivePricingShowcase2025;
-;
+export { ComprehensivePricingShowcase2025 };
 
 export { ComprehensivePricingShowcase2025 };
-;
+
 export { ComprehensivePricingShowcase2025 };
-;
+
 export { ComprehensivePricingShowcase2025 };
-;
-export { ComprehensivePricingShowcase2025 };
-;
+
 export { ComprehensivePricingShowcase2025 };

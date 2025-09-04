@@ -1,5 +1,5 @@
 import { Helmet } from 'react - helmet -async';
-;
+
 export default function Page() {;
  | Zion Tech Group`;
   const fullUrl = canonical || `${url}${window.location.pathname}`;
@@ -85,7 +85,7 @@ export default function Page() {;
       ];,
 }
   };
-;
+
     // Preload critical images;
     if(ogImage) {;
 
@@ -93,7 +93,7 @@ export default function Page() {;
       imageLink.as = 'image';
       imageLink.href = ogImage;
       document.head.appendChild(imageLink) }
-;
+
     // DNS prefetch for external domains;
     ;
     dnsPrefetchDomains.forEach(domain => {;
@@ -138,7 +138,7 @@ export default function Page() {;
 
       {/* Canonical URL */}";
       {canonical && <link rel="canonical" href={canonical} />}
-;
+
       {/* Open Graph Meta Tags */}";
       <meta property="og:title" content={title} />";
       <meta property="og:description" content={description} />";
@@ -163,7 +163,7 @@ export default function Page() {;
 
       {/* Robots */}
       {noindex && <meta name="robots" content="noindex, nofollow" />}
-;
+
       {/* Canonical URL */}
       <link rel="canonical" href={fullUrl} />;
 
@@ -200,7 +200,7 @@ export default function Page() {;
       {tags.map((tag, index) => (<meta key={index} property="article:tag" content={tag} />) ) }
     </Helmet>) ;,
 };}}}}
-;
+
       {/* Favicon */}
       <link rel="icon" type="image / x-icon" href="/favicon.ico" />;
       <link rel="apple - touch-icon" sizes="180x180" href="/apple - touch-icon.png" />;

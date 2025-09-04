@@ -173,18 +173,18 @@ import { ;
   BatteryMedium as BatteryMedium10,;
   BatteryEmpty as BatteryEmpty10;,
 } from 'lucide-react';
-;
+
 export default function GreenIT(...args: unknown[]): unknown {;
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState('all');
-;
+
   const categories = [;
     { id: 'all', name: 'All Solutions', count: 12 },;
     { id: 'energy', name: 'Energy Efficiency', count: 4 },;
     { id: 'hardware', name: 'Green Hardware', count: 3 },    { id: 'software', name: 'Sustainable Software', count: 3 },;
     { id: 'data', name: 'Data Centers', count: 2 }
   ];
-;
+
   const greenSolutions: unknown = [{}
       id: 'energy - monitoring',;
       name: 'Smart Energy Monitoring',;
@@ -463,11 +463,11 @@ export default function GreenIT(...args: unknown[]): unknown {;
       pricing: 'Starting from $8,000';,
 }
   ];
-;
+
 export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
   const [expandedSection, setExpandedSection] = useState<string | null>(null);';
   const [selectedCategory, setSelectedCategory] = useState('all')};
-;
+
   return();
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
       <SEO"";
@@ -857,14 +857,12 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
     </div>;
   );,
 }
-;
+export { GreenIT };
 
 export { GreenIT };
-;
+
 export { GreenIT };
-;
+
 export { GreenIT };
-;
-export { GreenIT };
-;
+
 export { GreenIT, GreenIT };

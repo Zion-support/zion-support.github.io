@@ -25,11 +25,11 @@ import { ;
   Share2,;
   Eye;,
 } from 'lucide-react';
-;
+
 export function EventsPage() {;
   const [selectedType, setSelectedType] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-;
+
   const eventTypes = [;
     { id: 'all', name: 'All Events', icon: Calendar },;
     { id: 'webinar', name: 'Webinars', icon: Play },;
@@ -38,7 +38,7 @@ export function EventsPage() {;
     { id: 'meetup', name: 'Meetups', icon: Globe },;
     { id: 'training', name: 'Training', icon: Award }
   ];
-;
+
   const events = [;
     {;
       id: 1,;
@@ -167,7 +167,7 @@ export function EventsPage() {;
       registrationUrl: '/register/data-analytics-masterclass';,
 }
   ];
-;
+
   const filteredEvents = events.filter(event => {;
     const matchesType = selectedType === 'all' || event.type === selectedType;
     const matchesSearch = event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -175,10 +175,10 @@ export function EventsPage() {;
                          event.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesType && matchesSearch;,
 });
-;
+
   const upcomingEvents = filteredEvents.filter(event => event.isUpcoming);
   const featuredEvents = upcomingEvents.filter(event => event.isFeatured);
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark">;
       {/* Hero Section */}
@@ -343,7 +343,7 @@ export function EventsPage() {;
           </div>;
         </section>;
       )}
-;
+
       {/* All Events */}
       <section className="py-16 bg-zion-slate-darker">;
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
@@ -507,5 +507,5 @@ export function EventsPage() {;
     </div>;
   );,
 }
-;
+
 export default EventsPage;

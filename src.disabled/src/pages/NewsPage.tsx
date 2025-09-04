@@ -23,11 +23,11 @@ import { ;
   ChevronLeft,;
   ChevronRight;,
 } from 'lucide-react';
-;
+
 export function NewsPage() {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-;
+
   const categories = [;
     { id: 'all', name: 'All News', icon: Globe },;
     { id: 'ai', name: 'AI & Machine Learning', icon: Brain },;
@@ -38,7 +38,7 @@ export function NewsPage() {;
     { id: 'company', name: 'Company News', icon: Award },;
     { id: 'industry', name: 'Industry Trends', icon: TrendingUp }
   ];
-;
+
   const newsArticles = [;
     {;
       id: 1,;
@@ -137,7 +137,7 @@ export function NewsPage() {;
       shares: 35;,
 }
   ];
-;
+
   const filteredArticles = newsArticles.filter(article => {;
     const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory;
     const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -145,10 +145,10 @@ export function NewsPage() {;
                          article.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;,
 });
-;
+
   const featuredArticles = newsArticles.filter(article => article.isFeatured);
   const regularArticles = filteredArticles.filter(article => !article.isFeatured);
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark">;
       {/* Hero Section */}
@@ -288,7 +288,7 @@ export function NewsPage() {;
           </div>;
         </section>;
       )}
-;
+
       {/* Regular Articles */}
       <section className="py-16 bg-zion-slate-darker">;
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
@@ -435,5 +435,5 @@ export function NewsPage() {;
     </div>;
   );,
 }
-;
+
 export default NewsPage;

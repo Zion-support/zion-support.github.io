@@ -4,7 +4,7 @@ export default function Page() {;
 `;
       router(`/request-quote?listing=${listing.id}`)}
   };
-;
+
   return ();
     <div;
       data-testid= "equipment-link";'`;
@@ -17,7 +17,7 @@ export default function Page() {;
           e.preventDefault () ;
           handleViewListing () }
       }}
-;
+
       {/* Image */}
       <div';
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'};
@@ -127,7 +127,7 @@ export default function Page() {;
       </div>;
     </div>;) }
 export default React.memo(ProductListingCard);
-;
+
 export default ProductListingCard;
 export default ProductListingCard;
 export default ProductListingCard;

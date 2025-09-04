@@ -784,4 +784,4 @@ designed to transform your business and drive exponential growth."
 """""""'"
 "
 
-export default Component
+export default Component;

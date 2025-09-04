@@ -13,7 +13,7 @@ import { ;
   Shield,;
   Rocket;,
 } from 'lucide-react';
-;
+
 export default function AISalesCopilotPage() {;
   return (;
     <div className="min-h-screen bg-zion-slate-dark text-white">;

@@ -218,13 +218,13 @@ import { Cpu, Zap, Brain, Target, Shield, Users, Globe, Atom, CircuitBoard const
 };
 export default QuantumComputing;,
 }}}
-;
+
 export { QuantumComputing };
-;
+
 export { QuantumComputing };
-;
+
 export { QuantumComputing };
-;
+
 export { QuantumComputing };
-;
+
 export { QuantumComputing };

@@ -51,7 +51,7 @@ import { ;
   ExternalLink,;
   Award;,
 } from 'lucide-react';
-;
+
 interface Service {;
   id: string;
   title: string;
@@ -74,12 +74,12 @@ interface Service {;
   complexity: 'Low' | 'Medium' | 'High';
   scalability: 'Small' | 'Medium' | 'Enterprise';,
 }
-;
+
 export default function ServicesComparison() {;
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-;
+
   const services: Service[] = [;
     // AI Services;
     {;
@@ -239,16 +239,16 @@ export default function ServicesComparison() {;
       scalability: 'Small';,
 }
   ];
-;
+
   const filteredServices = services.filter(service => {;
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory;,
 });
-;
+
   const categories = [...new Set(services.map(service => service.category))];
-;
+
   const toggleService = (serviceId: string) => {;
     setSelectedServices(prev => ;
       prev.includes(serviceId) ;
@@ -258,15 +258,15 @@ export default function ServicesComparison() {;
           : prev;
     );,
 };
-;
+
   const selectedServicesData = services.filter(service => selectedServices.includes(service.id));
-;
+
   const contactInfo = {;
     phone: "+1 302 464 0950",;
     email: "kleber@ziontechgroup.com",;
     website: "https://ziontechgroup.com";,
 };
-;
+
   return (;
     <div className="min-h-screen bg-zion-blue pt-20">;
       {/* Hero Section */}
@@ -616,7 +616,7 @@ export default function ServicesComparison() {;
           </div>;
         </section>;
       )}
-;
+
       {/* Call to Action */}
       <section className="py-20 bg-gradient-to-r from-zion-purple to-zion-purple-dark">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;

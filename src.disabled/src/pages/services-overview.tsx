@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-;
+
 import { ;
   Brain, ;
   Shield, ;
@@ -32,7 +32,7 @@ import { ;
   Wifi,;
   Link as LinkIcon;,
 } from 'lucide-react';
-;
+
 const ServicesOverview = () => {;
   const contactInfo = {;
     phone: '+1 302 464 0950',;
@@ -40,7 +40,7 @@ const ServicesOverview = () => {;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup.com';,
 };
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">;
       {/* Header */}
@@ -322,5 +322,5 @@ const ServicesOverview = () => {;
     </div>;
   );,
 };
-;
+
 export default ServicesOverview;

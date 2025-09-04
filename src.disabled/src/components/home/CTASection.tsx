@@ -1,11 +1,11 @@
-;
+
 const CTASection: React.FC = (): JSX.Element => {;,
 },;
     {;
       icon: Star,;";
       title: "Proven Results",;";
       description: "Trusted by industry leaders worldwide"};  ];
-;
+
   return (";
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/90 to-zion-slate-dark relative overflow-hidden" role="region" aria-labelledby="cta-heading">;
       {/* Background Elements */}";
@@ -81,7 +81,7 @@ const CTASection: React.FC = (): JSX.Element => {;,
 
             Join hundreds of companies that have already revolutionized their operations with Zion Tech Group's cutting-edge solutions.</motion.p>;
         </div>;
-;
+
         {/* Feature Grid */}
         <motion.div";
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12";
@@ -89,17 +89,17 @@ const CTASection: React.FC = (): JSX.Element => {;,
 
   { opacity: 0,;
   y: 30 ;
-;,
+
 }}          whileInView = {;
 
   { opacity: 1,;
   y: 0 ;
-;,
+
 }}          transition = {;
 
   { duration: 0.8,;
   delay: 0.6 ;
-;,
+
 }}          viewport={{ once: true }}
         >;
           {features.map((feature, index (;
@@ -140,19 +140,19 @@ const CTASection: React.FC = (): JSX.Element => {;,
 
   { opacity: 0,;
   y: 30 ;
-;,
+
 }}          whileInView = {;
 
   { opacity: 1,;
   y: 0 ;
-;,
+
 }}          transition = {;
 
   { duration: 0.8,;
   delay: 0.8 ;
-;,
+
 }}          viewport={{ once: true }}
-;
+
           <Link";
             to="/contact";
             className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-bold text-lg rounded-2xl hover:from-zion-blue hover:to-zion-purple transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/30 focus:outline-none focus:ring-4 focus:ring-zion-cyan/30 focus:ring-offset-2 focus:ring-offset-zion-slate-dark";
@@ -178,7 +178,7 @@ const CTASection: React.FC = (): JSX.Element => {;,
 
   { duration: 1,;
   delay: 1 ;
-;,
+
 }}          viewport={{ once: true }}
 ";
           <p className="text-zion-slate-light text-sm mb-4">Trusted by industry leaders worldwide</p>";
@@ -192,6 +192,6 @@ const CTASection: React.FC = (): JSX.Element => {;,
       </div>;
     </section>;
   )};
-;
+
 export default CTASection}}'";
 )

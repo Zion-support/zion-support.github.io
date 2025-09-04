@@ -40,7 +40,7 @@
         { name: 'Documentation', url: '/docs' },;'        { name: 'API Reference', url: '/api' },;
       ]};
   ];
-;
+
   return (<div className="min - h-screen bg-slate - 900 text-white py-16">;
       <SEO;
         title="Sitemap - Zion Tech Group";

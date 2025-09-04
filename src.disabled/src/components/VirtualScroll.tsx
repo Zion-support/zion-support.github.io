@@ -3,7 +3,7 @@ export default function ServiceVirtualScroll() {;
 
 export function VirtualScroll < T> ({;
 import { motion, AnimatePresence  } from 'framer-motion';
-;
+
   items,;
   height,;
   itemHeight,;
@@ -23,19 +23,19 @@ import { motion, AnimatePresence  } from 'framer-motion';
       start: Math.max(0, start - overscan),;
       end: Math.min(items.length, end);,
 }}, [scrollTop, itemHeight, height, overscan, items.length]);
-;
+
   // Calculate total height and transform;
   ;
   // Handle scroll;
 
     setScrollTop(newScrollTop) ;
     onScroll?.(newScrollTop) }, [onScroll]) ;
-;
+
   // Scroll to specific item;
   ;
       containerRef.current.scrollTop = scrollTop}
   }, [itemHeight]) ;
-;
+
   // Scroll to top;
   ;
     scrollToItem(0) }, [scrollToItem]) ;
@@ -53,7 +53,7 @@ import { motion, AnimatePresence  } from 'framer-motion';
       // For example, scroll to the last viewed item;,
 }
   }, [items.length]) ;
-;
+
   return ()`;
     <div className = {`relative ${className}`}>;
       {/* Scroll to top button */}
@@ -79,7 +79,7 @@ import { motion, AnimatePresence  } from 'framer-motion';
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />;
           </svg>;
         </motion.button>) }
-;
+
       {/* Virtual scroll container */}
       <div;
         ref={containerRef}";
@@ -120,7 +120,7 @@ import { motion, AnimatePresence  } from 'framer-motion';
           </div>;
         </div>;
       </div>;
-;
+
       {/* Scroll position indicator */};";
       <div className="absolute top-2 right-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">;
         {Math.round((scrollTop / (totalHeight - height)) * 100)}%;
@@ -139,7 +139,7 @@ interface ServiceVirtualScrollProps extends React.PropsWithChildren<{}> {;
   height?: number;
   onServiceClick?: (service: ServiceCard) => void;
   className?: string}
-;
+
 export default function ServiceVirtualScroll() {;
 
   const renderServiceCard = useCallback((service: anyServiceCard, index: number)  => (";
@@ -169,7 +169,7 @@ export default function ServiceVirtualScroll() {;
         </div>;
       </motion.div>;
     </div>;) , [onServiceClick]) ;
-;
+
   return ();
     <VirtualScroll items = {services};      height={height};
       itemHeight={120};

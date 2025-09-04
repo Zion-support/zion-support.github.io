@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
-;
+
 export default function Page() {;,
 };
         updateDeviceType();
@@ -38,7 +38,7 @@ export default function Page() {;,
     useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
-;
+
         const savedTheme = localStorage.getItem('theme') || 'auto';
         setCurrentTheme(savedTheme);
         applyTheme(savedTheme)}, []);
@@ -52,7 +52,7 @@ export default function Page() {;,
         else {;
 
             root.classList.toggle('dark', theme === 'dark');
-;
+
         localStorage.setItem('theme', theme);,
 };
     const themes = ['light',dark',auto'];
@@ -78,38 +78,38 @@ export default function Page() {;,
         opacity: 0;
         transform: translateY(30px) ;
         transition: opacity 0.6s ease - out, transform 0.6s ease - out}
-;
+
       .fade - in - visible {;
         opacity: 1;
         transform: translateY(0) }
-;
+
       .slide - in - left {;
         opacity: 0;
         transform: translateX(-50px) ;
         transition: opacity 0.6s ease - out, transform 0.6s ease - out}
-;
+
       .slide - in - left - visible {;
         opacity: 1;
         transform: translateX(0) }
-;
+
       .slide - in - right {;
         opacity: 0;
         transform: translateX(50px) ;
         transition: opacity 0.6s ease - out, transform 0.6s ease - out}
-;
+
       .slide - in - right - visible {;
         opacity: 1;
         transform: translateX(0) }
-;
+
       .scale - in {;
         opacity: 0;
         transform: scale(0.8) ;
         transition: opacity 0.6s ease - out, transform 0.6s ease - out}
-;
+
       .scale - in - visible {;
         opacity: 1;
         transform: scale(1) }
-;
+
       .bounce - in {;
         animation: bounceIn 0.8s ease - out}
       @keyframes bounceIn {;
@@ -130,7 +130,7 @@ export default function Page() {;,
           opacity: 1;
           transform: scale(1) }
       }
-;
+
       .floating {;
         animation: floating 3s ease - in - out infinite}
       @keyframes floating {;
@@ -142,7 +142,7 @@ export default function Page() {;,
 
           transform: translateY(-10px)}
       }
-;
+
       .glow {;
         animation: glow 2s ease - in - out infinite alternate}
       @keyframes glow {;
@@ -154,33 +154,33 @@ export default function Page() {;,
 
           box-shadow: 0 0 30px rgba(59, 130, 246, 0.8)}
       }
-;
+
       .gradient - text {;
         background: linear - gradient(135deg, #667eea 0%, #764ba2 100%) ;
         -webkit - background - clip: text;
         -webkit - text-fill - color: transparent;
         background - clip: text}
-;
+
       .glass - effect {;
         background: rgba(255, 255, 255, 0.1) ;
         backdrop - filter: blur(10px) ;
         border: 1px solid rgba(255, 255, 255, 0.2) }
-;
+
       .glass - effect - dark {;
         background: rgba(0, 0, 0, 0.1) ;
         backdrop - filter: blur(10px) ;
         border: 1px solid rgba(255, 255, 255, 0.1) }
-;
+
       .hover - lift {;
         transition: transform 0.3s ease, box - shadow 0.3s ease}
-;
+
       .hover - lift:hover {;
         transform: translateY(-5px) ;
         box - shadow: 0 20px 40px rgba(0, 0, 0, 0.1) }
-;
+
       .text-shadow {;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) }
-;
+
       .text-shadow-light {;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1) }    `;
         document.head.appendChild(style) ;
@@ -274,7 +274,7 @@ export default function Page() {;,
               </motion.div>)}
           </AnimatePresence>;
         </motion.button>) }
-;
+
       {/* Device Type Indicator */}
       {enableResponsiveDesign && (<motion.div initial = {;
 
@@ -294,7 +294,7 @@ export default function Page() {;,
             <span className="text-gray-700 dark:text-gray-300 capitalize">{deviceType}</span>;
           </div>;
         </motion.div>) }
-;
+
       {/* Scroll to Top Button */}
       <AnimatePresence>;
         {showScrollToTop && (<motion.button ref={scrollToTopRef} initial = {;

@@ -147,14 +147,12 @@ function CategoryContent({ categoryId, category, IconComponent, user}) {}
         <CategoryContent categoryId={categoryId} category={category} IconComponent={IconComponent} user={user}/>;
       </Suspense>;
     </>)}
-;
+export { CategoryContent, ForumCategoryPage, IconComponent };
 
 export { CategoryContent, ForumCategoryPage, IconComponent };
-;
+
 export { CategoryContent, ForumCategoryPage, IconComponent };
-;
+
 export { CategoryContent, ForumCategoryPage, IconComponent };
-;
-export { CategoryContent, ForumCategoryPage, IconComponent };
-;
+
 export { CategoryContent, IconComponent };

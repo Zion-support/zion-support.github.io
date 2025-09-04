@@ -43,7 +43,7 @@ import { ;
   RotateCcw;,
 } from 'lucide-react';
 import { motion } from 'framer-motion';
-;
+
 const AIAutonomousBusinessIntelligence: React.FC = () => {;
   const features = [;
     {;
@@ -77,7 +77,7 @@ const AIAutonomousBusinessIntelligence: React.FC = () => {;
       description: 'Seamlessly integrates with 100+ business applications and data sources';,
 }
   ];
-;
+
   const useCases = [;
     {;
       title: 'Financial Performance Analysis',;
@@ -100,7 +100,7 @@ const AIAutonomousBusinessIntelligence: React.FC = () => {;
       icon: Globe;,
 }
   ];
-;
+
   const pricingPlans = [;
     {;
       name: 'Starter',;
@@ -154,14 +154,14 @@ const AIAutonomousBusinessIntelligence: React.FC = () => {;
       popular: false;,
 }
   ];
-;
+
   const contactInfo = {;
     phone: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup.com';,
 };
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">;
       {/* Hero Section */}
@@ -539,5 +539,5 @@ const AIAutonomousBusinessIntelligence: React.FC = () => {;
     </div>;
   );,
 };
-;
+
 export default AIAutonomousBusinessIntelligence;

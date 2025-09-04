@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Badge } from '@/components / ui / badge';
 export default function Page() {;
-;
+
   const handleImageError = () => {;
     if(!imageError) {;
 

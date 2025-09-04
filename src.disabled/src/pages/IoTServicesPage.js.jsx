@@ -269,14 +269,12 @@ export default function IoTServicesPage() {}
 
       <TrustedBySection />;
     </div>)}
-;
+export { IoTServicesPage };
 
 export { IoTServicesPage };
-;
+
 export { IoTServicesPage };
-;
+
 export { IoTServicesPage };
-;
-export { IoTServicesPage };
-;
+
 export { IoTServicesPage };

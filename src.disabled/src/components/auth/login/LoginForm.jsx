@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import { useState } from 'react';
 export default function Page() {;
 );
-;
+
   const onSubmit = async data => {;
 
     if(isSubmitting) return;
-;
+
     try {;
       setIsSubmitting(true);
       const result = await login(data.email, data.password);
-;
+
       if(result.success) {;
 
         navigate('/');,
@@ -30,7 +30,7 @@ export default function Page() {;
       setIsSubmitting(false);,
 }
   };
-;
+
   return ();
     <Form {...form}>;
       <form;
@@ -42,7 +42,7 @@ export default function Page() {;
             {form.formState.errors.root.message}
           </p>;
         )}
-;
+
         <FormField;
           control={form.control}";
           name="email";
@@ -146,16 +146,14 @@ export default function Page() {;
     </Form>;
   );,
 }
-;
+
 export default LoginForm;
-;
+export { LoginForm };
 
 export { LoginForm };
-;
+
 export { LoginForm };
-;
+
 export { LoginForm };
-;
-export { LoginForm };
-;
+
 export { Page, LoginForm };

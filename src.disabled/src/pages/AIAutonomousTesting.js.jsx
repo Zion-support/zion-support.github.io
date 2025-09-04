@@ -239,14 +239,12 @@ const AIAutonomousTesting = () => {}
       </div>;
     </>)};
 export default AIAutonomousTesting;
-;
+export { AIAutonomousTesting };
 
 export { AIAutonomousTesting };
-;
+
 export { AIAutonomousTesting };
-;
+
 export { AIAutonomousTesting };
-;
-export { AIAutonomousTesting };
-;
+
 export { AIAutonomousTesting };

@@ -125,17 +125,17 @@
 
   { opacity: 0,;
   y: 20 ;
-;,
+
 }}          whileInView = {;
 
   { opacity: 1,;
   y: 0 ;
-;,
+
 }}          transition = {;
 
   { duration: 0.8,;
   delay: 0.4 ;
-;,
+
 }}          viewport={{ once: true }}
 ";
           <p className="text-zion-slate-light text-sm mb-6">Join our growing list of satisfied clients</p>";
@@ -161,5 +161,5 @@
       </div>;
     </section>;
   )};
-;
+
 export default Testimonials}}}'"`;

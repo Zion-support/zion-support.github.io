@@ -47,13 +47,13 @@ export default function Blog() {return (";
   Calendar, User, ArrowRight, Tag, Clock, TrendingUp,;
   Brain, Atom, Rocket, Shield, Globe, Code} from &apos;lucide-react";&apos;&apos;
 export default function Blog() {}
-;
+
   const blogPosts = [],;
       image: &quot,/api/placeholder/600/400&quot,";
   Calendar, User, ArrowRight, Tag, Clock, TrendingUp,;
   Brain, Atom, Rocket, Shield, Globe, Code} from "lucide-react;
 export default function Blog() {;
-;
+
   const blogPosts = [],";
       image: "/api/placeholder/600/400",;
 featured: true},;
@@ -112,7 +112,7 @@ title: "Cloud Infrastructure Best Practices for Global Enterprises;
 tags: ["Cloud", "Infrastructure", "Enterprise"],";
       image: "/api/placeholder/600/400",;
 featured: false}
-;
+
   const filteredPosts = blogPosts.filter(post => {;
     const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||;
@@ -159,7 +159,7 @@ featured: false}
                     className="px-4 py-2 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-sm">;
                   >;
                     {category.name}
-;
+
                   </span>;
 export default function Blog() {;
 
@@ -240,7 +240,7 @@ export default function Blog() {;
       tags: [&quot,Cloud&quot, &quot;Infrastructure&quot, &quot;Enterprise&quot],;
       image: &quot,/api/placeholder/600/400&quot,;
       featured: false}
-;
+
   ]&quot;
   const categories = []&quot;
 ";
@@ -250,7 +250,7 @@ export default function Blog() {;
       tags: ["Cloud", "Infrastructure", "Enterprise"], image: "/api/placeholder/600/400",";
       tags: ["Cloud,Infrastructure,Enterprise"], image: "/api/placeholder/600/400",;
       featured: false}
-;
+
   ];
   const categories = [];
   const featuredPosts = blogPosts.filter(post => post.featured);,
@@ -300,7 +300,7 @@ transition="{{" duration: 0.8 }}";
                     {category.name}&quot;
                   </span>;
                 ))}
-;
+
               </div>;
             </motion.div>;
           </div>;
@@ -311,7 +311,7 @@ transition="{{" duration: 0.8 }}";
             {/* comment */}";
             <div className="lg: col-span-3">,;
               {/* comment */}
-;
+
               {featuredPosts.length > 0 && (;";
                 <section className="mb-16">;";
                   <h2 className="text-3xl font-bold text-white mb-8 flex items-center">;";
@@ -330,7 +330,7 @@ transition="{{" duration: 0.8 }}";
             {/* comment */}";
             <div className="lg: col-span-3">,;
               {/* comment */}
-;
+
               {featuredPosts.length > 0 && (&quot}";
                 <section className="&quot;mb-16&quot;">&quot;
                   <h2 className="&quot;text-3xl" font-bold text-white mb-8 flex items-center&quot;>&quot;
@@ -339,7 +339,7 @@ transition="{{" duration: 0.8 }}";
                   </h2>";
                   <div className="&quot;grid" grid-cols-1 md: grid-cols-2 gap-8&quot,>;
                     {featuredPosts.map((post, index) => (&quot}
-;
+
                       <motion.article,";
 key = "{post.id}
                         initial="{{" opacity: 0, y: 20 }}";
@@ -353,14 +353,14 @@ key = "{post.id}
                             {post.category === "Quantum Computing" && <Atom  />}";
                             {post.category === "Micro SaaS" && <Rocket  />}";
                             {post.category === "Cybersecurity" && <Shield  />}
-;
+
                           </div>;
                         </div>;";
                         <div className="p-6">;";
                           <div className="flex items-center gap-4 mb-3">;";
                             <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs">;
                               {post.category}
-;
+
                             </span>;";
                             <span className="text-yellow-400 text-xs font-medium">Featured</span>;
                           </div>;";
@@ -373,18 +373,18 @@ key = "{post.id}
                               <span className="flex items-center">;";
                                 <User className="w-4 h-4 mr-1"  />;
                                 {post.author}
-;
+
                               </span>;";
                               <span className="flex items-center">;";
                                 <Calendar className="w-4 h-4 mr-1"  />;
                                 {new Date(post.date).toLocaleDateString()}
-;
+
                               </span>;
                             </div>;";
                             <span className="flex items-center">;";
                               <Clock className="w-4 h-4 mr-1"  />;
                               {post.readTime}
-;
+
                             </span>;
                           </div>;
                       </motion.article>;";
@@ -396,7 +396,7 @@ key = "{post.id}
                             {post.category === &quot;Quantum Computing&quot; &&"}&quot; <Atom  />}";
                             {post.category === &quot;Micro SaaS&quot; &&"}&quot; <Rocket  />}";
                             {post.category === &quot;Cybersecurity&quot; &&"}&quot; <Shield  />}
-;
+
                           </div>;
                         </div>";
                         <div className="&quot;p-6&quot;">&quot;
@@ -428,13 +428,13 @@ key = "{post.id}
                           </div>;
                       </motion.article>;
                     ))}
-;
+
                   </div>;
                 </section>;
               )}
-;
+
               {/* comment */}
-;
+
               <section>;";
                 <h2 className="text-3xl font-bold text-white mb-8">Latest Articles</h2>;";
                 <div className="space-y-8">;
@@ -444,7 +444,7 @@ key = "{post.id}
                 <h2 className="&quot;text-3xl" font-bold text-white mb-8&quot;>Latest Articles&quot;</h2>";
                 <div className="&quot;space-y-8&quot;">;
                   {regularPosts.map((post, index) => (&quot}
-;
+
                     <motion.article,";
 key = "{post.id}
                       initial="{{" opacity: 0, y: 20 }}";
@@ -461,14 +461,14 @@ key = "{post.id}
                             {post.category === "Cybersecurity" && <Shield  />}";
                             {post.category === "Digital Transformation" && <Globe  />}";
                             {post.category === "Cloud Computing" && <Code  />}
-;
+
                           </div>;
                         </div>;";
                         <div className="flex-1">;";
                           <div className="flex items-center gap-4 mb-3">;";
                             <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs">;
                               {post.category}
-;
+
                             </span>;
                           </div>;";
                           <h3 className = "{"text-xl" font-bold text-white mb-3 hover: text-blue-400 transition-colors">,";
@@ -480,17 +480,17 @@ key = "{post.id}
                               <span className="flex items-center">;";
                                 <User className="w-4 h-4 mr-1"  />;
                                 {post.author}
-;
+
                               </span>;";
                               <span className="flex items-center">;";
                                 <Calendar className="w-4 h-4 mr-1"  />;
                                 {new Date(post.date).toLocaleDateString()}
-;
+
                               </span>;";
                               <span className="flex items-center">;";
                                 <Clock className="{"w-4" h-4 mr-1"  />;
                                 {post.readTime}
-;
+
                               </span>;
                             </div>;
                             <Link;";
@@ -513,7 +513,7 @@ key = "{post.id}
                             {post.category === &quot;Cybersecurity&quot; &&"}&quot; <Shield  />}";
                             {post.category === &quot;Digital Transformation&quot; &&"}&quot; <Globe  />}";
                             {post.category === &quot;Cloud Computing&quot; &&"}&quot; <Code  />}
-;
+
                           </div>;
                         </div>";
                         <div className="&quot;flex-1&quot;">&quot;
@@ -550,7 +550,7 @@ key = "{post.id}
                           </div>;
                     </motion.article>;
                   ))}
-;
+
                 </div>;
               </section>;
             </div>;
@@ -591,7 +591,7 @@ key = "{post.id}
                       </Link>;";
                         to = "{"/blog/category/${category.name.toLowerCase().replace(/\s+/g," "-')}"}";
                         className=""flex" items-center justify-between p-3 rounded-lg hover: bg-slate-700/50 transition-colors group"}
-;
+
                       >";
                         <div className="flex items-center">";
                           <category.icon className="w-5 h-5 text-blue-400 mr-3 group-hover: text-blue-300" />",;
@@ -600,7 +600,7 @@ key = "{post.id}
                         <span className="&quot;text-sm" text-gray-400&quot;>{category.count}&quot;</span>;
                       </Link>;
                     ))}
-;
+
                   </div>;
                 {/* comment */}";
                 <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-blue-400/30">;";

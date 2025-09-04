@@ -5,11 +5,11 @@ interface CartState {;
   total: number;
 :src/store/cartSlice.tsx;
   itemCount: number;
-;
+
   itemCount: number}
-;,
+
 }
-;
+
 const initialState: CartState = {;
 
   items: [],;
@@ -21,7 +21,7 @@ const initialState: CartState = {;
   ;
   ;
   ;
-;,
+
 };
 const cartSlice:  createSlice({;  name: anycart',;
 const cartSlice:  createSlice({;
@@ -72,7 +72,7 @@ const cartSlice:  createSlice({;
       state.itemCount = 0},;,
 },;,
 });
-;
+
 export const { addItem, removeItem, updateQuantity, clearCart } = cartSlice.actions;
 export { cartSlice };
 export default cartSlice.reducer;

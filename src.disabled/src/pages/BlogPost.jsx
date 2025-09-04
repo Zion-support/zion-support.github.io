@@ -178,16 +178,14 @@ export default function BlogPost() {;
       </div>;
 :src/pages/BlogPost.js.jsx;
     </>)}
-;
+export { BlogPost };
 
 export { BlogPost };
-;
+
 export { BlogPost };
-;
+
 export { BlogPost };
-;
-export { BlogPost };
-;
+
 export { BlogPost };
     </>);,
 }

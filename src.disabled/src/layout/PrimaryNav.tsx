@@ -6,13 +6,13 @@
       router.push(`/search/${slugify(query)}`);
       setQuery('')}
 // Theme toggle component;
-;
+
   const [isDark, setIsDark] = useState<typeof false>(false);
-;
+
   const toggleTheme = (...args: unknown[]): unknown => {;    setIsDark(!isDark);
     // Add theme switching logic here;,
 };
-;
+
   return ();
     <>;
       <header;
@@ -54,7 +54,7 @@
                     // Default: search results page with slug;`;
                     router.push(`/search/${sugg.slug || slugify(sugg.text)}`)};
                   setQuery('');
-;
+
                   // Track analytics event';
                   if(typeof window !== 'null' && window.gtag) {;
 
@@ -174,7 +174,7 @@
                     </div>;
                   </div>;
                 ))}
-;
+
                 <div className="pt-4 border-t border-white/10 space-y-2">;
                   <Link                    to="/solutions";
                     className="block text-gray-300 hover:text-white transition-colors duration-200";

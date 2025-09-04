@@ -88,7 +88,7 @@ interface Service {}
   useCases: string[];'';
   link: string;''';
   status: 'available' | 'coming-soon' | 'beta'}
-;const services: Service[] = [];
+
   // AI Services;
   {}
 ';
@@ -354,7 +354,7 @@ interface Service {}
     status: 'available';,
 }
 ];
-;
+
 const categories = [;
   { id: 'all', name: 'All Services', icon: Globe, count: services.length },;
   { id: 'ai', name: 'AI Services', icon: Brain, count: services.filter(s => s.category.includes('AI')).length },;
@@ -363,12 +363,12 @@ const categories = [;
   { id: 'security', name: 'Security', icon: Shield, count: services.filter(s => s.category.includes('Security')).length },;
   { id: 'healthcare', name: 'Healthcare', icon: Heart, count: services.filter(s => s.category.includes('Healthcare')).length }
 ];
-;
+
 export default function ComprehensiveServicesShowcase2025(...args: unknown[]): unknown {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedService, setSelectedService] = useState<Service | null>(null);
-;
+
   const filteredServices = services.filter(service => {;
     const matchesCategory = selectedCategory === 'all' || ;
       service.category.toLowerCase().includes(selectedCategory.replace('-', ' '));
@@ -376,15 +376,15 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
       service.description.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;,
 });
-;
+
   const handleServiceClick = (service: Service) => {;
     setSelectedService(service);,
 };
-;
+
   const closeModal = () => {;
     setSelectedService(null);,
 };
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO ;
@@ -786,15 +786,13 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
     </div>;
   );,
 }
-;
+export { ComprehensiveServicesShowcase2025 };
 
 export { ComprehensiveServicesShowcase2025 };
-;
+
 export { ComprehensiveServicesShowcase2025 };
-;
+
 export { ComprehensiveServicesShowcase2025 };
-;
-export { ComprehensiveServicesShowcase2025 };
-;
+
 export { ComprehensiveServicesShowcase2025 };
 ))

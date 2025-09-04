@@ -29,4 +29,4 @@ export function ServicesShowcase() { const featuredServices = COMPREHENSIVE_SERV
 ";
 
   );
-export default Component
+export default Component;

@@ -1,6 +1,6 @@
 import {  import { motion, useAnimation  } from 'framer-motion';
  from 'lucide-react';
-;
+
 interface Stat {;
   id: string;
   icon: React.ComponentType < any>;
@@ -10,7 +10,7 @@ interface Stat {;
   color: string;
   gradient: string;,
 }
-;
+
 const stats: Stat[] = [{;
 
     id: 'clients',;
@@ -72,7 +72,7 @@ const stats: Stat[] = [{;
     gradient: 'from-zion-blue to-zion-cyan';
 
 ];
-;
+
 export default function EnhancedStatsSection(...args[]):  {;
 
   const [countedValues, setCountedValues] = useState<any>({});
@@ -82,7 +82,7 @@ export default function EnhancedStatsSection(...args[]):  {;
     threshold: 0.3,;
     triggerOnce: true;,
 }) ;
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
@@ -90,7 +90,7 @@ export default function EnhancedStatsSection(...args[]):  {;
 
       controls.start('visible')}
   }, [controls, inView]);
-;
+
     const increment = numericValue / (duration / 16) ; // 60fps;
 
     let current = start;
@@ -103,9 +103,9 @@ export default function EnhancedStatsSection(...args[]):  {;
 setCountedValues(prev:  > ({;
         ...prev,;
         [target]: Math.floor (current) }) ) }, 16) ;
-;
+
     return timer};
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
@@ -197,7 +197,7 @@ setCountedValues(prev:  > ({;
   0.5)`;,
 }}
                 transition={{ duration: 0.3 }}
-;
+
                 {/* Background gradient overlay */}`;
                 <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>;
 

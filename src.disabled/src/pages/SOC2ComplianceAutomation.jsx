@@ -577,7 +577,7 @@ import {}
   Zap,''';
   Brain'''';,
 } from 'lucide-react';
-;
+
 const successStories = [];
   {}
     id: 1,;
@@ -608,7 +608,7 @@ const successStories = [];
     results: "75% faster audit preparation, 90% automated security controls, better compliance, improved security","";
     logo: "CSP";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -642,7 +642,7 @@ const processSteps = [];
     icon: Gauge,"";
     duration: "4-8 weeks";
 ];
-;
+
 const soc2Benefits = [];
   {}
 ";
@@ -677,7 +677,7 @@ const soc2Benefits = [];
     examples["Better preparation", "Automated evidence", "Compliance reporting", "Audit success"];,
 }
 ];
-;
+
 export default function SOC2ComplianceAutomation() {}
 ';
 '';
@@ -986,7 +986,7 @@ export default function SOC2ComplianceAutomation() {}
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
 }`}
-;
+
                 {category}
               </button>) ) }
           </div>";
@@ -1009,7 +1009,7 @@ export default function SOC2ComplianceAutomation() {}
 }}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer";
                 onClick={ () => setSelectedSolution(solution) }
-;
+
 ";,
 }}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
@@ -1175,14 +1175,12 @@ export default function SOC2ComplianceAutomation() {}
       </section>;
     </div>;
   )}
-;
+export { SOC2ComplianceAutomation };
 
 export { SOC2ComplianceAutomation };
-;
+
 export { SOC2ComplianceAutomation };
-;
+
 export { SOC2ComplianceAutomation };
-;
-export { SOC2ComplianceAutomation };
-;
+
 export { SOC2ComplianceAutomation };

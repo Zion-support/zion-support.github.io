@@ -5,7 +5,7 @@ export default function Page() {;
     { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐' },;
     { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' };
   ];
-;
+
     { id: 'all', name: 'All Levels', icon: '🌟' },;
     { id: 'Advanced', name: 'Advanced', icon: '🚀' },;
     { id: 'Cutting-edge', name: 'Cutting-edge', icon: '⚡' },;
@@ -16,7 +16,7 @@ export default function Page() {;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     ;
     return matchesCategory && matchesSearch && matchesPrice && matchesInnovation}) ;
-;
+
     switch(sortBy) {;
       case 'price':;
         return a.price - b.price;      case 'name':;
@@ -31,14 +31,14 @@ export default function Page() {;
   ;
   ;
   'Revolutionary': 3 ;
-;,
+
 };
         return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ;
                (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);      case 'category':;
         return a.category.localeCompare(b.category) ;
       default:;
         return 0}) ;
-;
+
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -47,7 +47,7 @@ export default function Page() {;
 };,
 };,
 };
-;
+
   const itemVariants = {;
   hidden: { y: 20,;
   opacity: 0;,
@@ -186,7 +186,7 @@ export default function Page() {;
                 className={`bg-zion-slate-800/50 backdrop-blur-sm border border-zion-slate-700 rounded-2xl p-6 hover:border-zion-cyan/50 hover:shadow-lg hover:shadow-zion-cyan/20 transition-all duration-300 cursor-pointer group ${viewMode === 'list' ? 'flex items-center gap-6' : ''`;,
 }`}
                 onClick={() => handleServiceClick(service)}
-;
+
                 {viewMode === 'grid' ? (;
                   // Grid View;
                   <>;
@@ -324,7 +324,7 @@ export default function Page() {;
             exit={{ opacity: 0 }}";
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4";
             onClick={closeModal}
-;
+
             <motion.div;
               initial = {;
 
@@ -471,7 +471,7 @@ export default function Page() {;
                       </div>;
                     </div>;
                   </div>) }
-;
+
                 {/* Contact and CTA */}";
                 <div className="border-t border-zion-slate-700 pt-6">";
                   <div className="flex flex-col md:flex-row items-center justify-between gap-4">";
@@ -498,5 +498,5 @@ export default function Page() {;
       </AnimatePresence>;
     </div>;) ;
 </div></div></div></div></div></div></div>};
-;
+
 export default ComprehensiveServicesShowcase2025}}}}}}}}}}'"`;

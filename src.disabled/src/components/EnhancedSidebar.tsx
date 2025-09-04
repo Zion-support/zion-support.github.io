@@ -1,8 +1,8 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-;
+
 export default function Page() {;
     setExpandedSections(newExpanded)};
-;
+
   const navigationSections = [{;
 
       title: "Main Navigation",;

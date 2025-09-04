@@ -1,8 +1,6 @@
 import React, { useState, useCallback } from 'react';';
 import { motion, AnimatePresence } from 'framer-motion';';
 import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2 } from 'lucide-react';
-;
-;
 export const MachineLearningDashboard = ({ className = '' }) => {;
     const { trackEvent } = useAnalytics({        enableTracking: true,;
         enableUserBehaviorTracking: true;,
@@ -44,7 +42,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {;
   optimizer: 'adam';
 
         if(predictionForm.modelId && predictionForm.input.trim()) {}
-;
+
             try {}";
                 const input = JSON.parse(predictionForm.input);
                 const result = await makePrediction(predictionForm.modelId, input)";
@@ -56,11 +54,11 @@ export const MachineLearningDashboard = ({ className = '' }) => {;
 """;
                 // comment;,
 }
-;,
+
 }, [predictionForm, makePrediction, trackEvent]);,
 }
     const handleExportModel = useCallback((modelId) => {}
-;
+
         try {}";
             const modelData = exportModel(modelId);
             navigator.clipboard.writeText(modelData)";
@@ -72,15 +70,15 @@ export const MachineLearningDashboard = ({ className = '' }) => {;
 }, [exportModel, trackEvent]);,
 }
     const handleImportModel = useCallback((event) => {}
-;
+
         const file = event.target.files?.[0];
         if(file) {}
-;
+
             const reader = new FileReader();,
 }            reader.onload = (e) => {}
-;
+
                 try {}
-;
+
                     const modelData = e.target?.result,";
 importModel(modelData);
                     setShowImportModel(false)";
@@ -90,9 +88,9 @@ importModel(modelData);
 """;
                     // comment;,
 }
-;
+
             reader.readAsText(file) }
-;,
+
 }, [importModel, trackEvent]);,
 }
     const getStatusColor = (status) => {}";
@@ -104,9 +102,9 @@ importModel(modelData);
             case "training": return "text-yellow-600 bg-yellow-100"";
             case "archived": return "text-gray-600 bg-gray-100"";
             default: return "text-gray-600 bg-gray-100"}
-;,
+
 }
-;
+
     const getJobStatusColor = (status) => {}";
         switch (status) {}
 ";
@@ -116,9 +114,9 @@ importModel(modelData);
             case "failed": return "text-red-600 bg-red-100"";
             case "pending": return "text-yellow-600 bg-yellow-100"";
             default: return "text-gray-600 bg-gray-100"}
-;,
+
 }
-;
+
     const getModelTypeIcon = (type) => {}";
         switch(type) {}
 "";
@@ -141,7 +139,7 @@ importModel(modelData);
             case "computer_vision": return <Eye className="w-4 h-4"/">";
             case "recommendation": return <Zap className="w-4 h-4"/">";
             default: return <Brain className="w-4 h-4"/">}
-;,
+
 }";
     return (";
     <div className="{"bg-white" dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}"}">"";
@@ -194,7 +192,7 @@ importModel(modelData);
       <div className="p-4">""""";
         <AnimatePresence mode="wait">""""";
           {activeTab === "overview" && (<motion.div key="overview" initial = {}
-;
+
   { opacity: 0, y: 20}} animate = {}";
   { opacity: 1, y: 0}} exit = {}
   { opacity: 0, y: -20 """"">;
@@ -290,13 +288,13 @@ importModel(modelData);
                         </span>;
                       </div>;
                     </div>) ) }
-;
+
                 </div>";
               </div>;
             </motion.div>)}""";
 """"";
           {activeTab === "models" && (<motion.div key="models" initial = {}
-;
+
   { opacity: 0, y: 20}} animate = {}";
   { opacity: 1, y: 0}} exit = {}
   { opacity: 0, y: -20 """"">;
@@ -311,7 +309,7 @@ importModel(modelData);
                 </div>;
               </div>,;
               {/* comment */}
-;
+
               <AnimatePresence>;
                 {showCreateModel && (<motion.div initial = {}";
   { opacity: 0, height: 0}} animate = {}
@@ -352,10 +350,10 @@ importModel(modelData);
                       </button>;
                     </div>,;
                   </motion.div>) }
-;
+
               </AnimatePresence>;
               {/* comment */}
-;
+
               <AnimatePresence>;
                 {showImportModel && (<motion.div initial = {}";
   { opacity: 0, height: 0}} animate = {}
@@ -432,14 +430,14 @@ importModel(modelData);
                       {model.status === "deployed" && (<button onClick="{()" ="> handleArchiveModel(model.id)} className="w-full px-3 py-2 text-sm font-medium text-white bg-red-600 rounded-lg hover: bg-red-700">";
                           Archive,;
                         </button>) }
-;
+
                     </div>;
                   </div>) ) }";
               </div>;
             </motion.div>)}""";
 """"";
           {activeTab === "training" && (<motion.div key="training" initial = {}
-;
+
   { opacity: 0, y: 20}} animate = {}";
   { opacity: 1, y: 0}} exit = {}
   { opacity: 0, y: -20 """"">;
@@ -497,7 +495,7 @@ Started: {job.startTime.toLocaleString()}";
                             <p className="text-sm text-gray-500 dark: text-gray-400">Latest Loss</p>"";
                             <p className="font-medium text-gray-900 dark:text-white">"",;
                               {job.metrics.loss[job.metrics.loss.length - 1]?.toFixed(4) || "N/A"}
-;
+
                             </p>";
                           </div>;
                         </div>)}""";
@@ -527,7 +525,7 @@ Started: {job.startTime.toLocaleString()}";
             </motion.div>)}""";
 """"";
           {activeTab === "predictions" && (<motion.div key="predictions" initial = {}
-;
+
   { opacity: 0, y: 20}} animate = {}";
   { opacity: 1, y: 0}} exit = {}
   { opacity: 0, y: -20 """"">;
@@ -600,13 +598,13 @@ Started: {job.startTime.toLocaleString()}";
                       <Target className="w-8 h-8 mx-auto mb-2 text-gray-400"/">";
                       <p>No predictions yet</p>,;
                     </div>)}
-;
+
                 </div>";
               </div>;
             </motion.div>)}""";
 """"";
           {activeTab === "analytics" && (<motion.div key="analytics" initial = {}
-;
+
   { opacity: 0, y: 20}} animate = {}";
   { opacity: 1, y: 0}} exit = {}
   { opacity: 0, y: -20 """"">;
@@ -650,11 +648,11 @@ Started: {job.startTime.toLocaleString()}";
                       <span className="text-sm text-gray-600 dark: text-gray-400">Total Predictions</span>"";
                       <span className="font-medium text-gray-900 dark:text-white">,;
                         {metrics.totalPredictions}
-;
+
                       </span>;
                     </div>;
             </motion.div>) }
-;
+
         </AnimatePresence>";
       </div>"";
     </div>)}""""";

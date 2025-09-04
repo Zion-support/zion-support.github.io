@@ -1,19 +1,19 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Settings } from 'lucide-react';
-;
+
 interface AccessibilitySettings {;
   fontSize: number;
   highContrast: boolean;
   reducedMotion: boolean;
   keyboardNavigation: boolean;,
 }
-;
+
 interface AccessibilityEnhancerProps {;
   enabled?: boolean;
   showSettings?: boolean;,
 }
-;
+
 export function AccessibilityEnhancer({ enabled = true, showSettings = true }: AccessibilityEnhancerProps) {;
   const [settings, setSettings] = useState<AccessibilitySettings>({;
     fontSize: 16,;
@@ -21,9 +21,9 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
     reducedMotion: false,;
     keyboardNavigation: true;,
 });
-;
+
   const [isVisible, setIsVisible] = useState(false);
-;
+
   // Apply accessibility styles;
   const applyAccessibilityStyles = useCallback((highContrast: boolean, fontSize: string, reducedMotion: boolean) => {;
     const root = document.documentElement;
@@ -44,7 +44,7 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
       root.style.removeProperty('--animation-duration');,
 }
   }, []);
-;
+
   // Apply settings when they change;
   useEffect(() => {;
     applyAccessibilityStyles(;
@@ -53,13 +53,13 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
       settings.reducedMotion;
     );,
 }, [settings, applyAccessibilityStyles]);
-;
+
   const updateSetting = (key: keyof AccessibilitySettings, value: any) => {;
     setSettings(prev => ({ ...prev, [key]: value }));,
 };
-;
+
   if (!enabled) return null;
-;
+
   return (;
     <div className="accessibility-enhancer">;
       <AnimatePresence>;
@@ -137,5 +137,5 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
     </div>;
   );,
 }
-;
+
 export default AccessibilityEnhancer;

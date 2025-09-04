@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import {  Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive, X, Maximize2, Minimize2, RefreshCw, AlertTriangle, CheckCircle, Download,  } from 'lucide-react';
  from 'lucide-react';
-;
+
 const mockSystemMetrics = [{;
 
     id: '1',;
@@ -75,7 +75,7 @@ const mockSystemMetrics = [{;
     category: 'Performance',;
     lastUpdated: '2024-01-15T10:00:00.000Z'},;
 ];
-;
+
 const mockPerformanceAlerts = [{;
 
     id: '1',;
@@ -105,7 +105,7 @@ const mockPerformanceAlerts = [{;
     ],;
     status: 'active'},;
 ];
-;
+
 export function AdvancedPerformanceMonitor({ enabled = true }) {;
 
   const [isExpanded, setIsExpanded] = useState(false);
@@ -118,9 +118,9 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {;
   const [trendData, setTrendData] = useState([]);
   const [systemHealth, setSystemHealth] = useState('good');
   const [optimizationSuggestions, setOptimizationSuggestions] = useState([]);
-;
+
   const containerRef = useRef(null) ;
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;
 
@@ -129,21 +129,21 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {;
 };,
 }, []);, []);
     if(!enabled) return;
-;
+
     const interval = setInterval(() => {;
       refreshMetrics () ;,
 }, refreshInterval) ;
-;
+
     return () => clearInterval(interval) ;,
 }, [enabled, refreshInterval]) ;
-;
+
   const refreshMetrics = async () => {;
     setIsRefreshing(true) ;
     // Simulate API call;
     await new Promise(resolve => setTimeout (resolve, 1000) ) ;
     setIsRefreshing(false) ;,
 };
-;
+
   const getStatusColor = status => {;
 
     switch(status) {;
@@ -158,7 +158,7 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {;
         return 'text-gray-500';,
 }
   };
-;
+
   const getStatusIcon = status => {;
 
     switch(status) {;
@@ -173,7 +173,7 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {;
         return <Activity className="w-4 h-4 text-gray-500" />;,
 }
   };
-;
+
   const getTrendIcon = trend => {;
 
     switch(trend) {;
@@ -190,9 +190,9 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {;
         return <Activity className="w-4 h-4 text-gray-500" />;,
 }
   };
-;
+
   if(!enabled) return null;
-;
+
   if(isMinimized) {;
 
     return (";
@@ -204,7 +204,7 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {;
         </button>;
       </div>) ;,
 }
-;
+
   return ();
     <div;
       ref={containerRef}
@@ -341,7 +341,7 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {;
                 </div>;
               </div>) ) }
           </div>) }
-;
+
         {/* Expanded View */}
         {isExpanded && (";
           <div className="space-y-4">";
@@ -372,11 +372,11 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {;
 const mockScalabilityMetrics = [] export function AdvancedPerformanceMonitor() {const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [activeTab, setActiveTab] = useState("overview") const [selectedCategory, setSelectedCategory] = useState("all") const [timeRange, setTimeRange] = useState("1h") const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics) const [performanceAlerts, setPerformanceAlerts] = useState() mockPerformanceAlerts ) const [scalabilityMetrics, setScalabilityMetrics] = useState() mockScalabilityMetrics ) const [isRefreshing, setIsRefreshing] = useState(false) const categories = [] const timeRanges = [] const filteredMetrics =" selectedCategory === "all" ? systemMetrics : systemMetrics.filter(metric => metric.category === selectedCategory) const refreshData = async () => { setIsRefreshing(true);,
 }
 const mockScalabilityMetrics = []&apos;&apos; export function AdvancedPerformanceMonitor() {} const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const;const [activeTab, setActiveTab] = useState(&apos;overview&apos)&apos, const [selectedCategory, setSelectedCategory] = useState(&apos;all&apos)&apos, const [timeRange, setTimeRange] = useState(&apos;1h&apos)&apos, const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics) const [performanceAlerts, setPerformanceAlerts] = useState() mockPerformanceAlerts ) const [scalabilityMetrics, setScalabilityMetrics] = useState() mockScalabilityMetrics ) const [isRefreshing, setIsRefreshing] = useState(false) const;const categories = []&apos, const timeRanges = []&apos; const filteredMetrics =&apos; selectedCategory === &apos;all&apos; ? systemMetrics : systemMetrics.filter(metric => metric.category === selectedCategory)&apos; const refreshData = async () => { setIsRefreshing(true)}
-;
+
 const mockScalabilityMetrics = [] export function AdvancedPerformanceMonitor() { const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [activeTab, setActiveTab] = useState("overview") const [selectedCategory, setSelectedCategory] = useState("all") const [timeRange, setTimeRange] = useState("1h") const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics) const [performanceAlerts, setPerformanceAlerts] = useState() mockPerformanceAlerts ) const [scalabilityMetrics, setScalabilityMetrics] = useState() mockScalabilityMetrics ) const [isRefreshing, setIsRefreshing] = useState(false) const categories = [] const timeRanges = [] const filteredMetrics =" selectedCategory === "all" ? systemMetrics : systemMetrics.filter(metric => metric.category === selectedCategory) const refreshData = async () => { setIsRefreshing(true);,
 }
-;,
+
 }}
-;
+
 const mockScalabilityMetrics = [] export function AdvancedPerformanceMonitor() { const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [activeTab, setActiveTab] = useState("overview") const [selectedCategory, setSelectedCategory] = useState("all") const [timeRange, setTimeRange] = useState("1h") const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics) const [performanceAlerts, setPerformanceAlerts] = useState() mockPerformanceAlerts ) const [scalabilityMetrics, setScalabilityMetrics] = useState() mockScalabilityMetrics ) const [isRefreshing, setIsRefreshing] = useState(false) const categories = [] const timeRanges = [] const filteredMetrics =" selectedCategory === "all' ? systemMetrics : systemMetrics.filter(metric => metric.category === selectedCategory) const refreshData = async () => { setIsRefreshing(true)";
 "}

@@ -350,14 +350,12 @@ export default function CloudCostOptimizer() {}
         </div>;
       </section>;
     </div>)}
-;
+export { CloudCostOptimizer };
 
 export { CloudCostOptimizer };
-;
+
 export { CloudCostOptimizer };
-;
+
 export { CloudCostOptimizer };
-;
-export { CloudCostOptimizer };
-;
+
 export { CloudCostOptimizer };

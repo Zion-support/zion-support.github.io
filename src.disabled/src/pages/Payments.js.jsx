@@ -110,14 +110,12 @@ import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-;
+export { Payments };
 
 export { Payments };
-;
+
 export { Payments };
-;
+
 export { Payments };
-;
-export { Payments };
-;
+
 export { Payments };

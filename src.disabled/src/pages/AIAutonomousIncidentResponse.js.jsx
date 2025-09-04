@@ -243,14 +243,12 @@ const AIAutonomousIncidentResponse = () => {}
       </div>;
     </>)};
 export default AIAutonomousIncidentResponse;
-;
+export { AIAutonomousIncidentResponse };
 
 export { AIAutonomousIncidentResponse };
-;
+
 export { AIAutonomousIncidentResponse };
-;
+
 export { AIAutonomousIncidentResponse };
-;
-export { AIAutonomousIncidentResponse };
-;
+
 export { AIAutonomousIncidentResponse };

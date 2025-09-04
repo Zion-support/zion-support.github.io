@@ -1,12 +1,12 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
-;
+
 interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {;
 
   size?: 'sm' | 'md' | 'lg';
   text?: string;
   fullScreen?: boolean}
-;
+
 export function LoadingSpinner({;
 
   size = 'md',;
@@ -72,7 +72,7 @@ export function LoadingSpinner({;
     </div>;) }
   lines?: number;
   className?: string}
-;
+
 export function SkeletonLoader(...args[]):  {;
 
   return ()`;

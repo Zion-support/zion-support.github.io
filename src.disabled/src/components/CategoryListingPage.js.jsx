@@ -27,7 +27,7 @@ export default function Page() {;
     // Cleanup function;,
 };,
 }, []);, []);
-;
+
         localStorage.setItem('category_selected_sort', selectedSort)}, [selectedSort]);
     useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -36,7 +36,7 @@ export default function Page() {;
     // Cleanup function;,
 };,
 }, []);, []);
-;
+
         localStorage.setItem('category_selected_filter', selectedFilter)}, [selectedFilter]);
     useEffect(() => {;
   // TODO: Add dependencies if needed;

@@ -10,12 +10,12 @@ import { useAuth } from '@/hooks/useAuth';''';
 import { getCartKey } from '@/utils/cartUtils';''';
 import { useNavigate } from 'react-router-dom';''';
 import { safeStorage } from '@/utils/safeStorage';
-;
+
 export default function WishlistPage() {}
   const [favorites, setFavorites] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
-;
+
   useEffect(() => {}
 ';
 '';
@@ -33,7 +33,7 @@ export default function WishlistPage() {}
       setFavorites([]);,
 }
   }, [user, isAuthLoading, navigate]);
-;
+
   if (isAuthLoading || !user) {}
     // Show loading or null while auth check or redirect happens;
     return null; // Or a loading spinner;,
@@ -49,14 +49,14 @@ export default function WishlistPage() {}
     safeStorage.setItem(getCartKey(user?.id), JSON.stringify(cart));''';
     dispatch({ type: 'SET_ITEMS', payload: cart });,
 };
-;
+
   const addToCart = item => {}
 ';
 '';
 ''';
     const cart = JSON.parse(localStorage.getItem('cart') || '[]');
     const existingItem = cart.find(cartItem => cartItem.id === item.id);
-;
+
     if (existingItem) {}
       existingItem.quantity += 1;,
 } else {}
@@ -67,7 +67,7 @@ export default function WishlistPage() {}
     // You could add a toast notification here'';
     alert('Item added to cart!');,
 };
-;
+
   if (loading) {}
     return();
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 pt-24">"";
@@ -82,14 +82,12 @@ export default function WishlistPage() {}
       </div>;
     );,
 }
-;
+export { WishlistPage };
 
 export { WishlistPage };
-;
+
 export { WishlistPage };
-;
+
 export { WishlistPage };
-;
-export { WishlistPage };
-;
+
 export { WishlistPage };

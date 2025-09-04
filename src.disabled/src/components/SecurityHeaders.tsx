@@ -31,12 +31,12 @@ const securityMetaTags = document.querySelectorAll("meta[http-equiv]");,
             tag.getAttribute("http-equiv") === "Permissions-Policy") {;
           tag.remove();,
 }
-;,
+
 });,
 }
   }, []);,
 }
   return null}
-;
+
 ");
 export default SecurityHeaders;"

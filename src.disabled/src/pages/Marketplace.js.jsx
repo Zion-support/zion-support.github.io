@@ -8,7 +8,7 @@ import { ProductListingCard } from "@/components/ProductListingCard";"";
 import { marketplaceItems, marketplaceFilters } from "@/data/marketplaceData";"";
 import { generateRandomListing } from "@/utils/generateRandomListing";"";
 import { useNavigate } from "react-router-dom";
-;
+
 export default function Marketplace() {}
 ";
     const navigate = useNavigate();"";
@@ -166,14 +166,12 @@ export default function Marketplace() {}
           </div>;
         </div>;
       </main>)}
-;
+export { Marketplace };
 
 export { Marketplace };
-;
+
 export { Marketplace };
-;
+
 export { Marketplace };
-;
-export { Marketplace };
-;
+
 export { Marketplace };

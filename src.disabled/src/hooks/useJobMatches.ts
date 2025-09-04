@@ -34,7 +34,7 @@ export default function Page() {;
       setIsProcessing(false);,
 }
   };
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);

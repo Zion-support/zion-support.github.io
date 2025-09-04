@@ -1,6 +1,6 @@
 import React from 'react';''';
 import { SEO } from '../components/SEO';
-;
+
 export default function Cookies() {}
   return();
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">";
@@ -169,14 +169,12 @@ export default function Cookies() {}
     </div>;
   );,
 }
-;
+export { Cookies };
 
 export { Cookies };
-;
+
 export { Cookies };
-;
+
 export { Cookies };
-;
-export { Cookies };
-;
+
 export { Cookies };

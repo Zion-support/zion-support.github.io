@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-;
-;
 const ServicesMarketingPage = () => {;
     const allServices = [;
         ...REVOLUTIONARY_2025_ADVANCED_SERVICES,;
@@ -18,12 +16,6 @@ const ServicesMarketingPage = () => {;
         'Biotechnology': allServices.filter(s => s.category === 'Biotechnology'),;
   'Quantum Technology': allServices.filter(s => s.category === 'Quantum Technology');
     ;
-
-;
-
-;
-
-;,
 };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
       {/* Hero Section */}
@@ -415,14 +407,12 @@ const ServicesMarketingPage = () => {;
       </section>;
     </div>)};
 export default ServicesMarketingPage;
-;
+export { ServicesMarketingPage };
 
 export { ServicesMarketingPage };
-;
+
 export { ServicesMarketingPage };
-;
+
 export { ServicesMarketingPage };
-;
-export { ServicesMarketingPage };
-;
+
 export { ServicesMarketingPage };

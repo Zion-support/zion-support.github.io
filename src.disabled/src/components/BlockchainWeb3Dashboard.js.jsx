@@ -1,8 +1,6 @@
 import { useState, useCallback } from 'react';';
 import { motion, AnimatePresence } from 'framer-motion';';
 import { Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2 } from 'lucide-react';
-;
-;
 export const BlockchainWeb3Dashboard = ({ className = '' }) => {;
     const { trackEvent } = useAnalytics({        enableTracking: true,;
         enableUserBehaviorTracking: true;,
@@ -39,9 +37,9 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;
     }, [connectWallet, trackEvent]);
     const handleMintNFT = useCallback(async () => {}
         if(nftForm.name.trim() && wallet) {}
-;
+
             try {}
-;
+
                 const metadata = {}";
   name: nftForm.name, description: nftForm.description, image: nftForm.image || "https:// comment;
 """"", ",;,
@@ -59,18 +57,18 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;
                 setNftForm({ name: ", description: ", image: "" })";
                 setShowMintNFT(false)";
                 trackEvent("blockchain",dashboard",nft_minted")}
-;
+
             catch (error) {}
-;
+
 ";
 """;
                 // comment;,
 }
-;,
+
 }, [nftForm, wallet, contracts, mintNFT, trackEvent]);,
 }
     const handleSendTransaction = useCallback(async () => {}
-;
+
         if(transactionForm.to.trim() && transactionForm.value && wallet) {}";
             try {}
                 await sendTransaction(transactionForm.to, transactionForm.value, transactionForm.data || null)";
@@ -82,12 +80,12 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;
 """;
                 // comment;,
 }
-;,
+
 }, [transactionForm, wallet, sendTransaction, trackEvent]);,
 }
     const getStatusColor = (status) => {}";
         switch (status) {}
-;
+
             case "confirmed": return "text-green-600 bg-green-100";
             case "pending": return "text-yellow-600 bg-yellow-100";
             case "failed": return "text-red-600 bg-red-100;
@@ -170,7 +168,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;
             </motion.div>)}""";
 """"";
           {activeTab === "contracts" && (<motion.div key="contracts" initial = {}
-;
+
   { opacity: 0, y: 20}} animate = {}";
   { opacity: 1, y: 0}} exit = {}
   { opacity: 0, y: -20 """"">;
@@ -232,7 +230,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;
                         <span className="text-gray-500 dark: text-gray-400">Last Used:</span>"";
                         <span className="text-gray-900 dark:text-white">,;
                           {contract.lastInteraction.toLocaleDateString()}
-;
+
                         </span>;
                       </div>;
                   </div>) ) }";
@@ -240,7 +238,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;
             </motion.div>)}""";
 """"";
           {activeTab === "nfts" && (<motion.div key="nfts" initial = {}
-;
+
   { opacity: 0, y: 20}} animate = {}";
   { opacity: 1, y: 0}} exit = {}
   { opacity: 0, y: -20 """"">;
@@ -284,14 +282,14 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;
                             <span className="text-gray-500 dark: text-gray-400">Price:</span>""",;
                             <span className="text-green-600 font-medium">{nft.price} ETH</span>;
                           </div>)}
-;
+
                       </div>;
                   </div>) ) }";
               </div>;
             </motion.div>)}""";
 """"";
           {activeTab === "defi" && (<motion.div key="defi" initial = {}
-;
+
   { opacity: 0, y: 20}} animate = {}";
   { opacity: 1, y: 0}} exit = {}
   { opacity: 0, y: -20 """"">;
@@ -354,7 +352,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;
                         <span className="text-gray-500 dark: text-gray-400">Started:</span>"";
                         <span className="text-gray-900 dark:text-white">,;
                           {position.startDate.toLocaleDateString()}
-;
+
                         </span>;
                       </div>;
                   </div>) ) }";
@@ -362,7 +360,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;
             </motion.div>)}""";
 """"";
           {activeTab === "transactions" && (<motion.div key="transactions" initial = {}
-;
+
   { opacity: 0, y: 20}} animate = {}";
   { opacity: 1, y: 0}} exit = {}
   { opacity: 0, y: -20 """"">;
@@ -401,7 +399,7 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}";
                         <span className="text-gray-500 dark:text-gray-400">From:</span>"";
                         <code className="block text-xs font-mono mt-1">,;
                           {tx.from.slice(0, 8)}...{tx.from.slice(-6)}
-;
+
                         </code>";
                       </div>;
                       """;
@@ -409,7 +407,7 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}";
                         <span className="text-gray-500 dark: text-gray-400">To:</span>"";
                         <code className="block text-xs font-mono mt-1">,;
                           {tx.to.slice(0, 8)}...{tx.to.slice(-6)}
-;
+
                         </code>";
                       </div>;
                       """;
@@ -435,21 +433,21 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}";
                           <span className="text-gray-500 dark: text-gray-400">Timestamp:</span>"";
                           <p className="text-gray-900 dark:text-white">,;
                             {tx.timestamp.toLocaleString()}
-;
+
                           </p>;
                         </div>;
                   </div>) ) }
-;
+
               </div>;
             </motion.div>) }
-;
+
         </AnimatePresence>";
       </div>;
       {/* comment */}""";
       <AnimatePresence>"";
         {showMintNFT && (<motion.div initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} exit="{{" opacity: 0 }} className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">;
             <motion.div initial = {}
-;
+
   { scale: 0.9, opacity: 0}} animate = {}";
   { scale: 1, opacity: 1}} exit = {}
   { scale: 0.9, opacity: 0 """"">;
@@ -501,7 +499,7 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}";
       <AnimatePresence>"";
         {showSendTransaction && (<motion.div initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} exit="{{" opacity: 0 }} className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">;
             <motion.div initial = {}
-;
+
   { scale: 0.9, opacity: 0}} animate = {}";
   { scale: 1, opacity: 1}} exit = {}
   { scale: 0.9, opacity: 0 """"">;
@@ -555,4 +553,4 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}";
 } catch (error) {;
     console.error(error);,
 }
-export default Component
+export default Component;

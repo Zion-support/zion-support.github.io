@@ -3,7 +3,7 @@ export default AdvancedServiceRecommendation;
 import { Badge } from './ui / badge';
 export default function Page() {;
  from './ui/badge';
-;
+
     const [clientProfile, setClientProfile] = useState();,
 }
     const [recommendations, setRecommendations] = useState([])";
@@ -12,7 +12,7 @@ export default function Page() {;
     const industries = []";
     const compSizes = [];
     const mockServices = []{}
-;
+
             id: "ai - crm-platform",",;
             title: "AI - Powered CRM Platform",",;
             description: "Advanced customer relationship management platform with AI - driven insights and automation.",",;
@@ -65,7 +65,7 @@ export default function AdvancedServiceRecommendation() {return (";
       </div>;
   )};react&apos;framer-motion&apos,lucide-react;./ui/card&apos;&apos;./ui/button&apos;&apos,./ui/badge";&apos;&apos;
     const;const;const [clientProfile, setClientProfile] = useState({}
-;
+
 &apos;
 &apos;&apos;
         industry: &apos,&apos,&apos;&apos;
@@ -166,9 +166,9 @@ export default function AdvancedServiceRecommendation() {return (";
             image: "/images/services/blockchain - supply-chain.jpg", "",";
             link: "https:// comment;
             email: "kleber@ziontechgroup.com"}
-;
+
     const calculateMatchScore = (service, profile) => {}
-;
+
         let score = 0;
         // comment;
         if(service.targetAudience?.some((audience) => audience.toLowerCase().includes(profile.industry.toLowerCase()))) {}";
@@ -239,15 +239,15 @@ export default function AdvancedServiceRecommendation() {return (";
         // comment;
         const goalMatches = profile.primaryGoals.filter(goal => service.benefits.some ( (benefit) => benefit.toLowerCase () .includes(goal.toLowerCase () ) ) ) .length;
         score += (goalMatches / profile.primaryGoals.length) * 20        return Math.min(100, score) }
-;
+
     const generateRecommendations = () => {}
-;
+
         setIsAnalyzing(true);,
 }
         // comment        setTimeout(() => {}
-;
+
             const recs = mockServices.map(service => {}
-;
+
                 const;const;const matchScore = calculateMatchScore(service, clientProfile);,
 }
                 let priority,;
@@ -292,7 +292,7 @@ export default function AdvancedServiceRecommendation() {return (";
                 const timeToValue = complexity === "Simple" ? "2-4 months" : ;
                     complexity === "Moderate" ? "4-8 months" : "8-12 months;
                 return {}
-;
+
                     service,;
                     matchScore,;
                     reasoning,;
@@ -309,9 +309,9 @@ service, matchScore,;
             setIsAnalyzing(false);,
 }
             setShowResults(true) }, 2000) }&apos;&apos    const getPriorityColor = (priority) => {}
-;
+
         switch (priority) {}
-;
+
             case "High": return "bg-red-100 text-red-800";
             case "Medium": return "bg-yellow-100 text-yellow-800";
             case "Low": return "bg-green-100 text-green-800;
@@ -319,16 +319,16 @@ service, matchScore,;
             case &apos;Medium&apos;: return &apos;bg-yellow-100 text-yellow-800&apos;
             case &apos;Low&apos;: return &apos;bg-green-100 text-green-800&apos;
             default: return &apos,bg-gray-100 text-gray-800&apos}
-;,
+
 }&apos;&apos    const getComplexityColor = (complexity) => {}
-;
+
         switch (complexity) {}
-;
+
             case &apos;Complex&apos;: return &apos;bg-red-100 text-red-800&apos;
             case &apos;Moderate&apos;: return &apos;bg-yellow-100 text-yellow-800&apos;
             case &apos;Simple&apos;: return &apos;bg-green-100 text-green-800&apos;
     const isFormComplete = () => {}
-;
+
         return clientProfile.industry && clientProfile.compSize && clientProfile.budget &&;
             clientProfile.timeline && clientProfile.technologyMaturity &&"&apos,;
             clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0}";&apos;&apos;";
@@ -338,9 +338,9 @@ service, matchScore,;
             case "Medium": return "bg - yellow-100 text-yellow-800",;
             case "Low": return "bg - green-100 text-green-800",;
             default: return "bg-gray-100 text-gray-800"}
-;,
+
 }
-;
+
             case "Complex": return "bg-red-100 text-red-800";
             case "Moderate": return "bg-yellow-100 text-yellow-800";
             case "Simple": return "bg-green-100 text-green-800";
@@ -349,7 +349,7 @@ service, matchScore,;
             case "Simple": return "bg - green-100 text-green-800",;
             clientProfile.timeline && clientProfile.technologyMaturity &&",;
             clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0}
-;
+
     return (";
     <div className="max - w-7xl mx-auto p-6">,;
             clientProfile.timeline && clientProfile.technologyMaturity &&"",";
@@ -357,12 +357,12 @@ service, matchScore,;
     return (";
     <div className = "max-w-7xl mx-auto p-6">;
       {/* comment */}
-;
+
       <motion.div initial = {}
-;
+
   { opacity: 0>;
 y: 20}} animate = {}
-;
+
   { opacity: 1,;
 y: 0 ",">;
 ""}} className="text-center mb-8">"";";
@@ -385,7 +385,7 @@ y: 0 ",">;
   industry: e.target.value ",";
 ""}))} className="w-full p-3 border border-zion-slate-light rounded-md">"";";
               <option value = ">Select Industry</option> {industries.map(industry => (<option key="{industry}" value="{industry}">{industry}</option>) ) }
-;
+
             </select>;
           </div>;";
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Comp Size</label>;";
@@ -404,12 +404,12 @@ y: 0 ",">;
             <select value = "{clientProfile.technologyMaturity}" onChange = {}";
   technologyMaturity: e.target.value ",";
               <option value=">Select Technology Maturity</option> {technologyMaturityLevels.map(level => (<option key="{level}" value="{level}">{level}</option>) ) }
-;
+
         </div>"";";
         <div className="mt-6">"";";
           <label className="block text-sm font-medium text-zion-slate-dark mb-2">Primary Business Goals</label>"";";
           <div className = "grid grid-cols-2 md:grid-cols-3 gap-2">""{primaryGoals.map(goal => (<label key="{goal}" className="flex items-center gap-2 cursor-pointer">"" { opacity: 0, y: 20}} animate = {}
-;
+
   { opacity: 1,;
   y: 0 &apos,&apos,",;
 &apos,&apos,"&apos}} className="&apos;text-center" mb-8&apos;>"&apos;&apos,&apos;&apos;";
@@ -427,7 +427,7 @@ y: 0 ",">;
           Get personalized service recommendations based on your industry, goals, and requirements.Our AI analyzes your profile to suggest the perfect solutions for your business.</p>;
       </motion.div>;
       {/* comment */}
-;
+
   { opacity: 0, y: 20}} animate = {}";
 &apos;&apos,&apos}} transition="{{" delay: 0.1 }} className="&apos;bg-white" rounded-lg shadow-lg p-6 mb-8&apos;>"&apos;&apos,&apos;&apos;";
         <h2 className="&apos;text-2xl" font-bold text-zion-blue-dark mb-6 flex items-center gap-2&apos;>"&apos;&apos,&apos;&apos;";
@@ -443,7 +443,7 @@ y: 0 ",">;
 &apos,&apos,"&apos}))} className="&apos;w-full" p-3 border border-zion-slate-light rounded-md&apos;>"&apos;&apos,&apos;&apos;";
               <option value="&apos;&apos;">Select Industry&apos;&apos;</option>";
               {industries.map(industry = > (}<option key="{industry}" value="{industry}">{industry}</option>) ) }
-;
+
   { opacity: 0,;
   y: 20;,
 }} animate = {;
@@ -474,16 +474,16 @@ y: 0 ",">;
               {industries.map(industry => (<option key={industry} value={industry}>{industry}</option>) ) }
                 Get AI Recommendations;
               </>) }
-;
+
           </Button>;
       </motion.div> {/* comment */}
-;
+
       {showResults && (<motion.div initial = {}">;
   y: 0","}} transition="{{" delay: 0.2 }}>"";";
           <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 text-center">;
             Your Personalized Service Recommendations;";
           <div className = "space-y-6"> {recommendations.map((rec, index) => (<motion.div key="{rec.service.id}" initial = {}
-;
+
   x: -20}} animate = {}">;
   x: 0","}} transition="{{" delay: 0.1 * index }}>"";";
                 <Card className="hover: shadow-lg transition-shadow">",;
@@ -493,12 +493,12 @@ y: 0 ",">;
                         <CardTitle className="text - xl text-zion-blue-dark mb-2"> {rec.service.title}",;
                         </CardTitle>"";";
                         <p className = "text-zion-slate-light mb-3"> {rec.service.description}
-;
+
                         </p>"";";
                         <div className="flex flex-wrap gap-2 mb-4">;";
                           <Badge className="{getPriorityColor(rec.priority)}">;
                             Priority: {rec.priority}
-;
+
                           </Badge>;";
                           <Badge className = "{getComplexityColor" (rec.implementationComplexity) }>,;
                             Complexity: {rec.implementationComplexity}
@@ -508,7 +508,7 @@ y: 0 ",">;
                       <div className="text-right ml-4">"";";
                         <div className="text-2xl font-bold text-zion-cyan mb-1"> {rec.service.price}"";";
                         <div className = "text-sm text-zion-slate-light"> {rec.service.duration}
-;
+
                   </CardHeader>;
                   <CardContent>"";";
                     <div className="grid grid-cols-1 lg: grid-cols-2 gap-6">",";
@@ -518,9 +518,9 @@ y: 0 ",">;
                         </h4>",";
                         <ul className="space-y-2">""{rec.reasoning.map((reason, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">"";";
                               <CheckCircle className = "w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"  /> {reason}
-;
+
                             </li>) ) }
-;
+
                         </ul>;";
                           <BarChart3 className="w - 4 h-4 text-zion-cyan"  />,;
                           Implementation Details"";";
@@ -559,9 +559,9 @@ y: 0 ",">;
                 Get AI Recommendations,;
           </Button>;
       {/* comment */}
-;
+
       {showResults && (}<motion.div initial = {}
-;
+
   { opacity: 0,">;
   y: 0",&apos}} transition="{{" delay: 0.2 }}>&apos;&apos,&apos;&apos,";
           <h2 className="&apos;text-2xl" font-bold text-zion-blue-dark mb-6 text-center&apos;>;
@@ -585,7 +585,7 @@ y: 0 ",">;
             Your Personalized Service Recommendations";
           <div className="space-y-6">";
             {recommendations.map((rec, index) => (<motion.div key="{rec.service.id}" initial = {}
-;
+
   { opacity: 0, x: -20}} animate = {}";
   x: 0","}} transition="{{" delay: 0.1 * index }}>"";
                 <Card className="hover: shadow-lg transition-shadow">""";
@@ -621,7 +621,7 @@ y: 0 ",">;
                           {rec.service.price}"";
                         <div className="text-sm text-zion-slate-light">;
                           {rec.service.duration}
-;
+
                   </CardHeader>;
                   <CardContent>&apos;&apos,&apos;&apos,";
                     <div className="&apos;grid" grid-cols-1 lg: grid-cols-2 gap-6&apos,>"&apos,&apos,";
@@ -677,7 +677,7 @@ y: 0 ",">;
                   </CardContent>;
                 </Card>;
               </motion.div>) ) }
-;
+
           </div> {/* comment */}";
 ""}} transition="{{" delay: 0.4 }} className="mt-12 text-center">"";";
             <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"";";
@@ -732,7 +732,7 @@ for your business needs. Contact us today for a personalized consultation."";
   () => window.open("tel: +13024640950", _blank")";
                   <Zap className="w-5 h-5 mr-2"  />;
                   Call Now,        </motion.div>)}
-;
+
 ";,
 }>"";
                   <Zap className="w-5 h-5 mr-2"/>;
@@ -745,14 +745,14 @@ for your business needs. Contact us today for a personalized consultation."";
     </div>)};
 export default AdvancedServiceRecommendation;,
 }}}}}}}}}
-;
+
 export { AdvancedServiceRecommendation };
-;
+
 export { AdvancedServiceRecommendation };
-;
+
 export { AdvancedServiceRecommendation };
-;
+
 export { AdvancedServiceRecommendation };
-;
+
 export { AdvancedServiceRecommendation };
 ))))))))))))

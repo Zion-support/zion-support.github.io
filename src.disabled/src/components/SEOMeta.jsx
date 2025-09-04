@@ -69,7 +69,7 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
                         "name": "Quantum AI Fusion Platform","";
                         "description": "Revolutionary platform combining quantum computing with artificial intelligence";
             ];
-;,
+
 };
     const finalStructuredData = structuredData || defaultStructuredData;
     return (<Helmet>;
@@ -144,13 +144,13 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
     </Helmet>)};
 export default SEOMeta;,
 }}}}
-;
+
 export { SEOMeta };
-;
+
 export { SEOMeta };
-;
+
 export { SEOMeta };
-;
+
 export { SEOMeta };
-;
+
 export { SEOMeta };

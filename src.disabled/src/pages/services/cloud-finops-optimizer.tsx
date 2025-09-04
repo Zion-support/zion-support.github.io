@@ -16,7 +16,7 @@ import { ;
   AlertTriangle,;
   Lightbulb;,
 } from 'lucide-react';
-;
+
 export default function CloudFinOpsOptimizerPage() {;
   return (;
     <div className="min-h-screen bg-zion-slate-dark text-white">;

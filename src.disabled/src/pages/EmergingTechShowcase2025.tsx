@@ -14,11 +14,11 @@ export default function Page() {;
     { id: 'Nanotechnology', name: 'Nanotechnology', icon: Microscope, color: 'from - amber - 500 to - yellow-600' },;
     { id: 'Advanced Robotics', name: 'Robotics', icon: Bot, color: 'from - slate - 500 to - gray - 600' };
   ];
-;
+
     const filteredServices = selectedCategory === 'all';
     ? EMERGING_TECH_SERVICES_2025;
     : EMERGING_TECH_SERVICES_2025.filter(service => service.category === selectedCategory) ;
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
@@ -27,13 +27,13 @@ export default function Page() {;
         setCurrentSlide((prev) => (prev + 1) % filteredServices.length) ;,
 }, 5000) ;
       return () => clearInterval(interval) ;
-;,
+
 }, [autoPlay, filteredServices.length]) ;
-;
+
   const getCategoryIcon = (category: string) => {;
     const categoryData = categories.find(cat => cat.id === category) ;
     return categoryData ? categoryData.icon : Globe};
-;
+
           <div  className="grid md: grid - cols - 2 lg:grid - cols - 3 gap-8">;
             {filteredServices.map((service, index) => (<motion.div;
                 key={service.id}
@@ -52,7 +52,7 @@ export default function Page() {;
                 whileHover={{ y: -10 }}
                 className="bg-gradient - to - br from - white / 10 to - white / 5 backdrop - blur - sm rounded-2xl p - 6 hover:shadow-2xl transition - all cursor -pointer";
                 onClick={ () => setSelectedService(service.id) }
-;
+
                 <div  className="flex items - center gap-3 mb-4">;
                   <div  className={`p - 3 rounded-xl bg-gradient - to - r ${getCategoryColor(service.category) }`}>;
                     {React.createElement(getCategoryIcon (service.category) , { className: "w-6 h-6 text-white" }) }
@@ -152,7 +152,7 @@ export default function Page() {;
             exit={{ opacity: 0 }}
             className="fixed inset - 0 bg-black / 80 backdrop - blur - sm z - 50 flex items - center justify - center p -4";
             onClick={ () => setSelectedService(null) }
-;
+
             <motion.div;
               initial = {;
   { scale: 0.9,;
@@ -165,10 +165,6 @@ export default function Page() {;
               exit = {;
   { scale: 0.9,;
   opacity: 0;
-
-;
-;
-;,
 }};
               className="bg-gradient - to - br from - slate - 800 to - slate - 900 rounded-3xl p - 8 max - w-4xl w-full max - h-[90vh] overflow-y-auto";
               onClick={ (e) => e.stopPropagation () };
@@ -176,7 +172,7 @@ export default function Page() {;
               { ( () => {;
                 const service = EMERGING_TECH_SERVICES_2025.find(s => s.id === selectedService) ;
                 if(!service) return null;
-;
+
                 return (<div>;
                     <div  className="flex items - center justify - between mb-6">;
                       <div  className="flex items - center gap-3">;

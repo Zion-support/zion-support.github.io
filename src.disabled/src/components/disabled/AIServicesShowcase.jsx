@@ -7,4 +7,4 @@ import React { useState } from "react" }""" return: (<section className="py-20 b
 ";
 
   );
-export default Component
+export default Component;

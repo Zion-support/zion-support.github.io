@@ -10,7 +10,7 @@ export function LanguageSelector() {const [isOpen, setIsOpen] = useState()"react
     const handleClickOutside = (event) => {;
       if (menuRef.current && !menuRef.current.contains(event.target)) {;
         setIsOpen(false)}
-;
+
       if (menuRef.current &&, !menuRef.current.contains(event.target)) {},;
 ";
 ";
@@ -30,8 +30,6 @@ export function LanguageSelector() {const [isOpen, setIsOpen] = useState()"react
     setIsOpen();,
 }
     // comment;
-
-;
 ";
   return (";
     <div className = "relative" ref="{menuRef}">";
@@ -61,7 +59,7 @@ export function LanguageSelector() {const [isOpen, setIsOpen] = useState()"react
         <Globe className="h-4 w-4" /"></Globe>;
         <span className="text-sm font-medium hidden sm:block">,;
           {currentLanguage?.code.toUpperCase()}
-;
+
         </span>;
       </button>;
 ";
@@ -76,7 +74,7 @@ export function LanguageSelector() {const [isOpen, setIsOpen] = useState()"react
                     ? "text-zion-cyan bg-zion-purple/10";
                     : "text-zion-slate-light hover:text-white hove,";
     r: bg-zion-purple/10""}"}
-;
+
               >;
                 <div className=""flex" items-center space-x-3">;
                   <span className="text-lg">{language.flag}</span>;
@@ -102,7 +100,7 @@ export function LanguageSelector() {const [isOpen, setIsOpen] = useState()"react
                   <span></spa>{language.name}</span>";
                   <Check className="h-4 w-4 text-zion-cyan" /"></Check>;
                 )}
-;
+
             ))}";
   )}
   )}""";";,

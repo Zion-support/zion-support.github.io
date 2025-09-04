@@ -142,14 +142,12 @@ export default function Index() {}
       <FloatingCTA />;
       <Footer />;
     </div>)}
-;
+export { Index };
 
 export { Index };
-;
+
 export { Index };
-;
+
 export { Index };
-;
-export { Index };
-;
+
 export { Index };

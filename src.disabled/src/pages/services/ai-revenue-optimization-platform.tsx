@@ -224,5 +224,5 @@ const AIRevenueOptimizationPlatform = () => {;
     </>;
   );,
 }
-;
-export default AIRevenueOptimizationPlatform
+
+export default AIRevenueOptimizationPlatform;

@@ -555,14 +555,12 @@ const ITServices = () => {}
   );,
 };
 export default ITServices;
-;
+export { ITServices };
 
 export { ITServices };
-;
+
 export { ITServices };
-;
+
 export { ITServices };
-;
-export { ITServices };
-;
+
 export { ITServices };

@@ -593,14 +593,12 @@ export default function MicroSAASPage() {}
         </div>;
       </div>;
     </div>)}
-;
+export { MicroSAASPage };
 
 export { MicroSAASPage };
-;
+
 export { MicroSAASPage };
-;
+
 export { MicroSAASPage };
-;
-export { MicroSAASPage };
-;
+
 export { MicroSAASPage };

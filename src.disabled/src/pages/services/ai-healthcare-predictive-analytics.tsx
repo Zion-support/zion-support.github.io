@@ -54,7 +54,7 @@ import { ;
   Tablet,;
   Laptop;,
 } from 'lucide-react';
-;
+
 const AIHealthcarePredictiveAnalytics = () => {;
   const features = [;
     {;
@@ -88,7 +88,7 @@ const AIHealthcarePredictiveAnalytics = () => {;
       description: "Automated patient risk assessment and prioritization for care management";,
 }
   ];
-;
+
   const pricingPlans = [;
     {;
       name: "Starter",;
@@ -140,7 +140,7 @@ const AIHealthcarePredictiveAnalytics = () => {;
       popular: false;,
 }
   ];
-;
+
   const useCases = [;
     {;
       title: "Hospitals",;
@@ -163,7 +163,7 @@ const AIHealthcarePredictiveAnalytics = () => {;
       icon: Shield;,
 }
   ];
-;
+
   const analyticsTypes = [;
     {;
       title: "Clinical Analytics",;
@@ -190,7 +190,7 @@ const AIHealthcarePredictiveAnalytics = () => {;
       color: "from-red-500 to-pink-500";,
 }
   ];
-;
+
   const benefits = [;
     {;
       title: "Improve Patient Outcomes",;
@@ -213,7 +213,7 @@ const AIHealthcarePredictiveAnalytics = () => {;
       icon: Lock;,
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO ;
@@ -578,15 +578,15 @@ const AIHealthcarePredictiveAnalytics = () => {;
     </div>;
   );,
 };
-;
+
 export default AIHealthcarePredictiveAnalytics;
-;
+
 export { AIHealthcarePredictiveAnalytics };
-;
+
 export { AIHealthcarePredictiveAnalytics };
-;
+
 export { AIHealthcarePredictiveAnalytics };
-;
+
 export { AIHealthcarePredictiveAnalytics };
-;
+
 export { AIHealthcarePredictiveAnalytics };

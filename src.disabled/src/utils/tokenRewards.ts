@@ -11,7 +11,7 @@ export async function rewardOnboarding(;
     body: JSON.stringify({ userId, action, amount });,
 });,
 }
-;
+
 export async function earnTokensForPurchase(;
   userId: string,;
   purchaseAmount: number,;
@@ -27,7 +27,7 @@ export async function earnTokensForPurchase(;
 });,
 });,
 }
-;
+
 export async function earnTokensForReferral(;
   userId: string,;
   referredUserId: string;
@@ -42,7 +42,7 @@ export async function earnTokensForReferral(;
 });,
 });,
 }
-;
+
 export async function earnTokensForAction(;
   userId: string,;
   action: string,;
@@ -53,11 +53,9 @@ export async function earnTokensForAction(;
     body: JSON.stringify({ userId, action, amount });,
 });,
 }
-;
+
 export default earnTokensForAction;
 // comment;
-export const tokenRewards = {}
-;
-
+export const tokenRewards = {};
 export default tokenRewards;
 }

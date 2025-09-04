@@ -3,18 +3,18 @@ export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({ 
 export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = ({;
 export const useAccessibility = () => {;
 import { motion, AnimatePresence  } from 'framer-motion';
-;
+
 export default function Page() {;
 > {;
   children: ReactNode}
-;
+
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {;
   const [highContrast, setHighContrast] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const [fontSize, setFontSize] = useState(16);
   const [showSkipLinks, setShowSkipLinks] = useState(false);
   const [voiceNavigation, setVoiceNavigation] = useState(false);
-;
+
   // Load accessibility preferences from localStorage;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -23,12 +23,12 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     // Cleanup function;,
 };,
 }, []);, []);
-;
+
     setHighContrast(savedHighContrast);
     setReducedMotion(savedReducedMotion);
     setFontSize(savedFontSize ? parseInt(savedFontSize) : 16);
     setVoiceNavigation(savedVoiceNavigation)}, []);
-;
+
   // Apply accessibility settings to document;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -42,15 +42,15 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     if(highContrast) {;
       root.classList.add('high-contrast')} else {;
       root.classList.remove('high-contrast')}
-;
+
     // Apply reduced motion;
     if(reducedMotion) {;
       root.classList.add('reduce-motion')} else {;
       root.classList.remove('reduce-motion')}
-;
+
     // Apply font size;
     root.style.fontSize = `${fontSize}px`}, [highContrast, reducedMotion, fontSize]);
-;
+
   // Keyboard navigation support;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -61,12 +61,12 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 }, []);, []);
     ;
         setTimeout(() => setShowSkipLinks(false), 5000)}
-;
+
       // High contrast toggle(Alt + H);
       if(event.altKey && event.key === 'h') {;
         event.preventDefault();
         toggleHighContrast()}
-;
+
       // Font size controls(Alt + Plus/Minus);
       if(event.altKey && event.key === '+') {;
         event.preventDefault();
@@ -75,27 +75,27 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
         event.preventDefault();
         decreaseFontSize()}
     };
-;
+
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, []);
-;
+
     setHighContrast(newValue);
     localStorage.setItem('zion-high-contrast', newValue.toString())};
-;
+
     setReducedMotion(newValue);
     localStorage.setItem('zion-reduced-motion', newValue.toString())};
-;
+
     setFontSize(newSize);
     localStorage.setItem('zion-font-size', newSize.toString())};
-;
+
     setFontSize(newSize);
     localStorage.setItem('zion-font-size', newSize.toString())};
-;
+
     localStorage.setItem('zion-font-size', '16')};
-;
+
     setVoiceNavigation(newValue);
     localStorage.setItem('zion-voice-navigation', newValue.toString())};
-;
+
   const contextValue: AccessibilityContextType = {;
     highContrast,;
     toggleHighContrast,;
@@ -110,7 +110,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     voiceNavigation,;
     toggleVoiceNavigation,;,
 };
-;
+
   return (<AccessibilityContext.Provider value={contextValue}>;
       {children}
       ;

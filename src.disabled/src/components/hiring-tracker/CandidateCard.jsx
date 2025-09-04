@@ -9,7 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, } from "@/components/ui/dropdown-menu";
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
 import { toast } from "@/hooks/use-toast";
-;
+
 export function CandidateCard({ application, index }) {;
     const [showNotes, setShowNotes] = useState(false);    const [notes, setNotes] = useState(application.notes || "");
     const [showHireModal, setShowHireModal] = useState(false);
@@ -99,7 +99,7 @@ export function CandidateCard({ application, index }) {;
               {application.match_score !== null && application.match_score !== null && (<div className="mb-2">;
                   <ScoreBadge application={application}/>;
                 </div>)}
-;
+
               {/* Notes Section */}";
               {showNotes && (<div className="mt-2">";
                   <Textarea placeholder="Add private notes about this candidate..." className="text-xs min-h-[60px]" value={notes} onChange={(e) => setNotes(e.target.value)}/>";
@@ -107,7 +107,7 @@ export function CandidateCard({ application, index }) {;
                     <Button size="sm" onClick={handleSaveNotes}>Save Notes</Button>;
                   </div>;
                 </div>)}
-;
+
               {/* Action Buttons */}";
               <div className="flex justify-between mt-2 gap-1">";
                 <Button variant="outline" size="sm" className="flex-1" asChild>`;

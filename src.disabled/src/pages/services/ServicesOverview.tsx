@@ -38,11 +38,11 @@ import { ;
   MapPin;,
 } from 'lucide-react';
 import { motion } from 'framer-motion';
-;
+
 const ServicesOverview: React.FC = () => {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-;
+
   const serviceCategories = [;
     {;
       id: 'all',;
@@ -99,7 +99,7 @@ const ServicesOverview: React.FC = () => {;
       count: 0;,
 }
   ];
-;
+
   const allServices = [;
     // AI & Machine Learning;
     {;
@@ -283,14 +283,14 @@ const ServicesOverview: React.FC = () => {;
       tags: ['Digital Transformation', 'Consulting', 'Implementation', 'Strategy'];,
 }
   ];
-;
+
   // Calculate category counts;
   serviceCategories.forEach(category => {;
     category.count = allServices.filter(service => ;
       category.id === 'all' || service.category === category.id;
     ).length;,
 });
-;
+
   // Filter services based on search and category;
   const filteredServices = allServices.filter(service => {;
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -299,14 +299,14 @@ const ServicesOverview: React.FC = () => {;
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory;,
 });
-;
+
   const contactInfo = {;
     phone: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup.com';,
 };
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">;
       {/* Hero Section */}
@@ -632,5 +632,5 @@ const ServicesOverview: React.FC = () => {;
     </div>;
   );,
 };
-;
+
 export default ServicesOverview;

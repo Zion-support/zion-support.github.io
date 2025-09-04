@@ -1,13 +1,13 @@
 import {  import { innovativeServices2027 } from '../data/innovativeServices2027';
-;
+
 export default function Page() {;
     );
-;
+
     if(element) {;
       observer.observe(element)}
-;
+
     return () => observer.disconnect () }, []) ;
-;
+
   // Combine all services;
   ;
       source: 'innovative',;
@@ -15,14 +15,14 @@ export default function Page() {;
       features: service.features || [],;
       ctaLabel: service.ctaLabel || 'Get Started',;
       href: service.href || '/contact'}) ) ;  ];
-;
+
   // Filter services based on search and category;
 
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchQuery.toLowerCase());
-;
+
     return matchesSearch && matchesCategory && matchesPrice}) ;
-;
+
   // Sort services;
   ;
     switch(sortBy) {;
@@ -34,7 +34,7 @@ export default function Page() {;
       default:;
         return 0}
   });
-;
+
   ;
 ';
   phone: '+1 302 464 0950',';
@@ -44,23 +44,21 @@ export default function Page() {;
   ;
   address: '364 E Main St STE 1008 Middletown DE 19709';
   ;
-;,
-};
-;
 
+};
     if(numPrice < 100) return 'Low';
     if(numPrice < 1000) return 'Medium';
     return 'High'};
       default: return 'text-white'}
   };
-;
+
       'Robotics & Automation': Cpu,;
       'AR/VR Solutions': Eye,;
       'Biotech Solutions': Dna,;
       'LegalTech Solutions': Scale,;
       'Real Estate Tech': Home,;
       'Supply Chain Solutions': Truck};    return iconMap[category] || Target};
-;
+
   return (";
     <section id = "comprehensive-pricing-guide" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">;
       {/* Animated Background */}";
@@ -180,7 +178,7 @@ export default function Page() {;
             </div>;
           </div>;
         </motion.div>;
-;
+
         {/* Services Grid */}
         <motion.div;
           initial = {;
@@ -248,7 +246,7 @@ export default function Page() {;
                         </span>) }
                     </div>;
                   </div>;) }
-;
+
                 {/* Pricing & Billing */}";
                 <div className="mb-4">";
                   <div className="flex items-center justify-between">`;
@@ -276,7 +274,7 @@ export default function Page() {;
                       <div className="text-gray-400 text-xs">ROI</div>;
                     </div>;
                   </div>) }
-;
+
                 {/* CTA Button */}
                 <a;
                   href={service.href}";

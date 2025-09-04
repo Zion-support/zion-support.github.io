@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 export /**;
 import { motion  } from 'framer-motion';
 import { motion, AnimatePresence  } from 'framer-motion';
-;
+
  params - Function parameters;
  * @returns {*} Function return value;
  */;

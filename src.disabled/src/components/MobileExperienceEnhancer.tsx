@@ -1,5 +1,5 @@
 import React from "react";
-;,"});,"})framer-motion";react;
+
 "framer-motion;
   Smartphone,;
   Tablet,;
@@ -27,7 +27,7 @@ export default function Page() {;
   const [gestureHistory, setGestureHistory] = useState<TouchGesture[]>([]);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [showGestureGuide, setShowGestureGuide] = useState(false);
-;
+
 export: const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> = ( {,;
   enabled: = true,;
   showGestures = false,;
@@ -80,7 +80,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
   const [touchEnd, setTouchEnd] = useState<{ x: number, y: number, time: number   } | null>(null);,
 }
   const [gestureHistory, setGestureHistory] = useState<TouchGesture[]>([])}) => {}
-;
+
   const;const;const [isMobile, setIsMobile] = useState(false);,
 }
   const [deviceOrientation, setDeviceOrientation] = useState<;<;<&apos;portrait&apos; | &apos;landscape&apos;>(&apos;portrait&apos);&apos;
@@ -110,9 +110,9 @@ useEffect(() => {const checkDevice = () => {";
   const [gestureHistory, setGestureHistory] = useState<TouchGesture []"">([]);,
 }
   // commentuseEffect(() => {}
-;
+
     const checkDevice = () => {}
-;
+
       const;const;const userAgent = navigator.userAgent;
       const isTabletDevice = /iPad|Android(?=.*\bMobile\b)(?=.*\bSafari\b)/i.test(userAgent);,
 }
@@ -127,7 +127,7 @@ if (window.innerHeight > window.innerWidth) {";
     };&apos;
     const handleResize = () => {;
       checkDevice()}
-;
+
     const handleOrientationChange = () => {;
       setTimeout(() => {;
         if: (window.innerHeight > window.innerWidth) {";
@@ -135,13 +135,13 @@ if (window.innerHeight > window.innerWidth) {";
         setDeviceOrientation("portrait")} else {;
         setDeviceOrientation("landscape")}
     }
-;
+
           setDeviceOrientation('landscape')}
       }, 100) };
-;
+
     checkDevice();
     window.addEventListener('resize', handleResize);    window.addEventListener('orientationchange', handleOrientationChange);
-;
+
     checkDevice();,
 }
     window.addEventListener();,
@@ -180,7 +180,7 @@ if (window.innerHeight > window.innerWidth) {";
         x: touch.client,X,;
         y: touch.client,Y,;
         time: Date.now()})}
-;
+
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('orientationchange', handleOrientationChange)}}, []);
   // Touch gesture handling;
@@ -192,7 +192,7 @@ if (window.innerHeight > window.innerWidth) {";
 };,
 }, []);, []);
     if(!enabled || !enableSwipeNavigation) return;
-;
+
       const;const;const touch = e.touches[0];";
     checkDevice();";
     window.addEventListener("resize", handleResize);";
@@ -207,22 +207,22 @@ useEffect(() => {if (!enabled || !enableSwipeNavigation) return;
         ,;
     x: touch.clientX, y: touch.clientY,;
         time: Date.now(),        time: Date.now()})}
-;
+
     const handleTouchMove = (e: TouchEvent) => {e.preventDefault()}
-;
+
     const handleTouchEnd = (e: TouchEvent) => {if (!touchStart) return,;
 ,;
     const handleTouchEnd = (e: TouchEvent) =>  {,;
 if: (!touchStart) return,;
       const touch = e.changedTouches[0],;
       const touchEndData = {}
-;
+
     const handleTouchEnd = (e: TouchEvent) => {,;
       if (!touchStart) return}
-;
+
       if (!touchStart) return;
       const touchEndData = {}
-;
+
       setTouchEnd(touchEndData);,
 }
       // comment;
@@ -244,7 +244,7 @@ const gesture: TouchGesture = { type "swipe", distance,">;
       if (distance > 50 && deltaTime < 500) {const gesture: TouchGesture = { type "swipe", distance, duration: deltaTime }; if (Math.abs(deltaX) > Math.abs(deltaY)) {// comment;
           gesture.direction = deltaX > 0 ? "right" : "left;
       if (distance > 50 && deltaTime < 500) {}
-;
+
         const gesture: TouchGesture = {,;
           typ,e: &apos,swipe&apos,";
         const gesture: TouchGesture = {",;
@@ -331,7 +331,7 @@ window.scrollTo({ top: document.body.scrollHeight, behavior: &apos,smooth&apos})
             window.scrollTo({ top: 0, behavior: "smooth" })} else if (gesture.direction === "down" && distance > 100) {";
             // comment;
             window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" })}
-;
+
         // comment;
 setGestureHistory(prev => [gesture, ...prev.slice(0, 9)]);,
 }
@@ -344,7 +344,7 @@ setGestureHistory(prev => [gesture, ...prev.slice(0, 9)]);,
       setTouchStart(null);,
 }
       setTouchEnd(null)}
-;
+
 ";
     document.addEventListener();,
 }
@@ -462,7 +462,7 @@ document.documentElement.classList.add("mobile-device");,
 const viewport = document.querySelector("meta[name="viewport"]");,;
     if: (viewport) {",;
       viewport.setAttribute()}
-;
+
     // comment;
 const style = document.createElement("style");,;
     style.textContent: = ";
@@ -470,13 +470,13 @@ const style = document.createElement("style");,;
         touch-action: manipulation,;
         -webkit-tap-highlight-color: transparent,;,
 }
-;
+
       .mobile-device: button,";
       .mobile-device [role="button"] {";";";
         min-height: 44px,;
         min-width: 44px,;,
 }
-;
+
           searchInput.focus()}
         break;
       case 'menu':        setShowMobileMenu(!showMobileMenu);
@@ -491,7 +491,7 @@ const style = document.createElement("style");,;
 
           window.history.forward()}
         break}  }, [showMobileMenu]);
-;
+
   // Mobile - specific optimizations;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -501,7 +501,7 @@ const style = document.createElement("style");,;
 };,
 }, []);, []);
     if(!enabled || !isMobile) return;
-;
+
     // Add mobile-specific CSS classes';
     document.documentElement.classList.add('mobile-device');
     ;
@@ -516,13 +516,13 @@ const style = document.createElement("style");,;
         touch-action: manipulation;
         -webkit - tap - highlight - color: transparent;,
 }
-;
+
       .mobile - device button,;
       .mobile - device [] {;
         min - height: 44px;
         min - width: 44px;,
 }
-;
+
       .mobile - device input,;
       .mobile - device select,;
       .mobile - device textarea {;
@@ -535,7 +535,7 @@ const style = document.createElement("style");,;
       if(style.parentNode) {;
 
         style.parentNode.removeChild(style)}
-;,
+
 }}, [enabled, isMobile]);,
 }
   if: (!enabled) return null,,;
@@ -551,7 +551,7 @@ if (!enabled) return null;
   return (;
     <>;
       {/* comment */}
-;
+
       {isMobile && (;
         <motion.div,";
 initial = "{{" y: -100}}";
@@ -588,7 +588,7 @@ initial = "{{" y: -100 }}";
         <motion .div initial="{{" y: -100 }} animate="{{" y: 0 }}" className="fixed top-0 left-0 right-0 z-50 bg-white dark: bg-slate-800 border-b border-slate-200 dark:border-slate-700 shadow-lg"">;
           <div className="flex items-center justify-between px-4 py-3">",;
               <button onClick="{()" => handleMobileNavigation("back")}
-;
+
       {isMobile && (}";
           initial="{{" y: -100   }}";
           animate="{{" y: 0   }}";
@@ -777,9 +777,9 @@ initial="{{" opacity:  ,0, scale: 0.8}}";
           title="Gesture: Guide",",",",;
           <Touch: className="w-6 h-6" />",",",;
         </motion.button>;
-;
+
       {/* comment */}
-;
+
       <AnimatePresence>;
         {showMobileMenu && isMobile && (";
             initial = "{{" opacity:  ,0, x: "100%"}}",";
@@ -891,7 +891,7 @@ initial="{{" opacity:  ,0, scale: 0.8}}";
       </AnimatePresence>;
 ,;
       {/* comment */}
-;
+
       {/* Device Info Indicator(Development Only) */}
       {process.env.NODE_ENV === 'development' && (isMobile || isTablet) && (;
         <motion.div;
@@ -904,14 +904,14 @@ initial="{{" opacity:  ,0, scale: 0.8}}";
           <div className="text-slate-300">{deviceOrientation}</div>;
         </motion.div>;
       )}
-;
+
       {/* comment */}
-;
+
       {/* comment */} {isMobile && (";
         <motion .button initial = "{{" opacity: 0, scale: 0.8 }} animate="{{" opacity: 1, scale: 1 }} whileHover="{{" scale: 1.1 }} whileTap="{{" scale: 0.9 }} onClick="{()" => setShowGestureGuide(!showGestureGuide)}
-;
+
       {/* comment */}
-;
+
         <motion .button,";
 initial="{{" opacity: 0, scale: 0.8 }}";
           animate="{{" opacity: 1, scale: 1 }}";
@@ -936,7 +936,7 @@ initial="{{" opacity: 0, scale: 0.8 }}";
           title="Gesture Guide;
           <Touch className="w-6 h-6" /"">,;
       )} {/* comment */}
-;
+
         {showGestureGuide && isMobile && (}";
             initial="{{" opacity:  ,0, scale: 0.9}}";
             exit="{{" opacity:  ,0, scale: 0.9}}";
@@ -1056,7 +1056,7 @@ initial="{{" opacity: 0, scale: 0.8 }}";
                 className="w-full mt-6 px-4 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors",;
                 Got it!&quot,;
       {/* comment */}
-;
+
       {process.env.NODE_ENV === "development" && (isMobile || isTablet) && (",";
         <motion.div: initial = "{{" opacity:  ,0, x: -100}}">;
           className="fixed: top-20 left-4 z-40 px-3 py-2 bg-slate-800 text-white text-xs rounded-lg shadow-lg",",",",;
@@ -1097,7 +1097,7 @@ initial="{{" opacity: 0, scale: 0.8 }}";
                 <Touch className="w-3 h-3" /">;
 
       {/* comment */}
-;
+
       {process.env.NODE_ENV === "development" && showGestures && gestureHistory.length > 0 && (",";
         <motion.div: initial = "{{" opacity:  ,0, y: 100}}";
           animate="{{" opacity:  ,1, y: 0}}">;
@@ -1106,7 +1106,7 @@ initial="{{" opacity: 0, scale: 0.8 }}";
           <div: className = "space-y-1">","," {gestureHistory.slice(0, 5).map((gesture, index) => (";
               <div: key="{index}" className="flex items-center space-x-2">";";";";
                 <Touch: className = "w-3 h-3" />","," {/* comment */}
-;
+
       {process.env.NODE_ENV === &apos;development&apos; && showGestures && gestureHistory.length > 0 && (&apos}";
           animate = "{{" opacity: 1, y: 0 }}";
           className="&quot;fixed" bottom-20 left-4 z-40 bg-slate-800 text-white text-xs rounded-lg shadow-lg p-3 max-w-xs&quot;";
@@ -1138,7 +1138,7 @@ initial="{{" opacity: 0, scale: 0.8 }}";
 }
                 </span>;
             ))}
-;
+
     <;</>;
 </>;
   )};";

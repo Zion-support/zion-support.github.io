@@ -31,14 +31,14 @@ export default function Page() {;
     useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
-;
+
         window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll)}, [handleScroll]);
     // Service Worker registration for caching;
     useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
-;
+
         if('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {;
 
             navigator.serviceWorker';
@@ -54,7 +54,7 @@ export default function Page() {;
     useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
-;
+
         if('IntersectionObserver' in window) {;
 
             const observer = new IntersectionObserver((entries) => {;

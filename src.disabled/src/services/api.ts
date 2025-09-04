@@ -3,7 +3,7 @@ export class apiService {;
   constructor() {;
     this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api";,
 }
-;
+
   async get() {;
     try {;
       const response = await fetch("${this.baseUrl}/api");,
@@ -15,10 +15,8 @@ export class apiService {;
 }
       throw error;,
 }
-;,
-}
-;
 
-;
+}
+
 export default new apiService();,
 }

@@ -2,7 +2,7 @@ import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Target, Brain, Users, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, Zap, TrendingUp, BarChart3, Globe, Heart, Settings, Monitor, Smartphone, Laptop, Calendar, GitBranch, PieChart, AlertTriangle  } from 'lucide-react.ts';
 import { SEO  } from '@/components/SEO';
-;
+
 export default function AIProjectManagement(...args: unknown[]): unknown {;
   const features = [;
     {;
@@ -36,7 +36,7 @@ export default function AIProjectManagement(...args: unknown[]): unknown {;
       description: "AI-powered risk identification and mitigation strategies";,
 }
   ];
-;
+
   const benefits = [;
     "Reduce project delivery time by 30-50%",;
     "Improve resource utilization by 40-60%",;
@@ -45,7 +45,7 @@ export default function AIProjectManagement(...args: unknown[]): unknown {;
     "Eliminate manual reporting by 80%",;
     "Improve stakeholder communication by 50%";
   ];
-;
+
   const solutions = [;
     {;
       title: "AI Project Planning",;
@@ -72,7 +72,7 @@ export default function AIProjectManagement(...args: unknown[]): unknown {;
       price: "From $6,000/month";,
 }
   ];
-;
+
   const projectTypes = [;
     "Software Development",;
     "Construction & Engineering",;
@@ -81,7 +81,7 @@ export default function AIProjectManagement(...args: unknown[]): unknown {;
     "Research & Development",;
     "Event Management";
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO ;
@@ -325,13 +325,13 @@ export default function AIProjectManagement(...args: unknown[]): unknown {;
     </div>;
   );,
 }
-;
+
 export { AIProjectManagement };
-;
+
 export { AIProjectManagement };
-;
+
 export { AIProjectManagement };
-;
+
 export { AIProjectManagement };
-;
+
 export { AIProjectManagement };

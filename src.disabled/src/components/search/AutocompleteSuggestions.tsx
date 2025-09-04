@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { SearchSuggestion, SearchHighlight } from '@/types/search';
-;
+
 // Helper function to highlight matching text;
 const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {;
   if(!searchTerm || searchTerm.length === 0) {;
@@ -21,7 +21,7 @@ const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {;
     after: text.substring(index + searchTerm.length);,
 };,
 };
-;
+
 export function AutocompleteSuggestions({ ;
   suggestions, ;
   searchTerm, ;
@@ -32,7 +32,7 @@ export function AutocompleteSuggestions({ ;
 }: AutocompleteSuggestionsProps) {;
   const listRef = useRef<HTMLUListElement>(null);
   const highlightedItemRef = useRef<HTMLLIElement>(null);
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
@@ -56,7 +56,7 @@ export function AutocompleteSuggestions({ ;
         {suggestions.map((suggestion, index) => {;
           const highlight = highlightMatch(suggestion.text, searchTerm);
           const isHighlighted = index === highlightedIndex;
-;
+
           return (<li;
               key={`${suggestion.type}-${index}`}
               id={`suggestion-item-${index}`}

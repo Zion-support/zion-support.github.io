@@ -22,7 +22,7 @@ import { ;
   BarChart3, ;
   Target ;,
 } from 'lucide-react';
-;
+
 export default function AICybersecurityThreatIntelligencePlatform() {;
   const features = [;
     {;
@@ -56,7 +56,7 @@ export default function AICybersecurityThreatIntelligencePlatform() {;
       description: "Dedicated team of cybersecurity experts monitoring your systems";,
 }
   ];
-;
+
   const pricingPlans = [;
     {;
       name: "Essential",;
@@ -106,7 +106,7 @@ export default function AICybersecurityThreatIntelligencePlatform() {;
       popular: false;,
 }
   ];
-;
+
   const benefits = [;
     {;
       title: "Threat Prevention",;
@@ -129,7 +129,7 @@ export default function AICybersecurityThreatIntelligencePlatform() {;
       metric: "100% compliance ready";,
 }
   ];
-;
+
   const securityMetrics = [;
     {;
       metric: "10M+",;
@@ -148,7 +148,7 @@ export default function AICybersecurityThreatIntelligencePlatform() {;
       label: "Response Time";,
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">;
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">;

@@ -75,7 +75,7 @@ import {;
   Globe2Icon,;
   ShieldCheckIcon;,
 } from 'lucide-react';
-;
+
 interface Service {;
   id: string;
   title: string;
@@ -92,11 +92,11 @@ interface Service {;
   popular?: boolean;
   new?: boolean;,
 }
-;
+
 export default function EnhancedServicesShowcase2025() {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
-;
+
   const services: Service[] = [;
     // AI-Powered Micro SAAS Services;
     {;
@@ -395,7 +395,7 @@ export default function EnhancedServicesShowcase2025() {;
       icon: Shield;,
 }
   ];
-;
+
   const categories = [;
     { id: 'all', name: 'All Services', icon: Star },;
     { id: 'ai-saas', name: 'AI SaaS', icon: Brain },;
@@ -403,14 +403,14 @@ export default function EnhancedServicesShowcase2025() {;
     { id: 'security-saas', name: 'Security SaaS', icon: Shield },;
     { id: 'business-saas', name: 'Business SaaS', icon: Building }
   ];
-;
+
   const filteredServices = services.filter(service => {;
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;,
 });
-;
+
   return (;
     <>;
       <Helmet>;

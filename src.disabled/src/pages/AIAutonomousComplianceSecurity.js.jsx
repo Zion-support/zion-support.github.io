@@ -255,14 +255,12 @@ const AIAutonomousComplianceSecurity = () => {}
       </div>;
     </>)};
 export default AIAutonomousComplianceSecurity;
-;
+export { AIAutonomousComplianceSecurity };
 
 export { AIAutonomousComplianceSecurity };
-;
+
 export { AIAutonomousComplianceSecurity };
-;
+
 export { AIAutonomousComplianceSecurity };
-;
-export { AIAutonomousComplianceSecurity };
-;
+
 export { AIAutonomousComplianceSecurity };

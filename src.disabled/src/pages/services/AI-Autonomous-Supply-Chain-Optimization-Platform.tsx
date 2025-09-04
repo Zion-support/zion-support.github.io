@@ -23,7 +23,7 @@ import { ;
   Package,;
   Route;,
 } from 'lucide-react';
-;
+
 const AIAutonomousSupplyChainOptimizationPlatform: React.FC = () => {;
   const features = [;
     {;
@@ -51,7 +51,7 @@ const AIAutonomousSupplyChainOptimizationPlatform: React.FC = () => {;
       benefits: ["Zero stockout guarantee", "Automated reorder points", "Cost optimization"];,
 }
   ];
-;
+
   const pricingPlans = [;
     {;
       name: "Starter",;
@@ -95,7 +95,7 @@ const AIAutonomousSupplyChainOptimizationPlatform: React.FC = () => {;
       popular: false;,
 }
   ];
-;
+
   const useCases = [;
     {;
       title: "E-commerce Logistics",;
@@ -118,7 +118,7 @@ const AIAutonomousSupplyChainOptimizationPlatform: React.FC = () => {;
       icon: Globe;,
 }
   ];
-;
+
   const benefits = [;
     {;
       metric: "30%",;
@@ -141,7 +141,7 @@ const AIAutonomousSupplyChainOptimizationPlatform: React.FC = () => {;
       detail: "Improved delivery times through route optimization";,
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">;
       <SEO ;
@@ -314,7 +314,7 @@ const AIAutonomousSupplyChainOptimizationPlatform: React.FC = () => {;
                     </span>;
                   </div>;
                 )}
-;
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <p className="text-slate-400 mb-6">{plan.description}</p>;
@@ -430,5 +430,5 @@ const AIAutonomousSupplyChainOptimizationPlatform: React.FC = () => {;
     </div>;
   );,
 };
-;
+
 export default AIAutonomousSupplyChainOptimizationPlatform;

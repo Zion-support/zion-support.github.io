@@ -1,8 +1,8 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-;
+
 export default function Page() {;
 []}
-;
+
 const heroSlides: HeroSlide[] = [  {;
 
     id: 'ai-solutions',;
@@ -70,19 +70,19 @@ const heroSlides: HeroSlide[] = [  {;
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [direction, setDirection] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
-;
+
   // Memoize slides to prevent unnecessary re - renders;
   ;
   // Optimized slide navigation with useCallback;
   ;
     setCurrentSlide(prev => (prev + 1) % memoizedSlides.length);
     setIsAutoPlaying(false)}, [memoizedSlides.length]);
-;
+
     setCurrentSlide();
       prev => (prev - 1 + memoizedSlides.length) % memoizedSlides.length;
     );
     setIsAutoPlaying(false)}, [memoizedSlides.length]);
-;
+
       setCurrentSlide(index);
       setIsAutoPlaying(false)},;
     [currentSlide];
@@ -96,11 +96,11 @@ const heroSlides: HeroSlide[] = [  {;
 };,
 }, []);, []);
     if(!isAutoPlaying) return;
-;
+
       setCurrentSlide(prev => (prev + 1) % memoizedSlides.length)}, 6000);
-;
+
     return () => clearInterval(interval) }, [isAutoPlaying, memoizedSlides.length]) ;
-;
+
   // Handle keyboard navigation;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -115,10 +115,10 @@ const heroSlides: HeroSlide[] = [  {;
         e.preventDefault();
         setIsAutoPlaying(!isAutoPlaying)}
     };
-;
+
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown)}, [prevSlide, nextSlide, isAutoPlaying]);
-;
+
   // Handle image loading;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -131,12 +131,12 @@ const heroSlides: HeroSlide[] = [  {;
           img.onload = resolve;
           img.onerror = resolve;
           img.src = slide.image}) }) ;
-;
+
       await Promise.all(imagePromises) ;
       setIsLoading(false) };
-;
+
     preloadImages () }, [memoizedSlides]) ;
-;
+
   if(isLoading) {;
 
     return (";

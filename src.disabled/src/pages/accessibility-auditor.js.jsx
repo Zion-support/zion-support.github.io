@@ -223,14 +223,12 @@ const AccessibilityAuditor = () => {}
       </section>;
     </div>)};
 export default AccessibilityAuditor;
-;
+export { AccessibilityAuditor };
 
 export { AccessibilityAuditor };
-;
+
 export { AccessibilityAuditor };
-;
+
 export { AccessibilityAuditor };
-;
-export { AccessibilityAuditor };
-;
+
 export { AccessibilityAuditor };

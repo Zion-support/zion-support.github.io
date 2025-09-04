@@ -47,4 +47,4 @@ const MicroSAASServices2028 = () => {;
     </>;
   );,
 }
-export default MicroSAASServices2028
+export default MicroSAASServices2028;

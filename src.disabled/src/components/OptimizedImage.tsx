@@ -5,23 +5,23 @@ export default function Page() {;
   const [imageSrc, setImageSrc] = useState<any>(src);
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
-;
+
   // Intersection Observer for lazy loading;
   // Intersection Observer for lazy loading      }) ;
-;
+
     observerRef.current.observe(imgRef.current) ;
-;
+
     return () => {;
       if(observerRef.current) {;
 
         observerRef.current.disconnect()}
     }}, [priority, lazy]) ;
-;
+
   // Handle image load;
   ;
     setIsLoaded(true) ;
     onLoad?.() };
-;
+
   // Handle image error;
   ;
       setHasError(false);
@@ -30,7 +30,7 @@ export default function Page() {;
       setIsLoading(false);
       onError?.(new Error(`Failed to load image: any${src}`))}
   };
-;
+
   // Cleanup on unmount;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -44,7 +44,7 @@ export default function Page() {;
 
         observerRef.current.disconnect()}
     }}, []) ;
-;
+
   // Generate optimized src with quality parameter;
   const getOptimizedSrc = (src: anystring) => {;
     if(src.startsWith ('data:') || src.startsWith('blob:') ) {;
@@ -61,7 +61,7 @@ export default function Page() {;
 
       return src}
   };
-;
+
   // Base classes;
   ;
   // Loading skeleton;
@@ -89,4 +89,4 @@ export default function Page() {;
     </div>;
   )}
 export default OptimizedImage;";
-;";
+

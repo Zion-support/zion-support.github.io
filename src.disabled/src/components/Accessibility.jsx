@@ -1,13 +1,13 @@
 import React, { useState, useEffect, createContext, useContext } from 'react';''';
 import { motion, AnimatePresence } from 'framer-motion';''';
 import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucide-react';
-;
+
 const AccessibilityContext = createContext(null);
 export const useAccessibility = () => {}
 ";
-;';
+
 import { motion, AnimatePresence } from 'framer - motion';
-;
+
 export default function Page() {;,
 }, []);
     // Save settings to localStorage;
@@ -22,12 +22,12 @@ const AccessibilityContext = createContext (null);,
     if (!context) {}";
 
         throw new Error("useAccessibility must be used within an AccessibilityProvider")}
-;
+
     return context}
-;
+
 // comment;
 export const AccessibilityProvider = ({ children }) => {}
-;
+
     const [highContrast, setHighContrast] = useState();,
 }
     const [reducedMotion, setReducedMotion] = useState(false)";
@@ -39,7 +39,7 @@ export const AccessibilityProvider = ({ children }) => {}
         const savedSettings = localStorage.getItem("zion-accessibility-settings");,
 }
         if (savedSettings) {}
-;
+
             const settings = JSON.parse(savedSettings);,
 }
             setHighContrast();,
@@ -47,12 +47,12 @@ export const AccessibilityProvider = ({ children }) => {}
             setReducedMotion(settings.reducedMotion || false)",;
             setFontSize(settings.fontSize || "medium")",;
             setColorBlindMode(settings.colorBlindMode || "none")}
-;,
+
 }, []);,
 }
     // comment;
         const settings = {}
-;
+
   highContrast,";
             reducedMotion,";
             fontSize,;

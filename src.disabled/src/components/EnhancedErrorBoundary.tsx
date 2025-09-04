@@ -1,19 +1,19 @@
 import {  import { motion  } from 'framer-motion';
-;
+
 export default function Page() {;
 -${Math.random().toString(36).substr(2, 9)}`}}
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
 
     this.setState({ errorInfo });
-;
+
     // Log error to console';
     // console.error('Error caught by boundary:', error, errorInfo);
-;
+
     // Call custom error handler if provided;
     if(this.props.onError) {;
 
       this.props.onError(error, errorInfo)}
-;
+
     // Send error to error reporting service;
     this.reportError(error, errorInfo) }
   private async reportError(error: Error, errorInfo: ErrorInfo) {;
@@ -26,7 +26,7 @@ export default function Page() {;
         body: JSON.stringify(errorReport)})} catch(reportError) {;
 
       // console.error('Failed to report error:', reportError)}  }
-;
+
   private handleRetry = () => {;
     this.setState({;
 
@@ -35,20 +35,20 @@ export default function Page() {;
       errorInfo: null,;
       errorId: null,;
       reportSent: false})};
-;
+
   private handleGoHome = () => {;
 
     window.location.href = '/'};
-;
+
   private handleGoBack = () => {;
     window.history.back () };
   private handleReportError = async () => {;
     this.setState({ isReporting: true });
-;
+
     try {;
       await this.reportError(this.state.error!, this.state.errorInfo!);
       this.setState({ reportSent: true });
-;
+
       // Reset report status after 3 seconds;
       setTimeout(() => {;
         this.setState({ reportSent: false }) }, 3000) } catch(error) {;
@@ -56,7 +56,7 @@ export default function Page() {;
       // console.error('Failed to report error:', error)} finally {;
 
       this.setState({ isReporting: false })}  };
-;
+
   private handleRetry = () => {;
     this.setState({;
 
@@ -66,10 +66,10 @@ export default function Page() {;
       errorId: null,;
       showDetails: false,;
       isRecovering: true});
-;
+
     // Force a re - render of children;
     this.forceUpdate () };
-;
+
   private handleGoHome = () => {;
 
     window.location.href = '/'};
@@ -84,7 +84,7 @@ export default function Page() {;
 
         // console.error('Failed to copy error details:', err)}    }
   };
-;
+
   private toggleDetails = () => {;
     this.setState(prev => ({ showDetails: !prev.showDetails }) ) };
   render () {;
@@ -211,7 +211,7 @@ export default function Page() {;
                 )}
               </motion.div>;
             )}
-;
+
             {/* Contact Information */}
             <motion.div;
               initial={{ opacity: 0 }}

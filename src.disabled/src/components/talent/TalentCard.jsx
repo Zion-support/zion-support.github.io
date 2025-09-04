@@ -147,15 +147,15 @@ export default function Page() {}
     </Card>;
   );,
 };
-;
+
 export default TalentCardComponent;
-;
+
 export { TalentCardComponent };
-;
+
 export { TalentCardComponent };
-;
+
 export { TalentCardComponent };
-;
+
 export { TalentCardComponent };
-;
+
 export { Page };

@@ -47,4 +47,4 @@ const documentation = () => {;
     </>;
   );,
 }
-export default documentation
+export default documentation;

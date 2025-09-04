@@ -8,7 +8,7 @@ interface PerformanceMetrics {;
   domLoad: number | null; // DOM Content Loaded;
   windowLoad: number | null; // Window Load;,
 }
-;
+
 interface PerformanceOptions {;
 
   enableRealUserMonitoring?: boolean;
@@ -19,7 +19,7 @@ interface PerformanceOptions {;
 :src/hooks/usePerformance.tsx;
   sendToAnalytics?: boolean;
   sendToAnalytics?: boolean}
-;
+
 export function usePerformance(options: PerformanceOptions = {}) {;
 
   const {;
@@ -30,7 +30,7 @@ export function usePerformance(options: PerformanceOptions = {}) {;
     enableNavigationTiming = true,;
     logToConsole = false,;
     sendToAnalytics = false} = options;
-;
+
   const [metrics, setMetrics] = useState<PerformanceMetrics>({;
 
     fcp: null,;
@@ -41,11 +41,11 @@ export function usePerformance(options: PerformanceOptions = {}) {;
     domLoad: null,;
     windowLoad: null,;
     navigationStart: null});
-;
+
   const [isMonitoring, setIsMonitoring] = useState(false);
         // // // // // // // // console.warn('PerformanceObserver not supported');
       return;
-;
+
     // First Contentful Paint(FCP);
 
       if(fcpEntry) {;
@@ -67,7 +67,7 @@ export function usePerformance(options: PerformanceOptions = {}) {;
 
       // // // // // // // console.warn('PerformanceObserver not supported');
       return;
-;
+
     // First Contentful Paint(FCP);
 
       if(fcpEntry) {;
@@ -87,7 +87,7 @@ export function usePerformance(options: PerformanceOptions = {}) {;
         if(!layoutShiftEntry.hadRecentInput) {;
 
           clsValue += layoutShiftEntry.value;
-;
+
       setMetrics(prev => ({ ...prev, cls: clsValue }));,
 });    // Start observing;
     try {;
@@ -118,7 +118,7 @@ export function usePerformance(options: PerformanceOptions = {}) {;
         domLoad,;
         windowLoad;,
 }));
-;
+
           // // // // // // // // console.warn('Long task detected:', {;
 
             duration: entry.duration,;
@@ -139,19 +139,19 @@ export function usePerformance(options: PerformanceOptions = {}) {;
         console.log('Navigation Timing:', { ttfb, domLoad, windowLoad })}
     }
   }, [enableNavigationTiming, logToConsole]);
-;
+
   // Get resource timing metrics;
 :src/hooks/usePerformance.tsx;
 
     if(slowResources.length > 0 && logToConsole) {;
 
       // console.warn('Slow resources detected:', slowResources)}
-;
+
     if(slowResources.length > 0 && logToConsole) {;
       console.warn('Slow resources detected:', slowResources)}
-;
+
     return resources}, [enableResourceTiming, logToConsole]);
-;
+
   // Monitor Web Vitals;
 :src/hooks/usePerformance.tsx;
   ;
@@ -180,7 +180,7 @@ export function usePerformance(options: PerformanceOptions = {}) {;
         })});
       observerRef.current.observe({ entryTypes: ['paint'] })} catch(e) {;
       console.warn('FCP monitoring not supported')}
-;
+
     // Largest Contentful Paint;
     try {;
       lcpObserverRef.current = new PerformanceObserver((list) => {;
@@ -194,7 +194,7 @@ export function usePerformance(options: PerformanceOptions = {}) {;
       lcpObserverRef.current.observe({ entryTypes: ['largest-contentful-paint'] })} catch(e) {;
 
       // console.warn('LCP monitoring not supported')}
-;
+
         if(lastEntry) {;
           ;
           setMetrics(prev => ({ ...prev, lcp }));
@@ -202,7 +202,7 @@ export function usePerformance(options: PerformanceOptions = {}) {;
       });
       lcpObserverRef.current.observe({ entryTypes: ['largest-contentful-paint'] })} catch(e) {;
       console.warn('LCP monitoring not supported')}
-;
+
     // Cumulative Layout Shift;
     try {;
       clsObserverRef.current = new PerformanceObserver((list) => {;
@@ -221,12 +221,12 @@ export function usePerformance(options: PerformanceOptions = {}) {;
 
       // console.warn('CLS monitoring not supported')}
   }, [enableWebVitals, logToConsole]);
-;
+
   // Monitor First Input Delay;
   ;
     let firstInputTime: number | null = null;
     let firstInputDelay: number | null = null;
-;
+
             clsValue += (entry as any).value}
         }
         setMetrics(prev => ({ ...prev, cls: clsValue }));
@@ -234,30 +234,30 @@ export function usePerformance(options: PerformanceOptions = {}) {;
       clsObserverRef.current.observe({ entryTypes: ['layout-shift'] })} catch(e) {;
       console.warn('CLS monitoring not supported')}
   }, [enableWebVitals, logToConsole]);
-;
+
   // Monitor First Input Delay;
   ;
     let firstInputTime: number | null = null;
     let firstInputDelay: number | null = null;
-;
+
       firstInputTime = performance.now();
       firstInputDelay = firstInputTime - (performance.timeOrigin || 0);
-;
+
       setMetrics(prev => ({ ...prev, fid: firstInputDelay }));
       if(logToConsole) // console.log('FID:', firstInputDelay);
-;
+
 :src/hooks/usePerformance.tsx;
       // Remove listeners after first input';
       document.removeEventListener('pointerdown', firstInputHandler);
       document.removeEventListener('keydown', firstInputHandler);
       document.removeEventListener('mousedown', firstInputHandler);
       document.removeEventListener('touchstart', firstInputHandler)};
-;
+
     document.addEventListener('pointerdown', firstInputHandler);
     document.addEventListener('keydown', firstInputHandler);
     document.addEventListener('mousedown', firstInputHandler);
     document.addEventListener('touchstart', firstInputHandler)}, [enableWebVitals, logToConsole]);
-;
+
   // Start monitoring;
   ;
       // Remove listeners after first input;
@@ -265,22 +265,22 @@ export function usePerformance(options: PerformanceOptions = {}) {;
       document.removeEventListener('keydown', firstInputHandler);
       document.removeEventListener('mousedown', firstInputHandler);
       document.removeEventListener('touchstart', firstInputHandler)};
-;
+
     document.addEventListener('pointerdown', firstInputHandler);
     document.addEventListener('keydown', firstInputHandler);
     document.addEventListener('mousedown', firstInputHandler);
     document.addEventListener('touchstart', firstInputHandler)}, [enableWebVitals, logToConsole]);
-;
+
   // Start monitoring;
   ;
     setIsMonitoring(true);
-;
+
     // Monitor Web Vitals;
     monitorWebVitals();
-;
+
     // Monitor First Input;
     monitorFirstInput();
-;
+
     // Get initial metrics after page load    if(document.readyState === 'complete') {;
 
       getNavigationTiming();
@@ -289,14 +289,14 @@ export function usePerformance(options: PerformanceOptions = {}) {;
       window.addEventListener('load', () => {;
         getNavigationTiming();
         getResourceTiming()})}
-;
+
     // Monitor DOM content loaded';
     if(document.readyState === 'loading') {;
       document.addEventListener('DOMContentLoaded', getNavigationTiming)} else {;
 
       getNavigationTiming()}
   }, [isMonitoring, monitorWebVitals, monitorFirstInput, getNavigationTiming, getResourceTiming]);
-;
+
   // Stop monitoring;
   const stopMonitoring = useCallback(() => {;
     setIsMonitoring(false);
@@ -315,7 +315,7 @@ export function usePerformance(options: PerformanceOptions = {}) {;
       clsObserverRef.current.disconnect();
       clsObserverRef.current = null}
   }, []);
-;
+
   // Get performance score;
   const getPerformanceScore = useCallback(() => {;
     let score = 100;
@@ -347,7 +347,7 @@ export function usePerformance(options: PerformanceOptions = {}) {;
       else if(metrics.cls < 0.25) score -= 10;
       else score -= 25;,
 }
-;
+
     return Math.max(0, score);,
 }, [metrics]);
   // Send metrics to analytics;
@@ -357,11 +357,11 @@ export function usePerformance(options: PerformanceOptions = {}) {;
     if(window.gtag) {;
 
       window.gtag('event',performance_metrics', analyticsData)}
-;
+
     // Example: Send to Google Analytics;
     if(window.gtag) {;
       window.gtag('event', 'performance_metrics', analyticsData)}
-;
+
     // Example: Send to custom endpoint';
     fetch('/api/analytics/performance', {;
 
@@ -369,22 +369,22 @@ export function usePerformance(options: PerformanceOptions = {}) {;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON.stringify(analyticsData);,
 }).catch(console.error)}, [metrics, sendToAnalytics, getPerformanceScore]);
-;
+
   // Auto-start monitoring on mount;
   useEffect(: unknown {;
     if (enableRealUserMonitoring) {;
 :src/hooks/usePerformance.tsx;
 
       startMonitoring()}
-;
+
     return : unknown {;
       stopMonitoring()}}, [enableRealUserMonitoring, startMonitoring, stopMonitoring]);
 ';
       startMonitoring()}
-;
+
     return () => {;
       stopMonitoring()}}, [enableRealUserMonitoring, startMonitoring, stopMonitoring]);
-;
+
   // Auto-send metrics when they're complete;
   useEffect(: unknown {;
     if (sendToAnalytics && metrics.fcp && metrics.lcp && metrics.fid && metrics.cls) {;
@@ -393,7 +393,7 @@ export function usePerformance(options: PerformanceOptions = {}) {;
       sendMetricsToAnalytics()}
       sendMetricsToAnalytics()}
   }, [metrics, sendToAnalytics, sendMetricsToAnalytics]);
-;
+
   return {;
 
     metrics,;
@@ -407,7 +407,7 @@ export function usePerformance(options: PerformanceOptions = {}) {;
 :src/hooks/usePerformance.tsx;
       // // // // // // // // console.warn(`Error observing ${eventName}:`, error)}
     return : unknown observer.disconnect()}, [eventName, callback]);
-;
+
 // Hook for measuring time between renders;
 export function useRenderTime(...args: unknown[]): unknown {;
   ;
@@ -416,7 +416,7 @@ export function useRenderTime(...args: unknown[]): unknown {;
 
       // // // // // // // console.warn(`Error observing ${eventName}:`, error)}
     return () => observer.disconnect()}, [eventName, callback]);
-;
+
 // Hook for measuring time between renders;
 export function useRenderTime() {;
   ;
@@ -428,11 +428,11 @@ export function useRenderTime() {;
     // Cleanup function;,
 };,
 }, []);, []);
-;
+
     setRenderTime(time);
     renderStart.current = renderEnd});
   return renderTime}
-;
+
 // Hook for monitoring specific component performance;
 export function useComponentPerformance(componentName: string) {;
 
@@ -443,7 +443,7 @@ export function useComponentPerformance(componentName: string) {;
   useEffect(: unknown {;
     startTime.current = performance.now();
     setMountTime(startTime.current);
-;
+
     return : unknown {;
 
       setRenderTime(totalTime);
@@ -462,27 +462,27 @@ export function useComponentPerformance(componentName: string) {;
 }, []);, []);
     startTime.current = performance.now();
     setMountTime(startTime.current);
-;
+
     return () => {;
 
       setRenderTime(totalTime);
-;
+
       // Log slow components;
       if(totalTime > 16) { // 16ms = 60fps threshold;
         console.warn(`Slow component render: ${componentName} took ${totalTime.toFixed(2)}ms`)}
     }}, [componentName]);
-;
+
   return { renderTime, mountTime }}
-;
+
 // Hook for monitoring API call performance;
 export function useAPIPerformance(...args: unknown[]): unknown {;
   const [apiMetrics, setApiMetrics] = useState<Map<string, number[]>>(new Map());
-;
+
 :src/hooks/usePerformance.tsx;
 
       newMap.set(endpoint, [...existing, duration]);
       return newMap})}, []);
-;
+
 :src/hooks/usePerformance.tsx;
   ;
     if(!metrics || metrics.length === 0) return 0;
@@ -490,7 +490,7 @@ export function useAPIPerformance(...args: unknown[]): unknown {;
   ;
     if(!metrics || metrics.length === 0) return 0;
     return metrics.reduce((sum, time) => sum + time, 0) / metrics.length}, [apiMetrics]);
-;
+
   const getSlowAPIs = useCallback((threshold: number = 1000) => {;
 
     const slowAPIs: Array<{ endpoint: string; average: number }> = [];
@@ -507,7 +507,7 @@ export function useAPIPerformance(...args: unknown[]): unknown {;
         slowAPIs.push({ endpoint, average })}
     });
     return slowAPIs.sort((a, b) => b.average - a.average)}, [apiMetrics]);
-;
+
   return {;
 
     apiMetrics,;

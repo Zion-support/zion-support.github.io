@@ -443,14 +443,12 @@ export default function DigitalTransformation() {}
         </div>;
       </section>;
     </div>)}
-;
+export { DigitalTransformation, IconComponent, IconComponent, IconComponent };
 
 export { DigitalTransformation, IconComponent, IconComponent, IconComponent };
-;
+
 export { DigitalTransformation, IconComponent, IconComponent, IconComponent };
-;
+
 export { DigitalTransformation, IconComponent, IconComponent, IconComponent };
-;
-export { DigitalTransformation, IconComponent, IconComponent, IconComponent };
-;
+
 export { DigitalTransformation, IconComponent, IconComponent, IconComponent };

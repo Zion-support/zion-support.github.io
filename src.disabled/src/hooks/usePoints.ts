@@ -2,13 +2,13 @@ import { useEffect, useState, useCallback } from 'react'; // Added useCallback;
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
  from '@/types/points';
-;
+
 export function usePoints() {;
   const { user } = useAuth();
   const [ledger, setLedger] = useState<PointsLedgerEntry[]>([]);
   const [balance, setBalance] = useState(0);
   const [loading, setLoading] = useState(true);
-;
+
   const fetchLedger = useCallback(async () => { // Wrapped in useCallback;
     if(!user?.id) {;
       setLedger([]);
@@ -16,14 +16,14 @@ export function usePoints() {;
       setLoading(false);
       return;,
 }
-;
+
     setLoading(true);
     const { data, error } = await supabase;
       .from('points_ledger');
       .select('*');
       .eq('user_id', user.id);
       .order('created_at', { ascending: false });
-;
+
     if(!error && data) {;
       const entries = data as PointsLedgerEntry[];
       setLedger(entries);

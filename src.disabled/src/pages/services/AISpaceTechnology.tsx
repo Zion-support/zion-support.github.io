@@ -26,7 +26,7 @@ import { ;
   SatelliteDish;,
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-;
+
 export default function AISpaceTechnology() {;
   const features = [;
     "AI-powered satellite navigation systems",;
@@ -38,7 +38,7 @@ export default function AISpaceTechnology() {;
     "Deep space exploration AI",;
     "Space mining and resource detection";
   ];
-;
+
   const benefits = [;
     "Enhanced satellite communication reliability",;
     "Improved space mission success rates",;
@@ -49,7 +49,7 @@ export default function AISpaceTechnology() {;
     "Enhanced GPS and navigation accuracy",;
     "Revolutionary space resource discovery";
   ];
-;
+
   const pricingTiers = [;
     {;
       name: "Space Starter",;
@@ -97,7 +97,7 @@ export default function AISpaceTechnology() {;
       ];,
 }
   ];
-;
+
   const useCases = [;
     {;
       title: "Satellite Communications",;
@@ -120,7 +120,7 @@ export default function AISpaceTechnology() {;
       icon: Circle;,
 }
   ];
-;
+
   const technologies = [;
     {;
       name: "Machine Learning",;
@@ -143,7 +143,7 @@ export default function AISpaceTechnology() {;
       icon: Signal;,
 }
   ];
-;
+
   return (;
     <>;
       <SEO ;

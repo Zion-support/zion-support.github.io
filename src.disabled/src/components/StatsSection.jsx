@@ -1,5 +1,5 @@
 import React from 'react';
-;
+
 export function StatsSection() {;
   const stats = [{;
       number: '500+',;
@@ -102,5 +102,5 @@ export function StatsSection() {;
     </section>;
   );,
 }
-;
+
 export default StatsSection;

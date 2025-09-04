@@ -14,7 +14,7 @@ import { TrendingDown, ;
   Clock,;
   DollarSign;,
 } from 'lucide-react';
-;
+
 const AICustomerChurnPrediction: React.FC = (): JSX.Element => {;
   const features = [;
     {;
@@ -38,7 +38,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {;
       description: "Intelligent clustering of customers by risk level, value, and behavior patterns for targeted retention strategies.";,
 };
   ];
-;
+
   const benefits = [;
     "Reduce customer churn by 40-60%",;
     "Increase customer lifetime value by 35%",;
@@ -46,7 +46,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {;
     "Improve customer satisfaction scores by 25%",;
     "Automate 80% of retention workflows";
   ];
-;
+
   const integrations = [;
     "Salesforce, HubSpot, Pipedrive",;
     "Stripe, PayPal, Square",;
@@ -54,7 +54,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {;
     "Google Analytics, Mixpanel, Amplitude",;
     "Slack, Microsoft Teams, Email";
   ];
-;
+
   const pricing = [;
     {;
       plan: "Starter",;
@@ -79,7 +79,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {;
       popular: false;,
 };
   ];
-;
+
   return (;
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">;
       <SEO ;
@@ -97,22 +97,10 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {;
             initial = {;
   { opacity: 0,;
   y: 30 ;
-
-;
-
-;
-
-;,
 }}
             animate = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
             className="mb-8";
@@ -144,7 +132,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {;
           </motion.div>;
         </div>;
       </section>;
-;
+
       {/* Features Section */}
       <section className="py-20 bg-slate-800/50">;
         <div className="container mx-auto px-4">;
@@ -152,22 +140,10 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {;
             initial = {;
   { opacity: 0,;
   y: 30 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -188,33 +164,15 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {;
                 initial = {;
   { opacity: 0,;
   x: index % 2 === 0 ? -30 : 30 ;
-
-;
-
-;
-
-;,
 }}
                 whileInView = {;
   { opacity: 1,;
   x: 0 ;
-
-;
-
-;
-
-;,
 }}
                 viewport={{ once: true }}
                 transition = {;
   { duration: 0.8,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-red-500 transition-all duration-300";
 
@@ -236,22 +194,10 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {;
             initial = {;
   { opacity: 0,;
   y: 30 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -272,33 +218,15 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {;
                 initial = {;
   { opacity: 0,;
   y: 30 ;
-
-;
-
-;
-
-;,
 }}
                 whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
                 viewport={{ once: true }}
                 transition = {;
   { duration: 0.8,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 text-center";
 
@@ -319,22 +247,10 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {;
             initial = {;
   { opacity: 0,;
   y: 30 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -355,33 +271,15 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {;
                 initial = {;
   { opacity: 0,;
   scale: 0.8 ;
-
-;
-
-;
-
-;,
 }}
                 whileInView = {;
   { opacity: 1,;
   scale: 1 ;
-
-;
-
-;
-
-;,
 }}
                 viewport={{ once: true }}
                 transition = {;
   { duration: 0.8,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }}
                 className="bg-slate-800 p-4 rounded-lg border border-slate-700 text-center hover:border-blue-500 transition-colors";
 
@@ -399,22 +297,10 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {;
             initial = {;
   { opacity: 0,;
   y: 30 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -435,40 +321,22 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {;
                 initial = {;
   { opacity: 0,;
   y: 30 ;
-
-;
-
-;
-
-;,
 }}
                 whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
                 viewport={{ once: true }}
                 transition = {;
   { duration: 0.8,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }}
                 className={`relative bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border ${;
                   plan.popular;
                     ? 'border-red-500 shadow-lg shadow-red-500/20';
                     : 'border-slate-700';,
 }`}
-;
+
                 {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
                     <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold">;
@@ -476,7 +344,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {;
                     </span>;
                   </div>;
                 )}
-;
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.plan}</h3>;
                   <div className="flex items-baseline justify-center">;
@@ -514,26 +382,14 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {;
             initial = {;
   { opacity: 0,;
   y: 30 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-;
+
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">;
               Ready to Stop Customer Churn?;
             </h2>;
@@ -595,15 +451,15 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {;
     </div>;
   );,
 };
-;
+
 export default AICustomerChurnPrediction;}}}
-;
+
 export { AICustomerChurnPrediction };
-;
+
 export { AICustomerChurnPrediction };
-;
+
 export { AICustomerChurnPrediction };
-;
+
 export { AICustomerChurnPrediction };
-;
+
 export { AICustomerChurnPrediction };

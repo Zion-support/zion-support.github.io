@@ -431,7 +431,7 @@ export function AdvancedAIBusinessProcessAutomation() {;
                         </div>))}
                     </div>;
                   </div>) }
-;
+
                 {showAutomation && (<div>";
                     <h4 className="font-medium text-sm mb-2 flex items-center gap-2">";
                                              <Settings className="w-4 h-4 text-zion-blue"/>;

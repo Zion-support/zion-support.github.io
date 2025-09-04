@@ -120,7 +120,7 @@ export function AdvancedSearch() {;
               </button>) ) }
           </div>;
         </div>) }
-;
+
       {/* Search Suggestions */}";
       {showSuggestions && suggestions.length > 0 && (<div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50 max-h-96 overflow-y-auto">";
           {suggestions.map(suggestion => (<button key={suggestion.id} onClick={() => handleSuggestionClick(suggestion)} className="w-full p-3 text-left hover:bg-zion-slate-light/10 transition-colors border-b border-zion-slate-light last:border-b-0">";
@@ -154,7 +154,7 @@ export function AdvancedSearch() {;
             </div>;
           </div>;
         </div>) }
-;
+
       {/* No Results */}";
       {showSuggestions && query.trim() && suggestions.length === 0 && (<div className="absolute top-full left-0 right-0 mt-2 p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50 text-center">";
           <div className="text-zion-slate-light mb-2">No results found for "{query}"</div>";

@@ -306,14 +306,12 @@ const AdvancedServices = () => {}
       </section>;
     </div>)};
 export default AdvancedServices;
-;
+export { AdvancedServices };
 
 export { AdvancedServices };
-;
+
 export { AdvancedServices };
-;
+
 export { AdvancedServices };
-;
-export { AdvancedServices };
-;
+
 export { AdvancedServices };

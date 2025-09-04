@@ -49,7 +49,7 @@ import { ;
   MessageCircle,;
   Workflow as WorkflowIcon;,
 } from 'lucide-react';
-;
+
 export function ComprehensiveServicesShowcase2025() {;
   const serviceCategories = [;
     {;
@@ -283,7 +283,7 @@ export function ComprehensiveServicesShowcase2025() {;
       ];,
 }
   ];
-;
+
   const benefits = [;
     {;
       icon: Star,;
@@ -306,14 +306,14 @@ export function ComprehensiveServicesShowcase2025() {;
       description: 'Dedicated support team with deep technical expertise';,
 }
   ];
-;
+
   const stats = [;
     { number: '50+', label: 'Services & Solutions' },;
     { number: '1000+', label: 'Happy Clients' },;
     { number: '99.9%', label: 'Uptime SLA' },;
     { number: '24/7', label: 'Support Available' }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate-darker to-zion-slate-darkest">;
       {/* Hero Section */}
@@ -576,5 +576,5 @@ export function ComprehensiveServicesShowcase2025() {;
     </div>;
   );,
 }
-;
+
 export default ComprehensiveServicesShowcase2025;

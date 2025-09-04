@@ -19,13 +19,13 @@ interface SEOData {;
   ogType?: string;
   canonicalUrl?: string;
   structuredData?: object;
-;
+
 interface EnhancedSEOManagerProps {;
   // Add your props here;
 
   seoData: SEOData;
   children: React.ReactNode;
-;
+
 const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, children }) => {;
 
   useEffect(() => {;
@@ -35,7 +35,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
     ;
       // Update title;
       document.title = seoData.title;
-;
+
       // Update meta description';
       let metaDesc = document.querySelector('meta[name="description"]');
       if(!metaDesc) {;
@@ -43,9 +43,9 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
         metaDesc = document.createElement('meta');
         metaDesc.setAttribute('name',description');
         document.head.appendChild(metaDesc);
-;
+
       metaDesc.setAttribute('content', seoData.description);
-;
+
       // Update keywords'";
       let metaKeywords = document.querySelector('meta[name="keywords"]');
       if(!metaKeywords) {;
@@ -60,7 +60,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
 }
         ogTag.setAttribute('content', content) ;,
 };
-;
+
       if(seoData.ogImage) updateOGTag('og:image', seoData.ogImage) ;
       if(seoData.ogType) updateOGTag('og:type', seoData.ogType) ;
       updateOGTag('og:title', seoData.title) ;
@@ -75,7 +75,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
 }
         twitterTag.setAttribute('content', content) ;,
 };
-;
+
       updateTwitterTag('twitter:card', 'summary_large_image') ;
       updateTwitterTag('twitter:title', seoData.title) ;
       updateTwitterTag('twitter:description', seoData.description) ;
@@ -105,7 +105,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
 }
     };
     updateMetaTags () ;
-;
+
     // Cleanup function;
     return () => {;
       // Remove dynamically added meta tags on unmount;
@@ -113,7 +113,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       dynamicTags.forEach(tag => tag.remove () ) ;,
 };,
 }, [seoData]) ;
-;
+
   return (<>      <Helmet>;
         <title>{seoData.title}</title>";
         <meta name = "description" content={seoData.description} />";

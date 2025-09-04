@@ -63,14 +63,12 @@ export default function CreatePostPage() {}
         ;
         <PostForm initialValues={initialValues} onSubmit={handleSubmit}/>;
       </div>)}
-;
+export { CreatePostPage };
 
 export { CreatePostPage };
-;
+
 export { CreatePostPage };
-;
+
 export { CreatePostPage };
-;
-export { CreatePostPage };
-;
+
 export { CreatePostPage };

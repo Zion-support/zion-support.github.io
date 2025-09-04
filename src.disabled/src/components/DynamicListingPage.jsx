@@ -43,7 +43,7 @@ export default function Page() {;
                             category: listing.category,;
                             image: listing.images?.[0];,
 }) ;
-;,
+
 }, 500) ;,
 };
     return (<div className="min - h-screen bg-zion - blue py-12 px-4">;
@@ -71,7 +71,7 @@ export default function Page() {;
             console.log("Category selected:",;
   value) ;
             setSelectedCategory(value) ;
-;,
+
 }}>;
                   <SelectTrigger className="bg-zion - blue border border-zion - blue - light text-white">;
                     <SelectValue placeholder="Select Category"/>;
@@ -111,7 +111,7 @@ export default function Page() {;
                 console.log("Rating selected:",;
   rating) ;
                 setSelectedRating(rating) ;
-;,
+
 }} aria-pressed={selectedRating === rating} className={`${selectedRating === rating;
                 ? "bg-zion - purple / 30 border-zion - purple text-zion - purple";
                 : "border-zion - blue - light text-zion - slate - light"} focus - visible:ring - zion - purple`}>;
@@ -123,7 +123,7 @@ export default function Page() {;
                 </div>;
               </div>;
             // // // // // // // console.log("Resetting filters") ;
-;
+
               <Button variant="outline" className="w-full border-zion - purple text-zion - purple hover:bg-zion -purple / 10" onClick = { () => {;
             console.log("Resetting filters") ;
             setSearchQuery("") ;
@@ -131,7 +131,7 @@ export default function Page() {;
             setCurrentPriceFilter([0,;
   priceRange.max]) ;
             setSelectedRating(null) ;
-;,
+
 }}>;
                 Reset Filters;
               </Button>;
@@ -148,7 +148,7 @@ export default function Page() {;
             console.log("Search query:",;
   e.target.value) ;
             setSearchQuery(e.target.value) ;
-;,
+
 }} className="pl - 10 bg-zion - blue border border-zion - blue - light text-white"/>;
                 </div>;
 
@@ -212,12 +212,12 @@ export default function Page() {;
                   setCurrentPriceFilter([0,;
   priceRange.max]) ;
                   setSelectedRating(null) ;
-;,
+
 }} className="border-zion - purple text-zion - purple hover:bg-zion -purple / 10">;
                   Clear all filters;
                 </Button>;
               </div>) }
-;
+
             {totalPages > 1 && (<div className="mt-8">;
                 <Pagination className="justify -center">;
                   <PaginationContent>;
@@ -226,7 +226,7 @@ export default function Page() {;
                         e.preventDefault () ;
                         setCurrentPage(Math.max (1,;
   currentPage - 1) ) ;
-;,
+
 }}/>;
                     </PaginationItem>;
                     {Array.from({ length: totalPages }, (_, i) => i + 1) .map((page) => (<PaginationItem key={page}>;
@@ -242,7 +242,7 @@ export default function Page() {;
                         e.preventDefault () ;
                         setCurrentPage(Math.min (totalPages,;
   currentPage + 1) ) ;
-;,
+
 }}/>;
                     </PaginationItem>;
                   </PaginationContent>;

@@ -22,7 +22,7 @@ import { ;
   Globe,;
   Lock;,
 } from 'lucide-react';
-;
+
 export function AIAutonomousBusinessIntelligencePlatform() {;
   const features = [;
     {;
@@ -56,7 +56,7 @@ export function AIAutonomousBusinessIntelligencePlatform() {;
       description: "Share insights, create collaborative dashboards, and enable data-driven decision making across teams.";,
 }
   ];
-;
+
   const pricingPlans = [;
     {;
       name: "Starter",;
@@ -109,7 +109,7 @@ export function AIAutonomousBusinessIntelligencePlatform() {;
       popular: false;,
 }
   ];
-;
+
   const benefits = [;
     {;
       icon: Clock,;
@@ -132,7 +132,7 @@ export function AIAutonomousBusinessIntelligencePlatform() {;
       description: "Uncover patterns and correlations that traditional analysis methods might miss.";,
 }
   ];
-;
+
   const useCases = [;
     {;
       title: "Sales Performance Optimization",;
@@ -155,7 +155,7 @@ export function AIAutonomousBusinessIntelligencePlatform() {;
       icon: Activity;,
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate-darker to-zion-slate-darkest">;
       {/* Hero Section */}
@@ -398,5 +398,5 @@ export function AIAutonomousBusinessIntelligencePlatform() {;
     </div>;
   );,
 }
-;
+
 export default AIAutonomousBusinessIntelligencePlatform;

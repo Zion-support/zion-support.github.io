@@ -1,7 +1,5 @@
 import { Link  } from 'react-router-dom';
 export default function Page() {;
-;
-;
   return (<div  className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light text-white relative overflow-hidden">;
       {/* Animated Background */}
       <div  className="absolute inset -0">;
@@ -102,7 +100,7 @@ export default function Page() {;
           </div>;
         </div>;
       </section>;
-;
+
       {/* Services Grid / List */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
         <div  className="max - w-7xl mx -auto">;

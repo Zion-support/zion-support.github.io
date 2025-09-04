@@ -41,16 +41,16 @@ import { ;
   Handshake;,
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-;
+
 interface SidebarProps {;
   isOpen: boolean;
   onToggle: () => void;,
 }
-;
+
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {;
   const location = useLocation();
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
-;
+
   const toggleSection = (section: string) => {;
     setExpandedSections(prev => ;
       prev.includes(section) ;
@@ -58,7 +58,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {;
         : [...prev, section];
     );,
 };
-;
+
   const navigationSections = [;
     {;
       id: 'main',;
@@ -220,12 +220,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {;
       ];,
 }
   ];
-;
+
   const contactInfo = {;
     phone: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup.com';,
 };
-;
+
   return (;
     <AnimatePresence>;
       {isOpen && (;
@@ -348,5 +348,5 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {;
     </AnimatePresence>;
   );,
 };
-;
+
 export default Sidebar;

@@ -402,14 +402,12 @@ const EmergingTech = () => {}
       </div>;
     </div>)};
 export default EmergingTech;
-;
+export { EmergingTech };
 
 export { EmergingTech };
-;
+
 export { EmergingTech };
-;
+
 export { EmergingTech };
-;
-export { EmergingTech };
-;
+
 export { EmergingTech };

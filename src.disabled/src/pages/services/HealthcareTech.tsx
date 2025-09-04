@@ -2,7 +2,7 @@ import React from 'react';
 import { SEO } from "../../components/SEO";
 import { motion } from 'framer-motion';
 import { Heart, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Stethoscope, Microscope, Pill, Brain } from 'lucide-react';
-;
+
 export default function HealthcareTech(...args: []):  {;
   const features = [;
     {;
@@ -42,7 +42,7 @@ export default function HealthcareTech(...args: []):  {;
       color: 'from-indigo-500 to-purple-500';,
 };
   ];
-;
+
   const services = [;
     {;
       title: 'Healthcare AI Platform',;
@@ -69,7 +69,7 @@ export default function HealthcareTech(...args: []):  {;
       features: ['Device connectivity', 'Data collection', 'Real-time monitoring', 'Alert systems'];,
 };
   ];
-;
+
   const applications = [;
     { name: 'Diagnostics', icon: Microscope, description: 'AI-powered disease detection' },;
     { name: 'Telemedicine', icon: Activity, description: 'Remote patient consultations' },;
@@ -78,7 +78,7 @@ export default function HealthcareTech(...args: []):  {;
     { name: 'Medical Imaging', icon: Brain, description: 'Radiology and pathology analysis' },;
     { name: 'Clinical Trials', icon: FileText, description: 'Research and trial management' };
   ];
-;
+
   return (;
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO ;
@@ -94,22 +94,10 @@ export default function HealthcareTech(...args: []):  {;
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             animate = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto";
@@ -156,22 +144,10 @@ export default function HealthcareTech(...args: []):  {;
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16";
@@ -192,32 +168,14 @@ export default function HealthcareTech(...args: []):  {;
                 initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
                 whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
                 transition = {;
   { duration: 0.6,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300";
 
@@ -239,22 +197,10 @@ export default function HealthcareTech(...args: []):  {;
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16";
@@ -275,32 +221,14 @@ export default function HealthcareTech(...args: []):  {;
                 initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
                 whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
                 transition = {;
   { duration: 0.6,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300";
 
@@ -335,22 +263,10 @@ export default function HealthcareTech(...args: []):  {;
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16";
@@ -371,32 +287,14 @@ export default function HealthcareTech(...args: []):  {;
                 initial = {;
   { opacity: 0,;
   scale: 0.8 ;
-
-;
-
-;
-
-;,
 }}
                 whileInView = {;
   { opacity: 1,;
   scale: 1 ;
-
-;
-
-;
-
-;,
 }}
                 transition = {;
   { duration: 0.6,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }}
                 className="text-center group";
 
@@ -418,25 +316,13 @@ export default function HealthcareTech(...args: []):  {;
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.6 }}
-;
+
             <h2 className="text-4xl font-bold text-white mb-6">;
               Ready to Transform Healthcare?;
             </h2>;
@@ -465,13 +351,13 @@ export default function HealthcareTech(...args: []):  {;
     </div>;
   );,
 }}}}
-;
+
 export { HealthcareTech };
-;
+
 export { HealthcareTech };
-;
+
 export { HealthcareTech };
-;
+
 export { HealthcareTech };
-;
+
 export { HealthcareTech };

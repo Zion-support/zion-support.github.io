@@ -1,5 +1,3 @@
 // comment;
-export const cache = {}
-;
-
-export default cache
+export const cache = {};
+export default cache;

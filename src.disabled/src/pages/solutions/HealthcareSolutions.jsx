@@ -213,13 +213,13 @@ export default function HealthcareSolutions() {;
       </section>;
     </div>);,
 }}}}
-;
+
 export { HealthcareSolutions, Icon };
-;
+
 export { HealthcareSolutions, Icon };
-;
+
 export { HealthcareSolutions, Icon };
-;
+
 export { HealthcareSolutions, Icon };
-;
+
 export { HealthcareSolutions, Icon };

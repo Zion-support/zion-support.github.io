@@ -5,17 +5,17 @@ import React from 'react'; const HeroStats = memo(({ stats }) => ( <div classNam
   const [isLoaded, setIsLoaded] = useState();,
 }
   useEffect(() => {}
-;
+
     const timer = setTimeout(() => setIsVisible(true), 100);,
 }
     const loadTimer = setTimeout(() => setIsLoaded(true), 500);,
 }
     return () => {}
-;
+
       clearTimeout();,
 }
       clearTimeout(loadTimer)}
-;,
+
 }, []);,
 }
   const stats = []";
@@ -66,7 +66,7 @@ import React from 'react'; const HeroStats = memo(({ stats }) => ( <div classNam
       label: "Service Coverage,";
       icon: "🌍,";
       color: "from-green-400 to-teal-400"}
-;
+
   ]";
   if (!isVisible) {}
 """;
@@ -142,7 +142,7 @@ import React from 'react'; const HeroStats = memo(({ stats }) => ( <div classNam
                 animationDelay: "${Math.random() * 20}s", """""""";
                 animationDuration: "${20 + Math.random() * 10}s"}}""">""";
               {Math.random() > 0.5 ? "1" : "0"}
-;
+
             </div>;
           ))}";
         </div>;
@@ -217,20 +217,18 @@ future.;
             aria-hidden="true"""></div>;
         </>;
       )}
-;
+
     </section>;
   );,
 });';
 PerformanceOptimizedHero.displayName = 'PerformanceOptimizedHero';
 export default PerformanceOptimizedHero;
-;
+export { HeroStats, PerformanceOptimizedHero };
 
 export { HeroStats, PerformanceOptimizedHero };
-;
+
 export { HeroStats, PerformanceOptimizedHero };
-;
+
 export { HeroStats, PerformanceOptimizedHero };
-;
-export { HeroStats, PerformanceOptimizedHero };
-;
+
 export { HeroStats, PerformanceOptimizedHero };

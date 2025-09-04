@@ -1,7 +1,7 @@
 import React from 'react';
 import { Database, Check, ArrowRight } from 'lucide-react';
 import { SEO } from '../../components/SEO';
-;
+
 export default function AIIdentityManagement() {;
   const features = [;
     'Automated identity verification and validation',;
@@ -11,7 +11,7 @@ export default function AIIdentityManagement() {;
     'Real-time identity analytics and insights',;
     'Custom AI models for identity applications';
   ];
-;
+
   const tiers = [;
     {;
       name: 'Starter',;
@@ -29,7 +29,7 @@ export default function AIIdentityManagement() {;
       details: ['All identity features', 'Dedicated support', 'Unlimited users'];,
 }
   ];
-;
+
   return (;
     <>;
       <SEO ;

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
-;
+
 [];
   recentSuggestions: {;
     id: string;
@@ -15,7 +15,7 @@ import { supabase } from '@/integrations/supabase/client';
   isLoading: boolean;
   error: string | null;,
 }
-;
+
 export function usePricingSuggestionAnalytics(days = 30) {;
   const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({;
     totalSuggestions: 0,;
@@ -26,12 +26,12 @@ export function usePricingSuggestionAnalytics(days = 30) {;
     isLoading: true,;
     error: null;,
 });
-;
+
   const fetchAnalytics = useCallback(async () => {;
     setAnalytics(prev => ({ ...prev, isLoading: true, error: null }));
     try {;
       await new Promise(resolve => setTimeout(resolve, 1000));
-;
+
       const mockData = {;
         totalSuggestions: 256,;
         acceptanceRate: 0.72,;
@@ -53,13 +53,13 @@ export function usePricingSuggestionAnalytics(days = 30) {;
           type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent',;,
 }));,
 };
-;
+
       setAnalytics({;
         ...mockData,;
         isLoading: false,;
         error: null;,
 });
-;,
+
 } catch(error) {;
       console.error("Error fetching pricing suggestion analytics:", error);
       setAnalytics(prev => ({ ;
@@ -69,12 +69,12 @@ export function usePricingSuggestionAnalytics(days = 30) {;
 }));,
 }
   }, [days]);
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
     fetchAnalytics();,
 }, [fetchAnalytics]);
-;
+
   return analytics;,
 }

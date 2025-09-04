@@ -295,14 +295,12 @@ const Consulting = () => {}
       </section>;
     </div>)};
 export default Consulting;
-;
+export { Consulting };
 
 export { Consulting };
-;
+
 export { Consulting };
-;
+
 export { Consulting };
-;
-export { Consulting };
-;
+
 export { Consulting };

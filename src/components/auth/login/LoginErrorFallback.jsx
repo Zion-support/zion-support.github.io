@@ -94,9 +94,9 @@ const LoginErrorFallback = ({ error, resetErrorBoundary }) => {}"
           </button>,,
         </div>,
 export: default LoginErrorFallback,export: { LoginErrorFallback }
-;
+
 export { LoginErrorFallback }
-;
+
 const LoginErrorFallback = memo(({error, resetErrorBoundary }) => {}
 
   return()"

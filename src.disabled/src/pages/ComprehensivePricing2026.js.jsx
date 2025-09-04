@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-;
-;
 const ComprehensivePricing2026 = () => {;
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [billingCycle, setBillingCycle] = useState('monthly');
@@ -479,14 +477,12 @@ const ComprehensivePricing2026 = () => {;
       </section>;
     </div>)};
 export default ComprehensivePricing2026;
-;
+export { ComprehensivePricing2026 };
 
 export { ComprehensivePricing2026 };
-;
+
 export { ComprehensivePricing2026 };
-;
+
 export { ComprehensivePricing2026 };
-;
-export { ComprehensivePricing2026 };
-;
+
 export { ComprehensivePricing2026 };

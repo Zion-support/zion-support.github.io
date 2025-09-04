@@ -38,7 +38,7 @@ export const Button: React.FC<ButtonProps> = ({ children,"
 
     </button>
   )}
-;
+
   return (";
     <button type = "{type}"";
       className="{classes}"";

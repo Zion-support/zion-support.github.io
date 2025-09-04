@@ -1,5 +1,5 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-;
+
 export default function Page() {;
 interface DataVisualizationProps extends React.PropsWithChildren<{}> {;
 
@@ -7,7 +7,7 @@ interface DataVisualizationProps extends React.PropsWithChildren<{}> {;
   showMetrics?: boolean;
   showCharts?: boolean;
   showActions?: boolean}
-;
+
 export const DataVisualization: React.FC<DataVisualizationProps> = ({;
 
 title:  "Data Analytics Dashboard",;
@@ -16,7 +16,7 @@ title:  "Data Analytics Dashboard",;
   showActions = true}) => {;
   const [selectedTimeRange, setSelectedTimeRange] = useState('7d');
   const [isLoading, setIsLoading] = useState(false);  const [activeChart, setActiveChart] = useState<any>('bar');
-;
+
   // Sample data - in a real app, this would come from an API;
   const [chartData, setChartData] = useState<any>({;
 
@@ -30,7 +30,7 @@ title:  "Data Analytics Dashboard",;
       borderWidth: 2;,
 }];,
 }) ;
-;
+
   const [metrics, setMetrics] = useState<any> ([{;
 
       title: 'Total Revenue',;
@@ -64,12 +64,12 @@ title:  "Data Analytics Dashboard",;
       icon: <Activity className="w-5 h-5"  />,;
       color: 'text-purple-400'};
   ]) ;
-;
+
   // Simulate data refresh;
   ;
     setIsLoading(true) ;    // Simulate API call;
     await new Promise(resolve => setTimeout (resolve, 1000) ) ;
-;
+
     // Update chart data with new random values;
 setChartData(prev:  > ({;
       ...prev,;
@@ -86,9 +86,9 @@ setChartData(prev:  > ({;
       changeType: Math.random() > 0.6 ? 'increase' :';
                  Math.random() > 0.3 ? 'decrease' : 'neutral';,
 })));
-;
+
     setIsLoading(false) };
-;
+
   // Get change icon and color';
   labels: ['AI Services',Cloud Solutions',Security',Consulting',Development'],;
     datasets: [{;

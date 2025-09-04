@@ -1,8 +1,6 @@
 import { Link } from 'react - router - dom';''';
 import React from 'react';
-;
-;
-;
+
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star } from "lucide-react";
 export function ContactInfo() {;
@@ -251,4 +249,4 @@ export function ContactInfo() {;
 """""';
 ";
 
-export default Component
+export default Component;

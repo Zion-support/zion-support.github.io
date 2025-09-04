@@ -201,14 +201,12 @@ export default function Page() {}
       </div>;
       ;
     </>)}
-;
+export { SavedTalentsPage };
 
 export { SavedTalentsPage };
-;
+
 export { SavedTalentsPage };
-;
+
 export { SavedTalentsPage };
-;
-export { SavedTalentsPage };
-;
+
 export { SavedTalentsPage, Page };

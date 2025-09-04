@@ -175,7 +175,7 @@ import React, { useState } from 'react';                <Clock className="w-5 h-
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3"/>                      <span className="text-green-400">;
                         Thank you! We've received your quote request and will respond within 24 hours.</span>;
                     </motion.div>)}
-;
+
                   {submissionStatus === 'error' && (<motion.div initial = {;
 
   { opacity: 0,;
@@ -316,14 +316,12 @@ import React, { useState } from 'react';                <Clock className="w-5 h-
         </div>;
       </section>;
     </div>)}
-;
+export { RequestQuote };
 
 export { RequestQuote };
-;
+
 export { RequestQuote };
-;
+
 export { RequestQuote };
-;
-export { RequestQuote };
-;
+
 export { RequestQuote };

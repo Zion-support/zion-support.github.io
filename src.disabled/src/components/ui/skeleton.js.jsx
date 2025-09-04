@@ -8,14 +8,12 @@ function Skeleton({ className, ...props }) {}
   );,
 }
 export { Skeleton };
-;
+export { Skeleton };
 
 export { Skeleton };
-;
+
 export { Skeleton };
-;
+
 export { Skeleton };
-;
-export { Skeleton };
-;
+
 export { Skeleton };

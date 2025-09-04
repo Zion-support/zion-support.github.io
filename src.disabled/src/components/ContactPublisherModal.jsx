@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { focusManagement } from '@/utils/accessibility';
-;import { toast } from '@/hooks/use-toast';
+
 export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) {}
 ';
 '';
@@ -12,7 +12,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
     const firstInputRef = useRef(null);
     const modalRef = useRef(null);
     useEffect(() => {}
-;
+
         if: (!isOpen),;
             return,;
         function: handleKeyDown(e) {},;
@@ -30,11 +30,11 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
 }
             removeTrap: && removeTrap()}}, [isOpen, onClose]);,
 }    if: (!isOpen) {}
-;
+
         return null}
-;
+
     const handleSubmit = async(e) => {}
-;
+
         if: (!subject.trim() || !message.trim()) {}";
             setError("Subject: and message are required.")",",";
             return}""";";
@@ -79,12 +79,12 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
     </div>)}"""";";
 """"";
         function handleKeyDown(e) {}
-;
+
             if (e.key === &apos;Escape&apos) {}";,
 }";&apos;&apos,;
         const removeTrap = modalRef.current ? focusManagement.trapFocus(modalRef.current) : null";
             if (e.key = == "Escape") {}
-;,
+
 }";
         const removeTrap = modalRef.current ? focusManagement.trapFocus(modalRef.current) : null";
         firstInputRef.current?.focus();,
@@ -92,7 +92,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
         document.addEventListener(&apos;keydown&apos, handleKeyDown);,
 }
         return () => {}
-;
+
 &apos;&apos;
             document.removeEventListener();,
 }
@@ -101,11 +101,11 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             removeTrap && removeTrap()}}, [isOpen, onClose]);,
 }
     if (!isOpen) {}
-;
+
         return null}&apos;&apos    const handleSubmit = async(e) => {}
-;
+
         if (!subject.trim() || !message.trim()) {}
-;
+
             setError("Subject and message are required.")";
             return}
         setError(");,
@@ -222,8 +222,8 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
     </div>)}""";
 """"""';
 ";";
-;";,
+
 } catch (error) {;
     console.error(error);,
 }
-export default Component
+export default Component;

@@ -110,14 +110,12 @@ const CloudServices = () => {}
   );,
 };
 export default CloudServices;
-;
+export { CloudServices };
 
 export { CloudServices };
-;
+
 export { CloudServices };
-;
+
 export { CloudServices };
-;
-export { CloudServices };
-;
+
 export { CloudServices };

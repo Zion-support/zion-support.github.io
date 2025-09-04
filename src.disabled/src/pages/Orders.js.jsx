@@ -87,14 +87,12 @@ export default function OrdersPage() {}
           </TableBody>;
         </Table>)}
     </div>)}
-;
+export { OrdersPage };
 
 export { OrdersPage };
-;
+
 export { OrdersPage };
-;
+
 export { OrdersPage };
-;
-export { OrdersPage };
-;
+
 export { OrdersPage };

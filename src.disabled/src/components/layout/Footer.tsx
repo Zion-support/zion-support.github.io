@@ -60,11 +60,11 @@ import {;
   Home,;
   Leaf;,
 } from 'lucide-react';
-;
+
 export function Footer() {;
 
   const currentYear = new Date().getFullYear();
-;
+
   const footerSections = [;
     {;
 
@@ -139,7 +139,7 @@ export function Footer() {;
       ];,
 }
   ];
-;
+
   const quickLinks = [;
     { name: "About Us", href: "/about", icon: Building2 },;
     { name: "Services", href: "/services", icon: Server },;
@@ -150,7 +150,7 @@ export function Footer() {;
     { name: "Support", href: "/help-center", icon: HelpCircle },;
     { name: "Documentation", href: "/documentation", icon: BookOpen }
   ];
-;
+
   const contactInfo = [;
     {;
 
@@ -171,7 +171,7 @@ export function Footer() {;
       href: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709";,
 }
   ];
-;
+
   const socialLinks = [;
     { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },;
     { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },;
@@ -179,7 +179,7 @@ export function Footer() {;
     { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook },;
     { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram }
   ];
-;
+
   return (;
     <footer className="bg-zion-slate-darker border-t border-zion-purple/20">;
       {/* Main Footer Content */}

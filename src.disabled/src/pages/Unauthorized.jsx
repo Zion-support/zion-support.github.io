@@ -25,15 +25,13 @@ import { ShieldAlert export default function Unauthorized() {;
       </div>;
       ;
     </>)}
-;
+export { Unauthorized };
 
 export { Unauthorized };
-;
+
 export { Unauthorized };
-;
+
 export { Unauthorized };
-;
-export { Unauthorized };
-;
+
 export { Unauthorized };
 }

@@ -151,14 +151,12 @@ const Navigation = () => {}
         </div>)}
     </nav>)};
 export default Navigation;
-;
+export { Navigation, Icon, Icon };
 
 export { Navigation, Icon, Icon };
-;
+
 export { Navigation, Icon, Icon };
-;
+
 export { Navigation, Icon, Icon };
-;
-export { Navigation, Icon, Icon };
-;
+
 export { Navigation, Icon, Icon };

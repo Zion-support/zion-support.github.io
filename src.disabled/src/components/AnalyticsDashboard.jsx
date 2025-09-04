@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react';
-;
+
 export const AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {;
     const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({;
         enableTracking: true,;
@@ -76,7 +76,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             return `${(num / 1000).toFixed(1)}K`;
         return num.toString()};
     return (<div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>      {/* Header */}
-;,
+
 }
   };
   // Update summary when events change;
@@ -101,11 +101,11 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                 className = "{"w-2" h-2 rounded-full ${isTracking ? "bg-green-400" : "bg-red-400"}"}"></div>"{isTracking ? "Tracking" : "Stopped"}";
             </div>;
             {/* comment */}
-;
+
             <select;";
               value = "{selectedTimeRange}
               onChange="{e" => {}
-;
+
                 setSelectedTimeRange(e.target.value);,
 }
                 handleDashboardInteraction(&apos;time_range_changed&apos, {}";
@@ -142,7 +142,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 
                 isExpanded ? "Collapse dashboard"  : "Expand dashboard"}",;
             >""{isExpanded ? "−" : }
-;
+
             </button>;
           </div>;
 ""{/* comment */}"";";
@@ -206,7 +206,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
           Real-time Events""{showRealTime && (",";
             <div className = "w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>,;
           )}
-;
+
         </h4>;
 "";";
         <div className="space-y-2 max-h-32 overflow-y-auto">;
@@ -235,7 +235,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                   </span>"";";
                   <span className = "text-gray-800 dark: text-gray-200">,;
                     {event.action}
-;
+
                   </span>;
                 </div>"";";
                 <span className = "text - xs text-gray-500">,;
@@ -251,7 +251,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
               className = "p-1 hover: bg-white/20 rounded transition-colors",";
               aria-label="{}";
 ";
-;
+
 """;
                 isExpanded ? "Collapse dashboard" : "Expand dashboard""}"">"""{isExpanded ? "−" : }";
             </button>;
@@ -366,7 +366,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
           Real-time Events&apos;&apos,{showRealTime && (&apos;&apos,"&apos,&apos}";
             <div className="&apos;w-2" h-2 bg-green-500 rounded-full animate-pulse&apos;>&apos,</div>;
           )}
-;
+
         </h4>&apos;&apos,;
 &apos;&apos,&apos;&apos,";
         <div className="&apos;space-y-2" max-h-32 overflow-y-auto&apos;>;
@@ -376,14 +376,14 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             .reverse();,
 }
             .map(event = > (&apos}
-;
+
               <div&apos;&apos>;
                 key={event.id}&apos;&apos,";";
                 className="&apos;flex" items-center justify-between text-sm p-2 bg-gray-50 dark: bg-gray-700 rounded&apos,&apos,&apos;>"&apos;&apos,&apos;&apos,",;
                 <div className="&apos;flex" items-center gap-2&apos;>"&apos,;
                   <span",";
                     className = "{"w-2" h-2 rounded-full ${}
-;
+
                       event.category === &apos;interaction&apos;&apos;
                         ? &apos;bg-blue-500&apos;&apos;
                         : event.category === &apos;performance&apos;&apos;
@@ -445,7 +445,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                 </div>"";
                 <span className="text-xs text-gray-500">;
                   {new Date(event.timestamp).toLocaleTimeString()}
-;
+
                 </span>;
               </div>;
             ))}";
@@ -454,7 +454,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
               No events tracked yet;
             </div>;
           )}
-;
+
         </div>;
       {/* comment */}""{isExpanded && ("";";
         <div className="border-t border-gray-200 dark: border-gray-700 p-4 bg-gray-50 dark:bg-gray-800">",";
@@ -497,7 +497,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                   </span>",";
                   <span className = "font-medium">,;
                     {performanceMetrics.cumulativeLayoutShift.toFixed(3)}
-;
+
                   </span>;
                 </div>;
           )}";
@@ -522,7 +522,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
               No events tracked yet,;
             </div>;
           )}
-;
+
         </div>;
       {/* comment */}&apos;&apos,{isExpanded && (&apos;&apos,&apos;&apos}
         <div className="&apos;border-t" border-gray-200 dark: border-gray-700 p-4 bg-gray-50 dark:bg-gray-800&apos,>"&apos,&apos,&apos,&apos,";
@@ -606,11 +606,11 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                   </span>"";
                   <span className="font-medium">,;
                     {performanceMetrics.cumulativeLayoutShift.toFixed(3)}
-;
+
                   </span>;
                 </div>;
           )}
-;
+
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
           <div className="&apos;mb-4" p-3 bg-green-50 dark: bg-green-900/20 rounded-lg&apos,>"&apos,&apos,&apos,&apos,";
             <h5 className="&apos,font-medium" text-green-800 dar,k: text-green-200 mb-2&apos,>";
@@ -618,7 +618,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             </h5>&apos;&apos,&apos;&apos,",;
             <div className = "&apos,space-y-2&apos,">;
               {getEventsByCategory().map(item => (&apos}
-;
+
                 <div&apos;&apos>;
                   key={item.category}&apos;&apos,";";
                   className="&apos;flex" items-center justify-between&apos;&apos,&apos;>"&apos;&apos,&apos;&apos;";
@@ -648,16 +648,16 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 ";
 "">;
                           width: "${(item.count / Math.max(...getEventsByCategory().map(e = > e.count))) * 100}%"}}
-;
+
                       ></div>;
                     </div>"";";
                     <span className = "text-green-700 dark: text-green-300 text-sm font-medium w-8 text-right">,;
                       {item.count}
-;
+
                     </span>;
                   </div>;
               ))}
-;
+
             </div>;
           {/* comment */}""{currentSession && ("";";
             <div className="mb-4 p-3 bg-purple-50 dark: bg-purple-900/20 rounded-lg">",";
@@ -671,7 +671,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                   </span>",";
                   <span className = "font-medium font-mono text-xs">,;
                     {currentSession.id.slice(-8)}
-;
+
                   </span>;
                 </div>"";";
                 <div className="flex justify-between">"";";
@@ -680,7 +680,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                   </span>",";
                   <span className = "font-medium capitalize">,;
                     {currentSession.deviceInfo.type}
-;
+
                   </span>;
                 </div>"";";
                 <div className="flex justify-between">"";";
@@ -689,7 +689,7 @@ Screen: ",",;
                   </span>",";
                   <span className = "font-medium">,;
                     {currentSession.deviceInfo.screen.width}×{currentSession.deviceInfo.screen.height}
-;
+
                   </span>;
                 </div>"";";
                 <div className="flex justify-between">"";";
@@ -697,7 +697,7 @@ Screen: ",",;
 Referrer:",";
                   </span>",";
                   <span className = "font-medium text-xs max-w-32 truncate">"{currentSession.referrer || "Direct"}
-;
+
                   </span>;
                 </div>;
                       >&apos;&apos;</div>&apos;&apos,&apos;&apos,;
@@ -708,11 +708,11 @@ Referrer:",";
                     </div>"";
                     <span className = "text-green-700 dark: text-green-300 text-sm font-medium w-8 text-right">,;
                       {item.count}
-;
+
                     </span>;
                   </div>;
               ))}
-;
+
             </div>;
           {/* comment */}&apos;&apos,{currentSession && (&apos;&apos,&apos;&apos}
             <div className="&apos;mb-4" p-3 bg-purple-50 dark: bg-purple-900/20 rounded-lg&apos,>"&apos,&apos,&apos;&apos;";
@@ -787,7 +787,7 @@ Referrer: """;
                   </span>;
                 </div>;
           )}
-;
+
         </div>;
       )}";
 ""{/* comment */}"";";
@@ -797,7 +797,7 @@ Referrer: """;
       <div className="&apos;p-4" border-t border-gray-200 dark:border-gray-700 bg-gray-50 dar,k: bg-gray-800&apos,>"&apos,&apos,&apos;&apos,",;
         <div className="&apos;flex" gap-2&apos;>&apos,";
           <button onClick = "{()" => {}
-;
+
               handleDashboardInteraction();,
 }
               updateAnalyticsSummary()";&apos}}&apos;&apos,";";
@@ -806,7 +806,7 @@ Referrer: """;
             Refresh Data&apos,;
           </button>";
           <button onClick = "{()" => {}
-;
+
               handleTrackConversion()";
               handleDashboardInteraction(&apos;conversion_tracked&apos)";&apos}}&apos;&apos,";";
             className="&apos;px-3" py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2&apos,&apos,&apos;>"&apos;&apos,&apos;&apos,",;
@@ -816,7 +816,7 @@ Referrer: """;
       <div className = "p-4 border-t border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-800">"";
         <div className="flex gap-2">",;
           <button onClick="{()" => {}
-;
+
 ";
               handleDashboardInteraction();,
 }
@@ -827,7 +827,7 @@ Referrer: """;
             Refresh Data,,;
           </button>,";
           <button onClick = "{()" => {}
-;
+
               handleTrackConversion()";
               handleDashboardInteraction("conversion_tracked")";"}}"";";
             className="px-3 py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">"";";
@@ -845,7 +845,7 @@ Referrer: """;
             Refresh Data,;
           </button>",;
           <button onClick="{()" => {}
-;
+
               handleTrackConversion()";
               handleDashboardInteraction("conversion_tracked")";"}}"";
             className = "px-3 py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2""">""";

@@ -53,7 +53,7 @@ import { ;
   Mail,;
   MapPin;,
 } from 'lucide-react';
-;
+
 export default function AIComplianceCopilot() {;
   const features = [;
     {;
@@ -87,7 +87,7 @@ export default function AIComplianceCopilot() {;
       description: 'Streamlined communication and coordination across compliance teams';,
 }
   ];
-;
+
   const benefits = [;
     'Reduce compliance costs by up to 60%',;
     'Automate 80% of routine compliance tasks',;
@@ -96,7 +96,7 @@ export default function AIComplianceCopilot() {;
     'Scalable for enterprise organizations',;
     '24/7 compliance monitoring and reporting';
   ];
-;
+
   const useCases = [;
     {;
       industry: 'Financial Services',;
@@ -115,7 +115,7 @@ export default function AIComplianceCopilot() {;
       description: 'Data privacy compliance, cybersecurity standards, and software licensing compliance';,
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-zion-blue">;
       <Helmet>;

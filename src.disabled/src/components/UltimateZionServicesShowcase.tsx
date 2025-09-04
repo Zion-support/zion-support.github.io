@@ -2,7 +2,7 @@
 const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-;
+
   const categories = [{ id: 'all', name: 'All Services', icon: '🌟', color: 'from - purple - 600 to - pink - 600' },;
     { id: 'quantum - computing', name: 'Quantum Computing', icon: '⚛️', color: 'from - blue - 600 to - cyan - 600' },;
     { id: 'blockchain - web3', name: 'Blockchain & Web3', icon: '🔗', color: 'from - green - 600 to - emerald - 600' },;
@@ -11,28 +11,26 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
     { id: 'emerging - tech', name: 'Emerging Tech', icon: '🚀', color: 'from - orange - 600 to - red - 600' },;
     { id: 'micro - saas', name: 'Micro SAAS', icon: '💻', color: 'from - blue - 600 to - indigo - 600' },;
     { id: 'it - services', name: 'IT Services', icon: '🖥️', color: 'from - gray - 600 to - slate - 600' };  ];
-;
+
       service.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ||;
       service.tagline.toLowerCase () .includes(searchTerm.toLowerCase () ) ;
     return matchesCategory && matchesSearch}) ;
-;
+
       transition: {;
         staggerChildren: 0.1,;
         delayChildren: 0.2;,
 };,
 };,
 };
-;
+
   const itemVariants = {;
   hidden: { opacity: 0,;
   y: 20;
-
-;,
 },;
     visible: {;      opacity: 1,;
       y: 0,;
       transition: { duration: 0.5 }}};
-;
+
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">;
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
@@ -267,7 +265,7 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
                       </p>;
                     </div>;
                   </div>) }
-;
+
                 {/* Trial and Setup */}";
                 <div className="flex justify-between items-center mb-6 text-sm">";
                   <div className="text-center">";

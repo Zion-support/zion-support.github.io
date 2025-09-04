@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useState } from 'react';
-;
+
 export default function Page() {;
             alt={project.title}";
             className="w-full h-full object-cover";
@@ -21,7 +21,7 @@ export default function Page() {;
               {project.description}
             </p>;
           )}
-;
+
           {project.technologies && project.technologies.length > 0 && (";
             <div className="flex flex-wrap gap-1 mt-2">;
               {project.technologies.map((tech, index) => (";
@@ -48,7 +48,7 @@ export default function Page() {;
               </Button>;
             </a>;
           )}
-;
+
           {project.demo_url && (;
             <a;
               href={project.demo_url}";

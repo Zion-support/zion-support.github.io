@@ -1,8 +1,8 @@
 
 interface CartState { items: CartItem[]}
-;
+
 const initialState: CartState = { items: [] };
-;
+
 function cartReducer(state: CartState, action: CartAction): CartState {;
   switch(action.type) {;
     case 'ADD_ITEM': {;
@@ -25,16 +25,16 @@ function cartReducer(state: CartState, action: CartAction): CartState {;
     default:;
       return state}
 }
-;
+
 export function useCart(): CartContextType {;
   ;
   if(!ctx) throw new Error('useCart must be used within a CartProvider');
   return ctx}
-;
+
 export function CartProvider({ children }: { children: React.ReactNode }) {;
   const [state, dispatch] = useReducer(cartReducer, initialState);
   const { user } = useAuth();
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
@@ -50,7 +50,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {;
 }
       }
       return}
-;
+
     if(storedGuest) {;
       try {;
         ;
@@ -61,17 +61,17 @@ export function CartProvider({ children }: { children: React.ReactNode }) {;
 }
     }
   }, [user]);
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
     if(!user) {;
       safeStorage.setItem(GUEST_CART_KEY, JSON.stringify(state.items))}
   }, [state.items, user]);
-;
+
   const value: CartContextType = {;
     items: state.items,;
     dispatch,;,
 };
-;
+
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>}

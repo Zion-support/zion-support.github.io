@@ -1,5 +1,5 @@
 import React from 'react';
-;
+
 const ContactPage: React.FC = () => {;
   return (;
     <div className="min-h-screen bg-gray-50 py-20">;
@@ -68,5 +68,5 @@ const ContactPage: React.FC = () => {;
     </div>;
   );,
 };
-;
+
 export default ContactPage;

@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
-;
+
 export default function Page() {;
 ,;
   { id: 'digital-transformation', label: 'Digital Transformation', icon: Zap },;
   { id: 'it-consulting', label: 'IT Consulting', icon: Gift },;
   { id: 'industry-insights', label: 'Industry Insights', icon: Zap };
 ];
-;
+
   { value: 'weekly', label: 'Weekly', description: 'Stay updated with latest trends' },;
   { value: 'monthly', label: 'Monthly', description: 'Monthly digest of insights' },;
   { value: 'quarterly', label: 'Quarterly', description: 'Quarterly strategic updates' };
@@ -26,12 +26,12 @@ export default function Page() {;
 
       setStatus('error');      // console.error('Newsletter subscription error:', error)}
   };
-;
+
       setErrors(prev => ({ ...prev, interests: null }) ) }
   };
-;
+
     setFormData(prev => ({ ...prev, [field]: value }) ) ;
-;
+
     // Clear error when user starts typing;
     if(errors[field]) {;
 
@@ -188,7 +188,7 @@ export default function Page() {;
           </label>;";
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">;
             {interests.map((interest) => {;
-;
+
               return ()                <motion.button;
                   key = {interest.id}";
                   type="button";
@@ -223,7 +223,7 @@ export default function Page() {;
                     ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20'';
                     : 'border-slate-300 dark:border-slate-600 hover:border-blue-300 dark:hover:border-blue-600'`;,
 }`}
-;
+
                 <input";
                   type="radio";
                   name="frequency";
@@ -262,7 +262,7 @@ className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all
 }`}
           whileHover={status !== 'loading' ? { scale: 1.02 } : { /* empty */ }}
           whileTap={status !== 'loading' ? { scale: 0.98 } : { /* empty */ }}
-;
+
           {status === 'loading' ? (;
             <>";
               <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>;
@@ -292,7 +292,7 @@ className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all
             <p className="text-red-700 dark:text-red-300 text-sm flex items-center gap-2">";
               <AlertCircle className="h-4 w-4"  />              Something went wrong.Please try again later.</p>;
           </motion.div>;) }
-;
+
         {/* Privacy Notice */}";
         <p className="text-xs text-slate-500 dark:text-slate-400 text-center">;
           By subscribing, you agree to receive marketing emails from Zion Tech Group.;

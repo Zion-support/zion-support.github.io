@@ -4,11 +4,11 @@ interface WishlistState {;
   items: WishlistItem[];
 :src/store/wishlistSlice.tsx;
   itemCount: number;
-;
+
   itemCount: number}
-;,
+
 }
-;
+
 const initialState: WishlistState = {;
 
   items: [],;
@@ -19,7 +19,7 @@ const initialState: WishlistState = {;
   ;
   ;
   ;
-;,
+
 };
 const wishlistSlice:  createSlice({;  name: anywishlist',;
 const wishlistSlice:  createSlice({;
@@ -45,7 +45,7 @@ const wishlistSlice:  createSlice({;
       state.itemCount = 0},;,
 },;,
 });
-;
+
 export const { addToWishlist, removeFromWishlist, clearWishlist } = wishlistSlice.actions;
 export { wishlistSlice };
 export default wishlistSlice.reducer;

@@ -209,14 +209,12 @@ export default function HelpCenter() {}
         </section>;
       </div>;
     </>)}
-;
+export { HelpCenter };
 
 export { HelpCenter };
-;
+
 export { HelpCenter };
-;
+
 export { HelpCenter };
-;
-export { HelpCenter };
-;
+
 export { HelpCenter };

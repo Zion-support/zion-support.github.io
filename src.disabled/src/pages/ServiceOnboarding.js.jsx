@@ -27,14 +27,12 @@ export default function ServiceOnboarding() {}
       </div>;
       ;
     </>)}
-;
+export { ServiceOnboarding };
 
 export { ServiceOnboarding };
-;
+
 export { ServiceOnboarding };
-;
+
 export { ServiceOnboarding };
-;
-export { ServiceOnboarding };
-;
+
 export { ServiceOnboarding };

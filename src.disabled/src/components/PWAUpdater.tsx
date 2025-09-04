@@ -4,7 +4,7 @@ interface PWAUpdaterProps {;
   checkInterval?: number;
   showUpdatePrompt?: boolean;,
 }
-;
+
 const PWAUpdater: React.FC < PWAUpdaterProps> = ({;
   autoCheck = true,;
   checkInterval = 300000, // 5 minutes;
@@ -15,7 +15,7 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({;
   const [updateComplete, setUpdateComplete] = useState(false);
   const [registration, setRegistration] = useState<ServiceWorkerRegistration | null>(null);
   const [showPrompt, setShowPrompt] = useState(false);
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;
 
@@ -84,15 +84,15 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({;
       ;
       return () => clearInterval(interval)}
   }, [autoCheck, checkInterval, registration]) ;
-;
+
       // console.log('Service Worker update check completed')} catch(error) {;
 
       // console.error('Service Worker update check failed:', error)}
   };
-;
+
     setUpdating(true) ;
     setShowPrompt(false) ;
-;
+
     try {;
       // Send message to service worker to skip waiting;
       if(registration.waiting) {;
@@ -104,19 +104,19 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({;
 
       // // // // // // // // console.error('Update failed:', error);
       setIsUpdating(false);
-;
+
       // console.error('Failed to apply update:', error);
       setUpdating(false);
       setShowPrompt(true)}
   };
-;
+
     // Auto - show again after 1 hour;
     setTimeout(() => {;
       if(updateAvailable) {;
 
         setShowPrompt(true)}
     }, 3600000) };
-;
+
   // Don't render anything if no update is available;
   if(!updateAvailable && !updating && !updateComplete) {;
 

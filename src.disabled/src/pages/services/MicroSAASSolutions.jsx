@@ -1,7 +1,7 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
 import { Code, Zap, Users, TrendingUp, Shield, Building, Cpu, BarChart3 } from 'lucide-react';
-;
+
 export default function MicroSAASSolutions() {;
     const services = [;
         {;
@@ -222,13 +222,13 @@ export default function MicroSAASSolutions() {;
     </div>;
   );,
 }
-;
+
 export { MicroSAASSolutions };
-;
+
 export { MicroSAASSolutions };
-;
+
 export { MicroSAASSolutions };
-;
+
 export { MicroSAASSolutions };
-;
+
 export { MicroSAASSolutions };

@@ -101,7 +101,7 @@ import { ;
   Repeat,;
   Repeat1;,
 } from 'lucide-react';
-;
+
 const MicroSAAS: React.FC = () => {;
   const microSAASCategories = [;
     {;
@@ -207,7 +207,7 @@ const MicroSAAS: React.FC = () => {;
       benefits: ["Streamline recruitment by 60%", "Improve employee retention by 40%", "Reduce HR administrative time by 70%", "Enhance performance tracking"];,
 }
   ];
-;
+
   return (;
     <>;
       <Helmet>;
@@ -404,5 +404,5 @@ const MicroSAAS: React.FC = () => {;
     </>;
   );,
 };
-;
+
 export default MicroSAAS;

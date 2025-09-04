@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
-;
+
 const benefits = [{;
 
     icon: <Zap className="w-10 h-10" />,;
@@ -50,7 +50,7 @@ const benefits = [{;
       'Comprehensive testing',Code quality standards',Performance benchmarks',User experience focus',;
     ]},;
 ];
-;
+
 const additionalStats = [{;
 ";
     icon: <Users className="w-8 h-8" />,;
@@ -60,10 +60,10 @@ const additionalStats = [{;
   { icon: <Star className="w-8 h-8" />, value: '4.9/5', label: 'Rating' },";
   { icon: <Award className="w-8 h-8" />, value: '50+', label: 'Awards' },;
 ];
-;
+
 export function BenefitsSection() {;
   const [hoveredIndex, setHoveredIndex] = (useState < number) | (null > null);
-;
+
   const containerVariants = {;
 
     hidden: { opacity: 0 },;
@@ -74,7 +74,7 @@ export function BenefitsSection() {;
 
         staggerChildren: 0.2,;
         delayChildren: 0.1}}};
-;
+
   const itemVariants = {;
 
     hidden: { y: 30, opacity: 0 },;
@@ -86,7 +86,7 @@ export function BenefitsSection() {;
 
         duration: 0.6,;
         ease: 'easeOut'}}};
-;
+
   const statsVariants = {;
 
     hidden: { scale: 0.8, opacity: 0 },;
@@ -98,7 +98,7 @@ export function BenefitsSection() {;
 
         duration: 0.4,;
         ease: 'easeOut'}}};
-;
+
   return (";
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">;
       {/* Enhanced background pattern */}";

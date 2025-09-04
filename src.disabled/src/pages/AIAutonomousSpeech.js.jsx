@@ -241,14 +241,12 @@ const AIAutonomousSpeech = () => {}
       </div>;
     </>)};
 export default AIAutonomousSpeech;
-;
+export { AIAutonomousSpeech };
 
 export { AIAutonomousSpeech };
-;
+
 export { AIAutonomousSpeech };
-;
+
 export { AIAutonomousSpeech };
-;
-export { AIAutonomousSpeech };
-;
+
 export { AIAutonomousSpeech };

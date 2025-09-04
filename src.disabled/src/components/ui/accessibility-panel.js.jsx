@@ -428,33 +428,33 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
           :root {}
             --font-size: ${settings.fontSize}px;
             --color-blind-mode: ${settings.colorBlindMode}}
-;
+
           .high-contrast {}
             --bg-primary: #000000;
             --bg-secondary: #1a1a1a;
             --text-primary: #ffffff;
             --text-secondary: #e0e0e0;
             --border-color: #ffffff}
-;
+
           .large-text {}
             --font-size-base: 18px;
             --font-size-lg: 22px;
             --font-size-xl: 26px;
             --font-size-2xl: 32px}
-;
+
           .reduced-motion * {}
             animation-duration: 0.01ms !important;
             animation-iteration-count: 1 !important;
             transition-duration: 0.01ms !important}
-;
+
           .focus-indicator *:focus {}
             outline: 3px solid #00d4ff !important;
             outline-offset: 2px !important}
-;
+
           .keyboard-navigation *:focus-visible {}
             outline: 3px solid #00d4ff !important;
             outline-offset: 2px !important}
-;
+
           .sr-only {}
             position: absolute;
             width: 1px;
@@ -487,14 +487,12 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
 }}/>;
     </>)};
 export default AccessibilityPanel;
-;
+export { AccessibilityPanel };
 
 export { AccessibilityPanel };
-;
+
 export { AccessibilityPanel };
-;
+
 export { AccessibilityPanel };
-;
-export { AccessibilityPanel };
-;
+
 export { AccessibilityPanel };

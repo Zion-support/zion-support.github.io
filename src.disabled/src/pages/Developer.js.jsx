@@ -33,14 +33,12 @@ const Developer = () => {}
       </div>;
     </>)};
 export default Developer;
-;
+export { Developer };
 
 export { Developer };
-;
+
 export { Developer };
-;
+
 export { Developer };
-;
-export { Developer };
-;
+
 export { Developer };

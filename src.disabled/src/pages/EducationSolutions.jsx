@@ -25,11 +25,11 @@ import {}
   Brain,''';
   Code'''';,
 } from 'lucide-react';
-;
+
     integrations["Google Analytics", "Tableau", "Power BI", "Custom APIs"];,
 }
 ];
-;
+
 const edTechTrends = [];
   {}
 ";
@@ -63,7 +63,7 @@ const edTechTrends = [];
     icon: BarChart3,"";
     impact: "High";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -95,7 +95,7 @@ const successStories = [];
     results: "60% faster skill acquisition, 80% reduction in training costs","";
     logo: "CT";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -129,7 +129,7 @@ const processSteps = [];
     icon: Users,"";
     duration: "1-2 weeks";
 ];
-;
+
 export default function EducationSolutions() {}
 ';
 '';
@@ -375,7 +375,7 @@ export default function EducationSolutions() {}
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
 }`}
-;
+
                 {category}
               </button>) ) }
           </div>";
@@ -398,7 +398,7 @@ export default function EducationSolutions() {}
 }}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer";
                 onClick={ () => setSelectedSolution(solution) }
-;
+
 ";,
 }}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
@@ -564,14 +564,12 @@ export default function EducationSolutions() {}
       </section>;
     </div>;
   )}
-;
+export { EducationSolutions };
 
 export { EducationSolutions };
-;
+
 export { EducationSolutions };
-;
+
 export { EducationSolutions };
-;
-export { EducationSolutions };
-;
+
 export { EducationSolutions };

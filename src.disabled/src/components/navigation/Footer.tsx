@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Youtube, Github, ArrowRight } from 'lucide-react';
-;
+
 const Footer: React.FC = () => {;
   const currentYear = new Date().getFullYear();
   ;
@@ -11,7 +11,7 @@ const Footer: React.FC = () => {;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup.com';,
 };
-;
+
   const footerSections = [;
     {;
       title: 'Services',;
@@ -156,7 +156,7 @@ const Footer: React.FC = () => {;
       ];,
 }
   ];
-;
+
   const socialLinks = [;
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },;
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },;
@@ -165,7 +165,7 @@ const Footer: React.FC = () => {;
     { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },;
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
   ];
-;
+
   return (;
     <footer className="bg-gray-900 text-white">;
       {/* Main Footer Content */}
@@ -321,5 +321,5 @@ const Footer: React.FC = () => {;
     </footer>;
   );,
 };
-;
+
 export default Footer;

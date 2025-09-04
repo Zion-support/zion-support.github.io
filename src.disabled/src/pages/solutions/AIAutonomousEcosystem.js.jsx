@@ -324,14 +324,12 @@ const AIAutonomousEcosystem = () => {}
   );,
 };
 export default AIAutonomousEcosystem;
-;
+export { AIAutonomousEcosystem };
 
 export { AIAutonomousEcosystem };
-;
+
 export { AIAutonomousEcosystem };
-;
+
 export { AIAutonomousEcosystem };
-;
-export { AIAutonomousEcosystem };
-;
+
 export { AIAutonomousEcosystem };

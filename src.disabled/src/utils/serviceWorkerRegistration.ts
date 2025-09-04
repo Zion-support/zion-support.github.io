@@ -1,5 +1,3 @@
 // comment;
-export const serviceWorkerRegistration = {}
-;
-
-export default serviceWorkerRegistration
+export const serviceWorkerRegistration = {};
+export default serviceWorkerRegistration;

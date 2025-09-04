@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'; // Added useCallback;
 import { supabase } from '@/integrations/supabase/client';
-;
+
 export default function Page() {;
       if(user.userType === "jobSeeker" || user.userType === "creator") {;
         query = query.eq("talent_id", user.id);,
@@ -13,7 +13,7 @@ export default function Page() {;
             .eq("client_id", user.id);
           ;
           if(jobIdsError) throw jobIdsError;
-;
+
           if(jobIdsData && jobIdsData.length > 0) {;
             const jobIdArray = jobIdsData.map(job => job.id);
             query = query.in("job_id", jobIdArray);,

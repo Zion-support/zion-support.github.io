@@ -139,12 +139,12 @@ import { Brain, ;
   CalendarMonth2,;
   CalendarYear2;,
 } from 'lucide-react.ts';
-;
+
 export default function InnovativeServices2025(...args: unknown[]): unknown {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('popularity');
-;
+
   // Enhanced Services Catalog 2025;
   const services = [;
     // AI & Machine Learning Services;
@@ -395,7 +395,7 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {;
       reviews: 167;,
 }
   ];
-;
+
   const categories = [;
     { id: unknown'all', name: 'All Services', icon: Star, count: services.length },;
     { id: 'AI & ML', name: 'AI & Machine Learning', icon: Brain, count: services.filter(s  => s.category === 'AI & ML').length },;
@@ -403,14 +403,14 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {;
     { id: unknown'Micro SaaS', name: 'Micro SaaS', icon: Rocket, count: services.filter(s  => s.category === 'Micro SaaS').length },;
     { id: unknown'Emerging Tech', name: 'Emerging Technology', icon: Atom, count: services.filter(s  => s.category === 'Emerging Tech').length }
   ];
-;
+
   const filteredServices = services.filter(service => {;
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;,
 });
-;
+
   const sortedServices = [...filteredServices].sort((a, b) => {;
     switch (sortBy) {;
       case 'price-low':;
@@ -674,13 +674,13 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {;
     </div>;
   );,
 }
-;
+
 export { InnovativeServices2025 };
-;
+
 export { InnovativeServices2025 };
-;
+
 export { InnovativeServices2025 };
-;
+
 export { InnovativeServices2025 };
-;
+
 export { InnovativeServices2025 };

@@ -24,7 +24,7 @@ import {}
   Truck,''';
   Wrench'''';,
 } from 'lucide-react';
-;
+
     icon: GitFork,;
     features: [;
       "Automated testing","";
@@ -106,7 +106,7 @@ import {}
     platforms["IAM", "VPC", "Security Groups", "WAF"];,
 }
 ];
-;
+
 const cloudPlatforms = [];
   {}
 ";
@@ -143,7 +143,7 @@ const cloudPlatforms = [];
     features["Auto-scaling", "Load Balancing", "Service Discovery", "Rolling Updates"];,
 }
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -175,7 +175,7 @@ const successStories = [];
     results: "Full compliance, enhanced security, 40% faster time-to-market","";
     logo: "FS";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -209,7 +209,7 @@ const processSteps = [];
     icon: Zap,"";
     duration: "Ongoing";
 ];
-;
+
 export default function CloudDevOps() {}
 ';
 '';
@@ -449,7 +449,7 @@ export default function CloudDevOps() {}
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
 }`}
-;
+
                 {category}
               </button>) ) }
           </div>";
@@ -472,7 +472,7 @@ export default function CloudDevOps() {}
 }}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer";
                 onClick={ () => setSelectedSolution(solution) }
-;
+
 ";,
 }}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
@@ -638,14 +638,12 @@ export default function CloudDevOps() {}
       </section>;
     </div>;
   )}
-;
+export { CloudDevOps };
 
 export { CloudDevOps };
-;
+
 export { CloudDevOps };
-;
+
 export { CloudDevOps };
-;
-export { CloudDevOps };
-;
+
 export { CloudDevOps };

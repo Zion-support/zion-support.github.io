@@ -260,5 +260,5 @@ const EdgeComputingOrchestrationPlatform = () => {;
     </>;
   );,
 }
-;
-export default EdgeComputingOrchestrationPlatform
+
+export default EdgeComputingOrchestrationPlatform;

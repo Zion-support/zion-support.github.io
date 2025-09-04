@@ -41,7 +41,7 @@ const UltimateServicesShowcase2026 = () => {;
 };'';
     return icons[category] || '🚀';,
 };
-;
+
   const containerVariants = {}
     hidden: { opacity: 0 },;
     visible: {}
@@ -51,14 +51,14 @@ const UltimateServicesShowcase2026 = () => {;
 }
     }
   };
-;
+
             opacity: 1,;
             transition: {}
                 staggerChildren: 0.1;,
 }
         }
     };
-;
+
     const itemVariants = {}
         hidden: {}
             y: 20,;
@@ -337,16 +337,16 @@ const UltimateServicesShowcase2026: React.FC = () => {;
       </section>;
     </div>) ;,
 };
-;
+
 export default UltimateServicesShowcase2026;
-;
+
 export { UltimateServicesShowcase2026 };
-;
+
 export { UltimateServicesShowcase2026 };
-;
+
 export { UltimateServicesShowcase2026 };
-;
+
 export { UltimateServicesShowcase2026 };
-;
+
 export { UltimateServicesShowcase2026 };
 )

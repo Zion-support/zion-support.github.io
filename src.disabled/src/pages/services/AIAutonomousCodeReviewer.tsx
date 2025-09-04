@@ -42,7 +42,7 @@ import { ;
   Gitlab,;
   Bitbucket;,
 } from 'lucide-react';
-;
+
 const AIAutonomousCodeReviewer = () => {;
   const features = [;
     {;
@@ -76,7 +76,7 @@ const AIAutonomousCodeReviewer = () => {;
       description: 'Built-in code review workflows, comments, and approval systems for development teams';,
 }
   ];
-;
+
   const benefits = [;
     'Reduce code review time by 70%',;
     'Catch 90% of bugs before production',;
@@ -85,7 +85,7 @@ const AIAutonomousCodeReviewer = () => {;
     'Reduce technical debt',;
     'Ensure consistent coding standards';
   ];
-;
+
   const services = [;
     {;
       icon: Server,;
@@ -108,7 +108,7 @@ const AIAutonomousCodeReviewer = () => {;
       description: 'SQL query optimization, database schema analysis, and performance tuning recommendations';,
 }
   ];
-;
+
   const useCases = [;
     {;
       industry: 'Software Development',;
@@ -127,7 +127,7 @@ const AIAutonomousCodeReviewer = () => {;
       description: 'Maintaining high coding standards and reducing technical debt in large codebases';,
 }
   ];
-;
+
   const pricing = [;
     {;
       name: 'Starter',;
@@ -182,7 +182,7 @@ const AIAutonomousCodeReviewer = () => {;
       popular: false;,
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       {/* Hero Section */}
@@ -559,15 +559,15 @@ const AIAutonomousCodeReviewer = () => {;
     </div>;
   );,
 };
-;
+
 export default AIAutonomousCodeReviewer;}}}}
-;
+
 export { AIAutonomousCodeReviewer };
-;
+
 export { AIAutonomousCodeReviewer };
-;
+
 export { AIAutonomousCodeReviewer };
-;
+
 export { AIAutonomousCodeReviewer };
-;
+
 export { AIAutonomousCodeReviewer };

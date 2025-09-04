@@ -235,14 +235,12 @@ export default function Page() {;
       </main>;
       ;
     </>)}
-;
+export { TranslationManager };
 
 export { TranslationManager };
-;
+
 export { TranslationManager };
-;
+
 export { TranslationManager };
-;
-export { TranslationManager };
-;
+
 export { TranslationManager };

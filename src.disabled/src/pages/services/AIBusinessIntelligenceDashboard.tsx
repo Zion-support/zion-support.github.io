@@ -26,7 +26,7 @@ import { BarChart3, ;
   MapPin;,
 } from 'lucide-react.ts';
 import { SEO  } from '../../components/SEO';
-;
+
 const AIBusinessIntelligenceDashboard = () => {;
   const features = [;
     {;
@@ -60,7 +60,7 @@ const AIBusinessIntelligenceDashboard = () => {;
       description: "Access your dashboards from anywhere - web, mobile apps, and integrate with existing business tools";,
 }
   ];
-;
+
   const pricingPlans = [;
     {;
       name: "Starter",;
@@ -112,7 +112,7 @@ const AIBusinessIntelligenceDashboard = () => {;
       popular: false;,
 }
   ];
-;
+
   const useCases = [;
     {;
       title: "Sales Performance Analytics",;
@@ -135,7 +135,7 @@ const AIBusinessIntelligenceDashboard = () => {;
       icon: Activity;,
 }
   ];
-;
+
   const testimonials = [;
     {;
       name: "Sarah Johnson",;
@@ -159,7 +159,7 @@ const AIBusinessIntelligenceDashboard = () => {;
       rating: 5;,
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">;
       <SEO ;
@@ -498,15 +498,15 @@ const AIBusinessIntelligenceDashboard = () => {;
     </div>;
   );,
 };
-;
+
 export default AIBusinessIntelligenceDashboard;
-;
+
 export { AIBusinessIntelligenceDashboard };
-;
+
 export { AIBusinessIntelligenceDashboard };
-;
+
 export { AIBusinessIntelligenceDashboard };
-;
+
 export { AIBusinessIntelligenceDashboard };
-;
+
 export { AIBusinessIntelligenceDashboard };

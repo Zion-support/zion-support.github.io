@@ -1,9 +1,5 @@
 import { motion } from 'framer-motion';
-;
-;
-;
-;
-;
+
 const ComprehensiveServicesShowcase = () => {    const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedService, setSelectedService] = useState(null);
     const allServices = [];
@@ -64,18 +60,16 @@ const ComprehensiveServicesShowcase = () => {    const [selectedCategory, setSel
                 return true;
             // Handle special category mappings;
             const categoryMappings = {;
+export { ComprehensiveServicesShowcase };
 
-;
 export { ComprehensiveServicesShowcase };
-;
+
 export { ComprehensiveServicesShowcase };
-;
+
 export { ComprehensiveServicesShowcase };
-;
+
 export { ComprehensiveServicesShowcase };
-;
-export { ComprehensiveServicesShowcase };
-;
+
 ";
     id: "micro - saas",",;
     name: "Micro SAAS Solutions","";";
@@ -106,7 +100,7 @@ id: &apos,micro-saas&apos,"&apos;&apos,;
     icon: &apos,&apos, <Brain className="&apos,w-6" h-6&apos,       />,;
     color: &apos,from-blue-600 to-cyan-600&apos,;
     services: revolutionary2027AIInnovationServices}
-;
+
 ];&apos;&apos;
 export function ComprehensiveServicesShowcase() {}";
 
@@ -115,16 +109,16 @@ export function ComprehensiveServicesShowcase() {}";
   const [selectedService, setSelectedService] = useState(null);,
 }
   const containerVariants = {}
-;
+
     hidden: { opacity: 0 },;
     visible: {}
-;
+
       opacity: 1,;
 transition: {}
-;
+
         staggerChildren: 0.1,;
 delayChildren: 0.2}
-;
+
 &apos;
 &apos;&apos;&apos;&apos;
   const [selectedCategory, setSelectedCategory] = useState(&apos;micro-saas&apos);&apos;
@@ -142,23 +136,23 @@ delayChildren: 0.2}
     name: "AI Innovation Services", "";
     icon: <Brain className="w-6 h-6"  />,",";
     color: "from - blue-600 to-cyan-600", services: revolutionary2027AIInnovationServices}
-;
+
 ],;
 "",;
     hidden: { opacity: 0 }, visible: {}
-;
+
       opacity: 1,        staggerChildren: 0.1, delayChildren: 0.2}
-;,
+
 }
-;
+
   const itemVariants = {}
-;
+
   hidden: { y: 20,;
 opacity: 0},;
       y: 0,";
 duration: 0.5,;
         ease: "easeOut""}
-;
+
   hidden: { ,y: 20,;
   opacity: 0},;
   hidden: { y: 20, opacity: 0},;
@@ -168,9 +162,9 @@ duration: 0.5,;
         ease: &apos,easeOut&apos,&apos,"}";
         duration: 0.5, "";
         ease: "easeOut"""}
-;
+
   const cardVariants = {}
-;
+
   hidden: { scale: 0.95,;
 scale: 1,;
 duration: 0.4,;,
@@ -181,10 +175,10 @@ duration: 0.4,;,
         <motion.div "";";
           className="text-center mb-16";
           initial = {}
-;
+
   { opacity: 0,;
 y: 30}}
-;
+
   hidden: { scal,e: 0.95,;
   hidden: { scale: 0.95, opacity: 0}>;
       scale: 1, opacity: 1,>;
@@ -203,9 +197,9 @@ y: 30}}
         {/* comment */}"";
         <motion.div """";";
           className="text-center mb-16"  { opacity: 0, y: 30}}
-;
+
           animate = {}
-;
+
   { opacity: 1>;
 y: 0}}">;
           transition="{{" duration: 0.6 }}"">"";";
@@ -294,33 +288,33 @@ designed to transform your business and drive exponential growth.;
           className="&apos;flex" flex-wrap justify-center gap-4 mb-12&apos;&apos {/* comment */}""";
         <motion.div "";
           className="flex flex-wrap justify-center gap-4 mb-12"  { opacity: 0, y: 20}}
-;
+
           transition = {}
-;
+
   { duration: 0.6, { duration: 0.6>;
   delay: 0.2}}>;
         >{serviceCategories.map ( (category) => (&apos}&apos;<button { duration: 0.6, delay: 0.2}}
-;
+
         >{serviceCategories.map ( (category) => (<button;";
               key = "{category.id}
               onClick="{()" => setSelectedCategory(category.id)}";
               className="{"flex" items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${}
-;
+
 ";
 """;
 """;
                 selectedCategory = == category.id""""""";
                   ? "bg-gradient-to-r ${category.color} text-white shadow-lg""""""";
                   : "bg-zion-slate-dark text-zion-cyan-light hover:bg-zion-slate hover:text-zion-cyan border border-zion-cyan/30"""""}"}
-;
+
             >{category.icon}
-;
+
 "&apos;";
 "&apos;"&apos;";
                 selectedCategory === category.id"&apos;"&apos;"&apos;";
                   ? "bg-gradient-to-r ${category.color} text-white shadow-lg"&apos;&apos;"&apos;"&apos;";
                   : &apos;bg-zion-slate-dark text-zion-cyan-light hover:bg-zion-slate hove,r: text-zion-cyan border border-zion-cyan/30&apos,""""}"}
-;
+
             >{category.icon}&apos;&apos;
               <span>{category.name}</span>;
             </button>) ) }";
@@ -335,14 +329,14 @@ designed to transform your business and drive exponential growth.;
               className="&apos;group" cursor-pointer&apos;&apos;";
               variants = "{itemVariants}
               onClick="{" () => setSelectedService (service) }
-;
+
             >&apos;&apos,&apos;&apos,;
               <motion.div&apos;&apos,";";
                 className="&apos;bg-zion-slate-dark/80" backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/40 transition-all duration-300 h-full&apos,&apos,";
                 variants = "{cardVariants}"                whileHover = {}
-;
+
   {}
-;
+
                   y: -8,&apos;&apos,";
                   boxShadow: &apos,0 20px 40px rgba(0, 0, 0,&apos;&apos,>;
   0.3)&apos}}">&apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
@@ -422,7 +416,7 @@ designed to transform your business and drive exponential growth.;
                 <h3 className="text - xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors"> {service.name}",;
                 </h3>"";";
                 <p className = "text-zion-cyan-light text-sm mb-4 line-clamp-2"> {service.tagline}
-;
+
 ""{/* comment */}"";";
                 <div className="flex items-center justify-between mb-4">"";";
                   <div className="flex items-center space-x-2">"";";
@@ -439,7 +433,7 @@ designed to transform your business and drive exponential growth.;
                       <span"">;
                         key={index}"";";
                         className = "bg-zion-slate/50 text-zion-cyan-light text-xs px-2 py-1 rounded-full ">{feature}
-;
+
                       </span>;
                     ))}""{service.features.length > 3 && ("";";
                       <span className="bg-zion-cyan/20 text-zion-cyan text-xs px-2 py-1 rounded-full">;
@@ -584,7 +578,7 @@ delay: 0.4}}"">"";
                 Call Now: +1 302 464 0950,;
               </a>,;
       {/* comment */}
-;
+
       <AnimatePresence>;
         {selectedService && (&apos;&apos,&apos}&apos;";
             className="&apos;fixed" inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4&apos;&apos {selectedService && ("";
@@ -599,10 +593,10 @@ opacity: 0}}";
               className="&apos;bg-zion-slate-dark" rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto&apos;&apos;";
               className="bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto";
   { scale: 0.9, opacity: 0}}
-;
+
   { scale: 1,;
 opacity: 1}}
-;
+
               exit = {}";
               onClick="{(e)" => e.stopPropagation()}"">"";";
               <div className="flex items-start justify-between mb-6">"";";
@@ -623,7 +617,7 @@ opacity: 1}}
                         <span className="text-zion-cyan-light">{feature}</span>;
                       </li>;
                     ))}
-;
+
                   </ul>;";
                   <h3 className="text-xl font-semibold text-white mb-4">Service Details</h3>"";";
                   <div className="space-y-3">"";";
@@ -649,7 +643,7 @@ opacity: 1}}
                     className = "bg-zion-slate text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover:bg-zion-slate-dark transition-all duration-300 text-center ">,;
                     Call for Consultation,;
           </motion.div>) }
-;
+
       </AnimatePresence>;
     </section>;
   )}

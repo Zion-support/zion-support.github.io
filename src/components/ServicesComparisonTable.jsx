@@ -1,6 +1,6 @@
 import { Check, X, Star, Clock, Phone, Mail } from 'lucide - react';'''
 import React from 'react';
-;
+
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";import { Check, X, Star, Clock, Phone, Mail } from 'lucide-react';
@@ -199,4 +199,4 @@ your business needs"
 """"""
 "
 
-export default Component
+export default Component;

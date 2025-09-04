@@ -577,11 +577,11 @@ import {}
   Zap,''';
   Brain'''';,
 } from 'lucide-react';
-;
+
     technologies["AI", "Financial Analytics", "Risk Models", "Machine Learning"];,
 }
 ];
-;
+
 const businessTechnologies = [];
   {}
 ";
@@ -619,7 +619,7 @@ const businessTechnologies = [];
     useCase: "Strategic Planning","";
     reliability: "High";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -651,7 +651,7 @@ const successStories = [];
     results: "35% customer satisfaction increase, 45% marketing ROI improvement, better customer retention","";
     logo: "RCN";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -685,7 +685,7 @@ const processSteps = [];
     icon: Gauge,"";
     duration: "4-8 weeks";
 ];
-;
+
 const businessBenefits = [];
   {}
 ";
@@ -720,7 +720,7 @@ const businessBenefits = [];
     examples["Market insights", "Customer intelligence", "Innovation acceleration", "Strategic positioning"];,
 }
 ];
-;
+
 export default function AIAutonomousBusinessManager() {}
 ';
 '';
@@ -1029,7 +1029,7 @@ export default function AIAutonomousBusinessManager() {}
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
 }`}
-;
+
                 {category}
               </button>) ) }
           </div>";
@@ -1052,7 +1052,7 @@ export default function AIAutonomousBusinessManager() {}
 }}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer";
                 onClick={ () => setSelectedSolution(solution) }
-;
+
 ";,
 }}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
@@ -1218,14 +1218,12 @@ export default function AIAutonomousBusinessManager() {}
       </section>;
     </div>;
   )}
-;
+export { AIAutonomousBusinessManager };
 
 export { AIAutonomousBusinessManager };
-;
+
 export { AIAutonomousBusinessManager };
-;
+
 export { AIAutonomousBusinessManager };
-;
-export { AIAutonomousBusinessManager };
-;
+
 export { AIAutonomousBusinessManager };

@@ -257,14 +257,12 @@ const AIAutonomousData = () => {}
       </div>;
     </>)};
 export default AIAutonomousData;
-;
+export { AIAutonomousData };
 
 export { AIAutonomousData };
-;
+
 export { AIAutonomousData };
-;
+
 export { AIAutonomousData };
-;
-export { AIAutonomousData };
-;
+
 export { AIAutonomousData };

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';''';
 import { motion } from 'framer-motion';
 import { COMPREHENSIVE_SERVICES } from "../data/comprehensiveServices.jsx";
-;
+
 import { EMERGING_TECH_SERVICES } from "../data/emergingTechServices.jsx";
 export function NewServices() {;
     const [selectedCategory, setSelectedCategory] = useState('all');    const [searchTerm, setSearchTerm] = useState('');
@@ -484,7 +484,7 @@ export function NewServices() {;
           </motion.div>;
         </div>) }
     </div>) }
-;
+
 export default NewServices;
 export default NewServices;
 export default NewServices;

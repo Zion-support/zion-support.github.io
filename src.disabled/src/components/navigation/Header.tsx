@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, Mail, MapPin, ChevronDown, Search, User, ShoppingCart } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-;
+
 const Header: React.FC = () => {;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
-;
+
   useEffect(() => {;
     const handleScroll = () => {;
       setIsScrolled(window.scrollY > 10);,
@@ -16,7 +16,7 @@ const Header: React.FC = () => {;
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);,
 }, []);
-;
+
   const navigationItems = [;
     {;
       name: 'Services',;
@@ -164,13 +164,13 @@ const Header: React.FC = () => {;
       ];,
 }
   ];
-;
+
   const contactInfo = {;
     phone: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709';,
 };
-;
+
   return (;
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${;
       isScrolled ;
@@ -345,5 +345,5 @@ const Header: React.FC = () => {;
     </header>;
   );,
 };
-;
+
 export default Header;

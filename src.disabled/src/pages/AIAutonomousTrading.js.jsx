@@ -270,14 +270,12 @@ const AIAutonomousTrading = () => {}
       </div>;
     </>)};
 export default AIAutonomousTrading;
-;
+export { AIAutonomousTrading };
 
 export { AIAutonomousTrading };
-;
+
 export { AIAutonomousTrading };
-;
+
 export { AIAutonomousTrading };
-;
-export { AIAutonomousTrading };
-;
+
 export { AIAutonomousTrading };

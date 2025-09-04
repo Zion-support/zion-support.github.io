@@ -27,11 +27,11 @@ import { ;
   Globe,;
   Lock;,
 } from 'lucide-react';
-;
+
 export function MarketplacePage() {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-;
+
   const categories = [;
     { id: 'all', name: 'All Products', icon: Globe },;
     { id: 'ai', name: 'AI Solutions', icon: Brain },;
@@ -42,7 +42,7 @@ export function MarketplacePage() {;
     { id: 'automation', name: 'Automation', icon: Settings },;
     { id: 'analytics', name: 'Analytics', icon: BarChart3 }
   ];
-;
+
   const marketplaceProducts = [;
     {;
       id: 1,;
@@ -147,7 +147,7 @@ export function MarketplacePage() {;
       vendor: 'Zion Tech Group';,
 }
   ];
-;
+
   const filteredProducts = marketplaceProducts.filter(product => {;
     const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
     const matchesSearch = product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -155,7 +155,7 @@ export function MarketplacePage() {;
                          product.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;,
 });
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark">;
       {/* Hero Section */}
@@ -450,5 +450,5 @@ export function MarketplacePage() {;
     </div>;
   );,
 }
-;
+
 export default MarketplacePage;

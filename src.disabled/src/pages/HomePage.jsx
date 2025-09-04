@@ -174,11 +174,11 @@ export function HomePage() {const features = [];
                 </h3>";
                 <p className="text-zion-slate-light leading-relaxed">;
                   {feature.description}
-;
+
                 </p>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
 ";
@@ -217,10 +217,10 @@ export function HomePage() {const features = [];
                 </div>";
                 <div className="text-zion-slate-light">;
                   {stat.label}
-;
+
                 </div>;
             ))}
-;
+
           </div>;
       </section>;
 ";
@@ -412,7 +412,7 @@ export function HomePage() {const features = [];
                   <div className="text-zion-cyan text-sm">{testimonial.title}</div>;
                 </div>;
             ))}
-;
+
           </div>;
       </section>;
 ";

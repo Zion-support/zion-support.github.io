@@ -2,7 +2,7 @@
       newExpanded.delete(section) } else {;
       newExpanded.add(section) }
     setExpandedSections(newExpanded) };
-;
+
   const navigationSections = [{;
 
       title: "Main",;
@@ -48,12 +48,12 @@
         { name: "Support Center", href: "/support", icon: HelpCircle };
       ]};
   ];
-;
+
   const quickActions = [;";
     { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },;";
     { name: "Book Demo", href: "/demo", icon: Users, variant: "secondary" },;"    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" };
   ];
-;
+
   return ();
     <>;
       {/* Mobile Menu Button */}

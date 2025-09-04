@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 export default InteractiveServiceShowcase;
 import { motion, AnimatePresence  } from 'framer-motion';
-;
+
 export default function Page() {;
 ,;
         { id: 'security', name: 'Security', icon: '🛡️', count: 6 },;
@@ -207,7 +207,7 @@ export default function Page() {;
                     : 'bg-gradient-to-r from-zion-purple to-zion-cyan'}`}>;
                         {service.isPopular ? '🔥 Popular' : '✨ New'}
                       </div>) }
-;
+
                     {/* Service Icon */}`;
                     <div className={`w-20 h-20 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}>";
                       <span className="text-3xl">{service.icon}</span>;
@@ -291,13 +291,13 @@ export default function Page() {;
     </section>)};
 export default InteractiveServiceShowcase;,
 }}}}}}}
-;
+
 export { InteractiveServiceShowcase };
-;
+
 export { InteractiveServiceShowcase };
-;
+
 export { InteractiveServiceShowcase };
-;
+
 export { InteractiveServiceShowcase };
-;
+
 export { InteractiveServiceShowcase };

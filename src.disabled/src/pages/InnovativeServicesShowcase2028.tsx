@@ -3,7 +3,7 @@
 export default function InnovativeServicesShowcase2028(...args: unknown[]): unknown {;
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
-;
+
   // Enhanced service categories with real market prices and features;
   const serviceCategories = [;
     {;
@@ -226,14 +226,14 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
       ];,
 }
   ];
-;
+
   const contactInfo = {;
     phone: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup.com',;
     address: '364 E Main St STE 1008, Middletown DE 19709',;
     website: 'https://ziontechgroup.com';,
 };
-;
+
   const filteredServices = serviceCategories.flatMap(category => ;
     category.services.filter(service => ;
       (activeCategory === 'all' || service.category === activeCategory) &&;
@@ -242,7 +242,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
         service.description.toLowerCase().includes(searchQuery.toLowerCase()));
     );
   );
-;
+
   const containerVariants = {;
     hidden: { opacity: 0 },;
     visible: {;
@@ -252,7 +252,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
 }
     }
   };
-;
+
   const itemVariants = {;
     hidden: { opacity: 0, y: 20 },;
     visible: {;
@@ -261,7 +261,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
       transition: { duration: 0.6 }
     }
   };
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">;
       <SEO ;
@@ -617,14 +617,12 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
     </div>;
   );,
 }
-;
+export { InnovativeServicesShowcase2028 };
 
 export { InnovativeServicesShowcase2028 };
-;
+
 export { InnovativeServicesShowcase2028 };
-;
+
 export { InnovativeServicesShowcase2028 };
-;
-export { InnovativeServicesShowcase2028 };
-;
+
 export { InnovativeServicesShowcase2028 };

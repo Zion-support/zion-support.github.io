@@ -1,6 +1,6 @@
 import React, { useState } from 'react';''';
 import { Link } from 'react-router-dom';
-;
+
 const ComprehensiveServicesOverview2025 = () => {;
     const [selectedService, setSelectedService] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState('all');
@@ -33,14 +33,12 @@ const ComprehensiveServicesOverview2025 = () => {;
             'Legal Tech & AI': '⚖️',;
             'Marketing & AI': '📢',;
             'Energy & Sustainability': '⚡',;
+export { ComprehensiveServicesOverview2025 };
 
-;
 export { ComprehensiveServicesOverview2025 };
-;
+
 export { ComprehensiveServicesOverview2025 };
-;
+
 export { ComprehensiveServicesOverview2025 };
-;
-export { ComprehensiveServicesOverview2025 };
-;
+
 export { ComprehensiveServicesOverview2025 };}}}

@@ -235,14 +235,12 @@ export default function FraudDetection() {}
           </TabsContent>;
         </Tabs>;
       </div>)}
-;
+export { FraudDetection };
 
 export { FraudDetection };
-;
+
 export { FraudDetection };
-;
+
 export { FraudDetection };
-;
-export { FraudDetection };
-;
+
 export { FraudDetection };

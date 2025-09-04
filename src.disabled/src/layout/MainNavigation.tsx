@@ -1,9 +1,9 @@
 
 import { ChevronDown, Menu, X, Home, Settings, Users, Building, Globe, Zap, Brain, Shield, Cloud, Code, BarChart3'  } from 'lucide-react';
-;
+
 export default function Page() {;
 , []);
-;
+
   const baseLinks: NavigationLink[] = [{;
 
       key: 'home',;
@@ -85,14 +85,14 @@ export default function Page() {;
       name: 'Contact',;
       matches: (path: string) => path.startsWith('/contact')};
   ];
-;
+
               </div>;
             </motion.div>;
           )};
         </AnimatePresence>;
       </div>;
     )};
-;
+
   return ();
     <nav className = {`${className}`}>;
       {/* Desktop Navigation */}
@@ -112,7 +112,7 @@ export default function Page() {;
                     ? 'bg-zion-cyan text-white'';
                     : 'text-zion-slate-light hover:text-white hover:bg-white/10'`;,
 }`}
-;
+
                 {link.name}
               </Link>;
             )}
@@ -169,7 +169,7 @@ export default function Page() {;
                               ? 'bg-zion-cyan text-white'';
                               : 'text-zion-slate-light hover:text-white hover:bg-white/10'`;,
 }`}
-;
+
                           {link.name}'`;
                           <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>;
 
@@ -182,7 +182,7 @@ export default function Page() {;
                                 className={`block px-4 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors ${isActive(child) ? 'text-zion-cyan bg-zion-cyan/10' : ''`;,
 }`}
                                 onClick={: unknown setIsMobileMenuOpen(false)}
-;
+
                                 {child.name}
                               </Link>;
                             ))}
@@ -197,7 +197,7 @@ export default function Page() {;
                             : 'text-zion-slate-light hover:text-white hover:bg-white/10'`;,
 }`}
                         onClick={: unknown setIsMobileMenuOpen(false)}
-;
+
                         {link.name}
                       </Link>;
                     )}

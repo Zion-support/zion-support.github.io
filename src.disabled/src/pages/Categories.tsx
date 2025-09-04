@@ -1,7 +1,5 @@
 import React from "react";
 import { Brain, Cloud, Shield, Code, Database, Network } from "lucide-react";
-
-;,"});,"});,
 }
 const Categories: React.FC: = () => {,";
   const categories = [];
@@ -42,10 +40,10 @@ const Categories: React.FC = () => {",;
               </a>,;
           ))}"lucide-react";&apos;&apos;
 const Categories: React.FC = () => {}
-;
+
   const;const categories = [;
     { name: &apos,AI Services&apos, icon: Brain, count: 25 } { name: &apos,Cloud Solutions&apos, icon: Cloud, count: 15 } { name: &apos,Cybersecurity&apos, icon: Shield, count: 12 } { name: &apos,Development&apos, icon: Code, count: 18 } { name: &apos,Data Analytics&apos, icon: Database, count: 10 } { name: &apos,Infrastructure&apos, icon: Network, count: 8 }
-;
+
   return(&apos;";
     <div className="&apos;min-h-screen" bg-gradient-to-br from-slate-50 to-blue-50&apos;>&apos,";
       <div className="&apos;max-w-6xl" mx-auto px-4 sm: px-6 lg:px-8 py-16&apos,>&apos,";
@@ -120,7 +118,7 @@ const Categories: React.FC = () => {}
 export default Categories"";
 ";
   )}
-;
+
 export: default Categories,;
 export default Categories,";
   ];

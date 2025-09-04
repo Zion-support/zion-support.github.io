@@ -1,7 +1,7 @@
 import React from 'react';';
 export default InnovativeServicesOverview2025;'';
 import { motion  } from 'framer-motion';
-;
+
 export default function Page(...args: any[]): any {): unknown {): unknown {}
 ,;
     {}
@@ -22,7 +22,7 @@ export default function Page(...args: any[]): any {): unknown {): unknown {}
       ];,
 }
   ];
-;
+
   const additionalServices: unknown = [{}
       name: 'AI - Powered SEO Platform',;
       description: 'Advanced SEO optimization with machine learning',;
@@ -48,7 +48,7 @@ export default function Page(...args: any[]): any {): unknown {): unknown {}
       path: '/services / ai - workflow-orchestrator';,
 }
   ];
-;
+
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">";
       {/* Hero Section */}"";
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"";
@@ -263,15 +263,15 @@ export default function Page(...args: any[]): any {): unknown {): unknown {}
     </div>;
   );,
 };
-;
+
 export default InnovativeServicesOverview2025;
-;
+
 export { InnovativeServicesOverview2025 };
-;
+
 export { InnovativeServicesOverview2025 };
-;
+
 export { InnovativeServicesOverview2025 };
-;
+
 export { InnovativeServicesOverview2025 };
-;
+
 export { Page };

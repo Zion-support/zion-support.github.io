@@ -7,7 +7,7 @@ export function ModernHeader() {;
   const toggleMobileMenu = () => {;
     setIsMobileMenuOpen(!isMobileMenuOpen);,
 }
-;
+
   const closeMobileMenu = () => {;
     setIsMobileMenuOpen(false);,
 }
@@ -122,7 +122,7 @@ export function ModernHeader() {;
                           <div className="text-xs text-gray-600 mt-1">{service.description}</div>
                         </Link>
                       ))}
-;
+
                     </div>";
                     <div className="mt-4 pt-4 border-t border-gray-200 px-6">";
                       <Link href="/services;
@@ -132,7 +132,7 @@ export function ModernHeader() {;
                     </div>;
                   </div>,;
                 )}
-;
+
               </div>;
 ";
               <Link href="/about" className="text-gray-700 hover: text-blue-600 transition-colors font-medium">;
@@ -168,11 +168,11 @@ export function ModernHeader() {;
               <button onClick="{toggleMobileMenu}
                 className="text-gray-700 hover: text-blue-600 transition-colors">",;
                 {isMobileMenuOpen ? <X className="h-6 w-6"  /> : <Menu className="h-6 w-6"  />}
-;
+
               </button>;
             </div>;
         {/* comment */}
-;
+
         {isMobileMenuOpen && (";
           <div className="lg: hidden bg-white border-t border-gray-200">";
             <div className="px-4 py-6 space-y-4">";
@@ -190,7 +190,7 @@ export function ModernHeader() {;
                     className="block pl-4 text-gray-600 hover: text-blue-600 transition-colors"">;
                     onClick="{closeMobileMenu}">;
                     {service.name}
-;
+
                   </Link>;
                 ))}";
                 <Link href="/services;
@@ -239,10 +239,10 @@ export function ModernHeader() {;
                 </Link>;
               </div>;
         )}
-;
+
       </header>;
     </>;
   );";,
 }";
 
-export default Component
+export default Component;

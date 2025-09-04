@@ -7,13 +7,13 @@ import PerformanceOptimizer from './components/PerformanceOptimizer.tsx';
 import SEOEnhancer from './components/SEOEnhancer.tsx';
 import SecurityEnhancer from './components/SecurityEnhancer.tsx';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer.tsx';
-;
+
 // Lazy load components for better performance;
 const HomePage = lazy(() => import('./pages/home.tsx'));
 const ServicesPage = lazy(() => import('./pages/services.tsx'));
 const AboutPage = lazy(() => import('./pages/about.tsx'));
 const ContactPage = lazy(() => import('./pages/contact.tsx'));
-;
+
 function App() {;
   return (;
     <Router>;
@@ -41,5 +41,5 @@ function App() {;
     </Router>;
   );,
 }
-;
+
 export default App;

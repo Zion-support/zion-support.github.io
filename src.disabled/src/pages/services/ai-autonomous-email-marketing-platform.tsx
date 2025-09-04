@@ -27,7 +27,7 @@ import { ;
   Phone,;
   MapPin;,
 } from 'lucide-react';
-;
+
 const AIAutonomousEmailMarketingPlatform = () => {;
   const features = [;
     {;
@@ -61,7 +61,7 @@ const AIAutonomousEmailMarketingPlatform = () => {;
       description: "Built-in GDPR, CAN-SPAM, and CASL compliance with advanced deliverability monitoring and optimization.";,
 }
   ];
-;
+
   const pricingTiers = [;
     {;
       name: "Starter",;
@@ -114,7 +114,7 @@ const AIAutonomousEmailMarketingPlatform = () => {;
       popular: false;,
 }
   ];
-;
+
   const benefits = [;
     {;
       icon: <TrendingUp className="w-8 h-8 text-green-500" />,;
@@ -137,7 +137,7 @@ const AIAutonomousEmailMarketingPlatform = () => {;
       description: "Predictive analytics and optimization recommendations boost campaign performance.";,
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       {/* Hero Section */}
@@ -410,5 +410,5 @@ const AIAutonomousEmailMarketingPlatform = () => {;
     </div>;
   );,
 };
-;
+
 export default AIAutonomousEmailMarketingPlatform;

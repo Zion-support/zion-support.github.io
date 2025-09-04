@@ -1,6 +1,6 @@
 export const safeStorage = {;
 export default safeStorage;
-;
+
 // In - memory storage for fallback with optimizationsconst inMemoryStore = {};
 let localStorageAvailable = null; // Cache the availability check;
 let lastAvailabilityCheck = 0;
@@ -16,7 +16,7 @@ function isLocalStorageAvailable() {;
 
     return localStorageAvailable;,
 }
-;
+
   lastAvailabilityCheck = now;
   try {;
     if(typeof window === 'undefined') {;
@@ -24,7 +24,7 @@ function isLocalStorageAvailable() {;
       localStorageAvailable = false;
       return false;,
 }
-;
+
     const testKey = '__localStorage_test__';
     localStorage.setItem(testKey,test');
     localStorage.removeItem(testKey);
@@ -36,20 +36,20 @@ function isLocalStorageAvailable() {;
     return false;,
 }
 }
-;
+
 function safeConsoleError(message, error) {;
 
   const env = globalThis.process?.env?.NODE_ENV ?? 'production';
   // Prevent infinite recursion in console logging';
   if(env === 'production') return;
-;
+
   try {;
     // console.error(message, error);,
 } catch {;
 
     // Silent fail if console.error causes recursion;,
 }}
-;
+
 export const safeStorage = {;
 
   getItem: key => {;
@@ -116,6 +116,6 @@ export const safeStorage = {;
       // console.warn('Failed to get localStorage length:', error);
       return 0;    }
   }};
-;
+
 export default safeStorage;
 }

@@ -35,7 +35,7 @@ import { Shield, ;
   Activity,;
   ShieldCheck;,
 } from 'lucide-react.ts';
-;
+
 export default function AIAutonomousThreatIntelligence(...args: unknown[]): unknown {;
   const features = [;
     {;
@@ -63,7 +63,7 @@ export default function AIAutonomousThreatIntelligence(...args: unknown[]): unkn
       benefits: ['Global threat visibility', 'Dark web intelligence', 'Cross-platform correlation'];,
 }
   ];
-;
+
   const threatTypes = [;
     {;
       title: 'Ransomware Protection',;
@@ -94,7 +94,7 @@ export default function AIAutonomousThreatIntelligence(...args: unknown[]): unkn
       features: ['User behavior analysis', 'Access monitoring', 'Anomaly detection'];,
 }
   ];
-;
+
   const pricing = [;
     {;
       name: 'Threat Shield Basic',;
@@ -136,7 +136,7 @@ export default function AIAutonomousThreatIntelligence(...args: unknown[]): unkn
       ];,
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-orange-900 text-white">;
       {/* Hero Section */}
@@ -417,14 +417,12 @@ export default function AIAutonomousThreatIntelligence(...args: unknown[]): unkn
     </div>;
   );,
 }
-;
+export { AIAutonomousThreatIntelligence };
 
 export { AIAutonomousThreatIntelligence };
-;
+
 export { AIAutonomousThreatIntelligence };
-;
+
 export { AIAutonomousThreatIntelligence };
-;
-export { AIAutonomousThreatIntelligence };
-;
+
 export { AIAutonomousThreatIntelligence };

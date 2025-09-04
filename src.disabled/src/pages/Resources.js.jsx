@@ -31,14 +31,12 @@ const Resources = () => {}
       </div>;
     </>)};
 export default Resources;
-;
+export { Resources };
 
 export { Resources };
-;
+
 export { Resources };
-;
+
 export { Resources };
-;
-export { Resources };
-;
+
 export { Resources };

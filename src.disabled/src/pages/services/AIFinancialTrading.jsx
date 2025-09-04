@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { TrendingUp, Brain, Shield, Users, BarChart3, Clock, Zap, LineChart, PieChart, Target, CheckCircle, Activity, Network, Monitor } from 'lucide-react';
-;
+
 export default function AIFinancialTrading() {;
     const features = [;
         {;
@@ -249,7 +249,7 @@ export default function AIFinancialTrading() {;
                       Most Popular;
                     </span>;
                   </div>)}
-;
+
                 <div className="text-center mb-6">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <div className="text-4xl font-bold text-purple-400 mb-1">;
@@ -317,14 +317,12 @@ export default function AIFinancialTrading() {;
     </div>;
   );,
 }
-;
+export { AIFinancialTrading };
 
 export { AIFinancialTrading };
-;
+
 export { AIFinancialTrading };
-;
+
 export { AIFinancialTrading };
-;
-export { AIFinancialTrading };
-;
+
 export { AIFinancialTrading };
