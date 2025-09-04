@@ -7,7 +7,7 @@ class $1 {;
   constructor() {;
   this.projectRoot = process.cwd();
     this.deploymentSteps = [];
-    this.errors = [];,;,
+    this.$1 = [];
 }
 ;
   log(message, type = "INFO") {;

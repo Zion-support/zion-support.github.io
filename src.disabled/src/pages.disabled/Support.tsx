@@ -1,0 +1,337 @@
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {};
+} from 'lucide-react';
+import { SEO } from '@/components/SEO';
+
+export default function Support() {};
+  return null;
+}
+        { name: 'System Troubleshooting', href: '/support/technical/troubleshooting', description: 'Resolve system and application issues' },
+        { name: 'Configuration Help', href: '/support/technical/configuration', description: 'Setup and configuration assistance' },
+        { name: 'Performance Optimization', href: '/support/technical/performance', description: 'Improve system performance' },
+        { name: 'Integration Support', href: '/support/technical/integration', description: 'Help with third-party integrations' }
+      ]
+    },
+    {};
+        { name: 'AI Model Training', href: '/support/ai/training', description: 'AI model training and optimization' },
+        { name: 'Data Processing', href: '/support/ai/data-processing', description: 'Data preparation and processing' },
+        { name: 'Model Deployment', href: '/support/ai/deployment', description: 'AI model deployment assistance' },
+        { name: 'Performance Monitoring', href: '/support/ai/monitoring', description: 'AI system monitoring and alerts' }
+      ]
+    },
+    {};
+        { name: 'Cloud Migration', href: '/support/cloud/migration', description: 'Cloud migration planning and execution' },
+        { name: 'DevOps Pipeline', href: '/support/cloud/devops', description: 'CI/CD pipeline setup and maintenance' },
+        { name: 'Infrastructure Scaling', href: '/support/cloud/scaling', description: 'Auto-scaling and load balancing' },
+        { name: 'Cost Optimization', href: '/support/cloud/cost-optimization', description: 'Cloud cost management and optimization' }
+      ]
+    },
+    {};
+        { name: 'Security Audits', href: '/support/security/audits', description: 'Security assessment and compliance audits' },
+        { name: 'Incident Response', href: '/support/security/incident-response', description: 'Security incident handling and recovery' },
+        { name: 'Compliance Support', href: '/support/security/compliance', description: 'Regulatory compliance assistance' },
+        { name: 'Vulnerability Management', href: '/support/security/vulnerability-management', description: 'Security vulnerability assessment and remediation' }
+      ]
+    },
+    {};
+        { name: 'User Training', href: '/support/training/user-training', description: 'End-user training and workshops' },
+        { name: 'Technical Documentation', href: '/support/training/documentation', description: 'Technical guides and manuals' },
+        { name: 'Video Tutorials', href: '/support/training/video-tutorials', description: 'Step-by-step video guides' },
+        { name: 'Best Practices', href: '/support/training/best-practices', description: 'Industry best practices and guidelines' }
+      ]
+    }
+  ];
+
+  const supportChannels = [
+    {};
+      {/* Hero Section */}
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
+        
+        <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
+          <div>Broken JSX</div>
+          >
+            <div className="flex justify-center mb-6">
+              <div className="w-20 h-20 bg-gradient-to-br from-green-600 to-emerald-600 rounded-2xl flex items-center justify-center">
+                <Settings className="w-10 h-10 text-white" />
+              </div>
+            </div>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+              Technical Support
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Get expert technical support for all our services. Our 24/7 support team is here to help you succeed 
+              with comprehensive assistance, troubleshooting, and guidance.
+            </p>
+            
+            {/* Search and Filter */}
+            <div className="max-w-4xl mx-auto space-y-4">
+              <div className="flex flex-col md:flex-row gap-4">
+                <div className="relative flex-1">
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+                  <div>Broken JSX</div>
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full pl-12 pr-4 py-4 bg-slate-800/70 border border-slate-600 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white placeholder-slate-400 text-lg rounded-xl"
+                  />
+                </div>
+                <div>Broken JSX</div>
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="px-6 py-4 bg-slate-800/70 border border-slate-600 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white rounded-xl"
+                >
+                  <option value="all">All Categories</option>
+                  {};
+                    <option key={category.name} value={category.name}>{category.name}</option>
+                  ))}
+                </select>
+              </div>
+              {};
+                  Found {filteredServices.length} support topics matching "{searchQuery}"
+                </div>
+              )}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Support Channels */}
+      <section className="py-16 bg-slate-800">
+        <div className="container mx-auto px-4">
+          <div>Broken JSX</div>
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">How Can We Help You?</h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Choose from multiple support channels to get the technical assistance you need
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {};
+                <Link to={channel.href} className="block">
+                  <div className="bg-slate-900 rounded-xl p-6 h-full hover:bg-slate-700 transition-all duration-300 transform hover:scale-105 text-center">
+                    <div className={`w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br ${channel.color} flex items-center justify-center`}>
+                      <channel.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                      {channel.name}
+                    </h3>
+                    <p className="text-slate-300 text-sm mb-4">{channel.description}</p>
+                    <div className="space-y-2 text-sm">
+                      <div className="text-cyan-400">
+                        <span className="font-semibold">Availability:</span> {channel.availability}
+                      </div>
+                      <div className="text-slate-300">
+                        <span className="font-semibold">Response:</span> {channel.responseTime}
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Priority Levels */}
+      <section className="py-16 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <div>Broken JSX</div>
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">Support Priority Levels</h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Understand how we prioritize and respond to different types of support requests
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {};
+                <div className={`w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br ${priority.color} flex items-center justify-center`}>
+                  <div className="text-2xl font-bold text-white">{priority.level[0]}</div>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 text-center">{priority.level}</h3>
+                <p className="text-slate-300 text-sm mb-4 text-center">{priority.description}</p>
+                <div className="text-center mb-4">
+                  <div className="text-lg font-bold text-cyan-400">{priority.responseTime}</div>
+                  <div className="text-sm text-slate-400">Response Time</div>
+                </div>
+                <div className="space-y-2">
+                  <div className="text-sm font-semibold text-white mb-2">Examples:</div>
+                  {};
+                    <div key={exampleIndex} className="flex items-center space-x-2 text-sm text-slate-300">
+                      <CheckCircle className="w-3 h-3 text-cyan-400 flex-shrink-0" />
+                      <span>{example}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Support Categories */}
+      <section className="py-16 bg-slate-950">
+        <div className="container mx-auto px-4">
+          <div>Broken JSX</div>
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">Support Categories</h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Browse support topics organized by service category and technical area
+            </p>
+          </motion.div>
+
+          <div className="space-y-8">
+            {};
+                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center`}>
+                    <category.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white">{category.name}</h3>
+                    <p className="text-slate-300">{category.description}</p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {};
+                      <Link to={service.href} className="block">
+                        <div className="bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-all duration-300 group h-full">
+                          <h4 className="font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                            {service.name}
+                          </h4>
+                          <p className="text-sm text-slate-300 mb-4">
+                            {service.description}
+                          </p>
+                          <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                            <span className="text-sm font-medium">Get Support</span>
+                            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                          </div>
+                        </div>
+                      </Link>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Emergency Contact */}
+      <section className="py-16 bg-gradient-to-r from-red-600 to-orange-600">
+        <div className="container mx-auto px-4 text-center">
+          <div>Broken JSX</div>
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Emergency Support
+            </h2>
+            <p className="text-xl text-red-100 mb-8">
+              For critical system issues or security breaches, contact our emergency support line immediately
+            </p>
+            <div className="bg-white/20 backdrop-blur-sm rounded-xl p-8 mb-8">
+              <div className="text-6xl font-bold text-white mb-4">{contactInfo.emergency}</div>
+              <p className="text-white text-lg">Available 24/7 for critical issues</p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div>Broken JSX</div>
+              >
+                Call Emergency Line
+              </a>
+              <div>Broken JSX</div>
+              >
+                Contact Support Team
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Information */}
+      <section className="py-16 bg-slate-800">
+        <div className="container mx-auto px-4">
+          <div>Broken JSX</div>
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">Contact Information</h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Get in touch with our support team through multiple channels
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-600 to-emerald-600 rounded-lg flex items-center justify-center">
+                <Phone className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Phone Support</h3>
+              <div>Broken JSX</div>
+              >
+                {contactInfo.phone}
+              </a>
+              <p className="text-slate-300 text-sm mt-2">{contactInfo.hours}</p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center">
+                <Mail className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Email Support</h3>
+              <div>Broken JSX</div>
+              >
+                {contactInfo.email}
+              </a>
+              <p className="text-slate-300 text-sm mt-2">Response within 4 hours</p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">
+                <Globe className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Website</h3>
+              <div>Broken JSX</div>
+              >
+                {contactInfo.website.replace('https://', '')}
+              </a>
+              <p className="text-slate-300 text-sm mt-2">Visit our main site</p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-orange-600 to-red-600 rounded-lg flex items-center justify-center">
+                <MapPin className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
+              <p className="text-slate-300 text-sm leading-relaxed">
+                {contactInfo.address}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-cyan-600 to-blue-600">
+        <div className="container mx-auto px-4 text-center">
+          <div>Broken JSX</div>
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Get Technical Support?
+            </h2>
+            <p className="text-xl text-cyan-100 mb-8">
+              Our expert team is ready to help you resolve any technical issues and get back to business quickly.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div>Broken JSX</div>
+              >
+                Contact Support
+              </Link>
+              <div>Broken JSX</div>
+              >
+                Browse Help Center
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </>
+  );
+}
+export default Support;

@@ -17,7 +17,7 @@ class PM2AutomationLauncher {;
 const fs = require("fs")";const path = require("path")";const { execSync, spawn } = require("child_process")"";class PM2AutomationLauncher {;
   constructor() {;
     this.processes = new Map();
-    this.logFile = path.join();      __dirname,..",""logs",pm2-automation-launcher.log"");";    this.ensureLogDirectory();
+    this.logFile = path.join();      __dirname,..", ""logs",pm2-automation-launcher.log"");";    this.ensureLogDirectory();
     this.config = this.loadConfig(),,;,
 }
   ensureLogDirectory() {;
@@ -214,7 +214,7 @@ console.log(`\n${statusIcon} ${proc.name}`);console.log(`   Status: ${proc.pm2_e
 } catch (error) { this.log(`❌ Error getting status: ${error.message }`),;,
 }
         if (exists) {this.log(`⚠️ Process ${process.name} already exists, restarting...`);execSync(`pm2 restart ${process.name}`, { stdio": "pipe" });"} else {`;          // Start new process;
-          const scriptPath = path.resolve(__dirname, "..", process.script);";          if (fs.existsSync(scriptPath)) {execSync(`pm2 start ${scriptPath} --name ${process.name}`, {`;              stdio: "pipe",";              env: { ...process.env, ...process.env },,)});this.log(`✅ Started ${process.name}`);`} else {this.log(`❌ Script not "found: ${scriptPath}`);`}        }
+          const scriptPath = path.resolve(__dirname, "..", process.script);";          if (fs.existsSync(scriptPath)) {execSync(`pm2 start ${scriptPath} --name ${process.name}`, {`;              stdio: "pipe", ";              env: { ...process.env, ...process.env },,)});this.log(`✅ Started ${process.name}`);`} else {this.log(`❌ Script not "found: ${scriptPath}`);`}        }
 ;
         // Add delay between starts;
         await this.sleep(2000)} catch (error) {this.log(`❌ Failed to start ${process.name}: ${error.message}`);`}

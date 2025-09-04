@@ -1,0 +1,941 @@
+{
+  "timestamp": "2025-09-04T07:03:46.649Z",
+  "sessionId": "1756969426649",
+  "vulnerabilities": [
+    {
+      "type": "secret",
+      "file": "/workspace/automation-orchestrator-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\n    \\u001b[7m  \\u001b[0m ...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/automation-orchestrator-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\n    \\u001b[7m   \\u001b[0m...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/automation-orchestrator-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'wrongpassword\\n    \\u001b[7m   \\u001b[...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/automation-orchestrator-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\n    \\u001b[7m   \\u001b[0m...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/automation-orchestrator-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\n    \\u001b[7m   \\u001b[0m...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/automation-orchestrator-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\n    \\u001b[7m   \\u001b[0m...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/automation-orchestrator-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\n    \\u001b[7m   \\u001b[0m...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/automation-orchestrator-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\n    \\u001b[7m  \\u001b[0m ...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/automation-orchestrator-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\n    \\u001b[7m   \\u001b[0m...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/automation-orchestrator-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'wrongpassword\\n    \\u001b[7m   \\u001b[...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/automation-orchestrator-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\n    \\u001b[7m   \\u001b[0m...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/automation-orchestrator-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\n    \\u001b[7m   \\u001b[0m...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/automation-orchestrator-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\n    \\u001b[7m   \\u001b[0m...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/automation-orchestrator-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\n    \\u001b[7m   \\u001b[0m...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/automation-orchestrator-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Token = 'mock-access-token\\n    \\u001b[7m   \\u001b...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/automation-orchestrator-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Token = 'mock-access-token\\n    \\u001b[7m   \\u001b...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-automation-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\n    \\\\u001b[7m  \\\\u001b[...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-automation-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\n    \\\\u001b[7m   \\\\u001b...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-automation-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'wrongpassword\\\\n    \\\\u001b[7m   \\\\u00...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-automation-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\n    \\\\u001b[7m   \\\\u001b...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-automation-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\n    \\\\u001b[7m   \\\\u001b...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-automation-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\n    \\\\u001b[7m   \\\\u001b...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-automation-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\n    \\\\u001b[7m   \\\\u001b...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-automation-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\n    \\\\u001b[7m  \\\\u001b[...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-automation-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\n    \\\\u001b[7m   \\\\u001b...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-automation-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'wrongpassword\\\\n    \\\\u001b[7m   \\\\u00...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-automation-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\n    \\\\u001b[7m   \\\\u001b...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-automation-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\n    \\\\u001b[7m   \\\\u001b...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-automation-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\n    \\\\u001b[7m   \\\\u001b...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-automation-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\n    \\\\u001b[7m   \\\\u001b...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-automation-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Token = 'mock-access-token\\\\n    \\\\u001b[7m   \\\\u0...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-automation-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Token = 'mock-access-token\\\\n    \\\\u001b[7m   \\\\u0...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\n    \\\\u001b[7m  \\\\u001b[...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\n    \\\\u001b[7m   \\\\u001b...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'wrongpassword\\\\n    \\\\u001b[7m   \\\\u00...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\n    \\\\u001b[7m   \\\\u001b...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\n    \\\\u001b[7m   \\\\u001b...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\n    \\\\u001b[7m   \\\\u001b...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\n    \\\\u001b[7m   \\\\u001b...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\n    \\\\u001b[7m  \\\\u001b[...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\n    \\\\u001b[7m   \\\\u001b...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'wrongpassword\\\\n    \\\\u001b[7m   \\\\u00...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\n    \\\\u001b[7m   \\\\u001b...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\n    \\\\u001b[7m   \\\\u001b...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\n    \\\\u001b[7m   \\\\u001b...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\n    \\\\u001b[7m   \\\\u001b...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\n    \\\\\\\\u001b[7m  \\\\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\n    \\\\\\\\u001b[7m   \\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'wrongpassword\\\\\\\\n    \\\\\\\\u001b[7m   \\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\n    \\\\\\\\u001b[7m   \\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\n    \\\\\\\\u001b[7m   \\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\n    \\\\\\\\u001b[7m   \\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\n    \\\\\\\\u001b[7m   \\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\n    \\\\\\\\u001b[7m  \\\\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\n    \\\\\\\\u001b[7m   \\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'wrongpassword\\\\\\\\n    \\\\\\\\u001b[7m   \\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\n    \\\\\\\\u001b[7m   \\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\n    \\\\\\\\u001b[7m   \\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\n    \\\\\\\\u001b[7m   \\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\n    \\\\\\\\u001b[7m   \\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\n    \\\\\\\\u001b[7m  \\\\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\n    \\\\\\\\u001b[7m   \\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'wrongpassword\\\\\\\\n    \\\\\\\\u001b[7m   \\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\n    \\\\\\\\u001b[7m   \\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\n    \\\\\\\\u001b[7m   \\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\n    \\\\\\\\u001b[7m   \\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\n    \\\\\\\\u001b[7m   \\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\n    \\\\\\\\u001b[7m  \\\\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\n    \\\\\\\\u001b[7m   \\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'wrongpassword\\\\\\\\n    \\\\\\\\u001b[7m   \\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\n    \\\\\\\\u001b[7m   \\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\n    \\\\\\\\u001b[7m   \\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\n    \\\\\\\\u001b[7m   \\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\n    \\\\\\\\u001b[7m   \\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u001b[...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u001b[...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'wrongpassword\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u001...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u001b[...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u001b[...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u001b[...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u001b[...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u001b[...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u001b[...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'wrongpassword\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u001...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u001b[...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u001b[...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u001b[...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u001b[...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u001b[...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u001b[...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'wrongpassword\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u001...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u001b[...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u001b[...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u001b[...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u001b[...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u001b[...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u001b[...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'wrongpassword\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u001...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u001b[...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u001b[...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u001b[...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u001b[...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'wrongpassword\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n    \\\\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'wrongpassword\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n    \\\\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Password = 'password123\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: api_key='your-api-key'...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: api_key='your-api-key'...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Token = 'mock-access-token\\\\n    \\\\u001b[7m   \\\\u0...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Token = 'mock-access-token\\\\n    \\\\u001b[7m   \\\\u0...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Token = 'mock-access-token\\\\\\\\n    \\\\\\\\u001b[7m   ...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Token = 'mock-access-token\\\\\\\\n    \\\\\\\\u001b[7m   ...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Token = 'mock-access-token\\\\\\\\n    \\\\\\\\u001b[7m   ...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Token = 'mock-access-token\\\\\\\\n    \\\\\\\\u001b[7m   ...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Token = 'mock-access-token\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u00...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Token = 'mock-access-token\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u00...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Token = 'mock-access-token\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u00...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Token = 'mock-access-token\\\\\\\\\\\\\\\\n    \\\\\\\\\\\\\\\\u00...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Token = 'mock-access-token\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n    \\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    },
+    {
+      "type": "secret",
+      "file": "/workspace/security-scan-report.json",
+      "severity": "high",
+      "description": "Potential secret exposed: Token = 'mock-access-token\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n    \\\\\\...",
+      "recommendation": "Remove or move secrets to environment variables"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "critical",
+      "message": "130 high severity vulnerabilities found",
+      "action": "Address high severity issues immediately"
+    },
+    {
+      "priority": "medium",
+      "message": "Implement automated security scanning",
+      "action": "Set up CI/CD pipeline with security checks"
+    },
+    {
+      "priority": "low",
+      "message": "Regular security audits",
+      "action": "Schedule monthly security reviews"
+    }
+  ],
+  "summary": {
+    "totalChecks": 2,
+    "vulnerabilities": 130,
+    "high": 130,
+    "medium": 0,
+    "low": 0,
+    "securityScore": 0
+  }
+}

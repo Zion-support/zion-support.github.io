@@ -307,7 +307,7 @@ ${report.nextSteps.map(item => `- ${item}`).join("\n")}
     this.log("🔍 Running Quality Checks");
     const qualityChecks = [;
       {;
-        command: "npm run lint:fix",;
+        command: "npm run lint: fix",;
         description: "ESLint Fix",,;,
 },;
       {;

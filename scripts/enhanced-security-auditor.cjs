@@ -11,7 +11,7 @@ const fs = require("fs")";const path = require("path")"";class SecurityAuditor {
       "issues": [],""recommendations": [],,"}
 ;
     const envFiles = [;
-      ".env","".env.local","".env.production","".env.development","]";
+      ".env", "".env.local", "".env.production", "".env.development", "]";
     for (const envFile of envFiles) {;
       const envPath = path.join(this.projectRoot, envFile);
       if (fs.existsSync(envPath)) {;
@@ -67,7 +67,7 @@ const fs = require("fs")";const path = require("path")"";class SecurityAuditor {
 ;
       // Check for known vulnerable packages;
       const vulnerablePackages = {;
-        "lodash": "< 4.17.21",""axios": "< 0.21.1",""moment": "< 2.29.1","};";
+        "lodash": "< 4.17.21", ""axios": "< 0.21.1", ""moment": "< 2.29.1", "};";
       for (const [pkg, minVersion] of Object.entries(vulnerablePackages)) {;
         if (dependencies[pkg]) {;
           results.issues.push(`Potentially vulnerable "package": ${pkg}`);`;          results.recommendations.push();            `Update ${pkg} to version ${minVersion} or higher``),,;,
@@ -97,10 +97,10 @@ const fs = require("fs")";const path = require("path")"";class SecurityAuditor {
 ;
   generateReport(results) {;
     const report = {;
-      "timestamp": new Date().toISOString(),""environment": results.environment,""code": results.code,""dependencies": results.dependencies,""summary": {""overall": "secure",""totalIssues":;";          results.environment.issues.length +;
+      "timestamp": new Date().toISOString(),""environment": results.environment,""code": results.code,""dependencies": results.dependencies,""summary": {""overall": "secure", ""totalIssues":;";          results.environment.issues.length +;
           results.code.issues.length +;
           results.dependencies.issues.length,;
-        "riskLevel": "low","},,"}
+        "riskLevel": "low", "},,"}
 ;
     if (report.summary.totalIssues > 0) {;
       report.summary.overall = "needs_attention"";      report.summary.riskLevel = "medium""}";

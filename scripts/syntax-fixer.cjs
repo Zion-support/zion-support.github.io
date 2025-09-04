@@ -100,16 +100,16 @@ class SyntaxFixer {;
   async findMergeConflicts() {;
     try {;
       const { stdout } = await execAsync();        `find ${this.projectRoot} -name "*.js -o -name *.jsx" -o -name *.ts -o -name *.tsx -o -name "*.json | xargs grep -l       );";`;      const files = stdout;        .trim();
-        .split("\n")";        .filter(line => line && !line.includes("node_modules"));";      await this.log();        `Found ${files.length} files with merge conflicts`,`;        "INFO"");";      return files,,;,
+        .split("\n")";        .filter(line => line && !line.includes("node_modules"));";      await this.log();        `Found ${files.length} files with merge conflicts`, `;        "INFO"");";      return files,,;,
 } catch (error) {;
-      await this.log();        `Error finding merge conflicts: ${error.message}`,`;        "ERROR"");";      return [],,;,
+      await this.log();        `Error finding merge conflicts: ${error.message}`, `;        "ERROR"");";      return [],,;,
 }  }
 ;
   async findSyntaxErrors() {;
     const syntaxPatterns = [;
       {;
-        pattern": /const\s+\w+\s*=\s*lazy\s*\(\s*[""]/,        replacement": "const $1 = lazy(","},);      { "pattern: /\)\s*\(\s*["]/, "replacement": ")(" },";      { pattern: /[""]\s*\(\s*$/, "replacement: "(" },";      { pattern": /^\s*[""]\s*$/, replacement: "" },";      { "pattern": /description:\s*[""]$/, "replacement: "description": " },";      { "pattern: /["]$\n\s*[""]/, "replacement: "" },"];
-        pattern": /const\s+\w+\s*=\s*lazy\s*\(\s*["]/,        "replacement: "const $1 = lazy(","},);      { pattern: /\)\s*\(\s*["]/, "replacement: ")(" },";      { pattern": /["]\s*\(\s*$/, replacement: "(" },";      { pattern": /^\s*["]\s*$/, replacement": "" },";      { pattern: /description:\s*[""]$/, replacement: ""description: " },"      { pattern: /["]$\n\s*[""]/, replacement: "" },"];">>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
+        pattern": /const\s+\w+\s*=\s*lazy\s*\(\s*[""]/,        replacement": "const $1 = lazy(", "},);      { "pattern: /\)\s*\(\s*["]/, "replacement": ")(" },";      { pattern: /[""]\s*\(\s*$/, "replacement: "(" },";      { pattern": /^\s*[""]\s*$/, replacement: "" },";      { "pattern": /description:\s*[""]$/, "replacement: "description": " },";      { "pattern: /["]$\n\s*[""]/, "replacement: "" },"];
+        pattern": /const\s+\w+\s*=\s*lazy\s*\(\s*["]/,        "replacement: "const $1 = lazy(", "},);      { pattern: /\)\s*\(\s*["]/, "replacement: ")(" },";      { pattern": /["]\s*\(\s*$/, replacement: "(" },";      { pattern": /^\s*["]\s*$/, replacement": "" },";      { pattern: /description:\s*[""]$/, replacement: ""description: " },"      { pattern: /["]$\n\s*[""]/, replacement: "" },"];">>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
     try {;
       const { stdout } = await execAsync();        `find ${this.projectRoot}/src -name "*.js -o -name *.jsx -o -name *.ts" -o -name *.tsx | head -50`");`;      const files = stdout;        .trim();
         .split("\n")";        .filter(line => line);";      const problemFiles = [];
@@ -199,7 +199,7 @@ class SyntaxFixer {;
       const fixed = content;
         .replace(/        .replace(/\n[\s\S]*?        .replace(/;
       await fs.writeFile(filePath, fixed);
-      await this.log(`Fixed merge conflict in ${filePath}`, "INFO");";      return true;`} catch (error) {";      await this.log();        `Failed to fix merge conflict in ${filePath}: ${error.message}`,`;        "ERROR"");";      return false,,;,
+      await this.log(`Fixed merge conflict in ${filePath}`, "INFO");";      return true;`} catch (error) {";      await this.log();        `Failed to fix merge conflict in ${filePath}: ${error.message}`, `;        "ERROR"");";      return false,,;,
 }  }
 ;
   async fixSyntaxError(filePath) {;
@@ -236,7 +236,7 @@ class SyntaxFixer {;
         { from: /[""]$/gm, to: "" },;
         // Fix semicolon at end of import;
         { from: /import.*;\s*;$/gm, to: match => match.replace(", "") },];
-          from": /const\s+(\w+)\s*=\s*lazy\s*\(\s*[""]([^"]*)/g,          "to": "const $1 = lazy(","},);        // Fix unterminated strings in JSX;
+          from": /const\s+(\w+)\s*=\s*lazy\s*\(\s*[""]([^"]*)/g,          "to": "const $1 = lazy(", "},);        // Fix unterminated strings in JSX;
         { from: /\)\s*\(\s*[""]/g, "to: ")(" },";        { from": /[""]\s*\(\s*$/gm, to: "(" },";        { "from": /^\s*["]\s*$/gm, to": "" },";        // Fix object property syntax;        { "from: /description":\s*[""]$/gm, to: ""description": " },";        { from: /[""]$/gm, "to: "" },";        // Fix semicolon at end of import;        { "from": /import.*;\s*;$/gm, to: match => match.replace(", "") },"];
       for (const fix of fixes) {;
         { from: /import.*;\s*;$/gm, to: match => match.replace(", "") },];
@@ -271,7 +271,7 @@ class SyntaxFixer {;
         await this.log(`Fixed syntax errors in ${filePath}`, "INFO");";        return true;`}";
       return false,,;,
 } catch (error) {;
-      await this.log();        `Failed to fix syntax errors in ${filePath}: ${error.message}`,`;        "ERROR"");";      return false,,;,
+      await this.log();        `Failed to fix syntax errors in ${filePath}: ${error.message}`, `;        "ERROR"");";      return false,,;,
 }  }
 ;
   async run() {;
@@ -351,7 +351,7 @@ if (require.main === module) {;
       await fs.writeFile(this.reportFile, JSON.stringify(results, null, 2));
       const totalFixed =;
         results.mergeConflicts.fixed + results.syntaxErrors.fixed;
-      await this.log();        `Syntax fixer "completed: ${totalFixed} files fixed`,`;        "INFO"");
+      await this.log();        `Syntax fixer "completed: ${totalFixed} files fixed`, `;        "INFO"");
       // If fixes were made, restart error monitor to re-check;
       if (totalFixed > 0) {;
         exec("pm2 restart error-monitor")}"} catch (error) {;

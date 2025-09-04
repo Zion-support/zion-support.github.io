@@ -1,74 +1,59 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
-;
-function fixSyntaxErrors(filePath) {;
-  console.log(`Fixing syntax errors in: ${filePath}`);
-  ;
-  let content = fs.readFileSync(filePath, 'utf8');
-  ;
-  // Fix common syntax errors;
-  content = content;
-    // Remove extra semicolons after class declarations;
-    .replace(/class\s+\w+\s*\{;/g, (match) => match.replace('{;', '{'));
-    // Remove extra semicolons after method declarations;
-    .replace(/(\w+)\s*\([^)]*\)\s*\{;/g, '$1() {');
-    // Remove extra semicolons after if/for/while statements;
-    .replace(/(if|for|while|switch)\s*\([^)]*\)\s*\{;/g, '$1() {');
-    // Remove trailing commas before closing braces;
-    .replace(/,(\s*[}\]])/g, '$1');
-    // Remove extra semicolons after closing braces;
-    .replace(/\}(\s*;)/g, '}$1');
-    // Fix method declarations with extra semicolons;
-    .replace(/(\w+)\s*\([^)]*\)\s*\{;/g, '$1() {');
-    // Remove standalone semicolons;
-    .replace(/^\s*;\s*$/gm, '');
-    // Fix object property declarations;
-    .replace(/(\w+):\s*([^,}]+),;/g, '$1: $2,');
-    // Fix array declarations;
-    .replace(/\[\s*\]\s*;/g, '[]');
-    // Remove extra semicolons in function calls;
-    .replace(/\(\s*\)\s*;/g, '()');
-    // Fix constructor calls;
-    .replace(/new\s+(\w+)\s*\(\s*\)\s*;/g, 'new $1()');
-    // Clean up multiple semicolons;
-    .replace(/;+/g, ';');
-    // Remove semicolons at end of lines that shouldn't have them;
-    .replace(/;\s*$/gm, (match, offset, string) => {;
-      const lines = string.split('\n');
-      const lineIndex = string.substring(0, offset).split('\n').length - 1;
-      const line = lines[lineIndex];
-      ;
-      // Don't remove semicolons from statements that should have them;
-      if (line.match(/(const|let|var|return|throw|break|continue)\s/)) {;
-        return match;,
+
+// Function to fix common syntax errors
+function fixSyntaxErrors(content) {
+  // Fix missing commas in object literals
+  content = content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*(\w+):/g, '$1: $2,');
+  content = content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*}/g, '$1: $2\n  }');
+  
+  // Fix missing commas in style objects
+  content = content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*(\w+):/g, '$1: $2,');
+  content = content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*}/g, '$1: $2\n  }');
+  
+  // Fix missing semicolons after function declarations
+  content = content.replace(/(\w+)\s*\(\s*\)\s*=>\s*\{[^}]*\}\s*\n\s*return/g, '$1() => {\n    // ...\n  };\n  return');
+  
+  // Fix missing closing braces
+  content = content.replace(/(\w+)\s*\(\s*\)\s*=>\s*\{[^}]*\}\s*$/gm, '$1() => {\n    // ...\n  };');
+  
+  return content;
 }
-      ;
-      // Don't remove semicolons from object/array literals;
-      if (line.match(/[\[\{]\s*$/)) {;
-        return match;,
+
+// Function to process a file
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixedContent = fixSyntaxErrors(content);
+    
+    if (content !== fixedContent) {
+      fs.writeFileSync(filePath, fixedContent);
+      console.log(`Fixed: ${filePath}`);
+    }
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+  }
 }
-      ;
-      return match.replace(';', '');,
-});
-;
-  fs.writeFileSync(filePath, content);
-  console.log(`Fixed syntax errors in: ${filePath}`);,
+
+// Function to recursively find and process files
+function processDirectory(dirPath) {
+  const files = fs.readdirSync(dirPath);
+  
+  for (const file of files) {
+    const filePath = path.join(dirPath, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      processDirectory(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      processFile(filePath);
+    }
+  }
 }
-;
-// Fix the main automation files;
-const filesToFix = [;
-  'simple-automation-orchestrator.cjs',;
-  'run-automation-suite.cjs';
-];
-;
-filesToFix.forEach(file => {;
-  if (fs.existsSync(file)) {;
-    fixSyntaxErrors(file);,
-} else {;
-    console.log(`File not found: ${file}`);,
-}
-});
-;
-console.log('Syntax error fixing completed!');}}}}}}
+
+// Start processing from the current directory
+console.log('Fixing syntax errors...');
+processDirectory('.');
+console.log('Done!');

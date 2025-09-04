@@ -1,20 +1,20 @@
 #!/usr/bin/env node;
-;
+
 import fs from "fs";
 import path from "path";
 // List of critical files that need to be fixed;
-const criticalFiles = [;
+const criticalFiles = [
   "src/pages/services/index.tsx",;
   "src/pages/solutions.tsx",;
   "tailwind.config.ts",;
   "vite.config.ts",;
   "vitest.config.ts";
 ];
-function $1() {;
+function $1() {
   const content = `import React from "react";
 import { Link  } from "react-router-dom";
-const ServicesIndex: React.FC = () => {;
-  const links = [;
+const ServicesIndex: React.FC = () => {
+  const links = [
   { to: "/ai-services", label: "AI Services" },;
     { to: "/it-services", label: "IT Services" },;
     { to: "/micro-saas", label: "Micro SaaS" },;
@@ -49,19 +49,19 @@ const ServicesIndex: React.FC = () => {;
         </div>;
       </div>;
     </div>;
-  );,;,
+  );
 }
 export default ServicesIndex;
 `;
   fs.writeFileSync("src/pages/services/index.tsx", content);
-  console.log("Fixed src/pages/services/index.tsx");,;,
+  console.log("Fixed src/pages/services/index.tsx");
 }
 ;
-function fixSolutions() {;
+function fixSolutions() {
   const content = `import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-export default function Solutions() {;
+export default function Solutions() {
   return (;
     <>;
       <Head>;
@@ -119,27 +119,27 @@ export default function Solutions() {;
         </div>;
       </main>;
     </>;
-  );,;,
+  );
 }
 `;
   fs.writeFileSync("src/pages/solutions.tsx", content);
-  console.log("Fixed src/pages/solutions.tsx");,;,
+  console.log("Fixed src/pages/solutions.tsx");
 }
 ;
-function fixTailwindConfig() {;
+function fixTailwindConfig() {
   const content = `import type { Config } from "tailwindcss";
-export default {;
-  content: [;
+export default {
+  content: [
   "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",;
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",;
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",;
   ],;
   darkMode: "class",;
-  theme: {;
-  extend: {;
-  colors: {;
+  theme: {
+  extend: {
+  colors: {
   // Zion Tech Group brand colors;
-        zion: {;
+        zion: {
   50: "#f0f9ff",;
           100: "#e0f2fe",;
           200: "#bae6fd",;
@@ -150,99 +150,99 @@ export default {;
           700: "#0369a1",;
           800: "#075985",;
           900: "#0c4a6e",;
-          950: "#082f49",;,;,
+          950: "#082f49",;,
 },;
         // Extended gray palette for better contrast;
-        gray: {;
+        gray: {
   950: "#0a0a0a",;
           960: "#050505",;
           970: "#030303",;
           980: "#020202",;
-          990: "#010101",;,;,
+          990: "#010101",;,
 },;
         // Accent colors;
-        accent: {;
+        accent: {
   cyan: "#06b6d4",;
           blue: "#3b82f6",;
           purple: "#8b5cf6",;
           pink: "#ec4899",;
           emerald: "#10b981",;
           amber: "#f59e0b",;
-          rose: "#f43f5e",;,;,
-},;,;,
+          rose: "#f43f5e",;,
+},;,
 },;
-      animation: {;
+      animation: {
   "gradient": "gradient 6s ease infinite",;
         "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",;
         "bounce-slow": "bounce 3s infinite",;
-        "spin-slow": "spin 8s linear infinite",;,;,
+        "spin-slow": "spin 8s linear infinite",;,
 },;
-      keyframes: {;
-  gradient: {;
-  "0%, 100%": {;
+      keyframes: {
+  gradient: {
+  "0%, 100%": {
   "background-size": "200% 200%",;
-            "background-position": "left center",;,;,
+            "background-position": "left center",;,
 },;
-          "50%": {;
+          "50%": {
   "background-size": "200% 200%",;
-            "background-position": "right center",;,;,
-},;,;,
-},;,;,
+            "background-position": "right center",;,
+},;,
+},;,
 },;
-      fontFamily: {;
-  sans: ["Inter", "system-ui", "sans-serif"],;,;,
-},;,;,
-},;,;,
+      fontFamily: {
+  sans: ["Inter", "system-ui", "sans-serif"],;,
+},;,
+},;,
 },;
-  plugins: [;
+  plugins: [
   require("@tailwindcss/forms"),;
     require("@tailwindcss/typography"),;
     require("@tailwindcss/aspect-ratio"),;
-  ],;,;,
+  ],;,
 } satisfies Config;
 `;
   fs.writeFileSync("tailwind.config.ts", content);
-  console.log("Fixed tailwind.config.ts");,;,
+  console.log("Fixed tailwind.config.ts");
 }
 ;
-function fixViteConfig() {;
+function fixViteConfig() {
   const content = `import { defineConfig  } from "vite";
 import react from "@vitejs/plugin-react";
-export default defineConfig({;
+export default defineConfig({
   plugins: [react()],;
-  server: {;
-  port: 3000,;,;,
-},;,;,
+  server: {
+  port: 3000,;,
+},;,
 });
 `;
   fs.writeFileSync("vite.config.ts", content);
-  console.log("Fixed vite.config.ts");,;,
+  console.log("Fixed vite.config.ts");
 }
 ;
-function fixVitestConfig() {;
+function fixVitestConfig() {
   const content = `import { defineConfig  } from "vitest/config";
 import react from "@vitejs/plugin-react";
-export default defineConfig({;
+export default defineConfig({
   plugins: [react()],;
-  test: {;
-  environment: "jsdom",;,;,
-},;,;,
+  test: {
+  environment: "jsdom",;,
+},;,
 });
 `;
   fs.writeFileSync("vitest.config.ts", content);
-  console.log("Fixed vitest.config.ts");,;,
+  console.log("Fixed vitest.config.ts");
 }
 ;
 // Run the fixes;
 console.log("Starting critical file fixes...");
-try {;
+try {
   fixServicesIndex();
   fixSolutions();
   fixTailwindConfig();
   fixViteConfig();
   fixVitestConfig();
-  console.log("All critical files have been fixed!");,;,
-} catch (error) {;
+  console.log("All critical files have been fixed!");
+} catch (error) {
   console.error("Error fixing files:", error);
-  process.exit(1);,;,
+  process.exit(1);
 }

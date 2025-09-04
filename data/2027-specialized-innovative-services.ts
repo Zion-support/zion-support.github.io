@@ -78,14 +78,14 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
+      website: "https://ziontechgroup.com";,
 },;
     realImplementation: true,;
     implementationDetails: "Satellite data integration, AI model training, and monitoring system setup",;
     launchDate: "2027-02-15",;
     customers: 6,;
     rating: 4.9,;
-    reviews: 12;,;,
+    reviews: 12;,
 },;
   // AUGMENTED REALITY & VIRTUAL REALITY;
   {;
@@ -129,14 +129,14 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
+      website: "https://ziontechgroup.com";,
 },;
     realImplementation: true,;
     implementationDetails: "Hardware setup, content development, and user training",;
     launchDate: "2027-01-28",;
     customers: 45,;
     rating: 4.7,;
-    reviews: 89;,;,
+    reviews: 89;,
 },;
   // ROBOTICS & AUTOMATION;
   {;
@@ -180,14 +180,14 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
+      website: "https://ziontechgroup.com";,
 },;
     realImplementation: true,;
     implementationDetails: "Robot integration, AI model deployment, and workflow optimization",;
     launchDate: "2027-02-05",;
     customers: 23,;
     rating: 4.8,;
-    reviews: 34;,;,
+    reviews: 34;,
 },;
   // GREEN TECHNOLOGY & SUSTAINABILITY;
   {;
@@ -231,14 +231,14 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
+      website: "https://ziontechgroup.com";,
 },;
     realImplementation: true,;
     implementationDetails: "Energy audit, system integration, and optimization strategy development",;
     launchDate: "2027-01-18",;
     customers: 78,;
     rating: 4.7,;
-    reviews: 145;,;,
+    reviews: 145;,
 },;
   // SUPPLY CHAIN & LOGISTICS;
   {;
@@ -282,14 +282,14 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
+      website: "https://ziontechgroup.com";,
 },;
     realImplementation: true,;
     implementationDetails: "Supply chain assessment, system integration, and optimization strategy development",;
     launchDate: "2027-02-10",;
     customers: 56,;
     rating: 4.6,;
-    reviews: 98;,;,
+    reviews: 98;,
 },;
   // HUMAN RESOURCES & TALENT MANAGEMENT;
   {;
@@ -333,14 +333,14 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
+      website: "https://ziontechgroup.com";,
 },;
     realImplementation: true,;
     implementationDetails: "HR process assessment, system integration, and user training",;
     launchDate: "2027-01-25",;
     customers: 134,;
     rating: 4.7,;
-    reviews: 267;,;,
+    reviews: 267;,
 },;
   // LEGAL TECHNOLOGY & COMPLIANCE;
   {;
@@ -384,14 +384,14 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
+      website: "https://ziontechgroup.com";,
 },;
     realImplementation: true,;
     implementationDetails: "Legal process assessment, system integration, and user training",;
     launchDate: "2027-02-20",;
     customers: 45,;
     rating: 4.8,;
-    reviews: 78;,;,
+    reviews: 78;,
 },;
   // REAL ESTATE & PROPERTY TECHNOLOGY;
   {;
@@ -435,14 +435,14 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
+      website: "https://ziontechgroup.com";,
 },;
     realImplementation: true,;
     implementationDetails: "Property assessment, system integration, and optimization strategy development",;
     launchDate: "2027-02-25",;
     customers: 67,;
     rating: 4.6,;
-    reviews: 123;,;,
+    reviews: 123;,
 },;
   // SPORTS TECHNOLOGY & ANALYTICS;
   {;
@@ -486,14 +486,14 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
+      website: "https://ziontechgroup.com";,
 },;
     realImplementation: true,;
     implementationDetails: "System setup, data integration, and performance optimization",;
     launchDate: "2027-03-01",;
     customers: 34,;
     rating: 4.7,;
-    reviews: 56;,;,
+    reviews: 56;,
 },;
   // ENTERTAINMENT & MEDIA TECHNOLOGY;
   {;
@@ -537,7 +537,7 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
+      website: "https://ziontechgroup.com";,
 },;
     realImplementation: true,;
     implementationDetails: "Content analysis, recommendation engine setup, and performance optimization",;
@@ -552,7 +552,7 @@ export const getSpecializedServiceById = (id: string) => {;
 export const getSpecializedServicesByCategory = (category: string) => {;
   return specializedInnovativeServices2027.filter(service => service.category === category)}
 export const getSpecializedPopularServices = () => {;
-  return specializedInnovativeServices2027.filter(service => service.popular);,;,
+  return specializedInnovativeServices2027.filter(service => service.popular);
 }
 export const getSpecializedServicesByPriceRange = (minPrice: number, maxPrice: number) => {;
   return specializedInnovativeServices2027.filter(service => {;

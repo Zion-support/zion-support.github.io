@@ -1,136 +1,118 @@
 import React, { useEffect, useState } from "react";
-;
-interface AccessibilitySettings {;
+
+type FontSize = "small" | "normal" | "large" | "xlarge";
+
+interface AccessibilitySettings {
   highContrast: boolean;
-  fontSize: "small" | "normal" | "large" | "xlarge";
+  fontSize: FontSize;
   reducedMotion: boolean;
   focusVisible: boolean;
-  screenReader: boolean;,
+  screenReader: boolean;
 }
-;
-const AccessibilityManager: React.FC = () => {;
-  const [settings, setSettings] = useState<AccessibilitySettings>({;
-    highContrast: false,;
-    fontSize: "normal",;
-    reducedMotion: false,;
-    focusVisible: false,;
-    screenReader: false;,
-});
-;
-  useEffect(() => {;
-    // Load settings from localStorage;
-    const savedSettings = localStorage.getItem('accessibilitySettings');
-    if (savedSettings) {;
-      try {;
-        setSettings(JSON.parse(savedSettings));,
-} catch (error) {;
-        console.error('Error parsing accessibility settings:', error);,
-}
+
+const AccessibilityManager = () => {
+  const [settings, setSettings] = useState<AccessibilitySettings>({
+    highContrast: false,
+    fontSize: "normal",
+    reducedMotion: false,
+    focusVisible: false,
+    screenReader: false,
+  });
+
+  useEffect(() => {
+    const saved = localStorage.getItem('accessibilitySettings');
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved) as AccessibilitySettings;
+        setSettings(parsed);
+        applyAccessibilityStyles(parsed);
+      } catch (error) {
+        console.error('Error parsing accessibility settings:', error);
+      }
     }
   }, []);
-;
-  const updateSetting = (key: keyof AccessibilitySettings, value: boolean | string) => {;
-    const newSettings = { ...settings, [key]: value };
+
+  const updateSetting = (key: keyof AccessibilitySettings, value: boolean | FontSize) => {
+    const newSettings = { ...settings, [key]: value } as AccessibilitySettings;
     setSettings(newSettings);
     localStorage.setItem('accessibilitySettings', JSON.stringify(newSettings));
-    ;
-    // Apply accessibility styles;
-    applyAccessibilityStyles(newSettings);,
-};
-;
-  const applyAccessibilityStyles = (settings: AccessibilitySettings) => {;
-    const root = document.documentElement;
-    ;
-    // High contrast mode;
-    if (settings.highContrast) {;
-      root.classList.add('high-contrast');,
-} else {;
-      root.classList.remove('high-contrast');,
-}
-    ;
-    // Font size;
-    root.classList.remove('font-small', 'font-normal', 'font-large', 'font-xlarge');
-    root.classList.add(`font-${settings.fontSize}`);
-    ;
-    // Reduced motion;
-    if (settings.reducedMotion) {;
-      root.classList.add('reduced-motion');,
-} else {;
-      root.classList.remove('reduced-motion');,
-}
-    ;
-    // Focus visible;
-    if (settings.focusVisible) {;
-      root.classList.add('focus-visible');,
-} else {;
-      root.classList.remove('focus-visible');,
-}
+    applyAccessibilityStyles(newSettings);
   };
-;
-  return (;
-    <div className="accessibility-manager">;
-      <h2>Accessibility Settings</h2>;
-      ;
-      <div className="setting-group">;
-        <label>;
-          <input;
-            type="checkbox";
+
+  const applyAccessibilityStyles = (s: AccessibilitySettings) => {
+    const root = document.documentElement;
+
+    root.classList.toggle('high-contrast', s.highContrast);
+    root.classList.remove('font-small', 'font-normal', 'font-large', 'font-xlarge');
+    root.classList.add(`font-${s.fontSize}`);
+    root.classList.toggle('reduced-motion', s.reducedMotion);
+    root.classList.toggle('focus-visible', s.focusVisible);
+  };
+
+  return (
+    <div className="accessibility-manager">
+      <h2>Accessibility Settings</h2>
+
+      <div className="setting-group">
+        <label>
+          <input
+            type="checkbox"
             checked={settings.highContrast}
             onChange={(e) => updateSetting('highContrast', e.target.checked)}
-          />;
-          High Contrast Mode;
-        </label>;
-      </div>;
-      ;
-      <div className="setting-group">;
-        <label>;
-          Font Size:;
-          <select;
+          />
+          High Contrast Mode
+        </label>
+      </div>
+
+      <div className="setting-group">
+        <label>
+          Font Size:
+          <select
             value={settings.fontSize}
-            onChange={(e) => updateSetting('fontSize', e.target.value)}
-          >;
-            <option value="small">Small</option>;
-            <option value="normal">Normal</option>;
-            <option value="large">Large</option>;
-            <option value="xlarge">Extra Large</option>;
-          </select>;
-        </label>;
-      </div>;
-      ;
-      <div className="setting-group">;
-        <label>;
-          <input;
-            type="checkbox";
+            onChange={(e) => updateSetting('fontSize', e.target.value as FontSize)}
+          >
+            <option value="small">Small</option>
+            <option value="normal">Normal</option>
+            <option value="large">Large</option>
+            <option value="xlarge">Extra Large</option>
+          </select>
+        </label>
+      </div>
+
+      <div className="setting-group">
+        <label>
+          <input
+            type="checkbox"
             checked={settings.reducedMotion}
             onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
-          />;
-          Reduce Motion;
-        </label>;
-      </div>;
-      ;
-      <div className="setting-group">;
-        <label>;
-          <input;
-            type="checkbox";
+          />
+          Reduce Motion
+        </label>
+      </div>
+
+      <div className="setting-group">
+        <label>
+          <input
+            type="checkbox"
             checked={settings.focusVisible}
             onChange={(e) => updateSetting('focusVisible', e.target.checked)}
-          />;
-          Enhanced Focus Indicators;
-        </label>;
-      </div>;
-      ;
-      <div className="setting-group">;
-        <label>;
-          <input;
-            type="checkbox";
+          />
+          Enhanced Focus Indicators
+        </label>
+      </div>
+
+      <div className="setting-group">
+        <label>
+          <input
+            type="checkbox"
             checked={settings.screenReader}
             onChange={(e) => updateSetting('screenReader', e.target.checked)}
-          />;
-          Screen Reader Optimized;
-        </label>;
-      </div>;
-    </div>;
-  );,
+          />
+          Screen Reader Optimized
+        </label>
+      </div>
+    </div>
+  );
 };
-;
+
 export default AccessibilityManager;

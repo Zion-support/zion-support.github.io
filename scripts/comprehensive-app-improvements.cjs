@@ -67,7 +67,7 @@ export default function PerformanceDashboard() {;
 }, []);
 
   return (;
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
+    <div className="grid grid-cols-1 md: grid-cols-2 lg: grid-cols-4 gap-6">;
       <Card>;
         <CardHeader>;
           <CardTitle>Load Time</CardTitle>;
@@ -454,7 +454,7 @@ class TestAutomation {;
   private async runUnitTests() {;
     console.log('Running unit tests...');
     try {;
-      const result = execSync('npm run test:unit', { encoding: 'utf8' });
+      const result = execSync('npm run test: unit', { encoding: 'utf8' });
       this.results.push({ type: 'unit', status: 'passed', output: result });,
 } catch (error) {;
       this.results.push({ type: 'unit', status: 'failed', error: error.message });,
@@ -464,7 +464,7 @@ class TestAutomation {;
   private async runIntegrationTests() {;
     console.log('Running integration tests...');
     try {;
-      const result = execSync('npm run test:integration', { encoding: 'utf8' });
+      const result = execSync('npm run test: integration', { encoding: 'utf8' });
       this.results.push({ type: 'integration', status: 'passed', output: result });,
 } catch (error) {;
       this.results.push({ type: 'integration', status: 'failed', error: error.message });,
@@ -474,7 +474,7 @@ class TestAutomation {;
   private async runE2ETests() {;
     console.log('Running E2E tests...');
     try {;
-      const result = execSync('npm run test:e2e', { encoding: 'utf8' });
+      const result = execSync('npm run test: e2e', { encoding: 'utf8' });
       this.results.push({ type: 'e2e', status: 'passed', output: result });,
 } catch (error) {;
       this.results.push({ type: 'e2e', status: 'failed', error: error.message });,
@@ -484,7 +484,7 @@ class TestAutomation {;
   private async runPerformanceTests() {;
     console.log('Running performance tests...');
     try {;
-      const result = execSync('npm run test:performance', { encoding: 'utf8' });
+      const result = execSync('npm run test: performance', { encoding: 'utf8' });
       this.results.push({ type: 'performance', status: 'passed', output: result });,
 } catch (error) {;
       this.results.push({ type: 'performance', status: 'failed', error: error.message });,
@@ -494,7 +494,7 @@ class TestAutomation {;
   private async runSecurityTests() {;
     console.log('Running security tests...');
     try {;
-      const result = execSync('npm run test:security', { encoding: 'utf8' });
+      const result = execSync('npm run test: security', { encoding: 'utf8' });
       this.results.push({ type: 'security', status: 'passed', output: result });,
 } catch (error) {;
       this.results.push({ type: 'security', status: 'failed', error: error.message });,
@@ -599,7 +599,7 @@ export default function SystemHealthMonitor() {;
         </span>;
       </div>;
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">;
+      <div className="grid grid-cols-1 md: grid-cols-2 lg: grid-cols-4 gap-4">;
         <div className="bg-white p-4 rounded-lg shadow">;
           <h3 className="font-semibold text-gray-700">Uptime</h3>;
           <p className="text-2xl font-bold text-blue-600">{formatUptime(health.uptime)}</p>;

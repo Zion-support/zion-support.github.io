@@ -1,1 +1,0 @@
-import { render } from '@testing-library/react'import ForgotPassword from '../../pages/ForgotPassword'test('renders forgot password page', () => {  render(<ForgotPassword />)  // Add more tests as needed})

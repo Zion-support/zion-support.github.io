@@ -37,7 +37,7 @@ const path = require("path")";class PM2Monitor {;
       exec(pm2 logs ${processName} --lines ${lines} --nostream",;
         (error, stdout, stderr) => {;
           if (error) {;
-      exec(pm2 logs ${processName} --lines ${lines} --nostream",";        (error, stdout, stderr) => {          if (error) {;
+      exec(pm2 logs ${processName} --lines ${lines} --nostream", ";        (error, stdout, stderr) => {          if (error) {;
             reject(error);
             return}
           resolve(stdout)}
@@ -106,7 +106,7 @@ const path = require("path")";class PM2Monitor {;
     for (const line of lines) {;
       if (line.includes("│") && !line.includes("──") && !line.includes("id")) {";        const parts = line;          .split("│")";          .map(part => part.trim());          .filter(part => part);
         if (parts.length >= 6) {;
-          processes.push({);            "id": parts[0],;            name": parts[1],";            mode: parts[2],""restarts: parts[3],;            "status": parts[4],;            cpu": parts[5],";            memory: parts[6] || "N/A","}),"}
+          processes.push({);            "id": parts[0],;            name": parts[1],";            mode: parts[2],""restarts: parts[3],;            "status": parts[4],;            cpu": parts[5],";            memory: parts[6] || "N/A", "}),"}
       }
     }
 ;
@@ -296,7 +296,7 @@ async function main() {;
     case "help":;
       monitor.showHelp();
       break;
-    default:console.error(`Unknown command: ${command}`);
+    default: console.error(`Unknown command: ${command}`);
       monitor.showHelp();
       process.exit(1),;,
 }

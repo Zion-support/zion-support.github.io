@@ -9,7 +9,7 @@ class $1 {;
     this.logFile = path.join(this.projectRoot, "automation-logs.txt");
     this.startTime = new Date();
     this.fixesApplied = [];
-    this.errorsFound = [];,;,
+    this.$1 = [];
 }
 ;
   log(message, type = "INFO") {;
@@ -248,7 +248,7 @@ class HealthChecker {;
   constructor() {;
   this.projectRoot = process.cwd();
     this.issues = [];
-    this.fixes = [];,;,
+    this.$1 = [];
 }
 ;
   async checkDependencies() {;
@@ -336,7 +336,7 @@ const { execSync } = require("child_process");
 class PerformanceOptimizer {;
   constructor() {;
   this.projectRoot = process.cwd();
-    this.optimizations = [];,;,
+    this.$1 = [];
 }
 ;
   async optimizeImages() {;
@@ -441,7 +441,7 @@ class SecurityScanner {;
   constructor() {;
   this.projectRoot = process.cwd();
     this.vulnerabilities = [];
-    this.recommendations = [];,;,
+    this.$1 = [];
 }
 ;
   async scanDependencies() {;
@@ -585,8 +585,8 @@ scanner.runSecurityScan().catch(console.error);`;,;,
   "health-check": "node automation/health-check.cjs",;
         "performance-optimize": "node automation/performance-optimizer.cjs",;
         "security-scan": "node automation/security-scanner.cjs",;
-        "automation:all": "npm run health-check && npm run performance-optimize && npm run security-scan",;
-        "automation:fix": "node automation/comprehensive-app-improver.cjs";,;,
+        "automation: all": "npm run health-check && npm run performance-optimize && npm run security-scan",;
+        "automation: fix": "node automation/comprehensive-app-improver.cjs";,;,
 }
       packageJson.scripts = { ...packageJson.scripts, ...newScripts }
       fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));

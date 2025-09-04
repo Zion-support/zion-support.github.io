@@ -1,0 +1,15 @@
+import React from 'react';
+
+export default function About() {
+  return (
+    <div className="space-y-4">
+      <h2>About Zion Tech Group</h2>
+      <p>
+        We architect, build, and operate production-grade solutions across AI, security, cloud,
+        and data. Our teams deliver measurable outcomes with clear SLAs and enterprise-grade
+        compliance.
+      </p>
+    </div>
+  );
+}
+

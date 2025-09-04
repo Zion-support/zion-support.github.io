@@ -276,9 +276,9 @@ const path = require("path")";console.log("🛡️ Error Prevention & Automation
             this.errors.push({ file, error: error.message }),;,
 }
       this.log("Identifying build issues...");      ;      // Check for syntax errors in key files;
-      const keyFiles = [next.config.js",""tsconfig.json",package.json",""ecosystem.config.cjs""]      ;
+      const keyFiles = [next.config.js", ""tsconfig.json",package.json", ""ecosystem.config.cjs""]      ;
       this.log("Identifying build issues...");";      ;";      // Check for syntax errors in key files;
-      const keyFiles = [next.config.js",""tsconfig.json",package.json",""ecosystem.config.cjs""];";
+      const keyFiles = [next.config.js", ""tsconfig.json",package.json", ""ecosystem.config.cjs""];";
       for (const file of keyFiles) {;
         if (fs.existsSync(file)) {;
           try {;
@@ -404,7 +404,7 @@ const path = require("path")";console.log("🛡️ Error Prevention & Automation
     return report,;,
 }
 ;
-      "timestamp": new Date().toISOString(),;      process": process.env.PM2_PROCESS || "unknown",""summary: {"totalChecks": this.logs.length,;        errors": this.errors.length,";        fixes: this.fixes.length,""success: this.errors.length === 0,},;
+      "timestamp": new Date().toISOString(),;      process": process.env.PM2_PROCESS || "unknown", ""summary: {"totalChecks": this.logs.length,;        errors": this.errors.length,";        fixes: this.fixes.length,""success: this.errors.length === 0,},;
       "logs": this.logs,;      errors": this.errors,";      fixes: this.fixes,""recommendations: this.generateRecommendations(),}
     ;
     // Save report to fileconst reportFile = `error-prevention-report-${Date.now()}.json`;`;    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -526,7 +526,7 @@ async function main() {;
       case "conflicts":;
         await automation.fixMergeConflicts();
         break;
-      default:automation.log(`Unknown task: ${task}`, `error`);
+      default: automation.log(`Unknown task: ${task}`, `error`);
         automation.log(`Available tasks: full, deps, quality, build, tests, conflicts`);
         break,;,
 }
@@ -566,7 +566,7 @@ main().catch(error => {console.error(`Fatal error: ${error.message}`);
       case "build":";        await automation.checkBuildHealth();";        break;
       case "tests":";        await automation.runTests();";        break;
       case "conflicts":";        await automation.fixMergeConflicts();";        break;
-      default:automation.log(`Unknown task: ${task}`, "error");";        automation.log("Available "tasks: full, deps, quality, build, tests, conflicts");";        break;`}";
+      default: automation.log(`Unknown task: ${task}`, "error");";        automation.log("Available "tasks: full, deps, quality, build, tests, conflicts");";        break;`}";
     await automation.generateReport();
     process.exit(0);
     ,,;,

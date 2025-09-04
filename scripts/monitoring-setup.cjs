@@ -11,7 +11,7 @@ class MonitoringSetup {;
     const errorTrackingConfig = `;
 // Error tracking configuration;
 export const errorTracking = {;
-  sentry: {;
+  sentry {;
     dsn: process.env.SENTRY_DSN,;
     environment: process.env.NODE_ENV,;
     tracesSampleRate: 1.0,;

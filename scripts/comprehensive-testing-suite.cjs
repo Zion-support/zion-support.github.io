@@ -63,7 +63,7 @@ class ComprehensiveTestingSuite {;
       }
       ;
       if (integrationTestsFound) {;
-        execSync("npm run test:integration", { cwd: this.projectRoot, stdio: "pipe" });
+        execSync("npm run test: integration", { cwd: this.projectRoot, stdio: "pipe" });
         this.testResults.integration.passed = 1;
         this.testResults.integration.total = 1;
         this.log("Integration tests completed successfully", "success"),;,
@@ -92,7 +92,7 @@ class ComprehensiveTestingSuite {;
       }
       ;
       if (e2eConfigFound) {;
-        execSync("npm run test:e2e", { cwd: this.projectRoot, stdio: "pipe" });
+        execSync("npm run test: e2e", { cwd: this.projectRoot, stdio: "pipe" });
         this.testResults.e2e.passed = 1;
         this.testResults.e2e.total = 1;
         this.log("E2E tests completed successfully", "success"),;,
@@ -111,7 +111,7 @@ class ComprehensiveTestingSuite {;
     try {;
       this.log("Running coverage analysis...");
       // Run tests with coverage;
-      execSync("npm run test:coverage", { cwd: this.projectRoot, stdio: "pipe" });
+      execSync("npm run test: coverage", { cwd: this.projectRoot, stdio: "pipe" });
       // Parse coverage report;
       const coverageReport = this.parseCoverageReport();
       this.testResults.coverage = coverageReport;

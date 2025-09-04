@@ -1,0 +1,60 @@
+{
+  "timestamp": "2025-09-03T15:34:13.338Z",
+  "metrics": {
+    "bundleSize": 1487146,
+    "codeQuality": {
+      "totalFiles": 2863,
+      "totalLines": 418471,
+      "complexity": 3858
+    },
+    "dependencies": {
+      "production": 79,
+      "development": 37,
+      "total": 116
+    },
+    "buildPerformance": {
+      "lastBuild": "2025-09-03T15:34:13.477Z",
+      "estimatedTime": "Simulated"
+    }
+  },
+  "optimizations": [],
+  "recommendations": [
+    {
+      "type": "bundle",
+      "message": "Implement code splitting for better performance",
+      "priority": "high"
+    },
+    {
+      "type": "caching",
+      "message": "Implement proper caching strategies",
+      "priority": "medium"
+    },
+    {
+      "type": "images",
+      "message": "Optimize images and use modern formats",
+      "priority": "medium"
+    },
+    {
+      "type": "lazy-loading",
+      "message": "Implement lazy loading for components",
+      "priority": "low"
+    }
+  ],
+  "alerts": [
+    {
+      "type": "bundle-size",
+      "message": "Bundle size is large, consider code splitting",
+      "severity": "warning"
+    },
+    {
+      "type": "complexity",
+      "message": "High code complexity detected",
+      "severity": "warning"
+    },
+    {
+      "type": "dependencies",
+      "message": "High number of dependencies, consider optimization",
+      "severity": "info"
+    }
+  ]
+}

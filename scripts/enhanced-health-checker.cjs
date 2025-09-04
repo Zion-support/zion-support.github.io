@@ -80,7 +80,7 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
 ;
   generateReport(results) {;
     const report = {;
-      "timestamp": new Date().toISOString(),""fileStructure": results.fileStructure,""configuration": results.configuration,""dependencies": results.dependencies,""summary": {""overall": "healthy",""issues": [";          ...results.fileStructure.issues,;
+      "timestamp": new Date().toISOString(),""fileStructure": results.fileStructure,""configuration": results.configuration,""dependencies": results.dependencies,""summary": {""overall": "healthy", ""issues": [";          ...results.fileStructure.issues,;
           ...results.configuration.packageJson.issues,;
           ...results.configuration.nextConfig.issues,;
           ...results.configuration.tsConfig.issues,,],,,;,

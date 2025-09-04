@@ -59,7 +59,7 @@ STRIPE_SECRET_KEY=your_stripe_secret_key_here;
 SENDGRID_API_KEY=your_sendgrid_api_key_here;
 # Development;
 NODE_ENV=development;
-NEXT_PUBLIC_API_URL=http://localhost:3000/api;
+NEXT_PUBLIC_API_URL=http://localhost: 3000/api;
 `;
     const envPath = path.join(this.projectRoot, ".env.example");
     fs.writeFileSync(envPath, envTemplate);
@@ -183,7 +183,7 @@ export const securityConfig = {;
   cors: {;
     origin: process.env.NODE_ENV === "production" ;
       ? ["https://ziontechgroup.com"] ;
-      : ["http://localhost:3000"],;
+      : ["http://localhost: 3000"],;
     credentials: true,;,
 }
 }
@@ -318,7 +318,7 @@ export const OptimizedImage = ({;
         priority={priority}
         quality={85}
         placeholder="blur";
-        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=";
+        blurDataURL="data: image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=";
         onLoad={() => setIsLoading(false)}
         onError={() => {;
           setIsLoading(false);
@@ -547,7 +547,7 @@ class TestingPipeline {;
   async runUnitTests() {;
     console.log("🔬 Running unit tests...");
     try {;
-      const result = execSync("npm run test:unit", { encoding: "utf8" });
+      const result = execSync("npm run test: unit", { encoding: "utf8" });
       this.results.tests.push({ type: "unit", status: "passed", output: result });
       this.results.summary.passed++,;,
 } catch (error) {;
@@ -560,7 +560,7 @@ class TestingPipeline {;
   async runIntegrationTests() {;
     console.log("🔗 Running integration tests...");
     try {;
-      const result = execSync("npm run test:integration", { encoding: "utf8" });
+      const result = execSync("npm run test: integration", { encoding: "utf8" });
       this.results.tests.push({ type: "integration", status: "passed", output: result });
       this.results.summary.passed++,;,
 } catch (error) {;
@@ -573,7 +573,7 @@ class TestingPipeline {;
   async runE2ETests() {;
     console.log("🎭 Running E2E tests...");
     try {;
-      const result = execSync("npm run test:e2e", { encoding: "utf8" });
+      const result = execSync("npm run test: e2e", { encoding: "utf8" });
       this.results.tests.push({ type: "e2e", status: "passed", output: result });
       this.results.summary.passed++,;,
 } catch (error) {;
@@ -586,7 +586,7 @@ class TestingPipeline {;
   async generateCoverageReport() {;
     console.log("📊 Generating coverage report...");
     try {;
-      const result = execSync("npm run test:coverage", { encoding: "utf8" });
+      const result = execSync("npm run test: coverage", { encoding: "utf8" });
       this.results.coverage = { status: "generated", output: result }
     } catch (error) {;
       this.results.coverage = { status: "failed", error: error.message }
