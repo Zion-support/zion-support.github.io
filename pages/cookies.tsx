@@ -2,7 +2,11 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 export default function Cookies() {
-const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
+const contact = { 
+    phone: '+1 302 464 0950', 
+    email: 'kleber@ziontechgroup.com', 
+    address: '364 E Main St STE 1008 Middletown DE 19709', 
+    site: 'https://ziontechgroup.com'
   };
   const cookieTypes = [
     {
@@ -72,7 +76,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
         <div style={{ maxWidth: 1000, margin: '0 auto', padding: '40px 20px' }}>
           <div style={{ textAlign: 'center', marginBottom: 60 }}>
             <h1 style={{ 
-              fontSize: '2.5rem',
+              fontSize: '3rem',
               fontWeight: 800, 
               marginBottom: 20,
               background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
@@ -88,7 +92,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
           </div>
 
           <div style={{ marginBottom: 60 }}>
-            <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: 20 }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 20 }}>
               What Are Cookies?
             </h2>
             <div style={{
@@ -118,8 +122,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                   border: '1px solid #e2e8f0'
                 }}>
                   <h3 style={{ 
-                    fontSize: '1.2rem',
-                    fontWeight: 700, 
+                    fontSize: '2rem', fontWeight: 700, 
                     marginBottom: 15,
                     color: '#3b82f6'
                   }}>
@@ -136,7 +139,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                   </p>
                   
                   <div style={{ marginBottom: 20 }}>
-                    <h4 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
+                    <h4 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
                       Purpose:
                     </h4>
                     <p style={{ color: '#666', lineHeight: 1.5 }}>
@@ -145,7 +148,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                   </div>
                   
                   <div style={{ marginBottom: 20 }}>
-                    <h4 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
+                    <h4 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
                       Examples:
                     </h4>
                     <ul style={{ color: '#666', paddingLeft: 20 }}>
@@ -158,7 +161,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                   </div>
                   
                   <div>
-                    <h4 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
+                    <h4 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
                       Retention Period:
                     </h4>
                     <p style={{ color: '#666' }}>
@@ -186,7 +189,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
               </p>
               
               <div style={{ marginBottom: 20 }}>
-                <h3 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
+                <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
                   Browser Settings:
                 </h3>
                 <p style={{ color: '#666', lineHeight: 1.5 }}>
@@ -197,7 +200,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
               </div>
               
               <div>
-                <h3 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
+                <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
                   Cookie Banner:
                 </h3>
                 <p style={{ color: '#666', lineHeight: 1.5 }}>
@@ -260,8 +263,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
               padding: '12px 24px',
               textDecoration: 'none',
               borderRadius: 8,
-              fontSize: '1rem',
-              fontWeight: 600,
+              fontSize: '1.5rem', fontWeight: 600,
               display: 'inline-block'
             }}>
               Contact Us
