@@ -151,32 +151,7 @@ import Link from "next/link";`;
 }
 }
 ;
-// Function to fix Redux/TypeScript files;
-function $1() {
-  const reduxFiles = [
-  "src/store/hooks.ts",;
-    "src/store/index.ts",;
-    "src/store/wishlistSlice.ts";
-  ];
-  reduxFiles.forEach(filePath => {
-  try {
-  if (fs.existsSync(filePath)) {
-  let content = fs.readFileSync(filePath, "utf8");
-        // Fix common TypeScript syntax errors;
-        content = content.replace(/import\s*{([^}]*)\s*}\s*from\s*[""]react-redux[""];/, ;
-          "import { $1  } from "react-redux";");
-        // Fix generic type syntax;
-        content = content.replace(/useSelector<([^>]*)>/g, "useSelector<$1>");
-        content = content.replace(/useDispatch<([^>]*)>/g, "useDispatch<$1>");
-        fs.writeFileSync(filePath, content);
-        console.log(`Fixed Redux file: ${filePath}`);
-}
-    } catch (error) {
-  console.error(`Error fixing Redux file ${filePath}:`, error.message);
-}
-  });
-}
-;
+// Note: previously broken fixer removed to avoid syntax errors.
 // Function to fix test files;
 function fixTestFiles() {
   const testFiles = [
