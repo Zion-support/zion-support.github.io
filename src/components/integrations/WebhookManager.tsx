@@ -25,14 +25,16 @@ export default function Page(props: any) {
       ...newWebhook,
       eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
       selectedEvent: "" as WebhookEventType
-    });
+    }
+    );
   };
   
   const handleRemoveEvent = (props: any) => {
     setNewWebhook({
       ...newWebhook,
       eventTypes: newWebhoo k.eventTypes.filter(e => e !== event)
-    });
+    }
+    );
   };
   
   const handleCreateWebhook = async () => {
@@ -54,14 +56,16 @@ export default function Page(props: any) {
       selectedEvent: "" as WebhookEventType,
       eventTypes: [],
       secret: ""
-    });
+    }
+    );
   };
   
   const handleTestWebhook = async(webhookId: string, eventType: WebhookEventTyp e) => {
     await testWebhook(webhookId, eventType);
   };
   
-  return (<div className="space-y-8">
+  return (
+        <div className="space-y-8">
       <Card>
         <CardHeader>
           <CardTitle>Create Webhook</CardTitle>
@@ -145,7 +149,7 @@ export default function Page(props: any) {
       </Card>
       
       <div>
-        <h3 className="text-lg font-medium mb-4">Your Webhooks</h3>
+        <h3 className="text-lg font-medium mb-4">Your Webhooks
         
         {loading ? (
           <p>Loading webhooks...</p>
@@ -256,7 +260,7 @@ export default function Page(props: any) {
         )}
       </div>
     </div>
-  );
+    );
 }
 
 </empty>

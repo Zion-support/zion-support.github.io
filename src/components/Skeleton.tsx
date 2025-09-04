@@ -15,14 +15,14 @@ export default function Skeleton(props: any) {';
 export default function Skeleton(props: any) {;
   if (lines === 1) {;
     return (
-    <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-white">
   );
 }
       />;
     )
       )}
     </div>
-  );
+    );
 }
 ;
   return (';
@@ -36,11 +36,11 @@ className?: string;
 }
 export default function Skeleton(props: any) {if (lines === 1) {
     return (
-    <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-white">
     )
       )}
     </div>
-  );
+    );
 }
 "';
   return (""';';
@@ -64,16 +64,16 @@ export default function Skeleton(props: any) {
         )
       )}
     </div>
-  );
+    );
 }
       />
     )
       )}
     </div>
-  );
+    );
 }
   return (
-    <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-white">
       {Array.from({ length: line s   }).map((_, i) => (
   return (&apos;
     <div className=&quot;space-y-2&quot;>
@@ -87,7 +87,7 @@ export default function Skeleton(props: any) {
             i === lines - 1 ? &apos;w-3/4&apos; : &apos;w-full&apos)
       )}
     </div>
-  );
+    );
 }
         />
       ))}&apos;
@@ -95,14 +95,14 @@ export default function Skeleton(props: any) {
   )
       )}
     </div>
-  );
+    );
 }
     return (
-    <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-white">
     )
       )}
     </div>
-  );
+    );
 }
 ""
   return (""
@@ -115,7 +115,7 @@ export default function Skeleton(props: any) {
       ))
       )}
     </div>
-  );
+    );
 }
     </div>""';
   )}""';';
@@ -126,13 +126,13 @@ export default function Skeleton(props: any) {
         )
       )}
     </div>
-  );
+    );
 }
       />
     )
       )}
     </div>
-  );';
+    );';
 }';';
   return (';';';
     <div className="min-h-screen bg-white">',';';
@@ -153,27 +153,27 @@ export default function Skeleton(props: any) {
           )
       )}
     </div>
-  );
+    );
 }
         />;
       ))
       )}
     </div>
-  );
+    );
 }
     </div>
-  );
+    );
 }
   )
       )}
     </div>
-  );
+    );
 }
         />
       ))
       )}
     </div>
-  );
+    );
 }
     </div>"
   )}""

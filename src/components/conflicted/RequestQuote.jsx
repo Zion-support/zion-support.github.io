@@ -218,7 +218,7 @@ import React, {useState} from 'react';                <Clock className="w-5 h-5 
   x: 0
 
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-white mb-4">Get in Touch</h3>
+                <h3 className="text-xl font-bold text-white mb-4">Get in Touch
                 <div className="space-y-4">
                   <a href="tel:+13024640950" className="flex items-center text-white/80 hover:text-cyan-400 transition-colors">                    <Phone className="w-5 h-5 mr-3 text-cyan-400" />
                     +1(302) 464-0950
@@ -251,7 +251,7 @@ import React, {useState} from 'react';                <Clock className="w-5 h-5 
   delay: 0.2
 
 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-white mb-4">Why Choose Us</h3>
+                <h3 className="text-xl font-bold text-white mb-4">Why Choose Us
                 <div className="space-y-4">
                   <div className="flex items-start">                    <Star className="w-5 h-5 text-yellow-400 mr-3 mt-1 flex-shrink-0" />
                     <div>"
@@ -300,7 +300,7 @@ import React, {useState} from 'react';                <Clock className="w-5 h-5 
   delay: 0.4
 
 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-white mb-4">Our Process</h3>
+                <h3 className="text-xl font-bold text-white mb-4">Our Process
                 <div className="space-y-4">
                   <div className="flex items-start">                    <div className="w-6 h-6 bg-cyan-400 rounded-full flex items-center justify-center text-black text-xs font-bold mr-3 mt-1">1</div>
                     <div>"

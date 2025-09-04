@@ -89,7 +89,8 @@ export function AdvancedNotificationSystem(props: any) {
         const searchMatch = notification.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             notification.message.toLowerCase().includes(searchQuery.toLowerCase());
         const readMatch = showRead || !notification.isRead;
-        return typeMatch && priorityMatch && categoryMatch && searchMatch && readMatch});
+        return typeMatch && priorityMatch && categoryMatch && searchMatch && readMatch}
+    );
     const markAllAsRead = (props: any) => {
         setNotifications(prev => prev.map(n => ({ ...n, isRead: true })))};
     const archiveNotification = (props: any) => {
@@ -139,7 +140,8 @@ export function AdvancedNotificationSystem(props: any) {
           </span>)}
       </button>)}
     if (isMinimized) {
-        return (<div className="fixed bottom-4 right-36 z-50">
+        return (
+        <div className="fixed bottom-4 right-36 z-50">
         <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">
           <div className="flex items-center gap-3">
             <div className="w-3 h-3 bg-zion-emerald rounded-full animate-pulse"></div>
@@ -152,7 +154,8 @@ export function AdvancedNotificationSystem(props: any) {
           </div>
         </div>
       </div>)}
-    return (<div className="fixed bottom-4 right-4 w-96 h-[600px] bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 flex flex-col" ref={containerRef}>
+    return (
+        <div className="fixed bottom-4 right-4 w-96 h-[600px] bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 flex flex-col" ref={containerRef}>
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-emerald/10 to-zion-cyan/10">
         <div className="flex items-center gap-3">
@@ -219,7 +222,7 @@ export function AdvancedNotificationSystem(props: any) {
       <div className="flex-1 overflow-y-auto">
         {Object.entries(groupedNotifications).map(([category, categoryNotifications]) => (<div key={category}>
             {groupByCategory && (<div className="px-4 py-2 bg-zion-slate-light/10 border-b border-zion-slate-light">
-                <h3 className="text-sm font-medium text-zion-slate capitalize">{category}</h3>
+                <h3 className="text-sm font-medium text-zion-slate capitalize">{category}
               </div>)}
 
             {categoryNotifications.map((notification) => (<div key={notification.id} className={`border-l-4 ${getPriorityColor(notification.priority)} ${!notification.isRead ? 'bg-zion-emerald/5' : 'bg-white dark:bg-zion-slate'} hover:bg-zion-slate-light/5 transition-colors`}>

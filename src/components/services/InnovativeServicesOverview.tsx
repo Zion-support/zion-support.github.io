@@ -56,7 +56,7 @@ maxServices:  6,;
   const ServiceCard: React.FC<{ service: typeof INNOVATIVE_SERVICES_2025[0] }> = ({ service }) => (
     <div className = "bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
       <div className="flex items-start justify-between mb-3">
-        <h3 className="text-lg font-semibold text-gray-900">{service.title}</h3>
+        <h3 className="text-lg font-semibold text-gray-900">{service.title}
         <div className="flex items-center space-x-1">
           <span className="text-yellow-500 text-sm">★</span>
           <span className="text-sm text-gray-600">{service.rating}</span>
@@ -136,7 +136,7 @@ maxServices:  6,;
         <div className="bg-white rounded-lg shadow-md p-6 mb-12">
           <div className="flex flex-col md:flex-row items-center justify-between text-center md:text-left">
             <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Ready to Get Started?</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Ready to Get Started?
               <p className="text-gray-600">Contact our team for personalized solutions and competitive pricing</p>
             </div>
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 mt-4 md:mt-0">
@@ -187,7 +187,7 @@ maxServices:  6,;
 
         {/* CTA Section */}
         <div className="text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Business?</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Business?
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
             Our innovative services are designed to give you a competitive edge in today's rapidly evolving technology landscape.
           </p>

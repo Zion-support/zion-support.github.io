@@ -8,7 +8,7 @@ children: ReactNod e;
   showPerformanceMetrics?: boolean,;
   showSEOAnalysis?: boolean}
 
-export const EnhancedLayout: Reac t.FC<EnhancedLayoutProps> = ({ children,"
+export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
   title = "Zion Tech Group - Leading Technology Solutions Provider","
   description = "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.","
   keywords = "AI development, cloud architecture, digital transformation, technology solutions, machine learning, software development","

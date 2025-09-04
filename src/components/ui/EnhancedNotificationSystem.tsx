@@ -34,9 +34,9 @@ export
 
 interface NotificationProviderProps extends React.PropsWithChildren<{}> {
 
-  children: Reac t.ReactNode}
+  children: React.ReactNode}
 
-export const NotificationProvider: Reac t.FC<NotificationProviderProps> = ({ children }) => {
+export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
 
   const [notifications, setNotifications] = useState<any>([]);
 
@@ -60,7 +60,7 @@ export const NotificationProvider: Reac t.FC<NotificationProviderProps> = ({ chi
     </NotificationContext.Provider>;
   )};
 ;
-const NotificationContainer: Reac t.FC = props {;  const { notifications, removeNotification, clearAll } = useNotifications();
+const NotificationContainer: React.FC = props {;  const { notifications, removeNotification, clearAll } = useNotifications();
 
   if (notifications.length === 0) return null;
 
@@ -130,7 +130,7 @@ const NotificationContainer: Reac t.FC = props {;  const { notifications, remove
   notification: Notificatio n;
   onRemove: (id: string)  => void}
 
-const NotificationItem: Reac t.FC<NotificationItemProps> = ({ notification, onRemove }) => {
+const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRemove }) => {
 "
         return <Info className = "w-5 h-5 text-blue-400"   />}};
 '        return 'border-blue-500/30'}

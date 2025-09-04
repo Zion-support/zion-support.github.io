@@ -56,7 +56,8 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.category.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
-  });
+  }
+    );
 
   const serviceCategories = []
     {}
@@ -252,7 +253,7 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
                 <div className="text-4xl mb-4">{service.icon}</div>""""
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {service.name}"""
-                </h3>""""
+                """"
                 <p className="text-gray-300 mb-4 line-clamp-3">
                   {service.description}
                 </p>"""
@@ -307,7 +308,7 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
               <div className="text-4xl mb-4">🚀</div>""""
               <h3 className="text-xl font-semibold text-white mb-3">
                 Innovation First"""
-              </h3>""""
+              """"
               <p className="text-gray-300">
                 We stay ahead of technology trends, offering the latest AI,
                 quantum computing, and emerging tech solutions;
@@ -318,7 +319,7 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
               <div className="text-4xl mb-4">💼</div>""""
               <h3 className="text-xl font-semibold text-white mb-3">
                 Business Focused"""
-              </h3>""""
+              """"
               <p className="text-gray-300">
                 Every solution is designed with ROI in mind, ensuring measurable;
                 business impact and value creation;
@@ -329,7 +330,7 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
               <div className="text-4xl mb-4">🔒</div>""""
               <h3 className="text-xl font-semibold text-white mb-3">
                 Enterprise Grade"""
-              </h3>""""
+              """"
               <p className="text-gray-300">
                 Built with security, scalability, and compliance in mind for;
                 enterprise-level reliability;

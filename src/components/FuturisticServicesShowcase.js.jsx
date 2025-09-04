@@ -46,7 +46,7 @@ const ServiceCard = (props: any) => {    const [isHovered, setIsHovered] = useSt
               <div className="flex-1">""""
                 <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">""
                   {service.title}"""""
-                </h3>"""""
+                """""
                 <div className="flex items-center space-x-2 mb-3">""""
                   <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full border border-cyan-500/30">""
                     {service.category}"""""
@@ -159,7 +159,8 @@ export const FuturisticServicesShowcase = (props: any) => {}""
         const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
 service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-        return matchesCategory && matchesSearch});
+        return matchesCategory && matchesSearch}
+    );
     // Set all services as visible initially for better UX
     useEffect(() => {
   // TODO: Add dependencies if needed
@@ -170,7 +171,8 @@ service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
 }, []);, []);
         const allIndices = new Set(filteredServices.map((_, index) => index));
         setVisibleServices(allIndices)}, [filteredServices]);"
-    return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 py-20">
+    return (
+        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 py-20">
       {/* Animated Background */}"
       <div className="absolute inset-0 overflow-hidden">"
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5"></div>"

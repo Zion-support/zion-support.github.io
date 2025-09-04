@@ -23,7 +23,8 @@ export function DynamicListingPage(props: any) {
     const listingsWithPrice = allListings.filter(l => l.price !== null);
     if (listingsWithPrice.length > 0) {
       const max = Math.max(...listingsWithPrice.map(l => l.price || 0));
-      setPriceRange({ min: 0, max });
+      setPriceRange({ min: 0, max }
+    );
       setCurrentPriceFilter([0, max]);
     }
   }, [allListings]);
@@ -37,7 +38,8 @@ export function DynamicListingPage(props: any) {
     const matchesRating = selectedRating === null ||
                          (listing.rating !== null && listing.rating >= selectedRating);
     
-    return matchesSearch && matchesCategory && matchesPrice && matchesRating;});
+    return matchesSearch && matchesCategory && matchesPrice && matchesRating;}
+    );
 
   const totalPages = itemsPerPage
     ? Math.ceil(filteredListings.length / itemsPerPage)
@@ -59,7 +61,8 @@ export function DynamicListingPage(props: any) {
         toast({
           title: "Quote Requested",
           description: `Your quote request for ${listing.title} has been sent.`
-        });
+        }
+    );
         
         navigate("/request-quote", {
           state: {
@@ -71,13 +74,14 @@ export function DynamicListingPage(props: any) {
               image: listing.images?.[0]
             }
           }
-        });
+        }
+    );
       }
     }, 500);
   };
 
   return (
-    <div className="min-h-screen bg-blue-900 py-12 px-4">
+        <div className="min-h-screen bg-blue-900 py-12 px-4">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-white mb-4">{title}</h1>
@@ -164,7 +168,7 @@ export function DynamicListingPage(props: any) {
           {paginatedListings.map((listing) => (
             <div key={listing.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:border-white/40 transition-all duration-300">
               <div className="aspect-square bg-gray-300 rounded-lg mb-4"></div>
-              <h3 className="text-lg font-semibold text-white mb-2">{listing.title}</h3>
+              <h3 className="text-lg font-semibold text-white mb-2">{listing.title}
               <p className="text-gray-300 text-sm mb-3 line-clamp-2">{listing.description}</p>
               <div className="flex items-center justify-between mb-3">
                 <span className="text-2xl font-bold text-white">${listing.price}</span>
@@ -202,5 +206,5 @@ export function DynamicListingPage(props: any) {
         )}
       </div>
     </div>
-  );
+    );
 }

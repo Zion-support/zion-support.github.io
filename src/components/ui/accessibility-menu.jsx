@@ -9,7 +9,8 @@ export function AccessibilityMenu(props: any) {
         highContrast: false,
         reducedMotion: false,
         soundEnabled: true
-    });
+    }
+    );
     useEffect(() => {
         // Load settings from localStorage
         const savedSettings = localStorage.getItem('accessibility-settings');

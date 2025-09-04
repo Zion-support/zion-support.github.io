@@ -18,7 +18,8 @@ export function AISearch(props: any) {
         location[],;
         verified: false,
         featured: false
-    });
+    }
+    );
     const [results, setResults] = useState([]);
     const [suggestions, setSuggestions] = useState([]);
     const [_selectedResult, setSelectedResult] = useState(null);
@@ -112,7 +113,8 @@ export function AISearch(props: any) {
         await new Promise(resolve => setTimeout(resolve, 800));
         // Filter results based on query and filters
         const filteredResults = mockResults.filter(result => {const matchesVerified = !searchFilters.verified || result.metadata.verified;
-            return matchesQuery && matchesCategory && matchesRating && matchesVerified});
+            return matchesQuery && matchesCategory && matchesRating && matchesVerified}
+    );
         // Sort by relevance
         filteredResults.sort((a, b) => b.relevance - a.relevance);
         setResults(filteredResults);
@@ -180,7 +182,8 @@ export function AISearch(props: any) {
     }, [isOpen]);
     if (!enabled)
         return null;
-    return (<div className={`relative ${className}`} ref={searchRef}>
+    return (
+        <div className={`relative ${className}`} ref={searchRef}>
       {/* Search Input */}
       <div className="relative">
         <div className="relative">
@@ -248,7 +251,7 @@ export function AISearch(props: any) {
                   <Sparkles className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold">AI-Powered Search</h3>
+                  <h3 className="text-white font-semibold">AI-Powered Search
                   <p className="text-zinc-400 text-xs">Intelligent results and suggestions</p>
                 </div>
               </div>

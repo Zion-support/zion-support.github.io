@@ -116,7 +116,8 @@ export function AnalyticsManager(props: any) {
   }, [currentSession]) };
 
     // Scroll tracking'
-    document.addEventListener('scroll', handleScroll, { passive: tru e });
+    document.addEventListener('scroll', handleScroll, { passive: tru e }
+    );
 
     // Page unload tracking'
     window.addEventListener('beforeunload', handleBeforeUnload)}, []);
@@ -161,24 +162,30 @@ export function AnalyticsManager(props: any) {
         if(fcp) {
 
           trackPerformance('fcp', fcp.startTime)}
-      });
-      fcpObserver.observe({ entryTypes: ['paint'] });
+      }
+    );
+      fcpObserver.observe({ entryTypes: ['paint'] }
+    );
 
       // Largest Contentful Paint
 
         if(lcp) {
 
           trackPerformance('lcp', lcp.startTime)}
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      }
+    );
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }
+    );
 
       // First Input Delay
 
         if(fid) {
 
           trackPerformance('fid', fid.processingStart - fid.startTime)}
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
+      }
+    );
+      fidObserver.observe({ entryTypes: ['first-input'] }
+    );
 
       // Cumulative Layout Shift
       const clsObserver = new PerformanceObserver(list => {
@@ -189,14 +196,16 @@ export function AnalyticsManager(props: any) {
 
             clsValue += (entry as any).value}
         }
-        trackPerformance('cls', clsValue)});
+        trackPerformance('cls', clsValue)}
+    );
       clsObserver.observe({ entryTypes: ['layout-shift'] })}
   }, []) }
     }, 30000) ;
 
     return () => clearInterval(activityInterval) }, [currentSession]) ;
 
-        trackEvent('page_view', { path });
+        trackEvent('page_view', { path }
+    );
 
         // Send to analytics endpoint'
         sendAnalyticsData('page_view', { path, timestamp: Dat e.now() })}

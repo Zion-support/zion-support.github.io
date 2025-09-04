@@ -51,7 +51,7 @@ import { Globe, Clock, Users, Shield, Zap, CheckCircle export const GlobalServic
                 <div className="p-3 bg-blue-600/20 rounded-lg mr-4">
                   <service .icon className="h-8 w-8 text-blue-400"  />
                 </div>
-                <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+                <h3 className="text-xl font-semibold text-white">{service.title}
               </div>
               <p className="text-gray-300 mb-4">{service.description}</p>
               <ul className="space-y-2">
@@ -70,7 +70,7 @@ import { Globe, Clock, Users, Shield, Zap, CheckCircle export const GlobalServic
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Experience Global Service Excellence?
-            </h3>
+            
             <p className="text-gray-300 mb-6">
               Join organizations worldwide that trust Zion Tech Group for their global IT service needs.
             </p>

@@ -1,4 +1,4 @@
-const UltimateZionServicesMarketing: Reac t.FC = () : JSX.Element => {;
+const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
 
   const categories = [{
@@ -69,7 +69,8 @@ const UltimateZionServicesMarketing: Reac t.FC = () : JSX.Element => {;
 
   const selectedServices = getServicesByCategory(selectedCategory) ;
 
-  return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">
+  return (
+        <div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div  className="max - w-7xl mx - auto text-center">
@@ -189,7 +190,7 @@ const UltimateZionServicesMarketing: Reac t.FC = () : JSX.Element => {;
           >"
             <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               🚀 Ready to Transform Your Business?
-            </h3>
+            
             <div  className="grid grid - cols - 1 md: gri d - cols - 3 gap-6 text-sm">
               <div  className="text-center">
                 <div  className="text-purple - 400 font - semibold text-lg mb-2">📱 Contact Us</div>
@@ -355,7 +356,7 @@ const UltimateZionServicesMarketing: Reac t.FC = () : JSX.Element => {;
                   <div className={`text-6xl mb-4 group-hover: scal e-110 transition-transform duration-300`}>
                     {service.icon}
                   </div>"
-                  <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>"
+                  <h3 className="text-xl font-semibold text-white mb-2">{service.name}"
                   <div className="inline-block px-3 py-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xs font-semibold mb-2">
                     {service.innovationLevel}
                   </div>"

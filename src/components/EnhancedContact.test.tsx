@@ -9,6 +9,6 @@ export default function EnhancedContact.test() {return (
           Professional EnhancedContact.test services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

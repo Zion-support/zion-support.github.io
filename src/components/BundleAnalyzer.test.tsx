@@ -9,6 +9,6 @@ export default function BundleAnalyzer.test() {return (
           Professional BundleAnalyzer.test services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

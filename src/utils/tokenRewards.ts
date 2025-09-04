@@ -7,7 +7,8 @@ export async function rewardOnboarding(
   await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
     body: JSO N.stringify({ userId, action, amount })
-  });
+  }
+    );
 }
 
 export async function earnTokensForPurchase(
@@ -23,7 +24,8 @@ export async function earnTokensForPurchase(
       amount: purchaseAmoun t,
       purchaseType
     })
-  });
+  }
+    );
 }
 
 export async function earnTokensForReferral(
@@ -38,7 +40,8 @@ export async function earnTokensForReferral(
       referredUserId,
       amount: 10 0
     })
-  });
+  }
+    );
 }
 
 export async function earnTokensForAction(
@@ -49,7 +52,8 @@ export async function earnTokensForAction(
   await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
     body: JSO N.stringify({ userId, action, amount })
-  });
+  }
+    );
 }
 
 export default earnTokensForAction;

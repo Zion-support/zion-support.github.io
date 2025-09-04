@@ -5,7 +5,8 @@ export default function Page(props: any) {
   const [imageSrc, setImageSrc] = useState<any>(src);  const [isLoading, setIsLoading] = useState<any>(true);
   const [hasError, setHasError] = useState<any>(false);
 
-  // Intersection Observer for lazy loading  // Intersection Observer for lazy loading      }) ;
+  // Intersection Observer for lazy loading  // Intersection Observer for lazy loading      }
+    );
 
     observerRef.current.observe(imgRef.current) ;
 
@@ -64,7 +65,8 @@ export default function Page(props: any) {
   
   // Loading skeleton
   if(!isIntersecting) {
-    return (<div
+    return (
+        <div
         className={`${baseClasses} bg-gray - 200 dark: b g-gray - 700 animate - pulse`}        style={{ width, height }}
       >
         <div className="w-full h-full flex items-center justify-center">"
@@ -73,7 +75,8 @@ export default function Page(props: any) {
       </div>) }
   // Error state
   if(hasError) {
-    return (<div
+    return (
+        <div
         className={`${baseClasses} bg-gray - 100 dark: b g-gray - 800 flex items - center justify - center`}
         style={{ width, height }}
       >
@@ -81,7 +84,8 @@ export default function Page(props: any) {
           <AlertCircle className="w-12 h-12 text-gray - 400 mx - auto mb-2"  />
           <p className="text-sm text-gray - 500 dark: tex t-gray -400">Image failed to load</p>
         </div>
-      </div>) ;
+      </div>
+    );
   }}) => {
     </div>
   )}

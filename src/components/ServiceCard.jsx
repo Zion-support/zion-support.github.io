@@ -123,7 +123,7 @@ export default function Page(props: any) {
           {/* Enhanced Title */}"
           <h3 className="text-xl font-bold text-white mb-4 text-center group-hover:text-zion-cyan transition-all duration-300 group-hover:scale-105">
             {title}
-          </h3>
+          
 
           {/* Enhanced Description */}"
           <p className="text-zion-slate-light text-sm leading-relaxed mb-6 text-center group-hover:text-white transition-colors duration-300">

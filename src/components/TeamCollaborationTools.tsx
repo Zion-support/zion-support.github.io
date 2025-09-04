@@ -42,7 +42,7 @@ interface TeamCollaborationToolsProps extends React.PropsWithChildren<{}> {
   showFileSharing?: boolean;
   maxItems?: number}
 
-export const TeamCollaborationTools: Reac t.FC<TeamCollaborationToolsProps> = ({
+export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
   showTeamMembers = true,
 showProjects: tru e,;
@@ -302,7 +302,7 @@ showProjects: tru e,;
                     </div>
                   </div>"
                   <div className="flex-1">"
-                    <h3 className="text-lg font-semibold text-white">{member.name}</h3>"
+                    <h3 className="text-lg font-semibold text-white">{member.name}"
                     <p className="text-zinc-400 text-sm">{member.role}</p>"
                     <p className="text-zinc-500 text-xs">{member.department}</p>
                   </div>
@@ -497,7 +497,7 @@ showProjects: tru e,;
                 {/* Project Header */}"
                 <div className="flex items-start justify-between mb-4">"
                   <div className="flex-1">"
-                    <h3 className="text-xl font-semibold text-white mb-2">{project.name}</h3>"
+                    <h3 className="text-xl font-semibold text-white mb-2">{project.name}"
                     <p className="text-zinc-400 mb-3">{project.description}</p>
 "
                     <div className="flex flex-wrap items-center gap-3">`
@@ -929,7 +929,7 @@ showProjects: tru e,;
           <div className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center">;"
             <div className="border-2 border-dashed border-zinc-600 rounded-lg p-8">"
               <FileText className="w-16 h-16 text-zinc-600 mx-auto mb-4"   />"
-              <h3 className="text-lg font-medium text-zinc-300 mb-2">Upload Files</h3>"
+              <h3 className="text-lg font-medium text-zinc-300 mb-2">Upload Files"
               <p className="text-zinc-400 mb-4">Drag and drop files here or click to browse</p>"              <button className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover: b g-zion-cyan/80 transition-colors">
                 Choose Files
               </button>

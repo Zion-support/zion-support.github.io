@@ -56,7 +56,7 @@ export default function Page(props: any) {}
             <div className="flex justify-between items-start">""""
               <h3 className="text-lg font-bold text-white">
                 {talent.full_name}
-              </h3>
+              
               <FavoriteButton """
                 itemId={talent.id}""""
                 itemType="talent""""

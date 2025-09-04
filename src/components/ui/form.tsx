@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {
-  children: Reac t.ReactNode;
+  children: React.ReactNode;
 }
 
 export function Form(props: any) {
@@ -14,7 +14,7 @@ export function Form(props: any) {
 
 interface FormItemProps {
 
-  children: Reac t.ReactNode;
+  children: React.ReactNode;
   className?: string;
 
 }
@@ -24,12 +24,12 @@ export function FormItem(props: any) {
     <div className={`space-y-2 ${className}`}>
       {children}
     </div>
-  );
+    );
 }
 
 interface FormLabelProps {
 
-  children: Reac t.ReactNode;
+  children: React.ReactNode;
   className?: string;
   htmlFor?: string;
 
@@ -48,7 +48,7 @@ export function FormLabel(props: any) {
 
 interface FormFieldProps {
 
-  children: Reac t.ReactNode;
+  children: React.ReactNode;
   className?: string;
 
 }
@@ -58,7 +58,7 @@ export function FormField(props: any) {
     <div className={`space-y-1 ${className}`}>
       {children}
     </div>
-  );
+    );
 }
 
 interface FormMessageProps {

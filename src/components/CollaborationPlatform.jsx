@@ -17,7 +17,8 @@ export function CollaborationPlatform(props: any) {
         isAudioOn: true,
         isScreenSharing: false,
         isMuted: false
-    });
+    }
+    );
     const [activeChat, setActiveChat] = useState(false);
     const [chatMessages, setChatMessages] = useState(['
         {id: '1', user: 'John Smith', message: 'Great presentation!', timestamp: new Date()},

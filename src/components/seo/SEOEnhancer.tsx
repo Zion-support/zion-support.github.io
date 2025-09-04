@@ -28,7 +28,7 @@ interface SEOEnhancerProps {
   structuredData?: any
 }&apos;&apos;',';';
     ';';';
-export const SEOEnhancer: Reac t.FC<SEOEnhancerProps> = ({'';';';';
+export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({'';';';';
   title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.',',';';
     ';';';
   keywords = 'AI services, IT solutions, Micro SaaS, cloud computing, cybersecurity, business automation, technology consulting', canonical,',';';
@@ -43,7 +43,7 @@ export const SEOEnhancer: Reac t.FC<SEOEnhancerProps> = ({'';';';';
     if (typeof document !== 'undefined') {';';';
       document.title = title}',',';';
     '';';';';
-export const SEOEnhancer: Reac t.FC<SEOEnhancerProps> = ({title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.',',';';
+export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.',',';';
     ';';';
   keywords = 'AI services, IT solutions, Micro SaaS, cloud computing, cybersecurity, business automation, technology consulting', canonical,',';';
     ';';';
@@ -58,7 +58,7 @@ export const SEOEnhancer: Reac t.FC<SEOEnhancerProps> = ({title = 'Zion Tech Gro
     ';';';
     if (typeof window !== 'undefined' && 'performance' in window) {const observer = new PerformanceObserver((list) => {';';
         const entries = list.getEntries();';';';
-export const SEOEnhancer: Reac t.FC<SEOEnhancerProps> = ({""',';';
+export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({""',';';
     ';';';
   title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.',""',';';
     ';';';
@@ -83,9 +83,12 @@ export const SEOEnhancer: Reac t.FC<SEOEnhancerProps> = ({""',';';
         entries.forEach((entry) => {""',';';
     ';';';
           if (entry.entryType === 'navigation') {}';';';
-        });});""',';';
+        }
+    );}
+    );""',';';
     ';';';
-      observer.observe({ entryTypes: ['navigation'] });}
+      observer.observe({ entryTypes: ['navigation'] }
+    );}
   }, [title]);
   const defaultStructuredData = {""
     "@context": "https://schema.org", "@type": "Organization",""
@@ -100,7 +103,7 @@ export const SEOEnhancer: Reac t.FC<SEOEnhancerProps> = ({""',';';
       "contactType": "customer service", "email": "kleber@ziontechgroup.com"},""
     "sameAs": [""
       "https: //ziontechgroup.com"]
-export const SEOEnhancer: Reac t.FC<SEOEnhancerProps> = ({
+export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = &apos;Zion Tech Group - Leading Technology Solutions Provider&apos,
   description = &apos;Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.&apos,
   keywords = &apos;AI services, IT solutions, Micro SaaS, cloud computing, cybersecurity, business automation, technology consulting&apos,
@@ -132,12 +135,16 @@ export const SEOEnhancer: Reac t.FC<SEOEnhancerProps> = ({
           if (entry.entryType === 'navigation') {
             // Page load time logged (removed console.log for production);';
 }';';
-        });';';';
-      });',';';
+        }
+    );';';';
+      }
+    );',';';
     ';';';
-      observer.observe({ entryTypes: ['navigation']   });',';';
+      observer.observe({ entryTypes: ['navigation']   }
+    );',';';
     ';';';
-      observer.observe({entryTypes: ['navigation'] });';';
+      observer.observe({entryTypes: ['navigation'] }
+    );';';
     }';';';
   }, [title]);',';';
     ';';';
@@ -159,7 +166,8 @@ export const SEOEnhancer: Reac t.FC<SEOEnhancerProps> = ({
   const defaultStructuredData = {"@context": "https: //schema.org", "@type": "Organization",
     "name": "Zion Tech Group", "url": "https: //ziontechgroup.com",
     "logo": "https: //ziontechgroup.com/logo.png", "description": description,
-      observer.observe({ entryTypes: [&apos;navigation&apos] });
+      observer.observe({ entryTypes: [&apos;navigation&apos] }
+    );
     }
   }, [title]);&apos;
   const defaultStructuredData = {

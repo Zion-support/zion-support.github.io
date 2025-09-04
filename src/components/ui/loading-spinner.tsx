@@ -29,7 +29,7 @@ export default function LoadingSpinner(props: any) {
       <div className="relative">
         {/* Outer ring */}
         <div className={`${sizeClasses[size]} border-4 border-gray-200 rounded-full opacity-20`}></div>
-export const LoadingSpinner: Reac t.FC<LoadingSpinnerProps> = ({ 
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
   className = '' 
 }) => {
@@ -38,7 +38,8 @@ export const LoadingSpinner: Reac t.FC<LoadingSpinnerProps> = ({
     lg: 'w-12 h-12'
   };
 
-  return (<div className={`flex items-center justify-center ${className}`}>
+  return (
+        <div className={`flex items-center justify-center ${className}`}>
       <div
         className={`${sizeClasses[size]} border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin`}
         role="status"
@@ -46,11 +47,11 @@ export const LoadingSpinner: Reac t.FC<LoadingSpinnerProps> = ({
         <span className="sr-only">Loading...</span>
       </div>
     </div>
-  );
+    );
 }
 
 // Optimized spinner for inline use
-export const InlineSpinner: Reac t.FC<{ size?: 'sm' | 'md'; className?: string }> = ({
+export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }> = ({
   size = 'sm',
   className = ''
 }) => (
@@ -66,10 +67,10 @@ export const InlineSpinner: Reac t.FC<{ size?: 'sm' | 'md'; className?: string }
     />
     <span className="sr-only">Loading</span>
   </div>
-);
+    );
 
 // Full-screen loading overlay
-export const FullScreenLoader: Reac t.FC<{
+export const FullScreenLoader: React.FC<{
   text?: string;
   showLogo?: boolean;
   className?: string;
@@ -103,7 +104,7 @@ export const FullScreenLoader: Reac t.FC<{
   )}"
 interface LoadingSpinnerProps {
 size?: "sm" | "md" | "lg";"
-export const LoadingSpinner: Reac t.FC<LoadingSpinnerProps> = ({size = "md", className=""
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = "md", className=""
 }) => {const sizeClasses = {}"}" >""
       <div className="{"${sizeClasses[size]}" border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin"}" role="status" >"
   size?: &apos;sm&apos; | &apos;md&apos; | &apos;lg
@@ -113,7 +114,7 @@ export const LoadingSpinner: Reac t.FC<LoadingSpinnerProps> = ({size = "md", cla
   const sizeClasses = {}
 
 // Skeleton loading component
-export const SkeletonLoader: Reac t.FC<{
+export const SkeletonLoader: React.FC<{
   className?: string;
   lines?: number;
 }> = ({
@@ -128,7 +129,7 @@ export const SkeletonLoader: Reac t.FC<{
        />
     ))}
   </div>
-);
+    );
 
 </div>
 </div>

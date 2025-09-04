@@ -334,7 +334,8 @@ export default function Footer(props: any) {
         newSet.add(title);
       }
       return newSet;
-    });
+    }
+    );
   };
 
 <<<<<<< HEAD
@@ -343,7 +344,8 @@ export default function Footer(props: any) {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
-    });
+    }
+    );
   };
 export default function Footer(props: any) {
   const footerSections = [
@@ -403,7 +405,8 @@ export default function Footer(props: any) {
       ]
     }
 import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight } from 'lucide-react';
-ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})"
+ursor/automate-test-fix-improve-and-merge-code-99d1,"}
+    );,"})"
   Linkedin,
   Instagram,
   Twitter,
@@ -480,7 +483,8 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
 
 export function Footer(props: any) {
   const scrollToTop = (props: any) => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' }
+    );
   };
 
   ]"
@@ -573,7 +577,7 @@ export function Footer(props: any) {
             <div key={section.title} className="space-y-4">
               <h3 className="text-white font-semibold text-sm uppercase tracking-wider">
                 {section.title}
-              </h3>
+              
               <ul className="space-y-2">
                 {section.links.map((link) => (
                   <li key={link.name}>
@@ -602,7 +606,8 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' }
+    );
   };
 
 <<<<<<< HEAD
@@ -748,7 +753,7 @@ export function Footer() {
             <div key={section.title} className="space-y-4">
               <div className="flex items-center space-x-2">
                 <section.icon className="w-5 h-5 text-blue-400" />
-                <h3 className="font-semibold text-white">{section.title}</h3>
+                <h3 className="font-semibold text-white">{section.title}
               </div>
               <div className="space-y-2">
                 {section.services ? (
@@ -796,7 +801,7 @@ export function Footer() {
 =======
           {/* Services */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Services</h3>
+            <h3 className="text-lg font-semibold">Services
             <ul className="space-y-2">
               <li><Link href="/ai-services" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">AI Services</Link></li>
               <li><Link href="/it-services" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">IT Services</Link></li>
@@ -809,7 +814,7 @@ export function Footer() {
 
           {/* Company */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Company</h3>
+            <h3 className="text-lg font-semibold">Company
             <ul className="space-y-2">
               <li><Link href="/about" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">About Us</Link></li>
               <li><Link href="/team" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Our Team</Link></li>
@@ -822,7 +827,7 @@ export function Footer() {
 
           {/* Contact */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Contact</h3>
+            <h3 className="text-lg font-semibold">Contact
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-cyan-400" />
@@ -853,7 +858,7 @@ export function Footer() {
               <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
                 <Mail className="w-5 h-5 text-blue-400" />
                 <span>Get in Touch</span>
-              </h3>
+              
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-gray-400">
                   <Mail className="w-4 h-4 text-blue-400" />
@@ -872,7 +877,7 @@ export function Footer() {
 
             {/* Social Links */}
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-white">Follow Us</h3>
+              <h3 className="text-lg font-semibold text-white">Follow Us
               <div className="flex space-x-4">
                 {socialLinks.map((social) => {
                   const Icon = social.icon;
@@ -896,7 +901,7 @@ export function Footer() {
 
           {/* Resources */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Resources</h3>
+            <h3 className="text-lg font-semibold">Resources
             <ul className="space-y-2">
               <li><Link href="/docs" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Documentation</Link></li>
               <li><Link href="/api" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">API Reference</Link></li>
@@ -932,7 +937,8 @@ export function Footer() {
         newSet.add(title);
       }
       return newSet;
-    });
+    }
+    );
   };
 
   // Scroll to top function
@@ -941,7 +947,8 @@ export function Footer() {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
-    });
+    }
+    );
   };
 
 <<<<<<< HEAD
@@ -1061,7 +1068,7 @@ export function Footer() {
                   </div>
                   <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                     Zion Tech Group
-                  </h3>
+                  
                 </div>
                 
                 <p className="text-slate-300 text-lg leading-relaxed mb-6">
@@ -1184,7 +1191,7 @@ export function Footer() {
               transition={{ duration: 0.6 }}
               className="flex flex-col space-y-4"
             >
-              <h3 className="text-lg font-semibold text-white">Follow Us</h3>
+              <h3 className="text-lg font-semibold text-white">Follow Us
               <div className="flex space-x-4">
                 {socialLinks.map((link) => (
                   <motion.a
@@ -1219,7 +1226,7 @@ export function Footer() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
             <h3 className="text-2xl font-bold text-white mb-4">
               Stay Updated with Zion Tech Group
-            </h3>
+            
             <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
               Get the latest insights on AI, quantum computing, and technology trends delivered to your inbox.
             </p>
@@ -1374,7 +1381,8 @@ import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight, Facebook, Twitt
 
 export function Footer(props: any) {
   const scrollToTop = (props: any) => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' }
+    );
   };
 
 =======
@@ -1516,14 +1524,14 @@ export function Footer(props: any) {
             <div key={section.title} className="space-y-4">
               <h3 className="text-white font-semibold text-sm uppercase tracking-wider">
                 {section.title}
-              </h3>
+              
 =======
             <div key={section.title}>
-              <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
+              <h3 className="text-lg font-semibold mb-4">{section.title}
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
 =======
             <div key={section.title}>
-              <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
+              <h3 className="text-lg font-semibold mb-4">{section.title}
 >>>>>>> origin/merge-pr-11195
               <ul className="space-y-2">
                 {section.links.map((link) => (
@@ -1578,7 +1586,7 @@ export function Footer(props: any) {
 >>>>>>> merge-all-prs-20250904-105408
         <div className="mt-8 pt-8 border-t border-gray-800">
           <div className="max-w-md">
-            <h3 className="text-white font-semibold mb-3">Stay Updated</h3>
+            <h3 className="text-white font-semibold mb-3">Stay Updated
             <p className="text-gray-400 text-sm mb-4">
               Get the latest insights on AI, technology trends, and business innovation.
             </p>

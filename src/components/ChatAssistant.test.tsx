@@ -9,6 +9,6 @@ export default function ChatAssistant.test() {return (
           Professional ChatAssistant.test services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

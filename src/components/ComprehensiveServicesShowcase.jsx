@@ -75,7 +75,7 @@ export function ComprehensiveServicesShowcase(props: any) {}
           </p>
           '''{/* Contact Information */}''''
           <div className='mt-8 p-6 bg-zion-slate-dark/50 rounded-2xl border border-zion-cyan/20'>''''
-            <h3 className='text-2xl font-semibold text-zion-cyan mb-4'>Ready to Transform Your Business?</h3>''''
+            <h3 className='text-2xl font-semibold text-zion-cyan mb-4'>Ready to Transform Your Business?''''
             <div className='grid md:grid-cols-3 gap-6 text-sm'>''''
               <div className='flex items-center justify-center space-x-2'>''''
                 <Clock className='w-5 h-5 text-zion-cyan'  />''''
@@ -145,7 +145,7 @@ export function ComprehensiveServicesShowcase(props: any) {}
 '''{/* Service Info */}''''
                 <h3 className='text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors'>
                   {service.name}'''
-                </h3>''''
+                ''''
                 <p className='text-zion-cyan-light text-sm mb-4 line-clamp-2'>
                   {service.tagline}
                 </p>
@@ -212,7 +212,7 @@ export function ComprehensiveServicesShowcase(props: any) {}
           <div className='bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 p-8 rounded-2xl border border-zion-cyan/30'>''''
             <h3 className='text-2xl font-bold text-white mb-4'>
               Ready to Get Started?'''
-            </h3>''''
+            ''''
             <p className='text-zion-cyan-light mb-6 max-w-2xl mx-auto'>
               Join thousands of businesses already transforming their operations with our revolutionary services.;
               Get expert consultation and custom implementation tailored to your needs.'''
@@ -258,7 +258,7 @@ export function ComprehensiveServicesShowcase(props: any) {}
               <p className='text-zion-cyan-light text-lg mb-6'>{selectedService.description}</p>'''''
               <div className='grid md:grid-cols-2 gap-8'>'''
                 <div>''''
-                  <h3 className='text-xl font-semibold text-white mb-4'>Features</h3>''''
+                  <h3 className='text-xl font-semibold text-white mb-4'>Features''''
                   <ul className='space-y-2'>'''{selectedService.features.map((feature, index) => (''''
                       <li key={index} className='flex items-center space-x-2'>''''
                         <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0'  />''''
@@ -269,7 +269,7 @@ export function ComprehensiveServicesShowcase(props: any) {}
                 </div>
 '''
                 <div>''''
-                  <h3 className='text-xl font-semibold text-white mb-4'>Service Details</h3>''''
+                  <h3 className='text-xl font-semibold text-white mb-4'>Service Details''''
                   <div className='space-y-3'>''''
                     <div className='flex justify-between'>''''
                       <span className='text-zion-cyan-light'>Price:</span>''''

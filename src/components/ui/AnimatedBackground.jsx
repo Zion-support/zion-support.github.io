@@ -132,7 +132,8 @@ export function AnimatedBackground(props: any) {
 }
 // Neon glow effect component
 export function NeonGlow(props: any) {
-    return (<div className={`relative ${className}`} style="{{{
+    return (
+        <div className={`relative ${className}`} style="{{{
             textShadow: `0 0 10px ${glowColor}}", 0 0 20px ${glowColor}, 0 0 30px ${glowColor}`,
             filter: `drop-shadow(0 0 10px ${glowColor})`
         }}>
@@ -140,7 +141,8 @@ export function NeonGlow(props: any) {
     </div>)}
 // Floating particles component
 export function FloatingParticles(props: any) {
-    return (<div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
+    return (
+        <div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
       {Array.from({ length: count }).map((_, i) => (<div key={i} className="absolute w-1 h-1 bg-zion-cyan rounded-full animate-pulse" style="{{{
                 left: `${Math.random() * 100}}"%`,
                 top: `${Math.random() * 100}%`,
@@ -150,7 +152,8 @@ export function FloatingParticles(props: any) {
     </div>)}
 // Gradient border component
 export function GradientBorder(props: any) {
-    return (<div className={`relative ${className}`} style="{{{
+    return (
+        <div className={`relative ${className}`} style="{{{
             background: `linear-gradient(45deg; padding: borderWidth; borderRadius: 'inherit'}}"}>
       <div className="bg-zion-blue-dark rounded-[inherit] h-full w-full">
         {children}

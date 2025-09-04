@@ -111,7 +111,8 @@ export default function Page(props: any) {
         {id: 'biotech-ai', name: 'Biotech AI', count: portfolioData.filter(s => s.category === 'biotech-ai').length},
         {id: 'green-tech', name: 'Green Technology', count: portfolioData.filter(s => s.category === 'green-tech').length}
     ];"
-    return (<div className="max-w-7xl mx-auto p-6">
+    return (
+        <div className="max-w-7xl mx-auto p-6">
       {/* Header */}
       <motion.div initial = {
 
@@ -176,7 +177,7 @@ export default function Page(props: any) {
           <CardContent>"
             <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">
               {portfolioMetrics.totalServices}
-            </h3>"
+            "
             <p className="text-sm text-zion-slate-light">
               Total Services
             </p>
@@ -200,7 +201,7 @@ export default function Page(props: any) {
           <CardContent>"
             <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">
               ${(portfolioMetrics.totalRevenue / 1000000).toFixed(1)}M
-            </h3>"
+            "
             <p className="text-sm text-zion-slate-light">
               Total Revenue
             </p>
@@ -224,7 +225,7 @@ export default function Page(props: any) {
           <CardContent>"
             <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">
               {portfolioMetrics.activeClients}
-            </h3>"
+            "
             <p className="text-sm text-zion-slate-light">
               Active Clients
             </p>
@@ -248,7 +249,7 @@ export default function Page(props: any) {
           <CardContent>"
             <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">
               {portfolioMetrics.averagePerformance}%
-            </h3>"
+            "
             <p className="text-sm text-zion-slate-light">
               Avg Performance
             </p>
@@ -539,7 +540,7 @@ export default function Page(props: any) {
 "
 }} transition={{ delay: 0.5 }} className="text-center">"
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"
-          <h3 className="text-3xl font-bold mb-4">Ready to Expand Your Portfolio?</h3>"
+          <h3 className="text-3xl font-bold mb-4">Ready to Expand Your Portfolio?"
           <p className="text-xl mb-6 max-w-2xl mx-auto">
             Our comprehensive service portfolio offers cutting-edge solutions across all major technology sectors.Contact us to discuss how we can help you achieve your business goals.</p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"

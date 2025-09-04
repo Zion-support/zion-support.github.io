@@ -186,7 +186,7 @@ export default function Page(props: any) {
                     <div className={`p-2 rounded-lg ${getStatusBgColor(metric.status)}`}>`
                       <metric.icon className={`w-6 h-6 ${getStatusColor(metric.status)}`} />
                     </div>"
-                    <h3 className="text-lg font-semibold text-white">{metric.name}</h3>
+                    <h3 className="text-lg font-semibold text-white">{metric.name}
                   </div>
                   {getTrendIcon(metric.trend) }
                 </div>
@@ -223,7 +223,7 @@ export default function Page(props: any) {
             {/* Alerts */}"
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">"
               <div className="flex items-center gap-3 mb-4">"
-                <AlertTriangle className="w-6 h-6 text-yellow-400"   />"                <h3 className="text-xl font-semibold text-white">Active Alerts</h3>
+                <AlertTriangle className="w-6 h-6 text-yellow-400"   />"                <h3 className="text-xl font-semibold text-white">Active Alerts
               </div>"
               <div className="space-y-3">
                 {performanceData.alerts.map((alert, index) => ("
@@ -238,7 +238,7 @@ export default function Page(props: any) {
             {/* Recommendations */}"
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">"
               <div className="flex items-center gap-3 mb-4">"
-                <CheckCircle className="w-6 h-6 text-green-400"   />"                <h3 className="text-xl font-semibold text-white">Recommendations</h3>
+                <CheckCircle className="w-6 h-6 text-green-400"   />"                <h3 className="text-xl font-semibold text-white">Recommendations
               </div>"
               <div className="space-y-3">
                 {performanceData.recommendations.map((recommendation, index) => ("
@@ -269,7 +269,7 @@ export default function Page(props: any) {
           className="bg-white / 5 backdrop - blur - sm border border-white / 10 rounded-xl p - 8 text-center"
         >
           <BarChart3 className="w-16 h-16 text-gray - 400 mx - auto mb-4"  />
-          <h3 className="text-xl font - semibold text-white mb-2">Performance Trends</h3>
+          <h3 className="text-xl font - semibold text-white mb-2">Performance Trends
           <p className="text-gray -400">
             {isMonitoring
               ? 'Real - time performance data is being collected and analyzed...'              : 'Start monitoring to view performance trends and historical data'

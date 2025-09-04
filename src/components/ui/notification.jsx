@@ -30,7 +30,8 @@ export function NotificationProvider(props: any) {
 
 };
         setNotifications(prev => {const updated = [newNotification, ...prev];
-            return updated.slice(0, maxNotifications)});
+            return updated.slice(0, maxNotifications)}
+    );
         // Auto-dismiss after duration
         if (newNotification.duration && newNotification.duration > 0) {
             setTimeout(() => {
@@ -66,7 +67,8 @@ function NotificationContainer(props: any) {
     };
     if (notifications.length === 0)
         return null;
-    return (<div className={`fixed z-50 ${getPositionClasses(position)} max-w-sm w-full`}>
+    return (
+        <div className={`fixed z-50 ${getPositionClasses(position)} max-w-sm w-full`}>
       {/* Header with clear all button */}
       {notifications.length > 1 && (<div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">

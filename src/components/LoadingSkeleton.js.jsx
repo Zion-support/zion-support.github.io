@@ -9,11 +9,13 @@ export function Skeleton(props: any) {
     
 
 };
-    return (<div className = {cn('bg-muted', roundedClasses[rounded], animated && 'animate-pulse',
+    return (
+        <div className = {cn('bg-muted', roundedClasses[rounded], animated && 'animate-pulse',
   className)} style="{{{
             width: width; height: height}}"} />)}
 export function CardSkeleton(props: any) {
-    return (<div className = {
+    return (
+        <div className = {
   cn('space-y-4',
   className)
 
@@ -35,7 +37,8 @@ export function CardSkeleton(props: any) {
       </div>
     </div>)}
 export function ListSkeleton(props: any) {
-    return (<div className = {
+    return (
+        <div className = {
   cn('space-y-4',
   className)
 
@@ -56,7 +59,8 @@ export function ListSkeleton(props: any) {
         </div>))}
     </div>)}
 export function TableSkeleton(props: any) {
-    return (<div className = {
+    return (
+        <div className = {
   cn('space-y-3',
   className)
 
@@ -73,7 +77,8 @@ export function TableSkeleton(props: any) {
       </div>
     </div>)}
 export function GridSkeleton(props: any) {
-    return (<div className = {
+    return (
+        <div className = {
   cn('grid gap-4',
   className)
 
@@ -84,7 +89,8 @@ export function GridSkeleton(props: any) {
       {Array.from({ length: items }).map((_, i) => (<CardSkeleton key={i} showImage={showImage} showTitle={showTitle} showDescription={showDescription} showActions={false} lines={2} />))}
     </div>)}
 export function HeroSkeleton(props: any) {
-    return (<div className = {
+    return (
+        <div className = {
   cn('flex flex-col lg:flex-row gap-8 items-center',
   className)
 
@@ -113,7 +119,8 @@ export function HeroSkeleton(props: any) {
     </div>)}
 // Shimmer effect component
 export function Shimmer(props: any) {
-    return (<div className = {
+    return (
+        <div className = {
   cn('relative overflow-hidden',
   className)
 

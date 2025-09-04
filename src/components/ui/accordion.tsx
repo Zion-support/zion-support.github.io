@@ -1,6 +1,5 @@
         prev.includes(value)
-          ? prev.filter(item => item !== value)
-          [...prev, value];
+          ? prev.filter(item => item !== value) : [...prev, value];
       )}};
 
   return ()
@@ -39,7 +38,8 @@ export function Accordion(props: any) {;
 
             isOpen: openItem s.includes(child.props.value),
             onToggle: : unknown handleToggle(child.props.value)
-          });
+          }
+    );
 
         return child})}
     </div>
@@ -47,7 +47,7 @@ export function Accordion(props: any) {;
 
 interface AccordionItemProps extends React.PropsWithChildren<{}> {
 
-  children: Reac t.ReactNode;
+  children: React.ReactNode;
   value: string;
   className?: string;
   isOpen?: boolean;
@@ -56,7 +56,8 @@ interface AccordionItemProps extends React.PropsWithChildren<{}> {
 export function AccordionItem(props: any) {;
   return (;`    <div className={`border-b border-gray-200 ${className}`}> {React.Children.map(children: unknow n, (child: unknow n {;
         if (React.isValidElement(child)) {;
-          return React.cloneElement(child, { isOpen, onToggle });
+          return React.cloneElement(child, { isOpen, onToggle }
+    );
 
         return child})}
     </div>
@@ -64,7 +65,7 @@ export function AccordionItem(props: any) {;
 
 interface AccordionTriggerProps extends React.PropsWithChildren<{}> {
 
-  children: Reac t.ReactNode;
+  children: React.ReactNode;
   className?: string;
   isOpen?: boolean;
   onToggle?: ()  => void}
@@ -92,7 +93,7 @@ interface AccordionContentProps extends React.PropsWithChildren<{}> {;`
     </button>;
   )}
 
-  children: Reac t.ReactNode;
+  children: React.ReactNode;
   className?: string;
   isOpen?: boolean}
 

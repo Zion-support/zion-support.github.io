@@ -10,7 +10,8 @@ export default function Page(props: any) {
 
           img.style.display = 'none';
         };
-      });
+      }
+    );
     };
 
     // Use requestIdleCallback for non-critical optimization'
@@ -34,7 +35,8 @@ export default function Page(props: any) {
 
   useEffect(() => {// TODO: Add dependencies if needed}, []);
 
-    window.addEventListener('scroll', handleScroll, {passive: true});
+    window.addEventListener('scroll', handleScroll, {passive: true}
+    );
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
@@ -63,11 +65,14 @@ export default function Page(props: any) {
                   // New service worker available'
                   // // 
                 }
-              });
+              }
+    );
             }
-          });
+          }
+    );
         })
-        .catch(registrationError => {// // });
+        .catch(registrationError => {// // }
+    );
     }
   }, []);
 
@@ -91,11 +96,12 @@ export default function Page(props: any) {
                 observer.unobserve(target);
               }
             }
-          });
+          }
+    );
         },
         {rootMargin: '50px',
           threshold: 0.1}
-      );
+    );
 
       // Observe all images with data-src'
       const lazyImages = document.querySelectorAll('img[data-src]');
@@ -139,6 +145,7 @@ if(typeof window !== 'undefined') {
   })
 }
 ;"
-  });,"})
+  }
+    );,"})
 }
  export const PerformanceOptimizer = memo(({children}) => { const location = useLocation () """

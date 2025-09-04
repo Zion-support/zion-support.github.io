@@ -9,6 +9,6 @@ export default function AIContentOptimizer.test() {return (
           Professional AIContentOptimizer.test services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

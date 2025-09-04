@@ -55,11 +55,13 @@ export default function Page(props: any) {
   private handleGoBack = () => {
     window.history.back () };
   private handleReportError = async () => {
-    this.setState({ isReporting: tru e });
+    this.setState({ isReporting: tru e }
+    );
 
     try {
       await this.reportError(this.state.error!, this.state.errorInfo!);
-      this.setState({ reportSent: tru e });
+      this.setState({ reportSent: tru e }
+    );
 
       // Reset report status after 3 seconds
       setTimeout(() => {
@@ -77,7 +79,8 @@ export default function Page(props: any) {
       errorInfo: nul l,
       errorId: nul l,
       showDetails: fals e,
-      isRecovering: tru e});
+      isRecovering: tru e}
+    );
 
     // Force a re - render of children
     this.forceUpdate () };

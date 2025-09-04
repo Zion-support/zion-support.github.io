@@ -48,7 +48,8 @@ const FuturisticFooter: React.FC = (props: any) => {
   };
 
   const scrollToTop = (props: any) => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' }
+    );
   };
 
   return (
@@ -77,7 +78,7 @@ const FuturisticFooter: React.FC = (props: any) => {
                   <div>
                     <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-blue-600 bg-clip-text text-transparent">
                       ZION TECH GROUP
-                    </h3>
+                    
                     <p className="text-sm text-slate-300">Innovation • Intelligence • Impact</p>
                   </div>
                 </div>

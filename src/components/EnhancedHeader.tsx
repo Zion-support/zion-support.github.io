@@ -25,7 +25,7 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
 
-  const handleSearch = async(e: Reac t.FormEvent) => {
+  const handleSearch = async(e: React.FormEvent) => {
 
     e.preventDefault();    if(searchQuery.trim()) {
 
@@ -118,7 +118,7 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                       <div className="mb-8">"
                         <h3 className="text-xl font-semibold text-cyan-400 mb-6 font-orbitron">
                           Featured Services
-                        </h3>"
+                        "
                         <div className="grid grid-cols-3 gap-6">
                           {services
                             .filter(s => s.featured)
@@ -327,27 +327,49 @@ return (<header className="bg-white shadow-lg">
             <a href="/blog" className="text-gray-700 hover: tex t-blue-600">Blog</a>"
             <a href="/careers" className="text-gray-700 hover: tex t-blue-600">Careers</a>,,
   ),"
-,"});,"})"
-;,"});,"})"
-export const EnhancedHeader: Reac t.FC = () => {,"});,"})"
-  return (<header className="bg-white shadow-lg">;,"});,"})"
-      <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">,"});,"})"
-        <div className="flex justify-between items-center py-4 md: p y-6">,"});,"})"
-          <div className="flex items-center">;,"});,"})"
-            <a href="/" className="text-xl md: tex t-2xl font-bold text-blue-900">,"});,"})"
-              Zion Tech Group,"});,"})"
-            </a>;,"});,"})"
-          </div>;,"});,"})"
-          <nav className="hidden md: flex gap-6">,"});,"})"
-            <a href="/" className="text-gray-700 hover: tex t-blue-600">Home</a>,"});,"})"
-            <a href="/services" className="text-gray-700 hover: tex t-blue-600">Services</a>,"});,"})"
-            <a href="/solutions" className="text-gray-700 hover: tex t-blue-600">Solutions</a>,"});,"})"
-            <a href="/pricing-guide" className="text-gray-700 hover: tex t-blue-600">Pricing</a>,"});,"})"
-            <a href="/contact" className="text-gray-700 hover: tex t-blue-600">Contact</a>,"});,"})"
-          </nav>;,"});,"})"
-    </header>;,"});,"})"
-  );,"});,"});"
-};,"});,"})""
+,"}
+    );,"})"
+;,"}
+    );,"})"
+export const EnhancedHeader: React.FC = () => {,"}
+    );,"})"
+  return (<header className="bg-white shadow-lg">;,"}
+    );,"})"
+      <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">,"}
+    );,"})"
+        <div className="flex justify-between items-center py-4 md: p y-6">,"}
+    );,"})"
+          <div className="flex items-center">;,"}
+    );,"})"
+            <a href="/" className="text-xl md: tex t-2xl font-bold text-blue-900">,"}
+    );,"})"
+              Zion Tech Group,"}
+    );,"})"
+            </a>;,"}
+    );,"})"
+          </div>;,"}
+    );,"})"
+          <nav className="hidden md: flex gap-6">,"}
+    );,"})"
+            <a href="/" className="text-gray-700 hover: tex t-blue-600">Home</a>,"}
+    );,"})"
+            <a href="/services" className="text-gray-700 hover: tex t-blue-600">Services</a>,"}
+    );,"})"
+            <a href="/solutions" className="text-gray-700 hover: tex t-blue-600">Solutions</a>,"}
+    );,"})"
+            <a href="/pricing-guide" className="text-gray-700 hover: tex t-blue-600">Pricing</a>,"}
+    );,"})"
+            <a href="/contact" className="text-gray-700 hover: tex t-blue-600">Contact</a>,"}
+    );,"})"
+          </nav>;,"}
+    );,"})"
+    </header>;,"}
+    );,"})"
+  );,"}
+    );,"}
+    );"
+};,"}
+    );,"})""
   Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud,
   Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen,
   MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star,
@@ -406,7 +428,7 @@ export function EnhancedHeader(props: any) {}"""""""
 }
     setActiveDropdown(null)}, [location.pathname])
 }
-  const handleSearch = async (e: Reac t.FormEvent) =>  {,
+  const handleSearch = async (e: React.FormEvent) =>  {,
     e.preventDefault(),
     if: (searchQuery.trim()) {",,
       window.location.href = "/search?q="${encodeURIComponent(searchQuery.trim())}"}"}""
@@ -670,7 +692,7 @@ solutions: [ { name: "AI Solutions", href: "/ai-solutions", description: "Artifi
     { name: "Help Center", href: "/help", description: "Find answers and solutions" } { name: "FAQ", href: "/faq", description: "Frequently asked questions" } { name: "Support", href: "/support", description: "Technical assistance" } { name: "Training", href: "/training", description: "Skill development programs" } { name: "Contact Support", href: "/contact", description: "Get in touch with our team" } { name: "Status Page", href: "/status", description: "Service availability" }]
   const [mobileOpen, setMobileOpen] = useState()
 }
-export const EnhancedHeader: Reac t.FC = () => {}
+export const EnhancedHeader: React.FC = () => {}
 
   const;const;const [mobileOpen, setMobileOpen] = useState<any>(false)
 }

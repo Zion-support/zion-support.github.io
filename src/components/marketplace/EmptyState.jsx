@@ -37,14 +37,15 @@ export function EmptyState(props: any) {
     const { t } = useTranslation();
     const content = defaultContent[type];
     const displayIcon = icon || content.icon;
-    return (<div className="flex flex-col items-center justify-center py-12 px-6 text-center">
+    return (
+        <div className="flex flex-col items-center justify-center py-12 px-6 text-center">
       <div className="mb-4">
         {displayIcon}
       </div>
 
       <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
         {displayTitle}
-      </h3>
+      
 
       <p className="text-gray-600 dark:text-gray-400 max-w-md mb-6">
         {displayDescription}

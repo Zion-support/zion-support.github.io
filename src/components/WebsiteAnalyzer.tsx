@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-export const WebsiteAnalyzer: Reac t.FC = () : JSX.Element => {
+export const WebsiteAnalyzer: React.FC = () : JSX.Element => {
 export default WebsiteAnalyzer;
 import { CheckCircle, import { LinkChecker, LinkInfo, PageInfo } from '../utils / linkChecker';
 
@@ -152,7 +152,7 @@ export default function Page(props: any) {
               <div className="bg-red-50 border border-red-200 rounded-lg p-4">"
                 <h3 className="text-lg font-semibold text-red-900 mb-3 flex items-center">"
                   <XCircle className="w-5 h-5 mr-2"   />                  Broken Links Found
-                </h3>"
+                "
                 <div className="space-y-2">
                   {analysisResult.brokenLinks.map((link, index) => ("
                     <div key={index} className="flex items-center justify-between p-3 bg-white rounded border border-red-200">"
@@ -172,7 +172,7 @@ export default function Page(props: any) {
               <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">"
                 <h3 className="text-lg font-semibold text-yellow-900 mb-3 flex items-center">"
                   <AlertTriangle className="w-5 h-5 mr-2"   />                  Missing Pages
-                </h3>"
+                "
                 <div className="space-y-2">
                   {analysisResult.missingPages.map((page, index) => ("
                     <div key={index} className="flex items-center justify-between p-3 bg-white rounded border border-yellow-200">"
@@ -190,7 +190,7 @@ export default function Page(props: any) {
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">"
               <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">"
                 <FileText className="w-5 h-5 mr-2"   />                Page Analysis
-              </h3>"
+              "
               <div className="space-y-3">
                 {analysisResult.pages.map((page, index) => ("
                   <div key={index} className="bg-white p-4 rounded border border-gray-200">"

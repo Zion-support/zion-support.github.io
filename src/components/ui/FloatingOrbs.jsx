@@ -61,7 +61,8 @@ export function FloatingOrbs(props: any) {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             orbs.forEach(orb => {
                 orb.update();
-                orb.draw()});
+                orb.draw()}
+    );
             animationId = requestAnimationFrame(animate)};
         animate();
         // Cleanup

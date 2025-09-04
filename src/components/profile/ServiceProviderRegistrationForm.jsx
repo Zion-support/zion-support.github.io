@@ -27,7 +27,8 @@ const serviceProfileSchema = z.object({
     availability: z.enum(["available", "limited", "unavailable"]),
     enhancedProfile: z.boolean().transform(val => !!val),
     website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional(),
-});
+}
+    );
 export function ServiceProviderRegistrationForm(props: any) {
     const { user } = useAuth();
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -49,7 +50,8 @@ export function ServiceProviderRegistrationForm(props: any) {
             enhancedProfile: false,
             website: "",
         },
-    });
+    }
+    );
     // Handle adding service tags
     const handleAddService = (props: any) => {
         const serviceInput = form.getValues("services");
@@ -81,7 +83,8 @@ export function ServiceProviderRegistrationForm(props: any) {
             toast({
                 title: "More information needed",
                 description: "Please provide at least a detailed bio before generating enhanced content.",
-            });
+            }
+    );
             return}
         try {
             setIsGenerating(true);
@@ -96,7 +99,8 @@ export function ServiceProviderRegistrationForm(props: any) {
                         location: formData.location
 
 
-            });
+            }
+    );
             if (error) {throw new Error(error.message)}
             setGeneratedContent(data);
             toast({title: "Enhanced Profile Generated",
@@ -107,7 +111,8 @@ export function ServiceProviderRegistrationForm(props: any) {
                 title: "Generation failed",
                 description: error.message || "There was an error generating your enhanced profile. Please try again.",
                 variant: "destructive",
-            })}
+                }
+    );
         finally {setIsGenerating(false)}
     };
     // Apply generated content to form
@@ -128,7 +133,8 @@ export function ServiceProviderRegistrationForm(props: any) {
                 title: "Services required",
                 description: "Please add at least one service to your profile.",
                 variant: "destructive",
-            });
+            }
+    );
             return}
         setIsSubmitting(true);
         try {
@@ -149,7 +155,8 @@ export function ServiceProviderRegistrationForm(props: any) {
                                 location: values.location
 
 
-                    });
+                    }
+    );
                     if (aiData) {finalSummary = aiData.summary || values.bio;
                         // Merge AI suggested services with user-provided services
                         const aiServices = aiData.services || [];
@@ -190,7 +197,8 @@ export function ServiceProviderRegistrationForm(props: any) {
                 hourly_rate: Number(values.hourlyRate),
                 availability_status: values.availability,
                 location: values.location,
-                website: values.website || null,});
+                website: values.website || null,}
+    );
 
             if (serviceError) throw serviceError;
             */
@@ -222,7 +230,8 @@ export function ServiceProviderRegistrationForm(props: any) {
             toast({
                 title: "Profile Created Successfully",
                 description: "Your service provider profile has been published and is now visible in the directory.",
-            });
+            }
+    );
             // Redirect to service provider dashboard or profile page
             setTimeout(() => {window.location.href = "/service-dashboard"}, 1500)}
         catch (error) {
@@ -231,10 +240,12 @@ export function ServiceProviderRegistrationForm(props: any) {
                 title: "Error Creating Profile",
                 description: error.message || "There was an error creating your profile. Please try again.",
                 variant: "destructive",
-            })}
+                }
+    );
         finally {setIsSubmitting(false)}
     };
-    return (<div className="max-w-4xl mx-auto p-4 md:p-6">
+    return (
+        <div className="max-w-4xl mx-auto p-4 md:p-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle className="text-2xl text-white">Create Your Service Provider Profile</CardTitle>
@@ -248,7 +259,7 @@ export function ServiceProviderRegistrationForm(props: any) {
             <CardContent className="space-y-8">
               {/* Basic Information */}
               <div className="space-y-4">
-                <h3 className="text-lg font-medium text-white">Basic Information</h3>
+                <h3 className="text-lg font-medium text-white">Basic Information
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="col-span-1">
                     <FormField control={form.control} name="name" render={({ field }) => (<FormItem>
@@ -331,7 +342,7 @@ export function ServiceProviderRegistrationForm(props: any) {
 
               {/* Bio Section */}
               <div className="space-y-4">
-                <h3 className="text-lg font-medium text-white">Service Description</h3>
+                <h3 className="text-lg font-medium text-white">Service Description
                 <FormField control={form.control} name="bio" render={({ field }) => (<FormItem>
                       <FormLabel className="text-zion-slate-light">About Your Services</FormLabel>
                       <FormControl>
@@ -402,7 +413,7 @@ export function ServiceProviderRegistrationForm(props: any) {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Services Section */}
                 <div className="space-y-4">
-                  <h3 className="text-lg font-medium text-white">Services Offered</h3>
+                  <h3 className="text-lg font-medium text-white">Services Offered
                   <FormField control={form.control} name="services" render={({ field }) => (<FormItem>
                         <FormLabel className="text-zion-slate-light">Services</FormLabel>
                         <div className="flex gap-2">
@@ -432,7 +443,7 @@ export function ServiceProviderRegistrationForm(props: any) {
 
                 {/* Pricing and Availability Section */}
                 <div className="space-y-4">
-                  <h3 className="text-lg font-medium text-white">Pricing & Availability</h3>
+                  <h3 className="text-lg font-medium text-white">Pricing & Availability
                   <FormField control={form.control} name="hourlyRate" render={({ field }) => (<FormItem>
                         <FormLabel className="text-zion-slate-light">Starting Rate (USD)</FormLabel>
                         <FormControl>

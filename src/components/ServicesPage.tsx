@@ -13,11 +13,11 @@ const Card: React.FC<{ title: string; tagline: string }>
 	= ({ title, tagline, children }) => (
 		<div style="{{{
 			border: '1px solid #e5e7eb'; borderRadius: 12; padding: '1rem'; marginBottom: '1rem'; boxShadow: '0 1px 2px rgba(0}}"}>
-			<h3 style="{{{ margin: 0}}"}>{title}</h3>
+			<h3 style="{{{ margin: 0}}"}>{title}
 			<p style="{{{ color: '#475569'; marginTop: 6}}"}>{tagline}</p>
 			{children}
 		</div>
-	);
+    );
 
 const Price: React.FC<{ value: string }> = ({ value }) => (
 	<span style="{{{ fontWeight: 600}}"}>{value}</span>
@@ -80,7 +80,7 @@ export const ServicesPage: React.FC = (props: any) => {
 				</p>
 			</footer>
 		</div>
-	);
+    );
 };
 
 export default ServicesPage;

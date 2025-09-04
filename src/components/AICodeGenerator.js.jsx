@@ -5,7 +5,8 @@ import {useAICodeGeneration} from "../hooks/useAICodeGeneration.jsx";
 ;
 export const AICodeGenerator = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
-        enableUserBehaviorTracking: true;});'
+        enableUserBehaviorTracking: true;}
+    );'
     const [activeTab, setActiveTab] = useState('generate');
     const [showAdvanced, setShowAdvanced] = useState(false);'
     const [customCode, setCustomCode] = useState('');
@@ -26,7 +27,8 @@ export const AICodeGenerator = (props: any) => {
         includeErrorHandling: false,
         includeLogging: false,
         includeMetrics: false;
-    });
+    }
+    );
     // Handle form submission;
     const handleSubmit = useCallback(async (e) => {}
         e.preventDefault();
@@ -281,7 +283,7 @@ const handleClearHistory = useCallback(() => {}""
                   <div className="flex items-center justify-between">""""
                     <h3 className="text-lg font-semibold text-gray-900 dark: text-white">""
                       Generated Code"""""
-                    </h3>"""""
+                    """""
                     <div className="flex items-center gap-2">"""",
                       <button onClick="{()" =" > copyToClipboard(generatedCode)} className="px-3 py-1 bg-gray-100 hover: bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded text-sm transition-colors flex items-center gap-2">""""",
                         {copied ? <CheckCircle className="w-4 h-4"/" > : <Copy className="w-4 h-4"/" >}"""
@@ -403,7 +405,7 @@ const handleClearHistory = useCallback(() => {}""
                 <Zap className="w-16 h-16 text-yellow-500 mx-auto mb-4"/" >"""""
                 <h3 className="text-xl font-semibold text-gray-900 dark: text-white mb-2">""
                   Code Optimization"""""
-                </h3>""""
+                """"
                 <p className="text-gray-600 dark:text-gray-400">
                   Select an optimization focus area to improve your code"
                 </p>""
@@ -434,7 +436,7 @@ const handleClearHistory = useCallback(() => {}""
                 <TestTube className="w-16 h-16 text-green-500 mx-auto mb-4"/" >"""""
                 <h3 className="text-xl font-semibold text-gray-900 dark: text-white mb-2">""
                   Generate Tests"""""
-                </h3>""""
+                """"
                 <p className="text-gray-600 dark:text-gray-400">
                   Automatically generate comprehensive test suites for your code"
                 </p>""
@@ -456,7 +458,7 @@ const handleClearHistory = useCallback(() => {}""
                 <FileText className="w-16 h-16 text-indigo-500 mx-auto mb-4"/" >"""""
                 <h3 className="text-xl font-semibold text-gray-900 dark: text-white mb-2">""
                   Generate Documentation"""""
-                </h3>""""
+                """"
                 <p className="text-gray-600 dark:text-gray-400">
                   Create comprehensive documentation for your code"
                 </p>""
@@ -477,7 +479,7 @@ const handleClearHistory = useCallback(() => {}""
 """"}} className="mt-8 border-t border-gray-200 dark: border-gray-700 pt-6">""""
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">"",
               AI Suggestions ({suggestions.length})"""""
-            </h3>""""
+            """"
             <div className="grid gap-4">"
               {suggestions.map((suggestion) => (<motion.div key="{suggestion.id}" initial = {}"
   {opacity: 0, x: 20}} animate = {}""
@@ -535,7 +537,7 @@ const handleClearHistory = useCallback(() => {}""
             <div className="flex items-center justify-between mb-4">""""
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">"",
                 Generation History ({history.length})"""""
-              </h3>"""""
+              """""
               <button onClick="{handleClearHistory}" className="px-3 py-1 bg-red-100 hover: bg-red-200 dark:bg-red-900/30 dark:hover:bg-red-900/50 text-red-700 dark:text-red-300 rounded text-sm transition-colors flex items-center gap-2">""""
                 <Trash2 className="w-4 h-4"/" >"
                 Clear History"

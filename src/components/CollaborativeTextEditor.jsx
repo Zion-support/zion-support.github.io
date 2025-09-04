@@ -5,7 +5,8 @@ import {Users, MessageSquare, Sparkles, Save, Download, Loader2} from 'lucide-re
 ;
 export const CollaborativeTextEditor = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
-        enableUserBehaviorTracking: true;});
+        enableUserBehaviorTracking: true;}
+    );
     const [editorState, setEditorState] = useState({}
         content: initialContent,'
         selection: {start: 0, end: 0, text: ''},
@@ -479,7 +480,8 @@ ${editorState.content}"}
             onExport(exportContent, format)}
 
 // Default export behavior'
-            const blob = new Blob([exportContent], {type: 'text/plain'});
+            const blob = new Blob([exportContent], {type: 'text/plain'}
+    );
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;`
@@ -487,7 +489,8 @@ ${editorState.content}"}
             a.click();
             window.URL.revokeObjectURL(url);
         }
-        trackEvent('editor',content_exported', format, null, {format});
+        trackEvent('editor',content_exported', format, null, {format}
+    );
     }, [editorState.content, onExport, trackEvent]);
     // Handle collaboration text changes
     useEffect(() => {
@@ -618,7 +621,7 @@ generateAISuggestions()}
                 <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                 Live
               </div>)}"
-          </h3>""
+          ""
           "";"
           <div className = "flex items-center gap-2">""{/* comment */}""{enableCollaboration && (<button onClick="{()" => setShowCollaborators(!showCollaborators)} className="px-3 py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2">"","
                 <Users className="w-4 h-4"   />,
@@ -704,7 +707,7 @@ x: 0 "",">
                 Live,
               </div>)}
 
-          </h3>&apos;&apos,
+          &apos;&apos,
           &apos;&apos,&apos;&apos,"
           <div className="&apos;flex" items-center gap-2&apos;>"&apos;&apos;{/* comment */}&apos;&apos,&apos;{enableCollaboration && (&apos}&apos;<button onClick="{()" => setShowCollaborators(!showCollaborators)} className="&apos;px-3" py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2&apos,>"&apos,&apos,&apos;&apos,",
                 <Users className = "&apos,w-4" h-4&apos,        />
@@ -728,7 +731,7 @@ x: 0 "",">
                 <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                 Live,
               </div>)}"
-          </h3>"""""
+          """""
           """"
           <div className="flex items-center gap-2">"""{/* comment */}""""{enableCollaboration && (<button onClick="{()" => setShowCollaborators(!showCollaborators)} className="px-3 py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2">"""""
                 <Users className="w-4 h-4"   />,

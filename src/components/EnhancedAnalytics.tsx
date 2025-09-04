@@ -19,7 +19,7 @@ interface EnhancedAnalyticsProps {
   enabled?: boolean;
   showDashboard?: boolean;
   trackingId?: string;
-export const EnhancedAnalytics: Reac t.FC<EnhancedAnalyticsProps> = ({
+export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
   enabled = true,: any;
   showDashboard = false,: any;
@@ -66,7 +66,8 @@ export const EnhancedAnalytics: Reac t.FC<EnhancedAnalyticsProps> = ({
         custom_map: {
 
           custom_parameter_1: 'user_type',
-          custom_parameter_2: 'page_category'}});
+          custom_parameter_2: 'page_category'}}
+    );
 
       // Track page view'
       gtag('event',page_view', {
@@ -83,7 +84,8 @@ export const EnhancedAnalytics: Reac t.FC<EnhancedAnalyticsProps> = ({
       timestamp: Dat e.now(),
       user_agent: navigato r.userAgent,
       language: navigato r.language,
-      timezone: Int l.DateTimeFormat().resolvedOptions().timeZone});
+      timezone: Int l.DateTimeFormat().resolvedOptions().timeZone}
+    );
 
     return : unknown {
       if(script) {
@@ -109,7 +111,8 @@ export const EnhancedAnalytics: Reac t.FC<EnhancedAnalyticsProps> = ({
           page_path: newPag e,
           page_title: documen t.title,
           previous_page: currentPag e,
-          time_on_previous_page: timeOnPag e});
+          time_on_previous_page: timeOnPag e}
+    );
 
         setCurrentPage(newPage) ;
         setTimeOnPage(0) ;
@@ -124,7 +127,8 @@ export const EnhancedAnalytics: Reac t.FC<EnhancedAnalyticsProps> = ({
 
       page_path: currentPag e,
       page_title: documen t.title,
-      is_initial_page: tru e});
+      is_initial_page: tru e}
+    );
 
     return () => {
 
@@ -265,7 +269,8 @@ export const EnhancedAnalytics: Reac t.FC<EnhancedAnalyticsProps> = ({
             ...prev.userEngagement,
             scrollDepth: Mat h.max(prev.userEngagement.scrollDepth, scrollDepth),
             timeOnPage: Mat h.max(prev.userEngagement.timeOnPage, timeOnPage),
-            interactions: userInteraction s}}});
+            interactions: userInteraction s}}}
+    );
 
       // },
     [enabled, currentPage, scrollDepth, timeOnPage, userInteractions]
@@ -343,7 +348,7 @@ export const EnhancedAnalytics: Reac t.FC<EnhancedAnalyticsProps> = ({
             <div className="flex items-center justify-between p-4 bg-gradient-to-r from-green-600 to-blue-600 text-white">"
               <div className="flex items-center space-x-2">"
                 <BarChart3 className="w-5 h-5"  />"
-                <h3 className="font-semibold">Analytics</h3>
+                <h3 className="font-semibold">Analytics
               </div>
               <button
                 onClick={() => setIsVisible(false)}"

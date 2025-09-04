@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-export const ThemeProvider: Reac t.FC < ThemeProviderProps> = ({ children }) => {
+export const ThemeProvider: React.FC < ThemeProviderProps> = ({ children }) => {
 export const useTheme = (props: any) => {;
 type Theme = 'light' | 'dark' | 'system';
 'type Theme = 'light' | 'dark' | 'system';
@@ -17,9 +17,9 @@ export
 
 interface ThemeProviderProps extends React.PropsWithChildren<{}> {
 
-  children: Reac t.ReactNode}
+  children: React.ReactNode}
 
-export const ThemeProvider: Reac t.FC<ThemeProviderProps> = ({ children }) => {
+export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 
   const [theme, setTheme] = useState<Theme>(() => {
 
@@ -28,7 +28,8 @@ export const ThemeProvider: Reac t.FC<ThemeProviderProps> = ({ children }) => {
       if(saved && ['light',dark',system'].includes(saved)) {
         return saved}
     }
-    return 'system'});
+    return 'system'}
+    );
 
   const [isDark, setIsDark] = useState<any>(false);
 

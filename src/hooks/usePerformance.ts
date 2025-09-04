@@ -39,7 +39,8 @@ export function usePerformance(options: PerformanceOptions = {}) {
     domLoad: null,
     windowLoad: null,
     navigationStart: null,
-  });
+  }
+    );
 
   const [isMonitoring, setIsMonitoring] = useState(false);
   const observerRef = useRef<PerformanceObserver | null>(null);
@@ -53,7 +54,8 @@ export function usePerformance(options: PerformanceOptions = {}) {
       if (fcpEntry) {
         setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
 
-    });
+    }
+    );
     // Largest Contentful Paint (LCP)
     const lcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
@@ -61,7 +63,8 @@ export function usePerformance(options: PerformanceOptions = {}) {
       if (lcpEntry) {
         setMetrics(prev => ({ ...prev, lcp: lcpEntry.startTime }));
 
-    });
+    }
+    );
     // First Input Delay (FID)
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
@@ -69,7 +72,8 @@ export function usePerformance(options: PerformanceOptions = {}) {
       if (fidEntry && 'processingStart' in fidEntry) {
         setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
 
-    });
+    }
+    );
     // Cumulative Layout Shift (CLS)
     const clsObserver = new PerformanceObserver((list) => {
       const clsValue = 0;
@@ -80,13 +84,18 @@ export function usePerformance(options: PerformanceOptions = {}) {
 
 
       setMetrics(prev => ({ ...prev, cls: clsValue }));
-    });
+    }
+    );
     // Start observing
     try {
-      fcpObserver.observe({ entryTypes: ['paint'] });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      fcpObserver.observe({ entryTypes: ['paint'] }
+    );
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }
+    );
+      fidObserver.observe({ entryTypes: ['first-input'] }
+    );
+      clsObserver.observe({ entryTypes: ['layout-shift'] }
+    );
     } catch (error) {
       // // // // // // // 
     }
@@ -113,10 +122,13 @@ export function usePerformance(options: PerformanceOptions = {}) {
 
           // // // // // // // 
 
-      });
-    });
+      }
+    );
+    }
+    );
     try {
-      longTaskObserver.observe({ entryTypes: ['longtask'] });
+      longTaskObserver.observe({ entryTypes: ['longtask'] }
+    );
     } catch (error) {
       // // // // // // // 
     }
@@ -155,9 +167,12 @@ export function usePerformance(options: PerformanceOptions = {}) {
             setMetrics(prev => ({ ...prev, fcp }));
             if (logToConsole) 
           }
-        });
-      });
-      observerRef.current.observe({ entryTypes: ['paint'] });
+        }
+    );
+      }
+    );
+      observerRef.current.observe({ entryTypes: ['paint'] }
+    );
     } catch (e) {
       
     }
@@ -172,8 +187,10 @@ export function usePerformance(options: PerformanceOptions = {}) {
           setMetrics(prev => ({ ...prev, lcp }));
           if (logToConsole) 
         }
-      });
-      lcpObserverRef.current.observe({ entryTypes: ['largest-contentful-paint'] });
+      }
+    );
+      lcpObserverRef.current.observe({ entryTypes: ['largest-contentful-paint'] }
+    );
     } catch (e) {
       
     }
@@ -189,8 +206,10 @@ export function usePerformance(options: PerformanceOptions = {}) {
         }
         setMetrics(prev => ({ ...prev, cls: clsValue }));
         if (logToConsole) 
-      });
-      clsObserverRef.current.observe({ entryTypes: ['layout-shift'] });
+      }
+    );
+      clsObserverRef.current.observe({ entryTypes: ['layout-shift'] }
+    );
     } catch (e) {
       
     }
@@ -245,7 +264,8 @@ export function usePerformance(options: PerformanceOptions = {}) {
       window.addEventListener('load', () => {
         getNavigationTiming();
         getResourceTiming();
-      });
+      }
+    );
     }
 
     // Monitor DOM content loaded
@@ -378,7 +398,8 @@ export function useRenderTime() {
     const time = renderEnd - renderStart.current;
     setRenderTime(time);
     renderStart.current = renderEnd;
-  });
+  }
+    );
   return renderTime;
 
 }
@@ -418,7 +439,8 @@ export function useAPIPerformance() {
       const existing = newMap.get(endpoint) || [];
       newMap.set(endpoint, [...existing, duration]);
       return newMap;
-    });
+    }
+    );
   }, []);
 
   const getAPIAverage = useCallback((endpoint: string) => {
@@ -432,9 +454,11 @@ export function useAPIPerformance() {
     apiMetrics.forEach((times, endpoint) => {
       const average = times.reduce((sum, time) => sum + time, 0) / times.length;
       if (average > threshold) {
-        slowAPIs.push({ endpoint, average });
+        slowAPIs.push({ endpoint, average }
+    );
       }
-    });
+    }
+    );
     return slowAPIs.sort((a, b) => b.average - a.average);
   }, [apiMetrics]);
 

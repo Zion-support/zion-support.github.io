@@ -36,7 +36,8 @@ const sitemapData = [{
       ]};
   ];
 
-  return (<div className="min - h-screen bg-slate - 900 text-white py-16">
+  return (
+        <div className="min - h-screen bg-slate - 900 text-white py-16">
       <SEO title="Sitemap - Zion Tech Group"
         description="Complete sitemap of Zion Tech Group website with all pages and services organized by category."
        />

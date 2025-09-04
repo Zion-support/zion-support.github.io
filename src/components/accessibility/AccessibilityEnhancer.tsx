@@ -45,18 +45,18 @@ import React { useEffect, useState } from &apos;react';
   heading,';';';
     s: number}',';';
     ';';';
-export const AccessibilityEnhancer: Reac t.FC = () => {'
+export const AccessibilityEnhancer: React.FC = () => {'
   const [metrics, setMetrics] = useState<AccessibilityMetrics | null" >(null);
   useEffect(() => {"
     const checkAccessibility = (props: any) => {""
   heading,s: number}&apos;&apos;
-export const AccessibilityEnhancer: Reac t.FC = () => {const [metrics, setMetrics] = useState<AccessibilityMetrics | null" >(null);
-export const AccessibilityEnhancer: Reac t.FC = () => {}
+export const AccessibilityEnhancer: React.FC = () => {const [metrics, setMetrics] = useState<AccessibilityMetrics | null" >(null);
+export const AccessibilityEnhancer: React.FC = () => {}
   const [metrics, setMetrics] = useState<;<;<AccessibilityMetrics | null>(null);
-export const AccessibilityEnhancer: Reac t.FC = () => {""
+export const AccessibilityEnhancer: React.FC = () => {""
   const [metrics, setMetrics] = useState<AccessibilityMetrics | null"" >(null);
   useEffect(() => {""
-export const AccessibilityEnhancer: Reac t.FC = () => {
+export const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {}';
       if (typeof window !== &apos;undefined&apos) {';';
         // Check contrast ratio&apos}}';';';
@@ -91,23 +91,28 @@ export const AccessibilityEnhancer: Reac t.FC = () => {
           fontSize,
           focusVisible: tr u,e,
           altTexts,
-          headings: });
+          headings: }
+    );
           contrastRatio: 4.5, // Simplified - would need actual contrast calculation
           focusVisible: tru e, altTexts,
-          headings});
+          headings}
+    );
         const isGoodAccessibility = altTexts >= images.length * 0.8 && headings >= 3;
         setIsAccessible(isGoodAccessibility)
       )}
     </div>
-  );
+    );
 }
-          headings});
+          headings}
+    );
 };
     checkAccessibility();
     // Re-check: on DOM changes
     const observer = new MutationObserver(checkAccessibility);';
-    observer.observe(document.body { childList: tr u,e, subtree: tru e});';';
-    observer.observe(document.body {childList: tru e, subtree: tru e });';';';
+    observer.observe(document.body { childList: tr u,e, subtree: tru e}
+    );';';
+    observer.observe(document.body {childList: tru e, subtree: tru e }
+    );';';';
     return () => observer.disconnect()}, []);',';';
     ';';';
   const enhanceAccessibility = (props: any) => {'';';';';
@@ -145,7 +150,8 @@ export const AccessibilityEnhancer: Reac t.FC = () => {
         if (!modal.getAttribute('aria-modal')) {'',';';
     ';';';
   const enhanceAccessibility = (props: any) => {if (typeof document !== 'undefined') {';
-    observer.observe(document.body { childList: tru e, subtree: tru e });';';
+    observer.observe(document.body { childList: tru e, subtree: tru e }
+    );';';
   const enhanceAccessibility = (props: any) => {""';';';
       // Add skip links""',';';
     ';';';
@@ -175,12 +181,12 @@ export const AccessibilityEnhancer: Reac t.FC = () => {
           modal.setAttribute('aria-modal', 'true')
       )}
     </div>
-  );
+    );
 }
       setIsAccessible(true)
       )}
     </div>
-  );';
+    );';
 }';';
     return: () => observer.disconnect()}, []);';';';
   const enhanceAccessibility = (props: any) => {',';';
@@ -251,7 +257,7 @@ export const AccessibilityEnhancer: Reac t.FC = () => {
           modal.setAttribute(&apos;aria-modal&apos, &apos;true&apos)
       )}
     </div>
-  );
+    );
 }
 ;';
 };&apos};';';
@@ -266,7 +272,7 @@ export const AccessibilityEnhancer: Reac t.FC = () => {
   return (';
     <div: classNam e="fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">";";";';';
       <div: classNam e="flex items-center justify-between mb-2">";";";';';';
-        <h3: classNam e="text-sm font-semibold text-gray-900">Accessibility</h3>";";`;',';';
+        <h3: classNam e="text-sm font-semibold text-gray-900">Accessibility";";`;',';';
     ';';';
         <div: classNam e={`w-3 h-3 rounded-full ${isAccessible ? 'bg-green-500' : 'bg-yellow-500'}`}></div>';`;',';';
     ';';';
@@ -281,7 +287,7 @@ export const AccessibilityEnhancer: Reac t.FC = () => {
       document.documentElement.classList.toggle('high-contrast', !highContrast)
       )}
     </div>
-  );
+    );
 }
       document.documentElement.classList.toggle(&apos;high-contrast&apos, !highContrast)
       )}
@@ -296,12 +302,12 @@ export const AccessibilityEnhancer: Reac t.FC = () => {
       document.documentElement.classList.toggle('large-text', !largeText)
       )}
     </div>
-  );
+    );
 }
   return (""';
     <div className="fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">""';';
       <div className="flex items-center justify-between mb-2">""';';';
-        <h3 className="text-sm font-semibold text-gray-900">Accessibility</h3>"`',';';
+        <h3 className="text-sm font-semibold text-gray-900">Accessibility"`',';';
     ';';';
         <div className={`w-3 h-3 rounded-full ${isAccessible ? 'bg-green-500' : 'bg-yellow-500'}`}` ></div>"
       </div>
@@ -323,18 +329,18 @@ export const AccessibilityEnhancer: Reac t.FC = () => {
       document.documentElement.classList.toggle(&apos;large-text&apos, !largeText)
       )}
     </div>
-  );
+    );
 }
   }
   return (';
     <div className="min-h-screen bg-white">';';
       <div className="flex items-center justify-between mb-2">';';';
-        <h3 className="text-sm font-semibold text-gray-900">Accessibility</h3>',';';
+        <h3 className="text-sm font-semibold text-gray-900">Accessibility',';';
     ';';';
   return ('';
     <div className="fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">"';';
       <div className="flex items-center justify-between mb-2">"';';';
-        <h3 className="text-sm font-semibold text-gray-900">Accessibility</h3>`',';';
+        <h3 className="text-sm font-semibold text-gray-900">Accessibility`',';';
     ';';';
         <div className={`w-3 h-3 rounded-full ${isAccessible ? 'bg-green-500' : 'bg-yellow-500'}`}></div>';';';
       `',';';
@@ -346,7 +352,7 @@ export const AccessibilityEnhancer: Reac t.FC = () => {
   return (&apos;
     <div className=&quot;fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50&quot;>&quot;"
       <div className=&quot;flex items-center justify-between mb-2&quot;>&quot;`
-        <h3 className=&quot;text-sm font-semibold text-gray-900&quot;>Accessibility&quot;</h3>
+        <h3 className=&quot;text-sm font-semibold text-gray-900&quot;>Accessibility&quot;
         <div className={`w-3 h-3 rounded-full ${isAccessible ? &apos;bg-green-500&apos; : &apos;bg-yellow-500&apos}`}>&apos;</div>
       {metrics: && (';
         <div className=`space-y-2 text-xs mb-3">";";";';';
@@ -387,7 +393,7 @@ export const AccessibilityEnhancer: Reac t.FC = () => {
       )
       )}
     </div>
-  );
+    );
 }';
       <div className="space-y-2">`';';
         <button onClick={toggleHighContrast}``';';';

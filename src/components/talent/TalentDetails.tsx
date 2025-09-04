@@ -82,7 +82,7 @@ const TalentDetails: React.FC<TalentDetailsProps> = ({ talent }) => {
 
               {talent.key_projects.map((proj, i) => (
                 <li key={i} className="border-b border-zion-purple/20 pb-2">
-                  <h3 className="font-medium">{proj.title}</h3>
+                  <h3 className="font-medium">{proj.title}
                   {proj.description && (
                     <p className="text-sm text-zion-slate">{proj.description}</p>
                   )}

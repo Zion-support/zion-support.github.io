@@ -24,7 +24,7 @@ export function AdvancedServicesShowcase(props: any) {
               <div className="w-12 h-12 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-3">
                 <Brain className="w-6 h-6 text-zion-blue" />
               </div>
-              <h3 className="text-zion-cyan font-semibold">AI-Powered</h3>
+              <h3 className="text-zion-cyan font-semibold">AI-Powered
               <p className="text-zion-slate-light text-sm">Intelligent automation & insights</p>
             </div>
 
@@ -32,7 +32,7 @@ export function AdvancedServicesShowcase(props: any) {
               <div className="w-12 h-12 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-3">
                 <Shield className="w-6 h-6 text-zion-blue" />
               </div>
-              <h3 className="text-zion-cyan font-semibold">Enterprise Security</h3>
+              <h3 className="text-zion-cyan font-semibold">Enterprise Security
               <p className="text-zion-slate-light text-sm">Bank-level protection</p>
             </div>
 
@@ -40,7 +40,7 @@ export function AdvancedServicesShowcase(props: any) {
               <div className="w-12 h-12 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-3">
                 <TrendingUp className="w-6 h-6 text-zion-blue" />
               </div>
-              <h3 className="text-zion-cyan font-semibold">Proven Results</h3>
+              <h3 className="text-zion-cyan font-semibold">Proven Results
               <p className="text-zion-slate-light text-sm">Track record of success</p>
             </div>
 
@@ -48,7 +48,7 @@ export function AdvancedServicesShowcase(props: any) {
               <div className="w-12 h-12 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-3">
                 <Users className="w-6 h-6 text-zion-blue" />
               </div>
-              <h3 className="text-zion-cyan font-semibold">Expert Team</h3>
+              <h3 className="text-zion-cyan font-semibold">Expert Team
               <p className="text-zion-slate-light text-sm">Certified professionals</p>
             </div>
           </div>
@@ -107,7 +107,7 @@ export function AdvancedServicesShowcase(props: any) {
 
         {/* Service Categories Overview */}
         <div className="text-center mb-12">
-          <h3 className="text-2xl font-bold text-white mb-6">Comprehensive Service Categories</h3>
+          <h3 className="text-2xl font-bold text-white mb-6">Comprehensive Service Categories
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             <div className="text-center p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">
               <div className="text-2xl mb-2">🤖</div>
@@ -140,7 +140,7 @@ export function AdvancedServicesShowcase(props: any) {
           <div className="bg-zion-blue-dark rounded-2xl p-8 border border-zion-blue-light max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
-            </h3>
+            
             <p className="text-zion-slate-light mb-6">
               Get in touch with our experts to discuss your specific needs and discover how our AI and IT solutions can drive your business forward.
             </p>

@@ -3,7 +3,7 @@ import {  import { motion, useAnimation  } from 'framer-motion';
 
 interface Stat {
   id: string;
-  icon: Reac t.ComponentType < any>;
+  icon: React.ComponentType < any>;
   value: string;
   label: string;
   description: string;
@@ -75,13 +75,15 @@ const stats: Sta t[] = [{
 
 export default function EnhancedStatsSection(...args[]):  {
 
-  const [countedValues, setCountedValues] = useState<any>({});
+  const [countedValues, setCountedValues] = useState<any>({}
+    );
   
   const [ref, inView] = useInView({
 
     threshold: 0.3,
     triggerOnce: tru e
-  }) ;
+  }
+    );
 
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -242,7 +244,7 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
                 {/* Label */}"
                 <h3 className="text-2xl font-bold text-white mb-3 relative z-10">
                   {stat.label}
-                </h3>
+                
 
                 {/* Description */}"
                 <p className="text-gray-300 leading-relaxed relative z-10">
@@ -289,7 +291,7 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
 "
             <h3 className="text-3xl font-bold text-white mb-4">
               Industry Recognition & Awards
-            </h3>"
+            "
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Consistently recognized as a leader in innovation, receiving prestigious awards for our groundbreaking technology solutions and exceptional client service.</p>
 "

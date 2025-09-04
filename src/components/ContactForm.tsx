@@ -8,7 +8,7 @@ import {;
   User, Building,;',';';
     ';';';
   MessageSquare} from 'lucide-react';';';
-export const ContactForm: Reac t.FC = () => {';';';
+export const ContactForm: React.FC = () => {';';';
   const [formData, setFormData] = useState<any>({',';';
     ';';';
     firstName: '', lastName: '',',';';
@@ -19,7 +19,8 @@ export const ContactForm: Reac t.FC = () => {';';';
     ';';';
     message: '', budget: '',',';';
     ';';';
-    timeline: ''});';';';
+    timeline: ''}
+    );';';';
   const [isSubmitting, setIsSubmitting] = useState<any>(false);',';';
     ';';';
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -28,7 +29,7 @@ export const ContactForm: Reac t.FC = () => {';';';
     setFormData(prev => ({
       ...prev, [name]: value}));
   };
-  const handleSubmit = async (e: Reac t.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);';
     // Simulate form submission';';
@@ -46,7 +47,8 @@ export const ContactForm: Reac t.FC = () => {';';';
     ';';';
         message: '', budget: '',',';';
     ';';';
-        timeline: ''});';';';
+        timeline: ''}
+    );';';';
     } catch (error) {',';';
     ';';';
       setSubmitStatus('error');
@@ -80,7 +82,7 @@ export const ContactForm: Reac t.FC = () => {';';';
         <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
           <CheckCircle className="w-10 h-10 text-white"  />';
         </div>';';
-        <h3 className="text-2xl font-bold text-white mb-4">Thank You!</h3>';';';
+        <h3 className="text-2xl font-bold text-white mb-4">Thank You!';';';
         <p className="text-zion-slate-light mb-6">',';';
     ';';';
           Your message has been sent successfully. We&apos;ll get back to you within 24 hours.''';';
@@ -90,7 +92,7 @@ export const ContactForm: Reac t.FC = () => {';';';
           onClick={() => setSubmitStatus('idle')
       )}
     </div>
-  );
+    );
 }
           className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover: b g-zion-cyan/90 transition-colors"
         >
@@ -100,10 +102,10 @@ export const ContactForm: Reac t.FC = () => {';';';
     )
       )}
     </div>
-  );
+    );
 }
   return (
-    <div className="min-h-screen bg-white">';
+        <div className="min-h-screen bg-white">';
       <div className="text-center mb-8">';';
         <h2 className="text-3xl font-bold text-white mb-4">Get In Touch</h2>';';';
         <p className="text-zion-slate-light">',';';
@@ -241,7 +243,7 @@ export const ContactForm: Reac t.FC = () => {';';';
                 ))
       )}
     </div>
-  );
+    );
 }
               </select>
             </div>
@@ -262,7 +264,7 @@ export const ContactForm: Reac t.FC = () => {';';';
                 ))
       )}
     </div>
-  );
+    );
 }
               </select>
             </div>
@@ -284,7 +286,7 @@ export const ContactForm: Reac t.FC = () => {';';';
               ))
       )}
     </div>
-  );
+    );
 }
             </select>
           </div>
@@ -310,7 +312,7 @@ export const ContactForm: Reac t.FC = () => {';';';
           )
       )}
     </div>
-  );
+    );
 }
           <motion.button
             type="submit"
@@ -332,7 +334,7 @@ export const ContactForm: Reac t.FC = () => {';';';
             )
       )}
     </div>
-  );
+    );
 }
           </motion.button>
         </form>

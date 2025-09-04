@@ -45,7 +45,7 @@ import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = (props: an
                 <div className="flex items-center space-x-4">
                   <span className="text-4xl">{currentCountry.flag}</span>
                   <div>
-                    <h3 className="text-3xl font-bold">{currentCountry.name}</h3>
+                    <h3 className="text-3xl font-bold">{currentCountry.name}
                     <p className="text-blue-100 text-lg">
                       Professional IT services across {currentCountry.regions.length} regions
                     </p>
@@ -171,7 +171,7 @@ import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = (props: an
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 max-w-3xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
               Need Service in Another Region?
-            </h3>
+            
             <p className="text-blue-100 mb-6">
               Contact our global team to discuss your IT service needs in  location.
             </p>

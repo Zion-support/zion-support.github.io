@@ -184,7 +184,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   <div className="flex items-center justify-between mb-3">
                     <h3 className="text-slate-400 text-xs font-semibold uppercase tracking-wider">
                       {section.title}
-                    </h3>
+                    
                     {section.key && (
                       <button
                         onClick={() => toggleSection(section.key!)}
@@ -244,7 +244,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
           <div className="p-4 border-t border-slate-700">
             <h3 className="text-slate-400 text-xs font-semibold uppercase tracking-wider mb-3">
               Quick Actions
-            </h3>
+            
             <div className="space-y-2">
               {quickActions.map((action) => (
                 <Link

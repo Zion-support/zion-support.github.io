@@ -12,7 +12,7 @@ import { motion } from 'framer-motionimport { Link } from react-router-domimport
   Users,
   Clock,
   CheckCircle,
-  Search} from lucide-reactexport const EnhancedServicesShowcase: Reac t.FC = () => {
+  Search} from lucide-reactexport const EnhancedServicesShowcase: React.FC = () => {
   const services = [{
       title: AI Workflow Automation,'
       description: 'Transform business operations with intelligent automation that learns and scales',

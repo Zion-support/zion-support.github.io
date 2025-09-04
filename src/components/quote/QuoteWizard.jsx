@@ -10,7 +10,8 @@ import {useToast} from '@/hooks/use-toast';
 const WIZARD_STEPS = [1, 2, 3];
 function StepIndicator(props: any) {
     const progress = (step / WIZARD_STEPS.length) * 100;
-    return (<div className="space-y-1">
+    return (
+        <div className="space-y-1">
       <div data-testid="step-indicator" className="text-sm text-muted-foreground">
         {step}/{WIZARD_STEPS.length}
       </div>
@@ -55,7 +56,8 @@ export function QuoteWizard(props: any) {
             return;
         let endpoint = '/api/quotes';
         const payload = { user_message: message };
-        switch (category) {case 'services':
+        switch (filterType) {
+            case 'services':
                 endpoint = '/api/services/quotes';
                 payload.service_id = selectedItemId;
                 break;
@@ -74,10 +76,12 @@ export function QuoteWizard(props: any) {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
-        });
+        }
+    );
         setStep(3)};
     if (step === 1) {
-        return (<div className="space-y-6">
+        return (
+        <div className="space-y-6">
         <StepIndicator step={step} />
         {loading && !delayedError && (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" data-testid="loading-indicator">
             {Array.from({ length: 6 }).map((_, i) => (<Skeleton key={i} className="h-[120px] w-full" />))}
@@ -125,7 +129,8 @@ export function QuoteWizard(props: any) {
         </Button>
       </div>)}
     if (step === 2) {
-        return (<div data-testid="details-step" className="space-y-4">
+        return (
+        <div data-testid="details-step" className="space-y-4">
         <StepIndicator step={step} />
         {selectedItem && (<div data-testid="selected-item-name" className="text-lg font-semibold text-zion-slate-dark">
             Selected {category === 'services' ? 'Service' : category === 'talent' ? 'Talent' : 'Item'}: {selectedItem.name}
@@ -140,7 +145,8 @@ export function QuoteWizard(props: any) {
         </div>
       </div>)}
     if (step === 3) {
-        return (<div data-testid="success-step" className="space-y-4 text-center py-12">
+        return (
+        <div data-testid="success-step" className="space-y-4 text-center py-12">
         <StepIndicator step={step} />
         <div className="text-2xl font-semibold text-green-600">Quote Submitted Successfully!</div>
         <p className="text-muted-foreground">

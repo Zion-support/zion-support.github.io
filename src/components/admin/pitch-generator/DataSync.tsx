@@ -8,14 +8,14 @@ interface DataSyncProps {
 
 }
 
-const DataSync: Reac t.FC<DataSyncProps> = ({ syncedData, onNext, onBack }) => {
+const DataSync: React.FC<DataSyncProps> = ({ syncedData, onNext, onBack }) => {
   return (
     <div className="max-w-4xl mx-auto p-6">
       <h2 className="text-2xl font-bold mb-6">Data Synchronization</h2>
       
       <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-8">
         <div className="bg-white p-6 rounded-lg border border-gray-200">
-          <h3 className="text-lg font-semibold mb-4">Key Metrics</h3>
+          <h3 className="text-lg font-semibold mb-4">Key Metrics
           <div className="space-y-3">
             <div className="flex justify-between">
               <span className="text-gray-600">Active Users (30d)</span>
@@ -37,7 +37,7 @@ const DataSync: Reac t.FC<DataSyncProps> = ({ syncedData, onNext, onBack }) => {
         </div>
         
         <div className="bg-white p-6 rounded-lg border border-gray-200">
-          <h3 className="text-lg font-semibold mb-4">Project Stats</h3>
+          <h3 className="text-lg font-semibold mb-4">Project Stats
           <div className="space-y-3">
             <div className="flex justify-between">
               <span className="text-gray-600">Completed Projects</span>
@@ -52,7 +52,7 @@ const DataSync: Reac t.FC<DataSyncProps> = ({ syncedData, onNext, onBack }) => {
       </div>
       
       <div className="bg-white p-6 rounded-lg border border-gray-200 mb-8">
-        <h3 className="text-lg font-semibold mb-4">Conversion Funnel</h3>
+        <h3 className="text-lg font-semibold mb-4">Conversion Funnel
         <div className="grid grid-cols-2 md: gri d-cols-4 gap-4">
           <div className="text-center">
             <div className="text-2xl font-bold text-blue-600">
@@ -82,7 +82,7 @@ const DataSync: Reac t.FC<DataSyncProps> = ({ syncedData, onNext, onBack }) => {
       </div>
       
       <div className="bg-white p-6 rounded-lg border border-gray-200 mb-8">
-        <h3 className="text-lg font-semibold mb-4">Notable Clients</h3>
+        <h3 className="text-lg font-semibold mb-4">Notable Clients
         <div className="grid grid-cols-1 md: gri d-cols-2 gap-4">
           {syncedData?.notableClients?.map((client: an y, index: number) => (
             <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
@@ -115,7 +115,7 @@ const DataSync: Reac t.FC<DataSyncProps> = ({ syncedData, onNext, onBack }) => {
         </button>
       </div>
     </div>
-  );
+    );
 };
 
 export default DataSync;

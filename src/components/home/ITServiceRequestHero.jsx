@@ -126,7 +126,7 @@ export function ITServiceRequestHero(props: any) {
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-zion-cyan to-zion-blue mb-4">
                   <MapPin className="w-8 h-8 text-white"  />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2">Request IT Service</h3>
+                <h3 className="text-2xl font-bold text-white mb-2">Request IT Service
                 <p className="text-zion-slate-light">Enter your location to find nearby technicians</p>
               </div>
 

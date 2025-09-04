@@ -8,7 +8,7 @@ interface DataVisualizationProps extends React.PropsWithChildren<{}> {
   showCharts?: boolean;
   showActions?: boolean}
 
-export const DataVisualization: Reac t.FC<DataVisualizationProps> = ({
+export const DataVisualization: React.FC<DataVisualizationProps> = ({
 
 title:  "Data Analytics Dashboard",;
   showMetrics = true,;
@@ -29,7 +29,8 @@ title:  "Data Analytics Dashboard",;
       borderColor['rgba(34, 221, 210, 1)],;
       borderWidth: 2
     }]
-  }) ;
+  }
+    );
 
   const [metrics, setMetrics] = useState<any> ([{
 

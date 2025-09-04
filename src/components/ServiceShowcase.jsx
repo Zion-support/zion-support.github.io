@@ -19,7 +19,8 @@ export function ServiceShowcase(props: any) {
             case 'Development': return 'from-green-500 to-emerald-500';
             default: return 'from-gray-500 to-slate-500'}
     };
-    return (<div className="py-12 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
+    return (
+        <div className="py-12 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">

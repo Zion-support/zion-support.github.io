@@ -11,7 +11,8 @@ export function IntegrationConnectionModal(props: any) {
         pushNotes: false,
         syncJobDetails: true,
         syncApplicantData: true
-    });
+    }
+    );
     const handleConnectOAuth = (props: any) => {
         setIsConnecting(true);
         // Simulate OAuth flow
@@ -46,7 +47,7 @@ export function IntegrationConnectionModal(props: any) {
         {(integration.status === "connected" || integration.status === "warning") ? (<>
             <div className="grid gap-4 py-4">
               <div className="space-y-4">
-                <h3 className="text-sm font-medium">Sync Settings</h3>
+                <h3 className="text-sm font-medium">Sync Settings
 
                 <div className="flex items-center space-x-2">
                   <Checkbox id="autoCreateContacts" checked={syncSettings.autoCreateContacts} onCheckedChange = {
@@ -106,7 +107,7 @@ export function IntegrationConnectionModal(props: any) {
               </div>
 
               <div className="space-y-2">
-                <h3 className="text-sm font-medium">API Details</h3>
+                <h3 className="text-sm font-medium">API Details
                 <p className="text-xs text-muted-foreground">
                   Last synced: {integration.lastSync
                 ? new Date(integration.lastSync).toLocaleString()
@@ -131,7 +132,7 @@ export function IntegrationConnectionModal(props: any) {
               </p>
 
               <div className="space-y-4">
-                <h3 className="text-sm font-medium">What will be synced:</h3>
+                <h3 className="text-sm font-medium">What will be synced:
                 <ul className="list-disc pl-4 text-sm space-y-1">
                   <li>Contact information</li>
                   <li>Job details and descriptions</li>

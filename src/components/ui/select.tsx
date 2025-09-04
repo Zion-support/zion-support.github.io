@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
-  children: Reac t.ReactNode;
+  children: React.ReactNode;
   className?: string;
 }
 
@@ -20,7 +20,7 @@ export function Select(props: any) {
 
 interface SelectTriggerProps {
 
-  children: Reac t.ReactNode;
+  children: React.ReactNode;
   className?: string;
 
 }
@@ -30,12 +30,12 @@ export function SelectTrigger(props: any) {
     <div className={`flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus: outlin e-none focus: rin g-2 focus: rin g-ring focus: rin g-offset-2 disabled: curso r-not-allowed disabled: opacit y-50 ${className}`}>
       {children}
     </div>
-  );
+    );
 }
 
 interface SelectContentProps {
 
-  children: Reac t.ReactNode;
+  children: React.ReactNode;
   className?: string;
 
 }
@@ -45,7 +45,7 @@ export function SelectContent(props: any) {
     <div className={`relative ${className}`}>
       {children}
     </div>
-  );
+    );
 }
 
 interface SelectValueProps {
@@ -65,7 +65,7 @@ export function SelectValue(props: any) {
 
 interface SelectItemProps {
 
-  children: Reac t.ReactNode;
+  children: React.ReactNode;
   value: string;
   className?: string;
 

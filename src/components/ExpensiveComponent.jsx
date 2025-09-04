@@ -39,58 +39,72 @@ export {ExpensiveComponent};
 }
   })"
  export default function ExpensiveComponent(props: any) { const [data, setData] = useState ([]) ; const [loading, setLoading] = useState (true) ; useEffect ( () => {"";"
-  });,"})"
+  }
+    );,"})"
 ;,"})
 }
   })
 }
  export default function ExpensiveComponent(props: any) { const [data, setData] = useState([]); const [loading, setLoading] = useState(true); useEffect(() => {;"
-  });,"});"
+  }
+    );,"}
+    );"
 }"})
 }
   })""
-  });,"})"
+  }
+    );,"})"
 export default function ExpensiveComponent(props: any) {}"})
 }
   })
 }
   const [data, setData] = useState([]);"
-  });,"})"
+  }
+    );,"})"
   const [loading, setLoading] = useState(true);,"})
 }
   })"
-  useEffect(() => {}});,"})"
+  useEffect(() => {}}
+    );,"})"
     // comment
   })"
-    const timer = setTimeout(() => {}});,"})"
+    const timer = setTimeout(() => {}}
+    );,"})"
       const expensiveData = Array.from();,"})
 }
   })
 }
         {length: 10000},"
-  });,"})"
+  }
+    );,"})"
         (_, i) => Math.sqrt(i) * Math.PI * Math.random();,"})
 }
   })
 }
-      );"
-  });,"})"
+    );"
+  }
+    );,"})"
       setData(expensiveData);,"})
 }
   })
 }
       setLoading(false);"
-  });,"});"
+  }
+    );,"}
+    );"
 }, 2000);,"})
 }
   })
 }
     return () => clearTimeout(timer);"
-  });,"});"
+  }
+    );,"}
+    );"
 }, []);,"})
 }
   })"
-  if(loading) {}});,"})"
+  if(loading) {}}
+    );,"})"
     return();,"})
 }
   })"
@@ -105,37 +119,43 @@ export default function ExpensiveComponent(props: any) {}"})
   })
 }
       </div>;"
-  });,"})"
+  }
+    );,"})"
     </div>)}"})
 }
   })
 }
 ;"
-  });,"})"
+  }
+    );,"})"
 export {ExpensiveComponent};,"})
 }
   })
 }
 ;"
-  });,"})"
+  }
+    );,"})"
 export {ExpensiveComponent};,"})
 }
   })
 }
 ;"
-  });,"})"
+  }
+    );,"})"
 export {ExpensiveComponent};,"})
 }
   })
 }
 ;"
-  });,"})"
+  }
+    );,"})"
 export {ExpensiveComponent};,"})
 }
   })
 }
 ;"
-  });,"})"
+  }
+    );,"})"
 export {ExpensiveComponent};,"})
 }
   })"

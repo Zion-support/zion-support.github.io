@@ -7,7 +7,8 @@ import { RefreshCcw, AlertCircle function MarketplaceErrorFallback(props: any) {
     const handleRetry = async () => {
         try {
             // Re-call SWR mutate('*') to refresh all cached data
-            await mutate(() => true, null, { revalidate: true });
+            await mutate(() => true, null, { revalidate: true }
+    );
             resetErrorBoundary();
             // // // // // // // console.error('Error during retry:', retryError);
             Sentry.captureException(retryError);
@@ -16,7 +17,8 @@ import { RefreshCcw, AlertCircle function MarketplaceErrorFallback(props: any) {
         catch (retryError) {console.error('Error during retry:', retryError);
             Sentry.captureException(retryError)}
     };
-    return (<div className="flex items-center justify-center min-h-[400px] p-6">
+    return (
+        <div className="flex items-center justify-center min-h-[400px] p-6">
       <div className="max-w-md w-full space-y-4">
         <Alert variant="destructive">
           <AlertCircle aria-hidden="true" className="h-4 w-4" />
@@ -53,7 +55,8 @@ export function MarketplaceErrorBoundary(props: any) {
             scope.setTag('errorBoundary', 'marketplace');
             scope.setContext('errorInfo', {
                 componentStack: errorInfo.componentStack || null,
-            });
+            }
+    );
             scope.setLevel('error');
             Sentry.captureException(error)})};
     return (<ErrorBoundary FallbackComponent={MarketplaceErrorFallback} onError={handleError}>

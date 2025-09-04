@@ -25,7 +25,8 @@ export function EnhancedNewsletterForm(props: any) {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({email: trimmed}),
-            });
+            }
+    );
             const data = await res.json().catch(() => ({/* empty */}));
             if (res.ok) {
                 // Handle different success statuses
@@ -53,13 +54,14 @@ export function EnhancedNewsletterForm(props: any) {
             toast.error("Unable to subscribe right now. Please try again later.")}
         finally {setIsSubmitting(false)}
     };
-    return (<div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
+    return (
+        <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
       <div className="flex items-center mb-4">
         <div className="p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3">
           <Mail aria-hidden="true" className="h-6 w-6" />
         </div>
         <div>
-          <h3 className="text-lg font-bold text-white">Stay Updated</h3>
+          <h3 className="text-lg font-bold text-white">Stay Updated
           <p className="text-zion-slate-light text-sm">Get exclusive offers, trending AI news, and early access to best deals</p>
         </div>
       </div>

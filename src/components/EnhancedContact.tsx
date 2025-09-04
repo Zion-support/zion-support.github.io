@@ -24,9 +24,11 @@ export function EnhancedContact(...args[]):  {
     comp: '',;
     service: 'general',;
     message: ''
-  }) ;
+  }
+    );
 
-  const [errors, setErrors] = useState<any> ({}) ;
+  const [errors, setErrors] = useState<any> ({}
+    );
   const [isSubmitting, setIsSubmitting] = useState<any>(false);
   const [isSubmitted, setIsSubmitted] = useState<any>(false) { value: 'cloud-infrastructure', label: 'Cloud Infrastructure' }, { value: 'cybersecurity', label: 'Cybersecurity' }, { value: 'digital-transformation', label: 'Digital Transformation' }, { value: 'consulting', label: 'IT Consulting' }, { value: 'quantum-computing', label: 'Quantum Computing' }, { value: 'green-it', label: 'Green IT Solutions' };
   ];
@@ -197,7 +199,7 @@ export function EnhancedContact(...args[]):  {
                     <info.icon className="w-6 h-6 text-zion-cyan" />
                   </div>
                   <div>"
-                    <h3 className="text-lg font-semibold text-white mb-1">{info.title}</h3>"
+                    <h3 className="text-lg font-semibold text-white mb-1">{info.title}"
                     <p className="text-zion-cyan font-medium mb-1">{info.value}</p>"
                     <p className="text-zion-slate-light text-sm">{info.description}</p>
                   </div>
@@ -221,7 +223,7 @@ export function EnhancedContact(...args[]):  {
               transition={{ delay: 0.6 }}"
               className="mt-12 p-6 bg-zion-blue-light/10 rounded-xl border border-zion-blue-light/20"
             >"
-              <h3 className="text-xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h3>"
+              <h3 className="text-xl font-bold text-white mb-4">Why Choose Zion Tech Group?"
               <div className="grid grid-cols-2 gap-4">"
                 <div className="text-center">"
                   <div className="text-2xl font-bold text-zion-cyan mb-1">500+</div>"

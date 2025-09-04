@@ -4,7 +4,8 @@ function defaultReporter(metric: any): void {
   // Replace with analytics endpoint or gtag if desired
   // eslint-disable-next-line no-console
   .rating,
-  });
+  }
+    );
 }
 
 export function reportWebVitals(reporter: Reporter = defaultReporter): void {
@@ -27,6 +28,7 @@ export function reportWebVitals(reporter: Reporter = defaultReporter): void {
     })
     .catch(() => {
       // ignore if web-vitals isn't available
-    });
+    }
+    );
 }
 

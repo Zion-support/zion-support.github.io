@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-export const TestimonialsSection: Reac t.FC = () => {
+export const TestimonialsSection: React.FC = () => {
 import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page(props: any) {
@@ -38,7 +38,7 @@ export default function Page(props: any) {
 ];
 
 ;
-export const TestimonialsSection: Reac t.FC = props {
+export const TestimonialsSection: React.FC = props {
   const [currentTestimonial, setCurrentTestimonial] = useState<typeof 0>(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState<typeof true>(true);
 
@@ -268,7 +268,7 @@ export const TestimonialsSection: Reac t.FC = props {
           viewport={{ once: tru e }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >"
-          <h3 className="text-2xl font-semibold text-white mb-8">Trusted by Leading Organizations</h3>"
+          <h3 className="text-2xl font-semibold text-white mb-8">Trusted by Leading Organizations"
           <div className="flex flex-wrap justify-center items-center gap-8 md: ga p-16 opacity-60">
             {/* Add company logos here */}"
             <div className="text-gray-400 text-sm">Fortune 500 Companies</div>"

@@ -6,7 +6,7 @@ const Card = (props: any) => {}
     >
       {children}
     </div>
-  );
+    );
 };'
 const CardHeader = (props: any) => {}
 `
@@ -16,7 +16,7 @@ const CardHeader = (props: any) => {}
     <div className={`flex flex-col space-y-1.5 p-6 ${className}`}>
       {children}
     </div>
-  );
+    );
 };'
 const CardTitle = (props: any) => {}
   return()`
@@ -24,8 +24,7 @@ const CardTitle = (props: any) => {}
       className={`text-2xl font-semibold leading-none tracking-tight ${className}`}
     >
       {children}
-    </h3>
-  );
+    );
 };'
 const CardDescription = (props: any) => {}
 `
@@ -44,7 +43,7 @@ const CardFooter = (props: any) => {}
 ```
   return()````
     <div className={`flex items-center p-6 pt-0 ${className}`}>{children}</div>
-  );
+    );
 };
 export {}
   Card,
@@ -87,7 +86,8 @@ const Card = React.forwardRef((_a, ref) => {}
       props;
     )
   );
-});'
+}
+    );'
 Card.displayName = 'Card';
 const CardHeader = React.forwardRef((_a, ref) => {}
   var {className} = _a,'
@@ -99,7 +99,8 @@ const CardHeader = React.forwardRef((_a, ref) => {}
       props;
     )
   );
-});'
+}
+    );'
 CardHeader.displayName = 'CardHeader';
 const CardTitle = React.forwardRef((_a, ref) => {}
   var {className} = _a,'
@@ -115,7 +116,8 @@ const CardTitle = React.forwardRef((_a, ref) => {}
       props;
     )
   );
-});'
+}
+    );'
 CardTitle.displayName = 'CardTitle';
 const CardDescription = React.forwardRef((_a, ref) => {}
   var {className} = _a,'
@@ -127,7 +129,8 @@ const CardDescription = React.forwardRef((_a, ref) => {}
       props;
     )
   );
-});'
+}
+    );'
 CardDescription.displayName = 'CardDescription';
 const CardContent = React.forwardRef((_a, ref) => {}
   var {className} = _a,'
@@ -136,7 +139,8 @@ const CardContent = React.forwardRef((_a, ref) => {}
     'div','
     Object.assign({ref: ref, className: cn('p-6 pt-0', className)}, props)
   );
-});'
+}
+    );'
 CardContent.displayName = 'CardContent';
 const CardFooter = React.forwardRef((_a, ref) => {}
   var {className} = _a,'
@@ -148,7 +152,8 @@ const CardFooter = React.forwardRef((_a, ref) => {}
       props;
     )
   );
-});'
+}
+    );'
 CardFooter.displayName = 'CardFooter';
 export {Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent};
 

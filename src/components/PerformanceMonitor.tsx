@@ -20,7 +20,8 @@ const PerformanceMonitor = () => {
         delta: metric.delta,
         id: metric.id,
         navigationType: metric.navigationType,
-      });
+      }
+    );
 
       // Send to analytics service in production
       if (process.env.NODE_ENV === 'production') {
@@ -31,7 +32,8 @@ const PerformanceMonitor = () => {
             event_label: metric.id,
             value: Math.round(metric.value),
             non_interaction: true,
-          });
+          }
+    );
         }
       }
     };
@@ -57,7 +59,8 @@ const PerformanceMonitor = () => {
 
           logger.info('Page Load Metrics:', metrics);
         }
-      });
+      }
+    );
     }
   }, []);
 

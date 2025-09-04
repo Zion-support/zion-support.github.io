@@ -677,7 +677,7 @@ Get AI Recommendations
           </div> {/* comment */}"
 ""}} transition="{{" delay: 0.4 }} className="mt-12 text-center">"";"
             <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"";"
-              <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>"";"
+              <h3 className="text-3xl font-bold mb-4">Ready to Get Started?"";"
               <p className="text-xl mb-6 max-w-2xl mx-auto">
                 Our expert team is ready to help you implement the perfect solution,
                 for your business needs. Contact us today for a personalized consultation."";"
@@ -696,7 +696,7 @@ Get AI Recommendations
           </motion.div> {opacity: 0, y: 20}} animate = {}"
 &apos;&apos;"&apos}} transition="{{" delay: 0.4 }} className="&apos;mt-12" text-center&apos;>"&apos;&apos,&apos;&apos;"
             <div className="&apos;bg-gradient-to-r" from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white&apos;>"&apos;&apos,&apos;&apos;"
-              <h3 className="&apos;text-3xl" font-bold mb-4&apos;>Ready to Get Started?&apos;</h3>&apos;&apos,&apos;&apos,"
+              <h3 className="&apos;text-3xl" font-bold mb-4&apos;>Ready to Get Started?&apos;&apos;&apos,&apos;&apos,"
               <p className="&apos;text-xl" mb-6 max-w-2xl mx-auto&apos;>"
                 for your business needs. Contact us today for a personalized consultation.&apos;&apos,&apos;&apos,
               </p>&apos;&apos,&apos;&apos,"
@@ -714,7 +714,7 @@ Get AI Recommendations
                   Call Now&quot;"
 """"}} transition = "{{" delay: 0.4 }} className="mt-12 text-center">""""
             <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">""""
-              <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>""""
+              <h3 className="text-3xl font-bold mb-4">Ready to Get Started?""""
               <p className="text-xl mb-6 max-w-2xl mx-auto">
                 Our expert team is ready to help you implement the perfect solution,"
 for your business needs. Contact us today for a personalized consultation.""""

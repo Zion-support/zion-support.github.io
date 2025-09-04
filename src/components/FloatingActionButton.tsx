@@ -17,7 +17,7 @@ Plus,
 interface FloatingAction {
 
   id: string;
-  icon: Reac t.ComponentType<{ size?: number; className?: string 
+  icon: React.ComponentType<{ size?: number; className?: string 
 }>;
   label: string;
   action: () => void;
@@ -33,7 +33,7 @@ interface FloatingActionButtonProps {
   showContactActions?: boolean;
   showUtilityActions?: boolean;
 
-const FloatingActionButton: Reac t.FC<FloatingActionButtonProps> = ({
+const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 
   actions = [],: any;
   position = 'bottom-right',: any;
@@ -213,7 +213,8 @@ const FloatingActionButton: Reac t.FC<FloatingActionButtonProps> = ({
 
   // Sort actions by priority
   
-    return priorityOrder[b.priority] - priorityOrder[a.priority]}) ;
+    return priorityOrder[b.priority] - priorityOrder[a.priority]}
+    );
 
   // Toggle expansion
   
@@ -359,7 +360,7 @@ type FloatingActionButtonProps = {
   enabled?: boolean;
 };
 
-const FloatingActionButton: Reac t.FC<FloatingActionButtonProps> = ({ enabled = true }) => {
+const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ enabled = true }) => {
   const [open, setOpen] = useState<any>(false);
   if(!enabled) return null;
   return (<button

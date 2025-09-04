@@ -94,7 +94,8 @@ export function AdvancedAIBusinessProcessAutomation(props: any) {
     const priorityMatch = selectedPriority === 'all' || process.priority === selectedPriority;
     const automationMatch = selectedAutomationLevel === 'all' || process.automationLevel === selectedAutomationLevel;
     return categoryMatch && priorityMatch && automationMatch;
-  });
+  }
+    );
 
   const getStatusColor = (props: any) => {
     switch (status) {
@@ -144,7 +145,7 @@ export function AdvancedAIBusinessProcessAutomation(props: any) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -230,7 +231,7 @@ export function AdvancedAIBusinessProcessAutomation(props: any) {
               {/* Header */}
               <div className="flex items-start justify-between mb-4">
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-white mb-2">{process.name}</h3>
+                  <h3 className="text-xl font-semibold text-white mb-2">{process.name}
                   <p className="text-gray-300 text-sm">{process.description}</p>
                 </div>
                 <div className={`w-3 h-3 rounded-full ${getStatusColor(process.status)}`}></div>
@@ -318,7 +319,7 @@ export function AdvancedAIBusinessProcessAutomation(props: any) {
         </div>
       </div>
     </div>
-  );
+    );
 }
 
 </motion>

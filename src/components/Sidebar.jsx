@@ -464,7 +464,7 @@ export function Sidebar(props: any) {';';';
       )
       )}
     </div>
-  );
+    );
 }
       {/* Sidebar */}`';
       <div className={`';';
@@ -504,7 +504,7 @@ export function Sidebar(props: any) {';';';
             <div key={section.title} className="mb-6">""
               <h3 className="px-4 text-xs font-semibold text-zion-cyan uppercase tracking-wider mb-3">
                 {section.title}
-              </h3>
+              
               ""
               <div className="space-y-1">
                 {section.items.map((item, itemIndex) => (';
@@ -540,13 +540,13 @@ export function Sidebar(props: any) {';';';
             <div key={section.title} className="mb-6">"
               <h3 className="px-4 text-xs font-semibold text-zion-cyan uppercase tracking-wider mb-3">
                 {section.title}
-              </h3>
+              
               "
           {navigationSections.map((section, sectionIndex) => (
             <div key={section.title} className="mb-6">
               <h3 className="px-4 text-xs font-semibold text-blue-400 uppercase tracking-wider mb-3">
                 {section.title}
-              </h3>
+              
               <div className="space-y-1">
                 {section.items.map((item, itemIndex) => (
                   <div key={item.name}>
@@ -603,7 +603,7 @@ export function Sidebar(props: any) {';';';
                         )
       )}
     </div>
-  );
+    );
 }
                       </Link>
                     ) : (
@@ -616,7 +616,7 @@ export function Sidebar(props: any) {';';';
                       <button onClick={() => toggleSection(item.name.toLowerCase())
       )}
     </div>
-  );
+    );
 }
                         className="w-full flex items-center justify-between px-4 py-2 text-sm text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors"
                       <button onClick={() =" > toggleSection(item.name.toLowerCase())}"
@@ -633,7 +633,7 @@ export function Sidebar(props: any) {';';';
                       <button onClick={() => toggleSection(item.name.toLowerCase())
       )}
     </div>
-  );
+    );
 }
                         className="w-full flex items-center justify-between px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800 transition-colors"
                       >
@@ -648,19 +648,19 @@ export function Sidebar(props: any) {';';';
                         )
       )}
     </div>
-  );
+    );
 }
                       </button>
                     )
       )}
     </div>
-  );
+    );
 }
                   </div>
                 ))
       )}
     </div>
-  );
+    );
 }
               </div>
 >>>>>>> main
@@ -668,7 +668,7 @@ export function Sidebar(props: any) {';';';
           ))
       )}
     </div>
-  );
+    );
 }
         </div>
         {/* Footer */}"

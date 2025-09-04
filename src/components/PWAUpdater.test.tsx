@@ -9,6 +9,6 @@ export default function PWAUpdater.test() {return (
           Professional PWAUpdater.test services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

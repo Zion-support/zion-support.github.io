@@ -11,7 +11,8 @@ const WebsiteImprovementDashboard = (props: any) => {}
         cumulativeLayoutShift: 0,
         firstInputDelay: 0,
         timeToInteractive: 0;
-    });
+    }
+    );
     const [seoAnalysis, setSeoAnalysis] = useState({}
         score: 0,
         issues[],;
@@ -23,14 +24,16 @@ const WebsiteImprovementDashboard = (props: any) => {}
             canonical: false,
             ogTags: false,
             twitterTags: false;
-    });
+    }
+    );
     const [accessibilityReport, setAccessibilityReport] = useState({}
         score: 0,
         issues[],;'
         wcagCompliance: 'Non-Compliant',
         criticalIssues: 0,
         warnings: 0;
-    });
+    }
+    );
     const [isAnalyzing, setIsAnalyzing] = useState(false);
     // Analyze website performance;
     const analyzePerformance = useCallback(async () => {}

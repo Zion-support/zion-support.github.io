@@ -58,7 +58,7 @@
       </div>;
     )}
 
-  const style: Reac t.CSSProperties = { /* empty */ };
+  const style: React.CSSProperties = { /* empty */ };
   if (width) style.width = typeof width === 'number' ? `${width}px` : width;'`
   if (height) style.height = typeof height === 'number' ? `${height}px` : height;
 
@@ -91,7 +91,7 @@
   )};
 
 // Specialized skeleton components;
-export const CardSkeleton: Reac t.FC<{ className?: string }> = { className }: unknown (
+export const CardSkeleton: React.FC<{ className?: string }> = { className }: unknown (
   <div className = {
 
   cn('p-6 space-y-4',
@@ -112,7 +112,7 @@ export const CardSkeleton: Reac t.FC<{ className?: string }> = { className }: un
   </div>;
 );
 
-export const TableSkeleton: Reac t.FC<{ rows?: number; columns?: number; className?: string }> = ({
+export const TableSkeleton: React.FC<{ rows?: number; columns?: number; className?: string }> = ({
 
   rows = 5,
   columns = 4,
@@ -144,7 +144,7 @@ export const TableSkeleton: Reac t.FC<{ rows?: number; columns?: number; classNa
   </div>;
 );
 
-export const ListSkeleton: Reac t.FC<{ items?: number; className?: string }> = ({
+export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
 
   items = 5,
   className
@@ -171,7 +171,7 @@ export const ListSkeleton: Reac t.FC<{ items?: number; className?: string }> = (
   </div>;
 );
 ;
-export const GridSkeleton: Reac t.FC<{
+export const GridSkeleton: React.FC<{
 
   rows?: number;
   columns?: number;

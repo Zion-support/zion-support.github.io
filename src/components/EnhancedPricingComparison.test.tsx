@@ -2,7 +2,7 @@ import React from 'react',;',';';
     ';';';';
 import {SEO } from '@/components/SEO';
 export default function EnhancedPricingComparison.test() {return (
-    <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-white">
       <SEO title="EnhancedPricingComparison.test - Zion Tech Group" description="Professional EnhancedPricingComparison.test services by Zion Tech Group"  />
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold text-white mb-8">EnhancedPricingComparison.test</h1>

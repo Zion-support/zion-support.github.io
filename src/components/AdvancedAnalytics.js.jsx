@@ -11,7 +11,8 @@ export function AdvancedAnalytics(props: any) {
         topPages: [],
         trafficSources: [],
         deviceTypes: []
-    });
+    }
+    );
     const [timeRange, setTimeRange] = useState('7d');
     const [isLoading, setIsLoading] = useState(true);
 
@@ -44,7 +45,8 @@ export function AdvancedAnalytics(props: any) {
                     {device: 'Mobile', percentage: 35},
                     {device: 'Tablet', percentage: 5}
                 ]
-            });
+            }
+    );
             setIsLoading(false);
         };
         fetchData();
@@ -67,7 +69,7 @@ export function AdvancedAnalytics(props: any) {
             <div className="flex items-center justify-center h-64">
                 <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
             </div>
-        );}
+    );}
 
     return (
         <div className="space-y-6 p-6">
@@ -163,7 +165,7 @@ export function AdvancedAnalytics(props: any) {
                 >
                     <h3 className="text-xl font-semibold text-gray-800 mb-4">
                         Top Pages
-                    </h3>
+                    
                     <div className="space-y-3">
                         {analyticsData.topPages.map((page, index) => (
                             <div key={page.page} className="flex items-center justify-between">
@@ -192,7 +194,7 @@ export function AdvancedAnalytics(props: any) {
                 >
                     <h3 className="text-xl font-semibold text-gray-800 mb-4">
                         Traffic Sources
-                    </h3>
+                    
                     <div className="space-y-3">
                         {analyticsData.trafficSources.map((source, index) => (
                             <div key={source.source} className="flex items-center justify-between">

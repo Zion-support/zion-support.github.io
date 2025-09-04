@@ -11,7 +11,8 @@ export function AccessibilityPanel(props: any) {
         screenReader: false,
         fontSize: 16,
         colorBlindMode: 'normal'
-    });
+    }
+    );
     // Apply accessibility settings to document
     useEffect(() => {
         if (!enabled)

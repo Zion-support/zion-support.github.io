@@ -9,6 +9,6 @@ export default function GlobalSpinner(props: any) {return (
           Professional GlobalSpinner services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

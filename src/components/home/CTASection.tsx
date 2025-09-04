@@ -3,7 +3,7 @@ import { motion  } from 'framer-motion';
 import { Link  } from 'react-router-dom';
 import { ArrowRight, Rocket, MessageCircle, Calendar, Star  } from 'lucide-react';
 
-const CTASection: Reac t.FC = (): JSX.Element => {
+const CTASection: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Rocke t,
@@ -217,7 +217,7 @@ const CTASection: Reac t.FC = (): JSX.Element => {
               <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mx-auto mb-4">
                 <feature.icon className="w-6 h-6 text-white" aria-hidden="true" />
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
+              <h3 className="text-lg font-semibold text-white mb-2">{feature.title}
               <p className="text-zion-slate-light text-sm">{feature.description}</p>
             </motion.div>;
           ))}

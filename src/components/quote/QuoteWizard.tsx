@@ -17,7 +17,7 @@ function StepIndicator(props: any) {
     <div data-testid="step-indicator" className="text-sm text-muted-foreground">
       Step {index + 1} of {WIZARD_STEPS.length}
     </div>
-  );
+    );
 }
 
 export function QuoteWizard(props: any) {

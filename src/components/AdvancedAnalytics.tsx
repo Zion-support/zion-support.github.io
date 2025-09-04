@@ -25,7 +25,8 @@ function AdvancedAnalytics({
     scrolls: 0,
     formSubmissions: 0,
     errors: 0,
-    startTime: Dat e.now () }) ;
+    startTime: Dat e.now () }
+    );
 
   // Generate unique session ID
   useEffect(() => {
@@ -124,7 +125,8 @@ if(enableHeatmap) {
         trackInteraction('scroll', {
           scrollY: windo w.scrollY,
           scrollHeight: documen t.documentElement.scrollHeight
-        }) ;
+        }
+    );
       }, 100) ;
     };
 
@@ -208,8 +210,10 @@ if(enableHeatmap) {
             }
           }) ) ;
         }
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      }
+    );
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }
+    );
 
       return () => lcpObserver.disconnect () } catch(error) {
 
@@ -361,7 +365,7 @@ if(enableHeatmap) {
             <div className="mb-6">"
               <h3 className="text-sm font-medium text-gray-700 mb-3 flex items-center gap-2">"
                 <Zap className="w-4 h-4 text-yellow-500"   />                Performance
-              </h3>"
+              "
               <div className="space-y-2 text-xs">"
                 <div className="flex justify-between">
                   <span>Load Time:</span>"
@@ -384,7 +388,7 @@ if(enableHeatmap) {
 
             {/* Top Pages */}"
             <div className="mb-6">"
-              <h3 className="text-sm font-medium text-gray-700 mb-3">Top Pages</h3>"
+              <h3 className="text-sm font-medium text-gray-700 mb-3">Top Pages"
               <div className="space-y-2">
                 {analyticsData.topPages.map((page, index) => ("
                   <div key={index} className="flex justify-between items-center text-xs">"
@@ -397,7 +401,7 @@ if(enableHeatmap) {
 
             {/* Device Distribution */}"
             <div className="mb-6">"
-              <h3 className="text-sm font-medium text-gray-700 mb-3">Device Distribution</h3>"
+              <h3 className="text-sm font-medium text-gray-700 mb-3">Device Distribution"
               <div className="space-y-2">
                 {analyticsData.userAgents.map((device, index) => ("
                   <div key={index} className="flex items-center gap-2 text-xs">'"
@@ -428,7 +432,8 @@ if(enableHeatmap) {
       </AnimatePresence>
     </>
   )}}}}}}}}}}}}}'"`
-;,"});,})";
+;,"}
+    );,})";
 
 </motion>
 </motion>

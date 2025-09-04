@@ -3,7 +3,7 @@ import { Link  } from 'react-router-dom';
 export default function Page(props: any) {
  from 'lucide-react';
 
-const FloatingCTA: Reac t.FC = () : JSX.Element => {;
+const FloatingCTA: React.FC = () : JSX.Element => {;
   const [isOpen, setIsOpen] = useState<any>(false);
   const [isVisible, setIsVisible] = useState<any>(false);
 

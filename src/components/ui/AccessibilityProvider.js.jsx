@@ -108,9 +108,10 @@ export const AccessibilityProvider = (props: any) => {
 // Accessibility toolbar component
 export const AccessibilityToolbar = (props: any) => {
     const { isHighContrast, isReducedMotion, isLargeText, toggleHighContrast, toggleReducedMotion, toggleLargeText, } = useAccessibility();
-    return (<div className="fixed bottom-4 left-4 z-50 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-cyan/20 rounded-2xl p-4 shadow-2xl shadow-zion-cyan/20">
+    return (
+        <div className="fixed bottom-4 left-4 z-50 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-cyan/20 rounded-2xl p-4 shadow-2xl shadow-zion-cyan/20">
       <div className="space-y-3">
-        <h3 className="text-white text-sm font-semibold mb-3">Accessibility</h3>
+        <h3 className="text-white text-sm font-semibold mb-3">Accessibility
         
         <button onClick={toggleHighContrast} className={`w-full px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${isHighContrast
             ? 'bg-zion-cyan text-zion-blue-dark'

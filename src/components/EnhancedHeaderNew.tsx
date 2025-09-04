@@ -298,7 +298,7 @@ const EnhancedHeaderNew: React.FC = (props: any) => {
                         <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center`}>
                           <category.icon className="w-5 h-5 text-white" />
                         </div>
-                        <h3 className="font-semibold text-gray-900">{category.title}</h3>
+                        <h3 className="font-semibold text-gray-900">{category.title}
                       </div>
                       <ul className="space-y-2">
                         {category.services.map((service, serviceIndex) => (
@@ -363,7 +363,7 @@ const EnhancedHeaderNew: React.FC = (props: any) => {
                         </div>
                         <h3 className="text-xl font-semibold text-gray-900 group-hover:text-cyan-600">
                           {industry.name} Solutions
-                        </h3>
+                        
                       </div>
                       <p className="text-gray-600">
                         Specialized technology solutions designed for the {industry.name.toLowerCase()} industry 

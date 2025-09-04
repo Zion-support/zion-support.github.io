@@ -17,4 +17,4 @@ export const MobileLaunchHero = (props: any) => {return (
         </div>
       </div>
     </div>
-  );};
+    );};

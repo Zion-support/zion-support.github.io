@@ -9,6 +9,6 @@ export default function SEO.test() {return (
           Professional SEO.test services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

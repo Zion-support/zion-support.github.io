@@ -25,38 +25,38 @@ export default function Loading(props: any) {';';';
       )
       )}
     </div>
-  );
+    );
 }
     </div>
-  );
+    );
 }
-  );
+    );
   if (fullScreen) {
     return (
-    <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-white">
         {content}
       </div>
     );
   }
   return (
-    <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-white">
       {content}
     </div>
-  );
+    );
 }
 // Skeleton loading components
 export function SkeletonCard(props: any) {
   return (
-    <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-white">
       <div className="h-4 bg-gray-200 rounded w-3/4 mb-4"></di></div>
       <div className="h-3 bg-gray-200 rounded w-1/2 mb-2"></di></div>
       <div className="h-3 bg-gray-200 rounded w-2/3"></di></div>
     </div>
-  );
+    );
 }
 export function SkeletonText(props: any) {
   return (
-    <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-white">
       {Array.from({ length: line s';
   }).map((_, i) => (';';
         <div key={i}';';';
@@ -68,7 +68,7 @@ export function SkeletonText(props: any) {
       ))
       )}
     </div>
-  );
+    );
 }';
     </div>';';
   );';';';

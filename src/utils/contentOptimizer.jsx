@@ -17,7 +17,8 @@ export class ContentOptimizer {
             headingCount,
             imageCount,
             linkCount
-        });
+        }
+    );
         const suggestions = this.generateSuggestions(issues, page);
 
         return {page,
@@ -67,7 +68,8 @@ export class ContentOptimizer {
             } else {// Count vowel groups
                 const vowelGroups = word.match(/[aeiouy]+/g);
                 syllableCount += vowelGroups ? vowelGroups.length : 1;}
-        });
+        }
+    );
 
         return syllableCount;
     }
@@ -109,7 +111,8 @@ export class ContentOptimizer {
                 type: 'word_count',
                 severity: 'medium',
                 message: `Content is too short. Aim for at least ${this.MIN_WORD_COUNT} words.`
-            });
+            }
+    );
         }
 
         if (metrics.headingCount < this.MIN_HEADING_COUNT) {
@@ -117,7 +120,8 @@ export class ContentOptimizer {
                 type: 'heading_count',
                 severity: 'low',
                 message: `Add more headings to improve content structure.`
-            });
+            }
+    );
         }
 
         if (metrics.imageCount < this.MIN_IMAGE_COUNT) {
@@ -125,7 +129,8 @@ export class ContentOptimizer {
                 type: 'image_count',
                 severity: 'low',
                 message: `Consider adding images to make content more engaging.`
-            });
+            }
+    );
         }
 
         if (metrics.linkCount < this.MIN_LINK_COUNT) {
@@ -133,7 +138,8 @@ export class ContentOptimizer {
                 type: 'link_count',
                 severity: 'low',
                 message: `Add more internal and external links for better SEO.`
-            });
+            }
+    );
         }
 
         return issues;
@@ -157,7 +163,8 @@ export class ContentOptimizer {
                     suggestions.push('Include links to related pages on your site and authoritative external sources.');
                     break;
             }
-        });
+        }
+    );
 
         return suggestions;
     }

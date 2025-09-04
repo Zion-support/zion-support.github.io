@@ -43,7 +43,8 @@ export function SuggestedTalents(props: any) {
         title: "Error",
         description: "Failed to load suggested talents.Please try again later.",
         variant: "destructive",
-      });
+      }
+    );
     } finally {
       setIsLoading(false);
     }
@@ -54,7 +55,8 @@ export function SuggestedTalents(props: any) {
     toast({
       title: "View Profile",
       description: `Navigating to talent profile: ${talentId}`,
-    });
+    }
+    );
   };
 
   const handleInvite = (props: any) => {
@@ -62,14 +64,16 @@ export function SuggestedTalents(props: any) {
     toast({
       title: "Invite Talent",
       description: `Inviting talent: ${talentId}`,
-    });
+    }
+    );
   };
 
   const handleRefresh = (props: any) => {
     setIsProcessing(true);
     fetchSuggestedTalents().finally(() => {
       setIsProcessing(false);
-    });
+    }
+    );
   };
 
   useEffect(() => {
@@ -97,7 +101,8 @@ export function SuggestedTalents(props: any) {
       matchPercent: talen t.match_score || 85,
       skills: talen t.talent_profile?.skills || [],
     };
-  });
+  }
+    );
 
   return (<Card className="border-zion-blue-light bg-zion-blue">
       <CardHeader>

@@ -97,7 +97,8 @@ export function AIChatAssistant(props: any) {
     const clearChat = (props: any) => {setMessages([messages[0]]); // Keep welcome message};
     if (!enabled)
         return null;
-    return (<div className={`fixed bottom-4 right-4 z-40 ${className}`}>
+    return (
+        <div className={`fixed bottom-4 right-4 z-40 ${className}`}>
       {/* Chat Toggle Button */}
       <motion.button onClick={() => setIsOpen(!isOpen)} className="p-3 bg-zion-purple hover:bg-zion-purple-dark text-white rounded-full shadow-lg transition-all duration-300" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} aria-label="AI Chat Assistant">
         <MessageSquare className="w-6 h-6" />
@@ -134,7 +135,7 @@ export function AIChatAssistant(props: any) {
                     <Bot className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold">Zion AI Assistant</h3>
+                    <h3 className="text-white font-semibold">Zion AI Assistant
                     <div className="flex items-center gap-2">
                       <div className={`w-2 h-2 rounded-full ${isTyping ? 'bg-zion-cyan animate-pulse' : 'bg-green-400'}`} />
                       <span className="text-zinc-400 text-xs">

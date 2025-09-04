@@ -91,7 +91,8 @@ export function InteractiveTestimonials(props: any) {
         newSet.delete(testimonialId);
       } else {newSet.add(testimonialId);}
       return newSet;
-    });
+    }
+    );
   };
   const renderStars = rating => {
 

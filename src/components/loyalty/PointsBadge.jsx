@@ -17,7 +17,8 @@ export function PointsBadge(props: any) {
             acc.post += e.delta;
         if (e.reason === 'referral')
             acc.referral += e.delta;
-        return acc}, {purchase: 0, post: 0, referral: 0});
+        return acc}, {purchase: 0, post: 0, referral: 0}
+    );
     const handleLogout = async () => {
         if (signOut) {
             await signOut()}

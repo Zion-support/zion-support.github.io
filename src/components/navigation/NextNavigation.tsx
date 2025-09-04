@@ -140,7 +140,7 @@ const NextNavigation = (props: any) => {
                       onClick={() => toggleDropdown(item.name)
       )}
     </div>
-  );
+    );
 }
                       className={`flex items-center space-x-1 text-gray-300 hover: tex t-cyan-300 transition-colors duration-200 py-2`';
                     >';';
@@ -167,7 +167,7 @@ const NextNavigation = (props: any) => {
                                 onClick={() => setActiveDropdown(null)
       )}
     </div>
-  );
+    );
 }
                                 className="flex items-start space-x-3 p-3 rounded-lg hover: b g-gray-800/50 transition-colors duration-200 group"
                               >
@@ -186,14 +186,14 @@ const NextNavigation = (props: any) => {
                             ))
       )}
     </div>
-  );
+    );
 }
                           </div>
                         </motion.div>
                       )
       )}
     </div>
-  );
+    );
 }
                     </AnimatePresence>
                   </div>';
@@ -208,13 +208,13 @@ const NextNavigation = (props: any) => {
                 )
       )}
     </div>
-  );
+    );
 }
               </div>
             ))
       )}
     </div>
-  );
+    );
 }
           </div>
           {/* CTA Button */}
@@ -231,7 +231,7 @@ const NextNavigation = (props: any) => {
             onClick={() => setIsOpen(!isOpen)
       )}
     </div>
-  );
+    );
 }
             className="lg: hidden p-2 rounded-lg text-gray-300 hover: tex t-cyan-300 hover: b g-gray-800/50 transition-colors duration-200"
             aria-label="Toggle mobile menu"
@@ -255,7 +255,7 @@ const NextNavigation = (props: any) => {
               <div className="pb-4 border-b border-gray-700">
                 <h3 className="text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wide">
                   Contact Information
-                </h3>
+                
                 <div className="space-y-2">
                   {contactInfo.map((contact, index) => (
                     <a
@@ -269,7 +269,7 @@ const NextNavigation = (props: any) => {
                   ))
       )}
     </div>
-  );
+    );
 }
                 </div>
               </div>
@@ -283,7 +283,7 @@ const NextNavigation = (props: any) => {
                           onClick={() => toggleDropdown(item.name)
       )}
     </div>
-  );
+    );
 }
                           className={`flex items-center justify-between w-full text-left px-3 py-2 text-gray-300 hover: tex t-cyan-300 hover: b g-gray-800/50 rounded-lg transition-colors duration-200`';
                         >';';
@@ -315,13 +315,13 @@ const NextNavigation = (props: any) => {
                               ))
       )}
     </div>
-  );
+    );
 }
                             </motion.div>
                           )
       )}
     </div>
-  );
+    );
 }
                         </AnimatePresence>
                       </div>
@@ -340,13 +340,13 @@ const NextNavigation = (props: any) => {
                     )
       )}
     </div>
-  );
+    );
 }
                   </div>
                 ))
       )}
     </div>
-  );
+    );
 }
               </div>
               {/* Mobile CTA */}
@@ -364,7 +364,7 @@ const NextNavigation = (props: any) => {
         )
       )}
     </div>
-  );
+    );
 }
       </AnimatePresence>
     </nav>';

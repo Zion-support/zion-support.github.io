@@ -8,7 +8,7 @@ export default function Page(props: any) {
   placeholder?: string;
   showFilters?: boolean}
 
-export const SearchAndFilterSystem: Reac t.FC<SearchAndFilterSystemProps> = ({
+export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
 
   data,
   onResultsChange,
@@ -30,7 +30,8 @@ export const SearchAndFilterSystem: Reac t.FC<SearchAndFilterSystemProps> = ({
         results = results.sort((a, b) => {
 
           if(!a.rating || !b.rating) return 0;
-          return b.rating - a.rating});
+          return b.rating - a.rating}
+    );
         break;
       case 'name':        results = results.sort((a, b) => a.title.localeCompare(b.title) ) ;
         break;
@@ -220,7 +221,7 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
             className="mb-6 overflow-hidden"
 "
             <div className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">"
-              <h3 className="text-sm font-medium text-white mb-4">Advanced Filters</h3>
+              <h3 className="text-sm font-medium text-white mb-4">Advanced Filters
 "
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-4">
                 {/* Type Filters */}
@@ -315,7 +316,7 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                 <div className="flex items-start justify-between mb-2">"
                   <h3 className="text-lg font-semibold text-white group-hover: tex t-zion-cyan transition-colors">
                     {result.title}
-                  </h3>"
+                  "
                   <div className="flex items-center gap-2">
                     {result.rating && ("
                       <div className="flex items-center gap-1 text-yellow-400">"
@@ -360,7 +361,7 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
           className="text-center py-12"
 "
           <Search className="w-16 h-16 text-zinc-600 mx-auto mb-4"   />"
-          <h3 className="text-xl font-medium text-zinc-300 mb-2">No results found</h3>"          <p className="text-zinc-400 mb-4">
+          <h3 className="text-xl font-medium text-zinc-300 mb-2">No results found"          <p className="text-zinc-400 mb-4">
             Try adjusting your search terms or filters
           </p>
           <button

@@ -101,7 +101,7 @@ export function CategoriesSection(props: any) {
                       {category.icon}
                     </div>
                   </div>"
-                  <h3 className="text-xl font-bold text-white mb-3">{category.title}</h3>"
+                  <h3 className="text-xl font-bold text-white mb-3">{category.title}"
                   <p className="text-gray-300 text-sm">{category.description}</p>
                 </div>
               </Link>
@@ -114,7 +114,7 @@ export function CategoriesSection(props: any) {
           viewport={{ once: tru e }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >"
-          <h3 className="text-center text-xl font-bold text-white mb-6">Featured Services</h3>"
+          <h3 className="text-center text-xl font-bold text-white mb-6">Featured Services"
           <div className="flex flex-wrap justify-center gap-4">
             {specialServices.map((service) => (
               <Link

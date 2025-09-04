@@ -10,7 +10,7 @@ interface EmptyStateProps {
 
 }
 
-const EmptyState: Reac t.FC<EmptyStateProps> = ({
+const EmptyState: React.FC<EmptyStateProps> = ({
   title = 'No data available',
   description = 'There are no items to display at the moment.',
   icon,
@@ -27,7 +27,7 @@ const EmptyState: Reac t.FC<EmptyStateProps> = ({
       
       <h3 className="text-lg font-medium text-gray-900 mb-2">
         {title}
-      </h3>
+      
       
       {description && (
         <p className="text-sm text-gray-500 mb-6 max-w-md mx-auto">
@@ -41,11 +41,11 @@ const EmptyState: Reac t.FC<EmptyStateProps> = ({
         </div>
       )}
     </div>
-  );
+    );
 };
 
 // Default empty state icon component
-export const EmptyStateIcon: Reac t.FC<{ className?: string }> = ({ className = '' }) => (
+export const EmptyStateIcon: React.FC<{ className?: string }> = ({ className = '' }) => (
   <svg
     className={`h-full w-full ${className}`}
     fill="none"

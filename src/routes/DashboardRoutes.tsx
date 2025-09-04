@@ -13,7 +13,7 @@ const ProjectMilestones = lazy(() => import('../pages/ProjectMilestones'));
 const ProjectDetails = lazy(() => import('../pages/ProjectDetails'));
 const ProjectRoom = lazy(() => import('../pages/ProjectRoom'));
 
-const DashboardRoutes: Reac t.FC = () => {
+const DashboardRoutes: React.FC = () => {
   return (<Suspense fallback={<LoadingSpinner  />}>
       <Routes>
         <Route path="/dashboard" element={

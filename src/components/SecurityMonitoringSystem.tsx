@@ -295,7 +295,7 @@ interface SecurityMonitoringSystemProps {
                     <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-red-600 mx-auto mb-4"></div>"
                     <h3 className="text-xl font-semibold text-gray-900 dark: tex t-white mb-2">
                       Security scan in progress...
-                    </h3>"
+                    "
                     <p className="text-gray-600 dark: tex t-gray-400">
                       Analyzing systems for threats and vulnerabilities
                     </p>
@@ -307,7 +307,7 @@ interface SecurityMonitoringSystemProps {
                       <div className="flex items-center justify-between mb-4">"
                         <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">
                           Overall Security Score
-                        </h3>"
+                        "
                         <Shield className="w-6 h-6 text-red-600"   />                      </div>
 "
                       <div className="flex items-center space-x-6">"
@@ -393,7 +393,7 @@ interface SecurityMonitoringSystemProps {
                         <div className="flex items-center justify-between">"
                           <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">
                             Active Security Threats
-                          </h3>
+                          
                           <button
                             onClick={() => setShowAdvanced(!showAdvanced)}"
                             className="px-3 py-1 text-sm bg-red-600 text-white rounded-md hover: b g-red-700 transition-colors"
@@ -479,7 +479,7 @@ interface SecurityMonitoringSystemProps {
                       <div className="space-y-4">"
                         <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">
                           Vulnerability Assessment
-                        </h3>
+                        
 "
                         <div className="grid gap-4">
                           {vulnerabilities.map((vuln, index) => (
@@ -535,7 +535,7 @@ interface SecurityMonitoringSystemProps {
                       <div className="space-y-4">"
                         <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">
                           Compliance Status
-                        </h3>
+                        
 "
                         <div className="grid gap-4">
                           {complianceStatus.map((compliance, index) => (
@@ -622,7 +622,7 @@ interface SecurityMonitoringSystemProps {
                   <div className="text-center py-12">"
                     <Shield className="w-16 h-16 text-red-600 mx-auto mb-4"   />"                    <h3 className="text-xl font-semibold text-gray-900 dark: tex t-white mb-2">
                       Ready to monitor security?
-                    </h3>"
+                    "
                     <p className="text-gray-600 dark: tex t-gray-400 mb-6">
                       Click the scan button to start security monitoring
                     </p>

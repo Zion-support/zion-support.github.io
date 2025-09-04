@@ -26,7 +26,8 @@ export function EnhancedCard(props: any) {
     </Component>)}
 // Enhanced Card Header component
 export function EnhancedCardFooter(props: any) {
-    return (<div className = {
+    return (
+        <div className = {
   cn('p-6 pt-0',
   className)
 

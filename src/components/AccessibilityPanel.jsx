@@ -10,7 +10,8 @@ export const AccessibilityPanel = (props: any) => {
         screenReader: false,
         keyboardNavigation: false,
         focusIndicator: true
-    });
+    }
+    );
     
     const [accessibilityScore, setAccessibilityScore] = useState(85);
     const [activeTab, setActiveTab] = useState('general');

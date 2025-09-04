@@ -17,7 +17,8 @@ Object.defineProperty(window, 'matchMedia', {
     removeEventListener: global.global.global.jest.fn(),
     dispatchEvent: global.global.global.jest.fn(),
   })),
-});
+}
+    );
 
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {

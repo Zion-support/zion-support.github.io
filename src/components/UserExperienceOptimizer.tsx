@@ -219,7 +219,7 @@ export function UserExperienceOptimizer(props: any) {
                     <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-green-600 mx-auto mb-4"></div>"
                     <h3 className="text-xl font-semibold text-gray-900 dark: tex t-white mb-2">
                       Analyzing user experience...
-                    </h3>"
+                    "
                     <p className="text-gray-600 dark: tex t-gray-400">
                       Gathering metrics and generating optimization suggestions
                     </p>
@@ -231,7 +231,7 @@ export function UserExperienceOptimizer(props: any) {
                       <div className="flex items-center justify-between mb-4">"
                         <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">
                           Overall UX Score
-                        </h3>"
+                        "
                         <Users className="w-6 h-6 text-green-600"   />                      </div>
 "
                       <div className="flex items-center space-x-6">"
@@ -317,7 +317,7 @@ export function UserExperienceOptimizer(props: any) {
                         <div className="flex items-center justify-between">"
                           <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">
                             Key UX Metrics
-                          </h3>"
+                          "
                           <div className="flex items-center space-x-2">
                             <select
                               value={selectedTimeframe}
@@ -385,7 +385,7 @@ export function UserExperienceOptimizer(props: any) {
                         <div className="flex items-center justify-between">"
                           <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">
                             User Behavior Analysis
-                          </h3>
+                          
                           <button
                             onClick={() => setShowAdvanced(!showAdvanced)}"
                             className="px-3 py-1 text-sm bg-green-600 text-white rounded-md hover: b g-green-700 transition-colors"
@@ -456,7 +456,7 @@ export function UserExperienceOptimizer(props: any) {
                       <div className="space-y-4">"
                         <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">
                           Optimization Suggestions
-                        </h3>
+                        
 "
                         <div className="grid gap-4">
                           {optimizationSuggestions
@@ -553,7 +553,7 @@ export function UserExperienceOptimizer(props: any) {
                   <div className="text-center py-12">"
                     <Users className="w-16 h-16 text-green-600 mx-auto mb-4"   />"                    <h3 className="text-xl font-semibold text-gray-900 dark: tex t-white mb-2">
                       Ready to optimize user experience?
-                    </h3>"
+                    "
                     <p className="text-gray-600 dark: tex t-gray-400 mb-6">
                       Click the analyze button to start UX optimization
                     </p>

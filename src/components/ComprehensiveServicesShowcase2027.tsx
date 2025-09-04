@@ -59,17 +59,17 @@ const features = ["
           <div className="grid grid-cols-1 md: gri d-cols-3 gap-6 text-center">"
             <div className="flex flex-col items-center">"
               <Phone className="h-8 w-8 text-zion-cyan mb-2"  />"
-              <h3 className="text-lg font-semibold text-white mb-1">Call Us</h3>"
+              <h3 className="text-lg font-semibold text-white mb-1">Call Us"
               <p className="text-zion-slate-light">{contactInfo.mobile}</p>
             </div>"
             <div className="flex flex-col items-center">"
               <Mail className="h-8 w-8 text-zion-cyan mb-2"  />"
-              <h3 className="text-lg font-semibold text-white mb-1">Email Us</h3>"
+              <h3 className="text-lg font-semibold text-white mb-1">Email Us"
               <p className="text-zion-slate-light">{contactInfo.email}</p>
             </div>"
             <div className="flex flex-col items-center">"
               <MapPin className="h-8 w-8 text-zion-cyan mb-2"  />"
-              <h3 className="text-lg font-semibold text-white mb-1">Visit Us</h3>"              <p className="text-zion-slate-light text-sm">{contactInfo.address}</p>
+              <h3 className="text-lg font-semibold text-white mb-1">Visit Us"              <p className="text-zion-slate-light text-sm">{contactInfo.address}</p>
             </div>
           </div>
         </div>
@@ -97,7 +97,7 @@ const features = ["
 
         {/* Featured Services */}"
         <div className="mb-20">"
-          <h3 className="text-3xl font-bold text-white mb-8 text-center">Featured Services</h3>"
+          <h3 className="text-3xl font-bold text-white mb-8 text-center">Featured Services"
           <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-6">
             {featuredServices.map((service)  => ("
               <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover: borde r-zion-purple/50 transition-all duration-300 hover: scal e-105">"
@@ -152,7 +152,7 @@ const features = ["
         <div>"
           <h3 className="text-3xl font-bold text-white mb-8 text-center">
             All Services({filteredServices.length})
-          </h3>"
+          "
           <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-6">
             {filteredServices.map((service)  => ("
               <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover: borde r-zion-purple/50 transition-all duration-300 hover: scal e-105">
@@ -239,7 +239,7 @@ const features = ["
 
         {/* Benefits Section */}"
         <div className="mt-20">"
-          <h3 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Zion Tech Group?</h3>"
+          <h3 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Zion Tech Group?"
           <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-6">
             {benefits.map((benefit, index)  => ("
               <div key={index} className="text-center">"
@@ -258,7 +258,7 @@ const features = ["
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">"
             <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
-            </h3>"
+            "
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
               Join thousands of businesses already using our innovative solutions to drive growth,
               improve efficiency, and stay ahead of the competition.</p>"

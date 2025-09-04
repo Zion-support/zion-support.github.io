@@ -26,7 +26,8 @@ class ErrorBoundary extends Component<Props, State> {
     this.setState({
       error,
       errorInfo,
-    });
+    }
+    );
 
     // Log error to monitoring service
     if (process.env.NODE_ENV === 'production') {
@@ -36,7 +37,8 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined }
+    );
   }
 
   private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
@@ -61,7 +63,8 @@ class ErrorBoundary extends Component<Props, State> {
       //   method: 'POST',
       //   headers: { 'Content-Type': 'application/json' },
       //   body: JSON.stringify(errorData)
-      // });
+      // }
+    );
   } catch (logError) {
       console.error('Failed to log error:', logError);
     }
@@ -73,7 +76,8 @@ class ErrorBoundary extends Component<Props, State> {
       error: null,
       errorInfo: null,
       showStack: false
-    });
+    }
+    );
   };
 
   private handleGoHome = () => {
@@ -113,7 +117,8 @@ User Agent: ${navigator.userAgent}
         textArea.select();
         document.execCommand('copy');
         document.body.removeChild(textArea);
-      });
+      }
+    );
     }
   };
 
@@ -173,7 +178,7 @@ User Agent: ${navigator.userAgent}
             )}
           </div>
         </div>
-      );
+    );
     }
 
     return this.props.children;

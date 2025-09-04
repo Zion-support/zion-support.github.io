@@ -26,7 +26,8 @@ export default function Page(props: any) {;
     window.scrollTo({
 
       top: 0,
-      behavior: 'smooth'});
+      behavior: 'smooth'}
+    );
   };
 
   return ()

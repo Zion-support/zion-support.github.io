@@ -9,6 +9,6 @@ export default function EnhancedLoading.test() {return (
           Professional EnhancedLoading.test services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

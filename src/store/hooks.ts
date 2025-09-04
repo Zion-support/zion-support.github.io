@@ -1,9 +1,9 @@
 import { useDispatch, useSelector  } from 'react-redux'; ; export const useAppDispatch = () => useDispatch(); export const useAppSelector = useSelector; ;
 export const useAppDispatch = () => useDispatch();
 export const useAppSelector = useSelector;"
-const Hooks: Reac t.FC = () => {
+const Hooks: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-white">
       <SEO title="Hooks - Zion Tech Group
         description=Professional Hooks services by Zion Tech Group"
         keywords="hooks, technology, services

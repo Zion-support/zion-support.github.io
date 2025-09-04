@@ -9,6 +9,6 @@ export default function ProductActions(props: any) {return (
           Professional ProductActions services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

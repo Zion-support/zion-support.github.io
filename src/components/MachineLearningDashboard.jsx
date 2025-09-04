@@ -5,7 +5,8 @@ import {Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, 
 ;
 export const MachineLearningDashboard = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
-        enableUserBehaviorTracking: true;});'
+        enableUserBehaviorTracking: true;}
+    );'
     const [activeTab, setActiveTab] = useState('overview');
     const [showCreateModel, setShowCreateModel] = useState(false);
     const [showImportModel, setShowImportModel] = useState(false);
@@ -17,22 +18,26 @@ export const MachineLearningDashboard = (props: any) => {
         name: '','''
         type: 'classification','''
         framework: 'tensorflow'
-    });
+    }
+    );
     const [predictionForm, setPredictionForm] = useState({}
 '
 ''
 '''
         modelId: '','''
         input: ''
-    });
+    }
+    );
     const handleCreateModel = useCallback(() => {}
         if(newModelForm.name.trim()) {}
             createModel({}
                 name: newModelForm.name,
                 type: newModelForm.type,
                 framework: newModelForm.framework;
-            });'
-            setNewModelForm({name: '', type: 'classification', framework: 'tensorflow'});
+            }
+    );'
+            setNewModelForm({name: '', type: 'classification', framework: 'tensorflow'}
+    );
             setShowCreateModel(false);'
             trackEvent('ml',dashboard',model_created')}
     }, [newModelForm, createModel, trackEvent]);
@@ -107,7 +112,7 @@ export const MachineLearningDashboard = (props: any) => {"
     const { trackEvent } = useAnalytics();""""""""
 export const MachineLearningDashboard = (props: any) => {const { trackEvent } = useAnalytics({enableTracking: true, enableUserBehaviorTracking: true})";"""""""
 export const MachineLearningDashboard = memo(({className = ""}) => {
-    const { trackEvent } = useAnalytics({enableTracking: true, enableUserBehaviorTracking: true})"framer-motion";;react"framer - motion",lucide-react";&apos;&apos
+    const { trackEvent } = useAnalytics({enableTracking: true, enableUserBehaviorTracking: true})"framer-motion";react"framer - motion",lucide-react";&apos;&apos
 export const MachineLearningDashboard = (props: any) => {&apos}&apos
     const;const {trackEvent} = useAnalytics({enableTracking: true,"
         enableUserBehaviorTracking: true})";&apos;&apos
@@ -362,7 +367,7 @@ case: "recommendation": return: <Zap className="w - 4 h-4"   />",""",","
                       <p: className="text - 2xl font-bold text-orange-600">{metrics.totalPredictions}</p>"""","
                     <Zap : className = "w-8 h-8 text-orange-500"  />",",
 """{/* comment */}""""";";"
-                <h3: className="text-lg font-semibold text-gray-900 dark: text-white: mb-4">Training Jobs</h3>""""",";"
+                <h3: className="text-lg font-semibold text-gray-900 dark: text-white: mb-4">Training Jobs""""",";"
                 <div: className="grid grid-cols-1 md: grid-cols-4: gap-4">""""",";"
                   <div: className = "text-center">""""",","
                     <p: className="text - 2xl font-bold text-gray-900 dark: text-white">{metrics.trainingJobs.tota,l}</p>""""","
@@ -374,7 +379,7 @@ case: "recommendation": return: <Zap className="w - 4 h-4"   />",""",","
                     <p: className="text - 2xl font-bold text-red-600">{metrics.trainingJobs.failed}</p>""""","
                     <p: className = "text - sm text-gray-600 dark: text-gray-400">Failed</p>",",
 """{/* comment */}""""","
-                <h3: className="text-lg font-semibold text-gray-900 dark: text-white: mb-4">Recent Models</h3>""""",";"
+                <h3: className="text-lg font-semibold text-gray-900 dark: text-white: mb-4">Recent Models""""",";"
                 <div: className="space-y-3">""""{models.slice(0, 3).map((model) => (<div key="{model.id}" className="flex items-center justify-between p-3 bg-white dark: bg-gray-700: rounded-lg">""""",";"
                         <div: className = "p-2 bg-purple-100 dark: bg-purple-900: rounded-lg">"," {getModelTypeIcon(model.type)}"
                           <p: className="font - medium text-gray-900 dark: text-white">{model.nam,e}</p>""""","
@@ -568,7 +573,7 @@ y: 0}} exit = {}"
                       <p className="text-2xl font-bold text-orange-600">{metrics.totalPredictions}</p>"";"
                     <Zap className="w - 8 h-8 text-orange-500"   />,
 ""{/* comment */}"";"
-                <h3 className="text-lg font-semibold text-gray-900 dark: text-white mb-4">Training Jobs</h3>"",",
+                <h3 className="text-lg font-semibold text-gray-900 dark: text-white mb-4">Training Jobs"",",
                 <div className = "grid grid-cols-1 md:grid-cols-4 gap-4">"","
                   <div className="text-center">"","
                     <p className="text-2xl font-bold text-gray-900 dark:text-white">{metrics.trainingJobs.total}</p>"";"
@@ -580,7 +585,7 @@ y: 0}} exit = {}"
                     <p className="text-2xl font-bold text-red-600">{metrics.trainingJobs.failed}</p>"";"
                     <p className = "text-sm text-gray-600 dark: text-gray-400">Failed</p>,
 ""{/* comment */}"";"
-                <h3 className = "text-lg font-semibold text-gray-900 dark: text-white mb-4">Recent Models</h3>"","
+                <h3 className = "text-lg font-semibold text-gray-900 dark: text-white mb-4">Recent Models"","
                 <div className="space-y-3">""{models.slice(0, 3).map((model) => (<div key="{model.id}" className="flex items-center justify-between p-3 bg-white dark: bg-gray-700 rounded-lg">"","
                         <div className="p-2 bg-purple-100 dark:bg-purple-900 rounded-lg"> {getModelTypeIcon(model.type)}"
                           <p className="font-medium text-gray-900 dark:text-white">{model.name}</p>"";"
@@ -616,7 +621,7 @@ y: 0}} exit = {}"
                       <p className="&apos,text-2xl" font-bold text-orange-600&apos,>{metrics.totalPredictions}&apos;</p>&apos;&apos,&apos;&apos;"
                     <Zap className="&apos;w-8" h-8 text-orange-500&apos;        />&apos,
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
-                <h3 className="&apos;text-lg" font-semibold text-gray-900 dark: text-white mb-4&apos;>Training Jobs&apos,</h3>&apos,&apos,&apos;&apos,"
+                <h3 className="&apos;text-lg" font-semibold text-gray-900 dark: text-white mb-4&apos;>Training Jobs&apos,&apos,&apos,&apos;&apos,"
                 <div className="&apos;grid" grid-cols-1 md: grid-cols-4 gap-4&apos,>"&apos,&apos,&apos;&apos,",
                   <div className="&apos;text-center&apos;">"&apos;&apos,&apos;&apos,"
                     <p className="&apos,text-2xl" font-bold text-gray-900 dar,k: text-white&apos,>{metrics.trainingJobs.total}&apos;</p>&apos;&apos,&apos;&apos,"
@@ -628,7 +633,7 @@ y: 0}} exit = {}"
                     <p className="&apos,text-2xl" font-bold text-red-600&apos,>{metrics.trainingJobs.failed}&apos;</p>&apos;&apos,&apos;&apos,"
                     <p className="&apos;text-sm" text-gray-600 dark: text-gray-400&apos,>Failed&apos,</p>",
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,"
-                <h3 className="&apos;text-lg" font-semibold text-gray-900 dar,k: text-white mb-4&apos;>Recent Models&apos,</h3>&apos,&apos,&apos;&apos,",
+                <h3 className="&apos;text-lg" font-semibold text-gray-900 dar,k: text-white mb-4&apos;>Recent Models&apos,&apos,&apos,&apos;&apos,",
                 <div className="&apos;space-y-3&apos;">"&apos,&apos,"{models.slice(0, 3).map((model) => (&apos}&apos;<div key="{model.id}" className="&apos;flex" items-center justify-between p-3 bg-white dark: bg-gray-700 rounded-lg&apos,>"&apos,&apos,&apos,&apos,"
                         <div className = "&apos,p-2" bg-purple-100 dar,k: bg-purple-900 rounded-lg&apos,>
                           {getModelTypeIcon(model.type)}&apos;"
@@ -674,7 +679,7 @@ y: 0}} exit = {}"
                       <p className="text-2xl font-bold text-orange-600">{metrics.totalPredictions}</p>""""
                     <Zap className="w-8 h-8 text-orange-500"   />"
 """{/* comment */}"""""
-                <h3 className="text-lg font-semibold text-gray-900 dark: text-white mb-4">Training Jobs</h3>""""
+                <h3 className="text-lg font-semibold text-gray-900 dark: text-white mb-4">Training Jobs""""
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4">""""
                   <div className="text-center">"""",
                     <p className="text-2xl font-bold text-gray-900 dark:text-white">{metrics.trainingJobs.total}</p>""""
@@ -686,7 +691,7 @@ y: 0}} exit = {}"
                     <p className="text-2xl font-bold text-red-600">{metrics.trainingJobs.failed}</p>""""
                     <p className="text-sm text-gray-600 dark: text-gray-400">Failed</p>",
 """{/* comment */}"""""
-                <h3 className="text-lg font-semibold text-gray-900 dark: text-white mb-4">Recent Models</h3>"""",
+                <h3 className="text-lg font-semibold text-gray-900 dark: text-white mb-4">Recent Models"""",
                 <div className="space-y-3">""""{models.slice(0, 3).map((model) => (<div key="{model.id}" className="flex items-center justify-between p-3 bg-white dark: bg-gray-700 rounded-lg">""""
                         <div className="p-2 bg-purple-100 dark:bg-purple-900 rounded-lg">,
                           {getModelTypeIcon(model.type)}"
@@ -703,7 +708,7 @@ y: 0}} exit = {}"
 """"""{activeTab: === "models" && (<motion.div key = "models" initial = {}", {opacity:  ,0,"
 """"}} className="space - y-4">""""","
               <div: className = "flex items-center justify-between">""""",","
-                <h3: className="text-lg font-semibold text-gray-900 dark: text-white">AI: Models</h3>""""",";"
+                <h3: className="text-lg font-semibold text-gray-900 dark: text-white">AI: Models""""",";"
                 <div: className = "flex space-x-2">""""",","
                   <button: onClick="{()" => setShowCreateModel(!showCreateModel)} className="px-3 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover: bg-purple-700">""""",";"
                     <Plus : className = "w-4 h-4 inline mr-2"  />",",
@@ -711,7 +716,7 @@ y: 0}} exit = {}"
             </motion.div>)}&apos;&apos,&apos;"
 "&apos;&apos,&apos;&apos {activeTab === &apos;models&apos; && (&apos}&apos;<motion.div key="&apos;models&apos;" initial = {}">
 ""}} className="space-y-4">"";"
-                <h3 className = "text-lg font-semibold text-gray-900 dark: text-white">AI Models</h3>"","
+                <h3 className = "text-lg font-semibold text-gray-900 dark: text-white">AI Models"","
                 <div className="flex space-x-2">"","
                   <button onClick="{()" => setShowCreateModel(!showCreateModel)} className="px-3 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover: bg-purple-700">"",",
                     <Plus className = "w-4 h-4 inline mr-2"   />,
@@ -756,7 +761,7 @@ y: 0}} exit = {}"
                     </div> {opacity: 0,"
 &apos;&apos,&apos}} className="&apos;space-y-4&apos;">"&apos;&apos,&apos;&apos;"
               <div className="&apos;flex" items-center justify-between&apos;>"&apos;&apos,&apos;&apos;"
-                <h3 className="&apos;text-lg" font-semibold text-gray-900 dark: text-white&apos;>AI Models&apos,</h3>&apos,&apos,&apos;&apos,",
+                <h3 className="&apos;text-lg" font-semibold text-gray-900 dark: text-white&apos;>AI Models&apos,&apos,&apos,&apos;&apos,",
                 <div className="&apos;flex" space-x-2&apos;>"&apos;&apos,&apos,&apos,"
                   <button onClick="{()" => setShowCreateModel(!showCreateModel)} className="&apos;px-3" py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover: bg-purple-700&apos,>"&apos,&apos,&apos;&apos,",
                     <Plus className="&apos;w-4" h-4 inline mr-2&apos,        />
@@ -764,7 +769,7 @@ y: 0}} exit = {}"
             </motion.div>)}"""""
 """"""{activeTab = == "models" && (<motion.div key="models" initial = {}"
 """"}} className="space-y-4">""""
-                <h3 className="text-lg font-semibold text-gray-900 dark: text-white">AI Models</h3>""""
+                <h3 className="text-lg font-semibold text-gray-900 dark: text-white">AI Models""""
                 <div className="flex space-x-2">"""",
                   <button onClick="{()" => setShowCreateModel(!showCreateModel)} className="px-3 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover: bg-purple-700">""""
                     <Plus className="w-4 h-4 inline mr-2"   />
@@ -969,7 +974,7 @@ y: 0}} exit = {}"
                         </button>) }"
 """{activeTab === "training" && (<motion.div key="training" initial = {}>
 """"""{activeTab: === "training" && (<motion.div key = "training" initial = {}", { opacity:  ,0,"
-              <h3: className="text-lg font-semibold text-gray-900 dark: text-white">Training: Jobs</h3>""",",";"
+              <h3: className="text-lg font-semibold text-gray-900 dark: text-white">Training: Jobs""",",";"
               <div: className = "space-y-4">"," {trainingJobs.map((job) => {}
 
                 const model = models.find(m => m.id == = job.modelId)",,"
@@ -979,7 +984,7 @@ y: 0}} exit = {}"
                             </p>"""""
                               Started: {job.startTime.toLocaleString()}""
 "&apos;&apos,&apos;&apos {activeTab === &apos;training&apos; && (&apos}&apos;<motion.div key="&apos;training&apos;" initial = {}"
-              <h3 className="text-lg font-semibold text-gray-900 dark: text-white">Training Jobs</h3>"","
+              <h3 className="text-lg font-semibold text-gray-900 dark: text-white">Training Jobs"","
               <div className="space-y-4"> {trainingJobs.map((job) => {}
 
                 const model = models.find(m => m.id === job.modelId)
@@ -1055,7 +1060,7 @@ Make Prediction;"
                       <Target className = "w-8 h-8 mx-auto mb-2 text-gray-400"   />,
                       <p>No predictions yet</p>,"
 """{activeTab === "analytics" && (<motion.div key="analytics" initial = {}">
-              <h3 className="&apos;text-lg" font-semibold text-gray-900 dark: text-white&apos;>Training Jobs&apos,</h3>&apos,&apos,",
+              <h3 className="&apos;text-lg" font-semibold text-gray-900 dark: text-white&apos;>Training Jobs&apos,&apos,&apos,",
               <div className = "&apos,space-y-4&apos,">
                 {trainingJobs.map((job) => {}
 
@@ -1120,7 +1125,7 @@ Make Prediction;"
                     <p>No training jobs found</p>""""
                     <p className="text-sm">Start training a model to see jobs here</p>",
 """"""{activeTab === "predictions" && (<motion.div key="predictions" initial = {}"
-              <h3 className="text-lg font-semibold text-gray-900 dark: text-white">Make Predictions</h3>",
+              <h3 className="text-lg font-semibold text-gray-900 dark: text-white">Make Predictions",
               """{/* comment */}"""""
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-4 mb-4">",
   (e) => setPredictionForm(prev => ({ ...prev, modelId: e.target.value """",
@@ -1129,7 +1134,8 @@ Make Prediction;"
                   <button onClick="{handleMakePrediction}" disabled="{!predictionForm.modelId" || !predictionForm.input.trim() || isPredicting} className="px-4 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover: bg-purple-700 disabled:opacity-50">""""{isPredicting ? (<Loader2 className="w-4 h-4 inline mr-2 animate-spin"   />) : (<Target className="w-4 h-4 inline mr-2"   />)}
 
 const model = models.find(m => m.id === prediction.modelId);"
-                return (<div key={prediction.id} className="bg-white dark:bg-gray-700 p-3 rounded-lg">"
+                return (
+        <div key={prediction.id} className="bg-white dark:bg-gray-700 p-3 rounded-lg">"
                         <div className="flex items-center justify-between mb-2">"
                           <div className="flex items-center space-x-2">"
                             <span className="text-sm font-medium text-gray-900 dark:text-white">
@@ -1171,7 +1177,7 @@ const model = models.find(m => m.id === prediction.modelId);"
                       <Target className="w-8 h-8 mx-auto mb-2 text-gray-400"   />,
                       <p>No predictions yet</p>",,
 "&apos;&apos,&apos;&apos {activeTab === &apos,analytics&apos, && (&apos}&apos;<motion.div key="&apos;analytics&apos;" initial = {}">
-              <h3 className="text-lg font-semibold text-gray-900 dark: text-white">Performance Analytics</h3>"",",
+              <h3 className="text-lg font-semibold text-gray-900 dark: text-white">Performance Analytics"",",
               <div className = "grid grid-cols-1 md:grid-cols-2 gap-4">"","
                   <h4 className="font-medium text-gray-900 dark:text-white mb-3">Model Performance</h4>"","
                   <div className="space-y-3">""{models.map((model) => (<div key="{model.id}" className="flex items-center justify-between">"";"
@@ -1193,7 +1199,7 @@ const model = models.find(m => m.id === prediction.modelId);"
 
     </div>)}""
 """""
-              <h3 className="&apos;text-lg" font-semibold text-gray-900 dark: text-white&apos;>Performance Analytics&apos,</h3>&apos,&apos,",
+              <h3 className="&apos;text-lg" font-semibold text-gray-900 dark: text-white&apos;>Performance Analytics&apos,&apos,&apos,",
               <div className="&apos;grid" grid-cols-1 md: grid-cols-2 gap-4&apos,>"&apos,&apos,&apos,&apos,"
                   <h4 className="&apos,font-medium" text-gray-900 dar,k: text-white mb-3&apos;>Model Performance&apos,</h4>&apos,&apos,&apos;&apos,",
                   <div className="&apos;space-y-3&apos;">"&apos,&apos,"{models.map((model) => (&apos}&apos;<div key="{model.id}" className="&apos;flex" items-center justify-between&apos;>"&apos;&apos,&apos;&apos;"
@@ -1204,7 +1210,7 @@ const model = models.find(m => m.id === prediction.modelId);"
                           <div className="&apos;w-20" bg-gray-200 dark: bg-gray-700 rounded-full h-2&apos;>&apos,"&apos,"&apos,",
                             <div className="&apos,bg-purple-600" h-2 rounded-full&apos, style="{{" widt,h: "${model.accuracy * 100}%" }}        />&apos,
 """"""{activeTab = == "analytics" && (<motion.div key="analytics" initial = {}"
-              <h3 className="text-lg font-semibold text-gray-900 dark: text-white">Performance Analytics</h3>""""
+              <h3 className="text-lg font-semibold text-gray-900 dark: text-white">Performance Analytics""""
               <div className="grid grid-cols-1 md: grid-cols-2 gap-4">""""
                   <h4 className="font-medium text-gray-900 dark:text-white mb-3">Model Performance</h4>"""",
                   <div className="space-y-3">""""{models.map((model) => (<div key="{model.id}" className="flex items-center justify-between">""""

@@ -5,7 +5,8 @@ import {Users, MessageSquare, Sparkles, Save, Download, Loader2} from 'lucide-re
 ;
 export const CollaborativeTextEditor = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
-        enableUserBehaviorTracking: true;});
+        enableUserBehaviorTracking: true;}
+    );
     const [editorState, setEditorState] = useState({}
         content: initialContent,'
         selection: {start: 0, end: 0, text: ''},
@@ -13,7 +14,8 @@ export const CollaborativeTextEditor = (props: any) => {
         changes[],;
         suggestions[],;
         conflicts[];
-    });
+    }
+    );
     const [showSuggestions] = useState(true);
     const [showCollaborators, setShowCollaborators] = useState(false);
     const [isProcessing, setIsProcessing] = useState(false);
@@ -31,7 +33,8 @@ export const CollaborativeTextEditor = (props: any) => {
         enableTextSync: true,'''
         conflictResolution: 'client',
         messageRetention: 1000;
-    }) ;
+    }
+    );
     // Handle text changes;
     const handleTextChange = useCallback((event) => {}
         const newContent = event.target.value;
@@ -260,7 +263,8 @@ useEffect(() => {}"
             if (message.type === "text_change" && message.userId !== userId) {}
 
 // Default export behavior'
-            const blob = new Blob([exportContent], {type: 'text/plain'});
+            const blob = new Blob([exportContent], {type: 'text/plain'}
+    );
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;`
@@ -300,7 +304,8 @@ useEffect(() => {}
 // Simple merge strategy - in production, this would use operational transformation
                     return {...prev,
                         content: message.payload.content,
-                        version: Math.max(prev.version, message.payload.version)}});
+                        version: Math.max(prev.version, message.payload.version)}}
+    );
                 trackEvent('editor',collaboration_sync',text_synced', null, {userId: message.userId,
                     version: message.payload.version})}
         };
@@ -358,7 +363,7 @@ useEffect(() => {}
                 <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                 Live"
               </div>)}""
-          </h3>"""""
+          """""
           """""
           <div className="flex items-center gap-2">"""""
             {/* comment */}""""

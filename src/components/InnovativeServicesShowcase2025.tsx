@@ -7,7 +7,8 @@ export default function Page(props: any) {
       return aValue > bValue ? 1 : -1} else {
 
       return aValue < bValue ? 1 : -1}
-  }) ;
+  }
+    );
 
   const getCategoryIcon = (props: any) => {
     if(category === 'all') return < Rocket className="w-6 h-6" />;
@@ -24,7 +25,8 @@ export default function Page(props: any) {
     setSelectedService(null) ;
   };
 
-  return (<div  className="min - h-screen futuristic -bg">
+  return (
+        <div  className="min - h-screen futuristic -bg">
       {/* Matrix Rain Background Effect */}
       <div  className="matrix -rain"></div>
 
@@ -200,7 +202,7 @@ export default function Page(props: any) {
                       </div>
                     </div>
 "
-                    <h3 className="text-xl font-bold text-white mb-3 line-clamp-2">{service.title}</h3>"
+                    <h3 className="text-xl font-bold text-white mb-3 line-clamp-2">{service.title}"
                     <p className="text-gray-300 mb-4 flex-grow line-clamp-3">{service.description}</p>
 "
                     <div className="space-y-3 mb-4">"
@@ -250,7 +252,7 @@ export default function Page(props: any) {
 
                     <div  className="flex -1">
                       <div  className="flex items - center gap-4 mb-2">
-                        <h3 className="text-xl font - bold text-white">{service.title}</h3>
+                        <h3 className="text-xl font - bold text-white">{service.title}
                         <span className="text-sm text-gray -400 capitalize">{service.category}</span>
                         <div  className="flex items - center gap-1">
                           <Star className="w-4 h-4 text-yellow-400 fill -current"  />
@@ -285,7 +287,7 @@ export default function Page(props: any) {
         {sortedServices.length === 0 && ("
           <div className="text-center py-16">"
             <div className="text-6xl mb-4">🔍</div>"
-            <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>"
+            <h3 className="text-2xl font-bold text-white mb-2">No services found"
             <p className="text-gray-400">Try adjusting your search criteria or category filter</p>
           </div>
         )}
@@ -336,7 +338,7 @@ export default function Page(props: any) {
 
                 <div  className="grid grid - cols - 1 lg: gri d - cols - 2 gap-8">
                   <div>
-                    <h3 className="text-xl font - bold text-white mb-4">Service Overview</h3>
+                    <h3 className="text-xl font - bold text-white mb-4">Service Overview
                     <p className="text-gray - 300 mb-6">{selectedService.description}</p>
 
                     <div  className="space - y-4 mb-6">
@@ -384,7 +386,7 @@ export default function Page(props: any) {
                     <div  className="mb-6">
                       <h3 className="text-2xl font - bold text-cyan - 400 mb-2">
                         {selectedService.currency}{selectedService.price.toLocaleString () }
-                      </h3>
+                      
                       <p className="text-gray - 400 mb-4">One - time setup fee</p>
 
                       <div  className="space - y-3">                        <motion.button
@@ -450,7 +452,7 @@ export default function Page(props: any) {
               <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center">"
                 <CheckCircle className="w-8 h-8 text-white"   />
               </div>"
-              <h3 className="text-xl font-bold text-white mb-3">{key}</h3>"              <p className="text-gray-300">{value}</p>
+              <h3 className="text-xl font-bold text-white mb-3">{key}"              <p className="text-gray-300">{value}</p>
             </motion.div>
           ))}
         </div>

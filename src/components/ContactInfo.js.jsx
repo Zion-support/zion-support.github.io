@@ -218,7 +218,7 @@ export function ContactInfo(props: any) {
           <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark rounded-lg p-8 max-w-4xl mx-auto">""""
             <h3 className="text-2xl font-bold text-white mb-4">""
               Ready to Get Started?"""""
-            </h3>""""
+            """"
             <p className="text-zion-slate-light mb-6">"
               Join hundreds of satisfied clients who have transformed their""
               businesses with our technology solutions"""""

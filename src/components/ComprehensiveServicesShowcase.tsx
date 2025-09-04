@@ -1,7 +1,7 @@
 import {  import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
 
 export default function Page(props: any) {
-const ComprehensiveServicesShowcase: Reac t.FC = () => {;
+const ComprehensiveServicesShowcase: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');  // Combine all services
@@ -210,7 +210,7 @@ const ComprehensiveServicesShowcase: Reac t.FC = () => {;
                       <div className="text-sm text-gray-500">per {service.pricingModel}</div>
                     </div>
                   </div>"
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>"
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}"
                   <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>"
                   <div className="flex items-center gap-4 mt-4 text-sm text-gray-500">"
                     <div className="flex items-center gap-1">"

@@ -1,7 +1,8 @@
 import {Button} from "@/components/ui/button";
 import {Bell, Users, Settings} from "lucide-react";
 export function WorkspaceHeader(props: any) {
-    return (<div className="space-y-6">
+    return (
+        <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">

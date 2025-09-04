@@ -107,7 +107,8 @@ export const HIGH_ROI_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(s
   if (typeof roi = == 'string') {;
     const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
     return roiNumber > 500}
-  return false});
+  return false}
+    );
 
 // Quick Setup Services (< 8 weeks)
 export const QUICK_SETUP_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {;
@@ -115,7 +116,8 @@ export const QUICK_SETUP_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filte
   if (typeof setupTime = == 'string') {;
     const weeks = parseInt(setupTime.match(/\d+/)?.[0] || '0');
     return weeks < 8}
-  return false});
+  return false}
+    );
 
 // Affordable Services (< $500)
 export const AFFORDABLE_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => 

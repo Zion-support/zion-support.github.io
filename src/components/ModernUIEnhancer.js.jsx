@@ -19,7 +19,8 @@ export default function Page(props: any) {
 
                 const speed = parseFloat(element.getAttribute('data-parallax') || '0.5');
                 const yPos = -(scrolled * speed);
-                element.style.transform = `translateY(${yPos}px)`});
+                element.style.transform = `translateY(${yPos}px)`}
+    );
             // Fade in elements on scroll'
             const fadeElements = document.querySelectorAll('[data-fade-in]');
             fadeElements.forEach((element) => {
@@ -168,7 +169,8 @@ export default function Page(props: any) {
                 }
             })}, observerOptions);
         const animatedElements = document.querySelectorAll('[data-animation]');
-        animatedElements.forEach((element) => {observer.observe(element)});
+        animatedElements.forEach((element) => {observer.observe(element)}
+    );
         return () => {
             animatedElements.forEach((element) => {
 
@@ -329,7 +331,7 @@ export default function Page(props: any) {
               <div className="flex items-center justify-between">"
                 <div className="flex items-center space-x-2">"
                   <Sparkles className="w-5 h-5" />"
-                  <h3 className="font-semibold">UI Enhancements</h3>
+                  <h3 className="font-semibold">UI Enhancements
                 </div>"
                 <button onClick={() => setIsVisible(false)} className="text-white hover:text-gray-200 transition-colors">
                   ×

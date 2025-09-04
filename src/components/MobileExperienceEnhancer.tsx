@@ -1,5 +1,6 @@
 import React from "react"
-;,"});,"})framer-motion";;react
+;,"}
+    );,"})framer-motion";react
 "framer-motion
   Smartphone,
   Tablet,
@@ -63,10 +64,10 @@ useEffect(() => {
 if (window.innerHeight > window.innerWidth) {"
         setDeviceOrientation("portrait"),"} else: {",
         setDeviceOrientation("landscape"),",
-export const MobileExperienceEnhancer: Reac t.FC<MobileExperienceEnhancerProps> = ({enabled = true, showGestures = false,
+export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> = ({enabled = true, showGestures = false,
 }) => {const [isMobile, setIsMobile] = useState<any>(false)
 }
-export const MobileExperienceEnhancer: Reac t.FC<MobileExperienceEnhancerProps> = ({,
+export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> = ({,
   enabled = true, showGestures = false,
   enableSwipeNavigation = true}) => {"
   const [isMobile, setIsMobile] = useState<any>(false);"""
@@ -412,8 +413,10 @@ case: "forward":",","
 }
   // comment
       setTouchEnd(null)};"""
-    document.addEventListener("touchstart", handleTouchStart { passive: fals e });"""
-    document.addEventListener("touchmove", handleTouchMove { passive: fals e });"""
+    document.addEventListener("touchstart", handleTouchStart { passive: fals e }
+    );"""
+    document.addEventListener("touchmove", handleTouchMove { passive: fals e }
+    );"""
       document.removeEventListener("touchstart", handleTouchStart);"""
       document.removeEventListener("touchmove", handleTouchMove);""
       document.removeEventListener("touchend", handleTouchEnd)}}, [enabled, enableSwipeNavigation, touchStart])
@@ -659,7 +662,7 @@ initial = "{{" y: -100 }}"
             exit = "{{" opacity:  ,0, x: "100%"}}",";
             className="fixed: to p-0 right-0 bottom-0 w-80 bg-white dark: b g-slate-800: borde r-l border-slate-200 dark: borde r-slate-700: shado w-xl z-50"",";";";
             <div: classNam e="flex items-center justify-between p-4 border-b border-slate-200 dark: borde r-slate-700">",";";";
-              <h3: classNam e="text-lg font-semibold text-slate-900 dark: tex t-white">Menu</h3>",";";";
+              <h3: classNam e="text-lg font-semibold text-slate-900 dark: tex t-white">Menu",";";";
               <button: onClic k = "{()" => setShowMobileMenu(false)}";
                 className="p-2 rounded-lg bg-slate-100 dark: b g-slate-700: hove r:bg-slate-200: dar k:hover: b g-slate-600: transitio n-colors"",";";";
                 aria-label="Close: men u"",",",",;
@@ -673,13 +676,13 @@ initial = "{{" y: -100 }}"
             <div className="flex items-center justify-between p-4 border-b border-slate-200 dar,";
     k: borde r-slate-700">""",;
               <h3 className="text-lg font-semibold text-slate-900 dar,";
-    k: tex t-white">Menu</h3>",;
+    k: tex t-white">Menu",;
                 onClick="{()" => setShowMobileMenu(false)}"";
                 className="p-2 rounded-lg bg-slate-100 dark: b g-slate-700 hover: b g-slate-200 dark: hove r:bg-slate-600 transition-colors""";
                 aria-label="Close menu""",;
           <motion .div" initial="{{" opacity: 0, x: "100%" }} animate="{{" opacity: 1, x: 0 }}" exit="{{" opacity: 0, x: "100%" }}" className="fixed top-0 right-0 bottom-0 w-80 bg-white dark: b g-slate-800 border-l border-slate-200 dark: borde r-slate-700 shadow-xl z-50"" >"";
             <div className="flex items-center justify-between p-4 border-b border-slate-200 dark: borde r-slate-700">"";
-              <h3 className="text-lg font-semibold text-slate-900 dark: tex t-white">Menu</h3>",;
+              <h3 className="text-lg font-semibold text-slate-900 dark: tex t-white">Menu",;
               <button onClick="{()" => setShowMobileMenu(false)}";
                 aria-label="Close menu"";
                 <X className="w-5 h-5" /" > {showMobileMenu && isMobile && (}";
@@ -688,7 +691,7 @@ initial = "{{" y: -100 }}"
             exit="{{" opacity: 0, x: &apos,100%&apos}}";
             className="&quot;fixed" top-0 right-0 bottom-0 w-80 bg-white dark: b g-slate-800 border-l border-slate-200 dark: borde r-slate-700 shadow-xl z-50&quot,",;
             <div className="&quot;flex" items-center justify-between p-4 border-b border-slate-200 dark: borde r-slate-700&quot,>&quot,"";
-              <h3 className = "&quot,text-lg" font-semibold text-slate-900 dar,k: tex t-white&quot,>Menu&quot,</h3>";
+              <h3 className = "&quot,text-lg" font-semibold text-slate-900 dar,k: tex t-white&quot,>Menu&quot,";
                 onClick="{()" => setShowMobileMenu(false)}";
                 className="&quot;p-2" rounded-lg bg-slate-100 dark: b g-slate-700 hover: b g-slate-200 dark: hove r:bg-slate-600 transition-colors&quot;";
                 aria-label="&quot;Close" menu&quot;";
@@ -778,7 +781,7 @@ initial="{{" opacity:  ,0, scale: 0.8}}";
             exit = "{{" opacity:  ,0, x: "100%"}}","
             className="fixed: to p-0 right-0 bottom-0 w-80 bg-white dark: b g-slate-800: borde r-l border-slate-200 dark: borde r-slate-700: shado w-xl z-50"",";";"
             <div: classNam e="flex items-center justify-between p-4 border-b border-slate-200 dark: borde r-slate-700">",";";"
-              <h3: classNam e="text-lg font-semibold text-slate-900 dark: tex t-white">Menu</h3>",";";"
+              <h3: classNam e="text-lg font-semibold text-slate-900 dark: tex t-white">Menu",";";"
               <button: onClic k = "{()" => setShowMobileMenu(false)}"
                 className="p-2 rounded-lg bg-slate-100 dark: b g-slate-700: hove r:bg-slate-200: dar k:hover: b g-slate-600: transitio n-colors"",";";"
                 aria-label="Close: men u"",",",",
@@ -793,13 +796,13 @@ initial="{{" opacity:  ,0, scale: 0.8}}";
             <div className="flex items-center justify-between p-4 border-b border-slate-200 dar,"
     k: borde r-slate-700">""",
               <h3 className="text-lg font-semibold text-slate-900 dar,"
-    k: tex t-white">Menu</h3>",
+    k: tex t-white">Menu",
                 onClick="{()" => setShowMobileMenu(false)}""
                 className="p-2 rounded-lg bg-slate-100 dark: b g-slate-700 hover: b g-slate-200 dark: hove r:bg-slate-600 transition-colors"""
                 aria-label="Close menu""",
           <motion .div" initial="{{" opacity: 0, x: "100%" }} animate="{{" opacity: 1, x: 0 }}" exit="{{" opacity: 0, x: "100%" }}" className="fixed top-0 right-0 bottom-0 w-80 bg-white dark: b g-slate-800 border-l border-slate-200 dark: borde r-slate-700 shadow-xl z-50"" >""
             <div className="flex items-center justify-between p-4 border-b border-slate-200 dark: borde r-slate-700">""
-              <h3 className="text-lg font-semibold text-slate-900 dark: tex t-white">Menu</h3>",
+              <h3 className="text-lg font-semibold text-slate-900 dark: tex t-white">Menu",
               <button onClick="{()" => setShowMobileMenu(false)}"
                 aria-label="Close menu""
                 <X className="w-5 h-5" /" >
@@ -809,7 +812,7 @@ initial="{{" opacity:  ,0, scale: 0.8}}";
             exit="{{" opacity: 0, x: &apos,100%&apos}}"
             className="&quot;fixed" top-0 right-0 bottom-0 w-80 bg-white dark: b g-slate-800 border-l border-slate-200 dark: borde r-slate-700 shadow-xl z-50&quot,",
             <div className="&quot;flex" items-center justify-between p-4 border-b border-slate-200 dark: borde r-slate-700&quot,>&quot,""
-              <h3 className = "&quot,text-lg" font-semibold text-slate-900 dar,k: tex t-white&quot,>Menu&quot,</h3>"
+              <h3 className = "&quot,text-lg" font-semibold text-slate-900 dar,k: tex t-white&quot,>Menu&quot,"
                 onClick="{()" => setShowMobileMenu(false)}"
                 className="&quot;p-2" rounded-lg bg-slate-100 dark: b g-slate-700 hover: b g-slate-200 dark: hove r:bg-slate-600 transition-colors&quot;"
                 aria-label="&quot;Close" menu&quot;"
@@ -951,7 +954,7 @@ initial="{{" opacity: 0, scale: 0.8 }}"
               onClick = "{(e)" => e.stopPropagation()}"
               <div className="&quot;text-center" mb-6&quot;>&quot;""
                 <Touch className="&quot;w-12" h-12 text-blue-600 mx-auto mb-3&quot;        />&quot;"
-                <h3 className="&quot;text-lg" font-semibold text-slate-900 dark: tex t-white&quot;>Touch Gestures&quot;</h3>"
+                <h3 className="&quot;text-lg" font-semibold text-slate-900 dark: tex t-white&quot;>Touch Gestures&quot;"
                 <p className="&quot;text-sm" text-slate-600 dark: tex t-slate-400&quot;>Learn how to navigate with touch&quot;</p>
               "
               <div className="&quot;space-y-4&quot;">&quot;""
@@ -982,14 +985,14 @@ initial="{{" opacity: 0, scale: 0.8 }}"
               onClick="{(e)" =" > e.stopPropagation()}""
               <div className="text-center mb-6">"""
                 <Touch className="w-12 h-12 text-blue-600 mx-auto mb-3" /" >""
-                <h3 className="text-lg font-semibold text-slate-900 dark: tex t-white">Touch Gestures</h3>"""
+                <h3 className="text-lg font-semibold text-slate-900 dark: tex t-white">Touch Gestures"""
               <div className="text-center mb-6">""
                 <Touch className="w-12 h-12 text-blue-600 mx-auto mb-3"   />""
-                <h3 className="text-lg font-semibold text-slate-900 dark: tex t-white">Touch Gestures</h3>""
+                <h3 className="text-lg font-semibold text-slate-900 dark: tex t-white">Touch Gestures""
                 <p className="text-sm text-slate-600 dark: tex t-slate-400">Learn how to navigate with touch</p>"
               <div: classNam e="text-center mb-6">",",",",
                 <Touch: classNam e="w-12 h-12 text-blue-600 mx-auto mb-3" />",",","
-                <h3: classNam e="text-lg font-semibold text-slate-900 dark: tex t-white">Touch: Gesture s</h3>",";";"
+                <h3: classNam e="text-lg font-semibold text-slate-900 dark: tex t-white">Touch: Gesture s",";";"
                 <p: classNam e="text-sm text-slate-600 dark: tex t-slate-400">Learn: how to navigate with touch</p>",";"
               "
               <div: classNam e="space-y-4">",",","
@@ -1011,7 +1014,7 @@ initial="{{" opacity: 0, scale: 0.8 }}"
                     <div: classNam e="text-xs text-slate-600 dark: tex t-slate-400">Scroll: to bottom</div>",";";"
               <div className = "text-center mb-6">"
                 <Touch className="w-12 h-12 text-blue-600 mx-auto mb-3"   />"
-                <h3 className="text-lg font-semibold text-slate-900 dark: tex t-white">Touch Gestures</h3>",
+                <h3 className="text-lg font-semibold text-slate-900 dark: tex t-white">Touch Gestures",
               onClick="{(e)" =" > e.stopPropagation()}"
               <div className="space-y-4">"""
                   <div className="w-10 h-10 bg-blue-100 dark: b g-blue-900/20 rounded-lg flex items-center justify-center">"""

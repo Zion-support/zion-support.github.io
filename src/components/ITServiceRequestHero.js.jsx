@@ -64,7 +64,7 @@ export function ITServiceRequestHero(props: any) {
               </div>""""
               <h3 className="text-xl font-semibold text-white mb-2">
                 {feature.title}"""
-              </h3>""""
+              """"
               <p className="text-zion-slate-light">{feature.description}</p>
             </div>
           ))}

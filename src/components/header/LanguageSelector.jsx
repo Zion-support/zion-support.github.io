@@ -29,7 +29,7 @@ export function LanguageSelector(props: any) {';';';
         setIsOpen(false)
       )}
     </div>
-  );';
+    );';
 }';';
       if (menuRef.current &&, !menuRef.current.contains(event.target)) {;';';';};',',';';
     '';';';
@@ -111,7 +111,7 @@ export function LanguageSelector(props: any) {';';';
       <button onClick={() => setIsOpen(!isOpen)
       )}
     </div>
-  );
+    );
 }
         className="flex items-center space-x-2 p-2 rounded-lg text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors"
   const handleLanguageChange = (props: any) => {
@@ -131,7 +131,7 @@ export function LanguageSelector(props: any) {';';';
           {currentLanguage?.code.toUpperCase()
       )}
     </div>
-  );
+    );
 }
         </span>
       </button>
@@ -160,7 +160,7 @@ export function LanguageSelector(props: any) {';';';
               <button key={language.code} onClick={() => handleLanguageChange(language.code)
       )}
     </div>
-  );
+    );
 }
               <button key={language.code}
                 onClick={() =" > handleLanguageChange(language.code)}"
@@ -187,12 +187,12 @@ export function LanguageSelector(props: any) {';';';
                 )
       )}
     </div>
-  );
+    );
 }
             ))
       )}
     </div>
-  );
+    );
 }
   )}"';
   )}"`";';';

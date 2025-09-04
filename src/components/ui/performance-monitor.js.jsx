@@ -15,14 +15,16 @@ export function PerformanceMonitor(props: any) {
         cpuUsage: 0,
         diskUsage: 0,
         timestamp: Date.now()
-    });
+    }
+    );
     const [alerts, setAlerts] = useState([]);
     const [thresholds, setThresholds] = useState({fps: 30,
         memory: 80,
         renderTime: 16,
         networkLatency: 100,
         cpuUsage: 70,
-        diskUsage: 85});
+        diskUsage: 85}
+    );
     // Performance monitoring functions
     const measureFPS = useCallback(() => {
         let frameCount = 0;
@@ -90,7 +92,8 @@ export function PerformanceMonitor(props: any) {
             await fetch('/api/health', {
                 method: 'HEAD',
                 cache: 'no-cache'
-            });
+            }
+    );
             const end = performance.now();
             const latency = Math.round(end - start);
             setMetrics(prev => ({...prev, networkLatency: latency}));
@@ -214,7 +217,7 @@ export function PerformanceMonitor(props: any) {
               <Activity className="w-5 h-5 text-white" />
             </div>
             <div>
-              <h3 className="text-white font-semibold text-sm">Performance Monitor</h3>
+              <h3 className="text-white font-semibold text-sm">Performance Monitor
               <p className="text-zinc-400 text-xs">Real-time metrics</p>
             </div>
           </div>

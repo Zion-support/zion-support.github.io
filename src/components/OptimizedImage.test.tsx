@@ -9,6 +9,6 @@ export default function OptimizedImage.test() {return (
           Professional OptimizedImage.test services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

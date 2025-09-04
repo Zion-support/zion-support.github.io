@@ -73,7 +73,8 @@ class MimeTypeFallback {
 
   async checkAndFixMimeType(url: string): Promise<any> {
     try {
-      const response = await fetch(url, { method: 'HEAD' });
+      const response = await fetch(url, { method: 'HEAD' }
+    );
       
       if (!response.ok) {
         
@@ -109,7 +110,8 @@ class MimeTypeFallback {
       
       
       try {
-        const response = await fetch(fallbackUrl, { method: 'HEAD' });
+        const response = await fetch(fallbackUrl, { method: 'HEAD' }
+    );
         if (response.ok) {
           const contentType = response.headers.get('content-type');
           const expectedType = this.getMimeType(originalUrl);
@@ -134,14 +136,16 @@ class MimeTypeFallback {
     scripts.forEach(script => {
       (script as HTMLScriptElement).src = fallbackUrl;
       
-    });
+    }
+    );
 
     // Replace stylesheet links
     const links = document.querySelectorAll(`link[href="${originalUrl}"]`);
     links.forEach(link => {
       (link as HTMLLinkElement).href = fallbackUrl;
       
-    });
+    }
+    );
   }
 
   async preloadCriticalResources(): Promise<any> {
@@ -203,7 +207,8 @@ class MimeTypeFallback {
       } else {
         document.head.appendChild(element);
       }
-    });
+    }
+    );
   }
 }
 

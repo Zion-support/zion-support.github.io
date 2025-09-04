@@ -33,7 +33,7 @@ interface AccessibilityProviderProps {
 
 }
 
-export const AccessibilityProvider: Reac t.FC<AccessibilityProviderProps> = ({ children }) => {
+export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
   const [highContrast, setHighContrast] = useState<any>(false);
   const [reducedMotion, setReducedMotion] = useState<any>(false);
   const [fontSize, setFontSize] = useState<any>(16);
@@ -255,7 +255,7 @@ export const AccessibilityProvider: Reac t.FC<AccessibilityProviderProps> = ({ c
 };
 
 // Focus trap component for modals
-export const FocusTrap: Reac t.FC<{ children: ReactNod e; isActive?: boolean }> = ({
+export const FocusTrap: React.FC<{ children: ReactNod e; isActive?: boolean }> = ({
   children,
   isActive = true
 }) => {

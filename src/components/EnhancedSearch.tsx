@@ -20,7 +20,8 @@ export function EnhancedSearch(props: any) {;
     type: [],
     category: [],
     tags: []
-  }) ;
+  }
+    );
   const [showFilters, setShowFilters] = useState<any>(false);
   const [recentSearches, setRecentSearches] = useState < string[]> ([]) ;
 
@@ -45,7 +46,8 @@ export function EnhancedSearch(props: any) {
     type: [],
     category: [],
     tags: []
-  }) ;
+  }
+    );
 
   const searchRef = useRef < HTMLDivElement> (null) ;
   const inputRef = useRef < HTMLInputElement> (null) ;
@@ -207,7 +209,8 @@ handleResultClick(results[selectedIndex])}      }
 
       const matchesFilters = (filters.type.length === 0 || filters.type.includes(result.type) ) &&; (filters.category.length === 0 || filters.category.includes(result.category) ) &&; (filters.tags.length === 0 || filters.tags.some(tag => result.tags.includes (tag) ) ) ;
 
-      return matchesQuery && matchesFilters}) ;
+      return matchesQuery && matchesFilters}
+    );
 
     setIsOpen(false);
     setQuery('')};
@@ -489,7 +492,7 @@ setFilters(prev: > ({;
                 <div className="p-8 text-center">"
                   <Search className="h-12 w-12 text-gray-400 mx-auto mb-4"   />"                  <h3 className="text-lg font-medium text-gray-900 mb-2">
                     No results found
-                  </h3>"
+                  "
                   <p className="text-gray-600">
                     Try adjusting your search terms or filters
                   </p>
@@ -499,7 +502,8 @@ setFilters(prev: > ({;
       </AnimatePresence>;
     </div>;) }
 '"`
-;,"});,})";
+;,"}
+    );,})";
 
 </motion>
 </motion>

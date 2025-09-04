@@ -23,6 +23,7 @@ export function UpcomingInterviewsCard(props: any) {
     const loadInterviews = async () => {
       setIsLoading(true);
       try {
+            
         const interviews = await fetchInterviews();
         // const now = new Date(); // Not used here, can be removed if only for filtering future
         
@@ -37,11 +38,16 @@ export function UpcomingInterviewsCard(props: any) {
           .slice(0, 3); 
         
         setUpcomingInterviews(upcoming);
-      } catch(error) {
+      
+        } catch (error) {
+            
         console.error("Error loading upcoming interviews:", error);
-      } finally {
+      
+        } finally {
+            
         setIsLoading(false);
-      }
+      
+        }
     };
 
     loadInterviews();
@@ -112,7 +118,8 @@ export function UpcomingInterviewsCard(props: any) {
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
               interviewDate.getTime() > now.getTime();
             
-            return (<div key={interview.id} className="flex items-center gap-3">
+            return (
+        <div key={interview.id} className="flex items-center gap-3">
                 <Avatar className="h-10 w-10 bg-zion-purple/10">
                   {/* Assuming AvatarImage and AvatarFallback are part of Avatar or imported separately */}
                   {/* For now, conditional rendering based on available image */}
@@ -143,7 +150,7 @@ export function UpcomingInterviewsCard(props: any) {
                   </div>
                 </div>
               </div>
-            );
+    );
           })}
         </div>
         

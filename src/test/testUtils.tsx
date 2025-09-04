@@ -12,7 +12,8 @@ export const TestWrapper: React.FC<{ children: React.ReactNode }> = ({ children 
 
 // Custom render function
 export const renderWithProviders = (props: any) => {
-  return render(ui, { wrapper: TestWrapper });
+  return render(ui, { wrapper: TestWrapper }
+    );
 };
 
 // Mock data generators

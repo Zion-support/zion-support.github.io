@@ -270,7 +270,7 @@ export default EnhancedFuturisticFooter;
                   </div>"                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl blur-lg opacity-50"></div>
                 </div>
                 <div>"
-                  <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>"
+                  <h3 className="text-xl font-bold text-white">Zion Tech Group"
                   <p className="text-slate-400 text-sm">Future Technology Solutions</p>
                 </div>
               </div>

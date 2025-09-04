@@ -61,7 +61,7 @@ import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarCha
         {sidebarSections.map((section) => (<div key={section.title}>
             <h3 className="text-zion-slate-light text-xs font-semibold uppercase tracking-wider mb-3">
               {section.title}
-            </h3>
+            
             <ul className="space-y-1">
               {section.items.map((item) => (<li key={item.key}>
                   <Link to={item.href} className = {cn("flex items-center space-x-3 px-3 py-2 rounded-md text-sm font-medium transition-colors",

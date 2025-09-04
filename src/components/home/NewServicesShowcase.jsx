@@ -116,7 +116,7 @@ import { Sparkles, Zap, TrendingUp, ArrowRight, Star, CheckCircle, Globe, Messag
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {SERVICE_CATEGORIES.map((category, index) => (<div key={category.name} className="text-center p-6 rounded-lg bg-zion-blue-dark/30 border border-zion-blue-light/20 hover:border-zion-cyan/30 transition-all duration-300 hover:scale-105" style="{{{ animationDelay: `${index * 300}}"ms` }}>
               <div className="text-4xl mb-4">{category.icon}</div>
-              <h3 className="text-xl font-bold text-white mb-3">{category.name}</h3>
+              <h3 className="text-xl font-bold text-white mb-3">{category.name}
               <p className="text-zion-slate-light mb-4">{category.description}</p>
               <div className="text-2xl font-bold text-zion-cyan mb-2">
                 {category.services.length}+ Services
@@ -135,7 +135,7 @@ import { Sparkles, Zap, TrendingUp, ArrowRight, Star, CheckCircle, Globe, Messag
           <div className="bg-gradient-to-r from-zion-blue-dark/50 to-zion-slate/50 rounded-2xl p-8 border border-zion-blue-light/20">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
-            </h3>
+            
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
               Join thousands of businesses that have already revolutionized their operations with our AI-powered solutions and professional IT services.
             </p>

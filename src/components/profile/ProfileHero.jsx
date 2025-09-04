@@ -3,7 +3,8 @@ import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {Badge} from "@/components/ui/badge";
 import { Star import { cn } from "@/lib/utils";
 export function ProfileHero(props: any) {
-    return (<div className="w-full overflow-hidden">
+    return (
+        <div className="w-full overflow-hidden">
       <div className="relative">
         <AspectRatio ratio={3 / 1} className="bg-zion-blue-light">
           {coverImageUrl ? (<img loading="lazy" src={coverImageUrl} alt={`${name} cover`} className="w-full h-full object-cover"  />) : (<div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />)}

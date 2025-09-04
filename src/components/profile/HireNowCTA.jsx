@@ -11,7 +11,8 @@ export function HireNowCTA(props: any) {
         budget: '',
         startDate: '',
         message: ''
-    });
+    }
+    );
     const handleSubmit = (props: any) => {
         e.preventDefault();
         if (onHire) {
@@ -20,9 +21,10 @@ export function HireNowCTA(props: any) {
         setFormData({projectDescription: '',
             budget: '',
             startDate: '',
-            message: ''});
+            message: ''}
+    );
         setIsFormOpen(false)};
-    const handleChange = (props: any) => {
+    const handleChange = (e) => {
         setFormData(prev => ({
             ...prev,
             [e.target.name]: e.target.value

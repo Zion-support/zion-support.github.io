@@ -30,7 +30,7 @@ export function RolePicker(props: any) {
                                 <Briefcase className="h-6 w-6 text-primary" />
                             </div>
                             <div className="flex-1">
-                                <h3 className="font-medium">{t('onboarding.talent_title')}</h3>
+                                <h3 className="font-medium">{t('onboarding.talent_title')}
                                 <p className="text-sm text-muted-foreground">{t('onboarding.talent_desc')}</p>
                             </div>
                             {selectedRole === 'talent' && (
@@ -54,7 +54,7 @@ export function RolePicker(props: any) {
                                 <Users className="h-6 w-6 text-primary" />
                             </div>
                             <div className="flex-1">
-                                <h3 className="font-medium">{t('onboarding.client_title')}</h3>
+                                <h3 className="font-medium">{t('onboarding.client_title')}
                                 <p className="text-sm text-muted-foreground">{t('onboarding.client_desc')}</p>
                             </div>
                             {selectedRole === 'client' && (

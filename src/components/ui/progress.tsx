@@ -17,6 +17,6 @@ export function Progress(props: any) {
         style="{{{ width: `${percentage}}"%` }}
        />
     </div>
-  );
+    );
 }
 </div>

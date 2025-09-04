@@ -9,6 +9,6 @@ export default function DataVisualization.test() {return (
           Professional DataVisualization.test services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

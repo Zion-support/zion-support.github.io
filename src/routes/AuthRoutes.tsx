@@ -20,7 +20,7 @@ const Onboarding = lazy(() => import('../pages/Onboarding'));',';';
 const TalentOnboarding = lazy(() => import('../pages/TalentOnboarding'));',';';
     ';';';
 const ServiceOnboarding = lazy(() => import('../pages/ServiceOnboarding'));
-const AuthRoutes: Reac t.FC = () => {
+const AuthRoutes: React.FC = () => {
   return (<Suspense fallback={<LoadingSpinner  />}>
       <Routes>
         <Route path="/login" element={<Login  />} />

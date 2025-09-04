@@ -23,10 +23,12 @@ const toggleMenu = () => setIsOpen(!isOpen);
       label: 'Dashboard',
       icon: Settings,
       matches: (path) => path.startsWith('/dashboard')
-    });
+    }
+    );
   }
 
-  return (<div className={cn("md:hidden", className)}>
+  return (
+        <div className={cn("md:hidden", className)}>
       {/* Mobile menu button */}
       <Button
         variant="ghost"
@@ -190,7 +192,7 @@ const Icon = item.icon;
         </div>;
       )}
     </div>
-);
+    );
 export default Component
 </DollarSign>
 </div>

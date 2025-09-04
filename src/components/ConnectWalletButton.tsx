@@ -10,7 +10,7 @@ interface ConnectWalletButtonProps {
 
 }
 
-const ConnectWalletButton: Reac t.FC<ConnectWalletButtonProps> = ({
+const ConnectWalletButton: React.FC<ConnectWalletButtonProps> = ({
   onConnect,
   onDisconnect,
   isConnected = false,

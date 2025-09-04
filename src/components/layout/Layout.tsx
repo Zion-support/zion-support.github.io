@@ -7,8 +7,7 @@ type LayoutProps = {
 
 export default function Layout(props: any) {
   return (
-
-    <div className="min-h-screen flex flex-col bg-black">
+        <div className="min-h-screen flex flex-col bg-black">
       <AppHeader />
       <main className="flex-1 pt-20 lg:pt-24">{children}</main>
       <footer className="border-t border-zion-cyan/20 bg-black/90">
@@ -24,5 +23,5 @@ export default function Layout(props: any) {
         </div>
       </footer>
     </div>
-  );
+    );
 }

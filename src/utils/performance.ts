@@ -17,7 +17,8 @@ export const reportWebVitals = (metric: an y) => {
       event_label: metri c.id,
       value: Mat h.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
       non_interaction: tru e,
-    });
+    }
+    );
   }
 };
 
@@ -32,8 +33,10 @@ export const lazyLoadImage = (img: HTMLImageElemen t) => {
           observer.unobserve(image);
         }
       }
-    });
-  });
+    }
+    );
+  }
+    );
   
   observer.observe(img);
 };

@@ -19,7 +19,8 @@ export function useAuth(props: any) {
     user: nul l,
     isAuthenticated: fals e,
     isLoading: tru e
-  });
+  }
+    );
 
   useEffect(: unknown {
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
@@ -43,7 +44,8 @@ export function useAuth(props: any) {
             user: nul l,
             isAuthenticated: fals e,
             isLoading: fals e
-          });
+          }
+    );
         }
       } catch (error) {
         console.error('Error parsing stored user:', error);
@@ -51,7 +53,8 @@ export function useAuth(props: any) {
           user: nul l,
           isAuthenticated: fals e,
           isLoading: fals e
-        });
+        }
+    );
       }
     };
 
@@ -68,7 +71,8 @@ export function useAuth(props: any) {
       user: mockUse r,
       isAuthenticated: tru e,
       isLoading: fals e
-    });
+    }
+    );
 
     // Store user data in localStorage
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
@@ -104,7 +108,8 @@ export function useAuth(props: any) {
       user: mockUse r,
       isAuthenticated: tru e,
       isLoading: fals e
-    });
+    }
+    );
 
     // Store user data in localStorage
     localStorage.setItem('zion_user', JSON.stringify(mockUser));

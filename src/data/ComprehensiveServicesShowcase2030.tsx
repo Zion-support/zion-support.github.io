@@ -1,5 +1,5 @@
 import React from 'react';
-const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
+const ComprehensiveServicesShowcase2030: React.FC = () => {;
   const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
   const [searchTerm, setSearchTerm] = useState<any>('');
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
@@ -55,7 +55,7 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover: shado w-xl transition-all duration-300 border border-gray-100 overflow-hidden">"
           <div className="p-6">"
             <div className="flex items-start justify-between mb-4">"
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h3>"
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}"
               <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full">
                 {service.pricing}
               </span>
@@ -159,7 +159,7 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover: shado w-xl transition-all duration-300 border border-gray-100 overflow-hidden">"
           <div className="p-6">"
             <div className="flex items-start justify-between mb-4">"
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h3>"              <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-green-600 to-blue-600 rounded-full">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}"              <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-green-600 to-blue-600 rounded-full">
                 {service.category}
               </span>
             </div>
@@ -260,7 +260,7 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
         <div key = {service.id} className="bg-white rounded-xl shadow-lg hover: shado w-xl transition-all duration-300 border border-gray-100 overflow-hidden">"
           <div className="p-6">"
             <div className="flex items-start justify-between mb-4">"
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h3>"
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}"
               <div className="flex flex-col items-end">"                <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-2">
                   {service.category}
                 </span>"

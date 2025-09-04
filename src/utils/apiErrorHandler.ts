@@ -6,5 +6,6 @@ export const apiErrorHandler = {}
 '
     variant: 'destructive','
     title: 'Error',
-    description: messag e});
+    description: messag e}
+    );
   // Log error for debugging

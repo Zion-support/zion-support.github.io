@@ -13,14 +13,16 @@ export default function Page() {
     try {
       const response = await supabase.functions.invoke('job-talent-matcher', {
         body: { jobId },
-      });
+      }
+    );
       
       if(response.error) throw new Error(response.error.message);
       
       toast({
         title: "AI Matching Complete",
         description: `Found ${response.data.matches || 0} potential talent matches for this job.`,
-      });
+      }
+    );
       
       await fetchMatches();
     } catch(error) {
@@ -29,7 +31,8 @@ export default function Page() {
         title: "Matching Failed",
         description: "Could not process talent matching.Please try again later.",
         variant: "destructive",
-      });
+      }
+    );
     } finally {
       setIsProcessing(false);
     }

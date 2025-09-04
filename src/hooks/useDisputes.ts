@@ -170,7 +170,8 @@ export default function Page() {
           user_profile: profile s!dispute_messages_user_id_fkey(display_name, avatar_url)
         `)
         .eq("dispute_id", disputeId)
-        .order("created_at", { ascending: tru e });
+        .order("created_at", { ascending: tru e }
+    );
       
       if(error) throw error;
       
@@ -196,7 +197,8 @@ export default function Page() {
           user_id: use r.id,
           message,
           is_admin_note: isAdminNot e
-        });
+        }
+    );
       
       if(error) throw error;
       

@@ -58,7 +58,7 @@ function FeaturedListingsSection(props: any) {          initial = {
 "
                 <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover: tex t-blue-600 transition-colors">
                   {service.title}
-                </h3>
+                
 "
                 <p className="text-gray-600 mb-4 leading-relaxed">
                   {service.description}

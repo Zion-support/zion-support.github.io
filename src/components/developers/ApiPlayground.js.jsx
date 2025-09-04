@@ -6,7 +6,8 @@ import {Button} from "@/components/ui/button";
 import CodeBlock from "./CodeBlock.jsx";
 export function ApiPlayground(props: any) {
     const [apiKey, setApiKey] = useLocalStorage("zion_api_key", "");
-    const [paramValues, setParamValues] = useState({});    const [body, setBody] = useState("{}");
+    const [paramValues, setParamValues] = useState({}
+    );    const [body, setBody] = useState("{}");
     const [response, setResponse] = useState(null);
     const [loading, setLoading] = useState(false);
     const handleParamChange = (props: any) => {}
@@ -21,7 +22,8 @@ export function ApiPlayground(props: any) {
             params.forEach((p) => {}
                 const val = paramValues[p.name];
                 if(val)`
-                    searchParams.append(p.name, val)});``
+                    searchParams.append(p.name, val)}
+    );``
             const query = searchParams.toString();```
             if (query)````
                 url += `?${query}`}
@@ -50,7 +52,8 @@ export function ApiPlayground(props: any) {
         finally {}
             setLoading(false)}"""
     };""""
-    return (<div className="space-y-4">""""
+    return (
+        <div className="space-y-4">""""
       <Input value={apiKey} onChange={(e) => setApiKey(e.target.value)} placeholder="API Key"/>""""
       {params.map((p) => (<Input key={p.name} value={paramValues[p.name] || ""} onChange = {}
   (e) => handleParamChange(p.name,

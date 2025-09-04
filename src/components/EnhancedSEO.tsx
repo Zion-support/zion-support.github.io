@@ -100,7 +100,8 @@ export default function Page(props: any) {
 
       link.rel = 'dns-prefetch';
       link.href = domain;
-      document.head.appendChild(link)});
+      document.head.appendChild(link)}
+    );
   }, [ogImage]);
   if(type === 'article') {
     Object.assign(structuredData, {

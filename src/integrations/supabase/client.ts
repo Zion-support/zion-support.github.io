@@ -13,7 +13,8 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
     persistSession: tru e,
     detectSessionInUrl: tru e
   }
-});
+}
+    );
 
 // Helper functions for common operations
 export const supabaseHelpers = {
@@ -44,7 +45,8 @@ export const supabaseHelpers = {
         if (value !== undefined && value !== null) {
           queryBuilder = queryBuilder.eq(key, value);
         }
-      });
+      }
+    );
     }
     
     const { data, error } = await queryBuilder;

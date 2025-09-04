@@ -9,6 +9,6 @@ export default function HeroSection.test() {return (
           Professional HeroSection.test services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

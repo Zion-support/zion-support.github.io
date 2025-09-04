@@ -79,7 +79,7 @@ export function SiteFooter(props: any) {';
           {/* Navigation Sections */}
           { navSections.map((section) => (
             <div key={section.title}>
-              <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
+              <h3 className="text-lg font-semibold mb-4">{section.title}
               <ul className="space-y-3">
                 {section.links.map((link) => (
                   <li key={link.label}>
@@ -93,14 +93,14 @@ export function SiteFooter(props: any) {';
                 ))
       )}
     </div>
-  );
+    );
 }
               </ul>
             </div>
           ))
       )}
     </div>
-  );
+    );
 }
         </div>
         {/* Bottom Section */}
@@ -123,7 +123,7 @@ export function SiteFooter(props: any) {';
               ))
       )}
     </div>
-  );
+    );
 }
             </div>
           </div>

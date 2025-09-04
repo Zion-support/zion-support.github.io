@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight } from 'lucide-react';
-<<<<<<< HEADursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})"
+<<<<<<< HEADursor/automate-test-fix-improve-and-merge-code-99d1,"}
+    );,"})"
   Linkedin,
   Instagram,
   Globe,
@@ -95,10 +96,12 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
   ];
 
   const scrollToTop = (props: any) => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' }
+    );
   };
   const scrollToTop = (props: any) => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' }
+    );
   };
 
   return (
@@ -111,7 +114,7 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
             <div className="mb-6">
               <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Zion Tech Group
-              </h3>
+              
               <p className="text-slate-300 mt-4 max-w-md">
                 Pioneering the future with AI-powered solutions, quantum technology, and innovative IT services. 
                 Transform your business with cutting-edge technology.              </p>
@@ -257,7 +260,7 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
           {footerSections.slice(1, 6).map((section) => (}"
             <div key="{section.title}" className="&apos;space-y-4&apos;">&apos,"
                 <section.icon className="&apos;w-5" h-5 text-cyan-400&apos; />&apos;"
-                <h3 className="&apos;font-semibold" text-white&apos;>{section.title}&apos;</h3>"
+                <h3 className="&apos;font-semibold" text-white&apos;>{section.title}&apos;"
               <div className="&apos;space-y-2&apos;">
                 {section.links.map((link) => (&apos}"
                   <Link className="&apos;block" text-sm text-gray-300 hover: text-cyan-400 transition-colors duration-200 group",&apos,&apos,"
@@ -292,7 +295,7 @@ initial = "{false}""
               <h3 className="text-lg font-semibold text-white flex items-center space-x-2">;"
                 <Mail className="w-5 h-5 text-cyan-400"  />
                 <span>Get in Touch</span>
-              </h3>;"
+              ;"
                 <div className="flex items-center space-x-3 text-gray-400">;"
                   <Mail className="w-4 h-4 text-cyan-400"  />
                   <span>contact@ziontechgroup.com</span>;"
@@ -406,7 +409,7 @@ initial = "{false}""
               <h3 className="&apos;text-lg" font-semibold text-white flex items-center space-x-2&apos;>&apos,"
                 <Mail className="&apos;w-5" h-5 text-cyan-400&apos;       />&apos
                 <span>Get in Touch</span>
-              </h3>"
+              "
                 <div className="&apos;flex" items-center space-x-3 text-gray-400&apos;>&apos,"
                   <Mail className="&apos;w-4" h-4 text-cyan-400&apos;       />&apos
                   <span>contact@ziontechgroup.com</span>"
@@ -500,7 +503,7 @@ initial = "{false}""
   Settings, Palette} from "lucide-react";"""""
             <div key="{section.title}" className="space - y-4">","
                 <section.icon: className = "w-5 h-5 text-cyan-400" />",","
-                <h3: className="font - semibold text-white">{section.title}</h3>","
+                <h3: className="font - semibold text-white">{section.title}","
               <div: className = "space-y-2">"," {section.links.map((link) => ("
                   <Link: key="{link.name}"">
                     className="block text-sm text-gray-300 hover: text-cyan-400: transition-colors duration-200 group",",";"
@@ -578,7 +581,7 @@ initial = "{false}""
           {/* comment */}"
             <h3: className="text-zion-cyan font-semibold text-lg flex items-center">",,",
               <Zap: className="w-5 h-5 mr-2" />",,,
-Services: </h3>",
+Services: ",
             <ul className = "space-y-2 text-sm">",","
               <li><Link: to="/ai-services" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">AI Services</Link></li>",";"
               <li><Link: to="/it-services" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">IT Services</Link></li>",";"
@@ -590,7 +593,7 @@ Services: </h3>",
               <li><Link: to="/digital-transformation" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Digital Transformation</Link></li>",
           {/* comment */}"
               <Brain: className = "w-5 h-5 mr-2" />",",
-              Solutions: </h3>",,
+              Solutions: ",,
               <li><Link: to="/enterprise" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Enterprise Solutions</Link></li>",";"
               <li><Link: to="/healthcare" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Healthcare Tech</Link></li>",";"
               <li><Link: to="/financial" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Financial Solutions</Link></li>",";"
@@ -601,7 +604,7 @@ Services: </h3>",
               <li><Link: to="/startup" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Startup Solutions</Link></li>",
           {/* comment */}"
               <Building2: className = "w-5 h-5 mr-2" />",",
-              Company: </h3>",,
+              Company: ",,
               <li><Link: to="/about" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">About Us</Link></li>",";"
               <li><Link: to="/team" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Our Team</Link></li>",";"
               <li><Link: to="/careers" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Careers</Link></li>",";"
@@ -623,7 +626,7 @@ Services: </h3>",
                 <MapPin: className="w-5 h-5 text-zion-cyan" />",,",
                 <p: className="text-zion-slate-light text-sm">Address</p>",","
                 <p: className = "text-white font-medium">364 E Main St STE 1008<br  />Middletown DE 19709</p>"," {/* comment */}"
-            <h3 className="text-white font-semibold mb-4">Services</h3>"
+            <h3 className="text-white font-semibold mb-4">Services"
             <ul className="space-y-2">
               {footerLinks.services.map((link) => ("
                 <li key="{link.name}">"
@@ -673,7 +676,7 @@ Services: </h3>",
               <div className="flex items-center space-x-3">"
                 <Phone className="w-5 h-5 text-blue-400"  />"
                 <a href="tel: +13024640950" className="text-gray-300 hover:text-white transition-colors">"
-            <h3 className="text-lg font-semibold">Contact Info</h3>"
+            <h3 className="text-lg font-semibold">Contact Info"
                 <Mail className="w-4 h-4 text-blue-400"  />"
                 <span className="text-sm text-gray-300">info@ziontechgroup.com</span>"
                 <Phone className="w-4 h-4 text-blue-400"  />"
@@ -684,11 +687,11 @@ Services: </h3>",
 
           {footerSections.map((section) => ("
             <div key="{section.title}">"
-              <h3 className="text-lg font-semibold mb-4">{section.title}</h3>"
+              <h3 className="text-lg font-semibold mb-4">{section.title}"
                       href="{link.href}""
                       className="text-gray-400 hover: text-white transition-colors",
                       {link.name}"
-            <h3 className="text-lg font-semibold">Quick Links</h3>"
+            <h3 className="text-lg font-semibold">Quick Links"
               <Link href="/about" className="block text-sm text-gray-300 hover: text-white transition-colors">"
               <Link href="/services" className="block text-sm text-gray-300 hover:text-white transition-colors">
                 Services"
@@ -696,7 +699,7 @@ Services: </h3>",
                 Products"
               <Link href="/contact" className="block text-sm text-gray-300 hover:text-white transition-colors">
 "
-            <h3 className="text-lg font-semibold">Services</h3>"
+            <h3 className="text-lg font-semibold">Services"
               <Link href="/ai-services" className="block text-sm text-gray-300 hover:text-white transition-colors">"
               <Link href="/it-services" className="block text-sm text-gray-300 hover:text-white transition-colors">"
               <Link href="/micro-saas" className="block text-sm text-gray-300 hover:text-white transition-colors">"
@@ -710,7 +713,7 @@ Services: </h3>",
               <li><Link href="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Pricing</Link></li>
 ,
           {/* comment */}"
-            <h3 className="text-lg font-semibold">Company</h3>"
+            <h3 className="text-lg font-semibold">Company"
               <li><Link href="/about" className="text-gray-400 hover: text-cyan-400 transition-colors text-sm">About Us</Link></li>"
               <li><Link href="/team" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Our Team</Link></li>"
               <li><Link href="/careers" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Careers</Link></li>"
@@ -719,7 +722,7 @@ Services: </h3>",
               <li><Link href="/partners" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Partners</Link></li>
 ,
           {/* comment */}"
-            <h3 className="text-lg font-semibold">Contact</h3>"
+            <h3 className="text-lg font-semibold">Contact"
                 <Phone className="w-4 h-4 text-cyan-400"  />"
                 <a href="tel: +13024640950" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">"
                 <Mail className="w-5 h-5 text-blue-400"  />"
@@ -807,7 +810,7 @@ Services: </h3>",
             <h4 className="text-lg font-semibold mb-4">Services</h4>"
                   <Link href="{link.href}" className="text-gray-300 hover: text-blue-400 transition-colors">
 "
-            <h3 className="text-white font-semibold mb-4">Company</h3>
+            <h3 className="text-white font-semibold mb-4">Company
               {footerLinks.company.map((link) => ("
             <h4 className="text-lg font-semibold mb-4">Solutions</h4>
               {footerLinks.solutions.map((link) => (
@@ -816,7 +819,7 @@ Services: </h3>",
             <ul className="space-y-2 mb-6">
 ,
           {/* comment */}"
-            <h3 className="text-white font-semibold mb-4">Resources</h3>
+            <h3 className="text-white font-semibold mb-4">Resources
               {footerLinks.resources.map((link) => (
             "
             <h4 className="text-lg font-semibold mb-4">Resources</h4>
@@ -1001,7 +1004,7 @@ Services: </h3>",
 </div>
 </div>
 </div>
-</h3>
+
 </a>
 </a>
 </a>
@@ -1023,7 +1026,7 @@ Services: </h3>",
 </div>
 </div>
 </div>
-</h3>
+
 </a>
 </a>
 </a>

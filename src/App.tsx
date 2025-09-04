@@ -55,7 +55,7 @@ const PageLoader = () => (
       <p className="text-gray-400">Loading...</p>
     </div>
   </div>
-);
+    );
 
 // Lazy load pages - only import existing ones
 const Home = createLazyComponent(() => import('./pages/Home'));

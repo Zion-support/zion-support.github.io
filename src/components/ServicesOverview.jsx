@@ -249,7 +249,8 @@ const whyChooseUs = [
 
 ];
 export function ServicesOverview(props: any) {
-    return (<div className="py-20 bg-zion-blue-dark">
+    return (
+        <div className="py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -269,7 +270,7 @@ export function ServicesOverview(props: any) {
                   {category.icon}
                 </div>
                 <div>
-                  <h3 className="text-white text-xl font-bold">{category.title}</h3>
+                  <h3 className="text-white text-xl font-bold">{category.title}
                   <p className="text-zion-slate-light text-sm">{category.description}</p>
                 </div>
               </div>
@@ -325,7 +326,7 @@ export function ServicesOverview(props: any) {
           <div className="text-center mb-12">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
               Why Choose Zion Tech Group?
-            </h3>
+            
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
               We combine technical expertise with business acumen to deliver solutions that drive real results
             </p>
@@ -346,7 +347,7 @@ export function ServicesOverview(props: any) {
         <div className="text-center">
           <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
             Ready to Get Started?
-          </h3>
+          
           <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
             Contact us today for a free consultation and discover how our services can transform your business
           </p>

@@ -11,7 +11,8 @@ export function AccessibilityPanel(props: any) {
         screenReader: false,
         fontSize: 16,
         colorBlindMode: 'normal'
-    });
+    }
+    );
     // Apply accessibility settings to document
     useEffect(() => {
         if (!enabled)
@@ -122,7 +123,7 @@ export function AccessibilityPanel(props: any) {
 
               {/* Visual Settings */}
               <div className="space-y-4">
-                <h3 className="text-white font-semibold text-sm uppercase tracking-wider">Visual</h3>
+                <h3 className="text-white font-semibold text-sm uppercase tracking-wider">Visual
                 
                 {/* High Contrast */}
                 <div className="flex items-center justify-between">
@@ -180,7 +181,7 @@ export function AccessibilityPanel(props: any) {
 
               {/* Motion Settings */}
               <div className="space-y-4 mt-6">
-                <h3 className="text-white font-semibold text-sm uppercase tracking-wider">Motion</h3>
+                <h3 className="text-white font-semibold text-sm uppercase tracking-wider">Motion
                 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -195,7 +196,7 @@ export function AccessibilityPanel(props: any) {
 
               {/* Audio Settings */}
               <div className="space-y-4 mt-6">
-                <h3 className="text-white font-semibold text-sm uppercase tracking-wider">Audio</h3>
+                <h3 className="text-white font-semibold text-sm uppercase tracking-wider">Audio
                 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">

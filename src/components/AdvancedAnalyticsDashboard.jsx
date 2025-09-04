@@ -122,7 +122,7 @@ case trending':'return bg-green-100 text-green-800case stable':'return bg-blue-1
               <CardContent>''''
                 <h3 className='text-2xl font-bold text-zion-blue-dark mb-1'>
                   {metric.value}'''
-                </h3>''''
+                ''''
                 <p className='text-sm text-zion-slate-light'>{metric.title}</p>
               </CardContent>
             </Card>
@@ -315,7 +315,7 @@ case trending':'return bg-green-100 text-green-800case stable':'return bg-blue-1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}''transition={{ delay: 0.4 }}''className=text-center''''>''''
         <div className='bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white'>''''
-          <h3 className='text-3xl font-bold mb-4'>Get Detailed Analytics</h3>''''
+          <h3 className='text-3xl font-bold mb-4'>Get Detailed Analytics''''
           <p className='text-xl mb-6 max-w-2xl mx-auto'>
             Access comprehensive analytics, custom reports, and real-time;
             insights to optimize your business performance and make data-driven;

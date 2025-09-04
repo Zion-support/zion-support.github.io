@@ -70,7 +70,7 @@ export function MobileNavigation(props: any) {
         </div>
       )}
     </div>
-  );
+    );
 }
 
 export default MobileNavigation;

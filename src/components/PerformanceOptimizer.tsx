@@ -76,7 +76,7 @@ export default function Page(props: any) {
     newMetrics.score = Math.max(0, score) ;
     setMetrics(newMetrics) ;
     setHistory(prev => [...prev.slice (-9) , newMetrics]) }, []) ;
-export const PerformanceOptimizer: Reac t.FC<PerformanceOptimizerProps> = ({ children }) => {
+export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
 // TODO: Add dependencies if needed
 
@@ -95,7 +95,8 @@ export const PerformanceOptimizer: Reac t.FC<PerformanceOptimizerProps> = ({ chi
         if(!img.decoding) {
           img.decoding = 'async';
         }
-      });
+      }
+    );
     };
 
     // Initialize optimizations
@@ -113,7 +114,8 @@ export const PerformanceOptimizer: Reac t.FC<PerformanceOptimizerProps> = ({ chi
               observer.unobserve(target);
             }
           }
-        });
+        }
+    );
       },
       { rootMargin: '50px'   }
     );
@@ -153,7 +155,7 @@ return ("
           <div className="flex items-center justify-between mb-4">"
             <h3 className="text-lg font-semibold text-white">
               Performance Score
-            </h3>
+            
             {getScoreIcon(metrics.score)}
           </div>"
           <div className="text-center">
@@ -171,7 +173,7 @@ return ("
             <TrendingUp className="w-5 h-5 text-zion-cyan"   />"
             <h3 className="text-lg font-semibold text-white">
               Real-time Metrics
-            </h3>
+            
           </div>"
           <div className="space-y-2 text-sm">"
             <div className="flex justify-between">"
@@ -208,7 +210,7 @@ return ("
           <Zap className="w-5 h-5 text-zion-cyan"   />"
           <h3 className="text-lg font-semibold text-white">
             Optimization Suggestions
-          </h3>
+          
         </div>"
         <div className="space-y-3">
           {suggestions.map(suggestion => (
@@ -266,7 +268,7 @@ return ("
             <BarChart3 className="w-5 h-5 text-zion-cyan"  />"
             <h3 className="text-lg font-semibold text-white">
               Performance History
-            </h3>
+            
           </div>"
           <div className="bg-white/5 rounded-lg p-4">"
             <div className="flex items-center justify-between text-sm text-gray-300 mb-3">
@@ -284,12 +286,13 @@ return ("
             </div>
           </div>
         </div>) }
-    </div>) ;};
+    </div>
+    );};
 interface PerformanceOptimizerProps {
- children: Reac t.ReactNode
+ children: React.ReactNode
 }
 
-export const PerformanceOptimizer: Reac t.FC<PerformanceOptimizerProps> = ({ children }) => {
+export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
     // comment
 const preloadCriticalResources = (props: any) => {
@@ -333,87 +336,160 @@ const observer = new IntersectionObserver((entries) => {
           }"
         })} { rootMargin: "50px" }
 
-;,"});,"})" PerformanceOptimizerProps {,"});,"})"
-  children: Reac t.ReactNode,"});,"});"
-}export const PerformanceOptimizer: Reac t.FC < PerformanceOptimizerProps> = ({ children }) => {,"});,"})"
-  useEffect(() => {,"});,"})"
+;,"}
+    );,"})" PerformanceOptimizerProps {,"}
+    );,"})"
+  children: React.ReactNode,"}
+    );,"}
+    );"
+}export const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({ children }) => {,"}
+    );,"})"
+  useEffect(() => {,"}
+    );,"})"
     // comment
-const preloadCriticalResources = (props: any) => {,"});,"})"
-      const criticalFonts = []"criticalFonts.forEach (font => {,"});,"})"
-        const link = document.createElement ("link") ;        link.rel = "preload",        link.as = "style",        link.href = font,        document.head.appendChild (link) }) ;,"});,"});"
-};,"});,"})"
+const preloadCriticalResources = (props: any) => {,"}
+    );,"})"
+      const criticalFonts = []"criticalFonts.forEach (font => {,"}
+    );,"})"
+        const link = document.createElement ("link") ;        link.rel = "preload",        link.as = "style",        link.href = font,        document.head.appendChild (link) }
+    );,"}
+    );,"}
+    );"
+};,"}
+    );,"})"
     // comment
-const optimizeImages = (props: any) => {,"});,"})"
-      const images = document.querySelectorAll ("img") ;      images.forEach (img => {"        if (!img.loading) {,"});,"})"
-          img.loading = "lazy",        }"        if (!img.decoding) {,"});,"})"
+const optimizeImages = (props: any) => {,"}
+    );,"})"
+      const images = document.querySelectorAll ("img") ;      images.forEach (img => {"        if (!img.loading) {,"}
+    );,"})"
+          img.loading = "lazy",        }"        if (!img.decoding) {,"}
+    );,"})"
           img.decoding = "async",        }"      }) };// comment
-    preloadCriticalResources () ;,"});,"})"
-    optimizeImages () ;,"});,"})"
+    preloadCriticalResources () ;,"}
+    );,"})"
+    optimizeImages () ;,"}
+    );,"})"
     // comment
-const observer = new IntersectionObserver ( (entries) => {,"});,"})"
-        entries.forEach (entry => {,"});,"})"
-          if (entry.isIntersecting) {,"});,"})"
-            const target = entry.target as HTMLElement,"});,"})"
-            if (target.dataset.src) {,"});,"})"
-target.style.backgroundImage = "url (${target.dataset.src}) ";"              target.removeAttribute ("data - src") ,              observer.unobserve (target) ;"            };,"});,"});"
-}) ;,"});,"});"
+const observer = new IntersectionObserver ( (entries) => {,"}
+    );,"})"
+        entries.forEach (entry => {,"}
+    );,"})"
+          if (entry.isIntersecting) {,"}
+    );,"})"
+            const target = entry.target as HTMLElement,"}
+    );,"})"
+            if (target.dataset.src) {,"}
+    );,"})"
+target.style.backgroundImage = "url (${target.dataset.src}) ";"              target.removeAttribute ("data - src") ,              observer.unobserve (target) ;"            };,"}
+    );,"}
+    );"
+}
+    );,"}
+    );,"}
+    );"
 } { rootMargin: "50px" }") ;"// comment
-    const lazyElements = document.querySelectorAll ("[data - src]") ;    lazyElements.forEach (el = > observer.observe (el) ) ,return () => {,"});,"})"
-      observer.disconnect () ;,"});,"});"
-}, []) ;,"});,"})","});,"})"
-export default function Page(props: any) {,"});,"})"
+    const lazyElements = document.querySelectorAll ("[data - src]") ;    lazyElements.forEach (el = > observer.observe (el) ) ,return () => {,"}
+    );,"})"
+      observer.disconnect () ;,"}
+    );,"}
+    );"
+}, []) ;,"}
+    );,"})","}
+    );,"})"
+export default function Page(props: any) {,"}
+    );,"})"
 interface PerformanceOptimizerProps {
- children: Reac t.ReactNode,"
-});,"});"
-}"});,"})"
-export const PerformanceOptimizer: Reac t.FC<PerformanceOptimizerProps> = ({ children }) => {,"});,"})"
-  useEffect(() => {,"});,"})"
+ children: React.ReactNode,"
+}
+    );,"}
+    );"
+}"}
+    );,"})"
+export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {,"}
+    );,"})"
+  useEffect(() => {,"}
+    );,"})"
     // comment
-      const criticalFonts = [],"});,"})"
-      criticalFonts.forEach(font => {,"});,"})"
-        const link = document.createElement("link");,"});,"})"
-        link.rel = "preload";,"});,"})"
-        link.as = "style";,"});,"})"
-        link.href = font,"});,"})"
-        document.head.appendChild(link);,"});,"});"
-});,"});,"})"
+      const criticalFonts = [],"}
+    );,"})"
+      criticalFonts.forEach(font => {,"}
+    );,"})"
+        const link = document.createElement("link");,"}
+    );,"})"
+        link.rel = "preload";,"}
+    );,"})"
+        link.as = "style";,"}
+    );,"})"
+        link.href = font,"}
+    );,"})"
+        document.head.appendChild(link);,"}
+    );,"}
+    );"
+}
+    );,"}
+    );,"})"
     // comment
-      const images = document.querySelectorAll("img");,"});,"})"
-      images.forEach(img => {,"});,"})"
-        if (!img.loading) {,"});,"})"
-          img.loading = "lazy";,"});,"})"
-        if(!img.decoding) {,"});,"})"
-          img.decoding = "async";,"});,"})"
+      const images = document.querySelectorAll("img");,"}
+    );,"})"
+      images.forEach(img => {,"}
+    );,"})"
+        if (!img.loading) {,"}
+    );,"})"
+          img.loading = "lazy";,"}
+    );,"})"
+        if(!img.decoding) {,"}
+    );,"})"
+          img.decoding = "async";,"}
+    );,"})"
     // comment
-    preloadCriticalResources();,"});,"})"
-    optimizeImages();,"});,"})"
+    preloadCriticalResources();,"}
+    );,"})"
+    optimizeImages();,"}
+    );,"})"
     // comment
-    const observer = new IntersectionObserver((entries) => {,"});,"})"
-        entries.forEach(entry => {,"});,"})"
-            if(target.dataset.src) {,"});,"})"
-              target.style.backgroundImage = "url(${target.dataset.src})";,"});,"})"
-              target.removeAttribute("data-src");,"});,"})"
-              observer.unobserve(target);,"});,"});"
-},,"});,"})"
-      { rootMargin: "50px"  }"});,"})"
-    );,"});,"})"
+    const observer = new IntersectionObserver((entries) => {,"}
+    );,"})"
+        entries.forEach(entry => {,"}
+    );,"})"
+            if(target.dataset.src) {,"}
+    );,"})"
+              target.style.backgroundImage = "url(${target.dataset.src})";,"}
+    );,"})"
+              target.removeAttribute("data-src");,"}
+    );,"})"
+              observer.unobserve(target);,"}
+    );,"}
+    );"
+},,"}
+    );,"})"
+      { rootMargin: "50px"  }"}
+    );,"})"
+    );,"}
+    );,"})"
     // comment
-    const lazyElements = document.querySelectorAll("[data-src]");,"});,"})"
-    lazyElements.forEach(el => observer.observe(el));,"});,"})"
-    return () => {,"});,"})"
-      observer.disconnect();,"});,"});"
-}, []);,"});,"})"
-  return <>{children}</>"});,"})"interface PerformanceOptimizerProps {
+    const lazyElements = document.querySelectorAll("[data-src]");,"}
+    );,"})"
+    lazyElements.forEach(el => observer.observe(el));,"}
+    );,"})"
+    return () => {,"}
+    );,"})"
+      observer.disconnect();,"}
+    );,"}
+    );"
+}, []);,"}
+    );,"})"
+  return <>{children}</>"}
+    );,"})"interface PerformanceOptimizerProps {
 
 
-   children: Reac t.ReactNode
-}export const PerformanceOptimizer: Reac t.FC < PerformanceOptimizerProps> = ({ children }) => {
+   children: React.ReactNode
+}export const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
     // comment
       const criticalFonts = []",criticalFonts.forEach (font => {;interface PerformanceOptimizerProps {
   ": any;
-   children: Reac t.ReactNode
-}export const PerformanceOptimizer: Reac t.FC < PerformanceOptimizerProps> = ({children }) => {useEffect(() => {
+   children: React.ReactNode
+}export const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({children }) => {useEffect(() => {
     // comment
 const preloadCriticalResources = (props: any) => {""
       const criticalFonts = []criticalFonts.forEach (font => {""
@@ -427,8 +503,8 @@ const optimizeImages = (props: any) => {"
 const optimizeImages = (props: any) => {const images = document.querySelectorAll ("img") "      images.forEach (img => {"        if (!img.loading) {;react&apos;interface PerformanceOptimizerProps {
 
 
-   children: Reac t.ReactNode
-}&apos;&apos;export const PerformanceOptimizer: Reac t.FC < PerformanceOptimizerProps> = ({ children }) => {
+   children: React.ReactNode
+}&apos;&apos;export const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({ children }) => {
     // comment
 
 const preloadCriticalResources = (props: any) => {}

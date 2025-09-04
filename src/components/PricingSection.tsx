@@ -122,7 +122,7 @@ key = "{plan.name}""
                     <IconComponent className=""w-8" h-8"}        />
                   </div>
                   {/* comment */}"
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}"
                   <p className="text-zion-slate-light mb-6">{plan.description}</p>
                   {/* comment */}"
                   <div className="mb-6">"
@@ -203,7 +203,7 @@ whileHover="{{" scale: 1.02 }}"
           <div className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8">"
             <h3 className="text-2xl font-bold text-white mb-4">
               Need a Custom Solution?
-            </h3>"
+            "
             <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
               We understand that every business is unique. Contact us to discuss custom pricing,
 and solutions tailored to your specific requirements.
@@ -238,7 +238,7 @@ export default function PricingSection(props: any) {return ("
           Professional PricingSection services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>
 </motion>

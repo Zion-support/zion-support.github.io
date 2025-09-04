@@ -1,7 +1,7 @@
 import React from 'react';';';
 interface ButtonProps {
   ';';';: any;
-  children: Reac t.ReactNode;',';';
+  children: React.ReactNode;',';';
   ';';';: any;
   variant?: 'default' | 'outline' | 'ghost' | 'link',',';';
   ';';';';: any;
@@ -13,7 +13,7 @@ interface ButtonProps {
   type?: 'button' | 'submit' | 'reset';';
   disabled?: boolean
 }';';
-export const Button: Reac t.FC<ButtonProps> = ({';';';
+export const Button: React.FC<ButtonProps> = ({';';';
   children,',';';
     ';';';
   variant = 'default',',';';

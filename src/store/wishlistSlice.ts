@@ -5,6 +5,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'; export interface 
   } }, removeFromWishlist: ({ state.items = state.items.filter(item => item.listingId !== action.payload)) => $3 state.itemCount = state.items.length
   }, clearWishlist: ({ state.items = []) => $3 state.itemCount = 0
   }
-  }); export const { addToWishlist, removeFromWishlist, clearWishlist } = wishlistSlice.actions);
+  }
+    ); export const { addToWishlist, removeFromWishlist, clearWishlist } = wishlistSlice.actions);
 ';
 export default ComponentName;"';';

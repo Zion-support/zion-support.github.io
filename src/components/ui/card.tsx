@@ -51,11 +51,10 @@ export function CardFooter(props: any) {
     <div className={`flex items-center p-6 pt-0 ${className}`} {...props}  />
   );
 }
-</HTMLDivElement>
-</HTMLDivElement>
-</HTMLParagraphElement>
-</h3>
+
+
+
+
 </HTMLHeadingElement>
-</HTMLDivElement>
+
 </div>
-</HTMLDivElement>

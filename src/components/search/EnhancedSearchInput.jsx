@@ -40,7 +40,7 @@ export function EnhancedSearchInput(props: any) {const [isOpen, setIsOpen] = use
       setIsOpen(false)
       )}
     </div>
-  );
+    );
 }
     setHighlightedIndex(-1)}, [value, suggestions]);
       setIsOpen(true)} else {
@@ -125,7 +125,7 @@ export function EnhancedSearchInput(props: any) {const [isOpen, setIsOpen] = use
         <input type="text" value={value} onChange={(e) => onChange(e.target.value)
       )}
     </div>
-  );
+    );
 }';
   const getSuggestionIcon = (props: any) => {';';
     const lowerSuggestion = suggestion.toLowerCase();""';';';
@@ -168,7 +168,7 @@ export function EnhancedSearchInput(props: any) {const [isOpen, setIsOpen] = use
           onFocus={() => value.trim() && setIsOpen(true)
       )}
     </div>
-  );
+    );
 }
           placeholder={placeholder}`
           className={`w-full pl-10 pr-10 py-2 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focu,
@@ -192,7 +192,7 @@ export function EnhancedSearchInput(props: any) {const [isOpen, setIsOpen] = use
         )
       )}
     </div>
-  );
+    );
 }
       </div>
       {/* Suggestions Dropdown */} {isOpen && (
@@ -231,7 +231,7 @@ export function EnhancedSearchInput(props: any) {const [isOpen, setIsOpen] = use
                   <button key={suggestion} onClick={() => handleSuggestionSelect(suggestion)
       )}
     </div>
-  );
+    );
 }';
                   <button key={suggestion}';';
                     onClick={() =" > handleSuggestionSelect(suggestion)}`"';';';
@@ -264,7 +264,7 @@ export function EnhancedSearchInput(props: any) {const [isOpen, setIsOpen] = use
                 <button key={search} onClick={() => handleSuggestionSelect(search)
       )}
     </div>
-  );
+    );
 }
                   className="w-full flex items-center px-3 py-2 text-sm text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors"
                   <Clock className="h-4 w-4 mr-3 text-zion-slate-light"  />

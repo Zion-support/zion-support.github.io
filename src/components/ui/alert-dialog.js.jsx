@@ -20,7 +20,8 @@ export function AlertDialogTrigger(props: any) {
     const context = useContext(AlertDialogContext);
     if (!context)
         throw new Error('AlertDialogTrigger must be used within AlertDialog');
-    return (<div onClick={() => context.setIsOpen(true)}>
+    return (
+        <div onClick={() => context.setIsOpen(true)}>
       {children}
     </div>)}
 export function AlertDialogContent(props: any) {
@@ -29,7 +30,8 @@ export function AlertDialogContent(props: any) {
         throw new Error('AlertDialogContent must be used within AlertDialog');
     if (!context.isOpen)
         return null;
-    return (<div className="fixed inset-0 z-50 flex items-center justify-center">
+    return (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
       <div className="fixed inset-0 bg-black bg-opacity-50" />
       <div className={`relative bg-white rounded-lg p-6 max-w-md w-full mx-4 ${className}`}>
         {children}

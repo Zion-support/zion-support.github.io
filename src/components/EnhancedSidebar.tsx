@@ -98,7 +98,7 @@ export default function Page(props: any) {
 
 }}
         >"
-          <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?</h3>"
+          <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?"
           <div className="space-y-2 text-xs text-zion-slate-light">"
             <div className="flex items-center space-x-2">"
               <Phone className="w-3 h-3"   />

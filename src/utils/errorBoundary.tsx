@@ -35,7 +35,8 @@ class ErrorBoundary extends Component<Props, State> {
     this.setState({
       error,
       errorInfo
-    });
+    }
+    );
 
     // Log error to external service
     this.logError(error, errorInfo);

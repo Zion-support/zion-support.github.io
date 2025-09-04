@@ -1346,7 +1346,7 @@ export const SERVICE_PRICING_TIERS = {
   description: "Essential services for small businesses and startups"
 
 ;
-;;
+;
 },;"
   professional: { range: "$2,000 - $8,000", description: "Advanced solutions for growing companies and mid-market" },;"
   enterprise: { range: "$8,000 - $25,000", description: "Custom enterprise solutions with dedicated support" },;"
@@ -1379,4 +1379,4 @@ export default function enhancedServices() {return (
           Professional enhancedServices services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"

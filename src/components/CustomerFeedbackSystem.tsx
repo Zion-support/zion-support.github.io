@@ -7,7 +7,7 @@ export default function Page(props: any) {
   showFilters?: boolean;
   maxFeedback?: number}
 
-export const CustomerFeedbackSystem: Reac t.FC<CustomerFeedbackSystemProps> = ({
+export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
 
 showStats: tru e,;
   showFilters = true,;
@@ -20,7 +20,8 @@ showStats: tru e,;
     averageRating: 0,
     positivePercentage: 0,
     responseRate: 0,
-    topCategories[]});
+    topCategories[]}
+    );
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [selectedRating, setSelectedRating] = useState<any>(0);  const [searchQuery, setSearchQuery] = useState<any>('');
   const [showFeedbackForm, setShowFeedbackForm] = useState<any>(false);
@@ -29,7 +30,8 @@ showStats: tru e,;
     rating: 0,
     comment: '',
     category: 'overall' as Feedback['category']
-  });
+  }
+    );
 
   // Sample feedback data
   useEffect(() => {
@@ -196,7 +198,8 @@ showStats: tru e,;
   verified: fals e;
     };
 
-    setFeedback(prev  => [feedback, ...prev]);    setNewFeedback({ rating: 0, comment: '', category: 'overall' });
+    setFeedback(prev  => [feedback, ...prev]);    setNewFeedback({ rating: 0, comment: '', category: 'overall' }
+    );
     setShowFeedbackForm(false)};
 
   // Handle helpful/unhelpful votes'
@@ -329,7 +332,7 @@ showStats: tru e,;
       {/* Top Categories */}
       {showStats && ("
         <div className="mb-8">"
-          <h3 className="text-xl font-semibold text-white mb-4">Top Categories</h3>"
+          <h3 className="text-xl font-semibold text-white mb-4">Top Categories"
           <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-4">
             {stats.topCategories.map((category, index)  => (
               <motion.div
@@ -432,7 +435,7 @@ showStats: tru e,;
             className="mb-6 overflow-hidden"
 "
             <div className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">"
-              <h3 className="text-lg font-semibold text-white mb-4">Share Your Experience</h3>
+              <h3 className="text-lg font-semibold text-white mb-4">Share Your Experience
 "
               <div className="space-y-4">
                 {/* Rating */}
@@ -616,7 +619,7 @@ showStats: tru e,;
           className="text-center py-12"
 "
           <MessageCircle className="w-16 h-16 text-zinc-600 mx-auto mb-4"   />"
-          <h3 className="text-xl font-medium text-zinc-300 mb-2">No feedback found</h3>"          <p className="text-zinc-400 mb-4">
+          <h3 className="text-xl font-medium text-zinc-300 mb-2">No feedback found"          <p className="text-zinc-400 mb-4">
             Try adjusting your filters or be the first to share your experience!
           </p>
           <button

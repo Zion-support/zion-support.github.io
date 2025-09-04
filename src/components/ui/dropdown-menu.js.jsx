@@ -15,10 +15,12 @@ export function DropdownMenuTrigger(props: any) {
     if (!context)
         throw new Error('DropdownMenuTrigger must be used within DropdownMenu');
     if (asChild) {
-        return (<div onClick={() => context.setIsOpen(!context.isOpen)}>
+        return (
+        <div onClick={() => context.setIsOpen(!context.isOpen)}>
         {children}
       </div>)}
-    return (<div onClick={() => context.setIsOpen(!context.isOpen)}>
+    return (
+        <div onClick={() => context.setIsOpen(!context.isOpen)}>
       {children}
     </div>)}
 export function DropdownMenuContent(props: any) {
@@ -34,7 +36,8 @@ export function DropdownMenuContent(props: any) {
     
 
 };
-    return (<div className={`absolute z-50 mt-2 w-48 bg-white rounded-md shadow-lg py-1 border border-gray-200 ${alignClasses[align]} ${className}`}>
+    return (
+        <div className={`absolute z-50 mt-2 w-48 bg-white rounded-md shadow-lg py-1 border border-gray-200 ${alignClasses[align]} ${className}`}>
       {children}
     </div>)}
 export function DropdownMenuItem(props: any) {
@@ -46,7 +49,8 @@ export function DropdownMenuItem(props: any) {
             onClick();
         context.setIsOpen(false)};
     if (asChild) {
-        return (<div className={`block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer ${className}`}>
+        return (
+        <div className={`block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer ${className}`}>
         {children}
       </div>)}
     return (<button className={`block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none ${className}`} onClick={handleClick}>

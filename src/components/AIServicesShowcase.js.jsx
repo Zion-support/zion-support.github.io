@@ -218,7 +218,7 @@ export function AIServicesShowcase(props: any) {
                         <service .icon className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-white">{service.name}</h3>
+                        <h3 className="text-xl font-bold text-white">{service.name}
                         <div className="text-zion-slate-light text-sm">{service.category}</div>
                       </div>
                     </div>

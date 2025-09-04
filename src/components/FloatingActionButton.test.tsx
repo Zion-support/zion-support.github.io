@@ -9,6 +9,6 @@ export default function FloatingActionButton.test() {return (
           Professional FloatingActionButton.test services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

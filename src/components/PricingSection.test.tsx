@@ -9,6 +9,6 @@ export default function PricingSection.test() {return (
           Professional PricingSection.test services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

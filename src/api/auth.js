@@ -8,7 +8,8 @@ export async function requestPasswordReset(email) {}
     method: 'POST','''
     headers: { 'Content-Type': 'application/json' },'
     body: JSON.stringify({ email })''
-  });'''
+  }
+    );'''
   if (!res.ok) throw new Error('Failed to send reset code');
   return res.json().catch(() => ({}));
 }
@@ -22,7 +23,8 @@ export async function verifyResetCode(email, code) {}
     method: 'POST','''
     headers: { 'Content-Type': 'application/json' },'
     body: JSON.stringify({ email, code })''
-  });'''
+  }
+    );'''
   if (!res.ok) throw new Error('Invalid code');
   return res.json();
 }
@@ -36,7 +38,8 @@ export async function resetPassword(token, password) {}
     method: 'PUT','''
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ token, password })'
-  });''
+  }
+    );''
   const data = await res.json().catch(() => ({}));'''
   if (!res.ok) throw new Error(data.message || 'Failed to reset password');
   return data;

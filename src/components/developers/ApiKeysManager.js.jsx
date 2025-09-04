@@ -43,10 +43,12 @@ export default function ApiKeysManager(props: any) {}
     if(loading) {}
 """
 """"
-        return (<div className="flex items-center justify-center p-8">""""
+        return (
+        <div className="flex items-center justify-center p-8">""""
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-zion-cyan"></div>"""
       </div>)}""""
-    return (<div className="space-y-6">""""
+    return (
+        <div className="space-y-6">""""
       <div className="flex items-center justify-between">"""
         <div>""""
           <h2 className="text-2xl font-bold text-white">API Keys</h2>""""
@@ -96,7 +98,7 @@ export default function ApiKeysManager(props: any) {}
 """
       {/* New API Key Display */}""""
       {newApiKey && (<div className="bg-green-900/20 border border-green-500/30 rounded-lg p-4">""""
-          <h3 className="text-green-400 font-semibold mb-2">New API Key Created!</h3>""""
+          <h3 className="text-green-400 font-semibold mb-2">New API Key Created!""""
           <p className="text-green-300 text-sm mb-3">'
             Copy this key now. You won't be able to see it again."""
           </p>""""
@@ -116,7 +118,7 @@ export default function ApiKeysManager(props: any) {}
             <div className="flex items-center justify-between">""""
               <div className="flex-1">""""
                 <div className="flex items-center gap-3 mb-2">""`
-                  <h3 className="text-white font-semibold">{apiKey.name}</h3>`'`
+                  <h3 className="text-white font-semibold">{apiKey.name}`'`
                   <span className={`px-2 py-1 text-xs rounded-full ${apiKey.isActive''`
                 ? 'bg-green-900/30 text-green-400 border border-green-500/30''`'`
                 : 'bg-red-900/30 text-red-400 border border-red-500/30'}`}>'

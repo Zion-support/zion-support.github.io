@@ -41,7 +41,8 @@ export function usePerformance(props: any) {
     ttfb: nul l,
     domLoad: nul l,
     windowLoad: nul l,
-    navigationStart: nul l});
+    navigationStart: nul l}
+    );
 
   const [isMonitoring, setIsMonitoring] = useState<any>(false);
 :src/hooks/usePerformance.tsx
@@ -54,19 +55,22 @@ export function usePerformance(props: any) {
       
       if (fcpEntry) {
 
-        setMetrics(prev => ({ ...prev, fcp: fcpEntr y.startTime }))});
+        setMetrics(prev => ({ ...prev, fcp: fcpEntr y.startTime }))}
+    );
     // Largest Contentful Paint (LCP)
     
       
       if (lcpEntry) {
 
-        setMetrics(prev => ({ ...prev, lcp: lcpEntr y.startTime }))});
+        setMetrics(prev => ({ ...prev, lcp: lcpEntr y.startTime }))}
+    );
     // First Input Delay (FID)
     
       
       if (fidEntry && 'processingStart' in fidEntry) {
 
-        setMetrics(prev => ({ ...prev, fid: fidEntr y.processingStart - fidEntry.startTime }))});
+        setMetrics(prev => ({ ...prev, fid: fidEntr y.processingStart - fidEntry.startTime }))}
+    );
     // Cumulative Layout Shift (CLS)
     
       for (const entry of list.getEntries()) {
@@ -79,17 +83,20 @@ export function usePerformance(props: any) {
     
       
       if (fcpEntry) {
-        setMetrics(prev => ({ ...prev, fcp: fcpEntr y.startTime }))});
+        setMetrics(prev => ({ ...prev, fcp: fcpEntr y.startTime }))}
+    );
     // Largest Contentful Paint (LCP)
     
       
       if (lcpEntry) {
-        setMetrics(prev => ({ ...prev, lcp: lcpEntr y.startTime }))});
+        setMetrics(prev => ({ ...prev, lcp: lcpEntr y.startTime }))}
+    );
     // First Input Delay (FID)
     
       
       if (fidEntry && 'processingStart' in fidEntry) {
-        setMetrics(prev => ({ ...prev, fid: fidEntr y.processingStart - fidEntry.startTime }))});
+        setMetrics(prev => ({ ...prev, fid: fidEntr y.processingStart - fidEntry.startTime }))}
+    );
     // Cumulative Layout Shift (CLS)
     
       for (const entry of list.getEntries()) {
@@ -99,20 +106,27 @@ export function usePerformance(props: any) {
           clsValue += layoutShiftEntry.value;
 
 
-      setMetrics(prev => ({ ...prev, cls: clsValu e }))});
+      setMetrics(prev => ({ ...prev, cls: clsValu e }))}
+    );
     // Start observing
     try {
 :src/hooks/usePerformance.tsx
 '
-      fcpObserver.observe({ entryTypes: ['paint'] });'
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });'
-      fidObserver.observe({ entryTypes: ['first-input'] });'
+      fcpObserver.observe({ entryTypes: ['paint'] }
+    );'
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }
+    );'
+      fidObserver.observe({ entryTypes: ['first-input'] }
+    );'
       clsObserver.observe({ entryTypes: ['layout-shift'] })} catch (error) {
 
       // // // // // // // // }
-      fcpObserver.observe({ entryTypes: ['paint'] });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      fidObserver.observe({ entryTypes: ['first-input'] });
+      fcpObserver.observe({ entryTypes: ['paint'] }
+    );
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }
+    );
+      fidObserver.observe({ entryTypes: ['first-input'] }
+    );
       clsObserver.observe({ entryTypes: ['layout-shift'] })} catch (error) {
       // // // // // // // }
     // Navigation timing metrics
@@ -139,7 +153,8 @@ export function usePerformance(props: any) {
         windowLoad
       }));
 
-          // // // // // // // // })});
+          // // // // // // // // })}
+    );
     try {
 :src/hooks/usePerformance.tsx
 '
@@ -194,14 +209,16 @@ export function usePerformance(props: any) {
             
             setMetrics(prev => ({ ...prev, fcp }));
             if (logToConsole) // }
-        })});
+        })}
+    );
       observerRef.current.observe({ entryTypes: ['paint'] })} catch (e) {
 
       // }
             
             setMetrics(prev => ({ ...prev, fcp }));
             if (logToConsole) }
-        })});
+        })}
+    );
       observerRef.current.observe({ entryTypes: ['paint'] })} catch (e) {
       }
 
@@ -217,7 +234,8 @@ export function usePerformance(props: any) {
           
           setMetrics(prev => ({ ...prev, lcp }));
           if (logToConsole) // }
-      });
+      }
+    );
       lcpObserverRef.current.observe({ entryTypes: ['largest-contentful-paint'] })} catch (e) {
 
       // }
@@ -227,7 +245,8 @@ export function usePerformance(props: any) {
           
           setMetrics(prev => ({ ...prev, lcp }));
           if (logToConsole) }
-      });
+      }
+    );
       lcpObserverRef.current.observe({ entryTypes: ['largest-contentful-paint'] })} catch (e) {
       }
 
@@ -244,7 +263,8 @@ export function usePerformance(props: any) {
             clsValue += (entry as any).value}
         }
         setMetrics(prev => ({ ...prev, cls: clsValu e }));
-        if (logToConsole) // });
+        if (logToConsole) // }
+    );
       clsObserverRef.current.observe({ entryTypes: ['layout-shift'] })} catch (e) {
 
       // }
@@ -259,7 +279,8 @@ export function usePerformance(props: any) {
             clsValue += (entry as any).value}
         }
         setMetrics(prev => ({ ...prev, cls: clsValu e }));
-        if (logToConsole) });
+        if (logToConsole) }
+    );
       clsObserverRef.current.observe({ entryTypes: ['layout-shift'] })} catch (e) {
       }
   }, [enableWebVitals, logToConsole]);
@@ -469,7 +490,8 @@ export function useRenderTime(props: any) {
     
     
     setRenderTime(time);
-    renderStart.current = renderEnd});
+    renderStart.current = renderEnd}
+    );
   return renderTime}
 
 // Hook for monitoring specific component performance
@@ -537,12 +559,14 @@ export function useAPIPerformance(...args: unknow n[]): unknown {
       if (average > threshold) {
 
         slowAPIs.push({ endpoint, average })}
-    });
+    }
+    );
     return slowAPIs.sort(a: unknow n, b: unknown b.average - a.average)}, [apiMetrics]);
       
       if (average > threshold) {
         slowAPIs.push({ endpoint, average })}
-    });
+    }
+    );
     return slowAPIs.sort((a, b) => b.average - a.average)}, [apiMetrics]);
 
   return {

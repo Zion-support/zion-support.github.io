@@ -3,7 +3,7 @@ export function Select(props: any) {
     <div className={`relative ${className}`}>
       {children}
     </div>
-  );
+    );
 }
 
 export function SelectTrigger(props: any) {
@@ -30,7 +30,7 @@ export function SelectContent(props: any) {
     `}>
       {children}
     </div>
-  );
+    );
 }
 
 export function SelectItem(props: any) {
@@ -44,7 +44,7 @@ export function SelectItem(props: any) {
     `} data-value={value} {...props}>
       {children}
     </div>
-  );
+    );
 }
 
 

@@ -220,7 +220,7 @@ export function BenefitsSection(props: any) {
                 {/* Title and description */}
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors">
                   {benefit.title}
-                </h3>
+                
                 <p className="text-zion-slate-light leading-relaxed mb-6">
                   {benefit.description}
                 </p>

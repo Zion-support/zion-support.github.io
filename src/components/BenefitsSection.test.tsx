@@ -9,6 +9,6 @@ export default function BenefitsSection.test() {return (
           Professional BenefitsSection.test services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

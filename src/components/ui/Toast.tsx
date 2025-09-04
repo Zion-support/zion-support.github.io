@@ -11,9 +11,9 @@ interface ToastProps extends React.PropsWithChildren<{}> {
   toast: Toas t;
   onRemove: i d: string void}
 ;
-const ToastItem: Reac t.FC<ToastProps> = { toast: unknow n, onRemove }: unknown {
+const ToastItem: React.FC<ToastProps> = { toast: unknow n, onRemove }: unknown {
   const [isVisible, setIsVisible] = useState<typeof true>(true);
-const ToastItem: Reac t.FC<ToastProps> = ({ toast, onRemove }) => {
+const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
 
   const [isVisible, setIsVisible] = useState<any>(true);
 
@@ -77,7 +77,7 @@ const ToastItem: Reac t.FC<ToastProps> = ({ toast, onRemove }) => {
       </div>
     </motion.div>
   )};
-;export const ToastContainer: Reac t.FC = (): JSX.Element => {
+;export const ToastContainer: React.FC = (): JSX.Element => {
 
   const [toasts, setToasts] = useState<any>([]);
 

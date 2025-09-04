@@ -8,12 +8,13 @@ interface InputFieldsProps {
 
 }
 
-const InputFields: Reac t.FC<InputFieldsProps> = ({ inputData, setInputData, onNext }) => {
+const InputFields: React.FC<InputFieldsProps> = ({ inputData, setInputData, onNext }) => {
   const handleInputChange = (props: any) => {
     setInputData({
       ...inputData,
       [field]: value
-    });
+    }
+    );
   };
 
   const handleSubmit = (props: any) => {
@@ -88,7 +89,7 @@ const InputFields: Reac t.FC<InputFieldsProps> = ({ inputData, setInputData, onN
         </button>
       </form>
     </div>
-  );
+    );
 };
 
 export default InputFields;

@@ -11,7 +11,7 @@ const Badge = (props: any) => {
     <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
       {children}
     </div>
-  );
+    );
 };
 
 export {Badge};

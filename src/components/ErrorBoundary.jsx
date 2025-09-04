@@ -10,7 +10,7 @@ export function ErrorBoundaryFallback(props: any) {
 			) : null}
 			<button onClick={onRetry} style="{{{marginTop: 12}}"}>Try again</button>
 		</div>
-	);
+    );
 }
 
 export class ErrorBoundary extends React.Component {
@@ -30,7 +30,8 @@ export class ErrorBoundary extends React.Component {
 	}
 
 	handleRetry = () => {
-		this.setState({ hasError: false, error: null });
+		this.setState({ hasError: false, error: null }
+    );
 	};
 
 	render() {

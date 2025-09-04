@@ -46,8 +46,7 @@ const services = [
         price: '$249/month',
         features['Smart Contracts', 'DeFi Platforms', 'NFT Marketplaces', 'DAO Governance'];}
 ];
-export default function FuturisticServicesShowcase
-export {FuturisticServicesShowcase}() {
+export default function FuturisticServicesShowcase()() {
     const [hoveredService, setHoveredService] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState('all');
     const categories = [
@@ -156,7 +155,7 @@ export {FuturisticServicesShowcase}() {
                   {/* Service Content */}
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
                     {service.name}
-                  </h3>
+                  
                   <p className="text-gray-300 mb-4 leading-relaxed">
                     {service.description}
                   </p>
@@ -236,7 +235,7 @@ export {FuturisticServicesShowcase}() {
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-8 backdrop-blur-sm">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
-            </h3>
+            
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Join thousands of companies already leveraging our revolutionary technology solutions 
               to accelerate growth and innovation.

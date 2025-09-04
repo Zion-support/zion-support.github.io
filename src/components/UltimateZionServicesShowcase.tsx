@@ -1,4 +1,4 @@
-const UltimateZionServicesShowcase: Reac t.FC = () : JSX.Element => {;
+const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [searchTerm, setSearchTerm] = useState<any>('');
 
@@ -7,7 +7,8 @@ const UltimateZionServicesShowcase: Reac t.FC = () : JSX.Element => {;
 
       service.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ||;
       service.tagline.toLowerCase () .includes(searchTerm.toLowerCase () ) ;
-    return matchesCategory && matchesSearch}) ;
+    return matchesCategory && matchesSearch}
+    );
 
       transition: {
         staggerChildren: 0.1,;
@@ -26,7 +27,8 @@ const UltimateZionServicesShowcase: Reac t.FC = () : JSX.Element => {;
       y: 0,;
       transition: { duration: 0.5 }}};
 
-  return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">
+  return (
+        <div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div  className="max - w-7xl mx - auto text-center">
@@ -102,7 +104,7 @@ const UltimateZionServicesShowcase: Reac t.FC = () : JSX.Element => {;
           >"
             <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               🚀 Ready to Transform Your Business?
-            </h3>
+            
             <div  className="grid grid - cols - 1 md: gri d - cols - 3 gap-6 text-sm">
               <div  className="text-center">
                 <div  className="text-purple - 400 font - semibold text-lg mb-2">📱 Contact Us</div>
@@ -193,7 +195,7 @@ const UltimateZionServicesShowcase: Reac t.FC = () : JSX.Element => {;
                   <div className={`text-6xl mb-4 group-hover: scal e-110 transition-transform duration-300`}>
                     {service.icon}
                   </div>"
-                  <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>"
+                  <h3 className="text-xl font-semibold text-white mb-2">{service.name}"
                   <p className="text-sm text-purple-400 font-medium mb-2">
                     {service.category.replace('-',).toUpperCase()}
                   </p>"

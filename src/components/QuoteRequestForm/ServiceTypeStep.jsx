@@ -80,10 +80,12 @@ export function ServiceTypeStep(props: any) {
         if (searchQuery.trim() === "")
             return true;
         return item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.category.toLowerCase().includes(searchQuery.toLowerCase())});
-    return (<div className="space-y-6">
+            item.category.toLowerCase().includes(searchQuery.toLowerCase())}
+    );
+    return (
+        <div className="space-y-6">
       <div>
-        <h3 className="text-xl font-semibold text-white mb-4">What are you looking for?</h3>
+        <h3 className="text-xl font-semibold text-white mb-4">What are you looking for?
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <Card className={`p-4 cursor-pointer border-2 transition-colors ${formData.serviceType === "service"
             ? "bg-zion-purple/20 border-zion-purple"
@@ -109,7 +111,7 @@ export function ServiceTypeStep(props: any) {
       </div>
 
       {formData.serviceType && (<div className="space-y-4">
-          <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>
+          <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}
 
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />

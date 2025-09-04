@@ -8,11 +8,12 @@ interface User {
   email: string;
   createdAt?: string;
 
-const ApiDemo: Reac t.FC = (): JSX.Element => {;
+const ApiDemo: React.FC = (): JSX.Element => {;
   const [users, setUsers] = useState<any>([]);
   const [loading, setLoading] = useState<any>(false);
   const [error, setError] = useState<any>(null);
-const [newUser, setNewUser] = useState<any>({ name: '', email: ''});
+const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
+    );
   const [healthStatus, setHealthStatus] = useState<any>('Checking...');
 
   // Check API health on component mount
@@ -74,13 +75,13 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''});
 
         {/* API Health Status */}"
         <div className="mb-6 p-4 bg-gray-50 rounded-lg">"
-          <h3 className="text-lg font-semibold text-gray-700 mb-2">API Status</h3>"
+          <h3 className="text-lg font-semibold text-gray-700 mb-2">API Status"
           <p className="text-sm text-gray-600">{healthStatus}</p>
         </div>
 
         {/* Create User Form */}"
         <div className="mb-6 p-4 bg-blue-50 rounded-lg">"
-          <h3 className="text-lg font-semibold text-blue-700 mb-4">Create New User</h3>"
+          <h3 className="text-lg font-semibold text-blue-700 mb-4">Create New User"
           <form onSubmit={handleCreateUser} className="space-y-4">"
             <div className="grid grid-cols-1 md: gri d-cols-2 gap-4">
               <input"
@@ -124,7 +125,7 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''});
         {/* Users List */}"
         <div className="p-4 bg-gray-50 rounded-lg">"
           <div className="flex justify-between items-center mb-4">"
-            <h3 className="text-lg font-semibold text-gray-700">Users({users.length})</h3>
+            <h3 className="text-lg font-semibold text-gray-700">Users({users.length})
             <button
               onClick={fetchUsers}
               disabled={loading}"
@@ -163,7 +164,7 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''});
 
         {/* Architecture Info */}"
         <div className="mt-8 p-4 bg-green-50 rounded-lg">"
-          <h3 className="text-lg font-semibold text-green-700 mb-2">🏗️ Architecture</h3>"
+          <h3 className="text-lg font-semibold text-green-700 mb-2">🏗️ Architecture"
           <div className="text-sm text-green-700 space-y-1">
             <p>• <strong>Frontend:</strong> Vite + React(Port 3000) - Fast HMR & optimized builds</p>
             <p>• <strong>Backend:</strong> Node.js + Express(Port 5000) - API endpoints & business logic</p>;

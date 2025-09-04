@@ -1,5 +1,5 @@
 import React from 'react';
-          </h3>
+          
           <button onClick={onClose}"
             className="lg: hidden p-2 hover: b g-zion-blue-light/20 rounded-lg transition-colors"
 "
@@ -48,7 +48,8 @@ import React from 'react';
                         {option.label}
                         {option.count && ("
                           <span className="ml-2 text-zion-slate-light/60">
-                            ({option.count});
+                            ({option.count}
+    );
                           </span>;
                         )};
                       </span>;

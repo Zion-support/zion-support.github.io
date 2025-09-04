@@ -9,7 +9,7 @@ interface EnhancedAccessibilityProps {
   showControls?: boolean;
   className?: string;
 
-export const EnhancedAccessibility: Reac t.FC<EnhancedAccessibilityProps> = ({
+export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
 
   enabled = true,;: any;
   showControls = true,;: any;
@@ -20,7 +20,7 @@ export const EnhancedAccessibility: Reac t.FC<EnhancedAccessibilityProps> = ({
 
   colorBlindness: 'normal' | 'protanopia' | 'deuteranopia' | 'tritanopia';
   fontSize: 'small' | 'medium' | 'large' | 'xlarge'}
-export const EnhancedAccessibility: Reac t.FC = () => {
+export const EnhancedAccessibility: React.FC = () => {
   const [isOpen, setIsOpen] = useState<any>(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
 
@@ -32,7 +32,8 @@ export const EnhancedAccessibility: Reac t.FC = () => {
     focusIndicator: tru e,
     colorBlindness: 'normal',
     fontSize: 'medium'
-  }) ;
+  }
+    );
 
   // Apply accessibility settings to document
   
@@ -172,7 +173,8 @@ export const EnhancedAccessibility: Reac t.FC = () => {
           
 modals.forEach(modal:  > {;
             if (modal.getAttribute('aria-hidden') === 'false') {;
-              (modal as HTMLElement).click()}) ;          break;
+              (modal as HTMLElement).click()}
+    );          break;
 
   // Keyboard navigation support
   useEffect(() => {

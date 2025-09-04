@@ -26,7 +26,8 @@ const talentProfileSchema = z.object({
     }),
     availability: z.enum(["available", "limited", "unavailable"]),
     enhancedProfile: z.boolean().default(true),
-});
+}
+    );
 export function TalentRegistrationForm(props: any) {
     // Remove the useToast() hook since we're importing the toast function directly
     const { user } = useAuth();
@@ -48,7 +49,8 @@ export function TalentRegistrationForm(props: any) {
             availability: "available",
             enhancedProfile: true,
         },
-    });
+    }
+    );
     // Handle adding skill tags
     const handleAddSkill = (props: any) => {
         const skillInput = form.getValues("skills");
@@ -80,7 +82,8 @@ export function TalentRegistrationForm(props: any) {
             toast({
                 title: "More information needed",
                 description: "Please provide at least a detailed bio before generating enhanced content.",
-            });
+            }
+    );
             return}
         try {
             setIsGenerating(true);
@@ -95,7 +98,8 @@ export function TalentRegistrationForm(props: any) {
                         location: formData.location
 
 
-            });
+            }
+    );
             if (error) {throw new Error(error.message)}
             setGeneratedContent(data);
             toast({title: "Enhanced Profile Generated",
@@ -106,7 +110,8 @@ export function TalentRegistrationForm(props: any) {
                 title: "Generation failed",
                 description: error.message || "There was an error generating your enhanced profile. Please try again.",
                 variant: "destructive",
-            })}
+                }
+    );
         finally {setIsGenerating(false)}
     };
     // Apply generated content to form
@@ -123,7 +128,8 @@ export function TalentRegistrationForm(props: any) {
                         if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {
                             newSkills.push(skill)}
                     })}
-            });
+            }
+    );
             if (newSkills.length > 0) {setSkillTags([...skillTags, ...newSkills])}
         }
     };
@@ -168,7 +174,8 @@ export function TalentRegistrationForm(props: any) {
                 title: "Skills required",
                 description: "Please add at least one skill to your profile.",
                 variant: "destructive",
-            });
+            }
+    );
             return}
         setIsSubmitting(true);
         try {
@@ -189,7 +196,8 @@ export function TalentRegistrationForm(props: any) {
                                 location: values.location
 
 
-                    });
+                    }
+    );
                     if (aiData) {
                         finalSummary = aiData.summary;
                         // Safely merge AI suggested skills with user-provided skills
@@ -202,7 +210,8 @@ export function TalentRegistrationForm(props: any) {
                                     if (typeof skill === 'string' && skill) {
                                         aiSkills.push(skill)}
                                 })}
-                        });
+                        }
+    );
                         // Create a unique set of skills
                         finalSkills = [...new Set([...skillTags, ...aiSkills])]}
                 }
@@ -220,7 +229,8 @@ export function TalentRegistrationForm(props: any) {
                 toast({
                     title: "Profile Created Successfully",
                     description: "Your talent profile has been published and is now visible in the directory.",
-                });
+                }
+    );
                 // Send notification email if we have user email
                 if (userEmail && values.enhancedProfile && user?.id) {sendEnhancementNotification(user.id, userEmail)}
                 setIsSubmitting(false)}, 1500);
@@ -239,7 +249,8 @@ export function TalentRegistrationForm(props: any) {
                 hourly_rate: Number(values.hourlyRate),
                 availability_status: values.availability,
                 // Other fields would be handled here
-              });
+              }
+    );
 
             if (error) throw error;
             */
@@ -250,10 +261,12 @@ export function TalentRegistrationForm(props: any) {
                 title: "Error Creating Profile",
                 description: error.message || "There was an error creating your profile. Please try again.",
                 variant: "destructive",
-            });
+            }
+    );
             setIsSubmitting(false)}
     };
-    return (<div className="max-w-4xl mx-auto p-4 md:p-6">
+    return (
+        <div className="max-w-4xl mx-auto p-4 md:p-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle className="text-2xl text-white">Create Your Talent Profile</CardTitle>
@@ -267,7 +280,7 @@ export function TalentRegistrationForm(props: any) {
             <CardContent className="space-y-8">
               {/* Basic Information */}
               <div className="space-y-4">
-                <h3 className="text-lg font-medium text-white">Basic Information</h3>
+                <h3 className="text-lg font-medium text-white">Basic Information
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="col-span-1">
                     <FormField control={form.control} name="name" render={({ field }) => (<FormItem>
@@ -350,7 +363,7 @@ export function TalentRegistrationForm(props: any) {
 
               {/* Bio Section */}
               <div className="space-y-4">
-                <h3 className="text-lg font-medium text-white">Professional Bio</h3>
+                <h3 className="text-lg font-medium text-white">Professional Bio
                 <FormField control={form.control} name="bio" render={({ field }) => (<FormItem>
                       <FormLabel className="text-zion-slate-light">About Yourself</FormLabel>
                       <FormControl>
@@ -428,7 +441,7 @@ export function TalentRegistrationForm(props: any) {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Skills Section */}
                 <div className="space-y-4">
-                  <h3 className="text-lg font-medium text-white">Skills & Expertise</h3>
+                  <h3 className="text-lg font-medium text-white">Skills & Expertise
                   <FormField control={form.control} name="skills" render={({ field }) => (<FormItem>
                         <FormLabel className="text-zion-slate-light">Skills</FormLabel>
                         <div className="flex gap-2">
@@ -458,7 +471,7 @@ export function TalentRegistrationForm(props: any) {
 
                 {/* Availability Section */}
                 <div className="space-y-4">
-                  <h3 className="text-lg font-medium text-white">Availability</h3>
+                  <h3 className="text-lg font-medium text-white">Availability
                   <FormField control={form.control} name="availability" render={({ field }) => (<FormItem className="space-y-4">
                         <FormLabel className="text-zion-slate-light">Current Status</FormLabel>
                         <FormControl>

@@ -108,7 +108,7 @@ const Pricing = (props: any) => {}
                 <div className="text-center mb-6">""""
                   <h3 className="text-2xl font-bold text-white mb-2">
                     {tier.name}"""
-                  </h3>""""
+                  """"
                   <div className="text-4xl font-bold text-white mb-1">"""
                     {tier.price}""""
                     <span className="text-lg text-gray-400">{tier.period}</span>"""
@@ -172,7 +172,7 @@ const Pricing = (props: any) => {}
         </div>
       </section>
     </div>
-  );
+    );
 }
 
 export default Pricing;

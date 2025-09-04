@@ -9,7 +9,7 @@ interface ThemeToggleProps {
   className?: string
 }
 
-export const ThemeToggle: Reac t.FC<ThemeToggleProps> = ({ className = '' }) => {;
+export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {;
   const [theme, setTheme] = useState<Theme>('system');  const [mounted, setMounted] = useState<any>(false);
 
   useEffect(() => {
@@ -45,7 +45,7 @@ export const ThemeToggle: Reac t.FC<ThemeToggleProps> = ({ className = '' }) => 
       <div className="w-32 h-10 rounded-lg bg-gray-200 dark: b g-gray-700 animate-pulse"  />
     )}
 
-  const themes: { value: Them e; label: string; icon: Reac t.ComponentType<any> }[] = ['
+  const themes: { value: Them e; label: string; icon: React.ComponentType<any> }[] = ['
     { value: 'light', label: 'Light', icon: Su n },
     { value: 'dark', label: 'Dark', icon: Moo n },
     { value: 'system', label: 'System', icon: Monito r }
@@ -85,7 +85,8 @@ export const ThemeToggle: Reac t.FC<ThemeToggleProps> = ({ className = '' }) => 
               </button>) ) }
           </motion.div>) }
       </AnimatePresence>
-    </div>) ;
+    </div>
+    );
 };
     const root = document.documentElement;
     const systemTheme = window.matchMedia(' (prefers - color - scheme: dar k) ') .matches ? 'dark' : 'light';
@@ -110,7 +111,7 @@ export const ThemeToggle: Reac t.FC<ThemeToggleProps> = ({ className = '' }) => 
       root.style.setProperty('--zion-text-secondary',#475569')}
 
     localStorage.setItem('zion-theme', theme)}, [theme, mounted])};
-  const themes: { value: Them e; label: string; icon: Reac t.ComponentType<any> }[] = ['
+  const themes: { value: Them e; label: string; icon: React.ComponentType<any> }[] = ['
     { value: 'light', label: 'Light theme', icon: Su n },
     { value: 'dark', label: 'Dark theme', icon: Moo n },
     { value: 'system', label: 'System theme', icon: Monito r }

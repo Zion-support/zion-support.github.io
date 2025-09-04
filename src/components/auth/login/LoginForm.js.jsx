@@ -15,7 +15,8 @@ const loginSchema = z.object({}
 """
 """"
     email: z.string().email("Please enter a valid email").min(1, "Email is required"),""""
-    password: z.string().min(6, "Password must be at least 6 characters")});
+    password: z.string().min(6, "Password must be at least 6 characters")}
+    );
 function LoginForm(props: any) {}
     const {login, isLoading} = useAuth();
     const navigate = useNavigate();
@@ -27,7 +28,8 @@ function LoginForm(props: any) {}
 """
 """"
             email: "",""""
-            password: ""}});
+            password: ""}}
+    );
     const onSubmit = async (data) => {}
         if (isSubmitting)
             return;

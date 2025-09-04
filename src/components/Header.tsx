@@ -155,7 +155,7 @@ const handleScroll = (props: any) => {
         )
       )}
     </div>
-  );
+    );
 }
       </div>
 
@@ -190,7 +190,7 @@ const router = useRouter()
 }
   }, [])
 }
-  const handleSearch = async (e: Reac t.FormEvent) => {,
+  const handleSearch = async (e: React.FormEvent) => {,
     e.preventDefault(),
     if (searchQuery.trim()) {"
       router.push("/search?q="${encodeURIComponent(searchQuery.trim()),")}"
@@ -393,7 +393,7 @@ const router = useRouter()
     </header>
   )
 }
-  );"
+    );"
 }"
 "
 

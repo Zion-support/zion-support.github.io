@@ -82,7 +82,8 @@ export default function Page(props: any) {
                 return b.title.localeCompare(a.title);
             default:
                 return 0}
-    });
+    }
+    );
     return (<>"
       <div className="min-h-screen bg-zion-blue py-12 px-4">"
         <div className="container mx-auto">"
@@ -149,7 +150,7 @@ export default function Page(props: any) {
             </div>) : processedListings.length > 0 ? (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {processedListings.map((listing) => (<ListingScoreCard key={listing.id} title={listing.title} description={listing.description} category={listing.subcategory || listing.category} image={listing.image} tags={listing.tags} author={listing.author} authorImage={listing.authorImage} aiScore={listing.aiScore} rating={listing.rating} reviewCount={listing.reviewCount} />))}"
             </div>) : (<div className="text-center py-20">"
-              <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>"
+              <h3 className="text-xl font-bold text-white mb-2">No listings found"
               <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>"
               <Button variant="outline" onClick={() => {
 "

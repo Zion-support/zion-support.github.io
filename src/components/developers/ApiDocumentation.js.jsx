@@ -58,7 +58,8 @@ export function ApiDocumentation(props: any) {
   
 
 }
-});
+}
+    );
 
 const data = await response.json();
 `,
@@ -125,7 +126,8 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/jobs/\${jobId
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
   }
-});
+}
+    );
 
 const data = await response.json();
 `,
@@ -217,7 +219,8 @@ print(data)`
     },
     deadline: '2025-06-30T23:59:59Z'
   })
-});
+}
+    );
 
 const data = await response.json();
 `,
@@ -298,7 +301,8 @@ print(data)`
   
 
 }
-});
+}
+    );
 
 const data = await response.json();
 `,
@@ -359,7 +363,8 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/talent/\${talent
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
   }
-});
+}
+    );
 
 const data = await response.json();
 `,
@@ -457,7 +462,8 @@ print(data)`
     budget_max: 12000,
     requester_name: 'John Doe',
     requester_email: 'john@example.com'})
-});
+}
+    );
 
 const data = await response.json();
 `,
@@ -530,7 +536,8 @@ print(data)`
   
 
 }
-});
+}
+    );
 
 const data = await response.json();
 `,
@@ -574,7 +581,7 @@ print(data)`
           
           <TabsContent value="webhooks" className="space-y-6">
             <div className="prose prose-invert max-w-none">
-              <h3 className="text-lg font-semibold mb-2">Webhook Events</h3>
+              <h3 className="text-lg font-semibold mb-2">Webhook Events
               <p className="text-zinc-400 mb-4">
                 The Zion API can send webhook notifications when certain events occur in your account.
                 You can configure webhooks in the Webhooks tab of the Developer Dashboard.
@@ -616,7 +623,8 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   
   
   // Respond to acknowledge receipt
-  res.status(200).send('Webhook received')});`} language="javascript" showLineNumbers={true}/>
+  res.status(200).send('Webhook received')}
+    );`} language="javascript" showLineNumbers={true}/>
               
               <h4 className="text-md font-semibold mt-6 mb-2">Event Types</h4>
               <table className="w-full border-collapse mt-2">
@@ -672,7 +680,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
           
           <TabsContent value="errors" className="space-y-6">
             <div className="prose prose-invert max-w-none">
-              <h3 className="text-lg font-semibold mb-2">Error Responses</h3>
+              <h3 className="text-lg font-semibold mb-2">Error Responses
               <p className="text-zinc-400 mb-4">
                 The Zion API uses conventional HTTP status codes to indicate the success or failure of an API request.
                 In general, codes in the 2xx range indicate success, codes in the 4xx range indicate an error with the
@@ -771,7 +779,8 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
 // Helper component for API endpoint documentation
 function EndpointSection(props: any) {
     const [activeTab, setActiveTab] = useState("curl");
-    return (<div className="border border-zinc-800 rounded-md">
+    return (
+        <div className="border border-zinc-800 rounded-md">
       <div className="p-4">
         <div className="flex items-center">
           <Badge variant="outline" className={method === 'GET'

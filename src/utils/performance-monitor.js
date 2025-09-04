@@ -14,7 +14,8 @@ export class PerformanceMonitor {;
         event_category: 'timing',;
         event_label: name,;
         value: Math.round(end - start);
-      });
+      }
+    );
     }
     ;
     return result;
@@ -31,11 +32,13 @@ export class PerformanceMonitor {;
           event_category: 'timing',;
           event_label: name,;
           value: Math.round(end - start);
-        });
+        }
+    );
       }
       ;
       return result;
-    });
+    }
+    );
   }
   ;
   static reportWebVitals() {;
@@ -46,7 +49,8 @@ export class PerformanceMonitor {;
         getFCP(console.log);
         getLCP(console.log);
         getTTFB(console.log);
-      });
+      }
+    );
     }
   }
 }

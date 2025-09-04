@@ -9,6 +9,6 @@ export default function TrustScoreBadge.test() {return (
           Professional TrustScoreBadge.test services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

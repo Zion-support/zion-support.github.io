@@ -14,15 +14,18 @@ export function InteractiveTimeline(props: any) {
         category[],;
         priority[],;
         progress: 0
-    });
+    }
+    );
     const [viewMode, setViewMode] = useState('timeline');
     const [zoomLevel, setZoomLevel] = useState(1);
     const timelineRef = useRef(null);
     const {scrollYProgress: _scrollYProgress} = useScroll({target: timelineRef,
-        offset["start end", "end start"];});
+        offset["start end", "end start"];}
+    );
     // Filter events based on current filters
     const filteredEvents = events.filter(event => {const matchesPriority = filters.priority.length === 0 || filters.priority.includes(event.priority);
-        return matchesStatus && matchesCategory && matchesPriority});
+        return matchesStatus && matchesCategory && matchesPriority}
+    );
     // Auto-play functionality
     useEffect(() => {
         if (!isPlaying || filteredEvents.length === 0)
@@ -89,7 +92,8 @@ export function InteractiveTimeline(props: any) {
         setIsPlaying(false)}, []);
     // Export timeline
     const exportTimeline = useCallback(() => {
-        const dataBlob = new Blob([dataStr], { type: 'application/json' });
+        const dataBlob = new Blob([dataStr], { type: 'application/json' }
+    );
         const url = URL.createObjectURL(dataBlob);
         const link = document.createElement('a');
         link.href = url;
@@ -108,11 +112,12 @@ export function InteractiveTimeline(props: any) {
     }, []);
     if (!enabled || filteredEvents.length === 0)
         return null;
-    return (<div className={`bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-blue-light/30 rounded-xl p-6 ${className}`} ref={timelineRef}>
+    return (
+        <div className={`bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-blue-light/30 rounded-xl p-6 ${className}`} ref={timelineRef}>
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h3 className="text-xl font-semibold text-white mb-2">Interactive Timeline</h3>
+          <h3 className="text-xl font-semibold text-white mb-2">Interactive Timeline
           <p className="text-zinc-300 text-sm">Track project milestones and progress</p>
         </div>
         
@@ -491,7 +496,7 @@ export function InteractiveTimeline(props: any) {
 
 }} transition={{ duration: 0.2 }}>
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-xl font-semibold text-white">{selectedEvent.title}</h3>
+                <h3 className="text-xl font-semibold text-white">{selectedEvent.title}
                 <Button size="sm" variant="ghost" onClick={() => setSelectedEvent(null)} className="text-zinc-400 hover:text-white">
                   <X className="w-4 h-4" />
                 </Button>

@@ -44,7 +44,8 @@ export const ScreenshotManager = (props: any) => {
                 URL.revokeObjectURL(removed.url);
             }
             return filtered;
-        });
+        }
+    );
     };
     const handleDragOver = (props: any) => {e.preventDefault();
         setIsDragging(true);};

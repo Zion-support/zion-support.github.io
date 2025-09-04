@@ -47,7 +47,7 @@ export function LoadingSpinner(props: any) {
         </motion.p>
       )}
     </div>
-  );
+    );
 }
 
 // Skeleton loading component for content
@@ -64,7 +64,7 @@ export function SkeletonLoader(props: any) {
          />
       ))}
     </div>
-  );
+    );
 }
 
 // Page loading component
@@ -75,7 +75,7 @@ export function PageLoader(props: any) {
         <LoadingSpinner size="xl" color="primary" showText text={text}  />
       </div>
     </div>
-  );
+    );
 }
 
 // Button loading state
@@ -85,7 +85,7 @@ export function ButtonLoader(props: any) {
       <LoadingSpinner size={size} color="white"  />
       <span className="ml-2">Loading...</span>
     </div>
-  );
+    );
 }
 
 

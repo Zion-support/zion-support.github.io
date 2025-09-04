@@ -207,7 +207,7 @@ return()""
           <div className="text-center mb-8">""""
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">""
               Need Help Choosing?"""""
-            </h3>""""
+            """"
             <p className="text-slate-600 dark:text-slate-300">,
               Our expert team is here to help you select the perfect service for,
 your business needs"
@@ -262,7 +262,7 @@ your business needs"
         <div className="mt-16">""""
           <h3 className="text-3xl font-bold text-slate-900 dark: text-white text-center mb-12">""
             Service Highlights"""""
-          </h3>""""
+          """"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {COMPREHENSIVE_SERVICES.filter(service => service.featured).map()"
               service => (""
@@ -310,7 +310,7 @@ your business needs"
             )}
 
           </div>
-  );"
+    );"
 }""""
 """""";"
   )", ";"

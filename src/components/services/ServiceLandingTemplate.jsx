@@ -2,7 +2,8 @@ import {GradientHeading} from "@/components/GradientHeading";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardFooter} from "@/components/ui/card";
 export const ServiceLandingTemplate = (props: any) => {
-    return (<div className="bg-background text-white">
+    return (
+        <div className="bg-background text-white">
       <section className="bg-zion-blue py-16 px-4 text-center">
         <div className="container mx-auto">
           <GradientHeading level="h1" className="mb-4">
@@ -33,7 +34,7 @@ export const ServiceLandingTemplate = (props: any) => {
                 {benefit.icon && (<div className="mb-4 flex justify-center text-zion-cyan">
                     {benefit.icon}
                   </div>)}
-                <h3 className="text-lg font-bold mb-2">{benefit.title}</h3>
+                <h3 className="text-lg font-bold mb-2">{benefit.title}
                 <p className="text-zion-slate-light">{benefit.description}</p>
               </div>))}
           </div>
@@ -69,5 +70,6 @@ export const ServiceLandingTemplate = (props: any) => {
           <a href={ctaLink}>{ctaText}</a>
         </Button>
       </section>
-    </div>);
+    </div>
+    );
 };

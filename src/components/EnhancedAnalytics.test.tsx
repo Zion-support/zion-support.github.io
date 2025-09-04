@@ -9,6 +9,6 @@ export default function EnhancedAnalytics.test() {return (
           Professional EnhancedAnalytics.test services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

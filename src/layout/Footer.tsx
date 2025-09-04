@@ -85,7 +85,7 @@ export default function Footer(props: any) {
                 <span className="text-white font-bold text-2xl">Z</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold">Zion Tech Group</h3>
+                <h3 className="text-xl font-bold">Zion Tech Group
                 <p className="text-gray-400 text-sm">Innovation & Technology</p>
               </div>
             </div>

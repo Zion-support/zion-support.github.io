@@ -9,6 +9,6 @@ export default function EnhancedNewsletter.test() {return (
           Professional EnhancedNewsletter.test services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

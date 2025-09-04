@@ -9,7 +9,8 @@ export function AccessibilityMenu(props: any) {
         highContrast: false,
         reducedMotion: false,
         soundEnabled: true
-    });
+    }
+    );
     useEffect(() => {
         // Load settings from localStorage
         const savedSettings = localStorage.getItem('accessibility-settings');
@@ -77,7 +78,7 @@ export function AccessibilityMenu(props: any) {
 }}>
             <div className="p-6">
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-lg font-semibold text-white">Accessibility</h3>
+                <h3 className="text-lg font-semibold text-white">Accessibility
                 <Button variant="ghost" size="sm" onClick={resetSettings} className="text-zion-cyan hover:text-zion-cyan-light text-sm">
                   Reset
                 </Button>

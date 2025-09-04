@@ -12,7 +12,8 @@ export function Card3DGallery(props: any) {
         complexity[],;
         verified: false,
         featured: false
-    });
+    }
+    );
     const [searchQuery, setSearchQuery] = useState('');
     const [sortBy, setSortBy] = useState('rating');
     const [sortOrder, setSortOrder] = useState('desc');
@@ -47,7 +48,8 @@ export function Card3DGallery(props: any) {
                 return 0}
         if (sortOrder === 'asc') {return aValue > bValue ? 1 : -1}
         else {return aValue < bValue ? 1 : -1}
-    });
+    }
+    );
     // Auto-play carousel
     useEffect(() => {
         if (!isPlaying || viewMode !== 'carousel' || filteredAndSortedItems.length === 0)
@@ -104,11 +106,12 @@ export function Card3DGallery(props: any) {
         return iconMap[category] || Globe};
     if (!enabled || filteredAndSortedItems.length === 0)
         return null;
-    return (<div className={`bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-blue-light/30 rounded-xl p-6 ${className}`} ref={galleryRef}>
+    return (
+        <div className={`bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-blue-light/30 rounded-xl p-6 ${className}`} ref={galleryRef}>
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h3 className="text-xl font-semibold text-white mb-2">3D Card Gallery</h3>
+          <h3 className="text-xl font-semibold text-white mb-2">3D Card Gallery
           <p className="text-zinc-300 text-sm">
             {filteredAndSortedItems.length} items • Interactive 3D experience
           </p>
@@ -295,7 +298,7 @@ export function Card3DGallery(props: any) {
 
 }} transition={{ duration: 0.2 }}>
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-xl font-semibold text-white">{selectedItem.title}</h3>
+                <h3 className="text-xl font-semibold text-white">{selectedItem.title}
                 <Button size="sm" variant="ghost" onClick={() => setSelectedItem(null)} className="text-zinc-400 hover:text-white">
                   <X className="w-4 h-4" />
                 </Button>
@@ -379,7 +382,8 @@ function Card3D(props: any) {
     const [isLiked, setIsLiked] = useState(false);
     const x = useMotionValue(0);
     const y = useMotionValue(0);
-    const rotateY = useSpring(useTransform(x, [-100, 100], [-15, 15]), { stiffness: 300, damping: 30 });
+    const rotateY = useSpring(useTransform(x, [-100, 100], [-15, 15]), { stiffness: 300, damping: 30 }
+    );
     const CategoryIcon = getCategoryIcon(item.category);
     const handleMouseMove = useCallback((event) => {if (!isHovered)
             return;

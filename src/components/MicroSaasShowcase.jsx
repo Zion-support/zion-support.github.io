@@ -152,7 +152,7 @@ import { Sparkles, ArrowRight, Star, TrendingUp, Users, Zap, Shield, BarChart3, 
               {/* Service Content */}
               <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors">
                 {service.title}
-              </h3>
+              
               <p className="text-zion-slate-light text-sm mb-4 line-clamp-3">
                 {service.description}
               </p>

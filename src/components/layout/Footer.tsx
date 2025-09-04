@@ -214,7 +214,7 @@ export function Footer(props: any) {
             <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
               <Target className="h-5 w-5 text-zion-purple"  />
               <span>Quick Links</span>
-            </h3>
+            
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
@@ -229,7 +229,7 @@ export function Footer(props: any) {
               ))
       )}
     </div>
-  );
+    );
 }
             </ul>
           </div>
@@ -239,7 +239,7 @@ export function Footer(props: any) {
             <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
               <MessageCircle className="h-5 w-5 text-zion-purple"  />
               <span>Contact Us</span>
-            </h3>
+            
             <div className="space-y-3">
               {contactInfo.map((contact, index) => (
                 <a
@@ -261,7 +261,7 @@ export function Footer(props: any) {
             <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
               <Mail className="h-5 w-5 text-zion-purple"  />
               <span>Stay Updated</span>
-            </h3>
+            
             <p className="text-gray-300 text-sm">
               Get the latest updates on our innovative services and technology solutions.
             </p>
@@ -281,7 +281,7 @@ export function Footer(props: any) {
         <div className="mt-12 pt-8 border-t border-zion-slate">
           <h3 className="text-xl font-semibold text-white text-center mb-8">
             Our Comprehensive Service Portfolio
-          </h3>
+          
           <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-6">
             {footerSections.map((section) => (
               <div key={section.title} className="space-y-4">

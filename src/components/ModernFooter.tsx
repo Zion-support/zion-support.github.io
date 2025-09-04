@@ -9,6 +9,6 @@ export default function ModernFooter(props: any) {return (
           Professional ModernFooter services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

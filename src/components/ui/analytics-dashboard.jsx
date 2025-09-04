@@ -12,7 +12,8 @@ export function AnalyticsDashboard(props: any) {
         activeUsers: 8920,
         revenue: 456780,
         growth: 23.5
-    });
+    }
+    );
     // Simulate real-time data updates
     useEffect(() => {
         if (!enabled || !isExpanded)
@@ -67,7 +68,7 @@ export function AnalyticsDashboard(props: any) {
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h3 className="text-xl font-semibold text-white mb-2">Analytics Dashboard</h3>
+          <h3 className="text-xl font-semibold text-white mb-2">Analytics Dashboard
           <p className="text-zinc-300 text-sm">Real-time business metrics and insights</p>
         </div>
 

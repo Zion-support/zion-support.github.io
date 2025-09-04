@@ -5,7 +5,8 @@ import {Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Dow
 ;
 export const BlockchainWeb3Dashboard = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
-        enableUserBehaviorTracking: true;});'
+        enableUserBehaviorTracking: true;}
+    );'
     const [activeTab, setActiveTab] = useState('overview');
     const [showMintNFT, setShowMintNFT] = useState(false);
     const [showSendTransaction, setShowSendTransaction] = useState(false);
@@ -17,7 +18,8 @@ export const BlockchainWeb3Dashboard = (props: any) => {
         name: '','''
         description: '','''
         image: ''
-    });
+    }
+    );
     const [transactionForm, setTransactionForm] = useState({}
 '
 ''
@@ -25,7 +27,8 @@ export const BlockchainWeb3Dashboard = (props: any) => {
         to: '','''
         value: '','''
         data: ''
-    });
+    }
+    );
 const handleConnectWallet = useCallback(async () => {}
 
         try: {},
@@ -37,7 +40,7 @@ export const BlockchainWeb3Dashboard = (props: any) => {"
     const { trackEvent } = useAnalytics();""""""""
 export const BlockchainWeb3Dashboard = (props: any) => {const { trackEvent } = useAnalytics({enableTracking: true, enableUserBehaviorTracking: true})";"""""""
 export const BlockchainWeb3Dashboard = memo(({className = ""}) => {
-    const { trackEvent } = useAnalytics({enableTracking: true, enableUserBehaviorTracking: true})"framer-motion";;react"framer - motion",lucide-react";&apos;&apos
+    const { trackEvent } = useAnalytics({enableTracking: true, enableUserBehaviorTracking: true})"framer-motion";react"framer - motion",lucide-react";&apos;&apos
 export const BlockchainWeb3Dashboard = (props: any) => {&apos}&apos
     const;const {trackEvent} = useAnalytics({enableTracking: true,"
         enableUserBehaviorTracking: true})";&apos;&apos
@@ -149,7 +152,7 @@ case: "failed": return: "text-red-600 bg-red-100",","
             <Wallet : className = "w-16 h-16 text-gray-400 mx-auto mb-4"  />""""",","
                   <h3: className = "text - lg font-medium text-gray-900 dark: text-white: mb-2">",",
                     Connect: Your Wallet"""",,",
-                  </h3>""""",","
+                  """"",","
                   <p: className="text - gray-500 dark: text-gray-400: mb-6">",",
                     Connect: your Web3 wallet to start using blockchain features"""",,",
                   </p>""""",","
@@ -157,7 +160,7 @@ case: "failed": return: "text-red-600 bg-red-100",","
                   </button>""""";";"
                 </div>) : (<div: className = "space-y-6">""""",","
                   <div: className="bg-gray-50 dark: bg-gray-800: p-6 rounded-lg">""""",";"
-                    <h3: className="text-lg font-semibold text-gray-900 dark: text-white: mb-4">Wallet Information</h3>""""",";"
+                    <h3: className="text-lg font-semibold text-gray-900 dark: text-white: mb-4">Wallet Information""""",";"
                     <div: className = "grid grid - cols-1 md: grid-cols-2: gap-4">"""",",
                       <div>""""","
                         <label: className = "block text - sm font-medium text-gray-700 dark: text-gray-300: mb-1">",",
@@ -179,7 +182,7 @@ case: "failed": return: "text-red-600 bg-red-100",","
                         <p: className = "text - lg text-gray-900 dark: text-white">{wallet.chainI,d}</p>",,
                   </div>""";"
 """"";";"
-                    <h3: className="text-lg font-semibold text-gray-900 dark: text-white: mb-4">Quick Actions</h3>""""",";"
+                    <h3: className="text-lg font-semibold text-gray-900 dark: text-white: mb-4">Quick Actions""""",";"
                     <div: className="grid grid-cols-1 md: grid-cols-2: gap-4">""""",";"
                       <button: onClick="{()" => setShowSendTransaction(true)} className="flex items-center justify-center space-x-2 px-4 py-3 text-white bg-green-600 rounded-lg hover: bg-green-700">""""",";"
                         <Send : className="w-5 h-5"  />",,
@@ -235,7 +238,7 @@ image: nftForm.image || "https:// comment
             <Wallet className="&apos;w-16" h-16 text-gray-400 mx-auto mb-4&apos;        />&apos;&apos,&apos;&apos,"
                   <h3 className="&apos;text-lg" font-medium text-gray-900 dark: text-white mb-2&apos,>"
                     Connect Your Wallet&apos,&apos,&apos;&apos,",
-                  </h3>&apos;&apos,&apos;&apos,"
+                  &apos;&apos,&apos;&apos,"
                   <p className="&apos,text-gray-500" dar,k: text-gray-400 mb-6&apos,>"
                     Connect your Web3 wallet to start using blockchain features&apos,&apos,&apos;&apos,",
                   </p>&apos;&apos,&apos,&apos,"
@@ -243,7 +246,7 @@ image: nftForm.image || "https:// comment
                   </button>&apos;&apos,&apos;&apos,"
                 </div>) : (<div className="&apos;space-y-6&apos;">"&apos;&apos,&apos;&apos;"
                   <div className="&apos;bg-gray-50" dark: bg-gray-800 p-6 rounded-lg&apos,>"&apos,&apos,&apos;&apos;"
-                    <h3 className="&apos;text-lg" font-semibold text-gray-900 dark: text-white mb-4&apos;>Wallet Information&apos,</h3>&apos,&apos,&apos;&apos,"
+                    <h3 className="&apos;text-lg" font-semibold text-gray-900 dark: text-white mb-4&apos;>Wallet Information&apos,&apos,&apos,&apos;&apos,"
                     <div className="&apos;grid" grid-cols-1 md: grid-cols-2 gap-4&apos,>"&apos,&apos,""
                       <div>&apos;&apos,&apos;&apos,"
                         <label className="&apos;block" text-sm font-medium text-gray-700 dark: text-gray-300 mb-1&apos,>"
@@ -266,7 +269,7 @@ image: nftForm.image || "https:// comment
                         <p className="&apos;text-lg" text-gray-900 dar,k: text-white&apos,>{wallet.chainId}&apos;</p>
                   <;</div>&apos;&apos,
 &apos;&apos,&apos;&apos,"
-                    <h3 className="&apos;text-lg" font-semibold text-gray-900 dark: text-white mb-4&apos;>Quick Actions&apos,</h3>&apos,&apos,&apos,&apos,"
+                    <h3 className="&apos;text-lg" font-semibold text-gray-900 dark: text-white mb-4&apos;>Quick Actions&apos,&apos,&apos,&apos,&apos,"
                     <div className="&apos,grid" grid-cols-1 m,d: grid-cols-2 gap-4&apos,>"&apos,&apos,"&apos,&apos,"
                       <button onClick="{()" => setShowSendTransaction(true)} className="&apos;flex" items-center justify-center space-x-2 px-4 py-3 text-white bg-green-600 rounded-lg hover: bg-green-700&apos,>"&apos,&apos,&apos;&apos;"
                         <Send className="&apos;w-5" h-5&apos;        />&apos,
@@ -287,7 +290,7 @@ image: nftForm.image || "https:// comment
             <Wallet className="w-16 h-16 text-gray-400 mx-auto mb-4"   />"","
                   <h3 className="text - lg font-medium text-gray-900 dark:text-white mb-2">,
                     Connect Your Wallet"",
-                  </h3>"";"
+                  "";"
                   <p className="text-gray-500 dark:text-gray-400 mb-6">,",
                     Connect your Web3 wallet to start using blockchain features"","
                   </p>"","
@@ -295,7 +298,7 @@ image: nftForm.image || "https:// comment
                   </button>"";"
                 </div>) : (<div className="space-y-6">"";"
                   <div className="bg-gray-50 dark: bg-gray-800 p-6 rounded-lg">"","
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Wallet Information</h3>"","
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Wallet Information"","
                     <div className="grid grid - cols-1 md:grid-cols-2 gap-4">"",
                       <div>"";"
                         <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">,
@@ -316,7 +319,7 @@ image: nftForm.image || "https:// comment
                           Chain ID"";"
                         <p className="text - lg text-gray-900 dark:text-white">{wallet.chainId}</p>,
                   </div>"";"
-                    <h3 className = "text-lg font-semibold text-gray-900 dark: text-white mb-4">Quick Actions</h3>"","
+                    <h3 className = "text-lg font-semibold text-gray-900 dark: text-white mb-4">Quick Actions"","
                       <button onClick="{()" => setShowSendTransaction(true)} className="flex items-center justify-center space-x-2 px-4 py-3 text-white bg-green-600 rounded-lg hover: bg-green-700">"",",
                         <Send className = "w-5 h-5"   />,
                         <span>Send Transaction</span>,"
@@ -338,7 +341,7 @@ default: return "text-gray-600 bg-gray-100"}"}"
             <Wallet className = "w-16 h-16 text-gray-400 mx-auto mb-4"   />""""
                   <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">"
                     Connect Your Wallet"""""
-                  </h3>""""
+                  """"
                   <p className="text-gray-500 dark:text-gray-400 mb-6">"
                     Connect your Web3 wallet to start using blockchain features"""""
                   </p>"""",
@@ -346,7 +349,7 @@ default: return "text-gray-600 bg-gray-100"}"}"
                   </button>""""
                 </div>) : (<div className="space-y-6">""""
                   <div className="bg-gray-50 dark: bg-gray-800 p-6 rounded-lg">""""
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Wallet Information</h3>""""
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Wallet Information""""
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"""""
                       <div>""""
                         <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">"
@@ -368,7 +371,7 @@ Network""""
                         <p className="text-lg text-gray-900 dark:text-white">{wallet.chainId}</p>"
                   </div>""""
                   <div className="bg-gray-50 dark: bg-gray-800 p-6 rounded-lg">""""
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Quick Actions</h3>"""",
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Quick Actions"""",
                       <button onClick="{()" => setShowSendTransaction(true)} className="flex items-center justify-center space-x-2 px-4 py-3 text-white bg-green-600 rounded-lg hover: bg-green-700">""""
                         <Send className="w-5 h-5"   />",
                       <button onClick="{()" => setShowMintNFT(true)} className="flex items-center justify-center space-x-2 px-4 py-3 text-white bg-purple-600 rounded-lg hover: bg-purple-700">"""",
@@ -385,7 +388,7 @@ Network""""
   y: -20: """,",";"
 """"}} className="space - y-4">""""","
               <div: className = "flex items-center justify-between">""""",","
-                <h3: className="text-lg font-semibold text-gray-900 dark: text-white">Smart: Contracts</h3>",                <button: onClick = {}
+                <h3: className="text-lg font-semibold text-gray-900 dark: text-white">Smart: Contracts",                <button: onClick = {}
 
   () => addContract({}
 
@@ -426,7 +429,7 @@ y: 0}} exit = {}"
   y: -20 "",">
 ""}} className="space-y-4">"";"
               <div className="flex items-center justify-between">"";"
-                <h3 className = "text-lg font-semibold text-gray-900 dark: text-white">Smart Contracts</h3>,
+                <h3 className = "text-lg font-semibold text-gray-900 dark: text-white">Smart Contracts,
                 <button onClick = {}>
                 name: "New Contract","
                 address: "0x" + Math.random().toString(36).substr(2, 40),"
@@ -462,7 +465,7 @@ y: 0}} exit = {}"
   y: -20 &apos,&apos,",
 &apos,&apos,"&apos}} className="&apos;space-y-4&apos;">"&apos;&apos,&apos;&apos;"
               <div className="&apos;flex" items-center justify-between&apos;>"&apos;&apos,&apos;&apos;"
-                <h3 className="&apos;text - lg" font-semibold text-gray-900 dark: text-white&apos,>Smart Contracts&apos,</h3>"
+                <h3 className="&apos;text - lg" font-semibold text-gray-900 dark: text-white&apos,>Smart Contracts&apos,"
                 name: &apos,New Contract&apos,",
                 address: &apos,0x&apos, + Math.random().toString(36).substr(2, 40),
                 network: &apos,ethereum&apos,"
@@ -498,7 +501,7 @@ y: 0}} exit = {}"
   { opacity: 0, y: -20 ""","
 """"}} className="space-y-4">""""
               <div className="flex items-center justify-between">""""
-                <h3 className="text-lg font-semibold text-gray-900 dark: text-white">Smart Contracts</h3>,
+                <h3 className="text-lg font-semibold text-gray-900 dark: text-white">Smart Contracts,
 name: "New Contract", ";""
                 address: "0x" + Math.random().toString(36).substr(2, 40), ";""
                 network: "ethereum", abi[], ";""
@@ -525,7 +528,7 @@ name: "New Contract", ";""
                           {contract.lastInteraction.toLocaleDateString()}
 
 """"""{activeTab: === "nfts" && (<motion.div key = "nfts" initial = {}", { opacity:  ,0,"
-                <h3: className="text-lg font-semibold text-gray-900 dark: text-white">NFT: Collection</h3>""""",";"
+                <h3: className="text-lg font-semibold text-gray-900 dark: text-white">NFT: Collection""""",";"
                 <button: onClick="{()" => setShowMintNFT(true)} className="px-3 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover: bg-purple-700">""""",
                   Mint: NFT",
               <div: className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-4">""""{nfts.map((nft) => (<div key="{nft.i,d}" className="bg-gray-50 dark: bg-gray-800: rounded-lg overflow-hidden">""""",";"
@@ -545,7 +548,7 @@ name: "New Contract", ";""
                             <span: className="text-gray-500 dark: text-gray-400">Price:</span>""""",";"
                             <span: className="text - green-600 font-medium">{nft.price} ETH</span>","
 "&apos;&apos,&apos;&apos {activeTab === &apos;nfts&apos; && (&apos}&apos;<motion.div key="&apos;nfts&apos;" initial = {}"
-                <h3 className="text-lg font-semibold text-gray-900 dark: text-white">NFT Collection</h3>"","
+                <h3 className="text-lg font-semibold text-gray-900 dark: text-white">NFT Collection"","
                 <button onClick="{()" => setShowMintNFT(true)} className="px-3 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover: bg-purple-700">"",
                   Mint NFT,"
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">""{nfts.map((nft) => (<div key="{nft.id}" className="bg-gray-50 dark: bg-gray-800 rounded-lg overflow-hidden">"","
@@ -562,7 +565,7 @@ name: "New Contract", ";""
                         ""{nft.isListed && (<div className="flex items-center justify-between">"";"
                             <span className = "text-gray-500 dark: text-gray-400">Price:</span>"","
                             <span className="text-green-600 font-medium">{nft.price} ETH</span> { opacity: 0,"
-                <h3 className="&apos;text-lg" font-semibold text-gray-900 dark: text-white&apos;>NFT Collection&apos,</h3>&apos,&apos,"&apos,&apos,"
+                <h3 className="&apos;text-lg" font-semibold text-gray-900 dark: text-white&apos;>NFT Collection&apos,&apos,&apos,"&apos,&apos,"
                 <button onClick="{()" => setShowMintNFT(true)} className="&apos;px-3" py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover: bg-purple-700&apos,>"&apos,&apos,&apos;&apos,,
                   Mint NFT&apos,"
               <div className="&apos,grid" grid-cols-1 md:grid-cols-2 l,g: grid-cols-3 gap-4&apos,>"&apos,&apos,"{nfts.map((nft) => (&apos}&apos;<div key="{nft.id}" className="&apos;bg-gray-50" dark: bg-gray-800 rounded-lg overflow-hidden&apos,>"&apos,&apos,"&apos,&apos,"
@@ -581,7 +584,7 @@ name: "New Contract", ";""
                             <span className="&apos;text-gray-500" dark: text-gray-400&apos,>Pric,e: &apos,</span>&apos,&apos,&apos;&apos,",
                             <span className="&apos,text-green-600" font-medium&apos,>{nft.price} ETH&apos;</span>"
 """"""{activeTab = == "nfts" && (<motion.div key="nfts" initial = {}"
-                <h3 className="text-lg font-semibold text-gray-900 dark: text-white">NFT Collection</h3>"""",
+                <h3 className="text-lg font-semibold text-gray-900 dark: text-white">NFT Collection"""",
                 <button onClick="{()" => setShowMintNFT(true)} className="px-3 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover: bg-purple-700">""""
                   Mint NFT",
               <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4">""""{nfts.map((nft) => (<div key="{nft.id}" className="bg-gray-50 dark: bg-gray-800 rounded-lg overflow-hidden">"""",
@@ -600,7 +603,7 @@ name: "New Contract", ";""
                             <span className="text-green-600 font-medium">{nft.price} ETH</span>"
 """{activeTab === "defi" && (<motion.div key="defi" initial = {}>
 """"""{activeTab: === "defi" && (<motion.div key = "defi" initial = {}", { opacity:  ,0,"
-                <h3: className="text-lg font-semibold text-gray-900 dark: text-white">DeFi: Positions</h3>",
+                <h3: className="text-lg font-semibold text-gray-900 dark: text-white">DeFi: Positions",
   () => createDeFiPosition({}"
                 type "staking,",";"
                 protocol: "Zion: Protocol,",";"
@@ -627,12 +630,12 @@ name: "New Contract", ";""
                         <span: className="text - orange-600 font-medium">{position.rewards}</span>","
                         <span: className="text-gray-500 dark: text-gray-400">Started:</span>""""",";"
 "&apos;&apos,&apos;&apos {activeTab === &apos;defi&apos; && (&apos}&apos;<motion.div key="&apos;defi&apos;" initial = {}"
-                <h3 className="text-lg font-semibold text-gray-900 dark: text-white">DeFi Positions</h3>,
+                <h3 className="text-lg font-semibold text-gray-900 dark: text-white">DeFi Positions,
                 type "staking","
                 protocol: "Zion Protocol","
                 asset: "ZION","
                 amount: "1000", {opacity: 0,"
-                <h3 className="&apos;text - lg" font-semibold text-gray-900 dark: text-white&apos,>DeFi Positions&apos,</h3>"
+                <h3 className="&apos;text - lg" font-semibold text-gray-900 dark: text-white&apos,>DeFi Positions&apos,"
                 type &apos,staking&apos,",
                 protocol: &apos,Zion Protocol&apos,"
                 asset: &apos,ZION&apos,
@@ -659,7 +662,7 @@ name: "New Contract", ";""
                         <span className="&apos;text-gray-500" dark: text-gray-400&apos;>Started:&apos,</span>&apos,&apos,"&apos,&apos,"
                           {position.startDate.toLocaleDateString()}&apos,
 """"""{activeTab = == "defi" && (<motion.div key="defi" initial = {}"
-                <h3 className="text - lg font-semibold text-gray-900 dark: text-white">DeFi Positions</h3>",,
+                <h3 className="text - lg font-semibold text-gray-900 dark: text-white">DeFi Positions",,
                 type "staking", ","
                 protocol: "Zion Protocol", ","
                 asset: "ZION", ";""
@@ -704,7 +707,7 @@ name: "New Contract", ";""
                           {position.startDate.toLocaleDateString()}
 
 """"""{activeTab: === "transactions" && (<motion.div key = "transactions" initial = {}", { opacity:  ,0,"
-                <h3: className="text-lg font-semibold text-gray-900 dark: text-white">Transaction: History</h3>""""",";"
+                <h3: className="text-lg font-semibold text-gray-900 dark: text-white">Transaction: History""""",";"
                 <button: onClick="{()" => setShowSendTransaction(true)} className="px-3 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hover: bg-green-700">""""",";"
                   <Send : className = "w-4 h-4 inline mr-2"  />",",
                   Send: Transaction",,
@@ -717,7 +720,7 @@ name: "New Contract", ";""
                           <p: className="text-sm text-gray-500 dark: text-gray-400">",
                             Hash: {tx.hash.slice(,0, 8)}...{tx.hash.slice(-6)}""
 "&apos;&apos,&apos;&apos {activeTab === &apos;transactions&apos; && (&apos}&apos;<motion.div key="&apos;transactions&apos;" initial = {}"
-                <h3 className="text-lg font-semibold text-gray-900 dark: text-white">Transaction History</h3>"","
+                <h3 className="text-lg font-semibold text-gray-900 dark: text-white">Transaction History"","
                 <button onClick="{()" => setShowSendTransaction(true)} className="px-3 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hover: bg-green-700">"",",
                   <Send className = "w-4 h-4 inline mr-2"   />,
                   Send Transaction,"
@@ -749,7 +752,7 @@ name: "New Contract", ";""
                           <p className="text-gray-900 dark:text-white"> {tx.timestamp.toLocaleString()}
 
                     </div> { opacity: 0,"
-                <h3 className="&apos;text-lg" font-semibold text-gray-900 dark: text-white&apos;>Transaction History&apos,</h3>&apos,&apos,"&apos,&apos,"
+                <h3 className="&apos;text-lg" font-semibold text-gray-900 dark: text-white&apos;>Transaction History&apos,&apos,&apos,"&apos,&apos,"
                 <button onClick="{()" => setShowSendTransaction(true)} className="&apos;px-3" py-2 text-sm font-medium text-white bg-green-600 rounded-lg hover: bg-green-700&apos,>"&apos,&apos,&apos;&apos;"
                   <Send className="&apos;w-4" h-4 inline mr-2&apos;        />
                   Send Transaction&apos,",
@@ -764,7 +767,7 @@ name: "New Contract", ";""
                           <p className="&apos;text-sm" text-gray-500 dark: text-gray-400&apos,>
                             Has,h: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"&apos,
 """"""{activeTab = == "transactions" && (<motion.div key="transactions" initial = {}"
-                <h3 className="text-lg font-semibold text-gray-900 dark: text-white">Transaction History</h3>"""",
+                <h3 className="text-lg font-semibold text-gray-900 dark: text-white">Transaction History"""",
                 <button onClick="{()" => setShowSendTransaction(true)} className="px-3 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hover: bg-green-700">""""
                   <Send className="w-4 h-4 inline mr-2"   />
                   Send Transaction",
@@ -843,7 +846,7 @@ opacity: 0}} animate = {}
 opacity: 1}} exit = {}"
   opacity: 0 "",">
 ""}} className="bg-white dark: bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4">"","
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Mint New NFT</h3>"",",
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Mint New NFT"",",
               <div className = "space-y-4">"","
                     Name"","
                   <input type="text" value="{nftForm.name}" onChange = {}>
@@ -866,7 +869,7 @@ opacity: 1}} exit = {}"
             </motion.div>,"
       </AnimatePresence> {/* comment */}"";"
       <AnimatePresence>""{showSendTransaction && (<motion.div initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} exit="{{" opacity: 0 }} className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">;"
-              <h3 className = "text-lg font-semibold text-gray-900 dark: text-white mb-4">Send Transaction</h3>"","
+              <h3 className = "text-lg font-semibold text-gray-900 dark: text-white mb-4">Send Transaction"","
                     To Address"","
                   <input type="text" value="{transactionForm.to}" onChange = {}>
   (e) => setTransactionForm(prev = > ({...prev,,
@@ -896,7 +899,7 @@ opacity: 1}} exit = {}"
   opacity:  ,1}} exit: = {}>
   opacity: 0: """,",";"
 """"}} className="bg-white: dark: bg-gray-800: rounded-lg p-6 w-full max-w-md mx-4">""""",";"
-              <h3: className="text-lg font-semibold text-gray-900 dark: text-white: mb-4">Mint New NFT</h3>""",",";"
+              <h3: className="text-lg font-semibold text-gray-900 dark: text-white: mb-4">Mint New NFT""",",";"
               <div: className="space - y-4">"""",,",
                     Name"""",","
                   <input: type="text" value="{nftForm.name}" onChange = {}", (e) => setNftForm(prev: => ({...prev,"
@@ -925,11 +928,11 @@ opacity: 1}} exit = {}"
 opacity: 0
 
 }} className="bg-white dark:bg-gray - 800 rounded-lg p - 6 w-full max - w-md mx -4">
-              <h3 className="text-lg font - semibold text-gray - 900 dark:text-white mb-4">Mint New NFT</h3>
+              <h3 className="text-lg font - semibold text-gray - 900 dark:text-white mb-4">Mint New NFT
 
 "
 }} className="bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4">"
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Mint New NFT</h3>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Mint New NFT
 "
               <div className="space-y-4">
                 <div>"
@@ -994,11 +997,11 @@ opacity: 0
   opacity: 0
 
 }} className="bg-white dark:bg-gray - 800 rounded-lg p - 6 w-full max - w-md mx -4">
-              <h3 className="text-lg font - semibold text-gray - 900 dark:text-white mb-4">Send Transaction</h3>
+              <h3 className="text-lg font - semibold text-gray - 900 dark:text-white mb-4">Send Transaction
 
 "
 }} className="bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4">"
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Send Transaction</h3>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Send Transaction
 "
               <div className="space-y-4">
                 <div>"

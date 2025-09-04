@@ -28,7 +28,9 @@ export function UpcomingInterviewsCard(props: any) {
 
                 setUpcomingInterviews(upcoming)}
             catch (error) {console.error("Error loading upcoming interviews:", error)}
-            finally {setIsLoading(false)}
+            finally {
+                setIsLoading(false);
+            }
         };
         loadInterviews()}, []);
     if (isLoading) {
@@ -84,7 +86,8 @@ export function UpcomingInterviewsCard(props: any) {
             const now = new Date();
             const isStartingSoon = interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
                 interviewDate.getTime() > now.getTime();
-            return (<div key={interview.id} className="flex items-center gap-3">
+            return (
+        <div key={interview.id} className="flex items-center gap-3">
                 <Avatar className="h-10 w-10 bg-zion-purple/10">
                   {interview.client_avatar || interview.talent_avatar ? (<img loading="lazy" src={interview.client_avatar || interview.talent_avatar} alt={interview.client_name || interview.talent_name}  />) : (<div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">
                       {(interview.client_name || interview.talent_name || "U").charAt(0)}

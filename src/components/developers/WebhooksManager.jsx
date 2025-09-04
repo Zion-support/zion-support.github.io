@@ -143,7 +143,7 @@ export function WebhooksManager(props: any) {
             </div>) : (webhooks.map((webhook) => (<div key={webhook.id} className="p-4 border border-zinc-800 rounded-lg">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="font-medium">{webhook.name}</h3>
+                    <h3 className="font-medium">{webhook.name}
                     <div className="flex items-center text-sm text-zinc-400 mt-1">
                       <Globe size={14} className="mr-1" />
                       <span className="max-w-md truncate">{webhook.url}</span>

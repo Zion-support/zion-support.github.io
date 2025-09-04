@@ -39,7 +39,7 @@ interface AIChatbotSystemProps {
 
 }
 
-export const AIChatbotSystem: Reac t.FC<AIChatbotSystemProps> = ({
+export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   showHeader = true,
   showSettings = true,
   maxMessages = 50,
@@ -75,7 +75,8 @@ export const AIChatbotSystem: Reac t.FC<AIChatbotSystemProps> = ({
   // Auto-scroll to bottom
   useEffect(() => {
     if (autoScroll && messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' }
+    );
     }
   }, [messages, autoScroll]);
 
@@ -126,7 +127,7 @@ export const AIChatbotSystem: Reac t.FC<AIChatbotSystemProps> = ({
   }, []);
 
   // Handle message submission
-  const handleSubmit = useCallback(async (e: Reac t.FormEvent) => {
+  const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
     if (!inputValue.trim() || isTyping) return;
 
@@ -151,7 +152,7 @@ export const AIChatbotSystem: Reac t.FC<AIChatbotSystemProps> = ({
     }, []);
 
   // Handle file upload
-  const handleFileUpload = useCallback((e: Reac t.ChangeEvent<HTMLInputElement>) => {
+  const handleFileUpload = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
       const fileMessage: ChatMessag e = {
@@ -208,7 +209,7 @@ export const AIChatbotSystem: Reac t.FC<AIChatbotSystemProps> = ({
                       <Bot className="w-4 h-4 text-white"  />
                     </div>
                     <div>
-                      <h3 className="text-white font-semibold">Zion AI Assistant</h3>
+                      <h3 className="text-white font-semibold">Zion AI Assistant
                       <p className="text-xs text-gray-400">Online • 24/7 Available</p>
                     </div>
                   </div>
@@ -328,8 +329,8 @@ export default AIChatbotSystem;
 </motion>
 </motion>
 </motion>
-</HTMLInputElement>
-</HTMLDivElement>
+
+
 </any>
 </any>
 </any>

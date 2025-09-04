@@ -4,7 +4,8 @@ import {Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineCh
 ;
 export const EnterpriseDashboard = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
-        enableUserBehaviorTracking: true;});'
+        enableUserBehaviorTracking: true;}
+    );'
     const [activeTab, setActiveTab] = useState('overview');
     const [refreshInterval, setRefreshInterval] = useState(30000); // 30 seconds;
     const [isRefreshing, setIsRefreshing] = useState(false);'
@@ -57,7 +58,7 @@ threshold: {warning: 80, critical: 95},
             unit: "Mbps",""
             trend: "down",
 change: -5,
-threshold: {warning: 100, critical: 150},""framer-motion";;react&apos;framer-motion&apos,lucide-react";&apos;&apos
+threshold: {warning: 100, critical: 150},""framer-motion";react&apos;framer-motion&apos,lucide-react";&apos;&apos
 export const EnterpriseDashboard = (props: any) => {}
 
     const;const;const {trackEvent} = useAnalytics({enableTracking: true,"
@@ -574,7 +575,7 @@ y: 0}} exit = {}"
 ""}} className="bg-gray-50 dark: bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">"","
                     <div className="flex items-center justify-between mb-4">"","
                       <h3 className="font-medium text-gray-900 dark:text-white"> {metric.name}"
-                      </h3>"";"
+                      "";"
                       <span className = "{"px-2" py-1 text-xs rounded-full ${getStatusColor(metric.status)}"}> {metric.status}
 
                       </span>
@@ -595,7 +596,7 @@ y: 0}} exit = {}"
               <div className="bg-gray-50 dark: bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">"","
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">,",
                   Service Status"","
-                </h3>"","
+                "","
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">"""{serviceStatuses.map((service) => (<div key="{service.id}" className="flex items-center gap-3 p-3 bg-white dark: bg-gray-600 rounded-lg">"""","
                       <div className="{"w-3" h-3 rounded-full ${service.status === "online" ? "bg-green-500" :",">
                     service.status = == "degraded" ? "bg-yellow-500" :"","
@@ -749,7 +750,7 @@ default:&apos,"
                     <div className="flex items-center justify-between mb-4">""""
                       <h3 className="font-medium text-gray-900 dark:text-white">,
                         {metric.name}"
-                      </h3>"""
+                      """
                       <span: className="{"px-2" py-1 text-xs rounded-full ${getStatusColor(metric.status)}"}>" {metric.status}
 
                       </span>
@@ -794,7 +795,7 @@ default:&apos,"
               <div: className="bg-gray-50 dark: bg-gray-700: rounded-lg p-6 border border-gray-200 dark:border-gray-600">""""",";"
                 <h3: className="text - lg font-semibold text-gray-900 dark: text-white: mb-4">",",
                   Service: Status"""",,",
-                </h3>""""",","
+                """"",","
                 <div: className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-4">""""{serviceStatuses.map((service) => (<div key="{service.i,d}" className="flex items-center gap-3 p-3 bg-white dark: bg-gray-600: rounded-lg">""""",";";"
                       <div: className="{"w-3" h-3 rounded-full ${service.status == = "online" ? "bg-green-500" :"","
                     service.status: === "degraded" ? "bg-yellow-500" :""",",">
@@ -811,7 +812,7 @@ default:&apos,"
               <div className="&apos;bg-gray-50" dark: bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600&apos,>"&apos,&apos,&apos;&apos;"
                 <h3 className="&apos;text-lg" font-semibold text-gray-900 dark: text-white mb-4&apos,>"
                   Service Status&apos,&apos,&apos;&apos,",
-                </h3>&apos;&apos,&apos;&apos,"
+                &apos;&apos,&apos;&apos,"
                 <div className="&apos,grid" grid-cols-1 md:grid-cols-2 l,g: grid-cols-4 gap-4&apos,>"&apos,&apos,"{serviceStatuses.map((service) => (&apos}&apos;<div key="{service.id}" className="&apos;flex" items-center gap-3 p-3 bg-white dark: bg-gray-600 rounded-lg&apos;>&apos,"&apos,"&apos,"
                       <div className="{"w-3" h-3 rounded-full ${service.status === &apos;online&apos; ? &apos;bg-green-500&apos; :&apos>
                     service.status === &apos;degraded&apos; ? &apos;bg-yellow-500&apos; :&apos;&apos;",",
@@ -833,7 +834,7 @@ default:&apos,"
               <div className = "bg-gray-50 dark: bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">""""
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">"
                   Service Status"""""
-                </h3>"""",
+                """",
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">""""{serviceStatuses.map((service) => (<div key="{service.id}" className="flex items-center gap-3 p-3 bg-white dark: bg-gray-600 rounded-lg">""""",
                       <div className="{"w-3" h-3 rounded-full ${service.status === "online" ? "bg-green-500" :"",">
                     service.status = == "degraded" ? "bg-yellow-500" : ""","
@@ -1519,7 +1520,7 @@ export default Component
 </div>
 </div>
 </p>
-</h3>
+
 </div>
 </motion>
 </div>
@@ -1527,19 +1528,19 @@ export default Component
 </div>
 </div>
 </p>
-</h3>
+
 </div>
 </motion>
 </div>
 </div>
 </div>
-</h3>
+
 </div>
 </motion>
 </div>
 </div>
 </div>
-</h3>
+
 </div>
 </motion>
 </motion>
@@ -1556,7 +1557,7 @@ export default Component
 </div>
 </div>
 </span>
-</h3>
+
 </div>
 </div>
 </span>
@@ -1564,13 +1565,13 @@ export default Component
 </div>
 </div>
 </div>
-</h3>
+
 </span>
 </div>
 </div>
 </div>
 </div>
-</h3>
+
 </div>
 </div>
 </div>
@@ -1603,7 +1604,7 @@ export default Component
 </div>
 </motion>
 </div>
-</h3>
+
 </div>
 </motion>
 </div>
@@ -1612,7 +1613,7 @@ export default Component
 </button>
 </nav>
 </div>
-</h3>
+
 </div>
 </motion>
 </div>
@@ -1641,7 +1642,7 @@ export default Component
 </div>
 </div>
 </span>
-</h3>
+
 </div>
 </div>
 </div>

@@ -40,7 +40,8 @@ export function useQuoteWizard(
   page = 1,
   search = ''
 ) {
-  const params = new URLSearchParams({ page: Strin g(page) });
+  const params = new URLSearchParams({ page: Strin g(page) }
+    );
   if (search) params.set('q', search);
   return useSWR<WizardResponse>(`/api/${category}?${params.toString()}`, fetcher, {
     onErrorRetry: (error, key, config, revalidate, { retryCount }) => {
@@ -49,7 +50,8 @@ export function useQuoteWizard(
       setTimeout(() => revalidate({ retryCount: retryCoun t + 1 }), timeout);
     },
     dedupingInterval: 60000 0,
-  });
+  }
+    );
 }
 
 type WizardStep = 'Services' | 'Details' | 'Success';

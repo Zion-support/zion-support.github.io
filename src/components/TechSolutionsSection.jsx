@@ -161,7 +161,7 @@ const industries = ['"
                   </div>
 
                   <h3 className="text-2xl font - bold text-white mb-3 group - hover:text-zion - cyan transition -colors">                    {solution.title}
-                  </h3>"
+                  "
                   <p className="text-zion-slate-light leading-relaxed mb-4">
                     {solution.description}
                   </p>
@@ -281,7 +281,7 @@ const industries = ['"
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">"
               <h3 className="text-2xl font-bold text-white mb-4">
                 Ready to Transform Your Business?
-              </h3>"
+              "
               <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
                 Let our technology experts help you implement the right solutions for your business needs.</p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"

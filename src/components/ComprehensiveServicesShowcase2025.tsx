@@ -8,7 +8,8 @@ export default function Page(props: any) {
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     
-    return matchesCategory && matchesSearch && matchesPrice && matchesInnovation}) ;
+    return matchesCategory && matchesSearch && matchesPrice && matchesInnovation}
+    );
 
     switch(sortBy) {;
       case 'price':;
@@ -30,7 +31,8 @@ export default function Page(props: any) {
                (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);      case 'category':;
         return a.category.localeCompare(b.category) ;
       default:;
-        return 0}) ;
+        return 0}
+    );
 
     hidden: { opacity: 0 },;
     visible: {;
@@ -193,7 +195,7 @@ export default function Page(props: any) {
                         <div>"
                           <h3 className="text-lg font-semibold text-white group-hover: tex t-zion-cyan transition-colors">
                             {service.title}
-                          </h3>"
+                          "
                           <p className="text-sm text-zion-slate-400">{service.category}</p>
                         </div>
                       </div>
@@ -249,7 +251,7 @@ export default function Page(props: any) {
                           <div>"
                             <h3 className="text-xl font-semibold text-white group-hover: tex t-zion-cyan transition-colors">
                               {service.title}
-                            </h3>"
+                            "
                             <p className="text-zion-slate-400">{service.category}</p>
                           </div>
                         </div>
@@ -291,7 +293,7 @@ export default function Page(props: any) {
               className="text-center py-20"
 "
               <div className="text-6xl mb-4">🔍</div>"
-              <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>"
+              <h3 className="text-2xl font-semibold text-white mb-2">No services found"
               <p className="text-zion-slate-400 mb-6">
                 Try adjusting your search criteria or filters
               </p>
@@ -392,7 +394,7 @@ export default function Page(props: any) {
                   <div>"
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">"
                       <CheckCircle className="w-5 h-5 text-zion-green"   />                      Key Features
-                    </h3>"
+                    "
                     <ul className="space-y-2">
                       {selectedService.features.map((feature, index) => ("
                         <li key={index} className="flex items-start gap-2 text-zion-slate-300">"
@@ -404,7 +406,7 @@ export default function Page(props: any) {
                   <div>"
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">"
                       <TrendingUp className="w-5 h-5 text-zion-green"   />                      Benefits
-                    </h3>"
+                    "
                     <ul className="space-y-2">
                       {selectedService.benefits.map((benefit, index) => ("
                         <li key={index} className="flex items-start gap-2 text-zion-slate-300">"
@@ -420,7 +422,7 @@ export default function Page(props: any) {
                   <div>"
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">"
                       <Target className="w-5 h-5 text-zion-cyan"   />                      Use Cases
-                    </h3>"
+                    "
                     <ul className="space-y-2">
                       {selectedService.useCases.map((useCase, index) => ("
                         <li key={index} className="flex items-start gap-2 text-zion-slate-300">"
@@ -432,7 +434,7 @@ export default function Page(props: any) {
                   <div>"
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">"
                       <Users className="w-5 h-5 text-zion-purple"   />                      Target Audience
-                    </h3>"
+                    "
                     <ul className="space-y-2">
                       {selectedService.targetAudience.map((audience, index) => ("
                         <li key={index} className="flex items-start gap-2 text-zion-slate-300">"
@@ -448,7 +450,7 @@ export default function Page(props: any) {
                   <div className="mb-8">"
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">"
                       <Code className="w-5 h-5 text-zion-cyan"   />                      Technical Specifications
-                    </h3>"
+                    "
                     <div className="grid grid-cols-1 md: gri d-cols-2 gap-6">
                       <div>"
                         <h4 className="font-medium text-zion-slate-300 mb-2">Technology Stack</h4>"

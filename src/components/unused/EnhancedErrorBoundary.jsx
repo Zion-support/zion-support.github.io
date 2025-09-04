@@ -4,7 +4,8 @@ import {motion} from 'framer-motion';
 export default function Page(props: any) {
     componentDidCatch(error, errorInfo) {
 
-        this.setState({ errorInfo });
+        this.setState({ errorInfo }
+    );
         // Log error to console'
         // // // // // // // // console.error('Error caught by boundary:', error, errorInfo);
         // Call custom error handler if provided
@@ -41,7 +42,8 @@ export default function Page(props: any) {
             console.groupEnd();
 
         // In production, you would send this to your error reporting service
-        // Example: Sentry.captureException(error, { extra: errorReport });
+        // Example: Sentry.captureException(error, { extra: errorReport }
+    );
 
             // 
             // 
@@ -67,7 +69,8 @@ export default function Page(props: any) {
     };
                 return this.props.fallback}
             // Default error UI
-            return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center p-4">
+            return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center p-4">
           <motion.div initial = {
 
   { opacity: 0,
@@ -90,8 +93,10 @@ export default function Page(props: any) {
     window.addEventListener('error', handleError);
     window.addEventListener('unhandledrejection', (event) => {
 
-      handleError(event.reason, { componentStack: 'Promise rejection' });
-    });
+      handleError(event.reason, { componentStack: 'Promise rejection' }
+    );
+    }
+    );
 
     return () => {window.removeEventListener('error', handleError);
       window.removeEventListener('unhandledrejection', handleError);};

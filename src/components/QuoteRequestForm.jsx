@@ -74,7 +74,7 @@ agreeToMarketing: false})
   const serviceTypes = []";""
   const timelineOptions = []";""
   const budgetRanges = []";""
-  const urgencyLevels = []  const handleChange = (props: any) => {}
+  const urgencyLevels = []  const handleChange = (e) => {}
 
     setFormData(prev => ({}
 

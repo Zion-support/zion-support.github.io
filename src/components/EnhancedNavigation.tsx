@@ -249,7 +249,7 @@ export default function Page(props: any) {
   { label: 'Contact', href: '/contact' }
 ];
 
-export const EnhancedNavigation: Reac t.FC<EnhancedNavigationProps> = ({
+export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 
 className:  '',;
   onThemeChange }) => {;
@@ -340,7 +340,7 @@ root.classList.add(newTheme)}
                           <h3 className="text-sm font-semibold text-cyan-400 flex items-center space-x-2">
                             {item.icon}
                             <span>{item.label}</span>
-                          </h3>
+                          
                         </div>"
                         <div className="max-h-96 overflow-y-auto">
                           {item.children.map((child) => (
@@ -488,7 +488,8 @@ root.classList.add(newTheme)}
       </AnimatePresence>
     </nav>
   )};'"`
-;,"});,})";
+;,"}
+    );,})";
 
 </motion>
 </ChevronDown>

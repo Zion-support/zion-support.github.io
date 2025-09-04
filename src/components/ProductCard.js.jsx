@@ -19,7 +19,8 @@ export default function ProductCard(props: any) {
       product.title.trim() === "") {
     captureException(new Error("Invalid product data received by ProductCard"), { 
       extra: { product } 
-    });
+    }
+    );
     return (
       <div className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error">
         <p className="text-destructive text-sm">

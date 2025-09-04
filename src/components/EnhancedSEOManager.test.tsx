@@ -9,6 +9,6 @@ export default function EnhancedSEOManager.test() {return (
           Professional EnhancedSEOManager.test services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

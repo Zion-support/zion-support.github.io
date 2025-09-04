@@ -9,6 +9,6 @@ export default function ServicesGrid.test() {return (
           Professional ServicesGrid.test services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

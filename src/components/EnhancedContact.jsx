@@ -11,7 +11,8 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
         phone: '',
         service: '',
         message: ''
-    });
+    }
+    );
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     const contactMethods = [
@@ -155,7 +156,8 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
           </Button>
         </div>
       </motion.div>)}
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+    return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <motion.div className="max-w-7xl mx-auto text-center" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
@@ -180,7 +182,7 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
                   <div className="text-4xl mb-4 flex justify-center">
                     <method .icon className="h-16 w-16 text-zion-cyan group-hover:scale-110 transition-transform duration-300" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 text-center">{method.title}</h3>
+                  <h3 className="text-xl font-semibold text-white mb-3 text-center">{method.title}
                   <p className="text-gray-300 mb-4 text-center">{method.description}</p>
                   <div className="text-zion-cyan font-medium text-center group-hover:text-zion-cyan-light transition-colors">
                     {method.action}
@@ -289,19 +291,19 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
           <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <motion.div className="text-center" variants={itemVariants}>
               <Building className="h-16 w-16 text-zion-cyan mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Enterprise Solutions</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Enterprise Solutions
               <p className="text-gray-300">Scalable technology solutions for businesses of all sizes</p>
             </motion.div>
 
             <motion.div className="text-center" variants={itemVariants}>
               <Users className="h-16 w-16 text-zion-cyan mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Expert Team
               <p className="text-gray-300">Seasoned professionals with deep industry expertise</p>
             </motion.div>
 
             <motion.div className="text-center" variants={itemVariants}>
               <Globe className="h-16 w-16 text-zion-cyan mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Global Reach</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Global Reach
               <p className="text-gray-300">Serving clients worldwide with innovative solutions</p>
             </motion.div>
           </motion.div>

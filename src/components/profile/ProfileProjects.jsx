@@ -2,8 +2,9 @@ import {Card, CardContent} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
 import { FileText export function ProfileProjects(props: any) {
-    return (<div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
-      <h3 className="text-xl font-bold text-white mb-4">Projects</h3>
+    return (
+        <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
+      <h3 className="text-xl font-bold text-white mb-4">Projects
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {projects.map((project) => (<Card key={project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300">

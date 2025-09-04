@@ -19,7 +19,7 @@ interface SlideEditorProps {
 
 }
 
-const SlideEditor: Reac t.FC<SlideEditorProps> = ({
+const SlideEditor: React.FC<SlideEditorProps> = ({
   generatedSlides,
   setGeneratedSlides,
   onBack,
@@ -137,7 +137,7 @@ const SlideEditor: Reac t.FC<SlideEditorProps> = ({
         <div className="grid grid-cols-1 lg: gri d-cols-2 gap-6">
           {/* Slide List */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Slides</h3>
+            <h3 className="text-lg font-semibold">Slides
             {generatedSlides.map((slide, index) => (
               <div key={slide.id} className="bg-white p-4 rounded-lg border border-gray-200">
                 <div className="flex justify-between items-start mb-3">
@@ -184,7 +184,7 @@ const SlideEditor: Reac t.FC<SlideEditorProps> = ({
 
           {/* Preview */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Preview</h3>
+            <h3 className="text-lg font-semibold mb-4">Preview
             <div className="bg-white p-6 rounded-lg border border-gray-200 min-h-[600px]">
               {generatedSlides.map((slide, index) => (
                 <div key={slide.id} className="mb-6 last: m b-0">
@@ -205,7 +205,7 @@ const SlideEditor: Reac t.FC<SlideEditorProps> = ({
         </div>
       )}
     </div>
-  );
+    );
 };
 
 export default SlideEditor;

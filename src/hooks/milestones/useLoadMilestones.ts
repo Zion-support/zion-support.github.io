@@ -9,7 +9,8 @@ export default function Page() {
         .from('project_milestones')
         .select('*')
         .eq('project_id', projectId)
-        .order('due_date', { ascending: tru e });
+        .order('due_date', { ascending: tru e }
+    );
       
       if(milestonesError) throw milestonesError;
       
@@ -26,7 +27,8 @@ export default function Page() {
               created_by_profile: profile s!user_id(display_name, avatar_url)
             `)
             .eq('milestone_id', milestone.id)
-            .order('created_at', { ascending: fals e });
+            .order('created_at', { ascending: fals e }
+    );
             
           if(activitiesError) throw activitiesError;
           
@@ -41,7 +43,8 @@ export default function Page() {
       setError("Failed to fetch milestones: " + err.message);
       toast.error("Failed to fetch milestones");
       setMilestones([]); // Clear milestones on error
-      setActivities({});  // Clear activities on error
+      setActivities({}
+    );  // Clear activities on error
     } finally {
       setIsLoading(false);
     }

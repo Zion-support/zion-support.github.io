@@ -9,6 +9,6 @@ export default function ModernNavigation(props: any) {return (
           Professional ModernNavigation services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

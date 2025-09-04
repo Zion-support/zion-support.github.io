@@ -66,7 +66,8 @@ export function EnhancedAccessibilityPanel(props: any) {
     fontSize: 1 6,
     lineHeight: 1.5,
     letterSpacing: 0,
-    wordSpacing: 0});
+    wordSpacing: 0}
+    );
   const [issues, setIssues] = useState<AccessibilityIssue[]>([]);
   const [isScanning, setIsScanning] = useState<any>(false);
   const [currentFocus, setCurrentFocus] = useState<string>('');

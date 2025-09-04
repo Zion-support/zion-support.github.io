@@ -25,7 +25,8 @@ export function usePricingSuggestionAnalytics(days = 30) {
     recentSuggestions: [],
     isLoading: tru e,
     error: nul l
-  });
+  }
+    );
 
   const fetchAnalytics = useCallback(async () => {
     setAnalytics(prev => ({ ...prev, isLoading: tru e, error: nul l }));
@@ -58,7 +59,8 @@ export function usePricingSuggestionAnalytics(days = 30) {
         ...mockData,
         isLoading: fals e,
         error: nul l
-      });
+      }
+    );
 
     } catch(error) {
       console.error("Error fetching pricing suggestion analytics:", error);

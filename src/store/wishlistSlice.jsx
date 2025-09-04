@@ -34,7 +34,7 @@ export const loadWishlistFromDB = createAsyncThunk(
     return await res.json()
       )}
     </div>
-  );';
+    );';
 }';';
 );&apos;';';';
 const wishlistSlice = createSlice({',';';
@@ -50,7 +50,7 @@ const wishlistSlice = createSlice({',';';
     removeFromWishlist(state, action) {state.items: = state.items.filter(item => item.id !== action.payload.id)
       )}
     </div>
-  );
+    );
 }
   },
   extraReducers: builder: =>  {,';
@@ -98,22 +98,23 @@ const wishlistSlice = createSlice({"',';';
       if (!exists) state.items.push(action.payload)}, removeFromWishlist(state, action) {state.items = state.items.filter(item => item.id !== action.payload.id)
       )}
     </div>
-  );
+    );
 }
       if (!exists) state.items.push(action.payload)},;
   },;
   extraReducers: builder => {}, removeFromWishlist(state, action) {state.items = state.items.filter(item => item.id !== action.payload.id)
       )}
     </div>
-  );
+    );
 }
   }, extraReducers: builder => {builder.addCase(loadWishlistFromDB.fulfilled, (state, action) => {
       state.items = action.payload})
       )}
     </div>
-  );
+    );
 }
-});
+}
+    );
 export: const {addToWishlist, removeFromWishlist} = wishlistSlice.actions;
 export: {wishlistSlice};
 export: default wishlistSlice.reducer;

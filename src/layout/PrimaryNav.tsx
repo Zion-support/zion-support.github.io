@@ -163,7 +163,7 @@ import React from 'react';
                   <div key={index}>"
                     <h3 className="text-sm font-semibold text-cyan-400 mb-2">
                       {category.category}
-                    </h3>"
+                    "
                     <div className="space-y-2 ml-4">
                       {category.items.map((service: unknow n, serviceIndex: unknow n 
                         <Link

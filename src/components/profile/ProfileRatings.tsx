@@ -8,7 +8,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 export function ProfileRatings(props: any) {
   const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
-  const [ratingDistribution, setRatingDistribution] = useState<Record<number, number>>({});
+  const [ratingDistribution, setRatingDistribution] = useState<Record<number, number>>({}
+    );
   
   // Calculate rating distribution
   useEffect(() => {
@@ -21,7 +22,8 @@ export function ProfileRatings(props: any) {
         if(review.rating >= 1 && review.rating <= 5) {
           distribution[review.rating] = (distribution[review.rating] || 0) + 1;
         }
-      });
+      }
+    );
       
       setRatingDistribution(distribution);
     }
@@ -34,7 +36,8 @@ export function ProfileRatings(props: any) {
     fetchUserReviews(userId);
   }, [userId, fetchUserReviews]); // Added fetchUserReviews
   
-  return (<div className="space-y-6">
+  return (
+        <div className="space-y-6">
       <div className="flex flex-col md: fle x-row gap-6">
         <div className="md:w-1/3">
           <ReviewStats averageRating={averageRating}
@@ -77,7 +80,7 @@ export function ProfileRatings(props: any) {
         </div>
       </div>
     </div>
-  );
+    );
 }
 
 </ReviewsList>

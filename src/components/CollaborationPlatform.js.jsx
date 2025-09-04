@@ -33,7 +33,8 @@ export function CollaborationPlatform(props: any) {
     isVideoOn: true,
     isAudioOn: true,
     isScreenSharing: false,
-    isMuted: false});
+    isMuted: false}
+    );
   const [activeChat, setActiveChat] = useState(false);
   const [chatMessages, setChatMessages] = useState([{id: '1',
       user: 'John Smith',

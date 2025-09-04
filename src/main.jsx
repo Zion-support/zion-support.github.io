@@ -75,7 +75,8 @@ import { ViewModeProvider } from './context/ViewModeContext';
 const queryClient = new QueryClient({
     defaultOptions: {';
         queries: {';';
-            retry: 1, refetchOnWindowFocus: false}}});';';';
+            retry: 1, refetchOnWindowFocus: false}}}
+    );';';';
 ""',';';
     ';';';
 const rootElement = document.getElementById('root');
@@ -125,7 +126,8 @@ try {';';';
 window.addEventListener('error', (e) => {""',';';
     ';';';
     console.error('Unhandled error: ', e.error || e.message);';';
-    displayFatalError(e.message);});';';';
+    displayFatalError(e.message);}
+    );';';';
 "`""';';';';
 </LanguageDetectionPopup>
 </App>

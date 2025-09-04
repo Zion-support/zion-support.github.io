@@ -73,7 +73,7 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
               <div className="text-center">
                 <div className="flex items-center justify-center mb-6">
                   <QrCode className="w-8 h-8 text-blue-400 mr-3"  />
-                  <h3 className="text-2xl font-bold text-white">Scan to Download</h3>
+                  <h3 className="text-2xl font-bold text-white">Scan to Download
                 </div>
 
                 <div className="bg-white rounded-2xl p-6 mb-6 inline-block">
@@ -123,7 +123,7 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-2">
                     {currentPlatform.name}
-                  </h3>
+                  
                   <p className="text-gray-300">{currentPlatform.description}</p>
                 </div>
               </div>
@@ -214,7 +214,7 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
           <div className="bg-white/5 rounded-2xl p-6 border border-white/10 max-w-3xl mx-auto">
             <h3 className="text-xl font-semibold text-white mb-3">
               Having Trouble?
-            </h3>
+            
             <p className="text-gray-300 mb-4">
               If you're experiencing issues with the download or QR code, our support team is here to help.
             </p>

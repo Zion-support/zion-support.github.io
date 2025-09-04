@@ -3,7 +3,7 @@
   const [location, setLocation] = useState<any>("");
   const [isSubmitting, setIsSubmitting] = useState<any>(false);
   
-  const handleSubmit = async e: Reac t.FormEvent {;    e.preventDefault();
+  const handleSubmit = async e: React.FormEvent {;    e.preventDefault();
     if(location.trim()) {
 
       setIsSubmitting(true);
@@ -150,7 +150,7 @@ export function ITServiceRequestHero(props: any) {
           >"
             <h3 className="text-2xl font-bold text-white mb-6 text-center">
               Contact Information
-            </h3>
+            
 
             <div className="space-y-6">
               <div className="flex items-center gap-4">

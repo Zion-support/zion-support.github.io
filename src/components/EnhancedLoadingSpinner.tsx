@@ -17,7 +17,8 @@ setTimeout(() => {
   const renderSpinner = (props: any) => {
     switch(variant) {
       case 'futuristic':
-        return (<div className="relative">
+        return (
+        <div className="relative">
             {/* Outer ring */}
             <motion.div
               className="absolute inset - 0 border-4 border-zion - cyan / 20 rounded-full"
@@ -57,7 +58,8 @@ setTimeout(() => {
                   ease: "easeInOut"
                 }}
               />) ) }
-          </div>) ;
+          </div>
+    );
       case 'minimal':
 '      case 'minimal':
         return ()
@@ -87,7 +89,8 @@ setTimeout(() => {
                 {loadingSteps[currentStep].icon && React.createElement (loadingSteps[currentStep].icon, { size: 1 6 }) }
               </motion.div>
             </motion.div>
-          </div>) ;
+          </div>
+    );
 
       default: retur n ()
           <motion.div"
@@ -119,7 +122,8 @@ export default function EnhancedLoadingSpinner(props: any) {
     lg: 'text-lg'
   }
 
-  return (<div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>
+  return (
+        <div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>
 <motion.div
         className={`${sizeClasses[size]} relative`}
         animate={{ rotate: 36 0   }}
@@ -219,66 +223,127 @@ className="{"${sizeClasses[size]}" relative"}"
           className="absolute inset-0 flex items-center justify-center""          animate="{{" scale: [1, 1.2, 1] }}"          transition="{{" duration: 1.5, repeat: Infinit y, ease: "easeInOut" }}"        >"          <div className="w-2 h-2 bg-blue-600 rounded-full"   />"        </motion.div>"      </motion.div>
       
 "
-,"});,"})","});,"})"
+,"}
+    );,"})","}
+    );,"})"
 interface EnhancedLoadingSpinnerProps {
   ,": any;
-});,"})"
-  size?: "sm" | "md" | "lg";,"});,"})"
-  text?: string,"});,"})"
-  className?: string,"});,"});"
-}"});,"})"
-;,"});,"})"
-export default function EnhancedLoadingSpinner({,"});,"})"
-  size = "md",,"});,"})"
-  text = "Loading...",,"});,"})"
-  className = "";,"});,"});"
-}: EnhancedLoadingSpinnerProps) {,"});,"})"
-  const sizeClasses = {});,"})"
-    md: "w-12 h-12","});,"})"
-    lg: "w-16 h-16","});,"})"
-  const textSizes = {});,"})"
-    md: "text-base","});,"})"
-    lg: "text-lg","});,"})
+}
+    );,"})"
+  size?: "sm" | "md" | "lg";,"}
+    );,"})"
+  text?: string,"}
+    );,"})"
+  className?: string,"}
+    );,"}
+    );"
+}"}
+    );,"})"
+;,"}
+    );,"})"
+export default function EnhancedLoadingSpinner({,"}
+    );,"})"
+  size = "md",,"}
+    );,"})"
+  text = "Loading...",,"}
+    );,"})"
+  className = "";,"}
+    );,"}
+    );"
+}: EnhancedLoadingSpinnerProps) {,"}
+    );,"})"
+  const sizeClasses = {}
+    );,"})"
+    md: "w-12 h-12","}
+    );,"})"
+    lg: "w-16 h-16","}
+    );,"})"
+  const textSizes = {}
+    );,"})"
+    md: "text-base","}
+    );,"})"
+    lg: "text-lg","}
+    );,"})
 }
   return ("
-    <div className="{"flex" flex-col items-center justify-center space-y-4 ${className}"}>;,"});,"})"
-      <motion.div,"});,"})"
-        className="{"${sizeClasses[size]}" relative"}"});,"})"
-        animate="{{" rotate: 36 0  }}"});,"})"
-        transition="{{" duration: 1, repeat: Infinit y, ease: "linear" }}"});,"})"
-      >;,"});,"})"
-        {/* comment */}"});,"})"
-        <div className="{"${sizeClasses[size]}" border-4 border-blue-200 rounded-full"}        />;,"});,"})"
-        {/* comment */}"});,"})"
-          className="{"${sizeClasses[size]}" border-4 border-transparent border-t-blue-600 rounded-full absolute inset-0"}"});,"})"
-          animate="{{" rotate: -360  }}"});,"})"
-          transition="{{" duration: 0.8, repeat: Infinit y, ease: "linear" }}"});,"})" />;,"});,"})"
-        {/* comment */}"});,"})"
-          className="absolute inset-0 flex items-center justify-center";,"});,"})"
-          animate="{{" scale: [1, 1.2, 1] }}"});,"})"
-          transition="{{" duration: 1.5, repeat: Infinit y, ease: "easeInOut" }}"});,"})"
-          <div className="w-2 h-2 bg-blue-600 rounded-full"   />;,"});,"})"
-        </motion.div>;,"});,"})"
-      {/* comment */}"});,"})"
-        className="{"text-gray-600" font-medium ${textSizes[size]}"}"});,"})"
-        animate="{{" opacity: [0.5, 1, 0.5] }}"});,"})"
-        transition="{{" duration: 2, repeat: Infinit y, ease: "easeInOut" }}"});,"})"
-        {text}"});,"})"
-      {/* comment */}"});,"})"
-      <div className="flex space-x-1">;,"});,"})"
-        {[0, 1, 2].map((i) => (;,"});,"})"
-            key={i}"});,"})"
-            className="w-2 h-2 bg-blue-600 rounded-full";,"});,"})"
-            animate="{{" scale: [1, 1.5, 1],,"});,"})"
-              opacity: [0.5, 1, 0.5],"});,"});"
-}}"});,"})"
-            transition="{{" duration: 1.5,"});,"})"
-              repeat: Infinit y,"});,"})"
-              delay: i * 0.2,"});,"})"
-              ease: "easeInOut","});,"})"
-        ))}"});,"})"
-      </div>;,"});,"})"
-  );,"});,"})"interface EnhancedLoadingSpinnerProps {
+    <div className="{"flex" flex-col items-center justify-center space-y-4 ${className}"}>;,"}
+    );,"})"
+      <motion.div,"}
+    );,"})"
+        className="{"${sizeClasses[size]}" relative"}"}
+    );,"})"
+        animate="{{" rotate: 36 0  }}"}
+    );,"})"
+        transition="{{" duration: 1, repeat: Infinit y, ease: "linear" }}"}
+    );,"})"
+      >;,"}
+    );,"})"
+        {/* comment */}"}
+    );,"})"
+        <div className="{"${sizeClasses[size]}" border-4 border-blue-200 rounded-full"}        />;,"}
+    );,"})"
+        {/* comment */}"}
+    );,"})"
+          className="{"${sizeClasses[size]}" border-4 border-transparent border-t-blue-600 rounded-full absolute inset-0"}"}
+    );,"})"
+          animate="{{" rotate: -360  }}"}
+    );,"})"
+          transition="{{" duration: 0.8, repeat: Infinit y, ease: "linear" }}"}
+    );,"})" />;,"}
+    );,"})"
+        {/* comment */}"}
+    );,"})"
+          className="absolute inset-0 flex items-center justify-center";,"}
+    );,"})"
+          animate="{{" scale: [1, 1.2, 1] }}"}
+    );,"})"
+          transition="{{" duration: 1.5, repeat: Infinit y, ease: "easeInOut" }}"}
+    );,"})"
+          <div className="w-2 h-2 bg-blue-600 rounded-full"   />;,"}
+    );,"})"
+        </motion.div>;,"}
+    );,"})"
+      {/* comment */}"}
+    );,"})"
+        className="{"text-gray-600" font-medium ${textSizes[size]}"}"}
+    );,"})"
+        animate="{{" opacity: [0.5, 1, 0.5] }}"}
+    );,"})"
+        transition="{{" duration: 2, repeat: Infinit y, ease: "easeInOut" }}"}
+    );,"})"
+        {text}"}
+    );,"})"
+      {/* comment */}"}
+    );,"})"
+      <div className="flex space-x-1">;,"}
+    );,"})"
+        {[0, 1, 2].map((i) => (;,"}
+    );,"})"
+            key={i}"}
+    );,"})"
+            className="w-2 h-2 bg-blue-600 rounded-full";,"}
+    );,"})"
+            animate="{{" scale: [1, 1.5, 1],,"}
+    );,"})"
+              opacity: [0.5, 1, 0.5],"}
+    );,"}
+    );"
+}}"}
+    );,"})"
+            transition="{{" duration: 1.5,"}
+    );,"})"
+              repeat: Infinit y,"}
+    );,"})"
+              delay: i * 0.2,"}
+    );,"})"
+              ease: "easeInOut","}
+    );,"})"
+        ))}"}
+    );,"})"
+      </div>;,"}
+    );,"})"
+  );,"}
+    );,"})"interface EnhancedLoadingSpinnerProps {
   ": any;
   size?: "sm" | "md" | "lg" text?: string className?: string
 }
@@ -331,7 +396,7 @@ export default function EnhancedLoadingSpinner({,"});,"})"
 interface EnhancedLoadingSpinnerProps {
   "": any;
   ): any;
-};framer-motion";;framer-motion
+};framer-motion";framer-motion
   size?: &apos;sm&apos; | &apos;md&apos; | &apos;lg&apos; text?: string className?: string}&apos;&apos
 export default function EnhancedLoadingSpinner(props: any) {&apos}&apos
   const sizeClasses = {}&apos,

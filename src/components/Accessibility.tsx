@@ -22,7 +22,8 @@ export function Accessibility(): void {
     reducedMotion: fals e,
     soundEnabled: tru e,
     theme: 'auto'
-  });
+  }
+    );
 
   const updateSetting = (props: any) => {
     const newSettings = {
@@ -137,7 +138,7 @@ export function Accessibility(): void {
       {isOpen && (
         <div className="fixed bottom-20 left-4 z-40 w-80 bg-white dark: b g-gray-800 rounded-lg shadow-xl border border-gray-200 dark: borde r-gray-700 p-6">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">Accessibility</h3>
+            <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">Accessibility
             <button
               onClick={() => setIsOpen(false)}
               className="text-gray-400 hover: tex t-gray-600 dark: hove r:text-gray-300"

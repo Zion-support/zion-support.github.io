@@ -209,7 +209,7 @@ export function FeatureCTAs(...args[]):  {
           <div className="bg-gradient-to-r from-blue-600/10 to-cyan-600/10 border border-blue-500/20 rounded-2xl p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Get Started?
-            </h3>
+            
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Contact our team to discuss your specific needs and discover how our solutions can help your business grow
             </p>

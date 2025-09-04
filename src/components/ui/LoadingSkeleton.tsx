@@ -31,7 +31,7 @@ import React from 'react';
     </>
   )};
 
-export const CardSkeleton: Reac t.FC = (): JSX.Element => ("
+export const CardSkeleton: React.FC = (): JSX.Element => ("
   <div className="bg-white dark: b g-gray-800 rounded-lg shadow-md p-6 animate-pulse">"
     <div className="flex items-center space-x-4 mb-4">"
       <div className="w-12 h-12 bg-gray-300 rounded-full"></div>"
@@ -44,9 +44,9 @@ export const CardSkeleton: Reac t.FC = (): JSX.Element => ("
     <Skeleton height="h-4" width="w-5/6" className="mb-2"   />"
     <Skeleton height="h-4" width="w-4/6"   />
   </div>
-);
+    );
 
-export const HeroSkeleton: Reac t.FC = (): JSX.Element => ("
+export const HeroSkeleton: React.FC = (): JSX.Element => ("
   <div className="animate-pulse">"
     <div className="h-96 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 rounded-lg mb-8"></div>"
     <div className="max-w-4xl mx-auto text-center">"
@@ -57,9 +57,9 @@ export const HeroSkeleton: Reac t.FC = (): JSX.Element => ("
         <Skeleton height="h-12" width="w-32" rounded="rounded-lg"   />      </div>
     </div>
   </div>
-);
+    );
 
-export const ServiceCardSkeleton: Reac t.FC = (): JSX.Element => ("
+export const ServiceCardSkeleton: React.FC = (): JSX.Element => ("
   <div className="bg-white dark: b g-gray-800 rounded-xl shadow-lg p-6 hover: shado w-xl transition-shadow duration-300 animate-pulse">"
     <div className="w-16 h-16 bg-gray-300 rounded-lg mb-4"></div>"
     <Skeleton height="h-6" width="w-3/4" className="mb-3"   />"
@@ -69,7 +69,7 @@ export const ServiceCardSkeleton: Reac t.FC = (): JSX.Element => ("
       <Skeleton height="h-8" width="w-24" rounded="rounded-lg"   />"
       <Skeleton height="h-4" width="w-16"   />    </div>
   </div>
-);
+    );
 
 interface TableSkeletonProps extends React.PropsWithChildren<{}> {
 

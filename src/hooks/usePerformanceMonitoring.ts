@@ -21,7 +21,8 @@ export function usePerformanceMonitoring() {;
       if (performance.memory) {
         setMetrics({
           loadTime, renderTime: endTim e - startTime,
-          memoryUsage: performanc e.memory.usedJSHeapSize / 1024 / 1024});
+          memoryUsage: performanc e.memory.usedJSHeapSize / 1024 / 1024}
+    );
       }
     };
 

@@ -1,4 +1,4 @@
-export const ErrorFallback: Reac t.FC < ErrorFallbackProps> = ({ error, resetErrorBoundary }) => {
+export const ErrorFallback: React.FC < ErrorFallbackProps> = ({ error, resetErrorBoundary }) => {
 
 interface ErrorFallbackProps extends React.PropsWithChildren<{}> {
 
@@ -7,7 +7,8 @@ interface ErrorFallbackProps extends React.PropsWithChildren<{}> {
 
 }
 
-  return (<div  className="min - h-screen bg-gray - 50 flex items - center justify - center px-4">
+  return (
+        <div  className="min - h-screen bg-gray - 50 flex items - center justify - center px-4">
       <div  className="max - w-md w-full bg-white rounded-lg shadow-lg p - 6 text-center">
         <div  className="text-red - 500 text-6xl mb-4">⚠️</div>
         <h1 className="text-2xl font - bold text-gray - 900 mb-4">Something went wrong</h1>

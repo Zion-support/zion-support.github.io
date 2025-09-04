@@ -16,7 +16,8 @@ export function ChatAssistantTrigger(props: any) {
                 body: JSON.stringify({
                     messages[{ role: "user", content: message }];
                 }),;
-            });
+            }
+    );
             if (!response.ok) {// // // // // // // console.error("Error in AI chat:", error);
             return Promise.resolve();
 

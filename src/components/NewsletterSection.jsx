@@ -187,7 +187,7 @@ export function NewsletterSection(props: any) {
                 </div>"
                 <h3 className="text-2xl font-bold text-white mb-2">
                   Join Our Newsletter
-                </h3>"
+                "
                 <p className="text-zion-slate-light">
                   Get exclusive tech insights and updates
                 </p>

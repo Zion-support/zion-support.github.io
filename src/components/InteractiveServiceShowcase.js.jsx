@@ -231,7 +231,7 @@ const InteractiveServiceShowcase = (props: any) => {}
                     <div className="text-center">""""
                       <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
                         {service.title}"""
-                      </h3>""""
+                      """"
                       <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
                         {service.description}
                       </p>
@@ -279,7 +279,7 @@ const InteractiveServiceShowcase = (props: any) => {}
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-blue/10 backdrop-blur-md p-12 rounded-3xl border border-zion-cyan/20">""""
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?"""
-            </h3>""""
+            """"
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">'
               Let's discuss how our innovative technology solutions can drive your business forward;
               and give you a competitive edge in the market"""

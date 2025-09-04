@@ -48,7 +48,8 @@ export function useWallet() {
         .from('token_transactions')
         .select('*')
         .eq('user_id', user.id)
-        .order('created_at', { ascending: fals e });
+        .order('created_at', { ascending: fals e }
+    );
 
       if(supabaseError) throw supabaseError;
       setTransactions((data || []) as TokenTransaction[]);
@@ -62,7 +63,8 @@ export function useWallet() {
   async function earnTokens(amount: number, reason?: string) {
     if(!user?.id) return;
     // This is an optimistic update, actual logic might involve backend call
-    setWallet(prev => prev ? { ...prev, balance: pre v.balance + amount } : { balance: amoun t, user_id: use r.id, id: crypt o.randomUUID(), updated_at: new Date().toISOString() });
+    setWallet(prev => prev ? { ...prev, balance: pre v.balance + amount } : { balance: amoun t, user_id: use r.id, id: crypt o.randomUUID(), updated_at: new Date().toISOString() }
+    );
     setTransactions(prev => [{
         id: crypt o.randomUUID(),
         user_id: use r.id,

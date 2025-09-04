@@ -86,7 +86,8 @@ export function FuturisticBackground(props: any) {
                                 ctx.lineWidth = 1;
                                 ctx.stroke()}
                         }
-                    })});
+                    })}
+    );
                 requestAnimationFrame(animate)};
             animate()}
         // Grid system
@@ -184,7 +185,8 @@ export function NeonText(props: any) {
 // Futuristic card component
 export function FuturisticCard(props: any) {
     const glowSize = intensity === 'high' ? '0 0 30px' : intensity === 'medium' ? '0 0 20px' : '0 0 10px';
-    return (<div className={`relative overflow-hidden rounded-lg border border-transparent bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm ${className}`} style="{{{
+    return (
+        <div className={`relative overflow-hidden rounded-lg border border-transparent bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm ${className}`} style="{{{
             boxShadow: `0 0 ${glowSize}}" ${glowColor}`,
             borderColor: `${glowColor}40`
         }}>

@@ -26,7 +26,8 @@ export default function Page(props: any) {
       averageContentLength: 5000, // Sample data
       pagesWithImages: 45, // Sample data
       pagesWithMetaDescriptions: 32, // Sample data
-      lastUpdated: new Date()});
+      lastUpdated: new Date()}
+    );
   };
   const startAnalysis = async () => {setIsAnalyzing(true);
     // Simulate content analysis
@@ -77,7 +78,8 @@ export default function Page(props: any) {
   const filteredIssues = contentIssues.filter(issue => {const matchesSearch =
       issue.pageTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
       issue.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesFilter && matchesSearch;});
+    return matchesFilter && matchesSearch;}
+    );
   const getIssueTypeLabel = type => {
 
     switch(type) {
@@ -368,7 +370,7 @@ export default function Page(props: any) {
                   <h3 className="text-lg font-semibold text-green-400 mb-2 flex items-center">"
                     <CheckCircle className="w-5 h-5 mr-2"  />
                     Quick Fixes
-                  </h3>"
+                  "
                   <ul className="text-green-200 text-sm space-y-1">
                     <li>• Add missing page titles</li>
                     <li>• Include meta descriptions</li>

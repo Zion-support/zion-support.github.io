@@ -9,6 +9,6 @@ export default function GlobalPresenceSection.test() {return (
           Professional GlobalPresenceSection.test services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

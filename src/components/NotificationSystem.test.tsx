@@ -9,6 +9,6 @@ export default function NotificationSystem.test() {return (
           Professional NotificationSystem.test services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

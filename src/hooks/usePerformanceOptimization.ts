@@ -29,7 +29,8 @@ const metricsRef: useRe f<PerformanceMetrics>({;
     renderTime: 0,;
     memoryUsage: 0,;
     fps: 0;
-  });
+  }
+    );
 
   const observerRef = useRef<IntersectionObserver | null>(null);
   const frameCountRef = useRef(0);
@@ -117,7 +118,8 @@ const metricsRef: useRe f<PerformanceMetrics>({;
           if (observerRef.current) {
             observerRef.current.unobserve(entry.target)}
         }
-      })});
+      })}
+    );
 
     if (observerRef.current) {
       observerRef.current.observe(element)}

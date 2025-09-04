@@ -26,7 +26,8 @@ const productSchema = z.object({
     video: z.instanceof(File).optional(),
     model: z.instanceof(File).optional(),
     tags: z.string().optional(),
-});
+}
+    );
 export function ProductSubmissionForm(props: any) {
     const { user } = useAuth();
     const {toast} = useToast();
@@ -46,7 +47,8 @@ export function ProductSubmissionForm(props: any) {
             model: null,
             tags: "",
         },
-    });
+    }
+    );
     // Handle image upload preview
     const handleImageChange = (props: any) => {
         const file = e.target.files?.[0];
@@ -82,7 +84,8 @@ export function ProductSubmissionForm(props: any) {
                 title: "Authentication Required",
                 description: "You must be logged in to publish products",
                 variant: "destructive",
-            });
+            }
+    );
             return}
         setIsSubmitting(true);
         try {
@@ -122,7 +125,8 @@ export function ProductSubmissionForm(props: any) {
                 // Update the product with the image URL
                 const {error: updateError} = await supabase
                     .from('product_listings')
-                    .update({images[publicUrlData.publicUrl];});
+                    .update({images[publicUrlData.publicUrl];}
+    );
                     .eq('id', productRecord.id);
                 if (updateError) {throw new Error(updateError.message)}
             }
@@ -160,7 +164,8 @@ export function ProductSubmissionForm(props: any) {
             }
             // Show success message
             toast({title: "Product Published!",
-                description: "Your product has been successfully published on Zion.",});
+                description: "Your product has been successfully published on Zion.",}
+    );
             // Redirect to product page
             router(`/marketplace/listing/${productRecord.id}`);
         }
@@ -169,7 +174,8 @@ export function ProductSubmissionForm(props: any) {
                 title: "Publication Failed",
                 description: error instanceof Error ? error.message : "An unknown error occurred",
                 variant: "destructive",
-            })}
+                }
+    );
         finally {setIsSubmitting(false)}
     };
     return (<Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">

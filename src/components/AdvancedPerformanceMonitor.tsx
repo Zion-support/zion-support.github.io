@@ -52,7 +52,8 @@ export default function Page(props: any) {
 
         rating = 'poor';
         color = 'text-red-500'}
-    });
+    }
+    );
 
   TrendingUp,'
   AlertTriangle} from 'lucide-react';    
@@ -87,16 +88,20 @@ export default function Page(props: any) {
         if(fcpEntry) {
 
           setMetrics(prev => ({ ...prev, fcp: fcpEntr y.startTime }))}
-      });
-      fcpObserver.observe({ entryTypes: ['paint'] });
+      }
+    );
+      fcpObserver.observe({ entryTypes: ['paint'] }
+    );
 
       // Largest Contentful Paint
 
         if(lastEntry) {
 
           setMetrics(prev => ({ ...prev, lcp: lastEntr y.startTime }))}
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      }
+    );
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }
+    );
 
       // First Input Delay
       const fidObserver = new PerformanceObserver(list => {
@@ -106,8 +111,10 @@ export default function Page(props: any) {
           if (entry.processingStart && entry.startTime) {
 
             setMetrics(prev => ({ ...prev, fid }) ) }
-        })});
-      fidObserver.observe({ entryTypes: ['first-input'] });
+        })}
+    );
+      fidObserver.observe({ entryTypes: ['first-input'] }
+    );
 
       // Layout Shift
       const clsObserver = new PerformanceObserver(list => {
@@ -117,10 +124,13 @@ export default function Page(props: any) {
           if(!entry.hadRecentInput) {
 
             clsValue += entry.value}
-        });
+        }
+    );
         setMetrics(prev => ({ ...prev, cls: clsValu e }));
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      }
+    );
+      clsObserver.observe({ entryTypes: ['layout-shift'] }
+    );
       return () => {
         lcpObserver.disconnect();
         fidObserver.disconnect();
@@ -191,13 +201,13 @@ export default function Page(props: any) {
       <div className="flex items-center justify-between mb-4">"
         <h3 className="text-lg font-bold text-white flex items-center">"
           <Zap className="w-5 h-5 mr-2 text-zion-cyan"   />          Performance Monitor
-        </h3>
+        
         <button
           onClick={() => setIsVisible(false)}"
           className="text-zion-slate-light hover: tex t-white transition-colors"
         >
           ×
         </button>      </div>
-  );"}"
+    );"}"
 
 </div>

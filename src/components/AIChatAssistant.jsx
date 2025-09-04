@@ -105,7 +105,8 @@ export function AIChatAssistant(props: any) {
       </button>)}
     if(isMinimized) {
 "
-        return (<div className="fixed bottom-4 right-4 z-50">"
+        return (
+        <div className="fixed bottom-4 right-4 z-50">"
         <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">"
           <div className="flex items-center gap-3">"
             <div className="w-3 h-3 bg-zion-emerald rounded-full animate-pulse"></div>"
@@ -116,7 +117,8 @@ export function AIChatAssistant(props: any) {
           </div>
         </div>
       </div>)}"
-    return (<div className="fixed bottom-4 right-4 w-96 h-[500px] bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 flex flex-col">
+    return (
+        <div className="fixed bottom-4 right-4 w-96 h-[500px] bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 flex flex-col">
       {/* Header */}"
       <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">"
         <div className="flex items-center gap-3">"

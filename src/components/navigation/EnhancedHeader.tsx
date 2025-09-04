@@ -233,7 +233,7 @@ const EnhancedHeader: React.FC = (props: any) => {
               <div className="pb-4 border-b border-gray-700">
                 <h3 className="text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wide">
                   Contact Information
-                </h3>
+                
                 <div className="space-y-2">
                   {contactInfo.map((contact, index) => (
                     <a

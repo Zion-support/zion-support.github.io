@@ -38,7 +38,8 @@ export function AccessibilityEnhancer(props: any) {
     letterSpacing: 0,
     keyboardNavigation: tru e,
     screenReader: tru e
-  });
+  }
+    );
 
   const [isOpen, setIsOpen] = useState<any>(false);
 
@@ -147,7 +148,8 @@ export function AccessibilityEnhancer(props: any) {
         el.setAttribute('data-accessibility-enhanced', 'true');
         el.classList.add('focus-visible: outlin e-2', 'focus-visible: outlin e-blue-500', 'focus-visible: outlin e-offset-2');
       }
-    });
+    }
+    );
   }, [enabled]);
 
   const updateSetting = (props: any) => {
@@ -177,7 +179,7 @@ export function AccessibilityEnhancer(props: any) {
       {isOpen && showSettings && (
         <div className="fixed bottom-20 left-4 z-40 w-80 bg-white dark: b g-gray-800 rounded-lg shadow-xl border border-gray-200 dark: borde r-gray-700 p-6">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">Accessibility</h3>
+            <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">Accessibility
             <button
               onClick={() => setIsOpen(false)}
               className="text-gray-400 hover: tex t-gray-600 dark: hove r:text-gray-300"

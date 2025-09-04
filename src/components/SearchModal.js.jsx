@@ -27,7 +27,8 @@ export default function Page(props: any) {
         const filteredResults = mockSearchResults.filter(result => {
 
             const matchesFilter = activeFilter === 'all' || result.type === activeFilter;
-            return matchesQuery && matchesFilter}) ;
+            return matchesQuery && matchesFilter}
+    );
         setResults(filteredResults) ;
         setIsLoading(false) };
     const handleSearch = (props: any) => {
@@ -48,13 +49,17 @@ export default function Page(props: any) {
         switch(type) {
 
             case 'service':"
-                return _jsx(Briefcase, { className: "h-4 w-4" });
+                return _jsx(Briefcase, { className: "h-4 w-4" }
+    );
             case 'talent':"
-                return _jsx(Users, {className: "h-4 w-4"});
+                return _jsx(Users, {className: "h-4 w-4"}
+    );
             case 'equipment':"
-                return _jsx(ShoppingCart, {className: "h-4 w-4"});
+                return _jsx(ShoppingCart, {className: "h-4 w-4"}
+    );
             case 'page':"
-                return _jsx(Search, {className: "h-4 w-4"});
+                return _jsx(Search, {className: "h-4 w-4"}
+    );
             default:"
                 return _jsx(Search, {className: "h-4 w-4"})}
     };

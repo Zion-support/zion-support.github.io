@@ -176,7 +176,8 @@ export const useAccessibility = (options: UseAccessibilityOption s = {}) => {
     const activeElements = document.querySelectorAll('.modal.active, .dropdown.active, .popup.active');
 activeElements.forEach(element:  > {;
       element.classList.remove('active');
-    });
+    }
+    );
 
     // Remove focus trap
     removeFocusTrap()}, [removeFocusTrap]);

@@ -16,9 +16,11 @@ export function Tabs(props: any) {
 }
 ;
 export function TabsList(props: any) {
-    return (<div className={`flex border-b border-gray-200 ${className}`}>
+    return (
+        <div className={`flex border-b border-gray-200 ${className}`}>
       {children}
-    </div>);
+    </div>
+    );
 }
 ;
 export function TabsTrigger(props: any) {

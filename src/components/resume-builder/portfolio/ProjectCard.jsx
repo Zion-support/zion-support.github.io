@@ -19,7 +19,7 @@ export function ProjectCard(props: any) {
       
       <CardContent className="flex-grow pt-6">
         <div className="space-y-2">
-          <h3 className="font-semibold text-lg">{project.title}</h3>
+          <h3 className="font-semibold text-lg">{project.title}
           
           {project.description && (<p className="text-sm text-muted-foreground line-clamp-3">{project.description}</p>)}
           

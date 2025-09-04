@@ -6,7 +6,8 @@ import {cn} from "@/lib/utils";
 export const Sidebar = React.forwardRef((props, ref) => {
     const { isMobile, state, openMobile, setOpenMobile } = useSidebar();
     if (props.collapsible === "none") {
-        return (<div className = {
+        return (
+        <div className = {
   cn("flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground",
   props.className)
 
@@ -72,7 +73,8 @@ export const Sidebar = React.forwardRef((props, ref) => {
       </div>
     </div>'
   );''
-});'''
+}
+    );'''
 Sidebar.displayName = 'Sidebar';
 export const SidebarRail = React.forwardRef((props, ref) => {}
   const {toggleSidebar} = useSidebar();
@@ -91,7 +93,8 @@ export const SidebarRail = React.forwardRef((props, ref) => {}
       {...props}
      />'
   );''
-});'''
+}
+    );'''
 SidebarRail.displayName = 'SidebarRail';
 export const SidebarInset = React.forwardRef((props, ref) => {}
   return()
@@ -104,7 +107,8 @@ export const SidebarInset = React.forwardRef((props, ref) => {}
       {...props}
      />
   );
-});'
+}
+    );'
 SidebarInset.displayName = 'SidebarInset';'"""
 '"'"""
 

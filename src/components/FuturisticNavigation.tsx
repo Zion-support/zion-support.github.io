@@ -232,7 +232,7 @@ if(searchQuery.trim()) {
 "
                         <div className="p-4">"
                           <div className="mb-4">"
-                            <h3 className="text-lg font-semibold text-zion-cyan mb-2">{category.name}</h3>"
+                            <h3 className="text-lg font-semibold text-zion-cyan mb-2">{category.name}"
                             <div className="w-16 h-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full"></div>
                           </div>"
                           <div className="space-y-2">
@@ -320,7 +320,8 @@ if(searchQuery.trim()) {
     </>
   )};
 '"`
-;,"});,})";
+;,"}
+    );,})";
 
 </motion>
 </motion>

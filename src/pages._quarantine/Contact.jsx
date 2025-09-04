@@ -116,7 +116,8 @@ export default function Contact(props: any) {
     comp: '',
     service: '',
     message: ''
-  });
+  }
+    );
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
@@ -147,12 +148,13 @@ export default function Contact(props: any) {
         comp: '',
         service: '',
         message: ''
-      });
+      }
+    );
     }, 3000);
   };
 
   return (
-    <div className="min-h-screen bg-futuristic">
+        <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>
@@ -218,7 +220,7 @@ export default function Contact(props: any) {
                   <method .icon className="w-8 h-8 text-white"  />
                 </div>
 
-                <h3 className="text-lg font-bold text-white mb-2">{method.title}</h3>
+                <h3 className="text-lg font-bold text-white mb-2">{method.title}
                 <p className="text-zion-cyan font-semibold mb-1">{method.value}</p>
                 <p className="text-zion-slate-light text-sm mb-4">{method.description}</p>
 
@@ -262,7 +264,7 @@ export default function Contact(props: any) {
                   className="bg-green-500/20 border border-green-500/40 rounded-2xl p-8 text-center"
                 >
                   <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4"  />
-                  <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
+                  <h3 className="text-2xl font-bold text-white mb-2">Message Sent!
                   <p className="text-green-200">
                     Thank you for reaching out. We'll get back to you within 24 hours.
                   </p>
@@ -376,7 +378,7 @@ export default function Contact(props: any) {
               className="space-y-8"
             >
               <div>
-                <h3 className="text-2xl font-bold text-white mb-4">About Zion Tech Group</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">About Zion Tech Group
                 <p className="text-zion-slate-light leading-relaxed mb-6">
                   We are a leading technology company specializing in AI, cybersecurity, cloud solutions,
                   and digital transformation. Our team of experts is dedicated to helping businesses
@@ -389,7 +391,7 @@ export default function Contact(props: any) {
               </div>
 
               <div>
-                <h3 className="text-xl font-bold text-white mb-4">Connect With Us</h3>
+                <h3 className="text-xl font-bold text-white mb-4">Connect With Us
                 <div className="flex gap-4">
                   {socialLinks.map(social => (
                     <a
@@ -407,7 +409,7 @@ export default function Contact(props: any) {
               </div>
 
               <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 border border-zion-cyan/20 rounded-2xl p-6">
-                <h3 className="text-xl font-bold text-white mb-4">Why Choose Us?</h3>
+                <h3 className="text-xl font-bold text-white mb-4">Why Choose Us?
                 <ul className="space-y-3 text-zion-slate-light">
                   <li className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0"  />
@@ -456,7 +458,7 @@ export default function Contact(props: any) {
               </div>
             </div>
             <div className="text-center">
-              <h3 className="text-xl font-bold text-white mb-2">Zion Tech Group</h3>
+              <h3 className="text-xl font-bold text-white mb-2">Zion Tech Group
               <p className="text-zion-cyan">364 E Main St STE 1008</p>
               <p className="text-zion-slate-light">Middletown, DE 19709</p>
               <p className="text-zion-slate-light text-sm mt-2">United States</p>
@@ -465,7 +467,7 @@ export default function Contact(props: any) {
         </div>
       </section>
     </div>
-  );
+    );
 }
 
 </motion>

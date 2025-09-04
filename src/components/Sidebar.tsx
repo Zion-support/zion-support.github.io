@@ -182,7 +182,7 @@ export default function Sidebar(props: any) {
             </div>
           )}
         </div>
-      );
+    );
     }
 
     return null;
@@ -210,7 +210,7 @@ export default function Sidebar(props: any) {
       <div className="p-4 border-t border-gray-800 mt-8">
         <h3 className="text-gray-400 text-sm font-semibold uppercase tracking-wider mb-3">
           Quick Actions
-        </h3>
+        
         <div className="space-y-2">
           <Link
             to="/request-quote"
@@ -641,7 +641,7 @@ export default function Sidebar(props: any) {
 
         {/* Quick Links */}
         <div className="p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links
           <nav className="space-y-2">
             {quickLinks.map((link) => (
               <Link
@@ -660,7 +660,7 @@ export default function Sidebar(props: any) {
 
         {/* Contact Information */}
         <div className="p-6 border-t">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us
           <div className="space-y-3">
             {contactInfo.map((contact, index) => (
               <a
@@ -702,7 +702,7 @@ export default function Sidebar(props: any) {
         </div>
       </div>
     </div>
-  );
+    );
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-fe38
 

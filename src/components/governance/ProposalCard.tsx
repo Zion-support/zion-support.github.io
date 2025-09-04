@@ -21,7 +21,7 @@ interface ProposalCardProps {
 
 }
 
-const ProposalCard: Reac t.FC<ProposalCardProps> = ({ 
+const ProposalCard: React.FC<ProposalCardProps> = ({ 
   proposal, 
   onVote, 
   canVote = false 
@@ -57,7 +57,7 @@ const ProposalCard: Reac t.FC<ProposalCardProps> = ({
         <div className="flex-1">
           <h3 className="text-lg font-semibold text-gray-900 mb-2">
             {proposal.title}
-          </h3>
+          
           <p className="text-sm text-gray-600 mb-3">
             {proposal.description}
           </p>
@@ -116,7 +116,7 @@ const ProposalCard: Reac t.FC<ProposalCardProps> = ({
         )}
       </div>
     </div>
-  );
+    );
 };
 
 export default ProposalCard;

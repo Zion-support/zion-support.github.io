@@ -143,7 +143,8 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
       return ()
         matchesCategory && matchesStatus && matchesComplexity && matchesSearch;
       );
-    });
+    }
+    );
   }, [selectedCategory, selectedStatus, selectedComplexity, searchTerm]);
   const portfolioMetrics = useMemo(() => {}
 '
@@ -338,7 +339,7 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
           <CardContent>""""
             <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">
               {portfolioMetrics.totalServices}"""
-            </h3>""""
+            """"
             <p className="text-sm text-zion-slate-light">Total Services</p>
           </CardContent>
         </Card>"""
@@ -360,7 +361,7 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
           <CardContent>""""
             <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">
               ${(portfolioMetrics.totalRevenue / 1000000).toFixed(1)}M"""
-            </h3>""""
+            """"
             <p className="text-sm text-zion-slate-light">Total Revenue</p>
           </CardContent>
         </Card>"""
@@ -382,7 +383,7 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
           <CardContent>""""
             <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">
               {portfolioMetrics.activeClients}"""
-            </h3>""""
+            """"
             <p className="text-sm text-zion-slate-light">Active Clients</p>
           </CardContent>
         </Card>"""
@@ -404,7 +405,7 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
           <CardContent>""""
             <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">
               {portfolioMetrics.averagePerformance}%"""
-            </h3>""""
+            """"
             <p className="text-sm text-zion-slate-light">Avg Performance</p>
           </CardContent>
         </Card>
@@ -787,7 +788,7 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">""""
           <h3 className="text-3xl font-bold mb-4">
             Ready to Expand Your Portfolio?"""
-          </h3>""""
+          """"
           <p className="text-xl mb-6 max-w-2xl mx-auto">
             Our comprehensive service portfolio offers cutting-edge solutions;
             across all major technology sectors. Contact us to discuss how we;

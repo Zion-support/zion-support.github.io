@@ -21,7 +21,8 @@ export default function Page(props: any) {
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchQuery.toLowerCase());
 
-    return matchesSearch && matchesCategory && matchesPrice}) ;
+    return matchesSearch && matchesCategory && matchesPrice}
+    );
 
   // Sort services
   
@@ -33,7 +34,8 @@ export default function Page(props: any) {
         return a.category.localeCompare(b.category) ;
       default:;
         return 0}
-  });
+  }
+    );
 
   ;
 '
@@ -231,7 +233,7 @@ export default function Page(props: any) {
                     </div>"
                     <h3 className="text-xl font-bold text-white mb-2 group-hover: tex t-zion-cyan transition-colors duration-300">
                       {service.title}
-                    </h3>"
+                    "
                     <p className="text-gray-300 text-sm leading-relaxed">
                       {service.description}
                     </p>
@@ -314,7 +316,7 @@ export default function Page(props: any) {
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">;"
             <h3 className="text-3xl font-bold text-white mb-6">
               Need Custom Pricing or Have Questions?
-            </h3>"
+            "
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Our team of experts is ready to provide personalized quotes and answer any questions
               about our services.Get in touch for a detailed consultation.</p>
