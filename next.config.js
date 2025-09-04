@@ -15,7 +15,7 @@ const nextConfig = {
   trailingSlash: true,
   generateBuildId: async () => 'build-' + Date.now(),
   // Ensure standard Next.js page extensions are recognized alongside any custom route files
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'route.tsx', 'route.ts', 'xpage.tsx'],
+  pageExtensions: ['tsx', 'jsx'],
   images: {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
     formats: ['image/webp', 'image/avif'],
