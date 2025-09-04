@@ -1067,8 +1067,7 @@ export default function ITServices() {
         'Scalable IoT device management',
         'Real-time decision making capabilities'
       ],
-      category: 'Edge Computing'
-    },
+      category: 'Edge Computing'    },
     {
       icon: Shield,
       name: 'Zero Trust Security Architecture',
@@ -1088,8 +1087,7 @@ export default function ITServices() {
         'Enhanced security posture',
         'Reduced attack surface',
         'Improved compliance and governance',
-        'Automated threat response'
-      ],
+        'Automated threat response'      ],
       category: 'Security'
     },
     {
@@ -1157,8 +1155,7 @@ export default function ITServices() {
         'Ultra-low latency connectivity',
         'Massive IoT device support',
         'Enhanced mobile broadband',
-        'Next-generation application capabilities'
-      ],
+        'Next-generation application capabilities'      ],
       category: 'Network Infrastructure'
     },
     {
@@ -1180,8 +1177,7 @@ export default function ITServices() {
         'Accelerated AI model development',
         'Automated ML operations',
         'Scalable AI infrastructure',
-        'Enhanced model performance and reliability'
-      ],
+        'Enhanced model performance and reliability'      ],
       category: 'AI Infrastructure'
     },
     {
@@ -1297,8 +1293,7 @@ export default function ITServices() {
         'Complex simulation capabilities',
         'Advanced data processing and analysis'
       ],
-      category: 'High-Performance Computing'
-    }
+      category: 'High-Performance Computing'    }
   ];
 
   const categories = [...new Set(itServices.map(service => service.category))];
