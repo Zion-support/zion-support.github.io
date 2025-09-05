@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { Suspense, lazy } from 'react';
-=======
 import React, { Suspense, lazy, useEffect, memo, useCallback } from 'react';
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import Footer from './components/Footer';
@@ -94,7 +90,6 @@ const AISolutions = lazy(() => import('./pages/services/AISolutions').then(modul
 const QuantumComputing = lazy(() => import('./pages/services/QuantumComputing').then(module => ({ "default": module.QuantumComputing };)));
 const Cybersecurity = lazy(() => import('./pages/services/Cybersecurity').then(module => ({ "default": module.Cybersecurity };)));
 const AIContentCreation = lazy(() => import('./pages/services/AIContentCreation').then(module => ({ "default": module.default };)));
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 
 // Loading component
 const PageLoader = () => (
@@ -172,8 +167,6 @@ const "App": React.FC = memo(() => {
       </div>
     </div>
   ), []);
-
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
   return (
     <ErrorBoundary>
       <Router>
@@ -610,5 +603,4 @@ export default function App($1) {
       </div>
     </ErrorBoundary>
   );
-};';';
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
+};
