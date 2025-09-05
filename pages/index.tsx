@@ -2,12 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Brain, Network, Cloud, Zap, Shield, ArrowRight, CheckCircle, Users, Globe, Award } from 'lucide-react';
-=======
 import { Brain, Network, Cloud, Zap, Shield, ArrowRight, CheckCircle, Users, Globe, Award, Phone, Mail, MapPin, Star, TrendingUp, Clock, DollarSign } from 'lucide-react';
 import Layout from './components/Layout';
->>>>>>> 39cf982772ffeee4121c2d43f1637b033c77fcc1
 
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
@@ -37,24 +33,6 @@ const services = [
     title: "Micro SaaS",
     description: "85+ innovative micro SaaS solutions for modern businesses across all industries with real-time pricing and market analysis",
     icon: Cloud,
-<<<<<<< HEAD
-    href: "/micro-saas"
-  }
-];
-
-export default function HomePage() {
-  return (
-    <>
-      <Head>
-        <title>Zion Tech Group - Leading AI, IT & Micro SAAS Solutions Provider</title>
-        <meta name="description" content="Zion Tech Group provides cutting-edge AI services, IT solutions, and innovative micro SAAS platforms. Transform your business with our comprehensive technology services and solutions." />
-        <meta name="keywords" content="AI development, cloud solutions, blockchain, IoT platforms, micro SAAS, IT services, technology solutions" />
-        <meta property="og:title" content="Zion Tech Group - Leading Technology Solutions Provider" />
-        <meta property="og:description" content="Transform your business with our AI, IT, and micro SAAS solutions. Expert technology services for modern enterprises." />
-        <meta property="og:url" content="https://ziontechgroup.com" />
-        <meta property="og:type" content="website" />
-      </Head>
-=======
     href: "/micro-saas",
     price: "Starting at $1,500/month"
   }
@@ -136,7 +114,6 @@ export default function HomePage() {
       keywords="AI development, cloud solutions, blockchain, IoT platforms, micro SAAS, IT services, technology solutions"
       canonical="https://ziontechgroup.com"
     >
->>>>>>> 39cf982772ffeee4121c2d43f1637b033c77fcc1
       
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -232,97 +209,6 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="text-3xl mb-4">🧠</div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">AI Development</h3>
-              <p className="text-gray-600 mb-4">Custom AI solutions, machine learning models, and intelligent automation systems.</p>
-              <ul className="text-sm text-gray-500 space-y-2">
-                <li>• Natural Language Processing</li>
-                <li>• Computer Vision</li>
-                <li>• Predictive Analytics</li>
-                <li>• Chatbots & Virtual Assistants</li>
-              </ul>
-              <div className="mt-4">
-                <span className="text-2xl font-bold text-blue-600">Starting at $2,500/month</span>
-              </div>
-            </div>
-            
-            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="text-3xl mb-4">☁️</div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">Cloud Solutions</h3>
-              <p className="text-gray-600 mb-4">Scalable cloud infrastructure, migration services, and DevOps automation.</p>
-              <ul className="text-sm text-gray-500 space-y-2">
-                <li>• AWS, Azure, GCP Migration</li>
-                <li>• Container Orchestration</li>
-                <li>• Serverless Architecture</li>
-                <li>• Cloud Security & Compliance</li>
-              </ul>
-              <div className="mt-4">
-                <span className="text-2xl font-bold text-blue-600">Starting at $1,800/month</span>
-              </div>
-            </div>
-            
-            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="text-3xl mb-4">🔗</div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">Blockchain Solutions</h3>
-              <p className="text-gray-600 mb-4">Secure blockchain development, smart contracts, and DeFi applications.</p>
-              <ul className="text-sm text-gray-500 space-y-2">
-                <li>• Smart Contract Development</li>
-                <li>• DeFi Applications</li>
-                <li>• NFT Marketplaces</li>
-                <li>• Cryptocurrency Integration</li>
-              </ul>
-              <div className="mt-4">
-                <span className="text-2xl font-bold text-blue-600">Starting at $3,500/month</span>
-              </div>
-            </div>
-            
-            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="text-3xl mb-4">🌐</div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">IoT Platforms</h3>
-              <p className="text-gray-600 mb-4">Connected device solutions, sensor networks, and real-time data processing.</p>
-              <ul className="text-sm text-gray-500 space-y-2">
-                <li>• Device Management</li>
-                <li>• Real-time Analytics</li>
-                <li>• Edge Computing</li>
-                <li>• Industrial IoT Solutions</li>
-              </ul>
-              <div className="mt-4">
-                <span className="text-2xl font-bold text-blue-600">Starting at $2,200/month</span>
-              </div>
-            </div>
-            
-            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="text-3xl mb-4">⚡</div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">Micro SAAS Solutions</h3>
-              <p className="text-gray-600 mb-4">Custom micro SAAS platforms and automation tools for business efficiency.</p>
-              <ul className="text-sm text-gray-500 space-y-2">
-                <li>• Workflow Automation</li>
-                <li>• Data Processing Tools</li>
-                <li>• API Integration Services</li>
-                <li>• Custom Dashboard Solutions</li>
-              </ul>
-              <div className="mt-4">
-                <span className="text-2xl font-bold text-blue-600">Starting at $1,500/month</span>
-              </div>
-            </div>
-            
-            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="text-3xl mb-4">🔒</div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">Cybersecurity</h3>
-              <p className="text-gray-600 mb-4">Comprehensive security solutions to protect your digital assets and infrastructure.</p>
-              <ul className="text-sm text-gray-500 space-y-2">
-                <li>• Security Audits & Assessments</li>
-                <li>• Penetration Testing</li>
-                <li>• Zero-Trust Architecture</li>
-                <li>• Compliance & Risk Management</li>
-              </ul>
-              <div className="mt-4">
-                <span className="text-2xl font-bold text-blue-600">Starting at $2,000/month</span>
-              </div>
-            </div>
-=======
             {featuredServices.map((service, index) => (
               <motion.div 
                 key={index}
@@ -344,7 +230,6 @@ export default function HomePage() {
                 </div>
               </motion.div>
             ))}
->>>>>>> 39cf982772ffeee4121c2d43f1637b033c77fcc1
           </div>
         </div>
       </section>
@@ -387,39 +272,6 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-<<<<<<< HEAD
-            <div className="text-center">
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">Expert Team</h3>
-              <p className="text-gray-600">95+ certified professionals with deep expertise in AI, cloud, and emerging technologies.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">Security First</h3>
-              <p className="text-gray-600">Enterprise-grade security and compliance with industry standards and regulations.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">Rapid Delivery</h3>
-              <p className="text-gray-600">Agile development methodology ensuring fast time-to-market for your solutions.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">24/7 Support</h3>
-              <p className="text-gray-600">Round-the-clock support and monitoring to ensure your systems run smoothly.</p>
-            </div>
-=======
             {whyChooseUs.map((item, index) => (
               <motion.div 
                 key={index}
@@ -435,44 +287,23 @@ export default function HomePage() {
                 <p className="text-gray-600">{item.description}</p>
               </motion.div>
             ))}
->>>>>>> 39cf982772ffeee4121c2d43f1637b033c77fcc1
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* CTA Section */}
-      <section className="py-20 bg-blue-900 text-white">
-=======
       {/* Contact CTA Section */}
       <section className="py-20 bg-blue-600 text-white">
->>>>>>> 39cf982772ffeee4121c2d43f1637b033c77fcc1
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
           <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
             Join hundreds of companies that trust Zion Tech Group for their technology needs. 
             Let's discuss how we can help accelerate your digital transformation.
           </p>
-<<<<<<< HEAD
-          
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/contact" className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
-              Get Started Today
-            </Link>
-            <Link href="/quote" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
-              Request a Quote
-=======
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
             <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
               Get Free Consultation
->>>>>>> 39cf982772ffeee4121c2d43f1637b033c77fcc1
             </Link>
           </div>
-<<<<<<< HEAD
-        </div>
-      </section>
-    </>
-=======
           
           {/* Contact Information */}
           <div className="grid md:grid-cols-3 gap-8 mt-12">
@@ -492,6 +323,5 @@ export default function HomePage() {
         </div>
       </section>
     </Layout>
->>>>>>> 39cf982772ffeee4121c2d43f1637b033c77fcc1
   );
 }

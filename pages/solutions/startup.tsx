@@ -15,7 +15,7 @@ import {
   Target,
   TrendingUp
 } from 'lucide-react';
-import MainLayout from '../../components/layout/MainLayout';
+import Layout from '../../components/Layout';
 
 const features = [
   {
@@ -129,7 +129,7 @@ const successStories = [
 
 export default function StartupSolutionsPage() {
   return (
-    <MainLayout 
+    <Layout 
       title="Startup Solutions - Zion Tech Group"
       description="Fast, affordable technology solutions for startups. Quick setup, cost-effective pricing, and expert guidance to help your startup succeed."
       keywords="startup solutions, MVP development, startup technology, affordable tech solutions, startup consulting"
@@ -384,6 +384,6 @@ export default function StartupSolutionsPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

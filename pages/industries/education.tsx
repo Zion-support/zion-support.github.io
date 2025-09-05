@@ -25,7 +25,7 @@ import {
   Database,
   Video
 } from 'lucide-react';
-import MainLayout from '../../components/layout/MainLayout';
+import Layout from '../../components/Layout';
 
 const solutions = [
   {
@@ -87,7 +87,7 @@ const benefits = [
 
 export default function Education() {
   return (
-    <MainLayout
+    <Layout
       title="Education Technology Solutions - Zion Tech Group"
       description="Transform education with LMS platforms, virtual classrooms, student analytics, and administrative automation."
       keywords="education technology, LMS, virtual classroom, student analytics, e-learning, educational software"
@@ -267,6 +267,6 @@ export default function Education() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }
