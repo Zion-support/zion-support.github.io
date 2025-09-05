@@ -2,14 +2,14 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Brain, Network, Cloud, Zap, Shield, ArrowRight, CheckCircle, Users, Globe, Award, Phone, Mail, MapPin, Star, TrendingUp, Clock, DollarSign } from 'lucide-react';
-import Layout from '../../components/Layout';
+import { Brain, Network, Cloud, Zap, Shield, ArrowRight, CheckCircle, Users, Globe, Award, Phone, Mail, MapPin, Star, TrendingUp, Clock, DollarSign, Atom, LinkIcon, Wifi, Bot } from 'lucide-react';
+import Layout from '../components/Layout';
 
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' },
   { number: '2,500+', label: 'Projects Completed' },
-  { number: '305+', label: 'Services & Solutions' },
+  { number: '400+', label: 'Services & Solutions' },
   { number: '150+', label: 'Expert Team Members' },
   { number: '18+', label: 'Years Experience' }
 ];
@@ -40,7 +40,60 @@ const services = [
     description: "120+ innovative micro SaaS solutions for modern businesses across all industries with real-time pricing, market analysis, and instant deployment",
     icon: Cloud,
     href: "/micro-saas",
-    price: "Starting at $1,500/month"
+    count: "120+ Solutions",
+    pricing: "Starting at $1,500/month",
+    marketPrice: "$3,000-8,000/month",
+    benefits: ["Rapid deployment", "Scalable solutions", "Cost-effective"]
+  },
+  {
+    title: "Quantum Computing",
+    description: "Next-generation quantum solutions including algorithm development, optimization, cryptography, and quantum machine learning with proven quantum advantage",
+    icon: Atom,
+    href: "/quantum-computing",
+    count: "15+ Solutions",
+    pricing: "Starting at $5,000/month",
+    marketPrice: "$8,000-15,000/month",
+    benefits: ["Exponential speedup", "Quantum advantage", "Future-proof technology"]
+  },
+  {
+    title: "Blockchain & Web3",
+    description: "Comprehensive blockchain services including DeFi development, NFT marketplaces, smart contracts, and Web3 applications with competitive pricing",
+    icon: LinkIcon,
+    href: "/blockchain-services",
+    count: "25+ Solutions",
+    pricing: "Starting at $3,000/month",
+    marketPrice: "$6,000-12,000/month",
+    benefits: ["Decentralized solutions", "Smart contracts", "Web3 integration"]
+  },
+  {
+    title: "IoT & Edge Computing",
+    description: "Connected device solutions, edge computing, and smart city infrastructure with real-time processing and analytics capabilities",
+    icon: Wifi,
+    href: "/iot-edge-services",
+    count: "20+ Solutions",
+    pricing: "Starting at $3,000/month",
+    marketPrice: "$6,000-15,000/month",
+    benefits: ["Real-time processing", "Edge intelligence", "Scalable infrastructure"]
+  },
+  {
+    title: "Advanced Cybersecurity",
+    description: "Zero trust architecture, threat detection, SOC services, and compliance management with 24/7 monitoring and rapid response",
+    icon: Shield,
+    href: "/cybersecurity-advanced",
+    count: "30+ Solutions",
+    pricing: "Starting at $3,000/month",
+    marketPrice: "$6,000-20,000/month",
+    benefits: ["Zero trust security", "24/7 monitoring", "Compliance ready"]
+  },
+  {
+    title: "RPA & Automation",
+    description: "Intelligent automation solutions including RPA, document processing, chatbots, and workflow optimization to boost efficiency",
+    icon: Bot,
+    href: "/rpa-automation",
+    count: "18+ Solutions",
+    pricing: "Starting at $3,000/month",
+    marketPrice: "$6,000-12,000/month",
+    benefits: ["80% time savings", "Error elimination", "24/7 operation"]
   }
 ];
 
@@ -173,11 +226,11 @@ export default function HomePage() {
                 Our Core Services
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                We provide comprehensive technology solutions to help your business thrive in the digital age. From innovative micro SaaS applications to cutting-edge AI services, quantum computing, blockchain solutions, and enterprise IT infrastructure. Our 305+ services cover every aspect of modern technology needs with competitive pricing and proven results.
+                We provide comprehensive technology solutions to help your business thrive in the digital age. From innovative micro SaaS applications to cutting-edge AI services, quantum computing, blockchain solutions, IoT, cybersecurity, and enterprise IT infrastructure. Our 400+ services cover every aspect of modern technology needs with competitive pricing and proven results.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
               {services.map((service, index) => {
                 const IconComponent = service.icon;
                 return (
@@ -238,31 +291,6 @@ export default function HomePage() {
               })}
             </div>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredServices.map((service, index) => (
-              <motion.div 
-                key={index}
-                className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-              >
-                <div className="text-3xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold mb-4 text-gray-900">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <ul className="text-sm text-gray-500 space-y-2 mb-4">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx}>• {feature}</li>
-                  ))}
-                </ul>
-                <div className="mt-4">
-                  <span className="text-2xl font-bold text-blue-600">{service.price}</span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* Stats Section */}
@@ -288,37 +316,6 @@ export default function HomePage() {
         </div>
       </section>
 
-        {/* Market Position & Pricing Section */}
-        <section className="py-20 bg-gray-100">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why Choose Zion Tech Group?</h2>
-              <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-                We deliver cutting-edge technology solutions with competitive pricing and unmatched expertise.
-                Our comprehensive service portfolio covers everything from micro SaaS development to enterprise AI solutions.
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <motion.div
-                key={index}
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
-                <div className="text-gray-600">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Why Choose Us */}
       <section className="py-20 bg-gray-50">
@@ -337,22 +334,17 @@ export default function HomePage() {
                 className="text-center"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-xl font-bold text-gray-900 mb-4">💰 Competitive Pricing</h3>
-                <ul className="text-gray-600 space-y-2">
-                  <li>• Micro SaaS: $19 - $4,999/month</li>
-                  <li>• IT Services: $120 - $500/hour</li>
-                  <li>• AI Solutions: $1,000 - $1M/project</li>
-                  <li>• Blockchain: $50K - $500K/project</li>
-                  <li>• Quantum Computing: $100K - $1M/project</li>
-                  <li>• Transparent, no hidden fees</li>
-                </ul>
+                <div className="text-4xl mb-4">{item.icon}</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{item.title}</h3>
+                <p className="text-gray-600">{item.description}</p>
               </motion.div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* Contact CTA Section */}
       <section className="py-20 bg-blue-600 text-white">
@@ -385,6 +377,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      </div>
     </Layout>
   );
 }
