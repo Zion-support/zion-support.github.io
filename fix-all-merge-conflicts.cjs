@@ -69,6 +69,6 @@ function processDirectory(dirPath) {
   return fixedCount;
 }
 
-console.log('Starting merge conflict fixes...');
-const fixedCount = processDirectory('./components');
+console.log('Starting comprehensive merge conflict fixes...');
+const fixedCount = processDirectory('.');
 console.log(`Fixed ${fixedCount} files`);

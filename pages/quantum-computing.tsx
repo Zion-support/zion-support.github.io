@@ -1,16 +1,16 @@
-import * as React from 'react'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { Atom, Cpu, Zap, Lock, Brain, Target, CheckCircle, ArrowRight, Phone, Mail, MapPin, DollarSign, Clock, Award } from 'lucide-react'
-import Layout from '../components/Layout'
-
-export default function QuantumComputing() {
-  const contact = {
-    phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com' }
-  const services = [
-    {
+import React from 'react';
+import * as React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Atom, Cpu, Zap, Lock, Brain, Target, CheckCircle, ArrowRight, Phone, Mail, MapPin, DollarSign, Clock, Award } from 'lucide-react';
+import Layout from '../components/Layout';
+export default function QuantumComputing() {;
+  const contact = {;
+    phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com' ,};
+  const services = [;
+    {;
       icon: Atom, , ;
-      features: [
+      features: [;
         'Quantum optimization algorithms', 'Quantum simulation frameworks', ;
         'Quantum machine learning models', ;
         'Custom algorithm design & implementation', ;
@@ -24,7 +24,7 @@ export default function QuantumComputing() {
         'Reduce computational complexity by 99%+', ;
         'Enable previously impossible optimizations'], ;
       targetUsers: 'Finance, Logistics, Pharmaceuticals, Research' },;
-    {
+    {;
       icon: Cpu, , ;
       features: ['IBM Quantum, Google Quantum, AWS Braket access', ;
         'Quantum simulators & emulators', ;
@@ -40,7 +40,7 @@ export default function QuantumComputing() {
         '50% cost reduction vs direct access', ;
         '24/7 technical support'], ;
       targetUsers: 'Research Institutions, Enterprises, Startups' },;
-    {
+    {;
       icon: Zap, , ;
       features: ['Supply chain optimization', 'Portfolio optimization & risk management', ;
         'Scheduling & resource allocation', ;
@@ -55,7 +55,7 @@ export default function QuantumComputing() {
         'Improve efficiency by 40-60%', ;
         'Handle problems with 1000+ variables'], ;
       targetUsers: 'Logistics, Finance, Manufacturing, Energy' },;
-    {
+    {;
       icon: Lock, , ;
       features: ['Quantum key distribution(QKD)', 'Post-quantum cryptography implementation', ;
         'Quantum random number generation', ;
@@ -70,7 +70,7 @@ export default function QuantumComputing() {
         '100% secure key distribution', ;
         'Meet highest security standards'], ;
       targetUsers: 'Government, Finance, Healthcare, Defense' },;
-    {
+    {;
       icon: Brain, , ;
       features: ['Quantum neural networks', 'Quantum feature maps & kernels', ;
         'Quantum clustering algorithms', ;
@@ -85,7 +85,7 @@ export default function QuantumComputing() {
         'Discover complex patterns impossible classically', ;
         'Achieve higher accuracy with less data'], ;
       targetUsers: 'AI Companies, Research, Healthcare, Finance' },;
-    {
+    {;
       icon: Target, , ;
       features: ['Quantum strategy & roadmap development', 'Team training & certification programs', ;
         'Implementation guidance & support', ;
@@ -99,235 +99,234 @@ export default function QuantumComputing() {
       setupTime: '1-2 weeks', benefits: ['Build internal quantum capabilities', 'Make informed quantum technology decisions', ;
         'Reduce implementation risks by 70%', ;
         'Accelerate quantum adoption timeline'], ;
-      targetUsers: 'Enterprises, Government, Educational Institutions' }]
-
-  return(<Layout
-      title="Quantum Computing Services - Zion Tech Group | Next-Gen Quantum Solutions"
-      description="Cutting-edge quantum computing services including algorithm development, optimization solutions, quantum cryptography, and quantum machine learning. Transform your business with quantum advantage."
-      keywords="quantum computing, quantum algorithms, quantum optimization, quantum cryptography, quantum machine learning, quantum consulting"
-      canonical="https: //ziontechgroup.com/quantum-computing"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900">
-        { /* Hero Section */ }
-        <section className="bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white py-20">
-          <div className="container mx-auto px-4">
+      targetUsers: 'Enterprises, Government, Educational Institutions' }];
+  return(<Layout;
+      title="Quantum Computing Services - Zion Tech Group | Next-Gen Quantum Solutions";
+      description="Cutting-edge quantum computing services including algorithm development, optimization solutions, quantum cryptography, and quantum machine learning. Transform your business with quantum advantage.";
+      keywords="quantum computing, quantum algorithms, quantum optimization, quantum cryptography, quantum machine learning, quantum consulting";
+      canonical="https: //ziontechgroup.com/quantum-computing";
+    >;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900">;
+        { /* Hero Section */ ,};
+        <section className="bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white py-20">;
+          <div className="container mx-auto px-4">;
             <motion.div;
-              className="text-center max-w-4xl mx-auto"
-              initial={{opacity: 0, y: 30 }}
-              animate={{opacity: 1, y: 0 }}
-              transition={{duration: 0.8 }}
-            >
-              <h1 className="text-4xl md: text-6xl font-bold mb-6">
-                Quantum Computing Services
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 text-purple-100">
+              className="text-center max-w-4xl mx-auto";
+              initial={{opacity: 0, y: 30 ,}};
+              animate={{opacity: 1, y: 0 ,}};
+              transition={{duration: 0.8 ,}};
+            >;
+              <h1 className="text-4xl md: text-6xl font-bold mb-6">;
+                Quantum Computing Services;
+              </h1>;
+              <p className="text-xl md:text-2xl mb-8 text-purple-100">;
                 Harness the power of quantum computing for optimization, cryptography, and machine learning applications.;
                 Get quantum advantage with our cutting-edge solutions and expert implementation.;
-              </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
-                >
-                  Get Quantum Consultation
-                </Link>
-                <a
-                  href={ `tel:${contact.phone }`}
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-colors text-lg"
-                >
-                  Call { contact.phone }
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-        { /* Services Grid */ }
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
+              </p>;
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+                <Link;
+                  href="/contact";
+                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg";
+                >;
+                  Get Quantum Consultation;
+                </Link>;
+                <a;
+                  href={ `tel:${contact.phone ,}`};
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-colors text-lg";
+                >;
+                  Call { contact.phone ,};
+                </a>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+        { /* Services Grid */ };
+        <section className="py-20 bg-gray-50">;
+          <div className="container mx-auto px-4">;
             <motion.div;
-              className="text-center mb-16"
-              initial={{opacity: 0, y: 30 }}
-              whileInView={{opacity: 1, y: 0 }}
-              transition={{duration: 0.8 }}
-              viewport={{once: true }}
-            >
-              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
-                Next-Generation Quantum Solutions
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              className="text-center mb-16";
+              initial={{opacity: 0, y: 30 ,}};
+              whileInView={{opacity: 1, y: 0 ,}};
+              transition={{duration: 0.8 ,}};
+              viewport={{once: true ,}};
+            >;
+              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">;
+                Next-Generation Quantum Solutions;
+              </h2>;
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
                 From algorithm development to quantum cryptography, we provide cutting-edge quantum computing services;
                 to solve complex problems with proven quantum advantage and competitive pricing.;
-              </p>
-            </motion.div>
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+              </p>;
+            </motion.div>;
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">;
               { services.map((service, index) => (;
                 <motion.div;
-                  key={index }
-                  className="bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all duration-300 border border-gray-100"
-                  initial={{opacity: 0, y: 30 }}
-                  whileInView={{opacity: 1, y: 0 }}
-                  transition={{duration: 0.8, delay: index * 0.1 }}
-                  viewport={{once: true }}
-                  whileHover={{y: -5 }}
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mr-4">
-                      <service.icon className="w-8 h-8 text-purple-600"  />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-gray-900">{ service.title }</h3>
-                      <div className="flex items-center gap-2 mt-1">
-                        <Clock className="w-4 h-4 text-gray-400"  />
-                        <span className="text-sm text-gray-500">{ service.setupTime }</span>
-                      </div>
-                    </div>
-                  </div>
-                  <p className="text-gray-600 mb-4">{ service.description }</p>
-                  <div className="mb-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="text-2xl font-bold text-purple-600">{ service.price }</span>
-                      <span className="text-sm text-gray-500 line-through">{ service.marketPrice }</span>
-                    </div>
-                    <div className="text-sm text-green-600 font-medium">
+                  key={index };
+                  className="bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all duration-300 border border-gray-100";
+                  initial={{opacity: 0, y: 30 ,}};
+                  whileInView={{opacity: 1, y: 0 ,}};
+                  transition={{duration: 0.8, delay: index * 0.1 ,}};
+                  viewport={{once: true ,}};
+                  whileHover={{y: -5 ,}};
+                >;
+                  <div className="flex items-center mb-4">;
+                    <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mr-4">;
+                      <service.icon className="w-8 h-8 text-purple-600"  />;
+                    </div>;
+                    <div>;
+                      <h3 className="text-xl font-semibold text-gray-900">{ service.title }</h3>;
+                      <div className="flex items-center gap-2 mt-1">;
+                        <Clock className="w-4 h-4 text-gray-400"  />;
+                        <span className="text-sm text-gray-500">{ service.setupTime }</span>;
+                      </div>;
+                    </div>;
+                  </div>;
+                  <p className="text-gray-600 mb-4">{ service.description }</p>;
+                  <div className="mb-4">;
+                    <div className="flex items-center gap-2 mb-2">;
+                      <span className="text-2xl font-bold text-purple-600">{ service.price }</span>;
+                      <span className="text-sm text-gray-500 line-through">{ service.marketPrice }</span>;
+                    </div>;
+                    <div className="text-sm text-green-600 font-medium">;
                       Save up to 40% vs market rate;
-                    </div>
-                  </div>
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Key Features: </h4>
-                    <ul className="space-y-1">
+                    </div>;
+                  </div>;
+                  <div className="mb-4">;
+                    <h4 className="font-semibold text-gray-900 mb-2">Key Features: </h4>;
+                    <ul className="space-y-1">;
                       { service.features.slice(0, 4).map((feature, featureIndex) => (;
-                        <li key={featureIndex } className="flex items-center text-sm text-gray-700">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"  />
-                          { feature }
-                        </li>))}
-                    </ul>
-                  </div>
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Benefits: </h4>
-                    <ul className="space-y-1">
+                        <li key={featureIndex } className="flex items-center text-sm text-gray-700">;
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"  />;
+                          { feature };
+                        </li>))};
+                    </ul>;
+                  </div>;
+                  <div className="mb-4">;
+                    <h4 className="font-semibold text-gray-900 mb-2">Benefits: </h4>;
+                    <ul className="space-y-1">;
                       { service.benefits.slice(0, 2).map((benefit, benefitIndex) => (;
-                        <li key={benefitIndex } className="flex items-center text-sm text-gray-700">
-                          <ArrowRight className="w-4 h-4 text-purple-500 mr-2 flex-shrink-0"  />
-                          { benefit }
-                        </li>))}
-                    </ul>
-                  </div>
-                  <div className="mb-4">
-                    <div className="text-sm text-gray-600">
-                      <strong>Target Users:</strong> { service.targetUsers }
-                    </div>
-                  </div>
-                  <div className="flex flex-col sm: flex-row gap-2">
-                    <Link
-                      href="/contact"
-                      className="flex-1 bg-purple-600 text-white px-4 py-2 rounded text-center hover:bg-purple-700 transition-colors font-semibold"
-                    >
-                      Get Quote
-                    </Link>
-                    <Link
-                      href={ `/contact?service=${encodeURIComponent(service.title) }`}
-                      className="flex-1 border border-purple-600 text-purple-600 px-4 py-2 rounded text-center hover: bg-purple-50 transition-colors font-semibold"
-                    >
-                      Learn More
-                    </Link>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-        { /* Why Choose Us */ }
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
+                        <li key={benefitIndex } className="flex items-center text-sm text-gray-700">;
+                          <ArrowRight className="w-4 h-4 text-purple-500 mr-2 flex-shrink-0"  />;
+                          { benefit };
+                        </li>))};
+                    </ul>;
+                  </div>;
+                  <div className="mb-4">;
+                    <div className="text-sm text-gray-600">;
+                      <strong>Target Users: </strong> { service.targetUsers ,};
+                    </div>;
+                  </div>;
+                  <div className="flex flex-col sm: flex-row gap-2">;
+                    <Link;
+                      href="/contact";
+                      className="flex-1 bg-purple-600 text-white px-4 py-2 rounded text-center hover:bg-purple-700 transition-colors font-semibold";
+                    >;
+                      Get Quote;
+                    </Link>;
+                    <Link;
+                      href={ `/contact?service=${encodeURIComponent(service.title) ,}`};
+                      className="flex-1 border border-purple-600 text-purple-600 px-4 py-2 rounded text-center hover: bg-purple-50 transition-colors font-semibold";
+                    >;
+                      Learn More;
+                    </Link>;
+                  </div>;
+                </motion.div>;
+              )),};
+            </div>;
+          </div>;
+        </section>;
+        { /* Why Choose Us */ };
+        <section className="py-20 bg-white">;
+          <div className="container mx-auto px-4">;
             <motion.div;
-              className="text-center mb-16"
-              initial={{opacity: 0, y: 30 }}
-              whileInView={{opacity: 1, y: 0 }}
-              transition={{duration: 0.8 }}
-              viewport={{once: true }}
-            >
-              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Our Quantum Solutions?
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We combine cutting-edge quantum technology with deep expertise to deliver solutions that provide real quantum advantage.
-              </p>
-            </motion.div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              { [
-                {
+              className="text-center mb-16";
+              initial={{opacity: 0, y: 30 ,}};
+              whileInView={{opacity: 1, y: 0 ,}};
+              transition={{duration: 0.8 ,}};
+              viewport={{once: true ,}};
+            >;
+              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">;
+                Why Choose Our Quantum Solutions?;
+              </h2>;
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+                We combine cutting-edge quantum technology with deep expertise to deliver solutions that provide real quantum advantage.;
+              </p>;
+            </motion.div>;
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
+              { [;
+                {;
                   icon: Award,  }, ;
-                {
+                {;
                   icon: Zap,  }, ;
-                {
+                {;
                   icon: DollarSign,  }, ;
-                {
+                {;
                   icon: Clock,  }].map((item, index) => (;
                 <motion.div;
-                  key={ index }
-                  className="text-center"
-                  initial={{opacity: 0, y: 30 }}
-                  whileInView={{opacity: 1, y: 0 }}
-                  transition={{duration: 0.8, delay: index * 0.1 }}
-                  viewport={{once: true }}
-                >
-                  <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <item.icon className="w-8 h-8 text-purple-600"  />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">{ item.title }</h3>
-                  <p className="text-gray-600">{ item.description }</p>
-                </motion.div>))}
-            </div>
-          </div>
-        </section>
-        { /* CTA Section */ }
-        <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
-          <div className="container mx-auto px-4 text-center">
+                  key={ index };
+                  className="text-center";
+                  initial={{opacity: 0, y: 30 ,}};
+                  whileInView={{opacity: 1, y: 0 ,}};
+                  transition={{duration: 0.8, delay: index * 0.1 ,}};
+                  viewport={{once: true ,}};
+                >;
+                  <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
+                    <item.icon className="w-8 h-8 text-purple-600"  />;
+                  </div>;
+                  <h3 className="text-xl font-semibold mb-2">{ item.title }</h3>;
+                  <p className="text-gray-600">{ item.description }</p>;
+                </motion.div>))};
+            </div>;
+          </div>;
+        </section>;
+        { /* CTA Section */ };
+        <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">;
+          <div className="container mx-auto px-4 text-center">;
             <motion.div;
-              initial={{opacity: 0, y: 30 }}
-              whileInView={{opacity: 1, y: 0 }}
-              transition={{duration: 0.8 }}
-              viewport={{once: true }}
-            >
-              <h2 className="text-3xl md: text-4xl font-bold mb-6">
-                Ready for the Quantum Future?
-              </h2>
-              <p className="text-xl mb-8 text-purple-100 max-w-3xl mx-auto">
-                Explore how quantum computing can revolutionize your business operations and solve previously intractable problems.
-                Get started with our expert quantum consulting and implementation services.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <Link
-                  href="/contact"
-                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
-                >
-                  Schedule Quantum Consultation
-                </Link>
-                <a
-                  href={ `tel:${contact.phone }`}
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-colors text-lg"
-                >
-                  Call { contact.phone }
-                </a>
-              </div>
-              { /* Contact Information */ }
-              <div className="grid md: grid-cols-3 gap-8 mt-12">
-                <div className="flex items-center justify-center">
-                  <Phone className="w-6 h-6 mr-2" />
-                  <span>{ contact.phone }</span>
-                </div>
-                <div className="flex items-center justify-center">
-                  <Mail className="w-6 h-6 mr-2"  />
-                  <span>{ contact.email }</span>
-                </div>
-                <div className="flex items-center justify-center">
-                  <MapPin className="w-6 h-6 mr-2"  />
-                  <span>{ contact.address }</span>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-  )}
+              initial={{opacity: 0, y: 30 ,}};
+              whileInView={{opacity: 1, y: 0 ,}};
+              transition={{duration: 0.8 ,}};
+              viewport={{once: true ,}};
+            >;
+              <h2 className="text-3xl md: text-4xl font-bold mb-6">;
+                Ready for the Quantum Future?;
+              </h2>;
+              <p className="text-xl mb-8 text-purple-100 max-w-3xl mx-auto">;
+                Explore how quantum computing can revolutionize your business operations and solve previously intractable problems.;
+                Get started with our expert quantum consulting and implementation services.;
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">;
+                <Link;
+                  href="/contact";
+                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg";
+                >;
+                  Schedule Quantum Consultation;
+                </Link>;
+                <a;
+                  href={ `tel:${contact.phone ,}`};
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-colors text-lg";
+                >;
+                  Call { contact.phone ,};
+                </a>;
+              </div>;
+              { /* Contact Information */ };
+              <div className="grid md: grid-cols-3 gap-8 mt-12">;
+                <div className="flex items-center justify-center">;
+                  <Phone className="w-6 h-6 mr-2" />;
+                  <span>{ contact.phone ,}</span>;
+                </div>;
+                <div className="flex items-center justify-center">;
+                  <Mail className="w-6 h-6 mr-2"  />;
+                  <span>{ contact.email }</span>;
+                </div>;
+                <div className="flex items-center justify-center">;
+                  <MapPin className="w-6 h-6 mr-2"  />;
+                  <span>{ contact.address }</span>;
+                </div>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
+  )};

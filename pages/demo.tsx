@@ -1,277 +1,275 @@
-import * as React from 'react'
-import Layout from '../components/Layout'
-import { motion } from 'framer-motion'
-import { Play, CheckCircle, Star, Users, Clock, Shield } from 'lucide-react'
-
-const demoFeatures = [
+import React from 'react';
+import * as React from 'react';
+import Layout from '../components/Layout';
+import { motion } from 'framer-motion';
+import { Play, CheckCircle, Star, Users, Clock, Shield } from 'lucide-react';
+const demoFeatures = [;
   { , ;
     icon: Play, duration: "15 min", features: ["Machine Learning Models", "Natural Language Processing", "Computer Vision", "Predictive Analytics"] },;
   { , ;
     icon: CheckCircle, duration: "20 min", features: ["Cloud Migration", "Security Implementation", "DevOps Automation", "Monitoring & Analytics"] },;
   { , ;
-    icon: Star, duration: "25 min", features: ["Real-time Dashboards", "API Integration", "User Management", "Analytics & Reporting"] }]
-
+    icon: Star, duration: "25 min", features: ["Real-time Dashboards", "API Integration", "User Management", "Analytics & Reporting"] }];
 const benefits = [{ , ;
-    icon: Play }, ;
+    icon: Play ,}, ;
   { , ;
-    icon: Users }, ;
+    icon: Users ,}, ;
   { , ;
-    icon: Shield }]
-
-export default function DemoPage() {
-  return(<Layout
-      title="Request a Demo - Zion Tech Group"
-      description="Schedule a personalized demo of our AI services, IT solutions, and micro SaaS platforms. See our technology in action with expert guidance."
-      keywords="demo, trial, AI demo, IT services demo, micro SaaS demo, technology demonstration"
-      canonical="https: //ziontechgroup.com/demo"
-    >
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */ }
-        <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
-          <div className="container mx-auto px-4">
+    icon: Shield ,}];
+export default function DemoPage() {;
+  return(<Layout;
+      title="Request a Demo - Zion Tech Group";
+      description="Schedule a personalized demo of our AI services, IT solutions, and micro SaaS platforms. See our technology in action with expert guidance.";
+      keywords="demo, trial, AI demo, IT services demo, micro SaaS demo, technology demonstration";
+      canonical="https: //ziontechgroup.com/demo";
+    >;
+      <div className="min-h-screen bg-gray-50">;
+        {/* Hero Section */ ,};
+        <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">;
+          <div className="container mx-auto px-4">;
             <motion.div;
-              className="text-center"
-              initial={{opacity: 0, y: 30 }}
-              animate={{opacity: 1, y: 0 }}
-              transition={{duration: 0.8 }}
-            >
-              <h1 className="text-4xl md: text-6xl font-bold mb-6">
-                Request a Demo
-              </h1>
-              <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">
-                See our technology in action with a personalized demonstration.
-                Experience how our solutions can transform your business.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#schedule" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
-                  Schedule Demo
-                </a>
-                <a href="#features" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold">
-                  View Demo Features
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-        { /* Demo Features */ }
-        <section id="features" className="py-20">
-          <div className="container mx-auto px-4">
+              className="text-center";
+              initial={{opacity: 0, y: 30 ,}};
+              animate={{opacity: 1, y: 0 ,}};
+              transition={{duration: 0.8 ,}};
+            >;
+              <h1 className="text-4xl md: text-6xl font-bold mb-6">;
+                Request a Demo;
+              </h1>;
+              <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">;
+                See our technology in action with a personalized demonstration.;
+                Experience how our solutions can transform your business.;
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+                <a href="#schedule" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">;
+                  Schedule Demo;
+                </a>;
+                <a href="#features" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold">;
+                  View Demo Features;
+                </a>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+        { /* Demo Features */ ,};
+        <section id="features" className="py-20">;
+          <div className="container mx-auto px-4">;
             <motion.div;
-              className="text-center mb-16"
-              initial={{opacity: 0, y: 30 }}
-              whileInView={{opacity: 1, y: 0 }}
-              transition={{duration: 0.8 }}
-              viewport={{once: true }}
-            >
-              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
-                What You'll See in Our Demo
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Get hands-on experience with our cutting-edge technology solutions.
-              </p>
-            </motion.div>
-            <div className="grid md:grid-cols-3 gap-8">
-              { demoFeatures.map((feature, index) => {
+              className="text-center mb-16";
+              initial={{opacity: 0, y: 30 ,}};
+              whileInView={{opacity: 1, y: 0 ,}};
+              transition={{duration: 0.8 ,}};
+              viewport={{once: true ,}};
+            >;
+              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">;
+                What You'll See in Our Demo;
+              </h2>;
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
+                Get hands-on experience with our cutting-edge technology solutions.;
+              </p>;
+            </motion.div>;
+            <div className="grid md:grid-cols-3 gap-8">;
+              { demoFeatures.map((feature, index) => {;
                 const IconComponent = feature.icon;
                 return(<motion.div;
-                    key={index }
-                    className="bg-white p-6 rounded-lg shadow-lg hover: shadow-xl transition-all duration-300"
-                    initial={{opacity: 0, y: 30 }}
-                    whileInView={{opacity: 1, y: 0 }}
-                    transition={{duration: 0.5, delay: index * 0.1 }}
-                    viewport={{once: true }}
-                  >
-                    <div className="text-blue-600 mb-4">
-                      <IconComponent className="w-12 h-12"  />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">
-                      { feature.title }
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      { feature.description }
-                    </p>
-                    <div className="flex items-center text-sm text-blue-600 mb-4">
-                      <Clock className="w-4 h-4 mr-1"  />
-                      <span>{ feature.duration }</span>
-                    </div>
-                    <ul className="space-y-2">
+                    key={index };
+                    className="bg-white p-6 rounded-lg shadow-lg hover: shadow-xl transition-all duration-300";
+                    initial={{opacity: 0, y: 30 ,}};
+                    whileInView={{opacity: 1, y: 0 ,}};
+                    transition={{duration: 0.5, delay: index * 0.1 ,}};
+                    viewport={{once: true ,}};
+                  >;
+                    <div className="text-blue-600 mb-4">;
+                      <IconComponent className="w-12 h-12"  />;
+                    </div>;
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">;
+                      { feature.title };
+                    </h3>;
+                    <p className="text-gray-600 mb-4">;
+                      { feature.description };
+                    </p>;
+                    <div className="flex items-center text-sm text-blue-600 mb-4">;
+                      <Clock className="w-4 h-4 mr-1"  />;
+                      <span>{ feature.duration }</span>;
+                    </div>;
+                    <ul className="space-y-2">;
                       { feature.features.map((item, idx) => (;
-                        <li key={idx } className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2"  />
-                          { item }
-                        </li>))}
-                    </ul>
-                  </motion.div>
-                )})}
-            </div>
-          </div>
-        </section>
-        { /* Benefits */ }
-        <section className="py-20 bg-gray-100">
-          <div className="container mx-auto px-4">
+                        <li key={idx } className="flex items-center text-sm text-gray-600">;
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2"  />;
+                          { item };
+                        </li>))};
+                    </ul>;
+                  </motion.div>;
+                )})};
+            </div>;
+          </div>;
+        </section>;
+        { /* Benefits */ };
+        <section className="py-20 bg-gray-100">;
+          <div className="container mx-auto px-4">;
             <motion.div;
-              className="text-center mb-16"
-              initial={{opacity: 0, y: 30 }}
-              whileInView={{opacity: 1, y: 0 }}
-              transition={{duration: 0.8 }}
-              viewport={{once: true }}
-            >
-              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
-                Why Schedule a Demo?
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Get the most out of your demo experience with our expert team.
-              </p>
-            </motion.div>
-            <div className="grid md:grid-cols-3 gap-8">
-              { benefits.map((benefit, index) => {
+              className="text-center mb-16";
+              initial={{opacity: 0, y: 30 ,}};
+              whileInView={{opacity: 1, y: 0 ,}};
+              transition={{duration: 0.8 ,}};
+              viewport={{once: true ,}};
+            >;
+              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">;
+                Why Schedule a Demo?;
+              </h2>;
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
+                Get the most out of your demo experience with our expert team.;
+              </p>;
+            </motion.div>;
+            <div className="grid md:grid-cols-3 gap-8">;
+              { benefits.map((benefit, index) => {;
                 const IconComponent = benefit.icon;
                 return(<motion.div;
-                    key={index }
-                    className="bg-white p-6 rounded-lg shadow-md text-center"
-                    initial={{opacity: 0, y: 20 }}
-                    whileInView={{opacity: 1, y: 0 }}
-                    transition={{duration: 0.5, delay: index * 0.1 }}
-                    viewport={{once: true }}
-                  >
-                    <div className="text-blue-600 mb-4">
-                      <IconComponent className="w-12 h-12 mx-auto"  />
-                    </div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                      { benefit.title }
-                    </h3>
-                    <p className="text-gray-600 text-sm">
-                      { benefit.description }
-                    </p>
-                  </motion.div>)})}
-            </div>
-          </div>
-        </section>
-        { /* Schedule Demo Form */ }
-        <section id="schedule" className="py-20 bg-white">
-          <div className="container mx-auto px-4">
+                    key={index };
+                    className="bg-white p-6 rounded-lg shadow-md text-center";
+                    initial={{opacity: 0, y: 20 ,}};
+                    whileInView={{opacity: 1, y: 0 ,}};
+                    transition={{duration: 0.5, delay: index * 0.1 ,}};
+                    viewport={{once: true ,}};
+                  >;
+                    <div className="text-blue-600 mb-4">;
+                      <IconComponent className="w-12 h-12 mx-auto"  />;
+                    </div>;
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">;
+                      { benefit.title };
+                    </h3>;
+                    <p className="text-gray-600 text-sm">;
+                      { benefit.description };
+                    </p>;
+                  </motion.div>)})};
+            </div>;
+          </div>;
+        </section>;
+        { /* Schedule Demo Form */ };
+        <section id="schedule" className="py-20 bg-white">;
+          <div className="container mx-auto px-4">;
             <motion.div;
-              className="max-w-2xl mx-auto"
-              initial={{opacity: 0, y: 30 }}
-              whileInView={{opacity: 1, y: 0 }}
-              transition={{duration: 0.8 }}
-              viewport={{once: true }}
-            >
-              <div className="text-center mb-12">
-                <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
-                  Schedule Your Demo
-                </h2>
-                <p className="text-lg text-gray-600">
-                  Fill out the form below and we'll contact you to schedule your personalized demo.
-                </p>
-              </div>
-              <div className="bg-gray-50 p-8 rounded-lg">
-                <form className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        First Name *
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                       />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Last Name *
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                       />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                     />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Company Name *
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                     />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Demo Type *
-                    </label>
-                    <select
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    >
-                      <option value="">Select a demo type</option>
-                      <option value="ai-services">AI Services Demo</option>
-                      <option value="it-services">IT Services Demo</option>
-                      <option value="micro-saas">Micro SaaS Demo</option>
-                      <option value="custom">Custom Demo</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Additional Requirements
-                    </label>
-                    <textarea
-                      rows={ 4 }
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Tell us about your specific needs or questions..."
-                    ></textarea>
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full bg-blue-600 text-white py-4 px-6 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg"
-                  >
-                    Schedule My Demo
-                  </button>
-                </form>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-        { /* CTA Section */ }
-        <section className="py-20 bg-blue-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md: text-4xl font-bold mb-6">
-              Ready to See Our Solutions in Action?
-            </h2>
-            <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              Don't wait! Schedule your personalized demo today and discover how
-              our technology can transform your business.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a
-                href="#schedule"
-                className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors"
-              >
-                Schedule Demo Now
-              </a>
-              <a
-                href="/contact"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors"
-              >
-                Contact Us
-              </a>
-            </div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-  )
-}
+              className="max-w-2xl mx-auto";
+              initial={{opacity: 0, y: 30 ,}};
+              whileInView={{opacity: 1, y: 0 ,}};
+              transition={{duration: 0.8 ,}};
+              viewport={{once: true ,}};
+            >;
+              <div className="text-center mb-12">;
+                <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">;
+                  Schedule Your Demo;
+                </h2>;
+                <p className="text-lg text-gray-600">;
+                  Fill out the form below and we'll contact you to schedule your personalized demo.;
+                </p>;
+              </div>;
+              <div className="bg-gray-50 p-8 rounded-lg">;
+                <form className="space-y-6">;
+                  <div className="grid md:grid-cols-2 gap-6">;
+                    <div>;
+                      <label className="block text-sm font-medium text-gray-700 mb-2">;
+                        First Name *;
+                      </label>;
+                      <input;
+                        type="text";
+                        required;
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent";
+                       />;
+                    </div>;
+                    <div>;
+                      <label className="block text-sm font-medium text-gray-700 mb-2">;
+                        Last Name *;
+                      </label>;
+                      <input;
+                        type="text";
+                        required;
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent";
+                       />;
+                    </div>;
+                  </div>;
+                  <div>;
+                    <label className="block text-sm font-medium text-gray-700 mb-2">;
+                      Email Address *;
+                    </label>;
+                    <input;
+                      type="email";
+                      required;
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent";
+                     />;
+                  </div>;
+                  <div>;
+                    <label className="block text-sm font-medium text-gray-700 mb-2">;
+                      Company Name *;
+                    </label>;
+                    <input;
+                      type="text";
+                      required;
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent";
+                     />;
+                  </div>;
+                  <div>;
+                    <label className="block text-sm font-medium text-gray-700 mb-2">;
+                      Demo Type *;
+                    </label>;
+                    <select;
+                      required;
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent";
+                    >;
+                      <option value="">Select a demo type</option>;
+                      <option value="ai-services">AI Services Demo</option>;
+                      <option value="it-services">IT Services Demo</option>;
+                      <option value="micro-saas">Micro SaaS Demo</option>;
+                      <option value="custom">Custom Demo</option>;
+                    </select>;
+                  </div>;
+                  <div>;
+                    <label className="block text-sm font-medium text-gray-700 mb-2">;
+                      Additional Requirements;
+                    </label>;
+                    <textarea;
+                      rows={ 4 ,};
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent";
+                      placeholder="Tell us about your specific needs or questions...";
+                    ></textarea>;
+                  </div>;
+                  <button;
+                    type="submit";
+                    className="w-full bg-blue-600 text-white py-4 px-6 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg";
+                  >;
+                    Schedule My Demo;
+                  </button>;
+                </form>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+        { /* CTA Section */ ,};
+        <section className="py-20 bg-blue-600 text-white">;
+          <div className="container mx-auto px-4 text-center">;
+            <h2 className="text-3xl md: text-4xl font-bold mb-6">;
+              Ready to See Our Solutions in Action?;
+            </h2>;
+            <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">;
+              Don't wait! Schedule your personalized demo today and discover how;
+              our technology can transform your business.;
+            </p>;
+            <div className="flex flex-col sm:flex-row justify-center gap-4">;
+              <a;
+                href="#schedule";
+                className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors";
+              >;
+                Schedule Demo Now;
+              </a>;
+              <a;
+                href="/contact";
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors";
+              >;
+                Contact Us;
+              </a>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
+  );
+,};

@@ -3,206 +3,198 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
-import { 
-  BookOpen, 
-  Clock, 
-  User, 
-  Star,
-  Code,
-  Database,
-  Cloud,
-  Shield,
-  Download
+import {;
+  BookOpen,;
+  Clock,;
+  User,;
+  Star,;
+  Code,;
+  Database,;
+  Cloud,;
+  Shield,;
+  Download;
 } from 'lucide-react';
-
-const guides = [
-  {
-    id: 1,
-    title: 'Getting Started with AI Integration',
-    description: 'A comprehensive guide to integrating AI solutions into your business processes.',
-    category: 'AI & Machine Learning',
-    icon: BookOpen,
-    color: 'from-blue-500 to-purple-500',
-    readTime: '15 min',
-    difficulty: 'Beginner',
-    author: 'Dr. Sarah Chen',
-    publishedDate: '2024-01-15',
-    tags: ['AI', 'Integration', 'Business']
-  },
-  {
-    id: 2,
-    title: 'Cloud Migration Best Practices',
-    description: 'Step-by-step guide to migrating your infrastructure to the cloud safely and efficiently.',
-    category: 'Cloud Computing',
-    icon: Cloud,
-    color: 'from-green-500 to-blue-500',
-    readTime: '25 min',
-    difficulty: 'Intermediate',
-    author: 'Michael Rodriguez',
-    publishedDate: '2024-01-10',
-    tags: ['Cloud', 'Migration', 'Infrastructure']
-  },
-  {
-    id: 3,
-    title: 'Cybersecurity Implementation Guide',
-    description: 'Essential security measures to protect your business from cyber threats.',
-    category: 'Cybersecurity',
-    icon: Shield,
-    color: 'from-red-500 to-pink-500',
-    readTime: '30 min',
-    difficulty: 'Advanced',
-    author: 'James Wilson',
-    publishedDate: '2024-01-05',
-    tags: ['Security', 'Protection', 'Compliance']
-  }
+;
+const guides = [;
+  {;
+    id: 1,;
+    title: 'Getting Started with AI Integration',;
+    description: 'A comprehensive guide to integrating AI solutions into your business processes.',;
+    category: 'AI & Machine Learning',;
+    icon: BookOpen,;
+    color: 'from-blue-500 to-purple-500',;
+    readTime: '15 min',;
+    difficulty: 'Beginner',;
+    author: 'Dr. Sarah Chen',;
+    publishedDate: '2024-01-15',;
+    tags: ['AI', 'Integration', 'Business'];
+  },;
+  {;
+    id: 2,;
+    title: 'Cloud Migration Best Practices',;
+    description: 'Step-by-step guide to migrating your infrastructure to the cloud safely and efficiently.',;
+    category: 'Cloud Computing',;
+    icon: Cloud,;
+    color: 'from-green-500 to-blue-500',;
+    readTime: '25 min',;
+    difficulty: 'Intermediate',;
+    author: 'Michael Rodriguez',;
+    publishedDate: '2024-01-10',;
+    tags: ['Cloud', 'Migration', 'Infrastructure'];
+  },;
+  {;
+    id: 3,;
+    title: 'Cybersecurity Implementation Guide',;
+    description: 'Essential security measures to protect your business from cyber threats.',;
+    category: 'Cybersecurity',;
+    icon: Shield,;
+    color: 'from-red-500 to-pink-500',;
+    readTime: '30 min',;
+    difficulty: 'Advanced',;
+    author: 'James Wilson',;
+    publishedDate: '2024-01-05',;
+    tags: ['Security', 'Protection', 'Compliance'];
+  };
 ];
-
-export default function Guides() {
-  return (
-    <Layout
-      title="Guides & Resources - Zion Tech Group"
-      description="Comprehensive guides and resources to help you implement technology solutions effectively. Learn from our experts."
-      keywords="guides, tutorials, resources, AI implementation, cloud migration, cybersecurity, best practices"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                Guides &
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-                  {" "}Resources
-                </span>
-              </h1>
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Learn from our experts with comprehensive guides, tutorials, and resources 
-                designed to help you implement technology solutions effectively.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Guides Grid */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {guides.map((guide, index) => (
-                <motion.div
-                  key={guide.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
-                >
-                  <div className={`h-2 bg-gradient-to-r ${guide.color}`}></div>
-                  
-                  <div className="p-8">
-                    <div className="flex items-center mb-4">
-                      <div className={`p-3 bg-gradient-to-r ${guide.color} rounded-lg`}>
-                        <guide.icon className="h-6 w-6 text-white" />
-                      </div>
-                      <span className="ml-3 px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
-                        {guide.category}
-                      </span>
-                    </div>
-                    
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                      {guide.title}
-                    </h3>
-                    
-                    <p className="text-gray-600 mb-6">
-                      {guide.description}
-                    </p>
-                    
-                    <div className="flex items-center justify-between mb-6">
-                      <div className="flex items-center space-x-4 text-sm text-gray-500">
-                        <div className="flex items-center">
-                          <Clock className="h-4 w-4 mr-1" />
-                          {guide.readTime}
-                        </div>
-                        <div className="flex items-center">
-                          <User className="h-4 w-4 mr-1" />
-                          {guide.author}
-                        </div>
-                      </div>
-                      <span className={`px-2 py-1 text-xs rounded-full ${
-                        guide.difficulty === 'Beginner' ? 'bg-green-100 text-green-800' :
-                        guide.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-800' :
-                        'bg-red-100 text-red-800'
-                      }`}>
-                        {guide.difficulty}
-                      </span>
-                    </div>
-                    
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      {guide.tags.map((tag, tagIndex) => (
-                        <span
-                          key={tagIndex}
-                          className="px-2 py-1 bg-blue-100 text-blue-600 text-xs rounded-full"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-500">
-                        {guide.publishedDate}
-                      </span>
-                      <Link
-                        href="/contact"
-                        className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-                      >
-                        Read Guide
-                        <Download className="ml-1 h-4 w-4" />
-                      </Link>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Need More Help?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Our experts are here to help you implement these solutions and answer any questions you may have.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
-                >
-                  Get Expert Help
-                  <Download className="ml-2 h-5 w-5" />
-                </Link>
-                <Link
-                  href="/about"
-                  className="inline-flex items-center px-8 py-4 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
-                >
-                  Learn About Us
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </Layout>
+;
+export default function Guides() {;
+  return (;
+    <Layout;
+      title="Guides & Resources - Zion Tech Group";
+      description="Comprehensive guides and resources to help you implement technology solutions effectively. Learn from our experts.";
+      keywords="guides, tutorials, resources, AI implementation, cloud migration, cybersecurity, best practices";
+    >;
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">;
+        {/* Hero Section */};
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
+          <div className="max-w-7xl mx-auto">;
+            <motion.div;
+              initial={{ opacity: 0, y: 20 ,}};
+              animate={{ opacity: 1, y: 0 ,}};
+              transition={{ duration: 0.8 ,}};
+              className="text-center";
+            >;
+              <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">;
+                Guides &;
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">;
+                  {" ",}Resources;
+                </span>;
+              </h1>;
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">;
+                Learn from our experts with comprehensive guides, tutorials, and resources;
+                designed to help you implement technology solutions effectively.;
+              </p>;
+            </motion.div>;
+          </div>;
+        </section>;
+        {/* Guides Grid */};
+        <section className="py-20 px-4 sm:px-6 lg:px-8">;
+          <div className="max-w-7xl mx-auto">;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+              {guides.map((guide, index) => (;
+                <motion.div;
+                  key={guide.id};
+                  initial={{ opacity: 0, y: 20 ,}};
+                  animate={{ opacity: 1, y: 0 ,}};
+                  transition={{ duration: 0.6, delay: index * 0.1 ,}};
+                  className="bg-white rounded-xl shadow-lg hover: shadow-xl transition-shadow duration-300 overflow-hidden";
+                >;
+                  <div className={`h-2 bg-gradient-to-r ${guide.color,}`}></div>;
+                  <div className="p-8">;
+                    <div className="flex items-center mb-4">;
+                      <div className={`p-3 bg-gradient-to-r ${guide.color} rounded-lg`}>;
+                        <guide.icon className="h-6 w-6 text-white" />;
+                      </div>;
+                      <span className="ml-3 px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">;
+                        {guide.category};
+                      </span>;
+                    </div>;
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">;
+                      {guide.title};
+                    </h3>;
+                    <p className="text-gray-600 mb-6">;
+                      {guide.description};
+                    </p>;
+                    <div className="flex items-center justify-between mb-6">;
+                      <div className="flex items-center space-x-4 text-sm text-gray-500">;
+                        <div className="flex items-center">;
+                          <Clock className="h-4 w-4 mr-1" />;
+                          {guide.readTime};
+                        </div>;
+                        <div className="flex items-center">;
+                          <User className="h-4 w-4 mr-1" />;
+                          {guide.author};
+                        </div>;
+                      </div>;
+                      <span className={`px-2 py-1 text-xs rounded-full ${;
+                        guide.difficulty === 'Beginner' ? 'bg-green-100 text-green-800' :;
+                        guide.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-800' :;
+                        'bg-red-100 text-red-800';
+                      }`}>;
+                        {guide.difficulty};
+                      </span>;
+                    </div>;
+                    <div className="flex flex-wrap gap-2 mb-6">;
+                      {guide.tags.map((tag, tagIndex) => (;
+                        <span;
+                          key={tagIndex};
+                          className="px-2 py-1 bg-blue-100 text-blue-600 text-xs rounded-full";
+                        >;
+                          {tag};
+                        </span>;
+                      ))};
+                    </div>;
+                    <div className="flex items-center justify-between">;
+                      <span className="text-sm text-gray-500">;
+                        {guide.publishedDate};
+                      </span>;
+                      <Link;
+                        href="/contact";
+                        className="inline-flex items-center text-blue-600 hover: text-blue-700 font-medium";
+                      >;
+                        Read Guide;
+                        <Download className="ml-1 h-4 w-4" />;
+                      </Link>;
+                    </div>;
+                  </div>;
+                </motion.div>;
+              )),};
+            </div>;
+          </div>;
+        </section>;
+        {/* CTA Section */};
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">;
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
+            <motion.div;
+              initial={{ opacity: 0, y: 20 ,}};
+              animate={{ opacity: 1, y: 0 ,}};
+              transition={{ duration: 0.8 ,}};
+            >;
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">;
+                Need More Help?;
+              </h2>;
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">;
+                Our experts are here to help you implement these solutions and answer any questions you may have.;
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+                <Link;
+                  href="/contact";
+                  className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors";
+                >;
+                  Get Expert Help;
+                  <Download className="ml-2 h-5 w-5" />;
+                </Link>;
+                <Link;
+                  href="/about";
+                  className="inline-flex items-center px-8 py-4 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors";
+                >;
+                  Learn About Us;
+                </Link>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
   );
-}
+,};
