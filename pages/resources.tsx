@@ -2,10 +2,13 @@ import { FileText, BarChart3, MessageSquare, Settings, BookOpen, Video, Download
 import Head from 'next/head';
 import Link from 'next/link';
 
+<<<<<<< HEAD
 import React from 'react';
 import { FileText, BarChart3, MessageSquare, Settings, BookOpen, Video, Download } from 'lucide-react';
 import Layout from '../components/Layout';
 
+=======
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
 const resources = [
   {
     title: "Documentation",
@@ -37,6 +40,7 @@ const resources = [
     icon: Settings,
     href: "/api-docs",
     color: "from-orange-500 to-orange-600",
+<<<<<<< HEAD
     items: ["REST API", "GraphQL", "SDKs", "Code Examples"]
   }
 ];
@@ -92,6 +96,51 @@ export default function ResourcesPage() {
             </motion.div>;
           </div>;
         </section>;
+=======
+    items: ["REST API", "GraphQL", "Webhooks", "SDKs"]
+  },
+  {
+    title: "Tutorials",
+    description: "Step-by-step guides and hands-on tutorials",
+    icon: BookOpen,
+    href: "/tutorials",
+    color: "from-indigo-500 to-indigo-600",
+    items: ["Getting Started", "Advanced Topics", "Code Examples", "Video Tutorials"]
+  },
+  {
+    title: "Webinars",
+    description: "Live and recorded educational sessions",
+    icon: Video,
+    href: "/webinars",
+    color: "from-pink-500 to-pink-600",
+    items: ["Live Sessions", "Recorded Videos", "Q&A Sessions", "Expert Talks"]
+  }
+];
+
+export default function Resources() {
+  return (
+    <>
+      <Head>
+        <title>Resources - Zion Tech Group</title>
+        <meta name="description" content="Access our comprehensive resources including documentation, case studies, tutorials, and more." />
+      </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        {/* Header */}
+        <div className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Resources
+              </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Access our comprehensive collection of documentation, tutorials, case studies, and more to help you succeed with our solutions.
+              </p>
+            </div>
+          </div>
+        </div>
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
 
         {/* Resources Grid */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

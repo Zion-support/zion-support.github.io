@@ -1,5 +1,6 @@
 import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import {
   Users,
@@ -95,14 +96,17 @@ const benefits = [
 ];
 
 export default function Careers() {
-  return (
-    <>
-      <Head>
-        <title>Careers - Zion Tech Group</title>
-        <meta name="description" content="Join our team of innovative developers, engineers, and designers building the future of technology." />
-      </Head>
+=======
 
+const Page = () => {
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
+  return (
+    <MainLayout 
+      title="Page - Zion Tech Group"
+      description="Zion Tech Group page"
+    >
       <div className="min-h-screen bg-gray-50">
+<<<<<<< HEAD
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
           <div className="container mx-auto px-4">
@@ -347,7 +351,15 @@ export default function Careers() {
             </motion.div>
           </div>
         </section>
+=======
+        <div className="max-w-7xl mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
       </div>
     </MainLayout>
   );
-}
+};
+
+export default Page;

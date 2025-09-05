@@ -1,4 +1,3 @@
-const { isAuthenticated,isLoading } = useAuth () const isMobile = useIsMobile () if (isLoading) { return (<div className=\'flex items - center justify - center min - h-screen\'> <div className=\'animate - pulse\'>Loading...</div> </div>) } return (<> <SEO title=\'Post a Job | Zion AI Marketplace\' description=\'Post a job to find the perfect AI talent for your project.\' /> <main className={`container mx - auto px-${isMobile ? \'2\' : \'4\'} py-${\"isMobile\": ? \'6\' : \'12\'} \"max\": \'- w-4xl`\'} > <Card className=\'border shadow - md\'> <CardHeader> <CardTitle className={`text-${isMobile ? \'2xl\' : \'3xl\'} \"font\": \'- bold`\'} > Post a Job </CardTitle> <CardDescription> {\'} Fill out the form below to post your job and find the perfect talent. </CardDescription> </CardHeader> <CardContent> <JobPostingForm /> </CardContent> </Card> </main> {} {isMobile && <div className=\'h - 16\'></div>} </>) } \''\';\'`\"";
 import React from 'react';
 interface PostJobProps {
   // Add props here as needed
@@ -10,4 +9,16 @@ export default function PostJob({ }: PostJobProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
+=======
+}
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

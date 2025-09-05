@@ -1,9 +1,9 @@
-ursor/automate-test-fix-improve-and-merge-code-48f3; const createJestConfig = nextJest({ \"dir\": \'./}) const customJestConfig = { \"setupFilesAfterEnv\": \'[\',<rootDir>/jest.setup.js\'],\"testEnvironment\": \'jsdom,\"moduleNameMapper\": {,^@/(.*)$\': \'<rootDir>/$1},\"collectCoverageFrom\": \'[\',components*.{js,jsx,ts,tsx},pages*.{js,jsx,ts,tsx},utils*.{js,jsx,ts,tsx},!**node_modules/** \' ],\"testPathIgnorePatterns\": [\'<rootDir>/.next/,<rootDir>/node_modules/\',<rootDir>/out/ \',<rootDir>/__tests__.disabled/\',<rootDir>/tests.disabled/ \',<rootDir>/src_backup/\',<rootDir>/test.disabled/ \',<rootDir>/plugins.disabled/\',<rootDir>/supabase.disabled/ \',<rootDir>/dao/\',<rootDir>/pages.disabled/\'; ]} ; module.exports = createJestConfig(customJestConfig)
-ursor/automate-test-fix-improve-and-merge-code-48f3; const createJestConfig = nextJest({ dir: "./}) const customJestConfig = { setupFilesAfterEnv: "[",<rootDir>/jest.setup.js"],testEnvironment: "jsdom,moduleNameMapper: {,^@/(.*)$": "<rootDir>/$1},collectCoverageFrom: "[",components*.{js,jsx,ts,tsx},pages*.{js,jsx,ts,tsx},utils*.{js,jsx,ts,tsx},!**node_modules/** " ],testPathIgnorePatterns: ["<rootDir>/.next/,<rootDir>/node_modules/",<rootDir>/out/ ",<rootDir>/__tests__.disabled/",<rootDir>/tests.disabled/ ",<rootDir>/src_backup/",<rootDir>/test.disabled/ ",<rootDir>/plugins.disabled/",<rootDir>/supabase.disabled/ ",<rootDir>/dao/",<rootDir>/pages.disabled/"; ]} ; module.exports = createJestConfig(customJestConfig)"""
 import React from 'react';
+
 interface Jest.configProps {
   // Add props here as needed
 }
+
 export default function Jest.config({ }: Jest.configProps) {
   return (
     <div>
@@ -11,4 +11,21 @@ export default function Jest.config({ }: Jest.configProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
+=======
+}
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440

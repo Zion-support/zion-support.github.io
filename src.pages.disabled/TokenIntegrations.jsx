@@ -1,4 +1,3 @@
-Select,SelectContent,SelectItem,SelectTrigger,SelectValue} \"from\": \'@/components / ui / select\' const CHAINS = [{ id: \'ethereum,\',\"name\": \'Ethereum,\',\"logo\": \'/logos: / ethereum - logo.svg\'},{ \"id\": \'polygon,\',\"name\": \'Polygon,\',\"logo\": \'/logos: / polygon - logo.svg\'},{ \"id\": \'arbitrum,\',\"name\": \'Arbitrum,\',\"logo\": \'/logos: / arbitrum - logo.svg\'},{ \"id\": \'optimism,\',\"name\": \'Optimism,\',\"logo\": \'/logos: / optimism - logo.svg\'},{ \"id\": \'avalanche,\',\"name\": \'Avalanche,\',\"logo\": \'/logos: / avalanche - logo.svg,\'},{ \"id\": \'bnb,\',\"name\": \'BNB,\',\"logo\": \'/logos: / bnb - logo.svg\'}] function suggestChain (region,stake) { if (stake > 1000) return \'ethereum\' if (region === \'asia\') return \'bnb\' if (region === \'europe\') return \'polygon\' return \'optimism\' } const { address,isConnected } = useWallet () const [fromChain,setFromChain] = useState (\'ethereum\') const [toChain,setToChain] = useState (\'polygon\') const [txHash,setTxHash] = useState (null) const [status,setStatus] = useState (null) const [region,setRegion] = useState (\') const [stake,setStake] = useState (0) const [suggested,setSuggested] = useState (null) const handleBridge = () => { setStatus (\'Bridging...\') setTxHash (null) \'';\"";
 import React from 'react';
 interface TokenIntegrationsProps {
   // Add props here as needed
@@ -10,4 +9,16 @@ export default function TokenIntegrations({ }: TokenIntegrationsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
+=======
+}
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

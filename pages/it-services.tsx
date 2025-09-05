@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -396,45 +397,22 @@ export default function ITServicesPage() {
       description="Comprehensive IT services including cloud infrastructure, cybersecurity, DevOps, and system administration. Expert solutions for modern businesses."
       keywords="IT services, cloud computing, cybersecurity, DevOps, system administration, network solutions"
       canonical="https://ziontechgroup.com/it-services"
+=======
+import MainLayout from '../src/components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout 
+      title="Page - Zion Tech Group"
+      description="Zion Tech Group page"
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
     >
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto">
-            <motion.h1 
-              className="text-5xl md:text-6xl font-bold mb-6 leading-tight"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              Comprehensive 
-              <span className="text-blue-400"> IT Services</span>
-            </motion.h1>
-            <motion.p 
-              className="text-xl mb-8 text-blue-100"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              Transform your technology infrastructure with our expert IT services. 
-              From cloud migration to cybersecurity, we provide end-to-end solutions 
-              that drive business growth and operational efficiency.
-            </motion.p>
-            <motion.div 
-              className="flex flex-col sm:flex-row justify-center gap-4"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
-                Get Free Consultation
-              </Link>
-              <Link href="/quote" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
-                Request Quote
-              </Link>
-            </motion.div>
-          </div>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
         </div>
+<<<<<<< HEAD
       </section>
 
       {/* Services Overview */}
@@ -576,5 +554,11 @@ export default function ITServicesPage() {
         </div>
       </section>
     </Layout>
+=======
+      </div>
+    </MainLayout>
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
   );
-}
+};
+
+export default Page;

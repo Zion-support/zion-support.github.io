@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -158,31 +159,22 @@ export default function TeamPage() {
       description="Meet our expert team of technology professionals. Experienced engineers, data scientists, and business leaders dedicated to delivering exceptional results."
       keywords="team, experts, engineers, data scientists, AI specialists, cybersecurity experts, technology professionals"
       canonical="https://ziontechgroup.com/team"
+=======
+import MainLayout from '../src/components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout 
+      title="Page - Zion Tech Group"
+      description="Zion Tech Group page"
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
     >
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto">
-            <motion.h1 
-              className="text-5xl md:text-6xl font-bold mb-6 leading-tight"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              Meet Our 
-              <span className="text-purple-400"> Expert Team</span>
-            </motion.h1>
-            <motion.p 
-              className="text-xl mb-8 text-purple-100"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              Our diverse team of technology professionals brings together decades of experience 
-              in AI, cloud computing, cybersecurity, and business transformation.
-            </motion.p>
-          </div>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
         </div>
+<<<<<<< HEAD
       </section>
 
       {/* Stats Section */}
@@ -384,5 +376,11 @@ export default function TeamPage() {
         </div>
       </section>
     </Layout>
+=======
+      </div>
+    </MainLayout>
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
   );
-}
+};
+
+export default Page;
