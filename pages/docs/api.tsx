@@ -1,82 +1,21 @@
 import React, { useState } from 'react';
+import MainLayout from '../../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Layout from '../components/Layout';
-import { Code, BookOpen, Shield, Zap, ChevronRight, ExternalLink, Copy, Check } from 'lucide-react';
-
-const endpoints = [
-  {
-    name: 'AI Email Responder',
-    method: 'POST',
-    path: '/api/ai/email-responder',
-    description: 'Generate intelligent email responses using AI',
-    parameters: [
-      { name: 'message', type: 'string', required: true, description: 'The email message to respond to' },
-      { name: 'context', type: 'object', required: false, description: 'Additional context for the response' }
-    ],
-    response: {
-      status: 200,
-      data: {
-        response: 'string',
-        confidence: 'number',
-        suggestions: 'array'
-      }
-    }
-  },
-  {
-    name: 'Predictive Analytics',
-    method: 'POST',
-    path: '/api/ai/predictive-analytics',
-    description: 'Generate business predictions and forecasts',
-    parameters: [
-      { name: 'data', type: 'array', required: true, description: 'Historical data for analysis' },
-      { name: 'period', type: 'string', required: true, description: 'Time period for prediction' }
-    ],
-    response: {
-      status: 200,
-      data: {
-        predictions: 'array',
-        accuracy: 'number',
-        trends: 'array'
-      }
-    }
-  },
-  {
-    name: 'Content Generation',
-    method: 'POST',
-    path: '/api/ai/content-generation',
-    description: 'Generate AI-powered content for various purposes',
-    parameters: [
-      { name: 'prompt', type: 'string', required: true, description: 'Content generation prompt' },
-      { name: 'type', type: 'string', required: true, description: 'Type of content to generate' }
-    ],
-    response: {
-      status: 200,
-      data: {
-        content: 'string',
-        metadata: 'object'
-      }
-    }
-  }
-];
-
-const codeExamples = [
-  {
-    language: 'JavaScript',
-    code: `// AI Email Responder
-const response = await fetch('/api/ai/email-responder', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-    'Authorization': 'Bearer YOUR_API_KEY'
-  },
-  body: JSON.stringify({
-    message: 'I need help with my account',
-    context: { userId: '12345' }
-  })
-});`
-  }
-];
+import {
+  Code,
+  Copy,
+  Check,
+  ExternalLink,
+  ArrowRight,
+  Terminal,
+  Globe,
+  Shield,
+  Zap,
+  Database,
+  Cpu,
+  Cloud,
+  XCircle
+} from 'lucide-react';
 
 export default function APIDocumentationPage() {
   const [copiedCode, setCopiedCode] = useState(null);
@@ -322,68 +261,6 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\
           </div>
         </section>
 
-        {/* API Endpoints */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">API Endpoints</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Explore our comprehensive API endpoints for AI services.
-              </p>
-            </motion.div>
-            <div className="space-y-8">
-              {endpoints.map((endpoint, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg p-6"
-                >
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-xl font-semibold">{endpoint.name}</h3>
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                      endpoint.method === 'POST' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'
-                    }`}>
-                      {endpoint.method}
-                    </span>
-                  </div>
-                  <p className="text-gray-600 mb-4">{endpoint.description}</p>
-                  <div className="bg-gray-100 rounded-lg p-4 mb-4">
-                    <code className="text-sm font-mono">{endpoint.path}</code>
-                  </div>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <h4 className="font-semibold mb-3">Parameters</h4>
-                      <div className="space-y-2">
-                        {endpoint.parameters.map((param, paramIndex) => (
-                          <div key={paramIndex} className="flex items-center justify-between text-sm">
-                            <span className="font-mono">{param.name}</span>
-                            <span className={`px-2 py-1 rounded text-xs ${
-                              param.required ? 'bg-red-100 text-red-800' : 'bg-gray-100 text-gray-800'
-                            }`}>
-                              {param.type}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-3">Response</h4>
-                      <div className="bg-gray-100 rounded-lg p-3">
-                        <pre className="text-sm font-mono">
-                          {JSON.stringify(endpoint.response, null, 2)}
-                        </pre>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
         {/* Navigation Tabs */}
         <section className="py-8 bg-white border-b">
           <div className="container mx-auto px-4">
@@ -740,33 +617,6 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-blue-600">
-          <div className="max-w-7xl mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Get your API key and start integrating our AI services into your applications.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
-                >
-                  Get API Key
-                  <ExternalLink className="ml-2 w-4 h-4" />
-                </Link>
-                <Link
-                  href="/ai-services"
-                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
-                >
-                  View AI Services
-                </Link>
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
           <div className="container mx-auto px-4">
             <motion.div
@@ -800,10 +650,6 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\
             </motion.div>
           </div>
         </section>
-      </div>
-    </Layout>
-  );
-}
       </div>
     </MainLayout>
   );

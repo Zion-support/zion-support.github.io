@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Brain, Network, Cloud, Zap, Shield, ArrowRight, CheckCircle, Users, Globe, Award } from 'lucide-react';
+import { Brain, Network, Cloud, Zap, Shield, ArrowRight, CheckCircle, Users, Globe, Award, Cpu } from 'lucide-react';
 import Layout from '../components/Layout';
 
 const stats = [
@@ -15,24 +15,57 @@ const stats = [
 const services = [
   {
     title: 'AI Services',
-    description: 'Cutting-edge artificial intelligence solutions',
+    description: '120+ cutting-edge AI solutions including quantum AI, drug discovery, space mission planning, and autonomous systems',
     icon: Brain,
     link: '/ai-services',
-    color: 'from-blue-500 to-purple-600'
+    color: 'from-blue-500 to-purple-600',
+    count: '120+',
+    popular: true
   },
   {
     title: 'IT Services',
-    description: 'Comprehensive IT solutions and support',
+    description: '85+ comprehensive IT solutions from quantum security to autonomous infrastructure monitoring',
     icon: Network,
     link: '/it-services',
-    color: 'from-green-500 to-blue-600'
+    color: 'from-green-500 to-blue-600',
+    count: '85+',
+    popular: true
   },
   {
     title: 'Micro SAAS',
-    description: 'Innovative micro software solutions',
+    description: '100+ innovative micro software solutions for modern businesses across all industries',
     icon: Cloud,
     link: '/micro-saas',
-    color: 'from-purple-500 to-pink-600'
+    color: 'from-purple-500 to-pink-600',
+    count: '100+',
+    popular: true
+  },
+  {
+    title: 'Quantum Computing',
+    description: 'Revolutionary quantum solutions for optimization, encryption, and complex problem solving',
+    icon: Cpu,
+    link: '/quantum-computing',
+    color: 'from-indigo-500 to-cyan-600',
+    count: '25+',
+    popular: false
+  },
+  {
+    title: 'Blockchain Solutions',
+    description: 'Decentralized solutions with smart contracts, DeFi, and identity management',
+    icon: Shield,
+    link: '/blockchain',
+    color: 'from-orange-500 to-red-600',
+    count: '30+',
+    popular: false
+  },
+  {
+    title: 'IoT & Edge Computing',
+    description: 'Connected devices, edge AI, and real-time analytics for smart operations',
+    icon: Globe,
+    link: '/iot',
+    color: 'from-teal-500 to-green-600',
+    count: '40+',
+    popular: false
   }
 ];
 
@@ -149,25 +182,33 @@ export default function HomePage() {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 group"
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 group relative"
                 >
+                  {service.popular && (
+                    <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                      Popular
+                    </div>
+                  )}
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
+                    <span className="text-2xl font-bold text-blue-600">{service.count}</span>
+                  </div>
                   <p className="text-gray-600 mb-6">{service.description}</p>
                   <Link
                     href={service.link}
                     className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold group-hover:translate-x-2 transition-transform duration-300"
                   >
-                    Learn More
+                    Explore Services
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </motion.div>
@@ -213,6 +254,99 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Featured Services Section */}
+        <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Featured Innovation Services
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Discover our most cutting-edge solutions that are transforming industries worldwide.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  title: 'AI Drug Discovery Platform',
+                  description: 'Revolutionary AI accelerating pharmaceutical research with 70% faster drug discovery',
+                  price: 'Starting at $15,000/month',
+                  category: 'Healthcare AI',
+                  icon: '🧬',
+                  link: '/ai-services'
+                },
+                {
+                  title: 'Quantum AI Optimization',
+                  description: 'Solve complex problems 1000x faster with quantum-enhanced machine learning',
+                  price: 'Starting at $12,000/month',
+                  category: 'Quantum AI',
+                  icon: '⚛️',
+                  link: '/ai-services'
+                },
+                {
+                  title: 'Autonomous Trading System',
+                  description: 'Fully automated AI trading with 25-40% annual returns and 24/7 operation',
+                  price: 'Starting at $20,000/month',
+                  category: 'FinTech AI',
+                  icon: '📈',
+                  link: '/ai-services'
+                },
+                {
+                  title: 'Space Mission Planning AI',
+                  description: 'Advanced AI for space exploration with 50% cost reduction and 35% success improvement',
+                  price: 'Starting at $25,000/month',
+                  category: 'Space AI',
+                  icon: '🚀',
+                  link: '/ai-services'
+                },
+                {
+                  title: 'Smart City Management',
+                  description: 'Comprehensive AI platform reducing traffic by 40% and energy consumption by 25%',
+                  price: 'Starting at $10,000/month',
+                  category: 'Smart City AI',
+                  icon: '🏙️',
+                  link: '/ai-services'
+                },
+                {
+                  title: 'AI Content Creation Studio',
+                  description: 'Automated content production with 90% time savings and 500% output increase',
+                  price: 'Starting at $4,500/month',
+                  category: 'Content AI',
+                  icon: '🎬',
+                  link: '/ai-services'
+                }
+              ].map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 group"
+                >
+                  <div className="text-4xl mb-4">{service.icon}</div>
+                  <div className="text-sm text-blue-600 font-semibold mb-2">{service.category}</div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">{service.title}</h3>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <div className="text-lg font-bold text-green-600 mb-4">{service.price}</div>
+                  <Link
+                    href={service.link}
+                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold group-hover:translate-x-2 transition-transform duration-300"
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -225,7 +359,7 @@ export default function HomePage() {
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Let's discuss how our innovative solutions can help you achieve your goals and drive growth.
+                Join 500+ companies already using our innovative solutions. Let's discuss how we can help you achieve your goals and drive growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -235,12 +369,15 @@ export default function HomePage() {
                   <ArrowRight className="w-5 h-5 mr-2" />
                   Get Started Today
                 </Link>
-                <Link
-                  href="/about"
+                <a
+                  href="tel:+13024640950"
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
                 >
-                  Learn More About Us
-                </Link>
+                  Call +1 302 464 0950
+                </a>
+              </div>
+              <div className="mt-8 text-blue-200">
+                <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown DE 19709</p>
               </div>
             </motion.div>
           </div>
