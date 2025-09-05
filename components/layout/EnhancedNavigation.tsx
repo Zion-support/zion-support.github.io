@@ -1,324 +1,147 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-const React, { useState } from "react";"const Link from "next/link";"const { Menu, X, ChevronDown } from "lucide-react";const EnhancedNavigation: React.FC = () => { const [isOpen, setIsOpen] = useState(false); const [servicesOpen, setServicesOpen] = useState(false);" const services = [{ name: "All Services", href: "/services" }," { name: "AI Services", href: "/ai-services" }," { name: "IT Services", href: "/it-services" }," { name: "Micro SaaS", href: "/micro-saas" }, ]; return (" <nav className="bg-white shadow-lg">" <div className="container mx-auto px-4">" <div className="flex justify-between items-center py-4">'"'"
-=======
-<<<<<<< HEAD
-import _React, { useState } from 'react';,
-import Link from 'next/link';';
-import { Menu, X, ChevronDown } from 'lucide-react';,
-
-const "EnhancedNavigation": _React.FC = () => {";
-;  const [isOpen, setIsOpen] = useState(false);}
-  const [servicesOpen, setServicesOpen] = useState(false);,
-
-  const services = [{ name: 'All Services, href: '/services' },',
-    { name: 'AI Services, href: '/ai-services' },',
-    { name: 'IT Services, href: '/it-services' },',
-    { name: 'Micro SaaS, href: '/micro-saas' },',
-;  ];,
-
-  return (;
-    <nav className="bg-white shadow-lg">";
-      <div className="container mx-auto px-4">";
-        <div className="flex justify-between items-center py-4">";
-=======
 import React, { useState } from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
->>>>>>> main
+import { Menu, X, ChevronDown } from 'lucide-react';
 
 const EnhancedNavigation: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
-<<<<<<< HEAD
-=======
+  const services = [
+    { name: 'AI Services', href: '/ai-services' },
+    { name: 'IT Services', href: '/it-services' },
+    { name: 'Micro SaaS', href: '/micro-saas' },
+    { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
+    { name: 'Cybersecurity', href: '/cybersecurity' },
+    { name: 'Cloud Solutions', href: '/cloud-solutions' }
+  ];
+
   const navigationItems = [
     { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
+    { name: 'Services', href: '/services', hasDropdown: true },
     { name: 'Products', href: '/products' },
+    { name: 'Solutions', href: '/solutions' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' }
   ];
 
-=======
-import { Menu, X, ChevronDown } from 'lucide-react';
-const "EnhancedNavigation": React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const services = [{ name: 'All Services', href: '/services' },
-    { name: 'AI Services', href: '/ai-services' },
-    { name: 'IT Services', href: '/it-services' },
-    { name: 'Micro SaaS', href: '/micro-saas' },
-  ];
->>>>>>> main
->>>>>>> main
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-<<<<<<< HEAD
-          <Link href="/" className="text-2xl font-bold text-gray-800">
-            Zion Tech Group
-          </Link>
-
-          <div className="hidden lg:flex items-center space-x-8">
-            <Link href="/">
-              <span className="text-gray-600 hover:text-blue-600 transition-colors">Home</span>
-            </Link>
-
-            <div className="relative group">
-              <button
-                className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
-                onMouseEnter={() => setServicesOpen(true)}
-                onMouseLeave={() => setServicesOpen(false)}
-              >
-                Services
-                <ChevronDown className="ml-1 w-4 h-4" />
-              </button>
-              <div
-                className={`absolute top-full left-0 mt-2 w-64 bg-white shadow-xl rounded-lg py-2 opacity-0 invisible group-hover: opacity-100 group-hover:visible transition-all duration-200 ${
-                  servicesOpen ? 'opacity-100 visible' : '\'
-                }`}
-                onMouseEnter={() => setServicesOpen(true)}
-                onMouseLeave={() => setServicesOpen(false)}
-              >
-                {services.map((service) => (
-                  <Link key={service.name} href={service.href}>
-                    <span className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors> {service.name}
-                    </span"
-                  </Link>
-                ))}
-              </div>
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-xl">Z</span>
             </div>
-
-            <Link href="/about">
-              <span className="text-gray-600 hover:text-blue-600 transition-colors>About</span> </Link"
-            <Link href="/contact">
-              <span className="text-gray-600 hover:text-blue-600 transition-colors">Contact</span>
-            </Link>
-=======
-<<<<<<< HEAD
-          <Link href="/" className="text-2xl font-bold text-blue-600 hover:text-blue-700">
-            Zion Tech Group
+            <span className="text-2xl font-bold text-gray-900">Zion Tech Group</span>
           </Link>
-          
+
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex space-x-8">
-            <Link href="/" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
-              Home
-            </Link>
-            <div className="relative group">
-              <button className="text-gray-600 hover:text-blue-600 font-medium transition-colors flex items-center">
-                Services
-                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div className="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                <div className="py-2">
-                  <Link href="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    All Services
-                  </Link>
-                  <Link href="/services/ai-development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    AI Development
-                  </Link>
-                  <Link href="/services/cloud-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    Cloud Solutions
-                  </Link>
-                  <Link href="/services/blockchain" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    Blockchain
-                  </Link>
-                  <Link href="/services/iot-platforms" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    IoT Platforms
-                  </Link>
-                </div>
+          <div className="hidden lg:flex items-center space-x-8">
+            {navigationItems.map((item) => (
+              <div key={item.name} className="relative group">
+                <Link
+                  href={item.href}
+                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center space-x-1"
+                  onMouseEnter={() => item.hasDropdown && setServicesOpen(true)}
+                  onMouseLeave={() => item.hasDropdown && setServicesOpen(false)}
+                >
+                  <span>{item.name}</span>
+                  {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
+                </Link>
+                
+                {/* Services Dropdown */}
+                {item.hasDropdown && servicesOpen && (
+                  <div 
+                    className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50"
+                    onMouseEnter={() => setServicesOpen(true)}
+                    onMouseLeave={() => setServicesOpen(false)}
+                  >
+                    {services.map((service) => (
+                      <Link
+                        key={service.name}
+                        href={service.href}
+                        className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
-            </div>
-            <div className="relative group">
-              <button className="text-gray-600 hover:text-blue-600 font-medium transition-colors flex items-center">
-                Products
-                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div className="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                <div className="py-2">
-                  <Link href="/products" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    All Products
-                  </Link>
-                  <Link href="/products/micro-saas" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    Micro SAAS Solutions
-                  </Link>
-                  <Link href="/products/ai-tools" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    AI Tools & Platforms
-                  </Link>
-                  <Link href="/products/automation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    Automation Tools
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <Link href="/about" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
-              About
+            ))}
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <Link
+              href="/quote"
+              className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+            >
+              Get Quote
             </Link>
-            <Link href="/contact" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
-              Contact
-            </Link>
-            <Link href="/blog" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
-              Blog
+            <Link
+              href="/contact"
+              className="border border-blue-600 text-blue-600 px-6 py-2 rounded-lg font-medium hover:bg-blue-50 transition-colors"
+            >
+              Contact Us
             </Link>
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-600 hover:text-blue-600 focus:outline-none"
-            >
-              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                {isMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-gray-200">
-            <div className="flex flex-col space-y-4">
-              <Link href="/" className="text-gray-600 hover:text-blue-600 font-medium">
-                Home
-              </Link>
-              <Link href="/services" className="text-gray-600 hover:text-blue-600 font-medium">
-                Services
-              </Link>
-              <Link href="/products" className="text-gray-600 hover:text-blue-600 font-medium">
-                Products
-              </Link>
-              <Link href="/about" className="text-gray-600 hover:text-blue-600 font-medium">
-                About
-              </Link>
-              <Link href="/contact" className="text-gray-600 hover:text-blue-600 font-medium">
-                Contact
-              </Link>
-              <Link href="/blog" className="text-gray-600 hover:text-blue-600 font-medium">
-                Blog
-=======
-<<<<<<< HEAD
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">Z</span>
-            </div>
-            <div>
-              <div className="text-xl font-bold text-gray-800">Zion Tech Group</div>
-              <div className="text-xs text-gray-500">Technology Solutions</div>
-            </div>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex space-x-8">
-            {navigationItems.map((item) => (
-              <Link key={item.name} href={item.href}>
-                <span className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
-                  {item.name}
-                </span>
-              </Link>
-            ))}
-          </div>
-
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link href="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
-              Get Started
-            </Link>
-          </div>
-
-          {/* Mobile Menu Button */}
           <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {isMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-gray-200">
-            <div className="flex flex-col space-y-4">
-              {navigationItems.map((item) => (
-                <Link key={item.name} href={item.href} onClick={() => setIsMenuOpen(false)}>
-                  <span className="block text-gray-600 hover:text-blue-600 transition-colors font-medium py-2">
-                    {item.name}
-                  </span>
-                </Link>
-              ))}
-              <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
-                <span className="block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium text-center">
-=======
-<div className="text-xl font-bold text-gray-800">Logo</div>
-          <div className="hidden md:flex space-x-8>
-            <Link href="/"><span className="text-gray-600 hover:text-gray-900">Home</span></Link>
-            <Link href="/services"><span className="text-gray-600 hover:text-gray-900">Services</span></Link>
-            <Link href="/about"><span className="text-gray-600 hover:text-gray-900">About</span></Link>
-            <Link href="/contact"><span className="text-gray-600 hover:text-gray-900">Contact</span></Link>
->>>>>>> main
-          </div>
-          <div className="hidden lg:block">
-            <Link href="/contact">
-              <span className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
-                Get Started
-              </span>
-            </Link>
-          </div>
-          <button
-            className="lg:hidden"
             onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
+
+        {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden py-4 border-t border-gray-200>
-            <div className="space-y-2">
-              <Link href="/">
-                <span className="block py-2 text-gray-600 hover:text-blue-600">Home</span>
-              </Link>
-              <div className="space-y-2">
-                <div className="font-semibold text-gray-800 py-2">Services</div>
-                {services.map((service) => (
-                  <Link key={service.name} href={service.href}>
-                    <span className="block py-2 pl-4 text-gray-600 hover:text-blue-600> {service.name}
-                    </span"
+          <div className="lg:hidden border-t border-gray-200 py-4">
+            <div className="space-y-4">
+              {navigationItems.map((item) => (
+                <div key={item.name}>
+                  <Link
+                    href={item.href}
+                    className="block text-gray-700 hover:text-blue-600 font-medium py-2"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
                   </Link>
-                ))}
+                  {item.hasDropdown && (
+                    <div className="ml-4 space-y-2">
+                      {services.map((service) => (
+                        <Link
+                          key={service.name}
+                          href={service.href}
+                          className="block text-gray-600 hover:text-blue-600 py-1"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+              <div className="pt-4 space-y-2">
+                <Link
+                  href="/quote"
+                  className="block bg-blue-600 text-white px-6 py-2 rounded-lg font-medium text-center hover:bg-blue-700 transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Get Quote
+                </Link>
+                <Link
+                  href="/contact"
+                  className="block border border-blue-600 text-blue-600 px-6 py-2 rounded-lg font-medium text-center hover:bg-blue-50 transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Contact Us
+                </Link>
               </div>
-              <Link href="/about">
-                <span className="block py-2 text-gray-600 hover:text-blue-600>About</span> </Link"
-              <Link href="/contact">
-                <span className="block py-2 text-gray-600 hover:text-blue-600">Contact</span>
-              </Link>
-              <Link href="/contact">
-                <span className="block py-2 bg-blue-600 text-white text-center rounded-lg font-semibold">
->>>>>>> main
-                  Get Started
-                </span>
->>>>>>> main
-              </Link>
             </div>
           </div>
         )}
@@ -326,7 +149,5 @@ const "EnhancedNavigation": React.FC = () => {
     </nav>
   );
 };
+
 export default EnhancedNavigation;
->>>>>>> main
->>>>>>> main
->>>>>>> main
