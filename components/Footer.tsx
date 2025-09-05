@@ -1,6 +1,6 @@
 import React from "react";
 import Link from 'next/link';
-import { }
+import {
   MapPin, 
   Phone, 
   Mail, 
@@ -33,11 +33,11 @@ import { }
   HelpCircle,
   Lock,
   Scale,
-  Cookie;
+  Cookie
 } from 'lucide-react';
 
-const services = {}
-  'AI Solutions': []
+const services = {
+  'AI Solutions': [
     { name: 'AI-Powered Email Responder', href: '/ai-services#ai-email-responder' },
     { name: 'Predictive Analytics Platform', href: '/ai-services#predictive-analytics' },
     { name: 'Intelligent Chatbot System', href: '/ai-services#intelligent-chatbot' },
@@ -49,9 +49,9 @@ const services = {}
     { name: 'Quantum Machine Learning', href: '/ai-services#quantum-ml' },
     { name: 'AI Space Debris Management', href: '/ai-services#space-debris' },
     { name: 'AI Climate Engineering', href: '/ai-services#climate-engineering' },
-    { name: 'AI Neural Interface', href: '/ai-services#neural-interface' };
+    { name: 'AI Neural Interface', href: '/ai-services#neural-interface' }
   ],
-  'IT Services': []
+  'IT Services': [
     { name: 'Cloud Infrastructure Management', href: '/it-services#cloud-infrastructure' },
     { name: 'Cybersecurity Solutions', href: '/it-services#cybersecurity' },
     { name: 'Network Infrastructure', href: '/it-services#network-infrastructure' },

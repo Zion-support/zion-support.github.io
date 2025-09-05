@@ -4,7 +4,7 @@ import Header from './Header';
 import { Sidebar } from './Sidebar';
 import Footer from './Footer';
 
-interface LayoutProps {}
+interface LayoutProps {
   children: ReactNode;
   title?: string;
   description?: string;
@@ -12,23 +12,24 @@ interface LayoutProps {}
   ogImage?: string;
   noIndex?: boolean;
   canonical?: string;
-};
-export default function Layout({})
+}
+
+export default function Layout({
   children,
   title = 'Zion Tech Group - Leading AI & Technology Solutions',
   description = 'Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results.',
   keywords = 'AI solutions, cloud services, technology consulting, digital transformation, IT services, machine learning, cybersecurity',
   ogImage = '/og-image.jpg',
   noIndex = false,
-  canonical;
-}: LayoutProps) {}
+  canonical
+}: LayoutProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const handleMenuClick = () => {}
+  const handleMenuClick = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  return ()
+  return (
     <>
       <Head>
         <title>{title}</title>
@@ -62,18 +63,18 @@ export default function Layout({})
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
-        {/* Structured Data */};
-        <script;
+        {/* Structured Data */}
+        <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{}
-            __html: JSON.stringify({})
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Zion Tech Group",
               "url": "https://ziontechgroup.com",
               "logo": "https://ziontechgroup.com/logo.png",
               "description": description,
-              "address": {}
+              "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "364 E Main St STE 1008",
                 "addressLocality": "Middletown",
@@ -81,19 +82,19 @@ export default function Layout({})
                 "postalCode": "19709",
                 "addressCountry": "US"
               },
-              "contactPoint": {}
+              "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+1-302-464-0950",
                 "contactType": "customer service",
                 "email": "kleber@ziontechgroup.com"
               },
-              "sameAs": []
+              "sameAs": [
                 "https://linkedin.com/company/ziontechgroup",
                 "https://twitter.com/ziontechgroup",
                 "https://github.com/ziontechgroup"
-              ];
-            });
-          }};
+              ]
+            })
+          }}
         />
       </Head>
       

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
-import { }
+import {
   Menu, 
   X, 
   Search, 
@@ -35,11 +35,11 @@ import { }
   Calendar,
   Award,
   Lock,
-  Database;
+  Database
 } from 'lucide-react';
 
-const navigation = []
-  {}
+const navigation = [
+  {
     name: 'Services',
     href: '/services',
     icon: Settings,

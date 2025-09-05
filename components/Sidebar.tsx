@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { }
+import {
   Home, 
   Briefcase, 
   Target, 
@@ -22,14 +22,15 @@ import { }
   Cpu as CpuIcon,
   Lock,
   Network,
-  Monitor;
+  Monitor
 } from 'lucide-react';
 
-interface SidebarProps {}
+interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
-};
-export function Sidebar({ isOpen, onClose }: SidebarProps) {}
+}
+
+export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const router = useRouter();
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
