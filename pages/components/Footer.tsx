@@ -88,9 +88,9 @@ const footerSections = [
       { title: 'Blog', href: '/blog', icon: FileText },
       { title: 'Case Studies', href: '/case-studies', icon: BarChart3 },
       { title: 'White Papers', href: '/white-papers', icon: FileText },
-      { title: 'Webinars', href: '/webinars', icon: Calendar },
       { title: 'Tutorials', href: '/tutorials', icon: BookOpen },
-      { title: 'Documentation', href: '/docs', icon: FileText }
+      { title: 'Documentation', href: '/docs', icon: FileText },
+      { title: 'Events', href: '/events', icon: Calendar }
     ]
   },
   {
@@ -101,6 +101,7 @@ const footerSections = [
       { title: 'Careers', href: '/careers', icon: Users },
       { title: 'Partners', href: '/partners', icon: Globe },
       { title: 'News', href: '/news', icon: FileText },
+      { title: 'Press', href: '/press', icon: FileText },
       { title: 'Contact', href: '/contact', icon: MessageSquare }
     ]
   },
