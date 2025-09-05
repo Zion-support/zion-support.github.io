@@ -1,14 +1,14 @@
-import React from 'react'''
-import Link from 'next/link'''
-import { servicesCatalog } from '../../data/services'''
-      {' '''}
-        {' '''}
-          {' '''}
-          </h3>{' '''}
-          </ul>{' '''}
-        </div>{' '''}
-          </h3>{' '''}
-                </Link>{' '''}
-          </ul>{' '''}
-        </div>{' '''}
-      </div>{' '''}
+import React from 'react';
+
+interface SidebarProps {
+  // Add props here as needed
+}
+
+export default function Sidebar({ }: SidebarProps) {
+  return (
+    <div>
+      <h1>Sidebar</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

@@ -228,6 +228,8 @@
     "audit:security": "node scripts/security-audit-enhanced.cjs",
     "optimize:ux": "node scripts/ux-optimizer.cjs",
     "improve:all": "bash scripts/comprehensive-app-improvements.sh",
+    "sanitize:data": "node tools/sanitize-data-files.cjs",
+    "automation:safe": "node tools/run-safe-automations.cjs",
     "automation:safe": "bash scripts/run-safe-automations.sh",
     "ci:smoke": "npm run build && npm run test:smoke",
     "ci:consolidated": "bash scripts/ci-consolidated.sh",

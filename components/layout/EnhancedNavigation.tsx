@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, ChevronDown } from 'lucide-react';
@@ -136,3 +137,19 @@ const EnhancedNavigation: React.FC = () => {
 };
 
 export default EnhancedNavigation;
+=======
+import React from 'react';
+
+interface EnhancedNavigationProps {
+  // Add props here as needed
+}
+
+export default function EnhancedNavigation({ }: EnhancedNavigationProps) {
+  return (
+    <div>
+      <h1>EnhancedNavigation</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-0033

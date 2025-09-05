@@ -1,1 +1,14 @@
-import { useEffect, useRouter } from 'lucide-react'; import { useSelector } from 'react-redux'; function withAuth(Component) {; const Wrapped = (props) => {; const router = useRouter(); const isLoggedIn = useSelector((state) => state.auth.isLoggedIn); useEffect(() => {; if(!isLoggedIn) {; router.push('/login?next=/community/new'')'}
+import React from 'react';
+
+interface WithAuthProps {
+  // Add props here as needed
+}
+
+export default function WithAuth({ }: WithAuthProps) {
+  return (
+    <div>
+      <h1>WithAuth</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

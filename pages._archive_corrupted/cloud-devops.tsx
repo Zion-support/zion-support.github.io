@@ -1,9 +1,14 @@
-import React from 'react'''
-import dynamic from 'next/dynamic'''
-import Head from 'next/head'''
-import Link from 'next/link'''
-import { motion } from 'framer-motion'''
-} from 'lucide-react'''
-const SEO = dynamic(() => import('../src/components/SEO'')'
-const PageTransition = dynamic(() => import('../src/components/PageTransition'')
-cursor/fix-lint-push-and-merge-to-main-f3c1;)'
+import React from 'react';
+
+interface ClouddevopsProps {
+  // Add props here as needed
+}
+
+export default function Clouddevops({ }: ClouddevopsProps) {
+  return (
+    <div>
+      <h1>Clouddevops</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

@@ -1,2 +1,14 @@
-import React from 'react'; import Head from 'next/head';  import EnhancedNavigation from './layout/EnhancedNavigation'; import EnhancedFooter from './layout/EnhancedFooter'; interface LayoutProps { "children": 'React.ReactNode; title?: string; description?: string; keywords?: string; ogImage?: string;' } } const "Layout": React.FC<LayoutProps> = ({ children,title = 'Zion Tech Group - Leading Technology Solutions Provider',description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture,we help companies transform their digital presence.',keywords = 'technology solutions,AI development,cloud services,blockchain,data analytics,web development,mobile development,IoT platforms,cybersecurity',ogImage = '/images/og-image.jpg' }) => {  interface LayoutProps { "title""}
-</LayoutProps>"
+import React from 'react';
+
+interface LayoutProps {
+  // Add props here as needed
+}
+
+export default function Layout({ }: LayoutProps) {
+  return (
+    <div>
+      <h1>Layout</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

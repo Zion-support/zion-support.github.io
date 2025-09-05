@@ -60,7 +60,32 @@ function processFile(filePath) {
     return 0}
 }
 
+<<<<<<< HEAD
 async function main() {
+=======
+function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
+  let results = [];
+  const list = fs.readdirSync(dir);
+  
+  list.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat && stat.isDirectory()) {
+      results = results.concat(getAllFiles(filePath, extensions));
+    } else {
+      const ext = path.extname(file);
+      if (extensions.includes(ext)) {
+        results.push(filePath);
+      }
+    }
+  });
+  
+  return results;
+}
+
+function main() {
+>>>>>>> cursor/expand-services-advertise-and-build-project-0033
   const srcDir = path.join(process.cwd(), 'src');
   const pagesDir = path.join(process.cwd(), 'pages');
   
@@ -82,13 +107,20 @@ async function main() {
     }
   }
 
-  console.log("\n📊 Summary:");
+  console.log("\n📊 Summary: ");
   console.log(`   Files processed: ${filesProcessed}`);
-  console.log(`   Console statements removed: ${totalRemoved}`);
+  console.log(`   Console statements "removed": ${totalRemoved}`);
   
   if (totalRemoved > 0) {
+<<<<<<< HEAD
     console.log("\n✨ Production build optimized!")} else {
     console.log("\n✨ No console statements found to remove.")}
+=======
+    console.log(`\n✨ Production build optimized!`);
+  } else {
+    console.log(`\n✨ No console statements found to remove.`);
+  }
+>>>>>>> cursor/expand-services-advertise-and-build-project-0033
 }
 
 if (require.main === module) {
