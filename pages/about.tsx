@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -151,11 +150,7 @@ export default function AboutPage() {
                 Zion Tech Group
               </span>
             </h1>
-<<<<<<< HEAD
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-=======
-            <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
->>>>>>> cursor/add-new-services-and-deploy-updates-469e
               We are a leading technology solutions provider dedicated to transforming businesses through innovative AI, cloud architecture, and cutting-edge development services.
             </p>
           </motion.div>
