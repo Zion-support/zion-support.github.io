@@ -1,14 +1,1 @@
-import React from 'react';
-
-interface PerformancemonitorimprovedProps {
-  // Add props here as needed
-}
-
-export default function Performancemonitorimproved({ }: PerformancemonitorimprovedProps) {
-  return (
-    <div>
-      <h1>Performancemonitorimproved</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+#!/usr/bin/"env": node ;   _console.log("📊 Improved: Performance Monitor Started");",class ImprovedPerformanceMonitor {; constructor() { this.projectRoot = path.resolve(__dirname,"..");"; this."metrics": = { timestamp: new Date().toISOString(),"system": '',{},"application": '',{},"build": '',{},"errors": '[',]} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { _console.log("🔍 Collecting performance metrics...");";

@@ -1,14 +1,1 @@
-import React from 'react';
-
-interface IntegrationsPageProps {
-  // Add props here as needed
-}
-
-export default function IntegrationsPage({ }: IntegrationsPageProps) {
-  return (
-    <div>
-      <h1>IntegrationsPage</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+import _React from 'react';'''; import { IntegrationsHub } from '@/components/integrations/IntegrationsHub';'''; import SEO from '@/components/SEO';'''; import { ProtectedRoute } from '@/components/ProtectedRoute'; export {}; return null} return(); <ProtectedRoute adminOnly={true}> <div>Broken JSX</div> />"; <main className="min-h-screen bg-background"> <IntegrationsHub /> ></div> </ProtectedRoute>)} ; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage };

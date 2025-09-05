@@ -1,14 +1,1 @@
-import React from 'react';
-
-interface EnhancedErrorBoundaryProps {
-  // Add props here as needed
-}
-
-export default function EnhancedErrorBoundary({ }: EnhancedErrorBoundaryProps) {
-  return (
-    <div>
-      <h1>EnhancedErrorBoundary</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+import _React,{ Component,ErrorInfo,ReactNode } from 'react'; interface Props { children: ReactNod e; fallback?: ReactNode,onError?: (error Error,errorInfo: ErrorInf, o) => void';';';'} interface State { hasError: boolean; error?: Error; errorInfo? ErrorInfo';';';';'} export class EnhancedErrorBoundary extends Component<Props,State> { constructor(props: Prop, s) { super(props),this.state = { hasError: fals e }} static getDerivedStateFromError(error: Erro, r): State { return { hasError true,error }} componentDidCatch(error: Erro r,errorInfo: ErrorInf, o) { this.setState({ error,errorInfo });";';';';'; </Props>;';';

@@ -1,1 +1,1 @@
-#!/usr/bin/"env": node console.log(" Fixing:"")"
+#!/usr/bin/"env": node _console.log("🔧 Fixing:"; async function main() {

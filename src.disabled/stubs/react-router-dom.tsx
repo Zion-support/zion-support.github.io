@@ -1,14 +1,1 @@
-import React from 'react';
-
-interface ReactrouterdomProps {
-  // Add props here as needed
-}
-
-export default function Reactrouterdom({ }: ReactrouterdomProps) {
-  return (
-    <div>
-      <h1>Reactrouterdom</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+import _React from 'react'; "export": const Link: _React.FC<{ to?: string: href?: string: className?: string: children?: _React.ReactNode} & _React.AnchorHTMLAttributes<HTMLAnchorElement>> = ({ to,href,children,..."rest": ''}) => { return ( <a href={to || href || '#'} {...rest}>'; {children} </a> )} "export": const BrowserRouter: _React.FC<{ children?: _React.ReactNode}> = ({ "children": ''}) => <>{children}</> export const "Routes": _React.FC<{ children?: _React.ReactNode}> = ({ "children": ''}) => <>{children}</> export const "Route": _React.FC<{ children?: _React.ReactNode}> = ({ "children": ''}) => <>{children}</> export const useNavigate = () => () => {} export default { Link } '

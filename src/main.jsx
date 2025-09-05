@@ -1,14 +1,1 @@
-import React from 'react';
-
-interface MainProps {
-  // Add props here as needed
-}
-
-export default function Main({ }: MainProps) {
-  return (
-    <div>
-      <h1>Main</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+import _React from 'react';",'; ';';';';'; import {createRoot,hydrateRoot} from 'react-dom/client';";';';';'; import App from "./App.tsx";",'; ';';';';'; import './index.css';",'; ';';';';'; import {HelmetProvider} from 'react-helmet-async';",'; ';';';';'; import {BrowserRouter as Router} from 'react-router-dom';",'; ';';';';'; import {QueryClient,QueryClientProvider} from '@tanstack/react-query';",'; ';';';';'; import './utils/globalFetchInterceptor';",'; ';';';';'; import './utils/consoleErrorToast';';'; ';';';';'; import './i18n';",'; ';';';';'; import {LanguageProvider} from '@/context/LanguageContext';";';';';'; import {LanguageDetectionPopup} from "./components/LanguageDetectionPopup";",'; ';';';';'; import {WhitelabelProvider} from '@/context/WhitelabelContext';",'; ';';';'; 
