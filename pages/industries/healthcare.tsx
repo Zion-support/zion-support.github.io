@@ -26,7 +26,7 @@ import {
   Video,
   DollarSign
 } from 'lucide-react';
-import Layout from '.././components/layout/MainLayout';
+import MainLayout from '../components/layout/MainLayout';
 
 const solutions = [
   {

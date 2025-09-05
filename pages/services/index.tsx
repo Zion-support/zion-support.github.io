@@ -12,7 +12,10 @@ const Services: NextPage = () => {
         { name: "Chatbot Development", href: "/services/ai-chatbot-development", price: "Starting at $1,200/month" },
         { name: "Predictive Analytics", href: "/services/predictive-analytics", price: "Starting at $3,000/month" },
         { name: "Computer Vision", href: "/services/computer-vision", price: "Starting at $4,000/month" },
-        { name: "Natural Language Processing", href: "/services/nlp-services", price: "Starting at $2,800/month" }
+        { name: "Natural Language Processing", href: "/services/nlp-services", price: "Starting at $2,800/month" },
+        { name: "AI-Powered Document Processing", href: "/services/ai-document-processing", price: "Starting at $1,800/month" },
+        { name: "Intelligent Recommendation Systems", href: "/services/recommendation-systems", price: "Starting at $3,500/month" },
+        { name: "AI Voice Assistants", href: "/services/ai-voice-assistants", price: "Starting at $2,200/month" }
       ]
     },
     {
@@ -68,6 +71,31 @@ const Services: NextPage = () => {
         { name: "RPA Solutions", href: "/services/rpa-solutions", price: "Starting at $4,500/month" },
         { name: "API Integration", href: "/services/api-integration", price: "Starting at $1,800/project" },
         { name: "Process Optimization", href: "/services/process-optimization", price: "Starting at $2,200/month" }
+      ]
+    },
+    {
+      title: "Micro SAAS Solutions",
+      description: "Innovative micro applications for modern businesses",
+      services: [
+        { name: "Smart URL Shortener", href: "/services/url-shortener", price: "$29/month" },
+        { name: "AI Invoice Generator", href: "/services/invoice-generator", price: "$49/month" },
+        { name: "Enterprise Password Manager", href: "/services/password-manager", price: "$79/month" },
+        { name: "Business Analytics Dashboard", href: "/services/analytics-dashboard", price: "$99/month" },
+        { name: "Task Management System", href: "/services/task-management", price: "$39/month" },
+        { name: "Email Marketing Automation", href: "/services/email-marketing", price: "$59/month" },
+        { name: "Social Media Scheduler", href: "/services/social-scheduler", price: "$69/month" },
+        { name: "Customer Support Ticketing", href: "/services/support-ticketing", price: "$89/month" }
+      ]
+    },
+    {
+      title: "Blockchain & Web3 Services",
+      description: "Next-generation decentralized solutions",
+      services: [
+        { name: "Smart Contract Development", href: "/services/smart-contracts", price: "Starting at $5,000/project" },
+        { name: "DeFi Platform Development", href: "/services/defi-platform", price: "Starting at $15,000/project" },
+        { name: "NFT Marketplace Development", href: "/services/nft-marketplace", price: "Starting at $8,000/project" },
+        { name: "Cryptocurrency Wallet Development", href: "/services/crypto-wallet", price: "Starting at $6,000/project" },
+        { name: "Blockchain Consulting", href: "/services/blockchain-consulting", price: "Starting at $200/hour" }
       ]
     }
   ];

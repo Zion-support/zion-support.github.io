@@ -11,7 +11,8 @@ import {
   Play, 
   Download, 
   Target,
-  Zap
+  Zap,
+  ArrowRight
 } from 'lucide-react';
 import MainLayout from './components/layout/MainLayout';
 

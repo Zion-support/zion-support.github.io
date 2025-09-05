@@ -32,7 +32,7 @@ const teamMembers = [
     id: 2,
     name: "Dr. Sarah Johnson",
     role: "Chief Technology Officer",
-    expertise: "AI & Machine Learning",
+    expertise: ["AI & Machine Learning", "Data Science", "Neural Networks", "Deep Learning"],
     icon: Code,
     bio: "Leading our AI initiatives with 12+ years of experience in machine learning and data science."
   },
@@ -40,7 +40,7 @@ const teamMembers = [
     id: 3,
     name: "Michael Chen",
     role: "Head of Engineering",
-    expertise: "Cloud Architecture",
+    expertise: ["Cloud Architecture", "Distributed Systems", "DevOps", "Microservices"],
     icon: Shield,
     bio: "Expert in scalable cloud solutions and distributed systems architecture."
   }
