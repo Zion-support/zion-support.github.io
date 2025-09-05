@@ -1,10 +1,3 @@
-// Analytics and performance monitoring utilities
-export const trackEvent = (
-  eventName: string,
-  properties?: Record<string, string | number | boolean>
-) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', eventName, properties)}
 // Analytics and performance monitoring utilities;
 export const trackEvent = (;
   eventName: string,;

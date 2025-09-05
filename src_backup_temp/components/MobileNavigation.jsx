@@ -1,15 +1,8 @@
-import React, {useState, useEffect, useRef} from 'react';'''';';
-import {Link, useLocation} from 'react-router-dom';'''';';
-import {motion, AnimatePresence} from 'framer-motion';';
-import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any) => {}';';
-    const [activeDropdown, setActiveDropdown] = useState(null);'';';
 import React, {useState, useEffect, useRef} from 'react';
 import {Link, useLocation} from 'react-router-dom';
 import React, {useState, useEffect, useRef} from 'react';'''
 import {Link, useLocation} from 'react-router-dom';'''
 import {motion, AnimatePresence} from 'framer-motion';
-import { X, ChevronDown, Search, User, Bell const MobileNavigation = ("props": "any) => {"}
-    const [activeDropdown, setActiveDropdown] = useState(null);';
 import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any) => {}
     const [activeDropdown, setActiveDropdown] = useState(null);'
     const [searchQuery, setSearchQuery] = useState('');
@@ -23,73 +16,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
         const handleClickOutside = ("props": "any) => {"}
             if (menuRef.current && !menuRef.current.contains(event.target)) {}
                 onToggle()}
-        };';
-        if (isOpen) {}';';
-'';';
-''';';
-'''';';
-            document.addEventListener('mousedown', handleClickOutside);'''';';
-            document.body.style.overflow = 'hidden'}';
-        return () => {}';';
-'';';
-''';';
-'''';';
-            document.removeEventListener('mousedown', handleClickOutside);'''';';
-            document.body.style.overflow = 'unset'}}, [isOpen, onToggle]);
-    const navigationItems = []';
-        {}';';
-'';';
-''';';
-'''';';
-            label: 'Services','''';';
-            href: '/services',''';';
-            children[;'''';';
-                {label: 'AI & Machine Learning', href: '/services/ai'},'''';';
-                {label: 'Quantum Computing', href: '/services/quantum'},'''';';
-                {label: 'Cybersecurity', href: '/services/cybersecurity'},'''';';
-                {label: 'Cloud Services', href: '/services/cloud'},'''';';
-                {label: 'Digital Transformation', href: '/services/transformation'},'''';';
-                {label: 'Consulting', href: '/services/consulting'}
-            ]
-        },;';
-        {}';';
-'';';
-''';';
-'''';';
-            label: 'Solutions','''';';
-            href: '/solutions',''';';
-            children[;'''';';
-                {label: 'Enterprise Solutions', href: '/solutions/enterprise'},'''';';
-                {label: 'Startup Solutions', href: '/solutions/startup'},'''';';
-                {label: 'Government Solutions', href: '/solutions/government'},'''';';
-                {label: 'Healthcare Solutions', href: '/solutions/healthcare'}
-            ]
-        },;';
-        {}';';
-'';';
-''';';
-'''';';
-            label: 'Industries','''';';
-            href: '/industries',''';';
-            children[;'''';';
-                {label: 'Technology', href: '/industries/technology'},'''';';
-                {label: 'Healthcare', href: '/industries/healthcare'},'''';';
-                {label: 'Finance', href: '/industries/finance'},'''';';
-                {label: 'Manufacturing', href: '/industries/manufacturing'},'''';';
-                {label: 'Education', href: '/industries/education'}
-            ]
-        },;';
-        {}';';
-'';';
-''';';
-'''';';
-            label: 'Comp','''';';
-            href: '/about',''';';
-            children[;'''';';
-                {label: 'About Us', href: '/about'},'''';';
-                {label: 'Careers', href: '/careers'},'''';';
-                {label: 'News', href: '/news'},'''';';
-                {label: 'Press', href: '/press'},'''';';
         };
         if (isOpen) {}
 '
@@ -105,79 +31,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
             document.body.style.overflow = 'unset'}}, [isOpen, onToggle]);
     const navigationItems = []
         {}
-';
-'';
-''';
-            "label": 'Services',''';
-            "href": '/services','';
-            children[;''';
-                {"label": 'AI & Machine Learning', "href": '/services/ai'},''';
-                {"label": 'Quantum Computing', "href": '/services/quantum'},''';
-                {"label": 'Cybersecurity', "href": '/services/cybersecurity'},''';
-                {"label": 'Cloud Services', "href": '/services/cloud'},''';
-                {"label": 'Digital Transformation', "href": '/services/transformation'},''';
-                {"label": 'Consulting', "href": '/services/consulting'}
-            ];
-        },;
-        {}
-';
-'';
-''';
-            "label": 'Solutions',''';
-            "href": '/solutions','';
-            children[;''';
-                {"label": 'Enterprise Solutions', "href": '/solutions/enterprise'},''';
-                {"label": 'Startup Solutions', "href": '/solutions/startup'},''';
-                {"label": 'Government Solutions', "href": '/solutions/government'},''';
-                {"label": 'Healthcare Solutions', "href": '/solutions/healthcare'}
-            ];
-        },;
-        {}
-';
-'';
-''';
-            "label": 'Industries',''';
-            "href": '/industries','';
-            children[;''';
-                {"label": 'Technology', "href": '/industries/technology'},''';
-                {"label": 'Healthcare', "href": '/industries/healthcare'},''';
-                {"label": 'Finance', "href": '/industries/finance'},''';
-                {"label": 'Manufacturing', "href": '/industries/manufacturing'},''';
-                {"label": 'Education', "href": '/industries/education'}
-            ];
-        },;
-        {}
-';
-'';
-''';
-            "label": 'Comp',''';
-            "href": '/about','';
-            children[;''';
-                {label: 'About Us', href: '/about'},''';
-                {label: 'Careers', href: '/careers'},''';
-                {label: 'News', href: '/news'},''';
-                {label: 'Press', href: '/press'},''';
-                {label: 'Contact', href: '/contact'}
-            ];
-    ];
-    const toggleDropdown = (props: any) => {}
-        setActiveDropdown(activeDropdown === label ? null : label)};';
-    const handleSearch = (props: any) => {}';';
-        e.preventDefault();'';';
-        // Implement search functionality''';
-        // // // // // // // // ';';
-    };'
-        // };
-    const menuVariants = {}';
-  closed: {}';';
-'';';
-''';';
-'''';';
-            x: '100%',
-            opacity: 0,';
-            transition: {}';';
-                duration: 0.3,'';';
-  ease: 'easeInOut'
         setActiveDropdown(activeDropdown === label ? null : label)};
     const handleSearch = (props: any) => {}
                 {"label": 'About Us', "href": '/about'},''';
@@ -200,11 +53,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
 ';
 '';
 ''';
-            x: '100%',;
-            opacity: 0,;
-            transition: {}
-                duration: 0.3,';
-  ease: 'easeInOut';
             "x": '100%',;
             "opacity": "0",;
             "transition": "{"}
@@ -291,6 +139,7 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
                 {label: 'Press', href: '/press'},'''
                 {label: 'Contact', href: '/contact'}
             ]
+
     ];
     const toggleDropdown = (props: any) => {}
         setActiveDropdown(activeDropdown === label ? null : label)};
@@ -310,6 +159,7 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
             transition: {}
                 duration: 0.3,'
   ease: 'easeInOut'
+
 }
         },
         open: {}
@@ -318,6 +168,7 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
             transition: {}
                 duration: 0.3,'
                 ease: 'easeInOut'
+
     };
     const dropdownVariants = {}
   closed: {}
@@ -326,6 +177,7 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
             transition: {}
                 duration: 0.2,'
   ease: 'easeInOut'
+
 }
         },
         open: {}
@@ -337,6 +189,7 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
             transition: {}
                 duration: 0.2,'
                 ease: 'easeInOut'
+
             x: 0,;
             opacity: 1,;
             transition: {}
@@ -600,24 +453,18 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
 export default MobileNavigation;
 }}}}}}}}}</motion.div>}
 ;
-export {MobileNavigation};
-;
-export {MobileNavigation};
-;
-export {MobileNavigation};
-;
-export {MobileNavigation};
-;
-export {MobileNavigation};
-</motion>';
-</motion>;';;';
-;
 </motion>;
 </motion>;
+
 export {MobileNavigation};
+
 export {MobileNavigation};
+
 export {MobileNavigation};
+
 export {MobileNavigation};
+
 export {MobileNavigation};
+
 </motion>
 </motion>

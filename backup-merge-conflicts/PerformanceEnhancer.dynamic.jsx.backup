@@ -1,0 +1,10 @@
+<<<<<<< HEAD
+const PerformanceEnhancer = dynamic(() => import(\"./PerformanceEnhancer\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default PerformanceEnhancer\' ,
+=======
+<<<<<<< HEAD
+const PerformanceEnhancer = dynamic(() => import("./PerformanceEnhancer"),{"; loading: () => <p>Loading.</p,>}) export: "default PerformanceEnhancer" ,"""
+=======
+const PerformanceEnhancer = dynamic(() => import("./PerformanceEnhancer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default PerformanceEnhancer' ,'
+</p>'
+>>>>>>> main
+>>>>>>> main

@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface PricingProps {
   // Add props here as needed
 }
+
 export default function Pricing({ }: PricingProps) {
   return (
     <div>
@@ -9,8 +11,4 @@ export default function Pricing({ }: PricingProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/main

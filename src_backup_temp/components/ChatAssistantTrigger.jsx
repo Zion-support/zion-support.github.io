@@ -16,8 +16,6 @@ export function ChatAssistantTrigger("props": "any) {;
                 "body": "JSON.stringify({;
                     messages[{ "role": "user"", "content": "message "}];
                 }),;
-            });
-            if (!response.ok) {// // // // // // // console.error("Error in AI "chat":", error);
             }
     );
             if (!response.ok) {// // // // // // // console.error("Error in AI chat:", error);
@@ -38,6 +36,7 @@ export function ChatAssistantTrigger("props": "any) {;
                 "id": 'ai-assistant',;
                 "name": 'AI Assistant',;
                 "avatarUrl": '"https": "//placehold.co/64x64?text=AI'",;
+
 ;
 export default ChatAssistantTrigger;
 </ChatAssistant>

@@ -1,9 +1,4 @@
 import '@testing-library/jest-dom'; Object.defineProperty(window,'matchMedia',{ "writable": 'true',"value": "global.global.global.jest.fn().mockImplementation(query => ({ "matches": false","media": 'query',"onchange": 'null',"addListener": "global.global.global.jest.fn()","removeListener": "global.global.global.jest.fn()","addEventListener": "global.global.global.jest.fn()","removeEventListener": "global.global.global.jest.fn()","dispatchEvent": "global.global.global.jest.fn()"}))}); global.IntersectionObserver = class IntersectionObserver { constructor() { } disconnect() { } observe() { } unobserve() { } };
-<<<<<<< HEAD
-import &apos;@testing-library/jest-dom Object.defineProperty(window,&apos;matchMedia&apos;,{ writable: true,value: global.global.global.jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: global.global.global.jest.fn(),removeListener: global.global.global.jest.fn(),addEventListener: global.global.global.jest.fn(),removeEventListener: global.global.global.jest.fn(),dispatchEvent: global.global.global.jest.fn(),})),}); global.IntersectionObserver = class IntersectionObserver { constructor() { } disconnect() { } observe() { } unobserve() { } };&apos;;&apos;;
-=======
-=======
->>>>>>> origin/main
 // jest-dom adds custom jest matchers for asserting on DOM nodes.
 // allows you to do things "like": // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
@@ -13,19 +8,6 @@ Object.defineProperty(window, 'matchMedia', {
   "writable": true,
   "value": global.global.global.jest.fn().mockImplementation(query => ({
     matches: false,
-<<<<<<< HEAD
-    media: query,
-    onchange: null,
-    addListener: global.global.global.jest.fn(), // deprecated
-    removeListener: global.global.global.jest.fn(), // deprecated
-    addEventListener: global.global.global.jest.fn(),
-    removeEventListener: global.global.global.jest.fn(),
-    dispatchEvent: global.global.global.jest.fn(),
-  })),
-}
-    );
-=======
->>>>>>> origin/main
     "media": query,
     "onchange": null,
     "addListener": global.global.global.jest.fn(), // deprecated
@@ -38,17 +20,7 @@ global.IntersectionObserver = class IntersectionObserver {
   constructor() { /* empty */ }
   disconnect() { /* empty */ }
   observe() { /* empty */ }
-<<<<<<< HEAD
-  unobserve() { /* empty */ }';
-};;';;';
 import '@testing-library/jest-dom'; Object.defineProperty(window,'matchMedia',{ writable: 'true',value: global.global.global.jest.fn().mockImplementation(query => ({ matches: false,media: 'query',onchange: 'null',addListener: global.global.global.jest.fn(),removeListener: global.global.global.jest.fn(),addEventListener: global.global.global.jest.fn(),removeEventListener: global.global.global.jest.fn(),dispatchEvent: global.global.global.jest.fn(),})),}); global.IntersectionObserver = class IntersectionObserver { constructor() { } disconnect() { } observe() { } unobserve() { } };
   unobserve() { /* empty */ }
 };';';
 import '@testing-library/jest-dom Object.defineProperty(window,'matchMedia',{ writable: true,value: global.global.global.jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: global.global.global.jest.fn(),removeListener: global.global.global.jest.fn(),addEventListener: global.global.global.jest.fn(),removeEventListener: global.global.global.jest.fn(),dispatchEvent: global.global.global.jest.fn(),})),}); global.IntersectionObserver = class IntersectionObserver { constructor() { } disconnect() { } observe() { } unobserve() { } };';';
-=======
-import '@testing-library/jest-dom'; Object.defineProperty(window,'matchMedia',{ writable: 'true',value: global.global.global.jest.fn().mockImplementation(query => ({ matches: false,media: 'query',onchange: 'null',addListener: global.global.global.jest.fn(),removeListener: global.global.global.jest.fn(),addEventListener: global.global.global.jest.fn(),removeEventListener: global.global.global.jest.fn(),dispatchEvent: global.global.global.jest.fn(),})),}); global.IntersectionObserver = class IntersectionObserver { constructor() { } disconnect() { } observe() { } unobserve() { } };
-=======
-  unobserve() { /* empty */ }
-};';';
-import '@testing-library/jest-dom Object.defineProperty(window,'matchMedia',{ writable: true,value: global.global.global.jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: global.global.global.jest.fn(),removeListener: global.global.global.jest.fn(),addEventListener: global.global.global.jest.fn(),removeEventListener: global.global.global.jest.fn(),dispatchEvent: global.global.global.jest.fn(),})),}); global.IntersectionObserver = class IntersectionObserver { constructor() { } disconnect() { } observe() { } unobserve() { } };';';
->>>>>>> origin/main

@@ -43,11 +43,6 @@ export function CheckoutShippingOptions("props": "any) {;
     if(rate && onSelect) onSelect(rate)};
 ;
   if(!toAddress) return null;
-<<<<<<< HEAD
-;
-  return (<div className="my-4">;
-      <h2 className="font-semibold mb-2">Shipping Options</h2>;
-=======
 
 >>>>>>> origin/main
   return (
