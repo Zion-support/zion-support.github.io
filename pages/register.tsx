@@ -18,7 +18,6 @@ export default function RegisterPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
->>>>>>> origin/cursor/check-and-fix-netlify-build-1edd
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -33,7 +32,6 @@ export default function RegisterPage() {
       [name]: type === 'checkbox' ? checked : value
     }));
     });
->>>>>>> origin/cursor/check-and-fix-netlify-build-1edd
   };
 
   return (

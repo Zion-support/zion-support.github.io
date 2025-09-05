@@ -35,10 +35,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         : [...prev, section]
     );
   };
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
   const navigationItems = [
     {
       label: 'Home',
@@ -97,13 +94,11 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       hasSubmenu: true,
       submenu: [
         { label: 'Blog', href: '/blog' },
-<<<<<<< HEAD
         { label: 'White Papers', href: '/white-papers' },
         { label: 'Case Studies', href: '/case-studies' },
         { label: 'Webinars', href: '/webinars' },
         { label: 'Help Center', href: '/help' },
         { label: 'FAQ', href: '/faq' },
-=======
         { label: 'Case Studies', href: '/case-studies' },
         { label: 'White Papers', href: '/whitepapers' },
         { label: 'Webinars', href: '/webinars' },
@@ -112,7 +107,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { label: 'Help Center', href: '/help' },
         { label: 'FAQ', href: '/faq' },
         { label: 'Documentation', href: '/docs' },
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
       ]
     },
     {
@@ -127,10 +121,8 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { label: 'News', href: '/news' },
         { label: 'Contact', href: '/contact' },
       ]
-<<<<<<< HEAD
     }
   ];
-=======
     },
     {
       label: 'Support',
@@ -148,18 +140,15 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     }
   ];
 
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
   const quickLinks = [
     { label: 'Get Started', href: '/contact', icon: ChevronRight },
     { label: 'Pricing', href: '/pricing', icon: DollarSign },
     { label: 'Support', href: '/support', icon: HelpCircle },
     { label: 'Documentation', href: '/docs', icon: FileText },
-<<<<<<< HEAD
   ];
   const isActive = (href: string) => {
     return router.pathname === href;
   };
-=======
     { label: 'Search', href: '/search', icon: Search },
     { label: 'Sitemap', href: '/sitemap', icon: Search },
     { label: 'Newsletter', href: '/newsletter', icon: Mail },
@@ -169,7 +158,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     return router.pathname === href;
   };
 
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
   return (
     <>
       {/* Overlay */}
@@ -200,7 +188,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             <X className="w-6 h-6" />
           </button>
         </div>
-<<<<<<< HEAD
         {/* Search */}
         <div className="p-6 border-b border-gray-700">
           <div className="relative">
@@ -266,7 +253,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             ))}
           </div>
         </nav>
-=======
 
         <nav className="p-4">
           <div className="space-y-2">
@@ -327,7 +313,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
           </div>
         </nav>
 
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
         {/* Quick Links */}
         <div className="p-6 border-t border-gray-700">
           <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
@@ -347,21 +332,15 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
         {/* Contact Info */}
         <div className="p-6 border-t border-gray-700">
           <div className="text-sm text-gray-400">
             <p className="mb-2">Need help?</p>
-<<<<<<< HEAD
             <p className="text-blue-400">contact@ziontechgroup.com</p>
             <p className="text-blue-400">+1 (555) 123-4567</p>
-=======
             <p className="text-blue-400">kleber@ziontechgroup.com</p>
             <p className="text-blue-400">+1 302 464 0950</p>
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
           </div>
         </div>
       </div>

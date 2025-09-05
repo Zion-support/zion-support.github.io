@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, 
@@ -25,7 +23,6 @@ import {
   MessageSquare, 
   Phone, 
   FileText 
-=======
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 import { 
@@ -40,8 +37,6 @@ import {
   Clock,
   ChevronDown,
   DollarSign
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
-=======
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -62,7 +57,6 @@ import {
   Target,
   ArrowRight,
   ExternalLink
->>>>>>> 5a26b90779d51bf7627c9dcb90ec57f4a22fa8ec
 } from 'lucide-react';
 
 const navigation = [
@@ -74,15 +68,12 @@ const navigation = [
   {
     name: 'Services',
     href: '/services',
-<<<<<<< HEAD
-<<<<<<< HEAD
     icon: Settings,
     children: [
       { name: 'AI Solutions', href: '/ai-services', icon: Brain, count: '40+' },
       { name: 'IT Services', href: '/it-services', icon: Network, count: '40+' },
       { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, count: '45+' },
       { name: 'All Services', href: '/services', icon: Globe, count: '125+' }
-=======
     children: [
       { name: 'AI Services', href: '/ai-services', description: 'Cutting-edge AI solutions' },
       { name: 'IT Services', href: '/it-services', description: 'Comprehensive IT solutions' },
@@ -90,8 +81,6 @@ const navigation = [
       { name: 'Cloud & DevOps', href: '/services/cloud-devops', description: 'Cloud infrastructure solutions' },
       { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security solutions' },
       { name: 'Data Analytics', href: '/services/data-analytics', description: 'Data insights and analytics' }
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
-=======
     type: 'dropdown',
     children: [
       {
@@ -132,27 +121,21 @@ const navigation = [
         href: '/services/data-analytics',
         description: 'Data analysis and business intelligence'
       }
->>>>>>> 5a26b90779d51bf7627c9dcb90ec57f4a22fa8ec
     ]
   },
   {
     name: 'Solutions',
     href: '/solutions',
-<<<<<<< HEAD
-<<<<<<< HEAD
     icon: Shield,
     children: [
       { name: 'Digital Transformation', href: '/solutions/digital-transformation', icon: Zap },
       { name: 'Cloud Migration', href: '/solutions/cloud-migration', icon: Cloud }
-=======
     children: [
       { name: 'Enterprise', href: '/solutions/enterprise', description: 'Enterprise solutions' },
       { name: 'Healthcare', href: '/solutions/healthcare', description: 'Healthcare technology' },
       { name: 'Finance', href: '/solutions/finance', description: 'Financial services' },
       { name: 'Education', href: '/solutions/education', description: 'Educational technology' },
       { name: 'Government', href: '/solutions/government', description: 'Government solutions' }
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
-=======
     type: 'dropdown',
     children: [
       {
@@ -190,14 +173,11 @@ const navigation = [
         href: '/solutions/government',
         description: 'Government and public sector solutions'
       }
->>>>>>> 5a26b90779d51bf7627c9dcb90ec57f4a22fa8ec
     ]
   },
   {
     name: 'Industries',
     href: '/industries',
-<<<<<<< HEAD
-<<<<<<< HEAD
     icon: Building,
     children: [
       { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
@@ -206,7 +186,6 @@ const navigation = [
       { name: 'Retail', href: '/industries/retail', icon: ShoppingCart },
       { name: 'Education', href: '/industries/education', icon: BookOpen },
       { name: 'Government', href: '/industries/government', icon: Building }
-=======
     children: [
       { name: 'Healthcare', href: '/industries/healthcare', description: 'Healthcare industry' },
       { name: 'Finance', href: '/industries/finance', description: 'Financial services' },
@@ -214,18 +193,15 @@ const navigation = [
       { name: 'Government', href: '/industries/government', description: 'Government sector' },
       { name: 'Manufacturing', href: '/industries/manufacturing', description: 'Manufacturing industry' },
       { name: 'Retail', href: '/industries/retail', description: 'Retail industry' }
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
     ]
   },
   {
     name: 'Resources',
     href: '/resources',
-<<<<<<< HEAD
     icon: FileText,
     children: [
       { name: 'White Papers', href: '/white-papers', icon: FileText },
       { name: 'Webinars', href: '/webinars', icon: Video }
-=======
     type: 'dropdown',
     children: [
       {
@@ -263,7 +239,6 @@ const navigation = [
         href: '/industries/retail',
         description: 'Retail industry solutions'
       }
->>>>>>> 5a26b90779d51bf7627c9dcb90ec57f4a22fa8ec
     ]
   },
   {
@@ -378,7 +353,6 @@ export default function Header() {
   };
 
   return (
-<<<<<<< HEAD
     <header className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -386,7 +360,6 @@ export default function Header() {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-=======
     children: [
       { name: 'Blog', href: '/blog', description: 'Latest insights' },
       { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
@@ -489,14 +462,12 @@ export default function Header({ className = '', onMenuClick }: HeaderProps) {
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
                 <span className="text-white font-bold text-sm">Z</span>
               </div>
               <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
             </Link>
           </div>
 
-<<<<<<< HEAD
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-8">
             {navigation.map((item) => (
@@ -543,7 +514,6 @@ export default function Header({ className = '', onMenuClick }: HeaderProps) {
                     )}
                   </AnimatePresence>
                 )}
-=======
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
@@ -559,7 +529,6 @@ export default function Header({ className = '', onMenuClick }: HeaderProps) {
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
                 <span>{contactInfo.email}</span>
->>>>>>> 5a26b90779d51bf7627c9dcb90ec57f4a22fa8ec
               </div>
             </div>
             <div className="flex items-center space-x-2">
@@ -570,7 +539,6 @@ export default function Header({ className = '', onMenuClick }: HeaderProps) {
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isMobileMenuOpen && (
@@ -596,7 +564,6 @@ export default function Header({ className = '', onMenuClick }: HeaderProps) {
                   
                   {item.children && openDropdown === item.name && (
                     <div className="ml-4 space-y-1">
-=======
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
               {navigation.map((item) => (
@@ -621,12 +588,10 @@ export default function Header({ className = '', onMenuClick }: HeaderProps) {
                       onMouseEnter={() => setIsDropdownOpen(item.name)}
                       onMouseLeave={() => setIsDropdownOpen(null)}
                     >
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
                       {item.children.map((child) => (
                         <Link
                           key={child.name}
                           href={child.href}
-<<<<<<< HEAD
                           className="flex items-center justify-between px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md"
                           onClick={() => setIsMobileMenuOpen(false)}
                         >
@@ -641,7 +606,6 @@ export default function Header({ className = '', onMenuClick }: HeaderProps) {
                           )}
                         </Link>
                       ))}
-=======
       {/* Main Navigation */}
       <nav className="bg-white/95 backdrop-blur-md border-b border-gray-200">
         <div className="container mx-auto px-4">
@@ -705,17 +669,14 @@ export default function Header({ className = '', onMenuClick }: HeaderProps) {
                           </motion.div>
                         )}
                       </AnimatePresence>
->>>>>>> 5a26b90779d51bf7627c9dcb90ec57f4a22fa8ec
                     </div>
                   )}
                 </div>
               ))}
             </div>
-<<<<<<< HEAD
           </motion.div>
         )}
       </AnimatePresence>
-=======
                           className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors"
                         >
                           <div className="font-medium">{child.name}</div>
@@ -796,8 +757,6 @@ export default function Header({ className = '', onMenuClick }: HeaderProps) {
           </motion.div>
         </motion.div>
       )}
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
-=======
 
             {/* CTA Button */}
             <div className="hidden lg:flex items-center space-x-4">
@@ -905,7 +864,6 @@ export default function Header({ className = '', onMenuClick }: HeaderProps) {
           )}
         </AnimatePresence>
       </nav>
->>>>>>> 5a26b90779d51bf7627c9dcb90ec57f4a22fa8ec
     </header>
   );
 }

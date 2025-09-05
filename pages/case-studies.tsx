@@ -8,7 +8,6 @@ import {
   User, 
   Building,
   TrendingUp,
-<<<<<<< HEAD
   CheckCircle,
   Users,
   Building,
@@ -17,8 +16,6 @@ import {
   Clock,
   Target,
   Zap,
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
   Shield,
   Cloud,
   Brain
@@ -28,7 +25,6 @@ import Layout from '../components/Layout';
 const caseStudies = [
   {
     id: 1,
-<<<<<<< HEAD
     title: "AI-Powered Customer Service Transformation",
     client: "Global E-commerce Retailer",
     industry: "E-commerce",
@@ -160,7 +156,8 @@ const caseStudies = [
     technologies: ["React", "AI/ML", "Video Streaming", "Analytics"],
     image: "/images/case-studies/education-platform.jpg",
     featured: false
-=======
+  },
+  {
     title: 'Healthcare AI Transformation',
     client: 'Regional Medical Center',
     industry: 'Healthcare',
@@ -234,12 +231,10 @@ const caseStudies = [
     teamSize: '6 developers',
     image: '/case-studies/retail-security.jpg',
     icon: Shield
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
   }
 ];
 
 const industries = [
-<<<<<<< HEAD
   { name: "Healthcare", count: 12, icon: Users },
   { name: "Finance", count: 8, icon: Building },
   { name: "Manufacturing", count: 6, icon: Globe },
@@ -249,12 +244,6 @@ const industries = [
 ];
 
 const categories = [
-  { name: "AI Solutions", count: 20, icon: Brain },
-  { name: "IT Services", count: 25, icon: Shield },
-  { name: "Micro SaaS", count: 15, icon: Cloud }
-];
-
-=======
   { name: 'All', count: caseStudies.length },
   { name: 'Healthcare', count: caseStudies.filter(cs => cs.industry === 'Healthcare').length },
   { name: 'Finance', count: caseStudies.filter(cs => cs.industry === 'Finance').length },
@@ -262,7 +251,6 @@ const categories = [
   { name: 'Retail', count: caseStudies.filter(cs => cs.industry === 'Retail').length }
 ];
 
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
 export default function CaseStudiesPage() {
   const [selectedIndustry, setSelectedIndustry] = React.useState('All');
 
@@ -271,7 +259,6 @@ export default function CaseStudiesPage() {
     : caseStudies.filter(cs => cs.industry === selectedIndustry);
 
   return (
-<<<<<<< HEAD
     <MainLayout
       title="Case Studies - Zion Tech Group"
       description="Explore our successful technology implementations and digital transformation projects. See how we've helped businesses achieve their goals with innovative solutions."
@@ -280,7 +267,6 @@ export default function CaseStudiesPage() {
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
-=======
     <Layout 
       title="Case Studies - Zion Tech Group"
       description="Explore our success stories and see how we've helped businesses across industries achieve their technology goals."
@@ -289,7 +275,6 @@ export default function CaseStudiesPage() {
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center"
@@ -299,7 +284,6 @@ export default function CaseStudiesPage() {
               viewport={{ once: true }}
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-<<<<<<< HEAD
                 Success{' '}
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                   Stories
@@ -514,7 +498,6 @@ export default function CaseStudiesPage() {
         </section>
       </div>
     </MainLayout>
-=======
                 Success Stories
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
@@ -684,6 +667,5 @@ export default function CaseStudiesPage() {
         </section>
       </div>
     </Layout>
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
   );
 }

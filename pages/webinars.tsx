@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import {
   Calendar, 
   Clock, 
@@ -129,7 +128,6 @@ const webinars = [
     image: "/images/webinars/devops.jpg",
     tags: ["DevOps", "CI/CD", "Automation"],
     description: "Master DevOps practices and tools to streamline your software development process. Learn about CI/CD pipelines, automation, monitoring, and how to build a culture of continuous improvement."
-=======
 import { 
   Calendar, 
   Clock, 
@@ -222,12 +220,10 @@ const pastWebinars = [
     icon: BookOpen,
     recordingUrl: '#',
     slidesUrl: '#'
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
   }
 ];
 
 const categories = [
-<<<<<<< HEAD
   "All",
   "AI & Machine Learning",
   "Cloud Computing",
@@ -281,7 +277,6 @@ export default function WebinarsPage() {
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Learn from industry experts through our comprehensive webinar series. 
                 Gain practical insights and stay ahead of technology trends.
-=======
   { name: 'All', count: upcomingWebinars.length + pastWebinars.length },
   { name: 'Healthcare AI', count: upcomingWebinars.filter(w => w.category === 'Healthcare AI').length },
   { name: 'Cloud Computing', count: upcomingWebinars.filter(w => w.category === 'Cloud Computing').length },
@@ -323,13 +318,11 @@ export default function WebinarsPage() {
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
                 Learn from industry experts and stay ahead of technology trends with our comprehensive webinar series.
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
               </p>
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Filters */}
         <section className="py-12 bg-white">
           <div className="container mx-auto px-4">
@@ -590,7 +583,6 @@ export default function WebinarsPage() {
                 >
                   Clear Filters
                 </button>
-=======
         {/* Category Filter */}
         <section className="py-12 bg-white">
           <div className="container mx-auto px-4">
@@ -783,7 +775,6 @@ export default function WebinarsPage() {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">No webinars found</h3>
                 <p className="text-gray-600">Try selecting a different category or check back later for new webinars.</p>
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
               </div>
             )}
           </div>
@@ -799,7 +790,6 @@ export default function WebinarsPage() {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-<<<<<<< HEAD
                 Stay Updated with Our Webinars
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
@@ -820,7 +810,6 @@ export default function WebinarsPage() {
                 >
                   Contact Us
                 </a>
-=======
                 Stay Updated
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
@@ -839,16 +828,12 @@ export default function WebinarsPage() {
                 >
                   Request a Topic
                 </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
               </div>
             </motion.div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
     </MainLayout>
-=======
     </Layout>
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
   );
 }

@@ -1,15 +1,11 @@
 import React from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { Building, Shield, Users, BarChart3, ArrowRight, CheckCircle, Clock, Globe, Database, Lock } from 'lucide-react';
 import Layout from "../../components/Layout";
-=======
 import Layout from '../../components/Layout';
 import { Building2, Users, Shield, Zap, Target, CheckCircle, ArrowRight } from 'lucide-react';
 
->>>>>>> 5a26b90779d51bf7627c9dcb90ec57f4a22fa8ec
 const features = [
   {
     icon: Building2,
@@ -51,13 +47,11 @@ const benefits = [
   'Better data management and analytics',
   'Faster time-to-market for new initiatives'
 ];
-<<<<<<< HEAD
 const stats = [
   { number: '50+', label: 'Enterprise Clients' },
   { number: '200+', label: 'Projects Delivered' },
   { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' }
-=======
 import { 
   Building2, 
   Shield, 
@@ -166,7 +160,6 @@ const enterpriseServices = [
       'Business intelligence'
     ]
   }
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
 ];
 
 const industries = [
@@ -217,14 +210,10 @@ export default function EnterpriseSolutionsPage() {
   return (
     <Layout
       title="Enterprise Solutions - Zion Tech Group"
-<<<<<<< HEAD
       description="Comprehensive enterprise technology solutions including cloud migration, security, compliance, and custom development for large organizations."
       keywords="enterprise solutions, cloud migration, enterprise security, compliance, custom development, large organizations"
-=======
       description="Comprehensive enterprise technology solutions including digital transformation, AI, cybersecurity, and cloud services for large organizations."
       keywords="enterprise solutions, digital transformation, enterprise AI, cybersecurity, cloud services, large organizations"
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
-=======
 
 export default function EnterpriseSolutions() {
   return (
@@ -232,11 +221,9 @@ export default function EnterpriseSolutions() {
       title="Enterprise Solutions - Zion Tech Group"
       description="Comprehensive enterprise technology solutions designed for large-scale businesses. Scalable, secure, and reliable solutions."
       keywords="enterprise solutions, large business, scalable technology, enterprise software"
->>>>>>> 5a26b90779d51bf7627c9dcb90ec57f4a22fa8ec
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
@@ -250,7 +237,6 @@ export default function EnterpriseSolutions() {
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
-<<<<<<< HEAD
               <div className="flex items-center justify-center mb-6">
                 <Building className="w-16 h-16 text-blue-400 mr-4" />
                 <h1 className="text-5xl md:text-6xl font-bold">
@@ -259,13 +245,11 @@ export default function EnterpriseSolutions() {
               </div>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
                 Comprehensive technology solutions designed for large organizations, ensuring scalability, security, and compliance
-=======
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Enterprise Solutions
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
                 Comprehensive technology solutions designed for large organizations. Scale, secure, and transform your enterprise with our proven expertise.
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -276,13 +260,9 @@ export default function EnterpriseSolutions() {
                 </Link>
                 <Link
                   href="/case-studies"
-<<<<<<< HEAD
                   className="px-8 py-4 border border-white text-white hover:bg-white hover:text-gray-900 rounded-lg font-semibold transition-colors"
-=======
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold"
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
                 >
-=======
         <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -298,15 +278,12 @@ export default function EnterpriseSolutions() {
                   Get Started
                 </button>
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
->>>>>>> 5a26b90779d51bf7627c9dcb90ec57f4a22fa8ec
                   View Case Studies
                 </button>
               </div>
-<<<<<<< HEAD
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -323,51 +300,42 @@ export default function EnterpriseSolutions() {
                   <div className="text-gray-600 font-medium">{stat.label}</div>
                 </motion.div>
               ))}
-=======
->>>>>>> 5a26b90779d51bf7627c9dcb90ec57f4a22fa8ec
             </div>
           </div>
         </section>
 
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
-<<<<<<< HEAD
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-=======
 
         {/* Enterprise Features */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Enterprise <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Capabilities</span>
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Our enterprise solutions are designed to meet the complex needs of large organizations with robust security, scalability, and compliance features
-=======
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Enterprise-Grade Solutions
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Built for scale, security, and performance. Our enterprise solutions are designed to meet the complex needs of large organizations.
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-<<<<<<< HEAD
               {features.map((feature, index) => (
                 <motion.div
                   key={feature.title}
@@ -405,7 +373,6 @@ export default function EnterpriseSolutions() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-=======
               {enterpriseFeatures.map((feature, index) => {
                 const IconComponent = feature.icon;
                 return (
@@ -500,20 +467,17 @@ export default function EnterpriseSolutions() {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Services</span>
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Comprehensive enterprise services covering all aspects of your technology infrastructure and digital transformation
-=======
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Industries We Serve
               </h2>
@@ -565,13 +529,11 @@ export default function EnterpriseSolutions() {
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Hear from enterprise leaders who have transformed their organizations with our solutions.
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {capabilities.map((capability, index) => (
                 <motion.div
-<<<<<<< HEAD
                   key={capability.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -580,7 +542,6 @@ export default function EnterpriseSolutions() {
                 >
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{capability.title}</h3>
                   <p className="text-gray-600">{capability.description}</p>
-=======
                   key={index}
                   className="bg-white p-8 rounded-xl shadow-lg"
                   initial={{ opacity: 0, y: 30 }}
@@ -596,9 +557,7 @@ export default function EnterpriseSolutions() {
                     <div className="text-sm text-gray-600">{testimonial.title}</div>
                     <div className="text-sm text-blue-600">{testimonial.company}</div>
                   </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
                 </motion.div>
-=======
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -622,13 +581,11 @@ export default function EnterpriseSolutions() {
                     {feature.description}
                   </p>
                 </div>
->>>>>>> 5a26b90779d51bf7627c9dcb90ec57f4a22fa8ec
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -638,24 +595,20 @@ export default function EnterpriseSolutions() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Scale Your Enterprise?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Let's discuss how our enterprise solutions can help you achieve your business objectives and drive digital transformation
-=======
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Ready to Transform Your Enterprise?
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
                 Let our enterprise experts help you design and implement solutions that will drive your organization forward.
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
-<<<<<<< HEAD
                   className="px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
                 >
                   Schedule Enterprise Consultation
@@ -666,7 +619,6 @@ export default function EnterpriseSolutions() {
                   className="px-8 py-4 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-semibold transition-colors"
                 >
                   View All Solutions
-=======
                   className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
                 >
                   Schedule Consultation
@@ -676,9 +628,7 @@ export default function EnterpriseSolutions() {
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
                 >
                   View Success Stories
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
                 </Link>
-=======
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -699,7 +649,6 @@ export default function EnterpriseSolutions() {
                     </li>
                   ))}
                 </ul>
->>>>>>> 5a26b90779d51bf7627c9dcb90ec57f4a22fa8ec
               </div>
               <div className="bg-gradient-to-r from-blue-600 to-purple-700 p-8 rounded-xl text-white">
                 <h3 className="text-2xl font-bold mb-6">Ready to Transform Your Enterprise?</h3>

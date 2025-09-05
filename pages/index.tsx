@@ -2,15 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
 import MainLayout from '../components/layout/MainLayout';
 const stats = [{ number: '99.9%', label: 'Uptime Guarantee' },
-=======
 import Layout from '../components/Layout';
 
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
   { number: '24/7', label: 'Support Available' },
   { number: '500+', label: 'Projects Completed' },
   { number: '50+', label: 'Expert Team Members' }
@@ -19,14 +16,12 @@ const services = [{
     title: "AI Services",
     description: "Cutting-edge artificial intelligence solutions",
     icon: Brain,
-<<<<<<< HEAD
     href: "/ai-services"},
   {
     title: "IT Services",
     description: "Comprehensive information technology services",
     icon: Network,
     href: "/it-services"},
-=======
     href: "/ai-services",
   },
   {
@@ -35,19 +30,16 @@ const services = [{
     icon: Network,
     href: "/it-services",
   },
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
   {
     title: "Micro SaaS",
     description: "Scalable software as a service solutions",
     icon: Cloud,
-<<<<<<< HEAD
     href: "/micro-saas"}
 ];
 export default function HomePage() {
   return (
 <MainLayout>
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-=======
     href: "/micro-saas",
   }
 ];
@@ -57,12 +49,10 @@ export default function HomePage() {
     <Layout>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
         {/* Background Animation */}
         <div className="absolute inset-0">
-<<<<<<< HEAD
 <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
                   </div>
                   <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000">
@@ -72,7 +62,6 @@ export default function HomePage() {
                   </div>
                   <div className="container mx-auto px-4 relative z-10">
                   <motion.div
-=======
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
           <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
           <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
@@ -80,22 +69,17 @@ export default function HomePage() {
 
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-<<<<<<< HEAD
 <h1 className="text-4xl md:text-6xl font-bold mb-6">
-=======
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
               Transform Your Business with{' '}
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 AI & Technology
               </span>
-<<<<<<< HEAD
 </h1>
                   <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.
@@ -130,7 +114,6 @@ export default function HomePage() {
             </p>
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-=======
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.
@@ -166,7 +149,6 @@ export default function HomePage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
             {services.map((service, index) => {
               const IconComponent = service.icon;
               return (
@@ -175,13 +157,10 @@ export default function HomePage() {
                   className="bg-white p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
                   transition={{ duration: 0.8, delay: index * 0.1 }} 
                   viewport={{ once: true }} 
-=======
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
                   whileHover={{ y: -5 }}
                 >
                   <div className="text-blue-600 mb-4 group-hover:text-purple-600 transition-colors">
@@ -190,7 +169,6 @@ export default function HomePage() {
                   <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
                     {service.title}
                   </h3>
-<<<<<<< HEAD
                   <p className="text-gray-600 mb-6 text-sm md:text-base leading-relaxed">{service.description}</p>
                   <Link
                     href={service.href}
@@ -210,7 +188,6 @@ export default function HomePage() {
 <div className="container mx-auto px-4">
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                     {stats.map((stat, index) => (
-=======
                   <p className="text-gray-600 mb-6 text-sm md:text-base leading-relaxed">
                     {service.description}
                   </p>
@@ -233,7 +210,6 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
               <motion.div
                 key={index}
                 className="text-center"
@@ -242,7 +218,6 @@ export default function HomePage() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-<<<<<<< HEAD
 <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
                 <div className="text-gray-600 font-medium">{stat.label}</div>
                   </motion.div>
@@ -255,7 +230,6 @@ export default function HomePage() {
                   <div className="container mx-auto px-4">
                   <motion.div
             className="text-center mb-12"
-=======
                 <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                   {stat.number}
                 </div>
@@ -271,13 +245,11 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<<<<<<< HEAD
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why Choose Zion Tech Group?</h2>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto">
               We deliver cutting-edge technology solutions with competitive pricing and unmatched expertise.
@@ -357,7 +329,6 @@ export default function HomePage() {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
                   <div className="container mx-auto px-4 text-center">
                   <motion.div
-=======
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Get In Touch
             </h2>
@@ -421,13 +392,11 @@ export default function HomePage() {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<<<<<<< HEAD
 <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let our expert team help you leverage cutting-edge technology to drive growth and innovation.
@@ -458,7 +427,6 @@ export default function HomePage() {
                   </section>
                   </div>
                   </MainLayout>
-=======
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -478,6 +446,5 @@ export default function HomePage() {
       </section>
       </div>
     </Layout>
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
   );
 }

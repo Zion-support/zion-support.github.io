@@ -1272,6 +1272,11 @@ title: 'Generative AI Content Creation Suite',
     pricing: '$25,000 - $150,000/setup',
     category: 'Cybersecurity',
     popular: true
+  },
+  {
+    title: 'AI-Powered Medical Imaging',
+    description: 'Advanced medical image analysis and diagnosis assistance using AI.',
+    icon: Heart,
     features: ['X-ray Analysis', 'MRI Interpretation', 'CT Scan Processing', 'Pathology Detection'],
     pricing: '$25,000 - $150,000/project',
     category: 'Medical AI'

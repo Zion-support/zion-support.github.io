@@ -200,7 +200,6 @@ export default function APIPage() {
         + `\n.catch(error => console.error('Error:', error));`;
     }
   }
->>>>>>> origin/cursor/check-and-fix-netlify-build-1edd
   return (
     <>
       <Head>

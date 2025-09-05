@@ -4,8 +4,6 @@ import { motion } from 'framer-motion';
 import { Shield, CheckCircle, FileText, Users, Lock, Eye, Database, AlertCircle } from 'lucide-react';
 import Layout from '../components/Layout';
 import SimpleLayout from '../components/SimpleLayout';
-
-ursor/website-audit-and-update-with-deployment-9cae
 const complianceFrameworks = [
   {
     name: 'SOC 2 Type II',
@@ -69,7 +67,6 @@ const complianceFrameworks = [
   }
 ];
 
-ursor/website-audit-and-update-with-deployment-9cae
 const complianceAreas = [
   {
     category: 'Data Protection',

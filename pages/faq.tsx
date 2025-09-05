@@ -1,16 +1,12 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import { motion, AnimatePresence } from 'framer-motion';
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
 import { 
   ChevronDown, 
   ChevronUp, 
   HelpCircle, 
-<<<<<<< HEAD
   Search, 
   ArrowRight,
   Phone,
@@ -303,7 +299,6 @@ export default function FAQPage() {
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center"
-=======
   Search,
   MessageCircle,
   Phone,
@@ -591,13 +586,11 @@ export default function FAQPage() {
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <motion.div
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Still Have Questions?
               </h2>
@@ -633,7 +626,6 @@ export default function FAQPage() {
                   <ArrowRight className="w-5 h-5 mr-2" />
                   Contact Us Now
                 </a>
-=======
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Still Have Questions?
               </h2>
@@ -680,7 +672,6 @@ export default function FAQPage() {
                     Send Email
                   </a>
                 </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
               </div>
             </motion.div>
           </div>

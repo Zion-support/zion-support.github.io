@@ -31,10 +31,7 @@ const jobOpenings = [
     experience: "3+ years",
     description: "Build scalable web applications and microservices for our SaaS solutions.",
     requirements: [
-<<<<<<< HEAD
-=======
       "Bachelor's degree in Computer Science or related field",
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
       "3+ years experience in full-stack development",
       "Proficiency in React, Node.js, TypeScript",
       "Experience with databases (PostgreSQL, MongoDB)",
@@ -51,10 +48,7 @@ const jobOpenings = [
     experience: "7+ years",
     description: "Design and implement cloud infrastructure solutions for enterprise clients.",
     requirements: [
-<<<<<<< HEAD
-=======
       "Bachelor's degree in Computer Science or related field",
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
       "7+ years experience in cloud architecture",
       "AWS/Azure/GCP certifications preferred",
       "Experience with containerization (Docker, Kubernetes)",
@@ -71,10 +65,7 @@ const jobOpenings = [
     experience: "4+ years",
     description: "Protect our clients' digital assets and implement security best practices.",
     requirements: [
-<<<<<<< HEAD
-=======
       "Bachelor's degree in Cybersecurity or related field",
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
       "4+ years experience in cybersecurity",
       "Certifications (CISSP, CISM, CEH) preferred",
       "Experience with security tools and frameworks",
@@ -91,10 +82,7 @@ const jobOpenings = [
     experience: "3+ years",
     description: "Streamline our development and deployment processes with modern DevOps practices.",
     requirements: [
-<<<<<<< HEAD
-=======
       "Bachelor's degree in Computer Science or related field",
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
       "3+ years experience in DevOps",
       "Proficiency in CI/CD pipelines",
       "Experience with infrastructure as code (Terraform, CloudFormation)",
@@ -111,10 +99,7 @@ const jobOpenings = [
     experience: "2+ years",
     description: "Create intuitive and beautiful user experiences for our digital products.",
     requirements: [
-<<<<<<< HEAD
-=======
       "Bachelor's degree in Design or related field",
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
       "2+ years experience in UX/UI design",
       "Proficiency in Figma, Sketch, Adobe Creative Suite",
       "Experience with user research and testing",
@@ -158,7 +143,6 @@ const values = [
 
 export default function TalentPage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
       <Head>
         <title>Join Our Team - Zion Tech Group</title>
@@ -191,7 +175,6 @@ export default function TalentPage() {
               {jobOpenings.map((job, index) => (
                 <motion.div
                   key={job.id}
-=======
     <Layout 
       title="Careers - Zion Tech Group"
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
@@ -292,14 +275,12 @@ export default function TalentPage() {
                 <motion.div
                   key={index}
                   className="bg-white p-6 rounded-lg shadow-lg"
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
                 >
-<<<<<<< HEAD
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     {job.title}
                   </h3>
@@ -328,17 +309,14 @@ export default function TalentPage() {
                   <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
                     Apply Now
                   </button>
-=======
                   <div className="flex items-center">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" />
                     <span className="text-gray-900 font-medium">{value}</span>
                   </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
                 </motion.div>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
 
@@ -353,7 +331,6 @@ export default function TalentPage() {
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
-=======
         </section>
 
         {/* Job Openings Section */}
@@ -378,12 +355,10 @@ export default function TalentPage() {
                 <motion.div
                   key={job.id}
                   className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300"
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
                   className="bg-white rounded-lg shadow-lg p-6 text-center"
                 >
                   <benefit.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />
@@ -393,7 +368,6 @@ export default function TalentPage() {
                   <p className="text-gray-600">
                     {benefit.description}
                   </p>
-=======
                 >
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                     <div>
@@ -453,12 +427,10 @@ export default function TalentPage() {
                       </ul>
                     </div>
                   </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
                 </motion.div>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
 
@@ -479,7 +451,6 @@ export default function TalentPage() {
         </div>
       </section>
     </div>
-=======
         </section>
 
         {/* CTA Section */}
@@ -505,6 +476,5 @@ export default function TalentPage() {
         </section>
       </div>
     </Layout>
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
   );
 }

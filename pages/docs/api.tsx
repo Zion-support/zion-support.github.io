@@ -38,7 +38,6 @@ print(response.json())
 ]
 
 export default function APIDocumentationPage() {
->>>>>>> origin/cursor/check-and-fix-netlify-build-1edd
   return (
     <Layout title="API Docs">
       <div className="max-w-5xl mx-auto px-4 py-16">

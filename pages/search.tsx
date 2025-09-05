@@ -408,7 +408,6 @@ export default function SearchPage() {
         return '📚';
       default:
         return '🔍';
->>>>>>> origin/cursor/check-and-fix-netlify-build-1edd
     }
   };
 
@@ -595,6 +594,5 @@ export default function SearchPage() {
         </div>
       </div>
     </Layout>
-ursor/website-audit-and-update-with-deployment-9cae
   );
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock, MessageSquare, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -10,7 +9,6 @@ export default function ContactPage() {
         <meta name="description" content="Get in touch with our expert team for technology solutions and consulting." />
         <meta name="keywords" content="contact, support, consultation, technology services" />
       </Head>
-=======
 import Layout from '../components/Layout';
 
 export default function ContactPage() {
@@ -22,7 +20,6 @@ export default function ContactPage() {
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0">
@@ -50,12 +47,10 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-6xl mx-auto">
 {/* Contact Information Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-=======
 
       {/* Contact Information */}
       <section className="py-20 bg-white">
@@ -126,7 +121,6 @@ export default function ContactPage() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
             <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
@@ -142,7 +136,6 @@ export default function ContactPage() {
               </p>
             </motion.div>
             <motion.div
-<<<<<<< HEAD
               className="bg-white rounded-lg shadow-lg p-6 text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -157,15 +150,12 @@ export default function ContactPage() {
             </motion.div>
             <motion.div
               className="bg-white rounded-lg shadow-lg p-6 text-center"
-=======
               className="bg-white rounded-lg shadow-xl p-8"
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
               <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-8 h-8 text-purple-600" />
               </div>
@@ -185,8 +175,6 @@ export default function ContactPage() {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">Send us a Message</h2>
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -301,7 +289,6 @@ export default function ContactPage() {
                 </div>
               </form>
             </motion.div>
-<<<<<<< HEAD
             <motion.div
               className="bg-white rounded-lg shadow-lg p-8"
               initial={{ opacity: 0, x: 30 }}
@@ -346,8 +333,6 @@ export default function ContactPage() {
                 <p className="text-gray-600 text-sm">Sunday: Emergency support only</p>
               </div>
             </motion.div>
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
           </div>
         </div>
       </section>

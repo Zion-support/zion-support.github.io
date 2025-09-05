@@ -13,7 +13,8 @@ import {
   Zap,
   CheckCircle,
   ArrowRight,
-  Star,
+  Star
+} from 'lucide-react';
 import { 
   Brain,
   Users, 
@@ -25,8 +26,7 @@ import {
   Zap, 
   CheckCircle, 
   ArrowRight, 
-  Star, 
-ursor/website-audit-and-update-with-deployment-9cae
+  Star,
   TrendingUp,
   Building,
   Rocket,

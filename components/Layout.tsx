@@ -20,8 +20,6 @@ export default function Layout({
   noIndex = false
 }: LayoutProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-ursor/website-audit-and-update-with-deployment-9cae
   return (
     <>
       <Head>
@@ -89,7 +87,6 @@ name: "Zion Tech Group",
               "logo": "https://ziontechgroup.com/logo.png",
               "description": description,
               "address": {
-ursor/website-audit-and-update-with-deployment-9cae
                 "@type": "PostalAddress",
                 "streetAddress": "123 Technology Drive",
                 "addressLocality": "Innovation City",
@@ -106,7 +103,8 @@ telephone: "+1-302-464-0950",
 "sameAs": ["https: //linkedin.com/company/ziontechgroup",
                 "https: //twitter.com/ziontechgroup",
                 "https: //github.com/ziontechgroup"
-                "telephone": "+1-302-464-0950",
+              ],
+              "telephone": "+1-302-464-0950",
                 "contactType": "customer service",
                 "email": "kleber@ziontechgroup.com"
               },
