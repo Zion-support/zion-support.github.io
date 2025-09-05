@@ -1,1 +1,14 @@
-import React from 'react'; import { Link, useLocation, ChevronRight, Home } from 'lucide-react'; import { motion } from 'framer-motion'; ; interface BreadcrumbItem { label: string; path: string; isCurrent?: boolean}; interface BreadcrumbNavigationProps { items?: BreadcrumbItem[]; className?: string; showHome?: boolean; ';'}; export const BreadcrumbNavigation: Reac t.FC<BreadcrumbNavigationProps> = ({; items = [],; className = ",; showHome = true}) => {; const location = useLocation(); ; </BreadcrumbNavigationProps>;';';''}
+import React from 'react';
+
+interface BreadcrumbNavigationProps {
+  // Add props here as needed
+}
+
+export default function BreadcrumbNavigation({ }: BreadcrumbNavigationProps) {
+  return (
+    <div>
+      <h1>BreadcrumbNavigation</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
