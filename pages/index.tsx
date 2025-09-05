@@ -86,20 +86,24 @@ export default function Home() {
                 Transform your business with cutting-edge AI solutions, cloud computing, and digital innovation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition-colors"
-                >
-                  Get Started
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="border-2 border-white text-white font-bold py-4 px-8 rounded-lg text-lg hover:bg-white hover:text-blue-600 transition-colors"
-                >
-                  Learn More
-                </motion.button>
+                <Link href="/contact">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition-colors"
+                  >
+                    Get Started
+                  </motion.button>
+                </Link>
+                <Link href="/about">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="border-2 border-white text-white font-bold py-4 px-8 rounded-lg text-lg hover:bg-white hover:text-blue-600 transition-colors"
+                  >
+                    Learn More
+                  </motion.button>
+                </Link>
               </div>
             </motion.div>
           </div>
@@ -173,6 +177,74 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Features Section */}
+        <section className="py-20 bg-gray-100">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Why Choose Zion Tech Group?
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We deliver exceptional results through innovation, expertise, and dedication.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: Award,
+                  title: "Proven Expertise",
+                  description: "Years of experience delivering successful technology solutions across industries."
+                },
+                {
+                  icon: Shield,
+                  title: "Security First",
+                  description: "Enterprise-grade security measures to protect your data and systems."
+                },
+                {
+                  icon: Zap,
+                  title: "Fast Delivery",
+                  description: "Agile development processes that deliver results quickly and efficiently."
+                },
+                {
+                  icon: Users,
+                  title: "Expert Team",
+                  description: "Skilled professionals with deep expertise in cutting-edge technologies."
+                },
+                {
+                  icon: Globe,
+                  title: "Global Reach",
+                  description: "Serving clients worldwide with localized support and understanding."
+                },
+                {
+                  icon: Heart,
+                  title: "Client Focused",
+                  description: "Your success is our priority. We're committed to your long-term growth."
+                }
+              ].map((feature, index) => (
+                <motion.div
+                  key={feature.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+                >
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                    <feature.icon className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+                  <p className="text-gray-600">{feature.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -188,20 +260,24 @@ export default function Home() {
                 Let's discuss how our technology solutions can help you achieve your goals.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-white text-blue-600 font-bold py-4 px-8 rounded-lg text-lg hover:bg-gray-100 transition-colors"
-                >
-                  Get Started Today
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="border-2 border-white text-white font-bold py-4 px-8 rounded-lg text-lg hover:bg-white hover:text-blue-600 transition-colors"
-                >
-                  Contact Us
-                </motion.button>
+                <Link href="/contact">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-white text-blue-600 font-bold py-4 px-8 rounded-lg text-lg hover:bg-gray-100 transition-colors"
+                  >
+                    Get Started Today
+                  </motion.button>
+                </Link>
+                <Link href="/quote">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="border-2 border-white text-white font-bold py-4 px-8 rounded-lg text-lg hover:bg-white hover:text-blue-600 transition-colors"
+                  >
+                    Get a Quote
+                  </motion.button>
+                </Link>
               </div>
             </motion.div>
           </div>
