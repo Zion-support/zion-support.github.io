@@ -1,10 +1,10 @@
-import _React from 'react';,
+import React from 'react';
 import Head from 'next/head';';
-import { motion } from 'framer-motion';,
-import { Cookie, Settings, Shield, Eye, Database, Mail, Phone } from 'lucide-react';,
+import { motion } from 'framer-motion';
+import { Cookie, Settings, Shield, Eye, Database, Mail, Phone } from 'lucide-react';
 
-export default function CookiesPage() {}
-  return (;,
+export default function CookiesPage() {
+  return (;
     <div className="min-h-screen bg-gray-50">";
       <Head>;
         <title>Cookie Policy - Zion Tech Group</title>;
@@ -12,8 +12,8 @@ export default function CookiesPage() {}
       </Head>;
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">",
-        <div className="container mx-auto px-4">";,
+      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">"
+        <div className="container mx-auto px-4">";
           <div className="max-w-4xl mx-auto text-center">";
             <Cookie className="w-16 h-16 mx-auto mb-6" />";
             <h1 className="text-5xl font-bold mb-6">");
@@ -24,14 +24,14 @@ export default function CookiesPage() {}
             </p>;
             <p className="text-sm text-blue-200 mt-4">";
               Last updated: January 15, 2024,
-            </p>;,
+            </p>;
           </div>;
         </div>;
       </section>;
 
       {/* Content */}
-      <section className="py-16">",
-        <div className="container mx-auto px-4">";,
+      <section className="py-16">"
+        <div className="container mx-auto px-4">";
           <div className="max-w-4xl mx-auto">";
             <div className="bg-white rounded-lg shadow-lg p-8">";
               <motion.div;
@@ -39,7 +39,7 @@ export default function CookiesPage() {}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >,
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">";,
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">";
                   What Are Cookies?;
                 </h2>;
                 
@@ -66,7 +66,7 @@ export default function CookiesPage() {}
                       </p>;
                       <p className="text-sm text-gray-500">";
                         <strong>Examples:</strong> Session cookies, authentication cookies, security cookies,
-                      </p>;,
+                      </p>;
                     </div>;
                   </div>;
 
@@ -82,7 +82,7 @@ export default function CookiesPage() {}
                       </p>;
                       <p className="text-sm text-gray-500">";
                         <strong>Examples:</strong> Google Analytics, page view tracking, user behavior analysis,
-                      </p>;,
+                      </p>;
                     </div>;
                   </div>;
 
@@ -93,12 +93,12 @@ export default function CookiesPage() {}
                         Functional Cookies;
                       </h3>;
                       <p className="text-gray-600 mb-2">";
-                        These cookies enable enhanced functionality and personalization, such as remembering;,
-                        your preferences and settings.;,
+                        These cookies enable enhanced functionality and personalization, such as remembering;
+                        your preferences and settings.;
                       </p>;
                       <p className="text-sm text-gray-500">";
                         <strong>Examples:</strong> Language preferences, theme settings, form data,
-                      </p>;,
+                      </p>;
                     </div>;
                   </div>;
 
@@ -114,7 +114,7 @@ export default function CookiesPage() {}
                       </p>;
                       <p className="text-sm text-gray-500">";
                         <strong>Examples:</strong> Advertising cookies, social media cookies, remarketing pixels,
-                      </p>;,
+                      </p>;
                     </div>;
                   </div>;
                 </div>;
@@ -200,7 +200,7 @@ export default function CookiesPage() {}
                       <p className="text-gray-600">";
                         Most browsers allow you to control cookies through their settings. You can block or;
                         delete cookies, or set preferences for specific websites.,
-                      </p>;,
+                      </p>;
                     </div>;
                     
                     <div className="bg-gray-50 rounded-lg p-4">";
@@ -209,7 +209,7 @@ export default function CookiesPage() {}
                       </h3>;
                       <p className="text-gray-600">";
                         When you first visit our website, you'll see a cookie consent banner where you can ',
-                        choose which types of cookies to accept.;,
+                        choose which types of cookies to accept.;
                       </p>;
                     </div>;
                     
@@ -247,8 +247,8 @@ export default function CookiesPage() {}
                 
                 <p className="text-gray-600 mb-8">";
                   We may update this Cookie Policy from time to time to reflect changes in our practices;
-                  or for other operational, legal, or regulatory reasons. We will notify you of any material;,
-                  changes by posting the updated policy on our website.;,
+                  or for other operational, legal, or regulatory reasons. We will notify you of any material;
+                  changes by posting the updated policy on our website.;
                 </p>;
 
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">";
@@ -258,7 +258,7 @@ export default function CookiesPage() {}
                 <div className="bg-gray-50 rounded-lg p-6">";
                   <p className="text-gray-600 mb-4">";
                     If you have any questions about our use of cookies, please contact us:,
-                  </p>;,
+                  </p>;
                   
                   <div className="space-y-2">";
                     <div className="flex items-center gap-2">";

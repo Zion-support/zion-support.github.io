@@ -1,10 +1,10 @@
-import _React from 'react';,
+import React from 'react';
 import Head from 'next/head';';
-import { motion } from 'framer-motion';,
-import { Shield, Eye, Lock, Database, User, Mail, Phone } from 'lucide-react';,
+import { motion } from 'framer-motion';
+import { Shield, Eye, Lock, Database, User, Mail, Phone } from 'lucide-react';
 
-export default function PrivacyPage() {}
-  return (;,
+export default function PrivacyPage() {
+  return (;
     <div className="min-h-screen bg-gray-50">";
       <Head>;
         <title>Privacy Policy - Zion Tech Group</title>;
@@ -12,8 +12,8 @@ export default function PrivacyPage() {}
       </Head>;
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">",
-        <div className="container mx-auto px-4">";,
+      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">"
+        <div className="container mx-auto px-4">";
           <div className="max-w-4xl mx-auto text-center">";
             <Shield className="w-16 h-16 mx-auto mb-6" />";
             <h1 className="text-5xl font-bold mb-6">");
@@ -21,17 +21,17 @@ export default function PrivacyPage() {}
             </h1>;
             <p className="text-xl text-blue-100">";
               Your privacy is important to us. Learn how we collect, use, and protect your information.,
-            </p>;,
+            </p>;
             <p className="text-sm text-blue-200 mt-4">";
               Last updated: January 15, 2024,
-            </p>;,
+            </p>;
           </div>;
         </div>;
       </section>;
 
       {/* Content */}
-      <section className="py-16">",
-        <div className="container mx-auto px-4">";,
+      <section className="py-16">"
+        <div className="container mx-auto px-4">";
           <div className="max-w-4xl mx-auto">";
             <div className="bg-white rounded-lg shadow-lg p-8">";
 
@@ -40,7 +40,7 @@ export default function PrivacyPage() {}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >,
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">";,
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">";
                   Information We Collect;
                 </h2>;
                 
@@ -55,7 +55,7 @@ export default function PrivacyPage() {}
                         We collect information you provide directly to us, such as when you create an account, 
                         contact us, or use our services. This may include your name, email address, phone number, 
                         company information, and any other information you choose to provide.,
-                      </p>;,
+                      </p>;
                     </div>;
                   </div>;
 
@@ -67,7 +67,7 @@ export default function PrivacyPage() {}
                         Usage Information;
                       </h3>;
                       <p className="text-gray-600">";
-                        We automatically collect certain information about your use of our services, including;,
+                        We automatically collect certain information about your use of our services, including;
                         your IP address, browser type, device information, pages visited, time spent on pages, 
                         and other usage statistics.;
                       </p>;
@@ -81,9 +81,9 @@ export default function PrivacyPage() {}
                         Cookies and Tracking;
                       </h3>;
                       <p className="text-gray-600">";
-                        We use cookies and similar tracking technologies to enhance your experience, analyze;,
-                        usage patterns, and provide personalized content. You can control cookie settings;,
-                        through your browser preferences.;,
+                        We use cookies and similar tracking technologies to enhance your experience, analyze;
+                        usage patterns, and provide personalized content. You can control cookie settings;
+                        through your browser preferences.;
                       </p>;
                     </div>;
                   </div>;
@@ -100,7 +100,7 @@ export default function PrivacyPage() {}
                     </h3>;
                     <p className="text-gray-600">";
                       To provide, maintain, and improve our services, process transactions, and communicate with you.,
-                    </p>;,
+                    </p>;
                   </div>;
                   
                   <div className="bg-blue-50 rounded-lg p-6">";
@@ -109,7 +109,7 @@ export default function PrivacyPage() {}
                     </h3>;
                     <p className="text-gray-600">";
                       To customize your experience, provide relevant content, and improve our services.,
-                    </p>;,
+                    </p>;
                   </div>;
                   
                   <div className="bg-blue-50 rounded-lg p-6">";
@@ -118,7 +118,7 @@ export default function PrivacyPage() {}
                     </h3>;
                     <p className="text-gray-600">";
                       To send you updates, newsletters, and respond to your inquiries and support requests.,
-                    </p>;,
+                    </p>;
                   </div>;
                   
                   <div className="bg-blue-50 rounded-lg p-6">";
@@ -127,7 +127,7 @@ export default function PrivacyPage() {}
                     </h3>;
                     <p className="text-gray-600">";
                       To analyze usage patterns, improve our services, and develop new features.,
-                    </p>;,
+                    </p>;
                   </div>;
                 </div>;
 
@@ -139,15 +139,15 @@ export default function PrivacyPage() {}
                 <div className="space-y-4 mb-8">";
 
                   <p className="text-gray-600">";
-                    We do not sell, trade, or otherwise transfer your personal information to third parties without;,
+                    We do not sell, trade, or otherwise transfer your personal information to third parties without;
                     your consent, except in the following circumstances:,
-                  </p>;,
+                  </p>;
                   
                   <ul className="list-disc list-inside space-y-2 text-gray-600 ml-4">";
                     <li>With your explicit consent</li>;
                     <li>To comply with legal obligations or court orders</li>;
                     <li>To protect our rights, property, or safety, or that of our users</li>,
-                    <li>With trusted service providers who assist us in operating our services</li>;,
+                    <li>With trusted service providers who assist us in operating our services</li>;
                     <li>In connection with a business transfer or acquisition</li>;
                   </ul>;
                 </div>;
@@ -163,7 +163,7 @@ export default function PrivacyPage() {}
                       We implement appropriate technical and organizational security measures to protect your;
                       personal information against unauthorized access, alteration, disclosure, or destruction. 
                       This includes encryption, secure servers, and regular security audits.,
-                    </p>;,
+                    </p>;
                   </div>;
                 </div>;
 
@@ -193,7 +193,7 @@ export default function PrivacyPage() {}
                 <div className="bg-gray-50 rounded-lg p-6">";
                   <p className="text-gray-600 mb-4">";
                     If you have any questions about this Privacy Policy or our data practices, please contact us:,
-                  </p>;,
+                  </p>;
                   
                   <div className="space-y-2">";
                     <div className="flex items-center gap-2">";

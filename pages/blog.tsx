@@ -55,7 +55,6 @@ const categories = [
   "Cybersecurity",
   "SaaS",
   "Digital Transformation"
-
 ];
 
 export default function BlogPage() {
@@ -91,7 +90,7 @@ export default function BlogPage() {
             <div className="flex flex-wrap gap-4 mb-12 justify-center">
               {categories.map((category, index) => (
                 <button
-                  key={index}
+    key={index}
                   className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${
                     index === 0
                       ? 'bg-blue-600 text-white'
@@ -107,7 +106,7 @@ export default function BlogPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.map((post) => (
                 <motion.article
-                  key={post.id}
+    key={post.id}
                   className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
                   whileHover={{ y: -5 }}
                 >
@@ -143,7 +142,7 @@ export default function BlogPage() {
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-gray-500">{post.readTime}</span>
                       <Link
-                        href={`/blog/${post.id}`}
+    href={`/blog/${post.id}`}
                         className="flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium"
                       >
                         Read More

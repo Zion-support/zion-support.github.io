@@ -7,30 +7,30 @@ import Layout from '../components/layout/Layout';
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' },
-  { number: '750+', label: 'Projects Completed' },
-  { number: '175+', label: 'Services & Solutions' },
-  { number: '75+', label: 'Expert Team Members' },
+  { number: '1,200+', label: 'Projects Completed' },
+  { number: '235+', label: 'Services & Solutions' },
+  { number: '95+', label: 'Expert Team Members' },
   { number: '15+', label: 'Years Experience' }
 ];
 
 const services = [
   {
     title: "AI Services",
-    description: "60+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, and quantum AI",
+    description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
     icon: Brain,
-    href: "/ai-services",
+    href: "/ai-services"
   },
   {
     title: "IT Services", 
-    description: "50+ comprehensive IT services from cloud infrastructure to cybersecurity and quantum computing",
+    description: "70+ comprehensive IT services from cloud infrastructure to cybersecurity, quantum computing, and zero-trust architecture",
     icon: Network,
-    href: "/it-services",
+    href: "/it-services"
   },
   {
     title: "Micro SaaS",
-    description: "65+ innovative micro SaaS solutions for modern businesses across all industries",
+    description: "85+ innovative micro SaaS solutions for modern businesses across all industries with real-time pricing and market analysis",
     icon: Cloud,
-    href: "/micro-saas",
+    href: "/micro-saas"
   }
 ];
 
@@ -49,8 +49,8 @@ export default function HomePage() {
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <motion.div,
+    initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
@@ -62,7 +62,7 @@ export default function HomePage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, quantum computing, blockchain, IoT, and digital transformation services. We deliver 175+ innovative solutions to transform your business.
+              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, quantum computing, blockchain, IoT, and digital transformation services. We deliver 235+ innovative solutions to transform your business with cutting-edge technology and expert implementation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
@@ -79,8 +79,8 @@ export default function HomePage() {
       {/* Services Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-12 md:mb-16"
+          <motion.div,
+    className="text-center mb-12 md:mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -90,7 +90,7 @@ export default function HomePage() {
               Our Core Services
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              We provide comprehensive technology solutions to help your business thrive in the digital age. From innovative micro SaaS applications to cutting-edge AI services, quantum computing, blockchain solutions, and enterprise IT infrastructure. Our 175+ services cover every aspect of modern technology needs.
+              We provide comprehensive technology solutions to help your business thrive in the digital age. From innovative micro SaaS applications to cutting-edge AI services, quantum computing, blockchain solutions, and enterprise IT infrastructure. Our 235+ services cover every aspect of modern technology needs with real-world pricing and proven results.
             </p>
           </motion.div>
 
@@ -98,8 +98,8 @@ export default function HomePage() {
             {services.map((service, index) => {
               const IconComponent = service.icon;
               return (
-                <motion.div
-                  key={index}
+                <motion.div,
+    key={index}
                   className="bg-white p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -116,8 +116,8 @@ export default function HomePage() {
                   <p className="text-gray-600 mb-6 text-sm md:text-base leading-relaxed">
                     {service.description}
                   </p>
-                  <Link
-                    href={service.href}
+                  <Link,
+    href={service.href}
                     className="text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center"
                   >
                     <span>Learn More</span>
@@ -135,8 +135,8 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {stats.map((stat, index) => (
-              <motion.div
-                key={index}
+              <motion.div,
+    key={index}
                 className="text-center"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -156,8 +156,8 @@ export default function HomePage() {
       {/* Contact Information Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
+          <motion.div,
+    className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -225,8 +225,8 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <motion.div,
+    initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

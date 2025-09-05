@@ -1,7 +1,7 @@
-import _React from 'react';,
+import React from 'react';
 import Link from 'next/link';';
-import { motion } from 'framer-motion';,
-import { BookOpen, Clock, Users, ArrowRight, Play, Code, Database, Cloud, Shield } from 'lucide-react';,
+import { motion } from 'framer-motion';
+import { BookOpen, Clock, Users, ArrowRight, Play, Code, Database, Cloud, Shield } from 'lucide-react';
 import Layout from "../components/Layout";";
 
 const tutorials = [;
@@ -71,7 +71,7 @@ const tutorials = [;
     lessons: 24,
     students: 720,
   }
-;];,
+;];
 
 const categories = [;
   { name: 'All, count: 24, active: true },',
@@ -81,25 +81,25 @@ const categories = [;
   { name: 'Security, count: 3, active: false },',
   { name: 'Database, count: 2, active: false },',
   { name: 'Mobile Development, count: 1, active: false }',
-;];,
+;];
 
 const difficultyLevels = [;
   { name: 'Beginner, color: 'bg-green-500, description: 'No prior experience required' },',
   { name: 'Intermediate, color: 'bg-yellow-500, description: 'Some programming experience needed' },',
   { name: 'Advanced, color: 'bg-red-500, description: 'Strong technical background required' }',
-;];,
+;];
 
-export default function TutorialsPage() {}
-  return (;,
+export default function TutorialsPage() {
+  return (;
     <Layout);
       title="Tutorials - Zion Tech Group"";
-      description="Learn from our comprehensive tutorials covering web development, AI/ML, cloud computing, security, and more. Step-by-step guides for all skill levels."",
-      keywords="tutorials, learning, web development, AI, machine learning, cloud computing, programming, coding"",
-    >;,
+      description="Learn from our comprehensive tutorials covering web development, AI/ML, cloud computing, security, and more. Step-by-step guides for all skill levels.""
+      keywords="tutorials, learning, web development, AI, machine learning, cloud computing, programming, coding""
+    >;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">",
-          <div className="absolute inset-0">";,
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">"
+          <div className="absolute inset-0">";
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
           </div>;
@@ -109,8 +109,8 @@ export default function TutorialsPage() {}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"",
-            >;,
+              className="text-center max-w-4xl mx-auto""
+            >;
               <div className="flex items-center justify-center mb-6">";
                 <BookOpen className="w-16 h-16 text-blue-400 mr-4" />";
                 <h1 className="text-5xl md:text-6xl font-bold">";
@@ -140,34 +140,34 @@ export default function TutorialsPage() {}
         </section>;
 
         {/* Categories Filter */}
-        <section className="py-8 bg-white border-b border-gray-200">",
-          <div className="container mx-auto px-4">";,
+        <section className="py-8 bg-white border-b border-gray-200">"
+          <div className="container mx-auto px-4">";
             <div className="flex flex-wrap gap-4 justify-center">";
               {categories.map((category, index) => (,
                 <button}),
                   key={category.name}
                   className={`px-6 py-3 rounded-full font-medium transition-colors ${}
                     category.active,
-                      ? 'bg-blue-600 text-white'';,
+                      ? 'bg-blue-600 text-white'';
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'';
                   }`}
                 >,
                   {category.name} ({category.count}),
-                </button>;,
+                </button>;
               ))}
             </div>,
-          </div>;,
+          </div>;
         </section>;
 
         {/* Difficulty Levels */}
-        <section className="py-16 bg-gray-50">",
-          <div className="container mx-auto px-4">";,
+        <section className="py-16 bg-gray-50">"
+          <div className="container mx-auto px-4">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-12"",
-            >;,
+              className="text-center mb-12""
+            >;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">";
                 Choose Your Level;
               </h2>;
@@ -183,28 +183,28 @@ export default function TutorialsPage() {}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300"",
-                >;,
+                  className="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300""
+                >;
                   <div className={`w-16 h-16 ${level.color} rounded-full flex items-center justify-center mx-auto mb-4`}>,
-                    <span className="text-white font-bold text-xl">{level.name[0]}</span>",
-                  </div>;,
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{level.name}</h3>",
-                  <p className="text-gray-600">{level.description}</p>",
-                </motion.div>;,
+                    <span className="text-white font-bold text-xl">{level.name[0]}</span>"
+                  </div>;
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{level.name}</h3>"
+                  <p className="text-gray-600">{level.description}</p>"
+                </motion.div>;
               ))}
             </div>,
-          </div>;,
+          </div>;
         </section>;
 
         {/* Tutorials Grid */}
-        <section id="tutorials" className="py-20 bg-white">",
-          <div className="container mx-auto px-4">";,
+        <section id="tutorials" className="py-20 bg-white">"
+          <div className="container mx-auto px-4">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"",
-            >;,
+              className="text-center mb-16""
+            >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Tutorials</span>";
               </h2>;
@@ -220,13 +220,13 @@ export default function TutorialsPage() {}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300"",
-                >;,
+                  className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300""
+                >;
                   <div className={`h-48 bg-gradient-to-br ${tutorial.color} flex items-center justify-center`}>,
-                    <div className="text-center text-white">";,
+                    <div className="text-center text-white">";
                       <tutorial.icon className="w-16 h-16 mx-auto mb-4" />";
-                      <div className="text-lg font-bold">{tutorial.category}</div>",
-                    </div>;,
+                      <div className="text-lg font-bold">{tutorial.category}</div>"
+                    </div>;
                   </div>;
 
                   <div className="p-6">";
@@ -236,29 +236,29 @@ export default function TutorialsPage() {}
                       </span>,
                       <span className={`px-3 py-1 rounded-full text-sm font-medium ${}
                         tutorial.difficulty === 'Beginner' ? 'bg-green-100 text-green-600' :',
-                        tutorial.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-600' :';,
+                        tutorial.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-600' :';
                         'bg-red-100 text-red-600'';
                       }`}>,
                         {tutorial.difficulty}
                       </span>,
-                    </div>;,
+                    </div>;
 
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{tutorial.title}</h3>",
-                    <p className="text-gray-600 mb-4">{tutorial.description}</p>",
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{tutorial.title}</h3>"
+                    <p className="text-gray-600 mb-4">{tutorial.description}</p>"
 
                     <div className="flex items-center justify-between text-sm text-gray-500 mb-4">";
                       <div className="flex items-center">";
                         <Clock className="w-4 h-4 mr-1" />";
                         {tutorial.duration}
                       </div>,
-                      <div className="flex items-center">";,
+                      <div className="flex items-center">";
                         <Play className="w-4 h-4 mr-1" />";
                         {tutorial.lessons} lessons,
-                      </div>;,
+                      </div>;
                       <div className="flex items-center">";
                         <Users className="w-4 h-4 mr-1" />";
                         {tutorial.students} students,
-                      </div>;,
+                      </div>;
                     </div>;
 
                     <Link;
@@ -272,18 +272,18 @@ export default function TutorialsPage() {}
                 </motion.div>;
               ))}
             </div>,
-          </div>;,
+          </div>;
         </section>;
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">",
-          <div className="container mx-auto px-4 text-center">";,
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
+          <div className="container mx-auto px-4 text-center">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >,
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">";,
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Start Learning?;
               </h2>;
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">";

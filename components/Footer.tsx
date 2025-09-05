@@ -24,7 +24,9 @@ const services = {
     { name: 'AI Medical Imaging Analysis', href: '/ai-services#medical-imaging' },
     { name: 'AI Cybersecurity Analyst', href: '/ai-services#cybersecurity-ai' },
     { name: 'AI Climate Change Predictor', href: '/ai-services#climate-predictor' },
-    { name: 'AI Autonomous Vehicle System', href: '/ai-services#autonomous-vehicles' }
+    { name: 'AI Autonomous Vehicle System', href: '/ai-services#autonomous-vehicles' },
+    { name: 'AI-Powered Carbon Footprint Analysis', href: '/ai-services#carbon-footprint' },
+    { name: 'AI-Powered Voice Synthesis', href: '/ai-services#voice-synthesis' }
   ],
   'IT Services': [
     { name: 'Cloud Infrastructure Management', href: '/it-services#cloud-infrastructure' },
@@ -36,7 +38,9 @@ const services = {
     { name: 'Edge Computing Solutions', href: '/it-services#edge-computing' },
     { name: '5G Network Implementation', href: '/it-services#5g-networks' },
     { name: 'Blockchain Infrastructure', href: '/it-services#blockchain-infrastructure' },
-    { name: 'AI Infrastructure Setup', href: '/it-services#ai-infrastructure' }
+    { name: 'AI Infrastructure Setup', href: '/it-services#ai-infrastructure' },
+    { name: 'Zero Trust Security Architecture', href: '/it-services#zero-trust' },
+    { name: 'Hybrid Cloud Management', href: '/it-services#hybrid-cloud' }
   ],
   'Micro SaaS': [
     { name: 'Cloud Cost Guard', href: '/micro-saas#cloud-cost-guard' },
@@ -48,17 +52,19 @@ const services = {
     { name: 'Blockchain Analytics', href: '/micro-saas#blockchain-analytics' },
     { name: 'AI Legal Document Analyzer', href: '/micro-saas#legal-analyzer' },
     { name: 'Smart Supply Chain Optimizer', href: '/micro-saas#supply-chain' },
-    { name: 'AI Medical Diagnosis Assistant', href: '/micro-saas#medical-diagnosis' }
+    { name: 'AI Medical Diagnosis Assistant', href: '/micro-saas#medical-diagnosis' },
+    { name: 'AI-Powered Carbon Footprint Tracker', href: '/micro-saas#carbon-tracker' },
+    { name: 'Smart Contract Audit Platform', href: '/micro-saas#smart-contract-audit' }
   ],
-  'Solutions': [
-    { name: 'Cloud Solutions', href: '/solutions#cloud' },
-    { name: 'AI Implementation', href: '/solutions#ai' },
-    { name: 'Cybersecurity', href: '/solutions#security' },
-    { name: 'Digital Transformation', href: '/solutions#digital' },
-    { name: 'IoT Solutions', href: '/solutions#iot' },
-    { name: 'Blockchain Solutions', href: '/solutions#blockchain' },
-    { name: 'Smart Cities', href: '/solutions#smart-cities' },
-    { name: 'Healthcare Tech', href: '/solutions#healthcare' }
+  'Industries': [
+    { name: 'Healthcare', href: '/industries/healthcare' },
+    { name: 'Finance', href: '/industries/finance' },
+    { name: 'Manufacturing', href: '/industries/manufacturing' },
+    { name: 'Retail', href: '/industries/retail' },
+    { name: 'Education', href: '/industries/education' },
+    { name: 'Government', href: '/industries/government' },
+    { name: 'Energy', href: '/industries/energy' },
+    { name: 'Transportation', href: '/industries/transportation' }
   ]
 };
 
@@ -78,7 +84,7 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <h3 className="text-xl font-bold mb-4">Zion Tech Group</h3>
@@ -110,7 +116,7 @@ export default function Footer() {
             <div key={category}>
               <h4 className="text-lg font-semibold mb-4">{category}</h4>
               <ul className="space-y-2">
-                {serviceList.map((service) => (
+                {serviceList.slice(0, 8).map((service) => (
                   <li key={service.name}>
                     <Link 
                       href={service.href}
@@ -120,6 +126,16 @@ export default function Footer() {
                     </Link>
                   </li>
                 ))}
+                {serviceList.length > 8 && (
+                  <li>
+                    <Link 
+                      href={`/${category.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
+                    >
+                      View All {category} →
+                    </Link>
+                  </li>
+                )}
               </ul>
             </div>
           ))}
@@ -146,6 +162,16 @@ export default function Footer() {
               <li>
                 <Link href="/careers" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
                   Careers
+                </Link>
+              </li>
+              <li>
+                <Link href="/pricing" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+                  Pricing
+                </Link>
+              </li>
+              <li>
+                <Link href="/support" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+                  Support
                 </Link>
               </li>
               <li>

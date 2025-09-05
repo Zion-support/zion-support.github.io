@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
+import {
   Brain, 
   Zap, 
   Shield, 
@@ -426,7 +426,6 @@ const aiServices = [
     popular: true
   },
   {
-
     title: 'AI Drug Discovery Platform',
     description: 'Accelerated drug discovery using AI for molecular design and optimization.',
     icon: Heart,
@@ -976,6 +975,158 @@ const aiServices = [
     pricing: '$10,000 - $100,000/setup',
     category: 'Mental Health AI',
     popular: true
+  },
+  {
+    title: 'AI-Powered Carbon Footprint Analysis',
+    description: 'Advanced AI system for analyzing and optimizing carbon footprints across industries.',
+    icon: Sprout,
+    features: ['Carbon Tracking', 'Emission Analysis', 'Optimization Recommendations', 'Sustainability Reporting'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'Environmental AI'
+  },
+  {
+    title: 'AI-Powered Voice Synthesis & Cloning',
+    description: 'High-fidelity voice synthesis and cloning technology for content creation and accessibility.',
+    icon: Mic,
+    features: ['Voice Cloning', 'Emotion Synthesis', 'Multi-language Support', 'Real-time Processing'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'Voice AI'
+  },
+  {
+    title: 'AI-Powered Smart Grid Management',
+    description: 'Intelligent grid management system for renewable energy integration and optimization.',
+    icon: Zap,
+    features: ['Grid Optimization', 'Renewable Integration', 'Load Balancing', 'Predictive Maintenance'],
+    pricing: '$50,000 - $200,000/project',
+    category: 'Energy AI'
+  },
+  {
+    title: 'AI-Powered Drug Repurposing Platform',
+    description: 'Machine learning platform for discovering new uses for existing drugs.',
+    icon: Heart,
+    features: ['Drug-Disease Mapping', 'Side Effect Analysis', 'Efficacy Prediction', 'Clinical Trial Design'],
+    pricing: '$25,000 - $100,000/project',
+    category: 'Pharma AI'
+  },
+  {
+    title: 'AI-Powered Smart City Analytics',
+    description: 'Comprehensive AI platform for smart city data analysis and optimization.',
+    icon: Building,
+    features: ['Traffic Optimization', 'Resource Management', 'Citizen Services', 'Environmental Monitoring'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Smart Cities AI'
+  },
+  {
+    title: 'AI-Powered Advanced Fraud Prevention',
+    description: 'Next-generation fraud detection using deep learning and behavioral biometrics.',
+    icon: Shield,
+    features: ['Behavioral Biometrics', 'Deep Learning Models', 'Real-time Scoring', 'Adaptive Learning'],
+    pricing: '$20,000 - $100,000/setup',
+    category: 'Security AI'
+  },
+  {
+    title: 'AI-Powered Content Moderation Suite',
+    description: 'Comprehensive content moderation using multi-modal AI for text, images, and videos.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Context Understanding', 'Cultural Sensitivity', 'Real-time Processing'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Content AI'
+  },
+  {
+    title: 'AI-Powered Predictive Maintenance',
+    description: 'Advanced predictive maintenance system for industrial equipment and machinery.',
+    icon: Settings,
+    features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'Industrial AI'
+  },
+  {
+    title: 'AI-Powered Language Translation & Localization',
+    description: 'Advanced translation system with cultural context and real-time processing.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Cultural Adaptation', 'Context Awareness', 'Quality Assurance'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'Language AI'
+  },
+  {
+    title: 'AI-Powered Personal Finance Advisor',
+    description: 'Intelligent personal finance management with investment recommendations and risk assessment.',
+    icon: DollarSign,
+    features: ['Portfolio Analysis', 'Investment Recommendations', 'Risk Assessment', 'Goal Planning'],
+    pricing: '$2,000 - $10,000/setup',
+    category: 'FinTech AI'
+  },
+  {
+    title: 'AI-Powered Water Quality Monitoring',
+    description: 'Intelligent water quality analysis and contamination detection system.',
+    icon: Droplets,
+    features: ['Real-time Analysis', 'Contamination Detection', 'Quality Prediction', 'Alert Systems'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'Environmental AI'
+  },
+  {
+    title: 'AI-Powered Retail Analytics & Optimization',
+    description: 'Comprehensive retail analytics with demand forecasting and inventory optimization.',
+    icon: ShoppingCart,
+    features: ['Demand Forecasting', 'Inventory Optimization', 'Customer Analytics', 'Price Optimization'],
+    pricing: '$25,000 - $125,000/project',
+    category: 'Retail AI'
+  },
+  {
+    title: 'AI-Powered Cybersecurity Training Simulator',
+    description: 'Advanced cybersecurity training platform with AI-generated attack scenarios.',
+    icon: Shield,
+    features: ['Attack Simulation', 'Skill Assessment', 'Personalized Training', 'Progress Tracking'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Security Training AI'
+  },
+  {
+    title: 'AI-Powered Manufacturing Quality Control',
+    description: 'Intelligent quality control system for manufacturing with real-time defect detection.',
+    icon: Settings,
+    features: ['Defect Detection', 'Quality Metrics', 'Process Optimization', 'Predictive Quality'],
+    pricing: '$40,000 - $200,000/project',
+    category: 'Manufacturing AI'
+  },
+  {
+    title: 'AI-Powered Energy Storage Optimization',
+    description: 'Intelligent energy storage management for renewable energy systems.',
+    icon: Battery,
+    features: ['Storage Optimization', 'Load Balancing', 'Cost Optimization', 'Grid Integration'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'Energy AI'
+  },
+  {
+    title: 'AI-Powered Agricultural Intelligence',
+    description: 'Comprehensive AI platform for precision agriculture and crop optimization.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'AgTech AI'
+  },
+  {
+    title: 'AI-Powered Real Estate Valuation',
+    description: 'Advanced property valuation using AI analysis of market data and property features.',
+    icon: Home,
+    features: ['Property Analysis', 'Market Prediction', 'Investment Insights', 'Risk Assessment'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'PropTech AI'
+  },
+  {
+    title: 'AI-Powered Legal Document Analysis',
+    description: 'Intelligent legal document analysis with contract review and risk assessment.',
+    icon: FileText,
+    features: ['Contract Analysis', 'Risk Assessment', 'Clause Extraction', 'Compliance Checking'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'Legal AI'
+  },
+  {
+    title: 'AI-Powered Supply Chain Risk Management',
+    description: 'Intelligent supply chain risk assessment and mitigation strategies.',
+    icon: Network,
+    features: ['Risk Assessment', 'Supplier Analysis', 'Disruption Prediction', 'Mitigation Planning'],
+    pricing: '$25,000 - $125,000/project',
+    category: 'Supply Chain AI'
   }
 ];
 
@@ -992,7 +1143,6 @@ const industries = [
 
 const benefits = [
   {
-
     icon: Zap,
     title: 'Increased Efficiency',
     description: 'Automate repetitive tasks and processes',
@@ -1037,8 +1187,7 @@ export default function AIServicesPage() {
 
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
-
-            initial={{ opacity: 0, y: 30 }}
+    initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
@@ -1075,7 +1224,7 @@ export default function AIServicesPage() {
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
                   <motion.div
-            className="text-center mb-16"
+    className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1095,15 +1244,13 @@ export default function AIServicesPage() {
               const IconComponent = service.icon;
               return (
                 <motion.div
-                  key={index}
-
+    key={index}
                   className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
 
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-
                   whileHover={{ y: -5 }}
                 >
                   <div className="flex items-center justify-between mb-4">
@@ -1138,7 +1285,7 @@ export default function AIServicesPage() {
                   <span className="text-sm font-semibold text-blue-600">{service.pricing}</span>
                   </div>
                   <Link
-                    href="/contact"
+    href="/contact"
                     className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
                   >
                     <span>Get Quote</span>
@@ -1155,7 +1302,7 @@ export default function AIServicesPage() {
       <section className="py-20 bg-white">
                   <div className="container mx-auto px-4">
                   <motion.div
-            className="text-center mb-16"
+    className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1175,8 +1322,7 @@ export default function AIServicesPage() {
               const IconComponent = industry.icon;
               return (
                 <motion.div
-                  key={index}
-
+    key={index}
                   className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -1204,7 +1350,7 @@ export default function AIServicesPage() {
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
                   <motion.div
-            className="text-center mb-16"
+    className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1224,7 +1370,7 @@ export default function AIServicesPage() {
               const IconComponent = benefit.icon;
               return (
                 <motion.div
-                  key={index}
+    key={index}
                   className="text-center"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -1255,8 +1401,7 @@ export default function AIServicesPage() {
 
         <div className="container mx-auto px-4 text-center">
           <motion.div
-
-            initial={{ opacity: 0, y: 30 }}
+    initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -1285,7 +1430,7 @@ export default function AIServicesPage() {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+    initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"

@@ -82,8 +82,8 @@ const data = await response.json()
   {
     language: 'Python',
     title: 'Submit Contact Form',
-    code: `import requests
-url = 'https://ziontechgroup.com/api/v1/contact'
+    code: `import requests,
+    url = 'https://ziontechgroup.com/api/v1/contact'
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
@@ -148,8 +148,8 @@ export default function APIDocumentationPage() {
     return matchesSearch && matchesMethod
   })
   return (
-    <Layout
-      title="API Documentation - Zion Tech Group"
+    <Layout,
+    title="API Documentation - Zion Tech Group"
       description="Complete API documentation for Zion Tech Group services. Learn how to integrate with our APIs, view endpoints, and access code examples."
       keywords="API documentation, REST API, integration, developer docs, endpoints, Zion Tech Group API"
     >
@@ -157,8 +157,8 @@ export default function APIDocumentationPage() {
         {/* Header */}
         <section className="bg-white/10 backdrop-blur-md border-b border-white/20">
           <div className="container mx-auto px-4 py-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <motion.div,
+    initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="flex flex-col md:flex-row items-center justify-between"
@@ -187,8 +187,8 @@ export default function APIDocumentationPage() {
         {/* Quick Start */}
         <section className="py-12">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <motion.div,
+    initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="bg-white/10 backdrop-blur-md rounded-lg p-8 mb-8"
@@ -228,16 +228,16 @@ export default function APIDocumentationPage() {
             <div className="mb-8 flex flex-col md:flex-row gap-4">
               <div className="relative flex-1">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
+                <input,
+    type="text"
                   placeholder="Search endpoints..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
-              <select
-                value={selectedMethod}
+              <select,
+    value={selectedMethod}
                 onChange={(e) => setSelectedMethod(e.target.value)}
                 className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
@@ -251,8 +251,8 @@ export default function APIDocumentationPage() {
             {/* API Endpoints */}
             <div className="space-y-6">
               {filteredEndpoints.map((endpoint, index) => (
-                <motion.div
-                  key={index}
+                <motion.div,
+    key={index}
                   className="bg-white/10 backdrop-blur-md rounded-lg p-6 hover:bg-white/15 transition-colors"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -341,8 +341,8 @@ export default function APIDocumentationPage() {
         {/* Code Examples */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
+            <motion.div,
+    className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -357,8 +357,8 @@ export default function APIDocumentationPage() {
             </motion.div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {codeExamples.map((example, index) => (
-                <motion.div
-                  key={index}
+                <motion.div,
+    key={index}
                   className="bg-white rounded-lg shadow-lg overflow-hidden"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -370,8 +370,8 @@ export default function APIDocumentationPage() {
                       <Code className="w-5 h-5 text-blue-400" />
                       <span className="text-white font-medium">{example.language}</span>
                     </div>
-                    <button
-                      onClick={() => copyToClipboard(example.code, `${example.language}-${index}`)}
+                    <button,
+    onClick={() => copyToClipboard(example.code, `${example.language}-${index}`)}
                       className="p-2 text-gray-400 hover:text-white transition-colors"
                     >
                       {copiedCode === `${example.language}-${index}` ? (
@@ -397,8 +397,8 @@ export default function APIDocumentationPage() {
         {/* SDK Libraries */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
+            <motion.div,
+    className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -413,8 +413,8 @@ export default function APIDocumentationPage() {
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {sdkLibraries.map((sdk, index) => (
-                <motion.div
-                  key={index}
+                <motion.div,
+    key={index}
                   className="bg-gray-50 p-8 rounded-lg hover:shadow-lg transition-all duration-300"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -445,14 +445,14 @@ export default function APIDocumentationPage() {
                     </div>
                   </div>
                   <div className="flex space-x-2">
-                    <Link
-                      href={sdk.documentation}
+                    <Link,
+    href={sdk.documentation}
                       className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center font-medium"
                     >
                       Documentation
                     </Link>
-                    <button
-                      onClick={() => copyToClipboard(sdk.install, `install-${index}`)}
+                    <button,
+    onClick={() => copyToClipboard(sdk.install, `install-${index}`)}
                       className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100 transition-colors"
                     >
                       <Copy className="w-4 h-4" />
@@ -466,8 +466,8 @@ export default function APIDocumentationPage() {
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+            <motion.div,
+    initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}

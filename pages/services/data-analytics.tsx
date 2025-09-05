@@ -1,35 +1,35 @@
-import _React from 'react';,
+import React from 'react';
 import Layout from "../../components/Layout";";
-import { motion } from 'framer-motion';,
-import { BarChart3, TrendingUp, Database, Brain, CheckCircle, ArrowRight } from 'lucide-react';,
+import { motion } from 'framer-motion';
+import { BarChart3, TrendingUp, Database, Brain, CheckCircle, ArrowRight } from 'lucide-react';
 
-export default function DataAnalyticsPage() {}
-  const analyticsServices = [;,
+export default function DataAnalyticsPage() {
+  const analyticsServices = [;
     {}
-      title: "Business Intelligence",",
-      description: "Transform data into actionable business insights",",
+      title: "Business Intelligence","
+      description: "Transform data into actionable business insights","
       icon: BarChart3,
-      features: ["Custom Dashboards", "Real-time Reports", "KPI Tracking"]",
+      features: ["Custom Dashboards", "Real-time Reports", "KPI Tracking"]"
     },
     {}
-      title: "Predictive Analytics",",
-      description: "Forecast trends and make data-driven decisions",",
+      title: "Predictive Analytics","
+      description: "Forecast trends and make data-driven decisions","
       icon: TrendingUp,
-      features: ["Machine Learning Models", "Risk Assessment", "Demand Forecasting"]",
+      features: ["Machine Learning Models", "Risk Assessment", "Demand Forecasting"]"
     },
     {}
-      title: "Data Warehousing",",
-      description: "Centralized data storage and management solutions",",
+      title: "Data Warehousing","
+      description: "Centralized data storage and management solutions","
       icon: Database,
-      features: ["ETL Processes", "Data Integration", "Data Quality"]",
+      features: ["ETL Processes", "Data Integration", "Data Quality"]"
     },
     {}
-      title: "AI-Powered Analytics",",
-      description: "Advanced analytics powered by artificial intelligence",",
+      title: "AI-Powered Analytics","
+      description: "Advanced analytics powered by artificial intelligence","
       icon: Brain,
-      features: ["Natural Language Processing", "Pattern Recognition", "Automated Insights"]",
+      features: ["Natural Language Processing", "Pattern Recognition", "Automated Insights"]"
     }
-;  ];,
+;  ];
 
   return (;
     <Layout );
@@ -38,14 +38,14 @@ export default function DataAnalyticsPage() {}
     >;
       <div className="min-h-screen bg-gray-50">";
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white py-20">",
-          <div className="container mx-auto px-4">";,
+        <section className="bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white py-20">"
+          <div className="container mx-auto px-4">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"",
-            >;,
+              className="text-center""
+            >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
                 Data Analytics Services;
               </h1>;
@@ -58,47 +58,47 @@ export default function DataAnalyticsPage() {}
         </section>;
 
         {/* Services Section */}
-        <section className="py-20">",
-          <div className="container mx-auto px-4">";,
+        <section className="py-20">"
+          <div className="container mx-auto px-4">";
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {analyticsServices.map((service, index) => {}
-                const IconComponent = service.icon;,
-                return (;,
+                const IconComponent = service.icon;
+                return (;
                   <motion.div);
                     key={index}
-                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"",
+                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >,
-                    <div className="text-green-600 mb-4">";,
+                    <div className="text-green-600 mb-4">";
                       <IconComponent className="w-10 h-10" />";
                     </div>;
                     <h3 className="text-xl font-bold text-gray-900 mb-4">";
                       {service.title}
                     </h3>,
-                    <p className="text-gray-600 mb-4">";,
+                    <p className="text-gray-600 mb-4">";
                       {service.description}
                     </p>,
-                    <ul className="space-y-2">";,
+                    <ul className="space-y-2">";
                       {service.features.map((feature, featureIndex) => (,
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">",
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />";,
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />";
                           {feature}
                         </li>,
                       ))}
                     </ul>,
-                  </motion.div>;,
+                  </motion.div>;
                 );
               })}
             </div>,
-          </div>;,
+          </div>;
         </section>;
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">",
-          <div className="container mx-auto px-4 text-center">";,
+        <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">"
+          <div className="container mx-auto px-4 text-center">";
             <h2 className="text-3xl md:text-4xl font-bold mb-6">";
               Transform Your Data Today;
             </h2>;
@@ -110,7 +110,7 @@ export default function DataAnalyticsPage() {}
               className="inline-flex items-center px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"";
               whileHover={{ scale: 1.05 }}
             >,
-              Start Your Analytics Journey;,
+              Start Your Analytics Journey;
               <ArrowRight className="w-5 h-5 ml-2" />";
             </motion.a>;
           </div>;

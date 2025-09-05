@@ -1,7 +1,7 @@
-import _React from 'react';,
+import React from 'react';
 import Link from 'next/link';';
-import { motion } from 'framer-motion';,
-import { BarChart3, Shield, Users, Globe, ArrowRight, CheckCircle, Building, Heart, GraduationCap, Factory, Home, CreditCard } from 'lucide-react';,
+import { motion } from 'framer-motion';
+import { BarChart3, Shield, Users, Globe, ArrowRight, CheckCircle, Building, Heart, GraduationCap, Factory, Home, CreditCard } from 'lucide-react';
 import Layout from "../../components/Layout";";
 
 const industries = [;
@@ -10,44 +10,44 @@ const industries = [;
     icon: Heart,
     description: 'HIPAA-compliant solutions for healthcare providers and medical institutions,',
     features: ['HIPAA Compliance, 'Patient Data Security', 'Telemedicine Platforms', 'Medical Records Management'],',
-    color: 'from-red-500 to-pink-500'';,
+    color: 'from-red-500 to-pink-500'';
   },
   {}
     name: 'Finance,',
     icon: CreditCard,
     description: 'Secure financial technology and payment solutions for banks and fintech companies,',
     features: ['PCI DSS Compliance, 'Fraud Detection', 'Payment Processing', 'Risk Management'],',
-    color: 'from-green-500 to-emerald-500'';,
+    color: 'from-green-500 to-emerald-500'';
   },
   {}
     name: 'E-commerce,',
     icon: Globe,
     description: 'Scalable online retail and marketplace platforms for digital commerce,',
     features: ['Scalable Architecture, 'Payment Integration', 'Inventory Management', 'Customer Analytics'],',
-    color: 'from-blue-500 to-cyan-500'';,
+    color: 'from-blue-500 to-cyan-500'';
   },
   {}
     name: 'Education,',
     icon: GraduationCap,
     description: 'Learning management and educational technology solutions,',
     features: ['LMS Development, 'Student Analytics', 'Online Assessment', 'Content Management'],',
-    color: 'from-purple-500 to-indigo-500'';,
+    color: 'from-purple-500 to-indigo-500'';
   },
   {}
     name: 'Manufacturing,',
     icon: Factory,
     description: 'IoT and automation solutions for manufacturing and industrial operations,',
     features: ['IoT Integration, 'Process Automation', 'Quality Control', 'Supply Chain Management'],',
-    color: 'from-orange-500 to-red-500'';,
+    color: 'from-orange-500 to-red-500'';
   },
   {}
     name: 'Real Estate,',
     icon: Home,
     description: 'Property management and real estate technology platforms,',
     features: ['Property Management, 'Virtual Tours', 'Market Analytics', 'Transaction Management'],',
-    color: 'from-yellow-500 to-orange-500'';,
+    color: 'from-yellow-500 to-orange-500'';
   }
-;];,
+;];
 
 const capabilities = [;
   { title: 'Regulatory Compliance, description: 'Ensure compliance with industry-specific regulations' },',
@@ -56,26 +56,26 @@ const capabilities = [;
   { title: 'Security Standards, description: 'Industry-specific security and data protection' },',
   { title: 'Performance Optimization, description: 'Optimized for industry-specific performance requirements' },',
   { title: 'Ongoing Support, description: 'Dedicated support team familiar with your industry' }',
-;];,
+;];
 
 const stats = [;
   { number: '15+, label: 'Industries Served' },',
   { number: '10+, label: 'Years Experience' },',
   { number: '100%, label: 'Compliance Rate' },',
   { number: '500+, label: 'Industry Projects' }',
-;];,
+;];
 
-export default function IndustrySolutionsPage() {}
-  return (;,
+export default function IndustrySolutionsPage() {
+  return (;
     <Layout);
       title="Industry Solutions - Zion Tech Group"";
-      description="Specialized technology solutions tailored to specific industries including healthcare, finance, e-commerce, education, manufacturing, and real estate."",
-      keywords="industry solutions, healthcare technology, fintech, e-commerce, education technology, manufacturing IoT, real estate tech"",
-    >;,
+      description="Specialized technology solutions tailored to specific industries including healthcare, finance, e-commerce, education, manufacturing, and real estate.""
+      keywords="industry solutions, healthcare technology, fintech, e-commerce, education technology, manufacturing IoT, real estate tech""
+    >;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">",
-          <div className="absolute inset-0">";,
+        <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">"
+          <div className="absolute inset-0">";
             <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
           </div>;
@@ -85,8 +85,8 @@ export default function IndustrySolutionsPage() {}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"",
-            >;,
+              className="text-center max-w-4xl mx-auto""
+            >;
               <div className="flex items-center justify-center mb-6">";
                 <BarChart3 className="w-16 h-16 text-indigo-400 mr-4" />";
                 <h1 className="text-5xl md:text-6xl font-bold">";
@@ -116,8 +116,8 @@ export default function IndustrySolutionsPage() {}
         </section>;
 
         {/* Stats Section */}
-        <section className="py-16 bg-white">",
-          <div className="container mx-auto px-4">";,
+        <section className="py-16 bg-white">"
+          <div className="container mx-auto px-4">";
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
               {stats.map((stat, index) => (,
                 <motion.div}),
@@ -125,31 +125,31 @@ export default function IndustrySolutionsPage() {}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="text-center"",
-                >;,
-                  <div className="text-4xl md:text-5xl font-bold text-indigo-600 mb-2">{stat.number}</div>",
-                  <div className="text-gray-600 font-medium">{stat.label}</div>",
-                </motion.div>;,
+                  className="text-center""
+                >;
+                  <div className="text-4xl md:text-5xl font-bold text-indigo-600 mb-2">{stat.number}</div>"
+                  <div className="text-gray-600 font-medium">{stat.label}</div>"
+                </motion.div>;
               ))}
             </div>,
-          </div>;,
+          </div>;
         </section>;
 
         {/* Industries Section */}
-        <section className="py-20 bg-gray-50">",
-          <div className="container mx-auto px-4">";,
+        <section className="py-20 bg-gray-50">"
+          <div className="container mx-auto px-4">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"",
-            >;,
+              className="text-center mb-16""
+            >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Industry <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Expertise</span>";
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 We have deep expertise across multiple industries, delivering solutions that meet specific regulatory and business requirements,
-              </p>;,
+              </p>;
             </motion.div>;
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
@@ -159,41 +159,41 @@ export default function IndustrySolutionsPage() {}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300"",
-                >;,
+                  className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300""
+                >;
                   <div className="flex items-center mb-6">";
                     <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-xl flex items-center justify-center mr-4`}>,
-                      <industry.icon className="w-8 h-8 text-white" />";,
+                      <industry.icon className="w-8 h-8 text-white" />";
                     </div>;
                     <div>;
-                      <h3 className="text-2xl font-bold text-gray-900">{industry.name}</h3>",
-                      <p className="text-gray-600">{industry.description}</p>",
-                    </div>;,
+                      <h3 className="text-2xl font-bold text-gray-900">{industry.name}</h3>"
+                      <p className="text-gray-600">{industry.description}</p>"
+                    </div>;
                   </div>;
 
                   <ul className="space-y-3">";
                     {industry.features.map((feature, featureIndex) => (,
-                      <li key={featureIndex} className="flex items-center text-gray-600">",
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />";,
+                      <li key={featureIndex} className="flex items-center text-gray-600">"
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />";
                         {feature}
                       </li>,
                     ))}
                   </ul>,
-                </motion.div>;,
+                </motion.div>;
               ))}
             </div>,
-          </div>;,
+          </div>;
         </section>;
 
         {/* Capabilities Section */}
-        <section className="py-20 bg-white">",
-          <div className="container mx-auto px-4">";,
+        <section className="py-20 bg-white">"
+          <div className="container mx-auto px-4">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"",
-            >;,
+              className="text-center mb-16""
+            >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Capabilities</span>";
               </h2>;
@@ -209,25 +209,25 @@ export default function IndustrySolutionsPage() {}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"",
-                >;,
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{capability.title}</h3>",
-                  <p className="text-gray-600">{capability.description}</p>",
-                </motion.div>;,
+                  className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300""
+                >;
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{capability.title}</h3>"
+                  <p className="text-gray-600">{capability.description}</p>"
+                </motion.div>;
               ))}
             </div>,
-          </div>;,
+          </div>;
         </section>;
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">",
-          <div className="container mx-auto px-4 text-center">";,
+        <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">"
+          <div className="container mx-auto px-4 text-center">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >,
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">";,
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready for Industry-Specific Solutions?;
               </h2>;
               <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">";

@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
+import {
   Cloud, 
   Zap, 
   Shield, 
@@ -54,7 +54,6 @@ import {
 
 const microSaaSProducts = [
   {
-
     title: 'Cloud Cost Guard (FinOps Assistant)',
     description: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
     icon: DollarSign,
@@ -1027,12 +1026,172 @@ const microSaaSProducts = [
     pricing: '$199 - $1,299/month',
     category: 'Email Marketing',
     popular: true
+  },
+  {
+    title: 'AI-Powered Carbon Footprint Tracker',
+    description: 'Real-time carbon footprint monitoring and reduction recommendations for businesses and individuals.',
+    icon: Sprout,
+    features: ['Carbon Tracking', 'Reduction Strategies', 'Sustainability Reporting', 'Green Certification'],
+    pricing: '$99 - $599/month',
+    category: 'Sustainability',
+    popular: true
+  },
+  {
+    title: 'Smart Contract Audit Platform',
+    description: 'Automated smart contract security auditing and vulnerability detection for blockchain projects.',
+    icon: Shield,
+    features: ['Security Auditing', 'Vulnerability Detection', 'Code Analysis', 'Compliance Checking'],
+    pricing: '$499 - $2,999/month',
+    category: 'Blockchain Security'
+  },
+  {
+    title: 'AI-Powered Voice Cloning Platform',
+    description: 'High-quality voice cloning and synthesis for content creation and accessibility.',
+    icon: Mic,
+    features: ['Voice Cloning', 'Text-to-Speech', 'Voice Conversion', 'Multi-language Support'],
+    pricing: '$299 - $1,499/month',
+    category: 'Voice Technology'
+  },
+  {
+    title: 'Smart Grid Energy Management',
+    description: 'AI-powered smart grid optimization for utilities and energy providers.',
+    icon: Zap,
+    features: ['Grid Optimization', 'Demand Response', 'Renewable Integration', 'Load Balancing'],
+    pricing: '$999 - $4,999/month',
+    category: 'Energy Tech'
+  },
+  {
+    title: 'AI-Powered Drug Discovery Platform',
+    description: 'Machine learning platform for pharmaceutical drug discovery and development.',
+    icon: Heart,
+    features: ['Molecular Analysis', 'Drug Design', 'Toxicity Prediction', 'Clinical Trial Optimization'],
+    pricing: '$2,999 - $14,999/month',
+    category: 'PharmaTech'
+  },
+  {
+    title: 'Smart City Traffic Optimization',
+    description: 'AI-powered traffic management and optimization for smart cities.',
+    icon: Car,
+    features: ['Traffic Analysis', 'Route Optimization', 'Signal Control', 'Congestion Reduction'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'Smart Cities'
+  },
+  {
+    title: 'AI-Powered Fraud Detection System',
+    description: 'Advanced fraud detection and prevention for financial institutions and e-commerce.',
+    icon: Shield,
+    features: ['Real-time Detection', 'Behavioral Analysis', 'Risk Scoring', 'Automated Blocking'],
+    pricing: '$799 - $3,999/month',
+    category: 'FinTech Security'
+  },
+  {
+    title: 'Smart Home Security AI',
+    description: 'AI-powered home security system with facial recognition and behavioral analysis.',
+    icon: Home,
+    features: ['Facial Recognition', 'Behavioral Analysis', 'Intrusion Detection', 'Mobile Alerts'],
+    pricing: '$199 - $999/month',
+    category: 'Home Security'
+  },
+  {
+    title: 'AI-Powered Content Creation Suite',
+    description: 'Comprehensive AI content creation platform for blogs, social media, and marketing.',
+    icon: FileText,
+    features: ['Blog Writing', 'Social Media Posts', 'Video Scripts', 'SEO Optimization'],
+    pricing: '$149 - $799/month',
+    category: 'Content Creation'
+  },
+  {
+    title: 'Smart Manufacturing Execution System',
+    description: 'AI-powered manufacturing execution and quality control for production lines.',
+    icon: Settings,
+    features: ['Production Planning', 'Quality Control', 'Equipment Monitoring', 'Efficiency Optimization'],
+    pricing: '$1,499 - $7,499/month',
+    category: 'Manufacturing'
+  },
+  {
+    title: 'AI-Powered Personal Finance Coach',
+    description: 'Personalized financial coaching and investment advice using AI analysis.',
+    icon: DollarSign,
+    features: ['Financial Analysis', 'Investment Advice', 'Budget Planning', 'Goal Tracking'],
+    pricing: '$29 - $199/month',
+    category: 'Personal Finance'
+  },
+  {
+    title: 'Smart Water Quality Monitoring',
+    description: 'IoT-based water quality monitoring and contamination detection system.',
+    icon: Droplets,
+    features: ['Real-time Monitoring', 'Contamination Detection', 'Quality Alerts', 'Compliance Reporting'],
+    pricing: '$299 - $1,499/month',
+    category: 'Water Management'
+  },
+  {
+    title: 'AI-Powered Language Translation API',
+    description: 'Real-time language translation service with context awareness and cultural adaptation.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Context Awareness', 'Cultural Adaptation', 'API Integration'],
+    pricing: '$99 - $599/month',
+    category: 'Language Services'
+  },
+  {
+    title: 'Smart Retail Inventory Optimization',
+    description: 'AI-powered inventory optimization for retail with demand forecasting and automated ordering.',
+    icon: ShoppingCart,
+    features: ['Demand Forecasting', 'Automated Ordering', 'Price Optimization', 'Waste Reduction'],
+    pricing: '$399 - $1,999/month',
+    category: 'Retail Tech'
+  },
+  {
+    title: 'AI-Powered Mental Health Monitoring',
+    description: 'Continuous mental health monitoring and early intervention system.',
+    icon: Heart,
+    features: ['Mood Tracking', 'Stress Detection', 'Early Intervention', 'Professional Alerts'],
+    pricing: '$49 - $299/month',
+    category: 'Mental Health'
+  },
+  {
+    title: 'Smart Building Occupancy Analytics',
+    description: 'AI-powered building occupancy analysis and space utilization optimization.',
+    icon: Building,
+    features: ['Occupancy Tracking', 'Space Utilization', 'Energy Optimization', 'Capacity Planning'],
+    pricing: '$199 - $999/month',
+    category: 'PropTech'
+  },
+  {
+    title: 'AI-Powered Code Generation Platform',
+    description: 'Automated code generation and development assistance for software engineers.',
+    icon: Code,
+    features: ['Code Generation', 'Bug Fixing', 'Code Review', 'Documentation'],
+    pricing: '$199 - $999/month',
+    category: 'Development Tools'
+  },
+  {
+    title: 'Smart Agriculture Drone Management',
+    description: 'AI-powered drone fleet management for precision agriculture and crop monitoring.',
+    icon: Sprout,
+    features: ['Drone Fleet Management', 'Crop Monitoring', 'Precision Spraying', 'Yield Analysis'],
+    pricing: '$599 - $2,999/month',
+    category: 'AgTech'
+  },
+  {
+    title: 'AI-Powered Cybersecurity Training',
+    description: 'Personalized cybersecurity training and simulation platform for organizations.',
+    icon: Shield,
+    features: ['Personalized Training', 'Simulation Exercises', 'Progress Tracking', 'Certification'],
+    pricing: '$99 - $599/month',
+    category: 'Cybersecurity Training'
+  },
+  {
+    title: 'Smart Energy Storage Management',
+    description: 'AI-powered energy storage optimization for renewable energy systems.',
+    icon: Battery,
+    features: ['Storage Optimization', 'Load Balancing', 'Cost Optimization', 'Grid Integration'],
+    pricing: '$399 - $1,999/month',
+    category: 'Energy Storage'
   }
 ];
 
 const features = [
   {
-
     icon: Zap,
     title: 'Rapid Deployment',
     description: 'Get up and running in days, not months'
@@ -1067,7 +1226,6 @@ const features = [
 
 const benefits = [
   {
-
     icon: Clock,
     title: 'Fast Time to Market',
     description: 'Launch your SaaS in weeks, not months',
@@ -1096,7 +1254,6 @@ const benefits = [
 
 const pricingTiers = [
   {
-
     name: 'Starter',
     description: 'Perfect for small teams and MVPs',
     price: '$299',
@@ -1164,9 +1321,8 @@ export default function MicroSaaSPage() {
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-
-            initial={{ opacity: 0, y: 30 }}
+          <motion.div,
+    initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
@@ -1200,8 +1356,8 @@ export default function MicroSaaSPage() {
       {/* Products Grid */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
-                  <motion.div
-            className="text-center mb-16"
+                  <motion.div,
+    className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1220,11 +1376,9 @@ export default function MicroSaaSPage() {
             {microSaaSProducts.map((product, index) => {
               const IconComponent = product.icon;
               return (
-                <motion.div
-                  key={index}
-
+                <motion.div,
+    key={index}
                   className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative ${
-
                     product.popular ? 'ring-2 ring-purple-200' : ''
                   }`}
                   initial={{ opacity: 0, y: 30 }}
@@ -1240,7 +1394,6 @@ export default function MicroSaaSPage() {
                       </span>
                   </div>
                   )}
-                  
                   <div className="flex items-center justify-between mb-4">
 
                     <div className="text-purple-600 group-hover:text-indigo-600 transition-colors">
@@ -1273,8 +1426,8 @@ export default function MicroSaaSPage() {
                   <div className="mb-4">
                   <span className="text-sm font-semibold text-purple-600">{product.pricing}</span>
                   </div>
-                  <Link
-                    href="/contact"
+                  <Link,
+    href="/contact"
                     className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
                   >
                     <span>Get Started</span>
@@ -1290,8 +1443,8 @@ export default function MicroSaaSPage() {
       {/* Features Section */}
       <section className="py-20 bg-white">
                   <div className="container mx-auto px-4">
-                  <motion.div
-            className="text-center mb-16"
+                  <motion.div,
+    className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1308,12 +1461,10 @@ export default function MicroSaaSPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => {
-
               const IconComponent = feature.icon;
               return (
-                <motion.div
-                  key={index}
-
+                <motion.div,
+    key={index}
                   className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
 
                   initial={{ opacity: 0, y: 30 }}
@@ -1340,8 +1491,8 @@ export default function MicroSaaSPage() {
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
-                  <motion.div
-            className="text-center mb-16"
+                  <motion.div,
+    className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1360,8 +1511,8 @@ export default function MicroSaaSPage() {
             {benefits.map((benefit, index) => {
               const IconComponent = benefit.icon;
               return (
-                <motion.div
-                  key={index}
+                <motion.div,
+    key={index}
                   className="text-center"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -1390,8 +1541,8 @@ export default function MicroSaaSPage() {
       {/* Pricing Section */}
       <section className="py-20 bg-white">
                   <div className="container mx-auto px-4">
-                  <motion.div
-            className="text-center mb-16"
+                  <motion.div,
+    className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1409,8 +1560,8 @@ export default function MicroSaaSPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingTiers.map((tier, index) => (
 
-              <motion.div
-                key={index}
+              <motion.div,
+    key={index}
                 className={`p-8 rounded-xl shadow-lg ${
                   tier.popular ? 'bg-purple-50 border-2 border-purple-200' : 'bg-white'
                 }`}
@@ -1426,7 +1577,6 @@ export default function MicroSaaSPage() {
                     </span>
                   </div>
                 )}
-                
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   {tier.name}
                 </h3>
@@ -1445,8 +1595,8 @@ export default function MicroSaaSPage() {
                     </li>
                   ))}
                 </ul>
-                  <Link
-                  href="/contact"
+                  <Link,
+    href="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     tier.popular
 
@@ -1467,8 +1617,8 @@ export default function MicroSaaSPage() {
       {/* Contact Information Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
+          <motion.div,
+    className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1483,8 +1633,8 @@ export default function MicroSaaSPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <motion.div
-              className="text-center p-6 bg-white rounded-lg shadow-lg"
+            <motion.div,
+    className="text-center p-6 bg-white rounded-lg shadow-lg"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
@@ -1500,8 +1650,8 @@ export default function MicroSaaSPage() {
               </a>
             </motion.div>
 
-            <motion.div
-              className="text-center p-6 bg-white rounded-lg shadow-lg"
+            <motion.div,
+    className="text-center p-6 bg-white rounded-lg shadow-lg"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -1517,8 +1667,8 @@ export default function MicroSaaSPage() {
               </a>
             </motion.div>
 
-            <motion.div
-              className="text-center p-6 bg-white rounded-lg shadow-lg"
+            <motion.div,
+    className="text-center p-6 bg-white rounded-lg shadow-lg"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
@@ -1536,8 +1686,8 @@ export default function MicroSaaSPage() {
             </motion.div>
           </div>
 
-          <motion.div
-            className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-white text-center"
+          <motion.div,
+    className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-white text-center"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1572,9 +1722,8 @@ export default function MicroSaaSPage() {
       <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
 
         <div className="container mx-auto px-4 text-center">
-          <motion.div
-
-            initial={{ opacity: 0, y: 30 }}
+          <motion.div,
+    initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

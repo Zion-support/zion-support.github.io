@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
+import {
   Server, 
   Shield, 
   Cloud, 
@@ -40,7 +40,6 @@ import {
 
 const itServices = [
   {
-
     title: 'Cloud Infrastructure Management',
     description: 'Comprehensive cloud solutions including AWS, Azure, and Google Cloud Platform management.',
     icon: Cloud,
@@ -317,7 +316,6 @@ const itServices = [
     category: 'Compliance'
   },
   {
-
     title: 'Edge Computing Solutions',
     description: 'Edge computing infrastructure and deployment for low-latency applications.',
     icon: Cpu,
@@ -753,6 +751,158 @@ const itServices = [
     pricing: '$40,000 - $250,000/setup',
     category: 'Infrastructure Automation',
     popular: true
+  },
+  {
+    title: 'AI-Powered IT Operations (AIOps)',
+    description: 'Intelligent IT operations using AI for proactive monitoring, incident management, and automation.',
+    icon: Brain,
+    features: ['Predictive Analytics', 'Automated Incident Response', 'Root Cause Analysis', 'Performance Optimization'],
+    pricing: '$25,000 - $125,000/setup',
+    category: 'AIOps'
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Complete zero trust security implementation with identity verification and micro-segmentation.',
+    icon: Shield,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Risk Assessment'],
+    pricing: '$50,000 - $250,000/project',
+    category: 'Security Architecture'
+  },
+  {
+    title: 'Hybrid Cloud Management Platform',
+    description: 'Unified management platform for hybrid cloud environments across multiple providers.',
+    icon: Cloud,
+    features: ['Multi-cloud Management', 'Cost Optimization', 'Security Compliance', 'Performance Monitoring'],
+    pricing: '$30,000 - $150,000/setup',
+    category: 'Cloud Management'
+  },
+  {
+    title: 'Quantum-Safe Cryptography Implementation',
+    description: 'Implementation of quantum-resistant cryptographic solutions for future-proof security.',
+    icon: Lock,
+    features: ['Quantum-resistant Algorithms', 'Migration Planning', 'Compliance Testing', 'Performance Optimization'],
+    pricing: '$75,000 - $350,000/project',
+    category: 'Quantum Security'
+  },
+  {
+    title: 'Smart Building IT Infrastructure',
+    description: 'IoT-enabled smart building infrastructure with integrated building management systems.',
+    icon: Building,
+    features: ['IoT Integration', 'Building Automation', 'Energy Management', 'Occupant Analytics'],
+    pricing: '$40,000 - $200,000/project',
+    category: 'Smart Buildings'
+  },
+  {
+    title: 'Edge AI Computing Infrastructure',
+    description: 'Distributed AI computing infrastructure for edge devices and real-time processing.',
+    icon: Cpu,
+    features: ['Edge AI Deployment', 'Model Optimization', 'Real-time Processing', 'Bandwidth Optimization'],
+    pricing: '$60,000 - $300,000/setup',
+    category: 'Edge AI'
+  },
+  {
+    title: 'Cybersecurity Operations Center (SOC)',
+    description: '24/7 security operations center with advanced threat detection and response capabilities.',
+    icon: Shield,
+    features: ['24/7 Monitoring', 'Threat Hunting', 'Incident Response', 'Forensic Analysis'],
+    pricing: '$100,000 - $500,000/setup',
+    category: 'SOC Services'
+  },
+  {
+    title: 'Digital Twin Infrastructure',
+    description: 'Digital twin platform for real-time monitoring and simulation of physical assets.',
+    icon: Monitor,
+    features: ['Real-time Simulation', 'Predictive Modeling', 'Asset Monitoring', 'Performance Analytics'],
+    pricing: '$80,000 - $400,000/project',
+    category: 'Digital Twins'
+  },
+  {
+    title: 'Sustainable IT Infrastructure',
+    description: 'Green IT solutions with energy-efficient hardware and carbon footprint optimization.',
+    icon: Sprout,
+    features: ['Energy Optimization', 'Carbon Tracking', 'Green Hardware', 'Sustainability Reporting'],
+    pricing: '$35,000 - $175,000/setup',
+    category: 'Green IT'
+  },
+  {
+    title: 'Multi-Cloud Disaster Recovery',
+    description: 'Comprehensive disaster recovery across multiple cloud providers with automated failover.',
+    icon: Cloud,
+    features: ['Multi-cloud Backup', 'Automated Failover', 'Data Synchronization', 'Recovery Testing'],
+    pricing: '$45,000 - $225,000/setup',
+    category: 'Disaster Recovery'
+  },
+  {
+    title: 'IT Compliance & Governance Platform',
+    description: 'Comprehensive IT governance platform with compliance monitoring and risk management.',
+    icon: Shield,
+    features: ['Compliance Monitoring', 'Risk Assessment', 'Policy Management', 'Audit Reporting'],
+    pricing: '$20,000 - $100,000/setup',
+    category: 'IT Governance'
+  },
+  {
+    title: 'Advanced Network Analytics',
+    description: 'AI-powered network analytics with traffic analysis, anomaly detection, and optimization.',
+    icon: Network,
+    features: ['Traffic Analysis', 'Anomaly Detection', 'Performance Optimization', 'Capacity Planning'],
+    pricing: '$25,000 - $125,000/setup',
+    category: 'Network Analytics'
+  },
+  {
+    title: 'IT Service Management (ITSM) Platform',
+    description: 'Comprehensive ITSM platform with service desk, change management, and asset tracking.',
+    icon: Settings,
+    features: ['Service Desk', 'Change Management', 'Asset Tracking', 'Knowledge Management'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'ITSM'
+  },
+  {
+    title: 'Cloud-Native Application Platform',
+    description: 'Platform for building, deploying, and managing cloud-native applications with microservices.',
+    icon: Server,
+    features: ['Microservices Architecture', 'Container Orchestration', 'Service Mesh', 'API Management'],
+    pricing: '$50,000 - $250,000/setup',
+    category: 'Cloud Native'
+  },
+  {
+    title: 'IT Asset Lifecycle Management',
+    description: 'Complete IT asset lifecycle management from procurement to disposal with cost optimization.',
+    icon: Monitor,
+    features: ['Asset Discovery', 'Lifecycle Tracking', 'Cost Optimization', 'Compliance Management'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Asset Management'
+  },
+  {
+    title: 'Advanced Threat Intelligence Platform',
+    description: 'Comprehensive threat intelligence platform with real-time threat detection and analysis.',
+    icon: Shield,
+    features: ['Threat Intelligence', 'Real-time Analysis', 'Threat Hunting', 'Incident Correlation'],
+    pricing: '$30,000 - $150,000/setup',
+    category: 'Threat Intelligence'
+  },
+  {
+    title: 'IT Performance Optimization',
+    description: 'Comprehensive IT performance optimization with monitoring, analysis, and improvement.',
+    icon: TrendingUp,
+    features: ['Performance Monitoring', 'Bottleneck Analysis', 'Optimization Recommendations', 'Capacity Planning'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Performance Optimization'
+  },
+  {
+    title: 'Secure Remote Work Infrastructure',
+    description: 'Complete secure remote work infrastructure with VPN, VDI, and collaboration tools.',
+    icon: Users,
+    features: ['Secure VPN', 'Virtual Desktop', 'Collaboration Tools', 'Security Monitoring'],
+    pricing: '$25,000 - $125,000/setup',
+    category: 'Remote Work'
+  },
+  {
+    title: 'IT Cost Optimization Platform',
+    description: 'AI-powered IT cost optimization with resource right-sizing and waste reduction.',
+    icon: DollarSign,
+    features: ['Cost Analysis', 'Resource Right-sizing', 'Waste Detection', 'Optimization Recommendations'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'Cost Optimization'
   }
 ];
 
@@ -769,7 +919,6 @@ const technologies = [
 
 const benefits = [
   {
-
     icon: Clock,
     title: 'Reduced Downtime',
     description: 'Proactive monitoring and maintenance',
@@ -798,7 +947,6 @@ const benefits = [
 
 const supportLevels = [
   {
-
     name: 'Basic Support',
     description: 'Standard business hours support',
     features: ['Email Support', 'Phone Support', 'Basic Monitoring', 'Monthly Reports'],
@@ -836,9 +984,8 @@ export default function ITServicesPage() {
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-
-            initial={{ opacity: 0, y: 30 }}
+          <motion.div,
+    initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
@@ -874,8 +1021,8 @@ export default function ITServicesPage() {
       {/* Services Grid */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
-                  <motion.div
-            className="text-center mb-16"
+                  <motion.div,
+    className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -894,16 +1041,14 @@ export default function ITServicesPage() {
             {itServices.map((service, index) => {
               const IconComponent = service.icon;
               return (
-                <motion.div
-                  key={index}
-
+                <motion.div,
+    key={index}
                   className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
 
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-
                   whileHover={{ y: -5 }}
                 >
                   <div className="flex items-center justify-between mb-4">
@@ -937,8 +1082,8 @@ export default function ITServicesPage() {
                   <div className="mb-4">
                   <span className="text-sm font-semibold text-green-600">{service.pricing}</span>
                   </div>
-                  <Link
-                    href="/contact"
+                  <Link,
+    href="/contact"
                     className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
                   >
                     <span>Get Quote</span>
@@ -954,8 +1099,8 @@ export default function ITServicesPage() {
       {/* Technologies Section */}
       <section className="py-20 bg-white">
                   <div className="container mx-auto px-4">
-                  <motion.div
-            className="text-center mb-16"
+                  <motion.div,
+    className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -974,9 +1119,8 @@ export default function ITServicesPage() {
             {technologies.map((tech, index) => {
               const IconComponent = tech.icon;
               return (
-                <motion.div
-                  key={index}
-
+                <motion.div,
+    key={index}
                   className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -1003,8 +1147,8 @@ export default function ITServicesPage() {
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
-                  <motion.div
-            className="text-center mb-16"
+                  <motion.div,
+    className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1023,8 +1167,8 @@ export default function ITServicesPage() {
             {benefits.map((benefit, index) => {
               const IconComponent = benefit.icon;
               return (
-                <motion.div
-                  key={index}
+                <motion.div,
+    key={index}
                   className="text-center"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -1053,8 +1197,8 @@ export default function ITServicesPage() {
       {/* Support Levels Section */}
       <section className="py-20 bg-white">
                   <div className="container mx-auto px-4">
-                  <motion.div
-            className="text-center mb-16"
+                  <motion.div,
+    className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1071,8 +1215,8 @@ export default function ITServicesPage() {
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {supportLevels.map((level, index) => (
-              <motion.div
-                key={index}
+              <motion.div,
+    key={index}
                 className={`p-8 rounded-xl shadow-lg ${
                   index === 1 ? 'bg-green-50 border-2 border-green-200' : 'bg-white'
                 }`}
@@ -1098,8 +1242,8 @@ export default function ITServicesPage() {
                     </li>
                   ))}
                 </ul>
-                  <Link
-                  href="/contact"
+                  <Link,
+    href="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     index === 1
 
@@ -1121,9 +1265,8 @@ export default function ITServicesPage() {
       <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
 
         <div className="container mx-auto px-4 text-center">
-          <motion.div
-
-            initial={{ opacity: 0, y: 30 }}
+          <motion.div,
+    initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -1150,8 +1293,8 @@ export default function ITServicesPage() {
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-700 text-white">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <motion.div,
+    initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"

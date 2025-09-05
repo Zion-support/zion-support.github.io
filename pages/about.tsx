@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
+import {
   Brain, 
   Users, 
   Award, 
@@ -139,7 +139,7 @@ export default function AboutPage() {
 
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
-            initial={{ "opacity": 0, "y": 30 }}
+    initial={{ "opacity": 0, "y": 30 }}
             animate={{ "opacity": 1, "y": 0 }}
             transition={{ "duration": 0.8 }}
             className="text-center"
@@ -161,7 +161,7 @@ export default function AboutPage() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div
-            className="text-center mb-16"
+    className="text-center mb-16"
             initial={{ "opacity": 0, "y": 30 }}
             whileInView={{ "opacity": 1, "y": 0 }}
             transition={{ "duration": 0.8 }}
@@ -177,7 +177,7 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
-              className="bg-white p-8 rounded-xl shadow-lg text-center"
+    className="bg-white p-8 rounded-xl shadow-lg text-center"
               initial={{ opacity: 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
               transition={{ "duration": 0.8, "delay": 0.1 }}
@@ -193,7 +193,7 @@ export default function AboutPage() {
             </motion.div>
 
             <motion.div
-              className="bg-white p-8 rounded-xl shadow-lg text-center"
+    className="bg-white p-8 rounded-xl shadow-lg text-center"
               initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
               transition={{ "duration": 0.8, "delay": 0.2 }}
@@ -209,7 +209,7 @@ export default function AboutPage() {
             </motion.div>
 
             <motion.div
-              className="bg-white p-8 rounded-xl shadow-lg text-center"
+    className="bg-white p-8 rounded-xl shadow-lg text-center"
               initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
               transition={{ "duration": 0.8, "delay": 0.3 }}
@@ -231,7 +231,7 @@ export default function AboutPage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
-            className="text-center mb-16"
+    className="text-center mb-16"
             initial={{ "opacity": 0, "y": 30 }}
             whileInView={{ "opacity": 1, "y": 0 }}
             transition={{ "duration": 0.8 }}
@@ -250,7 +250,7 @@ export default function AboutPage() {
               const IconComponent = value.icon;
               return (
                 <motion.div
-                  key={index}
+    key={index}
                   className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   initial={{ opacity: 0, "y": 30 }}
                   whileInView={{ "opacity": 1, "y": 0 }}
@@ -277,7 +277,7 @@ export default function AboutPage() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div
-            className="text-center mb-16"
+    className="text-center mb-16"
             initial={{ "opacity": 0, "y": 30 }}
             whileInView={{ "opacity": 1, "y": 0 }}
             transition={{ "duration": 0.8 }}
@@ -294,7 +294,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, index) => (
               <motion.div
-                key={index}
+    key={index}
                 className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow"
                 initial={{ opacity: 0, "y": 30 }}
                 whileInView={{ "opacity": 1, "y": 0 }}
@@ -328,7 +328,7 @@ export default function AboutPage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
-            className="text-center mb-16"
+    className="text-center mb-16"
             initial={{ "opacity": 0, "y": 30 }}
             whileInView={{ "opacity": 1, "y": 0 }}
             transition={{ "duration": 0.8 }}
@@ -347,7 +347,7 @@ export default function AboutPage() {
               const IconComponent = achievement.icon;
               return (
                 <motion.div
-                  key={index}
+    key={index}
                   className="text-center"
                   initial={{ "opacity": 0, "y": 30 }}
                   whileInView={{ "opacity": 1, "y": 0 }}
@@ -377,7 +377,7 @@ export default function AboutPage() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div
-            className="text-center mb-16"
+    className="text-center mb-16"
             initial={{ "opacity": 0, "y": 30 }}
             whileInView={{ "opacity": 1, "y": 0 }}
             transition={{ "duration": 0.8 }}
@@ -395,7 +395,7 @@ export default function AboutPage() {
             <div className="space-y-8">
               {timeline.map((item, index) => (
                 <motion.div
-                  key={index}
+    key={index}
                   className="flex items-start space-x-6"
                   initial={{ "opacity": 0, "x": -30 }}
                   whileInView={{ "opacity": 1, "x": 0 }}
@@ -426,7 +426,7 @@ export default function AboutPage() {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ "opacity": 0, "y": 30 }}
+    initial={{ "opacity": 0, "y": 30 }}
             whileInView={{ "opacity": 1, "y": 0 }}
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}

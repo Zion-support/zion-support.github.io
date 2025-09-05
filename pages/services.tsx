@@ -77,8 +77,8 @@ export default function ServicesPage() {
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <motion.div,
+    initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
@@ -99,8 +99,8 @@ export default function ServicesPage() {
       {/* Services Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-12 md:mb-16"
+          <motion.div,
+    className="text-center mb-12 md:mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -118,8 +118,8 @@ export default function ServicesPage() {
             {services.map((service, index) => {
               const IconComponent = service.icon;
               return (
-                <motion.div
-                  key={index}
+                <motion.div,
+    key={index}
                   className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -165,8 +165,8 @@ export default function ServicesPage() {
                     <span className="text-lg font-semibold text-blue-600">{service.pricing}</span>
                   </div>
 
-                  <Link
-                    href={service.href}
+                  <Link,
+    href={service.href}
                     className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center group"
                   >
                     <span>Learn More</span>
@@ -182,8 +182,8 @@ export default function ServicesPage() {
       {/* Benefits Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
+          <motion.div,
+    className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -201,8 +201,8 @@ export default function ServicesPage() {
             {benefits.map((benefit, index) => {
               const IconComponent = benefit.icon;
               return (
-                <motion.div
-                  key={index}
+                <motion.div,
+    key={index}
                   className="text-center"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -228,8 +228,8 @@ export default function ServicesPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <motion.div,
+    initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

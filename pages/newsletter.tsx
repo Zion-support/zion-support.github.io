@@ -1,8 +1,7 @@
-import _React, { useState } from 'react';,
+import React, { useState } from 'react';
 import Link from 'next/link';';
-import { motion } from 'framer-motion';,
-import { }
-  Mail, 
+import { motion } from 'framer-motion';
+import { Mail, 
   CheckCircle, 
   ArrowRight,
   Users,
@@ -13,31 +12,31 @@ import { }
   Shield,
   Zap,
   BarChart3;
-} from 'lucide-react';,
+} from 'lucide-react';
 import Layout from '../components/Layout';';
 
 const benefits = [;
   {}
     title: 'Exclusive Content,',
     description: 'Get access to exclusive white papers, case studies, and industry insights.',',
-    icon: FileText;,
+    icon: FileText;
   },
   {}
     title: 'Webinar Invitations,',
     description: 'Receive invitations to our expert-led webinars and virtual events.,',
-    icon: Video;,
+    icon: Video;
   },
   {}
     title: 'Technology Updates,',
     description: 'Stay updated with the latest technology trends and innovations.,',
-    icon: Zap;,
+    icon: Zap;
   },
   {}
     title: 'Industry Insights,',
     description: 'Get valuable insights into your industry and market trends.,',
-    icon: BarChart3;,
+    icon: BarChart3;
   }
-;];,
+;];
 
 const newsletterTopics = [;
   'AI & Machine Learning',',
@@ -47,40 +46,40 @@ const newsletterTopics = [;
   'Data Analytics',',
   'Blockchain Technology',',
   'IoT Solutions',',
-  'Industry News'';,
-;];,
+  'Industry News'';
+;];
 
-export default function NewsletterPage() {}
+export default function NewsletterPage() {
   const [email, setEmail] = useState('');',
-  const [selectedTopics, setSelectedTopics] = useState<string[]>([]);,
-  const [isSubscribed, setIsSubscribed] = useState(false);,
+  const [selectedTopics, setSelectedTopics] = useState<string[]>([]);
+  const [isSubscribed, setIsSubscribed] = useState(false);
 
   const handleTopicToggle = (topic: string) => {}
     setSelectedTopics(prev => ),
       prev.includes(topic) 
         ? prev.filter(t => t !== topic);
-        : [...prev, topic];,
-;    );,
-  };,
+        : [...prev, topic];
+;    );
+  };
 
   const handleSubscribe = (e: _React.FormEvent) => {
 ;    e.preventDefault();
     // Here you would typically send the subscription to your backend}
-    setIsSubscribed(true);,
-    setEmail('');';,
-    setSelectedTopics([]);,
-  };,
+    setIsSubscribed(true);
+    setEmail('');';
+    setSelectedTopics([]);
+  };
 
   return (;
     <Layout );
       title="Newsletter - Zion Tech Group"";
-      description="Subscribe to our newsletter for exclusive content, webinar invitations, and the latest technology insights."",
-      keywords="newsletter, technology updates, industry insights, exclusive content, webinars"",
-    >;,
+      description="Subscribe to our newsletter for exclusive content, webinar invitations, and the latest technology insights.""
+      keywords="newsletter, technology updates, industry insights, exclusive content, webinars""
+    >;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white py-20 overflow-hidden">",
-          <div className="absolute inset-0">";,
+        <section className="relative bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white py-20 overflow-hidden">"
+          <div className="absolute inset-0">";
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";
             <div className="absolute top-40 right-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>";
@@ -91,8 +90,8 @@ export default function NewsletterPage() {}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"",
-            >;,
+              className="text-center max-w-4xl mx-auto""
+            >;
               <div className="flex items-center justify-center mb-6">";
                 <Mail className="w-12 h-12 text-blue-400 mr-4" />";
                 <h1 className="text-5xl md:text-6xl font-bold">";
@@ -105,22 +104,22 @@ export default function NewsletterPage() {}
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">";
                 Subscribe to our newsletter and get exclusive access to industry insights, 
                 technology updates, and expert-led webinars delivered to your inbox.,
-              </p>;,
+              </p>;
             </motion.div>;
           </div>;
         </section>;
 
         {/* Subscription Form */}
-        <section className="py-20 bg-white">",
-          <div className="container mx-auto px-4">";,
+        <section className="py-20 bg-white">"
+          <div className="container mx-auto px-4">";
             <div className="max-w-2xl mx-auto">";
               {isSubscribed ? (;
                 <motion.div}),
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
-                  className="text-center"",
-                >;,
+                  className="text-center""
+                >;
                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">";
                     <CheckCircle className="w-8 h-8 text-green-600" />";
                   </div>;
@@ -132,8 +131,8 @@ export default function NewsletterPage() {}
                   </p>;
                   <button;
                     onClick={() => setIsSubscribed(false)}
-                    className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"",
-                  >;,
+                    className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium""
+                  >;
                     Subscribe Another Email;
                   </button>;
                 </motion.div>;
@@ -143,12 +142,12 @@ export default function NewsletterPage() {}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
                 >,
-                  <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">";,
+                  <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">";
                     Subscribe to Our Newsletter;
                   </h2>;
                   
-                  <form onSubmit={handleSubscribe} className="space-y-6">",
-                    <div>;,
+                  <form onSubmit={handleSubscribe} className="space-y-6">"
+                    <div>;
                       <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">";
                         Email Address;
                       </label>;
@@ -157,8 +156,8 @@ export default function NewsletterPage() {}
                         id="email"";
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        required;,
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"";,
+                        required;
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"";
                         placeholder="Enter your email address"";
                       />;
                     </div>;
@@ -166,16 +165,16 @@ export default function NewsletterPage() {}
                     <div>;
                       <label className="block text-sm font-medium text-gray-700 mb-3">";
                         Topics of Interest (Select all that, apply),
-                      </label>;,
+                      </label>;
                       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">";
                         {newsletterTopics.map((topic) => (;
                           <button}),
                             key={topic}
-                            type="button"",
+                            type="button""
                             onClick={() => handleTopicToggle(topic)}
                             className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${}
                               selectedTopics.includes(topic),
-                                ? 'bg-blue-600 text-white'';,
+                                ? 'bg-blue-600 text-white'';
                                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'';
                             }`}
                           >,
@@ -183,7 +182,7 @@ export default function NewsletterPage() {}
                           </button>,
                         ))}
                       </div>,
-                    </div>;,
+                    </div>;
 
                     <button;
                       type="submit"";
@@ -197,18 +196,18 @@ export default function NewsletterPage() {}
                 </motion.div>;
               )}
             </div>,
-          </div>;,
+          </div>;
         </section>;
 
         {/* Benefits Section */}
-        <section className="py-20 bg-gray-50">",
-          <div className="container mx-auto px-4">";,
+        <section className="py-20 bg-gray-50">"
+          <div className="container mx-auto px-4">";
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"",
-            >;,
+              className="text-center mb-16""
+            >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 What You'll Get';
               </h2>;
@@ -225,37 +224,37 @@ export default function NewsletterPage() {}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="text-center"",
-                >;,
+                  className="text-center""
+                >;
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6">";
                     <benefit.icon className="w-8 h-8 text-white" />";
                   </div>;
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>",
-                  <p className="text-gray-600 leading-relaxed">{benefit.description}</p>",
-                </motion.div>;,
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>"
+                  <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
+                </motion.div>;
               ))}
             </div>,
-          </div>;,
+          </div>;
         </section>;
 
         {/* Stats Section */}
-        <section className="py-20 bg-white">",
-          <div className="container mx-auto px-4">";,
+        <section className="py-20 bg-white">"
+          <div className="container mx-auto px-4">";
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">";
               <motion.div;
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >,
-                <div className="text-4xl font-bold text-blue-600 mb-2">10,000+</div>",
-                <div className="text-gray-600">Subscribers</div>";,
+                <div className="text-4xl font-bold text-blue-600 mb-2">10,000+</div>"
+                <div className="text-gray-600">Subscribers</div>";
               </motion.div>;
               <motion.div;
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
               >,
-                <div className="text-4xl font-bold text-blue-600 mb-2">Weekly</div>";,
+                <div className="text-4xl font-bold text-blue-600 mb-2">Weekly</div>";
                 <div className="text-gray-600">Updates</div>";
               </motion.div>;
               <motion.div;
@@ -263,7 +262,7 @@ export default function NewsletterPage() {}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >,
-                <div className="text-4xl font-bold text-blue-600 mb-2">95%</div>";,
+                <div className="text-4xl font-bold text-blue-600 mb-2">95%</div>";
                 <div className="text-gray-600">Open Rate</div>";
               </motion.div>;
             </div>;
@@ -271,14 +270,14 @@ export default function NewsletterPage() {}
         </section>;
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">",
-          <div className="container mx-auto px-4 text-center">";,
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">"
+          <div className="container mx-auto px-4 text-center">";
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >,
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">";,
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Stay Updated?;
               </h2>;
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">";

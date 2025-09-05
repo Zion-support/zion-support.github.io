@@ -21,24 +21,30 @@ const navigation = [
     name: 'Services',
     href: '/services',
     children: [
-      { name: 'AI Services', href: '/ai-services', description: '60+ Cutting-edge AI solutions' },
-      { name: 'IT Services', href: '/it-services', description: '50+ Comprehensive IT solutions' },
-      { name: 'Micro SaaS', href: '/micro-saas', description: '65+ Scalable SaaS solutions' },
-      { name: 'Solutions', href: '/solutions', description: 'Industry-specific solutions' },
-      { name: 'Industries', href: '/industries', description: 'Sector-focused services' },
+      { name: 'AI Services', href: '/ai-services', description: '80+ Cutting-edge AI solutions' },
+      { name: 'IT Services', href: '/it-services', description: '70+ Comprehensive IT solutions' },
+      { name: 'Micro SaaS', href: '/micro-saas', description: '85+ Scalable SaaS solutions' },
+      { name: 'Cloud Solutions', href: '/solutions#cloud', description: 'Cloud infrastructure & migration' },
+      { name: 'Cybersecurity', href: '/solutions#security', description: 'Security & compliance' },
+      { name: 'Digital Transformation', href: '/solutions#digital', description: 'Business modernization' },
+      { name: 'IoT Solutions', href: '/solutions#iot', description: 'Internet of Things integration' },
+      { name: 'Blockchain Solutions', href: '/solutions#blockchain', description: 'Blockchain & Web3' },
+      { name: 'Quantum Computing', href: '/solutions#quantum', description: 'Quantum computing services' },
       { name: 'Pricing', href: '/pricing', description: 'Transparent pricing plans' }
     ]
   },
   {
-    name: 'Solutions',
-    href: '/solutions',
+    name: 'Industries',
+    href: '/industries',
     children: [
-      { name: 'Cloud Solutions', href: '/solutions#cloud', description: 'Cloud infrastructure & migration' },
-      { name: 'AI Solutions', href: '/solutions#ai', description: 'AI implementation & consulting' },
-      { name: 'Cybersecurity', href: '/solutions#security', description: 'Security & compliance' },
-      { name: 'Digital Transformation', href: '/solutions#digital', description: 'Business modernization' },
-      { name: 'IoT Solutions', href: '/solutions#iot', description: 'Internet of Things integration' },
-      { name: 'Blockchain Solutions', href: '/solutions#blockchain', description: 'Blockchain & Web3' }
+      { name: 'Healthcare', href: '/industries/healthcare', description: 'AI-powered healthcare solutions' },
+      { name: 'Finance', href: '/industries/finance', description: 'FinTech & banking solutions' },
+      { name: 'Manufacturing', href: '/industries/manufacturing', description: 'Smart manufacturing & Industry 4.0' },
+      { name: 'Retail', href: '/industries/retail', description: 'E-commerce & retail technology' },
+      { name: 'Education', href: '/industries/education', description: 'EdTech & learning platforms' },
+      { name: 'Government', href: '/industries/government', description: 'Public sector solutions' },
+      { name: 'Energy', href: '/industries/energy', description: 'Smart energy & utilities' },
+      { name: 'Transportation', href: '/industries/transportation', description: 'Logistics & mobility solutions' }
     ]
   },
   {
@@ -46,23 +52,25 @@ const navigation = [
     href: '/resources',
     children: [
       { name: 'Blog', href: '/blog', description: 'Latest insights & trends' },
-      { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
-      { name: 'White Papers', href: '/white-papers', description: 'In-depth research' },
-      { name: 'Webinars', href: '/webinars', description: 'Educational sessions' },
-      { name: 'Tutorials', href: '/tutorials', description: 'Step-by-step guides' },
-      { name: 'API Documentation', href: '/api-docs', description: 'Technical documentation' },
-      { name: 'News', href: '/news', description: 'Industry news & updates' }
+      { name: 'Case Studies', href: '/case-studies', description: 'Success stories & testimonials' },
+      { name: 'White Papers', href: '/white-papers', description: 'In-depth research & analysis' },
+      { name: 'Webinars', href: '/webinars', description: 'Educational sessions & demos' },
+      { name: 'Tutorials', href: '/tutorials', description: 'Step-by-step guides & tutorials' },
+      { name: 'API Documentation', href: '/api-docs', description: 'Technical documentation & guides' },
+      { name: 'News', href: '/news', description: 'Industry news & updates' },
+      { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' }
     ]
   },
   {
     name: 'Company',
     href: '/about',
     children: [
-      { name: 'About Us', href: '/about', description: 'Our story & mission' },
-      { name: 'Team', href: '/team', description: 'Meet our experts' },
-      { name: 'Careers', href: '/careers', description: 'Join our team' },
-      { name: 'Partners', href: '/partners', description: 'Our partners' },
-      { name: 'Contact', href: '/contact', description: 'Get in touch' }
+      { name: 'About Us', href: '/about', description: 'Our story, mission & values' },
+      { name: 'Team', href: '/team', description: 'Meet our expert team' },
+      { name: 'Careers', href: '/careers', description: 'Join our growing team' },
+      { name: 'Partners', href: '/partners', description: 'Our strategic partners' },
+      { name: 'Contact', href: '/contact', description: 'Get in touch with us' },
+      { name: 'Newsletter', href: '/newsletter', description: 'Subscribe to our updates' }
     ]
   },
   { name: 'Support', href: '/support' }

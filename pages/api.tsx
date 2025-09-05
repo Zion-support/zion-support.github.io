@@ -1,51 +1,51 @@
-import _React from 'react';,
-import Layout from '../components/Layout';';
-import { motion } from 'framer-motion';,
-import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';,
+import React from 'react';
+import Layout from '../components/Layout';
+import { motion } from 'framer-motion';
+import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
 
-export default function APIPage() {}
-  const apiFeatures = [;,
-    {}
-      title: "RESTful APIs",",
-      description: "Clean, intuitive REST API endpoints for easy integration",",
+export default function APIPage() {
+  const apiFeatures = [
+    {
+      title: "RESTful APIs",
+      description: "Clean, intuitive REST API endpoints for easy integration",
       icon: Code,
-      features: ["JSON Responses", "HTTP Status Codes", "Rate Limiting"]",
+      features: ["JSON Responses", "HTTP Status Codes", "Rate Limiting"]
     },
-    {}
-      title: "Comprehensive Documentation",",
-      description: "Detailed API documentation with examples and guides",",
+    {
+      title: "Comprehensive Documentation",
+      description: "Detailed API documentation with examples and guides",
       icon: Book,
-      features: ["Interactive Docs", "Code Examples", "SDK Libraries"]",
+      features: ["Interactive Docs", "Code Examples", "SDK Libraries"]
     },
-    {}
-      title: "High Performance",",
-      description: "Fast, reliable APIs built for scale and speed",",
+    {
+      title: "High Performance",
+      description: "Fast, reliable APIs built for scale and speed",
       icon: Zap,
-      features: ["Low Latency", "High Throughput", "Global CDN"]",
+      features: ["Low Latency", "High Throughput", "Global CDN"]
     },
-    {}
-      title: "Enterprise Security",",
-      description: "Bank-level security with authentication and encryption",",
+    {
+      title: "Enterprise Security",
+      description: "Bank-level security with authentication and encryption",
       icon: Shield,
-      features: ["OAuth 2.0", "API Keys", "SSL/TLS Encryption"]",
+      features: ["OAuth 2.0", "API Keys", "SSL/TLS Encryption"]
     }
-;  ];,
+  ];
 
-  return (;
-    <Layout );
-      title="API Reference - Zion Tech Group"";
-      description="Comprehensive API documentation and reference for integrating with Zion Tech Group services."";
+  return (
+    <Layout
+      title="API Reference - Zion Tech Group"
+      description="Comprehensive API documentation and reference for integrating with Zion Tech Group services."
     >;
       <div className="min-h-screen bg-gray-50">";
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20">",
-          <div className="container mx-auto px-4">";,
-            <motion.div;
+        <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20">"
+          <div className="container mx-auto px-4">";
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"",
-            >;,
+              className="text-center""
+            >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
                 API Reference;
               </h1>;
@@ -58,60 +58,60 @@ export default function APIPage() {}
         </section>;
 
         {/* Features Section */}
-        <section className="py-20">",
-          <div className="container mx-auto px-4">";,
+        <section className="py-20">"
+          <div className="container mx-auto px-4">";
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {apiFeatures.map((feature, index) => {}
-                const IconComponent = feature.icon;,
-                return (;,
+                const IconComponent = feature.icon;
+                return (;
                   <motion.div);
                     key={index}
-                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"",
+                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >,
-                    <div className="text-indigo-600 mb-4">";,
+                    <div className="text-indigo-600 mb-4">";
                       <IconComponent className="w-10 h-10" />";
                     </div>;
                     <h3 className="text-xl font-bold text-gray-900 mb-4">";
                       {feature.title}
                     </h3>,
-                    <p className="text-gray-600 mb-4">";,
+                    <p className="text-gray-600 mb-4">";
                       {feature.description}
                     </p>,
-                    <ul className="space-y-2">";,
+                    <ul className="space-y-2">";
                       {feature.features.map((item, itemIndex) => (,
-                        <li key={itemIndex} className="flex items-center text-sm text-gray-600">",
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />";,
+                        <li key={itemIndex} className="flex items-center text-sm text-gray-600">"
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />";
                           {item}
                         </li>,
                       ))}
                     </ul>,
-                  </motion.div>;,
+                  </motion.div>;
                 );
               })}
             </div>,
-          </div>;,
+          </div>;
         </section>;
 
         {/* API Endpoints Section */}
-        <section className="py-20 bg-white">",
-          <div className="container mx-auto px-4">";,
-            <motion.div;
+        <section className="py-20 bg-white">"
+          <div className="container mx-auto px-4">";
+            <motion.div
               className="text-center mb-16"";
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >,
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">";,
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">";
                 Available Endpoints;
               </h2>;
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">";
                 Explore our comprehensive API endpoints for AI services, IT solutions, and micro SaaS platforms.,
-              </p>;,
+              </p>;
             </motion.div>;
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
@@ -173,8 +173,8 @@ export default function APIPage() {}
         </section>;
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">",
-          <div className="container mx-auto px-4 text-center">";,
+        <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">"
+          <div className="container mx-auto px-4 text-center">";
             <h2 className="text-3xl md:text-4xl font-bold mb-6">";
               Start Building Today;
             </h2>;
@@ -186,7 +186,7 @@ export default function APIPage() {}
               className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"";
               whileHover={{ scale: 1.05 }}
             >,
-              Get API Access;,
+              Get API Access;
               <ArrowRight className="w-5 h-5 ml-2" />";
             </motion.a>;
           </div>;

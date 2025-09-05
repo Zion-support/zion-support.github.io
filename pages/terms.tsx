@@ -1,10 +1,10 @@
-import _React from 'react';,
+import React from 'react';
 import Head from 'next/head';';
-import { motion } from 'framer-motion';,
-import { FileText, Scale, AlertTriangle, Shield, Users, Mail, Phone } from 'lucide-react';,
+import { motion } from 'framer-motion';
+import { FileText, Scale, AlertTriangle, Shield, Users, Mail, Phone } from 'lucide-react';
 
-export default function TermsPage() {}
-  return (;,
+export default function TermsPage() {
+  return (;
     <div className="min-h-screen bg-gray-50">";
       <Head>;
         <title>Terms of Service - Zion Tech Group</title>;
@@ -12,8 +12,8 @@ export default function TermsPage() {}
       </Head>;
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">",
-        <div className="container mx-auto px-4">";,
+      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">"
+        <div className="container mx-auto px-4">";
           <div className="max-w-4xl mx-auto text-center">";
             <FileText className="w-16 h-16 mx-auto mb-6" />";
             <h1 className="text-5xl font-bold mb-6">");
@@ -24,14 +24,14 @@ export default function TermsPage() {}
             </p>;
             <p className="text-sm text-blue-200 mt-4">";
               Last updated: January 15, 2024,
-            </p>;,
+            </p>;
           </div>;
         </div>;
       </section>;
 
       {/* Content */}
-      <section className="py-16">",
-        <div className="container mx-auto px-4">";,
+      <section className="py-16">"
+        <div className="container mx-auto px-4">";
           <div className="max-w-4xl mx-auto">";
             <div className="bg-white rounded-lg shadow-lg p-8">";
 
@@ -40,7 +40,7 @@ export default function TermsPage() {}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >,
-                <div className="mb-8 p-4 bg-blue-50 border-l-4 border-blue-400">";,
+                <div className="mb-8 p-4 bg-blue-50 border-l-4 border-blue-400">";
                   <p className="text-blue-800">";
                     <strong>Important:</strong> By accessing or using our services, you agree to be bound by these Terms of Service.,
 
@@ -53,8 +53,8 @@ export default function TermsPage() {}
                 
                 <p className="text-gray-600 mb-6">";
                   These Terms of Service ("Terms") govern your use of Zion Tech Group's services, including our website, ',
-                  applications, and any related services (collectively, the "Services"). By accessing or using our Services, ",
-                  you agree to be bound by these Terms.;,
+                  applications, and any related services (collectively, the "Services"). By accessing or using our Services, "
+                  you agree to be bound by these Terms.;
                 </p>;
 
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">";
@@ -63,8 +63,8 @@ export default function TermsPage() {}
                 
                 <div className="space-y-4 mb-8">";
                   <p className="text-gray-600">";
-                    Zion Tech Group provides technology consulting, AI solutions, cloud services, and related technology;,
-                    services. Our Services include but are not limited to:;,
+                    Zion Tech Group provides technology consulting, AI solutions, cloud services, and related technology;
+                    services. Our Services include but are not limited to:;
                   </p>;
                   
                   <ul className="list-disc list-inside space-y-2 text-gray-600 ml-4">";
@@ -84,7 +84,7 @@ export default function TermsPage() {}
                 <div className="space-y-4 mb-8">";
                   <p className="text-gray-600">";
                     As a user of our Services, you agree to:,
-                  </p>;,
+                  </p>;
                   
                   <ul className="list-disc list-inside space-y-2 text-gray-600 ml-4">";
                     <li>Provide accurate and complete information when required</li>;
@@ -102,13 +102,13 @@ export default function TermsPage() {}
                 
                 <div className="space-y-4 mb-8">";
                   <p className="text-gray-600">";
-                    All content, trademarks, and intellectual property rights in our Services are owned by Zion Tech Group;,
+                    All content, trademarks, and intellectual property rights in our Services are owned by Zion Tech Group;
                     or our licensors. You may not use, reproduce, or distribute any content without our written permission.,
-                  </p>;,
+                  </p>;
                   
                   <p className="text-gray-600">";
-                    Any content you provide to us remains your property, but you grant us a license to use it in connection;,
-                    with providing our Services.;,
+                    Any content you provide to us remains your property, but you grant us a license to use it in connection;
+                    with providing our Services.;
                   </p>;
                 </div>;
 
@@ -137,9 +137,9 @@ export default function TermsPage() {}
                 <div className="space-y-4 mb-8">";
                   <p className="text-gray-600">";
                     To the maximum extent permitted by law, Zion Tech Group shall not be liable for any indirect, 
-                    incidental, special, consequential, or punitive damages, including but not limited to loss of;,
+                    incidental, special, consequential, or punitive damages, including but not limited to loss of;
                     profits, data, or business opportunities.,
-                  </p>;,
+                  </p>;
                   
                   <p className="text-gray-600">";
                     Our total liability for any claims arising from these Terms or our Services shall not exceed;
@@ -155,12 +155,12 @@ export default function TermsPage() {}
                   <p className="text-gray-600">";
                     While we strive to provide reliable Services, we cannot guarantee uninterrupted access. 
                     We reserve the right to modify, suspend, or discontinue any part of our Services at any time.,
-                  </p>;,
+                  </p>;
                   
                   <p className="text-gray-600">";
-                    We are not responsible for any downtime, data loss, or other issues that may occur due to;,
+                    We are not responsible for any downtime, data loss, or other issues that may occur due to;
                     maintenance, updates, or technical problems.,
-                  </p>;,
+                  </p>;
                 </div>;
 
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">";
@@ -207,7 +207,7 @@ export default function TermsPage() {}
                 <div className="bg-gray-50 rounded-lg p-6">";
                   <p className="text-gray-600 mb-4">";
                     If you have any questions about these Terms of Service, please contact us:,
-                  </p>;,
+                  </p>;
                   
                   <div className="space-y-2">";
                     <div className="flex items-center gap-2">";

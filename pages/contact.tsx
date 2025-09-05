@@ -16,8 +16,8 @@ export default function ContactPage() {
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <motion.div,
+    initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
@@ -40,8 +40,8 @@ export default function ContactPage() {
           
           {/* Contact Information Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <motion.div
-              className="bg-white rounded-lg shadow-lg p-6 text-center"
+            <motion.div,
+    className="bg-white rounded-lg shadow-lg p-6 text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -54,8 +54,8 @@ export default function ContactPage() {
               <p className="text-gray-600">+1 302 464 0950</p>
             </motion.div>
 
-            <motion.div
-              className="bg-white rounded-lg shadow-lg p-6 text-center"
+            <motion.div,
+    className="bg-white rounded-lg shadow-lg p-6 text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
@@ -68,8 +68,8 @@ export default function ContactPage() {
               <p className="text-gray-600">kleber@ziontechgroup.com</p>
             </motion.div>
 
-            <motion.div
-              className="bg-white rounded-lg shadow-lg p-6 text-center"
+            <motion.div,
+    className="bg-white rounded-lg shadow-lg p-6 text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -87,8 +87,8 @@ export default function ContactPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <motion.div
-              className="bg-white rounded-lg shadow-lg p-8"
+            <motion.div,
+    className="bg-white rounded-lg shadow-lg p-8"
               initial={{ opacity: 0, x:-30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -104,8 +104,8 @@ export default function ContactPage() {
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                       Full Name
                     </label>
-                    <input
-                      type="text"
+                    <input,
+    type="text"
                       id="name"
                       name="name"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -118,8 +118,8 @@ export default function ContactPage() {
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                       Email Address
                     </label>
-                    <input
-                      type="email"
+                    <input,
+    type="email"
                       id="email"
                       name="email"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -133,8 +133,8 @@ export default function ContactPage() {
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                     Company
                   </label>
-                  <input
-                    type="text"
+                  <input,
+    type="text"
                     id="company"
                     name="company"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -146,8 +146,8 @@ export default function ContactPage() {
                   <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                     Service Interest
                   </label>
-                  <select
-                    id="service"
+                  <select,
+    id="service"
                     name="service"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
@@ -164,8 +164,8 @@ export default function ContactPage() {
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                     Message
                   </label>
-                  <textarea
-                    id="message"
+                  <textarea,
+    id="message"
                     name="message"
                     rows={5}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -174,8 +174,8 @@ export default function ContactPage() {
                   ></textarea>
                 </div>
                 
-                <button
-                  type="submit"
+                <button,
+    type="submit"
                   className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
                   <MessageSquare className="w-5 h-5 mr-2" />
@@ -186,8 +186,8 @@ export default function ContactPage() {
             </motion.div>
           </div>
 
-          <motion.div
-              className="bg-white rounded-lg shadow-lg p-8"
+          <motion.div,
+    className="bg-white rounded-lg shadow-lg p-8"
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
