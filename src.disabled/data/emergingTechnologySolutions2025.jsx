@@ -1,3 +1,7 @@
 "export\": const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
 export: const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [""
+<<<<<<< HEAD
 "export": const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = ["]"
+=======
+"export": const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = ["]"
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

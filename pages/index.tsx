@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -249,3 +250,5 @@ export default function HomePage() {
     </Layout>
   );
 }
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

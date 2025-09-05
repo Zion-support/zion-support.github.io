@@ -111,7 +111,10 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             description: 'No headings found','''
             recommendation: 'Add proper heading structure (H1, H2, H3) for better content organization and SEO','''
             status: 'open'
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 import React, {useState, useEffect} from 'react';
 import {motion} from 'framer-motion';
 import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChart3, TrendingUp, Zap const ContentQualityAnalyzer = (props: any) => {}
@@ -930,24 +933,29 @@ export {ContentQualityAnalyzer};
 export {ContentQualityAnalyzer};
 ;
 export {ContentQualityAnalyzer};
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 </motion>';
 </motion>;';;';
 ;
 </motion>;
 </motion>;
 </motion>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 export {ContentQualityAnalyzer};
-
 export {ContentQualityAnalyzer};
-
 export {ContentQualityAnalyzer};
-
 export {ContentQualityAnalyzer};
-
 export {ContentQualityAnalyzer};
-
 </motion>
 </motion>
+<<<<<<< HEAD
 </motion>
+=======
+</motion>
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

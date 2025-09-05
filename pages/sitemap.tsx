@@ -57,7 +57,93 @@ export default function SitemapPage() {
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
+<<<<<<< HEAD
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+=======
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4">
+import React from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { FileText, ExternalLink, ArrowRight } from 'lucide-react';
+
+export default function SitemapPage() {
+  const siteStructure = [
+    {
+      category: 'Main Pages',
+      pages: [
+        { name: 'Home', url: '/', description: 'Main landing page' },
+        { name: 'About Us', url: '/about', description: 'Learn about our company' },
+        { name: 'Services', url: '/services', description: 'Our comprehensive services' },
+        { name: 'Contact', url: '/contact', description: 'Get in touch with us' }
+      ]
+    },
+    {
+      category: 'Services',
+      pages: [
+        { name: 'AI Services', url: '/ai-services', description: 'AI and machine learning solutions' },
+        { name: 'IT Services', url: '/it-services', description: 'Information technology services' },
+        { name: 'Cloud Solutions', url: '/cloud-solutions', description: 'Cloud infrastructure and services' },
+        { name: 'Database Solutions', url: '/database-solutions', description: 'Database design and optimization' },
+        { name: 'Security', url: '/security', description: 'Cybersecurity solutions' },
+        { name: 'Custom Development', url: '/custom-development', description: 'Bespoke software development' },
+        { name: 'Digital Transformation', url: '/digital-transformation', description: 'Digital transformation consulting' },
+        { name: 'Consulting', url: '/consulting', description: 'Technology consulting services' }
+      ]
+    },
+    {
+      category: 'Solutions',
+      pages: [
+        { name: 'Enterprise Solutions', url: '/enterprise-solutions', description: 'Solutions for large organizations' },
+        { name: 'Startup Solutions', url: '/startup-solutions', description: 'Solutions for growing businesses' },
+        { name: 'Industry Solutions', url: '/industries', description: 'Industry-specific solutions' }
+      ]
+    },
+    {
+      category: 'Company',
+      pages: [
+        { name: 'Team', url: '/team', description: 'Meet our team members' },
+        { name: 'Careers', url: '/careers', description: 'Join our team' },
+        { name: 'Case Studies', url: '/case-studies', description: 'Success stories and case studies' },
+        { name: 'News', url: '/news', description: 'Latest news and updates' },
+        { name: 'Partners', url: '/partners', description: 'Our business partners' }
+      ]
+    },
+    {
+      category: 'Resources',
+      pages: [
+        { name: 'Blog', url: '/blog', description: 'Technology insights and articles' },
+        { name: 'Documentation', url: '/docs', description: 'Technical documentation' },
+        { name: 'API Documentation', url: '/docs/api', description: 'API reference and guides' },
+        { name: 'Tutorials', url: '/tutorials', description: 'Learning resources and tutorials' },
+        { name: 'White Papers', url: '/white-papers', description: 'In-depth technical papers' },
+        { name: 'Webinars', url: '/webinars', description: 'Educational webinars and events' },
+        { name: 'FAQ', url: '/faq', description: 'Frequently asked questions' },
+        { name: 'Help Center', url: '/help', description: 'Support and help resources' }
+      ]
+    },
+    {
+      category: 'Legal',
+      pages: [
+        { name: 'Privacy Policy', url: '/privacy', description: 'Our privacy policy' },
+        { name: 'Terms of Service', url: '/terms', description: 'Terms and conditions' },
+        { name: 'Cookie Policy', url: '/cookies', description: 'Cookie usage policy' },
+        { name: 'Accessibility', url: '/accessibility', description: 'Accessibility statement' }
+      ]
+    }
+  ];
+
+  return (
+    <MainLayout
+      title="Sitemap - Zion Tech Group"
+      description="Navigate through all pages and sections of our website. Find the information you need quickly and easily."
+      keywords="sitemap, navigation, website structure, pages"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
           <div className="absolute inset-0">
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>

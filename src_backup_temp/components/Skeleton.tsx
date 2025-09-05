@@ -14,6 +14,8 @@ export default function Skeleton("props": "any) {';
 ;
 export default function Skeleton("props": "any) {;
   if (lines === 1) {;
+    return (;
+    <div className="min-h-screen bg-white">;
     return (
         <div className="min-h-screen bg-white">
   );
@@ -21,6 +23,8 @@ export default function Skeleton("props": "any) {;
       />;
     );
       )}
+    </div>;
+  );
     </div>
     );
 }
@@ -30,6 +34,17 @@ export default function Skeleton("props": "any) {;
         <div;',';';
     ';';';
 import {cn } from '@/lib/utils';
+interface SkeletonProps {;
+className?: "string;
+  lines?: number;
+"}
+export default function Skeleton("props": "any) {if (lines === 1) {;
+    return (;
+    <div className="min-h-screen bg-white">;
+    );
+      )"}
+    </div>;
+  );
 interface SkeletonProps {
 className?: string;
   lines?: number
@@ -62,12 +77,20 @@ export default function Skeleton("props": "any) {;
           className;
         );
       )}
+    </div>;
+  );
     </div>
     );
 }
       />;
     );
       )}
+    </div>;
+  );
+}
+  return (;
+    <div className="min-h-screen bg-white">;
+      {Array.from({ "length": "line s   "}).map((_, i) => (;
     </div>
     );
 }
@@ -80,6 +103,13 @@ export default function Skeleton("props": "any) {;
         <div';';
           key={i}';';';
           className={cn("',',';';
+    'animate-pulse bg-gray-200 rounded h-4', i === lines - 1 ? 'w-3/4' : 'w-full';
+          className={cn(;
+            &apos;animate-pulse bg-gray-200 rounded h-4&apos;
+            i === lines - 1 ? &apos;w-3/4&apos; : "&apos;w-full&apos);
+      )"}
+    </div>;
+  );
     'animate-pulse bg-gray-200 rounded h-4', i === lines - 1 ? 'w-3/4' : 'w-full'
           className={cn(
             &apos;animate-pulse bg-gray-200 rounded h-4&apos,
@@ -93,6 +123,15 @@ export default function Skeleton("props": "any) {;
     </div>;
   );
       )}
+    </div>;
+  );
+}
+    return (;
+    <div className="min-h-screen bg-white">;
+    );
+      )}
+    </div>;
+  );
     </div>
     );
 }
@@ -113,6 +152,8 @@ export default function Skeleton("props": "any) {;
         /"" >;
       ));
       )}
+    </div>;
+  );
     </div>
     );
 }
@@ -124,12 +165,16 @@ export default function Skeleton("props": "any) {;
           className;
         );
       )}
+    </div>;
+  );
     </div>
     );
 }
       />;
     );
       )}
+    </div>;
+  );';
     </div>
     );';
 }';';
@@ -151,12 +196,19 @@ export default function Skeleton("props": "any) {;
             i === lines - 1 ? 'w-3/4' : 'w-full';
           );
       )}
+    </div>;
+  );
     </div>
     );
 }
         />;
       ));
       )}
+    </div>;
+  );
+}
+    </div>;
+  );
     </div>
     );
 }
@@ -165,12 +217,16 @@ export default function Skeleton("props": "any) {;
 }
   );
       )}
+    </div>;
+  );
     </div>
     );
 }
         />;
       ));
       )}
+    </div>;
+  );
     </div>
     );
 }

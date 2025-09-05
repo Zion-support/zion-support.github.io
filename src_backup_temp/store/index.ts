@@ -11,7 +11,10 @@ export const store = configureStore({
   }
 }
     );
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 export type RootState = ReturnType;<typeof store.getState>;';
 export type AppDispatch = typeof store.dispatch;';';
 export type AppDispatch = typeof store.dispatch;""';';';
@@ -20,4 +23,8 @@ export type RootState = ReturnType<typeof store.getState> export type AppDispatc
 export type RootState = ReturnType;<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
 export type AppDispatch = typeof store.dispatch;""';
+<<<<<<< HEAD
 "';';
+=======
+"';';
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

@@ -16,7 +16,6 @@ import { motion } from 'framer-motion';''
 import { AlertTriangle, RefreshCw, Home, ArrowLeft } from 'lucide-react';'
 function ErrorFallback({ error, resetError }) {}
   const navigate = useNavigate();
-
   return (')
     <div className="min-h-screen bg-zion-blue-dark flex items-center justify-center p-4">"
 </div>"
@@ -56,7 +55,10 @@ function ErrorFallback({ error, resetError }) {}
             <RefreshCw className="w-4 h-4 mr-2" />"
 </RefreshCw>
           </button>
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 export function ErrorBoundaryFallback(props: any) {
 	return (
 		<div style="{{{padding: 24; textAlign: 'center'}}"}>
@@ -83,7 +85,10 @@ export class ErrorBoundary extends React.Component {;
 	}
 	handleRetry = () => {;
 		this.setState({ "hasError": "false", "error": "null "});
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 	handleRetry = () => {
 		this.setState({ hasError: false, error: null }
     );
@@ -103,7 +108,6 @@ export class ErrorBoundary extends React.Component {;
             <ArrowLeft className="w-4 h-4 mr-2" />"
 </ArrowLeft>
           </button>
-
           <a;"
             href="/"""
             className="block w-full px-4 py-2 text-center border border-zion-purple text-zion-purple rounded-md hover:bg-zion-purple hover:text-white transition-colors""
@@ -124,4 +128,8 @@ export class ErrorBoundary extends React.Component {;
       </div>
     </div>
     return <ErrorFallback error={error} resetError={resetError} />;
+<<<<<<< HEAD
 </ErrorFallback>"
+=======
+</ErrorFallback>"
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

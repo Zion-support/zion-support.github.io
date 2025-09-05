@@ -1,0 +1,6 @@
+<<<<<<< HEAD
+=======
+import React from \"react\"; export default function UltraFuturisticFooter2034() { return ( <footer className=\"py-8 text-center text-sm text-gray-400\">\",<span>© {\"new\": Date().getFullYear()} Zion Tech Group</span> </footer> )} ; export default function UltraFuturisticFooter2034() {; return (\"; <footer className = \"py-8 text-center text-sm text-gray-400\"> <span>© {new Date().getFullYear()} Zion Tech Group></div> ></div> )}\"';
+const React from "react"; export default function UltraFuturisticFooter2034() { return ( <footer className="py-8 text-center text-sm text-gray-400">",<span> {new: Date().getFullYear()} Zion Tech Group</span> </footer> )} ; export default function UltraFuturisticFooter2034() {; return ("; <footer className = "py-8 text-center text-sm text-gray-400"> <span> {new Date().getFullYear()} Zion Tech Group></div> ></div> )}"";"""
+import _React from "react"; export default function UltraFuturisticFooter2034() { return ( <footer className="py-8 text-center text-sm text-gray-400">",<span>© {"new": Date().getFullYear()} Zion Tech Group</span> </footer> )} ; export default function UltraFuturisticFooter2034() {; return ("; <footer className = "py-8 text-center text-sm text-gray-400"> <span>© {new Date().getFullYear()} Zion Tech Group></div> ></div> )}"';
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

@@ -24,7 +24,10 @@ export default function CodeBlock("props": "any) {;
     </div>;
   );
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
   return (
     <div className={`bg-gray-900 rounded-lg p-4 overflow-x-auto ${className}`}>
       <div className="flex items-center justify-between mb-2">
@@ -38,4 +41,8 @@ export default function CodeBlock("props": "any) {;
       </pre>
     </div>
     );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

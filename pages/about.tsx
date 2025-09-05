@@ -1,6 +1,7 @@
-import { motion } from 'framer-motion';
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
 import Layout from '../components/Layout';
 import { 
   TrendingUp,
@@ -325,3 +326,6 @@ className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transit
     </Layout>
   );
 }
+=======
+import { motion } from 'framer-motion';
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

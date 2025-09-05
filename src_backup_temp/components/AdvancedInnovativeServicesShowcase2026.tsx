@@ -1,7 +1,19 @@
+import React, { useState, useEffect } from 'react' import { motion  } from 'framer - motionimport { ADVANCED_INNOVATIVE_SERVICES_2025  } from ../data / advancedInnovativeServices2025 import { NEXT_GEN_INNOVATIVE_SERVICES_2026 } from ../data / nextGenInnovativeServices2026const AdvancedInnovativeServicesShowcase2026: Reac t.FC = () => { const [selectedCategory, setSelectedCategory] = useState<any>(all)  const [searchTerm, setSearchTerm] = useState ()  const [selectedService, setSelectedService] = useState < any> (null)  ";';
+</any>;';;';
 import React, { useState, useEffect } from 'react' import { motion  } from 'framer - motionimport { ADVANCED_INNOVATIVE_SERVICES_2025  } from ../data / advancedInnovativeServices2025 import { NEXT_GEN_INNOVATIVE_SERVICES_2026 } from ../data / nextGenInnovativeServices2026const AdvancedInnovativeServicesShowcase2026: React.FC = () => { const [selectedCategory, setSelectedCategory] = useState<any>(all)  const [searchTerm, setSearchTerm] = useState ()  const [selectedService, setSelectedService] = useState < any> (null)  ";
 </any>;
 import React, { useState, useEffect } from 'react' import { motion  } from 'framer - motionimport { ADVANCED_INNOVATIVE_SERVICES_2025  } from ../data / advancedInnovativeServices2025 import { NEXT_GEN_INNOVATIVE_SERVICES_2026 } from ../data / nextGenInnovativeServices2026const "AdvancedInnovativeServicesShowcase2026": "React.FC = () => { const [selectedCategory", setSelectedCategory] = useState<any>(all)  const [searchTerm, setSearchTerm] = useState ()  const [selectedService, setSelectedService] = useState < any> (null)  ";
 </any>;
+<<<<<<< HEAD
+=======
+import React, { useState, useEffect } from 'react' import { motion  } from 'framer - motionimport { ADVANCED_INNOVATIVE_SERVICES_2025  } from ../data / advancedInnovativeServices2025 import { NEXT_GEN_INNOVATIVE_SERVICES_2026 } from ../data / nextGenInnovativeServices2026const AdvancedInnovativeServicesShowcase2026: React.FC = () => { const [selectedCategory, setSelectedCategory] = useState<any>(all)  const [searchTerm, setSearchTerm] = useState ()  const [selectedService, setSelectedService] = useState < any> (null)  ";
+</any>
+import React,{ useState,useEffect } from &apos;react&apos; import { motion } from &apos;framer - motionimport { ADVANCED_INNOVATIVE_SERVICES_2025 } from ../data / advancedInnovativeServices2025 import { NEXT_GEN_INNOVATIVE_SERVICES_2026 } from ../data / nextGenInnovativeServices2026const AdvancedInnovativeServicesShowcase2026: Reac t.FC = () => { const [selectedCategory,setSelectedCategory] = useState<any>(all) const [searchTerm,setSearchTerm] = useState () const [selectedService,setSelectedService] = useState < any> (null) &quot;; </any>;&apos;;&apos;;
+const React,{ useState,useEffect } from "react" import { motion } from "framer - motionimport { ADVANCED_INNOVATIVE_SERVICES_2025 } from ./data / advancedInnovativeServices2025 import { NEXT_GEN_INNOVATIVE_SERVICES_2026 } from ./data / nextGenInnovativeServices2026const AdvancedInnovativeServicesShowcase2026: Reac t.FC = () => { const [selectedCategory,setSelectedCategory] = useState<any>(all) const [searchTerm,setSearchTerm] = useState () const [selectedService,setSelectedService] = useState < any> (null) "; </any>;"
+  ";"
+  ";"
+  """
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 import { useEffect } from 'react';,
 import { useState } from 'react';,
 import _React,{ useState,useEffect } from 'react' import { motion } from 'framer - motionimport { ADVANCED_INNOVATIVE_SERVICES_2025 } from ../data / advancedInnovativeServices2025 import { NEXT_GEN_INNOVATIVE_SERVICES_2026 } from ../data / nextGenInnovativeServices2026const AdvancedInnovativeServicesShowcase2026: Reac t.FC = () => { const [selectedCategory,setSelectedCategory] = useState<any>(all) const [searchTerm,setSearchTerm] = useState () const [selectedService,setSelectedService] = useState < any> (null) "; </any>;';';

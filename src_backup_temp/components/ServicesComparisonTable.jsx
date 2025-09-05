@@ -305,7 +305,10 @@ return()""
                     variant="outline"""""
                     className="w-full border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white ">,
                     View {category}
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
                   </Button>
                 </CardContent>
               </Card>
@@ -432,9 +435,7 @@ your business needs"
 }"""""
 """"""
 "
-
 export default Component
-
 </Button>
 </Badge>
 </div>
@@ -447,7 +448,6 @@ export default Component
 </div>
 </CardHeader>
 </div>
-
 </div>
 </Phone>
 </Phone>
@@ -627,4 +627,8 @@ export default Component;
 </div>;
 </div>;
 </div>
+<<<<<<< HEAD
 </div>
+=======
+</div>
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

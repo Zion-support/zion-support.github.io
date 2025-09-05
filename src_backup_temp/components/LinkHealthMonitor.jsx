@@ -102,7 +102,10 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             lastChecked: new Date(),'''
             parentPage: 'Contact','''
             linkText: 'Email'
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
     ];
     useEffect ( () => {}
         setLinkStatuses (sampleLinks) ;
@@ -693,24 +696,29 @@ export {LinkHealthMonitor};
 export {LinkHealthMonitor};
 ;
 export {LinkHealthMonitor};
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 </motion>';
 </motion>;';;';
 ;
 </motion>;
 </motion>;
 </motion>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 export {LinkHealthMonitor};
-
 export {LinkHealthMonitor};
-
 export {LinkHealthMonitor};
-
 export {LinkHealthMonitor};
-
 export {LinkHealthMonitor};
-
 </motion>
 </motion>
+<<<<<<< HEAD
 </motion>
+=======
+</motion>
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

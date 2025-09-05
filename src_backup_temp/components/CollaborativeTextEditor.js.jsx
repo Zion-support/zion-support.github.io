@@ -251,7 +251,6 @@ const handleExport = useCallback((format) => {}"";
 """;
 """"";
             exportContent = "# Document";
-
 ${editorState.content}"}
 ;
         if(onExport) {}
@@ -277,7 +276,10 @@ useEffect(() => {}";
 ;
 // Default export behavior';
             const blob = new Blob([exportContent], {"type": 'text/plain'});
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 // Default export behavior'
             const blob = new Blob([exportContent], {type: 'text/plain'}
     );
@@ -291,7 +293,6 @@ useEffect(() => {}";
     // Handle collaboration text changes;
     useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -323,7 +324,10 @@ useEffect(() => {}
                         "version": "Math.max(prev.version", message.payload.version)}});
                 trackEvent('editor',collaboration_sync',text_synced', null, {"userId": "message.userId",;
                     "version": "message.payload.version"})}
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 // Simple merge strategy - in production, this would use operational transformation
                     return {...prev,
                         content: message.payload.content,
@@ -337,7 +341,6 @@ useEffect(() => {}
     // Auto-save functionality;
     useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -346,14 +349,12 @@ useEffect(() => {}
             return;
         const autoSaveInterval = setInterval(() => {;
             if(editorState.content !== initialContent) {;
-
                 handleSave()}
         }, 30000); // Auto-save every 30 seconds;
         return () => clearInterval(autoSaveInterval)}, [editorState.content, initialContent, enableVersioning, handleSave]);
     // Generate suggestions when content changes significantly;
     useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -424,7 +425,10 @@ useEffect(() => {}
             </span>";
             <span>";
               Version {editorState.version}"";
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
                 generateAISuggestions()}"
 }, 3000)""
         return () => clearTimeout(debounceTimer)}, [editorState.content, enableAI, generateAISuggestions])""""
@@ -452,7 +456,6 @@ useEffect(() => {}
             {/* comment */}"""""
             {enableAI && (<button onClick="{generateAISuggestions}" disabled="{isProcessing}" className="px-3 py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2 disabled:opacity-50">"""",
                 {isProcessing ? (<Loader2 className="w-4 h-4 animate-spin"/" >) : (<Sparkles className="w-4 h-4"/" >)}
-
                 AI"
               </button>) }""
             """""
@@ -607,10 +610,8 @@ useEffect(() => {}
     </div>)}""""""";
 """""""""";
 ";
-
   } catch (error) {console.error(error);}
 export default Component;
-
 </motion>;
 </Download>;
 </Download>;

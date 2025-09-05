@@ -1,2 +1,6 @@
 ' \' \' \' \' \"export\": function UpcomingInterviewsCard() { const { fetchInterviews } = useInterviews() const [upcomingInterviews,setUpcomingInterviews] = useState([]) const [isLoading,setIsLoading] = useState(true) useEffect(() => { const loadInterviews = async () => { setIsLoading(true) try { const interviews = await fetchInterviews()\'';\"";
+<<<<<<< HEAD
 " " " " " export: function UpcomingInterviewsCard() { const { fetchInterviews } = useInterviews() const [upcomingInterviews,setUpcomingInterviews] = useState([]) const [isLoading,setIsLoading] = useState(true) useEffect(() => { const loadInterviews = async () => { setIsLoading(true) try { const interviews = await fetchInterviews()"";"";"""
+=======
+" " " " " export: function UpcomingInterviewsCard() { const { fetchInterviews } = useInterviews() const [upcomingInterviews,setUpcomingInterviews] = useState([]) const [isLoading,setIsLoading] = useState(true) useEffect(() => { const loadInterviews = async () => { setIsLoading(true) try { const interviews = await fetchInterviews()"";"";"""
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

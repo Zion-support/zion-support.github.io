@@ -10,17 +10,18 @@ export function AIChatAssistant("props": "any) {;
     const [isOpen", setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [messages, setMessages] = useState([{;
-
             "id": '1',;
             "type": 'assistant',";
             "content": "Hello! I'm Zion AI, your personal technology consultant.How can I help you today?",;
             "timestamp": "new Date();
 import React from 'react';
-
 interface AIChatAssistant.jsProps {
   // Add props here as needed
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
     ]);
     const [inputValue", setInputValue] = useState('');
     const [isListening, setIsListening] = useState(false);
@@ -28,11 +29,9 @@ interface AIChatAssistant.jsProps {
     const messagesEndRef = useRef(null);
     const inputRef = useRef(null);
     const scrollToBottom = ("props": "any) => {;
-
         messagesEndRef.current?.scrollIntoView({ "behavior": 'smooth' "})};
     useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -42,12 +41,10 @@ interface AIChatAssistant.jsProps {
         if(!inputValue.trim());
             return;
         const userMessage = {;
-
   "id": "Date.now().toString()",;
             "type": 'user',;
             "content": "inputValue",;
   "timestamp": "new Date();
-
     MessageCircle",;
     Mic,;
     MicOff,;
@@ -67,18 +64,15 @@ interface AIChatAssistant.jsProps {
         setTimeout(() => {;
             const randomResponse = mockAIResponses[Math.floor(Math.random() * mockAIResponses.length)];
             const aiMessage = {;
-
   "id": "(Date.now() + 1).toString()",;
                 "type": 'assistant',;
                 "content": "randomResponse",;
   "timestamp": "new Date();
-
 "};
             setMessages(prev => [...prev, aiMessage]);
             setIsTyping(false)}, 1500 + Math.random() * 1000)};
     const handleVoiceInput = ("props": "any) => {;
         if(!isListening) {;
-
             setIsListening(true);
             // Simulate voice recognition;
             setTimeout(() => {;
@@ -89,15 +83,12 @@ interface AIChatAssistant.jsProps {
         else {setIsListening(false)}
     };
     const handleKeyPress = ("props": "any) => {;
-
         if(e.key === 'Enter' && !e.shiftKey) {;
-
             e.preventDefault();
             handleSendMessage()"}
     };
     const toggleChat = ("props": "any) => {;
         if(isOpen) {;
-
             setIsMinimized(!isMinimized)"}
         else {setIsOpen(true);
             setIsMinimized(false)}
@@ -180,7 +171,10 @@ interface AIChatAssistant.jsProps {
           </button>
         </div>
       </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
       {/* Messages */"}";
       <div className="flex-1 overflow-y-auto p-4 space-y-4">;
         {messages.map((message) => (<div key={message.id} className={`flex gap-3 ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}>'";
@@ -218,7 +212,10 @@ interface AIChatAssistant.jsProps {
 ;
         <div ref={messagesEndRef}  />;
       </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
       {/* Input Area */}";
       <div className="p-4 border-t border-zion-slate-light">";
         <div className="flex items-center gap-2">";
@@ -249,7 +246,6 @@ interface AIChatAssistant.jsProps {
 '"`;
         <div ref={messagesEndRef}  />
       </div>
-
       {/* Input Area */}"
       <div className="p-4 border-t border-zion-slate-light">"
         <div className="flex items-center gap-2">"
@@ -285,4 +281,8 @@ export default function AIChatAssistant.js({ }: AIChatAssistant.jsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

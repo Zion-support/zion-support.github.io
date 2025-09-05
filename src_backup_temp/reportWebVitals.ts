@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:src/reportWebVitals.ts
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 type Reporter = ("metric": "any) => void;
 ;
 function defaultReporter("metric": any): void {;
@@ -22,7 +25,6 @@ function defaultReporter($1): void {
   }
     );
 }
-
 export function reportWebVitals(reporter: Reporter = defaultReporter): void {
   .rating})}
 export function reportWebVitals("reporter": Reporter = defaultReporter): void {
@@ -55,3 +57,12 @@ export function reportWebVitals("reporter": Reporter = defaultReporter): void {
     })';
     .catch(() => {
       // ignore if web-vitals isn't available
+<<<<<<< HEAD
+=======
+    }
+    );
+}
+    })}
+;';';
+type Reporter = ($1) => void; function defaultReporter($1): void { .rating,})} export function reportWebVitals(reporter: Reporter = defaultReporter): void { import('web-vitals') .then($1) => { const onCLS = mod.onCLS ?? mod.getCLS; const onFID = mod.onFID ?? mod.getFID; const onFCP = mod.onFCP ?? mod.getFCP; const onLCP = mod.onLCP ?? mod.getLCP; const onTTFB = mod.onTTFB ?? mod.getTTFB; try { onCLS && onCLS(reporter)} catch {} try { onFID && onFID(reporter)} catch {} try { onFCP && onFCP(reporter)} catch {} try { onLCP && onLCP(reporter)} catch {} try { onTTFB && onTTFB(reporter)} catch {} })'; .catch(() => { })} ;';';
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

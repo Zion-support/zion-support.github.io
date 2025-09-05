@@ -45,7 +45,10 @@ export const useApi = ("props": "any) => {;
       ;
       if (!response.ok) {;
         throw new Error(\`HTTP error! "status": "\${response.status"}\`);
+<<<<<<< HEAD
     
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
     try {
       const response = await fetch(url, {
         method: options.method || 'GET',
@@ -53,7 +56,6 @@ export const useApi = ("props": "any) => {;
         body: options.body ? JSON.stringify(options.body) : undefined,
       }
     );
-      
       if (!response.ok) {
         throw new Error(\`HTTP error! status: \${response.status}\`);
       }
@@ -195,9 +197,7 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
       <div className="container mx-auto px-4">;
   }
     );
-
   const copyToClipboard = (props: any) => {navigator.clipboard.writeText(code);};
-
   return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
       <div className="container mx-auto px-4">
@@ -211,7 +211,6 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
             From simple utilities to complex algorithms, get the code you need instantly.;
           </p>;
         </div>;
-
         {/* Search and Filters */}
         <div className="mb-8 flex flex-col "md": "flex-row gap-4">;
           <div className="flex-1 relative">;
@@ -247,7 +246,6 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
             ))}
           </select>;
         </div>;
-
         {/* Code Snippets Grid */}
         <div className="grid grid-cols-1 "lg": "grid-cols-2 gap-6">;
           {filteredSnippets.map((snippet) => (;
@@ -296,9 +294,7 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
                   <span className="text-sm text-gray-300">{snippet.rating}</span>;
                 </div>;
               </div>;
-
               <p className="text-gray-300 mb-4">{snippet.description}</p>;
-
               <div className="mb-4">;
                 <div className="flex items-center gap-2 mb-2">;
                   <span className="text-sm font-medium text-gray-400">"Language": "</span>;
@@ -309,7 +305,6 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
                   <span className="text-sm text-white">{snippet.usageCount.toLocaleString()"} times</span>;
                 </div>;
               </div>;
-
               <div className="flex flex-wrap gap-2 mb-4">;
                 {snippet.tags.map((tag, index) => (;
                   <span;
@@ -320,7 +315,6 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
                   </span>;
                 ))}
               </div>;
-
               <div className="flex items-center justify-between">;
                 <div className="flex items-center gap-2">;
                   <Eye className="w-4 h-4 text-gray-400"  />;
@@ -334,7 +328,6 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
             </div>;
           ))}
         </div>;
-
         {/* AI Features Section */}
         <div className="mt-12">;
           <h2 className="text-3xl font-bold text-white mb-6 text-center">;
@@ -361,7 +354,6 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
                 </div>;
               </div>;
             </div>;
-
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">;
               <div className="flex items-center gap-3 mb-4">;
                 <Sparkles className="w-6 h-6 text-yellow-400"  />;
@@ -382,7 +374,6 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
                 </div>;
               </div>;
             </div>;
-
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">;
               <div className="flex items-center gap-3 mb-4">;
                 <Zap className="w-6 h-6 text-blue-400"  />;
@@ -405,7 +396,6 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
             </div>;
           </div>;
         </div>;
-
         {/* CTA Section */}
         <div className="mt-16 text-center">;
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8">;
@@ -455,7 +445,6 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
                 </div>
               </div>
             </div>
-
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
               <div className="flex items-center gap-3 mb-4">
                 <Sparkles className="w-6 h-6 text-yellow-400"  />
@@ -476,7 +465,6 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
                 </div>
               </div>
             </div>
-
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
               <div className="flex items-center gap-3 mb-4">
                 <Zap className="w-6 h-6 text-blue-400"  />
@@ -499,7 +487,6 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8">
@@ -523,7 +510,10 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
     </div>
     );
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 export default AdvancedAICodeGenerator;
 ;
 </string>

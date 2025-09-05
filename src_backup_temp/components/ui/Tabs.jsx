@@ -64,21 +64,19 @@ const Tabs = (props: any) => {}
     </div>
     );
 };
-
 export default Tabs;
-
 export {Tabs};
-
 export {Tabs};
-
 export {Tabs};
-
 export {Tabs};
-
 export {Tabs};
 ';
 </motion>;';;';
 ;
 </motion>;
+<<<<<<< HEAD
 
 </motion>
+=======
+</motion>
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

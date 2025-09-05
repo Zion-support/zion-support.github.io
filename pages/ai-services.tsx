@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { 
   Brain, 
   Eye, 
@@ -1737,3 +1738,5 @@ export default function AIServicesPage() {
     </>
   );
 }
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

@@ -10,4 +10,8 @@ export default function TalentRoutes("props": "any) {;
 }
 import React from &apos;react&apos;; import TalentDirectory from &apos;@/pages/TalentDirectory import TalentsPage from &apos;@/pages/TalentsPage&apos;; export default function TalentRoutes($1) { return (<> <Route path=&quot;directory&quot; element={<TalentDirectory />}/> <Route path=&quot;list&quot; element={<TalentsPage />}/> </>)} ;&apos;;&apos;;
 const React from "react"; import TalentDirectory from "@/pages/TalentDirectory import TalentsPage from "@/pages/TalentsPage"; export default function TalentRoutes($1) { return (<> <Route path="directory" element={<TalentDirectory />}/> <Route path="list" element={<TalentsPage />}/> </>)} ;";";"""
+<<<<<<< HEAD
 import _React from 'react'; import TalentDirectory from '@/pages/TalentDirectory import TalentsPage from '@/pages/TalentsPage'; export default function TalentRoutes(_) { return (<> <Route path="directory" element={<TalentDirectory />}/> <Route path="list" element={<TalentsPage />}/> </>)} ;';';
+=======
+import _React from 'react'; import TalentDirectory from '@/pages/TalentDirectory import TalentsPage from '@/pages/TalentsPage'; export default function TalentRoutes(_) { return (<> <Route path="directory" element={<TalentDirectory />}/> <Route path="list" element={<TalentsPage />}/> </>)} ;';';
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

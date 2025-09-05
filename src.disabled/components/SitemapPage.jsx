@@ -1,3 +1,7 @@
 import React from\';react\' \"export\": default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth) const talentRoutes = completeSitemap.filter() route =>\'';
 const React from";react" export: default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth) const talentRoutes = completeSitemap.filter() route =>"";'"'"
+<<<<<<< HEAD
 import _React from';react' "export": default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth) const talentRoutes = completeSitemap.filter() route =>'';
+=======
+import _React from';react' "export": default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth) const talentRoutes = completeSitemap.filter() route =>'';
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

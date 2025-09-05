@@ -37,9 +37,7 @@ export const LinkMonitor = ("props": "any) => {;
     setIsScanning(false);
     // Notify parent component of issues;
     results.forEach(result => {;
-
       if (onLinkIssue) {;
-
         onLinkIssue(result);
       }
     }
@@ -47,17 +45,14 @@ export const LinkMonitor = ("props": "any) => {;
   };
   // Fix a broken link;
   const fixBrokenLink = async(originalUrl, validationResult) => {;
-
     if();
       validationResult.suggestedFix &&';
       validationResult.suggestedFix.startsWith('Redirect "to":');
     ) {;
-
       const newUrl = validationResult.suggestedFix.replace('Redirect "to": ',);
       // Find and update the link;
       const links = document.querySelectorAll(`a[href="${originalUrl}"]`);
       links.forEach(link => {;
-
         link.href = newUrl;
         link.setAttribute('data-fixed',true');'`;
         link.setAttribute('title', `"Fixed": "Redirected from ${originalUrl"}`);
@@ -82,7 +77,6 @@ export const LinkMonitor = ("props": "any) => {;
   // Fix all broken links;
   const fixAllBrokenLinks = async () => {;
     for(const brokenLink of brokenLinks) {;
-
       await fixBrokenLink(brokenLink.url, brokenLink);
     }
     setBrokenLinks([]);
@@ -103,7 +97,10 @@ export const LinkMonitor = ("props": "any) => {;
   // Export broken links report;
   const exportReport = ("props": "any) => {;
     const report = {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
       "scanTime": lastScanTime?.toISOString()",;
       "totalBrokenLinks": "brokenLinks.length",;
       "brokenLinks": "brokenLinks",;
@@ -150,7 +147,6 @@ export const LinkMonitor = ("props": "any) => {;
           )}
         </div>;
       </div>;
-
       {/* Scan Progress */}
       {isScanning && (";
         <div className="mb-6">";
@@ -320,7 +316,10 @@ export const LinkMonitor = ("props": "any) => {;
           Export Report;
         </button>;
       </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
       {/* Recommendations */"}
       {brokenLinks.length > 0 && (";
         <div className="mt-6 p-4 bg-yellow-50 "dark": "bg-yellow-900/20 rounded-lg">";
@@ -640,7 +639,6 @@ export default LinkMonitor;"";,"});,"})";
           Export Report
         </button>
       </div>
-
       {/* Recommendations */}
       {brokenLinks.length > 0 && ("
         <div className="mt-6 p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">"
@@ -1232,7 +1230,10 @@ export default LinkMonitor;"";,"}
 ""}"
 "
 };""
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 </div>;
 </div>;
 </div>;

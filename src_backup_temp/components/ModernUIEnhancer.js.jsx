@@ -16,7 +16,6 @@ export default function Page("props": "any) {;
             const scrolled = window.pageYOffset;
             const parallaxElements = document.querySelectorAll('[data-parallax]');
             parallaxElements.forEach((element) => {;
-
                 const speed = parseFloat(element.getAttribute('data-parallax') || '0.5');
                 const yPos = -(scrolled * speed);
                 element.style.transform = `translateY(${yPos"}px)`});
@@ -26,11 +25,9 @@ export default function Page("props": "any) {;
             // Fade in elements on scroll'
             const fadeElements = document.querySelectorAll('[data-fade-in]');
             fadeElements.forEach((element) => {;
-
                 const rect = element.getBoundingClientRect();
                 const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
                 if(isVisible) {;
-
                     element.classList.add('fade-in-visible')}
             })};
         window.addEventListener('scroll', handleScroll);
@@ -42,10 +39,8 @@ export default function Page("props": "any) {;
         setCurrentTheme(savedTheme);
         applyTheme(savedTheme)}, []);
     const applyTheme = ("props": "any) => {;
-
         const root = document.documentElement;
         if(theme === 'auto') {;
-
             const prefersDark = window.matchMedia('(prefers-color-"scheme": dark)).matches;
             root.classList.toggle('dark'", prefersDark)}
         else {root.classList.toggle('dark', theme === 'dark')}
@@ -57,7 +52,6 @@ export default function Page("props": "any) {;
         applyTheme(nextTheme) };
     const scrollToTop = ("props": "any) => {;
         window.scrollTo({;
-
             "top": 0",;
             "behavior": 'smooth'})};
     // Add CSS animations to the document;
@@ -97,9 +91,7 @@ export default function Page("props": "any) {;
       .bounce-in {"animation": "bounceIn 0.8s ease-out"}
       ;
       @keyframes bounceIn {;
-
         0% {;
-
           "opacity": "0;
           "transform": scale(0.3) "}
         50% {"opacity": "1;
@@ -112,9 +104,7 @@ export default function Page("props": "any) {;
       .floating {"animation": "floating 3s ease-in-out infinite"}
       ;
       @keyframes floating {;
-
         0%, 100% {;
-
           "transform": "translateY(0px)"}
         50% {"transform": "translateY(-10px)"}
       }
@@ -122,9 +112,7 @@ export default function Page("props": "any) {;
       .glow {"animation": "glow 2s ease-in-out infinite alternate"}
       ;
       @keyframes glow {;
-
         from {;
-
           box-"shadow": "0 0 20px rgba(59", 130, 246, 0.5)}
         to {box-"shadow": "0 0 30px rgba(59", 130, 246, 0.8)}
       }
@@ -158,11 +146,8 @@ export default function Page("props": "any) {;
         if(!enableScrollEffects);
             return;
         const observer = new IntersectionObserver((entries) => {;
-
             entries.forEach((entry) => {;
-
                 if(entry.isIntersecting) {;
-
                     const element = entry.target;
                     const animationType = element.getAttribute('data-animation');
                     if(animationType) {;
@@ -178,73 +163,55 @@ export default function Page("props": "any) {;
     );
         return () => {
             animatedElements.forEach((element) => {
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
                 observer.unobserve(element)})}}, [enableScrollEffects]);
     return (<>;
       {/* Theme Toggle Button */}
       {enableThemeToggle && (<motion.button initial = {;
-
   { "opacity": "0",;
   "scale": "0 ;
-
 "}} animate = {;
-
   { "opacity": "1",;
   "scale": "1 ;
 `;
 "}} whileHover={{ "scale": "1.1 "}} whileTap={{ "scale": "0.9 "}} onClick={toggleTheme} className="fixed top-6 right-6 z-50 p-3 bg-white "dark": "bg-gray-800 rounded-full shadow-lg "hover":shadow-xl transition-all duration-300 border border-gray-200 "dark":border-gray-700" title={`Current "theme": ${currentTheme"}`}>";
           <AnimatePresence mode="wait">'";
             {currentTheme === 'light' && (<motion.div key="light" initial = {;
-
   { "opacity": "0",;
   "rotate": "-90 ;
-
 "}} animate = {;
-
   { "opacity": "1",;
   "rotate": "0 ;
-
 "}} exit = {;
-
   { "opacity": "0",;
   "rotate": "90 ;
-
 "}} transition={{ "duration": "0.3 "}}>";
                 <Sun className="w-5 h-5 text-yellow-500" />;
               </motion.div>)}'";
             {currentTheme === 'dark' && (<motion.div key="dark" initial = {;
-
   { "opacity": "0",;
   "rotate": "-90 ;
-
 "}} animate = {;
-
   { "opacity": "1",;
   "rotate": "0 ;
-
 "}} exit = {;
-
   { "opacity": "0",;
   "rotate": "90 ;
-
 "}} transition={{ "duration": "0.3 "}}>";
                 <Moon className="w-5 h-5 text-blue-400" />;
               </motion.div>)}'";
             {currentTheme === 'auto' && (<motion.div key="auto" initial = {;
-
   { "opacity": "0",;
   "rotate": "-90 ;
-
 "}} animate = {;
-
   { "opacity": "1",;
   "rotate": "0 ;
-
 "}} exit = {;
-
   { "opacity": "0",;
   "rotate": "90 ;
-
 "}} transition={{ "duration": "0.3 "}}>";
                 <Monitor className="w-5 h-5 text-gray-600 "dark": "text-gray-400" />;
               </motion.div>)"}
@@ -253,12 +220,9 @@ export default function Page("props": "any) {;
 ;
       {/* Device Type Indicator */}
       {enableResponsiveDesign && (<motion.div initial = {;
-
   { "opacity": "0",;
   "x": "-50 ;
-
 "}} animate = {;
-
   { "opacity": "1",;
   "x": "0 ;
 ";
@@ -274,17 +238,12 @@ export default function Page("props": "any) {;
       {/* Scroll to Top Button */}
       <AnimatePresence>;
         {showScrollToTop && (<motion.button ref={scrollToTopRef} initial = {;
-
   { "opacity": "0",;
   "scale": "0 ;
-
 "}} animate = {;
-
   { "opacity": "1",;
   "scale": "1 ;
-
 "}} exit = {;
-
   { "opacity": "0",;
   "scale": "0 ;
 ";
@@ -292,39 +251,32 @@ export default function Page("props": "any) {;
             <ArrowUp className="w-5 h-5" />;
           </motion.button>)"}
       </AnimatePresence>;
-
       {/* Floating Action Button */}
       <motion.button initial = {;
-
   { "opacity": "0",;
   "scale": "0 ;
-
 "}} animate = {;
-
   { "opacity": "1",;
   "scale": "1 ;
 ";
 "}} whileHover={{ "scale": "1.1 "}} whileTap={{ "scale": "0.9 "}} onClick={() => setIsVisible(!isVisible)} className="fixed bottom-6 right-6 z-50 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg "hover": "shadow-xl transition-all duration-300" title="UI Enhancements">";
         <Palette className="w-5 h-5" />;
       </motion.button>;
-
       {/* UI Enhancement Panel */"}
       <AnimatePresence>;
         {isVisible && (<motion.div initial = {;
-
   { "opacity": "0", "y": "100",;
   "scale": "0.8 ;
-
 "}} animate = {;
-
   { "opacity": "1", "y": "0",;
   "scale": "1 ;
-
 "}} exit = {;
-
   { "opacity": "0", "y": "100",;
   "scale": "0.8 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 "}} transition = {;
 ";
   { "type": "spring", "damping": "25",;
@@ -361,7 +313,10 @@ export default function Page("props": "any) {;
                 </button>
               </div>
             </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
             {/* Content */"}";
             <div className="p-4 space-y-4">;
               {/* Animation Controls */}";
@@ -382,7 +337,6 @@ export default function Page("props": "any) {;
                   </button>;
                 </div>;
               </div>;
-
               {/* Visual Effects */"}";
               <div className="space-y-3">";
                 <h4 className="font-semibold text-gray-900 "dark": "text-white">Visual Effects</h4>";
@@ -401,7 +355,6 @@ export default function Page("props": "any) {;
                   </button>;
                 </div>;
               </div>;
-
               {/* Performance Info */"}";
               <div className="space-y-3">";
                 <h4 className="font-semibold text-gray-900 "dark": "text-white">Performance</h4>";
@@ -417,25 +370,18 @@ export default function Page("props": "any) {;
             </div>;
           </motion.div>) }
       </AnimatePresence>;
-
       {/* Background Particles */}";
       {enableParticles && (<div className="fixed inset-0 pointer-events-none z-0">";
           {[...Array(20)].map((_, i) => (<motion .div key={i} className="absolute w-2 h-2 bg-blue-400 rounded-full opacity-20" initial = {;
-
   {;
-
                     "x": "Math.random() * window.innerWidth",;
                     "y": "Math.random() * window.innerHeight"}} animate = {;
-
   {;
-
                     y[0, -100, 0],;
                     opacity[0.2, 0.5, 0.2],;
 ;
 }} transition = {;
-
   {;
-
                     "duration": "Math.random() * 10 + 10",;
                     "repeat": "Infinity",";
                     "ease": "linear"}} />))}
@@ -443,7 +389,6 @@ export default function Page("props": "any) {;
     </>)};
 export default ModernUIEnhancer;
 '"`;
-
 </motion>;
 </motion>;
 </motion>;

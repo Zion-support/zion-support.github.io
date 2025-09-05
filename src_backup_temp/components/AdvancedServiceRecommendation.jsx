@@ -443,10 +443,8 @@ service, matchScore,;
 ;
 {"opacity": "0",;
   "y": "20"}} animate = {;
-
   { "opacity": "1",;
   "y": "0;
-
 ";
 "}} transition={{ "delay": "0.1 "}} className="bg-white rounded-lg shadow-lg p-6 mb-8">";
         <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2">";
@@ -458,7 +456,6 @@ service, matchScore,;
           <div>";
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Industry</label>;
             <select value={clientProfile.industry"} onChange={;
-
         <div className="grid grid - cols - 1 "md": "grid - cols - 2 gap-6">;
           <div>;
             <label className="block text-sm font - medium text-zion - slate - dark mb-2">Industry</label>;
@@ -692,7 +689,10 @@ Get AI Recommendations;
                 <Button variant = "outline" className="border-white text-white "hover": "bg-white "hover":text-zion-purple" onClick = {"}>;
 " () => window.open(""tel": "+13024640950"",_blank");";
                   <Zap className="w-5 h-5 mr-2`        />;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
           </div> {/* comment */}"
 ""}} transition="{{" delay: 0.4 }} className="mt-12 text-center">"";"
             <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"";"
@@ -747,7 +747,6 @@ for your business needs. Contact us today for a personalized consultation.""""
   () => window.open("tel: +13024640950", _blank")"
                   <Zap className="w-5 h-5 mr-2"   />""
                   Call Now,        </motion.div>)}
-
 """
 }>""""
                   <Zap className="w-5 h-5 mr-2" />

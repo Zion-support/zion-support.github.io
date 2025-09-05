@@ -4,7 +4,6 @@ import { Card } from '@/components/ui/card';
 import { MapPin, Clock, CheckCircle2 } from 'lucide-react';
 import { FavoriteButton } from '@/components/FavoriteButton';
 import { useNavigate } from 'react-router-dom';
-
 export default function TalentCard({ talent, onBook, onFavorite, isFavorite }) {;
   const navigate = useNavigate();
   ;
@@ -175,7 +174,6 @@ export default function Page(props: any) {}
             <div className="flex justify-between items-start">""""
               <h3 className="text-lg font-bold text-white">
                 {talent.full_name}
-              
               <FavoriteButton """
                 itemId={talent.id}""""
                 itemType="talent""""
@@ -271,17 +269,15 @@ export default function Page(props: any) {}
     </Card>
   );
 };
-
 export default TalentCardComponent;
-
 export {TalentCardComponent};
-
 export {TalentCardComponent};
-
 export {TalentCardComponent};
-
 export {TalentCardComponent};
-
 export {Page};
+<<<<<<< HEAD
 
 </FavoriteButton>
+=======
+</FavoriteButton>
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

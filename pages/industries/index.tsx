@@ -1,4 +1,8 @@
 import Layout from '../../components/Layout';
+<<<<<<< HEAD
+=======
+import Layout from '../components/Layout';
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRight, CheckCircle, Users, Shield, Cloud, Brain } from 'lucide-react';

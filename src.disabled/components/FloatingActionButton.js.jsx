@@ -1,2 +1,6 @@
 "import { ;\" PlusIcon,XMarkIcon,ChatBubbleLeftRightIcon,PhoneIcon,EnvelopeIcon } from \'@heroicons/react/24/outline\';\"const FloatingActionButton = ({ className = \" }) => {\" const [isOpen,setIsOpen] = useState(false); const toggleMenu = () => setIsOpen(!isOpen); const actionItems = [; { \"icon\": \'ChatBubbleLeftRightIcon\',\"label\": \"Live Chat\",\" \"action\": () => window.open(\"https:
+<<<<<<< HEAD
 "import { ;" PlusIcon,XMarkIcon,ChatBubbleLeftRightIcon,PhoneIcon,EnvelopeIcon } from "@heroicons/react/24/outline";"const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState(false); const toggleMenu = () => setIsOpen(!isOpen); const actionItems = [; { icon: "ChatBubbleLeftRightIcon",label: "Live Chat"," action: () => window.open("https:'"'"
+=======
+"import { ;" PlusIcon,XMarkIcon,ChatBubbleLeftRightIcon,PhoneIcon,EnvelopeIcon } from "@heroicons/react/24/outline";"const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState(false); const toggleMenu = () => setIsOpen(!isOpen); const actionItems = [; { icon: "ChatBubbleLeftRightIcon",label: "Live Chat"," action: () => window.open("https:'"'"
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

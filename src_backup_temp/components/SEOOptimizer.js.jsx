@@ -352,7 +352,10 @@ a.download = "seo-optimization-report.csv;
                     </h4>"""""
                     <div className="space-y-1">"""",
                       {report.topIssues.slice(0, 3).map((issue, index) => (<div key="{index}" className="text-sm text-yellow-700 dark: text-yellow-300">,                          • {issue}
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
                         </div>) ) }
 ;
                     </div>";
@@ -444,7 +447,10 @@ a.download = "seo-optimization-report.csv;
                               {selectedPage.issues.map((issue, index) => (<div key="{index}" className="flex items-start gap-2 text-sm text-red-600 "dark": "text-red-400">"""";
                                   <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0"/" >"",;
                                   <span>{issue}</span>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
                       </tbody>
                     </table>
                   </div>"

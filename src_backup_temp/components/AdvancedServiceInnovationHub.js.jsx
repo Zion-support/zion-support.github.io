@@ -2462,7 +2462,10 @@ const innovationTrends = []";
             </Button>;
           </div>;
       </motion.div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
       <motion.div initial = {}"
   {opacity: 0, y: 20}} animate = {}""
   {opacity: 1, y: 0 """"">

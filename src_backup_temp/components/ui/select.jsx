@@ -1,5 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 export function Select({ className, children, ...props }) {
   return (
     <div className="min-h-screen bg-white">
@@ -17,7 +20,10 @@ export function SelectTrigger({ className, children, ...props }) {;
     <button;
       className={`flex h-10 w-full items-center justify-between rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 "placeholder": "text-gray-500 "focus":outline-none "focus":ring-2 "focus":ring-blue-500 "focus":border-transparent transition-colors cursor-pointer ${className || ''"}`}
 import React from &apos;react&apos;; export function Select({ className,children,...props }) { return ( <div className=&quot;min-h-screen bg-white&quot;> {children} </div> )} export function SelectTrigger({ className,children,...props }) { return ( <button className={`flex h-10 w-full items-center justify-between rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors cursor-pointer ${className || &quot;}`} {...props} > {children} </button> )} export function SelectValue({ placeholder,className,...props }) { return ( <span className={`text-sm ${className || &quot;}`} {...props}> {placeholder || &apos;Select an option&apos;} </span> )} export function SelectContent({ className,children,...props }) { return ( <div className=&quot;min-h-screen bg-white&quot;> {children} </div> )} export function SelectItem({ className,children,value,...props }) { return ( <div className=&quot;min-h-screen bg-white&quot;> {children} </div> )} export default select;&apos;;&apos;;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 import React from 'react';
 export function Select({ className, children, ...props }) {
   return (
@@ -100,4 +106,8 @@ export default select;';';
     </div>
   );
 }
+<<<<<<< HEAD
 import React from 'react'; export function Select({ className,children,...props }) { return ( <div className="min-h-screen bg-white"> {children} </div> )} export function SelectTrigger({ className,children,...props }) { return ( <button className={`flex h-10 w-full items-center justify-between rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors cursor-pointer ${className || "}`} {...props} > {children} </button> )} export function SelectValue({ placeholder,className,...props }) { return ( <span className={`text-sm ${className || "}`} {...props}> {placeholder || 'Select an option'} </span> )} export function SelectContent({ className,children,...props }) { return ( <div className="min-h-screen bg-white"> {children} </div> )} export function SelectItem({ className,children,value,...props }) { return ( <div className="min-h-screen bg-white"> {children} </div> )} export default select;';';
+=======
+import React from 'react'; export function Select({ className,children,...props }) { return ( <div className="min-h-screen bg-white"> {children} </div> )} export function SelectTrigger({ className,children,...props }) { return ( <button className={`flex h-10 w-full items-center justify-between rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors cursor-pointer ${className || "}`} {...props} > {children} </button> )} export function SelectValue({ placeholder,className,...props }) { return ( <span className={`text-sm ${className || "}`} {...props}> {placeholder || 'Select an option'} </span> )} export function SelectContent({ className,children,...props }) { return ( <div className="min-h-screen bg-white"> {children} </div> )} export function SelectItem({ className,children,value,...props }) { return ( <div className="min-h-screen bg-white"> {children} </div> )} export default select;';';
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

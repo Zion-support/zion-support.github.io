@@ -32,16 +32,13 @@ const {applications, isLoading, updateApplicationStatus} =;
   // Initialize columns with applications based on their status;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
 }, []);, []);
     if(applications) {;
-
       // Group applications by status;
       const groupedApplications = COLUMNS.reduce((acc, column) => {;
-
         acc[column.id] = applications.filter(app => app.status === column.id);
         return acc;
       }, {}
@@ -51,7 +48,6 @@ const {applications, isLoading, updateApplicationStatus} =;
   }, [applications]);
   // Handle drag end event to update the application status;
   const handleDragEnd = async result => {;
-
     const { destination, source, draggableId } = result;
     // If there's no destination or the item is dropped in the same place, do nothing;
     if();
@@ -84,13 +80,15 @@ const {applications, isLoading, updateApplicationStatus} =;
     try {
       await updateApplicationStatus(draggableId, newStatus);
       toast({;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
         "title": 'Status updated',;
         "description": "`Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title"}`});
     } catch(error) {;
       // Revert the UI changes if the database update fails;
       toast({;
-
         "title": 'Failed to update status',;
         "description": 'Please try again',;
         "variant": 'destructive'});
@@ -100,7 +98,6 @@ const {applications, isLoading, updateApplicationStatus} =;
     } catch(error) {
       // Revert the UI changes if the database update fails
       toast({
-
         title: 'Failed to update status',
         description: 'Please try again',
         variant: 'destructive'}
@@ -108,7 +105,6 @@ const {applications, isLoading, updateApplicationStatus} =;
     }
   };
   if(isLoading) {;
-
     return ();
       <div'`;
         className={`grid grid-cols-1 ${!isMobile ? '"md": "grid-cols-3 "lg":grid-cols-5' : ''"} gap-4`}
@@ -162,5 +158,4 @@ const {applications, isLoading, updateApplicationStatus} =;
   );
 }
 '"`;
-
 </KanbanColumn>

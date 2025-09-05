@@ -178,7 +178,6 @@ export const AICodeGenerator = (props: any) => {;
     // Copy code to clipboard;
     const copyToClipboard = useCallback(async (code) => {}
 try {}
-
             await navigator.clipboard.writeText(code)"
             setCopied(true)""
             setTimeout(() => setCopied(false), 2000)"""
@@ -187,7 +186,6 @@ try {}
 """
 """""
             // comment
-
     }, [trackEvent])
 }
     // comment;
@@ -291,9 +289,7 @@ const handleClearHistory = useCallback(() => {}""
                 ? "border-purple-500 text-purple-600 dark: text-purple-400""""""""",
                 : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"}"}>""""
               <Icon className="w-4 h-4"/" >"              {label}
-
             </button>) ) }
-
         </nav>"
       </div>""
 """""
@@ -418,7 +414,10 @@ const handleClearHistory = useCallback(() => {}""
 </>) : (<>"""";
                       <Sparkles className="w-5 h-5"/" >";
                       Generate Code",;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
   {opacity: 0, y: -20 """"">
@@ -507,7 +506,6 @@ const handleClearHistory = useCallback(() => {}""
                   {showAdvanced ? "Hide" : "Show"} Advanced Options,
                 </button>
                 {/* comment */}
-
                 {showAdvanced && (<motion.div initial = {}"
   {opacity: 0, height: 0}} animate = {}""
   {opacity: 1, """
@@ -536,7 +534,6 @@ const handleClearHistory = useCallback(() => {}""
                       <Sparkles className="w-5 h-5"/" >"
                       Generate Code,
 </>)}
-
                 </button>
               </form>
               {/* comment */}
@@ -589,7 +586,10 @@ const handleClearHistory = useCallback(() => {}""
 </>) : (<>"""";
                     <Eye className="w-5 h-5"/" >";
                     Analyze Code",;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
               {generatedCode && (<motion.div initial = {}"
   {opacity: 0, y: 20}} animate = {}""
   {opacity: 1, y: 0 """"">
@@ -619,7 +619,6 @@ const handleClearHistory = useCallback(() => {}""
             </motion.div>)}"""""
 """""""
           {activeTab === "analyze" && (<motion.div key="analyze" initial = {}
-
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
   {opacity: 0, y: -20 """"">
@@ -639,7 +638,6 @@ const handleClearHistory = useCallback(() => {}""
                     <Eye className="w-5 h-5"/" >"
                     Analyze Code,
 </>)}
-
               </button>
               {/* comment */}
 ;
@@ -699,7 +697,10 @@ const handleClearHistory = useCallback(() => {}""
                               </div>"""";
                               {issue.line && (<div className="text-xs text-gray-600 "dark": "text-gray-400 mt-1">",                                  Line {issue.line}
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
               {codeAnalysis && (<motion.div initial = {}"
   {opacity: 0, y: 20}} animate = {}""
   {opacity: 1, y: 0 """"">
@@ -724,7 +725,6 @@ const handleClearHistory = useCallback(() => {}""
                             </div>""""
                             <div className="text-sm text-gray-600 dark:text-gray-400">{label}</div>
                           </div>)}
-
                     return null})}"
                   </div>""
 """""
@@ -793,7 +793,10 @@ const handleClearHistory = useCallback(() => {}""
                                 {issue.message}""""";
                               </div>"""";
                               {issue.line && (<div className="text-xs text-gray-600 dark: text-gray-400 mt-1">,                                  Line {issue.line}
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
                                     </div>
   );
 }
@@ -803,7 +806,6 @@ const handleClearHistory = useCallback(() => {}""
 ;
                             </div>;
                         </div>))}
-
                     </div>"
                   </div>""
 """""
@@ -820,12 +822,13 @@ const handleClearHistory = useCallback(() => {}""
                                 {issue.message}"""""
                               </div>""""
                               {issue.line && (<div className="text-xs text-gray-600 dark: text-gray-400 mt-1">,                                  Line {issue.line}
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
                                 </div>) }
-
                             </div>
                           </div>) ) }
-
                       </div>
                     </div>)}"
                 </motion.div>)}""
@@ -904,7 +907,10 @@ const handleClearHistory = useCallback(() => {}""
                 <FileText className="w-5 h-5"/" >";
                 Generate Documentation",;
               </button>,;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
   {opacity: 0, y: -20 """"">
@@ -935,7 +941,6 @@ const handleClearHistory = useCallback(() => {}""
             </motion.div>)}"""""
 """""""
           {activeTab === "tests" && (<motion.div key="tests" initial = {}
-
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
   {opacity: 0, y: -20 """"">
@@ -957,7 +962,6 @@ const handleClearHistory = useCallback(() => {}""
             </motion.div>)}"""""
 """""""
           {activeTab === "docs" && (<motion.div key="docs" initial = {}
-
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
   {opacity: 0, y: -20 """"">
@@ -977,7 +981,6 @@ const handleClearHistory = useCallback(() => {}""
                 Generate Documentation,
               </button>,
             </motion.div>) }
-
         </AnimatePresence>
         {/* comment */}
 ;
@@ -1031,7 +1034,10 @@ const handleClearHistory = useCallback(() => {}""
                       Copy Code",;
                     </button>;
                   </div>,;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
         {suggestions.length > 0 && (<motion.div initial = {}"
   {opacity: 0, y: 20}} animate = {}""
   {opacity: 1, y: 0 """"">
@@ -1083,10 +1089,8 @@ const handleClearHistory = useCallback(() => {}""
                     </button>
                   </div>,
                 </motion.div>) ) }
-
             </div>
           </motion.div>) }
-
         {/* comment */}
 ;
         {history.length > 0 && (<motion.div initial = {}";
@@ -1129,7 +1133,10 @@ const handleClearHistory = useCallback(() => {}""
                       Export",;
                     </button>;
                   </div>,;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
         {history.length > 0 && (<motion.div initial = {}"
   {opacity: 0, y: 20}} animate = {}""
   {opacity: 1, y: 0 """"">
@@ -1171,17 +1178,14 @@ const handleClearHistory = useCallback(() => {}""
                     </button>
                   </div>,
                 </div>) ) }
-
             </div>
           </motion.div>) }"
       </div>""""
     </div>)}"""""""
 """""""`""
 "
-
   } catch (error) {console.error(error);}
 export default Component
-
 </Trash2>
 </motion>
 </motion>
@@ -1260,4 +1264,8 @@ export default Component;
 </Code>;
 </div>;
 </Code>
+<<<<<<< HEAD
 </div>
+=======
+</div>
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

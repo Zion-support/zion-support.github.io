@@ -1,0 +1,6 @@
+<<<<<<< HEAD
+=======
+import React from \'react\' import { Link } from \'react-router-dom\' export function Home(): JSX.Element { return ( <div> <h1>Welcome to Zion Tech Group</h1> <p>Cutting-edge technology solutions and AI services.</p> <div style={{ \"display\": \'flex\',\"gap\": \'12\',\"marginTop\": \'16\' }}> <Link to=\"/services\">Explore Services</Link> <Link to=\"/request-quote\">Request a Quote</Link> </div> </div> ) }
+const React from "react" import { Link } from "react-router-dom" export function Home(): JSX.Element { return ( <div> <h1>Welcome to Zion Tech Group</h1> <p>Cutting-edge technology solutions and AI services.</p> <div style={{ display: "flex",gap: "12",marginTop: "16" }}> <Link to="/services">Explore Services</Link> <Link to="/request-quote">Request a Quote</Link> </div> </div> ) }'"'"
+import _React from 'react' import { Link } from 'react-router-dom' export function Home(): JSX.Element { return ( <div> <h1>Welcome to Zion Tech Group</h1> <p>Cutting-edge technology solutions and AI services.</p> <div style={{ "display": 'flex',"gap": '12',"marginTop": '16' }}> <Link to="/services">Explore Services</Link> <Link to="/request-quote">Request a Quote</Link> </div> </div> ) }
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

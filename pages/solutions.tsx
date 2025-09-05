@@ -16,7 +16,14 @@ import {
   Star,
   Award,
   Globe,
-  Zap
+  Zap,
+  Cloud,
+  Code,
+  Heart,
+  ShoppingCart,
+  Settings,
+  GraduationCap,
+  Building
 } from 'lucide-react';
 
 const solutions = [

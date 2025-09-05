@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:src/data/aiServicesData.ts
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 export interface AIService {;
   "id": "string;
   "title": string;
@@ -99,7 +102,6 @@ export const "AI_SERVICES": "AIService[] = [;
     "competitors": "["IBM Watson"", "Microsoft Bot Framework", "Google Dialogflow", "Amazon Lex"],;
     "marketSize": "$15.7 billion by 2025";
   },;
-
   // Machine Learning Model Development & Deployment;
   {;
     "id": "ml-model-development-deployment",;
@@ -164,7 +166,6 @@ export const "AI_SERVICES": "AIService[] = [;
     "competitors": "["DataRobot"", "H2O.ai", "Dataiku", "Alteryx", "SAS"],;
     "marketSize": "$31.2 billion by 2025";
   },;
-
   // Computer Vision & Image Recognition Platform;
   {;
     "id": "computer-vision-image-recognition",;
@@ -229,7 +230,6 @@ export const "AI_SERVICES": "AIService[] = [;
     "competitors": "["Google Cloud Vision"", "Amazon Rekognition", "Microsoft Computer Vision", "IBM Watson Visual Recognition"],;
     "marketSize": "$18.9 billion by 2025";
   },;
-
   // Natural Language Processing & Text Analytics;
   {;
     "id": "nlp-text-analytics-platform",;
@@ -294,7 +294,6 @@ export const "AI_SERVICES": "AIService[] = [;
     "competitors": "["Google Cloud NLP"", "Amazon Comprehend", "Microsoft Text Analytics", "IBM Watson NLP"],;
     "marketSize": "$22.3 billion by 2025";
   },;
-
   // AI-Powered Predictive Analytics Platform;
   {;
     "id": "ai-predictive-analytics-platform",;
@@ -359,7 +358,6 @@ export const "AI_SERVICES": "AIService[] = [;
     "competitors": "["SAS"", "IBM SPSS", "RapidMiner", "Alteryx", "DataRobot"],;
     "marketSize": "$28.7 billion by 2025";
   },;
-
   // AI-Powered Content Generation Platform;
   {;
     "id": "ai-content-generation-platform",;
@@ -424,7 +422,6 @@ export const "AI_SERVICES": "AIService[] = [;
     "competitors": "["Jasper AI"", "Copy.ai", "Writesonic", "Canva", "Adobe Creative Suite"],;
     "marketSize": "$13.4 billion by 2025";
   },;
-
   // AI-Powered Process Automation Platform;
   {;
     "id": "ai-process-automation-platform",;
@@ -489,7 +486,6 @@ export const "AI_SERVICES": "AIService[] = [;
     "competitors": "["UiPath"", "Automation Anywhere", "Blue Prism", "Microsoft Power Automate", "Pega"],;
     "marketSize": "$19.6 billion by 2025";
   },;
-
   // AI-Powered Recommendation Engine;
   {;
     "id": "ai-recommendation-engine",;
@@ -554,7 +550,6 @@ export const "AI_SERVICES": "AIService[] = [;
     "competitors": "["Amazon Personalize"", "Google Recommendations AI", "Microsoft Personalizer", "Recombee"],;
     "marketSize": "$11.2 billion by 2025";
   },;
-
   // AI-Powered Fraud Detection System;
   {;
     "id": "ai-fraud-detection-system",;
@@ -619,7 +614,6 @@ export const "AI_SERVICES": "AIService[] = [;
     "competitors": "["FICO"", "SAS", "IBM Safer Payments", "ACI Worldwide", "Feedzai"],;
     "marketSize": "$9.8 billion by 2025";
   },;
-
   // AI-Powered Voice & Speech Recognition;
   {;
     "id": "ai-voice-speech-recognition",;
@@ -715,7 +709,6 @@ export interface AIService {}
     security: string[]};,
   competitors?: string[];,
   marketSize?: string}
-
 export const AI_SERVICES: AIService[] = [;,
   // AI-Powered Chatbot & Virtual Assistant Platform;,
   {}
@@ -782,7 +775,6 @@ export const AI_SERVICES: AIService[] = [;,
     competitors: ["IBM Watson", "Microsoft Bot Framework", "Google Dialogflow", "Amazon Lex"],",
     marketSize: "_5.7 billion by 2025";,",
   },
-
   // Machine Learning Model Development & Deployment;
   {}
     id: "ml-model-development-deployment",",
@@ -848,7 +840,6 @@ export const AI_SERVICES: AIService[] = [;,
     competitors: ["DataRobot", "H2O.ai", "Dataiku", "Alteryx", "SAS"],",
     marketSize: "$31.2 billion by 2025";,",
   },
-
   // Computer Vision & Image Recognition Platform;
   {}
     id: "computer-vision-image-recognition",",
@@ -914,7 +905,6 @@ export const AI_SERVICES: AIService[] = [;,
     competitors: ["Google Cloud Vision", "Amazon Rekognition", "Microsoft Computer Vision", "IBM Watson Visual Recognition"],",
     marketSize: "_8.9 billion by 2025";,",
   },
-
   // Natural Language Processing & Text Analytics;
   {}
     id: "nlp-text-analytics-platform",",
@@ -980,7 +970,6 @@ export const AI_SERVICES: AIService[] = [;,
     competitors: ["Google Cloud NLP", "Amazon Comprehend", "Microsoft Text Analytics", "IBM Watson NLP"],",
     marketSize: "$22.3 billion by 2025";,",
   },
-
   // AI-Powered Predictive Analytics Platform;
   {}
     id: "ai-predictive-analytics-platform",",
@@ -1046,7 +1035,6 @@ export const AI_SERVICES: AIService[] = [;,
     competitors: ["SAS", "IBM SPSS", "RapidMiner", "Alteryx", "DataRobot"],",
     marketSize: "$28.7 billion by 2025";,",
   },
-
   // AI-Powered Content Generation Platform;
   {}
     id: "ai-content-generation-platform",",
@@ -1112,7 +1100,6 @@ export const AI_SERVICES: AIService[] = [;,
     competitors: ["Jasper AI", "Copy.ai", "Writesonic", "Canva", "Adobe Creative Suite"],",
     marketSize: "_3.4 billion by 2025";,",
   },
-
   // AI-Powered Process Automation Platform;
   {}
     id: "ai-process-automation-platform",",
@@ -1178,7 +1165,6 @@ export const AI_SERVICES: AIService[] = [;,
     competitors: ["UiPath", "Automation Anywhere", "Blue Prism", "Microsoft Power Automate", "Pega"],",
     marketSize: "_9.6 billion by 2025";,",
   },
-
   // AI-Powered Recommendation Engine;
   {}
     id: "ai-recommendation-engine",",
@@ -1244,7 +1230,6 @@ export const AI_SERVICES: AIService[] = [;,
     competitors: ["Amazon Personalize", "Google Recommendations AI", "Microsoft Personalizer", "Recombee"],",
     marketSize: "_1.2 billion by 2025";,",
   },
-
   // AI-Powered Fraud Detection System;
   {}
     id: "ai-fraud-detection-system",",
@@ -1310,7 +1295,6 @@ export const AI_SERVICES: AIService[] = [;,
     competitors: ["FICO", "SAS", "IBM Safer Payments", "ACI Worldwide", "Feedzai"],",
     marketSize: "$9.8 billion by 2025";,",
   },
-
   // AI-Powered Voice & Speech Recognition;
   {}
     id: "ai-voice-speech-recognition",",
@@ -1376,7 +1360,6 @@ export const AI_SERVICES: AIService[] = [;,
     competitors: ["Google Speech-to-Text", "Amazon Transcribe", "Microsoft Speech Services", "IBM Watson Speech"],",
     marketSize: "$7.5 billion by 2025";,",
   },
-
   // AI-Powered Predictive Maintenance System;
   {}
     id: "ai-predictive-maintenance-system",",
@@ -1442,7 +1425,6 @@ export const AI_SERVICES: AIService[] = [;,
     competitors: ["IBM Maximo", "SAP Predictive Maintenance", "GE Predix", "PTC ThingWorx"],",
     marketSize: "_2.3 billion by 2025";,",
   },
-
   // AI-Powered Financial Risk Assessment Platform;
   {}
     id: "ai-financial-risk-assessment",",
@@ -1508,7 +1490,6 @@ export const AI_SERVICES: AIService[] = [;,
     competitors: ["FICO", "SAS Risk Management", "IBM SPSS", "SAP Risk Management"],",
     marketSize: "$8.7 billion by 2025";,",
   },
-
   // AI-Powered Supply Chain Optimization Platform;
   {}
     id: "ai-supply-chain-optimization",",
@@ -1574,7 +1555,6 @@ export const AI_SERVICES: AIService[] = [;,
     competitors: ["SAP Ariba", "Oracle Supply Chain", "Kinaxis", "Blue Yonder"],",
     marketSize: "_5.2 billion by 2025";,",
   },
-
   // AI-Powered Healthcare Diagnostics Assistant;
   {}
     id: "ai-healthcare-diagnostics-assistant",",
@@ -1640,7 +1620,6 @@ export const AI_SERVICES: AIService[] = [;,
     competitors: ["IBM Watson Health", "Google DeepMind", "Microsoft Healthcare", "NVIDIA Clara"],",
     marketSize: "$45.2 billion by 2025";,",
   },
-
   // AI-Powered Cybersecurity Threat Intelligence;
   {}
     id: "ai-cybersecurity-threat-intelligence",",
@@ -2714,4 +2693,8 @@ export const AI_SERVICES: AIService[] = [
     competitors: ["CrowdStrike", "Palo Alto Networks", "IBM Security", "Microsoft Sentinel"],
     marketSize: "$22.1 billion by 2025"
   }
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

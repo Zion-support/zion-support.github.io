@@ -56,7 +56,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
     setIsRefreshing(false);};
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -65,9 +64,7 @@ export function AdvancedPerformanceMonitor("props": "any) {;
       return () => clearInterval(interval);}
   }, [autoRefresh]);
   const getStatusColor = status => {;
-
     switch(status) {;
-
       case 'critical':';
         return 'bg-red-500 text-white';
       case 'warning':';
@@ -77,9 +74,7 @@ export function AdvancedPerformanceMonitor("props": "any) {;
     }
   };
   const getSeverityColor = severity => {;
-
     switch(severity) {;
-
       case 'critical':';
         return 'bg-red-100 text-red-700 "dark": "bg-red-900/30 "dark":text-red-300';
       case 'high':';
@@ -91,9 +86,7 @@ export function AdvancedPerformanceMonitor("props": "any) {;
     "}
   };
   const getTrendIcon = trend => {;
-
     switch(trend) {;
-
       case 'up': ";
         return <TrendingUp className="w-4 h-4 text-red-500"  />;
       case 'down':";
@@ -103,9 +96,7 @@ export function AdvancedPerformanceMonitor("props": "any) {;
     "}
   };
   const getCategoryIcon = category => {;
-
     switch(category) {;
-
       case 'Processor':";
         return <Cpu className="w-5 h-5 text-blue-500"  />;
       case 'Memory':";
@@ -124,7 +115,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
     if(utilization >= 60) return 'text-yellow-600';
     return 'text-green-600';};
   if(!isOpen) {;
-
     return ();
       <button;
         onClick={() => setIsOpen(true)}";
@@ -136,7 +126,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
     );
   "}
   if(isMinimized) {;
-
     return (";
       <div className="fixed bottom-4 right-4 bg-white "dark": "bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">";
         <div className="flex items-center gap-2 p-3">";
@@ -206,7 +195,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
           </button>;
         </div>;
       </div>;
-
       {/* Controls */"}";
       <div className="bg-zion-slate-light/50 p-4 border-b border-zion-slate-light">";
         <div className="flex items-center justify-between">";
@@ -261,7 +249,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
           </div>;
         </div>;
       </div>;
-
       {/* Tabs */"}";
       <div className="flex border-b border-zion-slate-light">;
         {[';
@@ -271,7 +258,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
           {"id": 'scalability', "label": 'Scalability', "icon": "TrendingUp"},;
           {"id": 'analytics', "label": 'Analytics', "icon": "Zap"},;
         ].map(tab => {;
-
           const Icon = tab.icon;
           return ();
             <button;
@@ -288,7 +274,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
           );
         })}
       </div>;
-
       {/* Content */}";
       <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">;
         {activeTab === 'overview' && (";
@@ -308,7 +293,10 @@ export function AdvancedPerformanceMonitor("props": "any) {;
                       </h3>;
                     </div>;
                     <span`;
+<<<<<<< HEAD
                       
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
                     </div>
                     <span`
                       className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(metric.status)}`}
@@ -348,7 +336,10 @@ export function AdvancedPerformanceMonitor("props": "any) {;
                 </div>;
               ))}
             </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
             {/* Quick Status */}";
             <div className="grid grid-cols-1 "lg": "grid-cols-2 gap-6">";
               <div className="bg-gradient-to-r from-zion-blue/10 to-zion-cyan/10 p-6 rounded-xl border border-zion-blue/20">";
@@ -475,7 +466,10 @@ export function AdvancedPerformanceMonitor("props": "any) {;
                         {metric.name}
                       </h3>;
                       <span`;
+<<<<<<< HEAD
                       
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
                       <span`
                         className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(metric.status)}`}
                       >;
@@ -544,7 +538,10 @@ export function AdvancedPerformanceMonitor("props": "any) {;
                         {alert.title"}
                       </h3>;
                       <span`;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
         {activeTab === 'alerts' && ("
           <div className="space-y-4">
             {performanceAlerts.map(alert => (
@@ -560,7 +557,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
                     <div className="flex items-center gap-3 mb-2">"
                       <h3 className="font-semibold text-zion-slate">
                         {alert.title}
-                      
                       <span`
                         className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(alert.severity)}`}
                       >;
@@ -638,7 +634,10 @@ export function AdvancedPerformanceMonitor("props": "any) {;
                         {metric.name"}
                       </h3>;
                       <span`;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
         {activeTab === 'scalability' && ("
           <div className="space-y-4">
             {scalabilityMetrics.map(metric => (
@@ -654,7 +653,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
                     <div className="flex items-center gap-3 mb-2">"
                       <h3 className="font-semibold text-zion-slate">
                         {metric.name}
-                      
                       <span`
                         className={`px-2 py-1 rounded-full text-xs font-medium ${getUtilizationColor(metric.utilization)}`}
                       >;
@@ -727,14 +725,16 @@ export function AdvancedPerformanceMonitor("props": "any) {;
     </div>;
   );}
 "export default ComponentName;";
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
         {activeTab === 'analytics' && ("
           <div className="space-y-6">"
             <div className="text-center text-zion-slate-light">"
               <Zap className="w-16 h-16 mx-auto mb-4 opacity-50"  />"
               <h3 className="text-lg font-semibold mb-2">
                 Performance Analytics
-              
               <p>
                 Advanced performance analytics and predictive insights coming
                 soon...
@@ -746,6 +746,9 @@ export function AdvancedPerformanceMonitor("props": "any) {;
     </div>
     );}
 "export default ComponentName;"
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 </RefreshCw>;
 </RefreshCw>

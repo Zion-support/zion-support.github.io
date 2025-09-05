@@ -9,14 +9,15 @@ export const ThemeProvider = ("props": "any) => {;
   const [theme", setTheme] = React.useState("dark");
   ;
   React.useEffect(() => {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 const ThemeContext = React.createContext({theme: "dark",
   setTheme: () => null,}
     );
-
 export const ThemeProvider = (props: any) => {
   const [theme, setTheme] = React.useState("dark");
-  
   React.useEffect(() => {
     const root = window.document.documentElement;
     root.classList.remove("light", "dark");

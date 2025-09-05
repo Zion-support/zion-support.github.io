@@ -3,11 +3,13 @@ import { Mail, Phone, MapPin, Clock, MessageSquare, ArrowRight, Globe, Shield, U
 ,;
         {;
 ";
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 interface ContactSection.jsProps {
   // Add props here as needed
 }
-
 export default function ContactSection.js({ }: ContactSection.jsProps) {
   return (
     <div>
@@ -16,4 +18,8 @@ export default function ContactSection.js({ }: ContactSection.jsProps) {
     </div>
   );
 export default Component;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
