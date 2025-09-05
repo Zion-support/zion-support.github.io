@@ -1,19 +1,17 @@
-import Head from 'next/head';
-import Layout from '../components/Layout';
+import Head from 'next/head'
+import Layout from '../components/Layout'
 
 export default function IndexTest() {
-  return (
-    <Layout>
+  return(<Layout>
       <Head>
         <title>Index Test - Zion Tech Group</title>
-        <meta name="description" content="Test page for index functionality." />
+        <meta name="description" content="Test page for index functionality."  />
       </Head>
-
       <main>
         <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className="text-4xl md: text-6xl font-bold mb-6">
                 Index Test
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -22,7 +20,6 @@ export default function IndexTest() {
             </div>
           </div>
         </section>
-
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
@@ -47,6 +44,4 @@ export default function IndexTest() {
           </div>
         </section>
       </main>
-    </Layout>
-  );
-}
+    </Layout>) }

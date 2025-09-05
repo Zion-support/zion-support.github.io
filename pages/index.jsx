@@ -1,24 +1,22 @@
-import Link from 'next/link';
-import Layout from '../components/Layout';
+import Link from 'next/link'
+import Layout from '../components/Layout'
 
 const Home = () => {
-  return (
-    <Layout 
+  return(<Layout
       title="Zion Tech Group - Leading Technology Solutions Provider"
       description="Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence."
     >
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         <main className="container mx-auto px-4 py-16">
           <div className="text-center text-white">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-5xl md: text-6xl font-bold mb-6">
               Welcome to Zion Tech Group
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-              Leading technology solutions provider helping businesses transform their digital presence 
-              with cutting-edge AI, cloud architecture, and innovative development services.
+              Leading technology solutions provider helping businesses transform their digital presence
+              with cutting-edge AI, cloud architecture, and innovative development services.;
             </p>
-            
-            <div className="flex flex-col sm:flex-row justify-center gap-6 mb-12">
+            <div className="flex flex-col sm: flex-row justify-center gap-6 mb-12">
               <Link href="/services" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
                 Explore Our Services
               </Link>
@@ -26,13 +24,12 @@ const Home = () => {
                 Get Free Consultation
               </Link>
             </div>
-            
             <div className="grid md:grid-cols-3 gap-8 mt-16">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-colors">
                 <div className="text-4xl mb-4">🤖</div>
                 <h3 className="text-2xl font-semibold mb-4">AI & Machine Learning</h3>
                 <p className="text-lg">Custom AI solutions, chatbots, predictive analytics, and machine learning models tailored to your business needs.</p>
-                <Link href="/services/ai-services" className="text-blue-200 hover:text-white mt-4 inline-block font-semibold">
+                <Link href="/services/ai-services" className="text-blue-200 hover: text-white mt-4 inline-block font-semibold">
                   Learn More →
                 </Link>
               </div>
@@ -40,7 +37,7 @@ const Home = () => {
                 <div className="text-4xl mb-4">☁️</div>
                 <h3 className="text-2xl font-semibold mb-4">Cloud Solutions</h3>
                 <p className="text-lg">Scalable cloud architecture, migration services, and infrastructure design for modern applications and businesses.</p>
-                <Link href="/services/it-services" className="text-blue-200 hover:text-white mt-4 inline-block font-semibold">
+                <Link href="/services/it-services" className="text-blue-200 hover: text-white mt-4 inline-block font-semibold">
                   Learn More →
                 </Link>
               </div>
@@ -48,14 +45,13 @@ const Home = () => {
                 <div className="text-4xl mb-4">🚀</div>
                 <h3 className="text-2xl font-semibold mb-4">Micro SAAS Solutions</h3>
                 <p className="text-lg">Innovative micro SAAS applications including URL shorteners, invoice generators, password managers, and more.</p>
-                <Link href="/services/micro-saas" className="text-blue-200 hover:text-white mt-4 inline-block font-semibold">
+                <Link href="/services/micro-saas" className="text-blue-200 hover: text-white mt-4 inline-block font-semibold">
                   Learn More →
                 </Link>
               </div>
             </div>
-
-            {/* Stats Section */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20">
+            {/* Stats Section */ }
+            <div className="grid grid-cols-2 md: grid-cols-4 gap-8 mt-20">
               <div className="text-center">
                 <div className="text-4xl font-bold text-blue-200 mb-2">150+</div>
                 <div className="text-lg">Projects Completed</div>
@@ -76,8 +72,7 @@ const Home = () => {
           </div>
         </main>
       </div>
-    </Layout>
-  );
-};
+    </Layout>)
+}
 
 export default Home;
