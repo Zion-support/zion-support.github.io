@@ -1,7 +1,6 @@
 export interface UltimateInnovativeService {}
   // TODO: Implement;
-};
-  "id": string;"
+};id": string;"
   title: string;,
   description: string;
   category: string;,
@@ -24,8 +23,8 @@ export interface UltimateInnovativeService {}
   email: string;
     website: string;
 };
-  technicalSpecs?: {"}
-    "technology": string[];"
+  technicalSpecs?: {}
+    "technology": string[];
     integrations: string[];,
   apiEndpoints: number;
     uptime: string;,
