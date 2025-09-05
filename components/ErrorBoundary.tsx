@@ -1,12 +1,10 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-interface Props {
-  children: ReactNode;
-  level?: string;
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 interface State {
   hasError: boolean;
