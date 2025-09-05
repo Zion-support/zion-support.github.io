@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import {
-  Menu,
-  X,
-  Search,
-  Sun,
-  Moon,
-  User,
-  Phone,
-  Mail,
+import { motion } from 'framer-motion';
+import { 
+  Menu, 
+  X, 
+  Search, 
+  Sun, 
+  Moon, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Clock,
   ChevronDown,
   Zap,
   Brain,
@@ -39,7 +41,6 @@ const navigation = [
   {
     name: 'Services',
     href: '/services',
-    icon: Settings,
     children: [
       { name: 'AI Solutions', href: '/ai-services', icon: Brain, count: '20+', description: 'Cutting-edge AI solutions' },
       { name: 'IT Services', href: '/it-services', icon: Network, count: '20+', description: 'Comprehensive IT services' },
@@ -92,7 +93,7 @@ const navigation = [
     ]
   },
   {
-    name: 'About',
+    name: 'Company',
     href: '/about',
     icon: Users,
     children: [
@@ -102,11 +103,7 @@ const navigation = [
       { name: 'Partners', href: '/partners', icon: Building, description: 'Partnership opportunities' }
     ]
   },
-  {
-    name: 'Contact',
-    href: '/contact',
-    icon: Phone
-  }
+  { name: 'Support', href: '/support' }
 ];
 
 const contactInfo = {
@@ -137,14 +134,12 @@ export default function Header({ onMenuClick }: HeaderProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
-  };
-
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       router.push(`/search?q=${encodeURIComponent(searchQuery)}`);
+      setIsSearchOpen(false);
+      setSearchQuery('');
     }
   };
 
@@ -187,10 +182,18 @@ export default function Header({ onMenuClick }: HeaderProps) {
       }`}>
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
+            {/* Mobile Menu Button */}
+            <button
+              onClick={onMenuClick}
+              className="lg:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+            >
+              <Menu className="w-6 h-6" />
+            </button>
+
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <Zap className="w-5 h-5 text-white" />
+              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">Z</span>
               </div>
               <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
             </Link>
@@ -346,6 +349,71 @@ export default function Header({ onMenuClick }: HeaderProps) {
           </div>
         )}
       </nav>
+              <button
+                onClick={() => setIsSearchOpen(!isSearchOpen)}
+                className="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md transition-colors"
+              >
+                <Search className="w-5 h-5" />
+              </button>
+
+              {/* CTA Button */}
+              <Link
+                href="/contact"
+                className="hidden sm:flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300"
+              >
+                <DollarSign className="w-4 h-4" />
+                <span>Get Quote</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Search Overlay */}
+      {isSearchOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 bg-black/50 z-50 flex items-start justify-center pt-20"
+          onClick={() => setIsSearchOpen(false)}
+        >
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="bg-white rounded-lg shadow-xl p-6 w-full max-w-md mx-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <form onSubmit={handleSearch} className="space-y-4">
+              <div className="flex items-center space-x-2">
+                <Search className="w-5 h-5 text-gray-400" />
+                <input
+                  type="text"
+                  placeholder="Search services, solutions..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="flex-1 border-none outline-none text-lg"
+                  autoFocus
+                />
+                <button
+                  type="button"
+                  onClick={() => setIsSearchOpen(false)}
+                  className="p-1 hover:bg-gray-100 rounded"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Search
+              </button>
+            </form>
+          </motion.div>
+        </motion.div>
+      )}
     </header>
   );
 }

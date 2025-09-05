@@ -179,8 +179,42 @@ export default function Footer() {
                   );
                 })}
               </div>
+                <Phone className="w-4 h-4 text-blue-400" />
+                <span>{companyInfo.phone}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-blue-400" />
+                <span>{companyInfo.email}</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 text-blue-400 mt-1" />
+                <span className="text-xs">{companyInfo.address}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Clock className="w-4 h-4 text-blue-400" />
+                <span className="text-xs">{companyInfo.hours}</span>
+              </div>
             </div>
           </div>
+
+          {/* Services */}
+          {Object.entries(services).map(([category, serviceList]) => (
+            <div key={category}>
+              <h4 className="text-lg font-semibold mb-4">{category}</h4>
+              <ul className="space-y-2">
+                {serviceList.map((service) => (
+                  <li key={service.name}>
+                    <Link 
+                      href={service.href}
+                      className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
+                    >
+                      {service.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
 
           {/* Services */}
           <div className="space-y-4">
@@ -328,6 +362,56 @@ export default function Footer() {
                 <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                 <span className="text-green-400 text-sm">All Systems Operational</span>
               </div>
+          </div>
+        </div>
+
+        {/* Newsletter Signup */}
+        <div className="border-t border-gray-800 mt-12 pt-8">
+          <div className="max-w-md mx-auto text-center">
+            <h4 className="text-lg font-semibold mb-2">Stay Updated</h4>
+            <p className="text-gray-300 text-sm mb-4">
+              Get the latest news and updates from Zion Tech Group
+            </p>
+            <div className="flex gap-2">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <button className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Social Links & Copyright */}
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="flex gap-4">
+              <a href="https://facebook.com/ziontechgroup" className="text-gray-400 hover:text-blue-400 transition-colors">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-blue-400 transition-colors">
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-blue-400 transition-colors">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a href="https://instagram.com/ziontechgroup" className="text-gray-400 hover:text-blue-400 transition-colors">
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-blue-400 transition-colors">
+                <Github className="w-5 h-5" />
+              </a>
+            </div>
+            <div className="text-center md:text-right">
+              <p className="text-gray-400 text-sm">
+                © {currentYear} Zion Tech Group. All rights reserved.
+              </p>
+              <p className="text-gray-500 text-xs mt-1">
+                Made with ❤️ for innovation
+              </p>
             </div>
           </div>
         </div>
