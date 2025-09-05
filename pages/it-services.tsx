@@ -44,7 +44,7 @@ const itServices = [{
     "features": ['Multi-cloud Strategy', 'Cost Optimization', 'Auto-scaling', 'Disaster Recovery'],
     "pricing": '$6,000 - $30,000/project',
     "category": 'Cloud',
-    "popular": true
+    popular:true
   },
   {
     "title": 'Cybersecurity Solutions',
@@ -53,7 +53,7 @@ const itServices = [{
     "features": ['Threat Detection', 'Vulnerability Assessment', 'Security Audits', 'Incident Response'],
     "pricing": '$5,000 - $40,000/project',
     "category": 'Security',
-    "popular": true
+    popular:true
   },
   {
     "title": 'Network Infrastructure',
@@ -94,7 +94,7 @@ const itServices = [{
     "features": ['CI/CD Pipelines', 'Infrastructure as Code', 'Container Orchestration', 'Monitoring & Logging'],
     "pricing": '$10,000 - $50,000/project',
     "category": 'DevOps',
-    "popular": true
+    popular:true
   },
   {
     "title": 'Data Center Migration',
@@ -215,7 +215,7 @@ const itServices = [{
     "features": ['Predictive Analytics', 'Automated Incident Response', 'Anomaly Detection', 'Self-healing Systems'],
     "pricing": '$15,000 - $75,000/setup',
     "category": 'AIOps',
-    "popular": true
+    popular:true
   },
   {
     "title": 'Zero Trust Security Architecture',
@@ -224,7 +224,7 @@ const itServices = [{
     "features": ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Least Privilege Access'],
     "pricing": '$25,000 - $150,000/project',
     "category": 'Zero Trust',
-    "popular": true
+    popular:true
   },
   {
     "title": 'Edge Computing Infrastructure',
@@ -233,7 +233,7 @@ const itServices = [{
     "features": ['Edge Nodes Deployment', 'Latency Optimization', 'IoT Integration', 'Distributed Processing'],
     "pricing": '$20,000 - $100,000/project',
     "category": 'Edge Computing',
-    "popular": true
+    popular:true
   },
   {
     "title": 'Quantum-Safe Cryptography Implementation',
@@ -242,7 +242,7 @@ const itServices = [{
     "features": ['Algorithm Migration', 'Key Management', 'Compliance Testing', 'Future-proofing'],
     "pricing": '$30,000 - $200,000/project',
     "category": 'Quantum Security',
-    "popular": true
+    popular:true
   },
   {
     "title": '5G Network Infrastructure',
@@ -251,7 +251,7 @@ const itServices = [{
     "features": ['5G Core Design', 'Network Slicing', 'Edge Integration', 'Performance Optimization'],
     "pricing": '$50,000 - $500,000/project',
     "category": '5G Networks',
-    "popular": true
+    popular:true
   },
   {
     "title": 'Blockchain Infrastructure Services',
@@ -260,7 +260,7 @@ const itServices = [{
     "features": ['Private Blockchain Networks', 'Smart Contract Development', 'Node Management', 'Consensus Mechanisms'],
     "pricing": '$40,000 - $300,000/project',
     "category": 'Blockchain',
-    "popular": true
+    popular:true
   },
   {
     "title": 'IoT Security & Management Platform',
@@ -269,7 +269,7 @@ const itServices = [{
     "features": ['Device Authentication', 'Firmware Updates', 'Threat Detection', 'Compliance Monitoring'],
     "pricing": '$25,000 - $150,000/setup',
     "category": 'IoT Security',
-    "popular": true
+    popular:true
   },
   {
     "title": 'Hybrid Cloud Orchestration',
@@ -278,7 +278,7 @@ const itServices = [{
     "features": ['Multi-cloud Management', 'Workload Migration', 'Cost Optimization', 'Unified Monitoring'],
     "pricing": '$30,000 - $200,000/project',
     "category": 'Hybrid Cloud',
-    "popular": true
+    popular:true
   },
   {
     "title": 'AI Model Infrastructure & MLOps',
@@ -287,7 +287,7 @@ const itServices = [{
     "features": ['Model Deployment', 'A/B Testing', 'Performance Monitoring', 'Auto-scaling'],
     "pricing": '$20,000 - $100,000/setup',
     "category": 'MLOps',
-    "popular": true
+    popular:true
   },
   {
     "title": 'Green IT & Sustainability Solutions',
@@ -296,7 +296,7 @@ const itServices = [{
     "features": ['Energy Monitoring', 'Carbon Tracking', 'Efficient Cooling', 'Renewable Energy Integration'],
     "pricing": '$15,000 - $80,000/project',
     "category": 'Green IT',
-    "popular": true
+    popular:true
   },
   {
     "title": 'Digital Twin Infrastructure',
@@ -305,7 +305,7 @@ const itServices = [{
     "features": ['3D Modeling', 'Real-time Simulation', 'Predictive Analytics', 'Integration APIs'],
     "pricing": '$40,000 - $250,000/project',
     "category": 'Digital Twins',
-    "popular": true
+    popular:true
   },
   {
     "title": 'AR/VR Infrastructure & Development',
@@ -314,7 +314,7 @@ const itServices = [{
     "features": ['VR/AR Hardware Setup', 'Content Development', 'Spatial Computing', 'User Experience Design'],
     "pricing": '$25,000 - $150,000/project',
     "category": 'AR/VR',
-    "popular": true
+    popular:true
   },
   {
     "title": 'Robotic Process Automation (RPA)',
@@ -323,7 +323,7 @@ const itServices = [{
     "features": ['Process Analysis', 'Bot Development', 'Workflow Automation', 'Performance Monitoring'],
     "pricing": '$10,000 - $60,000/project',
     "category": 'RPA',
-    "popular": true
+    popular:true
   },
   {
     "title": 'Data Mesh Architecture Implementation',
@@ -332,7 +332,7 @@ const itServices = [{
     "features": ['Domain-driven Design', 'Data Product Development', 'Federated Governance', 'Self-service Analytics'],
     "pricing": '$50,000 - $300,000/project',
     "category": 'Data Architecture',
-    "popular": true
+    popular:true
   },
   {
     "title": 'Serverless Architecture Design',
@@ -341,7 +341,7 @@ const itServices = [{
     "features": ['Function-as-a-Service', 'Event-driven Architecture', 'Auto-scaling', 'Cost Optimization'],
     "pricing": '$15,000 - $80,000/project',
     "category": 'Serverless',
-    "popular": true
+    popular:true
   },
   {
     "title": 'API Gateway & Management Platform',
@@ -350,7 +350,7 @@ const itServices = [{
     "features": ['API Gateway', 'Rate Limiting', 'Authentication', 'Developer Portal'],
     "pricing": '$10,000 - $50,000/setup',
     "category": 'API Management',
-    "popular": true
+    popular:true
   },
   {
     "title": 'Microservices Architecture Migration',
@@ -359,7 +359,7 @@ const itServices = [{
     "features": ['Service Decomposition', 'Container Orchestration', 'Service Mesh', 'Monitoring Setup'],
     "pricing": '$40,000 - $250,000/project',
     "category": 'Microservices',
-    "popular": true
+    popular:true
   },
   {
     "title": 'IT Service Management (ITSM) Platform',
@@ -368,7 +368,7 @@ const itServices = [{
     "features": ['Incident Management', 'Change Management', 'Service Catalog', 'Knowledge Management'],
     "pricing": '$20,000 - $100,000/setup',
     "category": 'ITSM',
-    "popular": true
+    popular:true
   },
   {
     "title": 'Cyber Threat Intelligence Platform',
@@ -377,7 +377,7 @@ const itServices = [{
     "features": ['Threat Detection', 'Intelligence Feeds', 'Incident Response', 'Threat Hunting'],
     "pricing": '$30,000 - $150,000/setup',
     "category": 'Threat Intelligence',
-    "popular": true
+    popular:true
   }
 ];
 
@@ -453,24 +453,24 @@ export default function ITServicesPage() {
 
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
-            initial={{ "opacity": 0, "y": 30 }}
-            animate={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.8 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center"
           >
             <div className="flex items-center justify-center mb-6">
               <Server className="h-16 w-16 text-green-400 mr-4" />
-              <h1 className="text-4xl "md": text-6xl font-bold">
+              <h1 className="text-4xl md:text-6xl font-bold">
                 IT{' '}
                 <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
                   Services
                 </span>
               </h1>
             </div>
-            <p className="text-xl "md": text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Comprehensive IT solutions to keep your business running smoothly. From cloud infrastructure to cybersecurity, we&apos;ve got you covered.
             </p>
-            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Get IT Consultation
               </Link>
@@ -487,12 +487,12 @@ export default function ITServicesPage() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ "opacity": 0, "y": 30 }}
-            whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.8 }}
-            viewport={{ "once": true }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once:true }}
           >
-            <h2 className="text-3xl "sm": text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Our IT Solutions
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -506,15 +506,15 @@ export default function ITServicesPage() {
               return (
                 <motion.div
                   key={index}
-                  className="bg-white p-8 rounded-xl shadow-lg "hover": shadow-xl transition-all duration-300 group"
-                  initial={{ opacity: 0, "y": 30 }}
-                  whileInView={{ "opacity": 1, "y": 0 }}
-                  transition={{ "duration": 0.8, "delay": index * 0.1 }}
-                  viewport={{ "once": true }}
-                  whileHover={{ "y": -5 }}
+                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay:index * 0.1 }}
+                  viewport={{ once:true }}
+                  whileHover={{ y:-5 }}
                 >
                   <div className="flex items-center justify-between mb-4">
-                    <div className="text-green-600 group-"hover": text-emerald-600 transition-colors">
+                    <div className="text-green-600 group-hover:text-emerald-600 transition-colors">
                       <IconComponent className="w-10 h-10" />
                     </div>
                     <span className="text-xs font-semibold text-green-600 bg-green-100 px-2 py-1 rounded-full">
@@ -547,7 +547,7 @@ export default function ITServicesPage() {
 
                   <Link
                     href="/contact"
-                    className="w-full bg-green-600 "hover": bg-green-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
+                    className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
                   >
                     <span>Get Quote</span>
                     <ArrowRight className="w-3 h-3 ml-1" />
@@ -564,12 +564,12 @@ export default function ITServicesPage() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ "opacity": 0, "y": 30 }}
-            whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.8 }}
-            viewport={{ "once": true }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once:true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Technologies We Work With
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -583,11 +583,11 @@ export default function ITServicesPage() {
               return (
                 <motion.div
                   key={index}
-                  className="text-center p-6 rounded-lg "hover": bg-gray-50 transition-colors"
-                  initial={{ opacity: 0, "y": 30 }}
-                  whileInView={{ "opacity": 1, "y": 0 }}
-                  transition={{ "duration": 0.8, "delay": index * 0.1 }}
-                  viewport={{ "once": true }}
+                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay:index * 0.1 }}
+                  viewport={{ once:true }}
                 >
                   <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="w-8 h-8 text-green-600" />
@@ -610,12 +610,12 @@ export default function ITServicesPage() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ "opacity": 0, "y": 30 }}
-            whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.8 }}
-            viewport={{ "once": true }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once:true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Our IT Services?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -630,10 +630,10 @@ export default function ITServicesPage() {
                 <motion.div
                   key={index}
                   className="text-center"
-                  initial={{ "opacity": 0, "y": 30 }}
-                  whileInView={{ "opacity": 1, "y": 0 }}
-                  transition={{ "duration": 0.8, "delay": index * 0.1 }}
-                  viewport={{ "once": true }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay:index * 0.1 }}
+                  viewport={{ once:true }}
                 >
                   <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="w-8 h-8 text-green-600" />
@@ -659,12 +659,12 @@ export default function ITServicesPage() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ "opacity": 0, "y": 30 }}
-            whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.8 }}
-            viewport={{ "once": true }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once:true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Support Levels
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -679,10 +679,10 @@ export default function ITServicesPage() {
                 className={`p-8 rounded-xl shadow-lg ${
                   index === 1 ? 'bg-green-50 border-2 border-green-200' : 'bg-white'
                 }`}
-                initial={{ "opacity": 0, "y": 30 }}
-                whileInView={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0.8, "delay": index * 0.1 }}
-                viewport={{ "once": true }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay:index * 0.1 }}
+                viewport={{ once:true }}
               >
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   {level.name}
@@ -705,7 +705,7 @@ export default function ITServicesPage() {
                   href="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     index === 1
-                      ? 'bg-green-600 "hover": bg-green-700 text-white'
+                      ? 'bg-green-600 hover:bg-green-700 text-white'
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
                   }`}
                 >
@@ -722,18 +722,18 @@ export default function ITServicesPage() {
       <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ "opacity": 0, "y": 30 }}
-            whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.8 }}
-            viewport={{ "once": true }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once:true }}
           >
-            <h2 className="text-3xl "md": text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Optimize Your IT Infrastructure?
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let our expert team help you build a robust, secure, and scalable IT environment.
             </p>
-            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Get IT Assessment
               </Link>

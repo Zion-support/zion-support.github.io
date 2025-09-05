@@ -139,18 +139,18 @@ export default function AboutPage() {
 
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
-            initial={{ "opacity": 0, "y": 30 }}
-            animate={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.8 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl "md": text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
               About{' '}
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Zion Tech Group
               </span>
             </h1>
-            <p className="text-xl "md": text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               We are a leading technology solutions provider dedicated to transforming businesses through innovative AI, cloud architecture, and cutting-edge development services.
             </p>
           </motion.div>
@@ -162,12 +162,12 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ "opacity": 0, "y": 30 }}
-            whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.8 }}
-            viewport={{ "once": true }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once:true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Our Foundation
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -178,10 +178,10 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
               className="bg-white p-8 rounded-xl shadow-lg text-center"
-              initial={{ opacity: 0, "y": 30 }}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8, "delay": 0.1 }}
-              viewport={{ "once": true }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once:true }}
             >
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Target className="w-8 h-8 text-blue-600" />
@@ -194,10 +194,10 @@ export default function AboutPage() {
 
             <motion.div
               className="bg-white p-8 rounded-xl shadow-lg text-center"
-              initial={{ "opacity": 0, "y": 30 }}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8, "delay": 0.2 }}
-              viewport={{ "once": true }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once:true }}
             >
               <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Rocket className="w-8 h-8 text-purple-600" />
@@ -210,10 +210,10 @@ export default function AboutPage() {
 
             <motion.div
               className="bg-white p-8 rounded-xl shadow-lg text-center"
-              initial={{ "opacity": 0, "y": 30 }}
-              whileInView={{ "opacity": 1, "y": 0 }}
-              transition={{ "duration": 0.8, "delay": 0.3 }}
-              viewport={{ "once": true }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once:true }}
             >
               <div className="bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Heart className="w-8 h-8 text-pink-600" />
@@ -232,12 +232,12 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ "opacity": 0, "y": 30 }}
-            whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.8 }}
-            viewport={{ "once": true }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once:true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Our Core Values
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -251,11 +251,11 @@ export default function AboutPage() {
               return (
                 <motion.div
                   key={index}
-                  className="text-center p-6 rounded-lg "hover": bg-gray-50 transition-colors"
-                  initial={{ opacity: 0, "y": 30 }}
-                  whileInView={{ "opacity": 1, "y": 0 }}
-                  transition={{ "duration": 0.8, "delay": index * 0.1 }}
-                  viewport={{ "once": true }}
+                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay:index * 0.1 }}
+                  viewport={{ once:true }}
                 >
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="w-8 h-8 text-blue-600" />
@@ -278,12 +278,12 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ "opacity": 0, "y": 30 }}
-            whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.8 }}
-            viewport={{ "once": true }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once:true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Meet Our Team
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -295,11 +295,11 @@ export default function AboutPage() {
             {team.map((member, index) => (
               <motion.div
                 key={index}
-                className="bg-white p-6 rounded-xl shadow-lg text-center "hover": shadow-xl transition-shadow"
-                initial={{ opacity: 0, "y": 30 }}
-                whileInView={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0.8, "delay": index * 0.1 }}
-                viewport={{ "once": true }}
+                className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay:index * 0.1 }}
+                viewport={{ once:true }}
               >
                 <div className="w-24 h-24 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <span className="text-2xl font-bold text-white">
@@ -329,12 +329,12 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ "opacity": 0, "y": 30 }}
-            whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.8 }}
-            viewport={{ "once": true }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once:true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Our Achievements
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -349,10 +349,10 @@ export default function AboutPage() {
                 <motion.div
                   key={index}
                   className="text-center"
-                  initial={{ "opacity": 0, "y": 30 }}
-                  whileInView={{ "opacity": 1, "y": 0 }}
-                  transition={{ "duration": 0.8, "delay": index * 0.1 }}
-                  viewport={{ "once": true }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay:index * 0.1 }}
+                  viewport={{ once:true }}
                 >
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="w-8 h-8 text-blue-600" />
@@ -378,12 +378,12 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ "opacity": 0, "y": 30 }}
-            whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.8 }}
-            viewport={{ "once": true }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once:true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Our Journey
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -397,10 +397,10 @@ export default function AboutPage() {
                 <motion.div
                   key={index}
                   className="flex items-start space-x-6"
-                  initial={{ "opacity": 0, "x": -30 }}
-                  whileInView={{ "opacity": 1, "x": 0 }}
-                  transition={{ "duration": 0.8, "delay": index * 0.1 }}
-                  viewport={{ "once": true }}
+                  initial={{ opacity: 0, x:-30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay:index * 0.1 }}
+                  viewport={{ once:true }}
                 >
                   <div className="flex-shrink-0">
                     <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
@@ -426,12 +426,12 @@ export default function AboutPage() {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ "opacity": 0, "y": 30 }}
-            whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.8 }}
-            viewport={{ "once": true }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once:true }}
           >
-            <h2 className="text-3xl "md": text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Work With Us?
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">

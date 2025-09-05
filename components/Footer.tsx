@@ -93,9 +93,9 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white">
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
-          <div className=""lg": col-span-1">
+          <div className="lg:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">Z</span>
@@ -146,7 +146,7 @@ export default function Footer() {
                       <li key={link.name}>
                         <Link 
                           href={link.href}
-                          className="text-gray-400 "hover": text-white transition-colors text-sm flex items-center group"
+                          className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
                         >
                           <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                           {link.name}
@@ -170,7 +170,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-gray-400 "hover": text-white transition-colors text-sm flex items-center group"
+                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
                   >
                     <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
@@ -191,7 +191,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-gray-400 "hover": text-white transition-colors text-sm flex items-center group"
+                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
                   >
                     <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
@@ -212,7 +212,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-gray-400 "hover": text-white transition-colors text-sm flex items-center group"
+                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
                   >
                     <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
@@ -233,10 +233,10 @@ export default function Footer() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center "hover": bg-blue-600 transition-colors group"
+                      className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors group"
                       aria-label={social.name}
                     >
-                      <IconComponent className="w-5 h-5 text-gray-400 group-"hover": text-white" />
+                      <IconComponent className="w-5 h-5 text-gray-400 group-hover:text-white" />
                     </a>
                   );
                 })}
@@ -249,7 +249,7 @@ export default function Footer() {
       {/* Newsletter Signup */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-8">
-          <div className="flex flex-col "md": flex-row items-center justify-between">
+          <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="mb-4 md:mb-0">
               <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
               <p className="text-gray-400 text-sm">
@@ -273,7 +273,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col "md": flex-row items-center justify-between">
+          <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="text-sm text-gray-400 mb-4 md:mb-0">
               © 2024 Zion Tech Group. All rights reserved. | 
               <span className="ml-2">Delaware, United States</span>

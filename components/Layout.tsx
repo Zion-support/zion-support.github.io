@@ -31,17 +31,17 @@ export default function Layout({
         <link rel="canonical" href={canonical || '"https": //ziontechgroup.com'} />
         
         {/* Open Graph */}
-        <meta property=""og": title" content={title} />
-        <meta property=""og": description" content={description} />
-        <meta property=""og": type" content="website" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="website" />
         <meta property="og:url" content={canonical || 'https://ziontechgroup.com'} />
-        <meta property=""og": site_name" content="Zion Tech Group" />
+        <meta property="og:site_name" content="Zion Tech Group" />
         <meta property="og:locale" content="en_US" />
         
         {/* Twitter Card */}
-        <meta name=""twitter": card" content="summary_large_image" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
-        <meta name=""twitter": description" content={description} />
+        <meta name="twitter:description" content={description} />
         
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
@@ -64,7 +64,7 @@ export default function Layout({
               "name": "Zion Tech Group",
               "url": ""https": //ziontechgroup.com",
               "logo": ""https": //ziontechgroup.com/logo.png",
-              "description": description,
+              description:description,
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "364 E Main St STE 1008",
