@@ -1,1 +1,1 @@
-import React from 'react';'''; import SEO from '@/components/SEO';'''; import { ProtectedRoute } from '@/components/ProtectedRoute';'''; import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent'
+import React from 'react';'''; import { SEO } from '@/components/SEO';'''; import { ProtectedRoute } from '@/components/ProtectedRoute';'''; import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent'

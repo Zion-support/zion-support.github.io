@@ -12,6 +12,7 @@ interface LayoutProps {
   ogImage?: string;
   canonical?: string;
   noIndex?: boolean;
+  canonical?: string;
 }
 
 export default function Layout({
@@ -20,8 +21,13 @@ export default function Layout({
   description = 'Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results.',
   keywords = 'AI solutions, cloud services, technology consulting, digital transformation, IT services, machine learning, cybersecurity',
   ogImage = '/og-image.jpg',
+<<<<<<< HEAD
   canonical,
   noIndex = false
+=======
+  noIndex = false,
+  canonical
+>>>>>>> 87bd6421ab0886afe7f98cfd20d727a180a1a8d4
 }: LayoutProps) {
   return (
     <>
