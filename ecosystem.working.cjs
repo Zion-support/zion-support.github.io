@@ -1,5 +1,5 @@
-module.exports = {
-  "apps": [{
+module.exports = {}
+  "apps": [{}]
       name: 'ziontechgroup-web',
       "script": 'npm',
       "args": 'start',
@@ -8,16 +8,16 @@ module.exports = {
       "autorestart": true,
       "watch": false,
       "max_memory_restart": '1G',
-      "env": {
+      "env": {}
         NODE_ENV: 'production',
-        "PORT": 3000
+        "PORT": 3000;
       },
       "log_file": './logs/web.log',
       "out_file": './logs/web-out.log',
       "error_file": './logs/web-error.log',
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
-    {
+    {}
       "name": 'automation-health-check',
       "script": 'node',
       "args": 'scripts/automation/simple-automation.cjs',
@@ -26,7 +26,7 @@ module.exports = {
       "autorestart": true,
       "watch": false,
       "cron_restart": '*/5 * * * *',
-      "env": {
+      "env": {}
         NODE_ENV: 'production',
         "AUTOMATION_TYPE": 'health-check'
       },
@@ -34,7 +34,7 @@ module.exports = {
       "out_file": './logs/health-check-out.log',
       "error_file": './logs/health-check-error.log'
     },
-    {
+    {}
       "name": 'automation-performance-monitor',
       "script": 'node',
       "args": 'scripts/automation/simple-automation.cjs',
@@ -43,7 +43,7 @@ module.exports = {
       "autorestart": true,
       "watch": false,
       "cron_restart": '*/10 * * * *',
-      "env": {
+      "env": {}
         NODE_ENV: 'production',
         "AUTOMATION_TYPE": 'performance'
       },
@@ -51,7 +51,7 @@ module.exports = {
       "out_file": './logs/performance-monitor-out.log',
       "error_file": './logs/performance-monitor-error.log'
     },
-    {
+    {}
       "name": 'automation-security-scanner',
       "script": 'node',
       "args": 'scripts/automation/simple-automation.cjs',
@@ -60,7 +60,7 @@ module.exports = {
       "autorestart": true,
       "watch": false,
       "cron_restart": '*/15 * * * *',
-      "env": {
+      "env": {}
         NODE_ENV: 'production',
         "AUTOMATION_TYPE": 'security'
       },
@@ -68,7 +68,7 @@ module.exports = {
       "out_file": './logs/security-scanner-out.log',
       "error_file": './logs/security-scanner-error.log'
     },
-    {
+    {}
       "name": 'automation-code-quality',
       "script": 'node',
       "args": 'scripts/automation/simple-automation.cjs',
@@ -77,13 +77,13 @@ module.exports = {
       "autorestart": true,
       "watch": false,
       "cron_restart": '*/20 * * * *',
-      "env": {
+      "env": {}
         NODE_ENV: 'production',
         "AUTOMATION_TYPE": 'quality'
       },
       "log_file": './logs/code-quality.log',
       "out_file": './logs/code-quality-out.log',
       "error_file": './logs/code-quality-error.log'
-    }
-  ]
+    };
+  ];
 };

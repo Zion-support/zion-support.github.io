@@ -1,521 +1,517 @@
-export type ServiceItem = {
-  "slug": string;
-  title: string;
-  category: 'Micro-SaaS' | 'IT Services' | 'AI Solutions';
-  description: string;
+export type ServiceItem = {}
+  "slug": string;"
+  title: string;,"
+  category: 'Micro-SaaS' | 'IT Services' | 'AI Solutions';'
+  description: string;,
   startingPriceUSD: string;
-  typicalTimeline: string;
+  typicalTimeline: string;,
   link: string;
-  references?: { label: string; url: string }[]};
-
-export const "servicesCatalog": ServiceItem[] = [// Existing Services
-  {
-    slug: 'ai-chatbot-for-support',
-    "title": 'AI Chatbot for Customer Support',
-    "category": 'Micro-SaaS',
-    "description": 'Deploy a branded AI assistant trained on your docs to deflect tickets, reduce response times, and boost CSAT across web and chat channels.',
-    "startingPriceUSD": '$1,500 setup + $99/mo',
-    "typicalTimeline": '1-2 weeks',
-    "link": '/services/ai-chatbot-for-support',
-    "references": [
-      { label: 'OpenAI API Pricing', "url": 'https://openai.com/api/pricing' },
-      { "label": 'Vercel Pricing', "url": 'https://vercel.com/pricing' },
+  references?: { label: string; url: string }[]};'
+export const "servicesCatalog": ServiceItem[] = [// Existing Services;"]
+  {"}
+    slug: 'ai-chatbot-for-support',''
+    "title": 'AI Chatbot for Customer Support',''
+    "category": 'Micro-SaaS',''
+    "description": 'Deploy a branded AI assistant trained on your docs to deflect tickets, reduce response times, and boost CSAT across web and chat channels.',''
+    "startingPriceUSD": '$1,500 setup + $99/mo',''
+    "typicalTimeline": '1-2 weeks',''
+    "link": '/services/ai-chatbot-for-support',''
+    "references": [""]
+      { label: 'OpenAI API Pricing', "url": 'https://openai.com/api/pricing' },''
+      { "label": 'Vercel Pricing', "url": 'https://vercel.com/pricing' },'];
     ]},
-  {
-    "slug": 'lead-scraper-and-enrichment',
-    "title": 'Lead Scraper & Enrichment Engine',
-    "category": 'Micro-SaaS',
-    "description": 'Automated B2B lead discovery, enrichment, and scoring with workflow exports to your CRM.',
-    "startingPriceUSD": '$2,500 setup + $149/mo',
-    "typicalTimeline": '2-3 weeks',
-    "link": '/services/lead-scraper-and-enrichment',
-    "references": [{ label: 'Clearbit (reference)', "url": 'https://clearbit.com' },
-      { "label": 'Apollo (reference)', "url": 'https://www.apollo.io/pricing' },
+  {'}
+    "slug": 'lead-scraper-and-enrichment',''
+    "title": 'Lead Scraper & Enrichment Engine',''
+    "category": 'Micro-SaaS',''
+    "description": 'Automated B2B lead discovery, enrichment, and scoring with workflow exports to your CRM.',''
+    "startingPriceUSD": '$2,500 setup + $149/mo',''
+    "typicalTimeline": '2-3 weeks',''
+    "link": '/services/lead-scraper-and-enrichment',''
+    "references": [{ label: 'Clearbit (reference)', "url": 'https://clearbit.com' },'']
+      { "label": 'Apollo (reference)', "url": 'https://www.apollo.io/pricing' },'];
     ]},
-  {
-    "slug": 'document-processing-automation',
-    "title": 'Document Processing Automation',
-    "category": 'AI Solutions',
-    "description": 'Extract structured data from PDFs, invoices, forms and route it into ERPs/CRMs with human-in-the-loop review.',
-    "startingPriceUSD": '$3,000 setup + usage',
-    "typicalTimeline": '2-4 weeks',
-    "link": '/services/document-processing-automation',
-    "references": [{ label: 'Google Document AI', "url": 'https://cloud.google.com/document-ai' },
-      { "label": 'AWS Textract', "url": 'https://aws.amazon.com/textract/pricing/' },
+  {'}
+    "slug": 'document-processing-automation',''
+    "title": 'Document Processing Automation',''
+    "category": 'AI Solutions',''
+    "description": 'Extract structured data from PDFs, invoices, forms and route it into ERPs/CRMs with human-in-the-loop review.',''
+    "startingPriceUSD": '$3,000 setup + usage',''
+    "typicalTimeline": '2-4 weeks',''
+    "link": '/services/document-processing-automation',''
+    "references": [{ label: 'Google Document AI', "url": 'https://cloud.google.com/document-ai' },'']
+      { "label": 'AWS Textract', "url": 'https://aws.amazon.com/textract/pricing/' },'];
     ]},
-  {
-    "slug": 'cloud-migration-and-cost-optimization',
-    "title": 'Cloud Migration & Cost Optimization',
-    "category": 'IT Services',
-    "description": 'Migrate workloads to AWS/GCP/Azure, implement IaC, and reduce spend via rightsizing and savings plans.',
-    "startingPriceUSD": 'From $8,000 project',
-    "typicalTimeline": '4-8 weeks',
-    "link": '/services/cloud-migration-and-cost-optimization',
-    "references": [{ label: 'AWS Pricing', "url": 'https://aws.amazon.com/pricing/' },
-      { "label": 'Terraform', "url": 'https://developer.hashicorp.com/terraform' },
+  {'}
+    "slug": 'cloud-migration-and-cost-optimization',''
+    "title": 'Cloud Migration & Cost Optimization',''
+    "category": 'IT Services',''
+    "description": 'Migrate workloads to AWS/GCP/Azure, implement IaC, and reduce spend via rightsizing and savings plans.',''
+    "startingPriceUSD": 'From $8,000 project',''
+    "typicalTimeline": '4-8 weeks',''
+    "link": '/services/cloud-migration-and-cost-optimization',''
+    "references": [{ label: 'AWS Pricing', "url": 'https://aws.amazon.com/pricing/' },'']
+      { "label": 'Terraform', "url": 'https://developer.hashicorp.com/terraform' },'];
     ]},
-  {
-    "slug": 'security-hardening-and-audits',
-    "title": 'Security Hardening & Audits',
-    "category": 'IT Services',
-    "description": 'CIS/NIST aligned audits, SOC2 readiness, penetration testing coordination, and remediation roadmaps.',
-    "startingPriceUSD": 'From $5,000 audit',
-    "typicalTimeline": '2-6 weeks',
-    "link": '/services/security-hardening-and-audits',
-    "references": [{ label: 'CIS Benchmarks', "url": 'https://www.cisecurity.org/cis-benchmarks' },
-      { "label": 'OWASP ASVS', "url": 'https://owasp.org/www-project-application-security-verification-standard/' },
+  {'}
+    "slug": 'security-hardening-and-audits',''
+    "title": 'Security Hardening & Audits',''
+    "category": 'IT Services',''
+    "description": 'CIS/NIST aligned audits, SOC2 readiness, penetration testing coordination, and remediation roadmaps.',''
+    "startingPriceUSD": 'From $5,000 audit',''
+    "typicalTimeline": '2-6 weeks',''
+    "link": '/services/security-hardening-and-audits',''
+    "references": [{ label: 'CIS Benchmarks', "url": 'https://www.cisecurity.org/cis-benchmarks' },'']
+      { "label": 'OWASP ASVS', "url": 'https://owasp.org/www-project-application-security-verification-standard/' },'];
     ]},
-  {
-    "slug": 'mvp-web-app-development',
-    "title": 'MVP Web App Development',
-    "category": 'Micro-SaaS',
-    "description": 'Design and build a production-ready MVP with Next.js, Tailwind, Stripe, and modern auth.',
-    "startingPriceUSD": 'From $12,000 project',
-    "typicalTimeline": '4-6 weeks',
-    "link": '/services/mvp-web-app-development',
-    "references": [{ label: 'Vercel Pricing', "url": 'https://vercel.com/pricing' },
-      { "label": 'Stripe Pricing', "url": 'https://stripe.com/pricing' },
+  {'}
+    "slug": 'mvp-web-app-development',''
+    "title": 'MVP Web App Development',''
+    "category": 'Micro-SaaS',''
+    "description": 'Design and build a production-ready MVP with Next.js, Tailwind, Stripe, and modern auth.',''
+    "startingPriceUSD": 'From $12,000 project',''
+    "typicalTimeline": '4-6 weeks',''
+    "link": '/services/mvp-web-app-development',''
+    "references": [{ label: 'Vercel Pricing', "url": 'https://vercel.com/pricing' },'']
+      { "label": 'Stripe Pricing', "url": 'https://stripe.com/pricing' },'];
     ]},
-  {
-    "slug": 'analytics-and-bi-dashboards',
-    "title": 'Analytics & BI Dashboards',
-    "category": 'AI Solutions',
-    "description": 'Data pipelines and BI with semantic layers and KPI dashboards for execs and ops teams.',
-    "startingPriceUSD": 'From $6,000 project',
-    "typicalTimeline": '3-5 weeks',
-    "link": '/services/analytics-and-bi-dashboards',
-    "references": [{ label: 'dbt', "url": 'https://www.getdbt.com/' },
-      { "label": 'BigQuery Pricing', "url": 'https://cloud.google.com/bigquery/pricing' },
+  {'}
+    "slug": 'analytics-and-bi-dashboards',''
+    "title": 'Analytics & BI Dashboards',''
+    "category": 'AI Solutions',''
+    "description": 'Data pipelines and BI with semantic layers and KPI dashboards for execs and ops teams.',''
+    "startingPriceUSD": 'From $6,000 project',''
+    "typicalTimeline": '3-5 weeks',''
+    "link": '/services/analytics-and-bi-dashboards',''
+    "references": [{ label: 'dbt', "url": 'https://www.getdbt.com/' },'']
+      { "label": 'BigQuery Pricing', "url": 'https://cloud.google.com/bigquery/pricing' },'];
     ]},
-
-  // NEW MICRO SAAS SERVICES
-  {
-    "slug": 'ai-content-generator',
-    "title": 'AI Content Generator Platform',
-    "category": 'Micro-SaaS',
-    "description": 'AI-powered content creation tool that generates blog posts, social media content, marketing copy, and product descriptions with brand voice consistency.',
-    "startingPriceUSD": '$2,000 setup + $79/mo',
-    "typicalTimeline": '2-3 weeks',
-    "link": '/services/ai-content-generator',
-    "references": [{ label: 'OpenAI GPT-4 Pricing', "url": 'https://openai.com/api/pricing' },
-      { "label": 'Content Marketing ROI', "url": 'https://contentmarketinginstitute.com/2023/08/content-marketing-roi/' },
+  // NEW MICRO SAAS SERVICES;
+  {'}
+    "slug": 'ai-content-generator',''
+    "title": 'AI Content Generator Platform',''
+    "category": 'Micro-SaaS',''
+    "description": 'AI-powered content creation tool that generates blog posts, social media content, marketing copy, and product descriptions with brand voice consistency.',''
+    "startingPriceUSD": '$2,000 setup + $79/mo',''
+    "typicalTimeline": '2-3 weeks',''
+    "link": '/services/ai-content-generator',''
+    "references": [{ label: 'OpenAI GPT-4 Pricing', "url": 'https://openai.com/api/pricing' },'']
+      { "label": 'Content Marketing ROI', "url": 'https://contentmarketinginstitute.com/2023/08/content-marketing-roi/' },'];
     ]},
-  {
-    "slug": 'automated-email-followup',
-    "title": 'Automated Email Follow-up System',
-    "category": 'Micro-SaaS',
-    "description": 'Intelligent email automation platform that sends personalized follow-ups, nurtures leads, and maintains customer engagement with advanced segmentation.',
-    "startingPriceUSD": '$1,200 setup + $49/mo',
-    "typicalTimeline": '1-2 weeks',
-    "link": '/services/automated-email-followup',
-    "references": [{ label: 'Email Marketing ROI', "url": 'https://www.campaignmonitor.com/resources/guides/email-marketing-roi/' },
-      { "label": 'SendGrid Pricing', "url": 'https://sendgrid.com/pricing/' },
+  {'}
+    "slug": 'automated-email-followup',''
+    "title": 'Automated Email Follow-up System',''
+    "category": 'Micro-SaaS',''
+    "description": 'Intelligent email automation platform that sends personalized follow-ups, nurtures leads, and maintains customer engagement with advanced segmentation.',''
+    "startingPriceUSD": '$1,200 setup + $49/mo',''
+    "typicalTimeline": '1-2 weeks',''
+    "link": '/services/automated-email-followup',''
+    "references": [{ label: 'Email Marketing ROI', "url": 'https://www.campaignmonitor.com/resources/guides/email-marketing-roi/' },'']
+      { "label": 'SendGrid Pricing', "url": 'https://sendgrid.com/pricing/' },'];
     ]},
-  {
-    "slug": 'customer-support-platform',
-    "title": 'All-in-One Customer Support Platform',
-    "category": 'Micro-SaaS',
-    "description": 'Comprehensive helpdesk solution with ticket management, knowledge base, live chat, AI chatbots, and customer satisfaction tracking.',
-    "startingPriceUSD": '$3,500 setup + $99/mo',
-    "typicalTimeline": '3-4 weeks',
-    "link": '/services/customer-support-platform',
-    "references": [{ label: 'Zendesk Pricing', "url": 'https://www.zendesk.com/pricing/' },
-      { "label": 'Customer Support ROI', "url": 'https://www.salesforce.com/resources/articles/customer-service-roi/' },
+  {'}
+    "slug": 'customer-support-platform',''
+    "title": 'All-in-One Customer Support Platform',''
+    "category": 'Micro-SaaS',''
+    "description": 'Comprehensive helpdesk solution with ticket management, knowledge base, live chat, AI chatbots, and customer satisfaction tracking.',''
+    "startingPriceUSD": '$3,500 setup + $99/mo',''
+    "typicalTimeline": '3-4 weeks',''
+    "link": '/services/customer-support-platform',''
+    "references": [{ label: 'Zendesk Pricing', "url": 'https://www.zendesk.com/pricing/' },'']
+      { "label": 'Customer Support ROI', "url": 'https://www.salesforce.com/resources/articles/customer-service-roi/' },'];
     ]},
-  {
-    "slug": 'ai-email-responder',
-    "title": 'AI Email Responder & Manager',
-    "category": 'Micro-SaaS',
-    "description": 'AI-driven email management system that reads, categorizes, and responds to emails automatically while flagging important messages for human review.',
-    "startingPriceUSD": '$2,800 setup + $89/mo',
-    "typicalTimeline": '2-3 weeks',
-    "link": '/services/ai-email-responder',
-    "references": [{ label: 'Gmail API', "url": 'https://developers.google.com/gmail/api' },
-      { "label": 'Email Productivity Stats', "url": 'https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-organization-blog/the-hidden-costs-of-email' },
+  {'}
+    "slug": 'ai-email-responder',''
+    "title": 'AI Email Responder & Manager',''
+    "category": 'Micro-SaaS',''
+    "description": 'AI-driven email management system that reads, categorizes, and responds to emails automatically while flagging important messages for human review.',''
+    "startingPriceUSD": '$2,800 setup + $89/mo',''
+    "typicalTimeline": '2-3 weeks',''
+    "link": '/services/ai-email-responder',''
+    "references": [{ label: 'Gmail API', "url": 'https://developers.google.com/gmail/api' },'']
+      { "label": 'Email Productivity Stats', "url": 'https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-organization-blog/the-hidden-costs-of-email' },'];
     ]},
-  {
-    "slug": 'event-management-dashboard',
-    "title": 'Event Management & Analytics Dashboard',
-    "category": 'Micro-SaaS',
-    "description": 'Complete event management platform with ticket sales, attendee management, scheduling, feedback collection, and comprehensive analytics.',
-    "startingPriceUSD": '$4,000 setup + $129/mo',
-    "typicalTimeline": '4-5 weeks',
-    "link": '/services/event-management-dashboard',
-    "references": [{ label: 'Eventbrite Pricing', "url": 'https://www.eventbrite.com/pricing/' },
-      { "label": 'Event Industry Growth', "url": 'https://www.eventmanagerblog.com/event-industry-statistics' },
+  {'}
+    "slug": 'event-management-dashboard',''
+    "title": 'Event Management & Analytics Dashboard',''
+    "category": 'Micro-SaaS',''
+    "description": 'Complete event management platform with ticket sales, attendee management, scheduling, feedback collection, and comprehensive analytics.',''
+    "startingPriceUSD": '$4,000 setup + $129/mo',''
+    "typicalTimeline": '4-5 weeks',''
+    "link": '/services/event-management-dashboard',''
+    "references": [{ label: 'Eventbrite Pricing', "url": 'https://www.eventbrite.com/pricing/' },'']
+      { "label": 'Event Industry Growth', "url": 'https://www.eventmanagerblog.com/event-industry-statistics' },'];
     ]},
-  {
-    "slug": 'ecommerce-return-management',
-    "title": 'E-commerce Return Management SaaS',
-    "category": 'Micro-SaaS',
-    "description": 'Automated return processing system that handles return requests, generates labels, tracks status, and provides analytics for e-commerce businesses.',
-    "startingPriceUSD": '$2,200 setup + $69/mo',
-    "typicalTimeline": '2-3 weeks',
-    "link": '/services/ecommerce-return-management',
-    "references": [{ label: 'E-commerce Return Rates', "url": 'https://www.narvar.com/blog/ecommerce-returns-statistics' },
-      { "label": 'Shopify App Store', "url": 'https://apps.shopify.com/' },
+  {'}
+    "slug": 'ecommerce-return-management',''
+    "title": 'E-commerce Return Management SaaS',''
+    "category": 'Micro-SaaS',''
+    "description": 'Automated return processing system that handles return requests, generates labels, tracks status, and provides analytics for e-commerce businesses.',''
+    "startingPriceUSD": '$2,200 setup + $69/mo',''
+    "typicalTimeline": '2-3 weeks',''
+    "link": '/services/ecommerce-return-management',''
+    "references": [{ label: 'E-commerce Return Rates', "url": 'https://www.narvar.com/blog/ecommerce-returns-statistics' },'']
+      { "label": 'Shopify App Store', "url": 'https://apps.shopify.com/' },'];
     ]},
-  {
-    "slug": 'ai-talent-matching',
-    "title": 'AI-Powered Talent Matching Platform',
-    "category": 'Micro-SaaS',
-    "description": 'Advanced AI recruitment platform that matches businesses with perfect tech talent using machine learning algorithms and skills assessment.',
-    "startingPriceUSD": '$5,000 setup + $199/mo',
-    "typicalTimeline": '4-6 weeks',
-    "link": '/services/ai-talent-matching',
-    "references": [{ label: 'LinkedIn Talent Solutions', "url": 'https://business.linkedin.com/talent-solutions' },
-      { "label": 'Recruitment AI Market', "url": 'https://www.grandviewresearch.com/industry-analysis/artificial-intelligence-recruitment-market' },
+  {'}
+    "slug": 'ai-talent-matching',''
+    "title": 'AI-Powered Talent Matching Platform',''
+    "category": 'Micro-SaaS',''
+    "description": 'Advanced AI recruitment platform that matches businesses with perfect tech talent using machine learning algorithms and skills assessment.',''
+    "startingPriceUSD": '$5,000 setup + $199/mo',''
+    "typicalTimeline": '4-6 weeks',''
+    "link": '/services/ai-talent-matching',''
+    "references": [{ label: 'LinkedIn Talent Solutions', "url": 'https://business.linkedin.com/talent-solutions' },'']
+      { "label": 'Recruitment AI Market', "url": 'https://www.grandviewresearch.com/industry-analysis/artificial-intelligence-recruitment-market' },'];
     ]},
-  {
-    "slug": 'inventory-optimization-ai',
-    "title": 'AI Inventory Optimization System',
-    "category": 'Micro-SaaS',
-    "description": 'Intelligent inventory management system that predicts demand, optimizes stock levels, prevents stockouts, and reduces carrying costs using AI.',
-    "startingPriceUSD": '$3,200 setup + $149/mo',
-    "typicalTimeline": '3-4 weeks',
-    "link": '/services/inventory-optimization-ai',
-    "references": [{ label: 'Inventory Management ROI', "url": 'https://www.fishbowl.com/blog/inventory-management-roi/' },
-      { "label": 'AI in Supply Chain', "url": 'https://www.mckinsey.com/capabilities/operations/our-insights/artificial-intelligence-in-supply-chain' },
+  {'}
+    "slug": 'inventory-optimization-ai',''
+    "title": 'AI Inventory Optimization System',''
+    "category": 'Micro-SaaS',''
+    "description": 'Intelligent inventory management system that predicts demand, optimizes stock levels, prevents stockouts, and reduces carrying costs using AI.',''
+    "startingPriceUSD": '$3,200 setup + $149/mo',''
+    "typicalTimeline": '3-4 weeks',''
+    "link": '/services/inventory-optimization-ai',''
+    "references": [{ label: 'Inventory Management ROI', "url": 'https://www.fishbowl.com/blog/inventory-management-roi/' },'']
+      { "label": 'AI in Supply Chain', "url": 'https://www.mckinsey.com/capabilities/operations/our-insights/artificial-intelligence-in-supply-chain' },'];
     ]},
-
-  // NEW IT SERVICES
-  {
-    "slug": 'zero-trust-security-implementation',
-    "title": 'Zero Trust Security Architecture',
-    "category": 'IT Services',
-    "description": 'Complete zero trust security implementation with identity verification, device trust, network segmentation, and continuous monitoring.',
-    "startingPriceUSD": 'From $15,000 project',
-    "typicalTimeline": '6-10 weeks',
-    "link": '/services/zero-trust-security-implementation',
-    "references": [{ label: 'NIST Zero Trust Framework', "url": 'https://www.nist.gov/publications/zero-trust-architecture' },
-      { "label": 'CISA Zero Trust Maturity Model', "url": 'https://www.cisa.gov/resources-tools/resources/zero-trust-maturity-model' },
+  // NEW IT SERVICES;
+  {'}
+    "slug": 'zero-trust-security-implementation',''
+    "title": 'Zero Trust Security Architecture',''
+    "category": 'IT Services',''
+    "description": 'Complete zero trust security implementation with identity verification, device trust, network segmentation, and continuous monitoring.',''
+    "startingPriceUSD": 'From $15,000 project',''
+    "typicalTimeline": '6-10 weeks',''
+    "link": '/services/zero-trust-security-implementation',''
+    "references": [{ label: 'NIST Zero Trust Framework', "url": 'https://www.nist.gov/publications/zero-trust-architecture' },'']
+      { "label": 'CISA Zero Trust Maturity Model', "url": 'https://www.cisa.gov/resources-tools/resources/zero-trust-maturity-model' },'];
     ]},
-  {
-    "slug": 'disaster-recovery-planning',
-    "title": 'Disaster Recovery & Business Continuity',
-    "category": 'IT Services',
-    "description": 'Comprehensive disaster recovery planning, backup strategies, failover systems, and business continuity testing to ensure minimal downtime.',
-    "startingPriceUSD": 'From $12,000 project',
-    "typicalTimeline": '4-8 weeks',
-    "link": '/services/disaster-recovery-planning',
-    "references": [{ label: 'AWS Disaster Recovery', "url": 'https://aws.amazon.com/disaster-recovery/' },
-      { "label": 'Business Continuity Planning', "url": 'https://www.ready.gov/business/implementation/continuity' },
+  {'}
+    "slug": 'disaster-recovery-planning',''
+    "title": 'Disaster Recovery & Business Continuity',''
+    "category": 'IT Services',''
+    "description": 'Comprehensive disaster recovery planning, backup strategies, failover systems, and business continuity testing to ensure minimal downtime.',''
+    "startingPriceUSD": 'From $12,000 project',''
+    "typicalTimeline": '4-8 weeks',''
+    "link": '/services/disaster-recovery-planning',''
+    "references": [{ label: 'AWS Disaster Recovery', "url": 'https://aws.amazon.com/disaster-recovery/' },'']
+      { "label": 'Business Continuity Planning', "url": 'https://www.ready.gov/business/implementation/continuity' },'];
     ]},
-  {
-    "slug": 'managed-it-support',
-    "title": '24/7 Managed IT Support Services',
-    "category": 'IT Services',
-    "description": 'Round-the-clock IT monitoring, maintenance, support, and proactive issue resolution with guaranteed response times and SLA compliance.',
-    "startingPriceUSD": 'From $2,500/mo',
-    "typicalTimeline": '1-2 weeks setup',
-    "link": '/services/managed-it-support',
-    "references": [{ label: 'Managed IT Services Market', "url": 'https://www.grandviewresearch.com/industry-analysis/managed-it-services-market' },
-      { "label": 'IT Support Best Practices', "url": 'https://www.itsupportguides.com/' },
+  {'}
+    "slug": 'managed-it-support',''
+    "title": '24/7 Managed IT Support Services',''
+    "category": 'IT Services',''
+    "description": 'Round-the-clock IT monitoring, maintenance, support, and proactive issue resolution with guaranteed response times and SLA compliance.',''
+    "startingPriceUSD": 'From $2,500/mo',''
+    "typicalTimeline": '1-2 weeks setup',''
+    "link": '/services/managed-it-support',''
+    "references": [{ label: 'Managed IT Services Market', "url": 'https://www.grandviewresearch.com/industry-analysis/managed-it-services-market' },'']
+      { "label": 'IT Support Best Practices', "url": 'https://www.itsupportguides.com/' },'];
     ]},
-  {
-    "slug": 'network-optimization',
-    "title": 'Network Performance Optimization',
-    "category": 'IT Services',
-    "description": 'Network infrastructure assessment, optimization, and modernization to improve performance, security, and reliability across all locations.',
-    "startingPriceUSD": 'From $8,500 project',
-    "typicalTimeline": '3-6 weeks',
-    "link": '/services/network-optimization',
-    "references": [{ label: 'Cisco Network Solutions', "url": 'https://www.cisco.com/c/en/us/solutions/index.html' },
-      { "label": 'Network Performance Monitoring', "url": 'https://www.solarwinds.com/network-performance-monitor' },
+  {'}
+    "slug": 'network-optimization',''
+    "title": 'Network Performance Optimization',''
+    "category": 'IT Services',''
+    "description": 'Network infrastructure assessment, optimization, and modernization to improve performance, security, and reliability across all locations.',''
+    "startingPriceUSD": 'From $8,500 project',''
+    "typicalTimeline": '3-6 weeks',''
+    "link": '/services/network-optimization',''
+    "references": [{ label: 'Cisco Network Solutions', "url": 'https://www.cisco.com/c/en/us/solutions/index.html' },'']
+      { "label": 'Network Performance Monitoring', "url": 'https://www.solarwinds.com/network-performance-monitor' },'];
     ]},
-  {
-    "slug": 'data-backup-solutions',
-    "title": 'Enterprise Data Backup & Recovery',
-    "category": 'IT Services',
-    "description": 'Comprehensive data backup strategies including cloud backup, on-premises solutions, and hybrid approaches with automated recovery testing.',
-    "startingPriceUSD": 'From $5,500 project',
-    "typicalTimeline": '2-4 weeks',
-    "link": '/services/data-backup-solutions',
-    "references": [{ label: 'Veeam Backup Solutions', "url": 'https://www.veeam.com/' },
-      { "label": 'AWS Backup Services', "url": 'https://aws.amazon.com/backup/' },
+  {'}
+    "slug": 'data-backup-solutions',''
+    "title": 'Enterprise Data Backup & Recovery',''
+    "category": 'IT Services',''
+    "description": 'Comprehensive data backup strategies including cloud backup, on-premises solutions, and hybrid approaches with automated recovery testing.',''
+    "startingPriceUSD": 'From $5,500 project',''
+    "typicalTimeline": '2-4 weeks',''
+    "link": '/services/data-backup-solutions',''
+    "references": [{ label: 'Veeam Backup Solutions', "url": 'https://www.veeam.com/' },'']
+      { "label": 'AWS Backup Services', "url": 'https://aws.amazon.com/backup/' },'];
     ]},
-
-  // NEW AI SOLUTIONS
-  {
-    "slug": 'predictive-analytics-platform',
-    "title": 'Predictive Analytics & Forecasting Platform',
-    "category": 'AI Solutions',
-    "description": 'Advanced predictive analytics platform that forecasts business trends, customer behavior, and market changes using machine learning models.',
-    "startingPriceUSD": 'From $8,500 project',
-    "typicalTimeline": '4-6 weeks',
-    "link": '/services/predictive-analytics-platform',
-    "references": [{ label: 'Predictive Analytics Market', "url": 'https://www.grandviewresearch.com/industry-analysis/predictive-analytics-market' },
-      { "label": 'Machine Learning Models', "url": 'https://scikit-learn.org/stable/supervised_learning.html' },
+  // NEW AI SOLUTIONS;
+  {'}
+    "slug": 'predictive-analytics-platform',''
+    "title": 'Predictive Analytics & Forecasting Platform',''
+    "category": 'AI Solutions',''
+    "description": 'Advanced predictive analytics platform that forecasts business trends, customer behavior, and market changes using machine learning models.',''
+    "startingPriceUSD": 'From $8,500 project',''
+    "typicalTimeline": '4-6 weeks',''
+    "link": '/services/predictive-analytics-platform',''
+    "references": [{ label: 'Predictive Analytics Market', "url": 'https://www.grandviewresearch.com/industry-analysis/predictive-analytics-market' },'']
+      { "label": 'Machine Learning Models', "url": 'https://scikit-learn.org/stable/supervised_learning.html' },'];
     ]},
-  {
-    "slug": 'computer-vision-solutions',
-    "title": 'Computer Vision & Image Recognition',
-    "category": 'AI Solutions',
-    "description": 'Custom computer vision solutions for object detection, facial recognition, quality control, and automated visual inspection systems.',
-    "startingPriceUSD": 'From $12,000 project',
-    "typicalTimeline": '6-8 weeks',
-    "link": '/services/computer-vision-solutions',
-    "references": [{ label: 'OpenCV Documentation', "url": 'https://opencv.org/' },
-      { "label": 'Computer Vision Applications', "url": 'https://www.ibm.com/cloud/learn/computer-vision' },
+  {'}
+    "slug": 'computer-vision-solutions',''
+    "title": 'Computer Vision & Image Recognition',''
+    "category": 'AI Solutions',''
+    "description": 'Custom computer vision solutions for object detection, facial recognition, quality control, and automated visual inspection systems.',''
+    "startingPriceUSD": 'From $12,000 project',''
+    "typicalTimeline": '6-8 weeks',''
+    "link": '/services/computer-vision-solutions',''
+    "references": [{ label: 'OpenCV Documentation', "url": 'https://opencv.org/' },'']
+      { "label": 'Computer Vision Applications', "url": 'https://www.ibm.com/cloud/learn/computer-vision' },'];
     ]},
-  {
-    "slug": 'natural-language-processing',
-    "title": 'Natural Language Processing Solutions',
-    "category": 'AI Solutions',
-    "description": 'NLP solutions for sentiment analysis, text classification, language translation, and automated content processing and understanding.',
-    "startingPriceUSD": 'From $7,000 project',
-    "typicalTimeline": '3-5 weeks',
-    "link": '/services/natural-language-processing',
-    "references": [{ label: 'Hugging Face Models', "url": 'https://huggingface.co/models' },
-      { "label": 'NLP Applications', "url": 'https://www.nvidia.com/en-us/deep-learning-ai/solutions/natural-language-processing/' },
+  {'}
+    "slug": 'natural-language-processing',''
+    "title": 'Natural Language Processing Solutions',''
+    "category": 'AI Solutions',''
+    "description": 'NLP solutions for sentiment analysis, text classification, language translation, and automated content processing and understanding.',''
+    "startingPriceUSD": 'From $7,000 project',''
+    "typicalTimeline": '3-5 weeks',''
+    "link": '/services/natural-language-processing',''
+    "references": [{ label: 'Hugging Face Models', "url": 'https://huggingface.co/models' },'']
+      { "label": 'NLP Applications', "url": 'https://www.nvidia.com/en-us/deep-learning-ai/solutions/natural-language-processing/' },'];
     ]},
-  {
-    "slug": 'ai-powered-crm',
-    "title": 'AI-Enhanced CRM System',
-    "category": 'AI Solutions',
-    "description": 'Intelligent CRM with AI-powered lead scoring, automated follow-ups, customer insights, and predictive sales analytics.',
-    "startingPriceUSD": 'From $10,000 project',
-    "typicalTimeline": '5-7 weeks',
-    "link": '/services/ai-powered-crm',
-    "references": [{ label: 'Salesforce AI Features', "url": 'https://www.salesforce.com/products/ai/' },
-      { "label": 'CRM Market Growth', "url": 'https://www.grandviewresearch.com/industry-analysis/customer-relationship-management-crm-market' },
+  {'}
+    "slug": 'ai-powered-crm',''
+    "title": 'AI-Enhanced CRM System',''
+    "category": 'AI Solutions',''
+    "description": 'Intelligent CRM with AI-powered lead scoring, automated follow-ups, customer insights, and predictive sales analytics.',''
+    "startingPriceUSD": 'From $10,000 project',''
+    "typicalTimeline": '5-7 weeks',''
+    "link": '/services/ai-powered-crm',''
+    "references": [{ label: 'Salesforce AI Features', "url": 'https://www.salesforce.com/products/ai/' },'']
+      { "label": 'CRM Market Growth', "url": 'https://www.grandviewresearch.com/industry-analysis/customer-relationship-management-crm-market' },'];
     ]},
-  {
-    "slug": 'voice-assistant-development',
-    "title": 'Custom Voice Assistant Development',
-    "category": 'AI Solutions',
-    "description": 'Custom voice assistants and chatbots with natural language understanding, multi-language support, and integration with business systems.',
-    "startingPriceUSD": 'From $15,000 project',
-    "typicalTimeline": '6-10 weeks',
-    "link": '/services/voice-assistant-development',
-    "references": [{ label: 'Amazon Alexa Skills', "url": 'https://developer.amazon.com/alexa' },
-      { "label": 'Google Assistant Actions', "url": 'https://developers.google.com/assistant' },
+  {'}
+    "slug": 'voice-assistant-development',''
+    "title": 'Custom Voice Assistant Development',''
+    "category": 'AI Solutions',''
+    "description": 'Custom voice assistants and chatbots with natural language understanding, multi-language support, and integration with business systems.',''
+    "startingPriceUSD": 'From $15,000 project',''
+    "typicalTimeline": '6-10 weeks',''
+    "link": '/services/voice-assistant-development',''
+    "references": [{ label: 'Amazon Alexa Skills', "url": 'https://developer.amazon.com/alexa' },'']
+      { "label": 'Google Assistant Actions', "url": 'https://developers.google.com/assistant' },'];
     ]},
-  {
-    "slug": 'ai-fraud-detection',
-    "title": 'AI-Powered Fraud Detection System',
-    "category": 'AI Solutions',
-    "description": 'Advanced fraud detection system using machine learning to identify suspicious transactions, prevent fraud, and protect business assets.',
-    "startingPriceUSD": 'From $9,500 project',
-    "typicalTimeline": '4-6 weeks',
-    "link": '/services/ai-fraud-detection',
-    "references": [{ label: 'Fraud Detection Statistics', "url": 'https://www.lexisnexis.com/risk/fraud-detection.html' },
-      { "label": 'Machine Learning for Fraud', "url": 'https://towardsdatascience.com/machine-learning-for-fraud-detection-6f65f37c5eef' },
+  {'}
+    "slug": 'ai-fraud-detection',''
+    "title": 'AI-Powered Fraud Detection System',''
+    "category": 'AI Solutions',''
+    "description": 'Advanced fraud detection system using machine learning to identify suspicious transactions, prevent fraud, and protect business assets.',''
+    "startingPriceUSD": 'From $9,500 project',''
+    "typicalTimeline": '4-6 weeks',''
+    "link": '/services/ai-fraud-detection',''
+    "references": [{ label: 'Fraud Detection Statistics', "url": 'https://www.lexisnexis.com/risk/fraud-detection.html' },'']
+      { "label": 'Machine Learning for Fraud', "url": 'https://towardsdatascience.com/machine-learning-for-fraud-detection-6f65f37c5eef' },'];
     ]},
-
-  // ADDITIONAL INNOVATIVE MICRO SAAS SERVICES
-  {
-    "slug": 'ai-social-media-manager',
-    "title": 'AI Social Media Management Platform',
-    "category": 'Micro-SaaS',
-    "description": 'Intelligent social media automation that creates, schedules, and optimizes content across all platforms with AI-driven engagement strategies.',
-    "startingPriceUSD": '$1,800 setup + $89/mo',
-    "typicalTimeline": '2-3 weeks',
-    "link": '/services/ai-social-media-manager',
-    "references": [{ label: 'Social Media ROI', "url": 'https://blog.hootsuite.com/social-media-roi/' },
-      { "label": 'AI Content Creation', "url": 'https://www.socialmediaexaminer.com/ai-content-creation-tools/' },
+  // ADDITIONAL INNOVATIVE MICRO SAAS SERVICES;
+  {'}
+    "slug": 'ai-social-media-manager',''
+    "title": 'AI Social Media Management Platform',''
+    "category": 'Micro-SaaS',''
+    "description": 'Intelligent social media automation that creates, schedules, and optimizes content across all platforms with AI-driven engagement strategies.',''
+    "startingPriceUSD": '$1,800 setup + $89/mo',''
+    "typicalTimeline": '2-3 weeks',''
+    "link": '/services/ai-social-media-manager',''
+    "references": [{ label: 'Social Media ROI', "url": 'https://blog.hootsuite.com/social-media-roi/' },'']
+      { "label": 'AI Content Creation', "url": 'https://www.socialmediaexaminer.com/ai-content-creation-tools/' },'];
     ]},
-  {
-    "slug": 'blockchain-nft-marketplace',
-    "title": 'Blockchain NFT Marketplace Platform',
-    "category": 'Micro-SaaS',
-    "description": 'Complete NFT marketplace with smart contracts, wallet integration, auction system, and royalty management for digital asset trading.',
-    "startingPriceUSD": '$8,000 setup + $199/mo',
-    "typicalTimeline": '6-8 weeks',
-    "link": '/services/blockchain-nft-marketplace',
-    "references": [{ label: 'NFT Market Growth', "url": 'https://www.nftnow.com/features/nft-market-report-2024/' },
-      { "label": 'Ethereum Smart Contracts', "url": 'https://ethereum.org/en/developers/docs/smart-contracts/' },
+  {'}
+    "slug": 'blockchain-nft-marketplace',''
+    "title": 'Blockchain NFT Marketplace Platform',''
+    "category": 'Micro-SaaS',''
+    "description": 'Complete NFT marketplace with smart contracts, wallet integration, auction system, and royalty management for digital asset trading.',''
+    "startingPriceUSD": '$8,000 setup + $199/mo',''
+    "typicalTimeline": '6-8 weeks',''
+    "link": '/services/blockchain-nft-marketplace',''
+    "references": [{ label: 'NFT Market Growth', "url": 'https://www.nftnow.com/features/nft-market-report-2024/' },'']
+      { "label": 'Ethereum Smart Contracts', "url": 'https://ethereum.org/en/developers/docs/smart-contracts/' },'];
     ]},
-  {
-    "slug": 'ai-video-editing-platform',
-    "title": 'AI Video Editing & Production Platform',
-    "category": 'Micro-SaaS',
-    "description": 'Automated video editing platform that uses AI to create professional videos, add effects, optimize for different platforms, and generate thumbnails.',
-    "startingPriceUSD": '$3,500 setup + $149/mo',
-    "typicalTimeline": '4-5 weeks',
-    "link": '/services/ai-video-editing-platform',
-    "references": [{ label: 'Video Marketing Statistics', "url": 'https://www.wyzowl.com/video-marketing-statistics/' },
-      { "label": 'AI Video Tools', "url": 'https://www.techradar.com/best/ai-video-editing-software' },
+  {'}
+    "slug": 'ai-video-editing-platform',''
+    "title": 'AI Video Editing & Production Platform',''
+    "category": 'Micro-SaaS',''
+    "description": 'Automated video editing platform that uses AI to create professional videos, add effects, optimize for different platforms, and generate thumbnails.',''
+    "startingPriceUSD": '$3,500 setup + $149/mo',''
+    "typicalTimeline": '4-5 weeks',''
+    "link": '/services/ai-video-editing-platform',''
+    "references": [{ label: 'Video Marketing Statistics', "url": 'https://www.wyzowl.com/video-marketing-statistics/' },'']
+      { "label": 'AI Video Tools', "url": 'https://www.techradar.com/best/ai-video-editing-software' },'];
     ]},
-  {
-    "slug": 'affiliate-marketing-tracker',
-    "title": 'Affiliate Marketing Tracking & Analytics',
-    "category": 'Micro-SaaS',
-    "description": 'Comprehensive affiliate marketing platform with link tracking, commission management, performance analytics, and automated payouts.',
-    "startingPriceUSD": '$2,200 setup + $79/mo',
-    "typicalTimeline": '2-3 weeks',
-    "link": '/services/affiliate-marketing-tracker',
-    "references": [{ label: 'Affiliate Marketing Growth', "url": 'https://www.statista.com/statistics/693418/affiliate-marketing-spending-worldwide/' },
-      { "label": 'Commission Junction', "url": 'https://www.cj.com/' },
+  {'}
+    "slug": 'affiliate-marketing-tracker',''
+    "title": 'Affiliate Marketing Tracking & Analytics',''
+    "category": 'Micro-SaaS',''
+    "description": 'Comprehensive affiliate marketing platform with link tracking, commission management, performance analytics, and automated payouts.',''
+    "startingPriceUSD": '$2,200 setup + $79/mo',''
+    "typicalTimeline": '2-3 weeks',''
+    "link": '/services/affiliate-marketing-tracker',''
+    "references": [{ label: 'Affiliate Marketing Growth', "url": 'https://www.statista.com/statistics/693418/affiliate-marketing-spending-worldwide/' },'']
+      { "label": 'Commission Junction', "url": 'https://www.cj.com/' },'];
     ]},
-  {
-    "slug": 'ai-personalized-learning',
-    "title": 'AI-Powered Personalized Learning Platform',
-    "category": 'Micro-SaaS',
-    "description": 'Adaptive learning management system that personalizes educational content, tracks progress, and adjusts difficulty based on individual performance.',
-    "startingPriceUSD": '$4,500 setup + $129/mo',
-    "typicalTimeline": '5-6 weeks',
-    "link": '/services/ai-personalized-learning',
-    "references": [{ label: 'EdTech Market Growth', "url": 'https://www.grandviewresearch.com/industry-analysis/education-technology-market' },
-      { "label": 'Personalized Learning Benefits', "url": 'https://www.edweek.org/technology/personalized-learning-what-does-the-research-say/2017/07' },
+  {'}
+    "slug": 'ai-personalized-learning',''
+    "title": 'AI-Powered Personalized Learning Platform',''
+    "category": 'Micro-SaaS',''
+    "description": 'Adaptive learning management system that personalizes educational content, tracks progress, and adjusts difficulty based on individual performance.',''
+    "startingPriceUSD": '$4,500 setup + $129/mo',''
+    "typicalTimeline": '5-6 weeks',''
+    "link": '/services/ai-personalized-learning',''
+    "references": [{ label: 'EdTech Market Growth', "url": 'https://www.grandviewresearch.com/industry-analysis/education-technology-market' },'']
+      { "label": 'Personalized Learning Benefits', "url": 'https://www.edweek.org/technology/personalized-learning-what-does-the-research-say/2017/07' },'];
     ]},
-  {
-    "slug": 'smart-contract-auditor',
-    "title": 'Smart Contract Security Auditor',
-    "category": 'Micro-SaaS',
-    "description": 'Automated smart contract security analysis platform that identifies vulnerabilities, gas optimization opportunities, and compliance issues.',
-    "startingPriceUSD": '$5,500 setup + $199/mo',
-    "typicalTimeline": '4-6 weeks',
-    "link": '/services/smart-contract-auditor',
-    "references": [{ label: 'Smart Contract Security', "url": 'https://consensys.github.io/smart-contract-best-practices/' },
-      { "label": 'Blockchain Security', "url": 'https://owasp.org/www-project-blockchain-security/' },
+  {'}
+    "slug": 'smart-contract-auditor',''
+    "title": 'Smart Contract Security Auditor',''
+    "category": 'Micro-SaaS',''
+    "description": 'Automated smart contract security analysis platform that identifies vulnerabilities, gas optimization opportunities, and compliance issues.',''
+    "startingPriceUSD": '$5,500 setup + $199/mo',''
+    "typicalTimeline": '4-6 weeks',''
+    "link": '/services/smart-contract-auditor',''
+    "references": [{ label: 'Smart Contract Security', "url": 'https://consensys.github.io/smart-contract-best-practices/' },'']
+      { "label": 'Blockchain Security', "url": 'https://owasp.org/www-project-blockchain-security/' },'];
     ]},
-  {
-    "slug": 'ai-weather-prediction',
-    "title": 'AI Weather Prediction & Analytics Platform',
-    "category": 'Micro-SaaS',
-    "description": 'Advanced weather forecasting platform using machine learning to provide hyperlocal weather predictions and climate analytics for businesses.',
-    "startingPriceUSD": '$3,800 setup + $99/mo',
-    "typicalTimeline": '3-4 weeks',
-    "link": '/services/ai-weather-prediction',
-    "references": [{ label: 'Weather API Services', "url": 'https://openweathermap.org/api' },
-      { "label": 'Climate Data', "url": 'https://www.ncdc.noaa.gov/data-access' },
+  {'}
+    "slug": 'ai-weather-prediction',''
+    "title": 'AI Weather Prediction & Analytics Platform',''
+    "category": 'Micro-SaaS',''
+    "description": 'Advanced weather forecasting platform using machine learning to provide hyperlocal weather predictions and climate analytics for businesses.',''
+    "startingPriceUSD": '$3,800 setup + $99/mo',''
+    "typicalTimeline": '3-4 weeks',''
+    "link": '/services/ai-weather-prediction',''
+    "references": [{ label: 'Weather API Services', "url": 'https://openweathermap.org/api' },'']
+      { "label": 'Climate Data', "url": 'https://www.ncdc.noaa.gov/data-access' },'];
     ]},
-  {
-    "slug": 'ai-code-reviewer',
-    "title": 'AI Code Review & Quality Assurance Platform',
-    "category": 'Micro-SaaS',
-    "description": 'Intelligent code review platform that automatically analyzes code quality, suggests improvements, detects bugs, and enforces coding standards.',
-    "startingPriceUSD": '$2,500 setup + $89/mo',
-    "typicalTimeline": '2-3 weeks',
-    "link": '/services/ai-code-reviewer',
-    "references": [{ label: 'Code Quality Metrics', "url": 'https://www.sonarqube.org/' },
-      { "label": 'Static Code Analysis', "url": 'https://owasp.org/www-community/controls/Static_Code_Analysis' },
+  {'}
+    "slug": 'ai-code-reviewer',''
+    "title": 'AI Code Review & Quality Assurance Platform',''
+    "category": 'Micro-SaaS',''
+    "description": 'Intelligent code review platform that automatically analyzes code quality, suggests improvements, detects bugs, and enforces coding standards.',''
+    "startingPriceUSD": '$2,500 setup + $89/mo',''
+    "typicalTimeline": '2-3 weeks',''
+    "link": '/services/ai-code-reviewer',''
+    "references": [{ label: 'Code Quality Metrics', "url": 'https://www.sonarqube.org/' },'']
+      { "label": 'Static Code Analysis', "url": 'https://owasp.org/www-community/controls/Static_Code_Analysis' },'];
     ]},
-
-  // ADDITIONAL IT SERVICES
-  {
-    "slug": 'iot-infrastructure-management',
-    "title": 'IoT Infrastructure & Device Management',
-    "category": 'IT Services',
-    "description": 'Complete IoT infrastructure setup with device monitoring, data collection, security protocols, and real-time analytics dashboard.',
-    "startingPriceUSD": 'From $12,000 project',
-    "typicalTimeline": '6-10 weeks',
-    "link": '/services/iot-infrastructure-management',
-    "references": [{ label: 'IoT Security Framework', "url": 'https://www.nist.gov/publications/guidelines-iot-device-cybersecurity-capabilities-core-baseline' },
-      { "label": 'AWS IoT Services', "url": 'https://aws.amazon.com/iot/' },
+  // ADDITIONAL IT SERVICES;
+  {'}
+    "slug": 'iot-infrastructure-management',''
+    "title": 'IoT Infrastructure & Device Management',''
+    "category": 'IT Services',''
+    "description": 'Complete IoT infrastructure setup with device monitoring, data collection, security protocols, and real-time analytics dashboard.',''
+    "startingPriceUSD": 'From $12,000 project',''
+    "typicalTimeline": '6-10 weeks',''
+    "link": '/services/iot-infrastructure-management',''
+    "references": [{ label: 'IoT Security Framework', "url": 'https://www.nist.gov/publications/guidelines-iot-device-cybersecurity-capabilities-core-baseline' },'']
+      { "label": 'AWS IoT Services', "url": 'https://aws.amazon.com/iot/' },'];
     ]},
-  {
-    "slug": 'edge-computing-solutions',
-    "title": 'Edge Computing & Distributed Systems',
-    "category": 'IT Services',
-    "description": 'Edge computing infrastructure deployment with low-latency processing, distributed data management, and real-time decision making capabilities.',
-    "startingPriceUSD": 'From $18,000 project',
-    "typicalTimeline": '8-12 weeks',
-    "link": '/services/edge-computing-solutions',
-    "references": [{ label: 'Edge Computing Benefits', "url": 'https://www.gartner.com/en/information-technology/glossary/edge-computing' },
-      { "label": 'Kubernetes Edge', "url": 'https://kubernetes.io/docs/concepts/cluster-administration/edge/' },
+  {'}
+    "slug": 'edge-computing-solutions',''
+    "title": 'Edge Computing & Distributed Systems',''
+    "category": 'IT Services',''
+    "description": 'Edge computing infrastructure deployment with low-latency processing, distributed data management, and real-time decision making capabilities.',''
+    "startingPriceUSD": 'From $18,000 project',''
+    "typicalTimeline": '8-12 weeks',''
+    "link": '/services/edge-computing-solutions',''
+    "references": [{ label: 'Edge Computing Benefits', "url": 'https://www.gartner.com/en/information-technology/glossary/edge-computing' },'']
+      { "label": 'Kubernetes Edge', "url": 'https://kubernetes.io/docs/concepts/cluster-administration/edge/' },'];
     ]},
-  {
-    "slug": 'quantum-computing-readiness',
-    "title": 'Quantum Computing Readiness Assessment',
-    "category": 'IT Services',
-    "description": 'Quantum computing readiness evaluation, algorithm optimization, and hybrid classical-quantum system integration for future-proofing.',
-    "startingPriceUSD": 'From $25,000 project',
-    "typicalTimeline": '10-16 weeks',
-    "link": '/services/quantum-computing-readiness',
-    "references": [{ label: 'IBM Quantum Network', "url": 'https://www.ibm.com/quantum/network' },
-      { "label": 'Quantum Computing Applications', "url": 'https://www.nature.com/articles/s41586-019-1666-5' },
+  {'}
+    "slug": 'quantum-computing-readiness',''
+    "title": 'Quantum Computing Readiness Assessment',''
+    "category": 'IT Services',''
+    "description": 'Quantum computing readiness evaluation, algorithm optimization, and hybrid classical-quantum system integration for future-proofing.',''
+    "startingPriceUSD": 'From $25,000 project',''
+    "typicalTimeline": '10-16 weeks',''
+    "link": '/services/quantum-computing-readiness',''
+    "references": [{ label: 'IBM Quantum Network', "url": 'https://www.ibm.com/quantum/network' },'']
+      { "label": 'Quantum Computing Applications', "url": 'https://www.nature.com/articles/s41586-019-1666-5' },'];
     ]},
-  {
-    "slug": '5g-network-implementation',
-    "title": '5G Network Implementation & Optimization',
-    "category": 'IT Services',
-    "description": '5G network deployment, optimization, and integration with existing infrastructure for enhanced connectivity and IoT capabilities.',
-    "startingPriceUSD": 'From $35,000 project',
-    "typicalTimeline": '12-20 weeks',
-    "link": '/services/5g-network-implementation',
-    "references": [{ label: '5G Technology Overview', "url": 'https://www.qualcomm.com/5g/what-is-5g' },
-      { "label": '5G Business Applications', "url": 'https://www.gsma.com/futurenetworks/5g/' },
+  {'}
+    "slug": '5g-network-implementation',''
+    "title": '5G Network Implementation & Optimization',''
+    "category": 'IT Services',''
+    "description": '5G network deployment, optimization, and integration with existing infrastructure for enhanced connectivity and IoT capabilities.',''
+    "startingPriceUSD": 'From $35,000 project',''
+    "typicalTimeline": '12-20 weeks',''
+    "link": '/services/5g-network-implementation',''
+    "references": [{ label: '5G Technology Overview', "url": 'https://www.qualcomm.com/5g/what-is-5g' },'']
+      { "label": '5G Business Applications', "url": 'https://www.gsma.com/futurenetworks/5g/' },'];
     ]},
-  {
-    "slug": 'cyber-threat-intelligence',
-    "title": 'Cyber Threat Intelligence & Monitoring',
-    "category": 'IT Services',
-    "description": 'Advanced threat intelligence platform with real-time monitoring, threat hunting, incident response, and security orchestration.',
-    "startingPriceUSD": 'From $15,000 project',
-    "typicalTimeline": '6-8 weeks',
-    "link": '/services/cyber-threat-intelligence',
-    "references": [{ label: 'MITRE ATT&CK Framework', "url": 'https://attack.mitre.org/' },
-      { "label": 'Threat Intelligence Platforms', "url": 'https://www.gartner.com/reviews/market/security-threat-intelligence' },
+  {'}
+    "slug": 'cyber-threat-intelligence',''
+    "title": 'Cyber Threat Intelligence & Monitoring',''
+    "category": 'IT Services',''
+    "description": 'Advanced threat intelligence platform with real-time monitoring, threat hunting, incident response, and security orchestration.',''
+    "startingPriceUSD": 'From $15,000 project',''
+    "typicalTimeline": '6-8 weeks',''
+    "link": '/services/cyber-threat-intelligence',''
+    "references": [{ label: 'MITRE ATT&CK Framework', "url": 'https://attack.mitre.org/' },'']
+      { "label": 'Threat Intelligence Platforms', "url": 'https://www.gartner.com/reviews/market/security-threat-intelligence' },'];
     ]},
-
-  // ADDITIONAL AI SOLUTIONS
-  {
-    "slug": 'ai-drug-discovery',
-    "title": 'AI-Powered Drug Discovery Platform',
-    "category": 'AI Solutions',
-    "description": 'Machine learning platform for pharmaceutical research, molecular design, drug interaction prediction, and clinical trial optimization.',
-    "startingPriceUSD": 'From $50,000 project',
-    "typicalTimeline": '12-20 weeks',
-    "link": '/services/ai-drug-discovery',
-    "references": [{ label: 'AI in Drug Discovery', "url": 'https://www.nature.com/articles/s41587-021-01179-w' },
-      { "label": 'Pharmaceutical AI Market', "url": 'https://www.grandviewresearch.com/industry-analysis/artificial-intelligence-pharmaceutical-market' },
+  // ADDITIONAL AI SOLUTIONS;
+  {'}
+    "slug": 'ai-drug-discovery',''
+    "title": 'AI-Powered Drug Discovery Platform',''
+    "category": 'AI Solutions',''
+    "description": 'Machine learning platform for pharmaceutical research, molecular design, drug interaction prediction, and clinical trial optimization.',''
+    "startingPriceUSD": 'From $50,000 project',''
+    "typicalTimeline": '12-20 weeks',''
+    "link": '/services/ai-drug-discovery',''
+    "references": [{ label: 'AI in Drug Discovery', "url": 'https://www.nature.com/articles/s41587-021-01179-w' },'']
+      { "label": 'Pharmaceutical AI Market', "url": 'https://www.grandviewresearch.com/industry-analysis/artificial-intelligence-pharmaceutical-market' },'];
     ]},
-  {
-    "slug": 'ai-financial-modeling',
-    "title": 'AI Financial Modeling & Risk Assessment',
-    "category": 'AI Solutions',
-    "description": 'Advanced financial modeling platform with AI-driven risk assessment, portfolio optimization, and automated trading strategies.',
-    "startingPriceUSD": 'From $20,000 project',
-    "typicalTimeline": '8-12 weeks',
-    "link": '/services/ai-financial-modeling',
-    "references": [{ label: 'FinTech AI Applications', "url": 'https://www.mckinsey.com/industries/financial-services/our-insights/ai-bank-of-the-future' },
-      { "label": 'Quantitative Finance', "url": 'https://www.quantstart.com/' },
+  {'}
+    "slug": 'ai-financial-modeling',''
+    "title": 'AI Financial Modeling & Risk Assessment',''
+    "category": 'AI Solutions',''
+    "description": 'Advanced financial modeling platform with AI-driven risk assessment, portfolio optimization, and automated trading strategies.',''
+    "startingPriceUSD": 'From $20,000 project',''
+    "typicalTimeline": '8-12 weeks',''
+    "link": '/services/ai-financial-modeling',''
+    "references": [{ label: 'FinTech AI Applications', "url": 'https://www.mckinsey.com/industries/financial-services/our-insights/ai-bank-of-the-future' },'']
+      { "label": 'Quantitative Finance', "url": 'https://www.quantstart.com/' },'];
     ]},
-  {
-    "slug": 'ai-supply-chain-optimization',
-    "title": 'AI Supply Chain Optimization Platform',
-    "category": 'AI Solutions',
-    "description": 'Intelligent supply chain management with demand forecasting, inventory optimization, route planning, and supplier risk assessment.',
-    "startingPriceUSD": 'From $25,000 project',
-    "typicalTimeline": '10-16 weeks',
-    "link": '/services/ai-supply-chain-optimization',
-    "references": [{ label: 'Supply Chain AI', "url": 'https://www.mckinsey.com/capabilities/operations/our-insights/artificial-intelligence-in-supply-chain' },
-      { "label": 'Supply Chain Optimization', "url": 'https://www.oracle.com/supply-chain-management/' },
+  {'}
+    "slug": 'ai-supply-chain-optimization',''
+    "title": 'AI Supply Chain Optimization Platform',''
+    "category": 'AI Solutions',''
+    "description": 'Intelligent supply chain management with demand forecasting, inventory optimization, route planning, and supplier risk assessment.',''
+    "startingPriceUSD": 'From $25,000 project',''
+    "typicalTimeline": '10-16 weeks',''
+    "link": '/services/ai-supply-chain-optimization',''
+    "references": [{ label: 'Supply Chain AI', "url": 'https://www.mckinsey.com/capabilities/operations/our-insights/artificial-intelligence-in-supply-chain' },'']
+      { "label": 'Supply Chain Optimization', "url": 'https://www.oracle.com/supply-chain-management/' },'];
     ]},
-  {
-    "slug": 'ai-mental-health-platform',
-    "title": 'AI Mental Health & Wellness Platform',
-    "category": 'AI Solutions',
-    "description": 'AI-powered mental health platform with mood tracking, personalized therapy recommendations, crisis detection, and wellness coaching.',
-    "startingPriceUSD": 'From $30,000 project',
-    "typicalTimeline": '12-18 weeks',
-    "link": '/services/ai-mental-health-platform',
-    "references": [{ label: 'Digital Mental Health', "url": 'https://www.nimh.nih.gov/health/topics/technology-and-the-future-of-mental-health-treatment' },
-      { "label": 'AI in Healthcare', "url": 'https://www.nature.com/articles/s41591-021-01614-0' },
+  {'}
+    "slug": 'ai-mental-health-platform',''
+    "title": 'AI Mental Health & Wellness Platform',''
+    "category": 'AI Solutions',''
+    "description": 'AI-powered mental health platform with mood tracking, personalized therapy recommendations, crisis detection, and wellness coaching.',''
+    "startingPriceUSD": 'From $30,000 project',''
+    "typicalTimeline": '12-18 weeks',''
+    "link": '/services/ai-mental-health-platform',''
+    "references": [{ label: 'Digital Mental Health', "url": 'https://www.nimh.nih.gov/health/topics/technology-and-the-future-of-mental-health-treatment' },'']
+      { "label": 'AI in Healthcare', "url": 'https://www.nature.com/articles/s41591-021-01614-0' },'];
     ]},
-  {
-    "slug": 'ai-autonomous-vehicles',
-    "title": 'AI Autonomous Vehicle Systems',
-    "category": 'AI Solutions',
-    "description": 'Autonomous vehicle AI systems with computer vision, sensor fusion, path planning, and real-time decision making for self-driving applications.',
-    "startingPriceUSD": 'From $100,000 project',
-    "typicalTimeline": '20-30 weeks',
-    "link": '/services/ai-autonomous-vehicles',
-    "references": [{ label: 'Autonomous Vehicle Technology', "url": 'https://www.sae.org/standards/content/j3016_202104/' },
-      { "label": 'Self-Driving Car AI', "url": 'https://www.tesla.com/AI' },
+  {'}
+    "slug": 'ai-autonomous-vehicles',''
+    "title": 'AI Autonomous Vehicle Systems',''
+    "category": 'AI Solutions',''
+    "description": 'Autonomous vehicle AI systems with computer vision, sensor fusion, path planning, and real-time decision making for self-driving applications.',''
+    "startingPriceUSD": 'From $100,000 project',''
+    "typicalTimeline": '20-30 weeks',''
+    "link": '/services/ai-autonomous-vehicles',''
+    "references": [{ label: 'Autonomous Vehicle Technology', "url": 'https://www.sae.org/standards/content/j3016_202104/' },'']
+      { "label": 'Self-Driving Car AI', "url": 'https://www.tesla.com/AI' },'];
     ]},
-  {
-    "slug": 'ai-space-technology',
-    "title": 'AI Space Technology & Satellite Systems',
-    "category": 'AI Solutions',
-    "description": 'AI-powered space technology solutions including satellite data processing, orbital mechanics optimization, and space mission planning.',
-    "startingPriceUSD": 'From $75,000 project',
-    "typicalTimeline": '16-24 weeks',
-    "link": '/services/ai-space-technology',
-    "references": [{ label: 'Space AI Applications', "url": 'https://www.nasa.gov/feature/artificial-intelligence-and-space-exploration' },
-      { "label": 'Satellite Technology', "url": 'https://www.spacex.com/' },
+  {'}
+    "slug": 'ai-space-technology',''
+    "title": 'AI Space Technology & Satellite Systems',''
+    "category": 'AI Solutions',''
+    "description": 'AI-powered space technology solutions including satellite data processing, orbital mechanics optimization, and space mission planning.',''
+    "startingPriceUSD": 'From $75,000 project',''
+    "typicalTimeline": '16-24 weeks',''
+    "link": '/services/ai-space-technology',''
+    "references": [{ label: 'Space AI Applications', "url": 'https://www.nasa.gov/feature/artificial-intelligence-and-space-exploration' },'']
+      { "label": 'Satellite Technology', "url": 'https://www.spacex.com/' },'];
     ]},
-];
-
+];'
+export type ServiceItem = { slug: string; title: string; category: 'Micro-SaaS' | 'IT Services' | 'AI Solutions'; description: string; startingPriceUSD: string; typicalTimeline: string; link: string; references?: { label: string; url: string }[]}; export const servicesCatalog: ServiceItem[] = [ { slug: 'ai-chatbot-for-support',title: 'AI Chatbot for Customer Support',category: 'Micro-SaaS',description: 'Deploy a branded AI assistant trained on your docs to deflect tickets,reduce response times,and boost CSAT across web and chat channels.',startingPriceUSD: '$1,500 setup + $99/mo',typicalTimeline: '1-2 weeks',link: '/services/ai-chatbot-for-support',references: [ { label: 'OpenAI API Pricing',url: 'https: { label: 'Vercel Pricing',url: 'https: ],},{ slug: 'lead-scraper-and-enrichment',title: 'Lead Scraper & Enrichment Engine',category: 'Micro-SaaS',description: 'Automated B2B lead discovery,enrichment,and scoring with workflow exports to your CRM.',startingPriceUSD: '$2,500 setup + $149/mo',typicalTimeline: '2-3 weeks',link: '/services/lead-scraper-and-enrichment',references: [ { label: 'Clearbit (reference)',url: 'https: { label: 'Apollo (reference)',url: 'https: ],},{ slug: 'document-processing-automation',title: 'Document Processing Automation',category: 'AI Solutions',description: 'Extract structured data from PDFs,invoices,forms and route it into ERPs/CRMs with human-in-the-loop review.',startingPriceUSD: '$3,000 setup + usage',typicalTimeline: '2-4 weeks',link: '/services/document-processing-automation',references: [ { label: 'Google Document AI',url: 'https: { label: 'AWS Textract',url: 'https: ],},{ slug: 'cloud-migration-and-cost-optimization',title: 'Cloud Migration & Cost Optimization',category: 'IT Services',description: 'Migrate workloads to AWS/GCP/Azure,implement IaC,and reduce spend via rightsizing and savings plans.',startingPriceUSD: 'From $8,000 project',typicalTimeline: '4-8 weeks',link: '/services/cloud-migration-and-cost-optimization',references: [ { label: 'AWS Pricing',url: 'https: { label: 'Terraform',url: 'https: ],},{ slug: 'security-hardening-and-audits',title: 'Security Hardening & Audits',category: 'IT Services',description: 'CIS/NIST aligned audits,SOC2 readiness,penetration testing coordination,and remediation roadmaps.',startingPriceUSD: 'From $5,000 audit',typicalTimeline: '2-6 weeks',link: '/services/security-hardening-and-audits',references: [ { label: 'CIS Benchmarks',url: 'https: { label: 'OWASP ASVS',url: 'https: ],},{ slug: 'mvp-web-app-development',title: 'MVP Web App Development',category: 'Micro-SaaS',description: 'Design and build a production-ready MVP with Next.js,Tailwind,Stripe,and modern auth.',startingPriceUSD: 'From $12,000 project',typicalTimeline: '4-6 weeks',link: '/services/mvp-web-app-development',references: [ { label: 'Vercel Pricing',url: 'https: { label: 'Stripe Pricing',url: 'https: ],},{ slug: 'analytics-and-bi-dashboards',title: 'Analytics & BI Dashboards',category: 'AI Solutions',description: 'Data pipelines and BI with semantic layers and KPI dashboards for execs and ops teams.',startingPriceUSD: 'From $6,000 project',typicalTimeline: '3-5 weeks',link: '/services/analytics-and-bi-dashboards',references: [ { label: 'dbt',url: 'https: { label: 'BigQuery Pricing',url: 'https: ],},{ slug: 'ai-content-generator',title: 'AI Content Generator Platform',category: 'Micro-SaaS',description: 'AI-powered content creation tool that generates blog posts,social media content,marketing copy,and product descriptions with brand voice consistency.',startingPriceUSD: '$2,000 setup + $79/mo',typicalTimeline: '2-3 weeks',link: '/services/ai-content-generator',references: [ { label: 'OpenAI GPT-4 Pricing',url: 'https: { label: 'Content Marketing ROI',url: 'https: ],},{ slug: 'automated-email-followup',title: 'Automated Email Follow-up System',category: 'Micro-SaaS',description: 'Intelligent email automation platform that sends personalized follow-ups,nurtures leads,and maintains customer engagement with advanced segmentation.',startingPriceUSD: '$1,200 setup + $49/mo',typicalTimeline: '1-2 weeks',link: '/services/automated-email-followup',references: [ { label: 'Email Marketing ROI',url: 'https: { label: 'SendGrid Pricing',url: 'https: ],},{ slug: 'customer-support-platform',title: 'All-in-One Customer Support Platform',category: 'Micro-SaaS',description: 'Comprehensive helpdesk solution with ticket management,knowledge base,live chat,AI chatbots,and customer satisfaction tracking.',startingPriceUSD: '$3,500 setup + $99/mo',typicalTimeline: '3-4 weeks',link: '/services/customer-support-platform',references: [ { label: 'Zendesk Pricing',url: 'https: { label: 'Customer Support ROI',url: 'https: ],},{ slug: 'ai-email-responder',title: 'AI Email Responder & Manager',category: 'Micro-SaaS',description: 'AI-driven email management system that reads,categorizes,and responds to emails automatically while flagging important messages for human review.',startingPriceUSD: '$2,800 setup + $89/mo',typicalTimeline: '2-3 weeks',link: '/services/ai-email-responder',references: [ { label: 'Gmail API',url: 'https: { label: 'Email Productivity Stats',url: 'https: ],},{ slug: 'event-management-dashboard',title: 'Event Management & Analytics Dashboard',category: 'Micro-SaaS',description: 'Complete event management platform with ticket sales,attendee management,scheduling,feedback collection,and comprehensive analytics.',startingPriceUSD: '$4,000 setup + $129/mo',typicalTimeline: '4-5 weeks',link: '/services/event-management-dashboard',references: [ { label: 'Eventbrite Pricing',url: 'https: { label: 'Event Industry Growth',url: 'https: ],},{ slug: 'ecommerce-return-management',title: 'E-commerce Return Management SaaS',category: 'Micro-SaaS',description: 'Automated return processing system that handles return requests,generates labels,tracks status,and provides analytics for e-commerce businesses.',startingPriceUSD: '$2,200 setup + $69/mo',typicalTimeline: '2-3 weeks',link: '/services/ecommerce-return-management',references: [ { label: 'E-commerce Return Rates',url: 'https: { label: 'Shopify App Store',url: 'https: ],},{ slug: 'ai-talent-matching',title: 'AI-Powered Talent Matching Platform',category: 'Micro-SaaS',description: 'Advanced AI recruitment platform that matches businesses with perfect tech talent using machine learning algorithms and skills assessment.',startingPriceUSD: '$5,000 setup + $199/mo',typicalTimeline: '4-6 weeks',link: '/services/ai-talent-matching',references: [ { label: 'LinkedIn Talent Solutions',url: 'https: { label: 'Recruitment AI Market',url: 'https: ],},{ slug: 'inventory-optimization-ai',title: 'AI Inventory Optimization System',category: 'Micro-SaaS',description: 'Intelligent inventory management system that predicts demand,optimizes stock levels,prevents stockouts,and reduces carrying costs using AI.',startingPriceUSD: '$3,200 setup + $149/mo',typicalTimeline: '3-4 weeks',link: '/services/inventory-optimization-ai',references: [ { label: 'Inventory Management ROI',url: 'https: { label: 'AI in Supply Chain',url: 'https: ],},{ slug: 'zero-trust-security-implementation',title: 'Zero Trust Security Architecture',category: 'IT Services',description: 'Complete zero trust security implementation with identity verification,device trust,network segmentation,and continuous monitoring.',startingPriceUSD: 'From $15,000 project',typicalTimeline: '6-10 weeks',link: '/services/zero-trust-security-implementation',references: [ { label: 'NIST Zero Trust Framework',url: 'https: { label: 'CISA Zero Trust Maturity Model',url: 'https: ],},{ slug: 'disaster-recovery-planning',title: 'Disaster Recovery & Business Continuity',category: 'IT Services',description: 'Comprehensive disaster recovery planning,backup strategies,failover systems,and business continuity testing to ensure minimal downtime.',startingPriceUSD: 'From $12,000 project',typicalTimeline: '4-8 weeks',link: '/services/disaster-recovery-planning',references: [ { label: 'AWS Disaster Recovery',url: 'https: { label: 'Business Continuity Planning',url: 'https: ],},{ slug: 'managed-it-support',title: '24/7 Managed IT Support Services',category: 'IT Services',description: 'Round-the-clock IT monitoring,maintenance,support,and proactive issue resolution with guaranteed response times and SLA compliance.',startingPriceUSD: 'From $2,500/mo',typicalTimeline: '1-2 weeks setup',link: '/services/managed-it-support',references: [ { label: 'Managed IT Services Market',url: 'https: { label: 'IT Support Best Practices',url: 'https: ],},{ slug: 'network-optimization',title: 'Network Performance Optimization',category: 'IT Services',description: 'Network infrastructure assessment,optimization,and modernization to improve performance,security,and reliability across all locations.',startingPriceUSD: 'From $8,500 project',typicalTimeline: '3-6 weeks',link: '/services/network-optimization',references: [ { label: 'Cisco Network Solutions',url: 'https: { label: 'Network Performance Monitoring',url: 'https: ],},{ slug: 'data-backup-solutions',title: 'Enterprise Data Backup & Recovery',category: 'IT Services',description: 'Comprehensive data backup strategies including cloud backup,on-premises solutions,and hybrid approaches with automated recovery testing.',startingPriceUSD: 'From $5,500 project',typicalTimeline: '2-4 weeks',link: '/services/data-backup-solutions',references: [ { label: 'Veeam Backup Solutions',url: 'https: { label: 'AWS Backup Services',url: 'https: ],},{ slug: 'predictive-analytics-platform',title: 'Predictive Analytics & Forecasting Platform',category: 'AI Solutions',description: 'Advanced predictive analytics platform that forecasts business trends,customer behavior,and market changes using machine learning models.',startingPriceUSD: 'From $8,500 project',typicalTimeline: '4-6 weeks',link: '/services/predictive-analytics-platform',references: [ { label: 'Predictive Analytics Market',url: 'https: { label: 'Machine Learning Models',url: 'https: ],},{ slug: 'computer-vision-solutions',title: 'Computer Vision & Image Recognition',category: 'AI Solutions',description: 'Custom computer vision solutions for object detection,facial recognition,quality control,and automated visual inspection systems.',startingPriceUSD: 'From $12,000 project',typicalTimeline: '6-8 weeks',link: '/services/computer-vision-solutions',references: [ { label: 'OpenCV Documentation',url: 'https: { label: 'Computer Vision Applications',url: 'https: ],},{ slug: 'natural-language-processing',title: 'Natural Language Processing Solutions',category: 'AI Solutions',description: 'NLP solutions for sentiment analysis,text classification,language translation,and automated content processing and understanding.',startingPriceUSD: 'From $7,000 project',typicalTimeline: '3-5 weeks',link: '/services/natural-language-processing',references: [ { label: 'Hugging Face Models',url: 'https: { label: 'NLP Applications',url: 'https: ],},{ slug: 'ai-powered-crm',title: 'AI-Enhanced CRM System',category: 'AI Solutions',description: 'Intelligent CRM with AI-powered lead scoring,automated follow-ups,customer insights,and predictive sales analytics.',startingPriceUSD: 'From $10,000 project',typicalTimeline: '5-7 weeks',link: '/services/ai-powered-crm',references: [ { label: 'Salesforce AI Features',url: 'https: { label: 'CRM Market Growth',url: 'https: ],},{ slug: 'voice-assistant-development',title: 'Custom Voice Assistant Development',category: 'AI Solutions',description: 'Custom voice assistants and chatbots with natural language understanding,multi-language support,and integration with business systems.',startingPriceUSD: 'From $15,000 project',typicalTimeline: '6-10 weeks',link: '/services/voice-assistant-development',references: [ { label: 'Amazon Alexa Skills',url: 'https: { label: 'Google Assistant Actions',url: 'https: ],},{ slug: 'ai-fraud-detection',title: 'AI-Powered Fraud Detection System',category: 'AI Solutions',description: 'Advanced fraud detection system using machine learning to identify suspicious transactions,prevent fraud,and protect business assets.',startingPriceUSD: 'From $9,500 project',typicalTimeline: '4-6 weeks',link: '/services/ai-fraud-detection',references: [ { label: 'Fraud Detection Statistics',url: 'https: { label: 'Machine Learning for Fraud',url: 'https: ],},{ slug: 'ai-social-media-manager',title: 'AI Social Media Management Platform',category: 'Micro-SaaS',description: 'Intelligent social media automation that creates,schedules,and optimizes content across all platforms with AI-driven engagement strategies.',startingPriceUSD: '$1,800 setup + $89/mo',typicalTimeline: '2-3 weeks',link: '/services/ai-social-media-manager',references: [ { label: 'Social Media ROI',url: 'https: { label: 'AI Content Creation',url: 'https: ],},{ slug: 'blockchain-nft-marketplace',title: 'Blockchain NFT Marketplace Platform',category: 'Micro-SaaS',description: 'Complete NFT marketplace with smart contracts,wallet integration,auction system,and royalty management for digital asset trading.',startingPriceUSD: '$8,000 setup + $199/mo',typicalTimeline: '6-8 weeks',link: '/services/blockchain-nft-marketplace',references: [ { label: 'NFT Market Growth',url: 'https: { label: 'Ethereum Smart Contracts',url: 'https: ],},{ slug: 'ai-video-editing-platform',title: 'AI Video Editing & Production Platform',category: 'Micro-SaaS',description: 'Automated video editing platform that uses AI to create professional videos,add effects,optimize for different platforms,and generate thumbnails.',startingPriceUSD: '$3,500 setup + $149/mo',typicalTimeline: '4-5 weeks',link: '/services/ai-video-editing-platform',references: [ { label: 'Video Marketing Statistics',url: 'https: { label: 'AI Video Tools',url: 'https: ],},{ slug: 'affiliate-marketing-tracker',title: 'Affiliate Marketing Tracking & Analytics',category: 'Micro-SaaS',description: 'Comprehensive affiliate marketing platform with link tracking,commission management,performance analytics,and automated payouts.',startingPriceUSD: '$2,200 setup + $79/mo',typicalTimeline: '2-3 weeks',link: '/services/affiliate-marketing-tracker',references: [ { label: 'Affiliate Marketing Growth',url: 'https: { label: 'Commission Junction',url: 'https: ],},{ slug: 'ai-personalized-learning',title: 'AI-Powered Personalized Learning Platform',category: 'Micro-SaaS',description: 'Adaptive learning management system that personalizes educational content,tracks progress,and adjusts difficulty based on individual performance.',startingPriceUSD: '$4,500 setup + $129/mo',typicalTimeline: '5-6 weeks',link: '/services/ai-personalized-learning',references: [ { label: 'EdTech Market Growth',url: 'https: { label: 'Personalized Learning Benefits',url: 'https: ],},{ slug: 'smart-contract-auditor',title: 'Smart Contract Security Auditor',category: 'Micro-SaaS',description: 'Automated smart contract security analysis platform that identifies vulnerabilities,gas optimization opportunities,and compliance issues.',startingPriceUSD: '$5,500 setup + $199/mo',typicalTimeline: '4-6 weeks',link: '/services/smart-contract-auditor',references: [ { label: 'Smart Contract Security',url: 'https: { label: 'Blockchain Security',url: 'https: ],},{ slug: 'ai-weather-prediction',title: 'AI Weather Prediction & Analytics Platform',category: 'Micro-SaaS',description: 'Advanced weather forecasting platform using machine learning to provide hyperlocal weather predictions and climate analytics for businesses.',startingPriceUSD: '$3,800 setup + $99/mo',typicalTimeline: '3-4 weeks',link: '/services/ai-weather-prediction',references: [ { label: 'Weather API Services',url: 'https: { label: 'Climate Data',url: 'https: ],},{ slug: 'ai-code-reviewer',title: 'AI Code Review & Quality Assurance Platform',category: 'Micro-SaaS',description: 'Intelligent code review platform that automatically analyzes code quality,suggests improvements,detects bugs,and enforces coding standards.',startingPriceUSD: '$2,500 setup + $89/mo',typicalTimeline: '2-3 weeks',link: '/services/ai-code-reviewer',references: [ { label: 'Code Quality Metrics',url: 'https: { label: 'Static Code Analysis',url: 'https: ],},{ slug: 'iot-infrastructure-management',title: 'IoT Infrastructure & Device Management',category: 'IT Services',description: 'Complete IoT infrastructure setup with device monitoring,data collection,security protocols,and real-time analytics dashboard.',startingPriceUSD: 'From $12,000 project',typicalTimeline: '6-10 weeks',link: '/services/iot-infrastructure-management',references: [ { label: 'IoT Security Framework',url: 'https: { label: 'AWS IoT Services',url: 'https: ],},{ slug: 'edge-computing-solutions',title: 'Edge Computing & Distributed Systems',category: 'IT Services',description: 'Edge computing infrastructure deployment with low-latency processing,distributed data management,and real-time decision making capabilities.',startingPriceUSD: 'From $18,000 project',typicalTimeline: '8-12 weeks',link: '/services/edge-computing-solutions',references: [ { label: 'Edge Computing Benefits',url: 'https: { label: 'Kubernetes Edge',url: 'https: ],},{ slug: 'quantum-computing-readiness',title: 'Quantum Computing Readiness Assessment',category: 'IT Services',description: 'Quantum computing readiness evaluation,algorithm optimization,and hybrid classical-quantum system integration for future-proofing.',startingPriceUSD: 'From $25,000 project',typicalTimeline: '10-16 weeks',link: '/services/quantum-computing-readiness',references: [ { label: 'IBM Quantum Network',url: 'https: { label: 'Quantum Computing Applications',url: 'https: ],},{ slug: '5g-network-implementation',title: '5G Network Implementation & Optimization',category: 'IT Services',description: '5G network deployment,optimization,and integration with existing infrastructure for enhanced connectivity and IoT capabilities.',startingPriceUSD: 'From $35,000 project',typicalTimeline: '12-20 weeks',link: '/services/5g-network-implementation',references: [ { label: '5G Technology Overview',url: 'https: { label: '5G Business Applications',url: 'https: ],},{ slug: 'cyber-threat-intelligence',title: 'Cyber Threat Intelligence & Monitoring',category: 'IT Services',description: 'Advanced threat intelligence platform with real-time monitoring,threat hunting,incident response,and security orchestration.',startingPriceUSD: 'From $15,000 project',typicalTimeline: '6-8 weeks',link: '/services/cyber-threat-intelligence',references: [ { label: 'MITRE ATT&CK Framework',url: 'https: { label: 'Threat Intelligence Platforms',url: 'https: ],},{ slug: 'ai-drug-discovery',title: 'AI-Powered Drug Discovery Platform',category: 'AI Solutions',description: 'Machine learning platform for pharmaceutical research,molecular design,drug interaction prediction,and clinical trial optimization.',startingPriceUSD: 'From $50,000 project',typicalTimeline: '12-20 weeks',link: '/services/ai-drug-discovery',references: [ { label: 'AI in Drug Discovery',url: 'https: { label: 'Pharmaceutical AI Market',url: 'https: ],},{ slug: 'ai-financial-modeling',title: 'AI Financial Modeling & Risk Assessment',category: 'AI Solutions',description: 'Advanced financial modeling platform with AI-driven risk assessment,portfolio optimization,and automated trading strategies.',startingPriceUSD: 'From $20,000 project',typicalTimeline: '8-12 weeks',link: '/services/ai-financial-modeling',references: [ { label: 'FinTech AI Applications',url: 'https: { label: 'Quantitative Finance',url: 'https: ],},{ slug: 'ai-supply-chain-optimization',title: 'AI Supply Chain Optimization Platform',category: 'AI Solutions',description: 'Intelligent supply chain management with demand forecasting,inventory optimization,route planning,and supplier risk assessment.',startingPriceUSD: 'From $25,000 project',typicalTimeline: '10-16 weeks',link: '/services/ai-supply-chain-optimization',references: [ { label: 'Supply Chain AI',url: 'https: { label: 'Supply Chain Optimization',url: 'https: ],},{ slug: 'ai-mental-health-platform',title: 'AI Mental Health & Wellness Platform',category: 'AI Solutions',description: 'AI-powered mental health platform with mood tracking,personalized therapy recommendations,crisis detection,and wellness coaching.',startingPriceUSD: 'From $30,000 project',typicalTimeline: '12-18 weeks',link: '/services/ai-mental-health-platform',references: [ { label: 'Digital Mental Health',url: 'https: { label: 'AI in Healthcare',url: 'https: ],},{ slug: 'ai-autonomous-vehicles',title: 'AI Autonomous Vehicle Systems',category: 'AI Solutions',description: 'Autonomous vehicle AI systems with computer vision,sensor fusion,path planning,and real-time decision making for self-driving applications.',startingPriceUSD: 'From $100,000 project',typicalTimeline: '20-30 weeks',link: '/services/ai-autonomous-vehicles',references: [ { label: 'Autonomous Vehicle Technology',url: 'https: { label: 'Self-Driving Car AI',url: 'https: ],},{ slug: 'ai-space-technology',title: 'AI Space Technology & Satellite Systems',category: 'AI Solutions',description: 'AI-powered space technology solutions including satellite data processing,orbital mechanics optimization,and space mission planning.',startingPriceUSD: 'From $75,000 project',typicalTimeline: '16-24 weeks',link: '/services/ai-space-technology',references: [ { label: 'Space AI Applications',url: 'https: { label: 'Satellite Technology',url: 'https: ],},];'
+origin/cursor/automate-test-improve-and-merge-code-eafe;
+cursor/website-audit-and-update-with-deployment-76dc;
+cursor/fix-lint-push-and-merge-to-main-f3c1;'

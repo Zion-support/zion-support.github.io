@@ -1,28 +1,14 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import EnhancedPerformanceMonitordynamic from '../components/EnhancedPerformanceMonitor.dynamic';
-
-describe('EnhancedPerformanceMonitordynamic', () => {
-  test('renders without crashing', () => {
+import React from 'react'; import { render,screen,fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import EnhancedPerformanceMonitordynamic from '../components/EnhancedPerformanceMonitor.dynamic'; describe('EnhancedPerformanceMonitordynamic',() => { test('renders without crashing',() => { render(<EnhancedPerformanceMonitordynamic />); expect( screen.getByTestId('enhancedperformancemonitor.dynamic') ).toBeInTheDocument()}
+}); test('displays correct content',() => { render(<EnhancedPerformanceMonitordynamic />)}
+}); test('handles user interactions',() => { render(<EnhancedPerformanceMonitordynamic />)}
+}); test('applies correct styling',() => { render(<EnhancedPerformanceMonitordynamic />)})}
+});'
+</EnhancedPerformanceMonitordynamic>
     render(<EnhancedPerformanceMonitordynamic />);
-    expect(
-      screen.getByTestId('enhancedperformancemonitor.dynamic')
-    ).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
+</EnhancedPerformanceMonitordynamic>
     render(<EnhancedPerformanceMonitordynamic />);
-    // Add specific content tests based on component
-  });
-
-  test('handles user interactions', () => {
+</EnhancedPerformanceMonitordynamic>
     render(<EnhancedPerformanceMonitordynamic />);
-    // Add interaction tests based on component functionality
-  });
-
-  test('applies correct styling', () => {
+</EnhancedPerformanceMonitordynamic>
     render(<EnhancedPerformanceMonitordynamic />);
-    // Add styling tests if needed
-  });
-});
+</EnhancedPerformanceMonitordynamic>'

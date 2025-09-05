@@ -1,28 +1,14 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import AccessibilityEnhancerdynamic from '../components/AccessibilityEnhancer.dynamic';
-
-describe('AccessibilityEnhancerdynamic', () => {
-  test('renders without crashing', () => {
+import React from 'react'; import { render,screen,fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import AccessibilityEnhancerdynamic from '../components/AccessibilityEnhancer.dynamic'; describe('AccessibilityEnhancerdynamic',() => { test('renders without crashing',() => { render(<AccessibilityEnhancerdynamic />); expect( screen.getByTestId('accessibilityenhancer.dynamic') ).toBeInTheDocument()}
+}); test('displays correct content',() => { render(<AccessibilityEnhancerdynamic />)}
+}); test('handles user interactions',() => { render(<AccessibilityEnhancerdynamic />)}
+}); test('applies correct styling',() => { render(<AccessibilityEnhancerdynamic />)})}
+});'
+</AccessibilityEnhancerdynamic>
     render(<AccessibilityEnhancerdynamic />);
-    expect(
-      screen.getByTestId('accessibilityenhancer.dynamic')
-    ).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
+</AccessibilityEnhancerdynamic>
     render(<AccessibilityEnhancerdynamic />);
-    // Add specific content tests based on component
-  });
-
-  test('handles user interactions', () => {
+</AccessibilityEnhancerdynamic>
     render(<AccessibilityEnhancerdynamic />);
-    // Add interaction tests based on component functionality
-  });
-
-  test('applies correct styling', () => {
+</AccessibilityEnhancerdynamic>
     render(<AccessibilityEnhancerdynamic />);
-    // Add styling tests if needed
-  });
-});
+</AccessibilityEnhancerdynamic>'

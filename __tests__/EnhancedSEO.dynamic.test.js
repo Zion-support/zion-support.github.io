@@ -1,26 +1,14 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import EnhancedSEOdynamic from '../components/EnhancedSEO.dynamic';
-
-describe('EnhancedSEOdynamic', () => {
-  test('renders without crashing', () => {
+import React from 'react'; import { render,screen,fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import EnhancedSEOdynamic from '../components/EnhancedSEO.dynamic'; describe('EnhancedSEOdynamic',() => { test('renders without crashing',() => { render(<EnhancedSEOdynamic />); expect(screen.getByTestId('enhancedseo.dynamic')).toBeInTheDocument()}
+}); test('displays correct content',() => { render(<EnhancedSEOdynamic />)}
+}); test('handles user interactions',() => { render(<EnhancedSEOdynamic />)}
+}); test('applies correct styling',() => { render(<EnhancedSEOdynamic />)})}
+});'
+</EnhancedSEOdynamic>
     render(<EnhancedSEOdynamic />);
-    expect(screen.getByTestId('enhancedseo.dynamic')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
+</EnhancedSEOdynamic>
     render(<EnhancedSEOdynamic />);
-    // Add specific content tests based on component
-  });
-
-  test('handles user interactions', () => {
+</EnhancedSEOdynamic>
     render(<EnhancedSEOdynamic />);
-    // Add interaction tests based on component functionality
-  });
-
-  test('applies correct styling', () => {
+</EnhancedSEOdynamic>
     render(<EnhancedSEOdynamic />);
-    // Add styling tests if needed
-  });
-});
+</EnhancedSEOdynamic>'
