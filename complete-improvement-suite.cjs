@@ -1,3 +1,11 @@
+const fs = require('fs');
+const { exec } = require('child_process');
+const path = require('path');
+
+class CompleteImprovementSuite {
+  constructor() {
+    this.reportsDir = './automation-reports';
+    this.stats = {
       "mergeConflicts": { resolved: 0, "failed": 0 },
       "syntaxErrors": { fixed: 0, "failed": 0 },
       "prsProcessed": { merged: 0, "failed": 0 },
