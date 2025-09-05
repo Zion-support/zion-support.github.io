@@ -9,10 +9,18 @@ import {
   ArrowRight,
   Building,
   Users,
+<<<<<<< HEAD
   CheckCircle,
   Globe,
   Database
 } from 'lucide-react'
+=======
+  Shield,
+  Cloud,
+  Brain
+} from 'lucide-react';
+import SimpleLayout from '../../components/SimpleLayout';
+>>>>>>> cursor/expand-services-advertise-and-build-project-dc3f
 
 const industries = [
   {
@@ -67,6 +75,7 @@ const industries = [
 
 export default function Industries() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="text-center mb-12">
@@ -75,6 +84,21 @@ export default function Industries() {
             We provide specialized technology solutions across various industries
           </p>
         </div>
+=======
+    <SimpleLayout
+      title="Industry Solutions - Zion Tech Group"
+      description="Specialized technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors."
+      keywords="industry solutions, healthcare technology, fintech, manufacturing IoT, retail technology, education technology, government services"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+          </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-dc3f
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {industries.map((industry, index) => (
@@ -129,6 +153,11 @@ export default function Industries() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </div>
   )
+=======
+    </SimpleLayout>
+  );
+>>>>>>> cursor/expand-services-advertise-and-build-project-dc3f
 }

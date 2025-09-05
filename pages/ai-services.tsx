@@ -280,6 +280,96 @@ const aiServices = [
     pricing: '$1,500 - $7,500/month',
     category: 'Speech AI',
     link: 'https://voicesynthesis.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Cybersecurity Intelligence',
+    description: 'Advanced AI-driven threat detection, incident response, and security orchestration.',
+    icon: Shield,
+    features: ['Threat Hunting', 'Behavioral Analysis', 'Automated Response', 'Security Orchestration'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Cybersecurity AI',
+    popular: true,
+    link: 'https://cybersecai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Drug Discovery Platform',
+    description: 'Machine learning platform for pharmaceutical research and drug development.',
+    icon: Heart,
+    features: ['Molecular Analysis', 'Drug Interaction Prediction', 'Clinical Trial Optimization', 'Side Effect Analysis'],
+    pricing: '$15,000 - $75,000/month',
+    category: 'Healthcare AI',
+    popular: true,
+    link: 'https://drugdiscovery.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Autonomous Vehicle Simulation',
+    description: 'Advanced simulation platform for autonomous vehicle testing and validation.',
+    icon: Car,
+    features: ['Virtual Testing', 'Scenario Generation', 'Safety Validation', 'Performance Analysis'],
+    pricing: '$10,000 - $50,000/month',
+    category: 'Autonomous Systems',
+    popular: true,
+    link: 'https://avsimulation.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Quantum Computing Optimizer',
+    description: 'Quantum algorithm optimization and quantum machine learning platform.',
+    icon: Cpu,
+    features: ['Quantum Algorithm Design', 'Optimization Problems', 'Quantum ML', 'Error Correction'],
+    pricing: '$8,000 - $40,000/month',
+    category: 'Quantum AI',
+    popular: true,
+    link: 'https://quantumai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Climate Change Modeling',
+    description: 'Advanced climate modeling and environmental impact prediction using AI.',
+    icon: Globe,
+    features: ['Climate Prediction', 'Impact Analysis', 'Carbon Footprint Optimization', 'Sustainability Planning'],
+    pricing: '$12,000 - $60,000/month',
+    category: 'Environmental AI',
+    popular: true,
+    link: 'https://climateai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Space Mission Planning',
+    description: 'Intelligent mission planning and optimization for space exploration missions.',
+    icon: Rocket,
+    features: ['Mission Optimization', 'Resource Planning', 'Risk Assessment', 'Trajectory Analysis'],
+    pricing: '$20,000 - $100,000/month',
+    category: 'Space AI',
+    popular: true,
+    link: 'https://spaceai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Financial Risk Management',
+    description: 'Advanced financial risk assessment and portfolio optimization using AI.',
+    icon: DollarSign,
+    features: ['Risk Assessment', 'Portfolio Optimization', 'Fraud Detection', 'Market Analysis'],
+    pricing: '$8,000 - $40,000/month',
+    category: 'FinTech AI',
+    popular: true,
+    link: 'https://finriskai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Smart City Management',
+    description: 'Intelligent city infrastructure management and optimization platform.',
+    icon: Building,
+    features: ['Traffic Optimization', 'Energy Management', 'Public Safety', 'Resource Allocation'],
+    pricing: '$15,000 - $75,000/month',
+    category: 'Smart City AI',
+    popular: true,
+    link: 'https://smartcityai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Agricultural Intelligence',
+    description: 'Precision agriculture and crop optimization using AI and IoT sensors.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'AgTech AI',
+    popular: true,
+    link: 'https://agtechai.ziontechgroup.com'
   }
 ];
 
@@ -308,7 +398,16 @@ const categories = [
   { name: 'Education AI', count: aiServices.filter(s => s.category === 'Education AI').length },
   { name: 'Content AI', count: aiServices.filter(s => s.category === 'Content AI').length },
   { name: 'Supply Chain AI', count: aiServices.filter(s => s.category === 'Supply Chain AI').length },
-  { name: 'Speech AI', count: aiServices.filter(s => s.category === 'Speech AI').length }
+  { name: 'Speech AI', count: aiServices.filter(s => s.category === 'Speech AI').length },
+  { name: 'Cybersecurity AI', count: aiServices.filter(s => s.category === 'Cybersecurity AI').length },
+  { name: 'Healthcare AI', count: aiServices.filter(s => s.category === 'Healthcare AI').length },
+  { name: 'Autonomous Systems', count: aiServices.filter(s => s.category === 'Autonomous Systems').length },
+  { name: 'Quantum AI', count: aiServices.filter(s => s.category === 'Quantum AI').length },
+  { name: 'Environmental AI', count: aiServices.filter(s => s.category === 'Environmental AI').length },
+  { name: 'Space AI', count: aiServices.filter(s => s.category === 'Space AI').length },
+  { name: 'FinTech AI', count: aiServices.filter(s => s.category === 'FinTech AI').length },
+  { name: 'Smart City AI', count: aiServices.filter(s => s.category === 'Smart City AI').length },
+  { name: 'AgTech AI', count: aiServices.filter(s => s.category === 'AgTech AI').length }
 ];
 
 export default function AIServicesPage() {
@@ -492,6 +591,110 @@ export default function AIServicesPage() {
                 <p className="text-gray-600">Try adjusting your search or filter criteria.</p>
               </div>
             )}
+          </div>
+        </section>
+
+        {/* Contact Information Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Ready to Implement AI Solutions?
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+                Our AI experts are ready to help you implement cutting-edge artificial intelligence solutions that drive real business value. From machine learning models to computer vision systems, we deliver enterprise-grade AI solutions tailored to your specific needs.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <motion.div
+                className="text-center p-6 bg-white rounded-lg shadow-lg"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MessageSquare className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">AI Strategy Consultation</h3>
+                <p className="text-gray-600 mb-4">Get a comprehensive AI strategy assessment and implementation roadmap for your business.</p>
+                <a href="tel:+13024640950" className="text-blue-600 font-semibold hover:text-blue-700">
+                  Call: +1 302 464 0950
+                </a>
+              </motion.div>
+
+              <motion.div
+                className="text-center p-6 bg-white rounded-lg shadow-lg"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Mail className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Email Our AI Team</h3>
+                <p className="text-gray-600 mb-4">Send us your AI project requirements and we'll provide a detailed technical proposal.</p>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 font-semibold hover:text-blue-700">
+                  kleber@ziontechgroup.com
+                </a>
+              </motion.div>
+
+              <motion.div
+                className="text-center p-6 bg-white rounded-lg shadow-lg"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Building className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Our AI Lab</h3>
+                <p className="text-gray-600 mb-4">Schedule a visit to our AI research and development facility in Delaware.</p>
+                <address className="text-blue-600 font-semibold not-italic">
+                  364 E Main St STE 1008<br />
+                  Middletown, DE 19709
+                </address>
+              </motion.div>
+            </div>
+
+            <motion.div
+              className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                Why Choose Our AI Services?
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-yellow-300 mb-2">100+</div>
+                  <div className="text-sm">AI Models Deployed</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-yellow-300 mb-2">95%</div>
+                  <div className="text-sm">Accuracy Rate</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-yellow-300 mb-2">24/7</div>
+                  <div className="text-sm">AI Monitoring</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-yellow-300 mb-2">5★</div>
+                  <div className="text-sm">Client Satisfaction</div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </section>
 
