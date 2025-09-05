@@ -543,6 +543,132 @@ title: 'AI-Powered IT Operations (AIOps)',
     pricing: '$50,000 - $500,000/project',
     category: 'Digital Transformation',
     popular: true
+  },
+  {
+    title: 'AI-Powered IT Operations',
+    description: 'Intelligent IT operations using AI for predictive maintenance and automation.',
+    icon: Bot,
+    features: ['Predictive Maintenance', 'Automated Incident Response', 'Performance Optimization', 'Anomaly Detection'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'AI Operations',
+    popular: true
+  },
+  {
+    title: 'Edge Computing Solutions',
+    description: 'Edge computing infrastructure and management for distributed applications.',
+    icon: Cpu,
+    features: ['Edge Infrastructure', 'Latency Optimization', 'Distributed Processing', 'Remote Management'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Edge Computing',
+    popular: true
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network design, implementation, and optimization services.',
+    icon: Network,
+    features: ['5G Planning', 'Network Slicing', 'Performance Optimization', 'Security Implementation'],
+    pricing: '$50,000 - $500,000/project',
+    category: '5G Technology',
+    popular: true
+  },
+  {
+    title: 'IoT Infrastructure Management',
+    description: 'Comprehensive IoT infrastructure design, implementation, and management.',
+    icon: Network,
+    features: ['IoT Architecture', 'Device Management', 'Data Processing', 'Security Implementation'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'IoT',
+    popular: true
+  },
+  {
+    title: 'Blockchain Infrastructure',
+    description: 'Blockchain infrastructure setup and management for enterprise applications.',
+    icon: Shield,
+    features: ['Blockchain Setup', 'Smart Contract Development', 'Security Implementation', 'Performance Optimization'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'Blockchain',
+    popular: true
+  },
+  {
+    title: 'Quantum Computing Integration',
+    description: 'Quantum computing infrastructure and integration services.',
+    icon: Cpu,
+    features: ['Quantum Infrastructure', 'Algorithm Development', 'Hybrid Computing', 'Security Implementation'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'AR/VR Infrastructure',
+    description: 'Augmented and virtual reality infrastructure setup and management.',
+    icon: Monitor,
+    features: ['AR/VR Setup', 'Content Management', 'Performance Optimization', 'User Experience'],
+    pricing: '$40,000 - $300,000/project',
+    category: 'AR/VR',
+    popular: true
+  },
+  {
+    title: 'Metaverse Infrastructure',
+    description: 'Complete metaverse infrastructure and platform development services.',
+    icon: Globe,
+    features: ['Virtual Worlds', 'Avatar Systems', 'Real-time Interactions', 'Blockchain Integration'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Metaverse',
+    popular: true
+  },
+  {
+    title: 'Green IT Solutions',
+    description: 'Sustainable and energy-efficient IT infrastructure solutions.',
+    icon: Sprout,
+    features: ['Energy Optimization', 'Carbon Footprint Reduction', 'Sustainable Hardware', 'Green Data Centers'],
+    pricing: '$20,000 - $150,000/project',
+    category: 'Green IT',
+    popular: true
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Zero trust security model implementation and management.',
+    icon: Shield,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Risk Assessment'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Zero Trust',
+    popular: true
+  },
+  {
+    title: 'API Management & Governance',
+    description: 'Comprehensive API management, security, and governance solutions.',
+    icon: Code,
+    features: ['API Gateway', 'Rate Limiting', 'Security Policies', 'Analytics & Monitoring'],
+    pricing: '$10,000 - $75,000/setup',
+    category: 'API Management',
+    popular: true
+  },
+  {
+    title: 'Data Mesh Architecture',
+    description: 'Data mesh architecture implementation for distributed data management.',
+    icon: Database,
+    features: ['Data Domains', 'Self-serve Platform', 'Federated Governance', 'Product Thinking'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Data Architecture',
+    popular: true
+  },
+  {
+    title: 'Microservices Architecture',
+    description: 'Microservices architecture design, implementation, and management.',
+    icon: Server,
+    features: ['Service Design', 'API Gateway', 'Service Mesh', 'Monitoring & Observability'],
+    pricing: '$30,000 - $250,000/project',
+    category: 'Microservices',
+    popular: true
+  },
+  {
+    title: 'Serverless Architecture',
+    description: 'Serverless architecture implementation and optimization services.',
+    icon: Cloud,
+    features: ['Function Design', 'Event-driven Architecture', 'Cost Optimization', 'Performance Tuning'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Serverless',
+    popular: true
   }
 ];
 

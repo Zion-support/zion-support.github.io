@@ -604,6 +604,132 @@ description: 'Automated code review with security scanning, performance optimiza
     pricing: '$49 - $399/month',
     category: 'Data Protection',
     popular: true
+  },
+  {
+    title: 'AI-Powered Code Review Assistant',
+    description: 'Automated code review and quality assurance for development teams.',
+    icon: Code,
+    features: ['Code Quality Analysis', 'Security Scanning', 'Performance Optimization', 'Best Practices'],
+    pricing: '$99 - $599/month',
+    category: 'Development',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Content Moderation',
+    description: 'Automated content moderation for text, images, and videos using AI.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Custom Rules', 'Real-time Processing', 'API Integration'],
+    pricing: '$199 - $999/month',
+    category: 'Content Safety',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Customer Churn Prediction',
+    description: 'Predict and prevent customer churn using machine learning algorithms.',
+    icon: TrendingUp,
+    features: ['Churn Prediction', 'Risk Scoring', 'Retention Campaigns', 'Analytics Dashboard'],
+    pricing: '$149 - $799/month',
+    category: 'Customer Success',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Price Optimization',
+    description: 'Dynamic pricing optimization using AI for maximum revenue and competitiveness.',
+    icon: DollarSign,
+    features: ['Dynamic Pricing', 'Competitor Analysis', 'Demand Forecasting', 'A/B Testing'],
+    pricing: '$299 - $1,499/month',
+    category: 'E-commerce',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Video Analytics',
+    description: 'Advanced video analysis for security, marketing, and business intelligence.',
+    icon: Video,
+    features: ['Object Detection', 'Behavior Analysis', 'Crowd Counting', 'Real-time Alerts'],
+    pricing: '$199 - $999/month',
+    category: 'Video Analytics',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Voice Analytics',
+    description: 'Voice analysis and sentiment detection for call centers and customer service.',
+    icon: Mic,
+    features: ['Sentiment Analysis', 'Call Transcription', 'Quality Scoring', 'Real-time Insights'],
+    pricing: '$149 - $799/month',
+    category: 'Voice Analytics',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Document Intelligence',
+    description: 'Intelligent document processing and data extraction using AI.',
+    icon: FileText,
+    features: ['OCR Technology', 'Data Extraction', 'Document Classification', 'Workflow Automation'],
+    pricing: '$99 - $599/month',
+    category: 'Document Processing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Supply Chain Optimization',
+    description: 'Intelligent supply chain management with predictive analytics and automation.',
+    icon: Network,
+    features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Risk Analysis'],
+    pricing: '$399 - $1,999/month',
+    category: 'Supply Chain',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Energy Management',
+    description: 'Smart energy monitoring and optimization for buildings and facilities.',
+    icon: Zap,
+    features: ['Energy Monitoring', 'Usage Optimization', 'Predictive Maintenance', 'Cost Analysis'],
+    pricing: '$199 - $999/month',
+    category: 'Energy Management',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Compliance Monitoring',
+    description: 'Automated compliance monitoring and reporting for various industries.',
+    icon: Shield,
+    features: ['Regulatory Compliance', 'Automated Reporting', 'Risk Assessment', 'Audit Trails'],
+    pricing: '$299 - $1,499/month',
+    category: 'Compliance',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Talent Acquisition',
+    description: 'Intelligent recruitment and candidate matching using AI algorithms.',
+    icon: Users,
+    features: ['Resume Screening', 'Skill Matching', 'Interview Scheduling', 'Candidate Scoring'],
+    pricing: '$199 - $999/month',
+    category: 'HR & Recruitment',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Market Research',
+    description: 'Automated market research and competitive intelligence using AI.',
+    icon: Search,
+    features: ['Market Analysis', 'Competitor Tracking', 'Trend Detection', 'Report Generation'],
+    pricing: '$149 - $799/month',
+    category: 'Market Research',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Legal Document Analysis',
+    description: 'Intelligent legal document review and contract analysis using AI.',
+    icon: BookOpen,
+    features: ['Contract Analysis', 'Risk Assessment', 'Clause Extraction', 'Compliance Checking'],
+    pricing: '$399 - $1,999/month',
+    category: 'Legal Tech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Healthcare Analytics',
+    description: 'Healthcare data analysis and patient outcome prediction using AI.',
+    icon: Heart,
+    features: ['Patient Analytics', 'Outcome Prediction', 'Risk Stratification', 'Clinical Insights'],
+    pricing: '$499 - $2,499/month',
+    category: 'Healthcare',
+    popular: true
   }
 ];
 
