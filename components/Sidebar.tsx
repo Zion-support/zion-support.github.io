@@ -10,17 +10,12 @@ import {
   Users,
   Settings,
   HelpCircle,
-<<<<<<< HEAD
   Phone,
   Mail,
   MapPin,
   Building2,
-  User,
-=======
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
   LogOut,
-  User,
-  Search
+  User
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -63,9 +58,6 @@ const navigation = [
 ];
 
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
-<<<<<<< HEAD
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-=======
   const [expandedItems, setExpandedItems] = useState<string[]>([]);
 
   const toggleExpanded = (label: string) => {
@@ -75,7 +67,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         : [...prev, label]
     );
   };
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 
   useEffect(() => {
     if (isOpen) {
@@ -89,13 +80,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     };
   }, [isOpen]);
 
-<<<<<<< HEAD
-  const handleDropdownToggle = (item: string) => {
-    setActiveDropdown(activeDropdown === item ? null : item);
-  };
-
-=======
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
   return (
     <AnimatePresence>
       {isOpen && (
@@ -108,18 +92,13 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={onClose}
           />
-<<<<<<< HEAD
-
-=======
           
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
           {/* Sidebar */}
           <motion.div
             initial={{ x: '-100%' }}
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
-<<<<<<< HEAD
             className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
           >
             <div className="p-6">
@@ -134,17 +113,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 <button
                   onClick={onClose}
                   className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
-=======
-            className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50"
-          >
-            <div className="flex flex-col h-full">
-              {/* Header */}
-              <div className="flex items-center justify-between p-6 border-b">
-                <h2 className="text-xl font-semibold text-gray-900">Menu</h2>
-                <button
-                  onClick={onClose}
-                  className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
                 >
                   <X className="h-6 w-6" />
                 </button>
@@ -205,8 +173,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                     );
                   })}
                 </div>
-<<<<<<< HEAD
-              </div>
+              </nav>
 
               {/* Contact Info */}
               <div className="mt-8 pt-8 border-t border-gray-200">
@@ -223,23 +190,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   <div className="flex items-start text-gray-600">
                     <MapPin className="w-4 h-4 mr-3 mt-1" />
                     <span>364 E Main St STE 1008, Middletown DE 19709</span>
-=======
-              </nav>
-
-              {/* Footer */}
-              <div className="border-t p-4">
-                <div className="flex items-center space-x-3">
-                  <div className="h-8 w-8 bg-gray-300 rounded-full flex items-center justify-center">
-                    <User className="h-5 w-5 text-gray-600" />
                   </div>
-                  <div className="flex-1">
-                    <p className="text-sm font-medium text-gray-900">John Doe</p>
-                    <p className="text-xs text-gray-500">john@example.com</p>
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
-                  </div>
-                  <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">
-                    <LogOut className="h-5 w-5" />
-                  </button>
                 </div>
               </div>
             </div>

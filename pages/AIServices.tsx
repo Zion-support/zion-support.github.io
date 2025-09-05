@@ -1,10 +1,6 @@
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-=======
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 import Layout from '../components/Layout';
 import { 
   Brain, 
@@ -68,7 +64,6 @@ const aiServices = [
     title: "AI Security",
     description: "Advanced threat detection and security solutions powered by artificial intelligence",
     icon: Shield,
-<<<<<<< HEAD
     features: [
       'Threat detection and analysis',
       'Automated incident response',
@@ -201,43 +196,23 @@ const aiServices = [
     marketPrice: '$5,500 - $20,000/month',
     setupTime: '6-12 weeks',
     targetUsers: 'Space Agencies, Satellite Companies, Research Institutions'
-=======
-    features: ["Threat Detection", "Anomaly Detection", "Fraud Prevention", "Security Monitoring"],
-    pricing: "Starting at $3,200/month"
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
   }
 ];
 
 const stats = [
-<<<<<<< HEAD
-  { number: "500+", label: "AI Projects Completed" },
-  { number: "99.9%", label: "Accuracy Rate" },
-=======
   { number: "500+", label: "AI Models Deployed" },
   { number: "99.9%", label: "Uptime Guarantee" },
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
   { number: "24/7", label: "AI Monitoring" },
   { number: "48hrs", label: "Average Response Time" }
 ];
 
 export default function AIServices() {
   return (
-<<<<<<< HEAD
     <Layout
       title="AI Services - Zion Tech Group"
       description="Comprehensive AI services including machine learning, computer vision, NLP, and cutting-edge quantum AI solutions."
     >
       <div className="min-h-screen bg-gray-50">
-=======
-    <>
-      <Head>
-        <title>AI Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI services including machine learning, computer vision, NLP, and predictive analytics. Transform your business with cutting-edge AI solutions." />
-        <meta name="keywords" content="AI services, machine learning, computer vision, NLP, predictive analytics, AI automation" />
-      </Head>
-      
-      <Layout>
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
           <div className="container mx-auto px-6 text-center">
@@ -398,12 +373,7 @@ export default function AIServices() {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
       </div>
     </Layout>
-=======
-      </Layout>
-    </>
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
   );
 }

@@ -1,40 +1,16 @@
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-import Header from './Header';
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Header from './Header';
 import { Sidebar } from './Sidebar';
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 import Footer from './Footer';
 
 interface LayoutProps {
   title?: string;
   description?: string;
-<<<<<<< HEAD
-  children: React.ReactNode;
-}
-
-const Layout: React.FC<LayoutProps> = ({ children, title, description }) => {
-  return (
-    <>
-      <Head>
-        <title>{title || 'Zion Tech Group'}</title>
-        <meta name="description" content={description || 'Leading technology solutions provider'} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className="min-h-screen bg-gray-50">
-        <Header />
-        <main className="flex-1">
-          {children}
-        </main>
-=======
   keywords?: string;
   ogImage?: string;
   noIndex?: boolean;
+  children: React.ReactNode;
 }
 
 export default function Layout({
@@ -105,15 +81,8 @@ export default function Layout({
           </main>
         </div>
         
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
         <Footer />
       </div>
     </>
   );
-<<<<<<< HEAD
-};
-
-export default Layout;
-=======
 }
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
