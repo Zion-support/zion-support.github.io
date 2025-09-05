@@ -559,7 +559,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$40,000 - $200,000 project',
     category: 'Robotics'
   },
-  {}
+  {
     title: 'AI Music Composition',
     description: 'AI-generated music composition with style adaptation and emotional intelligence.',
     icon: Mic,
