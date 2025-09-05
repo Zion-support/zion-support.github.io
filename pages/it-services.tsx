@@ -465,6 +465,417 @@ const itServices = [
     marketPrice: '$5,000-10,000/month',
     setupTime: '6-12 weeks',
     targetUsers: 'Automotive, Logistics, Agriculture, Manufacturing'
+  },
+
+  // Advanced Infrastructure & Enterprise Solutions
+  {
+    id: 16,
+    title: 'Enterprise Data Center Solutions',
+    description: 'Complete data center design, implementation, and management for enterprise-scale operations.',
+    icon: Server,
+    category: 'Data Center',
+    price: 'Starting at $4,500/month',
+    features: [
+      'Data center design & planning',
+      'Server infrastructure setup',
+      'Storage solutions & SAN',
+      'Backup & disaster recovery',
+      'Power & cooling optimization',
+      'Security & access control',
+      'Monitoring & management',
+      'Compliance & certification'
+    ],
+    benefits: [
+      'Scalable infrastructure',
+      'High availability & uptime',
+      'Cost optimization',
+      'Enterprise-grade security'
+    ],
+    marketPrice: '$7,000-15,000/month',
+    setupTime: '8-16 weeks',
+    targetUsers: 'Large enterprises, Government, Financial services'
+  },
+  {
+    id: 17,
+    title: 'Hybrid Cloud Architecture',
+    description: 'Seamless hybrid cloud solutions combining on-premises, private, and public cloud environments.',
+    icon: Cloud,
+    category: 'Cloud Services',
+    price: 'Starting at $3,500/month',
+    features: [
+      'Multi-cloud strategy',
+      'Hybrid cloud integration',
+      'Data synchronization',
+      'Workload optimization',
+      'Security & compliance',
+      'Cost management',
+      'Disaster recovery',
+      'Migration services'
+    ],
+    benefits: [
+      'Flexibility & scalability',
+      'Cost optimization',
+      'Enhanced security',
+      'Seamless operations'
+    ],
+    marketPrice: '$5,500-11,000/month',
+    setupTime: '6-12 weeks',
+    targetUsers: 'Enterprises, SMBs, Government, Healthcare'
+  },
+  {
+    id: 18,
+    title: 'Zero-Trust Security Architecture',
+    description: 'Comprehensive zero-trust security implementation with identity verification and micro-segmentation.',
+    icon: Shield,
+    category: 'Cybersecurity',
+    price: 'Starting at $2,800/month',
+    features: [
+      'Identity & access management',
+      'Micro-segmentation',
+      'Network security',
+      'Endpoint protection',
+      'Data encryption',
+      'Security monitoring',
+      'Compliance management',
+      'Incident response'
+    ],
+    benefits: [
+      'Enhanced security posture',
+      'Reduced attack surface',
+      'Compliance assurance',
+      'Better threat detection'
+    ],
+    marketPrice: '$4,500-9,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'All industries, Government, Financial services, Healthcare'
+  },
+  {
+    id: 19,
+    title: 'DevSecOps & Security Integration',
+    description: 'Security-first DevOps implementation with automated security testing and compliance monitoring.',
+    icon: Code,
+    category: 'DevOps',
+    price: 'Starting at $2,200/month',
+    features: [
+      'Security automation',
+      'CI/CD pipeline security',
+      'Vulnerability scanning',
+      'Compliance automation',
+      'Security testing',
+      'Threat modeling',
+      'Security monitoring',
+      'Incident response'
+    ],
+    benefits: [
+      'Faster secure deployments',
+      'Reduced security risks',
+      'Compliance automation',
+      'Better security culture'
+    ],
+    marketPrice: '$3,500-7,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'Development teams, Enterprises, Fintech, Healthcare'
+  },
+  {
+    id: 20,
+    title: 'High-Performance Computing (HPC)',
+    description: 'High-performance computing solutions for research, simulation, and data-intensive applications.',
+    icon: Cpu,
+    category: 'HPC Services',
+    price: 'Starting at $5,500/month',
+    features: [
+      'HPC cluster design',
+      'Parallel processing setup',
+      'GPU computing',
+      'High-speed networking',
+      'Storage optimization',
+      'Job scheduling',
+      'Performance tuning',
+      'Research collaboration'
+    ],
+    benefits: [
+      'Massive computational power',
+      'Faster research results',
+      'Complex problem solving',
+      'Competitive advantage'
+    ],
+    marketPrice: '$8,000-20,000/month',
+    setupTime: '8-16 weeks',
+    targetUsers: 'Research institutions, Universities, Pharmaceutical, Aerospace'
+  },
+
+  // Specialized IT Services
+  {
+    id: 21,
+    title: 'Digital Transformation Consulting',
+    description: 'Comprehensive digital transformation strategy and implementation for modern business operations.',
+    icon: TrendingUp,
+    category: 'Digital Transformation',
+    price: 'Starting at $3,000/month',
+    features: [
+      'Digital strategy development',
+      'Process automation',
+      'Technology modernization',
+      'Change management',
+      'Digital culture transformation',
+      'ROI optimization',
+      'Innovation implementation',
+      'Continuous improvement'
+    ],
+    benefits: [
+      'Modern business operations',
+      'Improved efficiency',
+      'Better customer experience',
+      'Competitive advantage'
+    ],
+    marketPrice: '$5,000-12,000/month',
+    setupTime: '6-12 weeks',
+    targetUsers: 'All industries, Enterprises, SMBs, Government'
+  },
+  {
+    id: 22,
+    title: 'IT Governance & Compliance',
+    description: 'Comprehensive IT governance framework with compliance management and risk assessment.',
+    icon: ClipboardList,
+    category: 'IT Governance',
+    price: 'Starting at $2,000/month',
+    features: [
+      'IT governance framework',
+      'Compliance management',
+      'Risk assessment',
+      'Policy development',
+      'Audit preparation',
+      'Regulatory compliance',
+      'Vendor management',
+      'Performance monitoring'
+    ],
+    benefits: [
+      'Regulatory compliance',
+      'Risk mitigation',
+      'Better governance',
+      'Audit readiness'
+    ],
+    marketPrice: '$3,500-7,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'All industries, Government, Financial services, Healthcare'
+  },
+  {
+    id: 23,
+    title: 'IT Asset Management',
+    description: 'Complete IT asset lifecycle management with tracking, optimization, and cost control.',
+    icon: Package,
+    category: 'Asset Management',
+    price: 'Starting at $1,200/month',
+    features: [
+      'Asset inventory management',
+      'Lifecycle tracking',
+      'Cost optimization',
+      'License management',
+      'Depreciation tracking',
+      'Vendor management',
+      'Disposal management',
+      'Reporting & analytics'
+    ],
+    benefits: [
+      'Cost optimization',
+      'Better asset utilization',
+      'Compliance assurance',
+      'Reduced waste'
+    ],
+    marketPrice: '$2,000-4,000/month',
+    setupTime: '2-4 weeks',
+    targetUsers: 'All businesses, Enterprises, SMBs, Government'
+  },
+  {
+    id: 24,
+    title: 'Network Security & Monitoring',
+    description: 'Advanced network security solutions with real-time monitoring and threat detection.',
+    icon: Network,
+    category: 'Network Security',
+    price: 'Starting at $2,500/month',
+    features: [
+      'Network security assessment',
+      'Firewall management',
+      'Intrusion detection',
+      'Network monitoring',
+      'Threat intelligence',
+      'Incident response',
+      'Security analytics',
+      'Compliance reporting'
+    ],
+    benefits: [
+      'Enhanced network security',
+      'Real-time threat detection',
+      'Faster incident response',
+      'Better compliance'
+    ],
+    marketPrice: '$4,000-8,000/month',
+    setupTime: '3-6 weeks',
+    targetUsers: 'All industries, Enterprises, Government, Financial services'
+  },
+  {
+    id: 25,
+    title: 'IT Disaster Recovery & Business Continuity',
+    description: 'Comprehensive disaster recovery and business continuity planning and implementation.',
+    icon: HardDrive,
+    category: 'Disaster Recovery',
+    price: 'Starting at $2,800/month',
+    features: [
+      'Disaster recovery planning',
+      'Backup strategy implementation',
+      'Business continuity planning',
+      'Recovery testing',
+      'Data replication',
+      'Failover systems',
+      'Recovery time optimization',
+      'Compliance management'
+    ],
+    benefits: [
+      'Minimize downtime',
+      'Data protection',
+      'Business continuity',
+      'Risk mitigation'
+    ],
+    marketPrice: '$4,500-9,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'All industries, Enterprises, Financial services, Healthcare'
+  },
+
+  // Emerging Technologies
+  {
+    id: 26,
+    title: '5G Network Infrastructure',
+    description: '5G network implementation and optimization for high-speed, low-latency connectivity.',
+    icon: Wifi,
+    category: '5G Services',
+    price: 'Starting at $4,000/month',
+    features: [
+      '5G network planning',
+      'Infrastructure deployment',
+      'Performance optimization',
+      'Edge computing integration',
+      'IoT connectivity',
+      'Network slicing',
+      'Security implementation',
+      'Monitoring & management'
+    ],
+    benefits: [
+      'Ultra-fast connectivity',
+      'Low latency',
+      'IoT enablement',
+      'Future-ready infrastructure'
+    ],
+    marketPrice: '$6,000-15,000/month',
+    setupTime: '6-12 weeks',
+    targetUsers: 'Telecommunications, IoT companies, Smart cities, Manufacturing'
+  },
+  {
+    id: 27,
+    title: 'Microservices Architecture',
+    description: 'Microservices architecture design and implementation for scalable, maintainable applications.',
+    icon: Settings,
+    category: 'Architecture',
+    price: 'Starting at $3,200/month',
+    features: [
+      'Microservices design',
+      'API gateway implementation',
+      'Service mesh setup',
+      'Container orchestration',
+      'Monitoring & logging',
+      'Security implementation',
+      'Performance optimization',
+      'Scalability planning'
+    ],
+    benefits: [
+      'Scalable architecture',
+      'Faster development',
+      'Better maintainability',
+      'Improved performance'
+    ],
+    marketPrice: '$5,000-10,000/month',
+    setupTime: '6-12 weeks',
+    targetUsers: 'Software companies, Enterprises, E-commerce, SaaS providers'
+  },
+  {
+    id: 28,
+    title: 'API Management & Integration',
+    description: 'Comprehensive API management platform with integration services and developer tools.',
+    icon: Code,
+    category: 'API Services',
+    price: 'Starting at $1,800/month',
+    features: [
+      'API gateway setup',
+      'API lifecycle management',
+      'Developer portal',
+      'API security',
+      'Rate limiting',
+      'Analytics & monitoring',
+      'Integration services',
+      'Documentation & testing'
+    ],
+    benefits: [
+      'Better API management',
+      'Enhanced security',
+      'Developer experience',
+      'Improved integration'
+    ],
+    marketPrice: '$3,000-6,000/month',
+    setupTime: '3-6 weeks',
+    targetUsers: 'Software companies, Enterprises, SaaS providers, E-commerce'
+  },
+  {
+    id: 29,
+    title: 'IT Performance Optimization',
+    description: 'Comprehensive IT performance analysis and optimization for maximum efficiency and cost savings.',
+    icon: BarChart3,
+    category: 'Performance Optimization',
+    price: 'Starting at $2,200/month',
+    features: [
+      'Performance assessment',
+      'Bottleneck identification',
+      'Resource optimization',
+      'Capacity planning',
+      'Cost optimization',
+      'Performance monitoring',
+      'Automation implementation',
+      'Continuous improvement'
+    ],
+    benefits: [
+      'Improved performance',
+      'Cost reduction',
+      'Better resource utilization',
+      'Enhanced efficiency'
+    ],
+    marketPrice: '$3,500-7,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'All businesses, Enterprises, SMBs, Government'
+  },
+  {
+    id: 30,
+    title: 'IT Training & Education',
+    description: 'Comprehensive IT training programs for teams and individuals on modern technologies and best practices.',
+    icon: GraduationCap,
+    category: 'IT Training',
+    price: 'Starting at $1,500/month',
+    features: [
+      'Custom training programs',
+      'Technology workshops',
+      'Certification preparation',
+      'Hands-on labs',
+      'Online learning platforms',
+      'Expert instructors',
+      'Progress tracking',
+      'Continuous learning'
+    ],
+    benefits: [
+      'Enhanced team skills',
+      'Better technology adoption',
+      'Improved productivity',
+      'Competitive advantage'
+    ],
+    marketPrice: '$2,500-5,000/month',
+    setupTime: '2-4 weeks',
+    targetUsers: 'All businesses, Enterprises, Educational institutions, Government'
   }
 ];
 

@@ -1,5 +1,6 @@
 
-import Link from 'next/link';';
+import Head from 'next/head';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
   BookOpen, 
@@ -87,6 +88,28 @@ const guides = [
     sections: 16,
     downloads: 1600
   }
+];
+
+export default function GuidesPage() {
+  return (
+    <>
+      <Head>
+        <title>Guides - Zion Tech Group | Technology Guides & Tutorials</title>
+        <meta name="description" content="Comprehensive guides and tutorials for AI, IT, and micro SAAS technologies. Learn from our experts and stay ahead of the curve." />
+        <meta name="keywords" content="technology guides, tutorials, AI guides, IT guides, micro SAAS guides, learning resources" />
+        <meta property="og:title" content="Guides - Zion Tech Group" />
+        <meta property="og:description" content="Comprehensive guides and tutorials for modern technologies." />
+        <meta property="og:url" content="https://ziontechgroup.com/guides" />
+        <meta property="og:type" content="website" />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+          </div>
 
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
