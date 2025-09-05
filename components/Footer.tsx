@@ -57,6 +57,7 @@ const company = [{ "name": 'About Us', "href": '/about' },
   { "name": 'Our Team', "href": '/about#team' },
   { "name": 'Careers', "href": '/careers' },
   { "name": 'Case Studies', "href": '/case-studies' },
+  { "name": 'Partners', "href": '/partners' },
   { "name": 'Blog', "href": '/blog' },
   { "name": 'News', "href": '/news' }
 ];
@@ -65,6 +66,8 @@ const resources = [{ "name": 'Documentation', "href": '/docs' },
   { "name": 'API Reference', "href": '/api-docs' },
   { "name": 'Tutorials', "href": '/tutorials' },
   { "name": 'Guides', "href": '/guides' },
+  { "name": 'White Papers', "href": '/white-papers' },
+  { "name": 'Webinars', "href": '/webinars' },
   { "name": 'FAQ', "href": '/faq' },
   { "name": 'Support', "href": '/support' }
 ];
