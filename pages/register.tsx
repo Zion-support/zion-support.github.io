@@ -31,7 +31,6 @@ export default function RegisterPage() {
       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
-    });
   };
 
   return (

@@ -110,7 +110,6 @@ const complianceAreas = [
   }
 ];
 
-ursor/website-audit-and-update-with-deployment-9cae
 const complianceMetrics = [
   { label: 'SOC 2 Score', value: '98%', description: 'Last audit score' },
   { label: 'HIPAA Compliance', value: '100%', description: 'Current compliance status' },
@@ -118,7 +117,6 @@ const complianceMetrics = [
   { label: 'Audit Frequency', value: 'Annual', description: 'Compliance audit schedule' }
 ];
 
-ursor/website-audit-and-update-with-deployment-9cae
 const certifications = [
   {
     name: 'SOC 2 Type II',
@@ -148,8 +146,6 @@ const certifications = [
 export default function CompliancePage() {
   return (
     <Layout
-    <SimpleLayout
-ursor/website-audit-and-update-with-deployment-9cae
       title="Compliance - Zion Tech Group"
       description="Learn about our compliance with industry standards including SOC 2, HIPAA, GDPR, and ISO 27001. Your data protection and regulatory compliance is our priority."
       keywords="compliance, SOC 2, HIPAA, GDPR, ISO 27001, data protection, regulatory compliance, security standards"
@@ -468,10 +464,7 @@ ursor/website-audit-and-update-with-deployment-9cae
           </div>
         </section>
       </div>
-    </MainLayout>
     </Layout>
-    </SimpleLayout>
-ursor/website-audit-and-update-with-deployment-9cae
   );
 }
 

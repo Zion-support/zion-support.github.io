@@ -1,7 +1,6 @@
-import React from 'react'
-import Layout from '../../components/Layout'
+import React from 'react';
+import Layout from '../../components/Layout';
 
-export default function ApiDocs() {
 const codeExamples = [
   {
     language: 'JavaScript',
@@ -35,7 +34,7 @@ response = requests.post(url, json=data, headers=headers)
 print(response.json())
 `
   }
-]
+];
 
 export default function APIDocumentationPage() {
   return (
@@ -45,6 +44,5 @@ export default function APIDocumentationPage() {
         <p className="text-gray-600">Reference content will return after fixes. Basic page added to restore build.</p>
       </div>
     </Layout>
-  )
+  );
 }
-

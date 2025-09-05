@@ -474,37 +474,6 @@ const microSaasProducts = [
   }
 ];
 
-const features = [{
-    icon: Zap,
-    title: 'Rapid Deployment',
-    description: 'Get up and running in days, not months'
-  },
-  {
-    icon: Shield,
-    title: 'Enterprise Security',
-    description: 'Bank-level security and compliance'
-  },
-  {
-    icon: Users,
-    title: 'Scalable Architecture',
-    description: 'Grows with your business needs'
-  },
-  {
-    icon: Globe,
-    title: 'Multi-tenant Ready',
-    description: 'Built for SaaS from the ground up'
-  },
-  {
-    icon: BarChart3,
-    title: 'Analytics Built-in',
-    description: 'Comprehensive usage and performance metrics'
-  },
-  {
-    icon: Lock,
-    title: 'Data Privacy',
-    description: 'GDPR and SOC 2 compliant by default'
-  }
-];
 
 const benefits = [{
     icon: Clock,
@@ -1068,38 +1037,6 @@ const developmentProcess = [
   }
 ];
 
-const benefits = [
-  {
-    icon: CheckCircle,
-    title: "Affordable Pricing",
-    description: "Cost-effective solutions starting from $19/month"
-  },
-  {
-    icon: Clock,
-    title: "Quick Setup",
-    description: "Get started in minutes with our easy onboarding"
-  },
-  {
-    icon: Shield,
-    title: "Secure & Reliable",
-    description: "Enterprise-grade security and 99.9% uptime guarantee"
-  },
-  {
-    icon: Award,
-    title: "Proven Results",
-    description: "Trusted by 1000+ businesses worldwide"
-  },
-  {
-    icon: Users,
-    title: "User-Centric Design",
-    description: "Intuitive interfaces and seamless user experiences that drive adoption and engagement"
-  },
-  {
-    icon: BarChart3,
-    title: "Scalable Architecture",
-    description: "Built to grow with your business, handling increased users and data seamlessly"
-  }
-];
 
 const pricingTiers = [
   {
@@ -1113,7 +1050,10 @@ const pricingTiers = [
     name: "Professional",
     price: "$49-199",
     description: "Ideal for growing businesses",
-    features: ["Advanced Features", "Priority Support", "25 Users", "10GB Storage"],
+    features: ["Advanced Features", "Priority Support", "25 Users", "10GB Storage"]
+  }
+];
+
 const microSaaSProducts = [{
     title: 'Cloud Cost Guard (FinOps Assistant)',
     description: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
@@ -2517,105 +2457,6 @@ description: 'Automated code review with security scanning, performance optimiza
     features: ['Content Generation', 'Optimal Timing', 'Engagement Prediction', 'Multi-platform Support'],
     pricing: '$39 - $199/month',
     category: 'Social Media Management'
-  }
-];
-const features = [{
-    icon: Zap,
-    title: 'Rapid Deployment',
-    description: 'Get up and running in days, not months'
-  },
-  {
-    icon: Shield,
-    title: 'Enterprise Security',
-    description: 'Bank-level security and compliance'
-  },
-  {
-    icon: Users,
-    title: 'Scalable Architecture',
-    description: 'Grows with your business needs'
-  },
-  {
-    icon: Globe,
-    title: 'Multi-tenant Ready',
-    description: 'Built for SaaS from the ground up'
-  },
-  {
-    icon: BarChart3,
-    title: 'Analytics Built-in',
-    description: 'Comprehensive usage and performance metrics'
-  },
-  {
-    icon: Lock,
-    title: 'Data Privacy',
-    description: 'GDPR and SOC 2 compliant by default'
-  }
-];
-const benefits = [{
-    icon: Clock,
-    title: 'Fast Time to Market',
-    description: 'Launch your SaaS in weeks, not months',
-    stat: '80%'
-  },
-  {
-    icon: DollarSign,
-    title: 'Cost Effective',
-    description: 'Lower development and maintenance costs',
-    stat: '60%'
-  },
-  {
-    icon: Star,
-    title: 'High Quality',
-    description: 'Production-ready code and infrastructure',
-    stat: '99.9%'
-  },
-  {
-    icon: TrendingUp,
-    title: 'Scalable',
-    description: 'Handles growth from startup to enterprise',
-    stat: '10x'
-  }
-];
-const pricingTiers = [{
-    name: 'Starter',
-    description: 'Perfect for small teams and MVPs',
-    price: '$299',
-    period: '/month',
-    features: [
-      'Up to 1,000 users',
-      'Basic analytics',
-      'Email support',
-      'Standard security',
-      '1 custom integration'
-    ],
-    popular: false
-  },
-  {
-    name: 'Professional',
-    description: 'Ideal for growing businesses',
-    price: '$799',
-    period: '/month',
-features: ['Up to 10,000 users',
-      'Advanced analytics',
-      'Priority support',
-      'Enhanced security',
-      '5 custom integrations',
-      'API access'
-    ],
-    popular: true
-  },
-  {
-    name: 'Enterprise',
-    description: 'For large organizations',
-    price: 'Custom',
-    period: '',
-features: ['Unlimited users',
-      'Custom analytics',
-      'Dedicated support',
-      'Enterprise security',
-      'Unlimited integrations',
-      'Custom development'
-    ],
-    popular: false
   }
 ];
 export default function MicroSaaSPage() {

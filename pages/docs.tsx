@@ -13,14 +13,13 @@ import {
   Download,
   ExternalLink,
   ChevronRight,
-  Filter
+  Filter,
+  CheckCircle,
+  Clock
 } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
-import { BookOpen, Search, FileText, Code, ArrowRight, CheckCircle, Clock, Users, Download } from 'lucide-react';
 import Layout from '../components/Layout';
 import SimpleLayout from '../components/SimpleLayout';
 
-ursor/website-audit-and-update-with-deployment-9cae
 const categories = [
   {
     title: 'Getting Started',
@@ -72,7 +71,6 @@ const categories = [
   }
 ];
 
-ursor/website-audit-and-update-with-deployment-9cae
 const popularDocs = [
   { title: 'Quick Start Guide', description: 'Get started with our platform in minutes', category: 'Getting Started', views: '2.5k' },
   { title: 'API Authentication', description: 'Learn how to authenticate with our API', category: 'API Reference', views: '1.8k' },
@@ -80,7 +78,6 @@ const popularDocs = [
   { title: 'Security Guidelines', description: 'Essential security practices for your applications', category: 'Best Practices', views: '1.5k' }
 ];
 
-ursor/website-audit-and-update-with-deployment-9cae
 export default function DocsPage() {
   return (
     <SimpleLayout
@@ -308,10 +305,7 @@ ursor/website-audit-and-update-with-deployment-9cae
           </div>
         </section>
       </div>
-    </MainLayout>
-    </Layout>
     </SimpleLayout>
-ursor/website-audit-and-update-with-deployment-9cae
   );
 }
 
