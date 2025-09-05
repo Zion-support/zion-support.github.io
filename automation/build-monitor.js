@@ -149,9 +149,7 @@ class BuildMonitor {
         this.log('Could not read previous report', 'WARN');
       }
 =======
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
     this.isRunning = false;
     this.checkInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 300000; // 5 minutes
     this.logLevel = process.env.LOG_LEVEL || 'info';
@@ -228,10 +226,8 @@ class BuildMonitor {
     this.log('Starting build health check...');
 =======
 
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
 
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   async checkBuildStatus() {
     try {
       this.log('info', 'Checking build status...');
@@ -263,10 +259,8 @@ class BuildMonitor {
     }
 =======
       
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
       
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
       return true;
     } catch (error) {
       this.log('error', `Build check failed: ${error.message}`);
@@ -521,9 +515,7 @@ if (require.main === module) {
   const monitor = new BuildMonitor();
   monitor.run().catch(console.error);
 =======
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   const command = process.argv[2];
   
   switch (command) {

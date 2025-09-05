@@ -7,37 +7,6 @@ import {
   Globe, 
   ArrowRight,
   Brain,
-<<<<<<< HEAD
-  Building,
-  Calculator,
-  Calendar,
-  Camera,
-  CheckCircle,
-  ClipboardList,
-<<<<<<< HEAD
-  Clock,
-  Cloud,
-  Code,
-  Cpu,
-  CreditCard,
-  DollarSign,
-  Eye,
-  FileText,
-  Gamepad2,
-  Globe,
-  HardDrive,
-  Heart,
-  HelpCircle,
-  Home,
-  Layers,
-  Lightbulb,
-  Lock,
-  Mail,
-  MapPin,
-  MessageSquare,
-  Music,
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   Network,
   Cloud,
   Shield,
@@ -74,16 +43,9 @@ import {
   Activity,
   Lightbulb,
   Wrench,
-<<<<<<< HEAD
-  Zap
-=======
-  Layers
->>>>>>> origin/main
-=======
   PieChart,
   ClipboardList,
   Layers
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 } from 'lucide-react';
 
 const footerSections = [

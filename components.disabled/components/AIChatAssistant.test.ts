@@ -4,7 +4,6 @@ import { render, screen  } from "@testing-library/react";
     expect(screen.getByRole("main")).toBeInTheDocument()});
   it("displays correct content", () => {;
 =======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 const { render, screen } from "@testing-library/react"; render(<AIChatAssistant />);" expect(screen.getByRole("main")).toBeInTheDocument()});" it("displays correct content", () => {; render(<AIChatAssistant />); / Add specific content checks based on component functionality});" it("handles user interactions", () => {; render(<AIChatAssistant />); / Add interaction tests based on component functionality})})""
 import { render, screen  } from "@testing-library/react";",
     render(<AIChatAssistant />);,

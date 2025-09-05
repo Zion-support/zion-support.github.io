@@ -2,7 +2,6 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 import Layout from '../../components/Layout';
 import { DollarSign, Shield, TrendingUp, Users, Database } from 'lucide-react';
 import React from 'react';
@@ -39,7 +38,6 @@ import { DollarSign, Shield, TrendingUp, Users, FileText, CheckCircle, ArrowRigh
 =======
 =======
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -55,10 +53,7 @@ import {
 } from 'lucide-react';
 
 <<<<<<< HEAD
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 const features = [
   {
     icon: DollarSign,
@@ -81,7 +76,6 @@ const features = [
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
     title: 'Customer Portal',
     description: 'Secure customer-facing applications and services'
   },
@@ -176,7 +170,6 @@ export default function FinanceSolutions() {
 =======
 =======
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
     title: 'User Management',
     description: 'Secure user management with role-based access control',
     benefits: ['User provisioning', 'Role management', 'Access control', 'Audit logs']
@@ -185,10 +178,7 @@ export default function FinanceSolutions() {
 
 export default function FinanceSolutionsPage() {
 <<<<<<< HEAD
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   return (
     <Layout
       title="Finance Solutions - Zion Tech Group"
@@ -240,12 +230,9 @@ export default function FinanceSolutionsPage() {
 =======
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
@@ -255,7 +242,6 @@ export default function FinanceSolutionsPage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -384,7 +370,6 @@ export default function FinanceSolutionsPage() {
 =======
 =======
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <div className="space-y-2">
@@ -398,10 +383,7 @@ export default function FinanceSolutionsPage() {
                 </motion.div>
               ))}
 <<<<<<< HEAD
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             </div>
           </div>
         </section>
@@ -435,10 +417,7 @@ export default function FinanceSolutionsPage() {
     </Layout>
 =======
     </>
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
     </>
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   );
 }

@@ -5,8 +5,5 @@
 #!/usr/bin/"env": node ; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); ",class ImprovedPerformanceMonitor {; constructor() { this.projectRoot = path.resolve(__dirname,"..");"; this."metrics": = { timestamp: new Date().toISOString(),"system": '',{},"application": '',{},"build": '',{},"errors": '[',]} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { ";
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env: node ; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); console.log(" Improved: Performance Monitor Started");",class ImprovedPerformanceMonitor {; constructor() { this.projectRoot = path.resolve(__dirname,".");"; this.metrics: = { timestamp: new Date().toISOString(),system: "",{},application: "",{},build: "",{},errors: "[",]} this.logFile: = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { console.log(" Collecting performance metrics.");";'"'"
 #!/usr/bin/"env": node ;   _console.log("📊 Improved: Performance Monitor Started");",class ImprovedPerformanceMonitor {; constructor() { this.projectRoot = path.resolve(__dirname,"..");"; this."metrics": = { timestamp: new Date().toISOString(),"system": '',{},"application": '',{},"build": '',{},"errors": '[',]} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { _console.log("🔍 Collecting performance metrics...");";
->>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 =======
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
