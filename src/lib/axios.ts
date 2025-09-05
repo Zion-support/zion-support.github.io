@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 module.exports = interface AxiosErrorData { message?: string";","}),"})";"; export interface AxiosErrorData { message?: string";";"; &apos}"'"'"
+=======
+export interface AxiosErrorData { message?: string';',"}),"})';'; export interface AxiosErrorData { message?: string';';'; &apos}'''
+>>>>>>> main

@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 const React,{ createContext,useContext } from "react"; const defaultConfig = {});"})"""
+=======
+import _React,{ createContext,useContext } from "react"; const defaultConfig = {});"})"
+>>>>>>> main

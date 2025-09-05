@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 module.exports = const EnhancedAbout = (props) => { const compValues = [{ icon: Brain,title:
   "Innovation First",description:"
   "We push the boundaries of what\"s possible with cutting-edge technology",color:"
@@ -67,3 +68,19 @@ module.exports = const EnhancedAbout = (props) => { const compValues = [{ icon: 
   " <motion.div className="max-w-4xl mx-auto text-center" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>" <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"> Ready to Work with Us? </h2>" <p className="text-xl text-gray-300 mb-8"> Let"s discuss how our expertise can transform your business </p>" <div className="flex flex-col sm:flex-row gap-4 justify-center">" <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 group"> Get Started Today" <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" /> </Link>" <Link to="/services" className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"> View Our Services </Link> </div> </motion.div> </section> </div>)};"
   "` ";"
   " </motion> </motion> </motion> </motion> </motion> </motion>"`"`
+=======
+import React from 'react';
+
+interface EnhancedAboutProps {
+  // Add props here as needed
+}
+
+export default function EnhancedAbout({ }: EnhancedAboutProps) {
+  return (
+    <div>
+      <h1>EnhancedAbout</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+>>>>>>> main
