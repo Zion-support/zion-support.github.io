@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import ErrorBoundary from '../components/ErrorBoundary';
+import { Brain, TrendingUp, FileText, Eye, Database, Shield, Mic, Zap, Cog, Search, Users, Code } from 'lucide-react';
 export default function AIServices() {
   const contact = {
     phone: '+1 302 464 0950',
