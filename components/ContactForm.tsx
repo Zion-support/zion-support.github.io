@@ -12,11 +12,11 @@ interface FormData {
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
+    name: ''
+    email: ''
+    company: ''
+    phone: ''
+    service: ''
     message: ''
   });
   
@@ -26,7 +26,7 @@ const ContactForm: React.FC = () => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
-      ...prev,
+      ...prev
       [name]: value
     }));
   };
@@ -41,11 +41,11 @@ const ContactForm: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
       setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
+        name: ''
+        email: ''
+        company: ''
+        phone: ''
+        service: ''
         message: ''
       });
     } catch {

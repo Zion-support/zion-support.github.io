@@ -2,7 +2,7 @@ import React, { memo, useMemo, useCallback } from 'react';
 
 // Higher-order component for performance optimization
 export const withPerformanceOptimization = <P extends object>(
-  Component: React.ComponentType<P>,
+  Component: React.ComponentType<P>
   options: {
     memo?: boolean;
     memoDeps?: (props: P) => any[];
@@ -33,7 +33,7 @@ export const withPerformanceOptimization = <P extends object>(
 
 // Hook for expensive calculations
 export const useExpensiveCalculation = <T>(
-  calculation: () => T,
+  calculation: () => T
   deps: React.DependencyList
 ): T => {
   return useMemo(calculation, deps);
@@ -41,7 +41,7 @@ export const useExpensiveCalculation = <T>(
 
 // Hook for stable callbacks
 export const useStableCallback = <T extends (...args: any[]) => any>(
-  callback: T,
+  callback: T
   deps: React.DependencyList
 ): T => {
   return useCallback(callback, deps);
@@ -79,7 +79,7 @@ export const LazyLoadWrapper: React.FC<{
           setIsVisible(true);
           setHasLoaded(true);
         }
-      },
+      }
       { threshold, rootMargin }
     );
 
@@ -149,8 +149,8 @@ export const OptimizedImage: React.FC<{
 
 // Virtual scrolling hook for large lists
 export const useVirtualScroll = <T>(
-  items: T[],
-  itemHeight: number,
+  items: T[]
+  itemHeight: number
   containerHeight: number
 ) => {
   const [scrollTop, setScrollTop] = React.useState(0);
@@ -158,13 +158,13 @@ export const useVirtualScroll = <T>(
   const visibleItems = useMemo(() => {
     const startIndex = Math.floor(scrollTop / itemHeight);
     const endIndex = Math.min(
-      startIndex + Math.ceil(containerHeight / itemHeight) + 1,
+      startIndex + Math.ceil(containerHeight / itemHeight) + 1
       items.length
     );
     
     return items.slice(startIndex, endIndex).map((item, index) => ({
-      item,
-      index: startIndex + index,
+      item
+      index: startIndex + index
       top: (startIndex + index) * itemHeight
     }));
   }, [items, itemHeight, containerHeight, scrollTop]);
@@ -176,8 +176,8 @@ export const useVirtualScroll = <T>(
   }, []);
   
   return {
-    visibleItems,
-    totalHeight,
+    visibleItems
+    totalHeight
     handleScroll
   };
 };
@@ -202,15 +202,15 @@ export const useDebouncedSearch = (value: string, delay: number = 300) => {
 // Performance metrics collection
 export const usePerformanceMetrics = () => {
   const [metrics, setMetrics] = React.useState({
-    renderCount: 0,
-    lastRenderTime: 0,
+    renderCount: 0
+    lastRenderTime: 0
     averageRenderTime: 0
   });
   
   const recordRender = useCallback((renderTime: number) => {
     setMetrics(prev => ({
-      renderCount: prev.renderCount + 1,
-      lastRenderTime: renderTime,
+      renderCount: prev.renderCount + 1
+      lastRenderTime: renderTime
       averageRenderTime: (prev.averageRenderTime * prev.renderCount + renderTime) / (prev.renderCount + 1)
     }));
   }, []);

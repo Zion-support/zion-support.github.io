@@ -1,30 +1,30 @@
 import React from 'react';
 import Link from 'next/link';
 import {
-  Phone,
-  Mail,
-  MapPin,
-  Brain,
-  Cloud,
-  Shield,
-  Code,
-  Database,
-  Network,
-  ArrowRight,
-  Linkedin,
-  Twitter,
-  Github,
-  Facebook,
-  Instagram,
-  Youtube,
-  Globe,
-  Building2,
-  Users,
-  Award,
-  Clock,
-  CheckCircle,
-  Settings,
-  Zap,
+  Phone
+  Mail
+  MapPin
+  Brain
+  Cloud
+  Shield
+  Code
+  Database
+  Network
+  ArrowRight
+  Linkedin
+  Twitter
+  Github
+  Facebook
+  Instagram
+  Youtube
+  Globe
+  Building2
+  Users
+  Award
+  Clock
+  CheckCircle
+  Settings
+  Zap
 } from 'lucide-react';
 
 interface FooterProps {
@@ -35,74 +35,74 @@ export default function Footer({ className = '' }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   const services = [
-    { name: 'AI Services', href: '/ai-services', icon: Brain },
-    { name: 'IT Services', href: '/it-services', icon: Code },
-    { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud },
-    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
-    { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud },
-    { name: 'Custom Development', href: '/custom-development', icon: Settings },
-    { name: 'Database Solutions', href: '/database-solutions', icon: Database },
-    { name: 'Digital Transformation', href: '/digital-transformation', icon: Zap },
+    { name: 'AI Services', href: '/ai-services', icon: Brain }
+    { name: 'IT Services', href: '/it-services', icon: Code }
+    { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud }
+    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield }
+    { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud }
+    { name: 'Custom Development', href: '/custom-development', icon: Settings }
+    { name: 'Database Solutions', href: '/database-solutions', icon: Database }
+    { name: 'Digital Transformation', href: '/digital-transformation', icon: Zap }
   ];
 
   const solutions = [
-    { name: 'Enterprise Solutions', href: '/enterprise-solutions' },
-    { name: 'Startup Solutions', href: '/startup-solutions' },
-    { name: 'Industry Solutions', href: '/industries' },
-    { name: 'Custom Development', href: '/custom-development' },
-    { name: 'Digital Transformation', href: '/digital-transformation' },
-    { name: 'Technology Consulting', href: '/consulting' },
-    { name: 'Cloud Migration', href: '/cloud-migration' },
-    { name: 'AI Implementation', href: '/ai-implementation' },
+    { name: 'Enterprise Solutions', href: '/enterprise-solutions' }
+    { name: 'Startup Solutions', href: '/startup-solutions' }
+    { name: 'Industry Solutions', href: '/industries' }
+    { name: 'Custom Development', href: '/custom-development' }
+    { name: 'Digital Transformation', href: '/digital-transformation' }
+    { name: 'Technology Consulting', href: '/consulting' }
+    { name: 'Cloud Migration', href: '/cloud-migration' }
+    { name: 'AI Implementation', href: '/ai-implementation' }
   ];
 
   const company = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Our Team', href: '/team' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'News & Updates', href: '/news' },
-    { name: 'Partners', href: '/partners' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Contact Us', href: '/contact' },
+    { name: 'About Us', href: '/about' }
+    { name: 'Our Team', href: '/team' }
+    { name: 'Careers', href: '/careers' }
+    { name: 'Case Studies', href: '/case-studies' }
+    { name: 'News & Updates', href: '/news' }
+    { name: 'Partners', href: '/partners' }
+    { name: 'Pricing', href: '/pricing' }
+    { name: 'Contact Us', href: '/contact' }
   ];
 
   const resources = [
-    { name: 'Blog', href: '/blog' },
-    { name: 'Documentation', href: '/docs' },
-    { name: 'API Reference', href: '/api-docs' },
-    { name: 'Tutorials', href: '/tutorials' },
-    { name: 'White Papers', href: '/white-papers' },
-    { name: 'Webinars', href: '/webinars' },
-    { name: 'FAQ', href: '/faq' },
-    { name: 'Support', href: '/support' },
+    { name: 'Blog', href: '/blog' }
+    { name: 'Documentation', href: '/docs' }
+    { name: 'API Reference', href: '/api-docs' }
+    { name: 'Tutorials', href: '/tutorials' }
+    { name: 'White Papers', href: '/white-papers' }
+    { name: 'Webinars', href: '/webinars' }
+    { name: 'FAQ', href: '/faq' }
+    { name: 'Support', href: '/support' }
   ];
 
   const legal = [
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
-    { name: 'Cookie Policy', href: '/cookies' },
-    { name: 'Security', href: '/security' },
-    { name: 'Compliance', href: '/compliance' },
-    { name: 'Accessibility', href: '/accessibility' },
-    { name: 'GDPR', href: '/gdpr' },
-    { name: 'SLA', href: '/sla' },
+    { name: 'Privacy Policy', href: '/privacy' }
+    { name: 'Terms of Service', href: '/terms' }
+    { name: 'Cookie Policy', href: '/cookies' }
+    { name: 'Security', href: '/security' }
+    { name: 'Compliance', href: '/compliance' }
+    { name: 'Accessibility', href: '/accessibility' }
+    { name: 'GDPR', href: '/gdpr' }
+    { name: 'SLA', href: '/sla' }
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
-    { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin }
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook }
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
+    { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube }
   ];
 
   const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown DE 19709',
-    hours: 'Mon-Fri: 9AM-6PM EST',
+    phone: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008, Middletown DE 19709'
+    hours: 'Mon-Fri: 9AM-6PM EST'
   };
 
   return (
@@ -119,7 +119,7 @@ export default function Footer({ className = '' }: FooterProps) {
               <span className="text-2xl font-bold">Zion Tech Group</span>
             </Link>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure,
+              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure
               and digital transformation services. We help businesses thrive in the digital age with
               cutting-edge technology solutions.
             </p>

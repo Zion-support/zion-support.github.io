@@ -3,26 +3,26 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import {
-  Brain,
-  Cloud,
-  Shield,
-  Code,
-  Database,
-  Network,
-  Settings,
-  Users,
-  Building2,
-  Rocket,
-  Factory,
-  ChevronRight,
-  ChevronDown,
-  Phone,
-  Mail,
-  MapPin,
-  Clock,
-  Award,
-  CheckCircle,
-  ArrowRight,
+  Brain
+  Cloud
+  Shield
+  Code
+  Database
+  Network
+  Settings
+  Users
+  Building2
+  Rocket
+  Factory
+  ChevronRight
+  ChevronDown
+  Phone
+  Mail
+  MapPin
+  Clock
+  Award
+  CheckCircle
+  ArrowRight
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -45,57 +45,57 @@ export default function Sidebar({ className = '', isOpen = false, onClose }: Sid
 
   const navigationSections = [
     {
-      id: 'services',
-      title: 'Our Services',
-      icon: Settings,
+      id: 'services'
+      title: 'Our Services'
+      icon: Settings
       items: [
-        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI solutions' },
-        { name: 'IT Services', href: '/it-services', icon: Code, description: 'Comprehensive IT solutions' },
-        { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, description: 'Scalable SaaS applications' },
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Advanced security solutions' },
-        { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud, description: 'Cloud infrastructure & services' },
-        { name: 'Database Solutions', href: '/database-solutions', icon: Database, description: 'Database management & optimization' },
-      ],
-    },
+        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI solutions' }
+        { name: 'IT Services', href: '/it-services', icon: Code, description: 'Comprehensive IT solutions' }
+        { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, description: 'Scalable SaaS applications' }
+        { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Advanced security solutions' }
+        { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud, description: 'Cloud infrastructure & services' }
+        { name: 'Database Solutions', href: '/database-solutions', icon: Database, description: 'Database management & optimization' }
+      ]
+    }
     {
-      id: 'solutions',
-      title: 'Solutions',
-      icon: Building2,
+      id: 'solutions'
+      title: 'Solutions'
+      icon: Building2
       items: [
-        { name: 'Enterprise Solutions', href: '/enterprise-solutions', icon: Building2, description: 'Large-scale business solutions' },
-        { name: 'Startup Solutions', href: '/startup-solutions', icon: Rocket, description: 'Scalable startup solutions' },
-        { name: 'Industry Solutions', href: '/industries', icon: Factory, description: 'Industry-specific solutions' },
-        { name: 'Custom Development', href: '/custom-development', icon: Code, description: 'Tailored software development' },
-        { name: 'Digital Transformation', href: '/digital-transformation', icon: Network, description: 'Complete digital transformation' },
-        { name: 'Technology Consulting', href: '/consulting', icon: Users, description: 'Strategic technology consulting' },
-      ],
-    },
+        { name: 'Enterprise Solutions', href: '/enterprise-solutions', icon: Building2, description: 'Large-scale business solutions' }
+        { name: 'Startup Solutions', href: '/startup-solutions', icon: Rocket, description: 'Scalable startup solutions' }
+        { name: 'Industry Solutions', href: '/industries', icon: Factory, description: 'Industry-specific solutions' }
+        { name: 'Custom Development', href: '/custom-development', icon: Code, description: 'Tailored software development' }
+        { name: 'Digital Transformation', href: '/digital-transformation', icon: Network, description: 'Complete digital transformation' }
+        { name: 'Technology Consulting', href: '/consulting', icon: Users, description: 'Strategic technology consulting' }
+      ]
+    }
     {
-      id: 'company',
-      title: 'Company',
-      icon: Building2,
+      id: 'company'
+      title: 'Company'
+      icon: Building2
       items: [
-        { name: 'About Us', href: '/about', icon: Building2, description: 'Learn about our company' },
-        { name: 'Our Team', href: '/team', icon: Users, description: 'Meet our expert team' },
-        { name: 'Careers', href: '/careers', icon: Award, description: 'Join our team' },
-        { name: 'Case Studies', href: '/case-studies', icon: CheckCircle, description: 'Success stories' },
-        { name: 'News & Updates', href: '/news', icon: ArrowRight, description: 'Latest news' },
-        { name: 'Partners', href: '/partners', icon: Users, description: 'Our partners' },
-      ],
-    },
+        { name: 'About Us', href: '/about', icon: Building2, description: 'Learn about our company' }
+        { name: 'Our Team', href: '/team', icon: Users, description: 'Meet our expert team' }
+        { name: 'Careers', href: '/careers', icon: Award, description: 'Join our team' }
+        { name: 'Case Studies', href: '/case-studies', icon: CheckCircle, description: 'Success stories' }
+        { name: 'News & Updates', href: '/news', icon: ArrowRight, description: 'Latest news' }
+        { name: 'Partners', href: '/partners', icon: Users, description: 'Our partners' }
+      ]
+    }
   ];
 
   const quickLinks = [
-    { name: 'Get Quote', href: '/contact', icon: Phone, highlight: true },
-    { name: 'Schedule Call', href: '/contact', icon: Clock },
-    { name: 'View Portfolio', href: '/case-studies', icon: Award },
-    { name: 'Download Brochure', href: '/resources', icon: ArrowRight },
+    { name: 'Get Quote', href: '/contact', icon: Phone, highlight: true }
+    { name: 'Schedule Call', href: '/contact', icon: Clock }
+    { name: 'View Portfolio', href: '/case-studies', icon: Award }
+    { name: 'Download Brochure', href: '/resources', icon: ArrowRight }
   ];
 
   const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown DE 19709',
+    phone: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008, Middletown DE 19709'
   };
 
   const handleLinkClick = (href: string) => {

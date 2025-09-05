@@ -1,17 +1,20 @@
 import React, { useEffect } from 'react';
 
 interface PerformanceMonitorProps {
-  onPerformanceData?: (data: any) => void;
+  onPerformanceData?: (data: Record<string, unknown>) => void;
+}
+
+// Extend Window interface for performance API
+declare global {
+  interface Window {
+    performance: Performance;
+  }
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
-  // Only render on client side
-  if (typeof window === 'undefined') {
-    return null;
-  }
-
   useEffect(() => {
-    if (typeof performance === 'undefined') return;
+    // Only run on client side
+    if (typeof window === 'undefined' || typeof performance === 'undefined') return;
 
     const measurePerformance = () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -19,21 +22,21 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
       
       const performanceData = {
         // Navigation timing
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-        loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-        totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
+        loadComplete: navigation.loadEventEnd - navigation.loadEventStart
+        totalLoadTime: navigation.loadEventEnd - navigation.fetchStart
         
         // Paint timing
-        firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
-        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+        firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0
+        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
         
         // Resource timing
-        resourceCount: performance.getEntriesByType('resource').length,
+        resourceCount: performance.getEntriesByType('resource').length
         
         // Memory usage (if available)
         memory: (performance as any).memory ? {
-          used: (performance as any).memory.usedJSHeapSize,
-          total: (performance as any).memory.totalJSHeapSize,
+          used: (performance as any).memory.usedJSHeapSize
+          total: (performance as any).memory.totalJSHeapSize
           limit: (performance as any).memory.jsHeapSizeLimit
         } : null
       };

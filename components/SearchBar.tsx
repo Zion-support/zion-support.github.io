@@ -19,39 +19,39 @@ const SearchBar: React.FC = () => {
   // Mock search data - in a real app, this would come from an API
   const searchData: SearchResult[] = [
     {
-      title: 'Micro SaaS Products',
-      description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',
-      url: '/micro-saas',
+      title: 'Micro SaaS Products'
+      description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more'
+      url: '/micro-saas'
       type: 'category'
-    },
+    }
     {
-      title: 'AI Services',
-      description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',
-      url: '/ai-services',
+      title: 'AI Services'
+      description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more'
+      url: '/ai-services'
       type: 'category'
-    },
+    }
     {
-      title: 'IT Services',
-      description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',
-      url: '/it-services',
+      title: 'IT Services'
+      description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more'
+      url: '/it-services'
       type: 'category'
-    },
+    }
     {
-      title: 'Cloud Cost Guard',
-      description: 'FinOps Assistant for anomaly detection and cost optimization',
-      url: '/services',
+      title: 'Cloud Cost Guard'
+      description: 'FinOps Assistant for anomaly detection and cost optimization'
+      url: '/services'
       type: 'service'
-    },
+    }
     {
-      title: 'Contact Us',
-      description: 'Get in touch with our experts for consultation and quotes',
-      url: '/contact',
+      title: 'Contact Us'
+      description: 'Get in touch with our experts for consultation and quotes'
+      url: '/contact'
       type: 'page'
-    },
+    }
     {
-      title: 'Pricing',
-      description: 'View our transparent pricing for all services',
-      url: '/pricing',
+      title: 'Pricing'
+      description: 'View our transparent pricing for all services'
+      url: '/pricing'
       type: 'page'
     }
   ];

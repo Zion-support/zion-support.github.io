@@ -16,23 +16,23 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
       document.head.appendChild(script);
 
       // Initialize gtag
-      window.dataLayer = window.dataLayer || [];
-      function gtag(...args: any[]) {
-        window.dataLayer.push(args);
+      (window as any).dataLayer = (window as any).dataLayer || [];
+      function gtag(...args: unknown[]) {
+        (window as any).dataLayer.push(args);
       }
-      window.gtag = gtag;
+      (window as any).gtag = gtag;
       gtag('js', new Date());
       gtag('config', trackingId, {
-        page_title: document.title,
-        page_location: window.location.href,
+        page_title: document.title
+        page_location: window.location.href
       });
 
       // Track page views
       const trackPageView = () => {
         gtag('event', 'page_view', {
-          page_title: document.title,
-          page_location: window.location.href,
-          page_path: window.location.pathname,
+          page_title: document.title
+          page_location: window.location.href
+          page_path: window.location.pathname
         });
       };
 
@@ -55,34 +55,34 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
   }, [trackingId]);
 
   // Track custom events
-  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', eventName, parameters);
+  const trackEvent = (eventName: string, parameters?: Record<string, unknown>) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', eventName, parameters);
     }
   };
 
   // Track button clicks
   const trackButtonClick = (buttonName: string, location?: string) => {
     trackEvent('button_click', {
-      button_name: buttonName,
-      location: location || window.location.pathname,
+      button_name: buttonName
+      location: location || window.location.pathname
     });
   };
 
   // Track form submissions
   const trackFormSubmission = (formName: string) => {
     trackEvent('form_submit', {
-      form_name: formName,
-      page_location: window.location.href,
+      form_name: formName
+      page_location: window.location.href
     });
   };
 
   // Track external link clicks
   const trackExternalLink = (url: string, linkText: string) => {
     trackEvent('external_link_click', {
-      link_url: url,
-      link_text: linkText,
-      page_location: window.location.href,
+      link_url: url
+      link_text: linkText
+      page_location: window.location.href
     });
   };
 
@@ -108,7 +108,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
                     const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
                     if (window.gtag) {
                       window.gtag('event', 'timing_complete', {
-                        name: 'load',
+                        name: 'load'
                         value: Math.round(loadTime)
                       });
                     }
@@ -116,7 +116,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
                 }, 0);
               });
             }
-          `,
+          `
         }}
       />
     </Head>

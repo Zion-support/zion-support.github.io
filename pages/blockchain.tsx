@@ -6,39 +6,39 @@ import { Shield, DollarSign, Users, Lock, Globe, BarChart3 } from 'lucide-react'
 export default function Blockchain() {
   const services = [
     {
-      icon: Shield,
-      title: 'Smart Contract Development',
-      description: 'Secure, audited smart contracts for various blockchain platforms.',
+      icon: Shield
+      title: 'Smart Contract Development'
+      description: 'Secure, audited smart contracts for various blockchain platforms.'
       features: ['Ethereum', 'Polygon', 'Binance Smart Chain', 'Custom Blockchains']
-    },
+    }
     {
-      icon: DollarSign,
-      title: 'DeFi Solutions',
-      description: 'Decentralized finance applications and protocols.',
+      icon: DollarSign
+      title: 'DeFi Solutions'
+      description: 'Decentralized finance applications and protocols.'
       features: ['DEX Development', 'Yield Farming', 'Liquidity Pools', 'Token Economics']
-    },
+    }
     {
-      icon: Users,
-      title: 'NFT Marketplace',
-      description: 'Complete NFT marketplace solutions with minting and trading.',
+      icon: Users
+      title: 'NFT Marketplace'
+      description: 'Complete NFT marketplace solutions with minting and trading.'
       features: ['Minting Platform', 'Auction System', 'Royalty Management', 'Metadata Storage']
-    },
+    }
     {
-      icon: Lock,
-      title: 'Security Audits',
-      description: 'Comprehensive security analysis for blockchain applications.',
+      icon: Lock
+      title: 'Security Audits'
+      description: 'Comprehensive security analysis for blockchain applications.'
       features: ['Code Review', 'Vulnerability Assessment', 'Penetration Testing', 'Compliance Check']
-    },
+    }
     {
-      icon: Globe,
-      title: 'Cross-Chain Solutions',
-      description: 'Interoperability solutions for multi-blockchain ecosystems.',
+      icon: Globe
+      title: 'Cross-Chain Solutions'
+      description: 'Interoperability solutions for multi-blockchain ecosystems.'
       features: ['Bridge Development', 'Cross-Chain Swaps', 'Asset Migration', 'Universal Protocols']
-    },
+    }
     {
-      icon: BarChart3,
-      title: 'Blockchain Analytics',
-      description: 'Data analysis and insights for blockchain transactions.',
+      icon: BarChart3
+      title: 'Blockchain Analytics'
+      description: 'Data analysis and insights for blockchain transactions.'
       features: ['Transaction Tracking', 'Pattern Analysis', 'Risk Assessment', 'Compliance Reporting']
     }
   ];

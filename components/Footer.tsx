@@ -7,55 +7,55 @@ const Footer: React.FC = () => {
 
   const services = {
     'AI Solutions': [
-      { name: 'AI-Powered Email Responder', href: '/ai-services#ai-email-responder' },
-      { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' },
-      { name: 'Computer Vision Solutions', href: '/ai-services#computer-vision' },
-      { name: 'Natural Language Processing', href: '/ai-services#nlp' },
-      { name: 'Machine Learning Models', href: '/ai-services#machine-learning' },
-      { name: 'AI Analytics Platform', href: '/ai-services#ai-analytics' },
-    ],
+      { name: 'AI-Powered Email Responder', href: '/ai-services#ai-email-responder' }
+      { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' }
+      { name: 'Computer Vision Solutions', href: '/ai-services#computer-vision' }
+      { name: 'Natural Language Processing', href: '/ai-services#nlp' }
+      { name: 'Machine Learning Models', href: '/ai-services#machine-learning' }
+      { name: 'AI Analytics Platform', href: '/ai-services#ai-analytics' }
+    ]
     'IT Services': [
-      { name: 'Cloud Migration', href: '/it-services#cloud-migration' },
-      { name: 'Cybersecurity Solutions', href: '/it-services#cybersecurity' },
-      { name: 'DevOps Automation', href: '/it-services#devops' },
-      { name: 'Infrastructure Management', href: '/it-services#infrastructure' },
-      { name: 'Data Analytics', href: '/it-services#data-analytics' },
-      { name: 'Network Security', href: '/it-services#network-security' },
-    ],
+      { name: 'Cloud Migration', href: '/it-services#cloud-migration' }
+      { name: 'Cybersecurity Solutions', href: '/it-services#cybersecurity' }
+      { name: 'DevOps Automation', href: '/it-services#devops' }
+      { name: 'Infrastructure Management', href: '/it-services#infrastructure' }
+      { name: 'Data Analytics', href: '/it-services#data-analytics' }
+      { name: 'Network Security', href: '/it-services#network-security' }
+    ]
     'Micro SAAS': [
-      { name: 'CRM Solutions', href: '/micro-saas#crm' },
-      { name: 'Project Management', href: '/micro-saas#project-management' },
-      { name: 'Email Marketing', href: '/micro-saas#email-marketing' },
-      { name: 'AI Content Tools', href: '/micro-saas#ai-content-tools' },
-      { name: 'Analytics Dashboard', href: '/micro-saas#analytics-dashboard' },
-      { name: 'Automation Tools', href: '/micro-saas#automation-tools' },
-    ],
+      { name: 'CRM Solutions', href: '/micro-saas#crm' }
+      { name: 'Project Management', href: '/micro-saas#project-management' }
+      { name: 'Email Marketing', href: '/micro-saas#email-marketing' }
+      { name: 'AI Content Tools', href: '/micro-saas#ai-content-tools' }
+      { name: 'Analytics Dashboard', href: '/micro-saas#analytics-dashboard' }
+      { name: 'Automation Tools', href: '/micro-saas#automation-tools' }
+    ]
   };
 
   const company = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Our Team', href: '/team' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Press', href: '/press' },
+    { name: 'About Us', href: '/about' }
+    { name: 'Our Team', href: '/team' }
+    { name: 'Careers', href: '/careers' }
+    { name: 'Case Studies', href: '/case-studies' }
+    { name: 'Blog', href: '/blog' }
+    { name: 'Press', href: '/press' }
   ];
 
   const resources = [
-    { name: 'Documentation', href: '/docs' },
-    { name: 'API Reference', href: '/api-docs' },
-    { name: 'Tutorials', href: '/tutorials' },
-    { name: 'Support', href: '/support' },
-    { name: 'FAQ', href: '/faq' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Documentation', href: '/docs' }
+    { name: 'API Reference', href: '/api-docs' }
+    { name: 'Tutorials', href: '/tutorials' }
+    { name: 'Support', href: '/support' }
+    { name: 'FAQ', href: '/faq' }
+    { name: 'Contact', href: '/contact' }
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin }
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook }
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
   ];
 
   return (
