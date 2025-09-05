@@ -101,10 +101,8 @@ const industries = [
 export default function DigitalTransformation() {
 =======
 import React from 'react';
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
 import React from 'react';
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Rocket, RefreshCw, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
@@ -144,9 +142,7 @@ export default function DigitalTransformationPage() {
     >;
       <div className="min-h-screen bg-gray-50">";
 =======
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   ];
   return (
     <MainLayout
@@ -167,9 +163,7 @@ export default function DigitalTransformationPage() {
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
 =======
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 text-white py-20">"
@@ -193,9 +187,7 @@ export default function DigitalTransformationPage() {
           </div>;
         </section>;
 =======
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -246,9 +238,7 @@ export default function DigitalTransformationPage() {
                     key={index}
                     className="bg-gray-50 rounded-lg p-6 text-center"
 =======
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -283,9 +273,7 @@ export default function DigitalTransformationPage() {
                         <li key={idx} className="flex items-center">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
 =======
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                   >,
                     <div className="text-purple-600 mb-4">";
                       <IconComponent className="w-10 h-10" />";
@@ -429,12 +417,10 @@ export default function DigitalTransformationPage() {
             </div>
           </div>
         </section>
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
             </div>
           </div>
         </section>
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600 text-white">"
           <div className="container mx-auto px-4 text-center">";

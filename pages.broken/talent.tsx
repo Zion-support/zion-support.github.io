@@ -6,7 +6,6 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-reac
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 import MainLayout from '../components/layout/MainLayout';
 const jobOpenings = [{
     "id": 1,
@@ -39,10 +38,7 @@ const jobOpenings = [
 <<<<<<< HEAD
 =======
 =======
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
       "Strong problem-solving and communication skills"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Professional development"]
@@ -52,7 +48,6 @@ const jobOpenings = [
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
     "id": 2,
     "title": "Full-Stack Developer"
     "department": "Micro SaaS"
@@ -79,10 +74,7 @@ const jobOpenings = [
 <<<<<<< HEAD
 =======
 =======
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
       "Knowledge of cloud deployment and DevOps"
     ],
     benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Stock options"]
@@ -92,7 +84,6 @@ const jobOpenings = [
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
     "id": 3,
     "title": "Cloud Solutions Architect"
     "department": "IT Services"
@@ -119,10 +110,7 @@ const jobOpenings = [
 <<<<<<< HEAD
 =======
 =======
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
       "Strong understanding of security best practices"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
@@ -132,7 +120,6 @@ const jobOpenings = [
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
     "id": 4,
     "title": "Cybersecurity Specialist"
     "department": "Security"
@@ -159,10 +146,7 @@ const jobOpenings = [
 <<<<<<< HEAD
 =======
 =======
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
       "Knowledge of compliance standards (SOC 2, ISO 27001)"
     ],
     benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Professional development"]
@@ -172,7 +156,6 @@ const jobOpenings = [
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
     "id": 5,
     "title": "DevOps Engineer"
     "department": "Engineering"
@@ -199,10 +182,7 @@ const jobOpenings = [
 <<<<<<< HEAD
 =======
 =======
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
       "Knowledge of monitoring and logging tools"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Learning budget"]
@@ -212,7 +192,6 @@ const jobOpenings = [
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
     "id": 6,
     "title": "UX/UI Designer"
     "department": "Design"
@@ -239,10 +218,7 @@ const jobOpenings = [
 <<<<<<< HEAD
 =======
 =======
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
       "Strong portfolio demonstrating design skills"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Design tools budget"]
@@ -252,7 +228,6 @@ const jobOpenings = [
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 const benefits = [{
     "title": "Competitive Compensation"
     "description": "We offer competitive salaries and performance-based bonuses"
@@ -311,11 +286,8 @@ const values = [
 =======
 =======
 
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
 
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   "Client success focus"
 ];
 
@@ -325,7 +297,6 @@ export default function TalentPage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
     <MainLayout,
     title="Careers - Zion Tech Group"
     <div className="min-h-screen bg-gray-50">
@@ -363,10 +334,7 @@ export default function TalentPage() {
 <<<<<<< HEAD
 =======
 =======
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
       keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect"
     >
@@ -378,7 +346,6 @@ export default function TalentPage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
             <motion.div,
     initial={{ "opacity": 0, "y": 30 }}
               animate={{ "opacity": 1, "y": 0 }}
@@ -390,10 +357,7 @@ export default function TalentPage() {
 <<<<<<< HEAD
 =======
 =======
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -421,7 +385,6 @@ export default function TalentPage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
             <motion.div,
     className="text-center mb-16"
               initial={{ "opacity": 0, "y": 30 }}
@@ -437,10 +400,7 @@ export default function TalentPage() {
 <<<<<<< HEAD
 =======
 =======
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Work With Us?
@@ -484,7 +444,6 @@ export default function TalentPage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
             <motion.div,
     className="text-center mb-16"
               initial={{ "opacity": 0, "y": 30 }}
@@ -500,10 +459,7 @@ export default function TalentPage() {
 <<<<<<< HEAD
 =======
 =======
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Values
@@ -582,7 +538,6 @@ export default function TalentPage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
             <motion.div,
     className="text-center mb-16"
               initial={{ "opacity": 0, "y": 30 }}
@@ -598,10 +553,7 @@ export default function TalentPage() {
 <<<<<<< HEAD
 =======
 =======
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Open Positions
@@ -720,7 +672,6 @@ export default function TalentPage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
             <motion.div,
     initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
@@ -734,10 +685,7 @@ export default function TalentPage() {
 <<<<<<< HEAD
 =======
 =======
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Don't See the Right Role?

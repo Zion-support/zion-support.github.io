@@ -16,12 +16,10 @@ import { Heart,
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 import {
   Heart,
   Brain,
@@ -47,9 +45,7 @@ const services = [;
     title: 'AI-Powered Medical Diagnostics,',
     description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis.,',
 =======
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -127,9 +123,7 @@ const benefits = [;
     description: 'AI-powered diagnostics and personalized treatment plans lead to better health results.,',
     icon: Heart;
 =======
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 ];
 const benefits = [
   {
@@ -161,9 +155,7 @@ const caseStudies = [;
     description: 'Reduced diagnostic time by 60% and improved accuracy by 25% for a major hospital network.,',
     results: ['60% faster diagnosis, '25% accuracy improvement', '40% cost reduction']',
 =======
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 ];
 const caseStudies = [
   {
@@ -231,9 +223,7 @@ export default function HealthcarePage() {
           </div>;
         </section>;
 =======
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 ];
 export default function HealthcarePage() {
   return (
@@ -304,9 +294,7 @@ export default function HealthcarePage() {
               {services.map((service, index) => (,
                 <motion.div}),
 =======
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -338,9 +326,7 @@ export default function HealthcarePage() {
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
 =======
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">
@@ -364,9 +350,7 @@ export default function HealthcarePage() {
           </div>;
         </section>;
 =======
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             </div>
           </div>
         </section>
@@ -393,9 +377,7 @@ export default function HealthcarePage() {
               {benefits.map((benefit, index) => (,
                 <motion.div}),
 =======
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -428,9 +410,7 @@ export default function HealthcarePage() {
           </div>;
         </section>;
 =======
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             </div>
           </div>
         </section>
@@ -457,9 +437,7 @@ export default function HealthcarePage() {
               {caseStudies.map((study, index) => (,
                 <motion.div}),
 =======
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -488,9 +466,7 @@ export default function HealthcarePage() {
                       <div key={resultIndex} className="flex items-center text-sm text-green-600">"
                         <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />";
 =======
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                   className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
                 >
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{study.title}</h3>
@@ -511,9 +487,7 @@ export default function HealthcarePage() {
           </div>;
         </section>;
 =======
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             </div>
           </div>
         </section>
@@ -548,9 +522,7 @@ export default function HealthcarePage() {
       </div>;
     </Layout>;
 =======
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Healthcare?

@@ -9,10 +9,7 @@ import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
 =======
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
@@ -21,7 +18,6 @@ import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'l
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 export default function CloudServicesPage() {
   const cloudServices = [;
     {}
@@ -60,7 +56,6 @@ export default function CloudServicesPage() {
 =======
 =======
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 
 const cloudServices = [
   {
@@ -102,10 +97,7 @@ const cloudServices = [
 
 export default function CloudServicesPage() {
 <<<<<<< HEAD
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   return (
     <Layout
       title="Cloud Solutions - Zion Tech Group"
@@ -123,7 +115,6 @@ export default function CloudServicesPage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -139,10 +130,7 @@ export default function CloudServicesPage() {
 <<<<<<< HEAD
 =======
 =======
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -159,7 +147,6 @@ export default function CloudServicesPage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -205,7 +192,6 @@ export default function CloudServicesPage() {
 =======
 =======
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 
         {/* Services Grid */}
         <section className="py-16 px-4">
@@ -247,10 +233,7 @@ export default function CloudServicesPage() {
         </section>
 
 <<<<<<< HEAD
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
           <div className="container mx-auto px-4 text-center">";

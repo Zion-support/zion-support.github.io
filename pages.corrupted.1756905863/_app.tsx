@@ -7,7 +7,4 @@ import _React from 'react'; import type { AppProps } from 'next/app'; import Hea
 import React from \'react\'; import type { AppProps } from \'next/app\'; import Head from \'next/head\'; import ErrorBoundary from \'../components/ErrorBoundary\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return ( <ErrorBoundary> <Head> <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" /> <title>Zion Tech Group — AI,IT & Micro SaaS</title> </Head> <div className=\"min-h-screen flex flex-col\"> {} <main className=\"flex-grow\"> <Component {...pageProps} /> </main> </div> </ErrorBoundary> )}
 import _React from 'react'; import type { AppProps } from 'next/app'; import Head from 'next/head'; import ErrorBoundary from '../components/ErrorBoundary'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return ( <ErrorBoundary> <Head> <meta name="viewport" content="width=device-width,initial-scale=1" /> <title>Zion Tech Group — AI,IT & Micro SaaS</title> </Head> <div className="min-h-screen flex flex-col"> {} <main className="flex-grow"> <Component {...pageProps} /> </main> </div> </ErrorBoundary> )}
 =======
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

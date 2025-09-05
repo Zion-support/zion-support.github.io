@@ -9,10 +9,7 @@ import React from "react";} from "lucide-react"; export default function Service
 import React from "react";
 import Link from "next/link";
 =======
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 import { 
 	Award, 
 	Brain, 
@@ -31,10 +28,7 @@ import {
 } from \"lucide-react\";
 } from "lucide-react";
 =======
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 export default function Services() {
 	const title = \"Services — Zion Tech Group\";
 	const description = \"AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.\";

@@ -2,7 +2,6 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 import Layout from '../../components/Layout';
 import { Cloud, Server, Database, Shield, Zap } from 'lucide-react';
 import React from 'react';
@@ -19,7 +18,6 @@ import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from '
 =======
 =======
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -27,10 +25,7 @@ import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
 
 <<<<<<< HEAD
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 const features = [
   {
     icon: Cloud,
@@ -39,7 +34,6 @@ const features = [
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
     description: 'Seamless migration to cloud platforms with zero downtime'
   },
   {}
@@ -180,12 +174,9 @@ export default function CloudDevOpsPage() {
 =======
     description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
     benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
     description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
     benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   },
   {
     icon: GitBranch,
@@ -212,7 +203,6 @@ export default function CloudDevOpsPage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 const benefits = [
   'Reduced infrastructure costs by up to 50%',
   'Improved deployment speed and reliability',
@@ -226,7 +216,6 @@ export default function CloudDevOpsServices() {
 =======
 =======
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 
 const tools = [
   { name: 'AWS', description: 'Amazon Web Services cloud platform' },
@@ -241,10 +230,7 @@ const tools = [
 
 export default function CloudDevOpsPage() {
 <<<<<<< HEAD
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   return (
     <Layout
       title="Cloud & DevOps Services - Zion Tech Group"
@@ -294,11 +280,8 @@ export default function CloudDevOpsPage() {
             </div>
 =======
             </motion.div>
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
             </motion.div>
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -320,7 +303,6 @@ export default function CloudDevOpsPage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -357,7 +339,6 @@ export default function CloudDevOpsPage() {
 =======
 =======
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 
         {/* Tools Section */}
         <section className="py-16 bg-white">
@@ -426,10 +407,7 @@ export default function CloudDevOpsPage() {
                 </motion.div>
               ))}
 <<<<<<< HEAD
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             </div>
           </div>
         </section>
@@ -463,10 +441,7 @@ export default function CloudDevOpsPage() {
     </Layout>
 =======
     </>
->>>>>>> origin/main
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
     </>
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   );
 }
