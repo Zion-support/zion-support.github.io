@@ -4,7 +4,6 @@ const nextConfig = {
   poweredByHeader: false,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
-  output: 'export',
   trailingSlash: true,
   images: {
     unoptimized: true
