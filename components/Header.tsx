@@ -2,33 +2,40 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Brain,
-  Settings,
-  Cloud,
-  CpuIcon,
+import { 
+  Menu, 
+  X, 
+  Search, 
+  Phone, 
+  ChevronDown, 
+  Brain, 
+  Cloud, 
+  Cpu as CpuIcon, 
+  Globe,
+  Mail,
+  MapPin,
+  Zap,
   Shield,
-  BarChart3,
-  Target,
-  Building2,
-  Heart,
+  Users,
+  FileText,
+  HelpCircle,
   DollarSign,
+  Settings,
+  Network,
+  Rocket,
+  BarChart3,
+  MessageSquare,
+  Youtube,
+  Building2,
+  Target,
+  Heart,
   ShoppingCart,
   GraduationCap,
-  Rocket,
-  FileText,
   BookOpen,
-  Award,
   Calendar,
-  HelpCircle,
-  Network,
-  Users,
-  MessageSquare,
-  Mail,
-  Phone,
-  ChevronDown,
-  Menu,
-  X
+  Award,
+  Lock,
+  Database
 } from 'lucide-react';
 
 const navigation = [
@@ -75,14 +82,14 @@ const navigation = [
         icon: Cloud,
         description: 'Innovative micro software-as-a-service solutions',
         children: [
-          { name: 'AI Content Marketing Suite', href: '/micro-saas#ai-content-marketing' },
-          { name: 'Smart Lead Management', href: '/micro-saas#smart-lead-management' },
-          { name: 'AI Analytics Dashboard', href: '/micro-saas#ai-analytics' },
+          { name: 'Cloud Cost Guard', href: '/micro-saas#cloud-cost-guard' },
+          { name: 'LLM Evaluation Suite', href: '/micro-saas#llm-evaluation' },
+          { name: 'Customer Feedback App', href: '/micro-saas#customer-feedback' },
+          { name: 'API Rate Limiting', href: '/micro-saas#api-rate-limiting' },
+          { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' },
           { name: 'Workflow Automation', href: '/micro-saas#workflow-automation' },
-          { name: 'AI Customer Support Bot', href: '/micro-saas#ai-support-bot' },
-          { name: 'Smart Inventory Management', href: '/micro-saas#smart-inventory' },
-          { name: 'AI Email Marketing', href: '/micro-saas#ai-email-marketing' },
-          { name: 'Smart Project Management', href: '/micro-saas#smart-project-management' }
+          { name: 'AI Lead Scoring', href: '/micro-saas#ai-lead-scoring' },
+          { name: 'Social Media Scheduler', href: '/micro-saas#social-media-scheduler' }
         ]
       },
       {
@@ -309,7 +316,7 @@ const contactInfo = {
   address: '364 E Main St STE 1008, Middletown, DE 19709'
 };
 
-export default function Header({ onMenuClick }) {
+export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -437,10 +444,7 @@ export default function Header({ onMenuClick }) {
 
             {/* Mobile Menu Button */}
             <button
-              onClick={() => {
-                setIsOpen(!isOpen);
-                onMenuClick && onMenuClick();
-              }}
+              onClick={() => setIsOpen(!isOpen)}
               className="lg:hidden p-2 text-gray-700 hover:text-blue-600"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

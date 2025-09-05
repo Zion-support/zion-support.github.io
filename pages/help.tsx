@@ -1,27 +1,25 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion'
 import {
-  Search, 
-  HelpCircle, 
-  BookOpen, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  FileText, 
+  Search,
+  HelpCircle,
+  BookOpen,
+  MessageCircle,
+  Phone,
+  Mail,
+  FileText,
   Video,
   Download,
   ExternalLink,
   ChevronDown,
   ChevronRight
-} from 'lucide-react';
-const helpCategories = [
-  {
+} from 'lucide-react'
+const helpCategories = [{
     title: "Getting Started",
     icon: BookOpen,
-    articles: [
-      {
+    articles: [{
         title: "Welcome to Zion Tech Group",
         description: "Learn the basics of our platform and services",
         type: "Guide",
@@ -38,14 +36,12 @@ const helpCategories = [
         description: "How to get started with our AI solutions",
         type: "Tutorial",
         readTime: "15 min"
-      }
-    ]
+      }]
   },
   {
     title: "AI Services",
     icon: HelpCircle,
-    articles: [
-      {
+    articles: [{
         title: "Understanding AI Models",
         description: "Learn about different AI models and their applications",
         type: "Guide",
@@ -62,14 +58,12 @@ const helpCategories = [
         description: "Tips and best practices for using AI effectively",
         type: "Guide",
         readTime: "12 min"
-      }
-    ]
+      }]
   },
   {
     title: "Cloud Services",
     icon: MessageCircle,
-    articles: [
-      {
+    articles: [{
         title: "Cloud Migration Guide",
         description: "Complete guide to migrating to our cloud platform",
         type: "Guide",
@@ -86,14 +80,12 @@ const helpCategories = [
         description: "Keep your cloud environment secure",
         type: "Guide",
         readTime: "15 min"
-      }
-    ]
+      }]
   },
   {
     title: "Billing & Account",
     icon: FileText,
-    articles: [
-      {
+    articles: [{
         title: "Understanding Your Bill",
         description: "Learn how to read and understand your billing statement",
         type: "Guide",
@@ -110,20 +102,14 @@ const helpCategories = [
         description: "Manage your account preferences and settings",
         type: "Tutorial",
         readTime: "10 min"
-      }
-    ]
-  }
-]
-
+      }]
+  }]
 const quickLinks = [
   { title: "API Documentation", href: "/docs/api", icon: FileText },
   { title: "Video Tutorials", href: "/tutorials", icon: Video },
   { title: "Download Resources", href: "/downloads", icon: Download },
-  { title: "Community Forum", href: "/community", icon: MessageCircle }
-]
-
-const faqs = [
-  {
+  { title: "Community Forum", href: "/community", icon: MessageCircle }]
+const faqs = [{
     question: "How do I get started with your AI services?",
     answer: "Getting started is easy! First, create an account, then choose a plan that fits your needs. You can start with our free trial to explore our AI capabilities before committing to a paid plan."
   },
@@ -138,13 +124,37 @@ const faqs = [
   {
     question: "Can I cancel my subscription anytime?",
     answer: "Yes, you can cancel your subscription at any time. There are no cancellation fees, and you'll continue to have access to your services until the end of your current billing period."
+  }]
+
+const supportMethods = [
+  {
+    title: "Live Chat Support",
+    description: "Get instant help with our 24/7 live chat support. Our team is always ready to assist you."
+  },
+  {
+    title: "Email Support",
+    description: "Send us an email at support@ziontechgroup.com and we'll respond within 4 hours."
+  },
+  {
+    title: "Phone Support",
+    description: "Call us at +1 302 464 0950 for immediate assistance during business hours."
+  },
+  {
+    title: "Video Call Support",
+    description: "Schedule a video call with our technical experts for complex issues."
   }
 ]
 
 export default function HelpPage() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
-
+  const [searchQuery, setSearchQuery] = useState('')
+  const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({})
+  
+  const toggleCategory = (categoryTitle: string) => {
+    setExpandedCategories(prev => ({
+      ...prev,
+      [categoryTitle]: !prev[categoryTitle]
+    }))
+  }
   return (
     <div className="min-h-screen bg-gray-50">
       <Head>
@@ -215,7 +225,7 @@ export default function HelpPage() {
                 >
                   <button
                     onClick={() => toggleCategory(category.title)}
-                    className="w-full p-6 text-left hover:bg-gray-50 transition-colors"
+                    className="w-full p-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
                   >
                     <div className="flex items-center gap-4">
                       <category.icon className="w-6 h-6 text-blue-600" />
@@ -223,11 +233,14 @@ export default function HelpPage() {
                         {category.title}
                       </h3>
                     </div>
-                    <ChevronDown className="w-5 h-5 text-gray-500" />
+                    {expandedCategories[category.title] ? (
+                      <ChevronDown className="w-5 h-5 text-gray-500" />
+                    ) : (
+                      <ChevronRight className="w-5 h-5 text-gray-500" />
+                    )}
                   </button>
-                  
                   <AnimatePresence>
-                    {expandedCategories.includes(category.title) && (
+                    {expandedCategories[category.title] && (
                       <motion.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: 'auto', opacity: 1 }}
@@ -245,7 +258,7 @@ export default function HelpPage() {
                               >
                                 <div className="flex items-start justify-between mb-2">
                                   <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
-                                    {article.category}
+                                    {article.type}
                                   </span>
                                   <span className="text-xs text-gray-500">
                                     {article.readTime}
@@ -255,7 +268,7 @@ export default function HelpPage() {
                                   {article.title}
                                 </h4>
                                 <p className="text-sm text-gray-600">
-                                  {article.excerpt}
+                                  {article.description}
                                 </p>
                               </motion.div>
                             ))}
@@ -277,7 +290,7 @@ export default function HelpPage() {
               Contact Support
             </h2>
             <div className="space-y-6">
-              {contactMethods.map((method, index) => (
+              {supportMethods.map((method, index) => (
                 <motion.div
                   key={index}
                   className="bg-gray-50 rounded-lg p-6"
@@ -304,7 +317,7 @@ export default function HelpPage() {
               Still Need Help?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Our support team is here to help you succeed. Get in touch with us today.
+              Our team is here to help you succeed. Get in touch with us today.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white/10 rounded-lg p-6">
@@ -323,10 +336,10 @@ export default function HelpPage() {
                 <h3 className="text-lg font-semibold text-white mb-2">Phone Support</h3>
                 <p className="text-blue-100 mb-4">Call us directly</p>
                 <a
-                  href="tel:+13024640950"
+                  href="tel:+15551234567"
                   className="text-white hover:text-blue-200 font-medium"
                 >
-                  +1 302 464 0950
+                  +1 (555) 123-4567
                 </a>
               </div>
               <div className="bg-white/10 rounded-lg p-6">
@@ -342,5 +355,5 @@ export default function HelpPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }
