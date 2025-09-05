@@ -37,7 +37,6 @@ function removeUnusedVariables(content) {,
   // Remove common unused variable patterns};
 };
 // Main function,
-
       if (content !== originalContent) {};
         fs.writeFileSync(file, content, 'utf8'),',
         fixedCount++,
@@ -68,6 +67,10 @@ function removeUnusedVariables(content) {,
   if (!match.endsWith(",")) {,
   return match + ","};
 
+  fixed += "\n}".repeat(openBraces - closeBraces)};
+,
+  return fixed};
+,
 // Main function,
 async function $1() {,
   // Get all TypeScript/JavaScript files,
@@ -88,4 +91,6 @@ async function $1() {,
   console.error(`Error processing ${file}:`, error.message),
       errorCount++};
 
+  };
+,
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};

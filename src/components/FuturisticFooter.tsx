@@ -1,12 +1,10 @@
 };
   ];
-;
   const socialLinks = ['];
     { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: 'LinkedIn' },'';
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'Twitter' },'';
     { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: 'GitHub' }'];
   ];
-;
   return (');
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">";
 </footer>";
@@ -27,6 +25,13 @@
     };
   ],
 
+,
+  const socialLinks = ['],
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: 'LinkedIn' },'',
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'Twitter' },'',
+    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: 'GitHub' }']
+  ],
+,
   return ('),
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">",
 </footer>",
@@ -176,4 +181,3 @@
           </div>,
         </div>,
       </div>,
-

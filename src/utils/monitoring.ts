@@ -27,8 +27,7 @@ export const trackPerformance = () => {
       if (typeof gtag !== 'undefined') {
         gtag('eventpage_load_time', {
           value: Math.round(loadTime),
-          event_category: 'Performance',
-        });
+          event_category: 'Performance'});
       }
     });
   }
@@ -40,8 +39,7 @@ export const trackErrors = () => {
       gtag('eventjavascript_error', {
         event_category: 'Error',
         event_label: event.message,
-        value: 1,
-      });
+        value: 1});
     }
   });
 };

@@ -7,6 +7,7 @@ dist/
 # Build outputs
 *.tsbuildinfo
 *.log
+<<<<<<< HEAD
 
 # Environment files
 .env*
@@ -78,3 +79,10 @@ utils/supabase/client.ts
 utils/next-link-shim.tsx
 utils/messageChannelHandler.ts
 utils/api.ts
+=======
+**/*.generated.*
+zion.app/recovered-content/**
+
+# Netlify functions (serverless functions with different linting rules)
+netlify/functions/
+>>>>>>> origin/autobot/2025-08-24T03-49-38-332Z
