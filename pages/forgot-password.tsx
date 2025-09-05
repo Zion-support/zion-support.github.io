@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Mail, CheckCircle } from 'lucide-react';
-import MainLayout from '../src/components/layout/MainLayout';
+import Layout from '../components/Layout';
 
 export default function ForgotPassword() {
   const [email, setEmail] = useState('');
@@ -21,7 +21,7 @@ export default function ForgotPassword() {
   };
 
   return (
-    <MainLayout 
+    <Layout 
       title="Forgot Password - Zion Tech Group"
       description="Reset your password for Zion Tech Group account"
     >
@@ -138,6 +138,6 @@ export default function ForgotPassword() {
           </motion.div>
         </div>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

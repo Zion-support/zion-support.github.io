@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Eye, EyeOff, Mail, Lock, User, ArrowRight, Check } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+import Head from 'next/head';
+import Link from 'next/link';
+import { User, Mail, Lock, Eye, EyeOff, ArrowRight } from 'lucide-react';
 
-export default function RegisterPage() {
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+export default function Register() {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -17,13 +15,6 @@ export default function RegisterPage() {
   });
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle registration logic here
-    console.log('Registration attempt:', formData);
-  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
@@ -31,15 +22,21 @@ export default function RegisterPage() {
       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
-    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission
+    console.log('Form submitted:', formData);
   };
 
   return (
-    <MainLayout
-      title="Register - Zion Tech Group"
-      description="Create your Zion Tech Group account to access our comprehensive technology solutions and services."
-      keywords="register, sign up, account, Zion Tech Group, technology solutions"
-    >
+    <div className="min-h-screen bg-gray-50">
+      <Head>
+        <title>Register - Zion Tech Group</title>
+        <meta name="description" content="Create your Zion Tech Group account to access our comprehensive technology solutions and services." />
+      </Head>
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <motion.div
@@ -248,6 +245,6 @@ export default function RegisterPage() {
           </motion.div>
         </div>
       </div>
-    </MainLayout>
+    </div>
   );
 }

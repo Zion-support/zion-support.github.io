@@ -1,75 +1,74 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-=======
-import { NextResponse } from "next/server";",
-import type { NextRequest } from "next/server";",
->>>>>>> main
 
-const publicRoutes = [;
-  "/",",
-  "/about",",
-  "/contact",",
-  "/blog",",
-  "/services",",
-  "/solutions",",
-  "/industries",",
-  "/resources",",
-  "/talent",",
-  "/team",",
-  "/partners",",
-  "/news",",
-  "/careers",",
-  "/privacy",",
-  "/terms",",
-  "/cookies",",
-  "/sitemap",",
-  "/auth/login",",
-  "/auth/register",",
-  "/auth/forgot-password",",
-  "/auth/reset-password",",
-  "/auth/verify",",
-;];,
+const publicRoutes = [
+  "/",
+  "/about",
+  "/contact",
+  "/blog",
+  "/services",
+  "/solutions",
+  "/industries",
+  "/resources",
+  "/talent",
+  "/team",
+  "/pricing",
+  "/security",
+  "/compliance",
+  "/privacy",
+  "/terms",
+  "/cookies",
+  "/sitemap",
+  "/search",
+  "/support",
+  "/help",
+  "/faq",
+  "/guides",
+  "/tutorials",
+  "/webinars",
+  "/white-papers",
+  "/whitepapers",
+  "/news",
+  "/newsletter",
+  "/partners",
+  "/case-studies",
+  "/community",
+  "/company",
+  "/industries",
+  "/login",
+  "/register",
+  "/forgot-password",
+  "/ai-services",
+  "/it-services",
+  "/micro-saas",
+  "/products",
+  "/solutions/enterprise",
+  "/solutions/small-business",
+  "/solutions/startup"
+];
 
-<<<<<<< HEAD
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
+  // Check if the route is public
   if (publicRoutes.includes(pathname)) {
     return NextResponse.next();
   }
   
-  const authCookie = request.cookies.get("auth-token");
-  if (!authCookie) {
-    return NextResponse.redirect(new URL("/auth/login", request.url));
-=======
-export function middleware(request: NextRequest) {}
-  const { pathname } = request.nextUrl;,
-
-  if (publicRoutes.includes(pathname)) {}
-    return NextResponse.next();,
-  }
-
-  const authCookie = request.cookies.get("auth-token");";
-  
-  if (!authCookie) {}
-    return NextResponse.redirect(new URL("/auth/login", request.url));",
->>>>>>> main
-  }
-  
+  // For protected routes, you can add authentication logic here
+  // For now, we'll just allow access
   return NextResponse.next();
 }
 
-export const config = {}
-  matcher: [;,
-    "/((?!api|_next/static|_next/image|favicon.ico).*)",",
+export const config = {
+  matcher: [
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api (API routes)
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     */
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
   ],
-<<<<<<< HEAD
 };
-=======
-import { NextResponse } from "next/server"; import type { NextRequest } from "next/server"; const publicRoutes = [ "/","/about","/contact","/blog","/services","/products","/talent","/test","/auth/login","/auth/register","/auth/forgot-password","/auth/reset-password","/auth/verify",]; export function middleware(request: NextRequest) { const { pathname } = request.nextUrl; if (publicRoutes.includes(pathname)) { return NextResponse.next()} const authCookie = request.cookies.get("auth-token"); if (!authCookie) { return NextResponse.redirect(new URL("/auth/login",request.url))} return NextResponse.next()} export const config = { matcher: [ "/((?!api|_next/static|_next/image|favicon.ico).*)",],};
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-;};
->>>>>>> main
