@@ -5,11 +5,11 @@ export const optimizeImages = (src, width, height) => {
   return `/api/optimize-image?src=${encodeURIComponent(src)}&w=${width}&h=${height}`;
 };
 
-export const lazyLoadComponent = (importFunc) => {
+export const lazyLoadComponent = importFunc => {
   return React.lazy(importFunc);
 };
 
-export const memoize = (fn) => {
+export const memoize = fn => {
   const cache = new Map();
   return (...args) => {
     const key = JSON.stringify(args);

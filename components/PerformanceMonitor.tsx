@@ -27,13 +27,18 @@ interface PerformanceData {
 interface PerformanceMonitorProps {
   onPerformanceData?: (performanceData: PerformanceData) => void;
 }
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+  onPerformanceData,
+}) => {
   useEffect(() => {
     // Only run on client side
-    if (typeof window === 'undefined' || typeof performance === 'undefined') return;
+    if (typeof window === 'undefined' || typeof performance === 'undefined')
+      return;
 
     const measurePerformance = () => {
-      const navigation = window.performance.getEntriesByType('navigation')[0] as {
+      const navigation = window.performance.getEntriesByType(
+        'navigation'
+      )[0] as {
         domContentLoadedEventEnd: number;
         domContentLoadedEventStart: number;
         loadEventEnd: number;
@@ -41,26 +46,65 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
         fetchStart: number;
       };
       const paint = window.performance.getEntriesByType('paint');
-      
+
       const performanceData: PerformanceData = {
         // Navigation timing
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+        domContentLoaded:
+          navigation.domContentLoadedEventEnd -
+          navigation.domContentLoadedEventStart,
         loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
         totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
-        
+
         // Paint timing
-        firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
-        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-        
+        firstPaint:
+          paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
+        firstContentfulPaint:
+          paint.find(entry => entry.name === 'first-contentful-paint')
+            ?.startTime || 0,
+
         // Resource timing
         resourceCount: window.performance.getEntriesByType('resource').length,
-        
+
         // Memory usage (if available)
-        memory: (window.performance as unknown as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory ? {
-          used: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.usedJSHeapSize,
-          total: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.totalJSHeapSize,
-          limit: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
-        } : null
+        memory: (
+          window.performance as unknown as {
+            memory?: {
+              usedJSHeapSize: number;
+              totalJSHeapSize: number;
+              jsHeapSizeLimit: number;
+            };
+          }
+        ).memory
+          ? {
+              used: (
+                window.performance as unknown as {
+                  memory: {
+                    usedJSHeapSize: number;
+                    totalJSHeapSize: number;
+                    jsHeapSizeLimit: number;
+                  };
+                }
+              ).memory.usedJSHeapSize,
+              total: (
+                window.performance as unknown as {
+                  memory: {
+                    usedJSHeapSize: number;
+                    totalJSHeapSize: number;
+                    jsHeapSizeLimit: number;
+                  };
+                }
+              ).memory.totalJSHeapSize,
+              limit: (
+                window.performance as unknown as {
+                  memory: {
+                    usedJSHeapSize: number;
+                    totalJSHeapSize: number;
+                    jsHeapSizeLimit: number;
+                  };
+                }
+              ).memory.jsHeapSizeLimit,
+            }
+          : null,
       };
 
       if (onPerformanceData) {
@@ -69,7 +113,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
 
       // Log performance data in development
       if (process.env.NODE_ENV === 'development') {
-        }
+      }
     };
 
     // Measure performance after page load

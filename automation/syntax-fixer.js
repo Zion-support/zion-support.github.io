@@ -1,15 +1,15 @@
 #!/usr/bin/env node
-import fs from "fs";
-import path from "path";
-import { execSync } from "child_process";
-import { fileURLToPath } from "url";
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 class SyntaxFixer {
   constructor() {
-    this.logFile = path.join(__dirname, "logs", "syntax-fixer.log");
+    this.logFile = path.join(__dirname, 'logs', 'syntax-fixer.log');
     this.fixesApplied = 0;
     this.ensureDirectories();
   }
@@ -21,7 +21,7 @@ class SyntaxFixer {
     }
   }
 
-  log(message, level = "INFO") {
+  log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     // // fs.appendFileSync(this.logFile, logMessage);
@@ -29,16 +29,16 @@ class SyntaxFixer {
 
   async fixSyntaxErrors() {
     try {
-      this.log("🔧 Starting syntax error fixes...");
-      
+      this.log('🔧 Starting syntax error fixes...');
+
       // Fix common syntax issues
       await this.fixCommaIssues();
       await this.fixImportIssues();
       await this.fixExportIssues();
-      
+
       this.log(`✅ Applied ${this.fixesApplied} syntax fixes`);
     } catch (error) {
-      this.log(`❌ Syntax fixing failed: ${error.message}`, "ERROR");
+      this.log(`❌ Syntax fixing failed: ${error.message}`, 'ERROR');
     }
   }
 
@@ -46,22 +46,22 @@ class SyntaxFixer {
     const files = this.getSourceFiles();
     files.forEach(file => {
       try {
-        let content = fs.readFileSync(file, "utf8");
+        let content = fs.readFileSync(file, 'utf8');
         let modified = false;
-        
+
         // Fix trailing commas in arrays and objects
         content = content.replace(/,(\s*[}\]])/g, '$1');
-        if (content !== fs.readFileSync(file, "utf8")) {
+        if (content !== fs.readFileSync(file, 'utf8')) {
           modified = true;
         }
-        
+
         if (modified) {
           fs.writeFileSync(file, content);
           this.fixesApplied++;
           this.log(`Fixed comma issues in ${file}`);
         }
       } catch (error) {
-        this.log(`Failed to fix ${file}: ${error.message}`, "WARN");
+        this.log(`Failed to fix ${file}: ${error.message}`, 'WARN');
       }
     });
   }
@@ -70,24 +70,24 @@ class SyntaxFixer {
     const files = this.getSourceFiles();
     files.forEach(file => {
       try {
-        let content = fs.readFileSync(file, "utf8");
+        let content = fs.readFileSync(file, 'utf8');
         let modified = false;
-        
+
         // Fix import statements
         content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1;');
         content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1;');
-        
-        if (content !== fs.readFileSync(file, "utf8")) {
+
+        if (content !== fs.readFileSync(file, 'utf8')) {
           modified = true;
         }
-        
+
         if (modified) {
           fs.writeFileSync(file, content);
           this.fixesApplied++;
           this.log(`Fixed import issues in ${file}`);
         }
       } catch (error) {
-        this.log(`Failed to fix ${file}: ${error.message}`, "WARN");
+        this.log(`Failed to fix ${file}: ${error.message}`, 'WARN');
       }
     });
   }
@@ -96,63 +96,73 @@ class SyntaxFixer {
     const files = this.getSourceFiles();
     files.forEach(file => {
       try {
-        let content = fs.readFileSync(file, "utf8");
+        let content = fs.readFileSync(file, 'utf8');
         let modified = false;
-        
+
         // Fix export statements
         content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1;');
-        
-        if (content !== fs.readFileSync(file, "utf8")) {
+
+        if (content !== fs.readFileSync(file, 'utf8')) {
           modified = true;
         }
-        
+
         if (modified) {
           fs.writeFileSync(file, content);
           this.fixesApplied++;
           this.log(`Fixed export issues in ${file}`);
         }
       } catch (error) {
-        this.log(`Failed to fix ${file}: ${error.message}`, "WARN");
+        this.log(`Failed to fix ${file}: ${error.message}`, 'WARN');
       }
     });
   }
 
   getSourceFiles() {
     const files = [];
-    const srcDir = path.join(process.cwd(), "src");
-    
+    const srcDir = path.join(process.cwd(), 'src');
+
     if (fs.existsSync(srcDir)) {
-      const walkDir = (dir) => {
+      const walkDir = dir => {
         const items = fs.readdirSync(dir);
         items.forEach(item => {
           const fullPath = path.join(dir, item);
           const stat = fs.statSync(fullPath);
-          
-          if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {
+
+          if (
+            stat.isDirectory() &&
+            !item.startsWith('.') &&
+            item !== 'node_modules'
+          ) {
             walkDir(fullPath);
-          } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {
+          } else if (
+            item.endsWith('.ts') ||
+            item.endsWith('.tsx') ||
+            item.endsWith('.js') ||
+            item.endsWith('.jsx')
+          ) {
             files.push(fullPath);
           }
         });
       };
-      
+
       walkDir(srcDir);
     }
-    
+
     return files;
   }
 
   async run() {
-    this.log("🚀 Starting Syntax Fixer");
-    
+    this.log('🚀 Starting Syntax Fixer');
+
     try {
       await this.fixSyntaxErrors();
-      
-      this.log("=" * 50);
-      this.log(`🎯 Syntax Fixer completed. Fixes applied: ${this.fixesApplied}`);
-      
+
+      this.log('=' * 50);
+      this.log(
+        `🎯 Syntax Fixer completed. Fixes applied: ${this.fixesApplied}`
+      );
     } catch (error) {
-      this.log(`❌ Syntax Fixer failed: ${error.message}`, "ERROR");
+      this.log(`❌ Syntax Fixer failed: ${error.message}`, 'ERROR');
     }
   }
 }

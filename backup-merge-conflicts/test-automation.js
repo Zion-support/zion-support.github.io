@@ -7,7 +7,8 @@ const path = require('path');
 class TestAutomation {
   constructor() {
     this.processName = process.env.PM2_PROCESS_NAME || 'test-automation';
-    this.coverageThreshold = parseInt(process.env.TEST_COVERAGE_THRESHOLD) || 80;
+    this.coverageThreshold =
+      parseInt(process.env.TEST_COVERAGE_THRESHOLD) || 80;
     this.autoRetryFailed = process.env.AUTO_RETRY_FAILED === 'true';
     this.parallelTests = process.env.PARALLEL_TESTS === 'true';
     this.logFile = path.join(process.cwd(), 'logs/pm2/test-automation.log');
@@ -17,24 +18,24 @@ class TestAutomation {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
     // // );
-    
+
     // Ensure log directory exists
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursive: true });
     }
-    
+
     fs.appendFileSync(this.logFile, logMessage);
   }
 
   async runTests() {
     try {
       this.log('Starting test automation...');
-      
+
       // Check if package.json has test scripts
       const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
-      const testScripts = Object.keys(packageJson.scripts).filter(script => 
-        script.includes('test') || script.includes('spec')
+      const testScripts = Object.keys(packageJson.scripts).filter(
+        script => script.includes('test') || script.includes('spec')
       );
 
       if (testScripts.length === 0) {
@@ -45,31 +46,30 @@ class TestAutomation {
       // Run tests
       for (const testScript of testScripts) {
         this.log(`Running ${testScript}...`);
-        
+
         try {
-          const command = this.parallelTests ? 
-            `npm run ${testScript} -- --parallel` : 
-            `npm run ${testScript}`;
-            
-          const output = execSync(command, { 
+          const command = this.parallelTests
+            ? `npm run ${testScript} -- --parallel`
+            : `npm run ${testScript}`;
+
+          const output = execSync(command, {
             encoding: 'utf8',
             stdio: 'pipe',
-            cwd: process.cwd()
+            cwd: process.cwd(),
           });
-          
+
           this.log(`${testScript} completed successfully`);
           this.log(`Output: ${output.substring(0, 500)}...`);
-          
         } catch (error) {
           this.log(`Error running ${testScript}: ${error.message}`);
-          
+
           if (this.autoRetryFailed) {
             this.log(`Retrying ${testScript}...`);
             try {
-              execSync(`npm run ${testScript}`, { 
+              execSync(`npm run ${testScript}`, {
                 encoding: 'utf8',
                 stdio: 'pipe',
-                cwd: process.cwd()
+                cwd: process.cwd(),
               });
               this.log(`${testScript} retry successful`);
             } catch (retryError) {
@@ -81,9 +81,8 @@ class TestAutomation {
 
       // Check test coverage if available
       await this.checkCoverage();
-      
+
       this.log('Test automation completed');
-      
     } catch (error) {
       this.log(`Test automation error: ${error.message}`);
     }
@@ -93,7 +92,7 @@ class TestAutomation {
     try {
       // Check if coverage report exists
       const coverageFiles = [
-        'coverage/lcov.infocoverage/coverage.jsoncoverage/coverage-summary.json'
+        'coverage/lcov.infocoverage/coverage.jsoncoverage/coverage-summary.json',
       ];
 
       let coverageFile = null;
@@ -111,18 +110,19 @@ class TestAutomation {
 
       // Parse coverage data
       const coverageData = fs.readFileSync(coverageFile, 'utf8');
-      
+
       if (coverageFile.endsWith('.json')) {
         const coverage = JSON.parse(coverageData);
         const totalCoverage = coverage.total?.lines?.pct || 0;
-        
+
         this.log(`Test coverage: ${totalCoverage}%`);
-        
+
         if (totalCoverage < this.coverageThreshold) {
-          this.log(`WARNING: Coverage ${totalCoverage}% is below threshold ${this.coverageThreshold}%`);
+          this.log(
+            `WARNING: Coverage ${totalCoverage}% is below threshold ${this.coverageThreshold}%`
+          );
         }
       }
-
     } catch (error) {
       this.log(`Coverage check error: ${error.message}`);
     }
@@ -130,14 +130,17 @@ class TestAutomation {
 
   async start() {
     this.log('Test automation service started');
-    
+
     // Run tests immediately
     await this.runTests();
-    
+
     // Set up interval for periodic test runs
-    setInterval(async () => {
-      await this.runTests();
-    }, 3 * 60 * 60 * 1000); // Every 3 hours
+    setInterval(
+      async () => {
+        await this.runTests();
+      },
+      3 * 60 * 60 * 1000
+    ); // Every 3 hours
   }
 }
 

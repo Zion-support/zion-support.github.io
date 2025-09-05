@@ -18,24 +18,25 @@ class BuildOptimizer {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
     // // );
-    
+
     // Ensure log directory exists
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursive: true });
     }
-    
+
     fs.appendFileSync(this.logFile, logMessage);
   }
 
   async optimizeBuild() {
     try {
       this.log('Starting build optimization...');
-      
+
       // Check if this is a Next.js project
       const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
-      const isNextJS = packageJson.dependencies?.next || packageJson.devDependencies?.next;
-      
+      const isNextJS =
+        packageJson.dependencies?.next || packageJson.devDependencies?.next;
+
       if (!isNextJS) {
         this.log('Not a Next.js project, skipping build optimization');
         return;
@@ -43,25 +44,24 @@ class BuildOptimizer {
 
       // Run build with optimization
       this.log('Running optimized build...');
-      
+
       const buildCommand = 'npm run build';
-      const output = execSync(buildCommand, { 
+      const output = execSync(buildCommand, {
         encoding: 'utf8',
         stdio: 'pipe',
-        cwd: process.cwd()
+        cwd: process.cwd(),
       });
-      
+
       this.log('Build completed successfully');
       this.log(`Build output: ${output.substring(0, 500)}...`);
 
       // Analyze build output
       await this.analyzeBuildOutput();
-      
+
       // Optimize bundle if needed
       if (this.optimizeBundles) {
         await this.optimizeBundles();
       }
-
     } catch (error) {
       this.log(`Build optimization error: ${error.message}`);
     }
@@ -70,7 +70,7 @@ class BuildOptimizer {
   async analyzeBuildOutput() {
     try {
       this.log('Analyzing build output...');
-      
+
       const buildDir = '.next';
       if (!fs.existsSync(buildDir)) {
         this.log('Build directory not found');
@@ -86,10 +86,11 @@ class BuildOptimizer {
       if (largeFiles.length > 0) {
         this.log('Large files detected:');
         largeFiles.forEach(file => {
-          this.log(`  ${file.path}: ${(file.size / 1024 / 1024).toFixed(2)} MB`);
+          this.log(
+            `  ${file.path}: ${(file.size / 1024 / 1024).toFixed(2)} MB`
+          );
         });
       }
-
     } catch (error) {
       this.log(`Build analysis error: ${error.message}`);
     }
@@ -98,7 +99,7 @@ class BuildOptimizer {
   async optimizeBundles() {
     try {
       this.log('Optimizing bundles...');
-      
+
       // Check for unused dependencies
       const unusedDeps = await this.findUnusedDependencies();
       if (unusedDeps.length > 0) {
@@ -110,7 +111,6 @@ class BuildOptimizer {
       if (duplicateDeps.length > 0) {
         this.log(`Duplicate dependencies found: ${duplicateDeps.join()}`);
       }
-
     } catch (error) {
       this.log(`Bundle optimization error: ${error.message}`);
     }
@@ -118,11 +118,11 @@ class BuildOptimizer {
 
   getDirectorySize(dirPath) {
     let totalSize = 0;
-    
+
     function calculateSize(itemPath) {
       try {
         const stat = fs.statSync(itemPath);
-        
+
         if (stat.isDirectory()) {
           const items = fs.readdirSync(itemPath);
           items.forEach(item => {
@@ -135,28 +135,29 @@ class BuildOptimizer {
         // Skip files that can't be accessed
       }
     }
-    
+
     calculateSize(dirPath);
     return totalSize;
   }
 
-  findLargeFiles(dirPath, threshold = 1024 * 1024) { // 1MB threshold
+  findLargeFiles(dirPath, threshold = 1024 * 1024) {
+    // 1MB threshold
     const largeFiles = [];
-    
+
     function scanDirectory(currentPath) {
       try {
         const items = fs.readdirSync(currentPath);
-        
+
         items.forEach(item => {
           const fullPath = path.join(currentPath, item);
           const stat = fs.statSync(fullPath);
-          
+
           if (stat.isDirectory()) {
             scanDirectory(fullPath);
           } else if (stat.size > threshold) {
             largeFiles.push({
               path: fullPath,
-              size: stat.size
+              size: stat.size,
             });
           }
         });
@@ -164,7 +165,7 @@ class BuildOptimizer {
         // Skip directories that can't be read
       }
     }
-    
+
     scanDirectory(dirPath);
     return largeFiles.sort((a, b) => b.size - a.size);
   }
@@ -175,7 +176,7 @@ class BuildOptimizer {
       const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
       const dependencies = Object.keys(packageJson.dependencies || {});
       const devDependencies = Object.keys(packageJson.devDependencies || {});
-      
+
       // This would need more sophisticated analysis
       return [];
     } catch (error) {
@@ -190,7 +191,7 @@ class BuildOptimizer {
       if (fs.existsSync('package-lock.json')) {
         const lockFile = JSON.parse(fs.readFileSync('package-lock.jsonutf8'));
         const dependencies = lockFile.dependencies || {};
-        
+
         // This would need more sophisticated analysis
         return [];
       }
@@ -203,14 +204,17 @@ class BuildOptimizer {
 
   async start() {
     this.log('Build optimizer service started');
-    
+
     // Run optimization immediately
     await this.optimizeBuild();
-    
+
     // Set up interval for periodic optimization
-    setInterval(async () => {
-      await this.optimizeBuild();
-    }, 24 * 60 * 60 * 1000); // Every 24 hours
+    setInterval(
+      async () => {
+        await this.optimizeBuild();
+      },
+      24 * 60 * 60 * 1000
+    ); // Every 24 hours
   }
 }
 

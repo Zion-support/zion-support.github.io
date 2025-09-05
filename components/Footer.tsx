@@ -1,26 +1,50 @@
 import React from 'react';
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook, Instagram } from 'lucide-react';
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Twitter,
+  Github,
+  Facebook,
+  Instagram,
+} from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const services = {
     'AI Solutions': [
-      { name: 'AI-Powered Email Responder', href: '/ai-services#ai-email-responder' },
-      { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' },
-      { name: 'Computer Vision Solutions', href: '/ai-services#computer-vision' },
+      {
+        name: 'AI-Powered Email Responder',
+        href: '/ai-services#ai-email-responder',
+      },
+      {
+        name: 'AI Content Generation',
+        href: '/ai-services#ai-content-generation',
+      },
+      {
+        name: 'Computer Vision Solutions',
+        href: '/ai-services#computer-vision',
+      },
       { name: 'Natural Language Processing', href: '/ai-services#nlp' },
-      { name: 'Machine Learning Models', href: '/ai-services#machine-learning' },
-      { name: 'AI Analytics Platform', href: '/ai-services#ai-analytics' }
+      {
+        name: 'Machine Learning Models',
+        href: '/ai-services#machine-learning',
+      },
+      { name: 'AI Analytics Platform', href: '/ai-services#ai-analytics' },
     ],
     'IT Services': [
       { name: 'Cloud Migration', href: '/it-services#cloud-migration' },
       { name: 'Cybersecurity Solutions', href: '/it-services#cybersecurity' },
       { name: 'DevOps Automation', href: '/it-services#devops' },
-      { name: 'Infrastructure Management', href: '/it-services#infrastructure' },
+      {
+        name: 'Infrastructure Management',
+        href: '/it-services#infrastructure',
+      },
       { name: 'Data Analytics', href: '/it-services#data-analytics' },
-      { name: 'Network Security', href: '/it-services#network-security' }
+      { name: 'Network Security', href: '/it-services#network-security' },
     ],
     'Micro SAAS': [
       { name: 'CRM Solutions', href: '/micro-saas#crm' },
@@ -28,8 +52,8 @@ const Footer: React.FC = () => {
       { name: 'Email Marketing', href: '/micro-saas#email-marketing' },
       { name: 'AI Content Tools', href: '/micro-saas#ai-content-tools' },
       { name: 'Analytics Dashboard', href: '/micro-saas#analytics-dashboard' },
-      { name: 'Automation Tools', href: '/micro-saas#automation-tools' }
-    ]
+      { name: 'Automation Tools', href: '/micro-saas#automation-tools' },
+    ],
   };
 
   const company = [
@@ -38,7 +62,7 @@ const Footer: React.FC = () => {
     { name: 'Careers', href: '/careers' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Press', href: '/press' }
+    { name: 'Press', href: '/press' },
   ];
 
   const resources = [
@@ -47,15 +71,31 @@ const Footer: React.FC = () => {
     { name: 'Tutorials', href: '/tutorials' },
     { name: 'Support', href: '/support' },
     { name: 'FAQ', href: '/faq' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Contact', href: '/contact' },
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+    {
+      name: 'LinkedIn',
+      href: 'https://linkedin.com/company/ziontechgroup',
+      icon: Linkedin,
+    },
+    {
+      name: 'Twitter',
+      href: 'https://twitter.com/ziontechgroup',
+      icon: Twitter,
+    },
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
+    {
+      name: 'Facebook',
+      href: 'https://facebook.com/ziontechgroup',
+      icon: Facebook,
+    },
+    {
+      name: 'Instagram',
+      href: 'https://instagram.com/ziontechgroup',
+      icon: Instagram,
+    },
   ];
 
   return (
@@ -70,23 +110,32 @@ const Footer: React.FC = () => {
               </div>
               <div>
                 <div className="text-xl font-bold">Zion Tech Group</div>
-                <div className="text-sm text-gray-400">Technology Solutions</div>
+                <div className="text-sm text-gray-400">
+                  Technology Solutions
+                </div>
               </div>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Leading provider of AI solutions, cloud services, and technology consulting.
-              Transforming businesses through innovation and cutting-edge technology.
+              Leading provider of AI solutions, cloud services, and technology
+              consulting. Transforming businesses through innovation and
+              cutting-edge technology.
             </p>
             <div className="space-y-2">
               <div className="flex items-center">
                 <Phone className="w-4 h-4 mr-2 text-blue-400" />
-                <a href="tel:+13024640950" className="hover:text-blue-400 transition-colors">
+                <a
+                  href="tel:+13024640950"
+                  className="hover:text-blue-400 transition-colors"
+                >
                   +1 302 464 0950
                 </a>
               </div>
               <div className="flex items-center">
                 <Mail className="w-4 h-4 mr-2 text-blue-400" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-400 transition-colors">
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="hover:text-blue-400 transition-colors"
+                >
                   kleber@ziontechgroup.com
                 </a>
               </div>
@@ -102,9 +151,11 @@ const Footer: React.FC = () => {
             <div className="space-y-4">
               {Object.entries(services).map(([category, links]) => (
                 <div key={category}>
-                  <h4 className="text-sm font-medium text-blue-400 mb-2">{category}</h4>
+                  <h4 className="text-sm font-medium text-blue-400 mb-2">
+                    {category}
+                  </h4>
                   <ul className="space-y-1">
-                    {links.slice(0, 3).map((link) => (
+                    {links.slice(0, 3).map(link => (
                       <li key={link.name}>
                         <Link
                           href={link.href}
@@ -123,7 +174,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Company</h3>
             <ul className="space-y-3">
-              {company.map((link) => (
+              {company.map(link => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -139,7 +190,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Resources</h3>
             <ul className="space-y-3">
-              {resources.map((link) => (
+              {resources.map(link => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -152,9 +203,11 @@ const Footer: React.FC = () => {
             </ul>
             {/* Social Links */}
             <div className="mt-6">
-              <h4 className="text-sm font-medium text-blue-400 mb-3">Follow Us</h4>
+              <h4 className="text-sm font-medium text-blue-400 mb-3">
+                Follow Us
+              </h4>
               <div className="flex space-x-4">
-                {socialLinks.map((social) => (
+                {socialLinks.map(social => (
                   <a
                     key={social.name}
                     href={social.href}
@@ -177,13 +230,22 @@ const Footer: React.FC = () => {
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
-              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
+              <Link
+                href="/privacy"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
+              <Link
+                href="/terms"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
                 Terms of Service
               </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors">
+              <Link
+                href="/cookies"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
                 Cookie Policy
               </Link>
             </div>

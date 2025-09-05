@@ -6,16 +6,16 @@ class CompleteImprovementSuite {
     this.projectRoot = process.cwd();
     this.reportsDir = './automation-reports';
     this.stats = {
-      "mergeConflicts": { resolved: 0, "failed": 0 },
-      "syntaxErrors": { fixed: 0, "failed": 0 },
-      "prsProcessed": { merged: 0, "failed": 0 },
-      "improvements": { applied: 0, "failed": 0 }
+      mergeConflicts: { resolved: 0, failed: 0 },
+      syntaxErrors: { fixed: 0, failed: 0 },
+      prsProcessed: { merged: 0, failed: 0 },
+      improvements: { applied: 0, failed: 0 },
     };
   }
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { "recursive": true });
+      fs.mkdirSync(this.reportsDir, { recursive: true });
     }
   }
 
@@ -27,15 +27,15 @@ class CompleteImprovementSuite {
     this.log(`🚀 Starting: ${description}`);
     try {
       const result = execSync(command, {
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": timeout
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+        timeout: timeout,
       });
       this.log(`✅ Completed: ${description}`);
-      return { "success": true, "output": result };
+      return { success: true, output: result };
     } catch (error) {
       this.log(`❌ Failed: ${description} - ${error.message}`);
-      return { "success": false, "error": error.message };
+      return { success: false, error: error.message };
     }
   }
 
@@ -45,7 +45,10 @@ class CompleteImprovementSuite {
 
     // Phase 1: Fix syntax errors
     this.log('📝 Phase 1: Fixing syntax errors...');
-    const syntaxFixResult = await this.runCommand('npm run lint:fix', 'Fix syntax errors');
+    const syntaxFixResult = await this.runCommand(
+      'npm run lint:fix',
+      'Fix syntax errors'
+    );
     if (syntaxFixResult.success) {
       this.stats.syntaxErrors.fixed++;
     } else {
@@ -54,7 +57,10 @@ class CompleteImprovementSuite {
 
     // Phase 2: Run tests
     this.log('🧪 Phase 2: Running tests...');
-    const testResult = await this.runCommand('npm run test:smoke', 'Run smoke tests');
+    const testResult = await this.runCommand(
+      'npm run test:smoke',
+      'Run smoke tests'
+    );
     if (testResult.success) {
       this.stats.improvements.applied++;
     } else {
@@ -63,7 +69,10 @@ class CompleteImprovementSuite {
 
     // Phase 3: Build application
     this.log('🏗️ Phase 3: Building application...');
-    const buildResult = await this.runCommand('npm run build', 'Build application');
+    const buildResult = await this.runCommand(
+      'npm run build',
+      'Build application'
+    );
     if (buildResult.success) {
       this.stats.improvements.applied++;
     } else {
@@ -83,11 +92,14 @@ class CompleteImprovementSuite {
       timestamp: new Date().toISOString(),
       stats: this.stats,
       summary: {
-        totalProcessed: Object.values(this.stats).reduce((sum, category) => 
-          sum + Object.values(category).reduce((catSum, val) => catSum + val, 0), 0
+        totalProcessed: Object.values(this.stats).reduce(
+          (sum, category) =>
+            sum +
+            Object.values(category).reduce((catSum, val) => catSum + val, 0),
+          0
         ),
-        successRate: this.calculateSuccessRate()
-      }
+        successRate: this.calculateSuccessRate(),
+      },
     };
 
     const reportPath = `${this.reportsDir}/complete-improvement-report.json`;
@@ -96,11 +108,19 @@ class CompleteImprovementSuite {
   }
 
   calculateSuccessRate() {
-    const total = Object.values(this.stats).reduce((sum, category) => 
-      sum + Object.values(category).reduce((catSum, val) => catSum + val, 0), 0
+    const total = Object.values(this.stats).reduce(
+      (sum, category) =>
+        sum + Object.values(category).reduce((catSum, val) => catSum + val, 0),
+      0
     );
-    const successful = Object.values(this.stats).reduce((sum, category) => 
-      sum + (category.resolved || 0) + (category.fixed || 0) + (category.merged || 0) + (category.applied || 0), 0
+    const successful = Object.values(this.stats).reduce(
+      (sum, category) =>
+        sum +
+        (category.resolved || 0) +
+        (category.fixed || 0) +
+        (category.merged || 0) +
+        (category.applied || 0),
+      0
     );
     return total > 0 ? Math.round((successful / total) * 100) : 0;
   }

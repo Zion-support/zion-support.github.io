@@ -20,40 +20,44 @@ const SearchBar: React.FC = () => {
   const searchData: SearchResult[] = [
     {
       title: 'Micro SaaS Products',
-      description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',
+      description:
+        'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',
       url: '/micro-saas',
-      type: 'category'
+      type: 'category',
     },
     {
       title: 'AI Services',
-      description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',
+      description:
+        'Advanced AI solutions including Computer Vision, Fraud Detection, and more',
       url: '/ai-services',
-      type: 'category'
+      type: 'category',
     },
     {
       title: 'IT Services',
-      description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',
+      description:
+        'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',
       url: '/it-services',
-      type: 'category'
+      type: 'category',
     },
     {
       title: 'Cloud Cost Guard',
-      description: 'FinOps Assistant for anomaly detection and cost optimization',
+      description:
+        'FinOps Assistant for anomaly detection and cost optimization',
       url: '/services',
-      type: 'service'
+      type: 'service',
     },
     {
       title: 'Contact Us',
       description: 'Get in touch with our experts for consultation and quotes',
       url: '/contact',
-      type: 'page'
+      type: 'page',
     },
     {
       title: 'Pricing',
       description: 'View our transparent pricing for all services',
       url: '/pricing',
-      type: 'page'
-    }
+      type: 'page',
+    },
   ];
 
   const handleSearch = async (searchQuery: string) => {
@@ -64,15 +68,16 @@ const SearchBar: React.FC = () => {
     }
 
     setIsLoading(true);
-    
+
     // Simulate API delay
     await new Promise(resolve => setTimeout(resolve, 300));
-    
-    const filteredResults = searchData.filter(item =>
-      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.description.toLowerCase().includes(searchQuery.toLowerCase())
+
+    const filteredResults = searchData.filter(
+      item =>
+        item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.description.toLowerCase().includes(searchQuery.toLowerCase())
     );
-    
+
     setResults(filteredResults);
     setIsOpen(true);
     setIsLoading(false);
@@ -98,7 +103,10 @@ const SearchBar: React.FC = () => {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+      if (
+        searchRef.current &&
+        !searchRef.current.contains(event.target as Node)
+      ) {
         setIsOpen(false);
       }
     };
@@ -161,14 +169,25 @@ const SearchBar: React.FC = () => {
                   aria-selected="false"
                 >
                   <div className="flex items-start gap-3">
-                    <div className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${
-                      result.type === 'service' ? 'bg-blue-500' :
-                      result.type === 'category' ? 'bg-purple-500' : 'bg-green-500'
-                    }`} />
+                    <div
+                      className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${
+                        result.type === 'service'
+                          ? 'bg-blue-500'
+                          : result.type === 'category'
+                            ? 'bg-purple-500'
+                            : 'bg-green-500'
+                      }`}
+                    />
                     <div>
-                      <h3 className="font-semibold text-white">{result.title}</h3>
-                      <p className="text-sm text-slate-300 mt-1">{result.description}</p>
-                      <span className="text-xs text-slate-400 capitalize">{result.type}</span>
+                      <h3 className="font-semibold text-white">
+                        {result.title}
+                      </h3>
+                      <p className="text-sm text-slate-300 mt-1">
+                        {result.description}
+                      </p>
+                      <span className="text-xs text-slate-400 capitalize">
+                        {result.type}
+                      </span>
                     </div>
                   </div>
                 </Link>
@@ -177,7 +196,9 @@ const SearchBar: React.FC = () => {
           ) : query && !isLoading ? (
             <div className="px-4 py-8 text-center text-slate-400">
               <p>No results found for "{query}"</p>
-              <p className="text-sm mt-1">Try different keywords or browse our services</p>
+              <p className="text-sm mt-1">
+                Try different keywords or browse our services
+              </p>
             </div>
           ) : null}
         </div>

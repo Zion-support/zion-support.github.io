@@ -24,10 +24,10 @@ class UltimateAutomationFactory {
   async runCommand(command, description) {
     try {
       this.log(`Running: ${description}`);
-      const output = execSync(command, { 
-        encoding: 'utf8', 
+      const output = execSync(command, {
+        encoding: 'utf8',
         cwd: process.cwd(),
-        stdio: 'pipe'
+        stdio: 'pipe',
       });
       this.log(`✅ ${description} completed successfully`);
       return { success: true, output };
@@ -39,19 +39,40 @@ class UltimateAutomationFactory {
 
   async runAllAutomations() {
     this.log('🚀 Starting Ultimate Automation Factory...');
-    
+
     const automations = [
-      { command: 'node automation/master-automation.cjs start', description: 'Master Automation' },
-      { command: 'node scripts/automation/ai-intelligent-code-analyzer.cjs', description: 'AI Code Analyzer' },
-      { command: 'node scripts/automation/intelligent-git-workflow.cjs', description: 'Git Workflow' },
-      { command: 'node scripts/automation/advanced-performance-optimizer.cjs', description: 'Performance Optimizer' },
-      { command: 'node scripts/automation/advanced-monitoring-alerting.cjs', description: 'Monitoring & Alerting' },
-      { command: 'node scripts/automation/smart-deployment-merge.cjs', description: 'Smart Deployment' }
+      {
+        command: 'node automation/master-automation.cjs start',
+        description: 'Master Automation',
+      },
+      {
+        command: 'node scripts/automation/ai-intelligent-code-analyzer.cjs',
+        description: 'AI Code Analyzer',
+      },
+      {
+        command: 'node scripts/automation/intelligent-git-workflow.cjs',
+        description: 'Git Workflow',
+      },
+      {
+        command: 'node scripts/automation/advanced-performance-optimizer.cjs',
+        description: 'Performance Optimizer',
+      },
+      {
+        command: 'node scripts/automation/advanced-monitoring-alerting.cjs',
+        description: 'Monitoring & Alerting',
+      },
+      {
+        command: 'node scripts/automation/smart-deployment-merge.cjs',
+        description: 'Smart Deployment',
+      },
     ];
 
     const results = [];
     for (const automation of automations) {
-      const result = await this.runCommand(automation.command, automation.description);
+      const result = await this.runCommand(
+        automation.command,
+        automation.description
+      );
       results.push({ ...automation, result });
     }
 
@@ -61,15 +82,15 @@ class UltimateAutomationFactory {
 
   async generateComprehensiveReport() {
     this.log('📊 Generating comprehensive automation report...');
-    
+
     const report = {
       timestamp: new Date().toISOString(),
       automations: await this.runAllAutomations(),
       summary: {
         totalAutomations: 6,
         successfulAutomations: 0,
-        failedAutomations: 0
-      }
+        failedAutomations: 0,
+      },
     };
 
     // Calculate summary
@@ -82,9 +103,12 @@ class UltimateAutomationFactory {
     });
 
     // Save report
-    const reportFile = path.join(this.logsDir, `ultimate-automation-report-${Date.now()}.json`);
+    const reportFile = path.join(
+      this.logsDir,
+      `ultimate-automation-report-${Date.now()}.json`
+    );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    
+
     this.log(`📄 Comprehensive report saved to: ${reportFile}`);
     return report;
   }
@@ -100,12 +124,15 @@ class UltimateAutomationFactory {
 // CLI interface
 if (import.meta.url === `file://${process.argv[1]}`) {
   const factory = new UltimateAutomationFactory();
-  factory.start().then(report => {
-    process.exit(0);
-  }).catch(error => {
-    console.error('Ultimate Automation Factory failed:', error);
-    process.exit(1);
-  });
+  factory
+    .start()
+    .then(report => {
+      process.exit(0);
+    })
+    .catch(error => {
+      console.error('Ultimate Automation Factory failed:', error);
+      process.exit(1);
+    });
 }
 
 export default UltimateAutomationFactory;

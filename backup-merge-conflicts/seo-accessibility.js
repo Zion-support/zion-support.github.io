@@ -18,38 +18,37 @@ class SEOAccessibilityChecker {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
     // // );
-    
+
     // Ensure log directory exists
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursive: true });
     }
-    
+
     fs.appendFileSync(this.logFile, logMessage);
   }
 
   async runChecks() {
     try {
       this.log('Starting SEO and accessibility checks...');
-      
+
       if (this.checkSEO) {
         await this.checkSEOIssues();
       }
-      
+
       if (this.checkAccessibility) {
         await this.checkAccessibilityIssues();
       }
-      
+
       if (this.checkPerformance) {
         await this.checkPerformanceIssues();
       }
-      
+
       if (this.lighthouseAudit) {
         await this.runLighthouseAudit();
       }
 
       this.log('SEO and accessibility checks completed');
-
     } catch (error) {
       this.log(`Check error: ${error.message}`);
     }
@@ -58,24 +57,28 @@ class SEOAccessibilityChecker {
   async checkSEOIssues() {
     try {
       this.log('Checking SEO issues...');
-      
+
       const pagesDir = path.join(process.cwd(), 'pages');
       const componentsDir = path.join(process.cwd(), 'components');
-      
+
       let issues = [];
-      
+
       // Check pages for SEO issues
       if (fs.existsSync(pagesDir)) {
         const pageFiles = this.findPageFiles(pagesDir);
-        issues = issues.concat(await this.analyzeFilesForSEO(pageFiles, 'page'));
+        issues = issues.concat(
+          await this.analyzeFilesForSEO(pageFiles, 'page')
+        );
       }
-      
+
       // Check components for SEO issues
       if (fs.existsSync(componentsDir)) {
         const componentFiles = this.findComponentFiles(componentsDir);
-        issues = issues.concat(await this.analyzeFilesForSEO(componentFiles, 'component'));
+        issues = issues.concat(
+          await this.analyzeFilesForSEO(componentFiles, 'component')
+        );
       }
-      
+
       if (issues.length > 0) {
         this.log(`Found ${issues.length} SEO issues:`);
         issues.forEach(issue => {
@@ -84,7 +87,6 @@ class SEOAccessibilityChecker {
       } else {
         this.log('No SEO issues found');
       }
-
     } catch (error) {
       this.log(`SEO check error: ${error.message}`);
     }
@@ -93,24 +95,28 @@ class SEOAccessibilityChecker {
   async checkAccessibilityIssues() {
     try {
       this.log('Checking accessibility issues...');
-      
+
       const pagesDir = path.join(process.cwd(), 'pages');
       const componentsDir = path.join(process.cwd(), 'components');
-      
+
       let issues = [];
-      
+
       // Check pages for accessibility issues
       if (fs.existsSync(pagesDir)) {
         const pageFiles = this.findPageFiles(pagesDir);
-        issues = issues.concat(await this.analyzeFilesForAccessibility(pageFiles, 'page'));
+        issues = issues.concat(
+          await this.analyzeFilesForAccessibility(pageFiles, 'page')
+        );
       }
-      
+
       // Check components for accessibility issues
       if (fs.existsSync(componentsDir)) {
         const componentFiles = this.findComponentFiles(componentsDir);
-        issues = issues.concat(await this.analyzeFilesForAccessibility(componentFiles, 'component'));
+        issues = issues.concat(
+          await this.analyzeFilesForAccessibility(componentFiles, 'component')
+        );
       }
-      
+
       if (issues.length > 0) {
         this.log(`Found ${issues.length} accessibility issues:`);
         issues.forEach(issue => {
@@ -119,7 +125,6 @@ class SEOAccessibilityChecker {
       } else {
         this.log('No accessibility issues found');
       }
-
     } catch (error) {
       this.log(`Accessibility check error: ${error.message}`);
     }
@@ -128,7 +133,7 @@ class SEOAccessibilityChecker {
   async checkPerformanceIssues() {
     try {
       this.log('Checking performance issues...');
-      
+
       // Check for large images
       const publicDir = path.join(process.cwd(), 'public');
       if (fs.existsSync(publicDir)) {
@@ -136,11 +141,13 @@ class SEOAccessibilityChecker {
         if (largeImages.length > 0) {
           this.log(`Found ${largeImages.length} large images:`);
           largeImages.forEach(image => {
-            this.log(`  - ${image.path}: ${(image.size / 1024 / 1024).toFixed(2)}MB`);
+            this.log(
+              `  - ${image.path}: ${(image.size / 1024 / 1024).toFixed(2)}MB`
+            );
           });
         }
       }
-      
+
       // Check for unused CSS
       const stylesDir = path.join(process.cwd(), 'styles');
       if (fs.existsSync(stylesDir)) {
@@ -152,7 +159,6 @@ class SEOAccessibilityChecker {
           });
         }
       }
-
     } catch (error) {
       this.log(`Performance check error: ${error.message}`);
     }
@@ -161,7 +167,7 @@ class SEOAccessibilityChecker {
   async runLighthouseAudit() {
     try {
       this.log('Running Lighthouse audit...');
-      
+
       // Check if lighthouse is installed
       try {
         execSync('lighthouse --version', { encoding: 'utf8' });
@@ -169,34 +175,38 @@ class SEOAccessibilityChecker {
         this.log('Lighthouse not installed. Installing...');
         execSync('npm install -g lighthouse', { encoding: 'utf8' });
       }
-      
+
       // Run lighthouse audit
       const url = 'http://localhost:3000';
-      const outputFile = path.join(process.cwd(), 'logs/pm2/lighthouse-report.json');
-      
+      const outputFile = path.join(
+        process.cwd(),
+        'logs/pm2/lighthouse-report.json'
+      );
+
       try {
-        execSync(`lighthouse ${url} --output=json --output-path=${outputFile} --chrome-flags="--headless"`, { 
-          encoding: 'utf8',
-          timeout: 60000 // 60 seconds timeout
-        });
-        
+        execSync(
+          `lighthouse ${url} --output=json --output-path=${outputFile} --chrome-flags="--headless"`,
+          {
+            encoding: 'utf8',
+            timeout: 60000, // 60 seconds timeout
+          }
+        );
+
         this.log(`Lighthouse audit completed. Report saved to ${outputFile}`);
-        
+
         // Parse and log key metrics
         if (fs.existsSync(outputFile)) {
           const report = JSON.parse(fs.readFileSync(outputFile, 'utf8'));
           const scores = report.categories;
-          
+
           this.log('Lighthouse Scores:');
           Object.entries(scores).forEach(([category, data]) => {
             this.log(`  ${category}: ${Math.round(data.score * 100)}`);
           });
         }
-        
       } catch (error) {
         this.log(`Lighthouse audit failed: ${error.message}`);
       }
-
     } catch (error) {
       this.log(`Lighthouse audit error: ${error.message}`);
     }
@@ -204,18 +214,23 @@ class SEOAccessibilityChecker {
 
   findPageFiles(dir) {
     const files = [];
-    
+
     function scanDirectory(currentDir) {
       try {
         const items = fs.readdirSync(currentDir);
-        
+
         items.forEach(item => {
           const fullPath = path.join(currentDir, item);
           const stat = fs.statSync(fullPath);
-          
+
           if (stat.isDirectory()) {
             scanDirectory(fullPath);
-          } else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {
+          } else if (
+            item.endsWith('.js') ||
+            item.endsWith('.jsx') ||
+            item.endsWith('.ts') ||
+            item.endsWith('.tsx')
+          ) {
             files.push(fullPath);
           }
         });
@@ -223,22 +238,22 @@ class SEOAccessibilityChecker {
         // Skip directories that can't be read
       }
     }
-    
+
     scanDirectory(dir);
     return files;
   }
 
   findComponentFiles(dir) {
     const files = [];
-    
+
     function scanDirectory(currentDir) {
       try {
         const items = fs.readdirSync(currentDir);
-        
+
         items.forEach(item => {
           const fullPath = path.join(currentDir, item);
           const stat = fs.statSync(fullPath);
-          
+
           if (stat.isDirectory()) {
             scanDirectory(fullPath);
           } else if (item.endsWith('.jsx') || item.endsWith('.tsx')) {
@@ -249,35 +264,43 @@ class SEOAccessibilityChecker {
         // Skip directories that can't be read
       }
     }
-    
+
     scanDirectory(dir);
     return files;
   }
 
   async analyzeFilesForSEO(files, type) {
     const issues = [];
-    
+
     for (const file of files) {
       try {
         const content = fs.readFileSync(file, 'utf8');
         const relativePath = path.relative(process.cwd(), file);
-        
+
         // Check for missing meta tags
-        if (type === 'page' && !content.includes('Head') && !content.includes('head')) {
+        if (
+          type === 'page' &&
+          !content.includes('Head') &&
+          !content.includes('head')
+        ) {
           issues.push({
             file: relativePath,
-            message: 'Missing Head component for SEO meta tags'
+            message: 'Missing Head component for SEO meta tags',
           });
         }
-        
+
         // Check for missing title
-        if (type === 'page' && !content.includes('title') && !content.includes('Title')) {
+        if (
+          type === 'page' &&
+          !content.includes('title') &&
+          !content.includes('Title')
+        ) {
           issues.push({
             file: relativePath,
-            message: 'Missing page title'
+            message: 'Missing page title',
           });
         }
-        
+
         // Check for missing alt attributes on images
         const imgRegex = /<img[^>]*>/g;
         const imgMatches = content.match(imgRegex);
@@ -286,28 +309,27 @@ class SEOAccessibilityChecker {
             if (!img.includes('alt=')) {
               issues.push({
                 file: relativePath,
-                message: 'Image missing alt attribute'
+                message: 'Image missing alt attribute',
               });
             }
           });
         }
-        
       } catch (error) {
         // Skip files that can't be read
       }
     }
-    
+
     return issues;
   }
 
   async analyzeFilesForAccessibility(files, type) {
     const issues = [];
-    
+
     for (const file of files) {
       try {
         const content = fs.readFileSync(file, 'utf8');
         const relativePath = path.relative(process.cwd(), file);
-        
+
         // Check for missing alt attributes
         const imgRegex = /<img[^>]*>/g;
         const imgMatches = content.match(imgRegex);
@@ -316,26 +338,29 @@ class SEOAccessibilityChecker {
             if (!img.includes('alt=')) {
               issues.push({
                 file: relativePath,
-                message: 'Image missing alt attribute for accessibility'
+                message: 'Image missing alt attribute for accessibility',
               });
             }
           });
         }
-        
+
         // Check for missing aria labels on interactive elements
         const buttonRegex = /<button[^>]*>/g;
         const buttonMatches = content.match(buttonRegex);
         if (buttonMatches) {
           buttonMatches.forEach(button => {
-            if (!button.includes('aria-label') && !button.includes('aria-labelledby')) {
+            if (
+              !button.includes('aria-label') &&
+              !button.includes('aria-labelledby')
+            ) {
               issues.push({
                 file: relativePath,
-                message: 'Button missing aria-label for accessibility'
+                message: 'Button missing aria-label for accessibility',
               });
             }
           });
         }
-        
+
         // Check for proper heading hierarchy
         const headingRegex = /<h([1-6])[^>]*>/g;
         const headingMatches = content.match(headingRegex);
@@ -346,41 +371,43 @@ class SEOAccessibilityChecker {
             if (level > lastLevel + 1) {
               issues.push({
                 file: relativePath,
-                message: `Heading hierarchy issue: h${level} after h${lastLevel}`
+                message: `Heading hierarchy issue: h${level} after h${lastLevel}`,
               });
             }
             lastLevel = level;
           });
         }
-        
       } catch (error) {
         // Skip files that can't be read
       }
     }
-    
+
     return issues;
   }
 
   findLargeImages(dir) {
     const largeImages = [];
     const maxSize = 1024 * 1024; // 1MB
-    
+
     function scanDirectory(currentDir) {
       try {
         const items = fs.readdirSync(currentDir);
-        
+
         items.forEach(item => {
           const fullPath = path.join(currentDir, item);
           const stat = fs.statSync(fullPath);
-          
+
           if (stat.isDirectory()) {
             scanDirectory(fullPath);
           } else if (stat.isFile()) {
             const ext = path.extname(item).toLowerCase();
-            if (['.jpg.jpeg.png.gif.webp'].includes(ext) && stat.size > maxSize) {
+            if (
+              ['.jpg.jpeg.png.gif.webp'].includes(ext) &&
+              stat.size > maxSize
+            ) {
               largeImages.push({
                 path: path.relative(process.cwd(), fullPath),
-                size: stat.size
+                size: stat.size,
               });
             }
           }
@@ -389,22 +416,22 @@ class SEOAccessibilityChecker {
         // Skip directories that can't be read
       }
     }
-    
+
     scanDirectory(dir);
     return largeImages;
   }
 
   async findUnusedCSS(dir) {
     const cssFiles = [];
-    
+
     function scanDirectory(currentDir) {
       try {
         const items = fs.readdirSync(currentDir);
-        
+
         items.forEach(item => {
           const fullPath = path.join(currentDir, item);
           const stat = fs.statSync(fullPath);
-          
+
           if (stat.isDirectory()) {
             scanDirectory(fullPath);
           } else if (item.endsWith('.css')) {
@@ -415,9 +442,9 @@ class SEOAccessibilityChecker {
         // Skip directories that can't be read
       }
     }
-    
+
     scanDirectory(dir);
-    
+
     // This is a simplified check - in practice, you'd use tools like PurgeCSS
     return cssFiles.filter(file => {
       try {
@@ -431,14 +458,17 @@ class SEOAccessibilityChecker {
 
   async start() {
     this.log('SEO and accessibility checker service started');
-    
+
     // Run checks immediately
     await this.runChecks();
-    
+
     // Set up interval for periodic checks
-    setInterval(async () => {
-      await this.runChecks();
-    }, 4 * 60 * 60 * 1000); // Every 4 hours
+    setInterval(
+      async () => {
+        await this.runChecks();
+      },
+      4 * 60 * 60 * 1000
+    ); // Every 4 hours
   }
 }
 

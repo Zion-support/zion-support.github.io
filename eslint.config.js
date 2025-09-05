@@ -138,13 +138,25 @@ export default [
       'public/**',
 
       // Root-level noisy files
-      'api/***.js.*.js*.ts*.tsx*.jsxjest.config.*fix-*.jsfix-*.jsx',
+      'api/**/*.js',
+      '**/*.js',
+      '**/*.ts',
+      '**/*.tsx',
+      '**/*.jsx',
+      'jest.config.*',
+      'fix-*.js',
+      'fix-*.jsx',
 
       // Misc root configs that were being linted
-      '.eslintrc.js.eslintrc.cjs.eslintrc.disabled.js.prettierrc.js',
+      '.eslintrc.js',
+      '.eslintrc.cjs',
+      '.eslintrc.disabled.js',
+      '.prettierrc.js',
 
       // Page backups
-      'pages.__backup/**pages-disabled/**pages.disabled_auto/**'
+      'pages.__backup/**',
+      'pages-disabled/**',
+      'pages.disabled_auto/**'
     ]
   }
 ];

@@ -23,7 +23,8 @@ export default function AccessibilityEnhancer() {
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-md focus:shadow-lg';
+    skipLink.className =
+      'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-md focus:shadow-lg';
     skipLink.style.cssText = `
       position: absolute;
       top: -40px;
@@ -50,14 +51,16 @@ export default function AccessibilityEnhancer() {
     // Enhance keyboard navigation
     const enhanceKeyboardNavigation = () => {
       // Add keyboard navigation for custom elements
-      const interactiveElements = document.querySelectorAll('[role="button"], [role="tab"], [role="menuitem"]');
+      const interactiveElements = document.querySelectorAll(
+        '[role="button"], [role="tab"], [role="menuitem"]'
+      );
 
-      interactiveElements.forEach((element) => {
+      interactiveElements.forEach(element => {
         if (!element.getAttribute('tabindex')) {
           element.setAttribute('tabindex0');
         }
         // Add keyboard event handlers
-        element.addEventListener('keydown', (e) => {
+        element.addEventListener('keydown', e => {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
             (element as HTMLElement).click();
@@ -99,12 +102,12 @@ export default function AccessibilityEnhancer() {
       const originalPushState = window.history.pushState;
       const originalReplaceState = window.history.replaceState;
 
-      window.history.pushState = function(...args) {
+      window.history.pushState = function (...args) {
         originalPushState.apply(this, args);
         setTimeout(handleRouteChange, 100);
       };
 
-      window.history.replaceState = function(...args) {
+      window.history.replaceState = function (...args) {
         originalReplaceState.apply(this, args);
         setTimeout(handleRouteChange, 100);
       };

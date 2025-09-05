@@ -9,25 +9,25 @@ console.log('🔧 Starting syntax error fixes...');
 function fixSyntaxErrors(content) {
   // Fix trailing commas in object properties
   content = content.replace(/,(\s*[}\]])/g, '$1');
-  
+
   // Fix semicolons after commas
   content = content.replace(/,;/g, ',');
-  
+
   // Fix double commas
   content = content.replace(/,+/g, ',');
-  
+
   // Fix malformed import statements
   content = content.replace(/import\s+([^,]+),\s*$/gm, 'import $1;');
-  
+
   // Fix object property syntax
   content = content.replace(/"([^"]+)":\s*([^,}]+),;/g, '"$1": $2,');
-  
+
   // Fix array syntax
   content = content.replace(/\[([^\]]+),\]/g, '[$1]');
-  
+
   // Fix function parameters
   content = content.replace(/\(\s*([^)]+),\s*\)/g, '($1)');
-  
+
   return content;
 }
 
@@ -38,7 +38,7 @@ const filesToFix = [
   'components/OptimizedImage.tsx',
   'components/Sidebar.tsx',
   'components/SimpleLayout.tsx',
-  'components/SkeletonLoader.tsx'
+  'components/SkeletonLoader.tsx',
 ];
 
 filesToFix.forEach(file => {
@@ -48,7 +48,7 @@ filesToFix.forEach(file => {
       let content = fs.readFileSync(filePath, 'utf8');
       const originalContent = content;
       content = fixSyntaxErrors(content);
-      
+
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content);
         console.log(`✅ Fixed: ${file}`);

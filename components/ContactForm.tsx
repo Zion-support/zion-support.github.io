@@ -17,17 +17,23 @@ const ContactForm: React.FC = () => {
     company: '',
     phone: '',
     service: '',
-    message: ''
+    message: '',
   });
-  
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    'idle' | 'success' | 'error'
+  >('idle');
+
+  const handleInputChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -46,7 +52,7 @@ const ContactForm: React.FC = () => {
         company: '',
         phone: '',
         service: '',
-        message: ''
+        message: '',
       });
     } catch {
       setSubmitStatus('error');
@@ -56,10 +62,17 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
+    <form
+      onSubmit={handleSubmit}
+      className="space-y-6"
+      aria-label="Contact form"
+    >
       <div className="grid md:grid-cols-2 gap-6">
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">
+          <label
+            htmlFor="name"
+            className="block text-sm font-medium text-slate-300 mb-2"
+          >
             Full Name *
           </label>
           <input
@@ -76,7 +89,10 @@ const ContactForm: React.FC = () => {
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-2">
+          <label
+            htmlFor="email"
+            className="block text-sm font-medium text-slate-300 mb-2"
+          >
             Email Address *
           </label>
           <input
@@ -95,7 +111,10 @@ const ContactForm: React.FC = () => {
 
       <div className="grid md:grid-cols-2 gap-6">
         <div>
-          <label htmlFor="company" className="block text-sm font-medium text-slate-300 mb-2">
+          <label
+            htmlFor="company"
+            className="block text-sm font-medium text-slate-300 mb-2"
+          >
             Company
           </label>
           <input
@@ -110,7 +129,10 @@ const ContactForm: React.FC = () => {
         </div>
 
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-slate-300 mb-2">
+          <label
+            htmlFor="phone"
+            className="block text-sm font-medium text-slate-300 mb-2"
+          >
             Phone Number
           </label>
           <input
@@ -126,7 +148,10 @@ const ContactForm: React.FC = () => {
       </div>
 
       <div>
-        <label htmlFor="service" className="block text-sm font-medium text-slate-300 mb-2">
+        <label
+          htmlFor="service"
+          className="block text-sm font-medium text-slate-300 mb-2"
+        >
           Service Interest
         </label>
         <select
@@ -146,7 +171,10 @@ const ContactForm: React.FC = () => {
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-2">
+        <label
+          htmlFor="message"
+          className="block text-sm font-medium text-slate-300 mb-2"
+        >
           Message *
         </label>
         <textarea
@@ -163,14 +191,21 @@ const ContactForm: React.FC = () => {
       </div>
 
       {submitStatus === 'success' && (
-        <div className="p-4 bg-green-900/50 border border-green-500 rounded-lg text-green-300" role="alert">
+        <div
+          className="p-4 bg-green-900/50 border border-green-500 rounded-lg text-green-300"
+          role="alert"
+        >
           Thank you for your message! We'll get back to you within 24 hours.
         </div>
       )}
 
       {submitStatus === 'error' && (
-        <div className="p-4 bg-red-900/50 border border-red-500 rounded-lg text-red-300" role="alert">
-          There was an error sending your message. Please try again or contact us directly.
+        <div
+          className="p-4 bg-red-900/50 border border-red-500 rounded-lg text-red-300"
+          role="alert"
+        >
+          There was an error sending your message. Please try again or contact
+          us directly.
         </div>
       )}
 

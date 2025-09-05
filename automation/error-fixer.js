@@ -1,15 +1,15 @@
 #!/usr/bin/env node
-import fs from "fs";
-import path from "path";
-import { execSync } from "child_process";
-import { fileURLToPath } from "url";
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 class ErrorFixer {
   constructor() {
-    this.logFile = path.join(__dirname, "logs", "error-fixer.log");
+    this.logFile = path.join(__dirname, 'logs', 'error-fixer.log');
     this.fixesApplied = [];
     this.ensureDirectories();
   }
@@ -21,7 +21,7 @@ class ErrorFixer {
     }
   }
 
-  log(message, level = "INFO") {
+  log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     // // fs.appendFileSync(this.logFile, logMessage);
@@ -29,55 +29,56 @@ class ErrorFixer {
 
   async fixLintErrors() {
     try {
-      this.log("Fixing lint errors...");
-      execSync("npm run lint:fix", { stdio: 'pipe' });
-      this.fixesApplied.push("Lint errors fixed");
-      this.log("✓ Lint errors fixed");
+      this.log('Fixing lint errors...');
+      execSync('npm run lint:fix', { stdio: 'pipe' });
+      this.fixesApplied.push('Lint errors fixed');
+      this.log('✓ Lint errors fixed');
     } catch (error) {
-      this.log(`Failed to fix lint errors: ${error.message}`, "ERROR");
+      this.log(`Failed to fix lint errors: ${error.message}`, 'ERROR');
     }
   }
 
   async fixTypeScriptErrors() {
     try {
-      this.log("Checking TypeScript errors...");
-      execSync("npx tsc --noEmit --skipLibCheck", { stdio: 'pipe' });
-      this.log("✓ No TypeScript errors found");
+      this.log('Checking TypeScript errors...');
+      execSync('npx tsc --noEmit --skipLibCheck', { stdio: 'pipe' });
+      this.log('✓ No TypeScript errors found');
     } catch (error) {
-      this.log(`TypeScript errors found: ${error.message}`, "WARN");
+      this.log(`TypeScript errors found: ${error.message}`, 'WARN');
       // Could add automatic fixes here
     }
   }
 
   async fixBuildErrors() {
     try {
-      this.log("Attempting to fix build errors...");
-      
+      this.log('Attempting to fix build errors...');
+
       // Try to fix common build issues
       await this.fixLintErrors();
       await this.fixTypeScriptErrors();
-      
+
       // Try building again
-      execSync("npm run build", { stdio: 'pipe' });
-      this.log("✓ Build successful after fixes");
-      this.fixesApplied.push("Build errors fixed");
+      execSync('npm run build', { stdio: 'pipe' });
+      this.log('✓ Build successful after fixes');
+      this.fixesApplied.push('Build errors fixed');
     } catch (error) {
-      this.log(`Build still failing: ${error.message}`, "ERROR");
+      this.log(`Build still failing: ${error.message}`, 'ERROR');
     }
   }
 
   async run() {
-    this.log("🔧 Starting Error Fixer");
-    
+    this.log('🔧 Starting Error Fixer');
+
     try {
       await this.fixBuildErrors();
-      
-      this.log("=" * 50);
-      this.log(`🎯 Error Fixer completed. Fixes applied: ${this.fixesApplied.length}`);
+
+      this.log('=' * 50);
+      this.log(
+        `🎯 Error Fixer completed. Fixes applied: ${this.fixesApplied.length}`
+      );
       this.fixesApplied.forEach(fix => this.log(`  ✓ ${fix}`));
-      
     } catch (error) {
-      this.log(`❌ Error Fixer failed: ${error.message}`, "ERROR");
+      this.log(`❌ Error Fixer failed: ${error.message}`, 'ERROR');
     }
   }
 }

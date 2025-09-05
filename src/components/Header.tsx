@@ -10,7 +10,7 @@ const Header = () => {
   const navigation = [
     {
       name: 'Home',
-      href: '/'
+      href: '/',
     },
     {
       name: 'Services',
@@ -21,8 +21,8 @@ const Header = () => {
         { name: 'Micro SaaS', href: '/micro-saas' },
         { name: 'Cloud Solutions', href: '/solutions/cloud-migration' },
         { name: 'Cybersecurity', href: '/services/cybersecurity' },
-        { name: 'Data Analytics', href: '/services/data-analytics' }
-      ]
+        { name: 'Data Analytics', href: '/services/data-analytics' },
+      ],
     },
     {
       name: 'Solutions',
@@ -33,8 +33,8 @@ const Header = () => {
         { name: 'Finance', href: '/solutions/finance' },
         { name: 'Government', href: '/solutions/government' },
         { name: 'Retail', href: '/solutions/retail' },
-        { name: 'Education', href: '/solutions/education' }
-      ]
+        { name: 'Education', href: '/solutions/education' },
+      ],
     },
     {
       name: 'Industries',
@@ -44,8 +44,8 @@ const Header = () => {
         { name: 'Healthcare', href: '/industries/healthcare' },
         { name: 'Manufacturing', href: '/industries/manufacturing' },
         { name: 'Retail', href: '/industries/retail' },
-        { name: 'Government', href: '/industries/government' }
-      ]
+        { name: 'Government', href: '/industries/government' },
+      ],
     },
     {
       name: 'Company',
@@ -55,8 +55,8 @@ const Header = () => {
         { name: 'Our Team', href: '/team' },
         { name: 'Careers', href: '/careers' },
         { name: 'Partners', href: '/partners' },
-        { name: 'Case Studies', href: '/case-studies' }
-      ]
+        { name: 'Case Studies', href: '/case-studies' },
+      ],
     },
     {
       name: 'Resources',
@@ -66,13 +66,13 @@ const Header = () => {
         { name: 'White Papers', href: '/white-papers' },
         { name: 'Webinars', href: '/webinars' },
         { name: 'Tutorials', href: '/tutorials' },
-        { name: 'API Documentation', href: '/api-docs' }
-      ]
+        { name: 'API Documentation', href: '/api-docs' },
+      ],
     },
     {
       name: 'Contact',
-      href: '/contact'
-    }
+      href: '/contact',
+    },
   ];
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -103,7 +103,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Main Navigation */}
       <nav className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
@@ -113,14 +113,16 @@ const Header = () => {
               <span className="text-white font-bold text-xl">Z</span>
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-gray-900">Zion Tech Group</h1>
+              <h1 className="text-2xl font-bold text-gray-900">
+                Zion Tech Group
+              </h1>
               <p className="text-sm text-gray-600">AI & Technology Solutions</p>
             </div>
           </Link>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            {navigation.map((item) => (
+            {navigation.map(item => (
               <div key={item.name} className="relative group">
                 <button
                   onClick={() => item.dropdown && toggleDropdown(item.name)}
@@ -128,12 +130,14 @@ const Header = () => {
                 >
                   <Link href={item.href}>{item.name}</Link>
                   {item.dropdown && (
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                      activeDropdown === item.name ? 'rotate-180' : ''
-                    }`} />
+                    <ChevronDown
+                      className={`w-4 h-4 transition-transform duration-200 ${
+                        activeDropdown === item.name ? 'rotate-180' : ''
+                      }`}
+                    />
                   )}
                 </button>
-                
+
                 {/* Dropdown Menu */}
                 {item.dropdown && (
                   <AnimatePresence>
@@ -144,7 +148,7 @@ const Header = () => {
                         exit={{ opacity: 0, y: 10 }}
                         className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50"
                       >
-                        {item.dropdown.map((subItem) => (
+                        {item.dropdown.map(subItem => (
                           <Link
                             key={subItem.name}
                             href={subItem.href}
@@ -161,16 +165,20 @@ const Header = () => {
               </div>
             ))}
           </div>
-          
+
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
             className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
-        
+
         {/* Mobile Navigation */}
         <AnimatePresence>
           {isMenuOpen && (
@@ -180,7 +188,7 @@ const Header = () => {
               exit={{ opacity: 0, height: 0 }}
               className="lg:hidden mt-4 border-t border-gray-200 pt-4"
             >
-              {navigation.map((item) => (
+              {navigation.map(item => (
                 <div key={item.name} className="mb-2">
                   <div className="flex items-center justify-between">
                     <Link
@@ -195,15 +203,17 @@ const Header = () => {
                         onClick={() => toggleDropdown(item.name)}
                         className="p-1"
                       >
-                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                          activeDropdown === item.name ? 'rotate-180' : ''
-                        }`} />
+                        <ChevronDown
+                          className={`w-4 h-4 transition-transform duration-200 ${
+                            activeDropdown === item.name ? 'rotate-180' : ''
+                          }`}
+                        />
                       </button>
                     )}
                   </div>
                   {item.dropdown && activeDropdown === item.name && (
                     <div className="ml-4 mt-2 space-y-1">
-                      {item.dropdown.map((subItem) => (
+                      {item.dropdown.map(subItem => (
                         <Link
                           key={subItem.name}
                           href={subItem.href}

@@ -1,15 +1,15 @@
 #!/usr/bin/env node
-import fs from "fs";
-import path from "path";
-import { execSync } from "child_process";
-import { fileURLToPath } from "url";
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 class SecurityScanner {
   constructor() {
-    this.logFile = path.join(__dirname, "logs", "security-scanner.log");
+    this.logFile = path.join(__dirname, 'logs', 'security-scanner.log');
     this.vulnerabilities = [];
     this.ensureDirectories();
   }
@@ -21,7 +21,7 @@ class SecurityScanner {
     }
   }
 
-  log(message, level = "INFO") {
+  log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     // // fs.appendFileSync(this.logFile, logMessage);
@@ -29,77 +29,86 @@ class SecurityScanner {
 
   async runSecurityAudit() {
     try {
-      this.log("Running security audit...");
-      const output = execSync("npm audit --json", { stdio: 'pipe' });
+      this.log('Running security audit...');
+      const output = execSync('npm audit --json', { stdio: 'pipe' });
       const auditResult = JSON.parse(output.toString());
-      
+
       if (auditResult.vulnerabilities) {
         const vulnCount = Object.keys(auditResult.vulnerabilities).length;
         this.vulnerabilities.push(`${vulnCount} vulnerabilities found`);
-        this.log(`Found ${vulnCount} vulnerabilities`, "WARN");
+        this.log(`Found ${vulnCount} vulnerabilities`, 'WARN');
       } else {
-        this.log("✓ No vulnerabilities found");
+        this.log('✓ No vulnerabilities found');
       }
     } catch (error) {
-      this.log(`Security audit failed: ${error.message}`, "ERROR");
+      this.log(`Security audit failed: ${error.message}`, 'ERROR');
     }
   }
 
   async checkSecrets() {
     try {
-      this.log("Checking for exposed secrets...");
+      this.log('Checking for exposed secrets...');
       const files = this.getSourceFiles();
       let secretCount = 0;
-      
+
       files.forEach(file => {
-        const content = fs.readFileSync(file, "utf8");
+        const content = fs.readFileSync(file, 'utf8');
         const secretPatterns = [
           /api[_-]?key\s*[:=]\s*["'][^"']+["']/gi,
           /secret\s*[:=]\s*["'][^"']+["']/gi,
           /password\s*[:=]\s*["'][^"']+["']/gi,
-          /token\s*[:=]\s*["'][^"']+["']/gi
+          /token\s*[:=]\s*["'][^"']+["']/gi,
         ];
-        
+
         secretPatterns.forEach(pattern => {
           if (pattern.test(content)) {
             secretCount++;
           }
         });
       });
-      
+
       if (secretCount > 0) {
         this.vulnerabilities.push(`${secretCount} potential secrets found`);
-        this.log(`Found ${secretCount} potential secrets`, "WARN");
+        this.log(`Found ${secretCount} potential secrets`, 'WARN');
       } else {
-        this.log("✓ No exposed secrets found");
+        this.log('✓ No exposed secrets found');
       }
     } catch (error) {
-      this.log(`Secret check failed: ${error.message}`, "ERROR");
+      this.log(`Secret check failed: ${error.message}`, 'ERROR');
     }
   }
 
   getSourceFiles() {
     const files = [];
-    const srcDir = path.join(process.cwd(), "src");
-    
+    const srcDir = path.join(process.cwd(), 'src');
+
     if (fs.existsSync(srcDir)) {
-      const walkDir = (dir) => {
+      const walkDir = dir => {
         const items = fs.readdirSync(dir);
         items.forEach(item => {
           const fullPath = path.join(dir, item);
           const stat = fs.statSync(fullPath);
-          
-          if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {
+
+          if (
+            stat.isDirectory() &&
+            !item.startsWith('.') &&
+            item !== 'node_modules'
+          ) {
             walkDir(fullPath);
-          } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {
+          } else if (
+            item.endsWith('.ts') ||
+            item.endsWith('.tsx') ||
+            item.endsWith('.js') ||
+            item.endsWith('.jsx')
+          ) {
             files.push(fullPath);
           }
         });
       };
-      
+
       walkDir(srcDir);
     }
-    
+
     return files;
   }
 
@@ -108,33 +117,34 @@ class SecurityScanner {
       timestamp: new Date().toISOString(),
       vulnerabilities: this.vulnerabilities,
       recommendations: [
-        "Run npm audit fix to address vulnerabilities",
-        "Review and remove any hardcoded secrets",
-        "Use environment variables for sensitive data",
-        "Implement proper authentication and authorization",
-        "Regularly update dependencies"
-      ]
+        'Run npm audit fix to address vulnerabilities',
+        'Review and remove any hardcoded secrets',
+        'Use environment variables for sensitive data',
+        'Implement proper authentication and authorization',
+        'Regularly update dependencies',
+      ],
     };
 
-    const reportFile = path.join(__dirname, "reports", "security-report.json");
+    const reportFile = path.join(__dirname, 'reports', 'security-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`Security report saved to: ${reportFile}`);
   }
 
   async run() {
-    this.log("🔒 Starting Security Scanner");
-    
+    this.log('🔒 Starting Security Scanner');
+
     try {
       await this.runSecurityAudit();
       await this.checkSecrets();
       await this.generateReport();
-      
-      this.log("=" * 50);
-      this.log(`🎯 Security Scanner completed. Issues found: ${this.vulnerabilities.length}`);
+
+      this.log('=' * 50);
+      this.log(
+        `🎯 Security Scanner completed. Issues found: ${this.vulnerabilities.length}`
+      );
       this.vulnerabilities.forEach(vuln => this.log(`  ⚠️  ${vuln}`));
-      
     } catch (error) {
-      this.log(`❌ Security Scanner failed: ${error.message}`, "ERROR");
+      this.log(`❌ Security Scanner failed: ${error.message}`, 'ERROR');
     }
   }
 }

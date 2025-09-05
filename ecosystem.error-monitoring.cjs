@@ -9,7 +9,7 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        LOG_LEVEL: 'info'
+        LOG_LEVEL: 'info',
       },
       error_file: './automation/logs/error-monitor-error.log',
       out_file: './automation/logs/error-monitor-out.log',
@@ -17,7 +17,7 @@ module.exports = {
       time: true,
       cron_restart: '0 */6 * * *', // Restart every 6 hours
       max_restarts: 10,
-      min_uptime: '10s'
+      min_uptime: '10s',
     },
     {
       name: 'syntax-fixer',
@@ -29,14 +29,14 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        WATCH_MODE: 'true'
+        WATCH_MODE: 'true',
       },
       error_file: './automation/logs/syntax-fixer-error.log',
       out_file: './automation/logs/syntax-fixer-out.log',
       log_file: './automation/logs/syntax-fixer-combined.log',
       time: true,
       max_restarts: 5,
-      min_uptime: '30s'
+      min_uptime: '30s',
     },
     {
       name: 'lint-automation',
@@ -48,14 +48,14 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTO_FIX: 'true'
+        AUTO_FIX: 'true',
       },
       error_file: './automation/logs/lint-automation-error.log',
       out_file: './automation/logs/lint-automation-out.log',
       log_file: './automation/logs/lint-automation-combined.log',
       time: true,
       max_restarts: 5,
-      min_uptime: '30s'
+      min_uptime: '30s',
     },
     {
       name: 'build-monitor',
@@ -66,7 +66,7 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        CHECK_INTERVAL: '300000' // 5 minutes
+        CHECK_INTERVAL: '300000', // 5 minutes
       },
       error_file: './automation/logs/build-monitor-error.log',
       out_file: './automation/logs/build-monitor-out.log',
@@ -74,7 +74,7 @@ module.exports = {
       time: true,
       cron_restart: '0 */2 * * *', // Restart every 2 hours
       max_restarts: 10,
-      min_uptime: '10s'
+      min_uptime: '10s',
     },
     {
       name: 'security-scanner',
@@ -85,7 +85,7 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        SCAN_INTERVAL: '3600000' // 1 hour
+        SCAN_INTERVAL: '3600000', // 1 hour
       },
       error_file: './automation/logs/security-scanner-error.log',
       out_file: './automation/logs/security-scanner-out.log',
@@ -93,7 +93,7 @@ module.exports = {
       time: true,
       cron_restart: '0 */4 * * *', // Restart every 4 hours
       max_restarts: 5,
-      min_uptime: '10s'
+      min_uptime: '10s',
     },
     {
       name: 'performance-monitor',
@@ -104,14 +104,14 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        MONITOR_INTERVAL: '600000' // 10 minutes
+        MONITOR_INTERVAL: '600000', // 10 minutes
       },
       error_file: './automation/logs/performance-monitor-error.log',
       out_file: './automation/logs/performance-monitor-out.log',
       log_file: './automation/logs/performance-monitor-combined.log',
       time: true,
       max_restarts: 5,
-      min_uptime: '10s'
+      min_uptime: '10s',
     },
     {
       name: 'git-workflow-automator',
@@ -123,14 +123,14 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         AUTO_COMMIT: 'true',
-        AUTO_PUSH: 'true'
+        AUTO_PUSH: 'true',
       },
       error_file: './automation/logs/git-workflow-error.log',
       out_file: './automation/logs/git-workflow-out.log',
       log_file: './automation/logs/git-workflow-combined.log',
       time: true,
       max_restarts: 3,
-      min_uptime: '10s'
+      min_uptime: '10s',
     },
     {
       name: 'master-orchestrator',
@@ -141,7 +141,7 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        ORCHESTRATE_ALL: 'true'
+        ORCHESTRATE_ALL: 'true',
       },
       error_file: './automation/logs/master-orchestrator-error.log',
       out_file: './automation/logs/master-orchestrator-out.log',
@@ -149,7 +149,7 @@ module.exports = {
       time: true,
       cron_restart: '0 */12 * * *', // Restart every 12 hours
       max_restarts: 5,
-      min_uptime: '30s'
-    }
-  ]
+      min_uptime: '30s',
+    },
+  ],
 };

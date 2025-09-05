@@ -19,7 +19,7 @@ export default function App() {
         <div className="min-h-screen bg-gray-50">
           <Header />
           <Sidebar />
-          
+
           <main className="flex-1 lg:ml-80">
             <Routes>
               <Route path="/" element={<HomePage />} />
@@ -29,7 +29,7 @@ export default function App() {
               <Route path="/pricing" element={<PricingPage />} />
             </Routes>
           </main>
-          
+
           <Footer />
         </div>
       </Router>

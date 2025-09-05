@@ -12,7 +12,7 @@ class PerformanceOptimizer {
       timestamp: new Date().toISOString(),
       optimizations: [],
       metrics: {},
-      recommendations: []
+      recommendations: [],
     };
   }
 
@@ -21,7 +21,7 @@ class PerformanceOptimizer {
     try {
       const buildOutput = execSync('npm run build', { encoding: 'utf8' });
       this.results.metrics.buildSuccess = true;
-      
+
       // Analyze .next directory
       const nextDir = path.join(process.cwd(), '.next');
       if (fs.existsSync(nextDir)) {
@@ -38,12 +38,12 @@ class PerformanceOptimizer {
   getDirectorySize(dirPath) {
     let totalSize = 0;
     let fileCount = 0;
-    
+
     const files = fs.readdirSync(dirPath);
     files.forEach(file => {
       const filePath = path.join(dirPath, file);
       const stats = fs.statSync(filePath);
-      
+
       if (stats.isDirectory()) {
         const subStats = this.getDirectorySize(filePath);
         totalSize += subStats.size;
@@ -53,7 +53,7 @@ class PerformanceOptimizer {
         fileCount++;
       }
     });
-    
+
     return { size: totalSize, count: fileCount };
   }
 
@@ -65,7 +65,7 @@ class PerformanceOptimizer {
       this.results.optimizations.push({
         type: 'image_optimization',
         count: images.length,
-        status: 'completed'
+        status: 'completed',
       });
     }
   }
@@ -73,40 +73,41 @@ class PerformanceOptimizer {
   findImages(dir) {
     const images = [];
     const files = fs.readdirSync(dir);
-    
+
     files.forEach(file => {
       const filePath = path.join(dir, file);
       const stats = fs.statSync(filePath);
-      
+
       if (stats.isDirectory()) {
         images.push(...this.findImages(filePath));
       } else if (/\.(jpg|jpeg|png|gif|webp)$/i.test(file)) {
         images.push(filePath);
       }
     });
-    
+
     return images;
   }
 
   async generateRecommendations() {
     console.log('💡 Generating optimization recommendations...');
-    
+
     this.results.recommendations = [
       {
         type: 'bundle_optimization',
         priority: 'high',
-        description: 'Consider implementing code splitting for better performance'
+        description:
+          'Consider implementing code splitting for better performance',
       },
       {
         type: 'image_optimization',
         priority: 'medium',
-        description: 'Optimize images and use modern formats like WebP'
+        description: 'Optimize images and use modern formats like WebP',
       },
       {
         type: 'caching',
         priority: 'medium',
-        description: 'Implement proper caching strategies'
-      }
+        description: 'Implement proper caching strategies',
+      },
     ];
   }
 
@@ -115,20 +116,23 @@ class PerformanceOptimizer {
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
-    
-    const reportPath = path.join(logsDir, `performance-optimization-${Date.now()}.json`);
+
+    const reportPath = path.join(
+      logsDir,
+      `performance-optimization-${Date.now()}.json`
+    );
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
     console.log(`📊 Report saved to: ${reportPath}`);
   }
 
   async run() {
     console.log('🚀 Starting performance optimization...');
-    
+
     await this.analyzeBundle();
     await this.optimizeImages();
     await this.generateRecommendations();
     await this.saveReport();
-    
+
     console.log('✅ Performance optimization completed!');
   }
 }

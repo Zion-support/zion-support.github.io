@@ -1,16 +1,20 @@
 #!/usr/bin/env node
-import fs from "fs";
-import path from "path";
-import { execSync, spawn } from "child_process";
-import { fileURLToPath } from "url";
+import fs from 'fs';
+import path from 'path';
+import { execSync, spawn } from 'child_process';
+import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 class ComprehensiveAutomationRunner {
   constructor() {
-    this.logFile = path.join(__dirname, "logs", "comprehensive-automation.log");
-    this.resultsFile = path.join(__dirname, "reports", "comprehensive-results.json");
+    this.logFile = path.join(__dirname, 'logs', 'comprehensive-automation.log');
+    this.resultsFile = path.join(
+      __dirname,
+      'reports',
+      'comprehensive-results.json'
+    );
     this.ensureDirectories();
     this.results = {
       timestamp: new Date().toISOString(),
@@ -19,7 +23,7 @@ class ComprehensiveAutomationRunner {
       linting: {},
       performance: {},
       security: {},
-      overall: { status: "unknown", score: 0 }
+      overall: { status: 'unknown', score: 0 },
     };
   }
 
@@ -27,8 +31,8 @@ class ComprehensiveAutomationRunner {
     const dirs = [
       path.dirname(this.logFile),
       path.dirname(this.resultsFile),
-      path.join(__dirname, "logs"),
-      path.join(__dirname, "reports")
+      path.join(__dirname, 'logs'),
+      path.join(__dirname, 'reports'),
     ];
     dirs.forEach(dir => {
       if (!fs.existsSync(dir)) {
@@ -37,7 +41,7 @@ class ComprehensiveAutomationRunner {
     });
   }
 
-  log(message, level = "INFO") {
+  log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     // // fs.appendFileSync(this.logFile, logMessage);
@@ -47,32 +51,32 @@ class ComprehensiveAutomationRunner {
     try {
       this.log(`Running: ${description}`);
       const startTime = Date.now();
-      const output = execSync(command, { 
-        stdio: 'pipe', 
+      const output = execSync(command, {
+        stdio: 'pipe',
         cwd: process.cwd(),
-        timeout: 300000 // 5 minutes
+        timeout: 300000, // 5 minutes
       });
       const duration = Date.now() - startTime;
       this.log(`✓ ${description} completed in ${duration}ms`);
       return { success: true, output: output.toString(), duration };
     } catch (error) {
-      this.log(`✗ ${description} failed: ${error.message}`, "ERROR");
-      return { 
-        success: false, 
-        error: error.message, 
-        output: error.stdout?.toString() || error.stderr?.toString() || ""
+      this.log(`✗ ${description} failed: ${error.message}`, 'ERROR');
+      return {
+        success: false,
+        error: error.message,
+        output: error.stdout?.toString() || error.stderr?.toString() || '',
       };
     }
   }
 
   async runBuildTests() {
-    this.log("=== RUNNING BUILD TESTS ===");
-    
+    this.log('=== RUNNING BUILD TESTS ===');
+
     const buildTests = [
-      { cmd: "npm run build", desc: "Production build" },
-      { cmd: "npm run lint", desc: "Linting check" },
-      { cmd: "npm run type-check", desc: "TypeScript type checking" },
-      { cmd: "npm run test:smoke", desc: "Smoke tests" }
+      { cmd: 'npm run build', desc: 'Production build' },
+      { cmd: 'npm run lint', desc: 'Linting check' },
+      { cmd: 'npm run type-check', desc: 'TypeScript type checking' },
+      { cmd: 'npm run test:smoke', desc: 'Smoke tests' },
     ];
 
     for (const test of buildTests) {
@@ -82,11 +86,11 @@ class ComprehensiveAutomationRunner {
   }
 
   async runPerformanceTests() {
-    this.log("=== RUNNING PERFORMANCE TESTS ===");
-    
+    this.log('=== RUNNING PERFORMANCE TESTS ===');
+
     const perfTests = [
-      { cmd: "npm run build:analyze", desc: "Bundle analysis" },
-      { cmd: "npm run perf:audit", desc: "Performance audit" }
+      { cmd: 'npm run build:analyze', desc: 'Bundle analysis' },
+      { cmd: 'npm run perf:audit', desc: 'Performance audit' },
     ];
 
     for (const test of perfTests) {
@@ -96,11 +100,11 @@ class ComprehensiveAutomationRunner {
   }
 
   async runSecurityTests() {
-    this.log("=== RUNNING SECURITY TESTS ===");
-    
+    this.log('=== RUNNING SECURITY TESTS ===');
+
     const securityTests = [
-      { cmd: "npm audit", desc: "Security audit" },
-      { cmd: "npm run security:audit", desc: "Enhanced security audit" }
+      { cmd: 'npm audit', desc: 'Security audit' },
+      { cmd: 'npm run security:audit', desc: 'Enhanced security audit' },
     ];
 
     for (const test of securityTests) {
@@ -110,12 +114,12 @@ class ComprehensiveAutomationRunner {
   }
 
   async runQualityTests() {
-    this.log("=== RUNNING QUALITY TESTS ===");
-    
+    this.log('=== RUNNING QUALITY TESTS ===');
+
     const qualityTests = [
-      { cmd: "npm run lint:check", desc: "Lint check" },
-      { cmd: "npm run format:check", desc: "Format check" },
-      { cmd: "npm run test:coverage", desc: "Test coverage" }
+      { cmd: 'npm run lint:check', desc: 'Lint check' },
+      { cmd: 'npm run format:check', desc: 'Format check' },
+      { cmd: 'npm run test:coverage', desc: 'Test coverage' },
     ];
 
     for (const test of qualityTests) {
@@ -150,16 +154,21 @@ class ComprehensiveAutomationRunner {
 
     const finalScore = Math.round((totalScore / maxScore) * 100);
     this.results.overall.score = finalScore;
-    this.results.overall.status = finalScore >= 80 ? "excellent" : 
-                                 finalScore >= 60 ? "good" : 
-                                 finalScore >= 40 ? "fair" : "poor";
-    
+    this.results.overall.status =
+      finalScore >= 80
+        ? 'excellent'
+        : finalScore >= 60
+          ? 'good'
+          : finalScore >= 40
+            ? 'fair'
+            : 'poor';
+
     return finalScore;
   }
 
   calculateCategoryScore(category) {
     if (!category || Object.keys(category).length === 0) return 0;
-    
+
     const results = Object.values(category);
     const successCount = results.filter(r => r.success).length;
     return Math.round((successCount / results.length) * 100);
@@ -167,7 +176,7 @@ class ComprehensiveAutomationRunner {
 
   generateRecommendations() {
     const recommendations = [];
-    
+
     // Build recommendations
     Object.entries(this.results.builds).forEach(([test, result]) => {
       if (!result.success) {
@@ -185,7 +194,9 @@ class ComprehensiveAutomationRunner {
     // Security recommendations
     Object.entries(this.results.security).forEach(([test, result]) => {
       if (!result.success) {
-        recommendations.push(`Address security issue in ${test}: ${result.error}`);
+        recommendations.push(
+          `Address security issue in ${test}: ${result.error}`
+        );
       }
     });
 
@@ -202,36 +213,42 @@ class ComprehensiveAutomationRunner {
   async saveResults() {
     this.results.recommendations = this.generateRecommendations();
     this.results.overall.score = this.calculateOverallScore();
-    
+
     fs.writeFileSync(this.resultsFile, JSON.stringify(this.results, null, 2));
     this.log(`Results saved to: ${this.resultsFile}`);
   }
 
   async runAll() {
-    this.log("🚀 Starting Comprehensive Automation Runner");
-    this.log("=" * 50);
-    
+    this.log('🚀 Starting Comprehensive Automation Runner');
+    this.log('=' * 50);
+
     try {
       await this.runBuildTests();
       await this.runPerformanceTests();
       await this.runSecurityTests();
       await this.runQualityTests();
-      
+
       const score = this.calculateOverallScore();
       await this.saveResults();
-      
-      this.log("=" * 50);
-      this.log(`🎯 Overall Score: ${score}/100 (${this.results.overall.status})`);
-      this.log("📊 Detailed results saved to reports/comprehensive-results.json");
-      
+
+      this.log('=' * 50);
+      this.log(
+        `🎯 Overall Score: ${score}/100 (${this.results.overall.status})`
+      );
+      this.log(
+        '📊 Detailed results saved to reports/comprehensive-results.json'
+      );
+
       if (score < 80) {
-        this.log("⚠️  Some improvements needed. Check recommendations.", "WARN");
+        this.log(
+          '⚠️  Some improvements needed. Check recommendations.',
+          'WARN'
+        );
       } else {
-        this.log("✅ All systems performing well!", "SUCCESS");
+        this.log('✅ All systems performing well!', 'SUCCESS');
       }
-      
     } catch (error) {
-      this.log(`❌ Automation runner failed: ${error.message}`, "ERROR");
+      this.log(`❌ Automation runner failed: ${error.message}`, 'ERROR');
       throw error;
     }
   }

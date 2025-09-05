@@ -13,7 +13,7 @@ class HealthChecker {
       overallHealth: 'unknown',
       checks: [],
       metrics: {},
-      recommendations: []
+      recommendations: [],
     };
   }
 
@@ -24,14 +24,14 @@ class HealthChecker {
       this.results.checks.push({
         name: 'build',
         status: 'healthy',
-        message: 'Build completed successfully'
+        message: 'Build completed successfully',
       });
     } catch (error) {
       this.results.checks.push({
         name: 'build',
         status: 'unhealthy',
         message: 'Build failed',
-        error: error.message
+        error: error.message,
       });
     }
   }
@@ -43,14 +43,14 @@ class HealthChecker {
       this.results.checks.push({
         name: 'tests',
         status: 'healthy',
-        message: 'Tests passed successfully'
+        message: 'Tests passed successfully',
       });
     } catch (error) {
       this.results.checks.push({
         name: 'tests',
         status: 'unhealthy',
         message: 'Tests failed',
-        error: error.message
+        error: error.message,
       });
     }
   }
@@ -62,14 +62,14 @@ class HealthChecker {
       this.results.checks.push({
         name: 'dependencies',
         status: 'healthy',
-        message: 'All dependencies are properly installed'
+        message: 'All dependencies are properly installed',
       });
     } catch (error) {
       this.results.checks.push({
         name: 'dependencies',
         status: 'unhealthy',
         message: 'Dependency issues detected',
-        error: error.message
+        error: error.message,
       });
     }
   }
@@ -81,50 +81,52 @@ class HealthChecker {
       this.results.checks.push({
         name: 'linting',
         status: 'healthy',
-        message: 'No linting errors found'
+        message: 'No linting errors found',
       });
     } catch (error) {
       this.results.checks.push({
         name: 'linting',
         status: 'warning',
         message: 'Linting issues detected',
-        error: error.message
+        error: error.message,
       });
     }
   }
 
   async checkFileStructure() {
     console.log('📁 Checking file structure health...');
-    
+
     const criticalFiles = [
       'package.json',
       'next.config.js',
       'tsconfig.json',
-      'tailwind.config.js'
+      'tailwind.config.js',
     ];
-    
+
     const missingFiles = criticalFiles.filter(file => !fs.existsSync(file));
-    
+
     if (missingFiles.length === 0) {
       this.results.checks.push({
         name: 'file_structure',
         status: 'healthy',
-        message: 'All critical files present'
+        message: 'All critical files present',
       });
     } else {
       this.results.checks.push({
         name: 'file_structure',
         status: 'unhealthy',
-        message: `Missing critical files: ${missingFiles.join(', ')}`
+        message: `Missing critical files: ${missingFiles.join(', ')}`,
       });
     }
   }
 
   calculateOverallHealth() {
-    const healthyChecks = this.results.checks.filter(check => check.status === 'healthy').length;
+    const healthyChecks = this.results.checks.filter(
+      check => check.status === 'healthy'
+    ).length;
     const totalChecks = this.results.checks.length;
     const healthPercentage = (healthyChecks / totalChecks) * 100;
-    
+
     if (healthPercentage >= 90) {
       this.results.overallHealth = 'excellent';
     } else if (healthPercentage >= 70) {
@@ -134,7 +136,7 @@ class HealthChecker {
     } else {
       this.results.overallHealth = 'poor';
     }
-    
+
     this.results.metrics.healthPercentage = healthPercentage;
     this.results.metrics.healthyChecks = healthyChecks;
     this.results.metrics.totalChecks = totalChecks;
@@ -142,37 +144,40 @@ class HealthChecker {
 
   async generateRecommendations() {
     console.log('💡 Generating health recommendations...');
-    
-    const unhealthyChecks = this.results.checks.filter(check => check.status === 'unhealthy');
-    
+
+    const unhealthyChecks = this.results.checks.filter(
+      check => check.status === 'unhealthy'
+    );
+
     unhealthyChecks.forEach(check => {
       switch (check.name) {
         case 'build':
           this.results.recommendations.push({
             type: 'build_fix',
             priority: 'high',
-            description: 'Fix build errors to ensure application can be deployed'
+            description:
+              'Fix build errors to ensure application can be deployed',
           });
           break;
         case 'tests':
           this.results.recommendations.push({
             type: 'test_fix',
             priority: 'high',
-            description: 'Fix failing tests to ensure code quality'
+            description: 'Fix failing tests to ensure code quality',
           });
           break;
         case 'dependencies':
           this.results.recommendations.push({
             type: 'dependency_fix',
             priority: 'medium',
-            description: 'Resolve dependency issues'
+            description: 'Resolve dependency issues',
           });
           break;
         case 'linting':
           this.results.recommendations.push({
             type: 'linting_fix',
             priority: 'low',
-            description: 'Fix linting issues for better code quality'
+            description: 'Fix linting issues for better code quality',
           });
           break;
       }
@@ -184,7 +189,7 @@ class HealthChecker {
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
-    
+
     const reportPath = path.join(logsDir, `health-check-${Date.now()}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
     console.log(`📊 Report saved to: ${reportPath}`);
@@ -192,18 +197,20 @@ class HealthChecker {
 
   async run() {
     console.log('🚀 Starting health check...');
-    
+
     await this.checkBuild();
     await this.checkTests();
     await this.checkDependencies();
     await this.checkLinting();
     await this.checkFileStructure();
-    
+
     this.calculateOverallHealth();
     await this.generateRecommendations();
     await this.saveReport();
-    
-    console.log(`✅ Health check completed! Overall health: ${this.results.overallHealth}`);
+
+    console.log(
+      `✅ Health check completed! Overall health: ${this.results.overallHealth}`
+    );
   }
 }
 
