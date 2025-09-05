@@ -32,7 +32,10 @@ import {
   Heart,
   Target,
   Lock,
-  MessageSquare
+  MessageSquare,
+  Home,
+  Leaf,
+  Truck
 } from 'lucide-react';
 import Layout from './components/Layout';
 
@@ -716,6 +719,386 @@ const microSaasSolutions = [
     marketPrice: "$3,000-6,000/month",
     benefits: ["Real-time insights", "Proactive issue detection", "Better customer experience"],
     setupTime: "2-3 weeks"
+  },
+  {
+    title: "AI-Powered Code Review Assistant",
+    description: "Automated code quality analysis, security scanning, and performance optimization recommendations",
+    icon: Code,
+    features: [
+      "Automated Code Review",
+      "Security Vulnerability Detection",
+      "Performance Analysis",
+      "Code Quality Metrics",
+      "Best Practice Suggestions",
+      "Integration with Git",
+      "Team Collaboration Tools",
+      "Custom Rule Configuration"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,000-8,000/month",
+    benefits: ["Reduce bugs by 60%", "Improve code quality by 40%", "Save 15+ hours/week"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "Smart Contract Management Platform",
+    description: "Blockchain-based contract creation, execution, and monitoring for businesses",
+    icon: FileText,
+    features: [
+      "Contract Templates",
+      "Digital Signatures",
+      "Automated Execution",
+      "Compliance Monitoring",
+      "Payment Integration",
+      "Dispute Resolution",
+      "Audit Trails",
+      "Multi-party Collaboration"
+    ],
+    price: "Starting at $3,000/month",
+    marketPrice: "$5,000-12,000/month",
+    benefits: ["Reduce contract disputes by 80%", "Automate 90% of processes", "Ensure compliance"],
+    setupTime: "3-4 weeks"
+  },
+  {
+    title: "AI-Powered Meeting Intelligence",
+    description: "Advanced meeting analytics, transcription, and action item tracking",
+    icon: Video,
+    features: [
+      "Real-time Transcription",
+      "Action Item Extraction",
+      "Meeting Analytics",
+      "Follow-up Automation",
+      "Integration with Calendars",
+      "Voice Recognition",
+      "Multi-language Support",
+      "Custom Reporting"
+    ],
+    price: "Starting at $1,200/month",
+    marketPrice: "$2,000-4,500/month",
+    benefits: ["Increase meeting productivity by 50%", "Never miss action items", "Save 5+ hours/week"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "Quantum-Safe Security Platform",
+    description: "Next-generation cybersecurity solutions preparing for quantum computing threats",
+    icon: Shield,
+    features: [
+      "Quantum Key Distribution",
+      "Post-Quantum Cryptography",
+      "Threat Assessment",
+      "Migration Planning",
+      "Compliance Monitoring",
+      "Risk Analysis",
+      "Security Audits",
+      "Future-Proofing"
+    ],
+    price: "Starting at $4,500/month",
+    marketPrice: "$8,000-20,000/month",
+    benefits: ["Future-proof security", "Quantum-ready encryption", "Compliance assurance"],
+    setupTime: "4-6 weeks"
+  },
+  {
+    title: "AI-Powered Personal Finance Manager",
+    description: "Intelligent personal finance tracking, budgeting, and investment recommendations",
+    icon: DollarSign,
+    features: [
+      "Expense Categorization",
+      "Budget Planning",
+      "Investment Analysis",
+      "Bill Reminders",
+      "Financial Goals",
+      "Tax Optimization",
+      "Credit Score Monitoring",
+      "Retirement Planning"
+    ],
+    price: "Starting at $800/month",
+    marketPrice: "$1,500-3,500/month",
+    benefits: ["Save 20% on expenses", "Optimize investments", "Achieve financial goals"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "Smart Home Automation Platform",
+    description: "Comprehensive IoT platform for smart home management and automation",
+    icon: Home,
+    features: [
+      "Device Integration",
+      "Automation Rules",
+      "Energy Monitoring",
+      "Security Systems",
+      "Voice Control",
+      "Mobile App",
+      "Scheduling",
+      "Remote Access"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-6,000/month",
+    benefits: ["Reduce energy costs by 30%", "Enhance security", "Convenience automation"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "AI-Powered Legal Document Analyzer",
+    description: "Intelligent legal document review, contract analysis, and compliance checking",
+    icon: FileText,
+    features: [
+      "Contract Analysis",
+      "Risk Assessment",
+      "Compliance Checking",
+      "Clause Extraction",
+      "Legal Research",
+      "Document Comparison",
+      "Deadline Tracking",
+      "Case Law Integration"
+    ],
+    price: "Starting at $2,800/month",
+    marketPrice: "$4,500-10,000/month",
+    benefits: ["Reduce review time by 70%", "Improve accuracy by 90%", "Lower legal costs"],
+    setupTime: "2-4 weeks"
+  },
+  {
+    title: "Sustainable Business Analytics",
+    description: "Environmental impact tracking and sustainability reporting for businesses",
+    icon: Leaf,
+    features: [
+      "Carbon Footprint Tracking",
+      "Sustainability Metrics",
+      "ESG Reporting",
+      "Waste Management",
+      "Energy Optimization",
+      "Supply Chain Analysis",
+      "Compliance Monitoring",
+      "Goal Setting"
+    ],
+    price: "Starting at $2,000/month",
+    marketPrice: "$3,500-8,000/month",
+    benefits: ["Meet sustainability goals", "Reduce environmental impact", "Improve brand reputation"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "AI-Powered Talent Matching",
+    description: "Intelligent recruitment platform matching candidates with job opportunities",
+    icon: Users,
+    features: [
+      "Skill Assessment",
+      "Cultural Fit Analysis",
+      "Job Matching",
+      "Interview Scheduling",
+      "Background Checks",
+      "Onboarding Automation",
+      "Performance Tracking",
+      "Retention Analytics"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$3,500-7,500/month",
+    benefits: ["Reduce hiring time by 50%", "Improve match quality by 60%", "Lower recruitment costs"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "Smart Inventory Optimization",
+    description: "AI-driven inventory management with demand forecasting and automated reordering",
+    icon: Package,
+    features: [
+      "Demand Forecasting",
+      "Automated Reordering",
+      "Stock Level Optimization",
+      "Supplier Management",
+      "Quality Control",
+      "Cost Analysis",
+      "Multi-location Support",
+      "Integration APIs"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-6,500/month",
+    benefits: ["Reduce stockouts by 90%", "Lower inventory costs by 25%", "Improve cash flow"],
+    setupTime: "2-4 weeks"
+  },
+  {
+    title: "AI-Powered Content Creation Suite",
+    description: "Comprehensive content creation platform with AI writing, design, and video tools",
+    icon: FileText,
+    features: [
+      "AI Writing Assistant",
+      "Image Generation",
+      "Video Creation",
+      "SEO Optimization",
+      "Brand Consistency",
+      "Multi-language Support",
+      "Content Calendar",
+      "Performance Analytics"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-5,500/month",
+    benefits: ["Create content 10x faster", "Improve engagement by 40%", "Reduce creative costs"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "Blockchain Supply Chain Tracker",
+    description: "Transparent supply chain monitoring using blockchain technology",
+    icon: Network,
+    features: [
+      "Product Tracking",
+      "Authenticity Verification",
+      "Quality Assurance",
+      "Supplier Verification",
+      "Compliance Monitoring",
+      "Transparency Reports",
+      "Smart Contracts",
+      "Integration APIs"
+    ],
+    price: "Starting at $3,500/month",
+    marketPrice: "$6,000-15,000/month",
+    benefits: ["Ensure product authenticity", "Improve transparency", "Reduce fraud by 95%"],
+    setupTime: "3-5 weeks"
+  },
+  {
+    title: "AI-Powered Health Monitoring",
+    description: "Personal health tracking and wellness recommendations using AI",
+    icon: Heart,
+    features: [
+      "Health Metrics Tracking",
+      "Symptom Analysis",
+      "Medication Reminders",
+      "Wellness Recommendations",
+      "Doctor Integration",
+      "Emergency Alerts",
+      "Health Reports",
+      "Privacy Protection"
+    ],
+    price: "Starting at $1,200/month",
+    marketPrice: "$2,000-4,000/month",
+    benefits: ["Improve health outcomes", "Early disease detection", "Reduce healthcare costs"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "Smart Energy Management System",
+    description: "AI-powered energy optimization for homes and businesses",
+    icon: Zap,
+    features: [
+      "Energy Monitoring",
+      "Usage Optimization",
+      "Renewable Integration",
+      "Cost Analysis",
+      "Predictive Maintenance",
+      "Automated Controls",
+      "Reporting Dashboard",
+      "Mobile Access"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-7,000/month",
+    benefits: ["Reduce energy costs by 35%", "Optimize renewable usage", "Improve efficiency"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "AI-Powered Customer Onboarding",
+    description: "Automated customer onboarding with personalized experiences",
+    icon: Users,
+    features: [
+      "Personalized Onboarding",
+      "Progress Tracking",
+      "Automated Communications",
+      "Document Collection",
+      "Verification Processes",
+      "Integration APIs",
+      "Analytics Dashboard",
+      "Custom Workflows"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-5,500/month",
+    benefits: ["Improve conversion by 40%", "Reduce onboarding time by 60%", "Enhance user experience"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "Smart Fleet Management Platform",
+    description: "Comprehensive fleet tracking, optimization, and maintenance management",
+    icon: Truck,
+    features: [
+      "Real-time Tracking",
+      "Route Optimization",
+      "Fuel Management",
+      "Maintenance Scheduling",
+      "Driver Management",
+      "Performance Analytics",
+      "Compliance Monitoring",
+      "Mobile App"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,000-10,000/month",
+    benefits: ["Reduce fuel costs by 20%", "Improve efficiency by 30%", "Lower maintenance costs"],
+    setupTime: "3-4 weeks"
+  },
+  {
+    title: "AI-Powered Market Research Platform",
+    description: "Intelligent market analysis and competitive intelligence gathering",
+    icon: BarChart3,
+    features: [
+      "Market Analysis",
+      "Competitor Tracking",
+      "Trend Identification",
+      "Consumer Insights",
+      "Data Visualization",
+      "Report Generation",
+      "Alert System",
+      "Custom Dashboards"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$3,500-8,000/month",
+    benefits: ["Make data-driven decisions", "Identify opportunities", "Stay competitive"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "Smart Event Management System",
+    description: "Comprehensive event planning and management with AI-powered insights",
+    icon: Calendar,
+    features: [
+      "Event Planning",
+      "Attendee Management",
+      "Venue Selection",
+      "Budget Tracking",
+      "Marketing Automation",
+      "Analytics Dashboard",
+      "Mobile App",
+      "Integration APIs"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-6,500/month",
+    benefits: ["Streamline event planning", "Improve attendee experience", "Increase ROI"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "AI-Powered Translation Platform",
+    description: "Real-time translation and localization services for global businesses",
+    icon: Globe,
+    features: [
+      "Real-time Translation",
+      "Document Translation",
+      "Website Localization",
+      "Voice Translation",
+      "Quality Assurance",
+      "Cultural Adaptation",
+      "API Integration",
+      "Custom Dictionaries"
+    ],
+    price: "Starting at $1,200/month",
+    marketPrice: "$2,000-5,000/month",
+    benefits: ["Expand globally", "Improve communication", "Reduce translation costs"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "Smart Compliance Management",
+    description: "Automated compliance monitoring and reporting for various industries",
+    icon: Shield,
+    features: [
+      "Regulatory Monitoring",
+      "Compliance Tracking",
+      "Automated Reporting",
+      "Risk Assessment",
+      "Document Management",
+      "Audit Preparation",
+      "Alert System",
+      "Integration APIs"
+    ],
+    price: "Starting at $2,800/month",
+    marketPrice: "$4,500-12,000/month",
+    benefits: ["Ensure compliance", "Reduce audit time by 70%", "Lower risk exposure"],
+    setupTime: "3-4 weeks"
   }
 ];
 
