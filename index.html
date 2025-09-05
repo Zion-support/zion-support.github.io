@@ -27,7 +27,6 @@
     <meta name="twitter:title" content="Zion Tech Group - Technology Solutions" />
     <meta name="twitter:description" content="Leading technology solutions in AI, cybersecurity, cloud, and digital transformation." />
     <meta name="twitter:image" content="/og-image.svg" />
-    
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -97,7 +96,6 @@
         }
       }
     </script>
-
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -113,6 +111,20 @@
           "@type": "Organization",
           "name": "Zion Tech Group"
         }
+      }
+    </script>
+    <script>
+      // Register service worker
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
       }
     </script>
   </head>

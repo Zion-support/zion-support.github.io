@@ -1,8 +1,6 @@
 module.exports = [
   {
-    files: [
-      "automation/**/*.{js,jsx,ts,tsx}",
-    ],
+    files: ["automation/**/*.{js,jsx,ts,tsx}"],
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
@@ -11,8 +9,8 @@ module.exports = [
         document: "readonly",
         console: "readonly",
         process: "readonly",
-        React: "readonly",
-      },
+        React: "readonly"
+      }
     },
     rules: {
       // Loosen rules for automation scripts to avoid CI noise
@@ -20,22 +18,15 @@ module.exports = [
       "no-console": "off",
       "prefer-const": "warn",
       "no-var": "warn",
-      "no-undef": "off",
-    },
+      "no-undef": "off"
+    }
   },
   {
     // Ignore build artifacts and vendor folders only
     ignores: [
-      "node_modules/**",
-      "dist/**",
-      "out/**",
-      ".next/**",
-      "coverage/**",
-      "**/*.min.js",
+      "node_modules/**/*.min.js",
       // Exclude automation backup snapshots and generated archives
-      "automation/backups/**",
-      // Exclude legacy CommonJS automation scripts that are not maintained
-      "automation/**/*.cjs",
+      "automation/backups/**/*.cjs",
       // Exclude known problematic automation scripts pending refactor
       "automation/automation-dashboard.js",
       "automation/check_automation_status.js",
@@ -50,7 +41,7 @@ module.exports = [
       "automation/automation-factory.js",
       "automation/error-monitor.js",
       "automation/error-prevention-automation.js",
-      "automation/file-integrity-monitor.js",
-    ],
-  },
+      "automation/file-integrity-monitor.js"
+    ]
+  }
 ];
