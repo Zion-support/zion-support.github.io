@@ -1,8 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import MainLayout from '../../src/components/layout/MainLayout';
+=======
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Layout from '../components/Layout';
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRight, CheckCircle, Users, Shield, Cloud, Brain } from 'lucide-react';
 =======
 <<<<<<< HEAD

@@ -1,5 +1,8 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 import { motion } from 'framer-motion';
 import { 
   Globe, 
@@ -34,6 +37,7 @@ import {
   Phone,
   Mail,
   MapPin
+<<<<<<< HEAD
 =======
 import Head from 'next/head';
 import Link from 'next/link';
@@ -49,12 +53,17 @@ import {
   Shield,
   Zap
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
 const partnerTypes = [
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
     title: 'Technology Partners',
     description: 'Leading technology companies that provide complementary solutions and platforms',
     icon: Code,
@@ -67,6 +76,7 @@ const partnerTypes = [
       { name: 'Salesforce', logo: 'Salesforce', description: 'CRM and automation' },
       { name: 'Oracle', logo: 'Oracle', description: 'Database and enterprise software' }
     ]
+<<<<<<< HEAD
   },
   {
     title: 'Industry Partners',
@@ -171,11 +181,42 @@ const stats = [
     description: 'Database and enterprise application solutions.',
     category: 'Database',
     benefits: ['Oracle Database', 'Enterprise Apps', 'Cloud Services']
+=======
+  },
+  {
+    title: 'Industry Partners',
+    description: 'Organizations across various industries that help us deliver specialized solutions',
+    icon: Building,
+    color: 'bg-green-100 text-green-800',
+    partners: [
+      { name: 'Healthcare Alliance', logo: 'Healthcare', description: 'Medical technology solutions' },
+      { name: 'FinTech Consortium', logo: 'Finance', description: 'Financial technology innovations' },
+      { name: 'Manufacturing Group', logo: 'Manufacturing', description: 'Industrial automation' },
+      { name: 'Retail Association', logo: 'Retail', description: 'E-commerce and retail tech' },
+      { name: 'Education Network', logo: 'Education', description: 'EdTech solutions' },
+      { name: 'Government Partners', logo: 'Government', description: 'Public sector technology' }
+    ]
+  },
+  {
+    title: 'Solution Partners',
+    description: 'Companies that provide specialized tools and services to enhance our offerings',
+    icon: Settings,
+    color: 'bg-purple-100 text-purple-800',
+    partners: [
+      { name: 'Security Experts', logo: 'Security', description: 'Cybersecurity solutions' },
+      { name: 'Data Analytics Co', logo: 'Analytics', description: 'Advanced analytics tools' },
+      { name: 'AI Research Lab', logo: 'AI Lab', description: 'Machine learning research' },
+      { name: 'Cloud Migration Pro', logo: 'Migration', description: 'Cloud migration services' },
+      { name: 'DevOps Specialists', logo: 'DevOps', description: 'Development operations' },
+      { name: 'UX Design Studio', logo: 'Design', description: 'User experience design' }
+    ]
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
   }
 ];
 
-const partnershipTypes = [
+const benefits = [
   {
+<<<<<<< HEAD
     icon: Handshake,
     title: 'Strategic Partnerships',
     description: 'Long-term collaborations with industry leaders to deliver comprehensive solutions.',
@@ -230,6 +271,38 @@ const stats = [
   { number: '25+', label: 'Countries Served' },
   { number: '99.9%', label: 'Partner Satisfaction' }
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+    title: 'Expanded Capabilities',
+    description: 'Access to cutting-edge technologies and specialized expertise',
+    icon: Zap,
+    features: ['Advanced AI models', 'Enterprise-grade security', 'Scalable cloud solutions']
+  },
+  {
+    title: 'Global Reach',
+    description: 'Serve clients worldwide through our international partner network',
+    icon: Globe,
+    features: ['Local support', 'Regional expertise', '24/7 coverage']
+  },
+  {
+    title: 'Innovation',
+    description: 'Stay ahead with access to the latest technologies and research',
+    icon: Brain,
+    features: ['R&D collaboration', 'Beta testing', 'Early access programs']
+  },
+  {
+    title: 'Quality Assurance',
+    description: 'Maintain the highest standards through certified partnerships',
+    icon: Award,
+    features: ['Certified solutions', 'Quality standards', 'Compliance assurance']
+  }
+];
+
+const stats = [
+  { number: '50+', label: 'Strategic Partners' },
+  { number: '15+', label: 'Countries' },
+  { number: '200+', label: 'Joint Projects' },
+  { number: '99%', label: 'Client Satisfaction' }
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 ];
 
 export default function PartnersPage() {
@@ -237,6 +310,9 @@ export default function PartnersPage() {
     <Layout
       title="Partners - Zion Tech Group"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
       description="Join our partner ecosystem and expand your reach with Zion Tech Group. Strategic partnerships for technology companies, solution providers, and industry leaders."
       keywords="partners, partnerships, technology partners, strategic alliances, business partners, technology ecosystem"
       canonical="https://ziontechgroup.com/partners"

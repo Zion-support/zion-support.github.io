@@ -16,6 +16,7 @@ interface LayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
+<<<<<<< HEAD
   keywords?: string;
 <<<<<<< HEAD
   image?: string;
@@ -413,11 +414,29 @@ const Layout: React.FC<LayoutProps> = ({
         <Header />
         <main className="flex-1">
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+  children: React.ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children, title, description }) => {
+  return (
+    <>
+      <Head>
+        <title>{title || 'Zion Tech Group'}</title>
+        <meta name="description" content={description || 'Leading technology solutions provider'} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        <Header />
+        <main className="flex-1">
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
           {children}
         </main>
         <Footer />
       </div>
     </>
+<<<<<<< HEAD
 =======
         <meta property="og:type" content="website" />
         {noIndex && <meta name="robots" content="noindex, nofollow" />}
@@ -429,6 +448,8 @@ const Layout: React.FC<LayoutProps> = ({
       <Footer />
     </div>
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
   );
 };
 

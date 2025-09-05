@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -84,6 +85,12 @@ const cloudProviders = [
     features: ['BigQuery', 'AI/ML services', 'Kubernetes Engine', 'Cloud Functions'],
     pricing: 'Competitive rates'
 =======
+=======
+import * as React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 import { 
   Cloud, 
   Shield, 
@@ -128,12 +135,16 @@ const migrationSteps = [
     description: 'Post-migration optimization and performance tuning',
     icon: Zap,
     features: ['Performance tuning', 'Cost optimization', 'Security hardening', 'Monitoring']
+<<<<<<< HEAD
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
   }
 ];
 
 const benefits = [
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     icon: TrendingUp,
     title: 'Scalability',
@@ -205,6 +216,8 @@ export default function CloudMigration() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
 =======
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
     icon: Shield,
     title: 'Enhanced Security',
     description: 'Bank-level security with advanced encryption and compliance'
@@ -240,11 +253,15 @@ export default function CloudMigrationPage() {
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Cloud{' '}
@@ -264,17 +281,23 @@ export default function CloudMigrationPage() {
                 </Link>
               </div>
 =======
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Cloud Migration</h1>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Seamlessly migrate your infrastructure to the cloud with zero downtime 
                 and maximum efficiency. Expert cloud migration services for all major platforms.
               </p>
+<<<<<<< HEAD
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
             </motion.div>
           </div>
         </section>
 
         {/* Migration Process */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -440,6 +463,8 @@ export default function CloudMigrationPage() {
                 );
               })}
 =======
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -479,12 +504,16 @@ export default function CloudMigrationPage() {
                   </div>
                 </motion.div>
               ))}
+<<<<<<< HEAD
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -525,6 +554,8 @@ export default function CloudMigrationPage() {
                 );
               })}
 =======
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
@@ -554,12 +585,16 @@ export default function CloudMigrationPage() {
                   <p className="text-gray-600">{benefit.description}</p>
                 </motion.div>
               ))}
+<<<<<<< HEAD
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -582,6 +617,8 @@ export default function CloudMigrationPage() {
                 <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
                   View All Solutions
 =======
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
@@ -608,7 +645,10 @@ export default function CloudMigrationPage() {
                   className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
                 >
                   View Cloud Services
+<<<<<<< HEAD
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
                 </Link>
               </div>
             </motion.div>
@@ -616,9 +656,13 @@ export default function CloudMigrationPage() {
         </section>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Layout>
 =======
     </>
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+    </>
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
   );
 }

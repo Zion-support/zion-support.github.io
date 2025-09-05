@@ -1,6 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
+=======
+import * as React from 'react';
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 
 =======
 <<<<<<< HEAD

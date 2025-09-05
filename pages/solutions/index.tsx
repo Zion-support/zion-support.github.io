@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 <<<<<<< HEAD
 import { motion } from 'framer-motion';
 =======
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+import * as React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 import { 
   Shield, 
   Rocket, 
@@ -17,10 +23,14 @@ import {
   Target
 } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Layout from '../../components/Layout';
 =======
 import Layout from '../components/Layout';
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+import Layout from '../components/Layout';
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 
 const solutions = [
   {

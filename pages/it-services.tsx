@@ -5,6 +5,9 @@ import Link from 'next/link';
 <<<<<<< HEAD
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 import { 
   Network, 
   Cloud, 
@@ -463,6 +466,7 @@ import Layout from '../components/Layout';
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 const itServices = [
   {
+<<<<<<< HEAD
     title: 'AI-Powered IT Operations Center',
     description: 'Intelligent IT operations management with predictive analytics and automated incident response.',
     icon: Brain,
@@ -3326,6 +3330,392 @@ export default function ITServicesPage() {
                   View AI Services
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </a>
+=======
+    title: "Cloud Infrastructure",
+    description: "Scalable and secure cloud solutions for modern businesses",
+    icon: Cloud,
+    features: [
+      "AWS, Azure, GCP Migration",
+      "Container Orchestration",
+      "Serverless Architecture",
+      "Cloud Security & Compliance",
+      "Auto-scaling Solutions",
+      "Disaster Recovery"
+    ],
+    price: "Starting at $1,800/month"
+  },
+  {
+    title: "Cybersecurity",
+    description: "Comprehensive security solutions to protect your digital assets",
+    icon: Shield,
+    features: [
+      "Security Audits & Assessments",
+      "Penetration Testing",
+      "Zero-Trust Architecture",
+      "Compliance & Risk Management",
+      "Incident Response",
+      "Security Training"
+    ],
+    price: "Starting at $2,000/month"
+  },
+  {
+    title: "DevOps & Automation",
+    description: "Streamline your development and deployment processes",
+    icon: Zap,
+    features: [
+      "CI/CD Pipeline Setup",
+      "Infrastructure as Code",
+      "Monitoring & Logging",
+      "Performance Optimization",
+      "Automated Testing",
+      "Deployment Automation"
+    ],
+    price: "Starting at $1,500/month"
+  },
+  {
+    title: "Database Management",
+    description: "Optimize and secure your data infrastructure",
+    icon: Database,
+    features: [
+      "Database Design & Optimization",
+      "Data Migration Services",
+      "Backup & Recovery Solutions",
+      "Performance Tuning",
+      "Data Security & Encryption",
+      "Cloud Database Setup"
+    ],
+    price: "Starting at $1,200/month"
+  },
+  {
+    title: "Network Solutions",
+    description: "Robust networking infrastructure for seamless connectivity",
+    icon: Network,
+    features: [
+      "Network Design & Implementation",
+      "VPN & Remote Access",
+      "Load Balancing",
+      "Network Security",
+      "Monitoring & Management",
+      "Cloud Networking"
+    ],
+    price: "Starting at $1,000/month"
+  },
+  {
+    title: "System Administration",
+    description: "Comprehensive system management and maintenance",
+    icon: Server,
+    features: [
+      "Server Setup & Configuration",
+      "System Monitoring",
+      "User Management",
+      "Backup Solutions",
+      "Performance Optimization",
+      "24/7 System Support"
+    ],
+    price: "Starting at $800/month",
+    marketPrice: "$1,200-2,500/month",
+    benefits: ["99.9% uptime", "Proactive monitoring", "24/7 support"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "Cloud Migration & Modernization",
+    description: "Seamless migration to cloud platforms with modernization strategies",
+    icon: Cloud,
+    features: [
+      "Legacy System Migration",
+      "Cloud Architecture Design",
+      "Data Migration & Validation",
+      "Application Modernization",
+      "Cost Optimization",
+      "Security Implementation",
+      "Performance Tuning",
+      "Training & Support"
+    ],
+    price: "Starting at $3,500/month",
+    marketPrice: "$5,000-15,000/month",
+    benefits: ["50% cost reduction", "Improved scalability", "Enhanced security"],
+    setupTime: "4-8 weeks"
+  },
+  {
+    title: "Zero-Trust Security Architecture",
+    description: "Implement comprehensive zero-trust security model for maximum protection",
+    icon: Shield,
+    features: [
+      "Identity & Access Management",
+      "Network Segmentation",
+      "Micro-segmentation",
+      "Continuous Monitoring",
+      "Threat Detection & Response",
+      "Compliance Management",
+      "Security Policy Implementation",
+      "User Behavior Analytics"
+    ],
+    price: "Starting at $4,000/month",
+    marketPrice: "$6,000-20,000/month",
+    benefits: ["99.9% security", "Reduced attack surface", "Compliance ready"],
+    setupTime: "6-12 weeks"
+  },
+  {
+    title: "Edge Computing Solutions",
+    description: "Deploy edge computing infrastructure for low-latency applications",
+    icon: Network,
+    features: [
+      "Edge Server Deployment",
+      "IoT Device Management",
+      "Real-time Data Processing",
+      "Edge Security Implementation",
+      "Content Delivery Networks",
+      "5G Integration",
+      "Edge Analytics",
+      "Remote Management"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,000-12,000/month",
+    benefits: ["90% latency reduction", "Improved performance", "Cost efficiency"],
+    setupTime: "3-6 weeks"
+  },
+  {
+    title: "Quantum Computing Integration",
+    description: "Prepare for quantum computing with hybrid quantum-classical solutions",
+    icon: Cpu,
+    features: [
+      "Quantum Algorithm Development",
+      "Hybrid Computing Solutions",
+      "Quantum Security Implementation",
+      "Performance Optimization",
+      "Quantum Machine Learning",
+      "Cryptographic Solutions",
+      "Research & Development",
+      "Future-Proofing Strategies"
+    ],
+    price: "Starting at $8,000/month",
+    marketPrice: "$15,000-50,000/month",
+    benefits: ["Future-ready technology", "Competitive advantage", "Breakthrough performance"],
+    setupTime: "8-16 weeks"
+  },
+  {
+    title: "AI Infrastructure & MLOps",
+    description: "Complete AI infrastructure setup with machine learning operations",
+    icon: Brain,
+    features: [
+      "AI/ML Platform Setup",
+      "Model Training Infrastructure",
+      "MLOps Pipeline Implementation",
+      "Data Pipeline Automation",
+      "Model Deployment & Monitoring",
+      "A/B Testing Frameworks",
+      "GPU/TPU Management",
+      "Performance Optimization"
+    ],
+    price: "Starting at $3,000/month",
+    marketPrice: "$5,000-18,000/month",
+    benefits: ["Faster AI deployment", "Scalable ML operations", "Cost optimization"],
+    setupTime: "4-8 weeks"
+  },
+  {
+    title: "Blockchain & Web3 Infrastructure",
+    description: "Build and deploy blockchain solutions and Web3 infrastructure",
+    icon: Globe,
+    features: [
+      "Blockchain Network Setup",
+      "Smart Contract Development",
+      "DeFi Platform Development",
+      "NFT Marketplace Creation",
+      "Web3 Integration",
+      "Cryptocurrency Solutions",
+      "Security Audits",
+      "Compliance Management"
+    ],
+    price: "Starting at $4,500/month",
+    marketPrice: "$7,000-25,000/month",
+    benefits: ["Decentralized solutions", "Enhanced security", "Future-proof technology"],
+    setupTime: "6-12 weeks"
+  },
+  {
+    title: "IoT & Smart Device Management",
+    description: "Comprehensive IoT solutions for connected devices and smart systems",
+    icon: Wifi,
+    features: [
+      "IoT Device Integration",
+      "Sensor Network Management",
+      "Real-time Data Collection",
+      "Edge Computing Implementation",
+      "Device Security & Authentication",
+      "Remote Monitoring & Control",
+      "Data Analytics & Insights",
+      "Scalable Architecture"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$3,500-12,000/month",
+    benefits: ["Operational efficiency", "Real-time insights", "Automated processes"],
+    setupTime: "3-6 weeks"
+  },
+  {
+    title: "Disaster Recovery & Business Continuity",
+    description: "Comprehensive disaster recovery and business continuity solutions",
+    icon: Shield,
+    features: [
+      "Backup Strategy Implementation",
+      "Disaster Recovery Planning",
+      "Business Continuity Testing",
+      "Data Replication Solutions",
+      "Failover Systems",
+      "Recovery Time Optimization",
+      "Compliance & Documentation",
+      "24/7 Monitoring"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-10,000/month",
+    benefits: ["99.9% uptime", "Quick recovery", "Data protection"],
+    setupTime: "2-4 weeks"
+  },
+  {
+    title: "Performance Optimization & Monitoring",
+    description: "Advanced performance monitoring and optimization services",
+    icon: BarChart3,
+    features: [
+      "Application Performance Monitoring",
+      "Infrastructure Optimization",
+      "Database Performance Tuning",
+      "Network Optimization",
+      "Load Testing & Analysis",
+      "Capacity Planning",
+      "Real-time Alerting",
+      "Performance Reporting"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-8,000/month",
+    benefits: ["50% performance improvement", "Proactive monitoring", "Cost optimization"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "Compliance & Governance Solutions",
+    description: "Ensure regulatory compliance and implement governance frameworks",
+    icon: CheckCircle,
+    features: [
+      "GDPR Compliance Implementation",
+      "HIPAA Compliance Solutions",
+      "SOX Compliance Management",
+      "ISO 27001 Certification",
+      "Audit Trail Implementation",
+      "Data Privacy Management",
+      "Risk Assessment",
+      "Policy Development"
+    ],
+    price: "Starting at $2,800/month",
+    marketPrice: "$4,500-15,000/month",
+    benefits: ["Regulatory compliance", "Risk mitigation", "Audit readiness"],
+    setupTime: "4-8 weeks"
+  },
+  {
+    title: "Hybrid Cloud Solutions",
+    description: "Seamless integration of on-premises and cloud infrastructure",
+    icon: Cloud,
+    features: [
+      "Hybrid Cloud Architecture",
+      "Multi-cloud Management",
+      "Data Synchronization",
+      "Security Integration",
+      "Cost Optimization",
+      "Workload Migration",
+      "Unified Management",
+      "Compliance Management"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,000-12,000/month",
+    benefits: ["Flexible deployment", "Cost optimization", "Enhanced security"],
+    setupTime: "4-6 weeks"
+  }
+];
+
+const whyChooseUs = [
+  {
+    title: "Expert Team",
+    description: "Certified professionals with deep expertise in IT infrastructure",
+    icon: "👥"
+  },
+  {
+    title: "24/7 Support",
+    description: "Round-the-clock monitoring and support for your systems",
+    icon: "🛡️"
+  },
+  {
+    title: "Proven Track Record",
+    description: "Successfully delivered 500+ IT projects across industries",
+    icon: "✅"
+  },
+  {
+    title: "Cost-Effective",
+    description: "Transparent pricing with no hidden costs or surprises",
+    icon: "💰"
+  }
+];
+
+export default function ITServicesPage() {
+  return (
+    <Layout
+      title="IT Services - Zion Tech Group"
+      description="Comprehensive IT services including cloud infrastructure, cybersecurity, DevOps, and system administration. Expert solutions for modern businesses."
+      keywords="IT services, cloud computing, cybersecurity, DevOps, system administration, network solutions"
+      canonical="https://ziontechgroup.com/it-services"
+    >
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-4xl mx-auto">
+            <motion.h1 
+              className="text-5xl md:text-6xl font-bold mb-6 leading-tight"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              Comprehensive 
+              <span className="text-blue-400"> IT Services</span>
+            </motion.h1>
+            <motion.p 
+              className="text-xl mb-8 text-blue-100"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Transform your technology infrastructure with our expert IT services. 
+              From cloud migration to cybersecurity, we provide end-to-end solutions 
+              that drive business growth and operational efficiency.
+            </motion.p>
+            <motion.div 
+              className="flex flex-col sm:flex-row justify-center gap-4"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+                Get Free Consultation
+              </Link>
+              <a href={`tel:${contactInfo.phone}`} className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+                Call {contactInfo.phone}
+              </a>
+            </motion.div>
+            <motion.div 
+              className="mt-8 text-center"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              <p className="text-blue-200 mb-2">Ready to transform your IT infrastructure?</p>
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-sm">
+                <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-2 hover:text-blue-300 transition-colors">
+                  <Mail className="w-4 h-4" />
+                  {contactInfo.email}
+                </a>
+                <a href={`tel:${contactInfo.phone}`} className="flex items-center gap-2 hover:text-blue-300 transition-colors">
+                  <Phone className="w-4 h-4" />
+                  {contactInfo.phone}
+                </a>
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4" />
+                  {contactInfo.address}
+                </div>
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
               </div>
             </motion.div>
           </div>
@@ -3541,6 +3931,7 @@ export default function ITServicesPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 =======
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
@@ -3645,6 +4036,8 @@ export default function ITServicesPage() {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
     </Layout>
   );
 }

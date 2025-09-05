@@ -1,4 +1,4 @@
-import React from 'react';';';
+import * as React from 'react';';';
 import { motion } from 'framer-motion';';';
 import { Brain, Zap, Globe, Rocket } from 'lucide-react';
 
@@ -25,7 +25,7 @@ const "LoadingSpinner": "React.FC<LoadingSpinnerProps> = ({;
     "sm": 'text-sm',;
     "md": 'text-base',;
     "lg": 'text-lg';
-import React from 'react';
+import * as React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, Zap, Globe, Rocket } from 'lucide-react';
 

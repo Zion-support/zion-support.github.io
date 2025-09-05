@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 =======
@@ -159,6 +160,15 @@ export default function CustomDevelopmentPage() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
 =======
+=======
+import * as React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  Settings, 
+  Code, 
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
   Zap, 
   Users, 
   ArrowRight, 
@@ -242,11 +252,15 @@ export default function CustomSolutionsPage() {
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="flex items-center justify-center mb-6">
                 <Settings className="w-16 h-16 text-orange-400 mr-4" />
@@ -267,16 +281,22 @@ export default function CustomSolutionsPage() {
                 </Link>
               </div>
 =======
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Custom Solutions</h1>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Bespoke software solutions tailored to your unique business needs. 
                 From web applications to mobile apps, we build what you need.
               </p>
+<<<<<<< HEAD
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Process Section */}
         <section className="py-20 bg-gray-50">
@@ -478,6 +498,8 @@ export default function CustomSolutionsPage() {
                   {tech}
                 </motion.span>
 =======
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
         {/* Features Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -549,13 +571,17 @@ export default function CustomSolutionsPage() {
                   <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
                   <p className="text-gray-600 text-sm">{step.description}</p>
                 </motion.div>
+<<<<<<< HEAD
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
               ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -578,6 +604,8 @@ export default function CustomSolutionsPage() {
                 <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-orange-600 transition-all duration-300 font-semibold">
                   Meet Our Developers
 =======
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
@@ -604,7 +632,10 @@ export default function CustomSolutionsPage() {
                   className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
                 >
                   Learn More
+<<<<<<< HEAD
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
                 </Link>
               </div>
             </motion.div>
@@ -612,9 +643,13 @@ export default function CustomSolutionsPage() {
         </section>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Layout>
 =======
     </>
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+    </>
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
   );
 }

@@ -95,6 +95,7 @@ const benefits = [
     icon: TrendingUp,
     title: 'Increased Sales',
 <<<<<<< HEAD
+<<<<<<< HEAD
     description: 'Boost sales with AI-powered recommendations and personalized experiences.',
     metric: '40%'
   },
@@ -136,6 +137,9 @@ export default function Retail() {
 =======
     description: 'AI-powered personalization and optimization drive higher conversion rates',
     icon: ShoppingCart
+=======
+    description: 'AI-powered personalization and optimization drive higher conversion rates'
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
   },
   {
     title: 'Better Customer Experience',

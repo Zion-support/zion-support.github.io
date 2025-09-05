@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+=======
+import * as React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 import { 
   Rocket, 
   RefreshCw, 

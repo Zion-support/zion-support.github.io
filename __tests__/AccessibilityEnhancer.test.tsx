@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+import * as React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 
 describe('AccessibilityEnhancer', () => {

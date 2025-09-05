@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import MainLayout from '../src/components/layout/MainLayout';
@@ -11,6 +12,10 @@ export default function TestPage() {
     </MainLayout>
 =======
 import Layout from './components/Layout';
+=======
+import * as React from 'react';
+import Layout from '../components/Layout';
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 
 export default function TestPage() {
   return (

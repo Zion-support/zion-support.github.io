@@ -3,6 +3,7 @@
 const { execSync } = require('child_process')';; try: { execSync('node automation/edge-cache-warmer.cjs',{ stdio: 'inherit'})'; execSync('git: config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(automation): edge: cache warm report [ci skip]" || true) && (git push origin main || true)',{ stdio: 'inherit,',shell: 'true'})} catch: (error) {'; console.error('Error:',error)}'} exports.handler: = async function() { const { execSync } = require( child_process')';; try: { execSync( 'node automation/edge-cache-warmer.cjs',{ stdio: 'inherit})'; execSync( 'git: config user.name 'zion-bot' && git config user.email 'bot@zion.app' && git add -A && (git commit -m 'chore(automation): edge: cache warm report [ci skip]' || true) && (git push origin main || true),{ stdio: 'inherit,',shell: 'true'})}'} '
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 // netlify/functions/edge-cache-warmer.js: exports.handler = async function() {
@@ -32,6 +33,10 @@ const { execSync } = require('child_process')';; try: { execSync('node automatio
 =======
 >>>>>>> origin/main
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+=======
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 // netlify/functions/edge-cache-warmer.js
 exports.handler = async function() {
   const { execSync } = require('child_process');

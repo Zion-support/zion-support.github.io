@@ -1,14 +1,22 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 =======
 import Head from 'next/head';
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
 import Link from 'next/link';
+=======
+import * as React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 import { 
   Rocket, 
   Zap, 
   DollarSign, 
   Users, 
+<<<<<<< HEAD
 <<<<<<< HEAD
   CheckCircle,
   ArrowRight,
@@ -129,6 +137,8 @@ const successStories = [
     growth: "1000% user growth",
     description: "Served 50K+ students with our learning platform"
 =======
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
   ArrowRight, 
   CheckCircle, 
   Clock, 
@@ -156,12 +166,16 @@ const features = [
     icon: Users,
     title: 'Scalable Architecture',
     description: 'Built to grow with your user base and business needs'
+<<<<<<< HEAD
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
   }
 ];
 
 export default function StartupSolutionsPage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <Layout 
       title="Startup Solutions - Zion Tech Group"
@@ -180,6 +194,8 @@ export default function StartupSolutionsPage() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
 =======
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
     <>
       <Head>
         <title>Startup Solutions - Zion Tech Group</title>
@@ -192,11 +208,15 @@ export default function StartupSolutionsPage() {
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="flex items-center justify-center mb-6">
                 <Rocket className="w-16 h-16 text-green-400 mr-4" />
@@ -217,16 +237,22 @@ export default function StartupSolutionsPage() {
                 </Link>
               </div>
 =======
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Startup Solutions</h1>
               <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">
                 Technology solutions designed for startups and growing companies.
               </p>
+<<<<<<< HEAD
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
             </motion.div>
           </div>
         </section>
 
         {/* Features Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -408,6 +434,8 @@ export default function StartupSolutionsPage() {
                     {story.description}
                   </div>
 =======
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -435,7 +463,10 @@ export default function StartupSolutionsPage() {
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
+<<<<<<< HEAD
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
                 </motion.div>
               ))}
             </div>
@@ -443,6 +474,7 @@ export default function StartupSolutionsPage() {
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -465,6 +497,8 @@ export default function StartupSolutionsPage() {
                 <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
                   Meet Our Team
 =======
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
         <section className="py-20 bg-orange-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
@@ -491,7 +525,10 @@ export default function StartupSolutionsPage() {
                   className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-orange-600 transition-colors font-semibold"
                 >
                   View Solutions
+<<<<<<< HEAD
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
                 </Link>
               </div>
             </motion.div>
@@ -499,9 +536,13 @@ export default function StartupSolutionsPage() {
         </section>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Layout>
 =======
     </>
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+    </>
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
   );
 }

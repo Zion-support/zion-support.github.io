@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 import React, { useState } from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 =======
 import React, { useState, useEffect } from 'react';
@@ -16,11 +17,15 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+import { useRouter } from 'next/navigation';
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 import { 
   Menu, 
   X, 
   Search, 
   Phone, 
+<<<<<<< HEAD
 <<<<<<< HEAD
   FileText,
   BarChart3,
@@ -115,6 +120,14 @@ const navigation = [
 } from 'lucide-react';
 
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+  Mail, 
+  MapPin,
+  ChevronDown,
+  Building2
+} from 'lucide-react';
+
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 const navigation = {
   'Services': [
     { name: 'AI Services', href: '/ai-services' },
@@ -234,6 +247,7 @@ const quickLinks = [
   { name: 'Get Quote', href: '/quote' },
   { name: 'Support', href: '/support' }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
 ];
 
@@ -261,6 +275,10 @@ export default function Header() {
 =======
 ];
 
+=======
+];
+
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -295,7 +313,10 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
+<<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
             {Object.entries(navigation).map(([title, links]) => (
               <div key={title} className="relative group">
                 <button
@@ -303,6 +324,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
                   onMouseEnter={() => setActiveDropdown(title)}
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <span className="font-medium">{title}</span>
 =======
@@ -360,10 +382,14 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
 =======
                   <span>{title}</span>
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+                  <span>{title}</span>
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
                   <ChevronDown className="w-4 h-4" />
                 </button>
                 
                 {activeDropdown === title && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-200 py-3 z-50 max-h-96 overflow-y-auto">
@@ -381,6 +407,8 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
 =======
 =======
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
                   <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
                     {links.map((link) => (
                       <Link
@@ -392,16 +420,21 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
                       </Link>
                     ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 =======
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
                   </div>
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+                  </div>
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
                 )}
               </div>
             ))}
           </nav>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           {/* CTA Button */}
@@ -420,10 +453,15 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
           {/* Quick Links */}
           <div className="hidden lg:flex items-center space-x-4">
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+          {/* Quick Links */}
+          <div className="hidden lg:flex items-center space-x-4">
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
             {quickLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 className="text-gray-700 hover:text-blue-600 transition-colors text-sm font-medium"
@@ -433,12 +471,16 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
 =======
                 className="text-gray-700 hover:text-blue-600 transition-colors"
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+                className="text-gray-700 hover:text-blue-600 transition-colors"
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
               >
                 {link.name}
               </Link>
             ))}
             <Link
               href="/contact"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
@@ -515,6 +557,8 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
           )}
         </AnimatePresence>
 =======
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
               className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
             >
               Contact Us
@@ -529,11 +573,15 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
             <Menu className="w-6 h-6" />
           </button>
         </div>
+<<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
       </div>
     </header>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           {/* Mobile Menu Button */}
@@ -551,3 +599,5 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
 =======
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05

@@ -50,7 +50,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {;
 ;
     // Call custom error handler;
     if (this.props.onError) {;
-import React from 'react';
+import * as React from 'react';
 import {  import { motion  } from 'framer-motion';
 
 export default function Page(props: any) {

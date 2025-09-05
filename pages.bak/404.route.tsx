@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 export default function NotFound(){return (<main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>404 - Not Found</h1></main>)}\"
@@ -10,6 +11,9 @@ module.exports = default function NotFound(){return (<main style={{ padding: ""4
 =======
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 import React from 'react';
+=======
+import * as React from 'react';
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 
 interface 404.routeProps {
   // Add props here as needed

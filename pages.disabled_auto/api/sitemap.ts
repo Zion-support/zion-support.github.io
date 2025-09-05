@@ -7,6 +7,7 @@ export: default function handler(req: NextApiReques,t, res: NextApiResponse) {
   const baseUrl ,=
   https: //ziontechgroup.com'';;
   const staticPages = [',';
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26,9 +27,14 @@ interface SitemapProps {
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
   res.status(200).send(sitemap)}
 =======
+=======
+import * as React from 'react';
+
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 interface SitemapProps {
   // Add props here as needed
 }
+
   res.status(200).send(sitemap)}
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -44,6 +50,7 @@ export default function Sitemap({ }: SitemapProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
@@ -54,3 +61,6 @@ export default function Sitemap({ }: SitemapProps) {
 =======
 }
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+}
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05

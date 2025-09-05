@@ -1,4 +1,4 @@
-import React from 'react';""',';';
+import * as React from 'react';""',';';
     ';';';
 import React from 'react;;
 import { Shield, Award, Users, Clock, CheckCircle, Star } from 'lucide-react';

@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+import * as React from 'react';
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -127,8 +131,11 @@ const stats = [
   { label: 'Support Response', value: '< 1hr' }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 import {
   Brain,
   Cloud,
@@ -141,8 +148,7 @@ import {
   Star,
   Users,
   Globe,
-  Cpu,
-  Settings
+  Cpu
 } from 'lucide-react';
 <<<<<<< HEAD
 
@@ -527,11 +533,14 @@ export default function ServicesPage() {
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' }
   ];
+<<<<<<< HEAD
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 =======
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 
 export default function Services() {
 >>>>>>> 2e9c29263b568858da4098d8218397d3dc948131
@@ -545,6 +554,7 @@ export default function Services() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -571,6 +581,8 @@ export default function Services() {
       <div className="min-h-screen bg-gray-50">
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 =======
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4">
@@ -590,9 +602,12 @@ export default function Services() {
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
@@ -685,6 +700,9 @@ export default function Services() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
         {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -817,6 +835,7 @@ export default function Services() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -859,6 +878,8 @@ export default function Services() {
         {/* Benefits Section */}
 =======
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
       {/* Process Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -927,6 +948,7 @@ export default function Services() {
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
         {/* Main Services */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-1436
 =======
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
@@ -935,6 +957,8 @@ export default function Services() {
 =======
         {/* Benefits Section */}
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div

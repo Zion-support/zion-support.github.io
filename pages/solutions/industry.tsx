@@ -1,13 +1,21 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 =======
 import Head from 'next/head';
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
 import Link from 'next/link';
+=======
+import * as React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 import { 
   BarChart3, 
   Shield, 
   Users, 
+<<<<<<< HEAD
 <<<<<<< HEAD
   CheckCircle,
   ArrowRight,
@@ -154,6 +162,8 @@ const caseStudies = [
     solution: "IoT sensors and AI-powered quality monitoring",
     result: "25% improvement in product quality"
 =======
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
   Globe, 
   ArrowRight, 
   CheckCircle, 
@@ -201,12 +211,16 @@ const industries = [
     icon: Building,
     description: 'Secure government and public sector solutions',
     features: ['Citizen services', 'Data security', 'Compliance', 'Digital transformation']
+<<<<<<< HEAD
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
   }
 ];
 
 export default function IndustrySolutionsPage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <Layout 
       title="Industry Solutions - Zion Tech Group"
@@ -225,6 +239,8 @@ export default function IndustrySolutionsPage() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
 =======
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
     <>
       <Head>
         <title>Industry Solutions - Zion Tech Group</title>
@@ -237,11 +253,15 @@ export default function IndustrySolutionsPage() {
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="flex items-center justify-center mb-6">
                 <BarChart3 className="w-16 h-16 text-purple-400 mr-4" />
@@ -262,16 +282,22 @@ export default function IndustrySolutionsPage() {
                 </Link>
               </div>
 =======
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Industry Solutions</h1>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Tailored technology solutions for specific industries. 
                 From healthcare to finance, we understand your unique challenges.
               </p>
+<<<<<<< HEAD
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Industries Section */}
         <section className="py-20 bg-gray-50">
@@ -434,6 +460,8 @@ export default function IndustrySolutionsPage() {
                   <div className="text-sm text-green-400 font-medium">
                     <strong>Result:</strong> {study.result}
 =======
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
         {/* Industries Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -469,7 +497,10 @@ export default function IndustrySolutionsPage() {
                         {feature}
                       </div>
                     ))}
+<<<<<<< HEAD
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
                   </div>
                 </motion.div>
               ))}
@@ -478,6 +509,7 @@ export default function IndustrySolutionsPage() {
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -500,6 +532,8 @@ export default function IndustrySolutionsPage() {
                 <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
                   Learn About Our Expertise
 =======
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
@@ -526,7 +560,10 @@ export default function IndustrySolutionsPage() {
                   className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
                 >
                   View Solutions
+<<<<<<< HEAD
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
                 </Link>
               </div>
             </motion.div>
@@ -534,9 +571,13 @@ export default function IndustrySolutionsPage() {
         </section>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Layout>
 =======
     </>
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+    </>
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
   );
 }

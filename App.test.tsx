@@ -17,10 +17,14 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import App from './src/App';
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+import * as React from 'react';
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229

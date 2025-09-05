@@ -1,5 +1,8 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 import { motion } from 'framer-motion';
 import { 
   Play, 
@@ -149,6 +152,7 @@ const stats = [
   { number: '10K+', label: 'Students' },
   { number: '100+', label: 'Hours of Content' },
   { number: '4.8', label: 'Average Rating' }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import Head from 'next/head';
@@ -346,11 +350,16 @@ const difficultyLevels = [
   { name: "Intermediate", color: "yellow", description: "Some technical knowledge helpful" },
   { name: "Advanced", color: "red", description: "Strong technical background required" }
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 ];
 
 export default function TutorialsPage() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
     <Layout
       title="Tutorials - Zion Tech Group"
       description="Learn from our comprehensive collection of tutorials covering AI, web development, cloud computing, cybersecurity, and more."
@@ -358,6 +367,7 @@ export default function TutorialsPage() {
       canonical="https://ziontechgroup.com/tutorials"
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+<<<<<<< HEAD
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
@@ -537,10 +547,18 @@ export default function TutorialsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
               transition={{ duration: 0.6 }}
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -548,6 +566,7 @@ export default function TutorialsPage() {
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Learn from industry experts with our comprehensive collection of tutorials and guides
+<<<<<<< HEAD
 =======
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
@@ -568,6 +587,8 @@ export default function TutorialsPage() {
                 Access our comprehensive video tutorials and hands-on guides on the latest technologies.
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -589,11 +610,19 @@ export default function TutorialsPage() {
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
         {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
+<<<<<<< HEAD
+                <motion.div
+                  key={index}
+                  className="text-center"
+=======
                 <motion.div
                   key={index}
                   className="text-center"
@@ -603,6 +632,40 @@ export default function TutorialsPage() {
                 >
                   <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
                   <div className="text-gray-600">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Categories */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Tutorial Categories</h2>
+              <p className="text-lg text-gray-600">Browse tutorials by topic</p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              {tutorialCategories.map((category, index) => (
+                <motion.div
+                  key={index}
+                  className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+<<<<<<< HEAD
+                  <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
+                  <div className="text-gray-600">{stat.label}</div>
+=======
+                  <div className={`inline-block px-3 py-1 rounded-full text-sm font-medium mb-2 ${category.color}`}>
+                    {category.name}
+                  </div>
+                  <div className="text-2xl font-bold text-gray-900">{category.count}</div>
+                  <div className="text-sm text-gray-500">tutorials</div>
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
                 </motion.div>
               ))}
             </div>
@@ -632,6 +695,7 @@ export default function TutorialsPage() {
 <<<<<<< HEAD
         {/* Featured Tutorials */}
         <section className="py-20 bg-white">
+<<<<<<< HEAD
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -816,10 +880,92 @@ export default function TutorialsPage() {
                 </select>
               </div>
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Tutorials</h2>
+              <p className="text-xl text-gray-600">Our most popular and comprehensive tutorials</p>
+            </div>
+            
+            <div className="grid lg:grid-cols-3 gap-8">
+              {featuredTutorials.map((tutorial, index) => (
+                <motion.article
+                  key={tutorial.id}
+                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-200"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <div className="h-48 bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
+                    <Play className="w-16 h-16 text-white" />
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">
+                        {tutorial.category}
+                      </span>
+                      <span className="text-sm text-gray-500">{tutorial.duration}</span>
+                    </div>
+                    
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">
+                      {tutorial.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 mb-4 line-clamp-3">
+                      {tutorial.excerpt}
+                    </p>
+                    
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {tutorial.tags.map((tag, idx) => (
+                        <span key={idx} className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    
+                    <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                      <div className="flex items-center">
+                        <User className="w-4 h-4 mr-1" />
+                        {tutorial.author}
+                      </div>
+                      <div className="flex items-center">
+                        <Star className="w-4 h-4 mr-1 text-yellow-400" />
+                        {tutorial.rating}
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                      <div className="flex items-center">
+                        <Users className="w-4 h-4 mr-1" />
+                        {tutorial.students.toLocaleString()} students
+                      </div>
+                      <div className="flex items-center">
+                        <span className={`px-2 py-1 rounded text-xs font-medium ${
+                          tutorial.difficulty === 'Beginner' ? 'bg-green-100 text-green-800' :
+                          tutorial.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-800' :
+                          'bg-red-100 text-red-800'
+                        }`}>
+                          {tutorial.difficulty}
+                        </span>
+                      </div>
+                    </div>
+                    
+                    <a
+                      href={tutorial.videoUrl}
+                      className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center justify-center"
+                    >
+                      <Play className="w-4 h-4 mr-2" />
+                      Start Tutorial
+                    </a>
+                  </div>
+                </motion.article>
+              ))}
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Tutorial Categories */}
         <section id="tutorials" className="py-20 bg-gray-50">
@@ -1109,6 +1255,8 @@ export default function TutorialsPage() {
         </section>
 
 <<<<<<< HEAD
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
         {/* Recent Tutorials */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1125,6 +1273,7 @@ export default function TutorialsPage() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
+<<<<<<< HEAD
                 >
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
@@ -1240,6 +1389,92 @@ export default function TutorialsPage() {
                   Get Help
                 </Link>
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+                >
+                  <div className="flex items-start justify-between">
+                    <div className="flex-1">
+                      <div className="flex items-center mb-2">
+                        <span className="bg-gray-100 text-gray-600 text-xs font-medium px-2 py-1 rounded-full mr-3">
+                          {tutorial.category}
+                        </span>
+                        <span className="text-sm text-gray-500">{tutorial.duration}</span>
+                      </div>
+                      
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                        {tutorial.title}
+                      </h3>
+                      
+                      <p className="text-gray-600 mb-3">
+                        {tutorial.excerpt}
+                      </p>
+                      
+                      <div className="flex flex-wrap gap-2 mb-3">
+                        {tutorial.tags.map((tag, idx) => (
+                          <span key={idx} className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                      
+                      <div className="flex items-center text-sm text-gray-500">
+                        <User className="w-4 h-4 mr-1" />
+                        <span className="mr-4">{tutorial.author}</span>
+                        <Star className="w-4 h-4 mr-1 text-yellow-400" />
+                        <span className="mr-4">{tutorial.rating}</span>
+                        <Users className="w-4 h-4 mr-1" />
+                        <span className="mr-4">{tutorial.students.toLocaleString()} students</span>
+                        <span className={`px-2 py-1 rounded text-xs font-medium ${
+                          tutorial.difficulty === 'Beginner' ? 'bg-green-100 text-green-800' :
+                          tutorial.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-800' :
+                          'bg-red-100 text-red-800'
+                        }`}>
+                          {tutorial.difficulty}
+                        </span>
+                      </div>
+                    </div>
+                    
+                    <a
+                      href={tutorial.videoUrl}
+                      className="ml-4 bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
+                    >
+                      <Play className="w-4 h-4 mr-2" />
+                      Start
+                    </a>
+                  </div>
+                </motion.article>
+              ))}
+            </div>
+            
+            <div className="text-center mt-12">
+              <a
+                href="/tutorials/archive"
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
+              >
+                View All Tutorials <ArrowRight className="ml-2 w-4 h-4" />
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Newsletter Signup */}
+        <section className="py-20 bg-blue-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl font-bold mb-6">Stay Learning</h2>
+            <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
+              Get notified when we publish new tutorials and learning content
+            </p>
+            
+            <div className="max-w-md mx-auto">
+              <div className="flex">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-4 py-3 rounded-l-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                />
+                <button className="bg-white text-blue-600 px-6 py-3 rounded-r-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Subscribe
+                </button>
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
               </div>
             </div>
           </div>
@@ -1273,9 +1508,13 @@ export default function TutorialsPage() {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Layout>
 =======
     </MainLayout>
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+    </Layout>
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
   );
 }

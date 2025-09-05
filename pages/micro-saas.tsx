@@ -20,6 +20,7 @@ import {
   DollarSign,
   GraduationCap,
   Calendar,
+<<<<<<< HEAD
   FileText,
   ShoppingCart,
   Network,
@@ -726,6 +727,39 @@ const microSaasServices = [
   {
     title: 'Analytics Dashboard',
     description: 'Comprehensive analytics and reporting for your business metrics and KPIs.',
+=======
+  ClipboardList
+} from 'lucide-react';
+import Layout from '../components/Layout';
+
+const contactInfo = {
+  phone: "+1 302 464 0950",
+  email: "kleber@ziontechgroup.com",
+  address: "364 E Main St STE 1008 Middletown DE 19709"
+};
+
+const microSaasSolutions = [
+  {
+    title: "Workflow Automation",
+    description: "Streamline business processes with intelligent automation tools",
+    icon: Zap,
+    features: [
+      "Process Automation",
+      "Task Scheduling",
+      "Data Integration",
+      "Custom Workflows",
+      "API Integrations",
+      "Real-time Notifications"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-4,000/month",
+    benefits: ["80% time savings", "95% accuracy", "50% cost reduction"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "Data Processing Tools",
+    description: "Powerful data analysis and processing solutions",
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
     icon: BarChart3,
     features: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Automated insights'],
     pricing: '$45/month',
@@ -786,6 +820,7 @@ const microSaasServices = [
 <<<<<<< HEAD
   },
   {
+<<<<<<< HEAD
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
     title: 'Password Manager',
     description: 'Secure password storage and management for individuals and teams.',
@@ -1326,6 +1361,63 @@ const additionalServices = [
     icon: FileText,
 =======
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
+=======
+    title: "Event Management Platform",
+    description: "Complete event management solution for planning, registration, and execution",
+    icon: Calendar,
+    features: [
+      "Event Planning Tools",
+      "Registration Management",
+      "Payment Processing",
+      "Attendee Management",
+      "Communication Tools",
+      "Analytics & Reporting",
+      "Mobile App",
+      "Integration APIs"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$3,500-6,500/month",
+    benefits: ["Streamlined planning", "Better attendee experience", "Automated processes"],
+    setupTime: "3-4 weeks"
+  },
+  {
+    title: "Survey & Feedback Platform",
+    description: "Advanced survey creation and feedback collection system",
+    icon: ClipboardList,
+    features: [
+      "Survey Builder",
+      "Multiple Question Types",
+      "Response Analytics",
+      "Custom Branding",
+      "Multi-language Support",
+      "Integration APIs",
+      "Real-time Results",
+      "Export Capabilities"
+    ],
+    price: "Starting at $800/month",
+    marketPrice: "$1,500-3,500/month",
+    benefits: ["Better insights", "Automated collection", "Professional surveys"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "API Gateway & Management",
+    description: "Comprehensive API management platform for security, monitoring, and analytics",
+    icon: Code,
+    features: [
+      "API Gateway",
+      "Rate Limiting",
+      "Authentication & Authorization",
+      "API Documentation",
+      "Monitoring & Analytics",
+      "Developer Portal",
+      "Version Management",
+      "Security Policies"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,000-8,000/month",
+    benefits: ["Enhanced security", "Better performance", "Developer experience"],
+    setupTime: "3-4 weeks"
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
   }
 ];
         'Automated rightsizing recommendations',
@@ -2805,10 +2897,23 @@ export default function MicroSaasPage() {
                       {feature}
                     </li>
                   ))}
+<<<<<<< HEAD
                   {solution.features.length > 4 && (
                     <li className="text-purple-600 font-medium">
                       +{solution.features.length - 4} more features
                     </li>
+=======
+                </ul>
+                <div className="mt-4 space-y-2">
+                  <div className="flex justify-between items-center">
+                    <span className="text-lg font-bold text-purple-600">{solution.price}</span>
+                    <span className="text-sm text-gray-500">Market: {solution.marketPrice}</span>
+                  </div>
+                  {solution.benefits && (
+                    <div className="text-xs text-green-600 font-medium">
+                      Benefits: {solution.benefits.join(", ")}
+                    </div>
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
                   )}
                 </ul>
 
@@ -2934,6 +3039,7 @@ export default function MicroSaasPage() {
             <div className="flex items-center justify-center">
               <MapPin className="w-6 h-6 mr-2" />
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
+<<<<<<< HEAD
 =======
 const categories = [
   'All',
@@ -3146,6 +3252,8 @@ export default function MicroSaasPage() {
                 364 E Main St STE 1008, Middletown, DE 19709
               </p>
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
             </div>
           </div>
         </div>

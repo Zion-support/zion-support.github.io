@@ -1,5 +1,8 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -41,6 +44,7 @@ const categories = [
       { title: 'Performance Tips', description: 'Optimize your application performance', time: '25 min read' },
       { title: 'Code Standards', description: 'Maintain consistent code quality', time: '15 min read' },
       { title: 'Testing Strategies', description: 'Effective testing approaches', time: '30 min read' }
+<<<<<<< HEAD
 =======
 import Head from 'next/head';
 import Link from 'next/link';
@@ -126,11 +130,16 @@ const docCategories = [
       { title: "Error Codes", description: "Complete list of error codes", type: "Reference", updated: "2024-01-13" },
       { title: "Performance Issues", description: "Troubleshoot performance problems", type: "Guide", updated: "2024-01-11" }
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
     ]
   }
 ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 export default function DocsPage() {
   return (
     <Layout>
@@ -139,6 +148,7 @@ export default function DocsPage() {
         <meta name="description" content="Comprehensive documentation for Zion Tech Group's AI, IT, and micro SaaS services." />
       </Head>
 
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 =======
 const popularDocs = [
@@ -189,6 +199,8 @@ export default function DocsPage() {
       description="Comprehensive documentation for Zion Tech Group's products and services. API references, integration guides, and user tutorials."
       keywords="documentation, API docs, integration guides, user guides, tutorials, reference, developer docs"
     >
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
@@ -207,6 +219,7 @@ export default function DocsPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
+<<<<<<< HEAD
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Documentation
@@ -257,11 +270,24 @@ export default function DocsPage() {
                 </Link>
               </div>
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+            >
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                Documentation
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-4xl mx-auto">
+                Everything you need to get started with our AI, IT, and micro SaaS services. 
+                From quick start guides to advanced API documentation.
+              </p>
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
             </motion.div>
           </div>
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
         {/* Documentation Categories */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -309,6 +335,7 @@ export default function DocsPage() {
                     Get Started
                     <ArrowRight className="w-4 h-4 inline ml-2" />
                   </Link>
+<<<<<<< HEAD
 =======
         {/* Popular Documentation */}
         <section className="py-20 bg-white">
@@ -526,10 +553,15 @@ export default function DocsPage() {
                 <h3 className="font-bold text-gray-900 mb-2">Support</h3>
                 <p className="text-gray-600 text-sm">Get help and support</p>
               </Link>
+=======
+                </motion.div>
+              ))}
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -549,15 +581,37 @@ export default function DocsPage() {
                   href="/contact"
                   className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
                 >
+=======
+        {/* Contact CTA */}
+        <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                Need Help?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Can't find what you're looking for? Our team is here to help you get the most out of our services.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
                   Contact Support
-                  <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
+<<<<<<< HEAD
                 <Link
                   href="/support"
                   className="px-8 py-4 border border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center justify-center"
                 >
                   Visit Support Center
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+                <Link href="/help" className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
+                  Help Center
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
                 </Link>
               </div>
             </motion.div>
@@ -565,9 +619,13 @@ export default function DocsPage() {
         </section>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Layout>
 =======
     </MainLayout>
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+    </Layout>
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
   );
 }

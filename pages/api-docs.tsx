@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { 
   Code, 
   ArrowRight,
@@ -21,10 +22,19 @@ import {
   Play,
   Book,
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+import { 
+  Code, 
+  ArrowRight,
+  Book,
+  Zap,
+  Shield,
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
   Globe,
   Database,
   Server,
   Lock,
+<<<<<<< HEAD
 <<<<<<< HEAD
   CheckCircle,
   Brain,
@@ -71,10 +81,16 @@ import {
   Brain,
   Cloud
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+  CheckCircle,
+  Brain,
+  Cloud
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 } from 'lucide-react';
 
-const apiFeatures = [
+const apiEndpoints = [
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     title: 'RESTful API',
     description: 'Clean, intuitive REST API design with comprehensive documentation.',
@@ -220,6 +236,8 @@ curl -X POST "https://api.ziontechgroup.com/api/ai/content-generator" \\
 
 const apiEndpoints = [
   {
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
     title: 'Authentication API',
     description: 'Secure authentication and authorization endpoints',
     icon: Lock,
@@ -263,6 +281,7 @@ const apiEndpoints = [
   }
 ];
 
+<<<<<<< HEAD
 const features = [
   {
     icon: Shield,
@@ -669,6 +688,17 @@ export default function APIDocs() {
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
           <div className="container mx-auto px-4">
 =======
+=======
+export default function APIDocsPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Head>
+        <title>API Documentation - Zion Tech Group | Developer Resources</title>
+        <meta name="description" content="Comprehensive API documentation for Zion Tech Group services. Access our RESTful APIs for AI, IT, and micro SaaS solutions." />
+        <meta name="keywords" content="API documentation, developer resources, REST API, integration, SDK" />
+      </Head>
+
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0">
@@ -755,12 +785,16 @@ export default function APIDocs() {
                 </motion.div>
               );
             })}
+<<<<<<< HEAD
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -814,6 +848,8 @@ export default function APIDocs() {
       </section>
     </Layout>
 =======
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
       <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
@@ -833,6 +869,7 @@ export default function APIDocs() {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         {/* Code Examples */}
@@ -1195,5 +1232,7 @@ export default function APIDocs() {
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
   );
 }

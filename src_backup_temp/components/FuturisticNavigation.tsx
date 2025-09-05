@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import {  import { MobileSidebarToggle } from './MobileSidebarToggle';
 export default function Page("props": "any) {;
 ", [location.pathname]);

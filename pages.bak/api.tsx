@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 module.exports = default function APIPage() { return null}
@@ -9,6 +10,9 @@ module.exports = default function APIPage() { return null}
 =======
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 import React from 'react';
+=======
+import * as React from 'react';
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 
 interface ApiProps {
   // Add props here as needed

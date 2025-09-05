@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import Head from 'next/head';
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 import Link from 'next/link';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { 
 =======
@@ -21,6 +22,8 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 <<<<<<< HEAD
 import Layout from '../components/Layout';
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 import { 
 <<<<<<< HEAD
 =======
@@ -59,11 +62,15 @@ import {
   CheckCircle, 
   ArrowRight, 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
   Star, 
   TrendingUp, 
   Building, 
   Rocket, 
   Lightbulb, 
+<<<<<<< HEAD
   Handshake,
 <<<<<<< HEAD
   Code
@@ -146,6 +153,9 @@ export default function AboutPage() {
 =======
   Star
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+  Handshake 
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 } from 'lucide-react';
 
 const values = [
@@ -153,23 +163,32 @@ const values = [
     icon: Lightbulb,
     title: 'Innovation',
 <<<<<<< HEAD
+<<<<<<< HEAD
     description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions that drive real business value.'
 =======
     description: 'We constantly push the boundaries of technology to create cutting-edge solutions that drive real business value.'
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+    description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions.'
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
   },
   {
     icon: Shield,
     title: 'Security',
 <<<<<<< HEAD
+<<<<<<< HEAD
     description: 'Enterprise-grade security is at the core of everything we do, ensuring your data and systems are always protected.'
 =======
     description: 'Security is at the core of everything we do, ensuring your data and systems are protected with enterprise-grade security.'
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+    description: 'Your data and systems are protected with enterprise-grade security measures.'
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
   },
   {
     icon: Users,
     title: 'Collaboration',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     description: 'We work closely with our clients as partners, understanding their unique challenges and co-creating solutions.'
@@ -185,10 +204,14 @@ export default function AboutPage() {
 =======
 <<<<<<< HEAD
     description: 'We work closely with our clients as partners, ensuring their success is our success.'
+=======
+    description: 'We work closely with our clients to understand their unique needs and challenges.'
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
   },
   {
     icon: Award,
     title: 'Excellence',
+<<<<<<< HEAD
     description: 'We maintain the highest standards in everything we do, delivering quality that exceeds expectations.'
 =======
 <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -644,6 +667,8 @@ const timeline = [{
     "description": 'Introduced our Micro SaaS solutions platform for rapid business application deployment.'
     icon: Award,
     title: 'Excellence',
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
     description: 'We strive for excellence in everything we do, delivering quality results every time.'
   }
 ];
@@ -673,6 +698,7 @@ export default function AboutPage() {
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
+<<<<<<< HEAD
     description: 'We work closely with our clients as partners, understanding their unique challenges and co-creating solutions.'
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -831,6 +857,17 @@ export default function AboutPage() {
               <p className="text-lg text-gray-600 mb-6">
                 To democratize access to cutting-edge technology and artificial intelligence, 
                 empowering businesses of all sizes to compete and thrive in the digital economy.
+=======
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                About Zion Tech Group
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                We are a leading technology solutions provider specializing in AI, IT services, and micro SaaS platforms. Our expert team delivers innovative solutions that transform businesses and drive growth.
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
               </p>
               <p className="text-lg text-gray-600 mb-8">
                 We believe that every business, regardless of size or industry, should have 
@@ -879,12 +916,19 @@ export default function AboutPage() {
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
+<<<<<<< HEAD
+=======
+              className="text-center mb-12"
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Values
               </h2>
@@ -912,6 +956,7 @@ export default function AboutPage() {
                   </motion.div>
                 );
               })}
+<<<<<<< HEAD
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Values</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
@@ -1007,6 +1052,8 @@ export default function AboutPage() {
                   </p>
                 </motion.div>
               ))}
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
             </div>
           </div>
         </section>
@@ -1016,6 +1063,7 @@ export default function AboutPage() {
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
+<<<<<<< HEAD
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
@@ -1071,10 +1119,13 @@ export default function AboutPage() {
             <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
+<<<<<<< HEAD
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
                 Our Foundation
               </h2>
@@ -1327,3 +1378,26 @@ className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transit
 =======
 }
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Work With Us?
+              </h2>
+              <p className="text-xl mb-8 max-w-2xl mx-auto">
+                Let's discuss how we can help transform your business with our innovative technology solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                  Get In Touch
+                </Link>
+                <a href="tel:+13024640950" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
+                  Call +1 302 464 0950
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -93,6 +94,15 @@ const challenges = [
 
 const benefits = [
 =======
+=======
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Layout from '../../components/Layout';
+import { DollarSign, Brain, Shield, BarChart3, CheckCircle, ArrowRight, TrendingUp, Lock, CreditCard, Database, FileText, Users } from 'lucide-react';
+
+const solutions = [
+  {
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
     title: 'AI-Powered Fraud Detection',
     description: 'Advanced machine learning algorithms to detect and prevent fraudulent transactions',
     icon: Shield,
@@ -115,6 +125,7 @@ const benefits = [
     description: 'Automated compliance monitoring and reporting system',
     icon: FileText,
     features: ['Regulatory Reporting', 'Compliance Monitoring', 'Audit Trails', 'Risk Assessment']
+<<<<<<< HEAD
 =======
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
@@ -182,6 +193,22 @@ const benefits = [
     title: 'Enhanced Security',
     description: 'Advanced security measures protect against cyber threats and fraud',
     icon: Lock
+=======
+  }
+];
+
+const benefits = [
+  {
+    icon: DollarSign,
+    title: 'Cost Reduction',
+    description: 'Automate processes and reduce operational costs through technology.',
+    metric: '35%'
+  },
+  {
+    icon: Shield,
+    title: 'Enhanced Security',
+    description: 'Advanced security measures protect against cyber threats and fraud'
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
   },
   {
     title: 'Improved Efficiency',
@@ -197,6 +224,7 @@ const benefits = [
     title: 'Regulatory Compliance',
     description: 'Automated compliance monitoring ensures adherence to regulations',
     icon: CheckCircle
+<<<<<<< HEAD
 =======
     title: 'Bank-Grade Security',
     description: 'Enterprise-level security with encryption, authentication, and fraud prevention'
@@ -235,11 +263,14 @@ const caseStudies = [
     results: ['80% faster trade execution', '50% reduction in system downtime', '30% increase in trading volume'],
     image: '/api/placeholder/400/300'
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
   }
 ];
 
 export default function FinancePage() {
   return (
+<<<<<<< HEAD
     <MainLayout
       title="Financial Technology Solutions - Zion Tech Group"
       description="Transform financial services with our secure, scalable fintech solutions including digital banking, trading platforms, and compliance systems."
@@ -255,6 +286,13 @@ export default function FinancePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+    <Layout>
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -262,6 +300,7 @@ export default function FinancePage() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
                 Financial{' '}
                 <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
@@ -279,6 +318,8 @@ export default function FinancePage() {
                   View Case Studies
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
                 Finance <span className="text-blue-600">Solutions</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
@@ -286,6 +327,7 @@ export default function FinancePage() {
                 and automated compliance solutions.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
+<<<<<<< HEAD
 =======
                 Financial Technology
                 <span className="block text-yellow-400">Solutions</span>
@@ -312,6 +354,20 @@ export default function FinancePage() {
                   View Case Studies
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Get Started
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+                <Link
+                  href="/ai-services"
+                  className="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
+                >
+                  View AI Services
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
                 </Link>
               </div>
             </motion.div>
@@ -319,6 +375,7 @@ export default function FinancePage() {
         </section>
 
         {/* Solutions Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -403,6 +460,8 @@ export default function FinancePage() {
                 Financial Industry Challenges
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -442,6 +501,7 @@ export default function FinancePage() {
                   </ul>
                 </motion.div>
               ))}
+<<<<<<< HEAD
 =======
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -485,11 +545,14 @@ export default function FinancePage() {
                 );
               })}
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -509,6 +572,8 @@ export default function FinancePage() {
             </motion.div>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
@@ -538,6 +603,7 @@ export default function FinancePage() {
                   <p className="text-gray-600">{benefit.description}</p>
                 </motion.div>
               ))}
+<<<<<<< HEAD
 =======
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -588,10 +654,13 @@ export default function FinancePage() {
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Case Studies */}
         <section className="py-20 bg-gray-50">
@@ -669,6 +738,8 @@ export default function FinancePage() {
                   View All Industries
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
@@ -696,6 +767,7 @@ export default function FinancePage() {
                   className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
                 >
                   View IT Services
+<<<<<<< HEAD
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
                 </Link>
               </div>
@@ -778,5 +850,14 @@ export default function FinancePage() {
         </section>
       </div>
     </MainLayout>
+=======
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </Layout>
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
   );
 }

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 export default function Home() { return (<main style={{\"padding\": \'20\'}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}
@@ -10,6 +11,9 @@ module.exports = default function Home() { return (<main style={{padding: "20"}}
 =======
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 import React from 'react';
+=======
+import * as React from 'react';
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 
 interface IndexProps {
   // Add props here as needed

@@ -14,6 +14,7 @@ import { motion } from 'framer-motion';
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
 import { 
   Brain, 
+<<<<<<< HEAD
   Zap, 
   Shield, 
   Database, 
@@ -46,15 +47,30 @@ import {
   DollarSign, 
   Award, 
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+  Eye, 
+  MessageSquare, 
+  BarChart3, 
+  CheckCircle, 
+  ArrowRight, 
+  Clock, 
+  Star, 
+  DollarSign, 
+  Award, 
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
   Globe, 
   Lock, 
   Cpu, 
   Bot, 
   FileText, 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   Image, 
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+  Image, 
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
   Video, 
   Mic, 
   Code, 
@@ -70,6 +86,7 @@ import {
   Building, 
   Sprout, 
   Mail, 
+<<<<<<< HEAD
 <<<<<<< HEAD
   ShoppingCart, 
   BookOpen, 
@@ -309,6 +326,14 @@ import Layout from '../components/Layout';
   Package, 
   Calendar, 
   BookOpen, 
+=======
+  Search, 
+  Target, 
+  TrendingUp, 
+  Package, 
+  Calendar, 
+  BookOpen, 
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
   ShoppingCart, 
   Home, 
   Trash2, 
@@ -328,10 +353,20 @@ import Layout from '../components/Layout';
   ClipboardList,
   TreePine,
   Droplets,
+<<<<<<< HEAD
   Gamepad2,
   Cog
+=======
+  Gamepad2
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 } from 'lucide-react';
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+
+const contactInfo = {
+  phone: "+1 302 464 0950",
+  email: "kleber@ziontechgroup.com",
+  address: "364 E Main St STE 1008 Middletown DE 19709"
+};
 
 const contactInfo = {
   phone: "+1 302 464 0950",
@@ -814,6 +849,7 @@ const aiServices = [
       'Reduce teaching workload by 40%',
       'Enable scalable education'
     ],
+<<<<<<< HEAD
     marketPrice: '$3,000-6,000/month',
     setupTime: '4-8 weeks',
     targetUsers: 'Schools, Universities, Online education, Corporate training'
@@ -1810,6 +1846,13 @@ const aiServices = [
     }
   ];
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+    marketPrice: '$3,500-8,500/month',
+    setupTime: '3-4 weeks',
+    targetUsers: 'Software Development, Manufacturing, E-commerce, SaaS'
+  }
+];
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 
 =======
       'Lower support costs by 60%'
@@ -3408,18 +3451,30 @@ export default function AIServicesPage() {
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
+<<<<<<< HEAD
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
 <<<<<<< HEAD
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 =======
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
           <div className="container mx-auto px-4">
+=======
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+          </div>
+
+          <div className="container mx-auto px-4 relative z-10">
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-4 md:mb-6">
@@ -3441,6 +3496,10 @@ export default function AIServicesPage() {
 =======
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 AI Services & Solutions
+=======
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                AI Services
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 100+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, 
@@ -3462,6 +3521,7 @@ export default function AIServicesPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Contact Info Bar */}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3778,10 +3838,16 @@ export default function AIServicesPage() {
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
+=======
+        {/* Services Section */}
+        <section id="services" className="py-20">
+          <div className="container mx-auto px-4">
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
               viewport={{ once: true }}
             >
 <<<<<<< HEAD
@@ -3813,6 +3879,16 @@ export default function AIServicesPage() {
                   Explore Micro SaaS
                 </Link>
               </div>
+=======
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                Our AI Services
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Comprehensive AI solutions designed to accelerate your digital transformation and drive innovation.
+              </p>
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
             </motion.div>
           </div>
         </section>

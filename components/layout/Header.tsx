@@ -7,6 +7,11 @@
   Mail, 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+import { useRouter } from 'next/navigation';
+import { motion, AnimatePresence } from 'framer-motion';
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 import {
   Menu,
   X,

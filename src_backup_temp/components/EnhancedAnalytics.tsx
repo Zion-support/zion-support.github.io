@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({;
   enabled = true,: any;

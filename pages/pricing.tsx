@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -181,6 +184,7 @@ const contactInfo = {
   email: "kleber@ziontechgroup.com",
   address: "364 E Main St STE 1008, Middletown DE 19709"
 };
+<<<<<<< HEAD
 =======
 import React, { useState } from 'react';
 import Head from 'next/head';
@@ -278,6 +282,11 @@ const addOns = [
 export default function PricingPage() {
   return (
 <<<<<<< HEAD
+=======
+
+export default function PricingPage() {
+  return (
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
     <Layout 
       title="Pricing - Zion Tech Group | Transparent Pricing for AI, IT & SaaS Services"
       description="View our transparent pricing for AI services, IT solutions, and Micro SaaS platforms. No hidden fees, flexible plans for businesses of all sizes."
@@ -287,6 +296,7 @@ export default function PricingPage() {
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
+<<<<<<< HEAD
 =======
     <>
       <Head>
@@ -446,6 +456,13 @@ export default function PricingPage() {
               transition={{ duration: 0.8 }}
             >
 <<<<<<< HEAD
+=======
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
               <h1 className="text-4xl md:text-5xl font-bold mb-6">Transparent Pricing</h1>
               <p className="text-xl mb-8 max-w-3xl mx-auto">
                 Choose the perfect plan for your business needs. No hidden fees, no surprises. 
@@ -629,6 +646,7 @@ export default function PricingPage() {
                 >
                   Call {contactInfo.phone}
                 </a>
+<<<<<<< HEAD
 =======
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Get Started?
@@ -651,11 +669,13 @@ export default function PricingPage() {
                   Learn More
                 </Link>
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
               </div>
             </motion.div>
           </div>
         </section>
       </div>
-    </>
+    </Layout>
   );
 }
