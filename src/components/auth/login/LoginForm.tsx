@@ -9,6 +9,6 @@ export default function LoginForm(props: any) {return (
           Professional LoginForm services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

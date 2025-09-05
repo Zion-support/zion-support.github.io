@@ -4,7 +4,8 @@ import {MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkl
 ;
 export const AIChatbot = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
-        enableUserBehaviorTracking: true;});
+        enableUserBehaviorTracking: true;}
+    );
     const [isOpen, setIsOpen] = useState(false);'
     const [isMinimized, setIsMinimized] = useState(false);''
     const [messages, setMessages] = useState([]);'''
@@ -143,7 +144,8 @@ trackChatbotInteraction("bot_response", {messageId: message.id,
     // comment
         const message = addMessage({"
             type: "bot", content,
-            metadata});"
+            metadata}
+    );"
         // comment
         trackChatbotInteraction("bot_response", {messageId: message.id,
             intent: metadata?.intent, confidence: metadata?.confidence})
@@ -246,7 +248,8 @@ return &quot;I understand you&apos;re asking about &apos;&quot; + userInput + "&
 }
         // comment
 trackChatbotInteraction(&apos;user_input&apos, {messageId: userMessage.id,
-inputLength: input.length;});'
+inputLength: input.length;}
+    );'
         // Clear input''
         setInputValue('');
         setIsTyping(true);
@@ -263,7 +266,8 @@ inputLength: input.length;});'
                     "Get a quote",
                     "View services",
                     "Contact sales"                ]
-            });'
+            }
+    );'
             // Track successful interaction''
             trackChatbotInteraction('conversation_success', {}
 userInput: input,

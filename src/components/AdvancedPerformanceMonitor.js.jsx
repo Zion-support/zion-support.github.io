@@ -305,7 +305,7 @@ export function AdvancedPerformanceMonitor(props: any) {
                       {getCategoryIcon(metric.category)}"
                       <h3 className="font-semibold text-zion-slate text-sm">
                         {metric.name}
-                      </h3>
+                      
                     </div>
                     <span`
                       className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(metric.status)}`}
@@ -352,7 +352,7 @@ export function AdvancedPerformanceMonitor(props: any) {
                 <h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">"
                   <CheckCircle className="w-5 h-5 text-zion-blue"  />
                   System Health Status
-                </h3>"
+                "
                 <div className="space-y-3">"
                   <div className="flex items-center justify-between">"
                     <span className="text-sm text-zion-slate">
@@ -386,7 +386,7 @@ export function AdvancedPerformanceMonitor(props: any) {
                 <h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">"
                   <TrendingUp className="w-5 h-5 text-zion-green"  />
                   Scalability Overview
-                </h3>"
+                "
                 <div className="space-y-3">
                   {scalabilityMetrics.slice(0, 3).map(metric => (
                     <div
@@ -422,7 +422,7 @@ export function AdvancedPerformanceMonitor(props: any) {
                     <div className="flex items-center gap-3 mb-2">"
                       <h3 className="font-semibold text-zion-slate">
                         {metric.name}
-                      </h3>
+                      
                       <span`
                         className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(metric.status)}`}
                       >
@@ -489,7 +489,7 @@ export function AdvancedPerformanceMonitor(props: any) {
                     <div className="flex items-center gap-3 mb-2">"
                       <h3 className="font-semibold text-zion-slate">
                         {alert.title}
-                      </h3>
+                      
                       <span`
                         className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(alert.severity)}`}
                       >
@@ -565,7 +565,7 @@ export function AdvancedPerformanceMonitor(props: any) {
                     <div className="flex items-center gap-3 mb-2">"
                       <h3 className="font-semibold text-zion-slate">
                         {metric.name}
-                      </h3>
+                      
                       <span`
                         className={`px-2 py-1 rounded-full text-xs font-medium ${getUtilizationColor(metric.utilization)}`}
                       >
@@ -626,7 +626,7 @@ export function AdvancedPerformanceMonitor(props: any) {
               <Zap className="w-16 h-16 mx-auto mb-4 opacity-50"  />"
               <h3 className="text-lg font-semibold mb-2">
                 Performance Analytics
-              </h3>
+              
               <p>
                 Advanced performance analytics and predictive insights coming
                 soon...
@@ -636,7 +636,7 @@ export function AdvancedPerformanceMonitor(props: any) {
         )}
       </div>
     </div>
-  );}
+    );}
 "export default ComponentName;"
 
 </RefreshCw>

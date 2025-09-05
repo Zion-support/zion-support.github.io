@@ -1,1 +1,0 @@
-import React from 'react'; interface Message { role: 'string; content: string;' } } interface KBChatRequestBody { messages: 'Message[];' } } choices?: OpenAIChoice[]; message: string; confidence: numbe,r} interface: ErrorResponse { error: string; details?: strin,g} export: default async function handler( req: NextApiReques,t

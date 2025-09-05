@@ -64,7 +64,7 @@ export function TechSolutionsSection(props: any) {
 
               <h3 className="text-xl font - bold text-white mb-3 group - hover: tex t-blue - 400 transition - colors duration -200">
                 {solution.title}
-              </h3>
+              
 
               <p className="text-gray - 400 text-sm mb-6 leading -relaxed">
                 {solution.description}
@@ -126,7 +126,7 @@ export function TechSolutionsSection(props: any) {
           <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">"
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Ready to Transform Your Business?
-            </h3>"
+            "
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               Let's discuss how our technology solutions can help you achieve
               your business goals and stay ahead of the competition.</p>"

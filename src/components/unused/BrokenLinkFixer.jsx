@@ -23,7 +23,8 @@ export default function Page(props: any) {
                     link.status = 'unknown';
                     link.fixable = true}
                 links.push(link)}
-        });
+        }
+    );
         return links}, []);
     // Check if a link is working
     const checkLink = useCallback(async (link) => {
@@ -87,7 +88,8 @@ export default function Page(props: any) {
             broken: 0,
             checking: 0,
             unknown: allLinks.length
-        });
+        }
+    );
         // Check links in batches to avoid overwhelming the system
         const batchSize = 5;
         for(let i = 0; i < allLinks.length; i += batchSize) {
@@ -111,8 +113,10 @@ export default function Page(props: any) {
                     else if(checkedLink.status === 'broken')
                         newStats.broken++;
                     newStats.checking--;
-                    newStats.unknown--});
-                return newStats});
+                    newStats.unknown--}
+    );
+                return newStats}
+    );
             // Small delay between batches
             if(i + batchSize < allLinks.length) {await new Promise(resolve => setTimeout(resolve, 100))}
         }
@@ -151,7 +155,8 @@ export default function Page(props: any) {
                     link.element.setAttribute('title', `Redirected from ${link.url} to working page`);
                     fixedCount++}
             }
-        });
+        }
+    );
         if(fixedCount > 0) {// Re-check links after fixes
             setTimeout(checkAllLinks, 1000)}
         return fixedCount}, [links, checkAllLinks]);
@@ -163,11 +168,13 @@ export default function Page(props: any) {
         // Remove previous highlights'
         document.querySelectorAll('.broken-link-highlight').forEach(el => {
 
-            el.classList.remove('broken-link-highlight')});
+            el.classList.remove('broken-link-highlight')}
+    );
         // Add highlight to selected element'
         link.element.classList.add('broken-link-highlight');
         // Scroll to element'
-        link.element.scrollIntoView({behavior: 'smooth', block: 'center'});
+        link.element.scrollIntoView({behavior: 'smooth', block: 'center'}
+    );
         // Remove highlight after 3 seconds
         setTimeout(() => {link.element?.classList.remove('broken-link-highlight')}, 3000)}, []);
     // Auto-check links
@@ -400,7 +407,8 @@ export default function Page(props: any) {
 
 }))
                         };
-                        const blob = new Blob([JSON.stringify(report, null, 2)], {type: 'application/json'});
+                        const blob = new Blob([JSON.stringify(report, null, 2)], {type: 'application/json'}
+    );
                         const url = URL.createObjectURL(blob);
                         const a = document.createElement('a');
                         a.href = url;

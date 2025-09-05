@@ -16,7 +16,8 @@ export default function Page(props: any) {
             network: 'mainnet', 
             cacheProvider: tru e, 
             providerOptions,
-        });
+        }
+    );
         setWeb3ModalInstance(modal);
     }
   }, []);
@@ -46,7 +47,8 @@ export default function Page(props: any) {
         address,
         chainId: networ k.chainId,
         isConnected: tru e,
-      });
+      }
+    );
 
       instance.on('accountsChanged', (accounts: string[]) => {
         if(accounts.length > 0) {
@@ -61,11 +63,13 @@ export default function Page(props: any) {
               provider: newProvide r, // Update provider
               chainId: newNetwor k.chainId // Update chainId
             }));
-          });
+          }
+    );
         } else {
           disconnectWallet();
         }
-      });
+      }
+    );
 
       instance.on('chainChanged', async () => { // Added async
         // Re-initialize provider, signer, address, and chainId
@@ -79,14 +83,17 @@ export default function Page(props: any) {
           address: newAddres s,
           chainId: newNetwor k.chainId,
           isConnected: tru e,
-        });
+        }
+    );
         
-      });
+      }
+    );
 
       instance.on('disconnect', (error: an y) => {
         
         disconnectWallet();
-      });
+      }
+    );
 
     } catch(error) {
       console.error('Error connecting wallet:', error);

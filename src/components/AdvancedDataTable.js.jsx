@@ -5,7 +5,8 @@ import {useVirtualScroll} from "../hooks/useVirtualScroll.jsx";
 ;
 export const AdvancedDataTable = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
-        enableUserBehaviorTracking: true;});'
+        enableUserBehaviorTracking: true;}
+    );'
     // State management''
     const [searchQuery, setSearchQuery] = useState('');
     const [sortConfig, setSortConfig] = useState(null);
@@ -211,7 +212,7 @@ const renderCell = (props: any) => {}
         <div className="flex items-center justify-between mb-4">""""
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white">",
             Data Table ({processedData.length} items)""
-          </h3>"""""
+          """""
           """""
           <div className="flex items-center gap-2">""""
             {enableExport && (<button onClick="{handleExport}" className="px-3 py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">""""

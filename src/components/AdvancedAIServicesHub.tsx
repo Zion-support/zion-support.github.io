@@ -62,14 +62,16 @@ export default function Page(props: any) {
     }
   ];
 
-    return matchesCategory && matchesSearch});
+    return matchesCategory && matchesSearch}
+    );
 
       case 'price':
         return a.pricing.starter - b.pricing.starter;
       case 'popularity':
         return 0; // Default sorting
       default: return 0}
-  });
+  }
+    );
 
       case 'beta':
         return 'bg-yellow-100 text-yellow-800';
@@ -85,7 +87,8 @@ export default function Page(props: any) {
       default: retur n 'Unknown'}
   };
 
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-12">
+  return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-12">
       <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
         {/* Header */}
         <motion.div

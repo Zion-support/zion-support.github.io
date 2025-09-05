@@ -9,6 +9,6 @@ export default function NotFound(props: any) {return (
           Professional NotFound services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

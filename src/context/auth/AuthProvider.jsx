@@ -29,25 +29,31 @@ export const AuthProvider = (props: any) => {}
 """"
                 title: "Login Failed",""""
                 description: data.error || "Email not confirmed. Please check your inbox to verify your email.",""""
-                variant: "destructive"});""""
+                variant: "destructive"}
+    );""""
             return {error: data.error || "Email not confirmed. Please check your inbox to verify your email."}}
         // Handle other errors from the API call'"""
         if (res.status === 400) { // Bad request (e.g. missing fields)'"'"""
-            toast({ title: "Login Failed", description: data?.error || 'Missing email or password', variant: "destructive" });'
+            toast({ title: "Login Failed", description: data?.error || 'Missing email or password', variant: "destructive" }
+    );'
             return {error: data?.error || 'Missing email or password'}}'"""
         if (res.status === 401) { // Unauthorized (invalid credentials)'"'"""
-            toast({ title: "Login Failed", description: 'Incorrect email or password', variant: "destructive" });'
+            toast({ title: "Login Failed", description: 'Incorrect email or password', variant: "destructive" }
+    );'
 return {error: 'Incorrect email or password'}}
         // Catch-all for other non-200 statuses from loginUser
         if(res.status !== 200) {
 '"
-            toast({ title: "Login Failed", description: data?.error || 'An unexpected error occurred during login.', variant: "destructive" });
+            toast({ title: "Login Failed", description: data?.error || 'An unexpected error occurred during login.', variant: "destructive" }
+    );
             return {error: data?.error || 'Login failed'}}
         // At this point, loginUser call was successful(200 OK)
-        setTokens({accessToken: data.accessToken, refreshToken: data.refreshToken});
+        setTokens({accessToken: data.accessToken, refreshToken: data.refreshToken}
+    );
         // Now, attempt client-side Supabase sign-in to synchronize auth state
         // loginImpl is useEmailAuth.login which calls supabase.auth.signInWithPassword
-        const clientLoginResult = await loginImpl({email, password});
+        const clientLoginResult = await loginImpl({email, password}
+    );
         if(clientLoginResult?.error) {
 
             // useEmailAuth.login already shows a toast on error.// We just need to return the error to the caller of AuthProvider.login"
@@ -56,7 +62,8 @@ return {error: 'Incorrect email or password'}}
             return { error: clientLoginResult.error?.message || "Client-side login failed." }}
         const params = new URLSearchParams(location.search);
         const next = params.get('redirectTo') || params.get('next') || '/equipment/recommendations';
-        router(next, {replace: true});
+        router(next, {replace: true}
+    );
         return {error: null}; // Successful login
     };
     // Register via backend and persist auth info
@@ -68,7 +75,8 @@ return {error: 'Incorrect email or password'}}
 
                 return { error: data?.message || 'Registration failed' }}
             safeStorage.setItem('auth', JSON.stringify({token: data.token, user: data.user}));
-            setTokens({accessToken: data.token, refreshToken: data.refreshToken || null});
+            setTokens({accessToken: data.token, refreshToken: data.refreshToken || null}
+    );
             setUser(data.user);
             return {error: null}}
         catch(err) {
@@ -78,17 +86,20 @@ return {error: 'Incorrect email or password'}}
     // Wrapper for signup to match the AuthContextType interface
     const signup = async(email, password, userData) => {
 
-        const result = await signupImpl({ email, password, display_name: userData });
+        const result = await signupImpl({ email, password, display_name: userData }
+    );
         if(!result?.error) {
 
             const loginResult = await login(email, password);
             if(!loginResult.error) {
 
                 const firstName = (userData?.name || userData || '').split(' ')[0];
-                toast({ title: `Welcome, ${firstName}!` });
+                toast({ title: `Welcome, ${firstName}!` }
+    );
                 const params = new URLSearchParams(location.search);
                 const next = params.get('redirectTo') || params.get('next') || '/dashboard';
-                router(next, {replace: true});
+                router(next, {replace: true}
+    );
             }
         }
         return result};
@@ -120,13 +131,16 @@ return {error: 'Incorrect email or password'}}
                                 const { id, title, price } = location.state.pendingActionArgs;
                                 dispatch(addItem({id, title, price}));
                                 // Clear pending action from state first
-                                router(location.pathname, { state: {}, replace: true });
+                                router(location.pathname, { state: {}, replace: true }
+    );
                                 // Navigate to checkout'
-                                router('/checkout', {replace: true});
+                                router('/checkout', {replace: true}
+    );
                             }
                             else if(next) {
 
-                                router(decodeURIComponent(next), { replace: true });
+                                router(decodeURIComponent(next), { replace: true }
+    );
                             }
                             // --- END MODIFICATION ---
 
@@ -154,7 +168,8 @@ return {error: 'Incorrect email or password'}}
 
                     handleSignedOut()}
             }
-            setIsLoading(false)});
+            setIsLoading(false)}
+    );
         return () => {subscription.unsubscribe()}}, [navigate]);
     const authContextValue = {user,
         isLoading,
