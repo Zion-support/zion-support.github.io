@@ -1,16 +1,20 @@
 // Build Verification Script
 // This script checks if our components can be imported without syntax errors
  
+// eslint-disable-next-line no-console
 console.log('🔍 Starting build verification...');
 try {
   // Test component imports;
+  // eslint-disable-next-line no-console
   console.log('📦 Testing component imports...');
   // Test basic React functionality;
   const React = require('react');
+  // eslint-disable-next-line no-console
   console.log('✅ React import successful', React.version);
 
   // Test framer-motion;
   const { motion } = require('framer-motion');
+  // eslint-disable-next-line no-console
   console.log('✅ Framer Motion import successful', typeof motion);
 
   // Test lucide-react icons;
@@ -21,6 +25,7 @@ try {
     Cloud,
     Shield,
     Zap} = require('lucide-react');
+  // eslint-disable-next-line no-console
   console.log('✅ Lucide React icons import successful', {
     "ArrowRight": typeof ArrowRight,
     "CheckCircle": typeof CheckCircle,
@@ -29,12 +34,14 @@ try {
     "Shield": typeof Shield,
     "Zap": typeof Zap});
 
+  // eslint-disable-next-line no-console
   console.log('🎉 All core dependencies imported successfully!');
+  // eslint-disable-next-line no-console
   console.log('📋 Components should be ready for build');
 } catch (error) {
-  console.error('❌ Import "error": ', error.message);
+  // eslint-disable-next-line no-console
+  console.error('❌ Import error:', error.message);
   process.exit(1);
 }
+// eslint-disable-next-line no-console
 console.log('🏁 Build verification complete');
-console.log('🔍 Starting build verification...'); try { console.log('📦 Testing component imports...'); const React = require('react'); console.log('✅ React import successful',React.version); const { motion } = require('framer-motion'); console.log('✅ Framer Motion import successful',typeof motion); const { ArrowRight,CheckCircle,Brain,Cloud,Shield,Zap,} = require('lucide-react'); console.log('✅ Lucide React icons import successful',{ ArrowRight: typeof ArrowRight,CheckCircle: typeof CheckCircle,Brain: typeof Brain,Cloud: typeof Cloud,Shield: typeof Shield,Zap: typeof Zap,}); console.log('🎉 All core dependencies imported successfully!'); console.log('📋 Components should be ready for build')} catch (error) { console.error('❌ Import error:',error.message); process.exit(1)} console.log('🏁 Build verification complete');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe

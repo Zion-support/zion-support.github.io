@@ -1,16 +1,17 @@
-import React from 'react'
-import Image from 'next/image'
+import React from 'react';
+import Image from 'next/image';
+
 interface OptimizedImageProps {
-  src: stringursor/add-new-services-and-deploy-updates-1b90
-  alt: string
-  width?: number
-  height?: number
-  priority?: boolean
-  className?: string
-  sizes?: string
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  priority?: boolean;
+  className?: string;
+  sizes?: string;
 }
 
-export const "OptimizedImage": React.FC<OptimizedImageProps> = ({
+export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
   width,

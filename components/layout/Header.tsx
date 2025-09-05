@@ -31,7 +31,7 @@ import { Button } from '../ui/Button';
 import { Badge } from '../ui/Badge';
 
 
-const "Header": React.FC = () => {
+const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -53,7 +53,7 @@ const "Header": React.FC = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
         <Link href="/" className="text-white font-bold">Zion Tech Group</Link>
         <nav className="hidden md:flex items-center gap-6 text-sm">
           {navigationItems.map((item) => (

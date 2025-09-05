@@ -46,7 +46,8 @@ import {
   Gamepad2
 } from 'lucide-react';
 
-const aiServices = [{ursor/add-new-services-and-deploy-updates-1b90
+const aiServices = [
+  {
     title: 'AI-Powered Email Responder',
     description: 'Automated email responses using advanced NLP and machine learning algorithms.',
     icon: Mail,
@@ -215,7 +216,7 @@ const aiServices = [{ursor/add-new-services-and-deploy-updates-1b90
 description: 'Complete autonomous vehicle systems with advanced perception and decision-making capabilities.',
     icon: Car,
     features: ['Computer Vision', 'Sensor Fusion', 'Path Planning', 'Real-time Decision Making'],
-    pricing: '$100,000 - $500,000/project',ursor/add-new-services-and-deploy-updates-1b90
+    pricing: '$100,000 - $500,000/project',
     category: 'Autonomous Systems',
     popular: true
   },

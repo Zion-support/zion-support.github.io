@@ -11,7 +11,12 @@ import {
   Instagram,
   Github,
   ArrowRight,
-  ExternalLink
+  ExternalLink,
+  Youtube,
+  Settings,
+  Users,
+  Globe,
+  Shield
 } from 'lucide-react';
 
 const services = {
@@ -95,7 +100,8 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   hours: '24/7 Support Available'
-};ursor/add-new-services-and-deploy-updates-1b90
+};
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -189,9 +195,9 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">ursor/add-new-services-and-deploy-updates-1b90
+          <div className="lg:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-6">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <Zap className="w-5 h-5 text-white" />
@@ -330,44 +336,32 @@ export default function Footer() {
                     </a>
                   );
                 })}
-              </div>ursor/add-new-services-and-deploy-updates-1b90
+              </div>
             </div>
           </div>
+        </div>
+      </div>
 
-{/* Newsletter Signup */}
+      {/* Newsletter Signup */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-8">
-                      <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="mb-4 md:mb-0">
-              <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
-              <p className="text-gray-400 text-sm">
-                Get the latest technology insights and company updates delivered to your inbox.
-              </p>ursor/add-new-services-and-deploy-updates-1b90
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="mb-6 md:mb-0">
+              <h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
+              <p className="text-gray-300">
+                Subscribe to our newsletter for the latest technology insights and updates.
+              </p>
             </div>
-          ))}
-        </div>
-
-        {/* Newsletter Signup */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex flex-col md:flex-row items-center justify-between">
-              <div className="mb-6 md:mb-0">
-                <h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
-                <p className="text-gray-300">
-                  Subscribe to our newsletter for the latest technology insights and updates.
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent min-w-64"
-                />
-                <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium flex items-center justify-center">
-                  Subscribe
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </button>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent min-w-64"
+              />
+              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium flex items-center justify-center">
+                Subscribe
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </button>
             </div>
           </div>
         </div>
@@ -379,7 +373,7 @@ export default function Footer() {
 <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="text-sm text-gray-400 mb-4 md:mb-0">
               © 2024 Zion Tech Group. All rights reserved. | 
-              <span className="ml-2">Delaware, United States</span>ursor/add-new-services-and-deploy-updates-1b90
+              <span className="ml-2">Delaware, United States</span>
             </div>
             
             <div className="flex flex-wrap items-center space-x-6">

@@ -2,15 +2,20 @@
 
 const fs = require('fs');
 
+// eslint-disable-next-line no-console
 console.log('🧪 Running Basic Tests...');
 
 // Test "1": Check if we can read package.json
 try {
   const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+  // eslint-disable-next-line no-console
   console.log('✅ Package.json is valid');
+  // eslint-disable-next-line no-console
   console.log(`   - "Name": ${packageJson.name}`);
+  // eslint-disable-next-line no-console
   console.log(`   - "Version": ${packageJson.version}`);
 } catch (error) {
+  // eslint-disable-next-line no-console
   console.log('❌ Package.json "error": ', error.message);
 }
 
@@ -18,12 +23,13 @@ try {
 const files = ['src/App.tsx', 'next.config.js', 'package.json'];
 files.forEach(file => {
   if (fs.existsSync(file)) {
+    // eslint-disable-next-line no-console
     console.log(`✅ ${file} exists`);
   } else {
+    // eslint-disable-next-line no-console
     console.log(`❌ ${file} missing`);
   }
 });
 
+// eslint-disable-next-line no-console
 console.log('✅ Basic tests completed');
-#!/usr/bin/env node const fs = require('fs'); console.log('🧪 Running Basic Tests...'); try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); console.log('✅ Package.json is valid'); console.log(` - Name: ${packageJson.name}`); console.log(` - Version: ${packageJson.version}`)} catch(error) { console.log('❌ Package.json error:',error.message)} const files = ['src/App.tsx','next.config.js','package.json']; files.forEach(file => { if (fs.existsSync(file)) { console.log(`✅ ${file} exists`)} else { console.log(`❌ ${file} missing`)} }); console.log('✅ Basic tests completed');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe

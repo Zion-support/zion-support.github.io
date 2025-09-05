@@ -4,7 +4,8 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
 
-const jobOpenings = [{ursor/add-new-services-and-deploy-updates-1b90
+const jobOpenings = [
+  {
     id: 1,
     title: "Senior AI/ML Engineer",
     department: "AI Services",
@@ -29,7 +30,8 @@ const jobOpenings = [{ursor/add-new-services-and-deploy-updates-1b90
     type: "Full-time",
     experience: "3+ years",
     description: "Build scalable web applications and microservices for our SaaS solutions.",
-requirements: ["Bachelor's degree in Computer Science or related field",ursor/add-new-services-and-deploy-updates-1b90
+    requirements: [
+      "Bachelor's degree in Computer Science or related field",
       "3+ years experience in full-stack development",
       "Proficiency in React, Node.js, TypeScript",
       "Experience with databases (PostgreSQL, MongoDB)",
