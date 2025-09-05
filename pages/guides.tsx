@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
-=======
-
-import Link from 'next/link';';
->>>>>>> main
 import { motion } from 'framer-motion';
+import Layout from '../components/Layout';
 import { 
   BookOpen, 
   ArrowRight,
@@ -26,13 +22,7 @@ import {
   Database,
   Cloud
 } from 'lucide-react';
-<<<<<<< HEAD
-import Layout from '../components/Layout';
 
-=======
-import MainLayout from '../components/layout/MainLayout';
-import { FileText, Clock, Users, ArrowRight, CheckCircle, BookOpen, Code, Database, Cloud, Shield } from 'lucide-react';
->>>>>>> main
 const guides = [
   {
     title: 'Complete Guide to Web Development',
@@ -48,34 +38,34 @@ const guides = [
   {
     title: 'AI and Machine Learning Fundamentals',
     description: 'Learn the basics of AI, machine learning algorithms, and practical applications',
-    category: 'Artificial Intelligence',
-    icon: Zap,
+    category: 'AI & ML',
+    icon: Brain,
     color: 'from-purple-500 to-pink-500',
     readTime: '60 min',
     difficulty: 'Intermediate',
     rating: 4.9,
-    downloads: 950
+    downloads: 1800
   },
   {
-    title: 'Cloud Computing Best Practices',
-    description: 'Essential strategies for cloud migration, optimization, and security',
+    title: 'Cloud Architecture Best Practices',
+    description: 'Design scalable and secure cloud infrastructure using modern practices',
     category: 'Cloud Computing',
     icon: Cloud,
     color: 'from-green-500 to-teal-500',
-    readTime: '35 min',
-    difficulty: 'Intermediate',
+    readTime: '50 min',
+    difficulty: 'Advanced',
     rating: 4.7,
-    downloads: 800
+    downloads: 950
   },
   {
     title: 'Cybersecurity Essentials',
-    description: 'Protect your systems with modern security practices and threat prevention',
-    category: 'Cybersecurity',
+    description: 'Protect your applications and data with essential security practices',
+    category: 'Security',
     icon: Shield,
     color: 'from-red-500 to-orange-500',
-    readTime: '50 min',
-    difficulty: 'Advanced',
-    rating: 4.8,
+    readTime: '40 min',
+    difficulty: 'Intermediate',
+    rating: 4.6,
     downloads: 1100
   },
   {
@@ -84,218 +74,172 @@ const guides = [
     category: 'Database',
     icon: Database,
     color: 'from-indigo-500 to-blue-500',
-    readTime: '40 min',
+    readTime: '55 min',
     difficulty: 'Intermediate',
-    rating: 4.6,
-    downloads: 700
+    rating: 4.8,
+    downloads: 1300
   },
   {
-    title: 'Micro SaaS Development Guide',
-    description: 'Build and launch successful micro SaaS products from idea to market',
-    category: 'SaaS Development',
+    title: 'DevOps and CI/CD Pipeline',
+    description: 'Streamline your development workflow with modern DevOps practices',
+    category: 'DevOps',
     icon: Settings,
     color: 'from-yellow-500 to-orange-500',
-    readTime: '55 min',
-    difficulty: 'Advanced',
-    rating: 4.9,
-    downloads: 1600
+    readTime: '35 min',
+    difficulty: 'Intermediate',
+    rating: 4.5,
+    downloads: 800
   }
-<<<<<<< HEAD
 ];
 
 const categories = [
-  'All Categories',
+  'All',
   'Web Development',
-  'Artificial Intelligence',
+  'AI & ML',
   'Cloud Computing',
-  'Cybersecurity',
+  'Security',
   'Database',
-  'SaaS Development'
+  'DevOps'
 ];
 
 export default function GuidesPage() {
-  const [selectedCategory, setSelectedCategory] = React.useState('All Categories');
-  const [searchTerm, setSearchTerm] = React.useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchTerm, setSearchTerm] = useState('');
 
   const filteredGuides = guides.filter(guide => {
-    const matchesCategory = selectedCategory === 'All Categories' || guide.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'All' || guide.category === selectedCategory;
     const matchesSearch = guide.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          guide.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
-=======
-
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-
-];
-
-ursor/website-audit-and-update-with-deployment-9cae
-const categories = [
-  { name: 'All', count: 24, active: true },
-  { name: 'Web Development', count: 6, active: false },
-  { name: 'Cloud Computing', count: 5, active: false },
-  { name: 'Database', count: 4, active: false },
-  { name: 'Security', count: 3, active: false },
-  { name: 'API Development', count: 3, active: false },
-  { name: 'DevOps', count: 3, active: false }
-];
-
-ursor/website-audit-and-update-with-deployment-9cae
-const popularGuides = [
-  { title: 'Getting Started with React', downloads: 3200, category: 'Web Development' },
-  { title: 'AWS Security Best Practices', downloads: 2800, category: 'Cloud Computing' },
-  { title: 'SQL Performance Optimization', downloads: 2600, category: 'Database' },
-  { title: 'RESTful API Design', downloads: 2400, category: 'API Development' }
-];
-export default function GuidesPage() {
->>>>>>> main
   return (
     <Layout
-      title="Guides & Resources - Zion Tech Group"
-      description="Comprehensive guides and resources to help you master modern technology. Learn web development, AI, cloud computing, and more."
-      keywords="guides, tutorials, resources, web development, AI, cloud computing, cybersecurity, learning"
+      title="Guides - Zion Tech Group"
+      description="Comprehensive guides and tutorials for modern technology and development practices"
+      keywords="guides, tutorials, web development, AI, cloud computing, cybersecurity"
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
+              className="text-center"
             >
-              <BookOpen className="w-16 h-16 mx-auto mb-6" />
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                Guides & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Resources</span>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Technology Guides
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Master modern technology with our comprehensive guides and resources. Learn from industry experts and stay ahead of the curve.
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Master modern technology with our comprehensive guides and tutorials
               </p>
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Search and Filter */}
-        <section className="py-12 bg-white">
+        <section className="py-8 bg-white border-b">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="flex flex-col md:flex-row gap-4 mb-8">
-                <div className="flex-1 relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <input
-                    type="text"
-                    placeholder="Search guides..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  />
-                </div>
-                <div className="flex gap-2">
-                  <Filter className="w-5 h-5 text-gray-400 mt-3" />
-                  <select
-                    value={selectedCategory}
-                    onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    {categories.map((category) => (
-                      <option key={category} value={category}>
-                        {category}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+            <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
+              <div className="relative flex-1 max-w-md">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search guides..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
               </div>
-=======
-ursor/website-audit-and-update-with-deployment-9cae
-        {/* Categories Filter */}
-
-            </div>
-          </div>
-        </section>
-
-ursor/website-audit-and-update-with-deployment-9cae
-        {/* Popular Guides */}
-                  key={guide.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-
->>>>>>> main
-            </div>
-          </div>
-        </section>
-
-<<<<<<< HEAD
-        {/* Guides Grid */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredGuides.map((guide, index) => {
-                const IconComponent = guide.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden"
+              
+              <div className="flex flex-wrap gap-2">
+                {categories.map((category) => (
+                  <button
+                    key={category}
+                    onClick={() => setSelectedCategory(category)}
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                      selectedCategory === category
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                    }`}
                   >
-                    <div className={`bg-gradient-to-r ${guide.color} p-6 text-white`}>
-                      <div className="flex items-center justify-between mb-4">
-                        <IconComponent className="w-8 h-8" />
-                        <span className="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm font-semibold">
-                          {guide.difficulty}
-                        </span>
-                      </div>
-                      <h3 className="text-xl font-bold mb-2">{guide.title}</h3>
-                      <p className="text-white text-opacity-90 text-sm">{guide.description}</p>
+                    {category}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Guides Grid */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredGuides.map((guide, index) => (
+                <motion.article
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+                >
+                  <div className={`h-48 bg-gradient-to-r ${guide.color} flex items-center justify-center`}>
+                    <guide.icon className="w-16 h-16 text-white" />
+                  </div>
+                  
+                  <div className="p-6">
+                    <div className="flex items-center gap-2 text-sm text-gray-500 mb-2">
+                      <Clock className="w-4 h-4" />
+                      <span>{guide.readTime}</span>
+                      <span className="mx-2">•</span>
+                      <span className="px-2 py-1 bg-gray-100 text-gray-700 rounded-full text-xs">
+                        {guide.difficulty}
+                      </span>
                     </div>
                     
-                    <div className="p-6">
-                      <div className="flex items-center justify-between mb-4">
-                        <span className="text-sm text-gray-500">{guide.category}</span>
-                        <div className="flex items-center">
-                          <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                          <span className="text-sm font-semibold">{guide.rating}</span>
-                        </div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2 line-clamp-2">
+                      {guide.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 mb-4 line-clamp-3">
+                      {guide.description}
+                    </p>
+                    
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center gap-1">
+                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                        <span className="text-sm text-gray-600">{guide.rating}</span>
+                        <span className="text-sm text-gray-500">({guide.downloads} downloads)</span>
                       </div>
-                      
-                      <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                        <div className="flex items-center">
-                          <Clock className="w-4 h-4 mr-1" />
-                          {guide.readTime}
-                        </div>
-                        <div className="flex items-center">
-                          <Download className="w-4 h-4 mr-1" />
-                          {guide.downloads} downloads
-                        </div>
-                      </div>
-                      
-                      <div className="flex gap-2">
-                        <button className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors font-semibold flex items-center justify-center">
-                          <BookOpen className="w-4 h-4 mr-2" />
-                          Read Guide
-                        </button>
-                        <button className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
-                          <Download className="w-4 h-4" />
-                        </button>
-                      </div>
+                      <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">
+                        {guide.category}
+                      </span>
                     </div>
-                  </motion.div>
-                );
-              })}
+                    
+                    <div className="flex gap-2">
+                      <Link
+                        href={`/guides/${guide.title.toLowerCase().replace(/\s+/g, '-')}`}
+                        className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                      >
+                        Read Guide
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                      </Link>
+                      <button className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
+                        <Download className="w-4 h-4" />
+                      </button>
+                    </div>
+                  </div>
+                </motion.article>
+              ))}
             </div>
-
+            
             {filteredGuides.length === 0 && (
               <div className="text-center py-12">
-                <BookOpen className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                <div className="text-gray-400 mb-4">
+                  <BookOpen className="w-16 h-16 mx-auto" />
+                </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">No guides found</h3>
                 <p className="text-gray-600">Try adjusting your search or filter criteria.</p>
               </div>
@@ -308,111 +252,34 @@ ursor/website-audit-and-update-with-deployment-9cae
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-=======
-ursor/website-audit-and-update-with-deployment-9cae
-        {/* Guides Grid */}
-                  key={guide.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                        {guide.category}
-                      </span>,
-                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${}
-                        guide.difficulty === 'Beginner' ? 'bg-green-100 text-green-600' :',
-                        guide.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-600' :';
-                        'bg-red-100 text-red-600'';
-                      }`}>,
-                        {guide.difficulty}
-
-                    <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                      <div className="flex items-center">
-                        <Clock className="w-4 h-4 mr-1" />
-                        {guide.readTime}
-
-                    <Link
-                      href="#"
-                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
-                    >
-                      Download Guide
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </Link>
-                  </div>
-                </motion.div>
-              ))}
-
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{guide.title}</h3>
-                    <p className="text-gray-600 mb-4">{guide.description}</p>
-
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{guide.title}</h3>
-                    <p className="text-gray-600 mb-4">{guide.description}</p>
-
-ursor/website-audit-and-update-with-deployment-9cae
-                    <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                      <div className="flex items-center">
-                        <Clock className="w-4 h-4 mr-1" />
-                        {guide.readTime}
-                      </div>
-                      <div className="flex items-center">
-                        <BookOpen className="w-4 h-4 mr-1" />
-                        {guide.sections} sections
-                      </div>
-                      <div className="flex items-center">
-                        <Users className="w-4 h-4 mr-1" />
-                        {guide.downloads} downloads
-                      </div>
-                    </div>
-
-ursor/website-audit-and-update-with-deployment-9cae
-                    <Link
-                      href="#"
-                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
-                    >
-                      Download Guide
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </Link>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-ursor/website-audit-and-update-with-deployment-9cae
-        {/* CTA Section */}
->>>>>>> main
+              viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Need Custom Training?
+                Need Custom Guidance?
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Our team can create custom training programs tailored to your specific needs and technology stack.
+                Our experts can create personalized guides and tutorials for your specific needs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+                <Link
                   href="/contact"
-                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
                 >
-                  Request Custom Training
-                </a>
-                <a
+                  Request Custom Guide
+                </Link>
+                <Link
                   href="/services"
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
                 >
                   View Our Services
-                </a>
+                </Link>
               </div>
             </motion.div>
           </div>
         </section>
       </div>
     </Layout>
-<<<<<<< HEAD
-=======
-    </SimpleLayout>
->>>>>>> main
   );
 }

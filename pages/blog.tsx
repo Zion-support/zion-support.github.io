@@ -1,13 +1,48 @@
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { BookOpen, ArrowRight, Calendar, Clock, User } from 'lucide-react';
+import Layout from '../components/Layout';
 
 const blogPosts = [
   {
     id: 1,
-  }
-]
+    title: 'The Future of AI in Enterprise Software',
+    excerpt: 'How artificial intelligence is transforming business operations and decision-making processes.',
+    content: 'Artificial Intelligence is revolutionizing the way enterprises operate...',
+    author: 'Sarah Johnson',
+    date: '2024-01-15',
+    readTime: '5 min read',
+    category: 'AI & Technology',
+    image: '/blog/ai-enterprise.jpg',
+    tags: ['AI', 'Enterprise', 'Technology', 'Innovation']
+  },
+  {
+    id: 2,
+    title: 'Cloud Migration Strategies for Modern Businesses',
+    excerpt: 'A comprehensive guide to migrating your infrastructure to the cloud successfully.',
+    content: 'Cloud migration has become essential for businesses looking to scale...',
+    author: 'David Rodriguez',
+    date: '2024-01-12',
+    readTime: '7 min read',
+    category: 'Cloud Computing',
+    image: '/blog/cloud-migration.jpg',
+    tags: ['Cloud', 'Migration', 'Business', 'Strategy']
+  },
+  {
+    id: 3,
+    title: 'Cybersecurity Trends to Watch in 2024',
+    excerpt: 'The latest cybersecurity threats and how to protect your organization.',
+    content: 'As technology evolves, so do the threats that target our digital infrastructure...',
+    author: 'Emily Chen',
+    date: '2024-01-08',
+    readTime: '6 min read',
+    category: 'Cybersecurity',
+    image: '/blog/cybersecurity-trends.jpg',
+    tags: ['Cybersecurity', 'Trends', 'Security', '2024']
+  },
+  {
+    id: 4,
     title: 'Cloud Security Best Practices for Enterprise Applications',
     excerpt: 'Essential security measures every enterprise should implement in their cloud infrastructure.',
     content: 'Cloud security is paramount in today\'s digital landscape...',
@@ -19,7 +54,7 @@ const blogPosts = [
     tags: ['Security', 'Cloud', 'Enterprise', 'Best Practices']
   },
   {
-    id: 4,
+    id: 5,
     title: 'Quantum Computing: The Next Frontier in Technology',
     excerpt: 'Understanding quantum computing and its potential impact on various industries.',
     content: 'Quantum computing represents a fundamental shift in computational power...',
@@ -32,19 +67,14 @@ const blogPosts = [
   }
 ];
 
-];
-
 const blogCategories = [
-  "All Posts",
-  "AI & Technology",
-  "Cloud Computing",
-  "Cybersecurity",
-  "SaaS",
-  "Digital Transformation"
->>>>>>> main
->>>>>>> main
+  { name: 'All', count: blogPosts.length },
+  { name: 'AI & Technology', count: blogPosts.filter(post => post.category === 'AI & Technology').length },
+  { name: 'Cloud Computing', count: blogPosts.filter(post => post.category === 'Cloud Computing').length },
+  { name: 'Cybersecurity', count: blogPosts.filter(post => post.category === 'Cybersecurity').length },
+  { name: 'Security', count: blogPosts.filter(post => post.category === 'Security').length },
+  { name: 'Quantum Computing', count: blogPosts.filter(post => post.category === 'Quantum Computing').length }
 ];
->>>>>>> main
 
 export default function BlogPage() {
   const [selectedCategory, setSelectedCategory] = React.useState('All');
@@ -54,27 +84,41 @@ export default function BlogPage() {
     : blogPosts.filter(post => post.category === selectedCategory);
 
   return (
->>>>>>> main
+    <Layout
       title="Blog - Zion Tech Group"
       description="Latest insights and trends in technology, AI, and business"
       keywords="blog, technology news, AI trends, business insights, tech articles"
     >
+      <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4">
             <motion.div
->>>>>>> main
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> main
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Tech Insights & Innovation
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Stay ahead with the latest trends, insights, and innovations in technology, AI, and business transformation.
               </p>
             </motion.div>
->>>>>>> main
           </div>
         </section>
 
+        {/* Category Filter */}
+        <section className="py-8 bg-white border-b">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-wrap gap-2 justify-center">
+              {blogCategories.map((category) => (
                 <button
+                  key={category.name}
+                  onClick={() => setSelectedCategory(category.name)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                    selectedCategory === category.name
                       ? 'bg-blue-600 text-white'
                       : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                   }`}
@@ -82,7 +126,6 @@ export default function BlogPage() {
                   {category.name} ({category.count})
                 </button>
               ))}
->>>>>>> main
             </div>
           </div>
         </section>
@@ -93,16 +136,40 @@ export default function BlogPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredPosts.map((post, index) => (
                 <motion.article
->>>>>>> main
+                  key={post.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
                 >
                   <div className="h-48 bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
                     <BookOpen className="w-16 h-16 text-white" />
                   </div>
                   
                   <div className="p-6">
-                      </div>
+                    <div className="flex items-center gap-2 text-sm text-gray-500 mb-2">
+                      <Calendar className="w-4 h-4" />
+                      <span>{post.date}</span>
+                      <Clock className="w-4 h-4 ml-2" />
+                      <span>{post.readTime}</span>
                     </div>
                     
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2 line-clamp-2">
+                      {post.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 mb-4 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center gap-2 text-sm text-gray-500">
+                        <User className="w-4 h-4" />
+                        <span>{post.author}</span>
+                      </div>
+                      <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">
+                        {post.category}
+                      </span>
                     </div>
                     
                     <Link
@@ -112,17 +179,18 @@ export default function BlogPage() {
                       Read More
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Link>
->>>>>>> main
                   </div>
                 </motion.article>
               ))}
             </div>
+            
             {/* Load More Button */}
             <div className="text-center mt-12">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                 Load More Posts
               </button>
             </div>
+            
             {filteredPosts.length === 0 && (
               <div className="text-center py-12">
                 <div className="text-gray-400 mb-4">
@@ -132,7 +200,6 @@ export default function BlogPage() {
                 <p className="text-gray-600">Try selecting a different category.</p>
               </div>
             )}
->>>>>>> main
           </div>
         </section>
 
@@ -170,7 +237,5 @@ export default function BlogPage() {
         </section>
       </div>
     </Layout>
->>>>>>> main
->>>>>>> main
   );
 }
