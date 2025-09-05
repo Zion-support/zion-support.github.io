@@ -73,9 +73,10 @@ const contactInfo = {
 =======
 interface HeaderProps {
   className?: string;
+  onMenuClick?: () => void;
 }
 
-export function Header({ className }: HeaderProps) {
+export function Header({ className, onMenuClick }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
@@ -131,10 +132,13 @@ export function Header({ className }: HeaderProps) {
       href: '/solutions',
       hasDropdown: true,
       dropdownItems: [
+        { label: 'All Solutions', href: '/solutions' },
         { label: 'Enterprise Solutions', href: '/solutions/enterprise' },
         { label: 'Healthcare', href: '/solutions/healthcare' },
         { label: 'Finance', href: '/solutions/finance' },
         { label: 'Retail', href: '/solutions/retail' },
+        { label: 'Education', href: '/solutions/education' },
+        { label: 'Government', href: '/solutions/government' },
       ]
     },
     {
@@ -147,6 +151,20 @@ export function Header({ className }: HeaderProps) {
         { label: 'Careers', href: '/careers' },
         { label: 'News', href: '/news' },
         { label: 'Contact', href: '/contact' },
+      ]
+    },
+    {
+      label: 'Industries',
+      href: '/industries',
+      hasDropdown: true,
+      dropdownItems: [
+        { label: 'All Industries', href: '/industries' },
+        { label: 'Healthcare', href: '/industries/healthcare' },
+        { label: 'Finance', href: '/industries/finance' },
+        { label: 'Education', href: '/industries/education' },
+        { label: 'Government', href: '/industries/government' },
+        { label: 'Manufacturing', href: '/industries/manufacturing' },
+        { label: 'Retail', href: '/industries/retail' },
       ]
     },
     {
@@ -204,6 +222,14 @@ export function Header({ className }: HeaderProps) {
       <div className="bg-white/95 backdrop-blur-md border-b border-gray-200">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
+            {/* Mobile Menu Button */}
+            <button
+              onClick={onMenuClick}
+              className="lg:hidden p-2 hover:bg-gray-100 rounded-lg"
+            >
+              <Menu className="w-6 h-6 text-gray-700" />
+            </button>
+
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">

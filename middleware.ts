@@ -7,9 +7,18 @@ const publicRoutes = [
   "/contact",
   "/blog",
   "/services",
-  "/products",
+  "/solutions",
+  "/industries",
+  "/resources",
   "/talent",
-  "/test",
+  "/team",
+  "/partners",
+  "/news",
+  "/careers",
+  "/privacy",
+  "/terms",
+  "/cookies",
+  "/sitemap",
   "/auth/login",
   "/auth/register",
   "/auth/forgot-password",
@@ -25,7 +34,7 @@ export function middleware(request: NextRequest) {
   }
 
   const authCookie = request.cookies.get("auth-token");
-
+  
   if (!authCookie) {
     return NextResponse.redirect(new URL("/auth/login", request.url));
   }

@@ -118,12 +118,25 @@ export default function Footer() {
     {
       title: 'Solutions',
       links: [
+        { label: 'All Solutions', href: '/solutions' },
         { label: 'Enterprise', href: '/solutions/enterprise' },
         { label: 'Healthcare', href: '/solutions/healthcare' },
         { label: 'Finance', href: '/solutions/finance' },
         { label: 'Retail', href: '/solutions/retail' },
         { label: 'Education', href: '/solutions/education' },
         { label: 'Government', href: '/solutions/government' },
+      ]
+    },
+    {
+      title: 'Industries',
+      links: [
+        { label: 'All Industries', href: '/industries' },
+        { label: 'Healthcare', href: '/industries/healthcare' },
+        { label: 'Finance', href: '/industries/finance' },
+        { label: 'Education', href: '/industries/education' },
+        { label: 'Government', href: '/industries/government' },
+        { label: 'Manufacturing', href: '/industries/manufacturing' },
+        { label: 'Retail', href: '/industries/retail' },
       ]
     },
     {
