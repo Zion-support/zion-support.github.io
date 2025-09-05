@@ -34,7 +34,8 @@ import {
   Brain,
   Sprout,
   Eye,
-  Bot
+  Bot,
+  Rocket
 } from 'lucide-react';
 
 const itServices = [{
@@ -377,6 +378,168 @@ const itServices = [{
     features: ['Threat Detection', 'Intelligence Feeds', 'Incident Response', 'Threat Hunting'],
     pricing: '$30,000 - $150,000/setup',
     category: 'Threat Intelligence',
+    popular: true
+  },
+  {
+    title: 'Quantum Computing Infrastructure',
+    description: 'Quantum computing infrastructure setup and integration for enterprise applications.',
+    icon: Cpu,
+    features: ['Quantum Hardware Integration', 'Hybrid Classical-Quantum', 'Quantum Algorithms', 'Error Correction'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'Neuromorphic Computing Systems',
+    description: 'Brain-inspired computing infrastructure for AI and machine learning applications.',
+    icon: Brain,
+    features: ['Neuromorphic Chips', 'Spiking Neural Networks', 'Low-power Processing', 'Real-time Learning'],
+    pricing: '$75,000 - $750,000/project',
+    category: 'Neuromorphic Computing',
+    popular: true
+  },
+  {
+    title: 'Space-Based Internet Infrastructure',
+    description: 'Satellite internet infrastructure and ground station management for global connectivity.',
+    icon: Globe,
+    features: ['Satellite Constellation', 'Ground Station Network', 'Low-latency Routing', 'Global Coverage'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'Satellite Internet',
+    popular: true
+  },
+  {
+    title: 'Holographic Computing Infrastructure',
+    description: 'Holographic display and computing systems for immersive 3D experiences.',
+    icon: Monitor,
+    features: ['Holographic Displays', '3D Processing', 'Spatial Computing', 'Interactive Systems'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Holographic Computing',
+    popular: true
+  },
+  {
+    title: 'DNA Data Storage Systems',
+    description: 'Revolutionary DNA-based data storage infrastructure for massive data archival.',
+    icon: Database,
+    features: ['DNA Synthesis', 'Data Encoding', 'Storage Management', 'Retrieval Systems'],
+    pricing: '$150,000 - $1,500,000/project',
+    category: 'DNA Storage',
+    popular: true
+  },
+  {
+    title: 'Fusion Energy IT Infrastructure',
+    description: 'IT infrastructure for nuclear fusion power plants and energy management systems.',
+    icon: Zap,
+    features: ['Plasma Control Systems', 'Energy Grid Integration', 'Safety Monitoring', 'Power Management'],
+    pricing: '$500,000 - $5,000,000/project',
+    category: 'Fusion Energy IT',
+    popular: true
+  },
+  {
+    title: 'Time Crystal Computing Systems',
+    description: 'Next-generation computing using time crystals for quantum information processing.',
+    icon: Clock,
+    features: ['Time Crystal Synthesis', 'Quantum Information', 'Temporal Computing', 'Error Correction'],
+    pricing: '$300,000 - $3,000,000/project',
+    category: 'Time Crystal Computing',
+    popular: true
+  },
+  {
+    title: 'Multiverse Simulation Infrastructure',
+    description: 'High-performance computing infrastructure for simulating multiple universe scenarios.',
+    icon: Globe,
+    features: ['Parallel Universe Modeling', 'Physics Simulation', 'Statistical Analysis', 'Visualization Systems'],
+    pricing: '$1,000,000 - $10,000,000/project',
+    category: 'Multiverse Computing',
+    popular: true
+  },
+  {
+    title: 'Consciousness Upload Infrastructure',
+    description: 'IT infrastructure for digital consciousness and mind uploading technologies.',
+    icon: Brain,
+    features: ['Neural Mapping', 'Consciousness Transfer', 'Digital Storage', 'Simulation Environment'],
+    pricing: '$2,000,000 - $20,000,000/project',
+    category: 'Consciousness IT',
+    popular: true
+  },
+  {
+    title: 'Teleportation Network Infrastructure',
+    description: 'Quantum teleportation network infrastructure for instant data and matter transmission.',
+    icon: Network,
+    features: ['Quantum Entanglement', 'Teleportation Protocols', 'Network Routing', 'Security Systems'],
+    pricing: '$5,000,000 - $50,000,000/project',
+    category: 'Teleportation IT',
+    popular: true
+  },
+  {
+    title: 'Time Travel Simulation Infrastructure',
+    description: 'Advanced computing infrastructure for simulating time travel and temporal mechanics.',
+    icon: Clock,
+    features: ['Temporal Modeling', 'Causality Simulation', 'Paradox Resolution', 'Timeline Management'],
+    pricing: '$3,000,000 - $30,000,000/project',
+    category: 'Temporal Computing',
+    popular: true
+  },
+  {
+    title: 'Dark Matter Detection IT Systems',
+    description: 'Specialized IT infrastructure for detecting and analyzing dark matter particles.',
+    icon: Eye,
+    features: ['Particle Detection', 'Signal Processing', 'Data Analysis', 'Statistical Computing'],
+    pricing: '$400,000 - $4,000,000/project',
+    category: 'Particle Physics IT',
+    popular: true
+  },
+  {
+    title: 'Gravitational Wave Computing Infrastructure',
+    description: 'High-sensitivity computing systems for gravitational wave detection and analysis.',
+    icon: Rocket,
+    features: ['Interferometer Control', 'Signal Processing', 'Noise Filtering', 'Event Detection'],
+    pricing: '$600,000 - $6,000,000/project',
+    category: 'Gravitational Wave IT',
+    popular: true
+  },
+  {
+    title: 'Exoplanet Discovery IT Platform',
+    description: 'Advanced IT infrastructure for discovering and analyzing exoplanets and alien life.',
+    icon: Globe,
+    features: ['Telescope Control', 'Data Processing', 'Atmospheric Analysis', 'Life Detection'],
+    pricing: '$800,000 - $8,000,000/project',
+    category: 'Astrobiology IT',
+    popular: true
+  },
+  {
+    title: 'Wormhole Communication Network',
+    description: 'Revolutionary communication network using theoretical wormhole technology.',
+    icon: Network,
+    features: ['Wormhole Generation', 'Quantum Communication', 'Instantaneous Transfer', 'Network Security'],
+    pricing: '$10,000,000 - $100,000,000/project',
+    category: 'Wormhole IT',
+    popular: true
+  },
+  {
+    title: 'Parallel Universe Gateway Infrastructure',
+    description: 'IT infrastructure for accessing and communicating with parallel universes.',
+    icon: Globe,
+    features: ['Universe Detection', 'Gateway Technology', 'Communication Protocols', 'Safety Systems'],
+    pricing: '$50,000,000 - $500,000,000/project',
+    category: 'Multiverse Gateway',
+    popular: true
+  },
+  {
+    title: 'Reality Manipulation Computing',
+    description: 'Advanced computing systems for manipulating physical reality at the quantum level.',
+    icon: Settings,
+    features: ['Quantum Manipulation', 'Reality Simulation', 'Physical Control', 'Safety Protocols'],
+    pricing: '$100,000,000 - $1,000,000,000/project',
+    category: 'Reality Computing',
+    popular: true
+  },
+  {
+    title: 'Omnipotent AI Infrastructure',
+    description: 'Ultimate AI infrastructure with unlimited computational power and knowledge.',
+    icon: Brain,
+    features: ['Infinite Processing', 'Universal Knowledge', 'Omniscient Analysis', 'Reality Control'],
+    pricing: 'Contact for Pricing',
+    category: 'Omnipotent AI',
     popular: true
   }
 ];

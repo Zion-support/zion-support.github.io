@@ -44,7 +44,8 @@ import {
   BookOpen,
   ShoppingCart,
   Home,
-  Database
+  Database,
+  Brain
 } from 'lucide-react';
 
 const microSaaSProducts = [{
@@ -420,6 +421,177 @@ const microSaaSProducts = [{
     features: ['Emotion Detection', 'Quality Scoring', 'Sentiment Analysis', 'Performance Metrics'],
     pricing: '$199 - $1,299/month',
     category: 'Voice Analytics',
+    popular: true
+  },
+  {
+    title: 'Quantum-Safe Encryption API',
+    description: 'Post-quantum cryptography solutions for future-proof data protection and secure communications.',
+    icon: Lock,
+    features: ['Quantum-Resistant Algorithms', 'Hybrid Encryption', 'Key Management', 'Compliance Ready'],
+    pricing: '$999 - $4,999/month',
+    category: 'Quantum Security',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Climate Risk Assessment',
+    description: 'Advanced climate risk modeling and ESG compliance for sustainable business operations.',
+    icon: Sprout,
+    features: ['Climate Modeling', 'ESG Scoring', 'Risk Visualization', 'Regulatory Compliance'],
+    pricing: '$1,499 - $7,999/month',
+    category: 'Climate Tech',
+    popular: true
+  },
+  {
+    title: 'Edge Computing Orchestration Platform',
+    description: 'Intelligent edge computing management with real-time processing and low-latency optimization.',
+    icon: Cpu,
+    features: ['Edge Deployment', 'Latency Optimization', 'Resource Management', 'Auto-scaling'],
+    pricing: '$399 - $2,499/month',
+    category: 'Edge Computing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Cybersecurity Threat Hunter',
+    description: 'Advanced threat detection and response using AI to identify and neutralize cyber threats.',
+    icon: Shield,
+    features: ['Threat Hunting', 'Behavioral Analysis', 'Automated Response', 'Forensic Investigation'],
+    pricing: '$2,999 - $12,999/month',
+    category: 'Cybersecurity AI',
+    popular: true
+  },
+  {
+    title: 'Digital Twin Management Platform',
+    description: 'Create and manage digital twins for physical assets with real-time monitoring and predictive maintenance.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Real-time Sync', 'Predictive Analytics', 'IoT Integration'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'Digital Twins',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Code Security Scanner',
+    description: 'Automated security vulnerability detection in source code with remediation suggestions.',
+    icon: Code,
+    features: ['Vulnerability Detection', 'SAST/DAST Analysis', 'Remediation Guidance', 'CI/CD Integration'],
+    pricing: '$299 - $1,999/month',
+    category: 'DevSecOps',
+    popular: true
+  },
+  {
+    title: 'Autonomous Vehicle Fleet Management',
+    description: 'AI-powered fleet management for autonomous vehicles with route optimization and safety monitoring.',
+    icon: Car,
+    features: ['Route Optimization', 'Safety Monitoring', 'Fleet Analytics', 'Predictive Maintenance'],
+    pricing: '$4,999 - $24,999/month',
+    category: 'Autonomous Vehicles',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Drug Discovery Platform',
+    description: 'Accelerated drug discovery using AI for molecular design, target identification, and clinical trial optimization.',
+    icon: Heart,
+    features: ['Molecular Design', 'Target Identification', 'Toxicity Prediction', 'Clinical Optimization'],
+    pricing: '$9,999 - $49,999/month',
+    category: 'Pharma AI',
+    popular: true
+  },
+  {
+    title: 'Smart City Infrastructure Management',
+    description: 'Comprehensive smart city platform for traffic, utilities, and public services optimization.',
+    icon: Building,
+    features: ['Traffic Management', 'Utility Optimization', 'Public Safety', 'Citizen Engagement'],
+    pricing: '$19,999 - $99,999/month',
+    category: 'Smart Cities',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Space Mission Planning',
+    description: 'Advanced mission planning and satellite constellation management for space operations.',
+    icon: Rocket,
+    features: ['Mission Planning', 'Orbit Optimization', 'Collision Avoidance', 'Resource Management'],
+    pricing: '$49,999 - $199,999/month',
+    category: 'Space Tech',
+    popular: true
+  },
+  {
+    title: 'Neural Interface Development Platform',
+    description: 'Development platform for brain-computer interfaces and neural signal processing applications.',
+    icon: Brain,
+    features: ['Signal Processing', 'Pattern Recognition', 'Real-time Analysis', 'Device Integration'],
+    pricing: '$7,999 - $39,999/month',
+    category: 'Neurotechnology',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Metaverse Builder',
+    description: 'Create immersive virtual worlds with AI-generated content, avatars, and interactive experiences.',
+    icon: Globe,
+    features: ['World Generation', 'AI Avatars', 'Physics Simulation', 'Multi-user Support'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'Metaverse',
+    popular: true
+  },
+  {
+    title: 'Quantum Machine Learning Platform',
+    description: 'Quantum-enhanced machine learning for complex optimization problems and pattern recognition.',
+    icon: Cpu,
+    features: ['Quantum Algorithms', 'Hybrid Classical-Quantum', 'Optimization Problems', 'Pattern Recognition'],
+    pricing: '$4,999 - $24,999/month',
+    category: 'Quantum ML',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Synthetic Data Generator',
+    description: 'Generate high-quality synthetic data for training AI models while preserving privacy and statistical properties.',
+    icon: Database,
+    features: ['Privacy-Preserving', 'Statistical Accuracy', 'Custom Datasets', 'Model Training'],
+    pricing: '$999 - $4,999/month',
+    category: 'Synthetic Data',
+    popular: true
+  },
+  {
+    title: 'Autonomous Drone Fleet Management',
+    description: 'AI-powered drone fleet coordination for delivery, surveillance, and inspection operations.',
+    icon: Rocket,
+    features: ['Fleet Coordination', 'Route Optimization', 'Collision Avoidance', 'Payload Management'],
+    pricing: '$2,999 - $14,999/month',
+    category: 'Drone Management',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Personalized Medicine Platform',
+    description: 'Precision medicine platform using AI for personalized treatment recommendations and drug interactions.',
+    icon: Heart,
+    features: ['Genetic Analysis', 'Treatment Optimization', 'Drug Interactions', 'Clinical Decision Support'],
+    pricing: '$3,999 - $19,999/month',
+    category: 'Precision Medicine',
+    popular: true
+  },
+  {
+    title: 'Blockchain-Based Carbon Credit Marketplace',
+    description: 'Transparent carbon credit trading platform with AI-powered verification and automated compliance.',
+    icon: Sprout,
+    features: ['Carbon Tracking', 'Verification AI', 'Smart Contracts', 'Compliance Automation'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'Carbon Markets',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Robotic Process Automation',
+    description: 'Intelligent RPA with computer vision, NLP, and decision-making capabilities for complex business processes.',
+    icon: Bot,
+    features: ['Process Discovery', 'Intelligent Automation', 'Exception Handling', 'Continuous Learning'],
+    pricing: '$1,499 - $7,499/month',
+    category: 'Intelligent RPA',
+    popular: true
+  },
+  {
+    title: 'Holographic Display Management System',
+    description: 'Platform for managing holographic displays and immersive 3D content in retail and entertainment.',
+    icon: Monitor,
+    features: ['3D Content Management', 'Hologram Rendering', 'Interactive Controls', 'Multi-device Sync'],
+    pricing: '$2,499 - $12,499/month',
+    category: 'Holographic Tech',
     popular: true
   }
 ];
