@@ -1,5 +1,11 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';'''';';
+import {Link} from 'react-router-dom';'''';';
+=======
 import React from 'react';'''
 import {Link} from 'react-router-dom';'''
+>>>>>>> main
 import {Button} from '../ui/button';
 import {}
   Card,
@@ -15,13 +21,116 @@ import {}
   Database,
   Zap,
   Eye,
+<<<<<<< HEAD
+  Leaf,';
+  DollarSign,';';
+  ArrowRight,'';';
+  Star,''';';
+  Clock,'''';';
+=======
+import React from 'react';
+import {Link} from 'react-router-dom';
+import {Button} from '../ui/button';
+import {}
+  Card,;
+  CardContent,';
+  CardDescription,'';
+  CardHeader,''';
+  CardTitle} from '../ui/card';
+import {Badge} from '../ui/badge';
+import {}
+  Brain,;
+  Shield,;
+  Cloud,;
+  Database,;
+  Zap,;
+  Eye,;
+  Leaf,;
+  DollarSign,;
+  ArrowRight,';
+  Star,'';
+  Clock,''';
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
   Leaf,
   DollarSign,
   ArrowRight,'
   Star,''
   Clock,'''
+>>>>>>> main
   Globe} from 'lucide-react';
 // Mock data for enhanced services;
+<<<<<<< HEAD
+const EnhancedServicesOverview = ("props": "any) => {"}
+  // Get featured services (first 6);
+  const featuredServices = ENHANCED_SERVICES.slice(0, 6);
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const getCategoryIcon = category => {}';
+    switch (category) {}';';
+'';';
+      case 'AI & Machine Learning': any;';';
+        return <Brain className="w-6 h-6"  />;'"""';';
+      case 'Cybersecurity':""""';';
+        return <Shield className="w-6 h-6"  />;'"""';';
+      case 'Cloud & DevOps':""""';';
+        return <Cloud className="w-6 h-6"  />;'"""';';
+      case 'Data & Analytics':""""';';
+        return <Database className="w-6 h-6"  />;'"""';';
+      case 'Blockchain & Web3':""""';';
+        return <Zap className="w-6 h-6"  />;'"""';';
+      case 'IoT & Edge Computing':""""';';
+        return <Eye className="w-6 h-6"  />;'"""';';
+      case 'Quantum Computing':""""';';
+        return <Brain className="w-6 h-6"  />;'"""';';
+      case 'AR/VR & Metaverse':""""';';
+        return <Eye className="w-6 h-6"  />;'"""';';
+      case 'Green Tech & Sustainability':""""';';
+        return <Leaf className="w-6 h-6"  />;'"""';';
+      case 'FinTech & Digital Banking':""""
+        return <DollarSign className="w-6 h-6"  />;"""
+      default:""""
+        return <Zap className="w-6 h-6"  />;
+    }
+  };
+  const getAvailabilityColor = availability => {}';
+    switch (availability) {}';';
+'';';
+      case 'immediate':''';';
+        return 'text-green-400';'';';
+      case 'within-week':''';';
+        return 'text-yellow-400';'';';
+      case 'within-month':''';';
+        return 'text-orange-400';'';';
+      default:''';';
+=======
+=======
+>>>>>>> main
+  const getCategoryIcon = category => {}
+    switch (category) {}
+';
+      case 'AI & Machine Learning': "any;
+        return <Brain className="w-6 h-6"  />;'""";
+      case 'Cybersecurity':"""";
+        return <Shield className="w-6 h-6"  />;'""";
+      case 'Cloud & DevOps':"""";
+        return <Cloud className="w-6 h-6"  />;'""";
+      case 'Data & Analytics':"""";
+        return <Database className="w-6 h-6"  />;'""";
+      case 'Blockchain & Web3':"""";
+        return <Zap className="w-6 h-6"  />;'""";
+      case 'IoT & Edge Computing':"""";
+        return <Eye className="w-6 h-6"  />;'""";
+      case 'Quantum Computing':"""";
+        return <Brain className="w-6 h-6"  />;'""";
+      case 'AR/VR & Metaverse':"""";
+        return <Eye className="w-6 h-6"  />;'""";
+      case 'Green Tech & Sustainability':"""";
+        return <Leaf className="w-6 h-6"  />;'""";
+      case 'FinTech & Digital Banking':"""";
+        return <DollarSign className="w-6 h-6"  />;""";
+      "default":"""";
+=======
 const EnhancedServicesOverview = (props: any) => {}
   // Get featured services (first 6)
   const featuredServices = ENHANCED_SERVICES.slice(0, 6);
@@ -49,11 +158,38 @@ const EnhancedServicesOverview = (props: any) => {}
       case 'FinTech & Digital Banking':""""
         return <DollarSign className="w-6 h-6"  />;"""
       default:""""
+>>>>>>> main
         return <Zap className="w-6 h-6"  />;
-    }
+    "}
   };
   const getAvailabilityColor = availability => {}
     switch (availability) {}
+<<<<<<< HEAD
+';
+      case 'immediate':'';
+        return 'text-green-400';';
+      case 'within-week':'';
+        return 'text-yellow-400';';
+      case 'within-month':'';
+        return 'text-orange-400';';
+<<<<<<< HEAD
+      default:'';
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+      "default":'';
+>>>>>>> main
+        return 'text-gray-400';
+    }
+  };""";
+  return ("""";
+    <section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">"""";
+      <div className="container mx-auto px-4">""";
+        {/* Header */}"""";
+        <div className="text-center mb-16">"""";
+          <h2 className="text-4xl "md": "text-5xl font-bold text-white mb-6">""";
+            Cutting-Edge"""";
+            <span className="block bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
+=======
 '
       case 'immediate':''
         return 'text-green-400';'
@@ -73,12 +209,50 @@ const EnhancedServicesOverview = (props: any) => {}
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"""
             Cutting-Edge""""
             <span className="block bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+>>>>>>> main
               Technology Services;
             </span>"""
           </h2>""""
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
             Transform your business with our comprehensive suite of;
             next-generation technology services.From AI and cybersecurity to;
+<<<<<<< HEAD
+            blockchain and quantum computing", we deliver innovative solutions;
+            that drive real business results.""";
+          </p>"""";
+          <div className="flex flex-wrap justify-center gap-4">"""";
+            <Link to="/enhanced-services">""";
+              <Button"""";
+                size="lg"""";
+                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark "hover": "from-zion-purple-light "hover":to-zion-purple text-white""";
+              >""";
+                Explore All Services"""";
+                <ArrowRight className="ml-2 w-4 h-4"  />;
+              </Button>;
+            </Link>""";
+            <Button"""";
+              size="lg"""";
+              variant="outline"""";
+              className="border-zion-cyan text-zion-cyan "hover":bg-zion-cyan/10""";
+            >;
+              Schedule Consultation;
+            </Button>;
+          </div>;
+        </div>;
+""";
+        {/* Featured Services Grid */"}"""";
+        <div className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-3 gap-8 mb-12">;
+          {featuredServices.map(service => (;
+            <Card""";
+              key={service.id"}"""";
+              className="bg-zion-blue-dark/50 border-zion-blue-light "hover": "border-zion-purple/50 transition-all duration-300 "hover":shadow-2xl "hover":shadow-zion-purple/20 "hover":-translate-y-2"""";
+            >"""";
+              <CardHeader className="pb-4">"""";
+                <div className="flex items-start justify-between mb-3">"""";
+                  <div className="flex items-center gap-2 text-zion-cyan">""";
+                    {getCategoryIcon(service.category)"}"""";
+                    <span className="text-sm font-medium">;
+=======
             blockchain and quantum computing, we deliver innovative solutions;
             that drive real business results."""
           </p>""""
@@ -114,6 +288,7 @@ const EnhancedServicesOverview = (props: any) => {}
                   <div className="flex items-center gap-2 text-zion-cyan">"""
                     {getCategoryIcon(service.category)}""""
                     <span className="text-sm font-medium">
+>>>>>>> main
                       {service.category}
                     </span>
                   </div>"""
@@ -131,18 +306,45 @@ const EnhancedServicesOverview = (props: any) => {}
 """"
                 <CardDescription className="text-zion-slate-light line-clamp-2">
                   {service.description}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
                 </CardDescription>
               </CardHeader>"""
 """"
               <CardContent className="space-y-4">"""
                 {/* Price and Rating */}""""
                 <div className="flex items-center justify-between">""""
+<<<<<<< HEAD
+                  <div className="text-xl font-bold text-zion-cyan">"""';
+                    ${service.price.toLocaleString()}""""';';
+                    <span className="text-sm text-zion-slate-light font-normal">'';';
+                      /''';';
+                      {service.pricingModel === 'subscription'''';';
+                        ? 'month'''';';
+=======
+                </CardDescription>;
+              </CardHeader>""";
+"""";
+              <CardContent className="space-y-4">""";
+                {/* Price and Rating */}"""";
+                <div className="flex items-center justify-between">"""";
+                  <div className="text-xl font-bold text-zion-cyan">""";
+                    ${service.price.toLocaleString()}"""";
+                    <span className="text-sm text-zion-slate-light font-normal">';
+                      /'';
+                      {service.pricingModel === 'subscription''';
+                        ? 'month''';
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
                   <div className="text-xl font-bold text-zion-cyan">"""
                     ${service.price.toLocaleString()}""""
                     <span className="text-sm text-zion-slate-light font-normal">'
                       /''
                       {service.pricingModel === 'subscription'''
                         ? 'month'''
+>>>>>>> main
                         : 'project'}
                     </span>"""
                   </div>""""
@@ -183,6 +385,89 @@ const EnhancedServicesOverview = (props: any) => {}
                 {/* Availability and Location */}""""
                 <div className="flex items-center justify-between text-sm">
                   <div;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    className={`flex items-center gap-2 ${getAvailabilityColor(service.availability)}`}"""
+                  >""""';
+                    <Clock className="w-4 h-4"  />""""';';
+                    <span className="font-medium">'';';
+                      {service.availability === 'immediate'''';';
+                        ? 'Available Now'''';';
+                        : service.availability === 'within-week'''';';
+                          ? 'Within 1 Week'''';';
+                          : service.availability === 'within-month'''';';
+                            ? 'Within 1 Month'''';';
+=======
+=======
+>>>>>>> main
+                    className={`flex items-center gap-2 ${getAvailabilityColor(service.availability)}`}""";
+                  >"""";
+                    <Clock className="w-4 h-4"  />"""";
+                    <span className="font-medium">';
+                      {service.availability === 'immediate''';
+                        ? 'Available Now''';
+                        : "service.availability === 'within-week''';
+                          ? 'Within 1 Week''';
+                          : service.availability === 'within-month''';
+                            ? 'Within 1 Month''';
+<<<<<<< HEAD
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+                            : 'Contact Us'}
+=======
+                            : 'Contact Us'"}
+>>>>>>> main
+                    </span>""";
+                  </div>"""";
+                  <div className="flex items-center gap-1 text-zion-slate-light">"""";
+                    <Globe className="w-4 h-4"  />;
+                    {service.location}
+                  </div>;
+                </div>;
+""";
+                {/* Action Button */}"""";
+                <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark "hover": "from-zion-purple-light "hover":to-zion-purple text-white">;
+                  Get Started;
+                </Button>;
+              </CardContent>;
+            </Card>;
+          ))"}
+        </div>;
+""";
+        {/* Service Categories Overview */}"""";
+        <div className="bg-zion-blue/20 rounded-2xl p-8 border border-zion-blue-light">"""";
+          <div className="text-center mb-8">"""";
+            <h3 className="text-2xl font-bold text-white mb-4">;
+              Service Categories""";
+            """";
+            <p className="text-zion-slate-light">;
+              Comprehensive coverage across all major technology domains;
+            </p>;
+          </div>""";
+"""";
+          <div className="grid grid-cols-2 "md": "grid-cols-5 gap-4">;
+            {ENHANCED_SERVICES.reduce((acc", service) => {}
+              if(!acc.find(cat => cat.category === service.category)) {}
+                acc.push({}
+                  "category": "service.category",;
+                  "count": "ENHANCED_SERVICES.filter();
+                    s => s.category === service.category;
+                  ).length",;
+                  "icon": "getCategoryIcon(service.category)"});
+              }
+              return acc;
+            }, []).map((cat, index) => (;
+              <div""";
+                key={index}"""";
+                className="text-center p-4 rounded-lg bg-zion-blue-dark/50 border border-zion-blue-light "hover": "border-zion-purple/50 transition-colors"""";
+              >"""";
+                <div className="text-zion-cyan mb-2 flex justify-center">;
+                  {cat.icon"}""";
+                </div>"""";
+                <div className="text-white font-medium text-sm mb-1">;
+                  {cat.category}""";
+                </div>"""";
+                <div className="text-zion-slate-light text-xs">;
+=======
                     className={`flex items-center gap-2 ${getAvailabilityColor(service.availability)}`}"""
                   >""""
                     <Clock className="w-4 h-4"  />""""
@@ -216,7 +501,7 @@ const EnhancedServicesOverview = (props: any) => {}
           <div className="text-center mb-8">""""
             <h3 className="text-2xl font-bold text-white mb-4">
               Service Categories"""
-            </h3>""""
+            """"
             <p className="text-zion-slate-light">
               Comprehensive coverage across all major technology domains;
             </p>
@@ -230,7 +515,8 @@ const EnhancedServicesOverview = (props: any) => {}
                   count: ENHANCED_SERVICES.filter()
                     s => s.category === service.category;
                   ).length,
-                  icon: getCategoryIcon(service.category)});
+                  icon: getCategoryIcon(service.category)}
+    );
               }
               return acc;
             }, []).map((cat, index) => (
@@ -245,6 +531,7 @@ const EnhancedServicesOverview = (props: any) => {}
                   {cat.category}"""
                 </div>""""
                 <div className="text-zion-slate-light text-xs">
+>>>>>>> main
                   {cat.count} services;
                 </div>
               </div>
@@ -257,10 +544,49 @@ const EnhancedServicesOverview = (props: any) => {}
           <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark rounded-2xl p-8 border border-zion-purple/30">""""
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?"""
-            </h3>""""
+            """"
             <p className="text-zion-slate-light max-w-2xl mx-auto mb-6">
               Our team of technology experts is ready to help you implement;
               cutting-edge solutions that drive real business results. Contact;
+<<<<<<< HEAD
+              us today for a free consultation.""";
+            </p>"""";
+            <div className="flex flex-wrap justify-center gap-4">""";
+              <Button"""";
+                size="lg"""";
+                className="bg-white text-zion-purple "hover": "bg-zion-slate-light""";
+              >;
+                Schedule Free Consultation;
+              </Button>""";
+              <Button"""";
+                size="lg"""";
+                variant="outline"""";
+                className="border-white text-white "hover":bg-white/10""";
+              >;
+                Download Service Catalog;
+              </Button>""";
+            </div>"""";
+            <div className="mt-6 text-zion-slate-light text-sm">"""";
+              <div className="flex flex-col "sm":flex-row gap-4 justify-center items-center">"""";
+                <div className="flex items-center gap-2">"""";
+                  <Globe className="w-4 h-4 text-zion-cyan"  />;
+                  <span>+1 302 464 0950</span>""";
+                </div>"""";
+                <div className="flex items-center gap-2">"""";
+                  <Globe className="w-4 h-4 text-zion-cyan"  />;
+                  <span>kleber@ziontechgroup.com</span>""";
+                </div>"""";
+                <div className="flex items-center gap-2">"""";
+                  <Globe className="w-4 h-4 text-zion-cyan"  />;
+                  <span>"https"://ziontechgroup.com</span>;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </section>)"};
+=======
               us today for a free consultation."""
             </p>""""
             <div className="flex flex-wrap justify-center gap-4">"""
@@ -298,7 +624,27 @@ const EnhancedServicesOverview = (props: any) => {}
         </div>
       </div>
     </section>)};
+>>>>>>> main
 export default EnhancedServicesOverview;
+<<<<<<< HEAD
+;
+export {EnhancedServicesOverview};
+;
+export {EnhancedServicesOverview};
+;
+export {EnhancedServicesOverview};
+;
+export {EnhancedServicesOverview};
+<<<<<<< HEAD
+
+export {EnhancedServicesOverview};';
+;';;';
+=======
+;
+export {EnhancedServicesOverview};
+;
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
 
 export {EnhancedServicesOverview};
 
@@ -309,3 +655,4 @@ export {EnhancedServicesOverview};
 export {EnhancedServicesOverview};
 
 export {EnhancedServicesOverview};
+>>>>>>> main

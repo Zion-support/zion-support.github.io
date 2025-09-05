@@ -1,3 +1,1 @@
-// comment;
-export const serviceWorkerRegistration = {};
-export default serviceWorkerRegistration;
+module.exports = const serviceWorkerRegistration = {}; export default serviceWorkerRegistration;

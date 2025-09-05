@@ -1,22 +1,22 @@
 {
-  "timestamp": "2025-09-03T16:31:19.468Z",
-  "bundleSize": {
-    ".next": {
-      "size": 41811549,
-      "sizeMB": "39.87"
-    },
-    "node_modules": {
-      "size": 819927451,
-      "sizeMB": "781.94"
-    }
+  "timestamp": "2025-09-05T00:20:16.317Z",
+  "memory": {
+    "rss": 48967680,
+    "heapTotal": 5570560,
+    "heapUsed": 4386112,
+    "external": 1472832,
+    "arrayBuffers": 10515
   },
-  "fileCounts": {
-    ".tsx": 13,
-    ".ts": 0,
-    ".jsx": 0,
-    ".js": 0,
-    ".css": 2,
-    ".json": 0
+  "uptime": 0.016888379,
+  "timestamp": "2025-09-04T23:24:14.834Z",
+  "memory": {
+    "rss": 48963584,
+    "heapTotal": 5570560,
+    "heapUsed": 4385808,
+    "external": 1472832,
+    "arrayBuffers": 10515
   },
-  "recommendations": []
+  "uptime": 0.028368744,
+  "platform": "linux",
+  "nodeVersion": "v22.16.0"
 }
