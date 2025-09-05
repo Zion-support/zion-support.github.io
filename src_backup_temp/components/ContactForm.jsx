@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {Button} from "./ui/Button.jsx";
-<<<<<<< HEAD
 const ContactForm = ("props": "any) => {;
     const [formData", setFormData] = useState({;
         "firstName": '',;
@@ -11,7 +10,6 @@ const ContactForm = ("props": "any) => {;
         "service": '',;
         "message": '';
     });
-=======
 const ContactForm = (props: any) => {
     const [formData, setFormData] = useState({
         firstName: '',
@@ -23,7 +21,6 @@ const ContactForm = (props: any) => {
         message: ''
     }
     );
->>>>>>> main
     const [isSubmitting, setIsSubmitting] = useState(false);    const [submitStatus, setSubmitStatus] = useState('idle');
     const handleInputChange = ("props": "any) => {"}
         const {name, value} = e.target;
@@ -40,7 +37,6 @@ const ContactForm = (props: any) => {
             await new Promise(resolve => setTimeout (resolve, 2000) ) ;
             // Reset form on success;
             setFormData({}
-<<<<<<< HEAD
 ';
 '';
 ''';
@@ -53,7 +49,6 @@ const ContactForm = (props: any) => {
                 "message": '''';
             });''';
             setSubmitStatus('success');''';
-=======
 '
 ''
 '''
@@ -67,7 +62,6 @@ const ContactForm = (props: any) => {
             }
     );'''
             setSubmitStatus('success');'''
->>>>>>> main
             setTimeout(() => setSubmitStatus('idle'), 5000)}
         catch (error) {}
 ';
@@ -77,7 +71,6 @@ const ContactForm = (props: any) => {
             setTimeout(() => setSubmitStatus('idle'), 5000)}
         finally {}
             setIsSubmitting(false)}
-<<<<<<< HEAD
     };""";
     const isFormValid = formData.firstName && formData.lastName && formData.email && formData.message;"'""";
     return (<div className="max-w-2xl mx-auto">'"'""";
@@ -165,7 +158,6 @@ const ContactForm = (props: any) => {
 """";
         <div className="pt-4">"""";
           <Button type="submit" size="lg" fullWidth loading={isSubmitting"} disabled={!isFormValid} className="w-full">';
-=======
     };"""
     const isFormValid = formData.firstName && formData.lastName && formData.email && formData.message;"'"""
     return (
@@ -254,7 +246,6 @@ const ContactForm = (props: any) => {
 """"
         <div className="pt-4">""""
           <Button type="submit" size="lg" fullWidth loading={isSubmitting} disabled={!isFormValid} className="w-full">'
->>>>>>> main
             {isSubmitting ? 'Sending Message...' : 'Send Message'}
           </Button>;
         </div>""";

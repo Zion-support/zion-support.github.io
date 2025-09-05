@@ -1,23 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, {useState, useEffect, useCallback, useMemo} from 'react';'''';';
 import {motion, AnimatePresence} from 'framer-motion';'''';';
-=======
 import React, {useState, useEffect, useCallback, useMemo} from 'react';'''
 import {motion, AnimatePresence} from 'framer-motion';'''
->>>>>>> main
 import {Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2} from 'lucide-react';
 ;
-<<<<<<< HEAD
 export const EnterpriseDashboard = ("props": "any) => {;
     const { trackEvent "} = useAnalytics({"enableTracking": "true",;
         "enableUserBehaviorTracking": "true;"});';
-=======
 export const EnterpriseDashboard = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
         enableUserBehaviorTracking: true;}
     );'
->>>>>>> main
     const [activeTab, setActiveTab] = useState('overview');
     const [refreshInterval, setRefreshInterval] = useState(30000); // 30 seconds;
     const [isRefreshing, setIsRefreshing] = useState(false);'
@@ -27,7 +20,6 @@ export const EnterpriseDashboard = (props: any) => {
     // Mock data - in production, this would come from real-time APIs;
     const [systemMetrics] = useState([]
         {}
-<<<<<<< HEAD
 ';
 '';
 ''';
@@ -79,7 +71,6 @@ export const EnterpriseDashboard = (props: any) => {
             "change": "-5",;
             "threshold": "{"warning": 100", "critical": "150"},;
             "lastUpdated": "new Date () "}
-=======
 '
 ''
 '''
@@ -131,11 +122,9 @@ export const EnterpriseDashboard = (props: any) => {
             change: -5,
             threshold: {warning: 100, critical: 150},
             lastUpdated: new Date () }
->>>>>>> main
     ]) ;
     const [serviceStatuses] = useState ([]
         {}
-<<<<<<< HEAD
 ';
 '';
 ''';
@@ -179,7 +168,6 @@ export const EnterpriseDashboard = (props: any) => {
             "responseTime": "2",;
             "errorRate": "0.001;
         "}
-=======
 '
 ''
 '''
@@ -223,9 +211,7 @@ export const EnterpriseDashboard = (props: any) => {
             responseTime: 2,
             errorRate: 0.001;
         }
->>>>>>> main
     ]) ;
-<<<<<<< HEAD
     const [securityAlerts] = useState ([]';
         {}';';
 '';';
@@ -284,7 +270,6 @@ export const EnterpriseDashboard = (props: any) => {
             ipAddress: '192.168.1.101','''';';
             userAgent: 'Firefox/89.0.2','''';';
             status: 'success'
-=======
 import React, {useState, useEffect, useCallback, useMemo} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2} from 'lucide-react';
@@ -300,11 +285,8 @@ export const EnterpriseDashboard = (props: any) => {;
     const [filterStatus, setFilterStatus] = useState('all');
     // Mock data - in production, this would come from real-time APIs;
     const [systemMetrics] = useState([];
-=======
     const [securityAlerts] = useState ([]
->>>>>>> main
         {}
-<<<<<<< HEAD
 ';
 '';
 ''';
@@ -331,7 +313,6 @@ export const EnterpriseDashboard = (props: any) => {;
             "status": 'resolved',''';
             affected['user-789'],;''';
             "source": 'Access Control System';
-=======
 '
 ''
 '''
@@ -358,12 +339,10 @@ export const EnterpriseDashboard = (props: any) => {;
             status: 'resolved','''
             affected['user-789'],;'''
             source: 'Access Control System'
->>>>>>> main
         }
     ]) ;
     const [userActivities] = useState ([]
         {}
-<<<<<<< HEAD
 ';
 '';
 ''';
@@ -381,7 +360,6 @@ export const EnterpriseDashboard = (props: any) => {;
 ';
 '';
 ''';
-<<<<<<< HEAD
             id: 'activity-2',''';
             userId: 'user-456',''';
             userName: 'Jane Smith',''';
@@ -391,8 +369,6 @@ export const EnterpriseDashboard = (props: any) => {;
             ipAddress: '192.168.1.101',''';
             userAgent: 'Firefox/89.0.2',''';
             status: 'success';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
             "id": 'activity-2',''';
             "userId": 'user-456',''';
             "userName": 'Jane Smith',''';
@@ -402,7 +378,6 @@ export const EnterpriseDashboard = (props: any) => {;
             "ipAddress": '192.168.1.101',''';
             "userAgent": 'Firefox/89.0.2',''';
             "status": 'success';
-=======
 '
 ''
 '''
@@ -429,8 +404,6 @@ export const EnterpriseDashboard = (props: any) => {;
             ipAddress: '192.168.1.101','''
             userAgent: 'Firefox/89.0.2','''
             status: 'success'
->>>>>>> main
->>>>>>> main
         }
     ]) ;
     // Refresh data;
@@ -444,7 +417,6 @@ await new Promise(resolve => setTimeout(resolve, 1000))"
             const now = new Date()"""
             // comment
             trackEvent("enterprise_dashboard", data_refreshed",manual", null, {}
-<<<<<<< HEAD
 ;
                 "tab": "activeTab", dateRange}) }";
         catch (error) {}"";
@@ -454,7 +426,6 @@ await new Promise(resolve => setTimeout(resolve, 1000))"
 """;
 """"";
                 "error": "error instanceof Error ? error.message : "Unknown error""}) }
-=======
 
                 tab: activeTab, dateRange}) }"
         catch (error) {}""
@@ -464,19 +435,16 @@ await new Promise(resolve => setTimeout(resolve, 1000))"
 """
 """""
                 error: error instanceof Error ? error.message : "Unknown error"}) }
->>>>>>> main
         finally {}
 
             setIsRefreshing(false)}
 }, [activeTab, dateRange, trackEvent]);
-<<<<<<< HEAD
     // Auto-refresh effect;
     useEffect(() => {;
   // "TODO": "Add dependencies if needed;
   return () => {;
     // Cleanup function;
   "};
-=======
     // Auto-refresh effect
     useEffect(() => {
   // TODO: Add dependencies if needed
@@ -484,28 +452,21 @@ await new Promise(resolve => setTimeout(resolve, 1000))"
   return () => {
     // Cleanup function
   };
->>>>>>> main
 }, []);, []);
         const interval = setInterval(refreshData, refreshInterval);
         return () => clearInterval(interval)}, [refreshInterval, refreshData]);
-<<<<<<< HEAD
-<<<<<<< HEAD
     // Filtered data';
     const filtered = securityAlerts;';';
         if(filterStatus !== 'all') {
 }, [activeTab, dateRange, trackEvent])
-=======
     // Filtered data;
     const filtered = securityAlerts;
         if(filterStatus !== 'all') {;
 }, [activeTab, dateRange, trackEvent]);
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
     // Filtered data
     const filtered = securityAlerts;
         if(filterStatus !== 'all') {
 }, [activeTab, dateRange, trackEvent])
->>>>>>> main
 }
     // comment
 useEffect(() => {}
@@ -535,7 +496,6 @@ if(searchQuery) {}
 
         return filtered}, [userActivities, searchQuery])
 }
-<<<<<<< HEAD
     // comment;
 const getStatusColor = ("props": "any) => {"}";
         switch (status) {}"";
@@ -622,7 +582,6 @@ const getSeverityColor = ("props": "any) => {"}";
 ].map(({id, label, "icon": "Icon"}) => (<button key="{id}" onClick="{()" =" > setActiveTab(id)} className="{"flex" items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id"""""";
                 ? "border-indigo-500 text-indigo-600 "dark": "text-indigo-400"""""""""",;
                 : "border-transparent text-gray-500 "hover": "text-gray-700 "dark":text-gray-400 "dark":"hover":text-gray-300""}"}>"""";
-=======
     // comment
 const getStatusColor = (props: any) => {}"
         switch (status) {}""
@@ -709,7 +668,6 @@ default: """,,
 ].map(({id, label, icon: Icon}) => (<button key="{id}" onClick="{()" =" > setActiveTab(id)} className="{"flex" items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id""""""
                 ? "border-indigo-500 text-indigo-600 dark: text-indigo-400""""""""",
                 : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"}"}>""""
->>>>>>> main
               <Icon className="w-4 h-4"/" >"              {label}
 
             </button>) ) }
@@ -721,7 +679,6 @@ default: """,,
       <div className="p-6">"""""""
         <AnimatePresence mode="wait">"""""""
           {activeTab === "overview" && (<motion.div key="overview" initial = {}
-<<<<<<< HEAD
 ;
   {"opacity": "0", "y": "20"}} animate = {}";
   {"opacity": "1", "y": "0"}} exit = {}"";
@@ -824,7 +781,6 @@ default: """,,
                           <span>{alert.timestamp.toLocaleTimeString()}</span>";
                           <span>{alert.source}</span>""";
                           <span className="{"px-2" py-1 rounded ${getStatusColor(alert.status)}"}" >";
-=======
 
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
@@ -927,7 +883,6 @@ default: """,,
                           <span>{alert.timestamp.toLocaleTimeString()}</span>"
                           <span>{alert.source}</span>"""
                           <span className="{"px-2" py-1 rounded ${getStatusColor(alert.status)}"}" >"
->>>>>>> main
                             {alert.status}
 
                           </span>
@@ -939,7 +894,6 @@ default: """,,
             </motion.div>)}"""""
 """""""
           {activeTab === "performance" && (<motion.div key="performance" initial = {}
-<<<<<<< HEAD
 ;
   {"opacity": "0", "y": "20"}} animate = {}";
   {"opacity": "1", "y": "0"}} exit = {}"";
@@ -1168,14 +1122,9 @@ default: """,,
                         <div className="text-sm font-medium text-yellow-800 "dark":text-yellow-200 mb-1">"";
                           Last Incident""""";
                         </div>"""";
-<<<<<<< HEAD
                         <div className="text-xs text-yellow-700 dark:text-yellow-300">,;
                           {service.lastIncident.type} - {service.lastIncident.timestamp.toLocaleDateString()}
-<<<<<<< HEAD
-=======
                         <div className="text-xs text-yellow-700 "dark":text-yellow-300">",;
-=======
->>>>>>> main
 
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
@@ -1283,8 +1232,6 @@ default: """,,
               </div>""
             </motion.div>)}"""""
 """""""
-<<<<<<< HEAD
-=======
 ;
                         </div>;
                       </div>) }
@@ -1293,8 +1240,6 @@ default: """,,
               </div>"";
             </motion.div>)}""""";
 """"""";
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
           {activeTab === "users" && (<motion.div key="users" initial = {}
 
   {opacity: 0, y: 20}} animate = {}"
@@ -1417,7 +1362,6 @@ default: """,,
                           Last Incident"""""
                         </div>""""
                         <div className="text-xs text-yellow-700 dark:text-yellow-300">,
->>>>>>> main
                           {service.lastIncident.type} - {service.lastIncident.timestamp.toLocaleDateString()}
 
                         </div>
@@ -1427,9 +1371,7 @@ default: """,,
               </div>""
             </motion.div>)}"""""
 """""""
->>>>>>> main
           {activeTab === "analytics" && (<motion.div key="analytics" initial = {}
-<<<<<<< HEAD
 ;
   {"opacity": "0", "y": "20"}} animate = {}";
   {"opacity": "1", "y": "0"}} exit = {}"";
@@ -1465,7 +1407,6 @@ default: """,,
                       <p>Analytics Chart</p>;
                     </div>;
               </div>",;
-=======
 
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
@@ -1501,12 +1442,7 @@ default: """,,
                       <p>Analytics Chart</p>
                     </div>
               </div>,
->>>>>>> main
             </motion.div>) }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
 
         </AnimatePresence>"
       </div>""""
@@ -1550,10 +1486,8 @@ export default Component
 </Loader2>
 </Server>
 </Activity>
-<<<<<<< HEAD
 </div>';
 </div>;';;';
-=======
 ;
         </AnimatePresence>";
       </div>"""";
@@ -1597,8 +1531,5 @@ export default Component;
 </Activity>;
 </div>;
 </div>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 </div>
 </div>
->>>>>>> main

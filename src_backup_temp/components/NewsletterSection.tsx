@@ -89,18 +89,6 @@ import React from 'react';
   { "duration": "0.5",;
   "delay": "inde x * 0.1;
 
-<<<<<<< HEAD
-"}}";
-                  className="flex items-start";
-";
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mr-4 flex-shrink-0">";
-                    <benefit.icon className="w-6 h-6 text-white" />;
-                  </div>;
-                  <div>";
-                    <h3 className="text-lg font-semibold text-white mb-1">{benefit.title}</h3>";
-                    <p className="text-gray-400">{benefit.description}</p>;
-                  </div>;
-=======
 }}"
                   className="flex items-start"
 "
@@ -111,7 +99,6 @@ import React from 'react';
                     <h3 className="text-lg font-semibold text-white mb-1">{benefit.title}"
                     <p className="text-gray-400">{benefit.description}</p>
                   </div>
->>>>>>> main
                 </motion.div>;) ) }
             </div>;
 ";
@@ -139,26 +126,6 @@ import React from 'react';
   { "duration": "0.6",;
   "delay": "0.2;
 
-<<<<<<< HEAD
-"}}
-          >";
-            <div className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-3xl p-8 border border-slate-500">";
-              <div className="text-center mb-6">";
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-4">";
-                  <Mail className="w-8 h-8 text-white"   />;
-                </div>";
-                <h3 className="text-2xl font-bold text-white mb-2">Subscribe to Our Newsletter</h3>"                <p className="text-gray-300">Get the latest updates delivered to your inbox</p>;
-              </div>;
-";
-              <form onSubmit={handleSubmit} className="space-y-4">;
-                <div>";
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">;
-                    Email Address;
-                  </label>;
-                  <input";
-                    type="email";
-                    id="email";
-=======
 }}
           >"
             <div className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-3xl p-8 border border-slate-500">"
@@ -177,7 +144,6 @@ import React from 'react';
                   <input"
                     type="email"
                     id="email"
->>>>>>> main
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}";
                     placeholder="Enter your email address";

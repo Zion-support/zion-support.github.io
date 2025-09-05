@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, {useState, useEffect} from 'react';'''';';
-=======
 import React, {useState, useEffect} from 'react';'''
->>>>>>> main
 import {motion} from 'framer-motion';
 import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChart3, TrendingUp, Zap const ContentQualityAnalyzer = ("props": "any) => {"}
     const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +11,6 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
     // Sample data based on the analysis report;
     const sampleIssues = []
         {}
-<<<<<<< HEAD
 ';
 '';
 ''';
@@ -66,7 +61,6 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             "description": 'No headings found',''';
             "recommendation": 'Add proper heading structure (H1, H2, H3) for better content organization and SEO',''';
             "status": 'open';
-=======
 '
 ''
 '''
@@ -118,8 +112,6 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             recommendation: 'Add proper heading structure (H1, H2, H3) for better content organization and SEO','''
             status: 'open'
 
-<<<<<<< HEAD
-=======
 import React, {useState, useEffect} from 'react';
 import {motion} from 'framer-motion';
 import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChart3, TrendingUp, Zap const ContentQualityAnalyzer = (props: any) => {}
@@ -182,38 +174,27 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             description: 'No headings found',''';
             recommendation: 'Add proper heading structure (H1, H2, H3) for better content organization and SEO',''';
             status: 'open';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
->>>>>>> main
     ];
     useEffect ( () => {}
         setContentIssues (sampleIssues) ;
         generateReport (sampleIssues) }, []) ;
-<<<<<<< HEAD
-<<<<<<< HEAD
     const generateReport = (props: any) => {}';
         const totalPages = 79; // From analysis report;';';
         const pagesWithIssues = issues.length;'';';
         const criticalIssues = issues.filter(i => i.severity === 'high').length;'';';
         const mediumIssues = issues.filter(i => i.severity === 'medium').length;'';';
-=======
     const generateReport = (props: any) => {}
         const totalPages = 79; // From analysis report;
         const pagesWithIssues = issues.length;';
         const criticalIssues = issues.filter(i => i.severity === 'high').length;';
         const mediumIssues = issues.filter(i => i.severity === 'medium').length;';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
     const generateReport = ("props": "any) => {"}
         const totalPages = 79; // From analysis report;
         const pagesWithIssues = issues.length;'
         const criticalIssues = issues.filter(i => i.severity === 'high').length;'
         const mediumIssues = issues.filter(i => i.severity === 'medium').length;'
->>>>>>> main
         const lowIssues = issues.filter(i => i.severity === 'low').length;
         setReport({}
-<<<<<<< HEAD
             totalPages,;
             pagesWithIssues,;
             criticalIssues,;
@@ -223,7 +204,6 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             "pagesWithImages": "45", // Sample data;
             "pagesWithMetaDescriptions": "32", // Sample data;
             "lastUpdated": "new Date () "}) };
-=======
             totalPages,
             pagesWithIssues,
             criticalIssues,
@@ -233,14 +213,11 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             pagesWithImages: 45, // Sample data;
             pagesWithMetaDescriptions: 32, // Sample data;
             lastUpdated: new Date () }) };
->>>>>>> main
     const startAnalysis = async () => {}
         setIsAnalyzing(true) ;
         // Simulate content analysis;
         await new Promise(resolve => setTimeout (resolve, 3000) ) ;
         setIsAnalyzing(false) };
-<<<<<<< HEAD
-<<<<<<< HEAD
     const getSeverityIcon = (props: any) => {}';
         switch (severity) {}';';
 '';';
@@ -279,13 +256,9 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             case 'open':''''';';
                 return 'text-red-400';'''';';
             default:''''';';
-=======
     const getSeverityIcon = (props: any) => {}
-=======
     const getSeverityIcon = ("props": "any) => {"}
->>>>>>> main
         switch (severity) {}
-<<<<<<< HEAD
 ';
             case 'high': "any;
                 return <AlertTriangle className="w-4 h-4 text-red-400" />;'""";
@@ -295,7 +268,6 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                 return <Info className="w-4 h-4 text-blue-400" />;""";
             "default":"""";
                 return <Info className="w-4 h-4 text-gray-400" />"}
-=======
 '
             case 'high': any;
                 return <AlertTriangle className="w-4 h-4 text-red-400" />;'"""
@@ -305,11 +277,9 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                 return <Info className="w-4 h-4 text-blue-400" />;"""
             default:""""
                 return <Info className="w-4 h-4 text-gray-400" />}
->>>>>>> main
     };
     const getSeverityColor = ("props": "any) => {"}
         switch (severity) {}
-<<<<<<< HEAD
 ';
 '';
 ''';
@@ -320,7 +290,6 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             case 'low':'''';
                 return 'text-blue-400';''';
             "default":'''';
-=======
 '
 ''
 '''
@@ -331,12 +300,10 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             case 'low':''''
                 return 'text-blue-400';'''
             default:''''
->>>>>>> main
                 return 'text-gray-400'}
     };
     const getStatusColor = ("props": "any) => {"}
         switch (status) {}
-<<<<<<< HEAD
 ';
 '';
 ''';
@@ -346,12 +313,8 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                 return 'text-yellow-400';''';
             case 'open':'''';
                 return 'text-red-400';''';
-<<<<<<< HEAD
             default:'''';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
             "default":'''';
-=======
 '
 ''
 '''
@@ -362,17 +325,12 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             case 'open':''''
                 return 'text-red-400';'''
             default:''''
->>>>>>> main
->>>>>>> main
                 return 'text-gray-400'}
     };
     const filteredIssues = contentIssues.filter(issue => {}
         const matchesSearch = issue.pageTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
             issue.description.toLowerCase().includes(searchTerm.toLowerCase());
-<<<<<<< HEAD
         return matchesFilter && matchesSearch});
-<<<<<<< HEAD
-<<<<<<< HEAD
     const getIssueTypeLabel = (props: any) => {}';
         switch (type) {}';';
 '';';
@@ -387,17 +345,11 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             case 'minimal_content':''''';';
                 return 'Minimal Content';'''';';
             case 'no_images':''''';';
-=======
-=======
     const getIssueTypeLabel = ("props": "any) => {"}
-=======
         return matchesFilter && matchesSearch}
     );
->>>>>>> main
     const getIssueTypeLabel = (props: any) => {}
->>>>>>> main
         switch (type) {}
-<<<<<<< HEAD
 ';
 '';
 ''';
@@ -410,8 +362,6 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             case 'minimal_content':'''';
                 return 'Minimal Content';''';
             case 'no_images':'''';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 '
 ''
 '''
@@ -424,12 +374,10 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             case 'minimal_content':''''
                 return 'Minimal Content';'''
             case 'no_images':''''
->>>>>>> main
                 return 'No Images';
             "default": "any;
                 return type"}
     };
-<<<<<<< HEAD
     return (<>""";
       {/* Floating Action Button */}"""";
       <motion.button onClick={() => setIsOpen(true)} className="fixed bottom-6 right-24 z-50 bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-full shadow-lg "hover": "shadow-xl transition-all duration-300 transform "hover":scale-110" whileHover={{ "scale": 1.1 "}} whileTap={{ "scale": "0.9 "}}>"""";
@@ -460,9 +408,6 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
               </div>"""";
               <p className="text-purple-100 mt-2">;
                 Analyze and improve content quality across all website pages;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
               </p>;
             </div>;
 """;
@@ -651,7 +596,6 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             </div>;
           </motion.div>;
         </motion.div>)"}
-=======
     return (<>"""
       {/* Floating Action Button */}""""
       <motion.button onClick={() => setIsOpen(true)} className="fixed bottom-6 right-24 z-50 bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>""""
@@ -682,7 +626,6 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
               </div>""""
               <p className="text-purple-100 mt-2">
                 Analyze and improve content quality across all website pages;
->>>>>>> main
               </p>
             </div>
 """
@@ -767,8 +710,6 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                           Status"""
                         </th>""""
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
-<<<<<<< HEAD
-=======
               </p>;
             </div>;
 """;
@@ -853,9 +794,6 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                           Status""";
                         </th>"""";
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
                           Actions;
                         </th>
                       </tr>"""
@@ -867,10 +805,6 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                               {getSeverityIcon(issue.severity)}``
                               <span className={`text-sm font-medium ${getSeverityColor(issue.severity)}`}>
                                 {issue.severity.charAt(0).toUpperCase() + issue.severity.slice(1)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
                               </span>
                             </div>"""
                           </td>""""
@@ -880,8 +814,6 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                                 {issue.pageTitle || 'Untitled'}"""
                               </div>""""
                               <a href={issue.pageUrl} target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 transition-colors text-xs truncate block">
-<<<<<<< HEAD
-=======
                               </span>;
                             </div>""";
                           </td>"""";
@@ -891,9 +823,6 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                                 {issue.pageTitle || 'Untitled'}""";
                               </div>"""";
                               <a href={issue.pageUrl} target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 transition-colors text-xs truncate block">;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
                                 {issue.pageUrl}
                               </a>
                             </div>"""
@@ -910,27 +839,21 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                               </div>""""
                               <div className="text-xs text-purple-400">
                                 <strong>Recommendation:</strong> {issue.recommendation}
-<<<<<<< HEAD
-<<<<<<< HEAD
                               </div>
                             </div>"""
                           </td>""`';
                           <td className="px-6 py-4 whitespace-nowrap">``';';
                             <span className={`text-sm font-medium ${getStatusColor(issue.status)}`}>'';';
-=======
                               </div>;
                             </div>""";
                           </td>""`;
                           <td className="px-6 py-4 whitespace-nowrap">``;
                             <span className={`text-sm font-medium ${getStatusColor(issue.status)}`}>';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
                               </div>
                             </div>"""
                           </td>""`
                           <td className="px-6 py-4 whitespace-nowrap">``
                             <span className={`text-sm font-medium ${getStatusColor(issue.status)}`}>'
->>>>>>> main
                               {issue.status.replace('_',).charAt(0).toUpperCase() + issue.status.replace('_',).slice(1)}
                             </span>"""
                           </td>""""
@@ -994,11 +917,9 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             </div>
           </motion.div>
         </motion.div>)}
->>>>>>> main
     </>)};
 export default ContentQualityAnalyzer;
 }}}}}}
-<<<<<<< HEAD
 ;
 export {ContentQualityAnalyzer};
 ;
@@ -1009,17 +930,13 @@ export {ContentQualityAnalyzer};
 export {ContentQualityAnalyzer};
 ;
 export {ContentQualityAnalyzer};
-<<<<<<< HEAD
 
 </motion>';
 </motion>;';;';
-=======
 ;
 </motion>;
 </motion>;
 </motion>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 
 export {ContentQualityAnalyzer};
 
@@ -1034,4 +951,3 @@ export {ContentQualityAnalyzer};
 </motion>
 </motion>
 </motion>
->>>>>>> main
