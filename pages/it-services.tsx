@@ -8,6 +8,26 @@ import {
   Cloud, 
   Database, 
   Network, 
+  Code, 
+  Settings, 
+  CheckCircle, 
+  Users, 
+  DollarSign, 
+  Brain, 
+  Cpu, 
+  Wifi, 
+  Monitor, 
+  AlertTriangle, 
+  TrendingUp, 
+  Lock, 
+  Globe, 
+  HardDrive, 
+  Smartphone, 
+  Building, 
+  BarChart3
+} from 'lucide-react';
+import Layout from '../components/Layout';
+
   Cloud, 
   Shield, 
   Zap, 
@@ -50,9 +70,9 @@ import {
   BookOpen, 
   Brain, 
   DollarSign, 
-  Rocket 
+  Rocket,
 } from 'lucide-react';
-import Layout from './components/Layout';
+import Layout from '../components/Layout';
 
 const itServices = [
   // Cloud & Infrastructure Services
