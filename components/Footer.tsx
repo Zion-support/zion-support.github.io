@@ -55,6 +55,7 @@ const companyLinks = [
 ];
 const supportLinks = [
   { name: 'Help Center', href: '/help' },
+  { name: 'FAQ', href: '/faq' },
   { name: 'Documentation', href: '/docs' },
   { name: 'API Reference', href: '/api-docs' },
   { name: 'Community', href: '/community' },
