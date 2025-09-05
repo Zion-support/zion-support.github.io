@@ -13,24 +13,34 @@ export function usePerformanceMetrics() {
     setIsSupported(true);
 
     const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const navigation = performance.getEntriesByType(
+        'navigation'
+      )[0] as PerformanceNavigationTiming;
       const paintEntries = performance.getEntriesByType('paint');
-      
-      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry;
-      
-      const cls = performance.getEntriesByType('layout-shift').reduce((acc, entry) => {
-        return acc + (entry as any).value;
-      }, 0);
 
-      const fid = performance.getEntriesByType('first-input')[0] as PerformanceEventTiming;
+      const fcp = paintEntries.find(
+        entry => entry.name === 'first-contentful-paint'
+      );
+      const lcp = performance.getEntriesByType(
+        'largest-contentful-paint'
+      )[0] as PerformanceEntry;
+
+      const cls = performance
+        .getEntriesByType('layout-shift')
+        .reduce((acc, entry) => {
+          return acc + (entry as any).value;
+        }, 0);
+
+      const fid = performance.getEntriesByType(
+        'first-input'
+      )[0] as PerformanceEventTiming;
 
       setMetrics({
         loadTime: navigation.loadEventEnd - navigation.loadEventStart,
         firstContentfulPaint: fcp ? fcp.startTime : 0,
         largestContentfulPaint: lcp ? lcp.startTime : 0,
         cumulativeLayoutShift: cls,
-        firstInputDelay: fid ? fid.processingStart - fid.startTime : 0
+        firstInputDelay: fid ? fid.processingStart - fid.startTime : 0,
       });
     };
 
