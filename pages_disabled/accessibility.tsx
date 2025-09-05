@@ -421,6 +421,7 @@ export default function AccessibilityPage() {
                   <p className="text-gray-600 mb-6">
                     If you encounter any accessibility barriers or have suggestions for improvement, we want to hear from you. Your feedback helps us create better experiences for everyone.
                   </p>
+<<<<<<<< HEAD:pages_disabled/accessibility.tsx
 <<<<<<<< HEAD:pages-disabled/accessibility.tsx.disabled
                 </div>
 ========
@@ -429,6 +430,9 @@ export default function AccessibilityPage() {
                   </span>
                 </motion.div>
 >>>>>>>> cursor/expand-services-advertise-and-build-project-59da:pages_disabled/accessibility.tsx
+========
+                </div>
+>>>>>>>> a19edd82339f030d1486cb753755512ca6e7d150:pages-disabled/accessibility.tsx.disabled
               </motion.div>
             </div>
           </div>
