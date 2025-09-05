@@ -32,7 +32,9 @@ import {
   Heart,
   Target,
   Lock,
-  MessageSquare
+  MessageSquare,
+  Mic,
+  Monitor
 } from 'lucide-react';
 import Layout from './components/Layout';
 
@@ -716,6 +718,244 @@ const microSaasSolutions = [
     marketPrice: "$3,000-6,000/month",
     benefits: ["Real-time insights", "Proactive issue detection", "Better customer experience"],
     setupTime: "2-3 weeks"
+  },
+  {
+    title: "AI-Powered Lead Scoring Platform",
+    description: "Intelligent lead qualification and scoring using machine learning algorithms",
+    icon: Target,
+    features: [
+      "ML-based Lead Scoring",
+      "Behavioral Analysis",
+      "Predictive Modeling",
+      "CRM Integration",
+      "Real-time Scoring",
+      "Custom Scoring Models"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$3,500-8,000/month",
+    benefits: ["40% increase in conversion", "Reduce sales cycle by 30%", "Better lead prioritization"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "Smart Contract Management System",
+    description: "Automated contract lifecycle management with AI-powered insights",
+    icon: FileText,
+    features: [
+      "Contract Creation & Templates",
+      "AI Clause Analysis",
+      "Automated Renewals",
+      "Compliance Monitoring",
+      "Risk Assessment",
+      "Digital Signatures"
+    ],
+    price: "Starting at $2,800/month",
+    marketPrice: "$4,500-12,000/month",
+    benefits: ["Reduce contract cycle by 60%", "Minimize legal risks", "Automated compliance"],
+    setupTime: "3-4 weeks"
+  },
+  {
+    title: "Voice AI Customer Service Platform",
+    description: "Advanced voice AI for automated customer support and call handling",
+    icon: Mic,
+    features: [
+      "Natural Voice Processing",
+      "Multi-language Support",
+      "Call Routing & Queuing",
+      "Sentiment Analysis",
+      "Call Analytics",
+      "CRM Integration"
+    ],
+    price: "Starting at $3,200/month",
+    marketPrice: "$5,000-15,000/month",
+    benefits: ["80% call automation", "24/7 availability", "Reduce support costs by 70%"],
+    setupTime: "3-5 weeks"
+  },
+  {
+    title: "Predictive Maintenance Platform",
+    description: "IoT-powered predictive maintenance for industrial equipment and machinery",
+    icon: Settings,
+    features: [
+      "Equipment Monitoring",
+      "Failure Prediction",
+      "Maintenance Scheduling",
+      "Parts Inventory Management",
+      "Cost Optimization",
+      "Mobile Alerts"
+    ],
+    price: "Starting at $3,500/month",
+    marketPrice: "$6,000-20,000/month",
+    benefits: ["Reduce downtime by 50%", "Lower maintenance costs by 40%", "Extend equipment life"],
+    setupTime: "4-6 weeks"
+  },
+  {
+    title: "Smart Energy Management System",
+    description: "AI-powered energy monitoring and optimization for buildings and facilities",
+    icon: Zap,
+    features: [
+      "Real-time Energy Monitoring",
+      "Usage Analytics",
+      "Cost Optimization",
+      "Renewable Integration",
+      "Automated Controls",
+      "Carbon Footprint Tracking"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,000-10,000/month",
+    benefits: ["Reduce energy costs by 25%", "Improve sustainability", "Automated optimization"],
+    setupTime: "3-4 weeks"
+  },
+  {
+    title: "AI-Powered Content Moderation",
+    description: "Automated content moderation and safety monitoring for online platforms",
+    icon: Shield,
+    features: [
+      "Image & Video Analysis",
+      "Text Content Filtering",
+      "Real-time Moderation",
+      "Custom Rule Engine",
+      "User Behavior Analysis",
+      "Compliance Reporting"
+    ],
+    price: "Starting at $2,000/month",
+    marketPrice: "$3,500-8,000/month",
+    benefits: ["95% accuracy in detection", "Reduce moderation costs by 80%", "24/7 monitoring"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "Smart Inventory Optimization",
+    description: "AI-driven inventory management with demand forecasting and automated reordering",
+    icon: Package,
+    features: [
+      "Demand Forecasting",
+      "Automated Reordering",
+      "Stock Optimization",
+      "Supplier Management",
+      "Cost Analysis",
+      "Multi-location Support"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$3,500-9,000/month",
+    benefits: ["Reduce stockouts by 90%", "Lower inventory costs by 30%", "Improve cash flow"],
+    setupTime: "3-4 weeks"
+  },
+  {
+    title: "Digital Twin Platform",
+    description: "Create digital replicas of physical assets for simulation and optimization",
+    icon: Monitor,
+    features: [
+      "3D Asset Modeling",
+      "Real-time Synchronization",
+      "Simulation Engine",
+      "Predictive Analytics",
+      "Performance Monitoring",
+      "What-if Scenarios"
+    ],
+    price: "Starting at $4,500/month",
+    marketPrice: "$8,000-25,000/month",
+    benefits: ["Optimize operations", "Reduce testing costs", "Improve decision making"],
+    setupTime: "6-10 weeks"
+  },
+  {
+    title: "AI-Powered Personalization Engine",
+    description: "Real-time personalization for websites, apps, and marketing campaigns",
+    icon: Brain,
+    features: [
+      "Real-time Personalization",
+      "Behavioral Analysis",
+      "A/B Testing",
+      "Content Optimization",
+      "Cross-channel Consistency",
+      "Performance Analytics"
+    ],
+    price: "Starting at $2,800/month",
+    marketPrice: "$4,500-12,000/month",
+    benefits: ["Increase conversion by 35%", "Improve user engagement", "Higher customer satisfaction"],
+    setupTime: "3-4 weeks"
+  },
+  {
+    title: "Smart Compliance Monitoring",
+    description: "Automated compliance tracking and reporting for regulatory requirements",
+    icon: CheckCircle,
+    features: [
+      "Regulatory Monitoring",
+      "Automated Reporting",
+      "Risk Assessment",
+      "Audit Trail",
+      "Alert System",
+      "Documentation Management"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,000-10,000/month",
+    benefits: ["Reduce compliance costs by 60%", "Minimize regulatory risks", "Automated reporting"],
+    setupTime: "3-4 weeks"
+  },
+  {
+    title: "Edge Computing Management Platform",
+    description: "Distributed computing platform for edge devices and IoT applications",
+    icon: Wifi,
+    features: [
+      "Edge Device Management",
+      "Data Processing",
+      "Latency Optimization",
+      "Offline Capabilities",
+      "Security Management",
+      "Performance Monitoring"
+    ],
+    price: "Starting at $3,000/month",
+    marketPrice: "$5,000-15,000/month",
+    benefits: ["Reduce latency by 80%", "Improve reliability", "Lower bandwidth costs"],
+    setupTime: "4-6 weeks"
+  },
+  {
+    title: "AI-Powered Fraud Prevention",
+    description: "Advanced fraud detection and prevention using machine learning",
+    icon: Shield,
+    features: [
+      "Real-time Fraud Detection",
+      "Behavioral Analysis",
+      "Risk Scoring",
+      "Transaction Monitoring",
+      "Pattern Recognition",
+      "Automated Blocking"
+    ],
+    price: "Starting at $3,200/month",
+    marketPrice: "$5,500-18,000/month",
+    benefits: ["Reduce fraud by 95%", "Minimize false positives", "Real-time protection"],
+    setupTime: "3-5 weeks"
+  },
+  {
+    title: "Smart Supply Chain Platform",
+    description: "End-to-end supply chain visibility and optimization with AI insights",
+    icon: Network,
+    features: [
+      "Supply Chain Mapping",
+      "Demand Forecasting",
+      "Supplier Management",
+      "Risk Assessment",
+      "Cost Optimization",
+      "Sustainability Tracking"
+    ],
+    price: "Starting at $4,000/month",
+    marketPrice: "$7,000-25,000/month",
+    benefits: ["Improve visibility by 90%", "Reduce costs by 25%", "Minimize risks"],
+    setupTime: "5-8 weeks"
+  },
+  {
+    title: "Quantum-Ready Security Platform",
+    description: "Future-proof security solutions preparing for quantum computing era",
+    icon: Lock,
+    features: [
+      "Quantum-Safe Encryption",
+      "Post-Quantum Cryptography",
+      "Hybrid Security Models",
+      "Migration Planning",
+      "Compliance Framework",
+      "Risk Assessment"
+    ],
+    price: "Starting at $5,000/month",
+    marketPrice: "$10,000-50,000/month",
+    benefits: ["Future-proof security", "Quantum-ready infrastructure", "Enhanced protection"],
+    setupTime: "6-12 weeks"
   }
 ];
 

@@ -48,6 +48,7 @@ import {
   HardDrive,
   Database,
   Phone,
+  Atom,
   MapPin,
   Zap,
   Users,
@@ -879,6 +880,276 @@ const aiServices = [
     marketPrice: '$5,500-15,000/month',
     setupTime: '3-6 weeks',
     targetUsers: 'Media, Entertainment, Education, Accessibility'
+  },
+  {
+    id: 31,
+    title: 'AI-Powered Drug Discovery',
+    description: 'Machine learning algorithms for pharmaceutical research, drug design, and molecular analysis.',
+    icon: Heart,
+    category: 'Healthcare AI',
+    price: 'Starting at $8,000/month',
+    features: [
+      'Molecular property prediction',
+      'Drug-target interaction modeling',
+      'Compound optimization',
+      'Toxicity prediction',
+      'Clinical trial optimization',
+      'Biomarker discovery',
+      'Drug repurposing',
+      'ADMET prediction'
+    ],
+    benefits: [
+      'Reduce drug development time by 50%',
+      'Lower R&D costs by 40%',
+      'Improve success rates by 30%',
+      'Accelerate breakthrough discoveries'
+    ],
+    marketPrice: '$15,000-50,000/month',
+    setupTime: '8-16 weeks',
+    targetUsers: 'Pharmaceutical, Biotech, Research, Healthcare'
+  },
+  {
+    id: 32,
+    title: 'AI-Powered Autonomous Vehicles',
+    description: 'Computer vision and machine learning for autonomous vehicle navigation and safety systems.',
+    icon: Car,
+    category: 'Autonomous Systems',
+    price: 'Starting at $12,000/month',
+    features: [
+      'Object detection & tracking',
+      'Path planning & navigation',
+      'Sensor fusion',
+      'Real-time decision making',
+      'Safety monitoring',
+      'Traffic prediction',
+      'Weather adaptation',
+      'Fleet management'
+    ],
+    benefits: [
+      'Improve safety by 90%',
+      'Reduce traffic accidents',
+      'Optimize fuel efficiency',
+      'Enable new mobility solutions'
+    ],
+    marketPrice: '$25,000-100,000/month',
+    setupTime: '12-24 weeks',
+    targetUsers: 'Automotive, Transportation, Logistics, Ride-sharing'
+  },
+  {
+    id: 33,
+    title: 'AI-Powered Space Exploration',
+    description: 'Machine learning for satellite data analysis, space mission planning, and astronomical research.',
+    icon: Rocket,
+    category: 'Space AI',
+    price: 'Starting at $15,000/month',
+    features: [
+      'Satellite image analysis',
+      'Orbital mechanics optimization',
+      'Space weather prediction',
+      'Mission planning',
+      'Astronomical data processing',
+      'Space debris tracking',
+      'Planetary exploration',
+      'Communication optimization'
+    ],
+    benefits: [
+      'Improve mission success rates',
+      'Optimize resource utilization',
+      'Enable new discoveries',
+      'Reduce mission costs'
+    ],
+    marketPrice: '$30,000-150,000/month',
+    setupTime: '16-32 weeks',
+    targetUsers: 'Space Agencies, Aerospace, Research, Defense'
+  },
+  {
+    id: 34,
+    title: 'AI-Powered Quantum Computing',
+    description: 'Machine learning algorithms optimized for quantum computing systems and quantum advantage.',
+    icon: Atom,
+    category: 'Quantum AI',
+    price: 'Starting at $20,000/month',
+    features: [
+      'Quantum algorithm development',
+      'Quantum machine learning',
+      'Quantum optimization',
+      'Quantum error correction',
+      'Quantum simulation',
+      'Hybrid classical-quantum systems',
+      'Quantum cryptography',
+      'Quantum advantage analysis'
+    ],
+    benefits: [
+      'Exponential computational speedup',
+      'Solve intractable problems',
+      'Enable quantum advantage',
+      'Revolutionize computing'
+    ],
+    marketPrice: '$50,000-500,000/month',
+    setupTime: '20-40 weeks',
+    targetUsers: 'Research, Finance, Cryptography, Scientific Computing'
+  },
+  {
+    id: 35,
+    title: 'AI-Powered Metaverse Platform',
+    description: 'AI-driven virtual worlds, avatars, and immersive experiences for the metaverse.',
+    icon: Globe,
+    category: 'Metaverse AI',
+    price: 'Starting at $6,000/month',
+    features: [
+      'Virtual world generation',
+      'AI-powered avatars',
+      'Natural language interaction',
+      'Behavioral simulation',
+      'Content generation',
+      'Social interaction AI',
+      'Virtual economy',
+      'Cross-platform integration'
+    ],
+    benefits: [
+      'Create immersive experiences',
+      'Enable virtual economies',
+      'Improve user engagement',
+      'Scale virtual worlds'
+    ],
+    marketPrice: '$12,000-60,000/month',
+    setupTime: '8-16 weeks',
+    targetUsers: 'Gaming, Social Media, Education, Entertainment'
+  },
+  {
+    id: 36,
+    title: 'AI-Powered Cybersecurity Intelligence',
+    description: 'Advanced AI systems for threat detection, security analysis, and cyber defense.',
+    icon: Shield,
+    category: 'Cybersecurity AI',
+    price: 'Starting at $4,500/month',
+    features: [
+      'Threat intelligence analysis',
+      'Anomaly detection',
+      'Attack pattern recognition',
+      'Automated response',
+      'Vulnerability assessment',
+      'Security orchestration',
+      'Incident investigation',
+      'Predictive security'
+    ],
+    benefits: [
+      'Detect threats 10x faster',
+      'Reduce false positives by 80%',
+      'Automate security responses',
+      'Improve security posture'
+    ],
+    marketPrice: '$8,000-30,000/month',
+    setupTime: '6-12 weeks',
+    targetUsers: 'Finance, Government, Healthcare, Enterprise'
+  },
+  {
+    id: 37,
+    title: 'AI-Powered Smart Cities',
+    description: 'Intelligent urban planning, traffic management, and city optimization systems.',
+    icon: Building,
+    category: 'Smart Cities AI',
+    price: 'Starting at $7,000/month',
+    features: [
+      'Traffic flow optimization',
+      'Energy consumption analysis',
+      'Waste management optimization',
+      'Public safety monitoring',
+      'Infrastructure planning',
+      'Citizen service automation',
+      'Environmental monitoring',
+      'Urban growth prediction'
+    ],
+    benefits: [
+      'Reduce traffic congestion by 40%',
+      'Lower energy consumption by 25%',
+      'Improve citizen services',
+      'Optimize urban planning'
+    ],
+    marketPrice: '$15,000-80,000/month',
+    setupTime: '12-20 weeks',
+    targetUsers: 'Government, Urban Planning, Transportation, Utilities'
+  },
+  {
+    id: 38,
+    title: 'AI-Powered Precision Agriculture',
+    description: 'Machine learning for crop optimization, soil analysis, and agricultural automation.',
+    icon: Sprout,
+    category: 'Agriculture AI',
+    price: 'Starting at $3,000/month',
+    features: [
+      'Crop yield prediction',
+      'Soil analysis & optimization',
+      'Pest & disease detection',
+      'Irrigation optimization',
+      'Harvest timing',
+      'Weather prediction',
+      'Resource allocation',
+      'Sustainability tracking'
+    ],
+    benefits: [
+      'Increase crop yields by 30%',
+      'Reduce water usage by 40%',
+      'Minimize pesticide use',
+      'Improve sustainability'
+    ],
+    marketPrice: '$6,000-25,000/month',
+    setupTime: '6-12 weeks',
+    targetUsers: 'Agriculture, Farming, Food Production, Research'
+  },
+  {
+    id: 39,
+    title: 'AI-Powered Mental Health Support',
+    description: 'Intelligent mental health monitoring, therapy assistance, and wellness optimization.',
+    icon: Heart,
+    category: 'Mental Health AI',
+    price: 'Starting at $2,500/month',
+    features: [
+      'Mood analysis & tracking',
+      'Therapy session optimization',
+      'Crisis intervention',
+      'Wellness recommendations',
+      'Medication adherence',
+      'Social support matching',
+      'Progress monitoring',
+      'Personalized treatment'
+    ],
+    benefits: [
+      'Improve treatment outcomes',
+      'Provide 24/7 support',
+      'Reduce healthcare costs',
+      'Increase accessibility'
+    ],
+    marketPrice: '$5,000-20,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'Healthcare, Mental Health, Wellness, Insurance'
+  },
+  {
+    id: 40,
+    title: 'AI-Powered Legal Research',
+    description: 'Intelligent legal document analysis, case research, and legal decision support.',
+    icon: FileText,
+    category: 'Legal AI',
+    price: 'Starting at $3,500/month',
+    features: [
+      'Legal document analysis',
+      'Case law research',
+      'Contract review',
+      'Legal precedent analysis',
+      'Risk assessment',
+      'Compliance checking',
+      'Legal writing assistance',
+      'Due diligence automation'
+    ],
+    benefits: [
+      'Reduce research time by 70%',
+      'Improve accuracy by 90%',
+      'Lower legal costs',
+      'Faster case preparation'
+    ],
+    marketPrice: '$7,000-35,000/month',
+    setupTime: '6-10 weeks',
+    targetUsers: 'Law Firms, Corporate Legal, Government, Compliance'
   }
 ];
 

@@ -558,6 +558,244 @@ const services = [
     marketPrice: "$3,500-8,500/month",
     benefits: ["99.9% uptime guarantee", "Rapid recovery", "Business continuity"],
     setupTime: "2-4 weeks"
+  },
+  {
+    title: "5G Network Implementation",
+    description: "Next-generation 5G network deployment and optimization services",
+    icon: Wifi,
+    features: [
+      "5G Infrastructure Setup",
+      "Network Slicing",
+      "Edge Computing Integration",
+      "IoT Connectivity",
+      "Performance Optimization",
+      "Security Implementation"
+    ],
+    price: "Starting at $8,000/month",
+    marketPrice: "$15,000-50,000/month",
+    benefits: ["10x faster speeds", "Ultra-low latency", "Massive IoT support"],
+    setupTime: "8-16 weeks"
+  },
+  {
+    title: "Quantum Computing Infrastructure",
+    description: "Quantum computing setup and hybrid classical-quantum systems",
+    icon: Atom,
+    features: [
+      "Quantum Hardware Setup",
+      "Quantum Software Development",
+      "Hybrid System Integration",
+      "Quantum Algorithm Implementation",
+      "Error Correction Systems",
+      "Quantum Security"
+    ],
+    price: "Starting at $25,000/month",
+    marketPrice: "$50,000-200,000/month",
+    benefits: ["Exponential computational power", "Future-proof technology", "Breakthrough capabilities"],
+    setupTime: "12-24 weeks"
+  },
+  {
+    title: "Edge Computing Solutions",
+    description: "Distributed computing infrastructure for edge devices and IoT",
+    icon: Cpu,
+    features: [
+      "Edge Data Centers",
+      "IoT Device Management",
+      "Real-time Processing",
+      "Latency Optimization",
+      "Offline Capabilities",
+      "Security Management"
+    ],
+    price: "Starting at $4,500/month",
+    marketPrice: "$8,000-25,000/month",
+    benefits: ["Reduce latency by 80%", "Improve reliability", "Lower bandwidth costs"],
+    setupTime: "6-12 weeks"
+  },
+  {
+    title: "Sustainable IT Solutions",
+    description: "Green IT infrastructure and carbon-neutral computing solutions",
+    icon: Leaf,
+    features: [
+      "Energy-Efficient Hardware",
+      "Renewable Energy Integration",
+      "Carbon Footprint Tracking",
+      "Green Data Centers",
+      "Sustainable Procurement",
+      "Environmental Monitoring"
+    ],
+    price: "Starting at $3,000/month",
+    marketPrice: "$5,000-15,000/month",
+    benefits: ["Reduce carbon footprint by 60%", "Lower energy costs", "Environmental compliance"],
+    setupTime: "4-8 weeks"
+  },
+  {
+    title: "AI Infrastructure Management",
+    description: "Specialized infrastructure for AI and machine learning workloads",
+    icon: Brain,
+    features: [
+      "GPU Cluster Management",
+      "ML Pipeline Infrastructure",
+      "Model Training Environments",
+      "Inference Optimization",
+      "Data Pipeline Management",
+      "MLOps Integration"
+    ],
+    price: "Starting at $6,000/month",
+    marketPrice: "$12,000-40,000/month",
+    benefits: ["Optimize AI performance", "Reduce training time", "Scale ML operations"],
+    setupTime: "6-10 weeks"
+  },
+  {
+    title: "Zero-Trust Security Architecture",
+    description: "Comprehensive zero-trust security model implementation",
+    icon: Shield,
+    features: [
+      "Identity Verification",
+      "Micro-segmentation",
+      "Continuous Monitoring",
+      "Least Privilege Access",
+      "Threat Detection",
+      "Automated Response"
+    ],
+    price: "Starting at $4,000/month",
+    marketPrice: "$7,000-20,000/month",
+    benefits: ["Enhanced security posture", "Reduce attack surface", "Compliance ready"],
+    setupTime: "8-12 weeks"
+  },
+  {
+    title: "Hybrid Cloud Management",
+    description: "Seamless management of hybrid cloud environments across multiple providers",
+    icon: Cloud,
+    features: [
+      "Multi-Cloud Orchestration",
+      "Workload Migration",
+      "Cost Optimization",
+      "Security Management",
+      "Performance Monitoring",
+      "Disaster Recovery"
+    ],
+    price: "Starting at $3,500/month",
+    marketPrice: "$6,000-18,000/month",
+    benefits: ["Optimize cloud costs", "Improve flexibility", "Enhanced security"],
+    setupTime: "6-10 weeks"
+  },
+  {
+    title: "IT Compliance & Governance",
+    description: "Comprehensive compliance management and IT governance services",
+    icon: CheckCircle,
+    features: [
+      "Regulatory Compliance",
+      "Audit Preparation",
+      "Policy Development",
+      "Risk Assessment",
+      "Documentation Management",
+      "Training Programs"
+    ],
+    price: "Starting at $2,800/month",
+    marketPrice: "$4,500-12,000/month",
+    benefits: ["Ensure compliance", "Reduce audit risks", "Streamline governance"],
+    setupTime: "4-8 weeks"
+  },
+  {
+    title: "IT Performance Optimization",
+    description: "Advanced performance tuning and optimization for IT infrastructure",
+    icon: Zap,
+    features: [
+      "Performance Analysis",
+      "Bottleneck Identification",
+      "Resource Optimization",
+      "Capacity Planning",
+      "Load Balancing",
+      "Monitoring & Alerting"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,000-10,000/month",
+    benefits: ["Improve performance by 50%", "Reduce costs", "Better user experience"],
+    setupTime: "3-6 weeks"
+  },
+  {
+    title: "IT Innovation Lab",
+    description: "Dedicated innovation lab for emerging technologies and proof-of-concepts",
+    icon: Code,
+    features: [
+      "Technology Research",
+      "Proof of Concept Development",
+      "Pilot Program Management",
+      "Innovation Workshops",
+      "Technology Assessment",
+      "Future Planning"
+    ],
+    price: "Starting at $5,000/month",
+    marketPrice: "$10,000-30,000/month",
+    benefits: ["Stay ahead of technology", "Innovation leadership", "Competitive advantage"],
+    setupTime: "2-4 weeks"
+  },
+  {
+    title: "IT Cost Optimization",
+    description: "Comprehensive cost analysis and optimization for IT infrastructure",
+    icon: DollarSign,
+    features: [
+      "Cost Analysis & Auditing",
+      "License Optimization",
+      "Resource Right-sizing",
+      "Vendor Management",
+      "Budget Planning",
+      "ROI Analysis"
+    ],
+    price: "Starting at $2,000/month",
+    marketPrice: "$3,500-8,000/month",
+    benefits: ["Reduce IT costs by 30%", "Optimize spending", "Better budget control"],
+    setupTime: "2-4 weeks"
+  },
+  {
+    title: "IT Transformation Services",
+    description: "Complete digital transformation and modernization of IT infrastructure",
+    icon: Settings,
+    features: [
+      "Digital Strategy Development",
+      "Legacy System Modernization",
+      "Process Automation",
+      "Change Management",
+      "Training & Support",
+      "Continuous Improvement"
+    ],
+    price: "Starting at $8,000/month",
+    marketPrice: "$15,000-60,000/month",
+    benefits: ["Modernize infrastructure", "Improve efficiency", "Future-ready systems"],
+    setupTime: "12-24 weeks"
+  },
+  {
+    title: "IT Vendor Management",
+    description: "Comprehensive vendor relationship and contract management services",
+    icon: Package,
+    features: [
+      "Vendor Selection",
+      "Contract Negotiation",
+      "Performance Monitoring",
+      "Relationship Management",
+      "Cost Optimization",
+      "Risk Management"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-7,000/month",
+    benefits: ["Optimize vendor relationships", "Reduce costs", "Improve service quality"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "IT Training & Certification",
+    description: "Comprehensive IT training programs and certification services",
+    icon: GraduationCap,
+    features: [
+      "Technical Training",
+      "Certification Programs",
+      "Skill Assessment",
+      "Custom Training",
+      "Online Learning",
+      "Hands-on Labs"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-6,000/month",
+    benefits: ["Improve team skills", "Increase productivity", "Reduce support costs"],
+    setupTime: "1-2 weeks"
   }
 ];
 
