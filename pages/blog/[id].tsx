@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
-import { User, Calendar, Clock, Share2, Tag } from 'lucide-react';
+import { User, Calendar, Clock, Share2, Tag, ArrowRight } from 'lucide-react';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
 
