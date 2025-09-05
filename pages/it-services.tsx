@@ -477,6 +477,119 @@ const itServices = [
     features: ['API Development', 'System Integration', 'Data Synchronization', 'Workflow Automation'],
     pricing: '$15,000 - $75,000/project',
     category: 'Integration'
+  },
+  {
+    title: 'AI-Powered IT Operations',
+    description: 'Intelligent IT operations with AI-driven automation and predictive maintenance.',
+    icon: Brain,
+    features: ['Predictive Maintenance', 'Automated Incident Response', 'Performance Optimization', 'Anomaly Detection'],
+    pricing: '$25,000 - $125,000/setup',
+    category: 'AIOps',
+    popular: true
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Comprehensive zero trust security implementation for modern enterprises.',
+    icon: Shield,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Policy Enforcement'],
+    pricing: '$50,000 - $250,000/project',
+    category: 'Security Architecture'
+  },
+  {
+    title: 'Edge Computing Infrastructure',
+    description: 'Edge computing solutions for low-latency applications and IoT deployments.',
+    icon: Cpu,
+    features: ['Edge Node Deployment', 'Latency Optimization', 'IoT Integration', 'Real-time Processing'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'Edge Computing'
+  },
+  {
+    title: 'Quantum-Safe Cryptography',
+    description: 'Post-quantum cryptography implementation for future-proof security.',
+    icon: Lock,
+    features: ['Quantum-resistant Algorithms', 'Migration Planning', 'Compliance Testing', 'Performance Optimization'],
+    pricing: '$75,000 - $300,000/project',
+    category: 'Quantum Security'
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network design, implementation, and optimization for enterprise use.',
+    icon: Network,
+    features: ['5G Infrastructure', 'Network Slicing', 'Performance Optimization', 'IoT Integration'],
+    pricing: '$100,000 - $500,000/project',
+    category: '5G Technology'
+  },
+  {
+    title: 'Blockchain Infrastructure',
+    description: 'Enterprise blockchain solutions with smart contracts and decentralized applications.',
+    icon: Shield,
+    features: ['Blockchain Development', 'Smart Contracts', 'DApp Development', 'Consensus Mechanisms'],
+    pricing: '$40,000 - $200,000/project',
+    category: 'Blockchain'
+  },
+  {
+    title: 'IoT Platform Development',
+    description: 'Comprehensive IoT platform development with device management and analytics.',
+    icon: Settings,
+    features: ['Device Management', 'Data Analytics', 'Real-time Monitoring', 'Security Framework'],
+    pricing: '$35,000 - $175,000/project',
+    category: 'IoT Development'
+  },
+  {
+    title: 'AR/VR Infrastructure',
+    description: 'Augmented and virtual reality infrastructure for enterprise applications.',
+    icon: Monitor,
+    features: ['AR/VR Development', '3D Content Creation', 'Spatial Computing', 'User Experience Design'],
+    pricing: '$60,000 - $300,000/project',
+    category: 'AR/VR'
+  },
+  {
+    title: 'Green IT Solutions',
+    description: 'Sustainable IT solutions with energy efficiency and carbon footprint reduction.',
+    icon: Sprout,
+    features: ['Energy Optimization', 'Carbon Tracking', 'Sustainable Hardware', 'Green Data Centers'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Sustainability'
+  },
+  {
+    title: 'IT Compliance Automation',
+    description: 'Automated compliance management for GDPR, HIPAA, SOX, and other regulations.',
+    icon: CheckCircle,
+    features: ['Compliance Monitoring', 'Automated Reporting', 'Risk Assessment', 'Audit Preparation'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'Compliance'
+  },
+  {
+    title: 'Hybrid Cloud Management',
+    description: 'Unified management of hybrid cloud environments across multiple providers.',
+    icon: Cloud,
+    features: ['Multi-cloud Management', 'Cost Optimization', 'Security Orchestration', 'Workload Migration'],
+    pricing: '$25,000 - $125,000/setup',
+    category: 'Cloud Management'
+  },
+  {
+    title: 'IT Service Mesh',
+    description: 'Service mesh implementation for microservices communication and security.',
+    icon: Network,
+    features: ['Service Discovery', 'Load Balancing', 'Security Policies', 'Observability'],
+    pricing: '$20,000 - $100,000/setup',
+    category: 'Service Mesh'
+  },
+  {
+    title: 'IT Disaster Recovery as a Service',
+    description: 'Comprehensive disaster recovery solutions with automated failover and testing.',
+    icon: Shield,
+    features: ['Automated Failover', 'Regular Testing', 'RTO/RPO Optimization', 'Multi-site Replication'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'DRaaS'
+  },
+  {
+    title: 'IT Performance Engineering',
+    description: 'Performance optimization and engineering for high-traffic applications.',
+    icon: TrendingUp,
+    features: ['Performance Testing', 'Load Optimization', 'Scalability Planning', 'Bottleneck Analysis'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'Performance Engineering'
   }
 ];
 

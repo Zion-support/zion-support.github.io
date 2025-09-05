@@ -516,6 +516,79 @@ const aiServices = [
     features: ['Personalized Learning', 'Adaptive Assessment', 'Progress Tracking', 'Skill Development'],
     pricing: '$2,000 - $10,000/month',
     category: 'EdTech'
+  },
+  {
+    title: 'AI-Powered Metaverse Platform',
+    description: 'Complete metaverse solution with AI-generated virtual worlds and intelligent avatars.',
+    icon: Globe,
+    features: ['Virtual World Generation', 'AI Avatars', 'Real-time Interactions', 'Blockchain Integration'],
+    pricing: '$100,000 - $500,000 project',
+    category: 'Metaverse',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Digital Twin Technology',
+    description: 'Real-time digital replicas of physical assets with predictive capabilities.',
+    icon: Monitor,
+    features: ['Real-time Monitoring', 'Predictive Analytics', 'Simulation Capabilities', 'IoT Integration'],
+    pricing: '$50,000 - $250,000 project',
+    category: 'Digital Twin'
+  },
+  {
+    title: 'AI-Powered Edge Computing',
+    description: 'Intelligent edge computing solutions for real-time data processing and decision making.',
+    icon: Cpu,
+    features: ['Real-time Processing', 'Low Latency', 'Autonomous Decision Making', 'Resource Optimization'],
+    pricing: '$25,000 - $125,000 setup',
+    category: 'Edge Computing'
+  },
+  {
+    title: 'AI-Powered Blockchain Analytics',
+    description: 'Advanced blockchain analysis and cryptocurrency intelligence using AI.',
+    icon: Shield,
+    features: ['Transaction Analysis', 'Fraud Detection', 'Market Intelligence', 'Compliance Monitoring'],
+    pricing: '$15,000 - $75,000 setup',
+    category: 'Blockchain'
+  },
+  {
+    title: 'AI-Powered 5G Network Optimization',
+    description: 'Intelligent 5G network management and optimization using machine learning.',
+    icon: Network,
+    features: ['Network Optimization', 'Traffic Management', 'Quality of Service', 'Resource Allocation'],
+    pricing: '$75,000 - $300,000 project',
+    category: '5G Technology'
+  },
+  {
+    title: 'AI-Powered IoT Security',
+    description: 'Comprehensive IoT security solution with AI-powered threat detection and prevention.',
+    icon: Lock,
+    features: ['Threat Detection', 'Device Authentication', 'Anomaly Detection', 'Automated Response'],
+    pricing: '$20,000 - $100,000 setup',
+    category: 'IoT Security'
+  },
+  {
+    title: 'AI-Powered Augmented Reality',
+    description: 'Advanced AR solutions with AI-powered object recognition and spatial mapping.',
+    icon: Eye,
+    features: ['Object Recognition', 'Spatial Mapping', 'Real-time Rendering', 'Gesture Control'],
+    pricing: '$40,000 - $200,000 project',
+    category: 'Augmented Reality'
+  },
+  {
+    title: 'AI-Powered Robotic Process Automation',
+    description: 'Intelligent RPA with AI decision-making capabilities for complex business processes.',
+    icon: Settings,
+    features: ['Process Automation', 'AI Decision Making', 'Exception Handling', 'Continuous Learning'],
+    pricing: '$10,000 - $50,000 setup',
+    category: 'RPA'
+  },
+  {
+    title: 'AI-Powered Synthetic Data Generation',
+    description: 'Generate realistic synthetic data for training and testing AI models.',
+    icon: Database,
+    features: ['Data Generation', 'Privacy Preservation', 'Model Training', 'Quality Validation'],
+    pricing: '$5,000 - $25,000 setup',
+    category: 'Data Science'
   }
 ];
 

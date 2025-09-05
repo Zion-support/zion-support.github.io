@@ -470,6 +470,119 @@ const microSaaSProducts = [
     features: ['Real-time Detection', 'Machine Learning Models', 'Risk Scoring', 'API Integration'],
     pricing: '$0.10 - $0.50 per transaction',
     category: 'Fraud Prevention'
+  },
+  {
+    title: 'AI-Powered Code Review Assistant',
+    description: 'Automated code review with AI-powered suggestions and security analysis.',
+    icon: Code,
+    features: ['Code Quality Analysis', 'Security Scanning', 'Performance Optimization', 'Best Practices'],
+    pricing: '$99 - $499/month',
+    category: 'Development Tools',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Meeting Transcriber',
+    description: 'Real-time meeting transcription with AI-powered insights and action items.',
+    icon: Mic,
+    features: ['Real-time Transcription', 'AI Summaries', 'Action Item Extraction', 'Multi-language Support'],
+    pricing: '$29 - $149/month',
+    category: 'Productivity'
+  },
+  {
+    title: 'AI-Powered Logo Generator',
+    description: 'Professional logo creation using AI with brand guidelines and variations.',
+    icon: Image,
+    features: ['AI Logo Generation', 'Brand Guidelines', 'Multiple Formats', 'Commercial License'],
+    pricing: '$19 - $99/month',
+    category: 'Design Tools'
+  },
+  {
+    title: 'AI-Powered Password Manager',
+    description: 'Intelligent password management with AI-powered security recommendations.',
+    icon: Lock,
+    features: ['Password Generation', 'Security Analysis', 'Breach Monitoring', 'Multi-device Sync'],
+    pricing: '$9 - $49/month',
+    category: 'Security'
+  },
+  {
+    title: 'AI-Powered Expense Tracker',
+    description: 'Smart expense tracking with AI categorization and receipt processing.',
+    icon: DollarSign,
+    features: ['Receipt Scanning', 'AI Categorization', 'Tax Preparation', 'Budget Analysis'],
+    pricing: '$19 - $99/month',
+    category: 'Finance'
+  },
+  {
+    title: 'AI-Powered Social Media Analytics',
+    description: 'Advanced social media analytics with AI-powered insights and recommendations.',
+    icon: BarChart3,
+    features: ['Performance Analytics', 'AI Insights', 'Competitor Analysis', 'Content Recommendations'],
+    pricing: '$49 - $299/month',
+    category: 'Social Media'
+  },
+  {
+    title: 'AI-Powered Email Signature Generator',
+    description: 'Professional email signature creation with AI-powered design and content.',
+    icon: Mail,
+    features: ['AI Design Generation', 'Brand Consistency', 'Multiple Templates', 'Easy Integration'],
+    pricing: '$9 - $49/month',
+    category: 'Email Tools'
+  },
+  {
+    title: 'AI-Powered Website Builder',
+    description: 'No-code website builder with AI-powered design and content generation.',
+    icon: Monitor,
+    features: ['AI Design Generation', 'Content Creation', 'SEO Optimization', 'Mobile Responsive'],
+    pricing: '$29 - $199/month',
+    category: 'Web Development'
+  },
+  {
+    title: 'AI-Powered Customer Feedback Analyzer',
+    description: 'Intelligent analysis of customer feedback with sentiment analysis and insights.',
+    icon: MessageSquare,
+    features: ['Sentiment Analysis', 'Trend Detection', 'Actionable Insights', 'Dashboard'],
+    pricing: '$39 - $199/month',
+    category: 'Customer Analytics'
+  },
+  {
+    title: 'AI-Powered Inventory Optimizer',
+    description: 'Smart inventory optimization with AI-powered demand forecasting.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Stock Optimization', 'Reorder Alerts', 'Cost Analysis'],
+    pricing: '$79 - $399/month',
+    category: 'Inventory Management'
+  },
+  {
+    title: 'AI-Powered Meeting Scheduler',
+    description: 'Intelligent meeting scheduling with AI-powered time optimization.',
+    icon: Calendar,
+    features: ['Smart Scheduling', 'Time Zone Handling', 'Conflict Resolution', 'Calendar Integration'],
+    pricing: '$19 - $99/month',
+    category: 'Scheduling'
+  },
+  {
+    title: 'AI-Powered Content Moderation',
+    description: 'Automated content moderation with AI-powered detection and filtering.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Custom Rules', 'Real-time Processing', 'API Integration'],
+    pricing: '$99 - $499/month',
+    category: 'Content Safety'
+  },
+  {
+    title: 'AI-Powered Lead Generation',
+    description: 'Automated lead generation with AI-powered prospecting and qualification.',
+    icon: Target,
+    features: ['Lead Discovery', 'Contact Enrichment', 'Qualification Scoring', 'CRM Integration'],
+    pricing: '$199 - $999/month',
+    category: 'Sales'
+  },
+  {
+    title: 'AI-Powered Video Editor',
+    description: 'Automated video editing with AI-powered content creation and optimization.',
+    icon: Video,
+    features: ['Auto-editing', 'Content Optimization', 'Multiple Formats', 'Cloud Processing'],
+    pricing: '$49 - $299/month',
+    category: 'Video Tools'
   }
 ];
 

@@ -13,7 +13,8 @@ import {
   Zap,
   Globe,
   Shield,
-  Brain
+  Brain,
+  BookOpen
 } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 

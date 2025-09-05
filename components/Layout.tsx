@@ -59,10 +59,10 @@ name: "Zion Tech Group",
               description: description,
               address: {
                 "@type": "PostalAddress",
-                "streetAddress": "123 Technology Drive",
-                "addressLocality": "Innovation City",
-                "addressRegion": "IC",
-                "postalCode": "12345",
+                "streetAddress": "364 E Main St STE 1008",
+                "addressLocality": "Middletown",
+                "addressRegion": "DE",
+                "postalCode": "19709",
                 "addressCountry": "US"
               },
               "contactPoint": {
