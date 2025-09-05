@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-import * as React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
->>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 
 describe('AccessibilityEnhancer', () => {
@@ -73,16 +67,6 @@ describe('AccessibilityEnhancer', () => {
     const element = screen.getByRole('button');
     expect(element).toHaveAttribute('tabindex', '-1');
   });
-<<<<<<< HEAD
-<<<<<<< HEAD
-});
-=======
-<<<<<<< HEAD
-});
-=======
-});
->>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
-=======
 });
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

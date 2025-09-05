@@ -1,10 +1,4 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-=======
-import { useRouter } from 'next/navigation';
-import { motion } from 'framer-motion';
-import { Search, ArrowRight, FileText, Users, Briefcase, Building2 } from 'lucide-react';
->>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 import Layout from '../components/Layout';
 
 // Mock search results data;

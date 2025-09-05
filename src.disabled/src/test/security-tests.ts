@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 // Security test configuration
 export const securityTests = {
   // Check for common security vulnerabilities

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react'
-=======
-import * as React from 'react'
->>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 import Head from 'next/head'
 import Link from 'next/link'
 import { 
@@ -108,7 +102,6 @@ export default function Pricing() {
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Choose the plan that fits your business needs. All plans include our core features with no hidden fees.
-=======
 import React from 'react';
 import Head from 'next/head';
             </h1>

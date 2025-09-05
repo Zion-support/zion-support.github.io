@@ -1,10 +1,2 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from \"react\"; interface SEOProps { title?: string; description?: string; keywords?: string[]; image?: string; url?: string; type?: \"website\" | \"article\" | \"product\"; structuredData? any} export const \"EnhancedSEOManager\": React.FC<SEOProps> = ({ title = \"Zion Tech Group - AI-Powered Technology Solutions\",description = \"Leading provider of AI-powered technology solutions,cybersecurity,cloud services,and digital transformation. Expert consulting and innovative solutions for modern businesses.\",keywords = [\"AI\",\"technology\",\"cybersecurity\",\"cloud computing\",\"digital transformation\",\"consulting\"],image = \'"https\": \",})
-const React from "react"; interface SEOProps { title?: string; description?: string; keywords?: string[]; image?: string; url?: string; type?: "website" | "article" | "product"; structuredData? any} export const EnhancedSEOManager: React.FC<SEOProps> = ({ title = "Zion Tech Group - AI-Powered Technology Solutions",description = "Leading provider of AI-powered technology solutions,cybersecurity,cloud services,and digital transformation. Expert consulting and innovative solutions for modern businesses.",keywords = ["AI","technology","cybersecurity","cloud computing","digital transformation","consulting"],image = "https: ",})"""
-import _React from "react"; interface SEOProps { title?: string; description?: string; keywords?: string[]; image?: string; url?: string; type?: "website" | "article" | "product"; structuredData? any} export const "EnhancedSEOManager": _React.FC<SEOProps> = ({ title = "Zion Tech Group - AI-Powered Technology Solutions",description = "Leading provider of AI-powered technology solutions,cybersecurity,cloud services,and digital transformation. Expert consulting and innovative solutions for modern businesses.",keywords = ["AI","technology","cybersecurity","cloud computing","digital transformation","consulting"],image = '"https": ",})
-=======
->>>>>>> main
 >>>>>>> origin/main
-=======
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

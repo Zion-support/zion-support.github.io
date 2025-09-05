@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
->>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 import {
   Brain,
   Cloud,
