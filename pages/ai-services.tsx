@@ -43,15 +43,14 @@ import {
   ShoppingCart,
   BookOpen,
   Home,
-  Gamepad2
+  Gamepad2,
+  Droplets,
+  Waves,
+  Satellite
 } from 'lucide-react';
 
-<<<<<<< HEAD
-const aiServices = [{
-=======
 const aiServices = [
   {
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
     title: 'AI-Powered Email Responder',
     description: 'Automated email responses using advanced NLP and machine learning algorithms.',
     icon: Mail,
@@ -217,46 +216,20 @@ const aiServices = [
   },
   {
     title: 'AI-Powered Autonomous Vehicles',
-<<<<<<< HEAD
-    description: 'Complete autonomous vehicle systems with advanced perception and decision-making capabilities.',
-    icon: Car,
-    features: ['Computer Vision', 'Sensor Fusion', 'Path Planning', 'Real-time Decision Making'],
-    pricing: '$100,000 - $500,000/project',
-=======
     description: 'Advanced autonomous vehicle systems with computer vision and decision making.',
     icon: Car,
     features: ['Computer Vision', 'Path Planning', 'Obstacle Detection', 'Real-time Decision Making'],
-    pricing: '$100,000 - $500,000 project',
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+    pricing: '$100,000 - $500,000/project',
     category: 'Autonomous Systems',
     popular: true
   },
   {
-<<<<<<< HEAD
-    title: 'Generative AI Content Creation Suite',
-    description: 'Advanced AI-powered content generation for text, images, videos, and audio.',
-    icon: FileText,
-    features: ['Text Generation', 'Image Creation', 'Video Production', 'Voice Synthesis'],
-    pricing: '$2,000 - $15,000/month',
-    category: 'Content Generation',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Cybersecurity Platform',
-    description: 'Next-generation cybersecurity using AI for threat detection and response.',
-    icon: Shield,
-    features: ['Threat Hunting', 'Behavioral Analysis', 'Automated Response', 'Zero-day Detection'],
-    pricing: '$15,000 - $100,000/setup',
-    category: 'Cybersecurity',
-    popular: true
-  },
-  {
-    title: 'AI Climate Change Modeling',
-    description: 'Advanced climate modeling and environmental impact prediction using AI.',
-    icon: Sprout,
-    features: ['Climate Prediction', 'Carbon Footprint Analysis', 'Environmental Monitoring', 'Policy Impact Assessment'],
-    pricing: '$25,000 - $150,000/project',
-    category: 'Environmental AI',
+    title: 'AI Drug Discovery Platform',
+    description: 'Accelerated drug discovery using AI for molecular design and optimization.',
+    icon: Heart,
+    features: ['Molecular Modeling', 'Drug-Target Interaction', 'Toxicity Prediction', 'Clinical Trial Optimization'],
+    pricing: '$50,000 - $200,000/project',
+    category: 'Healthcare',
     popular: true
   },
   {
@@ -350,6 +323,375 @@ const aiServices = [
     popular: true
   },
   {
+    title: 'AI-Powered Medical Imaging Analysis',
+    description: 'Advanced medical image analysis with AI-powered diagnosis assistance and reporting.',
+    icon: Eye,
+    features: ['Radiology Analysis', 'Pathology Detection', 'Diagnosis Assistance', 'Report Generation'],
+    pricing: '$5,000 - $30,000/setup',
+    category: 'Medical AI',
+    popular: true
+  },
+  {
+    title: 'AI Voice Cloning & Synthesis',
+    description: 'Advanced voice synthesis platform with natural speech generation and voice customization.',
+    icon: Mic,
+    features: ['Voice Cloning', 'Emotion Control', 'Multi-language Support', 'Real-time Synthesis'],
+    pricing: '$2,000 - $15,000/setup',
+    category: 'Voice AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Drug Discovery',
+    description: 'Advanced drug discovery platform with molecular analysis and clinical trial optimization.',
+    icon: Heart,
+    features: ['Molecular Analysis', 'Clinical Trials', 'Drug Interactions', 'Efficacy Prediction'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Pharmaceutical AI',
+    popular: true
+  },
+  {
+    title: 'AI Weather Prediction & Climate Modeling',
+    description: 'Advanced weather forecasting with hyperlocal predictions and climate analysis.',
+    icon: Cloud,
+    features: ['Hyperlocal Forecasts', 'Climate Analysis', 'Severe Weather Alerts', 'Long-term Modeling'],
+    pricing: '$10,000 - $75,000/setup',
+    category: 'Climate AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Space Analytics',
+    description: 'Satellite data analysis platform with earth observation and space weather monitoring.',
+    icon: Rocket,
+    features: ['Satellite Imagery', 'Earth Observation', 'Space Weather', 'Climate Monitoring'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Space AI',
+    popular: true
+  },
+  {
+    title: 'AI Quantum Machine Learning',
+    description: 'Quantum-enhanced machine learning algorithms for complex optimization problems.',
+    icon: Cpu,
+    features: ['Quantum Algorithms', 'Optimization Problems', 'Quantum ML Models', 'Quantum Simulation'],
+    pricing: '$30,000 - $250,000/project',
+    category: 'Quantum AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Gene Analysis',
+    description: 'Advanced genomic analysis platform with personalized medicine recommendations.',
+    icon: Heart,
+    features: ['Genomic Analysis', 'Personalized Medicine', 'Disease Prediction', 'Treatment Optimization'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Genomics AI',
+    popular: true
+  },
+  {
+    title: 'AI Autonomous Trading Systems',
+    description: 'Intelligent autonomous trading with AI-driven market analysis and execution.',
+    icon: TrendingUp,
+    features: ['Market Analysis', 'Algorithmic Trading', 'Risk Management', 'Portfolio Optimization'],
+    pricing: '$20,000 - $150,000/setup',
+    category: 'FinTech AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Cybersecurity Platform',
+    description: 'Next-generation cybersecurity using AI for threat detection and response.',
+    icon: Shield,
+    features: ['Threat Hunting', 'Behavioral Analysis', 'Automated Response', 'Zero-day Detection'],
+    pricing: '$15,000 - $100,000/setup',
+    category: 'Cybersecurity AI',
+    popular: true
+  },
+  {
+    title: 'AI Content Moderation Suite',
+    description: 'Advanced content moderation with multi-modal detection and real-time processing.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Real-time Processing', 'Custom Rules', 'API Integration'],
+    pricing: '$3,000 - $20,000/setup',
+    category: 'Content AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Personal Assistant',
+    description: 'Intelligent personal assistant with voice commands, scheduling, and task automation.',
+    icon: Bot,
+    features: ['Voice Commands', 'Task Automation', 'Calendar Management', 'Smart Reminders'],
+    pricing: '$1,000 - $8,000/setup',
+    category: 'Personal AI',
+    popular: true
+  },
+  {
+    title: 'AI Customer Insights & Analytics',
+    description: 'Advanced customer analytics with behavioral prediction and personalization recommendations.',
+    icon: BarChart3,
+    features: ['Behavioral Analysis', 'Personalization', 'Churn Prediction', 'Lifetime Value'],
+    pricing: '$5,000 - $35,000/setup',
+    category: 'Customer AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Language Learning',
+    description: 'Personalized language learning platform with AI tutors and adaptive curriculum.',
+    icon: BookOpen,
+    features: ['AI Tutors', 'Adaptive Learning', 'Speech Recognition', 'Progress Tracking'],
+    pricing: '$2,000 - $15,000/setup',
+    category: 'Education AI',
+    popular: true
+  },
+  {
+    title: 'AI Mental Health Assistant',
+    description: 'Intelligent mental health support with mood tracking, therapy recommendations, and crisis intervention.',
+    icon: Heart,
+    features: ['Mood Tracking', 'Therapy Recommendations', 'Crisis Detection', 'Progress Monitoring'],
+    pricing: '$3,000 - $25,000/setup',
+    category: 'Mental Health AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Legal Research',
+    description: 'Intelligent legal research platform with case law analysis and precedent identification.',
+    icon: FileText,
+    features: ['Case Law Search', 'Precedent Analysis', 'Legal Research', 'Document Analysis'],
+    pricing: '$5,000 - $30,000/setup',
+    category: 'Legal AI',
+    popular: true
+  },
+  {
+    title: 'AI Smart City Management',
+    description: 'Comprehensive urban management system with traffic optimization, resource management, and citizen services.',
+    icon: Building,
+    features: ['Traffic Optimization', 'Resource Management', 'Citizen Services', 'Data Analytics'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Smart City AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Fraud Detection',
+    description: 'Advanced fraud detection system with real-time monitoring and risk assessment.',
+    icon: Shield,
+    features: ['Real-time Detection', 'Risk Scoring', 'Pattern Recognition', 'Alert System'],
+    pricing: '$8,000 - $50,000/setup',
+    category: 'Security AI',
+    popular: true
+  },
+  {
+    title: 'AI Financial Planning Assistant',
+    description: 'Intelligent financial planning and investment advice platform with personalized recommendations.',
+    icon: DollarSign,
+    features: ['Financial Planning', 'Investment Advice', 'Risk Assessment', 'Portfolio Optimization'],
+    pricing: '$3,000 - $20,000/setup',
+    category: 'FinTech AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Real Estate Valuation',
+    description: 'Intelligent property valuation with market analysis and investment recommendations.',
+    icon: Building,
+    features: ['Property Valuation', 'Market Analysis', 'Investment Insights', 'Trend Prediction'],
+    pricing: '$2,000 - $15,000/setup',
+    category: 'Real Estate AI',
+    popular: true
+  },
+  {
+    title: 'AI Travel Planning Assistant',
+    description: 'Intelligent travel planning with personalized itineraries and real-time optimization.',
+    icon: Globe,
+    features: ['Personalized Itineraries', 'Real-time Updates', 'Budget Optimization', 'Local Insights'],
+    pricing: '$1,500 - $10,000/setup',
+    category: 'Travel AI',
+    popular: true
+  },
+  {
+    title: 'AI Manufacturing Optimization',
+    description: 'IoT-based manufacturing optimization with predictive maintenance and quality control.',
+    icon: Settings,
+    features: ['Predictive Maintenance', 'Quality Control', 'Production Optimization', 'Supply Chain'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Manufacturing AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Video Editor',
+    description: 'Automated video editing with AI-driven content optimization and social media formatting.',
+    icon: Video,
+    features: ['Auto Video Editing', 'Social Media Optimization', 'Voice Enhancement', 'Template Library'],
+    pricing: '$2,000 - $15,000/setup',
+    category: 'Video AI',
+    popular: true
+  },
+  {
+    title: 'AI Retail Analytics Platform',
+    description: 'Advanced retail analytics with customer behavior analysis and inventory optimization.',
+    icon: ShoppingCart,
+    features: ['Customer Analytics', 'Inventory Optimization', 'Sales Forecasting', 'Personalization'],
+    pricing: '$5,000 - $35,000/setup',
+    category: 'Retail AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Energy Management',
+    description: 'Smart energy management and optimization for buildings and facilities.',
+    icon: Zap,
+    features: ['Energy Monitoring', 'Usage Analytics', 'Cost Optimization', 'Predictive Maintenance'],
+    pricing: '$10,000 - $75,000/project',
+    category: 'Energy AI',
+    popular: true
+  },
+  {
+    title: 'AI Water Management System',
+    description: 'IoT-based water management with leak detection, quality monitoring, and conservation analytics.',
+    icon: Droplets,
+    features: ['Leak Detection', 'Quality Monitoring', 'Conservation Analytics', 'Predictive Maintenance'],
+    pricing: '$8,000 - $60,000/project',
+    category: 'Environmental AI',
+    popular: true
+  },
+  {
+    title: 'AI Cybersecurity Training Platform',
+    description: 'Intelligent cybersecurity education platform with simulated attacks and skill assessment.',
+    icon: Shield,
+    features: ['Simulated Attacks', 'Skill Assessment', 'Personalized Learning', 'Certification'],
+    pricing: '$2,000 - $15,000/setup',
+    category: 'Education AI',
+    popular: true
+  },
+  {
+    title: 'AI Digital Identity Verification',
+    description: 'Self-sovereign digital identity platform with privacy-preserving authentication.',
+    icon: Lock,
+    features: ['Self-Sovereign Identity', 'Privacy Protection', 'Multi-factor Auth', 'Interoperability'],
+    pricing: '$3,000 - $25,000/setup',
+    category: 'Identity AI',
+    popular: true
+  },
+  {
+    title: 'AI Predictive Maintenance',
+    description: 'Intelligent equipment maintenance with failure prediction and optimization recommendations.',
+    icon: Settings,
+    features: ['Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'Performance Monitoring'],
+    pricing: '$5,000 - $40,000/setup',
+    category: 'Industrial AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Ocean Monitoring',
+    description: 'Advanced ocean data analysis with marine life tracking and pollution detection.',
+    icon: Waves,
+    features: ['Marine Life Tracking', 'Pollution Detection', 'Ocean Health', 'Climate Impact'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Marine AI',
+    popular: true
+  },
+  {
+    title: 'AI Healthcare Records Management',
+    description: 'Secure healthcare data management with patient privacy and interoperability.',
+    icon: Heart,
+    features: ['Secure Records', 'Patient Privacy', 'Interoperability', 'Consent Management'],
+    pricing: '$10,000 - $75,000/setup',
+    category: 'Healthcare AI',
+    popular: true
+  },
+  {
+    title: 'AI Satellite Communication Optimization',
+    description: 'Intelligent satellite communication optimization with network management and coverage analysis.',
+    icon: Satellite,
+    features: ['Network Optimization', 'Coverage Analysis', 'Signal Processing', 'Bandwidth Management'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Communication AI',
+    popular: true
+  },
+  {
+    title: 'AI Agricultural Robotics',
+    description: 'Autonomous agricultural robots with precision farming and crop management.',
+    icon: Sprout,
+    features: ['Precision Farming', 'Crop Management', 'Autonomous Operation', 'Yield Optimization'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Agricultural AI',
+    popular: true
+  },
+  {
+    title: 'AI Space Mining Optimization',
+    description: 'Intelligent space resource extraction with asteroid analysis and mining optimization.',
+    icon: Rocket,
+    features: ['Asteroid Analysis', 'Mining Optimization', 'Resource Mapping', 'Safety Protocols'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Space AI',
+    popular: true
+  },
+  {
+    title: 'AI Quantum Cryptography',
+    description: 'Advanced quantum encryption with unbreakable security and key distribution.',
+    icon: Lock,
+    features: ['Quantum Encryption', 'Key Distribution', 'Security Protocols', 'Quantum Key Exchange'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Quantum Security AI',
+    popular: true
+  },
+  {
+    title: 'AI Traffic Optimization System',
+    description: 'Intelligent traffic management with real-time optimization and congestion prediction.',
+    icon: Car,
+    features: ['Traffic Optimization', 'Congestion Prediction', 'Signal Control', 'Route Planning'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Transportation AI',
+    popular: true
+  },
+  {
+    title: 'AI Nuclear Fusion Control',
+    description: 'Advanced fusion reactor control with plasma optimization and energy output maximization.',
+    icon: Zap,
+    features: ['Plasma Control', 'Energy Optimization', 'Safety Monitoring', 'Reactor Management'],
+    pricing: '$500,000 - $5,000,000/project',
+    category: 'Energy AI',
+    popular: true
+  },
+  {
+    title: 'AI Space Debris Management',
+    description: 'Decentralized space debris monitoring with collision prediction and cleanup coordination.',
+    icon: Satellite,
+    features: ['Debris Tracking', 'Collision Prediction', 'Cleanup Coordination', 'Risk Assessment'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Space AI',
+    popular: true
+  },
+  {
+    title: 'AI Time Travel Simulation',
+    description: 'Advanced temporal modeling with historical analysis and future prediction algorithms.',
+    icon: Clock,
+    features: ['Temporal Modeling', 'Historical Analysis', 'Future Prediction', 'Causality Analysis'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Temporal AI',
+    popular: true
+  },
+  {
+    title: 'AI Interstellar Communication',
+    description: 'Long-distance space communication with signal optimization and message encryption.',
+    icon: Satellite,
+    features: ['Signal Optimization', 'Message Encryption', 'Long-distance Transmission', 'Error Correction'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'Communication AI',
+    popular: true
+  },
+  {
+    title: 'AI Dimensional Analysis',
+    description: 'Advanced multi-dimensional data analysis with parallel universe modeling.',
+    icon: Cpu,
+    features: ['Multi-dimensional Analysis', 'Parallel Universe Modeling', 'Dimensional Mapping', 'Reality Simulation'],
+    pricing: '$500,000 - $5,000,000/project',
+    category: 'Dimensional AI',
+    popular: true
+  },
+  {
+    title: 'AI Digital Consciousness Transfer',
+    description: 'Decentralized digital consciousness preservation with neural network backup.',
+    icon: Brain,
+    features: ['Consciousness Backup', 'Neural Network Storage', 'Memory Preservation', 'Identity Transfer'],
+    pricing: '$1,000,000 - $10,000,000/project',
+    category: 'Consciousness AI',
+    popular: true
+  },
+  {
     title: 'AI-Powered Scientific Discovery',
     description: 'AI systems for accelerating scientific research and discovery across multiple domains.',
     icon: BookOpen,
@@ -396,617 +738,90 @@ const aiServices = [
   }
 ];
 
-const industries = [{ name: 'Healthcare', icon: Heart, description: 'AI-powered diagnostics and patient care' },
-=======
-    title: 'AI Drug Discovery Platform',
-    description: 'Accelerated drug discovery using AI for molecular design and optimization.',
-    icon: Heart,
-    features: ['Molecular Modeling', 'Drug-Target Interaction', 'Toxicity Prediction', 'Clinical Trial Optimization'],
-    pricing: '$50,000 - $200,000 project',
-    category: 'Healthcare'
-  },
-  {
-    title: 'AI-Powered Climate Modeling',
-    description: 'Advanced climate prediction and environmental impact analysis using AI.',
-    icon: Globe,
-    features: ['Climate Prediction', 'Environmental Impact Analysis', 'Weather Forecasting', 'Sustainability Metrics'],
-    pricing: '$25,000 - $100,000 project',
-    category: 'Environmental'
-  },
-  {
-    title: 'AI Quantum Computing Optimizer',
-    description: 'AI-powered quantum computing algorithm optimization and error correction.',
-    icon: Cpu,
-    features: ['Quantum Algorithm Optimization', 'Error Correction', 'Quantum State Analysis', 'Performance Tuning'],
-    pricing: '$75,000 - $300,000 project',
-    category: 'Quantum Computing'
-  },
-  {
-    title: 'AI-Powered Space Exploration',
-    description: 'Autonomous space mission planning and satellite constellation management.',
-    icon: Rocket,
-    features: ['Mission Planning', 'Satellite Management', 'Orbital Mechanics', 'Resource Optimization'],
-    pricing: '$100,000 - $500,000 project',
-    category: 'Space Technology'
-  },
-  {
-    title: 'AI Neural Interface System',
-    description: 'Brain-computer interface with AI-powered neural signal processing.',
-    icon: Brain,
-    features: ['Neural Signal Processing', 'Motor Control', 'Cognitive Enhancement', 'Medical Applications'],
-    pricing: '$200,000 - $1,000,000 project',
-    category: 'Neurotechnology'
-  },
-  {
-    title: 'AI-Powered Smart Cities',
-    description: 'Comprehensive smart city management with AI optimization.',
-    icon: Building,
-    features: ['Traffic Optimization', 'Energy Management', 'Public Safety', 'Resource Allocation'],
-    pricing: '$500,000 - $2,000,000 project',
-    category: 'Smart Cities'
-  },
-  {
-    title: 'AI Agricultural Intelligence',
-    description: 'Precision agriculture with AI-powered crop monitoring and optimization.',
-    icon: Sprout,
-    features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],
-    pricing: '$15,000 - $75,000 project',
-    category: 'Agriculture'
-  },
-  {
-    title: 'AI-Powered Cybersecurity AI',
-    description: 'Self-evolving AI cybersecurity system that adapts to new threats.',
-    icon: Shield,
-    features: ['Threat Detection', 'Adaptive Defense', 'Zero-day Protection', 'Automated Response'],
-    pricing: '$25,000 - $125,000 setup',
-    category: 'Cybersecurity'
-  },
-  {
-    title: 'AI Financial Trading System',
-    description: 'High-frequency trading AI with market prediction and risk management.',
-    icon: TrendingUp,
-    features: ['Market Prediction', 'Risk Management', 'Algorithmic Trading', 'Portfolio Optimization'],
-    pricing: '$50,000 - $250,000 setup',
-    category: 'FinTech'
-  },
-  {
-    title: 'AI-Powered Virtual Reality',
-    description: 'Immersive VR experiences with AI-generated content and interactions.',
-    icon: Monitor,
-    features: ['Content Generation', 'Realistic Interactions', 'Adaptive Environments', 'User Behavior Analysis'],
-    pricing: '$30,000 - $150,000 project',
-    category: 'Virtual Reality'
-  },
-  {
-    title: 'AI Language Translation',
-    description: 'Real-time multi-language translation with cultural context understanding.',
-    icon: Globe,
-    features: ['Real-time Translation', 'Cultural Context', 'Voice Translation', 'Document Translation'],
-    pricing: '$2,000 - $10,000/month',
-    category: 'Language Technology'
-  },
-  {
-    title: 'AI-Powered Robotics',
-    description: 'Intelligent robotic systems with advanced AI decision making.',
-    icon: Bot,
-    features: ['Autonomous Navigation', 'Object Manipulation', 'Human-Robot Interaction', 'Learning Capabilities'],
-    pricing: '$40,000 - $200,000 project',
-    category: 'Robotics'
-  },
-  {
-    title: 'AI Music Composition',
-    description: 'AI-generated music composition with style adaptation and emotional intelligence.',
-    icon: Mic,
-    features: ['Style Adaptation', 'Emotional Intelligence', 'Instrument Simulation', 'Collaborative Composition'],
-    pricing: '$5,000 - $25,000 setup',
-    category: 'Creative AI'
-  },
-  {
-    title: 'AI-Powered Gaming',
-    description: 'Intelligent game AI with adaptive difficulty and procedural content generation.',
-    icon: Gamepad2,
-    features: ['Adaptive Difficulty', 'Procedural Content', 'NPC Intelligence', 'Player Behavior Analysis'],
-    pricing: '$20,000 - $100,000 project',
-    category: 'Gaming'
-  },
-  {
-    title: 'AI Personal Health Coach',
-    description: 'AI-powered personal health monitoring and wellness recommendations.',
-    icon: Heart,
-    features: ['Health Monitoring', 'Wellness Recommendations', 'Symptom Analysis', 'Preventive Care'],
-    pricing: '$99 - $499/month',
-    category: 'Personal Health'
-  },
-  {
-    title: 'AI-Powered Smart Home',
-    description: 'Intelligent home automation with predictive behavior and energy optimization.',
-    icon: Home,
-    features: ['Predictive Automation', 'Energy Optimization', 'Security Monitoring', 'Voice Control'],
-    pricing: '$10,000 - $50,000 setup',
-    category: 'Smart Home'
-  },
-  {
-    title: 'AI Content Creation Studio',
-    description: 'AI-powered content creation for marketing, social media, and advertising.',
-    icon: Image,
-    features: ['Content Generation', 'Brand Consistency', 'Multi-format Output', 'Performance Optimization'],
-    pricing: '$1,500 - $7,500/month',
-    category: 'Content Marketing'
-  },
-  {
-    title: 'AI-Powered Education Platform',
-    description: 'Personalized learning platform with AI tutoring and assessment.',
-    icon: BookOpen,
-    features: ['Personalized Learning', 'Adaptive Assessment', 'Progress Tracking', 'Skill Development'],
-    pricing: '$2,000 - $10,000/month',
-    category: 'EdTech'
-  },
-  {
-    title: 'AI-Powered Drug Discovery',
-    description: 'Accelerated drug discovery using AI for molecular design and optimization.',
-    icon: Heart,
-    features: ['Molecular Design', 'Drug Optimization', 'Toxicity Prediction', 'Clinical Trial Design'],
-    pricing: '$50,000 - $500,000/project',
-    category: 'Pharmaceuticals',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Autonomous Vehicles',
-    description: 'Complete autonomous vehicle AI system with perception, planning, and control.',
-    icon: Car,
-    features: ['Computer Vision', 'Path Planning', 'Sensor Fusion', 'Safety Systems'],
-    pricing: '$100,000 - $2,000,000/project',
-    category: 'Autonomous Systems'
-  },
-  {
-    title: 'AI-Powered Financial Trading',
-    description: 'Algorithmic trading system with AI-driven market analysis and execution.',
-    icon: TrendingUp,
-    features: ['Market Analysis', 'Risk Management', 'Portfolio Optimization', 'Real-time Trading'],
-    pricing: '$25,000 - $200,000/setup',
-    category: 'FinTech'
-  },
-  {
-    title: 'AI-Powered Climate Modeling',
-    description: 'Advanced climate modeling and environmental impact prediction using AI.',
-    icon: Globe,
-    features: ['Climate Prediction', 'Environmental Analysis', 'Carbon Footprint', 'Sustainability Planning'],
-    pricing: '$30,000 - $300,000/project',
-    category: 'Environmental'
-  },
-  {
-    title: 'AI-Powered Space Exploration',
-    description: 'AI systems for space mission planning, satellite operations, and data analysis.',
-    icon: Rocket,
-    features: ['Mission Planning', 'Satellite Operations', 'Data Analysis', 'Autonomous Navigation'],
-    pricing: '$100,000 - $1,000,000/project',
-    category: 'Aerospace'
-  },
-  {
-    title: 'AI-Powered Quantum Computing',
-    description: 'AI algorithms and applications for quantum computing systems.',
-    icon: Cpu,
-    features: ['Quantum Algorithms', 'Error Correction', 'Optimization', 'Simulation'],
-    pricing: '$50,000 - $500,000/project',
-    category: 'Quantum AI'
-  },
-  {
-    title: 'AI-Powered Cybersecurity AI',
-    description: 'Advanced AI systems for threat detection, response, and prevention.',
-    icon: Shield,
-    features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Predictive Security'],
-    pricing: '$40,000 - $400,000/project',
-    category: 'Cybersecurity'
-  },
-  {
-    title: 'AI-Powered Smart Cities',
-    description: 'Comprehensive AI solutions for smart city infrastructure and management.',
-    icon: Building,
-    features: ['Traffic Optimization', 'Energy Management', 'Public Safety', 'Resource Planning'],
-    pricing: '$100,000 - $1,000,000/project',
-    category: 'Smart Cities'
-  },
-  {
-    title: 'AI-Powered Robotics',
-    description: 'AI-powered robotic systems for manufacturing, healthcare, and service industries.',
-    icon: Bot,
-    features: ['Motion Planning', 'Object Recognition', 'Human-Robot Interaction', 'Learning Systems'],
-    pricing: '$75,000 - $750,000/project',
-    category: 'Robotics'
-  },
-  {
-    title: 'AI-Powered Metaverse Platform',
-    description: 'AI-driven virtual world creation and management for metaverse applications.',
-    icon: Globe,
-    features: ['Virtual World Generation', 'Avatar AI', 'Content Creation', 'Social Interaction'],
-    pricing: '$50,000 - $500,000/project',
-    category: 'Metaverse'
-  },
-  {
-    title: 'AI-Powered Brain-Computer Interface',
-    description: 'AI systems for brain-computer interface applications and neural signal processing.',
-    icon: Brain,
-    features: ['Neural Signal Processing', 'Pattern Recognition', 'Control Systems', 'Rehabilitation'],
-    pricing: '$100,000 - $1,000,000/project',
-    category: 'Neurotechnology'
-  },
-  {
-    title: 'AI-Powered Supply Chain Optimization',
-    description: 'End-to-end supply chain optimization using AI for logistics and inventory management.',
-    icon: Network,
-    features: ['Demand Forecasting', 'Route Optimization', 'Inventory Management', 'Risk Assessment'],
-    pricing: '$30,000 - $300,000/project',
-    category: 'Supply Chain'
-  },
-  {
-    title: 'AI-Powered Energy Grid Management',
-    description: 'Smart grid management and renewable energy optimization using AI.',
-    icon: Zap,
-    features: ['Grid Optimization', 'Renewable Integration', 'Demand Response', 'Predictive Maintenance'],
-    pricing: '$40,000 - $400,000/project',
-    category: 'Energy'
-  },
-  {
-    title: 'AI-Powered Agricultural Intelligence',
-    description: 'Precision agriculture and crop management using AI and IoT sensors.',
-    icon: Sprout,
-    features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],
-    pricing: '$25,000 - $250,000/project',
-    category: 'Agriculture'
-  }
-];
-
 const industries = [
   { name: 'Healthcare', icon: Heart, description: 'AI-powered diagnostics and patient care' },
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
-  { name: 'Finance', icon: Building, description: 'Fraud detection and risk assessment' },
-  { name: 'E-commerce', icon: ShoppingCart, description: 'Personalized recommendations and automation' },
+  { name: 'Finance', icon: DollarSign, description: 'Algorithmic trading and risk management' },
   { name: 'Manufacturing', icon: Settings, description: 'Predictive maintenance and quality control' },
+  { name: 'Retail', icon: ShoppingCart, description: 'Personalized recommendations and inventory optimization' },
   { name: 'Education', icon: BookOpen, description: 'Personalized learning and assessment' },
   { name: 'Transportation', icon: Car, description: 'Autonomous systems and route optimization' }
 ];
 
-<<<<<<< HEAD
-const benefits = [{
-=======
-const benefits = [
-  {
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
-    icon: Zap,
-    title: 'Increased Efficiency',
-    description: 'Automate repetitive tasks and processes',
-    stat: '40%'
-  },
-  {
-    icon: TrendingUp,
-    title: 'Better Insights',
-    description: 'Data-driven decision making',
-    stat: '60%'
-  },
-  {
-    icon: Shield,
-    title: 'Enhanced Security',
-    description: 'AI-powered threat detection',
-    stat: '99.9%'
-  },
-  {
-    icon: Users,
-    title: 'Improved Experience',
-    description: 'Personalized user interactions',
-    stat: '85%'
-  }
+const stats = [
+  { label: 'AI Models Deployed', stat: '500+' },
+  { label: 'Client Satisfaction', stat: '98%' },
+  { label: 'Cost Reduction', stat: '40%' },
+  { label: 'Performance Improvement', stat: '85%' }
 ];
 
 export default function AIServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-                  <Head>
-                  <title>AI Services - Zion Tech Group</title>
-                  <meta name="description" content="Cutting-edge AI solutions including machine learning, natural language processing, computer vision, and intelligent automation." />
-                  <meta name="keywords" content="AI services, machine learning, NLP, computer vision, artificial intelligence, automation" />
-                  </Head>
-
+      <Head>
+        <title>AI Services - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI services and solutions for your business" />
+      </Head>
+      
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
-<<<<<<< HEAD
-                  <div className="absolute inset-0">
-                  <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
-                  </div>
-                  <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000">
-                  </div>
-                  </div>
-                  <div className="container mx-auto px-4 relative z-10">
-                  <motion.div
-=======
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-        </div>
-
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-<<<<<<< HEAD
-                  <div className="flex items-center justify-center mb-6">
-                  <Brain className="h-16 w-16 text-blue-400 mr-4" />
-                  <h1 className="text-4xl md:text-6xl font-bold">
-=======
-            <div className="flex items-center justify-center mb-6">
-              <Brain className="h-16 w-16 text-blue-400 mr-4" />
-              <h1 className="text-4xl md:text-6xl font-bold">
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
-                AI{' '}
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Services
-                </span>
-<<<<<<< HEAD
-                  </h1>
-                  </div>
-                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your business with cutting-edge artificial intelligence solutions. From machine learning to natural language processing, we deliver AI that works.
-            </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-=======
-              </h1>
-            </div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              AI Services & Solutions
+            </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your business with cutting-edge artificial intelligence solutions. From machine learning to natural language processing, we deliver AI that works.
+              Transform your business with cutting-edge artificial intelligence solutions
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
-                Get AI Consultation
-              </Link>
-                  <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                View All Services
-              </Link>
-                  </div>
-                  </motion.div>
-                  </div>
-                  </section>
-
+          </motion.div>
+        </div>
+      </section>
+      
       {/* Services Grid */}
       <section className="py-20 bg-gray-50">
-                  <div className="container mx-auto px-4">
-                  <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-<<<<<<< HEAD
-                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-=======
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
-              Our AI Solutions
-            </h2>
-                  <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Comprehensive AI services designed to solve real business challenges and drive innovation.
-            </p>
-                  </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service, index) => {
               const IconComponent = service.icon;
               return (
                 <motion.div
                   key={index}
-<<<<<<< HEAD
-                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group
-=======
-                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+                  className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-                  whileHover={{ y: -5 }} ">
-                  <div className="flex items-center justify-between mb-4">
-                  <div className="text-blue-600 group-hover:text-purple-600 transition-colors">
-                  <IconComponent className="w-10 h-10" />
-                  </div>
-                  <span className="text-xs font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded-full">
-=======
-                  whileHover={{ y: -5 }}
                 >
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-blue-600 group-hover:text-purple-600 transition-colors">
-                      <IconComponent className="w-10 h-10" />
-                    </div>
-                    <span className="text-xs font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded-full">
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
-                      {service.category}
-                    </span>
+                  <div className="text-blue-600 mb-4">
+                    <IconComponent className="w-10 h-10" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
+                  <p className="text-gray-600 mb-4">
                     {service.description}
                   </p>
                   <div className="mb-4">
-<<<<<<< HEAD
-                  <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key "Features": </h4>
-                  <ul className="space-y-1">
-=======
-                    <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key Features:</h4>
-                    <ul className="space-y-1">
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-xs text-gray-600">
-                  <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
+                    <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx}>• {feature}</li>
                       ))}
                     </ul>
                   </div>
-                  <div className="mb-4">
-                  <span className="text-sm font-semibold text-blue-600">{service.pricing}</span>
+                  <div className="text-blue-600 font-semibold">
+                    {service.pricing}
                   </div>
-                  <Link
-                    href="/contact"
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
-                  >
-                    <span>Get Quote</span>
-                  <ArrowRight className="w-3 h-3 ml-1" />
-                  </Link>
-                  </motion.div>
+                </motion.div>
               );
             })}
           </div>
-                  </div>
-                  </section>
-
-      {/* Industries Section */}
-      <section className="py-20 bg-white">
-                  <div className="container mx-auto px-4">
-                  <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-<<<<<<< HEAD
-                  <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Industries We Serve</h2>
-=======
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Industries We Serve
-            </h2>
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our AI solutions are tailored for various industries and use cases.
-            </p>
-                  </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industries.map((industry, index) => {
-              const IconComponent = industry.icon;
-              return (
-                <motion.div
-                  key={index}
-<<<<<<< HEAD
-                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }}">
-=======
-                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
-                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <IconComponent className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {industry.name}
-                  </h3>
-                  <p className="text-gray-600">
-                    {industry.description}
-                  </p>
-                  </motion.div>
-              );
-            })}
-          </div>
-                  </div>
-                  </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 bg-gray-50">
-                  <div className="container mx-auto px-4">
-                  <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-<<<<<<< HEAD
-                  <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Why Choose Our AI Services?</h2>
-=======
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Our AI Services?
-            </h2>
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Proven results and measurable impact for your business.
-            </p>
-                  </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => {
-              const IconComponent = benefit.icon;
-              return (
-                <motion.div
-                  key={index}
-                  className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <IconComponent className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <div className="text-3xl font-bold text-blue-600 mb-2">
-                    {benefit.stat}
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {benefit.description}
-                  </p>
-                  </motion.div>
-              );
-            })}
-          </div>
-                  </div>
-                  </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-<<<<<<< HEAD
-                  <div className="container mx-auto px-4 text-center">
-                  <motion.div
-=======
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-<<<<<<< HEAD
-                  <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business with AI?</h2>
-=======
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Business with AI?
-            </h2>
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Let&apos;s discuss how our AI solutions can drive innovation and growth for your organization.
-            </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                Start Your AI Journey
-              </Link>
-                  <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
-                View All Services
-              </Link>
-                  </div>
-                  </motion.div>
-                  </div>
-                  </section>
-                  </div>
+        </div>
+      </section>
+    </div>
   );
 }

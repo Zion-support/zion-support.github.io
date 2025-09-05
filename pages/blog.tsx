@@ -4,8 +4,8 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Calendar, User, ArrowRight, Tag } from 'lucide-react';
 
-<<<<<<< HEAD
-const blogPosts = [{
+const blogPosts = [
+  {
     id: 1,
     title: "The Future of AI in Business: Trends and Predictions for 2024",
     excerpt: "Explore the latest AI trends that are reshaping how businesses operate and compete in the digital landscape.",
@@ -73,7 +73,8 @@ const categories = [{ name: "AI & Machine Learning", count: 12 },
   { name: "SaaS Development", count: 10 },
   { name: "Digital Transformation", count: 7 },
   { name: "IT Infrastructure", count: 5 }
-=======
+];
+
 const blogPosts = [
   {
     id: 1,
@@ -124,19 +125,17 @@ const categories = [
   "Cybersecurity",
   "SaaS",
   "Digital Transformation"
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
 ];
 
 export default function BlogPage() {
   return (
-<<<<<<< HEAD
-    <MainLayout 
-      title="Blog - Zion Tech Group"
-      description="Insights, trends, and best practices in AI, cloud computing, cybersecurity, and technology solutions."
-      keywords="technology blog, AI insights, cloud computing, cybersecurity, SaaS development, digital transformation"
-    >
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
+    <div className="min-h-screen bg-gray-50">
+      <Head>
+        <title>Blog - Zion Tech Group</title>
+        <meta name="description" content="Insights, trends, and best practices in AI, cloud computing, cybersecurity, and technology solutions." />
+      </Head>
+      
+      {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4">
             <motion.div
@@ -152,7 +151,6 @@ export default function BlogPage() {
                 Stay updated with the latest insights, trends, and best practices in technology
               </p>
             </motion.div>
-=======
     <div className="min-h-screen bg-gray-50">
       <Head>
         <title>Blog - Zion Tech Group</title>
@@ -169,21 +167,19 @@ export default function BlogPage() {
             <p className="text-xl text-blue-100 mb-8">
               Stay updated with the latest trends, insights, and innovations in technology
             </p>
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-        {/* Blog Posts Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-              {/* Main Content */}
-              <div className="lg:col-span-3">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  {blogPosts.map((post, index) => (
-                    <motion.article
+      {/* Blog Posts Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            {/* Main Content */}
+            <div className="lg:col-span-3">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {blogPosts.map((post, index) => (
+                  <motion.article
                       key={post.id}
                       className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
                       initial={{ opacity: 0, y: 30 }}
@@ -229,7 +225,6 @@ export default function BlogPage() {
                             <ArrowRight className="w-4 h-4 ml-1" />
                           </Link>
                         </div>
-=======
       {/* Blog Content */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -302,77 +297,6 @@ export default function BlogPage() {
               ))}
             </div>
 
-<<<<<<< HEAD
-                {/* Pagination */}
-                <div className="mt-12 flex justify-center">
-                  <nav className="flex space-x-2">
-                    <button className="px-3 py-2 bg-white border border-gray-300 rounded-md hover:bg-gray-50">
-                      Previous
-                    </button>
-                    <button className="px-3 py-2 bg-blue-600 text-white rounded-md">
-                      1
-                    </button>
-                    <button className="px-3 py-2 bg-white border border-gray-300 rounded-md hover:bg-gray-50">
-                      2
-                    </button>
-                    <button className="px-3 py-2 bg-white border border-gray-300 rounded-md hover:bg-gray-50">
-                      3
-                    </button>
-                    <button className="px-3 py-2 bg-white border border-gray-300 rounded-md hover:bg-gray-50">
-                      Next
-                    </button>
-                  </nav>
-                </div>
-              </div>
-
-              {/* Sidebar */}
-              <div className="lg:col-span-1">
-                <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
-                  <h3 className="text-lg font-bold text-gray-900 mb-4">Categories</h3>
-                  <ul className="space-y-2">
-                    {categories.map((category, index) => (
-                      <li key={index}>
-                        <Link
-                          href={`/blog/category/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
-                          className="flex items-center justify-between text-gray-600 hover:text-blue-600 transition-colors"
-                        >
-                          <span>{category.name}</span>
-                          <span className="text-sm bg-gray-100 px-2 py-1 rounded-full">
-                            {category.count}
-                          </span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="bg-white rounded-lg shadow-lg p-6">
-                  <h3 className="text-lg font-bold text-gray-900 mb-4">Newsletter</h3>
-                  <p className="text-gray-600 mb-4">
-                    Subscribe to get the latest technology insights delivered to your inbox.
-                  </p>
-                  <form className="space-y-3">
-                    <input
-                      type="email"
-                      placeholder="Enter your email"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-                    <button
-                      type="submit"
-                      className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
-                    >
-                      Subscribe
-                    </button>
-                  </form>
-                </div>
-              </div>
-=======
-            {/* Load More Button */}
-            <div className="text-center mt-12">
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                Load More Posts
-              </button>
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
             </div>
           </div>
         </div>

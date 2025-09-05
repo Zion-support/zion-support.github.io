@@ -103,9 +103,6 @@ function main() {
     }
   }
 
-<<<<<<< HEAD
-  console.log("\n📊 Summary:");
-=======
   // Process pages directory if it exists
   if (fs.existsSync(pagesDir)) {
     const files = getAllFiles(pagesDir);
@@ -118,8 +115,7 @@ function main() {
     }
   }
 
-  console.log("\n📊 Summary: ");
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+  console.log("\n📊 Summary:");
   console.log(`   Files processed: ${filesProcessed}`);
   console.log(`   Console statements removed: ${totalRemoved}`);
   
