@@ -36,7 +36,7 @@ import {
   Rocket
 } from 'lucide-react';
 
-const itServices = [{ursor/add-new-services-and-deploy-updates-1b90
+const itServices = [{
     title: 'Cloud Infrastructure Management',
     description: 'Comprehensive cloud solutions including AWS, Azure, and Google Cloud Platform management.',
     icon: Cloud,
@@ -298,6 +298,87 @@ title: 'AI-Powered IT Operations (AIOps)',
     popular: true
   },
   {
+    title: 'Quantum Computing Infrastructure',
+    description: 'Quantum computing infrastructure setup and integration for enterprise applications.',
+    icon: Cpu,
+    features: ['Quantum Hardware Integration', 'Quantum Software Development', 'Hybrid Classical-Quantum Systems', 'Quantum Security'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'Extended Reality (XR) Infrastructure',
+    description: 'AR/VR infrastructure and platform development for immersive experiences.',
+    icon: Monitor,
+    features: ['XR Platform Development', '3D Content Creation', 'Spatial Computing', 'Haptic Integration'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'XR Technology',
+    popular: true
+  },
+  {
+    title: 'Digital Twin Infrastructure',
+    description: 'Complete digital twin infrastructure for real-time simulation and monitoring.',
+    icon: Building,
+    features: ['3D Modeling', 'Real-time Data Integration', 'Simulation Engine', 'IoT Connectivity'],
+    pricing: '$75,000 - $400,000/project',
+    category: 'Digital Twins',
+    popular: true
+  },
+  {
+    title: 'Autonomous Systems Infrastructure',
+    description: 'Infrastructure for autonomous vehicles, drones, and robotic systems.',
+    icon: Car,
+    features: ['Sensor Integration', 'Edge Computing', 'Real-time Processing', 'Safety Systems'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Autonomous Systems',
+    popular: true
+  },
+  {
+    title: 'Space Technology Infrastructure',
+    description: 'Ground station and satellite communication infrastructure for space applications.',
+    icon: Rocket,
+    features: ['Ground Station Setup', 'Satellite Communication', 'Data Processing', 'Mission Control Systems'],
+    pricing: '$200,000 - $1,000,000/project',
+    category: 'Space Technology',
+    popular: true
+  },
+  {
+    title: 'Neuromorphic Computing Infrastructure',
+    description: 'Brain-inspired computing infrastructure for AI and cognitive applications.',
+    icon: Brain,
+    features: ['Neuromorphic Hardware', 'Spiking Neural Networks', 'Cognitive Computing', 'Low Power Processing'],
+    pricing: '$150,000 - $750,000/project',
+    category: 'Neuromorphic Computing',
+    popular: true
+  },
+  {
+    title: 'Holographic Display Infrastructure',
+    description: 'Holographic display systems and 3D visualization infrastructure.',
+    icon: Eye,
+    features: ['Holographic Displays', '3D Rendering', 'Spatial Computing', 'Interactive Interfaces'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Holographic Technology',
+    popular: true
+  },
+  {
+    title: 'Biometric Security Infrastructure',
+    description: 'Advanced biometric authentication and identity management systems.',
+    icon: Shield,
+    features: ['Multi-modal Biometrics', 'Liveness Detection', 'Privacy Protection', 'Integration APIs'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Biometric Security',
+    popular: true
+  },
+  {
+    title: 'Smart City IT Infrastructure',
+    description: 'Comprehensive IT infrastructure for smart city applications and citizen services.',
+    icon: Building,
+    features: ['IoT Networks', 'Data Analytics Platform', 'Citizen Services', 'Emergency Response Systems'],
+    pricing: '$500,000 - $2,000,000/project',
+    category: 'Smart Cities',
+    popular: true
+  },
+  {
     title: 'Digital Twin Infrastructure',
     description: 'Digital twin technology implementation for physical assets and processes.',
     icon: Monitor,
@@ -380,7 +461,7 @@ title: 'AI-Powered IT Operations (AIOps)',
   }
 ];
 
-const technologies = [{ name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },ursor/add-new-services-and-deploy-updates-1b90
+const technologies = [{ name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },
   { name: 'Containerization', icon: Server, description: 'Docker, Kubernetes, OpenShift' },
   { name: 'Security Tools', icon: Shield, description: 'SIEM, WAF, IAM, Encryption' },
   { name: 'Monitoring', icon: BarChart3, description: 'Prometheus, Grafana, ELK Stack' },
@@ -388,7 +469,7 @@ const technologies = [{ name: 'Cloud Platforms', icon: Cloud, description: 'AWS,
   { name: 'Networking', icon: Network, description: 'Cisco, Fortinet, SD-WAN' }
 ];
 
-const benefits = [{ursor/add-new-services-and-deploy-updates-1b90
+const benefits = [{
     icon: Clock,
     title: 'Reduced Downtime',
     description: 'Proactive monitoring and maintenance',
@@ -414,7 +495,7 @@ const benefits = [{ursor/add-new-services-and-deploy-updates-1b90
   }
 ];
 
-const supportLevels = [{ursor/add-new-services-and-deploy-updates-1b90
+const supportLevels = [{
     name: 'Basic Support',
     description: 'Standard business hours support',
     features: ['Email Support', 'Phone Support', 'Basic Monitoring', 'Monthly Reports'],
@@ -452,7 +533,7 @@ export default function ITServicesPage() {
                   </div>
                   </div>
                   <div className="container mx-auto px-4 relative z-10">
-                  <motion.divursor/add-new-services-and-deploy-updates-1b90
+                  <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -687,7 +768,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   href="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     index === 1
-? 'bg-green-600 hover: bg-green-700 text-white'ursor/add-new-services-and-deploy-updates-1b90
+? 'bg-green-600 hover:bg-green-700 text-white'
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
                   }`}
                 >
@@ -703,7 +784,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
 <div className="container mx-auto px-4 text-center">
-                  <motion.divursor/add-new-services-and-deploy-updates-1b90
+                  <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}

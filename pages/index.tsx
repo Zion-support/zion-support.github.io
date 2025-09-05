@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, ArrowRight } from 'lucide-react';
 import Layout from '../components/Layout';
 
-const stats = [{ number: '99.9%', label: 'Uptime Guarantee' },ursor/add-new-services-and-deploy-updates-1b90
+const stats = [{ number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' },
   { number: '500+', label: 'Projects Completed' },
   { number: '50+', label: 'Expert Team Members' }
@@ -12,24 +12,33 @@ const stats = [{ number: '99.9%', label: 'Uptime Guarantee' },ursor/add-new-serv
 
 const services = [{
     title: "AI Services",
-    description: "Cutting-edge artificial intelligence solutions",
+    description: "Cutting-edge artificial intelligence solutions including machine learning, computer vision, and natural language processing",
     icon: Brain,
-    href: "/ai-services"},
+    href: "/ai-services",
+    pricing: "$1,000 - $1M/project",
+    features: ["Machine Learning", "Computer Vision", "NLP", "Predictive Analytics"]
+  },
   {
     title: "IT Services", 
-    description: "Comprehensive information technology services",
+    description: "Comprehensive information technology services including cloud infrastructure, cybersecurity, and digital transformation",
     icon: Network,
-    href: "/it-services"},
+    href: "/it-services",
+    pricing: "$120 - $500/hour",
+    features: ["Cloud Infrastructure", "Cybersecurity", "DevOps", "Digital Transformation"]
+  },
   {
     title: "Micro SaaS",
-    description: "Scalable software as a service solutions",
+    description: "Scalable software as a service solutions for businesses of all sizes with innovative features",
     icon: Cloud,
-    href: "/micro-saas"}ursor/add-new-services-and-deploy-updates-1b90
+    href: "/micro-saas",
+    pricing: "$29 - $4,999/month",
+    features: ["FinOps Tools", "AI Safety", "Automation", "Analytics"]
+  }
 ];
 
 export default function HomePage() {
   return (
-<MainLayout>
+<Layout>
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">ursor/add-new-services-and-deploy-updates-1b90
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
@@ -43,7 +52,7 @@ export default function HomePage() {
                   </div>
                   </div>
                   <div className="container mx-auto px-4 relative z-10">
-                  <motion.divursor/add-new-services-and-deploy-updates-1b90
+                  <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -104,13 +113,23 @@ className="bg-white p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-a
                   <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
                     {service.title}
                   </h3>
-<p className="text-gray-600 mb-6 text-sm md:text-base leading-relaxed">{service.description}</p>
+                  <p className="text-gray-600 mb-4 text-sm md:text-base leading-relaxed">{service.description}</p>
+                  <div className="mb-4">
+                    <div className="text-lg font-bold text-green-600 mb-2">{service.pricing}</div>
+                    <div className="flex flex-wrap gap-2">
+                      {service.features.map((feature, idx) => (
+                        <span key={idx} className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">
+                          {feature}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                   <Link
                     href={service.href}
-                    className="text-blue-600 hover: text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center"ursor/add-new-services-and-deploy-updates-1b90
+                    className="text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center"
                   >
-                  <span>Learn More</span>
-                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                    <span>Learn More</span>
+                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </Link>
                   </motion.div>
               );
@@ -123,7 +142,7 @@ className="bg-white p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-a
       <section className="py-20 bg-white">
 <div className="container mx-auto px-4">
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                    {stats.map((stat, index) => (ursor/add-new-services-and-deploy-updates-1b90
+                    {stats.map((stat, index) => (
               <motion.div
                 key={index}
                 className="text-center"
@@ -229,7 +248,7 @@ className="bg-white p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-a
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
                   <div className="container mx-auto px-4 text-center">
-                  <motion.divursor/add-new-services-and-deploy-updates-1b90
+                  <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -264,6 +283,6 @@ className="bg-white p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-a
                   </div>
                   </section>
                   </div>
-                  </MainLayout>ursor/add-new-services-and-deploy-updates-1b90
+                  </Layout>
   );
 }

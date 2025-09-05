@@ -46,7 +46,7 @@ import {
   Gamepad2
 } from 'lucide-react';
 
-const aiServices = [{ursor/add-new-services-and-deploy-updates-1b90
+const aiServices = [{
     title: 'AI-Powered Email Responder',
     description: 'Automated email responses using advanced NLP and machine learning algorithms.',
     icon: Mail,
@@ -198,9 +198,90 @@ const aiServices = [{ursor/add-new-services-and-deploy-updates-1b90
     title: 'AI Legal Document Analysis',
     description: 'Intelligent legal document review and contract analysis.',
     icon: BookOpen,
-    features: ['Contract Analysis', 'Risk Assessment', 'Clause Extraction', 'Compliance Checking'],
-    pricing: '$5,000 - $25,000 setup',
+    features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Clause Extraction'],
+    pricing: '$3,000 - $15,000 setup',
     category: 'Legal Tech'
+  },
+  {
+    title: 'AI-Powered Autonomous Vehicles',
+    description: 'Advanced AI systems for autonomous vehicle navigation and safety.',
+    icon: Car,
+    features: ['Computer Vision', 'Path Planning', 'Obstacle Detection', 'Real-time Decision Making'],
+    pricing: '$100,000 - $500,000 project',
+    category: 'Autonomous Systems',
+    popular: true
+  },
+  {
+    title: 'AI Climate Change Modeling',
+    description: 'Advanced climate modeling and environmental impact prediction using AI.',
+    icon: Globe,
+    features: ['Climate Prediction', 'Environmental Impact Analysis', 'Carbon Footprint Tracking', 'Sustainability Planning'],
+    pricing: '$25,000 - $100,000 project',
+    category: 'Environmental AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Space Exploration',
+    description: 'AI systems for space mission planning, satellite operations, and data analysis.',
+    icon: Rocket,
+    features: ['Mission Planning', 'Satellite Operations', 'Space Data Analysis', 'Orbital Mechanics'],
+    pricing: '$50,000 - $250,000 project',
+    category: 'Space Technology',
+    popular: true
+  },
+  {
+    title: 'AI Quantum Machine Learning',
+    description: 'Quantum-enhanced machine learning algorithms for complex optimization problems.',
+    icon: Cpu,
+    features: ['Quantum Algorithms', 'Optimization Problems', 'Quantum Simulation', 'Hybrid Classical-Quantum'],
+    pricing: '$75,000 - $300,000 project',
+    category: 'Quantum AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Brain-Computer Interface',
+    description: 'Advanced BCI systems for medical applications and human-computer interaction.',
+    icon: Brain,
+    features: ['Neural Signal Processing', 'Motor Control', 'Cognitive Enhancement', 'Medical Applications'],
+    pricing: '$100,000 - $500,000 project',
+    category: 'Neurotechnology',
+    popular: true
+  },
+  {
+    title: 'AI Digital Twin Platform',
+    description: 'Comprehensive digital twin creation and simulation for physical assets.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Real-time Simulation', 'Predictive Maintenance', 'Performance Optimization'],
+    pricing: '$20,000 - $100,000 project',
+    category: 'Digital Twins',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Metaverse Platform',
+    description: 'AI-driven virtual world creation and management for immersive experiences.',
+    icon: Globe,
+    features: ['Virtual World Generation', 'AI NPCs', 'Behavioral Simulation', 'Content Creation'],
+    pricing: '$50,000 - $200,000 project',
+    category: 'Metaverse',
+    popular: true
+  },
+  {
+    title: 'AI Edge Computing Platform',
+    description: 'Distributed AI processing at the edge for real-time applications.',
+    icon: Server,
+    features: ['Edge Processing', 'Real-time Inference', 'Distributed Learning', 'Low Latency'],
+    pricing: '$15,000 - $75,000 project',
+    category: 'Edge AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Synthetic Data Generation',
+    description: 'High-quality synthetic data generation for training and testing AI models.',
+    icon: Database,
+    features: ['Data Synthesis', 'Privacy Preservation', 'Model Training', 'Quality Validation'],
+    pricing: '$5,000 - $25,000 project',
+    category: 'Data Generation',
+    popular: true
   },
   {
     title: 'AI Customer Sentiment Analysis',
@@ -215,7 +296,7 @@ const aiServices = [{ursor/add-new-services-and-deploy-updates-1b90
 description: 'Complete autonomous vehicle systems with advanced perception and decision-making capabilities.',
     icon: Car,
     features: ['Computer Vision', 'Sensor Fusion', 'Path Planning', 'Real-time Decision Making'],
-    pricing: '$100,000 - $500,000/project',ursor/add-new-services-and-deploy-updates-1b90
+    pricing: '$100,000 - $500,000/project',
     category: 'Autonomous Systems',
     popular: true
   },
@@ -554,7 +635,7 @@ title: 'Generative AI Content Creation Suite',
   }
 ];
 
-const industries = [{ name: 'Healthcare', icon: Heart, description: 'AI-powered diagnostics and patient care' },ursor/add-new-services-and-deploy-updates-1b90
+const industries = [{ name: 'Healthcare', icon: Heart, description: 'AI-powered diagnostics and patient care' },
   { name: 'Finance', icon: Building, description: 'Fraud detection and risk assessment' },
   { name: 'E-commerce', icon: ShoppingCart, description: 'Personalized recommendations and automation' },
   { name: 'Manufacturing', icon: Settings, description: 'Predictive maintenance and quality control' },
@@ -562,7 +643,7 @@ const industries = [{ name: 'Healthcare', icon: Heart, description: 'AI-powered 
   { name: 'Transportation', icon: Car, description: 'Autonomous systems and route optimization' }
 ];
 
-const benefits = [{ursor/add-new-services-and-deploy-updates-1b90
+const benefits = [{
     icon: Zap,
     title: 'Increased Efficiency',
     description: 'Automate repetitive tasks and processes',
@@ -606,7 +687,7 @@ export default function AIServicesPage() {
                   </div>
                   </div>
                   <div className="container mx-auto px-4 relative z-10">
-                  <motion.divursor/add-new-services-and-deploy-updates-1b90
+                  <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -796,7 +877,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
 <div className="container mx-auto px-4 text-center">
-                  <motion.divursor/add-new-services-and-deploy-updates-1b90
+                  <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}

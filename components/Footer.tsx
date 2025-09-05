@@ -95,7 +95,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   hours: '24/7 Support Available'
-};ursor/add-new-services-and-deploy-updates-1b90
+};
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -109,6 +109,11 @@ export default function Footer() {
         { label: 'Cloud & DevOps', href: '/services/cloud-devops' },
         { label: 'Cybersecurity', href: '/services/cybersecurity' },
         { label: 'Data Analytics', href: '/services/data-analytics' },
+        { label: 'Quantum Computing', href: '/services/quantum-computing' },
+        { label: 'Blockchain Solutions', href: '/services/blockchain' },
+        { label: 'IoT & Smart Cities', href: '/services/iot-smart-cities' },
+        { label: 'Edge Computing', href: '/services/edge-computing' },
+        { label: 'Digital Twins', href: '/services/digital-twins' },
       ]
     },
     {
@@ -208,15 +213,15 @@ export default function Footer() {
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">+1 (555) 123-4567</span>
+                <span className="text-gray-300">+1 302 464 0950</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">contact@ziontechgroup.com</span>
+                <span className="text-gray-300">kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">123 Technology Drive, Innovation City, IC 12345</span>
+                <span className="text-gray-300">364 E Main St STE 1008, Middletown, DE 19709</span>
               </div>
             </div>
 </div>
@@ -333,18 +338,20 @@ export default function Footer() {
               </div>ursor/add-new-services-and-deploy-updates-1b90
             </div>
           </div>
+        </div>
+      </div>
 
-{/* Newsletter Signup */}
+      {/* Newsletter Signup */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-8">
-                      <div className="flex flex-col md:flex-row items-center justify-between">
+          <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="mb-4 md:mb-0">
               <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
               <p className="text-gray-400 text-sm">
                 Get the latest technology insights and company updates delivered to your inbox.
-              </p>ursor/add-new-services-and-deploy-updates-1b90
+              </p>
             </div>
-          ))}
+          </div>
         </div>
 
         {/* Newsletter Signup */}
@@ -379,7 +386,7 @@ export default function Footer() {
 <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="text-sm text-gray-400 mb-4 md:mb-0">
               © 2024 Zion Tech Group. All rights reserved. | 
-              <span className="ml-2">Delaware, United States</span>ursor/add-new-services-and-deploy-updates-1b90
+              <span className="ml-2">Delaware, United States</span>
             </div>
             
             <div className="flex flex-wrap items-center space-x-6">

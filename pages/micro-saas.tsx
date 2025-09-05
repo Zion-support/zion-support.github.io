@@ -49,7 +49,7 @@ import {
   HardDrive
 } from 'lucide-react';
 
-const microSaaSProducts = [{ursor/add-new-services-and-deploy-updates-1b90
+const microSaaSProducts = [{
     title: 'Cloud Cost Guard (FinOps Assistant)',
     description: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
     icon: DollarSign,
@@ -398,6 +398,87 @@ description: 'Automated code review with security scanning, performance optimiza
     popular: true
   },
   {
+    title: 'AI-Powered Voice Cloning Platform',
+    description: 'High-quality voice cloning and synthesis for content creators and businesses.',
+    icon: Mic,
+    features: ['Voice Cloning', 'Text-to-Speech', 'Voice Customization', 'API Integration'],
+    pricing: '$199 - $1,499/month',
+    category: 'Voice AI',
+    popular: true
+  },
+  {
+    title: 'Quantum Computing Simulator',
+    description: 'Cloud-based quantum computing simulation and algorithm development platform.',
+    icon: Cpu,
+    features: ['Quantum Simulation', 'Algorithm Development', 'Circuit Design', 'Performance Analysis'],
+    pricing: '$499 - $2,999/month',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Cybersecurity Threat Hunter',
+    description: 'Advanced threat detection and response with AI-powered security analysis.',
+    icon: Shield,
+    features: ['Threat Detection', 'Behavioral Analysis', 'Incident Response', 'Threat Intelligence'],
+    pricing: '$399 - $2,499/month',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
+    title: 'Smart City IoT Management Platform',
+    description: 'Comprehensive IoT platform for smart city infrastructure and citizen services.',
+    icon: Building,
+    features: ['Infrastructure Monitoring', 'Citizen Services', 'Data Analytics', 'Predictive Maintenance'],
+    pricing: '$999 - $4,999/month',
+    category: 'Smart Cities',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Personal Finance Assistant',
+    description: 'Intelligent personal finance management with budgeting and investment advice.',
+    icon: DollarSign,
+    features: ['Budget Tracking', 'Investment Analysis', 'Bill Management', 'Financial Goals'],
+    pricing: '$9 - $49/month',
+    category: 'Personal Finance',
+    popular: true
+  },
+  {
+    title: 'Blockchain Identity Verification',
+    description: 'Decentralized identity verification and KYC compliance platform.',
+    icon: Lock,
+    features: ['Identity Verification', 'KYC Compliance', 'Privacy Protection', 'Blockchain Integration'],
+    pricing: '$0.50 - $2.00 per verification',
+    category: 'Identity Management',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Mental Health Companion',
+    description: 'AI-driven mental health support with mood tracking and therapeutic interventions.',
+    icon: Heart,
+    features: ['Mood Tracking', 'Therapeutic Chat', 'Crisis Detection', 'Professional Referrals'],
+    pricing: '$19 - $99/month',
+    category: 'Mental Health',
+    popular: true
+  },
+  {
+    title: 'Smart Manufacturing Quality Control',
+    description: 'AI-powered quality control and defect detection for manufacturing processes.',
+    icon: Settings,
+    features: ['Defect Detection', 'Quality Analytics', 'Process Optimization', 'Predictive Maintenance'],
+    pricing: '$599 - $3,999/month',
+    category: 'Manufacturing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Language Learning Platform',
+    description: 'Personalized language learning with AI tutors and adaptive curriculum.',
+    icon: BookOpen,
+    features: ['Adaptive Learning', 'AI Tutoring', 'Speech Recognition', 'Progress Tracking'],
+    pricing: '$29 - $149/month',
+    category: 'Education',
+    popular: true
+  },
+  {
     title: 'AI-Powered Personalization Engine',
     description: 'Real-time personalization engine for e-commerce and content platforms.',
     icon: Target,
@@ -426,7 +507,7 @@ description: 'Automated code review with security scanning, performance optimiza
   }
 ];
 
-const features = [{ursor/add-new-services-and-deploy-updates-1b90
+const features = [{
     icon: Zap,
     title: 'Rapid Deployment',
     description: 'Get up and running in days, not months'
@@ -458,7 +539,7 @@ const features = [{ursor/add-new-services-and-deploy-updates-1b90
   }
 ];
 
-const benefits = [{ursor/add-new-services-and-deploy-updates-1b90
+const benefits = [{
     icon: Clock,
     title: 'Fast Time to Market',
     description: 'Launch your SaaS in weeks, not months',
@@ -484,7 +565,7 @@ const benefits = [{ursor/add-new-services-and-deploy-updates-1b90
   }
 ];
 
-const pricingTiers = [{ursor/add-new-services-and-deploy-updates-1b90
+const pricingTiers = [{
     name: 'Starter',
     description: 'Perfect for small teams and MVPs',
     price: '$299',
@@ -503,7 +584,7 @@ const pricingTiers = [{ursor/add-new-services-and-deploy-updates-1b90
     description: 'Ideal for growing businesses',
     price: '$799',
     period: '/month',
-features: ['Up to 10,000 users',ursor/add-new-services-and-deploy-updates-1b90
+    features: ['Up to 10,000 users',
       'Advanced analytics',
       'Priority support',
       'Enhanced security',
@@ -517,7 +598,7 @@ features: ['Up to 10,000 users',ursor/add-new-services-and-deploy-updates-1b90
     description: 'For large organizations',
     price: 'Custom',
     period: '',
-features: ['Unlimited users',ursor/add-new-services-and-deploy-updates-1b90
+    features: ['Unlimited users',
       'Custom analytics',
       'Dedicated support',
       'Enterprise security',
@@ -546,7 +627,7 @@ export default function MicroSaaSPage() {
                   </div>
                   </div>
                   <div className="container mx-auto px-4 relative z-10">
-                  <motion.divursor/add-new-services-and-deploy-updates-1b90
+                  <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -594,7 +675,7 @@ export default function MicroSaaSPage() {
               return (
                 <motion.div
                   key={index}
-className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all duration-300 group relative ${ursor/add-new-services-and-deploy-updates-1b90
+                  className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative ${
                     product.popular ? 'ring-2 ring-purple-200' : ''
                   }`}
                   initial={{ opacity: 0, y: 30 }}
@@ -669,12 +750,12 @@ className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all du
             </p>
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {features.map((feature, index) => {ursor/add-new-services-and-deploy-updates-1b90
+                    {features.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
                 <motion.div
                   key={index}
-className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"ursor/add-new-services-and-deploy-updates-1b90
+                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -758,7 +839,7 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"ursor/
             </p>
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {pricingTiers.map((tier, index) => (ursor/add-new-services-and-deploy-updates-1b90
+                    {pricingTiers.map((tier, index) => (
               <motion.div
                 key={index}
                 className={`p-8 rounded-xl shadow-lg ${
@@ -799,7 +880,7 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"ursor/
                   href="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     tier.popular
-? 'bg-purple-600 hover: bg-purple-700 text-white'ursor/add-new-services-and-deploy-updates-1b90
+? 'bg-purple-600 hover:bg-purple-700 text-white'
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
                   }`}
                 >
@@ -919,7 +1000,7 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"ursor/
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
 <div className="container mx-auto px-4 text-center">
-                  <motion.divursor/add-new-services-and-deploy-updates-1b90
+                  <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -940,6 +1021,6 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"ursor/
                   </motion.div>
                   </div>
                   </section>
-                  </div>ursor/add-new-services-and-deploy-updates-1b90
+                  </div>
   );
 }

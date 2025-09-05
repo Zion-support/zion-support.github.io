@@ -71,7 +71,7 @@ const categories = [{ name: "AI & Machine Learning", count: 12 },
   { name: "Cybersecurity", count: 6 },
   { name: "SaaS Development", count: 10 },
   { name: "Digital Transformation", count: 7 },
-  { name: "IT Infrastructure", count: 5 }ursor/add-new-services-and-deploy-updates-1b90
+  { name: "IT Infrastructure", count: 5 }
 ];
 
 export default function BlogPage() {
@@ -97,12 +97,12 @@ export default function BlogPage() {
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
                 Stay updated with the latest insights, trends, and best practices in technology
               </p>
-            </motion.div>ursor/add-new-services-and-deploy-updates-1b90
+              </motion.div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-{/* Blog Posts Section */}
+        {/* Blog Posts Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
