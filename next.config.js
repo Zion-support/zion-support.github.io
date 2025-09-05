@@ -5,12 +5,13 @@ const nextConfig = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  trailingSlash: true,
   
   // Performance optimizations
   experimental: {
     scrollRestoration: true,
     optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons', 'framer-motion']
   },
   
   // Image optimization
@@ -20,6 +21,12 @@ const nextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 31536000, // 1 year
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
+  
+  env: {
+    CUSTOM_KEY: process.env.CUSTOM_KEY,
   },
   
   // Webpack optimizations
@@ -53,16 +60,29 @@ const nextConfig = {
         source: '/(.*)',
         headers: [
           {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
             key: 'X-Content-Type-Options',
             value: 'nosniff',
           },
           {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
+          },
+          {
             key: 'Referrer-Policy',
             value: 'origin-when-cross-origin',
+          },
+        ],
+      },
+      {
+        source: '/static/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
           },
         ],
       },
@@ -78,7 +98,16 @@ const nextConfig = {
         permanent: true,
       },
     ];
-  }
+  },
+  
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: '/api/:path*',
+      },
+    ];
+  },
 };
 
 export default nextConfig;

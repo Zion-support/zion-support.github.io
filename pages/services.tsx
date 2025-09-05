@@ -119,6 +119,23 @@ const stats = [
   { label: 'Uptime Guarantee', value: '99.9%' },
   { label: 'Support Response', value: '< 1hr' }
 ];
+<<<<<<< HEAD
+=======
+import {
+  Brain,
+  Cloud,
+  Database,
+  Shield,
+  Code,
+  Zap,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  Globe,
+  Cpu
+} from 'lucide-react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-1436
 
 export default function ServicesPage() {
 =======
@@ -200,6 +217,7 @@ export default function Services() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         {/* Navigation */}
         <nav className="relative z-10 px-6 py-4">
@@ -216,6 +234,30 @@ export default function Services() {
               <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link>
               <Link href="/careers" className="text-gray-300 hover:text-white transition-colors">Careers</Link>
             </div>
+=======
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Comprehensive Technology Services
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-gray-200">
+              From AI development to cloud solutions, we provide end-to-end technology services 
+              that drive business growth and digital transformation.
+            </p>
+    <MainLayout
+      title="Our Services - Zion Tech Group"
+      description="Discover our comprehensive range of technology services including AI solutions, cloud services, cybersecurity, and custom development. Transform your business with our expertise."
+      keywords="AI services, cloud solutions, cybersecurity, custom development, IT services, technology consulting"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-1436
           </div>
         </nav>
 
@@ -270,6 +312,7 @@ export default function Services() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Services Grid */}
 <<<<<<< HEAD
         <section className="px-6 py-20">
@@ -277,6 +320,10 @@ export default function Services() {
             <div className="grid lg:grid-cols-3 gap-8">
 =======
         <section className="py-20 bg-white">
+=======
+        {/* Stats Section */}
+        <section className="py-16 bg-white">
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-1436
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -306,6 +353,7 @@ export default function Services() {
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6`}>
                     <service.icon className="h-8 w-8 text-white" />
                   </div>
+<<<<<<< HEAD
                   <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
                   <ul className="space-y-3 mb-8">
@@ -351,12 +399,16 @@ export default function Services() {
                     Learn More
                   </button>
 >>>>>>> 2e9c29263b568858da4098d8218397d3dc948131
+=======
+                  <div className="text-gray-600 font-medium">{stat.label}</div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-1436
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Process Section */}
         <section className="px-6 py-20">
@@ -388,6 +440,74 @@ export default function Services() {
                   <p className="text-gray-300">{step.description}</p>
 =======
         {/* Benefits Section */}
+=======
+      {/* Process Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Process</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We follow a proven methodology to deliver exceptional results for every project.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-blue-600">1</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">Discovery</h3>
+              <p className="text-gray-600">We analyze your requirements and understand your business goals.</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-blue-600">2</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">Planning</h3>
+              <p className="text-gray-600">We create a detailed project plan with timelines and milestones.</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-blue-600">3</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">Development</h3>
+              <p className="text-gray-600">We build your solution using cutting-edge technologies and best practices.</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-blue-600">4</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">Deployment</h3>
+              <p className="text-gray-600">We deploy your solution and provide ongoing support to ensure optimal performance.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-blue-900 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>
+          <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
+            Let's discuss your project requirements and find the perfect solution for your business needs.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Link href="/contact" className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+              Contact Us Today
+            </Link>
+            <Link href="/quote" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+              Get a Quote
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+        {/* Main Services */}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-1436
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div

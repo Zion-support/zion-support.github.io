@@ -5,9 +5,9 @@ const publicRoutes = [
   "/",
   "/about",
   "/contact",
-  "/blog",
   "/services",
   "/ai-services",
+<<<<<<< HEAD
   "/it-services",
   "/micro-saas",
   "/careers",
@@ -20,6 +20,13 @@ const publicRoutes = [
   "/auth/forgot-password",
   "/auth/reset-password",
   "/auth/verify",
+=======
+  "/blog",
+  "/docs",
+  "/careers",
+  "/privacy",
+  "/terms"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-1436
 ];
 
 export function middleware(request: NextRequest) {
@@ -43,6 +50,10 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
+<<<<<<< HEAD
     '/((?!_next/static|_next/image|favicon.ico).*)',
+=======
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-1436
   ],
 };

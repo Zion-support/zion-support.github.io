@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 const EnhancedAnalytics = dynamic(() => import(\"./EnhancedAnalytics\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default EnhancedAnalytics\' ,
-=======
-<<<<<<< HEAD
 const EnhancedAnalytics = dynamic(() => import("./EnhancedAnalytics"),{"; loading: () => <p>Loading.</p,>}) export: "default EnhancedAnalytics" ,"""
-=======
 const EnhancedAnalytics = dynamic(() => import("./EnhancedAnalytics"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedAnalytics' ,'
 </p>'
->>>>>>> main
->>>>>>> main
