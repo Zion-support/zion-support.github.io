@@ -1,20 +1,20 @@
-import { useState } from 'react';
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { WorkExperience } from "@/types/resume";
-import { Button } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Textarea } from "@/components/ui/textarea";
-import { cn } from "@/lib/utils";
-import { Switch } from "@/components/ui/switch";
-import { format } from "date-fns";
+import { useState } from 'react',
+import { zodResolver } from "@hookform/resolvers/zod",
+import { useForm } from "react-hook-form",
+import { z } from "zod",
+import { WorkExperience } from "@/types/resume",
+import { Button } from "@/components/ui/button",
+import { Calendar } from "@/components/ui/calendar",
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
+import { Textarea } from "@/components/ui/textarea",
+import { cn } from "@/lib/utils",
+import { Switch } from "@/components/ui/switch",
+import { format } from "date-fns",
 import { CalendarIcon, Loader2 } from 'lucide-react'
-import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton";
-import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
+import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",
+import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",
 
 // Define form schema
 const formSchema = z.object({
@@ -25,21 +25,21 @@ const formSchema = z.object({
   end_date: z.date().optional(),
   is_current: z.boolean().default(false),
   description: z.string().optional(),
-  location: z.string().optional()});
+  location: z.string().optional()}),
 
-type FormValues = z.infer<typeof formSchema>;
+type FormValues = z.infer<typeof formSchema>,
 
 interface WorkExperienceItemFormProps {
-  initialData?: WorkExperience;
-  onSubmit: (data: WorkExperience) => Promise<void>;
-  onCancel: () => void;
+  initialData?: WorkExperience,
+  onSubmit: (data: WorkExperience) => Promise<void>,
+  onCancel: () => void
 }
 
 export function WorkExperienceItemForm({
   initialData,
   onSubmit,
   onCancel}: WorkExperienceItemFormProps) {
-  const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
+  const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),
 
   // Set up form
   const form = useForm<FormValues>({
@@ -51,12 +51,12 @@ export function WorkExperienceItemForm({
       end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined,
       is_current: initialData?.is_current || false,
       description: initialData?.description || "",
-      location: initialData?.location || ""}});
+      location: initialData?.location || ""}}),
   
-  const { isSubmitting } = form.formState;
-  const watchIsCurrent = form.watch("is_current");
-  const watchRoleTitle = form.watch("role_title");
-  const watchCompanyName = form.watch("company_name");
+  const { isSubmitting } = form.formState,
+  const watchIsCurrent = form.watch("is_current"),
+  const watchRoleTitle = form.watch("role_title"),
+  const watchCompanyName = form.watch("company_name"),
 
   const handleFormSubmit = async (values: FormValues) => {
     // Create a properly typed WorkExperience object with all required fields
@@ -69,15 +69,15 @@ export function WorkExperienceItemForm({
       is_current: values.is_current,      // Required
       description: values.description,    // Optional
       location: values.location,          // Optional
-    };
+    },
     
-    await onSubmit(workExperience);
-  };
+    await onSubmit(workExperience),
+  },
 
   const handleAIEnhancement = (content: string) => {
-    form.setValue("description", content, { shouldDirty: true });
-    setIsEnhancementDialogOpen(false);
-  };
+    form.setValue("description", content, { shouldDirty: true }),
+    setIsEnhancementDialogOpen(false),
+  },
 
   return (
     <>
@@ -310,5 +310,5 @@ export function WorkExperienceItemForm({
         initialContent={form.getValues("description") || ""}
       />
     </>
-  );
+  ),
 }

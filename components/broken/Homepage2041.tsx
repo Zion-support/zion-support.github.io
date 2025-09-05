@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import Layout from './layout/Layout';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import Layout from './layout/Layout',
+import { motion } from 'framer-motion',
 import { 
-  ArrowRight, 
+  ArrowRight,
   Star, 
   Search,
   Shield,
@@ -22,28 +22,28 @@ import {
   Users,
   Award,
   Clock
-} from 'lucide-react';
-import Link from 'next/link';
-import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
-import { innovative2041MicroSaasServices } from '../data/innovative-2041-micro-saas-services';
-import { innovative2041ITServices } from '../data/innovative-2041-it-services';
-import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
+} from 'lucide-react',
+import Link from 'next/link',
+import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026',
+import { innovative2041MicroSaasServices } from '../data/innovative-2041-micro-saas-services',
+import { innovative2041ITServices } from '../data/innovative-2041-it-services',
+import { innovative2041AIServices } from '../data/innovative-2041-ai-services',
 
 const Homepage2041: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState(''),
 
   const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     if (searchQuery.trim()) {
-      window.location.href = `/services?search=${encodeURIComponent(searchQuery.trim())}`;
+      window.location.href = `/services?search=${encodeURIComponent(searchQuery.trim())}`,
     }
-  };
+  },
 
   const featuredServices = [
     ...innovative2041MicroSaasServices.filter(s => s.popular).slice(0, 3),
     ...innovative2041ITServices.filter(s => s.popular).slice(0, 2),
     ...innovative2041AIServices.filter(s => s.popular).slice(0, 1)
-  ];
+  ],
 
   const testimonials = [
     {
@@ -70,14 +70,14 @@ const Homepage2041: React.FC = () => {
       rating: 5,
       avatar: "👩‍🔬"
     }
-  ];
+  ],
 
   const stats = [
     { number: "500+", label: "Revolutionary Services", icon: Rocket },
     { number: "50+", label: "Quantum Solutions", icon: Atom },
     { number: "1000x", label: "Performance Boost", icon: Zap },
     { number: "24/7", label: "AI Operations", icon: Brain }
-  ];
+  ],
 
   return (
     <Layout>
@@ -350,7 +350,7 @@ const Homepage2041: React.FC = () => {
                 Join the technological revolution with our cutting-edge 2041 services. 
                 Transform your business, accelerate innovation, and lead the future of technology.
               </p>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <div className="flex flex-col sm: flex-row gap-6 justify-center">
                 <Link
                   href="/contact"
                   className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3"
@@ -371,7 +371,7 @@ const Homepage2041: React.FC = () => {
         </section>
       </main>
     </Layout>
-  );
-};
+  )
+},
 
-export default Homepage2041;
+export default Homepage2041,

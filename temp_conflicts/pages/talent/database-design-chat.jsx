@@ -1,6 +1,6 @@
 
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link',
 
 const DatabaseDesignChat = () => {
   return (
@@ -16,7 +16,7 @@ const DatabaseDesignChat = () => {
         <Link href="/services">Back to Services</Link>
       </main>
     </div>
-  );
-};
+  ),
+},
 
-export default DatabaseDesignChat;
+export default DatabaseDesignChat,

@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function TechnologyInsightsPage() {
   const technologyTrends = [
@@ -28,28 +28,28 @@ export default function TechnologyInsightsPage() {
       readTime: '18 min read',
       featured: false
     }
-  ];
+  ],
 
   const researchAreas = [
     {
       title: 'Autonomous Systems Research',
       description: 'Pioneering research in building truly autonomous systems that can operate independently.',
-      focus: ['Decision Making', 'Self-Learning', 'Adaptive Behavior', 'System Integration'],
+      focus: ['Decision MakingSelf-Learning', 'Adaptive BehaviorSystem Integration'],
       icon: '🔬'
     },
     {
       title: 'AI Ethics & Governance',
       description: 'Research into responsible AI development and ethical considerations for autonomous systems.',
-      focus: ['Ethical AI', 'Bias Detection', 'Transparency', 'Accountability'],
+      focus: ['Ethical AIBias Detection', 'TransparencyAccountability'],
       icon: '⚖️'
     },
     {
       title: 'Human-AI Collaboration',
       description: 'Exploring how humans and AI can work together effectively and safely.',
-      focus: ['Human-AI Interface', 'Collaborative Decision Making', 'Safety Protocols', 'Trust Building'],
+      focus: ['Human-AI InterfaceCollaborative Decision Making', 'Safety ProtocolsTrust Building'],
       icon: '🤝'
     }
-  ];
+  ],
 
   const whitepapers = [
     {
@@ -76,7 +76,7 @@ export default function TechnologyInsightsPage() {
       category: 'Business',
       downloadUrl: '/whitepapers/automation-roi-guide.pdf'
     }
-  ];
+  ],
 
   return (
     <>
@@ -203,7 +203,7 @@ export default function TechnologyInsightsPage() {
               <div className="flex flex-wrap justify-center gap-4">
                 <Link 
                   href="/contact"
-                  className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
+                  className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
                 >
                   Get in Touch
                 </Link>
@@ -219,5 +219,5 @@ export default function TechnologyInsightsPage() {
         </main>
       </div>
     </>
-  );
+  )
 }

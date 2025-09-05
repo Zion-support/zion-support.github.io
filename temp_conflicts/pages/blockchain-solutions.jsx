@@ -1,5 +1,5 @@
 
-import Head from 'next/head';
+import Head from 'next/head',
 
 const BlockchainSolutions = () => {
   return (
@@ -14,7 +14,7 @@ const BlockchainSolutions = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  ),
+},
 
-export default BlockchainSolutions;
+export default BlockchainSolutions,

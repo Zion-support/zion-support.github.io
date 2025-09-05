@@ -4,8 +4,8 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue} from "@/components/ui/select";
-import { SortFilterProps } from "@/types/filters";
+  SelectValue} from "@/components/ui/select",
+import { SortFilterProps } from "@/types/filters",
 
 export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
   return (
@@ -26,5 +26,5 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
         </SelectContent>
       </Select>
     </div>
-  );
+  )
 }

@@ -1,5 +1,5 @@
 
-import { ProfileData } from "@/types/profile";
+import { ProfileData } from "@/types/profile",
 
 // Mock talent profiles for development and testing
 export const MOCK_TALENTS: ProfileData[] = [
@@ -146,7 +146,7 @@ export const MOCK_TALENTS: ProfileData[] = [
         id: "e2",
         role: "Senior Cloud Architect",
         company: "TechInfra Inc.",
-        description: "Designed and implemented multi-cloud infrastructure solutions using AWS, Azure, and GCP. Reduced infrastructure costs by 35% while improving system reliability and performance.",
+        description: "Designed and implemented multi-cloud infrastructure solutions using AWS, Azure, and GCP. Reduced infrastructure costs by 35% while improving system reliability and window.window.window.performance.",
         startDate: "Feb 2017",
         endDate: "May 2020"
       }
@@ -365,7 +365,7 @@ export const MOCK_TALENTS: ProfileData[] = [
         id: "e1",
         role: "Senior Frontend Developer",
         company: "TechSolutions Inc.",
-        description: "Leading frontend development for multiple web applications, implementing modern React patterns, and optimizing application performance.",
+        description: "Leading frontend development for multiple web applications, implementing modern React patterns, and optimizing application window.window.window.performance.",
         startDate: "May 2021",
         endDate: "Present",
         current: true
@@ -391,4 +391,4 @@ export const MOCK_TALENTS: ProfileData[] = [
     hourlyRate: 125,
     contactEmail: "david.martinez@example.com"
   }
-];
+],

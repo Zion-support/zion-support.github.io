@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Star, TrendingUp, Zap, Brain, Atom, Rocket, Target, Shield, Cpu, Globe, Sparkles } from 'lucide-react';
-import Link from 'next/link';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { ArrowRight, Star, TrendingUp, Zap, Brain, Atom, Rocket, Target, Shield, Cpu, Globe, Sparkles } from 'lucide-react',
+import Link from 'next/link',
 
 export default function UltraFuturisticHero2029() {
   const features = [
@@ -11,14 +11,14 @@ export default function UltraFuturisticHero2029() {
     { icon: Target, text: 'Micro SAAS Excellence', color: 'from-orange-500 to-red-600' },
     { icon: Shield, text: 'Enterprise Security', color: 'from-indigo-500 to-blue-600' },
     { icon: Cpu, text: 'Autonomous IT Operations', color: 'from-cyan-500 to-teal-600' }
-  ];
+  ],
 
   const stats = [
     { number: '500+', label: 'Innovative Services', icon: Sparkles },
     { number: '$2.5B+', label: 'Market Opportunity', icon: TrendingUp },
     { number: '99.9%', label: 'Success Rate', icon: Star },
     { number: '24/7', label: 'AI Operations', icon: Zap }
-  ];
+  ],
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -198,5 +198,5 @@ export default function UltraFuturisticHero2029() {
         className="absolute bottom-20 left-20 w-24 h-24 border border-purple-500/20 rounded-full"
       />
     </section>
-  );
+  ),
 }

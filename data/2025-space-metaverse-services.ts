@@ -1,38 +1,38 @@
 export interface SpaceMetaverseService {
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  category: string;
+  id: string,
+  name: string,
+  tagline: string,
+  description: string,
+  category: string,
   price: {
-    monthly: number;
-    yearly: number;
-    currency: string;
-    trialDays: number;
-    setupTime: string;
-    enterprise: string;
-  };
-  features: string[];
-  benefits: string[];
-  targetAudience: string[];
-  marketPosition: string;
-  competitors: string[];
-  techStack: string[];
-  realImplementation: boolean;
-  implementationDetails: string;
-  roi: string;
-  useCases: string[];
-  integrations: string[];
-  support: string;
-  compliance: string[];
-  link: string;
-  icon: string;
-  color: string;
-  popular: boolean;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    monthly: number,
+    yearly: number,
+    currency: string,
+    trialDays: number,
+    setupTime: string,
+    enterprise: string
+  },
+  features: string[],
+  benefits: string[],
+  targetAudience: string[],
+  marketPosition: string,
+  competitors: string[],
+  techStack: string[],
+  realImplementation: boolean,
+  implementationDetails: string,
+  roi: string,
+  useCases: string[],
+  integrations: string[],
+  support: string,
+  compliance: string[],
+  link: string,
+  icon: string,
+  color: string,
+  popular: boolean,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 
 export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
@@ -51,31 +51,21 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
       enterprise: 'Custom pricing'
     },
     features: [
-      'AI-powered resource detection',
-      'Multi-spectral data analysis',
-      '3D mapping and visualization',
-      'Resource optimization algorithms',
-      'Real-time satellite data processing',
-      'Predictive resource modeling',
-      'Mining operation planning',
-      'Cost-benefit analysis',
-      'Regulatory compliance monitoring',
-      'API for space agencies'
+      'AI-powered resource detectionMulti-spectral data analysis',
+      '3D mapping and visualizationResource optimization algorithms',
+      'Real-time satellite data processingPredictive resource modeling',
+      'Mining operation planningCost-benefit analysis',
+      'Regulatory compliance monitoringAPI for space agencies'
     ],
     benefits: [
-      'Increase resource discovery by 300%',
-      'Reduce exploration costs by 50%',
-      'Optimize mining operations',
-      'Improve space mission planning',
+      'Increase resource discovery by 300%Reduce exploration costs by 50%',
+      'Optimize mining operationsImprove space mission planning',
       'Enable sustainable space development'
     ],
     targetAudience: [
-      'Space agencies',
-      'Private space companies',
-      'Mining corporations',
-      'Research institutions',
-      'Government agencies',
-      'Space tourism companies'
+      'Space agenciesPrivate space companies',
+      'Mining corporationsResearch institutions',
+      'Government agenciesSpace tourism companies'
     ],
     marketPosition: 'Leading AI-powered space resource platform. Competes with Planetary Resources (acquired), Deep Space Industries (acquired), and traditional space agencies. Our advantage: AI intelligence and comprehensive resource analysis.',
     competitors: ['Traditional space agencies, Private space companies, Research institutions'],
@@ -84,12 +74,9 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     implementationDetails: 'Production-ready space resource platform with AI models, satellite data integration, and comprehensive analytics. Includes 3D visualization and planning tools.',
     roi: 'Space organizations achieve 500% ROI through improved resource discovery and optimized operations.',
     useCases: [
-      'Asteroid mining planning',
-      'Lunar resource exploration',
-      'Mars mission planning',
-      'Satellite constellation optimization',
-      'Space tourism route planning',
-      'Resource extraction planning'
+      'Asteroid mining planningLunar resource exploration',
+      'Mars mission planningSatellite constellation optimization',
+      'Space tourism route planningResource extraction planning'
     ],
     integrations: ['NASA APIs, ESA data, SpaceX data, Custom space agency systems'],
     support: 'Space technology experts, implementation consulting, custom development, and dedicated success manager.',
@@ -118,31 +105,21 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
       enterprise: 'Custom pricing'
     },
     features: [
-      'AI-powered world generation',
-      '3D modeling and animation tools',
-      'Virtual reality integration',
-      'Blockchain asset management',
-      'Multi-user collaboration',
-      'Real-time rendering engine',
-      'Custom scripting language',
-      'Asset marketplace',
-      'Analytics and insights',
-      'API for developers'
+      'AI-powered world generation3D modeling and animation tools',
+      'Virtual reality integrationBlockchain asset management',
+      'Multi-user collaborationReal-time rendering engine',
+      'Custom scripting languageAsset marketplace',
+      'Analytics and insightsAPI for developers'
     ],
     benefits: [
-      'Reduce development time by 70%',
-      'Lower development costs by 60%',
-      'Enable rapid prototyping',
-      'Create immersive experiences',
+      'Reduce development time by 70%Lower development costs by 60%',
+      'Enable rapid prototypingCreate immersive experiences',
       'Monetize virtual assets'
     ],
     targetAudience: [
-      'Game developers',
-      'Virtual reality companies',
-      'Brands and marketers',
-      'Educational institutions',
-      'Real estate companies',
-      'Event organizers'
+      'Game developersVirtual reality companies',
+      'Brands and marketersEducational institutions',
+      'Real estate companiesEvent organizers'
     ],
     marketPosition: 'Leading metaverse development platform. Competes with Unity ($399-1800/year), Unreal Engine (5% revenue), and Roblox Studio (free). Our advantage: AI-powered tools and blockchain integration.',
     competitors: ['Unity, Unreal Engine, Roblox Studio, Decentraland, The Sandbox'],
@@ -151,12 +128,9 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     implementationDetails: 'Production-ready metaverse platform with comprehensive development tools, 3D engine, and blockchain integration. Includes mobile SDK and developer portal.',
     roi: 'Developers achieve 400% ROI through reduced development costs and increased monetization opportunities.',
     useCases: [
-      'Virtual reality games',
-      'Virtual events and conferences',
-      'Virtual real estate',
-      'Educational simulations',
-      'Brand experiences',
-      'Social virtual worlds'
+      'Virtual reality gamesVirtual events and conferences',
+      'Virtual real estateEducational simulations',
+      'Brand experiencesSocial virtual worlds'
     ],
     integrations: ['VR headsets, AR devices, Blockchain wallets, Payment processors'],
     support: '24/7 technical support, development consulting, custom development, and dedicated success manager.',
@@ -185,31 +159,21 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
       enterprise: 'Custom pricing'
     },
     features: [
-      'Quantum entanglement communications',
-      'Satellite quantum networks',
-      'Ground station integration',
-      'Real-time quantum key distribution',
-      'Multi-node quantum routing',
-      'Advanced quantum protocols',
-      'Network monitoring',
-      'Security analytics',
-      'API for space agencies',
-      'Custom quantum protocols'
+      'Quantum entanglement communicationsSatellite quantum networks',
+      'Ground station integrationReal-time quantum key distribution',
+      'Multi-node quantum routingAdvanced quantum protocols',
+      'Network monitoringSecurity analytics',
+      'API for space agenciesCustom quantum protocols'
     ],
     benefits: [
-      'Enable unbreakable space communications',
-      'Improve communication reliability',
-      'Reduce communication latency',
-      'Enhance space mission security',
+      'Enable unbreakable space communicationsImprove communication reliability',
+      'Reduce communication latencyEnhance space mission security',
       'Enable quantum internet in space'
     ],
     targetAudience: [
-      'Space agencies',
-      'Satellite companies',
-      'Military organizations',
-      'Research institutions',
-      'Space tourism companies',
-      'Critical infrastructure'
+      'Space agenciesSatellite companies',
+      'Military organizationsResearch institutions',
+      'Space tourism companiesCritical infrastructure'
     ],
     marketPosition: 'First-to-market quantum space communications network. No direct competitors in quantum space communications. Traditional competitors: Classical space communications providers. Our advantage: Quantum entanglement security.',
     competitors: ['Classical space communications, Satellite communications companies'],
@@ -218,12 +182,9 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     implementationDetails: 'Production-ready quantum space communications network with quantum hardware, satellite integration, and comprehensive monitoring. Includes quantum network management tools.',
     roi: 'Space organizations achieve unlimited ROI through unbreakable communications and enhanced mission security.',
     useCases: [
-      'Satellite communications',
-      'Space station communications',
-      'Deep space missions',
-      'Military space operations',
-      'Research collaborations',
-      'Space tourism communications'
+      'Satellite communicationsSpace station communications',
+      'Deep space missionsMilitary space operations',
+      'Research collaborationsSpace tourism communications'
     ],
     integrations: ['Satellite systems, Ground stations, Space agencies, Custom space systems'],
     support: 'Quantum experts, space technology consulting, custom protocol development, and 24/7 technical support.',
@@ -252,31 +213,21 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
       enterprise: 'Custom pricing'
     },
     features: [
-      'Real-time space traffic monitoring',
-      'AI-powered collision prediction',
-      'Automated collision avoidance',
-      'Orbital path optimization',
-      'Satellite tracking',
-      'Debris monitoring',
-      'Regulatory compliance',
-      'Advanced analytics',
-      'API for space agencies',
-      'Mobile monitoring app'
+      'Real-time space traffic monitoringAI-powered collision prediction',
+      'Automated collision avoidanceOrbital path optimization',
+      'Satellite trackingDebris monitoring',
+      'Regulatory complianceAdvanced analytics',
+      'API for space agenciesMobile monitoring app'
     ],
     benefits: [
-      'Prevent 99.9% of space collisions',
-      'Optimize orbital efficiency',
-      'Reduce space debris',
-      'Improve mission safety',
+      'Prevent 99.9% of space collisionsOptimize orbital efficiency',
+      'Reduce space debrisImprove mission safety',
       'Ensure regulatory compliance'
     ],
     targetAudience: [
-      'Space agencies',
-      'Satellite operators',
-      'Space tourism companies',
-      'Military organizations',
-      'Insurance companies',
-      'Regulatory bodies'
+      'Space agenciesSatellite operators',
+      'Space tourism companiesMilitary organizations',
+      'Insurance companiesRegulatory bodies'
     ],
     marketPosition: 'Leading AI-powered space traffic management platform. Competes with LeoLabs ($500-2000/month), Space-Track (free), and commercial space monitoring services. Our advantage: AI intelligence and automated collision prevention.',
     competitors: ['LeoLabs, Space-Track, Commercial space monitoring services'],
@@ -285,12 +236,9 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     implementationDetails: 'Production-ready space traffic management platform with real-time monitoring, AI prediction models, and comprehensive analytics. Includes mobile app and API.',
     roi: 'Space organizations achieve 400% ROI through improved safety and reduced collision risks.',
     useCases: [
-      'Satellite collision avoidance',
-      'Space debris monitoring',
-      'Orbital path optimization',
-      'Mission planning',
-      'Regulatory compliance',
-      'Insurance risk assessment'
+      'Satellite collision avoidanceSpace debris monitoring',
+      'Orbital path optimizationMission planning',
+      'Regulatory complianceInsurance risk assessment'
     ],
     integrations: ['Space agencies, Satellite operators, Ground stations, Custom space systems'],
     support: '24/7 technical support, space safety consulting, custom development, and dedicated success manager.',
@@ -319,31 +267,21 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
       enterprise: 'Custom pricing'
     },
     features: [
-      'VR training simulations',
-      'Virtual collaboration spaces',
-      '3D visualization tools',
-      'Custom VR applications',
-      'Multi-user VR experiences',
-      'Analytics and reporting',
-      'Mobile VR support',
-      'API for integration',
-      'Content management system',
-      'Enterprise security features'
+      'VR training simulationsVirtual collaboration spaces',
+      '3D visualization toolsCustom VR applications',
+      'Multi-user VR experiencesAnalytics and reporting',
+      'Mobile VR supportAPI for integration',
+      'Content management systemEnterprise security features'
     ],
     benefits: [
-      'Improve training effectiveness by 300%',
-      'Reduce training costs by 60%',
-      'Enhance collaboration',
-      'Improve decision making',
+      'Improve training effectiveness by 300%Reduce training costs by 60%',
+      'Enhance collaborationImprove decision making',
       'Increase employee engagement'
     ],
     targetAudience: [
-      'Manufacturing companies',
-      'Healthcare organizations',
-      'Educational institutions',
-      'Training companies',
-      'Real estate companies',
-      'Architecture firms'
+      'Manufacturing companiesHealthcare organizations',
+      'Educational institutionsTraining companies',
+      'Real estate companiesArchitecture firms'
     ],
     marketPosition: 'Leading enterprise VR platform. Competes with Pico ($299-599), Meta Quest Pro ($999), and HTC Vive ($699-1399). Our advantage: Enterprise-focused features and comprehensive solutions.',
     competitors: ['Pico, Meta Quest Pro, HTC Vive, Varjo, Magic Leap'],
@@ -352,12 +290,9 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     implementationDetails: 'Production-ready enterprise VR platform with comprehensive tools, security features, and mobile support. Includes admin dashboard and analytics.',
     roi: 'Enterprises achieve 400% ROI through improved training effectiveness and reduced operational costs.',
     useCases: [
-      'Employee training',
-      'Virtual meetings',
-      'Product design review',
-      'Safety training',
-      'Remote collaboration',
-      'Customer presentations'
+      'Employee trainingVirtual meetings',
+      'Product design reviewSafety training',
+      'Remote collaborationCustomer presentations'
     ],
     integrations: ['HR systems, Learning management systems, Project management tools, Custom enterprise systems'],
     support: '24/7 technical support, implementation consulting, custom development, and dedicated success manager.',
@@ -371,4 +306,4 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     rating: 4.7,
     reviews: 1400
   }
-];
+],

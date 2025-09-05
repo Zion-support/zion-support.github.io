@@ -1,21 +1,21 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Zap, Brain, Code, Shield, Users, TrendingUp, 
   CheckCircle, ArrowRight, Star, Clock, Target,
   Cpu, Rocket, Globe, BarChart3, Settings
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
+} from 'lucide-react',
+import Layout from '../components/layout/Layout',
+import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceHighlights = [
   {
@@ -23,37 +23,37 @@ const serviceHighlights = [
     description: 'Generate production-ready code across multiple languages with AI intelligence',
     icon: Code,
     color: 'from-emerald-500 to-teal-600',
-    features: ['Multi-language support', 'Security scanning', 'Performance optimization', 'Team collaboration']
+    features: ['Multi-language supportSecurity scanning', 'Performance optimizationTeam collaboration']
   },
   {
     title: 'DevOps Automation',
     description: 'Intelligent automation for modern DevOps workflows with predictive analytics',
     icon: Cpu,
     color: 'from-purple-500 to-indigo-600',
-    features: ['CI/CD optimization', 'Self-healing infrastructure', 'Cost optimization', 'Multi-cloud support']
+    features: ['CI/CD optimizationSelf-healing infrastructure', 'Cost optimizationMulti-cloud support']
   },
   {
     title: 'Customer Support AI',
     description: 'Transform customer support with intelligent automation and sentiment analysis',
     icon: Users,
     color: 'from-blue-500 to-cyan-600',
-    features: ['Intelligent chatbots', 'Multi-language support', 'Predictive resolution', '24/7 availability']
+    features: ['Intelligent chatbotsMulti-language support', 'Predictive resolution24/7 availability']
   },
   {
     title: 'Marketing Automation',
     description: 'AI-powered marketing automation with predictive analytics and optimization',
     icon: BarChart3,
     color: 'from-pink-500 to-rose-600',
-    features: ['Campaign optimization', 'Customer personalization', 'ROI tracking', 'Multi-channel automation']
+    features: ['Campaign optimizationCustomer personalization', 'ROI trackingMulti-channel automation']
   },
   {
     title: 'Sales Intelligence',
     description: 'Boost sales performance with AI-powered insights and predictive analytics',
     icon: TrendingUp,
     color: 'from-yellow-500 to-orange-600',
-    features: ['Lead scoring', 'Sales forecasting', 'Customer insights', 'Performance optimization']
+    features: ['Lead scoringSales forecasting', 'Customer insightsPerformance optimization']
   }
-];
+],
 
 const benefits = [
   {
@@ -80,7 +80,7 @@ const benefits = [
     icon: BarChart3,
     color: 'text-pink-400'
   }
-];
+],
 
 export default function AIAutomationServices() {
   return (
@@ -364,7 +364,7 @@ export default function AIAutomationServices() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Automate</span> Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -406,5 +406,5 @@ export default function AIAutomationServices() {
         </div>
       </section>
     </Layout>
-  );
+  )
 }

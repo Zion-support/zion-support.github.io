@@ -1,6 +1,6 @@
 // Re-export Jest globals so tests written for Vitest compile under Jest
 // eslint-disable-next-line @typescript-eslint/no-require-imports
-const jestGlobals = require('@jest/globals');
+const jestGlobals = require('@jest/globals'),
 
 module.exports = {
   vi: {
@@ -15,4 +15,4 @@ module.exports = {
   test: jestGlobals.test,
   describe: jestGlobals.describe,
   beforeEach: jestGlobals.beforeEach,
-  afterEach: jestGlobals.afterEach}; 
+  afterEach: jestGlobals.afterEach}, 

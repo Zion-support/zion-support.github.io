@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from 'next/link',
 
 export default function ReportsIndex() {
   const items = [
@@ -9,7 +9,7 @@ export default function ReportsIndex() {
     { title: 'AI Trends', href: '/reports/ai-trends', desc: 'AI trends aggregated insights.' },
     { title: 'Roadmap', href: '/reports/roadmap', desc: 'Autonomous roadmap generated from schedules and functions.' },
     { title: 'Knowledge Pack', href: '/knowledge-pack.json', desc: 'Repository knowledge pack with live stats.' }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-slate-950 text-white">
@@ -30,5 +30,5 @@ export default function ReportsIndex() {
         </div>
       </main>
     </div>
-  );
+  ),
 }

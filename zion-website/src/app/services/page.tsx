@@ -1,5 +1,5 @@
 import { 
-  UserGroupIcon, 
+  UserGroupIcon,
   LightBulbIcon, 
   CogIcon, 
   ShieldCheckIcon,
@@ -15,10 +15,8 @@ const professionalServices = [
     description: 'Comprehensive assessment and strategic planning for AI transformation initiatives.',
     icon: LightBulbIcon,
     features: [
-      'Technology Assessment',
-      'ROI Analysis',
-      'Implementation Roadmap',
-      'Change Management Planning'
+      'Technology AssessmentROI Analysis',
+      'Implementation RoadmapChange Management Planning'
     ],
     duration: '4-8 weeks'},
   {
@@ -26,10 +24,8 @@ const professionalServices = [
     description: 'Tailored AI solutions built specifically for your business needs and objectives.',
     icon: CogIcon,
     features: [
-      'Custom Algorithm Development',
-      'Integration Services',
-      'Testing & Validation',
-      'Documentation & Training'
+      'Custom Algorithm DevelopmentIntegration Services',
+      'Testing & ValidationDocumentation & Training'
     ],
     duration: '8-24 weeks'},
   {
@@ -37,10 +33,8 @@ const professionalServices = [
     description: 'Seamless integration of AI solutions into your existing infrastructure and workflows.',
     icon: RocketLaunchIcon,
     features: [
-      'System Integration',
-      'API Development',
-      'Performance Optimization',
-      'Go-live Support'
+      'System IntegrationAPI Development',
+      'Performance OptimizationGo-live Support'
     ],
     duration: '4-12 weeks'},
   {
@@ -48,10 +42,8 @@ const professionalServices = [
     description: 'Comprehensive training programs to ensure your team maximizes AI solution value.',
     icon: AcademicCapIcon,
     features: [
-      'Technical Training',
-      'Best Practices',
-      'Ongoing Support',
-      'Certification Programs'
+      'Technical TrainingBest Practices',
+      'Ongoing SupportCertification Programs'
     ],
     duration: '2-4 weeks'},
   {
@@ -59,10 +51,8 @@ const professionalServices = [
     description: 'Continuous monitoring, optimization, and support for your AI solutions.',
     icon: ShieldCheckIcon,
     features: [
-      '24/7 Monitoring',
-      'Performance Optimization',
-      'Security Updates',
-      'Technical Support'
+      '24/7 MonitoringPerformance Optimization',
+      'Security UpdatesTechnical Support'
     ],
     duration: 'Ongoing'},
   {
@@ -70,10 +60,8 @@ const professionalServices = [
     description: 'Comprehensive audits to ensure your AI systems meet regulatory and ethical standards.',
     icon: ChartBarIcon,
     features: [
-      'Compliance Assessment',
-      'Ethical AI Review',
-      'Security Audits',
-      'Risk Mitigation'
+      'Compliance AssessmentEthical AI Review',
+      'Security AuditsRisk Mitigation'
     ],
     duration: '2-6 weeks'}]
 

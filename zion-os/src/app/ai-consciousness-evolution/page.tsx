@@ -1,9 +1,9 @@
-import Link from "next/link";
+import Link from "next/link",
 
 export const metadata = {
   title: "AI Consciousness Evolution - Zion Tech Group",
   description: "Explore the frontier of artificial consciousness with our advanced AI systems that simulate and evolve cognitive processes.",
-  keywords: "AI consciousness, artificial consciousness, cognitive AI, consciousness evolution, Zion Tech Group"};
+  keywords: "AI consciousness, artificial consciousness, cognitive AI, consciousness evolution, Zion Tech Group"},
 
 export default function AIConsciousnessEvolutionPage() {
   return (
@@ -315,7 +315,7 @@ export default function AIConsciousnessEvolutionPage() {
             <p className="text-xl text-gray-300 mb-8">
               Be part of the most important technological advancement in human history—the creation of conscious AI.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link href="/contact" className="btn-primary">
                 Join the Research
               </Link>
@@ -327,5 +327,5 @@ export default function AIConsciousnessEvolutionPage() {
         </section>
       </div>
     </div>
-  );
+  )
 }

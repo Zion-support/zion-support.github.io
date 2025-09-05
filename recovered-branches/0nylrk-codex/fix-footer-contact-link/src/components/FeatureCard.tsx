@@ -1,13 +1,13 @@
 
-import { cn } from "@/lib/utils";
-import React from "react";
+import { cn } from "@/lib/utils",
+import React from "react",
 
 interface FeatureCardProps {
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  className?: string;
-  key?: string | number; // Added key prop
+  title: string,
+  description: string,
+  icon: React.ReactNode,
+  className?: string,
+  key?: string | number, // Added key prop
 }
 
 export function FeatureCard({ title, description, icon, className }: FeatureCardProps) {
@@ -24,5 +24,5 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
         <p className="text-zion-slate-light">{description}</p>
       </div>
     </div>
-  );
+  ),
 }

@@ -1,46 +1,46 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import Layout from './layout/Layout';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useEffect, useState, useCallback } from 'react',
+import Layout from './layout/Layout',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3,
   Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft,
   Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import our new revolutionary services
-import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
-import { revolutionary2044InnovativeServices } from '../data/revolutionary-2044-innovative-services';
+import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services',
+import { revolutionary2044InnovativeServices } from '../data/revolutionary-2044-innovative-services',
 
 const Homepage2043: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
-  const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
+  const [isVisible, setIsVisible] = useState(false),
+  const [currentServiceIndex, setCurrentServiceIndex] = useState(0),
+  const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0),
+  const [isHovered, setIsHovered] = useState(false),
   
   useEffect(() => {
-    setIsVisible(true);
+    setIsVisible(true),
     
     // Auto-rotate featured services
     const serviceInterval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % 6);
-    }, 4000);
+      setCurrentServiceIndex((prev) => (prev + 1) % 6),
+    }, 4000),
     
     // Auto-rotate testimonials
     const testimonialInterval = setInterval(() => {
-      setCurrentTestimonialIndex((prev) => (prev + 1) % 3);
-    }, 6000);
+      setCurrentTestimonialIndex((prev) => (prev + 1) % 3),
+    }, 6000),
     
     return () => {
-      clearInterval(serviceInterval);
-      clearInterval(testimonialInterval);
-    };
-  }, []);
+      clearInterval(serviceInterval),
+      clearInterval(testimonialInterval),
+    },
+  }, []),
 
   // Combine all revolutionary services
-  const allRevolutionaryServices = [...revolutionary2043AdvancedServices, ...revolutionary2044InnovativeServices];
+  const allRevolutionaryServices = [...revolutionary2043AdvancedServices, ...revolutionary2044InnovativeServices],
 
   // Get featured services for rotation
-  const featuredServices = allRevolutionaryServices.slice(0, 6);
+  const featuredServices = allRevolutionaryServices.slice(0, 6),
 
   const features = [
     { 
@@ -91,14 +91,14 @@ const Homepage2043: React.FC = () => {
       color: "from-yellow-500 to-orange-500",
       gradient: "bg-gradient-to-br from-yellow-500/20 to-orange-500/20"
     }
-  ];
+  ],
 
   const stats = [
     { number: "2000+", label: "Revolutionary Services", icon: Star, color: "from-yellow-400 to-orange-500" },
     { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp, color: "from-green-400 to-emerald-500" },
     { number: "24/7", label: "AI Support Available", icon: Brain, color: "from-purple-400 to-pink-500" },
     { number: "150+", label: "Countries Served", icon: Globe, color: "from-blue-400 to-cyan-500" }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -125,27 +125,27 @@ const Homepage2043: React.FC = () => {
       rating: 5,
       avatar: "👩‍💻"
     }
-  ];
+  ],
 
   const handleGetStarted = useCallback(() => {
-    window.location.href = '/revolutionary-2040-2041-pricing-showcase';
-  }, []);
+    window.location.href = '/revolutionary-2040-2041-pricing-showcase',
+  }, []),
 
   const handleWatchDemo = useCallback(() => {
-    window.location.href = '/services';
-  }, []);
+    window.location.href = '/services',
+  }, []),
 
   const handleContact = useCallback(() => {
-    window.location.href = '/contact';
-  }, []);
+    window.location.href = '/contact',
+  }, []),
 
   const nextService = () => {
-    setCurrentServiceIndex((prev) => (prev + 1) % featuredServices.length);
-  };
+    setCurrentServiceIndex((prev) => (prev + 1) % featuredServices.length),
+  },
 
   const prevService = () => {
-    setCurrentServiceIndex((prev) => (prev - 1 + featuredServices.length) % featuredServices.length);
-  };
+    setCurrentServiceIndex((prev) => (prev - 1 + featuredServices.length) % featuredServices.length),
+  },
 
   return (
     <Layout>
@@ -538,7 +538,7 @@ const Homepage2043: React.FC = () => {
               </div>
 
               {/* Contact Information */}
-              <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="mt-16 grid grid-cols-1 md: grid-cols-3 gap-8">
                 <div className="text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 mb-4">
                     <Phone className="w-8 h-8 text-white" />
@@ -568,7 +568,7 @@ const Homepage2043: React.FC = () => {
         </section>
       </main>
     </Layout>
-  );
-};
+  )
+},
 
-export default Homepage2043;
+export default Homepage2043,

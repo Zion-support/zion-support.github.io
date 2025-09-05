@@ -1,44 +1,44 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 
 export interface EmergingTech2026Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 
 export const emergingTech2026Services: EmergingTech2026Service[] = [
@@ -51,16 +51,11 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     period: '/month',
     description: 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural architecture for ultra-efficient AI processing and autonomous robotics.',
     features: [
-      'Brain-inspired neural architecture',
-      'Ultra-low power consumption',
-      'Real-time learning capabilities',
-      'Autonomous decision making',
-      'Adaptive behavior patterns',
-      'Multi-modal sensory processing',
-      'Continuous learning algorithms',
-      'Energy-efficient computing',
-      'Real-time pattern recognition',
-      'Autonomous robotics control'
+      'Brain-inspired neural architectureUltra-low power consumption',
+      'Real-time learning capabilitiesAutonomous decision making',
+      'Adaptive behavior patternsMulti-modal sensory processing',
+      'Continuous learning algorithmsEnergy-efficient computing',
+      'Real-time pattern recognitionAutonomous robotics control'
     ],
     popular: true,
     icon: '🧠',
@@ -73,11 +68,11 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     setupTime: '16 hours',
     category: 'Emerging Technology & AI',
     realService: true,
-    technology: ['Neuromorphic Computing', 'Spiking Neural Networks', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Custom Hardware'],
-    integrations: ['ROS (Robot Operating System)', 'TensorFlow', 'PyTorch', 'OpenCV', 'Gazebo Simulator', 'Unity3D', 'Unreal Engine'],
-    useCases: ['Autonomous robotics', 'Edge AI processing', 'Real-time pattern recognition', 'Autonomous vehicles', 'Smart sensors', 'Cognitive computing'],
+    technology: ['Neuromorphic ComputingSpiking Neural Networks', 'ReactNode.js', 'PostgreSQLRedis', 'AWSCustom Hardware'],
+    integrations: ['ROS (Robot Operating System)TensorFlow', 'PyTorchOpenCV', 'Gazebo SimulatorUnity3D', 'Unreal Engine'],
+    useCases: ['Autonomous roboticsEdge AI processing', 'Real-time pattern recognitionAutonomous vehicles', 'Smart sensorsCognitive computing'],
     roi: 'Average customer sees 600% ROI within 18 months through improved AI performance and energy efficiency.',
-    competitors: ['Intel Loihi', 'IBM TrueNorth', 'BrainChip', 'Qualcomm Zeroth', 'SpiNNaker'],
+    competitors: ['Intel LoihiIBM TrueNorth', 'BrainChipQualcomm Zeroth', 'SpiNNaker'],
     marketSize: '$8.7B market',
     growthRate: '400% annual growth',
     variant: 'ai-futuristic',
@@ -104,16 +99,11 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     period: '/month',
     description: 'Cutting-edge DNA computing platform that leverages molecular biology for ultra-dense data storage and complex computational problems.',
     features: [
-      'Molecular data storage',
-      'DNA-based computation',
-      'Ultra-dense information encoding',
-      'Parallel processing capabilities',
-      'Biological error correction',
-      'Molecular programming interface',
-      'DNA synthesis integration',
-      'Bioinformatics analysis',
-      'Molecular robotics control',
-      'Biological security protocols'
+      'Molecular data storageDNA-based computation',
+      'Ultra-dense information encodingParallel processing capabilities',
+      'Biological error correctionMolecular programming interface',
+      'DNA synthesis integrationBioinformatics analysis',
+      'Molecular robotics controlBiological security protocols'
     ],
     popular: true,
     icon: '🧬',
@@ -126,11 +116,11 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     setupTime: '24 hours',
     category: 'Emerging Technology & Biotechnology',
     realService: true,
-    technology: ['DNA Computing', 'Molecular Biology', 'Bioinformatics', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['DNA synthesis platforms', 'Bioinformatics tools', 'Laboratory equipment', 'Research databases', 'Molecular modeling software'],
-    useCases: ['Complex problem solving', 'Ultra-dense data storage', 'Drug discovery', 'Genetic research', 'Molecular robotics', 'Biological computing'],
+    technology: ['DNA ComputingMolecular Biology', 'BioinformaticsReact', 'Node.jsPostgreSQL', 'RedisAWS'],
+    integrations: ['DNA synthesis platformsBioinformatics tools', 'Laboratory equipmentResearch databases', 'Molecular modeling software'],
+    useCases: ['Complex problem solvingUltra-dense data storage', 'Drug discoveryGenetic research', 'Molecular roboticsBiological computing'],
     roi: 'Average customer sees 800% ROI within 24 months through revolutionary computing capabilities and data storage density.',
-    competitors: ['Microsoft DNA Storage', 'Catalog DNA', 'Twist Bioscience', 'Illumina', 'Pacific Biosciences'],
+    competitors: ['Microsoft DNA StorageCatalog DNA', 'Twist BioscienceIllumina', 'Pacific Biosciences'],
     marketSize: '$12.5B market',
     growthRate: '500% annual growth',
     variant: 'ai-futuristic',
@@ -157,16 +147,11 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     period: '/month',
     description: 'Revolutionary photonic computing platform that uses light instead of electricity for ultra-fast processing and quantum communication.',
     features: [
-      'Light-speed processing',
-      'Quantum optical computing',
-      'Photonic neural networks',
-      'Ultra-low latency',
-      'Quantum communication',
-      'Optical memory systems',
-      'Photonic AI acceleration',
-      'Quantum cryptography',
-      'Optical interconnect',
-      'Quantum sensing capabilities'
+      'Light-speed processingQuantum optical computing',
+      'Photonic neural networksUltra-low latency',
+      'Quantum communicationOptical memory systems',
+      'Photonic AI accelerationQuantum cryptography',
+      'Optical interconnectQuantum sensing capabilities'
     ],
     popular: true,
     icon: '💡',
@@ -179,11 +164,11 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     setupTime: '20 hours',
     category: 'Emerging Technology & Photonics',
     realService: true,
-    technology: ['Photonic Computing', 'Quantum Optics', 'Optical Computing', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Optical networks', 'Quantum communication systems', 'High-frequency trading platforms', 'Telecommunications infrastructure', 'Data center equipment'],
-    useCases: ['High-frequency trading', 'Quantum communication', 'Optical computing', 'AI acceleration', 'Quantum sensing', 'Optical networking'],
+    technology: ['Photonic ComputingQuantum Optics', 'Optical ComputingReact', 'Node.jsPostgreSQL', 'RedisAWS'],
+    integrations: ['Optical networksQuantum communication systems', 'High-frequency trading platformsTelecommunications infrastructure', 'Data center equipment'],
+    useCases: ['High-frequency tradingQuantum communication', 'Optical computingAI acceleration', 'Quantum sensingOptical networking'],
     roi: 'Average customer sees 700% ROI within 18 months through ultra-fast processing and quantum capabilities.',
-    competitors: ['Lightmatter', 'PsiQuantum', 'Xanadu', 'PicoQuant', 'ID Quantique'],
+    competitors: ['LightmatterPsiQuantum', 'XanaduPicoQuant', 'ID Quantique'],
     marketSize: '$15.2B market',
     growthRate: '450% annual growth',
     variant: 'quantum-futuristic',
@@ -210,16 +195,11 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     period: '/month',
     description: 'Revolutionary holographic display platform that creates immersive 3D visualizations and interactive experiences for entertainment, education, and business.',
     features: [
-      'True 3D holographic display',
-      'Interactive holographic interfaces',
-      'Real-time 3D rendering',
-      'Multi-user collaboration',
-      'Gesture recognition',
-      'Spatial audio integration',
-      'Holographic telepresence',
-      '3D content creation tools',
-      'Augmented reality overlay',
-      'Virtual reality integration'
+      'True 3D holographic displayInteractive holographic interfaces',
+      'Real-time 3D renderingMulti-user collaboration',
+      'Gesture recognitionSpatial audio integration',
+      'Holographic telepresence3D content creation tools',
+      'Augmented reality overlayVirtual reality integration'
     ],
     popular: true,
     icon: '🌟',
@@ -232,11 +212,11 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     setupTime: '6 hours',
     category: 'Emerging Technology & Visualization',
     realService: true,
-    technology: ['Holographic Display', '3D Rendering', 'Computer Vision', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Unity3D', 'Unreal Engine', 'Blender', 'Maya', '3ds Max', 'VR headsets', 'Motion capture systems'],
-    useCases: ['3D visualization', 'Interactive presentations', 'Virtual meetings', 'Educational content', 'Entertainment experiences', 'Product demonstrations'],
+    technology: ['Holographic Display3D Rendering', 'Computer VisionReact', 'Node.jsPostgreSQL', 'RedisAWS'],
+    integrations: ['Unity3DUnreal Engine', 'BlenderMaya', '3ds MaxVR headsets', 'Motion capture systems'],
+    useCases: ['3D visualizationInteractive presentations', 'Virtual meetingsEducational content', 'Entertainment experiencesProduct demonstrations'],
     roi: 'Average customer sees 400% ROI within 12 months through enhanced engagement and immersive experiences.',
-    competitors: ['Looking Glass', 'Voxon', 'RealView', 'HoloLens', 'Magic Leap'],
+    competitors: ['Looking GlassVoxon', 'RealViewHoloLens', 'Magic Leap'],
     marketSize: '$18.9B market',
     growthRate: '350% annual growth',
     variant: 'ai-futuristic',
@@ -263,16 +243,11 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     period: '/month',
     description: 'Advanced swarm robotics platform that coordinates multiple robots to work together autonomously on complex tasks and missions.',
     features: [
-      'Multi-robot coordination',
-      'Autonomous task allocation',
-      'Swarm intelligence algorithms',
-      'Real-time communication',
-      'Distributed decision making',
-      'Scalable robot networks',
-      'Fault tolerance',
-      'Performance optimization',
-      'Mission planning tools',
-      'Analytics dashboard'
+      'Multi-robot coordinationAutonomous task allocation',
+      'Swarm intelligence algorithmsReal-time communication',
+      'Distributed decision makingScalable robot networks',
+      'Fault tolerancePerformance optimization',
+      'Mission planning toolsAnalytics dashboard'
     ],
     popular: true,
     icon: '🤖',
@@ -285,11 +260,11 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     setupTime: '12 hours',
     category: 'Emerging Technology & Robotics',
     realService: true,
-    technology: ['Swarm Robotics', 'Multi-Agent Systems', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['ROS (Robot Operating System)', 'Robot hardware', 'Sensors and cameras', 'GPS systems', 'Communication networks'],
-    useCases: ['Warehouse automation', 'Search and rescue', 'Agricultural automation', 'Construction automation', 'Logistics optimization', 'Research and development'],
+    technology: ['Swarm RoboticsMulti-Agent Systems', 'Machine LearningReact', 'Node.jsPostgreSQL', 'RedisAWS'],
+    integrations: ['ROS (Robot Operating System)Robot hardware', 'Sensors and camerasGPS systems', 'Communication networks'],
+    useCases: ['Warehouse automationSearch and rescue', 'Agricultural automationConstruction automation', 'Logistics optimizationResearch and development'],
     roi: 'Average customer sees 500% ROI within 15 months through improved efficiency and autonomous operations.',
-    competitors: ['Boston Dynamics', 'iRobot', 'KUKA', 'ABB', 'FANUC'],
+    competitors: ['Boston DynamicsiRobot', 'KUKAABB', 'FANUC'],
     marketSize: '$22.3B market',
     growthRate: '380% annual growth',
     variant: 'ai-futuristic',
@@ -316,16 +291,11 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     period: '/month',
     description: 'Revolutionary quantum internet platform that provides unbreakable encryption and quantum-secured communication networks.',
     features: [
-      'Quantum-secured network',
-      'Quantum key distribution',
-      'Post-quantum cryptography',
-      'Quantum repeaters',
-      'Quantum memory systems',
-      'Quantum routing protocols',
-      'Quantum network management',
-      'Security monitoring',
-      'Performance analytics',
-      'Compliance certifications'
+      'Quantum-secured networkQuantum key distribution',
+      'Post-quantum cryptographyQuantum repeaters',
+      'Quantum memory systemsQuantum routing protocols',
+      'Quantum network managementSecurity monitoring',
+      'Performance analyticsCompliance certifications'
     ],
     popular: true,
     icon: '🌐',
@@ -338,11 +308,11 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     setupTime: '24 hours',
     category: 'Emerging Technology & Quantum Computing',
     realService: true,
-    technology: ['Quantum Internet', 'Quantum Key Distribution', 'Post-Quantum Cryptography', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Traditional internet infrastructure', 'Quantum hardware', 'Security systems', 'Network equipment', 'Monitoring tools'],
-    useCases: ['Secure communications', 'Government networks', 'Financial transactions', 'Healthcare data', 'Defense communications', 'Research collaboration'],
+    technology: ['Quantum InternetQuantum Key Distribution', 'Post-Quantum CryptographyReact', 'Node.jsPostgreSQL', 'RedisAWS'],
+    integrations: ['Traditional internet infrastructureQuantum hardware', 'Security systemsNetwork equipment', 'Monitoring tools'],
+    useCases: ['Secure communicationsGovernment networks', 'Financial transactionsHealthcare data', 'Defense communicationsResearch collaboration'],
     roi: 'Average customer sees 600% ROI within 18 months through enhanced security and quantum capabilities.',
-    competitors: ['Traditional ISPs', 'Quantum network providers', 'Security companies', 'Telecommunications companies'],
+    competitors: ['Traditional ISPsQuantum network providers', 'Security companiesTelecommunications companies'],
     marketSize: '$28.7B market',
     growthRate: '500% annual growth',
     variant: 'quantum-futuristic',
@@ -369,16 +339,11 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     period: '/month',
     description: 'Revolutionary biometric AI platform that provides advanced authentication, identity verification, and security monitoring using multiple biometric modalities.',
     features: [
-      'Multi-modal biometric authentication',
-      'AI-powered identity verification',
-      'Behavioral biometrics',
-      'Liveness detection',
-      'Anti-spoofing technology',
-      'Real-time monitoring',
-      'Compliance management',
-      'Integration APIs',
-      'Analytics dashboard',
-      'Security reporting'
+      'Multi-modal biometric authenticationAI-powered identity verification',
+      'Behavioral biometricsLiveness detection',
+      'Anti-spoofing technologyReal-time monitoring',
+      'Compliance managementIntegration APIs',
+      'Analytics dashboardSecurity reporting'
     ],
     popular: true,
     icon: '🔒',
@@ -391,11 +356,11 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     setupTime: '4 hours',
     category: 'Emerging Technology & Security',
     realService: true,
-    technology: ['Biometric AI', 'Computer Vision', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Mobile devices', 'Security systems', 'Access control', 'Identity management', 'Compliance tools', 'Monitoring systems'],
-    useCases: ['User authentication', 'Identity verification', 'Access control', 'Security monitoring', 'Compliance management', 'Fraud prevention'],
+    technology: ['Biometric AIComputer Vision', 'Machine LearningReact', 'Node.jsPostgreSQL', 'RedisAWS'],
+    integrations: ['Mobile devicesSecurity systems', 'Access controlIdentity management', 'Compliance toolsMonitoring systems'],
+    useCases: ['User authenticationIdentity verification', 'Access controlSecurity monitoring', 'Compliance managementFraud prevention'],
     roi: 'Average customer sees 350% ROI within 10 months through enhanced security and reduced fraud.',
-    competitors: ['Apple Face ID', 'Microsoft Windows Hello', 'Google Pixel Imprint', 'Samsung Knox', 'BioCatch'],
+    competitors: ['Apple Face IDMicrosoft Windows Hello', 'Google Pixel ImprintSamsung Knox', 'BioCatch'],
     marketSize: '$32.1B market',
     growthRate: '280% annual growth',
     variant: 'ai-futuristic',
@@ -422,16 +387,11 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     period: '/month',
     description: 'Revolutionary quantum energy platform that optimizes energy distribution, manages renewable energy systems, and predicts energy consumption patterns.',
     features: [
-      'Quantum energy optimization',
-      'Renewable energy management',
-      'Smart grid optimization',
-      'Energy consumption prediction',
-      'Grid stability analysis',
-      'Demand response optimization',
-      'Energy storage optimization',
-      'Carbon footprint tracking',
-      'Real-time monitoring',
-      'Predictive analytics'
+      'Quantum energy optimizationRenewable energy management',
+      'Smart grid optimizationEnergy consumption prediction',
+      'Grid stability analysisDemand response optimization',
+      'Energy storage optimizationCarbon footprint tracking',
+      'Real-time monitoringPredictive analytics'
     ],
     popular: true,
     icon: '⚡',
@@ -444,11 +404,11 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     setupTime: '16 hours',
     category: 'Emerging Technology & Energy',
     realService: true,
-    technology: ['Quantum Computing', 'Energy Management', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Smart meters', 'Energy management systems', 'Renewable energy equipment', 'Grid infrastructure', 'IoT sensors'],
-    useCases: ['Energy optimization', 'Smart grid management', 'Renewable energy integration', 'Demand response', 'Energy storage', 'Carbon reduction'],
+    technology: ['Quantum ComputingEnergy Management', 'Machine LearningReact', 'Node.jsPostgreSQL', 'RedisAWS'],
+    integrations: ['Smart metersEnergy management systems', 'Renewable energy equipmentGrid infrastructure', 'IoT sensors'],
+    useCases: ['Energy optimizationSmart grid management', 'Renewable energy integrationDemand response', 'Energy storageCarbon reduction'],
     roi: 'Average customer sees 500% ROI within 18 months through improved energy efficiency and cost savings.',
-    competitors: ['Siemens Energy', 'GE Digital', 'Schneider Electric', 'ABB', 'Honeywell'],
+    competitors: ['Siemens EnergyGE Digital', 'Schneider ElectricABB', 'Honeywell'],
     marketSize: '$25.8B market',
     growthRate: '320% annual growth',
     variant: 'quantum-futuristic',
@@ -465,4 +425,4 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     rating: 4.8,
     reviews: 120
   }
-];
+],

@@ -1,11 +1,11 @@
 export class ApiError extends Error {
-  status: number;
-  data?: unknown;
+  status: number,
+  data?: unknown,
 
   constructor(message: string, status: number, data?: unknown) {
-    super(message);
-    this.status = status;
-    this.data = data;
+    super(message),
+    this.status = status,
+    this.data = data,
   }
 }
 
@@ -14,29 +14,29 @@ export async function apiClient(
   init?: RequestInit,
   retries = 3
 ): Promise<Response> {
-  let lastError: unknown;
-  for (let attempt = 0; attempt < retries; attempt++) {
+  let lastError: unknown,
+  for (let attempt = 0, attempt < retries, attempt++) {
     try {
-      const response = await fetch(input, init);
+      const response = await fetch(input, init),
       if (!response.ok) {
-        let data: any;
+        let data: any,
         try {
-          data = await response.clone().json();
+          data = await response.clone().json()
         } catch {
-          data = undefined;
+          data = undefined,
         }
-        const message = data?.error || data?.message || response.statusText;
-        throw new ApiError(message, response.status, data);
+        const message = data?.error || data?.message || response.statusText,
+        throw new ApiError(message, response.status, data),
       }
-      return response;
+      return response,
     } catch (err) {
-      lastError = err;
+      lastError = err,
       // Network errors are usually TypeError
       if (err instanceof TypeError && attempt < retries - 1) {
-        continue;
+        continue,
       }
-      throw err;
+      throw err,
     }
   }
-  throw lastError;
+  throw lastError,
 }

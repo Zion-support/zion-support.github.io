@@ -1,44 +1,44 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 
 export interface AdvancedLogisticsSupplyChainSolution2025 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 
 export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [
@@ -50,16 +50,11 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     period: '/month',
     description: 'Advanced AI-powered supply chain optimization platform that uses machine learning to optimize inventory, demand forecasting, and logistics operations.',
     features: [
-      'Demand forecasting',
-      'Inventory optimization',
-      'Route optimization',
-      'Supplier management',
-      'Risk assessment',
-      'Performance analytics',
-      'Real-time monitoring',
-      'API integration',
-      'Custom algorithms',
-      'Compliance tools'
+      'Demand forecastingInventory optimization',
+      'Route optimizationSupplier management',
+      'Risk assessmentPerformance analytics',
+      'Real-time monitoringAPI integration',
+      'Custom algorithmsCompliance tools'
     ],
     popular: true,
     icon: '📦',
@@ -101,16 +96,11 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     period: '/month',
     description: 'Revolutionary quantum logistics optimization platform that leverages quantum computing to solve complex routing, scheduling, and optimization problems.',
     features: [
-      'Quantum algorithms',
-      'Route optimization',
-      'Scheduling optimization',
-      'Vehicle routing',
-      'Capacity planning',
-      'Real-time optimization',
-      'High-performance computing',
-      'API access',
-      'Custom models',
-      'Performance analytics'
+      'Quantum algorithmsRoute optimization',
+      'Scheduling optimizationVehicle routing',
+      'Capacity planningReal-time optimization',
+      'High-performance computingAPI access',
+      'Custom modelsPerformance analytics'
     ],
     popular: false,
     icon: '⚛️',
@@ -152,16 +142,11 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     period: '/month',
     description: 'Advanced IoT-based fleet management platform that provides real-time monitoring, predictive maintenance, and optimization for vehicle fleets.',
     features: [
-      'Real-time tracking',
-      'Predictive maintenance',
-      'Fuel monitoring',
-      'Driver behavior analysis',
-      'Route optimization',
-      'Performance analytics',
-      'Mobile integration',
-      'API access',
-      'Custom dashboards',
-      'Compliance tools'
+      'Real-time trackingPredictive maintenance',
+      'Fuel monitoringDriver behavior analysis',
+      'Route optimizationPerformance analytics',
+      'Mobile integrationAPI access',
+      'Custom dashboardsCompliance tools'
     ],
     popular: true,
     icon: '🚛',
@@ -203,16 +188,11 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     period: '/month',
     description: 'Advanced blockchain-based supply chain transparency platform that provides end-to-end visibility, traceability, and compliance across global supply chains.',
     features: [
-      'End-to-end traceability',
-      'Smart contracts',
-      'Compliance tracking',
-      'Quality assurance',
-      'Sustainability monitoring',
-      'Real-time updates',
-      'API integration',
-      'Data analytics',
-      'Audit trails',
-      'Performance monitoring'
+      'End-to-end traceabilitySmart contracts',
+      'Compliance trackingQuality assurance',
+      'Sustainability monitoringReal-time updates',
+      'API integrationData analytics',
+      'Audit trailsPerformance monitoring'
     ],
     popular: false,
     icon: '⛓️',
@@ -254,16 +234,11 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     period: '/month',
     description: 'Advanced AI-powered warehouse automation platform that uses machine learning to optimize picking, packing, and warehouse operations.',
     features: [
-      'Automated picking',
-      'Smart routing',
-      'Inventory optimization',
-      'Performance analytics',
-      'Predictive maintenance',
-      'Real-time monitoring',
-      'Mobile integration',
-      'API access',
-      'Custom workflows',
-      'Compliance tools'
+      'Automated pickingSmart routing',
+      'Inventory optimizationPerformance analytics',
+      'Predictive maintenanceReal-time monitoring',
+      'Mobile integrationAPI access',
+      'Custom workflowsCompliance tools'
     ],
     popular: true,
     icon: '🏭',
@@ -297,4 +272,4 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     rating: 4.8,
     reviews: 112
   }
-];
+],

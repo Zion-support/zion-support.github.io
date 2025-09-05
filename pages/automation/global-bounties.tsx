@@ -1,9 +1,9 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
 // @ts-ignore - JSON import
-import data from '../../data/global-bounties.json';
+import data from '../../data/global-bounties.json',
 
 export default function GlobalBountiesPage() {
-  const items: any[] = (data?.items || []).slice(0, 100);
+  const items: any[] = (data?.items || []).slice(0, 100),
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -24,5 +24,5 @@ export default function GlobalBountiesPage() {
         </ul>
       </div>
     </EnhancedLayout>
-  );
+  ),
 }

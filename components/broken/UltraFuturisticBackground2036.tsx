@@ -28,7 +28,7 @@ export default function UltraFuturisticBackground2036({
 
     let animationFrameId: number;
     let particles: Particle[] = [];
-    let connections: Connection[] = [];
+    const connections: Connection[] = [];
 
     // Particle system
     const particles: Array<{

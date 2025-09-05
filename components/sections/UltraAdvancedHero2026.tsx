@@ -1,19 +1,19 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
-import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
-import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
-import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
+import React from 'react',
+import { motion } from 'framer-motion',
+import Link from 'next/link',
+import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles, CheckCircle, Phone, Mail, MapPin } from 'lucide-react',
+import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services',
+import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services',
+import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services',
 
 export default function UltraAdvancedHero2026() {
-  const totalServices = aiAutonomousServices2026.length + quantumSpaceTechServices2026.length + metaverseDigitalRealityServices2026.length;
+  const totalServices = aiAutonomousServices2026.length + quantumSpaceTechServices2026.length + metaverseDigitalRealityServices2026.length,
   
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
+  },
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -23,7 +23,7 @@ export default function UltraAdvancedHero2026() {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -34,7 +34,7 @@ export default function UltraAdvancedHero2026() {
         duration: 0.8
       }
     }
-  };
+  },
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -275,5 +275,5 @@ export default function UltraAdvancedHero2026() {
         </motion.div>
       </div>
     </section>
-  );
+  ),
 }

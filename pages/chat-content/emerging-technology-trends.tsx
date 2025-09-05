@@ -1,5 +1,5 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import type { NextPage } from 'next',
+import Head from 'next/head',
 
 const EmergingTechnologyTrends: NextPage = () => {
   return (
@@ -14,7 +14,7 @@ const EmergingTechnologyTrends: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  )
+},
 
-export default EmergingTechnologyTrends;
+export default EmergingTechnologyTrends,

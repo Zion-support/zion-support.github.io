@@ -1,4 +1,4 @@
-"use client";
+"use client",
 
 export function StructuredData() {
   const structuredData = {
@@ -48,12 +48,12 @@ export function StructuredData() {
       "name": "Zion Tech Group",
       "url": "https://ziontechgroup.com"
     }
-  };
+  },
 
   return (
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
     />
-  );
+  ),
 }

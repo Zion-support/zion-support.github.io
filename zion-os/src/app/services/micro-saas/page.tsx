@@ -1,20 +1,20 @@
-"use client";
+"use client",
 
-import { useState } from "react";
+import { useState } from "react",
 
 interface MicroSAASService {
-  id: string;
-  name: string;
-  description: string;
-  targetMarket: string[];
-  features: string[];
-  pricing: string;
-  startingPrice: number;
-  contactLink: string;
-  icon: string;
-  benefits: string[];
-  integrations: string[];
-  deployment: string;
+  id: string,
+  name: string,
+  description: string,
+  targetMarket: string[],
+  features: string[],
+  pricing: string,
+  startingPrice: number,
+  contactLink: string,
+  icon: string,
+  benefits: string[],
+  integrations: string[],
+  deployment: string
 }
 
 const microSAASServices: MicroSAASService[] = [
@@ -294,7 +294,7 @@ const microSAASServices: MicroSAASService[] = [
     ],
     deployment: "Enterprise cloud with compliance features"
   }
-];
+],
 
 export default function MicroSAASPage() {
   return (
@@ -454,11 +454,11 @@ export default function MicroSAASPage() {
       <div className="text-center">
         <a
           href="/services"
-          className="inline-block px-6 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10 transition-all font-semibold"
+          className="inline-block px-6 py-3 rounded-lg border border-white/20 text-white hover: bg-white/10 transition-all font-semibold"
         >
           ← Back to All Services
         </a>
       </div>
     </div>
-  );
+  )
 }

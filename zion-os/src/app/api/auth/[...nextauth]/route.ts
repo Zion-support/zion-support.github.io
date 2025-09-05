@@ -1,8 +1,8 @@
-import NextAuth from "next-auth";
-import CredentialsProvider from "next-auth/providers/credentials";
-import { PrismaAdapter } from "@auth/prisma-adapter";
-import { prisma } from "@/lib/prisma";
-import bcrypt from "bcryptjs";
+import NextAuth from "next-auth",
+import CredentialsProvider from "next-auth/providers/credentials",
+import { PrismaAdapter } from "@auth/prisma-adapter",
+import { prisma } from "@/lib/prisma",
+import bcrypt from "bcryptjs",
 
 const handler = NextAuth({
   adapter: PrismaAdapter(prisma),
@@ -15,33 +15,33 @@ const handler = NextAuth({
       },
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) {
-          return null;
+          return null,
         }
 
         const user = await prisma.user.findUnique({
           where: {
             email: credentials.email
           }
-        });
+        }),
 
         if (!user || !user.password) {
-          return null;
+          return null,
         }
 
         const isPasswordValid = await bcrypt.compare(
           credentials.password,
           user.password
-        );
+        ),
 
         if (!isPasswordValid) {
-          return null;
+          return null,
         }
 
         return {
           id: user.id,
           email: user.email,
           name: user.name,
-          role: user.role};
+          role: user.role},
       }
     })
   ],
@@ -50,19 +50,19 @@ const handler = NextAuth({
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
-        token.role = user.role;
+        token.role = user.role,
       }
-      return token;
+      return token,
     },
     async session({ session, token }) {
       if (token) {
-        session.user.id = token.sub!;
-        session.user.role = token.role;
+        session.user.id = token.sub!,
+        session.user.role = token.role,
       }
-      return session;
+      return session,
     }},
   pages: {
     signIn: "/auth/signin",
-    signUp: "/auth/signup"}});
+    signUp: "/auth/signup"}}),
 
-export { handler as GET, handler as POST };
+export { handler as GET, handler as POST },

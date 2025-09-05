@@ -5,10 +5,8 @@ export const advancedMicroSaasExpansion2025V2 = [
     category: 'AI & Data',
     pricing: '$299/month',
     features: [
-      'Multi-format content generation',
-      'Brand voice customization',
-      'Content calendar management',
-      'Performance analytics'
+      'Multi-format content generationBrand voice customization',
+      'Content calendar managementPerformance analytics'
     ]
   },
   {
@@ -17,10 +15,8 @@ export const advancedMicroSaasExpansion2025V2 = [
     category: 'AI & Data',
     pricing: '$199/month',
     features: [
-      'Automated content scheduling',
-      'Social media integration',
-      'Lead nurturing workflows',
-      'ROI tracking'
+      'Automated content schedulingSocial media integration',
+      'Lead nurturing workflowsROI tracking'
     ]
   },
   {
@@ -29,10 +25,8 @@ export const advancedMicroSaasExpansion2025V2 = [
     category: 'AI & Data',
     pricing: '$249/month',
     features: [
-      'User behavior analysis',
-      'Dynamic content rendering',
-      'A/B testing automation',
-      'Personalization insights'
+      'User behavior analysisDynamic content rendering',
+      'A/B testing automationPersonalization insights'
     ]
   },
   {
@@ -41,10 +35,8 @@ export const advancedMicroSaasExpansion2025V2 = [
     category: 'AI & Data',
     pricing: '$399/month',
     features: [
-      'Creative brief generation',
-      'Asset management',
-      'Collaboration tools',
-      'Creative analytics'
+      'Creative brief generationAsset management',
+      'Collaboration toolsCreative analytics'
     ]
   },
   {
@@ -53,10 +45,8 @@ export const advancedMicroSaasExpansion2025V2 = [
     category: 'AI & Data',
     pricing: '$349/month',
     features: [
-      'Customer journey mapping',
-      'Predictive analytics',
-      'Segmentation tools',
-      'Behavioral insights'
+      'Customer journey mappingPredictive analytics',
+      'Segmentation toolsBehavioral insights'
     ]
   },
   {
@@ -65,10 +55,8 @@ export const advancedMicroSaasExpansion2025V2 = [
     category: 'AI & Data',
     pricing: '$179/month',
     features: [
-      'Success milestone tracking',
-      'Automated check-ins',
-      'Churn prediction',
-      'Success metrics'
+      'Success milestone trackingAutomated check-ins',
+      'Churn predictionSuccess metrics'
     ]
   },
   {
@@ -77,10 +65,8 @@ export const advancedMicroSaasExpansion2025V2 = [
     category: 'AI & Data',
     pricing: '$229/month',
     features: [
-      'Workflow automation',
-      'Task prioritization',
-      'Performance monitoring',
-      'Success optimization'
+      'Workflow automationTask prioritization',
+      'Performance monitoringSuccess optimization'
     ]
   },
   {
@@ -89,10 +75,8 @@ export const advancedMicroSaasExpansion2025V2 = [
     category: 'AI & Data',
     pricing: '$99/month',
     features: [
-      'Dream pattern analysis',
-      'Psychological insights',
-      'Dream journaling',
-      'Interpretation tools'
+      'Dream pattern analysisPsychological insights',
+      'Dream journalingInterpretation tools'
     ]
   },
   {
@@ -101,10 +85,8 @@ export const advancedMicroSaasExpansion2025V2 = [
     category: 'Education',
     pricing: '$399/month',
     features: [
-      'Adaptive learning paths',
-      'Content personalization',
-      'Progress tracking',
-      'Assessment tools'
+      'Adaptive learning pathsContent personalization',
+      'Progress trackingAssessment tools'
     ]
   },
   {
@@ -113,10 +95,8 @@ export const advancedMicroSaasExpansion2025V2 = [
     category: 'AI & Data',
     pricing: '$159/month',
     features: [
-      'Emotion recognition',
-      'EQ assessment',
-      'Training modules',
-      'Progress tracking'
+      'Emotion recognitionEQ assessment',
+      'Training modulesProgress tracking'
     ]
   },
   {
@@ -125,10 +105,8 @@ export const advancedMicroSaasExpansion2025V2 = [
     category: 'AI & Data',
     pricing: '$499/month',
     features: [
-      'Ethics guidelines',
-      'Bias detection',
-      'Compliance monitoring',
-      'Governance tools'
+      'Ethics guidelinesBias detection',
+      'Compliance monitoringGovernance tools'
     ]
   },
   {
@@ -137,10 +115,8 @@ export const advancedMicroSaasExpansion2025V2 = [
     category: 'Financial Services',
     pricing: '$599/month',
     features: [
-      'Real-time monitoring',
-      'Pattern recognition',
-      'Risk scoring',
-      'Alert management'
+      'Real-time monitoringPattern recognition',
+      'Risk scoringAlert management'
     ]
   },
   {
@@ -149,10 +125,8 @@ export const advancedMicroSaasExpansion2025V2 = [
     category: 'Financial Services',
     pricing: '$449/month',
     features: [
-      'Market analysis',
-      'Portfolio optimization',
-      'Risk assessment',
-      'Financial planning'
+      'Market analysisPortfolio optimization',
+      'Risk assessmentFinancial planning'
     ]
   },
   {
@@ -161,10 +135,8 @@ export const advancedMicroSaasExpansion2025V2 = [
     category: 'Healthcare',
     pricing: '$699/month',
     features: [
-      'Diagnostic algorithms',
-      'Medical imaging analysis',
-      'Patient data integration',
-      'Clinical decision support'
+      'Diagnostic algorithmsMedical imaging analysis',
+      'Patient data integrationClinical decision support'
     ]
   },
   {
@@ -173,10 +145,8 @@ export const advancedMicroSaasExpansion2025V2 = [
     category: 'Transportation',
     pricing: '$379/month',
     features: [
-      'Route optimization',
-      'Inventory management',
-      'Demand forecasting',
-      'Performance analytics'
+      'Route optimizationInventory management',
+      'Demand forecastingPerformance analytics'
     ]
   },
   {
@@ -185,10 +155,8 @@ export const advancedMicroSaasExpansion2025V2 = [
     category: 'Cybersecurity',
     pricing: '$799/month',
     features: [
-      'Threat detection',
-      'Behavioral analysis',
-      'Incident response',
-      'Security analytics'
+      'Threat detectionBehavioral analysis',
+      'Incident responseSecurity analytics'
     ]
   },
   {
@@ -197,10 +165,8 @@ export const advancedMicroSaasExpansion2025V2 = [
     category: 'Manufacturing',
     pricing: '$429/month',
     features: [
-      'Equipment monitoring',
-      'Failure prediction',
-      'Maintenance scheduling',
-      'Cost optimization'
+      'Equipment monitoringFailure prediction',
+      'Maintenance schedulingCost optimization'
     ]
   },
   {
@@ -209,10 +175,8 @@ export const advancedMicroSaasExpansion2025V2 = [
     category: 'AI & Data',
     pricing: '$279/month',
     features: [
-      'Lead scoring',
-      'Opportunity identification',
-      'Sales forecasting',
-      'Performance analytics'
+      'Lead scoringOpportunity identification',
+      'Sales forecastingPerformance analytics'
     ]
   },
   {
@@ -221,11 +185,9 @@ export const advancedMicroSaasExpansion2025V2 = [
     category: 'Cybersecurity',
     pricing: '$549/month',
     features: [
-      'Real-time monitoring',
-      'Threat intelligence',
-      'Automated response',
-      'Incident management'
+      'Real-time monitoringThreat intelligence',
+      'Automated responseIncident management'
     ]
 
   }
-];
+],

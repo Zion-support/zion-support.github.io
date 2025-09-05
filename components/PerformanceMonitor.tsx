@@ -1,19 +1,31 @@
 import React, { useEffect } from 'react';
 
-const PerformanceMonitor: React.FC = () => {
+interface PerformanceData {
+  loadTime: number;
+  domContentLoaded: number;
+  firstPaint: number;
+  firstContentfulPaint: number;
+}
+
+interface PerformanceMonitorProps {
+  onPerformanceData?: (data: PerformanceData) => void;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
   useEffect(() => {
     const measurePerformance = () => {
-      // Measure Core Web Vitals
-      if ('web-vitals' in window) {
-        // This would be imported from web-vitals library
-        console.log('Web Vitals measurement would be here');
-      }
-      
-      // Measure page load time
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigation) {
-        const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-        console.log('Page load time:', loadTime);
+      const paint = performance.getEntriesByType('paint');
+      
+      const performanceData: PerformanceData = {
+        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+        firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
+        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+      };
+      
+      if (onPerformanceData) {
+        onPerformanceData(performanceData);
       }
     };
 
@@ -27,9 +39,9 @@ const PerformanceMonitor: React.FC = () => {
     return () => {
       window.removeEventListener('load', measurePerformance);
     };
-  }, []);
+  }, [onPerformanceData]);
 
-  return null; // This component doesn't render anything visible
+  return null;
 };
 
 export default PerformanceMonitor;

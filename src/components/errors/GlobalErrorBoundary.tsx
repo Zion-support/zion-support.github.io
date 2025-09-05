@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import * as Sentry from '@sentry/nextjs'
-import {logErrorToProduction} from '@/utils/productionLogger';
+import {logErrorToProduction} from '@/utils/productionLogger',
 
 
 interface ErrorBoundaryState {
@@ -30,7 +30,7 @@ interface ErrorBoundaryProps {
   context?: string
 }
 
-export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundaryState> {
   private retryTimeouts: NodeJS.Timeout[] = []
 
   constructor(props: ErrorBoundaryProps) {
@@ -406,7 +406,7 @@ export const useErrorBoundary = () => {
 // Higher-order component for adding error boundaries
 export const withErrorBoundary = <P extends object>(
   Component: React.ComponentType<P>,
-  errorBoundaryProps?: Omit<ErrorBoundaryProps, 'children'>
+  errorBoundaryProps?: Omit<ErrorBoundaryProps 'children'>
 ) => {
   const WrappedComponent = (props: P) => (
     <GlobalErrorBoundary {...errorBoundaryProps}>

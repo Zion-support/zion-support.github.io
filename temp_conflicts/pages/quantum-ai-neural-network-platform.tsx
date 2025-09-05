@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Atom, Brain, Zap, Shield, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
-import SEO from '../components/SEO';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { Atom, Brain, Zap, Shield, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react',
+import SEO from '../components/SEO',
 
 const QuantumAINeuralNetworkPlatform: React.FC = () => {
   const features = [
@@ -15,7 +15,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
     "Quantum coherence preservation",
     "Quantum measurement optimization",
     "Cross-platform quantum synchronization"
-  ];
+  ],
 
   const benefits = [
     "Exponential computational power",
@@ -23,13 +23,13 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
     "Enhanced pattern recognition",
     "Faster convergence rates",
     "Quantum-secure AI operations"
-  ];
+  ],
 
   const pricing = {
     starter: "$999/month",
     professional: "$1,999/month",
     enterprise: "Custom pricing"
-  };
+  },
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -224,7 +224,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-2xl shadow-blue-500/25"
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover: from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-2xl shadow-blue-500/25"
             >
               Start Your Quantum Journey Today
             </motion.button>
@@ -232,7 +232,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+},
 
-export default QuantumAINeuralNetworkPlatform;
+export default QuantumAINeuralNetworkPlatform,

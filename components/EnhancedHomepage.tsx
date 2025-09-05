@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
+import React, { useEffect, useState } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
+import Link from 'next/link',
 import { 
-  ArrowRight, 
+  ArrowRight,
   TrendingUp, 
   Brain, 
   Shield, 
@@ -14,59 +14,59 @@ import {
   Mail, 
   MapPin,
   ArrowUpRight
-} from 'lucide-react';
-import Head from 'next/head';
+} from 'lucide-react',
+import Head from 'next/head',
 
 // Import our enhanced components
-import EnhancedNavigation from './layout/EnhancedNavigation';
-import EnhancedServiceCard from './ui/EnhancedServiceCard';
-import PerformanceMonitor from './PerformanceMonitor';
-import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
+import EnhancedNavigation from './layout/EnhancedNavigation',
+import EnhancedServiceCard from './ui/EnhancedServiceCard',
+import PerformanceMonitor from './PerformanceMonitor',
+import UltraFuturisticBackground from './ui/UltraFuturisticBackground',
 
 // Import service data
-import { revolutionary2044AdvancedMicroSaas } from '../data/revolutionary-2044-advanced-micro-saas';
-import { revolutionary2044ITServices } from '../data/revolutionary-2044-it-services';
-import { revolutionary2044AIServices } from '../data/revolutionary-2044-ai-services';
-import { realEnterpriseMicroSaas2025 } from '../data/2025-real-enterprise-micro-saas';
-import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-services-expansion-v3';
-import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3';
-import { innovative2025ITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-services';
-import { innovative2025AIAutonomousServices } from '../data/2025-innovative-ai-autonomous-services';
+import { revolutionary2044AdvancedMicroSaas } from '../data/revolutionary-2044-advanced-micro-saas',
+import { revolutionary2044ITServices } from '../data/revolutionary-2044-it-services',
+import { revolutionary2044AIServices } from '../data/revolutionary-2044-ai-services',
+import { realEnterpriseMicroSaas2025 } from '../data/2025-real-enterprise-micro-saas',
+import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-services-expansion-v3',
+import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3',
+import { innovative2025ITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-services',
+import { innovative2025AIAutonomousServices } from '../data/2025-innovative-ai-autonomous-services',
 
 const EnhancedHomepage: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
-  const [colorScheme, setColorScheme] = useState<'cyber' | 'quantum' | 'neon' | 'holographic'>('cyber');
-  const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
+  const [isVisible, setIsVisible] = useState(false),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }),
+  const [currentServiceIndex, setCurrentServiceIndex] = useState(0),
+  const [colorScheme, setColorScheme] = useState<'cyber' | 'quantum' | 'neon' | 'holographic'>('cyber'),
+  const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false),
   
   useEffect(() => {
-    setIsVisible(true);
+    setIsVisible(true),
     
     // Auto-rotate featured services
     const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % 6);
-    }, 6000);
+      setCurrentServiceIndex((prev) => (prev + 1) % 6),
+    }, 6000),
     
     // Track mouse movement for parallax effects
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
+      setMousePosition({ x: e.clientX, y: e.clientY }),
+    },
     
     // Show performance monitor after 5 seconds
     const performanceTimer = setTimeout(() => {
-      setShowPerformanceMonitor(true);
-    }, 5000);
+      setShowPerformanceMonitor(true),
+    }, 5000),
     
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove),
     
     return () => {
-      clearInterval(interval);
-      clearTimeout(performanceTimer);
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
+      clearInterval(interval),
+      clearTimeout(performanceTimer),
+      window.removeEventListener('mousemove', handleMouseMove),
+    },
+  }, []),
 
   // Combine all revolutionary services
   const allRevolutionaryServices = [
@@ -78,16 +78,16 @@ const EnhancedHomepage: React.FC = () => {
     ...innovativeAIServicesExpansion2025V3
     ...innovative2025ITInfrastructureServices,
     ...innovative2025AIAutonomousServices
-  ];
+  ],
 
   // Filter services by category
   const getFilteredServices = () => {
-    if (selectedCategory === 'all') return allRevolutionaryServices;
+    if (selectedCategory === 'all') return allRevolutionaryServices,
     return allRevolutionaryServices.filter(service => 
       service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
       (service as any).type?.toLowerCase().includes(selectedCategory.toLowerCase())
-    );
-  };
+    ),
+  },
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Sparkles, color: 'from-purple-500 to-pink-500', scheme: 'holographic' as const },
@@ -96,10 +96,10 @@ const EnhancedHomepage: React.FC = () => {
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500', scheme: 'neon' as const },
     { id: 'space', name: 'Space Technology', icon: Rocket, color: 'from-indigo-500 to-purple-500', scheme: 'holographic' as const },
     { id: 'enterprise', name: 'Enterprise Solutions', icon: Building, color: 'from-green-500 to-teal-500', scheme: 'cyber' as const }
-  ];
+  ],
 
   // Get featured services for rotation
-  const featuredServices = allRevolutionaryServices.slice(0, 6);
+  const featuredServices = allRevolutionaryServices.slice(0, 6),
 
   // Animation variants
   const containerVariants = {
@@ -111,7 +111,7 @@ const EnhancedHomepage: React.FC = () => {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -123,7 +123,7 @@ const EnhancedHomepage: React.FC = () => {
         ease: "easeOut" as const
       }
     }
-  };
+  },
 
   const heroVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -135,7 +135,7 @@ const EnhancedHomepage: React.FC = () => {
         ease: "easeOut" as const
       }
     }
-  };
+  },
 
   const floatingVariants = {
     animate: {
@@ -145,15 +145,15 @@ const EnhancedHomepage: React.FC = () => {
         ease: "easeInOut" as const
       }
     }
-  };
+  },
 
   const handleCategoryChange = (categoryId: string) => {
-    setSelectedCategory(categoryId);
-    const category = categories.find(cat => cat.id === categoryId);
+    setSelectedCategory(categoryId),
+    const category = categories.find(cat => cat.id === categoryId),
     if (category) {
-      setColorScheme(category.scheme);
+      setColorScheme(category.scheme)
     }
-  };
+  },
 
   return (
     <>
@@ -350,7 +350,7 @@ const EnhancedHomepage: React.FC = () => {
                   rating={4.0 + Math.random() * 1.0}
                   reviewCount={Math.floor(Math.random() * 100) + 10}
                   estimatedDelivery="2-4 weeks"
-                  technologies={['AI', 'Cloud', 'Security', 'Automation']}
+                  technologies={['AICloud', 'SecurityAutomation']}
                 />
               ))}
             </motion.div>
@@ -508,7 +508,7 @@ const EnhancedHomepage: React.FC = () => {
         )}
       </AnimatePresence>
     </>
-  );
-};
+  ),
+},
 
-export default EnhancedHomepage;
+export default EnhancedHomepage,

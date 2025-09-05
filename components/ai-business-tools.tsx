@@ -1,9 +1,9 @@
-import React from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
+import React from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button',
 import { 
-  Brain, 
+  Brain,
   MessageSquare, 
   Image, 
   Video, 
@@ -18,7 +18,7 @@ import {
   TrendingUp,
   Shield,
   Globe
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function AIBusinessToolsPage() {
   const aiTools = [
@@ -32,17 +32,14 @@ export default function AIBusinessToolsPage() {
       icon: <Brain className="w-8 h-8 text-green-400" />,
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       features: [
-        'Natural language processing',
-        'Code generation & debugging',
-        'Content creation',
-        'Data analysis',
-        'Creative writing',
-        'Multi-language support'
+        'Natural language processingCode generation & debugging',
+        'Content creationData analysis',
+        'Creative writingMulti-language support'
       ],
       website: 'https://chat.openai.com',
       useCase: 'Ideal for writers, developers, researchers, and anyone who needs AI assistance with complex tasks.',
-      pros: ['Powerful capabilities', 'Easy to use', 'Regular updates', 'Good free tier'],
-      cons: ['Sometimes inaccurate', 'Limited context', 'Privacy concerns'],
+      pros: ['Powerful capabilitiesEasy to use', 'Regular updatesGood free tier'],
+      cons: ['Sometimes inaccurateLimited context', 'Privacy concerns'],
       bestFor: 'Content creators, developers, researchers'
     },
     {
@@ -55,17 +52,14 @@ export default function AIBusinessToolsPage() {
       icon: <Image className="w-8 h-8 text-purple-400" />,
       color: 'bg-gradient-to-br from-purple-500 to-pink-600',
       features: [
-        'Text-to-image generation',
-        'High-resolution output',
-        'Artistic styles',
-        'Commercial usage rights',
-        'Community features',
-        'Discord integration'
+        'Text-to-image generationHigh-resolution output',
+        'Artistic stylesCommercial usage rights',
+        'Community featuresDiscord integration'
       ],
       website: 'https://midjourney.com',
       useCase: 'Perfect for designers, marketers, content creators, and businesses needing custom visual content.',
-      pros: ['High-quality output', 'Creative control', 'Commercial rights', 'Active community'],
-      cons: ['Discord-only interface', 'Limited customization', 'Monthly subscription'],
+      pros: ['High-quality outputCreative control', 'Commercial rightsActive community'],
+      cons: ['Discord-only interfaceLimited customization', 'Monthly subscription'],
       bestFor: 'Designers, marketers, content creators'
     },
     {
@@ -78,17 +72,14 @@ export default function AIBusinessToolsPage() {
       icon: <FileText className="w-8 h-8 text-blue-400" />,
       color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
       features: [
-        'Marketing copy generation',
-        'Blog post writing',
-        'Social media content',
-        'SEO optimization',
-        'Brand voice training',
-        'Team collaboration'
+        'Marketing copy generationBlog post writing',
+        'Social media contentSEO optimization',
+        'Brand voice trainingTeam collaboration'
       ],
       website: 'https://jasper.ai',
       useCase: 'Essential for marketing teams, content creators, and businesses that need high-quality written content at scale.',
-      pros: ['Specialized for marketing', 'Brand voice training', 'SEO optimization', 'Team features'],
-      cons: ['Expensive', 'Limited free trial', 'Can be repetitive'],
+      pros: ['Specialized for marketingBrand voice training', 'SEO optimizationTeam features'],
+      cons: ['ExpensiveLimited free trial', 'Can be repetitive'],
       bestFor: 'Marketing teams, content creators, businesses'
     },
     {
@@ -101,17 +92,14 @@ export default function AIBusinessToolsPage() {
       icon: <Video className="w-8 h-8 text-red-400" />,
       color: 'bg-gradient-to-br from-red-500 to-pink-600',
       features: [
-        'AI avatar generation',
-        'Text-to-speech',
-        'Video templates',
-        'Multi-language support',
-        'Custom branding',
-        'API access'
+        'AI avatar generationText-to-speech',
+        'Video templatesMulti-language support',
+        'Custom brandingAPI access'
       ],
       website: 'https://synthesia.io',
       useCase: 'Perfect for creating training videos, marketing content, and presentations without hiring actors or video crews.',
-      pros: ['Professional quality', 'Multiple languages', 'Custom avatars', 'Easy to use'],
-      cons: ['Limited avatar options', 'Expensive', 'Subscription required'],
+      pros: ['Professional qualityMultiple languages', 'Custom avatarsEasy to use'],
+      cons: ['Limited avatar optionsExpensive', 'Subscription required'],
       bestFor: 'Training departments, marketers, educators'
     },
     {
@@ -124,17 +112,14 @@ export default function AIBusinessToolsPage() {
       icon: <MessageSquare className="w-8 h-8 text-orange-400" />,
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
       features: [
-        'Marketing copy generation',
-        'Product descriptions',
-        'Social media posts',
-        'Email campaigns',
-        'Blog content',
-        'Free tier available'
+        'Marketing copy generationProduct descriptions',
+        'Social media postsEmail campaigns',
+        'Blog contentFree tier available'
       ],
       website: 'https://copy.ai',
       useCase: 'Great for small businesses, entrepreneurs, and marketers who need quality copy without hiring writers.',
-      pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable'],
-      cons: ['Limited customization', 'Quality varies', 'Basic features'],
+      pros: ['Free tierEasy to use', 'Good templatesAffordable'],
+      cons: ['Limited customizationQuality varies', 'Basic features'],
       bestFor: 'Small businesses, entrepreneurs, marketers'
     },
     {
@@ -147,17 +132,14 @@ export default function AIBusinessToolsPage() {
       icon: <Check className="w-8 h-8 text-green-400" />,
       color: 'bg-gradient-to-br from-green-500 to-teal-600',
       features: [
-        'Grammar & spelling check',
-        'Tone analysis',
-        'Style suggestions',
-        'Plagiarism detection',
-        'Browser extension',
-        'Mobile apps'
+        'Grammar & spelling checkTone analysis',
+        'Style suggestionsPlagiarism detection',
+        'Browser extensionMobile apps'
       ],
       website: 'https://grammarly.com',
       useCase: 'Essential for anyone who writes professionally, including students, professionals, and content creators.',
-      pros: ['Excellent accuracy', 'Multiple platforms', 'Free tier', 'User-friendly'],
-      cons: ['Limited free features', 'Privacy concerns', 'Can be overzealous'],
+      pros: ['Excellent accuracyMultiple platforms', 'Free tierUser-friendly'],
+      cons: ['Limited free featuresPrivacy concerns', 'Can be overzealous'],
       bestFor: 'Students, professionals, content creators'
     },
     {
@@ -170,17 +152,14 @@ export default function AIBusinessToolsPage() {
       icon: <Video className="w-8 h-8 text-blue-400" />,
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       features: [
-        'Text-to-video conversion',
-        'Video templates',
-        'Music library',
-        'Brand customization',
-        'Social media formats',
-        'Free tier available'
+        'Text-to-video conversionVideo templates',
+        'Music libraryBrand customization',
+        'Social media formatsFree tier available'
       ],
       website: 'https://lumen5.com',
       useCase: 'Perfect for marketers, social media managers, and businesses that want to create video content from existing text.',
-      pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable'],
-      cons: ['Limited customization', 'Basic features', 'Watermark on free'],
+      pros: ['Free tierEasy to use', 'Good templatesAffordable'],
+      cons: ['Limited customizationBasic features', 'Watermark on free'],
       bestFor: 'Marketers, social media managers, small businesses'
     },
     {
@@ -193,27 +172,24 @@ export default function AIBusinessToolsPage() {
       icon: <TrendingUp className="w-8 h-8 text-green-400" />,
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       features: [
-        'Content optimization',
-        'Keyword research',
-        'Competitor analysis',
-        'SERP analysis',
-        'Content editor',
-        'Rank tracking'
+        'Content optimizationKeyword research',
+        'Competitor analysisSERP analysis',
+        'Content editorRank tracking'
       ],
       website: 'https://surferseo.com',
       useCase: 'Essential for content marketers, SEO specialists, and businesses that want to improve their search rankings.',
-      pros: ['Data-driven insights', 'Content optimization', 'Competitor analysis', 'Good support'],
-      cons: ['Expensive', 'Complex interface', 'Steep learning curve'],
+      pros: ['Data-driven insightsContent optimization', 'Competitor analysisGood support'],
+      cons: ['ExpensiveComplex interface', 'Steep learning curve'],
       bestFor: 'SEO specialists, content marketers, businesses'
     }
-  ];
+  ],
 
-  const categories = ['All', 'AI Assistant', 'AI Art', 'AI Writing', 'AI Video', 'AI Copywriting', 'AI SEO'];
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
+  const categories = ['AllAI Assistant', 'AI ArtAI Writing', 'AI VideoAI Copywriting', 'AI SEO'],
+  const [selectedCategory, setSelectedCategory] = React.useState('All'),
 
   const filteredTools = selectedCategory === 'All' 
     ? aiTools 
-    : aiTools.filter(tool => tool.category === selectedCategory);
+    : aiTools.filter(tool => tool.category === selectedCategory),
 
   return (
     <>
@@ -471,7 +447,7 @@ export default function AIBusinessToolsPage() {
           <p className="text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed">
             Our AI experts can help you identify the right tools, implement them effectively, and maximize their impact on your business.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm: flex-row gap-6 justify-center">
             <Button
               href="/contact"
               variant="secondary"
@@ -493,5 +469,5 @@ export default function AIBusinessToolsPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

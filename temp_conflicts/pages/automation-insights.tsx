@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function AutomationInsightsPage() {
   const automationTrends = [
@@ -28,7 +28,7 @@ export default function AutomationInsightsPage() {
       readTime: '10 min read',
       featured: false
     }
-  ];
+  ],
 
   const automationTools = [
     {
@@ -41,7 +41,7 @@ export default function AutomationInsightsPage() {
     {
       id: 'performance-monitor',
       title: 'Performance Monitoring Suite',
-      description: 'Comprehensive tools for monitoring and optimizing automation performance.',
+      description: 'Comprehensive tools for monitoring and optimizing automation window.window.window.performance.',
       type: 'Tool',
       complexity: 'Intermediate'
     },
@@ -52,7 +52,7 @@ export default function AutomationInsightsPage() {
       type: 'Process',
       complexity: 'Beginner'
     }
-  ];
+  ],
 
   const successMetrics = [
     {
@@ -75,7 +75,7 @@ export default function AutomationInsightsPage() {
       label: 'Pages Generated',
       description: 'Content created autonomously'
     }
-  ];
+  ],
 
   return (
     <>
@@ -163,7 +163,7 @@ export default function AutomationInsightsPage() {
               <div className="flex flex-wrap justify-center gap-4">
                 <Link 
                   href="/contact"
-                  className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
+                  className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
                 >
                   Get Started
                 </Link>
@@ -179,5 +179,5 @@ export default function AutomationInsightsPage() {
         </main>
       </div>
     </>
-  );
+  )
 }

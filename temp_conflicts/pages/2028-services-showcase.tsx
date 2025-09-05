@@ -1,23 +1,23 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Rocket, Brain, Atom, Shield, Cloud, Database, Code, 
   BarChart3, Star, Zap, Sparkles, ArrowRight, CheckCircle,
   TrendingUp, Users, Globe, Cpu, Lock, Target, Award, Phone
-} from 'lucide-react';
-import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
-import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
-import { futuristic2028Services } from '../data/2028-futuristic-micro-saas';
-import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
+} from 'lucide-react',
+import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',
+import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028',
+import { futuristic2028Services } from '../data/2028-futuristic-micro-saas',
+import { emergingTech2028Services } from '../data/2028-emerging-tech-services',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -48,7 +48,7 @@ const serviceCategories = [
     color: 'from-emerald-600 to-teal-600',
     services: emergingTech2028Services.slice(4, 8)
   }
-];
+],
 
 const features = [
   {
@@ -71,7 +71,7 @@ const features = [
     title: 'Customer Focused',
     description: 'Dedicated support and personalized solutions'
   }
-];
+],
 
 export default function ServicesShowcase2028() {
   return (
@@ -168,7 +168,7 @@ export default function ServicesShowcase2028() {
               Why Choose Our <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">2028 Services</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We combine cutting-edge technology with practical business solutions to deliver unprecedented value and performance.
+              We combine cutting-edge technology with practical business solutions to deliver unprecedented value and window.window.window.performance.
             </p>
           </motion.div>
 
@@ -360,5 +360,5 @@ export default function ServicesShowcase2028() {
 
       <UltraFuturisticFooter2028 />
     </>
-  );
+  ),
 }

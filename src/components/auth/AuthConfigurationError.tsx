@@ -1,22 +1,22 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
-import { Button } from '@/components/ui/button';
-import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Button } from '@/components/ui/button',
+import { Alert, AlertDescription } from '@/components/ui/alert',
 
 interface AuthConfigurationErrorProps {
-  onRetry?: () => void;
-  showSetupButton?: boolean;
+  onRetry?: () => void,
+  showSetupButton?: boolean,
 }
 
 export function AuthConfigurationError({ onRetry, showSetupButton = true }: AuthConfigurationErrorProps) {
   const handleRefresh = () => {
     if (onRetry) {
-      onRetry();
+      onRetry(),
     } else {
-      window.location.reload();
+      window.location.reload(),
     }
-  };
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4">
@@ -59,7 +59,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
           <div className="flex flex-col sm:flex-row gap-3 mb-6">
             {showSetupButton && (
               <Button 
-                onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md', '_blank')}
+                onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
                 className="bg-blue-600 hover:bg-blue-700 text-white flex-1"
               >
                 <Settings className="w-4 h-4 mr-2" />
@@ -188,8 +188,8 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
           <p>
             For detailed instructions, see{' '}
             <button 
-              onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md', '_blank')}
-              className="text-blue-600 hover:underline"
+              onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
+              className="text-blue-600 hover: underline"
             >
               AUTH0_SETUP_GUIDE_ISSUE_1.md
             </button>
@@ -197,7 +197,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default AuthConfigurationError; 
+export default AuthConfigurationError, 

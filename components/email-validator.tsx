@@ -58,7 +58,7 @@ export default function EmailValidatorPage() {
     
     let status = 'valid';
     let score = 100;
-    let issues = [];
+    const issues = [];
     
     if (!emailRegex.test(email)) {
       status = 'invalid';

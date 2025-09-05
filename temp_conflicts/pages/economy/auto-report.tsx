@@ -1,47 +1,47 @@
-import fs from 'fs';
-import path from 'path';
-import Link from 'next/link';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import fs from 'fs',
+import path from 'path',
+import Link from 'next/link',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
 
 export async function getStaticProps() {
-  const reportsDir = path.join(process.cwd(), 'data', 'reports', 'economy');
-  let latest: string | null = null;
-  let summaries: { runId: string; createdAt: string; endingSupply: number; endingTreasury: number; avgInflationPct: number }[] = [];
+  const reportsDir = path.join(process.cwd(), 'datareports', 'economy'),
+  let latest: string | null = null,
+  let summaries: { runId: string, createdAt: string, endingSupply: number, endingTreasury: number, avgInflationPct: number }[] = [],
 
   if (fs.existsSync(reportsDir)) {
-    const latestPath = path.join(reportsDir, 'latest.json');
+    const latestPath = path.join(reportsDir, 'latest.json'),
     if (fs.existsSync(latestPath)) {
       try {
-        const latestData = JSON.parse(fs.readFileSync(latestPath, 'utf8'));
-        latest = latestData.latest || null;
+        const latestData = JSON.parse(fs.readFileSync(latestPath, 'utf8')),
+        latest = latestData.latest || null,
       } catch {}
     }
 
-    const files = fs.readdirSync(reportsDir).filter((f) => f.endsWith('-summary.json'));
+    const files = fs.readdirSync(reportsDir).filter((f) => f.endsWith('-summary.json')),
     summaries = files
       .map((f) => {
         try {
-          const data = JSON.parse(fs.readFileSync(path.join(reportsDir, f), 'utf8'));
-          return data;
+          const data = JSON.parse(fs.readFileSync(path.join(reportsDir, f), 'utf8')),
+          return data,
         } catch {
-          return null;
+          return null,
         }
       })
       .filter(Boolean)
-      .sort((a: any, b: any) => (a.createdAt < b.createdAt ? 1 : -1));
+      .sort((a: any, b: any) => (a.createdAt < b.createdAt ? 1 : -1))
   }
 
-  let latestReport: any = null;
+  let latestReport: any = null,
   if (latest) {
-    const p = path.join(reportsDir, `${latest}.json`);
+    const p = path.join(reportsDir, `${latest}.json`),
     if (fs.existsSync(p)) {
       try {
-        latestReport = JSON.parse(fs.readFileSync(p, 'utf8'));
+        latestReport = JSON.parse(fs.readFileSync(p, 'utf8')),
       } catch {}
     }
   }
 
-  return { props: { latest, latestReport, summaries } };
+  return { props: { latest, latestReport, summaries } },
 }
 
 export default function EconomyAutoReportPage({ latest, latestReport, summaries }: any) {
@@ -88,5 +88,5 @@ export default function EconomyAutoReportPage({ latest, latestReport, summaries 
         </div>
       </div>
     </EnhancedLayout>
-  );
+  ),
 }

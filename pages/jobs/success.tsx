@@ -1,9 +1,9 @@
-import Link from 'next/link';
+import Link from 'next/link',
 
 export default function JobSuccessPage() {
   return (
     <div className="max-w-xl text-center mx-auto py-16">
-      <div className="mx-auto mb-6 h-20 w-20 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
+      <div className="mx-auto mb-6 h-20 w-20 rounded-full bg-green-100 dark: bg-green-900/30 flex items-center justify-center">
         <span className="text-3xl">✅</span>
       </div>
       <h1 className="text-xl font-semibold mb-2">Job posted successfully</h1>
@@ -13,5 +13,5 @@ export default function JobSuccessPage() {
         <Link href="/talent"><a className="px-4 py-2 rounded-md border">Browse Talent</a></Link>
       </div>
     </div>
-  );
+  )
 }

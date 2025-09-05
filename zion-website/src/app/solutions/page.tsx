@@ -1,5 +1,5 @@
 import { 
-  LightBulbIcon, 
+  LightBulbIcon,
   CpuChipIcon, 
   RocketLaunchIcon, 
   ShieldCheckIcon,
@@ -15,10 +15,8 @@ const flagshipSolutions = [
     description: 'Revolutionary autonomous research platform that accelerates scientific discovery across all domains.',
     icon: LightBulbIcon,
     features: [
-      'Natural Language Processing',
-      'Multi-modal Learning',
-      'Real-time Collaboration',
-      'Advanced Analytics'
+      'Natural Language ProcessingMulti-modal Learning',
+      'Real-time CollaborationAdvanced Analytics'
     ],
     href: '/solutions/ai-autonomous-research'},
   {
@@ -26,10 +24,8 @@ const flagshipSolutions = [
     description: 'Breakthrough quantum computing technology for next-generation AI applications.',
     icon: CpuChipIcon,
     features: [
-      'Quantum Supremacy',
-      'Neural Architecture Search',
-      'Hybrid Classical-Quantum',
-      'Scalable Architecture'
+      'Quantum SupremacyNeural Architecture Search',
+      'Hybrid Classical-QuantumScalable Architecture'
     ],
     href: '/solutions/quantum-neural-networks'},
   {
@@ -37,10 +33,8 @@ const flagshipSolutions = [
     description: 'Self-optimizing business processes that adapt and improve automatically.',
     icon: RocketLaunchIcon,
     features: [
-      'Process Automation',
-      'Predictive Analytics',
-      'Continuous Optimization',
-      'Real-time Monitoring'
+      'Process AutomationPredictive Analytics',
+      'Continuous OptimizationReal-time Monitoring'
     ],
     href: '/solutions/autonomous-business'},
   {
@@ -48,10 +42,8 @@ const flagshipSolutions = [
     description: 'Intelligent asset tracking and optimization for modern enterprise infrastructure.',
     icon: ShieldCheckIcon,
     features: [
-      'Asset Discovery',
-      'Lifecycle Management',
-      'Security Compliance',
-      'Cost Optimization'
+      'Asset DiscoveryLifecycle Management',
+      'Security ComplianceCost Optimization'
     ],
     href: '/solutions/it-asset-management'}]
 
@@ -60,22 +52,22 @@ const industryApplications = [
     name: 'Healthcare',
     description: 'AI-powered diagnostics, drug discovery, and patient care optimization.',
     icon: UserGroupIcon,
-    useCases: ['Medical Imaging Analysis', 'Drug Discovery', 'Patient Risk Assessment', 'Clinical Decision Support']},
+    useCases: ['Medical Imaging AnalysisDrug Discovery', 'Patient Risk AssessmentClinical Decision Support']},
   {
     name: 'Finance',
     description: 'Intelligent trading, risk assessment, and fraud detection systems.',
     icon: ChartBarIcon,
-    useCases: ['Algorithmic Trading', 'Credit Risk Analysis', 'Fraud Detection', 'Portfolio Optimization']},
+    useCases: ['Algorithmic TradingCredit Risk Analysis', 'Fraud DetectionPortfolio Optimization']},
   {
     name: 'Manufacturing',
     description: 'Predictive maintenance, quality control, and supply chain optimization.',
     icon: CogIcon,
-    useCases: ['Predictive Maintenance', 'Quality Control', 'Supply Chain Optimization', 'Production Planning']},
+    useCases: ['Predictive MaintenanceQuality Control', 'Supply Chain OptimizationProduction Planning']},
   {
     name: 'Retail',
     description: 'Customer behavior analysis, inventory management, and personalized marketing.',
     icon: GlobeAltIcon,
-    useCases: ['Customer Analytics', 'Inventory Management', 'Personalized Marketing', 'Demand Forecasting']}]
+    useCases: ['Customer AnalyticsInventory Management', 'Personalized MarketingDemand Forecasting']}]
 
 const implementationSteps = [
   {

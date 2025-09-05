@@ -1,91 +1,91 @@
-import { useCallback, useMemo, useState } from 'react';
-import Head from 'next/head';
-import DatePicker from 'react-datepicker';
-import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
-import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
+import { useCallback, useMemo, useState } from 'react',
+import Head from 'next/head',
+import DatePicker from 'react-datepicker',
+import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit',
+import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit',
 
 const KitPage = () => {
-  const [bundle, setBundle] = useState<MediaBundle>('general');
-  const [startDate, setStartDate] = useState<Date>(new Date());
-  const [companyName, setCompanyName] = useState('Zion');
-  const [raiseAmount, setRaiseAmount] = useState('$5M');
-  const [tokenName, setTokenName] = useState('ZION');
-  const [timeline, setTimeline] = useState<{ label: string; date: string }[]>([]);
+  const [bundle, setBundle] = useState<MediaBundle>('general'),
+  const [startDate, setStartDate] = useState<Date>(new Date()),
+  const [companyName, setCompanyName] = useState('Zion'),
+  const [raiseAmount, setRaiseAmount] = useState('$5M'),
+  const [tokenName, setTokenName] = useState('ZION'),
+  const [timeline, setTimeline] = useState<{ label: string, date: string }[]>([]),
 
-  const assets: MediaAsset[] = useMemo(() => getDefaultAssets(bundle), [bundle]);
+  const assets: MediaAsset[] = useMemo(() => getDefaultAssets(bundle), [bundle]),
 
   const onGenerateTimeline = useCallback(() => {
-    setTimeline(buildTimeline(startDate));
-  }, [startDate]);
+    setTimeline(buildTimeline(startDate)),
+  }, [startDate]),
 
   const onDownloadZip = useCallback(async () => {
-    const JSZip = (await import('jszip')).default;
-    const zip = new JSZip();
+    const JSZip = (await import('jszip')).default,
+    const zip = new JSZip(),
 
     // Add static/dynamic assets
     for (const asset of assets) {
       if (asset.type === 'text' && asset.content != null) {
-        zip.file(asset.filename, asset.content);
+        zip.file(asset.filename, asset.content),
       } else if (asset.type === 'binary' && asset.path) {
-        const res = await fetch(asset.path);
-        const blob = await res.blob();
-        zip.file(asset.filename, blob);
+        const res = await fetch(asset.path),
+        const blob = await res.blob(),
+        zip.file(asset.filename, blob),
       }
     }
 
     // Add press releases
-    const nowStr = new Date().toISOString().substring(0, 10);
-    const prSeed = buildPressRelease('seed-round', { companyName, date: nowStr, raiseAmount });
-    const prLaunch = buildPressRelease('launch', { companyName, date: nowStr });
-    const prToken = buildPressRelease('token-sale', { companyName, date: nowStr, tokenName });
-    zip.file('press-releases/seed-round.md', prSeed);
-    zip.file('press-releases/launch.md', prLaunch);
-    if (bundle === 'web3') zip.file('press-releases/token-sale.md', prToken);
+    const nowStr = new Date().toISOString().substring(0, 10),
+    const prSeed = buildPressRelease('seed-round', { companyName, date: nowStr, raiseAmount }),
+    const prLaunch = buildPressRelease('launch', { companyName, date: nowStr }),
+    const prToken = buildPressRelease('token-sale', { companyName, date: nowStr, tokenName }),
+    zip.file('press-releases/seed-round.md', prSeed),
+    zip.file('press-releases/launch.md', prLaunch),
+    if (bundle === 'web3') zip.file('press-releases/token-sale.md', prToken),
 
     // Add timeline if generated
     if (timeline.length > 0) {
-      const tl = timeline.map(t => `${t.label}: ${t.date}`).join('\n');
-      zip.file('rollout-timeline.txt', tl);
+      const tl = timeline.map(t => `${t.label}: ${t.date}`).join('\n'),
+      zip.file('rollout-timeline.txt', tl),
     }
 
-    const blob = await zip.generateAsync({ type: 'blob' });
-    const { saveAs } = await import('file-saver');
-    saveAs(blob, `zion-media-kit-${bundle}.zip`);
-  }, [assets, bundle, companyName, raiseAmount, timeline, tokenName]);
+    const blob = await zip.generateAsync({ type: 'blob' }),
+    const { saveAs } = await import('file-saver'),
+    saveAs(blob, `zion-media-kit-${bundle}.zip`),
+  }, [assets, bundle, companyName, raiseAmount, timeline, tokenName]),
 
   const onGeneratePdf = useCallback(async () => {
-    const { PDFDocument, StandardFonts, rgb } = await import('pdf-lib');
-    const pdfDoc = await PDFDocument.create();
-    const page = pdfDoc.addPage([612, 792]);
-    const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
+    const { PDFDocument, StandardFonts, rgb } = await import('pdf-lib'),
+    const pdfDoc = await PDFDocument.create(),
+    const page = pdfDoc.addPage([612, 792]),
+    const font = await pdfDoc.embedFont(StandardFonts.Helvetica),
 
     const drawText = (text: string, x: number, y: number, size = 12) => {
-      page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) });
-    };
+      page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) }),
+    },
 
-    let y = 760;
-    drawText('Zion Media Kit', 50, y, 18); y -= 24;
-    drawText(`Bundle: ${bundle}`, 50, y); y -= 16;
-    drawText('Assets:', 50, y); y -= 16;
-    assets.slice(0, 8).forEach(a => { drawText(`- ${a.filename}`, 60, y); y -= 14; });
-    if (y < 120) { pdfDoc.addPage([612, 792]); }
+    let y = 760,
+    drawText('Zion Media Kit', 50, y, 18), y -= 24,
+    drawText(`Bundle: ${bundle}`, 50, y), y -= 16,
+    drawText('Assets:', 50, y), y -= 16,
+    assets.slice(0, 8).forEach(a => { drawText(`- ${a.filename}`, 60, y), y -= 14, }),
+    if (y < 120) { pdfDoc.addPage([612, 792]), }
     if (timeline.length) {
-      y -= 6; drawText('Timeline:', 50, y); y -= 16;
-      timeline.forEach(t => { drawText(`- ${t.label}: ${t.date}`, 60, y); y -= 14; });
+      y -= 6, drawText('Timeline:', 50, y), y -= 16,
+      timeline.forEach(t => { drawText(`- ${t.label}: ${t.date}`, 60, y), y -= 14, }),
     }
 
-    const pdfBytes = await pdfDoc.save();
-    const blob = new Blob([pdfBytes], { type: 'application/pdf' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url; link.download = `zion-media-kit-${bundle}.pdf`; link.click();
-    URL.revokeObjectURL(url);
-  }, [assets, bundle, timeline]);
+    const pdfBytes = await pdfDoc.save(),
+    const blob = new Blob([pdfBytes], { type: 'application/pdf' }),
+    const url = URL.createObjectURL(blob),
+    const link = document.createElement('a'),
+    link.href = url, link.download = `zion-media-kit-${bundle}.pdf`, link.click(),
+    URL.revokeObjectURL(url),
+  }, [assets, bundle, timeline]),
 
-  const PressReleaseCard = ({ type, title }: { type: PressReleaseType; title: string }) => {
-    const nowStr = new Date().toISOString().substring(0, 10);
-    const text = buildPressRelease(type, { companyName, date: nowStr, raiseAmount, tokenName });
-    const onCopy = () => navigator.clipboard.writeText(text);
+  const PressReleaseCard = ({ type, title }: { type: PressReleaseType, title: string }) => {
+    const nowStr = new Date().toISOString().substring(0, 10),
+    const text = buildPressRelease(type, { companyName, date: nowStr, raiseAmount, tokenName }),
+    const onCopy = () => navigator.clipboard.writeText(text),
     return (
       <div className="p-4 border rounded-lg space-y-2">
         <div className="flex items-center justify-between">
@@ -94,8 +94,8 @@ const KitPage = () => {
         </div>
         <pre className="whitespace-pre-wrap text-xs bg-gray-50 p-3 rounded max-h-60 overflow-auto">{text}</pre>
       </div>
-    );
-  };
+    ),
+  },
 
   return (
     <div>
@@ -117,7 +117,7 @@ const KitPage = () => {
           <div className="p-4 border rounded-lg">
             <h3 className="font-semibold mb-2">Bundle</h3>
             <div className="flex gap-2">
-              {(['general','web3','institutional'] as MediaBundle[]).map(b => (
+              {(['generalweb3','institutional'] as MediaBundle[]).map(b => (
                 <button key={b} onClick={() => setBundle(b)} className={`px-3 py-1 rounded border ${bundle===b ? 'bg-blue-600 text-white border-blue-600':'bg-white'}`}>{b}</button>
               ))}
             </div>
@@ -167,7 +167,7 @@ const KitPage = () => {
         </section>
       </div>
     </div>
-  );
-};
+  ),
+},
 
-export default KitPage;
+export default KitPage,

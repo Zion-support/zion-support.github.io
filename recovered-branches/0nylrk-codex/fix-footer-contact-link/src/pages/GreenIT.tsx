@@ -1,10 +1,10 @@
 
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Leaf, Server, Cloud } from "lucide-react";
-import { Link } from "react-router-dom";
-import { AppLayout } from "@/layout/AppLayout";
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Leaf, Server, Cloud } from "lucide-react",
+import { Link } from "react-router-dom",
+import { AppLayout } from "@/layout/AppLayout",
 
 export default function GreenIT() {
   const greenITSolutions = [
@@ -20,13 +20,13 @@ export default function GreenIT() {
       title: "Renewable Energy Integration",
       description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",
       icon: Leaf}
-  ];
+  ],
 
   return (
     <AppLayout>
       <SEO 
         title="Green IT Solutions - Sustainable Technology" 
-        description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance." 
+        description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.window.window.performance." 
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
         canonical="https://app.ziontechgroup.com/marketplace/category/green-it"
       />
@@ -88,7 +88,7 @@ export default function GreenIT() {
             <div className="mb-16">
               <h2 className="text-2xl font-bold text-white mb-6">Why Choose Green IT?</h2>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
                 <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
                   <h3 className="text-white font-medium text-xl mb-4">Environmental Benefits</h3>
                   <ul className="text-zion-slate-light space-y-2">
@@ -124,5 +124,5 @@ export default function GreenIT() {
         </div>
       </main>
     </AppLayout>
-  );
+  )
 }

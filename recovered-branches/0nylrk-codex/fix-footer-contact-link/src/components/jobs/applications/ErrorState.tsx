@@ -1,8 +1,8 @@
 
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card",
 
 interface ErrorStateProps {
-  error: string;
+  error: string
 }
 
 export function ErrorState({ error }: ErrorStateProps) {
@@ -13,5 +13,5 @@ export function ErrorState({ error }: ErrorStateProps) {
         <p className="text-muted-foreground">{error}</p>
       </CardContent>
     </Card>
-  );
+  ),
 }

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
@@ -12,14 +12,14 @@ import {
   Leaf, Sun, Moon, Wind, Droplets, Mountain,
   Code, Wrench, Smartphone, BarChart3, Eye,
   Infinity, Hexagon, Network
-} from 'lucide-react';
+} from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -94,7 +94,7 @@ const serviceCategories = [
       { name: 'AI HR Management Suite 2030', href: '/ai-hr-management-suite-2030', description: 'Intelligent human resources management powered by AI', price: '$149/month' }
     ]
   }
-];
+],
 
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home },
@@ -105,7 +105,7 @@ const mainNavigation = [
   { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
   { name: 'Blog', href: '/blog', icon: MessageCircle },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
-];
+],
 
 const quickLinks = [
   { name: 'AI Services', href: '/services/ai', icon: Brain, color: 'from-purple-500 to-pink-500' },
@@ -114,23 +114,23 @@ const quickLinks = [
   { name: 'Space Technology', href: '/services/space', icon: Rocket, color: 'from-indigo-500 to-purple-500' },
   { name: 'Enterprise IT', href: '/services/enterprise', icon: Cpu, color: 'from-gray-500 to-slate-500' },
   { name: 'Micro SAAS', href: '/services/micro-saas', icon: Target, color: 'from-orange-500 to-red-500' }
-];
+],
 
 export default function UltraFuturisticNavigation2030() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState<number | null>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false),
+  const [activeCategory, setActiveCategory] = useState<number | null>(null),
+  const [isScrolled, setIsScrolled] = useState(false),
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+      setIsScrolled(window.scrollY > 20),
+    },
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
+  const toggleMenu = () => setIsOpen(!isOpen),
+  const closeMenu = () => setIsOpen(false),
 
   return (
     <>
@@ -352,5 +352,5 @@ export default function UltraFuturisticNavigation2030() {
       {/* Spacer for fixed navigation */}
       <div className="h-20"></div>
     </>
-  );
+  ),
 }

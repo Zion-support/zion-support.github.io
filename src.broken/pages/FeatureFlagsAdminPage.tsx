@@ -1,8 +1,8 @@
-import React from 'react';
-import AdminLayout from '@/components/admin/AdminLayout';
+import React from 'react',
+import AdminLayout from '@/components/admin/AdminLayout',
 
 export default function FeatureFlagsAdminPage() {
-  const url = process.env.UNLEASH_URL || '';
+  const url = process.env.UNLEASH_URL || '',
   return (
     <AdminLayout>
       <div className="space-y-4">
@@ -16,5 +16,5 @@ export default function FeatureFlagsAdminPage() {
         </p>
       </div>
     </AdminLayout>
-  );
+  ),
 }

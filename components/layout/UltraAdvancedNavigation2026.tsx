@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, 
   BookOpen, MessageCircle 
-} from 'lucide-react';
+} from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -88,7 +88,7 @@ const serviceCategories = [
       { name: 'AI Business Intelligence', href: '/autonomous-business-intelligence-network', description: 'Self-evolving BI', price: '$1,299/month' }
     ]
   }
-];
+],
 
 const companyLinks = [
   { name: 'Home', href: '/', icon: Home },
@@ -101,20 +101,20 @@ const companyLinks = [
   { name: 'Blog & Resources', href: '/blog', icon: BookOpen },
   { name: 'Careers', href: '/careers', icon: Users },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
-];
+],
 
 const UltraAdvancedNavigation2026 = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isOpen, setIsOpen] = useState(false),
+  const [isScrolled, setIsScrolled] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+      setIsScrolled(window.scrollY > 20),
+    },
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
   const navigationItems = [
     {
@@ -171,13 +171,13 @@ const UltraAdvancedNavigation2026 = () => {
         { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
       ]
     }
-  ];
+  ],
 
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
+  },
 
   return (
     <>
@@ -438,7 +438,7 @@ const UltraAdvancedNavigation2026 = () => {
       {/* Spacer for fixed navigation */}
       <div className="h-20"></div>
     </>
-  );
+  ),
 }
 
-export default UltraAdvancedNavigation2026;
+export default UltraAdvancedNavigation2026,

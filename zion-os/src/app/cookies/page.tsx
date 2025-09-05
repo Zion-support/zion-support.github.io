@@ -205,7 +205,7 @@ export default function CookiesPage() {
 
       {/* CTA Section */}
       <section>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Need Help with Cookie Settings?</h2>
           <p className="text-xl text-white/70 mb-8">
             We're here to help you understand and manage your cookie preferences.
@@ -227,5 +227,5 @@ export default function CookiesPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import Button from '../ui/Button';
+import React from 'react',
+import Link from 'next/link',
+import Button from '../ui/Button',
 
 const Header: React.FC = () => {
   const navigation = [
@@ -9,7 +9,7 @@ const Header: React.FC = () => {
     { name: 'Resources', href: '/resources' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' }];
+    { name: 'Contact', href: '/contact' }],
 
   return (
     <header className="bg-white/5 backdrop-blur-xl border-b border-white/10 sticky top-0 z-50">
@@ -54,7 +54,7 @@ const Header: React.FC = () => {
         </div>
       </div>
     </header>
-  );
-};
+  ),
+},
 
-export default Header;
+export default Header,

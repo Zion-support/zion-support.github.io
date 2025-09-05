@@ -1,79 +1,79 @@
-import { useState, useEffect } from "react";
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import { SEO } from "@/components/SEO";
-import JsonLd from "@/components/JsonLd";
-import { Button } from "@/components/ui/button";
-import ImageWithRetry from '@/components/ui/ImageWithRetry';
+import { useState, useEffect } from "react",
+import { useRouter } from 'next/router',
+import Link from 'next/link',
+import { SEO } from "@/components/SEO",
+import JsonLd from "@/components/JsonLd",
+import { Button } from "@/components/ui/button",
+import ImageWithRetry from '@/components/ui/ImageWithRetry',
 import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
-import type { BlogPost as BlogPostType } from "@/types/blog";
-import { Separator } from "@/components/ui/separator";
-import ReactMarkdown from 'react-markdown';
-import {logErrorToProduction} from '@/utils/productionLogger';
+import type { BlogPost as BlogPostType } from "@/types/blog",
+import { Separator } from "@/components/ui/separator",
+import ReactMarkdown from 'react-markdown',
+import {logErrorToProduction} from '@/utils/productionLogger',
 
 // Importing the sample blog posts - in a real app, you would fetch this from an API
-import { BLOG_POSTS } from "@/data/blog-posts";
-import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
-import { fetchWithRetry } from '@/utils/fetchWithRetry';
+import { BLOG_POSTS } from "@/data/blog-posts",
+import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout',
+import { fetchWithRetry } from '@/utils/fetchWithRetry',
 
 export default function BlogPost() {
 
-  const router = useRouter();
-  const { slug } = router.query as { slug: string };
-  const [post, setPost] = useState<BlogPostType | null>(null);
-  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
-  const [showShareMenu, setShowShareMenu] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const timedOut = useSkeletonTimeout(20000);
+  const router = useRouter(),
+  const { slug } = router.query as { slug: string },
+  const [post, setPost] = useState<BlogPostType | null>(null),
+  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]),
+  const [showShareMenu, setShowShareMenu] = useState(false),
+  const [isLoading, setIsLoading] = useState(true),
+  const [error, setError] = useState<string | null>(null),
+  const timedOut = useSkeletonTimeout(20000),
   
   useEffect(() => {
     const fetchPost = async () => {
-      setIsLoading(true);
-      setError(null);
+      setIsLoading(true),
+      setError(null),
       try {
-        const data = await fetchWithRetry(`/api/blog/${slug}`);
-        setPost(data);
+        const data = await fetchWithRetry(`/api/blog/${slug}`),
+        setPost(data),
         const related = BLOG_POSTS.filter(
           (p) =>
             p.id !== data.id &&
             (p.category === data.category ||
               p.tags.some((tag) => data.tags.includes(tag)))
-        ).slice(0, 3);
-        setRelatedPosts(related);
-        setIsLoading(false);
-        return;
+        ).slice(0, 3),
+        setRelatedPosts(related),
+        setIsLoading(false),
+        return,
       } catch (err) {
-        logErrorToProduction('Failed to fetch blog post', { data: err });
-        setError('Failed to load article');
+        logErrorToProduction('Failed to fetch blog post', { data: err }),
+        setError('Failed to load article'),
       }
 
-      const currentPost = BLOG_POSTS.find((p) => p.slug === slug);
+      const currentPost = BLOG_POSTS.find((p) => p.slug === slug),
       if (currentPost) {
-        setPost(currentPost);
+        setPost(currentPost),
         const related = BLOG_POSTS.filter(
           (p) =>
             p.id !== currentPost.id &&
             (p.category === currentPost.category ||
               p.tags.some((tag) => currentPost.tags.includes(tag)))
-        ).slice(0, 3);
-        setRelatedPosts(related);
+        ).slice(0, 3),
+        setRelatedPosts(related),
       } else {
-        router.replace('/blog');
+        router.replace('/blog'),
       }
-      setIsLoading(false);
-    };
+      setIsLoading(false),
+    },
 
-    fetchPost();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [slug, router]);
+    fetchPost(),
+    window.scrollTo({ top: 0, behavior: 'smooth' }),
+  }, [slug, router]),
   
   if (isLoading && !timedOut) {
     return (
       <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
         <div className="animate-pulse">Loading article...</div>
       </div>
-    );
+    ),
   }
 
   if (!post && (error || timedOut)) {
@@ -82,7 +82,7 @@ export default function BlogPost() {
         <p>Failed to load article.</p>
         <Button onClick={() => router.reload()}>Retry</Button>
       </div>
-    );
+    ),
   }
 
   // If post is still null after loading, show not found
@@ -92,27 +92,26 @@ export default function BlogPost() {
         <p>Article not found.</p>
         <Button onClick={() => router.push('/blog')}>Back to Blog</Button>
       </div>
-    );
+    ),
   }
 
   // Helper function to get share URL
   const getShareUrl = (platform: string) => {
-    if (!post) return '';
+    if (!post) return '',
     
-    const url = encodeURIComponent(window.location.href);
-    const title = encodeURIComponent(post.title);
+    const url = encodeURIComponent(window.location.href),
+    const title = encodeURIComponent(post.title),
     
     switch (platform) {
       case 'facebook':
-        return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+        return `https://www.facebook.com/sharer/sharer.php?u=${url}`,
       case 'twitter':
-        return `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
+        return `https://twitter.com/intent/tweet?url=${url}&text=${title}`,
       case 'linkedin':
-        return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
-      default:
-        return '#';
+        return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`,
+      default: return '#'
     }
-  };
+  },
 
   const articleLd = {
     "@context": "https://schema.org",
@@ -123,7 +122,7 @@ export default function BlogPost() {
     datePublished: post.publishedDate,
     author: {
       "@type": "Person",
-      name: post.author.name}};
+      name: post.author.name}},
   
   return (
     <>
@@ -316,7 +315,7 @@ export default function BlogPost() {
             <div className="flex justify-between items-center mt-12">
               <Button
                 variant="outline"
-                className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
+                className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
                 asChild
               >
                 <Link href="/blog">
@@ -329,5 +328,5 @@ export default function BlogPost() {
         </div>
       </div>
     </>
-  );
+  )
 }

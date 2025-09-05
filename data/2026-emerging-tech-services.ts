@@ -1,41 +1,41 @@
 export interface EmergingTechService2026 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 
 const contact = {
@@ -43,7 +43,7 @@ const contact = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 export const emergingTechServices2026: EmergingTechService2026[] = [
   // Quantum Computing Services
@@ -55,16 +55,11 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     period: '/month',
     description: 'Cloud-based quantum computing platform that provides access to quantum processors, quantum algorithms, and quantum machine learning capabilities. Features include quantum circuit optimization, quantum error correction, and hybrid quantum-classical computing.',
     features: [
-      'Access to multiple quantum processors (IBM, Google, Rigetti)',
-      'AI-optimized quantum algorithm library',
-      'Quantum error correction and noise mitigation',
-      'Hybrid quantum-classical computing workflows',
-      'Quantum machine learning algorithms',
-      'Real-time quantum circuit visualization',
-      'Integration with classical computing frameworks',
-      'Custom quantum algorithm development',
-      'Quantum performance analytics and benchmarking',
-      'API for quantum application development'
+      'Access to multiple quantum processors (IBM, Google, Rigetti)AI-optimized quantum algorithm library',
+      'Quantum error correction and noise mitigationHybrid quantum-classical computing workflows',
+      'Quantum machine learning algorithmsReal-time quantum circuit visualization',
+      'Integration with classical computing frameworksCustom quantum algorithm development',
+      'Quantum performance analytics and benchmarkingAPI for quantum application development'
     ],
     popular: true,
     icon: '🔮',
@@ -77,11 +72,11 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     setupTime: '1-2 weeks',
     category: 'Quantum Computing & AI',
     realService: true,
-    technology: ['Qiskit', 'Cirq', 'PennyLane', 'Python', 'React', 'PostgreSQL'],
-    integrations: ['IBM Quantum', 'Google Quantum AI', 'Amazon Braket', 'Rigetti', 'D-Wave', 'Jupyter'],
-    useCases: ['Drug discovery', 'Financial modeling', 'Optimization problems', 'Machine learning', 'Cryptography research'],
+    technology: ['QiskitCirq', 'PennyLanePython', 'ReactPostgreSQL'],
+    integrations: ['IBM QuantumGoogle Quantum AI', 'Amazon BraketRigetti', 'D-WaveJupyter'],
+    useCases: ['Drug discoveryFinancial modeling', 'Optimization problemsMachine learning', 'Cryptography research'],
     roi: 'Research institutions report 500% ROI through accelerated discovery and breakthrough innovations.',
-    competitors: ['IBM Quantum', 'Amazon Braket', 'Google Quantum AI', 'Rigetti'],
+    competitors: ['IBM QuantumAmazon Braket', 'Google Quantum AIRigetti'],
     marketSize: '$8.5B quantum computing market',
     growthRate: '45% annual growth',
     contactInfo: contact,
@@ -102,16 +97,11 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     period: '/month',
     description: 'Advanced blockchain analytics platform that uses AI to analyze blockchain data, optimize DeFi strategies, and provide intelligent insights for cryptocurrency and blockchain applications.',
     features: [
-      'AI-powered blockchain data analysis',
-      'DeFi strategy optimization and automation',
-      'Smart contract security auditing',
-      'Cryptocurrency portfolio management',
-      'Blockchain transaction monitoring',
-      'NFT market analysis and insights',
-      'Integration with major blockchains',
-      'Custom blockchain analytics dashboards',
-      'Real-time alerts and notifications',
-      'API for blockchain applications'
+      'AI-powered blockchain data analysisDeFi strategy optimization and automation',
+      'Smart contract security auditingCryptocurrency portfolio management',
+      'Blockchain transaction monitoringNFT market analysis and insights',
+      'Integration with major blockchainsCustom blockchain analytics dashboards',
+      'Real-time alerts and notificationsAPI for blockchain applications'
     ],
     popular: true,
     icon: '⛓️',
@@ -124,11 +114,11 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     setupTime: '2-3 hours',
     category: 'Blockchain & Web3',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis'],
-    integrations: ['Ethereum', 'Bitcoin', 'Polygon', 'Binance Smart Chain', 'Solana', 'Uniswap'],
-    useCases: ['Blockchain analytics', 'DeFi optimization', 'Portfolio management', 'Security auditing', 'Market analysis'],
+    technology: ['PythonTensorFlow', 'ReactNode.js', 'PostgreSQLRedis'],
+    integrations: ['EthereumBitcoin', 'PolygonBinance Smart Chain', 'SolanaUniswap'],
+    useCases: ['Blockchain analyticsDeFi optimization', 'Portfolio managementSecurity auditing', 'Market analysis'],
     roi: 'Users report 300% ROI through improved trading strategies and DeFi optimization.',
-    competitors: ['Chainalysis', 'Elliptic', 'CipherTrace', 'Glassnode'],
+    competitors: ['ChainalysisElliptic', 'CipherTraceGlassnode'],
     marketSize: '$19.9B blockchain analytics market',
     growthRate: '35% annual growth',
     contactInfo: contact,
@@ -149,33 +139,28 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     period: '/month',
     description: 'Comprehensive IoT platform that uses AI to manage connected devices, analyze sensor data, and provide intelligent automation for smart homes, cities, and industrial applications.',
     features: [
-      'AI-powered IoT device management',
-      'Real-time sensor data analytics',
-      'Predictive maintenance and monitoring',
-      'Smart automation and control',
-      'Edge computing optimization',
-      'Integration with major IoT platforms',
-      'Custom IoT application development',
-      'Security and privacy management',
-      'Scalable device connectivity',
-      'Advanced analytics and reporting'
+      'AI-powered IoT device managementReal-time sensor data analytics',
+      'Predictive maintenance and monitoringSmart automation and control',
+      'Edge computing optimizationIntegration with major IoT platforms',
+      'Custom IoT application developmentSecurity and privacy management',
+      'Scalable device connectivityAdvanced analytics and reporting'
     ],
     popular: false,
     icon: '📡',
     color: 'from-green-600 to-emerald-600',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-iot-intelligence-platform',
-    marketPosition: 'Competes with AWS IoT ($0.08/million messages), Azure IoT Hub ($0.50/million messages), Google Cloud IoT ($0.40/million messages). Our advantage: AI automation reduces IoT management complexity by 60% and improves device performance.',
+    marketPosition: 'Competes with AWS IoT ($0.08/million messages), Azure IoT Hub ($0.50/million messages), Google Cloud IoT ($0.40/million messages). Our advantage: AI automation reduces IoT management complexity by 60% and improves device window.window.window.performance.',
     targetAudience: 'Smart home companies, Industrial IoT providers, City planners, Manufacturing companies',
     trialDays: 14,
     setupTime: '3-4 hours',
     category: 'Internet of Things (IoT)',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis'],
-    integrations: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Home Assistant', 'SmartThings', 'Hubitat'],
-    useCases: ['Smart home automation', 'Industrial monitoring', 'Smart city management', 'Predictive maintenance', 'Energy optimization'],
+    technology: ['PythonTensorFlow', 'ReactNode.js', 'PostgreSQLRedis'],
+    integrations: ['AWS IoTAzure IoT', 'Google Cloud IoTHome Assistant', 'SmartThingsHubitat'],
+    useCases: ['Smart home automationIndustrial monitoring', 'Smart city managementPredictive maintenance', 'Energy optimization'],
     roi: 'Organizations report 250% ROI through improved device management and operational efficiency.',
-    competitors: ['AWS IoT', 'Azure IoT Hub', 'Google Cloud IoT', 'ThingWorx'],
+    competitors: ['AWS IoTAzure IoT Hub', 'Google Cloud IoTThingWorx'],
     marketSize: '$384.7B IoT market',
     growthRate: '28% annual growth',
     contactInfo: contact,
@@ -196,16 +181,11 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     period: '/month',
     description: 'Advanced edge computing platform that uses AI to optimize edge node performance, manage 5G network resources, and provide intelligent edge application deployment.',
     features: [
-      'AI-powered edge node optimization',
-      '5G network resource management',
-      'Edge application deployment automation',
-      'Real-time performance monitoring',
-      'Edge security and compliance',
-      'Integration with major cloud providers',
-      'Custom edge computing workflows',
-      'Advanced analytics and reporting',
-      'Mobile edge computing support',
-      'API for edge applications'
+      'AI-powered edge node optimization5G network resource management',
+      'Edge application deployment automationReal-time performance monitoring',
+      'Edge security and complianceIntegration with major cloud providers',
+      'Custom edge computing workflowsAdvanced analytics and reporting',
+      'Mobile edge computing supportAPI for edge applications'
     ],
     popular: false,
     icon: '📶',
@@ -218,11 +198,11 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     setupTime: '4-6 hours',
     category: 'Edge Computing & 5G',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'Kubernetes', 'React', 'PostgreSQL', 'Redis'],
-    integrations: ['AWS Outposts', 'Azure Stack Edge', 'Google Anthos', 'OpenStack', 'Kubernetes', 'Docker'],
-    useCases: ['Edge computing optimization', '5G network management', 'Edge application deployment', 'Performance monitoring', 'Resource optimization'],
+    technology: ['PythonTensorFlow', 'KubernetesReact', 'PostgreSQLRedis'],
+    integrations: ['AWS OutpostsAzure Stack Edge', 'Google AnthosOpenStack', 'KubernetesDocker'],
+    useCases: ['Edge computing optimization5G network management', 'Edge application deploymentPerformance monitoring', 'Resource optimization'],
     roi: 'Organizations report 300% ROI through improved edge performance and reduced network costs.',
-    competitors: ['AWS Outposts', 'Azure Stack Edge', 'Google Anthos', 'VMware Edge'],
+    competitors: ['AWS OutpostsAzure Stack Edge', 'Google AnthosVMware Edge'],
     marketSize: '$67.2B edge computing market',
     growthRate: '32% annual growth',
     contactInfo: contact,
@@ -243,16 +223,11 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     period: '/month',
     description: 'Advanced AR/VR development platform that uses AI to create immersive content, optimize user experiences, and provide intelligent development tools for augmented and virtual reality applications.',
     features: [
-      'AI-powered 3D content generation',
-      'Intelligent user experience optimization',
-      'AR/VR application development tools',
-      'Content personalization and adaptation',
-      'Performance optimization and testing',
-      'Integration with major AR/VR platforms',
-      'Custom AR/VR workflows',
-      'Real-time content analytics',
-      'Multi-platform deployment support',
-      'API for AR/VR applications'
+      'AI-powered 3D content generationIntelligent user experience optimization',
+      'AR/VR application development toolsContent personalization and adaptation',
+      'Performance optimization and testingIntegration with major AR/VR platforms',
+      'Custom AR/VR workflowsReal-time content analytics',
+      'Multi-platform deployment supportAPI for AR/VR applications'
     ],
     popular: false,
     icon: '🥽',
@@ -265,11 +240,11 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     setupTime: '3-4 hours',
     category: 'AR/VR & Immersive Technology',
     realService: true,
-    technology: ['Unity', 'Unreal Engine', 'Python', 'TensorFlow', 'React', 'PostgreSQL'],
-    integrations: ['Oculus', 'HTC Vive', 'Microsoft HoloLens', 'Magic Leap', 'ARKit', 'ARCore'],
-    useCases: ['AR/VR application development', '3D content creation', 'Immersive training', 'Virtual events', 'Gaming and entertainment'],
+    technology: ['UnityUnreal Engine', 'PythonTensorFlow', 'ReactPostgreSQL'],
+    integrations: ['OculusHTC Vive', 'Microsoft HoloLensMagic Leap', 'ARKitARCore'],
+    useCases: ['AR/VR application development3D content creation', 'Immersive trainingVirtual events', 'Gaming and entertainment'],
     roi: 'Developers report 400% ROI through faster development and improved content quality.',
-    competitors: ['Unity', 'Unreal Engine', 'Vuforia', 'ARKit'],
+    competitors: ['UnityUnreal Engine', 'VuforiaARKit'],
     marketSize: '$31.1B AR/VR market',
     growthRate: '38% annual growth',
     contactInfo: contact,
@@ -290,16 +265,11 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     period: '/month',
     description: 'Advanced robotics platform that uses AI to control robotic systems, optimize automation workflows, and provide intelligent robotics solutions for manufacturing, logistics, and service industries.',
     features: [
-      'AI-powered robotic control systems',
-      'Automated workflow optimization',
-      'Predictive maintenance for robots',
-      'Integration with major robotics platforms',
-      'Custom automation workflows',
-      'Real-time performance monitoring',
-      'Safety and compliance management',
-      'Advanced analytics and reporting',
-      'Mobile app for robot control',
-      'API for robotics applications'
+      'AI-powered robotic control systemsAutomated workflow optimization',
+      'Predictive maintenance for robotsIntegration with major robotics platforms',
+      'Custom automation workflowsReal-time performance monitoring',
+      'Safety and compliance managementAdvanced analytics and reporting',
+      'Mobile app for robot controlAPI for robotics applications'
     ],
     popular: false,
     icon: '🤖',
@@ -312,11 +282,11 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     setupTime: '1-2 weeks',
     category: 'Robotics & Automation',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'ROS', 'React', 'PostgreSQL', 'Redis'],
-    integrations: ['ABB', 'FANUC', 'KUKA', 'Universal Robots', 'Boston Dynamics', 'iRobot'],
-    useCases: ['Manufacturing automation', 'Logistics optimization', 'Service robotics', 'Research and development', 'Quality control'],
+    technology: ['PythonTensorFlow', 'ROSReact', 'PostgreSQLRedis'],
+    integrations: ['ABBFANUC', 'KUKAUniversal Robots', 'Boston DynamicsiRobot'],
+    useCases: ['Manufacturing automationLogistics optimization', 'Service roboticsResearch and development', 'Quality control'],
     roi: 'Organizations report 400% ROI through improved robotic efficiency and reduced operational costs.',
-    competitors: ['ABB RobotStudio', 'FANUC ROBOGUIDE', 'KUKA Sim', 'Universal Robots'],
+    competitors: ['ABB RobotStudioFANUC ROBOGUIDE', 'KUKA SimUniversal Robots'],
     marketSize: '$43.8B robotics market',
     growthRate: '25% annual growth',
     contactInfo: contact,
@@ -337,16 +307,11 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     period: '/month',
     description: 'Advanced digital twin platform that uses AI to create virtual replicas of physical systems, simulate scenarios, and provide intelligent insights for optimization and decision-making.',
     features: [
-      'AI-powered digital twin creation',
-      'Real-time simulation and modeling',
-      'Predictive analytics and forecasting',
-      'Integration with IoT and sensor data',
-      'Custom simulation scenarios',
-      'Performance optimization insights',
-      '3D visualization and modeling',
-      'Advanced analytics and reporting',
-      'API for custom integrations',
-      'Mobile app for monitoring'
+      'AI-powered digital twin creationReal-time simulation and modeling',
+      'Predictive analytics and forecastingIntegration with IoT and sensor data',
+      'Custom simulation scenariosPerformance optimization insights',
+      '3D visualization and modelingAdvanced analytics and reporting',
+      'API for custom integrationsMobile app for monitoring'
     ],
     popular: false,
     icon: '🔄',
@@ -359,11 +324,11 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     setupTime: '2-3 weeks',
     category: 'Digital Twin & Simulation',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'Unity', 'React', 'PostgreSQL', 'Redis'],
-    integrations: ['Siemens', 'PTC', 'GE Digital', 'Autodesk', 'Dassault Systèmes', 'IoT platforms'],
-    useCases: ['Manufacturing optimization', 'Infrastructure monitoring', 'Energy management', 'Predictive maintenance', 'Urban planning'],
+    technology: ['PythonTensorFlow', 'UnityReact', 'PostgreSQLRedis'],
+    integrations: ['SiemensPTC', 'GE DigitalAutodesk', 'Dassault SystèmesIoT platforms'],
+    useCases: ['Manufacturing optimizationInfrastructure monitoring', 'Energy managementPredictive maintenance', 'Urban planning'],
     roi: 'Organizations report 300% ROI through improved operational efficiency and reduced maintenance costs.',
-    competitors: ['Siemens Digital Twin', 'PTC ThingWorx', 'GE Digital Twin', 'Autodesk'],
+    competitors: ['Siemens Digital TwinPTC ThingWorx', 'GE Digital TwinAutodesk'],
     marketSize: '$86.1B digital twin market',
     growthRate: '42% annual growth',
     contactInfo: contact,
@@ -374,19 +339,19 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     rating: 4.4,
     reviews: 29
   }
-];
+],
 
 export const getEmergingTechServices2026ByCategory = (category: string) => {
-  return emergingTechServices2026.filter(service => service.category === category);
-};
+  return emergingTechServices2026.filter(service => service.category === category)
+},
 
 export const getPopularEmergingTechServices2026 = () => {
-  return emergingTechServices2026.filter(service => service.popular);
-};
+  return emergingTechServices2026.filter(service => service.popular),
+},
 
 export const getEmergingTechServices2026ByPriceRange = (minPrice: number, maxPrice: number) => {
   return emergingTechServices2026.filter(service => {
-    const price = parseInt(service.price.replace('$', ''));
-    return price >= minPrice && price <= maxPrice;
-  });
-};
+    const price = parseInt(service.price.replace('$', '')),
+    return price >= minPrice && price <= maxPrice,
+  }),
+},

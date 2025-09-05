@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Phone, Mail, MapPin, Globe, Rocket, Brain, Atom, 
   Cpu, Target, Microscope, Shield, Zap, Sparkles,
   Menu, X, Search, ChevronDown, Home, Briefcase, 
   DollarSign, BookOpen, Users, MessageCircle
-} from 'lucide-react';
+} from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -61,7 +61,7 @@ const serviceCategories = [
       { name: 'Virtual Event Holograms', href: '/virtual-event-hologram-platform', description: 'Holographic events', price: '$2,499/month' }
     ]
   }
-];
+],
 
 const quickLinks = [
   { name: 'Services Overview', href: '/enhanced-services-overview', icon: Globe, color: 'from-cyan-500 to-blue-600' },
@@ -70,24 +70,24 @@ const quickLinks = [
   { name: 'Space Tech', href: '/space-technology', icon: Rocket, color: 'from-teal-500 to-emerald-600' },
   { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu, color: 'from-blue-500 to-cyan-600' },
   { name: 'Micro SAAS', href: '/enhanced-micro-saas-showcase', icon: Target, color: 'from-green-500 to-yellow-600' }
-];
+],
 
 export default function UltraFuturisticNavigation2033() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [isOpen, setIsOpen] = useState(false),
+  const [activeCategory, setActiveCategory] = useState<string | null>(null),
+  const [searchQuery, setSearchQuery] = useState(''),
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
+  const toggleMenu = () => setIsOpen(!isOpen),
+  const closeMenu = () => setIsOpen(false),
 
   // Close menu on escape key
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') closeMenu();
-    };
-    document.addEventListener('keydown', handleEscape);
-    return () => document.removeEventListener('keydown', handleEscape);
-  }, []);
+      if (e.key === 'Escape') closeMenu()
+    },
+    document.addEventListener('keydown', handleEscape),
+    return () => document.removeEventListener('keydown', handleEscape),
+  }, []),
 
   return (
     <>
@@ -313,5 +313,5 @@ export default function UltraFuturisticNavigation2033() {
         </AnimatePresence>
       </nav>
     </>
-  );
+  ),
 }

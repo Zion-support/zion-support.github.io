@@ -1,11 +1,11 @@
 
-import { DynamicListingPage } from "@/components/DynamicListingPage";
-import { ProductListing } from "@/types/listings";
-import { AppLayout } from "@/layout/AppLayout";
-import { TrustedBySection } from "@/components/TrustedBySection";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { Globe } from "lucide-react";
+import { DynamicListingPage } from "@/components/DynamicListingPage",
+import { ProductListing } from "@/types/listings",
+import { AppLayout } from "@/layout/AppLayout",
+import { TrustedBySection } from "@/components/TrustedBySection",
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom",
+import { Globe } from "lucide-react",
 
 // Sample service listings
 const SERVICE_LISTINGS: ProductListing[] = [
@@ -107,7 +107,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     createdAt: "2024-02-02T10:30:00.000Z",
     aiScore: 94,
     rating: 4.8,
-    reviewCount: 85}];
+    reviewCount: 85}],
 
 // Filter options specific to services
 const SERVICE_FILTERS = [
@@ -116,7 +116,7 @@ const SERVICE_FILTERS = [
   { label: 'Security', value: 'security' },
   { label: 'Analytics', value: 'analytics' },
   { label: 'Consulting', value: 'consulting' },
-  { label: 'Strategy', value: 'strategy' }];
+  { label: 'Strategy', value: 'strategy' }],
 
 export default function ServicesPage() {
   return (
@@ -149,5 +149,5 @@ export default function ServicesPage() {
       />
       <TrustedBySection />
     </AppLayout>
-  );
+  ),
 }

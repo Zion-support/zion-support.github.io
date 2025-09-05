@@ -84,7 +84,7 @@ export default function DesignMapPage() {
   )
 }
 
-function MapColumn({ title, sections }: { title: string; sections: { id: string; title: string; items: { id: string; title: string }[] }[] }) {
+function MapColumn({ title, sections }: { title: string, sections: { id: string, title: string, items: { id: string, title: string }[] }[] }) {
   return (
     <div className="space-y-3">
       <h3 className="text-lg font-semibold">{title}</h3>

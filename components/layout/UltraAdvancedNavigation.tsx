@@ -1,26 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin,
   Brain, Rocket, Dna, Globe, Shield, Wifi, Package,
   Bot, Car, Building2, DollarSign, Monitor, Users,
   Cpu, Zap, Atom, Database, Cloud, Lock, Code
-} from 'lucide-react';
-import Link from 'next/link';
+} from 'lucide-react',
+import Link from 'next/link',
 
 const UltraAdvancedNavigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isOpen, setIsOpen] = useState(false),
+  const [isScrolled, setIsScrolled] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+      setIsScrolled(window.scrollY > 50),
+    },
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
   const navigationItems = [
     {
@@ -215,13 +215,13 @@ const UltraAdvancedNavigation: React.FC = () => {
       href: '/contact',
       icon: null
     }
-  ];
+  ],
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
+  },
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -442,7 +442,7 @@ const UltraAdvancedNavigation: React.FC = () => {
         )}
       </AnimatePresence>
     </nav>
-  );
-};
+  ),
+},
 
-export default UltraAdvancedNavigation;
+export default UltraAdvancedNavigation,

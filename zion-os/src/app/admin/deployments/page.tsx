@@ -1,8 +1,8 @@
-"use client";
+"use client",
 
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react",
 import { 
-  Rocket, 
+  Rocket,
   Clock, 
   CheckCircle, 
   AlertCircle, 
@@ -24,22 +24,22 @@ import {
   Pause,
   StopCircle,
   MapPin
-} from "lucide-react";
+} from "lucide-react",
 
 interface Deployment {
-  id: string;
-  instanceName: string;
-  status: 'pending' | 'deploying' | 'completed' | 'failed' | 'paused';
-  createdAt: string;
-  updatedAt: string;
-  progress: number;
-  features: string[];
-  vertical: string;
-  governanceType: string;
-  domain?: string;
-  subdomain?: string;
-  region?: string;
-  country?: string;
+  id: string,
+  instanceName: string,
+  status: 'pending' | 'deploying' | 'completed' | 'failed' | 'paused',
+  createdAt: string,
+  updatedAt: string,
+  progress: number,
+  features: string[],
+  vertical: string,
+  governanceType: string,
+  domain?: string,
+  subdomain?: string,
+  region?: string,
+  country?: string
 }
 
 // Mock data - replace with actual API calls
@@ -86,52 +86,52 @@ const mockDeployments: Deployment[] = [
     region: "Asia Pacific",
     country: "Singapore"
   }
-];
+],
 
 export default function DeploymentsPage() {
-  const [deployments, setDeployments] = useState<Deployment[]>(mockDeployments);
-  const [filter, setFilter] = useState<'all' | 'pending' | 'deploying' | 'completed' | 'failed'>('all');
+  const [deployments, setDeployments] = useState<Deployment[]>(mockDeployments),
+  const [filter, setFilter] = useState<'all' | 'pending' | 'deploying' | 'completed' | 'failed'>('all'),
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'completed': return 'text-green-400';
-      case 'deploying': return 'text-blue-400';
-      case 'pending': return 'text-yellow-400';
-      case 'failed': return 'text-red-400';
-      case 'paused': return 'text-orange-400';
-      default: return 'text-gray-400';
+      case 'completed': return 'text-green-400',
+      case 'deploying': return 'text-blue-400',
+      case 'pending': return 'text-yellow-400',
+      case 'failed': return 'text-red-400',
+      case 'paused': return 'text-orange-400',
+      default: return 'text-gray-400'
     }
-  };
+  },
 
   const getStatusIcon = (status: string) => {
     switch (status) {
-      case 'completed': return <CheckCircle className="w-5 h-5" />;
-      case 'deploying': return <Activity className="w-5 h-5" />;
-      case 'pending': return <Clock className="w-5 h-5" />;
-      case 'failed': return <AlertCircle className="w-5 h-5" />;
-      case 'paused': return <Pause className="w-5 h-5" />;
-      default: return <Clock className="w-5 h-5" />;
+      case 'completed': return <CheckCircle className="w-5 h-5" />,
+      case 'deploying': return <Activity className="w-5 h-5" />,
+      case 'pending': return <Clock className="w-5 h-5" />,
+      case 'failed': return <AlertCircle className="w-5 h-5" />,
+      case 'paused': return <Pause className="w-5 h-5" />,
+      default: return <Clock className="w-5 h-5" />
     }
-  };
+  },
 
   const getVerticalIcon = (vertical: string) => {
     switch (vertical) {
-      case "HEALTH": return <Shield className="w-4 h-4 text-blue-400" />;
-      case "EDUCATION": return <Building2 className="w-4 h-4 text-green-400" />;
-      case "LAW": return <Shield className="w-4 h-4 text-purple-400" />;
-      case "GOV": return <Users className="w-4 h-4 text-red-400" />;
-      default: return <Globe className="w-4 h-4 text-gray-400" />;
+      case "HEALTH": return <Shield className="w-4 h-4 text-blue-400" />,
+      case "EDUCATION": return <Building2 className="w-4 h-4 text-green-400" />,
+      case "LAW": return <Shield className="w-4 h-4 text-purple-400" />,
+      case "GOV": return <Users className="w-4 h-4 text-red-400" />,
+      default: return <Globe className="w-4 h-4 text-gray-400" />
     }
-  };
+  },
 
   const getGovernanceIcon = (type: string) => {
     switch (type) {
-      case "ADMIN": return <User className="w-4 h-4 text-yellow-400" />;
-      case "DAO_LITE": return <Users className="w-4 h-4 text-blue-400" />;
-      case "DAO_FULL": return <Zap className="w-4 h-4 text-purple-400" />;
-      default: return <User className="w-4 h-4 text-gray-400" />;
+      case "ADMIN": return <User className="w-4 h-4 text-yellow-400" />,
+      case "DAO_LITE": return <Users className="w-4 h-4 text-blue-400" />,
+      case "DAO_FULL": return <Zap className="w-4 h-4 text-purple-400" />,
+      default: return <User className="w-4 h-4 text-gray-400" />
     }
-  };
+  },
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -139,16 +139,16 @@ export default function DeploymentsPage() {
       day: 'numeric',
       hour: '2-digit',
       minute: '2-digit'
-    });
-  };
+    }),
+  },
 
   const filteredDeployments = deployments.filter(deployment => 
     filter === 'all' || deployment.status === filter
-  );
+  ),
 
   const getStatusCount = (status: string) => {
-    return deployments.filter(d => d.status === status).length;
-  };
+    return deployments.filter(d => d.status === status).length
+  },
 
   return (
     <div className="space-y-8">
@@ -310,7 +310,7 @@ export default function DeploymentsPage() {
                 {(deployment.region || deployment.country) && (
                   <div className="flex items-center gap-2 text-white/70">
                     <MapPin className="w-4 h-4" />
-                    <span>{[deployment.region, deployment.country].filter(Boolean).join(', ')}</span>
+                    <span>{[deployment.region, deployment.country].filter(Boolean).join()}</span>
                   </div>
                 )}
               </div>
@@ -418,5 +418,5 @@ export default function DeploymentsPage() {
         </div>
       )}
     </div>
-  );
+  ),
 }

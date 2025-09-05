@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function FAQPage() {
-  const [openCategory, setOpenCategory] = useState('general');
+  const [openCategory, setOpenCategory] = useState('general'),
 
   const faqData = {
     general: [
@@ -102,7 +102,7 @@ export default function FAQPage() {
         answer: 'Ongoing costs typically include system maintenance, updates, support services, and any additional features or capacity. We provide transparent pricing for all ongoing services and work with clients to optimize costs while maintaining system performance and reliability.'
       }
     ]
-  };
+  },
 
   const categories = [
     { id: 'general', name: 'General Questions', icon: '🏢' },
@@ -111,7 +111,7 @@ export default function FAQPage() {
     { id: 'sustainability', name: 'Sustainability & Green AI', icon: '🌱' },
     { id: 'healthcare', name: 'Healthcare Solutions', icon: '🏥' },
     { id: 'pricing', name: 'Pricing & Business', icon: '💰' }
-  ];
+  ],
 
   return (
     <>
@@ -204,7 +204,7 @@ export default function FAQPage() {
             {/* Related Pages */}
             <section className="mt-16">
               <h2 className="text-2xl font-bold mb-8 text-center text-white">Explore More</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md: grid-cols-3 gap-6">
                 <Link href="/services" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 text-center group">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     <span className="text-2xl">🚀</span>
@@ -234,12 +234,12 @@ export default function FAQPage() {
         </main>
       </div>
     </>
-  );
-import React from 'react';
-import Head from 'next/head';
+  ),
+import React from 'react',
+import Head from 'next/head',
   return (
     <>
-      <Head><title>faq - Zion App</title><meta name="description" content="faq page" /></Head><div className="container mx-auto px-4 py-8"><h1 className="text-3xl font-bold mb-6">faq</h1><p className="text-lg mb-4">This page is under construction.</p><div className="mt-4"><a href="/" className="text-blue-600 hover:underline">;
-            ← Back to Home</a></div></div></>;
-  );
+      <Head><title>faq - Zion App</title><meta name="description" content="faq page" /></Head><div className="container mx-auto px-4 py-8"><h1 className="text-3xl font-bold mb-6">faq</h1><p className="text-lg mb-4">This page is under construction.</p><div className="mt-4"><a href="/" className="text-blue-600 hover:underline">,
+            ← Back to Home</a></div></div></>,
+  )
 }
