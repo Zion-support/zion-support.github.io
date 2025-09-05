@@ -11,3 +11,6 @@ describe('App Smoke Tests', () => {
   it('should render a basic structure', () => {
     const { container } = render(<App />);
 
+    expect(container.firstChild).toBeTruthy();
+  });
+});

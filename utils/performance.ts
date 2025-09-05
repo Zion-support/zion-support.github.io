@@ -58,8 +58,7 @@ export const getPerformanceScore = (
     firstContentfulPaint: { good: 1000, needsImprovement: 2000 },
     largestContentfulPaint: { good: 1500, needsImprovement: 3000 },
     cumulativeLayoutShift: { good: 0.05, needsImprovement: 0.1 },
-    firstInputDelay: { good: 50, needsImprovement: 100 },
-  };
+    firstInputDelay: { good: 50, needsImprovement: 100 }};
 
   const getScore = (
     value: number,
@@ -98,8 +97,7 @@ export const getPerformanceScore = (
     firstInputDelay: getScore(
       metrics.firstInputDelay,
       thresholds.firstInputDelay
-    ),
-  };
+    )};
 
   const poorCount = Object.values(scores).filter(
     score => score === 'poor'

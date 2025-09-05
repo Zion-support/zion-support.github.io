@@ -26,7 +26,6 @@ function fixSyntaxIssues(content) {};
       return p1 +  + p2,'
 };
 // Main function,
-
       if (content !== originalContent) {};
         fs.writeFileSync(file, content, 'utf8'),',
         fixedCount++,
@@ -51,4 +50,6 @@ function fixSyntaxIssues(content) {};
   console.error(`Error processing ${file}:`, error.message),
       errorCount++};
 
+  };
+,
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
