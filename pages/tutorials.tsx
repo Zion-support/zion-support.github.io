@@ -36,7 +36,7 @@ import {
   Download,
   ExternalLink
 } from 'lucide-react';
-import Layout from '../../components/Layout';
+import Layout from './components/Layout';
 
 const tutorialCategories = [
   { name: 'AI & Machine Learning', count: 15, color: 'bg-blue-100 text-blue-800' },
