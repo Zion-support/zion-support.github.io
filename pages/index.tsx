@@ -1,7 +1,9 @@
 import Link from 'next/link';
-import Head from 'next/head';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import { ContactInfo, AnimationState } from '../types';
+import SEOHead from '../components/SEOHead';
+import PerformanceOptimizer from '../components/PerformanceOptimizer';
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
@@ -33,65 +35,45 @@ export default function Home() {
     );
   }
 
-  const contact: ContactInfo = {
+  const contact: ContactInfo = useMemo(() => ({
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
+  }), []);
   return (
     <>
-      <Head>
-        <title>Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions</title>
-        <meta name="description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />
-        <meta name="keywords" content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing, enterprise solutions" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="language" content="en-US" />
-        <link rel="canonical" href={contact.site} />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <meta property="og:title" content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions" />
-        <meta property="og:description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />
-        <meta property="og:url" content={contact.site} />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Zion Tech Group" />
-        <meta property="og:locale" content="en_US" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions" />
-        <meta name="twitter:description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />
-        <meta name="twitter:site" content="@ziontechgroup" />
-        <meta name="twitter:creator" content="@ziontechgroup" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "url": contact.site,
-              "logo": `${contact.site}/favicon.svg`,
-              "description": "Leading provider of micro SaaS products, AI services, and IT solutions",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "364 E Main St STE 1008",
-                "addressLocality": "Middletown",
-                "addressRegion": "DE",
-                "postalCode": "19709",
-                "addressCountry": "US"
-              },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": contact.phone,
-                "contactType": "customer service",
-                "email": contact.email
-              },
-              "sameAs": [contact.site]
-            })
-          }}
-        />
-      </Head>
+      <SEOHead
+        title="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions"
+        description="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions."
+        keywords="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing, enterprise solutions"
+        canonicalUrl={contact.site}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "url": contact.site,
+          "logo": `${contact.site}/favicon.svg`,
+          "description": "Leading provider of micro SaaS products, AI services, and IT solutions",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "364 E Main St STE 1008",
+            "addressLocality": "Middletown",
+            "addressRegion": "DE",
+            "postalCode": "19709",
+            "addressCountry": "US"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": contact.phone,
+            "contactType": "customer service",
+            "email": contact.email
+          },
+          "sameAs": [contact.site]
+        }}
+      />
+      <PerformanceOptimizer enableReporting={process.env.NODE_ENV === 'development'} />
+      <AccessibilityEnhancer />
       
       <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
         {/* Hero Section */}

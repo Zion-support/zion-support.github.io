@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Brain, Network, Cloud, Shield, Code, Zap, Building, Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, Github, Globe, ArrowRight, CheckCircle, Star, Server, Users, Building2, FileText, Rocket, Target, Atom, Lock, TrendingUp, Workflow, MessageCircle, DollarSign, Briefcase, ArrowUp, Sparkles, Home, Truck, Factory, Heart, BookOpen, BarChart3, Cpu, Leaf, Satellite, HelpCircle, ShoppingBag } from 'lucide-react';
 import { useRouter } from 'next/router';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import Link from 'next/link';
 
 const servicesDropdown = [
@@ -33,7 +33,7 @@ const servicesDropdown = [
     href: '/cybersecurity',
     features: ['Security Audits', 'Threat Detection', 'Compliance', 'Incident Response'],
   },
-];
+] as const;
 
 const solutionsDropdown = [
   {
@@ -57,7 +57,7 @@ const solutionsDropdown = [
     href: '/ecommerce',
     features: ['Platform Development', 'Payment Integration', 'SEO Optimization', 'Analytics'],
   },
-];
+] as const;
 
 const industriesDropdown = [
   { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
@@ -66,7 +66,7 @@ const industriesDropdown = [
   { name: 'Manufacturing', href: '/industries/manufacturing', icon: Factory },
   { name: 'Retail', href: '/industries/retail', icon: ShoppingBag },
   { name: 'Government', href: '/industries/government', icon: Building2 },
-];
+] as const;
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -85,21 +85,21 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const toggleMenu = useCallback(() => {
+    setIsMenuOpen(prev => !prev);
+  }, []);
 
-  const closeMenu = () => {
+  const closeMenu = useCallback(() => {
     setIsMenuOpen(false);
     setIsServicesOpen(false);
     setIsSolutionsOpen(false);
     setIsIndustriesOpen(false);
-  };
+  }, []);
 
-  const handleServiceClick = (href: string) => {
+  const handleServiceClick = useCallback((href: string) => {
     router.push(href);
     closeMenu();
-  };
+  }, [router, closeMenu]);
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
