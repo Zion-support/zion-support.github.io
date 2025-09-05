@@ -1,5 +1,5 @@
 import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
+import MainLayout from './components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Calendar, User, ArrowRight, Search, Tag, Clock } from 'lucide-react';
