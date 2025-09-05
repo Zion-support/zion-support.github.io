@@ -14,7 +14,8 @@ import {
   Star,
   Users,
   Globe,
-  Cpu
+  Cpu,
+  Settings
 } from 'lucide-react';
 
 export default function ServicesPage() {

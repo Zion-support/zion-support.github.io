@@ -50,7 +50,8 @@ import {
   HardDrive,
   Database,
   Phone,
-  MapPin
+  MapPin,
+  PenTool
 } from 'lucide-react';
 
 const microSaaSServices = [
@@ -76,7 +77,8 @@ const microSaaSServices = [
     ],
     marketPrice: "$400-600/month",
     targetUsers: "SMBs, Enterprises, Agencies",
-    setupTime: "1-2 weeks"
+    setupTime: "1-2 weeks",
+    link: "https://ziontechgroup.com/ai-analytics-dashboard"
   },
   {
     id: 2,
@@ -99,11 +101,265 @@ const microSaaSServices = [
       "Process 1000+ documents/hour"
     ],
     marketPrice: "$300-500/month",
-    targetUsers: "Legal, Finance, Healthcare, Real Estate",
-    setupTime: "1-2 weeks"
+    targetUsers: "Legal, Healthcare, Finance, Real Estate",
+    setupTime: "1-2 weeks",
+    link: "https://ziontechgroup.com/smart-document-processing"
   },
   {
     id: 3,
+    title: "Customer Experience Intelligence",
+    description: "AI-driven customer sentiment analysis, feedback processing, and experience optimization platform.",
+    icon: Heart,
+    category: "Customer Experience",
+    price: "$399/month",
+    features: [
+      "Real-time sentiment analysis",
+      "Multi-channel feedback collection",
+      "Automated response suggestions",
+      "Customer journey mapping",
+      "ROI tracking and analytics",
+      "Integration with CRM systems"
+    ],
+    benefits: [
+      "Improve customer satisfaction by 35%",
+      "Reduce churn rate by 25%",
+      "Increase customer lifetime value by 40%"
+    ],
+    marketPrice: "$500-800/month",
+    targetUsers: "E-commerce, SaaS, Retail, Hospitality",
+    setupTime: "2-3 weeks",
+    link: "https://ziontechgroup.com/customer-experience-intelligence"
+  },
+  {
+    id: 4,
+    title: "Smart Inventory Management",
+    description: "AI-powered inventory optimization with demand forecasting and automated reordering capabilities.",
+    icon: Package,
+    category: "Supply Chain",
+    price: "$249/month",
+    features: [
+      "Demand forecasting with 95% accuracy",
+      "Automated reorder points",
+      "Multi-location inventory tracking",
+      "Supplier performance analytics",
+      "Cost optimization recommendations",
+      "Mobile app for field teams"
+    ],
+    benefits: [
+      "Reduce inventory costs by 30%",
+      "Eliminate stockouts by 90%",
+      "Improve cash flow by 25%"
+    ],
+    marketPrice: "$400-700/month",
+    targetUsers: "Manufacturing, Retail, Distribution, E-commerce",
+    setupTime: "2-4 weeks",
+    link: "https://ziontechgroup.com/smart-inventory-management"
+  },
+  {
+    id: 5,
+    title: "AI Content Marketing Suite",
+    description: "Complete content creation and marketing automation platform with AI-powered writing and optimization.",
+    icon: PenTool,
+    category: "Marketing",
+    price: "$179/month",
+    features: [
+      "AI content generation for blogs, social media, emails",
+      "SEO optimization and keyword research",
+      "Content calendar and scheduling",
+      "Performance analytics and A/B testing",
+      "Multi-language support",
+      "Brand voice consistency"
+    ],
+    benefits: [
+      "Increase content output by 300%",
+      "Improve SEO rankings by 50%",
+      "Reduce content costs by 60%"
+    ],
+    marketPrice: "$300-500/month",
+    targetUsers: "Marketing Agencies, SMBs, Content Creators",
+    setupTime: "1-2 weeks",
+    link: "https://ziontechgroup.com/ai-content-marketing-suite"
+  },
+  {
+    id: 6,
+    title: "Smart HR Analytics Platform",
+    description: "AI-driven human resources analytics for talent acquisition, retention, and performance optimization.",
+    icon: Users,
+    category: "Human Resources",
+    price: "$329/month",
+    features: [
+      "Resume screening and candidate matching",
+      "Employee performance analytics",
+      "Retention risk prediction",
+      "Skills gap analysis",
+      "Diversity and inclusion metrics",
+      "Compliance monitoring"
+    ],
+    benefits: [
+      "Reduce hiring time by 50%",
+      "Improve employee retention by 30%",
+      "Increase productivity by 25%"
+    ],
+    marketPrice: "$500-900/month",
+    targetUsers: "HR Departments, Recruitment Agencies, Enterprises",
+    setupTime: "2-3 weeks",
+    link: "https://ziontechgroup.com/smart-hr-analytics"
+  },
+  {
+    id: 7,
+    title: "Financial Health Monitor",
+    description: "Real-time financial analysis and forecasting platform for small to medium businesses.",
+    icon: DollarSign,
+    category: "Finance",
+    price: "$199/month",
+    features: [
+      "Cash flow forecasting and analysis",
+      "Expense categorization and tracking",
+      "Profit margin optimization",
+      "Tax preparation assistance",
+      "Investment opportunity analysis",
+      "Financial goal tracking"
+    ],
+    benefits: [
+      "Improve cash flow visibility by 100%",
+      "Reduce financial risks by 40%",
+      "Increase profitability by 20%"
+    ],
+    marketPrice: "$300-600/month",
+    targetUsers: "SMBs, Startups, Freelancers, Consultants",
+    setupTime: "1-2 weeks",
+    link: "https://ziontechgroup.com/financial-health-monitor"
+  },
+  {
+    id: 8,
+    title: "Smart Project Management",
+    description: "AI-enhanced project management with resource optimization, risk prediction, and automated reporting.",
+    icon: Calendar,
+    category: "Project Management",
+    price: "$149/month",
+    features: [
+      "AI-powered resource allocation",
+      "Risk prediction and mitigation",
+      "Automated progress tracking",
+      "Team performance analytics",
+      "Budget optimization",
+      "Client communication automation"
+    ],
+    benefits: [
+      "Increase project success rate by 35%",
+      "Reduce project delays by 50%",
+      "Improve team productivity by 30%"
+    ],
+    marketPrice: "$250-450/month",
+    targetUsers: "Project Managers, Agencies, Consultants, Enterprises",
+    setupTime: "1-2 weeks",
+    link: "https://ziontechgroup.com/smart-project-management"
+  },
+  {
+    id: 9,
+    title: "AI-Powered Lead Generation",
+    description: "Automated lead identification, qualification, and nurturing platform with advanced targeting capabilities.",
+    icon: Target,
+    category: "Sales & Marketing",
+    price: "$279/month",
+    features: [
+      "AI lead scoring and qualification",
+      "Multi-channel lead capture",
+      "Automated email sequences",
+      "Social media monitoring",
+      "Competitor analysis",
+      "ROI tracking and optimization"
+    ],
+    benefits: [
+      "Increase qualified leads by 200%",
+      "Improve conversion rates by 45%",
+      "Reduce lead acquisition costs by 40%"
+    ],
+    marketPrice: "$400-700/month",
+    targetUsers: "Sales Teams, Marketing Agencies, B2B Companies",
+    setupTime: "2-3 weeks",
+    link: "https://ziontechgroup.com/ai-lead-generation"
+  },
+  {
+    id: 10,
+    title: "Smart Compliance Manager",
+    description: "Automated compliance monitoring and reporting platform for various industry regulations and standards.",
+    icon: Shield,
+    category: "Compliance & Security",
+    price: "$399/month",
+    features: [
+      "Multi-regulation compliance tracking",
+      "Automated audit preparation",
+      "Risk assessment and mitigation",
+      "Document management and versioning",
+      "Training and certification tracking",
+      "Real-time compliance alerts"
+    ],
+    benefits: [
+      "Reduce compliance costs by 50%",
+      "Eliminate compliance violations by 95%",
+      "Save 20+ hours per month on reporting"
+    ],
+    marketPrice: "$600-1200/month",
+    targetUsers: "Healthcare, Finance, Legal, Government, Manufacturing",
+    setupTime: "3-4 weeks",
+    link: "https://ziontechgroup.com/smart-compliance-manager"
+  },
+  {
+    id: 11,
+    title: "AI Customer Support Assistant",
+    description: "Intelligent customer support automation with natural language processing and multi-channel support.",
+    icon: MessageSquare,
+    category: "Customer Support",
+    price: "$199/month",
+    features: [
+      "24/7 AI chatbot with human handoff",
+      "Multi-language support",
+      "Knowledge base integration",
+      "Sentiment analysis and escalation",
+      "Performance analytics",
+      "Custom training and optimization"
+    ],
+    benefits: [
+      "Reduce support costs by 60%",
+      "Improve response time by 80%",
+      "Increase customer satisfaction by 35%"
+    ],
+    marketPrice: "$300-600/month",
+    targetUsers: "E-commerce, SaaS, Service Companies, Healthcare",
+    setupTime: "1-2 weeks",
+    link: "https://ziontechgroup.com/ai-customer-support"
+  },
+  {
+    id: 12,
+    title: "Smart Energy Management",
+    description: "AI-powered energy consumption monitoring and optimization platform for commercial buildings and facilities.",
+    icon: Zap,
+    category: "Sustainability",
+    price: "$299/month",
+    features: [
+      "Real-time energy monitoring",
+      "Predictive maintenance alerts",
+      "Cost optimization recommendations",
+      "Carbon footprint tracking",
+      "Integration with smart devices",
+      "Sustainability reporting"
+    ],
+    benefits: [
+      "Reduce energy costs by 25%",
+      "Decrease carbon footprint by 30%",
+      "Improve equipment efficiency by 20%"
+    ],
+    marketPrice: "$500-900/month",
+    targetUsers: "Facility Managers, Property Owners, Manufacturing, Retail",
+    setupTime: "2-3 weeks",
+    link: "https://ziontechgroup.com/smart-energy-management"
+  }
+];
+
+const additionalServices = [
+  {
+    id: 13,
     title: "Quantum-Secure Communication Platform",
     description: "Next-generation encrypted communication using quantum key distribution for ultra-secure messaging and file sharing.",
     icon: Shield,

@@ -69,7 +69,8 @@ const itServices = [
     ],
     marketPrice: '$4,000-8,000/month',
     setupTime: '2-4 weeks',
-    targetUsers: 'Enterprises, SMBs, Startups'
+    targetUsers: 'Enterprises, SMBs, Startups',
+    link: 'https://ziontechgroup.com/cloud-infrastructure-migration'
   },
   {
     id: 2,
@@ -96,277 +97,288 @@ const itServices = [
     ],
     marketPrice: '$3,000-6,000/month',
     setupTime: '1-2 weeks',
-    targetUsers: 'Healthcare, Finance, E-commerce, Government'
+    targetUsers: 'Healthcare, Finance, E-commerce, Government',
+    link: 'https://ziontechgroup.com/cybersecurity-solutions'
   },
   {
     id: 3,
-    title: 'Quantum Computing Infrastructure',
-    description: 'Next-generation quantum computing solutions for complex problem-solving and advanced cryptography.',
-    icon: Cpu,
-    category: 'Quantum Computing',
-    price: 'Starting at $15,000/month',
+    title: 'Managed IT Services',
+    description: 'Complete IT infrastructure management including helpdesk, monitoring, maintenance, and support services.',
+    icon: Settings,
+    category: 'Managed Services',
+    price: 'Starting at $1,200/month',
     features: [
-      'Quantum algorithm development',
-      'Quantum hardware integration',
-      'Quantum software development',
-      'Quantum cryptography implementation',
-      'Quantum simulation services',
-      'Hybrid classical-quantum systems',
-      'Quantum machine learning',
-      'Quantum optimization solutions'
+      '24/7 helpdesk support',
+      'Proactive monitoring & maintenance',
+      'Software updates & patch management',
+      'Backup & disaster recovery',
+      'Network management & optimization',
+      'User account management',
+      'IT asset management',
+      'Performance optimization'
     ],
     benefits: [
-      'Solve previously intractable problems',
-      'Exponential computational advantages',
-      'Future-proof security solutions',
-      'Breakthrough optimization results'
+      'Reduce IT downtime by 70%',
+      'Lower IT operational costs by 40%',
+      'Improve system reliability by 90%',
+      'Free up internal IT resources'
     ],
-    marketPrice: '$20,000-50,000/month',
-    setupTime: '12-24 weeks',
-    targetUsers: 'Research, Finance, Pharmaceuticals, Defense'
+    marketPrice: '$2,000-4,000/month',
+    setupTime: '1-2 weeks',
+    targetUsers: 'SMBs, Mid-market companies, Non-profits',
+    link: 'https://ziontechgroup.com/managed-it-services'
   },
   {
     id: 4,
-    title: 'Edge Computing Solutions',
-    description: 'Distributed computing infrastructure for real-time processing and reduced latency applications.',
+    title: 'Network Infrastructure & Security',
+    description: 'Design, implement, and maintain secure, scalable network infrastructure for optimal performance and security.',
     icon: Network,
-    category: 'Edge Computing',
-    price: 'Starting at $3,200/month',
+    category: 'Infrastructure',
+    price: 'Starting at $3,500/month',
     features: [
-      'Edge server deployment',
-      'Real-time data processing',
-      'IoT device management',
-      'Content delivery optimization',
-      'Latency reduction strategies',
-      'Edge security implementation',
-      '5G network integration',
-      'Distributed analytics'
+      'Network design & architecture',
+      'Firewall configuration & management',
+      'VPN setup & maintenance',
+      'Wireless network optimization',
+      'Network security implementation',
+      'Bandwidth management',
+      'Network monitoring & alerting',
+      'Performance optimization'
     ],
     benefits: [
-      'Reduce latency by 80%',
-      'Improve real-time performance',
-      'Enable IoT at scale',
-      'Optimize bandwidth usage'
+      'Improve network performance by 60%',
+      'Enhance security posture by 85%',
+      'Reduce network downtime by 80%',
+      'Support remote work capabilities'
     ],
-    marketPrice: '$4,500-9,000/month',
-    setupTime: '3-6 weeks',
-    targetUsers: 'Manufacturing, Healthcare, Automotive, Smart Cities'
+    marketPrice: '$5,000-10,000/month',
+    setupTime: '2-3 weeks',
+    targetUsers: 'Enterprises, Healthcare, Education, Government',
+    link: 'https://ziontechgroup.com/network-infrastructure-security'
   },
   {
     id: 5,
-    title: 'Blockchain & Web3 Solutions',
-    description: 'Comprehensive blockchain development including smart contracts, DeFi, NFTs, and decentralized applications.',
-    icon: Lock,
-    category: 'Blockchain',
-    price: 'Starting at $4,500/month',
-    features: [
-      'Smart contract development',
-      'DeFi protocol creation',
-      'NFT marketplace development',
-      'DApp development',
-      'Token economics design',
-      'Blockchain integration',
-      'Cryptocurrency wallet development',
-      'Consensus mechanism implementation'
-    ],
-    benefits: [
-      'Enable decentralized operations',
-      'Increase transparency and trust',
-      'Reduce transaction costs',
-      'Create new business models'
-    ],
-    marketPrice: '$6,000-15,000/month',
-    setupTime: '4-12 weeks',
-    targetUsers: 'Finance, Gaming, Supply Chain, Real Estate'
-  },
-  {
-    id: 6,
-    title: 'IoT & Smart Device Management',
-    description: 'Complete IoT solutions including device connectivity, data processing, and smart system integration.',
-    icon: Globe,
-    category: 'IoT Solutions',
-    price: 'Starting at $2,800/month',
-    features: [
-      'IoT device development',
-      'Sensor network deployment',
-      'Real-time data collection',
-      'Device management platform',
-      'Predictive maintenance',
-      'Remote monitoring systems',
-      'IoT security implementation',
-      'Integration with existing systems'
-    ],
-    benefits: [
-      'Enable smart operations',
-      'Improve efficiency by 40%',
-      'Reduce maintenance costs by 50%',
-      'Enable predictive insights'
-    ],
-    marketPrice: '$4,000-8,000/month',
-    setupTime: '4-8 weeks',
-    targetUsers: 'Manufacturing, Agriculture, Healthcare, Smart Cities'
-  },
-  {
-    id: 7,
-    title: 'Zero-Trust Security Architecture',
-    description: 'Advanced zero-trust security model implementation for comprehensive network and data protection.',
-    icon: Shield,
-    category: 'Zero-Trust Security',
-    price: 'Starting at $5,500/month',
-    features: [
-      'Identity verification systems',
-      'Micro-segmentation implementation',
-      'Continuous monitoring',
-      'Privileged access management',
-      'Multi-factor authentication',
-      'Device trust verification',
-      'Data encryption at rest and in transit',
-      'Security policy automation'
-    ],
-    benefits: [
-      'Eliminate security perimeters',
-      'Prevent lateral movement attacks',
-      'Ensure continuous verification',
-      'Comply with strict regulations'
-    ],
-    marketPrice: '$7,500-15,000/month',
-    setupTime: '6-12 weeks',
-    targetUsers: 'Government, Finance, Healthcare, Critical Infrastructure'
-  },
-  {
-    id: 8,
-    title: 'AI Infrastructure & MLOps',
-    description: 'Complete AI infrastructure setup including model training, deployment, and monitoring at scale.',
-    icon: Brain,
-    category: 'AI Infrastructure',
-    price: 'Starting at $6,500/month',
-    features: [
-      'AI model training infrastructure',
-      'MLOps pipeline development',
-      'Model versioning & management',
-      'Automated model deployment',
-      'A/B testing frameworks',
-      'Model monitoring & alerting',
-      'GPU cluster management',
-      'Data pipeline automation'
-    ],
-    benefits: [
-      'Scale AI operations efficiently',
-      'Reduce model deployment time by 70%',
-      'Improve model performance monitoring',
-      'Enable rapid AI experimentation'
-    ],
-    marketPrice: '$8,500-18,000/month',
-    setupTime: '6-12 weeks',
-    targetUsers: 'Tech Companies, Research, Finance, Healthcare'
-  },
-  {
-    id: 9,
-    title: 'Disaster Recovery & Business Continuity',
-    description: 'Comprehensive disaster recovery solutions ensuring business continuity and data protection.',
-    icon: HardDrive,
-    category: 'Disaster Recovery',
-    price: 'Starting at $2,200/month',
-    features: [
-      'Backup strategy development',
-      'Disaster recovery planning',
-      'Data replication systems',
-      'Failover automation',
-      'Recovery time optimization',
-      'Business continuity testing',
-      'Cloud backup solutions',
-      'Recovery point objectives (RPO)'
-    ],
-    benefits: [
-      'Minimize downtime to minutes',
-      'Protect critical business data',
-      'Ensure regulatory compliance',
-      'Reduce recovery costs by 60%'
-    ],
-    marketPrice: '$3,500-7,000/month',
-    setupTime: '2-4 weeks',
-    targetUsers: 'Enterprises, Healthcare, Finance, Government'
-  },
-  {
-    id: 10,
-    title: 'Network Infrastructure & SD-WAN',
-    description: 'Advanced networking solutions including SD-WAN, network optimization, and connectivity management.',
-    icon: Network,
-    category: 'Networking',
-    price: 'Starting at $1,900/month',
-    features: [
-      'SD-WAN implementation',
-      'Network performance optimization',
-      'Bandwidth management',
-      'Quality of Service (QoS)',
-      'Network monitoring & analytics',
-      'VPN solutions',
-      'Load balancing',
-      'Network security integration'
-    ],
-    benefits: [
-      'Improve network performance by 50%',
-      'Reduce connectivity costs by 40%',
-      'Enable flexible network management',
-      'Enhance security and reliability'
-    ],
-    marketPrice: '$3,000-6,000/month',
-    setupTime: '2-4 weeks',
-    targetUsers: 'Enterprises, Remote Work, Branch Offices, Cloud Migration'
-  },
-  {
-    id: 11,
-    title: 'Database & Data Management',
-    description: 'Comprehensive database solutions including design, optimization, migration, and management services.',
+    title: 'Database Management & Optimization',
+    description: 'Comprehensive database services including design, optimization, migration, and 24/7 monitoring.',
     icon: Database,
-    category: 'Data Management',
-    price: 'Starting at $2,100/month',
+    category: 'Database Services',
+    price: 'Starting at $1,500/month',
     features: [
       'Database design & architecture',
       'Performance tuning & optimization',
       'Database migration services',
       'Backup & recovery solutions',
-      'Data warehousing',
-      'ETL/ELT pipeline development',
-      'Database security implementation',
-      '24/7 database monitoring'
+      'Security hardening',
+      'Monitoring & alerting',
+      'Capacity planning',
+      'Disaster recovery planning'
     ],
     benefits: [
-      'Improve database performance by 60%',
-      'Reduce data management costs by 35%',
-      'Ensure data integrity and security',
-      'Enable scalable data operations'
+      'Improve database performance by 50%',
+      'Reduce data loss risk by 95%',
+      'Lower database costs by 30%',
+      'Ensure 99.9% uptime'
     ],
-    marketPrice: '$3,500-7,500/month',
-    setupTime: '2-6 weeks',
-    targetUsers: 'Enterprises, E-commerce, Analytics, Healthcare'
+    marketPrice: '$2,500-5,000/month',
+    setupTime: '1-3 weeks',
+    targetUsers: 'E-commerce, SaaS, Healthcare, Finance',
+    link: 'https://ziontechgroup.com/database-management-optimization'
+  },
+  {
+    id: 6,
+    title: 'IT Consulting & Strategy',
+    description: 'Strategic IT consulting to align technology with business goals and drive digital transformation.',
+    icon: Building,
+    category: 'Consulting',
+    price: 'Starting at $200/hour',
+    features: [
+      'IT strategy development',
+      'Technology roadmap planning',
+      'Digital transformation consulting',
+      'Vendor evaluation & selection',
+      'IT governance & compliance',
+      'Change management',
+      'ROI analysis & reporting',
+      'Executive technology briefings'
+    ],
+    benefits: [
+      'Align IT with business objectives',
+      'Reduce technology costs by 25%',
+      'Improve decision-making processes',
+      'Accelerate digital transformation'
+    ],
+    marketPrice: '$300-500/hour',
+    setupTime: '1-2 weeks',
+    targetUsers: 'C-level executives, IT directors, Business owners',
+    link: 'https://ziontechgroup.com/it-consulting-strategy'
+  },
+  {
+    id: 7,
+    title: 'DevOps & CI/CD Implementation',
+    description: 'Implement DevOps practices and CI/CD pipelines to accelerate software delivery and improve quality.',
+    icon: Code,
+    category: 'DevOps',
+    price: 'Starting at $2,800/month',
+    features: [
+      'CI/CD pipeline setup',
+      'Infrastructure automation',
+      'Container orchestration (Kubernetes)',
+      'Monitoring & logging setup',
+      'Security scanning integration',
+      'Deployment automation',
+      'Environment management',
+      'Team training & best practices'
+    ],
+    benefits: [
+      'Reduce deployment time by 80%',
+      'Improve code quality by 60%',
+      'Increase deployment frequency by 300%',
+      'Reduce production incidents by 70%'
+    ],
+    marketPrice: '$4,000-8,000/month',
+    setupTime: '3-6 weeks',
+    targetUsers: 'Software companies, Development teams, Enterprises',
+    link: 'https://ziontechgroup.com/devops-cicd-implementation'
+  },
+  {
+    id: 8,
+    title: 'IT Support & Helpdesk',
+    description: 'Professional IT support services with rapid response times and comprehensive issue resolution.',
+    icon: Monitor,
+    category: 'Support',
+    price: 'Starting at $800/month',
+    features: [
+      '24/7 technical support',
+      'Remote desktop assistance',
+      'Hardware & software troubleshooting',
+      'User training & onboarding',
+      'System maintenance',
+      'Security incident response',
+      'Mobile device management',
+      'Knowledge base & documentation'
+    ],
+    benefits: [
+      'Resolve 90% of issues within 4 hours',
+      'Improve user productivity by 40%',
+      'Reduce IT support costs by 50%',
+      'Enhance user satisfaction by 85%'
+    ],
+    marketPrice: '$1,500-3,000/month',
+    setupTime: '1 week',
+    targetUsers: 'SMBs, Remote teams, Growing companies',
+    link: 'https://ziontechgroup.com/it-support-helpdesk'
+  },
+  {
+    id: 9,
+    title: 'Data Backup & Recovery',
+    description: 'Comprehensive data protection solutions with automated backups and rapid recovery capabilities.',
+    icon: HardDrive,
+    category: 'Data Protection',
+    price: 'Starting at $400/month',
+    features: [
+      'Automated backup scheduling',
+      'Multi-location backup storage',
+      'Point-in-time recovery',
+      'Disaster recovery testing',
+      'Data encryption & security',
+      'Compliance reporting',
+      'Recovery time optimization',
+      'Backup monitoring & alerting'
+    ],
+    benefits: [
+      'Protect against data loss by 99.9%',
+      'Reduce recovery time by 90%',
+      'Ensure regulatory compliance',
+      'Minimize business disruption'
+    ],
+    marketPrice: '$600-1,200/month',
+    setupTime: '1-2 weeks',
+    targetUsers: 'All business types, Healthcare, Legal, Finance',
+    link: 'https://ziontechgroup.com/data-backup-recovery'
+  },
+  {
+    id: 10,
+    title: 'IT Security Auditing & Compliance',
+    description: 'Comprehensive security assessments and compliance management for various industry standards.',
+    icon: Shield,
+    category: 'Compliance',
+    price: 'Starting at $2,200/month',
+    features: [
+      'Security risk assessments',
+      'Compliance gap analysis',
+      'Penetration testing',
+      'Vulnerability scanning',
+      'Policy development',
+      'Staff training programs',
+      'Audit preparation',
+      'Remediation planning'
+    ],
+    benefits: [
+      'Achieve compliance requirements',
+      'Identify security vulnerabilities',
+      'Reduce audit preparation time by 70%',
+      'Improve security posture by 80%'
+    ],
+    marketPrice: '$3,500-7,000/month',
+    setupTime: '2-4 weeks',
+    targetUsers: 'Healthcare, Finance, Government, E-commerce',
+    link: 'https://ziontechgroup.com/it-security-auditing-compliance'
+  },
+  {
+    id: 11,
+    title: 'Cloud Security & Compliance',
+    description: 'Specialized cloud security services to protect cloud infrastructure and ensure compliance.',
+    icon: Cloud,
+    category: 'Cloud Security',
+    price: 'Starting at $1,900/month',
+    features: [
+      'Cloud security architecture review',
+      'Identity & access management',
+      'Data encryption & key management',
+      'Security monitoring & alerting',
+      'Compliance automation',
+      'Incident response planning',
+      'Security training & awareness',
+      'Regular security assessments'
+    ],
+    benefits: [
+      'Secure cloud environments by 95%',
+      'Ensure cloud compliance by 100%',
+      'Reduce security incidents by 85%',
+      'Optimize cloud security costs by 30%'
+    ],
+    marketPrice: '$3,000-6,000/month',
+    setupTime: '2-3 weeks',
+    targetUsers: 'Cloud-first companies, Enterprises, SaaS providers',
+    link: 'https://ziontechgroup.com/cloud-security-compliance'
   },
   {
     id: 12,
-    title: 'IT Consulting & Digital Transformation',
-    description: 'Strategic IT consulting services for digital transformation, technology assessment, and implementation planning.',
-    icon: Settings,
-    category: 'IT Consulting',
-    price: 'Starting at $3,500/month',
+    title: 'IT Infrastructure Monitoring',
+    description: '24/7 monitoring and alerting for IT infrastructure to prevent issues and ensure optimal performance.',
+    icon: Eye,
+    category: 'Monitoring',
+    price: 'Starting at $1,100/month',
     features: [
-      'Technology strategy development',
-      'Digital transformation planning',
-      'IT infrastructure assessment',
-      'Technology roadmap creation',
-      'Vendor evaluation & selection',
-      'Change management support',
-      'IT governance implementation',
-      'Performance optimization consulting'
+      'Real-time infrastructure monitoring',
+      'Performance metrics tracking',
+      'Automated alerting system',
+      'Capacity planning & forecasting',
+      'Uptime monitoring & reporting',
+      'Security event monitoring',
+      'Custom dashboard creation',
+      'Incident response automation'
     ],
     benefits: [
-      'Align technology with business goals',
-      'Reduce IT costs by 25%',
-      'Improve operational efficiency',
-      'Enable digital innovation'
+      'Prevent 90% of infrastructure issues',
+      'Improve system uptime by 99.5%',
+      'Reduce mean time to resolution by 60%',
+      'Optimize resource utilization by 40%'
     ],
-    marketPrice: '$5,000-12,000/month',
-    setupTime: '2-8 weeks',
-    targetUsers: 'Enterprises, SMBs, Startups, Government'
+    marketPrice: '$1,800-3,500/month',
+    setupTime: '1-2 weeks',
+    targetUsers: 'All business types, Data centers, Cloud providers',
+    link: 'https://ziontechgroup.com/it-infrastructure-monitoring'
   }
 ];
 

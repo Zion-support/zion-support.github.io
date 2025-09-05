@@ -78,9 +78,11 @@ export default function HomePage() {
 
   const stats = [
     { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
+    { number: '200+', label: 'Happy Clients' },
     { number: '99.9%', label: 'Uptime Guarantee' },
-    { number: '24/7', label: 'Support Available' }
+    { number: '24/7', label: 'Support Available' },
+    { number: '50+', label: 'AI Models Deployed' },
+    { number: '15+', label: 'Years Experience' }
   ];
 
   const features = [
@@ -128,12 +130,12 @@ export default function HomePage() {
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Transform Your Business with{' '}
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-                  Technology
+                  AI & Technology
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                We provide cutting-edge technology solutions including AI, cloud services, 
-                cybersecurity, and custom development to help your business thrive in the digital age.
+                Leading provider of AI solutions, cloud services, cybersecurity, and custom development. 
+                We help businesses achieve digital transformation with cutting-edge technology and expert implementation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -323,6 +325,66 @@ export default function HomePage() {
                     </Link>
                   </motion.div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Info Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Get in Touch
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Ready to start your digital transformation journey? Contact our experts today.
+              </p>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <motion.div
+                  className="text-center p-6 bg-gray-50 rounded-lg"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Phone className="w-8 h-8 text-indigo-600 mx-auto mb-4" />
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
+                  <p className="text-gray-600">+1 302 464 0950</p>
+                </motion.div>
+
+                <motion.div
+                  className="text-center p-6 bg-gray-50 rounded-lg"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <Mail className="w-8 h-8 text-indigo-600 mx-auto mb-4" />
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
+                  <p className="text-gray-600">kleber@ziontechgroup.com</p>
+                </motion.div>
+
+                <motion.div
+                  className="text-center p-6 bg-gray-50 rounded-lg"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                  viewport={{ once: true }}
+                >
+                  <MapPin className="w-8 h-8 text-indigo-600 mx-auto mb-4" />
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>
+                  <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                </motion.div>
               </div>
             </div>
           </div>

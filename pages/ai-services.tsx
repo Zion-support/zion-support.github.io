@@ -78,7 +78,8 @@ const aiServices = [
     ],
     marketPrice: '$5,000-12,000/month',
     setupTime: '3-6 weeks',
-    targetUsers: 'E-commerce, Finance, Healthcare, Manufacturing'
+    targetUsers: 'E-commerce, Finance, Healthcare, Manufacturing',
+    link: 'https://ziontechgroup.com/machine-learning-models'
   },
   {
     id: 2,
@@ -105,277 +106,288 @@ const aiServices = [
     ],
     marketPrice: '$4,000-8,000/month',
     setupTime: '2-4 weeks',
-    targetUsers: 'Manufacturing, Security, Retail, Healthcare'
+    targetUsers: 'Manufacturing, Security, Retail, Healthcare',
+    link: 'https://ziontechgroup.com/computer-vision-solutions'
   },
   {
     id: 3,
-    title: 'Quantum AI Processing',
-    description: 'Revolutionary quantum-enhanced AI algorithms for solving complex optimization problems and advanced machine learning.',
-    icon: Cpu,
-    category: 'Quantum AI',
-    price: 'Starting at $8,500/month',
+    title: 'Natural Language Processing',
+    description: 'Advanced NLP solutions for text analysis, language understanding, and automated content processing.',
+    icon: MessageSquare,
+    category: 'NLP',
+    price: 'Starting at $2,200/month',
     features: [
-      'Quantum machine learning algorithms',
-      'Quantum optimization solutions',
-      'Quantum neural networks',
-      'Hybrid classical-quantum models',
-      'Quantum data processing',
-      'Advanced cryptography',
-      'Quantum simulation',
-      'Real-time quantum computing'
+      'Text analysis & sentiment analysis',
+      'Language translation & localization',
+      'Chatbot & conversational AI',
+      'Document summarization',
+      'Named entity recognition',
+      'Intent classification',
+      'Multi-language support',
+      'Custom language models'
     ],
     benefits: [
-      'Solve previously intractable problems',
-      'Exponential speedup for specific tasks',
-      'Breakthrough optimization results',
-      'Future-proof AI architecture'
+      'Process 10,000+ documents/hour',
+      'Improve customer service by 70%',
+      'Reduce content processing time by 90%',
+      'Enable multilingual operations'
     ],
-    marketPrice: '$12,000-25,000/month',
-    setupTime: '6-12 weeks',
-    targetUsers: 'Research, Finance, Pharmaceuticals, Defense'
+    marketPrice: '$3,500-7,000/month',
+    setupTime: '2-4 weeks',
+    targetUsers: 'Customer Service, Content Management, Legal, Healthcare',
+    link: 'https://ziontechgroup.com/natural-language-processing'
   },
   {
     id: 4,
-    title: 'Autonomous AI Agents',
-    description: 'Self-managing AI agents that can perform complex tasks, make decisions, and adapt to changing environments autonomously.',
-    icon: Bot,
-    category: 'Autonomous Systems',
-    price: 'Starting at $4,200/month',
+    title: 'Predictive Analytics Platform',
+    description: 'Comprehensive predictive analytics solution for forecasting, trend analysis, and business intelligence.',
+    icon: BarChart3,
+    category: 'Analytics',
+    price: 'Starting at $1,800/month',
     features: [
-      'Self-learning AI agents',
-      'Multi-agent coordination',
-      'Autonomous decision making',
-      'Environment adaptation',
-      'Task planning & execution',
-      'Human-AI collaboration',
-      'Continuous learning',
-      'Risk assessment & mitigation'
+      'Demand forecasting',
+      'Customer behavior prediction',
+      'Risk assessment & modeling',
+      'Trend analysis & reporting',
+      'Real-time dashboards',
+      'Automated insights generation',
+      'Data visualization',
+      'Custom metric tracking'
     ],
     benefits: [
-      'Reduce human intervention by 90%',
-      'Improve task completion by 75%',
-      'Enable 24/7 autonomous operations',
-      'Scale operations without limits'
+      'Improve forecast accuracy by 85%',
+      'Reduce inventory costs by 30%',
+      'Increase revenue by 25%',
+      'Enable data-driven decisions'
     ],
-    marketPrice: '$6,000-12,000/month',
-    setupTime: '4-8 weeks',
-    targetUsers: 'Manufacturing, Logistics, Customer Service, Finance'
+    marketPrice: '$3,000-6,000/month',
+    setupTime: '2-3 weeks',
+    targetUsers: 'Retail, Finance, Supply Chain, Marketing',
+    link: 'https://ziontechgroup.com/predictive-analytics-platform'
   },
   {
     id: 5,
-    title: 'Neural Interface AI',
-    description: 'Brain-computer interface AI that enables direct neural control and communication with machines and systems.',
-    icon: Brain,
-    category: 'Neural Interfaces',
-    price: 'Starting at $6,500/month',
+    title: 'AI-Powered Automation',
+    description: 'Intelligent automation solutions for business processes, workflows, and repetitive task elimination.',
+    icon: Settings,
+    category: 'Automation',
+    price: 'Starting at $2,500/month',
     features: [
-      'EEG signal interpretation',
-      'Neural pattern recognition',
-      'Thought-to-action translation',
-      'Accessibility applications',
-      'Medical monitoring',
-      'Gaming interfaces',
-      'Prosthetic control',
-      'Cognitive enhancement'
+      'Process automation & optimization',
+      'Workflow intelligence',
+      'Document processing automation',
+      'Email & communication automation',
+      'Data entry automation',
+      'Approval workflow automation',
+      'Exception handling',
+      'Performance monitoring'
     ],
     benefits: [
-      'Enable accessibility solutions',
-      'Revolutionize human-machine interaction',
-      'Advance medical treatments',
-      'Create new interaction paradigms'
+      'Reduce manual work by 80%',
+      'Improve process efficiency by 60%',
+      'Eliminate human errors by 95%',
+      'Save 20+ hours per week'
     ],
-    marketPrice: '$8,000-15,000/month',
-    setupTime: '8-16 weeks',
-    targetUsers: 'Healthcare, Gaming, Accessibility, Research'
+    marketPrice: '$4,000-8,000/month',
+    setupTime: '3-5 weeks',
+    targetUsers: 'Finance, HR, Operations, Customer Service',
+    link: 'https://ziontechgroup.com/ai-powered-automation'
   },
   {
     id: 6,
-    title: 'AI-Powered Drug Discovery',
-    description: 'Advanced AI platform for accelerating drug discovery, molecular design, and pharmaceutical research.',
-    icon: Heart,
-    category: 'Pharmaceutical AI',
-    price: 'Starting at $12,000/month',
+    title: 'AI Customer Intelligence',
+    description: 'Advanced customer analytics and personalization platform for enhanced customer experience and engagement.',
+    icon: Users,
+    category: 'Customer Intelligence',
+    price: 'Starting at $3,200/month',
     features: [
-      'Molecular design AI',
-      'Drug-target interaction prediction',
-      'Clinical trial optimization',
-      'Side effect prediction',
-      'Drug repurposing analysis',
-      'Biomarker discovery',
-      'Personalized medicine',
-      'Regulatory compliance'
+      'Customer segmentation & profiling',
+      'Personalized recommendations',
+      'Churn prediction & prevention',
+      'Lifetime value prediction',
+      'Behavioral analysis',
+      'Real-time personalization',
+      'A/B testing framework',
+      'ROI tracking & optimization'
     ],
     benefits: [
-      'Reduce drug discovery time by 70%',
-      'Lower development costs by 50%',
-      'Improve success rates by 40%',
-      'Enable personalized treatments'
+      'Increase customer retention by 40%',
+      'Boost conversion rates by 35%',
+      'Improve customer satisfaction by 50%',
+      'Increase average order value by 25%'
     ],
-    marketPrice: '$15,000-30,000/month',
-    setupTime: '12-24 weeks',
-    targetUsers: 'Pharmaceuticals, Biotech, Research, Healthcare'
+    marketPrice: '$5,000-10,000/month',
+    setupTime: '4-6 weeks',
+    targetUsers: 'E-commerce, SaaS, Retail, Subscription Services',
+    link: 'https://ziontechgroup.com/ai-customer-intelligence'
   },
   {
     id: 7,
-    title: 'AI Climate Modeling',
-    description: 'Advanced AI systems for climate prediction, environmental monitoring, and sustainability optimization.',
-    icon: Globe,
-    category: 'Environmental AI',
-    price: 'Starting at $5,500/month',
+    title: 'AI Security & Fraud Detection',
+    description: 'Advanced AI-powered security solutions for fraud detection, threat analysis, and risk management.',
+    icon: Shield,
+    category: 'AI Security',
+    price: 'Starting at $2,800/month',
     features: [
-      'Climate pattern prediction',
-      'Environmental impact analysis',
-      'Carbon footprint optimization',
-      'Renewable energy forecasting',
-      'Ecosystem monitoring',
-      'Disaster prediction',
-      'Sustainability planning',
-      'Policy impact modeling'
+      'Real-time fraud detection',
+      'Anomaly detection & analysis',
+      'Threat intelligence & monitoring',
+      'Risk scoring & assessment',
+      'Behavioral analysis',
+      'Pattern recognition',
+      'Automated response systems',
+      'Compliance monitoring'
     ],
     benefits: [
-      'Improve climate predictions by 60%',
-      'Optimize sustainability efforts',
-      'Reduce environmental impact',
-      'Enable data-driven policy making'
+      'Detect fraud with 99.5% accuracy',
+      'Reduce false positives by 70%',
+      'Prevent 95% of security incidents',
+      'Save millions in fraud losses'
     ],
-    marketPrice: '$7,000-14,000/month',
-    setupTime: '6-12 weeks',
-    targetUsers: 'Government, Environmental, Energy, Agriculture'
+    marketPrice: '$4,500-9,000/month',
+    setupTime: '3-5 weeks',
+    targetUsers: 'Banking, E-commerce, Insurance, Healthcare',
+    link: 'https://ziontechgroup.com/ai-security-fraud-detection'
   },
   {
     id: 8,
-    title: 'AI-Powered Space Exploration',
-    description: 'Advanced AI systems for space mission planning, satellite operations, and extraterrestrial research.',
-    icon: Rocket,
-    category: 'Space AI',
-    price: 'Starting at $15,000/month',
+    title: 'AI Content Generation',
+    description: 'Intelligent content creation platform for automated writing, editing, and content optimization.',
+    icon: FileText,
+    category: 'Content AI',
+    price: 'Starting at $1,500/month',
     features: [
-      'Mission planning optimization',
-      'Satellite constellation management',
-      'Space debris tracking',
-      'Planetary exploration AI',
-      'Communication optimization',
-      'Resource utilization',
-      'Risk assessment',
-      'Autonomous navigation'
+      'Automated content writing',
+      'SEO optimization',
+      'Content personalization',
+      'Multi-language content generation',
+      'Brand voice consistency',
+      'Content quality scoring',
+      'Plagiarism detection',
+      'Content performance analytics'
     ],
     benefits: [
-      'Improve mission success rates',
-      'Optimize space operations',
-      'Enable autonomous space systems',
-      'Advance space exploration'
+      'Increase content output by 300%',
+      'Improve SEO rankings by 50%',
+      'Reduce content costs by 60%',
+      'Maintain consistent brand voice'
     ],
-    marketPrice: '$20,000-40,000/month',
-    setupTime: '12-24 weeks',
-    targetUsers: 'Space Agencies, Aerospace, Research, Defense'
+    marketPrice: '$2,500-5,000/month',
+    setupTime: '1-2 weeks',
+    targetUsers: 'Marketing, Content Creators, E-commerce, Agencies',
+    link: 'https://ziontechgroup.com/ai-content-generation'
   },
   {
     id: 9,
-    title: 'AI-Powered Financial Trading',
-    description: 'Advanced AI trading systems with real-time market analysis, risk management, and automated trading strategies.',
-    icon: DollarSign,
-    category: 'FinTech AI',
-    price: 'Starting at $7,500/month',
+    title: 'AI Voice & Speech Solutions',
+    description: 'Advanced voice AI for speech recognition, synthesis, and conversational interfaces.',
+    icon: Mic,
+    category: 'Voice AI',
+    price: 'Starting at $2,200/month',
     features: [
-      'Real-time market analysis',
-      'Algorithmic trading strategies',
-      'Risk management systems',
-      'Portfolio optimization',
-      'Fraud detection',
-      'Regulatory compliance',
-      'High-frequency trading',
-      'Sentiment analysis'
+      'Speech-to-text conversion',
+      'Text-to-speech synthesis',
+      'Voice command recognition',
+      'Conversational AI interfaces',
+      'Multi-language support',
+      'Voice biometrics',
+      'Real-time transcription',
+      'Custom voice training'
     ],
     benefits: [
-      'Increase trading profits by 35%',
-      'Reduce risk exposure by 50%',
-      'Enable 24/7 trading',
-      'Improve decision speed'
+      'Improve accessibility by 100%',
+      'Reduce call center costs by 50%',
+      'Enable hands-free operations',
+      'Enhance user experience'
     ],
-    marketPrice: '$10,000-20,000/month',
-    setupTime: '4-8 weeks',
-    targetUsers: 'Banks, Hedge Funds, Trading Firms, FinTech'
+    marketPrice: '$3,500-7,000/month',
+    setupTime: '2-4 weeks',
+    targetUsers: 'Call Centers, Healthcare, Accessibility, IoT',
+    link: 'https://ziontechgroup.com/ai-voice-speech-solutions'
   },
   {
     id: 10,
-    title: 'AI-Powered Creative Studio',
-    description: 'Comprehensive AI platform for content creation, design, music, and multimedia production.',
-    icon: Camera,
-    category: 'Creative AI',
-    price: 'Starting at $2,200/month',
+    title: 'AI Recommendation Engine',
+    description: 'Intelligent recommendation system for products, content, and services with advanced personalization.',
+    icon: Target,
+    category: 'Recommendation AI',
+    price: 'Starting at $2,800/month',
     features: [
-      'AI content generation',
-      'Image & video editing',
-      'Music composition',
-      '3D modeling & animation',
-      'Copywriting & storytelling',
-      'Brand design',
-      'Social media content',
-      'Multimedia production'
+      'Collaborative filtering',
+      'Content-based recommendations',
+      'Hybrid recommendation models',
+      'Real-time personalization',
+      'A/B testing framework',
+      'Performance analytics',
+      'Cold start problem solving',
+      'Multi-domain recommendations'
     ],
     benefits: [
-      'Reduce content creation time by 80%',
-      'Lower production costs by 60%',
-      'Enable unlimited creativity',
-      'Scale content production'
+      'Increase click-through rates by 40%',
+      'Boost conversion rates by 30%',
+      'Improve user engagement by 50%',
+      'Increase average session duration by 35%'
     ],
-    marketPrice: '$3,000-6,000/month',
-    setupTime: '2-4 weeks',
-    targetUsers: 'Marketing, Media, Entertainment, Design'
+    marketPrice: '$4,500-9,000/month',
+    setupTime: '3-5 weeks',
+    targetUsers: 'E-commerce, Streaming, News, Social Media',
+    link: 'https://ziontechgroup.com/ai-recommendation-engine'
   },
   {
     id: 11,
-    title: 'AI-Powered Cybersecurity',
-    description: 'Advanced AI security systems with threat detection, automated response, and predictive security analytics.',
-    icon: Shield,
-    category: 'Security AI',
-    price: 'Starting at $4,800/month',
+    title: 'AI Data Intelligence',
+    description: 'Comprehensive AI platform for data analysis, insights generation, and intelligent data management.',
+    icon: Database,
+    category: 'Data AI',
+    price: 'Starting at $3,500/month',
     features: [
-      'Threat detection & prevention',
-      'Automated incident response',
-      'Behavioral analysis',
-      'Vulnerability assessment',
-      'Security orchestration',
-      'Compliance monitoring',
-      'Zero-trust architecture',
-      'Predictive security'
+      'Automated data analysis',
+      'Pattern recognition & discovery',
+      'Data quality assessment',
+      'Intelligent data cleaning',
+      'Automated insights generation',
+      'Data visualization & reporting',
+      'Anomaly detection',
+      'Data lineage tracking'
     ],
     benefits: [
-      'Detect threats 10x faster',
-      'Reduce false positives by 85%',
-      'Automate 90% of security tasks',
-      'Prevent 99.9% of attacks'
+      'Reduce data analysis time by 90%',
+      'Improve data quality by 85%',
+      'Discover hidden insights',
+      'Enable self-service analytics'
     ],
-    marketPrice: '$6,500-13,000/month',
-    setupTime: '3-6 weeks',
-    targetUsers: 'Enterprises, Government, Healthcare, Finance'
+    marketPrice: '$5,500-11,000/month',
+    setupTime: '4-6 weeks',
+    targetUsers: 'Data Teams, Analytics, Business Intelligence, Research',
+    link: 'https://ziontechgroup.com/ai-data-intelligence'
   },
   {
     id: 12,
-    title: 'AI-Powered Personal Assistant',
-    description: 'Advanced personal AI assistant with natural language processing, task automation, and intelligent scheduling.',
-    icon: Users,
-    category: 'Personal AI',
-    price: 'Starting at $199/month',
+    title: 'AI Edge Computing',
+    description: 'Edge AI solutions for real-time processing, IoT integration, and distributed intelligence.',
+    icon: Network,
+    category: 'Edge AI',
+    price: 'Starting at $4,200/month',
     features: [
-      'Natural language understanding',
-      'Task automation',
-      'Intelligent scheduling',
-      'Email management',
-      'Research assistance',
-      'Voice interaction',
-      'Learning & adaptation',
-      'Multi-platform integration'
+      'Edge model deployment',
+      'Real-time inference',
+      'IoT device integration',
+      'Distributed processing',
+      'Low-latency optimization',
+      'Offline capability',
+      'Edge-to-cloud synchronization',
+      'Resource optimization'
     ],
     benefits: [
-      'Increase productivity by 50%',
-      'Save 15+ hours per week',
-      'Improve task organization',
-      'Enable hands-free operation'
+      'Reduce latency by 80%',
+      'Enable offline AI processing',
+      'Improve privacy & security',
+      'Reduce bandwidth costs by 60%'
     ],
-    marketPrice: '$300-600/month',
-    setupTime: '1-2 weeks',
-    targetUsers: 'Professionals, Executives, Entrepreneurs, Students'
+    marketPrice: '$6,500-13,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'IoT, Manufacturing, Autonomous Vehicles, Smart Cities',
+    link: 'https://ziontechgroup.com/ai-edge-computing'
   }
 ];
 

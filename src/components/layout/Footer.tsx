@@ -22,7 +22,9 @@ import {
   Users,
   Award,
   Clock,
-  CheckCircle
+  CheckCircle,
+  Settings,
+  Zap
 } from 'lucide-react';
 
 interface FooterProps {
@@ -36,9 +38,11 @@ export default function Footer({ className = '' }: FooterProps) {
     { name: 'AI Services', href: '/ai-services', icon: Brain },
     { name: 'IT Services', href: '/it-services', icon: Code },
     { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud },
-    { name: 'Cybersecurity', href: '/security', icon: Shield },
+    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
     { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud },
-    { name: 'Database Solutions', href: '/database-solutions', icon: Database }
+    { name: 'Custom Development', href: '/custom-development', icon: Settings },
+    { name: 'Database Solutions', href: '/database-solutions', icon: Database },
+    { name: 'Digital Transformation', href: '/digital-transformation', icon: Zap }
   ];
 
   const solutions = [
@@ -47,7 +51,9 @@ export default function Footer({ className = '' }: FooterProps) {
     { name: 'Industry Solutions', href: '/industries' },
     { name: 'Custom Development', href: '/custom-development' },
     { name: 'Digital Transformation', href: '/digital-transformation' },
-    { name: 'Technology Consulting', href: '/consulting' }
+    { name: 'Technology Consulting', href: '/consulting' },
+    { name: 'Cloud Migration', href: '/cloud-migration' },
+    { name: 'AI Implementation', href: '/ai-implementation' }
   ];
 
   const company = [
@@ -56,7 +62,9 @@ export default function Footer({ className = '' }: FooterProps) {
     { name: 'Careers', href: '/careers' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'News & Updates', href: '/news' },
-    { name: 'Partners', href: '/partners' }
+    { name: 'Partners', href: '/partners' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Contact Us', href: '/contact' }
   ];
 
   const resources = [
@@ -65,7 +73,9 @@ export default function Footer({ className = '' }: FooterProps) {
     { name: 'API Reference', href: '/api-docs' },
     { name: 'Tutorials', href: '/tutorials' },
     { name: 'White Papers', href: '/white-papers' },
-    { name: 'Webinars', href: '/webinars' }
+    { name: 'Webinars', href: '/webinars' },
+    { name: 'FAQ', href: '/faq' },
+    { name: 'Support', href: '/support' }
   ];
 
   const legal = [
@@ -74,7 +84,9 @@ export default function Footer({ className = '' }: FooterProps) {
     { name: 'Cookie Policy', href: '/cookies' },
     { name: 'Security', href: '/security' },
     { name: 'Compliance', href: '/compliance' },
-    { name: 'Accessibility', href: '/accessibility' }
+    { name: 'Accessibility', href: '/accessibility' },
+    { name: 'GDPR', href: '/gdpr' },
+    { name: 'SLA', href: '/sla' }
   ];
 
   const socialLinks = [
