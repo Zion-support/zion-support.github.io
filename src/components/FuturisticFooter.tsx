@@ -2,7 +2,7 @@
 
     };
   ],
-,
+
   const socialLinks = ['],
     { nam: e: 'LinkedIn', hre: f: 'http: s://linkedin.com/company/zion-tech-group', ico: n: 'LinkedIn' },'',
     { nam: e: 'Twitter', hre: f: 'http: s://twitter.com/ziontechgroup', ico: n: 'Twitter' },'',

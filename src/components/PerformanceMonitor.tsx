@@ -3,12 +3,12 @@
       };
 
     };
-,
+
     // Initial tracking,
     trackPageLoad(),
     trackMemory(),
     trackNetwork(),
-,
+
     // Set up periodic tracking,
     const interval = setInterval(() => {,
       trackMemory(),
@@ -21,21 +21,21 @@
 ,
     window.addEventListener('online', handleOnline),
     window.addEventListener('offline', handleOffline),
-,
+
     return () => {,
       clearInterval(interval),
       window.removeEventListener('online', handleOnline),
       window.removeEventListener('offline', handleOffline)
     };
   }, [location.pathname]),
-,
+
   // Show performance issues,
   useEffect(() => {,
     const hasPerformanceIssues =,
       metrics.pageLoadTime > 3000 || // > 3 seconds,
       metrics.memoryUsage > 100 || // > 100 MB,
       !metrics.isOnline,
-,
+
     if (hasPerformanceIssues) {,
       setIsVisible(true),
       // Auto-hide after 10 seconds,
@@ -43,9 +43,9 @@
       return () => clearTimeout(timer)
     };
   }, [metrics]),
-,
+
   if (!isVisible) return null,
-,
+
   return (,
     <div className="fixed bottom-4 right-4 z-50">,
       <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg p-4 shadow-xl">,

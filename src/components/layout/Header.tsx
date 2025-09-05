@@ -156,8 +156,7 @@
                   </Link>,
                 </div>,
               </div>,
-            </motion.div>,
-          )};
+            </motion.div>)};
         </AnimatePresence>,
       </nav>,
     </header>,
