@@ -1,3 +1,24 @@
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { 
+  Code, 
+  Database, 
+  Server, 
+  Lock, 
+  Brain, 
+  Cloud,
+  ArrowRight,
+  Copy,
+  Check,
+  ExternalLink,
+  Globe,
+  Shield,
+  Terminal,
+  XCircle
+} from 'lucide-react';
+import Link from 'next/link';
+
 export default function APIDocsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -186,6 +207,6 @@ export default function APIDocsPage() {
           </div>
         </section>
       </div>
-    </Layout>
+    </div>
   );
 }

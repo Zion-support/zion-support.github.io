@@ -1,7 +1,8 @@
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import Layout from '../components/Layout';
-import { Code, BookOpen, Shield, Zap, ChevronRight, ExternalLink, Copy, Check } from 'lucide-react';
+import MainLayout from '../../src/components/layout/MainLayout';
+import { Code, BookOpen, Shield, Zap, ChevronRight, ExternalLink, Copy, Check, Globe, Terminal, Cpu, Cloud, XCircle } from 'lucide-react';
 
 const endpoints = [
   {
@@ -252,39 +253,9 @@ export default function APIDocumentationPage() {
   ];
 
   const codeExamples = {
-    javascript: `// JavaScript/Node.js Example
-const response = await fetch('https://api.ziontechgroup.com/api/v1/auth/login', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({
-    email: 'user@example.com',
-    password: 'your-password'
-  })
-});
-
-const data = await response.json();
-console.log(data);`,
-    python: `# Python Example
-import requests
-
-url = "https://api.ziontechgroup.com/api/v1/auth/login"
-payload = {
-    "email": "user@example.com",
-    "password": "your-password"
-}
-
-response = requests.post(url, json=payload)
-data = response.json()
-print(data)`,
-    curl: `# cURL Example
-curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\
-  -H "Content-Type: application/json" \\
-  -d '{
-    "email": "user@example.com",
-    "password": "your-password"
-  }'`
+    javascript: "// JavaScript/Node.js Example\nconst response = await fetch('https://api.ziontechgroup.com/api/v1/auth/login', {\n  method: 'POST',\n  headers: {\n    'Content-Type': 'application/json',\n  },\n  body: JSON.stringify({\n    email: 'user@example.com',\n    password: 'your-password'\n  })\n});\n\nconst data = await response.json();\nconsole.log(data);",
+    python: "# Python Example\nimport requests\n\nurl = \"https://api.ziontechgroup.com/api/v1/auth/login\"\npayload = {\n    \"email\": \"user@example.com\",\n    \"password\": \"your-password\"\n}\n\nresponse = requests.post(url, json=payload)\ndata = response.json()\nprint(data)",
+    curl: "# cURL Example\ncurl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\\\\n  -H \"Content-Type: application/json\" \\\\\n  -d '{\n    \"email\": \"user@example.com\",\n    \"password\": \"your-password\"\n  }'"
   };
 
   const copyToClipboard = (code, language) => {
@@ -816,11 +787,6 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\
             </motion.div>
           </div>
         </section>
-      </div>
-    </Layout>
-  );
-}
-=======
       </div>
     </MainLayout>
   );

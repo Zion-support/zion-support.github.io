@@ -15,7 +15,11 @@ import {
   Award,
   BarChart3,
   Cloud,
-  Shield
+  Shield,
+  Calendar,
+  User,
+  Tag,
+  ExternalLink
 } from 'lucide-react';
 
 const caseStudies = [
@@ -340,187 +344,8 @@ export default function CaseStudiesPage() {
               </div>
             </motion.div>
           </div>
-import { 
-  Calendar, 
-  User, 
-  ArrowRight, 
-  Tag, 
-  ExternalLink,
-  Building,
-  TrendingUp,
-  Award,
-  Clock,
-  CheckCircle,
-  Users
-} from 'lucide-react';
-
-export default function CaseStudiesPage() {
-  return (
-    <MainLayout
-      title="Case Studies - Zion Tech Group"
-      description="Explore our success stories and see how we've helped businesses transform through innovative technology solutions."
-      keywords="case studies, success stories, client projects, technology solutions, AI implementation"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-green-900 via-teal-900 to-blue-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-          </div>
-
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Success{' '}
-                <span className="bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent">
-                  Stories
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Discover how we've helped businesses transform and achieve their goals 
-                through innovative technology solutions.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Stats Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="text-3xl md:text-4xl font-bold text-green-600 mb-2">
-                    {stat.number}
-                  </div>
-                  <div className="text-gray-600 font-medium">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Featured Case Studies */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Success Stories
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Discover how we've helped businesses transform and achieve their goals
-              </p>
-            </motion.div>
-
-            <div className="max-w-6xl mx-auto">
-              <div className="space-y-16">
-                {caseStudies.map((study, index) => (
-                  <motion.div
-                    key={index}
-                    className="bg-white rounded-xl shadow-lg overflow-hidden"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="p-8">
-                      <div className="flex items-center mb-6">
-                        <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center mr-4">
-                          <study.icon className="w-8 h-8 text-white" />
-                        </div>
-                        <div>
-                          <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                            {study.title}
-                          </h3>
-                          <p className="text-gray-600">
-                            {study.client} • {study.industry}
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="grid md:grid-cols-2 gap-8">
-                        <div>
-                          <h4 className="font-semibold text-gray-900 mb-2">Challenge</h4>
-                          <p className="text-gray-600 mb-4">{study.challenge}</p>
-                          
-                          <h4 className="font-semibold text-gray-900 mb-2">Solution</h4>
-                          <p className="text-gray-600">{study.solution}</p>
-                        </div>
-                        
-                        <div>
-                          <h4 className="font-semibold text-gray-900 mb-2">Results</h4>
-                          <ul className="space-y-2">
-                            {study.results.map((result, resultIndex) => (
-                              <li key={resultIndex} className="flex items-center text-gray-600">
-                                <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                                {result}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Ready to Start Your Success Story?
-              </h2>
-              <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
-                Let's work together to transform your business with innovative technology solutions.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
-                >
-                  Start Your Project
-                </a>
-                <a
-                  href="/services"
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold"
-                >
-                  View Our Services
-                </a>
-              </div>
-            </motion.div>
-          </div>
         </section>
       </div>
     </MainLayout>
   );
 }
-

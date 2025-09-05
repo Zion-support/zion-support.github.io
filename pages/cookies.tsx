@@ -193,28 +193,27 @@ export default function CookiePolicyPage() {
                     marketing: false,
                     functional: false
                   })}
-                    className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
-                  >
-                    Reject All
-                  </button>
-                  <button
-                    onClick={() => setCookiePreferences({
-                      necessary: true,
-                      analytics: true,
-                      marketing: true,
-                      functional: true
-                    })}
-                    className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
-                  >
-                    Accept All
-                  </button>
-                  <button
-                    onClick={savePreferences}
-                    className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-                  >
-                    Save Preferences
-                  </button>
-                </div>
+                  className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
+                >
+                  Reject All
+                </button>
+                <button
+                  onClick={() => setCookiePreferences({
+                    necessary: true,
+                    analytics: true,
+                    marketing: true,
+                    functional: true
+                  })}
+                  className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
+                >
+                  Accept All
+                </button>
+                <button
+                  onClick={savePreferences}
+                  className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+                >
+                  Save Preferences
+                </button>
               </div>
             </div>
           </div>
