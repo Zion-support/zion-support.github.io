@@ -1,4 +1,5 @@
 module.exports = {
+module.exports = {
   "apps": [    // Main Error Detection and Fixing Service
     {
       name: 'error-detection-service',
@@ -394,4 +395,5 @@ module.exports = {
       'pre-setup': ''
     }
   }
+};
 };

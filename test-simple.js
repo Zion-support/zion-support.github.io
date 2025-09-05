@@ -1,3 +1,4 @@
+#!/usr/bin/env node    ); setInterval(() => { .toISOString())},30000);
 #!/usr/bin/env node
 console.log('Simple test script running...');
 console.log('Node "version": ', process.version);

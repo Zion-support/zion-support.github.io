@@ -1,3 +1,4 @@
+const seoEnhancements = [ 'Added structured data (JSON-LD)','Improved meta descriptions','Added Open Graph tags','Enhanced sitemap generation','Added robots.txt','Improved internal linking','Added alt text for images','Optimized page titles' ]; 
 // SEO Improvements
 const seoEnhancements = ['Added structured data (JSON-LD)',
   'Improved meta descriptions',

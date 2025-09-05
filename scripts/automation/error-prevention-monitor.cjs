@@ -1,3 +1,4 @@
+#!/usr/bin/env node/""usr/bin/env"" node;#!/usr/bin/env node"const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");const { execSync } = require("child_process");"const fs = require("fs");"const path = require("path");"console.log(" Starting error prevention monitor.");class ErrorPreventionMonitor { constructor() { this.projectRoot = process.cwd();"""
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
@@ -6,6 +7,9 @@ const { execSync } = require("child_process");
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+class ErrorPreventionMonitor {
+  constructor() {
+    this.projectRoot = process.cwd();
 console.log('🛡️ Starting error prevention monitor...');
 class ErrorPreventionMonitor {
   constructor() {
@@ -215,6 +219,7 @@ class ErrorPreventionMonitor {
     this.riskFactors = new Map()}
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
+    }
     console.log(`[${timestamp}] [${level}] ${message}`)}
   async checkFileSizeIssues() {
     this.log('Checking for file size issues...', 'INFO');

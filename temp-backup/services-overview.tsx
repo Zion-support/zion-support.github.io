@@ -1,14 +1,1 @@
-import React from 'react';
-
-interface ServicesoverviewProps {
-  // Add props here as needed
-}
-
-export default function Servicesoverview({ }: ServicesoverviewProps) {
-  return (
-    <div>
-      <h1>Servicesoverview</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+import React from \'react\'; import { Helmet } from \'react-helmet-async\'; import { Link } from \'react-router-dom\'; import { motion } from \'framer-motion\'; import { ArrowRight,CheckCircle,Star,Clock,Users,Shield,Zap,TrendingUp,Award,Globe,Brain,Cloud,Cpu,Lock,Rocket,Heart,Code,Network,Database,Target } from \'lucide-react\';

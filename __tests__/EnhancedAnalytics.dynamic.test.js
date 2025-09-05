@@ -1,14 +1,21 @@
 import React from 'react';
-
-interface EnhancedAnalytics.dynamic.testProps {
-  // Add props here as needed
-}
-
-export default function EnhancedAnalytics.dynamic.test({ }: EnhancedAnalytics.dynamic.testProps) {
-  return (
-    <div>
-      <h1>EnhancedAnalytics.dynamic.test</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import EnhancedAnalyticsdynamic from '../components/EnhancedAnalytics.dynamic';
+describe('EnhancedAnalyticsdynamic', () => {
+  test('renders without crashing', () => {
+    render(<EnhancedAnalyticsdynamic />);
+    expect(screen.getByTestId('enhancedanalytics.dynamic')).toBeInTheDocument();
+  });
+  test('displays correct content', () => {
+    render(<EnhancedAnalyticsdynamic />);
+  });
+  test('handles user interactions', () => {
+    render(<EnhancedAnalyticsdynamic />);
+  });
+  test('applies correct styling', () => {
+    render(<EnhancedAnalyticsdynamic />);
+  });
+});
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import EnhancedAnalyticsdynamic from "./components/EnhancedAnalytics.dynamic"; describe("EnhancedAnalyticsdynamic",() => { test("renders without crashing",() => { render(<EnhancedAnalyticsdynamic />); expect(screen.getByTestId("enhancedanalytics.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<EnhancedAnalyticsdynamic />)}); test("handles user interactions",() => { render(<EnhancedAnalyticsdynamic />)}); test("applies correct styling",() => { render(<EnhancedAnalyticsdynamic />)})});''"
+import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedAnalyticsdynamic from '../components/EnhancedAnalytics.dynamic'; describe('EnhancedAnalyticsdynamic',() => { test('renders without crashing',() => { render(<EnhancedAnalyticsdynamic />); expect(screen.getByTestId('enhancedanalytics.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedAnalyticsdynamic />)}); test('handles user interactions',() => { render(<EnhancedAnalyticsdynamic />)}); test('applies correct styling',() => { render(<EnhancedAnalyticsdynamic />)})});

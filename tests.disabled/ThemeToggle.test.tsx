@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface ThemeToggle.testProps {
   // Add props here as needed
 }
-
 export default function ThemeToggle.test({ }: ThemeToggle.testProps) {
   return (
     <div>

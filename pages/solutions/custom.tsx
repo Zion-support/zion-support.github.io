@@ -1,203 +1,140 @@
 import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Settings, Code, Zap, Users, ArrowRight, CheckCircle, Clock, Target, Wrench } from 'lucide-react';
-import Layout from "../../components/Layout";
+import { 
+  Settings, 
+  Code, 
+  Zap, 
+  Users, 
+  ArrowRight, 
+  CheckCircle, 
+  Clock, 
+  Target, 
+  Wrench 
+} from 'lucide-react';
+
 const features = [
   {
     title: 'Tailored Solutions',
     description: 'Bespoke software solutions designed specifically for your unique business needs',
     icon: Settings,
-    benefits: ['Custom Architecture', 'Unique Features', 'Business Logic Integration', 'Scalable Design']
+    benefits: ['Custom development', 'Unique requirements', 'Scalable architecture', 'Future-proof design']
   },
   {
-    title: 'Full Stack Development',
-    description: 'Complete end-to-end development from frontend to backend and everything in between',
-    icon: Code,
-    benefits: ['Frontend Development', 'Backend APIs', 'Database Design', 'Cloud Integration']
-  },
-  {
-    title: 'API Integration',
-    description: 'Seamless integration with existing systems and third-party services',
+    title: 'Rapid Development',
+    description: 'Fast-track development with agile methodologies and modern technologies',
     icon: Zap,
-    benefits: ['RESTful APIs', 'GraphQL', 'Third-party Integrations', 'Data Synchronization']
+    benefits: ['Agile development', 'Quick prototyping', 'Iterative delivery', 'Modern tech stack']
   },
   {
-    title: 'Ongoing Support',
-    description: 'Continuous support and maintenance to ensure your solution remains optimal',
+    title: 'Expert Team',
+    description: 'Experienced developers and designers working on your project',
     icon: Users,
-    benefits: ['24/7 Support', 'Regular Updates', 'Performance Monitoring', 'Bug Fixes']
+    benefits: ['Senior developers', 'UI/UX designers', 'Project managers', 'Quality assurance']
+  },
+  {
+    title: 'Full Support',
+    description: 'Comprehensive support and maintenance for your custom solutions',
+    icon: Wrench,
+    benefits: ['24/7 support', 'Regular updates', 'Bug fixes', 'Feature enhancements']
   }
 ];
-const technologies = [
-  { category: 'Frontend', techs: ['React', 'Next.js', 'Vue.js', 'Angular', 'TypeScript'] },
-  { category: 'Backend', techs: ['Node.js', 'Python', 'Java', 'C#', 'Go'] },
-  { category: 'Database', techs: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch'] },
-  { category: 'Cloud', techs: ['AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes'] },
-  { category: 'Mobile', techs: ['React Native', 'Flutter', 'iOS', 'Android', 'PWA'] }
+
+const developmentProcess = [
+  {
+    step: '1',
+    title: 'Discovery',
+    description: 'Understanding your requirements and business goals',
+    icon: Target
+  },
+  {
+    step: '2',
+    title: 'Design',
+    description: 'Creating wireframes and user interface designs',
+    icon: Settings
+  },
+  {
+    step: '3',
+    title: 'Development',
+    description: 'Building your custom solution with clean, maintainable code',
+    icon: Code
+  },
+  {
+    step: '4',
+    title: 'Testing',
+    description: 'Thorough testing to ensure quality and reliability',
+    icon: CheckCircle
+  },
+  {
+    step: '5',
+    title: 'Deployment',
+    description: 'Launching your solution and providing ongoing support',
+    icon: Zap
+  }
 ];
-const process = [
-  { step: 'Discovery', description: 'Understanding your requirements and business goals' },
-  { step: 'Planning', description: 'Creating detailed project roadmap and architecture' },
-  { step: 'Development', description: 'Agile development with regular feedback and iterations' },
-  { step: 'Testing', description: 'Comprehensive testing and quality assurance' },
-  { step: 'Deployment', description: 'Smooth deployment and go-live support' },
-  { step: 'Maintenance', description: 'Ongoing support and continuous improvement' }
-];
-const stats = [
-  { number: '150+', label: 'Custom Projects' },
-  { number: '98%', label: 'Client Satisfaction' },
-  { number: 'On Time', label: 'Delivery Rate' },
-  { number: '5+', label: 'Years Experience' }
-];
-export default function CustomDevelopmentPage() {
+
+export default function CustomSolutionsPage() {
   return (
-    <Layout
-      title="Custom Development - Zion Tech Group"
-      description="Bespoke software solutions designed for your unique needs. Full stack development, API integration, and ongoing support for custom applications."
-      keywords="custom development, bespoke software, full stack development, API integration, custom applications"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <>
+      <Head>
+        <title>Custom Solutions - Zion Tech Group</title>
+        <meta name="description" content="Bespoke software solutions tailored to your business needs. Custom development, web applications, and mobile apps." />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-          </div>
-          <div className="container mx-auto px-4 relative z-10">
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
+              className="text-center"
             >
-              <div className="flex items-center justify-center mb-6">
-                <Settings className="w-16 h-16 text-purple-400 mr-4" />
-                <h1 className="text-5xl md:text-6xl font-bold">
-                  Custom <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Development</span>
-                </h1>
-              </div>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Bespoke software solutions designed specifically for your unique business needs and requirements
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Custom Solutions</h1>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Bespoke software solutions tailored to your unique business needs. 
+                From web applications to mobile apps, we build what you need.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
-                >
-                  Start Your Project
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link
-                  href="/case-studies"
-                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-gray-900 rounded-lg font-semibold transition-colors"
-                >
-                  View Portfolio
-                </Link>
-              </div>
             </motion.div>
           </div>
         </section>
-        {/* Stats Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="text-4xl md:text-5xl font-bold text-purple-600 mb-2">{stat.number}</div>
-                  <div className="text-gray-600 font-medium">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+
         {/* Features Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"
+              className="text-center mb-12"
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Custom <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Capabilities</span>
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We build custom solutions that perfectly match your business requirements and integrate seamlessly with your existing systems
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Custom Solutions</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Our custom solutions are designed to meet your specific requirements and business goals.
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <motion.div
-                  key={feature.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                  className="bg-white rounded-2xl shadow-xl p-8"
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
                 >
-                  <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl flex items-center justify-center mr-4">
-                      <feature.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-900">{feature.title}</h3>
-                      <p className="text-gray-600">{feature.description}</p>
-                    </div>
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                    <feature.icon className="w-6 h-6 text-blue-600" />
                   </div>
-                  <ul className="space-y-3">
+                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                  <p className="text-gray-600 mb-4">{feature.description}</p>
+                  <div className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-gray-600">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                      <div key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                         {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* Technologies Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Technology <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Stack</span>
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We use the latest technologies and frameworks to build robust, scalable, and maintainable custom solutions
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {technologies.map((category, index) => (
-                <motion.div
-                  key={category.category}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-6"
-                >
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{category.category}</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {category.techs.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm"
-                      >
-                        {tech}
-                      </span>
+                      </div>
                     ))}
                   </div>
                 </motion.div>
@@ -205,76 +142,74 @@ export default function CustomDevelopmentPage() {
             </div>
           </div>
         </section>
-        {/* Process Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
+
+        {/* Development Process */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"
+              className="text-center mb-12"
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Development <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Process</span>
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our proven development process ensures your custom solution is delivered on time, on budget, and exceeds expectations
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Development Process</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                We follow a proven methodology to ensure successful project delivery.
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {process.map((step, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+              {developmentProcess.map((step, index) => (
                 <motion.div
-                  key={step.step}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="text-center"
                 >
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg flex items-center justify-center mr-4">
-                      <span className="text-white font-bold text-lg">{index + 1}</span>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900">{step.step}</h3>
+                  <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                    {step.step}
                   </div>
-                  <p className="text-gray-600">{step.description}</p>
+                  <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
+                  <p className="text-gray-600 text-sm">{step.description}</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
+
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
-          <div className="container mx-auto px-4 text-center">
+        <section className="py-20 bg-blue-600">
+          <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Ready to Build Something Custom?
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Build Your Custom Solution?
               </h2>
-              <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
-                Let's discuss your unique requirements and create a custom solution that perfectly fits your business needs
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Let's discuss your requirements and create a solution that perfectly fits your needs.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-wrap justify-center gap-4">
                 <Link
                   href="/contact"
-                  className="px-8 py-4 bg-white text-purple-600 hover:bg-gray-100 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
+                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
                 >
-                  Start Custom Project
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  Start Your Project
+                  <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
                 <Link
-                  href="/solutions"
-                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-purple-600 rounded-lg font-semibold transition-colors"
+                  href="/about"
+                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
                 >
-                  View All Solutions
+                  Learn More
                 </Link>
               </div>
             </motion.div>
           </div>
         </section>
       </div>
-    </Layout>
+    </>
   );
 }

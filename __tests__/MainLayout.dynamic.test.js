@@ -1,14 +1,21 @@
 import React from 'react';
-
-interface MainLayout.dynamic.testProps {
-  // Add props here as needed
-}
-
-export default function MainLayout.dynamic.test({ }: MainLayout.dynamic.testProps) {
-  return (
-    <div>
-      <h1>MainLayout.dynamic.test</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import MainLayoutdynamic from '../components/MainLayout.dynamic';
+describe('MainLayoutdynamic', () => {
+  test('renders without crashing', () => {
+    render(<MainLayoutdynamic />);
+    expect(screen.getByTestId('mainlayout.dynamic')).toBeInTheDocument();
+  });
+  test('displays correct content', () => {
+    render(<MainLayoutdynamic />);
+  });
+  test('handles user interactions', () => {
+    render(<MainLayoutdynamic />);
+  });
+  test('applies correct styling', () => {
+    render(<MainLayoutdynamic />);
+  });
+});
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import MainLayoutdynamic from "./components/MainLayout.dynamic"; describe("MainLayoutdynamic",() => { test("renders without crashing",() => { render(<MainLayoutdynamic />); expect(screen.getByTestId("mainlayout.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<MainLayoutdynamic />)}); test("handles user interactions",() => { render(<MainLayoutdynamic />)}); test("applies correct styling",() => { render(<MainLayoutdynamic />)})});''"
+import _React from 'react';  import '@testing-library/jest-dom'; import MainLayoutdynamic from '../components/MainLayout.dynamic'; describe('MainLayoutdynamic',() => { test('renders without crashing',() => { render(<MainLayoutdynamic />); expect(screen.getByTestId('mainlayout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<MainLayoutdynamic />)}); test('handles user interactions',() => { render(<MainLayoutdynamic />)}); test('applies correct styling',() => { render(<MainLayoutdynamic />)})});

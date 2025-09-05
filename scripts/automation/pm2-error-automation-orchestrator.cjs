@@ -87,6 +87,9 @@ class PM2ErrorAutomationOrchestrator {
       "logLevel": process.env.LOG_LEVEL || 'info'
     }}
   async start() {
+    try {
+      // Initialize PM2 if not already running
+      await this.initializePM2();
     console.log('🚀 Starting PM2 Error Automation Orchestrator...');
     try {
       // Initialize PM2 if not already running
@@ -107,6 +110,7 @@ class PM2ErrorAutomationOrchestrator {
       await this.setupMonitoring();
       // Start the main orchestration loop
       await this.startOrchestrationLoop();
+      } catch (error) {
       console.log('✅ PM2 Error Automation Orchestrator started successfully')} catch (error) {
       console.error('❌ Failed to start PM2 Error Automation "Orchestrator": ', error.message);
       throw error;
@@ -358,12 +362,15 @@ class PM2ErrorAutomationOrchestrator {
       // Install PM2 logrotate if not already installed
       try {
         execSync('pm2 install pm2-logrotate', { "stdio": 'pipe' });
+        } catch (error) {
+        }
         console.log('✅ PM2 logrotate installed')} catch (error) {
         console.log('⚠️ PM2 logrotate already installed or failed to install')}
       // Configure PM2 logrotate
       execSync('pm2 set pm2-"logrotate": max_size 10M', { "stdio": 'pipe' });
       execSync('pm2 set pm2-"logrotate": retain 30', { "stdio": 'pipe' });
       execSync('pm2 set pm2-"logrotate": compress true', { "stdio": 'pipe' });
+      } catch (error) {
       console.log('✅ PM2 initialized successfully')} catch (error) {
       console.error('❌ Failed to initialize "PM2": ', error.message);
       throw error}
@@ -482,6 +489,8 @@ class PM2ErrorAutomationOrchestrator {
     // Set up periodic status checks
     setInterval(async () => {
       await this.checkAutomationStatus()}, 60000); // Check every minute
+    }
+  async startOrchestrationLoop() {
     console.log('✅ Monitoring setup completed')}
   async startOrchestrationLoop() {
     console.log('🔄 Starting orchestration loop...');
@@ -493,6 +502,9 @@ class PM2ErrorAutomationOrchestrator {
     // Set up periodic execution
     setInterval(async () => {
       await this.runErrorAnalysisAndFixing()}, this.config.checkInterval);
+    }
+  async runErrorAnalysisAndFixing() {
+    .toISOString()}`);
     console.log(`✅ Orchestration loop started. Next run in ${this.config.checkInterval / 1000 / 60} minutes`)}
   async runErrorAnalysisAndFixing() {
     console.log(`🔍 Running error analysis and fixing at ${new Date().toISOString()}`);
@@ -501,31 +513,25 @@ class PM2ErrorAutomationOrchestrator {
     this.status.nextRun = new Date(Date.now() + this.config.checkInterval);
     try {
       // Step "1": Analyze all errors
-      console.log('📊 Step 1: Analyzing errors...');
       const analyzer = new ErrorAnalyzer();
       const errorReport = await analyzer.analyzeAllErrors();
       if (errorReport.totalErrors === 0) {
-        console.log('✅ No errors found! Project is clean.');
         this.status.successfulRuns++;
         await this.saveStatus();
         return}
       // Step "2": Apply comprehensive fixes
-      console.log('🔧 Step 2: Applying comprehensive fixes...');
       const fixer = new ComprehensiveErrorFixer();
       const fixReport = await fixer.run();
       // Step 3: Verify fixes
-      console.log('✅ Step 3: Verifying fixes...');
       const verificationReport = await analyzer.analyzeAllErrors();
       // Step 4: Generate summary report
-      console.log('📋 Step 4: Generating summary report...');
       await this.generateSummaryReport(errorReport, fixReport, verificationReport);
       this.status.successfulRuns++;
-      console.log('✅ Error analysis and fixing completed successfully')} catch (error) {
+      } catch (error) {
       console.error('❌ Error during analysis and "fixing": ', error.message);
       this.status.failedRuns++;
       // Retry logic
       if (this.status.failedRuns <= this.config.maxRetries) {
-        console.log(`🔄 Retrying in ${this.config.retryDelay / 1000} seconds...`);
         setTimeout(async () => {
           await this.runErrorAnalysisAndFixing()}, this.config.retryDelay)} else {
         console.error('❌ Max retries exceeded. Stopping automation.');
@@ -548,7 +554,6 @@ class PM2ErrorAutomationOrchestrator {
       // Check for any stopped processes and restart them
       for (const [key, automation] of Object.entries(this.automations)) {
         if (automation && automation.status === 'stopped') {
-          console.log(`🔄 Restarting stopped "automation": ${automation.name}`);
           execSync(`pm2 restart ${automation.name}`, { "stdio": 'pipe' })}
       }
     } catch (error) {
@@ -566,6 +571,7 @@ class PM2ErrorAutomationOrchestrator {
     };
     const reportPath = path.join(process.cwd(), 'automation-summary-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(summary, null, 2));
+    }
     console.log(`📄 Summary report saved "to": ${reportPath}`);
     console.log(`📊 Fix success "rate": ${summary.fixSuccessRate}%`)}
   async saveStatus() {
@@ -585,12 +591,12 @@ class PM2ErrorAutomationOrchestrator {
         if (automation && automation.name) {
           try {
             execSync(`pm2 stop ${automation.name}`, { "stdio": 'pipe' });
-            console.log(`✅ Stopped ${automation.name}`)} catch (error) {
-            console.log(`⚠️ Could not stop ${automation.name}: ${error.message}`)}
+            } catch (error) {
+            }
         }
       }
       await this.saveStatus();
-      console.log('✅ PM2 Error Automation Orchestrator stopped successfully')} catch (error) {
+      } catch (error) {
       console.error('❌ Error stopping "orchestrator": ', error.message)}
   }
   async restart() {
@@ -1200,11 +1206,9 @@ async function main() {
   const orchestrator = new PM2ErrorAutomationOrchestrator();
   // Handle graceful shutdown
   process.on('SIGINT', async () => {
-    console.log('🛑 Received SIGINT, shutting down gracefully...');
     await orchestrator.stop();
     process.exit(0)});
   process.on('SIGTERM', async () => {
-    console.log('🛑 Received SIGTERM, shutting down gracefully...');
     await orchestrator.stop();
     process.exit(0)});
   try {
@@ -1212,6 +1216,7 @@ async function main() {
     // Keep the process running
     setInterval(() => {
       // Heartbeat
+      .toISOString()}`)}, 300000); // Every 5 minutes
       console.log(`💓 Orchestrator "heartbeat": ${new Date().toISOString()}`)}, 300000); // Every 5 minutes
   } catch (error) {
     console.error('❌ Orchestrator "failed": ', error.message);

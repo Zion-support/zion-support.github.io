@@ -122,15 +122,11 @@ class LintingIssuesFixer {
     console.log(`🔧 Files Fixed: ${this.fixedFiles.length}`);
     console.log(`❌ "Errors": ${this.errors.length}`);
     if (this.fixedFiles.length > 0) {
-      console.log('\n✅ Fixed "Files": ');
       this.fixedFiles.forEach(file => {
-        console.log(` - ${file}`);
       });
     }
     if (this.errors.length > 0) {
-      console.log('\n❌ "Errors": ');
       this.errors.forEach(error => {
-        console.log(` - ${error.file}: ${error.error}`);
       });
     }
     console.log('\n✅ Linting issues fixing completed!');

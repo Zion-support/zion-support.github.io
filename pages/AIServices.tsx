@@ -1,970 +1,434 @@
 import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
+import { 
+  Brain, 
+  Cpu, 
+  Eye, 
+  MessageSquare, 
+  BarChart3, 
+  Shield, 
+  Zap, 
+  CheckCircle, 
+  ArrowRight, 
+  Star,
+  TrendingUp,
+  Building,
+  Rocket,
+  Lightbulb,
+  Handshake,
+  Car
+} from 'lucide-react';
+
+const aiServices = [
+  {
+    id: 1,
+    name: 'Machine Learning & AI Development',
+    description: 'Custom AI solutions and machine learning models tailored to your business needs',
+    icon: Brain,
+    features: [
+      'Custom ML model development',
+      'Data preprocessing and analysis',
+      'Model training and optimization',
+      'Real-time prediction systems',
+      'Model deployment and monitoring'
+    ],
+    price: '$2,500 - $8,000/month',
+    benefits: [
+      '40% increase in operational efficiency',
+      'Automated decision making',
+      'Predictive analytics capabilities',
+      'Reduced manual workload'
+    ],
+    marketPrice: '$4,000 - $12,000/month',
+    setupTime: '2-4 weeks',
+    targetUsers: 'Enterprises, Startups, SMBs'
+  },
+  {
+    id: 2,
+    name: 'Computer Vision Solutions',
+    description: 'Advanced image and video analysis using cutting-edge computer vision technology',
+    icon: Eye,
+    features: [
+      'Object detection and recognition',
+      'Facial recognition systems',
+      'Image classification',
+      'Video analytics',
+      'Real-time processing'
+    ],
+    price: '$3,000 - $10,000/month',
+    benefits: [
+      'Enhanced security systems',
+      'Automated quality control',
+      'Real-time monitoring',
+      'Cost reduction in manual inspection'
+    ],
+    marketPrice: '$5,000 - $15,000/month',
+    setupTime: '3-6 weeks',
+    targetUsers: 'Manufacturing, Security, Healthcare'
+  },
+  {
+    id: 3,
+    name: 'Natural Language Processing',
+    description: 'Text analysis, sentiment analysis, and language understanding solutions',
+    icon: MessageSquare,
+    features: [
+      'Text classification and analysis',
+      'Sentiment analysis',
+      'Language translation',
+      'Chatbot development',
+      'Document processing'
+    ],
+    price: '$2,000 - $7,000/month',
+    benefits: [
+      'Automated customer support',
+      'Improved content analysis',
+      'Multilingual capabilities',
+      'Enhanced user experience'
+    ],
+    marketPrice: '$3,500 - $10,000/month',
+    setupTime: '2-4 weeks',
+    targetUsers: 'E-commerce, Customer Service, Content Platforms'
+  },
+  {
+    id: 4,
+    name: 'Predictive Analytics Platform',
+    description: 'Data-driven insights and forecasting to optimize business decisions',
+    icon: BarChart3,
+    features: [
+      'Advanced statistical modeling',
+      'Time series forecasting',
+      'Risk assessment',
+      'Performance optimization',
+      'Real-time dashboards'
+    ],
+    price: '$3,500 - $12,000/month',
+    benefits: [
+      'Improved decision making',
+      'Risk mitigation',
+      'Revenue optimization',
+      'Operational efficiency gains'
+    ],
+    marketPrice: '$6,000 - $18,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'Finance, Retail, Healthcare, Manufacturing'
+  },
+  {
+    id: 5,
+    name: 'AI-Powered Cybersecurity',
+    description: 'Intelligent threat detection and automated security response systems',
+    icon: Shield,
+    features: [
+      'Threat detection and analysis',
+      'Automated incident response',
+      'Behavioral analytics',
+      'Vulnerability assessment',
+      'Security monitoring'
+    ],
+    price: '$4,000 - $15,000/month',
+    benefits: [
+      'Enhanced security posture',
+      'Reduced false positives',
+      'Faster threat response',
+      'Compliance automation'
+    ],
+    marketPrice: '$7,000 - $25,000/month',
+    setupTime: '3-6 weeks',
+    targetUsers: 'Financial Services, Healthcare, Government, Enterprise'
+  },
+  {
+    id: 6,
+    name: 'Conversational AI & Chatbots',
+    description: 'Intelligent virtual assistants and customer service automation',
+    icon: MessageSquare,
+    features: [
+      'Natural language understanding',
+      'Multi-channel deployment',
+      'Context-aware conversations',
+      'Integration with CRM systems',
+      'Analytics and reporting'
+    ],
+    price: '$1,500 - $5,000/month',
+    benefits: [
+      '24/7 customer support',
+      'Reduced support costs',
+      'Improved customer satisfaction',
+      'Scalable customer service'
+    ],
+    marketPrice: '$2,500 - $8,000/month',
+    setupTime: '2-4 weeks',
+    targetUsers: 'E-commerce, SaaS, Customer Service, Healthcare'
+  },
+  {
+    id: 7,
+    name: 'Quantum AI & Machine Learning',
+    description: 'Next-generation AI powered by quantum computing principles',
+    icon: Cpu,
+    features: [
+      'Quantum machine learning algorithms',
+      'Quantum neural networks',
+      'Optimization problems solving',
+      'Quantum data processing',
+      'Hybrid classical-quantum systems'
+    ],
+    price: '$5,500 - $15,000/month',
+    benefits: [
+      'Exponential processing power',
+      'Complex problem solving',
+      'Advanced optimization',
+      'Future-proof technology'
+    ],
+    marketPrice: '$8,000 - $25,000/month',
+    setupTime: '6-12 weeks',
+    targetUsers: 'Research Institutions, Pharmaceutical, Financial Services'
+  },
+  {
+    id: 8,
+    name: 'AI Drug Discovery & Development',
+    description: 'Accelerated pharmaceutical research using AI and machine learning',
+    icon: Brain,
+    features: [
+      'Molecular property prediction',
+      'Drug-target interaction modeling',
+      'Clinical trial optimization',
+      'Side effect prediction',
+      'Drug repurposing analysis'
+    ],
+    price: '$4,500 - $20,000/month',
+    benefits: [
+      'Faster drug development',
+      'Reduced R&D costs',
+      'Improved success rates',
+      'Personalized medicine'
+    ],
+    marketPrice: '$7,000 - $35,000/month',
+    setupTime: '8-16 weeks',
+    targetUsers: 'Pharmaceutical Companies, Research Labs, Biotech'
+  },
+  {
+    id: 9,
+    name: 'AI Climate & Environmental Solutions',
+    description: 'Environmental monitoring and climate change mitigation using AI',
+    icon: TrendingUp,
+    features: [
+      'Climate data analysis',
+      'Environmental monitoring',
+      'Carbon footprint optimization',
+      'Renewable energy forecasting',
+      'Sustainability reporting'
+    ],
+    price: '$2,200 - $7,000/month',
+    benefits: [
+      'Environmental compliance',
+      'Cost savings on energy',
+      'Sustainability goals achievement',
+      'Risk mitigation'
+    ],
+    marketPrice: '$3,500 - $12,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'Energy Companies, Government, Environmental Organizations'
+  },
+  {
+    id: 10,
+    name: 'AI Space Technology & Research',
+    description: 'Space exploration and satellite data analysis using advanced AI',
+    icon: Rocket,
+    features: [
+      'Satellite data processing',
+      'Space mission optimization',
+      'Astronomical data analysis',
+      'Space weather prediction',
+      'Autonomous space systems'
+    ],
+    price: '$3,500 - $12,000/month',
+    benefits: [
+      'Enhanced space missions',
+      'Improved data accuracy',
+      'Cost-effective operations',
+      'Scientific breakthroughs'
+    ],
+    marketPrice: '$5,500 - $20,000/month',
+    setupTime: '6-12 weeks',
+    targetUsers: 'Space Agencies, Satellite Companies, Research Institutions'
+  }
+];
+
+const stats = [
+  { number: "500+", label: "AI Projects Completed" },
+  { number: "99.9%", label: "Accuracy Rate" },
+  { number: "24/7", label: "AI Monitoring" },
+  { number: "48hrs", label: "Average Response Time" }
+];
+
 export default function AIServices() {
-  const aiServices = [
-    {
-      name: "AI Content Creation Studio",
-      description: "Revolutionary AI-powered content creation platform that generates high-quality, brand-consistent content across multiple channels.",
-      price: "$299/month",
-      features: [
-        "Automated blog post generation",
-        "Social media content creation",
-        "Email marketing campaigns",
-        "SEO-optimized content",
-        "Multi-language support",
-        "Brand voice customization",
-        "Content calendar management",
-        "Performance analytics"
-      ],
-      benefits: [
-        "Reduce content creation time by 80%",
-        "Maintain consistent brand voice",
-        "Scale content production effortlessly",
-        "Improve SEO rankings"
-      ],
-      marketPrice: "$500-800/month",
-      savings: "Save up to $500/month"
-    },
-    {
-      name: "AI Email Automation Platform",
-      description: "Intelligent email management system that reads, categorizes, and responds to emails automatically while learning from your preferences.",
-      price: "$199/month",
-      features: [
-        "Smart email categorization",
-        "Automated response generation",
-        "Priority message flagging",
-        "Sentiment analysis",
-        "Follow-up automation",
-        "Email analytics dashboard",
-        "Integration with CRM systems",
-        "Custom response templates"
-      ],
-      benefits: [
-        "Handle 90% of routine emails automatically",
-        "Never miss important messages",
-        "Improve response time by 70%",
-        "Reduce email management overhead"
-      ],
-      marketPrice: "$300-500/month",
-      savings: "Save up to $300/month"
-    },
-    {
-      name: "AI Business Intelligence Suite",
-      description: "Advanced analytics platform that provides real-time insights, predictive analytics, and automated reporting for data-driven decision making.",
-      price: "$499/month",
-      features: [
-        "Real-time data visualization",
-        "Predictive analytics models",
-        "Automated report generation",
-        "Custom dashboard creation",
-        "Data integration from multiple sources",
-        "Anomaly detection",
-        "Trend analysis",
-        "Executive summary reports"
-      ],
-      benefits: [
-        "Make data-driven decisions faster",
-        "Identify opportunities and risks early",
-        "Reduce manual reporting by 85%",
-        "Improve business performance metrics"
-      ],
-      marketPrice: "$800-1200/month",
-      savings: "Save up to $700/month"
-    },
-    {
-      name: "AI Customer Support Automation",
-      description: "Comprehensive customer support platform with AI-powered chatbots, ticket routing, and automated resolution capabilities.",
-      price: "$399/month",
-      features: [
-        "Intelligent chatbot system",
-        "Automatic ticket routing",
-        "Knowledge base integration",
-        "Sentiment analysis",
-        "Multi-language support",
-        "Escalation management",
-        "Performance analytics",
-        "Custom workflow automation"
-      ],
-      benefits: [
-        "Reduce support response time by 60%",
-        "Handle 70% of inquiries automatically",
-        "Improve customer satisfaction scores",
-        "Scale support without additional staff"
-      ],
-      marketPrice: "$600-900/month",
-      savings: "Save up to $500/month"
-    },
-    {
-      name: "AI Marketing Automation Platform",
-      description: "End-to-end marketing automation with AI-driven personalization, campaign optimization, and customer journey mapping.",
-      price: "$599/month",
-      features: [
-        "AI-powered personalization",
-        "Automated campaign optimization",
-        "Customer journey mapping",
-        "A/B testing automation",
-        "Lead scoring and nurturing",
-        "Cross-channel marketing",
-        "ROI tracking and analytics",
-        "Integration with major platforms"
-      ],
-      benefits: [
-        "Increase conversion rates by 40%",
-        "Reduce marketing costs by 30%",
-        "Improve customer engagement",
-        "Automate complex marketing workflows"
-      ],
-      marketPrice: "$1000-1500/month",
-      savings: "Save up to $900/month"
-    },
-    {
-      name: "AI Financial Analytics Platform",
-      description: "Advanced financial analysis tool with AI-powered forecasting, risk assessment, and automated financial reporting.",
-      price: "$699/month",
-      features: [
-        "Financial forecasting models",
-        "Risk assessment algorithms",
-        "Automated financial reporting",
-        "Cash flow optimization",
-        "Investment analysis",
-        "Compliance monitoring",
-        "Fraud detection",
-        "Real-time financial dashboards"
-      ],
-      benefits: [
-        "Improve financial forecasting accuracy",
-        "Reduce financial risk exposure",
-        "Automate compliance reporting",
-        "Optimize cash flow management"
-      ],
-      marketPrice: "$1200-2000/month",
-      savings: "Save up to $1300/month"
-    },
-    {
-      name: "AI Document Intelligence Platform",
-      description: "Advanced document processing and analysis system that extracts insights, automates workflows, and ensures compliance across all document types.",
-      price: "$449/month",
-      features: [
-        "Intelligent document parsing",
-        "Automated data extraction",
-        "Contract analysis and review",
-        "Compliance monitoring",
-        "Document classification",
-        "Version control and tracking",
-        "OCR and text recognition",
-        "Workflow automation"
-      ],
-      benefits: [
-        "Reduce document processing time by 90%",
-        "Eliminate manual data entry errors",
-        "Ensure regulatory compliance",
-        "Improve document searchability"
-      ],
-      marketPrice: "$800-1200/month",
-      savings: "Save up to $750/month"
-    },
-    {
-      name: "AI Voice Assistant Platform",
-      description: "Enterprise-grade voice AI platform with natural language processing, voice analytics, and multi-channel voice automation.",
-      price: "$399/month",
-      features: [
-        "Natural language understanding",
-        "Voice command processing",
-        "Multi-language support",
-        "Voice analytics and insights",
-        "Integration with business systems",
-        "Custom voice training",
-        "Real-time transcription",
-        "Voice biometric authentication"
-      ],
-      benefits: [
-        "Improve customer experience with voice",
-        "Reduce call center costs by 50%",
-        "Enable hands-free operations",
-        "Enhance accessibility"
-      ],
-      marketPrice: "$700-1000/month",
-      savings: "Save up to $600/month"
-    },
-    {
-      name: "AI Predictive Maintenance System",
-      description: "IoT-powered predictive maintenance platform that uses AI to predict equipment failures and optimize maintenance schedules.",
-      price: "$599/month",
-      features: [
-        "IoT sensor integration",
-        "Machine learning algorithms",
-        "Failure prediction models",
-        "Maintenance scheduling optimization",
-        "Real-time monitoring dashboards",
-        "Cost-benefit analysis",
-        "Integration with existing systems",
-        "Mobile alerts and notifications"
-      ],
-      benefits: [
-        "Reduce unplanned downtime by 70%",
-        "Lower maintenance costs by 40%",
-        "Extend equipment lifespan",
-        "Improve operational efficiency"
-      ],
-      marketPrice: "$1000-1500/month",
-      savings: "Save up to $900/month"
-    },
-    {
-      name: "AI Code Generation Platform",
-      description: "Advanced AI-powered code generation and development assistance platform that accelerates software development and improves code quality.",
-      price: "$299/month",
-      features: [
-        "Intelligent code generation",
-        "Bug detection and fixing",
-        "Code optimization suggestions",
-        "Multi-language support",
-        "Integration with IDEs",
-        "Code review automation",
-        "Documentation generation",
-        "Testing assistance"
-      ],
-      benefits: [
-        "Accelerate development by 60%",
-        "Reduce bugs and technical debt",
-        "Improve code quality and consistency",
-        "Enable faster time-to-market"
-      ],
-      marketPrice: "$500-800/month",
-      savings: "Save up to $500/month"
-    },
-    {
-      name: "AI Social Media Management",
-      description: "Comprehensive AI-powered social media management platform with automated posting, engagement, and analytics across all major platforms.",
-      price: "$199/month",
-      features: [
-        "Automated content scheduling",
-        "AI-powered engagement responses",
-        "Sentiment analysis and monitoring",
-        "Hashtag optimization",
-        "Influencer identification",
-        "Crisis management alerts",
-        "Performance analytics",
-        "Multi-platform management"
-      ],
-      benefits: [
-        "Increase social media engagement by 80%",
-        "Reduce social media management time",
-        "Improve brand reputation monitoring",
-        "Optimize social media ROI"
-      ],
-      marketPrice: "$300-500/month",
-      savings: "Save up to $300/month"
-    },
-    {
-      name: "AI HR Analytics Platform",
-      description: "Advanced human resources analytics platform with AI-powered insights for recruitment, employee engagement, and workforce optimization.",
-      price: "$399/month",
-      features: [
-        "Resume screening and matching",
-        "Employee performance analytics",
-        "Retention prediction models",
-        "Skills gap analysis",
-        "Diversity and inclusion metrics",
-        "Recruitment optimization",
-        "Employee sentiment analysis",
-        "Workforce planning tools"
-      ],
-      benefits: [
-        "Improve hiring success rates by 50%",
-        "Reduce employee turnover by 30%",
-        "Optimize workforce planning",
-        "Enhance employee satisfaction"
-      ],
-      marketPrice: "$600-900/month",
-      savings: "Save up to $500/month"
-    },
-    {
-      name: "AI Supply Chain Optimization",
-      description: "Intelligent supply chain management platform with AI-powered demand forecasting, inventory optimization, and logistics automation.",
-      price: "$799/month",
-      features: [
-        "Demand forecasting algorithms",
-        "Inventory optimization",
-        "Supplier performance analytics",
-        "Risk assessment and mitigation",
-        "Route optimization",
-        "Cost analysis and reduction",
-        "Sustainability tracking",
-        "Real-time supply chain visibility"
-      ],
-      benefits: [
-        "Reduce inventory costs by 25%",
-        "Improve demand forecasting accuracy",
-        "Minimize supply chain disruptions",
-        "Optimize logistics operations"
-      ],
-      marketPrice: "$1200-2000/month",
-      savings: "Save up to $1200/month"
-    },
-    {
-      name: "AI Legal Document Analysis",
-      description: "Specialized AI platform for legal document analysis, contract review, and compliance monitoring with advanced natural language processing.",
-      price: "$599/month",
-      features: [
-        "Contract analysis and review",
-        "Legal document search",
-        "Compliance monitoring",
-        "Risk assessment",
-        "Clause extraction and comparison",
-        "Legal research assistance",
-        "Document summarization",
-        "Deadline tracking and alerts"
-      ],
-      benefits: [
-        "Reduce legal review time by 80%",
-        "Improve contract accuracy",
-        "Ensure regulatory compliance",
-        "Lower legal costs significantly"
-      ],
-      marketPrice: "$1000-1500/month",
-      savings: "Save up to $900/month"
-    },
-    {
-      name: "AI Video Analytics Platform",
-      description: "Advanced video analysis platform with AI-powered content recognition, sentiment analysis, and automated video processing capabilities.",
-      price: "$349/month",
-      features: [
-        "Video content analysis",
-        "Object and face recognition",
-        "Sentiment analysis from video",
-        "Automated video editing",
-        "Content moderation",
-        "Video search and indexing",
-        "Real-time video processing",
-        "Custom model training"
-      ],
-      benefits: [
-        "Automate video content processing",
-        "Improve content moderation efficiency",
-        "Enhance video search capabilities",
-        "Reduce manual video review time"
-      ],
-      marketPrice: "$600-900/month",
-      savings: "Save up to $550/month"
-    },
-    {
-      name: "AI Code Review Assistant",
-      description: "Intelligent code review platform that automatically analyzes code quality, identifies bugs, and suggests improvements using advanced AI algorithms.",
-      price: "$199/month",
-      features: [
-        "Automated code analysis",
-        "Bug detection and prevention",
-        "Code quality scoring",
-        "Security vulnerability scanning",
-        "Performance optimization suggestions",
-        "Code style enforcement",
-        "Integration with Git workflows",
-        "Team collaboration tools"
-      ],
-      benefits: [
-        "Reduce bugs by 70%",
-        "Improve code quality by 85%",
-        "Accelerate development cycles",
-        "Enhance team productivity"
-      ],
-      marketPrice: "$400-700/month",
-      savings: "Save up to $500/month"
-    },
-    {
-      name: "AI Customer Journey Optimizer",
-      description: "Advanced customer journey mapping and optimization platform that uses AI to identify friction points and improve conversion rates.",
-      price: "$599/month",
-      features: [
-        "Customer journey visualization",
-        "Friction point identification",
-        "Conversion optimization suggestions",
-        "A/B testing automation",
-        "Behavioral analytics",
-        "Personalization recommendations",
-        "Multi-channel tracking",
-        "ROI measurement tools"
-      ],
-      benefits: [
-        "Increase conversion rates by 60%",
-        "Reduce customer churn by 45%",
-        "Improve customer satisfaction",
-        "Optimize marketing spend"
-      ],
-      marketPrice: "$1000-1500/month",
-      savings: "Save up to $900/month"
-    },
-    {
-      name: "AI Fraud Detection System",
-      description: "Real-time fraud detection and prevention system using machine learning to identify suspicious activities and protect business transactions.",
-      price: "$799/month",
-      features: [
-        "Real-time fraud monitoring",
-        "Machine learning algorithms",
-        "Behavioral pattern analysis",
-        "Risk scoring system",
-        "Automated alerts and responses",
-        "Multi-channel protection",
-        "Custom rule configuration",
-        "Compliance reporting"
-      ],
-      benefits: [
-        "Reduce fraud losses by 90%",
-        "Minimize false positives by 80%",
-        "Protect customer data",
-        "Ensure regulatory compliance"
-      ],
-      marketPrice: "$1500-2500/month",
-      savings: "Save up to $1700/month"
-    },
-    {
-      name: "AI Personalization Engine",
-      description: "Advanced personalization platform that delivers tailored experiences across all customer touchpoints using real-time AI insights.",
-      price: "$699/month",
-      features: [
-        "Real-time personalization",
-        "Multi-channel content delivery",
-        "Behavioral prediction models",
-        "Dynamic pricing optimization",
-        "Product recommendation engine",
-        "Email personalization",
-        "Website customization",
-        "Performance analytics"
-      ],
-      benefits: [
-        "Increase engagement by 120%",
-        "Boost conversion rates by 75%",
-        "Improve customer lifetime value",
-        "Enhance user experience"
-      ],
-      marketPrice: "$1200-2000/month",
-      savings: "Save up to $1300/month"
-    },
-    {
-      name: "AI Inventory Forecasting",
-      description: "Intelligent inventory management system that predicts demand, optimizes stock levels, and prevents stockouts using advanced AI algorithms.",
-      price: "$499/month",
-      features: [
-        "Demand forecasting models",
-        "Seasonal trend analysis",
-        "Supplier performance tracking",
-        "Automated reorder points",
-        "Cost optimization",
-        "Multi-location management",
-        "Integration with ERP systems",
-        "Real-time reporting"
-      ],
-      benefits: [
-        "Reduce inventory costs by 40%",
-        "Eliminate stockouts by 95%",
-        "Improve cash flow",
-        "Optimize supplier relationships"
-      ],
-      marketPrice: "$800-1200/month",
-      savings: "Save up to $700/month"
-    },
-    {
-      name: "AI Voice Analytics Platform",
-      description: "Advanced voice analytics system that analyzes customer calls, extracts insights, and provides actionable recommendations for improvement.",
-      price: "$449/month",
-      features: [
-        "Call transcription and analysis",
-        "Sentiment analysis",
-        "Keyword extraction",
-        "Performance metrics",
-        "Quality scoring",
-        "Training recommendations",
-        "Compliance monitoring",
-        "Real-time dashboards"
-      ],
-      benefits: [
-        "Improve call quality by 80%",
-        "Increase customer satisfaction",
-        "Identify training needs",
-        "Ensure compliance standards"
-      ],
-      marketPrice: "$800-1200/month",
-      savings: "Save up to $750/month"
-    },
-    {
-      name: "AI Content Moderation System",
-      description: "Automated content moderation platform that uses AI to detect and filter inappropriate content across multiple channels and formats.",
-      price: "$399/month",
-      features: [
-        "Multi-format content analysis",
-        "Real-time moderation",
-        "Custom policy configuration",
-        "False positive reduction",
-        "Multi-language support",
-        "Escalation workflows",
-        "Analytics and reporting",
-        "API integration"
-      ],
-      benefits: [
-        "Reduce moderation costs by 85%",
-        "Improve response time by 95%",
-        "Maintain brand safety",
-        "Scale content operations"
-      ],
-      marketPrice: "$700-1000/month",
-      savings: "Save up to $600/month"
-    },
-    {
-      name: "AI Energy Optimization Platform",
-      description: "Smart energy management system that uses AI to optimize energy consumption, reduce costs, and improve sustainability across facilities.",
-      price: "$599/month",
-      features: [
-        "Energy consumption monitoring",
-        "Predictive maintenance",
-        "Cost optimization algorithms",
-        "Sustainability tracking",
-        "Real-time alerts",
-        "Integration with IoT devices",
-        "Carbon footprint analysis",
-        "Compliance reporting"
-      ],
-      benefits: [
-        "Reduce energy costs by 35%",
-        "Improve sustainability metrics",
-        "Prevent equipment failures",
-        "Ensure regulatory compliance"
-      ],
-      marketPrice: "$1000-1500/month",
-      savings: "Save up to $900/month"
-    },
-    {
-      name: "AI Translation and Localization",
-      description: "Advanced translation platform with AI-powered language processing, cultural adaptation, and real-time multilingual content generation.",
-      price: "$299/month",
-      features: [
-        "Real-time translation",
-        "Cultural adaptation",
-        "Context-aware translation",
-        "Multi-language support",
-        "Quality assurance",
-        "Integration with content systems",
-        "Custom terminology management",
-        "Performance analytics"
-      ],
-      benefits: [
-        "Expand global reach",
-        "Improve translation accuracy by 90%",
-        "Reduce localization costs by 60%",
-        "Maintain brand consistency"
-      ],
-      marketPrice: "$500-800/month",
-      savings: "Save up to $500/month"
-    },
-    {
-      name: "AI Quantum Computing Simulator",
-      description: "Advanced quantum computing simulation platform for research, optimization problems, and cryptographic applications with real quantum hardware integration.",
-      price: "$1,999/month",
-      features: [
-        "Quantum algorithm development",
-        "Real quantum hardware access",
-        "Optimization problem solving",
-        "Cryptographic analysis",
-        "Quantum machine learning",
-        "Simulation environment",
-        "Research collaboration tools",
-        "Advanced analytics dashboard"
-      ],
-      benefits: [
-        "Solve complex optimization problems",
-        "Advance quantum research",
-        "Develop quantum algorithms",
-        "Access cutting-edge technology"
-      ],
-      marketPrice: "$5,000-10,000/month",
-      savings: "Save up to $8,000/month"
-    },
-    {
-      name: "AI Autonomous Vehicle Platform",
-      description: "Complete autonomous vehicle development platform with AI perception, decision-making, and safety systems for automotive manufacturers.",
-      price: "$4,999/month",
-      features: [
-        "Computer vision AI",
-        "Sensor fusion algorithms",
-        "Path planning optimization",
-        "Safety system integration",
-        "Real-time decision making",
-        "Simulation environment",
-        "Regulatory compliance tools",
-        "Fleet management system"
-      ],
-      benefits: [
-        "Accelerate AV development",
-        "Ensure safety compliance",
-        "Reduce development costs",
-        "Improve vehicle performance"
-      ],
-      marketPrice: "$15,000-30,000/month",
-      savings: "Save up to $25,000/month"
-    },
-    {
-      name: "AI Drug Discovery Platform",
-      description: "Revolutionary AI platform for pharmaceutical research with molecular design, drug interaction prediction, and clinical trial optimization.",
-      price: "$2,999/month",
-      features: [
-        "Molecular design AI",
-        "Drug interaction prediction",
-        "Clinical trial optimization",
-        "Biomarker identification",
-        "Toxicity prediction",
-        "Patent analysis",
-        "Regulatory pathway guidance",
-        "Collaboration tools"
-      ],
-      benefits: [
-        "Reduce drug development time by 60%",
-        "Lower research costs by 70%",
-        "Improve success rates",
-        "Accelerate time to market"
-      ],
-      marketPrice: "$10,000-20,000/month",
-      savings: "Save up to $17,000/month"
-    },
-    {
-      name: "AI Climate Modeling System",
-      description: "Advanced climate modeling with AI-powered weather prediction, environmental impact analysis, and sustainability optimization.",
-      price: "$1,499/month",
-      features: [
-        "Weather prediction AI",
-        "Climate change modeling",
-        "Environmental impact analysis",
-        "Carbon footprint optimization",
-        "Renewable energy planning",
-        "Disaster prediction",
-        "Policy impact assessment",
-        "Real-time monitoring"
-      ],
-      benefits: [
-        "Improve weather accuracy by 40%",
-        "Optimize environmental strategies",
-        "Reduce climate risks",
-        "Support sustainability goals"
-      ],
-      marketPrice: "$5,000-10,000/month",
-      savings: "Save up to $8,500/month"
-    },
-    {
-      name: "AI Space Mission Planner",
-      description: "Intelligent space mission planning with trajectory optimization, resource management, and autonomous decision-making for space agencies.",
-      price: "$3,999/month",
-      features: [
-        "Trajectory optimization",
-        "Resource management AI",
-        "Mission risk assessment",
-        "Autonomous decision making",
-        "Satellite constellation planning",
-        "Launch window optimization",
-        "Ground station coordination",
-        "Mission simulation"
-      ],
-      benefits: [
-        "Optimize mission success rates",
-        "Reduce mission costs by 50%",
-        "Improve resource utilization",
-        "Enable autonomous operations"
-      ],
-      marketPrice: "$15,000-25,000/month",
-      savings: "Save up to $21,000/month"
-    },
-    {
-      name: "AI Financial Trading Algorithm",
-      description: "Advanced AI trading system with real-time market analysis, risk management, and automated trading strategies for financial institutions.",
-      price: "$2,499/month",
-      features: [
-        "Real-time market analysis",
-        "Algorithmic trading strategies",
-        "Risk management AI",
-        "Portfolio optimization",
-        "Market sentiment analysis",
-        "Regulatory compliance",
-        "Backtesting environment",
-        "Performance analytics"
-      ],
-      benefits: [
-        "Increase trading profits by 35%",
-        "Reduce risk exposure",
-        "Automate trading decisions",
-        "Improve portfolio performance"
-      ],
-      marketPrice: "$10,000-20,000/month",
-      savings: "Save up to $17,500/month"
-    },
-    {
-      name: "AI Medical Diagnosis Assistant",
-      description: "Advanced medical AI for diagnostic assistance, treatment recommendations, and patient monitoring with FDA compliance.",
-      price: "$1,999/month",
-      features: [
-        "Medical image analysis",
-        "Diagnostic assistance",
-        "Treatment recommendations",
-        "Patient monitoring",
-        "Drug interaction checking",
-        "Clinical decision support",
-        "FDA compliance tools",
-        "Integration with EHR systems"
-      ],
-      benefits: [
-        "Improve diagnostic accuracy by 45%",
-        "Reduce medical errors",
-        "Accelerate diagnosis time",
-        "Enhance patient outcomes"
-      ],
-      marketPrice: "$8,000-15,000/month",
-      savings: "Save up to $13,000/month"
-    },
-    {
-      name: "AI Cybersecurity Threat Hunter",
-      description: "Advanced AI cybersecurity platform with threat hunting, attack prediction, and automated response for enterprise security.",
-      price: "$1,799/month",
-      features: [
-        "Threat hunting AI",
-        "Attack prediction models",
-        "Automated incident response",
-        "Behavioral analysis",
-        "Zero-day detection",
-        "Threat intelligence integration",
-        "Compliance monitoring",
-        "Security orchestration"
-      ],
-      benefits: [
-        "Detect threats 90% faster",
-        "Prevent 95% of attacks",
-        "Reduce response time by 80%",
-        "Minimize security breaches"
-      ],
-      marketPrice: "$6,000-12,000/month",
-      savings: "Save up to $10,200/month"
-    },
-    {
-      name: "AI Smart City Platform",
-      description: "Comprehensive smart city management with AI-powered traffic optimization, energy management, and citizen services.",
-      price: "$2,999/month",
-      features: [
-        "Traffic optimization AI",
-        "Energy management system",
-        "Citizen service automation",
-        "Infrastructure monitoring",
-        "Emergency response coordination",
-        "Environmental monitoring",
-        "Data analytics dashboard",
-        "Integration with city systems"
-      ],
-      benefits: [
-        "Reduce traffic congestion by 40%",
-        "Lower energy consumption by 30%",
-        "Improve citizen satisfaction",
-        "Optimize city operations"
-      ],
-      marketPrice: "$10,000-20,000/month",
-      savings: "Save up to $17,000/month"
-    },
-    {
-      name: "AI Agricultural Optimization",
-      description: "Precision agriculture AI with crop monitoring, yield prediction, and automated farming operations for modern agriculture.",
-      price: "$899/month",
-      features: [
-        "Crop monitoring AI",
-        "Yield prediction models",
-        "Automated irrigation",
-        "Pest and disease detection",
-        "Soil analysis",
-        "Weather integration",
-        "Equipment optimization",
-        "Farm management dashboard"
-      ],
-      benefits: [
-        "Increase crop yields by 25%",
-        "Reduce water usage by 35%",
-        "Minimize pesticide use",
-        "Optimize farming operations"
-      ],
-      marketPrice: "$3,000-6,000/month",
-      savings: "Save up to $5,100/month"
-    },
-    {
-      name: "AI Legal Research Assistant",
-      description: "Advanced legal AI for case research, document analysis, and legal strategy development with comprehensive law database integration.",
-      price: "$1,299/month",
-      features: [
-        "Legal case research",
-        "Document analysis AI",
-        "Legal strategy development",
-        "Precedent identification",
-        "Contract analysis",
-        "Regulatory compliance checking",
-        "Legal writing assistance",
-        "Case outcome prediction"
-      ],
-      benefits: [
-        "Reduce research time by 80%",
-        "Improve case success rates",
-        "Accelerate document review",
-        "Enhance legal strategies"
-      ],
-      marketPrice: "$5,000-10,000/month",
-      savings: "Save up to $8,700/month"
-    },
-    {
-      name: "AI Manufacturing Quality Control",
-      description: "Intelligent manufacturing quality control with computer vision, defect detection, and process optimization for industrial production.",
-      price: "$1,599/month",
-      features: [
-        "Computer vision inspection",
-        "Defect detection AI",
-        "Process optimization",
-        "Predictive maintenance",
-        "Quality analytics",
-        "Real-time monitoring",
-        "Integration with production systems",
-        "Custom quality standards"
-      ],
-      benefits: [
-        "Reduce defects by 90%",
-        "Improve production efficiency by 40%",
-        "Lower quality control costs",
-        "Ensure consistent quality"
-      ],
-      marketPrice: "$6,000-12,000/month",
-      savings: "Save up to $10,400/month"
-    }
-  ];
   return (
     <Layout
       title="AI Services - Zion Tech Group"
-      description="Cutting-edge AI services including content creation, automation, machine learning, and intelligent solutions."
+      description="Comprehensive AI services including machine learning, computer vision, NLP, and cutting-edge quantum AI solutions."
     >
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      {/* Header */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Services
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Revolutionary artificial intelligence solutions that transform your business operations and drive growth
-          </p>
-          <div className="bg-cyan-500/20 border border-cyan-500/30 rounded-lg p-6 max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold text-cyan-400 mb-4">Why Choose Our AI Services?</h2>
-            <div className="grid md:grid-cols-3 gap-6 text-left">
-              <div>
-                <h3 className="text-lg font-semibold text-white mb-2">Cost Effective</h3>
-                <p className="text-gray-300">Save up to 70% compared to market rates</p>
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                AI Services & Solutions
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto">
+                Transform your business with cutting-edge artificial intelligence solutions. 
+                From machine learning to quantum AI, we deliver innovative results.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Get Started
+                </Link>
+                <Link href="/pricing" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                  View Pricing
+                </Link>
               </div>
-              <div>
-                <h3 className="text-lg font-semibold text-white mb-2">Proven Results</h3>
-                <p className="text-gray-300">Average 40% improvement in efficiency</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-white mb-2">24/7 Support</h3>
-                <p className="text-gray-300">Round-the-clock technical assistance</p>
-              </div>
-            </div>
+            </motion.div>
           </div>
-        </div>
-      </section>
-      {/* Services Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8">
-            {aiServices.map((service, index) => (
-              <div key={index} className="bg-gray-800 p-8 rounded-lg hover:bg-gray-700 transition-colors">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-2xl font-semibold text-cyan-400">
-                    {service.name}
-                  </h3>
-                  <div className="text-right">
-                    <div className="text-3xl font-bold text-green-400">{service.price}</div>
-                    <div className="text-sm text-gray-400">Market: {service.marketPrice}</div>
-                    <div className="text-sm text-green-400 font-semibold">{service.savings}</div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
+                    {stat.number}
                   </div>
-                </div>
-                <p className="text-gray-300 mb-6">
-                  {service.description}
-                </p>
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
-                  <ul className="text-gray-300 space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">
-                        <span className="text-cyan-400 mr-2">✓</span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Benefits:</h4>
-                  <ul className="text-gray-300 space-y-2">
-                    {service.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center">
-                        <span className="text-green-400 mr-2">→</span>
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="flex gap-4">
-                  <Link
-                    href="/contact"
-                    className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors flex-1 text-center"
-                  >
-                    Get Started
-                  </Link>
-                  <Link
-                    href="/request-quote"
-                    className="bg-transparent border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-6 py-2 rounded-lg font-semibold transition-colors flex-1 text-center"
-                  >
-                    Request Quote
-                  </Link>
-                </div>
+                  <div className="text-gray-600">
+                    {stat.label}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Services Grid */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our AI Services
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Comprehensive AI solutions designed to accelerate your digital transformation
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {aiServices.map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+                >
+                  <div className="flex items-center mb-4">
+                    <service.icon className="w-8 h-8 text-blue-600 mr-3" />
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      {service.name}
+                    </h3>
+                  </div>
+                  
+                  <p className="text-gray-600 mb-4">
+                    {service.description}
+                  </p>
+
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      {service.features.slice(0, 3).map((feature, idx) => (
+                        <li key={idx} className="flex items-center">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mb-4">
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-lg font-semibold text-blue-600">
+                        {service.price}
+                      </span>
+                      <span className="text-sm text-gray-500 line-through">
+                        {service.marketPrice}
+                      </span>
+                    </div>
+                    <div className="text-sm text-gray-600">
+                      Setup: {service.setupTime}
+                    </div>
+                  </div>
+
+                  <div className="flex space-x-2">
+                    <Link 
+                      href="/contact" 
+                      className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg text-center hover:bg-blue-700 transition-colors"
+                    >
+                      Get Quote
+                    </Link>
+                    <Link 
+                      href={`/ai-services#${service.name.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="flex-1 border border-blue-600 text-blue-600 px-4 py-2 rounded-lg text-center hover:bg-blue-50 transition-colors"
+                    >
+                      Learn More
+                    </Link>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-blue-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Ready to Transform Your Business with AI?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Contact our AI experts today for a free consultation and discover how our solutions can accelerate your success.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Start Your AI Journey
+                </Link>
+                <Link href="/pricing" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                  View All Pricing
+                </Link>
               </div>
-            ))}
+            </motion.div>
           </div>
-        </div>
-      </section>
-      {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-            Ready to Transform Your Business with AI?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Contact us today to discuss your AI needs and get a customized solution
-          </p>
-          <div className="grid md:grid-cols-3 gap-8 text-gray-300 mb-8">
-            <div>
-              <h3 className="text-xl font-semibold text-cyan-400 mb-2">Phone</h3>
-              <p>+1 302 464 0950</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-cyan-400 mb-2">Email</h3>
-              <p>kleber@ziontechgroup.com</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-cyan-400 mb-2">Address</h3>
-              <p>364 E Main St STE 1008<br />Middletown DE 19709</p>
-            </div>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Contact Us Now
-            </Link>
-            <Link
-              href="/request-quote"
-              className="bg-transparent border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Get Free Consultation
-            </Link>
-          </div>
-        </div>
-      </section>
+        </section>
       </div>
     </Layout>
   );

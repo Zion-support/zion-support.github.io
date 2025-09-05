@@ -1,3 +1,4 @@
+#!/usr/bin/env node/""usr/bin/env"" node;#!/usr/bin/env node"const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class $1 { constructor() {""
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
@@ -275,6 +276,7 @@ throw error}
     this.dependencyHistory = []}
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
+    }
     console.log(`[${timestamp}] [${level}] ${message}`)}
   async runDependencyCheck() {
     try {

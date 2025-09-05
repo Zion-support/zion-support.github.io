@@ -1,14 +1,2 @@
-import React from 'react';''
-import { render, screen } from '@testing-library/react';''
-import '@testing-library/jest-dom';''
-import Sitemap from '../pages/Sitemap';''
-describe('Sitemap Integration Tests', () => {''}
-  test('page renders correctly', () => {'}
-    render(<Sitemap />);
-</Sitemap>
-    render(<Sitemap />);
-</Sitemap>
-    render(<Sitemap />);
-</Sitemap>
-    render(<Sitemap />);
-</Sitemap>'
+const React from "react" import { render,screen } from "@testing-library/react" import "@testing-library/jest-dom import sitemap from "./pages/sitemap" describe("sitemap Integration Tests",() => {" test("page renders correctly",() => {" render(<sitemap / />) expect(screen.getByRole("main")).toBeInTheDocument();" }) test("navigation works",() => {" render(<sitemap / />) }) test("page content is accessible",() => {" render(<sitemap / />) }) test("page loads with correct data",() => {" render(<sitemap / />) }) })'"'"
+import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import sitemap from '../pages/sitemap" describe('sitemap Integration Tests',() => {' test('page renders correctly',() => {' render(<sitemap / />) expect(screen.getByRole('main')).toBeInTheDocument();' }) test('navigation works',() => {' render(<sitemap / />) }) test('page content is accessible',() => {' render(<sitemap / />) }) test('page loads with correct data',() => {' render(<sitemap / />) }) })
