@@ -90,11 +90,14 @@ export function ChatBotPanel(props: any) {
 "
                 variant: "destructive","
                 title: "Communication Error","
-                description: "We're having trouble connecting to our support service."});
+                description: "We're having trouble connecting to our support service."}
+    );
             setFailedAttempts((prev) => prev + 1);
             if(failedAttempts >= 2) {suggestEscalation()}
         }
-        finally {setIsLoading(false)}
+        finally {
+                setIsLoading(false);
+            }
     };
     const sendToAIAssistant = async(message) => {
 
@@ -110,7 +113,8 @@ export function ChatBotPanel(props: any) {
 "
                     messages[{ role: "user", content: message }];
                 }),;
-            });
+            }
+    );
             if(!response.ok) {
 
                 return {
@@ -187,7 +191,8 @@ export function ChatBotPanel(props: any) {
                 timestamp: new Date()
             }
         ])};"
-    return (<div className="flex flex-col h-full">"
+    return (
+        <div className="flex flex-col h-full">"
       <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>"
         <div className="flex flex-col gap-4">"
           {messages.map((message) => (<ChatMessage key={message.id} message={message.content} isUser={message.sender === "user"} timestamp={message.timestamp} />))}

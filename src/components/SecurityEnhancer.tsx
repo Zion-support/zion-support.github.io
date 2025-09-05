@@ -228,7 +228,8 @@ export function SecurityEnhancer(props: any) {
 
   // Filter events
 
-    return matchesSearch && matchesFilter}) ;
+    return matchesSearch && matchesFilter}
+    );
 
   // Get status icon
   
@@ -313,7 +314,7 @@ export function SecurityEnhancer(props: any) {
                 <div className="mb-6">"
                   <h3 className="text-lg font-semibold mb-3 text-gray-900 dark: tex t-white">
                     Security Status
-                  </h3>"
+                  "
                   <div className="space-y-2">
                     {['
                       { key: 'csp', label: 'Content Security Policy' },
@@ -344,7 +345,7 @@ export function SecurityEnhancer(props: any) {
                 <div className="mb-6">"
                   <h3 className="text-lg font-semibold mb-3 text-gray-900 dark: tex t-white">
                     Security Metrics
-                  </h3>"
+                  "
                   <div className="grid grid-cols-2 gap-3">"
                     <div className="p-3 bg-blue-50 dark: b g-blue-900/20 rounded-lg">"
                       <p className="text-xs text-blue-600 dark: tex t-blue-400">
@@ -386,7 +387,7 @@ export function SecurityEnhancer(props: any) {
                 <div className="flex items-center justify-between mb-3">"
                   <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">
                     Security Events
-                  </h3>
+                  
                   <button
                     onClick={runSecurityScan}
                     disabled={isScanning}"
@@ -477,7 +478,7 @@ export function SecurityEnhancer(props: any) {
               <div className="mb-6">"
                 <h3 className="text-lg font-semibold mb-3 text-gray-900 dark: tex t-white">
                   Quick Actions
-                </h3>"
+                "
                 <div className="grid grid-cols-2 gap-3">
                   <button
                     onClick={() =>
@@ -504,7 +505,7 @@ export function SecurityEnhancer(props: any) {
               <div className="mb-6">"
                 <h3 className="text-lg font-semibold mb-3 text-gray-900 dark: tex t-white">
                   Security Tips
-                </h3>"
+                "
                 <div className="space-y-2 text-sm text-gray-600 dark: tex t-gray-400">
                   <p>• Keep your browser and extensions updated</p>
                   <p>• Use strong, unique passwords for each account</p>

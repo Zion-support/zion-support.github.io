@@ -1,1 +1,9 @@
-import React from';react' const LinkHealthChecker = ({ links,className = ' }) => { const [linkStatuses,setLinkStatuses] = useState([]) const [isChecking,setIsChecking] = useState(false) const checkLinkHealth = async url => { const startTime = Date.now() try {'''';
+<<<<<<< HEAD
+import React from\';react\' const LinkHealthChecker = ({ links,className = \' }) => { const [linkStatuses,setLinkStatuses] = useState([]) const [isChecking,setIsChecking] = useState(false) const checkLinkHealth = async url => { const startTime = Date.now() try {\''\'';
+=======
+<<<<<<< HEAD
+const React from";react" const LinkHealthChecker = ({ links,className = " }) => { const [linkStatuses,setLinkStatuses] = useState([]) const [isChecking,setIsChecking] = useState(false) const checkLinkHealth = async url => { const startTime = Date.now() try {"""";""
+=======
+import _React from';react' const LinkHealthChecker = ({ links,className = ' }) => { const [linkStatuses,setLinkStatuses] = useState([]) const [isChecking,setIsChecking] = useState(false) const checkLinkHealth = async url => { const startTime = Date.now() try {'''';
+>>>>>>> main
+>>>>>>> main

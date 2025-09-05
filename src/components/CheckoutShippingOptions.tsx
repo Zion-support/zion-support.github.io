@@ -46,7 +46,8 @@ export function CheckoutShippingOptions(props: any) {
 
   if(!toAddress) return null;
 
-  return (<div className="my-4">
+  return (
+        <div className="my-4">
       <h2 className="font-semibold mb-2">Shipping Options</h2>
       {loading && <p>Loading...</p>}
       {!loading && (

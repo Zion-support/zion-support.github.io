@@ -94,7 +94,7 @@ function InnovationResearchSection(props: any) {export function InnovationResear
         >"
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Active Research Areas
-          </h3>
+          
 
           <div className="grid grid - cols - 1 md: gri d - cols - 2 gap-8">
             {researchAreas.map((area, index) => (<motion.div
@@ -177,7 +177,7 @@ function InnovationResearchSection(props: any) {export function InnovationResear
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">"
             <h3 className="text-2xl font-bold text-white text-center mb-6">
               Latest Research Breakthroughs
-            </h3>
+            
 
             <div className="grid grid - cols - 1 md: gri d - cols - 3 gap-6">
               <div className="text-center">
@@ -230,7 +230,7 @@ function InnovationResearchSection(props: any) {export function InnovationResear
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">"
             <h3 className="text-2xl font-bold mb-4">
               Join the Innovation Revolution
-            </h3>"
+            "
             <p className="text-indigo-100 mb-6 max-w-2xl mx-auto">
               Partner with us to explore the frontiers of technology and create
               solutions that will shape the future of humanity.</p>"

@@ -1,1 +1,17 @@
-export class apiService {; constructor() {; this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api";,} async get() {; try {; const response = await fetch("${this.baseUrl}/api");,} return await response.json();,} } catch (error) {; console.error("Error fetching data:",error);,} throw error;,} } export default new apiService();,}
+<<<<<<< HEAD
+=======
+// comment;
+export class apiService {;
+  constructor() {;
+    this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api"}
+  async get() {;
+    try {;
+      const response = await fetch("${this.baseUrl}/api")}
+      return await response.json()}
+    } catch (error) {;
+      console.error("Error fetching "data": ", error)}
+      throw error}
+}
+export default new apiService()}
+>>>>>>> main
+export class apiService {; constructor() {; this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api",} async get() {; try {; const response = await fetch("${this.baseUrl}/api"),} return await response.json(),} } catch (error) {; console.error("Error fetching data:",error),} throw error,} } export default new apiService(),}

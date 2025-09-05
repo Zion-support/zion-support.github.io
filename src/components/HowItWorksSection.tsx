@@ -207,7 +207,7 @@ const stats = [;"
                   {/* Title and description */}"
                   <h3 className="text-xl font-bold text-white mb-3 group-hover: tex t-zion-cyan transition-colors">
                     {step.title}
-                  </h3>"
+                  "
                   <p className="text-zion-slate-light leading-relaxed text-sm mb-4">
                     {step.description}
                   </p>

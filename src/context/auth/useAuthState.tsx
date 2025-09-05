@@ -27,7 +27,8 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
 
     accessToken: nul l,
     refreshToken: nul l
-  });
+  }
+    );
 
   useEffect(() => {
   // TODO: Add dependencies if needed

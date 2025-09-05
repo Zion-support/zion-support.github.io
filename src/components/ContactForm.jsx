@@ -9,7 +9,8 @@ const ContactForm = (props: any) => {
         phone: '',
         service: '',
         message: ''
-    });
+    }
+    );
     const [isSubmitting, setIsSubmitting] = useState(false);    const [submitStatus, setSubmitStatus] = useState('idle');
     const handleInputChange = (props: any) => {}
         const {name, value} = e.target;
@@ -36,7 +37,8 @@ const ContactForm = (props: any) => {
                 phone: '','''
                 service: '','''
                 message: ''''
-            });'''
+            }
+    );'''
             setSubmitStatus('success');'''
             setTimeout(() => setSubmitStatus('idle'), 5000)}
         catch (error) {}
@@ -49,7 +51,8 @@ const ContactForm = (props: any) => {
             setIsSubmitting(false)}
     };"""
     const isFormValid = formData.firstName && formData.lastName && formData.email && formData.message;"'"""
-    return (<div className="max-w-2xl mx-auto">'"'"""
+    return (
+        <div className="max-w-2xl mx-auto">'"'"""
       {submitStatus === 'success' && (<div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">""""
           <div className="flex items-center">""""
             <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">""""

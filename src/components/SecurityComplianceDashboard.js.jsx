@@ -5,7 +5,8 @@ import {Shield, AlertTriangle, CheckCircle, XCircle, Download, Settings, Refresh
 ;
 export const SecurityComplianceDashboard = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
-        enableUserBehaviorTracking: true;});'
+        enableUserBehaviorTracking: true;}
+    );'
     const [activeTab, setActiveTab] = useState('overview');
     const [showSettings, setShowSettings] = useState(false);
     const [copied, setCopied] = useState(false);
@@ -27,7 +28,8 @@ export const SecurityComplianceDashboard = (props: any) => {
         trackEvent('security',dashboard',report_generated')}, [generateSecurityReport, trackEvent]);
     const handleExportAuditLog = useCallback(() => {}
         const auditLog = exportAuditLog();'
-        const blob = new Blob([auditLog], {type: 'application/json'});
+        const blob = new Blob([auditLog], {type: 'application/json'}
+    );
         const url = URL.createObjectURL(blob);'
         const a = document.createElement('a');
         a.href = url;'
@@ -80,7 +82,8 @@ export const SecurityComplianceDashboard = (props: any) => {
             case 'low': return 'text-green-600 bg-green-100 border-green-200';'
             default: return 'text-gray-600 bg-gray-100 border-gray-200'}`
     };``
-    return (<div className={`bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}>"""
+    return (
+        <div className={`bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}>"""
       {/* Header */}""""
       <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">""""
         <div className="flex items-center space-x-3">""""

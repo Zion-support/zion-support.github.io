@@ -1,7 +1,9 @@
-import React from 'react';
-import type { AppProps } from 'next/app';
-import '../src/index.css';
-
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
-}
+<<<<<<< HEAD
+import React from \'react\'; import type { AppProps } from \'next/app\'; import \'../src/index.css\'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
+=======
+<<<<<<< HEAD
+const React from "react"; import type { AppProps } from "next/app"; import "./src/index.css"; export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''"
+=======
+import _React from 'react'; import type { AppProps } from 'next/app'; import '../src/index.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
+>>>>>>> main
+>>>>>>> main

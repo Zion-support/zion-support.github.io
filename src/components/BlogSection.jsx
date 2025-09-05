@@ -1,10 +1,10 @@
 import React from 'react';
-export function BlogSection(props: any) {
 
-import { Link  } from 'react-router-dom';
-,
-        {
+interface BlogSection.jsProps {
+  // Add props here as needed
+}
 
+<<<<<<< HEAD
             id: '2',
             title: 'Building Scalable Web Applications',
             excerpt: 'Best practices and architectural patterns for creating scalable web apps...',
@@ -26,7 +26,7 @@ import { Link  } from 'react-router-dom';
                 <Link to={`/blog/${post.id}`} className="hover:text-zion-cyan">
                   {post.title}
                 </Link>
-              </h3>"
+              "
               <p className="text-zion-slate-light mb-4">{post.excerpt}</p>"
               <div className="flex justify-between text-sm text-zion-slate-light">
                 <span>{post.date}</span>
@@ -37,3 +37,13 @@ import { Link  } from 'react-router-dom';
       </div>
     </section>)}
 '"`
+=======
+export default function BlogSection.js({ }: BlogSection.jsProps) {
+  return (
+    <div>
+      <h1>BlogSection.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+>>>>>>> main

@@ -70,5 +70,5 @@ export default function Page(props: any) {
           <FavoriteButton itemId={listing.id} itemType="product"  />
         </div>
 </div>
-  );"}"
+    );"}"
 </div>
