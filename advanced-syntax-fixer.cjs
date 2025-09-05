@@ -84,7 +84,7 @@ function fixAdvancedSyntaxIssues(filePath) {
 
     // Fix vite config issues
     if (filePath.includes('vite.config.ts')) {
-      content = content.replace(/import { defineConfig,splitVendorChunkPlugin } from 'vite', import react from '@vitejs/plugin-react', import path from 'node: path', export default defineConfig\(\{/g, 
+      content = content.replace(/import { defineConfig,splitVendorChunkPlugin } from 'vite', import react from '@vitejs\/plugin-react', import path from 'node: path', export default defineConfig\(\{/g, 
         `import { defineConfig, splitVendorChunkPlugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'node:path';

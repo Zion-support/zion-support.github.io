@@ -127,7 +127,12 @@ export default [
   {
     ignores: [
       // Node/build outputs
-      'node_modules/**.next/**dist/**build/**out/**coverage/**',
+      'node_modules/**',
+      '.next/**',
+      'dist/**',
+      'build/**',
+      'out/**',
+      'coverage/**',
 
       // Large/legacy sources and disabled dirs
       'src/**src.corrupted/**src.disabled/**src.broken/**src.pages.disabled/**solutions.disabled/**components.disabled/**components.corrupted/**',
