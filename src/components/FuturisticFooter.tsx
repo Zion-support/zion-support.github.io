@@ -4,7 +4,7 @@
   const socialLinks = ['],
     { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: 'LinkedIn' },'',
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'Twitter' },'',
-    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: 'GitHub' }'],
+    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: 'GitHub' }']
   ],
 ,
   return ('),

@@ -8,7 +8,7 @@ class SecurityScanner {,
     this.projectRoot = process.cwd(),
     this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log'),
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json'),
-    this.startTime = Date.now(),
+    this.startTime = Date.now()
   };
 ,
   log(message) {,
@@ -16,9 +16,9 @@ class SecurityScanner {,
     const logMessage = `[${timestamp}] ${message}\n`,
 ,
     try {,
-      fs.appendFileSync(this.logFile, logMessage),
+      fs.appendFileSync(this.logFile, logMessage)
     } catch (error) {,
-      console.error('Error writing to log file:', error.message),
+      console.error('Error writing to log file:', error.message)
     };
   };
 ,
@@ -29,7 +29,7 @@ class SecurityScanner {,
       const auditResult = execSync('npm audit --json', {,
         cwd: this.projectRoot,
         stdio: 'pipe',
-        encoding: 'utf8',
+        encoding: 'utf8'
       }),
 ,
       const audit = JSON.parse(auditResult),
@@ -46,17 +46,17 @@ class SecurityScanner {,
           return {,
             success: false,
             error: 'Vulnerabilities found',
-            output: output,
+            output: output
           };
         };
       } catch (parseError) {,
-        this.log(`Error parsing npm audit output: ${parseError.message}`),
+        this.log(`Error parsing npm audit output: ${parseError.message}`)
       };
 ,
       return {,
         success: false,
         error: error.message,
-        output: error.stdout || error.stderr || '',
+        output: error.stdout || error.stderr || ''
       };
     };
   };
@@ -83,14 +83,14 @@ class SecurityScanner {,
               line: lineNum,
               type: 'hardcoded-password',
               severity: 'high',
-              message: 'Hardcoded password detected',
-            }),
+              message: 'Hardcoded password detected'
+            })
           };
       };
     };
 ,
     scanDirectory(this.projectRoot),
-    return files,
+    return files
   };
 ,
   async scanConfigs() {,
@@ -99,9 +99,8 @@ class SecurityScanner {,
 ,
       const configIssues = [],
       const configFiles = [,
-        'package.jsonnext.config.js',
-        'tsconfig.json.env',
-        '.env.local.env.production',
+        'package.jsonnext.config.jstsconfig.json.env',
+        '.env.local.env.production'
       ],
 ,
       configFiles.forEach(configFile => {,
@@ -115,8 +114,8 @@ class SecurityScanner {,
               file: configFile,
               type: 'exposed-secret',
               severity: 'high',
-              message: 'Potential secret exposed in configuration file',
-            }),
+              message: 'Potential secret exposed in configuration file'
+            })
           };
 ,
           // Check for debug mode in production configs,
@@ -125,21 +124,21 @@ class SecurityScanner {,
               file: configFile,
               type: 'debug-mode',
               severity: 'medium',
-              message: 'Debug mode enabled in production configuration',
-            }),
+              message: 'Debug mode enabled in production configuration'
+            })
           };
         };
       }),
 ,
       return {,
         success: true,
-        issues: configIssues,
+        issues: configIssues
       };
     } catch (error) {,
       return {,
         success: false,
         error: error.message,
-        issues: [],
+        issues: []
       };
     };
   };
@@ -151,14 +150,14 @@ class SecurityScanner {,
         dependencies: depResults.success ? 'secure' : 'vulnerable',
         code: codeResults.issues.length === 0 ? 'secure' : 'issues-found',
         configs: configResults.issues.length === 0 ? 'secure' : 'issues-found',
-        overall: (depResults.success && codeResults.issues.length === 0 && configResults.issues.length === 0) ? 'secure' : 'issues-found',
+        overall: (depResults.success && codeResults.issues.length === 0 && configResults.issues.length === 0) ? 'secure' : 'issues-found'
       },
       details: {,
         dependencies: depResults,
         code: codeResults,
-        configs: configResults,
+        configs: configResults
       },
-      recommendations: [],
+      recommendations: []
     };
 ,
     // Generate recommendations,
@@ -166,8 +165,8 @@ class SecurityScanner {,
       report.recommendations.push({,
         priority: 'critical',
         message: 'Dependency vulnerabilities found',
-        action: 'Run npm audit fix to resolve vulnerabilities',
-      }),
+        action: 'Run npm audit fix to resolve vulnerabilities'
+      })
     };
 ,
     if (codeResults.issues.length > 0) {,
@@ -176,8 +175,8 @@ class SecurityScanner {,
         report.recommendations.push({,
           priority: 'high',
           message: `${highSeverity} high-severity security issues found in code`,
-          action: 'Review and fix high-severity security issues',
-        }),
+          action: 'Review and fix high-severity security issues'
+        })
       };
     };
 ,
@@ -185,24 +184,24 @@ class SecurityScanner {,
       report.recommendations.push({,
         priority: 'medium',
         message: 'Configuration security issues found',
-        action: 'Review configuration files for security issues',
-      }),
+        action: 'Review configuration files for security issues'
+      })
     };
 ,
-    return report,
+    return report
   };
 ,
   async saveReport(report) {,
     try {,
       const reportDir = path.dirname(this.reportFile),
       if (!fs.existsSync(reportDir)) {,
-        fs.mkdirSync(reportDir, { recursive: true }),
+        fs.mkdirSync(reportDir, { recursive: true })
       };
 ,
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),
-      this.log(`Report saved to: ${this.reportFile}`),
+      this.log(`Report saved to: ${this.reportFile}`)
     } catch (error) {,
-      this.log(`Error saving report: ${error.message}`),
+      this.log(`Error saving report: ${error.message}`)
     };
   };
 ,
@@ -214,7 +213,7 @@ class SecurityScanner {,
       // Create logs directory if it doesn't exist,
       const logsDir = path.dirname(this.logFile),
       if (!fs.existsSync(logsDir)) {,
-        fs.mkdirSync(logsDir, { recursive: true }),
+        fs.mkdirSync(logsDir, { recursive: true })
       };
 ,
       // Run all security scans,
@@ -243,15 +242,15 @@ class SecurityScanner {,
         this.log('\n💡 Recommendations: '),
         report.recommendations.forEach(rec => {,
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),
-          this.log(`    Action: ${rec.action}`),
-        }),
+          this.log(`    Action: ${rec.action}`)
+        })
       } else {,
-        this.log('\n✨ No security issues found!'),
+        this.log('\n✨ No security issues found!')
       };
-,
+
     } catch (error) {,
       this.log(`❌ Error running security scanner: ${error.message}`),
-      process.exit(1),
+      process.exit(1)
     };
   };
 };
@@ -259,5 +258,5 @@ class SecurityScanner {,
 // Run the security scanner,
 const scanner = new SecurityScanner(),
 scanner.run().catch(error => {,
-  process.exit(1),
+  process.exit(1)
 }),);
