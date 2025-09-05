@@ -133,7 +133,7 @@ export default function APIPage() {
                   <div className="flex items-center justify-between">"
 </div>"
                     <span className="text-sm text-gray-600">POST /api/saas/configure</span>"
-                    <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">SaaS</span>">>>
+                    <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">SaaS</span>">
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <h2

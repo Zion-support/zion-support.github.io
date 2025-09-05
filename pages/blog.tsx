@@ -125,6 +125,6 @@ export default function BlogPage() {
                             href={`/blog/${post.id}`}
                             className="text-blue-600 hover:text-blue-700 font-semibold inline-flex items-center">
                             Read More
-                            <ArrowRight className="w-4 h-4 ml-1" />>>
+                            <ArrowRight className="w-4 h-4 ml-1" />
   )
 }

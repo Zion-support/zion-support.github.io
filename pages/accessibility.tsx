@@ -165,25 +165,28 @@ export default function AccessibilityPage() {
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                <span
-                  Accessibility>></span>
-              <p
-                Making technology accessible to everyone></p>
+                <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                  Accessibility
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8">
+                Making technology accessible to everyone
+              </p>
             </motion.div>
-        </section>"
-        <section className="py-20">"
-</section>"
-          <div"></div>
-            <motion.div;"
+          </div>
+        </section>
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}>
-</motion>"
+</motion.div>
               <h2"></h2>
               </h2>"
-              <p">></p>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">We implement comprehensive accessibility features to ensure our platform is usable by everyone.</p>
             </motion.div>
 "
             <div"></div>
@@ -194,7 +197,7 @@ export default function AccessibilityPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}>
-</motion>"
+</motion.div>
                     <div className="flex items-start space-x-4">"
 </div>"
                       <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">"
@@ -219,16 +222,16 @@ export default function AccessibilityPage() {
         <section className="py-20 bg-white">"
 </section>"
           <div"></div>
-            <motion.div;"
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}>
-</motion>"
+</motion.div>
               <h2"></h2>
               </h2>"
-              <p">></p>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">We implement comprehensive accessibility features to ensure our platform is usable by everyone.</p>
             </motion.div>
 "
             <div"></div>
@@ -239,7 +242,7 @@ export default function AccessibilityPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}>
-</motion>"
+</motion.div>
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">"
 </div>"
                       <IconComponent className="w-8 h-8 text-white" />">
@@ -259,16 +262,16 @@ export default function AccessibilityPage() {
         <section className="py-20">"
 </section>"
           <div"></div>
-            <motion.div;"
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}>
-</motion>"
+</motion.div>
               <h2"></h2>
               </h2>"
-              <p">></p>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">We implement comprehensive accessibility features to ensure our platform is usable by everyone.</p>
             </motion.div>
 "
             <div"></div>
@@ -279,7 +282,7 @@ export default function AccessibilityPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}>
-</motion>"
+</motion.div>
                   <div className="flex items-start space-x-4">"
 </div>"
                     <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">"
@@ -294,23 +297,23 @@ export default function AccessibilityPage() {
                         </h3>"
                         <span">></span>
                       </div>"
-                      <p">></p>
+                      <p className="text-lg text-gray-600 max-w-3xl mx-auto">We implement comprehensive accessibility features to ensure our platform is usable by everyone.</p>
                 </motion.div>
               ))}>
         </section>"
         <section className="py-20 bg-white">"
 </section>"
           <div"></div>
-            <motion.div;"
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}>
-</motion>"
+</motion.div>
               <h2"></h2>
               </h2>"
-              <p">></p>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">We implement comprehensive accessibility features to ensure our platform is usable by everyone.</p>
             </motion.div>
 "
             <div"></div>
@@ -321,7 +324,7 @@ export default function AccessibilityPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}>
-</motion>"
+</motion.div>
                   <h3"></h3>
                   </h3>"
                   <ul className="space-y-2">"
@@ -337,13 +340,13 @@ export default function AccessibilityPage() {
           <div className="container mx-auto px-4">"
 </div>"
             <div"></div>
-              <motion.div;"
+              <motion.div
                 className="bg-white p-8 rounded-xl shadow-lg"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}>
-</motion>"
+</motion.div>
                 <h2"></h2>
                 </h2>"
                 <div className="prose prose-lg max-w-none">"
@@ -363,7 +366,7 @@ export default function AccessibilityPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}>
-</motion>"
+</motion.div>
               <h2"></h2>
               </h2>"
               <p"></p>
