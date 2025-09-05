@@ -15,7 +15,7 @@ import {
   Database,
   Lock
 } from 'lucide-react';
-import Layout from './components/Layout';
+import MainLayout from '../src/components/layout/MainLayout';
 
 const features = [
   {
@@ -76,7 +76,7 @@ const stats = [
 
 export default function EnterprisePage() {
   return (
-    <Layout
+    <MainLayout
       title="Enterprise Solutions - Zion Tech Group"
       description="Comprehensive enterprise solutions including ERP, CRM, business intelligence, and cloud migration services for large organizations."
       keywords="enterprise solutions, ERP, CRM, business intelligence, cloud migration, large-scale systems"
@@ -258,6 +258,6 @@ export default function EnterprisePage() {
           </motion.div>
         </div>
       </section>
-    </Layout>
+    </MainLayout>
   );
 }

@@ -2,11 +2,11 @@ import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
 import { FileText, Shield, AlertCircle, Scale, Mail, Phone, MapPin } from 'lucide-react';
-import Layout from './components/Layout';
+import MainLayout from '../src/components/layout/MainLayout';
 
 export default function TermsPage() {
   return (
-    <Layout
+    <MainLayout
       title="Terms of Service - Zion Tech Group"
       description="Zion Tech Group's terms of service outlining the rules and regulations for using our services."
       keywords="terms of service, user agreement, service terms, legal terms"
@@ -159,6 +159,6 @@ export default function TermsPage() {
           </div>
         </section>
       </div>
-    </Layout>
+    </MainLayout>
   );
 }

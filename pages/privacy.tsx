@@ -2,11 +2,11 @@ import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Shield, Lock, Eye, Database, Mail, Phone, MapPin } from 'lucide-react';
-import Layout from './components/Layout';
+import MainLayout from '../src/components/layout/MainLayout';
 
 export default function PrivacyPage() {
   return (
-    <Layout
+    <MainLayout
       title="Privacy Policy - Zion Tech Group"
       description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information."
       keywords="privacy policy, data protection, personal information, GDPR compliance"
@@ -146,6 +146,6 @@ export default function PrivacyPage() {
           </div>
         </section>
       </div>
-    </Layout>
+    </MainLayout>
   );
 }
