@@ -5,7 +5,7 @@
 ## Removed SPA-style redirect to preserve Next.js routing on Netlify
 
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "20"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
