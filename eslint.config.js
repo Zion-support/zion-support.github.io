@@ -1,13 +1,23 @@
+<<<<<<< HEAD
 import js from '@eslint/js'
 import typescript from '@typescript-eslint/eslint-plugin'
 import typescriptParser from '@typescript-eslint/parser'
 import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
 import next from '@next/eslint-plugin-next'
+=======
+import js from '@eslint/js';
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import next from '@next/eslint-plugin-next';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-12ad
 
 export default [
   js.configs.recommended,
   {
+<<<<<<< HEAD
     files: ['**/*.{js,jsx,ts,tsx}'],
     ignores: [
       '.next/**',
@@ -165,6 +175,8 @@ export default [
       '**/performance-*.md',
       '**/performance-*.txt'
     ],
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-12ad
     languageOptions: {
       parser: typescriptParser,
       parserOptions: {
@@ -216,6 +228,7 @@ export default [
         beforeAll: 'readonly',
         afterAll: 'readonly',
         jest: 'readonly',
+<<<<<<< HEAD
         // Node.js globals
         require: 'readonly',
         module: 'readonly',
@@ -229,6 +242,13 @@ export default [
     plugins: {
       '@typescript-eslint': typescript,
       'react': react,
+=======
+      },
+    },
+    plugins: {
+      '@typescript-eslint': typescript,
+      react: react,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-12ad
       'react-hooks': reactHooks,
       '@next/next': next,
     },
@@ -253,7 +273,11 @@ export default [
     },
   },
   {
+<<<<<<< HEAD
     files: ['**/*.cjs'],
+=======
+    files: ['**/*.cjs', '**/*.js'],
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-12ad
     languageOptions: {
       sourceType: 'commonjs',
       globals: {
@@ -275,12 +299,22 @@ export default [
         clearImmediate: 'readonly',
       },
     },
+<<<<<<< HEAD
+=======
+    rules: {
+      '@typescript-eslint/no-require-imports': 'off',
+      'no-console': 'off',
+      'no-unused-vars': 'warn',
+      '@typescript-eslint/no-unused-vars': 'warn',
+    },
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-12ad
   },
   {
     ignores: [
       // Node/build outputs
       'node_modules/**',
       '.next/**',
+<<<<<<< HEAD
       'dist/**',
       'build/**',
       'out/**',
@@ -370,3 +404,15 @@ export default [
     ],
   },
 ];
+=======
+      'out/**',
+      'dist/**',
+      'build/**',
+      'coverage/**',
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+    ],
+  },
+];
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-12ad
