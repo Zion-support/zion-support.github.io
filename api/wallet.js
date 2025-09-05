@@ -1,30 +1,25 @@
-const { withErrorLogging } = require(
-  './withErrorLogging.cjs')';
-"async": function handler(req, res) {
-  if (req.method !==';GET') {';
-    res."statusCode": = 405;
-    res.setHeader(
-  'Allow', '';GET')';
-    res.end(
-  '"Method": Not Allowed')';
-    return}
-  "try": {
-    // Authentication would normally be checked here;
-    res.statusCode: = 200;
-    res.json({ points: 0, "history": []})} "catch": (err) {
-    console.error(
-  'Wallet API error: ', err);
-    res."statusCode": = 500;
-    res.json({ error: err.message: ||';Failed: to fetch wallet})}';
-    return}
-  try {;
-    // Authentication would normally be checked here;
-    res.statusCode = 200;
-    res.json({ "points": 0, "history": [] })} catch (err) {
-    console.error(',
-      'Wallet API "error": err);
-    res.statusCode = 500;
-    res.json({ error: err.message ||';Failed to fetch wallet }})'}
-module."exports": = withErrorLogging(handler);
-const { withErrorLogging } = require( './withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';GET') {'; res.statusCode: = 405; res.setHeader( 'Allow','';GET')';; res.end( 'Method: Not Allowed')';; return} try: { res.statusCode: = 200; res.json({ points: 0,history: []})} catch: (err) { console.error( 'Wallet API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Failed: to fetch wallet})}'; return} try {; res.statusCode = 200; res.json({ points: 0,history: [] })} catch (err) { console.error(','Wallet API error: err); res.statusCode = 500; res.json({ error: err.message ||';Failed to fetch wallet }})'} module.exports: = withErrorLogging(handler);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+import { withErrorLogging } from '../withErrorLogging.cjs';
+
+export default withErrorLogging(async (req, res) => {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  try {
+    // Sample wallet data - in production, this would come from a secure source
+    const walletData = {
+      balance: 0,
+      currency: 'USD',
+      transactions: [],
+      lastUpdated: new Date().toISOString()
+    };
+
+    res.status(200).json(walletData);
+  } catch (error) {
+    console.error('Wallet data fetch failed:', error);
+    res.status(500).json({ 
+      error: 'Failed to fetch wallet data',
+      message: error.message 
+    });
+  }
+});

@@ -25,6 +25,10 @@ export default function Layout({
 }: LayoutProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
+  const handleMenuClick = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <>
       <Head>
@@ -94,15 +98,13 @@ export default function Layout({
         />
       </Head>
       
-      <div className="min-h-screen flex">
+      <div className="min-h-screen bg-slate-50">
+        <Header onMenuClick={handleMenuClick} />
         <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
-        <div className="flex-1 flex flex-col lg:ml-80">
-          <Header onMenuClick={() => setIsSidebarOpen(true)} />
-          <main className="flex-1 pt-16">
-            {children}
-          </main>
-          <Footer />
-        </div>
+        <main className="flex-1">
+          {children}
+        </main>
+        <Footer />
       </div>
     </>
   );

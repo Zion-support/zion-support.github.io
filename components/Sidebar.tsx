@@ -57,6 +57,11 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { label: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
         { label: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
         { label: 'Data Analytics', href: '/services/data-analytics', icon: Brain },
+        { label: 'Quantum Computing', href: '/services/quantum-computing', icon: Cpu },
+        { label: 'Blockchain Solutions', href: '/services/blockchain', icon: Lock },
+        { label: 'IoT & Smart Cities', href: '/services/iot-smart-cities', icon: Globe },
+        { label: 'Edge Computing', href: '/services/edge-computing', icon: Network },
+        { label: 'Digital Twins', href: '/services/digital-twins', icon: Monitor },
       ]
     },
     {
@@ -252,11 +257,12 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 
         {/* Contact Info */}
         <div className="p-6 border-t border-gray-700">
-          <div className="text-sm text-gray-400">
-            <p className="mb-2">Need help?</p>
-            <p className="text-blue-400">contact@ziontechgroup.com</p>
-            <p className="text-blue-400">+1 (555) 123-4567</p>
-          </div>
+                  <div className="text-sm text-gray-400">
+          <p className="mb-2">Need help?</p>
+          <p className="text-blue-400">kleber@ziontechgroup.com</p>
+          <p className="text-blue-400">+1 302 464 0950</p>
+          <p className="text-blue-400 text-xs mt-1">364 E Main St STE 1008<br />Middletown, DE 19709</p>
+        </div>
         </div>
       </div>
     </>

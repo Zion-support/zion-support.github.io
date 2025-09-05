@@ -1,14 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
 import { 
-  Zap, 
+  MapPin, 
   Phone, 
   Mail, 
-  MapPin, 
+  Clock, 
   Facebook, 
   Twitter, 
   Linkedin, 
-  Instagram,
+  Instagram, 
   Github,
   ArrowRight,
   ExternalLink,
@@ -224,7 +224,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-6">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <Zap className="w-5 h-5 text-white" />
+                <Brain className="w-5 h-5 text-white" />
               </div>
               <span className="text-2xl font-bold">Zion Tech Group</span>
             </Link>
@@ -233,7 +233,7 @@ export default function Footer() {
               Leading provider of AI solutions, cloud services, and technology consulting. 
               We help businesses transform and succeed in the digital age.
             </p>
-
+            
             {/* Contact Info */}
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3">
@@ -248,6 +248,21 @@ export default function Footer() {
                 <MapPin className="w-5 h-5 text-blue-400" />
                 <span className="text-gray-300">{contactInfo.address}</span>
               </div>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex space-x-4">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  <social.icon className="w-5 h-5" />
+                </a>
+              ))}
             </div>
           </div>
 
@@ -275,47 +290,38 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Newsletter Signup */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex flex-col md:flex-row items-center justify-between">
-              <div className="mb-6 md:mb-0">
-                <h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
-                <p className="text-gray-300">
-                  Subscribe to our newsletter for the latest technology insights and updates.
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent min-w-64"
-                />
-                <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium flex items-center justify-center">
-                  Subscribe
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </button>
-              </div>
+        {/* Newsletter Section */}
+        <div className="border-t border-gray-800 mt-16 pt-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h3 className="text-2xl font-bold mb-4">Stay Updated</h3>
+            <p className="text-gray-300 mb-6">
+              Get the latest insights on AI, technology trends, and industry updates.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors">
+                Subscribe
+              </button>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-gray-800">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="text-sm text-gray-400 mb-4 md:mb-0">
-              © {currentYear} Zion Tech Group. All rights reserved. | 
-              <span className="ml-2">Delaware, United States</span>
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="text-gray-400 text-sm mb-4 md:mb-0">
+              © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-            
-            <div className="flex flex-wrap items-center space-x-6">
-              {legalLinks.map((link, index) => (
+            <div className="flex flex-wrap gap-6">
+              {legalLinks.map((link) => (
                 <Link
-                  key={index}
+                  key={link.label}
                   href={link.href}
-                  className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
+                  className="text-gray-400 hover:text-white text-sm transition-colors"
                 >
                   {link.label}
                 </Link>
