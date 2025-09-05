@@ -1,1 +1,1 @@
-export const performance = {}; export default performance;
+module.exports = const performance = {}; export default performance;

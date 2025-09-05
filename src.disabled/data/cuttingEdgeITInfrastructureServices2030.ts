@@ -1,1 +1,1 @@
-import { ProductListing } from';@/types/listings'';';
+const { ProductListing } from";@/types/listings"";";''"

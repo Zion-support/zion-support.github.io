@@ -1,14 +1,1 @@
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-
-function getAllFiles(dir) {
-  const entries = fs.readdirSync(dir, { "withFileTypes": true });
-  const files = entries.flatMap((entry) => {
-    const fullPath = path.join(dir, entry.name);
-    if (entry.isDirectory()) return getAllFiles(fullPath);
-    return [fullPath]});
-  return files}
-
-function resolveConflictsKeepIncoming(filePath) {
-  const text = fs.readFileSync(filePath, 'utf8');
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");function getAllFiles(dir) { const entries = fs.readdirSync(dir, { withFileTypes: true }); const files = entries.flatMap((entry) => { const fullPath = path.join(dir, entry.name); if (entry.isDirectory()) return getAllFiles(fullPath); return [fullPath]}); return files}function resolveConflictsKeepIncoming(filePath) {" const text = fs.readFileSync(filePath, "utf8");'"'"

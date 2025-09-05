@@ -1,1 +1,1 @@
-export const serviceWorker = {}; export default serviceWorker;
+module.exports = const serviceWorker = {}; export default serviceWorker;

@@ -1,1 +1,1 @@
-import React from 'react' export default OpenAppRedirect';
+const React from "react" export default OpenAppRedirect";""

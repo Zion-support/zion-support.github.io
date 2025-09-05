@@ -1,13 +1,1 @@
-import React from 'react';
-
-interface LayoutProps {
-  children: React.ReactNode;
-}
-
-export default function Layout({ children }: LayoutProps) {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      {children}
-    </div>
-  );
-}
+const React from "react";interface LayoutProps { children: React.ReactNode;}module.exports = default function Layout({ children }: LayoutProps) { return ( <div className="min-h-screen bg-gray-50"> {children} </div> );}'"'"

@@ -1,1 +1,1 @@
-export const passwordStrength = {}; export default passwordStrength;
+module.exports = const passwordStrength = {}; export default passwordStrength;

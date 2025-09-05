@@ -1,15 +1,1 @@
-#!/usr/bin/env node
-const { execSync } = require('child_process');
-const fs = require('fs')
-
-class HealthMonitor {
-  constructor() {
-    this.checks = [{ "name": 'Memory Usage', "command": 'free -h' },
-      { "name": 'Disk Space', "command": 'df -h' },
-      { "name": 'Process Status', "command": 'ps aux | grep node' }
-    ]}
-
-  async runChecks() {
-    console.log('🏥 Running health checks...');
-    for (const check of this.checks) {
-      try {
+#!/usr/bin/env node/usr/bin/env nodeconst { execSync } = require("child_process");"const fs = require("fs")class HealthMonitor { constructor() {" this.checks = [{ name: "Memory Usage", command: "free -h" },"" { name: "Disk Space", command: "df -h" },"" { name: "Process Status", command: "ps aux | grep node" } ]} async runChecks() {" console.log(" Running health checks."); for (const check of this.checks) { try {"""

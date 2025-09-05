@@ -1,1 +1,1 @@
-import { Home,Search,ArrowRight,AlertTriangle const NotFound = () => { const popularPages = [' ''';'"";
+const { Home,Search,ArrowRight,AlertTriangle const NotFound = () => { const popularPages = [" """;""";"""

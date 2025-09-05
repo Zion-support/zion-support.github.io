@@ -1,1 +1,1 @@
-import NotFound from '@/pages/NotFound export default function ErrorRoutes($1) { return (<Route path="*" element={<NotFound />}/>)} ;';';
+const NotFound from "@/pages/NotFound export default function ErrorRoutes($1) { return (<Route path="*" element={<NotFound />}/>)} ;";";"""

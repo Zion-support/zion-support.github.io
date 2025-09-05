@@ -1,1 +1,1 @@
-export const cartUtils = {}; export default cartUtils;
+module.exports = const cartUtils = {}; export default cartUtils;

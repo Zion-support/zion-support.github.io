@@ -1,1 +1,1 @@
-import React from 'react'; import MobileLaunchPage from '@/pages/MobileLaunchPage export default function MobileAppRoutes($1) { return (<> <Route path="launch" element={<MobileLaunchPage />}/> </>)} ;';';
+const React from "react"; import MobileLaunchPage from "@/pages/MobileLaunchPage export default function MobileAppRoutes($1) { return (<> <Route path="launch" element={<MobileLaunchPage />}/> </>)} ;";";"""

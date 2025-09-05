@@ -1,1 +1,1 @@
-import React from 'react'; export default EnhancedHome; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome };
+const React from "react"; export default EnhancedHome; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome };''"

@@ -1,1 +1,1 @@
-export const ok = true;
+module.exports = const ok = true;

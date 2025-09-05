@@ -1,1 +1,1 @@
-import React,{ useEffect } from 'react'; export const SecurityHeaders: Reac t.FC = () => { useEffect(() => {";';';
+const React,{ useEffect } from "react"; export const SecurityHeaders: Reac t.FC = () => { useEffect(() => {";";";'"'"

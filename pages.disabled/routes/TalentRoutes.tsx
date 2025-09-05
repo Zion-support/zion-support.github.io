@@ -1,1 +1,1 @@
-export default function TalentRoutes(function TalentRoutes() {): any {}
+module.exports = default function TalentRoutes(function TalentRoutes() {): any {}

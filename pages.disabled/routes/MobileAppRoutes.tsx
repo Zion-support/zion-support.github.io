@@ -1,1 +1,1 @@
-export default function MobileAppRoutes(function MobileAppRoutes() {): any {}
+module.exports = default function MobileAppRoutes(function MobileAppRoutes() {): any {}

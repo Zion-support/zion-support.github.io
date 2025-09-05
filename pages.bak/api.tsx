@@ -1,1 +1,1 @@
-export default function APIPage() { return null}
+module.exports = default function APIPage() { return null}

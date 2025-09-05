@@ -1,1 +1,1 @@
-export { LoginForm as LoginContent } from './LoginForm.jsx';
+module.exports = { LoginForm as LoginContent } from "./LoginForm.jsx";''"

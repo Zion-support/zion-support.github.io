@@ -1,1 +1,1 @@
-export const securityConfig = { }
+module.exports = const securityConfig = {}

@@ -1,1 +1,1 @@
-import { useState,useEffect } from 'react' export function useMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => {;"}};';';
+const { useState,useEffect } from "react" export function useMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => {;"}};";";'"'"

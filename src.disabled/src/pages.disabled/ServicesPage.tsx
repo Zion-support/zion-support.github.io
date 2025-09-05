@@ -1,1 +1,1 @@
-import React from 'react'; const "ServicesPage": React.FC = () => {}}; export default ServicesPage;
+const React from "react"; const ServicesPage: React.FC = () => {}}; export default ServicesPage;'"'"

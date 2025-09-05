@@ -1,1 +1,1 @@
-import React from "react"; import { SEO } from "@/components/SEO";,"});,"});} export default function API() {}; return null} } }
+const React from "react"; import { SEO } from "@/components/SEO";,"});,"});} export default function API() { return; }; return null} } }""

@@ -1,18 +1,1 @@
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-
-class MonitoringDashboard {
-  constructor() {
-    this.data = {
-      timestamp: new Date().toISOString(),
-      system: {
-        platform: process.platform,
-        nodeVersion: process.version,
-        memory: process.memoryUsage()
-      },
-      project: {
-        hasPackageJson: fs.existsSync('package.json'),
-        hasNodeModules: fs.existsSync('node_modules'),
-        hasTsConfig: fs.existsSync('tsconfig.json')
-      }
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");class MonitoringDashboard { constructor() { this.data = { timestamp: new Date().toISOString(), system: { platform: process.platform, nodeVersion: process.version, memory: process.memoryUsage() }, project: {" hasPackageJson: fs.existsSync("package.json")," hasNodeModules: fs.existsSync("node_modules")," hasTsConfig: fs.existsSync("tsconfig.json") }''"

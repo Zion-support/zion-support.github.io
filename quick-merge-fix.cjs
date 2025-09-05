@@ -1,15 +1,1 @@
-#!/usr/bin/env node
-
-const fs = require('fs');
-const path = require('path');
-
-class QuickMergeFix {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.fixedCount = 0}
-
-  log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`)}
-
-  fixMergeConflicts(content) {
-    // Remove merge conflict markers and keep HEAD version
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");class QuickMergeFix { constructor() { this.projectRoot = process.cwd(); this.fixedCount = 0} log(message) { console.log(`[${new Date().toISOString()}] ${message}`)} fixMergeConflicts(content) { / Remove merge conflict markers and keep HEAD version"`"`

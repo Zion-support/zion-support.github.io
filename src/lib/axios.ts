@@ -1,1 +1,1 @@
-export interface AxiosErrorData { message?: string';',"}),"})';'; export interface AxiosErrorData { message?: string';';'; &apos}'
+module.exports = interface AxiosErrorData { message?: string";","}),"})";"; export interface AxiosErrorData { message?: string";";"; &apos}"'"'"
