@@ -5,7 +5,7 @@ import { Sidebar } from './Sidebar';
 import Footer from './Footer';
 
 interface LayoutProps {
-children: ReactNode;ursor/add-new-services-and-deploy-updates-1b90
+  children: ReactNode;
   title?: string;
   description?: string;
   keywords?: string;

@@ -1,7 +1,8 @@
 const path = require("path");
 const { spawnSync } = require("child_process");
 exports.config = {
-  "schedule": "*/20 * * * *", // every 20 minutes}
+  "schedule": "*/20 * * * *" // every 20 minutes
+};
 exports.handler = async () => {
   const logs = [];
   const logStep = (name, fn) => {

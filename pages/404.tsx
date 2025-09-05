@@ -9,7 +9,7 @@ export default function Custom404() {
     <div className="min-h-screen bg-gray-50 flex items-center justify-center">
       <Head>
         <title>404 - Page Not Found | Zion Tech Group</title>
-        <meta name="description" content="The page you're looking for doesn't exist. Return to our homepage or explore our services." />
+        <meta name="description" content="The page you&apos;re looking for doesn&apos;t exist. Return to our homepage or explore our services." />
       </Head>
 
       <div className="max-w-4xl mx-auto px-4 text-center">
@@ -38,7 +38,7 @@ export default function Custom404() {
               Oops! Page Not Found
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              The page you're looking for doesn't exist or has been moved.
+              The page you&apos;re looking for doesn&apos;t exist or has been moved.
             </p>
           </div>
 
@@ -122,7 +122,7 @@ export default function Custom404() {
           {/* Help Text */}
           <div className="mt-8 text-center">
             <p className="text-gray-600">
-              Still can't find what you're looking for?{' '}
+              Still can&apos;t find what you&apos;re looking for?{' '}
               <Link href="/contact" className="text-blue-600 hover:text-blue-800 font-medium">
                 Contact our support team
               </Link>

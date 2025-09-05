@@ -11,7 +11,7 @@ const services = [{
     href: "/ai-services",
     features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics", "AI Fraud Detection", "Voice AI", "Content Generation"],
     pricing: "Starting at $1,000/month",
-    count: "20+ Services",ursor/add-new-services-and-deploy-updates-1b90
+    count: "20+ Services",
     popular: true
   },
   {

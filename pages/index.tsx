@@ -4,7 +4,8 @@ import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, ArrowRight } from 'lucide-react';
 import Layout from '../components/Layout';
 
-const stats = [{ number: '99.9%', label: 'Uptime Guarantee' },ursor/add-new-services-and-deploy-updates-1b90
+const stats = [
+  { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' },
   { number: '500+', label: 'Projects Completed' },
   { number: '50+', label: 'Expert Team Members' }

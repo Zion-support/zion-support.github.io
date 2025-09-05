@@ -36,7 +36,8 @@ import {
   Rocket
 } from 'lucide-react';
 
-const itServices = [{ursor/add-new-services-and-deploy-updates-1b90
+const itServices = [
+  {
     title: 'Cloud Infrastructure Management',
     description: 'Comprehensive cloud solutions including AWS, Azure, and Google Cloud Platform management.',
     icon: Cloud,

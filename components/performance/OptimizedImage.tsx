@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 interface OptimizedImageProps {
-  src: stringursor/add-new-services-and-deploy-updates-1b90
+  src: string
   alt: string
   width?: number
   height?: number

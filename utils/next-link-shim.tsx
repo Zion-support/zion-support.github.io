@@ -3,11 +3,11 @@ import React from 'react';
 type Href = string | { pathname?: string; href?: string };
 
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
-  "href": Href;
+  href: Href;
   children: React.ReactNode;
 };
 
-function resolveHref("href": Href): string {
+function resolveHref(href: Href): string {
   if (typeof href === 'string') return href;
   return href?.pathname || (href as { href?: string })?.href || '#';
 }

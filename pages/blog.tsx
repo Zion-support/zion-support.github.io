@@ -71,7 +71,7 @@ const categories = [{ name: "AI & Machine Learning", count: 12 },
   { name: "Cybersecurity", count: 6 },
   { name: "SaaS Development", count: 10 },
   { name: "Digital Transformation", count: 7 },
-  { name: "IT Infrastructure", count: 5 }ursor/add-new-services-and-deploy-updates-1b90
+  { name: "IT Infrastructure", count: 5 }
 ];
 
 export default function BlogPage() {

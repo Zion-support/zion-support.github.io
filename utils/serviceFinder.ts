@@ -1,7 +1,5 @@
 // Service finder utility
-export const findService = ("_serviceName": string) => {
+export const findService = (_serviceName: string) => {
   // Implementation placeholder
   return null;
 };
-export const findService = (_serviceName: string) => { return null};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe

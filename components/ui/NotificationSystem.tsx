@@ -1,5 +1,5 @@
 interface Notification {
-  id: string;ursor/add-new-services-and-deploy-updates-1b90
+  id: string;
   type: 'success' | 'error' | 'warning' | 'info';
   message: string;
   title?: string;

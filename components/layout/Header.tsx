@@ -31,7 +31,7 @@ import { Button } from '../ui/Button';
 import { Badge } from '../ui/Badge';
 
 
-const "Header": React.FC = () => {
+const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
