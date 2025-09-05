@@ -1,14 +1,10 @@
-import React from 'react';
+<<<<<<< HEAD
+export const SEOEnhancer = ({ title = &apos;Zion Tech Group - Leading AI & Technology Solutions&apos;,description = &apos;Leading provider of innovative technology solutions,AI - powered services,and digital transformation expertise. We help businesses thrive in the digital age.&apos;,keywords = [&apos;AI solutions&apos;,technology consulting&apos;,digital transformation&apos;,cloud computing&apos;,cybersecurity&apos;,machine learning&apos;],image = &apos;/images / zion - tech - group - og.jpg&apos;,url = &apos;https:&quot;;&quot;;
+=======
+<<<<<<< HEAD
 
-interface SEOEnhancerProps {
-  // Add props here as needed
-}
-
-export default function SEOEnhancer({ }: SEOEnhancerProps) {
-  return (
-    <div>
-      <h1>SEOEnhancer</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+=======
+ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology Solutions', description = 'Leading provider of innovative technology solutions, AI - powered services, and digital transformation expertise. We help businesses thrive in the digital age.', keywords = ['AI solutions', technology consulting',digital transformation', cloud computing',cybersecurity', machine learning'], image = '/images / zion - tech - group - og.jpg', url = '"https": ";";
+export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology Solutions',description = 'Leading provider of innovative technology solutions,AI - powered services,and digital transformation expertise. We help businesses thrive in the digital age.',keywords = ['AI solutions',technology consulting',digital transformation',cloud computing',cybersecurity',machine learning'],image = '/images / zion - tech - group - og.jpg',url = 'https:";";
+>>>>>>> main
+>>>>>>> main

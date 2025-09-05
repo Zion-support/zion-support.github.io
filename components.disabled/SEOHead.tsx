@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
 
 interface SEOHeadProps {
@@ -12,3 +14,4 @@ export default function SEOHead({ }: SEOHeadProps) {
     </div>
   );
 }
+>>>>>>> main

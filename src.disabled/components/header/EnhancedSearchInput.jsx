@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import { Search,X,ArrowDown,Clock,TrendingUp,Building,Users,Globe export const EnhancedSearchInput = () => { const [isOpen,setIsOpen] = useState(false) const [searchQuery,setSearchQuery] = useState(\') const [activeIndex,setActiveIndex] = useState(-1) const [recentSearches,setRecentSearches] = useState([\'IT infrastructure setup\',Network security\',Cloud migration\',Data backup solutions\' ]) const [trendingSearches,setTrendingSearches] = useState([\'AI-powered IT management\',Cybersecurity services\',Remote IT support\',Digital transformation\' ]) const [suggestions,setSuggestions] = useState([]) const searchRef = useRef(null) const inputRef = useRef(null)\'';\"";
+=======
+<<<<<<< HEAD
+const { Search,X,ArrowDown,Clock,TrendingUp,Building,Users,Globe export const EnhancedSearchInput = () => { const [isOpen,setIsOpen] = useState(false) const [searchQuery,setSearchQuery] = useState(") const [activeIndex,setActiveIndex] = useState(-1) const [recentSearches,setRecentSearches] = useState(["IT infrastructure setup",Network security",Cloud migration",Data backup solutions" ]) const [trendingSearches,setTrendingSearches] = useState(["AI-powered IT management",Cybersecurity services",Remote IT support",Digital transformation" ]) const [suggestions,setSuggestions] = useState([]) const searchRef = useRef(null) const inputRef = useRef(null)"";"";"""
+=======
 import React from 'react';
 
 interface EnhancedSearchInputProps {
@@ -12,3 +18,5 @@ export default function EnhancedSearchInput({ }: EnhancedSearchInputProps) {
     </div>
   );
 }
+>>>>>>> main
+>>>>>>> main

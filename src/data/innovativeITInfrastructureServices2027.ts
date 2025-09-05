@@ -1,14 +1,11 @@
-import React from 'react';
-
-interface InnovativeITInfrastructureServices2027Props {
-  // Add props here as needed
-}
-
-export default function InnovativeITInfrastructureServices2027({ }: InnovativeITInfrastructureServices2027Props) {
-  return (
-    <div>
-      <h1>InnovativeITInfrastructureServices2027</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+<<<<<<< HEAD
+=======
+import { ProductListing } from '@/types/listings'; export const "INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027": ProductListin g[] = [;","}),"})';';';';
+import { ProductListing } from '@/types/listings'  export const "INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027": ProductListin g[] = [";
+import { ProductListing } from '@/types/listings'  export const "INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027": ProductListin g[] = [;";';';';
+import {ProductListing } from '@/types/listings'  export const "INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027": ProductListin g[] = [;";';';';
+import { ProductListing } from &apos;@/types/listings&apos;&apos;'  export const "INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027": ProductListin g[] = [;';
+import { ProductListing }  from '@/types/listings';export const "INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027": ProductListin g[] = [;";';';
+";';';';
+import { ProductListing } from '@/types/listings'; ; export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListin g[] = [;","}),"})';';';'; import { ProductListing } from '@/types/listings' export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListin g[] = ["; import { ProductListing } from '@/types/listings' export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListin g[] = [;";';';'; import {ProductListing } from '@/types/listings' export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListin g[] = [;";';';'; import { ProductListing } from &apos;@/types/listings&apos;&apos;' export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListin g[] = [;'; import { ProductListing } from '@/types/listings';export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListin g[] = [;";';'; ";';';';
+>>>>>>> main

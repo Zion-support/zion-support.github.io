@@ -1,14 +1,31 @@
-import React from 'react';
+<<<<<<< HEAD
+import {motion} from &apos;framer-motion&apos;; export function PerformanceOptimizedLoader($1) { const sizeClasses = { sm: &apos;w-6 h-6&apos;,md: &apos;w-12 h-12&apos;,lg: &apos;w-16 h-16&apos; };;&apos;;&apos;; const colorClasses = {primary: &apos;text-zion-purple&apos;,secondary: &apos;text-zion-cyan&apos;,white: &apos;text-white&apos;};; const spinnerVariants = { animate: { rotate: 360,transition: { duration: 1,repeat: Infinity,ease: &quot;linear&quot; } } };; const pulseVariants = { export default PerformanceOptimizedLoader;&apos;;&apos;;
+=======
+<<<<<<< HEAD
 
-interface PerformanceOptimizedLoaderProps {
-  // Add props here as needed
+=======
+import {motion} from 'framer-motion';
+export function PerformanceOptimizedLoader($1) {
+    const sizeClasses = {
+  "sm": 'w-6 h-6',
+        "md": 'w-12 h-12',
+  "lg": 'w-16 h-16'
+};';';
+    const colorClasses = {"primary": 'text-zion-purple',
+        "secondary": 'text-zion-cyan',
+  "white": 'text-white'};
+    const spinnerVariants = {
+  "animate": {
+            rotate: 360,
+            "transition": {
+                duration: 1,
+                "repeat": Infinity,
+  "ease": "linear"
 }
-
-export default function PerformanceOptimizedLoader({ }: PerformanceOptimizedLoaderProps) {
-  return (
-    <div>
-      <h1>PerformanceOptimizedLoader</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+        }
+    };
+    const pulseVariants = {
+export default PerformanceOptimizedLoader;';';
+import {motion} from 'framer-motion'; export function PerformanceOptimizedLoader($1) { const sizeClasses = { sm: 'w-6 h-6',md: 'w-12 h-12',lg: 'w-16 h-16' };;';'; const colorClasses = {primary: 'text-zion-purple',secondary: 'text-zion-cyan',white: 'text-white'};; const spinnerVariants = { animate: { rotate: 360,transition: { duration: 1,repeat: Infinity,ease: "linear" } } };; const pulseVariants = { export default PerformanceOptimizedLoader;';';
+>>>>>>> main
+>>>>>>> main

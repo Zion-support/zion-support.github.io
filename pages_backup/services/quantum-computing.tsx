@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
   Atom, 
   Cpu, 
   Zap, 
@@ -116,8 +116,8 @@ const processSteps = [
 
 export default function QuantumComputingPage() {
   return (
-    <Layout
-      title="Quantum Computing Services - Zion Tech Group"
+    <Layout,
+    title="Quantum Computing Services - Zion Tech Group"
       description="Explore the future of computing with our quantum computing services. Quantum algorithms, machine learning, and cryptography solutions."
       keywords="quantum computing, quantum algorithms, quantum machine learning, quantum cryptography, Qiskit, quantum software"
     >
@@ -125,8 +125,8 @@ export default function QuantumComputingPage() {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <motion.div,
+    initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
@@ -135,18 +135,18 @@ export default function QuantumComputingPage() {
                 Quantum Computing Solutions
               </h1>
               <p className="text-xl text-purple-100 mb-8">
-                Harness the power of quantum computing to solve complex problems 
-                and unlock new possibilities for your business.
+                Harness the power of quantum computing to solve complex problems,
+    and unlock new possibilities for your business.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <a
-                  href="#services"
+                <a,
+    href="#services"
                   className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Explore Services
                 </a>
-                <a
-                  href="/contact"
+                <a,
+    href="/contact"
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
                   Start Quantum Project
@@ -159,8 +159,8 @@ export default function QuantumComputingPage() {
         {/* Services Overview */}
         <section id="services" className="py-20">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <motion.div,
+    initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
@@ -169,15 +169,15 @@ export default function QuantumComputingPage() {
                 Our Quantum Computing Services
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                From quantum algorithm development to infrastructure setup, we provide 
-                comprehensive quantum computing solutions.
+                From quantum algorithm development to infrastructure setup, we provide,
+    comprehensive quantum computing solutions.
               </p>
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <motion.div
-                  key={index}
+                <motion.div,
+    key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 * index }}
@@ -209,8 +209,8 @@ export default function QuantumComputingPage() {
         {/* Applications */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <motion.div,
+    initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
@@ -219,15 +219,15 @@ export default function QuantumComputingPage() {
                 Quantum Computing Applications
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Discover how quantum computing can revolutionize your industry 
-                and solve previously intractable problems.
+                Discover how quantum computing can revolutionize your industry,
+    and solve previously intractable problems.
               </p>
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {applications.map((app, index) => (
-                <motion.div
-                  key={index}
+                <motion.div,
+    key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 * index }}
@@ -251,8 +251,8 @@ export default function QuantumComputingPage() {
         {/* Technologies */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <motion.div,
+    initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
@@ -261,15 +261,15 @@ export default function QuantumComputingPage() {
                 Quantum Technologies
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We work with leading quantum computing platforms and frameworks 
-                to deliver cutting-edge solutions.
+                We work with leading quantum computing platforms and frameworks,
+    to deliver cutting-edge solutions.
               </p>
             </motion.div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
               {technologies.map((tech, index) => (
-                <motion.div
-                  key={index}
+                <motion.div,
+    key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6, delay: 0.05 * index }}
@@ -290,8 +290,8 @@ export default function QuantumComputingPage() {
         {/* Process */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <motion.div,
+    initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
@@ -300,15 +300,15 @@ export default function QuantumComputingPage() {
                 Our Quantum Process
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We follow a systematic approach to ensure successful quantum 
-                computing implementation and maximum value.
+                We follow a systematic approach to ensure successful quantum,
+    computing implementation and maximum value.
               </p>
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {processSteps.map((step, index) => (
-                <motion.div
-                  key={index}
+                <motion.div,
+    key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 * index }}
@@ -332,8 +332,8 @@ export default function QuantumComputingPage() {
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
           <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <motion.div,
+    initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
@@ -341,19 +341,19 @@ export default function QuantumComputingPage() {
                 Explore the Quantum Future
               </h2>
               <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-                Be at the forefront of quantum computing innovation. Let our experts 
-                help you harness quantum power for your business.
+                Be at the forefront of quantum computing innovation. Let our experts,
+    help you harness quantum power for your business.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <a
-                  href="/contact"
+                <a,
+    href="/contact"
                   className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center space-x-2"
                 >
                   <span>Start Quantum Project</span>
                   <ArrowRight className="w-5 h-5" />
                 </a>
-                <a
-                  href="/case-studies"
+                <a,
+    href="/case-studies"
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
                   View Quantum Cases

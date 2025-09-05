@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import { render, screen } from '@testing-library/react';
 import App from '../src/App';
 describe('App', () => {
@@ -11,3 +13,4 @@ describe('App', () => {
     expect(heading).toBeInTheDocument();
   });
 });
+>>>>>>> main
