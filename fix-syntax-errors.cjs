@@ -1,84 +1,112 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 
+// Function to fix syntax errors in a file
 function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
     
     // Fix common syntax errors
-    content = content
-      // Remove trailing commas before semicolons
-      .replace(/,;/g, ';')
-      // Fix JSX attributes with trailing commas
-      .replace(/,(\s*[}>])/g, '$1')
-      // Fix object properties with trailing commas
-      .replace(/,(\s*[}])/g, '$1')
-      // Fix array elements with trailing commas
-      .replace(/,(\s*\])/g, '$1')
-      // Fix function parameters with trailing commas
-      .replace(/,(\s*\))/g, '$1')
-      // Fix JSX closing tags with trailing commas
-      .replace(/,(\s*\/>)/g, '$1')
-      // Fix JSX children with trailing commas
-      .replace(/,(\s*<\/[^>]+>)/g, '$1')
-      // Remove standalone commas
-      .replace(/^,;$/gm, '')
-      .replace(/^,$/gm, '')
-      // Fix multiple semicolons
-      .replace(/;+/g, ';')
-      // Fix spaces around colons in CSS
-      .replace(/:\s*;/g, ': ')
-      // Fix malformed JSX attributes
-      .replace(/(\w+)\s*=\s*{([^}]+)}\s*,/g, '$1={$2}')
-      // Fix malformed object properties
-      .replace(/(\w+):\s*([^,}]+)\s*,/g, '$1: $2,')
-      // Clean up extra whitespace
-      .replace(/\s+/g, ' ')
-      .replace(/\n\s*\n/g, '\n');
+    // Remove extra commas and semicolons
+    content = content.replace(/,;/g, ';');
+    content = content.replace(/,(\s*[;}])/g, '$1');
+    content = content.replace(/,(\s*\/\/)/g, '$1');
+    content = content.replace(/,(\s*\/\*)/g, '$1');
     
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
-    return true;
+    // Fix JSX syntax issues
+    content = content.replace(/,(\s*<)/g, '$1');
+    content = content.replace(/,(\s*{)/g, '$1');
+    content = content.replace(/,(\s*})/g, '$1');
+    
+    // Fix object syntax
+    content = content.replace(/,(\s*})/g, '$1');
+    content = content.replace(/,(\s*])/g, '$1');
+    
+    // Fix function parameters
+    content = content.replace(/,(\s*\))/g, '$1');
+    
+    // Fix class names with spaces
+    content = content.replace(/className="([^"]*)\s+([^"]*)"/g, 'className="$1$2"');
+    
+    // Fix hover states
+    content = content.replace(/hover:\s+([a-zA-Z-]+)/g, 'hover:$1');
+    
+    // Fix focus states
+    content = content.replace(/focus:\s+([a-zA-Z-]+)/g, 'focus:$1');
+    
+    // Fix group hover
+    content = content.replace(/group-hover:\s+([a-zA-Z-]+)/g, 'group-hover:$1');
+    
+    // Fix not-sr-only
+    content = content.replace(/not-sr-only/g, 'not-sr-only');
+    
+    // Fix missing imports
+    if (content.includes('React') && !content.includes("import React")) {
+      content = "import React from 'react';\n" + content;
+    }
+    
+    // Fix missing export
+    if (content.includes('const ') && !content.includes('export default') && !content.includes('export ')) {
+      const componentName = content.match(/const\s+([A-Z][a-zA-Z0-9]*)/);
+      if (componentName) {
+        content += `\n\nexport default ${componentName[1]};`;
+      }
+    }
+    
+    // Only write if content changed
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    
+    return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Get all TypeScript and JSX files
-const files = [
-  'components/AccessibilityEnhancer.tsx',
-  'components/AccessibilityProvider.tsx',
-  'components/Analytics.tsx',
-  'components/ContactForm.tsx',
-  'components/Header.tsx',
-  'components/Layout.tsx',
-  'components/LoadingSpinner.tsx',
-  'components/OptimizedImage.tsx',
-  'components/PerformanceMonitor.tsx',
-  'components/SEOHead.tsx',
-  'components/SearchBar.tsx',
-  'components/Sidebar.tsx',
-  'components/SimpleLayout.tsx',
-  'components/layout/Footer.tsx',
-  'components/layout/Layout.tsx',
-  'components/layout/MainLayout.tsx',
-  'components/performance/LazyComponent.tsx',
-  'components/performance/OptimizedImage.tsx',
-  'components/ui/EnhancedMarketplaceCard.tsx',
-  'components/ui/InteractiveNavigation.tsx',
-  'components/ui/NotificationSystem.tsx',
-  'hooks/useApi.ts',
-  'hooks/useLocalStorage.ts',
-  'hooks/usePerformanceMonitor.ts',
-  'hooks/useResponsive.ts'
-];
-
-let fixedCount = 0;
-files.forEach(file => {
-  if (fixSyntaxErrors(file)) {
-    fixedCount++;
+// Function to recursively find and fix files
+function fixFilesInDirectory(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      fixedCount += fixFilesInDirectory(filePath);
+    } else if (file.match(/\.(tsx?|jsx?)$/)) {
+      if (fixSyntaxErrors(filePath)) {
+        fixedCount++;
+      }
+    }
   }
-});
+  
+  return fixedCount;
+}
 
-console.log(`Fixed ${fixedCount} files`);
+// Main execution
+console.log('Starting syntax error fixes...');
+
+const componentsDir = path.join(__dirname, 'components');
+const hooksDir = path.join(__dirname, 'hooks');
+
+let totalFixed = 0;
+
+if (fs.existsSync(componentsDir)) {
+  console.log('Fixing components directory...');
+  totalFixed += fixFilesInDirectory(componentsDir);
+}
+
+if (fs.existsSync(hooksDir)) {
+  console.log('Fixing hooks directory...');
+  totalFixed += fixFilesInDirectory(hooksDir);
+}
+
+console.log(`Fixed ${totalFixed} files`);

@@ -6,8 +6,24 @@ const AccessibilityEnhancer: React.FC = () => {
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-blue-600 focus:text-white';
+    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
     document.body.insertBefore(skipLink, document.body.firstChild);
+
+    // Focus management
+    let isUsingMouse = false;
+    const handleMouseDown = () => {
+      isUsingMouse = true;
+      document.body.classList.add('using-mouse');
+    };
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Tab') {
+        isUsingMouse = false;
+        document.body.classList.remove('using-mouse');
+      }
+    };
+
+    document.addEventListener('mousedown', handleMouseDown);
+    document.addEventListener('keydown', handleKeyDown);
 
     // Add ARIA live region for announcements
     const liveRegion = document.createElement('div');
@@ -50,6 +66,8 @@ const AccessibilityEnhancer: React.FC = () => {
 
     // Cleanup
     return () => {
+      document.removeEventListener('mousedown', handleMouseDown);
+      document.removeEventListener('keydown', handleKeyDown);
       if (skipLink.parentNode) {
         skipLink.parentNode.removeChild(skipLink);
       }
@@ -61,5 +79,44 @@ const AccessibilityEnhancer: React.FC = () => {
 
   return null;
 };
+
+// Add CSS for focus management
+const focusStyles = `
+  .using-mouse *:focus {
+    outline: none !important;
+  }
+  .focus-visible:focus {
+    outline: 2px solid #2563eb !important;
+    outline-offset: 2px !important;
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  .sr-only.focus:not-sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+`;
+
+// Inject styles
+if (typeof document !== 'undefined') {
+  const styleSheet = document.createElement('style');
+  styleSheet.textContent = focusStyles;
+  document.head.appendChild(styleSheet);
+}
 
 export default AccessibilityEnhancer;
