@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Shield, Lock, Eye, Database, Mail, Phone, MapPin } from 'lucide-react';
+import { Shield, Lock, Eye, Database, Mail, Phone, MapPin, Users } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 
 export default function PrivacyPage() {
@@ -112,7 +112,7 @@ export default function PrivacyPage() {
                     <span>+1 302 464 0950</span>
                   </div>
                   <div className="flex items-start">
-                    <User className="w-5 h-5 text-blue-600 mr-3 mt-1" />
+                    <Users className="w-5 h-5 text-blue-600 mr-3 mt-1" />
                     <div>
                       <p>Zion Tech Group</p>
                       <p>364 E Main St STE 1008</p>

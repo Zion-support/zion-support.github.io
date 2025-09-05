@@ -28,6 +28,8 @@ import {
   Wifi,
   Smartphone,
   Laptop,
+  MessageSquare,
+  Mail,
   Building,
   BarChart3,
   Code,
