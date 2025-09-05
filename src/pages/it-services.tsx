@@ -144,6 +144,195 @@ const itServices = [
       "Better data flow",
       "Reduced manual work"
     ]
+  },
+  {
+    title: "DevOps & CI/CD Implementation",
+    description: "Complete DevOps transformation with automated deployment pipelines and infrastructure as code",
+    icon: Zap,
+    features: [
+      "CI/CD Pipeline Setup",
+      "Infrastructure as Code",
+      "Container Orchestration",
+      "Automated Testing",
+      "Deployment Automation",
+      "Monitoring & Alerting"
+    ],
+    color: "from-teal-500 to-cyan-500",
+    benefits: [
+      "Faster deployments",
+      "Reduced errors",
+      "Better collaboration",
+      "Improved reliability"
+    ],
+    pricing: "Starting at $2,999/month"
+  },
+  {
+    title: "Cloud Security & Compliance",
+    description: "Comprehensive cloud security solutions with compliance management for various standards",
+    icon: Shield,
+    features: [
+      "Security Assessment",
+      "Compliance Auditing",
+      "Identity & Access Management",
+      "Data Encryption",
+      "Security Monitoring",
+      "Incident Response"
+    ],
+    color: "from-red-500 to-pink-500",
+    benefits: [
+      "Enhanced security posture",
+      "Compliance assurance",
+      "Risk mitigation",
+      "Peace of mind"
+    ],
+    pricing: "Starting at $1,999/month"
+  },
+  {
+    title: "IT Infrastructure Monitoring",
+    description: "24/7 monitoring and management of your IT infrastructure with proactive issue resolution",
+    icon: Monitor,
+    features: [
+      "24/7 Infrastructure Monitoring",
+      "Performance Optimization",
+      "Capacity Planning",
+      "Predictive Maintenance",
+      "Alert Management",
+      "Incident Response"
+    ],
+    color: "from-green-500 to-emerald-500",
+    benefits: [
+      "Proactive issue detection",
+      "Reduced downtime",
+      "Better performance",
+      "Cost optimization"
+    ],
+    pricing: "Starting at $1,499/month"
+  },
+  {
+    title: "Data Backup & Disaster Recovery",
+    description: "Comprehensive backup solutions and disaster recovery planning to protect your critical data",
+    icon: HardDrive,
+    features: [
+      "Automated Backups",
+      "Disaster Recovery Planning",
+      "Data Replication",
+      "Recovery Testing",
+      "Off-site Storage",
+      "RTO/RPO Optimization"
+    ],
+    color: "from-amber-500 to-orange-500",
+    benefits: [
+      "Data protection",
+      "Business continuity",
+      "Minimal data loss",
+      "Quick recovery"
+    ],
+    pricing: "Starting at $799/month"
+  },
+  {
+    title: "IT Consulting & Strategy",
+    description: "Strategic IT consulting to align technology with business goals and digital transformation",
+    icon: Lightbulb,
+    features: [
+      "IT Strategy Development",
+      "Technology Roadmapping",
+      "Digital Transformation",
+      "Cost Optimization",
+      "Vendor Management",
+      "Technology Assessment"
+    ],
+    color: "from-violet-500 to-purple-500",
+    benefits: [
+      "Strategic alignment",
+      "Cost savings",
+      "Technology optimization",
+      "Future-proofing"
+    ],
+    pricing: "Starting at $299/hour"
+  },
+  {
+    title: "Managed IT Services",
+    description: "Complete IT management services including helpdesk, maintenance, and strategic planning",
+    icon: Users,
+    features: [
+      "24/7 Helpdesk Support",
+      "Proactive Maintenance",
+      "Software Management",
+      "Hardware Support",
+      "Security Management",
+      "Strategic Planning"
+    ],
+    color: "from-blue-500 to-indigo-500",
+    benefits: [
+      "Reduced IT costs",
+      "Improved reliability",
+      "Focus on core business",
+      "Expert support"
+    ],
+    pricing: "Starting at $99/user/month"
+  },
+  {
+    title: "Network Security & Firewall Management",
+    description: "Advanced network security solutions with firewall configuration and threat protection",
+    icon: Shield,
+    features: [
+      "Firewall Configuration",
+      "Intrusion Detection",
+      "VPN Management",
+      "Network Segmentation",
+      "Threat Intelligence",
+      "Security Policies"
+    ],
+    color: "from-slate-500 to-gray-500",
+    benefits: [
+      "Enhanced network security",
+      "Threat protection",
+      "Compliance assurance",
+      "Reduced vulnerabilities"
+    ],
+    pricing: "Starting at $1,299/month"
+  },
+  {
+    title: "Cloud Migration Services",
+    description: "Expert cloud migration services to move your infrastructure and applications to the cloud",
+    icon: Cloud,
+    features: [
+      "Migration Planning",
+      "Application Assessment",
+      "Data Migration",
+      "Performance Optimization",
+      "Security Implementation",
+      "Training & Support"
+    ],
+    color: "from-cyan-500 to-teal-500",
+    benefits: [
+      "Reduced infrastructure costs",
+      "Improved scalability",
+      "Enhanced security",
+      "Better performance"
+    ],
+    pricing: "Starting at $5,999/project"
+  },
+  {
+    title: "IT Asset Management",
+    description: "Comprehensive IT asset tracking, management, and optimization services",
+    icon: Database,
+    features: [
+      "Asset Discovery",
+      "License Management",
+      "Lifecycle Planning",
+      "Cost Optimization",
+      "Compliance Tracking",
+      "Reporting & Analytics"
+    ],
+    color: "from-emerald-500 to-green-500",
+    benefits: [
+      "Cost optimization",
+      "License compliance",
+      "Asset visibility",
+      "Better planning"
+    ],
+    pricing: "Starting at $499/month"
   }
 ];
 

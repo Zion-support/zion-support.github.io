@@ -143,6 +143,195 @@ const aiServices = [
       "Supply chain optimization",
       "Compliance monitoring"
     ]
+  },
+  {
+    title: "AI-Powered Content Generation",
+    description: "Advanced content creation using GPT and other language models for marketing and communication",
+    icon: MessageSquare,
+    features: [
+      "Blog Post Generation",
+      "Social Media Content",
+      "Email Campaigns",
+      "Product Descriptions",
+      "SEO-Optimized Content",
+      "Multi-language Support"
+    ],
+    color: "from-cyan-500 to-blue-500",
+    useCases: [
+      "Content marketing automation",
+      "Social media management",
+      "Email marketing campaigns",
+      "Product catalog generation"
+    ],
+    pricing: "Starting at $199/month"
+  },
+  {
+    title: "Intelligent Document Processing",
+    description: "AI-powered document analysis, extraction, and processing for various business documents",
+    icon: Database,
+    features: [
+      "OCR Text Extraction",
+      "Form Data Extraction",
+      "Contract Analysis",
+      "Invoice Processing",
+      "Document Classification",
+      "Automated Data Entry"
+    ],
+    color: "from-slate-500 to-gray-500",
+    useCases: [
+      "Invoice automation",
+      "Contract management",
+      "Compliance documentation",
+      "Legal document review"
+    ],
+    pricing: "Starting at $299/month"
+  },
+  {
+    title: "AI-Powered Customer Insights",
+    description: "Advanced customer behavior analysis and sentiment tracking for better business decisions",
+    icon: Users,
+    features: [
+      "Customer Segmentation",
+      "Sentiment Analysis",
+      "Churn Prediction",
+      "Lifetime Value Prediction",
+      "Personalization Engine",
+      "Behavioral Analytics"
+    ],
+    color: "from-pink-500 to-rose-500",
+    useCases: [
+      "Customer retention strategies",
+      "Personalized marketing",
+      "Product recommendations",
+      "Customer service optimization"
+    ],
+    pricing: "Starting at $249/month"
+  },
+  {
+    title: "AI Security & Fraud Detection",
+    description: "Advanced security solutions using AI to detect and prevent fraud and cyber threats",
+    icon: Shield,
+    features: [
+      "Real-time Fraud Detection",
+      "Anomaly Detection",
+      "Threat Intelligence",
+      "Behavioral Analysis",
+      "Risk Scoring",
+      "Automated Response"
+    ],
+    color: "from-red-500 to-orange-500",
+    useCases: [
+      "Financial fraud prevention",
+      "Cybersecurity monitoring",
+      "Identity verification",
+      "Transaction monitoring"
+    ],
+    pricing: "Starting at $399/month"
+  },
+  {
+    title: "AI-Powered Voice & Speech",
+    description: "Advanced voice recognition, synthesis, and conversational AI for voice-enabled applications",
+    icon: MessageSquare,
+    features: [
+      "Speech-to-Text",
+      "Text-to-Speech",
+      "Voice Cloning",
+      "Language Translation",
+      "Voice Analytics",
+      "Conversational AI"
+    ],
+    color: "from-violet-500 to-purple-500",
+    useCases: [
+      "Voice assistants",
+      "Call center automation",
+      "Accessibility solutions",
+      "Multilingual support"
+    ],
+    pricing: "Starting at $179/month"
+  },
+  {
+    title: "AI-Powered Image & Video Analysis",
+    description: "Advanced computer vision solutions for image and video processing and analysis",
+    icon: Eye,
+    features: [
+      "Object Detection & Recognition",
+      "Facial Recognition",
+      "Video Analytics",
+      "Image Enhancement",
+      "Content Moderation",
+      "Visual Search"
+    ],
+    color: "from-emerald-500 to-green-500",
+    useCases: [
+      "Security surveillance",
+      "Quality control",
+      "Content moderation",
+      "Visual search engines"
+    ],
+    pricing: "Starting at $229/month"
+  },
+  {
+    title: "AI-Powered Recommendation Engine",
+    description: "Intelligent recommendation systems for products, content, and services",
+    icon: Target,
+    features: [
+      "Product Recommendations",
+      "Content Personalization",
+      "Collaborative Filtering",
+      "Real-time Updates",
+      "A/B Testing",
+      "Performance Analytics"
+    ],
+    color: "from-amber-500 to-yellow-500",
+    useCases: [
+      "E-commerce personalization",
+      "Content platforms",
+      "Streaming services",
+      "Social media feeds"
+    ],
+    pricing: "Starting at $159/month"
+  },
+  {
+    title: "AI-Powered Supply Chain Optimization",
+    description: "Intelligent supply chain management with demand forecasting and logistics optimization",
+    icon: Network,
+    features: [
+      "Demand Forecasting",
+      "Inventory Optimization",
+      "Route Optimization",
+      "Supplier Risk Assessment",
+      "Cost Optimization",
+      "Real-time Monitoring"
+    ],
+    color: "from-indigo-500 to-blue-500",
+    useCases: [
+      "Inventory management",
+      "Logistics optimization",
+      "Supplier management",
+      "Cost reduction"
+    ],
+    pricing: "Starting at $349/month"
+  },
+  {
+    title: "AI-Powered Financial Analysis",
+    description: "Advanced financial modeling, risk assessment, and investment analysis using AI",
+    icon: BarChart3,
+    features: [
+      "Financial Modeling",
+      "Risk Assessment",
+      "Investment Analysis",
+      "Credit Scoring",
+      "Market Prediction",
+      "Portfolio Optimization"
+    ],
+    color: "from-teal-500 to-cyan-500",
+    useCases: [
+      "Investment decisions",
+      "Risk management",
+      "Credit assessment",
+      "Financial planning"
+    ],
+    pricing: "Starting at $279/month"
   }
 ];
 

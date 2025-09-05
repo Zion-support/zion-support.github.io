@@ -144,6 +144,237 @@ const microSaasServices = [
       "Customer management",
       "Business growth"
     ]
+  },
+  {
+    title: "AI-Powered Analytics Dashboard",
+    description: "Intelligent business intelligence platform with predictive analytics and automated insights",
+    icon: BarChart3,
+    features: [
+      "Real-time Data Visualization",
+      "Predictive Analytics",
+      "Custom KPI Tracking",
+      "Automated Reports",
+      "Data Export/Import",
+      "Multi-source Integration"
+    ],
+    color: "from-teal-500 to-blue-500",
+    benefits: [
+      "Data-driven decisions",
+      "Automated insights",
+      "Real-time monitoring",
+      "Competitive advantage"
+    ],
+    pricing: "Starting at $299/month"
+  },
+  {
+    title: "Customer Relationship Management (CRM)",
+    description: "Comprehensive CRM system with AI-powered lead scoring and automated follow-ups",
+    icon: Users,
+    features: [
+      "Lead Management",
+      "Contact Organization",
+      "Sales Pipeline Tracking",
+      "Email Automation",
+      "Task Management",
+      "Performance Analytics"
+    ],
+    color: "from-pink-500 to-rose-500",
+    benefits: [
+      "Improved sales efficiency",
+      "Better customer relationships",
+      "Automated workflows",
+      "Higher conversion rates"
+    ],
+    pricing: "Starting at $199/month"
+  },
+  {
+    title: "Project Management Platform",
+    description: "Advanced project management tool with team collaboration and resource planning",
+    icon: Target,
+    features: [
+      "Task Management",
+      "Team Collaboration",
+      "Time Tracking",
+      "Resource Planning",
+      "Progress Monitoring",
+      "Document Sharing"
+    ],
+    color: "from-amber-500 to-orange-500",
+    benefits: [
+      "Improved productivity",
+      "Better team coordination",
+      "Clear project visibility",
+      "Deadline management"
+    ],
+    pricing: "Starting at $149/month"
+  },
+  {
+    title: "Inventory Management System",
+    description: "Smart inventory tracking with automated reordering and demand forecasting",
+    icon: Database,
+    features: [
+      "Real-time Inventory Tracking",
+      "Automated Reordering",
+      "Barcode Scanning",
+      "Multi-location Support",
+      "Demand Forecasting",
+      "Supplier Management"
+    ],
+    color: "from-emerald-500 to-green-500",
+    benefits: [
+      "Reduced stockouts",
+      "Lower inventory costs",
+      "Automated processes",
+      "Better supplier relationships"
+    ],
+    pricing: "Starting at $179/month"
+  },
+  {
+    title: "Email Marketing Automation",
+    description: "Advanced email marketing platform with AI-powered personalization and segmentation",
+    icon: Zap,
+    features: [
+      "Email Campaign Builder",
+      "AI Personalization",
+      "Automated Sequences",
+      "A/B Testing",
+      "Analytics & Reporting",
+      "List Management"
+    ],
+    color: "from-violet-500 to-purple-500",
+    benefits: [
+      "Higher open rates",
+      "Automated nurturing",
+      "Better segmentation",
+      "Increased conversions"
+    ],
+    pricing: "Starting at $99/month"
+  },
+  {
+    title: "Financial Management Suite",
+    description: "Comprehensive financial tracking with automated invoicing and expense management",
+    icon: BarChart3,
+    features: [
+      "Automated Invoicing",
+      "Expense Tracking",
+      "Financial Reporting",
+      "Tax Preparation",
+      "Budget Planning",
+      "Payment Processing"
+    ],
+    color: "from-cyan-500 to-teal-500",
+    benefits: [
+      "Streamlined finances",
+      "Automated invoicing",
+      "Better cash flow",
+      "Tax compliance"
+    ],
+    pricing: "Starting at $129/month"
+  },
+  {
+    title: "HR Management System",
+    description: "Complete human resources platform with employee onboarding and performance tracking",
+    icon: Users,
+    features: [
+      "Employee Database",
+      "Time & Attendance",
+      "Performance Reviews",
+      "Payroll Integration",
+      "Benefits Management",
+      "Recruitment Tools"
+    ],
+    color: "from-indigo-500 to-blue-500",
+    benefits: [
+      "Streamlined HR processes",
+      "Better employee management",
+      "Compliance tracking",
+      "Reduced paperwork"
+    ],
+    pricing: "Starting at $199/month"
+  },
+  {
+    title: "Social Media Management",
+    description: "AI-powered social media scheduling and analytics platform for multiple platforms",
+    icon: Globe,
+    features: [
+      "Multi-platform Posting",
+      "Content Calendar",
+      "AI Content Suggestions",
+      "Engagement Analytics",
+      "Hashtag Research",
+      "Competitor Analysis"
+    ],
+    color: "from-rose-500 to-pink-500",
+    benefits: [
+      "Consistent posting",
+      "Better engagement",
+      "Time savings",
+      "Data-driven content"
+    ],
+    pricing: "Starting at $79/month"
+  },
+  {
+    title: "Document Management System",
+    description: "Secure document storage and collaboration platform with version control and search",
+    icon: Database,
+    features: [
+      "Secure File Storage",
+      "Version Control",
+      "Collaborative Editing",
+      "Advanced Search",
+      "Access Permissions",
+      "Document Templates"
+    ],
+    color: "from-slate-500 to-gray-500",
+    benefits: [
+      "Organized documents",
+      "Better collaboration",
+      "Version control",
+      "Enhanced security"
+    ],
+    pricing: "Starting at $89/month"
+  },
+  {
+    title: "Learning Management System (LMS)",
+    description: "Comprehensive e-learning platform with course creation and progress tracking",
+    icon: Lightbulb,
+    features: [
+      "Course Creation Tools",
+      "Progress Tracking",
+      "Certification System",
+      "Interactive Content",
+      "Assessment Tools",
+      "Mobile Learning"
+    ],
+    color: "from-yellow-500 to-amber-500",
+    benefits: [
+      "Employee training",
+      "Skill development",
+      "Compliance training",
+      "Knowledge retention"
+    ],
+    pricing: "Starting at $159/month"
+  },
+  {
+    title: "Help Desk & Support System",
+    description: "Customer support platform with ticket management and knowledge base",
+    icon: Shield,
+    features: [
+      "Ticket Management",
+      "Knowledge Base",
+      "Live Chat Integration",
+      "SLA Tracking",
+      "Customer Portal",
+      "Performance Analytics"
+    ],
+    color: "from-red-500 to-orange-500",
+    benefits: [
+      "Better customer service",
+      "Faster resolution times",
+      "Self-service options",
+      "Improved satisfaction"
+    ],
+    pricing: "Starting at $119/month"
   }
 ];
 
@@ -240,7 +471,7 @@ const benefits = [
 const pricingTiers = [
   {
     name: "Starter",
-    price: "$2,999",
+    price: "$1,999",
     description: "Perfect for small businesses and startups",
     features: [
       "Basic web application",
@@ -248,13 +479,15 @@ const pricingTiers = [
       "User authentication",
       "Basic analytics",
       "3 months support",
-      "Source code included"
+      "Source code included",
+      "Up to 5 users",
+      "Basic integrations"
     ],
     color: "from-blue-500 to-cyan-500"
   },
   {
     name: "Professional",
-    price: "$7,999",
+    price: "$4,999",
     description: "Ideal for growing businesses with complex needs",
     features: [
       "Advanced web application",
@@ -263,14 +496,17 @@ const pricingTiers = [
       "Database integration",
       "Advanced analytics",
       "6 months support",
-      "Source code included"
+      "Source code included",
+      "Up to 25 users",
+      "Advanced integrations",
+      "Priority support"
     ],
     color: "from-purple-500 to-pink-500",
     popular: true
   },
   {
     name: "Enterprise",
-    price: "Custom",
+    price: "$9,999+",
     description: "Tailored solutions for large organizations",
     features: [
       "Custom enterprise solution",
@@ -279,9 +515,47 @@ const pricingTiers = [
       "Custom analytics dashboard",
       "12 months support",
       "Dedicated project manager",
-      "Source code included"
+      "Source code included",
+      "Unlimited users",
+      "Custom integrations",
+      "24/7 support",
+      "SLA guarantee"
     ],
     color: "from-green-500 to-emerald-500"
+  }
+];
+
+const microSaasPricing = [
+  {
+    category: "Business Management",
+    services: [
+      { name: "CRM System", price: "$199/month", features: "Lead management, sales pipeline, automation" },
+      { name: "Project Management", price: "$149/month", features: "Task tracking, team collaboration, reporting" },
+      { name: "HR Management", price: "$199/month", features: "Employee database, payroll, performance tracking" },
+      { name: "Financial Management", price: "$129/month", features: "Invoicing, expense tracking, reporting" }
+    ]
+  },
+  {
+    category: "Marketing & Sales",
+    services: [
+      { name: "Email Marketing", price: "$99/month", features: "Campaign builder, automation, analytics" },
+      { name: "Social Media Management", price: "$79/month", features: "Multi-platform posting, analytics, scheduling" },
+      { name: "Analytics Dashboard", price: "$299/month", features: "Real-time data, predictive analytics, insights" }
+    ]
+  },
+  {
+    category: "Operations",
+    services: [
+      { name: "Inventory Management", price: "$179/month", features: "Real-time tracking, automated reordering" },
+      { name: "Document Management", price: "$89/month", features: "Secure storage, collaboration, version control" },
+      { name: "Help Desk System", price: "$119/month", features: "Ticket management, knowledge base, analytics" }
+    ]
+  },
+  {
+    category: "Learning & Development",
+    services: [
+      { name: "Learning Management", price: "$159/month", features: "Course creation, progress tracking, certification" }
+    ]
   }
 ];
 

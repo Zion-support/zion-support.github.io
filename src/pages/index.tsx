@@ -348,17 +348,17 @@ export default function HomePage() {
             <div className="text-center">
               <Phone className="w-8 h-8 mx-auto mb-4 text-blue-400" />
               <h3 className="text-lg font-semibold mb-2">Phone</h3>
-              <p className="text-gray-300">+1 (555) 123-4567</p>
+              <p className="text-gray-300">+1 302 464 0950</p>
             </div>
             <div className="text-center">
               <Mail className="w-8 h-8 mx-auto mb-4 text-blue-400" />
               <h3 className="text-lg font-semibold mb-2">Email</h3>
-              <p className="text-gray-300">info@ziontechgroup.com</p>
+              <p className="text-gray-300">kleber@ziontechgroup.com</p>
             </div>
             <div className="text-center">
               <MapPin className="w-8 h-8 mx-auto mb-4 text-blue-400" />
               <h3 className="text-lg font-semibold mb-2">Location</h3>
-              <p className="text-gray-300">San Francisco, CA</p>
+              <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
         </div>
