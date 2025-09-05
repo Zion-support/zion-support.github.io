@@ -173,7 +173,7 @@ export default function BlogPage() {
           </div>
         </section>
 
-      {/* Blog Posts */}
+        {/* Blog Posts */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row gap-8">

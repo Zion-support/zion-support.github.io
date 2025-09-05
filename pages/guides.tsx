@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-import Link from 'next/link';
-=======
-
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -10,7 +6,7 @@ import {
   ArrowRight,
   FileText,
   Clock,
-  User,
+  Users,
   Star,
   CheckCircle,
   Download,
@@ -25,13 +21,7 @@ import {
   Database,
   Cloud
 } from 'lucide-react';
-<<<<<<< HEAD
 import Layout from '../components/Layout';
-
-=======
-import MainLayout from '../components/layout/MainLayout';
-import { FileText, Clock, Users, ArrowRight, CheckCircle, BookOpen, Code, Database, Cloud, Shield } from 'lucide-react';
->>>>>>> main
 const guides = [
   {
     title: 'Complete Guide to Web Development',
@@ -122,26 +112,6 @@ export default function GuidesPage() {
                          guide.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
-
-=======
-
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-
-];
-
-const categories = [
-  { name: 'All', count: 24, active: true },
-  { name: 'Web Development', count: 6, active: false },
-  { name: 'Cloud Computing', count: 5, active: false },
-  { name: 'Database', count: 4, active: false },
-  { name: 'Security', count: 3, active: false },
-  { name: 'API Development', count: 3, active: false },
-  { name: 'DevOps', count: 3, active: false }
-];
 
 const popularGuides = [
   { title: 'Getting Started with React', downloads: 3200, category: 'Web Development' },

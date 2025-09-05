@@ -64,8 +64,6 @@ export default function CookiePolicyPage() {
     // In a real implementation, this would save to localStorage and update cookie settings
     alert('Cookie preferences saved!');
   };
-
-export default function CookiesPage() {
   return (
     <MainLayout
       title="Cookie Policy - Zion Tech Group"
